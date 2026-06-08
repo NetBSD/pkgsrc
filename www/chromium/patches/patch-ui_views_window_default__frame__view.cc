@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_window_default__frame__view.cc,v 1.16 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-ui_views_window_default__frame__view.cc,v 1.17 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/default_frame_view.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/views/window/default_frame_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/views/window/default_frame_view.cc
 @@ -285,7 +285,7 @@ int DefaultFrameView::NonClientTopBorder
  int DefaultFrameView::CaptionButtonY() const {

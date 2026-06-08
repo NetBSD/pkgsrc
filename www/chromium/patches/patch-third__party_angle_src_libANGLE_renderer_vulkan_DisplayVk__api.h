@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_libANGLE_renderer_vulkan_DisplayVk__api.h,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_libANGLE_renderer_vulkan_DisplayVk__api.h,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/angle/src/libANGLE/renderer/vulkan/DisplayVk_api.h
 @@ -23,7 +23,7 @@ bool IsVulkanWin32DisplayAvailable();
  DisplayImpl *CreateVulkanWin32Display(const egl::DisplayState &state);

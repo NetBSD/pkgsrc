@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_dns__config__service__posix.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_dns_dns__config__service__posix.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_config_service_posix.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/dns/dns_config_service_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/dns/dns_config_service_posix.cc
 @@ -35,6 +35,11 @@
  #include "net/dns/dns_config_watcher_mac.h"

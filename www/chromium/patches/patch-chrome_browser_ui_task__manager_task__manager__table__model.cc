@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.20 2026/06/01 10:09:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -364,7 +364,7 @@ TaskManagerTableModel::~TaskManagerTable
    // Note: system_total_time_ is used for both since there is no functional

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_sndio_audio__manager__sndio.h,v 1.20 2026/06/01 10:09:16 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_audio__manager__sndio.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/audio_manager_sndio.h.orig	2026-05-31 17:28:56.950379838 +0000
+--- media/audio/sndio/audio_manager_sndio.h.orig	2026-06-06 07:58:20.129502329 +0000
 +++ media/audio/sndio/audio_manager_sndio.h
 @@ -0,0 +1,66 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

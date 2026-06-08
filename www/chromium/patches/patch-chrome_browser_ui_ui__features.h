@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.20 2026/06/01 10:09:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
-@@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(kBrowserWidgetCache
+@@ -23,7 +23,7 @@ BASE_DECLARE_FEATURE(kAllowEyeDropperWGC
  
  BASE_DECLARE_FEATURE(kCreateNewTabGroupAppMenuTopLevel);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.20 2026/06/01 10:09:09 kikad
  BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
-@@ -68,7 +68,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+@@ -64,7 +64,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
  BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.20 2026/06/01 10:09:09 kikad
  // When enabled, user may see the session restore UI flow.
  BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
  
-@@ -257,7 +257,7 @@ BASE_DECLARE_FEATURE(kWebUITabStripConte
+@@ -243,7 +243,7 @@ BASE_DECLARE_FEATURE(kManagedProfileRequ
  BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
 @@ -50,7 +50,7 @@
  #include "testing/gtest/include/gtest/gtest.h"
@@ -87,7 +87,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    base::FilePath desktop_shortcut_path =
        GetShortcutPath(profile, desktop(), app_id, app_name);
    return base::PathExists(desktop_shortcut_path);
-@@ -771,7 +771,7 @@ void OsIntegrationTestOverrideImpl::Enab
+@@ -786,7 +786,7 @@ void OsIntegrationTestOverrideImpl::Enab
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -96,7 +96,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  base::FilePath OsIntegrationTestOverrideImpl::desktop() {
    return desktop_.GetPath();
  }
-@@ -822,7 +822,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
+@@ -837,7 +837,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
    success = chrome_apps_folder_.CreateUniqueTempDirUnderPath(
        outer_temp_dir_.GetPath());
    CHECK(success);
@@ -105,7 +105,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    success = desktop_.CreateUniqueTempDirUnderPath(outer_temp_dir_.GetPath());
    CHECK(success);
    success = startup_.CreateUniqueTempDirUnderPath(outer_temp_dir_.GetPath());
-@@ -835,7 +835,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
+@@ -850,7 +850,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
    CHECK(success);
  #endif
  
@@ -114,7 +114,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    auto callback = base::BindRepeating([](base::FilePath filename_in,
                                           std::string xdg_command,
                                           std::string file_contents) {
-@@ -907,7 +907,7 @@ OsIntegrationTestOverrideImpl::~OsIntegr
+@@ -922,7 +922,7 @@ OsIntegrationTestOverrideImpl::~OsIntegr
    EXPECT_TRUE(!startup_.IsValid() || startup_.Delete());
  #elif BUILDFLAG(IS_MAC)
    EXPECT_TRUE(!chrome_apps_folder_.IsValid() || DeleteChromeAppsDir());

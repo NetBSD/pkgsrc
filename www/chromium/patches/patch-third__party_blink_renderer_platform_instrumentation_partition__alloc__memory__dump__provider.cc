@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_instrumentation_partition__alloc__memory__dump__provider.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_instrumentation_partition__alloc__memory__dump__provider.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc
 @@ -14,7 +14,9 @@
  

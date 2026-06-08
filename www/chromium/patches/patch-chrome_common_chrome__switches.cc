@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__switches.cc,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/common/chrome_switches.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/common/chrome_switches.cc
-@@ -913,7 +913,7 @@ const char kDebugPrint[] = "debug-print"
+@@ -923,7 +923,7 @@ const char kDebugPrint[] = "debug-print"
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__switches.cc,v 1.20 2026/06/01 10:09:10 kika
  
  // Causes the browser to launch directly in guest mode.
  const char kGuest[] = "guest";
-@@ -957,7 +957,7 @@ const char kGlicGuestUrlPresetStaging[] 
+@@ -967,7 +967,7 @@ const char kGlicGuestUrlPresetStaging[] 
  const char kGlicGuestUrlPresetPreprod[] = "glic-guest-url-preset-preprod";
  const char kGlicGuestUrlPresetProd[] = "glic-guest-url-preset-prod";
  

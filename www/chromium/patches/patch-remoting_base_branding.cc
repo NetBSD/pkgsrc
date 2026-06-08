@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_branding.cc,v 1.4 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-remoting_base_branding.cc,v 1.5 2026/06/08 13:12:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/branding.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- remoting/base/branding.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ remoting/base/branding.cc
 @@ -10,7 +10,7 @@
  #include "base/path_service.h"

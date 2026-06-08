@@ -1,12 +1,12 @@
-$NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink__impl.h,v 1.20 2026/06/01 10:09:13 kikadf Exp $
+$NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink__impl.h,v 1.21 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -220,7 +220,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
+@@ -222,7 +222,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    base::TimeDelta display_frame_interval_ = BeginFrameArgs::DefaultInterval();
    base::TimeDelta preferred_frame_interval_;
  

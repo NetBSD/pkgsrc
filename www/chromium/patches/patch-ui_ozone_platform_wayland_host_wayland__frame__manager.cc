@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.19 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.20 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_frame_manager.cc
 @@ -5,7 +5,9 @@
  #include "ui/ozone/platform/wayland/host/wayland_frame_manager.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.20 2026/06/01 10:09:12 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.21 2026/06/08 13:12:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
-@@ -13,7 +13,12 @@
+@@ -15,7 +15,12 @@
  #include "base/win/scoped_handle.h"
  #elif BUILDFLAG(IS_MAC)
  #include <bsm/libbsm.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.20 202
  #include <sys/socket.h>
  #endif
  
-@@ -30,8 +35,12 @@ struct ConnectionInfo {
+@@ -32,8 +37,12 @@ struct ConnectionInfo {
    base::ProcessId pid{};
  #if BUILDFLAG(IS_MAC)
    audit_token_t audit_token{};

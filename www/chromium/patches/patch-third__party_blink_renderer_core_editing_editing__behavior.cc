@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_editing_editing__behavior.cc,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_editing_editing__behavior.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
-@@ -138,7 +138,7 @@ const KeyboardCodeKeyDownEntry kKeyboard
+@@ -144,7 +144,7 @@ const KeyboardCodeKeyDownEntry kKeyboard
      {VKEY_DELETE, 0, "DeleteForward"},
      {VKEY_BACK, OPTION_OR_CTRL_KEY, "DeleteWordBackward"},
      {VKEY_DELETE, OPTION_OR_CTRL_KEY, "DeleteWordForward"},
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_core_editing_editing__behavior.cc,v 1
      {VKEY_BACK, kCtrlKey | kShiftKey, "DeleteToBeginningOfLine"},
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -307,7 +307,7 @@ bool EditingBehavior::ShouldInsertCharac
+@@ -313,7 +313,7 @@ bool EditingBehavior::ShouldInsertCharac
    // unexpected behaviour
    if (ch < ' ')
      return false;

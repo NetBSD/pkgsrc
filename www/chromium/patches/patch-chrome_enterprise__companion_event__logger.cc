@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_enterprise__companion_event__logger.cc,v 1.19 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-chrome_enterprise__companion_event__logger.cc,v 1.20 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/event_logger.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/enterprise_companion/event_logger.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/enterprise_companion/event_logger.cc
 @@ -126,7 +126,7 @@ proto::EnterpriseCompanionMetadata GetMe
    metadata.set_application_arch(proto::ARM64);

@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_backend_cups__printer.cc,v 1.16 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__printer.cc,v 1.17 2026/06/08 13:12:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_printer.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- printing/backend/cups_printer.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ printing/backend/cups_printer.cc
 @@ -24,7 +24,7 @@
  #include "printing/print_job_constants.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
-@@ -405,7 +405,7 @@ void RecordPrerenderActivationSignalDela
+@@ -398,7 +398,7 @@ void RecordPrerenderActivationSignalDela
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_WIN)
  SkFontHinting RendererPreferencesToSkiaHinting(
      const blink::RendererPreferences& prefs) {
@@ -15,16 +15,16 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
    if (!prefs.should_antialias_text) {
      // When anti-aliasing is off, GTK maps all non-zero hinting settings to
      // 'Normal' hinting so we do the same. Otherwise, folks who have 'Slight'
-@@ -3615,7 +3615,7 @@ void WebViewImpl::UpdateFontRenderingFro
+@@ -3474,7 +3474,7 @@ void WebViewImpl::UpdateFontRenderingFro
        gfx::FontRenderParams::SUBPIXEL_RENDERING_NONE);
    WebFontRenderStyle::SetSubpixelPositioning(
        renderer_preferences_.use_subpixel_positioning);
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (!renderer_preferences_.system_font_family_name.empty()) {
-     WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUTF8(
+     WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUtf8(
          renderer_preferences_.system_font_family_name));
-@@ -3759,7 +3759,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3623,7 +3623,7 @@ void WebViewImpl::UpdateRendererPreferen
        renderer_preferences_.selection_clipboard_buffer_available);
  #endif  // BUILDFLAG(IS_OZONE)
  

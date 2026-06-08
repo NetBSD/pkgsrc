@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_include_perfetto_tracing_internal_track__event__legacy.h,v 1.20 2026/06/01 10:09:21 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_include_perfetto_tracing_internal_track__event__legacy.h,v 1.21 2026/06/08 13:12:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h
 @@ -253,7 +253,7 @@ class PERFETTO_EXPORT_COMPONENT LegacyTr
  // are different. E.g. on Mac size_t is considered a different type from

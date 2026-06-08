@@ -1,10 +1,10 @@
-$NetBSD: patch-components_named__system__lock_lock__unittest.cc,v 1.19 2026/06/01 10:09:12 kikadf Exp $
+$NetBSD: patch-components_named__system__lock_lock__unittest.cc,v 1.20 2026/06/08 13:12:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_system_lock/lock_unittest.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/named_system_lock/lock_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/named_system_lock/lock_unittest.cc
 @@ -18,7 +18,7 @@
  #include "build/build_config.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-components_named__system__lock_lock__unittest.cc,v 1.19 2026/06/0
  #include <fcntl.h>
  #include <sys/mman.h>
  
-@@ -45,7 +45,7 @@ class NamedSystemLockTest : public ::tes
+@@ -44,7 +44,7 @@ class NamedSystemLockTest : public ::tes
    const std::string lock_name_ = base::UnguessableToken::Create().ToString();
  
    std::unique_ptr<ScopedLock> CreateLock() {
@@ -23,8 +23,8 @@ $NetBSD: patch-components_named__system__lock_lock__unittest.cc,v 1.19 2026/06/0
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      return ScopedLock::Create(lock_name_, base::Seconds(0));
  #else
-     CSecurityAttributes sa;
-@@ -95,7 +95,7 @@ TEST_F(NamedSystemLockTest, TryLockInThr
+     SECURITY_ATTRIBUTES sa = {sizeof(SECURITY_ATTRIBUTES), nullptr, FALSE};
+@@ -94,7 +94,7 @@ TEST_F(NamedSystemLockTest, TryLockInThr
    EXPECT_TRUE(CreateLock());
  }
  

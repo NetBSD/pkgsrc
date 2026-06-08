@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_updater_configurator.cc,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-chrome_updater_configurator.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/configurator.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/updater/configurator.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/updater/configurator.cc
 @@ -94,7 +94,7 @@ Configurator::Configurator(scoped_refptr
          return std::nullopt;

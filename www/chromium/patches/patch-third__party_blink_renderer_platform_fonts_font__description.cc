@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__description.cc,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__description.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_description.cc
 @@ -45,7 +45,7 @@
  #include "third_party/blink/renderer/platform/wtf/text/string_hash.h"

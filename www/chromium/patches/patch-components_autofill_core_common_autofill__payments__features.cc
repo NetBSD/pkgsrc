@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.20 2026/06/01 10:09:11 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -27,7 +27,7 @@ BASE_FEATURE(kAutofillDisableBnplCountry
  // page using server-side AI.
@@ -87,7 +87,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -247,7 +247,7 @@ BASE_FEATURE(kAutofillEnableTouchToFillR
+@@ -252,7 +252,7 @@ BASE_FEATURE(kAutofillEnableTravelCatego
  // the card, and FIDO is not.
  BASE_FEATURE(kAutofillEnableVcn3dsAuthentication,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -96,7 +96,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -276,7 +276,7 @@ BASE_FEATURE(kAutofillEnableWalletBrandi
+@@ -281,7 +281,7 @@ BASE_FEATURE(kAutofillEnableWalletBrandi
  // eligibility.
  BASE_FEATURE(kAutofillPreferBuyNowPayLaterBlocklists,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -105,7 +105,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -326,7 +326,7 @@ const base::FeatureParam<int> kAutofillV
+@@ -336,7 +336,7 @@ const base::FeatureParam<int> kAutofillV
      /*default_value=*/180};
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

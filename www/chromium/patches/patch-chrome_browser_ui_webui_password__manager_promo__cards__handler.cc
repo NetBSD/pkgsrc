@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -31,7 +31,7 @@
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_sad__tab.cc,v 1.20 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_sad__tab.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/sad_tab.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/sad_tab.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/sad_tab.cc
-@@ -181,7 +181,7 @@ std::vector<int> SadTab::GetSubMessages(
+@@ -179,7 +179,7 @@ std::vector<int> SadTab::GetSubMessages(
        if (!web_contents_->GetBrowserContext()->IsOffTheRecord()) {
          message_ids.insert(message_ids.begin(), IDS_SAD_TAB_RELOAD_INCOGNITO);
        }

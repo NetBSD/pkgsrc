@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__tab__provider.cc,v 1.20 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__tab__provider.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/startup/startup_tab_provider.cc
-@@ -66,7 +66,7 @@
+@@ -67,7 +67,7 @@
  #include "extensions/common/manifest_handlers/chrome_url_overrides_handler.h"
  #endif  // !BUILDFLAG(IS_ANDROID)
  

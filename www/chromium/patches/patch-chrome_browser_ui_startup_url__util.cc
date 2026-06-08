@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_startup_google__chrome__scheme__util.cc,v 1.5 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_url__util.cc,v 1.1 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/google_chrome_scheme_util.cc.orig	2026-05-26 20:39:02.000000000 +0000
-+++ chrome/browser/ui/startup/google_chrome_scheme_util.cc
-@@ -26,7 +26,7 @@
- #include "chrome/common/chrome_constants.h"
- #endif
+--- chrome/browser/ui/startup/url_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
++++ chrome/browser/ui/startup/url_util.cc
+@@ -13,7 +13,7 @@
+ #include "url/gurl.h"
+ #include "url/url_constants.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/headless/headless_mode_util.h"
  #endif
  
-@@ -133,7 +133,7 @@ bool ValidateUrl(const GURL& url) {
+@@ -39,7 +39,7 @@ bool ValidateLaunchUrl(const GURL& url) 
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
    bool url_scheme_is_chrome = false;

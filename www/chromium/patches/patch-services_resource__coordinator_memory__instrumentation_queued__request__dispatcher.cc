@@ -1,10 +1,10 @@
-$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.20 2026/06/01 10:09:19 kikadf Exp $
+$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.21 2026/06/08 13:12:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc
 @@ -56,7 +56,7 @@ uint32_t CalculatePrivateFootprintKb(con
                                       uint32_t shared_resident_kb) {

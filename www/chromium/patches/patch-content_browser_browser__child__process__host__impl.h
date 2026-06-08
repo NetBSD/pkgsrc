@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl.h,v 1.20 2026/06/01 10:09:14 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl.h,v 1.21 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/browser_child_process_host_impl.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/browser_child_process_host_impl.h
 @@ -38,7 +38,7 @@
  #include "base/win/object_watcher.h"

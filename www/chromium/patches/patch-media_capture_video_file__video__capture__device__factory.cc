@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_file__video__capture__device__factory.cc,v 1.20 2026/06/01 10:09:16 kikadf Exp $
+$NetBSD: patch-media_capture_video_file__video__capture__device__factory.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/file_video_capture_device_factory.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- media/capture/video/file_video_capture_device_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ media/capture/video/file_video_capture_device_factory.cc
 @@ -52,7 +52,7 @@ void FileVideoCaptureDeviceFactory::GetD
        VideoCaptureApi::WIN_DIRECT_SHOW;

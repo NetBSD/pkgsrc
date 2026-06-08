@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_font__access_font__enumeration__data__source.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
+$NetBSD: patch-content_browser_font__access_font__enumeration__data__source.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/font_access/font_enumeration_data_source.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/font_access/font_enumeration_data_source.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/font_access/font_enumeration_data_source.cc
 @@ -16,7 +16,7 @@
  #include "content/browser/font_access/font_enumeration_data_source_win.h"

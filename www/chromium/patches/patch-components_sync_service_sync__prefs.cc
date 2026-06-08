@@ -1,12 +1,12 @@
-$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.16 2026/06/01 10:09:13 kikadf Exp $
+$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.17 2026/06/08 13:12:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ components/sync/service/sync_prefs.cc
-@@ -866,7 +866,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
+@@ -871,7 +871,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
            update_selected_types_dict->EnsureDict(
                signin::GaiaIdHash::FromGaiaId(gaia_id).ToBase64());
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_json__schema__compiler_cpp__bundle__generator.py,v 1.20 2026/06/01 10:09:22 kikadf Exp $
+$NetBSD: patch-tools_json__schema__compiler_cpp__bundle__generator.py,v 1.21 2026/06/08 13:12:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2026-05-26 20:39:02.000000000 +0000
+--- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2026-05-28 23:24:11.000000000 +0000
 +++ tools/json_schema_compiler/cpp_bundle_generator.py
 @@ -140,7 +140,7 @@ class CppBundleGenerator(object):
        elif platform == Platforms.DESKTOP_ANDROID:

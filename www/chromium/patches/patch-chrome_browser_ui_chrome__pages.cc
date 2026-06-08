@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.20 2026/06/01 10:09:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -85,12 +85,12 @@
+@@ -86,12 +86,12 @@
  #include "components/signin/public/identity_manager/identity_manager.h"
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.20 2026/06/01 10:09:08 kik
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -256,7 +256,7 @@ bool SiteGURLIsValid(const GURL& url) {
+@@ -257,7 +257,7 @@ bool SiteGURLIsValid(const GURL& url) {
    return !site_origin.opaque() && (url.SchemeIsHTTPOrHTTPS() ||
                                     url.SchemeIs(extensions::kExtensionScheme)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.20 2026/06/01 10:09:08 kik
                                     || url.SchemeIs(webapps::kIsolatedAppScheme)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -409,7 +409,7 @@ void ShowChromeTips(BrowserWindowInterfa
+@@ -404,7 +404,7 @@ void ShowChromeTips(BrowserWindowInterfa
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.20 2026/06/01 10:09:08 kik
  void ShowChromeWhatsNew(BrowserWindowInterface* browser) {
    ShowSingletonTab(browser, GURL(kChromeUIWhatsNewURL));
  }
-@@ -700,7 +700,7 @@ void ShowSharedTabGroupActivity(Profile*
+@@ -695,7 +695,7 @@ void ShowSharedTabGroupActivity(Profile*
                     GURL(data_sharing::features::kActivityLogsURL.Get()));
  }
  

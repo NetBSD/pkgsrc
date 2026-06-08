@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.20 2026/06/01 10:09:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.21 2026/06/08 13:12:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -87,7 +87,7 @@ void SystemMenuModelBuilder::BuildMenu(u
  

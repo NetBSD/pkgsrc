@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_gpu_gpu__data__manager__impl.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
+$NetBSD: patch-content_browser_gpu_gpu__data__manager__impl.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_data_manager_impl.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/gpu/gpu_data_manager_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl.cc
-@@ -427,7 +427,7 @@ void GpuDataManagerImpl::OnDisplayMetric
+@@ -432,7 +432,7 @@ void GpuDataManagerImpl::OnDisplayMetric
    private_->OnDisplayMetricsChanged(display, changed_metrics);
  }
  

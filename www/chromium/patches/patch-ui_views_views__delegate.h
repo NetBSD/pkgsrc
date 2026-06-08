@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_views__delegate.h,v 1.20 2026/06/01 10:09:24 kikadf Exp $
+$NetBSD: patch-ui_views_views__delegate.h,v 1.21 2026/06/08 13:12:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- ui/views/views_delegate.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ ui/views/views_delegate.h
 @@ -139,7 +139,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.20 2026/06/01 10:09:14 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -56,7 +56,7 @@
  #include "content/browser/renderer_host/p2p/socket_dispatcher_host.h"

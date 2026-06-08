@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.20 2026/06/01 10:09:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
 @@ -148,7 +148,7 @@
  #include "chrome/browser/ui/webui/settings/system_handler.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"overscrollHistoryNavigationTitle",
         IDS_SETTINGS_OVERSCROLL_HISTORY_NAVIGATION_TITLE},
        {"overscrollHistoryNavigationSubtitle",
-@@ -552,7 +552,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -551,7 +551,7 @@ void AddAppearanceStrings(content::WebUI
        {"uiFeatureAlignSide", IDS_SETTINGS_UI_FEATURE_ALIGN_SIDE},
        {"uiFeatureAlignTop", IDS_SETTINGS_UI_FEATURE_ALIGN_TOP},
        {"resetToDefault", IDS_SETTINGS_RESET_TO_DEFAULT},
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"gtkTheme", IDS_SETTINGS_GTK_THEME},
        {"useGtkTheme", IDS_SETTINGS_USE_GTK_THEME},
        {"qtTheme", IDS_SETTINGS_QT_THEME},
-@@ -560,11 +560,11 @@ void AddAppearanceStrings(content::WebUI
+@@ -559,11 +559,11 @@ void AddAppearanceStrings(content::WebUI
        {"classicTheme", IDS_SETTINGS_CLASSIC_THEME},
        {"useClassicTheme", IDS_SETTINGS_USE_CLASSIC_THEME},
  #endif
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"showWindowDecorations", IDS_SHOW_WINDOW_DECORATIONS},
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -595,7 +595,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -594,7 +594,7 @@ void AddAppearanceStrings(content::WebUI
        "showEverythingMenuEnabled",
        tab_groups::SavedTabGroupUtils::IsEnabledForProfile(profile));
  
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
    bool show_custom_chrome_frame = ui::OzonePlatform::GetInstance()
                                        ->GetPlatformRuntimeProperties()
                                        .supports_server_side_window_decorations;
-@@ -1858,7 +1858,7 @@ void AddSignOutDialogStrings(content::We
+@@ -1862,7 +1862,7 @@ void AddSignOutDialogStrings(content::We
            g_browser_process->GetApplicationLocale())
            .spec();
  

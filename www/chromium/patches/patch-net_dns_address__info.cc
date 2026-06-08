@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_address__info.cc,v 1.20 2026/06/01 10:09:17 kikadf Exp $
+$NetBSD: patch-net_dns_address__info.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/address_info.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- net/dns/address_info.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ net/dns/address_info.cc
 @@ -74,8 +74,12 @@ AddressInfo::AddressInfoAndResult Addres
      // error.

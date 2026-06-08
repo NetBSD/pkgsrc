@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_pulse_pulse__util.cc,v 1.20 2026/06/01 10:09:16 kikadf Exp $
+$NetBSD: patch-media_audio_pulse_pulse__util.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/pulse/pulse_util.cc.orig	2026-05-26 20:39:02.000000000 +0000
+--- media/audio/pulse/pulse_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
 +++ media/audio/pulse/pulse_util.cc
 @@ -45,8 +45,12 @@ constexpr char kBrowserDisplayName[] = "
  

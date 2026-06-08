@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_util_misc_address__types.h,v 1.20 2026/06/01 10:09:20 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_util_misc_address__types.h,v 1.21 2026/06/08 13:12:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2026-05-26 20:39:02.000000000 +0000
+--- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2026-05-28 23:24:11.000000000 +0000
 +++ third_party/crashpad/crashpad/util/misc/address_types.h
 @@ -25,7 +25,7 @@
  #include <mach/mach_types.h>
