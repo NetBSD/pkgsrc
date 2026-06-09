@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/21 21:08:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/09 16:32:02 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -203,6 +203,7 @@ include/mysql/server/private/sql_cache.h
 include/mysql/server/private/sql_callback.h
 include/mysql/server/private/sql_class.h
 include/mysql/server/private/sql_cmd.h
+include/mysql/server/private/sql_command.h
 include/mysql/server/private/sql_connect.h
 include/mysql/server/private/sql_const.h
 include/mysql/server/private/sql_crypt.h
@@ -329,6 +330,7 @@ lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth_0x0100.so
 lib/mysql/plugin/auth_ed25519.so
 lib/mysql/plugin/auth_gssapi.so
+lib/mysql/plugin/auth_mysql_sha2.so
 ${PLIST.auth_pam}lib/mysql/plugin/auth_pam.so
 ${PLIST.auth_pam}lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
 ${PLIST.auth_pam}lib/mysql/plugin/auth_pam_v1.so
@@ -368,6 +370,7 @@ lib/mysql/plugin/query_response_time.so
 lib/mysql/plugin/server_audit.so
 lib/mysql/plugin/simple_password_check.so
 lib/mysql/plugin/sql_errlog.so
+lib/mysql/plugin/test_pam_modules/pam_mariadb_mtr.so
 lib/mysql/plugin/test_sql_service.so
 lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
@@ -381,7 +384,6 @@ sbin/mysqld
 share/doc/mysql/COPYING
 share/doc/mysql/CREDITS
 share/doc/mysql/INSTALL-BINARY
-share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
 share/doc/mysql/hashicorp_key_management.txt
