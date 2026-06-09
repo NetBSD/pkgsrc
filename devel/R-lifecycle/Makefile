@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/12/14 10:57:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/09 05:49:13 mef Exp $
 
 R_PKGNAME=	lifecycle
-R_PKGVER=	1.0.4
+R_PKGVER=	1.0.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
