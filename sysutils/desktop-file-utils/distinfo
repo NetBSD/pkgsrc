@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2024/07/23 06:23:42 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/06/09 18:05:38 wiz Exp $
 
-BLAKE2s (desktop-file-utils-0.27.tar.xz) = 11c4218f124808a4ed8345ffbc07a44e105aa030a6e86442014599a85ace7af4
-SHA512 (desktop-file-utils-0.27.tar.xz) = 81356239a92fb17885aa85a5192c84c2757ebb2e540920d0d41d07035795f08f4162f41b1a87bb2bfcf70ec61f19f1f158e4395a359f46b46f68cb9e24f259a8
-Size (desktop-file-utils-0.27.tar.xz) = 80808 bytes
+BLAKE2s (desktop-file-utils-0.28.tar.xz) = eec27ccfe0992b5e814777bb5e88e536549954273d976c0af92e0f80b0b83e9b
+SHA512 (desktop-file-utils-0.28.tar.xz) = 1024172fcd37ace0660fd58195c0562b47f1ef8ed37f662b88048c295a388d1458d01f86799b34ec9e8b27a7ea441f98665f0d641c29cb5ecc3abd7da41230f0
+Size (desktop-file-utils-0.28.tar.xz) = 81620 bytes
 SHA1 (patch-src_update-desktop-database.c) = b721f8a732dcd5e740ff5fa11969d1a68ba374b7
