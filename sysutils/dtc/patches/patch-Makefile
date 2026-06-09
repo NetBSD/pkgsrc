@@ -1,21 +1,21 @@
-$NetBSD: patch-Makefile,v 1.4 2024/09/09 19:18:13 adam Exp $
+$NetBSD: patch-Makefile,v 1.5 2026/06/09 07:57:07 adam Exp $
 
 Use custom CFLAGS; do not fail on warnings.
 Fix install_name on Darwin.
 Link against shared library.
 
---- Makefile.orig	2024-08-17 08:22:16.000000000 +0000
+--- Makefile.orig	2026-05-28 02:40:45.000000000 +0000
 +++ Makefile
-@@ -21,7 +21,7 @@ CPPFLAGS = -I libfdt -I . -DFDT_ASSUME_M
- WARNINGS = -Wall -Wpointer-arith -Wcast-qual -Wnested-externs -Wsign-compare \
- 	-Wstrict-prototypes -Wmissing-prototypes -Wredundant-decls -Wshadow \
- 	-Wsuggest-attribute=format -Wwrite-strings
+@@ -28,7 +28,7 @@ WARNINGS = -Wall -Wpointer-arith -Wcast-
+ ifeq ($(shell $(CC) --version | grep -q gcc && echo gcc),gcc)
+ WARNINGS += -Wsuggest-attribute=format
+ endif
 -CFLAGS = -g -Os $(SHAREDLIB_CFLAGS) -Werror $(WARNINGS) $(EXTRA_CFLAGS)
 +CFLAGS = $(SHAREDLIB_CFLAGS) $(WARNINGS) $(EXTRA_CFLAGS)
  
  BISON = bison
  LEX = flex
-@@ -67,7 +67,7 @@ endif
+@@ -73,7 +73,7 @@ HAS_VERSION_SCRIPT := $(shell echo 'int
  ifeq ($(HOSTOS),darwin)
  SHAREDLIB_EXT     = dylib
  SHAREDLIB_CFLAGS  = -fPIC
