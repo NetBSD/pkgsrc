@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2025/12/25 09:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/09 07:52:22 adam Exp $
 
-DISTNAME=	graphite2-1.3.14
-PKGREVISION=	3
+DISTNAME=	graphite2-1.3.15
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=silnrsi/}
+GITHUB_PROJECT=	graphite
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,12 +12,9 @@ HOMEPAGE=	https://graphite.sil.org/
 COMMENT=	Cross-platform rendering for complex writing systems
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-
-USE_CXX_FEATURES+=	c++11
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
