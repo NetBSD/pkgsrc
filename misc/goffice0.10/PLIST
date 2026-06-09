@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/03/07 11:00:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/06/09 17:35:16 wiz Exp $
 include/libgoffice-0.10/goffice/app/error-info.h
 include/libgoffice-0.10/goffice/app/file.h
 include/libgoffice-0.10/goffice/app/go-cmd-context-impl.h
@@ -415,6 +415,7 @@ share/locale/id/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/it/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ja/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ka/LC_MESSAGES/goffice-${PKGVERSION}.mo
+share/locale/kk/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ko/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/lt/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/lv/LC_MESSAGES/goffice-${PKGVERSION}.mo
