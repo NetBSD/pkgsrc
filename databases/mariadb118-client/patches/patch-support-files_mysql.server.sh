@@ -1,4 +1,4 @@
-$NetBSD: patch-support-files_mysql.server.sh,v 1.2 2025/10/27 20:56:37 nia Exp $
+$NetBSD: patch-support-files_mysql.server.sh,v 1.3 2026/06/09 16:28:09 nia Exp $
 
 Shell portability.
 

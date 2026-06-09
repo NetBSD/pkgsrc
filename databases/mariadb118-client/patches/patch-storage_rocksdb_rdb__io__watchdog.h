@@ -1,4 +1,4 @@
-$NetBSD: patch-storage_rocksdb_rdb__io__watchdog.h,v 1.1 2025/06/07 08:58:43 nia Exp $
+$NetBSD: patch-storage_rocksdb_rdb__io__watchdog.h,v 1.2 2026/06/09 16:28:09 nia Exp $
 
 If timer_t is an integer type, setting it to nullptr fails.
 

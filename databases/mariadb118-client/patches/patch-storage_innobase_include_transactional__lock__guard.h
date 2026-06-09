@@ -1,4 +1,4 @@
-$NetBSD: patch-storage_innobase_include_transactional__lock__guard.h,v 1.1 2025/06/07 08:58:43 nia Exp $
+$NetBSD: patch-storage_innobase_include_transactional__lock__guard.h,v 1.2 2026/06/09 16:28:09 nia Exp $
 
 Strange build failures on NetBSD:
 error: 'rw_lock' is not an accessible base of 'page_hash_latch'
