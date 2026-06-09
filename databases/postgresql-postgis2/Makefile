@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2026/05/14 16:40:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.195 2026/06/09 09:10:48 gdt Exp $
 
 # Note that the PKGPATH remains "postgresql-postgis2", added during
 # postgis 1->2 migration, due to inertia and the pain of renaming.  So
@@ -42,7 +42,7 @@ USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
-PGSQL_VERSIONS_ACCEPTED=	17 16 15 14
+PGSQL_VERSIONS_ACCEPTED=	18 17 16 15 14
 
 # This isn't an option, but could be.
 CONFIGURE_ARGS+=	--with-address-standardizer
