@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27382 2026/06/09 17:51:20 wiz Exp $
+$NetBSD: TODO,v 1.27383 2026/06/09 17:55:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o binutils-2.46
 	o binutils-mips-current-2.36.1
 	o bioperl-1.7.8
-	o bk-0.8.0
 	o blender-5.1
 	o bliz++-0.10
 	o blogbench-1.2
@@ -604,7 +603,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
-	o entr-5.8
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-extensions-3.2.0
@@ -725,7 +723,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
-	o gnumeric112-1.12.61
 	o gnunet-0.27
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9

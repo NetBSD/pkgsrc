@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3673 2026/06/09 17:51:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3674 2026/06/09 17:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5592,3 +5592,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/goffice0.10 to 0.10.61 [wiz 2026-06-09]
 	Updated math/gnumeric112 to 1.12.61 [wiz 2026-06-09]
 	Updated print/fig2dev to 3.2.9a [wiz 2026-06-09]
+	Updated sysutils/entr to 5.8 [wiz 2026-06-09]
