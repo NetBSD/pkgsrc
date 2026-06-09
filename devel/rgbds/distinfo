@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:19:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/06/09 10:57:13 sjmulder Exp $
 
-BLAKE2s (rgbds-0.5.1.tar.gz) = a82d0bb2eb6b167c385eadf06705914dfd09af394c93cd622e826648ace8fd59
-SHA512 (rgbds-0.5.1.tar.gz) = dc29a94291a137a45bd6af45afaf7d98d29c16bbb66794b36236f53f4604ec0e4688e6542c80990e6e794d94e8fa5de13813d9764efe34e5a79fe68a66ce592c
-Size (rgbds-0.5.1.tar.gz) = 7938330 bytes
-SHA1 (patch-Makefile) = 2459ff1d685893e886a673ebc306bfa9e8f807ae
+BLAKE2s (rgbds-1.0.1.tar.gz) = cfad65083fa18ba7b6b3d07bcf524054b30dd6d277547691ded4d6e25ff9e712
+SHA512 (rgbds-1.0.1.tar.gz) = adc68fff379066b1be8a3a9342c67874845ca307f0fac79fc5e391a8c8cf15faa7c57bf997ec3dd4afe9fbcc502c637a0058c77df5c2e7f66429ae8417f7944e
+Size (rgbds-1.0.1.tar.gz) = 10559223 bytes
