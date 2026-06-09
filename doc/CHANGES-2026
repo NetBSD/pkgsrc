@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3666 2026/06/09 16:36:30 nia Exp $
+$NetBSD: CHANGES-2026,v 1.3667 2026/06/09 17:09:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5585,3 +5585,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mariadb114-server to 11.4.12 [nia 2026-06-09]
 	Updated databases/mariadb106-client to 10.6.27 [nia 2026-06-09]
 	Updated databases/mariadb106-server to 10.6.27 [nia 2026-06-09]
+	Updated graphics/adwaita-icon-theme to 50.0 [wiz 2026-06-09]
