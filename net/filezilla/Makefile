@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.188 2026/05/15 07:43:32 wiz Exp $
+# $NetBSD: Makefile,v 1.189 2026/06/09 18:03:50 wiz Exp $
 
-VERSION=	3.70.5
+VERSION=	3.70.6
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
@@ -31,7 +31,7 @@ USE_CXX_FEATURES+=	c++17
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.55.0
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.56.1
 .include "../../net/libfilezilla/buildlink3.mk"
 .include "../../net/fzssh/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
