@@ -1,19 +1,19 @@
-$NetBSD: patch-goffice_utils_go-glib-extras.c,v 1.1 2015/08/10 19:30:06 joerg Exp $
+$NetBSD: patch-goffice_utils_go-glib-extras.c,v 1.2 2026/06/09 17:35:16 wiz Exp $
 
 Format string is passed in as argument.
 
---- goffice/utils/go-glib-extras.c.orig	2015-08-10 16:27:43.000000000 +0000
+--- goffice/utils/go-glib-extras.c.orig	2026-04-30 00:44:54.000000000 +0000
 +++ goffice/utils/go-glib-extras.c
-@@ -893,6 +893,8 @@ go_object_toggle (gpointer object, const
- 	g_object_set (object, property_name, !value, NULL);
+@@ -957,6 +957,8 @@ go_destroy_password (char *passwd)
+ 	memset (passwd, 0, strlen (passwd));
  }
  
 +#pragma GCC diagnostic push
 +#pragma GCC diagnostic ignored "-Wformat-nonliteral"
  
- gboolean
- go_object_set_property (GObject *obj, const char *property_name,
-@@ -963,8 +965,7 @@ go_object_set_property (GObject *obj, co
+ /**
+  * go_memdup:
+@@ -1115,8 +1117,7 @@ go_object_set_property (GObject *obj, const char *prop
  		return TRUE;
  }
  

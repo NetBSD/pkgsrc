@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2026/03/07 11:00:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.78 2026/06/09 17:35:16 wiz Exp $
 
-DISTNAME=	goffice-0.10.60
+DISTNAME=	goffice-0.10.61
 PKGNAME=	${DISTNAME:S/goffice/goffice0.10/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goffice/${PKGVERSION_NOREV:R}/}
@@ -13,10 +13,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
+USE_TOOLS+=		bison gmake intltool msgfmt pkg-config perl
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libgoffice.pc.in
 TEST_TARGET=		check
+
+REPLACE_PERL+=		tests/t8000-multipass.pl
+REPLACE_PERL+=		tools/check-multipass
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -35,6 +38,6 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.22.0
 .include "../../graphics/lasem/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.7
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.20
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
