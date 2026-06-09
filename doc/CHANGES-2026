@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3681 2026/06/09 23:13:20 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3682 2026/06/09 23:26:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/dialog to 1.3.20260107 [wiz 2026-06-09]
 	Updated devel/boehm-gc to 8.2.12 [wiz 2026-06-09]
 	Updated math/R-reshape2 to 1.4.5 [mef 2026-06-09]
+	Updated math/R-dplyr to 1.2.1nb1 [mef 2026-06-09]
