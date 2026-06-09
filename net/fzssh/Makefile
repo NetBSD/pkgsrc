@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/05/15 07:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/09 17:57:02 wiz Exp $
 
-DISTNAME=	fzssh-1.2.1
+DISTNAME=	fzssh-1.3.0
 CATEGORIES=	net
 MASTER_SITES=	# scraper ownload protection, download manually
 EXTRACT_SUFX=	.tar.xz
