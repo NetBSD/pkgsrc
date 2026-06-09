@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3660 2026/06/09 13:47:55 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3661 2026/06/09 14:58:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5575,3 +5575,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-ruby_smb to 3.3.21 [taca 2026-06-09]
 	Updated devel/php-xdebug to 3.5.3 [taca 2026-06-09]
 	Updated devel/R-BH to 1.90.0.1 [mef 2026-06-09]
+	Updated security/openssl to 3.6.3 [adam 2026-06-09]
+	Updated www/py-tornado to 6.5.7 [adam 2026-06-09]
