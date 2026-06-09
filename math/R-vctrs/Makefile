@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2024/01/21 07:51:09 mef Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/09 03:20:35 mef Exp $
 
 R_PKGNAME=	vctrs
-R_PKGVER=	0.6.5
+R_PKGVER=	0.7.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Vector helpers
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	R-assertthat-[0-9]*:../../devel/R-assertthat
 DEPENDS+=	R-backports>=1.1.4:../../math/R-backports
 DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli
 DEPENDS+=	R-digest>=0.6.25:../../security/R-digest
 DEPENDS+=	R-ellipsis>=0.2.0:../../math/R-ellipsis
 DEPENDS+=	R-glue>=1.4.1:../../devel/R-glue
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
-DEPENDS+=	R-rlang>=1.0.11:../../devel/R-rlang
+DEPENDS+=	R-rlang>=1.1.7:../../devel/R-rlang
 DEPENDS+=	R-zeallot>=0.1.0:../../math/R-zeallot
 
 TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
