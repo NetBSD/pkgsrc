@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3649 2026/06/09 05:49:24 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3650 2026/06/09 07:01:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5563,3 +5563,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/fast_float to 8.2.8 [adam 2026-06-09]
 	Updated net/grpc to 1.81.1 [adam 2026-06-09]
 	Updated devel/R-lifecycle to 1.0.5 [mef 2026-06-09]
+	Updated shells/bash to 5.3.12 [wiz 2026-06-09]
