@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27380 2026/06/09 17:17:37 wiz Exp $
+$NetBSD: TODO,v 1.27381 2026/06/09 17:18:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -744,7 +744,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gp-grpconst-2.6.5
 	o gpac-26.02.0
 	o gperiodic-3.0.3
-	o gpgmepp-2.1.0
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-12.3.1 [wip]
