@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3664 2026/06/09 16:28:32 nia Exp $
+$NetBSD: CHANGES-2026,v 1.3665 2026/06/09 16:32:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5581,3 +5581,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mercurial to 7.2.2 [wiz 2026-06-09]
 	Updated databases/mariadb118-client to 11.8.8 [nia 2026-06-09]
 	Updated databases/mariadb118-server to 11.8.8 [nia 2026-06-09]
+	Updated databases/mariadb114-client to 11.4.12 [nia 2026-06-09]
+	Updated databases/mariadb114-server to 11.4.12 [nia 2026-06-09]
