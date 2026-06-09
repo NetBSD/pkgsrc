@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/05/05 13:15:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/06/09 13:24:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/metasploit-framework_acceptance.yml
 ${GEM_LIBDIR}/.github/workflows/verify.yml
@@ -409,6 +409,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_file_information_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_file_information_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_fs_information_level.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_fs_information_level/query_fs_attribute_info.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_fs_information_level/query_fs_cifs_unix_info.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_fs_information_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_fs_information_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/query_information_level.rb
@@ -421,6 +422,12 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/request_secondary.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_file_information_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_file_information_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_fs_information_level.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_fs_information_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_fs_information_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_information_level.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_path_information_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/set_path_information_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/subcommands.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/trans2/win9x_framing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb1/packet/tree_connect_request.rb
@@ -760,6 +767,10 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_file_information_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_file_information_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_fs_information_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_fs_information_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_path_information_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/set_path_information_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/trans2/win9x_framing_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/tree_connect_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb1/packet/tree_connect_response_spec.rb
