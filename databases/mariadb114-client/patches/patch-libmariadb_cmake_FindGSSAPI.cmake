@@ -1,12 +1,12 @@
-$NetBSD: patch-libmariadb_cmake_FindGSSAPI.cmake,v 1.1 2024/08/21 21:08:34 nia Exp $
+$NetBSD: patch-libmariadb_cmake_FindGSSAPI.cmake,v 1.2 2026/06/09 16:32:02 nia Exp $
 
 Use pkgsrc provided krb5-config.
 
---- libmariadb/cmake/FindGSSAPI.cmake.orig	2024-07-22 18:44:49.199556247 +0000
+--- libmariadb/cmake/FindGSSAPI.cmake.orig	2026-05-23 19:43:02.000000000 +0000
 +++ libmariadb/cmake/FindGSSAPI.cmake
-@@ -46,11 +46,6 @@ if(GSSAPI_LIBS AND GSSAPI_FLAVOR)
+@@ -46,11 +46,6 @@ else()
  
- else(GSSAPI_LIBS AND GSSAPI_FLAVOR)
+ else()
  
 -  find_program(KRB5_CONFIG NAMES krb5-config PATHS
 -     /opt/local/bin

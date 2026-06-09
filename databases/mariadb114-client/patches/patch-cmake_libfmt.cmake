@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_libfmt.cmake,v 1.5 2025/10/27 20:53:45 nia Exp $
+$NetBSD: patch-cmake_libfmt.cmake,v 1.6 2026/06/09 16:32:02 nia Exp $
 
 Disable broken libfmt detection.
 
