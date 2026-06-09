@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/06/09 07:03:08 wiz Exp $
 
-DISTNAME=		convmv-2.05
-PKGREVISION=		5
+DISTNAME=		convmv-2.06
 CATEGORIES=		converters
 MASTER_SITES=		https://www.j3e.de/linux/convmv/
 
@@ -22,9 +21,8 @@ MAKE_FLAGS+=		INSTALL_SCRIPT_DIR=${INSTALL_SCRIPT_DIR:Q}
 MAKE_FLAGS+=		INSTALL_MAN=${INSTALL_MAN:Q}
 MAKE_FLAGS+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 
-REPLACE_PERL+=		${WRKSRC}/convmv
+REPLACE_PERL+=		convmv
 REPLACE_PERL+=		suite/parsable_tester.pl
-REPLACE_SH+=		suite/dotests.sh
 
 CHECK_PORTABILITY_SKIP=	suite/test-nfd/*
 
@@ -32,7 +30,7 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} != Darwin
 post-extract:
 	# use option p to get the right permissions for symlinks
 	cd ${WRKSRC} && pax -p p -rf testsuite.tar
