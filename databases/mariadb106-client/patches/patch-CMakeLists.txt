@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2025/10/27 20:51:00 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2026/06/09 16:36:05 nia Exp $
 
 Allow building a server-only configuration.
 
