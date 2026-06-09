@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/06/07 08:58:42 nia Exp $
+# $NetBSD: options.mk,v 1.2 2026/06/09 16:28:09 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-client
 

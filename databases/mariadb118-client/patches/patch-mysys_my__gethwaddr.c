@@ -1,4 +1,4 @@
-$NetBSD: patch-mysys_my__gethwaddr.c,v 1.2 2025/10/27 20:56:37 nia Exp $
+$NetBSD: patch-mysys_my__gethwaddr.c,v 1.3 2026/06/09 16:28:09 nia Exp $
 
 SunOS doesn't support hwaddr.
 

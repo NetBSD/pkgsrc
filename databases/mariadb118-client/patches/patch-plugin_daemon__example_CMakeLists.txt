@@ -1,4 +1,4 @@
-$NetBSD: patch-plugin_daemon__example_CMakeLists.txt,v 1.1 2025/06/07 08:58:43 nia Exp $
+$NetBSD: patch-plugin_daemon__example_CMakeLists.txt,v 1.2 2026/06/09 16:28:09 nia Exp $
 
 Allow building a server-only configuration.
 
