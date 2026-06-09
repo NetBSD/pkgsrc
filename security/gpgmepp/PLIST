@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/01/29 13:49:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/09 17:18:30 wiz Exp $
 include/gpgme++/configuration.h
 include/gpgme++/context.h
 include/gpgme++/data.h
@@ -10,6 +10,7 @@ include/gpgme++/engineinfo.h
 include/gpgme++/error.h
 include/gpgme++/eventloopinteractor.h
 include/gpgme++/exception.h
+include/gpgme++/flags.h
 include/gpgme++/global.h
 include/gpgme++/gpgaddexistingsubkeyeditinteractor.h
 include/gpgme++/gpgadduserideditinteractor.h
@@ -49,5 +50,5 @@ lib/cmake/Gpgmepp/GpgmeppTargets-noconfig.cmake
 lib/cmake/Gpgmepp/GpgmeppTargets.cmake
 lib/libgpgmepp.so
 lib/libgpgmepp.so.7
-lib/libgpgmepp.so.7.0.0
+lib/libgpgmepp.so.7.1.0
 lib/pkgconfig/gpgmepp.pc
