@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38.4.1 2026/05/07 22:47:02 maya Exp $
+@comment $NetBSD: PLIST,v 1.38.4.2 2026/06/09 22:55:47 maya Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -245,6 +245,7 @@ share/httpd/build/special.mk
 share/httpd/error/HTTP_BAD_GATEWAY.html.var
 share/httpd/error/HTTP_BAD_REQUEST.html.var
 share/httpd/error/HTTP_FORBIDDEN.html.var
+share/httpd/error/HTTP_GATEWAY_TIME_OUT.html.var
 share/httpd/error/HTTP_GONE.html.var
 share/httpd/error/HTTP_INTERNAL_SERVER_ERROR.html.var
 share/httpd/error/HTTP_LENGTH_REQUIRED.html.var
@@ -513,6 +514,7 @@ share/httpd/manual/bind.html.en
 share/httpd/manual/bind.html.fr.utf8
 share/httpd/manual/bind.html.ja.utf8
 share/httpd/manual/bind.html.ko.euc-kr
+share/httpd/manual/bind.html.pt-br.utf8
 share/httpd/manual/bind.html.tr.utf8
 share/httpd/manual/caching.html
 share/httpd/manual/caching.html.en
@@ -601,6 +603,7 @@ share/httpd/manual/filter.html.es
 share/httpd/manual/filter.html.fr.utf8
 share/httpd/manual/filter.html.ja.utf8
 share/httpd/manual/filter.html.ko.euc-kr
+share/httpd/manual/filter.html.pt-br.utf8
 share/httpd/manual/filter.html.tr.utf8
 share/httpd/manual/getting-started.html
 share/httpd/manual/getting-started.html.en
@@ -646,6 +649,7 @@ share/httpd/manual/howto/htaccess.html.fr.utf8
 share/httpd/manual/howto/htaccess.html.ja.utf8
 share/httpd/manual/howto/htaccess.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html.pt-br
+share/httpd/manual/howto/htaccess.html.pt-br.utf8
 share/httpd/manual/howto/http2.html
 share/httpd/manual/howto/http2.html.en
 share/httpd/manual/howto/http2.html.es
@@ -690,24 +694,27 @@ share/httpd/manual/images/favicon.png
 share/httpd/manual/images/feather.gif
 share/httpd/manual/images/feather.png
 share/httpd/manual/images/filter_arch.png
+share/httpd/manual/images/filter_arch.pt-br.png
 share/httpd/manual/images/filter_arch.tr.png
 share/httpd/manual/images/home.gif
 share/httpd/manual/images/index.gif
 share/httpd/manual/images/left.gif
 share/httpd/manual/images/mod_filter_new.gif
 share/httpd/manual/images/mod_filter_new.png
+share/httpd/manual/images/mod_filter_new.pt-br.png
 share/httpd/manual/images/mod_filter_new.tr.png
 share/httpd/manual/images/mod_filter_old.gif
 share/httpd/manual/images/mod_filter_old.png
-share/httpd/manual/images/mod_rewrite_fig1.gif
 share/httpd/manual/images/mod_rewrite_fig1.png
-share/httpd/manual/images/mod_rewrite_fig2.gif
+share/httpd/manual/images/mod_rewrite_fig1.svg
 share/httpd/manual/images/mod_rewrite_fig2.png
+share/httpd/manual/images/mod_rewrite_fig2.svg
 share/httpd/manual/images/pixel.gif
 share/httpd/manual/images/reverse-proxy-arch.png
 share/httpd/manual/images/rewrite_backreferences.png
+share/httpd/manual/images/rewrite_backreferences.svg
 share/httpd/manual/images/rewrite_process_uri.png
-share/httpd/manual/images/rewrite_rule_flow.png
+share/httpd/manual/images/rewrite_process_uri.svg
 share/httpd/manual/images/right.gif
 share/httpd/manual/images/ssl_intro_fig1.gif
 share/httpd/manual/images/ssl_intro_fig1.png
@@ -717,7 +724,9 @@ share/httpd/manual/images/ssl_intro_fig3.gif
 share/httpd/manual/images/ssl_intro_fig3.png
 share/httpd/manual/images/sub.gif
 share/httpd/manual/images/syntax_rewritecond.png
+share/httpd/manual/images/syntax_rewritecond.svg
 share/httpd/manual/images/syntax_rewriterule.png
+share/httpd/manual/images/syntax_rewriterule.svg
 share/httpd/manual/images/up.gif
 share/httpd/manual/index.html
 share/httpd/manual/index.html.da
@@ -728,6 +737,7 @@ share/httpd/manual/index.html.fr.utf8
 share/httpd/manual/index.html.ja.utf8
 share/httpd/manual/index.html.ko.euc-kr
 share/httpd/manual/index.html.pt-br
+share/httpd/manual/index.html.pt-br.utf8
 share/httpd/manual/index.html.ru.utf8
 share/httpd/manual/index.html.tr.utf8
 share/httpd/manual/index.html.zh-cn.utf8
@@ -738,6 +748,7 @@ share/httpd/manual/install.html.es
 share/httpd/manual/install.html.fr.utf8
 share/httpd/manual/install.html.ja.utf8
 share/httpd/manual/install.html.ko.euc-kr
+share/httpd/manual/install.html.pt-br.utf8
 share/httpd/manual/install.html.tr.utf8
 share/httpd/manual/invoking.html
 share/httpd/manual/invoking.html.de
@@ -746,6 +757,7 @@ share/httpd/manual/invoking.html.es
 share/httpd/manual/invoking.html.fr.utf8
 share/httpd/manual/invoking.html.ja.utf8
 share/httpd/manual/invoking.html.ko.euc-kr
+share/httpd/manual/invoking.html.pt-br.utf8
 share/httpd/manual/invoking.html.tr.utf8
 share/httpd/manual/license.html
 share/httpd/manual/license.html.en
@@ -1356,16 +1368,19 @@ share/httpd/manual/new_features_2_0.html.fr.utf8
 share/httpd/manual/new_features_2_0.html.ja.utf8
 share/httpd/manual/new_features_2_0.html.ko.euc-kr
 share/httpd/manual/new_features_2_0.html.pt-br
+share/httpd/manual/new_features_2_0.html.pt-br.utf8
 share/httpd/manual/new_features_2_0.html.tr.utf8
 share/httpd/manual/new_features_2_2.html
 share/httpd/manual/new_features_2_2.html.en
 share/httpd/manual/new_features_2_2.html.fr.utf8
 share/httpd/manual/new_features_2_2.html.ko.euc-kr
 share/httpd/manual/new_features_2_2.html.pt-br
+share/httpd/manual/new_features_2_2.html.pt-br.utf8
 share/httpd/manual/new_features_2_2.html.tr.utf8
 share/httpd/manual/new_features_2_4.html
 share/httpd/manual/new_features_2_4.html.en
 share/httpd/manual/new_features_2_4.html.fr.utf8
+share/httpd/manual/new_features_2_4.html.pt-br.utf8
 share/httpd/manual/new_features_2_4.html.tr.utf8
 share/httpd/manual/platform/ebcdic.html
 share/httpd/manual/platform/ebcdic.html.en
@@ -1597,6 +1612,7 @@ share/httpd/manual/suexec.html.tr.utf8
 share/httpd/manual/upgrading.html
 share/httpd/manual/upgrading.html.en
 share/httpd/manual/upgrading.html.fr.utf8
+share/httpd/manual/upgrading.html.pt-br.utf8
 share/httpd/manual/urlmapping.html
 share/httpd/manual/urlmapping.html.en
 share/httpd/manual/urlmapping.html.fr.utf8
