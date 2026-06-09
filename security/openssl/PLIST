@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/04/07 18:37:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/06/09 14:57:03 adam Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -579,6 +579,10 @@ man/man3/BIO_new_socket.3
 man/man3/BIO_new_ssl.3
 man/man3/BIO_new_ssl_connect.3
 man/man3/BIO_next.3
+man/man3/BIO_nread.3
+man/man3/BIO_nread0.3
+man/man3/BIO_nwrite.3
+man/man3/BIO_nwrite0.3
 man/man3/BIO_parse_hostserv.3
 man/man3/BIO_pending.3
 man/man3/BIO_pop.3
@@ -1014,10 +1018,12 @@ man/man3/CRYPTO_mem_leaks.3
 man/man3/CRYPTO_mem_leaks_cb.3
 man/man3/CRYPTO_mem_leaks_fp.3
 man/man3/CRYPTO_memcmp.3
+man/man3/CRYPTO_memdup.3
 man/man3/CRYPTO_new_ex_data.3
 man/man3/CRYPTO_realloc.3
 man/man3/CRYPTO_realloc_array.3
 man/man3/CRYPTO_realloc_fn.3
+man/man3/CRYPTO_secure_actual_size.3
 man/man3/CRYPTO_secure_allocated.3
 man/man3/CRYPTO_secure_calloc.3
 man/man3/CRYPTO_secure_clear_free.3
