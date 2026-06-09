@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/09 15:05:34 adam Exp $
+
+BLAKE2s (clickhouse-cpp-2.6.1.tar.gz) = 09c04c50bda48590bd3f1045547422c208ab6d456572bc38b71600cd01931da9
+SHA512 (clickhouse-cpp-2.6.1.tar.gz) = 626cce4d6037cbeb86c5720ece7ac95c9ff0e561825e7907934669709091886d209f3128798db41a89ef3585d0639e40a5c4f96a0e724b6bee25291710ad391e
+Size (clickhouse-cpp-2.6.1.tar.gz) = 1135714 bytes
