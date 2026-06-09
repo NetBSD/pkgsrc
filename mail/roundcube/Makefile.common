@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42.2.1 2026/03/31 14:36:44 maya Exp $
+# $NetBSD: Makefile.common,v 1.42.2.2 2026/06/09 21:41:00 maya Exp $
 #
 # used by mail/roundcube/Makefile
 # used by mail/roundcube/plugins.mk
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	roundcubemail
 GITHUB_RELEASE=	${RC_VERS}
 HOMEPAGE=	https://roundcube.net/
 
-RC_VERS=	1.6.15
+RC_VERS=	1.6.16
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax

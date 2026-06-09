@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2026/03/18 14:58:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.59.2.1 2026/06/09 21:41:00 maya Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2134,6 +2134,7 @@ share/roundcube/vendor/guzzlehttp/guzzle/src/functions_include.php
 share/roundcube/vendor/guzzlehttp/promises/CHANGELOG.md
 share/roundcube/vendor/guzzlehttp/promises/LICENSE
 share/roundcube/vendor/guzzlehttp/promises/README.md
+share/roundcube/vendor/guzzlehttp/promises/UPGRADING.md
 share/roundcube/vendor/guzzlehttp/promises/composer.json
 share/roundcube/vendor/guzzlehttp/promises/src/AggregateException.php
 share/roundcube/vendor/guzzlehttp/promises/src/CancellationException.php
@@ -2154,6 +2155,7 @@ share/roundcube/vendor/guzzlehttp/promises/src/Utils.php
 share/roundcube/vendor/guzzlehttp/psr7/CHANGELOG.md
 share/roundcube/vendor/guzzlehttp/psr7/LICENSE
 share/roundcube/vendor/guzzlehttp/psr7/README.md
+share/roundcube/vendor/guzzlehttp/psr7/UPGRADING.md
 share/roundcube/vendor/guzzlehttp/psr7/composer.json
 share/roundcube/vendor/guzzlehttp/psr7/src/AppendStream.php
 share/roundcube/vendor/guzzlehttp/psr7/src/BufferStream.php
