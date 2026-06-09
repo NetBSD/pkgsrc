@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3645 2026/06/08 20:55:33 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3646 2026/06/09 01:23:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5558,3 +5558,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/kitty to 0.47.2 [ktnb 2026-06-08]
 	Removed filesystems/perfuse [gdt 2026-06-08]
 	Updated math/R-ellipsis to 0.3.3 [mef 2026-06-08]
+	Updated www/apache24 to 2.4.68 [taca 2026-06-09]
