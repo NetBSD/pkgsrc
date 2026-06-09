@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2026/03/07 10:53:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.114 2026/06/09 17:48:34 wiz Exp $
 
-DISTNAME=	gnumeric-1.12.60
+DISTNAME=	gnumeric-1.12.61
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,8 +17,22 @@ USE_TOOLS+=		itstool
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
+REPLACE_PERL+=		doc/make-func-list.pl
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
+REPLACE_PERL+=		plugins/perl-loader/perl-cc-wrapper
 REPLACE_PERL+=		test/*.pl
+REPLACE_PERL+=		test/normalize-gnumeric
+REPLACE_PERL+=		tools/biffnames
+REPLACE_PERL+=		tools/check-gfrees
+REPLACE_PERL+=		tools/check-glade-parsing
+REPLACE_PERL+=		tools/check-gtk-includes
+REPLACE_PERL+=		tools/check-null-false-returns
+REPLACE_PERL+=		tools/dumpdef.pl
+REPLACE_PERL+=		tools/embedder
+REPLACE_PERL+=		tools/gnmgdb
+REPLACE_PERL+=		tools/gnmvalgrind
+REPLACE_PERL+=		tools/handle-conf-options
+REPLACE_PERL+=		tools/itstoolwrapper
 
 # needs a DISPLAY
 TEST_TARGET=		check
@@ -38,10 +52,10 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.33
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.57
+BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.61
 .include "../../misc/goffice0.10/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.7
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.20
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/pyversion.mk"
