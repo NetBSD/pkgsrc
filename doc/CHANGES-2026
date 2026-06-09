@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3655 2026/06/09 11:55:28 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3656 2026/06/09 13:11:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-gnssutils to 1.2.3 [gdt 2026-06-09]
 	Updated devel/rgbds to 1.0.1 [sjmulder 2026-06-09]
 	Updated textproc/R-xml2 to 1.5.2 [mef 2026-06-09]
+	Updated www/typo3-13 to 13.4.31 [taca 2026-06-09]
