@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/09 17:17:25 wiz Exp $
 
-DISTNAME=	dotconf-1.3
+DISTNAME=	dotconf-1.4.1
 CATEGORIES=	devel
-MASTER_SITES=	http://files.opentts.org/dotconf/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=williamh/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.opentts.org/projects/dotconf
+HOMEPAGE=	https://github.com/williamh/dotconf
 COMMENT=	Simple-to-use and powerful configuration-file parser library
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake autoreconf
 
 PKGCONFIG_OVERRIDE+=	dotconf.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
