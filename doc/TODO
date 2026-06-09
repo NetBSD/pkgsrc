@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27379 2026/06/09 17:13:18 wiz Exp $
+$NetBSD: TODO,v 1.27380 2026/06/09 17:17:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -577,7 +577,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doas-6.4 [project migrated to Codeberg]
 	o dotclear-2.53
-	o dotconf-1.4.1
 	o dovecot-2.4.4 [CVE-2025-30189]
 	o dovecot2-pigeonhole-2.4.4 [needs dovecot2 2.4]
 	o drawpile-2.1.20
