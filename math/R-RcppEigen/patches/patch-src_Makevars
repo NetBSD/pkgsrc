@@ -1,0 +1,26 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/06/09 12:32:34 mef Exp $
+
+- The Problem is:
+  RcppEigen.so: Undefined PLT symbol "backtrace_symbols" (symnum = 108)
+
+- The symbol "backtrace_symbols" is defined in /usr/lib/libexecinfo
+  at *BSD OS
+
+- R package does not honor LIBS+= parameter, due to real build is done
+  at (pkgsrc) install stage
+
+- Neither bmake (.if eq ... .endif) nor gmake ( ifneq .. endif) does work
+  in src/Makevars
+
+- So the condition branch will be done at SUBST mechanism
+
+--- src/Makevars.orig	2023-07-21 06:30:13.000000000 +0900
++++ src/Makevars	2026-06-09 21:06:42.551092341 +0900
+@@ -5,6 +5,7 @@ PKG_CXXFLAGS = -I../inst/include
+ 
+ ## One could add '-fopenmp' here (and above) for multithreaded operations
+ PKG_LIBS = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
++@@PKG_LIBS@@
+ 
+ ## We are not enabling multithreaded operations by default because this would be
+ ## a change in behaviour that would like create trouble for packages using RcppEigen

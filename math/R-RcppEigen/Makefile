@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/26 11:55:30 mef Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/09 12:32:34 mef Exp $
 
 R_PKGNAME=	RcppEigen
 R_PKGVER=	0.3.4.0.2
@@ -24,6 +24,17 @@ TEST_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 
 USE_LANGUAGES=		c c++ fortran
 USE_CXX_FEATURES+=	c++11
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != SunOS
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
