@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3658 2026/06/09 13:24:44 taca Exp $
+$NetBSD: CHANGES-2026,v 1.3659 2026/06/09 13:28:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-13 to 13.4.31 [taca 2026-06-09]
 	Updated devel/ruby-msgpack to 1.8.2 [taca 2026-06-09]
 	Updated net/ruby-ruby_smb to 3.3.21 [taca 2026-06-09]
+	Updated devel/php-xdebug to 3.5.3 [taca 2026-06-09]
