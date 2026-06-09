@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3662 2026/06/09 15:05:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3663 2026/06/09 15:41:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5578,3 +5578,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssl to 3.6.3 [adam 2026-06-09]
 	Updated www/py-tornado to 6.5.7 [adam 2026-06-09]
 	Added databases/clickhouse-cpp version 2.6.1 [adam 2026-06-09]
+	Updated devel/py-mercurial to 7.2.2 [wiz 2026-06-09]
