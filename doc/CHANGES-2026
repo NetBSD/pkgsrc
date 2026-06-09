@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3672 2026/06/09 17:48:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3673 2026/06/09 17:51:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5591,3 +5591,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gpgmepp to 2.1.0 [wiz 2026-06-09]
 	Updated misc/goffice0.10 to 0.10.61 [wiz 2026-06-09]
 	Updated math/gnumeric112 to 1.12.61 [wiz 2026-06-09]
+	Updated print/fig2dev to 3.2.9a [wiz 2026-06-09]
