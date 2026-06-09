@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/04/03 16:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2026/06/09 15:41:38 wiz Exp $
 #
 # Changelog sometimes at: https://mercurial-scm.org/news
 
@@ -30,8 +30,17 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=	bash:test
-# Test status as of 7.2.1 as !root
-# tests/test-revlog-mmapindex.t (race condition / buffer)
+# Test status as of 7.2.2 as !root
+# Ran 985 tests, 84 skipped, 9 failed.
+# Failed test-copies-chain-merge.t#pull: timed out
+# Failed test-copies-chain-merge.t#pull-upgrade: timed out
+# Failed test-copies-chain-merge.t#push: timed out
+# Failed test-copies-chain-merge.t#push-upgrade: timed out
+# Failed test-copies-chain-merge.t#sidedata: timed out
+# Failed test-copies-chain-merge.t#upgraded: timed out
+# Failed test-copies-chain-merge.t#upgraded-parallel: timed out
+# Failed test-revlog-mmapindex.t: output changed
+# Failed test-revset.t: timed out
 
 .if make(test)
 # tries to build/install wheel
