@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.188 2026/04/07 18:37:35 wiz Exp $
+$NetBSD: distinfo,v 1.189 2026/06/09 14:57:03 adam Exp $
 
-BLAKE2s (openssl-3.6.2.tar.gz) = a66d68bf51f8c83fead828c4a8e91e73f77ebe16513d8d579b1b5646454ab358
-SHA512 (openssl-3.6.2.tar.gz) = 46549ed4d6b0160adfa3e1406bc16f3083a7f3c85bdda289c1dbebd0db91433c39855dae765787ec68157faffba4cdb05a0600af4652e3e35da939e0bad8ef1e
-Size (openssl-3.6.2.tar.gz) = 54913556 bytes
+BLAKE2s (openssl-3.6.3.tar.gz) = 805be28e9457a3da03cf81331cc9cda847505771385ebccf33fe84e264593e2a
+SHA512 (openssl-3.6.3.tar.gz) = 4179ad56f285fd27a1c7b294472afdca588e915d4f8a9610e461f34f0678004aebe32e88434ae536a63a7c9aff6607702a3b341e2faacb7899c27d6def4cc92d
+Size (openssl-3.6.3.tar.gz) = 54953005 bytes
 SHA1 (patch-Configurations_unix-Makefile.tmpl) = ea9b0a0c8de810362813d84a4f85c5ebdedf9fc6
 SHA1 (patch-util_perl_OpenSSL_config.pm) = 3ba3c23046bf69c7d348b4c1c8c8269d83cfa2b4
