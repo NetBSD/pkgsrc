@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/06/09 23:13:07 mef Exp $
 
-BLAKE2s (R/reshape2_1.4.4.tar.gz) = b2937c025a6c0872c6cfc7e612effe99125e980ff750cfe4636ca3fa56241dea
-SHA512 (R/reshape2_1.4.4.tar.gz) = 7378ca67e076100014df8a35cfd89e828387f3b09c0f546daf5f1532865dad227eb0adb849a8195ce536c91f04c64b2f875ac18c755b7b77f2ebe23dd9fbf545
-Size (R/reshape2_1.4.4.tar.gz) = 37307 bytes
+BLAKE2s (R/reshape2_1.4.5.tar.gz) = c61cbf9a5d2e8cf33745147e3a2eabec2fcc714efb27b5cb55cd94604051e91f
+SHA512 (R/reshape2_1.4.5.tar.gz) = 85cb69aabfa71d264eae0f40b52c18f3d5cbe171a2314dbcfac8824aa91c6295f80af5ae3449ce974b31258fb89be60629624f42e35b883f7ce4c3ebbffdc7fc
+Size (R/reshape2_1.4.5.tar.gz) = 38080 bytes
