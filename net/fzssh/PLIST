@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/15 07:41:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/09 17:57:02 wiz Exp $
 include/fzssh/agent.hpp
 include/fzssh/client.hpp
 include/fzssh/privkey.hpp
@@ -10,9 +10,9 @@ include/fzssh/version.hpp
 include/fzssh/visibility.hpp
 include/fzssh/visibility_client.hpp
 lib/libfzssh-client.so
-lib/libfzssh-client.so.12.0.0
+lib/libfzssh-client.so.13.0.0
 lib/libfzssh-crypt.so
-lib/libfzssh-crypt.so.12.0.0
+lib/libfzssh-crypt.so.13.0.0
 lib/libfzssh.so
-lib/libfzssh.so.12.0.0
+lib/libfzssh.so.13.0.0
 lib/pkgconfig/libfzssh-client.pc
