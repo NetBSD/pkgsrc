@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3687 2026/06/10 07:34:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3688 2026/06/10 10:59:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5610,3 +5610,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/yt-dlp to 2026.6.9 [adam 2026-06-10]
 	Updated devel/py-xbe to 1.0.4 [adam 2026-06-10]
 	Updated shells/oh-my-posh to 29.15.0 [pin 2026-06-10]
+	Updated databases/mariadb1011-client to 10.11.18 [nia 2026-06-10]
+	Updated databases/mariadb1011-embedded to 10.11.18 [nia 2026-06-10]
+	Updated databases/mariadb1011-server to 10.11.18 [nia 2026-06-10]
