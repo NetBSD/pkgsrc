@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/10/27 20:48:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/10 10:59:01 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
@@ -62,9 +62,6 @@ include/mysql/mysql_com.h
 include/mysql/mysql_version.h
 include/mysql/mysqld_error.h
 include/mysql/server/big_endian.h
-include/mysql/server/byte_order_generic.h
-include/mysql/server/byte_order_generic_x86.h
-include/mysql/server/byte_order_generic_x86_64.h
 include/mysql/server/decimal.h
 include/mysql/server/errmsg.h
 include/mysql/server/handler_ername.h

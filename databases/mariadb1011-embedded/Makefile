@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/05/14 16:40:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2026/06/10 10:59:02 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
-PKGREVISION=	6
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (embedded)
 
 # for the header files needed by the installed header file of this package
@@ -208,6 +207,7 @@ post-install:
 		include/mysql/server/private/sql_callback.h \
 		include/mysql/server/private/sql_class.h \
 		include/mysql/server/private/sql_cmd.h \
+		include/mysql/server/private/sql_command.h \
 		include/mysql/server/private/sql_connect.h \
 		include/mysql/server/private/sql_const.h \
 		include/mysql/server/private/sql_crypt.h \
@@ -322,55 +322,8 @@ post-install:
 		include/mysql/server/private/wsrep_xid.h \
 		include/mysql/server/private/xa.h \
 		lib/libmysqlservices.a \
-		lib/mysql/plugin/adt_null.so \
-		lib/mysql/plugin/auth_0x0100.so \
-		lib/mysql/plugin/auth_ed25519.so \
-		lib/mysql/plugin/auth_gssapi.so \
-		lib/mysql/plugin/auth_pam.so \
-		lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool \
-		lib/mysql/plugin/auth_pam_v1.so \
-		lib/mysql/plugin/auth_test_plugin.so \
-		lib/mysql/plugin/daemon_example.ini \
-		lib/mysql/plugin/debug_key_management.so \
-		lib/mysql/plugin/dialog_examples.so \
-		lib/mysql/plugin/disks.so \
-		lib/mysql/plugin/example_key_management.so \
-		lib/mysql/plugin/file_key_management.so \
-		lib/mysql/plugin/func_test.so \
-		lib/mysql/plugin/ha_archive.so \
-		lib/mysql/plugin/ha_blackhole.so \
-		lib/mysql/plugin/ha_connect.so \
-		lib/mysql/plugin/ha_federated.so \
-		lib/mysql/plugin/ha_federatedx.so \
-		lib/mysql/plugin/ha_rocksdb.so \
-		lib/mysql/plugin/ha_s3.so \
-		lib/mysql/plugin/ha_sphinx.so \
-		lib/mysql/plugin/ha_spider.so \
-		lib/mysql/plugin/ha_test_sql_discovery.so \
-		lib/mysql/plugin/handlersocket.so \
-		lib/mysql/plugin/hashicorp_key_management.so \
-		lib/mysql/plugin/libdaemon_example.so \
-		lib/mysql/plugin/locales.so \
-		lib/mysql/plugin/metadata_lock_info.so \
-		lib/mysql/plugin/mypluglib.so \
-		lib/mysql/plugin/password_reuse_check.so \
-		lib/mysql/plugin/provider_bzip2.so \
-		lib/mysql/plugin/provider_lzma.so \
-		lib/mysql/plugin/qa_auth_client.so \
-		lib/mysql/plugin/qa_auth_interface.so \
-		lib/mysql/plugin/qa_auth_server.so \
-		lib/mysql/plugin/query_cache_info.so \
-		lib/mysql/plugin/query_response_time.so \
-		lib/mysql/plugin/server_audit.so \
-		lib/mysql/plugin/simple_password_check.so \
-		lib/mysql/plugin/sql_errlog.so \
-		lib/mysql/plugin/test_sql_service.so \
-		lib/mysql/plugin/test_versioning.so \
-		lib/mysql/plugin/type_mysql_json.so \
-		lib/mysql/plugin/type_mysql_timestamp.so \
-		lib/mysql/plugin/type_test.so \
-		lib/mysql/plugin/wsrep_info.so \
-		lib/security/pam_user_map.so \
+		lib/mysql/plugin/* \
+		lib/security/*.so \
 		sbin/mariadbd \
 		sbin/mysqld \
 		share \
