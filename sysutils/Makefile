@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1195 2026/06/06 18:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.1196 2026/06/10 21:22:45 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -613,6 +613,7 @@ SUBDIR+=	py-crontab
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-eliot
+SUBDIR+=	py-extra-platforms
 SUBDIR+=	py-filetype
 SUBDIR+=	py-fritz_exporter
 SUBDIR+=	py-fsspec
