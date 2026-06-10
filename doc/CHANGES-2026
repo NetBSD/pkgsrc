@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3692 2026/06/10 13:24:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3693 2026/06/10 14:00:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-tqdm to 4.68.2 [adam 2026-06-10]
 	Updated net/ndpi to 5.0 [adam 2026-06-10]
 	Updated net/ntopng to 6.6 [adam 2026-06-10]
+	Updated devel/ruby-msgpack to 1.8.3 [taca 2026-06-10]
