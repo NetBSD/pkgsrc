@@ -1,0 +1,26 @@
+$NetBSD: patch-src_http-ntlm.c,v 1.1 2026/06/10 07:18:46 markd Exp $
+
+Build with nettle-4
+
+--- src/http-ntlm.c.orig	2024-03-11 22:59:02.000000000 +0000
++++ src/http-ntlm.c
+@@ -48,6 +48,7 @@ as that of the covered work.  */
+ #ifdef HAVE_NETTLE
+ # include <nettle/md4.h>
+ # include <nettle/des.h>
++# include <nettle/version.h>
+ #else
+ # include <openssl/des.h>
+ # include <openssl/md4.h>
+@@ -322,7 +323,11 @@ mkhash(const char *password,
+ #ifdef HAVE_NETTLE
+     nettle_md4_init(&MD4);
+     nettle_md4_update(&MD4, (unsigned) (2 * len), pw4);
++#if NETTLE_VERSION_MAJOR > 3
++    nettle_md4_digest(&MD4, ntbuffer);
++#else 
+     nettle_md4_digest(&MD4, MD4_DIGEST_SIZE, ntbuffer);
++#endif 
+ #else
+     /* create NT hashed password */
+     MD4_Init(&MD4);
