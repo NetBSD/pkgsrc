@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/11/24 05:23:25 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/10 22:00:47 mef Exp $
 
 R_PKGNAME=	survey
-R_PKGVER=	4.4-2
+R_PKGVER=	4.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Analysis of complex survey samples
@@ -19,7 +19,13 @@ TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
 TEST_DEPENDS+=	R-quantreg-[0-9]*:../../math/R-quantreg
 
 USE_LANGUAGES=	c++
+GCC_REQD+=	8
 
+.include "../../mk/bsd.prefs.mk"
+pre-patch:
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src/
+.endif
 .include "../../math/R-RcppArmadillo/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
