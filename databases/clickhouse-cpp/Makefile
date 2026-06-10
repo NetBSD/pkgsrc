@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/06/09 15:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/10 12:19:20 adam Exp $
 
-DISTNAME=	clickhouse-cpp-2.6.1
+DISTNAME=	clickhouse-cpp-2.6.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ClickHouse/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
