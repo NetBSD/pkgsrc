@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.3.2.3 2026/05/08 01:05:31 maya Exp $
+# $NetBSD: Makefile.common,v 1.3.2.4 2026/06/10 01:32:44 maya Exp $
 # used by www/palemoon/Makefile
 # used by www/palemoon-gtk3/Makefile
 #
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PM_VER=		34.2.2
+PM_VER=		34.3.0
 CATEGORIES=	www
 
 DISTINFO_FILE=	${.CURDIR}/../../www/palemoon/distinfo
@@ -24,7 +24,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PM_VER}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260430.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20260602.tar.gz
 
 SITES.icudt${ICU_MAJOR}b.dat.gz=	${MASTER_SITE_LOCAL}
 
@@ -96,7 +96,13 @@ CWRAPPERS_APPEND.ld+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/palemoon-${PKGVERSION_NO
 
 .include "../../mk/bsd.prefs.mk"
 
+# see notes on Dav1d here: https://www.palemoon.org/releasenotes.shtml
+.if ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--enable-libaom
+.endif
+
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=		nasm>=1.1:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
@@ -132,7 +138,6 @@ CHECK_PORTABILITY_SKIP+=	platform/js/src/tests/*.sh
 CHECK_PORTABILITY_SKIP+=	platform/memory/jemalloc/src/configure
 CHECK_PORTABILITY_SKIP+=	platform/security/nss/tests/*/*.sh
 
-PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2026/02/22 11:05:44 nia Exp $
+# $NetBSD: options.mk,v 1.2.2.1 2026/06/10 01:32:44 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.palemoon
 PKG_SUPPORTED_OPTIONS=		dbus pulseaudio
@@ -8,7 +8,6 @@ PKG_SUPPORTED_OPTIONS=		dbus pulseaudio
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
 .  include "../../sysutils/dbus/buildlink3.mk"
-.  include "../../sysutils/dbus-glib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
