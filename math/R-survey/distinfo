@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/11/24 05:23:25 mef Exp $
+$NetBSD: distinfo,v 1.7 2026/06/10 22:00:47 mef Exp $
 
-BLAKE2s (R/survey_4.4-2.tar.gz) = 62fae78306d03f9a1c0d4d05a556f63f6760bd6369631d612984dbb43db7e83c
-SHA512 (R/survey_4.4-2.tar.gz) = e9648cb482e2b5a8edefd609c5faa0305a43a5a9d91dcd0dd27e8275252486126320cc60ed2f899c016fa2aced8682bb75649a3386a936f0981256a5d8f41746
-Size (R/survey_4.4-2.tar.gz) = 2341313 bytes
+BLAKE2s (R/survey_4.5.tar.gz) = 82a428f632ab86b146b9755471adce78ea6b3ea37cb5fd1a58414a1edb93cf82
+SHA512 (R/survey_4.5.tar.gz) = 82c7bf193b89fe30e1801865842a715c8420c5b1aeb7977932770257f9ae3f650edf74111cfd1b5e7443e773a67fed80629741298dce0b062971cd8c3a4a8508
+Size (R/survey_4.5.tar.gz) = 2417046 bytes
