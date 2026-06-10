@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/04/27 08:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/10 07:28:30 markd Exp $
 
 DISTNAME=		editres-1.1.1
 CATEGORIES=		x11
@@ -10,6 +10,8 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Dynamic resource editor for libXt applications
 
 USE_TOOLS+=		pkg-config
+
+MESON_NATIVE_ARGS+=	-Dappdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/libXaw/buildlink3.mk"
