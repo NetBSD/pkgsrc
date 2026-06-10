@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3686 2026/06/10 07:12:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3687 2026/06/10 07:34:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5609,3 +5609,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bird to 3.3.1 [adam 2026-06-10]
 	Updated net/yt-dlp to 2026.6.9 [adam 2026-06-10]
 	Updated devel/py-xbe to 1.0.4 [adam 2026-06-10]
+	Updated shells/oh-my-posh to 29.15.0 [pin 2026-06-10]
