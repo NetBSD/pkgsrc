@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.95 2026/06/09 07:01:15 wiz Exp $
+$NetBSD: distinfo,v 1.96 2026/06/10 16:58:38 kre Exp $
 
 BLAKE2s (bash-5.3/bash-5.3.tar.gz) = d4ed22a4b1e170ae9eee8732048cb649aa1d0c4dded08f23abefd7a581822afc
 SHA512 (bash-5.3/bash-5.3.tar.gz) = 426702c8b0fb9e0c9956259973ce5b657890fd47f4f807a64febf20077bb48d0b91474ed6e843d2ef277186b46c5fffa79b808da9b48d4ec027d5e2de1b28ed8
@@ -39,6 +39,15 @@ Size (bash-5.3/bash53-011) = 2251 bytes
 BLAKE2s (bash-5.3/bash53-012) = 4305342ef9ec8720be7d4ee8ad95888e0fa0c9fffa29571a6ddd2f95020991b0
 SHA512 (bash-5.3/bash53-012) = e178cd27f1db5d7607ec90bb4305059d996cf95486a1e5e3b4d76f37811a0320433a2a2900e50c5704b199fae946280edb50daedb8ab8aabed9ec83dc2540d2b
 Size (bash-5.3/bash53-012) = 2378 bytes
+BLAKE2s (bash-5.3/bash53-013) = 077cc405d3fa61d75fc643cc42df899f3ce31d4e9723a2f3af14979d6b72758b
+SHA512 (bash-5.3/bash53-013) = a973b7d9c37dc1b271fe1efa3afe3b700c1bebbf9f72e6e4e6a72a8d1f50f7875d82ee26af335e26d20883376d89c78f14b1901a0a70a8f9a9b2418df40f71fc
+Size (bash-5.3/bash53-013) = 1467 bytes
+BLAKE2s (bash-5.3/bash53-014) = a115dbcc00f19af58f610ddad4048ab395f105350ed924395437696c7677fc33
+SHA512 (bash-5.3/bash53-014) = 7beb4a1c39b126189a94deb12d5065b571196f27abdd8ae9c9b340ffccc1f52ed9fec31a475b72fed661097d081b1a93d088fabe53c45c8b2cc286b831c16977
+Size (bash-5.3/bash53-014) = 2229 bytes
+BLAKE2s (bash-5.3/bash53-015) = d3dc03bb7cd4151c170f5b9a2c1291d077274c47feafe88f0e6b0cbe761dcc10
+SHA512 (bash-5.3/bash53-015) = 812fbffd1b755cc9bbf730a4632f68a573351c4eeb5a4f495fa8f2f4dd7dbe1587dd22aed0f9c4d5c941130489ecc3def96068c77cc142680326ba8785862432
+Size (bash-5.3/bash53-015) = 2151 bytes
 SHA1 (patch-Makefile.in) = 5e5333bfbb7ea03207e01ea75caeca0d9c9ecdc0
 SHA1 (patch-bashline.c) = 0f44d7995ff839b0a7ce6a6b55711a151fa94688
 SHA1 (patch-builtins_common.h) = c5b97e165fe06c612d340f683695c5c6a115c274
