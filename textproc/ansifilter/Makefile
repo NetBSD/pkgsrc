@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/05/30 21:51:23 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/10 15:15:52 adam Exp $
 
-DISTNAME=	ansifilter-2.21
+DISTNAME=	ansifilter-2.22
 CATEGORIES=	textproc
 MASTER_SITES=	http://andre-simon.de/zip/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,13 +10,12 @@ HOMEPAGE=	http://andre-simon.de/doku/ansifilter/en/ansifilter.php
 COMMENT=	Converts text containing terminal escape codes into markup
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
-
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 
 MAKE_FILE=	makefile
-MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
-MAKE_FLAGS+=	man_dir=${PREFIX:Q}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	man_dir=${PREFIX}/${PKGMANDIR}/man1
 
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 #.include "../../devel/cmake/build.mk"
