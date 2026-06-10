@@ -1,11 +1,11 @@
-$NetBSD: patch-src_lib_Makefile.in,v 1.8 2024/08/23 17:54:06 adam Exp $
+$NetBSD: patch-src_lib_Makefile.in,v 1.9 2026/06/10 13:17:31 adam Exp $
 
 Fix building on Darwin.
 
---- src/lib/Makefile.in.orig	2024-08-05 07:46:22.000000000 +0000
+--- src/lib/Makefile.in.orig	2025-11-17 08:11:53.000000000 +0000
 +++ src/lib/Makefile.in
-@@ -33,8 +33,15 @@ OBJECTS   = $(patsubst protocols/%.c, pr
- HEADERS   = $(wildcard ../include/*.h) $(wildcard *.h)
+@@ -42,8 +42,15 @@ OBJECTS   = $(patsubst $(srcdir)/protoco
+ HEADERS   = $(wildcard $(top_srcdir)/src/include/*.h) $(wildcard $(top_builddir)/src/include/*.h) $(wildcard $(srcdir)/*.h)
  NDPI_VERSION_MAJOR   = @NDPI_MAJOR@
  NDPI_LIB_STATIC      = libndpi.a
 +ifeq ($(OS),Darwin)
@@ -20,17 +20,17 @@ Fix building on Darwin.
  NDPI_LIBS            = $(NDPI_LIB_STATIC) $(NDPI_LIB_SHARED)
  USE_HOST_LIBGCRYPT   = @USE_HOST_LIBGCRYPT@
  
-@@ -46,8 +53,7 @@ endif
+@@ -55,8 +62,7 @@ endif
  BUILD_MINGW    		 = @BUILD_MINGW@
  
  ifeq ($(OS),Darwin)
 -CC=clang -fno-color-diagnostics
 -SONAME_FLAG=
-+SONAME_FLAG=-install_name $(PREFIX)$(libdir)/${NDPI_LIB_SHARED}
++SONAME_FLAG=-install_name $(libdir)/${NDPI_LIB_SHARED}
  else
  ifneq ($(BUILD_MINGW),)
  NDPI_LIB_SHARED_BASE = libndpi
-@@ -68,7 +74,7 @@ $(NDPI_LIB_STATIC): $(OBJECTS)
+@@ -77,7 +83,7 @@ $(NDPI_LIB_STATIC): $(OBJECTS)
  $(NDPI_LIB_SHARED): $(OBJECTS)
  	$(CC) -shared -fPIC $(CFLAGS) $(SONAME_FLAG) -o $@ $(LDFLAGS) $(OBJECTS) $(LIBS)
  	ln -fs $(NDPI_LIB_SHARED) $(NDPI_LIB_SHARED_BASE)
@@ -38,13 +38,13 @@ Fix building on Darwin.
 +	ln -fs $(NDPI_LIB_SHARED) $(NDPI_LIB_SHARED_SHORT)
  
  %.o: %.c $(HEADERS) Makefile
- 	$(CC) $(CPPFLAGS) $(CFLAGS) $(CFLAGS_$<) -c $< -o $@
-@@ -99,7 +105,7 @@ install: $(NDPI_LIBS)
- 	mkdir -p $(DESTDIR)$(PREFIX)$(libdir)
- 	cp $(NDPI_LIBS) $(DESTDIR)$(PREFIX)$(libdir)/
- 	cp -P $(NDPI_LIB_SHARED_BASE) $(DESTDIR)$(PREFIX)$(libdir)/
--	cp -P $(NDPI_LIB_SHARED_BASE).$(NDPI_VERSION_MAJOR) $(DESTDIR)$(PREFIX)$(libdir)/
-+	cp -P $(NDPI_LIB_SHARED_SHORT) $(DESTDIR)$(PREFIX)$(libdir)/
- 	mkdir -p $(DESTDIR)$(PREFIX)$(includedir)
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) $(CFLAGS_$(notdir $<)) -c $< -o $@
+@@ -108,7 +114,7 @@ install: $(NDPI_LIBS)
+ 	mkdir -p $(DESTDIR)@libdir@
+ 	cp $(NDPI_LIBS) $(DESTDIR)@libdir@/
+ 	cp -P $(NDPI_LIB_SHARED_BASE) $(DESTDIR)@libdir@/
+-	cp -P $(NDPI_LIB_SHARED_BASE).$(NDPI_VERSION_MAJOR) $(DESTDIR)@libdir@/
++	cp -P $(NDPI_LIB_SHARED_SHORT) $(DESTDIR)@libdir@/
+ 	mkdir -p $(DESTDIR)@includedir@/ndpi
  	#Avoid installing private header
- 	find ../include/*.h ! -name ndpi_private.h -exec cp "{}" $(DESTDIR)$(PREFIX)$(includedir)/ \;
+ 	# Installing header files to $(DESTDIR)@includedir@/ndpi
