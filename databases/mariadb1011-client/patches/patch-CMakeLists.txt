@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2025/10/27 20:48:59 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2026/06/10 10:59:01 nia Exp $
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2025-05-19 16:14:23.000000000 +0000
+--- CMakeLists.txt.orig	2026-05-23 15:01:04.000000000 +0000
 +++ CMakeLists.txt
-@@ -457,8 +457,6 @@ ENDIF()
+@@ -477,8 +477,6 @@ UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
  UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
@@ -13,7 +13,7 @@ Allow building a server-only configuration.
  INCLUDE(cpack_tgz)
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
-@@ -469,19 +467,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -489,19 +487,16 @@ CONFIGURE_PLUGINS()
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -33,7 +33,7 @@ Allow building a server-only configuration.
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MariaDB with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER)
-@@ -500,10 +495,12 @@ IF(NOT WITHOUT_SERVER)
+@@ -520,10 +515,12 @@ IF(NOT WITHOUT_SERVER)
      ADD_SUBDIRECTORY(win/upgrade_wizard)
      ADD_SUBDIRECTORY(win/packaging)
    ENDIF()
@@ -49,7 +49,7 @@ Allow building a server-only configuration.
  ENDIF()
  
  IF (NOT WITHOUT_ABI_CHECK)
-@@ -512,13 +509,14 @@ ENDIF()
+@@ -532,13 +529,14 @@ ADD_SUBDIRECTORY(scripts)
  INCLUDE(cmake/tags.cmake)
  INCLUDE(for_clients)
  ADD_SUBDIRECTORY(scripts)
@@ -66,7 +66,7 @@ Allow building a server-only configuration.
    ENDIF()
    # minimal target to build only binaries for export
    ADD_CUSTOM_TARGET(import_executables DEPENDS ${EXPORTED})
-@@ -590,7 +588,7 @@ IF(WIN32 AND SIGNCODE)
+@@ -607,7 +605,7 @@ ENDIF()
    INSTALL(SCRIPT ${PROJECT_BINARY_DIR}/sign.cmake)
  ENDIF()
  
@@ -75,10 +75,11 @@ Allow building a server-only configuration.
  
  OPTION(FEATURE_SUMMARY "Print feature summary at the end of configure step" ON)
  IF (FEATURE_SUMMARY)
-@@ -602,41 +600,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
+@@ -618,42 +616,4 @@ You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNI
+ IF(NON_DISTRIBUTABLE_WARNING)
    MESSAGE(WARNING "
  You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNING} libraries!  You may not distribute the resulting binary. If you do, you will put yourself into a legal problem with the Free Software Foundation.")
- ENDIF()
+-ENDIF()
 -
 -IF(NOT WITHOUT_SERVER)
 -  # Define target for minimal mtr-testable build
@@ -116,4 +117,4 @@ Allow building a server-only configuration.
 -    COMMAND perl ./mysql-test-run.pl main.1st
 -    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/mysql-test)
 -  ADD_DEPENDENCIES(smoketest minbuild)
--ENDIF()
+ ENDIF()

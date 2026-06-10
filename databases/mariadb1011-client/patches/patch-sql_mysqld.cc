@@ -1,4 +1,4 @@
-$NetBSD: patch-sql_mysqld.cc,v 1.4 2025/06/20 17:04:41 nia Exp $
+$NetBSD: patch-sql_mysqld.cc,v 1.5 2026/06/10 10:59:01 nia Exp $
 
 Build fixes for illumos. From OmniOS CE.
 

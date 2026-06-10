@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/17 00:19:22 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/06/10 10:59:02 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -193,6 +193,7 @@ include/mysql/server/private/sql_cache.h
 include/mysql/server/private/sql_callback.h
 include/mysql/server/private/sql_class.h
 include/mysql/server/private/sql_cmd.h
+include/mysql/server/private/sql_command.h
 include/mysql/server/private/sql_connect.h
 include/mysql/server/private/sql_const.h
 include/mysql/server/private/sql_crypt.h
@@ -355,6 +356,7 @@ lib/mysql/plugin/query_response_time.so
 lib/mysql/plugin/server_audit.so
 lib/mysql/plugin/simple_password_check.so
 lib/mysql/plugin/sql_errlog.so
+lib/mysql/plugin/test_pam_modules/pam_mariadb_mtr.so
 lib/mysql/plugin/test_sql_service.so
 lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
@@ -367,7 +369,6 @@ sbin/mysqld
 share/doc/mysql/COPYING
 share/doc/mysql/CREDITS
 share/doc/mysql/INSTALL-BINARY
-share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
 share/doc/mysql/hashicorp_key_management.txt
