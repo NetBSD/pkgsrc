@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2026/06/08 09:36:58 adam Exp $
+$NetBSD: distinfo,v 1.40 2026/06/10 13:04:20 adam Exp $
 
-BLAKE2s (jupyter_client-8.9.0.tar.gz) = 814e3a0fe55d8b6222f1d64ca98d39237b76843694374848590121f6c5c37d12
-SHA512 (jupyter_client-8.9.0.tar.gz) = 84180c5a0dd12de8a2cbade4f660c12ce1a52fca033b7392c47f5b876e5662ea7eed661f24435e9d747f49ae580b12382f027b36c4426d05af681a92e989e7c0
-Size (jupyter_client-8.9.0.tar.gz) = 358714 bytes
+BLAKE2s (jupyter_client-8.9.1.tar.gz) = 32cb3b4d93ff4ee91a700eec797ef8bb74b9df420c7075f62bedf3349961696f
+SHA512 (jupyter_client-8.9.1.tar.gz) = 8a125344a458bfa4102a8895220a659b39fc72e2a0a9ee99ca3d25471c2bc4b09b307c17d6c1103501ad4eff058269ed0688239aa8f4d753ff079d9de014822b
+Size (jupyter_client-8.9.1.tar.gz) = 359256 bytes
