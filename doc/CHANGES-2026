@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3689 2026/06/10 12:20:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3690 2026/06/10 12:24:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mariadb1011-server to 10.11.18 [nia 2026-06-10]
 	Updated databases/clickhouse-cpp to 2.6.2 [adam 2026-06-10]
 	Updated archivers/py-zopfli to 0.4.3 [adam 2026-06-10]
+	Updated lang/R-cpp11 to 0.5.5 [mef 2026-06-10]
