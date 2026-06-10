@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2026/05/14 16:41:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2026/06/10 13:18:13 adam Exp $
 
-DISTNAME=	ntopng-6.4
-PKGREVISION=	6
+NTOPNG_VERSION=	6.6
+DISTNAME=	ntopng-${NTOPNG_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -20,16 +20,18 @@ DEPENDS+=	redis-[0-9]*:../../databases/redis
 # 5. uncomment the DISTFILES=... line and regen distinfo
 .PHONY: update-ui
 update-ui:
-	cd ${WRKSRC} && npm install && npm run build && \
+	cd ${WRKSRC} && npm install --force && npm run build && \
 	cd .. && ${TAR} -czf ${HTTPDOCS_DIST} ${DISTNAME}/httpdocs/dist && \
 	${CP} ${HTTPDOCS_DIST} ${DISTDIR}/${HTTPDOCS_DIST} && \
 	${ECHO} "UI built. Run this command:" && \
 	${ECHO} "# scp ${DISTDIR}/${HTTPDOCS_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
 
-HTTPDOCS_DIST=		${DISTNAME}-httpdocs.tar.gz
-SITES.${HTTPDOCS_DIST}=	${MASTER_SITE_LOCAL}
+#HTTPDOCS_DIST=		${DISTNAME}-httpdocs.tar.gz
+#SITES.${HTTPDOCS_DIST}=	${MASTER_SITE_LOCAL}
 # comment out this when running make update-ui
+HTTPDOCS_DIST=		ntopng-dist-${NTOPNG_VERSION}-stable.tar.gz
 DISTFILES=		${DEFAULT_DISTFILES} ${HTTPDOCS_DIST}
+SITES.${HTTPDOCS_DIST}=	-${MASTER_SITES}ntopng-dist/archive/refs/heads/${NTOPNG_VERSION}-stable.tar.gz
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
@@ -60,6 +62,10 @@ SUBST_FILES.fix-vers=	configure.ac.in
 SUBST_SED.fix-vers=	-e 's,@VERSION@,${PKGVERSION},g'
 SUBST_SED.fix-vers+=	-e 's,@SHORT_VERSION@,${PKGVERSION_NOREV},g'
 
+post-extract:
+	${RM} -fr ${WRKSRC}/httpdocs/dist
+	${LN} -s ${WRKDIR}/ntopng-dist-${NTOPNG_VERSION}-stable ${WRKSRC}/httpdocs/dist
+
 pre-configure:
 	cd ${WRKSRC} && ${CP} configure.ac.in configure.ac && autoreconf -fiv
 
@@ -69,6 +75,7 @@ post-build:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/ntopng/httpdocs/misc/ntopng-utils-manage-updates.in.orig
 
+.include "../../adam/clickhouse/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"

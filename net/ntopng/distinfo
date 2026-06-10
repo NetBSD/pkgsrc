@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.18 2025/08/07 05:05:58 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/06/10 13:18:13 adam Exp $
 
-BLAKE2s (ntopng-6.4-httpdocs.tar.gz) = 65e7eee5286a6d59df2e186f2b81be8fdb7764e9b1b3178427fe8f0183c66176
-SHA512 (ntopng-6.4-httpdocs.tar.gz) = d518b3e1f95312a5a250a7c09de303a39b58b0ffbf1386c13a29962ce0d0cecdecd2ba77207eada095a5b4ae6f387979a22dbba4f6448019feb10f7969446725
-Size (ntopng-6.4-httpdocs.tar.gz) = 7999962 bytes
-BLAKE2s (ntopng-6.4.tar.gz) = d5e6ca8463a701295fc6766aba54d3f0e36ea622691d43b7f702283450a65226
-SHA512 (ntopng-6.4.tar.gz) = a4ff3058b9a10677485808ac51c67a728b1df536df7e818925ff0515b597d5fad4dedacd1c80a62c0408606c86376d73bb38986d85f68385e2e2de3ba82e03a4
-Size (ntopng-6.4.tar.gz) = 80787345 bytes
+BLAKE2s (ntopng-6.6.tar.gz) = 602f8ab521d51e59bd7a8f9636829d25275805bda22e741bdbb4bc79610f31fd
+SHA512 (ntopng-6.6.tar.gz) = 7e3f9fce3a88b245bcea6b471e2f0ed85fab7577ebfd92bd85b774a89514aa168d703057725ccedd5dbd8e00ebf4bb034e21cf0c9ad345e317c30674f832aa29
+Size (ntopng-6.6.tar.gz) = 82387035 bytes
+BLAKE2s (ntopng-dist-6.6-stable.tar.gz) = 505807cc47f9f5d268b717bedc03c2f85a291d7763d9f078e19b94bfafb58608
+SHA512 (ntopng-dist-6.6-stable.tar.gz) = 4510c351a88a8ae2f9145ef5bae8ab023894bbadcd1f98c9e03ab46cf667b14a7c0efaee41eb3519df3d991eb0cd140fd12dbf5a1f5ac6d7cedc4155abda8bb7
+Size (ntopng-dist-6.6-stable.tar.gz) = 7145478 bytes
+SHA1 (patch-Makefile.in) = 29e8f23b9147bc744570e7093f0effc27d7ee986
 SHA1 (patch-configure.ac.in) = 08ba8383478fe58ce8cedf8c5466bbb6a1be59c3
 SHA1 (patch-httpdocs_misc_ntopng-utils-manage-updates.in) = c6a4bf93c0464d2c2e8493f3b5de9b5c243a1e52
 SHA1 (patch-include_Redis.h) = cf73f5e53abdeb096d93449327365931ba99ae2b
