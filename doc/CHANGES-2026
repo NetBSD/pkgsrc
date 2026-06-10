@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3696 2026/06/10 18:11:09 bouyer Exp $
+$NetBSD: CHANGES-2026,v 1.3697 2026/06/10 19:24:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5631,3 +5631,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xentools418 to 20260610 [bouyer 2026-06-10]
 	Updated sysutils/xenkernel420 to 20260610 [bouyer 2026-06-10]
 	Updated sysutils/xentools420 to 20260610 [bouyer 2026-06-10]
+	Updated devel/gitpane to 0.7.14 [pin 2026-06-10]
