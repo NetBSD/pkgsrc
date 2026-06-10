@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3691 2026/06/10 13:06:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3692 2026/06/10 13:24:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5620,3 +5620,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.13.1 [adam 2026-06-10]
 	Updated devel/py-jupyter_client to 8.9.1 [adam 2026-06-10]
 	Updated databases/py-lmdb to 2.2.1 [adam 2026-06-10]
+	Updated misc/py-tqdm to 4.68.2 [adam 2026-06-10]
+	Updated net/ndpi to 5.0 [adam 2026-06-10]
+	Updated net/ntopng to 6.6 [adam 2026-06-10]
