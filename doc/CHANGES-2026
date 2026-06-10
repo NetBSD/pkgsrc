@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3700 2026/06/10 21:22:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3701 2026/06/10 22:00:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5635,3 +5635,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/xfr to 0.9.16 [pin 2026-06-10]
 	Updated devel/py-filelock to 3.29.3 [wiz 2026-06-10]
 	Added sysutils/py-extra-platforms version 13.0.0 [wiz 2026-06-10]
+	Updated math/R-survey to 4.5 [mef 2026-06-10]
