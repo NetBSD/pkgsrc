@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/10 21:22:30 wiz Exp $
+
+BLAKE2s (extra_platforms-13.0.0.tar.gz) = 00a626208178721c34897e842620dcc21ad0b136f83653bc898e4c51b4c2de0e
+SHA512 (extra_platforms-13.0.0.tar.gz) = 8896140e6856e81dec20b9a8304da3ca76f6d40d6cca9cacaf2a99ac4539f09d699774d711ead758261720cd2e8c02d138310278fff3234596fce0d50f2519a5
+Size (extra_platforms-13.0.0.tar.gz) = 80874 bytes

@@ -1,0 +1,5 @@
+Extra Platforms detects the runtime architecture, operating system
+(including Linux distribution), shell, terminal, CI environment &
+AI coding agents, and exposes rich, cacheable metadata (version,
+codename, icon, canonical URL). It also groups them into reusable
+families.
