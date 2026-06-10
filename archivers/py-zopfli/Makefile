@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/05/27 07:35:38 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/10 12:20:31 adam Exp $
 
-DISTNAME=	zopfli-0.4.2
+DISTNAME=	zopfli-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
