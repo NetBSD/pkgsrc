@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2026/06/10 13:18:13 adam Exp $
+# $NetBSD: Makefile,v 1.89 2026/06/10 13:20:17 adam Exp $
 
 NTOPNG_VERSION=	6.6
 DISTNAME=	ntopng-${NTOPNG_VERSION}
@@ -75,7 +75,7 @@ post-build:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/ntopng/httpdocs/misc/ntopng-utils-manage-updates.in.orig
 
-.include "../../adam/clickhouse/buildlink3.mk"
+.include "../../databases/clickhouse-cpp/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
