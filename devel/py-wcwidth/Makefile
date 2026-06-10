@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/06/07 06:29:02 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/10 04:03:37 adam Exp $
 
-DISTNAME=	wcwidth-0.8.0
+DISTNAME=	wcwidth-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcwidth/}

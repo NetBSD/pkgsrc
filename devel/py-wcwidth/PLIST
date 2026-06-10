@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/06/07 06:29:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/06/10 04:03:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -55,6 +55,9 @@ ${PYSITELIB}/wcwidth/table_grapheme_overrides/__init__.pyo
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_27e0693f.py
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_27e0693f.pyc
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_27e0693f.pyo
+${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_3d4826b8.py
+${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_3d4826b8.pyc
+${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_3d4826b8.pyo
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_45d92e98.py
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_45d92e98.pyc
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_45d92e98.pyo
@@ -85,9 +88,6 @@ ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_970dbe10.pyo
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0a2cdbf.py
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0a2cdbf.pyc
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0a2cdbf.pyo
-${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0d5dc9e.py
-${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0d5dc9e.pyc
-${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c0d5dc9e.pyo
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c2157f7e.py
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c2157f7e.pyc
 ${PYSITELIB}/wcwidth/table_grapheme_overrides/_known_c2157f7e.pyo
