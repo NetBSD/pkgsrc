@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:57 brook Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/10 13:17:47 mef Exp $
 
 R_PKGNAME=	readxl
 R_PKGVER=	1.3.1
@@ -12,6 +12,18 @@ DEPENDS+=	R-tibble>=1.3.1:../../math/R-tibble
 DEPENDS+=	R-cellranger>=1.1.0:../../textproc/R-cellranger
 
 USE_LANGUAGES+=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
