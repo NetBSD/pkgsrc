@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2026/06/09 15:05:34 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/06/10 12:19:20 adam Exp $
 
-BLAKE2s (clickhouse-cpp-2.6.1.tar.gz) = 09c04c50bda48590bd3f1045547422c208ab6d456572bc38b71600cd01931da9
-SHA512 (clickhouse-cpp-2.6.1.tar.gz) = 626cce4d6037cbeb86c5720ece7ac95c9ff0e561825e7907934669709091886d209f3128798db41a89ef3585d0639e40a5c4f96a0e724b6bee25291710ad391e
-Size (clickhouse-cpp-2.6.1.tar.gz) = 1135714 bytes
+BLAKE2s (clickhouse-cpp-2.6.2.tar.gz) = d07be0b2c8d8ea1b3d2a964d7eefe223471640b61b9afab384b5f33e7ed16dd0
+SHA512 (clickhouse-cpp-2.6.2.tar.gz) = 3b6d76a541d75e3565b3d196193ac04baa7e99c54fd175deeb5bb143f9192243966c7d82a5c3159760d8b77f9e3d6b88254bce9ee58af53505dc0c5dc6e429a6
+Size (clickhouse-cpp-2.6.2.tar.gz) = 1167734 bytes
+SHA1 (patch-clickhouse_base_platform.h) = da3945cb11710a6b2074cda6c6557fb053b2ba95
+SHA1 (patch-clickhouse_base_socket.cpp) = 1b925266fc3744adcbeb7c852e110fb4386e1d60
