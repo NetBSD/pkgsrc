@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/05/29 12:36:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/10 13:05:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +16,7 @@ ${PYSITELIB}/lmdb/_config.pyc
 ${PYSITELIB}/lmdb/_config.pyo
 ${PYSITELIB}/lmdb/aio.py
 ${PYSITELIB}/lmdb/aio.pyc
+${PYSITELIB}/lmdb/aio.pyi
 ${PYSITELIB}/lmdb/aio.pyo
 ${PYSITELIB}/lmdb/cffi.py
 ${PYSITELIB}/lmdb/cffi.pyc
