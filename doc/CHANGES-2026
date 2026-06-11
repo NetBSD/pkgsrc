@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3722 2026/06/11 13:38:36 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3723 2026/06/11 14:18:12 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-bleach to 6.4.0 [adam 2026-06-11]
 	Updated security/py-pip-audit to 2.10.1 [adam 2026-06-11]
 	Updated net/ipv6calc to 4.4.0 [drixter 2026-06-11]
+	Updated audio/vorbis-tools to 1.4.3 [drixter 2026-06-11]
