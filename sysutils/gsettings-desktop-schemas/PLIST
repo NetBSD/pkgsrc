@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/11/03 12:34:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/06/11 07:29:28 wiz Exp $
 include/gsettings-desktop-schemas/gdesktop-enums.h
 lib/girepository-1.0/GDesktopEnums-3.0.typelib
 share/GConf/gsettings/gsettings-desktop-schemas.convert
@@ -6,11 +6,13 @@ share/GConf/gsettings/wm-schemas.convert
 share/gir-1.0/GDesktopEnums-3.0.gir
 share/glib-2.0/schemas/org.gnome.desktop.a11y.applications.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.a11y.gschema.xml
+share/glib-2.0/schemas/org.gnome.desktop.a11y.interface.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.a11y.keyboard.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.a11y.magnifier.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.a11y.mouse.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.app-folders.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.background.gschema.xml
+share/glib-2.0/schemas/org.gnome.desktop.break-reminders.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.calendar.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.datetime.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.default-applications.gschema.xml
@@ -22,6 +24,7 @@ share/glib-2.0/schemas/org.gnome.desktop.media-handling.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.notifications.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.peripherals.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.privacy.gschema.xml
+share/glib-2.0/schemas/org.gnome.desktop.screen-time-limits.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.search-providers.gschema.xml
 share/glib-2.0/schemas/org.gnome.desktop.session.gschema.xml
@@ -33,7 +36,9 @@ share/glib-2.0/schemas/org.gnome.desktop.wm.preferences.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.locale.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.location.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.proxy.gschema.xml
+share/locale/ab/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/as/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/be/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/bg/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/bs/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/ca/LC_MESSAGES/gsettings-desktop-schemas.mo
@@ -43,9 +48,11 @@ share/locale/da/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/de/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/el/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/en_GB/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/en_US/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/eo/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/es/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/eu/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/fa/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/fi/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/fr/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/fur/LC_MESSAGES/gsettings-desktop-schemas.mo
@@ -59,6 +66,8 @@ share/locale/id/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/is/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/it/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/ja/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/ka/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/kab/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/kk/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/lt/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/lv/LC_MESSAGES/gsettings-desktop-schemas.mo
@@ -84,6 +93,7 @@ share/locale/tg/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/tr/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/ug/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/uk/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/uz/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/vi/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/zh_CN/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/zh_HK/LC_MESSAGES/gsettings-desktop-schemas.mo
