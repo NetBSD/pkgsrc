@@ -1,24 +1,31 @@
-# $NetBSD: Makefile,v 1.39 2020/01/26 17:31:50 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.40 2026/06/11 13:38:59 drixter Exp $
 
-DISTNAME=	ipv6calc-0.94.1
+DISTNAME=	ipv6calc-4.4.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/Linux/ipv6/bipv6/ipv6calc/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.deepspace6.net/projects/ipv6calc.html
 COMMENT=	Manipulates IPv6 addresses
 LICENSE=	gnu-gpl-v2
 
-# This package does not set or evaluate IPV6_READY, but it should still
-# be listed in README-IPv6.html. Leave this comment here to make it so!
-#
-BUILD_DEFS+=	IPV6_READY
-
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
+USE_TOOLS+=	perl
+USE_TOOLS+=	bash
 
-INSTALL_TARGET=	install
+MAKE_FLAGS+=	CFLAGS="${CFLAGS} -Wno-error=char-subscripts -Wno-char-subscripts"
+
+REPLACE_PERL+=	tools/ipv6calc-create-registry-list-ipv4.pl
+REPLACE_PERL+=	tools/ipv6calc-create-registry-list-ipv6.pl
+
+REPLACE_BASH+=	ipv6calcweb/create_ipv6calcweb-cgi.sh
+REPLACE_BASH+=	tools/DBIP-update.sh.in
+REPLACE_BASH+=	tools/GeoIP-update.sh.in
+REPLACE_BASH+=	tools/IP2Location-update.sh.in
+REPLACE_BASH+=	tools/ipv6calc-create-update-ipset.sh
+REPLACE_BASH+=	tools/ipv6calc-db-update-support.sh
+REPLACE_BASH+=	tools/ipv6calc-db-update.sh.in
 
 .include "../../mk/bsd.pkg.mk"
