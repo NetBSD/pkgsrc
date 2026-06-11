@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27391 2026/06/11 07:23:36 wiz Exp $
+$NetBSD: TODO,v 1.27392 2026/06/11 07:27:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asymptote-3.01
-	o at-spi2-core-2.60.4
 	o atkmm-2.36.4
 	o atril-1.28.4
 	o audacity-3.7.5
