@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1591 2026/06/07 03:38:56 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1592 2026/06/11 13:14:35 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1197,6 +1197,7 @@ SUBDIR+=	py-pybtex-docutils
 SUBDIR+=	py-pygccxml
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pylev
+SUBDIR+=	py-pymdown-extensions
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
 SUBDIR+=	py-pysrt
