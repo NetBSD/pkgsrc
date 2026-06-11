@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3715 2026/06/11 12:14:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3716 2026/06/11 12:45:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5660,3 +5660,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/python314 to 3.14.6 [adam 2026-06-11]
 	Updated lang/py313-html-docs to 3.13.14 [adam 2026-06-11]
 	Updated lang/py314-html-docs to 3.14.6 [adam 2026-06-11]
+	Updated net/ldns to 1.9.2 [adam 2026-06-11]
+	Updated net/drill to 1.9.2 [adam 2026-06-11]
+	Updated www/py-daphne to 4.2.2 [adam 2026-06-11]
