@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3719 2026/06/11 13:14:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3720 2026/06/11 13:16:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5666,3 +5666,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/trustedQSL to 2.8.6 [mef 2026-06-11]
 	Added devel/py-deepmerge version 2.0 [wiz 2026-06-11]
 	Added textproc/py-pymdown-extensions version 10.21.3 [wiz 2026-06-11]
+	Added www/py-zensical version 0.0.44 [wiz 2026-06-11]
