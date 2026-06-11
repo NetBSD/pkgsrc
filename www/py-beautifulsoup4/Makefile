@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/12/01 19:48:53 adam Exp $
+# $NetBSD: Makefile,v 1.42 2026/06/11 11:08:43 adam Exp $
 
-DISTNAME=	beautifulsoup4-4.14.3
+DISTNAME=	beautifulsoup4-4.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=b/beautifulsoup4/}
@@ -13,9 +13,10 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-soupsieve>=1.2:../../www/py-soupsieve
+DEPENDS+=	${PYPKGPREFIX}-soupsieve>=1.6.1:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
+# lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
