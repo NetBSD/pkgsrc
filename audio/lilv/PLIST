@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/04/15 11:19:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/06/11 07:31:38 adam Exp $
 bin/lv2apply
 bin/lv2info
 bin/lv2ls
@@ -12,29 +12,3 @@ man/man1/lv2apply.1
 man/man1/lv2info.1
 man/man1/lv2ls.1
 share/bash_completion.d/lilv
-${PLIST.doc}share/doc/lilv-0/html/_static/base-stemmer.js
-${PLIST.doc}share/doc/lilv-0/html/_static/english-stemmer.js
-${PLIST.doc}share/doc/lilv-0/html/_static/pygments.css
-${PLIST.doc}share/doc/lilv-0/html/_static/sphinx_lv2_theme.css
-${PLIST.doc}share/doc/lilv-0/html/api/lilv.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_class.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_collections.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_instance.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_node.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_plugin.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_port.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_scalepoint.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_state.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_ui.html
-${PLIST.doc}share/doc/lilv-0/html/api/lilv_world.html
-${PLIST.doc}share/doc/lilv-0/html/genindex.html
-${PLIST.doc}share/doc/lilv-0/html/index.html
-${PLIST.doc}share/doc/lilv-0/html/overview.html
-${PLIST.doc}share/doc/lilv-0/html/plugins.html
-${PLIST.doc}share/doc/lilv-0/html/uis.html
-${PLIST.doc}share/doc/lilv-0/html/world.html
-${PLIST.doc}share/doc/lilv-0/singlehtml/_static/base-stemmer.js
-${PLIST.doc}share/doc/lilv-0/singlehtml/_static/english-stemmer.js
-${PLIST.doc}share/doc/lilv-0/singlehtml/_static/pygments.css
-${PLIST.doc}share/doc/lilv-0/singlehtml/_static/sphinx_lv2_theme.css
-${PLIST.doc}share/doc/lilv-0/singlehtml/index.html
