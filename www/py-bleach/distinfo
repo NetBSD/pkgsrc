@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2025/10/29 09:21:57 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/06/11 13:17:07 adam Exp $
 
-BLAKE2s (bleach-6.3.0.tar.gz) = 0366d2efdb9b02babef564e237c97e94889283474fda530725eaecfa7be2c12e
-SHA512 (bleach-6.3.0.tar.gz) = 8ebf85f78f7daae90db91e54f368fcc36dde8d93f04cbe469e861d76c55c52d147e756a9d0198e01b3cd93aca966fdaf4d5d35bd2ed3c731e772ed67d5d484a3
-Size (bleach-6.3.0.tar.gz) = 203533 bytes
+BLAKE2s (bleach-6.4.0.tar.gz) = 1e52e077ef407cb0a3f99b2dc8837763f368aa7ba6499158a5b0ad90bb7f6676
+SHA512 (bleach-6.4.0.tar.gz) = 3d60b3a96b41d574bb5318bfe7d28e1db94c38d4635b9b46c5d7b4ebd462244b4f424c70ea7b7882aeeabcce7bddae8e14c395455b0eaaff5b377cfd9a1c4198
+Size (bleach-6.4.0.tar.gz) = 204857 bytes
