@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4636 2026/06/07 02:20:21 mef Exp $
+# $NetBSD: Makefile,v 1.4637 2026/06/11 13:11:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2662,6 +2662,7 @@ SUBDIR+=	py-dash
 SUBDIR+=	py-ddt
 SUBDIR+=	py-debugpy
 SUBDIR+=	py-decorator
+SUBDIR+=	py-deepmerge
 SUBDIR+=	py-deprecat
 SUBDIR+=	py-deprecated
 SUBDIR+=	py-deprecation
