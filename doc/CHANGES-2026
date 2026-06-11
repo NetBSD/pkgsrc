@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3726 2026/06/11 18:53:36 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3727 2026/06/11 22:00:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5673,3 +5673,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/vorbis-tools to 1.4.3 [drixter 2026-06-11]
 	Added shells/brush-shell version 0.4.0 [drixter 2026-06-11]
 	Updated audio/vorbis-tools to 1.4.3nb1 [drixter 2026-06-11]
+	Updated databases/R-RSQLite to 3.53.1 [mef 2026-06-11]
