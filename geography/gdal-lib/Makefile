@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.201 2026/06/05 22:59:47 gdt Exp $
+# $NetBSD: Makefile,v 1.202 2026/06/11 14:29:09 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
+PKGREVISION=	1
 #PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats
@@ -47,8 +48,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PARQUET=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PODOFO=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POPPLER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
 
 # Disable python bindings because it is in ../py-gdal.  The reasons
@@ -104,8 +103,30 @@ PRINT_PLIST_AWK+=	/MM_m_idofic.csv/ { print "$${PLIST.le}" $$0; next }
 PLIST.le=	yes
 .endif
 
-# \todo: Support geopdf by including poppler, PoDoFo, or PDFium.
-# https://gdal.org/drivers/raster/pdf.html
+# GeoPDF support: https://gdal.org/drivers/raster/pdf.html
+# \todo: Decide about reading geopdf.  gdal can use, in order of
+# preference, PDFium, poppler with the unstable API enabled, and
+# PoDoFo (with pdftoppm).  PoDoFo is described as a partial
+# alternative.
+#
+# pkg_info -S increase:
+#   poppler: 18.4 MB
+#   PoDoFo: 6.8 MB
+# but I don't believe that because the PoDoFo build depends on poppler
+# and is less by poppler-includes (1.5MB) and greater by PoDoFo and
+# any deps it has that aren't required by poppler or gdal-lib.
+#
+# PDFium is not in pkgsrc.  Choose poppler as not that heavy and
+# satisfactory.
+# \todo Consider moving poppler to a default-on option if there are
+# complaints.
+CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PDFIUM=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POPPLER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PODOFO=OFF
+.include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
+#.include "../../print/podofo/buildlink3.mk"
+#DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
 # \todo Enable zstd
 # .include "../../archivers/zstd/buildlink3.mk"
