@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/06/03 15:49:06 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/06/11 12:37:58 wiz Exp $
 
 DISTNAME=	pcsc-tools-1.7.5
 CATEGORIES=	security
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	p5-pcsc>=1.4.6:../../security/p5-pcsc
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake perl:run pkg-config
+USE_TOOLS+=	gmake msgfmt perl:run pkg-config
 GNU_CONFIGURE=	yes
 
 LDFLAGS.NetBSD+=	-lpthread
