@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/04/12 09:44:00 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/11 07:23:51 wiz Exp $
 
 .include "../../devel/capstone/Makefile.common"
 
@@ -15,6 +15,9 @@ PYSETUPSUBDIR=	bindings/python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+# as of 5.0.9
+# 2 failed, 24 passed, 1 error
 
 .include "../../devel/capstone/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
