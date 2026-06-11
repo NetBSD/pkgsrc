@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/14 13:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/11 09:50:01 adam Exp $
 
-DISTNAME=	django_haystack-3.3.0
+DISTNAME=	django_haystack-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-haystack/}
 
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
