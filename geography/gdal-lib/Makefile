@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2026/06/11 17:23:25 gdt Exp $
+# $NetBSD: Makefile,v 1.204 2026/06/11 17:41:16 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -45,7 +45,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PARQUET=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
 
 # Disable python bindings because it is in ../py-gdal.  The reasons
 # are to allow multiple python versions, and to remove the dependency
