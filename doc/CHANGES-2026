@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3716 2026/06/11 12:45:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3717 2026/06/11 12:53:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5663,3 +5663,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ldns to 1.9.2 [adam 2026-06-11]
 	Updated net/drill to 1.9.2 [adam 2026-06-11]
 	Updated www/py-daphne to 4.2.2 [adam 2026-06-11]
+	Updated ham/trustedQSL to 2.8.6 [mef 2026-06-11]
