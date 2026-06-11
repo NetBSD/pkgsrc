@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3721 2026/06/11 13:20:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3722 2026/06/11 13:38:36 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5669,3 +5669,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/py-zensical version 0.0.44 [wiz 2026-06-11]
 	Updated www/py-bleach to 6.4.0 [adam 2026-06-11]
 	Updated security/py-pip-audit to 2.10.1 [adam 2026-06-11]
+	Updated net/ipv6calc to 4.4.0 [drixter 2026-06-11]
