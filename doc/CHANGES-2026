@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3702 2026/06/11 03:38:24 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3703 2026/06/11 06:39:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5624,6 +5624,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ndpi to 5.0 [adam 2026-06-10]
 	Updated net/ntopng to 6.6 [adam 2026-06-10]
 	Updated devel/ruby-msgpack to 1.8.3 [taca 2026-06-10]
+	Updated textproc/ansifilter to 2.22 [adam 2026-06-10]
+	Updated security/ccid to 1.8.1 [adam 2026-06-10]
+	Updated security/pcsc-lite to 2.5.1 [adam 2026-06-10]
 	Updated www/palemoon-gtk3 to 34.3.0.1 [nia 2026-06-10]
 	Updated www/palemoon to 34.3.0.1 [nia 2026-06-10]
 	Updated shells/bash to 5.3.15 [kre 2026-06-10]
@@ -5637,3 +5640,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/py-extra-platforms version 13.0.0 [wiz 2026-06-10]
 	Updated math/R-survey to 4.5 [mef 2026-06-10]
 	Updated shells/oh-my-posh to 29.15.1 [pin 2026-06-11]
+>>>>>>> 1.3702
