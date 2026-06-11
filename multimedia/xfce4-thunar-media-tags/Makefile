@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/01/27 08:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/06/11 07:17:30 wiz Exp $
 
-PKGREVISION= 27
+PKGREVISION= 28
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	thunar-media-tags-plugin-0.3.0

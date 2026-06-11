@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2026/02/07 08:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/06/11 07:17:57 wiz Exp $
 
 DISTNAME=	sakura-3.8.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/sakura/trunk/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.bz2

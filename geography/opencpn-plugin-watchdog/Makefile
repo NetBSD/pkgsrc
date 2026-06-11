@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2026/01/27 08:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/06/11 07:17:03 wiz Exp $
 #
 
 VERSION=	2.4.6
 DISTNAME=	watchdog_pi-${VERSION}
 PKGNAME=	opencpn-plugin-watchdog-${VERSION}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rgleason/}
 GITHUB_PROJECT=	watchdog_pi

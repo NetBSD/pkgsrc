@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/05/21 08:25:15 markd Exp $
+# $NetBSD: Makefile,v 1.21 2026/06/11 07:17:52 wiz Exp $
 
 DISTNAME=	kjobwidgets-${KF6VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

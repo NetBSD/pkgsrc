@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2026/01/27 08:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/06/11 07:17:54 wiz Exp $
 
-PKGREVISION= 19
+PKGREVISION= 20
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-screensaver-${VERSION:R}.2

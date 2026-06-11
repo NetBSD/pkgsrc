@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2026/01/27 08:39:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/11 07:17:01 wiz Exp $
 
 DISTNAME=	libgnome-games-support-1.8.2
 PKGNAME=	${DISTNAME:S/support/support1/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome-games-support/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

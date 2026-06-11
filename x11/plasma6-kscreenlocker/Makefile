@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/05/14 16:42:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/11 07:17:56 wiz Exp $
 
 DISTNAME=	kscreenlocker-${PLASMAVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

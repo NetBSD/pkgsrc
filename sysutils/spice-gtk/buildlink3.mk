@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2026/05/15 20:08:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/06/11 07:17:41 wiz Exp $
 
 BUILDLINK_TREE+=	spice-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	spice-gtk
 SPICE_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spice-gtk+=	spice-gtk>=0.39
-BUILDLINK_ABI_DEPENDS.spice-gtk+=	spice-gtk>=0.42nb4
+BUILDLINK_ABI_DEPENDS.spice-gtk+=	spice-gtk>=0.42nb5
 BUILDLINK_PKGSRCDIR.spice-gtk?=		../../sysutils/spice-gtk
 
 .include "../../audio/libopus/buildlink3.mk"

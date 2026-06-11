@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/05/14 16:41:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/11 07:17:22 wiz Exp $
 
 DISTNAME=	eventviews-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/

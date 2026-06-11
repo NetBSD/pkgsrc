@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2026/05/15 09:58:53 adam Exp $
+# $NetBSD: Makefile,v 1.88 2026/06/11 07:17:11 wiz Exp $
 
 PKGNAME=	gnuradio-dtv-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 COMMENT=	Various digital television standards of GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

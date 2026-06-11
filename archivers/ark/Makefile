@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2026/05/14 16:40:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.111 2026/06/11 07:16:41 wiz Exp $
 
 DISTNAME=	ark-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	archivers
 
 HOMEPAGE=	https://kde.org/applications/utilities/ark/

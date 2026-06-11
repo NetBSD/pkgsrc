@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/04/20 05:11:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/11 07:17:45 wiz Exp $
 
 DISTNAME=	swappy-1.8.0
+PKGREVISION=	1
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jtheoof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

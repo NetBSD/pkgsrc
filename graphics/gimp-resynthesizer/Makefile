@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2026/01/27 08:39:39 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/06/11 07:17:05 wiz Exp $
 
 DISTNAME=	resynthesizer-3.0.0
 PKGNAME=	gimp-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bootchk/}
 GITHUB_PROJECT=	resynthesizer

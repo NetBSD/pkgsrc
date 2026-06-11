@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/05/15 17:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/06/11 07:16:46 wiz Exp $
 
 DISTNAME=	amtk-5.0.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/amtk/5.0/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2026/05/14 16:40:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2026/06/11 07:16:50 wiz Exp $
 
 DISTNAME=	libkgapi-${KAPPSVER}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel
 
 HOMEPAGE=	https://www.kde.org/

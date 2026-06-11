@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2026/05/14 16:40:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2026/06/11 07:16:51 wiz Exp $
 
 DISTNAME=	lokalize-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/lokalize/

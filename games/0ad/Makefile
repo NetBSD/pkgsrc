@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/05/15 09:58:49 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/06/11 07:16:58 wiz Exp $
 
-PKGREVISION= 43
+PKGREVISION= 44
 .include "Makefile.common"
 
 DISTNAME=	${DISTVERSION}-build
