@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/05/11 11:53:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/11 12:13:39 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1237,7 +1237,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-26.1.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-26.1.2-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3208,6 +3208,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_unicode.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_watchers.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_watchers.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_watchers.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_weakref.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_weakref.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_weakref.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.pyo
@@ -3931,6 +3934,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict_watcher.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict_watcher.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dict_watcher.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_enumerate.pyo
@@ -3973,6 +3979,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_mmap.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_races.pyo
