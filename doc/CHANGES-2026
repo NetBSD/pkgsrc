@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3717 2026/06/11 12:53:48 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3718 2026/06/11 13:11:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/drill to 1.9.2 [adam 2026-06-11]
 	Updated www/py-daphne to 4.2.2 [adam 2026-06-11]
 	Updated ham/trustedQSL to 2.8.6 [mef 2026-06-11]
+	Added devel/py-deepmerge version 2.0 [wiz 2026-06-11]
