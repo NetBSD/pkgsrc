@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3725 2026/06/11 15:34:03 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3726 2026/06/11 18:53:36 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5672,3 +5672,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ipv6calc to 4.4.0 [drixter 2026-06-11]
 	Updated audio/vorbis-tools to 1.4.3 [drixter 2026-06-11]
 	Added shells/brush-shell version 0.4.0 [drixter 2026-06-11]
+	Updated audio/vorbis-tools to 1.4.3nb1 [drixter 2026-06-11]
