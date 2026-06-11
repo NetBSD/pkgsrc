@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.204 2026/06/11 17:41:16 gdt Exp $
+# $NetBSD: Makefile,v 1.205 2026/06/11 18:01:39 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-PKGREVISION=	2
+PKGREVISION=	3
 #PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats
@@ -28,10 +28,6 @@ cmake-options:
 	(cd ${WRKSRC}/cmake-pkgsrc-build && cmake -L ..) > OPTIONS
 
 .include "../../devel/cmake/build.mk"
-
-# \todo Justify or change to bl3 on json-c
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_JSONC_INTERNAL=ON
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_JSONC=OFF
 
 # Disable things that cmake finds that we didn't bl3.
 # \todo For each, consider if we should intead add a bl3.
@@ -145,8 +141,7 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PODOFO=OFF
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-# \todo See USE_JSONC_INTERNAL in Makefile.common.
-# .include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
