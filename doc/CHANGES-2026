@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3704 2026/06/11 07:00:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3705 2026/06/11 07:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5642,3 +5642,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.15.1 [pin 2026-06-11]
 	Updated devel/cbindgen to 0.29.4 [adam 2026-06-11]
 	Updated editors/neovim to 0.12.3 [adam 2026-06-11]
+	Updated lang/rust to 1.96.0 [wiz 2026-06-11]
