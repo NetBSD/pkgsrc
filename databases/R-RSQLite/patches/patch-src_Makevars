@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/06/11 22:00:10 mef Exp $
+
+Probably, not neccesary line left out
+(deps.mk is not in the tree)
+
+--- src/Makevars.orig	2026-06-12 06:53:39.166668750 +0900
++++ src/Makevars	2026-06-12 06:53:46.755420864 +0900
+@@ -28,5 +28,3 @@ $(SHLIB): $(PKG_LIBS)
+ # For the tarball, we create an empty file.
+ deps.mk:
+ 	touch -r $$(ls -t *.cpp | head -n 1) "$@"
+-
+-include deps.mk

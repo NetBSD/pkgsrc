@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/12/14 01:29:33 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/11 22:00:10 mef Exp $
 
 R_PKGNAME=	RSQLite
-R_PKGVER=	2.3.9
+R_PKGVER=	3.53.1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
