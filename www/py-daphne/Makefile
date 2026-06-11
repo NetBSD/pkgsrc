@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/12/11 15:14:55 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/06/11 12:44:39 adam Exp $
 
-DISTNAME=	daphne-4.2.1
+DISTNAME=	daphne-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
@@ -19,15 +19,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
 
+PY_RENAME_BINARIES=	daphne
+
 PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-autobahn
 
 # test fails with:
 # https://github.com/django/daphne/issues/522
 # ModuleNotFoundError: No module named 'http_strategies'
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} daphne daphne-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
