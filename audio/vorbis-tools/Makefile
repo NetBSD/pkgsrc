@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.102 2026/05/14 16:40:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2026/06/11 14:18:39 drixter Exp $
 
-DISTNAME=	vorbis-tools-1.4.2
-PKGREVISION=	20
+DISTNAME=	vorbis-tools-1.4.3
 CATEGORIES=	audio
 MASTER_SITES=	https://ftp.osuosl.org/pub/xiph/releases/vorbis/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
 LICENSE=	gnu-gpl-v2
@@ -28,6 +27,6 @@ PTHREAD_OPTS+=	require
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
+.include "../../multimedia/libkate/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
