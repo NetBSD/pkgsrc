@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3705 2026/06/11 07:01:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3706 2026/06/11 07:02:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5643,3 +5643,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cbindgen to 0.29.4 [adam 2026-06-11]
 	Updated editors/neovim to 0.12.3 [adam 2026-06-11]
 	Updated lang/rust to 1.96.0 [wiz 2026-06-11]
+	Updated lang/rust-bin to 1.96.0 [wiz 2026-06-11]
