@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2026/06/11 14:18:39 drixter Exp $
+# $NetBSD: Makefile,v 1.104 2026/06/11 18:55:45 drixter Exp $
 
 DISTNAME=	vorbis-tools-1.4.3
+PKGREVISION=    1
 CATEGORIES=	audio
 MASTER_SITES=	https://ftp.osuosl.org/pub/xiph/releases/vorbis/
 
@@ -27,6 +28,5 @@ PTHREAD_OPTS+=	require
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../multimedia/libkate/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
