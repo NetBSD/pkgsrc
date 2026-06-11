@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.8 2026/04/02 19:06:34 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.9 2026/06/11 07:00:57 wiz Exp $
 
 Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 
@@ -9,7 +9,7 @@ Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 +
 +use rustc_abi::Endian;
 +
-+use crate::spec::{Abi, Arch, Target, TargetMetadata, TargetOptions, base};
++use crate::spec::{Arch, CfgAbi, LlvmAbi, Target, TargetMetadata, TargetOptions, base};
 +
 +pub(crate) fn target() -> Target {
 +    let mut base = base::netbsd::opts();
@@ -28,10 +28,10 @@ Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 +        data_layout: "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64".into(),
 +        arch: Arch::Mips64,
 +        options: TargetOptions {
-+            abi: Abi::ElfV2,
++            cfg_abi: CfgAbi::AbiV2,
 +            endian: Endian::Little,
 +            features: "+soft-float,+abi=n32".into(),
-+            llvm_abiname: "n32".into(),
++            llvm_abiname: LlvmAbi::N32,
 +            mcount: "__mcount".into(),
 +            ..base
 +        },
