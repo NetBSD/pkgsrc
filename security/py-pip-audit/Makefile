@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2025/12/02 13:02:54 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/06/11 13:19:40 adam Exp $
 
-DISTNAME=	pip_audit-2.10.0
+DISTNAME=	pip_audit-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
@@ -24,9 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.2.0:../../textproc/py-tomli_w
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-        ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pip-audit
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
