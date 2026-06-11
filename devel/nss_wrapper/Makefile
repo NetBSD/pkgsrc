@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/09/06 18:27:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/11 07:21:25 wiz Exp $
 
 DISTNAME=	nss_wrapper-1.1.16
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.samba.org/pub/cwrap/
 
