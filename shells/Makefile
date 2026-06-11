@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/12/13 17:59:44 vins Exp $
+# $NetBSD: Makefile,v 1.81 2026/06/11 15:19:44 drixter Exp $
 #
 
 COMMENT=	Shells
@@ -11,6 +11,7 @@ SUBDIR+=	bash-preexec
 SUBDIR+=	bash2
 SUBDIR+=	bash2-doc
 SUBDIR+=	bosh
+SUBDIR+=	brush-shell
 SUBDIR+=	dash
 SUBDIR+=	eltclsh
 SUBDIR+=	elvish

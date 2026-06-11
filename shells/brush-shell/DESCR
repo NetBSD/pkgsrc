@@ -1,0 +1,3 @@
+brush (Bo(u)rn(e) RUsty SHell) is a modern bash- and POSIX-compatible
+shell written in Rust.  Run your existing scripts and .bashrc
+unchanged -- with syntax highlighting and auto-suggestions built-in.
