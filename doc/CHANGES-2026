@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3703 2026/06/11 06:39:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3704 2026/06/11 07:00:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5640,4 +5640,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/py-extra-platforms version 13.0.0 [wiz 2026-06-10]
 	Updated math/R-survey to 4.5 [mef 2026-06-10]
 	Updated shells/oh-my-posh to 29.15.1 [pin 2026-06-11]
->>>>>>> 1.3702
+	Updated devel/cbindgen to 0.29.4 [adam 2026-06-11]
+	Updated editors/neovim to 0.12.3 [adam 2026-06-11]
