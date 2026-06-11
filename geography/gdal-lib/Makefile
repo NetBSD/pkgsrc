@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.202 2026/06/11 14:29:09 gdt Exp $
+# $NetBSD: Makefile,v 1.203 2026/06/11 17:23:25 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-PKGREVISION=	1
+PKGREVISION=	2
 #PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats
@@ -42,9 +42,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_FREEXL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_HDF5=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_HEIF=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
-# \todo Resolve LZMA usage.
-# GDAL_USE_LZMA appears in gtif but cmake says it doesn't exist.
-#CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZMA=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PARQUET=OFF
@@ -128,12 +125,13 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PODOFO=OFF
 #.include "../../print/podofo/buildlink3.mk"
 #DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
-# \todo Enable zstd
-# .include "../../archivers/zstd/buildlink3.mk"
 
 .include "../../mk/atomic64.mk"
 
 .include "../../archivers/libarchive/buildlink3.mk"
+# Confusingly, liblzma is part of xz.
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
