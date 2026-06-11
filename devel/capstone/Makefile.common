@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2026/02/24 08:22:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2026/06/11 07:23:26 wiz Exp $
 #
 # used by devel/py-capstone/Makefile
 
-DISTNAME=	capstone-5.0.7
+DISTNAME=	capstone-5.0.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=capstone-engine/}
 
