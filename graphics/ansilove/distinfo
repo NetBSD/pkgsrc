@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2025/03/31 06:06:24 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/06/11 09:46:57 adam Exp $
 
-BLAKE2s (ansilove-4.2.1.tar.gz) = 25e3b45a0ae2036c15c50acf66db3d660a2070f104d71cc556563d66529a9812
-SHA512 (ansilove-4.2.1.tar.gz) = 8fe75abb49ccdd1f264b11340157fbf705392b72c44a87a0b20ae1dda4f80b023ecd641ae909647e52d34b51f770a66714d4552e20dfad8e747b54b5ba8b73c6
-Size (ansilove-4.2.1.tar.gz) = 42218 bytes
+BLAKE2s (ansilove-4.2.2.tar.gz) = 7c7b8426fc2a566eed6e4a6f827225bf32fda065971f0cf8f573fb432049a1bb
+SHA512 (ansilove-4.2.2.tar.gz) = 3de5811dad4c37a556ae56838da1a5a92552700e4a0d9ca3b4be4bba1944012b5d48b5fa993bbb609ef42c3ba505dc49ead8af625de69805c744a6175a2a13bc
+Size (ansilove-4.2.2.tar.gz) = 42329 bytes
