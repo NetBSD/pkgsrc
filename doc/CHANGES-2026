@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3706 2026/06/11 07:02:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3707 2026/06/11 07:21:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5644,3 +5644,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/neovim to 0.12.3 [adam 2026-06-11]
 	Updated lang/rust to 1.96.0 [wiz 2026-06-11]
 	Updated lang/rust-bin to 1.96.0 [wiz 2026-06-11]
+	Updated devel/cmocka to 2.0.2 [wiz 2026-06-11]
