@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/05/14 16:42:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/06/11 07:17:57 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-plasma-workspace
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-plasma-workspace
 PLASMA6_PLASMA_WORKSPACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-plasma-workspace+=	plasma6-plasma-workspace>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-plasma-workspace?=		plasma6-plasma-workspace>=6.5.2nb1
+BUILDLINK_ABI_DEPENDS.plasma6-plasma-workspace?=		plasma6-plasma-workspace>=6.5.2nb2
 BUILDLINK_PKGSRCDIR.plasma6-plasma-workspace?=		../../x11/plasma6-plasma-workspace
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"

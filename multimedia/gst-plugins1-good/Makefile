@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2026/02/13 18:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/06/11 07:17:29 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - good plugins

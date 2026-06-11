@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2026/05/14 16:41:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2026/06/11 07:17:24 wiz Exp $
 
 BUILDLINK_TREE+=	kidentitymanagement
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kidentitymanagement
 KIDENTITYMANAGEMENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kidentitymanagement+=	kidentitymanagement>=25.08.2
-BUILDLINK_ABI_DEPENDS.kidentitymanagement?=	kidentitymanagement>=25.08.3nb4
+BUILDLINK_ABI_DEPENDS.kidentitymanagement?=	kidentitymanagement>=25.08.3nb5
 BUILDLINK_PKGSRCDIR.kidentitymanagement?=	../../misc/kidentitymanagement
 
 .include "../../textproc/kpimtextedit/buildlink3.mk"

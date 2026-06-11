@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.176 2026/05/15 17:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2026/06/11 07:16:47 wiz Exp $
 
 DISTNAME=	devhelp-3.34.0
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/devhelp/3.34/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2026/05/14 16:41:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2026/06/11 07:17:01 wiz Exp $
 
 DISTNAME=	kreversi-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kreversi/

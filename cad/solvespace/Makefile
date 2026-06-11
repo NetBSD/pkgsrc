@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/01/27 08:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/06/11 07:16:45 wiz Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -15,7 +15,7 @@ LIBDXF_HASH=		0b7b7b709d9299565db603f878214656ef5e9ddf
 SOLVESPACE_HASH=	70bde63cb32a7f049fa56cbdf924e2695fcb2916
 
 DISTNAME=		solvespace-3.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=solvespace/solvespace/archive/}
 DIST_SUBDIR=		${PKGNAME_NOREV}

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2026/01/27 08:40:39 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/06/11 07:17:41 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-fsguard-plugin-1.1.4

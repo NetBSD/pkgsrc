@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/01/27 08:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/11 07:17:04 wiz Exp $
 
 DISTNAME=	clearlooks-phenix-7.1
 PKGNAME=	${DISTNAME:S/-phenix/-phenix-theme/1}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpfleury/}
 GITHUB_PROJECT=	clearlooks-phenix
