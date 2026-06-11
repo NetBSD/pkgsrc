@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/04/15 11:17:34 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/06/11 07:09:28 adam Exp $
 
-DISTNAME=	serd-0.32.8
+DISTNAME=	serd-0.32.10
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.xz
