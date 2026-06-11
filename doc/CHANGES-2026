@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3708 2026/06/11 07:23:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3709 2026/06/11 07:24:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rust-bin to 1.96.0 [wiz 2026-06-11]
 	Updated devel/cmocka to 2.0.2 [wiz 2026-06-11]
 	Updated devel/capstone to 5.0.9 [wiz 2026-06-11]
+	Updated devel/py-capstone to 5.0.9 [wiz 2026-06-11]
