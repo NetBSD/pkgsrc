@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3728 2026/06/12 04:30:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3729 2026/06/12 04:48:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5676,3 +5676,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/R-RSQLite to 3.53.1 [mef 2026-06-11]
 	Updated devel/protobuf to 35.1 [adam 2026-06-12]
 	Updated devel/py-protobuf to 7.35.1 [adam 2026-06-12]
+	Updated databases/py-peewee to 4.0.7 [adam 2026-06-12]
+	Updated devel/zix to 0.8.2 [adam 2026-06-12]
