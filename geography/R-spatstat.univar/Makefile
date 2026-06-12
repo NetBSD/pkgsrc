@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/12/02 12:25:47 mef Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/12 13:42:27 mef Exp $
 
 R_PKGNAME=	spatstat.univar
-R_PKGVER=	3.1-1
+R_PKGVER=	3.2-0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
