@@ -1,0 +1,9 @@
+Fast, robust, powerful, and user-friendly pkgsrc package builder.
+
+Bob is a comprehensive utility for building pkgsrc packages in parallel inside
+sandboxes.
+
+Bob is designed to be an easy-to-use and complete replacement for build tools
+such as pbulk, pkg_chk, or pkg_rolling-replace, while providing a modern
+intuitive interface and many additional features for local pkgsrc development,
+bulk build reporting and publishing, and failure analysis.
