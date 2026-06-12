@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 09:25:44 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/12 14:04:37 mef Exp $
 
 R_PKGNAME=	spatstat.linnet
-R_PKGVER=	3.2-5
+R_PKGVER=	3.5-1
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
