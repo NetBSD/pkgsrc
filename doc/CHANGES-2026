@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3735 2026/06/12 10:05:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3736 2026/06/12 10:14:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5688,3 +5688,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.17 [adam 2026-06-12]
 	Updated devel/py-plumbum to 2.0.1 [adam 2026-06-12]
 	Updated devel/py-distlib to 0.4.3 [adam 2026-06-12]
+	Updated geography/py-nmeagps to 1.1.5 [gdt 2026-06-12]
