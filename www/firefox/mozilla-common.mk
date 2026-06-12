@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.313 2026/05/31 20:28:35 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.314 2026/06/12 07:27:58 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,7 @@ USE_CXX_FEATURES+=	c++20
 # XXX: As of 145.0
 GCC_REQD+=		10
 
-TOOL_DEPENDS+=		cbindgen>=0.29.1:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.29.1<0.29.4:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 BUILDLINK_DEPMETHOD.nodejs=	build
