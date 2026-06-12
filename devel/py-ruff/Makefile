@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/06/05 07:22:02 adam Exp $
+# $NetBSD: Makefile,v 1.111 2026/06/12 08:04:35 adam Exp $
 
-DISTNAME=	ruff-0.15.16
+DISTNAME=	ruff-0.15.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -11,12 +11,10 @@ COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-RUST_REQ=	1.93
+RUST_REQ=	1.94
 
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
-
-CARGO_GITHUB_CRATES+=	astral-sh lsp-types e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
