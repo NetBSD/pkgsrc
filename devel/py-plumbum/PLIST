@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/06/12 10:04:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,9 +6,18 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/plumbum/__init__.py
 ${PYSITELIB}/plumbum/__init__.pyc
 ${PYSITELIB}/plumbum/__init__.pyo
+${PYSITELIB}/plumbum/_compat/__init__.py
+${PYSITELIB}/plumbum/_compat/__init__.pyc
+${PYSITELIB}/plumbum/_compat/__init__.pyo
+${PYSITELIB}/plumbum/_compat/typing.py
+${PYSITELIB}/plumbum/_compat/typing.pyc
+${PYSITELIB}/plumbum/_compat/typing.pyo
 ${PYSITELIB}/plumbum/_testtools.py
 ${PYSITELIB}/plumbum/_testtools.pyc
 ${PYSITELIB}/plumbum/_testtools.pyo
+${PYSITELIB}/plumbum/async_cmd.py
+${PYSITELIB}/plumbum/async_cmd.pyc
+${PYSITELIB}/plumbum/async_cmd.pyo
 ${PYSITELIB}/plumbum/cli/__init__.py
 ${PYSITELIB}/plumbum/cli/__init__.pyc
 ${PYSITELIB}/plumbum/cli/__init__.pyo
@@ -71,6 +80,12 @@ ${PYSITELIB}/plumbum/colors.pyo
 ${PYSITELIB}/plumbum/commands/__init__.py
 ${PYSITELIB}/plumbum/commands/__init__.pyc
 ${PYSITELIB}/plumbum/commands/__init__.pyo
+${PYSITELIB}/plumbum/commands/_daemon_launcher.py
+${PYSITELIB}/plumbum/commands/_daemon_launcher.pyc
+${PYSITELIB}/plumbum/commands/_daemon_launcher.pyo
+${PYSITELIB}/plumbum/commands/async_.py
+${PYSITELIB}/plumbum/commands/async_.pyc
+${PYSITELIB}/plumbum/commands/async_.pyo
 ${PYSITELIB}/plumbum/commands/base.py
 ${PYSITELIB}/plumbum/commands/base.pyc
 ${PYSITELIB}/plumbum/commands/base.pyo
@@ -137,9 +152,11 @@ ${PYSITELIB}/plumbum/path/remote.pyo
 ${PYSITELIB}/plumbum/path/utils.py
 ${PYSITELIB}/plumbum/path/utils.pyc
 ${PYSITELIB}/plumbum/path/utils.pyo
+${PYSITELIB}/plumbum/py.typed
 ${PYSITELIB}/plumbum/typed_env.py
 ${PYSITELIB}/plumbum/typed_env.pyc
 ${PYSITELIB}/plumbum/typed_env.pyo
 ${PYSITELIB}/plumbum/version.py
 ${PYSITELIB}/plumbum/version.pyc
+${PYSITELIB}/plumbum/version.pyi
 ${PYSITELIB}/plumbum/version.pyo
