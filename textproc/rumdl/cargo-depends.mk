@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2026/05/16 20:34:17 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2026/06/12 12:32:39 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -139,6 +139,7 @@ CARGO_CRATE_DEPENDS+=	idna-1.1.0
 CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.1
 CARGO_CRATE_DEPENDS+=	ignore-0.4.25
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
+CARGO_CRATE_DEPENDS+=	indoc-2.0.7
 CARGO_CRATE_DEPENDS+=	inotify-0.11.1
 CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
 CARGO_CRATE_DEPENDS+=	ipnet-2.12.0
