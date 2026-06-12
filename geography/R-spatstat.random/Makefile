@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/12/01 14:03:45 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/12 14:09:17 mef Exp $
 
 R_PKGNAME=	spatstat.random
-R_PKGVER=	3.3-2
+R_PKGVER=	3.5-0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-spatstat.data>=3.0:../../geography/R-spatstat.data
 DEPENDS+=	R-spatstat.geom>=3.2.1:../../geography/R-spatstat.geom
 DEPENDS+=	R-spatstat.utils>=3.0.2:../../geography/R-spatstat.utils
+DEPENDS+=	R-spatstat.sparse-[0-9]*:../../geography/R-spatstat.sparse
 
 TEST_DEPENDS+=	R-spatstat.linnet-[0-9]*:../../geography/R-spatstat.linnet
 TEST_DEPENDS+=	R-spatstat.explore-[0-9]*:../../geography/R-spatstat.explore
