@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/12/22 13:34:35 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/06/12 07:49:11 adam Exp $
 
-DISTNAME=	asteval-1.0.8
+DISTNAME=	asteval-1.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asteval/}
