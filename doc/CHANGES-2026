@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3746 2026/06/12 12:52:04 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3747 2026/06/12 13:07:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/R-ps to 1.9.3 [mef 2026-06-12]
 	Updated math/R-backports to 1.5.1 [mef 2026-06-12]
 	Updated math/R-zoo to 1.8.15 [mef 2026-06-12]
+	Updated geography/R-s2 to 1.1.9 [mef 2026-06-12]
