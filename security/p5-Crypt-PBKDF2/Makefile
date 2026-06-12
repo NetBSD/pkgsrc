@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2025/07/04 08:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/06/12 13:50:05 wiz Exp $
 
-DISTNAME=		Crypt-PBKDF2-0.161520
+DISTNAME=		Crypt-PBKDF2-0.261630
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
 CATEGORIES=		security perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AR/ARODLAND/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Crypt-PBKDF2
 COMMENT=		PBKDF2 password hashing algorithm
 LICENSE=		${PERL5_LICENSE}
 
+DEPENDS+=		p5-Crypt-URandom-[0-9]*:../../security/p5-Crypt-URandom
 DEPENDS+=		p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=		p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
@@ -18,6 +18,7 @@ DEPENDS+=		p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=		p5-Digest-SHA3-[0-9]*:../../security/p5-Digest-SHA3
 TEST_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/Crypt/PBKDF2/.packlist
 
 .include "../../lang/perl5/module.mk"
