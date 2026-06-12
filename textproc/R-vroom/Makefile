@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/21 09:05:33 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/12 23:06:38 mef Exp $
 
 R_PKGNAME=	vroom
-R_PKGVER=	1.6.5
+R_PKGVER=	1.7.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
