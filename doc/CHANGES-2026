@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3749 2026/06/12 13:27:03 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3750 2026/06/12 13:30:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5703,3 +5703,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/R-s2 to 1.1.9 [mef 2026-06-12]
 	Updated security/R-oskeyring to 0.1.7 [mef 2026-06-12]
 	Updated geography/R-spatstat.utils to 3.2.3 [mef 2026-06-12]
+	Updated geography/R-spatstat.sparse to 3.2.0 [mef 2026-06-12]
