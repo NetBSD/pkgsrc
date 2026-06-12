@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/06/12 16:58:19 mef Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/12 17:11:55 mef Exp $
 
 R_PKGNAME=	s2
 R_PKGVER=	1.1.7
@@ -27,6 +27,16 @@ USE_LANGUAGES=		c c++
 CWRAPPERS_APPEND.cxx=	-D_NETBSD_SOURCE
 .  endif
 .endif
+
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars.in
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
