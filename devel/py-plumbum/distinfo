@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/11/11 13:38:56 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/06/12 10:04:38 adam Exp $
 
-BLAKE2s (plumbum-1.10.0.tar.gz) = a3bd4e730f70c9427d6fa17140b248918944bf5b626a7079d575935f07ad1d5b
-SHA512 (plumbum-1.10.0.tar.gz) = c290ae9bb4475380ae6cc32d801050642d1ef2806df6b1be9e45ed61f511ac5e3a4da2f45104d55b0eb34b6a73c649bab05b8ea9bb84d666adf8d921f8c503e2
-Size (plumbum-1.10.0.tar.gz) = 320039 bytes
+BLAKE2s (plumbum-2.0.1.tar.gz) = abb98ba2a4c4f87734970a79159caf0090131e74d825538365d31855c60efcdd
+SHA512 (plumbum-2.0.1.tar.gz) = 251e6e4f960c353c3c482f3c82598d001a9ca62a8f2cad38621c7789813b91404034541c92758e2cb88148964e13983643c78b61b72e1cf3f1d06ad219bb2f7f
+Size (plumbum-2.0.1.tar.gz) = 377668 bytes
