@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3743 2026/06/12 12:33:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3744 2026/06/12 12:44:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5697,3 +5697,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ttl to 0.20.0 [pin 2026-06-12]
 	Updated net/xfr to 0.9.18 [pin 2026-06-12]
 	Updated textproc/rumdl to 0.2.14 [pin 2026-06-12]
+	Updated sysutils/R-ps to 1.9.3 [mef 2026-06-12]
