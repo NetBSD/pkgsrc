@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/01/21 02:54:27 mef Exp $
+$NetBSD: distinfo,v 1.7 2026/06/12 23:06:38 mef Exp $
 
-BLAKE2s (R/vroom_1.6.5.tar.gz) = f7f6c281fb023d086e301f474b396bc872e91775e34adcd901446124b08e8e74
-SHA512 (R/vroom_1.6.5.tar.gz) = 7df88eea567418608db95bfb7925e4371851fa1c9badecb15cf87ab64b6d2bcd3f19c8d278d95aa0c487e7ad2376332e0739975c55d677cf9b177f8ba3a6f502
-Size (R/vroom_1.6.5.tar.gz) = 750416 bytes
+BLAKE2s (R/vroom_1.7.1.tar.gz) = 46a6cf4e0e03a2b1d2e021300258784686b51feb81fe6e18069834f96593de9f
+SHA512 (R/vroom_1.7.1.tar.gz) = d25657d6459e6a0883fb6e8d9bb86b415f0de2ce02c4a0f0ecb9c386d36e0effecfd0126a0dcfa71af051665734a46dc1db0ecc5352c6cba1d5bc3459b84ff6a
+Size (R/vroom_1.7.1.tar.gz) = 619728 bytes
