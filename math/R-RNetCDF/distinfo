@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/10/26 08:43:56 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/06/12 23:52:18 mef Exp $
 
-BLAKE2s (R/RNetCDF_2.9-2.tar.gz) = 3f70454e9dcd9453fd4a4e501aa5a2feb7ccf09ad6acae79ac7117355a362763
-SHA512 (R/RNetCDF_2.9-2.tar.gz) = 2d6bd638bc11a90cb566f696bbbda8db5cdab221afbe400723558dc62b7e6f666bfa2036d839ae1c9b292d3d16408e1fc28559fe0fd9094b1026a8b49580ce52
-Size (R/RNetCDF_2.9-2.tar.gz) = 160580 bytes
+BLAKE2s (R/RNetCDF_2.11-1.tar.gz) = 53bbcc0b0fc5123b4b5f83bb0e092fab663dfd0e0dd6826757365931a87923d8
+SHA512 (R/RNetCDF_2.11-1.tar.gz) = f1adb3facb1833ba7a664459ca013e289916778d9ebc269ecea3d9ff05c2897a81405ad9958c15b4c290d138c35c2a2867eea9a15ffd9e70f36fa65a06ca93a0
+Size (R/RNetCDF_2.11-1.tar.gz) = 164210 bytes
