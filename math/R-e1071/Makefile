@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/11/02 00:26:24 mef Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/12 14:27:18 mef Exp $
 
 R_PKGNAME=	e1071
-R_PKGVER=	1.7-16
+R_PKGVER=	1.7-17
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
