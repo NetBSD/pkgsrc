@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/09/27 09:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/12 23:11:35 mef Exp $
 
 R_PKGNAME=	readr
-R_PKGVER=	2.1.5
-PKGREVISION=	1
+R_PKGVER=	2.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
