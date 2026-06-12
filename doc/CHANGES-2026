@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3741 2026/06/12 12:31:08 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3742 2026/06/12 12:32:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.6.3 [pin 2026-06-12]
 	Updated finance/rex to 0.2.7 [pin 2026-06-12]
 	Updated net/ttl to 0.20.0 [pin 2026-06-12]
+	Updated net/xfr to 0.9.18 [pin 2026-06-12]
