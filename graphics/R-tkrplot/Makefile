@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/11/12 13:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/12 23:31:44 mef Exp $
 
 R_PKGNAME=	tkrplot
-R_PKGVER=	0.0-27
-PKGREVISION=	2
+R_PKGVER=	0.0-32
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
