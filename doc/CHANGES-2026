@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3764 2026/06/12 23:22:14 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3765 2026/06/12 23:28:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5718,3 +5718,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/chirp to 20260612 [gdt 2026-06-12]
 	Updated textproc/R-readr to 2.2.0 [mef 2026-06-12]
 	Updated www/R-RCurl to 1.98.1.19 [mef 2026-06-12]
+	Updated textproc/R-vroom to 1.7.1 [mef 2026-06-12]
