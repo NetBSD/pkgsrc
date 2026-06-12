@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.314 2026/06/12 07:27:58 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.315 2026/06/12 07:28:27 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -42,12 +42,12 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 CFLAGS+=		-msse2
 .endif
 
-#CKSUM_CRATES+=	third_party/rust/quinn-udp
+#CKSUM_CRATES+=		third_party/rust/quinn-udp
 #
-#CKSUMS+=	b8e595499055115d15bfb95259c0c585934adf55f61e365bcc9fc47ab8fa9cdd
-#CKSUMS+=	7be04be65b1606fd2560d572ba5a6238a645075555085d5e9cef15d10b0b8024
+#CKSUMS+=		b8e595499055115d15bfb95259c0c585934adf55f61e365bcc9fc47ab8fa9cdd
+#CKSUMS+=		7be04be65b1606fd2560d572ba5a6238a645075555085d5e9cef15d10b0b8024
 #
-#SUBST_CLASSES+=		cksum
+#SUBST_CLASSES+=	cksum
 #SUBST_STAGE.cksum=	pre-configure
 #.for crate in ${CKSUM_CRATES}
 #SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
@@ -165,12 +165,12 @@ SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
 SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "aarch64"
-SUBST_CLASSES+=                 sve2
-SUBST_STAGE.sve2=               pre-configure
-SUBST_FILES.sve2=               media/libyuv/libyuv/source/convert.cc
-SUBST_FILES.sve2+=              media/libyuv/libyuv/source/scale_argb.cc
-SUBST_FILES.sve2+=              media/libyuv/libyuv/source/convert_argb.cc
-SUBST_SED.sve2=                 -e 's/_SVE2/_NEON/g'
+SUBST_CLASSES+=			sve2
+SUBST_STAGE.sve2=		pre-configure
+SUBST_FILES.sve2=		media/libyuv/libyuv/source/convert.cc
+SUBST_FILES.sve2+=		media/libyuv/libyuv/source/scale_argb.cc
+SUBST_FILES.sve2+=		media/libyuv/libyuv/source/convert_argb.cc
+SUBST_SED.sve2=			-e 's/_SVE2/_NEON/g'
 .endif
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or earlier.
