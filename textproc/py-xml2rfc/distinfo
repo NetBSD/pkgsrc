@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/04/10 07:51:50 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/06/12 07:51:23 adam Exp $
 
-BLAKE2s (xml2rfc-3.33.0.tar.gz) = 51b725b46c23a591b205ac7f62de5fe4a22f8ba1a6128bd7213610c138fbd41a
-SHA512 (xml2rfc-3.33.0.tar.gz) = 55cfb6dfddc0b1c61c6ed115fd9b7299566413a87ff74278827d2a7bb2a6d7e99249389ea2496ef59ae7660f37e843e9bbf84d77349324c17eeaf695f28ef0ba
-Size (xml2rfc-3.33.0.tar.gz) = 424125 bytes
+BLAKE2s (xml2rfc-3.34.0.tar.gz) = e59045e695ca5aaabadbc016fda4450a71f3eafc8cdd6cc5f85dcd2d2e843ba7
+SHA512 (xml2rfc-3.34.0.tar.gz) = 7ed4de76ed93918b4881888c61ac40193b296520f968d4b281617dbd1f56293589f4f5d997485651b22234a4e39c515502333c0394406089aab451483805387a
+Size (xml2rfc-3.34.0.tar.gz) = 424364 bytes
