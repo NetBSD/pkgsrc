@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/12/15 01:51:53 mef Exp $
+$NetBSD: distinfo,v 1.8 2026/06/12 23:22:04 mef Exp $
 
-BLAKE2s (R/RCurl_1.98-1.16.tar.gz) = 511c7269a63aa6f6cd7d8af93e75436b3b7da97625225b49aeb2a91d3f8f9429
-SHA512 (R/RCurl_1.98-1.16.tar.gz) = 1c50b9cfb9568f9a8b9dfc64473cd572bece683d64bcf4f74d16c6e97a22982fe21c134a63c2a70f72aded916df7ac9abdfaaf9981c436dbcb59fdfdd4bbf443
-Size (R/RCurl_1.98-1.16.tar.gz) = 728943 bytes
+BLAKE2s (R/RCurl_1.98-1.19.tar.gz) = 653ed5c43d923b13d1fc7ce3e726e03a077d832adf62113fb52321ea0e582ace
+SHA512 (R/RCurl_1.98-1.19.tar.gz) = d0c24818eb930fd93693091e993e333f555bbb1787d983b341feab0fea0514d7ed76d27d83b3bdb532ae8e29151dac856200b3ef79b9bb7c998d0cc259831af1
+Size (R/RCurl_1.98-1.19.tar.gz) = 718117 bytes
