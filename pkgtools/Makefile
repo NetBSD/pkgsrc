@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2026/03/11 21:54:30 agc Exp $
+# $NetBSD: Makefile,v 1.130 2026/06/12 12:21:03 jperkin Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -6,6 +6,7 @@ COMMENT=	Tools for use in the packages collection
 SUBDIR+=	R2pkg
 SUBDIR+=	autoswc
 SUBDIR+=	binpatch
+SUBDIR+=	bob
 SUBDIR+=	bootstrap-extras
 SUBDIR+=	bootstrap-mk-files
 SUBDIR+=	cdpack
