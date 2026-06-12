@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3755 2026/06/12 13:54:38 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3756 2026/06/12 13:59:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5709,3 +5709,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-PBKDF2 to 0.261630 [wiz 2026-06-12]
 	Updated geography/R-spatstat.geom to 3.8.1 [mef 2026-06-12]
 	Updated geography/R-spatstat.explore to 3.8.1 [mef 2026-06-12]
+	Updated geography/R-spatstat.model to 3.7.1 [mef 2026-06-12]
