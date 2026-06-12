@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/04/10 07:51:50 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/06/12 07:51:23 adam Exp $
 
-DISTNAME=	xml2rfc-3.33.0
+DISTNAME=	xml2rfc-3.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
@@ -24,11 +24,9 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PY_RENAME_BINARIES=	xml2rfc
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} xml2rfc xml2rfc-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
