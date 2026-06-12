@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3730 2026/06/12 06:45:37 tron Exp $
+$NetBSD: CHANGES-2026,v 1.3731 2026/06/12 07:26:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-peewee to 4.0.7 [adam 2026-06-12]
 	Updated devel/zix to 0.8.2 [adam 2026-06-12]
 	Updated mail/mutt to 2.3.3 [tron 2026-06-12]
+	Downgraded devel/cbindgen to 0.29.2 [wiz 2026-06-12]
