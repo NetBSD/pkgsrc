@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/10/27 09:37:11 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/12 12:48:40 mef Exp $
 
 R_PKGNAME=	backports
-R_PKGVER=	1.5.0
+R_PKGVER=	1.5.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Reimplementations of functions introduced since R-3.0.0
