@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3738 2026/06/12 12:21:14 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.3739 2026/06/12 12:28:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5692,3 +5692,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-sh to 2.3.0 [adam 2026-06-12]
 	Updated devel/py-testfixtures to 12.0.1 [adam 2026-06-12]
 	Added pkgtools/bob version 1.0.0 [jperkin 2026-06-12]
+	Updated devel/mise to 2026.6.3 [pin 2026-06-12]
