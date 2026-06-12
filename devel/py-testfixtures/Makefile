@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/05/25 08:11:32 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/12 10:29:22 adam Exp $
 
-DISTNAME=	testfixtures-12.0.0
+DISTNAME=	testfixtures-12.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testfixtures/}
