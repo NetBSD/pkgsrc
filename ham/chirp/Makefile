@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.76 2026/05/15 11:55:05 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2026/06/12 14:31:22 gdt Exp $
 
-VERSION=	20260508
+VERSION=	20260612
 DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
 # As of sometime after 20251128 and before 20260508, the distfile is not
-# fetchable by ftp/wget/curl due to apparent anti-LLM-crawler blocks.
-# Reported upstream by email 20260508 and 20260515.
+# fetchable by ftp/wget/curl.
+# Reported upstream by email to their list 20260508 and 20260515, but
+# this report did not reach the mailinglist.
+#
+# The workaround is to fetch manually and then:
+#   make upload-distfiles
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
 # Chirp does not have what would normally called releases.  They have
 # "daily builds" which are like releases except that:
