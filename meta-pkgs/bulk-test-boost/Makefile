@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/05/16 17:56:35 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/12 10:07:25 adam Exp $
 
 DISTNAME=	bulk-test-boost-20260516
 CATEGORIES=	meta-pkgs
@@ -40,6 +40,7 @@ DEPENDS+=	hugin-[0-9]*:../../graphics/hugin
 DEPENDS+=	icinga2-[0-9]*:../../net/icinga2
 DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
 DEPENDS+=	innoextract-[0-9]*:../../archivers/innoextract
+DEPENDS+=	kea-[0-9]*:../../net/kea
 DEPENDS+=	kicad-[0-9]*:../../cad/kicad
 DEPENDS+=	krita-[0-9]*:../../graphics/krita
 DEPENDS+=	libclucene-[0-9]*:../../textproc/libclucene
