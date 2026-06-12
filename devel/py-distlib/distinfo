@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/06/03 05:20:21 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/06/12 10:05:27 adam Exp $
 
-BLAKE2s (distlib-0.4.1.tar.gz) = 1f6c8543a97136d0c6982772fcbbafa26beaf8596bfa709b5d192f89ae4d8e7d
-SHA512 (distlib-0.4.1.tar.gz) = 1d94668beceda3e947c13d854f385aecc9f054beb51a084260337b4b0cf07524dca62fb35ebf8f8296a7ab9e9006bee5452f11dd0c9637ea399100363334acf7
-Size (distlib-0.4.1.tar.gz) = 610526 bytes
+BLAKE2s (distlib-0.4.3.tar.gz) = 962a5d9f1fc2e8983eba379b5393eac2f589505085565b7ef2508a947c5f9cb7
+SHA512 (distlib-0.4.3.tar.gz) = 0f6b44640cbfa9bccef10c6cdeedaec8582a2bd5878fcbc803a6feedb81daee5f28506004e23749f3eba206199cadae99808dbcd956066ba948cde455301fd74
+Size (distlib-0.4.3.tar.gz) = 615141 bytes
