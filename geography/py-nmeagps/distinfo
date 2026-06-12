@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/04/27 11:59:16 gdt Exp $
+$NetBSD: distinfo,v 1.6 2026/06/12 10:14:13 gdt Exp $
 
-BLAKE2s (pynmeagps-1.1.4.tar.gz) = bf57ca192db1fe9dbbe51773326c337c8dcd98cbe36cfcb0dba28ca68715364c
-SHA512 (pynmeagps-1.1.4.tar.gz) = 61fb045f3f1911e9e314706a543963b6a420be4933ee477e12b32f00e69ca333de7210a793c09ad714cb230361647e08dc6f92e43e0383eae42c3795f9596978
-Size (pynmeagps-1.1.4.tar.gz) = 135351 bytes
+BLAKE2s (pynmeagps-1.1.5.tar.gz) = c6ea6cd3ede584170757f52b49b68945502da3130fec0288113a9cd40c880ccb
+SHA512 (pynmeagps-1.1.5.tar.gz) = 18ab604adccec50f21f374a24ae1a187dae6058de2e336051e4d4dc08143044873a8a49df92a51a035658f5abd21d331105246c5d597b2a9a419afc22c451b8d
+Size (pynmeagps-1.1.5.tar.gz) = 141300 bytes
