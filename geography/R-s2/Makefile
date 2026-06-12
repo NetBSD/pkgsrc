@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/06/12 13:07:51 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/12 16:58:19 mef Exp $
 
 R_PKGNAME=	s2
-R_PKGVER=	1.1.9
+R_PKGVER=	1.1.7
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=		c c++
-# make patch to be portable
-USE_TOOLS+=		gmake
 .include "../../mk/bsd.prefs.mk"
 
 # https://mail-index.netbsd.org/pkgsrc-users/2025/01/02/msg040775.html
