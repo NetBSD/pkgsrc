@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3774 2026/06/13 01:02:46 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3775 2026/06/13 02:10:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5728,3 +5728,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R-LearnBayes to 2.15.2 [mef 2026-06-13]
 	Updated math/R-MatrixModels to 0.5.4 [mef 2026-06-13]
 	Updated math/R-RPostgreSQL to 0.7.8 [mef 2026-06-13]
+	Updated www/pound to 4.23 [gutteridge 2026-06-13]
