@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3790 2026/06/13 15:59:07 js Exp $
+$NetBSD: CHANGES-2026,v 1.3791 2026/06/13 17:30:23 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5761,3 +5761,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/amiri-ttf to 1.003 [wiz 2026-06-13]
 	Added editors/vim-gtk4 version 9.2.0602 [wiz 2026-06-13]
 	Updated cross/ppc-morphos-gcc to 15.2.0 [js 2026-06-13]
+	Updated emulators/qemu to 11.0.1nb2 [thorpej 2026-06-13]
