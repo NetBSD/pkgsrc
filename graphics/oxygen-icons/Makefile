@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2025/01/23 23:27:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.51 2026/06/13 14:43:04 wiz Exp $
 
 DISTNAME=	oxygen-icons-5.114.0
 CATEGORIES=	graphics kde
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.oxygen-icons.org/
+HOMEPAGE=	https://invent.kde.org/frameworks/oxygen-icons
 COMMENT=	Oxygen icon set for the KDE integrated X11 desktop
 LICENSE=	gnu-lgpl-v3
 
