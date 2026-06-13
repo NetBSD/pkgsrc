@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3783 2026/06/13 11:31:59 markd Exp $
+$NetBSD: CHANGES-2026,v 1.3784 2026/06/13 11:42:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5754,3 +5754,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/liboauth2-apache version 2.3.0 [markd 2026-06-13]
 	Added security/cyrus-sasl-oauth2-oidc version 1.0.2 [markd 2026-06-13]
 	Added www/ap2-oauth2 version 4.2.0 [markd 2026-06-13]
+	Updated textproc/R-readxl to 1.5.0 [mef 2026-06-13]
