@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/11/12 13:10:50 mef Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/13 00:09:48 mef Exp $
 
 R_PKGNAME=	GPArotation
-R_PKGVER=	2024.3-1
+R_PKGVER=	2026.4-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Gradient Projection Factor Rotation
