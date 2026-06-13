@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/02/20 03:14:01 mef Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/06/13 14:39:46 wiz Exp $
 #
 # used by textproc/hunspell-af_ZA/Makefile
 # used by textproc/hunspell-bg_BG/Makefile
@@ -31,7 +31,7 @@ PKGNAME=	hunspell-${DISTNAME}-${VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_OPENOFFICE:=contrib/dictionaries/}
 
-HOMEPAGE=	http://wiki.services.openoffice.org/wiki/Dictionaries
+HOMEPAGE=	https://wiki.services.openoffice.org/wiki/Dictionaries
 
 # Whether to install readme files for dict
 HUNDICT_INSTALL_README?=	yes
