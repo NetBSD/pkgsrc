@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.114 2026/05/14 16:41:48 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.115 2026/06/13 06:15:19 adam Exp $
 
-DISTNAME=		ocamlnet-4.1.9
-PKGREVISION=		29
-CATEGORIES=		net
-MASTER_SITES=		http://download.camlcity.org/download/
+DISTNAME=	ocamlnet-4.1.9
+PKGREVISION=	30
+CATEGORIES=	net
+MASTER_SITES=	http://download.camlcity.org/download/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://projects.camlcity.org/projects/ocamlnet.html
-COMMENT=		Library focusing on application-level network protocols (OCaml)
-LICENSE=		zlib AND gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://projects.camlcity.org/projects/ocamlnet.html
+COMMENT=	Library focusing on application-level network protocols (OCaml)
+LICENSE=	zlib AND gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
 
@@ -38,6 +37,6 @@ OCAML_FINDLIB_DIRS+=	rpc-xti
 
 .include "options.mk"
 
-.include "../../devel/pcre-ocaml/buildlink3.mk"
 .include "../../archivers/ocaml-zip/buildlink3.mk"
+.include "../../devel/pcre-ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

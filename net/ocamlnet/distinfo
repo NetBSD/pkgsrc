@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.32 2022/05/03 09:40:28 jaapb Exp $
+$NetBSD: distinfo,v 1.33 2026/06/13 06:15:19 adam Exp $
 
 BLAKE2s (ocamlnet-4.1.9.tar.gz) = 861dd6efd600d3d9ab18437096309d060ab52af4edc95bc6aa742576324ac7f8
 SHA512 (ocamlnet-4.1.9.tar.gz) = a251724deb35e756c81d2d3ac836d413b659acdce6c0acf479a4fca48934ab62ad399a884197d00dbb7e7558132a56be1c8efd553c0a644d329418272f809a46
 Size (ocamlnet-4.1.9.tar.gz) = 4628747 bytes
 SHA1 (patch-src_netsys_netsys__c.c) = 2fe5c7db2e76a894b8fde36f381caf46661fa73b
+SHA1 (patch-src_nettls-gnutls_nettle.c) = 317a913fe572150236c331a9e385562724105ab3
