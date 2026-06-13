@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/06/13 09:38:20 markd Exp $
+
+Configure like Linux for some defaults
+
+--- CMakeLists.txt.orig	2026-06-04 15:30:18.000000000 +0000
++++ CMakeLists.txt
+@@ -44,6 +44,8 @@ endif()
+ include(cmake/project_version.cmake)
+ include(GNUInstallDirs)
+ 
++set(ADDITIONAL_DEFINITIONS ${ADDITIONAL_DEFINITIONS} -DQ_WS_X11)
++
+ if(MSVC)
+ 	set(ADDITIONAL_DEFINITIONS ${ADDITIONAL_DEFINITIONS} -D_CRT_SECURE_NO_WARNINGS -D_UNICODE -DUNICODE)
+ 	add_compile_options(/wd4267 /wd4244)
