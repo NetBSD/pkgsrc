@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.135 2026/05/15 09:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.136 2026/06/13 09:51:21 markd Exp $
 
-DISTNAME=		lyx-2.3.6.1
-PKGREVISION=		32
+DISTNAME=		lyx-2.5.1
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.3.x/
-MASTER_SITES+=		ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.3.x/
-MASTER_SITES+=		ftp://ftp.lip6.fr/pub/lyx/stable/2.3.x/
-MASTER_SITES+=		ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.3.x/
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.5.x/
+MASTER_SITES+=		ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.5.x/
+MASTER_SITES+=		ftp://ftp.lip6.fr/pub/lyx/stable/2.5.x/
+MASTER_SITES+=		ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.5.x/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		reed@reedmedia.net
@@ -67,13 +66,12 @@ USE_PKGLOCALEDIR=		YES
 CXXFLAGS.Linux+=	-fpermissive
 
 CONFIGURE_ARGS+=	--without-included-mythes
-CONFIGURE_ARGS+=	--without-included-boost
 
-CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt5-qtbase} \
+CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt6-qtbase} \
 			--with-qt-dir=${QTDIR:Q} \
-			--with-qt-includes=${BUILDLINK_PREFIX.qt5-qtbase}/qt5/include \
-			--with-qt-libraries=${BUILDLINK_PREFIX.qt5-qtbase}/qt5/lib \
-			--enable-qt5
+			--with-qt-includes=${BUILDLINK_PREFIX.qt6-qtbase}/qt5/include \
+			--with-qt-libraries=${BUILDLINK_PREFIX.qt6-qtbase}/qt5/lib \
+			--enable-qt6
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -125,21 +123,26 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	lib/configure.py
 SUBST_SED.python=	-e "s,python ,${PYTHONBIN} ,"
-SUBST_FILES.python+=	src/graphics/GraphicsConverter.cpp
 SUBST_SED.python+=	-e "s,\#!/usr/bin/env python,\#!${PYTHONBIN},"
 SUBST_FILES.python+=	lib/scripts/lyxpak.py
 SUBST_SED.python+=	-e "s, = 'python, = '${PYTHONBIN},"
 SUBST_FILES.python+=	src/support/os.cpp
 SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+
+# pkgsrc infrastructure does not support opt-2 files
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/lyx/lyx2lyx/__pycache__/*opt-2*pyc
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"   # for PLIST handling
 .include "../../textproc/aspell/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 
