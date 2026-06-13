@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/11/12 16:50:10 rillig Exp $
+$NetBSD: distinfo,v 1.7 2026/06/13 10:02:33 markd Exp $
 
-BLAKE2s (cjose-0.6.2.2.tar.gz) = 08f6e34b02ffe9dace8413c131db10a9e074900c684d2c44f8216beb532c30f5
-SHA512 (cjose-0.6.2.2.tar.gz) = 71a087709816f0aac060a7c5f037068e981366b1809f6ee32e39eaded02ad8be061b0e2fa5093515a8acec10c7f4aca232281004426221b4b7e5edbd203eb49c
-Size (cjose-0.6.2.2.tar.gz) = 498461 bytes
-SHA1 (patch-concatkdf.c) = 730001ddc2c0020f560fd8235b076cc262856edb
+BLAKE2s (cjose-0.6.2.6.tar.gz) = a9c838fe02dc5a988358e20fdfec9b96017e5445c57c2322f1db1eb421ef8518
+SHA512 (cjose-0.6.2.6.tar.gz) = 83815c685e1080d34bb36fb932184c97f581d6636e2c34d0f8aea44e6d01e0544b1ec9b2b94e5beafab13999c08ff146076fd27ea3cfc79413891c81251c5ea6
+Size (cjose-0.6.2.6.tar.gz) = 518324 bytes
+SHA1 (patch-configure) = 012bf495c18c743d005443f0a8a1fe8385ce714a
