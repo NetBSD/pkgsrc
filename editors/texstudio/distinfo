@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2022/12/13 19:47:35 markd Exp $
+$NetBSD: distinfo,v 1.13 2026/06/13 09:38:20 markd Exp $
 
-BLAKE2s (texstudio-4.4.0.tar.gz) = a920fd04036f0cf4c553f54219ac977daaa7a429171cecff39d0eb666f91088b
-SHA512 (texstudio-4.4.0.tar.gz) = 02b328c79fca6d9d2c3fd0039081d25279d803051f4459d83750e5b2bad23227871ed367d641e06a5bafd2f08699d1410a9ffcad5ff4d2de48b53f0b0f60d977
-Size (texstudio-4.4.0.tar.gz) = 111069980 bytes
+BLAKE2s (texstudio-4.9.5.tar.gz) = e788321e3394b352bf3ba83841505ba918c4b7a096acbc056a426053b7e79a11
+SHA512 (texstudio-4.9.5.tar.gz) = 8c9f3dbfe9a11dd5f13e7d5fd1068dc679a4ba345ed67e5401d201b8d9ae7c85ae4f70cb1cfbfaf514d71c1f0e9af31fe10c76ccd7a15659ed5c7f6b997a36ca
+Size (texstudio-4.9.5.tar.gz) = 120771580 bytes
+SHA1 (patch-CMakeLists.txt) = 7c8a89f46ae6f995258df0f4d184a7124a9ac9ee
 SHA1 (patch-minisplitter.cpp) = 93b1910a12308294a5ae4870da0b208cb4580ee7
