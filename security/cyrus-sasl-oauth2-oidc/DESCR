@@ -1,0 +1,2 @@
+A comprehensive SASL plugin for OAuth2 and OpenID Connect authentication,
+built with liboauth2 for native OIDC support.

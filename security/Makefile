@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1013 2026/06/13 11:06:10 markd Exp $
+# $NetBSD: Makefile,v 1.1014 2026/06/13 11:21:21 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -78,6 +78,7 @@ SUBDIR+=	cy2-saml
 SUBDIR+=	cy2-scram
 SUBDIR+=	cy2-sql
 SUBDIR+=	cyrus-sasl
+SUBDIR+=	cyrus-sasl-oauth2-oidc
 SUBDIR+=	cyrus-sasl-xoauth2
 SUBDIR+=	cyrus-saslauthd
 SUBDIR+=	d0_blind_id

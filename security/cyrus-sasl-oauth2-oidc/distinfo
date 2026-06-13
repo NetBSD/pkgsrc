@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/13 11:21:21 markd Exp $
+
+BLAKE2s (cyrus-sasl-oauth2-oidc-1.0.2.tar.gz) = b291ca2c02d6aba5fc52a5844dac3a21d3481e5010342e24bccaf56496435c92
+SHA512 (cyrus-sasl-oauth2-oidc-1.0.2.tar.gz) = 1d71aacc4358616a0665a6f56788bc696b545611c28b494677ed50c4e7bb17d40666c05b7ea17e431781e015a2f20d22b0affec7b662b02404665bf4884eed0c
+Size (cyrus-sasl-oauth2-oidc-1.0.2.tar.gz) = 78201 bytes
