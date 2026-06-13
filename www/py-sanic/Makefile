@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/01/11 10:40:12 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/06/13 06:28:07 adam Exp $
 
-DISTNAME=	sanic-25.12.0
+DISTNAME=	sanic-25.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -41,11 +41,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PY_RENAME_BINARIES=	sanic
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} sanic sanic-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
