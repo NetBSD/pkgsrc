@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/08/22 11:21:57 markd Exp $
+$NetBSD: distinfo,v 1.12 2026/06/13 09:03:21 markd Exp $
 
-BLAKE2s (texworks-0.6.9.tar.gz) = 6c790de6c2bc0c76aebff0401297eebf69a94367f70e4bcf9144cd2abfeccb8f
-SHA512 (texworks-0.6.9.tar.gz) = 54677205e7767f377fa66be6b2c43bec2d3c3981ea1a24eb11f45608c1cb3ddc98852c43611680273601eb8e8ae4a6095c9b9a9338ee69ef0475a43f2191551e
-Size (texworks-0.6.9.tar.gz) = 12505487 bytes
+BLAKE2s (texworks-0.6.11.tar.gz) = 5e6c42bb9b6a87d3bb446e0f7b3cfc424c936f28b1c4abc8d68d26d92e8db1a7
+SHA512 (texworks-0.6.11.tar.gz) = f281001fa28bb9b9d4d633d234b844f94b1d019dcdb8f9ea6794d5baa4844dffb663a43cc84db7bc0f2f60babcd0562c752e0ce198d1a2241ac58754f1dd962e
+Size (texworks-0.6.11.tar.gz) = 11509961 bytes

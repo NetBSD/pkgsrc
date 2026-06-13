@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2026/05/14 16:40:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.145 2026/06/13 09:03:21 markd Exp $
 
-DISTNAME=	texworks-0.6.9
-PKGREVISION=	17
+DISTNAME=	texworks-0.6.11
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TeXworks/}
 GITHUB_PROJECT=	texworks
@@ -28,12 +27,13 @@ DEPENDS+=	poppler-data>=0.4.5:../../print/poppler-data
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../print/poppler-qt5/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../print/poppler-qt6/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtscript/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
