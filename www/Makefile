@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1922 2026/06/11 13:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.1923 2026/06/13 11:17:00 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -48,6 +48,7 @@ SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-mkdir
+SUBDIR+=	ap2-oauth2
 SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
