@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/06/10 13:17:47 mef Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/13 11:42:26 mef Exp $
 
 R_PKGNAME=	readxl
-R_PKGVER=	1.3.1
+R_PKGVER=	1.5.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,6 +26,6 @@ SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
 .endif
 
 .include "../../math/R/Makefile.extension"
-.include "../../devel/R-Rcpp/buildlink3.mk"
+.include "../../lang/R-cpp11/buildlink3.mk"
 .include "../../sysutils/R-progress/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
