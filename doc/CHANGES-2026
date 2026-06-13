@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3772 2026/06/13 00:16:07 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3773 2026/06/13 00:18:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5726,3 +5726,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R-GPArotation to 2026.4.1 [mef 2026-06-13]
 	Updated math/R-ISwR to 2.0.12 [mef 2026-06-13]
 	Updated math/R-LearnBayes to 2.15.2 [mef 2026-06-13]
+	Updated math/R-MatrixModels to 0.5.4 [mef 2026-06-13]
