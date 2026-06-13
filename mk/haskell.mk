@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.73 2025/03/07 13:06:19 pho Exp $
+# $NetBSD: haskell.mk,v 1.74 2026/06/13 14:37:38 wiz Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -157,7 +157,7 @@ _IGN_VARS.haskell= \
 
 PKGNAME?=	hs-${DISTNAME}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${DISTNAME}/}
-HOMEPAGE?=	http://hackage.haskell.org/package/${DISTNAME:C/-[^-]*$//}
+HOMEPAGE?=	https://hackage.haskell.org/package/${DISTNAME:C/-[^-]*$//}
 
 # GHC can be a memory hog, so don't apply regular limits.
 UNLIMIT_RESOURCES+=	datasize virtualsize
