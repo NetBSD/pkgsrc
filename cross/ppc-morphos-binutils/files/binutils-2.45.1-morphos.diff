@@ -1,0 +1,4945 @@
+diff -ruN binutils-2.45/bfd/bfd-in2.h binutils-2.45_mos/bfd/bfd-in2.h
+--- binutils-2.45/bfd/bfd-in2.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/bfd-in2.h	2025-07-27 14:39:08.700060484 +0300
+@@ -3975,6 +3975,10 @@
+   BFD_RELOC_PPC_EMB_RELST_HA,
+   BFD_RELOC_PPC_EMB_BIT_FLD,
+   BFD_RELOC_PPC_EMB_RELSDA,
++  BFD_RELOC_PPC_MORPHOS_DREL,
++  BFD_RELOC_PPC_MORPHOS_DREL_LO,
++  BFD_RELOC_PPC_MORPHOS_DREL_HI,
++  BFD_RELOC_PPC_MORPHOS_DREL_HA,
+   BFD_RELOC_PPC_VLE_REL8,
+   BFD_RELOC_PPC_VLE_REL15,
+   BFD_RELOC_PPC_VLE_REL24,
+diff -ruN binutils-2.45/bfd/config.bfd binutils-2.45_mos/bfd/config.bfd
+--- binutils-2.45/bfd/config.bfd	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/config.bfd	2025-07-27 14:39:08.700060484 +0300
+@@ -1208,6 +1208,12 @@
+   pru-*-*)
+     targ_defvec=pru_elf32_vec
+     ;;
++  powerpc-*-morphos*)
++    #targ_defvec=powerpc_elf32_vec
++    #targ_selvecs="powerpc_elf32_vec"
++    targ_defvec=powerpc_elf32_morphos_vec
++    targ_selvecs=powerpc_elf32_morphos_vec
++    ;;
+ 
+ #ifdef BFD64
+   riscvbe-*-* | riscv32be*-*-*)
+diff -ruN binutils-2.45/bfd/configure binutils-2.45_mos/bfd/configure
+--- binutils-2.45/bfd/configure	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/configure	2025-07-27 14:39:08.700060484 +0300
+@@ -15473,6 +15473,8 @@
+ coff="cofflink.lo $coffgen"
+ ecoff="ecofflink.lo $coffgen"
+ xcoff="xcofflink.lo $coffgen"
++elf_morphos="elf.lo elflink.lo elf-attrs.lo elf-strtab.lo elf-properties.lo
++     elf-eh-frame.lo dwarf1.lo dwarf2.lo"
+ 
+ elfxx_x86="elfxx-x86.lo elf-ifunc.lo elf-vxworks.lo"
+ for vec in $selvecs
+@@ -15656,6 +15658,7 @@
+     powerpc_boot_vec)		 tb="$tb ppcboot.lo" ;;
+     powerpc_elf32_vec)		 tb="$tb elf32-ppc.lo elf-vxworks.lo elf32.lo $elf" ;;
+     powerpc_elf32_le_vec)	 tb="$tb elf32-ppc.lo elf-vxworks.lo elf32.lo $elf" ;;
++    powerpc_elf32_morphos_vec)   tb="$tb elf32-ppc.lo elf32.lo $elf_morphos elf-vxworks.lo";;
+     powerpc_elf32_fbsd_vec)	 tb="$tb elf32-ppc.lo elf-vxworks.lo elf32.lo $elf" ;;
+     powerpc_elf32_vxworks_vec)	 tb="$tb elf32-ppc.lo elf-vxworks.lo elf32.lo $elf" ;;
+     powerpc_elf64_vec)		 tb="$tb elf64-ppc.lo elf64-gen.lo elf64.lo $elf"; target_size=64 ;;
+diff -ruN binutils-2.45/bfd/configure.host binutils-2.45_mos/bfd/configure.host
+--- binutils-2.45/bfd/configure.host	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/configure.host	2025-07-27 14:39:08.712060584 +0300
+@@ -97,4 +97,6 @@
+ 			ac_cv_header_sys_time_h=no
+ 			ac_cv_header_unistd_h=no
+ 			;;
++
++powerpc-*-morphos*)	HDEFINES="-D_LARGEFILE64_SOURCE" ;;
+ esac
+diff -ruN binutils-2.45/bfd/elf32-ppc.c binutils-2.45_mos/bfd/elf32-ppc.c
+--- binutils-2.45/bfd/elf32-ppc.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/elf32-ppc.c	2025-07-27 14:39:08.704060517 +0300
+@@ -53,6 +53,11 @@
+ static bfd_reloc_status_type ppc_elf_unhandled_reloc
+   (bfd *, arelent *, asymbol *, void *, asection *, bfd *, char **);
+ 
++#ifdef MORPHOS_TARGET
++int ddr_count;
++bfd_byte *ddr_ptr;
++#endif
++
+ /* Branch prediction bit for branch taken relocs.  */
+ #define BRANCH_PREDICT_BIT 0x200000
+ /* Mask to set RA in memory instructions.  */
+@@ -693,6 +698,25 @@
+   /* Phony reloc to handle AIX style TOC entries.  */
+   HOW (R_PPC_TOC16, 2, 16, 0xffff, 0, false, signed,
+        ppc_elf_unhandled_reloc),
++
++#ifdef MORPHOS_TARGET
++  /* 32-bit relocation relative to _SDA_BASE_ */
++  HOW (R_PPC_MORPHOS_DREL, 4, 32, 0, 0, false, bitfield,
++       bfd_elf_generic_reloc),
++
++  /* Lower 16 bits of a relocation relative to _SDA_BASE */
++  HOW (R_PPC_MORPHOS_DREL_LO, 2, 16, 0xffff, 0, false, dont,
++       bfd_elf_generic_reloc),
++
++  /* Upper 16 bits of a relocation relative to _SDA_BASE */
++  HOW (R_PPC_MORPHOS_DREL_HI, 2, 16, 0xffff, 16, false, dont,
++       bfd_elf_generic_reloc),
++
++  /* Upper 16 bits of a relocation relative to _SDA_BASE */
++  HOW (R_PPC_MORPHOS_DREL_HA, 2, 16, 0xffff, 16, false, dont,
++       bfd_elf_generic_reloc),
++#endif
++
+ };
+ 
+ /* Initialize the ppc_elf_howto_table, so that linear accesses can be done.  */
+@@ -859,6 +883,14 @@
+     case BFD_RELOC_PPC_REL16DX_HA:	r = R_PPC_REL16DX_HA;		break;
+     case BFD_RELOC_VTABLE_INHERIT:	r = R_PPC_GNU_VTINHERIT;	break;
+     case BFD_RELOC_VTABLE_ENTRY:	r = R_PPC_GNU_VTENTRY;		break;
++
++#ifdef MORPHOS_TARGET
++    /* Special MorphOS relocs. */
++    case BFD_RELOC_PPC_MORPHOS_DREL:	r = R_PPC_MORPHOS_DREL;		break;
++    case BFD_RELOC_PPC_MORPHOS_DREL_LO:	r = R_PPC_MORPHOS_DREL_LO;	break;
++    case BFD_RELOC_PPC_MORPHOS_DREL_HI:	r = R_PPC_MORPHOS_DREL_HI;	break;
++    case BFD_RELOC_PPC_MORPHOS_DREL_HA:	r = R_PPC_MORPHOS_DREL_HA;	break;
++#endif
+     }
+ 
+   return ppc_elf_howto_table[r];
+@@ -922,6 +954,31 @@
+ 
+ /* Handle the R_PPC_ADDR16_HA and R_PPC_REL16_HA relocs.  */
+ 
++#ifdef MORPHOS_TARGET
++static bfd_reloc_status_type
++ppc_elf_addr16_ha_reloc (bfd *abfd ATTRIBUTE_UNUSED,
++			 arelent *r,
++			 asymbol *symbol ATTRIBUTE_UNUSED,
++			 void *data ATTRIBUTE_UNUSED,
++			 asection *sec,
++			 bfd *output_bfd,
++			 char **error_message ATTRIBUTE_UNUSED)
++{
++
++  /*bfd_vma relocation;*/
++  if (output_bfd != NULL)
++    {
++      r->address += sec->output_offset;
++      return bfd_reloc_ok;
++    }
++  else
++    {
++      r->address += sec->output_offset;
++      sec->output_section->orelocation[sec->output_section->reloc_count++]=r;
++      return bfd_reloc_ok;
++    }
++}
++#else
+ static bfd_reloc_status_type
+ ppc_elf_addr16_ha_reloc (bfd *abfd,
+ 			 arelent *reloc_entry,
+@@ -969,6 +1026,7 @@
+   bfd_put_32 (abfd, insn, (bfd_byte *) data + octets);
+   return bfd_reloc_ok;
+ }
++#endif
+ 
+ static bfd_reloc_status_type
+ ppc_elf_unhandled_reloc (bfd *abfd,
+@@ -3415,6 +3473,15 @@
+ 		return false;
+ 	      break;
+ 	    }
++#ifdef MORPHOS_TARGET
++	#warning "Morphos: what to do here?"
++	case R_PPC_MORPHOS_DREL:
++	case R_PPC_MORPHOS_DREL_LO:
++	case R_PPC_MORPHOS_DREL_HI:
++	case R_PPC_MORPHOS_DREL_HA:
++	  //printf("MorphOS: What to do here?\n");
++	  break;
++#endif
+ 
+ 	dodyn:
+ 	  /* Set up information for symbols that might need dynamic
+@@ -5070,18 +5137,17 @@
+   return need;
+ }
+ 
+-/* If H is undefined, make it dynamic if that makes sense.  */
++/* If H is undefined weak, make it dynamic if that makes sense.  */
+ 
+ static bool
+-ensure_undef_dynamic (struct bfd_link_info *info,
+-		      struct elf_link_hash_entry *h)
++ensure_undefweak_dynamic (struct bfd_link_info *info,
++			  struct elf_link_hash_entry *h)
+ {
+   struct elf_link_hash_table *htab = elf_hash_table (info);
+ 
+   if (htab->dynamic_sections_created
+-      && ((info->dynamic_undefined_weak != 0
+-	   && h->root.type == bfd_link_hash_undefweak)
+-	  || h->root.type == bfd_link_hash_undefined)
++      && info->dynamic_undefined_weak != 0
++      && h->root.type == bfd_link_hash_undefweak
+       && h->dynindx == -1
+       && !h->forced_local
+       && ELF_ST_VISIBILITY (h->other) == STV_DEFAULT)
+@@ -5124,8 +5190,9 @@
+ 	  && eh->has_addr16_lo
+ 	  && htab->params->pic_fixup > 0))
+     {
+-      /* Make sure this symbol is output as a dynamic symbol.  */
+-      if (!ensure_undef_dynamic (info, &eh->elf))
++      /* Make sure this symbol is output as a dynamic symbol.
++	 Undefined weak syms won't yet be marked as dynamic.  */
++      if (!ensure_undefweak_dynamic (info, &eh->elf))
+ 	return false;
+ 
+       unsigned int need = got_entries_needed (eh->tls_mask);
+@@ -5232,8 +5299,9 @@
+ 
+       if (h->dyn_relocs != NULL)
+ 	{
+-	  /* Make sure this symbol is output as a dynamic symbol.  */
+-	  if (!ensure_undef_dynamic (info, h))
++	  /* Make sure undefined weak symbols are output as a dynamic
++	     symbol in PIEs.  */
++	  if (!ensure_undefweak_dynamic (info, h))
+ 	    return false;
+ 	}
+     }
+@@ -5254,8 +5322,9 @@
+ 	       && eh->has_addr16_lo
+ 	       && htab->params->pic_fixup > 0))
+ 	{
+-	  /* Make sure this symbol is output as a dynamic symbol.  */
+-	  if (!ensure_undef_dynamic (info, h))
++	  /* Make sure this symbol is output as a dynamic symbol.
++	     Undefined weak syms won't yet be marked as dynamic.  */
++	  if (!ensure_undefweak_dynamic (info, h))
+ 	    return false;
+ 
+ 	  if (h->dynindx == -1)
+@@ -5301,7 +5370,7 @@
+ 	    asection *s;
+ 	    bool dyn;
+ 
+-	    if (!ensure_undef_dynamic (info, h))
++	    if (!ensure_undefweak_dynamic (info, h))
+ 	      return false;
+ 
+ 	    dyn = !use_local_plt (info, h);
+@@ -6948,6 +7017,66 @@
+   return swap_reloc_out (obfd, rel, loc, s);
+ }
+ 
++#ifdef MORPHOS_TARGET
++static void morphos_copy_reloc(bfd *output_bfd, asection *input_section, asection *sec, enum elf_ppc_reloc_type r_type, bfd_vma relocation, bfd_vma addend, bfd_vma offset2)
++{
++	Elf_Internal_Rela outrel2;
++	Elf_Internal_Shdr *rel_hdr = _bfd_elf_single_rel_hdr(input_section->output_section);
++	bool skip;
++
++	skip = false;
++
++	if(sec == NULL)  /* Don't know if it is possible... */
++		return;
++
++	/*printf("copying reloc %d, addend=%x, rel=%x, indx=%d, offset=%x, sec_vma=%x, sh_size=%d, count=%d, rsize=%ld\n",
++	 r_type,(int)addend,(int)relocation,sec->output_section->target_index,
++	 (int)sec->output_offset,(int)sec->output_section->vma, (unsigned int)rel_hdr->sh_size, input_section->output_section->reloc_count,
++	 sizeof(Elf_Internal_Rela));*/
++
++	if(input_section->sec_info_type == SEC_INFO_TYPE_STABS)
++	{
++		bfd_vma off;
++
++		off = _bfd_stab_section_offset(input_section, elf_section_data(input_section)->sec_info,
++		                               offset2);
++
++		if(off == (bfd_vma) - 1)
++			skip = true;
++
++		outrel2.r_offset = off;
++	}
++	else
++	{
++		outrel2.r_offset = offset2;
++	}
++
++
++	outrel2.r_info = ELF32_R_INFO(sec->output_section->target_index, r_type);
++	outrel2.r_addend = relocation + addend - sec->output_section->vma;
++	outrel2.r_offset += input_section->output_offset;
++
++	if((input_section->output_section->reloc_count * sizeof(Elf32_External_Rela)) >= (unsigned int)rel_hdr->sh_size)
++	{
++		printf("skipping reloc (out of space)\n");
++	}
++	else
++	{
++		if(skip)
++		{
++			memset(&outrel2, 0, sizeof outrel2);
++		}
++		else
++		{
++			bfd_elf32_swap_reloca_out(output_bfd, &outrel2,
++			                          (bfd_byte*)((Elf32_External_Rela *)rel_hdr->contents
++			                                      + input_section->output_section->reloc_count));
++			++input_section->output_section->reloc_count;
++		}
++	}
++}
++#endif
++
+ /* The RELOCATE_SECTION function is called by the ELF backend linker
+    to handle the relocations for a section.
+ 
+@@ -6998,9 +7127,15 @@
+   bfd_vma *local_got_offsets;
+   bool ret = true;
+   bfd_vma d_offset = (bfd_big_endian (input_bfd) ? 2 : 0);
++#ifndef MORPHOS_TARGET
+   bool is_vxworks_tls;
++#endif
+   unsigned int picfixup_size = 0;
+   struct ppc_elf_relax_info *relax_info = NULL;
++#ifdef MORPHOS_TARGET
++  asection *sdata_sec			  = NULL;
++  asection *sbss_sec			  = NULL;
++#endif
+ 
+ #ifdef DEBUG
+   _bfd_error_handler ("ppc_elf_relocate_section called for %pB section %pA, "
+@@ -7022,15 +7157,26 @@
+   if (!ppc_elf_howto_table[R_PPC_ADDR32])
+     ppc_elf_howto_init ();
+ 
++#ifdef MORPHOS_TARGET
++  sdata_sec = bfd_get_section_by_name(output_bfd, ".sdata");
++  if (sdata_sec)
++    sdata_sec = sdata_sec->output_section;
++  sbss_sec = bfd_get_section_by_name(output_bfd, ".sbss");
++  if (sbss_sec)
++    sbss_sec = sbss_sec->output_section;
++#endif
++
+   htab = ppc_elf_hash_table (info);
+   local_got_offsets = elf_local_got_offsets (input_bfd);
+   symtab_hdr = &elf_symtab_hdr (input_bfd);
+   sym_hashes = elf_sym_hashes (input_bfd);
+   /* We have to handle relocations in vxworks .tls_vars sections
+      specially, because the dynamic loader is 'weird'.  */
++#ifndef MORPHOS_TARGET
+   is_vxworks_tls = (htab->elf.target_os == is_vxworks && bfd_link_pic (info)
+ 		    && !strcmp (input_section->output_section->name,
+ 				".tls_vars"));
++#endif
+   if (input_section->sec_info_type == SEC_INFO_TYPE_TARGET)
+     relax_info = elf_section_data (input_section)->sec_info;
+   rel = wrel = relocs;
+@@ -7044,6 +7190,10 @@
+       asection *sec;
+       struct elf_link_hash_entry *h;
+       const char *sym_name;
++#ifdef MORPHOS_TARGET
++      bool copy			= false;
++      bfd_vma offset2			= rel->r_offset;
++#endif
+       reloc_howto_type *howto;
+       unsigned long r_symndx;
+       bfd_vma relocation;
+@@ -8084,9 +8234,11 @@
+ 	  /* fall through */
+ 
+ 	dodyn:
++#ifndef MORPHOS_TARGET
+ 	  if ((input_section->flags & SEC_ALLOC) == 0
+ 	      || is_vxworks_tls)
+ 	    break;
++#endif
+ 
+ 	  if (bfd_link_pic (info)
+ 	      ? ((h == NULL
+@@ -8243,6 +8395,107 @@
+ 		  break;
+ 		}
+ 	    }
++#ifdef MORPHOS_TARGET
++	  else if (r_type == R_PPC_REL24 || r_type == R_PPC_REL14)
++	    {
++		  if (sec->output_section != input_section->output_section)
++		{
++		  (*_bfd_error_handler) ("%s: The target (%s) of a %s relocation is in the wrong section (%pA)",
++					 bfd_get_filename (input_bfd),
++					 sym_name,
++					 ppc_elf_howto_table[ (int)r_type ]->name,
++					 input_section);
++
++		  bfd_set_error (bfd_error_bad_value);
++		  ret = false;
++		  continue;
++		}
++	      break;
++	    }
++	  else if (r_type == R_PPC_REL32)
++	    {
++	      if (sec->output_section != input_section->output_section)
++		copy = true;
++	      else
++		break;
++	    }
++	  else if (ddr_ptr && sec && r_type == R_PPC_ADDR32 &&
++		   (sec->output_section == sdata_sec ||
++		    sec->output_section == sbss_sec /*||
++		    !strcmp(bfd_get_section_name(abfd, sec), "COMMON") ||
++		    !strcmp(bfd_get_section_name(abfd, sec), ".data") ||
++		    !strcmp(bfd_get_section_name(abfd, sec), ".bss")*/) &&
++		   (input_section->output_section == sdata_sec ||
++		    input_section->output_section == sbss_sec /*||
++		    !strcmp(bfd_get_section_name(abfd, input_section), "COMMON") ||
++		    !strcmp(bfd_get_section_name(abfd, input_section), ".data") ||
++		    !strcmp(bfd_get_section_name(abfd, input_section), ".bss")*/))
++	    {
++	      int tmp = input_section->output_offset + offset2;
++	      ++ddr_count;
++	      ddr_ptr[0] = (bfd_byte)(tmp >> 24);
++	      ddr_ptr[1] = (bfd_byte)(tmp >> 16);
++	      ddr_ptr[2] = (bfd_byte)(tmp >> 8);
++	      ddr_ptr[3] = (bfd_byte)tmp;
++	      ddr_ptr += 4;
++	      copy = true;
++/*if (sec->output_section != sdata_sec && sec->output_section != sbss_sec)
++{
++	if (sdata_sec)
++		printf("sdata %p output %p ", sdata_sec, sdata_sec->output_section);
++	if (sbss_sec)
++		printf("sbss %p output %p ", sbss_sec, sbss_sec->output_section);
++	printf("*** sec %p output %p <%s> <%s>\n", sec, sec->output_section,
++			bfd_get_section_name(abfd, sec), bfd_get_section_name(abfd, input_section));
++}*/
++	      break;
++	    }
++	  else if (sec && !bfd_is_abs_section(sec))
++	    {
++	      copy = true;
++	      break;
++	    }
++
++	  if (copy && ddr_ptr && sec &&
++	      strcmp(input_section->name, "lnkdata") &&
++	      (sec->output_section == sdata_sec ||
++	       sec->output_section == sbss_sec ||
++	       !strcmp(sec->name, "COMMON") ||
++	       !strcmp(sec->name, ".data") ||
++	       !strcmp(sec->name, ".bss") ||
++	       !strncmp(sec->name, ".gnu.linkonce.s.", 16) ||
++	       !strncmp(sec->name, ".gnu.linkonce.b.", 16) ||
++	       !strncmp(sec->name, ".gnu.linkonce.sb.", 17))
++ /*&&
++	      (r_type != R_PPC_ADDR32 ||
++	       !(input_section->output_section == sdata_sec->output_section ||
++		 input_section->output_section == sbss_sec->output_section ||
++		 !strcmp(bfd_get_section_name(abfd, input_section), "COMMON") ||
++		 !strcmp(bfd_get_section_name(abfd, input_section), ".data") ||
++		 !strcmp(bfd_get_section_name(abfd, input_section), ".bss")))*/)
++	    {
++	      (*_bfd_error_handler) ("%s: The target (%s) of a %s relocation is in the wrong section (%s)",
++				     bfd_get_filename (input_bfd),
++				     sym_name,
++				     ppc_elf_howto_table[ (int)r_type ]->name,
++				     sec->name);
++	      bfd_set_error (bfd_error_bad_value);
++	      ret = false;
++	      continue;
++	    }
++
++	  /* Arithmetic adjust relocations that aren't going into a
++	     shared object.  */
++	  if (r_type == R_PPC_ADDR16_HA
++	      /* It's just possible that this symbol is a weak symbol
++		 that's not actually defined anywhere. In that case,
++		 'sec' would be NULL, and we should leave the symbol
++		 alone (it will be set to zero elsewhere in the link).  */
++	      && sec != NULL)
++	    {
++	      addend += ((relocation + addend) & 0x8000) << 1;
++	    }
++#endif
+ 	  break;
+ 
+ 	case R_PPC_RELAX_PLT:
+@@ -8306,12 +8559,16 @@
+ 
+ 	      /* First insn is HA, second is LO.  */
+ 	      insn = *stub++;
++#ifndef MORPHOS_TARGET
+ 	      insn |= ((relocation + 0x8000) >> 16) & 0xffff;
++#endif
+ 	      bfd_put_32 (input_bfd, insn, contents + insn_offset);
+ 	      insn_offset += 4;
+ 
+ 	      insn = *stub++;
++#ifndef MORPHOS_TARGET
+ 	      insn |= relocation & 0xffff;
++#endif
+ 	      bfd_put_32 (input_bfd, insn, contents + insn_offset);
+ 	      insn_offset += 4;
+ 	      size -= 2;
+@@ -8331,10 +8588,21 @@
+ 	      wrel->r_offset = rel->r_offset + d_offset;
+ 	      wrel->r_info = ELF32_R_INFO (r_symndx, R_PPC_ADDR16_HA);
+ 	      wrel->r_addend = rel->r_addend;
++
++#ifdef MORPHOS_TARGET
++         //printf("DEBUG: %s(%d)\n", __FUNCTION__, __LINE__);
++		 morphos_copy_reloc(output_bfd, input_section, sec, R_PPC_ADDR16_HA, relocation, 0, offset2 + 2 + 0);
++#endif
++
+ 	      memmove (wrel + 1, wrel, (relend - wrel - 1) * sizeof (*wrel));
+ 	      wrel++, rel++;
+ 	      wrel->r_offset += 4;
+ 	      wrel->r_info = ELF32_R_INFO (r_symndx, R_PPC_ADDR16_LO);
++
++#ifdef MORPHOS_TARGET
++        //printf("DEBUG: %s(%d)\n", __FUNCTION__, __LINE__);
++		morphos_copy_reloc(output_bfd, input_section, sec, R_PPC_ADDR16_LO, relocation, 0, offset2 + 2 + 4);
++#endif
+ 	    }
+ 	  else
+ 	    goto de_fault;
+@@ -8492,6 +8760,9 @@
+ 	      }
+ 	    addend -= SYM_VAL (sda);
+ 
++#ifdef MORPHOS_TARGET
++	     addend += sda->root.u.def.section->output_offset;
++#endif
+ 	    name = bfd_section_name (sec->output_section);
+ 	    if (!(strcmp (name, ".sdata") == 0
+ 		  || strcmp (name, ".sbss") == 0))
+@@ -8508,6 +8779,59 @@
+ 	  }
+ 	  break;
+ 
++#ifdef MORPHOS_TARGET
++	/* relocate against _SDA_BASE_, in large data mode */
++	case R_PPC_MORPHOS_DREL:
++	case R_PPC_MORPHOS_DREL_LO:
++	case R_PPC_MORPHOS_DREL_HI:
++	case R_PPC_MORPHOS_DREL_HA:
++	{
++		const char *name;
++
++		if (sec == NULL
++			|| sec->output_section == NULL
++			|| !is_static_defined (htab->sdata[0].sym))
++		{
++			unresolved_reloc = true;
++			break;
++		}
++		name = bfd_section_name (sec->output_section);
++		if(strcmp(name, ".sdata") != 0
++			&& strcmp(name, ".sbss") != 0
++			&& strcmp(name, ".data") != 0
++			&& strcmp(name, ".bss") != 0
++			&& strncmp(name, ".ctors", 6) != 0
++			&& strncmp(name, ".dtors", 6) != 0)
++		{
++
++			//info->callbacks->einfo
++			_bfd_error_handler
++			/* xgettext:c-format */
++			(_("%pB: the target (%s) of a %s relocation is "
++			   "in the wrong output section (%s)\n"),
++			 input_bfd,
++			 sym_name,
++			 howto->name,
++			 name);
++		}
++		else
++		{
++			/*printf("%s: addend = %x, sdata->val = %x, vma = %x, output_offset = %x\n",
++				   howto->name,
++				   addend, htab->sdata[0].sym->root.u.def.value,
++				   htab->sdata[0].sym->root.u.def.section->output_section->vma,
++				   htab->sdata[0].sym->root.u.def.section->output_offset);*/
++
++			addend -= (htab->sdata[0].sym->root.u.def.value
++					   + htab->sdata[0].sym->root.u.def.section->output_section->vma);
++			if(r_type == R_PPC_MORPHOS_DREL_HA)
++				addend += ((relocation + addend) & 0x8000) << 1;
++		}
++		break;
++
++	}
++#endif
++
+ 	  /* Relocate against _SDA2_BASE_.  */
+ 	case R_PPC_EMB_SDA2REL:
+ 	  {
+@@ -8967,7 +9291,12 @@
+ 	case R_PPC_GOT_DTPREL16_HA:
+ 	  /* Add 0x10000 if sign bit in 0:15 is set.
+ 	     Bits 0:15 are not used.  */
+-	  addend += 0x8000;
++#ifdef MORPHOS_TARGET
++		if(r_type != R_PPC_ADDR16_HA) /* fm: MorphOS needs addend at 0 ... */
++#endif
++		{
++	  		addend += 0x8000;
++		}
+ 	  break;
+ 
+ 	case R_PPC_ADDR16:
+@@ -9034,6 +9363,7 @@
+ 	       (long) addend);
+ #endif
+ 
++#ifndef MORPHOS_TARGET //NB
+       if (unresolved_reloc
+ 	  && !((input_section->flags & SEC_DEBUGGING) != 0
+ 	       && h->def_dynamic)
+@@ -9048,6 +9378,7 @@
+ 	     sym_name);
+ 	  ret = false;
+ 	}
++#endif
+ 
+       /* 16-bit fields in insns mostly have signed values, but a
+ 	 few insns have 16-bit unsigned values.  Really, we should
+@@ -9078,7 +9409,68 @@
+ 	      howto = &alt_howto;
+ 	    }
+ 	}
++#ifdef MORPHOS_TARGET
++      if (copy)
++	{
++          //printf("DEBUG: %s(%d)\n", __FUNCTION__, __LINE__);
++		  morphos_copy_reloc(output_bfd, input_section, sec, r_type, relocation, addend, offset2);
++	}
++      else
++	{
++	  /*printf("applying reloc %d, sym=%s addend=%x, rel=%x, indx=%d, offset=%x, sec_vma=%x\n",
++		 r_type,sym_name,addend,relocation,sec->output_section->target_index,
++		 sec->output_offset,sec->output_section->vma);*/
++	  r = _bfd_final_link_relocate (howto,
++					input_bfd,
++					input_section,
++					contents,
++					offset2,
++					relocation,
++					addend);
+ 
++report_reloc:
++		if (r != bfd_reloc_ok)
++		{
++			ret = false;
++			if (r == bfd_reloc_overflow)
++			{
++				const char *name;
++				if (h != NULL)
++				  name = h->root.root.string;
++				else
++				  {
++				name = bfd_elf_string_from_elf_section (input_bfd,
++									symtab_hdr->sh_link,
++									sym->st_name);
++				if (name == NULL)
++				  break;
++
++				if (*name == '\0')
++				  name = bfd_section_name (sec);
++				  }
++
++			  (*info->callbacks->reloc_overflow) (info,
++								(h ? &h->root : NULL),
++								sym_name,
++								howto->name,
++								rel->r_addend,
++								input_bfd,
++								input_section,
++								rel->r_offset);
++			}
++	  else
++	    {
++	      info->callbacks->einfo
++		/* xgettext:c-format */
++		(_("%H: %s reloc against `%s': error %d\n"),
++		 input_bfd, input_section, rel->r_offset,
++		 howto->name, sym_name, (int) r);
++	      ret = false;
++	    }
++		}
++	}
++
++#else
+       if (r_type == R_PPC_REL16DX_HA)
+ 	{
+ 	  /* Split field reloc isn't handled by _bfd_final_link_relocate.  */
+@@ -9130,6 +9522,7 @@
+ 	      ret = false;
+ 	    }
+ 	}
++#endif
+     copy_reloc:
+       if (wrel != rel)
+ 	*wrel = *rel;
+@@ -10377,11 +10770,13 @@
+ 
+   return ret;
+ }
+-
++
++#ifdef MORPHOS_TARGET
++
+ #define TARGET_LITTLE_SYM	powerpc_elf32_le_vec
+ #define TARGET_LITTLE_NAME	"elf32-powerpcle"
+-#define TARGET_BIG_SYM		powerpc_elf32_vec
+-#define TARGET_BIG_NAME		"elf32-powerpc"
++#define TARGET_BIG_SYM		powerpc_elf32_morphos_vec
++#define TARGET_BIG_NAME		"elf32-morphos"
+ #define ELF_ARCH		bfd_arch_powerpc
+ #define ELF_TARGET_ID		PPC32_ELF_DATA
+ #define ELF_MACHINE_CODE	EM_PPC
+@@ -10404,6 +10799,8 @@
+ #define elf_backend_rela_normal		1
+ #define elf_backend_caches_rawsize	1
+ 
++#define elf_backend_got_symbol_offset 4
++
+ #define bfd_elf32_mkobject			ppc_elf_mkobject
+ #define bfd_elf32_bfd_merge_private_bfd_data	ppc_elf_merge_private_bfd_data
+ #define bfd_elf32_bfd_relax_section		ppc_elf_relax_section
+@@ -10443,8 +10840,11 @@
+ #define elf_backend_init_index_section		_bfd_elf_init_1_index_section
+ #define elf_backend_lookup_section_flags_hook	ppc_elf_lookup_section_flags
+ 
++
+ #include "elf32-target.h"
+ 
++#else
++
+ /* FreeBSD Target */
+ 
+ #undef  TARGET_LITTLE_SYM
+@@ -10577,3 +10977,4 @@
+ #define elf32_bed				ppc_elf_vxworks_bed
+ 
+ #include "elf32-target.h"
++#endif //MORPHOS_TARGET
+diff -ruN binutils-2.45/bfd/elf.c binutils-2.45_mos/bfd/elf.c
+--- binutils-2.45/bfd/elf.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/elf.c	2025-07-27 14:39:08.704060517 +0300
+@@ -7052,8 +7052,12 @@
+ 
+ /* Assign file positions for all the reloc sections which are not part
+    of the loadable file image, and the file position of section headers.  */
+-
+-static bool
++#ifdef MORPHOS_TARGET
++bool _bfd_elf_assign_file_positions_for_non_load (bfd *abfd);
++#else
++static 
++#endif
++bool
+ _bfd_elf_assign_file_positions_for_non_load (bfd *abfd)
+ {
+   file_ptr off;
+diff -ruN binutils-2.45/bfd/elflink.c binutils-2.45_mos/bfd/elflink.c
+--- binutils-2.45/bfd/elflink.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/elflink.c	2025-08-24 04:52:57.719225910 +0300
+@@ -37,6 +37,9 @@
+ #define CHAR_BIT 8
+ #endif
+ 
++extern int ddr_count;
++extern bfd_byte *ddr_ptr;
++
+ /* This struct is used to pass information to routines called via
+    elf_link_hash_traverse which must return failure.  */
+ 
+@@ -9761,6 +9764,12 @@
+   unsigned int count = reldata->count;
+   struct elf_link_hash_entry **rel_hash = reldata->hashes;
+ 
++
++#ifdef MORPHOS_TARGET
++	if (!(sort && count != 0))
++		reldata->hdr->sh_size = sec->reloc_count * reldata->hdr->sh_entsize;
++#endif
++
+   if (reldata->hdr->sh_entsize == bed->s->sizeof_rel)
+     {
+       swap_in = bed->s->swap_reloc_in;
+@@ -10921,7 +10930,9 @@
+ 	    sym.st_value = h->root.u.def.value + input_sec->output_offset;
+ 	    if (!bfd_link_relocatable (flinfo->info))
+ 	      {
++#ifndef MORPHOS_TARGET
+ 		sym.st_value += input_sec->output_section->vma;
++#endif
+ 		if (h->type == STT_TLS)
+ 		  {
+ 		    asection *tls_sec = elf_hash_table (flinfo->info)->tls_sec;
+@@ -11581,7 +11592,9 @@
+       osym.st_value += isec->output_offset;
+       if (!bfd_link_relocatable (flinfo->info))
+ 	{
++#ifndef MORPHOS_TARGET
+ 	  osym.st_value += isec->output_section->vma;
++#endif
+ 	  if (ELF_ST_TYPE (osym.st_info) == STT_TLS)
+ 	    {
+ 	      /* STT_TLS symbols are relative to PT_TLS segment base.  */
+@@ -11963,7 +11976,9 @@
+ 	      rel_hash_list = rel_hash;
+ 	      rela_hash_list = NULL;
+ 	      last_offset = o->output_offset;
+-	      if (!bfd_link_relocatable (flinfo->info))
++#ifndef MORPHOS_TARGET
++		  if (!bfd_link_relocatable (flinfo->info))
++#endif
+ 		last_offset += o->output_section->vma;
+ 	      for (next_erel = 0; irela < irelaend; irela++, next_erel++)
+ 		{
+@@ -12003,7 +12018,9 @@
+ 		  irela->r_offset += o->output_offset;
+ 
+ 		  /* Relocs in an executable have to be virtual addresses.  */
++#ifndef MORPHOS_TARGET
+ 		  if (!bfd_link_relocatable (flinfo->info))
++#endif
+ 		    irela->r_offset += o->output_section->vma;
+ 
+ 		  last_offset = irela->r_offset;
+@@ -12132,7 +12149,9 @@
+ 			  sym.st_value += sec->output_offset;
+ 			  if (!bfd_link_relocatable (flinfo->info))
+ 			    {
++#ifndef MORPHOS_TARGET
+ 			      sym.st_value += osec->vma;
++#endif
+ 			      if (ELF_ST_TYPE (sym.st_info) == STT_TLS)
+ 				{
+ 				  struct elf_link_hash_table *htab
+@@ -12631,6 +12650,12 @@
+   Elf_Internal_Shdr *symtab_shndx_hdr;
+   const struct elf_backend_data *bed = get_elf_backend_data (abfd);
+   struct elf_outext_info eoinfo;
++#ifdef MORPHOS_TARGET
++  bfd_size_type max_datadata_reloc_count;
++  asection *ddr_sec;
++  asection *sdata_sec = NULL;
++  asection *sbss_sec = NULL;
++#endif
+   bool merged;
+   size_t relativecount;
+   size_t relr_entsize;
+@@ -12645,11 +12670,54 @@
+   if (bfd_link_pic (info))
+     abfd->flags |= DYNAMIC;
+ 
++#ifdef MORPHOS_TARGET
++#if 0 // Disabled for now - #ifdef MORPHOS_SDK_RELEASE_ID
++if (bfd_link_executable (info) && bfd_get_flavour (abfd) == bfd_target_elf_flavour)
++{
++  /* If .comment section is missing, add one with the SDK ID. Note: This
++     later needs to be adjusted to modify existing section on the fly,
++     replacing the hack elsewhere.. For now we just add this as backup to
++     fix "ld -b binary file -o file.o" usecase.. - Piru  */
++  asection *s = bfd_get_section_by_name( abfd, ".comment" );
++  if (s == NULL)
++    {
++      flagword flags = (SEC_MERGE | SEC_STRINGS | SEC_HAS_CONTENTS | SEC_READONLY);
++      s = bfd_make_section_with_flags (abfd, ".comment", flags);
++      if (s != NULL && bfd_set_section_alignment (s, 0))
++      {
++	struct bfd_link_order *link_order;
++#define xstr_(s) str_(s)
++#define str_(s) #s
++	static char data[] = "\0MorphOS_SDK: " xstr_(MORPHOS_SDK_RELEASE_ID);
++	elf_section_type (s) = SHT_PROGBITS;
++	s->size = sizeof (data);
++	s->output_section = s;
++	s->output_offset = 0;
++	link_order = bfd_new_link_order (abfd, s);
++	if (link_order)
++	  {
++	    link_order->type = bfd_data_link_order;
++	    link_order->u.data.contents = (unsigned char *) data;
++	    link_order->u.data.size = s->size;
++	    link_order->size = s->size;
++	    link_order->offset = 0;
++	  }
++       }
++    }
++}
++#endif
++  bfd_set_start_address(abfd, 0);
++#endif
++
+   dynamic = htab->dynamic_sections_created;
+   dynobj = htab->dynobj;
+ 
++#ifdef MORPHOS_TARGET
++  emit_relocs = 1;
++#else
+   emit_relocs = (bfd_link_relocatable (info)
+ 		 || info->emitrelocations);
++#endif
+ 
+   memset (&flinfo, 0, sizeof (flinfo));
+   flinfo.info = info;
+@@ -12730,6 +12798,10 @@
+   if (sections_removed)
+     _bfd_fix_excluded_sec_syms (abfd, info);
+ 
++#ifdef MORPHOS_TARGET
++  ddr_sec = bfd_get_section_by_name(abfd, "ddrelocs");
++#endif
++
+   /* Count up the number of relocations we will output for each output
+      section, so that we know the sizes of the reloc sections.  We
+      also figure out some maximum sizes.  */
+@@ -12755,6 +12827,9 @@
+   max_sym_count = 0;
+   max_sym_shndx_count = 0;
+   merged = false;
++#ifdef MORPHOS_TARGET
++  max_datadata_reloc_count = 0;
++#endif
+   for (o = abfd->sections; o != NULL; o = o->next)
+     {
+       struct bfd_elf_section_data *esdo = elf_section_data (o);
+@@ -12890,8 +12965,24 @@
+ 	    }
+ 	}
+ 
++#ifdef MORPHOS_TARGET
++      if (!strcmp(bfd_section_name(o), ".sdata"))
++	sdata_sec = o;
++      else if(!strcmp(bfd_section_name(o), ".sbss"))
++	sbss_sec = o;
++      else
++	bfd_set_section_vma(o, 0);
++
++      if (o->reloc_count > 0)
++	{
++	o->flags |= SEC_RELOC;
++	  if (o == sdata_sec || o == sbss_sec)
++	    max_datadata_reloc_count += o->reloc_count;
++	}
++#else
+       if (o->reloc_count > 0)
+ 	o->flags |= SEC_RELOC;
++#endif
+       else
+ 	{
+ 	  /* Explicitly clear the SEC_RELOC flag.  The linker tends to
+@@ -12912,10 +13003,44 @@
+   if (! bfd_link_relocatable (info) && merged)
+     elf_link_hash_traverse (htab, _bfd_elf_link_sec_merge_syms, abfd);
+ 
++#ifdef MORPHOS_TARGET
++  if (sdata_sec)
++    {
++      if (sbss_sec)
++	{
++	  /* Emm: all this is pretty hackish and I'm not sure it's 100% safe. There is probably
++	   * a better place to do that too.
++	   */
++	  int align1 = bfd_section_alignment (sdata_sec);
++	  int align = bfd_section_alignment (sbss_sec);
++
++	  int mask = (1 << align) - 1;
++//printf("align1 %d align %d\n", align1, align);
++	  if (align > align1)
++	    bfd_set_section_alignment(sdata_sec, align);
++//printf("data_size 0x%x\n", (unsigned int)(sbss_sec->vma - sdata_sec->vma));
++//printf("-> 0x%x\n", (unsigned int)(sbss_sec->vma - sdata_sec->vma + mask) & ~mask);
++//printf("section_size : 0x%x\n",(unsigned int)sdata_sec->rawsize);
++	  sdata_sec->rawsize = (sdata_sec->rawsize + mask) & ~mask;
++//printf("section_size : 0x%x\n",(unsigned int)sdata_sec->rawsize);
++	  //bfd_set_section_vma(abfd, sbss_sec, (sbss_sec->vma - sdata_sec->vma + mask) & ~mask);
++	  bfd_set_section_vma(sbss_sec, sdata_sec->rawsize);
++	  //sdata_sec->rawsize = sbss_sec->vma;
++//printf("section_size : 0x%x\n",(unsigned int)sdata_sec->rawsize);
++	}
++      bfd_set_section_vma(sdata_sec, 0);
++    }
++#endif
++
+   /* Figure out the file positions for everything but the symbol table
+      and the relocs.  We set symcount to force assign_section_numbers
+      to create a symbol table.  */
++
++#ifdef MORPHOS_TARGET
++   abfd->symcount = 1;
++#else
+   abfd->symcount = info->strip != strip_all || emit_relocs;
++#endif
+   BFD_ASSERT (! abfd->output_has_begun);
+   if (! _bfd_elf_compute_section_file_positions (abfd, info))
+     goto error_return;
+@@ -12944,6 +13069,12 @@
+       esdo->rel.count = 0;
+       esdo->rela.count = 0;
+ 
++#ifdef MORPHOS_TARGET
++      /* Use the reloc_count field as an index when outputting the
++         relocs.  */
++      o->reloc_count = 0;
++#endif
++
+       if ((esdo->this_hdr.sh_offset == (file_ptr) -1)
+ 	  && !bfd_section_is_ctf (o))
+ 	{
+@@ -12988,7 +13119,9 @@
+     = (elf_numsections (abfd) > (SHN_LORESERVE & 0xFFFF)
+        ? (Elf_External_Sym_Shndx *) -1 : NULL);
+ 
++#ifndef MORPHOS_TARGET
+   if (info->strip != strip_all || emit_relocs)
++#endif
+     {
+       file_ptr off = elf_next_file_pos (abfd);
+ 
+@@ -13034,8 +13167,12 @@
+ 		{
+ 		  o->target_index = bfd_get_symcount (abfd);
+ 		  elfsym.st_shndx = i;
++#ifdef MORPHOS_TARGET
++		  elfsym.st_value = 0;
++#else
+ 		  if (!bfd_link_relocatable (info))
+ 		    elfsym.st_value = o->vma;
++#endif
+ 		  if (name_local_sections)
+ 		    name = o->name;
+ 		  if (elf_link_output_symstrtab (&flinfo, name, &elfsym, o,
+@@ -13149,6 +13286,22 @@
+     info->callbacks->fatal
+       (_("%P: %pB: failed to finish relative relocations\n"), abfd);
+ 
++#ifdef MORPHOS_TARGET
++  if (ddr_sec)
++    {
++      ddr_count = 0;
++      ddr_ptr = (bfd_byte *)bfd_alloc(abfd, 4 * max_datadata_reloc_count + 4);
++      if (ddr_ptr)
++	  {
++	ddr_ptr += 4;
++	}
++      else
++	goto error_return;
++    }
++  else
++    ddr_ptr = NULL;
++#endif
++
+   /* Since ELF permits relocations to be against local symbols, we
+      must have the local symbols available when we do the relocations.
+      Since we would rather only read the local symbols once, and we
+@@ -13267,7 +13420,18 @@
+ 	     (abfd, info, &flinfo, elf_link_output_symstrtab)))
+ 	goto error_return;
+     }
++#ifdef MORPHOS_TARGET
++  /* Set the vma of the sections to 0. We can't do that before, otherwise the
++     relocation doesn't work properly for .sbss. */
++  {
++    int n = elf_elfheader(abfd)->e_shnum;
++    int ij;
+ 
++	Elf_Internal_Shdr **hdr = elf_elfsections(abfd);
++    for (ij = 1; ij < n; ++ij, ++hdr)
++      (*hdr)->sh_addr = 0;
++  }
++#endif
+   /* That wrote out all the local symbols.  Finish up the symbol table
+      with the global symbols. Even if we want to strip everything we
+      can, we still need to deal with those global symbols that got
+@@ -13394,13 +13558,44 @@
+   free (htab->strtab);
+   htab->strtab = NULL;
+ 
++#ifdef MORPHOS_TARGET
++{
++file_ptr off = 0;
++
++  /* Add the __datadata_relocs table. */
++  if (ddr_sec)
++    {
++      int tmp = ddr_count ? ddr_count : -1;
++
++      Elf_Internal_Shdr *hdr = elf_elfsections(abfd)[_bfd_elf_section_from_bfd_section(abfd, ddr_sec)];
++      off = symtab_hdr->sh_offset + symtab_hdr->sh_size;
++
++      ddr_sec->size = ddr_sec->rawsize = hdr->sh_size = 4 * ddr_count + 4;
++      hdr->sh_addralign = 4;
++
++      off = _bfd_elf_assign_file_position_for_section (hdr, off, true, 0);
++      ddr_ptr -= (ddr_count + 1) * 4;
++      ddr_ptr[0] = (bfd_byte)(tmp >> 24);
++      ddr_ptr[1] = (bfd_byte)(tmp >> 16);
++      ddr_ptr[2] = (bfd_byte)(tmp >> 8);
++      ddr_ptr[3] = (bfd_byte)tmp;
++
++      bfd_set_section_contents(abfd, ddr_sec, ddr_ptr, 0, hdr->sh_size);
++    }
++#endif
++
+   /* Now we know the size of the symtab section.  */
+   if (bfd_get_symcount (abfd) > 0)
+     {
+       /* Finish up and write out the symbol string table (.strtab)
+ 	 section.  */
+       Elf_Internal_Shdr *symstrtab_hdr = NULL;
++#ifndef MORPHOS_TARGET
+       file_ptr off = symtab_hdr->sh_offset + symtab_hdr->sh_size;
++#else
++      if(!off)
++	off = symtab_hdr->sh_offset + symtab_hdr->sh_size;
++#endif
+ 
+       if (elf_symtab_shndx_list (abfd))
+ 	{
+@@ -13450,6 +13645,9 @@
+ 			  info->out_implib_bfd);
+       goto error_return;
+     }
++#ifdef MORPHOS_TARGET
++}
++#endif
+ 
+   /* Adjust the relocs to have the correct symbol indices.  */
+   for (o = abfd->sections; o != NULL; o = o->next)
+diff -ruN binutils-2.45/bfd/hosts/morphos.h binutils-2.45_mos/bfd/hosts/morphos.h
+--- binutils-2.45/bfd/hosts/morphos.h	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/bfd/hosts/morphos.h	2025-07-27 14:39:08.704060517 +0300
+@@ -0,0 +1,5 @@
++/* Host configuration for MorphOS */
++#ifndef hosts_morphos_h
++#define hosts_morphos_h
++#include "hosts/std-host.h"
++#endif /* hosts_morphos_h */
+diff -ruN binutils-2.45/bfd/libbfd.h binutils-2.45_mos/bfd/libbfd.h
+--- binutils-2.45/bfd/libbfd.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/libbfd.h	2025-07-27 14:39:08.704060517 +0300
+@@ -1559,6 +1559,10 @@
+   "BFD_RELOC_PPC_EMB_RELST_HA",
+   "BFD_RELOC_PPC_EMB_BIT_FLD",
+   "BFD_RELOC_PPC_EMB_RELSDA",
++  "BFD_RELOC_PPC_MORPHOS_DREL",
++  "BFD_RELOC_PPC_MORPHOS_DREL_LO",
++  "BFD_RELOC_PPC_MORPHOS_DREL_HI",
++  "BFD_RELOC_PPC_MORPHOS_DREL_HA",
+   "BFD_RELOC_PPC_VLE_REL8",
+   "BFD_RELOC_PPC_VLE_REL15",
+   "BFD_RELOC_PPC_VLE_REL24",
+diff -ruN binutils-2.45/bfd/opncls.c binutils-2.45_mos/bfd/opncls.c
+--- binutils-2.45/bfd/opncls.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/opncls.c	2025-07-27 14:39:08.704060517 +0300
+@@ -817,7 +817,10 @@
+   /* If the file was open for writing and is now executable,
+      make it so.  */
+   if (abfd->direction == write_direction
+-      && (abfd->flags & (EXEC_P | DYNAMIC)) != 0)
++#ifndef MORPHOS_TARGET
++      && (abfd->flags & (EXEC_P | DYNAMIC)) != 0
++#endif
++     )
+     {
+       struct stat buf;
+ 
+diff -ruN binutils-2.45/bfd/reloc.c binutils-2.45_mos/bfd/reloc.c
+--- binutils-2.45/bfd/reloc.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/reloc.c	2025-07-27 14:39:08.708060551 +0300
+@@ -2610,6 +2610,14 @@
+ ENUMX
+   BFD_RELOC_PPC_EMB_RELSDA
+ ENUMX
++  BFD_RELOC_PPC_MORPHOS_DREL
++ENUMX
++  BFD_RELOC_PPC_MORPHOS_DREL_LO
++ENUMX
++  BFD_RELOC_PPC_MORPHOS_DREL_HI
++ENUMX
++  BFD_RELOC_PPC_MORPHOS_DREL_HA
++ENUMX
+   BFD_RELOC_PPC_VLE_REL8
+ ENUMX
+   BFD_RELOC_PPC_VLE_REL15
+diff -ruN binutils-2.45/bfd/sysdep.h binutils-2.45_mos/bfd/sysdep.h
+--- binutils-2.45/bfd/sysdep.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/sysdep.h	2025-07-27 14:39:08.708060551 +0300
+@@ -29,6 +29,9 @@
+ #include "config.h"
+ #include <stdio.h>
+ 
++#if defined(MORPHOS_TARGET) && !defined(__off64_t_defined)
++typedef int64_t         off64_t;
++#endif
+ #ifdef HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
+diff -ruN binutils-2.45/bfd/targets.c binutils-2.45_mos/bfd/targets.c
+--- binutils-2.45/bfd/targets.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/bfd/targets.c	2025-07-27 14:39:08.708060551 +0300
+@@ -847,6 +847,7 @@
+ extern const bfd_target powerpc_elf32_vec;
+ extern const bfd_target powerpc_elf32_le_vec;
+ extern const bfd_target powerpc_elf32_fbsd_vec;
++extern const bfd_target powerpc_elf32_morphos_vec;
+ extern const bfd_target powerpc_elf32_vxworks_vec;
+ extern const bfd_target powerpc_elf64_vec;
+ extern const bfd_target powerpc_elf64_le_vec;
+@@ -1234,6 +1235,7 @@
+ 	&powerpc_elf32_vec,
+ 	&powerpc_elf32_le_vec,
+ 	&powerpc_elf32_fbsd_vec,
++	&powerpc_elf32_morphos_vec,
+ 	&powerpc_elf32_vxworks_vec,
+ #ifdef BFD64
+ 	&powerpc_elf64_vec,
+diff -ruN binutils-2.45/binutils/objcopy.c binutils-2.45_mos/binutils/objcopy.c
+--- binutils-2.45/binutils/objcopy.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/binutils/objcopy.c	2025-07-27 14:39:08.708060551 +0300
+@@ -1550,7 +1550,9 @@
+ {
+   asymbol **from = isyms, **to = osyms;
+   long src_count = 0, dst_count = 0;
++#ifndef MORPHOS_TARGET
+   int relocatable = (abfd->flags & (EXEC_P | DYNAMIC)) == 0;
++#endif
+ 
+   for (; src_count < *symcount; src_count++)
+     {
+@@ -1565,6 +1567,13 @@
+ 
+       undefined = bfd_is_und_section (bfd_asymbol_section (sym));
+ 
++#ifdef MORPHOS_TARGET
++      if (strip_symbols == STRIP_ALL && undefined)
++        {
++          add_specific_symbol(strdup(name), keep_specific_htab); /* Is this really correct? - Piru */
++        }
++#endif
++
+       if (add_sym_list)
+ 	{
+ 	  struct addsym_node *ptr;
+@@ -1659,7 +1668,11 @@
+ 	  keep = true;
+ 	  used_in_reloc = true;
+ 	}
++#ifdef MORPHOS_TARGET
++      else if (0			/* Don't keep globals just because our executables are also relocatable.  */
++#else
+       else if (relocatable			/* Relocatable file.  */
++#endif
+ 	       && ((flags & (BSF_GLOBAL | BSF_WEAK)) != 0
+ 		   || bfd_is_com_section (bfd_asymbol_section (sym))))
+ 	keep = true;
+@@ -1712,7 +1725,21 @@
+ 	keep = true;
+ 
+       if (keep && is_strip_section (abfd, bfd_asymbol_section (sym)))
++#ifdef MORPHOS_TARGET
++	{
++          /* If the symbol refers to a stripped section, we still want to
++           * keep it, e.g., _SDA_BASE_ TODO: We should perhaps output a
++           * warning or add another option to trigger this behaviour.
++           * FIXME: The section to which symbol refers must be adjusted
++           * as well */
++          if (!is_specified_symbol (name, keep_specific_htab))
++            {
++              keep = false;
++            }
++	}
++#else
+ 	keep = false;
++#endif
+ 
+       if (keep)
+ 	{
+@@ -2785,8 +2812,10 @@
+       flags &= ~bfd_flags_to_clear;
+       flags &= bfd_applicable_file_flags (obfd);
+ 
++#ifndef MORPHOS_TARGET
+       if (strip_symbols == STRIP_ALL)
+ 	flags &= ~HAS_RELOC;
++#endif
+ 
+       if (!bfd_set_start_address (obfd, start)
+ 	  || !bfd_set_file_flags (obfd, flags))
+@@ -3315,8 +3344,16 @@
+   if (convert_debugging)
+     dhandle = read_debugging_info (ibfd, isympp, symcount, false);
+ 
++#ifdef MORPHOS_TARGET
++   /* Always mark section symbols used, or else ppc-morphos-strip
++      tries to remove .text etc symbols. Why this happens is unclear.
++      If there's a better way to fix this, feel free to change.
++      - Piru */
++   if (1)
++#else
+    if ((obfd->flags & (EXEC_P | DYNAMIC)) != 0
+        && (obfd->flags & HAS_RELOC) == 0)
++#endif
+     {
+       if (bfd_keep_unused_section_symbols (obfd) || keep_section_symbols)
+ 	{
+@@ -3372,7 +3409,9 @@
+ 	 haven't been set yet.  mark_symbols_used_in_relocations will
+ 	 ignore input sections which have no corresponding output
+ 	 section.  */
++#ifndef MORPHOS_TARGET
+       if (strip_symbols != STRIP_ALL)
++#endif
+ 	{
+ 	  bfd_set_error (bfd_error_no_error);
+ 	  for (asection *s = ibfd->sections; s != NULL; s = s->next)
+@@ -4574,7 +4613,11 @@
+ 	    }
+ 	}
+ 
++#ifdef MORPHOS_TARGET
++if(0)
++#else
+       if (strip_symbols == STRIP_ALL)
++#endif
+ 	{
+ 	  /* Remove relocations which are not in
+ 	     keep_strip_specific_list.  */
+@@ -4582,6 +4625,26 @@
+ 	  long i;
+ 
+ 	  for (w_relpp = relpp, i = 0; i < relcount; i++)
++#ifdef MORPHOS_TARGET
++	    if (relpp[i]->sym_ptr_ptr)
++	    {
++		asection *sec;
++		sec = bfd_asymbol_section(*relpp[i]->sym_ptr_ptr);
++		if (is_specified_symbol (bfd_asymbol_name (*relpp[i]->sym_ptr_ptr),
++					 keep_specific_htab))
++		  *w_relpp++ = relpp[i];
++		else
++		  {
++		     /* Don't keep the symbol, but keep the reloc */
++		     *w_relpp = relpp[i];
++		     (*w_relpp)->addend = bfd_asymbol_value(*relpp [i]->sym_ptr_ptr)
++						- sec->vma
++						+ relpp[i]->addend;
++		     (*w_relpp)->sym_ptr_ptr = &sec->symbol;
++		     w_relpp++;
++		  }
++	    }
++#else
+ 	    /* PR 17512: file: 9e907e0c.  */
+ 	    if (relpp[i]->sym_ptr_ptr
+ 		/* PR 20096 */
+@@ -4589,6 +4652,7 @@
+ 		&& is_specified_symbol (bfd_asymbol_name (*relpp[i]->sym_ptr_ptr),
+ 					keep_specific_htab))
+ 	      *w_relpp++ = relpp[i];
++#endif
+ 	  relcount = w_relpp - relpp;
+ 	  *w_relpp = 0;
+ 	}
+@@ -5045,6 +5109,11 @@
+   if (show_version)
+     print_version ("strip");
+ 
++#ifdef MORPHOS_TARGET
++  add_specific_symbol("__amigappc__", keep_specific_htab);
++  add_specific_symbol("__abox__", keep_specific_htab);
++#endif
++
+   default_deterministic ();
+ 
+   /* Default is to strip all symbols.  */
+@@ -6142,6 +6211,11 @@
+   if (show_version)
+     print_version ("objcopy");
+ 
++#ifdef MORPHOS_TARGET
++  add_specific_symbol("__amigappc__", keep_specific_htab);
++  add_specific_symbol("__abox__", keep_specific_htab);
++#endif
++
+   if (interleave && copy_byte == -1)
+     fatal (_("interleave start byte must be set with --byte"));
+ 
+diff -ruN binutils-2.45/gas/as.c binutils-2.45_mos/gas/as.c
+--- binutils-2.45/gas/as.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/as.c	2025-08-25 21:09:46.151475896 +0300
+@@ -104,6 +104,11 @@
+    MD_AFTER_PARSE_ARGS.  */
+ int flag_dwarf_cie_version = -1;
+ 
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++extern void morphos_add_sdkid_if_missing (void);
++int flag_no_inject_sdkid = 0;
++#endif
++
+ /* The maximum level of DWARF DEBUG information we should manufacture.
+    This defaults to 3 unless overridden by a command line option.  */
+ unsigned int dwarf_level = 3;
+@@ -512,6 +517,9 @@
+       OPTION_NOINFO
+     /* When you add options here, check that they do
+        not collide with OPTION_MD_BASE.  See as.h.  */
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++     ,OPTION_NO_INJECT_SDKID
++#endif
+     };
+ 
+   static const struct option std_longopts[] =
+@@ -600,6 +608,9 @@
+     ,{"info", no_argument, NULL, OPTION_INFO}
+     ,{"warn", no_argument, NULL, OPTION_WARN}
+     ,{"multibyte-handling", required_argument, NULL, OPTION_MULTIBYTE_HANDLING}
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++    ,{"no-inject-sdkid", no_argument, NULL, OPTION_NO_INJECT_SDKID}
++#endif
+   };
+ 
+   /* Construct the option lists from the standard list and the target
+@@ -1166,6 +1177,12 @@
+ 
+ 	case OPTION_HASH_TABLE_SIZE:
+ 	  break;
++
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++	case OPTION_NO_INJECT_SDKID:
++	  flag_no_inject_sdkid = 1;
++	  break;
++#endif
+ 	}
+     }
+ 
+@@ -1490,6 +1507,11 @@
+   md_finish ();
+ #endif
+ 
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++  if (! flag_no_inject_sdkid)
++    morphos_add_sdkid_if_missing ();
++#endif
++
+ #if defined OBJ_ELF || defined OBJ_MAYBE_ELF
+   if ((flag_execstack || flag_noexecstack)
+       && OUTPUT_FLAVOR == bfd_target_elf_flavour)
+diff -ruN binutils-2.45/gas/config/obj-elf.c binutils-2.45_mos/gas/config/obj-elf.c
+--- binutils-2.45/gas/config/obj-elf.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/config/obj-elf.c	2025-08-25 19:39:12.022555036 +0300
+@@ -1994,9 +1994,16 @@
+     return NULL;
+ 
+   gas_assert (symbol_get_value_expression (csym)->X_op == O_constant);
++
++#ifdef MORPHOS_TARGET
++  return fix_new (symbol_get_frag (csym),
++		  symbol_get_value_expression (csym)->X_add_number,
++		  0, psym, 0, 0, BFD_RELOC_VTABLE_INHERIT, 0);
++#else
+   return fix_new (symbol_get_frag (csym),
+ 		  symbol_get_value_expression (csym)->X_add_number,
+ 		  0, psym, 0, 0, BFD_RELOC_VTABLE_INHERIT);
++#endif
+ }
+ 
+ /* This is a version of obj_elf_get_vtable_inherit() that is
+@@ -2037,8 +2044,14 @@
+ 
+   demand_empty_rest_of_line ();
+ 
++#ifdef MORPHOS_TARGET
++   return fix_new (frag_now, frag_now_fix (), 0, sym, offset, 0,
++		  BFD_RELOC_VTABLE_ENTRY, 0);
++#else
++
+   return fix_new (frag_now, frag_now_fix (), 0, sym, offset, 0,
+ 		  BFD_RELOC_VTABLE_ENTRY);
++#endif
+ }
+ 
+ /* This is a version of obj_elf_get_vtable_entry() that is
+@@ -2638,6 +2651,69 @@
+ #endif
+ }
+ 
++#if defined(MORPHOS_TARGET) && defined(MORPHOS_SDK_RELEASE_ID)
++void morphos_add_sdkid_if_missing(void);
++void morphos_add_sdkid_if_missing(void)
++{
++  bool morphos_sdkid_seen = false;
++
++  if (comment_section && seg_not_empty_p (comment_section))
++    {
++      segT old_section = now_seg;
++      int old_subsection = now_subseg;
++      size_t sz;
++      fragS *f;
++      subseg_set (comment_section, 0);
++
++      /* Get last fragment size */
++      sz = frag_now_fix_octets ();
++      /* Calculate total size of the comment section so far */
++      for (f = frchain_now->frch_root; f; f = f->fr_next)
++	{
++	  if (f->fr_type != rs_fill)
++	    continue;
++ 	  if (frchain_now->frch_last != f)
++	    sz += f->fr_fix;
++	}
++
++      if (sz)
++	{
++	  char *msg = xmalloc (sz);
++	  char *ptr = msg;
++	  for (f = frchain_now->frch_root; f; f = f->fr_next)
++	    {
++	      size_t fix = f == frchain_now->frch_last ? sz : f->fr_fix;
++	      if (f->fr_type != rs_fill)
++		continue;
++
++	      memcpy (ptr, f->fr_literal, fix);
++	      ptr += fix;
++	    }
++
++	  ptr = memmem (msg, sz, "MorphOS_SDK: ", 13);
++	  /* Either at the beginning of section or preceeded by \0 */
++	  if (ptr == msg || (ptr && ptr[-1] == '\0'))
++	    morphos_sdkid_seen = true;
++
++	  free (msg);
++	}
++      subseg_set (old_section, old_subsection);
++    }
++
++  /* If there isn't the SDK ID yet, add it to a .comment section */
++  if (! morphos_sdkid_seen)
++    {
++      char *oldlineptr = input_line_pointer;
++#define xstr_(s) str_(s)
++#define str_(s) #s
++      char data[] = "\"MorphOS_SDK: " xstr_(MORPHOS_SDK_RELEASE_ID) "\"";
++      input_line_pointer = data;
++      obj_elf_ident (0);
++      input_line_pointer = oldlineptr;
++    }
++}
++#endif
++
+ #ifdef INIT_STAB_SECTION
+ 
+ /* The first entry in a .stabs section is special.  */
+diff -ruN binutils-2.45/gas/config/tc-ppc.c binutils-2.45_mos/gas/config/tc-ppc.c
+--- binutils-2.45/gas/config/tc-ppc.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/config/tc-ppc.c	2025-07-27 14:39:08.708060551 +0300
+@@ -279,7 +279,7 @@
+ /* Structure to hold information about predefined registers.  */
+ struct pd_reg
+   {
+-    char name[6];
++    char name[7];
+     unsigned short value;
+     unsigned short flags;
+   };
+@@ -661,6 +661,8 @@
+   { "v8", 8, PPC_OPERAND_VR },
+   { "v9", 9, PPC_OPERAND_VR },
+ 
++  { "vrsave", 256, PPC_OPERAND_SPR },
++
+   /* Vector Scalar (VSX) registers (ISA 2.06).  */
+   { "vs.0", 0, PPC_OPERAND_VSR },
+   { "vs.1", 1, PPC_OPERAND_VSR },
+@@ -1404,7 +1406,7 @@
+   fprintf (stream, _("\
+ -many                   generate code for any architecture (PWR/PWRX/PPC)\n"));
+   fprintf (stream, _("\
+--maltivec               generate code for AltiVec\n"));
++-maltivec, -mvec              generate code for AltiVec\n"));
+   fprintf (stream, _("\
+ -mvsx                   generate code for Vector-Scalar (VSX) instructions\n"));
+   fprintf (stream, _("\
+@@ -1551,6 +1553,8 @@
+ #ifdef OBJ_ELF
+ # ifdef TE_FreeBSD
+   return (ppc_obj64 ? "elf64-powerpc-freebsd" : "elf32-powerpc-freebsd");
++#elif defined (TE_MORPHOS)
++  return "elf32-morphos";
+ # elif defined (TE_VXWORKS)
+   return "elf32-powerpc-vxworks";
+ # else
+@@ -2157,6 +2161,16 @@
+     MAP ("got@tprel@l",		BFD_RELOC_PPC_GOT_TPREL16_LO),
+     MAP ("got@tprel@h",		BFD_RELOC_PPC_GOT_TPREL16_HI),
+     MAP ("got@tprel@ha",	BFD_RELOC_PPC_GOT_TPREL16_HA),
++
++    /* MorphOS specific relocs */
++    MAP ("drel",			BFD_RELOC_PPC_MORPHOS_DREL),
++    MAP ("drell",			BFD_RELOC_PPC_MORPHOS_DREL_LO),
++    MAP ("drelh",			BFD_RELOC_PPC_MORPHOS_DREL_HI),
++    MAP ("drelha",			BFD_RELOC_PPC_MORPHOS_DREL_HA),
++    MAP ("drel@l",			BFD_RELOC_PPC_MORPHOS_DREL_LO),
++    MAP ("drel@h",			BFD_RELOC_PPC_MORPHOS_DREL_HI),
++    MAP ("drel@ha",			BFD_RELOC_PPC_MORPHOS_DREL_HA),
++
+     MAP32 ("fixup",		BFD_RELOC_CTOR),
+     MAP32 ("plt",		BFD_RELOC_24_PLT_PCREL),
+     MAP32 ("pltrel24",		BFD_RELOC_24_PLT_PCREL),
+@@ -3005,8 +3019,6 @@
+     case BFD_RELOC_VTABLE_ENTRY:
+     case BFD_RELOC_VTABLE_INHERIT:
+       break;
+-
+-    case BFD_RELOC_8:
+       size = 1;
+       break;
+ 
+@@ -3112,6 +3124,12 @@
+     case BFD_RELOC_PPC_TPREL16_HA:
+     case BFD_RELOC_PPC_TPREL16_HI:
+     case BFD_RELOC_PPC_TPREL16_LO:
++#ifdef MORPHOS_TARGET
++    case BFD_RELOC_8:
++    case BFD_RELOC_PPC_MORPHOS_DREL_LO:
++    case BFD_RELOC_PPC_MORPHOS_DREL_HI:
++    case BFD_RELOC_PPC_MORPHOS_DREL_HA:
++#endif
+       size = 2;
+       break;
+ 
+@@ -3176,6 +3194,9 @@
+     case BFD_RELOC_PPC_VLE_SDAREL_LO16D:
+     case BFD_RELOC_PPC64_TLS_PCREL:
+     case BFD_RELOC_RVA:
++#ifdef MORPHOS_TARGET
++    case BFD_RELOC_PPC_MORPHOS_DREL:
++#endif
+       size = 4;
+       break;
+ 
+@@ -4131,7 +4152,11 @@
+ 			      size,
+ 			      &fixups[i].exp,
+ 			      pcrel,
++#ifdef MORPHOS_TARGET
++			      fixups[i].reloc, 0);
++#else
+ 			      fixups[i].reloc);
++#endif
+ 	}
+       else
+ 	{
+@@ -4143,7 +4168,11 @@
+ 			      insn_length,
+ 			      &fixups[i].exp,
+ 			      (operand->flags & PPC_OPERAND_RELATIVE) != 0,
++#ifdef MORPHOS_TARGET
++			      BFD_RELOC_NONE, 0);
++#else
+ 			      BFD_RELOC_NONE);
++#endif
+ 	}
+       fixP->fx_pcrel_adjust = fixups[i].opindex;
+     }
+@@ -7645,6 +7674,12 @@
+ 	case BFD_RELOC_16:
+ 	case BFD_RELOC_16_PCREL:
+ 	case BFD_RELOC_8:
++#ifdef MORPHOS_TARGET
++	case BFD_RELOC_PPC_MORPHOS_DREL:
++	case BFD_RELOC_PPC_MORPHOS_DREL_LO:
++	case BFD_RELOC_PPC_MORPHOS_DREL_HI:
++	case BFD_RELOC_PPC_MORPHOS_DREL_HA:
++#endif
+ 	  break;
+ 
+ 	default:
+diff -ruN binutils-2.45/gas/config/te-morphos.h binutils-2.45_mos/gas/config/te-morphos.h
+--- binutils-2.45/gas/config/te-morphos.h	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/gas/config/te-morphos.h	2025-07-27 14:39:08.708060551 +0300
+@@ -0,0 +1,14 @@
++/*
++ * te-morphos.h -- MorphOS target environment declarations.
++ */
++
++#define TE_MORPHOS 1
++
++#define LOCAL_LABELS_DOLLAR 1
++#define LOCAL_LABELS_FB 1
++
++#ifdef OBJ_HEADER
++#include OBJ_HEADER
++#else
++#include "obj-format.h"
++#endif
+diff -ruN binutils-2.45/gas/configure.tgt binutils-2.45_mos/gas/configure.tgt
+--- binutils-2.45/gas/configure.tgt	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/configure.tgt	2025-07-27 14:39:08.708060551 +0300
+@@ -357,6 +357,7 @@
+ 
+   pj*)					fmt=elf ;;
+ 
++  ppc-*-morphos*)			fmt=elf em=morphos ;;
+   ppc-*-aix5.[01])			fmt=coff em=aix5 ;;
+   ppc-*-aix[5-9].*)			fmt=coff em=aix5 ;;
+   ppc-*-aix*)				fmt=coff em=aix ;;
+diff -ruN binutils-2.45/gas/dw2gencfi.c binutils-2.45_mos/gas/dw2gencfi.c
+--- binutils-2.45/gas/dw2gencfi.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/dw2gencfi.c	2025-07-27 14:39:08.708060551 +0300
+@@ -189,8 +189,13 @@
+       char *p = frag_more (size);
+       gas_assert (size == (unsigned) howto->bitsize / 8);
+       md_number_to_chars (p, 0, size);
++#ifdef MORPHOS_TARGET
++      fix_new (frag_now, p - frag_now->fr_literal, size, exp->X_add_symbol,
++	       exp->X_add_number, howto->pc_relative, code, 0);
++#else
+       fix_new (frag_now, p - frag_now->fr_literal, size, exp->X_add_symbol,
+ 	       exp->X_add_number, howto->pc_relative, code);
++#endif
+     }
+   else if ((encoding & 0x70) == DW_EH_PE_pcrel)
+     {
+@@ -1422,7 +1427,11 @@
+ 	  exp.X_add_symbol = (symbolS *) local_symbol_make (cseg->name, cseg, frch->frch_root, 0);
+ 	  exp.X_add_number = 0;
+ 	  subseg_set (iseg, ifrch->frch_subseg);
++#ifdef MORPHOS_TARGET
++	  fix_new_exp (ifrch->frch_root, 0, 0, &exp, 0, BFD_RELOC_NONE, 0);
++#else
+ 	  fix_new_exp (ifrch->frch_root, 0, 0, &exp, 0, BFD_RELOC_NONE);
++#endif
+ 
+ 	  /* Restore the original segment info.  */
+ 	  subseg_set (cseg, l->subseg);
+@@ -2085,8 +2094,13 @@
+ 	  char *p = frag_more (addr_size);
+ 	  gas_assert (addr_size == (unsigned) howto->bitsize / 8);
+ 	  md_number_to_chars (p, 0, addr_size);
++#ifdef MORPHOS_TARGET
++	  fix_new (frag_now, p - frag_now->fr_literal, addr_size,
++		   fde->start_address, 0, howto->pc_relative, code, 0);
++#else
+ 	  fix_new (frag_now, p - frag_now->fr_literal, addr_size,
+ 		   fde->start_address, 0, howto->pc_relative, code);
++#endif
+ 	}
+       else
+ 	{
+diff -ruN binutils-2.45/gas/read.c binutils-2.45_mos/gas/read.c
+--- binutils-2.45/gas/read.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/read.c	2025-07-27 14:39:08.708060551 +0300
+@@ -4899,9 +4899,14 @@
+ 	as_bad (_("unsupported BFD relocation size %u"), size);
+ 	return;
+       }
++#ifdef MORPHOS_TARGET
++  fix_new_exp (frag, p - frag->fr_literal + offset, size,
++	       exp, 0, r, 0);
++#else
+   fix_new_exp (frag, p - frag->fr_literal + offset, size,
+ 	       exp, 0, r);
+ #endif
++#endif
+ }
+ 
+ /* Handle an MRI style string expression.  */
+diff -ruN binutils-2.45/gas/write.c binutils-2.45_mos/gas/write.c
+--- binutils-2.45/gas/write.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/write.c	2025-07-27 14:39:08.708060551 +0300
+@@ -136,7 +136,12 @@
+ 		  offsetT offset,	/* X_add_number.  */
+ 		  int pcrel,		/* TRUE if PC-relative relocation.  */
+ 		  RELOC_ENUM r_type	/* Relocation type.  */,
++#ifdef MORPHOS_TARGET
++		  int at_beginning,	/* Add to the start of the list?  */
++		  int baserel ATTRIBUTE_UNUSED) /* TRUE if base-relative data */
++#else
+ 		  int at_beginning)	/* Add to the start of the list?  */
++#endif
+ {
+   fixS *fixP;
+ 
+@@ -175,6 +180,9 @@
+ #endif
+ 
+ #ifdef TC_FIX_TYPE
++#ifndef TC_PPC //memo: MORPHOS_TARGET
++  fixP->tc_fix_data = baserel;
++#endif
+   TC_INIT_FIX_DATA (fixP);
+ #endif
+ 
+@@ -219,10 +227,18 @@
+ 	 symbolS *add_symbol,		/* X_add_symbol.  */
+ 	 offsetT offset,		/* X_add_number.  */
+ 	 int pcrel,			/* TRUE if PC-relative relocation.  */
++#ifdef MORPHOS_TARGET
++	 RELOC_ENUM r_type,		/* Relocation type.  */
++	 unsigned long baserel)			/* TRUE if base-relative data */
++{
++  return fix_new_internal (frag, where, size, add_symbol,
++			   NULL, offset, pcrel, r_type, false, baserel);
++#else
+ 	 RELOC_ENUM r_type		/* Relocation type.  */)
+ {
+   return fix_new_internal (frag, where, size, add_symbol,
+ 			   NULL, offset, pcrel, r_type, false);
++#endif
+ }
+ 
+ /* Create a fixup for an expression.  Currently we only support fixups
+@@ -235,7 +251,12 @@
+ 	     unsigned long size,	/* 1, 2, or 4 usually.  */
+ 	     const expressionS *exp,	/* Expression.  */
+ 	     int pcrel,			/* TRUE if PC-relative relocation.  */
++#ifdef MORPHOS_TARGET
++	     RELOC_ENUM r_type,		/* Relocation type.  */
++	     unsigned long baserel)		/* TRUE if base-relative data */
++#else
+ 	     RELOC_ENUM r_type		/* Relocation type.  */)
++#endif
+ {
+   symbolS *add = NULL;
+   symbolS *sub = NULL;
+@@ -278,8 +299,13 @@
+       break;
+     }
+ 
++#ifdef MORPHOS_TARGET
++  return fix_new_internal (frag, where, size, add, sub, off, pcrel,
++			   r_type, false, baserel);
++#else
+   return fix_new_internal (frag, where, size, add, sub, off, pcrel,
+ 			   r_type, false);
++#endif
+ }
+ 
+ /* Create a fixup at the beginning of FRAG.  The arguments are the same
+@@ -289,8 +315,14 @@
+ fix_at_start (fragS *frag, unsigned long size, symbolS *add_symbol,
+ 	      offsetT offset, int pcrel, RELOC_ENUM r_type)
+ {
++
++#ifdef MORPHOS_TARGET
++  return fix_new_internal (frag, 0, size, add_symbol,
++                           NULL, offset, pcrel, r_type, true, 0);
++#else
+   return fix_new_internal (frag, 0, size, add_symbol,
+ 			   NULL, offset, pcrel, r_type, true);
++#endif
+ }
+ 
+ /* Generic function to determine whether a fixup requires a relocation.  */
+@@ -2227,10 +2259,16 @@
+ 			   lie->word_goes_here - lie->frag->fr_literal,
+ 			   2, &exp, TC_PARSE_CONS_RETURN_NONE);
+ #else
++#ifdef MORPHOS_TARGET
++	  fix_new_exp (lie->frag,
++		       lie->word_goes_here - lie->frag->fr_literal,
++		       2, &exp, 0, BFD_RELOC_16, 0);
++#else
+ 	  fix_new_exp (lie->frag,
+ 		       lie->word_goes_here - lie->frag->fr_literal,
+ 		       2, &exp, 0, BFD_RELOC_16);
+ #endif
++#endif
+ 	  *prevP = lie->next_broken_word;
+ 	}
+       else
+diff -ruN binutils-2.45/gas/write.h binutils-2.45_mos/gas/write.h
+--- binutils-2.45/gas/write.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/gas/write.h	2025-07-27 14:39:08.708060551 +0300
+@@ -180,12 +180,22 @@
+ extern int relax_segment (struct frag *, segT, int);
+ extern void number_to_chars_littleendian (char *, valueT, int);
+ extern void number_to_chars_bigendian (char *, valueT, int);
++#ifdef MORPHOS_TARGET
++extern fixS *fix_new (fragS *, unsigned long, unsigned long, symbolS *,
++		      offsetT, int, bfd_reloc_code_real_type, unsigned long baserel);
++#else
+ extern fixS *fix_new (fragS *, unsigned long, unsigned long, symbolS *,
+ 		      offsetT, int, bfd_reloc_code_real_type);
++#endif
+ extern fixS *fix_at_start (fragS *, unsigned long, symbolS *,
+ 			   offsetT, int, bfd_reloc_code_real_type);
++#ifdef MORPHOS_TARGET
++extern fixS *fix_new_exp (fragS *, unsigned long, unsigned long,
++			  const expressionS *, int, bfd_reloc_code_real_type, unsigned long baserel);
++#else
+ extern fixS *fix_new_exp (fragS *, unsigned long, unsigned long,
+ 			  const expressionS *, int, bfd_reloc_code_real_type);
++#endif
+ extern void write_print_statistics (FILE *);
+ extern void as_bad_subtract (fixS *);
+ 
+diff -ruN binutils-2.45/include/elf/ppc.h binutils-2.45_mos/include/elf/ppc.h
+--- binutils-2.45/include/elf/ppc.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/include/elf/ppc.h	2025-07-27 14:39:08.708060551 +0300
+@@ -133,6 +133,12 @@
+   RELOC_NUMBER (R_PPC_EMB_RELST_HA,	114)
+   RELOC_NUMBER (R_PPC_EMB_BIT_FLD,	115)
+   RELOC_NUMBER (R_PPC_EMB_RELSDA,	116)
++  
++/* Special MorphOS relocs. */
++  RELOC_NUMBER (R_PPC_MORPHOS_DREL,	200)
++  RELOC_NUMBER (R_PPC_MORPHOS_DREL_LO,	201)
++  RELOC_NUMBER (R_PPC_MORPHOS_DREL_HI,	202)
++  RELOC_NUMBER (R_PPC_MORPHOS_DREL_HA,	203)
+ 
+ /* Marker reloc for inline plt call insns.  */
+   RELOC_NUMBER (R_PPC_PLTSEQ,		119)
+diff -ruN binutils-2.45/ld/configure.tgt binutils-2.45_mos/ld/configure.tgt
+--- binutils-2.45/ld/configure.tgt	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/configure.tgt	2025-07-27 14:39:08.712060584 +0300
+@@ -803,6 +803,8 @@
+ 			;;
+ powerpc-*-haiku*)	targ_emul=elf32ppchaiku
+ 			;;
++powerpc-*-morphos*)	targ_emul=morphos ; targ_extra_emuls=morphos_baserel
++			;;
+ powerpc-*-windiss*)	targ_emul=elf32ppcwindiss
+ 			;;
+ pru*-*-*)		targ_emul=pruelf
+diff -ruN binutils-2.45/ld/emulparams/morphos_baserel.sh binutils-2.45_mos/ld/emulparams/morphos_baserel.sh
+--- binutils-2.45/ld/emulparams/morphos_baserel.sh	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/ld/emulparams/morphos_baserel.sh	2025-07-27 14:39:08.712060584 +0300
+@@ -0,0 +1,6 @@
++TEMPLATE_NAME=morphos
++SCRIPT_NAME=morphos_baserel
++OUTPUT_FORMAT="elf32-morphos"
++MAXPAGESIZE=0x40000
++ARCH=powerpc
++MACHINE=
+diff -ruN binutils-2.45/ld/emulparams/morphos.sh binutils-2.45_mos/ld/emulparams/morphos.sh
+--- binutils-2.45/ld/emulparams/morphos.sh	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/ld/emulparams/morphos.sh	2025-07-27 14:39:08.712060584 +0300
+@@ -0,0 +1,9 @@
++TEMPLATE_NAME=morphos
++SCRIPT_NAME=morphos
++OUTPUT_FORMAT="elf32-morphos"
++MAXPAGESIZE=0x10000
++TEXT_START_ADDR=0x0
++SEGMENT_SIZE=0x0
++ARCH=powerpc
++MACHINE=
++ENTRY=__start
+diff -ruN binutils-2.45/ld/emultempl/morphos.em binutils-2.45_mos/ld/emultempl/morphos.em
+--- binutils-2.45/ld/emultempl/morphos.em	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/ld/emultempl/morphos.em	2025-07-27 14:39:08.712060584 +0300
+@@ -0,0 +1,1866 @@
++# This shell script emits a C file. -*- C -*-
++# It does some substitutions.
++# ELF emulations.
++test -z "${ELFSIZE}" && ELFSIZE=32
++if [ -z "$MACHINE" ]; then
++  OUTPUT_ARCH=${ARCH}
++else
++  OUTPUT_ARCH=${ARCH}:${MACHINE}
++fi
++fragment <<EOF
++/* This file is is generated by a shell script.  DO NOT EDIT! */
++
++/* ${ELFSIZE} bit ELF emulation code for ${EMULATION_NAME}
++   Copyright (C) 1991-2017 Free Software Foundation, Inc.
++   Written by Steve Chamberlain <sac@cygnus.com>
++   ELF support by Ian Lance Taylor <ian@cygnus.com>
++   MorphOS support by Emmanuel Lesueur <lesueur@club-internet.fr>
++   Additional MorphOS support by Harry Sintonen <sintonen@iki.fi>
++
++   This file is part of the GNU Binutils.
++
++   This program is free software; you can redistribute it and/or modify
++   it under the terms of the GNU General Public License as published by
++   the Free Software Foundation; either version 3 of the License, or
++   (at your option) any later version.
++
++   This program is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++   GNU General Public License for more details.
++
++   You should have received a copy of the GNU General Public License
++   along with this program; if not, write to the Free Software
++   Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston,
++   MA 02110-1301, USA.  */
++
++#define TARGET_IS_${EMULATION_NAME}
++
++#include "sysdep.h"
++#include "bfd.h"
++#include "libiberty.h"
++#include "safe-ctype.h"
++#include "filenames.h"
++#include "getopt.h"
++#include <fcntl.h>
++
++#include "bfdlink.h"
++#include "ctf-api.h"
++
++#include "ld.h"
++#include "ldmain.h"
++#include "ldmisc.h"
++#include "ldexp.h"
++#include "ldlang.h"
++#include "ldfile.h"
++#include "ldemul.h"
++#include "ldbuildid.h"
++#include <ldgram.h>
++#include "elf/common.h"
++#include "elf-bfd.h"
++#include "filenames.h"
++#include "elf32-ppc.h"
++#include "ldelfgen.h"
++
++/* Declare functions used by various EXTRA_EM_FILEs.  */
++static void gld${EMULATION_NAME}_before_parse (void);
++static void gld${EMULATION_NAME}_after_parse (void);
++static void gld${EMULATION_NAME}_after_open (void);
++static void gld${EMULATION_NAME}_set_symbols (void);
++static void gld${EMULATION_NAME}_before_allocation (void);
++static void gld${EMULATION_NAME}_after_allocation (void);
++static lang_output_section_statement_type *gld${EMULATION_NAME}_place_orphan
++  (asection *, const char *, int);
++EOF
++
++# Import any needed special functions and/or overrides.
++#
++source_em ${srcdir}/emultempl/elf-generic.em
++if test -n "$EXTRA_EM_FILE" ; then
++  source_em ${srcdir}/emultempl/${EXTRA_EM_FILE}.em
++fi
++
++fragment <<EOF
++static int morphos_resident;
++static int morphos_allow_mixed_sdkid;
++
++struct filelistnode
++{
++	struct filelistnode *next;
++	char name[0];
++};
++
++static struct ppc_elf_params params = { PLT_UNSET, 0, -1, 0, 0, 0, 0, 0, 0, 0 };
++
++static void
++ppc_after_open_output (void)
++{
++  if (params.emit_stub_syms < 0)
++    params.emit_stub_syms = (link_info.emitrelocations
++			     || bfd_link_pic (&link_info));
++  if (params.pagesize == 0)
++    params.pagesize = link_info.commonpagesize;
++  ppc_elf_link_params (&link_info, &params);
++}
++
++/* Handle MorphOS specific options */
++static bool
++gld${EMULATION_NAME}_parse_args (int argc, char **argv)
++{
++  int prevoptind = optind;
++  int prevopterr = opterr;
++  int indx;
++  int longind;
++  int optc;
++
++#define OPTION_IGNORE (300)
++#define OPTION_MORPHOS_DATADATA_RELOC	(OPTION_IGNORE + 1)
++#define OPTION_MORPHOS_BASEREL32	(OPTION_IGNORE + 2)
++#define OPTION_FLAVOR			(OPTION_IGNORE + 3)
++#define OPTION_MORPHOS_ALLOW_MIXED_SDKID	(OPTION_IGNORE + 4)
++
++  static struct option longopts[] = {
++    {"datadata-reloc", no_argument, NULL, OPTION_MORPHOS_DATADATA_RELOC},
++    /*    '\0', NULL, "Relocate for resident program", ONE_DASH },*/
++    {"flavor", required_argument, NULL, OPTION_FLAVOR},
++    /*'\0', NULL, "Select a library flavor", ONE_DASH },*/
++    /*{"baserel32", no_argument, NULL, OPTION_MORPHOS_BASEREL32},*/
++    /*    '\0', NULL, "Build a large-data base relative executable", ONE_DASH },*/
++    {"allow-mixed-sdkid", no_argument, NULL, OPTION_MORPHOS_ALLOW_MIXED_SDKID},
++    /*'\0', NULL, "Do not perform SDK ID verification", ONE_DASH },*/
++    {NULL, no_argument, NULL, 0}
++  };
++
++  indx = optind;
++  if (indx == 0)
++    indx = 1;
++
++  opterr = 0;
++  optc = getopt_long_only (argc, argv, "-", longopts, &longind);
++  opterr = prevopterr;
++  switch (optc)
++    {
++    default:
++      optind = prevoptind;
++      return false;
++
++    case 0:
++      /* Long option which just sets a flag.  */
++      break;
++
++    case OPTION_MORPHOS_DATADATA_RELOC:
++      morphos_resident=1; /* Write out datadata_reloc array */
++      break;
++
++      /*case OPTION_MORPHOS_BASEREL32:
++      morphos_baserel32=1;
++      break;*/
++
++    case OPTION_FLAVOR:
++      {
++	ldfile_add_flavor (optarg);
++      }
++      break;
++
++    case OPTION_MORPHOS_ALLOW_MIXED_SDKID:
++      morphos_allow_mixed_sdkid=1;
++      break;
++    }
++  return true;
++}
++
++static void
++gld${EMULATION_NAME}_set_symbols (void)
++{
++  if (link_info.strip == strip_all)
++    {
++      link_info.keep_hash = ((struct bfd_hash_table *)
++			     xmalloc (sizeof (struct bfd_hash_table)));
++
++      if (! bfd_hash_table_init (link_info.keep_hash, bfd_hash_newfunc, sizeof(struct bfd_hash_entry)))
++	einfo ("%P%F: bfd_hash_table_init failed: %E\n");
++
++      if (bfd_hash_lookup (link_info.keep_hash, "__amigappc__", true, true) == (struct bfd_hash_entry *) NULL
++       || bfd_hash_lookup (link_info.keep_hash, "__abox__", true, true) == (struct bfd_hash_entry *) NULL)
++	einfo ("%P%F: bfd_hash_lookup for insertion failed: %E\n");
++
++      link_info.strip = strip_some;
++    }
++}
++
++EOF
++
++# Functions in this file can be overridden by setting the LDEMUL_* shell
++# variables.  If the name of the overriding function is the same as is
++# defined in this file, then don't output this file's version.
++# If a different overriding name is given then output the standard function
++# as presumably it is called from the overriding function.
++#
++if test x"$LDEMUL_BEFORE_PARSE" != xgld"$EMULATION_NAME"_before_parse; then
++fragment <<EOF
++
++static void
++gld${EMULATION_NAME}_before_parse (void)
++{
++  ldfile_set_output_arch ("${OUTPUT_ARCH}", bfd_arch_`echo ${ARCH} | sed -e 's/:.*//'`);
++  input_flags.dynamic = ${DYNAMIC_LINK-true};
++  config.has_shared = `if test -n "$GENERATE_SHLIB_SCRIPT" ; then echo true ; else echo false ; fi`;
++  config.separate_code = `if test "x${SEPARATE_CODE}" = xyes ; then echo true ; else echo false ; fi`;
++  `if test -n "$CALL_NOP_BYTE" ; then echo link_info.call_nop_byte = $CALL_NOP_BYTE; fi`;
++  link_info.check_relocs_after_open_input = true;
++  link_info.relro = DEFAULT_LD_Z_RELRO;
++  ldfile_sort_flavors();
++}
++
++EOF
++fi
++
++if test x"$LDEMUL_AFTER_PARSE" != xgld"$EMULATION_NAME"_after_parse; then
++fragment <<EOF
++
++static void
++gld${EMULATION_NAME}_after_parse (void)
++{
++  if (bfd_link_pie (&link_info))
++    link_info.flags_1 |= (bfd_vma) DF_1_PIE;
++
++  after_parse_default ();
++}
++
++EOF
++fi
++
++fragment <<EOF
++
++/* These variables are used to implement target options */
++
++static char *audit; /* colon (typically) separated list of libs */
++static char *depaudit; /* colon (typically) separated list of libs */
++
++/* Style of .note.gnu.build-id section.  */
++static const char *emit_note_gnu_build_id;
++
++EOF
++
++if test x"$LDEMUL_AFTER_OPEN" != xgld"$EMULATION_NAME"_after_open; then
++fragment <<EOF
++
++static bfd_size_type
++id_note_section_size (bfd *abfd ATTRIBUTE_UNUSED)
++{
++  const char *style = emit_note_gnu_build_id;
++  bfd_size_type size;
++  bfd_size_type build_id_size;
++
++  size = offsetof (Elf_External_Note, name[sizeof "GNU"]);
++  size = (size + 3) & -(bfd_size_type) 4;
++
++  build_id_size = compute_build_id_size (style);
++  if (build_id_size)
++    size += build_id_size;
++  else
++    size = 0;
++
++  return size;
++}
++
++static bool
++write_build_id (bfd *abfd)
++{
++  const struct elf_backend_data *bed = get_elf_backend_data (abfd);
++  struct elf_obj_tdata *t = elf_tdata (abfd);
++  const char *style;
++  asection *asec;
++  Elf_Internal_Shdr *i_shdr;
++  unsigned char *contents, *id_bits;
++  bfd_size_type size;
++  file_ptr position;
++  Elf_External_Note *e_note;
++
++  style = t->o->build_id.style;
++  asec = t->o->build_id.sec;
++  if (bfd_is_abs_section (asec->output_section))
++    {
++      einfo (_("%P: warning: .note.gnu.build-id section discarded,"
++	       " --build-id ignored.\n"));
++      return true;
++    }
++  i_shdr = &elf_section_data (asec->output_section)->this_hdr;
++
++  if (i_shdr->contents == NULL)
++    {
++      if (asec->contents == NULL)
++	asec->contents = (unsigned char *) xmalloc (asec->size);
++      contents = asec->contents;
++    }
++  else
++    contents = i_shdr->contents + asec->output_offset;
++
++  e_note = (Elf_External_Note *) contents;
++  size = offsetof (Elf_External_Note, name[sizeof "GNU"]);
++  size = (size + 3) & -(bfd_size_type) 4;
++  id_bits = contents + size;
++  size = asec->size - size;
++
++  bfd_h_put_32 (abfd, sizeof "GNU", &e_note->namesz);
++  bfd_h_put_32 (abfd, size, &e_note->descsz);
++  bfd_h_put_32 (abfd, NT_GNU_BUILD_ID, &e_note->type);
++  memcpy (e_note->name, "GNU", sizeof "GNU");
++
++  generate_build_id (abfd, style, bed->s->checksum_contents, id_bits, size);
++
++  position = i_shdr->sh_offset + asec->output_offset;
++  size = asec->size;
++  return (bfd_seek (abfd, position, SEEK_SET) == 0
++	  && bfd_write (contents, size, abfd) == size);
++}
++
++/* Make .note.gnu.build-id section, and set up elf_tdata->build_id.  */
++
++static bool
++setup_build_id (bfd *ibfd)
++{
++  asection *s;
++  bfd_size_type size;
++  flagword flags;
++
++  size = id_note_section_size (ibfd);
++  if (size == 0)
++    {
++      einfo ("%P: warning: unrecognized --build-id style ignored.\n");
++      return false;
++    }
++
++  flags = (SEC_ALLOC | SEC_LOAD | SEC_IN_MEMORY
++	   | SEC_LINKER_CREATED | SEC_READONLY | SEC_DATA);
++  s = bfd_make_section_with_flags (ibfd, ".note.gnu.build-id", flags);
++  if (s != NULL && bfd_set_section_alignment (s, 2))
++    {
++      struct elf_obj_tdata *t = elf_tdata (link_info.output_bfd);
++      t->o->build_id.after_write_object_contents = &write_build_id;
++      t->o->build_id.style = emit_note_gnu_build_id;
++      t->o->build_id.sec = s;
++      elf_section_type (s) = SHT_NOTE;
++      s->size = size;
++      return true;
++    }
++
++  einfo ("%P: warning: Cannot create .note.gnu.build-id section,"
++	 " --build-id ignored.\n");
++  return false;
++}
++
++/* This is called after all the input files have been opened.  */
++
++static void
++gld${EMULATION_NAME}_after_open (void)
++{
++  struct bfd_link_needed_list *needed, *l;
++  struct elf_link_hash_table *htab;
++  asection *s;
++  bfd *abfd;
++
++  after_open_default ();
++
++  htab = elf_hash_table (&link_info);
++  if (!is_elf_hash_table (&htab->root))
++    return;
++
++  if (command_line.out_implib_filename)
++    {
++      unlink_if_ordinary (command_line.out_implib_filename);
++      link_info.out_implib_bfd
++	= bfd_openw (command_line.out_implib_filename,
++		     bfd_get_target (link_info.output_bfd));
++
++      if (link_info.out_implib_bfd == NULL)
++	{
++	  einfo ("%F%s: Can't open for writing: %E\n",
++		 command_line.out_implib_filename);
++	}
++    }
++
++  if (emit_note_gnu_build_id != NULL)
++    {
++      /* Find an ELF input.  */
++      for (abfd = link_info.input_bfds;
++	   abfd != (bfd *) NULL; abfd = abfd->link.next)
++	if (bfd_get_flavour (abfd) == bfd_target_elf_flavour
++	    && bfd_count_sections (abfd) != 0
++	    && !((lang_input_statement_type *) abfd->usrdata)->flags.just_syms)
++	  break;
++
++      /* PR 10555: If there are no ELF input files do not try to
++	 create a .note.gnu-build-id section.  */
++      if (abfd == NULL
++	  || !setup_build_id (abfd))
++	{
++	  free ((char *) emit_note_gnu_build_id);
++	  emit_note_gnu_build_id = NULL;
++	}
++    }
++
++  get_elf_backend_data (link_info.output_bfd)->setup_gnu_properties (&link_info);
++
++  if (bfd_link_relocatable (&link_info))
++    {
++      if (link_info.execstack == ! link_info.noexecstack)
++	/* PR ld/16744: If "-z [no]execstack" has been specified on the
++	   command line and we are perfoming a relocatable link then no
++	   PT_GNU_STACK segment will be created and so the
++	   linkinfo.[no]execstack values set in _handle_option() will have no
++	   effect.  Instead we create a .note.GNU-stack section in much the
++	   same way as the assembler does with its --[no]execstack option.  */
++	(void) bfd_make_section_with_flags (link_info.input_bfds,
++					    ".note.GNU-stack",
++					    SEC_READONLY | (link_info.execstack ? SEC_CODE : 0));
++
++      return;
++    }
++
++  if (!link_info.traditional_format)
++    {
++      bfd *elfbfd = NULL;
++      bool warn_eh_frame = false;
++      int seen_type = 0;
++
++      for (abfd = link_info.input_bfds; abfd; abfd = abfd->link.next)
++	{
++	  int type = 0;
++
++	  if (((lang_input_statement_type *) abfd->usrdata)->flags.just_syms)
++	    continue;
++
++	  for (s = abfd->sections; s && type < COMPACT_EH_HDR; s = s->next)
++	    {
++	      const char *name = bfd_section_name (s);
++
++	      if (bfd_is_abs_section (s->output_section))
++		continue;
++	      if (startswith (name, ".eh_frame_entry"))
++		type = COMPACT_EH_HDR;
++	      else if (strcmp (name, ".eh_frame") == 0 && s->size > 8)
++		type = DWARF2_EH_HDR;
++	    }
++
++	  if (type != 0)
++	    {
++	      if (seen_type == 0)
++		{
++		  seen_type = type;
++		}
++	      else if (seen_type != type)
++		{
++		  einfo (_("%P%F: compact frame descriptions incompatible with"
++			 " DWARF2 .eh_frame from %B\n"),
++			 type == DWARF2_EH_HDR ? abfd : elfbfd);
++		  break;
++		}
++
++	      if (!elfbfd
++		  && (type == COMPACT_EH_HDR || link_info.eh_frame_hdr_type != 0))
++		{
++		  if (bfd_get_flavour (abfd) == bfd_target_elf_flavour)
++		    elfbfd = abfd;
++
++		  warn_eh_frame = true;
++		}
++	    }
++
++	  if (seen_type == COMPACT_EH_HDR)
++	    link_info.eh_frame_hdr_type = COMPACT_EH_HDR;
++	}
++      if (elfbfd)
++	{
++	  const struct elf_backend_data *bed;
++
++	  bed = get_elf_backend_data (elfbfd);
++	  s = bfd_make_section_with_flags (elfbfd, ".eh_frame_hdr",
++					   bed->dynamic_sec_flags
++					   | SEC_READONLY);
++	  if (s != NULL
++	      && bfd_set_section_alignment (s, 2))
++	    {
++	      htab->eh_info.hdr_sec = s;
++	      warn_eh_frame = false;
++	    }
++	}
++      if (warn_eh_frame)
++	einfo ("%P: warning: Cannot create .eh_frame_hdr section,"
++	       " --eh-frame-hdr ignored.\n");
++    }
++
++  /* Get the list of files which appear in DT_NEEDED entries in
++     dynamic objects included in the link (often there will be none).
++     For each such file, we want to track down the corresponding
++     library, and include the symbol table in the link.  This is what
++     the runtime dynamic linker will do.  Tracking the files down here
++     permits one dynamic object to include another without requiring
++     special action by the person doing the link.  Note that the
++     needed list can actually grow while we are stepping through this
++     loop.  */
++  needed = bfd_elf_get_needed_list (link_info.output_bfd, &link_info);
++  for (l = needed; l != NULL; l = l->next)
++    {
++      struct bfd_link_needed_list *ll;
++
++      /* If we've already seen this file, skip it.  */
++      for (ll = needed; ll != l; ll = ll->next)
++	if (strcmp (ll->name, l->name) == 0)
++	  break;
++      if (ll != l)
++	continue;
++
++      einfo ("%P: warning: %s, needed by %B, not found (try using -rpath or -rpath-link)\n",
++	     l->name, l->by);
++    }
++
++  if (link_info.eh_frame_hdr_type == COMPACT_EH_HDR)
++    if (!bfd_elf_parse_eh_frame_entries (NULL, &link_info))
++      einfo (_("%P%F: Failed to parse EH frame entries.\n"));
++
++
++  /* If final executable linking, perform checks against SDK version mixing  */
++  if (!morphos_allow_mixed_sdkid && bfd_link_executable (&link_info))
++    {
++      struct filelistnode *bfd_without_sdk_id = NULL;
++      struct filelistnode *nextnodep = NULL;
++      bool mixed_linkage = false;
++      bool linking_with_libnix = false;
++      char *sdk_id = NULL;
++
++      for (abfd = link_info.input_bfds; abfd; abfd = abfd->link.next)
++	{
++	  bool progbits_seen = false;
++	  bool id_seen = false;
++
++	  if (bfd_get_flavour (abfd) != bfd_target_elf_flavour)
++	     continue;
++
++	  if (abfd->my_archive != NULL
++              && !bfd_is_thin_archive (abfd->my_archive))
++	    {
++	      const char *archivename = bfd_get_filename (abfd->my_archive);
++	      size_t namelen = strlen(archivename);
++
++	      if (namelen >= 14 && strcmp (archivename + namelen - 14, "/libnix/libc.a") == 0)
++		linking_with_libnix = true;
++	      /* Whitelist libgcc.a from checking */
++	      else if (namelen >= 9 && strcmp (archivename + namelen - 9, "/libgcc.a") == 0)
++		continue;
++	    }
++
++	  for (s = abfd->sections; s; s = s->next)
++	    {
++	      const char *name = bfd_section_name (s);
++	      ssize_t sz;
++	      char *msg, *ptr;
++
++	      if (elf_section_type (s) == SHT_PROGBITS && (s->flags & SEC_CODE))
++		progbits_seen = true;
++
++	      if (strcmp (name, ".comment") != 0 || s->size == 0)
++		continue;
++
++	      sz = s->size;
++	      msg = (char *) xmalloc ((size_t) (sz + 1));
++	      if (! bfd_get_section_contents (abfd, s, msg,
++		                              (file_ptr) 0, sz))
++	      {
++		free (msg);
++		einfo ("%P: Can't read %pB contents of section .comment: %E\n",
++		       abfd);
++		continue;
++	      }
++	      msg[sz] = '\0';
++	      ptr = msg;
++	      do
++		{
++		  char *p = strchr (ptr, '\0');
++		  char *id = ptr;
++
++		  if (! p)
++		    p = msg + sz;
++		  sz -= p + 1 - ptr;
++		  ptr = p + 1;
++		  if (strncmp (id, "MorphOS_SDK: ", 13) != 0)
++		    continue;
++		  id += 13;
++		  id_seen = true;
++
++		  /* If wildcard ID is specified, back out from all checking */
++		  if (strcmp (id, "*") == 0)
++		    goto wildout;
++
++		  if (sdk_id)
++		    {
++		      /* Do we have mixed SDK ID? */
++		      if (strcmp (sdk_id, id) != 0)
++			{
++			  einfo ("%P: the MorphOS SDK identification %s from %pB"
++			         " different from expected identification %s\n",
++			         id, abfd, sdk_id);
++			  mixed_linkage = true;
++			  break;
++			}
++		    }
++		  else
++		    {
++		      /* If we have seen bfd without SDK identication, this is
++		         mixed linking. */
++		      if (bfd_without_sdk_id)
++			{
++			  if (! mixed_linkage)
++			    {
++			      const struct filelistnode *n;
++			      einfo ("%P: The MorphOS SDK identification %s is missing"
++			             " from object file(s): ",
++			             id);
++			      for (n = bfd_without_sdk_id; n; n = n->next)
++				{
++				  einfo ("%s%s", n->name, n->next ? ", " : ".\n");
++				}
++			      mixed_linkage = true;
++			    }
++			  break;
++			}
++			sdk_id = xstrdup (id);
++		    }
++		} while ( sz > 0);
++	      free (msg);
++	    }
++
++	  /* If SDK identification has been seen, but this bfd omits it,
++	     this is mixed linking. */
++	  if ( !mixed_linkage && sdk_id && progbits_seen && !id_seen)
++	    {
++	      mixed_linkage = true;
++	      einfo ("%P: The MorphOS SDK identification omitted from %pB\n",
++		abfd);
++	    }
++	  /* If bfd included "program" parts but didn't include the SDK ID
++	     note this for other check rounds (see above). */
++	  else if (progbits_seen && !id_seen)
++	    {
++	      const char *archivename = abfd->my_archive != NULL
++	        && !bfd_is_thin_archive (abfd->my_archive) ? bfd_get_filename(abfd->my_archive) :
++	        NULL;
++	      const char *name = bfd_get_filename(abfd);
++	      struct filelistnode *fln;
++	      if (archivename)
++		{
++		  fln = xmalloc (sizeof(*fln) + strlen (archivename) + 2 + strlen (name) + 1);
++		  sprintf (fln->name, "%s(%s)", archivename, name);
++		}
++	      else
++		{
++		  fln = xmalloc (sizeof(*fln) + strlen(name) + 1);
++		  strcpy (fln->name, name);
++		}
++	      fln->next = NULL;
++	      if (nextnodep)
++		nextnodep->next = fln;
++	      else
++		bfd_without_sdk_id = fln;
++	      nextnodep = fln;
++	    }
++	}
++	if (mixed_linkage)
++	  {
++	    void (*mfunc)(const char *, ...);
++	    const char *extra;
++	    if (linking_with_libnix)
++	      {
++		/* Outright fail the link operation */
++		mfunc = fatal;
++		extra = ", in specific linking against libc is dangerous";
++	      }
++	    else
++	      {
++		/* Warn the user about potential issues */
++		mfunc = einfo;
++		extra = "";
++	      }
++	    mfunc ("%P: Mixing object files and linklibs compiled with"
++	           " different SDK versions may result in unexpected"
++	           " behaviour and crashes%s. If in doubt rebuild all files"
++	           " with the current SDK. Consult the SDK documentation"
++	           " for further details.\n", extra);
++	  }
++wildout:
++	free (sdk_id);
++       for (nextnodep = bfd_without_sdk_id; nextnodep; )
++	  {
++	    void *p = nextnodep;
++	    nextnodep = nextnodep->next;
++	    free (p);
++	  }
++    }
++}
++
++EOF
++fi
++
++fragment <<EOF
++
++/* Look through an expression for an assignment statement.  */
++
++static void
++gld${EMULATION_NAME}_find_exp_assignment (etree_type *exp)
++{
++  bool provide = false;
++
++  switch (exp->type.node_class)
++    {
++    case etree_provide:
++    case etree_provided:
++      provide = true;
++      /* Fallthru */
++    case etree_assign:
++      /* We call record_link_assignment even if the symbol is defined.
++	 This is because if it is defined by a dynamic object, we
++	 actually want to use the value defined by the linker script,
++	 not the value from the dynamic object (because we are setting
++	 symbols like etext).  If the symbol is defined by a regular
++	 object, then, as it happens, calling record_link_assignment
++	 will do no harm.  */
++      if (strcmp (exp->assign.dst, ".") != 0)
++	{
++	  if (!bfd_elf_record_link_assignment (link_info.output_bfd,
++					       &link_info,
++					       exp->assign.dst, provide,
++					       exp->assign.hidden))
++	    einfo ("%P%F: failed to record assignment to %s: %E\n",
++		   exp->assign.dst);
++	}
++      gld${EMULATION_NAME}_find_exp_assignment (exp->assign.src);
++      break;
++
++    case etree_binary:
++      gld${EMULATION_NAME}_find_exp_assignment (exp->binary.lhs);
++      gld${EMULATION_NAME}_find_exp_assignment (exp->binary.rhs);
++      break;
++
++    case etree_trinary:
++      gld${EMULATION_NAME}_find_exp_assignment (exp->trinary.cond);
++      gld${EMULATION_NAME}_find_exp_assignment (exp->trinary.lhs);
++      gld${EMULATION_NAME}_find_exp_assignment (exp->trinary.rhs);
++      break;
++
++    case etree_unary:
++      gld${EMULATION_NAME}_find_exp_assignment (exp->unary.child);
++      break;
++
++    default:
++      break;
++    }
++}
++
++
++/* This is called by the before_allocation routine via
++   lang_for_each_statement.  It locates any assignment statements, and
++   tells the ELF backend about them, in case they are assignments to
++   symbols which are referred to by dynamic objects.  */
++
++static void
++gld${EMULATION_NAME}_find_statement_assignment (lang_statement_union_type *s)
++{
++  if (s->header.type == lang_assignment_statement_enum)
++    gld${EMULATION_NAME}_find_exp_assignment (s->assignment_statement.exp);
++}
++
++EOF
++
++if test x"$LDEMUL_BEFORE_ALLOCATION" != xgld"$EMULATION_NAME"_before_allocation; then
++  if test x"${ELF_INTERPRETER_NAME+set}" = xset; then
++    ELF_INTERPRETER_SET_DEFAULT="
++  if (sinterp != NULL)
++    {
++      sinterp->contents = (unsigned char *) ${ELF_INTERPRETER_NAME};
++      sinterp->size = strlen ((char *) sinterp->contents) + 1;
++    }
++
++"
++  else
++    ELF_INTERPRETER_SET_DEFAULT=
++  fi
++fragment <<EOF
++
++/* used by before_allocation and handle_option. */
++static void
++gld${EMULATION_NAME}_append_to_separated_string (char **to, char *op_arg)
++{
++  if (*to == NULL)
++    *to = xstrdup (op_arg);
++  else
++    {
++      size_t to_len = strlen (*to);
++      size_t op_arg_len = strlen (op_arg);
++      char *buf;
++      char *cp = *to;
++
++      /* First see whether OPTARG is already in the path.  */
++      do
++	{
++	  if (strncmp (op_arg, cp, op_arg_len) == 0
++	      && (cp[op_arg_len] == 0
++		  || cp[op_arg_len] == config.rpath_separator))
++	    /* We found it.  */
++	    break;
++
++	  /* Not yet found.  */
++	  cp = strchr (cp, config.rpath_separator);
++	  if (cp != NULL)
++	    ++cp;
++	}
++      while (cp != NULL);
++
++      if (cp == NULL)
++	{
++	  buf = xmalloc (to_len + op_arg_len + 2);
++	  sprintf (buf, "%s%c%s", *to,
++		   config.rpath_separator, op_arg);
++	  free (*to);
++	  *to = buf;
++	}
++    }
++}
++
++#if defined(__GNUC__) && GCC_VERSION < 4006
++  /* Work around a GCC uninitialized warning bug fixed in GCC 4.6.  */
++static struct bfd_link_hash_entry ehdr_start_empty;
++#endif
++
++/* This is called after the sections have been attached to output
++   sections, but before any sizes or addresses have been set.  */
++
++static void
++gld${EMULATION_NAME}_before_allocation (void)
++{
++  const char *rpath;
++  asection *sinterp;
++  bfd *abfd;
++  struct elf_link_hash_entry *ehdr_start = NULL;
++#if defined(__GNUC__) && GCC_VERSION < 4006
++  /* Work around a GCC uninitialized warning bug fixed in GCC 4.6.  */
++  struct bfd_link_hash_entry ehdr_start_save = ehdr_start_empty;
++#else
++  struct bfd_link_hash_entry ehdr_start_save;
++#endif
++
++  if (is_elf_hash_table (link_info.hash))
++    {
++      _bfd_elf_tls_setup (link_info.output_bfd, &link_info);
++
++      /* Make __ehdr_start hidden if it has been referenced, to
++	 prevent the symbol from being dynamic.  */
++      if (!bfd_link_relocatable (&link_info))
++       {
++         struct elf_link_hash_entry *h
++           = elf_link_hash_lookup (elf_hash_table (&link_info), "__ehdr_start",
++                                   false, false, true);
++
++         /* Only adjust the export class if the symbol was referenced
++            and not defined, otherwise leave it alone.  */
++         if (h != NULL
++             && (h->root.type == bfd_link_hash_new
++                 || h->root.type == bfd_link_hash_undefined
++                 || h->root.type == bfd_link_hash_undefweak
++                 || h->root.type == bfd_link_hash_common))
++           {
++             _bfd_elf_link_hash_hide_symbol (&link_info, h, true);
++             if (ELF_ST_VISIBILITY (h->other) != STV_INTERNAL)
++               h->other = (h->other & ~ELF_ST_VISIBILITY (-1)) | STV_HIDDEN;
++	     /* Don't leave the symbol undefined.  Undefined hidden
++		symbols typically won't have dynamic relocations, but
++		we most likely will need dynamic relocations for
++		__ehdr_start if we are building a PIE or shared
++		library.  */
++	     ehdr_start = h;
++	     ehdr_start_save = h->root;
++	     h->root.type = bfd_link_hash_defined;
++	     h->root.u.def.section = bfd_abs_section_ptr;
++	     h->root.u.def.value = 0;
++           }
++       }
++
++      /* If we are going to make any variable assignments, we need to
++	 let the ELF backend know about them in case the variables are
++	 referred to by dynamic objects.  */
++      lang_for_each_statement (gld${EMULATION_NAME}_find_statement_assignment);
++	  /* Add the data->data relocation table... */
++	  if (morphos_resident)
++		{
++		  asection *sec = bfd_make_section(link_info.output_bfd, "ddrelocs");
++		  struct bfd_link_hash_entry *sym;
++
++		  if (sec)
++		{
++		  bfd_set_section_flags(sec, SEC_ALLOC | SEC_LOAD | SEC_READONLY |
++					SEC_DATA | SEC_HAS_CONTENTS);
++		  sec->output_section = sec;
++		  sec->output_offset = 0;
++		  sym = bfd_link_hash_lookup(link_info.hash, "__datadata_relocs", true, false, false);
++		  if (sym)
++			{
++			  sym->type = bfd_link_hash_defined;
++			  sym->u.def.value = 0;
++			  sym->u.def.section = sec;
++			}
++		}
++		}
++    }
++
++  /* Let the ELF backend work out the sizes of any sections required
++     by dynamic linking.  */
++  rpath = command_line.rpath;
++//  if (rpath == NULL)
++//    rpath = (const char *) getenv ("LD_RUN_PATH");
++
++  for (abfd = link_info.input_bfds; abfd; abfd = abfd->link.next)
++    if (bfd_get_flavour (abfd) == bfd_target_elf_flavour)
++      {
++	const char *audit_libs = elf_dt_audit (abfd);
++
++	/* If the input bfd contains an audit entry, we need to add it as
++	   a dep audit entry.  */
++	if (audit_libs && *audit_libs != '\0')
++	  {
++	    char *cp = xstrdup (audit_libs);
++	    do
++	      {
++		int more = 0;
++		char *cp2 = strchr (cp, config.rpath_separator);
++
++		if (cp2)
++		  {
++		    *cp2 = '\0';
++		    more = 1;
++		  }
++
++		if (cp != NULL && *cp != '\0')
++		  gld${EMULATION_NAME}_append_to_separated_string (&depaudit, cp);
++
++		cp = more ? ++cp2 : NULL;
++	      }
++	    while (cp != NULL);
++	  }
++      }
++
++  if (! (bfd_elf_size_dynamic_sections
++	 (link_info.output_bfd, command_line.soname, rpath,
++	  command_line.filter_shlib, audit, depaudit,
++	  (const char * const *) command_line.auxiliary_filters,
++	  &link_info, &sinterp)))
++    einfo ("%P%F: failed to set dynamic section sizes: %E\n");
++
++${ELF_INTERPRETER_SET_DEFAULT}
++  /* Let the user override the dynamic linker we are using.  */
++  if (command_line.interpreter != NULL
++      && sinterp != NULL)
++    {
++      sinterp->contents = (bfd_byte *) command_line.interpreter;
++      sinterp->size = strlen (command_line.interpreter) + 1;
++    }
++
++  /* Look for any sections named .gnu.warning.  As a GNU extensions,
++     we treat such sections as containing warning messages.  We print
++     out the warning message, and then zero out the section size so
++     that it does not get copied into the output file.  */
++
++  {
++    LANG_FOR_EACH_INPUT_STATEMENT (is)
++      {
++	asection *s;
++	bfd_size_type sz;
++	char *msg;
++
++	if (is->flags.just_syms)
++	  continue;
++
++	s = bfd_get_section_by_name (is->the_bfd, ".gnu.warning");
++	if (s == NULL)
++	  continue;
++
++	sz = s->size;
++	msg = (char *) xmalloc ((size_t) (sz + 1));
++	if (! bfd_get_section_contents (is->the_bfd, s,	msg,
++					(file_ptr) 0, sz))
++	  einfo ("%F%B: Can't read contents of section .gnu.warning: %E\n",
++		 is->the_bfd);
++	msg[sz] = '\0';
++	(*link_info.callbacks->warning) (&link_info, msg,
++					 (const char *) NULL, is->the_bfd,
++					 (asection *) NULL, (bfd_vma) 0);
++	free (msg);
++
++	/* Clobber the section size, so that we don't waste space
++	   copying the warning into the output file.  If we've already
++	   sized the output section, adjust its size.  The adjustment
++	   is on rawsize because targets that size sections early will
++	   have called lang_reset_memory_regions after sizing.  */
++	if (s->output_section != NULL
++	    && s->output_section->rawsize >= s->size)
++	  s->output_section->rawsize -= s->size;
++
++	s->size = 0;
++
++	/* Also set SEC_EXCLUDE, so that local symbols defined in the
++	   warning section don't get copied to the output.  */
++	s->flags |= SEC_EXCLUDE | SEC_KEEP;
++      }
++  }
++
++  before_allocation_default ();
++
++  if (!bfd_elf_size_dynsym_hash_dynstr (link_info.output_bfd, &link_info))
++    einfo ("%P%F: failed to set dynamic section sizes: %E\n");
++
++  if (ehdr_start != NULL)
++    {
++      /* If we twiddled __ehdr_start to defined earlier, put it back
++	 as it was.  */
++      ehdr_start->root.type = ehdr_start_save.type;
++      ehdr_start->root.u = ehdr_start_save.u;
++    }
++
++    ENABLE_RELAXATION;
++    params.branch_trampolines = 1;
++}
++
++EOF
++fi
++
++if test x"$LDEMUL_PLACE_ORPHAN" != xgld"$EMULATION_NAME"_place_orphan; then
++fragment <<EOF
++
++/* A variant of lang_output_section_find used by place_orphan.  */
++
++static lang_output_section_statement_type *
++output_rel_find (int isdyn, int rela)
++{
++  lang_output_section_statement_type *lookup;
++  lang_output_section_statement_type *last = NULL;
++  lang_output_section_statement_type *last_alloc = NULL;
++  lang_output_section_statement_type *last_ro_alloc = NULL;
++  lang_output_section_statement_type *last_rel = NULL;
++  lang_output_section_statement_type *last_rel_alloc = NULL;
++
++  for (lookup = &lang_os_list.head->output_section_statement;
++       lookup != NULL;
++       lookup = lookup->next)
++    {
++      if (lookup->constraint >= 0
++	  && startswith (lookup->name, ".rel"))
++	{
++	  int lookrela = lookup->name[4] == 'a';
++
++	  /* .rel.dyn must come before all other reloc sections, to suit
++	     GNU ld.so.  */
++	  if (isdyn)
++	    break;
++
++	  /* Don't place after .rel.plt as doing so results in wrong
++	     dynamic tags.  */
++	  if (strcmp (".plt", lookup->name + 4 + lookrela) == 0)
++	    break;
++
++	  if (rela == lookrela || last_rel == NULL)
++	    last_rel = lookup;
++	  if ((rela == lookrela || last_rel_alloc == NULL)
++	      && lookup->bfd_section != NULL
++	      && (lookup->bfd_section->flags & SEC_ALLOC) != 0)
++	    last_rel_alloc = lookup;
++	}
++
++      last = lookup;
++      if (lookup->bfd_section != NULL
++	  && (lookup->bfd_section->flags & SEC_ALLOC) != 0)
++	{
++	  last_alloc = lookup;
++	  if ((lookup->bfd_section->flags & SEC_READONLY) != 0)
++	    last_ro_alloc = lookup;
++	}
++    }
++
++  if (last_rel_alloc)
++    return last_rel_alloc;
++
++  if (last_rel)
++    return last_rel;
++
++  if (last_ro_alloc)
++    return last_ro_alloc;
++
++  if (last_alloc)
++    return last_alloc;
++
++  return last;
++}
++
++/* Place an orphan section.  We use this to put random SHF_ALLOC
++   sections in the right segment.  */
++
++static lang_output_section_statement_type *
++gld${EMULATION_NAME}_place_orphan (asection *s,
++				   const char *secname,
++				   int constraint)
++{
++  static struct orphan_save hold[] =
++    {
++      { ".text",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_READONLY | SEC_CODE,
++	0, 0, 0, 0 },
++      { ".rodata",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_READONLY | SEC_DATA,
++	0, 0, 0, 0 },
++      { ".tdata",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_DATA | SEC_THREAD_LOCAL,
++	0, 0, 0, 0 },
++      { ".data",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_DATA,
++	0, 0, 0, 0 },
++      { ".bss",
++	SEC_ALLOC,
++	0, 0, 0, 0 },
++      { 0,
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_READONLY | SEC_DATA,
++	0, 0, 0, 0 },
++      { ".interp",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_READONLY | SEC_DATA,
++	0, 0, 0, 0 },
++      { ".sdata",
++	SEC_HAS_CONTENTS | SEC_ALLOC | SEC_LOAD | SEC_DATA | SEC_SMALL_DATA,
++	0, 0, 0, 0 },
++      { ".comment",
++	SEC_HAS_CONTENTS,
++	0, 0, 0, 0 },
++    };
++  enum orphan_save_index
++    {
++      orphan_text = 0,
++      orphan_rodata,
++      orphan_tdata,
++      orphan_data,
++      orphan_bss,
++      orphan_rel,
++      orphan_interp,
++      orphan_sdata,
++      orphan_nonalloc
++    };
++  static int orphan_init_done = 0;
++  struct orphan_save *place;
++  lang_output_section_statement_type *after;
++  lang_output_section_statement_type *os;
++  lang_output_section_statement_type *match_by_name = NULL;
++  int isdyn = 0;
++  int iself = s->owner->xvec->flavour == bfd_target_elf_flavour;
++  unsigned int sh_type = iself ? elf_section_type (s) : SHT_NULL;
++  flagword flags;
++  asection *nexts;
++
++  if (!bfd_link_relocatable (&link_info)
++      && link_info.combreloc
++      && (s->flags & SEC_ALLOC))
++    {
++      if (iself)
++	switch (sh_type)
++	  {
++	  case SHT_RELA:
++	    secname = ".rela.dyn";
++	    isdyn = 1;
++	    break;
++	  case SHT_REL:
++	    secname = ".rel.dyn";
++	    isdyn = 1;
++	    break;
++	  default:
++	    break;
++	  }
++      else if (startswith (secname, ".rel"))
++	{
++	  secname = secname[4] == 'a' ? ".rela.dyn" : ".rel.dyn";
++	  isdyn = 1;
++	}
++    }
++
++  if (!bfd_link_relocatable (&link_info)
++      && (s->flags & SEC_ALLOC) != 0
++      && (elf_section_flags (s) & SHF_GNU_MBIND) != 0)
++    {
++      /* Find the output mbind section with the same type, attributes
++	 and sh_info field.  */
++      for (os = (void *) lang_os_list.head;
++	   os != NULL;
++	   os = os->next)
++	if (os->bfd_section != NULL
++	    && !bfd_is_abs_section (os->bfd_section)
++	    && (elf_section_flags (os->bfd_section) & SHF_GNU_MBIND) != 0
++	    && ((s->flags & (SEC_ALLOC
++			     | SEC_LOAD
++			     | SEC_HAS_CONTENTS
++			     | SEC_READONLY
++			     | SEC_CODE))
++		== (os->bfd_section->flags & (SEC_ALLOC
++					      | SEC_LOAD
++					      | SEC_HAS_CONTENTS
++					      | SEC_READONLY
++					      | SEC_CODE)))
++	    && (elf_section_data (os->bfd_section)->this_hdr.sh_info
++		== elf_section_data (s)->this_hdr.sh_info))
++	    {
++	      lang_add_section (&os->children, s, NULL, NULL, os);
++	      return os;
++	    }
++
++      /* Create the output mbind section with the ".mbind." prefix
++	 in section name.  */
++      if ((s->flags & (SEC_LOAD | SEC_HAS_CONTENTS)) == 0)
++	secname = ".mbind.bss";
++      else if ((s->flags & SEC_READONLY) == 0)
++	secname = ".mbind.data";
++      else if ((s->flags & SEC_CODE) == 0)
++	secname = ".mbind.rodata";
++      else
++	secname = ".mbind.text";
++    }
++
++  /* Look through the script to see where to place this section.  */
++  if (constraint == 0)
++    for (os = lang_output_section_find (secname);
++	 os != NULL;
++	 os = next_matching_output_section_statement (os, 0))
++      {
++	/* If we don't match an existing output section, tell
++	   lang_insert_orphan to create a new output section.  */
++	constraint = SPECIAL;
++
++	/* SEC_EXCLUDE is cleared when doing a relocatable link.  But
++	   we can't merge 2 input sections with the same name when only
++	   one of them has SHF_EXCLUDE.  Don't merge 2 sections with
++	   different sh_info.  */
++	if (os->bfd_section != NULL
++	    && (elf_section_data (os->bfd_section)->this_hdr.sh_info
++		== elf_section_data (s)->this_hdr.sh_info)
++	    && (os->bfd_section->flags == 0
++		|| ((!bfd_link_relocatable (&link_info)
++		     || (iself && (((elf_section_flags (s)
++				     ^ elf_section_flags (os->bfd_section))
++				    & SHF_EXCLUDE) == 0)))
++		    && ((s->flags ^ os->bfd_section->flags)
++		     & (SEC_LOAD | SEC_ALLOC)) == 0
++		    && _bfd_elf_match_sections_by_type (link_info.output_bfd,
++							os->bfd_section,
++							s->owner, s))))
++	  {
++	    /* We already have an output section statement with this
++	       name, and its bfd section has compatible flags.
++	       If the section already exists but does not have any flags
++	       set, then it has been created by the linker, probably as a
++	       result of a --section-start command line switch.  */
++	    lang_add_section (&os->children, s, NULL, NULL, os);
++	    return os;
++	  }
++
++	/* Save unused output sections in case we can match them
++	   against orphans later.  */
++	if (os->bfd_section == NULL)
++	  match_by_name = os;
++      }
++
++  /* If we didn't match an active output section, see if we matched an
++     unused one and use that.  */
++  if (match_by_name)
++    {
++      lang_add_section (&match_by_name->children, s, NULL, NULL, match_by_name);
++      return match_by_name;
++    }
++
++  if (!orphan_init_done)
++    {
++      struct orphan_save *ho;
++
++      for (ho = hold; ho < hold + sizeof (hold) / sizeof (hold[0]); ++ho)
++	if (ho->name != NULL)
++	  {
++	    ho->os = lang_output_section_find (ho->name);
++	    if (ho->os != NULL && ho->os->flags == 0)
++	      ho->os->flags = ho->flags;
++	  }
++      orphan_init_done = 1;
++    }
++
++  /* If this is a final link, then always put .gnu.warning.SYMBOL
++     sections into the .text section to get them out of the way.  */
++  if (bfd_link_executable (&link_info)
++      && startswith (s->name, ".gnu.warning.")
++      && hold[orphan_text].os != NULL)
++    {
++      os = hold[orphan_text].os;
++      lang_add_section (&os->children, s, NULL, NULL, os);
++      return os;
++    }
++
++  flags = s->flags;
++  if (!bfd_link_relocatable (&link_info))
++    {
++      nexts = s;
++      while ((nexts = bfd_get_next_section_by_name (nexts->owner, nexts))
++	     != NULL)
++	if (nexts->output_section == NULL
++	    && (nexts->flags & SEC_EXCLUDE) == 0
++	    && ((nexts->flags ^ flags) & (SEC_LOAD | SEC_ALLOC)) == 0
++	    && (nexts->owner->flags & DYNAMIC) == 0
++	    && nexts->owner->usrdata != NULL
++	    && !(((lang_input_statement_type *) nexts->owner->usrdata)
++		 ->flags.just_syms)
++	    && _bfd_elf_match_sections_by_type (nexts->owner, nexts,
++						s->owner, s))
++	  flags = (((flags ^ SEC_READONLY)
++		    | (nexts->flags ^ SEC_READONLY))
++		   ^ SEC_READONLY);
++    }
++
++  /* Decide which segment the section should go in based on the
++     section name and section flags.  We put loadable .note sections
++     right after the .interp section, so that the PT_NOTE segment is
++     stored right after the program headers where the OS can read it
++     in the first page.  */
++
++  place = NULL;
++  if ((flags & (SEC_ALLOC | SEC_DEBUGGING)) == 0)
++    place = &hold[orphan_nonalloc];
++  else if ((flags & SEC_ALLOC) == 0)
++    ;
++  else if ((flags & SEC_LOAD) != 0
++	   && ((iself && sh_type == SHT_NOTE)
++	       || (!iself && startswith (secname, ".note"))))
++    place = &hold[orphan_interp];
++  else if ((flags & (SEC_LOAD | SEC_HAS_CONTENTS | SEC_THREAD_LOCAL)) == 0)
++    place = &hold[orphan_bss];
++  else if ((flags & SEC_SMALL_DATA) != 0)
++    place = &hold[orphan_sdata];
++  else if ((flags & SEC_THREAD_LOCAL) != 0)
++    place = &hold[orphan_tdata];
++  else if ((flags & SEC_READONLY) == 0)
++    place = &hold[orphan_data];
++  else if (((iself && (sh_type == SHT_RELA || sh_type == SHT_REL))
++	    || (!iself && startswith (secname, ".rel")))
++	   && (flags & SEC_LOAD) != 0)
++    place = &hold[orphan_rel];
++  else if ((flags & SEC_CODE) == 0)
++    place = &hold[orphan_rodata];
++  else
++    place = &hold[orphan_text];
++
++  after = NULL;
++  if (place != NULL)
++    {
++      if (place->os == NULL)
++	{
++	  if (place->name != NULL)
++	    place->os = lang_output_section_find (place->name);
++	  else
++	    {
++	      int rela = /*elfinput ? sh_type == SHT_RELA :*/secname[4] == 'a';
++	      place->os = output_rel_find (isdyn, rela);
++	    }
++	}
++      after = place->os;
++      if (after == NULL)
++	after
++	  = lang_output_section_find_by_flags (s, flags, &place->os,
++					       _bfd_elf_match_sections_by_type);
++      if (after == NULL)
++	/* *ABS* is always the first output section statement.  */
++	after = &lang_os_list.head->output_section_statement;
++    }
++
++  return lang_insert_orphan (s, secname, constraint, after, place, NULL, NULL);
++}
++EOF
++fi
++
++if test x"$LDEMUL_AFTER_ALLOCATION" != xgld"$EMULATION_NAME"_after_allocation; then
++fragment <<EOF
++
++static void
++gld${EMULATION_NAME}_after_allocation (void)
++{
++  int need_layout = bfd_elf_discard_info (link_info.output_bfd, &link_info);
++
++  if (need_layout < 0)
++    einfo ("%X%P: .eh_frame/.stab edit: %E\n");
++  else
++    ldelf_map_segments (need_layout);
++}
++EOF
++fi
++
++if test x"$LDEMUL_GET_SCRIPT" != xgld"$EMULATION_NAME"_get_script; then
++fragment <<EOF
++
++static char *
++gld${EMULATION_NAME}_get_script (int *isfile)
++EOF
++
++if test x"$COMPILE_IN" = xyes
++then
++# Scripts compiled in.
++
++# sed commands to quote an ld script as a C string.
++sc="-f ${srcdir}/emultempl/stringify.sed"
++
++fragment <<EOF
++{
++  *isfile = 0;
++
++  if (bfd_link_relocatable (&link_info) && config.build_constructors)
++    return 
++EOF
++sed $sc ldscripts/${EMULATION_NAME}.xu			>> e${EMULATION_NAME}.c
++echo '  ; else if (bfd_link_relocatable (&link_info)) return' >> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xr			>> e${EMULATION_NAME}.c
++if test -n "$GENERATE_PIE_SCRIPT" ; then
++if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
++echo '  ; else if (bfd_link_pie (&link_info)'		>> e${EMULATION_NAME}.c
++echo '             && link_info.combreloc'		>> e${EMULATION_NAME}.c
++echo '             && link_info.relro'			>> e${EMULATION_NAME}.c
++echo '             && (link_info.flags & DF_BIND_NOW)) return' >> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xdw			>> e${EMULATION_NAME}.c
++echo '  ; else if (bfd_link_pie (&link_info)'		>> e${EMULATION_NAME}.c
++echo '             && link_info.combreloc) return'	>> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xdc			>> e${EMULATION_NAME}.c
++fi
++echo '  ; else if (bfd_link_pie (&link_info)) return'	>> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xd			>> e${EMULATION_NAME}.c
++fi
++echo '  ; else return'					>> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.x			>> e${EMULATION_NAME}.c
++echo '; }'						>> e${EMULATION_NAME}.c
++
++else
++# Scripts read from the filesystem.
++
++fragment <<EOF
++{
++  *isfile = 1;
++
++  if (bfd_link_relocatable (&link_info) && config.build_constructors)
++    return "ldscripts/${EMULATION_NAME}.xu";
++  else if (bfd_link_relocatable (&link_info))
++    return "ldscripts/${EMULATION_NAME}.xr";
++  else if (!config.text_read_only)
++    return "ldscripts/${EMULATION_NAME}.xbn";
++EOF
++if cmp -s ldscripts/${EMULATION_NAME}.x ldscripts/${EMULATION_NAME}.xn; then :
++else
++fragment <<EOF
++  else if (!config.magic_demand_paged)
++    return "ldscripts/${EMULATION_NAME}.xn";
++EOF
++fi
++if test -n "$GENERATE_PIE_SCRIPT" ; then
++if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
++fragment <<EOF
++  else if (bfd_link_pie (&link_info)
++	   && link_info.combreloc
++	   && link_info.relro
++	   && (link_info.flags & DF_BIND_NOW))
++    return "ldscripts/${EMULATION_NAME}.xdw";
++  else if (bfd_link_pie (&link_info)
++	   && link_info.combreloc)
++    return "ldscripts/${EMULATION_NAME}.xdc";
++EOF
++fi
++fragment <<EOF
++  else if (bfd_link_pie (&link_info))
++    return "ldscripts/${EMULATION_NAME}.xd";
++EOF
++fi
++if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
++fragment <<EOF
++  else if (link_info.combreloc && link_info.relro
++	   && (link_info.flags & DF_BIND_NOW))
++    return "ldscripts/${EMULATION_NAME}.xw";
++  else if (link_info.combreloc)
++    return "ldscripts/${EMULATION_NAME}.xc";
++EOF
++fi
++fragment <<EOF
++  else
++    return "ldscripts/${EMULATION_NAME}.x";
++}
++
++EOF
++fi
++fi
++
++if test -n "$PARSE_AND_LIST_PROLOGUE" ; then
++fragment <<EOF
++ $PARSE_AND_LIST_PROLOGUE
++EOF
++fi
++
++fragment <<EOF
++
++enum elf_options
++{
++  OPTION_DISABLE_NEW_DTAGS = 400,
++  OPTION_ENABLE_NEW_DTAGS,
++  OPTION_GROUP,
++  OPTION_EH_FRAME_HDR,
++  OPTION_NO_EH_FRAME_HDR,
++  OPTION_EXCLUDE_LIBS,
++  OPTION_HASH_STYLE,
++  OPTION_BUILD_ID,
++  OPTION_AUDIT,
++  OPTION_COMPRESS_DEBUG
++};
++
++static void
++gld${EMULATION_NAME}_add_options
++  (int ns, char **shortopts, int nl, struct option **longopts,
++   int nrl ATTRIBUTE_UNUSED, struct option **really_longopts ATTRIBUTE_UNUSED)
++{
++EOF
++if test x"$GENERATE_SHLIB_SCRIPT" = xyes; then
++fragment <<EOF
++  static const char xtra_short[] = "${PARSE_AND_LIST_SHORTOPTS}z:P:";
++EOF
++else
++fragment <<EOF
++  static const char xtra_short[] = "${PARSE_AND_LIST_SHORTOPTS}z:";
++EOF
++fi
++fragment <<EOF
++  static const struct option xtra_long[] = {
++EOF
++if test x"$GENERATE_SHLIB_SCRIPT" = xyes; then
++fragment <<EOF
++    {"audit", required_argument, NULL, OPTION_AUDIT},
++    {"Bgroup", no_argument, NULL, OPTION_GROUP},
++EOF
++fi
++fragment <<EOF
++    {"build-id", optional_argument, NULL, OPTION_BUILD_ID},
++    {"compress-debug-sections", required_argument, NULL, OPTION_COMPRESS_DEBUG},
++EOF
++if test x"$GENERATE_SHLIB_SCRIPT" = xyes; then
++fragment <<EOF
++    {"depaudit", required_argument, NULL, 'P'},
++    {"disable-new-dtags", no_argument, NULL, OPTION_DISABLE_NEW_DTAGS},
++    {"enable-new-dtags", no_argument, NULL, OPTION_ENABLE_NEW_DTAGS},
++    {"eh-frame-hdr", no_argument, NULL, OPTION_EH_FRAME_HDR},
++    {"no-eh-frame-hdr", no_argument, NULL, OPTION_NO_EH_FRAME_HDR},
++    {"exclude-libs", required_argument, NULL, OPTION_EXCLUDE_LIBS},
++    {"hash-style", required_argument, NULL, OPTION_HASH_STYLE},
++EOF
++fi
++if test -n "$PARSE_AND_LIST_LONGOPTS" ; then
++fragment <<EOF
++    $PARSE_AND_LIST_LONGOPTS
++EOF
++fi
++fragment <<EOF
++    {NULL, no_argument, NULL, 0}
++  };
++
++  *shortopts = (char *) xrealloc (*shortopts, ns + sizeof (xtra_short));
++  memcpy (*shortopts + ns, &xtra_short, sizeof (xtra_short));
++  *longopts = (struct option *)
++    xrealloc (*longopts, nl * sizeof (struct option) + sizeof (xtra_long));
++  memcpy (*longopts + nl, &xtra_long, sizeof (xtra_long));
++}
++
++#define DEFAULT_BUILD_ID_STYLE	"sha1"
++
++static bool
++gld${EMULATION_NAME}_handle_option (int optc)
++{
++  switch (optc)
++    {
++    default:
++      return false;
++
++    case OPTION_BUILD_ID:
++      if (emit_note_gnu_build_id != NULL)
++	{
++	  free ((char *) emit_note_gnu_build_id);
++	  emit_note_gnu_build_id = NULL;
++	}
++      if (optarg == NULL)
++	optarg = DEFAULT_BUILD_ID_STYLE;
++      if (strcmp (optarg, "none"))
++	emit_note_gnu_build_id = xstrdup (optarg);
++      break;
++
++    case OPTION_COMPRESS_DEBUG:
++      if (strcasecmp (optarg, "none") == 0)
++	config.compress_debug = COMPRESS_DEBUG_NONE;
++      else if (strcasecmp (optarg, "zlib") == 0)
++	config.compress_debug = COMPRESS_DEBUG_GABI_ZLIB;
++      else if (strcasecmp (optarg, "zlib-gnu") == 0)
++	config.compress_debug = COMPRESS_DEBUG_GNU_ZLIB;
++      else if (strcasecmp (optarg, "zlib-gabi") == 0)
++	config.compress_debug = COMPRESS_DEBUG_GABI_ZLIB;
++      else
++	einfo (_("%P%F: invalid --compress-debug-sections option: \`%s'\n"),
++	       optarg);
++      break;
++EOF
++
++if test x"$GENERATE_SHLIB_SCRIPT" = xyes; then
++fragment <<EOF
++    case OPTION_AUDIT:
++	gld${EMULATION_NAME}_append_to_separated_string (&audit, optarg);
++	break;
++
++    case 'P':
++	gld${EMULATION_NAME}_append_to_separated_string (&depaudit, optarg);
++	break;
++
++    case OPTION_DISABLE_NEW_DTAGS:
++      link_info.new_dtags = false;
++      break;
++
++    case OPTION_ENABLE_NEW_DTAGS:
++      link_info.new_dtags = true;
++      break;
++
++    case OPTION_EH_FRAME_HDR:
++      link_info.eh_frame_hdr_type = DWARF2_EH_HDR;
++      break;
++
++    case OPTION_NO_EH_FRAME_HDR:
++      link_info.eh_frame_hdr_type = 0;
++      break;
++
++    case OPTION_GROUP:
++      link_info.flags_1 |= (bfd_vma) DF_1_GROUP;
++      /* Groups must be self-contained.  */
++      link_info.unresolved_syms_in_objects = RM_DIAGNOSE;
++      link_info.unresolved_syms_in_shared_libs = RM_DIAGNOSE;
++      break;
++
++    case OPTION_EXCLUDE_LIBS:
++      add_excluded_libs (optarg);
++      break;
++
++    case OPTION_HASH_STYLE:
++      link_info.emit_hash = false;
++      link_info.emit_gnu_hash = false;
++      if (strcmp (optarg, "sysv") == 0)
++	link_info.emit_hash = true;
++      else if (strcmp (optarg, "gnu") == 0)
++	link_info.emit_gnu_hash = true;
++      else if (strcmp (optarg, "both") == 0)
++	{
++	  link_info.emit_hash = true;
++	  link_info.emit_gnu_hash = true;
++	}
++      else
++	einfo (_("%P%F: invalid hash style \`%s'\n"), optarg);
++      break;
++
++EOF
++fi
++fragment <<EOF
++    case 'z':
++      if (strcmp (optarg, "defs") == 0)
++	link_info.unresolved_syms_in_objects = RM_DIAGNOSE;
++      else if (strcmp (optarg, "muldefs") == 0)
++	link_info.allow_multiple_definition = true;
++      else if (startswith (optarg, "max-page-size="))
++	{
++	  char *end;
++
++	  link_info.maxpagesize = strtoul (optarg + 14, &end, 0);
++	  if (*end || (link_info.maxpagesize & (link_info.maxpagesize - 1)) != 0)
++	    einfo (_("%P%F: invalid maxium page size \`%s'\n"),
++		   optarg + 14);
++	}
++      else if (startswith (optarg, "common-page-size="))
++	{
++	  char *end;
++	  link_info.commonpagesize = strtoul (optarg + 17, &end, 0);
++	  if (*end
++	      || (link_info.commonpagesize & (link_info.commonpagesize - 1)) != 0)
++	    einfo (_("%P%F: invalid common page size \`%s'\n"),
++		   optarg + 17);
++	}
++      else if (startswith (optarg, "stack-size="))
++	{
++	  char *end;
++	  link_info.stacksize = strtoul (optarg + 11, &end, 0);
++	  if (*end || link_info.stacksize < 0)
++	    einfo (_("%P%F: invalid stack size \`%s'\n"), optarg + 11);
++	  if (!link_info.stacksize)
++	    /* Use -1 for explicit no-stack, because zero means
++	       'default'.   */
++	    link_info.stacksize = -1;
++	}
++      else if (strcmp (optarg, "execstack") == 0)
++	{
++	  link_info.execstack = true;
++	  link_info.noexecstack = false;
++	}
++      else if (strcmp (optarg, "noexecstack") == 0)
++	{
++	  link_info.noexecstack = true;
++	  link_info.execstack = false;
++	}
++EOF
++
++if test x"$GENERATE_SHLIB_SCRIPT" = xyes; then
++fragment <<EOF
++      else if (strcmp (optarg, "global") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_GLOBAL;
++      else if (strcmp (optarg, "initfirst") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_INITFIRST;
++      else if (strcmp (optarg, "interpose") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_INTERPOSE;
++      else if (strcmp (optarg, "loadfltr") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_LOADFLTR;
++      else if (strcmp (optarg, "nodefaultlib") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_NODEFLIB;
++      else if (strcmp (optarg, "nodelete") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_NODELETE;
++      else if (strcmp (optarg, "nodlopen") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_NOOPEN;
++      else if (strcmp (optarg, "nodump") == 0)
++	link_info.flags_1 |= (bfd_vma) DF_1_NODUMP;
++      else if (strcmp (optarg, "now") == 0)
++	{
++	  link_info.flags |= (bfd_vma) DF_BIND_NOW;
++	  link_info.flags_1 |= (bfd_vma) DF_1_NOW;
++	}
++      else if (strcmp (optarg, "lazy") == 0)
++	{
++	  link_info.flags &= ~(bfd_vma) DF_BIND_NOW;
++	  link_info.flags_1 &= ~(bfd_vma) DF_1_NOW;
++	}
++      else if (strcmp (optarg, "origin") == 0)
++	{
++	  link_info.flags |= (bfd_vma) DF_ORIGIN;
++	  link_info.flags_1 |= (bfd_vma) DF_1_ORIGIN;
++	}
++      else if (strcmp (optarg, "combreloc") == 0)
++	link_info.combreloc = true;
++      else if (strcmp (optarg, "nocombreloc") == 0)
++	link_info.combreloc = false;
++      else if (strcmp (optarg, "nocopyreloc") == 0)
++	link_info.nocopyreloc = true;
++      else if (strcmp (optarg, "relro") == 0)
++	link_info.relro = true;
++      else if (strcmp (optarg, "norelro") == 0)
++	link_info.relro = false;
++      else if (strcmp (optarg, "common") == 0)
++	link_info.elf_stt_common = elf_stt_common;
++      else if (strcmp (optarg, "nocommon") == 0)
++	link_info.elf_stt_common = no_elf_stt_common;
++      else if (strcmp (optarg, "text") == 0)
++	link_info.error_textrel = true;
++      else if (strcmp (optarg, "notext") == 0)
++	link_info.error_textrel = false;
++      else if (strcmp (optarg, "textoff") == 0)
++	link_info.error_textrel = false;
++EOF
++fi
++
++if test -n "$PARSE_AND_LIST_ARGS_CASE_Z" ; then
++fragment <<EOF
++ $PARSE_AND_LIST_ARGS_CASE_Z
++EOF
++fi
++
++fragment <<EOF
++      else
++	einfo (_("%P: warning: -z %s ignored.\n"), optarg);
++      break;
++EOF
++
++if test -n "$PARSE_AND_LIST_ARGS_CASES" ; then
++fragment <<EOF
++ $PARSE_AND_LIST_ARGS_CASES
++EOF
++fi
++
++fragment <<EOF
++    }
++
++  return true;
++}
++
++EOF
++
++if test x"$LDEMUL_LIST_OPTIONS" != xgld"$EMULATION_NAME"_list_options; then
++gld_list_options="gld${EMULATION_NAME}_list_options"
++if test -n "$PARSE_AND_LIST_OPTIONS"; then
++fragment <<EOF
++
++static void
++gld${EMULATION_NAME}_list_options (FILE * file)
++{
++EOF
++
++if test -n "$PARSE_AND_LIST_OPTIONS" ; then
++fragment <<EOF
++ $PARSE_AND_LIST_OPTIONS
++EOF
++fi
++
++fragment <<EOF
++}
++EOF
++else
++  gld_list_options="NULL"
++fi
++
++if test -n "$PARSE_AND_LIST_EPILOGUE" ; then
++fragment <<EOF
++ $PARSE_AND_LIST_EPILOGUE
++EOF
++fi
++fi
++
++fragment <<EOF
++
++struct ld_emulation_xfer_struct ld_${EMULATION_NAME}_emulation =
++{
++  ${LDEMUL_BEFORE_PARSE-gld${EMULATION_NAME}_before_parse},
++  ${LDEMUL_SYSLIB-syslib_default},
++  ${LDEMUL_HLL-hll_default},
++  ${LDEMUL_AFTER_PARSE-gld${EMULATION_NAME}_after_parse},
++  ${LDEMUL_BEFORE_PLUGIN_ALL_SYMBOLS_READ-NULL},
++  ${LDEMUL_AFTER_OPEN-gld${EMULATION_NAME}_after_open},
++  ${LDEMUL_AFTER_CHECK_RELOCS-after_check_relocs_default},
++  ${LDEMUL_BEFORE_PLACE_ORPHANS-before_place_orphans_default},
++  ${LDEMUL_AFTER_ALLOCATION-gld${EMULATION_NAME}_after_allocation},
++  ${LDEMUL_SET_OUTPUT_ARCH-set_output_arch_default},
++  ${LDEMUL_CHOOSE_TARGET-ldemul_default_target},
++  ${LDEMUL_BEFORE_ALLOCATION-gld${EMULATION_NAME}_before_allocation},
++  ${LDEMUL_GET_SCRIPT-gld${EMULATION_NAME}_get_script},
++  "${EMULATION_NAME}",
++  "${OUTPUT_FORMAT}",
++  ${LDEMUL_FINISH-finish_default},
++  ppc_after_open_output,
++  ${LDEMUL_OPEN_DYNAMIC_ARCHIVE-NULL},
++  ${LDEMUL_PLACE_ORPHAN-gld${EMULATION_NAME}_place_orphan},
++  ${LDEMUL_SET_SYMBOLS-gld${EMULATION_NAME}_set_symbols},
++  ${LDEMUL_PARSE_ARGS-gld${EMULATION_NAME}_parse_args},
++  gld${EMULATION_NAME}_add_options,
++  gld${EMULATION_NAME}_handle_option,
++  ${LDEMUL_UNRECOGNIZED_FILE-NULL},
++  ${LDEMUL_LIST_OPTIONS-${gld_list_options}},
++  ${LDEMUL_RECOGNIZED_FILE-NULL},
++  ${LDEMUL_FIND_POTENTIAL_LIBRARIES-NULL},
++  ${LDEMUL_NEW_VERS_PATTERN-NULL},
++  ${LDEMUL_EXTRA_MAP_FILE_TEXT-NULL},
++  NULL, //${LDEMUL_EMIT_CTF_EARLY-NULL},      /* FIXME: We have no CTF support? https://lwn.net/Articles/795384/ */
++  NULL, //${LDEMUL_ACQUIRE_STRINGS_FOR_CTF-NULL},
++  NULL, //${LDEMUL_NEW_DYNSYM_FOR_CTF-NULL},
++  ${LDEMUL_PRINT_SYMBOL-NULL},
++  ${LDEMUL_FIND_START_SYMBOL-NULL}
++};
++EOF
+diff -ruN binutils-2.45/ld/ldfile.c binutils-2.45_mos/ld/ldfile.c
+--- binutils-2.45/ld/ldfile.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/ldfile.c	2025-07-27 14:39:08.712060584 +0300
+@@ -276,6 +276,39 @@
+ }
+ 
+ 
++/* Flavour support.  */
++
++static int flavors_cmp(const void *f1, const void *f2);
++
++static int n_flavors, flavors_len;
++static char **flavors;
++
++static int
++flavors_cmp (const void *f1, const void *f2)
++{
++  return strcmp (*(char **)f1, *(char **)f2);
++}
++
++void
++ldfile_sort_flavors (void)
++{
++  if (n_flavors > 1)
++    qsort ((void *) flavors, n_flavors, sizeof (char **), flavors_cmp);
++}
++
++void
++ldfile_add_flavor (const char *name)
++{
++  n_flavors++;
++  if (flavors)
++    flavors = (char **) xrealloc ((void *)flavors, n_flavors * sizeof (char *));
++  else
++    flavors = (char **) xmalloc (sizeof (char *));
++  flavors [n_flavors-1] = (char *) name;
++  flavors_len += strlen (name);
++}
++
++
+ /* Test whether a pathname, after canonicalization, is the same or a
+    sub-directory of the sysroot directory.  */
+ 
+@@ -550,6 +585,7 @@
+ 			 const char *lib,
+ 			 const char *suffix)
+ {
++  char *flavor_dir = (char *) alloca (flavors_len + n_flavors + 1);
+   search_dirs_type *search;
+ 
+   /* If this is not an archive, try to open it in the current
+@@ -577,6 +613,7 @@
+   for (search = search_head; search != NULL; search = search->next)
+     {
+       char *string;
++      int i, count;
+ 
+       if (entry->flags.dynamic && !bfd_link_relocatable (&link_info))
+ 	{
+@@ -584,20 +621,30 @@
+ 	    return true;
+ 	}
+ 
+-      if (entry->flags.maybe_archive && !entry->flags.full_name_provided)
+-	string = concat (search->name, slash, lib, entry->filename,
+-			 arch, suffix, (const char *) NULL);
+-      else
+-	string = concat (search->name, slash, entry->filename,
+-			 (const char *) 0);
+-
+-      if (ldfile_try_open_bfd (string, entry))
++      for (count = n_flavors; count >= 0; count--)
+ 	{
+-	  entry->filename = string;
+-	  return true;
+-	}
++	  *flavor_dir = '\0';
++	  for (i = 0; i < count; i++)
++	    {
++	      strcat (flavor_dir, flavors[i]);
++	      strcat (flavor_dir, slash);
++	    }
+ 
+-      free (string);
++	  if (entry->flags.maybe_archive && !entry->flags.full_name_provided)
++	    string = concat (search->name, slash, flavor_dir, lib, entry->filename,
++			     arch, suffix, (const char *) NULL);
++	  else
++	    string = concat (search->name, slash, flavor_dir, entry->filename,
++			     (const char *) 0);
++
++	  if (ldfile_try_open_bfd (string, entry))
++	    {
++	      entry->filename = string;
++	      return true;
++	    }
++
++	  free (string);
++	}
+     }
+ 
+   return false;
+diff -ruN binutils-2.45/ld/ldfile.h binutils-2.45_mos/ld/ldfile.h
+--- binutils-2.45/ld/ldfile.h	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/ldfile.h	2025-07-27 14:39:08.712060584 +0300
+@@ -76,6 +76,9 @@
+ extern bool ldfile_open_file_search
+   (const char *arch, struct lang_input_statement_struct *,
+    const char *lib, const char *suffix);
++extern void ldfile_sort_flavors(void);
++extern void ldfile_add_flavor(const char *);
++
+ 
+ extern void ldfile_add_remap
+   (const char *, const char *);
+diff -ruN binutils-2.45/ld/ldmain.c binutils-2.45_mos/ld/ldmain.c
+--- binutils-2.45/ld/ldmain.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/ldmain.c	2025-07-27 14:39:08.712060584 +0300
+@@ -884,10 +884,14 @@
+ 
+   /* Print error messages for any missing symbols, for any warning
+      symbols, and possibly multiple definitions.  */
++#ifdef MORPHOS_TARGET
++  link_info.output_bfd->flags &= ~EXEC_P;
++#else
+   if (bfd_link_relocatable (&link_info))
+     link_info.output_bfd->flags &= ~EXEC_P;
+   else
+     link_info.output_bfd->flags |= EXEC_P;
++#endif
+ 
+   flagword flags = 0;
+   switch (config.compress_debug)
+@@ -1482,6 +1486,16 @@
+       && nval == oval)
+     return;
+ 
++#ifdef MORPHOS_TARGET
++  /* fm: let's check for the GCC4/5 defsym'd __abox__ symbol here and let
++     any redefinition in an object file section pass ... */
++  if (!strcmp(h->root.string,"__abox__") &&
++      h->type == bfd_link_hash_defined
++      && bfd_is_abs_section (osec))
++    return;
++#endif
++
++
+   /* If either section has the output_section field set to
+      bfd_abs_section_ptr, it means that the section is being
+      discarded, and this is not really a multiple definition at all.
+diff -ruN binutils-2.45/ld/lexsup.c binutils-2.45_mos/ld/lexsup.c
+--- binutils-2.45/ld/lexsup.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/lexsup.c	2025-07-27 14:39:08.712060584 +0300
+@@ -812,9 +812,14 @@
+ 	       && optc != argv[last_optind][1])
+ 	{
+ 	  if (optarg)
++#ifdef MORPHOS_TARGET
++	    einfo (_("%P: Warning: unable to disambiguate: %s (did you mean -%s ?)\n"),
++		   argv[last_optind], argv[last_optind]);
++#else
+ 	    fatal (_("%P: Error: unable to disambiguate: "
+ 		     "%s (did you mean -%s ?)\n"),
+ 		   argv[last_optind], argv[last_optind]);
++#endif
+ 	  else
+ 	    einfo (_("%P: Warning: grouped short command line options are deprecated: %s\n"), argv[last_optind]);
+ 	}
+diff -ruN binutils-2.45/ld/Makefile.am binutils-2.45_mos/ld/Makefile.am
+--- binutils-2.45/ld/Makefile.am	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/Makefile.am	2025-07-27 14:39:08.712060584 +0300
+@@ -324,6 +324,8 @@
+ 	emcorepe.c \
+ 	emn10200.c \
+ 	emn10300.c \
++	emorphos.c \
++	emorphos_baserel.c \
+ 	emoxiebox.c \
+ 	emsp430X.c \
+ 	emsp430elf.c \
+diff -ruN binutils-2.45/ld/Makefile.in binutils-2.45_mos/ld/Makefile.in
+--- binutils-2.45/ld/Makefile.in	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/ld/Makefile.in	2025-07-27 14:39:08.712060584 +0300
+@@ -835,6 +835,8 @@
+ 	emcorepe.c \
+ 	emn10200.c \
+ 	emn10300.c \
++	emorphos.c \
++	emorphos_baserel.c \
+ 	emoxiebox.c \
+ 	emsp430X.c \
+ 	emsp430elf.c \
+@@ -1533,6 +1535,8 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emn10200.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emn10300.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emoxiebox.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emorphos.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emorphos_baserel.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emsp430X.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/emsp430elf.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ends32belf.Po@am__quote@
+diff -ruN binutils-2.45/ld/scripttempl/morphos_baserel.sc binutils-2.45_mos/ld/scripttempl/morphos_baserel.sc
+--- binutils-2.45/ld/scripttempl/morphos_baserel.sc	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/ld/scripttempl/morphos_baserel.sc	2025-07-27 14:39:08.712060584 +0300
+@@ -0,0 +1,216 @@
++#
++# Unusual variables checked by this code:
++#	NOP - two byte opcode for no-op (defaults to 0)
++#	DATA_ADDR - if end-of-text-plus-one-page isn't right for data start
++#	OTHER_READONLY_SECTIONS - other than .text .init .rodata ...
++#		(e.g., .PARISC.milli)
++#	OTHER_READWRITE_SECTIONS - other than .data .bss .ctors .sdata ...
++#		(e.g., .PARISC.global)
++#	OTHER_SECTIONS - at the end
++#	EXECUTABLE_SYMBOLS - symbols that must be defined for an
++#		executable (e.g., _DYNAMIC_LINK)
++#	TEXT_START_SYMBOLS - symbols that appear at the start of the
++#		.text section.
++#	DATA_START_SYMBOLS - symbols that appear at the start of the
++#		.data section.
++#	OTHER_BSS_SYMBOLS - symbols that appear at the start of the
++#		.bss section besides __bss_start.
++#
++# When adding sections, do note that the names of some sections are used
++# when specifying the start address of the next.
++#
++test -z "${BIG_OUTPUT_FORMAT}" && BIG_OUTPUT_FORMAT=${OUTPUT_FORMAT}
++test -z "${LITTLE_OUTPUT_FORMAT}" && LITTLE_OUTPUT_FORMAT=${OUTPUT_FORMAT}
++test "$LD_FLAG" = "N" && DATA_ADDR=.
++SBSS2=".sbss2 ${RELOCATING-0} : { *(.sbss2) }"
++SDATA2=".sdata2 ${RELOCATING-0} : { *(.sdata2) }"
++INTERP=".interp ${RELOCATING-0} : { *(.interp) }"
++PLT=".plt ${RELOCATING-0} : { *(.plt) }"
++cat <<EOF
++OUTPUT_FORMAT("${OUTPUT_FORMAT}", "${BIG_OUTPUT_FORMAT}",
++	      "${LITTLE_OUTPUT_FORMAT}")
++OUTPUT_ARCH(${ARCH})
++
++${RELOCATING+ENTRY (__start)}
++${RELOCATING+${LIB_SEARCH_DIRS}}
++${RELOCATING+/* Do we need any of these for elf?
++   __DYNAMIC = 0; ${STACKZERO+${STACKZERO}} ${SHLIB_PATH+${SHLIB_PATH}}  */}
++${RELOCATING+${EXECUTABLE_SYMBOLS}}
++${RELOCATING- /* For some reason, the Solaris linker makes bad executables
++  if gld -r is used and the intermediate file has sections starting
++  at non-zero addresses.  Could be a Solaris ld bug, could be a GNU ld
++  bug.  But for now assigning the zero vmas works.  */}
++
++${RELOCATING+PROVIDE (__stack = 0);}
++PROVIDE (__machtype = 0x1);
++SECTIONS
++{
++  /* Read-only sections, merged into text segment: */
++  ${CREATE_SHLIB-${RELOCATING+. = ${TEXT_START_ADDR} + SIZEOF_HEADERS;}}
++  ${CREATE_SHLIB+${RELOCATING+. = SIZEOF_HEADERS;}}
++  ${CREATE_SHLIB-${INTERP}}
++  .hash		${RELOCATING-0} : { *(.hash)		}
++  .dynsym	${RELOCATING-0} : { *(.dynsym)		}
++  .dynstr	${RELOCATING-0} : { *(.dynstr)		}
++  .gnu.version ${RELOCATING-0} : { *(.gnu.version)      }
++  .gnu.version_d ${RELOCATING-0} : { *(.gnu.version_d)  }
++  .gnu.version_r ${RELOCATING-0} : { *(.gnu.version_r)  }
++  .rela.text   ${RELOCATING-0} :
++    { *(.rela.text) *(.rela.gnu.linkonce.t*) }
++  .rela.got	${RELOCATING-0} : { *(.rela.got)	}
++  .rela.got1	${RELOCATING-0} : { *(.rela.got1)	}
++  .rela.got2	${RELOCATING-0} : { *(.rela.got2)	}
++  .rela.ctors	${RELOCATING-0} : { *(.rela.ctors)	}
++  .rela.dtors	${RELOCATING-0} : { *(.rela.dtors)	}
++  .rela.init	${RELOCATING-0} : { *(.rela.init)	}
++  .rela.fini	${RELOCATING-0} : { *(.rela.fini)	}
++  .rela.plt	${RELOCATING-0} : { *(.rela.plt)	}
++  .rela.rodata  ${RELOCATING-0} :
++    { *(.rela.rodata) *(.rela.gnu.linkonce.r*) }
++  .rela.sdata	${RELOCATING-0} :
++  {
++    *(.rela.data)
++    *(.rela.gnu.linkonce.d*)
++    *(.rela.sdata)
++  }
++  .rela.sbss	${RELOCATING-0} :
++  {
++    *(.rela.sbss)
++    *(.rela.bss)
++  }
++  .rela.sdata2	${RELOCATING-0} : { *(.rela.sdata2)	}
++  .rela.sbss2	${RELOCATING-0} : { *(.rela.sbss2)	}
++  .text    ${RELOCATING-0} :
++  {
++    PROVIDE (__text_start = .);
++    ${RELOCATING+${TEXT_START_SYMBOLS}}
++    *(.text)
++    *(.text.*)
++    KEEP(*(.eh_frame*))
++    /* .gnu.warning sections are handled specially by elf32.em.  */
++    *(.gnu.warning)
++    *(.gnu.linkonce.t*)
++    PROVIDE (__text_end = .);
++  } =${NOP-0}
++  PROVIDE (__text_size = SIZEOF(.text));
++  .init		${RELOCATING-0} : { KEEP(*(.init))		} =${NOP-0}
++  .fini		${RELOCATING-0} : { KEEP(*(.fini))		} =${NOP-0}
++  .ctdt		${RELOCATING-0} : { KEEP(*(.ctdt))		} =${NOP-0}
++  ${RELOCATING+_etext = .;}
++  ${RELOCATING+PROVIDE (etext = .);}
++  ${CREATE_SHLIB-${SDATA2}}
++  ${CREATE_SHLIB-${SBSS2}}
++  ${RELOCATING+${OTHER_READONLY_SECTIONS}}
++
++  .got1		${RELOCATING-0} : { *(.got1) }
++  .dynamic	${RELOCATING-0} : { *(.dynamic) }
++
++  /* Put .ctors and .dtors next to the .got2 section, so that the pointers
++     get relocated with -mrelocatable. Also put in the .fixup pointers.
++     The current compiler no longer needs this, but keep it around for 2.7.2  */
++
++		${RELOCATING+PROVIDE (_GOT2_START_ = .);}
++  .got2		${RELOCATING-0} :  { *(.got2) }
++
++		${RELOCATING+PROVIDE (__CTOR_LIST__ = .);}
++  .ctors	${RELOCATING-0} : { *(.ctors) }
++		${RELOCATING+PROVIDE (__CTOR_END__ = .);}
++
++		${RELOCATING+PROVIDE (__DTOR_LIST__ = .);}
++  .dtors	${RELOCATING-0} : { *(.dtors) }
++		${RELOCATING+PROVIDE (__DTOR_END__ = .);}
++
++		${RELOCATING+PROVIDE (_FIXUP_START_ = .);}
++  .fixup	${RELOCATING-0} : { *(.fixup) }
++		${RELOCATING+PROVIDE (_FIXUP_END_ = .);}
++		${RELOCATING+PROVIDE (_GOT2_END_ = .);}
++
++		${RELOCATING+PROVIDE (_GOT_START_ = .);}
++  .got		${RELOCATING-0} : { *(.got) }
++  .got.plt	${RELOCATING-0} : { *(.got.plt) }
++  ${CREATE_SHLIB+${SDATA2}}
++  ${CREATE_SHLIB+${SBSS2}}
++		${RELOCATING+PROVIDE (_GOT_END_ = .);}
++  .rodata	${RELOCATING-0} : { *(.rodata) }
++ /* We want the small data sections together, so single-instruction offsets
++     can access them all, and initialized data all before uninitialized, so
++     we can shorten the on-disk segment size.  */
++  .sdata	${RELOCATING-0} : 
++  { 
++    /*PROVIDE (__sdata_start = .);*/
++    __sdata_start = .;
++    *(.data)
++    *(.data.*)
++    *(.data1)
++    *(.data1.*)
++    *(.data.rel)
++    *(.data.rel.local)
++    __small_start = .;
++    *(.sdata)
++    *(.sdata.*)
++    *(.gnu.linkonce.s.*)
++    ${CONSTRUCTING+CONSTRUCTORS}
++    PROVIDE (__r13_init = /*__small_start*/ __sdata_start + 0x8000);
++    PROVIDE (__sdata_end = .);
++  }
++  /*PROVIDE (__sdata_size = SIZEOF(.sdata));*/
++  ${RELOCATING+_edata  =  .;}
++  ${RELOCATING+PROVIDE (edata = .);}
++  .sbss    ${RELOCATING-0} :
++  {
++    /*PROVIDE (__sbss_start = .);*/
++    __sbss_start = .;
++    *(.sbss)
++    *(.sbss.*)
++    *(.scommon)
++    *(.gnu.linkonce.sb.*)
++    *(.dynsbss)
++    *(.bss)
++    *(.bss.*)
++    *(.gnu.linkonce.b.*)
++    *(COMMON)
++    PROVIDE (__sbss_end = .);
++  }
++  PROVIDE (__sdata_size = __sbss_start - __sdata_start);
++  PROVIDE (__sbss_size = SIZEOF(.sbss));
++
++  /* These are needed for ELF backends which have not yet been
++     converted to the new style linker.  */
++  .stab 0 : { *(.stab) }
++  .stabstr 0 : { *(.stabstr) }
++
++  /* DWARF debug sections.
++     Symbols in the DWARF debugging sections are relative to the beginning
++     of the section so we begin them at 0.  */
++
++  /* DWARF 1 */
++  .debug          0 : { *(.debug) }
++  .line           0 : { *(.line) }
++
++  /* GNU DWARF 1 extensions */
++  .debug_srcinfo  0 : { *(.debug_srcinfo) }
++  .debug_sfnames  0 : { *(.debug_sfnames) }
++
++  /* DWARF 1.1 and DWARF 2 */
++  .debug_aranges  0 : { *(.debug_aranges) }
++  .debug_pubnames 0 : { *(.debug_pubnames) }
++
++  /* DWARF 2 */
++  .debug_info     0 : { *(.debug_info) }
++  .debug_abbrev   0 : { *(.debug_abbrev) }
++  .debug_line     0 : { *(.debug_line) }
++  .debug_frame    0 : { *(.debug_frame) }
++  .debug_str      0 : { *(.debug_str) }
++  .debug_loc      0 : { *(.debug_loc) }
++  .debug_macinfo  0 : { *(.debug_macinfo) }
++
++  /* SGI/MIPS DWARF 2 extensions */
++  .debug_weaknames 0 : { *(.debug_weaknames) }
++  .debug_funcnames 0 : { *(.debug_funcnames) }
++  .debug_typenames 0 : { *(.debug_typenames) }
++  .debug_varnames  0 : { *(.debug_varnames) }
++
++  /* These must appear regardless of ${RELOCATING}.  */
++  ${OTHER_SECTIONS}
++}
++EOF
+diff -ruN binutils-2.45/ld/scripttempl/morphos.sc binutils-2.45_mos/ld/scripttempl/morphos.sc
+--- binutils-2.45/ld/scripttempl/morphos.sc	1970-01-01 02:00:00.000000000 +0200
++++ binutils-2.45_mos/ld/scripttempl/morphos.sc	2025-07-27 14:39:08.712060584 +0300
+@@ -0,0 +1,691 @@
++#
++# Unusual variables checked by this code:
++#	NOP - four byte opcode for no-op (defaults to none)
++#	NO_SMALL_DATA - no .sbss/.sbss2/.sdata/.sdata2 sections if not
++#		empty.
++#	SMALL_DATA_CTOR - .ctors contains small data.
++#	SMALL_DATA_DTOR - .dtors contains small data.
++#	DATA_ADDR - if end-of-text-plus-one-page isn't right for data start
++#	INITIAL_READONLY_SECTIONS - at start of text segment
++#	OTHER_READONLY_SECTIONS - other than .text .init .rodata ...
++#		(e.g., .PARISC.milli)
++#	OTHER_TEXT_SECTIONS - these get put in .text when relocating
++#	OTHER_READWRITE_SECTIONS - other than .data .bss .ctors .sdata ...
++#		(e.g., .PARISC.global)
++#	OTHER_RELRO_SECTIONS - other than .data.rel.ro ...
++#		(e.g. PPC32 .fixup, .got[12])
++#	OTHER_BSS_SECTIONS - other than .bss .sbss ...
++#	ATTRS_SECTIONS - at the end
++#	OTHER_SECTIONS - at the end
++#	EXECUTABLE_SYMBOLS - symbols that must be defined for an
++#		executable (e.g., _DYNAMIC_LINK)
++#       TEXT_START_ADDR - the first byte of the text segment, after any
++#               headers.
++#       TEXT_BASE_ADDRESS - the first byte of the text segment.
++#	TEXT_START_SYMBOLS - symbols that appear at the start of the
++#		.text section.
++#	DATA_START_SYMBOLS - symbols that appear at the start of the
++#		.data section.
++#	DATA_END_SYMBOLS - symbols that appear at the end of the
++#		writeable data sections.
++#	OTHER_GOT_SYMBOLS - symbols defined just before .got.
++#	OTHER_GOT_SECTIONS - sections just after .got.
++#	OTHER_SDATA_SECTIONS - sections just after .sdata.
++#	OTHER_BSS_SYMBOLS - symbols that appear at the start of the
++#		.bss section besides __bss_start.
++#	DATA_PLT - .plt should be in data segment, not text segment.
++#	PLT_BEFORE_GOT - .plt just before .got when .plt is in data segement.
++#	BSS_PLT - .plt should be in bss segment
++#	NO_REL_RELOCS - Don't include .rel.* sections in script
++#	NO_RELA_RELOCS - Don't include .rela.* sections in script
++#	NON_ALLOC_DYN - Place dynamic sections after data segment.
++#	TEXT_DYNAMIC - .dynamic in text segment, not data segment.
++#	EMBEDDED - whether this is for an embedded system.
++#	SHLIB_TEXT_START_ADDR - if set, add to SIZEOF_HEADERS to set
++#		start address of shared library.
++#	INPUT_FILES - INPUT command of files to always include
++#	WRITABLE_RODATA - if set, the .rodata section should be writable
++#	INIT_START, INIT_END -  statements just before and just after
++# 	combination of .init sections.
++#	FINI_START, FINI_END - statements just before and just after
++# 	combination of .fini sections.
++#	STACK_ADDR - start of a .stack section.
++#	OTHER_SYMBOLS - symbols to place right at the end of the script.
++#	ETEXT_NAME - name of a symbol for the end of the text section,
++#		normally etext.
++#	SEPARATE_CODE - if set, .text and similar sections containing
++#		actual machine instructions must be in wholly disjoint
++#		pages from any other data, including headers
++#	SEPARATE_GOTPLT - if set, .got.plt should be separate output section,
++#		so that .got can be in the RELRO area.  It should be set to
++#		the number of bytes in the beginning of .got.plt which can be
++#		in the RELRO area as well.
++#	USER_LABEL_PREFIX - prefix to add to user-visible symbols.
++#	RODATA_NAME, SDATA_NAME, SBSS_NAME, BSS_NAME - base parts of names
++#		for standard sections, without initial "." or suffixes.
++#
++# When adding sections, do note that the names of some sections are used
++# when specifying the start address of the next.
++#
++
++#  Many sections come in three flavours.  There is the 'real' section,
++#  like ".data".  Then there are the per-procedure or per-variable
++#  sections, generated by -ffunction-sections and -fdata-sections in GCC,
++#  and useful for --gc-sections, which for a variable "foo" might be
++#  ".data.foo".  Then there are the linkonce sections, for which the linker
++#  eliminates duplicates, which are named like ".gnu.linkonce.d.foo".
++#  The exact correspondences are:
++#
++#  Section	Linkonce section
++#  .text	.gnu.linkonce.t.foo
++#  .rodata	.gnu.linkonce.r.foo
++#  .data	.gnu.linkonce.d.foo
++#  .bss		.gnu.linkonce.b.foo
++#  .sdata	.gnu.linkonce.s.foo
++#  .sbss	.gnu.linkonce.sb.foo
++#  .sdata2	.gnu.linkonce.s2.foo
++#  .sbss2	.gnu.linkonce.sb2.foo
++#  .debug_info	.gnu.linkonce.wi.foo
++#  .tdata	.gnu.linkonce.td.foo
++#  .tbss	.gnu.linkonce.tb.foo
++#  .lrodata	.gnu.linkonce.lr.foo
++#  .ldata	.gnu.linkonce.l.foo
++#  .lbss	.gnu.linkonce.lb.foo
++#
++#  Each of these can also have corresponding .rel.* and .rela.* sections.
++
++if test -n "$NOP"; then
++  FILL="=$NOP"
++else
++  FILL=
++fi
++
++test -z "$RODATA_NAME" && RODATA_NAME=rodata
++test -z "$SDATA_NAME" && SDATA_NAME=sdata
++test -z "$SBSS_NAME" && SBSS_NAME=sbss
++test -z "$BSS_NAME" && BSS_NAME=bss
++test -z "${BIG_OUTPUT_FORMAT}" && BIG_OUTPUT_FORMAT=${OUTPUT_FORMAT}
++test -z "${LITTLE_OUTPUT_FORMAT}" && LITTLE_OUTPUT_FORMAT=${OUTPUT_FORMAT}
++if [ -z "$MACHINE" ]; then OUTPUT_ARCH=${ARCH}; else OUTPUT_ARCH=${ARCH}:${MACHINE}; fi
++test -z "${ELFSIZE}" && ELFSIZE=32
++test -z "${ALIGNMENT}" && ALIGNMENT="${ELFSIZE} / 8"
++test "$LD_FLAG" = "N" && DATA_ADDR=.
++test -z "${ETEXT_NAME}" && ETEXT_NAME=${USER_LABEL_PREFIX}etext
++test -n "$CREATE_SHLIB$CREATE_PIE" && test -n "$SHLIB_DATA_ADDR" && COMMONPAGESIZE=""
++test -z "$CREATE_SHLIB$CREATE_PIE" && test -n "$DATA_ADDR" && COMMONPAGESIZE=""
++test -n "$RELRO_NOW" && unset SEPARATE_GOTPLT
++test -z "$ATTRS_SECTIONS" && ATTRS_SECTIONS=".gnu.attributes 0 : { KEEP (*(.gnu.attributes)) }"
++DATA_SEGMENT_ALIGN="ALIGN(${SEGMENT_SIZE}) + (. & (${MAXPAGESIZE} - 1))"
++DATA_SEGMENT_RELRO_END=""
++DATA_SEGMENT_END=""
++if test -n "${COMMONPAGESIZE}"; then
++  DATA_SEGMENT_ALIGN="ALIGN (${SEGMENT_SIZE}) - ((${MAXPAGESIZE} - .) & (${MAXPAGESIZE} - 1)); . = DATA_SEGMENT_ALIGN (${MAXPAGESIZE}, ${COMMONPAGESIZE})"
++  DATA_SEGMENT_END=". = DATA_SEGMENT_END (.);"
++  DATA_SEGMENT_RELRO_END=". = DATA_SEGMENT_RELRO_END (${SEPARATE_GOTPLT-0}, .);"
++fi
++if test -z "${INITIAL_READONLY_SECTIONS}${CREATE_SHLIB}"; then
++  INITIAL_READONLY_SECTIONS=".interp       ${RELOCATING-0} : { *(.interp) }"
++fi
++if test -z "$PLT"; then
++  IPLT=".iplt         ${RELOCATING-0} : { *(.iplt) }"
++  PLT=".plt          ${RELOCATING-0} : { *(.plt)${IREL_IN_PLT+ *(.iplt)} }
++  ${IREL_IN_PLT-$IPLT}"
++fi
++test -n "${DATA_PLT-${BSS_PLT-text}}" && TEXT_PLT=yes
++if test -z "$GOT"; then
++  if test -z "$SEPARATE_GOTPLT"; then
++    GOT=".got          ${RELOCATING-0} : { *(.got.plt) *(.igot.plt) *(.got) *(.igot) }"
++  else
++    GOT=".got          ${RELOCATING-0} : { *(.got) *(.igot) }"
++    GOTPLT=".got.plt      ${RELOCATING-0} : { *(.got.plt)  *(.igot.plt) }"
++  fi
++fi
++REL_IFUNC=".rel.ifunc    ${RELOCATING-0} : { *(.rel.ifunc) }"
++RELA_IFUNC=".rela.ifunc   ${RELOCATING-0} : { *(.rela.ifunc) }"
++REL_IPLT=".rel.iplt     ${RELOCATING-0} :
++    {
++      ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rel_iplt_start = .);}}
++      *(.rel.iplt)
++      ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rel_iplt_end = .);}}
++    }"
++RELA_IPLT=".rela.iplt    ${RELOCATING-0} :
++    {
++      ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rela_iplt_start = .);}}
++      *(.rela.iplt)
++      ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rela_iplt_end = .);}}
++    }"
++DYNAMIC=".dynamic      ${RELOCATING-0} : { *(.dynamic) }"
++RODATA=".${RODATA_NAME}       ${RELOCATING-0} : { *(.${RODATA_NAME}${RELOCATING+ .${RODATA_NAME}.* .gnu.linkonce.r.*}) }"
++DATARELRO=".data.rel.ro : { *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*) *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*) }"
++DISCARDED="/DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }"
++if test -z "${NO_SMALL_DATA}"; then
++  SBSS=".${SBSS_NAME}         ${RELOCATING-0} :
++  {
++    PROVIDE (__sbss_start = .);
++    ${CREATE_SHLIB+*(.${SBSS_NAME}2 .${SBSS_NAME}2.* .gnu.linkonce.sb2.*)}
++    *(.dyn${SBSS_NAME})
++    *(.${SBSS_NAME}${RELOCATING+ .${SBSS_NAME}.* .gnu.linkonce.sb.*})
++    *(.scommon)
++    PROVIDE (__sbss_end = .);
++  }
++  PROVIDE (__sbss_size = SIZEOF(.sbss));"
++  SBSS2=".${SBSS_NAME}2        ${RELOCATING-0} : { *(.${SBSS_NAME}2${RELOCATING+ .${SBSS_NAME}2.* .gnu.linkonce.sb2.*}) }"
++  SDATA="/* We want the small data sections together, so single-instruction offsets
++     can access them all, and initialized data all before uninitialized, so
++     we can shorten the on-disk segment size.  */
++  .${SDATA_NAME}        ${RELOCATING-0} :
++  {
++    PROVIDE (__sdata_start = .);
++    ${RELOCATING+${SDATA_START_SYMBOLS}}
++    ${CREATE_SHLIB+*(.${SDATA_NAME}2 .${SDATA_NAME}2.* .gnu.linkonce.s2.*)}
++    *(.${SDATA_NAME}${RELOCATING+ .${SDATA_NAME}.* .gnu.linkonce.s.*})
++    PROVIDE (__r13_init = 0x8000);
++    PROVIDE (__sdata_end = .);
++  }
++  PROVIDE (__sdata_size = SIZEOF(.sdata));"
++  SDATA2=".${SDATA_NAME}2       ${RELOCATING-0} :
++  {
++    ${RELOCATING+${SDATA2_START_SYMBOLS}}
++    *(.${SDATA_NAME}2${RELOCATING+ .${SDATA_NAME}2.* .gnu.linkonce.s2.*})
++  }"
++  REL_SDATA=".rel.${SDATA_NAME}    ${RELOCATING-0} : { *(.rel.${SDATA_NAME}${RELOCATING+ .rel.${SDATA_NAME}.* .rel.gnu.linkonce.s.*}) }
++  .rela.${SDATA_NAME}   ${RELOCATING-0} : { *(.rela.${SDATA_NAME}${RELOCATING+ .rela.${SDATA_NAME}.* .rela.gnu.linkonce.s.*}) }"
++  REL_SBSS=".rel.${SBSS_NAME}     ${RELOCATING-0} : { *(.rel.${SBSS_NAME}${RELOCATING+ .rel.${SBSS_NAME}.* .rel.gnu.linkonce.sb.*}) }
++  .rela.${SBSS_NAME}    ${RELOCATING-0} : { *(.rela.${SBSS_NAME}${RELOCATING+ .rela.${SBSS_NAME}.* .rela.gnu.linkonce.sb.*}) }"
++  REL_SDATA2=".rel.${SDATA_NAME}2   ${RELOCATING-0} : { *(.rel.${SDATA_NAME}2${RELOCATING+ .rel.${SDATA_NAME}2.* .rel.gnu.linkonce.s2.*}) }
++  .rela.${SDATA_NAME}2  ${RELOCATING-0} : { *(.rela.${SDATA_NAME}2${RELOCATING+ .rela.${SDATA_NAME}2.* .rela.gnu.linkonce.s2.*}) }"
++  REL_SBSS2=".rel.${SBSS_NAME}2    ${RELOCATING-0} : { *(.rel.${SBSS_NAME}2${RELOCATING+ .rel.${SBSS_NAME}2.* .rel.gnu.linkonce.sb2.*}) }
++  .rela.${SBSS_NAME}2   ${RELOCATING-0} : { *(.rela.${SBSS_NAME}2${RELOCATING+ .rela.${SBSS_NAME}2.* .rela.gnu.linkonce.sb2.*}) }"
++else
++  NO_SMALL_DATA=" "
++fi
++if test -z "${DATA_GOT}"; then
++  if test -n "${NO_SMALL_DATA}"; then
++    DATA_GOT=" "
++  fi
++fi
++if test -z "${SDATA_GOT}"; then
++  if test -z "${NO_SMALL_DATA}"; then
++    SDATA_GOT=" "
++  fi
++fi
++test -n "$SEPARATE_GOTPLT" && SEPARATE_GOTPLT=" "
++test "${LARGE_SECTIONS}" = "yes" && REL_LARGE="
++  .rel.ldata    ${RELOCATING-0} : { *(.rel.ldata${RELOCATING+ .rel.ldata.* .rel.gnu.linkonce.l.*}) }
++  .rela.ldata   ${RELOCATING-0} : { *(.rela.ldata${RELOCATING+ .rela.ldata.* .rela.gnu.linkonce.l.*}) }
++  .rel.lbss     ${RELOCATING-0} : { *(.rel.lbss${RELOCATING+ .rel.lbss.* .rel.gnu.linkonce.lb.*}) }
++  .rela.lbss    ${RELOCATING-0} : { *(.rela.lbss${RELOCATING+ .rela.lbss.* .rela.gnu.linkonce.lb.*}) }
++  .rel.lrodata  ${RELOCATING-0} : { *(.rel.lrodata${RELOCATING+ .rel.lrodata.* .rel.gnu.linkonce.lr.*}) }
++  .rela.lrodata ${RELOCATING-0} : { *(.rela.lrodata${RELOCATING+ .rela.lrodata.* .rela.gnu.linkonce.lr.*}) }"
++test "${LARGE_SECTIONS}" = "yes" && OTHER_BSS_SECTIONS="
++  ${OTHER_BSS_SECTIONS}
++  .lbss ${RELOCATING-0} :
++  {
++    *(.dynlbss)
++    *(.lbss${RELOCATING+ .lbss.* .gnu.linkonce.lb.*})
++    *(LARGE_COMMON)
++  }"
++test "${LARGE_SECTIONS}" = "yes" && LARGE_SECTIONS="
++  .lrodata ${RELOCATING-0} ${RELOCATING+ALIGN(${MAXPAGESIZE}) + (. & (${MAXPAGESIZE} - 1))} :
++  {
++    *(.lrodata${RELOCATING+ .lrodata.* .gnu.linkonce.lr.*})
++  }
++  .ldata ${RELOCATING-0} ${RELOCATING+ALIGN(${MAXPAGESIZE}) + (. & (${MAXPAGESIZE} - 1))} :
++  {
++    *(.ldata${RELOCATING+ .ldata.* .gnu.linkonce.l.*})
++    ${RELOCATING+. = ALIGN(. != 0 ? ${ALIGNMENT} : 1);}
++  }"
++if test "${ENABLE_INITFINI_ARRAY}" = "yes"; then
++  SORT_INIT_ARRAY="KEEP (*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))"
++  SORT_FINI_ARRAY="KEEP (*(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*)))"
++  CTORS_IN_INIT_ARRAY="KEEP (*(EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o $OTHER_EXCLUDE_FILES) .ctors))"
++  DTORS_IN_FINI_ARRAY="KEEP (*(EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o $OTHER_EXCLUDE_FILES) .dtors))"
++else
++  SORT_INIT_ARRAY="KEEP (*(SORT(.init_array.*)))"
++  SORT_FINI_ARRAY="KEEP (*(SORT(.fini_array.*)))"
++  CTORS_IN_INIT_ARRAY=
++  DTORS_IN_FINI_ARRAY=
++fi
++INIT_ARRAY=".init_array   ${RELOCATING-0} :
++  {
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__init_array_start = .);}}
++    ${SORT_INIT_ARRAY}
++    KEEP (*(.init_array))
++    ${CTORS_IN_INIT_ARRAY}
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__init_array_end = .);}}
++  }"
++FINI_ARRAY=".fini_array   ${RELOCATING-0} :
++  {
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__fini_array_start = .);}}
++    ${SORT_FINI_ARRAY}
++    KEEP (*(.fini_array))
++    ${DTORS_IN_FINI_ARRAY}
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__fini_array_end = .);}}
++  }"
++CTOR=".ctors        ${CONSTRUCTING-0} :
++  {
++    ${CONSTRUCTING+${CTOR_START}}
++    /* gcc uses crtbegin.o to find the start of
++       the constructors, so we make sure it is
++       first.  Because this is a wildcard, it
++       doesn't matter if the user does not
++       actually link against crtbegin.o; the
++       linker won't look for a file to match a
++       wildcard.  The wildcard also means that it
++       doesn't matter which directory crtbegin.o
++       is in.  */
++
++    KEEP (*crtbegin.o(.ctors))
++    KEEP (*crtbegin?.o(.ctors))
++
++    /* We don't want to include the .ctor section from
++       the crtend.o file until after the sorted ctors.
++       The .ctor section from the crtend file contains the
++       end of ctors marker and it must be last */
++
++    KEEP (*(EXCLUDE_FILE (*crtend.o *crtend?.o $OTHER_EXCLUDE_FILES) .ctors))
++    KEEP (*(SORT(.ctors.*)))
++    KEEP (*(.ctors))
++    ${CONSTRUCTING+${CTOR_END}}
++  }"
++DTOR=".dtors        ${CONSTRUCTING-0} :
++  {
++    ${CONSTRUCTING+${DTOR_START}}
++    KEEP (*crtbegin.o(.dtors))
++    KEEP (*crtbegin?.o(.dtors))
++    KEEP (*(EXCLUDE_FILE (*crtend.o *crtend?.o $OTHER_EXCLUDE_FILES) .dtors))
++    KEEP (*(SORT(.dtors.*)))
++    KEEP (*(.dtors))
++    ${CONSTRUCTING+${DTOR_END}}
++  }"
++STACK="  .stack        ${RELOCATING-0}${RELOCATING+${STACK_ADDR}} :
++  {
++    ${RELOCATING+${USER_LABEL_PREFIX}_stack = .;}
++    *(.stack)
++  }"
++
++TEXT_START_ADDR="SEGMENT_START(\"text-segment\", ${TEXT_START_ADDR})"
++SHLIB_TEXT_START_ADDR="SEGMENT_START(\"text-segment\", ${SHLIB_TEXT_START_ADDR:-0})"
++
++if [ -z "$SEPARATE_CODE" ]; then
++  SIZEOF_HEADERS_CODE=" + SIZEOF_HEADERS"
++else
++  SIZEOF_HEADERS_CODE=
++fi
++
++# if this is for an embedded system, don't add SIZEOF_HEADERS.
++if [ -z "$EMBEDDED" ]; then
++   test -z "${TEXT_BASE_ADDRESS}" && TEXT_BASE_ADDRESS="${TEXT_START_ADDR}${SIZEOF_HEADERS_CODE}"
++else
++   test -z "${TEXT_BASE_ADDRESS}" && TEXT_BASE_ADDRESS="${TEXT_START_ADDR}"
++fi
++
++cat <<EOF
++OUTPUT_FORMAT("${OUTPUT_FORMAT}", "${BIG_OUTPUT_FORMAT}",
++	      "${LITTLE_OUTPUT_FORMAT}")
++OUTPUT_ARCH(${OUTPUT_ARCH})
++
++${RELOCATING+ENTRY (__start)}
++${RELOCATING+${LIB_SEARCH_DIRS}}
++${RELOCATING+${EXECUTABLE_SYMBOLS}}
++${RELOCATING+${INPUT_FILES}}
++${RELOCATING- /* For some reason, the Solaris linker makes bad executables
++  if gld -r is used and the intermediate file has sections starting
++  at non-zero addresses.  Could be a Solaris ld bug, could be a GNU ld
++  bug.  But for now assigning the zero vmas works.  */}
++
++${RELOCATING+PROVIDE (__stack = 0);}
++PROVIDE (__machtype = 0x1);
++SECTIONS
++{
++  /* Read-only sections, merged into text segment: */
++  ${CREATE_SHLIB-${CREATE_PIE-${RELOCATING+PROVIDE (__executable_start = ${TEXT_START_ADDR}); . = ${TEXT_BASE_ADDRESS};}}}
++  ${CREATE_SHLIB+${RELOCATING+. = ${SHLIB_TEXT_START_ADDR}${SIZEOF_HEADERS_CODE};}}
++  ${CREATE_PIE+${RELOCATING+. = ${SHLIB_TEXT_START_ADDR}${SIZEOF_HEADERS_CODE};}}
++EOF
++
++emit_early_ro()
++{
++  cat <<EOF
++  ${INITIAL_READONLY_SECTIONS}
++  .note.gnu.build-id : { *(.note.gnu.build-id) }
++EOF
++}
++
++test -n "${SEPARATE_CODE}" || emit_early_ro
++
++test -n "${RELOCATING+0}" || unset NON_ALLOC_DYN
++test -z "${NON_ALLOC_DYN}" || TEXT_DYNAMIC=
++cat > ldscripts/dyntmp.$$ <<EOF
++  ${TEXT_DYNAMIC+${DYNAMIC}}
++  .hash         ${RELOCATING-0} : { *(.hash) }
++  .gnu.hash     ${RELOCATING-0} : { *(.gnu.hash) }
++  .dynsym       ${RELOCATING-0} : { *(.dynsym) }
++  .dynstr       ${RELOCATING-0} : { *(.dynstr) }
++  .gnu.version  ${RELOCATING-0} : { *(.gnu.version) }
++  .gnu.version_d ${RELOCATING-0}: { *(.gnu.version_d) }
++  .gnu.version_r ${RELOCATING-0}: { *(.gnu.version_r) }
++EOF
++
++if [ "x$COMBRELOC" = x ]; then
++  COMBRELOCCAT="cat >> ldscripts/dyntmp.$$"
++else
++  COMBRELOCCAT="cat > $COMBRELOC"
++fi
++eval $COMBRELOCCAT <<EOF
++  ${INITIAL_RELOC_SECTIONS}
++  .rel.text     ${RELOCATING-0} : { *(.rel.text${RELOCATING+ .rel.text.* .rel.gnu.linkonce.t.*}) }
++  .rela.text    ${RELOCATING-0} : { *(.rela.text${RELOCATING+ .rela.text.* .rela.gnu.linkonce.t.*}) }
++  .rel.init     ${RELOCATING-0} : { *(.rel.init) }
++  .rela.init    ${RELOCATING-0} : { *(.rela.init) }
++  .rel.fini     ${RELOCATING-0} : { *(.rel.fini) }
++  .rela.fini    ${RELOCATING-0} : { *(.rela.fini) }
++  .rel.${RODATA_NAME}   ${RELOCATING-0} : { *(.rel.${RODATA_NAME}${RELOCATING+ .rel.${RODATA_NAME}.* .rel.gnu.linkonce.r.*}) }
++  .rela.${RODATA_NAME}  ${RELOCATING-0} : { *(.rela.${RODATA_NAME}${RELOCATING+ .rela.${RODATA_NAME}.* .rela.gnu.linkonce.r.*}) }
++  ${OTHER_READONLY_RELOC_SECTIONS}
++  .rel.data.rel.ro ${RELOCATING-0} : { *(.rel.data.rel.ro${RELOCATING+ .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*}) }
++  .rela.data.rel.ro ${RELOCATING-0} : { *(.rela.data.rel.ro${RELOCATING+ .rela.data.rel.ro.* .rela.gnu.linkonce.d.rel.ro.*}) }
++  .rel.data     ${RELOCATING-0} : { *(.rel.data${RELOCATING+ .rel.data.* .rel.gnu.linkonce.d.*}) }
++  .rela.data    ${RELOCATING-0} : { *(.rela.data${RELOCATING+ .rela.data.* .rela.gnu.linkonce.d.*}) }
++  ${OTHER_READWRITE_RELOC_SECTIONS}
++  .rel.tdata	${RELOCATING-0} : { *(.rel.tdata${RELOCATING+ .rel.tdata.* .rel.gnu.linkonce.td.*}) }
++  .rela.tdata	${RELOCATING-0} : { *(.rela.tdata${RELOCATING+ .rela.tdata.* .rela.gnu.linkonce.td.*}) }
++  .rel.tbss	${RELOCATING-0} : { *(.rel.tbss${RELOCATING+ .rel.tbss.* .rel.gnu.linkonce.tb.*}) }
++  .rela.tbss	${RELOCATING-0} : { *(.rela.tbss${RELOCATING+ .rela.tbss.* .rela.gnu.linkonce.tb.*}) }
++  .rel.ctors    ${RELOCATING-0} : { *(.rel.ctors) }
++  .rela.ctors   ${RELOCATING-0} : { *(.rela.ctors) }
++  .rel.dtors    ${RELOCATING-0} : { *(.rel.dtors) }
++  .rela.dtors   ${RELOCATING-0} : { *(.rela.dtors) }
++  .rel.got      ${RELOCATING-0} : { *(.rel.got) }
++  .rela.got     ${RELOCATING-0} : { *(.rela.got) }
++  ${OTHER_GOT_RELOC_SECTIONS}
++  ${REL_SDATA}
++  ${REL_SBSS}
++  ${REL_SDATA2}
++  ${REL_SBSS2}
++  .rel.${BSS_NAME}      ${RELOCATING-0} : { *(.rel.${BSS_NAME}${RELOCATING+ .rel.${BSS_NAME}.* .rel.gnu.linkonce.b.*}) }
++  .rela.${BSS_NAME}     ${RELOCATING-0} : { *(.rela.${BSS_NAME}${RELOCATING+ .rela.${BSS_NAME}.* .rela.gnu.linkonce.b.*}) }
++  ${REL_LARGE}
++  ${IREL_IN_PLT+$REL_IFUNC}
++  ${IREL_IN_PLT+$RELA_IFUNC}
++  ${IREL_IN_PLT-$REL_IPLT}
++  ${IREL_IN_PLT-$RELA_IPLT}
++EOF
++
++if [ -n "$COMBRELOC" ]; then
++cat >> ldscripts/dyntmp.$$ <<EOF
++  .rel.dyn      ${RELOCATING-0} :
++    {
++EOF
++sed -e '/^[ 	]*[{}][ 	]*$/d;/:[ 	]*$/d;/\.rela\./d;s/^.*: { *\(.*\)}$/      \1/' $COMBRELOC >> ldscripts/dyntmp.$$
++cat >> ldscripts/dyntmp.$$ <<EOF
++    }
++  .rela.dyn     ${RELOCATING-0} :
++    {
++EOF
++sed -e '/^[ 	]*[{}][ 	]*$/d;/:[ 	]*$/d;/\.rel\./d;s/^.*: { *\(.*\)}/      \1/' $COMBRELOC >> ldscripts/dyntmp.$$
++cat >> ldscripts/dyntmp.$$ <<EOF
++    }
++EOF
++fi
++
++cat >> ldscripts/dyntmp.$$ <<EOF
++  .rel.plt      ${RELOCATING-0} :
++    {
++      *(.rel.plt)
++      ${IREL_IN_PLT+${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rel_iplt_start = .);}}}
++      ${IREL_IN_PLT+${RELOCATING+*(.rel.iplt)}}
++      ${IREL_IN_PLT+${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rel_iplt_end = .);}}}
++    }
++  .rela.plt     ${RELOCATING-0} :
++    {
++      *(.rela.plt)
++      ${IREL_IN_PLT+${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rela_iplt_start = .);}}}
++      ${IREL_IN_PLT+${RELOCATING+*(.rela.iplt)}}
++      ${IREL_IN_PLT+${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__rela_iplt_end = .);}}}
++    }
++  ${OTHER_PLT_RELOC_SECTIONS}
++EOF
++
++emit_dyn()
++{
++  if test -z "${NO_REL_RELOCS}${NO_RELA_RELOCS}"; then
++    cat ldscripts/dyntmp.$$
++  else
++    if test -z "${NO_REL_RELOCS}"; then
++      sed -e '/^[ 	]*\.rela\.[^}]*$/,/}/d' -e '/^[ 	]*\.rela\./d' ldscripts/dyntmp.$$
++    fi
++    if test -z "${NO_RELA_RELOCS}"; then
++      sed -e '/^[ 	]*\.rel\.[^}]*$/,/}/d' -e '/^[ 	]*\.rel\./d' ldscripts/dyntmp.$$
++    fi
++  fi
++  rm -f ldscripts/dyntmp.$$
++}
++
++test -n "${NON_ALLOC_DYN}${SEPARATE_CODE}" || emit_dyn
++
++cat <<EOF
++
++  ${TEXT_PLT+${PLT}}
++  ${TINY_READONLY_SECTION}
++  .text    ${RELOCATING-0} :
++  {
++    PROVIDE (__text_start = .);
++    ${RELOCATING+${TEXT_START_SYMBOLS}}
++    *(.text)
++    *(.text.*)
++    KEEP(*(.eh_frame*))
++    *(.text .stub${RELOCATING+ .text.* .gnu.linkonce.t.*})
++    /* .gnu.warning sections are handled specially by elf32.em.  */
++    *(.gnu.warning)
++    PROVIDE (__text_end = .);
++  } =${NOP-0}
++  PROVIDE (__text_size = SIZEOF(.text));  
++
++  .init         ${RELOCATING-0} :
++  {
++    ${RELOCATING+${INIT_START}}
++    KEEP (*(SORT_NONE(.init)))
++    ${RELOCATING+${INIT_END}}
++  } ${FILL}
++
++  .fini         ${RELOCATING-0} :
++  {
++    ${RELOCATING+${FINI_START}}
++    KEEP (*(SORT_NONE(.fini)))
++    ${RELOCATING+${FINI_END}}
++  } ${FILL}
++  .ctdt         ${RELOCATING-0} : { KEEP(*(.ctdt)) } =${NOP-0}
++  ${RELOCATING+PROVIDE (__${ETEXT_NAME} = .);}
++  ${RELOCATING+PROVIDE (_${ETEXT_NAME} = .);}
++  ${RELOCATING+PROVIDE (${ETEXT_NAME} = .);}
++EOF
++
++if test -n "${SEPARATE_CODE}"; then
++  if test -n "${RODATA_ADDR}"; then
++    RODATA_ADDR="\
++SEGMENT_START(\"rodata-segment\", ${RODATA_ADDR}) + SIZEOF_HEADERS"
++  else
++    RODATA_ADDR="ALIGN(${SEGMENT_SIZE}) + (. & (${MAXPAGESIZE} - 1))}"
++    RODATA_ADDR="SEGMENT_START(\"rodata-segment\", ${RODATA_ADDR})"
++  fi
++  if test -n "${SHLIB_RODATA_ADDR}"; then
++    SHLIB_RODATA_ADDR="\
++SEGMENT_START(\"rodata-segment\", ${SHLIB_RODATA_ADDR}) + SIZEOF_HEADERS"
++  else
++    SHLIB_RODATA_ADDR="SEGMENT_START(\"rodata-segment\", ${SHLIB_RODATA_ADDR})"
++    SHLIB_RODATA_ADDR="ALIGN(${SEGMENT_SIZE}) + (. & (${MAXPAGESIZE} - 1))"
++  fi
++  cat <<EOF
++  /* Adjust the address for the rodata segment.  We want to adjust up to
++     the same address within the page on the next page up.  */
++  ${CREATE_SHLIB-${CREATE_PIE-${RELOCATING+. = ${RODATA_ADDR};}}}
++  ${CREATE_SHLIB+${RELOCATING+. = ${SHLIB_RODATA_ADDR};}}
++  ${CREATE_PIE+${RELOCATING+. = ${SHLIB_RODATA_ADDR};}}
++EOF
++  emit_early_ro
++  emit_dyn
++fi
++
++cat <<EOF
++  ${WRITABLE_RODATA-${RODATA}}
++  .${RODATA_NAME}1      ${RELOCATING-0} : { *(.${RODATA_NAME}1) }
++  ${CREATE_SHLIB-${SDATA2}}
++  ${CREATE_SHLIB-${SBSS2}}
++  ${OTHER_READONLY_SECTIONS}
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RO { *(.gcc_except_table
++  .gcc_except_table.*) }
++  /* These sections are generated by the Sun/Oracle C++ compiler.  */
++  .exception_ranges ${RELOCATING-0} : ONLY_IF_RO { *(.exception_ranges
++  .exception_ranges*) }
++
++  /* Adjust the address for the data segment.  We want to adjust up to
++     the same address within the page on the next page up.  */
++  ${CREATE_SHLIB-${CREATE_PIE-${RELOCATING+. = ${DATA_ADDR-${DATA_SEGMENT_ALIGN}};}}}
++  ${CREATE_SHLIB+${RELOCATING+. = ${SHLIB_DATA_ADDR-${DATA_SEGMENT_ALIGN}};}}
++  ${CREATE_PIE+${RELOCATING+. = ${SHLIB_DATA_ADDR-${DATA_SEGMENT_ALIGN}};}}
++
++  /* Exception handling  */
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RW { *(.gcc_except_table .gcc_except_table.*) }
++  .exception_ranges ${RELOCATING-0} : ONLY_IF_RW { *(.exception_ranges .exception_ranges*) }
++
++  /* Thread Local Storage sections  */
++  .tdata	${RELOCATING-0} : { *(.tdata${RELOCATING+ .tdata.* .gnu.linkonce.td.*}) }
++  .tbss		${RELOCATING-0} : { *(.tbss${RELOCATING+ .tbss.* .gnu.linkonce.tb.*})${RELOCATING+ *(.tcommon)} }
++
++  .preinit_array   ${RELOCATING-0} :
++  {
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__preinit_array_start = .);}}
++    KEEP (*(.preinit_array))
++    ${RELOCATING+${CREATE_SHLIB-PROVIDE_HIDDEN (${USER_LABEL_PREFIX}__preinit_array_end = .);}}
++  }
++  ${RELOCATING+${INIT_ARRAY}}
++  ${RELOCATING+${FINI_ARRAY}}
++  ${SMALL_DATA_CTOR-${RELOCATING+${CTOR}}}
++  ${SMALL_DATA_DTOR-${RELOCATING+${DTOR}}}
++  .jcr          ${RELOCATING-0} : { KEEP (*(.jcr)) }
++
++  ${RELOCATING+${DATARELRO}}
++  ${OTHER_RELRO_SECTIONS}
++  ${TEXT_DYNAMIC-${DYNAMIC}}
++  ${DATA_GOT+${RELRO_NOW+${GOT}}}
++  ${DATA_GOT+${RELRO_NOW+${GOTPLT}}}
++  ${DATA_GOT+${RELRO_NOW-${SEPARATE_GOTPLT+${GOT}}}}
++  ${RELOCATING+${DATA_SEGMENT_RELRO_END}}
++  ${DATA_GOT+${RELRO_NOW-${SEPARATE_GOTPLT-${GOT}}}}
++  ${DATA_GOT+${RELRO_NOW-${GOTPLT}}}
++
++  ${DATA_PLT+${PLT_BEFORE_GOT-${PLT}}}
++
++  .data         ${RELOCATING-0} :
++  {
++    PROVIDE (__data_start = .);
++    ${RELOCATING+${DATA_START_SYMBOLS}}
++    *(.data${RELOCATING+ .data.* .gnu.linkonce.d.*})
++    ${CONSTRUCTING+SORT(CONSTRUCTORS)}
++    PROVIDE (__data_end = .);
++  }
++  PROVIDE (__data_size = SIZEOF(.data));
++  .data1        ${RELOCATING-0} : { *(.data1) }
++  ${WRITABLE_RODATA+${RODATA}}
++  ${OTHER_READWRITE_SECTIONS}
++  ${SMALL_DATA_CTOR+${RELOCATING+${CTOR}}}
++  ${SMALL_DATA_DTOR+${RELOCATING+${DTOR}}}
++  ${DATA_PLT+${PLT_BEFORE_GOT+${PLT}}}
++  ${SDATA_GOT+${RELOCATING+${OTHER_GOT_SYMBOLS+. = .; ${OTHER_GOT_SYMBOLS}}}}
++  ${SDATA_GOT+${GOT}}
++  ${SDATA_GOT+${OTHER_GOT_SECTIONS}}
++  ${SDATA}
++  ${OTHER_SDATA_SECTIONS}
++  ${RELOCATING+${DATA_END_SYMBOLS-${USER_LABEL_PREFIX}_edata = .; PROVIDE (${USER_LABEL_PREFIX}edata = .);}}
++  ${RELOCATING+. = .;}
++  ${RELOCATING+${USER_LABEL_PREFIX}__bss_start = .;}
++  ${RELOCATING+${OTHER_BSS_SYMBOLS}}
++  ${SBSS}
++  ${BSS_PLT+${PLT}}
++  .${BSS_NAME}          ${RELOCATING-0} :
++  {
++   PROVIDE (__bss_start = .);
++   *(.dyn${BSS_NAME})
++   *(.${BSS_NAME}${RELOCATING+ .${BSS_NAME}.* .gnu.linkonce.b.*})
++   *(COMMON)
++   /* Align here to ensure that the .bss section occupies space up to
++      _end.  Align after .bss to ensure correct alignment even if the
++      .bss section disappears because there are no input sections.
++      FIXME: Why do we need it? When there is no .bss section, we don't
++      pad the .data section.  */
++   ${RELOCATING+. = ALIGN(. != 0 ? ${ALIGNMENT} : 1);}
++   PROVIDE (__bss_end = .);
++  }
++  PROVIDE (__bss_size = SIZEOF(.bss));
++  ${OTHER_BSS_SECTIONS}
++  ${RELOCATING+${OTHER_BSS_END_SYMBOLS}}
++  ${RELOCATING+. = ALIGN(${ALIGNMENT});}
++  ${LARGE_SECTIONS}
++  ${RELOCATING+. = ALIGN(${ALIGNMENT});}
++  ${RELOCATING+${OTHER_END_SYMBOLS}}
++  ${RELOCATING+${END_SYMBOLS-${USER_LABEL_PREFIX}_end = .; PROVIDE (${USER_LABEL_PREFIX}end = .);}}
++  ${RELOCATING+${DATA_SEGMENT_END}}
++EOF
++
++test -z "${NON_ALLOC_DYN}" || emit_dyn
++
++cat <<EOF
++  /* Stabs debugging sections.  */
++  .stab          0 : { *(.stab) }
++  .stabstr       0 : { *(.stabstr) }
++  .stab.excl     0 : { *(.stab.excl) }
++  .stab.exclstr  0 : { *(.stab.exclstr) }
++  .stab.index    0 : { *(.stab.index) }
++  .stab.indexstr 0 : { *(.stab.indexstr) }
++
++  .comment       0 : { *(.comment) }
++
++  /* DWARF debug sections.
++     Symbols in the DWARF debugging sections are relative to the beginning
++     of the section so we begin them at 0.  */
++
++  /* DWARF 1 */
++  .debug          0 : { *(.debug) }
++  .line           0 : { *(.line) }
++
++  /* GNU DWARF 1 extensions */
++  .debug_srcinfo  0 : { *(.debug_srcinfo) }
++  .debug_sfnames  0 : { *(.debug_sfnames) }
++
++  /* DWARF 1.1 and DWARF 2 */
++  .debug_aranges  0 : { *(.debug_aranges) }
++  .debug_pubnames 0 : { *(.debug_pubnames) }
++
++  /* DWARF 2 */
++  .debug_info     0 : { *(.debug_info${RELOCATING+ .gnu.linkonce.wi.*}) }
++  .debug_abbrev   0 : { *(.debug_abbrev) }
++  .debug_line     0 : { *(.debug_line) }
++  .debug_frame    0 : { *(.debug_frame) }
++  .debug_str      0 : { *(.debug_str) }
++  .debug_loc      0 : { *(.debug_loc) }
++  .debug_macinfo  0 : { *(.debug_macinfo) }
++
++  /* SGI/MIPS DWARF 2 extensions */
++  .debug_weaknames 0 : { *(.debug_weaknames) }
++  .debug_funcnames 0 : { *(.debug_funcnames) }
++  .debug_typenames 0 : { *(.debug_typenames) }
++  .debug_varnames  0 : { *(.debug_varnames) }
++
++  /* DWARF 3 */
++  .debug_pubtypes 0 : { *(.debug_pubtypes) }
++  .debug_ranges   0 : { *(.debug_ranges) }
++
++  /* DWARF Extension.  */
++  .debug_macro    0 : { *(.debug_macro) }
++
++  ${TINY_DATA_SECTION}
++  ${TINY_BSS_SECTION}
++
++  ${STACK_ADDR+${STACK}}
++  ${ATTRS_SECTIONS}
++  ${OTHER_SECTIONS}
++  ${RELOCATING+${OTHER_SYMBOLS}}
++  ${RELOCATING+${DISCARDED}}
++}
++EOF
+diff -ruN binutils-2.45/opcodes/ppc-dis.c binutils-2.45_mos/opcodes/ppc-dis.c
+--- binutils-2.45/opcodes/ppc-dis.c	2025-07-27 02:00:00.000000000 +0300
++++ binutils-2.45_mos/opcodes/ppc-dis.c	2025-07-27 14:39:08.712060584 +0300
+@@ -288,6 +288,8 @@
+   { "titan",   (PPC_OPCODE_PPC | PPC_OPCODE_BOOKE | PPC_OPCODE_PMR
+ 		| PPC_OPCODE_RFMCI | PPC_OPCODE_TITAN),
+     0 },
++  { "vec", PPC_OPCODE_PPC,
++    PPC_OPCODE_ALTIVEC },
+   { "vle",     (PPC_OPCODE_PPC | PPC_OPCODE_BOOKE | PPC_OPCODE_SPE
+ 		| PPC_OPCODE_ISEL | PPC_OPCODE_EFS | PPC_OPCODE_BRLOCK
+ 		| PPC_OPCODE_PMR | PPC_OPCODE_CACHELCK | PPC_OPCODE_RFMCI

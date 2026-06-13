@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/04/28 20:45:02 js Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/13 15:32:44 js Exp $
 
-DISTNAME=	sdk-source-20230510
-PKGNAME=	ppc-morphos-binutils-2.40
-PKGREVISION=	1
+DISTNAME=	binutils-2.45.1
+PKGNAME=	ppc-morphos-${DISTNAME}
 CATEGORIES=	cross
-MASTER_SITES=	https://morphos-team.net/files/src/sdk/
+MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	js@NetBSD.org
@@ -12,7 +11,6 @@ HOMEPAGE=	https://www.morphos-team.net/
 COMMENT=	Binutils for ppc-morphos
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_LANGUAGES=		c c++
@@ -28,13 +26,8 @@ CONFIGURE_ARGS+=	--disable-initfini-array
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS} -DMORPHOS_TARGET"
 
-post-extract:
-	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
-		${XZCAT} binutils-${PKGVERSION_NOREV}.tar.xz | ${GTAR} xf -
-
 pre-patch:
-	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
-		${PATCH} -p0 <binutils-${PKGVERSION_NOREV}-morphos.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <${FILESDIR}/binutils-2.45.1-morphos.diff
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
