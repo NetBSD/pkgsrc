@@ -1,15 +1,44 @@
-$NetBSD: patch-configure,v 1.1 2021/07/22 15:58:49 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2026/06/13 10:51:14 markd Exp $
 
 Shell portability.
 
---- configure.orig	2021-06-02 06:20:17.000000000 +0000
+--- configure.orig	2026-06-01 10:24:45.000000000 +0000
 +++ configure
-@@ -4181,7 +4181,7 @@ fi
- 
+@@ -15705,7 +15705,7 @@ printf "%s\n" "yes" >&6; }
+         with_libbrotlidec=yes
+ fi
+ fi
+- if test "${with_libbrotlienc}" == "yes" && test "${with_libbrotlidec}" == "yes"; then
++ if test "${with_libbrotlienc}" = "yes" && test "${with_libbrotlidec}" = "yes"; then
+   HAVE_LIBBROTLI_TRUE=
+   HAVE_LIBBROTLI_FALSE='#'
+ else
+@@ -15816,7 +15816,7 @@ fi
  case "$with_hiredis" in #(
    yes) :
--    if test "$HIREDIS_LIBS" == ""; then
-+    if test "$HIREDIS_LIBS" = ""; then
+ 
+-		if test "$HIREDIS_LIBS" == ""; then
++		if test "$HIREDIS_LIBS" = ""; then
  pkg_failed=no
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for hiredis" >&5
  printf %s "checking for hiredis... " >&6; }
+@@ -15987,15 +15987,15 @@ fi
+ 
+ if test -n "$with_jq"
+ then
+-	if test "$JQ_CFLAGS" == ""; then
+-		if test "$with_jq" == "yes"; then
++	if test "$JQ_CFLAGS" = ""; then
++		if test "$with_jq" = "yes"; then
+ 			JQ_CFLAGS="-I/usr/include"
+ 		else
+ 			JQ_CFLAGS="-I$with_jq/include"
+ 		fi
+ 	fi
+-	if test "$JQ_LIBS" == ""; then
+-		if test "$with_jq" == "yes"; then
++	if test "$JQ_LIBS" = ""; then
++		if test "$with_jq" = "yes"; then
+ 			JQ_LIBS="-L/usr/lib -ljq"
+ 		else
+ 			JQ_LIBS="-L$with_jq/lib -ljq"
