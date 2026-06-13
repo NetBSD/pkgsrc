@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2026/04/28 12:11:52 morr Exp $
+# $NetBSD: Makefile,v 1.82 2026/06/13 15:49:54 wiz Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -8,7 +8,7 @@ COMMENT=		Vim editor (vi clone) without GUI
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
 
-CONFLICTS+=		vim-gtk2-[0-9]* vim-gtk3-[0-9]* vim-motif-[0-9]*
+CONFLICTS+=		vim-gtk2-[0-9]* vim-gtk3-[0-9]* vim-gtk4-[0-9]* vim-motif-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-gui=no --without-x
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
