@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2026/06/11 07:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2026/06/13 14:41:19 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.61
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnumeric.org/
+HOMEPAGE=	https://gnome.pages.gitlab.gnome.org/gnumeric-web//
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
