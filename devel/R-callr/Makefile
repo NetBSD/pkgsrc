@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/06/07 21:55:07 mef Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/13 11:45:44 mef Exp $
 
 R_PKGNAME=	callr
 R_PKGVER=	3.8.0
@@ -9,6 +9,7 @@ COMMENT=	Call R from R
 LICENSE=	mit
 
 DEPENDS+=	R-processx>=3.8.2:../../sysutils/R-processx
+DEPENDS+=	R-otel-[0-9]*:../../devel/R-otel
 
 # Package suggested but not available: 'asciicast'
 
