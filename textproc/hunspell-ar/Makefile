@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 13:09:26 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/13 14:39:46 wiz Exp $
 
 VERSION=		20080110
 DICTNAME=		ar
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ayaspell/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wiki.services.openoffice.org/wiki/Dictionaries
+HOMEPAGE=		https://wiki.services.openoffice.org/wiki/Dictionaries
 COMMENT=		Arabic dictionary for hunspell
 
 USE_LANGUAGES=		# none
