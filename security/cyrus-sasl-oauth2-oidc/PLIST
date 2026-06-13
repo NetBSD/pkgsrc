@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/13 11:21:21 markd Exp $
+lib/sasl2/liboauth2.la
+lib/sasl2/liboauthbearer.so
+lib/sasl2/libxoauth2.so
+share/doc/cyrus-sasl-oauth2-oidc/README.md
