@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3767 2026/06/12 23:52:24 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3768 2026/06/13 00:04:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/R-vroom to 1.7.1 [mef 2026-06-12]
 	Updated graphics/R-tkrplot to 0.0.32 [mef 2026-06-12]
 	Updated math/R-RNetCDF to 2.11.1 [mef 2026-06-12]
+	Updated math/R-DBI to 1.3.0 [mef 2026-06-13]
