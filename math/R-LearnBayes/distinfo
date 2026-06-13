@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/06/13 00:16:00 mef Exp $
 
-BLAKE2s (R/LearnBayes_2.15.1.tar.gz) = 75f8711c048697c555d9c6406c6fee7cd680494725656d3c1bdf399fe11e97eb
-SHA512 (R/LearnBayes_2.15.1.tar.gz) = 3534c49db81a3205b2b806db0a3f5f8540c5cb1cb6f927b9305c3ba80e8b955f1b0877285d7ff360e78416569ad6e82bdc519979538faa58b0e0d37ede6e71e7
-Size (R/LearnBayes_2.15.1.tar.gz) = 794622 bytes
+BLAKE2s (R/LearnBayes_2.15.2.tar.gz) = ccd5e184567011b3f962b6186cc62f86683cd0426a808f9b5ee8341540927575
+SHA512 (R/LearnBayes_2.15.2.tar.gz) = 5d6bfd2774dd7d51fe925b2f17ba757436ab5cfa9ffb8b29bb1c544c99b3976ce0704d1f0f361e0a80c2bba1ff96842d5dcef92073feab0621e1556b1d6da5e1
+Size (R/LearnBayes_2.15.2.tar.gz) = 89218 bytes
