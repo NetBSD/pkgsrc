@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2020/08/08 12:48:56 leot Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/06/13 15:23:37 wiz Exp $
 
 DISTNAME=	john-1.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security textproc
 MASTER_SITES=	http://www.openwall.com/john/k/
 EXTRACT_SUFX=	.tar.xz
@@ -85,7 +84,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/run/john ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/run/mailer ${DESTDIR}${PREFIX}/bin
 	# configuration file
-	${INSTALL_DATA} ${WRKSRC}/run/john.conf ${DESTDIR}${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/john.conf ${DESTDIR}${PREFIX}/share/john/john.ini
 	# symbolic links
 .for i in unafs unique unshadow
 	${LN} -sf john ${DESTDIR}${PREFIX}/bin/${i}

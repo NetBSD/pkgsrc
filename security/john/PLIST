@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/08/08 12:42:22 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/06/13 15:23:37 wiz Exp $
 bin/john
 bin/mailer
 bin/unafs
@@ -15,7 +15,7 @@ share/john/alnum.chr
 share/john/alpha.chr
 share/john/ascii.chr
 share/john/digits.chr
-share/john/john.conf
+share/john/john.ini
 share/john/lm_ascii.chr
 share/john/lower.chr
 share/john/lowernum.chr
