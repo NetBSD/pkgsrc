@@ -1,5 +1,5 @@
---- gcc-11.1.0-old/libstdc++-v3/include/c_compatibility/fenv.h	2021-04-27 13:00:16.000000000 +0300
-+++ gcc-11.1.0-new/libstdc++-v3/include/c_compatibility/fenv.h	2021-06-21 22:57:48.553142842 +0300
+--- gcc-15.2.0.orig/libstdc++-v3/include/c_compatibility/fenv.h	2025-08-08 09:51:45.775148372 +0300
++++ gcc-15.2.0/libstdc++-v3/include/c_compatibility/fenv.h	2025-08-08 12:36:34.566775350 +0300
 @@ -26,6 +26,10 @@
   *  This is a Standard C++ Library header.
   */
@@ -11,15 +11,15 @@
  #ifndef _GLIBCXX_FENV_H
  #define _GLIBCXX_FENV_H 1
  
-@@ -79,3 +83,5 @@
+@@ -86,3 +90,5 @@
  #endif // C++11
  
  #endif // _GLIBCXX_FENV_H
 +
 +#endif
---- gcc-11.1.0-old/libstdc++-v3/include/c_global/cfenv	2021-04-27 13:00:16.000000000 +0300
-+++ gcc-11.1.0-new/libstdc++-v3/include/c_global/cfenv	2021-06-21 22:54:39.506005252 +0300
-@@ -37,9 +37,11 @@
+--- gcc-15.2.0.orig/libstdc++-v3/include/c_global/cfenv	2025-08-08 09:51:45.776484451 +0300
++++ gcc-15.2.0/libstdc++-v3/include/c_global/cfenv	2025-08-08 12:35:52.862460141 +0300
+@@ -39,9 +39,11 @@
  
  #include <bits/c++config.h>
  
@@ -32,5 +32,5 @@
 +#include_next <fenv.h>
 +#undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
  
- #ifdef _GLIBCXX_USE_C99_FENV_TR1
+ #ifdef _GLIBCXX_USE_C99_FENV
  

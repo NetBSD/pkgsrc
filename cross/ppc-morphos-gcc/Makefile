@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/04/04 01:29:41 js Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/13 15:58:31 js Exp $
 
-DISTNAME=	gcc-15.1.0
-PKGREVISION=	1
+DISTNAME=	gcc-15.2.0
 PKGNAME=	ppc-morphos-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
@@ -52,6 +51,8 @@ pre-patch:
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <${FILESDIR}/morphos-std-fastfloat.diff
 	${RUN} cd ${WRKSRC} && ${PATCH} -p0 <${FILESDIR}/fix-saveds.diff
 	${RUN} cd ${WRKSRC} && ${PATCH} -p0 <${FILESDIR}/objc-saveds.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <${FILESDIR}/libcpp-disable-canonicalize.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p0 <${FILESDIR}/const-baserel.diff
 	${RUN} find ${WRKSRC} -name configure -print0 | xargs -0 -r perl -i.orig -p -e "s|toolexecdir='\\\$$\(libdir\)/gcc/\\\$$\(target_alias\)'|toolexecdir='\\\$$(libdir)/gcc-lib/\\\$$(target_alias)'|g;"
 	${RUN} find ${WRKSRC} -name Makefile.in -print0 | xargs -0 -r perl -i.orig -p -e "s|= \\\$$\(libexecdir\)/gcc/\\\$$\(real_target_noncanonical\)|= \\\$$(libexecdir)/gcc-lib/\\\$$(real_target_noncanonical)|g;s|= \\\$$\(libdir\)/gcc/\\\$$\(target_noncanonical\)|= \\\$$(libdir)/gcc-lib/\\\$$(target_noncanonical)|g;"
 
