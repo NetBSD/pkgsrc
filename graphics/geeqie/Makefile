@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2026/06/11 07:17:05 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2026/06/13 14:40:56 wiz Exp $
 
 DISTNAME=	geeqie-2.7
 PKGREVISION=	5
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.geeqie.org/
+HOMEPAGE=	https://www.geeqie.org/
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
 
