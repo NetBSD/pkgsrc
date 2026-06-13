@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/14 12:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/13 12:27:28 gdt Exp $
 
 DISTNAME=	libomemo-c-0.5.1
 PKGREVISION=	2
@@ -12,13 +12,26 @@ HOMEPAGE=	https://github.com/dino/libomemo-c/
 COMMENT=	OMEMO library (asynchronous ratcheting forward-secrecy)
 LICENSE=	gnu-gpl-v3
 
+USE_LANGUAGES=	c
+
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/libomemo-c.pc.in
 
-# Upstream documents cmake but meson works better.
-# https://github.com/dino/libomemo-c/issues/13
-.include "../../devel/meson/build.mk"
+# Upstream README.md says that the build system is cmake.  However
+# that has multiple problems, and building with meson seems to work.
+#   https://github.com/dino/libomemo-c/issues/13
+
+LIBOMEMO_BUILD=	meson
+
+.if !empty(LIBOMEMO_BUILD:Mmeson)
+.  include "../../devel/meson/build.mk"
+.else
+# The cmake builds tries to use a c++ compiler and exits when that fails.
+# It fails (correctly) if USE_LANGUAGES does not contain c++
+USE_LANGUAGES+=		c++
+.  include "../../devel/cmake/build.mk"
+.endif
 
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/protobuf-c/buildlink3.mk"
