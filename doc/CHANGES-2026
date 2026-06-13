@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3782 2026/06/13 08:23:16 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3783 2026/06/13 11:31:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5745,3 +5745,12 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-python-discovery to 1.4.2 [adam 2026-06-13]
 	Updated www/esbuild to 0.28.1 [kikadf 2026-06-13]
 	Updated www/chromium to 149.0.7827.114 [kikadf 2026-06-13]
+	Updated editors/texworks to 0.6.11 [markd 2026-06-13]
+	Updated editors/texstudio to 4.9.5 [markd 2026-06-13]
+	Updated editors/lyx to 2.5.1 [markd 2026-06-13]
+	Updated textproc/cjose to 0.6.2.6 [markd 2026-06-13]
+	Updated www/ap-auth-openidc to 2.4.19.3 [markd 2026-06-13]
+	Added security/liboauth2 version 2.3.0 [markd 2026-06-13]
+	Added security/liboauth2-apache version 2.3.0 [markd 2026-06-13]
+	Added security/cyrus-sasl-oauth2-oidc version 1.0.2 [markd 2026-06-13]
+	Added www/ap2-oauth2 version 4.2.0 [markd 2026-06-13]
