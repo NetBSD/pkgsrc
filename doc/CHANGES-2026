@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3775 2026/06/13 02:10:21 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.3776 2026/06/13 05:30:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5729,3 +5729,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R-MatrixModels to 0.5.4 [mef 2026-06-13]
 	Updated math/R-RPostgreSQL to 0.7.8 [mef 2026-06-13]
 	Updated www/pound to 4.23 [gutteridge 2026-06-13]
+	Updated audio/fluidsynth to 2.5.5 [adam 2026-06-13]
+	Updated math/fast_float to 8.2.9 [adam 2026-06-13]
