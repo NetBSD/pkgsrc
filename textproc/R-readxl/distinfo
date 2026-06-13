@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/06/10 13:17:47 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/06/13 11:42:26 mef Exp $
 
-BLAKE2s (R/readxl_1.3.1.tar.gz) = 697a490da2cf6df09c6adeb062859fbf0f6116b1404cc5ba5a5115f0daa9fa2e
-SHA512 (R/readxl_1.3.1.tar.gz) = befeb57b4b5eeb934e08927aca0c0026591d264c34a029f2d77509b60d466c7f8e5df7d11bd38865ab1010042eb30f93363bf0c6fce608ae724f1ccb0b402ac2
-Size (R/readxl_1.3.1.tar.gz) = 2056165 bytes
-SHA1 (patch-src_Makevars) = 45f469bf6e2342f5e64cd74fce8b6c58a10c99d2
+BLAKE2s (R/readxl_1.5.0.tar.gz) = 3724784b38a2d94d05f679e0dbfd65445c1ce5c063651b1d0da65e6334498e8b
+SHA512 (R/readxl_1.5.0.tar.gz) = 3c86ed073a5f84c7ad4aa3cc7f0c1a768c437fd8211f31e55605711e767103a7582ddb12061f39172fccf760057e372e17ff79ee0afb7c0862260b4f7b409cf4
+Size (R/readxl_1.5.0.tar.gz) = 2088990 bytes
+SHA1 (patch-src_Makevars) = db960fc12d9714771c03dcc5d7faa3625ecd732a
