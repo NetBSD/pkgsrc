@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/10/26 06:36:16 mef Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/13 00:12:38 mef Exp $
 
 R_PKGNAME=	ISwR
-R_PKGVER=	2.0-9
+R_PKGVER=	2.0-12
 CATEGORIES=	math databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
