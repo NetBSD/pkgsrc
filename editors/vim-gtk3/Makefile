@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/06/11 07:16:55 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/06/13 15:49:54 wiz Exp $
 
 PKGNAME=	vim-gtk3-${VIM_VERSION}.${VIM_PATCHLEVEL}
 PKGREVISION=	10
@@ -11,7 +11,7 @@ PKG_SUPPORTED_OPTIONS+=	gnome
 
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
-CONFLICTS+=		vim-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
+CONFLICTS+=		vim-[0-9]* vim-gtk2-[0-9]* vim-gtk4-[0-9]* vim-motif-[0-9]*
 
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2026/01/27 08:39:22 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2026/06/13 15:49:54 wiz Exp $
 
 PKGNAME=	vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 PKGREVISION=	8
@@ -9,7 +9,7 @@ COMMENT=	Vim editor (vi clone) with X11 GTK2 GUI
 
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
-CONFLICTS+=		vim-[0-9]* vim-gtk3-[0-9]* vim-motif-[0-9]*
+CONFLICTS+=		vim-[0-9]* vim-gtk3-[0-9]* vim-gtk4-[0-9]* vim-motif-[0-9]*
 
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 CONFIGURE_ARGS+=	--enable-gui=gtk2
