@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/11/09 13:33:04 mef Exp $
+$NetBSD: distinfo,v 1.2 2026/06/13 00:06:49 mef Exp $
 
-BLAKE2s (R/Deriv_4.1.6.tar.gz) = c4d7a8219867a0c98191a74f3f03317c5f5e12d4c6091c646166b1988350e856
-SHA512 (R/Deriv_4.1.6.tar.gz) = 8a0352844e0ae78b5dcaace33fdb4f5d8deebfbfc597fb8da35ca4bdf6d4bb74050e6c6b6f509443f19d01c9c51eb9ac4f96c916f8d68668d7b9c770fd99814e
-Size (R/Deriv_4.1.6.tar.gz) = 37831 bytes
+BLAKE2s (R/Deriv_4.2.0.tar.gz) = fd05b10c369714c1db864b24762199a8e4a06c82a4408eb0a0449fb2249bba7e
+SHA512 (R/Deriv_4.2.0.tar.gz) = e4873693d65b30143de7b7ebbab023567481626fafba9a664f0477057fdb7baeda4fe9107c87f1c9efdde6593fe36f1f1a68058beb3d965d5592f469965e7323
+Size (R/Deriv_4.2.0.tar.gz) = 38752 bytes

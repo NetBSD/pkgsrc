@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/11/09 13:33:04 mef Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/13 00:06:49 mef Exp $
 
 R_PKGNAME=	Deriv
-R_PKGVER=	4.1.6
+R_PKGVER=	4.2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Symbolic Differentiation
