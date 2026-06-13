@@ -1,0 +1,18 @@
+--- gcc-x.x.x/libcpp/files.cc.orig	2025-11-11 19:13:40.653252674 +0200
++++ gcc-x.x.x/libcpp/files.cc	2025-11-12 00:53:58.538194331 +0200
+@@ -399,6 +399,7 @@
+       char *copy;
+       void **pp;
+ 
++#ifndef __ixemul__
+       /* We try to canonicalize system headers.  For DOS based file
+        * system, we always try to shorten non-system headers, as DOS
+        * has a tighter constraint on max path length.  */
+@@ -417,6 +418,7 @@
+ 	      path = canonical_path;
+ 	    }
+ 	}
++#endif
+ 
+       hv = htab_hash_string (path);
+       if (htab_find_with_hash (pfile->nonexistent_file_hash, path, hv) != NULL)

@@ -1,5 +1,3 @@
-$NetBSD: patch-gcc_config_rs6000_rs6000.cc,v 1.1 2026/04/04 01:29:42 js Exp $
-
 Also use baserel for const - after all, something in a const might refer to
 something that gets relocated, so needs to be accessed baserel as well.
 
