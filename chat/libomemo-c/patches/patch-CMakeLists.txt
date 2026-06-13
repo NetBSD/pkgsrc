@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/06/13 12:27:28 gdt Exp $
+
+pkgsrc cmake in 202606 fails if minimum required is < 3.5.   Just
+increase it.
+
+See https://github.com/dino/libomemo-c/issues/13.
+
+--- CMakeLists.txt.orig	2025-03-29 17:30:00.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.4)
++cmake_minimum_required(VERSION 3.5)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMakeModules/")
+ project(omemo-c)
+ 
