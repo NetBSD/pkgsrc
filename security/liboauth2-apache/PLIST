@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/13 11:06:10 markd Exp $
+include/oauth2/apache.h
+lib/liboauth2_apache.la
+lib/pkgconfig/liboauth2_apache.pc

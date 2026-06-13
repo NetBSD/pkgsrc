@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/06/13 11:06:10 markd Exp $
+
+BLAKE2s (liboauth2-2.3.0.tar.gz) = 864821c9cd0fbffc5b8f710d0ee2401ba406dfca0f92c22003e7cbc73972ee97
+SHA512 (liboauth2-2.3.0.tar.gz) = 8190c6fdb1ff50e3f8d6d5c79e0a6d4f659f12679525eb48eaa6ec37304d7331e3dd31af24be1912091e05dffe84a4bdc9aed8cc23395fc71563fa702f7a0f5f
+Size (liboauth2-2.3.0.tar.gz) = 171261 bytes
+SHA1 (patch-Makefile.am) = 3fe2ae0eabcab9329681a7439619eb1e55246db1
+SHA1 (patch-src_proto.c) = 9a8b0f49184668352fd59228b3eed089729b0c3f
+SHA1 (patch-src_util.c) = 73ada74548e80fdd0cc699de70c22ef90bf3fee4

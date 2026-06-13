@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/13 11:06:10 markd Exp $
+include/oauth2/cache.h
+include/oauth2/cfg.h
+include/oauth2/http.h
+include/oauth2/ipc.h
+include/oauth2/jose.h
+include/oauth2/log.h
+include/oauth2/mem.h
+include/oauth2/oauth2.h
+include/oauth2/openidc.h
+include/oauth2/proto.h
+include/oauth2/session.h
+include/oauth2/util.h
+include/oauth2/version.h
+lib/liboauth2.la
+lib/pkgconfig/liboauth2.pc

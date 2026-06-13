@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1 2026/06/13 11:06:10 markd Exp $
+# used by security/liboauth2/Makefile
+# used by security/liboauth2-apache/Makefile
+
+DISTNAME=	liboauth2-2.3.0
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenIDC/}
+GITHUB_PROJECT=	liboauth2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-user@NetBSD.org
+HOMEPAGE=	https://github.com/OpenIDC/liboauth2
+LICENSE=	apache-2.0
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	automake pkg-config
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	${SH} ./autogen.sh
+
+DISTINFO_FILE=	${.CURDIR}/../../security/liboauth2/distinfo
+PATCHDIR=	${.CURDIR}/../../security/liboauth2/patches
