@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3769 2026/06/13 00:06:58 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3770 2026/06/13 00:09:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5723,3 +5723,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R-RNetCDF to 2.11.1 [mef 2026-06-12]
 	Updated math/R-DBI to 1.3.0 [mef 2026-06-13]
 	Updated math/R-Deriv to 4.2.0 [mef 2026-06-13]
+	Updated math/R-GPArotation to 2026.4.1 [mef 2026-06-13]
