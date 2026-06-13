@@ -1,0 +1,2 @@
+Generic library to build C-based OAuth 2.x and OpenID Connect servers and
+clients e.g. web-server plugins. - Apache specific support

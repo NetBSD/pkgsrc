@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2026/06/13 11:06:10 markd Exp $
+
+Use installed liboauth2
+
+--- Makefile.am.orig	2026-06-03 16:26:36.000000000 +0000
++++ Makefile.am
+@@ -139,7 +139,7 @@ liboauth2_apache_la_pkgconfig_DATA = lib
+ 
+ liboauth2_apache_la_CPPFLAGS = $(AM_CPPFLAGS) -DHAVE_APACHE
+ liboauth2_apache_la_CFLAGS = @APACHE_CFLAGS@ @PCRE2_CFLAGS@
+-liboauth2_apache_la_LIBADD = liboauth2.la @APR_LIBS@ @JANSSON_LIBS@
++liboauth2_apache_la_LIBADD = -loauth2 @APR_LIBS@ @JANSSON_LIBS@
+ liboauth2_apache_la_LDFLAGS = @LIBTOOL_EXTRA_FLAGS@
+ 
+ includesub_HEADERS += \
