@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/01/15 15:44:54 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/06/13 06:26:05 adam Exp $
 
-BLAKE2s (meson_python-0.19.0.tar.gz) = 7c7a4aab93fd83c957f6cd4ba186e20f14dd37917f21ba90052de9905ecea493
-SHA512 (meson_python-0.19.0.tar.gz) = 3ad3fd06a526c3e0b055eaabf67a574930b0d092c6fd6dd7e6ff773a7d1d0454de436352769a381d91f0b997dbcfbc9f83e1910bc2805beef15a6288cee1158f
-Size (meson_python-0.19.0.tar.gz) = 101504 bytes
+BLAKE2s (meson_python-0.20.0.tar.gz) = 21c143a2f6a723cc6c9593d5392b9fda32acf994f2e6752e9b6449d1425463bc
+SHA512 (meson_python-0.20.0.tar.gz) = 4ce654734c671a2e0b54bb906086e9bcdcf5840fa13fc5ba4360638930dd92dd206092aa18db433602384fb303f11bf18a85cc5c9efdf3f2271bdb96d790d6da
+Size (meson_python-0.20.0.tar.gz) = 102641 bytes
