@@ -5,3 +5,6 @@ works in synchronous and asynchronous messaging.  The fork adds
 support for OMEMO as defined in
 [XEP-0384](https://xmpp.org/extensions/xep-0384.html) versions 0.3.0
 and 0.4.0+.
+
+As of 2026-06, libomemo-c appears no longer being maintained upstream,
+since March of 2025.
