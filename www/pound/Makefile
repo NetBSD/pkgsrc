@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/03/21 23:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/06/13 02:10:06 gutteridge Exp $
 
-DISTNAME=	pound-4.16
+DISTNAME=	pound-4.23
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graygnuorg/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,13 +28,17 @@ USE_TOOLS+=		autoconf automake autoreconf makeinfo perl
 
 TEXINFO_REQD+=		7.0
 
+LUA_VERSIONS_ACCEPTED=	54 53
+.include "../../lang/lua/luaversion.mk"
+
 # from 'bootstrap'
 pre-configure:
 	cd ${WRKSRC} && \
 	perl md2txt.pl -l 4 README.md > README && \
 	autoreconf -fiv
 
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .include "../../mk/pthread.buildlink3.mk"
