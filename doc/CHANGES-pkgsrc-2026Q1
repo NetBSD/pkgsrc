@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.26 2026/06/10 01:33:51 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q1,v 1.1.2.27 2026/06/13 09:41:18 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -267,3 +267,10 @@ databases/ruby-sqlite3: Security fix
 
 Pullup ticket #7136 - requested by taca
 www/apache24: Security fix
+
+Pullup ticket #7137 - requested by nia
+www/palemoon: stability fix
+
+Pullup ticket #7138 - requested by bouyer
+sysutils/xen*: security fix
+
