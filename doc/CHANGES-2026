@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3780 2026/06/13 06:34:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3781 2026/06/13 07:29:11 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5743,3 +5743,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-testing to 1.81.1 [adam 2026-06-13]
 	Updated net/py-grpcio-tools to 1.81.1 [adam 2026-06-13]
 	Updated lang/py-python-discovery to 1.4.2 [adam 2026-06-13]
+	Updated www/esbuild to 0.28.1 [kikadf 2026-06-13]
