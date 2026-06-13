@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3776 2026/06/13 05:30:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3777 2026/06/13 05:41:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5731,3 +5731,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/pound to 4.23 [gutteridge 2026-06-13]
 	Updated audio/fluidsynth to 2.5.5 [adam 2026-06-13]
 	Updated math/fast_float to 8.2.9 [adam 2026-06-13]
+	Updated sysutils/restic to 0.19.0 [adam 2026-06-13]
+	Updated net/helm to 4.2.1 [adam 2026-06-13]
