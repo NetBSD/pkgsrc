@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/02/15 04:29:47 mef Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/13 11:04:42 mef Exp $
 
 R_PKGNAME=	lme4
 R_PKGVER=	1.1-36
@@ -24,6 +24,17 @@ TEST_DEPENDS+=	R-car-[0-9]*:../../math/R-car
 TEST_DEPENDS+=	R-pbkrtest-[0-9]*:../../math/R-pbkrtest
 
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=  Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

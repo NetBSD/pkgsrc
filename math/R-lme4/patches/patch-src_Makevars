@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makevars,v 1.1 2026/06/13 11:04:42 mef Exp $
+
+add 
+PKG_LIBS+= -lexecinfo
+for 
+Undefined PLT symbol "backtrace_symbols"
+
+--- src/Makevars.orig	2024-10-02 06:47:22.000000000 +0900
++++ src/Makevars	2026-06-13 10:15:20.973070879 +0900
+@@ -8,5 +8,5 @@ PKG_CXXFLAGS = -DEIGEN_DONT_VECTORIZE
+ ## is bad form.  Better to learn of bugs in an impolite way than not
+ ## to learn of them.
+ PKG_CXXFLAGS = -DNDEBUG -DEIGEN_DONT_VECTORIZE
+-
++@@PKG_LIBS@@
+ 

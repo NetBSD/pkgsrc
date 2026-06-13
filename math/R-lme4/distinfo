@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2025/02/15 04:29:47 mef Exp $
+$NetBSD: distinfo,v 1.12 2026/06/13 11:04:42 mef Exp $
 
 BLAKE2s (R/lme4_1.1-36.tar.gz) = 8199e27c9e2265e9b802b3d786ed95a30f1ff1d0f98a19701448b7f9a92b703b
 SHA512 (R/lme4_1.1-36.tar.gz) = 7d9b6b9fca73b920a77c523bd1efaf0aca2dc7934e50e51053444f56556ac8cca0178d660affab5f1831ae22438ded2dbb49fe80812946ed8d42635ed0c3a88e
 Size (R/lme4_1.1-36.tar.gz) = 3294834 bytes
+SHA1 (patch-src_Makevars) = fd51be7db16ba4583758920a0f9523ae12ddc1e8
