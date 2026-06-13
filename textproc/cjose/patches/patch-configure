@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/06/13 10:02:33 markd Exp $
+
+test ... == ...
+
+--- configure.orig	2026-06-02 13:25:04.000000000 +0000
++++ configure
+@@ -17082,7 +17082,7 @@ fi
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $rsapkcs1_5" >&5
+ printf "%s\n" "$rsapkcs1_5" >&6; }
+ 
+-if test "x$rsapkcs1_5" == xyes ; then
++if test "x$rsapkcs1_5" = xyes ; then
+     printf "%s\n" "#define HAVE_RSA_PKCS1_PADDING 1" >>confdefs.h
+ 
+ fi
