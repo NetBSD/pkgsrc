@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3791 2026/06/13 17:30:23 thorpej Exp $
+$NetBSD: CHANGES-2026,v 1.3792 2026/06/13 21:53:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added editors/vim-gtk4 version 9.2.0602 [wiz 2026-06-13]
 	Updated cross/ppc-morphos-gcc to 15.2.0 [js 2026-06-13]
 	Updated emulators/qemu to 11.0.1nb2 [thorpej 2026-06-13]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2026Q2 branch [maya 2026-06-13]
