@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.9 2022/06/06 04:27:14 dholland Exp $
+$NetBSD: patch-ae,v 1.10 2026/06/14 15:46:14 nia Exp $
 
 --- configure.orig	2002-10-04 05:33:59.000000000 +0000
 +++ configure
-@@ -3384,8 +3384,8 @@ case $target in
+@@ -2488,6 +2488,8 @@ else
+ #line 2489 "configure"
+ #include "confdefs.h"
+ #include <stdio.h>
++#include <stdlib.h>
++int
+ main()
+ {
+   FILE *f=fopen("conftestval", "w");
+@@ -3384,8 +3386,8 @@ case $target in
      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
    *)
@@ -13,7 +22,7 @@ $NetBSD: patch-ae,v 1.9 2022/06/06 04:27:14 dholland Exp $
      ;;
  esac
  
-@@ -4072,7 +4072,8 @@ fi
+@@ -4072,7 +4074,8 @@ fi
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
@@ -23,7 +32,7 @@ $NetBSD: patch-ae,v 1.9 2022/06/06 04:27:14 dholland Exp $
      # Not available on all versions:  check for include file.
      ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -4109,9 +4110,10 @@ test_ok=no
+@@ -4109,9 +4112,10 @@ fi
  fi
  
      if test "$test_ok" = yes; then
@@ -35,7 +44,7 @@ $NetBSD: patch-ae,v 1.9 2022/06/06 04:27:14 dholland Exp $
      fi
      ;;
  
-@@ -4181,9 +4183,9 @@ fi
+@@ -4181,9 +4185,9 @@ fi
    *-solaris2*)
  
      SHLIB_CFLAGS="-KPIC"
