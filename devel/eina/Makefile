@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:08 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/14 13:03:52 nia Exp $
 #
 
 DISTNAME=	eina-1.7.10
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+FORCE_C_STD=	gnu89
 
 PKGCONFIG_OVERRIDE=	eina.pc.in
 
