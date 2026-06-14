@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.33 2025/10/04 13:37:08 tnn Exp $
+$NetBSD: distinfo,v 1.34 2026/06/14 12:57:42 nia Exp $
 
 BLAKE2s (w3c-libwww-5.4.2.tgz) = f3885a50927cefff19d9931000c10fadeed77495eb7d18f92e9bb2e4d83c6750
 SHA512 (w3c-libwww-5.4.2.tgz) = d0dbe2be106c4987a5131c22c300bd3fcb1dce1881d0009269dd4e3c8068da1c07e2b1ca4bfd181640f8b467d4a378a9036f9b385d3a28badbe22b2ed74e0e74
 Size (w3c-libwww-5.4.2.tgz) = 2630357 bytes
 SHA1 (patch-Library_Makefile.in) = f0ea0413c13501cfa7d038ebfe602d6bdbf02de4
+SHA1 (patch-Library_src_HTFTP.c) = 32e71cc93e3fa59193616d2fe3904c538a237b89
 SHA1 (patch-Library_src_HTMIMImp.c) = 2f14df9867758c69f9e6110b16f75d017e032a8e
+SHA1 (patch-Library_src_HTRDF.c) = 8c51036160255024219ef922137166073f032d3f
 SHA1 (patch-Library_src_HTStyle.c) = 2c42a00ce5ed0ff0f34e779582684805e47edce2
+SHA1 (patch-Library_src_HTTCP.c) = 70a87960adeab6fb7e106ee8ae2de4e10411beb6
+SHA1 (patch-Library_src_HTTPGen.c) = 04c00086464ba727ce889b2a27cafcc3c98ff2c6
 SHA1 (patch-Library_src_Makefile.am) = 14bf3beef9e2e57e2574ccb806132b13d2b60af7
 SHA1 (patch-Library_src_Makefile.in) = cd685a468b93066c0da9e1171051da93cfd28bb4
 SHA1 (patch-Library_src_SSL_HTSSL.c) = 70a3b8876f7e11029375deebf9fa9f0667515e99
