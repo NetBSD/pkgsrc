@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/11/17 11:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/06/14 15:46:14 nia Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -13,6 +13,9 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	https://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
+
+# Uses "old-style function definitions".
+FORCE_C_STD=	gnu89
 
 MAKE_JOBS_SAFE=	no
 
