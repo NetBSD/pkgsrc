@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:46:09 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/06/14 15:56:38 nia Exp $
 
 BLAKE2s (gdchart0.11.5dev.tar.gz) = 0513a34339f81744831cc2ff216ec164d78b9677a01071ead66026454d10e828
 SHA512 (gdchart0.11.5dev.tar.gz) = dc08d02c0273fd41d0de193126b5fd8524473e76e17ea972ed1891354ca67dd406c1073f07fe5f11a2623b575499bb7e5633825d43033fdfd2b492d19db957a3
 Size (gdchart0.11.5dev.tar.gz) = 38783 bytes
 SHA1 (patch-ac) = 191ad026f5203cd115deb9c5e7d55f981858d401
+SHA1 (patch-gdc.c) = 3fd5fef9f2c043502f7ced614432483deac6485b
+SHA1 (patch-gdc__pie.c) = 2661081d8e7b747215b2d5f961ae0301065a773a
+SHA1 (patch-gdchart.c) = ce5cb049a0a6d4ca7d542ff3d09f72024d42ea91

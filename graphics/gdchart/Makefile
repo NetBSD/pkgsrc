@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/10/23 20:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/06/14 15:56:38 nia Exp $
 
 DISTNAME=	gdchart0.11.5dev
 PKGNAME=	gdchart-0.11.5
@@ -12,6 +12,8 @@ COMMENT=	Easy to use, fast C API for creating charts and graphs
 
 USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	include lib
+
+FORCE_C_STD=	gnu89
 
 #TEST_TARGET=	gdc_samp1 gdc_samp2 gdc_pie_samp ft_samp
 
