@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3796 2026/06/14 08:16:22 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3797 2026/06/14 08:22:39 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5767,3 +5767,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-pkgbuild to 1.4.8 [mef 2026-06-14]
 	Updated devel/R-devtools to 2.5.2 [mef 2026-06-14]
 	Updated archivers/unrar to 7.2.6 [drixter 2026-06-14]
+	Updated net/bftpd to 6.6 [drixter 2026-06-14]
