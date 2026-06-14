@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/05/14 16:40:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2026/06/14 18:13:32 nia Exp $
 
 DISTNAME=	libgphoto2-2.5.31
 PKGREVISION=	10
@@ -16,6 +16,8 @@ CONFLICTS+=	gphoto<2.1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
+# Uses bool as a variable name, which conflicts with the C23 keyword.
+FORCE_C_STD=		gnu99
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		DOXYGEN=
 CONFIGURE_ARGS+=	ac_cv_path_DOXYGEN=no
