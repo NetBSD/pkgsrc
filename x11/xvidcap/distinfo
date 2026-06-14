@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:34:59 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/06/14 10:12:56 nia Exp $
 
 BLAKE2s (xvidcap-1.1.7.tar.gz) = cc98acc42810e743775ff8049871f0b24ed141e432fd59bf6f6b76badfd156b6
 SHA512 (xvidcap-1.1.7.tar.gz) = 9dc2e6751a0f9126dc81f24fca18430a57550b57eaad2e2cd782cc1a5274a7998b509b491d85db3a1302866583b48c36e65043608c453c0466fbbe3d1142bc42
 Size (xvidcap-1.1.7.tar.gz) = 4789924 bytes
 SHA1 (patch-configure) = 9a82ebbfd4fd6e7b1ad4567e346ce2c2860d1c9e
+SHA1 (patch-ffmpeg_libavcodec_bitstream.h) = 76199105fc31ec92703420bbcd06c61d958b3515
 SHA1 (patch-src_capture.c) = 1fc2f28c3a30a08eac799cb646d291472e99a10a
