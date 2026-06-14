@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2026/01/27 08:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/06/14 10:12:56 nia Exp $
 
 DISTNAME=	xvidcap-1.1.7
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 
@@ -44,6 +44,12 @@ SUBST_SED.sr+=		-e "s|sndrate = 44100|sndrate = 48000|g"
 .endif
 
 CONFIGURE_ARGS+=	--with-forced-embedded-ffmpeg
+
+.include "../../mk/compiler.mk"
+
+.if !${CC_VERSION:Mgcc-4.*}
+CFLAGS+=		-Wno-incompatible-pointer-types
+.endif
 
 .include "options.mk"
 .include "../../devel/libglade/buildlink3.mk"
