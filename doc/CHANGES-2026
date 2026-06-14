@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3799 2026/06/14 08:35:03 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3800 2026/06/14 08:52:46 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5770,3 +5770,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bftpd to 6.6 [drixter 2026-06-14]
 	Updated net/6tunnel to 0.14 [drixter 2026-06-14]
 	Updated shells/shellcheck to 0.11.0 [drixter 2026-06-14]
+	Updated net/mtr to 0.96 [drixter 2026-06-14]
