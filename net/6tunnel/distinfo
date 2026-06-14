@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:05:20 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/06/14 08:30:30 drixter Exp $
 
-BLAKE2s (6tunnel-0.13.tar.gz) = ebf1cbd87a31df29ab811c383f7179dbff2c8b9ea924853047806ae97c018336
-SHA512 (6tunnel-0.13.tar.gz) = e495b561e2fe4483417cf44291d729377fe02123f21b7d58b9aed294c676392d860de7474b6bcb4e3e4ffdcd87752ee1af070dfbab028b5de5adb778b0241f72
-Size (6tunnel-0.13.tar.gz) = 103054 bytes
+BLAKE2s (6tunnel-0.14.tar.gz) = 744fd3f73cebcb34cb2382ab770bd07418099984290d611852abf62bff1527ab
+SHA512 (6tunnel-0.14.tar.gz) = 9c38ceccf6e50d26f07a10740228c5e5bbec45f8334fcc54468f53ab8d0db725a4f7249bf8b22088b24291397386ef7b56c6734d26063c252431db7c5eeaec27
+Size (6tunnel-0.14.tar.gz) = 104488 bytes
