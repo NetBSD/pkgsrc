@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/11/17 11:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/06/14 19:15:13 nia Exp $
 
 DISTNAME=	libmcrypt-2.5.8
 CATEGORIES=	security devel
@@ -12,6 +12,9 @@ COMMENT=	Crypto algorithms library
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# Uses "old-style function definitions" everywhere.
+FORCE_C_STD=		gnu89
 
 INSTALLATION_DIRS=	include/mutils
 
