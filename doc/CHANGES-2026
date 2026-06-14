@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3795 2026/06/14 05:19:40 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3796 2026/06/14 08:16:22 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R-tibble to 3.3.1 [mef 2026-06-14]
 	Updated devel/R-pkgbuild to 1.4.8 [mef 2026-06-14]
 	Updated devel/R-devtools to 2.5.2 [mef 2026-06-14]
+	Updated archivers/unrar to 7.2.6 [drixter 2026-06-14]
