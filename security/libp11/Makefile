@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/06/28 13:37:59 manu Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/14 18:23:46 nia Exp $
 #
 
 DISTNAME=		libp11-0.4.12
@@ -17,6 +17,10 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	src/libp11.pc.in
+
+# Uses "true" and "false" as variable names, which conflict with the
+# C23 keywords.
+FORCE_C_STD=		gnu99
 
 CONFIGURE_ARGS+=	--with-enginesdir=${PREFIX}/lib/engines-1.1
 
