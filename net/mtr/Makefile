@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.132 2026/01/27 08:40:22 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2026/06/14 08:53:08 drixter Exp $
 
-DISTNAME=	mtr-0.95
-PKGREVISION=	13
+DISTNAME=	mtr-0.96
 CATEGORIES=	net
 MASTER_SITES=	https://www.bitwizard.nl/mtr/files/
 MASTER_SITES+=	https://www.aydogan.net/distfiles/net/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 LICENSE=	gnu-gpl-v2
