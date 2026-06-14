@@ -6,3 +6,6 @@ stop pCacheFS or if you reboot your computer -- it is persistent.
 pCacheFS is designed for caching large amounts of data on remote
 filesystems that don't change very much, such as movie or music
 libraries.
+
+This package is no longer maintained upstream.  The last release was
+in 2017 and the upstream repo was archived in 2019.
