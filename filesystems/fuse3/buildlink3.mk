@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/06/04 17:04:20 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/06/14 23:20:40 gdt Exp $
 
 BUILDLINK_TREE+=	fuse3
 
@@ -15,7 +15,7 @@ BUILDLINK_LIBS.fuse3=		${BUILDLINK_LIBNAME.fuse3:S/^/-l/:S/^-l$//}
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux"
 .  include "../../devel/liburing/buildlink3.mk"
 .endif
 
