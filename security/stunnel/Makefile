@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2026/04/29 13:40:47 sborrill Exp $
+# $NetBSD: Makefile,v 1.137 2026/06/14 17:59:30 nia Exp $
 
 DISTNAME=		stunnel-5.78
 CATEGORIES=		security
@@ -15,6 +15,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
+
+# The libwrap usage conflicts with a C23 default language
+# version.
+FORCE_C_STD=		gnu99
 
 .include "../../mk/bsd.prefs.mk"
 
