@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/06/11 18:55:45 drixter Exp $
+# $NetBSD: Makefile,v 1.105 2026/06/14 17:51:31 nia Exp $
 
 DISTNAME=	vorbis-tools-1.4.3
 PKGREVISION=    1
@@ -16,6 +16,9 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+# Uses "old-style function definitions" in getopt support files.
+FORCE_C_STD=		gnu89
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME}
 
