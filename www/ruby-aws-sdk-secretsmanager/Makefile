@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2026/06/07 04:09:17 taca Exp $
+# $NetBSD: Makefile,v 1.53 2026/06/14 15:18:21 taca Exp $
 
 DISTNAME=	aws-sdk-secretsmanager-1.133.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +9,7 @@ HOMEPAGE=	https://github.com/aws/aws-sdk-ruby
 COMMENT=	AWS SDK for Ruby - AWS Secrets Manager
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.244.0<4:../../www/ruby-aws-sdk-core
+DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.248.0<4:../../www/ruby-aws-sdk-core
 #DEPENDS+=	${RUBY_PKGPREFIX}-aws-sigv4>=1.5<2:../../www/ruby-aws-sigv4
 
 USE_LANGUAGES=		# none
