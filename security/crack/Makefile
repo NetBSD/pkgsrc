@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/08/14 05:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/06/14 15:28:46 nia Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
@@ -11,6 +11,8 @@ MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a
+
+FORCE_C_STD=	gnu89 # Uses "old-style function definitions"
 
 INSTALLATION_DIRS=	sbin
 
