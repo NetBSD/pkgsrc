@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/01/05 09:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/06/14 19:11:54 nia Exp $
 
 DISTNAME=	libmatchbox-1.9
 PKGREVISION=	13
@@ -13,6 +13,9 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+# Uses "old-style function definitions".
+FORCE_C_STD=	gnu89
 
 SUBST_CLASSES+=		pc
 SUBST_SED.pc+=		-e "s/libpng12/libpng16/"
