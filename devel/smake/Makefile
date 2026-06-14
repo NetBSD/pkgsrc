@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/03/22 11:03:32 micha Exp $
+# $NetBSD: Makefile,v 1.29 2026/06/14 15:23:48 nia Exp $
 
 DISTNAME=	2024-03-21
 PKGNAME=	smake-1.7
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake gm4
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
 MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
+
+FORCE_C_STD=	gnu89 # Uses "old-style-definitions"
 
 .include "../../mk/bsd.prefs.mk"
 
