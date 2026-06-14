@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/09/26 20:24:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.20 2026/06/14 19:20:40 nia Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	33
@@ -15,6 +15,11 @@ MAKE_JOBS_SAFE=	no
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl
 USE_LANGUAGES+=		c c++
+
+# Tons of problems compiling with newer language versions.
+# Uses "old-style function definitions".
+FORCE_C_STD=		gnu89
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
