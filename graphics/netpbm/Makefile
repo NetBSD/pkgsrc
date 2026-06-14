@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2026/01/07 08:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.261 2026/06/14 19:01:56 nia Exp $
 
 DISTNAME=	netpbm-11.02.09
 PKGREVISION=	8
@@ -66,11 +66,16 @@ MAKE_FLAGS.SunOS+=	LDSHLIB=-shared
 MAKE_FLAGS.SunOS+=	NEED_RUNTIME_PATH=Y
 MAKE_FLAGS.SunOS+=	NETWORKLD="-lsocket -lnsl"
 
+# Uses "old-style function definitions" in getopt.c.
+FORCE_C_STD=		gnu89
+
+# Fix implicit function declarations.
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+CFLAGS.SunOS+=		-D__EXTENSIONS__
+
 .if ${OS_VARIANT} == "SCOOSR5"
 MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .endif
-
-.include "../../mk/compiler.mk"
 
 # Ridiculous but they hardcode it in every file so we have no choice.
 SUBST_CLASSES+=		xopen
@@ -82,11 +87,6 @@ SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE/s/1$$/600/'
 SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE[^0-9]*\//s/SOURCE/SOURCE 600/'
 SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE$$/s/E$$/E 600/'
 SUBST_SED.xopen+=	-e '/_POSIX_SOURCE.*fdopen/s/_POSIX_SOURCE/_XOPEN_SOURCE 600/'
-
-# Fixing this properly would require patching far too many files.
-.if ${PKGSRC_COMPILER:Mgcc}
-CFLAGS+=	-Wno-error=implicit-function-declaration
-.endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 share/netpbm
 
