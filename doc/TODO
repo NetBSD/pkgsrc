@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27406 2026/06/14 08:52:46 drixter Exp $
+$NetBSD: TODO,v 1.27407 2026/06/14 10:02:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -817,6 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
+	o jsoncpp-1.9.8
 	o kactivities-5.81.0
 	o kaffe-1.1.9
 	o kapooka-0.3
@@ -890,6 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
+	o litehtml-0.10
 	o llvm-22.1.7 [wip]
 	o lmbench-3
 	o lnav-0.12.4 [wip]
@@ -953,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
+	o moor-2.15.0
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1052,6 +1055,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Math-Bezier-0.02
 	o p5-Module-Path-0.33
 	o p5-MooseX-Types-DateTime-0.16
+	o p5-Net-DNS-1.55 [wiz]
 	o p5-Net-INET6Glue-0.604
 	o p5-Net-Jabber-2.1.7
 	o p5-Padre-1.02
@@ -1147,30 +1151,44 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-OpenSSL-26.3.0
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptography-49.0.0
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
+	o py-cyclonedx-python-lib-11.10.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-filelock-3.29.4
+	o py-google-auth-2.54.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-maturin-1.14.0
+	o py-msgpack-1.2.0
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pillow_heif-1.4.0
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0
+	o py-pyrate-limiter-4.3.1
+	o py-readme_renderer-45.0
 	o py-simpletal-5.1
+	o py-sphinx-autodoc-typehints-3.11.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-test-9.1.0
 	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
 	o py-uliweb-0.6
+	o py-uv-build-0.11.21
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
+	o py-zensical-0.0.45
 	o pythontidy-1.23
 	o q5go-2.1.3
 	o qca2-2.3.9
