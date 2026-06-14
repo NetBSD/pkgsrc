@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/01/04 15:33:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/14 18:20:48 nia Exp $
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
@@ -16,6 +16,9 @@ WRKSRC=			${WRKDIR}/etm
 INSTALLATION_DIRS=	include lib
 
 USE_TOOLS+=		nroff
+
+# Uses "old-style function definitions".
+FORCE_C_STD=		gnu89
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
