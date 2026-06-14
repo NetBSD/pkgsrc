@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/05/16 22:34:41 zafer Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/14 18:33:50 nia Exp $
 
 DISTNAME=	unifdef-2.12
 CATEGORIES=	devel
@@ -12,5 +12,9 @@ LICENSE=	2-clause-bsd AND modified-bsd
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+# Uses constexpr as a variable name, which conflicts with the
+# C23 keyword.
+FORCE_C_STD=	gnu99
 
 .include "../../mk/bsd.pkg.mk"
