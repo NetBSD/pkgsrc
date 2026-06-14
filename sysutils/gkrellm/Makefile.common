@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2025/08/30 08:24:18 pho Exp $
+# $NetBSD: Makefile.common,v 1.21 2026/06/14 15:11:23 nia Exp $
 #
 # used by sysutils/gkrellm-share/Makefile
 # used by sysutils/gkrellm-server/Makefile
@@ -17,6 +17,7 @@ HOMEPAGE=	https://gkrellm.srcbox.net/
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		gmake
+FORCE_C_STD=		gnu89
 
 FILESDIR=		${.CURDIR}/../../sysutils/gkrellm/files
 PATCHDIR=		${.CURDIR}/../../sysutils/gkrellm/patches
