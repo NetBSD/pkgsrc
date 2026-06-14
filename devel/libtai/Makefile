@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/05/22 04:51:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/14 12:49:13 nia Exp $
 
 DISTNAME=		libtai-0.60
 PKGREVISION=		8
@@ -9,6 +9,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://cr.yp.to/libtai.html
 COMMENT=		Library for storing and manipulating dates and times
 LICENSE=		public-domain
+
+FORCE_C_STD=		gnu89
 
 CONFLICTS=		libowfat<0.32nb1
 
