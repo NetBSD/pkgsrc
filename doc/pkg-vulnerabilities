@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.763 2026/05/16 11:49:42 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.764 2026/06/14 15:10:30 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30326,7 +30326,7 @@ crates-io-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releas
 defguard-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 eilmeldung<1.5.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 endbasic-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-flawz-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+flawz<0.4.1	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 gitnr-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 iamb-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 kaput-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
@@ -30336,8 +30336,8 @@ mise<2026.4.20	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag
 mktool<1.5.8	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 moccasin-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 monolith-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-ncspot-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-nushell-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+ncspot<1.3.4	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+nushell<0.113.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 oatbar-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 phetch-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 pijul-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
