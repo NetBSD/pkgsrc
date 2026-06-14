@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2026/01/27 08:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2026/06/14 18:31:22 nia Exp $
 
 DISTNAME=	TiMidity++-2.15.0
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -24,6 +24,9 @@ CONFIGURE_ARGS+=	--with-libFLAC="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},ao,vorbis,flac,speex
 CONFIGURE_ARGS+=	--enable-network
+
+# Uses "old-style function definitions".
+FORCE_C_STD=		gnu89
 
 FAKE_NCURSES=		yes
 
