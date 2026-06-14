@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3802 2026/06/14 15:08:36 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3803 2026/06/14 15:18:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5773,3 +5773,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/mtr to 0.96 [drixter 2026-06-14]
 	Updated net/knot to 3.5.5 [drixter 2026-06-14]
 	Updated security/flawz to 0.4.1 [pin 2026-06-14]
+	Updated www/ruby-aws-sdk-secretsmanager to 1.133.0nb1 [taca 2026-06-14]
