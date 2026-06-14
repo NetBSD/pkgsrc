@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2025/06/01 22:05:00 thor Exp $
+# $NetBSD: Makefile,v 1.83 2026/06/14 19:25:35 nia Exp $
 
 COMMENT=	Simple Authentication and Security Layer
 PKGREVISION=	2
@@ -6,6 +6,9 @@ PKGREVISION=	2
 .include "Makefile.common"
 
 CPPFLAGS+=	-DPIC -fPIC
+
+# Uses "old-style function definitions".
+FORCE_C_STD=	gnu89
 
 .include "options.mk"
 
