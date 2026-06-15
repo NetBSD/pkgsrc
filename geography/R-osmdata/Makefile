@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/11/29 15:31:15 mef Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/15 21:58:01 mef Exp $
 
 R_PKGNAME=	osmdata
-R_PKGVER=	0.2.5
+R_PKGVER=	0.3.0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,6 +33,13 @@ TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+pre-configure:
+	${CP}  ${FILESDIR}/Makevars  ${WRKSRC}/src
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

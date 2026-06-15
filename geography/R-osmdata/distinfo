@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/11/29 15:31:15 mef Exp $
+$NetBSD: distinfo,v 1.6 2026/06/15 21:58:01 mef Exp $
 
-BLAKE2s (R/osmdata_0.2.5.tar.gz) = d8cb652863083616604f8774eef14f910daf99cdb97a6bc3564849d19151e219
-SHA512 (R/osmdata_0.2.5.tar.gz) = c6cbe85f5f0e0e559cc12687b6fb50864f3c942ceef1556fa33df88fbe55f1847610dc98a93dfab6264ff9432dc68d352320bb5ca8256f9407b8aad61687f6ab
-Size (R/osmdata_0.2.5.tar.gz) = 2530898 bytes
+BLAKE2s (R/osmdata_0.3.0.tar.gz) = 700aae4026885658936c3097e99603dd877ce18ec26ae0f2f76e7c7f5394e7e4
+SHA512 (R/osmdata_0.3.0.tar.gz) = f0f1e4908b445988d89dfdc31afc1bc4548d7c3bd2e5714f9cf52af6c0ef8f65c237acd5ca9a622fea5e92d6f61084f509ed1f9cd64abeebdaae0784fb6acf6d
+Size (R/osmdata_0.3.0.tar.gz) = 2353838 bytes
