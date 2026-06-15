@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2025/02/14 22:59:56 mef Exp $
+$NetBSD: distinfo,v 1.14 2026/06/15 14:23:37 mef Exp $
 
-BLAKE2s (R/igraph_2.1.4.tar.gz) = 8a7e26414004ae04b33ee3982df30ac3ba3f09ce851f7c162eb712ffde2777f3
-SHA512 (R/igraph_2.1.4.tar.gz) = bbd7aa1edc50c85ffdc1b027bf70f32e0c12754e2baeeda7f7306ff3bf078558fe6fce0144db163d8de6b534d6c8697380b8a719592b42ea5a5ec57a8d74b36e
-Size (R/igraph_2.1.4.tar.gz) = 4997408 bytes
+BLAKE2s (R/igraph_2.3.2.tar.gz) = aba0888fa65b0320235d51623a1e9eb9558f05aa3a2ecef23d33557f52025c6f
+SHA512 (R/igraph_2.3.2.tar.gz) = 9ffd4ce1e11387cfce807b4852257356579eab53152450daa082e71b7d3312707f423c152fc7891500860b2511f668c4d9690c6e4657e2e86ba312f294d3a609
+Size (R/igraph_2.3.2.tar.gz) = 5209216 bytes
+SHA1 (patch-src_Makevars.in) = 0d5a823d0607400f975e37d37f1065bd02dda0a2
 SHA1 (patch-src_vendor_cigraph_vendor_plfit_hzeta.c) = 0f394527fdde6fece01920dd11d9432aaca0d124

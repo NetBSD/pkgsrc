@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makevars.in,v 1.1 2026/06/15 14:23:38 mef Exp $
+
+deps.mk has been removed ?
+
+--- src/Makevars.in.orig	2026-06-15 23:05:22.168262449 +0900
++++ src/Makevars.in	2026-06-15 23:05:39.955157560 +0900
+@@ -16,7 +16,7 @@ all: symbols.rds $(SHLIB)
+ deps.mk:
+ 	touch -r $$(ls -t *.cpp | head -n 1) "$@"
+ 
+-include deps.mk
++## include deps.mk
+ 
+ PKG_CFLAGS=$(C_VISIBILITY)
+ PKG_CXXFLAGS=$(CXX_VISIBILITY)
