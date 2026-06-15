@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2024/03/22 11:40:33 micha Exp $
+# $NetBSD: Makefile,v 1.133 2026/06/15 07:17:11 nia Exp $
 
 DISTNAME=	2024-03-21
 PKGNAME=	cdrtools-3.02a10
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://codeberg.org/schilytools/schilytools/
 COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 LICENSE=	cddl-1.0 AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND 2-clause-bsd
+
+# Uses "old-style function definitions".
+FORCE_C_STD=	gnu89
 
 LDFLAGS.Darwin+=	-L${PREFIX}/lib -lintl -liconv
 
