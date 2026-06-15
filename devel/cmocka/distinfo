@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2026/06/11 07:20:58 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/06/15 19:04:10 gdt Exp $
 
 BLAKE2s (cmocka-2.0.2.tar.xz) = 8e8d3539ead9c0debd8091421589b33e6a731178026cc46eb5f282a762f18638
 SHA512 (cmocka-2.0.2.tar.xz) = d02d65f0881f18f30b9e46c325acfa349261339daa2c1bf3a4e6360976f13b31588e997415197220f6def156f77d9864994d4e3cfd09c8f16a8594d0a4789a16
 Size (cmocka-2.0.2.tar.xz) = 121144 bytes
+SHA1 (patch-include_cmocka.h) = 71df53d3bbd2cf709a46cc533b0ebf2745244f80
