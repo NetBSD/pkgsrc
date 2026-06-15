@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2023/12/20 17:05:00 wiz Exp $
+$NetBSD: distinfo,v 1.58 2026/06/15 07:36:25 nia Exp $
 
 BLAKE2s (proftpd-1.3.8b.tar.gz) = 9b720dd369ce8bdee0190f579535cd1e0dca45fe22fc75adcab9951203478853
 SHA512 (proftpd-1.3.8b.tar.gz) = 291a91f220d711fefdbff18ef4e056080ad99c94dc4c71d0651f725932e1f2d9438fb75fbc2017e0f30a9a18a354b2d515788fbd538a80414f8c2d4eaaace396
@@ -10,3 +10,4 @@ SHA1 (patch-contrib_mod__load_mod__load.h.in) = 37b6d7eaeeb0ec68dfdd48e4bf5c0338
 SHA1 (patch-contrib_mod__sftp_Makefile.in) = cda07c1d8836071f1d86ea07cb1d8d09d036bd43
 SHA1 (patch-locale_en__US.po) = 6c8c55130072dccc8cdda18fa2a70a7aab13c328
 SHA1 (patch-src_pidfile.c) = fbe032bf1d9fbe089c44851e4da008d2a1c2945f
+SHA1 (patch-src_table.c) = 51b2c302ba5f2cdc198e05212f2b93a041174be1

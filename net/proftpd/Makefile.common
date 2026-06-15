@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2023/12/28 23:01:41 zafer Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/06/15 07:36:25 nia Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -21,6 +21,8 @@ PATCHDIR=		${.CURDIR}/../../net/proftpd/patches
 
 USE_TOOLS+=		gmake intltool msgfmt perl:run autoconf
 USE_LIBTOOL=		yes
+# Uses bool as a variable name, which conflicts with the C23 keyword.
+FORCE_C_STD=		gnu99
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
