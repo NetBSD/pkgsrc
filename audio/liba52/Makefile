@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/11/17 11:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/06/15 07:29:39 nia Exp $
 #
 
 DISTNAME=	a52dec-0.7.4
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+
+# Uses "old-style function definitions", but also restrict keyword.
+FORCE_C_STD=		gnu99
 
 CONFIGURE_ARGS+=	--disable-oss
 CONFIGURE_ARGS+=	--disable-mlib

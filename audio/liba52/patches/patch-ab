@@ -1,27 +1,64 @@
-$NetBSD: patch-ab,v 1.4 2005/07/29 00:41:51 grant Exp $
+$NetBSD: patch-ab,v 1.5 2026/06/15 07:29:39 nia Exp $
 
---- configure.orig	2002-07-28 13:50:42.000000000 +1000
+--- configure.orig	2002-07-28 03:50:42.000000000 +0000
 +++ configure
-@@ -9639,8 +9639,8 @@ _ACEOF
+@@ -9585,14 +9585,6 @@ else
+ #include "confdefs.h"
+ #include <sys/types.h>
+ #include <signal.h>
+-#ifdef signal
+-# undef signal
+-#endif
+-#ifdef __cplusplus
+-extern "C" void (*signal (int, void (*)(int)))(int);
+-#else
+-void (*signal ()) ();
+-#endif
+ 
+ #ifdef F77_DUMMY_MAIN
+ #  ifdef __cplusplus
+@@ -9600,10 +9592,19 @@ void (*signal ()) ();
+ #  endif
+    int F77_DUMMY_MAIN() { return 1; }
+ #endif
++
++void handler(int signo)
++{
++	(void)signo;
++}
++
+ int
+-main ()
++main (int argc, char **argv)
+ {
+ int i;
++(void)argc;
++(void)argv;
++signal(SIGBUS, handler);
+   ;
+   return 0;
+ }
+@@ -9639,9 +9640,9 @@ _ACEOF
  
  
  
--
--LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
 +# we set LIBA52_CFLAGS in CONFIGURE_ENV
 +# LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
  
+-LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
+-
  # Check whether --enable-double or --disable-double was given.
  if test "${enable_double+set}" = set; then
-@@ -9743,6 +9743,11 @@ if test $ac_cv_lib_ossaudio__oss_ioctl =
+   enableval="$enable_double"
+@@ -9742,6 +9743,11 @@ fi
+ if test $ac_cv_lib_ossaudio__oss_ioctl = yes; then
    LIBAO_LIBS="$LIBAO_LIBS -lossaudio"
  fi
- ;;
++;;
 +    *-netbsd*)
 +cat >> confdefs.h <<\EOF
 +#define LIBAO_SOLARIS 
 +EOF
-+;;
+ ;;
      esac
  fi
- 
