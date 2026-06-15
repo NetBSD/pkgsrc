@@ -1,0 +1,55 @@
+$NetBSD: patch-autoconf_configure,v 1.1 2026/06/15 07:17:11 nia Exp $
+
+Update tests for the return type of signal handlers for the
+GCC 15 era.
+
+--- autoconf/configure.orig	2024-03-21 13:19:57.000000000 +0000
++++ autoconf/configure
+@@ -6318,17 +6318,15 @@ else
+ #include "confdefs.h"
+ #include <sys/types.h>
+ #include <signal.h>
+-#ifdef signal
+-#undef signal
+-#endif
+-#ifdef __cplusplus
+-extern "C" void (*signal (int, void (*)(int)))(int);
+-#else
+-void (*signal ()) ();
+-#endif
+ 
++void handler(int signo)
++{
++	(void)signo;
++}
++
+ int main() {
+ int i;
++signal(SIGBUS, handler);
+ ; return 0; }
+ EOF
+ if { { eval echo configure:6335: \"$ac_compile\" ;} 1>&5; { eval $ac_compile ;} 2>&5; }; then
+@@ -14184,17 +14182,15 @@ else
+ #include "confdefs.h"
+ #include <sys/types.h>
+ #include <signal.h>
+-#ifdef signal
+-#undef signal
+-#endif
+-#ifdef __cplusplus
+-extern "C" void (*signal (int, void (*)(int)))(int);
+-#else
+-void (*signal ()) ();
+-#endif
+ 
++void handler(int signo)
++{
++	(void)signo;
++}
++
+ int main() {
+ int i;
++signal(SIGBUS, handler);
+ ; return 0; }
+ EOF
+ if { { eval echo configure:14201: \"$ac_compile\" ;} 1>&5; { eval $ac_compile ;} 2>&5; }; then
