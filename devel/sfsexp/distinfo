@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/04/26 19:36:49 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/06/15 07:22:00 nia Exp $
 
 BLAKE2s (sfsexp-1.4.1.tar.gz) = 5d26b0fe2d641a04ad8d07226b84773c90d19369040baf5d655e7997202d0e30
 SHA512 (sfsexp-1.4.1.tar.gz) = d7625f1b58b12bf34d0d0e9a110bac7ea48ce7b5d9920bb4dd11e5dacf1e9fd998f974fc5da9669797496bb43702319cee44f2e760d0888b2d22db80a55e5f44
 Size (sfsexp-1.4.1.tar.gz) = 465297 bytes
+SHA1 (patch-examples_binmode.c) = 6d17e27457488e27d46c3a5b915b355e588334c8
