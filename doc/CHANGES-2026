@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3807 2026/06/15 06:47:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3808 2026/06/15 14:06:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/lighttpd to 1.4.83 [schmonz 2026-06-15]
 	Updated graphics/p5-GD to 2.86 [wiz 2026-06-15]
 	Updated devel/p5-Config-IniFiles to 3.001000 [wiz 2026-06-15]
+	Updated security/p5-Crypt-DSA to 1.21 [wiz 2026-06-15]
