@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2025/07/04 08:45:27 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/06/15 06:47:40 wiz Exp $
 
-DISTNAME=	Config-IniFiles-3.000003
+DISTNAME=	Config-IniFiles-3.001000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Config-IniFiles
