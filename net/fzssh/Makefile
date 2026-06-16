@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/09 17:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/16 17:06:59 nia Exp $
 
 DISTNAME=	fzssh-1.3.0
 CATEGORIES=	net
@@ -12,6 +12,8 @@ LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
+
+USE_CXX_FEATURES+=	c++20
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libfzssh-client.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
