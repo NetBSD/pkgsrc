@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.764 2026/06/14 15:10:30 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.765 2026/06/16 07:25:23 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30341,7 +30341,7 @@ nushell<0.113.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/ta
 oatbar-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 phetch-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 pijul-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-py314-cryptography-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+py314-cryptography<48.0.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 py314-maturin-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 routinator-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 rust-kanban-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
@@ -30370,3 +30370,4 @@ wthrr-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/o
 xh-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 yaydl-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 zola-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+perl<5.42.2nb3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-12087
