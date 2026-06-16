@@ -1,0 +1,15 @@
+# $NetBSD: patch-configure,v 1.1 2026/06/16 09:43:38 martin Exp $
+
+Make configure work with newer compiler C standard defaults
+
+--- configure.orig	2020-08-24 21:33:30.000000000 +0200
++++ configure	2026-06-14 21:21:24.986768519 +0200
+@@ -13610,7 +13610,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+   #include <osipparser2/osip_parser.h>
+-  main() {
++  int main() {
+   osip_message_t t;
+   int  e;
+   e=t.contacts.nb_elt;

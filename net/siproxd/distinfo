@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/06/16 09:43:38 martin Exp $
 
 BLAKE2s (siproxd-0.8.3.tar.gz) = d940018866e98ac9c95384f70a21b4a114bb6186c20153b621915da7aeef5d1e
 SHA512 (siproxd-0.8.3.tar.gz) = 355eaf0c19cbb44576f4d8485551232b530c14134e610d87c454de113266f739bcc8be4ed7f9ed81deb901bd576ea9845e749f4ea251a1a6773fa40476e557a4
 Size (siproxd-0.8.3.tar.gz) = 602331 bytes
+SHA1 (patch-acinclude.m4) = a44e7e6d920eda1a45c8114fd7460be2271bee2e
+SHA1 (patch-configure) = 36b3385426c4a1d262e27e37d2904c7cde1fa07e
 SHA1 (patch-doc_Makefile.in) = 5cbd0460e12609f0551959e266ce4b9ca37c7559
 SHA1 (patch-doc_siproxd.conf.example) = 74be8af2124ec65e8f125ee81dedf666fd032088
 SHA1 (patch-src_plugins.h) = 678f5c87e8695137c3f9290f55b3070d5262e247
