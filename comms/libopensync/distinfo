@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:06:00 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/06/16 12:35:00 nia Exp $
 
 BLAKE2s (libopensync-0.22.tar.bz2) = ed12a9c526a2b66c5da0f0d56fa65c455bfb6aff9e5638fc9b3e87ebbdb6d92e
 SHA512 (libopensync-0.22.tar.bz2) = 90b6c7af9890d51bddfa5ce9ff5403f642d1deb7dc839e517366f9fd0afa5cd582b9a0e6e37d4a110f2aba7421da6705da0a761ad3ea40e9def3d3580f1b6aa2
 Size (libopensync-0.22.tar.bz2) = 489978 bytes
-SHA1 (patch-aa) = 4bcf03611850719042bafd794fc413cef159a702
+SHA1 (patch-aa) = e439f081c02977e350d96c40a26c4a2e19fba813
 SHA1 (patch-ab) = 057f995d58c98eba96e22671d9c8ee0ec8270b3e
 SHA1 (patch-ac) = f6a8c12e9344a7f68439b06f8797bfa30106d0e3
 SHA1 (patch-ad) = d2a199b04788512378dbd5024b34d367da6add5d
 SHA1 (patch-ae) = 39b5cf27a5b1722f5d8550b97deb1a8763a4ace1
 SHA1 (patch-af) = 07666352a1cd68ae00b10fc5eefeb8001673abe7
+SHA1 (patch-formats_vformats-xml_xml-support.h) = dec852062b43d99f3740122ff992ed67e52bd39d
 SHA1 (patch-opensync_opensync__group.c) = da6cb5ae9a2c8067126f9cec3d27bf4d8c0b56df
 SHA1 (patch-opensync_opensync_time.c) = cb6cf27e1ba3fcd6a0cb139759d4da7306817e10
