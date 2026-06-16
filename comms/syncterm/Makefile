@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/05/10 06:06:05 vins Exp $
+# $NetBSD: Makefile,v 1.18 2026/06/16 16:56:49 nia Exp $
 
 DISTNAME=	syncterm-1.8-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -19,7 +19,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake gzip perl:build
 USE_TOOLS+=	pkg-config sed
 
-USE_CC_FEATURES=	c11
+# seems to actually compile fine with FORCE_C_STD=c11,
+# but their choice is to use -std=c17...
+USE_CC_FEATURES=	c17
 
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	rm:-lpthread
