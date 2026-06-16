@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3815 2026/06/16 16:17:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.3816 2026/06/16 16:18:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5786,3 +5786,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-redmine61 to 6.1.3 [taca 2026-06-16]
 	Updated devel/ruby-redmine60 to 6.0.10 [taca 2026-06-16]
 	Updated www/firefox140 to 140.12.0 [gutteridge 2026-06-16]
+	Updated www/firefox140-l10n to 140.12.0 [gutteridge 2026-06-16]
