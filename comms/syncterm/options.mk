@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/10/12 06:01:33 vins Exp $
+# $NetBSD: options.mk,v 1.4 2026/06/16 16:56:49 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.syncterm
 PKG_OPTIONS_NONEMPTY_SETS=	display sound
@@ -30,9 +30,9 @@ MAKE_FLAGS+=	WITHOUT_ALSA_SOUND=yes
 ## Choose the right curses library based on CURSES_TYPE.
 ##
 .if !empty(PKG_OPTIONS:Mcurses)
-.  include "../../mk/curses.buildlink3.mk"
 USE_CURSES=	getmouse halfdelay wide
 FAKE_NCURSES=	yes
+.  include "../../mk/curses.buildlink3.mk"
 .  if !${CURSES_TYPE:M*ncurses*}
 CFLAGS+=	-DUSE_SYSTEM_CURSES
 .  else
