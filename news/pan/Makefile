@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2026/06/11 07:17:33 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2026/06/16 17:04:53 nia Exp $
 
 PKGNAME=		pan-0.165
 PKGREVISION=		2
@@ -18,7 +18,7 @@ TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 FORCE_CXX_STD=		c++17
 USE_PKGLOCALEDIR=	YES
 
