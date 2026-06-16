@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/09/21 21:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/06/16 12:12:14 nia Exp $
 
 DISTNAME=	plotutils-2.6
 PKGREVISION=	4
@@ -19,6 +19,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter
 MAKE_JOBS_SAFE=		no
 INFO_FILES=		yes
+
+# This defines its own bool type, which is incompatible
+# with C23 having it as a built-in keyword.
+#
+# gnu99 is chosen for being the minimum bootstrap requirement
+# and safety against APIs being hidden in standards mode.
+FORCE_C_STD=		gnu99
 
 .include "options.mk"
 
