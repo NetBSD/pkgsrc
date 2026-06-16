@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2025/05/08 05:29:47 dbj Exp $
+$NetBSD: distinfo,v 1.35 2026/06/16 11:51:09 nia Exp $
 
 BLAKE2s (groff-1.23.0.tar.gz) = e8cffb11a7d2bf3449546d89940646cfddd89e0a3c7edd7957bfea0ea42e3530
 SHA512 (groff-1.23.0.tar.gz) = eff473fd1d0e6b27527318452ef2b7c6c7aba0b1c27fc529036496eccba5717f3639df0b81a297a57f700e27543196d7086b15e43d7e3c7bf075f95feb7f4089
@@ -6,4 +6,6 @@ Size (groff-1.23.0.tar.gz) = 7433031 bytes
 SHA1 (patch-aa) = b2f2942d66455a02d9178030d5019cf81aafa6d3
 SHA1 (patch-configure) = 24bc3ac283a8aa988021c2c4053519410de314f2
 SHA1 (patch-lib_math.in.h) = ca5b3763fce8d29b4dd8c5044fe5537dbe43663a
+SHA1 (patch-src_include_lib.h) = 7db4da95c48ca7161d70670fda3669dc9e9359b5
+SHA1 (patch-src_libs_libgroff_getopt.c) = e7e66c15315dd4e4f0f8f34e590fa02b88502909
 SHA1 (patch-src_libs_libgroff_tmpfile.cpp) = 3794a028dc7c569e5adea6b7b876c3ac085376ba
