@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2025/12/07 10:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/16 18:31:00 leot Exp $
 
 DISTNAME=	dvtm-0.15
 CATEGORIES=	misc
 MASTER_SITES=	https://www.brain-dump.org/projects/dvtm/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	schaiba@gmail.com
 HOMEPAGE=	https://www.brain-dump.org/projects/dvtm/
 COMMENT=	Dynamic virtual terminal manager
 LICENSE=	mit
