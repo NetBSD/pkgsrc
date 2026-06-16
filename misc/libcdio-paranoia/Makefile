@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/12/26 11:10:46 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/16 17:39:32 nia Exp $
 
 DISTNAME=	libcdio-paranoia-10.2+2.0.2
 PKGNAME=	libcdio-paranoia-2.0.2
@@ -22,6 +22,13 @@ INFO_FILES=		yes
 PKGCONFIG_OVERRIDE+=	libcdio_cdda.pc.in
 PKGCONFIG_OVERRIDE+=	libcdio_paranoia.pc.in
 TEST_TARGET=		check
+
+# getopt.c uses "old-style function definitions",
+# which are incompatible with C23 as a default language.
+#
+# gnu99 is chosen for being the minimum bootstrap requirement
+# and safety against APIs being hidden in standards mode.
+FORCE_C_STD=		gnu99
 
 .include "../../mk/compiler.mk"
 
