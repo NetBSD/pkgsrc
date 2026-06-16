@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3818 2026/06/16 21:02:34 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.3819 2026/06/16 21:05:30 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.12.0 [gutteridge 2026-06-16]
 	Updated x11/xfce4-settings to 4.20.4 [gutteridge 2026-06-16]
 	Updated x11/xfce4-session to 4.20.4 [gutteridge 2026-06-16]
+	Updated meta-pkgs/xfce4 to 4.20.0nb18 [gutteridge 2026-06-16]
