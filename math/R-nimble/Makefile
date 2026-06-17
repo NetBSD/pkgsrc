@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/02/15 05:46:28 mef Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/17 13:44:01 mef Exp $
 
 R_PKGNAME=	nimble
-R_PKGVER=	1.3.0
+R_PKGVER=	1.4.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MCMC, Particle Filtering, and Programmable Hierarchical Modeling
