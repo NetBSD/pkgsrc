@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27409 2026/06/16 14:39:34 taca Exp $
+$NetBSD: TODO,v 1.27410 2026/06/17 17:53:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.10
-	o llvm-22.1.7 [wip]
+	o llvm-22.1.8 [wip]
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -976,6 +976,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o ncview-2.1.11
+	o neomutt-20260616
 	o netatalk-4.4.3
 	o nethack-5.0
 	o netramet-50
@@ -1117,7 +1118,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
-	o plasma-6.6
+	o plasma-6.7
 	o ploticus-examples-230
 	o poco-1.12.4
 	o podcastdl-0.3.3
@@ -1192,6 +1193,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-zensical-0.0.45
 	o pythontidy-1.23
 	o q5go-2.1.3
+	o qbittorrent-5.2.2
 	o qca2-2.3.9
 	o qconf-2.5
 	o qore-2.2.0
@@ -1225,7 +1227,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.17
+	o rumdl-0.2.18
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
