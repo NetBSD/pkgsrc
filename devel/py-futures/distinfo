@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2022/11/02 13:05:57 adam Exp $
-
-BLAKE2s (futures-3.4.0.tar.gz) = 55b928b04e33bea80c1fedf3df5485d12ce828ac2b445b495dcc66bbee5579ef
-SHA512 (futures-3.4.0.tar.gz) = 149afceb19cf7d30545bcecaa72c91400f487829bfc1afe3a469387f719e6c007c9b3109b554bb4c044b4966389fc148ac0fd40b2b4235953482966d44c72e5c
-Size (futures-3.4.0.tar.gz) = 27686 bytes
