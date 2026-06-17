@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/09/22 23:37:05 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/06/17 13:07:58 mef Exp $
 
-BLAKE2s (R/tidyr_1.3.1.tar.gz) = 10bc5cb08fa520da1d6d40022c4801f3df4899ab26a072d7048082e235913d50
-SHA512 (R/tidyr_1.3.1.tar.gz) = a5f57a7c93cf603c02b3e922c9944be48fd812e46e425c66aebf5704e689f949105c0c98e9c0d882f290f0ac29641d67e04e61741bf2716c2e139853c326b7f2
-Size (R/tidyr_1.3.1.tar.gz) = 809058 bytes
+BLAKE2s (R/tidyr_1.3.2.tar.gz) = 2263ddf2f026a6589cf0ec66c341ac780381f399bad9d4bcb0b8ed022152e4c0
+SHA512 (R/tidyr_1.3.2.tar.gz) = 6f14220309a0043fefb03f2fccc16574b48dcb8de54e5bdd469c01c5561559a74fd77090a346510c3aa239f2956451ebd27e90aec5085df49edffb3d803a34f6
+Size (R/tidyr_1.3.2.tar.gz) = 809031 bytes

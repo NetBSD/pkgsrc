@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/09/22 23:37:05 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/17 13:07:58 mef Exp $
 
 R_PKGNAME=	tidyr
-R_PKGVER=	1.3.1
+R_PKGVER=	1.3.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easily tidy data with 'spread()' and 'gather()' functions
