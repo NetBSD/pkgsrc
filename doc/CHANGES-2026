@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3822 2026/06/17 13:44:12 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3823 2026/06/17 13:45:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5793,3 +5793,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-futures [adam 2026-06-17]
 	Updated math/R-tidyr to 1.3.2 [mef 2026-06-17]
 	Updated math/R-nimble to 1.4.2 [mef 2026-06-17]
+	Updated geography/R-osmdata to 0.3.0 [mef 2026-06-17]
