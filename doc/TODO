@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27417 2026/06/18 08:48:20 wiz Exp $
+$NetBSD: TODO,v 1.27418 2026/06/18 08:52:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -953,7 +953,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
-	o moor-2.15.0
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41

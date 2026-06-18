@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3831 2026/06/18 08:48:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3832 2026/06/18 08:52:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.45 [wiz 2026-06-18]
 	Updated audio/kid3 to 3.10.0 [wiz 2026-06-18]
 	Updated graphics/digikam to 9.1.0 [wiz 2026-06-18]
+	Updated textproc/moor to 2.15.1 [wiz 2026-06-18]
