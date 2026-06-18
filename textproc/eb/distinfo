@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:21:51 nia Exp $
+$NetBSD: distinfo,v 1.20 2026/06/18 14:36:49 nia Exp $
 
 BLAKE2s (eb-4.3/cencro-1.0.tar.gz) = d98301ff88c13b584c87350ae234e367cf4c86d634b62b2b72b1fc3cba908cb3
 SHA512 (eb-4.3/cencro-1.0.tar.gz) = 8474bdce42237b03cf9bedc625d169ed43bd536f49abf1d470239d302ae7cc52a239178a6706dd64d114c26c1797f9b06445a10ee2e0d29e070c0e27692047be
@@ -97,3 +97,4 @@ BLAKE2s (eb-4.3/superdic98-1.0.tar.gz) = 69ef7963fd52fb29749335417e20a09b7d96f9a
 SHA512 (eb-4.3/superdic98-1.0.tar.gz) = 62156597e4399bc36bf8fe8f1fe2483106715a0954db0a3528a9a8f96ef2abce71c0f2bf2f84ff1d3a5d5a99ce5c08e8ecbeb07f99bf6faa8bf21c97ebc9260f
 Size (eb-4.3/superdic98-1.0.tar.gz) = 5252 bytes
 SHA1 (patch-aa) = a0d822612c29aa3964eaa8b6ccee4028926bb4c7
+SHA1 (patch-libebutils_puts__eucjp.c) = b997336e2a333246f9fa6c9fa7b6215e7445e819
