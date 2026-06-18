@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/12/28 08:15:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/06/18 14:43:14 nia Exp $
 
 .include "../../security/yara/Makefile.common"
 
@@ -14,6 +14,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	automake autoreconf flex pkg-config
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__ # getline
 
 PKGCONFIG_OVERRIDE+=	libyara/yara.pc.in
 
