@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.70 2026/03/09 17:51:13 wiz Exp $
+$NetBSD: distinfo,v 1.71 2026/06/18 08:48:10 wiz Exp $
 
-BLAKE2s (digiKam-9.0.0.tar.xz) = 51045c4b08b79a2c3816587118c2cb8af0a90dc2e4047fa59af0cea8782b5e2d
-SHA512 (digiKam-9.0.0.tar.xz) = 8b9e4362424971edd9c7c9d634ecbb5687db3bfb97e3df1678848b7336b8c68b7f7cae9ccbdbf664d5a0fdf19e3c835165cb8c4167eebc08e2bc2b9490c3ceb7
-Size (digiKam-9.0.0.tar.xz) = 53858376 bytes
+BLAKE2s (digiKam-9.1.0.tar.xz) = 7c0946c0eb3874a3561f1d24b73cefa55d025b928488e4a2fb62e114e9038557
+SHA512 (digiKam-9.1.0.tar.xz) = ab083cbde1f3e243a8766b8fe5ea256d32877ff7f2e048349fb063e1ca90b0395eee16028466516a9ab74f10582a413bfc9d64392a4b25b33e45b70ca34f5cd6
+Size (digiKam-9.1.0.tar.xz) = 73714208 bytes
