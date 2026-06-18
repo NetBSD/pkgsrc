@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3837 2026/06/18 21:33:19 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3838 2026/06/18 22:04:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5808,3 +5808,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-purrr to 1.2.2 [mef 2026-06-18]
 	Updated security/ipv6-toolkit to 2.2 [drixter 2026-06-18]
 	Updated net/dnscontrol to 4.42.0 [drixter 2026-06-18]
+	Added textproc/gemtext2html version 0.1 [js 2026-06-18]
