@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/06/11 13:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/18 08:13:14 wiz Exp $
 
-DISTNAME=	zensical-0.0.44
+DISTNAME=	zensical-0.0.45
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zensical/}
