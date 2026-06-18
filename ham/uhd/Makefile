@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/05/17 09:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.98 2026/06/18 15:18:22 nia Exp $
 
 DISTNAME=	uhd-4.10.0.0
 PKGREVISION=	2
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-mako>=0.4.2:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15:../../devel/py-ruamel-yaml
 
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++17 filesystem
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 TEST_TARGET=		test
