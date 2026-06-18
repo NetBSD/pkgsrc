@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27419 2026/06/18 09:02:41 wiz Exp $
+$NetBSD: TODO,v 1.27420 2026/06/18 09:45:11 pin Exp $
 
 Suggested new packages
 ======================
@@ -511,6 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o canna-3.7p5
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cargo-deny-0.19.9 [pin]
 	o cbindgen-0.29.4 [verify firefox still builds]
 	o cddbd-1.5.2
 	o cdrdao-1.2.5
@@ -577,6 +578,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o drivel-3.0.5
 	o drupal-10.0.5
 	o drupal-9.5.5
+	o dua-cli-2.36.0 [pin]
 	o dvdisaster-0.79.10
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
@@ -764,6 +766,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
+	o hck-0.11.6 [pin]
 	o herisvm-0.8.2
 	o hesiod-3.2.1
 	o heyu-2.9.0
@@ -1009,6 +1012,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
+	o oh-my-posh-29.17.0 [pin]
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
@@ -1311,6 +1315,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o telepathy-idle-0.2.2
 	o telepathy-mission-control5-5.16.6
 	o telepathy-qt-0.9.8
+	o television-0.15.9 [pin]
 	o terraform-0.15.1 [wait for https://github.com/hashicorp/terraform/issues/25813]
 	o terraform-1.0
 	o terraform-provider-aws-3.37.0
@@ -1341,7 +1346,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
 	o turba-4.2.12
-	o typst-0.15
+	o typst-0.15 [pin]
 	o uae-0.8.29
 	o ubs-0.20
 	o ucview-0.33
@@ -1354,7 +1359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o utilisp-1.14
-	o uutils-coreutils-0.9
 	o uv-0.7.13
 	o varnish-8.0.0
 	o vault-1.7.4
@@ -1394,6 +1398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wordwarvi-1.0.4
 	o wxRemind-101
 	o x2vnc-1.31
+	o xan-0.59.0 [pin]
 	o xcoral-3.14
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
