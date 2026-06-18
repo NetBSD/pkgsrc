@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/01/11 14:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/06/18 19:16:59 nia Exp $
 
 DISTNAME=	vtwm-5.5.0
 PKGREVISION=	4
@@ -13,6 +13,13 @@ LICENSE=	x11
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	pkg-config flex bison m4
+
+# vtwm contains old (K&R) style function definitions which
+# are forbidden in C23. As safety against further developments
+# in the C standard, pick a reasonable one, in this case
+# the minimum bootstrap requirement with extensions enabled
+# to expose all system APIs.
+FORCE_C_STD=		gnu99
 
 CONFIGURE_ARGS+=	--disable-esd-sound
 CONFIGURE_ARGS+=	--disable-rplay-sound
