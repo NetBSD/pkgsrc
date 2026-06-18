@@ -1,18 +1,26 @@
-$NetBSD: patch-ab,v 1.3 2006/06/21 20:41:27 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2026/06/18 16:07:13 nia Exp $
 
---- src/FreeBSD/os.c.orig	2006-06-21 20:12:56.000000000 +0000
+--- src/FreeBSD/os.c.orig	2002-12-01 23:56:11.000000000 +0000
 +++ src/FreeBSD/os.c
-@@ -125,16 +125,27 @@ GetStatus(ProcInfo *p)
+@@ -24,6 +24,7 @@
+ #include "config.h"
+ #include "os.h"
+ #include <fcntl.h>
++#include <stdlib.h>
+ #include <limits.h>
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+@@ -125,16 +126,27 @@ GetStatus(ProcInfo *p)
    if (!active.allprocs) {
  #ifdef HAVE_REGEX
      if (active.match_regexp) {
 +#if defined(__DragonFly__)
-+      int regmatch = regexec(&active.re_pat, 
+       int regmatch = regexec(&active.re_pat, 
 +			     IDtouser(proc->kp_eproc.e_ucred.cr_ruid), 
 +			     (size_t) NULL, (regmatch_t *) NULL,
 +			     REG_NOTBOL|REG_NOTEOL);
 +#else
-       int regmatch = regexec(&active.re_pat, 
++      int regmatch = regexec(&active.re_pat, 
  			     IDtouser(proc->kp_eproc.e_pcred.p_ruid), 
  			     (size_t) NULL, (regmatch_t *) NULL,
  			     REG_NOTBOL|REG_NOTEOL);
@@ -30,7 +38,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/21 20:41:27 joerg Exp $
  	return False;
  #ifdef HAVE_REGEX
      }
-@@ -166,8 +177,10 @@ GetStatus(ProcInfo *p)
+@@ -166,8 +178,10 @@ GetStatus(ProcInfo *p)
  
    if (proc->kp_proc.p_pid == MyPid && !cmd_options.me_too)
      pstat = SSLEEP;
@@ -41,7 +49,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/21 20:41:27 joerg Exp $
    else
      pstat = proc->kp_proc.p_stat;
  
-@@ -179,7 +192,11 @@ void 
+@@ -179,7 +193,11 @@ GetProcName(ProcInfo *p, TREENODE *node)
  GetProcName(ProcInfo *p, TREENODE *node)
  {
    ProcInfo proc = *p;
@@ -53,7 +61,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/21 20:41:27 joerg Exp $
  
    if (proc->kp_proc.p_stat == SZOMB)
      strcpy(node->label, "*zombie*");
-@@ -196,9 +213,15 @@ GetProcName(ProcInfo *p, TREENODE *node)
+@@ -196,9 +214,15 @@ GetProcName(ProcInfo *p, TREENODE *node)
  
        /* We've got a sleeping process. (Hopefully that's the majority of 
  	 the processes. Assign a color based on userid. */
@@ -69,7 +77,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/21 20:41:27 joerg Exp $
  	strcpy(node->label1, username);
        } else {
  	strcpy(node->label1, UNKNOWN_USER);
-@@ -209,7 +232,11 @@ GetProcName(ProcInfo *p, TREENODE *node)
+@@ -209,7 +233,11 @@ GetProcName(ProcInfo *p, TREENODE *node)
  #ifdef XPS_RECOLOR_LOGIN_PROCESSES      
        for (i=0;i<NUMLABS ;i++ ) {
  	if (strcmp(node->label, label_array[i]) == 0) {
