@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.49 2026/05/26 05:37:15 adam Exp $
+$NetBSD: distinfo,v 1.50 2026/06/18 08:04:30 wiz Exp $
 
-BLAKE2s (qbittorrent-5.2.1.tar.gz) = 1a0361a5eca38b1102c7cc03c1e022a5d6a40e076273848597c86343b6461167
-SHA512 (qbittorrent-5.2.1.tar.gz) = 495b57c964e90db0ff2cce13c8eeb6b6d6f4c0bfa45259b6b699dc0b9d823b3f39a69df32f7afa2aed2399949aef3eb92a5a47f652d31c467bf7ea24c5f192e6
-Size (qbittorrent-5.2.1.tar.gz) = 10820971 bytes
+BLAKE2s (qbittorrent-5.2.2.tar.gz) = 2cf5fd26f79095ac5dae5d29f644c2664a58dd04e8cc9479d190149708c14fcd
+SHA512 (qbittorrent-5.2.2.tar.gz) = 9cd7ad5302be5b140fa1c37824c41642e4123ae8a7bcfbb4bec2ad7dda06737c28d950410949d051f261f9bbc9f8dfb3cd316e6a1c8ca903a796ff56011296f7
+Size (qbittorrent-5.2.2.tar.gz) = 10828314 bytes
 SHA1 (patch-dist_CMakeLists.txt) = 2c426222aa168c24a2e39a665f3152eca848e4a8
 SHA1 (patch-src_app_CMakeLists.txt) = 6ef5c2fd194607a5f2ab05a60b909e0c2998892c
 SHA1 (patch-src_base_utils_fs.cpp) = f23333502ed971a63d25e4f6f0f11f60d9ab844b
