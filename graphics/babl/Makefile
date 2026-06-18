@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/04/20 06:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/06/18 14:47:38 nia Exp $
 
 DISTNAME=	babl-0.1.126
 CATEGORIES=	graphics
@@ -58,6 +58,9 @@ MESON_ARGS+=	-Denable-mmx=true
 .else
 MESON_ARGS+=	-Denable-mmx=false
 .endif
+
+# Avoid implicit declaration of alloca(3).
+CFLAGS.SunOS+=	-Dalloca=__builtin_alloca
 
 # Apply removals to post-wrapper transformed arguments.
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
