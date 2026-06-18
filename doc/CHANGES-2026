@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3836 2026/06/18 19:01:18 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3837 2026/06/18 21:33:19 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5807,3 +5807,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/digikam-gmic-qt to 3.6.0.20260312 [wiz 2026-06-18]
 	Updated devel/R-purrr to 1.2.2 [mef 2026-06-18]
 	Updated security/ipv6-toolkit to 2.2 [drixter 2026-06-18]
+	Updated net/dnscontrol to 4.42.0 [drixter 2026-06-18]
