@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.71 2026/03/19 12:41:26 gdt Exp $
+$NetBSD: distinfo,v 1.72 2026/06/18 13:34:07 gdt Exp $
 
-BLAKE2s (nextcloud-32.0.6.tar.bz2) = ea991de3f2a83162a90b6151da769a53732b3eca40c88aba246db9bcc9490839
-SHA512 (nextcloud-32.0.6.tar.bz2) = f68b80a5444452594e37ca81721c8b529f268db874a2fac104bb27b0ec7a7aa529240b3ea6e3b24c5ef596b4490558e6c426c8aa79df4a2bb11ba37303e91de4
-Size (nextcloud-32.0.6.tar.bz2) = 271382484 bytes
+BLAKE2s (nextcloud-32.0.11.tar.bz2) = 20088b8a5f5681c893dcfaef1365e66399350e0481358df5bba1965abce0d8ed
+SHA512 (nextcloud-32.0.11.tar.bz2) = 25c0aae3807be092d19d6cea533306c249dff136dded6ff03112f84f7251b70423d863f231cb5fdace853602926548fd3307ada7aa2a3b9a65722bd4732d5c3b
+Size (nextcloud-32.0.11.tar.bz2) = 241813503 bytes
