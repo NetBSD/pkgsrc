@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/07/01 19:09:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/06/18 08:20:31 wiz Exp $
 bin/kid3-cli
 bin/kid3-qt
 lib/kid3/libkid3-core.so
@@ -72,6 +72,7 @@ share/kid3/qml/script/QmlConsole.qml
 share/kid3/qml/script/ReplayGain2SoundCheck.qml
 share/kid3/qml/script/ResizeAlbumArt.qml
 share/kid3/qml/script/RewriteTags.qml
+share/kid3/qml/script/SelectChapterTags.qml
 share/kid3/qml/script/ShowTextEncodingV1.qml
 share/kid3/qml/script/Tag1ToAscii.qml
 share/kid3/qml/script/TitleCase.qml
