@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:25:21 nia Exp $
+$NetBSD: distinfo,v 1.19 2026/06/18 19:46:43 nia Exp $
 
 BLAKE2s (wmii+ixp-3.9.2.tbz) = e60adc9cb57226a5cd4a165dbef6878a957fe03e0eb0c98c3d2788a0e4b5c448
 SHA512 (wmii+ixp-3.9.2.tbz) = c75d6d3f80e2b263c8d7b9eb6d0e700a1ad642209fc0984908e9399d22372c6c0572f47ab61881d5d56c4cc4eeb2914a545f6af1bbb936b65848764577d75761
 Size (wmii+ixp-3.9.2.tbz) = 432032 bytes
 SHA1 (patch-aa) = e8f5445fce699ba438753cefd4ec250018ce6985
 SHA1 (patch-ab) = cdb5ae1f02497852a5c965bdfb106e1b3a77853e
+SHA1 (patch-cmd_wmii___util.c) = c5caf458d57ec1c027009fea87cbf8a25012998c
 SHA1 (patch-cmd_wmii_main.c) = 2e52a5861b197b9ffa8b7df83230e7bc74059256
 SHA1 (patch-util_compile) = 5b4815086c36789ad53c795ab26057b1066f5113
