@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3832 2026/06/18 08:52:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3833 2026/06/18 09:02:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5803,3 +5803,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kid3 to 3.10.0 [wiz 2026-06-18]
 	Updated graphics/digikam to 9.1.0 [wiz 2026-06-18]
 	Updated textproc/moor to 2.15.1 [wiz 2026-06-18]
+	Updated graphics/py-pillow_heif to 1.4.0 [wiz 2026-06-18]
