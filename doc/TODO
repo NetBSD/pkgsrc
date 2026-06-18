@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27410 2026/06/17 17:53:37 wiz Exp $
+$NetBSD: TODO,v 1.27411 2026/06/18 07:39:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,7 +418,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o alevt-1.6.2
 	o alsa-plugins-1.2.7.1
 	o amanda-3.5.2
-	o amarok-3.3
+	o amarok-3.3.3
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5
 	o amtterm-1.7.1
@@ -824,7 +824,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kcron-21.04.0
 	o kdenetwork-filesharing-20.12.3
-	o kdenlive-25.04
+	o kdenlive-26.04.2
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
@@ -1040,6 +1040,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
+	o oxygen-icons-6.27.0
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
@@ -1197,6 +1198,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-2.3.9
 	o qconf-2.5
 	o qore-2.2.0
+	o qtcreator-20
 	o qutebrowser-3.0.1
 	o radare2-6.0
 	o rails-6.1.0
