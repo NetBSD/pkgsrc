@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/01/01 19:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/06/18 14:59:31 nia Exp $
 
 DISTNAME=	vifm-0.14.3
 CATEGORIES=	sysutils
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake nroff perl pkg-config
 
-USE_CURSES=	resize_term wide
+USE_CURSES=	resize_term wide getmouse
 FAKE_NCURSES=	yes
 
 SUBST_CLASSES+=		curses
