@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/12/21 08:57:01 spz Exp $
+# $NetBSD: Makefile,v 1.24 2026/06/18 14:27:56 nia Exp $
 #
 
 DISTNAME=	cracklib,2.7
@@ -12,6 +12,12 @@ HOMEPAGE=	https://alecmuffett.com/alecm/software/cracklib/cracklib%2C2.7.txt
 COMMENT=	Password checking library
 
 USE_LIBTOOL=	YES
+
+# This uses K&R style function definitions and is unlikely to
+# be happy with an evolving C standard. gnu99 is chosen for
+# being the minimum bootstrap requirement and safety against
+# APIs being hidden in strict standards mode.
+FORCE_C_STD=	gnu99
 
 INSTALLATION_DIRS=	bin include/cracklib lib libdata
 
