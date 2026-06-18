@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:10:07 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/06/18 15:45:16 nia Exp $
 
 BLAKE2s (xsqlmenu-2.10.tar.gz) = ed06d4b2714c316a0a2b8bfb471039e5e0906680aee43671cd773bc34a6671c6
 SHA512 (xsqlmenu-2.10.tar.gz) = 3dc1e84a39d390fac82f36e654819d0eba3c1cd32a26a01d6704d4ddccbe4c7d939aba09090789a70923744f071ac05941bc3697a05560601d08cffe9a5ffb99
 Size (xsqlmenu-2.10.tar.gz) = 31458 bytes
+SHA1 (patch-XsqlMain.c) = b9a67f8575f39f733d853a5a80a9be538b3bdce2
 SHA1 (patch-Xsqldefs.h) = 8eedffa8b92d0a9eae85e7879d65d04a34d91271
 SHA1 (patch-aa) = 68c45a0787adf3a840343cf968d1c2172822a080
