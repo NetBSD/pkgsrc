@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/01/15 08:35:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/18 13:12:35 thorpej Exp $
 
 DISTNAME=	openocd-0.12.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openocd/}
 EXTRACT_SUFX=	.tar.bz2
