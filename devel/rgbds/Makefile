@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/09 10:57:13 sjmulder Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/18 15:22:03 nia Exp $
 
 DISTNAME=	rgbds-1.0.1
 CATEGORIES=	devel
@@ -20,6 +20,8 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	YACC=${YACC:Q}
 MAKE_FLAGS+=	LEX=${LEX:Q}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+USE_CXX_FEATURES+=	c++20
 
 CHECK_PORTABILITY_SKIP=	test/pokecrystal/tools/compare2.sh
 
