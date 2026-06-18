@@ -1,0 +1,6 @@
+Gemtext2HTML is a simple ObjC library with a C interface and a command line
+utility that translates Gemtext to HTML.
+
+The command line utitlity acts as a filter, meaning it reads Gemtext from stdin
+and outputs HTML to stdout. This can be used to render Gemtext in Forgejo,
+including a "README.gmi" file.
