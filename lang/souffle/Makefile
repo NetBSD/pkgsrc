@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/04/27 10:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/18 15:07:39 nia Exp $
 
 DISTNAME=	souffle-2.5
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	upl-1.0
 
 USE_TOOLS+=		flex bison pkg-config git
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 PTHREAD_AUTO_VARS=	yes
 
 CMAKE_GENERATORS_INCOMPATIBLE=	make
