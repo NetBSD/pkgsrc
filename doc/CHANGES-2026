@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3835 2026/06/18 14:40:12 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3836 2026/06/18 19:01:18 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-pillow_heif to 1.4.0 [wiz 2026-06-18]
 	Updated graphics/digikam-gmic-qt to 3.6.0.20260312 [wiz 2026-06-18]
 	Updated devel/R-purrr to 1.2.2 [mef 2026-06-18]
+	Updated security/ipv6-toolkit to 2.2 [drixter 2026-06-18]
