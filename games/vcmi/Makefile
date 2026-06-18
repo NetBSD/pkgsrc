@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/06/03 15:43:06 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/18 15:22:37 nia Exp $
 
 DISTNAME=	vcmi-1.7.4
 CATEGORIES=	games
@@ -17,7 +17,7 @@ HOMEPAGE=	https://vcmi.eu/
 COMMENT=	Open-source engine for Heroes of Might and Magic III
 LICENSE=	gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run pkg-config
 
