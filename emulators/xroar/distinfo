@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2024/01/02 00:21:01 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2026/06/18 15:50:48 nia Exp $
 
 BLAKE2s (xroar-1.4.2.tar.gz) = df4cee605ca70f764f6757411b3b93304fed71bf64a66c7612754e92e53e44fc
 SHA512 (xroar-1.4.2.tar.gz) = a84071e3f13b0892cfe7eb956bcb75ffb10a4a76aacf0ca379ba01d9a7626a916a805fc4bb25ac540d2dfb0f0392ea26f3968d562ec3ebde259d388a16478293
 Size (xroar-1.4.2.tar.gz) = 1228108 bytes
+SHA1 (patch-src_gdb.c) = d9f5053fa19110c30a50cf48a9f22a23b0e359cc
