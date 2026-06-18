@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:17:12 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/06/18 14:27:56 nia Exp $
 
 BLAKE2s (cracklib,2.7.tar.gz) = cf8702fecf41a790d238b4caf43027035e5c020b77ae7a587ba54e32a4559d49
 SHA512 (cracklib,2.7.tar.gz) = 2d63ed30d78a8fb07caeb21b2eeeb88941b224fe9c94da6c5eaecc4d23510117c836a373e77dffc1ff827dbd8bc02a07d07434caa4fc39b48d515bef425819e9
 Size (cracklib,2.7.tar.gz) = 21059 bytes
-SHA1 (patch-CVE-2016-6318) = 8cfb44a70c1b9e23a9739edc393fc017a7327902
+SHA1 (patch-CVE-2016-6318) = 14cf27cc349ef3425809de9845e52623aff373fc
 SHA1 (patch-aa) = 8119a733f4bdb0a5a41e41ab53e9923564a70855
 SHA1 (patch-ab) = b69fafe0b49de13a977df43fbaf8c01c06e0c2a8
 SHA1 (patch-ac) = 44677705081bfd13523469137cd73fe2d9a3aadb
+SHA1 (patch-cracklib_packer.h) = 5fc0e572748ee0e21370dc7b45054382d040bfe3
