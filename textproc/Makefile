@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1592 2026/06/11 13:14:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1593 2026/06/18 22:05:39 js Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -258,6 +258,7 @@ SUBDIR+=	freexl
 SUBDIR+=	frogmouth
 SUBDIR+=	fsrx
 SUBDIR+=	gdome2
+SUBDIR+=	gemtext2html
 SUBDIR+=	git-delta
 SUBDIR+=	glimpse
 SUBDIR+=	glow
