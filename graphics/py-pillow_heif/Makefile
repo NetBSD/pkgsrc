@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2026/04/20 18:14:08 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/06/18 09:02:32 wiz Exp $
 
-DISTNAME=	pillow_heif-1.3.0
+DISTNAME=	pillow_heif-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
 
@@ -16,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1.0:../../graphics/py-Pillow
 TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0:../../textproc/py-defusedxml
 
 .include "../../lang/python/wheel.mk"
-BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.17.6
+BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.19.0
 .include "../../graphics/libheif/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libaom+=	libaom>=3.6.1
 .include "../../multimedia/libaom/buildlink3.mk"
