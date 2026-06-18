@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3828 2026/06/18 08:07:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3829 2026/06/18 08:13:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5799,3 +5799,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/qbittorrent to 5.2.2 [wiz 2026-06-18]
 	Updated misc/khard to 0.21.0 [wiz 2026-06-18]
 	Updated mail/neomutt to 20260616 [wiz 2026-06-18]
+	Updated www/py-zensical to 0.0.45 [wiz 2026-06-18]
