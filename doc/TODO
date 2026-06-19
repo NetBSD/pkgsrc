@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27421 2026/06/18 10:01:09 wiz Exp $
+$NetBSD: TODO,v 1.27422 2026/06/19 10:45:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,6 +1044,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clipboard-0.28
+	o p5-Crypt-OpenPGP-1.21 [wiz]
 	o p5-DBD-DB2-1.86
 	o p5-DBD-Oracle-1.80
 	o p5-DBD-Sybase-1.16
@@ -1177,6 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pydantic-core-2.47.0
 	o py-pyrate-limiter-4.3.1
 	o py-readme_renderer-45.0
+	o py-ruff-0.15.18
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-3.11.0
 	o py-sybase-0.37
@@ -1225,7 +1227,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.18
+	o rumdl-0.2.19
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
