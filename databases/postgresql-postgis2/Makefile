@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2026/06/09 09:10:48 gdt Exp $
+# $NetBSD: Makefile,v 1.196 2026/06/19 10:59:42 gdt Exp $
 
 # Note that the PKGPATH remains "postgresql-postgis2", added during
 # postgis 1->2 migration, due to inertia and the pain of renaming.  So
@@ -18,7 +18,7 @@ PKGREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://postgis.net/
 COMMENT=	Spatial database capabilities for PostgreSQL
 LICENSE=	gnu-gpl-v2
