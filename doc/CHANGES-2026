@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3838 2026/06/18 22:04:36 js Exp $
+$NetBSD: CHANGES-2026,v 1.3839 2026/06/19 13:11:34 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5809,3 +5809,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ipv6-toolkit to 2.2 [drixter 2026-06-18]
 	Updated net/dnscontrol to 4.42.0 [drixter 2026-06-18]
 	Added textproc/gemtext2html version 0.1 [js 2026-06-18]
+	Updated textproc/ruby-nokogiri to 1.19.4 [tsutsui 2026-06-19]
