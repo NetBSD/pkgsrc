@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3840 2026/06/19 13:20:39 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.3841 2026/06/19 17:31:16 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/gemtext2html version 0.1 [js 2026-06-18]
 	Updated textproc/ruby-nokogiri to 1.19.4 [tsutsui 2026-06-19]
 	Updated archivers/lhasa to 0.6.0 [tsutsui 2026-06-19]
+	Updated net/bind918 to 9.18.50 [he 2026-06-19]
