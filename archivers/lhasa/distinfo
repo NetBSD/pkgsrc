@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/01/18 01:57:05 tsutsui Exp $
+$NetBSD: distinfo,v 1.14 2026/06/19 13:20:21 tsutsui Exp $
 
-BLAKE2s (lhasa-0.5.0.tar.gz) = 88ffc32158e1df681282cd0b3a495de75119b8743cff13a4c4f7926d499f93f4
-SHA512 (lhasa-0.5.0.tar.gz) = 26de1e454230e6ed33919ce0071d1f6aa8d35d2a534ce17956d32b9a73a162db8627bea58db6fef3f359ab88ca8331f991a04d7a6d696e949dd9e189b4835038
-Size (lhasa-0.5.0.tar.gz) = 3568200 bytes
+BLAKE2s (lhasa-0.6.0.tar.gz) = df609944bc1fc43377031b17d1cc5216f49a6a24fefa49b2ebe970fdcf382fe1
+SHA512 (lhasa-0.6.0.tar.gz) = 250ddd2a2660a1980ceea69ce5dca7006516f8af9b1b5f8077bfd10221ed67be2270218c924bf34c92e624cc5aeb039fab189feb7ec758873e38c26af63fa10e
+Size (lhasa-0.6.0.tar.gz) = 3567690 bytes
