@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/11/17 11:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/20 10:22:15 nia Exp $
 #
 
 DISTNAME=	srm-1.2.15
@@ -13,6 +13,11 @@ LICENSE=	x11
 GNU_CONFIGURE=	yes
 
 CONFLICTS+=	sr-[0-9]* # bin/srm
+
+# doesn't include <alloca.h> which is needed on SunOS,
+# just define the function to the compiler builtin to avoid
+# needing a patch.
+CFLAGS.SunOS+=	-Dalloca=__builtin_alloca
 
 do-test:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./test.sh
