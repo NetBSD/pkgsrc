@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/06/10 10:59:02 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/20 00:50:37 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -356,7 +356,7 @@ lib/mysql/plugin/query_response_time.so
 lib/mysql/plugin/server_audit.so
 lib/mysql/plugin/simple_password_check.so
 lib/mysql/plugin/sql_errlog.so
-lib/mysql/plugin/test_pam_modules/pam_mariadb_mtr.so
+${PLIST.auth_pam}lib/mysql/plugin/test_pam_modules/pam_mariadb_mtr.so
 lib/mysql/plugin/test_sql_service.so
 lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
