@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2005/03/04 16:27:26 schwarz Exp $
+$NetBSD: patch-ac,v 1.3 2026/06/20 11:00:53 nia Exp $
 
---- Mailbox.c.orig	2005-03-04 15:58:13.000000000 +0100
-+++ Mailbox.c	2005-03-04 15:58:52.000000000 +0100
-@@ -276,7 +276,7 @@
+--- Mailbox.c.orig	1997-07-16 16:07:12.000000000 +0000
++++ Mailbox.c
+@@ -39,6 +39,7 @@
+ #include <pwd.h>				/* for getting username */
+ #include <stdlib.h>				/* for getenv() */
+ #include <string.h>
++#include <unistd.h>
+ 
+ #ifndef NO_AUDIO
+ #ifdef NCD_AUDIO
+@@ -276,7 +277,7 @@ static GC get_mailbox_gc (w)
      return (XtGetGC ((Widget) w, valuemask, &xgcv));
  }
  
