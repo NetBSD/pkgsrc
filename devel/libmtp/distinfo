@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/05/19 13:32:22 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/06/20 00:33:12 nia Exp $
 
 BLAKE2s (libmtp-1.1.23.tar.gz) = 7784cb3d111d1076a3c8dbe64b8d1bd1667611bfd177c872c97289e595df0912
 SHA512 (libmtp-1.1.23.tar.gz) = 2411513f1b7f81d4418eb1455213d7e198bc7d36bfadc22d2c380c51ca1924fffe21b08b6522266586ec76cbfc760427ed5d1c31064a59f6906d6638f198d1af
@@ -8,5 +8,5 @@ SHA1 (patch-hotplug.sh.in) = 72216bb36bd0f6274c16c09d121fcffb567ab120
 SHA1 (patch-m4_byteorder.m4) = e6c1170d9099f13c637b3a73d67618d318c7a73d
 SHA1 (patch-src_libusb1-glue.c) = 2c83f2436a7cbc27c8b03f8d22db9bb446f55446
 SHA1 (patch-src_ptp-pack.c) = 7657d7f5b707c644bb5599f31c0d2c395d43d893
-SHA1 (patch-src_unicode.c) = c38b2070e39e6df088c7e9ec7c3a723e0fcc87ed
+SHA1 (patch-src_unicode.c) = 5b130ea8aaa67d7e57af3b3a61ea23ee948881d6
 SHA1 (patch-src_util.c) = f7be6760014323dc2b159e1e44f94e40d96f26d0
