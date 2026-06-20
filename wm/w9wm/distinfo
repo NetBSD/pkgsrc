@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:19 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/06/20 10:40:32 nia Exp $
 
 BLAKE2s (w9wm-0.4.2.tar.gz) = 672f6780663c09f40d9f8128661dc822f6203722632e648201fb2c58bb425ce2
 SHA512 (w9wm-0.4.2.tar.gz) = 63ab3c8e7f8d4dc1b462d48d4221d80fb2d3aa05b52d2f5f7fd0e5209361861ee0f6d28bd63ad15f77136a5c15ece899e39f5b31665497f67aa3931f1dc4113c
 Size (w9wm-0.4.2.tar.gz) = 24505 bytes
 SHA1 (patch-aa) = eeebe51f8cb7752570bd08fc28209c63eff483af
+SHA1 (patch-error.c) = 62ca7a12db8e3fb840a010e31fab96e81d55051a
+SHA1 (patch-manage.c) = 4b78e08731fedf1a5d3fa578851754eb4e83d41c
+SHA1 (patch-menu.c) = 2c3c64bde8146f138c5b3e97d048599a39a48715
