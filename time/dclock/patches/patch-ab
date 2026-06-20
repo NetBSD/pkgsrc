@@ -1,10 +1,18 @@
-$NetBSD: patch-ab,v 1.4 2016/03/30 09:46:37 jperkin Exp $
+$NetBSD: patch-ab,v 1.5 2026/06/20 01:17:05 nia Exp $
 
 Various fixes.
 
---- Dclock.c.orig	2007-04-19 18:51:51.000000000 +0200
+--- Dclock.c.orig	2026-06-20 01:11:50.748058979 +0000
 +++ Dclock.c
-@@ -21,8 +21,6 @@ static void
+@@ -3,6 +3,7 @@
+  * Copyright (c) 1988 Dan Heller <argv@sun.com>
+  */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/time.h>
+ #include <X11/IntrinsicP.h>
+ #include <X11/Xos.h>
+@@ -21,8 +22,6 @@ static void
  #define CLOCK_WIDTH	256
  #define CLOCK_HEIGHT	80
  #define DATE_FMT	"%W, %M %d"
@@ -13,7 +21,25 @@ Various fixes.
  
  
  static Boolean SetValues(), show_time();
-@@ -367,8 +365,8 @@ DclockWidget w;
+@@ -36,7 +35,7 @@ static char *saved_date;
+ static int old_digs[4];
+ static struct tm before;
+ static char *saved_date;
+-static cur_position;	/* outline current digit for setting alarm */
++static int cur_position;	/* outline current digit for setting alarm */
+ static struct { int hrs, mins; } Alarm;
+ 
+ static char defaultTranslations[] =
+@@ -114,7 +113,7 @@ DclockClassRec dclockClassRec = {
+     /* num_actions		*/	XtNumber(actionsList),
+     /* resources		*/	resources,
+     /* resource_count		*/	XtNumber(resources),
+-    /* xrm_class		*/	NULL,
++    /* xrm_class		*/	0,
+     /* compress_motion		*/	TRUE,
+     /* compress_exposure	*/	TRUE,
+     /* compress_enterleave	*/	TRUE,
+@@ -367,8 +366,8 @@ DclockWidget w;
  
      if (w->dclock.interval_id != (XtIntervalId)NULL)
  	XtRemoveTimeOut(w->dclock.interval_id);
@@ -24,7 +50,7 @@ Various fixes.
      for (n = 0; n < 10; n++) {
  	XFreePixmap(XtDisplay(w), w->dclock.digits[n]);
  	XFreePixmap(XtDisplay(w), w->dclock.tiny_digits[n]);
-@@ -388,7 +386,7 @@ DclockWidget    w;
+@@ -388,7 +387,7 @@ DclockWidget    w;
      Pixmap pix;
      GC gc = w->dclock.foreGC;
  
@@ -33,7 +59,7 @@ Various fixes.
  	return;
  
      winwidth = w->core.width;
-@@ -450,7 +448,7 @@ DclockWidget    w;
+@@ -450,7 +449,7 @@ DclockWidget    w;
  	    make_number(w, w->dclock.tiny_digits[i], gc, i, tiny_segment_pts);
  	}
  	else
@@ -42,7 +68,7 @@ Various fixes.
      }
      /* The colon[0] area is blank */
      if (w->dclock.colon[0])
-@@ -627,9 +625,9 @@ DclockWidget    w;
+@@ -627,9 +626,9 @@ DclockWidget    w;
  {
      Boolean save_scroll = w->dclock.scroll;
      Boolean save_fade = w->dclock.fade;
@@ -54,7 +80,7 @@ Various fixes.
  	return;
  
      if (w->dclock.interval_id != (XtIntervalId)NULL) {
-@@ -663,7 +661,7 @@ DclockWidget w;
+@@ -663,7 +662,7 @@ DclockWidget w;
  {
      char buf[11];
      Boolean alarm_went_off = False;
@@ -63,7 +89,7 @@ Various fixes.
      register struct tm *l_time = localtime(&t);
      int digit_w = w->dclock.digit_w;
      int digit_h = w->dclock.digit_h;
-@@ -802,7 +800,7 @@ register char *p;
+@@ -802,7 +801,7 @@ register char *p;
  		turn_off[i] = oldmask & ~newmask;
  	    }
  	    else
@@ -72,7 +98,7 @@ Various fixes.
   
  	for (j = 1; j != FADE_ITER; ++j)
  	{
-@@ -875,27 +873,36 @@ struct tm *now;
+@@ -875,27 +874,36 @@ struct tm *now;
  	if (*p != '%')
  	    *datep++ = *p;
  	else switch (*++p) {
@@ -121,7 +147,7 @@ Various fixes.
  	}
      }
      *datep = 0;
-@@ -906,7 +913,7 @@ struct tm *now;
+@@ -906,7 +914,7 @@ struct tm *now;
  
      /* remove what was there in case the whole thing isn't overwritten */
      XFillRectangle(XtDisplay(w), XtWindow(w), w->dclock.backGC,
@@ -130,7 +156,7 @@ Various fixes.
  	winwidth, w->dclock.font->ascent + w->dclock.font->descent);
  
      XDrawString(XtDisplay(w), XtWindow(w), w->dclock.foreGC,
-@@ -924,7 +931,8 @@ XtIntervalId *id;
+@@ -924,7 +932,8 @@ XtIntervalId *id;
  {
      Boolean alarm_went_off = show_time(w);
      w->dclock.interval_id =
@@ -140,7 +166,7 @@ Various fixes.
  			timeout, (XtPointer)w);
  }
  
-@@ -960,8 +968,8 @@ DclockWidget current, request, new;
+@@ -960,8 +969,8 @@ DclockWidget current, request, new;
      ||  new->dclock.tails != current->dclock.tails
      ||  new->dclock.fade != current->dclock.fade
      ||  new->dclock.miltime != current->dclock.miltime) {
@@ -151,7 +177,7 @@ Various fixes.
  	GetGC(new);
  	Resize(new); /* pixmaps need to be redrawn */
  	do_redraw = True;
-@@ -1024,7 +1032,7 @@ DclockWidget w;
+@@ -1024,7 +1033,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNreverseVideo, !w->dclock.reverse);
@@ -160,7 +186,7 @@ Various fixes.
  }
  
  static void
-@@ -1038,7 +1046,7 @@ DclockWidget w;
+@@ -1038,7 +1047,7 @@ DclockWidget w;
  	return;
      }
      XtSetArg(arg, XtNmilitaryTime, !w->dclock.miltime);
@@ -169,7 +195,7 @@ Various fixes.
  }
  
  static void
-@@ -1052,7 +1060,7 @@ DclockWidget w;
+@@ -1052,7 +1061,7 @@ DclockWidget w;
  	return;
      }
      XtSetArg(arg, XtNseconds, !w->dclock.seconds);
@@ -178,7 +204,7 @@ Various fixes.
  }
  
  static void
-@@ -1062,7 +1070,7 @@ DclockWidget w;
+@@ -1062,7 +1071,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNfade, !w->dclock.fade);
@@ -187,7 +213,7 @@ Various fixes.
      if (w->dclock.fade && w->dclock.scroll)
  	toggle_scroll(w);
  }
-@@ -1074,7 +1082,7 @@ DclockWidget w;
+@@ -1074,7 +1083,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNtails, !w->dclock.tails);
@@ -196,7 +222,7 @@ Various fixes.
  }
  
  static void
-@@ -1084,7 +1092,7 @@ DclockWidget w;
+@@ -1084,7 +1093,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNalarm, !w->dclock.alarm);
@@ -205,7 +231,16 @@ Various fixes.
  }
  
  static void
-@@ -1124,20 +1132,24 @@ XButtonEvent *event;
+@@ -1092,7 +1101,7 @@ XButtonEvent *event;
+ DclockWidget w;
+ XButtonEvent *event;
+ {
+-    static saved_secs, saved_miltime;
++    static int saved_secs, saved_miltime;
+ 
+     if (event->button == 3) {
+ 	if (!(w->dclock.display_time = !w->dclock.display_time)) {
+@@ -1124,20 +1133,24 @@ XButtonEvent *event;
  		    int digit = w->dclock.alarm_time[i>1?i+1:i] - '0';
  		    int mod;
  		    switch (i) {
