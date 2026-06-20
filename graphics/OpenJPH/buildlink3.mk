@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/09/21 15:09:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/06/20 13:02:45 wiz Exp $
 
 BUILDLINK_TREE+=	OpenJPH
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	OpenJPH
 OPENJPH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.OpenJPH+=	OpenJPH>=0.23.1
+BUILDLINK_ABI_DEPENDS.OpenJPH?=	OpenJPH>=0.28.1
 BUILDLINK_PKGSRCDIR.OpenJPH?=	../../graphics/OpenJPH
 
 .endif	# OPENJPH_BUILDLINK3_MK
