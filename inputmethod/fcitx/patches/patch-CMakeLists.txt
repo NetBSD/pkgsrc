@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/06/20 09:29:04 nia Exp $
+
+Honour the user's PKGMANDIR.
+
+--- CMakeLists.txt.orig	2026-06-20 09:24:34.879435137 +0000
++++ CMakeLists.txt
+@@ -188,7 +188,8 @@ if(NOT DEFINED MAN_INSTALL_DIR)
+     set(LIBDATA_INSTALL_DIR "${LIB_INSTALL_DIR}"  CACHE PATH "Lib data install directory [default=LIB_INSTALL_DIR]")
+ endif()
+ if(NOT DEFINED MAN_INSTALL_DIR)
+-    set(MAN_INSTALL_DIR "${prefix}/share/man"  CACHE PATH "man install directory [default=PREFIX/share/man]")
++    include(GNUInstallDirs)
++    set(MAN_INSTALL_DIR "${prefix}/${CMAKE_INSTALL_MANDIR}"  CACHE PATH "man install directory [default=PREFIX/share/man]")
+ endif()
+ if (NOT DEFINED DBUS_SERVICE_DIR)
+     set(DBUS_SERVICE_DIR "${CMAKE_INSTALL_PREFIX}/share/dbus-1/services" CACHE PATH "dbus session service directory [default=PREFIX/share/dbus-1/services]")
