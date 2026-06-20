@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/06/11 07:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/20 09:09:06 nia Exp $
 
 DISTNAME=	libayatana-indicator-0.9.4
 PKGREVISION=	8
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	data/ayatana-indicator.pc.in
 PKGCONFIG_OVERRIDE+=	data/ayatana-indicator3-no-IDO.pc.in
 PKGCONFIG_OVERRIDE+=	data/ayatana-indicator3.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/indicator.symbols
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
