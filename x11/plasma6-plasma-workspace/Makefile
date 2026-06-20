@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/06/11 07:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/20 18:09:03 wiz Exp $
 
 DISTNAME=	plasma-workspace-${PLASMAVER}
 PKGREVISION=	2
@@ -7,6 +7,8 @@ CATEGORIES=	x11
 HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	KDE Plasma Workspace
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
+
+BROKEN=		"Needs wip/plasma6-kwin to build."
 
 .include "../../meta-pkgs/kde/plasma6.mk"
 
