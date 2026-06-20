@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.36 2026/01/19 13:02:38 wiz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.37 2026/06/20 14:49:00 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -10,9 +10,9 @@ For instance, when you have multiple machines that should run the same software,
 it is wasted time if they all build their packages themselves from source.
 Or you may want to build a list of packages you want and check them before
 deploying onto production systems.
-There is a way of getting a set of binary packages:
-the bulk build system, or pbulk ("p" stands for "parallel").
-This chapter describes how to set it up.</para>
+There is a way of getting a set of binary packages using
+a bulk build system, for example pbulk ("p" stands for "parallel") or bob.
+This chapter describes how to set them up.</para>
 
 <sect1 id="bulk.pre">
 <title>Preparations</title>
@@ -27,7 +27,7 @@ For limited bulk builds you need to make a list of packages you want to build.
 Note that all their dependencies will be built, so you don't need to track them manually.
 </para>
 
-<para>During bulk builds various packages are installed and deinstalled
+<para>During pbulk (but not bob) builds various packages are installed and deinstalled
 in <filename>/usr/pkg</filename> (or whatever <filename>LOCALBASE</filename> is),
 so make sure that you don't need any package during the builds.
 Essentially, you should provide a fresh system, either a chroot environment
@@ -74,9 +74,9 @@ unprivileged user doesn't work well at the moment.</para></listitem>
 </sect1>
 
 <sect1 id="bulk.pbulk">
-<title>Running a bulk build</title>
+<title>Running a pbulk build</title>
 
-<para>Running a bulk build works roughly as follows:</para>
+<para>Running a pbulk build works roughly as follows:</para>
 
 <itemizedlist>
 <listitem><para>First, build the pbulk infrastructure in a fresh pkgsrc location.</para></listitem>
@@ -167,6 +167,52 @@ an IP address that must be accessible over SSH without a password).</para>
 
 </sect2>
 
+</sect1>
+<sect1 id="bulk.bob">
+<title>Running a bob build</title>
+
+<para>Bob is designed to be a simpler and more powerful alternative to
+pbulk.  To get started, install the <filename
+role="pkg">pkgtools/bob</filename> package, modify
+<filename>${PKG_SYSCONFBASE}/bob/config.lua</filename> to customize
+the packages you wish to build and tune the settings for your system,
+then run</para>
+<screen>
+&rprompt; <userinput>bob build</userinput>
+</screen>
+<para>This will build all of the packages you have selected inside
+clean sandboxes, and produce a <filename>pkg_summary</filename> file
+at the end, ready for <filename role="pkg">pkgtools/pkgin</filename>
+to upgrade the system.</para>
+<para>Any time you update your pkgsrc checkout, first run</para>
+<screen>
+&rprompt; <userinput>bob clean</userinput>
+</screen>
+<para>to remove the existing build metadata before starting a new build.</para>
+<para>Some other useful features include being able to run a scan separately first, so that you can see what packages will be built:</para>
+<screen>
+&rprompt; <userinput>bob scan</userinput>
+&rprompt; <userinput>bob status</userinput>
+</screen>
+<para>You can also add arbitrary packages to the current build by providing a <varname>PKGPATH</varname> as an argument:</para>
+<screen>
+&rprompt; <userinput>bob build graphics/png</userinput>
+</screen>
+<para>If a package fails to build you can view the log file:</para>
+<screen>
+&rprompt; <userinput>bob log png</userinput>
+</screen>
+<para>If you fix an issue and you only want to rebuild the previously failed packages without starting from scratch, you can run:</para>
+<screen>
+&rprompt; <userinput>bob rebuild -a</userinput>
+</screen>
+<para>Other useful commands:</para>
+<screen>
+&rprompt; <userinput>bob dev # run an interactive sandbox for development work</userinput>
+&rprompt; <userinput>bob history # show package build history</userinput>
+&rprompt; <userinput>bob publish # generate build reports, emails, and publish packages</userinput>
+</screen>
+<para>For more details, please see <ulink url="https://docs.rs/bob/latest/bob/"/>.</para>
 </sect1>
 
 <sect1 id="bulk.scan">
