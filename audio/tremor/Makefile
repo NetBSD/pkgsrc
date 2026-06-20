@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/03/26 19:43:30 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2026/06/20 09:17:14 nia Exp $
 
 DISTNAME=	tremor-562307a
 PKGNAME=	tremor-1.0.2.20180316
@@ -19,6 +19,11 @@ USE_TOOLS+=		autoconf automake gmake pkg-config
 USE_LIBTOOL=		yes
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
+
+# doesn't include <alloca.h> which is needed on SunOS,
+# just define the function to the compiler builtin to avoid
+# needing a patch.
+CFLAGS.SunOS+=		-Dalloca=__builtin_alloca
 
 pre-configure:
 	touch ${WRKSRC}/config.h.in
