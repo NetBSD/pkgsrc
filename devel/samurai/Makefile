@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/12/17 22:01:04 mcf Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/20 09:42:30 nia Exp $
 
 DISTNAME=	samurai-1.2
 CATEGORIES=	devel
@@ -14,5 +14,7 @@ BUILD_TARGET=	samu
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__ # getline(3)
 
 .include "../../mk/bsd.pkg.mk"
