@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2023/11/27 02:21:51 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2026/06/20 00:52:49 nia Exp $
 
 BLAKE2s (lzsa-1.4.1.tar.gz) = 5596b8694df3787d4a6d15a8a982e4d67592ecb848aa218eb940db8bd854ce5c
 SHA512 (lzsa-1.4.1.tar.gz) = 08fed665bf24c7435f98e80d3560d2cdd346c863850227468af9dcfea9dded47168de8c4584e3b24c83dc57dd13ae94f5842c1b7cec68ed10e7e6c7c97f5b20b
 Size (lzsa-1.4.1.tar.gz) = 152571 bytes
+SHA1 (patch-Makefile) = 0b50051ac1649eb9361eca902d4ce3edd2079b79
+SHA1 (patch-src_dictionary.c) = bc492e11bcc2bc7fedcc5259d541f7273854ba9d

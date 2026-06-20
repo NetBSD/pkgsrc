@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/27 02:21:51 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/20 00:52:49 nia Exp $
 
 DISTNAME=	lzsa-1.4.1
 CATEGORIES=	archivers
@@ -12,7 +12,12 @@ LICENSE=	zlib
 
 USE_TOOLS+=	gmake
 
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+
 INSTALLATION_DIRS=	bin
+
+pre-patch:
+	dos2unix ${WRKSRC}/src/*.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lzsa ${DESTDIR}${PREFIX}/bin
