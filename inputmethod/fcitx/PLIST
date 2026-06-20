@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/28 12:38:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/20 09:29:04 nia Exp $
 bin/createPYMB
 bin/fcitx
 bin/fcitx-autostart
@@ -124,6 +124,15 @@ lib/pkgconfig/fcitx-config.pc
 lib/pkgconfig/fcitx-gclient.pc
 lib/pkgconfig/fcitx-utils.pc
 lib/pkgconfig/fcitx.pc
+man/man1/createPYMB.1
+man/man1/fcitx-remote.1
+man/man1/fcitx.1
+man/man1/mb2org.1
+man/man1/mb2txt.1
+man/man1/readPYBase.1
+man/man1/readPYMB.1
+man/man1/scel2org.1
+man/man1/txt2mb.1
 share/applications/fcitx-configtool.desktop
 share/applications/fcitx-skin-installer.desktop
 share/applications/fcitx.desktop
@@ -417,13 +426,4 @@ share/locale/ko/LC_MESSAGES/fcitx.mo
 share/locale/ru/LC_MESSAGES/fcitx.mo
 share/locale/zh_CN/LC_MESSAGES/fcitx.mo
 share/locale/zh_TW/LC_MESSAGES/fcitx.mo
-share/man/man1/createPYMB.1
-share/man/man1/fcitx-remote.1
-share/man/man1/fcitx.1
-share/man/man1/mb2org.1
-share/man/man1/mb2txt.1
-share/man/man1/readPYBase.1
-share/man/man1/readPYMB.1
-share/man/man1/scel2org.1
-share/man/man1/txt2mb.1
 share/mime/packages/x-fskin.xml
