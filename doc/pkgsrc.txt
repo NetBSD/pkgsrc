@@ -78,23 +78,24 @@ I. The pkgsrc user's guide
         7.2. Settings for creation of binary packages
     8. Creating binary packages for everything in pkgsrc (bulk builds)
         8.1. Preparations
-        8.2. Running a bulk build
+        8.2. Running a pbulk build
             8.2.1. Configuration
-        8.3. Speeding up bulk build scans
-        8.4. Requirements of a full bulk build
-        8.5. Bulk build variants
-            8.5.1. Detect unknown configure options
-            8.5.2. Detect classes of bugs by forcing compiler warnings
-            8.5.3. Force compiler options only in the build phase
-            8.5.4. Use custom directories
-            8.5.5. Turn warnings into errors
-            8.5.6. Reject packages for which pkglint reports errors
-            8.5.7. Reject packages that contain forbidden strings
-            8.5.8. Reject packages whose self-test fails
-            8.5.9. Reject packages that use undefined shell variables
-            8.5.10. Turn off verbose logging
-        8.6. Creating a multiple CD-ROM packages collection
-            8.6.1. Example of cdpack
+        8.3. Running a bob build
+        8.4. Speeding up bulk build scans
+        8.5. Requirements of a full bulk build
+        8.6. Bulk build variants
+            8.6.1. Detect unknown configure options
+            8.6.2. Detect classes of bugs by forcing compiler warnings
+            8.6.3. Force compiler options only in the build phase
+            8.6.4. Use custom directories
+            8.6.5. Turn warnings into errors
+            8.6.6. Reject packages for which pkglint reports errors
+            8.6.7. Reject packages that contain forbidden strings
+            8.6.8. Reject packages whose self-test fails
+            8.6.9. Reject packages that use undefined shell variables
+            8.6.10. Turn off verbose logging
+        8.7. Creating a multiple CD-ROM packages collection
+            8.7.1. Example of cdpack
     9. Directory layout of the installed files
         9.1. File system layout in ${LOCALBASE}
         9.2. File system layout in ${VARBASE}
@@ -641,23 +642,24 @@ Table of Contents
     7.2. Settings for creation of binary packages
 8. Creating binary packages for everything in pkgsrc (bulk builds)
     8.1. Preparations
-    8.2. Running a bulk build
+    8.2. Running a pbulk build
         8.2.1. Configuration
-    8.3. Speeding up bulk build scans
-    8.4. Requirements of a full bulk build
-    8.5. Bulk build variants
-        8.5.1. Detect unknown configure options
-        8.5.2. Detect classes of bugs by forcing compiler warnings
-        8.5.3. Force compiler options only in the build phase
-        8.5.4. Use custom directories
-        8.5.5. Turn warnings into errors
-        8.5.6. Reject packages for which pkglint reports errors
-        8.5.7. Reject packages that contain forbidden strings
-        8.5.8. Reject packages whose self-test fails
-        8.5.9. Reject packages that use undefined shell variables
-        8.5.10. Turn off verbose logging
-    8.6. Creating a multiple CD-ROM packages collection
-        8.6.1. Example of cdpack
+    8.3. Running a bob build
+    8.4. Speeding up bulk build scans
+    8.5. Requirements of a full bulk build
+    8.6. Bulk build variants
+        8.6.1. Detect unknown configure options
+        8.6.2. Detect classes of bugs by forcing compiler warnings
+        8.6.3. Force compiler options only in the build phase
+        8.6.4. Use custom directories
+        8.6.5. Turn warnings into errors
+        8.6.6. Reject packages for which pkglint reports errors
+        8.6.7. Reject packages that contain forbidden strings
+        8.6.8. Reject packages whose self-test fails
+        8.6.9. Reject packages that use undefined shell variables
+        8.6.10. Turn off verbose logging
+    8.7. Creating a multiple CD-ROM packages collection
+        8.7.1. Example of cdpack
 9. Directory layout of the installed files
     9.1. File system layout in ${LOCALBASE}
     9.2. File system layout in ${VARBASE}
@@ -1658,32 +1660,33 @@ Chapter  8.  Creating binary packages for everything in pkgsrc (bulk builds)
 Table of Contents
 
 8.1. Preparations
-8.2. Running a bulk build
+8.2. Running a pbulk build
     8.2.1. Configuration
-8.3. Speeding up bulk build scans
-8.4. Requirements of a full bulk build
-8.5. Bulk build variants
-    8.5.1. Detect unknown configure options
-    8.5.2. Detect classes of bugs by forcing compiler warnings
-    8.5.3. Force compiler options only in the build phase
-    8.5.4. Use custom directories
-    8.5.5. Turn warnings into errors
-    8.5.6. Reject packages for which pkglint reports errors
-    8.5.7. Reject packages that contain forbidden strings
-    8.5.8. Reject packages whose self-test fails
-    8.5.9. Reject packages that use undefined shell variables
-    8.5.10. Turn off verbose logging
-8.6. Creating a multiple CD-ROM packages collection
-    8.6.1. Example of cdpack
+8.3. Running a bob build
+8.4. Speeding up bulk build scans
+8.5. Requirements of a full bulk build
+8.6. Bulk build variants
+    8.6.1. Detect unknown configure options
+    8.6.2. Detect classes of bugs by forcing compiler warnings
+    8.6.3. Force compiler options only in the build phase
+    8.6.4. Use custom directories
+    8.6.5. Turn warnings into errors
+    8.6.6. Reject packages for which pkglint reports errors
+    8.6.7. Reject packages that contain forbidden strings
+    8.6.8. Reject packages whose self-test fails
+    8.6.9. Reject packages that use undefined shell variables
+    8.6.10. Turn off verbose logging
+8.7. Creating a multiple CD-ROM packages collection
+    8.7.1. Example of cdpack
 
 For a number of reasons, you may want to build binary packages for a large
 selected set of packages in pkgsrc, or even for all pkgsrc packages. For
 instance, when you have multiple machines that should run the same software, it
 is wasted time if they all build their packages themselves from source. Or you
 may want to build a list of packages you want and check them before deploying
-onto production systems. There is a way of getting a set of binary packages:
-the bulk build system, or pbulk ("p" stands for "parallel"). This chapter
-describes how to set it up.
+onto production systems. There is a way of getting a set of binary packages
+using a bulk build system, for example pbulk ("p" stands for "parallel") or
+bob. This chapter describes how to set them up.
 
 8.1.  Preparations
 
@@ -1692,22 +1695,23 @@ set of them. Full bulk builds usually consume a lot more resources, both space
 and time, than builds for some practical sets of packages. A number of
 particularly heavy packages exist that are not actually interesting to a wide
 audience. (The approximate resource consumption for a full bulk build is given
-in section Section  8.4,    Requirements of a full bulk build   .) For limited bulk
+in section Section  8.5,    Requirements of a full bulk build   .) For limited bulk
 builds you need to make a list of packages you want to build. Note that all
 their dependencies will be built, so you don't need to track them manually.
 
-During bulk builds various packages are installed and deinstalled in /usr/pkg
-(or whatever LOCALBASE is), so make sure that you don't need any package during
-the builds. Essentially, you should provide a fresh system, either a chroot
-environment or something even more restrictive, depending on what the operating
-system provides, or dedicate the whole physical machine. As a useful side
-effect this makes sure that bulk builds cannot break anything in your system.
-There have been numerous cases where certain packages tried to install files
-outside the LOCALBASE or wanted to edit some files in /etc.
+During pbulk (but not bob) builds various packages are installed and
+deinstalled in /usr/pkg (or whatever LOCALBASE is), so make sure that you don't
+need any package during the builds. Essentially, you should provide a fresh
+system, either a chroot environment or something even more restrictive,
+depending on what the operating system provides, or dedicate the whole physical
+machine. As a useful side effect this makes sure that bulk builds cannot break
+anything in your system. There have been numerous cases where certain packages
+tried to install files outside the LOCALBASE or wanted to edit some files in /
+etc.
 
-8.2.  Running a bulk build
+8.2.  Running a pbulk build
 
-Running a bulk build works roughly as follows:
+Running a pbulk build works roughly as follows:
 
   * First, build the pbulk infrastructure in a fresh pkgsrc location.
 
@@ -1778,7 +1782,54 @@ replicate the target system, including the pbulk prefix, or remote machines
 (each node is an IP address that must be accessible over SSH without a
 password).
 
-8.3.  Speeding up bulk build scans
+8.3.  Running a bob build
+
+Bob is designed to be a simpler and more powerful alternative to pbulk. To get
+started, install the pkgtools/bob package, modify ${PKG_SYSCONFBASE}/bob/
+config.lua to customize the packages you wish to build and tune the settings
+for your system, then run
+
+# bob build
+
+This will build all of the packages you have selected inside clean sandboxes,
+and produce a pkg_summary file at the end, ready for pkgtools/pkgin to upgrade
+the system.
+
+Any time you update your pkgsrc checkout, first run
+
+# bob clean
+
+to remove the existing build metadata before starting a new build.
+
+Some other useful features include being able to run a scan separately first,
+so that you can see what packages will be built:
+
+# bob scan
+# bob status
+
+You can also add arbitrary packages to the current build by providing a PKGPATH
+as an argument:
+
+# bob build graphics/png
+
+If a package fails to build you can view the log file:
+
+# bob log png
+
+If you fix an issue and you only want to rebuild the previously failed packages
+without starting from scratch, you can run:
+
+# bob rebuild -a
+
+Other useful commands:
+
+# bob dev # run an interactive sandbox for development work
+# bob history # show package build history
+# bob publish # generate build reports, emails, and publish packages
+
+For more details, please see https://docs.rs/bob/latest/bob/.
+
+8.4.  Speeding up bulk build scans
 
 At the start of a bulk build. pkgsrc is scanned for details about the packages
 to build. This is needed e.g. to build a dependency graph for building the
@@ -1826,7 +1877,7 @@ environment. The safest method is to re-create the varcache before each build,
 make sure the environment variables are still up-to-date, and to delete the
 PBULK_CACHE_DIRECTORY before builds.
 
-8.4.  Requirements of a full bulk build
+8.5.  Requirements of a full bulk build
 
 A complete bulk build requires lots of disk space. Some of the disk space can
 be read-only, some other must be writable. Some can be on remote filesystems
@@ -1845,14 +1896,14 @@ others must survive a sudden reboot.
 
   * 5 GB for temporary files (read-write, local, temporary)
 
-8.5.  Bulk build variants
+8.6.  Bulk build variants
 
 To ensure that pkgsrc packages work in different configurations, it makes sense
 to run non-default bulk builds from time to time. This section lists some ideas
 for bulk builds that intentionally let packages fail if they don't follow the
 pkgsrc style.
 
-8.5.1.  Detect unknown configure options
+8.6.1.  Detect unknown configure options
 
 Add the following line to mk.conf.
 
@@ -1862,7 +1913,7 @@ When a package fails this additional check, the most common cause is that the
 configure option was valid for an older version of the package but does not
 apply anymore. In that case, just remove it.
 
-8.5.2.  Detect classes of bugs by forcing compiler warnings
+8.6.2.  Detect classes of bugs by forcing compiler warnings
 
 The job of a compiler is not restricted to producing executable code, most
 compilers also detect typical programming mistakes. The pkgsrc compiler
@@ -1908,7 +1959,7 @@ collected above.
 Patches that are not essential for the package to work should only be reported
 upstream but not committed to pkgsrc, to make future updates easier.
 
-8.5.3.  Force compiler options only in the build phase
+8.6.3.  Force compiler options only in the build phase
 
 When adding custom compiler flags via CFLAGS, these apply to all phases of the
 package build process. Especially in the configure phase, adding -Werror leads
@@ -1977,10 +2028,10 @@ options, but the corresponding lines starting with <.> do end with these
 options.
 
 Building packages using this setup variant and fixing the resulting bugs is the
-same as in Section  8.5.2,    Detect classes of bugs by forcing compiler warnings   
+same as in Section  8.6.2,    Detect classes of bugs by forcing compiler warnings   
 .
 
-8.5.4.  Use custom directories
+8.6.4.  Use custom directories
 
 Some directories like PREFIX, VARBASE, PKG_SYSCONFDIR, PKGMANDIR, PKG_INFODIR
 can be configured in pkgsrc. Set these to arbitrary paths during bootstrap or
@@ -1992,7 +2043,7 @@ VARBASE=        /a-random-uuid
 PKGMANDIR=      a-random-uuid
 PKG_INFODIR=    a-random-uuid
 
-8.5.5.  Turn warnings into errors
+8.6.5.  Turn warnings into errors
 
 When building a package, warnings are typically ignored since they just flow by
 and do not cause the build to fail immediately. To find these warnings,
@@ -2008,14 +2059,14 @@ If a package suggests to add USE_TOOLS+=perl to the package Makefile, research
 whether the package actually needs Perl. If it does, add USE_TOOLS+=perl to the
 package Makefile, and if it doesn't, add TOOLS_BROKEN+=perl.
 
-8.5.6.  Reject packages for which pkglint reports errors
+8.6.6.  Reject packages for which pkglint reports errors
 
 Using pkglint as part of the regular build process is mostly a waste of time.
 If you want to fix some of the warnings, just run pkglint recursively on the
 whole pkgsrc tree. This will take a few minutes (up to 10), which is much
 faster than a complete bulk build.
 
-8.5.7.  Reject packages that contain forbidden strings
+8.6.7.  Reject packages that contain forbidden strings
 
 To ensure that the binary packages don't contain references to the build
 directory, there is already CHECK_WRKREF. If that variable includes the item
@@ -2030,7 +2081,7 @@ CHECK_WRKREF_EXTRA_DIRS+=       @[A-Z][A-Z]*@
 The above patterns will probably generate many false positives, therefore the
 results need to be taken with a grain of salt.
 
-8.5.8.  Reject packages whose self-test fails
+8.6.8.  Reject packages whose self-test fails
 
 To run the test suites that come with each package, add this line to mk.conf.
 
@@ -2041,7 +2092,7 @@ build with this, it will often abort in the early phase where the packages are
 scanned for their dependencies since there are cyclic dependencies. There is
 still a lot to do in this area.
 
-8.5.9.  Reject packages that use undefined shell variables
+8.6.9.  Reject packages that use undefined shell variables
 
 To catch typos in the shell snippets from the Makefile fragments, add the -u
 flag to most of the commands by adding this line to mk.conf.
@@ -2054,7 +2105,7 @@ error message the command sh -ceu '$undefined' outputs.
 
 See mk/misc/common.mk for the existing definition.
 
-8.5.10.  Turn off verbose logging
+8.6.10.  Turn off verbose logging
 
 The build logs of a package are often quite long. This allows error messages or
 other interesting details to hide between the noise. To make the actual error
@@ -2066,7 +2117,7 @@ MAKE_FLAGS+=            -s
 The -s option works for both GNU Make and BSD Make. On exotic platforms with
 their own make, it may be a little different.
 
-8.6.  Creating a multiple CD-ROM packages collection
+8.7.  Creating a multiple CD-ROM packages collection
 
 After your pkgsrc bulk-build has completed, you may wish to create a CD-ROM set
 of the resulting binary packages to assist in installing packages on other
@@ -2074,7 +2125,7 @@ machines. The pkgtools/cdpack package provides a simple tool for creating the
 ISO 9660 images. cdpack arranges the packages on the CD-ROMs in a way that
 keeps all the dependencies for a given package on the same CD as that package.
 
-8.6.1.  Example of cdpack
+8.7.1.  Example of cdpack
 
 Complete documentation for cdpack is found in the cdpack(1) man page. The
 following short example assumes that the binary packages are left in /usr/
@@ -10060,305 +10111,306 @@ RUBY_GEM_ARCH                     RUBY_GEM_BASE
 RUBY_INC                          RUBY_LIB
 RUBY_LIB_BASE                     RUBY_NAME
 RUBY_NOVERSION                    RUBY_PKGPREFIX
-RUBY_RAILS                        RUBY_RAILS61_VERSION
-RUBY_RAILS72_VERSION              RUBY_RAILS80_VERSION
-RUBY_RAILS_ACCEPTED               RUBY_RAILS_DEFAULT
-RUBY_RAILS_REQD                   RUBY_RAILS_STRICT_DEP
-RUBY_RIDIR                        RUBY_SETUP
-RUBY_SHLIB                        RUBY_SHLIBALIAS
-RUBY_SHLIBVER                     RUBY_SIMPLE_INSTALL
-RUBY_SITEARCHLIB                  RUBY_SITELIB
-RUBY_SITELIB_BASE                 RUBY_SITERIDIR
-RUBY_SLEXT                        RUBY_SRCDIR
-RUBY_STATICLIB                    RUBY_SUFFIX
-RUBY_SYSRIDIR                     RUBY_USE_PTHREAD
-RUBY_VENDORARCHLIB                RUBY_VENDORLIB
-RUBY_VENDORLIB_BASE               RUBY_VER
-RUBY_VERSION                      RUBY_VERSIONS_ACCEPTED
-RUBY_VERSIONS_INCOMPATIBLE        RUBY_VERSION_DEFAULT
-RUBY_VERSION_REQD                 RUBY_VER_DIR
-RUN                               RUN_LDCONFIG
-RUST_TYPE                         SCO
-SCREWS_GROUP                      SCREWS_USER
-SCRIPTS_ENV                       SCROLLKEEPER_DATADIR
-SCROLLKEEPER_REBUILDDB            SCROLLKEEPER_UPDATEDB
-SDIST_PAWD                        SDL12_TYPE
-SERIAL_DEVICES                    SETGIDGAME
-SETGID_GAMES_PERMS                SETUID_ROOT_PERMS
-SH                                SHAIRPORT_GROUP
-SHAIRPORT_USER                    SHLIB_EXT
-SHORTNAME                         SIGN_PACKAGES
-SILC_CLIENT_WITH_PERL             SITE_SPECIFIC_PKGS
-SKIP_DEPENDS                      SMF_INSTANCES
-SMF_MANIFEST                      SMF_METHODS
-SMF_METHOD_SHELL                  SMF_METHOD_SRC
-SMF_NAME                          SMF_PREFIX
-SMF_SRCDIR                        SNIPROXY_GROUP
-SNIPROXY_USER                     SOURCE_BUFFSIZE
-SPECIAL_PERMS                     SPECIFIC_PKGS
-SSH_SUID                          SSLCERTBUNDLE
-SSLCERTS                          SSLDIR
-SSLKEYS                           SSP_SUPPORTED
-SSYNC_PAWD                        STEP_MSG
-STRIP                             STRIP_DBG
-STRIP_DEBUG                       STRIP_DEBUG_SUPPORTED
-STRIP_FILES_SKIP                  SU
-SUBDIR                            SUBST
-SUBST_CLASSES                     SUBST_FILES
-SUBST_FILTER_CMD                  SUBST_MESSAGE
-SUBST_NOOP_OK                     SUBST_SED
-SUBST_SHOW_DIFF                   SUBST_SKIP_TEXT_CHECK
-SUBST_STAGE                       SUBST_VARS
-SUNWSPROBASE                      SUSE_PREFER
-SU_CMD                            SVN_EXTRACTDIR
-SVN_REPO                          SVN_REPOSITORIES
-SVN_REVISION                      SYSCONFBASE
-TARGET_MACHINE_ARCH               TBL
-TERMCAP_TYPE                      TERMINFO_DEFAULT
-TERMINFO_TYPE                     TEST
-TEST_DEPENDS                      TEST_DIRS
-TEST_ENV                          TEST_ENV_SHELL
-TEST_MAKE_CMD                     TEST_MAKE_FLAGS
-TEST_TARGET                       TEXLIVE_IGNORE_PATTERNS
-TEXLIVE_REV                       TEXLIVE_UNVERSIONED
-TEXMFSITE                         TEX_FORMATS
-TEX_HYPHEN_DAT                    TEX_HYPHEN_DEF
-TEX_TEXMF_DIRS                    THTTPD_LOG_FACILITY
-TINYDYN_USER                      TLS
-TLSWRAPPER_CHROOT                 TO
-TOOLDIR                           TOOLS_ALIASES
-TOOLS_ALWAYS_WRAP                 TOOLS_ARGS
-TOOLS_BROKEN                      TOOLS_CMD
-TOOLS_CMDLINE_SED                 TOOLS_CREATE
-TOOLS_CROSS_DESTDIR               TOOLS_DIR
-TOOLS_FAIL                        TOOLS_GNU_MISSING
-TOOLS_LDCONFIG                    TOOLS_NOOP
-TOOLS_PATH                        TOOLS_SCRIPT
-TOOLS_USE_CROSS_COMPILE           TOOL_DEPENDS
-TTF_FONTDIR                       TTF_FONTS_DIR
-TYPE                              UAC_REQD_EXECS
-UCSPI_SSL_GROUP                   UCSPI_SSL_USER
-UNBOUND_GROUP                     UNBOUND_LOG_FACILITY
-UNBOUND_USER                      UNLIMIT_RESOURCES
-UNPRIVILEGED                      UNPRIVILEGED_GROUP
-UNPRIVILEGED_GROUPS               UNPRIVILEGED_USER
-UNWRAP_FILES                      UNWRAP_PATTERNS
-UPDATE_GEMSPEC                    UPDATE_TARGET
-URI                               USERGROUP_PHASE
-USERPPP_GROUP                     USER_SPECIFIC_PKGS
-USE_ABI_DEPENDS                   USE_ADA_FEATURES
-USE_APR                           USE_BSD_MAKEFILE
-USE_BUILTIN                       USE_CC_FEATURES
-USE_CROSS_COMPILE                 USE_CURSES
-USE_CWRAPPERS                     USE_CXX_FEATURES
-USE_DB185                         USE_FEATURES
-USE_GAMESGROUP                    USE_GCC_RUNTIME
-USE_IMAKE                         USE_INDIRECT_DEPENDS
-USE_JAVA                          USE_JAVA2
-USE_LANGUAGES                     USE_LIBTOOL
-USE_NATIVE_GCC                    USE_NETBSD_REPO
-USE_PKGSRC_GCC                    USE_PKGSRC_GCC_RUNTIME
-USE_PKGTASKS                      USE_PKG_ADMIN_DIGEST
-USE_RUBY_EXTCONF                  USE_RUBY_INSTALL
-USE_RUBY_SETUP                    USE_RUBY_SETUP_PKG
-USE_TMPFILES                      USE_TOOLS
-UUCP_GROUP                        UUCP_USER
-VARBASE                           VARNAME
-VIM_EXTRA_OPTS                    WARNING_MSG
-WCALC_CGIDIR                      WCALC_CGIPATH
-WCALC_HTMLDIR                     WCALC_HTMLPATH
-WDM_MANAGERS                      WRAPPER_CC
-WRAPPER_REORDER_CMDS              WRKDIR
-WRKDIR_BASENAME                   WRKDIR_LOCKTYPE
-WRKLOG                            WRKOBJDIR
-WRKSRC                            X10_PORT
-X11                               X11BASE
-X11_PKGSRCDIR                     X11_TYPE
-X509_CERTIFICATE                  X509_KEY
-XAW_TYPE                          XLOCK_DEFAULT_MODE
-XMKMF                             XMKMF_FLAGS
-XXX                               XXXX
-YES                               ZSH_STATIC
-__stdc__                          _vargroups
-accept                            acquire-localbase-lock
-acquire-lock                      add
-added                             administrator
-alloca                            alternatives
-aslr                              asprintf
-atlas                             autoconf
-automake                          autoreconf
-awk                               barrier
-bash                              big-endian
-bin-install                       bind
-binpkg-list                       blas
-bootstrap-depends                 broken
-broken_on_platform                bsd
-bsd.prog.mk                       build
-build-env                         buildlink-directories
-buildlink-oss-soundcard-h         built-in
-builtin                           c
-c++                               ccache
-cce                               cdefs
-ceil                              changes
-changes-entry                     changes-entry-noupdate
-check                             check-clean
-check-files                       check-files-clean
-check-hackage                     check-vulnerable
-checksum                          checksum-phase
-clean                             clean-depends
-cleandir                          commit
-commit-changes-entry              compact
-compiler                          conf
-config.guess                      config.sub
-configuration                     configure
-configure-env                     configure-help
-configure_args                    connect
-cos                               cpe
-cputime                           create-usergroup
-csh                               ctf
-cvs                               debug
-debug-barrier                     declaration
-declare                           defined
-depend                            dependencies
-depends                           depends-checksum
-depends-fetch                     describe
-destdir                           disable
-distclean                         distfiles
-distinfo                          dl
-dlopen                            do-buildlink
-do-clean                          do-configure
-do-configure-post-hook            do-extract
-do-fetch                          do-install
-download                          emul
-emul-distinfo                     emul-fetch
-emulation                         emulator
-enable                            endian
-endif                             enomem
-ensurepip                         err
-errx                              etc
-exp                               extract-rpm
-fabs                              feature
-features                          fetch
-fetch-list                        follows
-forbids                           form
-format                            fortify
-fortify_source                    fossil
-friend                            fts
-fts_close                         fts_open
-fts_read                          fts_set
-gcc                               gethostbyaddr
-gethostbyname                     gethostbyname2
-getopt_long                       getprogname
-getservbyname                     getservbyport
-getservent                        gettext
-git                               github
-gitlab                            glob
-gnu                               gnu_configure_strict
-go                                golang
-guess-license                     hashbang
-heimdal                           help
-hg                                imake
-in-tree                           increment
-indirect                          inet_aton
-install                           install-env
-interp                            interpreter
-intl                              ip4
-ip6                               ipv4
-ipv6                              iso
-kerberos                          krb
-krb5                              ksh
-lapack                            latex
-libiconv                          libintl_bindtextdomain
-libintl_gettext                   libintl_textdomain
-libnbcompat                       libs
-libtool                           licence
-license                           lintl
-little-endian                     lock
-locking                           lua
-lvalue                            machine_endian
-make                              makedistinfo
-makepatchsum                      makesum
-mdi                               memory
-mercurial                         meta
-meta-package                      meta_package
-mit-krb5                          mk.conf
-mkl                               mount
-move                              moved
-mprotect                          mps
-mremap                            native
-nb                                nbcompat
-netlib                            network
-node                              node.js
-nodejs                            obstack
-obstack_ptr_grow                  occurs
-only                              openblas
-options                           options.mk
-order                             override
-override-intltool                 override-message-intltool
-package                           parallel
-path                              pax
-paxctl                            pbulk-index
-pc                                perl
-perl5                             perms
-php                               pkg-build-options
-pkg-config                        pkg_build_options
-pkgsrc                            platform
-plist                             post-extract
-post-fetch                        post-wrapper
-pre-build-checks-hook             pre-configure-checks-hook
-pre-extract                       pre-fetch
-print-plist                       print-summary-data
-privileged-install-hook           pypi
-python                            r
-readme-all                        recursive
-recv                              recvfrom
-regcomp                           release-localbase-lock
-release-lock                      relro
-remove                            removed
-rename                            renamed
-reorder                           replace
-replace_interpreter               reproducible
-resolv                            root
-ruby                              send
-sendfile                          sendto
-setenv                            setgid
-setprogname                       setuid
-sh                                shebang
-show                              show-all
-show-build-defs                   show-depends
-show-depends-dirs                 show-depends-pkgpaths
-show-depends-recursive            show-deps
-show-distfiles                    show-downlevel
-show-subdir-var                   show-tools
-show-var                          show-vars
-snprintf                          socket
-ssp                               st_mode
-stage-install                     strcasestr
-strict                            strip
-strndup                           strnlen
-strsep                            subst
-substitutions                     subversion
-sun                               sunpro
-sunwspro                          svn
-symlink                           test
-test-env                          tex
-texlive                           tmp
-todo                              tool
-tools                             tools-libtool-m4-override
-transitive                        type
-ulimit                            undefined
-undo-replace                      unlimit
-unprivileged                      unprivileged-install-hook
-unstripped                        update
-updated                           upload
-upload-distfiles                  use_tools
-user                              utimes
-vasprintf                         verbose
-vsnprintf                         warn
-warning                           warnings
-warnx                             wattr_off
-wattr_on                          work
-wrapper                           wrkdir
+RUBY_RAILS                        RUBY_RAILS72_VERSION
+RUBY_RAILS80_VERSION              RUBY_RAILS_ACCEPTED
+RUBY_RAILS_DEFAULT                RUBY_RAILS_REQD
+RUBY_RAILS_STRICT_DEP             RUBY_RIDIR
+RUBY_SETUP                        RUBY_SHLIB
+RUBY_SHLIBALIAS                   RUBY_SHLIBVER
+RUBY_SIMPLE_INSTALL               RUBY_SITEARCHLIB
+RUBY_SITELIB                      RUBY_SITELIB_BASE
+RUBY_SITERIDIR                    RUBY_SLEXT
+RUBY_SRCDIR                       RUBY_STATICLIB
+RUBY_SUFFIX                       RUBY_SYSRIDIR
+RUBY_USE_PTHREAD                  RUBY_VENDORARCHLIB
+RUBY_VENDORLIB                    RUBY_VENDORLIB_BASE
+RUBY_VER                          RUBY_VERSION
+RUBY_VERSIONS_ACCEPTED            RUBY_VERSIONS_INCOMPATIBLE
+RUBY_VERSION_DEFAULT              RUBY_VERSION_REQD
+RUBY_VER_DIR                      RUN
+RUN_LDCONFIG                      RUST_TYPE
+SCO                               SCREWS_GROUP
+SCREWS_USER                       SCRIPTS_ENV
+SCROLLKEEPER_DATADIR              SCROLLKEEPER_REBUILDDB
+SCROLLKEEPER_UPDATEDB             SDIST_PAWD
+SDL12_TYPE                        SERIAL_DEVICES
+SETGIDGAME                        SETGID_GAMES_PERMS
+SETUID_ROOT_PERMS                 SH
+SHAIRPORT_GROUP                   SHAIRPORT_USER
+SHLIB_EXT                         SHORTNAME
+SIGN_PACKAGES                     SILC_CLIENT_WITH_PERL
+SITE_SPECIFIC_PKGS                SKIP_DEPENDS
+SMF_INSTANCES                     SMF_MANIFEST
+SMF_METHODS                       SMF_METHOD_SHELL
+SMF_METHOD_SRC                    SMF_NAME
+SMF_PREFIX                        SMF_SRCDIR
+SNIPROXY_GROUP                    SNIPROXY_USER
+SOURCE_BUFFSIZE                   SPECIAL_PERMS
+SPECIFIC_PKGS                     SSH_SUID
+SSLCERTBUNDLE                     SSLCERTS
+SSLDIR                            SSLKEYS
+SSP_SUPPORTED                     SSYNC_PAWD
+STEP_MSG                          STRIP
+STRIP_DBG                         STRIP_DEBUG
+STRIP_DEBUG_SUPPORTED             STRIP_FILES_SKIP
+SU                                SUBDIR
+SUBST                             SUBST_CLASSES
+SUBST_FILES                       SUBST_FILTER_CMD
+SUBST_MESSAGE                     SUBST_NOOP_OK
+SUBST_SED                         SUBST_SHOW_DIFF
+SUBST_SKIP_TEXT_CHECK             SUBST_STAGE
+SUBST_VARS                        SUNWSPROBASE
+SUSE_PREFER                       SU_CMD
+SVN_EXTRACTDIR                    SVN_REPO
+SVN_REPOSITORIES                  SVN_REVISION
+SYSCONFBASE                       TARGET_MACHINE_ARCH
+TBL                               TERMCAP_TYPE
+TERMINFO_DEFAULT                  TERMINFO_TYPE
+TEST                              TEST_DEPENDS
+TEST_DIRS                         TEST_ENV
+TEST_ENV_SHELL                    TEST_MAKE_CMD
+TEST_MAKE_FLAGS                   TEST_TARGET
+TEXLIVE_IGNORE_PATTERNS           TEXLIVE_REV
+TEXLIVE_UNVERSIONED               TEXMFSITE
+TEX_FORMATS                       TEX_HYPHEN_DAT
+TEX_HYPHEN_DEF                    TEX_TEXMF_DIRS
+THTTPD_LOG_FACILITY               TINYDYN_USER
+TLS                               TLSWRAPPER_CHROOT
+TO                                TOOLDIR
+TOOLS_ALIASES                     TOOLS_ALWAYS_WRAP
+TOOLS_ARGS                        TOOLS_BROKEN
+TOOLS_CMD                         TOOLS_CMDLINE_SED
+TOOLS_CREATE                      TOOLS_CROSS_DESTDIR
+TOOLS_DIR                         TOOLS_FAIL
+TOOLS_GNU_MISSING                 TOOLS_LDCONFIG
+TOOLS_NOOP                        TOOLS_PATH
+TOOLS_SCRIPT                      TOOLS_USE_CROSS_COMPILE
+TOOL_DEPENDS                      TTF_FONTDIR
+TTF_FONTS_DIR                     TYPE
+UAC_REQD_EXECS                    UCSPI_SSL_GROUP
+UCSPI_SSL_USER                    UDEV_REQUIRED
+UDEV_TYPE                         UNBOUND_GROUP
+UNBOUND_LOG_FACILITY              UNBOUND_USER
+UNLIMIT_RESOURCES                 UNPRIVILEGED
+UNPRIVILEGED_GROUP                UNPRIVILEGED_GROUPS
+UNPRIVILEGED_USER                 UNWRAP_FILES
+UNWRAP_PATTERNS                   UPDATE_GEMSPEC
+UPDATE_TARGET                     URI
+USERGROUP_PHASE                   USERPPP_GROUP
+USER_SPECIFIC_PKGS                USE_ABI_DEPENDS
+USE_ADA_FEATURES                  USE_APR
+USE_BSD_MAKEFILE                  USE_BUILTIN
+USE_CC_FEATURES                   USE_CROSS_COMPILE
+USE_CURSES                        USE_CWRAPPERS
+USE_CXX_FEATURES                  USE_DB185
+USE_FEATURES                      USE_GAMESGROUP
+USE_GCC_RUNTIME                   USE_IMAKE
+USE_INDIRECT_DEPENDS              USE_JAVA
+USE_JAVA2                         USE_LANGUAGES
+USE_LIBTOOL                       USE_NATIVE_GCC
+USE_NETBSD_REPO                   USE_PKGSRC_GCC
+USE_PKGSRC_GCC_RUNTIME            USE_PKGTASKS
+USE_PKG_ADMIN_DIGEST              USE_RUBY_EXTCONF
+USE_RUBY_INSTALL                  USE_RUBY_SETUP
+USE_RUBY_SETUP_PKG                USE_TMPFILES
+USE_TOOLS                         UUCP_GROUP
+UUCP_USER                         VARBASE
+VARNAME                           VIM_EXTRA_OPTS
+WARNING_MSG                       WCALC_CGIDIR
+WCALC_CGIPATH                     WCALC_HTMLDIR
+WCALC_HTMLPATH                    WDM_MANAGERS
+WRAPPER_CC                        WRAPPER_REORDER_CMDS
+WRKDIR                            WRKDIR_BASENAME
+WRKDIR_LOCKTYPE                   WRKLOG
+WRKOBJDIR                         WRKSRC
+X10_PORT                          X11
+X11BASE                           X11_PKGSRCDIR
+X11_TYPE                          X509_CERTIFICATE
+X509_KEY                          XAW_TYPE
+XLOCK_DEFAULT_MODE                XMKMF
+XMKMF_FLAGS                       XXX
+XXXX                              YES
+ZSH_STATIC                        __stdc__
+_vargroups                        accept
+acquire-localbase-lock            acquire-lock
+add                               added
+administrator                     alloca
+alternatives                      aslr
+asprintf                          atlas
+autoconf                          automake
+autoreconf                        awk
+barrier                           bash
+big-endian                        bin-install
+bind                              binpkg-list
+blas                              bootstrap-depends
+broken                            broken_on_platform
+bsd                               bsd.prog.mk
+build                             build-env
+buildlink-directories             buildlink-oss-soundcard-h
+built-in                          builtin
+c                                 c++
+ccache                            cce
+cdefs                             ceil
+changes                           changes-entry
+changes-entry-noupdate            check
+check-clean                       check-files
+check-files-clean                 check-hackage
+check-vulnerable                  checksum
+checksum-phase                    clean
+clean-depends                     cleandir
+commit                            commit-changes-entry
+compact                           compiler
+conf                              config.guess
+config.sub                        configuration
+configure                         configure-env
+configure-help                    configure_args
+connect                           cos
+cpe                               cputime
+create-usergroup                  csh
+ctf                               cvs
+debug                             debug-barrier
+declaration                       declare
+defined                           depend
+dependencies                      depends
+depends-checksum                  depends-fetch
+describe                          destdir
+disable                           distclean
+distfiles                         distinfo
+dl                                dlopen
+do-buildlink                      do-clean
+do-configure                      do-configure-post-hook
+do-extract                        do-fetch
+do-install                        download
+emul                              emul-distinfo
+emul-fetch                        emulation
+emulator                          enable
+endian                            endif
+enomem                            ensurepip
+err                               errx
+etc                               exp
+extract-rpm                       fabs
+feature                           features
+fetch                             fetch-list
+follows                           forbids
+form                              format
+fortify                           fortify_source
+fossil                            friend
+fts                               fts_close
+fts_open                          fts_read
+fts_set                           gcc
+gethostbyaddr                     gethostbyname
+gethostbyname2                    getopt_long
+getprogname                       getservbyname
+getservbyport                     getservent
+gettext                           git
+github                            gitlab
+glob                              gnu
+gnu_configure_strict              go
+golang                            guess-license
+hashbang                          heimdal
+help                              hg
+imake                             in-tree
+increment                         indirect
+inet_aton                         install
+install-env                       interp
+interpreter                       intl
+ip4                               ip6
+ipv4                              ipv6
+iso                               kerberos
+krb                               krb5
+ksh                               lapack
+latex                             libiconv
+libintl_bindtextdomain            libintl_gettext
+libintl_textdomain                libnbcompat
+libs                              libtool
+licence                           license
+lintl                             little-endian
+lock                              locking
+lua                               lvalue
+machine_endian                    make
+makedistinfo                      makepatchsum
+makesum                           mdi
+memory                            mercurial
+meta                              meta-package
+meta_package                      mit-krb5
+mk.conf                           mkl
+mount                             move
+moved                             mprotect
+mps                               mremap
+native                            nb
+nbcompat                          netlib
+network                           node
+node.js                           nodejs
+obstack                           obstack_ptr_grow
+occurs                            only
+openblas                          options
+options.mk                        order
+override                          override-intltool
+override-message-intltool         package
+parallel                          path
+pax                               paxctl
+pbulk-index                       pc
+perl                              perl5
+perms                             php
+pkg-build-options                 pkg-config
+pkg_build_options                 pkgsrc
+platform                          plist
+post-extract                      post-fetch
+post-wrapper                      pre-build-checks-hook
+pre-configure-checks-hook         pre-extract
+pre-fetch                         print-plist
+print-summary-data                privileged-install-hook
+pypi                              python
+r                                 readme-all
+recursive                         recv
+recvfrom                          regcomp
+release-localbase-lock            release-lock
+relro                             remove
+removed                           rename
+renamed                           reorder
+replace                           replace_interpreter
+reproducible                      resolv
+root                              ruby
+send                              sendfile
+sendto                            setenv
+setgid                            setprogname
+setuid                            sh
+shebang                           show
+show-all                          show-build-defs
+show-depends                      show-depends-dirs
+show-depends-pkgpaths             show-depends-recursive
+show-deps                         show-distfiles
+show-downlevel                    show-subdir-var
+show-tools                        show-var
+show-vars                         snprintf
+socket                            ssp
+st_mode                           stage-install
+strcasestr                        strict
+strip                             strndup
+strnlen                           strsep
+subst                             substitutions
+subversion                        sun
+sunpro                            sunwspro
+svn                               symlink
+test                              test-env
+tex                               texlive
+tmp                               todo
+tool                              tools
+tools-libtool-m4-override         transitive
+type                              ulimit
+undefined                         undo-replace
+unlimit                           unprivileged
+unprivileged-install-hook         unstripped
+update                            updated
+upload                            upload-distfiles
+use_tools                         user
+utimes                            vasprintf
+verbose                           vsnprintf
+warn                              warning
+warnings                          warnx
+wattr_off                         wattr_on
+work                              wrapper
+wrkdir                              
 
 Appendix  F.  Editing guidelines for the pkgsrc guide
 
