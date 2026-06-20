@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2008/09/30 14:13:11 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2026/06/20 10:57:44 nia Exp $
 
---- xmailwatcher.c.orig	2008-09-30 16:09:35.000000000 +0200
+--- xmailwatcher.c.orig	1999-08-24 09:02:29.000000000 +0000
 +++ xmailwatcher.c
-@@ -47,6 +47,7 @@ purpose.  It is provided "as is" without
+@@ -47,6 +47,7 @@ purpose.  It is provided "as is" without express or im
  #define BUFFER_DEFAULT 32000
  
  #include <stdio.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1 2008/09/30 14:13:11 joerg Exp $
  
  typedef struct _Resources {
  	int	pollInterval;
-@@ -149,7 +150,7 @@ static XtConvertArgRec screenConvertArg[
+@@ -149,7 +150,7 @@ void iconEvent();
  void timedRescan();
  void listEvent();
  void iconEvent();
@@ -19,7 +19,15 @@ $NetBSD: patch-ab,v 1.1 2008/09/30 14:13:11 joerg Exp $
  
  static int mapped;
  
-@@ -361,12 +362,11 @@ XtPointer client_data, call_data;
+@@ -164,6 +165,7 @@ static Widget iconLabel;
+ static Widget mailWatchIcon;
+ static Widget iconLabel;
+ 
++int
+ main(argc, argv)
+ int argc;
+ char **argv;
+@@ -361,12 +363,11 @@ XtPointer client_data, call_data;
  	}
  }
  

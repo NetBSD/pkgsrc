@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/27 18:26:54 nra Exp $
+$NetBSD: patch-aa,v 1.2 2026/06/20 10:57:44 nia Exp $
 
---- box.c.orig	Sat Feb  3 18:13:00 2001
-+++ box.c	Sat Feb  3 18:13:50 2001
-@@ -31,7 +31,7 @@
+--- box.c.orig	1999-11-01 15:12:32.000000000 +0000
++++ box.c
+@@ -28,10 +28,12 @@ purpose.  It is provided "as is" without express or im
+ #include "box.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <ctype.h>
  #include <unistd.h>
  #include <sys/stat.h>
  #include <sys/types.h>
@@ -11,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/27 18:26:54 nra Exp $
  #include <X11/Xos.h>
  
  /* MIME processing */
-@@ -235,7 +235,7 @@
+@@ -235,7 +237,7 @@ static int MHparseMailbox(char *mailbox, char *buffer,
  	int n, i, tally;
  	char oneFrom[160];
  	char *pos;

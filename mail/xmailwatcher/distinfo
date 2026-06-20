@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:54:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/06/20 10:57:44 nia Exp $
 
 BLAKE2s (xmailwatcher.tar.gz) = 28ae4e6f12591642b50eb1893cc0d4ffc3f68af1e3d7bdd673372bc410a520d0
 SHA512 (xmailwatcher.tar.gz) = 28ba32e89b5463e7448c77c07af389570fa81b45fe2f86960c3a638d2e1352bf21243d85a16bd8ae83d93bf247b574faebc8aeee7089937c50fb6fd7a07917dc
 Size (xmailwatcher.tar.gz) = 15393 bytes
-SHA1 (patch-aa) = f9af02cab5c4b3244e1a5ac346b8fff123fcf441
-SHA1 (patch-ab) = d06c810dd30f476c81dc05eda92bb822dd9fc742
+SHA1 (patch-aa) = 4dd9cfe2205d001f8f359b12f1e197715c5fa607
+SHA1 (patch-ab) = 36b66de381c65d83757e0d80a3875ecd451c8b9e
