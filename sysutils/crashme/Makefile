@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/20 01:09:58 nia Exp $
 #
 
 DISTNAME=	crashme-2.4
@@ -17,5 +17,12 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1
 EXTRACT_OPTS=		-f shar
 MAKE_FILE=		makefile
 WRKSRC=			${WRKDIR}
+
+# This is old code that uses K&R style function definitions.
+# Since an evolving C standard is likely to cause compatibility
+# problems with it, we force a "known working" standard, in this
+# case, the minimum bootstrap requirement, not in strict standard
+# mode to ensure no APIs are hidden.
+FORCE_C_STD=		gnu99
 
 .include "../../mk/bsd.pkg.mk"
