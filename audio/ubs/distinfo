@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 09:59:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/06/20 10:44:28 nia Exp $
 
 BLAKE2s (ubs-0.17.tar.gz) = f5583a943361b5829f243b1dea325f6bc6c3f23e4b82664849e7b38094922f4a
 SHA512 (ubs-0.17.tar.gz) = 821e9aeb33abb18fc25476cb8fc98e592398104495f6687364ff86de21e1f161cac7061e82b9c84d17adfb072c518b66e8d115441f084f8cfc65f63156dc1eda
@@ -6,4 +6,10 @@ Size (ubs-0.17.tar.gz) = 372222 bytes
 SHA1 (patch-aa) = 4f8d8085a8925ffe866f2d8cec72232f6da70811
 SHA1 (patch-ab) = 88d06fca850e7bf2d38ad587021e4352c96cc89b
 SHA1 (patch-ac) = af22e0ca907b22eedb86e79ce2e81e4fb87283e9
+SHA1 (patch-lib_exec__proc.c) = 2d44a92ff627281b8f2e8b04ec4163c2818ca421
 SHA1 (patch-lib_get__song.c) = 1158e4dacb1f47e27902af0e42b60ecbc96e82f6
+SHA1 (patch-lib_parse__line.c) = 56899ae79f40f21a24a010b6b6f2bdf32b27bd26
+SHA1 (patch-src_cmd__search.c) = 58399d1fbe0f46477eb260f018e1edf0b1f2aa3b
+SHA1 (patch-src_loginfo.c) = cf64f4145d4b5198b9995f07e0c85f4d88a64ebd
+SHA1 (patch-src_read__sched.c) = 32cb2de79c2b148ad8fdc8accc904a606a9a5956
+SHA1 (patch-src_ubs.c) = 947f1fa1e3ff0558a14c46dede8f8263268f4257
