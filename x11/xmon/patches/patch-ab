@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/23 07:42:25 rh Exp $
+$NetBSD: patch-ab,v 1.2 2026/06/20 11:13:44 nia Exp $
 
---- main.c.orig	Fri Feb  7 04:28:15 1997
-+++ main.c	Mon Nov 22 10:24:20 1999
-@@ -35,6 +35,7 @@
+--- main.c.orig	2000-02-03 11:08:48.000000000 +0000
++++ main.c
+@@ -10,9 +10,7 @@
+ #include <sys/types.h>	       /* needed by sys/socket.h and netinet/in.h */
+ #include <sys/uio.h>	       /* for struct iovec, used by socket.h */
+ #include <sys/socket.h>	       /* for AF_INET, SOCK_STREAM, ... */
+-#ifdef AIXV3
+ #include <sys/select.h>        /* for fd_set, ... */
+-#endif
+ #include <sys/ioctl.h>	       /* for FIONCLEX, FIONBIO, ... */
+ #if defined(SVR4) && defined(sun)
+ # include <sys/filio.h>	       /* for FIONCLEX, etc on Solaris */
+@@ -35,6 +33,7 @@
  #ifdef SYSV
  #include <fcntl.h>
  #endif
@@ -10,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/11/23 07:42:25 rh Exp $
  
  #include "xmond.h"
  #include "select_args.h"
-@@ -76,7 +77,6 @@
+@@ -76,7 +75,6 @@ extern char *getenv();
  #endif
  
  extern char *getenv();
