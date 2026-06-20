@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3842 2026/06/20 13:34:43 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3843 2026/06/20 19:55:08 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5813,3 +5813,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lhasa to 0.6.0 [tsutsui 2026-06-19]
 	Updated net/bind918 to 9.18.50 [he 2026-06-19]
 	Updated www/chromium to 149.0.7827.155 [kikadf 2026-06-20]
+	Updated textproc/gemtext2html to 1.0.1 [js 2026-06-20]
