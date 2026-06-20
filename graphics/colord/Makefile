@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/04/26 19:48:17 vins Exp $
+# $NetBSD: Makefile,v 1.33 2026/06/20 00:31:33 nia Exp $
 
 DISTNAME=	colord-1.4.8
 PKGREVISION=	1
@@ -77,6 +77,9 @@ MESON_ARGS+=	-Dudev_rules=true
 .else
 MESON_ARGS+=	-Dudev_rules=false
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script,${WRKSRC}/lib/colord/colord.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script,${WRKSRC}/lib/colorhug/colorhug.map
 
 .include "options.mk"
 
