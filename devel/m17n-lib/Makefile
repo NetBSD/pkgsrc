@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/01/07 08:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/06/20 09:12:48 nia Exp $
 
 DISTNAME=	m17n-lib-1.8.0
 PKGREVISION=	25
@@ -14,6 +14,11 @@ MAKE_JOBS_SAFE=	no
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+# doesn't include <alloca.h> which is needed on SunOS,
+# just define the function to the compiler builtin to avoid
+# needing a patch.
+CFLAGS.SunOS+=	-Dalloca=__builtin_alloca
 
 PKGCONFIG_OVERRIDE+=	m17n-core.pc.in m17n-shell.pc.in m17n-flt.pc.in
 PKGCONFIG_OVERRIDE+=	m17n-gui.pc.in
