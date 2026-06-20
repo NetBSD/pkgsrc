@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/10/23 20:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/06/20 10:29:35 nia Exp $
 
 DISTNAME=	sslh-2.2.4
 PKGREVISION=	1
@@ -27,6 +27,8 @@ RCD_SCRIPTS=	sslh
 
 AUTO_MKDIRS=	yes
 REPLACE_SH+=	genver.sh
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__ # vasprintf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sslh-fork ${DESTDIR}${PREFIX}/sbin/sslh
