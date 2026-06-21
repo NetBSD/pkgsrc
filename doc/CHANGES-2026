@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3850 2026/06/21 11:20:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3851 2026/06/21 21:21:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/R-sf to 1.1.1 [mef 2026-06-21]
 	Updated devel/R-pkgload to 1.5.3 [mef 2026-06-21]
 	Updated devel/jq to 1.8.2 [wiz 2026-06-21]
+	Updated ham/hamlib to 4.7.2 [gdt 2026-06-21]
