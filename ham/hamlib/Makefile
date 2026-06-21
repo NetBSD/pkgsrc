@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2026/04/30 12:08:28 gdt Exp $
+# $NetBSD: Makefile,v 1.73 2026/06/21 21:21:47 gdt Exp $
 #
 
-VERSION=	4.7.1
+VERSION=	4.7.2
 DISTNAME=	hamlib-${VERSION}
 CATEGORIES=	ham
 # hamlib is both at github and sourceforge, and upstream documents
