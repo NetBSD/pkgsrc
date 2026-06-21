@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/06/07 19:06:31 drixter Exp $
+# $NetBSD: Makefile,v 1.62 2026/06/21 18:17:59 drixter Exp $
 
 DISTNAME=	pdns-recursor-5.4.2
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
@@ -37,6 +37,7 @@ do-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 
 .include "cargo-depends.mk"
+.include "../../lang/python/tool.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
