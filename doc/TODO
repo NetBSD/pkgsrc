@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27427 2026/06/21 11:20:10 wiz Exp $
+$NetBSD: TODO,v 1.27428 2026/06/21 14:05:13 pin Exp $
 
 Suggested new packages
 ======================
@@ -1118,6 +1118,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6dd-20040819a
 	o pim6sd-20050715a
 	o pinfo-0.6.10
+	o piratebay-0.2.2 [pin]
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
@@ -1325,6 +1326,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o telepathy-mission-control5-5.16.6
 	o telepathy-qt-0.9.8
 	o television-0.15.9 [pin]
+	o termscp-1.1.1 [pin]
 	o terraform-0.15.1 [wait for https://github.com/hashicorp/terraform/issues/25813]
 	o terraform-1.0
 	o terraform-provider-aws-3.37.0
@@ -1351,6 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.1.1
+	o treegrep-2.2.0 [pin]
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
