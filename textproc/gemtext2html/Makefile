@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/06/20 19:54:39 js Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/21 21:24:22 js Exp $
 
-PKGNAME=	gemtext2html-1.0.1
+PKGNAME=	gemtext2html-1.1
 DISTNAME=	v${PKGVERSION_NOREV}
 CATEGORIES=	textproc
 MASTER_SITES=	https://git.nil.im/js/Gemtext2HTML/archive/

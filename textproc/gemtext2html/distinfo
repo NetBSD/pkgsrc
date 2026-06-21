@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/06/20 19:54:39 js Exp $
+$NetBSD: distinfo,v 1.3 2026/06/21 21:24:22 js Exp $
 
-BLAKE2s (gemtext2html/v1.0.1.tar.gz) = a37b267e4a91a0e23f4aca9f740a4f18e8740d69989300981c3b5bdde83e12a4
-SHA512 (gemtext2html/v1.0.1.tar.gz) = 57eecb3660298394a19ae002dd85e7b29c4f24f3345b47519ef5ad49b2fd42dc611522d0aedb8f753b38b4450f4b79e676c76ec0cfca15700f19163b41302e59
-Size (gemtext2html/v1.0.1.tar.gz) = 23388 bytes
+BLAKE2s (gemtext2html/v1.1.tar.gz) = 373ea7568c6bdbe797941f7d6ca4941a24814cfc0713ddaaed8d8abc701e84cf
+SHA512 (gemtext2html/v1.1.tar.gz) = e7718f049ca8b37b680d4e38a58fbb73ef3f4cc232b64b822c63eb43bc3c8e642268dbdeb0289b06493317c113e29ee2ad6571ef3a8232bfc197be8b9a299072
+Size (gemtext2html/v1.1.tar.gz) = 23872 bytes
