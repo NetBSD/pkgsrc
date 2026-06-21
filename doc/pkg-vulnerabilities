@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.766 2026/06/18 16:01:36 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.767 2026/06/21 10:54:52 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30371,3 +30371,19 @@ xh-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/open
 yaydl-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 zola-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 perl<5.42.2nb3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-12087
+jq<1.8.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-32316
+jq<1.8.2	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-33947
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-33948
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-39956
+jq<1.8.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-39979
+jq<1.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-40164
+jq<1.8.2	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-40612
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-41256
+jq<1.8.2	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-41257
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-43894
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-43895
+jq<1.8.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-43896
+jq<1.8.2	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-44777
+jq<1.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-47770
+jq<1.8.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-49839
+jq<1.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-54679
