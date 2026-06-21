@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3849 2026/06/21 11:14:39 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3850 2026/06/21 11:20:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5820,3 +5820,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-ujson to 5.13.0 [wiz 2026-06-21]
 	Updated geography/R-sf to 1.1.1 [mef 2026-06-21]
 	Updated devel/R-pkgload to 1.5.3 [mef 2026-06-21]
+	Updated devel/jq to 1.8.2 [wiz 2026-06-21]
