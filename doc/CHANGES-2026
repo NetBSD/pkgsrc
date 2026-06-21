@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3847 2026/06/21 08:02:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3848 2026/06/21 10:51:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5818,3 +5818,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mutt to 2.4.0 [tron 2026-06-21]
 	Updated textproc/py-pdf to 6.13.3 [wiz 2026-06-21]
 	Updated textproc/py-ujson to 5.13.0 [wiz 2026-06-21]
+	Updated geography/R-sf to 1.1.1 [mef 2026-06-21]
