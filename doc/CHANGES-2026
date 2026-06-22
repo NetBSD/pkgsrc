@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3908 2026/06/22 17:36:56 dogcow Exp $
+$NetBSD: CHANGES-2026,v 1.3909 2026/06/22 17:54:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/transmission-common to 4.1.2 [dogcow 2026-06-22]
 	Updated net/transmission-gtk to 4.1.2nb1 [dogcow 2026-06-22]
 	Updated net/transmission-qt to 4.1.2 [dogcow 2026-06-22]
+	Updated devel/autoconf to 2.73 [wiz 2026-06-22]
