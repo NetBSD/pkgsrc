@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3864 2026/06/22 05:36:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3865 2026/06/22 05:59:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5838,3 +5838,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/gitte version 0.7.0 [wiz 2026-06-22]
 	Updated multimedia/ffmpeg8 to 8.1.2 [adam 2026-06-22]
 	Updated multimedia/ffplay8 to 8.1.2 [adam 2026-06-22]
+	Updated security/cargo-deny to 0.19.9 [pin 2026-06-22]
