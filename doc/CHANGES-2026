@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3904 2026/06/22 15:07:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3905 2026/06/22 15:08:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/joker to 1.8.3 [ktnb 2026-06-22]
 	Updated x11/kitty to 0.47.4 [ktnb 2026-06-22]
 	Updated time/py-icalendar to 7.1.3 [wiz 2026-06-22]
+	Updated news/eilmeldung to 1.6.0 [pin 2026-06-22]
