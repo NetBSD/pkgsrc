@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/03/06 08:04:13 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/06/22 15:44:57 adam Exp $
 
-BLAKE2s (tzlocal-5.3.1.tar.gz) = 14dd45cc09d9c55c2d8bc6d4241f9b8adc84fc4c64bc365abdce089bff1300d3
-SHA512 (tzlocal-5.3.1.tar.gz) = 496943ac75710cf6145238827b430e777396412ef25c53c8c0e65ec0446f28273253028bf82c44b616cfbb9d7280ac66da837ce1563335e508a4a50153053347
-Size (tzlocal-5.3.1.tar.gz) = 30761 bytes
+BLAKE2s (tzlocal-5.4.3.tar.gz) = cfa85fc1ab93693566ccf8e167fa633fe66ddf9bd96bfd22ba19dac39136f07e
+SHA512 (tzlocal-5.4.3.tar.gz) = 128068ea10f97742d844df9431ca6ccb0ddde974f8a0dce74ce86c792b079f3a0e9c441140a4f5889fa4bfea7f9c7fb91dda34c50e84a05998a0a6981e796b4b
+Size (tzlocal-5.4.3.tar.gz) = 30873 bytes
