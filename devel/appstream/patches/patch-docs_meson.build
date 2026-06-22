@@ -1,0 +1,15 @@
+$NetBSD: patch-docs_meson.build,v 1.1 2026/06/22 16:49:14 adam Exp $
+
+Use xsl from pkgsrc.
+
+--- docs/meson.build.orig	2026-06-22 15:57:20.158580148 +0000
++++ docs/meson.build
+@@ -9,7 +9,7 @@ as_doc_target_dir = join_paths(get_optio
+ 
+ if get_option('man')
+     # make manual pages
+-    manpages_xsl = 'http://docbook.sourceforge.net/release/xsl-ns/current/manpages/docbook.xsl'
++    manpages_xsl = join_paths(get_option('prefix'), 'share/xsl/docbook/manpages/docbook.xsl')
+     xsltproc = find_program('xsltproc')
+     if run_command([xsltproc, '--nonet', manpages_xsl],
+                     check: false).returncode() != 0
