@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/06/02 22:52:39 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/22 21:53:51 mef Exp $
 
 R_PKGNAME=	nanotime
 R_PKGVER=	0.3.11
@@ -26,7 +26,17 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=         pkglibs
+SUBST_STAGE.pkglibs=    pre-configure
+SUBST_FILES.pkglibs=    src/Makevars
+SUBST_MESSAGE.pkglibs=  Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS
+SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
