@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2026/05/14 16:41:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.163 2026/06/22 18:28:10 gdt Exp $
 
 DISTNAME=	merkaartor-0.20.0
 PKGREVISION=	25
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 # Not documented, but in CMakeLists.txt.
-USE_CC_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17
 
 USE_TOOLS+=	pkg-config
 
