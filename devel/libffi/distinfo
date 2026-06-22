@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2026/06/22 19:35:16 wiz Exp $
+$NetBSD: distinfo,v 1.70 2026/06/22 21:52:58 wiz Exp $
 
 BLAKE2s (libffi-3.6.0.tar.gz) = 9144acf66819d80cd98eb0cf547d60a4d4b2b86c5a01ec81a874595c9e5c464b
 SHA512 (libffi-3.6.0.tar.gz) = 716f0e7884cd7206ceb7410a8422a0c2229bf48151ff525575f7489d389683531bd0c6cf8c78a3a5f9c54444ef485a7f2b0e1e6e4180b4da599dec9021a40491
@@ -14,4 +14,5 @@ SHA1 (patch-src_mips_ffi.c) = 1fa75056b37f3de4526e81bb8df4d2973067f4d4
 SHA1 (patch-src_mips_ffitarget.h) = 8e743e89bdc6de977d503a516bdcde44db233b7a
 SHA1 (patch-src_powerpc_ffi.c) = b68a93d0f8552efaa8c50256da3af3bde5de7059
 SHA1 (patch-src_powerpc_ffi__powerpc.h) = fafb125b28069d5108726ac7b2d4efdc4fdadf92
+SHA1 (patch-testsuite_lib_libffi.exp) = 2cebc793178f7f4adc873cdfccc248dff209428d
 SHA1 (patch-testsuite_libffi.call_float2.c) = 2a42a428b0cc55065968c7f0748026da12b70b9d
