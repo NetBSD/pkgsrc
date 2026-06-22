@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3900 2026/06/22 13:20:46 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3901 2026/06/22 13:36:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.6.12 [pin 2026-06-22]
 	Updated textproc/rumdl to 0.2.20 [pin 2026-06-22]
 	Updated biology/openbabel to 3.2.0 [pin 2026-06-22]
+	Updated biology/molsketch to 0.8.4nb6 [pin 2026-06-22]
