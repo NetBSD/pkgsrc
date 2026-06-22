@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3915 2026/06/22 19:35:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3916 2026/06/22 19:38:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5911,3 +5911,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/fmtlib to 12.2.0 [wiz 2026-06-22]
 	Updated textproc/jsoncpp to 1.9.8 [wiz 2026-06-22]
 	Updated devel/libffi to 3.6.0 [wiz 2026-06-22]
+	Updated devel/abseil to 20260526.0 [wiz 2026-06-22]
