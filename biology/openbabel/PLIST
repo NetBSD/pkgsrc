@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/06/22 13:20:21 pin Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/06/22 13:35:42 pin Exp $
 bin/obabel
 bin/obconformer
 bin/obdistgen
@@ -7,6 +7,7 @@ bin/obfit
 bin/obfitall
 bin/obgen
 bin/obgrep
+${PLIST.wx-gui}bin/obgui
 bin/obminimize
 bin/obmm
 bin/obprobe
