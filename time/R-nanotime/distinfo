@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/06/02 22:52:39 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/06/22 21:53:51 mef Exp $
 
 BLAKE2s (R/nanotime_0.3.11.tar.gz) = d1aa2d7db24e0de8eea16419eee0a75e82b9c1c683cbee11655ba72c3cfe66a0
 SHA512 (R/nanotime_0.3.11.tar.gz) = 1391910042b2c1f6805f919ef1c8c71250637d82dbedbb9fa804b8ec8ec0edf7926ac81a4a876bd0b4c8417a26d4c14bedc8d78f2ea587e47dcd06b56724dfa0
 Size (R/nanotime_0.3.11.tar.gz) = 408523 bytes
-SHA1 (patch-src_Makevars) = 0cea60b310b305889163c973dbd2f5b75dffe1f5
+SHA1 (patch-src_Makevars) = 8c98a21b56fd31026f50259c7a877a6f58d51c7e

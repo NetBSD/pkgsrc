@@ -1,17 +1,11 @@
-$NetBSD: patch-src_Makevars,v 1.1 2026/06/02 22:52:39 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2026/06/22 21:53:51 mef Exp $
 
 symbol backtrace_symbols is defined in /usr/lib/libexecinfo
 
 --- src/Makevars.orig	2024-06-17 19:54:52.000000000 +0900
-+++ src/Makevars	2026-06-03 07:48:22.110859722 +0900
-@@ -3,3 +3,10 @@ CXX_STD = CXX17
++++ src/Makevars	2026-06-23 06:50:33.955847020 +0900
+@@ -3,3 +3,4 @@ CXX_STD = CXX17
  
  ## We need headers from our package, the directory is not automatically included
  PKG_CXXFLAGS = -I../inst/include
-+
-+UNAME := $(shell uname)
-+
-+ifneq ($(UNAME), Linux)
-+PKG_LIBS += -lexecinfo
-+endif
-+
++@@PKG_LIBS@@
