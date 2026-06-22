@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3913 2026/06/22 19:28:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3914 2026/06/22 19:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5909,3 +5909,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/fontconfig to 2.18.1 [wiz 2026-06-22]
 	Updated x11/xkeyboard-config to 2.48 [wiz 2026-06-22]
 	Updated textproc/fmtlib to 12.2.0 [wiz 2026-06-22]
+	Updated textproc/jsoncpp to 1.9.8 [wiz 2026-06-22]
