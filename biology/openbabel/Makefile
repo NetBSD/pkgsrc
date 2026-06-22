@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2026/06/11 07:16:45 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2026/06/22 13:20:21 pin Exp $
 
-DISTNAME=	openbabel-3.1.1
-PKGREVISION=	43
+DISTNAME=	openbabel-3.2.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbabel/}
 GITHUB_TAG=	openbabel-${PKGVERSION_NOREV:S/./-/g}
@@ -12,14 +11,13 @@ COMMENT=	Chemistry file translation program
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c gnu++11
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config perl
 
 PKGCONFIG_OVERRIDE+=	openbabel-3.pc.cmake
 
 .include "options.mk"
 
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../biology/coordgenlibs/buildlink3.mk"
