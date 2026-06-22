@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3889 2026/06/22 09:50:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3890 2026/06/22 09:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/QXlsx to 1.5.1.1 [adam 2026-06-22]
 	Updated net/py-zeep to 4.3.3 [adam 2026-06-22]
 	Added mail/py-imaplib2 version 3.6 [wiz 2026-06-22]
+	Added mail/offlineimap3 version 8.0.2 [wiz 2026-06-22]
