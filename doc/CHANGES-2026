@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3919 2026/06/22 19:50:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3920 2026/06/22 19:59:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-OpenSSL to 26.3.0 [wiz 2026-06-22]
 	Updated security/py-cryptography to 49.0.0 [wiz 2026-06-22]
 	Updated security/py-cryptography_vectors to 49.0.0 [wiz 2026-06-22]
+	Updated devel/py-filelock to 3.29.4 [wiz 2026-06-22]
