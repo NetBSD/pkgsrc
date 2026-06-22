@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3856 2026/06/22 05:30:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3857 2026/06/22 05:31:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5829,3 +5829,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.138 [adam 2026-06-22]
 	Updated net/libtorrent to 0.16.14 [adam 2026-06-22]
 	Updated net/rtorrent to 0.16.14 [adam 2026-06-22]
+	Updated net/p5-Net-DNS to 1.55 [wiz 2026-06-22]
