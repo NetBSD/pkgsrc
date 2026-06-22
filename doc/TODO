@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27448 2026/06/22 13:17:13 pin Exp $
+$NetBSD: TODO,v 1.27449 2026/06/22 13:20:46 pin Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
-	o openbabel-3.2.0
 	o openblas-0.3.33
 	o opencl-3.0.19
 	o opencpn-5.12.4
