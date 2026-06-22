@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/06/01 07:28:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/06/22 12:34:42 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -99,6 +99,7 @@ bin/indi_microtouch_focus
 bin/indi_mlastro_rpa
 bin/indi_moonlite_focus
 bin/indi_moonlitedro_focus
+bin/indi_mxhd_telescope
 bin/indi_myDewControllerPro
 bin/indi_mydcp4esp32
 bin/indi_myfocuserpro2_focus
@@ -338,18 +339,18 @@ lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.2.2
+lib/libindiAlignmentDriver.so.2.2.3
 lib/libindiclient.a
 lib/libindiclient.so
 lib/libindiclient.so.2
-lib/libindiclient.so.2.2.2
+lib/libindiclient.so.2.2.3
 lib/libindidriver.a
 lib/libindidriver.so
 lib/libindidriver.so.2
-lib/libindidriver.so.2.2.2
+lib/libindidriver.so.2.2.3
 lib/libindilx200.so
 lib/libindilx200.so.2
-lib/libindilx200.so.2.2.2
+lib/libindilx200.so.2.2.3
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml

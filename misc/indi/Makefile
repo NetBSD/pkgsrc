@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/06/01 07:28:16 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/06/22 12:34:42 adam Exp $
 
-DISTNAME=	indi-2.2.2
+DISTNAME=	indi-2.2.3.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=indilib/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DINDI_BUILD_SERVER=NO
+CMAKE_CONFIGURE_ARGS+=	-DFIX_WARNINGS=NO # avoid -Werror
 
 PKGCONFIG_OVERRIDE=	libindi.pc.cmake
 
