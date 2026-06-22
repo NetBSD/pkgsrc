@@ -1,29 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/18 07:34:38 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2026/06/22 13:20:21 pin Exp $
 
 Remove obsolete variable.
 
---- CMakeLists.txt.orig	2020-05-08 15:38:02.000000000 +0000
+--- CMakeLists.txt.orig	2026-06-22 05:11:30.535235428 +0000
 +++ CMakeLists.txt
-@@ -10,9 +10,6 @@ set (CMAKE_CXX_STANDARD 11)
- 
- if(COMMAND cmake_policy)
-   cmake_policy(SET CMP0003 NEW)
--  if(POLICY CMP0042)
--    cmake_policy(SET CMP0042 OLD)
--  endif()
- endif()
- 
- include (CheckCXXCompilerFlag)
-@@ -344,7 +341,7 @@ elseif(HAVE_STD_TR1_SHARED_PTR_IN_TR1_HE
- else()
-   find_package(Boost)
-   if(Boost_FOUND)
--    include_directories(${Boost_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
-+    include_directories(${Boost_INCLUDE_DIRS})
-     add_definitions(-DUSE_BOOST -DHAVE_SHARED_POINTER)
-     set(SHARED_POINTER true)
-   else()
-@@ -357,7 +354,7 @@ message(STATUS "Use ${OB_SHARED_PTR_IMPL
+@@ -318,7 +318,7 @@ find_package(Boost COMPONENTS program_options iostream
  
  find_package(Boost COMPONENTS program_options iostreams)
    if(Boost_FOUND)
@@ -32,7 +13,7 @@ Remove obsolete variable.
   endif()
  
  # Intel C++ Compiler
-@@ -472,7 +469,7 @@ endif()
+@@ -482,7 +482,7 @@ if(Boost_FOUND)
  
  find_package(Boost COMPONENTS filesystem iostreams unit_test_framework)
  if(Boost_FOUND)
