@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/02/13 11:26:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/22 17:36:27 dogcow Exp $
 bin/transmission-qt
 share/applications/transmission-qt.desktop
+share/icons/hicolor/scalable/apps/transmission-qt-devel.svg
+share/icons/hicolor/scalable/apps/transmission-qt.svg
+share/icons/hicolor/symbolic/apps/transmission-qt-symbolic.svg
 share/transmission/translations/transmission_af.qm
 share/transmission/translations/transmission_ca.qm
 share/transmission/translations/transmission_da.qm
@@ -11,9 +14,11 @@ share/transmission/translations/transmission_es.qm
 share/transmission/translations/transmission_eu.qm
 share/transmission/translations/transmission_fi.qm
 share/transmission/translations/transmission_fr.qm
+share/transmission/translations/transmission_he.qm
 share/transmission/translations/transmission_hu.qm
 share/transmission/translations/transmission_id.qm
-share/transmission/translations/transmission_it_IT.qm
+share/transmission/translations/transmission_is.qm
+share/transmission/translations/transmission_it.qm
 share/transmission/translations/transmission_ja.qm
 share/transmission/translations/transmission_ka.qm
 share/transmission/translations/transmission_kk.qm
@@ -31,3 +36,4 @@ share/transmission/translations/transmission_sv.qm
 share/transmission/translations/transmission_tr.qm
 share/transmission/translations/transmission_uk.qm
 share/transmission/translations/transmission_zh_CN.qm
+share/transmission/translations/transmission_zh_TW.qm

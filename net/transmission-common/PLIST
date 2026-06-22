@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/01 14:11:04 dogcow Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/06/22 17:36:27 dogcow Exp $
+share/transmission/public_html/images/apple-touch-icon.png
 share/transmission/public_html/images/favicon.ico
-share/transmission/public_html/images/favicon.png
-share/transmission/public_html/images/webclip-icon.png
+share/transmission/public_html/images/favicon.svg
 share/transmission/public_html/index.html
 share/transmission/public_html/transmission-app.css
+share/transmission/public_html/transmission-app.css.LEGAL.txt
+share/transmission/public_html/transmission-app.css.map
 share/transmission/public_html/transmission-app.js
 share/transmission/public_html/transmission-app.js.LEGAL.txt
