@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3863 2026/06/22 05:35:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3864 2026/06/22 05:36:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5836,3 +5836,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-OpenPGP to 1.21 [wiz 2026-06-22]
 	Updated www/p5-URI to 5.35 [wiz 2026-06-22]
 	Added devel/gitte version 0.7.0 [wiz 2026-06-22]
+	Updated multimedia/ffmpeg8 to 8.1.2 [adam 2026-06-22]
+	Updated multimedia/ffplay8 to 8.1.2 [adam 2026-06-22]
