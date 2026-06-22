@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3892 2026/06/22 09:57:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3893 2026/06/22 10:10:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5878,3 +5878,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/catch2 to 3.15.1 [adam 2026-06-22]
 	Updated devel/py-ruff to 0.15.18 [adam 2026-06-22]
 	Updated devel/py-dulwich to 1.2.6 [adam 2026-06-22]
+	Updated textproc/pugixml to 1.16 [adam 2026-06-22]
+	Updated devel/py-pygit2 to 1.19.3 [adam 2026-06-22]
