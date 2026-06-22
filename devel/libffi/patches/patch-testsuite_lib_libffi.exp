@@ -1,0 +1,24 @@
+$NetBSD: patch-testsuite_lib_libffi.exp,v 1.1 2026/06/22 21:52:58 wiz Exp $
+
+testsuite: link threads tests against libpthread on NetBSD
+The libffi.threads/tsan.c test calls pthread_create but the harness
+only appended -lpthread for OpenBSD, FreeBSD, and some Linux targets.
+On NetBSD this caused an undefined reference to pthread_create.
+
+Fixes #988
+
+https://github.com/libffi/libffi/commit/c93f9428d17cde4eb35517b58feeae6fb43aba5b
+
+--- testsuite/lib/libffi.exp.orig	2026-06-20 13:58:53.000000000 +0000
++++ testsuite/lib/libffi.exp
+@@ -411,6 +411,10 @@ proc libffi_target_compile { source dest type options 
+             lappend options "libs= -lpthread"
+         }
+ 
++        if { [string match "*-*-netbsd*" $target_triplet] } {
++            lappend options "libs= -lpthread"
++        }
++
+         lappend options "libs= -lffi"
+ 
+         if { [string match "aarch64*-*-linux*" $target_triplet] } {

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2026/06/22 19:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/06/22 21:52:58 wiz Exp $
 
 DISTNAME=	libffi-3.6.0
 CATEGORIES=	devel
@@ -21,11 +21,6 @@ PKGCONFIG_OVERRIDE+=	libffi.pc.in
 INFO_FILES=		yes
 TEST_DEPENDS+=		dejagnu-[0-9]*:../../devel/dejagnu
 TEST_TARGET=		check
-
-# as of 3.6.0
-# of expected passes            2456
-# of unexpected failures        2
-# of unresolved testcases       2
 
 .include "../../mk/compiler.mk"
 # The Compaq C frontend groks .s, but not .S. Assemble osf.S directly w/ as(1).
