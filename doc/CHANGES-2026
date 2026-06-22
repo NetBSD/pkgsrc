@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3855 2026/06/22 02:59:54 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.3856 2026/06/22 05:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5826,3 +5826,6 @@ Changes to the packages collection and infrastructure in 2026:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q2 branch [maya 2026-06-22]
 	Updated comms/asterisk22 to 22.10.0 [jnemeth 2026-06-22]
 	Updated comms/asterisk23 to 23.4.0 [jnemeth 2026-06-22]
+	Updated devel/cargo-nextest to 0.9.138 [adam 2026-06-22]
+	Updated net/libtorrent to 0.16.14 [adam 2026-06-22]
+	Updated net/rtorrent to 0.16.14 [adam 2026-06-22]
