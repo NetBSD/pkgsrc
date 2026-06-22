@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2026/06/20 13:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2026/06/22 16:57:50 adam Exp $
 
-DISTNAME=	OpenImageIO-3.1.14.0
+DISTNAME=	OpenImageIO-3.1.14.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	OpenImageIO
