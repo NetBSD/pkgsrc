@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3924 2026/06/22 22:09:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3925 2026/06/22 22:54:30 morr Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5901,3 +5901,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gnupg2 to 2.5.20nb2 [wiz 2026-06-22]
 	Updated cad/py-PyRTL to 1.0.0 [ryoon 2026-06-22]
 	Updated sysutils/restic to 0.19.0nb1 [wiz 2026-06-22]
+	Updated editors/vim-share to 9.2.0707 [sh 2026-06-22]
