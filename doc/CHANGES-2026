@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3870 2026/06/22 06:59:13 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3871 2026/06/22 07:20:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5846,3 +5846,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/ffmpeg6 to 6.1.6 [adam 2026-06-22]
 	Updated multimedia/ffplay6 to 6.1.6 [adam 2026-06-22]
 	Updated shells/oh-my-posh to 29.17.0 [pin 2026-06-22]
+	Updated multimedia/ffmpeg4 to 4.4.8 [adam 2026-06-22]
+	Updated multimedia/ffplay4 to 4.4.8 [adam 2026-06-22]
