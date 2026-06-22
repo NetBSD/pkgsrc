@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3887 2026/06/22 09:08:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3888 2026/06/22 09:45:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5868,3 +5868,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ccid to 1.8.2 [adam 2026-06-22]
 	Updated security/py-certifi to 2026.6.17 [adam 2026-06-22]
 	Updated sysutils/dua-cli to 2.37.0 [pin 2026-06-22]
+	Updated devel/cmake to 4.3.4 [adam 2026-06-22]
+	Updated devel/cmake-gui to 4.3.4 [adam 2026-06-22]
+	Updated math/QXlsx to 1.5.1.1 [adam 2026-06-22]
+	Updated net/py-zeep to 4.3.3 [adam 2026-06-22]
