@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/22 05:32:59 wiz Exp $
+
+BLAKE2s (Crypt-DSA-GMP-0.02.tar.gz) = c696dd91f0768079e566de608aafbea9ed2d7e0bcd53f44537b4a6082344c31f
+SHA512 (Crypt-DSA-GMP-0.02.tar.gz) = a5f8a090a9c7e85576fb83a6e9bcb4b44c7756be1533e6f0ff37d01fcf5fd107e98af67ec57026ce3b30f14c2538a28e370beaee71b0e087449288da6b103a67
+Size (Crypt-DSA-GMP-0.02.tar.gz) = 45643 bytes
