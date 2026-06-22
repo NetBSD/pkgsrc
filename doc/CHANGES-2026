@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3867 2026/06/22 06:51:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3868 2026/06/22 06:57:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5842,3 +5842,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.35.0 [pin 2026-06-22]
 	Updated multimedia/ffmpeg7 to 7.1.5 [adam 2026-06-22]
 	Updated multimedia/ffplay7 to 7.1.5 [adam 2026-06-22]
+	Updated textproc/hck to 0.11.6 [pin 2026-06-22]
