@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/12/01 20:34:27 pin Exp $
+# $NetBSD: Makefile,v 1.16 2026/06/22 06:56:01 pin Exp $
 
-DISTNAME=	hck-0.11.5
+DISTNAME=	hck-0.11.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	unlicense OR mit
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
-RUST_REQ=	1.90.0
+RUST_REQ=	1.95.0
 
 .include "cargo-depends.mk"
 
