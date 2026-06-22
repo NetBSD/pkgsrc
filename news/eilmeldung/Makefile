@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/06/05 10:11:12 pin Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/22 15:08:22 pin Exp $
 
-DISTNAME=	eilmeldung-1.5.4
+DISTNAME=	eilmeldung-1.6.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=christo-auer/}
 
