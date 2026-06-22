@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3907 2026/06/22 16:58:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3908 2026/06/22 17:36:56 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5900,3 +5900,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-tzlocal to 5.4.3 [adam 2026-06-22]
 	Updated devel/appstream to 1.1.3 [adam 2026-06-22]
 	Updated graphics/openimageio to 3.1.14.1 [adam 2026-06-22]
+	Updated net/transmission to 4.1.2 [dogcow 2026-06-22]
+	Updated net/transmission-common to 4.1.2 [dogcow 2026-06-22]
+	Updated net/transmission-gtk to 4.1.2nb1 [dogcow 2026-06-22]
+	Updated net/transmission-qt to 4.1.2 [dogcow 2026-06-22]
