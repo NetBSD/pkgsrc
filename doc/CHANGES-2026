@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3858 2026/06/22 05:31:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3859 2026/06/22 05:32:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5831,3 +5831,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rtorrent to 0.16.14 [adam 2026-06-22]
 	Updated net/p5-Net-DNS to 1.55 [wiz 2026-06-22]
 	Updated security/p5-CryptX to 0.090 [wiz 2026-06-22]
+	Added math/p5-Math-Prime-Util-GMP version 0.53 [wiz 2026-06-22]
