@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/03 15:39:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/22 20:20:56 ryoon Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -51,6 +51,21 @@ ${PYSITELIB}/pyrtl/rtllib/aes.pyo
 ${PYSITELIB}/pyrtl/rtllib/barrel.py
 ${PYSITELIB}/pyrtl/rtllib/barrel.pyc
 ${PYSITELIB}/pyrtl/rtllib/barrel.pyo
+${PYSITELIB}/pyrtl/rtllib/float/__init__.py
+${PYSITELIB}/pyrtl/rtllib/float/__init__.pyc
+${PYSITELIB}/pyrtl/rtllib/float/__init__.pyo
+${PYSITELIB}/pyrtl/rtllib/float/add_sub.py
+${PYSITELIB}/pyrtl/rtllib/float/add_sub.pyc
+${PYSITELIB}/pyrtl/rtllib/float/add_sub.pyo
+${PYSITELIB}/pyrtl/rtllib/float/multiplication.py
+${PYSITELIB}/pyrtl/rtllib/float/multiplication.pyc
+${PYSITELIB}/pyrtl/rtllib/float/multiplication.pyo
+${PYSITELIB}/pyrtl/rtllib/float/types.py
+${PYSITELIB}/pyrtl/rtllib/float/types.pyc
+${PYSITELIB}/pyrtl/rtllib/float/types.pyo
+${PYSITELIB}/pyrtl/rtllib/float/utils.py
+${PYSITELIB}/pyrtl/rtllib/float/utils.pyc
+${PYSITELIB}/pyrtl/rtllib/float/utils.pyo
 ${PYSITELIB}/pyrtl/rtllib/libutils.py
 ${PYSITELIB}/pyrtl/rtllib/libutils.pyc
 ${PYSITELIB}/pyrtl/rtllib/libutils.pyo

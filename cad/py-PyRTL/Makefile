@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/12/27 16:31:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/22 20:20:56 ryoon Exp $
 
 DISTNAME=	pyrtl-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-PyRTL-0.12
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-PyRTL-1.0.0
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrtl/}
 
@@ -18,9 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # 2 failed, 1176 passed, 9 skipped
 
 USE_LANGUAGES=	c # for test
-
-pre-configure:
-	cd ${WRKSRC} && ${RM} pyrtl/*.orig
 
 # for tests
 .include "../../lang/python/tool.mk"
