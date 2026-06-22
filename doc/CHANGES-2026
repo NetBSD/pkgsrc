@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3916 2026/06/22 19:38:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3917 2026/06/22 19:41:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/jsoncpp to 1.9.8 [wiz 2026-06-22]
 	Updated devel/libffi to 3.6.0 [wiz 2026-06-22]
 	Updated devel/abseil to 20260526.0 [wiz 2026-06-22]
+	Updated security/py-OpenSSL to 26.3.0 [wiz 2026-06-22]
