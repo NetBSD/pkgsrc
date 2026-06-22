@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/06/22 09:50:20 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/imaplib2/__init__.py
+${PYSITELIB}/imaplib2/__init__.pyc
+${PYSITELIB}/imaplib2/__init__.pyo
+${PYSITELIB}/imaplib2/imaplib2.py
+${PYSITELIB}/imaplib2/imaplib2.pyc
+${PYSITELIB}/imaplib2/imaplib2.pyo
