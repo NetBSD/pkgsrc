@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27435 2026/06/22 07:35:08 adam Exp $
+$NetBSD: TODO,v 1.27436 2026/06/22 07:40:21 pin Exp $
 
 Suggested new packages
 ======================
@@ -1120,7 +1120,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6dd-20040819a
 	o pim6sd-20050715a
 	o pinfo-0.6.10
-	o piratebay-0.2.2 [pin]
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
