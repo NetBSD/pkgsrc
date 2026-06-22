@@ -1,35 +1,30 @@
-# $NetBSD: Makefile,v 1.19 2025/06/02 12:54:30 vins Exp $
-#
+# $NetBSD$
 
-DISTNAME=	xwpe-1.5.30a
-PKGREVISION=	1
+DISTNAME=	xwpe-1.6.6
 CATEGORIES=	editors
-MASTER_SITES=	http://www.identicalsoftware.com/xwpe/
+MASTER_SITES=	https://codeberg.org/mendezr/xwpe/releases/download/v1.6.6/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	http://www.identicalsoftware.com/xwpe/
+HOMEPAGE=	https://codeberg.org/mendezr/xwpe/
 COMMENT=	Programming environment for UNIX systems
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	gmake pkg-config makeinfo
+USE_LANGUAGES=	c
+USE_NCURSES=	yes
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
+ICON_THEMES=	yes
 
-BUILD_TARGET=		# the one from the Makefile
+CONFIGURE_ARGS+=	--without-gpm
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/pixmaps
-
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/xwpe.desktop	\
-	   ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${FILESDIR}/xwpe.xpm		\
-	   ${DESTDIR}${PREFIX}/share/pixmaps
-
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libSM/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+.include "../../devel/libvterm01/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

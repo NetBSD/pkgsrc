@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/08 08:51:55 vins Exp $
+@comment $NetBSD$
 bin/we
 bin/wpe
 bin/xwe
 bin/xwpe
+info/xwpe.info
 lib/xwpe/help.key
 lib/xwpe/help.xwpe
 lib/xwpe/syntax_def
@@ -11,4 +12,5 @@ man/man1/wpe.1
 man/man1/xwe.1
 man/man1/xwpe.1
 share/applications/xwpe.desktop
-share/pixmaps/xwpe.xpm
+share/icons/hicolor/scalable/apps/xwpe.svg
+share/metainfo/io.codeberg.mendezr.xwpe.metainfo.xml
