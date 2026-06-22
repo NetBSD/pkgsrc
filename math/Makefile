@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2026/06/08 07:39:43 dkazankov Exp $
+# $NetBSD: Makefile,v 1.636 2026/06/22 05:32:20 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -358,6 +358,7 @@ SUBDIR+=	p5-Math-MatrixReal
 SUBDIR+=	p5-Math-Pari
 SUBDIR+=	p5-Math-Permute-List
 SUBDIR+=	p5-Math-Prime-Util
+SUBDIR+=	p5-Math-Prime-Util-GMP
 SUBDIR+=	p5-Math-Random
 SUBDIR+=	p5-Math-Random-ISAAC
 SUBDIR+=	p5-Math-Random-ISAAC-XS
