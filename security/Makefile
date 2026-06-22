@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1014 2026/06/13 11:21:21 markd Exp $
+# $NetBSD: Makefile,v 1.1015 2026/06/22 05:33:12 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -325,6 +325,7 @@ SUBDIR+=	p5-Crypt-DES_EDE3
 SUBDIR+=	p5-Crypt-DH
 SUBDIR+=	p5-Crypt-DH-GMP
 SUBDIR+=	p5-Crypt-DSA
+SUBDIR+=	p5-Crypt-DSA-GMP
 SUBDIR+=	p5-Crypt-ECB
 SUBDIR+=	p5-Crypt-Eksblowfish
 SUBDIR+=	p5-Crypt-GPG
