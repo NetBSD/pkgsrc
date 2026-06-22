@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2026/06/03 22:33:11 morr Exp $
+@comment $NetBSD: PLIST,v 1.92 2026/06/22 22:54:13 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -11,6 +11,8 @@ share/vim/${VIM_SUBDIR}/autoload/README.txt
 share/vim/${VIM_SUBDIR}/autoload/RstFold.vim
 share/vim/${VIM_SUBDIR}/autoload/ada.vim
 share/vim/${VIM_SUBDIR}/autoload/adacomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/beancount.vim
+share/vim/${VIM_SUBDIR}/autoload/beancountcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/bitbake.vim
 share/vim/${VIM_SUBDIR}/autoload/cargo.vim
 share/vim/${VIM_SUBDIR}/autoload/cargo/quickfix.vim
@@ -114,6 +116,7 @@ share/vim/${VIM_SUBDIR}/compiler/ant.vim
 share/vim/${VIM_SUBDIR}/compiler/bash.vim
 share/vim/${VIM_SUBDIR}/compiler/bcc.vim
 share/vim/${VIM_SUBDIR}/compiler/bdf.vim
+share/vim/${VIM_SUBDIR}/compiler/bean_check.vim
 share/vim/${VIM_SUBDIR}/compiler/biome.vim
 share/vim/${VIM_SUBDIR}/compiler/cabal.vim
 share/vim/${VIM_SUBDIR}/compiler/cargo.vim
@@ -436,6 +439,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bash.vim
 share/vim/${VIM_SUBDIR}/ftplugin/basic.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/beancount.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bicep-params.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bicep.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bindzone.vim
@@ -857,6 +861,7 @@ share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/awk.vim
 share/vim/${VIM_SUBDIR}/indent/bash.vim
 share/vim/${VIM_SUBDIR}/indent/basic.vim
+share/vim/${VIM_SUBDIR}/indent/beancount.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
 share/vim/${VIM_SUBDIR}/indent/bitbake.vim
 share/vim/${VIM_SUBDIR}/indent/bpftrace.vim
@@ -1237,6 +1242,7 @@ share/vim/${VIM_SUBDIR}/syntax/bash.vim
 share/vim/${VIM_SUBDIR}/syntax/basic.vim
 share/vim/${VIM_SUBDIR}/syntax/bc.vim
 share/vim/${VIM_SUBDIR}/syntax/bdf.vim
+share/vim/${VIM_SUBDIR}/syntax/beancount.vim
 share/vim/${VIM_SUBDIR}/syntax/bib.vim
 share/vim/${VIM_SUBDIR}/syntax/bindzone.vim
 share/vim/${VIM_SUBDIR}/syntax/bitbake.vim
@@ -1986,6 +1992,7 @@ share/vim/${VIM_SUBDIR}/tools/vimspell.sh
 share/vim/${VIM_SUBDIR}/tools/vimspell.txt
 share/vim/${VIM_SUBDIR}/tools/xcmdsrv_client.c
 share/vim/${VIM_SUBDIR}/tutor/README.el.txt
+share/vim/${VIM_SUBDIR}/tutor/README.it.txt
 share/vim/${VIM_SUBDIR}/tutor/README.ru.txt
 share/vim/${VIM_SUBDIR}/tutor/README.sv.txt
 share/vim/${VIM_SUBDIR}/tutor/README.txt
