@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3861 2026/06/22 05:34:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3862 2026/06/22 05:34:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5834,3 +5834,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/p5-Math-Prime-Util-GMP version 0.53 [wiz 2026-06-22]
 	Added security/p5-Crypt-DSA-GMP version 0.02 [wiz 2026-06-22]
 	Updated security/p5-Crypt-OpenPGP to 1.21 [wiz 2026-06-22]
+	Updated www/p5-URI to 5.35 [wiz 2026-06-22]
