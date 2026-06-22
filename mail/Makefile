@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2026/05/28 16:15:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.693 2026/06/22 09:52:26 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -211,6 +211,7 @@ SUBDIR+=	notmuch-emacs
 SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
+SUBDIR+=	offlineimap3
 SUBDIR+=	openarc
 SUBDIR+=	opendkim
 SUBDIR+=	opendmarc
@@ -354,6 +355,7 @@ SUBDIR+=	py-dkim
 SUBDIR+=	py-email_validator
 SUBDIR+=	py-flufl.bounce
 SUBDIR+=	py-imapclient
+SUBDIR+=	py-imaplib2
 SUBDIR+=	py-lieer
 SUBDIR+=	py-mail-parser
 SUBDIR+=	py-mailman-hyperkitty
