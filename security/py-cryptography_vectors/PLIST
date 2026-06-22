@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/04/26 09:01:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/06/22 19:50:20 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -589,7 +589,6 @@ ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-256-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-ofb.txt
-${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20/counter-overflow.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20/rfc7539.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/boringssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/openssl.txt
