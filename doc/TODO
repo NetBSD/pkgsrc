@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27446 2026/06/22 10:10:19 adam Exp $
+$NetBSD: TODO,v 1.27447 2026/06/22 10:50:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
-	o fast_float-8.2.10
 	o fcitx5-5.1.12
 	o fcitx5-chinese-addons-5.1.12 [needs fcitx 5.1.12]
 	o fd-3.01j

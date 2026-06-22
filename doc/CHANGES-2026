@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3893 2026/06/22 10:10:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3894 2026/06/22 10:50:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5880,3 +5880,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dulwich to 1.2.6 [adam 2026-06-22]
 	Updated textproc/pugixml to 1.16 [adam 2026-06-22]
 	Updated devel/py-pygit2 to 1.19.3 [adam 2026-06-22]
+	Updated audio/strawberry to 1.2.20 [adam 2026-06-22]
+	Updated math/fast_float to 8.2.10 [adam 2026-06-22]
