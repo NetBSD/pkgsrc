@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/04/13 02:50:22 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/06/22 02:21:18 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -62,6 +62,7 @@ lib/asterisk/modules/app_softhangup.so
 lib/asterisk/modules/app_speech_utils.so
 lib/asterisk/modules/app_stack.so
 lib/asterisk/modules/app_stasis.so
+lib/asterisk/modules/app_stasis_broadcast.so
 lib/asterisk/modules/app_stream_echo.so
 lib/asterisk/modules/app_system.so
 lib/asterisk/modules/app_talkdetect.so
@@ -269,6 +270,7 @@ lib/asterisk/modules/res_pjsip_exten_state.so
 lib/asterisk/modules/res_pjsip_header_funcs.so
 lib/asterisk/modules/res_pjsip_history.so
 lib/asterisk/modules/res_pjsip_logger.so
+lib/asterisk/modules/res_pjsip_maintenance.so
 lib/asterisk/modules/res_pjsip_messaging.so
 lib/asterisk/modules/res_pjsip_mwi.so
 lib/asterisk/modules/res_pjsip_mwi_body_generator.so
@@ -313,6 +315,7 @@ lib/asterisk/modules/res_speech_aeap.so
 ${PLIST.srtp}lib/asterisk/modules/res_srtp.so
 lib/asterisk/modules/res_stasis.so
 lib/asterisk/modules/res_stasis_answer.so
+lib/asterisk/modules/res_stasis_broadcast.so
 lib/asterisk/modules/res_stasis_device_state.so
 lib/asterisk/modules/res_stasis_playback.so
 lib/asterisk/modules/res_stasis_recording.so
@@ -2320,6 +2323,8 @@ share/doc/asterisk/CREDITS
 share/doc/asterisk/ChangeLog-22.0.0.md
 share/doc/asterisk/ChangeLog-22.1.0.md
 share/doc/asterisk/ChangeLog-22.1.1.md
+share/doc/asterisk/ChangeLog-22.10.0.html
+share/doc/asterisk/ChangeLog-22.10.0.md
 share/doc/asterisk/ChangeLog-22.2.0.md
 share/doc/asterisk/ChangeLog-22.3.0.html
 share/doc/asterisk/ChangeLog-22.3.0.md
