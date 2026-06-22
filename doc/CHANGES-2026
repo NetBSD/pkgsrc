@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3891 2026/06/22 09:54:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3892 2026/06/22 09:57:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5876,3 +5876,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added mail/offlineimap3 version 8.0.2 [wiz 2026-06-22]
 	Updated sysutils/ansible-core to 2.21.1 [adam 2026-06-22]
 	Updated devel/catch2 to 3.15.1 [adam 2026-06-22]
+	Updated devel/py-ruff to 0.15.18 [adam 2026-06-22]
+	Updated devel/py-dulwich to 1.2.6 [adam 2026-06-22]
