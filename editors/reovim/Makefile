@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/04/09 17:16:54 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/06/22 19:38:47 wiz Exp $
 
 DISTNAME=	reovim-0.14.4
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ds1sqe/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
