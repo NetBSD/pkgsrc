@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3885 2026/06/22 08:57:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3886 2026/06/22 08:59:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5865,3 +5865,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 26.3.1 [adam 2026-06-22]
 	Updated lang/nodejs24 to 24.17.0 [adam 2026-06-22]
 	Updated lang/nodejs22 to 22.23.0 [adam 2026-06-22]
+	Updated security/ccid to 1.8.2 [adam 2026-06-22]
+	Updated security/py-certifi to 2026.6.17 [adam 2026-06-22]
