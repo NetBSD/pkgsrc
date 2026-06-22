@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27460 2026/06/22 19:41:04 wiz Exp $
+$NetBSD: TODO,v 1.27461 2026/06/22 19:50:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1151,7 +1151,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-coverage-7.14.2
-	o py-cryptography-49.0.0
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
 	o py-cyclonedx-python-lib-11.11.0

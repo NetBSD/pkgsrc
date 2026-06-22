@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3917 2026/06/22 19:41:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3918 2026/06/22 19:50:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5913,3 +5913,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libffi to 3.6.0 [wiz 2026-06-22]
 	Updated devel/abseil to 20260526.0 [wiz 2026-06-22]
 	Updated security/py-OpenSSL to 26.3.0 [wiz 2026-06-22]
+	Updated security/py-cryptography to 49.0.0 [wiz 2026-06-22]
