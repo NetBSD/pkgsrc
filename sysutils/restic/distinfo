@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2026/06/13 05:36:38 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/06/22 22:09:45 wiz Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.25.1.mod) = c36f332c45cf24a4dd4d1a4c6ff42cd78732769e87b139ce56cd3f7c66ff685e
 SHA512 (cel.dev_expr_@v_v0.25.1.mod) = 67aecc4be51ad90133564333b4619f3195b522bcc4cec478fe37fcb7eef22a7efbfdbae97bfccd9ef1c45828116977a56a53451a037fd1ada3faa906278f4842
@@ -867,3 +867,5 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (restic-0.19.0.tar.gz) = 7003d6a3c90cf101b7823a4da17c1c06ac673df4fc2663c7a26214046f001a98
 SHA512 (restic-0.19.0.tar.gz) = 914b438691591d4f12085c0c83a471672ce99fecd108754eb18ee27985fbe8d48d05af954043724a05d63fe9283ee7421de7975d2a1f5debc8b4dd047140b47c
 Size (restic-0.19.0.tar.gz) = 24158333 bytes
+SHA1 (patch-cmd_restic_cmd__stats.go) = 119ed629fa4f2be34793ad79546dfa50f6a44947
+SHA1 (patch-cmd_restic_cmd__stats__test.go) = 2eb4cc9350a2a0605983cc5091baa613c12363a7
