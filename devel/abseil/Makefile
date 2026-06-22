@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/02/11 20:26:46 adam Exp $
+# $NetBSD: Makefile,v 1.41 2026/06/22 19:38:10 wiz Exp $
 
-DISTNAME=	abseil-20260107.1
+DISTNAME=	abseil-20260526.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abseil/}
 GITHUB_PROJECT=	abseil-cpp
@@ -20,7 +20,7 @@ USE_CXX_FEATURES=	c++17
 # which is forced by the pkgsrc build).  Thus, try to make the
 # compiler be c++17 only, and not accept c++20.
 FORCE_CXX_STD=		c++17
-# gcc7 fails "expression '<lambda>' is not a constant expression"
+# required by abseil as of 20260526
 GCC_REQD+=		10
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
