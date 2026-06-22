@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2026/04/16 13:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/22 19:38:47 wiz Exp $
 
 DISTNAME=	dm_tree-0.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dm-tree/}
 

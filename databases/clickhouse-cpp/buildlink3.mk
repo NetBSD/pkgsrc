@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/06/10 13:20:17 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/06/22 19:38:45 wiz Exp $
 
 BUILDLINK_TREE+=	clickhouse-cpp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	clickhouse-cpp
 CLICKHOUSE_CPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clickhouse-cpp+=	clickhouse-cpp>=2.6.1
+BUILDLINK_ABI_DEPENDS.clickhouse-cpp?=	clickhouse-cpp>=2.6.2nb1
 BUILDLINK_PKGSRCDIR.clickhouse-cpp?=	../../databases/clickhouse-cpp
 
 .include "../../archivers/lz4/buildlink3.mk"
