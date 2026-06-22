@@ -1,0 +1,12 @@
+Crypt::DSA::GMP is an implementation of the DSA (Digital Signature
+Algorithm) signature verification system. The implementation itself
+is pure Perl, with mathematics support from Math::BigInt::GMP and
+Math::Prime::Util::GMP.
+
+This package provides DSA signing, signature verification, and key
+generation.
+
+This module is backwards compatible with Crypt::DSA. It removes a
+number of dependencies that were portability concerns. Importantly,
+it follows FIPS 186-4 wherever possible, and has support for the
+new hash methods.
