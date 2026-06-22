@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.36 2026/06/22 06:00:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.37 2026/06/22 09:07:45 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -89,11 +89,9 @@ CARGO_CRATE_DEPENDS+=	gix-diff-0.63.0
 CARGO_CRATE_DEPENDS+=	gix-dir-0.25.0
 CARGO_CRATE_DEPENDS+=	gix-discover-0.51.0
 CARGO_CRATE_DEPENDS+=	gix-error-0.2.4
-CARGO_CRATE_DEPENDS+=	gix-features-0.44.1
 CARGO_CRATE_DEPENDS+=	gix-features-0.48.1
 CARGO_CRATE_DEPENDS+=	gix-filter-0.30.0
 CARGO_CRATE_DEPENDS+=	gix-fs-0.21.2
-CARGO_CRATE_DEPENDS+=	gix-glob-0.22.1
 CARGO_CRATE_DEPENDS+=	gix-glob-0.26.1
 CARGO_CRATE_DEPENDS+=	gix-hash-0.25.1
 CARGO_CRATE_DEPENDS+=	gix-hashtable-0.15.1
@@ -107,7 +105,6 @@ CARGO_CRATE_DEPENDS+=	gix-object-0.60.0
 CARGO_CRATE_DEPENDS+=	gix-odb-0.80.0
 CARGO_CRATE_DEPENDS+=	gix-pack-0.70.0
 CARGO_CRATE_DEPENDS+=	gix-packetline-0.21.5
-CARGO_CRATE_DEPENDS+=	gix-path-0.10.21
 CARGO_CRATE_DEPENDS+=	gix-path-0.12.1
 CARGO_CRATE_DEPENDS+=	gix-pathspec-0.18.1
 CARGO_CRATE_DEPENDS+=	gix-protocol-0.61.0
@@ -126,7 +123,6 @@ CARGO_CRATE_DEPENDS+=	gix-transport-0.57.1
 CARGO_CRATE_DEPENDS+=	gix-traverse-0.57.0
 CARGO_CRATE_DEPENDS+=	gix-url-0.36.1
 CARGO_CRATE_DEPENDS+=	gix-utils-0.3.3
-CARGO_CRATE_DEPENDS+=	gix-validate-0.10.1
 CARGO_CRATE_DEPENDS+=	gix-validate-0.11.2
 CARGO_CRATE_DEPENDS+=	gix-worktree-0.52.0
 CARGO_CRATE_DEPENDS+=	gix-worktree-state-0.30.0
@@ -140,7 +136,6 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.17.1
 CARGO_CRATE_DEPENDS+=	heapless-0.8.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.5.2
-CARGO_CRATE_DEPENDS+=	home-0.5.12
 CARGO_CRATE_DEPENDS+=	human_format-1.1.0
 CARGO_CRATE_DEPENDS+=	hybrid-array-0.4.12
 CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.64
