@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3873 2026/06/22 07:40:21 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3874 2026/06/22 07:49:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5851,3 +5851,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sccache to 0.16.0 [adam 2026-06-22]
 	Updated games/scummvm to 2026.3.0 [adam 2026-06-22]
 	Updated net/piratebay to 0.2.2 [pin 2026-06-22]
+	Updated textproc/television to 0.15.9 [pin 2026-06-22]
