@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3884 2026/06/22 08:21:43 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.3885 2026/06/22 08:57:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5862,3 +5862,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-headers to 1.4.350.1 [kikadf 2026-06-22]
 	Updated parallel/spirv-tools to 1.4.350.1 [kikadf 2026-06-22]
 	Updated graphics/glslang to 1.4.350.1 [kikadf 2026-06-22]
+	Updated lang/nodejs to 26.3.1 [adam 2026-06-22]
+	Updated lang/nodejs24 to 24.17.0 [adam 2026-06-22]
+	Updated lang/nodejs22 to 22.23.0 [adam 2026-06-22]
