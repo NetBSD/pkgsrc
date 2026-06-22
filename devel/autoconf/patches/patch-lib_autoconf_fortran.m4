@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_autoconf_fortran.m4,v 1.1 2014/03/06 15:41:50 joerg Exp $
+$NetBSD: patch-lib_autoconf_fortran.m4,v 1.2 2026/06/22 17:53:58 wiz Exp $
+
+Rpath is a linker option, so prefix it with -Wl.
 
 --- lib/autoconf/fortran.m4.orig	2014-02-24 14:06:39.000000000 +0000
 +++ lib/autoconf/fortran.m4

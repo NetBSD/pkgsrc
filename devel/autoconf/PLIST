@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/12/30 10:12:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/06/22 17:53:58 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -26,6 +26,7 @@ share/autoconf/Autom4te/Getopt.pm
 share/autoconf/Autom4te/Request.pm
 share/autoconf/Autom4te/XFile.pm
 share/autoconf/INSTALL
+share/autoconf/autoconf/a68.m4
 share/autoconf/autoconf/autoconf.m4
 share/autoconf/autoconf/autoconf.m4f
 share/autoconf/autoconf/autoheader.m4
@@ -47,6 +48,7 @@ share/autoconf/autoconf/specific.m4
 share/autoconf/autoconf/status.m4
 share/autoconf/autoconf/trailer.m4
 share/autoconf/autoconf/types.m4
+share/autoconf/autoconf_version.m4
 share/autoconf/autom4te.cfg
 share/autoconf/autoscan/autoscan.list
 share/autoconf/autotest/autotest.m4
@@ -61,4 +63,3 @@ share/autoconf/m4sugar/m4sh.m4
 share/autoconf/m4sugar/m4sh.m4f
 share/autoconf/m4sugar/m4sugar.m4
 share/autoconf/m4sugar/m4sugar.m4f
-share/autoconf/version.m4
