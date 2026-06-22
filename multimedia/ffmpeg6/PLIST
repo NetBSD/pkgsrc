@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/27 07:33:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/22 06:56:52 adam Exp $
 bin/ffmpeg6
 bin/ffprobe6
 include/ffmpeg6/libavcodec/ac3_parser.h
@@ -156,7 +156,7 @@ lib/ffmpeg6/libavfilter.so.9.12.100
 lib/ffmpeg6/libavformat.a
 lib/ffmpeg6/libavformat.so
 lib/ffmpeg6/libavformat.so.60
-lib/ffmpeg6/libavformat.so.60.16.100
+lib/ffmpeg6/libavformat.so.60.16.101
 lib/ffmpeg6/libavutil.a
 lib/ffmpeg6/libavutil.so
 lib/ffmpeg6/libavutil.so.58
