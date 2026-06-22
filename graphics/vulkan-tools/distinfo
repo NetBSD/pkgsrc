@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2026/05/14 15:39:58 kikadf Exp $
+$NetBSD: distinfo,v 1.7 2026/06/22 08:17:58 kikadf Exp $
 
-BLAKE2s (vulkan-tools-1.4.350.0.tar.gz) = 1ff991985ffa7aead517a63eea9e9f592cb2631a56324ffaa824c0e07a4d07d6
-SHA512 (vulkan-tools-1.4.350.0.tar.gz) = 2d2afbcb06bb1ee08ffb3cbe133b531fe6341e90fa0dca4d5459dbdedf201521e798226768a7e307f8b6c08b388114a34a9a581a294f6226ca7a2fcd6f63f813
-Size (vulkan-tools-1.4.350.0.tar.gz) = 811196 bytes
-SHA1 (patch-cube_cube.c) = 662d641041852e2fc049abba57623ca52a88eb5b
-SHA1 (patch-cube_cube.cpp) = 8e960de47586bf0bc8e148b1c3b288d305c58831
+BLAKE2s (vulkan-tools-1.4.350.1.tar.gz) = 557dc674944e0e3da5a87db7377c887076143a8468db07e53edafcb617b16ff2
+SHA512 (vulkan-tools-1.4.350.1.tar.gz) = 016bceae9d2caa276a6d7465f53e8a608e94c2c029f5be36c8706f23a0196c1e7bfff60a057c8cd3d39b7c143ece08977a6459500c5da0d9dd29b2fa2cab1f2a
+Size (vulkan-tools-1.4.350.1.tar.gz) = 811196 bytes
+SHA1 (patch-cube_cube.c) = d2a0013cc3a043ca697176bf2622169b8cf8832c
+SHA1 (patch-cube_cube.cpp) = dba20434678ce1caa15ff6cad60b99c1a4e52cdc
