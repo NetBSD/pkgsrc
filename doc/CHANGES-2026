@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3854 2026/06/22 02:21:25 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.3855 2026/06/22 02:59:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5825,3 +5825,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/gemtext2html to 1.1 [js 2026-06-21]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q2 branch [maya 2026-06-22]
 	Updated comms/asterisk22 to 22.10.0 [jnemeth 2026-06-22]
+	Updated comms/asterisk23 to 23.4.0 [jnemeth 2026-06-22]
