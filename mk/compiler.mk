@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.113 2025/07/01 19:56:04 dkazankov Exp $
+# $NetBSD: compiler.mk,v 1.114 2026/06/22 18:24:19 gdt Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -109,7 +109,7 @@
 #	versions is not consistent.  It is also useful if a package
 #	wants to use GNU language extensions without setting -std=gnuXX.
 #
-#	Valid values are: c90, c99, c11, gnu90, gnu99, gnu11
+#	Valid values are: c89, c99, c11f, gnu89, gnu99, gnu11
 #
 # FORCE_CXX_STD
 #
