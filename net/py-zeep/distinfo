@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/09/22 08:30:13 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/06/22 09:44:57 adam Exp $
 
-BLAKE2s (zeep-4.3.2.tar.gz) = b1b2d2a37eb6ac525235e581ed4ab318b220a1394173790ee976baa2ca8b4e9b
-SHA512 (zeep-4.3.2.tar.gz) = 512260a81c22b55b7fec4629b10cda775883f5bdfb40bda8ff8fdd6deff7bfe594cdb0919dac405a4eeff5e19f8a3c5906cb542760773971b2f43e03e3bdb313
-Size (zeep-4.3.2.tar.gz) = 166687 bytes
+BLAKE2s (zeep-4.3.3.tar.gz) = e8e2f62f1f87a2c8b14786bc058d8cc1383ea0733a6589355eccc5373f3472f0
+SHA512 (zeep-4.3.3.tar.gz) = 19985e823d4467ad728f97e87cb90812faad56e7ad92480574d28642f166769b30ab32217b6607900f6738b10cca65752059e6913898faa9f5e99ed46103d8ec
+Size (zeep-4.3.3.tar.gz) = 167372 bytes
