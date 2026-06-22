@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/10/09 07:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/22 09:44:57 adam Exp $
 
-DISTNAME=	zeep-4.3.2
+DISTNAME=	zeep-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=17.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-isodate>=0.5.4:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=1.4.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-file>=1.5.1:../../devel/py-requests-file
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.7.1:../../devel/py-requests-toolbelt
