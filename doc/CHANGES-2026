@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3890 2026/06/22 09:52:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3891 2026/06/22 09:54:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5874,3 +5874,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zeep to 4.3.3 [adam 2026-06-22]
 	Added mail/py-imaplib2 version 3.6 [wiz 2026-06-22]
 	Added mail/offlineimap3 version 8.0.2 [wiz 2026-06-22]
+	Updated sysutils/ansible-core to 2.21.1 [adam 2026-06-22]
+	Updated devel/catch2 to 3.15.1 [adam 2026-06-22]
