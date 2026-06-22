@@ -1,0 +1,7 @@
+A module for number theory in Perl using GMP. This includes primality
+tests, getting primes in a range, factoring, and more.
+
+While it certainly can be used directly, the main purpose of this
+module is for Math::Prime::Util. That module will automatically
+load this one if it is installed, greatly speeding up many of its
+operations on big numbers.
