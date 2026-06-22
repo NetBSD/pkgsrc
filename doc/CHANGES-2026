@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3859 2026/06/22 05:32:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3860 2026/06/22 05:33:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5832,3 +5832,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-DNS to 1.55 [wiz 2026-06-22]
 	Updated security/p5-CryptX to 0.090 [wiz 2026-06-22]
 	Added math/p5-Math-Prime-Util-GMP version 0.53 [wiz 2026-06-22]
+	Added security/p5-Crypt-DSA-GMP version 0.02 [wiz 2026-06-22]
