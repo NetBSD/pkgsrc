@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3902 2026/06/22 14:39:08 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.3903 2026/06/22 14:41:18 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5893,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated biology/openbabel to 3.2.0 [pin 2026-06-22]
 	Updated biology/molsketch to 0.8.4nb6 [pin 2026-06-22]
 	Updated lang/joker to 1.8.3 [ktnb 2026-06-22]
+	Updated x11/kitty to 0.47.4 [ktnb 2026-06-22]
