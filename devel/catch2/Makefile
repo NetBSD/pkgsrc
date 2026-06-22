@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/05/22 12:31:57 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/06/22 09:53:45 adam Exp $
 
-DISTNAME=	Catch2-3.15.0
+DISTNAME=	Catch2-3.15.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=catchorg/}
