@@ -1,4 +1,4 @@
-# $NetBSD: gcc-style-args.mk,v 1.6 2026/06/22 18:20:10 gdt Exp $
+# $NetBSD: gcc-style-args.mk,v 1.7 2026/06/22 18:22:58 gdt Exp $
 
 #
 # Some compilers (e.g. clang) share command line argument formats with GCC.
@@ -23,8 +23,7 @@ CWRAPPERS_PREPEND.cc+=	-fcommon
 
 _GCC_C_DIALECTS=	c89 c99 c11 c17 c23
 
-_GCC_C_DIALECTS+=	gnu89 gnu90 gnu99 gnu9x gnu11 gnu1x gnu17 gnu18 \
-			gnu2x
+_GCC_C_DIALECTS+=	gnu89 gnu99 gnu11 gnu17 gnu23
 
 _GCC_CXX_DIALECTS=	c++98 c++03 c++0x c++11 c++1y c++14 \
 			c++1z c++17 c++2a c++20 c++23
