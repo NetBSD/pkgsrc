@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3897 2026/06/22 12:39:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3898 2026/06/22 13:16:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5888,3 +5888,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httpbin to 0.10.4 [adam 2026-06-22]
 	Updated misc/indi to 2.2.3.1 [adam 2026-06-22]
 	Updated misc/py-tqdm to 4.68.3 [adam 2026-06-22]
+	Updated devel/mise to 2026.6.12 [pin 2026-06-22]
