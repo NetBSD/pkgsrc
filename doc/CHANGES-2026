@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3876 2026/06/22 07:54:54 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3877 2026/06/22 07:58:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5854,3 +5854,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/television to 0.15.9 [pin 2026-06-22]
 	Updated net/termscp to 1.1.1 [pin 2026-06-22]
 	Updated sysutils/treegrep to 2.2.0 [pin 2026-06-22]
+	Updated textproc/typst to 0.15.0 [pin 2026-06-22]
