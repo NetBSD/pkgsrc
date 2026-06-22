@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/06/05 10:16:31 pin Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/22 07:59:07 pin Exp $
 
-DISTNAME=	xan-0.58.0
+DISTNAME=	xan-0.59.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=medialab/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/medialab/xan/
 COMMENT=	CSV handling tool
 LICENSE=	unlicense
 
-RUST_REQ=	1.83.0
+RUST_REQ=	1.85.0
 USE_LANGUAGES=	c
 USE_TOOLS+=	pax
 
