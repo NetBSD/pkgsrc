@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3878 2026/06/22 08:00:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3879 2026/06/22 08:08:52 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/treegrep to 2.2.0 [pin 2026-06-22]
 	Updated textproc/typst to 0.15.0 [pin 2026-06-22]
 	Updated textproc/xan to 0.59.0 [pin 2026-06-22]
+	Updated graphics/vulkan-headers to 1.4.350.1 [kikadf 2026-06-22]
