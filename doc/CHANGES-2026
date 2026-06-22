@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3895 2026/06/22 11:25:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3896 2026/06/22 12:20:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5883,3 +5883,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/strawberry to 1.2.20 [adam 2026-06-22]
 	Updated math/fast_float to 8.2.10 [adam 2026-06-22]
 	Updated devel/ast-grep to 0.44.0 [pin 2026-06-22]
+	Updated multimedia/gstreamer1 to 1.28.4 [adam 2026-06-22]
+	Updated mail/py-checkdmarc to 5.17.1 [adam 2026-06-22]
+	Updated www/py-httpbin to 0.10.4 [adam 2026-06-22]
