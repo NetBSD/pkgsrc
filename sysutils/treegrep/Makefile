@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/06/02 11:04:02 pin Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/22 07:53:40 pin Exp $
 
-DISTNAME=	treegrep-2.1.1
+DISTNAME=	treegrep-2.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=4imothy/}
 
@@ -11,5 +11,11 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+USE_TOOLS+=	pkg-config
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
+
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
