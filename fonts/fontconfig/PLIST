@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.36 2025/08/10 13:58:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/06/22 19:26:13 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
+bin/fc-genconf
 bin/fc-list
 bin/fc-match
 bin/fc-pattern
@@ -13,7 +14,7 @@ include/fontconfig/fcprivate.h
 include/fontconfig/fontconfig.h
 lib/libfontconfig.so
 lib/libfontconfig.so.1
-lib/libfontconfig.so.1.16.0
+lib/libfontconfig.so.1.17.0
 lib/pkgconfig/fontconfig.pc
 share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
