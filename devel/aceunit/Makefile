@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/04 18:06:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/22 18:15:55 gdt Exp $
 
 DISTNAME=		aceunit-${GITHUB_TAG}
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -12,7 +12,7 @@ COMMENT=		Advanced C and Embedded Unit test framework
 LICENSE=		modified-bsd
 
 USE_TOOLS+=		bash:run gmake
-FORCE_C_STD=		c90
+FORCE_C_STD=		c89
 TOOLS_PLATFORM.bash=	# undef, to avoid too-old vendor bash
 REPLACE_BASH=		bin/aceunit
 BUILD_TARGET=		build	# need to build the tests in this phase
