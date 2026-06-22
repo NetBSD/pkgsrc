@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.25 2026/06/05 12:38:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/06/22 05:30:21 adam Exp $
 include/torrent/bitfield.h
 include/torrent/chunk_manager.h
 include/torrent/common.h
-include/torrent/connection_manager.h
 include/torrent/data/block.h
 include/torrent/data/block_list.h
 include/torrent/data/block_transfer.h
@@ -21,6 +20,7 @@ include/torrent/download/choke_queue.h
 include/torrent/download/download_manager.h
 include/torrent/download/group_entry.h
 include/torrent/download/resource_manager.h
+include/torrent/download/types.h
 include/torrent/download_info.h
 include/torrent/event.h
 include/torrent/exceptions.h
