@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3935 2026/06/23 09:35:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3936 2026/06/23 09:39:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5916,3 +5916,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-dateparser to 1.4.1 [adam 2026-06-23]
 	Updated textproc/py-elementpath to 5.1.2 [adam 2026-06-23]
 	Updated graphics/OpenJPH to 0.30.1 [wiz 2026-06-23]
+	Updated audio/alsa-lib to 1.2.16.1 [wiz 2026-06-23]
