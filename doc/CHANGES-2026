@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3971 2026/06/23 17:04:58 rillig Exp $
+$NetBSD: CHANGES-2026,v 1.3972 2026/06/23 21:39:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5956,3 +5956,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/basilisk to 2026.06.12 [nia 2026-06-23]
 	Updated geography/R-terra to 1.9.34 [mef 2026-06-23]
 	Updated pkgtools/pkglint to 23.21.1 [rillig 2026-06-23]
+	Updated geography/R-raster to 3.6.32 [mef 2026-06-23]
