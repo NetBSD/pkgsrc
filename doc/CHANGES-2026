@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3950 2026/06/23 10:42:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3951 2026/06/23 10:47:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/oxygen-icons to 6.27.0 [wiz 2026-06-23]
 	Updated sysutils/py-Glances to 4.5.5 [wiz 2026-06-23]
 	Updated security/py-cyclonedx-python-lib to 11.11.0 [wiz 2026-06-23]
+	Updated security/py-google-auth to 2.55.0 [wiz 2026-06-23]
