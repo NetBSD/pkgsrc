@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3943 2026/06/23 10:27:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3944 2026/06/23 10:32:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5925,3 +5925,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/enca to 1.22 [wiz 2026-06-23]
 	Updated textproc/gspell to 1.14.3 [wiz 2026-06-23]
 	Added graphics/gexiv2-0.16 version 0.16.0 [wiz 2026-06-23]
+	Updated textproc/libzim to 9.8.0 [wiz 2026-06-23]
