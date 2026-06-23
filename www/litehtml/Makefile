@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2025/01/05 22:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/06/23 10:38:28 drixter Exp $
 
-DISTNAME=	litehtml-0.9
-PKGREVISION=	1
+DISTNAME=	litehtml-0.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=litehtml/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	http://www.litehtml.com/
 COMMENT=	Fast and lightweight HTML/CSS rendering engine
 LICENSE=	modified-bsd
