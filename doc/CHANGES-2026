@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3960 2026/06/23 13:20:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3961 2026/06/23 13:23:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5946,3 +5946,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/ffplay5 to 5.1.10 [adam 2026-06-23]
 	Updated security/py-otp to 2.10.0 [adam 2026-06-23]
 	Updated textproc/py-prettytable to 3.18.0 [adam 2026-06-23]
+	Updated security/putty to 0.84 [ryoon 2026-06-23]
