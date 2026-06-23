@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3932 2026/06/23 09:06:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3933 2026/06/23 09:15:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5912,5 +5912,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-order to 1.5.0 [adam 2026-06-23]
 	Updated editors/featherpad to 1.6.4 [pin 2026-06-23]
 	Updated graphics/kvantum to 1.1.8 [pin 2026-06-23]
+	Added devel/sem version 0.13.0 [pin 2026-06-23]
 	Updated time/py-dateparser to 1.4.1 [adam 2026-06-23]
 	Updated textproc/py-elementpath to 5.1.2 [adam 2026-06-23]
+>>>>>>> 1.3932
