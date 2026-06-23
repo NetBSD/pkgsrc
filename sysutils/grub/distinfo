@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:19:39 nia Exp $
+$NetBSD: distinfo,v 1.27 2026/06/23 12:40:05 wiz Exp $
 
 BLAKE2s (grub-0.97.tar.gz) = e0fc5097f93d2988beeff3de4f1126e998fcbd12a894b95419290df88d98f2de
 SHA512 (grub-0.97.tar.gz) = c2bc9ffc8583aeae71cee9ddcc4418969768d4e3764d47307da54f93981c0109fb07d84b061b3a3628bd00ba4d14a54742bc04848110eb3ae8ca25dbfbaabadb
@@ -17,3 +17,4 @@ SHA1 (patch-ak) = 8e67eb603e639ca47536cb191e7e29ec48b95642
 SHA1 (patch-al) = 58761e867ff182ad46c42b15575395ba8c38fbd6
 SHA1 (patch-am) = d848f67f7f21fa076751d14bd3235ae7351be1b7
 SHA1 (patch-an) = b86401eceed91ff49a00a1e2a7aa49009e01a875
+SHA1 (patch-lib_device.c) = ab702713b934657d46d4f2209d6bf3ef57e6f53f
