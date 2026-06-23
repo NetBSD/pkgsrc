@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/27 13:33:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/23 11:42:42 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,9 @@ ${PYSITELIB}/pyrate_limiter/_version.pyo
 ${PYSITELIB}/pyrate_limiter/abstracts/__init__.py
 ${PYSITELIB}/pyrate_limiter/abstracts/__init__.pyc
 ${PYSITELIB}/pyrate_limiter/abstracts/__init__.pyo
+${PYSITELIB}/pyrate_limiter/abstracts/algorithm.py
+${PYSITELIB}/pyrate_limiter/abstracts/algorithm.pyc
+${PYSITELIB}/pyrate_limiter/abstracts/algorithm.pyo
 ${PYSITELIB}/pyrate_limiter/abstracts/bucket.py
 ${PYSITELIB}/pyrate_limiter/abstracts/bucket.pyc
 ${PYSITELIB}/pyrate_limiter/abstracts/bucket.pyo
