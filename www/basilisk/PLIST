@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/20 19:45:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/06/23 14:32:59 nia Exp $
 bin/basilisk
 lib/basilisk-52.9.0/application.ini
 lib/basilisk-52.9.0/basilisk
@@ -12,6 +12,18 @@ lib/basilisk-52.9.0/browser/components/components.manifest
 lib/basilisk-52.9.0/browser/components/libbrowsercomps.so
 lib/basilisk-52.9.0/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
 lib/basilisk-52.9.0/browser/icons/mozicon128.png
+lib/basilisk-52.9.0/browser/internal-userscripts/elementfrompoint-finite-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/getanimations-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/imagedecode-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/intl-displaynames-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/intl-listformat-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/intl-segmenter-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/readablestream-pipethrough-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/readablestream-pipeto-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/textdecoderstream-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/textencoderstream-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/transformstream-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/webauthn-microsoft-shim.user.js
 lib/basilisk-52.9.0/browser/omni.ja
 lib/basilisk-52.9.0/chrome.manifest
 lib/basilisk-52.9.0/defaults/pref/channel-prefs.js
@@ -20,8 +32,8 @@ lib/basilisk-52.9.0/dictionaries/en-US.aff
 lib/basilisk-52.9.0/dictionaries/en-US.dic
 lib/basilisk-52.9.0/fonts/TwemojiMozilla.ttf
 lib/basilisk-52.9.0/gtk2/libmozgtk.so
-${PLIST.be}lib/basilisk-52.9.0/icudt63b.dat
-${PLIST.le}lib/basilisk-52.9.0/icudt63l.dat
+${PLIST.be}lib/basilisk-52.9.0/icudt78b.dat
+${PLIST.le}lib/basilisk-52.9.0/icudt78l.dat
 lib/basilisk-52.9.0/libhunspell.so
 lib/basilisk-52.9.0/liblgpllibs.so
 lib/basilisk-52.9.0/libmozavcodec.so

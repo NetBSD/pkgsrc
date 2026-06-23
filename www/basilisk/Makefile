@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.8 2026/06/11 07:17:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/23 14:32:59 nia Exp $
 # This package is mostly derived from www/palemoon since they use the
 # same backend.  However, several key things are different.
 
-PKGNAME=	basilisk-2025.10.10
-PKGREVISION=	3
+PKGNAME=	basilisk-2026.06.12
 CATEGORIES=	www
 
 DIST_SUBDIR=	basilisk-${PKGVERSION_NOREV}
 DISTFILES+=	basilisk.tar.gz
 DISTFILES+=	uxp.tar.gz
-DISTFILES+=	psutil.tar.gz
+
+# The default bundled copy of ICU does not contain big-endian
+# data files, so this one is generated manually.
+ICU_MAJOR=	78
+DISTFILES+=	icudt${ICU_MAJOR}b.dat.gz
+
+SITES.icudt${ICU_MAJOR}b.dat.gz= \
+		${MASTER_SITE_LOCAL}
 
 SITES.basilisk.tar.gz= \
 	-https://repo.palemoon.org/Basilisk-Dev/Basilisk/archive/v${PKGVERSION_NOREV}.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/545d52572d4fe410bd0a776b59c7c7da27e1d0a1.tar.gz
-
-SITES.psutil.tar.gz= \
-	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/83826f1f34efa77ac20fc514fa2e3d14a941f115.tar.gz
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.basilisk-browser.org/
@@ -59,7 +62,6 @@ CONFIGURE_ARGS+=	--enable-optimize=-O3
 CONFIGURE_ARGS+=	--enable-application=basilisk
 CONFIGURE_ARGS+=	--enable-devtools
 CONFIGURE_ARGS+=	--enable-av1
-CONFIGURE_ARGS+=	--enable-jxl
 CONFIGURE_ARGS+=	--enable-pie
 CONFIGURE_ARGS+=	--enable-webrtc		# without seems broken
 CONFIGURE_ARGS+=	--disable-tests
@@ -68,7 +70,6 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--with-pthreads
-CONFIGURE_ARGS+=	--disable-gconf
 # unlike palemoon/firefox, basilisk *only* has "unofficial branding"
 CONFIGURE_ARGS+=	--disable-official-branding
 
@@ -86,16 +87,20 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 .include "../../mk/bsd.prefs.mk"
 
-# The default bundled copy of ICU does not contain big-endian
-# data files, so this one is generated manually.
-DISTFILES+=		icudt63b.dat.gz
-SITES.icudt63b.dat.gz=	${MASTER_SITE_LOCAL}
+# see notes on Dav1d here: https://www.palemoon.org/releasenotes.shtml
+.if ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--enable-libaom
+.endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=		nasm>=1.1:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
-.if ${MACHINE_PLATFORM:MNetBSD-*-earm*}
+.if ${MACHINE_PLATFORM:MNetBSD-*-earm*} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-alpha*} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-powerpc*} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-sparc64*}
 LDFLAGS+=		-Wl,--no-keep-memory
 .endif
 
@@ -130,7 +135,6 @@ CHECK_PORTABILITY_SKIP+=	platform/js/src/tests/*.sh
 CHECK_PORTABILITY_SKIP+=	platform/memory/jemalloc/src/configure
 CHECK_PORTABILITY_SKIP+=	platform/security/nss/tests/*/*.sh
 
-PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=format
@@ -143,8 +147,6 @@ pre-configure:
 
 pre-patch:
 	${MV} ${WRKDIR}/uxp/* ${WRKSRC}/platform/
-	${RM} -rf ${WRKSRC}/platform/python/psutil
-	${MV} ${WRKDIR}/psutil-3.4.2 ${WRKSRC}/platform/python/psutil
 
 pre-build:
 	${TOUCH} ${WRKSRC}/platform/configure
@@ -155,7 +157,7 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/include
 	${RM} -rf ${DESTDIR}${PREFIX}/share/idl
 .if ${PM_BIG_ENDIAN:tl} != "no"
-	${INSTALL_DATA} ${WRKDIR}/icudt63b.dat \
+	${INSTALL_DATA} ${WRKDIR}/icudt${ICU_MAJOR}b.dat \
 	    ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/
 .endif
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/*-devel*

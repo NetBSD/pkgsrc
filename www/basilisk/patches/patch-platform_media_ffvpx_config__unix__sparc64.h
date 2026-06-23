@@ -1,4 +1,4 @@
-$NetBSD: patch-platform_media_ffvpx_config__unix__sparc64.h,v 1.1 2025/12/20 19:45:27 nia Exp $
+$NetBSD: patch-platform_media_ffvpx_config__unix__sparc64.h,v 1.2 2026/06/23 14:33:00 nia Exp $
 
 Add pregenerated config for sparc64.
 This has been accepted upstream.
