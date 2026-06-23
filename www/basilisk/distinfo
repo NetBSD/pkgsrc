@@ -1,28 +1,21 @@
-$NetBSD: distinfo,v 1.4 2026/01/02 23:31:03 tnn Exp $
+$NetBSD: distinfo,v 1.5 2026/06/23 14:32:59 nia Exp $
 
-BLAKE2s (basilisk-2025.10.10/basilisk.tar.gz) = ed37e20294ce3566904ddb7b0b617a6bdde0ade188883412d37c852b4ba1a5c9
-SHA512 (basilisk-2025.10.10/basilisk.tar.gz) = 7d3c6ba90fe5378ea7d3ebef72c0aee2ea0414c39703c8af2632650f49f19f983cd53faf6dc83108c2dd9840880b1f01437c98918d68eda5bdb1f2ad84a5e01f
-Size (basilisk-2025.10.10/basilisk.tar.gz) = 12923077 bytes
-BLAKE2s (basilisk-2025.10.10/icudt63b.dat.gz) = 609cc504b54df324a891aa9531ab069b3699591bf49b989e792479df33262a92
-SHA512 (basilisk-2025.10.10/icudt63b.dat.gz) = 514b8bfe28fb54e1e26b9140d4b3065504a0b0284fded121f26c4e0f13697154a54da4a7c85a0fa0b9dae2e5b452aff4df138228c28ed80969ec0ac33b0ad0b2
-Size (basilisk-2025.10.10/icudt63b.dat.gz) = 11145931 bytes
-BLAKE2s (basilisk-2025.10.10/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
-SHA512 (basilisk-2025.10.10/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
-Size (basilisk-2025.10.10/psutil.tar.gz) = 274361 bytes
-BLAKE2s (basilisk-2025.10.10/uxp.tar.gz) = 826dc51d9a8064a4e97a4d9cf24be09ef7532314e62a6cfa2a88908309517b04
-SHA512 (basilisk-2025.10.10/uxp.tar.gz) = 92dc5a37444caef814bbf85a5a33b8efa6106f83feeb9cb08d7ba66fb633933cf16d5f0f15685c9233a71e2ae69d9604368b2412497807cbe4758f237ca722bb
-Size (basilisk-2025.10.10/uxp.tar.gz) = 264432178 bytes
+BLAKE2s (basilisk-2026.06.12/basilisk.tar.gz) = bb39a9a33f42726d6468fbe364e9704ea45b60be350ba72e11020338bc0b7c19
+SHA512 (basilisk-2026.06.12/basilisk.tar.gz) = 33ed55f1a2c6427e1a49f4df72586e694fb94893d8d8107d52571b97e1021a11066cb73035c4cac2aab8e06cabf0943e5ae781a7c2ba37ddefe106c076cd9b90
+Size (basilisk-2026.06.12/basilisk.tar.gz) = 14559974 bytes
+BLAKE2s (basilisk-2026.06.12/icudt78b.dat.gz) = f7414c79346600686ea9e0660e2604156b04cf655cb70e04915fdfd15f24ce93
+SHA512 (basilisk-2026.06.12/icudt78b.dat.gz) = 5ea8779e6f8809cdd30662da7fc1f578274d8a9ea79ed0f2ae63807bb9ae0bcbe1f8302d4ba4d58d2997d46a3bcb10f0697288b16e19c7cfb5af288358cde314
+Size (basilisk-2026.06.12/icudt78b.dat.gz) = 13078670 bytes
+BLAKE2s (basilisk-2026.06.12/uxp.tar.gz) = c926c6965bfe474d52d099eaeec6b08099604f2c219718429305b42b8775f782
+SHA512 (basilisk-2026.06.12/uxp.tar.gz) = 126a4dc5f43eda9b4bc1560d596c47ca986747e2b4e66f7902fdd2aaa5ee9604198392d46a4be732921d46984dbf0fe22470909e748b040216dfe1f868b10b5f
+Size (basilisk-2026.06.12/uxp.tar.gz) = 283223991 bytes
 SHA1 (patch-platform__ipc__chromium__src__third__party__libevent__kqueue.c) = 82cbbcd23a193a5c27311380b795fc3ff9f82602
-SHA1 (patch-platform__media__ffvpx__config_unix_ppc.h) = 38a984034aa9e707659dea784e54016d7adc1900
 SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
 SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
-SHA1 (patch-platform_intl_icu_source_configure) = 87d19e9212b4340d9b052b5a89be84432ad1cff2
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops.h) = ab4b489e9f9c22a861a275924ef34a909d210828
 SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f33b6c391689c52d0a6855e29ff25d863a7f15e5
-SHA1 (patch-platform_layout_base_FrameProperties.h) = 400fca775e5bdf2595fbd02ca8679b15988a66d0
-SHA1 (patch-platform_media_ffvpx_config.h) = 7d42a3cbcb10818b2d2d890a6fcc9ec7b6b05ec1
 SHA1 (patch-platform_media_ffvpx_config__unix__sparc64.h) = bbecefd480ab7bc20206bd46ef918fcedbd700f5
-SHA1 (patch-platform_media_ffvpx_libavutil_arm_bswap.h) = 0bca91cd67ad4b2f6809991766a6938213736fbb
+SHA1 (patch-platform_media_ffvpx_libavutil_arm_bswap.h) = f4d4777533c2c307e1d544aaceaf544bae1bbe09
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
@@ -35,7 +28,6 @@ SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf4177
 SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptsynch.c) = f99271490a983d0a1d101cb0d2b593a3987549d7
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptthread.c) = a04b06e39c289ac32dfbb6cbd79b1d7ecf0b560d
-SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
 SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
