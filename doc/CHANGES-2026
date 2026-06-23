@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3947 2026/06/23 10:38:06 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3948 2026/06/23 10:39:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5929,3 +5929,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.13 [wiz 2026-06-23]
 	Updated devel/extra-cmake-modules to 6.27.0 [wiz 2026-06-23]
 	Updated www/litehtml to 0.10 [drixter 2026-06-23]
+	Updated graphics/oxygen-icons to 6.27.0 [wiz 2026-06-23]
