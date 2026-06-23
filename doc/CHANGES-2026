@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3939 2026/06/23 10:00:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3940 2026/06/23 10:01:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/buf to 1.71.0 [adam 2026-06-23]
 	Updated audio/py-music21 to 10.5.0 [adam 2026-06-23]
 	Updated devel/atkmm2.36 to 2.36.4 [wiz 2026-06-23]
+	Updated graphics/cairomm1.16 to 1.18.1 [wiz 2026-06-23]
