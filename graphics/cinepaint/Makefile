@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2026/06/20 13:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/06/23 09:36:58 wiz Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cinepaint/}
 
