@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.768 2026/06/23 14:19:08 ryoon Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.769 2026/06/23 16:58:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30388,5 +30388,5 @@ jq<1.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-47770
 jq<1.8.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2026-49839
 jq<1.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-54679
 putty<0.84	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-48852
-putty<0.84	double-free	https://www.cve.org/CVERecord?id=CVE-2026-48850
+putty<0.84	double-free		https://nvd.nist.gov/vuln/detail/CVE-2026-48850
 putty<0.84	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-48851
