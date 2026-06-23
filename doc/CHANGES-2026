@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3966 2026/06/23 13:55:32 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3967 2026/06/23 14:00:45 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5952,3 +5952,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/lagrange to 1.20.8 [pin 2026-06-23]
 	Updated shells/oh-my-posh to 29.18.0 [pin 2026-06-23]
 	Updated sysutils/pfetch to 1.11.0 [pin 2026-06-23]
+	Downgraded www/litehtml to 0.10 [drixter 2026-06-23]
