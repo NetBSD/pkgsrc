@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3962 2026/06/23 13:46:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3963 2026/06/23 13:48:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-prettytable to 3.18.0 [adam 2026-06-23]
 	Updated security/putty to 0.84 [ryoon 2026-06-23]
 	Updated emulators/jgenesis to 0.13.0 [pin 2026-06-23]
+	Updated net/gping to 1.20.2 [pin 2026-06-23]
