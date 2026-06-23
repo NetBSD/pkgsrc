@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3970 2026/06/23 15:26:43 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3971 2026/06/23 17:04:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5955,3 +5955,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Downgraded www/litehtml to 0.9 [drixter 2026-06-23]
 	Updated www/basilisk to 2026.06.12 [nia 2026-06-23]
 	Updated geography/R-terra to 1.9.34 [mef 2026-06-23]
+	Updated pkgtools/pkglint to 23.21.1 [rillig 2026-06-23]
