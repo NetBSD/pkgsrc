@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27468 2026/06/23 10:00:08 wiz Exp $
+$NetBSD: TODO,v 1.27469 2026/06/23 10:05:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bugzilla3-3.6.13
 	o cacti-1.2.30
 	o cacti-spine-1.2.30
-	o cairomm-1.18.1
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-9.8
@@ -590,7 +589,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
-	o enca-1.22
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
