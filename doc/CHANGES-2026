@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3958 2026/06/23 12:55:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3959 2026/06/23 13:03:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5942,3 +5942,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-syrupy to 5.3.2 [adam 2026-06-23]
 	Updated devel/py-uv to 0.11.23 [adam 2026-06-23]
 	Updated devel/py-uv-build to 0.11.23 [adam 2026-06-23]
+	Updated multimedia/ffmpeg5 to 5.1.10 [adam 2026-06-23]
+	Updated multimedia/ffplay5 to 5.1.10 [adam 2026-06-23]
