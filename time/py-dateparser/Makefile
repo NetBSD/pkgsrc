@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/03/31 04:38:26 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/06/23 09:04:28 adam Exp $
 
-DISTNAME=	dateparser-1.4.0
+DISTNAME=	dateparser-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dateparser/}
@@ -22,9 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} dateparser-download dateparser-download-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	dateparser-download
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
