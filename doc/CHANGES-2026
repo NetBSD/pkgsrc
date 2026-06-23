@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3956 2026/06/23 11:44:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3957 2026/06/23 12:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5938,3 +5938,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/resterm version 0.43.2 [drixter 2026-06-23]
 	Updated net/py-pyrate-limiter to 4.4.0 [wiz 2026-06-23]
 	Updated textproc/dasel to 3.11.1 [wiz 2026-06-23]
+	Removed graphics/p5-RRDTool-OO [wiz 2026-06-23]
