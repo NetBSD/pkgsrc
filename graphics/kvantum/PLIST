@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/02/20 09:37:16 pin Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/06/23 07:41:37 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
 qt6/plugins/styles/libkvantum.so
@@ -115,6 +115,7 @@ share/color-schemes/Kvantum.colors
 share/color-schemes/KvantumAlt.colors
 share/icons/hicolor/scalable/apps/kvantum.svg
 share/kvantummanager/translations/kvantummanager_ar_DZ.qm
+share/kvantummanager/translations/kvantummanager_az.qm
 share/kvantummanager/translations/kvantummanager_be.qm
 share/kvantummanager/translations/kvantummanager_bg.qm
 share/kvantummanager/translations/kvantummanager_ca.qm
@@ -123,6 +124,7 @@ share/kvantummanager/translations/kvantummanager_cy.qm
 share/kvantummanager/translations/kvantummanager_da.qm
 share/kvantummanager/translations/kvantummanager_de.qm
 share/kvantummanager/translations/kvantummanager_el.qm
+share/kvantummanager/translations/kvantummanager_en_GB.qm
 share/kvantummanager/translations/kvantummanager_eo.qm
 share/kvantummanager/translations/kvantummanager_es.qm
 share/kvantummanager/translations/kvantummanager_et.qm
@@ -153,6 +155,7 @@ share/kvantummanager/translations/kvantummanager_zh_CN.qm
 share/kvantummanager/translations/kvantummanager_zh_Hant.qm
 share/kvantummanager/translations/kvantummanager_zh_TW.qm
 share/kvantumpreview/translations/kvantumpreview_ar_DZ.qm
+share/kvantumpreview/translations/kvantumpreview_az.qm
 share/kvantumpreview/translations/kvantumpreview_bg.qm
 share/kvantumpreview/translations/kvantumpreview_ca.qm
 share/kvantumpreview/translations/kvantumpreview_cs.qm
@@ -160,6 +163,7 @@ share/kvantumpreview/translations/kvantumpreview_cy.qm
 share/kvantumpreview/translations/kvantumpreview_da.qm
 share/kvantumpreview/translations/kvantumpreview_de.qm
 share/kvantumpreview/translations/kvantumpreview_el.qm
+share/kvantumpreview/translations/kvantumpreview_en_GB.qm
 share/kvantumpreview/translations/kvantumpreview_eo.qm
 share/kvantumpreview/translations/kvantumpreview_es.qm
 share/kvantumpreview/translations/kvantumpreview_et.qm
