@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/02/07 18:42:45 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/06/23 09:59:58 wiz Exp $
 
-BLAKE2s (atkmm-2.36.3.tar.xz) = e4a07afa5721a5173134fc31ff6eff4b7e7df53adb7cb78bec51d04bef3013b1
-SHA512 (atkmm-2.36.3.tar.xz) = 2c2513b5c5fd7a5c9392727325c7551c766d4d51b8089fbea7e8043cde97d07c9b1f98a4a693f30835e4366e9236e28e092c2480a78415d77c5cb72e9432344f
-Size (atkmm-2.36.3.tar.xz) = 797504 bytes
+BLAKE2s (atkmm-2.36.4.tar.xz) = 6e300e6cfdedc5c5f40c77fe4e767e6ee1674cf517ca29cc96b8d96535048f38
+SHA512 (atkmm-2.36.4.tar.xz) = 268a16bae365427c13ae5f318c0913782ddfdd705dd577407424f2b08a2454acc9a6435c67abcd1eef3986c7ca0e23936c78179269fd844dde402c69d2c95976
+Size (atkmm-2.36.4.tar.xz) = 753684 bytes
