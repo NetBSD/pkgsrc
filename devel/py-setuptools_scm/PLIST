@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/03/29 18:49:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/06/23 05:36:15 adam Exp $
 bin/setuptools-scm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,18 +13,27 @@ ${PYSITELIB}/setuptools_scm/__init__.pyo
 ${PYSITELIB}/setuptools_scm/__main__.py
 ${PYSITELIB}/setuptools_scm/__main__.pyc
 ${PYSITELIB}/setuptools_scm/__main__.pyo
+${PYSITELIB}/setuptools_scm/_compat_helpers.py
+${PYSITELIB}/setuptools_scm/_compat_helpers.pyc
+${PYSITELIB}/setuptools_scm/_compat_helpers.pyo
 ${PYSITELIB}/setuptools_scm/_get_version.py
 ${PYSITELIB}/setuptools_scm/_get_version.pyc
 ${PYSITELIB}/setuptools_scm/_get_version.pyo
 ${PYSITELIB}/setuptools_scm/_integration/__init__.py
 ${PYSITELIB}/setuptools_scm/_integration/__init__.pyc
 ${PYSITELIB}/setuptools_scm/_integration/__init__.pyo
+${PYSITELIB}/setuptools_scm/_integration/_discover.py
+${PYSITELIB}/setuptools_scm/_integration/_discover.pyc
+${PYSITELIB}/setuptools_scm/_integration/_discover.pyo
 ${PYSITELIB}/setuptools_scm/_integration/build_py.py
 ${PYSITELIB}/setuptools_scm/_integration/build_py.pyc
 ${PYSITELIB}/setuptools_scm/_integration/build_py.pyo
 ${PYSITELIB}/setuptools_scm/_integration/deprecation.py
 ${PYSITELIB}/setuptools_scm/_integration/deprecation.pyc
 ${PYSITELIB}/setuptools_scm/_integration/deprecation.pyo
+${PYSITELIB}/setuptools_scm/_integration/egg_info.py
+${PYSITELIB}/setuptools_scm/_integration/egg_info.pyc
+${PYSITELIB}/setuptools_scm/_integration/egg_info.pyo
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.py
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyc
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyo
