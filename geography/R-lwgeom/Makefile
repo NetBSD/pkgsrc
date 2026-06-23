@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/05/14 16:41:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2026/06/23 15:06:47 mef Exp $
 
 R_PKGNAME=	lwgeom
 R_PKGVER=	0.2-14
@@ -24,6 +24,17 @@ TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=         pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars.in
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

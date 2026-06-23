@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2024/11/28 12:37:55 mef Exp $
+$NetBSD: distinfo,v 1.7 2026/06/23 15:06:47 mef Exp $
 
 BLAKE2s (R/lwgeom_0.2-14.tar.gz) = 0e42b625cda520f87d9778ca19de544d0552c3ba52b1c38168958f99131df2b5
 SHA512 (R/lwgeom_0.2-14.tar.gz) = 99150c2c31280da053a5c5d24dc3afe7a0da8019a633106919031279706c9ac8f5d4afe0b2d1541377f50b471098e935e3d92becc99086ae2e17d09a06f9c905
 Size (R/lwgeom_0.2-14.tar.gz) = 475042 bytes
+SHA1 (patch-src_Makevars.in) = c72981700eec335c50f25682f51d734444cf717f
