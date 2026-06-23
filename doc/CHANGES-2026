@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3942 2026/06/23 10:15:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3943 2026/06/23 10:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5924,3 +5924,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/cairomm1.16 to 1.18.1 [wiz 2026-06-23]
 	Updated textproc/enca to 1.22 [wiz 2026-06-23]
 	Updated textproc/gspell to 1.14.3 [wiz 2026-06-23]
+	Added graphics/gexiv2-0.16 version 0.16.0 [wiz 2026-06-23]
