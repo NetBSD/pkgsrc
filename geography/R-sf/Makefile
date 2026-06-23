@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2026/06/21 10:49:32 mef Exp $
+# $NetBSD: Makefile,v 1.46 2026/06/23 14:52:57 mef Exp $
 
 R_PKGNAME=	sf
 R_PKGVER=	1.1-1
@@ -10,6 +10,7 @@ LICENSE=	mit OR gnu-gpl-v2
 
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++11
+GCC_REQD+=		8
 
 DEPENDS+=	R-classInt>=0.4.1:../../math/R-classInt
 DEPENDS+=	R-magrittr>=2.0.3:../../devel/R-magrittr
@@ -44,4 +45,9 @@ TEST_DEPENDS+=	R-wk-[0-9]*:../../geography/R-wk
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../geography/libspatialite/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
