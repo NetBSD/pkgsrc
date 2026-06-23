@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/08/08 08:31:55 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/06/23 10:15:09 wiz Exp $
 
-BLAKE2s (gspell-1.8.4.tar.xz) = e73a7247d34c0045b9015af3e4dd81995067d24b9e851dd24b1f253af481b208
-SHA512 (gspell-1.8.4.tar.xz) = adb481590442d81040151746c7747791d76248b1b35af1702dc5389efbd2e0c6bdda070b8e84384d22f4922b5a382ac2c6519e425f417ec85c8efbe22dc38c82
-Size (gspell-1.8.4.tar.xz) = 424356 bytes
+BLAKE2s (gspell-1.14.3.tar.xz) = 9e36dffd7c37dfe4334acd998ea68d6243beaafcf456de12cd5c090fc8592518
+SHA512 (gspell-1.14.3.tar.xz) = fd22f6c60e46976697619385b6c7f32c399126b3c057f929c9a504eb8ee8a8376e240cff67fc94e0ccf20b832556f0e3362ddf2771a5d7616264841113d6da26
+Size (gspell-1.14.3.tar.xz) = 118848 bytes
