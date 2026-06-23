@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/05/14 16:41:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2026/06/23 15:26:33 mef Exp $
 
 R_PKGNAME=	terra
-R_PKGVER=	1.9-27
-PKGREVISION=	1
+R_PKGVER=	1.9-34
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,4 +22,9 @@ USE_CXX_FEATURES=	c++17
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../geography/libspatialite/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
