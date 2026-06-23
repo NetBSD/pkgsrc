@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/05/10 12:07:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/06/23 10:32:12 wiz Exp $
 
-BLAKE2s (libzim-9.7.0.tar.gz) = 893c3d7ccc8d81c83086d48e3f0b7c644b1a78cc8b4824354d0dad2b6b35d573
-SHA512 (libzim-9.7.0.tar.gz) = 3f635eaf4363bf12b92f12a4d089883f10bb8cfe4c572876ab410d88273f8a44455ce93ef74bcb0836051ea3dd51d39f25f703d6c01d6599cce0a8801bc09fba
-Size (libzim-9.7.0.tar.gz) = 283154 bytes
+BLAKE2s (libzim-9.8.0.tar.gz) = c7b160ea8470d7bf6dbf0880b525c046c40437cc6a93e074381cf0232ccde23c
+SHA512 (libzim-9.8.0.tar.gz) = dbddee0a7beadc041df416e3ecc2c0dba4afacfb4a5245dd02b4466d582979d9eeb8e027e095bf719f856c95563653e6d6d3b2fae59315d997f3740eac4b392c
+Size (libzim-9.8.0.tar.gz) = 285545 bytes
