@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/06/18 15:22:37 nia Exp $
+# $NetBSD: Makefile,v 1.28 2026/06/23 08:15:51 wiz Exp $
 
 DISTNAME=	vcmi-1.7.4
 CATEGORIES=	games
@@ -68,6 +68,7 @@ PLIST.desktop=	yes
 
 .include "options.mk"
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
