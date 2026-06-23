@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3968 2026/06/23 14:06:31 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3969 2026/06/23 14:33:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.18.0 [pin 2026-06-23]
 	Updated sysutils/pfetch to 1.11.0 [pin 2026-06-23]
 	Downgraded www/litehtml to 0.9 [drixter 2026-06-23]
+	Updated www/basilisk to 2026.06.12 [nia 2026-06-23]
