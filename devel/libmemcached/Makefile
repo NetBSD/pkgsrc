@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/16 10:38:09 nia Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/23 13:53:18 gdt Exp $
 
 DISTNAME=	libmemcached-1.0.18
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c gnu++0x
+USE_LANGUAGES=	c gnu++11
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	support/libmemcached.pc.in

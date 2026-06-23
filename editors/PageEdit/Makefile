@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/01/07 08:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/06/23 13:53:19 gdt Exp $
 
 DISTNAME=	PageEdit-2.0.2
 PKGREVISION=	13
@@ -16,7 +16,7 @@ ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
 
 BUILDLINK_TRANSFORM+=	opt:-O2:-O0
 
-USE_LANGUAGES=	c c++0x
+USE_LANGUAGES=	c c++11
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 

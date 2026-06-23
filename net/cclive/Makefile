@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/05/15 09:58:58 adam Exp $
+# $NetBSD: Makefile,v 1.60 2026/06/23 13:53:18 gdt Exp $
 
 DISTNAME=		cclive-0.7.16
 PKGREVISION=		53
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		libquvi-scripts>=0.4.0:../../net/libquvi-scripts
 
-USE_LANGUAGES=		c c++0x
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}

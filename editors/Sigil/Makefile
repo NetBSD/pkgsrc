@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2026/01/07 08:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2026/06/23 13:53:19 gdt Exp $
 
 DISTNAME=	Sigil-2.0.2
 PKGREVISION=	13
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
 
-USE_LANGUAGES=	c c++0x
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
