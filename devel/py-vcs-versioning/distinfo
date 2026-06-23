@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/03/29 18:46:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/06/23 05:34:55 adam Exp $
 
-BLAKE2s (vcs_versioning-1.1.1.tar.gz) = a4690585c1d30855f6ea462b79923329d0a6ec0eaef412060a37b2184c2ca20c
-SHA512 (vcs_versioning-1.1.1.tar.gz) = e5bf9fa68eeb38c8d884f4bad6f93f1354854ad0ab04919d369ed1b40832c2ed117f4c9d9458ae5a8a71c84497f6d0ff0ca5b38881c7a3a057619b3da3cbbbbc
-Size (vcs_versioning-1.1.1.tar.gz) = 97575 bytes
+BLAKE2s (vcs_versioning-2.1.0.tar.gz) = fd8a8a223feb39fd23b50b165fd40b8dc1f13a7824a3c5f880537135ba303f68
+SHA512 (vcs_versioning-2.1.0.tar.gz) = b8cdb083e2a229fd78141e51543971d2ad066f9e3ba53aa8be941ce6408c8b80b8db2eb4aac738d31de47d409d4eaa4473ebe3458f7b8ed696ac4127b28f76f3
+Size (vcs_versioning-2.1.0.tar.gz) = 130507 bytes
