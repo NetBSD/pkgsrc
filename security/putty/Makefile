@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2026/06/11 07:17:36 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/06/23 13:23:31 ryoon Exp $
 
-DISTNAME=	putty-0.83
-PKGREVISION=	5
+DISTNAME=	putty-0.84
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PKGVERSION_NOREV}/
 
@@ -10,7 +9,6 @@ HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/putty/
 COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
@@ -37,6 +35,7 @@ CFLAGS.NetBSD+=	-DHAVE_FUTIMES -DHAVE_NO_SETRESUID
 CFLAGS.Linux+=	-DHAVE_FUTIMES -DHAVE_NO_SETRESUID
 LDFLAGS.Linux+=	-ldl
 
+.include "../../devel/cmake/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.gtk3:Mquartz}
 BUILDLINK_TRANSFORM+=	rm:-lX11 rm:-lXext
