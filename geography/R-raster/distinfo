@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/02/08 08:42:07 mef Exp $
+$NetBSD: distinfo,v 1.8 2026/06/23 21:39:02 mef Exp $
 
-BLAKE2s (R/raster_3.6-31.tar.gz) = be6438d58768698718b6100434a8ae67d50631d8acb6f02a7b3a7764a245d999
-SHA512 (R/raster_3.6-31.tar.gz) = eadcacfbc113d8efde31110f69c293594d6e1e99fd8a37802d4a47047e638795bc0b1eccbf906a0a8216f213665fcf5a02856e6dff17c6ceea3a89db1f66e34e
-Size (R/raster_3.6-31.tar.gz) = 575608 bytes
+BLAKE2s (R/raster_3.6-32.tar.gz) = 93e737f3be6109da6f40ae77a7a087518388b2c1a2b8298042006b6925b2d0ff
+SHA512 (R/raster_3.6-32.tar.gz) = 3eb12572975495ad0dd5c6629e95c82c8196bf1ec9ac7b21adf4707627e27ebf0e64a7c7303ab6c2103f75a809131c00302a5448b019c8db1481bdde3f37081f
+Size (R/raster_3.6-32.tar.gz) = 575813 bytes

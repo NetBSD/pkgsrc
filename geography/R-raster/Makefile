@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 08:42:06 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/23 21:39:02 mef Exp $
 
 R_PKGNAME=	raster
-R_PKGVER=	3.6-31
+R_PKGVER=	3.6-32
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +21,20 @@ TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest
 
 USE_LANGUAGES+=	c c++
+
+pre-configure:
+	${CP}	${FILESDIR}/Makevars ${WRKSRC}/src
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	post-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
