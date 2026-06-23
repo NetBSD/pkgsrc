@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.130 2026/06/10 07:33:42 pin Exp $
+# $NetBSD: go-modules.mk,v 1.131 2026/06/23 13:51:11 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -117,8 +117,8 @@ GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.zip
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.mod
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.zip
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.3.1.mod
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.3.1.zip
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.1.mod
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.1.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.mod
@@ -175,8 +175,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.48.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.42.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.42.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.43.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.43.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.21.0.mod
