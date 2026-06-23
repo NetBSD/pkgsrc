@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1121 2026/05/15 11:52:22 wiz Exp $
+# $NetBSD: Makefile,v 1.1122 2026/06/23 10:27:45 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -169,6 +169,7 @@ SUBDIR+=	gegl
 SUBDIR+=	geomview
 SUBDIR+=	get_ds7
 SUBDIR+=	gexiv2
+SUBDIR+=	gexiv2-0.16
 SUBDIR+=	gfract
 SUBDIR+=	gif2png
 SUBDIR+=	gif320
