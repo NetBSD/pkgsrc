@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/05/28 19:57:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.41 2026/06/23 09:48:37 adam Exp $
 
-DISTNAME=	music21-noCorpus-10.3.0
+DISTNAME=	music21-noCorpus-10.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
