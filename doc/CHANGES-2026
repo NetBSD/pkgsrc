@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3925 2026/06/22 22:54:30 morr Exp $
+$NetBSD: CHANGES-2026,v 1.3926 2026/06/23 04:27:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5902,3 +5902,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cad/py-PyRTL to 1.0.0 [ryoon 2026-06-22]
 	Updated sysutils/restic to 0.19.0nb1 [wiz 2026-06-22]
 	Updated editors/vim-share to 9.2.0707 [sh 2026-06-22]
+	Updated devel/py-coverage to 7.14.3 [adam 2026-06-23]
+	Updated devel/py-greenlet to 3.5.2 [adam 2026-06-23]
