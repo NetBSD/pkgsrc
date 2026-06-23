@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/12/07 08:23:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/06/23 06:00:45 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -52,6 +52,30 @@ ${PYSITELIB}/_pytest/_version.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
+${PYSITELIB}/_pytest/assertion/_compare_any.py
+${PYSITELIB}/_pytest/assertion/_compare_any.pyc
+${PYSITELIB}/_pytest/assertion/_compare_any.pyo
+${PYSITELIB}/_pytest/assertion/_compare_mapping.py
+${PYSITELIB}/_pytest/assertion/_compare_mapping.pyc
+${PYSITELIB}/_pytest/assertion/_compare_mapping.pyo
+${PYSITELIB}/_pytest/assertion/_compare_sequence.py
+${PYSITELIB}/_pytest/assertion/_compare_sequence.pyc
+${PYSITELIB}/_pytest/assertion/_compare_sequence.pyo
+${PYSITELIB}/_pytest/assertion/_compare_set.py
+${PYSITELIB}/_pytest/assertion/_compare_set.pyc
+${PYSITELIB}/_pytest/assertion/_compare_set.pyo
+${PYSITELIB}/_pytest/assertion/_guards.py
+${PYSITELIB}/_pytest/assertion/_guards.pyc
+${PYSITELIB}/_pytest/assertion/_guards.pyo
+${PYSITELIB}/_pytest/assertion/_typing.py
+${PYSITELIB}/_pytest/assertion/_typing.pyc
+${PYSITELIB}/_pytest/assertion/_typing.pyo
+${PYSITELIB}/_pytest/assertion/compare_text.py
+${PYSITELIB}/_pytest/assertion/compare_text.pyc
+${PYSITELIB}/_pytest/assertion/compare_text.pyo
+${PYSITELIB}/_pytest/assertion/highlight.py
+${PYSITELIB}/_pytest/assertion/highlight.pyc
+${PYSITELIB}/_pytest/assertion/highlight.pyo
 ${PYSITELIB}/_pytest/assertion/rewrite.py
 ${PYSITELIB}/_pytest/assertion/rewrite.pyc
 ${PYSITELIB}/_pytest/assertion/rewrite.pyo
@@ -76,9 +100,6 @@ ${PYSITELIB}/_pytest/config/__init__.pyo
 ${PYSITELIB}/_pytest/config/argparsing.py
 ${PYSITELIB}/_pytest/config/argparsing.pyc
 ${PYSITELIB}/_pytest/config/argparsing.pyo
-${PYSITELIB}/_pytest/config/compat.py
-${PYSITELIB}/_pytest/config/compat.pyc
-${PYSITELIB}/_pytest/config/compat.pyo
 ${PYSITELIB}/_pytest/config/exceptions.py
 ${PYSITELIB}/_pytest/config/exceptions.pyc
 ${PYSITELIB}/_pytest/config/exceptions.pyo

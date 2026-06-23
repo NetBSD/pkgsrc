@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2026/04/10 04:01:52 adam Exp $
+# $NetBSD: Makefile,v 1.145 2026/06/23 06:00:45 adam Exp $
 
-DISTNAME=	pytest-9.0.3
+DISTNAME=	pytest-9.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
 
+PY_RENAME_BINARIES=	py.test pytest
+
 # as of 8.3.3
 # 3621 passed, 112 skipped, 11 xfailed, 1 xpassed
 
@@ -34,11 +36,6 @@ USE_TOOLS+=	bash:build
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
 .endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} py.test py.test-${PYVERSSUFFIX} && \
-	${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
