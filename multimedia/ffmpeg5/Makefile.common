@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.18 2026/05/15 11:49:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2026/06/23 13:02:52 adam Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
-DISTNAME=	ffmpeg-5.1.9
+DISTNAME=	ffmpeg-5.1.10
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
