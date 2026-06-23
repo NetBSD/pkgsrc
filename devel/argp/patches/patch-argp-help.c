@@ -1,27 +1,60 @@
-$NetBSD: patch-argp-help.c,v 1.2 2024/09/04 11:52:38 jperkin Exp $
+$NetBSD: patch-argp-help.c,v 1.3 2026/06/23 09:52:25 wiz Exp $
 
-Use getprogname() as short program name if available.
-SunOS needs alloca.h.
+Fix ctype(3) usage.
 
---- argp-help.c.orig	2003-12-11 08:37:05.000000000 +0000
+--- argp-help.c.orig	2026-06-23 09:46:08.262497366 +0000
 +++ argp-help.c
-@@ -26,6 +26,10 @@
- #include <config.h>
- #endif
+@@ -176,7 +176,7 @@ fill_in_uparams(const struct argp_state* state)
+ #define SKIPWS(p)                                                                                  \
+     do                                                                                             \
+     {                                                                                              \
+-        while (isspace(*p))                                                                        \
++        while (isspace((unsigned char)*p))                                                                        \
+             p++;                                                                                   \
+     } while (0);
  
-+#ifdef __sun
-+#include <alloca.h>
-+#endif
-+
- /* AIX requires this to be the first thing in the file.  */
- #ifndef __GNUC__
- # if HAVE_ALLOCA_H
-@@ -1725,6 +1729,8 @@ __argp_short_program_name(const struct a
-   return program_invocation_short_name;
- #elif HAVE_DECL_PROGRAM_INVOCATION_NAME
-   return __argp_basename(program_invocation_name);
-+#elif HAVE_GETPROGNAME
-+  return (char *)(uintptr_t)/*UNCONST*/getprogname();
- #else /* !HAVE_DECL_PROGRAM_INVOCATION_NAME */
-   /* FIXME: What now? Miles suggests that it is better to use NULL,
-      but currently the value is passed on directly to fputs_unlocked,
+@@ -186,14 +186,14 @@ fill_in_uparams(const struct argp_state* state)
+         {
+             SKIPWS(var);
+ 
+-            if (isalpha(*var))
++            if (isalpha((unsigned char)*var))
+             {
+                 size_t var_len;
+                 const struct uparam_name* un;
+                 int unspec = 0, val = 0;
+                 const char* arg = var;
+ 
+-                while (isalnum(*arg) || *arg == '-' || *arg == '_')
++                while (isalnum((unsigned char)*arg) || *arg == '-' || *arg == '_')
+                     arg++;
+                 var_len = arg - var;
+ 
+@@ -218,10 +218,10 @@ fill_in_uparams(const struct argp_state* state)
+                     else
+                         val = 1;
+                 }
+-                else if (isdigit(*arg))
++                else if (isdigit((unsigned char)*arg))
+                 {
+                     val = atoi(arg);
+-                    while (isdigit(*arg))
++                    while (isdigit((unsigned char)*arg))
+                         arg++;
+                     SKIPWS(arg);
+                 }
+@@ -732,12 +732,12 @@ canon_doc_option(const char** name)
+ {
+     int non_opt;
+     /* Skip initial whitespace.  */
+-    while (isspace(**name))
++    while (isspace((unsigned char)**name))
+         (*name)++;
+     /* Decide whether this looks like an option (leading `-') or not.  */
+     non_opt = (**name != '-');
+     /* Skip until part of name used for sorting.  */
+-    while (**name && !isalnum(**name))
++    while (**name && !isalnum((unsigned char)**name))
+         (*name)++;
+     return non_opt;
+ }
