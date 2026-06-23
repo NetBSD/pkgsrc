@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.12 2026/05/19 09:34:17 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2026/06/23 10:05:27 wiz Exp $
 
-BLAKE2s (enca-1.15.tar.bz2) = 4487af00052b8f07536685f3c4bd0010f55ce8e67ad0d07a6f2f1b19296f8e46
-SHA512 (enca-1.15.tar.bz2) = f0b843b0b38fcb250991ad072fe2f1bcaa6aaad8348983446046f40b44a2523a7c3b46569f9693e5b2848356288f718595ea4cc9bc0b4685aac02291fe7393ba
-Size (enca-1.15.tar.bz2) = 536627 bytes
-SHA1 (patch-configure.ac) = fdfe12a86d37ba8182919061d6976b06a6ddd892
+BLAKE2s (enca-1.22.tar.gz) = 43fdfbd8ded0180bce5900d90eb708668bf4544f71dc08047551118fcda8e927
+SHA512 (enca-1.22.tar.gz) = eedd2ccb08ddf1f8f57d835cfc794400c6226a4af7b17eb9fef60f9366aed4f5a678d52fb7cd8ee6d906691e7afc604d5db6b217106e97f22fdc75518ef7b1ea
+Size (enca-1.22.tar.gz) = 808055 bytes
 SHA1 (patch-src_getopt.h) = 8e0ddd2ea42b804f5adb3d76423ee9b8fddae6e8
-SHA1 (patch-tools_Makefile.am) = 01f8af341f2fb8c6d7816edf5b38690b5a9c53f8
-SHA1 (patch-tools_make__hash.c) = d842781d13ee7ee2849beff410426596712be92d

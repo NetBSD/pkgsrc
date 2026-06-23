@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2024/08/05 13:23:25 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2026/06/23 10:05:27 wiz Exp $
 
-DISTNAME=		enca-1.15
+DISTNAME=		enca-1.22
 CATEGORIES=		textproc converters
-MASTER_SITES=		http://dl.cihar.com/enca/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=Project-OSS-Revival/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://github.com/nijel/enca
+HOMEPAGE=		https://github.com/Project-OSS-Revival/enca
 COMMENT=		Extremely Naive Charset Analyser
 LICENSE=		gnu-gpl-v2
 
@@ -15,22 +14,5 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	enca.pc.in
-
-USE_TOOLS+=		autoconf automake autoreconf
-TOOL_DEPENDS+=		autoconf-archive>=0:../../devel/autoconf-archive
-TOOL_DEPENDS+=		gettext-m4>=0:../../devel/gettext-m4
-pre-configure:
-	@${STEP_MSG} Rebuilding Makefiles
-	${RUN} cd ${WRKSRC} && autoreconf -fiv
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${USE_CROSS_COMPILE:tl} == "yes"
-CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
-CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
-CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_urandom=yes
-CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_srandom=no
-CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_arandom=no
-.endif
 
 .include "../../mk/bsd.pkg.mk"
