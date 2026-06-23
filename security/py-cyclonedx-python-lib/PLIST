@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/03/26 14:36:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/06/23 10:42:43 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -24,6 +24,12 @@ ${PYSITELIB}/cyclonedx/contrib/README.md
 ${PYSITELIB}/cyclonedx/contrib/__init__.py
 ${PYSITELIB}/cyclonedx/contrib/__init__.pyc
 ${PYSITELIB}/cyclonedx/contrib/__init__.pyo
+${PYSITELIB}/cyclonedx/contrib/bom/__init__.py
+${PYSITELIB}/cyclonedx/contrib/bom/__init__.pyc
+${PYSITELIB}/cyclonedx/contrib/bom/__init__.pyo
+${PYSITELIB}/cyclonedx/contrib/bom/utils.py
+${PYSITELIB}/cyclonedx/contrib/bom/utils.pyc
+${PYSITELIB}/cyclonedx/contrib/bom/utils.pyo
 ${PYSITELIB}/cyclonedx/contrib/component/__init__.py
 ${PYSITELIB}/cyclonedx/contrib/component/__init__.pyc
 ${PYSITELIB}/cyclonedx/contrib/component/__init__.pyo

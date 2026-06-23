@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/06/07 21:13:58 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/06/23 10:42:43 wiz Exp $
 
-DISTNAME=	cyclonedx_python_lib-11.8.0
+DISTNAME=	cyclonedx_python_lib-11.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
@@ -23,8 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff>=2.6.3:../../textproc/py-xmldiff
 
 USE_LANGUAGES=	# none
 
-# as of 11.8.0
-# 40 failed, 6622 passed, 1387 warnings
+# as of 11.11.0
+# 40 failed, 6919 passed, 1397 warnings
 
 .include "../../lang/python/pyversion.mk"
 
