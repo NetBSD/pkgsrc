@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/05 07:38:57 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/23 13:19:15 adam Exp $
 
-DISTNAME=	pyotp-2.9.0
+DISTNAME=	pyotp-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyotp/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/pyauth/pyotp
 COMMENT=	Python One-Time Password Library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
