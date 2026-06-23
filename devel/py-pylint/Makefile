@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2026/02/22 14:20:09 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2026/06/23 11:33:23 wiz Exp $
+#
+# Changes: https://github.com/pylint-dev/pylint/releases
 
-DISTNAME=	pylint-4.0.5
+DISTNAME=	pylint-4.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -22,8 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
 
-# as of 4.0.5
-# 25 failed, 1985 passed, 261 skipped, 5 xfailed
+# as of 4.0.6
+# 25 failed, 1998 passed, 261 skipped, 5 xfailed
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
