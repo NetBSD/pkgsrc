@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3927 2026/06/23 04:56:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3928 2026/06/23 05:36:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5906,3 +5906,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-greenlet to 3.5.2 [adam 2026-06-23]
 	Updated devel/py-wrapt to 2.2.2 [adam 2026-06-23]
 	Updated audio/py-mutagen to 1.48.0 [adam 2026-06-23]
+	Updated devel/py-vcs-versioning to 2.1.0 [adam 2026-06-23]
+	Updated devel/py-setuptools_scm to 10.1.2 [adam 2026-06-23]
