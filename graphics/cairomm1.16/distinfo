@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/14 16:01:45 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/06/23 10:00:59 wiz Exp $
 
-BLAKE2s (cairomm-1.18.0.tar.xz) = faa9ea186999fe16f3233eafc4725eb0d75090d9ad38b555ad1c0cd5cec90b96
-SHA512 (cairomm-1.18.0.tar.xz) = d358a765136e244773b4a0fdcb2d9c81dd0b76f7a27c7108f94df9765f2d790f5f50b5645c09c292efce3e012528f85114d51916450c5fe6fa87d09f5a405d4c
-Size (cairomm-1.18.0.tar.xz) = 632520 bytes
+BLAKE2s (cairomm-1.18.1.tar.xz) = 1d673667e26f04e836ea3dd44d65d10991d2e9c08bc79c31b48eab004c0fd953
+SHA512 (cairomm-1.18.1.tar.xz) = ff23565dba657b45658613971429b5f06a60c585b467e9a302bda8ded7cf33dc3d4290b1699bd2bde907f5cbd3c8b4219d4e7f8442d65f61712767db6cb21874
+Size (cairomm-1.18.1.tar.xz) = 613728 bytes
