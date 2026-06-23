@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/05/14 16:40:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2026/06/23 13:53:18 gdt Exp $
 
 DISTNAME=	aegis-4.24.2
 PKGREVISION=	55
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c gnu++0x
+USE_LANGUAGES=		c gnu++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		groff gsoelim msgfmt perl:run yacc patch:run
 
