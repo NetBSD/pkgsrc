@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makevars.in,v 1.1 2026/06/23 15:06:47 mef Exp $
+
+-lexecinfo is required for *BSD, see SUBST at Makefile
+
+--- src/Makevars.in.orig	2026-06-23 23:58:02.138821654 +0900
++++ src/Makevars.in	2026-06-23 23:55:30.162698989 +0900
+@@ -1,6 +1,7 @@
+ PKG_CPPFLAGS=@PKG_CPPFLAGS@
+ PKG_LIBS=@PKG_LIBS@
+ CXX_STD = CXX
++@@PKG_LIBS@@
+ 
+ OBJECTS_LIBLWGEOM= \
+   liblwgeom/varint.o \
