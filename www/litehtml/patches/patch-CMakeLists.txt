@@ -1,23 +1,22 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2026/06/23 10:38:28 drixter Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2026/06/23 13:56:50 drixter Exp $
 
 * create shared library
 * Use PRIVATE instead of PUBLIC keyword since we use
   dynamic linking and don't want -lgumbo if requesting
   linkage to litehtml via cmake.
 
-
---- CMakeLists.txt.orig	2026-06-14 12:09:51.093123674 +0000
+--- CMakeLists.txt.orig	2023-05-18 23:55:10.000000000 +0000
 +++ CMakeLists.txt
-@@ -162,7 +162,7 @@ else()
- 	add_compile_options(-Wall -Wextra -Wpedantic -Wfloat-conversion)
- endif()
+@@ -143,7 +143,7 @@ set(TEST_LITEHTML
+ set(PROJECT_LIB_VERSION ${PROJECT_MAJOR}.${PROJECT_MINOR}.0)
+ set(PROJECT_SO_VERSION ${PROJECT_MAJOR})
  
--add_library(${PROJECT_NAME} ${HEADER_LITEHTML} ${SOURCE_LITEHTML})
-+add_library(${PROJECT_NAME} SHARED ${HEADER_LITEHTML} ${SOURCE_LITEHTML})
+-add_library(${PROJECT_NAME} ${SOURCE_LITEHTML})
++add_library(${PROJECT_NAME} SHARED ${SOURCE_LITEHTML})
  set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_LIB_VERSION} SOVERSION ${PROJECT_SO_VERSION})
  
  set_target_properties(${PROJECT_NAME} PROPERTIES
-@@ -179,7 +179,7 @@ target_include_directories(${PROJECT_NAM
+@@ -160,7 +160,7 @@ target_include_directories(${PROJECT_NAM
  target_include_directories(${PROJECT_NAME} PRIVATE include/${PROJECT_NAME})
  
  # Gumbo
