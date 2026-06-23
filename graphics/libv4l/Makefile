@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2026/01/03 04:02:34 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2026/06/23 09:52:56 wiz Exp $
 
 LIBV4L_VERS=	1.32.0
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 PKGNAME=	libv4l-${LIBV4L_VERS}
 MASTER_SITES=	https://www.linuxtv.org/downloads/v4l-utils/
