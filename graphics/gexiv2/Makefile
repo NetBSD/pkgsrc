@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/05/15 17:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/06/23 10:28:25 wiz Exp $
 
 DISTNAME=	gexiv2-0.14.3
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/gexiv2
-COMMENT=	GObject-based wrapper around the Exiv2 library
+COMMENT=	GObject-based wrapper around the Exiv2 library (old version)
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
