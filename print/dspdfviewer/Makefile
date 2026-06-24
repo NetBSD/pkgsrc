@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2026/05/15 09:59:00 adam Exp $
+# $NetBSD: Makefile,v 1.87 2026/06/24 21:58:40 wiz Exp $
 
 DISTNAME=	dspdfviewer-1.15.1
-PKGREVISION=	81
+PKGREVISION=	82
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dannyedel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

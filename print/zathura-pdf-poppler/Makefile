@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2026/06/11 07:17:34 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/06/24 21:58:41 wiz Exp $
 
 DISTNAME=	zathura-pdf-poppler-2026.02.03
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura-pdf-poppler/download/
 EXTRACT_SUFX=	.tar.xz
