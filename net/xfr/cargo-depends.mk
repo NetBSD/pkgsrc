@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2026/06/12 12:31:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2026/06/24 07:31:53 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -240,7 +240,7 @@ CARGO_CRATE_DEPENDS+=	prometheus-0.14.0
 CARGO_CRATE_DEPENDS+=	protobuf-3.7.2
 CARGO_CRATE_DEPENDS+=	protobuf-support-3.7.2
 CARGO_CRATE_DEPENDS+=	quinn-0.11.9
-CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.14
+CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.15
 CARGO_CRATE_DEPENDS+=	quinn-udp-0.5.14
 CARGO_CRATE_DEPENDS+=	quote-1.0.45
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
