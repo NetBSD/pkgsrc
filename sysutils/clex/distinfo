@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:19:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/06/24 11:53:10 drixter Exp $
 
-BLAKE2s (clex-4.6.4.tar.gz) = c7828d1a99042df0dd85472391eebaf7ba94663ff7c84237c660d3567ea18a62
-SHA512 (clex-4.6.4.tar.gz) = 040ecf0ebcda7e4e241d2d6a23a413c50674e917ee4a715db57e8ec69ae3dfebd8d5cfe23847719f039331da8e637279b44714564f0171d55c42f27db007dfb9
-Size (clex-4.6.4.tar.gz) = 243297 bytes
-SHA1 (patch-src_cfg-clex) = 4fb8995131195b4f54a53c72eac85da2cd6f14a2
-SHA1 (patch-src_clexheaders.h) = d60ec230f3b2656063c1f51257fc4e29267cf8b7
+BLAKE2s (clex-4.7.tar.gz) = 91294b2700d8c8ac34b34e886e9274c1dc0e7945f05ce3a818abdab7b17b409f
+SHA512 (clex-4.7.tar.gz) = a7da964cb32fcd5c4ef12c0921e9314dd236543ba2c848300fdcaaff6ec2a412081cea8f1df48946e1a0daa34eb6e54f3bf1124c6534b4663796e16f56bcfcf5
+Size (clex-4.7.tar.gz) = 157528 bytes
+SHA1 (patch-src_cfg-clex) = ba6ac277ea4a1bfe31cbac078d1c77f2ce81959a
+SHA1 (patch-src_clexheaders.h) = 4928ef4f30e0df17780108b464cbf5c00ef637b6
