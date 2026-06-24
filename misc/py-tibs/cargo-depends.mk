@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/06/06 06:34:35 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/06/24 08:51:16 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.102
@@ -42,11 +42,11 @@ CARGO_CRATE_DEPENDS+=	pkg-config-0.3.33
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.13.1
 CARGO_CRATE_DEPENDS+=	prettyplease-0.2.37
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
-CARGO_CRATE_DEPENDS+=	pyo3-0.28.2
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.28.2
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.28.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.28.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.28.2
+CARGO_CRATE_DEPENDS+=	pyo3-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.44
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	radium-0.7.0
