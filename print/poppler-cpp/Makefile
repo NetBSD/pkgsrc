@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2026/05/14 16:41:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2026/06/24 21:55:30 wiz Exp $
 
 PKGNAME=	poppler-cpp-${POPPLER_VERS}
-PKGREVISION=	8
 
 COMMENT=	PDF rendering library (cpp wrapper)
 
