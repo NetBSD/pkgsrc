@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:22 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/06/24 14:54:24 schmonz Exp $
 
-BLAKE2s (bfs-1.5.1.tar.gz) = 7c4506daf5d0438e48189483439d4921d859098fa99a492b56db812154a61d5b
-SHA512 (bfs-1.5.1.tar.gz) = f501f2acaa19c772a350863539030c60299c3b001ebd3d473add4e8975f4fda3a79a6a524a0d1fbf729a66a943557cb66aa6d65a8aae41ab88b81a7740b17874
-Size (bfs-1.5.1.tar.gz) = 113824 bytes
-SHA1 (patch-mtab.c) = 591269c91adff55bae9c4b9ab7b66a621b11486f
+BLAKE2s (bfs-4.1.3.tar.gz) = a07e5a3a6d871f07edb4a7bb1b4f733adf1b68dde31fe175a6afeef8ea63a463
+SHA512 (bfs-4.1.3.tar.gz) = 2ddf87df20c493d5aa944ac615320c945112e4480c9fc0229d24c5394e9b50cb11ed2cffbed117eaeda294801f64c88086a1800663ac672c0347eabe225b769a
+Size (bfs-4.1.3.tar.gz) = 300677 bytes
