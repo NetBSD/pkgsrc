@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2026/02/16 11:13:35 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/06/24 05:28:22 adam Exp $
 
-BLAKE2s (xgboost-3.2.0.tar.gz) = 98a31bf52f8bc4918f0d2950ea3e995dcf27a7b23ab2d38c80b00d5f1aaccc38
-SHA512 (xgboost-3.2.0.tar.gz) = a9cafe87b012dfbeea4c2937b02c593f3d3bd4708c6eb282796915725e2194df390fc0ea961b3124d47120dba829038591b84e157c2e45007b02df4d921e3295
-Size (xgboost-3.2.0.tar.gz) = 1263936 bytes
+BLAKE2s (xgboost-3.3.0.tar.gz) = ac0ba40aa906bee72ab1ddc85cf4f099b237fe1a46a73cbcd62adc7fba1b0fbe
+SHA512 (xgboost-3.3.0.tar.gz) = 8f19706df2696e7d3601bfd2d42788aba2fd598d92345af1778141825403e5e948797d45a637038e03c5409bd3301cef3fba0d05a905653ea8fe2e4b7be8c1c4
+Size (xgboost-3.3.0.tar.gz) = 1224702 bytes
 SHA1 (patch-cpp__src_dmlc-core_CMakeLists.txt) = d7365655159fd310c73fa1abbbeb86db88c6f671
 SHA1 (patch-cpp__src_include_xgboost_collective_socket.h) = f6b0cca135d6d8f6086213d6c221db466592287e
 SHA1 (patch-xgboost_libpath.py) = 39b2538729e5e4408de81534cd2b720ed112775a
