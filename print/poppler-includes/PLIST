@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/07/13 08:16:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/06/24 21:55:30 wiz Exp $
 include/poppler/Annot.h
 include/poppler/AnnotStampImageHelper.h
 include/poppler/Array.h
@@ -39,6 +39,7 @@ include/poppler/PDFDoc.h
 include/poppler/PDFDocBuilder.h
 include/poppler/PDFDocEncoding.h
 include/poppler/PDFDocFactory.h
+include/poppler/PDFRectangle.h
 include/poppler/PSOutputDev.h
 include/poppler/Page.h
 include/poppler/PageTransition.h

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.181 2025/08/22 08:04:03 adam Exp $
+$NetBSD: distinfo,v 1.182 2026/06/24 21:55:29 wiz Exp $
 
-BLAKE2s (poppler-25.08.0.tar.xz) = e3e3725d907c3069842c2aa53716f144adc08449a85c0b393d39c39dc1b8a946
-SHA512 (poppler-25.08.0.tar.xz) = ebefb6952bbec3356bbe1e43562203fc4446065ff289bc181ecc6f5a11901b7cc002ce1b0746487bb5b52535df0f0b77866ea427b244df1ba6d87bffce555999
-Size (poppler-25.08.0.tar.xz) = 1975316 bytes
-SHA1 (patch-CMakeLists.txt) = db4e962f42b2b4a212c6d215111114ac439b4f89
+BLAKE2s (poppler-26.06.0.tar.xz) = a9c3f5adca30a26b72903eb8df3a3ca226fe0a1da642e621ec3fc4a48b3ca181
+SHA512 (poppler-26.06.0.tar.xz) = 65ddfed90f07740a1f6ba641db7902ac537bf9d18d7f39de834c15a932dac8f5145552fa44a938a1938cc7424566f1e4fce6371e64b9c5b554e16b55ff5b643b
+Size (poppler-26.06.0.tar.xz) = 2044116 bytes

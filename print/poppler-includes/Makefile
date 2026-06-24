@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2026/05/14 16:41:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2026/06/24 21:55:30 wiz Exp $
 
 PKGNAME=	poppler-includes-${POPPLER_VERS}
-PKGREVISION=	6
 
 COMMENT=	Poppler Xpdf includes (unsupported)
 
@@ -11,6 +10,7 @@ NO_BUILD=	yes
 
 INCDIR=		${DESTDIR}${PREFIX}/include
 
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_BOOST=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6=OFF
 
