@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/05/10 13:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/24 05:25:41 adam Exp $
 
-DISTNAME=	mistune-3.2.1
+DISTNAME=	mistune-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mistune/}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+PY_RENAME_BINARIES=	mistune
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
