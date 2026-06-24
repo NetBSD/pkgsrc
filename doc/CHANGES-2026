@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3983 2026/06/24 13:11:06 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3984 2026/06/24 13:30:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5974,3 +5974,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/clex to 4.7 [drixter 2026-06-24]
 	Updated misc/libreoffice to 26.2.4.2 [ryoon 2026-06-24]
 	Updated geography/py-gnssutils to 1.2.5 [gdt 2026-06-24]
+	Updated graphics/geeqie to 2.8 [gdt 2026-06-24]
