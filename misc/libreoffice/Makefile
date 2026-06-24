@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.386 2026/06/22 19:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.387 2026/06/24 12:54:52 ryoon Exp $
 
-VERREL=		26.2.3
+VERREL=		26.2.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +21,7 @@ GCC_REQD+=	12
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++20
+USE_C_FEATURES+=	c23
 
 # Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
 # Mixture of C++11, C++20 and so on. Do not override standards in Makefiles.
@@ -93,7 +93,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.9.tar.gz \
+	xmlsec1-1.3.11.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -115,7 +115,7 @@ MORE_DISTFILES= \
 	rhino-1.7.15.1.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-15.17.tar.bz2 \
+	postgresql-15.18.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
