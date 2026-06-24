@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3973 2026/06/24 03:25:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3974 2026/06/24 05:28:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5958,3 +5958,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/pkglint to 23.21.1 [rillig 2026-06-23]
 	Updated geography/R-raster to 3.6.32 [mef 2026-06-23]
 	Updated devel/libadwaita to 1.9.1 [wiz 2026-06-24]
+	Updated devel/py-vcs-versioning to 2.1.2 [adam 2026-06-24]
+	Updated math/py-gmpy2 to 2.3.1 [adam 2026-06-24]
+	Updated textproc/py-mistune to 3.3.2 [adam 2026-06-24]
+	Updated math/py-xgboost to 3.3.0 [adam 2026-06-24]
