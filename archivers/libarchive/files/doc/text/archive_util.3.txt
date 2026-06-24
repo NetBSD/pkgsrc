@@ -3,9 +3,11 @@
 1mNAME0m
        archive_clear_error,   archive_compression,   archive_compression_name,
        archive_copy_error,	  archive_errno,	 archive_error_string,
-       archive_file_count,	archive_filter_code,	 archive_filter_count,
-       archive_filter_name,	   archive_format,	  archive_format_name,
-       archive_position, archive_set_error — libarchive utility functions
+       archive_file_count,	archive_filter_bytes,	  archive_filter_code,
+       archive_filter_count,	   archive_filter_name,	       archive_format,
+       archive_format_name,	archive_free,	  archive_position_compressed,
+       archive_position_uncompressed, archive_set_error —  libarchive  utility
+       functions
 
 1mLIBRARY0m
        Streaming Archive Library (libarchive, -larchive)
@@ -34,6 +36,9 @@
        4mint0m
        1marchive_file_count22m(4mstruct24m 4marchive24m 4m*24m);
 
+       4mint64_t0m
+       1marchive_filter_bytes22m(4mstruct24m 4marchive24m 4m*24m, 4mint24m);
+
        4mint0m
        1marchive_filter_code22m(4mstruct24m 4marchive24m 4m*24m, 4mint24m);
 
@@ -49,8 +54,14 @@
        4mconst24m 4mchar24m 4m*0m
        1marchive_format_name22m(4mstruct24m 4marchive24m 4m*24m);
 
+       4mint0m
+       1marchive_free22m(4mstruct24m 4marchive24m 4m*24m);
+
        4mint64_t0m
-       1marchive_position22m(4mstruct24m 4marchive24m 4m*24m, 4mint24m);
+       1marchive_position_compressed22m(4mstruct24m 4marchive24m 4m*24m);
+
+       4mint64_t0m
+       1marchive_position_uncompressed22m(4mstruct24m 4marchive24m 4m*24m);
 
        4mvoid0m
        1marchive_set_error22m(4mstruct24m 4marchive24m 4m*24m,	 4mint24m 4merror_code24m,  4mconst24m 4mchar24m 4m*fmt24m,
@@ -100,12 +111,12 @@
 	       there are three filters: filter 0 is the gunzip filter,	filter
 	       1  is  the  uudecode  filter, and filter 2 is the pseudo-filter
 	       that wraps the archive read functions.  In this case,  request‐
-	       ing   1marchive_position22m(4ma24m,   4m-124m)	would	be   a	 synonym  for
-	       1marchive_position22m(4ma24m, 4m224m) which would return the number  of	bytes
-	       currently  read	from the archive, while 1marchive_position22m(4ma24m, 4m124m)
-	       would  return  the  number  of  bytes  after  uudecoding,   and
-	       1marchive_position22m(4ma24m,  4m024m)  would return the number of bytes after
-	       decompression.
+	       ing   1marchive_filter_bytes22m(4ma24m,	 4m-124m)  would  be  a	 synonym  for
+	       1marchive_filter_bytes22m(4ma24m, 4m224m) which would  return  the  number  of
+	       bytes	 currently    read    from    the    archive,	 while
+	       1marchive_filter_bytes22m(4ma24m, 4m124m) would return the number of bytes af‐
+	       ter uudecoding, and 1marchive_filter_bytes22m(4ma24m, 4m024m) would return the
+	       number of bytes after decompression.
        1marchive_filter_name22m()
 	       Returns a textual name identifying the indicated	 filter.   See
 	       1marchive_filter_count22m() for details of the numbering.
@@ -119,13 +130,19 @@
 	       different format codes.
        1marchive_format_name22m()
 	       A textual description of the format of the current entry.
-       1marchive_position22m()
+       1marchive_free22m()
+	       Closes the archive if necessary, then releases all resources.
+       1marchive_filter_bytes22m()
 	       Returns the number of bytes read from or written to  the	 indi‐
-	       cated  filter.	In  particular, 1marchive_position22m(4ma24m, 4m024m) returns
-	       the number of bytes read or  written  by	 the  format  handler,
-	       while  1marchive_position22m(4ma24m, 4m-124m) returns the number of bytes read
-	       or written to the archive.  See 1marchive_filter_count22m() for	de‐
-	       tails of the numbering here.
+	       cated  filter.	In  particular, 1marchive_filter_bytes22m(4ma24m, 4m024m) re‐
+	       turns the number of bytes read or written by  the  format  han‐
+	       dler,  while  1marchive_filter_bytes22m(4ma24m, 4m-124m) returns the number of
+	       bytes	read	or    written	 to    the    archive.	   See
+	       1marchive_filter_count22m() for details of the numbering here.
+       1marchive_position_compressed22m()
+	       Synonym for 1marchive_filter_bytes22m(4ma24m, 4m-124m).
+       1marchive_position_uncompressed22m()
+	       Synonym for 1marchive_filter_bytes22m(4ma24m, 4m024m).
        1marchive_set_error22m()
 	       Sets  the numeric error code and error description that will be
 	       returned by 1marchive_errno22m() and  1marchive_error_string22m().   This

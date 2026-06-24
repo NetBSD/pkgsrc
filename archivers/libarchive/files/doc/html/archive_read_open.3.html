@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Apr 13 12:57:33 2026 -->
+<!-- CreationDate: Tue Jun 23 09:58:13 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -28,8 +28,8 @@
 <p style="margin-left:9%;">archive_read_open,
 archive_read_open2, archive_read_open_fd,
 archive_read_open_FILE, archive_read_open_filename,
-archive_read_open_memory &mdash; functions for reading
-streaming archives</p>
+archive_read_open_filenames, archive_read_open_memory
+&mdash; functions for reading streaming archives</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -77,6 +77,13 @@ streaming archives</p>
 
 <p><b>archive_read_open_filename</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>const&nbsp;char&nbsp;*filename</i>,
+<i>size_t&nbsp;block_size</i>);</p>
+
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
+
+
+<p><b>archive_read_open_filenames</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<i>const&nbsp;char&nbsp;**filenames</i>,
 <i>size_t&nbsp;block_size</i>);</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
@@ -135,6 +142,16 @@ for <b>archive_read_open_filename</b>().</p>
 filename and a block size. A NULL filename represents
 standard input. This function is safe for use with tape
 drives or other blocked devices.</p>
+
+<p><b>archive_read_open_filenames</b>()</p>
+
+<p style="margin-left:19%;">Like
+<b>archive_read_open</b>(), except that it accepts a
+NULL-terminated array of filenames to open in sequence (as
+would be created by the <i>split</i>(1) command) and a block
+size. A NULL filename at the beginning of the array
+represents standard input. This function is safe for use
+with tape drives or other blocked devices.</p>
 
 <p><b>archive_read_open_memory</b>()</p>
 

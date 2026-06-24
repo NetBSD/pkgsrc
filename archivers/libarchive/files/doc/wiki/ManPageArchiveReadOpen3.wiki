@@ -5,6 +5,7 @@ ARCHIVE_READ_OPEN(3) manual page
 '''archive_read_open_fd''', 
 '''archive_read_open_FILE''', 
 '''archive_read_open_filename''', 
+'''archive_read_open_filenames''', 
 '''archive_read_open_memory''' 
 - functions for reading streaming archives 
 == LIBRARY == 
@@ -31,6 +32,10 @@ Streaming Archive Library (libarchive, -larchive)
 ''int'' 
 <br> 
 '''archive_read_open_filename'''(''struct archive *'', ''const char *filename'', ''size_t block_size''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_open_filenames'''(''struct archive *'', ''const char **filenames'', ''size_t block_size''); 
 <br> 
 ''int'' 
 <br> 
@@ -79,6 +84,15 @@ Like
 '''archive_read_open'''(), 
 except that it accepts a simple filename and a block size. 
 A NULL filename represents standard input. 
+This function is safe for use with tape drives or other blocked devices. 
+</dd><dt>'''archive_read_open_filenames'''()</dt><dd> 
+Like 
+'''archive_read_open'''(), 
+except that it accepts a NULL-terminated array of filenames to open in 
+sequence (as would be created by the 
+[[split(1)|http://www.freebsd.org/cgi/man.cgi?query=split&sektion=1]] 
+command) and a block size. 
+A NULL filename at the beginning of the array represents standard input. 
 This function is safe for use with tape drives or other blocked devices. 
 </dd><dt>'''archive_read_open_memory'''()</dt><dd> 
 Like 

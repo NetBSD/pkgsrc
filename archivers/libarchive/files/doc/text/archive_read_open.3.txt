@@ -3,7 +3,8 @@
 1mNAME0m
        archive_read_open,	archive_read_open2,	 archive_read_open_fd,
        archive_read_open_FILE,			   archive_read_open_filename,
-       archive_read_open_memory — functions for reading streaming archives
+       archive_read_open_filenames,  archive_read_open_memory  — functions for
+       reading streaming archives
 
 1mLIBRARY0m
        Streaming Archive Library (libarchive, -larchive)
@@ -29,6 +30,10 @@
 
        4mint0m
        1marchive_read_open_filename22m(4mstruct24m 4marchive24m 4m*24m,	     4mconst24m 4mchar24m 4m*filename24m,
+	   4msize_t24m 4mblock_size24m);
+
+       4mint0m
+       1marchive_read_open_filenames22m(4mstruct24m 4marchive24m 4m*24m,   4mconst24m 4mchar24m 4m**filenames24m,
 	   4msize_t24m 4mblock_size24m);
 
        4mint0m
@@ -64,6 +69,13 @@
 	       name and a block size.  A NULL filename represents standard in‐
 	       put.  This function is safe for use with tape drives  or	 other
 	       blocked devices.
+       1marchive_read_open_filenames22m()
+	       Like  1marchive_read_open22m(), except that it accepts a NULL-termi‐
+	       nated array of filenames to open in sequence (as would be  cre‐
+	       ated  by	 the 4msplit24m(1) command) and a block size.  A NULL file‐
+	       name at the beginning of the array represents  standard	input.
+	       This function is safe for use with tape drives or other blocked
+	       devices.
        1marchive_read_open_memory22m()
 	       Like  1marchive_read_open22m(), except that it accepts a pointer and
 	       size of a block of memory containing the archive data.

@@ -6,6 +6,7 @@
 \fB\%archive_read_open_fd\fP,
 \fB\%archive_read_open_FILE\fP,
 \fB\%archive_read_open_filename\fP,
+\fB\%archive_read_open_filenames\fP,
 \fB\%archive_read_open_memory\fP
 \- functions for reading streaming archives
 .SH LIBRARY
@@ -34,6 +35,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_read_open_filename\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ *filename\fP, \fI\%size_t\ block_size\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_open_filenames\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ **filenames\fP, \fI\%size_t\ block_size\fP);
 .br
 \fIint\fP
 .br
@@ -89,6 +94,16 @@ Like
 \fB\%archive_read_open\fP(),
 except that it accepts a simple filename and a block size.
 A NULL filename represents standard input.
+This function is safe for use with tape drives or other blocked devices.
+.TP
+\fB\%archive_read_open_filenames\fP()
+Like
+\fB\%archive_read_open\fP(),
+except that it accepts a NULL-terminated array of filenames to open in
+sequence (as would be created by the
+\fBsplit\fP(1)
+command) and a block size.
+A NULL filename at the beginning of the array represents standard input.
 This function is safe for use with tape drives or other blocked devices.
 .TP
 \fB\%archive_read_open_memory\fP()

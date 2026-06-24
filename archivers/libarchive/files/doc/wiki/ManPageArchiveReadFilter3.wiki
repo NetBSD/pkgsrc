@@ -137,7 +137,9 @@ These functions return
 '''ARCHIVE_OK''' 
 if the compression is fully supported, 
 '''ARCHIVE_WARN''' 
-if the compression is supported only through an external program. 
+if the compression is supported only through an external program, or 
+'''ARCHIVE_FATAL''' 
+on error. 
 
 '''archive_read_support_filter_none'''() 
 always succeeds. 
@@ -150,6 +152,5 @@ functions.
 == SEE ALSO == 
 [[ManPageArchiveRead3]], 
 [[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadFormat3]], 
 [[ManPageArchiveReadFormat3]], 
 [[ManPageLibarchive3]] 
