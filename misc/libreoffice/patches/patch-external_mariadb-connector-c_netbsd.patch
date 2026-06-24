@@ -1,11 +1,13 @@
-$NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.2 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.3 2026/06/24 12:54:52 ryoon Exp $
 
---- external/mariadb-connector-c/netbsd.patch.orig	2018-02-01 04:59:29.711564554 +0000
+* GCC 14 of NetBSD 11.99.6 defines 202000L for gcc -std=gnu23.
+
+--- external/mariadb-connector-c/netbsd.patch.orig	2026-06-23 23:20:28.939524630 +0000
 +++ external/mariadb-connector-c/netbsd.patch
-@@ -0,0 +1,11 @@
-+--- mariadb/include/ma_global.h.orig	2014-04-04 10:21:01.000000000 +0000
+@@ -0,0 +1,20 @@
++--- mariadb/include/ma_global.h.orig	2025-10-06 09:45:00.000000000 +0000
 ++++ mariadb/include/ma_global.h
-+@@ -190,7 +190,7 @@ double my_ulonglong2double(unsigned long
++@@ -176,7 +176,7 @@
 + #ifdef HAVE_UNISTD_H
 + #include <unistd.h>
 + #endif
@@ -14,3 +16,12 @@ $NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.2 2021/08/22 02:41:
 + #undef HAVE_ALLOCA
 + #undef HAVE_ALLOCA_H
 + #endif
++@@ -685,7 +685,7 @@ typedef unsigned long long my_ulonglong;
++ typedef int		myf;	/* Type of MyFlags in my_funcs */
++ typedef char		my_bool; /* Small bool */
++ typedef unsigned long long my_ulonglong;
++-#if !defined(bool) && !defined(bool_defined) && (!defined(HAVE_BOOL) || !defined(__cplusplus)) && (__STDC_VERSION__ < 202300L)
+++#if !defined(bool) && !defined(bool_defined) && (!defined(HAVE_BOOL) || !defined(__cplusplus)) && (__STDC_VERSION__ < 202000L)
++ typedef char		bool;	/* Ordinary boolean values 0 1 */
++ #endif
++ 	/* Macros for converting *constants* to the right type */
