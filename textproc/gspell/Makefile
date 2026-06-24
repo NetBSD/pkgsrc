@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2026/06/23 10:15:09 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/06/24 21:40:50 wiz Exp $
 
 DISTNAME=	gspell-1.14.3
 CATEGORIES=	textproc gnome
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 
 MESON_ARGS+=		-Dgtk_doc=false
 
