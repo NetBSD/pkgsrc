@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3977 2026/06/24 07:31:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3978 2026/06/24 07:33:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/helm to 4.2.2 [adam 2026-06-24]
 	Updated devel/sem to 0.14.1 [pin 2026-06-24]
 	Updated games/setrixtui to 0.4.2 [pin 2026-06-24]
+	Updated net/xfr to 0.9.20 [pin 2026-06-24]
