@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/05/15 17:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/06/24 03:24:56 wiz Exp $
 
-DISTNAME=	libadwaita-1.8.0
-PKGREVISION=	1
+DISTNAME=	libadwaita-1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,11 +23,12 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 .include "../../devel/appstream/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.84.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.19.4
+BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.21.1
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
