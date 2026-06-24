@@ -1,0 +1,1 @@
+bin/mistune @PREFIX@/bin/mistune-@PYVERSSUFFIX@
