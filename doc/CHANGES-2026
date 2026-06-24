@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3981 2026/06/24 11:52:27 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.3982 2026/06/24 12:55:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-kafka-python to 3.0.4 [adam 2026-06-24]
 	Updated misc/py-tibs to 0.10.0 [adam 2026-06-24]
 	Updated sysutils/clex to 4.7 [drixter 2026-06-24]
+	Updated misc/libreoffice to 26.2.4.2 [ryoon 2026-06-24]
