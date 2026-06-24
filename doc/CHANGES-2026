@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3979 2026/06/24 07:34:57 pin Exp $
+$NetBSD: CHANGES-2026,v 1.3980 2026/06/24 08:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5969,3 +5969,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/setrixtui to 0.4.2 [pin 2026-06-24]
 	Updated net/xfr to 0.9.20 [pin 2026-06-24]
 	Updated textproc/rumdl to 0.2.22 [pin 2026-06-24]
+	Updated devel/py-kafka-python to 3.0.4 [adam 2026-06-24]
+	Updated misc/py-tibs to 0.10.0 [adam 2026-06-24]
