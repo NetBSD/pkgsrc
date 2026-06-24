@@ -625,6 +625,9 @@
 /* Define to 1 if the system has the type 'intmax_t'. */
 #undef HAVE_INTMAX_T
 
+/* Define to 1 if you have the <intsafe.h> header file. */
+#undef HAVE_INTSAFE_H
+
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
@@ -1014,6 +1017,9 @@
 /* Define to 1 if you have the <stdarg.h> header file. */
 #undef HAVE_STDARG_H
 
+/* Define to 1 if you have the <stdckdint.h> header file. */
+#undef HAVE_STDCKDINT_H
+
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
 
@@ -1264,9 +1270,6 @@
 
 /* Define to 1 if you have the <wctype.h> header file. */
 #undef HAVE_WCTYPE_H
-
-/* Define to 1 if you have the <wincrypt.h> header file. */
-#undef HAVE_WINCRYPT_H
 
 /* Define to 1 if you have the <windows.h> header file. */
 #undef HAVE_WINDOWS_H

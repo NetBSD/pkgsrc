@@ -21,6 +21,9 @@
        1marchive_write_add_filter_b64encode22m(4mstruct24m 4marchive24m 4m*24m);
 
        4mint0m
+       1marchive_write_add_filter_by_name22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*name24m);
+
+       4mint0m
        1marchive_write_add_filter_bzip222m(4mstruct24m 4marchive24m 4m*24m);
 
        4mint0m
@@ -80,6 +83,9 @@
 	       The output will be encoded as specified.	 The encoded output is
 	       always properly blocked.
 
+       1marchive_write_add_filter_by_name22m()
+	       Sets the corresponding filter based on the common name.
+
        1marchive_write_add_filter_none22m()
 	       This  is	 never	necessary.   It is provided only for backwards
 	       compatibility.
@@ -90,7 +96,9 @@
 	       write callbacks.
 
 1mRETURN VALUES0m
-       These functions return 1mARCHIVE_OK 22mon success, or 1mARCHIVE_FATAL22m.
+       These functions return  1mARCHIVE_OK  22m(or  1mARCHIVE_WARN  22mif  an	external
+       program	had  to	 be  executed  to  handle  the	filter) on success, or
+       1mARCHIVE_FATAL22m.
 
 1mERRORS0m
        Detailed error codes and textual descriptions are  available  from  the

@@ -120,9 +120,11 @@
 
        1marchive_write_set_format_filter_by_ext22m()
 	       1marchive_write_set_format_filter_by_ext_def22m()
-	       Sets  both  filters  and	 format	 based on the output filename.
-	       Supported extensions: .7z, .zip, .jar, .cpio,  .iso,  .a,  .ar,
-	       .tar, .tgz, .tar.gz, .tar.bz2, .tar.xz
+	       Sets  both filters and format based on the output filename, op‐
+	       tionally referring to a default extension if the supplied file‐
+	       name does not have a known  one.	  Supported  extensions:  .7z,
+	       .zip,   .jar,  .cpio,  .iso,  .a,  .ar,	.tar,  .tgz,  .tar.gz,
+	       .tar.bz2, .tar.xz
 
        1marchive_write_set_format_7zip22m()	  1marchive_write_set_format_ar_bsd22m()
 	       1marchive_write_set_format_ar_svr422m()
@@ -143,19 +145,19 @@
 	       1marchive_write_set_format_v7tar22m()
 	       1marchive_write_set_format_warc22m()  1marchive_write_set_format_xar22m()
 	       1marchive_write_set_format_zip22m()
-	       Set the format as specified.  More details on the formats  sup‐
-	       ported  by libarchive can be found in the 4mlibarchive-formats24m(5)
+	       Set  the format as specified.  More details on the formats sup‐
+	       ported by libarchive can be found in the	 4mlibarchive-formats24m(5)
 	       manual page.
 
 1mRETURN VALUES0m
        These functions return 1mARCHIVE_OK 22mon success, or 1mARCHIVE_FATAL22m.
 
 1mERRORS0m
-       Detailed error codes and textual descriptions are  available  from  the
+       Detailed	 error	codes  and textual descriptions are available from the
        1marchive_errno22m() and 1marchive_error_string22m() functions.
 
 1mSEE ALSO0m
-       4mtar24m(1),  4marchive_write24m(3), 4marchive_write_set_options24m(3), 4mlibarchive24m(3),
+       4mtar24m(1), 4marchive_write24m(3), 4marchive_write_set_options24m(3),  4mlibarchive24m(3),
        4mcpio24m(5), 4mlibarchive-formats24m(5), 4mmtree24m(5), 4mtar24m(5)
 
 Debian			       February 14, 2013       4mARCHIVE_WRITE_FORMAT24m(3)

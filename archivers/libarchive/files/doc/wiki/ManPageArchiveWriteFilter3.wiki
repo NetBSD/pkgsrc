@@ -28,6 +28,10 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
+'''archive_write_add_filter_by_name'''(''struct archive *'', ''const char *name''); 
+<br> 
+''int'' 
+<br> 
 '''archive_write_add_filter_bzip2'''(''struct archive *''); 
 <br> 
 ''int'' 
@@ -104,6 +108,8 @@ Note that the compressed output is always properly blocked.
 </dt> <dd> 
 The output will be encoded as specified. 
 The encoded output is always properly blocked. 
+</dd><dt>'''archive_write_add_filter_by_name'''()</dt><dd> 
+Sets the corresponding filter based on the common name. 
 </dd><dt>'''archive_write_add_filter_none'''()</dt><dd> 
 This is never necessary. 
 It is provided only for backwards compatibility. 
@@ -115,6 +121,10 @@ write callbacks.
 == RETURN VALUES == 
 These functions return 
 '''ARCHIVE_OK''' 
+Po or 
+'''ARCHIVE_WARN''' 
+if an external program had to be executed to handle the filter 
+Pc 
 on success, or 
 '''ARCHIVE_FATAL'''. 
 == ERRORS == 
