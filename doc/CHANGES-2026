@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3974 2026/06/24 05:28:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3975 2026/06/24 06:33:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5962,3 +5962,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-gmpy2 to 2.3.1 [adam 2026-06-24]
 	Updated textproc/py-mistune to 3.3.2 [adam 2026-06-24]
 	Updated math/py-xgboost to 3.3.0 [adam 2026-06-24]
+	Updated archivers/libarchive to 3.8.8 [adam 2026-06-24]
+	Updated archivers/bsdtar to 3.8.8 [adam 2026-06-24]
+	Updated net/helm to 4.2.2 [adam 2026-06-24]
