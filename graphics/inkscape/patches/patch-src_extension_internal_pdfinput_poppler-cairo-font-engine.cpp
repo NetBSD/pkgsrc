@@ -1,0 +1,60 @@
+$NetBSD: patch-src_extension_internal_pdfinput_poppler-cairo-font-engine.cpp,v 1.3 2026/06/24 21:57:17 wiz Exp $
+
+poppler 26.6 support.
+https://gitlab.com/inkscape/inkscape/-/merge_requests/7919
+https://gitlab.com/inkscape/inkscape/-/work_items/6210
+
+--- src/extension/internal/pdfinput/poppler-cairo-font-engine.cpp.orig	2025-12-13 00:49:29.000000000 +0000
++++ src/extension/internal/pdfinput/poppler-cairo-font-engine.cpp
+@@ -313,7 +313,11 @@ CairoFreeTypeFont *CairoFreeTypeFont::create(GfxFont *
+ #else
+     GfxFontLoc *fontLoc;
+ #endif
++#if POPPLER_CHECK_VERSION(26, 5, 0)
++    const char * const *enc;
++#else
+     char **enc;
++#endif
+     const char *name;
+ #if POPPLER_CHECK_VERSION(25, 7, 0)
+     std::unique_ptr<FoFiType1C> ff1c;
+@@ -385,7 +389,11 @@ CairoFreeTypeFont *CairoFreeTypeFont::create(GfxFont *
+                 goto err2;
+             }
+ 
++#if POPPLER_CHECK_VERSION(26, 5, 0)
++            enc = gfx8bit->getEncoding().data();
++#else
+             enc = gfx8bit->getEncoding();
++#endif
+ 
+             codeToGID.resize(256);
+             for (i = 0; i < 256; ++i) {
+@@ -677,7 +685,7 @@ CairoType3Font *CairoType3Font::create(GfxFont *gfxFon
+ #endif
+ 
+     std::vector<int> codeToGID;
+-    char *name;
++    const char *name;
+ 
+     Dict *charProcs = gfx8bit->getCharProcs();
+     Ref ref = *gfxFont->getID();
+@@ -694,13 +702,17 @@ CairoType3Font *CairoType3Font::create(GfxFont *gfxFon
+ 
+     cairo_font_face_set_user_data(font_face, &type3_font_key, (void *)info, _free_type3_font_info);
+ 
++#if POPPLER_CHECK_VERSION(26, 5, 0)
++    const char * const *enc = gfx8bit->getEncoding().data();
++#else
+     char **enc = gfx8bit->getEncoding();
++#endif
+     codeToGID.resize(256);
+     for (int i = 0; i < 256; ++i) {
+         codeToGID[i] = 0;
+         if (charProcs && (name = enc[i])) {
+             for (int j = 0; j < charProcs->getLength(); j++) {
+-                if (strcmp(name, charProcs->getKey(j)) == 0) {
++                if (std::string(charProcs->getKey(j)).compare(name) == 0) {
+                     codeToGID[i] = j;
+                 }
+             }
