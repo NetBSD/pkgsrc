@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3991 2026/06/24 21:55:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3992 2026/06/24 21:58:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5987,3 +5987,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-WebOb to 1.8.10 [adam 2026-06-24]
 	Updated devel/objfw to 1.5.6 [js 2026-06-24]
 	Updated print/poppler to 26.06.0 [wiz 2026-06-24]
+	Updated print/scribus to 1.7.0.20260624 [wiz 2026-06-24]
