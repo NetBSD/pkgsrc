@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/03/15 09:41:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/06/24 03:24:56 wiz Exp $
 bin/adwaita-1-demo
 include/libadwaita-1/adw-about-dialog.h
 include/libadwaita-1/adw-about-window.h
@@ -56,6 +56,9 @@ include/libadwaita-1/adw-shortcut-label.h
 include/libadwaita-1/adw-shortcuts-dialog.h
 include/libadwaita-1/adw-shortcuts-item.h
 include/libadwaita-1/adw-shortcuts-section.h
+include/libadwaita-1/adw-sidebar-item.h
+include/libadwaita-1/adw-sidebar-section.h
+include/libadwaita-1/adw-sidebar.h
 include/libadwaita-1/adw-spin-row.h
 include/libadwaita-1/adw-spinner-paintable.h
 include/libadwaita-1/adw-spinner.h
@@ -80,6 +83,7 @@ include/libadwaita-1/adw-toolbar-view.h
 include/libadwaita-1/adw-version.h
 include/libadwaita-1/adw-view-stack.h
 include/libadwaita-1/adw-view-switcher-bar.h
+include/libadwaita-1/adw-view-switcher-sidebar.h
 include/libadwaita-1/adw-view-switcher-title.h
 include/libadwaita-1/adw-view-switcher.h
 include/libadwaita-1/adw-window-title.h
@@ -130,6 +134,7 @@ share/locale/lv/LC_MESSAGES/libadwaita.mo
 share/locale/nb/LC_MESSAGES/libadwaita.mo
 share/locale/ne/LC_MESSAGES/libadwaita.mo
 share/locale/nl/LC_MESSAGES/libadwaita.mo
+share/locale/nn/LC_MESSAGES/libadwaita.mo
 share/locale/oc/LC_MESSAGES/libadwaita.mo
 share/locale/pa/LC_MESSAGES/libadwaita.mo
 share/locale/pl/LC_MESSAGES/libadwaita.mo
@@ -140,10 +145,13 @@ share/locale/ru/LC_MESSAGES/libadwaita.mo
 share/locale/sk/LC_MESSAGES/libadwaita.mo
 share/locale/sl/LC_MESSAGES/libadwaita.mo
 share/locale/sr/LC_MESSAGES/libadwaita.mo
+share/locale/sr@latin/LC_MESSAGES/libadwaita.mo
 share/locale/sv/LC_MESSAGES/libadwaita.mo
 share/locale/th/LC_MESSAGES/libadwaita.mo
 share/locale/tr/LC_MESSAGES/libadwaita.mo
+share/locale/ug/LC_MESSAGES/libadwaita.mo
 share/locale/uk/LC_MESSAGES/libadwaita.mo
+share/locale/uz/LC_MESSAGES/libadwaita.mo
 share/locale/vi/LC_MESSAGES/libadwaita.mo
 share/locale/zh_CN/LC_MESSAGES/libadwaita.mo
 share/locale/zh_TW/LC_MESSAGES/libadwaita.mo
