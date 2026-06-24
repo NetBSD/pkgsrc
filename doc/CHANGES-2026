@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3980 2026/06/24 08:52:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3981 2026/06/24 11:52:27 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5971,3 +5971,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.22 [pin 2026-06-24]
 	Updated devel/py-kafka-python to 3.0.4 [adam 2026-06-24]
 	Updated misc/py-tibs to 0.10.0 [adam 2026-06-24]
+	Updated sysutils/clex to 4.7 [drixter 2026-06-24]
