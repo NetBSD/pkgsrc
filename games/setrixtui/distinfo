@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/04/29 19:14:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/06/24 07:29:56 pin Exp $
 
-BLAKE2s (Setrixtui-0.4.1.tar.gz) = 2ffbf3e802ef18bb48d7006cff0d23763c375355fd75164da17b90a4e21809a8
-SHA512 (Setrixtui-0.4.1.tar.gz) = 607c1ba6864f248cf13ceb1ddb85cca851536767696a2118fcbbab541227385150a45bda819e05425d22dd1ee49730da4b9f4223b04a4013e1e862528f431730
-Size (Setrixtui-0.4.1.tar.gz) = 7112188 bytes
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
 Size (aho-corasick-1.1.4.crate) = 184015 bytes
@@ -438,6 +435,9 @@ Size (serde_derive-1.0.228.crate) = 59605 bytes
 BLAKE2s (serde_json-1.0.149.crate) = 2d8799691eba81211f3c93711b5afe6f051948eb7ed4d813d2e4dba1b4e95ed0
 SHA512 (serde_json-1.0.149.crate) = 85fa8cb7b479f8241a4fd2255dd80e346fa5cde103aa7f25c14ccbcdf0e3276578fd0645e1d2542ee07c7e08c32058ff662bbf03926cd796c38622a12f423d43
 Size (serde_json-1.0.149.crate) = 155994 bytes
+BLAKE2s (setrixtui-0.4.2.crate) = 9f93e30cba3be0e4e53c22c05314760fd022b0c6833e776cfc9b979002950ace
+SHA512 (setrixtui-0.4.2.crate) = 65091e5078f664075801cb75282fb5604e41c598eb93051f799d2a43635ade32e3fc8aa2111f35450502efe1188fd8c5c400cbaaabab29cf598070e18ee15f3c
+Size (setrixtui-0.4.2.crate) = 7115699 bytes
 BLAKE2s (sha2-0.10.9.crate) = b0b7a333d767acd0419a8fa55bd26673d2d2b82a30ce17d140d9cd25f4d2a8d9
 SHA512 (sha2-0.10.9.crate) = 963adeeb4ed8b0e7fc19085e8721ea13e9b3aea5d115ca1b3dbca495ad14810c6450991dd3753807c293c415aaeb1054b8b4124c72e7090cd9e86f09fcbb4f80
 Size (sha2-0.10.9.crate) = 29271 bytes
