@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/04/13 21:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/24 18:14:13 adam Exp $
 
-DISTNAME=	webob-1.8.9
+DISTNAME=	webob-1.8.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webob/}
 
@@ -24,7 +23,7 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} > 312
-DEPENDS+=	${PYPKGPREFIX}-legacy-cgi-[0-9]*:../../www/py-legacy-cgi
+DEPENDS+=	${PYPKGPREFIX}-legacy-cgi>=2.6:../../www/py-legacy-cgi
 .endif
 
 .include "../../lang/python/wheel.mk"
