@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/03 20:34:45 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/24 17:53:57 gdt Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,6 +19,9 @@ ${PYSITELIB}/libtmux/_internal/__init__.pyo
 ${PYSITELIB}/libtmux/_internal/constants.py
 ${PYSITELIB}/libtmux/_internal/constants.pyc
 ${PYSITELIB}/libtmux/_internal/constants.pyo
+${PYSITELIB}/libtmux/_internal/control_mode.py
+${PYSITELIB}/libtmux/_internal/control_mode.pyc
+${PYSITELIB}/libtmux/_internal/control_mode.pyo
 ${PYSITELIB}/libtmux/_internal/dataclasses.py
 ${PYSITELIB}/libtmux/_internal/dataclasses.pyc
 ${PYSITELIB}/libtmux/_internal/dataclasses.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/libtmux/_vendor/_structures.pyo
 ${PYSITELIB}/libtmux/_vendor/version.py
 ${PYSITELIB}/libtmux/_vendor/version.pyc
 ${PYSITELIB}/libtmux/_vendor/version.pyo
+${PYSITELIB}/libtmux/client.py
+${PYSITELIB}/libtmux/client.pyc
+${PYSITELIB}/libtmux/client.pyo
 ${PYSITELIB}/libtmux/common.py
 ${PYSITELIB}/libtmux/common.pyc
 ${PYSITELIB}/libtmux/common.pyo
