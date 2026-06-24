@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3975 2026/06/24 06:33:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3976 2026/06/24 07:29:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5965,3 +5965,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/libarchive to 3.8.8 [adam 2026-06-24]
 	Updated archivers/bsdtar to 3.8.8 [adam 2026-06-24]
 	Updated net/helm to 4.2.2 [adam 2026-06-24]
+	Updated devel/sem to 0.14.1 [pin 2026-06-24]
