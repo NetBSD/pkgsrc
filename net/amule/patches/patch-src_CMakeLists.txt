@@ -1,0 +1,40 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/06/24 13:37:09 adam Exp $
+
+On Darwin, don't build app bundle.
+
+--- src/CMakeLists.txt.orig	2026-06-08 08:48:19.000000000 +0000
++++ src/CMakeLists.txt
+@@ -285,7 +285,7 @@ if (BUILD_MONOLITHIC)
+ 		)
+ 	endif()
+ 
+-	if (APPLE)
++	if (FALSE)
+ 		set_target_properties (amule PROPERTIES
+ 			MACOSX_BUNDLE TRUE
+ 			MACOSX_BUNDLE_BUNDLE_NAME "aMule"
+@@ -355,7 +355,6 @@ if (BUILD_MONOLITHIC)
+ 
+ 	install (TARGETS amule
+ 		RUNTIME DESTINATION bin
+-		BUNDLE DESTINATION .
+ 	)
+ 
+ 	# Legacy /usr/share/pixmaps/ fallback for desktops that don't
+@@ -425,7 +424,7 @@ if (BUILD_REMOTEGUI)
+ 		)
+ 	endif()
+ 
+-	if (APPLE)
++	if (FALSE)
+ 		# amulegui is a GUI wxApp (remote-control UI) — bundle it as a
+ 		# .app so macOS gives it an icon in the Dock, a menu bar and
+ 		# normal application lifecycle events, matching the monolithic
+@@ -492,7 +491,6 @@ if (BUILD_REMOTEGUI)
+ 
+ 	install (TARGETS amulegui
+ 		RUNTIME DESTINATION bin
+-		BUNDLE DESTINATION .
+ 	)
+ endif()
+ 

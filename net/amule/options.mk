@@ -1,66 +1,65 @@
-# $NetBSD: options.mk,v 1.2 2020/11/19 20:01:40 nia Exp $
+# $NetBSD: options.mk,v 1.3 2026/06/24 13:37:09 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amule
-PKG_SUPPORTED_OPTIONS=	amule-monolithic
+PKG_SUPPORTED_OPTIONS=	amule-cas amule-monolithic
 PKG_SUPPORTED_OPTIONS+=	amule-gui amule-daemon amule-cmd amule-webserver
-PKG_SUPPORTED_OPTIONS+=	amule-cas amule-wxcas amule-ed2k amule-alc amule-alcc
-PKG_SUPPORTED_OPTIONS+=	debug geoip upnp
-PKG_SUGGESTED_OPTIONS=	amule-monolithic amule-ed2k upnp
+PKG_SUPPORTED_OPTIONS+=	amule-wxcas amule-ed2k amule-alc amule-alcc geoip
+PKG_SUGGESTED_OPTIONS=	amule-monolithic amule-ed2k
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	skins alc alcc amule ed2k daemon gui cmd web cas wxcas
+PLIST_VARS+=	alc alcc amule cas cmd ed2k daemon gui skins web wxcas
 
 ###
 ### monolithic aMule app
 ###
 .if !empty(PKG_OPTIONS:Mamule-monolithic)
-CONFIGURE_ARGS+=	--enable-monolithic
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_MONOLITHIC=ON
 PLIST.amule=		yes
 PLIST.skins=		yes
 .else
-CONFIGURE_ARGS+=	--disable-monolithic
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_MONOLITHIC=OFF
 .endif
 
 ###
 ### aMule daemon version
 ###
 .if !empty(PKG_OPTIONS:Mamule-daemon)
-CONFIGURE_ARGS+=	--enable-amule-daemon
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_DAEMON=ON
 PLIST.daemon=		yes
 .else
-CONFIGURE_ARGS+=	--disable-amule-daemon
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_DAEMON=OFF
 .endif
 
 ###
 ### aMule remote GUI
 ###
 .if !empty(PKG_OPTIONS:Mamule-gui)
-CONFIGURE_ARGS+=	--enable-amule-gui
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_REMOTEGUI=ON
 PLIST.gui=		yes
 PLIST.skins=		yes
 .else
-CONFIGURE_ARGS+=	--disable-amule-gui
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_REMOTEGUI=OFF
 .endif
 
 ###
 ### aMule command line client
 ###
 .if !empty(PKG_OPTIONS:Mamule-cmd)
-CONFIGURE_ARGS+=	--enable-amulecmd
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_AMULECMD=ON
 PLIST.cmd=		yes
 .else
-CONFIGURE_ARGS+=	--disable-amulecmd
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_AMULECMD=OFF
 .endif
 
 ###
 ### aMule WebServer
 ###
 .if !empty(PKG_OPTIONS:Mamule-webserver)
-CONFIGURE_ARGS+=	--enable-webserver
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WEBSERVER=ON
 PLIST.web=		yes
 .else
-CONFIGURE_ARGS+=	--disable-webserver
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WEBSERVER=OFF
 .endif
 
 ###
@@ -68,82 +67,60 @@ CONFIGURE_ARGS+=	--disable-webserver
 ###
 .if !empty(PKG_OPTIONS:Mamule-cas)
 .include "../../graphics/gd/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-cas
-CONFIGURE_ARGS+=	--with-gdlib-config=${BUILDLINK_PREFIX.gd}/bin/gdlib-config
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_CAS=ON
 PLIST.cas=		yes
 .else
-CONFIGURE_ARGS+=	--disable-cas
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_CAS=OFF
 .endif
 
 ###
 ### aMule GUI Statistics
 ###
 .if !empty(PKG_OPTIONS:Mamule-wxcas)
-CONFIGURE_ARGS+=	--enable-wxcas
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WXCAS=ON
 PLIST.wxcas=		yes
 .else
-CONFIGURE_ARGS+=	--disable-wxcas
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WXCAS=OFF
 .endif
 
 ###
 ### aMule ed2k links handler
 ###
 .if !empty(PKG_OPTIONS:Mamule-ed2k)
-CONFIGURE_ARGS+=	--enable-ed2k
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ED2K=ON
 PLIST.ed2k=		yes
 .else
-CONFIGURE_ARGS+=	--disable-ed2k
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ED2K=OFF
 .endif
 
 ###
 ### aMule LinkCreator GUI version
 ###
 .if !empty(PKG_OPTIONS:Mamule-alc)
-CONFIGURE_ARGS+=	--enable-alc
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALC=ON
 PLIST.alc=		yes
 .else
-CONFIGURE_ARGS+=	--disable-alc
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALC=OFF
 .endif
 
 ###
 ### aMule LinkCreator for console
 ###
 .if !empty(PKG_OPTIONS:Mamule-alcc)
-CONFIGURE_ARGS+=	--enable-alcc
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALCC=ON
 PLIST.alcc=		yes
 .else
-CONFIGURE_ARGS+=	--disable-alcc
-.endif
-
-###
-### Additional debugging output
-###
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
-.else
-CONFIGURE_ARGS+=	--disable-debug
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALCC=OFF
 .endif
 
 ###
 ### GeoIP IP2Country support
 ###
 .if !empty(PKG_OPTIONS:Mgeoip)
-.include "../../net/GeoIP/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-geoip
+.include "../../geography/libmaxminddb/buildlink3.mk"
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_IP2COUNTRY=ON
 .else
-CONFIGURE_ARGS+=	--disable-geoip
-.endif
-
-###
-### UPnP support
-###
-.if !empty(PKG_OPTIONS:Mupnp)
-BUILDLINK_API_DEPENDS.libupnp+=	libupnp>=1.6.6
-.include "../../net/libupnp/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-upnp
-CONFIGURE_ARGS+=	--with-libupnp-prefix=${BUILDLINK_PREFIX.libupnp}
-.else
-CONFIGURE_ARGS+=	--disable-upnp
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_IP2COUNTRY=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mamule-alc) || \
