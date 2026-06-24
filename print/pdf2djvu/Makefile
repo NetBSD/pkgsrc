@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.136 2026/05/14 16:41:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.137 2026/06/24 21:57:36 wiz Exp $
 
 DISTNAME=	pdf2djvu-0.9.19
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_PROJECT=	pdf2djvu
@@ -15,16 +15,18 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
-FORCE_CXX_STD=		c++20 # For poppler-24.10.0
-
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c++17
+USE_LANGUAGES=		c++
+USE_CXX_FEATURES=	c++20
+FORCE_CXX_STD=		c++20 # For poppler-24.10.0
+
 USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ARGS+=	--disable-rpath
+
+CFLAGS+=		-fno-permissive
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
