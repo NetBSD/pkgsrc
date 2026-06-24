@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.22 2024/10/24 13:37:47 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2026/06/24 21:57:36 wiz Exp $
 
 BLAKE2s (pdf2djvu-0.9.19.tar.xz) = 5c8d49e99261de6846e563edc367abd385be03c097a5ebe62b10f15253a06e1c
 SHA512 (pdf2djvu-0.9.19.tar.xz) = 14d6b217345da6ae8fb9f0fccfb79b86f4448d30d1de1bd2eb537c4eb129f0bdac64ed58c59119f31a837df143490be77050a4b92362a548e08bf8991a03ec41
 Size (pdf2djvu-0.9.19.tar.xz) = 309952 bytes
+SHA1 (patch-pdf-backend.cc) = f71598c13c62ba3a9af5957db062e4d2759141bc
+SHA1 (patch-pdf-backend.hh) = bf73f015f48466fac2140db98bd98237b45a1f0f
+SHA1 (patch-pdf-dpi.cc) = e9b931173c18ccff6bc59d211cc982608b8de672
+SHA1 (patch-pdf-unicode.cc) = d55de68c5155a7d33a67b1beaab2dc66c1634110
+SHA1 (patch-system.hh) = 0bcabb99025440edd56c7df435045d3f296ec6a1
