@@ -31,6 +31,10 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_write_add_filter_by_name\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ *name\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_write_add_filter_bzip2\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
@@ -107,6 +111,9 @@ Note that the compressed output is always properly blocked.
 The output will be encoded as specified.
 The encoded output is always properly blocked.
 .TP
+\fB\%archive_write_add_filter_by_name\fP()
+Sets the corresponding filter based on the common name.
+.TP
 \fB\%archive_write_add_filter_none\fP()
 This is never necessary.
 It is provided only for backwards compatibility.
@@ -120,6 +127,10 @@ write callbacks.
 .ad l
 These functions return
 \fBARCHIVE_OK\fP
+Po or
+\fBARCHIVE_WARN\fP
+if an external program had to be executed to handle the filter
+Pc
 on success, or
 \fBARCHIVE_FATAL\fP.
 .SH ERRORS

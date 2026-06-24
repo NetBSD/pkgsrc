@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.1.1.6 2024/04/12 15:27:39 adam Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.1.1.7 2026/06/24 05:38:53 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -319,7 +319,7 @@ compare_format(const void *key, const void *element)
 pack_t *
 pack_find(const char *name)
 {
-	struct format	*format;
+	const struct format	*format;
 
 	format = bsearch(name, formats,
 	    sizeof(formats)/sizeof(formats[0]),

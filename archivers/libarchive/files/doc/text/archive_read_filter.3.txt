@@ -109,7 +109,7 @@
 1mRETURN VALUES0m
        These  functions	 return	 1mARCHIVE_OK  22mif  the compression is fully sup‐
        ported, 1mARCHIVE_WARN 22mif the compression is supported  only	through	 an
-       external program.
+       external program, or 1mARCHIVE_FATAL 22mon error.
 
        1marchive_read_support_filter_none22m() always succeeds.
 
@@ -119,6 +119,6 @@
 
 1mSEE ALSO0m
        4marchive_read24m(3),	 4marchive_read_data24m(3),	 4marchive_read_format24m(3),
-       4marchive_read_format24m(3), 4mlibarchive24m(3)
+       4mlibarchive24m(3)
 
 Debian				 June 9, 2020		4mARCHIVE_READ_FILTER24m(3)

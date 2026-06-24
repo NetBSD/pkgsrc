@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Apr 13 12:57:34 2026 -->
+<!-- CreationDate: Tue Jun 23 09:58:13 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -28,10 +28,12 @@
 <p style="margin-left:9%;">archive_clear_error,
 archive_compression, archive_compression_name,
 archive_copy_error, archive_errno, archive_error_string,
-archive_file_count, archive_filter_code,
-archive_filter_count, archive_filter_name, archive_format,
-archive_format_name, archive_position, archive_set_error
-&mdash; libarchive utility functions</p>
+archive_file_count, archive_filter_bytes,
+archive_filter_code, archive_filter_count,
+archive_filter_name, archive_format, archive_format_name,
+archive_free, archive_position_compressed,
+archive_position_uncompressed, archive_set_error &mdash;
+libarchive utility functions</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -81,6 +83,13 @@ archive_format_name, archive_position, archive_set_error
 
 <p style="margin-left:14%;"><b>archive_file_count</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
+
+<p style="margin-left:9%; margin-top: 1em"><i>int64_t</i></p>
+
+
+<p style="margin-left:14%;"><b>archive_filter_bytes</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<i>int</i>);</p>
+
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
@@ -111,12 +120,22 @@ archive_format_name, archive_position, archive_set_error
 
 <p style="margin-left:14%;"><b>archive_format_name</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:14%;"><b>archive_free</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
 
 <p style="margin-left:9%; margin-top: 1em"><i>int64_t</i></p>
 
 
-<p style="margin-left:14%;"><b>archive_position</b>(<i>struct&nbsp;archive&nbsp;*</i>,
-<i>int</i>);</p>
+<p style="margin-left:14%;"><b>archive_position_compressed</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+
+<p style="margin-left:9%; margin-top: 1em"><i>int64_t</i></p>
+
+
+<p style="margin-left:14%;"><b>archive_position_uncompressed</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>void</i></p>
 
@@ -200,13 +219,13 @@ when reading a uuencoded gzipped tar archive, there are
 three filters: filter 0 is the gunzip filter, filter 1 is
 the uudecode filter, and filter 2 is the pseudo-filter that
 wraps the archive read functions. In this case, requesting
-<b>archive_position</b>(<i>a</i>, <i>-1</i>) would be a
-synonym for <b>archive_position</b>(<i>a</i>, <i>2</i>)
+<b>archive_filter_bytes</b>(<i>a</i>, <i>-1</i>) would be a
+synonym for <b>archive_filter_bytes</b>(<i>a</i>, <i>2</i>)
 which would return the number of bytes currently read from
-the archive, while <b>archive_position</b>(<i>a</i>,
+the archive, while <b>archive_filter_bytes</b>(<i>a</i>,
 <i>1</i>) would return the number of bytes after uudecoding,
-and <b>archive_position</b>(<i>a</i>, <i>0</i>) would return
-the number of bytes after decompression.</p>
+and <b>archive_filter_bytes</b>(<i>a</i>, <i>0</i>) would
+return the number of bytes after decompression.</p>
 
 <p><b>archive_filter_name</b>()</p>
 
@@ -231,16 +250,31 @@ will have different format codes.</p>
 <p style="margin-left:19%;">A textual description of the
 format of the current entry.</p>
 
-<p><b>archive_position</b>()</p>
+<p><b>archive_free</b>()</p>
+
+<p style="margin-left:19%;">Closes the archive if
+necessary, then releases all resources.</p>
+
+<p><b>archive_filter_bytes</b>()</p>
 
 <p style="margin-left:19%;">Returns the number of bytes
 read from or written to the indicated filter. In particular,
-<b>archive_position</b>(<i>a</i>, <i>0</i>) returns the
+<b>archive_filter_bytes</b>(<i>a</i>, <i>0</i>) returns the
 number of bytes read or written by the format handler, while
-<b>archive_position</b>(<i>a</i>, <i>-1</i>) returns the
+<b>archive_filter_bytes</b>(<i>a</i>, <i>-1</i>) returns the
 number of bytes read or written to the archive. See
 <b>archive_filter_count</b>() for details of the numbering
 here.</p>
+
+<p><b>archive_position_compressed</b>()</p>
+
+<p style="margin-left:19%;">Synonym for
+<b>archive_filter_bytes</b>(<i>a</i>, <i>-1</i>).</p>
+
+<p><b>archive_position_uncompressed</b>()</p>
+
+<p style="margin-left:19%;">Synonym for
+<b>archive_filter_bytes</b>(<i>a</i>, <i>0</i>).</p>
 
 <p><b>archive_set_error</b>()</p>
 

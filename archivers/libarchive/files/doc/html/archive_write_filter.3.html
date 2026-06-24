@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Apr 13 12:57:34 2026 -->
+<!-- CreationDate: Tue Jun 23 09:58:13 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -56,6 +56,12 @@ archive_write_add_filter_xz, archive_write_add_filter_zstd
 
 
 <p style="margin-left:14%;"><b>archive_write_add_filter_b64encode</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:14%;"><b>archive_write_add_filter_by_name</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<i>const&nbsp;char&nbsp;*name</i>);</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
@@ -154,6 +160,12 @@ specified. The encoded output is always properly
 blocked.</p>
 
 
+<p style="margin-top: 1em"><b>archive_write_add_filter_by_name</b>()</p>
+
+<p style="margin-left:19%;">Sets the corresponding filter
+based on the common name.</p>
+
+
 <p style="margin-top: 1em"><b>archive_write_add_filter_none</b>()</p>
 
 <p style="margin-left:19%;">This is never necessary. It is
@@ -170,7 +182,11 @@ callbacks.</p>
 <p style="margin-top: 1em"><b>RETURN VALUES</b></p>
 
 <p style="margin-left:9%;">These functions return
-<b>ARCHIVE_OK</b> on success, or <b>ARCHIVE_FATAL</b>.</p>
+<b>ARCHIVE_OK</b> (</p>
+
+<p>or <b>ARCHIVE_WARN</b> if an external program had to be
+executed to handle the filter ) on success, or
+<b>ARCHIVE_FATAL</b>.</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>
 

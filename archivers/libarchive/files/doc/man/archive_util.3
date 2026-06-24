@@ -8,12 +8,15 @@
 \fB\%archive_errno\fP,
 \fB\%archive_error_string\fP,
 \fB\%archive_file_count\fP,
+\fB\%archive_filter_bytes\fP,
 \fB\%archive_filter_code\fP,
 \fB\%archive_filter_count\fP,
 \fB\%archive_filter_name\fP,
 \fB\%archive_format\fP,
 \fB\%archive_format_name\fP,
-\fB\%archive_position\fP,
+\fB\%archive_free\fP,
+\fB\%archive_position_compressed\fP,
+\fB\%archive_position_uncompressed\fP,
 \fB\%archive_set_error\fP
 \- libarchive utility functions
 .SH LIBRARY
@@ -51,6 +54,10 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fB\%archive_file_count\fP(\fI\%struct\ archive\ *\fP);
 .br
+\fIint64_t\fP
+.br
+\fB\%archive_filter_bytes\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
+.br
 \fIint\fP
 .br
 \fB\%archive_filter_code\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
@@ -71,9 +78,17 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fB\%archive_format_name\fP(\fI\%struct\ archive\ *\fP);
 .br
+\fIint\fP
+.br
+\fB\%archive_free\fP(\fI\%struct\ archive\ *\fP);
+.br
 \fIint64_t\fP
 .br
-\fB\%archive_position\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
+\fB\%archive_position_compressed\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint64_t\fP
+.br
+\fB\%archive_position_uncompressed\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIvoid\fP
 .br
@@ -150,13 +165,13 @@ filter 0 is the gunzip filter,
 filter 1 is the uudecode filter,
 and filter 2 is the pseudo-filter that wraps the archive read functions.
 In this case, requesting
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%-1\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%-1\fP)
 would be a synonym for
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%2\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%2\fP)
 which would return the number of bytes currently read from the archive, while
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%1\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%1\fP)
 would return the number of bytes after uudecoding, and
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%0\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%0\fP)
 would return the number of bytes after decompression.
 .TP
 \fB\%archive_filter_name\fP()
@@ -179,16 +194,27 @@ These entries will have different format codes.
 \fB\%archive_format_name\fP()
 A textual description of the format of the current entry.
 .TP
-\fB\%archive_position\fP()
+\fB\%archive_free\fP()
+Closes the archive if necessary, then releases all resources.
+.TP
+\fB\%archive_filter_bytes\fP()
 Returns the number of bytes read from or written to the indicated filter.
 In particular,
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%0\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%0\fP)
 returns the number of bytes read or written by the format handler, while
-\fB\%archive_position\fP(\fI\%a\fP, \fI\%-1\fP)
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%-1\fP)
 returns the number of bytes read or written to the archive.
 See
 \fB\%archive_filter_count\fP()
 for details of the numbering here.
+.TP
+\fB\%archive_position_compressed\fP()
+Synonym for
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%-1\fP).
+.TP
+\fB\%archive_position_uncompressed\fP()
+Synonym for
+\fB\%archive_filter_bytes\fP(\fI\%a\fP, \fI\%0\fP).
 .TP
 \fB\%archive_set_error\fP()
 Sets the numeric error code and error description that will be returned

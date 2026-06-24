@@ -149,7 +149,7 @@
        and length.
 
        1mbinary	 22mThe	 libarchive library transparently reads both big-endian and
-	       little-endian variants of the the two binary cpio formats;  the
+	       little-endian variants of the  two  binary  cpio	 formats;  the
 	       original	 one  from  PWB/UNIX, and the later, more widely used,
 	       variant.	 This format used 32-bit binary values for  file  size
 	       and  mtime, and 16-bit binary values for the other fields.  The
