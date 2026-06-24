@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3987 2026/06/24 16:05:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.3988 2026/06/24 17:54:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5982,3 +5982,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libass to 0.17.5 [adam 2026-06-24]
 	Updated net/libtorrent to 0.16.15 [adam 2026-06-24]
 	Updated net/rtorrent to 0.16.15 [adam 2026-06-24]
+	Updated misc/py-libtmux to 0.58.1 [gdt 2026-06-24]
