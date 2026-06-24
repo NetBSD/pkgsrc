@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/11/15 20:11:48 bsiegert Exp $
+$NetBSD: distinfo,v 1.13 2026/06/24 06:27:17 drixter Exp $
 
-BLAKE2s (di-6.2.0.tar.gz) = d4d788d3fd676de783c5cc43696fdfe6e98337807efaae1a73ba88373731ef30
-SHA512 (di-6.2.0.tar.gz) = ac19b075fd5676a5ac1827dc058441327bdfaf7ed649fc5b7b765d188a41517eef0b67221213eee4e32343d057eb1b06793e45cf529a455b1841ca735b675578
-Size (di-6.2.0.tar.gz) = 137838 bytes
+BLAKE2s (di-6.2.2.2.tar.gz) = 09d59df89cf2d2c83cfb1ef5494fed4b5a02e7ae7098610e7316b3b946005bca
+SHA512 (di-6.2.2.2.tar.gz) = 4306d7c20ff9c4da738dc254717f562a7c7086b95138ffc0ed8739533073e2be3f02eb8ec5616e3578591c1fabfdf5087555cae3b047aaaa308286375bc73f4c
+Size (di-6.2.2.2.tar.gz) = 140770 bytes
