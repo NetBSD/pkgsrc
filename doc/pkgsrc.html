@@ -1040,7 +1040,7 @@ and dashes.</p>
 	quarterly basis from the current branch and only gets modified
 	for security updates. The names of the stable branches are built
 	from the year and the quarter, for example
-	<code class="literal">2025Q4</code>.</p>
+	<code class="literal">2026Q2</code>.</p>
 <p>The second step is to decide <span class="emphasis"><em>how</em></span> you
 	want to download pkgsrc. You can get it as a tar file or via CVS.
 	Both ways are described here.</p>
@@ -1066,11 +1066,11 @@ and dashes.</p>
 	respectively.
 	</p>
 <p>You can fetch the same files using FTP.</p>
-<p>The tar file for the stable branch 2025Q4 is in the
-	directory <code class="filename">pkgsrc-2025Q4</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2025Q4/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
+<p>The tar file for the stable branch 2026Q2 is in the
+	directory <code class="filename">pkgsrc-2026Q2</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2026Q2/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
 <p>To download the latest pkgsrc stable tarball, run:</p>
 <pre class="screen">
-<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2025Q4/pkgsrc.tar.gz</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2026Q2/pkgsrc.tar.gz</code></strong></pre>
 <p>If you prefer, you can also fetch it using "wget", "curl",
 	or your web browser.</p>
 <p>Then, extract it with:</p>
@@ -1085,7 +1085,7 @@ and dashes.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="getting-via-cvs"></a>3.1.2. Via anonymous CVS</h3></div></div></div>
 <p>To fetch a specific pkgsrc stable branch, run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2025Q4 -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2026Q2 -P pkgsrc</code></strong>
 </pre>
 <p>This will create the directory <code class="filename">pkgsrc/</code> 
 	in your <code class="filename">/usr/</code> directory and all the package source 
@@ -1170,7 +1170,7 @@ release -d
 	by adding the option <span class="quote">“<span class="quote">-A</span>”</span> after the
 	<span class="quote">“<span class="quote">update</span>”</span> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<span class="quote">“<span class="quote">-rpkgsrc-2025Q4</span>”</span> option.</p>
+	<span class="quote">“<span class="quote">-rpkgsrc-2026Q2</span>”</span> option.</p>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
@@ -10064,7 +10064,7 @@ followed:</p>
     the tree one by one with appropriate log messages.  At the end,
     commit the three meta package updates and all the corresponding
     changes to the <code class="filename">doc/CHANGES-&lt;YEAR&gt;</code> and
-    <a href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/doc/TODO?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top"><code class="filename">pkgsrc/doc/TODO</code></a> files.</p></li>
+    <a href="//cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/doc/TODO?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top"><code class="filename">pkgsrc/doc/TODO</code></a> files.</p></li>
 </ol></div>
 </div>
 <div class="sect1">
