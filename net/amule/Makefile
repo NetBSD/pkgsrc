@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.115 2026/06/11 07:17:30 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2026/06/24 13:37:09 adam Exp $
 
-DISTNAME=	aMule-2.3.3
-PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	21
+DISTNAME=	amule-3.0.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=amule-project/}
 
 MAINTAINER=	tripledes@eslack.org
-HOMEPAGE=	http://www.amule.org/
+HOMEPAGE=	https://www.amule.org/
 COMMENT=	Another Emule P2P client
 LICENSE=	gnu-gpl-v2
 
@@ -16,31 +13,25 @@ CONFLICTS=		xmule-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK30}/bin/wx-config
-CONFIGURE_ARGS+=	--with-crypto-prefix=${BUILDLINK_PREFIX.cryptopp}
-CONFIGURE_ARGS+=	--with-language=all
-CONFIGURE_ARGS+=	--enable-xas
-TEST_TARGET=		check
-
-CXXFLAGS+=		-Wno-undef
+USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF # needs some options
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_NLS=ON
 
 .include "options.mk"
 
-REPLACE_PERL=		src/libs/ec/file_generator.pl		\
-			src/utils/scripts/kadnodescreate.pl	\
-			src/utils/scripts/stats.pl		\
-			src/utils/scripts/mldonkey_importer.pl	\
-			src/utils/xas/xas.pl
+REPLACE_PERL+=	src/libs/ec/file_generator.pl
+REPLACE_PERL+=	src/utils/scripts/kadnodescreate.pl
+REPLACE_PERL+=	src/utils/scripts/stats.pl
+REPLACE_PERL+=	src/utils/scripts/mldonkey_importer.pl
+REPLACE_PERL+=	src/utils/xas/xas.pl
 
-LIBS+=			-lm	# for pow(3)
-
-UNLIMIT_RESOURCES+=	datasize
-
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/libupnp/buildlink3.mk"
 .include "../../security/crypto++/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
