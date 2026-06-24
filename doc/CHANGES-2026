@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3972 2026/06/23 21:39:11 mef Exp $
+$NetBSD: CHANGES-2026,v 1.3973 2026/06/24 03:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5957,3 +5957,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/R-terra to 1.9.34 [mef 2026-06-23]
 	Updated pkgtools/pkglint to 23.21.1 [rillig 2026-06-23]
 	Updated geography/R-raster to 3.6.32 [mef 2026-06-23]
+	Updated devel/libadwaita to 1.9.1 [wiz 2026-06-24]
