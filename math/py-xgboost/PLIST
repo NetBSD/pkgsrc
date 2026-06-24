@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/02/16 11:13:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/24 05:28:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/xgboost/VERSION
 ${PYSITELIB}/xgboost/__init__.py
 ${PYSITELIB}/xgboost/__init__.pyc
 ${PYSITELIB}/xgboost/__init__.pyo
+${PYSITELIB}/xgboost/_c_api.py
+${PYSITELIB}/xgboost/_c_api.pyc
+${PYSITELIB}/xgboost/_c_api.pyo
 ${PYSITELIB}/xgboost/_data_utils.py
 ${PYSITELIB}/xgboost/_data_utils.pyc
 ${PYSITELIB}/xgboost/_data_utils.pyo
@@ -42,6 +45,9 @@ ${PYSITELIB}/xgboost/data.pyo
 ${PYSITELIB}/xgboost/federated.py
 ${PYSITELIB}/xgboost/federated.pyc
 ${PYSITELIB}/xgboost/federated.pyo
+${PYSITELIB}/xgboost/interpret.py
+${PYSITELIB}/xgboost/interpret.pyc
+${PYSITELIB}/xgboost/interpret.pyo
 ${PYSITELIB}/xgboost/lib/libxgboost.so
 ${PYSITELIB}/xgboost/libpath.py
 ${PYSITELIB}/xgboost/libpath.pyc
