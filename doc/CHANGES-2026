@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3988 2026/06/24 17:54:03 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.3989 2026/06/24 18:14:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5983,3 +5983,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/libtorrent to 0.16.15 [adam 2026-06-24]
 	Updated net/rtorrent to 0.16.15 [adam 2026-06-24]
 	Updated misc/py-libtmux to 0.58.1 [gdt 2026-06-24]
+	Updated net/tor to 0.4.9.10 [adam 2026-06-24]
+	Updated www/py-WebOb to 1.8.10 [adam 2026-06-24]
