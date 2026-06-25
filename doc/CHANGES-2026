@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4004 2026/06/25 10:30:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4005 2026/06/25 11:22:31 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6005,3 +6005,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tabiew to 0.14.0 [wiz 2026-06-25]
 	Updated www/resterm to 0.44.1 [drixter 2026-06-25]
 	Updated security/polkit to 127nb1 [wiz 2026-06-25]
+	Updated net/nsd to 4.14.3 [he 2026-06-25]
