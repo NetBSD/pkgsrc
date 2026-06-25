@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/06/23 09:03:37 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/06/25 12:50:39 pin Exp $
 bin/sem
+share/bash-completion/completions/sem
+share/zsh/site-functions/_sem

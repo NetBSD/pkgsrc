@@ -1,0 +1,16 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/06/25 12:50:40 pin Exp $
+
+Disable self-update
+https://github.com/Ataraxy-Labs/sem/pull/391
+
+--- Cargo.toml.orig	2026-06-25 10:43:57.569730009 +0000
++++ Cargo.toml
+@@ -50,6 +50,8 @@ pkg-fmt = "zip"
+ pkg-fmt = "zip"
+ 
+ [features]
++default = ["self-update"]
++self-update = []
+ vendored-openssl = ["openssl-sys/vendored"]
+ 
+ [dev-dependencies]

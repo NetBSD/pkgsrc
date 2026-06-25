@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/06/24 07:27:56 pin Exp $
+# $NetBSD: Makefile,v 1.3 2026/06/25 12:50:39 pin Exp $
 
 DISTNAME=	sem-0.14.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ataraxy-Labs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,6 +20,18 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 CONFLICTS+=	parallel-[0-9]*
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/zsh/site-functions
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+
+post-build:
+	cd ${WRKDIR}/${DISTNAME}/crates && target/release/sem completions bash > sem.bash
+	cd ${WRKDIR}/${DISTNAME}/crates && target/release/sem completions zsh > _sem
+
+post-install:
+	cd ${WRKDIR}/${DISTNAME}/crates && ${INSTALL_DATA} sem.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/sem
+	cd ${WRKDIR}/${DISTNAME}/crates && ${INSTALL_DATA} _sem ${DESTDIR}${PREFIX}/share/zsh/site-functions/_sem
 
 .include "cargo-crates.mk"
 
