@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4009 2026/06/25 12:46:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4010 2026/06/25 12:48:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6014,3 +6014,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator to 1.9.0 [adam 2026-06-25]
 	Updated devel/py-vcs-versioning to 2.2.0 [adam 2026-06-25]
 	Updated devel/py-sybil to 10.1.0 [adam 2026-06-25]
+	Updated textproc/rucola to 0.10.0 [pin 2026-06-25]
