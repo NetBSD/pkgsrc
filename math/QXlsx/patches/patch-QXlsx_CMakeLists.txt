@@ -1,0 +1,23 @@
+$NetBSD: patch-QXlsx_CMakeLists.txt,v 1.3 2026/06/25 08:12:32 adam Exp $
+
+Install xlsxreadsax.h
+https://github.com/QtExcel/QXlsx/pull/465
+
+--- QXlsx/CMakeLists.txt.orig	2026-06-25 08:02:46.742304674 +0000
++++ QXlsx/CMakeLists.txt
+@@ -114,7 +114,6 @@ set(SRC_FILES
+     header/xlsxdrawing_p.h
+     header/xlsxrichstring_p.h
+     header/xlsxutility_p.h
+-    header/xlsxreadsax.h
+ )
+ 
+ set(QXLSX_PUBLIC_HEADERS
+@@ -134,6 +133,7 @@ set(QXLSX_PUBLIC_HEADERS
+     header/xlsxdocument.h
+     header/xlsxformat.h
+     header/xlsxglobal.h
++    header/xlsxreadsax.h
+     header/xlsxrichstring.h
+     header/xlsxworkbook.h
+     header/xlsxworksheet.h
