@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3999 2026/06/25 08:33:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4000 2026/06/25 08:42:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5999,3 +5999,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libcurl-gnutls to 8.21.0 [wiz 2026-06-25]
 	Updated misc/stellarium to 26.2 [adam 2026-06-25]
 	Updated lang/nodejs to 26.4.0 [adam 2026-06-25]
+	Updated devel/py-ruff to 0.15.19 [wiz 2026-06-25]
