@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2026/06/24 21:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/06/25 06:45:58 wiz Exp $
 
 COMMENT=	PDF rendering library
 
@@ -50,8 +50,9 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../devel/boost-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.41.0
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.80.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=      build
 .include "../../devel/gobject-introspection/buildlink3.mk"
