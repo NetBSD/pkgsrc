@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/06/24 21:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/06/25 07:34:36 wiz Exp $
 
 PKGNAME=	poppler-includes-${POPPLER_VERS}
 
@@ -38,7 +38,8 @@ do-install:
 
 .include "../../print/poppler/Makefile.common"
 
-BUILDLINK_DEPMETHOD.fontconfig= build
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15
+BUILDLINK_DEPMETHOD.fontconfig=		build
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
