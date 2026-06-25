@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2026/06/25 05:00:41 adam Exp $
+
+Fix error: return type defaults to 'int' [-Wimplicit-int]
+
+--- configure.orig	2026-06-25 04:55:39.781319940 +0000
++++ configure
+@@ -1089,7 +1089,7 @@ cat > conftest.$ac_ext << EOF
+ #line 1090 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1095: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
+@@ -1968,7 +1968,7 @@ cat > conftest.$ac_ext << EOF
+ #line 1969 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1974: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes

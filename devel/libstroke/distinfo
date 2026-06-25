@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/06/25 05:00:41 adam Exp $
 
-BLAKE2s (libstroke-0.5.1.tar.gz) = 168ce052217b1c0b0b3c89eb218d0c3a207d5647a184e1e42afcb1c360be1253
-SHA512 (libstroke-0.5.1.tar.gz) = 03431d4cd39174aadb6cfd00a1c487d34ae9cf4b1db9e9d01d563f2a661f01979f474b87099fd2bfb0e54653416a1b9dea988367674a3cc6134e16b62810a0c7
-Size (libstroke-0.5.1.tar.gz) = 174270 bytes
+BLAKE2s (libstroke-0.5.7.tar.gz) = 3a77b97612bd5f22ec23fd10fd78cf69c66b5dba0c9887ace4c1d315a5b852d1
+SHA512 (libstroke-0.5.7.tar.gz) = f7d259081f3077448dd149106a192a040aa6ef1fd3ce28772ca0dabaac11cdc56e82138b94f88ead54779f8b9b3c06b148db5f81636737694cc688f1ca186bb7
+Size (libstroke-0.5.7.tar.gz) = 180272 bytes
+SHA1 (patch-configure) = 6dc76d5a5c81b224ec2a71d0bb74a8c4d1f5b57d
