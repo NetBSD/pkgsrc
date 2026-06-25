@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3996 2026/06/25 07:52:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3997 2026/06/25 08:26:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5995,3 +5995,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-jwcrypto to 1.5.8 [adam 2026-06-25]
 	Updated audio/musicpd to 0.24.12 [wiz 2026-06-25]
 	Updated games/corewars to 0.9.13nb4 [wiz 2026-06-25]
+	Updated www/curl to 8.21.0 [wiz 2026-06-25]
