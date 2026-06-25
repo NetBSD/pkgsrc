@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4012 2026/06/25 15:56:05 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4013 2026/06/25 16:00:06 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6017,3 +6017,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rucola to 0.10.0 [pin 2026-06-25]
 	Updated devel/sem to 0.14.1nb1 [pin 2026-06-25]
 	Updated net/dnsdist to 2.0.7 [drixter 2026-06-25]
+	Updated net/powerdns to 5.1.2 [drixter 2026-06-25]
