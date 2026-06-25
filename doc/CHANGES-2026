@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3992 2026/06/24 21:58:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3993 2026/06/25 04:15:20 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5988,3 +5988,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/objfw to 1.5.6 [js 2026-06-24]
 	Updated print/poppler to 26.06.0 [wiz 2026-06-24]
 	Updated print/scribus to 1.7.0.20260624 [wiz 2026-06-24]
+	Updated net/libslirp to 4.9.3 [khorben 2026-06-25]
