@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.59 2026/05/11 15:51:26 adam Exp $
+$NetBSD: distinfo,v 1.60 2026/06/25 20:59:15 wiz Exp $
 
-BLAKE2s (expat-2.8.1.tar.gz) = f4b7e78afa9094b38f09bc2381ed97c776158b2722f54065f66d6a8a47863956
-SHA512 (expat-2.8.1.tar.gz) = 2b17c1210d7267bdd0bd98d3e093279c56487efec1f2ae725bbc87b834c3f7aa789791ddb89ee324d1a823dc4e65b2f0d1555afb95cc06d64d75821e565dfc8c
-Size (expat-2.8.1.tar.gz) = 812969 bytes
+BLAKE2s (expat-2.8.2.tar.gz) = 7c09ddc0193f920b8f670caf6ca41538b0fa379ea9f154697959d56a21328a3f
+SHA512 (expat-2.8.2.tar.gz) = 378fe8b8319d1654dae09e2ce15e0dcff68e735eb9e28728b7bee7f60c81781025c3fccd6b620589529a6e63d94d0812474dc4c09721e5a3ea64dbc1efb623dd
+Size (expat-2.8.2.tar.gz) = 818391 bytes
