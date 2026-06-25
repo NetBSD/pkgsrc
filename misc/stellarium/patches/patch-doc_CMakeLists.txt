@@ -1,15 +1,15 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.6 2024/08/12 14:06:58 adam Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.7 2026/06/25 08:32:03 adam Exp $
 
 Install man pages also on Darwin.
 
---- doc/CMakeLists.txt.orig	2024-05-13 14:25:38.000000000 +0000
+--- doc/CMakeLists.txt.orig	2026-06-24 16:39:28.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -2,7 +2,7 @@
  # to generate manual page:
  # pod2man --section=1 -r ${VERSION} --center=" " stellarium.pod stellarium.1
  
--IF(UNIX AND NOT WIN32 AND NOT APPLE)
-+IF(UNIX AND NOT WIN32)
-      ADD_CUSTOM_TARGET(ManPages ALL)
- 
-      CONFIGURE_FILE(
+-IF(UNIX AND NOT WIN32 AND NOT APPLE AND NOT ANDROID)
++IF(UNIX AND NOT WIN32 AND NOT ANDROID)
+      ADD_CUSTOM_TARGET(ManPages ALL
+           DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1
+      )
