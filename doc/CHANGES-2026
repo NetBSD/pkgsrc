@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4007 2026/06/25 12:01:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4008 2026/06/25 12:41:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6010,3 +6010,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.0.3 [adam 2026-06-25]
 	Updated devel/py-setuptools_scm to 10.2.0 [adam 2026-06-25]
 	Updated devel/py-hypothesis to 6.155.7 [adam 2026-06-25]
+	Updated emulators/libspectrum to 1.6.2 [adam 2026-06-25]
+	Updated emulators/fuse-emulator to 1.9.0 [adam 2026-06-25]
