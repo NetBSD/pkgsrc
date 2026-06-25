@@ -1,7 +1,24 @@
-$NetBSD: distinfo,v 1.12 2026/02/07 23:11:45 khorben Exp $
+$NetBSD: distinfo,v 1.13 2026/06/25 08:16:53 wiz Exp $
 
 BLAKE2s (gerbera-3.0.0.tar.gz) = cc092c0713a9203ee7202f913f2f120066b43a37cf311b926cb118e5b6334e51
 SHA512 (gerbera-3.0.0.tar.gz) = c57e52fb1012687caa78b2a35751602afbb67d204acb2895c74121e07c2163162899b5bbbb81ecbedcaf5e3c84ae7c0453eee7b4fa4e4145ecd44b9d507b09ef
 Size (gerbera-3.0.0.tar.gz) = 9916800 bytes
 SHA1 (patch-CMakeLists.txt) = 7b8e0e42547da4545be4fdf19dd27e6b5592f21d
 SHA1 (patch-src_config_grb__runtime.cc) = f3118cbffe4fa13bb3a552f31d86cb9bc486b95f
+SHA1 (patch-src_config_setup_config__setup__path.cc) = d1009b7fc964af82a37ab94a31f40df91481afa2
+SHA1 (patch-src_content_inotify_mt__inotify.cc) = 6fb057556146b13e2208d8c7c1061d11f4a1580d
+SHA1 (patch-src_database_search__handler.h) = 29770f35aac4b0c3d611082e7fad32a351cb7c98
+SHA1 (patch-src_database_sqlite3_sqlite__database.cc) = a9b6c4f2e9130b91a81a78d83a5010c228de2ace
+SHA1 (patch-src_exceptions.h) = c8dc96720b329a8dd9c5547b255b3c399b214178
+SHA1 (patch-src_iohandler_curl__io__handler.cc) = 95229c952147b6a829807d49c5350da3227bfc01
+SHA1 (patch-src_iohandler_mem__io__handler.cc) = 2eb064e9baa47f136a914b546d6dfdab47457415
+SHA1 (patch-src_iohandler_process__io__handler.cc) = b28d15682307f70620203fd08d01781b4a1b7e2e
+SHA1 (patch-src_metadata_metacontent__handler.cc) = fe221b8463c237ea8f56f1c544eaa934fb4419fd
+SHA1 (patch-src_transcoding_transcode__ext__handler.cc) = 2ebac4b4f3791cb4b6eedc1c12f4162b8073784c
+SHA1 (patch-src_util_grb__fs.cc) = 8ce707de57333efa3256177ca87cadd67f4c610f
+SHA1 (patch-src_util_grb__net.cc) = b8e82b8af5ff07d7465d56ecfc706f4490f500aa
+SHA1 (patch-src_util_string__converter.cc) = fb6535b2fe428e6e0328c3caa91dae73be77cdd9
+SHA1 (patch-src_util_thread__executor.cc) = 3cabc159a216865b3e96212bac4097e957c75aed
+SHA1 (patch-src_util_thread__runner.h) = 55369375992cf16f63e23816235bc1fe61faa795
+SHA1 (patch-src_util_tools.cc) = d91bfaeb8d0357fae97a4ab1c92dc08fcb66739a
+SHA1 (patch-src_util_url__utils.cc) = 124aaac305373e955f263aebb228cb93974c5937
