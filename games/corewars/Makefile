@@ -1,23 +1,29 @@
-# $NetBSD: Makefile,v 1.24 2026/06/23 09:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/25 07:52:15 wiz Exp $
 
 DISTNAME=	corewars-0.9.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corewars/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://sourceforge.net/projects/corewars/
 #HOMEPAGE=	http://sal.math.ualberta.ca/
 COMMENT=	Programs on a virtual machine, fighting each other
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		autoconf automake autoreconf bison flex gmake pkg-config
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
+CFLAGS+=	-Wno-implicit-function-declaration
 
-.if ${OPSYS} != "Linux"
-MAKE_FLAGS+=	corewars_cmd_LDFLAGS=-largp
-.endif
+# random build failures with -j12
+MAKE_JOBS_SAFE=	no
 
-.include "../../devel/argp/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+# problem with 'bool'
+FORCE_C_STD=	c99
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
