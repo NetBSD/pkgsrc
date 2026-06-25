@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4006 2026/06/25 11:51:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4007 2026/06/25 12:01:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6008,3 +6008,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nsd to 4.14.3 [he 2026-06-25]
 	Updated audio/py-mutagen to 1.48.1 [adam 2026-06-25]
 	Updated devel/py-urwid to 4.0.3 [adam 2026-06-25]
+	Updated devel/py-setuptools_scm to 10.2.0 [adam 2026-06-25]
+	Updated devel/py-hypothesis to 6.155.7 [adam 2026-06-25]
