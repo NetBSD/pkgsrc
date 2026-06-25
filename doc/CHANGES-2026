@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4001 2026/06/25 08:53:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4002 2026/06/25 09:05:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6002,3 +6002,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.15.19 [wiz 2026-06-25]
 	Updated devel/py-anyio to 4.14.1 [adam 2026-06-25]
 	Updated databases/py-redis to 8.0.1 [adam 2026-06-25]
+	Updated textproc/tabiew to 0.14.0 [wiz 2026-06-25]
