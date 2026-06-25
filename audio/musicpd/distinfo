@@ -1,8 +1,21 @@
-$NetBSD: distinfo,v 1.154 2026/01/30 08:58:13 wiz Exp $
+$NetBSD: distinfo,v 1.155 2026/06/25 07:29:21 wiz Exp $
 
-BLAKE2s (mpd-0.24.8.tar.xz) = c28938775a0b09bb06f202b22a6a6204af7fe1e450f9944242cb2414e3a76c1c
-SHA512 (mpd-0.24.8.tar.xz) = cbcdb737b67e2539145ad5dc880bdf277e71db3fd7a63dd52f3c7a5f348f0539e6548bcaa4c2d07b4d25f1a33003199c0564c62317e254fd761c387fee6ac318
-Size (mpd-0.24.8.tar.xz) = 1017040 bytes
+BLAKE2s (mpd-0.24.12.tar.xz) = 7af0a6242a4c3de7580ed9419273865099f6fa99ea56b39a83042912083c8dc9
+SHA512 (mpd-0.24.12.tar.xz) = 868e6f97c63876ad36c1aa901c5e17ac501d9feccc9bffcc8a104e786c282d3e58ad2c0f8a2bb1fdada40fb5c9a8c55f7af19f396e54e58938231463daa0a624
+Size (mpd-0.24.12.tar.xz) = 1020148 bytes
 SHA1 (patch-doc_mpd.conf.5.rst) = c6ea2852d864613a9e1f074c57af3e161227cef0
+SHA1 (patch-src_input_plugins_AlsaInputPlugin.cxx) = 184add3e052757b4bea4ba957bee535c60a9f4b2
+SHA1 (patch-src_input_plugins_QobuzClient.cxx) = cc7b9db51488d462e3cac53d41a0666969abb5ed
+SHA1 (patch-src_input_plugins_QobuzLoginRequest.cxx) = 2e4d20547f2ee16ca4556b264beebe2934f2eb52
+SHA1 (patch-src_input_plugins_QobuzTrackRequest.cxx) = e02182af45664e377e1eaeef95e0f508002aad46
+SHA1 (patch-src_lib_avahi_Publisher.cxx) = e1f6e0c16f5e749eb70b16aa91cda91f7eab5b59
+SHA1 (patch-src_lib_nfs_FileReader.cxx) = 6115cc373849681e36565d8412f011d5bb5e8c83
 SHA1 (patch-src_net_IPv6Address.hxx) = f89b838ad5e946c5db8d95a6dd560e02bdccae29
+SHA1 (patch-src_net_ToString.cxx) = 94afe13bd17fd54ef88ec5f2846d95a5415c87e2
+SHA1 (patch-src_output_plugins_httpd_HttpdClient.cxx) = d7f179a7a962516c10d213a372eac3ae1284eede
+SHA1 (patch-src_output_plugins_httpd_IcyMetaDataServer.cxx) = 479b71103b487c74c5784f1bb68278297ed1ea1e
+SHA1 (patch-src_song_AddedSinceSongFilter.cxx) = e8e5393caf5c3af69dada9a288a313a79b50d84f
+SHA1 (patch-src_song_AudioFormatSongFilter.cxx) = 72f64cd8a65559b043f404854b8ed6c092d6a0d1
+SHA1 (patch-src_song_ModifiedSinceSongFilter.cxx) = c982a28c6066076fee59dbbd4050ca72bfb43f40
+SHA1 (patch-src_storage_plugins_NfsStorage.cxx) = 268a55dd422b12a079a34b1d885c901cee4a533f
 SHA1 (patch-src_util_WStringAPI.hxx) = 92f39096770943c26d8aaae8a7581d4daca2d233
