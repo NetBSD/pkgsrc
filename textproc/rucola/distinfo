@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/04/30 11:51:35 pin Exp $
+$NetBSD: distinfo,v 1.5 2026/06/25 12:48:15 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -699,9 +699,9 @@ Size (regex-automata-0.4.14.crate) = 618012 bytes
 BLAKE2s (regex-syntax-0.8.10.crate) = e2ae5809632d9dadfe451ea51eef4cc65796237eb50568db33594de2e308b06f
 SHA512 (regex-syntax-0.8.10.crate) = ca9c36c963c81c2fa36e1105cdd193a9b99ee259de1765e6e8010fb4091e49ac100e2ba0cd117adb0890b32e74421581dd6397eb896772168c6eae9da0a938c3
 Size (regex-syntax-0.8.10.crate) = 358781 bytes
-BLAKE2s (rucola-0.9.0.tar.gz) = 82fb73e82a2f11879db218cd8ca65ba7c93045804aad367ac40c6b40d4321a4b
-SHA512 (rucola-0.9.0.tar.gz) = 123f5c9d6588142a883e22b128c40950245d462ce4da49d1a2da3b9b6ad60533e9cded2a149fb5e6af68c7e8ce0cf4cbd5b2a887f263b80a8d1b42d0809716b9
-Size (rucola-0.9.0.tar.gz) = 244029 bytes
+BLAKE2s (rucola-0.10.0.tar.gz) = 971d119d2fdcc77bbd02b31ffed49af13dc2828b0fefe128ef8d4de474f5af52
+SHA512 (rucola-0.10.0.tar.gz) = ddfda20a124835acdde54c63c9e8658e832b85baf3d14709393a067f8653df59c10cd9d2a8b97f819c7928d932da79e8d4c952451ab65461d7efc06833c1976b
+Size (rucola-0.10.0.tar.gz) = 247381 bytes
 BLAKE2s (rust-argon2-0.8.3.crate) = b6de7c7ad352ed9dc7aeec09489906d7a070d9f5e5a2e5f8276c8d23dac3df35
 SHA512 (rust-argon2-0.8.3.crate) = f336dd3f90e1a49be107b641f9e9d513b6f8098dbdd1ab8aa2bd1fae329ce6840ad11a902b599922bef45d96ffb556d52b57d61218271bdccb7c85f9fe1da033
 Size (rust-argon2-0.8.3.crate) = 28313 bytes
