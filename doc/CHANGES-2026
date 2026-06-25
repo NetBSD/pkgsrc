@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3998 2026/06/25 08:26:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.3999 2026/06/25 08:33:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5997,3 +5997,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/corewars to 0.9.13nb4 [wiz 2026-06-25]
 	Updated www/curl to 8.21.0 [wiz 2026-06-25]
 	Updated www/libcurl-gnutls to 8.21.0 [wiz 2026-06-25]
+	Updated misc/stellarium to 26.2 [adam 2026-06-25]
+	Updated lang/nodejs to 26.4.0 [adam 2026-06-25]
