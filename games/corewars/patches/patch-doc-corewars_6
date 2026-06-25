@@ -1,0 +1,15 @@
+$NetBSD: patch-doc-corewars_6,v 1.1 2026/06/25 07:52:16 wiz Exp $
+
+Adapt manpage for argp patch.
+
+--- doc/corewars.6.orig	Wed Apr 12 15:10:09 2000
++++ doc/corewars.6	Wed Mar 24 23:04:18 2010
+@@ -38,7 +38,7 @@ called \fBRedcode\fP, is harder to learn but also more
+ .\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+ .\" respectively.
+ .SH OPTIONS
+-Use \fBcorewars-cmd --help\fP to get a list of supported command line options.
++Use \fBcorewars-cmd -H\fP to get a list of supported command line options.
+ .br
+ .SH AUTHORS
+ This manual page was written by Michael Vogt <mvogt@acm.org>,

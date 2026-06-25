@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.8 2022/12/24 14:24:34 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/06/25 07:52:15 wiz Exp $
 
 BLAKE2s (corewars-0.9.13.tar.gz) = 424ed84d33a26c31f44831556c8fa6688581b550502abeb607e427fd0c0e15ef
 SHA512 (corewars-0.9.13.tar.gz) = fe4194ac5efa7612a06d80c1218740de17a6dae6228f5e603074ab296f4a195adc68c0d8db5bbc9588947a536a9cfc208b411b024163adfe1cda072d05dd6a71
 Size (corewars-0.9.13.tar.gz) = 203874 bytes
+SHA1 (patch-aclocal_m4) = 9b5a6f055538c02741719b1f337a6bec203b4bc9
+SHA1 (patch-configure_ac) = ffc95a38174788f7ad6d4af4cf0ae2e7b5dcc336
+SHA1 (patch-doc-corewars_6) = 9928c6ce2561648f1dc1b419e11c835b6ff63c70
+SHA1 (patch-src_dirbrowser_c) = 6fe50113b1730d29e7ecab868490740a2876ee77
 SHA1 (patch-src_execute-cw.c) = 4c4a76cd4bed4b2bfb7e93a44c9df91f880c90e3
+SHA1 (patch-src_main-cmd_c) = 2d5c3568671f1d98c8670b9100d84b07656ad5a6
+SHA1 (patch-src_main-gui_c) = 093e442b8a5440bfd4fb70300cac41c986f16a0d
+SHA1 (patch-src_parser-cw_y) = 39f4251e5a9a8f946a2662c474cae07c446d4828
+SHA1 (patch-src_parser-rc_y) = a08c50e2a08e87eafe1fc4f2303bd8741181a3cf
