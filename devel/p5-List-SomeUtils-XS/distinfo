@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:51 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/06/25 21:00:59 wiz Exp $
 
-BLAKE2s (List-SomeUtils-XS-0.58.tar.gz) = 412a70d16a077ec6032a5809e38a636fa3940b2fef5c8bdde9df64701436644e
-SHA512 (List-SomeUtils-XS-0.58.tar.gz) = f89f5a35224a69a59c1d512a819bd725b324f0968ea447824a42c741c4ba66ee9522db939bd3e75d190e0f2f75d54100912b83a86d5e7dd1079025a57a245c38
-Size (List-SomeUtils-XS-0.58.tar.gz) = 94190 bytes
+BLAKE2s (List-SomeUtils-XS-0.59.tar.gz) = e0256aa1f6ee7516b0015b2e6a0dbffe77d0ef39c9c54caa7bb93332291ef285
+SHA512 (List-SomeUtils-XS-0.59.tar.gz) = 703816812356be085934cab6f22393d3afc31b49d00fc2dc4b519371f41e409adb361e778932525f6697881816470b7efc7a23126691d5b9865a772ab140cdbf
+Size (List-SomeUtils-XS-0.59.tar.gz) = 169762 bytes
