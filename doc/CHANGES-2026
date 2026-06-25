@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4014 2026/06/25 18:30:14 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4015 2026/06/25 18:47:41 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnsdist to 2.0.7 [drixter 2026-06-25]
 	Updated net/powerdns to 5.1.2 [drixter 2026-06-25]
 	Updated net/powerdns-recursor to 5.4.3 [drixter 2026-06-25]
+	Updated www/resterm to 0.44.2 [drixter 2026-06-25]
