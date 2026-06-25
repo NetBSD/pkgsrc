@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.119 2026/06/24 21:58:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.120 2026/06/25 08:43:01 wiz Exp $
 
 BUILDLINK_TREE+=	poppler
 
@@ -14,6 +14,7 @@ USE_CXX_FEATURES+=	c++20
 .include "../../devel/nss/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
