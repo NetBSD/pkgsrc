@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4000 2026/06/25 08:42:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4001 2026/06/25 08:53:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6000,3 +6000,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/stellarium to 26.2 [adam 2026-06-25]
 	Updated lang/nodejs to 26.4.0 [adam 2026-06-25]
 	Updated devel/py-ruff to 0.15.19 [wiz 2026-06-25]
+	Updated devel/py-anyio to 4.14.1 [adam 2026-06-25]
+	Updated databases/py-redis to 8.0.1 [adam 2026-06-25]
