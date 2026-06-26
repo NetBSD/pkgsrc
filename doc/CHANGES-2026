@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4024 2026/06/26 12:37:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4025 2026/06/26 12:53:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6034,3 +6034,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httplib2 to 0.32.0 [adam 2026-06-26]
 	Updated devel/py-syrupy to 5.3.4 [adam 2026-06-26]
 	Updated devel/py-typer to 0.26.8 [adam 2026-06-26]
+	Updated net/haproxy to 3.4.1 [adam 2026-06-26]
+	Updated devel/glib2 to 2.88.2 [adam 2026-06-26]
+	Updated devel/glib2-tools to 2.88.2 [adam 2026-06-26]
+	Updated devel/gdbus-codegen to 2.88.2 [adam 2026-06-26]
+	Updated devel/glib2-introspection to 2.88.2 [adam 2026-06-26]
