@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4018 2026/06/25 21:01:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4019 2026/06/26 06:15:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.8.1 [jun 2026-06-26]
 	Updated textproc/expat to 2.8.2 [wiz 2026-06-25]
 	Updated devel/p5-List-SomeUtils-XS to 0.59 [wiz 2026-06-25]
+	Updated devel/argp to 1.5.0nb1 [wiz 2026-06-26]
