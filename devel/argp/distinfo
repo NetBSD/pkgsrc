@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2026/06/23 09:52:25 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/06/26 06:15:09 wiz Exp $
 
 BLAKE2s (argp-standalone-1.5.0.tar.gz) = fa9a4f7195c8669d84bf754b6ee73c299c70b2d90c77fffc24380606f4da0bd1
 SHA512 (argp-standalone-1.5.0.tar.gz) = fa2eb61ea00f7a13385e5c1e579dd88471d6ba3a13b6353e924fe71914b90b40688b42a9f1789bc246e03417fee1788b1990753cda8c8d4a544e85f26b63f9e2
 Size (argp-standalone-1.5.0.tar.gz) = 65889 bytes
 SHA1 (patch-argp-fmtstream.c) = 9d4d213bdc733c708c13d5c4446a7c15ed668fdd
 SHA1 (patch-argp-help.c) = 16054c949616dbae1a06b64c53b0778c51433f81
+SHA1 (patch-meson.build) = 1983d37d2fc0f1347bcabbe0f85dc535af28a349

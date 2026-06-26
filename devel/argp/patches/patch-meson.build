@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/06/26 06:15:09 wiz Exp $
+
+Build a shared library.
+
+--- meson.build.orig	2026-06-25 19:52:53.238074874 +0000
++++ meson.build
+@@ -68,7 +68,7 @@ endif
+ 	argp_source += files(['mempcpy.c'])
+ endif
+ 
+-argp_library = static_library('argp',
++argp_library = shared_library('argp',
+ 	argp_source,
+ 	include_directories : '.',
+ 	dependencies : deps,

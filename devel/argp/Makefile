@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2026/06/23 09:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/26 06:15:09 wiz Exp $
 
 DISTNAME=	argp-standalone-1.5.0
 PKGNAME=	${DISTNAME:S/-standalone//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=argp-standalone/}
 GITHUB_PROJECT=	argp-standalone
