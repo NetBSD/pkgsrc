@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/13 11:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/26 06:39:21 adam Exp $
 
-DISTNAME=	hpack-4.1.0
+DISTNAME=	hpack-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hpack/}
 
