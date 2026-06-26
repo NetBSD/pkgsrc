@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4020 2026/06/26 06:41:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4021 2026/06/26 08:01:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-patiencediff to 0.2.19 [adam 2026-06-26]
 	Updated net/py-hpack to 4.2.0 [adam 2026-06-26]
 	Updated net/py-zeroconf to 0.150.0 [adam 2026-06-26]
+	Updated devel/py-ruff to 0.15.20 [wiz 2026-06-26]
