@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4029 2026/06/26 17:04:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4030 2026/06/26 21:00:59 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6045,3 +6045,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-python-socks to 2.8.2 [adam 2026-06-26]
 	Updated security/p5-Bytes-Random-Secure to 0.29nb10 [wiz 2026-06-26]
 	Updated security/p5-Bytes-Random-Secure-Tiny to 1.011nb2 [wiz 2026-06-26]
+	Updated www/resterm to 0.44.3 [drixter 2026-06-26]
