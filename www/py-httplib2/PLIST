@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/08/31 10:12:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/06/26 12:34:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,6 +14,9 @@ ${PYSITELIB}/httplib2/cacerts.txt
 ${PYSITELIB}/httplib2/certs.py
 ${PYSITELIB}/httplib2/certs.pyc
 ${PYSITELIB}/httplib2/certs.pyo
+${PYSITELIB}/httplib2/decode.py
+${PYSITELIB}/httplib2/decode.pyc
+${PYSITELIB}/httplib2/decode.pyo
 ${PYSITELIB}/httplib2/error.py
 ${PYSITELIB}/httplib2/error.pyc
 ${PYSITELIB}/httplib2/error.pyo
