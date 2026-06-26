@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.131 2026/06/23 13:51:11 pin Exp $
+# $NetBSD: go-modules.mk,v 1.132 2026/06/26 11:59:23 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -76,8 +76,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.1.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.1.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.6.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.6.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.8.0.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.8.0.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
@@ -117,8 +117,8 @@ GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.zip
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.mod
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.zip
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.1.mod
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.1.zip
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.2.mod
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.2.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.mod
