@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/06/26 17:01:29 wiz Exp $
 
 BLAKE2s (Bytes-Random-Secure-0.29.tar.gz) = 278c905b8a2ab45fd5fb1be25e59b5acf0862b6948bc18d9dc44a055262fd6e3
 SHA512 (Bytes-Random-Secure-0.29.tar.gz) = 72faf9e9fff1cc9641845d47b8dd1efb39861b4015246b169167d4f6050998e91d30b53d6a3e08daf91a838fcf29a05042073064204270de05b2f2ca9990fe64
 Size (Bytes-Random-Secure-0.29.tar.gz) = 28007 bytes
+SHA1 (patch-lib_Bytes_Random_Secure.pm) = 476970873f7dc3dd2cd37971b7dfb8714cd1a73c
