@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4026 2026/06/26 13:44:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4027 2026/06/26 13:51:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6041,3 +6041,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-introspection to 2.88.2 [adam 2026-06-26]
 	Updated net/gssdp to 1.6.6 [adam 2026-06-26]
 	Updated net/py-aioresponses to 0.7.9 [adam 2026-06-26]
+	Updated audio/py-discid to 1.4.1 [adam 2026-06-26]
+	Updated net/py-python-socks to 2.8.2 [adam 2026-06-26]
