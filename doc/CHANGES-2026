@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4022 2026/06/26 08:04:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4023 2026/06/26 11:59:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6030,3 +6030,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zeroconf to 0.150.0 [adam 2026-06-26]
 	Updated devel/py-ruff to 0.15.20 [wiz 2026-06-26]
 	Updated print/texlab to 5.26.0 [wiz 2026-06-26]
+	Updated shells/oh-my-posh to 29.19.0 [pin 2026-06-26]
