@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2026/06/20 13:34:25 kikadf Exp $
+# $NetBSD: Makefile,v 1.63 2026/06/26 21:28:57 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			149.0.7827.155
+PKGREVISION=			1
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -389,6 +390,7 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libudev-bsd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
