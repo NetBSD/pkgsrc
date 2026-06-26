@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4028 2026/06/26 17:01:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4029 2026/06/26 17:04:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-discid to 1.4.1 [adam 2026-06-26]
 	Updated net/py-python-socks to 2.8.2 [adam 2026-06-26]
 	Updated security/p5-Bytes-Random-Secure to 0.29nb10 [wiz 2026-06-26]
+	Updated security/p5-Bytes-Random-Secure-Tiny to 1.011nb2 [wiz 2026-06-26]
