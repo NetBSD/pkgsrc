@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/12 15:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/26 16:55:06 ryoon Exp $
 
 DISTNAME=	screen-4.9.1
 PKGREVISION=	2
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-colors256
 
 PKG_SHELL=		bin/screen
 
-USE_TOOLS+=		automake autoconf autoreconf makeinfo
+USE_TOOLS+=		automake autoconf269 autoreconf makeinfo
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
