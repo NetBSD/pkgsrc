@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/10/31 11:48:44 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/26 06:37:22 adam Exp $
 
-DISTNAME=	patiencediff-0.2.18
+DISTNAME=	patiencediff-0.2.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/patiencediff/}
@@ -13,9 +13,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # or later
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.5.0:../../devel/py-setuptools-rust
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} patiencediff patiencediff-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	patiencediff
 
 .include "cargo-depends.mk"
 

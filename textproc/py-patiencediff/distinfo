@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/10/31 11:48:44 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/06/26 06:37:22 adam Exp $
 
 BLAKE2s (autocfg-1.5.0.crate) = d9738bc6755bf80a73705691ef930ca883cd58e4a2d1162b5c0a09cdc7029304
 SHA512 (autocfg-1.5.0.crate) = f279856f234d39d369623576acf9546a1ca24d7fe449f36d4fb93ea75a7efaf2c4015b9616a69bbbed358c5e5882e16b045352f046aa4c049b3d13b1e8257b08
@@ -21,9 +21,9 @@ Size (once_cell-1.21.3.crate) = 34534 bytes
 BLAKE2s (patiencediff-0.2.1.crate) = 55c922f7668f3d66253aeb28c58929f5d68eede981d55a7400419ecd190916f7
 SHA512 (patiencediff-0.2.1.crate) = 500b3f42a6fd936a3a2fa6b65f5ea0f6b8e37f50be5f002dd2ae76d2138765e45547a6aac68586ded2d5970609e5c2238ce0f5b2fb5b7396e7ca8914f0c1c2c1
 Size (patiencediff-0.2.1.crate) = 21717 bytes
-BLAKE2s (patiencediff-0.2.18.tar.gz) = 6f432e69d67c7410c737e0f5e2a572f5f7a967fb524e9a9d12484cacd4f2bc62
-SHA512 (patiencediff-0.2.18.tar.gz) = 9eaddfb4533bb213f982b83c4d82fc9235d32b587820af9b1575395ce8b53bb05818b16cb9e721eb41880ffa4cf614f420332aeb2c2823f4fe78372fa629c2e7
-Size (patiencediff-0.2.18.tar.gz) = 24521 bytes
+BLAKE2s (patiencediff-0.2.19.tar.gz) = 00d05b8e07f6efb06554aec46964064026a162906034221436e2e2d421310d66
+SHA512 (patiencediff-0.2.19.tar.gz) = 714dd4f1107d75070233ff545d026c075e3afafb91e86571ef8a1a27fe938a678716b660bbac1caaa708144e52de76414d36dd1987d5f09dfcf6d8ee7a8820ed
+Size (patiencediff-0.2.19.tar.gz) = 24536 bytes
 BLAKE2s (portable-atomic-1.11.1.crate) = 3758e723fa680cf28dc6cc870b7f521f37f8a3abf788e07b7178f9c875a53d29
 SHA512 (portable-atomic-1.11.1.crate) = 4c037ae0b4aef43077bdbf803389bc078d963f20d023e2e1d339a54f67fa9b27c174e7c1b6eca8881ecf301e30c431632d2c0dcedfb5b19552892fac0f81e2e1
 Size (portable-atomic-1.11.1.crate) = 185506 bytes
