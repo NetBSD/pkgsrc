@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/04/01 16:59:51 abs Exp $
+$NetBSD: distinfo,v 1.2 2026/06/26 17:04:18 wiz Exp $
 
 BLAKE2s (Bytes-Random-Secure-Tiny-1.011.tar.gz) = 55f73a924691060a957a7e0457724d0fef8d68f4b03b37e9b5139d67dd5c7bdc
 SHA512 (Bytes-Random-Secure-Tiny-1.011.tar.gz) = b04b765af3d4ecd337571b53ff02d9efc54a08a598ece5df82357c8e364fbeff0f2a97561916a0e362f5e89e83939cdd10c3a3b3288e2952324fa57490d640be
 Size (Bytes-Random-Secure-Tiny-1.011.tar.gz) = 28598 bytes
+SHA1 (patch-lib_Bytes_Random_Secure_Tiny.pm) = d88b90ff66add7a2204b6919eb0b036380a98b98
