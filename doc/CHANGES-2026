@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4032 2026/06/27 10:59:33 mef Exp $
+$NetBSD: CHANGES-2026,v 1.4033 2026/06/27 14:48:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6048,3 +6048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.44.3 [drixter 2026-06-26]
 	Updated security/wolfssl to 5.9.2 [fox 2026-06-27]
 	Updated math/R to 4.6.1 [mef 2026-06-27]
+	Updated devel/feluda to 1.14.0 [pin 2026-06-27]
