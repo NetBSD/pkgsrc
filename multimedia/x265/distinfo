@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2026/04/20 18:05:25 adam Exp $
+$NetBSD: distinfo,v 1.46 2026/06/27 22:53:56 he Exp $
 
 BLAKE2s (x265_4.2.tar.gz) = cb25b083232b66c93aa916ed714ff3f91a05473b58638179e8c504dcdc7ef5d0
 SHA512 (x265_4.2.tar.gz) = 0c4ded0388b79ecdfe28b7f48da095ecb12a7e1fc7cd92f8d35a850087de562081582de69846a7d64e03889d6b8da620b5fa084dac3ab8734a05552f68bf8623
@@ -8,6 +8,7 @@ SHA1 (patch-common_common.h) = eece838c76a1f199af29de88d9fc5c5a7a7243c0
 SHA1 (patch-common_cpu.cpp) = 9848fdb3664f3403f4c0c540fe77a41b4accb5ea
 SHA1 (patch-common_cpu.h) = 000f9b6e40a459db4e3428730c8a9f5eeb6d9449
 SHA1 (patch-common_quant.cpp) = 648e21479e7af9007e5aca1db86a7f1de50047ea
+SHA1 (patch-common_threading.h) = f25b8f99d5dc3c69bca67519f558eaef61042154
 SHA1 (patch-common_version.cpp) = b7deaf67279a391e79e1820078bfd248fb66759a
 SHA1 (patch-encoder_analysis.cpp) = c9661f34f73b03055273331065052f1f6bb41507
 SHA1 (patch-encoder_encoder.cpp) = 7305a5b065d02eb5f3824b1af1ab4a85a14cb4c4

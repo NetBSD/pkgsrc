@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/04/20 18:05:25 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/06/27 22:53:56 he Exp $
 
 DISTNAME=	x265_4.2
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265_git/downloads/
 
@@ -39,4 +40,5 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SYSTEM_PROCESSOR:STRING=${MACHINE_ARCH}
 .endif
 
 .include "../../devel/cmake/build.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
