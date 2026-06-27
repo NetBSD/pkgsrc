@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1632 2026/06/05 10:08:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1633 2026/06/27 20:46:20 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -318,6 +318,7 @@ SUBDIR+=	kismet
 SUBDIR+=	knewstuff
 SUBDIR+=	knock
 SUBDIR+=	knot
+SUBDIR+=	knot-resolver
 SUBDIR+=	krdc
 SUBDIR+=	krfb
 SUBDIR+=	ktorrent
