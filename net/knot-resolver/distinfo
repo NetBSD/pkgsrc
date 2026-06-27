@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/27 20:39:04 drixter Exp $
+
+BLAKE2s (knot-resolver-6.4.0.tar.xz) = 29437878e674cdb80ee4d23b4521aee7fdf1014f3edf68ac5d49d6973a5cf177
+SHA512 (knot-resolver-6.4.0.tar.xz) = 3992a014e64899c1867773714d5505b44f714bab511af2b7657456c79706b75eae0ba1f9f93017dd5648793fbbf32baf48208a5789422d2e42a1a361b0d91311
+Size (knot-resolver-6.4.0.tar.xz) = 2367316 bytes

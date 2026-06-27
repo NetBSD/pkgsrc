@@ -1,0 +1,3 @@
+Knot Resolver is a full caching DNS resolver implementation.
+The core architecture is tiny and efficient, written in C and LuaJIT,
+providing a foundation and a state-machine-like API for extension modules.
