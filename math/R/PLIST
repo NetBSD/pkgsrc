@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2026/05/18 13:35:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2026/06/27 10:59:23 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
