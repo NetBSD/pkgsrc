@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4033 2026/06/27 14:48:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4034 2026/06/27 14:50:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6049,3 +6049,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/wolfssl to 5.9.2 [fox 2026-06-27]
 	Updated math/R to 4.6.1 [mef 2026-06-27]
 	Updated devel/feluda to 1.14.0 [pin 2026-06-27]
+	Updated editors/redox to 0.6.2 [pin 2026-06-27]
