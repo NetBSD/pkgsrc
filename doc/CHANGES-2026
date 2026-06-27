@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4031 2026/06/27 09:07:45 fox Exp $
+$NetBSD: CHANGES-2026,v 1.4032 2026/06/27 10:59:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6047,3 +6047,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Bytes-Random-Secure-Tiny to 1.011nb2 [wiz 2026-06-26]
 	Updated www/resterm to 0.44.3 [drixter 2026-06-26]
 	Updated security/wolfssl to 5.9.2 [fox 2026-06-27]
+	Updated math/R to 4.6.1 [mef 2026-06-27]
