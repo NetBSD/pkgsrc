@@ -1,8 +1,18 @@
-$NetBSD: distinfo,v 1.19 2026/01/31 18:10:10 gdt Exp $
+$NetBSD: distinfo,v 1.20 2026/06/27 20:07:53 gdt Exp $
 
 BLAKE2s (XEphem-4.2.0.tar.gz) = 28bfc97fcd86769c3e9926695e9c77ac19da95c2f5d162ad63bc928cb875b77a
 SHA512 (XEphem-4.2.0.tar.gz) = 97756bc299821e95cbc06facc3091795feb245db033193fdf587bcfd7a83142a15552a1f8aa53c040c87cb75021424b94bbed5a747fb9783f5a0cac6fb4ddb3e
 Size (XEphem-4.2.0.tar.gz) = 17317398 bytes
 SHA1 (patch-aa) = f72467338392d2cfc6f9bfde07c3c4f1e0f259d0
+SHA1 (patch-compiler.c) = 6503330c37bc79fa9be3d5ee1754020fb237f2d1
+SHA1 (patch-gallerymenu.c) = b1aeff4f641df6fb9e222c62954177146baadf3c
 SHA1 (patch-homeio.c) = b2891558c607b1e0a57a5a786b8e399c5f9102e8
+SHA1 (patch-indimenu.c) = 1f3cad50a8a3d039a2986dd3d9632671a42f3c6c
+SHA1 (patch-mainmenu.c) = 63ce07c5edc9233da3b7e9c810d486687049011c
+SHA1 (patch-marsmenu.c) = 164f486d1f22f9c354f026689fad487112260848
+SHA1 (patch-saveres.c) = eb7028c69bfe63817a90e825ec5d7ad10dd96c8f
+SHA1 (patch-sites.c) = 97828621e29d438d2ba6fcf426183c5cf76b1a60
+SHA1 (patch-skyip.c) = ea6a140647f1ff0756ba81db2f9499f3eac10a87
+SHA1 (patch-skyviewmenu.c) = a5eea432918629aba89005b6139b330762de97d8
 SHA1 (patch-tools_xedb_xedb.c) = 3f1310401f5eb49d35f90a25f99d7bccc05cd79d
+SHA1 (patch-xmisc.c) = 7c5190ecce8919cffe06ad68719b6ca289fd13df
