@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/03/23 10:12:16 nia Exp $
+# $NetBSD: Makefile,v 1.80 2026/06/27 13:21:12 gdt Exp $
 
 VERSION=	4.2.0
 DISTNAME=	XEphem-${VERSION}
@@ -11,6 +11,9 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/XEphem/XEphem
 COMMENT=	Interactive astronomical ephemeris program
 LICENSE=	mit
+
+# There are ctype(3) problems.
+# \todo Grab patch from https://github.com/XEphem/XEphem/pull/126 
 
 # License was previously xephem-licenes (boutique, almost free). Do not
 # delete this comment; I will do so eventually when licensing is 100%
