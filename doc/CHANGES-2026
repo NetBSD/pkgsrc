@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4034 2026/06/27 14:50:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4035 2026/06/27 14:51:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6050,3 +6050,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/R to 4.6.1 [mef 2026-06-27]
 	Updated devel/feluda to 1.14.0 [pin 2026-06-27]
 	Updated editors/redox to 0.6.2 [pin 2026-06-27]
+	Updated textproc/rumdl to 0.2.24 [pin 2026-06-27]
