@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4037 2026/06/27 22:55:24 he Exp $
+$NetBSD: CHANGES-2026,v 1.4038 2026/06/28 06:17:16 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6053,3 +6053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.24 [pin 2026-06-27]
 	Added net/knot-resolver version 6.4.0 [drixter 2026-06-27]
 	Updated multimedia/x265 to 4.2nb1 [he 2026-06-27]
+	Updated inputmethod/ja-freewnn-lib to 1.11alpha23nb1 [tsutsui 2026-06-28]
