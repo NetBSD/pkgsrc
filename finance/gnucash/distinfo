@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.135 2026/03/30 21:32:53 wiz Exp $
+$NetBSD: distinfo,v 1.136 2026/06/28 20:13:21 wiz Exp $
 
-BLAKE2s (gnucash-5.15.tar.bz2) = 6d41a4f67b3a68e7fc8b2e905f27ae6bd7e1c9adb81fe8622215167f6833c68a
-SHA512 (gnucash-5.15.tar.bz2) = cf97fcc199e95db8ad756ff8c7e83321a6d47f3c720e66c3f6092c6c31e40a9462c142baca898a84384f639af5c27f17e5a157058d62eeb799fddc6aa9b20796
-Size (gnucash-5.15.tar.bz2) = 16455386 bytes
-SHA1 (patch-CMakeLists.txt) = 8edbd8a025c3a4a0284a692ce1856e036d24acd4
+BLAKE2s (gnucash-5.16.tar.bz2) = b71b3e4b7d8aec36828626d00293d50bc5ed57b21993762c12de97495449926a
+SHA512 (gnucash-5.16.tar.bz2) = 926f76f07fd17082e33d1ffe25e1c2cd0293cb0d34dd636c7e785e83e6d0e04bf55102171b0e28e8c20bcdc3adcf27a95526f3fe06ac0321fe1d5c745533e1c0
+Size (gnucash-5.16.tar.bz2) = 15539568 bytes
