@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4094 2026/06/28 15:30:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4095 2026/06/28 15:40:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6127,3 +6127,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-structlog to 26.1.0 [adam 2026-06-28]
 	Updated www/ruby-sass-embedded to 1.101.0 [taca 2026-06-28]
 	Updated www/ruby-selenium-webdriver to 4.45.0 [taca 2026-06-28]
+	Updated math/py-numpy to 2.5.0 [wiz 2026-06-28]
