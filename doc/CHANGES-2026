@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4052 2026/06/28 11:53:47 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4053 2026/06/28 11:55:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6079,3 +6079,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/miniflux to 2.3.2 [drixter 2026-06-28]
 	Updated textproc/dasel to 3.11.2 [drixter 2026-06-28]
 	Updated devel/pango to 1.58.0 [pin 2026-06-28]
+	Updated editors/tp-note to 1.26.3 [pin 2026-06-28]
