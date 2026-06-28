@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4051 2026/06/28 11:06:27 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4052 2026/06/28 11:53:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6078,3 +6078,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-blessed to 1.44.0 [adam 2026-06-28]
 	Updated www/miniflux to 2.3.2 [drixter 2026-06-28]
 	Updated textproc/dasel to 3.11.2 [drixter 2026-06-28]
+	Updated devel/pango to 1.58.0 [pin 2026-06-28]
