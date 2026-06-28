@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/02/25 15:10:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:29 wiz Exp $
 
 DISTNAME=	lap-0.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython

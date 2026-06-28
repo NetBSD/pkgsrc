@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/06/07 04:57:31 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/06/28 15:41:08 wiz Exp $
 
 DISTNAME=	soundfile-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

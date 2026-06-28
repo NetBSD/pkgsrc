@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:28 wiz Exp $
 
 DISTNAME=	astroML-1.0.2.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata-[0-9]*:../../net/py-test-remotedat
 
 WHEEL_NAME=	${DISTNAME:tl}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-astropy
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-astropy
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

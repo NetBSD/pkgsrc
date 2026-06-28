@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/05/19 11:32:37 adam Exp $
+# $NetBSD: Makefile,v 1.96 2026/06/28 15:41:35 wiz Exp $
 
 DISTNAME=	reportlab-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 
 # The files should already be included in the distfile.
 WHEEL_ARGS+=	-C=--no-download-t1-files
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

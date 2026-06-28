@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/03/03 08:19:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/28 15:41:13 wiz Exp $
 
 DISTNAME=	apycula-0.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-msgspec-[0-9]*:../../devel/py-msgspec
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 .for c in pack pll unpack

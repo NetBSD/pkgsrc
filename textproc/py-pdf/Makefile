@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2026/06/21 08:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/06/28 15:41:41 wiz Exp $
 
 DISTNAME=	pypdf-6.13.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -20,6 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2026/05/14 13:52:11 gdt Exp $
+# $NetBSD: Makefile,v 1.107 2026/06/28 15:41:31 wiz Exp $
 
 DISTNAME=	scipy-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -86,7 +86,7 @@ WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/f2py-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/f2py

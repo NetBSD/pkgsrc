@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/27 11:00:10 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/28 15:41:47 wiz Exp $
 #
 
 DISTNAME=	jupyterhub-5.4.6
@@ -29,6 +29,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.1:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-tornado>=5.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3.2:../../devel/py-traitlets
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PY_RENAME_BINARIES=	jupyterhub jupyterhub-singleuser
 REPLACE_NODEJS=		share/jupyterhub/static/components/requirejs/bin/r.js

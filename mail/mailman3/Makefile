@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/07/05 11:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/28 15:41:26 wiz Exp $
 
 DISTNAME=	mailman-3.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
+
+BROKEN=		"Only supports Python 3.11 but requires dependencies that don't support Python 3.11"
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
@@ -76,7 +78,7 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 # uses nntplib, removed from Python 3.13
 # https://gitlab.com/mailman/mailman/-/issues/1176
-PYTHON_VERSIONS_ACCEPTED=	312 311
+PYTHON_VERSIONS_ACCEPTED=	311
 
 post-patch:
 	${CP} ${FILESDIR}/crontab.sample ${WRKSRC}/crontab.sample

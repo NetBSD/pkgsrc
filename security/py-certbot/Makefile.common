@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.106 2026/05/22 09:15:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.107 2026/06/28 15:41:36 wiz Exp $
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
@@ -30,4 +30,4 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311

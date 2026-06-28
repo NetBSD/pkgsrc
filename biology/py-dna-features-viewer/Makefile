@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/02/19 07:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/28 15:41:09 wiz Exp $
 
 DISTNAME=	dna_features_viewer-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-bcbio-gff>0:../../biology/py-bcbio-gff
 DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 #TEST_DEPENDS+=	${PYPKGPREFIX}-bokeh>=0:../../wip/py-bokeh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # 12 failed, 8 passed
 # due to missing test data

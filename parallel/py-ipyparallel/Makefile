@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/05/20 13:18:27 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/28 15:41:35 wiz Exp $
 
 DISTNAME=	ipyparallel-9.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -38,7 +38,7 @@ REPLACE_PYTHON+=	ipyparallel/controller/app.py
 REPLACE_PYTHON+=	ipyparallel/controller/heartmonitor.py
 REPLACE_PYTHON+=	ipyparallel/engine/app.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 07:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/28 15:41:49 wiz Exp $
 
 DISTNAME=	matrix_sydent-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/matrix_//}
@@ -31,7 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.6.0:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_SELF_CONFLICT=	yes
 

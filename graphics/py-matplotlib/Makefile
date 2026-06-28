@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2026/05/12 05:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.114 2026/06/28 15:41:24 wiz Exp $
 
 DISTNAME=	matplotlib-3.10.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -39,7 +39,7 @@ WHEEL_ARGS+=	-Cinstall-args="--tags=data,python-runtime,runtime,tests"
 # to ensure that we set it to "no" first to get accurate dependencies.
 PYTHON_FOR_BUILD_ONLY=	no
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # as of 3.10.6
 # 906 failed, 7091 passed, 1603 skipped, 32 xfailed

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/14 14:16:22 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/06/28 15:41:45 wiz Exp $
 
 DISTNAME=	djangocms-googlemap-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.7:../../www/py-django-filer
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.3:../../www/py-django-treebeard
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

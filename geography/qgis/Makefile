@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2026/06/22 19:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.276 2026/06/28 15:41:21 wiz Exp $
 
 # This is intentionally 3.44, about to be Long Term Release.  Please
 # do not update to later branches without MAINTAINER consensus.  The
@@ -107,8 +107,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # for metasearch
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 .include "../../lang/python/pyversion.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/pgsql.buildlink3.mk"
 

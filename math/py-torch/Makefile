@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/04 21:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/28 15:41:31 wiz Exp $
 
 DISTNAME=	pytorch-v2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,pytorch-v,torch-,}
@@ -70,7 +70,7 @@ MAKE_ENV+=	BUILD_TEST=0
 MAKE_ENV+=	USE_CUDNN=0
 MAKE_ENV+=	USE_DISTRIBUTED=1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 314
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 314
 
 post-extract:
 	# For mkpatches(1) and developers only.

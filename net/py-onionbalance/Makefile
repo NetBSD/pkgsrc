@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/01/12 11:40:11 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/06/28 15:41:34 wiz Exp $
 
 DISTNAME=	onionbalance-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/03/31 13:19:37 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/06/28 15:41:10 wiz Exp $
 
 DISTNAME=	cairosvg-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # tests need a copy of the directory test_non_regression/cairosvg_reference
 

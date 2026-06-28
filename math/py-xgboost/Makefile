@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/06/24 05:28:22 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:32 wiz Exp $
 
 DISTNAME=	xgboost-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake ninja
 GCC_REQD+=		8.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # as of 2.1.4:
 # NotImplementedError: System SunOS not supported

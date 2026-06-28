@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/03/07 11:50:03 nia Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:32 wiz Exp $
 
 DISTNAME=	bulk-test-icu-20260307
 CATEGORIES=	meta-pkgs
@@ -13,6 +13,8 @@ META_PACKAGE=	yes
 RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # All of these (primarily leaf) packages depend on ICU.
 # Feel free to add one if you care about it not breaking.

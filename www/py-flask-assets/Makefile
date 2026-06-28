@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/14 18:56:06 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:46 wiz Exp $
 
 DISTNAME=	Flask-Assets-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

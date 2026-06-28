@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/01/26 09:13:18 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/06/28 15:41:11 wiz Exp $
 
 DISTNAME=	multidict-6.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed-[0-9]*:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

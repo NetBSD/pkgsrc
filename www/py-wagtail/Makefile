@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/12/28 08:25:44 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/06/28 15:41:50 wiz Exp $
 
 DISTNAME=	wagtail-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -52,7 +52,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ruff>=0.1.5:../../devel/py-ruff
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 REPLACE_PYTHON+=	wagtail/project_template/manage.py-tpl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/06/12 07:51:23 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/06/28 15:41:43 wiz Exp $
 
 DISTNAME=	xml2rfc-3.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	xml2rfc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

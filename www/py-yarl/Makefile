@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2026/05/20 04:52:15 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/06/28 15:41:51 wiz Exp $
 
 DISTNAME=	yarl-1.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

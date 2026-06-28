@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/06/23 09:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/06/28 15:41:22 wiz Exp $
 
 DISTNAME=	willow-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^w/W/}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.1.1:../../sysutils/py-filetype
 # heif
 DEPENDS+=	${PYPKGPREFIX}-pillow_heif>=1.0.0:../../graphics/py-pillow_heif
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

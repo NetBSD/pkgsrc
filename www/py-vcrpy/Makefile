@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/01/05 16:08:27 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/06/28 15:41:50 wiz Exp $
 
 DISTNAME=	vcrpy-8.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>0:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin>=1.0.0:../../www/py-test-httpbin
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # as of 6.0.1
 # 60 failed, 173 passed, 9 skipped, 14 errors

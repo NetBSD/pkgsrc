@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2026/02/09 16:54:37 kleink Exp $
+# $NetBSD: Makefile,v 1.61 2026/06/28 15:41:35 wiz Exp $
 
 DISTNAME=	weasyprint-68.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

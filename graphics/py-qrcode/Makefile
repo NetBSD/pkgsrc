@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/09/27 21:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/28 15:41:24 wiz Exp $
 
 DISTNAME=	qrcode-8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-pypng-[0-9]*:../../graphics/py-pypng
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 REPLACE_PYTHON+=	qrcode/console_scripts.py
 

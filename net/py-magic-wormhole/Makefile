@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/10/09 08:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/06/28 15:41:33 wiz Exp $
 
 # Work around setuptools insisting that distfiles not match the (pypi)
 # package name.
@@ -52,6 +52,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server>=0.3.1:../../net/py-
 USE_LANGUAGES=	# none
 
 AUTO_MKDIRS=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_SELF_CONFLICT=	yes # completion files
 
