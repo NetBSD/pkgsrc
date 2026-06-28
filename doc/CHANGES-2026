@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4045 2026/06/28 08:07:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4046 2026/06/28 08:11:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6063,3 +6063,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-libtmux to 0.59.0 [adam 2026-06-28]
 	Updated devel/py-setuptools-rust to 1.13.0 [adam 2026-06-28]
 	Updated misc/py-tibs to 0.11.0 [adam 2026-06-28]
+	Updated databases/sqlite3 to 3.53.3 [adam 2026-06-28]
+	Updated databases/sqlite3-diff to 3.53.3 [adam 2026-06-28]
+	Updated databases/sqlite3-docs to 3.53.3 [adam 2026-06-28]
+	Updated databases/sqlite3-tcl to 3.53.3 [adam 2026-06-28]
+	Updated devel/lemon to 1.0.3.53.3 [adam 2026-06-28]
