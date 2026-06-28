@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4105 2026/06/28 20:26:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4106 2026/06/28 22:26:23 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6139,3 +6139,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/gnucash-docs to 5.16 [wiz 2026-06-28]
 	Updated graphics/jbig2enc to 0.32 [adam 2026-06-28]
 	Updated geography/pdal-lib to 2.10.2 [adam 2026-06-28]
+	Updated math/ocaml-zarith to 1.14nb3 [dholland 2026-06-28]
