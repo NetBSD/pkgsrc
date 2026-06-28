@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4073 2026/06/28 14:50:50 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4074 2026/06/28 14:52:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6100,3 +6100,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-pairing_heap to 3.1.1 [taca 2026-06-28]
 	Updated devel/ruby-rbtree to 0.4.7 [taca 2026-06-28]
 	Updated devel/ruby-shoulda-matchers to 8.0.1 [taca 2026-06-28]
+	Updated devel/ruby-version_gem to 1.1.13 [taca 2026-06-28]
