@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4057 2026/06/28 14:00:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4058 2026/06/28 14:01:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6084,3 +6084,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/xh to 0.26.1 [pin 2026-06-28]
 	Updated www/gotosocial to 0.21.3 [wiz 2026-06-28]
 	Updated graphics/libheif to 1.23.1 [wiz 2026-06-28]
+	Updated www/libpsl to 0.22.0 [wiz 2026-06-28]
