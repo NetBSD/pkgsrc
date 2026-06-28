@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2026/06/28 00:36:15 gdt Exp $
+# $NetBSD: Makefile,v 1.83 2026/06/28 00:37:42 gdt Exp $
 
 VERSION=	4.2.0
 PKGREVISION=	1
@@ -15,21 +15,6 @@ LICENSE=	mit
 
 # There are ctype(3) problems.
 # \todo Grab patch from https://github.com/XEphem/XEphem/pull/126 
-
-# License was previously xephem-licenes (boutique, almost free). Do not
-# delete this comment; I will do so eventually when licensing is 100%
-# resolved.
-#
-# From: "Elwood C. Downey" <ecdowney@clearskyinstitute.com>
-# Subject: Re: license terms, tarball mirroring, binary packages
-# To: "Greg Troxel" <gdt@ir.bbn.com>
-# Date: Wed, 10 May 2006 18:41:01 -0600 (MDT)
-# [rest omitted]
-# In the mean time, please consider this email to grant permissions for
-# the NetBSD distros to make available both through online download and
-# physical media both the original XEphem tarball and a binary built
-# from the original tarball (including possible changes for porting but
-# not changes in functionality).
 
 # old-school makefile with no synchronization
 # (not reported upstream because a bug report today would be disrespectful)
