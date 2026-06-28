@@ -1,9 +1,7 @@
-$NetBSD: patch-saveres.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_saveres.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- saveres.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ saveres.c
+--- GUI/xephem/saveres.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/saveres.c
 @@ -1785,10 +1785,10 @@ char *from;
  {
  	char *lastnwsp;		/* last non w/s char in to not counting '\0' */

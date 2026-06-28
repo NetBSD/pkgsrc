@@ -1,13 +1,7 @@
-$NetBSD: patch-tools_xedb_xedb.c,v 1.1 2026/01/31 18:05:27 gdt Exp $
+$NetBSD: patch-GUI_xephem_tools_xedb_xedb.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-While xedb doesn't seem to be used, patch wrong hardcoded path to app
-defaults, in conjuction with a SUBST.
-
-Not reported upstream until there is more clarity about this change,
-and also about future maintenance.
-
---- tools/xedb/xedb.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ tools/xedb/xedb.c
+--- GUI/xephem/tools/xedb/xedb.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/tools/xedb/xedb.c
 @@ -188,13 +188,8 @@ findResFile (char path[])
  	    return (found);
  	}

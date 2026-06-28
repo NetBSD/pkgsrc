@@ -1,9 +1,7 @@
-$NetBSD: patch-gallerymenu.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_gallerymenu.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- gallerymenu.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ gallerymenu.c
+--- GUI/xephem/gallerymenu.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/gallerymenu.c
 @@ -661,7 +661,7 @@ trimws (char *s)
  {
  	char *s0;

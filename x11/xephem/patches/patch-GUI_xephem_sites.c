@@ -1,9 +1,7 @@
-$NetBSD: patch-sites.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_sites.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- sites.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ sites.c
+--- GUI/xephem/sites.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/sites.c
 @@ -183,9 +183,9 @@ int maxn;
  	 * n is an index, not a count.
  	 */
