@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.60 2026/06/05 10:21:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.61 2026/06/28 13:49:07 wiz Exp $
 
-DISTNAME=	gotosocial-0.19.0
-PKGREVISION=	11
+DISTNAME=	gotosocial-0.21.3-source-code
+PKGNAME=	${DISTNAME:S/-source-code//}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://codeberg.org/superseriousbusiness/gotosocial/releases/download/v${PKGVERSION_NOREV}/
+SRC_DISTFILE=	gotosocial-${PKGVERSION_NOREV}-source-code.tar.gz
+WRKSRC=		${WRKDIR}/gotosocial-${PKGVERSION_NOREV}-source-code
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gotosocial.org/
 COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
 
-# TODO: fix build of this package with Go 1.25 and remove this line
-GO_VERSION_DEFAULT=	124
-
 USE_TOOLS+=	pax tar
 
-ASSETS=		${DISTNAME:S/-/_/}_web-assets.tar.gz
-DISTFILES:=	${DEFAULT_DISTFILES} ${ASSETS}
-EXTRACT_ONLY=	${DISTFILES}
+ASSETS=		gotosocial_${PKGVERSION_NOREV}_web-assets.tar.gz
+DISTFILES=	${SRC_DISTFILE} ${ASSETS}
 
-SITES.${ASSETS}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_TAG}/}
+EXTRACT_ONLY=	${SRC_DISTFILE} ${ASSETS}
+EXTRACT_DIR=	${WRKSRC}
 
 MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
+
+# Set compilation flags inspired from gotosocial's build.sh
+GOFLAGS+=		-trimpath -tags=osusergo,nomsgpack,stdlibjson -ldflags='-s -w -X main.Version=v${PKGVERSION}'
+MAKE_ENV+=		CGO_ENABLED=0
 
 .include "go-modules.mk"
 
@@ -68,16 +70,14 @@ SUBST_SED.systemdpaths=		-e 's,/gotosocial/gotosocial,${PREFIX}/bin/gotosocial,g
 SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 
 post-install:
-	${MKDIR} ${DESTDIR}/${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/gotosocial.service ${DESTDIR}/${EGDIR}/gotosocial.service
 	# Installs the assets source, may not be necessary
 	cd ${WRKSRC} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
-	cd ${WRKDIR} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
-	# do not install extra binaries
-	# TOOD: check if they are wanted
-	cd ${DESTDIR}${PREFIX}/bin && ${RM} gen gen-ulid process-emoji process-media
+	# Do not install test/dev binaries
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} gen process-emoji process-media
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
