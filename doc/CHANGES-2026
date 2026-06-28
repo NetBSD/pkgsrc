@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4054 2026/06/28 11:56:02 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4055 2026/06/28 11:57:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6081,3 +6081,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/pango to 1.58.0 [pin 2026-06-28]
 	Updated editors/tp-note to 1.26.3 [pin 2026-06-28]
 	Updated net/ttl to 0.20.1 [pin 2026-06-28]
+	Updated www/xh to 0.26.1 [pin 2026-06-28]
