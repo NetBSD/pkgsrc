@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.166 2026/06/24 22:12:33 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2026/06/28 14:04:05 wiz Exp $
 
-DISTNAME=	geeqie-2.8
-PKGREVISION=	2
+DISTNAME=	geeqie-2.9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -29,10 +28,6 @@ USE_LANGUAGES=		c c++
 # awk -W
 USE_TOOLS=		bash:run gawk msgfmt pkg-config
 
-REPLACE_BASH+=		plugins/*/*
-REPLACE_BASH+=		doc/*.sh
-REPLACE_BASH+=		g*.sh
-REPLACE_BASH+=		version.sh
 REPLACE_BASH+=		data/plugins/resize-image/downsize
 
 MESON_ARGS+=	-Dgq_localedir='${PREFIX}/${PKGLOCALEDIR}/locale'
