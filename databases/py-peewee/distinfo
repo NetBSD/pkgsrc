@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.99 2026/06/12 04:47:06 adam Exp $
+$NetBSD: distinfo,v 1.100 2026/06/28 14:52:51 adam Exp $
 
-BLAKE2s (peewee-4.0.7.tar.gz) = f64524abae656f692c977672d05487e62e936036d587b29f37d000dd5f3b5c8a
-SHA512 (peewee-4.0.7.tar.gz) = d35fa5c5768361eaecc49c080ed47317bac383cc68be515a51e15c31dbff0cf4b64d73c3b06e8e0c40020489f601f23d28fb7d7d0dbc81b32077b956cc4d4691
-Size (peewee-4.0.7.tar.gz) = 744667 bytes
+BLAKE2s (peewee-4.1.1.tar.gz) = b6b54b34f02e8c63dad71e8dd30635ede573f5641ad7e53eb7d00e49d3697136
+SHA512 (peewee-4.1.1.tar.gz) = 5ca37e23e8b810168eca25fd06abfe3bb3b5cedb1855d2bbfa55247926edae8f6ceecc6ae580a98449059c1bf8f6a988d9f54f03b9210e24bc9aecf6756808a5
+Size (peewee-4.1.1.tar.gz) = 772233 bytes
