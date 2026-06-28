@@ -1,3 +1,34 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.1 2026/06/22 01:08:28 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.2 2026/06/28 18:51:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
+
+Pullup ticket #7140 - requested by taca
+x11/kitty: security fix
+
+Pullup ticket #7141 - requested by taca
+security/gnupg2: security fix
+
+Pullup ticket #7142 - requested by taca
+www/curl: security fix
+
+Pullup ticket #7143 - requested by taca
+net/nsd: security fix
+
+Pullup ticket #7144 - requested by taca
+net/powerdns: security fix
+
+Pullup ticket #7145 - requested by taca
+net/powerdns-recursor: security fix
+
+Pullup ticket #7146 - requested by taca
+textproc/expat: security fix
+
+Pullup ticket #7147 - requested by taca
+security/p5-Bytes-Random-Secure: security fix
+
+Pullup ticket #7148 - requested by taca
+p5-Bytes-Random-Secure-Tiny: security fix
+
+Pullup ticket #7149 - requested by taca
+security/wolfssl: security fix
+
