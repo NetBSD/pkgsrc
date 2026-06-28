@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4081 2026/06/28 15:08:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4082 2026/06/28 15:09:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6109,3 +6109,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-net-ssh to 7.3.3 [taca 2026-06-28]
 	Updated security/ruby-oauth-tty to 1.0.12 [taca 2026-06-28]
 	Updated security/ruby-snaky_hash to 2.0.6 [taca 2026-06-28]
+	Updated graphics/gdk-pixbuf2 to 2.44.7 [adam 2026-06-28]
+	Updated devel/glibmm2.68 to 2.88.1 [adam 2026-06-28]
+	Updated net/gupnp-tools to 0.12.3 [adam 2026-06-28]
