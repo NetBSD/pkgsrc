@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4092 2026/06/28 15:26:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4093 2026/06/28 15:28:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6125,3 +6125,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-faraday to 2.14.3 [taca 2026-06-28]
 	Updated devel/py-txaio to 26.6.1 [adam 2026-06-28]
 	Updated sysutils/py-structlog to 26.1.0 [adam 2026-06-28]
+	Updated www/ruby-sass-embedded to 1.101.0 [taca 2026-06-28]
