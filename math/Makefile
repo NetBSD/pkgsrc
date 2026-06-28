@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.636 2026/06/22 05:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.637 2026/06/28 16:23:44 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -169,6 +169,7 @@ SUBDIR+=	blas
 SUBDIR+=	blas64
 SUBDIR+=	blitz++
 SUBDIR+=	boolstuff
+SUBDIR+=	cadical
 SUBDIR+=	calc
 SUBDIR+=	calcoo
 SUBDIR+=	cantor
