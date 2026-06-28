@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2026/05/19 07:34:21 adam Exp $
+# $NetBSD: Makefile,v 1.153 2026/06/28 15:40:18 wiz Exp $
 
-DISTNAME=	numpy-2.4.6
+DISTNAME=	numpy-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -24,19 +24,13 @@ FORCE_C_STD=		c99
 # meson checks for gcc 9.3
 GCC_REQD+=		9
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../math/py-numpy/make_env.mk"
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
-PLIST_SRC=		PLIST
 .include "../../lang/python/pyversion.mk"
-# Python 3.12 has no distutils anymore.
-.if ${PYTHON_VERSION} < 312
-PLIST_SRC+=		PLIST.distutils
-.endif
-PRINT_PLIST_AWK+=	/\/distutils\// { $$0 = "$${PLIST.distutils}" $$0 }
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
@@ -80,17 +74,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
-# Files don't exist with Python 3.12, so add '-f' to ${RM}
-# (Please check if this is still necessary after updates.)
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/command/config.py.orig
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/log.py.orig
-.for bin in f2py numpy-config
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	f2py numpy-config
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -98,8 +82,8 @@ SUBST_MESSAGE.paths=	Fixing path to numpy-configure (for tests).
 SUBST_FILES.paths=	numpy/tests/test_configtool.py
 SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
 
-# as of 2.4.2
-# 35 failed, 47867 passed, 378 skipped, 2817 deselected, 33 xfailed, 1 xpassed, 14 warnings
+# as of 2.5.0
+# 35 failed, 47765 passed, 336 skipped, 3634 deselected, 33 xfailed, 1 xpassed, 14 warnings
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
