@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4080 2026/06/28 15:06:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4081 2026/06/28 15:08:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6108,3 +6108,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-recog to 3.1.30 [taca 2026-06-28]
 	Updated security/ruby-net-ssh to 7.3.3 [taca 2026-06-28]
 	Updated security/ruby-oauth-tty to 1.0.12 [taca 2026-06-28]
+	Updated security/ruby-snaky_hash to 2.0.6 [taca 2026-06-28]
