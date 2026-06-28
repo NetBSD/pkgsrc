@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/02/23 14:27:24 taca Exp $
+# $NetBSD: Makefile,v 1.29 2026/06/28 14:50:40 taca Exp $
 
-DISTNAME=	shoulda-matchers-7.0.1
+DISTNAME=	shoulda-matchers-8.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
