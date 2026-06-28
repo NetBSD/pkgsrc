@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2026/06/11 07:16:55 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2026/06/28 11:54:28 pin Exp $
 
-DISTNAME=	tp-note-1.26.1
-PKGREVISION=	1
+DISTNAME=	tp-note-1.26.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
-GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
@@ -14,8 +12,6 @@ LICENSE=	mit OR apache-2.0
 .include "cargo-depends.mk"
 
 RUST_REQ=	1.91.1
-
-WRKSRC=		${WRKDIR}/tp-note-v1.26.1-0e00184d14ed0f2857ab0b9bc0cb2ca2e7714ea7
 
 USE_TOOLS+=	pkg-config
 
