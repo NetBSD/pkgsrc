@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2026/06/23 11:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/06/28 11:07:02 drixter Exp $
 
-DISTNAME=	dasel-3.11.1
+DISTNAME=	dasel-3.11.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TomWright/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/TomWright/dasel/
 COMMENT=	Select, put and delete data from JSON, TOML, YAML, XML and CSV
 LICENSE=	mit
