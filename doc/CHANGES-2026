@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4104 2026/06/28 20:15:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4105 2026/06/28 20:26:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6137,3 +6137,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/ledger32 to 3.2.1nb8 [wiz 2026-06-28]
 	Updated finance/gnucash to 5.16 [wiz 2026-06-28]
 	Updated finance/gnucash-docs to 5.16 [wiz 2026-06-28]
+	Updated graphics/jbig2enc to 0.32 [adam 2026-06-28]
+	Updated geography/pdal-lib to 2.10.2 [adam 2026-06-28]
