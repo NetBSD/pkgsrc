@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/10/09 07:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:44 wiz Exp $
 
 DISTNAME=	aiohttp-cors-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=2.2.0:../../www/py-aiohttp
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

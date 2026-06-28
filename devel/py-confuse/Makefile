@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/02/01 17:55:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/28 15:41:13 wiz Exp $
 
 DISTNAME=	confuse-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

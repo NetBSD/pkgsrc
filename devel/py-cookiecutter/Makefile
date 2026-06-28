@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/03/12 05:35:35 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/06/28 15:41:13 wiz Exp $
 
 DISTNAME=	cookiecutter-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

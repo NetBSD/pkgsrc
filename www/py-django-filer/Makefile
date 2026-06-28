@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/02/12 14:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/06/28 15:41:45 wiz Exp $
 
 DISTNAME=	django_filer-3.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-easy-thumbnails>=2.0:../../www/py-easy-thumbnails
 DEPENDS+=	${PYPKGPREFIX}-svglib>=1.5.1:../../graphics/py-svglib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

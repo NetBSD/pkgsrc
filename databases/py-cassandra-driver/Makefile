@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/02/19 08:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/06/28 15:41:11 wiz Exp $
 
 DISTNAME=	python-driver-3.29.3
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
@@ -20,7 +20,7 @@ WHEEL_NAME=	${DISTNAME:S/python-/cassandra_/}
 
 WRKSRC=		${WRKDIR}/cassandra-${DISTNAME}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/pyversion.mk"
 

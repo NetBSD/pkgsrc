@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/05/03 13:18:24 kim Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/28 15:41:27 wiz Exp $
 
 DISTNAME=	postfix_mta_sts_resolver-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "version.mk"
 

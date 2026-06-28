@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/05/17 07:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/06/28 15:41:24 wiz Exp $
 
 DISTNAME=	mcomix-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.36.0:../../devel/py-gobject3
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_SELF_CONFLICT=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/06/23 09:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/06/28 15:41:35 wiz Exp $
 
 DISTNAME=	psutils-3.3.15
 # renamed from pspdfutils to psutils in 3.3.7
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wand>=0:../../graphics/py-wand
 CONFLICTS+=	psutils<3
 
 INSTALLATION_DIRS+=	${PKGMANDIR}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_SELF_CONFLICT=		yes
 

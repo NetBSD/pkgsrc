@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/02/27 07:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/06/28 15:41:31 wiz Exp $
 
 DISTNAME=	scikit_learn-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -24,7 +24,7 @@ GCC_REQD+=	8
 REPLACE_PYTHON+=	sklearn/_build_utils/version.py
 REPLACE_PYTHON+=	sklearn/_build_utils/tempita.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/sklearn/preprocessing/_target_encoder_fast.pyx.orig

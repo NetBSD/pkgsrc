@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/06/23 09:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/06/28 15:41:22 wiz Exp $
 
 DISTNAME=	blender-3.6.18
 PKGREVISION=	14
@@ -77,7 +77,7 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
 
 INSTALLATION_DIRS=	bin share/blender
 
-PYTHON_VERSIONS_ACCEPTED=	311
+PYTHON_VERSIONS_ACCEPTED=	# 311 but also py-numpy, which does not support 311
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build

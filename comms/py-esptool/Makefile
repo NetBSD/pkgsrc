@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/12/15 11:07:49 triaxx Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/28 15:41:10 wiz Exp $
 
 DISTNAME=	esptool-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../devel/py-rich-click
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_SELF_CONFLICT=	yes
 

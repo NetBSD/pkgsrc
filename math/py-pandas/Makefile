@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/06/05 10:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.69 2026/06/28 15:41:29 wiz Exp $
 
 DISTNAME=	pandas-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ GCC_REQD+=		10
 
 REPLACE_PYTHON+=	generate_version.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # This would otherwise be installed, causing PLIST mismatch
 post-patch:

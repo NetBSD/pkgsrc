@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/06/08 09:57:50 adam Exp $
+# $NetBSD: Makefile,v 1.108 2026/06/28 15:41:44 wiz Exp $
 
 DISTNAME=	aiohttp-3.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,7 +33,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-zlib-ng-[0-9]*:../../archivers/py-zlib-ng
 #TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster-[0-9]*:../../wip/py-blockbuster
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)

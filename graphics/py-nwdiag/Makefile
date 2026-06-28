@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/05 15:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:24 wiz Exp $
 
 DISTNAME=	nwdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_PKG_RESOURCES=	yes
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 .for bin in nwdiag packetdiag rackdiag

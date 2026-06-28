@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/23 20:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/06/28 15:41:08 wiz Exp $
 
 DISTNAME=	aeneas-1.7.3
 PKGREVISION=	21
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	AENEAS_FORCE_CEW=True
 WHEEL_NAME=	${DISTNAME}.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # Tries to use deprecated numpy.distuils
 # https://github.com/readbeyond/aeneas/issues/312

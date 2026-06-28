@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/05/15 09:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/06/28 15:41:18 wiz Exp $
 
 DISTNAME=	ledger-3.3.2
 PKGREVISION=	10
@@ -19,6 +19,8 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	check
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC:Q}/${CMAKE_BUILD_DIR:Q}
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC:Q}/${CMAKE_BUILD_DIR:Q}
+
+BROKEN=		"does not support Python > 3.11 but py-numpy does not support < 3.12"
 
 # https://github.com/ledger/ledger/issues/2332
 PYTHON_VERSIONS_ACCEPTED=	311 # PyUnicode_GET_SIZE

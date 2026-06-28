@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/03/09 08:52:01 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/06/28 15:41:34 wiz Exp $
 
 DISTNAME=	moto-5.1.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,7 +35,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 .for bin in moto_proxy moto_server

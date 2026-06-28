@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/02/15 13:22:32 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/06/28 15:41:15 wiz Exp $
 
 DISTNAME=	ipykernel-7.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -38,7 +38,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

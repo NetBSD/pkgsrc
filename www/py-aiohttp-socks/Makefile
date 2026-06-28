@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/12/09 18:01:36 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/06/28 15:41:44 wiz Exp $
 
 DISTNAME=	aiohttp_socks-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-python-socks>=2.4.3:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

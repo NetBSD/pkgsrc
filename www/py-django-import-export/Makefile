@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/05/20 09:57:07 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/06/28 15:41:45 wiz Exp $
 
 DISTNAME=	django_import_export-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-tablib>=3.7.0:../../textproc/py-tablib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

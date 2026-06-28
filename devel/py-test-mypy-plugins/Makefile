@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/05/14 13:22:30 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/06/28 15:41:18 wiz Exp $
 
 DISTNAME=	pytest_mypy_plugins-4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/g}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 SUBST_CLASSES+=		cmd
 SUBST_STAGE.cmd=	pre-configure

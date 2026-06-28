@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/06/06 06:36:42 adam Exp $
+# $NetBSD: Makefile,v 1.66 2026/06/28 15:41:50 wiz Exp $
 
 DISTNAME=	uvicorn-0.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	uvicorn
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # Needs a2wsgi
 pre-test:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/01/20 16:06:25 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2026/06/28 15:41:19 wiz Exp $
 
 DISTNAME=	beancount-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

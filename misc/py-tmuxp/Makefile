@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/05/04 06:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:32 wiz Exp $
 
 DISTNAME=	tmuxp-${VERSION}
 PKGREVISION=	1
@@ -15,9 +15,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-libtmux>=0.55:../../misc/py-libtmux
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6:../../textproc/py-yaml
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
-
 # codecov
 # coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7:../../devel/py-test-cov
@@ -27,6 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0:../../textproc/py-sphinx
 
 # as of 1.67.0
 # 66 failed, 897 passed, 2 skipped, 59 errors, 25 rerun
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 USE_LANGUAGES=	# none
 

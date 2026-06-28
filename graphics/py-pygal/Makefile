@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/12/26 10:30:21 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/06/28 15:41:24 wiz Exp $
 
 DISTNAME=	pygal-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # as of 3.0.4
 # 4414 passed, 8710 warnings

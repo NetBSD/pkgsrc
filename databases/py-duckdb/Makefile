@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/05/30 15:37:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/28 15:41:11 wiz Exp $
 
 DISTNAME=	duckdb-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES+=	c c++
 
 USE_TOOLS+=	cmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 WHEEL_ARGS+=	-C skbuild.build-dir=${WRKDIR}/build
 

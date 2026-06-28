@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 07:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/06/28 15:41:09 wiz Exp $
 
 DISTNAME=	multiqc-1.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-natsort-[0-9]*:../../textproc/py-natsort
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # test status as of 1.25.2
 # 44 failed, 46 passed, 357 errors

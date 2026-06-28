@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/01/08 15:10:53 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:28 wiz Exp $
 
 DISTNAME=	gwcs-0.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.14.1:../../math/py-scipy
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-astropy>=0.11.0:../../devel/py-test-astropy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>0:../../devel/py-test-doctestplus
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-astropy
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-astropy
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/05/08 16:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/06/28 15:41:09 wiz Exp $
 
 DISTNAME=	biopython-1.87
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	biopython
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # tests fail because pypi distfile is missing a lot of the required files
 

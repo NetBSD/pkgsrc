@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/02/09 10:50:09 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/06/28 15:41:42 wiz Exp $
 
 DISTNAME=	pyaml-26.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

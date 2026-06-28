@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2026/04/02 08:50:43 adam Exp $
+# $NetBSD: Makefile,v 1.102 2026/06/28 15:41:22 wiz Exp $
 
 DISTNAME=	pillow-12.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
@@ -26,6 +26,8 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
 # as of 12.1.1
 # 2 failed, 4959 passed, 102 skipped, 3 xfailed
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 .include "../../lang/python/wheel.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
