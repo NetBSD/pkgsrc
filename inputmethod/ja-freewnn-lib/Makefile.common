@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2026/01/01 09:24:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2026/06/28 06:16:27 tsutsui Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=freewnn/63271/}
 MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 CATEGORIES=	inputmethod
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+MAINTAINER=	tsutsui@NetBSD.org
 #HOMEPAGE=	https://freewnn.osdn.jp/
 COMMENT=	Japanese/Chinese/Korean input method
 LICENSE=	gnu-gpl-v2
@@ -30,16 +30,3 @@ SUBST_CLASSES+=		imdictdir
 SUBST_STAGE.imdictdir=	post-extract
 SUBST_SED.imdictdir=	-e 's|@LIBDIR/@LANG/dic|${WNNDICTDIR}/@LANG|'
 SUBST_FILES.imdictdir=	Wnn/jd/jserverrc
-
-# Fix GCC warnings:
-# rk_main.c:1441:41: error: array subscript has type 'char'
-# rk_main.c:1453:24: error: array subscript has type 'char'
-# rk_main.c:1454:26: error: array subscript has type 'char'
-# rk_main.c:1505:36: error: array subscript has type 'char'
-#
-# The variable ebf_sw should really be a boolean, not an int.
-#
-SUBST_CLASSES+=		char
-SUBST_STAGE.char=	pre-configure
-SUBST_FILES.char=	Wnn/romkan/rk_main.c
-SUBST_SED.char=		-e 's,char ebf_sw = 0,int ebf_sw = 0,'

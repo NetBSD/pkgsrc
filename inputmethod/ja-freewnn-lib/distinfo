@@ -1,6 +1,25 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:49:36 nia Exp $
+$NetBSD: distinfo,v 1.17 2026/06/28 06:16:27 tsutsui Exp $
 
 BLAKE2s (FreeWnn-1.1.1-a023.tar.gz) = a7ff74d8d90a273e6e6a3b84494a1d175bcb43e58db41f4870f35ef43ec6f4e3
 SHA512 (FreeWnn-1.1.1-a023.tar.gz) = e5255fe17dd6099cb9a33453d279f9fb64312ad1401ee6e77e5d39151d7a34636372fe48631be95a75b26400aa1204204e9aa88b5b50eb7be02bcbb5b93c76a2
 Size (FreeWnn-1.1.1-a023.tar.gz) = 3712238 bytes
+SHA1 (patch-PubdicPlus_pod.c) = 04975cc2552b0f4ec25a8be74dc070d0b3036e7c
+SHA1 (patch-Wnn_etc_sstrings.c) = e28bdd74a5d9b257b5554af33865c37a0e63061f
+SHA1 (patch-Wnn_include_jllib.h) = 7bac52f7b8a1b9a63d4b06921d1b19aa4c58d250
+SHA1 (patch-Wnn_include_jutil.h) = 2806768f73a98404fd3f218c5897a647f69964c8
+SHA1 (patch-Wnn_jlib_jl.c) = ad70af217328876e100f0ba9b824d12346b5bf0a
+SHA1 (patch-Wnn_jserver_de__header.h) = 705688990d8e9bd8519f9bb0157dda049e8ecb77
+SHA1 (patch-Wnn_jserver_jikouho.c) = a945e6f83b4fdfc4bf30813ca01dc6a3789b4275
+SHA1 (patch-Wnn_jserver_jikouho__d.c) = aed041017ac96df4b99860f0fcccaa18f08eb42a
+SHA1 (patch-Wnn_jserver_jishoop.c) = 5a27dba4fe5bad38826b7585b554bdcd7cf243ae
+SHA1 (patch-Wnn_jserver_snd__rcv.c) = db73d401160e04582ccff2f969d9b57d68894b12
+SHA1 (patch-Wnn_jutil_atod.c) = a0fa823064f4629fc733d07316df85f588b9de75
+SHA1 (patch-Wnn_jutil_atof.c) = 5883beb71a21dce01456284d1fe8ea6a10d6bb62
+SHA1 (patch-Wnn_jutil_atorev.c) = f4c0ea91e6024b9bb3a2bec8473a6e11a7cb838f
+SHA1 (patch-Wnn_jutil_ujisf.c) = d72a767ae3cd7ad48dc24ddb7aeb8d62047b6c7d
+SHA1 (patch-Wnn_romkan_rk__main.c) = 1ab3251a15a616ef35ba0927fb3956a17e49eab6
+SHA1 (patch-Xwnmo_romkan__m_rk__main.c) = 1b474482e28814e555452c6e95ed8a4ddbf8bb36
+SHA1 (patch-Xwnmo_romkan__m_rk__multi.h) = 8c6af6d5744a20c00a9e202d92d64bb24a96e0b2
+SHA1 (patch-Xwnmo_xjutil_kensaku.c) = 8b977992dbebcd58e249c2cc341bba6814f29389
+SHA1 (patch-configure) = a12abeef3eb73abe5facc655ccce9cdc77a414d5
 SHA1 (patch-makerule.mk.in) = 3c27d57081ac5937bb280c1b8cdaf12e489d2384
