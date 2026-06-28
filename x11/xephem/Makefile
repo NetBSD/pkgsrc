@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2026/06/27 20:07:53 gdt Exp $
+# $NetBSD: Makefile,v 1.82 2026/06/28 00:36:15 gdt Exp $
 
 VERSION=	4.2.0
 PKGREVISION=	1
@@ -35,7 +35,11 @@ LICENSE=	mit
 # (not reported upstream because a bug report today would be disrespectful)
 MAKE_JOBS_SAFE=		no
 
+# \todo Fix this WRKSRC line (move subdir to BUILD_DIRS), because
+# while the build is done in that dir, files not in that subdir are
+# used in the build -- which breaks mkpatches.
 WRKSRC=			${WRKDIR}/${DISTNAME}/GUI/xephem
+
 USE_TOOLS+=		gmake pax perl:run
 
 X11_LDFLAGS+=		${LIBS}
