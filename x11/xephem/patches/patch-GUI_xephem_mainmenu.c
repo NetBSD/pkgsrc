@@ -1,9 +1,7 @@
-$NetBSD: patch-mainmenu.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_mainmenu.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- mainmenu.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ mainmenu.c
+--- GUI/xephem/mainmenu.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/mainmenu.c
 @@ -2241,7 +2241,7 @@ Field *fp;
  		    char *txt0, *txt;
  

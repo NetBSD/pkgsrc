@@ -1,9 +1,7 @@
-$NetBSD: patch-xmisc.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_xmisc.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- xmisc.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ xmisc.c
+--- GUI/xephem/xmisc.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/xmisc.c
 @@ -1130,7 +1130,7 @@ strtolower (char *str)
  
  	/* actually faster to /not/ call isupper() first */

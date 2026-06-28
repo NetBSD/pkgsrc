@@ -1,9 +1,7 @@
-$NetBSD: patch-indimenu.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_indimenu.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- indimenu.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ indimenu.c
+--- GUI/xephem/indimenu.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/indimenu.c
 @@ -2520,7 +2520,7 @@ handleOneBLOB (XMLEle *root, IBLOB *bp, 
  
  	/* rig up a file name from the timestamp and format */

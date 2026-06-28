@@ -1,12 +1,7 @@
-$NetBSD: patch-homeio.c,v 1.1 2026/01/31 18:10:10 gdt Exp $
+$NetBSD: patch-GUI_xephem_homeio.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-In part, patch path to app-defaults.
-
-Not submitted upstream until a) better understood and b) upstream
-maintenance status is clearer.
-
---- homeio.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ homeio.c
+--- GUI/xephem/homeio.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/homeio.c
 @@ -11,6 +11,9 @@
  #include <time.h>
  #include <sys/types.h>

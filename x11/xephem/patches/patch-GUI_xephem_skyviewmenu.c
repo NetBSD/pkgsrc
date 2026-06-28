@@ -1,9 +1,7 @@
-$NetBSD: patch-skyviewmenu.c,v 1.1 2026/06/27 20:07:53 gdt Exp $
+$NetBSD: patch-GUI_xephem_skyviewmenu.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
 
-Fix ctype(3) UB.   Taken from https://github.com/XEphem/XEphem/pull/126
-
---- skyviewmenu.c.orig	2024-02-13 14:35:36.000000000 +0000
-+++ skyviewmenu.c
+--- GUI/xephem/skyviewmenu.c.orig	2024-02-13 14:35:36.000000000 +0000
++++ GUI/xephem/skyviewmenu.c
 @@ -9703,7 +9703,7 @@ int d;		/* diam of object we are labelin
  	    if (sv_ggc && chk_greeklabel (name, &gl, &g)) {
  		XTextExtents (sv_gf, &g, 1, &dir, &asc, &des, &xcs);
