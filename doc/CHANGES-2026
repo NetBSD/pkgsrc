@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4047 2026/06/28 08:19:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4048 2026/06/28 08:43:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6071,3 +6071,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ngtcp2 to 1.24.0 [adam 2026-06-28]
 	Updated www/nghttp3 to 1.17.0 [adam 2026-06-28]
 	Updated audio/strawberry to 1.2.21 [adam 2026-06-28]
+	Updated emulators/atari800 to 7.0.0 [adam 2026-06-28]
+	Updated emulators/qemu to 11.0.2 [adam 2026-06-28]
+	Updated sysutils/qemu-guest-agent to 11.0.2 [adam 2026-06-28]
