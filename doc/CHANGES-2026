@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4064 2026/06/28 14:14:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4065 2026/06/28 14:30:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6091,3 +6091,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/ruby-zip to 3.4.1 [taca 2026-06-28]
 	Updated security/py-google-auth to 2.55.1 [wiz 2026-06-28]
 	Updated time/py-icalendar to 7.2.0 [wiz 2026-06-28]
+	Updated devel/ruby-io-event to 1.16.4 [taca 2026-06-28]
