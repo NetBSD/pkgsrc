@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/28 16:22:35 alnsn Exp $
+
+BLAKE2s (cadical-3.0.0.tar.gz) = fe6e9d0d8b5038146f22ac811034836d2115777850d544d100f98e4113052156
+SHA512 (cadical-3.0.0.tar.gz) = df0149ca658d55a6c0dbd6209ddf21578ccfc2142eae76847302a7fb9716d25b1ca4ead7cc79cf5d63f0e71538aaa0d94863c0bb3c77a0287b78bf15316eec56
+Size (cadical-3.0.0.tar.gz) = 885834 bytes
