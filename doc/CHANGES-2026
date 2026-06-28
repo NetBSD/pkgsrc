@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4049 2026/06/28 08:57:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4050 2026/06/28 11:04:00 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6076,3 +6076,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/qemu-guest-agent to 11.0.2 [adam 2026-06-28]
 	Added devel/py-jinxed version 2.0.4 [adam 2026-06-28]
 	Updated devel/py-blessed to 1.44.0 [adam 2026-06-28]
+	Updated www/miniflux to 2.3.2 [drixter 2026-06-28]
