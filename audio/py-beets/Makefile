@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2026/05/10 12:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/06/28 14:06:41 wiz Exp $
 
-DISTNAME=	beets-2.11.0
+DISTNAME=	beets-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
