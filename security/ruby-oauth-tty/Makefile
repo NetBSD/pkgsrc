@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2026/05/31 06:07:55 taca Exp $
+# $NetBSD: Makefile,v 1.6 2026/06/28 15:06:11 taca Exp $
 
-DISTNAME=	oauth-tty-1.0.8
+DISTNAME=	oauth-tty-1.0.12
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.com/oauth-xx/oauth-tty
+HOMEPAGE=	https://github.com/ruby-oauth/oauth-tty
 COMMENT=	OAuth 1.0 TTY CLI
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-version_gem>=1.1.9<2:../../devel/ruby-version_gem
+DEPENDS+=	${RUBY_PKGPREFIX}-version_gem>=1.1.12<2:../../devel/ruby-version_gem
 
 USE_LANGUAGES=	# none
 
