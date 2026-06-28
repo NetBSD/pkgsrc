@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4083 2026/06/28 15:12:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4084 2026/06/28 15:14:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6113,3 +6113,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glibmm2.68 to 2.88.1 [adam 2026-06-28]
 	Updated net/gupnp-tools to 0.12.3 [adam 2026-06-28]
 	Updated security/ruby-oauth to 1.1.7 [taca 2026-06-28]
+	Updated www/ruby-aws-partitions to 1.1262.0 [taca 2026-06-28]
