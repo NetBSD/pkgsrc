@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2026/06/07 19:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/06/28 11:04:21 drixter Exp $
 
-DISTNAME=	miniflux-2.3.1
+DISTNAME=	miniflux-2.3.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=miniflux/}
 GITHUB_PROJECT=	v2
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/miniflux/v2/
 COMMENT=	Minimalist and opinionated feed reader
 LICENSE=	apache-2.0
