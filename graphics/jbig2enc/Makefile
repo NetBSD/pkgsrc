@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/04/24 08:50:43 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/28 20:01:11 adam Exp $
 
-DISTNAME=	jbig2enc-0.31
+DISTNAME=	jbig2enc-0.32
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/agl/jbig2enc
 COMMENT=	JBIG2 encoder
 LICENSE=	apache-2.0
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
