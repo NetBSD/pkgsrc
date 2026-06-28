@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2026/06/22 19:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/06/28 08:19:01 adam Exp $
 
-DISTNAME=	strawberry-1.2.20
-PKGREVISION=	1
+DISTNAME=	strawberry-1.2.21
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ COMMENT=	Music player and music collection organizer (based on Clementine)
 LICENSE=	gnu-gpl-v3
 
 USE_CC_FEATURES=	c99
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
@@ -26,8 +25,6 @@ DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
 DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
 DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
 DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
-
-USE_CXX_FEATURES+=	c++17
 
 .include "../../mk/oss.buildlink3.mk"
 

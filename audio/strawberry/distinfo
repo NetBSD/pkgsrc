@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2026/06/22 10:41:10 adam Exp $
+$NetBSD: distinfo,v 1.30 2026/06/28 08:19:01 adam Exp $
 
-BLAKE2s (strawberry-1.2.20.tar.xz) = 7ad423c154c0188dd30735d3af5f2b33f1666cd9e10e4c2877d4adb4ac2fb6c1
-SHA512 (strawberry-1.2.20.tar.xz) = 60d0e56d29b519a9f1f84c362580d502c83757e60cf51da07d3524f9925c5d5e66877afc2c17057b33e50f56ea290f31139f52bd223b82b733e4ef666d67f6ed
-Size (strawberry-1.2.20.tar.xz) = 11644812 bytes
+BLAKE2s (strawberry-1.2.21.tar.xz) = d45ae696ab34468722cf89f9cd96a3a9ca6a3930002a6b9a20ece4631d5411df
+SHA512 (strawberry-1.2.21.tar.xz) = 04753adc7c91ac8f82da85d01b0ff56aa5deb06b6ed73d67b4dd071fe5196266b69152e4ce00aa71856f2f74b9fa1387d7d1adbf7b422974de85a2dd785e2f3a
+Size (strawberry-1.2.21.tar.xz) = 11660932 bytes
 SHA1 (patch-CMakeLists.txt) = 97e61ba9af9c09fe21ed452f4727131a06847941
 SHA1 (patch-dist_CMakeLists.txt) = 8abaef03d614bfb0607f4a99647557f352ea7e5a
 SHA1 (patch-src_analyzer_blockanalyzer.cpp) = b798929eb1dc57647014c24116f249601e973789
