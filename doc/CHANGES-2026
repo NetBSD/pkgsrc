@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4097 2026/06/28 16:24:55 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.4098 2026/06/28 16:29:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6130,3 +6130,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.5.0 [wiz 2026-06-28]
 	Updated textproc/py-pdf to 6.14.2 [wiz 2026-06-28]
 	Added math/cadical version 3.0.0 [alnsn 2026-06-28]
+	Updated finance/ledger to 3.4.1 [wiz 2026-06-28]
