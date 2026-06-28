@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2026/03/28 04:54:38 pho Exp $
+# $NetBSD: Makefile,v 1.21 2026/06/28 17:59:25 osa Exp $
 
 NAME=		quickjs
-QJS_DATE=	2025-12-22
+QJS_DATE=	2026-06-04
 VERSION=	${QJS_DATE:S/-//g}
 DISTNAME=	${NAME}-${QJS_DATE}
 PKGNAME=	${NAME}-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GITHUB:=bellard/}
-GITHUB_PROJECT=	${NAME}
-GITHUB_TAG=	f1139494d18a2053630c5ed3384a42bb70db3c53
+MASTER_SITES=	https://bellard.org/quickjs/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bellard.org/quickjs/
