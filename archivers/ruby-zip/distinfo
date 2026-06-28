@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/05/31 14:43:35 taca Exp $
+$NetBSD: distinfo,v 1.26 2026/06/28 14:08:50 taca Exp $
 
-BLAKE2s (rubyzip-3.3.1.gem) = a7114e6b8bf96ba9fa8a3f540036895acc2bbbfcc0a21eba5d4f308711bb3d8f
-SHA512 (rubyzip-3.3.1.gem) = 843ab589a208aa50fdb6414300adb24e821142ce2a7cba3d70d2bccbddc46edcb408f7ed6f5de186bb3f87b4bcaef4d3675ff9037ba594462830d3d064de85ed
-Size (rubyzip-3.3.1.gem) = 57856 bytes
+BLAKE2s (rubyzip-3.4.1.gem) = 3d80033459606dd3be279d48ca9a8d6effa14670b28d44275dbfc5d846473c01
+SHA512 (rubyzip-3.4.1.gem) = df8fa8ac41133c04ec9cc53a7dcd4769113f60e4d45b212de9622dee8f7da73aa57b97547282c84bd4eb0d781078ac84fc69c4a839fa04c8a931a4c309fcf22b
+Size (rubyzip-3.4.1.gem) = 58880 bytes
