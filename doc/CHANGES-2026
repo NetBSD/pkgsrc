@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4082 2026/06/28 15:09:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4083 2026/06/28 15:12:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6112,3 +6112,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/gdk-pixbuf2 to 2.44.7 [adam 2026-06-28]
 	Updated devel/glibmm2.68 to 2.88.1 [adam 2026-06-28]
 	Updated net/gupnp-tools to 0.12.3 [adam 2026-06-28]
+	Updated security/ruby-oauth to 1.1.7 [taca 2026-06-28]
