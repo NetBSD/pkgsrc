@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4055 2026/06/28 11:57:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4056 2026/06/28 13:50:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6082,3 +6082,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/tp-note to 1.26.3 [pin 2026-06-28]
 	Updated net/ttl to 0.20.1 [pin 2026-06-28]
 	Updated www/xh to 0.26.1 [pin 2026-06-28]
+	Updated www/gotosocial to 0.21.3 [wiz 2026-06-28]
