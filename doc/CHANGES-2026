@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4091 2026/06/28 15:24:09 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4092 2026/06/28 15:26:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6123,3 +6123,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/py-braintree to 4.45.0 [adam 2026-06-28]
 	Updated www/ruby-crass to 1.0.7 [taca 2026-06-28]
 	Updated www/ruby-faraday to 2.14.3 [taca 2026-06-28]
+	Updated devel/py-txaio to 26.6.1 [adam 2026-06-28]
+	Updated sysutils/py-structlog to 26.1.0 [adam 2026-06-28]
