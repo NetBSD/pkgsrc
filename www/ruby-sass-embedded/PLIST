@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/06/07 04:19:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/06/28 15:28:49 taca Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -181,7 +181,7 @@ ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/tsconfig.build.tsbuildin
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/package.json
 ${GEM_EXTSDIR}/sass/package-lock.json
 ${GEM_EXTSDIR}/sass/package.json
-${GEM_EXTSDIR}/sass/sass-1.100.0.tgz
+${GEM_EXTSDIR}/sass/sass-1.101.0.tgz
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/sass
@@ -189,7 +189,7 @@ ${GEM_LIBDIR}/ext/sass/Rakefile
 ${GEM_LIBDIR}/ext/sass/file_utils.rb
 ${GEM_LIBDIR}/ext/sass/package.json
 ${GEM_LIBDIR}/ext/sass/platform.rb
-${GEM_LIBDIR}/ext/sass/sass-1.100.0.tgz
+${GEM_LIBDIR}/ext/sass/sass-1.101.0.tgz
 ${GEM_LIBDIR}/ext/sass/sass_config.rb
 ${GEM_LIBDIR}/ext/sass/utils.rb
 ${GEM_LIBDIR}/lib/sass-embedded.rb
@@ -201,12 +201,14 @@ ${GEM_LIBDIR}/lib/sass/compiler.rb
 ${GEM_LIBDIR}/lib/sass/compiler/channel.rb
 ${GEM_LIBDIR}/lib/sass/compiler/connection.rb
 ${GEM_LIBDIR}/lib/sass/compiler/dispatcher.rb
-${GEM_LIBDIR}/lib/sass/compiler/host.rb
-${GEM_LIBDIR}/lib/sass/compiler/host/function_registry.rb
-${GEM_LIBDIR}/lib/sass/compiler/host/importer_registry.rb
-${GEM_LIBDIR}/lib/sass/compiler/host/logger_registry.rb
-${GEM_LIBDIR}/lib/sass/compiler/host/protofier.rb
-${GEM_LIBDIR}/lib/sass/compiler/host/struct.rb
+${GEM_LIBDIR}/lib/sass/compiler/session.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/function_registry.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/importer_registry.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/logger_registry.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/path.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/protofier.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/stack_trace.rb
+${GEM_LIBDIR}/lib/sass/compiler/session/struct.rb
 ${GEM_LIBDIR}/lib/sass/compiler/varint.rb
 ${GEM_LIBDIR}/lib/sass/elf.rb
 ${GEM_LIBDIR}/lib/sass/embedded.rb
@@ -221,6 +223,7 @@ ${GEM_LIBDIR}/lib/sass/logger/source_location.rb
 ${GEM_LIBDIR}/lib/sass/logger/source_span.rb
 ${GEM_LIBDIR}/lib/sass/node_package_importer.rb
 ${GEM_LIBDIR}/lib/sass/serializer.rb
+${GEM_LIBDIR}/lib/sass/uri.rb
 ${GEM_LIBDIR}/lib/sass/value.rb
 ${GEM_LIBDIR}/lib/sass/value/argument_list.rb
 ${GEM_LIBDIR}/lib/sass/value/boolean.rb
