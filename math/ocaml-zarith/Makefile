@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/03/01 12:38:36 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2026/06/28 22:25:41 dholland Exp $
 #
 
-VERSION=	1.12
+VERSION=	1.14
 GITHUB_PROJECT=	Zarith
 GITHUB_TAG=	release-${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}

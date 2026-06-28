@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/05/24 17:55:23 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2026/06/28 22:25:41 dholland Exp $
 
-BLAKE2s (Zarith-1.12.tar.gz) = 0484c6e5e2850a9a95eb2c5599ec15f1a96dcd30725a12cfe5ce61c21e3d5cb7
-SHA512 (Zarith-1.12.tar.gz) = 8075573ae65579a2606b37dd1b213032a07d220d28c733f9288ae80d36f8a2cc4d91632806df2503c130ea9658dc207ee3a64347c21aa53969050a208f5b2bb4
-Size (Zarith-1.12.tar.gz) = 93695 bytes
+BLAKE2s (Zarith-1.14.tar.gz) = 6f6ceba642a1d930d41e53a960f70629b13e0e3829b605c043a93fabb5442153
+SHA512 (Zarith-1.14.tar.gz) = 8a7f3e82dfa5699c8dda54dd5398c712f3ac4fe04f5208d43d8ba198fb8152de5f91cbb59c15c0a4ba010d4dfcc79f52e405bdd0abbf2798167e9e4216bcb3dd
+Size (Zarith-1.14.tar.gz) = 91788 bytes
