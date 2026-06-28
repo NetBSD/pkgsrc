@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.59 2025/01/06 21:49:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.60 2026/06/28 08:42:08 adam Exp $
 
-DISTNAME=		atari800-5.2.0-src
-PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		1
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_GITHUB:=atari800/}
-GITHUB_RELEASE=		ATARI800_${PKGVERSION_NOREV:S/./_/g}
-EXTRACT_SUFX=		.tgz
+DISTNAME=	atari800-7.0.0-src
+PKGNAME=	${DISTNAME:S/-src//}
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=atari800/}
+GITHUB_RELEASE=	ATARI800_${PKGVERSION_NOREV:S/./_/g}
+EXTRACT_SUFX=	.tgz
+
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} pcxf380.zip
 SITES.pcxf380.zip=	http://www.emulators.com/freefile/
 
@@ -18,9 +18,8 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake unzip
 CONFIGURE_ARGS+=	--disable-sdltest
-CONFIGURE_ARGS+=	--with-sound=sdl
-CONFIGURE_ARGS+=	--with-video=sdl
-CONFIGURE_ARGS.Darwin+=	--disable-rserial
+CONFIGURE_ARGS+=	--with-sound=sdl2
+CONFIGURE_ARGS+=	--with-video=sdl2
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	${PREFIX}/share/atari800
@@ -43,8 +42,9 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
 		${WRKSRC}/atari800.cfg ${DESTDIR}${PREFIX}/share/atari800/
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
