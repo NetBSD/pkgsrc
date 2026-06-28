@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4088 2026/06/28 15:20:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4089 2026/06/28 15:20:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6119,3 +6119,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gpgme to 2.1.1 [adam 2026-06-28]
 	Updated www/ruby-aws-sdk-s3 to 1.226.0 [taca 2026-06-28]
 	Updated security/ruby-rex-socket to 0.1.69 [taca 2026-06-28]
+	Updated archivers/7-zip to 26.02 [adam 2026-06-28]
+	Updated finance/py-braintree to 4.45.0 [adam 2026-06-28]
