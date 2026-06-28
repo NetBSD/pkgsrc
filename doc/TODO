@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27505 2026/06/28 11:04:00 drixter Exp $
+$NetBSD: TODO,v 1.27506 2026/06/28 11:06:28 drixter Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o dap-3.10
 	o darktable-5.4
-	o dasel-3.11.2
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
