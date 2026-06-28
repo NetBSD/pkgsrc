@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4060 2026/06/28 14:06:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4061 2026/06/28 14:08:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6087,3 +6087,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libpsl to 0.22.0 [wiz 2026-06-28]
 	Updated graphics/geeqie to 2.9 [wiz 2026-06-28]
 	Updated audio/py-beets to 2.12.0 [wiz 2026-06-28]
+	Updated www/py-google-api-python-client to 2.198.0 [wiz 2026-06-28]
