@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2026/05/24 18:38:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2026/06/28 14:14:29 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -272,6 +272,7 @@ ${PYSITELIB}/icalendar/tests/calendars/empty_RDATE.ics
 ${PYSITELIB}/icalendar/tests/calendars/example.ics
 ${PYSITELIB}/icalendar/tests/calendars/fuzz_testcase_0_char_in_component_name.ics
 ${PYSITELIB}/icalendar/tests/calendars/fuzz_testcase_invalid_month.ics
+${PYSITELIB}/icalendar/tests/calendars/invalid_duration.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_104_broken_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1050_all_components.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1050_calendar_with_events_and_todos.ics
@@ -281,10 +282,21 @@ ${PYSITELIB}/icalendar/tests/calendars/issue_1050_multiple_calendars.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1050_simple_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1050_timezone_only_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1050_uid_in_description.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_empty_rdate.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_event_with_rrule.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_freebusy_comma_separated.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_invalid_rrule_freq.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_invalid_start_and_end.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_invalid_start_valid_end.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_list_of_properties.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_tzid_param.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1081_with_summary.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1231_recurrence.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_1237_x_property.jcal
 ${PYSITELIB}/icalendar/tests/calendars/issue_1238.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_127_categories_with_commas.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1426.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_1426_value_parameters.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal_2.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_165_missing_event.ics
@@ -413,12 +425,18 @@ ${PYSITELIB}/icalendar/tests/prop/test_constructors.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_date_and_time.py
 ${PYSITELIB}/icalendar/tests/prop/test_date_and_time.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_date_and_time.pyo
+${PYSITELIB}/icalendar/tests/prop/test_duration_overflow.py
+${PYSITELIB}/icalendar/tests/prop/test_duration_overflow.pyc
+${PYSITELIB}/icalendar/tests/prop/test_duration_overflow.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.py
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_property_values.py
 ${PYSITELIB}/icalendar/tests/prop/test_property_values.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_property_values.pyo
+${PYSITELIB}/icalendar/tests/prop/test_trailing_newline.py
+${PYSITELIB}/icalendar/tests/prop/test_trailing_newline.pyc
+${PYSITELIB}/icalendar/tests/prop/test_trailing_newline.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_unit.py
 ${PYSITELIB}/icalendar/tests/prop/test_unit.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_unit.pyo
@@ -440,6 +458,9 @@ ${PYSITELIB}/icalendar/tests/prop/test_vDatetime.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_vFloat.py
 ${PYSITELIB}/icalendar/tests/prop/test_vFloat.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_vFloat.pyo
+${PYSITELIB}/icalendar/tests/prop/test_vFrequency.py
+${PYSITELIB}/icalendar/tests/prop/test_vFrequency.pyc
+${PYSITELIB}/icalendar/tests/prop/test_vFrequency.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_vInt.py
 ${PYSITELIB}/icalendar/tests/prop/test_vInt.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_vInt.pyo
@@ -527,9 +548,15 @@ ${PYSITELIB}/icalendar/tests/rfc_9253_icalendar_relationships/test_related_to.py
 ${PYSITELIB}/icalendar/tests/test_bom_calendar.py
 ${PYSITELIB}/icalendar/tests/test_bom_calendar.pyc
 ${PYSITELIB}/icalendar/tests/test_bom_calendar.pyo
+${PYSITELIB}/icalendar/tests/test_categories_value_with_colon.py
+${PYSITELIB}/icalendar/tests/test_categories_value_with_colon.pyc
+${PYSITELIB}/icalendar/tests/test_categories_value_with_colon.pyo
 ${PYSITELIB}/icalendar/tests/test_cli_tool.py
 ${PYSITELIB}/icalendar/tests/test_cli_tool.pyc
 ${PYSITELIB}/icalendar/tests/test_cli_tool.pyo
+${PYSITELIB}/icalendar/tests/test_compatibility.py
+${PYSITELIB}/icalendar/tests/test_compatibility.pyc
+${PYSITELIB}/icalendar/tests/test_compatibility.pyo
 ${PYSITELIB}/icalendar/tests/test_component_register.py
 ${PYSITELIB}/icalendar/tests/test_component_register.pyc
 ${PYSITELIB}/icalendar/tests/test_component_register.pyo
@@ -558,6 +585,9 @@ ${PYSITELIB}/icalendar/tests/test_error_tolerant_parsing.pyo
 ${PYSITELIB}/icalendar/tests/test_examples.py
 ${PYSITELIB}/icalendar/tests/test_examples.pyc
 ${PYSITELIB}/icalendar/tests/test_examples.pyo
+${PYSITELIB}/icalendar/tests/test_free_busy_duration.py
+${PYSITELIB}/icalendar/tests/test_free_busy_duration.pyc
+${PYSITELIB}/icalendar/tests/test_free_busy_duration.pyo
 ${PYSITELIB}/icalendar/tests/test_funding_json.py
 ${PYSITELIB}/icalendar/tests/test_funding_json.pyc
 ${PYSITELIB}/icalendar/tests/test_funding_json.pyo
@@ -606,6 +636,12 @@ ${PYSITELIB}/icalendar/tests/test_issue_1238.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.py
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_127_categories_comma_escaping.pyo
+${PYSITELIB}/icalendar/tests/test_issue_1426.py
+${PYSITELIB}/icalendar/tests/test_issue_1426.pyc
+${PYSITELIB}/icalendar/tests/test_issue_1426.pyo
+${PYSITELIB}/icalendar/tests/test_issue_1436_implicit_file_read.py
+${PYSITELIB}/icalendar/tests/test_issue_1436_implicit_file_read.pyc
+${PYSITELIB}/icalendar/tests/test_issue_1436_implicit_file_read.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.py
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyo
@@ -735,6 +771,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_987.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_999_negative_event_duration.py
 ${PYSITELIB}/icalendar/tests/test_issue_999_negative_event_duration.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_999_negative_event_duration.pyo
+${PYSITELIB}/icalendar/tests/test_jcal_recursion.py
+${PYSITELIB}/icalendar/tests/test_jcal_recursion.pyc
+${PYSITELIB}/icalendar/tests/test_jcal_recursion.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
@@ -744,6 +783,9 @@ ${PYSITELIB}/icalendar/tests/test_oss_fuzz_errors.pyo
 ${PYSITELIB}/icalendar/tests/test_parameter_access.py
 ${PYSITELIB}/icalendar/tests/test_parameter_access.pyc
 ${PYSITELIB}/icalendar/tests/test_parameter_access.pyo
+${PYSITELIB}/icalendar/tests/test_parser_quadratic_unfolding.py
+${PYSITELIB}/icalendar/tests/test_parser_quadratic_unfolding.pyc
+${PYSITELIB}/icalendar/tests/test_parser_quadratic_unfolding.pyo
 ${PYSITELIB}/icalendar/tests/test_parsing.py
 ${PYSITELIB}/icalendar/tests/test_parsing.pyc
 ${PYSITELIB}/icalendar/tests/test_parsing.pyo
