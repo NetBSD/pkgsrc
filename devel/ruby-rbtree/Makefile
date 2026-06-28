@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2022/12/18 14:21:23 taca Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/28 14:48:01 taca Exp $
 
-DISTNAME=	rbtree-0.4.6
+DISTNAME=	rbtree-0.4.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# http://rubyforge.org/projects/rbtree/
+HOMEPAGE=	https://github.com/mame/rbtree
 COMMENT=	Sorted associative collection using Red-Black Trees for Ruby
 LICENSE=	mit
 
