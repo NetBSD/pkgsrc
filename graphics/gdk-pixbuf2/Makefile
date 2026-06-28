@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2026/04/01 06:40:42 adam Exp $
+# $NetBSD: Makefile,v 1.80 2026/06/28 15:01:05 adam Exp $
 
-DISTNAME=	gdk-pixbuf-2.44.6
+DISTNAME=	gdk-pixbuf-2.44.7
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
