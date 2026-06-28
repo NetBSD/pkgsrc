@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/06/07 04:19:15 taca Exp $
+$NetBSD: distinfo,v 1.11 2026/06/28 15:28:49 taca Exp $
 
-BLAKE2s (sass-embedded-1.100.0.gem) = 4c906312ca5b458178568e49a56dd69e115ad609f27266b1bca7c7de24d83d3b
-SHA512 (sass-embedded-1.100.0.gem) = 66c5b233e2f20220662c5c51c30f8e5145517662d23b72c732a1235ccd7e72a674c4a683b7b6e064b208ff6e36594e56147dfa997bac0a6ba404e56e57afa69d
-Size (sass-embedded-1.100.0.gem) = 1044480 bytes
+BLAKE2s (sass-embedded-1.101.0.gem) = a25d404e0dcb13c60925a68fee2e193a987ee503f73fbde2fedf5c14c7135a64
+SHA512 (sass-embedded-1.101.0.gem) = d247eb465b58bbcee78475f7f6fb6b9160097ae7e7fccbba2aab852fd6d9951fc73b446a6747a034b05bc00280cacc4fca31dc44f6fdbbfeb4f2f1736f704231
+Size (sass-embedded-1.101.0.gem) = 1046528 bytes
