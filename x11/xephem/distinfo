@@ -1,18 +1,21 @@
-$NetBSD: distinfo,v 1.21 2026/06/28 00:44:25 gdt Exp $
+$NetBSD: distinfo,v 1.22 2026/06/28 00:51:58 gdt Exp $
 
 BLAKE2s (XEphem-4.2.0.tar.gz) = 28bfc97fcd86769c3e9926695e9c77ac19da95c2f5d162ad63bc928cb875b77a
 SHA512 (XEphem-4.2.0.tar.gz) = 97756bc299821e95cbc06facc3091795feb245db033193fdf587bcfd7a83142a15552a1f8aa53c040c87cb75021424b94bbed5a747fb9783f5a0cac6fb4ddb3e
 Size (XEphem-4.2.0.tar.gz) = 17317398 bytes
 SHA1 (patch-GUI_xephem_Makefile) = 4f89c84f08872f6c284e6c486c1e41bc35be7f62
-SHA1 (patch-GUI_xephem_compiler.c) = a2672b6121e178b210c8c50f44463a5736ed882f
-SHA1 (patch-GUI_xephem_gallerymenu.c) = 93bba67ed1fa0e59ad0494a3e1e208a7868e362c
-SHA1 (patch-GUI_xephem_homeio.c) = a0ede09206e13484335a5d039615e7bb884d4b6c
-SHA1 (patch-GUI_xephem_indimenu.c) = c27bdb68e5dced751f108b54b3b63983fd849121
-SHA1 (patch-GUI_xephem_mainmenu.c) = 283677708450f3be8cda7aec817bede314e69616
-SHA1 (patch-GUI_xephem_marsmenu.c) = e319707c91842b6513a767b2c4ddf2f8f6aac7f8
-SHA1 (patch-GUI_xephem_saveres.c) = 34901b4cd16f689872ce174e20020adaf26fe9d4
-SHA1 (patch-GUI_xephem_sites.c) = f2d522b6c162192879db32b9c2fbe605c5a45b56
-SHA1 (patch-GUI_xephem_skyip.c) = 4814cb9a274ffde6af07b003f02c22e716986737
-SHA1 (patch-GUI_xephem_skyviewmenu.c) = 3da04bc3af6b12613acd5940335d0060ca34ccf2
-SHA1 (patch-GUI_xephem_tools_xedb_xedb.c) = 7b4e7af2e29e211d459efde4ec2479d7114e3ac8
-SHA1 (patch-GUI_xephem_xmisc.c) = 6a7dc92483b417f394e049cab77feff4d6289dfb
+SHA1 (patch-GUI_xephem_compiler.c) = 23f55da2963f44eded971679b9c14da3863fb9d9
+SHA1 (patch-GUI_xephem_gallerymenu.c) = 513fbf4742b26ef54fdbe27abd2d719647a1e3eb
+SHA1 (patch-GUI_xephem_homeio.c) = 72efb030597fba36b20c6df3d4e4a435c940d4fe
+SHA1 (patch-GUI_xephem_indimenu.c) = b5e000d13b1a64755e4106dde39ea29e16533121
+SHA1 (patch-GUI_xephem_mainmenu.c) = 81ba3f5153e4598c94080caabbf2a9f8978874cf
+SHA1 (patch-GUI_xephem_marsmenu.c) = 8cde999adda36aceb8a18d6a5886032a9d910124
+SHA1 (patch-GUI_xephem_saveres.c) = b85cb930e4ed24da1f2b943a4e44b0e757907478
+SHA1 (patch-GUI_xephem_sites.c) = d4780dac06761614905de9ffb84fd28f03c36327
+SHA1 (patch-GUI_xephem_skyip.c) = fbb76d74418d1cd3f4c9e7e8e26568b78b94bfb0
+SHA1 (patch-GUI_xephem_skyviewmenu.c) = 40aa9c2d0f46277a5ef11ec2209df584e432ffe7
+SHA1 (patch-GUI_xephem_tools_xedb_xedb.c) = 0bcc5658f84edd8462b95f41e5cb20188086c92f
+SHA1 (patch-GUI_xephem_xmisc.c) = d476ead200112a0507ea83a26924daba5aa3ceea
+SHA1 (patch-libastro_constel.c) = b7dde8620fa262fc80b4a0c3077cd2a39db6ffec
+SHA1 (patch-libastro_dbfmt.c) = 6ab59159f09d871a463a62f384e1a1f8b20bf3d3
+SHA1 (patch-liblilxml_base64.c) = 9faeff6663c5d5b10e01f97b52531e6504ec98fd

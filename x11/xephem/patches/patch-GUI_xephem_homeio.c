@@ -1,5 +1,10 @@
-$NetBSD: patch-GUI_xephem_homeio.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
+$NetBSD: patch-GUI_xephem_homeio.c,v 1.2 2026/06/28 00:51:58 gdt Exp $
 
+Move errno.h.  \todo File upstream after grasping
+
+Use pkgsrc share directory.  To be maybe filed upstream after figuring
+out if there is a bug, but I didn't understand this last time around.
+  
 --- GUI/xephem/homeio.c.orig	2024-02-13 14:35:36.000000000 +0000
 +++ GUI/xephem/homeio.c
 @@ -11,6 +11,9 @@

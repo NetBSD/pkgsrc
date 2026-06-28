@@ -1,4 +1,8 @@
-$NetBSD: patch-GUI_xephem_tools_xedb_xedb.c,v 1.1 2026/06/28 00:44:25 gdt Exp $
+$NetBSD: patch-GUI_xephem_tools_xedb_xedb.c,v 1.2 2026/06/28 00:51:58 gdt Exp $
+
+Use pkgsrc path, not upstream defaults.
+
+Not filed upstream because it is a pkgsrc accomodation.  
 
 --- GUI/xephem/tools/xedb/xedb.c.orig	2024-02-13 14:35:36.000000000 +0000
 +++ GUI/xephem/tools/xedb/xedb.c

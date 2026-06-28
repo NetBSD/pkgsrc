@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2026/06/28 00:44:25 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2026/06/28 00:51:58 gdt Exp $
 
 VERSION=	4.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	XEphem-${VERSION}
 PKGNAME=	xephem-${VERSION}
 CATEGORIES=	x11
