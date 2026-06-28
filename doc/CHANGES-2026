@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4101 2026/06/28 18:25:29 osa Exp $
+$NetBSD: CHANGES-2026,v 1.4102 2026/06/28 19:59:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6134,3 +6134,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/xclock to 1.2.0 [wiz 2026-06-28]
 	Updated www/freenginx-devel to 1.31.2nb2 [osa 2026-06-28]
 	Updated lang/quickjs to 20260604 [osa 2026-06-28]
+	Updated finance/ledger32 to 3.2.1nb8 [wiz 2026-06-28]
