@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4043 2026/06/28 06:27:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4044 2026/06/28 06:28:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6059,3 +6059,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-IO-Socket-SSL to 2.099 [wiz 2026-06-28]
 	Updated math/p5-Math-BigInt to 2.005003 [wiz 2026-06-28]
 	Updated math/p5-Math-BigInt-GMP to 1.7003 [wiz 2026-06-28]
+	Updated textproc/p5-Text-CSV_XS to 1.64 [wiz 2026-06-28]
