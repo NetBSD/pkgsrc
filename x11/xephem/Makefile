@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/06/28 00:51:58 gdt Exp $
+# $NetBSD: Makefile,v 1.86 2026/06/28 00:57:20 gdt Exp $
 
 VERSION=	4.2.0
 PKGREVISION=	2
@@ -30,13 +30,7 @@ MAKE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
-# \todo Evaluate and perhaps modernize this section.
 REPLACE_PERL+=		${BUILD_DIRS}/auxil/*.pl
-
-REPLACE_INTERPRETER+=	perl
-REPLACE.perl.old=	.*/bin/perl
-REPLACE.perl.new=	${PREFIX}/bin/perl
-REPLACE_FILES.perl=	auxil/astorb2edb.pl auxil/mpcorb2edb.pl
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
 			${PKGMANDIR}/man1
