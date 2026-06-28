@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/06/01 13:43:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/06/28 14:08:43 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -173,6 +173,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudkms.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudlocationfinder.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudlocationfinder.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudnumberregistry.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudproductregistry.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudprofiler.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudresourcemanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudresourcemanager.v1beta1.json
@@ -212,6 +213,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/contentwarehouse.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/css.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/databasecenter.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataflow.v1b3.json
@@ -518,6 +520,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/safebrowsing.v5.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sasportal.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/script.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/searchads360.v0.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/searchads360.v23.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/searchconsole.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1beta1.json
@@ -595,6 +598,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/vmwareengine.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vpcaccess.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vpcaccess.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/walletobjects.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/webcontentpublisher.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webfonts.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webmasters.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webrisk.v1.json
