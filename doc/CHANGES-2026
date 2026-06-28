@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4085 2026/06/28 15:15:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4086 2026/06/28 15:16:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6115,3 +6115,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-oauth to 1.1.7 [taca 2026-06-28]
 	Updated www/ruby-aws-partitions to 1.1262.0 [taca 2026-06-28]
 	Updated www/ruby-aws-sdk-core to 3.252.0 [taca 2026-06-28]
+	Updated devel/patchelf to 0.19.0 [adam 2026-06-28]
+	Updated security/gpgme to 2.1.1 [adam 2026-06-28]
