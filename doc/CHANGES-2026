@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4039 2026/06/28 06:19:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4040 2026/06/28 06:21:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6055,3 +6055,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/x265 to 4.2nb1 [he 2026-06-27]
 	Updated inputmethod/ja-freewnn-lib to 1.11alpha23nb1 [tsutsui 2026-06-28]
 	Updated databases/p5-DBI to 1.649 [wiz 2026-06-28]
+	Updated www/p5-HTTP-Date to 6.07 [wiz 2026-06-28]
