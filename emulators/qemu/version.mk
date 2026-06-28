@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.15 2026/05/28 05:05:51 adam Exp $
+# $NetBSD: version.mk,v 1.16 2026/06/28 08:42:35 adam Exp $
 #
 # used by emulators/qemu
 # used by sysutils/qemu-guest-agent
 
-QEMU_VERSION?=	11.0.1
+QEMU_VERSION?=	11.0.2
