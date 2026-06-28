@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/26 17:02:31 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2026/06/28 20:23:59 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/lockfile/__init__.py
 ${PYSITELIB}/lockfile/__init__.pyc
 ${PYSITELIB}/lockfile/__init__.pyo
@@ -20,6 +21,6 @@ ${PYSITELIB}/lockfile/pidlockfile.pyo
 ${PYSITELIB}/lockfile/sqlitelockfile.py
 ${PYSITELIB}/lockfile/sqlitelockfile.pyc
 ${PYSITELIB}/lockfile/sqlitelockfile.pyo
+${PYSITELIB}/lockfile/symlinklockfile.py
 ${PYSITELIB}/lockfile/symlinklockfile.pyc
 ${PYSITELIB}/lockfile/symlinklockfile.pyo
-${PYSITELIB}/lockfile/symlinklockfile.py
