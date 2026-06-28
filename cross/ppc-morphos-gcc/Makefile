@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/06/13 15:58:31 js Exp $
+# $NetBSD: Makefile,v 1.4 2026/06/28 02:09:51 js Exp $
 
 DISTNAME=	gcc-15.2.0
 PKGNAME=	ppc-morphos-${DISTNAME}
@@ -24,6 +24,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 GNU_CONFIGURE_PREFIX=	${PREFIX}/gg
 CONFIGURE_ARGS+=	--target=ppc-morphos
 CONFIGURE_ARGS+=	--with-plugin-ld=no
+CONFIGURE_ARGS+=	--disable-sjlj-exceptions
 CONFIGURE_ARGS+=	--enable-languages=c,c++,objc,obj-c++
 CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/gg
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/gg/lib
@@ -32,9 +33,11 @@ CONFIGURE_ARGS+=	--program-prefix=ppc-morphos-
 CONFIGURE_ARGS+=	--enable-threads=morphos
 CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
+CONFIGURE_ARGS+=	--disable-libatomic
 CONFIGURE_ARGS+=	--disable-nls
-# Used by a sub-configure, therefore needs to be passed via MAKE_ENV.
-MAKE_ENV+=		gcc_cv_have_tls=no
+# GCC is broken and tries link tests after already setting gcc_no_link=yes if it
+# doesn't know the OS. Override them to no to avoid the forbidden link tests.
+CONFIGURE_ARGS+=	target_configargs="gcc_cv_have_tls=yes ac_cv_func_shl_load=no ac_cv_lib_dld_shl_load=no ac_cv_func_dlopen=no ac_cv_lib_dl_dlopen=no ac_cv_lib_svld_dlopen=no ac_cv_lib_dld_dld_link=no"
 
 # Relocations result in a linker error.
 MKPIE_SUPPORTED=	no
