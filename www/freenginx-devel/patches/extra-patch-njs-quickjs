@@ -1,0 +1,28 @@
+--- ../njs-1.0.0/auto/quickjs.orig	2026-06-23 11:18:04.000000000 -0400
++++ ../njs-1.0.0/auto/quickjs	2026-06-28 13:23:46.299804429 -0400
+@@ -42,9 +42,9 @@
+     fi
+ 
+     if [ $njs_found = no ]; then
+-        njs_feature="QuickJS library -I/usr/include/quickjs/ -L/usr/lib/quickjs/ -lquickjs"
+-        njs_feature_incs="$NJS_QUICKJS_DEFAULT_INCS /usr/include/quickjs/"
+-        njs_feature_libs="-L/usr/lib/quickjs/ -lquickjs -lm -ldl -lpthread"
++        njs_feature="QuickJS library -I/usr/pkg/include/quickjs -L/usr/pkg/lib -lquickjs"
++        njs_feature_incs="$NJS_QUICKJS_DEFAULT_INCS /usr/include/quickjs"
++        njs_feature_libs="-L/usr/pkg/lib -lquickjs -lm -lpthread"
+ 
+         . auto/feature
+     fi
+--- ../njs-1.0.0/nginx/config.orig	2026-06-28 13:01:43.273373787 -0400
++++ ../njs-1.0.0/nginx/config	2026-06-28 13:02:46.754225650 -0400
+@@ -60,8 +60,8 @@
+     fi
+ 
+     if [ $ngx_found = no ]; then
+-        ngx_feature="QuickJS library -I/usr/include/quickjs/ -L/usr/lib/quickjs/ -lquickjs"
+-        ngx_feature_libs="-L/usr/lib/quickjs/ -lquickjs -lm -ldl -lpthread"
++        ngx_feature="QuickJS library -I/usr/pkg/include/quickjs/ -L/usr/pkg/lib/ -lquickjs"
++        ngx_feature_libs="-L/usr/pkg/lib/quickjs/ -lquickjs -lm -lpthread"
+ 
+         . auto/feature
+     fi
