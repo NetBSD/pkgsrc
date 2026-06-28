@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/05/04 23:42:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/06/28 20:25:24 adam Exp $
 bin/pdal
 bin/pdal-config
 include/pdal/Artifact.hpp
@@ -145,6 +145,7 @@ include/pdal/filters/private/DimRange.hpp
 include/pdal/filters/private/DisjointSet.hpp
 include/pdal/filters/private/Point.hpp
 include/pdal/filters/private/Segmentation.hpp
+@pkgdir include/pdal/filters/private/csf
 include/pdal/filters/private/delaunator.hpp
 include/pdal/filters/private/expr/AssignParser.hpp
 include/pdal/filters/private/expr/AssignStatement.hpp
@@ -169,6 +170,7 @@ include/pdal/filters/private/hexer/Point.hpp
 include/pdal/filters/private/hexer/Processor.hpp
 include/pdal/filters/private/hexer/Segment.hpp
 include/pdal/filters/private/hexer/exception.hpp
+@pkgdir include/pdal/filters/private/miniball
 include/pdal/filters/private/mongoexpression/Comparison.hpp
 include/pdal/filters/private/mongoexpression/Expression.hpp
 include/pdal/filters/private/mongoexpression/LogicGate.hpp
@@ -342,13 +344,11 @@ lib/cmake/PDAL/PDALTargets.cmake
 lib/cmake/PDAL/pluginmacros.cmake
 lib/libpdal_plugin_kernel_fauxplugin.so
 lib/libpdal_plugin_kernel_fauxplugin.so.20
-lib/libpdal_plugin_kernel_fauxplugin.so.20.1.0
+lib/libpdal_plugin_kernel_fauxplugin.so.20.2.0
 lib/libpdal_plugin_reader_hdf.so
 lib/libpdal_plugin_reader_hdf.so.20
-lib/libpdal_plugin_reader_hdf.so.20.1.0
+lib/libpdal_plugin_reader_hdf.so.20.2.0
 lib/libpdalcpp.so
 lib/libpdalcpp.so.20
-lib/libpdalcpp.so.20.1.0
+lib/libpdalcpp.so.20.2.0
 lib/pkgconfig/pdal.pc
-@pkgdir include/pdal/filters/private/miniball
-@pkgdir include/pdal/filters/private/csf
