@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4071 2026/06/28 14:45:12 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4072 2026/06/28 14:48:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6098,3 +6098,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-google-protobuf to 4.35.1 [taca 2026-06-28]
 	Updated devel/ruby-i18n to 1.15.2 [taca 2026-06-28]
 	Updated devel/ruby-pairing_heap to 3.1.1 [taca 2026-06-28]
+	Updated devel/ruby-rbtree to 0.4.7 [taca 2026-06-28]
