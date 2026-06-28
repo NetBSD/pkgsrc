@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4046 2026/06/28 08:11:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4047 2026/06/28 08:19:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6068,3 +6068,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/sqlite3-docs to 3.53.3 [adam 2026-06-28]
 	Updated databases/sqlite3-tcl to 3.53.3 [adam 2026-06-28]
 	Updated devel/lemon to 1.0.3.53.3 [adam 2026-06-28]
+	Updated net/ngtcp2 to 1.24.0 [adam 2026-06-28]
+	Updated www/nghttp3 to 1.17.0 [adam 2026-06-28]
+	Updated audio/strawberry to 1.2.21 [adam 2026-06-28]
