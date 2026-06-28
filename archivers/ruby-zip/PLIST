@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.16 2026/02/03 14:40:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/06/28 14:08:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/rubyzip.rb
 ${GEM_LIBDIR}/lib/zip.rb
 ${GEM_LIBDIR}/lib/zip/central_directory.rb
 ${GEM_LIBDIR}/lib/zip/compressor.rb
