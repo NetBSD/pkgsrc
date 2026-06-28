@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4090 2026/06/28 15:21:52 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4091 2026/06/28 15:24:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/7-zip to 26.02 [adam 2026-06-28]
 	Updated finance/py-braintree to 4.45.0 [adam 2026-06-28]
 	Updated www/ruby-crass to 1.0.7 [taca 2026-06-28]
+	Updated www/ruby-faraday to 2.14.3 [taca 2026-06-28]
