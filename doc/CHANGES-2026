@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4109 2026/06/29 06:48:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4110 2026/06/29 07:21:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6146,3 +6146,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-greenlet to 3.5.3 [adam 2026-06-29]
 	Updated sysutils/py-fsspec to 2026.6.0 [adam 2026-06-29]
 	Updated finance/ledger32 to 3.2.1nb9 [wiz 2026-06-29]
+	Updated x11/xedit to 1.2.5 [wiz 2026-06-29]
