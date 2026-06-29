@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4122 2026/06/29 13:34:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4123 2026/06/29 15:26:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6168,3 +6168,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/psmisc to 23.7 [adam 2026-06-29]
 	Updated www/py-protego to 0.6.2 [adam 2026-06-29]
 	Updated textproc/py-regex to 2026.6.28 [adam 2026-06-29]
+	Added games/Zork-I version 1.0 [jnemeth 2026-06-29]
