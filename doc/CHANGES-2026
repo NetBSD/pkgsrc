@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4114 2026/06/29 09:04:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4115 2026/06/29 10:09:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6152,3 +6152,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.37.1 [pin 2026-06-29]
 	Updated devel/py-vcs-versioning to 2.2.1 [adam 2026-06-29]
 	Updated time/py-tzlocal to 5.4.4 [adam 2026-06-29]
+	Updated devel/py-boltons to 26.0.0 [adam 2026-06-29]
+	Updated mail/py-checkdmarc to 5.17.3 [adam 2026-06-29]
