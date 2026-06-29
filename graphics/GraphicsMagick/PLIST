@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2026/06/29 12:00:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/06/29 12:02:13 adam Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -93,7 +93,6 @@ lib/${PKGNAME}/config/type-urw-base35-otf.mgk
 lib/${PKGNAME}/config/type-windows.mgk
 lib/${PKGNAME}/config/type.mgk
 lib/${PKGNAME}/modules-Q8/coders/aai.la
-lib/${PKGNAME}/modules-Q8/coders/aai.so
 lib/${PKGNAME}/modules-Q8/coders/art.la
 lib/${PKGNAME}/modules-Q8/coders/avs.la
 lib/${PKGNAME}/modules-Q8/coders/bmp.la
