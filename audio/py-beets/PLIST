@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2026/05/10 12:21:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/06/29 06:28:10 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -42,12 +42,21 @@ ${PYSITELIB}/beets/dbcore/query.pyo
 ${PYSITELIB}/beets/dbcore/queryparse.py
 ${PYSITELIB}/beets/dbcore/queryparse.pyc
 ${PYSITELIB}/beets/dbcore/queryparse.pyo
+${PYSITELIB}/beets/dbcore/sort.py
+${PYSITELIB}/beets/dbcore/sort.pyc
+${PYSITELIB}/beets/dbcore/sort.pyo
 ${PYSITELIB}/beets/dbcore/types.py
 ${PYSITELIB}/beets/dbcore/types.pyc
 ${PYSITELIB}/beets/dbcore/types.pyo
+${PYSITELIB}/beets/exceptions.py
+${PYSITELIB}/beets/exceptions.pyc
+${PYSITELIB}/beets/exceptions.pyo
 ${PYSITELIB}/beets/importer/__init__.py
 ${PYSITELIB}/beets/importer/__init__.pyc
 ${PYSITELIB}/beets/importer/__init__.pyo
+${PYSITELIB}/beets/importer/actions.py
+${PYSITELIB}/beets/importer/actions.pyc
+${PYSITELIB}/beets/importer/actions.pyo
 ${PYSITELIB}/beets/importer/session.py
 ${PYSITELIB}/beets/importer/session.pyc
 ${PYSITELIB}/beets/importer/session.pyo
@@ -200,6 +209,9 @@ ${PYSITELIB}/beets/util/lyrics.pyo
 ${PYSITELIB}/beets/util/m3u.py
 ${PYSITELIB}/beets/util/m3u.pyc
 ${PYSITELIB}/beets/util/m3u.pyo
+${PYSITELIB}/beets/util/pathformats.py
+${PYSITELIB}/beets/util/pathformats.pyc
+${PYSITELIB}/beets/util/pathformats.pyo
 ${PYSITELIB}/beets/util/pipeline.py
 ${PYSITELIB}/beets/util/pipeline.pyc
 ${PYSITELIB}/beets/util/pipeline.pyo
@@ -430,6 +442,7 @@ ${PYSITELIB}/beetsplug/playlist.pyo
 ${PYSITELIB}/beetsplug/plexupdate.py
 ${PYSITELIB}/beetsplug/plexupdate.pyc
 ${PYSITELIB}/beetsplug/plexupdate.pyo
+${PYSITELIB}/beetsplug/py.typed
 ${PYSITELIB}/beetsplug/random.py
 ${PYSITELIB}/beetsplug/random.pyc
 ${PYSITELIB}/beetsplug/random.pyo
