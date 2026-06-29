@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4124 2026/06/29 15:27:28 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.4125 2026/06/29 15:27:49 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6170,3 +6170,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.6.28 [adam 2026-06-29]
 	Added games/Zork-I version 1.0 [jnemeth 2026-06-29]
 	Added games/Zork-II version 1.0 [jnemeth 2026-06-29]
+	Added games/Zork-III version 1.0 [jnemeth 2026-06-29]
