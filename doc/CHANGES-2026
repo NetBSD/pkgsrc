@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4106 2026/06/28 22:26:23 dholland Exp $
+$NetBSD: CHANGES-2026,v 1.4107 2026/06/29 00:55:08 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6140,3 +6140,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/jbig2enc to 0.32 [adam 2026-06-28]
 	Updated geography/pdal-lib to 2.10.2 [adam 2026-06-28]
 	Updated math/ocaml-zarith to 1.14nb3 [dholland 2026-06-28]
+	Added devel/herdtools7 version 7.58 [dholland 2026-06-29]
