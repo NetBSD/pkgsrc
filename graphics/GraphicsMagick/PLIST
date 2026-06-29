@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/09/07 08:53:57 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/06/29 12:00:28 adam Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -89,8 +89,11 @@ include/GraphicsMagick/wand/wand_symbols.h
 lib/${PKGNAME}/config/delegates.mgk
 lib/${PKGNAME}/config/type-ghostscript.mgk
 lib/${PKGNAME}/config/type-solaris.mgk
+lib/${PKGNAME}/config/type-urw-base35-otf.mgk
 lib/${PKGNAME}/config/type-windows.mgk
 lib/${PKGNAME}/config/type.mgk
+lib/${PKGNAME}/modules-Q8/coders/aai.la
+lib/${PKGNAME}/modules-Q8/coders/aai.so
 lib/${PKGNAME}/modules-Q8/coders/art.la
 lib/${PKGNAME}/modules-Q8/coders/avs.la
 lib/${PKGNAME}/modules-Q8/coders/bmp.la
@@ -252,7 +255,10 @@ share/doc/GraphicsMagick/www/ChangeLog-2019.html
 share/doc/GraphicsMagick/www/ChangeLog-2020.html
 share/doc/GraphicsMagick/www/ChangeLog-2021.html
 share/doc/GraphicsMagick/www/ChangeLog-2022.html
-share/doc/GraphicsMagick/www/Changelog.html
+share/doc/GraphicsMagick/www/ChangeLog-2023.html
+share/doc/GraphicsMagick/www/ChangeLog-2024.html
+share/doc/GraphicsMagick/www/ChangeLog-2025.html
+share/doc/GraphicsMagick/www/ChangeLog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
 share/doc/GraphicsMagick/www/FAQ.html
