@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4116 2026/06/29 10:35:28 nia Exp $
+$NetBSD: CHANGES-2026,v 1.4117 2026/06/29 11:29:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6156,3 +6156,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-checkdmarc to 5.17.3 [adam 2026-06-29]
 	Updated www/palemoon-gtk3 to 34.3.1 [nia 2026-06-29]
 	Updated www/palemoon to 34.3.1 [nia 2026-06-29]
+	Updated graphics/py-matplotlib to 3.11.0 [adam 2026-06-29]
+	Updated graphics/py-wand to 0.7.2 [adam 2026-06-29]
