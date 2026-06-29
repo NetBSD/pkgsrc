@@ -1,0 +1,14 @@
+$NetBSD: patch-meson.build,v 1.1 2026/06/29 07:27:32 wiz Exp $
+
+https://gitlab.freedesktop.org/xorg/app/xclock/-/merge_requests/27
+
+--- meson.build.orig	2026-06-27 20:18:51.000000000 +0000
++++ meson.build
+@@ -47,6 +47,7 @@ conf.set('HAVE_NL_LANGINFO', cc.has_function('nl_langi
+ conf.set('HAVE_STRLCPY', cc.has_function('strlcpy') ? '1' : false)
+ conf.set('HAVE_GETPID', cc.has_function('getpid') ? '1' : false)
+ conf.set('HAVE_NL_LANGINFO', cc.has_function('nl_langinfo') ? '1' : false)
++conf.set('HAVE_USELOCALE', cc.has_function('uselocale') ? '1' : false)
+ 
+ # Replacement for AM_ICONV
+ dep_iconv = dependency('iconv', required: false)
