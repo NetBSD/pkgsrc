@@ -1,0 +1,36 @@
+$NetBSD: patch-Makefile,v 1.1 2026/06/29 00:53:14 dholland Exp $
+
+Configure for pkgsrc.
+
+--- Makefile.orig	2025-02-12 16:18:12.000000000 +0000
++++ Makefile
+@@ -1,15 +1,10 @@
+ .PHONY: check-deps
+ 
+ OS := $(shell uname)
+-PREFIX=$$HOME
+ D=dune
+ 
+ #Limit parallelism of some expensive operations
+-ifeq ($(OS),Darwin)
+-	J=$(shell sysctl -n hw.logicalcpu)
+-else
+-	J=$(shell nproc)
+-endif
++J=$(MAKE_JOBS)
+ 
+ 
+ REGRESSION_TEST_MODE = test
+@@ -42,10 +37,10 @@ $(BENTO): Version.ml | check-deps
+ 	dune build -j $(J) --profile $(DUNE_PROFILE) $@
+ 
+ install:
+-	sh ./dune-install.sh $(PREFIX)
++	sh ./dune-install.sh $(DESTDIR)$(PREFIX)
+ 
+ uninstall:
+-	sh ./dune-uninstall.sh $(PREFIX)
++	sh ./dune-uninstall.sh $(DESTDIR)$(PREFIX)
+ 
+ clean: dune-clean clean-asl-pseudocode clean-asldoc
+ 	rm -f Version.ml
