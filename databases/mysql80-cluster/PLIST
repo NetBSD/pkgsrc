@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/31 10:47:48 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/06/29 05:53:09 jnemeth Exp $
 bin/comp_err
 bin/ibd2sdi
 bin/innochecksum
@@ -112,7 +112,7 @@ include/mysql/storage/ndb/ndbapi/ndberror.h
 lib/libmysqlclient.a
 lib/libmysqlclient.so
 lib/libmysqlclient.so.21
-lib/libmysqlclient.so.21.2.46
+lib/libmysqlclient.so.21.2.47
 lib/libmysqlservices.a
 lib/libndbclient.so
 lib/libndbclient.so.6.1.0
