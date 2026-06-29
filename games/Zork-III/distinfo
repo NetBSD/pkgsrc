@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/06/29 15:27:44 jnemeth Exp $
+
+BLAKE2s (zork3.z3) = dc5ae67106bc3e5e9c560d207b7fc4b6064d7c5ddefcad138db58adff9db2c4c
+SHA512 (zork3.z3) = 8c8d7949d39f8276b7fd0b090377d25af3ac08a580563148ee96f1b7deb706b32a1f3f288cef1a5692ef9bf5ea112fded6c641de50176882a955ffde0be85f6a
+Size (zork3.z3) = 87984 bytes
