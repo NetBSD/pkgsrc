@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2026/06/22 22:54:13 morr Exp $
+@comment $NetBSD: PLIST,v 1.93 2026/06/29 19:14:13 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -868,6 +868,7 @@ share/vim/${VIM_SUBDIR}/indent/bpftrace.vim
 share/vim/${VIM_SUBDIR}/indent/bst.vim
 share/vim/${VIM_SUBDIR}/indent/bzl.vim
 share/vim/${VIM_SUBDIR}/indent/c.vim
+share/vim/${VIM_SUBDIR}/indent/cabal.vim
 share/vim/${VIM_SUBDIR}/indent/cdl.vim
 share/vim/${VIM_SUBDIR}/indent/ch.vim
 share/vim/${VIM_SUBDIR}/indent/chaiscript.vim
@@ -1827,8 +1828,12 @@ share/vim/${VIM_SUBDIR}/syntax/squirrel.vim
 share/vim/${VIM_SUBDIR}/syntax/srec.vim
 share/vim/${VIM_SUBDIR}/syntax/srt.vim
 share/vim/${VIM_SUBDIR}/syntax/ssa.vim
+share/vim/${VIM_SUBDIR}/syntax/sshallowedsigners.vim
+share/vim/${VIM_SUBDIR}/syntax/sshauthorizedkeys.vim
 share/vim/${VIM_SUBDIR}/syntax/sshconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/sshdconfig.vim
+share/vim/${VIM_SUBDIR}/syntax/sshknownhosts.vim
+share/vim/${VIM_SUBDIR}/syntax/sshpublickey.vim
 share/vim/${VIM_SUBDIR}/syntax/st.vim
 share/vim/${VIM_SUBDIR}/syntax/stata.vim
 share/vim/${VIM_SUBDIR}/syntax/stp.vim
