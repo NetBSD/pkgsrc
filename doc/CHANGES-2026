@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4121 2026/06/29 13:11:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4122 2026/06/29 13:34:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6166,3 +6166,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-scikit-build to 0.19.1 [adam 2026-06-29]
 	Updated math/py-pandas to 3.0.4 [adam 2026-06-29]
 	Updated sysutils/psmisc to 23.7 [adam 2026-06-29]
+	Updated www/py-protego to 0.6.2 [adam 2026-06-29]
+	Updated textproc/py-regex to 2026.6.28 [adam 2026-06-29]
