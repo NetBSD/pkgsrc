@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/03/03 23:11:30 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/06/29 07:25:09 wiz Exp $
 
-BLAKE2s (xfontsel-1.1.1.tar.xz) = 7caafe124ea36c16b80ded3ad8c9c4243924c3bcea2cd179d524dabd123a1c99
-SHA512 (xfontsel-1.1.1.tar.xz) = fdb1f20dc86e2e74da77ef5e62d9465ea24d1af965f1ff3a6334ffefb239130fcf28f7cde9b4e7d7e6c9cf12fcb637784e7af209cffcee3dbe304025d33abcdd
-Size (xfontsel-1.1.1.tar.xz) = 142336 bytes
+BLAKE2s (xfontsel-1.1.2.tar.xz) = baee544589c3f4d7a6cabb8cb709abea6fce297fd13e01a2f2720666106dfb04
+SHA512 (xfontsel-1.1.2.tar.xz) = 377ef4e95f68411716a9cd202f4b2468ef5638d53ebd058518bdf97319f8008052f2cb76154503a1eae76aae3ce27dfa7334428b66f738a087d0915bef69c603
+Size (xfontsel-1.1.2.tar.xz) = 148792 bytes
