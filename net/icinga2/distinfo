@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2026/05/21 12:45:37 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/06/29 19:40:41 adam Exp $
 
-BLAKE2s (icinga2-2.16.1.tar.gz) = 43142fe89b37c95b6299d300023aa91868829c430f42cc774e681a629ab96585
-SHA512 (icinga2-2.16.1.tar.gz) = ea96ff526f6e0421bf55e9e67ab53f3eac7851ab42981ce5151444df031b59791c08410859ce26fe1cf7ca40fb79a0ee1be825250b38db4f23cab2f2711b1c12
-Size (icinga2-2.16.1.tar.gz) = 9578801 bytes
+BLAKE2s (icinga2-2.16.2.tar.gz) = 8647573b1a17c7ddd777a393ecd96fabb00fd4631f585ab1a1bca4f8ceb58702
+SHA512 (icinga2-2.16.2.tar.gz) = 664fb4e4b3a79bf99cf7f253007effd6940a15aa164a1f3aa122f2fc91bae5d9d4c5d732cfa9ca497cf668e4494a6ee1fe42a5ef411709b4e0426e76786576ae
+Size (icinga2-2.16.2.tar.gz) = 9582890 bytes
 SHA1 (patch-third-party_cmake_FindMySQL.cmake) = a33567c30db47c4fab379f1b7c358174dd85fdd3
