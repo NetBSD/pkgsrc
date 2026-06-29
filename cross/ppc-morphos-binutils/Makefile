@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/06/13 15:32:44 js Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/29 20:03:38 js Exp $
 
 DISTNAME=	binutils-2.45.1
+PKGREVISION=	1
 PKGNAME=	ppc-morphos-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
@@ -24,7 +25,7 @@ CONFIGURE_ARGS+=	--target=ppc-morphos
 CONFIGURE_ARGS+=	--enable-plugins=no
 CONFIGURE_ARGS+=	--disable-initfini-array
 CONFIGURE_ARGS+=	--disable-nls
-CONFIGURE_ARGS+=	CFLAGS="${CFLAGS} -DMORPHOS_TARGET"
+CONFIGURE_ARGS+=	CFLAGS="${CFLAGS} -DMORPHOS_TARGET -DMORPHOS_SDK_RELEASE_ID=1"
 
 pre-patch:
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <${FILESDIR}/binutils-2.45.1-morphos.diff
