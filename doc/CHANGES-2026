@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4107 2026/06/29 00:55:08 dholland Exp $
+$NetBSD: CHANGES-2026,v 1.4108 2026/06/29 05:32:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6141,3 +6141,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/pdal-lib to 2.10.2 [adam 2026-06-28]
 	Updated math/ocaml-zarith to 1.14nb3 [dholland 2026-06-28]
 	Added devel/herdtools7 version 7.58 [dholland 2026-06-29]
+	Updated databases/py-sqlalchemy to 2.0.51 [adam 2026-06-29]
+	Updated databases/py-alembic to 1.18.5 [adam 2026-06-29]
+	Updated devel/py-greenlet to 3.5.3 [adam 2026-06-29]
+	Updated sysutils/py-fsspec to 2026.6.0 [adam 2026-06-29]
