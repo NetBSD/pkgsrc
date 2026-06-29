@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/06/29 00:53:14 dholland Exp $
+
+BLAKE2s (herdtools7-7.58.tar.gz) = 41229dedf36a04d621d82b9454a399c03d82b9c230feaf3461f7478af5c23fdc
+SHA512 (herdtools7-7.58.tar.gz) = a8acfafe1b95867f50cfac41ec5f5d46f10a14babe3c6a34fcb412b89cbeb163de539f19a7f35690cf4ba1420480b0aaa17a7f4429f8482a810b1405bc224f94
+Size (herdtools7-7.58.tar.gz) = 1599224 bytes
+SHA1 (patch-Makefile) = bfd4c9886c97c8913d08c25a05af90a87c6f775b
