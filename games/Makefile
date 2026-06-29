@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2026/05/18 12:20:35 nia Exp $
+# $NetBSD: Makefile,v 1.566 2026/06/29 15:29:05 jnemeth Exp $
 #
 
 COMMENT=	Games
@@ -17,6 +17,9 @@ SUBDIR+=	KoboDeluxe
 SUBDIR+=	LostPixels
 SUBDIR+=	MyGoGrinder
 SUBDIR+=	REminiscence
+SUBDIR+=	Zork-I
+SUBDIR+=	Zork-II
+SUBDIR+=	Zork-III
 SUBDIR+=	abbayedesmorts
 SUBDIR+=	abuse
 SUBDIR+=	adom
