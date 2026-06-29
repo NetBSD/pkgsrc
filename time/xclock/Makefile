@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/06/28 17:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/06/29 07:27:32 wiz Exp $
 
 DISTNAME=	xclock-1.2.0
 CATEGORIES=	time x11
@@ -12,8 +12,6 @@ COMMENT=	Analog / digital clock for X
 PREV_PKGPATH=	x11/xclock
 
 USE_TOOLS+=	pkg-config
-
-CFLAGS+=	-DNO_I18N
 
 .include "../../devel/meson/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
