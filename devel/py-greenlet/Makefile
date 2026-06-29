@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2026/06/23 04:27:25 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/06/29 05:29:34 adam Exp $
 
-DISTNAME=	greenlet-3.5.2
+DISTNAME=	greenlet-3.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
@@ -14,13 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
-USE_LANGUAGES=	c c++
-
-# This does not use -std=cXX, but includes cstdint.
-# When compiling with gcc 4.8, this causes an error due to not having
-# explicitly enabled C++11 support.
-#FORCE_CXX_STD=		c++11
 USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 
 # sorry, unimplemented: non-trivial designated initializers not supported
 GCC_REQD+=		8
