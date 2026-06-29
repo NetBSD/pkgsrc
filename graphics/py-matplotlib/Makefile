@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2026/06/28 15:41:24 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/06/29 11:25:19 adam Exp $
 
-DISTNAME=	matplotlib-3.10.9
+DISTNAME=	matplotlib-3.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -13,7 +13,7 @@ COMMENT=	Matlab-style plotting package for Python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=2020.06.20:../../security/py-certifi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-contourpy>=1.0.1:../../graphics/py-contourpy
 DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
@@ -27,6 +27,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-freetype=true"
+WHEEL_ARGS+=	-Csetup-args="-Dsystem-libraqm=true"
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-qhull=true"
 WHEEL_ARGS+=	-Csetup-args="-Db_lto=false"
 # install test data, per
@@ -54,6 +55,7 @@ do-test:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/raqm/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
 .include "../../math/py-numpy/buildlink3.mk"
