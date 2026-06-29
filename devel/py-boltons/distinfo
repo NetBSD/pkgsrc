@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/02/05 20:56:23 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/06/29 10:07:20 adam Exp $
 
-BLAKE2s (boltons-25.0.0.tar.gz) = 3b23722e11bfcfcd965b964528a4b505e677979d55e6687bc4d745197ad0753f
-SHA512 (boltons-25.0.0.tar.gz) = 4a1c9a511d5628c21c0416f289260f0dcbf4ebc38338d8dbf2d9a7ee8031b5d69c74ca6f5bc0a97fee1773a6e86fdb470af9b643f0c0b89db23987fe842dff4f
-Size (boltons-25.0.0.tar.gz) = 246294 bytes
+BLAKE2s (boltons-26.0.0.tar.gz) = 90daedaeebadb762e8ae01a66330843c02d1558200c56a0d0444d9095134ab0c
+SHA512 (boltons-26.0.0.tar.gz) = c2f1f61d57ad9716da07a0d8f128cf8624f9c9134d659f7f7f6fe87471e1738a5ce29f486f8cf2348e292c4f30e500825b45577cefefa54c5a67e5acbc09813f
+Size (boltons-26.0.0.tar.gz) = 225129 bytes
