@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.48 2026/06/05 10:41:53 adam Exp $
+$NetBSD: distinfo,v 1.49 2026/06/29 12:48:43 adam Exp $
 
-BLAKE2s (pandas-3.0.3.tar.gz) = 0e9868c49f7fd29b55edbee091e13d7688abaaf45dd6523b3124c1cc1570034c
-SHA512 (pandas-3.0.3.tar.gz) = 000b859c42aabf9364bf4e35fcd728a7a4ff4cfdbc7d2d40b4d3739087e1d03704438a2705e9e04a4025f6d98559bbe4c2f4f695c91b2ba4c4347b0444d48202
-Size (pandas-3.0.3.tar.gz) = 4651414 bytes
+BLAKE2s (pandas-3.0.4.tar.gz) = 86655fe147271f3698de784f75bb8817051e84bb34f8b7d41faf4ea92a5e4239
+SHA512 (pandas-3.0.4.tar.gz) = 0321357d876f465d2bbfb7194e3a15242943ab37fbf8a05829cd4b87174ba56ff0991dafc86e44ec8bfb7223fbb1e1a711da866b87198ca4b61a21ebecc7143a
+Size (pandas-3.0.4.tar.gz) = 4658146 bytes
 SHA1 (patch-pandas___libs_src_parser_tokenizer.c) = 3f74c1ca3c54d72cd976e9915339e20b356ad77b
 SHA1 (patch-pandas___libs_window_aggregations.pyx) = c38a287038a13af52164d44301a31a4a810b3860
