@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4125 2026/06/29 15:27:49 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.4126 2026/06/29 19:09:53 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6171,3 +6171,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added games/Zork-I version 1.0 [jnemeth 2026-06-29]
 	Added games/Zork-II version 1.0 [jnemeth 2026-06-29]
 	Added games/Zork-III version 1.0 [jnemeth 2026-06-29]
+	Updated www/resterm to 0.44.4 [drixter 2026-06-29]
