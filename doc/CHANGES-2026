@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4117 2026/06/29 11:29:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4118 2026/06/29 12:03:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6158,3 +6158,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/palemoon to 34.3.1 [nia 2026-06-29]
 	Updated graphics/py-matplotlib to 3.11.0 [adam 2026-06-29]
 	Updated graphics/py-wand to 0.7.2 [adam 2026-06-29]
+	Updated graphics/GraphicsMagick to 1.3.47 [adam 2026-06-29]
+	Updated graphics/p5-GraphicsMagick to 1.3.47 [adam 2026-06-29]
