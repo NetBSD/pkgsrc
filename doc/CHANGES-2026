@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4111 2026/06/29 07:25:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4112 2026/06/29 08:05:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6148,3 +6148,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/ledger32 to 3.2.1nb9 [wiz 2026-06-29]
 	Updated x11/xedit to 1.2.5 [wiz 2026-06-29]
 	Updated x11/xfontsel to 1.1.2 [wiz 2026-06-29]
+	Updated shells/starship to 1.26.0 [pin 2026-06-29]
