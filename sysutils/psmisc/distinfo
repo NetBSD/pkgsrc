@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:20:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/06/29 13:11:00 adam Exp $
 
-BLAKE2s (psmisc-20.1.tar.gz) = 455436f3fd78af0b4037878c3b71d0f0a9bca636351ea93b63060d5d137756ad
-SHA512 (psmisc-20.1.tar.gz) = 14553afd185d968042a10eefadaec089f4deb821fee70b69d520565ccbaa485c65137af2279bcfc2abbfdeb3e35bad2beaa5357372fbe6cfa587d10e9bdc2f9b
-Size (psmisc-20.1.tar.gz) = 57767 bytes
-SHA1 (patch-ab) = 74134f6cd2ea0270fdbaff8c0acb9e40767cc5cb
-SHA1 (patch-ac) = 9f9a7c7c5155345a1045aee70a2dd65a25ec7219
-SHA1 (patch-ad) = 6e2886ca59160d161d334e276675f187f138db7c
-SHA1 (patch-ae) = 484305118582c575f8c4827783aa3d5f57b25b5d
-SHA1 (patch-af) = ecba31c5e44291e695eb4b9ea19b9a70cdbd3f67
-SHA1 (patch-ag) = a03a4a0c0dbf065e2b2785cee8f23579a11ae13f
+BLAKE2s (psmisc-v23.7.tar.bz2) = cc84a432aa65fd37530669b9147d6ab5d6dc8f86695b2de094fb91ad028091b3
+SHA512 (psmisc-v23.7.tar.bz2) = facb57c8f4dcd4ed7ece729c2108f91aaaf2f2c5123c71f8f645d30c4bfb8ec147f1f222da262c37e18a7b0def7c25b66e3b5d0e216a45a016e8085f472121eb
+Size (psmisc-v23.7.tar.bz2) = 268418 bytes
+SHA1 (patch-configure.ac) = 38bf28e9c81c00894fbc97b1662904562d0b31aa
+SHA1 (patch-src_killall.c) = 0c1b8dc90a825b5c2862be4851b73afc1a2ccfb3

@@ -1,0 +1,21 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/06/29 13:11:00 adam Exp $
+
+fuser is for Linux only.
+
+--- configure.ac.orig	2024-11-17 09:42:46.507146070 +0000
++++ configure.ac
+@@ -167,11 +167,11 @@ AC_CHECK_MEMBERS([struct pt_regs.orig_d0
+                   struct pt_regs.d0],[],[], [#include <asm/ptrace.h>])
+ 
+ case ${host_os} in
+-  gnu*)
+-    want_fuser=no
++  linux*)
++    want_fuser=yes
+     ;;
+   *)
+-    want_fuser=yes
++    want_fuser=no
+ 	;;
+ esac
+ AM_CONDITIONAL(WANT_FUSER, test $want_fuser = yes)
