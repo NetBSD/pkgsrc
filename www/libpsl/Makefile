@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/06/28 14:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/06/29 05:18:35 adam Exp $
 
 DISTNAME=	libpsl-0.22.0
 CATEGORIES=	www
@@ -13,11 +13,12 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
-USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		gmake msgfmt msgmerge pkg-config xgettext
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-runtime=libidn2
+# Fix for iconv detection in gettext 1.0.
+CONFIGURE_ENV.Darwin=   am_cv_func_iconv_works=yes
 PKGCONFIG_OVERRIDE+=	libpsl.pc.in
 TEST_TARGET=		check
 
@@ -25,9 +26,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 REPLACE_PYTHON+=	src/psl-make-dafsa
 
-.include "../../lang/python/tool.mk"
-.include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
