@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.22 2025/12/01 13:34:43 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/06/30 16:29:51 adam Exp $
 
-BLAKE2s (xmp-4.2.0.tar.gz) = aedfcea23f85825015bcbfb3aef835fce9505f33b0d3046e867e4889d173991d
-SHA512 (xmp-4.2.0.tar.gz) = dc9834f6a08b1d9c5b8b91a32c0e886fc4da769e9c3c5c8b94d21ca672293d1911d43c75c1a5a820cb95286d7da46b0bd2ae91574d357c3ce78ee2777f216d04
-Size (xmp-4.2.0.tar.gz) = 224328 bytes
+BLAKE2s (xmp-4.3.0.tar.gz) = 3420237d46cc5a899ef01e72398a240159998e6f447ce22f6ab409718563b37f
+SHA512 (xmp-4.3.0.tar.gz) = 384d8e930970218ffa55f697521d3b0f2702de42a136a3518a6ea6d357734888799632296248d903e655aaa02a5d67689d40b0d6cb3dd69ca00118a3407653f8
+Size (xmp-4.3.0.tar.gz) = 233861 bytes
 SHA1 (patch-src_Makefile.in) = 5816b82a6253a627b39ff2ca262bfb5675ca97e3
-SHA1 (patch-src_options.c) = fe293ddf0e6ab58b0dc5b2eea16c13c0c2e4b693
