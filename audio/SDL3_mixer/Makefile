@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/04/18 15:08:09 js Exp $
+# $NetBSD: Makefile,v 1.2 2026/06/30 16:26:29 adam Exp $
 
-DISTNAME=	SDL3_mixer-3.2.0
+DISTNAME=	SDL3_mixer-3.2.4
 CATEGORIES=	audio devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL_mixer
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/libsdl-org/SDL_mixer
 COMMENT=	Sample multi-channel audio mixer library
 LICENSE=	zlib
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 # Don't dynamically load things - we build it with support for it.
 CMAKE_CONFIGURE_ARGS+=	-DSDLMIXER_DEPS_SHARED=OFF
