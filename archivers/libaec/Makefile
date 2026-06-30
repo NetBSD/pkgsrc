@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2025/03/05 10:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/06/30 17:41:45 wiz Exp $
 
 DISTNAME=	libaec-v1.1.3
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	archivers
-MASTER_SITES=	https://gitlab.dkrz.de/k202009/libaec/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://gitlab.dkrz.de/dkrz-sw/libaec/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://gitlab.dkrz.de/k202009/libaec
+HOMEPAGE=	https://gitlab.dkrz.de/dkrz-sw/libaec
 COMMENT=	Adaptive entropy coding library
 LICENSE=	2-clause-bsd
 
