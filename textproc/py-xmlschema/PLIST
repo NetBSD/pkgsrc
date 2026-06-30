@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2026/01/19 08:48:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/06/30 20:29:58 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -86,6 +86,8 @@ ${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.po
+${PYSITELIB}/xmlschema/locale/ka/LC_MESSAGES/xmlschema.mo
+${PYSITELIB}/xmlschema/locale/ka/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/locale/pl/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/pl/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/locale/ru/LC_MESSAGES/xmlschema.mo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2026/01/19 08:48:23 adam Exp $
+# $NetBSD: Makefile,v 1.70 2026/06/30 20:29:58 adam Exp $
 
-DISTNAME=	xmlschema-4.3.1
+DISTNAME=	xmlschema-4.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
@@ -11,15 +11,11 @@ COMMENT=	XML Schema validator and decoder
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-elementpath>=5.1.0:../../textproc/py-elementpath
+DEPENDS+=	${PYPKGPREFIX}-elementpath>=5.1.3:../../textproc/py-elementpath
 
 USE_LANGUAGES=	# none
 
-post-install:
-.for bin in xmlschema-json2xml xmlschema-validate xmlschema-xml2json
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	xmlschema-json2xml xmlschema-validate xmlschema-xml2json
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
