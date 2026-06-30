@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4130 2026/06/30 05:23:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4131 2026/06/30 05:47:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6178,3 +6178,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.25 [adam 2026-06-29]
 	Updated devel/py-uv-build to 0.11.25 [adam 2026-06-29]
 	Updated devel/gitpane to 0.8.1 [pin 2026-06-30]
+	Updated devel/py-wcwidth to 0.8.2 [adam 2026-06-30]
+	Updated textproc/py-bracex to 3.0 [adam 2026-06-30]
+	Updated textproc/py-wcmatch to 10.2 [adam 2026-06-30]
+	Updated devel/py-vcs-versioning to 2.2.2 [adam 2026-06-30]
