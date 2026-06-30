@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2026/06/20 13:34:26 kikadf Exp $
+# $NetBSD: options.mk,v 1.4.2.1 2026/06/30 15:22:00 bsiegert Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
@@ -46,7 +46,6 @@ GN_ARGS+=	use_pulseaudio=false
 
 .if !empty(PKG_OPTIONS:Mwayland)
 GN_ARGS+=	use_system_libffi=true
-.include "../../devel/input-headers/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .else
