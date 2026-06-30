@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4129 2026/06/29 21:10:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4130 2026/06/30 05:23:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6177,3 +6177,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql-timescaledb to 2.28.1 [adam 2026-06-29]
 	Updated devel/py-uv to 0.11.25 [adam 2026-06-29]
 	Updated devel/py-uv-build to 0.11.25 [adam 2026-06-29]
+	Updated devel/gitpane to 0.8.1 [pin 2026-06-30]
