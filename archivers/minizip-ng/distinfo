@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/04/28 08:14:33 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/06/30 20:10:22 adam Exp $
 
-BLAKE2s (minizip-ng-4.2.1.tar.gz) = 5e39cf2d5ef22dc341f7533464a4372e4800a60918bc9e3356f356bd15e696f3
-SHA512 (minizip-ng-4.2.1.tar.gz) = 606962a5939103d6045e05742f56d7a000708ee41a021dcd2583c534ab5944eb5d81c09bde37d891eaed8bdd6263513e94e73f89628225a68e36675342eb70d8
-Size (minizip-ng-4.2.1.tar.gz) = 610659 bytes
+BLAKE2s (minizip-ng-4.2.2.tar.gz) = 87e123b95cc5732c7614226f0aea7779109d8b3da5c3072af8f3c8b59a08a0d3
+SHA512 (minizip-ng-4.2.2.tar.gz) = 247e8e6a022dccfb19e1e2239e024adebbef4cba88c433997d41f3dd0cb9b09003fdcc0a77675ae1885b2ad7ec34c7fe222f7fc4ffda08b2ecf5de3f5d7d8262
+Size (minizip-ng-4.2.2.tar.gz) = 611941 bytes
