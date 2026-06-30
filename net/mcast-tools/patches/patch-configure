@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2026/06/30 22:55:14 wiz Exp $
+
+Add missing return value.
+
+--- configure.orig	2026-06-30 22:53:13.179822953 +0000
++++ configure
+@@ -7242,6 +7242,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ 
++int
+ main ()
+ {
+   int ac_sock;
