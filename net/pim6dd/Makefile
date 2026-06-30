@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/03/18 17:59:20 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2026/06/30 19:55:52 wiz Exp $
 
 DISTNAME=	pim6dd-20031021a
 PKGREVISION=	1
@@ -11,15 +11,16 @@ COMMENT=	IPv6 PIM dense mode daemon
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES+=		inet6
 
-CWARNFLAGS.clang=	-Wno-error=knr-promoted-parameter \
-			-Wno-error=address-of-packed-member
-MAKE_ENV+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
+CWARNFLAGS.clang=	-Wno-error=knr-promoted-parameter
+CWARNFLAGS.clang+=	-Wno-error=address-of-packed-member
+MAKE_ENV+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
+MAKE_FLAGS+=		PREFIX=${PREFIX}
 
-CONFLICTS=	mcast-tools-*
+CONFLICTS=	mcast-tools-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/pim6dd/
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 \
-			${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8
+INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.pkg.mk"
