@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2026/06/20 13:34:25 kikadf Exp $
+$NetBSD: distinfo,v 1.48 2026/06/30 11:39:08 kikadf Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -51,12 +51,12 @@ Size (cc-1.1.21.crate) = 83463 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (chromium-149.0.7827.155-lite.tar.xz) = b363a7656e35c057de8dd27d9069058802122614283bab56e15d7cf957a69716
-SHA512 (chromium-149.0.7827.155-lite.tar.xz) = 54acfe3adf3d3149c049660149cfa700dc0e3aeff59e37546ab8c1974b13eb6a1837edaf9c6cfab22f04de085865dff12bef2313e3ae6fa1f60e22bde9630c22
-Size (chromium-149.0.7827.155-lite.tar.xz) = 1610093724 bytes
-BLAKE2s (chromium-149.0.7827.155-testdata.tar.xz) = b88b76062349b25835b7279b07435b478d75bf7102a272e88a6aaeeee79b61e6
-SHA512 (chromium-149.0.7827.155-testdata.tar.xz) = 9f5586e1ed4ae8b1e7c447f21aad04e7b32cb947d3ac8d74ee5bec526aaaeb2884ddf7b119b3bf1889f150655e30f9789f02572a27aa70b56b41cf8aa1f5b84a
-Size (chromium-149.0.7827.155-testdata.tar.xz) = 1314813100 bytes
+BLAKE2s (chromium-149.0.7827.200-lite.tar.xz) = 42c86cf0d1f241c9ea249b75b8dc08ae3eae5b2ca15a1649ed5d8e931a478b57
+SHA512 (chromium-149.0.7827.200-lite.tar.xz) = ad3847243c15f3d4c5ba6e762ef8ed1544b450276e2d252f78cf9c55cd940f714e3d2985c27dd38d590d1550ef6833e5c01331c2a64791be9ba7dc18bbca86c9
+Size (chromium-149.0.7827.200-lite.tar.xz) = 1609734124 bytes
+BLAKE2s (chromium-149.0.7827.200-testdata.tar.xz) = 1ae2dad9a64d8e47c45cb78d91ef1178d2ef27cfa3bffd0bd5c1dec32665cbc6
+SHA512 (chromium-149.0.7827.200-testdata.tar.xz) = 5d7c463d8ddd52377ae369bc48169b0746aebf6eb4204ab1d1e94cc308b27535fe65db6ac5163a74da20fa927d7bb4a4e46b2d9d49bfeb8d1e37a01390ed52ab
+Size (chromium-149.0.7827.200-testdata.tar.xz) = 1314825672 bytes
 BLAKE2s (convert_case-0.6.0.crate) = c65fc0970543af9611c565957751df80f31efa3aa7c4d8e5eac41712864a67d5
 SHA512 (convert_case-0.6.0.crate) = 3b17449195a9a36e3965db89eeb967979c192ad7743217ea08e8c8b91ecae1ac1674362d05dc6f32f1f361fface3f783398285bb78060403f65a777a9d29adf2
 Size (convert_case-0.6.0.crate) = 18675 bytes
