@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2026/01/27 08:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/06/30 06:44:49 wiz Exp $
 
 DISTNAME=		gmpc-11.8.16
 PKGREVISION=		61
@@ -15,7 +15,9 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool msgfmt pkg-config gmake
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
-REPLACE_SH=		remote/gmpc-remote-stream
+
+CFLAGS+=		-Wno-incompatible-pointer-types
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .include "options.mk"
 
