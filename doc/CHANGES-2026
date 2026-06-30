@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4142 2026/06/30 11:39:28 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4143 2026/06/30 13:43:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6195,3 +6195,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cython to 3.2.8 [adam 2026-06-30]
 	Updated math/py-scipy to 1.18.0 [adam 2026-06-30]
 	Updated www/chromium to 149.0.7827.200 [kikadf 2026-06-30]
+	Updated devel/jq to 1.8.2nb1 [wiz 2026-06-30]
