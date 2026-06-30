@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4143 2026/06/30 13:43:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4144 2026/06/30 14:18:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-scipy to 1.18.0 [adam 2026-06-30]
 	Updated www/chromium to 149.0.7827.200 [kikadf 2026-06-30]
 	Updated devel/jq to 1.8.2nb1 [wiz 2026-06-30]
+	Updated inputmethod/canna to 3.8 [tsutsui 2026-06-30]
