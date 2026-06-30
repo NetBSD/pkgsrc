@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/03/07 11:50:03 nia Exp $
+# $NetBSD: Makefile,v 1.13 2026/06/30 10:03:53 wiz Exp $
 
-DISTNAME=	bulk-test-python27-20260307
+DISTNAME=	bulk-test-python27-20260630
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,8 +25,6 @@ DEPENDS+=	python27-[0-9]*:../../lang/python27
 
 DEPENDS+=	getmail5-[0-9]*:../../mail/getmail5
 DEPENDS+=	mailman<3:../../mail/mailman
-DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
-DEPENDS+=	palemoon-[0-9]*:../../www/palemoon
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
 
 # does not support Python 3 yet
