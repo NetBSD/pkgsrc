@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/06/11 07:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/06/30 07:27:28 wiz Exp $
 
 DISTNAME=	Surfer-0.3.1
 PKGNAME=	deforaos-surfer-0.3.1
@@ -25,14 +25,16 @@ MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
+CFLAGS+=	-Wno-incompatible-pointer-types
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${PKGMANDIR} != "share/man"
 post-install:
-. for page in download helper htmlapp surfer
+.  for page in download helper htmlapp surfer
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/${page}.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/${page}.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/${page}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${page}.1
-. endfor
+.  endfor
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
