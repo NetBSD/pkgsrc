@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/06/29 09:02:46 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/06/30 05:46:26 adam Exp $
 
-DISTNAME=	vcs_versioning-2.2.1
+DISTNAME=	vcs_versioning-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcs_versioning/}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
