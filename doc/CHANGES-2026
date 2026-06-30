@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4148 2026/06/30 19:43:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4149 2026/06/30 20:10:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6206,3 +6206,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/xmp to 4.3.0 [adam 2026-06-30]
 	Updated devel/py-dunamai to 1.26.1nb1 [wiz 2026-06-30]
 	Updated devel/p5-Devel-NYTProf to 6.14nb4 [wiz 2026-06-30]
+	Updated graphics/libjpeg-turbo to 3.2.0 [adam 2026-06-30]
+	Updated archivers/minizip-ng to 4.2.2 [adam 2026-06-30]
