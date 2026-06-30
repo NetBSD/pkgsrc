@@ -1,47 +1,27 @@
-$NetBSD: patch-canuum_canna.c,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+$NetBSD: patch-canuum_canna.c,v 1.2 2026/06/30 14:17:52 tsutsui Exp $
 
-- Appease prototype warnings.
 - Remove unnecessary ops.
+- Remove non-standard and unnecessary resetterm()
 
---- canuum/canna.c.orig	2003-09-17 08:50:52.000000000 +0000
+--- canuum/canna.c.orig	2026-05-09 14:08:44.000000000 +0000
 +++ canuum/canna.c
-@@ -52,4 +52,16 @@ static char rcsid[] = "$Id: canna.c,v 1.
+@@ -1248,10 +1248,8 @@ int flag;
  #endif
- 
-+#ifdef HAVE_CONFIG_H
-+#  include <config.h>
-+#endif
-+
-+#if STDC_HEADERS
-+#  include <string.h>
-+#else
-+#  if HAVE_STRINGS_H
-+#    include <strings.h>
-+#  endif
-+#endif /* STDC_HEADERS */
-+
- #include "commonhd.h"
- #include "sdefine.h"
-@@ -95,6 +107,4 @@ static char rcsid[] = "$Id: canna.c,v 1.
- #define NOREDRAW      0
- 
--extern	int	errno;
--
- static int maxmodelen;
- static int maxwidth = 0;
-@@ -1239,8 +1249,6 @@ int flag;
  
  #ifdef TERMINFO
 -  int fd, res;
  
 -  fd = open("/dev/null", O_WRONLY, &res);
 -  setupterm(term, fd, (int *)0);
-+  setupterm(term, 0, NULL);
++  setupterm(term, STDOUT_FILENO, NULL);
  
    cannakeyentry(key_f1,    CANNA_KEY_F1);
-@@ -1271,5 +1279,4 @@ int flag;
+   cannakeyentry(key_f2,    CANNA_KEY_F2);
+@@ -1280,7 +1278,6 @@ int flag;
+   cannakeyentry(key_end,   CANNA_KEY_End);
  #endif
  
 -  resetterm();
  #endif
  
+   if (terminalname = malloc(strlen(term) + 1)) {

@@ -1,25 +1,16 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:49:30 nia Exp $
+$NetBSD: distinfo,v 1.21 2026/06/30 14:17:51 tsutsui Exp $
 
-BLAKE2s (Canna37p3.tar.bz2) = e36a9f8479d9a201a030b5350bef41203879d291f4ca2c6367af59c1d4cf8050
-SHA512 (Canna37p3.tar.bz2) = 82846f2393aa2654dd2c97a93178098b8bd11e5409b584447f1b6fdf303adacc9802e2293cafd98b68af8b69622625ed00aa9712bf270feaa119adfdf4211158
-Size (Canna37p3.tar.bz2) = 1263065 bytes
-SHA1 (patch-Canna.conf) = 81b46285a2b91c07b8497dc6669eb26552391a6c
-SHA1 (patch-Imakefile) = a70dee63ce9ce392b29b76df70479fee45e1a2b9
-SHA1 (patch-canna_widedef.h) = 711bc129ca58265fb7555b99f9fe7fa72bebd7fc
-SHA1 (patch-canuum_Imakefile) = 5f4e7970a92d514ec538e4591eaa4f46843654a3
-SHA1 (patch-canuum_canna.c) = a543a720fba9e2f770d6397d6b05352cfa58f300
-SHA1 (patch-canuum_config.h.in) = 98547954e459bd85e5b03fc86f34fb5d1e3eed4b
-SHA1 (patch-canuum_configure) = c08efb73bb7d93d8c539873c1337be54ed864902
-SHA1 (patch-canuum_configure.in) = a1a6a821b9e9f9baef450ad340cb57a6f20a6989
-SHA1 (patch-canuum_jhlp.c) = 1d15186608f116cc4fb3e6a9691bb1b701d8b0ec
-SHA1 (patch-canuum_printf.c) = c05ef114fae689855989d5d5eded2f734c62e12e
-SHA1 (patch-canuum_termcap.c) = 958015b3bf4e9f89703e198c1ed28d51ae3f8c4e
-SHA1 (patch-canuum_termio.c) = df9e68c8fb564ee4c4367acf6b042c253d17e525
-SHA1 (patch-cmd_catdic_rutil.c) = f9b3d866c089cc6a49d8f90c216fb27cbbc55e19
-SHA1 (patch-cmd_cmd.tmpl) = f6ec97c273aa84eb84bdd24cbe16aaf7e696e041
-SHA1 (patch-dic_phono_Imakefile) = 4e1210517317b57796cad5b350de41e1f0d8157d
-SHA1 (patch-lib_RKC_convert.c) = f196cfa3db3ef163c1869ca6bfd3f22170997aef
-SHA1 (patch-lib_RK_dd.c) = 8055a2a3902e7d4d0cc1d782295c2879311750ec
-SHA1 (patch-lib_RK_ncache.c) = e792592500e7db85a6b2370c4ea9eb533d97bda0
-SHA1 (patch-lib_canna_keydef.c) = af14140f58bf8a6214a7fb9d5d73347c1b3cdd85
-SHA1 (patch-lib_canna_lisp.c) = 0ed74a04406ab21fb88ef94b182cff2ff3c793ef
+BLAKE2s (Canna38.tar.xz) = 0055232ceb6395d99f1e7fe27933e8f10efb9b973d69ca41b375b5e9999d4f57
+SHA512 (Canna38.tar.xz) = 50f44904fe95f5893f6d18f55ec29ae55b6d35ffec9f07c44898907bfbfef1c88b47ce269767395409a4ae6a22aa2f2be7ec44fc376eb83d2feb2453233f18f0
+Size (Canna38.tar.xz) = 2060780 bytes
+SHA1 (patch-Canna.conf) = 01a5e1b323d3cf1d49498119c83db28dff93d2d5
+SHA1 (patch-Imakefile) = 71c6d9fb2b60d386c37eb5f1f3df879cb8462929
+SHA1 (patch-canna_widedef.h) = a28dfd4c546dbc91e68589721c389426098d19ef
+SHA1 (patch-canuum_canna.c) = b52a0cdce5bd3e45ad9a9adbfab5c4f6d7c6ccf1
+SHA1 (patch-canuum_termcap.c) = 38fb86a2e0385d2fe13165987c1c6842f558165d
+SHA1 (patch-canuum_termio.c) = 9b1284c3672a4fbceb85388ba544d17a17863e49
+SHA1 (patch-cmd_cmd.tmpl) = 642e3e15057fba2142ed48e0493464be978e07b2
+SHA1 (patch-dic_phono_Imakefile) = e81f1a1629751d28436e6b73266d89caba48ee15
+SHA1 (patch-lib_RKC_convert.c) = 80933aad8d831fbcda295b56eb3de965b46e8894
+SHA1 (patch-lib_RK_dd.c) = 3b050411704788fbb4908a4e0bb982955c64bf4d
+SHA1 (patch-lib_canna_lisp.c) = f944eec48d6f9c7ed797bcd41c0b9f26235446c0

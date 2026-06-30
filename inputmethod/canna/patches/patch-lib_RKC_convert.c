@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_RKC_convert.c,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+$NetBSD: patch-lib_RKC_convert.c,v 1.2 2026/06/30 14:17:52 tsutsui Exp $
 
 Tweak include path to build without configure in unnecessary dirs
 
 --- lib/RKC/convert.c.orig	2004-04-26 21:48:37.000000000 +0000
 +++ lib/RKC/convert.c
-@@ -30,7 +30,7 @@ static char rcs_id[] = "$Id: convert.c,v
+@@ -27,7 +27,7 @@
  #include "rkcw.h"
  #include "canna/RK.h"
  #include "rkc.h"
