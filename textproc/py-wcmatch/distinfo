@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/06/30 19:47:11 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/06/30 05:44:02 adam Exp $
 
-BLAKE2s (wcmatch-10.1.tar.gz) = 953de4fd3e87df2f8126dfb2b5fa01397b4059408db48804e025e097703f095c
-SHA512 (wcmatch-10.1.tar.gz) = 83d363ada86266ac23b67801a4b7bbc5eb30ec9e73b93a7bfc6e5bcc4b37528a65b683cd6e29e70aace6971e240bb1ed210172d40ef262db0650ad98d20541b8
-Size (wcmatch-10.1.tar.gz) = 117421 bytes
+BLAKE2s (wcmatch-10.2.tar.gz) = 3c53d2f2cf671d09a9b86a176150ee048936fd8e5bfea724403776c6ce2de193
+SHA512 (wcmatch-10.2.tar.gz) = a910bd5c1f2806b7f11a76d0e5a3964b3374e4a8637f43c143ef744a0e91ebf88a24677d3fabbfe8bed4a50255f3b490ab771ad173cb43424c044b7252ea7597
+Size (wcmatch-10.2.tar.gz) = 132499 bytes
