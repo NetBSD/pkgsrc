@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4139 2026/06/30 09:59:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4140 2026/06/30 10:04:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6191,3 +6191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-CSS-Minifier-XS to 0.14 [wiz 2026-06-30]
 	Updated mail/offlineimap to 8.0.2 [wiz 2026-06-30]
 	Removed mail/offlineimap3 successor mail/offlineimap [wiz 2026-06-30]
+	Updated meta-pkgs/bulk-test-python27 to 20260630 [wiz 2026-06-30]
