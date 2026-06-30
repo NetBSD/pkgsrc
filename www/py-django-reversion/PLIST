@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/10/31 09:50:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/06/30 07:13:53 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -50,6 +50,8 @@ ${PYSITELIB}/reversion/locale/sl_SI/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/sl_SI/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/tr/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/zh_Hans/LC_MESSAGES/django.mo
