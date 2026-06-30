@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/08/10 13:02:56 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2026/06/30 06:54:57 adam Exp $
 
-BLAKE2s (lzip-1.25.tar.gz) = ee579cbb34a63da65bfdfe6cbe47e839721751f66dbebf6bdd435969eabfd8bf
-SHA512 (lzip-1.25.tar.gz) = 6dec5625d5668d2f6f93816b0f2d7050ef357b5ce9a9af100bde45dddc21171341c2bcb623acdde8146b7eaed2248f8e0f5f32e64f57ecc6fe6cb9a0e187b796
-Size (lzip-1.25.tar.gz) = 115640 bytes
+BLAKE2s (lzip-1.26.tar.gz) = 28dcbb96cc27f3bf9136340ae47c561753887afd22f3138468bf02331a8635d2
+SHA512 (lzip-1.26.tar.gz) = df99d7c9ce932486aec64fe9f9c378a9f98300deac6f6065c9543006cf35daeb52b419316d4672c182acbd0c8105388267947dfc9267965697d521259d59a0ad
+Size (lzip-1.26.tar.gz) = 120476 bytes
