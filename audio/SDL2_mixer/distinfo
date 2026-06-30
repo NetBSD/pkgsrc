@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/02/18 10:01:14 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/06/30 16:24:45 adam Exp $
 
-BLAKE2s (SDL2_mixer-2.8.1.tar.gz) = 5041c45cc482c8885feaab7a63ac6c4bf57446f912f93e36af0b9f07e09fa993
-SHA512 (SDL2_mixer-2.8.1.tar.gz) = 6148591404b2113bcdb54391821658548acfe380a9cba660113e55e6f2fb7da2a5a59a99fefe51a0d7f8b91160648f11f72750353da88d285a962e3a410aecd7
-Size (SDL2_mixer-2.8.1.tar.gz) = 5996239 bytes
+BLAKE2s (SDL2_mixer-2.8.2.tar.gz) = b44e95b4beaa3357e7c8905095b60eeabd651d6604d171cbc943307d82ff89e0
+SHA512 (SDL2_mixer-2.8.2.tar.gz) = 9ea190a3e5a0dc3fc9c5a1d0b8aef4af7243559060c8c6d10b0da0defdafd8e78d584ad5ffc88d2e841cdf6886781f77e86b5c95abce6468ed877b372a57747b
+Size (SDL2_mixer-2.8.2.tar.gz) = 6000649 bytes
