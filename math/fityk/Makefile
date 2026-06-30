@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/06/11 07:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/06/30 07:11:17 wiz Exp $
 
 DISTNAME=	fityk-1.3.2
 PKGREVISION=	15
@@ -21,6 +21,7 @@ FORCE_CXX_STD=		c++14
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xylib+=	xylib>=1.6
 .include "../../math/xylib/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
