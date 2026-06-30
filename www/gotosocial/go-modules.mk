@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2026/06/28 13:49:07 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.3 2026/06/30 09:44:12 wiz Exp $
 
 GO_MODULE_FILES+=	code.superseriousbusiness.org/activity/@v/v1.19.0.mod
 GO_MODULE_FILES+=	code.superseriousbusiness.org/activity/@v/v1.19.0.zip
@@ -40,6 +40,8 @@ GO_MODULE_FILES+=	codeberg.org/gruf/go-kv/v2/@v/v2.0.10.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-kv/v2/@v/v2.0.10.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-list/@v/v0.0.0-20240425093752-494db03d641f.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-list/@v/v0.0.0-20240425093752-494db03d641f.zip
+GO_MODULE_FILES+=	codeberg.org/gruf/go-longdur/@v/v0.1.3.mod
+GO_MODULE_FILES+=	codeberg.org/gruf/go-longdur/@v/v0.1.3.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-mangler/v2/@v/v2.0.9.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-mangler/v2/@v/v2.0.9.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-maps/@v/v1.0.4.mod
@@ -52,8 +54,8 @@ GO_MODULE_FILES+=	codeberg.org/gruf/go-mutexes/@v/v1.5.9.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-mutexes/@v/v1.5.9.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-runners/@v/v1.7.0.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-runners/@v/v1.7.0.zip
-GO_MODULE_FILES+=	codeberg.org/gruf/go-sched/@v/v1.3.0.mod
-GO_MODULE_FILES+=	codeberg.org/gruf/go-sched/@v/v1.3.0.zip
+GO_MODULE_FILES+=	codeberg.org/gruf/go-sched/@v/v1.3.1.mod
+GO_MODULE_FILES+=	codeberg.org/gruf/go-sched/@v/v1.3.1.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-split/@v/v1.2.0.mod
 GO_MODULE_FILES+=	codeberg.org/gruf/go-split/@v/v1.2.0.zip
 GO_MODULE_FILES+=	codeberg.org/gruf/go-storage/@v/v0.6.0.mod
@@ -251,6 +253,8 @@ GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.5.3.mod
 GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.5.3.zip
 GO_MODULE_FILES+=	github.com/grpc-ecosystem/grpc-gateway/v2/@v/v2.29.0.mod
 GO_MODULE_FILES+=	github.com/grpc-ecosystem/grpc-gateway/v2/@v/v2.29.0.zip
+GO_MODULE_FILES+=	github.com/hashicorp/cronexpr/@v/v1.1.3.mod
+GO_MODULE_FILES+=	github.com/hashicorp/cronexpr/@v/v1.1.3.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.zip
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
