@@ -1,10 +1,10 @@
-$NetBSD: patch-Imakefile,v 1.1 2015/10/18 03:58:31 tsutsui Exp $
+$NetBSD: patch-Imakefile,v 1.2 2026/06/30 14:17:51 tsutsui Exp $
 
 Explicitly install man pages.
 
 --- Imakefile.orig	2004-05-19 15:39:22.000000000 +0000
 +++ Imakefile
-@@ -166,7 +166,7 @@ instserver::
+@@ -165,7 +165,7 @@ instserver::
  	for i in $(SERVERDIR) ;\
  	do \
  		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
@@ -13,7 +13,7 @@ Explicitly install man pages.
  	done
  
  instclient::
-@@ -174,7 +174,7 @@ instclient::
+@@ -173,7 +173,7 @@ instclient::
  	for i in $(CLIENTDIR) ;\
  	do \
  		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \

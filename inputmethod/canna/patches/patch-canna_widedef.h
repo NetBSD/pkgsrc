@@ -1,30 +1,24 @@
-$NetBSD: patch-canna_widedef.h,v 1.2 2017/07/22 17:53:16 maya Exp $
+$NetBSD: patch-canna_widedef.h,v 1.3 2026/06/30 14:17:51 tsutsui Exp $
 
-DragonFly wchar_t support.
-apple and freebsd no longer have machine/ansi.h
-freebsd probably needs sys/_types.h as it does on gcc which is the
-source of this file.
+- DragonFly wchar_t support.
+- machine/ansi.h is not necessary
 
---- canna/widedef.h.orig	2003-12-27 17:15:20.000000000 +0000
+--- canna/widedef.h.orig	2026-05-09 14:08:44.000000000 +0000
 +++ canna/widedef.h
-@@ -29,14 +29,17 @@
- 
- #ifdef __FreeBSD__
+@@ -30,12 +30,10 @@
  # include <osreldate.h>
-+# include <sys/_types.h>
  #endif
  
 -#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) \
--    || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
- # include <machine/ansi.h>
- #endif
- 
+-    || defined(__NetBSD__) || defined(__OpenBSD__)
+-# include <machine/ansi.h>
+-#endif
+-
 -#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) \
 +#if defined(__DragonFly__)
 +# include <wchar.h>
 +# define _WCHAR_T
 +#elif (defined(__FreeBSD__) && __FreeBSD_version < 500000) \
-     || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
+     || defined(__NetBSD__) || defined(__OpenBSD__)
  # ifdef _BSD_WCHAR_T_
  #  undef _BSD_WCHAR_T_

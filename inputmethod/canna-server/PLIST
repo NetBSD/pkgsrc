@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/10/18 03:58:31 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/06/30 14:17:51 tsutsui Exp $
 bin/addwords
 bin/canlisp
 bin/cannacheck
@@ -18,7 +18,6 @@ bin/dpbindic
 bin/dpromdic
 bin/dpxdic
 bin/forcpp
-bin/forsort
 bin/kpdic
 bin/lsdic
 bin/mergeword
