@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4136 2026/06/30 09:54:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4137 2026/06/30 09:55:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/gotosocial to 0.22.0 [wiz 2026-06-30]
 	Updated time/xclock to 1.2.0nb1 [wiz 2026-06-30]
 	Updated www/p5-JavaScript-Minifier-XS to 0.16 [wiz 2026-06-30]
+	Updated www/p5-CSS-Minifier-XS to 0.14 [wiz 2026-06-30]
