@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4132 2026/06/30 06:55:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4133 2026/06/30 08:13:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6184,3 +6184,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-vcs-versioning to 2.2.2 [adam 2026-06-30]
 	Updated archivers/lzip to 1.26 [adam 2026-06-30]
 	Updated archivers/lziprecover to 1.26 [adam 2026-06-30]
+	Updated devel/git to 2.55.0 [adam 2026-06-30]
