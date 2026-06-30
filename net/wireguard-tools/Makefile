@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/03/21 10:37:37 nia Exp $
+# $NetBSD: Makefile,v 1.10 2026/06/30 10:55:20 gdt Exp $
 
 DISTNAME=	wireguard-tools-1.0.20260223
 CATEGORIES=	net
@@ -32,11 +32,6 @@ PLIST_VARS+=		wg-quick
 PRINT_PLIST_AWK+=	/wg-quick/ { print "$${PLIST.wg-quick}" $$0; next }
 
 .include "../../mk/bsd.prefs.mk"
-
-# Darwin's native bash 3.x isn't sufficient
-.if ${OPSYS} == "Darwin" && "${TOOLS_PLATFORM.bash}" == "/bin/bash"
-TOOLS_PLATFORM.bash=
-.endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" \
  || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
