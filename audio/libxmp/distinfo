@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/12/01 13:32:44 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/06/30 16:27:52 adam Exp $
 
-BLAKE2s (libxmp-4.6.3.tar.gz) = f0107c707912e87e698e62c0c4326e9ebf6a6c14364e69db8e2c057a105972fc
-SHA512 (libxmp-4.6.3.tar.gz) = fc87fafa392ebd07f6f9823801cdf296d5f5a6216e15a437d0539bc4ebf0f963bb8d868c73499d1ece33a238b71a8da6da303be23d409975a62b166225853bec
-Size (libxmp-4.6.3.tar.gz) = 805616 bytes
-SHA1 (patch-include_xmp.h) = 4976367981f3706514f54801665cab5b7600bf26
+BLAKE2s (libxmp-4.7.0.tar.gz) = d893531f51580fb3196bdb0cb10c0aabd72075f71950e28899e7c5e08fac3d8d
+SHA512 (libxmp-4.7.0.tar.gz) = ed69adeae826bd1c2171db7a171dc38ad6d6f30057d8e709466b52fc03a9d6b0cd1db8e856175f34dfc30266a958fee5b401e40cc9c30c10ea9f17a39a61f9e8
+Size (libxmp-4.7.0.tar.gz) = 838712 bytes
