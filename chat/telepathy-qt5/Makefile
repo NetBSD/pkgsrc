@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/01/07 08:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/06/30 07:46:20 wiz Exp $
 
 DISTNAME=	telepathy-qt-0.9.8
 PKGNAME=	${DISTNAME:S/qt/qt5/g}
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQt.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQtService.pc.in
