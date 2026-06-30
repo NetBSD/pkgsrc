@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/10/23 20:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/06/30 16:24:45 adam Exp $
 
-DISTNAME=	SDL2_mixer-2.8.1
-PKGREVISION=	1
+DISTNAME=	SDL2_mixer-2.8.2
 CATEGORIES=	audio devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL_mixer
@@ -21,9 +20,11 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	SDL2_mixer.pc.in
 
-CONFIGURE_ARGS+=	--disable-music-ogg-stb --enable-music-ogg-vorbis
-CONFIGURE_ARGS+=	--disable-music-flac-drflac --enable-music-flac-libflac
-CONFIGURE_ARGS+=	--disable-music-mp3-drmp3 --enable-music-mp3-mpg123
+CONFIGURE_ARGS+=	--disable-music-ogg-stb
+CONFIGURE_ARGS+=	--enable-music-ogg-vorbis
+CONFIGURE_ARGS+=	--disable-music-flac-drflac
+CONFIGURE_ARGS+=	--enable-music-flac-libflac
+CONFIGURE_ARGS+=	--enable-music-mp3-mpg123
 # needs sort -V
 CONFIGURE_ARGS+=	SORT=${PREFIX}/gnu/bin/sort
 
