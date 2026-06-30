@@ -1,5 +1,7 @@
-$NetBSD: patch-tests_dbus_account-basics.cpp,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: patch-tests_dbus_account-basics.cpp,v 1.2 2026/06/30 07:46:28 wiz Exp $
+
 * remove use of deprecated function
+
 --- tests/dbus/account-basics.cpp.orig	2019-11-11 17:17:37.000000000 +0000
 +++ tests/dbus/account-basics.cpp
 @@ -295,15 +295,15 @@ void TestAccountBasics::testBasics()

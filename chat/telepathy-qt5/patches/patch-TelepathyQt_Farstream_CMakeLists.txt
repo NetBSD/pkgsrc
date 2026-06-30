@@ -1,6 +1,8 @@
-$NetBSD: patch-TelepathyQt_Farstream_CMakeLists.txt,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: patch-TelepathyQt_Farstream_CMakeLists.txt,v 1.2 2026/06/30 07:46:28 wiz Exp $
+
 * don't put GLib etc in interface libraries, they are private in the pc files.
   Fixes link break when linking with telepathy-qt5-farstream from cmake.
+
 --- TelepathyQt/Farstream/CMakeLists.txt.orig	2019-12-11 17:51:44.129571773 +0000
 +++ TelepathyQt/Farstream/CMakeLists.txt
 @@ -41,14 +41,17 @@ if(FARSTREAM_COMPONENTS_FOUND)

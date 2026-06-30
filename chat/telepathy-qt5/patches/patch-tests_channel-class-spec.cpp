@@ -1,5 +1,7 @@
-$NetBSD: patch-tests_channel-class-spec.cpp,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: patch-tests_channel-class-spec.cpp,v 1.2 2026/06/30 07:46:28 wiz Exp $
+
 * remove use of deprecated function
+
 --- tests/channel-class-spec.cpp.orig	2019-12-10 09:48:42.267292950 +0000
 +++ tests/channel-class-spec.cpp
 @@ -13,7 +13,7 @@ ChannelClassSpecList reverse(const Chann
