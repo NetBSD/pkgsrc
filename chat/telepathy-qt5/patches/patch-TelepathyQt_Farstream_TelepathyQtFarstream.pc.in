@@ -1,6 +1,8 @@
-$NetBSD: patch-TelepathyQt_Farstream_TelepathyQtFarstream.pc.in,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: patch-TelepathyQt_Farstream_TelepathyQtFarstream.pc.in,v 1.2 2026/06/30 07:46:28 wiz Exp $
+
 * *_INSTALL_DIR is absolute so don't write the prefixes twice
 * move Qt5Core and Qt5DBus to Requires since headers requests their headers
+
 --- TelepathyQt/Farstream/TelepathyQtFarstream.pc.in.orig	2019-11-11 17:17:37.000000000 +0000
 +++ TelepathyQt/Farstream/TelepathyQtFarstream.pc.in
 @@ -1,11 +1,12 @@

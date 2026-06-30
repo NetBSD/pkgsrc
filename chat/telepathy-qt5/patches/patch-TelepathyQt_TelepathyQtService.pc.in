@@ -1,5 +1,7 @@
-$NetBSD: patch-TelepathyQt_TelepathyQtService.pc.in,v 1.1 2019/12/12 16:44:53 nros Exp $
+$NetBSD: patch-TelepathyQt_TelepathyQtService.pc.in,v 1.2 2026/06/30 07:46:28 wiz Exp $
+
 * move Qt5Core and Qt5DBus to Requires since headers requests their headers
+
 --- TelepathyQt/TelepathyQtService.pc.in.orig	2019-12-10 18:08:40.297294454 +0000
 +++ TelepathyQt/TelepathyQtService.pc.in
 @@ -4,6 +4,7 @@ includedir=${INCLUDE_INSTALL_DIR}
