@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/05/04 12:26:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/06/30 20:27:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,7 +8,14 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
-${PYSITELIB}/pycurl.so
+${PYSITELIB}/pycurl/__init__.py
+${PYSITELIB}/pycurl/__init__.pyc
+${PYSITELIB}/pycurl/__init__.pyo
+${PYSITELIB}/pycurl/_pycurl.pyi
+${PYSITELIB}/pycurl/_pycurl.so
+${PYSITELIB}/pycurl/async_multi.py
+${PYSITELIB}/pycurl/async_multi.pyc
+${PYSITELIB}/pycurl/async_multi.pyo
 share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-MIT
@@ -18,7 +25,6 @@ share/doc/pycurl${PYVERSSUFFIX}/README.rst
 share/doc/pycurl${PYVERSSUFFIX}/RELEASE-NOTES.rst
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/linksys.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/multi-socket_action-select.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/opensocketexception.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_buffer.py
@@ -42,3 +48,4 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/ws_echo.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/ws_fragmented.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/ws_multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
+share/doc/pycurl3.14/examples/async_multi.py
