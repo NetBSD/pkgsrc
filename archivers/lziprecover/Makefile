@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/08/10 13:03:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/06/30 06:55:29 adam Exp $
 
-DISTNAME=	lziprecover-1.25
+DISTNAME=	lziprecover-1.26
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lziprecover/
 
@@ -10,13 +10,13 @@ COMMENT=	Recovery tool for lossless data compressor based on the LZMA algorithm
 LICENSE=	gnu-gpl-v2 # or later
 
 USE_LANGUAGES=		c++
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
 TEST_TARGET=		check
-USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		CXX=${CXX:Q}
 MAKE_FLAGS+=		CPPFLAGS=${CPPFLAGS:Q}
