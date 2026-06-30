@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2025/01/29 10:31:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.103 2026/06/30 08:12:08 wiz Exp $
 
 DISTNAME=	groff-1.23.0
 PKGREVISION=	1
@@ -27,15 +27,7 @@ CONFIGURE_ARGS+=	--with-urw-fonts-dir=${PREFIX}/share/fonts/urw
 
 INFO_FILES=		YES
 
-REPLACE_AWK+=		font/devlj4/generate/special.awk
 REPLACE_PERL+=		contrib/*/*.pl
-REPLACE_PERL+=		src/roff/grog/grog.pl
-REPLACE_PERL+=		src/roff/grog/subs.pl
-
-REPLACE_INTERPRETER+=	sed
-REPLACE.sed.old=	.*/sed
-REPLACE.sed.new=	${SED}
-REPLACE_FILES.sed+=	font/devps/generate/symbol.sed
 
 .include "options.mk"
 
