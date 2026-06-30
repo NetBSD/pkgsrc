@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.67 2024/07/03 13:27:16 cheusov Exp $
+# $NetBSD: tools.Darwin.mk,v 1.68 2026/06/30 00:25:00 gdt Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -7,7 +7,10 @@ OSX_XCRUN=			${SETENV} PATH= /usr/bin/xcrun --no-cache
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
-TOOLS_PLATFORM.bash?=		/bin/bash
+# Native bash is 3.2.57 macOS 15 and macOS 26.  This is inadequate for
+# many uses, and in 2026 bash 3 is not a reasonable implementation of
+# bash.
+#TOOLS_PLATFORM.bash?=		/bin/bash
 # Native bison (at least up to version 2.3 in OSX Lion) does not work
 # well in the tools environment and cannot locate m4sugar.m4 without
 # BISON_PKGDATADIR being set.  For now just pull in the pkgsrc tool.
