@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/12/24 15:39:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/06/30 20:07:32 adam Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
@@ -21,7 +21,7 @@ lib/libjpeg.so.8.3.2
 lib/libturbojpeg.a
 lib/libturbojpeg.so
 lib/libturbojpeg.so.0
-lib/libturbojpeg.so.0.4.0
+lib/libturbojpeg.so.0.5.0
 lib/pkgconfig/libjpeg.pc
 lib/pkgconfig/libturbojpeg.pc
 man/man1/cjpeg.1
