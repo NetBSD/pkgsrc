@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.54 2026/04/02 19:06:34 wiz Exp $
+# $NetBSD: options.mk,v 1.55 2026/06/30 15:13:10 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
-PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
+PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs rust-system-libgit2
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -74,6 +74,14 @@ CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 # may be older (e.g., 18) than the internal LLD (now 19.x), ref.
 # https://github.com/rust-lang/rust/issues/131291
 CONFIGURE_ARGS+=	--set rust.lld=false
+.endif
+
+#
+# Use the external libgit2.
+#
+.if !empty(PKG_OPTIONS:Mrust-system-libgit2)
+.include "../../devel/libgit2/buildlink3.mk"
+CONFIGURE_ENV+=		LIBGIT2_NO_VENDOR=1
 .endif
 
 # Rust bumps into NetBSD's limit of 256 TLS keys per process, at least
