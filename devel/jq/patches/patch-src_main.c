@@ -1,7 +1,7 @@
-$NetBSD: patch-src_main.c,v 1.3 2026/06/28 15:41:12 wiz Exp $
+$NetBSD: patch-src_main.c,v 1.4 2026/06/30 13:43:04 wiz Exp $
 
 ctype(3) usage
-https://github.com/jqlang/jq/issues/3569
+https://github.com/jqlang/jq/pull/3574
 
 --- src/main.c.orig	2026-06-23 06:02:47.113070826 +0000
 +++ src/main.c
