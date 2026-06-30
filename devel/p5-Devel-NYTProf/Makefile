@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2025/07/04 08:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/06/30 19:43:36 wiz Exp $
 
 DISTNAME=	Devel-NYTProf-6.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -13,8 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=		p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
-
+DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
 TEST_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TEST_DEPENDS+=		p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TEST_DEPENDS+=		p5-Sub-Name>=0.11:../../devel/p5-Sub-Name
 TEST_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 SUBST_CLASSES+=		paths
