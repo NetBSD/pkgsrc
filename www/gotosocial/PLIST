@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/06/28 13:49:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/06/30 09:44:11 wiz Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -31,10 +31,12 @@ share/examples/gotosocial/web/assets/dist/_fonts.css
 share/examples/gotosocial/web/assets/dist/_media-wrapper.css
 share/examples/gotosocial/web/assets/dist/_prism-dark.css
 share/examples/gotosocial/web/assets/dist/_prism-light.css
+share/examples/gotosocial/web/assets/dist/_profile-header-wide-stats.css
 share/examples/gotosocial/web/assets/dist/_profile-header.css
 share/examples/gotosocial/web/assets/dist/_status-media.css
 share/examples/gotosocial/web/assets/dist/about.css
 share/examples/gotosocial/web/assets/dist/base.css
+share/examples/gotosocial/web/assets/dist/directory.css
 share/examples/gotosocial/web/assets/dist/frontend.js
 share/examples/gotosocial/web/assets/dist/frontend_prerender.js
 share/examples/gotosocial/web/assets/dist/index.css
@@ -189,10 +191,12 @@ share/examples/gotosocial/web/source/css/_fonts.css
 share/examples/gotosocial/web/source/css/_media-wrapper.css
 share/examples/gotosocial/web/source/css/_prism-dark.css
 share/examples/gotosocial/web/source/css/_prism-light.css
+share/examples/gotosocial/web/source/css/_profile-header-wide-stats.css
 share/examples/gotosocial/web/source/css/_profile-header.css
 share/examples/gotosocial/web/source/css/_status-media.css
 share/examples/gotosocial/web/source/css/about.css
 share/examples/gotosocial/web/source/css/base.css
+share/examples/gotosocial/web/source/css/directory.css
 share/examples/gotosocial/web/source/css/index.css
 share/examples/gotosocial/web/source/css/login-info.css
 share/examples/gotosocial/web/source/css/page.css
@@ -213,6 +217,7 @@ share/examples/gotosocial/web/source/settings/components/back-button.tsx
 share/examples/gotosocial/web/source/settings/components/blurhash.tsx
 share/examples/gotosocial/web/source/settings/components/check-list.tsx
 share/examples/gotosocial/web/source/settings/components/combo-box.tsx
+share/examples/gotosocial/web/source/settings/components/datetime.tsx
 share/examples/gotosocial/web/source/settings/components/error.tsx
 share/examples/gotosocial/web/source/settings/components/filterable-domain-actions-list.tsx
 share/examples/gotosocial/web/source/settings/components/form/inputs.tsx
@@ -222,9 +227,14 @@ share/examples/gotosocial/web/source/settings/components/languages.tsx
 share/examples/gotosocial/web/source/settings/components/loading.tsx
 share/examples/gotosocial/web/source/settings/components/pageable-list.tsx
 share/examples/gotosocial/web/source/settings/components/profile.tsx
+share/examples/gotosocial/web/source/settings/components/relaydetailform.tsx
+share/examples/gotosocial/web/source/settings/components/relayflags.tsx
+share/examples/gotosocial/web/source/settings/components/relaylistentry.tsx
+share/examples/gotosocial/web/source/settings/components/relaynew.tsx
 share/examples/gotosocial/web/source/settings/components/status.tsx
 share/examples/gotosocial/web/source/settings/components/user-logout-card.tsx
 share/examples/gotosocial/web/source/settings/components/username-lozenge.tsx
+share/examples/gotosocial/web/source/settings/components/website.tsx
 share/examples/gotosocial/web/source/settings/index.tsx
 share/examples/gotosocial/web/source/settings/lib/form/array.ts
 share/examples/gotosocial/web/source/settings/lib/form/bool.tsx
@@ -258,6 +268,7 @@ share/examples/gotosocial/web/source/settings/lib/query/admin/domain-permissions
 share/examples/gotosocial/web/source/settings/lib/query/admin/domain-permissions/update.ts
 share/examples/gotosocial/web/source/settings/lib/query/admin/http-header-permissions/index.ts
 share/examples/gotosocial/web/source/settings/lib/query/admin/index.ts
+share/examples/gotosocial/web/source/settings/lib/query/admin/relay-subscriptions/index.ts
 share/examples/gotosocial/web/source/settings/lib/query/admin/reports/index.ts
 share/examples/gotosocial/web/source/settings/lib/query/gts-api.ts
 share/examples/gotosocial/web/source/settings/lib/query/login/index.ts
@@ -268,6 +279,7 @@ share/examples/gotosocial/web/source/settings/lib/query/user/domainperms.ts
 share/examples/gotosocial/web/source/settings/lib/query/user/export-import.ts
 share/examples/gotosocial/web/source/settings/lib/query/user/index.ts
 share/examples/gotosocial/web/source/settings/lib/query/user/interactions.ts
+share/examples/gotosocial/web/source/settings/lib/query/user/relay-pushes.ts
 share/examples/gotosocial/web/source/settings/lib/query/user/tokens.ts
 share/examples/gotosocial/web/source/settings/lib/query/user/twofactor.ts
 share/examples/gotosocial/web/source/settings/lib/types/account.ts
@@ -281,6 +293,7 @@ share/examples/gotosocial/web/source/settings/lib/types/interaction.ts
 share/examples/gotosocial/web/source/settings/lib/types/migration.ts
 share/examples/gotosocial/web/source/settings/lib/types/oauth.ts
 share/examples/gotosocial/web/source/settings/lib/types/query.ts
+share/examples/gotosocial/web/source/settings/lib/types/relay.ts
 share/examples/gotosocial/web/source/settings/lib/types/report.ts
 share/examples/gotosocial/web/source/settings/lib/types/rules.ts
 share/examples/gotosocial/web/source/settings/lib/types/scopes.ts
@@ -317,7 +330,13 @@ share/examples/gotosocial/web/source/settings/views/admin/http-header-permission
 share/examples/gotosocial/web/source/settings/views/admin/instance/ruledetail.tsx
 share/examples/gotosocial/web/source/settings/views/admin/instance/rules.tsx
 share/examples/gotosocial/web/source/settings/views/admin/instance/settings.tsx
+share/examples/gotosocial/web/source/settings/views/admin/instances/detail/index.tsx
+share/examples/gotosocial/web/source/settings/views/admin/instances/index.tsx
+share/examples/gotosocial/web/source/settings/views/admin/instances/search/index.tsx
 share/examples/gotosocial/web/source/settings/views/admin/menu.tsx
+share/examples/gotosocial/web/source/settings/views/admin/relay-subscriptions/detail.tsx
+share/examples/gotosocial/web/source/settings/views/admin/relay-subscriptions/index.tsx
+share/examples/gotosocial/web/source/settings/views/admin/relay-subscriptions/new.tsx
 share/examples/gotosocial/web/source/settings/views/admin/router.tsx
 share/examples/gotosocial/web/source/settings/views/moderation/accounts/detail/actions.tsx
 share/examples/gotosocial/web/source/settings/views/moderation/accounts/detail/index.tsx
@@ -376,18 +395,22 @@ share/examples/gotosocial/web/source/settings/views/user/posts/interaction-polic
 share/examples/gotosocial/web/source/settings/views/user/posts/interaction-policy-settings/something-else.tsx
 share/examples/gotosocial/web/source/settings/views/user/posts/interaction-policy-settings/types.ts
 share/examples/gotosocial/web/source/settings/views/user/profile/profile.tsx
+share/examples/gotosocial/web/source/settings/views/user/relay-pushes/detail.tsx
+share/examples/gotosocial/web/source/settings/views/user/relay-pushes/index.tsx
+share/examples/gotosocial/web/source/settings/views/user/relay-pushes/new.tsx
 share/examples/gotosocial/web/source/settings/views/user/router.tsx
+share/examples/gotosocial/web/source/settings/views/user/tokens/detail.tsx
 share/examples/gotosocial/web/source/settings/views/user/tokens/index.tsx
 share/examples/gotosocial/web/source/settings/views/user/tokens/search.tsx
 share/examples/gotosocial/web/source/tsconfig.json
 share/examples/gotosocial/web/source/yarn.lock
 share/examples/gotosocial/web/template/2fa.tmpl
-share/examples/gotosocial/web/template/404.tmpl
 share/examples/gotosocial/web/template/about.tmpl
 share/examples/gotosocial/web/template/authorize-interaction.tmpl
 share/examples/gotosocial/web/template/authorize.tmpl
 share/examples/gotosocial/web/template/confirm-email.tmpl
 share/examples/gotosocial/web/template/confirmed-email.tmpl
+share/examples/gotosocial/web/template/directory.tmpl
 share/examples/gotosocial/web/template/domain-allowlist.tmpl
 share/examples/gotosocial/web/template/domain-blocklist.tmpl
 share/examples/gotosocial/web/template/email_confirm.tmpl
@@ -403,6 +426,8 @@ share/examples/gotosocial/web/template/finalize.tmpl
 share/examples/gotosocial/web/template/index.tmpl
 share/examples/gotosocial/web/template/index_register.tmpl
 share/examples/gotosocial/web/template/index_what_is_this.tmpl
+share/examples/gotosocial/web/template/item_deleted.tmpl
+share/examples/gotosocial/web/template/item_not_visible.tmpl
 share/examples/gotosocial/web/template/login-info.tmpl
 share/examples/gotosocial/web/template/login_button.tmpl
 share/examples/gotosocial/web/template/maintenance.tmpl
