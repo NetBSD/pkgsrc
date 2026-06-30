@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2026/06/26 21:28:57 kikadf Exp $
+# $NetBSD: Makefile,v 1.64 2026/06/30 11:39:08 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			149.0.7827.155
-PKGREVISION=			1
+VERSION=			149.0.7827.200
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
