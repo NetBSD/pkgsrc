@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/23 10:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/01 20:42:06 tnn Exp $
 
 DISTNAME=		enca-1.22
 CATEGORIES=		textproc converters
@@ -14,5 +14,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	enca.pc.in
+
+CHECK_PORTABILITY_SKIP+=	test/*
 
 .include "../../mk/bsd.pkg.mk"
