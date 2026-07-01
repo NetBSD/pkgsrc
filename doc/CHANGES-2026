@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4166 2026/07/01 12:12:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4167 2026/07/01 13:07:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6236,3 +6236,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-hishel to 1.3.0 [adam 2026-07-01]
 	Updated textproc/py-humanize to 4.16.0 [adam 2026-07-01]
 	Removed devel/py-subprocess32 [adam 2026-07-01]
+	Updated graphics/py-Pillow to 12.3.0 [adam 2026-07-01]
+	Updated devel/py-rpds-py to 2026.6.3 [adam 2026-07-01]
+	Updated security/py-asyncssh to 2.24.0 [adam 2026-07-01]
