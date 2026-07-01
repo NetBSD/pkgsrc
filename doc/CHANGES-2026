@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4171 2026/07/01 15:40:37 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4172 2026/07/01 15:42:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6243,3 +6243,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns to 5.1.3 [drixter 2026-07-01]
 	Updated geography/mapserver to 8.6.4 [gdt 2026-07-01]
 	Updated geography/py-qgc to 1.0.0 [gdt 2026-07-01]
+	Updated geography/proj-doc to 9.8 [gdt 2026-07-01]
