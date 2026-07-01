@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4159 2026/07/01 08:07:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4160 2026/07/01 08:12:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-bidi to 0.6.11 [adam 2026-07-01]
 	Updated devel/py-bitarray to 3.8.2 [adam 2026-07-01]
 	Updated fonts/fontconfig to 2.18.1nb1 [wiz 2026-07-01]
+	Updated x11/xfontsel to 1.1.2nb1 [wiz 2026-07-01]
