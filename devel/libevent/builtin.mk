@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2020/11/06 15:48:15 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.22 2026/07/01 21:14:26 wiz Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -25,7 +25,7 @@ MAKEVARS+=		IS_BUILTIN.libevent
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.libevent) && \
-    !empty(IS_BUILTIN.libevent:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.libevent:tl} == yes && \
     empty(H_LIBEVENT:M__nonexistent__)
 .  if empty(H_LIBEVENTCONFIG:M__nonexistent__)
 _BLTN_EVENT_1_4_11!=		\
@@ -118,10 +118,10 @@ USE_BUILTIN.libevent=	no
 .  else
 USE_BUILTIN.libevent=	${IS_BUILTIN.libevent}
 .    if defined(BUILTIN_PKG.libevent) && \
-        !empty(IS_BUILTIN.libevent:M[yY][eE][sS])
+        ${IS_BUILTIN.libevent:tl} == yes
 USE_BUILTIN.libevent=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libevent}
-.        if !empty(USE_BUILTIN.libevent:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libevent:tl} == yes
 USE_BUILTIN.libevent!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libevent:Q}; then \
 		${ECHO} yes;						\
@@ -137,7 +137,7 @@ MAKEVARS+=		USE_BUILTIN.libevent
 
 # Fake pkg-config for builtin libevent on NetBSD
 
-.if !empty(USE_BUILTIN.libevent:M[yY][eE][sS])
+.if ${USE_BUILTIN.libevent:tl} == yes
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-libevent-pkgconfig
 
