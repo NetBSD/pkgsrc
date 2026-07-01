@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/09/09 13:01:03 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/01 15:42:44 gdt Exp $
 
 # https://proj.org/_/downloads/en/9.6/pdf/
-VERSION=		9.6
+VERSION=		9.8
 DISTNAME=		proj-doc-${VERSION}
 CATEGORIES=		geography
 MASTER_SITES=		-https://proj.org/_/downloads/en/${VERSION}/pdf/
