@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27520 2026/07/01 10:04:28 wiz Exp $
+$NetBSD: TODO,v 1.27521 2026/07/01 20:36:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -840,6 +840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
+	o libevent-2.1.13
 	o libfakekey-0.3
 	o libflash-0.4.13
 	o libfolks-0.15.9
