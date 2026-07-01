@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/05/09 11:29:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/07/01 15:40:32 gdt Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,6 +25,9 @@ ${PYSITELIB}/pyqgc/qgcreader.pyo
 ${PYSITELIB}/pyqgc/qgctypes_core.py
 ${PYSITELIB}/pyqgc/qgctypes_core.pyc
 ${PYSITELIB}/pyqgc/qgctypes_core.pyo
+${PYSITELIB}/pyqgc/qgctypes_decodes.py
+${PYSITELIB}/pyqgc/qgctypes_decodes.pyc
+${PYSITELIB}/pyqgc/qgctypes_decodes.pyo
 ${PYSITELIB}/pyqgc/qgctypes_get.py
 ${PYSITELIB}/pyqgc/qgctypes_get.pyc
 ${PYSITELIB}/pyqgc/qgctypes_get.pyo
