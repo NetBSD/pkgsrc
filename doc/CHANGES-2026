@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4173 2026/07/01 21:14:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4174 2026/07/01 21:14:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6245,3 +6245,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-qgc to 1.0.0 [gdt 2026-07-01]
 	Updated geography/proj-doc to 9.8 [gdt 2026-07-01]
 	Updated devel/libevent to 2.1.13 [wiz 2026-07-01]
+	Updated devel/py-libevent-rpcgen to 2.1.13 [wiz 2026-07-01]
