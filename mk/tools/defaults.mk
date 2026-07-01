@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.66 2024/07/03 13:27:16 cheusov Exp $
+# $NetBSD: defaults.mk,v 1.67 2026/07/01 12:02:33 gdt Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,6 +53,7 @@ TOOLS_DEFAULTS_MK=	defined
 
 _TOOLS_VARNAME.awk=		AWK
 _TOOLS_VARNAME.basename=	BASENAME
+# TOOLS_PLATFORM.bash must be >= 4.0.
 _TOOLS_VARNAME.bash=		BASH
 _TOOLS_VARNAME.bison-yacc=	YACC
 _TOOLS_VARNAME.byacc=		YACC
