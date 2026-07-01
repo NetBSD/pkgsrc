@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.30 2026/03/09 12:50:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/07/01 07:50:30 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/scm_file_list.json
+${PYSITELIB}/${WHEEL_INFODIR}/scm_version.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ansiblelint/__init__.py
 ${PYSITELIB}/ansiblelint/__init__.pyc
