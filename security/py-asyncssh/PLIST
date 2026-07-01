@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/04/14 05:08:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/07/01 13:06:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -188,6 +188,9 @@ ${PYSITELIB}/asyncssh/sk_eddsa.pyo
 ${PYSITELIB}/asyncssh/socks.py
 ${PYSITELIB}/asyncssh/socks.pyc
 ${PYSITELIB}/asyncssh/socks.pyo
+${PYSITELIB}/asyncssh/sshsig.py
+${PYSITELIB}/asyncssh/sshsig.pyc
+${PYSITELIB}/asyncssh/sshsig.pyo
 ${PYSITELIB}/asyncssh/stream.py
 ${PYSITELIB}/asyncssh/stream.pyc
 ${PYSITELIB}/asyncssh/stream.pyo
