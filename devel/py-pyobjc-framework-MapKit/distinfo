@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/06/03 11:44:10 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/07/01 09:24:32 adam Exp $
 
-BLAKE2s (pyobjc_framework_mapkit-12.2.tar.gz) = 46c632d13e105a007a030dac9573d52a5fe992884037179e68bba49e25372268
-SHA512 (pyobjc_framework_mapkit-12.2.tar.gz) = 40f14b99346caf844551e6fbf7f96b9cfe4fb4982071b820e8f3d046e0034dc75bac72567f84565b06d58071084d8a04fd4661652058357f4466d6006432886b
-Size (pyobjc_framework_mapkit-12.2.tar.gz) = 79554 bytes
+BLAKE2s (pyobjc_framework_mapkit-12.2.1.tar.gz) = 02cd27a9598fbae438e056a5e401cb16800a45731b64caceb6ef443f133edc72
+SHA512 (pyobjc_framework_mapkit-12.2.1.tar.gz) = 37ca9ff346fd61dbaf9cf7b75d634f56c1618db75648921dbe5b5053e008a9b5f4524909d4487ac450740a6fe4d2cfd2773ff6fe5db7df2dd778419427f11d7d
+Size (pyobjc_framework_mapkit-12.2.1.tar.gz) = 79578 bytes

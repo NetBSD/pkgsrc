@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/06/03 11:44:14 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/07/01 09:24:36 adam Exp $
 
-BLAKE2s (pyobjc_framework_scenekit-12.2.tar.gz) = 35022cd7d9dad85f6952cd8a3e3d5ee4b4307d277c1abbab0f636d421f035c28
-SHA512 (pyobjc_framework_scenekit-12.2.tar.gz) = 22aeb39a30982f4aebbf0fd5fd6dec8402166faf9066d2cc2670ff0dc73927c7d58f02fa033c961fe97aaac19f57ac2f87249fb9c2a5c68ddaa3408fd1a69424
-Size (pyobjc_framework_scenekit-12.2.tar.gz) = 131982 bytes
+BLAKE2s (pyobjc_framework_scenekit-12.2.1.tar.gz) = adc14390dfc3a64e0a469f4fc3762889b933c95fb29d7b0acbeb80951be0509f
+SHA512 (pyobjc_framework_scenekit-12.2.1.tar.gz) = 241fe13c5e0c162f129f21d55e27e66311b0d0103c0b38f611ee93dbeb99cb2cfc7b596af8940233e61ea10d05fc1a808faa15d8bbfedae4492e630557bc0463
+Size (pyobjc_framework_scenekit-12.2.1.tar.gz) = 132003 bytes

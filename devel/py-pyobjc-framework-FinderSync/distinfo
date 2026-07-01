@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/06/03 11:44:07 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/07/01 09:24:29 adam Exp $
 
-BLAKE2s (pyobjc_framework_findersync-12.2.tar.gz) = d7b246af7f1796affeda58b5b8be9f9c9e77ed17bfac4a48b08d3a040c39825b
-SHA512 (pyobjc_framework_findersync-12.2.tar.gz) = e44c15fe8a2bc44b768125a6f034c86cac3448b099fd32e98aa3770505e2cdf4c30b99305522aeaa046e7a31eb8a73811d660637eab197c7fc5854c930ab9827
-Size (pyobjc_framework_findersync-12.2.tar.gz) = 14210 bytes
+BLAKE2s (pyobjc_framework_findersync-12.2.1.tar.gz) = 5bc398cc3c264517638b4cbaf5c69c4778399eb00fa38507ca718c4a05af1df1
+SHA512 (pyobjc_framework_findersync-12.2.1.tar.gz) = 20febfffe7d0e3c6159a7a2fecd2883570ff1b803deef95d08e3c3c3fca21758149547c237fe4ae35ee56537bda0e30b0f8e3cc90511920245f9044069a46630
+Size (pyobjc_framework_findersync-12.2.1.tar.gz) = 14303 bytes
