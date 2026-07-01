@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/06/03 11:44:10 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/07/01 09:24:31 adam Exp $
 
-BLAKE2s (pyobjc_framework_libxpc-12.2.tar.gz) = cc502735e4c23155d89f7c09645c3cbb50ec5616ab2289fdc2c3817abaceeeb9
-SHA512 (pyobjc_framework_libxpc-12.2.tar.gz) = 8931892dc0f5b6656b962c59aeb8158a72ce9df3e76e30557e548c7d46a5d29c15907e9e2babfadf6fe4cb7d5754a755f7ddb7fb22e4ebe3321949ff6421f08f
-Size (pyobjc_framework_libxpc-12.2.tar.gz) = 37263 bytes
+BLAKE2s (pyobjc_framework_libxpc-12.2.1.tar.gz) = ce266ddf6633aa0253e9f1c4a5179c43b8a1d30a932b7815b55bf09e2f1a15bd
+SHA512 (pyobjc_framework_libxpc-12.2.1.tar.gz) = a5fadc4931e831ef7767e9c7ead01da5a734b2ea76689784e2e95418d290da6440760e137c10783119c8ed92ca884fb0784d4d8e106440e06972a752ee3a7566
+Size (pyobjc_framework_libxpc-12.2.1.tar.gz) = 37265 bytes

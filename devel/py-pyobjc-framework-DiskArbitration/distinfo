@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/06/03 11:44:06 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/07/01 09:24:28 adam Exp $
 
-BLAKE2s (pyobjc_framework_diskarbitration-12.2.tar.gz) = 2c8c3cf67dd6b987b171650aa5c3a23ee8caf76e04b2a0f2e3c5bb87a108852d
-SHA512 (pyobjc_framework_diskarbitration-12.2.tar.gz) = 8cd60748343443ea824bd7c376ba605ef46c4f59049fba9e3fb585a202a6e1da569a89543351b6eef10fcd10474efd1eb36526e27e715f1a636ce74a5722f8f6
-Size (pyobjc_framework_diskarbitration-12.2.tar.gz) = 18162 bytes
+BLAKE2s (pyobjc_framework_diskarbitration-12.2.1.tar.gz) = d44206ef59be8ef2bca715db1544164f485e7b3c0f8424f3c72f047c110acb20
+SHA512 (pyobjc_framework_diskarbitration-12.2.1.tar.gz) = 4d30698ac24d47217e79dfd6da430d91b17714211a6e6fa036fc71453bcaa7c70e85e7c132b3899009b7b9b32b24c8ff719c20b09221d999c523d01c3dbca0af
+Size (pyobjc_framework_diskarbitration-12.2.1.tar.gz) = 18174 bytes
