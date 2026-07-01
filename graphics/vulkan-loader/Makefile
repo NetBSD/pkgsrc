@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/04/13 13:56:07 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/01 13:15:44 wiz Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=	vulkan-loader-${SDK_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 GITHUB_PROJECT=	Vulkan-Loader
 EXTRACT_USING=	bsdtar
@@ -14,6 +15,10 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_TOOLS+=	pkg-config
+
+USE_CC_FEATURES=	c99
+# Warning: reference to the libc supplied alloca(3); this most likely will not work. Please use the compiler provided version of alloca(3), by supplying the appropriate compiler flags (e.g. -std=gnu99).
+FORCE_C_STD=		gnu99
 
 LIBVERSION=	${PKGVERSION_NOREV:R}
 PLIST_SUBST+=	LIBVERSION=${LIBVERSION}
