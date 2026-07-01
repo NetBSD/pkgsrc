@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4647 2026/07/01 12:11:26 adam Exp $
+# $NetBSD: Makefile,v 1.4648 2026/07/01 22:04:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3371,6 +3371,7 @@ SUBDIR+=	reposurgeon
 SUBDIR+=	retrie
 SUBDIR+=	revive
 SUBDIR+=	rgbds
+SUBDIR+=	rhg
 SUBDIR+=	rinutils
 SUBDIR+=	robin-map
 SUBDIR+=	ropper
