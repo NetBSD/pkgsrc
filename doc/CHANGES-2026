@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4162 2026/07/01 08:53:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4163 2026/07/01 09:25:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6231,3 +6231,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-requirements-parser to 0.13.1 [adam 2026-07-01]
 	Updated devel/py-polib to 1.2.0 [adam 2026-07-01]
 	Updated devel/py-pydantic-settings to 2.14.2 [adam 2026-07-01]
+	Updated devel/py-pyobjc to 12.2.1 [adam 2026-07-01]
