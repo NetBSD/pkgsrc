@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2026/06/30 20:19:42 adam Exp $
+# $NetBSD: options.mk,v 1.9 2026/07/01 21:28:37 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.git
-PKG_SUPPORTED_OPTIONS=	openssl
+PKG_SUPPORTED_OPTIONS=	openssl rust
 .if ${OPSYS} == "Darwin"
 PKG_SUPPORTED_OPTIONS+=	apple-common-crypto
 .endif
@@ -21,4 +21,11 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .  else
 CONFIGURE_ARGS+=	--without-openssl
 .  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mrust)
+MAKE_ENV+=	WITH_RUST=YesPlease
+.include "../../lang/rust/buildlink3.mk"
+.else
+MAKE_ENV+=	NO_RUST=1
 .endif
