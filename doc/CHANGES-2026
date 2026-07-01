@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4157 2026/07/01 07:50:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4158 2026/07/01 08:04:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6223,3 +6223,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-inline-snapshot to 0.34.2 [adam 2026-07-01]
 	Updated sysutils/py-ansible-compat to 26.6.0 [adam 2026-07-01]
 	Updated sysutils/ansible-lint to 26.6.0 [adam 2026-07-01]
+	Updated converters/py-bidi to 0.6.11 [adam 2026-07-01]
+	Updated devel/py-bitarray to 3.8.2 [adam 2026-07-01]
