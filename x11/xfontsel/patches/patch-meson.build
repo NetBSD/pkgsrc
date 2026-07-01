@@ -1,0 +1,24 @@
+$NetBSD: patch-meson.build,v 1.1 2026/07/01 08:12:08 wiz Exp $
+
+Trying to workaround https://github.com/mesonbuild/meson/issues/3740
+which causes meson to fail to detect it needs to link against libintl
+for gettext() on NetBSD.
+https://gitlab.freedesktop.org/xorg/app/xfontsel/-/merge_requests/18
+
+--- meson.build.orig	2026-06-29 01:07:03.000000000 +0000
++++ meson.build
+@@ -51,10 +51,12 @@ deps = [dep_libxaw, dep_libxmu, dep_libxt, dep_libx11,
+ deps = [dep_libxaw, dep_libxmu, dep_libxt, dep_libx11, dep_xproto]
+ 
+ # Internationalization & localization support
+-use_gettext = cc.has_function('gettext')
++libintl_prefix = '#include <libintl.h>'
++use_gettext = cc.has_function('gettext', prefix: libintl_prefix)
+ if use_gettext == false
+   dep_libintl = cc.find_library('intl', required: false)
+-  use_gettext = cc.has_function('gettext', dependencies: dep_libintl)
++  use_gettext = cc.has_function('gettext', dependencies: dep_libintl,
++                                prefix: libintl_prefix)
+   if use_gettext == true
+     deps += dep_libintl
+   endif

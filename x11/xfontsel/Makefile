@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/06/29 07:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/01 08:12:08 wiz Exp $
 
 DISTNAME=		xfontsel-1.1.2
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
@@ -12,8 +13,6 @@ COMMENT=		X font selector
 USE_TOOLS+=		pkg-config
 
 MESON_ARGS+=		-Dappdefaultdir=${PREFIX}/lib/X11/app-defaults
-
-LDFLAGS+=		-lintl
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

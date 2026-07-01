@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2026/06/29 07:25:09 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/07/01 08:12:08 wiz Exp $
 
 BLAKE2s (xfontsel-1.1.2.tar.xz) = baee544589c3f4d7a6cabb8cb709abea6fce297fd13e01a2f2720666106dfb04
 SHA512 (xfontsel-1.1.2.tar.xz) = 377ef4e95f68411716a9cd202f4b2468ef5638d53ebd058518bdf97319f8008052f2cb76154503a1eae76aae3ce27dfa7334428b66f738a087d0915bef69c603
 Size (xfontsel-1.1.2.tar.xz) = 148792 bytes
+SHA1 (patch-meson.build) = 6e7495443ef25c8b087c1393cb96aef9612c5538
