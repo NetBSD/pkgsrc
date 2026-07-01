@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4645 2026/07/01 06:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.4646 2026/07/01 06:39:25 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3110,7 +3110,6 @@ SUBDIR+=	py-pyobjc-framework-iTunesLibrary
 SUBDIR+=	py-pyobjc-framework-libdispatch
 SUBDIR+=	py-pyobjc-framework-libxpc
 SUBDIR+=	py-pyparsing
-SUBDIR+=	py-pyparsing2
 SUBDIR+=	py-pyperf
 SUBDIR+=	py-pypi-cli
 SUBDIR+=	py-pyproject_hooks
