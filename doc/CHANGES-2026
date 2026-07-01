@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4163 2026/07/01 09:25:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4164 2026/07/01 09:45:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6232,3 +6232,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-polib to 1.2.0 [adam 2026-07-01]
 	Updated devel/py-pydantic-settings to 2.14.2 [adam 2026-07-01]
 	Updated devel/py-pyobjc to 12.2.1 [adam 2026-07-01]
+	Removed archivers/szip successor archivers/libaec [wiz 2026-07-01]
