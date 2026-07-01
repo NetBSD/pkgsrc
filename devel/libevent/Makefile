@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.60 2025/10/05 02:49:44 js Exp $
+# $NetBSD: Makefile,v 1.61 2026/07/01 21:14:26 wiz Exp $
 
-PKGREVISION= 2
 .include "../../devel/libevent/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-stable//}
@@ -23,6 +22,9 @@ CPPFLAGS.QNX+=		-D__EXT_POSIX2
 
 .include "../../mk/bsd.prefs.mk"
 
+# test status as of 2.1.13
+# 2/342 TESTS FAILED. (51 skipped)
+
 # No OpenSSL on QNX.
 CONFIGURE_ARGS.QNX+=	--disable-openssl
 
@@ -36,7 +38,7 @@ CONFIGURE_ENV+=		ac_cv_func_kqueue=no
 CONFIGURE_ENV+=		ac_cv_func_poll=no
 .endif
 
-.if !empty(MACHINE_PLATFORM:MHPUX-11.11-*)
+.if ${MACHINE_PLATFORM:MHPUX-11.11-*}
 CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
 CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif

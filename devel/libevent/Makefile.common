@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2020/07/06 10:08:58 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/07/01 21:14:26 wiz Exp $
 #
 # used by devel/libevent/Makefile
 # used by devel/py-libevent-rpcgen/Makefile
 
-DISTNAME=	libevent-2.1.12-stable
+DISTNAME=	libevent-2.1.13-stable
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libevent/}
 GITHUB_PROJECT=	libevent
