@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2017/04/15 15:56:00 kim Exp $
+# $NetBSD: options.mk,v 1.3 2026/07/01 22:14:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libwebp
 PKG_SUPPORTED_OPTIONS=	tiff
@@ -8,6 +8,4 @@ PKG_SUGGESTED_OPTIONS=	tiff
 
 .if !empty(PKG_OPTIONS:Mtiff)
 .include "../../graphics/tiff/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-tiff
 .endif

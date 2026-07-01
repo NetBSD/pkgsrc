@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/07/23 17:02:03 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/01 22:14:21 wiz Exp $
 bin/cwebp
 bin/dwebp
 bin/gif2webp
@@ -13,11 +13,21 @@ include/webp/mux_types.h
 include/webp/sharpyuv/sharpyuv.h
 include/webp/sharpyuv/sharpyuv_csp.h
 include/webp/types.h
-lib/libsharpyuv.la
-lib/libwebp.la
-lib/libwebpdecoder.la
-lib/libwebpdemux.la
-lib/libwebpmux.la
+lib/libsharpyuv.so
+lib/libsharpyuv.so.0
+lib/libsharpyuv.so.0.1.2
+lib/libwebp.so
+lib/libwebp.so.7
+lib/libwebp.so.7.2.0
+lib/libwebpdecoder.so
+lib/libwebpdecoder.so.3
+lib/libwebpdecoder.so.3.2.0
+lib/libwebpdemux.so
+lib/libwebpdemux.so.2
+lib/libwebpdemux.so.2.0.17
+lib/libwebpmux.so
+lib/libwebpmux.so.3
+lib/libwebpmux.so.3.1.2
 lib/pkgconfig/libsharpyuv.pc
 lib/pkgconfig/libwebp.pc
 lib/pkgconfig/libwebpdecoder.pc
@@ -27,6 +37,11 @@ man/man1/cwebp.1
 man/man1/dwebp.1
 man/man1/gif2webp.1
 man/man1/img2webp.1
+man/man1/vwebp.1
 man/man1/webpinfo.1
 man/man1/webpmux.1
+share/WebP/cmake/WebPConfig.cmake
+share/WebP/cmake/WebPConfigVersion.cmake
+share/WebP/cmake/WebPTargets-release.cmake
+share/WebP/cmake/WebPTargets.cmake
 share/doc/libwebp/COPYING
