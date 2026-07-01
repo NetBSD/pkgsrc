@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/17 12:45:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/01 07:36:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -166,6 +166,9 @@ ${PYSITELIB}/inline_snapshot/_snapshot/min_max_value.pyo
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.py
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyc
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot_arg.py
+${PYSITELIB}/inline_snapshot/_snapshot_arg.pyc
+${PYSITELIB}/inline_snapshot/_snapshot_arg.pyo
 ${PYSITELIB}/inline_snapshot/_snapshot_session.py
 ${PYSITELIB}/inline_snapshot/_snapshot_session.pyc
 ${PYSITELIB}/inline_snapshot/_snapshot_session.pyo
@@ -184,6 +187,9 @@ ${PYSITELIB}/inline_snapshot/_utils.pyo
 ${PYSITELIB}/inline_snapshot/extra.py
 ${PYSITELIB}/inline_snapshot/extra.pyc
 ${PYSITELIB}/inline_snapshot/extra.pyo
+${PYSITELIB}/inline_snapshot/fix_pytest_cache.py
+${PYSITELIB}/inline_snapshot/fix_pytest_cache.pyc
+${PYSITELIB}/inline_snapshot/fix_pytest_cache.pyo
 ${PYSITELIB}/inline_snapshot/fix_pytest_diff.py
 ${PYSITELIB}/inline_snapshot/fix_pytest_diff.pyc
 ${PYSITELIB}/inline_snapshot/fix_pytest_diff.pyo

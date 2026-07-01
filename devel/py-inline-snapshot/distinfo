@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/04/30 11:08:10 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/07/01 07:36:04 adam Exp $
 
-BLAKE2s (inline_snapshot-0.32.7.tar.gz) = 4645ae495eefcb563f94724af6ea358b81730c8fb3b22fe32f8afa750e08675d
-SHA512 (inline_snapshot-0.32.7.tar.gz) = 2e417a21e9fa1d315981ab449c3682a3d925035cb6d5dc66cfb77f635e46c12fce9727aaa0c9ad37aeb6e1aa1a3f2fa3a9326e6c0f9e68777bc0f7a62dcd7228
-Size (inline_snapshot-0.32.7.tar.gz) = 2630267 bytes
+BLAKE2s (inline_snapshot-0.34.2.tar.gz) = 338aa9e007da38cc94f33afd236180c56a202185ff7a4997377685b9d691a6e2
+SHA512 (inline_snapshot-0.34.2.tar.gz) = fc2a388aa70e991de641d19ab97c7313dd982248af25013f97313517e1bfd673086f73d60318316c0312c21c6703c567519e2e3a7baeeb14ad5a324c047f59ae
+Size (inline_snapshot-0.34.2.tar.gz) = 2641142 bytes
