@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2026/01/07 08:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/07/01 03:50:37 gutteridge Exp $
 
 DISTNAME=	xmlto-0.0.29
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ SUBST_FILES.fix-paths=		format/docbook/*
 SUBST_SED.fix-paths=		-e 's,http://docbook.sourceforge.net/release/xsl/current/,file://${PREFIX}/share/xsl/docbook/,g'
 
 MAKE_ENV+=		SGML_CATALOG_FILES=${PREFIX}/share/xml/catalog
-REPLACE_BASH+=		xmlif/test/run-test
+REPLACE_SH+=		xmlif/test/run-test
 TEST_TARGET=		check
 
 INSTALLATION_DIRS=	share/xmlto/format/docbook share/xmlto/format/fo

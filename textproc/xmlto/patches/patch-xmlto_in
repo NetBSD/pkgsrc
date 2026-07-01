@@ -1,11 +1,12 @@
-$NetBSD: patch-xmlto_in,v 1.1 2018/01/21 18:45:27 roy Exp $
+$NetBSD: patch-xmlto_in,v 1.2 2026/07/01 03:50:37 gutteridge Exp $
 
 Avoid pointless bashisms.
-Avoid use of non POSIX local builtin.
+Avoid use of non-POSIX local builtin.
+Avoid non-portable "type -p" expression.
 
---- xmlto.in.orig	2015-11-16 14:07:10.000000000 +0000
+--- xmlto.in.orig	2026-07-01 03:19:00.575014754 +0000
 +++ xmlto.in
-@@ -78,13 +78,15 @@ EOF
+@@ -78,13 +78,15 @@ make_temp () {
  #  * Remembers the temporary file's name so it can be deleted on exit
  #  * If the failure message is empty or missing, exits on failure
  make_temp () {
@@ -24,7 +25,7 @@ Avoid use of non POSIX local builtin.
      return 0
    elif [ -z "$3" ]
    then
-@@ -97,7 +99,7 @@ make_temp () {
+@@ -97,7 +99,7 @@ compute_searchpath () {
  }
  
  compute_searchpath () {
@@ -33,3 +34,12 @@ Avoid use of non POSIX local builtin.
    IFS=":"
    for asearchpath in "$1"; do
      # wrangle relative paths into absolute ones so that the user
+@@ -315,7 +317,7 @@ while [ "$#" -gt "0" ]; do
+ 	;;
+   -o)
+ 	OUTPUT_DIR="$2"
+-	if type -p cygpath >/dev/null; then
++	if type cygpath >/dev/null 2>&1; then
+ 		OUTPUT_DIR=$(cygpath "$OUTPUT_DIR")
+ 	fi
+ 	case "$OUTPUT_DIR" in
