@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/05/08 19:59:04 gdt Exp $
+$NetBSD: distinfo,v 1.18 2026/07/01 15:36:59 gdt Exp $
 
-BLAKE2s (mapserver-8.6.3.tar.gz) = f232340bbf42eab1fe87938bb92925cf5ec2c9185869021fb5662b574150281e
-SHA512 (mapserver-8.6.3.tar.gz) = b30042813357f7cf0d1c8771563dcc15582f6165e8021aeb0379b05d7abe9f7f2f1ab54dd5233a97c6974003a605641e1af02babfaa80e97e80774d7c3ada9eb
-Size (mapserver-8.6.3.tar.gz) = 3006009 bytes
+BLAKE2s (mapserver-8.6.4.tar.gz) = 0054924a90364eea59663fec0bfb3199f5a51a551bbbd971ba19df00699c21f1
+SHA512 (mapserver-8.6.4.tar.gz) = a51d3d6bc37e337b8eb27f7140209301d2c2c8649c6475336f724bb7660e086caaa24f1345da19b797e3d53517673388f3ab621076afa57c14683b78a9f13032
+Size (mapserver-8.6.4.tar.gz) = 3007483 bytes
