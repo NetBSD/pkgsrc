@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2014/12/01 10:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/01 01:15:55 gutteridge Exp $
 
 DISTNAME=	getopt-1.1.6
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://frodo.looijaard.name/system/files/software/getopt/
 
