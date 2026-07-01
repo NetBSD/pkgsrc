@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/05/10 10:54:59 gdt Exp $
+$NetBSD: distinfo,v 1.3 2026/07/01 15:40:32 gdt Exp $
 
-BLAKE2s (qgc-0_2_2_github/pyqgc-0.2.2.tar.gz) = bcfa25b8b0848f5aeab7b7ec0fd88aca4e06c5fdbd0fd08d172808c2a14e813a
-SHA512 (qgc-0_2_2_github/pyqgc-0.2.2.tar.gz) = 754c75bd6d4b149f9e198c76c3d975d3d047f4a5080214a45f7b4921965a31ab658d0f500ff734058efcd2c5b01455f21094988055eb8551765f076fe320c989
-Size (qgc-0_2_2_github/pyqgc-0.2.2.tar.gz) = 64657 bytes
+BLAKE2s (pyqgc-1.0.0.tar.gz) = f2415d4f5da49019ea3127b939ec60b3de90737069f638257443b4bff2e21e74
+SHA512 (pyqgc-1.0.0.tar.gz) = 8e79e29cb33fa70d377e83873c8fe2cd7944465a5d01fb0ea5072e55a3d6fc5f22088bd00261f631ddbcc851950ad78fe85fdea219973428d760e737592d861e
+Size (pyqgc-1.0.0.tar.gz) = 69166 bytes
