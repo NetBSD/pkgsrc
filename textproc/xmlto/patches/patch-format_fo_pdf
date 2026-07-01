@@ -1,4 +1,6 @@
-$NetBSD: patch-format_fo_pdf,v 1.1 2015/12/11 23:31:09 joerg Exp $
+$NetBSD: patch-format_fo_pdf,v 1.2 2026/07/01 03:53:04 gutteridge Exp $
+
+Avoid non-portable "type -t" expression.
 
 --- format/fo/pdf.orig	2015-12-11 20:30:43.000000000 +0000
 +++ format/fo/pdf
