@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4176 2026/07/01 22:04:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4177 2026/07/01 22:14:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-libevent-rpcgen to 2.1.13 [wiz 2026-07-01]
 	Updated textproc/enchant2 to 2.8.17 [wiz 2026-07-01]
 	Added devel/rhg version 7.2.2 [wiz 2026-07-01]
+	Updated graphics/libwebp to 1.6.0nb2 [wiz 2026-07-01]
