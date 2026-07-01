@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4644 2026/07/01 06:16:08 adam Exp $
+# $NetBSD: Makefile,v 1.4645 2026/07/01 06:33:32 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2912,7 +2912,6 @@ SUBDIR+=	py-pip
 SUBDIR+=	py-pip-api
 SUBDIR+=	py-pip-requirements-parser
 SUBDIR+=	py-pip-run
-SUBDIR+=	py-pip20
 SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pipx
 SUBDIR+=	py-pkgconfig
