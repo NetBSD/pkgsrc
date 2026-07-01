@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4153 2026/07/01 06:18:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4154 2026/07/01 06:39:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6215,3 +6215,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-djangocms-file to 4.0.1 [adam 2026-07-01]
 	Removed devel/py-more-itertools2 successor devel/py-more-itertools [adam 2026-07-01]
 	Removed devel/py27-attrs successor devel/py-attrs [adam 2026-07-01]
+	Removed devel/py-pip20 successor devel/py-pip [adam 2026-07-01]
+	Removed devel/py-pyparsing2 successor devel/py-pyparsing [adam 2026-07-01]
