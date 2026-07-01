@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2026/06/28 15:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/07/01 12:58:28 adam Exp $
 
-DISTNAME=	pillow-12.2.0
+DISTNAME=	pillow-12.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
@@ -29,7 +29,6 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
-.include "../../lang/python/wheel.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
@@ -40,5 +39,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/raqm/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
