@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2026/05/20 11:14:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2026/07/01 05:56:04 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -795,10 +795,10 @@ ${PYSITELIB}/cms/sitemaps/cms_sitemap.pyc
 ${PYSITELIB}/cms/sitemaps/cms_sitemap.pyo
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.admin.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.base.css
+${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.headless.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.pagetree.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.welcome.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.wizard.css
-${PYSITELIB}/cms/static/cms/css/5.0.7/cms.headless.css
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.eot
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.svg
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.ttf
