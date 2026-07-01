@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/07 11:49:06 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/07/01 08:49:21 adam Exp $
 
-BLAKE2s (polib-1.1.1.tar.gz) = d5c95945a82e6ea31d3e0c025e0cc74d749f6549d34b4a7f79f921b7be6439ce
-SHA512 (polib-1.1.1.tar.gz) = 38de5fbdbc9ef879a4d55b9fe4f86a3aca3fb90dbb671745bd2b126be443598b8b18fe53afd116c3a4d3efc7a42b5ed05d75569bb5b2ef0bd2ced6e13eda95ad
-Size (polib-1.1.1.tar.gz) = 154644 bytes
+BLAKE2s (polib-1.2.0.tar.gz) = 635a70996370133dc26ae1e59f7c74523c0565922df6e3a0a8cfb3bddc29b8ce
+SHA512 (polib-1.2.0.tar.gz) = b325730cd4df6c881ffcab72da1796eb2949243f6060c650209e1c6584e5344ecaede870f22ece00f5c74bcd289fa5d2aa5223b88cb78de0dff5f9e41759096e
+Size (polib-1.2.0.tar.gz) = 161658 bytes
