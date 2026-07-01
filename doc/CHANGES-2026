@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4167 2026/07/01 13:07:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4168 2026/07/01 13:15:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6239,3 +6239,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-Pillow to 12.3.0 [adam 2026-07-01]
 	Updated devel/py-rpds-py to 2026.6.3 [adam 2026-07-01]
 	Updated security/py-asyncssh to 2.24.0 [adam 2026-07-01]
+	Updated graphics/vulkan-loader to 1.4.350.1nb1 [wiz 2026-07-01]
