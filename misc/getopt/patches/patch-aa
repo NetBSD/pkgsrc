@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2026/05/19 07:57:55 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2026/07/01 01:15:55 gutteridge Exp $
 
 Add missing includes.
 
---- getopt.c.orig	2003-01-23 21:51:24.000000000 +0100
+Use ctype.h correctly.
+
+--- getopt.c.orig	2014-11-24 12:33:57.000000000 +0000
 +++ getopt.c
-@@ -58,6 +58,7 @@
+@@ -61,6 +61,7 @@
  #include <string.h>
  #include <unistd.h>
  #include <ctype.h>
@@ -12,3 +14,12 @@ Add missing includes.
  
  #if LIBCGETOPT
  #include <getopt.h>
+@@ -158,7 +159,7 @@ static const char *normalize(const char
+ 			/* Newline: replace it with: \n */
+ 			*bufptr++ = '\\';
+ 			*bufptr++ = 'n';
+-		} else if (shell == TCSH && isspace(*argptr)) {
++		} else if (shell == TCSH && isspace((unsigned char)*argptr)) {
+ 			/* Non-newline whitespace: replace it with \<ws> */
+ 			*bufptr++ = '\'';
+ 			*bufptr++ = '\\';
