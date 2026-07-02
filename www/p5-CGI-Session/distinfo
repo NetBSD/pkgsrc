@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:29:48 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/07/02 08:59:08 wiz Exp $
 
-BLAKE2s (CGI-Session-4.48.tar.gz) = a9ed67bc660a9301678c4a1cdd9973c2d8f7f5af4b07029b960a3d361e74e389
-SHA512 (CGI-Session-4.48.tar.gz) = 82d6a498035b91474df712fdae2c9ce7290157ddec36095757f16b5cbce593d3b5115077c722350d1c890c299230f7489a41328ed64b85a0f4c3cfff8aceef54
-Size (CGI-Session-4.48.tar.gz) = 95291 bytes
+BLAKE2s (CGI-Session-4.49.tar.gz) = 10a0036eeeae0caa363e556cb8dabd22cca93f58b9eb069dc56630b0c04d3773
+SHA512 (CGI-Session-4.49.tar.gz) = 4efc06b0f97d6a1a9afa553847092aaf5ffd5f104af72d72bc4f115b90082ec285718c2562f10dbc4ed80dc209b089394a84ea0bb5dd1d2e2c2f048317bcd8ac
+Size (CGI-Session-4.49.tar.gz) = 92674 bytes
