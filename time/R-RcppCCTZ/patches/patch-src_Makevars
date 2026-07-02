@@ -1,18 +1,11 @@
-$NetBSD: patch-src_Makevars,v 1.1 2026/05/26 21:19:47 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2026/07/02 16:01:48 mef Exp $
 
 symbol backtrace_symbols is defined in /usr/lib/libexecinfo
 
 --- src/Makevars.orig	2025-12-30 08:54:49.000000000 +0900
-+++ src/Makevars	2026-05-27 06:13:20.451270591 +0900
-@@ -24,3 +24,11 @@ PKG_SOURCES = \
++++ src/Makevars	2026-07-03 00:57:07.911103911 +0900
+@@ -24,3 +24,4 @@ PKG_SOURCES = \
  PKG_OBJECTS = $(PKG_SOURECES:.cpp=.o)
  
  $(SHLIB): $(CCTZ_OBJECTS) $(PKG_OBJECTS)
-+
-+UNAME := $(shell uname)
-+
-+ifneq ($(UNAME), Linux)
-+ifneq ($(UNAME), SunOS)
-+PKG_LIBS += -lexecinfo
-+endif
-+endif
++@@PKG_LIBS@@
