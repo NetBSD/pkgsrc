@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4178 2026/07/02 03:35:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4179 2026/07/02 06:39:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6251,3 +6251,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libwebp to 1.6.0nb2 [wiz 2026-07-01]
 	Updated graphics/libjxl to 0.12.0 [adam 2026-07-02]
 	Updated devel/jj to 0.43.0 [adam 2026-07-02]
+	Updated devel/py-virtualenv to 21.5.1 [adam 2026-07-02]
+	Updated devel/py-tox to 4.56.1 [adam 2026-07-02]
