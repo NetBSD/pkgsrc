@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4184 2026/07/02 08:59:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4185 2026/07/02 09:21:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6261,3 +6261,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testresources to 2.1.2 [adam 2026-07-02]
 	Updated devel/py-testscenarios to 0.6.2 [adam 2026-07-02]
 	Updated www/p5-CGI-Session to 4.49 [wiz 2026-07-02]
+	Updated devel/mm-common to 1.0.8 [adam 2026-07-02]
+	Updated security/pinentry to 1.3.3 [adam 2026-07-02]
