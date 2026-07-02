@@ -1,0 +1,11 @@
+Tensor library for machine learning
+
+## Features
+
+- Low-level cross-platform implementation
+- Integer quantization support
+- Broad hardware support
+- Automatic differentiation
+- ADAM and L-BFGS optimizers
+- No third-party dependencies
+- Zero memory allocations during runtime
