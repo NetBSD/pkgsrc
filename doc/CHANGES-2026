@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4198 2026/07/02 22:36:30 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.4199 2026/07/02 23:23:14 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6280,3 +6280,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/symfpu version 1.2.0 [alnsn 2026-07-02]
 	Updated net/tailscale to 1.98.8 [ktnb 2026-07-02]
 	Added math/libpoly version 0.2.1 [alnsn 2026-07-02]
+	Added math/cvc5 version 1.3.4 [alnsn 2026-07-02]
