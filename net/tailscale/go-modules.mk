@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2026/05/18 20:46:51 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.4 2026/07/02 19:55:14 ktnb Exp $
 
 GO_MODULE_FILES+=	4d63.com/gocheckcompilerdirectives/@v/v1.2.1.mod
 GO_MODULE_FILES+=	4d63.com/gocheckcompilerdirectives/@v/v1.2.1.zip
@@ -808,8 +808,8 @@ GO_MODULE_FILES+=	github.com/nishanths/predeclared/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/nishanths/predeclared/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/nuclearkev/peercred/@v/v0.0.0-20260422153448-b7b00efe5151.mod
 GO_MODULE_FILES+=	github.com/nuclearkev/peercred/@v/v0.0.0-20260422153448-b7b00efe5151.zip
-GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20260518172154-8ce295ace1d0.mod
-GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20260518172154-8ce295ace1d0.zip
+GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20260702184710-b6918577cb6a.mod
+GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20260702184710-b6918577cb6a.zip
 GO_MODULE_FILES+=	github.com/nunnatsa/ginkgolinter/@v/v0.16.1.mod
 GO_MODULE_FILES+=	github.com/nunnatsa/ginkgolinter/@v/v0.16.1.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
@@ -1430,6 +1430,8 @@ GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20240716161551-93cc26a95ae9.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20240716161551-93cc26a95ae9.zip
 GO_MODULE_FILES+=	golang.zx2c4.com/wintun/@v/v0.0.0-20230126152724-0fa3db229ce2.mod
 GO_MODULE_FILES+=	golang.zx2c4.com/wintun/@v/v0.0.0-20230126152724-0fa3db229ce2.zip
+GO_MODULE_FILES+=	golang.zx2c4.com/wireguard/@v/v0.0.0-20260522210424-ecfc5a8d5446.mod
+GO_MODULE_FILES+=	golang.zx2c4.com/wireguard/@v/v0.0.0-20260522210424-ecfc5a8d5446.zip
 GO_MODULE_FILES+=	golang.zx2c4.com/wireguard/windows/@v/v0.5.3.mod
 GO_MODULE_FILES+=	golang.zx2c4.com/wireguard/windows/@v/v0.5.3.zip
 GO_MODULE_FILES+=	gomodules.xyz/jsonpatch/v2/@v/v2.4.0.mod
