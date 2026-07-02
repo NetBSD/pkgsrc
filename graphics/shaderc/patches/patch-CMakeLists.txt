@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/02 10:55:48 wiz Exp $
+
+We provide the dependencies manually or from pkgsrc,
+avoid hacking detection.
+
+--- CMakeLists.txt.orig	2026-07-01 09:30:46.386568682 +0000
++++ CMakeLists.txt
+@@ -130,7 +130,7 @@ endif(MSVC)
+ 
+ # Configure subdirectories.
+ # We depend on these for later projects, so they should come first.
+-add_subdirectory(third_party)
++#add_subdirectory(third_party)
+ 
+ add_subdirectory(libshaderc_util)
+ add_subdirectory(libshaderc)

@@ -1,0 +1,5 @@
+A collection of tools, libraries and tests for shader compilation.
+At the moment it includes:
+
+- glslc, a command line compiler for GLSL/HLSL to SPIR-V, and
+- libshaderc, a library API for accessing `glslc` functionality.
