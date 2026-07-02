@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/02 23:20:47 alnsn Exp $
+
+BLAKE2s (cvc5-1.3.4.tar.gz) = 11f158543cb7183b5d40039f56bf49e90a4f4a5288b508555bf29dae93ecad4f
+SHA512 (cvc5-1.3.4.tar.gz) = 6e65593e9493dd2db1acc38cdf38fe3285a9ca966ded7f4ecb349927e6fce17b6d4f6cb7f9d950ab5f48f50eb59f4f7a995b74f9d244455f5f460ac66e1a6dd9
+Size (cvc5-1.3.4.tar.gz) = 9271118 bytes

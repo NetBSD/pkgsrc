@@ -1,0 +1,5 @@
+An efficient open-source automatic theorem prover for Satisfiability
+Modulo Theories (SMT) problems. It can be used to prove the
+satisfiability (or, dually, the validity) of first-order formulas
+with respect to (combinations of) a variety of useful background
+theories.
