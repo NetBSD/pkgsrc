@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/29 03:10:14 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/02 18:24:00 ktnb Exp $
 bin/kew
 man/man1/kew.1
+share/applications/kew.desktop
+share/icons/hicolor/512x512/apps/kew.png
+share/kew/layouts/LAYOUTS-HOWTO.md
+share/kew/layouts/alt.layout
+share/kew/layouts/current.layout
+share/kew/themes/THEMES-HOWTO.md
+share/kew/themes/albumcolors.theme
 share/kew/themes/army.theme
 share/kew/themes/bunker.theme
 share/kew/themes/catpuccin.theme
@@ -9,12 +16,16 @@ share/kew/themes/default.theme
 share/kew/themes/forest.theme
 share/kew/themes/gruvbox.theme
 share/kew/themes/gruvboxlight.theme
+share/kew/themes/kanagawa.theme
 share/kew/themes/kew-theme-pack1.txt
 share/kew/themes/kew-theme-pack2.txt
+share/kew/themes/kew-theme-pack3.txt
 share/kew/themes/marianatrench.theme
 share/kew/themes/midnight.theme
 share/kew/themes/monochrome.theme
 share/kew/themes/neutral.theme
+share/kew/themes/nord.theme
+share/kew/themes/onealbumcolor.theme
 share/kew/themes/paper.theme
 share/kew/themes/pewter.theme
 share/kew/themes/purple.theme
