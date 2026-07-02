@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2026/07/01 22:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/07/02 10:42:04 ryoon Exp $
 
 DISTNAME=	libwebp-1.6.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/downloads.webmproject.org/releases/webp/
 
@@ -11,6 +11,8 @@ COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+# Disable SDL2 explicitly to fix build when devel/SDL2 is already installed.
+CMAKE_CONFIGURE_ARGS+=	-DWEBP_BUILD_VWEBP=OFF
 
 .include "options.mk"
 
