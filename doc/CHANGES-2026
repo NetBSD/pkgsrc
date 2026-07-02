@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4182 2026/07/02 08:06:13 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4183 2026/07/02 08:41:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6258,3 +6258,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-gevent to 26.5.0 [adam 2026-07-02]
 	Updated net/py-geventhttpclient to 2.3.9 [adam 2026-07-02]
 	Updated www/resterm to 0.44.5 [drixter 2026-07-02]
+	Updated devel/py-testresources to 2.1.2 [adam 2026-07-02]
+	Updated devel/py-testscenarios to 0.6.2 [adam 2026-07-02]
