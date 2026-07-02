@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/07/02 23:20:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/02 23:52:13 alnsn Exp $
 
 DISTNAME=	cvc5-1.3.4
 CATEGORIES=	math
@@ -23,9 +23,10 @@ DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0.9:../../devel/py-pyparsing
 
 # Tests take a long time to finish, you can instead
 # run them inside a sandboxed shell and pass -j N:
-# make install
 # make build-env
-# cd cmake-pkgsrc-build && ctest -j 32
+# cd cmake-pkgsrc-build
+# export LD_LIBRARY_PATH=$(pwd)/src:$(pwd)/src/parser:$(pwd)/src/main
+# ctest -j 32
 # ^D
 #TEST_TARGET=	test
 
