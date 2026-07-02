@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/10/22 13:16:02 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/02 09:03:55 adam Exp $
 
-DISTNAME=	mm-common-1.0.7
+DISTNAME=	mm-common-1.0.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mm-common/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
