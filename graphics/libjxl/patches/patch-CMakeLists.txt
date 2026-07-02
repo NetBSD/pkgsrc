@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2025/03/01 12:16:44 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2026/07/02 03:13:36 adam Exp $
 
 Remediate upstream having hard-to-follow code to find a python
 interpreter for a2x instead of just running it.  While it probably
@@ -7,14 +7,14 @@ on non-broken systems.
 
 Not sent upstream because this is a philosophical choice.
 
---- CMakeLists.txt.orig	2025-02-20 14:38:12.758394187 +0000
+--- CMakeLists.txt.orig	2026-07-01 16:36:59.000000000 +0000
 +++ CMakeLists.txt
-@@ -459,32 +459,9 @@ endif() # JPEGXL_ENABLE_DOXYGEN
+@@ -446,32 +446,9 @@ endif() # JPEGXL_ENABLE_DOXYGEN
  if(JPEGXL_ENABLE_MANPAGES)
    find_program(ASCIIDOC a2x)
    if(ASCIIDOC)
 -    file(STRINGS "${ASCIIDOC}" ASCIIDOC_SHEBANG LIMIT_COUNT 1)
--    if(ASCIIDOC_SHEBANG MATCHES "sh$" OR ASCIIDOC_SHEBANG MATCHES "libexec/bin/python$" OR MINGW)
+-    if(ASCIIDOC_SHEBANG MATCHES "sh( -e)?$" OR ASCIIDOC_SHEBANG MATCHES "libexec/bin/python$" OR MINGW)
 -      set(ASCIIDOC_PY_FOUND ON)
 -      # Run the program directly and set ASCIIDOC as empty.
 -      set(ASCIIDOC_PY "${ASCIIDOC}")
@@ -42,6 +42,6 @@ Not sent upstream because this is a philosophical choice.
 +    set(ASCIIDOC_PY "${ASCIIDOC}")
 +    set(ASCIIDOC "")
 +    set(ASCIIDOC_PY_FOUND ON) 
-
+ 
      if (ASCIIDOC_PY_FOUND)
        set(MANPAGE_FILES "")
