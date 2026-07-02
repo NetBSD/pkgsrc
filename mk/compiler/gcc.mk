@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.309 2026/01/27 14:07:50 wiz Exp $
+# $NetBSD: gcc.mk,v 1.310 2026/07/02 13:21:03 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -159,26 +159,51 @@ GCC_REQD+=	2.8
 #
 # We of course only choose versions in pkgsrc, and tend towards a gcc
 # version included in a NetBSD release, because those are known to
-# work well, and because it is simpler to limit selection to fewer
-# versions.  This tendency is much stronger for C++ versions, and less
-# so for c11.
+# work well, and because it is better to build fewer versions of gcc.
+#
+# This logic should be replaced by specifying the precise minimum
+# version and a per-platform table of preferred limited versions.  The
+# plan for now is that comments are clear about what is required vs
+# what is chosen.
 #
 # Thus we tend to:
 #   - gcc 4.8, in NetBSD 7, CentOS 7
 #   - gcc 5, in NetBSD 8
 #   - gcc 7, in NetBSD 9
 #   - gcc 10, in NetBSD 10
+#   - gcc 12, in NetBSD 11
 #
 # Other systems have different versions, and we note a few:
 #
 #  - gcc 8, in Enterprise Linux 8
 #
-# Resources:
-# https://gcc.gnu.org/projects/cxx-status.html
-# https://gcc.gnu.org/onlinedocs/libstdc++/manual/status.html
-# https://gcc.gnu.org/wiki/C11Status
-# https://gcc.gnu.org/c99status.html
-#
+# Tables of which gcc version supports which C/C++ dialects, by
+# feature within dialect:
+#   https://gcc.gnu.org/projects/c-status.html
+#   https://gcc.gnu.org/projects/cxx-status.html
+# 
+# Table of dialect feature support within gcc mainline (not directly
+# relevant for pkgsrc, but a guide to the future):
+#   https://gcc.gnu.org/onlinedocs/libstdc++/manual/status.html
+
+# C dialects
+
+.if !empty(USE_CC_FEATURES:Mc17)
+# GCC 8 is the first version that works.  10 is the first version
+# shipped with a NetBSD release.
+GCC_REQD+=	10.0
+.endif
+
+# 4.9 supports c11; don't reject it by rounding up to 5
+.if !empty(USE_CC_FEATURES:Mc11)
+GCC_REQD+=	4.9
+.endif
+
+.if !empty(USE_CC_FEATURES:Mc99)
+GCC_REQD+=	3
+.endif
+
+# C++ dialects
 
 .if !empty(USE_CXX_FEATURES:Mc++23)
 # gcc documents that 14 is required.
@@ -211,24 +236,11 @@ GCC_REQD+=	5
 GCC_REQD+=	4.8
 .endif
 
+# C++ (with one C) dialect features
+
 .if !empty(USE_CXX_FEATURES:Mhas_include) || \
     !empty(USE_CC_FEATURES:Mhas_include)
 GCC_REQD+=	5
-.endif
-
-.if !empty(USE_CC_FEATURES:Mc99)
-GCC_REQD+=	3
-.endif
-
-# 4.9 supports c11; don't reject it by rounding up to 5
-.if !empty(USE_CC_FEATURES:Mc11)
-GCC_REQD+=	4.9
-.endif
-
-.if !empty(USE_CC_FEATURES:Mc17)
-# GCC 8 is the first version that works.  10 is the first version
-# shipped with a NetBSD release.
-GCC_REQD+=	10.0
 .endif
 
 # Don't round to gcc 5.
