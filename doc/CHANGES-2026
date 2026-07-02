@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4194 2026/07/02 18:24:13 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4195 2026/07/02 18:45:13 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6276,3 +6276,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/unrar to 7.2.7 [adam 2026-07-02]
 	Updated devel/jq to 1.8.2nb2 [wiz 2026-07-02]
 	Updated audio/kew to 4.1.6 [ktnb 2026-07-02]
+	Updated lang/joker to 1.9.0 [ktnb 2026-07-02]
