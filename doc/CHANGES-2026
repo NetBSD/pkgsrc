@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4177 2026/07/01 22:14:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4178 2026/07/02 03:35:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6249,3 +6249,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/enchant2 to 2.8.17 [wiz 2026-07-01]
 	Added devel/rhg version 7.2.2 [wiz 2026-07-01]
 	Updated graphics/libwebp to 1.6.0nb2 [wiz 2026-07-01]
+	Updated graphics/libjxl to 0.12.0 [adam 2026-07-02]
+	Updated devel/jj to 0.43.0 [adam 2026-07-02]
