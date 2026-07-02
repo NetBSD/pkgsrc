@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/07/02 16:57:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/02 16:59:20 tsutsui Exp $
 
 CANNA_MODULE=	canuum
 
 .include "../../inputmethod/canna/Makefile.common"
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
 
 INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/man1
 
