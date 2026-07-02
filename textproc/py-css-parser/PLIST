@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 11:57:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/02 07:24:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,12 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/css_parser/__init__.py
 ${PYSITELIB}/css_parser/__init__.pyc
 ${PYSITELIB}/css_parser/__init__.pyo
-${PYSITELIB}/css_parser/_codec2.py
-${PYSITELIB}/css_parser/_codec2.pyc
-${PYSITELIB}/css_parser/_codec2.pyo
-${PYSITELIB}/css_parser/_codec3.py
-${PYSITELIB}/css_parser/_codec3.pyc
-${PYSITELIB}/css_parser/_codec3.pyo
 ${PYSITELIB}/css_parser/_fetch.py
 ${PYSITELIB}/css_parser/_fetch.pyc
 ${PYSITELIB}/css_parser/_fetch.pyo
@@ -161,6 +155,3 @@ ${PYSITELIB}/css_parser/tokenize2.pyo
 ${PYSITELIB}/css_parser/util.py
 ${PYSITELIB}/css_parser/util.pyc
 ${PYSITELIB}/css_parser/util.pyo
-${PYSITELIB}/css_parser/version.py
-${PYSITELIB}/css_parser/version.pyc
-${PYSITELIB}/css_parser/version.pyo
