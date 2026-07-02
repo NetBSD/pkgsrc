@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/01/27 08:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/07/02 08:49:42 wiz Exp $
 
 DISTNAME=	gmpc-tagedit-11.8.16
 PKGREVISION=	43
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake intltool pkg-config msgfmt
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../audio/gmpc/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
