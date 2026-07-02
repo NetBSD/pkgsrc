@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/05/25 10:51:51 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/07/02 11:24:09 adam Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -6,9 +6,9 @@ Size (aho-corasick-1.1.4.crate) = 184015 bytes
 BLAKE2s (anyhow-1.0.100.crate) = 57b092c11db49087e69a7d8909c7d46f0da77932bf39f1aa9b24fb91886f248c
 SHA512 (anyhow-1.0.100.crate) = 1f0c072aab9490d68db3783f078c6f8a4d96360908fc6ee3e971b02fb72b9dd5e689dd385f0e93388a87e0dfbd8cff0e14a280b40d55f87646f3c0e558e779ca
 Size (anyhow-1.0.100.crate) = 54059 bytes
-BLAKE2s (ast_serialize-0.5.0.tar.gz) = 57443d847ab910d84697876a365b80017914fe81af8ac60eef4a551e08d58b3c
-SHA512 (ast_serialize-0.5.0.tar.gz) = 7f8155e1e443ede04f73f0655bb522aa27aebffcc5a78ab3639fb7ccc215950caaeab5f04a657e2112485eb196db65f170acddbcd14dbd731d5ac232911cbed0
-Size (ast_serialize-0.5.0.tar.gz) = 61157 bytes
+BLAKE2s (ast_serialize-0.6.0.tar.gz) = 453c69e9e6211c77459383279e806b65cc3b65d7102d84576be9149a8220a5d9
+SHA512 (ast_serialize-0.6.0.tar.gz) = 3710a4eea600e1207bd94610870394be1637d4a649be519a20830b17aaa03d0c18a77863713eec6fc870729631a1c5a3d5c60b0202be5df4ac7cffdb5dd1b9ea
+Size (ast_serialize-0.6.0.tar.gz) = 61489 bytes
 BLAKE2s (attribute-derive-0.10.5.crate) = 1c824c6783571d93ca71d604f8cb88bd6ce146029002567a36c30ee668b39fff
 SHA512 (attribute-derive-0.10.5.crate) = 0c08d98f3ec480e4ac7fa6557726a40823c11164bce351da07cd976acc34b2493a55c9908798a6bdb6a5056223a443f6e2cbd38351493672c8faba8212b645a0
 Size (attribute-derive-0.10.5.crate) = 23575 bytes
@@ -177,6 +177,21 @@ Size (regex-automata-0.4.13.crate) = 625250 bytes
 BLAKE2s (ruff-0.15.12.tar.gz) = 0b6e6fffa13a4ceba1175e6d65229ba7d9e5cee28625734726cda5d696ed8643
 SHA512 (ruff-0.15.12.tar.gz) = add23d05f9c1e86e52a5bda70f16dc300414b4a7fbb5a3f7d703c21b11ee6d1692f095be2bea1eeff7cf66b2e8a98bfbefb72854fd4535c4f748560931613b54
 Size (ruff-0.15.12.tar.gz) = 11514538 bytes
+BLAKE2s (ruff_python_ast-0.0.0.crate) = 1efae34d8f9f9d5e18434059fdb00e8b8d25d764cb729be6ec767d82145bbfd8
+SHA512 (ruff_python_ast-0.0.0.crate) = c20a275764a7900804e60060f41a33375a255e44246c3f297223a9638438749cfca07f4e31f86e2dd841b89fbe2bd2f6e29776c3fbf1ecee59b38eda59ee53ec
+Size (ruff_python_ast-0.0.0.crate) = 1058 bytes
+BLAKE2s (ruff_python_parser-0.0.0.crate) = 97dc2e8bfb77a287897d68534ff861896a16b0164ad13b55fcd10ea633d64593
+SHA512 (ruff_python_parser-0.0.0.crate) = 51787f6cc1e54cd7db6a250d584dc305db1b2a177566617dbc49dddca05c9f805c3d2e7bc5ce7654c00b1c9b01eaa735e4cea7aee65ad46e518cfc7225fd1fbc
+Size (ruff_python_parser-0.0.0.crate) = 1063 bytes
+BLAKE2s (ruff_python_trivia-0.0.0.crate) = e872a38917cf532e00e819efbbe1df86d48ead374c011a574e5749bb86ebc1ec
+SHA512 (ruff_python_trivia-0.0.0.crate) = 2c5cb026c167dafdc1d81c66e1ba102e5e91208fca21d926583859a6861fa58ccce096450946e5a7909b925ff49205a3efde5c0305bc3a931773653c761534b4
+Size (ruff_python_trivia-0.0.0.crate) = 1063 bytes
+BLAKE2s (ruff_source_file-0.0.0.crate) = ee54e092309630707dab202b0f29b2d196dd999e82afaee3c03ebf2d8b896c8a
+SHA512 (ruff_source_file-0.0.0.crate) = 0ee55d10e2a7eb97f7421eea3fe257411e42716c22c4723a7f635eec328e3a4d7f8252b52fe3de2eb4384ebc691aea49f7599badae4e86a6e6ca068ce36810a1
+Size (ruff_source_file-0.0.0.crate) = 1060 bytes
+BLAKE2s (ruff_text_size-0.0.0.crate) = 4cf2203b4e25d63b2e7ecfe0831b7b27ccd6885e76a507ad9f931f652ce6bb45
+SHA512 (ruff_text_size-0.0.0.crate) = 424c145f6137161b6d0a17f9c5f5389224f17f6aca83babd8c638841e3c13c49664e8ad39fc69c68be9c2e974b6ea384d2dc60c25a2d2973049005fc2a7c1fb8
+Size (ruff_text_size-0.0.0.crate) = 1052 bytes
 BLAKE2s (rustc-hash-2.1.1.crate) = f59440e372f86adc01d4b8f287e6b1e7e77508ad59d6a473e33253b1e917848f
 SHA512 (rustc-hash-2.1.1.crate) = 87097d98d47f327d000041ab13acddc366f1500d9c3e5c82169c3358112c7a7c03701c9b3c2c81d9f9da65b7ebac1c479b179dfaf7c059cd0b929b4673e51084
 Size (rustc-hash-2.1.1.crate) = 14154 bytes
