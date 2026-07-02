@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2026/07/02 19:35:28 alnsn Exp $
+# $NetBSD: Makefile,v 1.640 2026/07/02 22:35:17 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -292,6 +292,7 @@ SUBDIR+=	liblbfgs
 SUBDIR+=	liblinear
 SUBDIR+=	libmatheval
 SUBDIR+=	libnumbertext
+SUBDIR+=	libpoly
 SUBDIR+=	libquadmath
 SUBDIR+=	libshorttext
 SUBDIR+=	libsvm
