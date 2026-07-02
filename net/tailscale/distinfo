@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/06/02 13:48:00 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2026/07/02 19:55:14 ktnb Exp $
 
 BLAKE2s (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 467abef409ed18697f6f4f07f1d9c469cc7ba77b6b985e440b141c9ba37d0505
 SHA512 (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 661d501b50181f5af0dfff7e269b704eaa97bc2659dc5f95f22dd886e71f8f8a13ae9ce36cddfff3a1c68a312b445291ba67c7a976841d12216cbc4caefaea80
@@ -2424,12 +2424,12 @@ Size (github.com_nuclearkev_peercred_@v_v0.0.0-20260422153448-b7b00efe5151.mod) 
 BLAKE2s (github.com_nuclearkev_peercred_@v_v0.0.0-20260422153448-b7b00efe5151.zip) = a75b3a8dbd2903642d9b540d22badfcf2c083f3aa76de7dea09d07a3ce08eb86
 SHA512 (github.com_nuclearkev_peercred_@v_v0.0.0-20260422153448-b7b00efe5151.zip) = d64a44db2c67e0cc19ddeb872b7b945393f1ccb056665a1b08962711da7afeb997488b5a2bdd7fa7b06551f9aeedcecee44c18283937cdc818a9b91e2e0996f0
 Size (github.com_nuclearkev_peercred_@v_v0.0.0-20260422153448-b7b00efe5151.zip) = 9173 bytes
-BLAKE2s (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.mod) = 63c57489d5a1e3c310d9e94f98cd5c6953fcb08e6cd2a2af88656de0aa089008
-SHA512 (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.mod) = eabf4e695dac4a9cc8b9687d24995a6607b3a32e44d883b89da58f36b5a6e2d42359eb38851d68c30a7a5d0a68c427a6c34caa159848f12f6f77ab45063751e6
-Size (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.mod) = 500 bytes
-BLAKE2s (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.zip) = 079b8b0e320a3e546e07c4c86de2de86b35f087dbc30dae3e5502bada4abe9cb
-SHA512 (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.zip) = 770d90f41f5ffc3c9304b2c65f5f9851a34bdbe312c905af7418724cee16ac6adc618689819cecaf38f3e535cfec5473714c003f007fb5a1e2b3c8dd59ede8f1
-Size (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260518172154-8ce295ace1d0.zip) = 241176 bytes
+BLAKE2s (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.mod) = 63c57489d5a1e3c310d9e94f98cd5c6953fcb08e6cd2a2af88656de0aa089008
+SHA512 (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.mod) = eabf4e695dac4a9cc8b9687d24995a6607b3a32e44d883b89da58f36b5a6e2d42359eb38851d68c30a7a5d0a68c427a6c34caa159848f12f6f77ab45063751e6
+Size (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.mod) = 500 bytes
+BLAKE2s (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.zip) = a02d3c95759529f837b5eb00e9e2541df07bdab413b1bca6cf0ff2812e5d6cfd
+SHA512 (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.zip) = 944f3a64779f96b8beaa04c5b1c484e3516483cf0e2614364b813abb905b0a2a29caf987e12ef99be0a444139dbacc3c35024c26be3039e2b36cdad4d125eb44
+Size (github.com_nuclearkev_wireguard-go_@v_v0.0.0-20260702184710-b6918577cb6a.zip) = 242596 bytes
 BLAKE2s (github.com_nunnatsa_ginkgolinter_@v_v0.16.1.mod) = 8ed4ab2a6e39b1c4b1e57e96b2e53f25b5713ed5e02277bfb8c6fdd5a87d1bc1
 SHA512 (github.com_nunnatsa_ginkgolinter_@v_v0.16.1.mod) = 24e071e802b7a111fc6040c327eb83cdaa405e599255d9a4d519f75c3845e7c642fdf89b5e24f3fcbf0240c054df1fddb7d36c809c600023c0c2a9171711f56c
 Size (github.com_nunnatsa_ginkgolinter_@v_v0.16.1.mod) = 257 bytes
@@ -4290,6 +4290,12 @@ Size (golang.zx2c4.com_wintun_@v_v0.0.0-20230126152724-0fa3db229ce2.mod) = 101 b
 BLAKE2s (golang.zx2c4.com_wintun_@v_v0.0.0-20230126152724-0fa3db229ce2.zip) = 0f82c88d5642e664ef4c21424559fc828fac8d841411e9334942d7a1d8927bc2
 SHA512 (golang.zx2c4.com_wintun_@v_v0.0.0-20230126152724-0fa3db229ce2.zip) = bf71b5707d07c9c5dd7315187d4774d8c36376926a0393a08d5c7fb2b8415b74a127bffeb71387171f643e825eefdadafcef08fac2b046153060041896afe5f9
 Size (golang.zx2c4.com_wintun_@v_v0.0.0-20230126152724-0fa3db229ce2.zip) = 6048 bytes
+BLAKE2s (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.mod) = 28da68330d584ced9c480da3383e07b4c2ab6d3bfe70aa01035abf6cd6c5808f
+SHA512 (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.mod) = b7093579576af45d2beebd2033946d099c8e16111d5ab27db1b28b6029025dbc7e9f795cf1f12177d47402090e7bbb7f88a8a9b15a61d53e4acca7d2d9e80b7a
+Size (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.mod) = 348 bytes
+BLAKE2s (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.zip) = ff7ef3a1a7ce6718d2ae1dd7fc479723a355e911d83ee73f60500289a27a933d
+SHA512 (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.zip) = 2711ba18225622282d4a651e7b824a8abcd4106987c9dc48f8fef035696d9dc8646c422d2ca1a3163944be0aa2155eb3f5eadf502920330f90f4e3f0d505af24
+Size (golang.zx2c4.com_wireguard_@v_v0.0.0-20260522210424-ecfc5a8d5446.zip) = 174972 bytes
 BLAKE2s (golang.zx2c4.com_wireguard_windows_@v_v0.5.3.mod) = 959be327a1cce7ba323db8c6c5396d32f8b583848693cda4d7481197fb4465e4
 SHA512 (golang.zx2c4.com_wireguard_windows_@v_v0.5.3.mod) = 62e0d5b4be460368d531f157091bf58c29c6b456288662381adff9c3f45a82b031904076857b729a5ec592ccd0b2860d4a5c44b2a996f3eb5f05a077607ac019
 Size (golang.zx2c4.com_wireguard_windows_@v_v0.5.3.mod) = 751 bytes
@@ -4830,9 +4836,9 @@ Size (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.mod) = 100 bytes
 BLAKE2s (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = b26f48ccbf09250e193e0a5ff46b5e65509fcbe977d1b635b4fcf310127a0c1a
 SHA512 (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = 25b95c81b6f03ac8a0a0bedfe5206926f290588192bba1264fd0cbd0ee00766e6d2715300ce921a82d81579feb546b20cca7f0d001aa97b9a4a5a05e8ccbd7eb
 Size (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = 45988 bytes
-BLAKE2s (tailscale-235dbc84c51749d989ba6fe6485340bbf2a3ba04.tar.gz) = 6e74c320f34db8f4b3e42d8010896db941e80e00751b7ef9f190987cb1e68ed7
-SHA512 (tailscale-235dbc84c51749d989ba6fe6485340bbf2a3ba04.tar.gz) = 8188013f29c50263d095ca14506a367aea05db4e443514b48274d3f7f0e64ea9987eef64948984e05c7d52672a2ba3f437b231414732e077e373cceace387e8c
-Size (tailscale-235dbc84c51749d989ba6fe6485340bbf2a3ba04.tar.gz) = 4769954 bytes
+BLAKE2s (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = cd8cb5908c6ef3c5fca6d54ba6f6229101e521a05953dd9cc59d233b8a37014f
+SHA512 (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = 2bfd320e54fcfab30c726012830359bd7448027938e0b41c0d99f3e135559bf0d311ee2baee719a8fd35d02d5430fdcd8afe2c9de6cc3b737b0fae870b46a7d5
+Size (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = 4772120 bytes
 BLAKE2s (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = b1d0294e5bda7181a77ce77868e0d6b09cdf51f2f0a896c2d187432f1f81dcae
 SHA512 (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = cb40ef264651843145bf639dbe1a42da0357dd75d646c8a860801e96acdeb26f21d3eec3e8f8ee044af3aa8a80a511b5a3130ea5cc244721c5e5d292314498fa
 Size (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = 342 bytes
