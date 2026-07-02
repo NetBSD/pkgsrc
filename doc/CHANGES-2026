@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4192 2026/07/02 13:17:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4193 2026/07/02 15:26:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6274,3 +6274,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typing-extensions to 4.16.0 [adam 2026-07-02]
 	Updated security/py-fido2 to 2.2.1 [adam 2026-07-02]
 	Updated archivers/unrar to 7.2.7 [adam 2026-07-02]
+	Updated devel/jq to 1.8.2nb2 [wiz 2026-07-02]
