@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/06/05 23:49:27 mef Exp $
+# $NetBSD: Makefile,v 1.38 2026/07/02 15:43:11 mef Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.1.1-1.1
@@ -56,7 +56,7 @@ CHECK_RELRO_SKIP+=	${CHECK_SSP_SKIP}
 SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
 SUBST_FILES.pkglibs=	src/Makevars
-.if ${OPSYS} != SunOS
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,PKG_LIBS+=-lexecinfo,
 .else
 SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,,
