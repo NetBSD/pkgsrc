@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/01/06 11:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/02 08:40:19 adam Exp $
 
-DISTNAME=	testscenarios-0.5.0
+DISTNAME=	testscenarios-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testscenarios/}
 
@@ -11,12 +10,11 @@ HOMEPAGE=	https://pypi.python.org/pypi/testscenarios
 COMMENT=	Pyunit extension for dependency injection
 LICENSE=	apache-2.0 OR modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.8.7:../../devel/py-testtools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
+USE_LANGUAGES=	# none
 
-TEST_TARGET=	check
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
