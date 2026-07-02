@@ -1,0 +1,16 @@
+$NetBSD: patch-heifio_CMakeLists.txt,v 1.1 2026/07/02 14:39:18 tnn Exp $
+
+- don't pick up stray webp dependency.
+
+--- heifio/CMakeLists.txt.orig	2026-07-02 14:35:46.763003361 +0000
++++ heifio/CMakeLists.txt
+@@ -107,7 +107,8 @@ if (TARGET PNG::PNG)
+     target_sources(heifio PRIVATE decoder_png.cc decoder_png.h)
+ endif ()
+ 
+-find_package(WEBP)
++#find_package(WEBP)
++set(WEBP_FOUND False)
+ if(WEBP_FOUND)
+     target_compile_definitions(heifio PUBLIC -DHAVE_LIBWEBP=1)
+ 
