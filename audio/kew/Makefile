@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/05/01 15:09:32 ktnb Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/02 18:24:00 ktnb Exp $
 
-DISTNAME=	kew-4.0.0
+DISTNAME=	kew-4.1.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ravachol/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,6 +19,9 @@ USE_TOOLS+=	pkg-config gmake
 
 MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/512x512/apps
+
 .include "options.mk"
 
 .include "../../audio/faad2/buildlink3.mk"
@@ -29,6 +32,7 @@ MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../graphics/chafa/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/atomic64.mk"
