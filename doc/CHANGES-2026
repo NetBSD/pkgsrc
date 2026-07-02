@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4196 2026/07/02 19:36:42 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.4197 2026/07/02 19:56:53 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6278,3 +6278,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.1.6 [ktnb 2026-07-02]
 	Updated lang/joker to 1.9.0 [ktnb 2026-07-02]
 	Added math/symfpu version 1.2.0 [alnsn 2026-07-02]
+	Updated net/tailscale to 1.98.8 [ktnb 2026-07-02]
