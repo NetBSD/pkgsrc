@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2026/06/22 19:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/07/02 11:39:29 gdt Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -20,8 +20,8 @@ HOMEPAGE=	https://github.com/protocolbuffers/protobuf
 COMMENT=	Google protocol buffers
 LICENSE=	modified-bsd
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
 
 # protobuf 34.1 failed to build with gcc <=12 and new abseil:
