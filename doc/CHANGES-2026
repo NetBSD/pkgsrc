@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4180 2026/07/02 07:28:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4181 2026/07/02 07:55:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6255,3 +6255,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tox to 4.56.1 [adam 2026-07-02]
 	Updated textproc/py-css-parser to 1.1.1 [adam 2026-07-02]
 	Updated net/py-aiohappyeyeballs to 2.7.1 [adam 2026-07-02]
+	Updated net/py-gevent to 26.5.0 [adam 2026-07-02]
+	Updated net/py-geventhttpclient to 2.3.9 [adam 2026-07-02]
