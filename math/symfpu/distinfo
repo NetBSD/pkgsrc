@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/07/02 19:34:01 alnsn Exp $
+
+BLAKE2s (symfpu-1.2.0.tar.gz) = d3112f3c7745be00c593d9bf895542aa36fc22c2ce1fca28ef03c5593024bd3e
+SHA512 (symfpu-1.2.0.tar.gz) = 0c441c37e9ccc5f25d3df0f7fbfe4d8efeb63eb6e4ece290fb6d4429fb3080ded5bdbf152d46fc1d93e493d8b0690ac11b7859e8579434d617ae98dd72f05b5b
+Size (symfpu-1.2.0.tar.gz) = 81162 bytes
+SHA1 (patch-Makefile) = bdf46bf30bee933ab0f55eb2bcfeaa03d6820f87
+SHA1 (patch-baseTypes_Makefile) = 339079979c54d572cf63ccec98e6b0579b3e629a
+SHA1 (patch-baseTypes_simpleExecutable.cpp) = b3434edd922cb0083e6fe3d99042e444c260429f
+SHA1 (patch-baseTypes_simpleExecutable.h) = f1923b4650c2dceee1dbb968c2a13a37e0808628

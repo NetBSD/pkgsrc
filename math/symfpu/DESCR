@@ -1,0 +1,4 @@
+SymFPU is an implementation of the SMT-LIB theory of (IEEE-754)
+floating-point in terms of bit-vector operations. It is templated
+in terms of the bit-vectors, propositions, floating-point formats
+and rounding mode types used.
