@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2026/07/02 09:21:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2026/07/02 15:38:39 tnn Exp $
 #
 # used by security/pinentry/Makefile
 # used by security/pinentry-fltk/Makefile
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 # Fix for iconv detection in gettext 1.0.
 CONFIGURE_ENV.Darwin=   am_cv_func_iconv_works=yes
 INFO_FILES=		yes
+
+CHECK_PORTABILITY_SKIP+=	build-aux/config.rpath
 
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
