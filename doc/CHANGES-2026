@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4181 2026/07/02 07:55:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4182 2026/07/02 08:06:13 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6257,3 +6257,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-aiohappyeyeballs to 2.7.1 [adam 2026-07-02]
 	Updated net/py-gevent to 26.5.0 [adam 2026-07-02]
 	Updated net/py-geventhttpclient to 2.3.9 [adam 2026-07-02]
+	Updated www/resterm to 0.44.5 [drixter 2026-07-02]
