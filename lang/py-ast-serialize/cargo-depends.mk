@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/05/25 10:51:51 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/07/02 11:24:09 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
@@ -57,6 +57,11 @@ CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.13
+CARGO_CRATE_DEPENDS+=	ruff_python_ast-0.0.0
+CARGO_CRATE_DEPENDS+=	ruff_python_parser-0.0.0
+CARGO_CRATE_DEPENDS+=	ruff_python_trivia-0.0.0
+CARGO_CRATE_DEPENDS+=	ruff_source_file-0.0.0
+CARGO_CRATE_DEPENDS+=	ruff_text_size-0.0.0
 CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.1
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.22
 CARGO_CRATE_DEPENDS+=	ryu-1.0.22
