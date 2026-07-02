@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2026/07/02 10:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.639 2026/07/02 19:35:28 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -503,6 +503,7 @@ SUBDIR+=	suitesparse
 SUBDIR+=	sundials
 SUBDIR+=	superlu
 SUBDIR+=	svmlin
+SUBDIR+=	symfpu
 SUBDIR+=	tasp-vsipl
 SUBDIR+=	teapot
 SUBDIR+=	tex-apnum
