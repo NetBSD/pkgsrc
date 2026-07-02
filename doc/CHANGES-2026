@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4190 2026/07/02 12:37:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4191 2026/07/02 13:07:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6272,3 +6272,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/openvpn to 2.7.5 [adam 2026-07-02]
 	Updated devel/py-stevedore to 5.9.0 [adam 2026-07-02]
 	Updated devel/py-typing-extensions to 4.16.0 [adam 2026-07-02]
+	Updated security/py-fido2 to 2.2.1 [adam 2026-07-02]
