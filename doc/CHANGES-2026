@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4179 2026/07/02 06:39:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4180 2026/07/02 07:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6253,3 +6253,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jj to 0.43.0 [adam 2026-07-02]
 	Updated devel/py-virtualenv to 21.5.1 [adam 2026-07-02]
 	Updated devel/py-tox to 4.56.1 [adam 2026-07-02]
+	Updated textproc/py-css-parser to 1.1.1 [adam 2026-07-02]
+	Updated net/py-aiohappyeyeballs to 2.7.1 [adam 2026-07-02]
