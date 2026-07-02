@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.310 2026/07/02 13:21:03 gdt Exp $
+# $NetBSD: gcc.mk,v 1.311 2026/07/02 13:26:29 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -194,12 +194,16 @@ GCC_REQD+=	2.8
 GCC_REQD+=	10.0
 .endif
 
-# 4.9 supports c11; don't reject it by rounding up to 5
+# gcc documents that 4.9 supports c11.  Don't reject it by rounding up
+# to 5.
 .if !empty(USE_CC_FEATURES:Mc11)
 GCC_REQD+=	4.9
 .endif
 
 .if !empty(USE_CC_FEATURES:Mc99)
+# gcc documents that full support requires gcc 5, but most features
+# appear in 3.  Choose not to worry, because use of pre-gcc-5 is rare
+# and problems have not surfaced.
 GCC_REQD+=	3
 .endif
 
