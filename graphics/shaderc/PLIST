@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2026/07/02 10:55:48 wiz Exp $
+bin/glslc
+include/shaderc/env.h
+include/shaderc/shaderc.h
+include/shaderc/shaderc.hpp
+include/shaderc/status.h
+include/shaderc/visibility.h
+lib/libshaderc.a
+lib/libshaderc_combined.a
+lib/libshaderc_shared.so
+lib/libshaderc_shared.so.1
+lib/pkgconfig/shaderc.pc
+lib/pkgconfig/shaderc_combined.pc
+lib/pkgconfig/shaderc_static.pc
