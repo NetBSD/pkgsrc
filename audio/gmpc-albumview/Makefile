@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/01/27 08:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/07/02 08:47:30 wiz Exp $
 
 DISTNAME=	gmpc-albumview-11.8.16
 PKGREVISION=	41
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config msgfmt
+
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../audio/gmpc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
