@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/01/27 08:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/07/02 08:48:34 wiz Exp $
 
 DISTNAME=	gmpc-magnatune-11.8.16
 PKGREVISION=	56
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool msgfmt pkg-config
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../audio/gmpc/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
