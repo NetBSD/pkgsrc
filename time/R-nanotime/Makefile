@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/06/22 21:53:51 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/02 16:04:15 mef Exp $
 
 R_PKGNAME=	nanotime
 R_PKGVER=	0.3.11
@@ -32,7 +32,7 @@ SUBST_CLASSES+=         pkglibs
 SUBST_STAGE.pkglibs=    pre-configure
 SUBST_FILES.pkglibs=    src/Makevars
 SUBST_MESSAGE.pkglibs=  Add -lexecinfo for *BSD
-.if ${OPSYS} != SunOS
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
 .else
 SUBST_SED.pkglibs=      -e s,@@PKG_LIBS@@,,
