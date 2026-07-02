@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/06/13 11:42:26 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/07/02 12:59:03 mef Exp $
 
 R_PKGNAME=	readxl
 R_PKGVER=	1.5.0
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
 SUBST_FILES.pkglibs=	src/Makevars
 SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
 .else
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
