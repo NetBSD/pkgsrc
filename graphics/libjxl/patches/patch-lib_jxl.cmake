@@ -1,30 +1,22 @@
-$NetBSD: patch-lib_jxl.cmake,v 1.2 2025/03/01 12:16:44 adam Exp $
-
-CMAKE_REQUIRED_LINK_OPTIONS is better suited for tests than CMAKE_EXE_LINKER_FLAGS.
-https://github.com/libjxl/libjxl/pull/4133
+$NetBSD: patch-lib_jxl.cmake,v 1.3 2026/07/02 03:13:36 adam Exp $
 
 Not all linkers support --version-script, so test for it
 
---- lib/jxl.cmake.orig	2024-11-26 13:02:35.000000000 +0000
+--- lib/jxl.cmake.orig	2026-07-01 16:36:59.000000000 +0000
 +++ lib/jxl.cmake
-@@ -224,9 +224,14 @@ set_target_properties(jxl_dec PROPERTIES
- # Check whether the linker support excluding libs
- set(LINKER_EXCLUDE_LIBS_FLAG "-Wl,--exclude-libs=ALL")
- include(CheckCSourceCompiles)
--list(APPEND CMAKE_EXE_LINKER_FLAGS ${LINKER_EXCLUDE_LIBS_FLAG})
-+list(APPEND CMAKE_REQUIRED_LINK_OPTIONS ${LINKER_EXCLUDE_LIBS_FLAG})
- check_c_source_compiles("int main(){return 0;}" LINKER_SUPPORT_EXCLUDE_LIBS)
--list(REMOVE_ITEM CMAKE_EXE_LINKER_FLAGS ${LINKER_EXCLUDE_LIBS_FLAG})
-+list(REMOVE_ITEM CMAKE_REQUIRED_LINK_OPTIONS ${LINKER_VERSION_SCRIPT_FLAG})
-+
+@@ -244,6 +244,11 @@ else()
+   list(REMOVE_ITEM CMAKE_REQUIRED_LINK_OPTIONS ${LINKER_EXCLUDE_LIBS_FLAG})
+ endif()
+ 
 +set(LINKER_VERSION_SCRIPT_FLAG "-Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/jxl/jxl.version")
 +list(APPEND CMAKE_REQUIRED_LINK_OPTIONS ${LINKER_VERSION_SCRIPT_FLAG})
 +check_c_source_compiles("int main(){return 0;}" LINKER_VERSION_SCRIPT)
 +list(REMOVE_ITEM CMAKE_REQUIRED_LINK_OPTIONS ${LINKER_VERSION_SCRIPT_FLAG})
- 
- if(NOT BUILD_SHARED_LIBS)
-   target_compile_definitions(jxl PUBLIC -DJXL_STATIC_DEFINE)
-@@ -245,8 +250,10 @@ foreach(target IN ITEMS jxl jxl_dec)
++
+ # Add a jxl.version file as a version script to tag symbols with the
+ # appropriate version number. This script is also used to limit what's exposed
+ # in the shared library from the static dependencies bundled here.
+@@ -256,8 +261,10 @@ foreach(target IN ITEMS jxl jxl_dec)
    elseif(WIN32)
      # Nothing needed here, we use __declspec(dllexport) (jxl_export.h)
    else()

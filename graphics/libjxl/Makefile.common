@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2026/02/10 18:53:11 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2026/07/02 03:13:36 adam Exp $
 # used by graphics/gdk-pixbuf2-jxl/Makefile
 
-DISTNAME=	libjxl-0.11.2
+DISTNAME=	libjxl-0.12.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

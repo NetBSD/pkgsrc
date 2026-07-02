@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/06/23 09:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/02 03:13:36 adam Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	3
 
 COMMENT=	JpegXL reference codec
 
