@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/04/30 12:11:14 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/02 13:07:08 adam Exp $
 
-DISTNAME=	fido2-2.2.0
+DISTNAME=	fido2-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fido2/}
@@ -11,7 +11,7 @@ COMMENT=	Yubico FIDO U2F and FIDO 2.0 USB Python library
 LICENSE=	2-clause-bsd AND apache-2.0 AND mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=36:../../security/py-cryptography
 # optional
 DEPENDS+=	${PYPKGPREFIX}-scard>=2.0.0:../../devel/py-scard
 
