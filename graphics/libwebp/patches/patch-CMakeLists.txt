@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/02 13:00:11 tnn Exp $
+
+Don't pick up stray SDL2 dependency
+
+--- CMakeLists.txt.orig	2025-07-08 00:20:00.000000000 +0000
++++ CMakeLists.txt
+@@ -666,7 +666,8 @@ if(WEBP_BUILD_EXTRAS)
+                                                   ${CMAKE_CURRENT_BINARY_DIR})
+ 
+   # vwebp_sdl
+-  find_package(SDL2 QUIET)
++  #find_package(SDL2 QUIET)
++  set(SDL2_FOUND False)
+   if(WEBP_BUILD_VWEBP AND SDL2_FOUND)
+     add_executable(vwebp_sdl ${VWEBP_SDL_SRCS})
+     target_link_libraries(vwebp_sdl ${SDL2_LIBRARIES} imageioutil webp)
