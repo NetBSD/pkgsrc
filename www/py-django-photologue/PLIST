@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 14:16:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/07/02 11:32:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -223,3 +223,6 @@ ${PYSITELIB}/scripts/__init__.pyo
 ${PYSITELIB}/scripts/releaser_hooks.py
 ${PYSITELIB}/scripts/releaser_hooks.pyc
 ${PYSITELIB}/scripts/releaser_hooks.pyo
+${PYSITELIB}/scripts/run_tests.py
+${PYSITELIB}/scripts/run_tests.pyc
+${PYSITELIB}/scripts/run_tests.pyo
