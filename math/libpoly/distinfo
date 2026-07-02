@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/02 22:34:07 alnsn Exp $
+
+BLAKE2s (libpoly-0.2.1.tar.gz) = 79b471e2695a23989d203521f7c5dc21a3db4d203c56b571fc0e8d4a66e71b5e
+SHA512 (libpoly-0.2.1.tar.gz) = f12a7eab7ece2b2cb123ac232e815eaaad6ff97d9219e0ef3a4785c036ef4fc887a854e4a405e3802b6b337f6616cb0177f715880dcba5473372d91754384d8b
+Size (libpoly-0.2.1.tar.gz) = 629599 bytes
