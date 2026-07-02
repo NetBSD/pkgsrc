@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.311 2026/07/02 13:26:29 gdt Exp $
+# $NetBSD: gcc.mk,v 1.312 2026/07/02 13:35:39 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -172,6 +172,7 @@ GCC_REQD+=	2.8
 #   - gcc 7, in NetBSD 9
 #   - gcc 10, in NetBSD 10
 #   - gcc 12, in NetBSD 11
+#   - [temporarily] gcc 14, in NetBSD current
 #
 # Other systems have different versions, and we note a few:
 #
@@ -187,6 +188,13 @@ GCC_REQD+=	2.8
 #   https://gcc.gnu.org/onlinedocs/libstdc++/manual/status.html
 
 # C dialects
+
+.if !empty(USE_CC_FEATURES:Mc23)
+# gcc documents that 15 is required for full support, but if one
+# excludes two likely-obscure features, 14 is sufficent.  For now,
+# choose 14 because it is in NetBSD current.
+GCC_REQD+=	14
+.endif
 
 .if !empty(USE_CC_FEATURES:Mc17)
 # GCC 8 is the first version that works.  10 is the first version
