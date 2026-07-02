@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.32 2026/07/02 13:09:41 tnn Exp $
+$NetBSD: distinfo,v 1.33 2026/07/02 14:15:58 ryoon Exp $
 
 BLAKE2s (libwebp-1.6.0.tar.gz) = b8c21cb969d86525b64f177f9a6be0fa65cbd47b954977f9b4172e21591bae04
 SHA512 (libwebp-1.6.0.tar.gz) = 5c159d9760efcb92749092536daada22c0a73c20926c76097a5f0448ddbf874cf761324ca97925ca5f578b30477564b2b072b47667e504673797128b31cafcbf
 Size (libwebp-1.6.0.tar.gz) = 4296070 bytes
+SHA1 (patch-cmake_cpu.cmake) = 2766653d2f5271daaf8b168385a3a574350ff07d
