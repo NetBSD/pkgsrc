@@ -1,0 +1,13 @@
+$NetBSD: patch-baseTypes_Makefile,v 1.1 2026/07/02 19:34:01 alnsn Exp $
+
+Don't assume that the root directory is named "symfpu".
+
+--- baseTypes/Makefile.orig	2026-07-01 22:10:52.161950683 +0000
++++ baseTypes/Makefile
+@@ -1,5 +1,5 @@
+ include ../flags
+-CXXFLAGS+=-I../../
++CXXFLAGS+=-I..
+ ALL=simpleExecutable.o
+ 
+ .PHONY : all
