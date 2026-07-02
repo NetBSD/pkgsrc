@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2025/08/02 09:55:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2026/07/02 09:21:18 adam Exp $
 #
 # used by security/pinentry/Makefile
 # used by security/pinentry-fltk/Makefile
@@ -7,7 +7,7 @@
 # used by security/pinentry-qt5/Makefile
 # used by security/pinentry-qt6/Makefile
 
-DISTNAME=	pinentry-1.3.2
+DISTNAME=	pinentry-1.3.3
 
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/pinentry/
@@ -22,6 +22,8 @@ PATCHDIR=	${.CURDIR}/../../security/pinentry/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+# Fix for iconv detection in gettext 1.0.
+CONFIGURE_ENV.Darwin=   am_cv_func_iconv_works=yes
 INFO_FILES=		yes
 
 .include "../../security/libassuan2/buildlink3.mk"

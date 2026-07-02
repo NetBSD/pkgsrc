@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/01/27 08:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/02 09:21:19 adam Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-fltk-/}
-PKGREVISION=	2
 COMMENT=	Applications for entering PINs or Passphrases, FLTK enabled
 
 .include "../../security/pinentry/Makefile.common"
@@ -19,15 +18,6 @@ CONFIGURE_ARGS+=	--disable-pinentry-qt5
 CONFIGURE_ARGS+=	--enable-pinentry-fltk
 
 INSTALL_DIRS=		fltk
-
-# ----------------------------------------------------------------------
-# Remove "patch-configure.ac" and this section after FLTK 1.4 support
-# was provided by upstream
-USE_TOOLS+=	autoconf automake autoreconf gm4 gettext-m4
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -fi
-# ----------------------------------------------------------------------
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
