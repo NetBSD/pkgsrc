@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/04/28 07:44:56 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/07/02 08:33:05 adam Exp $
 
-BLAKE2s (testresources-2.0.2.tar.gz) = 77218a3c14d5b1b967e04bcaeab8761c83ea65a854f3e592b5ddefc33c1f296a
-SHA512 (testresources-2.0.2.tar.gz) = 3e7970830833f0a057488638e77af017ca337a736c27e1bd86c896e02174d8f52ad154a649ba3f5a32aac36e1e17b4cb63a6539fcdb19eedba2dba42a76adaf1
-Size (testresources-2.0.2.tar.gz) = 45057 bytes
+BLAKE2s (testresources-2.1.2.tar.gz) = 0d3beb8a11c254617b3621f24a91e9391f6509e79a591d1a9d454c74b1225425
+SHA512 (testresources-2.1.2.tar.gz) = b0ab838f7e18a14daa3499f2b19e0470f242c22a1870da62d1193de4d1cc80f9a6fa706fc70fba93227102578c20ca2327af3595474856415d961f04b2fd8e78
+Size (testresources-2.1.2.tar.gz) = 37654 bytes
