@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/06/30 20:27:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/07/02 07:28:29 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,7 @@ share/doc/pycurl${PYVERSSUFFIX}/ChangeLog
 share/doc/pycurl${PYVERSSUFFIX}/INSTALL.rst
 share/doc/pycurl${PYVERSSUFFIX}/README.rst
 share/doc/pycurl${PYVERSSUFFIX}/RELEASE-NOTES.rst
+share/doc/pycurl${PYVERSSUFFIX}/examples/async_multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/multi-socket_action-select.py
@@ -48,4 +49,3 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/ws_echo.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/ws_fragmented.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/ws_multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
-share/doc/pycurl3.14/examples/async_multi.py
