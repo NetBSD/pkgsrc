@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4189 2026/07/02 11:34:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4190 2026/07/02 12:37:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6269,3 +6269,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-ast-serialize to 0.6.0 [adam 2026-07-02]
 	Updated devel/py-dulwich to 1.2.7 [adam 2026-07-02]
 	Updated www/py-django-photologue to 3.19 [adam 2026-07-02]
+	Updated net/openvpn to 2.7.5 [adam 2026-07-02]
+	Updated devel/py-stevedore to 5.9.0 [adam 2026-07-02]
+	Updated devel/py-typing-extensions to 4.16.0 [adam 2026-07-02]
