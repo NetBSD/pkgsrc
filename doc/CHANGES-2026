@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4203 2026/07/03 09:46:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4204 2026/07/03 10:18:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6293,3 +6293,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-wcmatch to 10.2.1 [adam 2026-07-03]
 	Updated print/py-octoprint to 1.11.8 [adam 2026-07-03]
 	Updated www/py-zensical to 0.0.46 [adam 2026-07-03]
+	Updated audio/sox_ng to 14.8.0.1 [wiz 2026-07-03]
