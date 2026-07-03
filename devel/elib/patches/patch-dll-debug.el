@@ -1,9 +1,9 @@
-$NetBSD: patch-dll-debug.el,v 1.1 2023/09/08 22:08:18 mef Exp $
+$NetBSD: patch-dll-debug.el,v 1.2 2026/07/03 10:33:29 wiz Exp $
 
 for emacs28
 
 --- dll-debug.el	1995-12-11 09:50:54.000000000 +0900
-+++ /tmp/dll-debug.el	2023-09-09 06:49:20.470715606 +0900
++++ dll-debug.el	2023-09-09 06:49:20.470715606 +0900
 @@ -74,9 +74,9 @@
  (defmacro dll-insert-after (node element)
    (let ((node-v (make-symbol "node"))
