@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4208 2026/07/03 11:27:14 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4209 2026/07/03 11:51:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6300,3 +6300,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-rebulk to 6.0.1 [adam 2026-07-03]
 	Updated textproc/py-guessit to 4.0.2 [adam 2026-07-03]
 	Updated graphics/tiff to 4.7.2 [gdt 2026-07-03]
+	Updated security/gnupg2 to 2.5.21 [adam 2026-07-03]
+	Updated security/libjwt to 3.6.1 [adam 2026-07-03]
