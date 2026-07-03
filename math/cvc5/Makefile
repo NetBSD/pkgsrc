@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/07/03 20:36:34 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/03 22:03:50 alnsn Exp $
 
 DISTNAME=	cvc5-1.3.4
 CATEGORIES=	math
@@ -21,7 +21,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_POLY=ON
 
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0.9:../../devel/py-pyparsing
 
-TEST_TARGET=	test
+TEST_TARGET=	check
 CVC5_BUILD_SRC=	${WRKSRC}/${CMAKE_BUILD_DIR}/src
 TEST_ENV+=	LD_LIBRARY_PATH=${CVC5_BUILD_SRC}:${CVC5_BUILD_SRC}/parser:${CVC5_BUILD_SRC}/main
 
