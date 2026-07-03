@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4202 2026/07/03 07:11:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4203 2026/07/03 09:46:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6289,3 +6289,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-croniter to 6.2.3 [adam 2026-07-03]
 	Updated devel/SDL3 to 3.4.12 [adam 2026-07-03]
 	Updated net/icinga2 to 2.16.3 [adam 2026-07-03]
+	Updated www/py-autobahn to 26.6.2 [adam 2026-07-03]
+	Updated textproc/py-wcmatch to 10.2.1 [adam 2026-07-03]
+	Updated print/py-octoprint to 1.11.8 [adam 2026-07-03]
+	Updated www/py-zensical to 0.0.46 [adam 2026-07-03]
