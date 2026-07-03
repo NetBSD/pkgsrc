@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/12/25 23:11:14 adam Exp $
+# $NetBSD: Makefile,v 1.40 2026/07/03 06:01:25 adam Exp $
 
-DISTNAME=	libva-2.23.0
+DISTNAME=	libva-2.24.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,13 +11,11 @@ HOMEPAGE=	https://github.com/intel/libva
 COMMENT=	Video Acceleration API
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
-
 USE_CC_FEATURES=	c99
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		gnu99
 
