@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/07/03 15:46:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/07/03 09:32:19 wiz Exp $
 
-BLAKE2s (sox_ng-14.6.0.2.tar.gz) = da368431a0b584483d2a8393b40db83796757e177b54209cb690a18f5731f1e1
-SHA512 (sox_ng-14.6.0.2.tar.gz) = 9468cd15b83b2500210d54355ed5d7ae2a97171148b8a54c47007d1a7d9c57e378211c0429ee4d8065f0ba5ab97b31c9abb8795b659585c523942c044fe49b1d
-Size (sox_ng-14.6.0.2.tar.gz) = 1746640 bytes
-SHA1 (patch-src_oss.c) = f4665b500a5e6a996768e415145e751d9ff9886c
-SHA1 (patch-src_sox__ng.c) = 1dc7ddacbb1a7de683b3af981cc0d08e31888bae
-SHA1 (patch-src_sunaudio.c) = dd624099df32f67948becd647eded4d69c7c1c34
+BLAKE2s (sox_ng-14.8.0.1.tar.gz) = d8a1aac43297469c912d6ad07c6531899d7c639dd6206fb6a483b7acbc954afa
+SHA512 (sox_ng-14.8.0.1.tar.gz) = 795c6cad01f1f598730107c54aa61b033a3b10bb6c683f80d19f9306dd8e93fd82167f299268910eb97127ff24d0d1ecbc0811a1c5b6376c0209d833c8a3346f
+Size (sox_ng-14.8.0.1.tar.gz) = 2506133 bytes
