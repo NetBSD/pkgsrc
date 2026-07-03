@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/05/22 08:07:17 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/07/03 14:12:14 wiz Exp $
 
 BUILDLINK_TREE+=	nodejs
 
 .if !defined(NODEJS_BUILDLINK3_MK)
 NODEJS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.nodejs+=	nodejs>=10
+BUILDLINK_API_DEPENDS.nodejs+=	nodejs>=10<25
 BUILDLINK_ABI_DEPENDS.nodejs+=	nodejs>=24.12.0nb1
 BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs24
 
