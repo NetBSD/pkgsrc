@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4215 2026/07/03 16:31:47 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.4216 2026/07/03 18:56:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6310,3 +6310,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/muon to 0.6.0 [micha 2026-07-03]
 	Updated net/coturn to 4.14.0 [gdt 2026-07-03]
 	Updated graphics/lerc to 4.1.1 [bsiegert 2026-07-03]
+	Updated shells/oh-my-posh to 29.20.0 [pin 2026-07-03]
