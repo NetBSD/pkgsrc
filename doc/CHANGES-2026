@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4206 2026/07/03 10:24:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4207 2026/07/03 11:05:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6297,3 +6297,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed audio/sox successor audio/sox_ng [wiz 2026-07-03]
 	Updated devel/py-uv to 0.11.26 [adam 2026-07-03]
 	Updated devel/py-uv-build to 0.11.26 [adam 2026-07-03]
+	Updated textproc/py-rebulk to 6.0.1 [adam 2026-07-03]
+	Updated textproc/py-guessit to 4.0.2 [adam 2026-07-03]
