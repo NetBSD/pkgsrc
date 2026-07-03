@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/14 12:06:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/03 11:04:45 adam Exp $
 bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/guessit/__init__.py
 ${PYSITELIB}/guessit/__init__.pyc
 ${PYSITELIB}/guessit/__init__.pyo
@@ -27,6 +24,7 @@ ${PYSITELIB}/guessit/config/options.json
 ${PYSITELIB}/guessit/data/__init__.py
 ${PYSITELIB}/guessit/data/__init__.pyc
 ${PYSITELIB}/guessit/data/__init__.pyo
+${PYSITELIB}/guessit/data/output-schema.json
 ${PYSITELIB}/guessit/data/tlds-alpha-by-domain.txt
 ${PYSITELIB}/guessit/jsonutils.py
 ${PYSITELIB}/guessit/jsonutils.pyc
@@ -58,6 +56,9 @@ ${PYSITELIB}/guessit/rules/common/expected.pyo
 ${PYSITELIB}/guessit/rules/common/formatters.py
 ${PYSITELIB}/guessit/rules/common/formatters.pyc
 ${PYSITELIB}/guessit/rules/common/formatters.pyo
+${PYSITELIB}/guessit/rules/common/keys.py
+${PYSITELIB}/guessit/rules/common/keys.pyc
+${PYSITELIB}/guessit/rules/common/keys.pyo
 ${PYSITELIB}/guessit/rules/common/numeral.py
 ${PYSITELIB}/guessit/rules/common/numeral.pyc
 ${PYSITELIB}/guessit/rules/common/numeral.pyo
@@ -127,6 +128,9 @@ ${PYSITELIB}/guessit/rules/properties/episodes.pyo
 ${PYSITELIB}/guessit/rules/properties/film.py
 ${PYSITELIB}/guessit/rules/properties/film.pyc
 ${PYSITELIB}/guessit/rules/properties/film.pyo
+${PYSITELIB}/guessit/rules/properties/imdb.py
+${PYSITELIB}/guessit/rules/properties/imdb.pyc
+${PYSITELIB}/guessit/rules/properties/imdb.pyo
 ${PYSITELIB}/guessit/rules/properties/language.py
 ${PYSITELIB}/guessit/rules/properties/language.pyc
 ${PYSITELIB}/guessit/rules/properties/language.pyo
@@ -163,9 +167,15 @@ ${PYSITELIB}/guessit/rules/properties/type.pyo
 ${PYSITELIB}/guessit/rules/properties/video_codec.py
 ${PYSITELIB}/guessit/rules/properties/video_codec.pyc
 ${PYSITELIB}/guessit/rules/properties/video_codec.pyo
+${PYSITELIB}/guessit/rules/properties/volume.py
+${PYSITELIB}/guessit/rules/properties/volume.pyc
+${PYSITELIB}/guessit/rules/properties/volume.pyo
 ${PYSITELIB}/guessit/rules/properties/website.py
 ${PYSITELIB}/guessit/rules/properties/website.pyc
 ${PYSITELIB}/guessit/rules/properties/website.pyo
+${PYSITELIB}/guessit/schema.py
+${PYSITELIB}/guessit/schema.pyc
+${PYSITELIB}/guessit/schema.pyo
 ${PYSITELIB}/guessit/test/__init__.py
 ${PYSITELIB}/guessit/test/__init__.pyc
 ${PYSITELIB}/guessit/test/__init__.pyo
@@ -173,6 +183,9 @@ ${PYSITELIB}/guessit/test/config/dummy.txt
 ${PYSITELIB}/guessit/test/config/test.json
 ${PYSITELIB}/guessit/test/config/test.yaml
 ${PYSITELIB}/guessit/test/config/test.yml
+${PYSITELIB}/guessit/test/conftest.py
+${PYSITELIB}/guessit/test/conftest.pyc
+${PYSITELIB}/guessit/test/conftest.pyo
 ${PYSITELIB}/guessit/test/enable_disable_properties.yml
 ${PYSITELIB}/guessit/test/episodes.yml
 ${PYSITELIB}/guessit/test/movies.yml
@@ -211,15 +224,24 @@ ${PYSITELIB}/guessit/test/test_api.pyo
 ${PYSITELIB}/guessit/test/test_api_unicode_literals.py
 ${PYSITELIB}/guessit/test/test_api_unicode_literals.pyc
 ${PYSITELIB}/guessit/test/test_api_unicode_literals.pyo
+${PYSITELIB}/guessit/test/test_archive_metadata.py
+${PYSITELIB}/guessit/test/test_archive_metadata.pyc
+${PYSITELIB}/guessit/test/test_archive_metadata.pyo
 ${PYSITELIB}/guessit/test/test_benchmark.py
 ${PYSITELIB}/guessit/test/test_benchmark.pyc
 ${PYSITELIB}/guessit/test/test_benchmark.pyo
+${PYSITELIB}/guessit/test/test_keys.py
+${PYSITELIB}/guessit/test/test_keys.pyc
+${PYSITELIB}/guessit/test/test_keys.pyo
 ${PYSITELIB}/guessit/test/test_main.py
 ${PYSITELIB}/guessit/test/test_main.pyc
 ${PYSITELIB}/guessit/test/test_main.pyo
 ${PYSITELIB}/guessit/test/test_options.py
 ${PYSITELIB}/guessit/test/test_options.pyc
 ${PYSITELIB}/guessit/test/test_options.pyo
+${PYSITELIB}/guessit/test/test_schema.py
+${PYSITELIB}/guessit/test/test_schema.pyc
+${PYSITELIB}/guessit/test/test_schema.pyo
 ${PYSITELIB}/guessit/test/test_yml.py
 ${PYSITELIB}/guessit/test/test_yml.pyc
 ${PYSITELIB}/guessit/test/test_yml.pyo
