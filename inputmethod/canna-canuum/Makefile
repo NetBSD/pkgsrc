@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/07/02 16:59:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/03 16:03:24 tsutsui Exp $
 
 CANNA_MODULE=	canuum
 
@@ -10,12 +10,14 @@ CONFIGURE_DIRS=		${WRKSRC}/canuum
 
 INSTALL_MAKE_FLAGS+=	INSTUGIDFLAGS=
 
+# XXX
+# canuum determines whether to use TERMCAP or TERMINFO by configure script,
+# but Imakefile cannot use library names checked by the configure because
+# the ${CONFIGURE_CMD} is invoked via Makefile generated from Imakefile.
+# Force canuum's imake-side terminal library choice to match pkgsrc's
+# curses framework so that proper TERMCAP_LIB is used here.
 .include "../../mk/curses.buildlink3.mk"
-SUBST_CLASSES+=		fix_curs
-SUBST_STAGE.fix_curs=	pre-configure
-SUBST_MESSAGE.fix_curs=	Fixing curses
-SUBST_FILES.fix_curs+=	canuum/Imakefile
-SUBST_SED.fix_curs+=	-e 's/TERMCAP_LIB = .*/TERMCAP_LIB = -l'${BUILDLINK_LIBNAME.curses}'/g'
+IMAKEOPTS+=	-DTermcapLibrary=-l${BUILDLINK_LIBNAME.curses}
 
 .include "../../inputmethod/canna-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
