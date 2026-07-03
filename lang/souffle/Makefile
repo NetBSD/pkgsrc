@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/06/18 15:07:39 nia Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/03 20:12:56 alnsn Exp $
 
 DISTNAME=	souffle-2.5
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -27,11 +27,6 @@ CMAKE_CONFIGURE_ARGS+=	-DSOUFFLE_COMPILE_PY_COMPILER=${CXX:Q}
 CMAKE_CONFIGURE_ARGS+=	-DBUILDLINK_DIR=${BUILDLINK_DIR}
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG}
 
-# Tests take a long time to finish, you can instead
-# run them inside a sandboxed shell and pass -j N:
-# make build-env
-# cd cmake-pkgsrc-build && ctest -j 32
-# ^D
 TEST_TARGET=		test
 
 .include "options.mk"
