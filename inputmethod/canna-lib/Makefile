@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/06/30 14:17:51 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/03 15:05:59 tsutsui Exp $
 
 CANNA_MODULE=	lib
 
@@ -19,6 +19,7 @@ post-extract:
 	${CP} ${FILESDIR}/dic-phono-filter.awk ${WRKSRC}/dic/phono/
 
 post-configure:
+	# prepare necessary symlinks to build without configure in server dir
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
 
 post-install:

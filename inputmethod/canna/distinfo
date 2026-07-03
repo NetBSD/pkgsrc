@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/06/30 14:17:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.22 2026/07/03 15:05:58 tsutsui Exp $
 
 BLAKE2s (Canna38.tar.xz) = 0055232ceb6395d99f1e7fe27933e8f10efb9b973d69ca41b375b5e9999d4f57
 SHA512 (Canna38.tar.xz) = 50f44904fe95f5893f6d18f55ec29ae55b6d35ffec9f07c44898907bfbfef1c88b47ce269767395409a4ae6a22aa2f2be7ec44fc376eb83d2feb2453233f18f0
@@ -11,6 +11,5 @@ SHA1 (patch-canuum_termcap.c) = 38fb86a2e0385d2fe13165987c1c6842f558165d
 SHA1 (patch-canuum_termio.c) = 9b1284c3672a4fbceb85388ba544d17a17863e49
 SHA1 (patch-cmd_cmd.tmpl) = 642e3e15057fba2142ed48e0493464be978e07b2
 SHA1 (patch-dic_phono_Imakefile) = e81f1a1629751d28436e6b73266d89caba48ee15
-SHA1 (patch-lib_RKC_convert.c) = 80933aad8d831fbcda295b56eb3de965b46e8894
 SHA1 (patch-lib_RK_dd.c) = 3b050411704788fbb4908a4e0bb982955c64bf4d
 SHA1 (patch-lib_canna_lisp.c) = f944eec48d6f9c7ed797bcd41c0b9f26235446c0
