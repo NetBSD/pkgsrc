@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/12/26 08:57:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/07/03 07:23:16 adam Exp $
 bin/flatc-${PYVERSSUFFIX}
 bin/wamp-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -80,6 +80,7 @@ ${PYSITELIB}/autobahn/flatbuffers/number_types.pyo
 ${PYSITELIB}/autobahn/flatbuffers/packer.py
 ${PYSITELIB}/autobahn/flatbuffers/packer.pyc
 ${PYSITELIB}/autobahn/flatbuffers/packer.pyo
+${PYSITELIB}/autobahn/flatbuffers/reflection.bfbs
 ${PYSITELIB}/autobahn/flatbuffers/reflection.fbs
 ${PYSITELIB}/autobahn/flatbuffers/reflection/AdvancedFeatures.py
 ${PYSITELIB}/autobahn/flatbuffers/reflection/AdvancedFeatures.pyc
@@ -143,6 +144,9 @@ ${PYSITELIB}/autobahn/nvx/_xormasker.pyo
 ${PYSITELIB}/autobahn/nvx/test/__init__.py
 ${PYSITELIB}/autobahn/nvx/test/__init__.pyc
 ${PYSITELIB}/autobahn/nvx/test/__init__.pyo
+${PYSITELIB}/autobahn/nvx/test/test_compile_args.py
+${PYSITELIB}/autobahn/nvx/test/test_compile_args.pyc
+${PYSITELIB}/autobahn/nvx/test/test_compile_args.pyo
 ${PYSITELIB}/autobahn/nvx/test/test_nvx_utf8validator.py
 ${PYSITELIB}/autobahn/nvx/test/test_nvx_utf8validator.pyc
 ${PYSITELIB}/autobahn/nvx/test/test_nvx_utf8validator.pyo
@@ -162,6 +166,12 @@ ${PYSITELIB}/autobahn/rawsocket/util.pyo
 ${PYSITELIB}/autobahn/test/__init__.py
 ${PYSITELIB}/autobahn/test/__init__.pyc
 ${PYSITELIB}/autobahn/test/__init__.pyo
+${PYSITELIB}/autobahn/test/test_flatbuffers_version.py
+${PYSITELIB}/autobahn/test/test_flatbuffers_version.pyc
+${PYSITELIB}/autobahn/test/test_flatbuffers_version.pyo
+${PYSITELIB}/autobahn/test/test_import_all.py
+${PYSITELIB}/autobahn/test/test_import_all.pyc
+${PYSITELIB}/autobahn/test/test_import_all.pyo
 ${PYSITELIB}/autobahn/test/test_rng.py
 ${PYSITELIB}/autobahn/test/test_rng.pyc
 ${PYSITELIB}/autobahn/test/test_rng.pyo
@@ -258,6 +268,7 @@ ${PYSITELIB}/autobahn/wamp/flatbuffers/roles.fbs
 ${PYSITELIB}/autobahn/wamp/flatbuffers/rpc.fbs
 ${PYSITELIB}/autobahn/wamp/flatbuffers/session.fbs
 ${PYSITELIB}/autobahn/wamp/flatbuffers/types.fbs
+${PYSITELIB}/autobahn/wamp/flatbuffers/wamp.bfbs
 ${PYSITELIB}/autobahn/wamp/flatbuffers/wamp.fbs
 ${PYSITELIB}/autobahn/wamp/gen/__init__.py
 ${PYSITELIB}/autobahn/wamp/gen/__init__.pyc
@@ -353,9 +364,6 @@ ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/CancelMode.pyo
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Challenge.py
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Challenge.pyc
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Challenge.pyo
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ChannelBinding.py
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ChannelBinding.pyc
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ChannelBinding.pyo
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ClientRoles.py
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ClientRoles.pyc
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/ClientRoles.pyo
@@ -392,9 +400,6 @@ ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/InvocationPolicy.pyo
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/KDF.py
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/KDF.pyc
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/KDF.pyo
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Kdf.py
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Kdf.pyc
-${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Kdf.pyo
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Match.py
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Match.pyc
 ${PYSITELIB}/autobahn/wamp/gen/wamp/proto/Match.pyo
