@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/06/29 13:11:00 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/07/03 18:49:13 wiz Exp $
 
 DISTNAME=	psmisc-v23.7
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/psmisc/psmisc
 COMMENT=	Miscellaneous procfs tools: killall, pidof, and pstree
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
 CONFLICTS+=	pstree<=2.16
 
@@ -28,7 +31,7 @@ PLIST.fuser=		yes
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -fi && ${SH} po/update-potfiles
+	cd ${WRKSRC} && autoreconf -fiv && ${SH} po/update-potfiles
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
