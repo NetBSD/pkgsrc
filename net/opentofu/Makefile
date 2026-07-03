@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.21 2026/06/05 10:21:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/03 12:44:57 adam Exp $
 
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	opentofu-1.6.2
-PKGREVISION=	20
+DISTNAME=	opentofu-1.12.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://opentofu.org
+HOMEPAGE=	https://opentofu.org/
 COMMENT=	Free infrastructure orchestration tool
 LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	./cmd/tofu
 
-USE_LANGUAGES+=	c		# something here uses cgo
+USE_LANGUAGES=		c # something uses cgo
 
 .include "go-modules.mk"
 
