@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/06/24 20:30:23 js Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/07/03 22:07:19 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
@@ -294,7 +294,7 @@ lib/cmake/ObjFW/ObjFWConfig.cmake
 lib/cmake/ObjFW/ObjFWConfigVersion.cmake
 lib/libobjfw.so
 lib/libobjfw.so.1
-lib/libobjfw.so.1.5.6
+lib/libobjfw.so.1.5.7
 lib/libobjfwhid.so
 lib/libobjfwhid.so.1
 lib/libobjfwhid.so.1.5.6
