@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.77 2026/06/23 04:26:04 adam Exp $
+$NetBSD: distinfo,v 1.78 2026/07/03 06:12:32 adam Exp $
 
-BLAKE2s (coverage-7.14.3.tar.gz) = f4e910800e661cd39afd82aa15b4a7ee050483d32e50ebff84dedbe6b5163254
-SHA512 (coverage-7.14.3.tar.gz) = 1a29d6e4824fc472b766476e0940d0d4db0ce4ea33ec4376d7738fb318365da05e33773bd8ca1cad56b7f2471780333b52a53f135bc13414ccf3b3c445e8d2fe
-Size (coverage-7.14.3.tar.gz) = 924398 bytes
+BLAKE2s (coverage-7.15.0.tar.gz) = 6da3ad13d2ae21eb6caea01284ef9a2bb1a45da55dddf21ff01a24309b399bf7
+SHA512 (coverage-7.15.0.tar.gz) = 559aea2ef68f488b3863f9919ee586b011197bb7e91c73cc72e61d4811af0ec7b084dc77752355f661f230147633ea2245e23c3a9a7c081a10872ae77e58dfc5
+Size (coverage-7.15.0.tar.gz) = 925362 bytes
