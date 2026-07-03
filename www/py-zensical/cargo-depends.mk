@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/06/18 08:13:14 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/07/03 07:38:07 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -88,11 +88,11 @@ CARGO_CRATE_DEPENDS+=	potential_utf-0.1.5
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	prettyplease-0.2.37
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
-CARGO_CRATE_DEPENDS+=	pyo3-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.28.3
+CARGO_CRATE_DEPENDS+=	pyo3-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.45
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	r-efi-6.0.0
