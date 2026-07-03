@@ -1,7 +1,5 @@
-# $NetBSD: Makefile.common,v 1.65 2026/05/22 08:06:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.66 2026/07/03 14:11:58 wiz Exp $
 # used by lang/nodejs/Makefile
-# used by lang/nodejs18/Makefile
-# used by lang/nodejs20/Makefile
 # used by lang/nodejs22/Makefile
 # used by lang/nodejs24/Makefile
 
