@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.178 2026/06/22 20:08:57 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2026/07/03 11:30:46 adam Exp $
 
-DISTNAME=	gnupg-2.5.20
+DISTNAME=	gnupg-2.5.21
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,14 +30,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # SunOS does have getaddrinfo() and the code knows how to use it
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
-
 TEST_TARGET=		check
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600	# socklen_t
-
 LDFLAGS.Darwin+=	-lintl
-#LDFLAGS.SunOS+=	-lsocket -lrt
-#LDFLAGS.Linux+=	-lrt
 
 .include "options.mk"
 
@@ -50,8 +45,7 @@ BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.11.0
 .include "../../security/libgcrypt/buildlink3.mk"
-# per configure script as of 2.5.17
-#BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.56
+# As of 2.5.21, configure script requests libgpg-error>=1.56
 # but we need a fix for NetBSD
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.58nb2
 .include "../../security/libgpg-error/buildlink3.mk"
