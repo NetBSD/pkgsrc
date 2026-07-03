@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/07/03 15:25:41 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2026/07/03 16:14:51 gdt Exp $
 
 DISTNAME=	coturn-4.14.0
 CATEGORIES=	net
@@ -21,8 +21,6 @@ COTURN_GROUP?=	${COTURN_USER}
 COTURN_DATA?=	${VARBASE}/db/coturn
 BUILD_DEFS+=	COTURN_USER COTURN_GROUP VARBASE COTURN_DATA
 
-# \todo Justify disabling rpath.
-CONFIGURE_ARGS+=	--disable-rpath
 CONFIGURE_ARGS+=	--localstatedir ${COTURN_DATA}
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
