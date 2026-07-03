@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/12/21 21:48:37 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/03 12:08:37 adam Exp $
 
-DISTNAME=	zope_testing-6.1
+DISTNAME=	zope_testing-6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.testing/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.testing
 COMMENT=	Zope testing helpers
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78.1.1:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
