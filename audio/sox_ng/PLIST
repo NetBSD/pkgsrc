@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/07/03 09:32:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/07/03 10:59:09 wiz Exp $
 bin/play
 bin/play_ng
 bin/rec
@@ -9,7 +9,9 @@ bin/soxi
 bin/soxi_ng
 include/sox.h
 include/sox_ng.h
+lib/libsox.a
 lib/libsox.la
+lib/libsox.so
 lib/libsox_ng.la
 lib/pkgconfig/sox.pc
 lib/pkgconfig/sox_ng.pc
