@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4204 2026/07/03 10:18:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4205 2026/07/03 10:23:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6294,3 +6294,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-octoprint to 1.11.8 [adam 2026-07-03]
 	Updated www/py-zensical to 0.0.46 [adam 2026-07-03]
 	Updated audio/sox_ng to 14.8.0.1 [wiz 2026-07-03]
+	Removed audio/sox successor audio/sox_ng [wiz 2026-07-03]
