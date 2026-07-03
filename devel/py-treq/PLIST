@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/08/16 07:09:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/03 12:13:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,9 +9,6 @@ ${PYSITELIB}/treq/__init__.pyo
 ${PYSITELIB}/treq/_agentspy.py
 ${PYSITELIB}/treq/_agentspy.pyc
 ${PYSITELIB}/treq/_agentspy.pyo
-${PYSITELIB}/treq/_multipart.py
-${PYSITELIB}/treq/_multipart.pyc
-${PYSITELIB}/treq/_multipart.pyo
 ${PYSITELIB}/treq/_types.py
 ${PYSITELIB}/treq/_types.pyc
 ${PYSITELIB}/treq/_types.pyo
