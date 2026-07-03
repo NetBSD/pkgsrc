@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/14 12:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/07/03 11:04:45 adam Exp $
 
-DISTNAME=	guessit-3.8.0
+DISTNAME=	guessit-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
 
@@ -11,10 +10,10 @@ HOMEPAGE=	https://guessit.readthedocs.io/
 COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.6.0:../../textproc/py-babelfish
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-rebulk>=3.2.0:../../textproc/py-rebulk
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.6.1:../../textproc/py-babelfish
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.0:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-rebulk>=6:../../textproc/py-rebulk
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -22,9 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} guessit guessit-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	guessit
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
