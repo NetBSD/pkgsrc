@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2025/04/07 12:00:32 micha Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/03 14:36:21 micha Exp $
 
-DISTNAME=		0.4.0
-PKGNAME=		muon-${DISTNAME}
-PKGREVISION=		1
+DISTNAME=		muon-v0.6.0
+PKGNAME=		${DISTNAME:S/v//}
 CATEGORIES=		devel
-MASTER_SITES=		https://git.sr.ht/~lattis/muon/archive/
+MASTER_SITES=		https://muon.build/releases/${DISTNAME:S/muon-//}/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		${DEFAULT_DISTFILES} man.tar.gz
-SITES.man.tar.gz=	https://muon.build/releases/v${DISTNAME}/docs/
+SITES.man.tar.gz=	https://muon.build/releases/${DISTNAME:S/muon-//}/docs/
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		https://git.sr.ht/~lattis/muon
 COMMENT=		Implementation of meson build system in C99 with minimal dependencies
 LICENSE=		gnu-gpl-v3
 
+USE_TOOLS=		pkg-config
 USE_CC_FEATURES=	c99
 
 # Use external samurai
@@ -29,15 +29,17 @@ BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--no-as-needed:-Wl,-zrecord
 
 MUON_ARGS+=		-Dlibcurl=disabled
 MUON_ARGS+=		-Dlibarchive=disabled
-MUON_ARGS+=		-Dlibpkgconf=enabled
+MUON_ARGS+=		-Dlibpkgconf=disabled
 MUON_ARGS+=		-Dsamurai=disabled
+MUON_ARGS+=		-Dtracy=disabled
+MUON_ARGS+=		-Dui=disabled
 MUON_ARGS+=		-Dreadline=builtin
 MUON_ARGS+=		-Dstatic=false
-MUON_ARGS+=		-Ddocs=disabled
-MUON_ARGS+=		-Dwebsite=false
-MUON_ARGS+=		-Dtracy=disabled
+MUON_ARGS+=		-Dman-pages=disabled
+MUON_ARGS+=		-Dmeson-docs=disabled
+MUON_ARGS+=		-Dmeson-tests=disabled
+MUON_ARGS+=		-Dwebsite=disabled
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-configure:
@@ -54,7 +56,5 @@ do-test:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/output/muon ${DESTDIR}${PREFIX}/bin/muon
 	${INSTALL_MAN} ${WRKDIR}/man/muon.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-.include "../../devel/pkgconf/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
