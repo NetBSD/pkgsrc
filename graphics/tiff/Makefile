@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2026/07/03 11:27:07 gdt Exp $
+# $NetBSD: Makefile,v 1.174 2026/07/03 11:41:35 gdt Exp $
 
 VERSION_BASE=	4.7.2
 # Accomodate testing unreleased versions.
@@ -17,7 +17,8 @@ WRKSRC=		${WRKDIR}/tiff-${VERSION_BASE}
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
 USE_TOOLS=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
