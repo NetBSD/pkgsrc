@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/17 21:04:37 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.3 2026/07/03 11:04:00 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/rebulk/__init__.py
 ${PYSITELIB}/rebulk/__init__.pyc
 ${PYSITELIB}/rebulk/__init__.pyo
@@ -26,6 +24,9 @@ ${PYSITELIB}/rebulk/formatters.pyo
 ${PYSITELIB}/rebulk/introspector.py
 ${PYSITELIB}/rebulk/introspector.pyc
 ${PYSITELIB}/rebulk/introspector.pyo
+${PYSITELIB}/rebulk/key.py
+${PYSITELIB}/rebulk/key.pyc
+${PYSITELIB}/rebulk/key.pyo
 ${PYSITELIB}/rebulk/loose.py
 ${PYSITELIB}/rebulk/loose.pyc
 ${PYSITELIB}/rebulk/loose.pyo
@@ -38,6 +39,7 @@ ${PYSITELIB}/rebulk/pattern.pyo
 ${PYSITELIB}/rebulk/processors.py
 ${PYSITELIB}/rebulk/processors.pyc
 ${PYSITELIB}/rebulk/processors.pyo
+${PYSITELIB}/rebulk/py.typed
 ${PYSITELIB}/rebulk/rebulk.py
 ${PYSITELIB}/rebulk/rebulk.pyc
 ${PYSITELIB}/rebulk/rebulk.pyo
@@ -68,12 +70,18 @@ ${PYSITELIB}/rebulk/test/test_debug.pyo
 ${PYSITELIB}/rebulk/test/test_introspector.py
 ${PYSITELIB}/rebulk/test/test_introspector.pyc
 ${PYSITELIB}/rebulk/test/test_introspector.pyo
+${PYSITELIB}/rebulk/test/test_key.py
+${PYSITELIB}/rebulk/test/test_key.pyc
+${PYSITELIB}/rebulk/test/test_key.pyo
 ${PYSITELIB}/rebulk/test/test_loose.py
 ${PYSITELIB}/rebulk/test/test_loose.pyc
 ${PYSITELIB}/rebulk/test/test_loose.pyo
 ${PYSITELIB}/rebulk/test/test_match.py
 ${PYSITELIB}/rebulk/test/test_match.pyc
 ${PYSITELIB}/rebulk/test/test_match.pyo
+${PYSITELIB}/rebulk/test/test_model.py
+${PYSITELIB}/rebulk/test/test_model.pyc
+${PYSITELIB}/rebulk/test/test_model.pyo
 ${PYSITELIB}/rebulk/test/test_pattern.py
 ${PYSITELIB}/rebulk/test/test_pattern.pyc
 ${PYSITELIB}/rebulk/test/test_pattern.pyo
@@ -89,6 +97,9 @@ ${PYSITELIB}/rebulk/test/test_rules.pyo
 ${PYSITELIB}/rebulk/test/test_toposort.py
 ${PYSITELIB}/rebulk/test/test_toposort.pyc
 ${PYSITELIB}/rebulk/test/test_toposort.pyo
+${PYSITELIB}/rebulk/test/test_utils.py
+${PYSITELIB}/rebulk/test/test_utils.pyc
+${PYSITELIB}/rebulk/test/test_utils.pyo
 ${PYSITELIB}/rebulk/test/test_validators.py
 ${PYSITELIB}/rebulk/test/test_validators.pyc
 ${PYSITELIB}/rebulk/test/test_validators.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/04/17 17:29:07 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/03 11:04:00 adam Exp $
 
-DISTNAME=	rebulk-3.2.0
+DISTNAME=	rebulk-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rebulk/}
@@ -10,14 +10,9 @@ HOMEPAGE=	https://github.com/Toilal/rebulk
 COMMENT=	Performs advanced searches in strings
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.11:../../devel/py-uv-build
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
