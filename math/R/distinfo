@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.119 2026/06/27 10:59:23 mef Exp $
+$NetBSD: distinfo,v 1.120 2026/07/03 10:59:36 mef Exp $
 
 BLAKE2s (R-4.6.1.tar.xz) = f2fc4cd9acdf7c4bcffdea003a1fdf83bb48c6522428d021917f4da84e764c3e
 SHA512 (R-4.6.1.tar.xz) = b62fdd0591b47999d8f8233c5ebf3b215d2db640badebcfe844082c91b44179595d2f921eb976a089aac94ea3337d2b3bdba74e4d8b5f84fd90ccf83faef2675
@@ -6,7 +6,6 @@ Size (R-4.6.1.tar.xz) = 30960876 bytes
 SHA1 (patch-configure.ac) = d688dfd94d987b3b22d20bb040ff44ee3612f3ad
 SHA1 (patch-src_extra_xdr_xdr__mem.c) = 2e607b070db8b24a6ad5501e9c7c1549bf1b1d82
 SHA1 (patch-src_extra_xdr_xdr__stdio.c) = 91ea16599693e9dc14e631880fbe1c52f0f2009f
-SHA1 (patch-src_include_R__ext_Error.h) = 2d1eaebff5e57d73d301f7e818daa0b959a5c0f2
 SHA1 (patch-src_library_grDevices_src_devPS.c) = baaa914530519f8fd4b151d32f2aee327b908051
 SHA1 (patch-src_library_stats_src_Makefile.in) = 4eb93292858392792c37a706399e2cef91821bbe
 SHA1 (patch-src_main_character.c) = c1be2cae404ecbdd547343b70e9d072e9e1d5549
