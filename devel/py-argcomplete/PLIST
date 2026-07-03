@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2025/01/02 13:48:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/07/03 06:10:45 adam Exp $
 bin/activate-global-python-argcomplete
-bin/python-argcomplete-check-easy-install-script
 bin/register-python-argcomplete
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -49,9 +48,6 @@ ${PYSITELIB}/argcomplete/scripts/__init__.pyo
 ${PYSITELIB}/argcomplete/scripts/activate_global_python_argcomplete.py
 ${PYSITELIB}/argcomplete/scripts/activate_global_python_argcomplete.pyc
 ${PYSITELIB}/argcomplete/scripts/activate_global_python_argcomplete.pyo
-${PYSITELIB}/argcomplete/scripts/python_argcomplete_check_easy_install_script.py
-${PYSITELIB}/argcomplete/scripts/python_argcomplete_check_easy_install_script.pyc
-${PYSITELIB}/argcomplete/scripts/python_argcomplete_check_easy_install_script.pyo
 ${PYSITELIB}/argcomplete/scripts/register_python_argcomplete.py
 ${PYSITELIB}/argcomplete/scripts/register_python_argcomplete.pyc
 ${PYSITELIB}/argcomplete/scripts/register_python_argcomplete.pyo
