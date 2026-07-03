@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2026/06/30 14:17:51 tsutsui Exp $
+# $NetBSD: Makefile,v 1.27 2026/07/03 19:54:41 tsutsui Exp $
 
 CANNA_MODULE=	server
 
 .include "../../inputmethod/canna/Makefile.common"
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 INSTALL_TARGET=	instserver
 
