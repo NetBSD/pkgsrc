@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/07/03 15:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/03 09:32:19 wiz Exp $
 
-DISTNAME=	sox_ng-14.6.0.2
+DISTNAME=	sox_ng-14.8.0.1
 CATEGORIES=	audio
 MASTER_SITES=	https://codeberg.org/sox_ng/sox_ng/releases/download/${DISTNAME}/
 
@@ -14,12 +14,13 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
+# install compatibility links so this can replace 'sox'
+CONFIGURE_ARGS+=	--enable-replace
+CONFLICTS+=		sox-[0-9]*
+
 PKGCONFIG_OVERRIDE+=	sox_ng.pc.in
 
-SUBST_CLASSES+=		gsm
-SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
-SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
-SUBST_STAGE.gsm=	pre-configure
+TEST_TARGET=		check
 
 .include "options.mk"
 
