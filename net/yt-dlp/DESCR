@@ -15,6 +15,3 @@ Some of the new features are:
 * new options
 * plugin extractors
 * differences in default behavior
-
-(This package contains only yt-dlp proper, and does not depend on
-various programs that upstream labels strongly recommended.)
