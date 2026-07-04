@@ -1,19 +1,13 @@
-$NetBSD: patch-src_Makevars.in,v 1.1 2026/05/21 13:13:45 mef Exp $
+$NetBSD: patch-src_Makevars.in,v 1.2 2026/07/04 23:32:32 mef Exp $
 
 the function backtrace_symbols which may be found at
 /usr/lib/libexecinfo.* ( in *BSD OS, I assume)
 
 --- src/Makevars.in.orig	2025-10-20 02:02:36.000000000 +0900
 +++ src/Makevars.in	2026-05-21 21:58:07.950515018 +0900
-@@ -4,3 +4,11 @@ PKG_LIBS = -pthread @extra_pkg_libs@
+@@ -4,3 +4,5 @@ PKG_LIBS = -pthread @extra_pkg_libs@
  #### Debugging flags ####
  # Uncomment to enable thread assertions
  # PKG_CPPFLAGS += -DDEBUG_THREAD -UNDEBUG
 +
-+UNAME := $(shell uname)
-+
-+ifneq ($(UNAME), Linux)
-+ifneq ($(UNAME), SunOS)
-+PKG_LIBS += -lexecinfo
-+endif
-+endif
++@@PKG_LIBS@@

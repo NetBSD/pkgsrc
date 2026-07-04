@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2026/05/21 13:13:45 mef Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/04 23:32:31 mef Exp $
 
 R_PKGNAME=	later
 R_PKGVER=	1.4.8
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,8 +20,17 @@ TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 MAKE_ENV+=	-DEXTRA_PKG_LIBS=-lexecinfo
 USE_LANGUAGES=	c c++
 
-# to make patches/patch-src_Makefile.in more portable
-USE_TOOLS+=	gmake
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars.in
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
+
 
 .include "../../mk/bsd.prefs.mk"
 
