@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makevars,v 1.1 2026/05/25 15:02:10 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2026/07/04 23:26:00 mef Exp $
 
 symbol backtrace_symbols is defined in /usr/lib/libexecinfo
 
@@ -12,17 +12,11 @@ Execution halted
 ERROR: loading failed
 ---------------------------------
 
---- /dev/null	2026-05-25 23:49:38.565140977 +0900
-+++ src/Makevars	2026-05-25 23:54:14.584419265 +0900
-@@ -0,0 +1,11 @@
+--- src/Makevars.orig	2026-07-05 08:20:00.751584080 +0900
++++ src/Makevars	2026-07-05 08:22:56.091779410 +0900
+@@ -0,0 +1,5 @@
 + #### Debugging flags ####
 + # Uncomment to enable thread assertions
 + # PKG_CPPFLAGS += -DDEBUG_THREAD -UNDEBUG
 +
-+UNAME := $(shell uname)
-+
-+ifneq ($(UNAME), Linux)
-+ifneq ($(UNAME), SunOS)
-+PKG_LIBS += -lexecinfo
-+endif
-+endif
++@@PKG_LIBS@@
