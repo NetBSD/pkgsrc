@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/06/30 05:22:58 pin Exp $
+$NetBSD: distinfo,v 1.5 2026/07/04 05:06:03 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -27,9 +27,9 @@ Size (anstyle-query-1.1.5.crate) = 10264 bytes
 BLAKE2s (anstyle-wincon-3.0.11.crate) = 071e18edcb1861915756f752dc9cee82ae2b70cb4836835fb8114fca1a5ffa8c
 SHA512 (anstyle-wincon-3.0.11.crate) = 09c3215dc6cef75d6282078e68c5dbd51580b6c8db79a77932d2e74a51d29cb0ef23c31b8a73a71896a45eb5dc5f94aee209bd8f6e5df4c675dabe3cd304a96b
 Size (anstyle-wincon-3.0.11.crate) = 12638 bytes
-BLAKE2s (anyhow-1.0.102.crate) = 26be8358bef190b04de5f1b7d362aaa57a257601ae31709ea515b461dc770f52
-SHA512 (anyhow-1.0.102.crate) = 18064a92b6d577151b6f1be3df0985fdefdc5f7089ac0aa9bc92a2034c780eac5b71b8fbb260217aea122bee7c950ff00abf4b6d8f4143dff889b7164c7d6f0b
-Size (anyhow-1.0.102.crate) = 48658 bytes
+BLAKE2s (anyhow-1.0.103.crate) = ab3966e765f432e9d44f62e70bdb5ef631c108ac808b62acd95d87636df9c110
+SHA512 (anyhow-1.0.103.crate) = f61e983039daa3a0da4fe4d5d30f43348b6ca8302bd04a6be9125b08f6951b3e9d061360e8ed5f83f7484d85b7308db67cf2a677852203517a2088c59a3c9198
+Size (anyhow-1.0.103.crate) = 48746 bytes
 BLAKE2s (approx-0.5.1.crate) = 8da488e71d6cc64f2cb8bff398bbbcb0438bfa03968ed8b8750d649eae057bb6
 SHA512 (approx-0.5.1.crate) = c6d768496c974b6ff4cf7ad8e65f3fc9faf29a1957da497968ee112c6a0b9d7a0ff9a2579206e864976c0f65ed2190bc9d2b63b31a09ced7b57879e207c46407
 Size (approx-0.5.1.crate) = 15100 bytes
@@ -282,9 +282,9 @@ Size (gimli-0.32.3.crate) = 289789 bytes
 BLAKE2s (git2-0.21.0.crate) = a2e93ada354032544e89b79dd7c631314be96697dcbae037a864decc3be7721b
 SHA512 (git2-0.21.0.crate) = c105b5a05ab3a0a291a30fdc627ac3b72196b93cadb91c62ae5395d2f469517fbcd32954972d62691590d3cad6a8aa5fc514ca966cc0ad2225d04fb5a53dfd26
 Size (git2-0.21.0.crate) = 242222 bytes
-BLAKE2s (gitpane-0.8.1.tar.gz) = b2f3bd35fb2cdf50df81fb147366ca60a5f161fae1df38eb289136af74b4dbdc
-SHA512 (gitpane-0.8.1.tar.gz) = 2ffc8462c38736a8d15e264380d6b38dad42b215282ed7355d0c720480eeeb162e2b30c4bc92f6c201041417676843c9071feb57c21d1ac62567e3d46e738a39
-Size (gitpane-0.8.1.tar.gz) = 4031851 bytes
+BLAKE2s (gitpane-0.8.2.tar.gz) = 53ff008559d2469e2e4eb47588b4dce9f71e08d0a98c41db0137f2269ae6e001
+SHA512 (gitpane-0.8.2.tar.gz) = ca0d3f1b8e1cb214faf6aa022e3042a907ae8322ba02f7ea4419a17e87fb1822047e19a3c475a1e92c175efc3409ae8aae49c313e83feeaeb6a2036b4ef259f0
+Size (gitpane-0.8.2.tar.gz) = 4032797 bytes
 BLAKE2s (globset-0.4.18.crate) = e11bcd40201278f23b7b3aa74f96441bf85cc94e4c3364847ce6c15c4e5d1115
 SHA512 (globset-0.4.18.crate) = 44afbcdaff506dba351b967ff435752988f7d980e0b908c248c2aa462dcc95c94907a6d9ec7aec28599dc29d3fbd421cdf0bc8082042263b6af69b36fc1a2c54
 Size (globset-0.4.18.crate) = 28970 bytes
