@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2020/11/29 21:16:52 dbj Exp $
-#
+# $NetBSD: Makefile,v 1.11 2026/07/04 06:25:04 wiz Exp $
 
 DISTNAME=	predict-2.2.6
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/kd2bd/
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://www.qsl.net/kd2bd/predict.html
 COMMENT=	Curses satellite tracking/orbital prediction program
-
 LICENSE=	gnu-gpl-v2
+
+# Run time only dependency on the play utility
+DEPENDS+=	sox_ng-[0-9]*:../../audio/sox_ng
 
 USE_LANGUAGES=	c
 
@@ -32,9 +34,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/man/predict.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/predict.1
 	${INSTALL_DATA} ${WRKSRC}/vocalizer/*.wav ${DESTDIR}${PREFIX}/share/predict/vocalizer/
 	${INSTALL_DATA} ${WRKSRC}/default/predict.* ${DESTDIR}${PREFIX}/share/predict/default/
-
-# Run time only dependency on the play utility
-DEPENDS+=	sox-[0-9]*:../../audio/sox
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

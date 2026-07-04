@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/12/30 01:13:18 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/07/04 06:25:03 wiz Exp $
 
 DISTNAME=	juke-0.7
 PKGREVISION=	5
@@ -13,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 FAKE_NCURSES=	yes
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 EGDIR=		${PREFIX}/share/examples/juke
 

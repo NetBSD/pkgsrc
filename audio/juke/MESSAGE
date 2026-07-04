@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+$NetBSD: MESSAGE,v 1.2 2026/07/04 06:25:03 wiz Exp $
 
 You may wish to install at least some players from pkgsrc to use with juke
 (if you don't have them installed already).  You can try the following
@@ -12,7 +12,7 @@ packages:
                       ULT 669 files
   audio/mpg123        Command-line player for mpeg layer 1, 2 and 3 audio
   audio/sidplay       tools for playing sidtunes
-  audio/sox           SOund eXchange - universal sound sample translator
+  audio/sox_ng        SOund eXchange - universal sound sample translator
   audio/vorbis-tools  Ogg Vorbis encoder and player
   audio/xmp           Player for many different Amiga and PC module formats
 

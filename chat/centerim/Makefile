@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2026/05/14 16:40:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2026/07/04 06:25:04 wiz Exp $
 
 DISTNAME=	centerim-4.22.10
-PKGREVISION=	53
+PKGREVISION=	54
 CATEGORIES=	chat
 #MASTER_SITES=	https://transacid.de/centerim/releases/
 
@@ -21,12 +21,12 @@ LIBS+=			${LDFLAGS}
 # Fails with C++14 default language.
 FORCE_CXX_STD=		c++03
 
+CFLAGS+=		-Wno-implicit-function-declaration
+
 REPLACE_PERL=		misc/cimextracthistory.pl
 REPLACE_PERL+=		misc/cimconv
 REPLACE_PYTHON+=	misc/CenterIMLog2HTML.py
 REPLACE_AWK+=		misc/cimformathistory
-
-INCOMPAT_CURSES+=	NetBSD-[0-5].*-* # see PR 29060
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -34,7 +34,7 @@ INCOMPAT_CURSES+=	NetBSD-[0-5].*-* # see PR 29060
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-DAUDIO_PLAYER="\"/usr/bin/audioplay\""
 .else
-DEPENDS+=		sox>=12.17.4:../../audio/sox
+DEPENDS+=		sox_ng>=12.17.4:../../audio/sox_ng
 CPPFLAGS+=		-DAUDIO_PLAYER="\"${LOCALBASE}/bin/play\""
 .endif
 

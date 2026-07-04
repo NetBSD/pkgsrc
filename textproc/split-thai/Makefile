@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2026/03/26 05:03:44 scole Exp $
+# $NetBSD: Makefile,v 1.71 2026/07/04 06:25:05 wiz Exp $
 
 ST_VERSION=	2.42
 PKGNAME=	split-thai-${ST_VERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	scole@NetBSD.org
@@ -23,7 +24,7 @@ USE_TOOLS=	mkdir cp env awk cat sort uniq grep wc echo
 TOOL_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 TOOL_DEPENDS+=	swath-[0-9]*:../../textproc/swath
 DEPENDS+=	emacs>=29.1:../../editors/emacs
-DEPENDS+=	sox-[0-9]*:../../audio/sox
+DEPENDS+=	sox_ng-[0-9]*:../../audio/sox_ng
 
 ST_SHARE_DIR=		share/split-thai
 INSTALLATION_DIRS=	${ST_SHARE_DIR}

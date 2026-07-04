@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/11/17 11:01:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/04 06:25:04 wiz Exp $
 
 DISTNAME=	dvd-slideshow-0.7.5
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 
@@ -12,7 +12,7 @@ COMMENT=	Script that creates a slideshow-style DVD with some simple menus
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
-DEPENDS+=	sox-[0-9]*:../../audio/sox
+DEPENDS+=	sox_ng-[0-9]*:../../audio/sox_ng
 DEPENDS+=	dvdauthor-[0-9]*:../../multimedia/dvdauthor
 DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick

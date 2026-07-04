@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/07/04 06:25:03 wiz Exp $
 
 BLAKE2s (juke-0.7.tar.gz) = 1885f7aa47c1aed75d5ac60f809e580277198313d773154bec314e2459775524
 SHA512 (juke-0.7.tar.gz) = 279f4c8f90b97c245de24da5cdb87b4a8b263d07f1da82be4ef9e23b51fbef34f6dead4c0d754136f2bb7534a9023c6c5dc8f24178ec98dfd531913b2b706e95
@@ -7,5 +7,5 @@ SHA1 (patch-aa) = e835b1fe8f00d8c5581a87d55407b9979bb73710
 SHA1 (patch-ab) = e4a089f7307e6a029b7e0c6b5b862326e160f6d5
 SHA1 (patch-ac) = f1c7233cd88ebdbc8df1a5ec5955b6506fd73634
 SHA1 (patch-ad) = 3080321b954c2fa1ae83c6e945214c62f0f34e72
-SHA1 (patch-ae) = fe4a70293f762a17503c5782163181e873b52186
+SHA1 (patch-ae) = ddbba03df23e2b9a639b2f5f695afafcbb7303f1
 SHA1 (patch-af) = ec5e9602ffcef4b8e01c00a260b65612e1d9f89a
