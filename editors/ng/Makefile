@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/10/24 09:32:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2026/07/04 08:27:41 wiz Exp $
 
 DISTNAME=	ng-1.4.4
+PKGREVISION=	1
 CATEGORIES=	editors japanese
 MASTER_SITES=	http://tt.sakura.ne.jp/~amura/archives/ng/
 

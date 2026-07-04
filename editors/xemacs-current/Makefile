@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2025/09/23 16:41:10 hauke Exp $
+# $NetBSD: Makefile,v 1.126 2026/07/04 08:27:42 wiz Exp $
 
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 COMMENT=	XEmacs text editor version ${PKGVERSION_NOREV}
 
 .include "Makefile.common"
