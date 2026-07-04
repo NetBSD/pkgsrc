@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/04 08:27:42 wiz Exp $
 
 CANNA_MODULE=	dict
 
 MAKE_JOBS_SAFE=	no
 
+PKGREVISION= 1
 .include "../../inputmethod/canna/Makefile.common"
 
 TOOL_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../../inputmethod/canna-server
