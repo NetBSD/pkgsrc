@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4219 2026/07/03 22:19:36 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4220 2026/07/04 04:01:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6314,3 +6314,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rust-bin to 1.96.1 [he 2026-07-03]
 	Updated devel/objfw to 1.5.7 [js 2026-07-03]
 	Updated net/dnsdist to 2.1.0 [drixter 2026-07-03]
+	Updated security/clamav to 1.4.5 [taca 2026-07-04]
