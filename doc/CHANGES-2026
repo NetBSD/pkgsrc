@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4235 2026/07/04 13:36:42 tron Exp $
+$NetBSD: CHANGES-2026,v 1.4236 2026/07/04 16:40:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6337,3 +6337,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/blogc version 0.20.1 [gdt 2026-07-04]
 	Updated www/resterm to 0.44.6 [drixter 2026-07-04]
 	Updated mail/mutt to 2.4.1 [tron 2026-07-04]
+	Removed filesystems/fuse-gmailfs [gdt 2026-07-04]
+	Removed filesystems/fuse-pcachefs [gdt 2026-07-04]
+	Removed filesystems/fuse-wikipediafs [gdt 2026-07-04]
