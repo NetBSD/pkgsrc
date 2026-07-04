@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/02/04 00:06:54 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/04 06:39:26 taca Exp $
 
 GIT_VERSION=	20240206.1615ec326858f8c2bd8f30b3a86ea71830409ce4
 DIST_VERSION=	0.1
+PKGREVISION=	1
 DISTNAME=	gyp-${DIST_VERSION}pre${GIT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/.[^.]*$//}
 CATEGORIES=	devel
@@ -39,6 +40,9 @@ USE_TOOLS+=	bash:run
 # for test
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+pre-configure:
+	cd ${WRKSRC}; rm -fr .git
 
 do-test:
 	${RUN}cd ${WRKSRC}; LANG=C ${SETENV} ${TEST_ENV} ${PYTHONBIN} gyptest.py -a -f make --passed
