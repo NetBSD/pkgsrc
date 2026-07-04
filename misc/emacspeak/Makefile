@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/10/23 20:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/04 06:25:04 wiz Exp $
 
 DISTNAME=	emacspeak-60.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tvraman/}
 GITHUB_PROJECT=	emacspeak
@@ -18,7 +18,7 @@ COMMENT=	Speech interface for emacs
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
-DEPENDS+=	sox-[0-9]*:../../audio/sox
+DEPENDS+=	sox_ng-[0-9]*:../../audio/sox_ng
 
 USE_TOOLS=	gmake perl bash:run pax
 

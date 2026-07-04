@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/02/20 12:17:03 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/07/04 06:25:04 wiz Exp $
 
 DISTNAME=	xmradio-1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 #MASTER_SITES=	http://core.de/~coto/radio/
 
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Radio application for Brooktree 848 compatible TV cards
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	sox>=12.16:../../audio/sox
+DEPENDS+=	sox_ng>=12.16:../../audio/sox_ng
 
 ONLY_FOR_PLATFORM=	NetBSD-*.*-* DragonFly-*-*
 

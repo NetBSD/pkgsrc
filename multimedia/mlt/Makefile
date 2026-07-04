@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.158 2026/01/27 08:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2026/07/04 06:25:05 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 COMMENT=	Open source multimedia framework
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	src/mlt++/mlt++.pc.in
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/rubberband/buildlink3.mk"
-.include "../../audio/sox/buildlink3.mk"
+.include "../../audio/sox_ng/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .if !empty(PKGSRC_COMPILER:M*gcc*)
 .  include "../../devel/libatomic/buildlink3.mk"

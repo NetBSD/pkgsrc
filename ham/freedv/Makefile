@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2026/06/11 07:17:10 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/07/04 06:25:04 wiz Exp $
 
 # warning: TAG is also set, but upstream seems now to have release
 # name/tag/unpacking-location in alignment.
@@ -50,7 +50,7 @@ pre-configure:
 .include "../../ham/hamlib/buildlink3.mk"
 # \todo Fix build using vendored sox instead of bl3 sox.
 # See CMakeFile line 211, "${PROJECT_SOURCE_DIR}/cmake/soxconfig.h.in"
-#.include "../../audio/sox/buildlink3.mk"
+#.include "../../audio/sox_ng/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"

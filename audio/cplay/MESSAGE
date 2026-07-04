@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/11/08 15:56:40 tonio Exp $
+$NetBSD: MESSAGE,v 1.2 2026/07/04 06:25:03 wiz Exp $
 
 In order to make this package actually useful, you should install at least
 one of the following audio players:
@@ -10,5 +10,5 @@ audio/mpg321
 audio/madplay
 audio/mikmod
 audio/xmp
-audio/sox
+audio/sox_ng
 ===========================================================================

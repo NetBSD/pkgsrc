@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2026/01/07 08:48:23 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/07/04 06:25:05 wiz Exp $
 
 DISTNAME=	nagstamon-3.16.2
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Nagios status monitor which takes place in systray or on desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 #DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.24:../../textproc/py-libxslt
-#DEPENDS+=	sox>=14.0.1:../../audio/sox
+#DEPENDS+=	sox_ng>=14.0.1:../../audio/sox_ng
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 #        'python3-crypto '
