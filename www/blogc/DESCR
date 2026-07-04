@@ -1,0 +1,4 @@
+Blogc is a blog compiler written in C. Given a template and source file(s) it
+will generate those into blog/website resources. Each page is generated
+independently, making blogc easy to integrate with make and other UNIX build
+toos while remaining fast, portable, and predictable.

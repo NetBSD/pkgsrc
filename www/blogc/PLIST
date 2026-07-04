@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/07/04 11:49:00 gdt Exp $
+bin/blogc
+man/man1/blogc.1
+man/man7/blogc-pagination.7
+man/man7/blogc-source.7
+man/man7/blogc-template.7
+man/man7/blogc-toctree.7

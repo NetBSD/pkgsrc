@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/04 11:49:00 gdt Exp $
+
+BLAKE2s (blogc-0.20.1.tar.gz) = 84421069e5a83afa0c623dd214cce26f55ec12b15f076f61a4aa01e7c00355e0
+SHA512 (blogc-0.20.1.tar.gz) = d05fd527e4a74c1eeb31689eb516687813f6612291a3dfa3131103cf6f6aeb77994846d8070e59a4f584a033d86db92ce4641e673a7dada59dedfb978d3b6f35
+Size (blogc-0.20.1.tar.gz) = 506761 bytes
