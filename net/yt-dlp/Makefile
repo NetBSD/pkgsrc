@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.91 2026/06/10 07:09:09 adam Exp $
+# $NetBSD: Makefile,v 1.92 2026/07/04 18:20:46 leot Exp $
 
 DISTNAME=	yt_dlp-2026.6.9
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/yt-dlp/yt-dlp
 COMMENT=	Youtube-dl fork with new features and patches
 LICENSE=	unlicense
