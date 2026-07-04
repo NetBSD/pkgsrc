@@ -16,9 +16,5 @@ Some of the new features are:
 * plugin extractors
 * differences in default behavior
 
-yt-dlp works fine for most supported sites. At least multimedia/ffmpeg[2345678]
-is highly recommended for some extractors, as well as net/rtmpdump and
-multimedia/mplayer or multimedia/mpv.
-You also want to install audio/py-mutagen, security/py-cryptodome,
-phantomjs, www/py-websockets, security/py-keyring for some functions
-of the application.
+(This package contains only yt-dlp proper, and does not depend on
+various programs that upstream labels strongly recommended.)
