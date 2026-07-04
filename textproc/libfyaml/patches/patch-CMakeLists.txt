@@ -1,6 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2026/04/01 08:53:14 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/07/04 04:42:32 adam Exp $
 
 https://github.com/pantoniou/libfyaml/commit/238082d09eb2453a9b6e98f359fb0eed05086694.patch
+
+Don't build documentation.
 
 --- CMakeLists.txt.orig	2026-03-15 13:48:50.000000000 +0000
 +++ CMakeLists.txt
@@ -13,3 +15,12 @@ https://github.com/pantoniou/libfyaml/commit/238082d09eb2453a9b6e98f359fb0eed050
      check_c_source_compiles("
          #include <emmintrin.h>
          int main() { __m128i a = _mm_setzero_si128(); return 0; }
+@@ -1592,7 +1592,7 @@ endif()
+ # Documentation
+ find_program(SPHINX_EXECUTABLE NAMES sphinx-build)
+ 
+-if(SPHINX_EXECUTABLE)
++if(FALSE)
+     set(HAVE_SPHINX TRUE)
+     set(SPHINX_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/doc")
+     set(SPHINX_BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}/doc/_build")
