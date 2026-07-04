@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2026/06/08 20:51:14 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2026/07/04 16:38:24 gdt Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -19,7 +19,6 @@ SUBDIR+=	fuse-darling-dmg
 SUBDIR+=	fuse-encfs
 SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-ext2
-SUBDIR+=	fuse-gmailfs
 SUBDIR+=	fuse-gphotofs
 SUBDIR+=	fuse-httpdirfs
 SUBDIR+=	fuse-httpfs
@@ -28,14 +27,12 @@ SUBDIR+=	fuse-lzofs
 SUBDIR+=	fuse-mp3fs
 SUBDIR+=	fuse-ntfs-3g
 SUBDIR+=	fuse-obexfs
-SUBDIR+=	fuse-pcachefs
 SUBDIR+=	fuse-s3fs
 SUBDIR+=	fuse-sparsebundlefs
 SUBDIR+=	fuse-sshfs
 SUBDIR+=	fuse-svnfs
 SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
-SUBDIR+=	fuse-wikipediafs
 SUBDIR+=	fuse3
 SUBDIR+=	glusterfs
 SUBDIR+=	glusterfs8
