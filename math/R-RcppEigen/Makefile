@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/09 12:32:34 mef Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/04 23:34:20 mef Exp $
 
 R_PKGNAME=	RcppEigen
 R_PKGVER=	0.3.4.0.2
@@ -30,7 +30,7 @@ SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
 SUBST_FILES.pkglibs=	src/Makevars
 SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
-.if ${OPSYS} != SunOS && ${OPSYS} != SunOS
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
 .else
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
