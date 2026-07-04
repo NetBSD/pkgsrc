@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.202 2026/06/24 21:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2026/07/04 22:52:03 prlw1 Exp $
 
-DISTNAME=	evince-48.1
-PKGREVISION=	6
+DISTNAME=	evince-48.4
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Apps/Evince
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/evince
 COMMENT=	Document viewer for multiple document formats
 LICENSE=	gnu-gpl-v2
 
