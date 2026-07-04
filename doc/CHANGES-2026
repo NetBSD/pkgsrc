@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4236 2026/07/04 16:40:29 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4237 2026/07/04 17:19:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6340,3 +6340,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed filesystems/fuse-gmailfs [gdt 2026-07-04]
 	Removed filesystems/fuse-pcachefs [gdt 2026-07-04]
 	Removed filesystems/fuse-wikipediafs [gdt 2026-07-04]
+	Updated audio/fluidsynth to 2.5.6 [adam 2026-07-04]
+	Updated devel/lazygit to 0.63.0 [adam 2026-07-04]
