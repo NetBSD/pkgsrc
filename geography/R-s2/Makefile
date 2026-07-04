@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/12 17:11:55 mef Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/04 23:42:08 mef Exp $
 
 R_PKGNAME=	s2
 R_PKGVER=	1.1.7
@@ -31,7 +31,7 @@ CWRAPPERS_APPEND.cxx=	-D_NETBSD_SOURCE
 SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
 SUBST_FILES.pkglibs=	src/Makevars.in
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
 .else
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
