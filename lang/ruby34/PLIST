@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/09/23 03:15:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/04 06:14:13 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1706,6 +1706,7 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_accessors.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_inheritance.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_type_coercion.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_version_defaults.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/connection_state.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/data_encoding.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/data_lite.rb
@@ -2755,18 +2756,6 @@ ${RUBY_DOC}/BSDL
 ${RUBY_DOC}/CONTRIBUTING.md
 ${RUBY_DOC}/COPYING
 ${RUBY_DOC}/COPYING.ja
-${RUBY_DOC}/ChangeLog
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.06_to_0.52
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.50_to_0.60
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.60_to_1.1
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-1.8.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-1.9.3
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.0.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.1.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.2.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.3.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.4.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-YARV
 ${RUBY_DOC}/GPL
 ${RUBY_DOC}/KNOWNBUGS.rb
 ${RUBY_DOC}/LEGAL
