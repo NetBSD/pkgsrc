@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.48 2026/03/05 06:55:33 taca Exp $
+$NetBSD: distinfo,v 1.49 2026/07/04 04:00:48 taca Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
 Size (adler2-2.0.1.crate) = 13366 bytes
-BLAKE2s (adler32-1.2.0.crate) = 8bc63ca383f40390bb522c750ef33e14b5e49bc48eb0ec33a140f615c598a6df
-SHA512 (adler32-1.2.0.crate) = 8ed72612fb78e213fc92963fdae0508ef26988656c939e6c9cddccbe2658d4a956a8ae934d9658262a8b2687dc446b3f1ee7614128b440487c81e606526dfda3
-Size (adler32-1.2.0.crate) = 6411 bytes
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
 Size (aho-corasick-1.1.3.crate) = 183311 bytes
@@ -105,9 +102,9 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.38.crate) = cd804c8f2c3ec8027f1a28fc2406b92e8cb27989956cf7e27fb98f6e338704cf
 SHA512 (chrono-0.4.38.crate) = 858e47e3facebd5383e71898f26b27d92fe4a69027e2cc47da2af59975ead7767355e0b699f4228eabe76a3eff8b2519c7cecf8b60dc3fc60fbf9b28e2f3d4d9
 Size (chrono-0.4.38.crate) = 220559 bytes
-BLAKE2s (clamav-1.4.4.tar.gz) = 242bf312218dedde01e1ee25ce814ea6afec262e255677bbcf1895d32a0788ab
-SHA512 (clamav-1.4.4.tar.gz) = a9372196076345dfafdef448fd94b19787c4aa7019cc9c0609b03cdaaa887b4a6941554305293d2c53000beb27ed2877207e531875830eebca399882da57e2ba
-Size (clamav-1.4.4.tar.gz) = 45268142 bytes
+BLAKE2s (clamav-1.4.5.tar.gz) = e1fda10df1b5546d7d4c7e581dc5cf8a5fc4cc46c22411611b683687ce25e885
+SHA512 (clamav-1.4.5.tar.gz) = 1b20b51c532892287dcefc7bdd4a154b33147bee3e39650993b6bbe93995ec3f3491c32d247b507cc2e5de42e7da98fc4060c3606e364c91bdd3425637b50d7c
+Size (clamav-1.4.5.tar.gz) = 46095554 bytes
 BLAKE2s (clang-sys-1.7.0.crate) = e2d4f063bac7ae563cef9363b02884fc718864129c02ae62606757b232db9c22
 SHA512 (clang-sys-1.7.0.crate) = e544984d5bd76824ea2093f43f98b59a99e1ca8a5de40e49164b870ed4a91a530f3492faf0678190b91e74aa5d122bdbb32c649998d0ce24912dfb0b83ed6b81
 Size (clang-sys-1.7.0.crate) = 42088 bytes
@@ -231,9 +228,6 @@ Size (imgref-1.12.0.crate) = 66324 bytes
 BLAKE2s (indexmap-1.9.3.crate) = fe9c741c1c6d6e741ce68d48bb49010f6c2c07169f76e07820305cf960ef2c72
 SHA512 (indexmap-1.9.3.crate) = 2aa8069eb07a814c8fa3e11296c9f032ef60963520d7786ad20cca5cb7e73b8f76d97722a994d65295bb713020aadce5008cd3df5e99d8bd968ef1979f910a37
 Size (indexmap-1.9.3.crate) = 54653 bytes
-BLAKE2s (inflate-0.4.5.crate) = 5ab133b3d231d9a863b8501bc9b1ba9e36bb556d6d9841786303a9506ab2c7e2
-SHA512 (inflate-0.4.5.crate) = 1392402f72a8463dc5cdaf815d8933e8dfcc914fb3a91e69c38e54deb7d55b5211e157b640b7cfa999400fb4d2e233a4a1a678147594dfa0be300894126d17f2
-Size (inflate-0.4.5.crate) = 17715 bytes
 BLAKE2s (interpolate_name-0.2.4.crate) = 9fa9308fac01d346ad60826823aeb5b9524603f54fb65759bc4aa0c2bd09371d
 SHA512 (interpolate_name-0.2.4.crate) = 87d2b732a9104d1a094a15ba6fa642641690aec10bec065d02aff5830f54a0fed02ff5de4bd5c237a91d34cd81da0ef11cc37ded3d4ac640de9dcb96fb73fe11
 Size (interpolate_name-0.2.4.crate) = 4027 bytes

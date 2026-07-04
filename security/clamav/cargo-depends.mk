@@ -1,7 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/03/05 06:55:33 taca Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/07/04 04:00:48 taca Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
-CARGO_CRATE_DEPENDS+=	adler32-1.2.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	aligned-0.4.3
 CARGO_CRATE_DEPENDS+=	aligned-vec-0.6.4
@@ -76,7 +75,6 @@ CARGO_CRATE_DEPENDS+=	image-0.25.9
 CARGO_CRATE_DEPENDS+=	image-webp-0.2.4
 CARGO_CRATE_DEPENDS+=	imgref-1.12.0
 CARGO_CRATE_DEPENDS+=	indexmap-1.9.3
-CARGO_CRATE_DEPENDS+=	inflate-0.4.5
 CARGO_CRATE_DEPENDS+=	interpolate_name-0.2.4
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itertools-0.14.0
