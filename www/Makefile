@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1924 2026/06/23 11:36:40 drixter Exp $
+# $NetBSD: Makefile,v 1.1925 2026/07/04 11:49:00 gdt Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -81,6 +81,7 @@ SUBDIR+=	bannerfilter
 SUBDIR+=	basilisk
 SUBDIR+=	bins
 SUBDIR+=	bkedit
+SUBDIR+=	blogc
 SUBDIR+=	bluefish
 SUBDIR+=	blur6ex
 SUBDIR+=	bozohttpd
