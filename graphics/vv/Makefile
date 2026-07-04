@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.19 2026/06/23 09:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/04 21:44:30 wiz Exp $
 
-DISTNAME=	vv-3.2
-PKGREVISION=	12
+# not a release, but we want the change fixing the build with libjxl 0.12.0
+DISTNAME=	moderncore-20260704
+PKGNAME=	${DISTNAME:S/moderncore-/vv-3.2./}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_PROJECT=	moderncore
+#GITHUB_TAG=	${DISTNAME:S/moderncore-//}
+GITHUB_TAG=	c84fe419ca4be928505b0e1af67a87e61b0aa525
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/wolfpld/vv/
+HOMEPAGE=	https://github.com/wolfpld/moderncore/
 COMMENT=	View images in your terminal
 LICENSE=	modified-bsd
 
@@ -15,24 +18,31 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++20
 # needs <format> which was added in 13, despite being in C++ 20
 GCC_REQD+=		13
-USE_TOOLS+=		pkg-config
-INSTALLATION_DIRS+=	bin share/doc/vv
+USE_TOOLS+=		git pkg-config
+INSTALLATION_DIRS+=	share/doc/vv
 
 # https://github.com/wolfpld/vv/issues/14#issuecomment-2660992164
 JPEG_ACCEPTED=		libjpeg-turbo
 
-# 'master' as of 2025-02-08
-GITHUB_SUBMODULES+=	wolfpld tracy 9b7d53a979f0734deebb07d0135f5400af12a576 tracy
+# 'master' as of 2026-07-04
+GITHUB_SUBMODULES+=	wolfpld tracy 853fff614eb2deffd7c86853b517c8021a3efd1f tracy
 CMAKE_CONFIGURE_ARGS+=	-DCPM_tracy_SOURCE=${WRKSRC}/tracy
 # hash from CMakeLists.txt
-GITHUB_SUBMODULES+=	nothings stb 2e2bef463a5b53ddf8bb788e25da6b8506314c08 stb
+GITHUB_SUBMODULES+=	nothings stb f1c79c02822848a9bed4315b12c8c8f3761e1296 stb
 CMAKE_CONFIGURE_ARGS+=	-DCPM_stb_SOURCE=${WRKSRC}/stb
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH=OFF
+# don't build wayland-using iv viewer
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_IV=OFF
 
 # Turn off -march=native that is enabled by default.
 CMAKE_CONFIGURE_ARGS+=	-DMARCH_NATIVE:BOOL=OFF
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/vv ${DESTDIR}${PREFIX}/bin
+pre-configure:
+	${ECHO} ${GITHUB_TAG:C/(.......).*/\1/} > ${WRKSRC}/git-commit-id
+
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/vv/
 
 .include "../../devel/cmake/build.mk"

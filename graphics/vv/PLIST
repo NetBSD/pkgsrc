@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/04 11:25:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/07/04 21:44:30 wiz Exp $
+bin/exrconv
 bin/vv
+lib/libmcoreimage.so
+lib/libmcoreutil.so
 share/doc/vv/README.md
