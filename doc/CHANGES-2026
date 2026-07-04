@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4238 2026/07/04 21:44:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4239 2026/07/04 22:52:28 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6343,3 +6343,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fluidsynth to 2.5.6 [adam 2026-07-04]
 	Updated devel/lazygit to 0.63.0 [adam 2026-07-04]
 	Updated graphics/vv to 3.2.20260704 [wiz 2026-07-04]
+	Updated print/evince to 48.4 [prlw1 2026-07-04]
