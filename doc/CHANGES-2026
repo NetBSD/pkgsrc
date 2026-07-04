@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4227 2026/07/04 06:19:24 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4228 2026/07/04 06:21:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6329,3 +6329,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/task to 3.52.0 [iquiw 2026-07-04]
 	Updated lang/ruby34 to 3.4.10 [taca 2026-07-04]
 	Updated lang/php82 to 8.2.32 [taca 2026-07-04]
+	Updated lang/php83 to 8.3.32 [taca 2026-07-04]
