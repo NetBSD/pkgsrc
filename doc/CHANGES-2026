@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4221 2026/07/04 04:15:27 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4222 2026/07/04 04:17:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6316,3 +6316,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnsdist to 2.1.0 [drixter 2026-07-03]
 	Updated security/clamav to 1.4.5 [taca 2026-07-04]
 	Updated security/clamav-doc to 1.4.5 [taca 2026-07-04]
+	Updated mail/postfix to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-cdb to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-ldap to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-lmdb to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-mysql to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-pcre to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-pgsql to 3.11.4 [taca 2026-07-04]
+	Updated mail/postfix-sqlite to 3.11.4 [taca 2026-07-04]
