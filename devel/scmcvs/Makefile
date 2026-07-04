@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/29 09:10:51 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/04 12:56:29 gdt Exp $
 
 DISTNAME=	cvs-1.12.13
 PKGREVISION=	9
@@ -11,7 +11,9 @@ HOMEPAGE=	https://cvs.nongnu.org/
 COMMENT=	Concurrent Versions System
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		makeinfo autoconf
+# autoconf 2.73 AC_PROG_CC attempts to set --std=c23, which cvs does not support.
+USE_TOOLS+=		autoconf269
+USE_TOOLS+=		makeinfo
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-external-zlib
 CONFIGURE_ARGS+=	--with-rsh=ssh
