@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.182 2026/06/24 21:55:29 wiz Exp $
+$NetBSD: distinfo,v 1.183 2026/07/04 21:57:33 prlw1 Exp $
 
 BLAKE2s (poppler-26.06.0.tar.xz) = a9c3f5adca30a26b72903eb8df3a3ca226fe0a1da642e621ec3fc4a48b3ca181
 SHA512 (poppler-26.06.0.tar.xz) = 65ddfed90f07740a1f6ba641db7902ac537bf9d18d7f39de834c15a932dac8f5145552fa44a938a1938cc7424566f1e4fce6371e64b9c5b554e16b55ff5b643b
 Size (poppler-26.06.0.tar.xz) = 2044116 bytes
+SHA1 (patch-glib_poppler-page.cc) = 8373e421a7887ebeb7ab44323d2020c4263bdb45
