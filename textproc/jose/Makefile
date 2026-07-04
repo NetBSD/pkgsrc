@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/23 08:18:42 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/04 20:55:06 wiz Exp $
 
 DISTNAME=	jose-14
 CATEGORIES=	textproc
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 post-install:
-	${RM} -rf ${DESTDIR}/usr/pkg/share/licenses/jose
+	${RM} -rf ${DESTDIR}${PREFIX}/share/licenses/jose
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
