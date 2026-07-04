@@ -1,0 +1,35 @@
+--- ./gcc/config/rs6000/rs6000.h.orig	2026-07-04 17:55:03.554901293 +0000
++++ ./gcc/config/rs6000/rs6000.h
+@@ -1523,7 +1523,8 @@ typedef struct rs6000_args
+    || (TARGET_ALTIVEC && (REGNO) == VRSAVE_REGNO)		\
+    || (crtl->calls_eh_return					\
+        && TARGET_AIX						\
+-       && (REGNO) == 2))
++       && (REGNO) == 2)                                         \
++   || (crtl->calls_eh_return && (REGNO) == 13))
+ 
+ 
+ /* Length in units of the trampoline for entering a nested function.  */
+--- ./gcc/config/rs6000/rs6000-logue.cc.orig	2026-07-04 17:56:56.172827431 +0000
++++ ./gcc/config/rs6000/rs6000-logue.cc
+@@ -114,6 +114,11 @@ save_reg_p (int reg)
+ 	return true;
+     }
+ 
++#ifdef TARGET_BASEREL
++  if (reg == 13 && (crtl->calls_eh_return || crtl->saves_all_registers))
++    return true;
++#endif
++
+   return !call_used_or_fixed_reg_p (reg) && df_regs_ever_live_p (reg);
+ }
+ 
+@@ -2689,6 +2694,8 @@ rs6000_get_separate_components (void)
+       || (flag_pic && DEFAULT_ABI == ABI_DARWIN))
+     bitmap_clear_bit (components, RS6000_PIC_OFFSET_TABLE_REGNUM);
+ 
++  bitmap_clear_bit (components, 13);
++
+   /* The FPRs we need saved to the frame.  */
+   if ((info->savres_strategy & SAVE_INLINE_FPRS)
+       && (info->savres_strategy & REST_INLINE_FPRS))
