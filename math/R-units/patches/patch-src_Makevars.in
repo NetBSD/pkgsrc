@@ -1,20 +1,13 @@
-$NetBSD: patch-src_Makevars.in,v 1.1 2026/05/25 21:45:21 mef Exp $
+$NetBSD: patch-src_Makevars.in,v 1.2 2026/07/04 23:17:05 mef Exp $
 
  Undefined PLT symbol "backtrace_symbols"
 
  this symbol found at /usr/lib/libexecinfo for *BSD
 
 --- src/Makevars.in.orig	2023-09-07 03:40:05.000000000 +0900
-+++ src/Makevars.in	2026-05-26 06:42:12.633885738 +0900
-@@ -1,2 +1,11 @@
++++ src/Makevars.in	2026-07-05 08:10:34.026713533 +0900
+@@ -1,2 +1,4 @@
  PKG_CPPFLAGS = -DUDUNITS2_DIR=@UDUNITS2_DIR@ @UD_CPPFLAGS@
-+
-+UNAME := $(shell uname)
-+
  PKG_LIBS = @LIBS@
 +
-+ifneq ($(UNAME), Linux)
-+ifneq ($(UNAME), SunOS)
-+PKG_LIBS += -lexecinfo
-+endif
-+endif
++@@PKG_LIBS@@

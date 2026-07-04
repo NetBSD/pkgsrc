@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/05/25 21:45:20 mef Exp $
+# $NetBSD: Makefile,v 1.8 2026/07/04 23:17:05 mef Exp $
 
 R_PKGNAME=	units
 R_PKGVER=	0.8-5
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Measurement Units for R Vectors
@@ -17,8 +18,18 @@ TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 
 USE_LANGUAGES+=	c c++
-# make patch more portable
-USE_TOOLS+=	gmake
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars.in
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
+
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
