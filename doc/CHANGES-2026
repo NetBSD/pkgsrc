@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4233 2026/07/04 11:49:22 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4234 2026/07/04 11:59:40 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gyp to 0.1pre20240206nb1 [taca 2026-07-04]
 	Updated devel/php-msgpack to 3.0.1 [taca 2026-07-04]
 	Added www/blogc version 0.20.1 [gdt 2026-07-04]
+	Updated www/resterm to 0.44.6 [drixter 2026-07-04]
