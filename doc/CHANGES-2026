@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4225 2026/07/04 05:11:25 iquiw Exp $
+$NetBSD: CHANGES-2026,v 1.4226 2026/07/04 06:14:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6327,3 +6327,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-about to 0.9.1 [pin 2026-07-04]
 	Updated devel/gitpane to 0.8.2 [pin 2026-07-04]
 	Updated devel/task to 3.52.0 [iquiw 2026-07-04]
+	Updated lang/ruby34 to 3.4.10 [taca 2026-07-04]
