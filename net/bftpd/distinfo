@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.21 2026/06/14 08:23:40 drixter Exp $
+$NetBSD: distinfo,v 1.22 2026/07/05 13:36:22 drixter Exp $
 
 BLAKE2s (bftpd-6.6.tar.gz) = 61cb194cac1106d0a6f52d7ff48680bfdc6c1caf89a00b49c7a961917a0d84ae
 SHA512 (bftpd-6.6.tar.gz) = a062acabf5f84a6a7043c75ca832f3c70271a8888b5eb9e9850f73d3e691301603af197a468c2060913ec39f3ea8b7eaaf3d1ed5ac21ec08c639dc77a7dcf8c2
 Size (bftpd-6.6.tar.gz) = 175241 bytes
+SHA1 (patch-login.c) = ca50745aa2a4148076ca6735a14467bda1411c21
