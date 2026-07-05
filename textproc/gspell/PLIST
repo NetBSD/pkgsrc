@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/23 10:15:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/05 10:12:43 adam Exp $
 bin/gspell-app1
 include/gspell-1/gspell/gspell-checker-dialog.h
 include/gspell-1/gspell/gspell-checker.h
@@ -14,23 +14,11 @@ include/gspell-1/gspell/gspell-navigator.h
 include/gspell-1/gspell/gspell-text-buffer.h
 include/gspell-1/gspell/gspell-text-view.h
 include/gspell-1/gspell/gspell.h
-${PLIST.gir}lib/girepository-1.0/Gspell-1.typelib
+lib/girepository-1.0/Gspell-1.typelib
 lib/libgspell-1.so
 lib/libgspell-1.so.3
 lib/pkgconfig/gspell-1.pc
-libexec/installed-tests/gspell-1/test-checker
-libexec/installed-tests/gspell-1/test-entry
-libexec/installed-tests/gspell-1/test-icu
-libexec/installed-tests/gspell-1/test-inline-checker-text-buffer
-libexec/installed-tests/gspell-1/test-text-iter
-libexec/installed-tests/gspell-1/test-utils
-${PLIST.gir}share/gir-1.0/Gspell-1.gir
-share/installed-tests/gspell-1/test-checker.test
-share/installed-tests/gspell-1/test-entry.test
-share/installed-tests/gspell-1/test-icu.test
-share/installed-tests/gspell-1/test-inline-checker-text-buffer.test
-share/installed-tests/gspell-1/test-text-iter.test
-share/installed-tests/gspell-1/test-utils.test
+share/gir-1.0/Gspell-1.gir
 share/locale/ab/LC_MESSAGES/gspell-1.mo
 share/locale/ar/LC_MESSAGES/gspell-1.mo
 share/locale/be/LC_MESSAGES/gspell-1.mo
@@ -66,6 +54,7 @@ share/locale/kab/LC_MESSAGES/gspell-1.mo
 share/locale/kk/LC_MESSAGES/gspell-1.mo
 share/locale/ko/LC_MESSAGES/gspell-1.mo
 share/locale/kw/LC_MESSAGES/gspell-1.mo
+share/locale/lo/LC_MESSAGES/gspell-1.mo
 share/locale/lt/LC_MESSAGES/gspell-1.mo
 share/locale/lv/LC_MESSAGES/gspell-1.mo
 share/locale/mjw/LC_MESSAGES/gspell-1.mo
@@ -95,5 +84,5 @@ share/locale/uz/LC_MESSAGES/gspell-1.mo
 share/locale/vi/LC_MESSAGES/gspell-1.mo
 share/locale/zh_CN/LC_MESSAGES/gspell-1.mo
 share/locale/zh_TW/LC_MESSAGES/gspell-1.mo
-${PLIST.gir}share/vala/vapi/gspell-1.deps
-${PLIST.gir}share/vala/vapi/gspell-1.vapi
+share/vala/vapi/gspell-1.deps
+share/vala/vapi/gspell-1.vapi
