@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4253 2026/07/05 12:22:07 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4254 2026/07/05 16:05:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6365,3 +6365,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nasm to 3.02 [adam 2026-07-05]
 	Updated audio/suil to 0.10.26 [adam 2026-07-05]
 	Updated geography/qgis to 3.44.12 [gdt 2026-07-05]
+	Updated mail/roundcube to 1.6.17 [taca 2026-07-05]
+	Updated mail/roundcube-plugin-enigma to 1.6.17 [taca 2026-07-05]
+	Updated mail/roundcube-plugin-password to 1.6.17 [taca 2026-07-05]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.17 [taca 2026-07-05]
