@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4242 2026/07/05 07:59:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4243 2026/07/05 08:39:53 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6349,3 +6349,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/nushell to 0.114.0 [adam 2026-07-05]
 	Updated net/libtorrent to 0.16.16 [adam 2026-07-05]
 	Updated net/rtorrent to 0.16.16 [adam 2026-07-05]
+	Added sysutils/gatus version 5.36.0 [drixter 2026-07-05]
