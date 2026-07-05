@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2026/07/01 21:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/07/05 12:11:13 wiz Exp $
 
-DISTNAME=		enchant-2.8.17
+DISTNAME=		enchant-2.8.18
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rrthomas/}
@@ -13,8 +13,7 @@ COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
-# Upstream doesn't document, but configure.ac requires C++11.
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++20
 
 USE_TOOLS+=		autoconf gmake groff pkg-config
 USE_PKGLOCALEDIR=	yes
