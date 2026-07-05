@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/06/28 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/05 10:38:17 adam Exp $
 
-DISTNAME=	requests_cache-1.3.2
+DISTNAME=	requests_cache-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-cache/}
