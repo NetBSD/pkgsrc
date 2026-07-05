@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/05/26 12:42:35 mef Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/05 13:32:19 mef Exp $
 
 R_PKGNAME=	minqa
 R_PKGVER=	1.2.8
@@ -14,8 +14,17 @@ TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 
 USE_LANGUAGES=	c++ fortran
-# only for ifne in patch-src_Makevars
-USE_TOOLS+=	gmake
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
