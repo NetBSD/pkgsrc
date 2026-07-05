@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4241 2026/07/05 05:20:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4242 2026/07/05 07:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6346,3 +6346,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/evince to 48.4 [prlw1 2026-07-04]
 	Updated security/p5-Crypt-DSA to 1.22 [wiz 2026-07-05]
 	Removed security/p5-Crypt-DSA successor security/p5-Crypt-DSA-GMP [wiz 2026-07-05]
+	Updated shells/nushell to 0.114.0 [adam 2026-07-05]
+	Updated net/libtorrent to 0.16.16 [adam 2026-07-05]
+	Updated net/rtorrent to 0.16.16 [adam 2026-07-05]
