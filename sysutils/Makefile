@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1196 2026/06/10 21:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1197 2026/07/05 08:40:50 drixter Exp $
 #
 
 COMMENT=	System utilities
@@ -253,6 +253,7 @@ SUBDIR+=	ftwin
 SUBDIR+=	fzf
 SUBDIR+=	gam
 SUBDIR+=	gamin
+SUBDIR+=	gatus
 SUBDIR+=	gcombust
 SUBDIR+=	gdmap
 SUBDIR+=	gemfetch
