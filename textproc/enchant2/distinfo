@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2026/07/01 21:20:22 wiz Exp $
+$NetBSD: distinfo,v 1.42 2026/07/05 12:11:13 wiz Exp $
 
-BLAKE2s (enchant-2.8.17.tar.gz) = ad7dab26bf43ba71eda052f5ba6a9e72b3a5cf91bd7a090556d91fe3b5b7feda
-SHA512 (enchant-2.8.17.tar.gz) = 41dfcc896fbc0fed729e842b1191b64fddd3657a39d2b79ee1ec318395872c951d723b8fbf6e8c964b04effccf9eb7699f4fbd0cd03da26599416c3c3ffb50eb
-Size (enchant-2.8.17.tar.gz) = 1271953 bytes
+BLAKE2s (enchant-2.8.18.tar.gz) = 02fc5033ed0b903b9e5f4adc71b3e0e54da614695f55319f78bd51cd609e7a90
+SHA512 (enchant-2.8.18.tar.gz) = f90961b00f86e9a80cd5f6d3f2096bff455845f88466ae151f9474aeaefc5e0a65ff5d9ea96c2d23e33f9e646f988debf761f7fef5eb6013bebb0623c9f5e094
+Size (enchant-2.8.18.tar.gz) = 1268882 bytes
 SHA1 (patch-config.h.in) = ac10b6900034acb0e961d73b1f9cf1a39bb00775
