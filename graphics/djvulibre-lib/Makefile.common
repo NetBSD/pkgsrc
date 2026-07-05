@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2025/07/04 06:25:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2026/07/05 10:30:42 adam Exp $
 # used by graphics/djvulibre-lib/Makefile
 # used by graphics/djvulibre-tools/Makefile
 
-DISTNAME=	djvulibre-3.5.29
+DISTNAME=	djvulibre-3.5.30
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
+EXTRACT_USING=	gtar # Cannot extract extended attributes
 
 HOMEPAGE=	https://djvu.sourceforge.net/
 COMMENT=	Compression library for scanned documents

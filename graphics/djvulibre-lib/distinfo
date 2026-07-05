@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2025/07/04 06:25:30 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/07/05 10:30:42 adam Exp $
 
-BLAKE2s (djvulibre-3.5.29.tar.gz) = 49b84fcf17338277c7624acb0d4d30aa253f046899dcd7d6be1e281979f9b089
-SHA512 (djvulibre-3.5.29.tar.gz) = 701745aa8d93e596d39fa0e772d575bd530efdb120fd02449eddac2a98b08afef8a1fa099cb6354cef23304dcec4323722299ecb64c2ac33056b45a5074c51f1
-Size (djvulibre-3.5.29.tar.gz) = 3716911 bytes
+BLAKE2s (djvulibre-3.5.30.tar.gz) = 3b5568725e66208a30493303737453212a43d44f9d1017cb526ea4c9ea87953b
+SHA512 (djvulibre-3.5.30.tar.gz) = b68291cd844d9f3b92acae39014a7f3c1b3e8f024053a79f527fa322683ac3d09d170cae8d4dc409249cc9d9feb3ec692cfeea22c9795a64c9418a92d22dc95c
+Size (djvulibre-3.5.30.tar.gz) = 3721274 bytes
 SHA1 (patch-libdjvu_miniexp.cpp) = d63236ac02aa48d68536b0771c0fc8e17626fd33
 SHA1 (patch-libdjvu_miniexp.h) = 6ccf60185b0f9916a258a882fe9eabb301201ca4
 SHA1 (patch-tools_Makefile.in) = 5455c515f9ed1ac3aeb1e31339cb9ebb7fe6dbe3
