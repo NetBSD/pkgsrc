@@ -1,9 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2019/10/06 13:19:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/05 12:12:50 adam Exp $
 include/suil-0/suil/suil.h
 lib/libsuil-0.so
-lib/libsuil-0.so.0
 lib/libsuil-0.so.${PKGVERSION}
+lib/libsuil-0.so.0
 lib/pkgconfig/suil-0.pc
 lib/suil-0/libsuil_x11.so
 lib/suil-0/libsuil_x11_in_gtk2.so
-lib/suil-0/libsuil_x11_in_gtk3.so
+${PLIST.gtk3}lib/suil-0/libsuil_x11_in_gtk3.so
+${PLIST.qt5}lib/suil-0/libsuil_x11_in_qt5.so
+${PLIST.doc}share/doc/suil-0/html/_static/base-stemmer.js
+${PLIST.doc}share/doc/suil-0/html/_static/english-stemmer.js
+${PLIST.doc}share/doc/suil-0/html/_static/pygments.css
+${PLIST.doc}share/doc/suil-0/html/_static/sphinx_lv2_theme.css
+${PLIST.doc}share/doc/suil-0/html/api/suil.html
+${PLIST.doc}share/doc/suil-0/html/api/suil_callbacks.html
+${PLIST.doc}share/doc/suil-0/html/api/suil_host.html
+${PLIST.doc}share/doc/suil-0/html/api/suil_instance.html
+${PLIST.doc}share/doc/suil-0/html/api/suil_library.html
+${PLIST.doc}share/doc/suil-0/html/genindex.html
+${PLIST.doc}share/doc/suil-0/html/index.html
+${PLIST.doc}share/doc/suil-0/html/overview.html
+${PLIST.doc}share/doc/suil-0/singlehtml/_static/base-stemmer.js
+${PLIST.doc}share/doc/suil-0/singlehtml/_static/english-stemmer.js
+${PLIST.doc}share/doc/suil-0/singlehtml/_static/pygments.css
+${PLIST.doc}share/doc/suil-0/singlehtml/_static/sphinx_lv2_theme.css
+${PLIST.doc}share/doc/suil-0/singlehtml/index.html

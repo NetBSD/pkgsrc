@@ -1,31 +1,32 @@
-# $NetBSD: Makefile,v 1.44 2026/06/11 07:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/07/05 12:12:50 adam Exp $
 
-DISTNAME=	suil-0.10.12
-PKGREVISION=	20
+DISTNAME=	suil-0.10.26
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://drobilla.net/software/suil/
 COMMENT=	Lightweight C library for loading and wrapping LV2 plugin UIs
 LICENSE=	isc
 
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
-# Kludge to support rst2man on Mac OS X, PR pkg/49921
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-WAF_ENV+=	LC_ALL="en_US.UTF-8"
-.endif
 
-PYTHON_FOR_BUILD_ONLY=	tool
-PKGCONFIG_OVERRIDE+=	suil.pc.in
+SUBST_CLASSES+=		sphinx
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_FILES.sphinx=	doc/meson.build
+SUBST_MESSAGE.sphinx=	Fixing Python binary names.
+SUBST_SED.sphinx+=	-e "s,'sphinx-build','sphinx-build-${PYVERSSUFFIX}',"
+SUBST_SED.sphinx+=	-e "s,'sphinxygen','sphinxygen-${PYVERSSUFFIX}',"
 
-.include "../../devel/waf/waf.mk"
-BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.12.0
+.include "options.mk"
+
+BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.18.4
 .include "../../audio/lv2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
