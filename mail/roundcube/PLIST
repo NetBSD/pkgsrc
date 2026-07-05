@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/05/24 13:05:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/07/05 16:03:49 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2113,11 +2113,15 @@ share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlVersion.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/ProxyEnvironment.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/TlsVersion.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/HandlerStack.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/MessageFormatter.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/MessageFormatterInterface.php
@@ -2128,6 +2132,7 @@ share/roundcube/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/RequestOptions.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/TransferStats.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/TransportSharing.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Utils.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/functions.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/functions_include.php
@@ -2177,6 +2182,7 @@ share/roundcube/vendor/guzzlehttp/psr7/src/PumpStream.php
 share/roundcube/vendor/guzzlehttp/psr7/src/Query.php
 share/roundcube/vendor/guzzlehttp/psr7/src/Request.php
 share/roundcube/vendor/guzzlehttp/psr7/src/Response.php
+share/roundcube/vendor/guzzlehttp/psr7/src/Rfc3986.php
 share/roundcube/vendor/guzzlehttp/psr7/src/Rfc7230.php
 share/roundcube/vendor/guzzlehttp/psr7/src/ServerRequest.php
 share/roundcube/vendor/guzzlehttp/psr7/src/Stream.php
@@ -2405,3 +2411,14 @@ share/roundcube/vendor/symfony/deprecation-contracts/LICENSE
 share/roundcube/vendor/symfony/deprecation-contracts/README.md
 share/roundcube/vendor/symfony/deprecation-contracts/composer.json
 share/roundcube/vendor/symfony/deprecation-contracts/function.php
+share/roundcube/vendor/symfony/polyfill-php80/LICENSE
+share/roundcube/vendor/symfony/polyfill-php80/Php80.php
+share/roundcube/vendor/symfony/polyfill-php80/PhpToken.php
+share/roundcube/vendor/symfony/polyfill-php80/README.md
+share/roundcube/vendor/symfony/polyfill-php80/Resources/stubs/Attribute.php
+share/roundcube/vendor/symfony/polyfill-php80/Resources/stubs/PhpToken.php
+share/roundcube/vendor/symfony/polyfill-php80/Resources/stubs/Stringable.php
+share/roundcube/vendor/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php
+share/roundcube/vendor/symfony/polyfill-php80/Resources/stubs/ValueError.php
+share/roundcube/vendor/symfony/polyfill-php80/bootstrap.php
+share/roundcube/vendor/symfony/polyfill-php80/composer.json
