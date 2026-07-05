@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2026/04/10 16:54:28 schwarz Exp $
+# $NetBSD: Makefile,v 1.74 2026/07/05 12:11:26 adam Exp $
 
-DISTNAME=	nasm-3.01
+DISTNAME=	nasm-3.02
 CATEGORIES=	devel lang
 MASTER_SITES=	https://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -10,10 +10,8 @@ HOMEPAGE=	https://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGE=		c
-USE_CC_FEATURES=	c17
-FORCE_C_STD=		c17
-
+USE_CC_FEATURES=	c23
+USE_LANGUAGES=		c
 USE_TOOLS+=		gmake makeinfo perl gsed
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/nasm
