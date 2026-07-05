@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4251 2026/07/05 12:11:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4252 2026/07/05 12:13:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6362,3 +6362,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/mozilla-rootcerts-openssl to 2.23 [wiz 2026-07-05]
 	Updated sysutils/hwdata to 0.409 [wiz 2026-07-05]
 	Updated textproc/enchant2 to 2.8.18 [wiz 2026-07-05]
+	Updated devel/nasm to 3.02 [adam 2026-07-05]
+	Updated audio/suil to 0.10.26 [adam 2026-07-05]
