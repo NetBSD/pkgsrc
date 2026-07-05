@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/06/08 12:49:19 mef Exp $
+# $NetBSD: Makefile,v 1.14 2026/07/05 14:18:45 mef Exp $
 
 R_PKGNAME=	httpuv
 R_PKGVER=	1.6.11
@@ -25,7 +25,7 @@ USE_LANGUAGES=	c c++
 SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
 SUBST_FILES.pkglibs=	src/Makevars
-.if ${OPSYS} != SunOS
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,-lexecinfo,
 .else
 SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
