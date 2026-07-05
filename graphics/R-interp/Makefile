@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/06/10 12:49:03 mef Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/05 14:20:55 mef Exp $
 
 R_PKGNAME=	interp
 R_PKGVER=	1.1-6
@@ -23,7 +23,7 @@ USE_LANGUAGES=	c c++ fortran
 
 .include "../../mk/bsd.prefs.mk"
 pre-patch:
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src/
 .endif
 
