@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/06/15 14:05:52 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/07/05 05:18:48 wiz Exp $
 
-BLAKE2s (Crypt-DSA-1.21.tar.gz) = b982390c7b31d07c294e85cab7096ab9914acf0863c79a7ded699974b4cbdf98
-SHA512 (Crypt-DSA-1.21.tar.gz) = 915bf901ea1513e0b8b942533bb1b8277da9bdded42cf23b4533290f4d0dbb559ceda5d0111c990e3412bf83d86b45dbf0b6521b0b7e973d4ae542bf2574cd4d
-Size (Crypt-DSA-1.21.tar.gz) = 31022 bytes
+BLAKE2s (Crypt-DSA-1.22.tar.gz) = 78a473cc3edac104c80b7c411998adf32bab1bdb598a96740f86ed82faf3032f
+SHA512 (Crypt-DSA-1.22.tar.gz) = 3a55fef12fe2bb5cebc4ccb989b172799cb00abff6919df87405d3159747a832588be5acece2724d666fc8366da05a08829b7a65a6bcc1a90da83004c030e28d
+Size (Crypt-DSA-1.22.tar.gz) = 33348 bytes
