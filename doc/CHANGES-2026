@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4239 2026/07/04 22:52:28 prlw1 Exp $
+$NetBSD: CHANGES-2026,v 1.4240 2026/07/05 05:18:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6344,3 +6344,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.63.0 [adam 2026-07-04]
 	Updated graphics/vv to 3.2.20260704 [wiz 2026-07-04]
 	Updated print/evince to 48.4 [prlw1 2026-07-04]
+	Updated security/p5-Crypt-DSA to 1.22 [wiz 2026-07-05]
