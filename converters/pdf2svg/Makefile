@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.64 2026/06/24 21:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/07/05 10:34:40 adam Exp $
 
-DISTNAME=	pdf2svg-0.2.3
-PKGREVISION=	63
+DISTNAME=	pdf2svg-0.2.4
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dawbarton/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bsd@cs.ubc.ca
-HOMEPAGE=	http://www.cityinthesky.co.uk/opensource/pdf2svg/
+HOMEPAGE=	https://cityinthesky.co.uk/opensource/pdf2svg/
 COMMENT=	Small utility to convert PDF files to SVG files
 LICENSE=	gnu-gpl-v2
 
