@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.107 2026/03/11 10:08:03 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.108 2026/07/06 08:46:42 wiz Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -12,6 +6,12 @@ ${PYSITELIB}/_distutils_hack/override.py
 ${PYSITELIB}/_distutils_hack/override.pyc
 ${PYSITELIB}/_distutils_hack/override.pyo
 ${PYSITELIB}/distutils-precedence.pth
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -126,6 +126,7 @@ ${PYSITELIB}/setuptools/_distutils/compilers/C/errors.pyo
 ${PYSITELIB}/setuptools/_distutils/compilers/C/msvc.py
 ${PYSITELIB}/setuptools/_distutils/compilers/C/msvc.pyc
 ${PYSITELIB}/setuptools/_distutils/compilers/C/msvc.pyo
+${PYSITELIB}/setuptools/_distutils/compilers/C/py.typed
 ${PYSITELIB}/setuptools/_distutils/compilers/C/tests/test_base.py
 ${PYSITELIB}/setuptools/_distutils/compilers/C/tests/test_base.pyc
 ${PYSITELIB}/setuptools/_distutils/compilers/C/tests/test_base.pyo
@@ -183,6 +184,7 @@ ${PYSITELIB}/setuptools/_distutils/filelist.pyo
 ${PYSITELIB}/setuptools/_distutils/log.py
 ${PYSITELIB}/setuptools/_distutils/log.pyc
 ${PYSITELIB}/setuptools/_distutils/log.pyo
+${PYSITELIB}/setuptools/_distutils/py.typed
 ${PYSITELIB}/setuptools/_distutils/spawn.py
 ${PYSITELIB}/setuptools/_distutils/spawn.pyc
 ${PYSITELIB}/setuptools/_distutils/spawn.pyo

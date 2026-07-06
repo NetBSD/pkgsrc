@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.276 2026/03/11 10:08:03 adam Exp $
+# $NetBSD: Makefile,v 1.277 2026/07/06 08:46:42 wiz Exp $
 
-DISTNAME=	setuptools-82.0.1
+DISTNAME=	setuptools-83.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -37,8 +37,8 @@ REPLACE_PYTHON+=	setuptools/_vendor/bin/wheel
 # Pick setuptools.tests which are not built nor installed.
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
 
-# as of 82.0.0
-# 9 failed, 989 passed, 31 skipped, 14 xfailed, 3 xpassed
+# as of 83.0.0
+# 3 failed, 1002 passed, 31 skipped, 14 xfailed, 3 xpassed
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
