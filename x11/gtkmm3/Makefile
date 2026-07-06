@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2026/06/11 07:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/07/06 12:27:59 adam Exp $
 
-DISTNAME=	gtkmm-3.24.10
+DISTNAME=	gtkmm-3.24.11
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,13 +13,13 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
-MESON_REQD+=	0.56.0
+MESON_REQD+=	0.60.0
 
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
