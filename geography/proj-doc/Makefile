@@ -1,10 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2026/07/01 15:42:44 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2026/07/06 12:36:09 gdt Exp $
 
-# https://proj.org/_/downloads/en/9.6/pdf/
-VERSION=		9.8
+# URLs look like
+#   https://proj.org/_/downloads/en/9.6/pdf/
+# but upstream download contents are unstable.  A URL x.y may have
+# x.y.z instead, and the x.y.z pdf may be replaced by a different
+# x.y.z pdf (e.g. 9.8.1).  Posted on upstream email list 20260706.
+#
+# VERSION is set to the proj version, and adds a .n nano version if
+# the distfile is replaced.  DOWNLOAD_VERSION is major.minor only,
+# because that's how RTD works.
+VERSION=		9.8.1
+DOWNLOAD_VERSION=	9.8
 DISTNAME=		proj-doc-${VERSION}
 CATEGORIES=		geography
-MASTER_SITES=		-https://proj.org/_/downloads/en/${VERSION}/pdf/
+MASTER_SITES=		-https://proj.org/_/downloads/en/${DOWNLOAD_VERSION}/pdf/
 # Hack around assumption that it is an archive.
 EXTRACT_SUFX=		.pdf
 
@@ -14,9 +23,7 @@ COMMENT=		PDF documentation for the PROJ cartographic projection software
 LICENSE=		mit
 
 # \todo Consider building the docs with sphinx and latex from the
-# distribution tarball, and perhaps installing HTML too.  OTOH I am
-# not sure if anyone really uses this package, and the current
-# situation is good enough for operating offline.
+# distribution tarball, and perhaps installing HTML too.
 NO_BUILD=		yes
 INSTALLATION_DIRS+=	share/doc/proj
 
