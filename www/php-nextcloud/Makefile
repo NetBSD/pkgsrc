@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2026/07/06 13:07:12 gdt Exp $
+# $NetBSD: Makefile,v 1.88 2026/07/06 13:12:47 gdt Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -47,9 +47,8 @@ NC_DIR=		share/nextcloud
 INSTALLATION_DIRS=	${NC_DIR}
 
 # Nextcloud "documents" in lib/versioncheck.php that:
-#   nextcloud requires at least PHP 8.0
-#   nextcloud it not compatible with PHP 8.3 or higher
-PHP_VERSIONS_INCOMPATIBLE=	56 74
+#   nextcloud requires PHP >= 8.1 < 8.5
+PHP_VERSIONS_INCOMPATIBLE=	56 74 85
 
 # for php interpreter
 CHECK_INTERPRETER_SKIP+=	${NC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
