@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.cc,v 1.21 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.cc,v 1.22 2026/07/06 13:07:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.cc
-@@ -203,7 +203,7 @@ DragOperation DesktopDragDropClientOzone
+@@ -225,7 +225,7 @@ DragOperation DesktopDragDropClientOzone
    return selected_operation_;
  }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.8 2026/06/08 13:12:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.9 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/prefs/pref_watcher.cc
 @@ -37,7 +37,7 @@
  #include "components/browser_ui/accessibility/android/font_size_prefs_android.h"

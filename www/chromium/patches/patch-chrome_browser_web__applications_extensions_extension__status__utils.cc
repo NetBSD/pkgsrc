@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_extensions_extension__status__utils.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_extensions_extension__status__utils.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -93,7 +93,7 @@ bool IsExternalExtensionUninstalled(cont
    return prefs && prefs->IsExternalExtensionUninstalled(extension_id);

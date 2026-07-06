@@ -1,10 +1,10 @@
-$NetBSD: patch-headless_lib_browser_headless__content__browser__client.h,v 1.21 2026/06/08 13:12:41 kikadf Exp $
+$NetBSD: patch-headless_lib_browser_headless__content__browser__client.h,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_content_browser_client.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- headless/lib/browser/headless_content_browser_client.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ headless/lib/browser/headless_content_browser_client.h
 @@ -48,7 +48,7 @@ class HeadlessContentBrowserClient : pub
    CreateDevToolsManagerDelegate() override;

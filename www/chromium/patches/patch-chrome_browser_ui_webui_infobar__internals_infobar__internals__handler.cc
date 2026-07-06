@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.8 2026/06/08 13:12:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.9 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
-@@ -46,7 +46,7 @@
- #include "chrome/browser/win/installer_downloader/installer_downloader_pref_names.h"
+@@ -63,7 +63,7 @@
+ #include "chrome/browser/ui/cocoa/keystone_infobar_delegate.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -15,19 +15,19 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
  #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_manager.h"  // nogncheck
  #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_prefs.h"  // nogncheck
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_delegate.h"
-@@ -76,7 +76,7 @@ void InfoBarInternalsHandler::TriggerInf
- void InfoBarInternalsHandler::GetInfoBars(GetInfoBarsCallback callback) {
-   // Please keep the entries in alphabetized order base on the type.
-   std::vector<InfoBarEntryPtr> infobar_list;
+@@ -106,7 +106,7 @@ void InfoBarInternalsHandler::GetInfoBar
+       "The Collected Cookies infobar is shown after the user has changed "
+       "the allowed/blocked state of a cookie, reminding them to reload "
+       "the page in order for the new cookies to take effect."));
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    infobar_list.emplace_back(InfoBarEntry::New(
        /*type=*/InfoBarType::kDefaultBrowser, /*name=*/"Default Browser",
        /*description=*/
-@@ -139,7 +139,7 @@ void InfoBarInternalsHandler::GetInfoBar
- bool InfoBarInternalsHandler::TriggerInfoBarInternal(InfoBarType type) {
-   // Please keep the entries in alphabetized order base on the type.
-   switch (type) {
+@@ -232,7 +232,7 @@ bool InfoBarInternalsHandler::TriggerInf
+       CollectedCookiesInfoBarDelegate::Create(infobar_manager);
+       return true;
+     }
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      case InfoBarType::kDefaultBrowser: {

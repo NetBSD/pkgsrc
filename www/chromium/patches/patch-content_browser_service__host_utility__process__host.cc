@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.20 2026/06/08 13:12:40 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__process__host.cc,v 1.21 2026/07/06 13:06:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_process_host.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- content/browser/service_host/utility_process_host.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ content/browser/service_host/utility_process_host.cc
 @@ -65,7 +65,7 @@
  #include "content/browser/v8_snapshot_files.h"

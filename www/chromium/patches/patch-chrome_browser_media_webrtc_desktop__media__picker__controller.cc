@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_desktop__media__picker__controller.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_desktop__media__picker__controller.cc,v 1.22 2026/07/06 13:06:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
 @@ -100,7 +100,7 @@ bool DesktopMediaPickerController::IsSys
              base::FeatureList::IsEnabled(

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator.h,v 1.21 2026/06/08 13:12:29 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator.h,v 1.22 2026/07/06 13:06:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator.h
 @@ -279,7 +279,7 @@ bool DecommitAndZeroSystemPages(void* ad
  // recommitted. Do not assume that this will not change over time.

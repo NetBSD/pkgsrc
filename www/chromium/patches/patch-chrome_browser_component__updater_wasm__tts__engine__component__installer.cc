@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.20 2026/06/08 13:12:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.21 2026/07/06 13:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/component_updater/wasm_tts_engine_component_installer.cc
 @@ -14,7 +14,7 @@
  #include "components/prefs/pref_registry_simple.h"

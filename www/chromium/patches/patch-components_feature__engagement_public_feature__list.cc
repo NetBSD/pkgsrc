@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.22 2026/07/06 13:06:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -235,7 +235,7 @@ const base::Feature* const kAllFeatures[
+@@ -242,7 +242,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.21 202
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -317,7 +317,7 @@ const base::Feature* const kAllFeatures[
+@@ -328,7 +328,7 @@ const base::Feature* const kAllFeatures[
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.21 202
      // keep-sorted start case=no
      &kIPHAutofillAccountNameEmailSuggestionFeature,
      &kIPHAutofillAiOptInFeature,
-@@ -349,7 +349,7 @@ const base::Feature* const kAllFeatures[
+@@ -361,7 +361,7 @@ const base::Feature* const kAllFeatures[
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

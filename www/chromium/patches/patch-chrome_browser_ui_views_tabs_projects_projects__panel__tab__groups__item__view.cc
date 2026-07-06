@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_projects_projects__panel__tab__groups__item__view.cc,v 1.5 2026/06/08 13:12:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_projects_projects__panel__tab__groups__item__view.cc,v 1.6 2026/07/06 13:06:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/tabs/projects/projects_panel_tab_groups_item_view.cc
-@@ -243,7 +243,7 @@ void ProjectsPanelTabGroupsItemView::OnM
+@@ -249,7 +249,7 @@ void ProjectsPanelTabGroupsItemView::OnM
  
  void ProjectsPanelTabGroupsItemView::OnMouseExited(
      const ui::MouseEvent& event) {

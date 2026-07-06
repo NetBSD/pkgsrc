@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__bsd.cc,v 1.22 2026/07/06 13:06:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_bsd.cc.orig	2026-06-06 07:58:19.140656639 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2026-07-05 17:05:15.153522697 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2023 The Chromium Authors

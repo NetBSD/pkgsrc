@@ -1,10 +1,10 @@
-$NetBSD: patch-content_common_font__list__unittest.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
+$NetBSD: patch-content_common_font__list__unittest.cc,v 1.22 2026/07/06 13:06:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/font_list_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- content/common/font_list_unittest.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ content/common/font_list_unittest.cc
 @@ -48,7 +48,7 @@ TEST(FontList, GetFontList) {
          EXPECT_TRUE(HasFontWithName(fonts, "MS Gothic", "MS Gothic"));

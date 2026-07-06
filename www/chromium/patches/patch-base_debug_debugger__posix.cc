@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_debugger__posix.cc,v 1.21 2026/06/08 13:12:29 kikadf Exp $
+$NetBSD: patch-base_debug_debugger__posix.cc,v 1.22 2026/07/06 13:06:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/debug/debugger_posix.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/debug/debugger_posix.cc
 @@ -39,6 +39,10 @@
  #include <sys/sysctl.h>

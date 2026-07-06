@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_desktop__session__proxy.h,v 1.3 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-remoting_host_desktop__session__proxy.h,v 1.4 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session_proxy.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/desktop_session_proxy.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/desktop_session_proxy.h
-@@ -107,7 +107,7 @@ class DesktopSessionProxy
+@@ -108,7 +108,7 @@ class DesktopSessionProxy
    std::unique_ptr<UrlForwarderConfigurator> CreateUrlForwarderConfigurator();
    std::unique_ptr<RemoteWebAuthnStateChangeNotifier>
    CreateRemoteWebAuthnStateChangeNotifier();

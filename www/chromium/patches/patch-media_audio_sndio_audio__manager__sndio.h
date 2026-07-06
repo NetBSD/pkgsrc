@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_sndio_audio__manager__sndio.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_audio__manager__sndio.h,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/audio_manager_sndio.h.orig	2026-06-06 07:58:20.129502329 +0000
+--- media/audio/sndio/audio_manager_sndio.h.orig	2026-07-05 17:05:15.967489331 +0000
 +++ media/audio/sndio/audio_manager_sndio.h
 @@ -0,0 +1,66 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -36,8 +36,8 @@ $NetBSD: patch-media_audio_sndio_audio__manager__sndio.h,v 1.21 2026/06/08 13:12
 +  // Implementation of AudioManager.
 +  bool HasAudioOutputDevices() override;
 +  bool HasAudioInputDevices() override;
-+  void GetAudioInputDeviceNames(AudioDeviceNames* device_names) override;
-+  void GetAudioOutputDeviceNames(AudioDeviceNames* device_names) override;
++  bool GetAudioInputDeviceNames(AudioDeviceNames* device_names) override;
++  bool GetAudioOutputDeviceNames(AudioDeviceNames* device_names) override;
 +  AudioParameters GetInputStreamParameters(
 +      const std::string& device_id) override;
 +  const std::string_view GetName() override;

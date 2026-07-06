@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.21 2026/06/08 13:12:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.22 2026/07/06 13:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -576,7 +576,7 @@ class ChromeContentBrowserClient : publi
+@@ -585,7 +585,7 @@ class ChromeContentBrowserClient : publi
        const GURL& site_url) override;
    std::unique_ptr<content::TracingDelegate> CreateTracingDelegate() override;
    bool IsSystemWideTracingEnabled() override;

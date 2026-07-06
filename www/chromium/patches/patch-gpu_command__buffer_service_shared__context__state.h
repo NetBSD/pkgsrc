@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.21 2026/06/08 13:12:41 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.22 2026/07/06 13:06:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.h
 @@ -243,7 +243,7 @@ class GPU_GLES2_EXPORT SharedContextStat
      return &memory_type_tracker_;

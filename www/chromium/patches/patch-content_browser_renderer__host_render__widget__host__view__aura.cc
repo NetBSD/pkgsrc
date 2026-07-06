@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.21 2026/06/08 13:12:40 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.22 2026/07/06 13:06:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
-@@ -130,7 +130,7 @@
+@@ -132,7 +132,7 @@
  #include "ui/gfx/win/gdi_util.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
  #include "ui/accessibility/platform/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -555,7 +555,7 @@ gfx::NativeViewAccessible RenderWidgetHo
+@@ -578,7 +578,7 @@ gfx::NativeViewAccessible RenderWidgetHo
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
    ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -2016,7 +2016,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -2048,7 +2048,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -3063,7 +3063,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -3113,7 +3113,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
    return NeedsInputGrab();
  #else
    return false;
-@@ -3273,7 +3273,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -3330,7 +3330,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

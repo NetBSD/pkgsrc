@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_modules_peerconnection_rtc__data__channel.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_peerconnection_rtc__data__channel.cc,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/modules/peerconnection/rtc_data_channel.cc
 @@ -567,6 +567,7 @@ void RTCDataChannel::send(Blob* data, Ex
    pending_messages_.push_back(message);

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.21 2026/06/08 13:12:38 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.22 2026/07/06 13:06:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/password_manager/core/browser/password_form_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/password_manager/core/browser/password_form_manager.cc
-@@ -236,7 +236,7 @@ bool ShouldUploadCrowdsourcingVotes(cons
+@@ -238,7 +238,7 @@ bool ShouldUploadCrowdsourcingVotes(cons
    return false;
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__form__manager
  bool ShouldShowKeychainErrorBubble(
      std::optional<PasswordStoreBackendError> backend_error) {
    if (!backend_error.has_value()) {
-@@ -944,7 +944,7 @@ void PasswordFormManager::OnFetchComplet
+@@ -946,7 +946,7 @@ void PasswordFormManager::OnFetchComplet
          error.value().type);
    }
  

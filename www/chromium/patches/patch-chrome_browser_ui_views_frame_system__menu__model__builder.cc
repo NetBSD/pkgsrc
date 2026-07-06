@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.21 2026/06/08 13:12:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.22 2026/07/06 13:06:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
-@@ -87,7 +87,7 @@ void SystemMenuModelBuilder::BuildMenu(u
+@@ -131,7 +131,7 @@ void SystemMenuModelBuilder::BuildSystem
+   }
+ #endif  // BUILDFLAG(IS_WIN)
  
- void SystemMenuModelBuilder::BuildSystemMenuForBrowserWindow(
-     ui::SimpleMenuModel* model) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   model->AddItemWithStringId(IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU);
-   model->AddItemWithStringId(IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU);
-   model->AddItemWithStringId(IDC_RESTORE_WINDOW, IDS_RESTORE_WINDOW_MENU);
-@@ -177,7 +177,7 @@ void SystemMenuModelBuilder::BuildSystem
+   AddItemWithIconMaybe(model, IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU,
+                        views::kChromeMinimizeIcon);
+   AddItemWithIconMaybe(model, IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU,
+@@ -231,7 +231,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER_CONTEXT_MENU, IDS_TASK_MANAGER);
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -252,7 +252,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -315,7 +315,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER, IDS_TASK_MANAGER);
    }

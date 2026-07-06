@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_swiftshader_third__party_llvm-subzero_build_Linux_include_llvm_Config_config.h,v 1.21 2026/06/08 13:12:48 kikadf Exp $
+$NetBSD: patch-third__party_swiftshader_third__party_llvm-subzero_build_Linux_include_llvm_Config_config.h,v 1.22 2026/07/06 13:06:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h
 @@ -5,8 +5,6 @@
  #include "llvm/Config/llvm-config.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.13 2026/06/08 13:12:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.14 2026/07/06 13:06:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_widget.cc
-@@ -52,7 +52,7 @@
+@@ -53,7 +53,7 @@
  #include "ui/aura/window.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.13 2026/06/0
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -86,7 +86,7 @@ class ThemeChangedObserver : public view
+@@ -87,7 +87,7 @@ class ThemeChangedObserver : public view
  };
  
  bool IsUsingLinuxSystemTheme(Profile* profile) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.13 2026/06/0
    return ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme();
  #else
    return false;
-@@ -205,7 +205,7 @@ void BrowserWidget::InitBrowserWidget() 
+@@ -206,7 +206,7 @@ void BrowserWidget::InitBrowserWidget() 
  
    Init(std::move(params));
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.13 2026/06/0
    SelectNativeTheme();
  #else
    SetNativeTheme(ui::NativeTheme::GetInstanceForNativeUi());
-@@ -532,7 +532,7 @@ void BrowserWidget::OnMenuClosed() {
+@@ -534,7 +534,7 @@ void BrowserWidget::OnMenuClosed() {
  }
  
  void BrowserWidget::SelectNativeTheme() {
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.13 2026/06/0
    // Use the regular NativeTheme instance if running incognito mode, regardless
    // of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -573,7 +573,7 @@ void BrowserWidget::OnTouchUiChanged() {
+@@ -575,7 +575,7 @@ void BrowserWidget::OnTouchUiChanged() {
  bool BrowserWidget::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_enterprise__reporting__private__api.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_enterprise__reporting__private__api.cc,v 1.22 2026/07/06 13:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc
-@@ -38,7 +38,7 @@
- #include "components/reporting/util/statusor.h"
- #endif
+@@ -29,7 +29,7 @@
+ #include "components/enterprise/connectors/core/reporting_constants.h"
+ #include "google_apis/gaia/gaia_id.h"
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include <optional>
  
  #include "base/strings/string_util.h"
-@@ -154,7 +154,7 @@ api::enterprise_reporting_private::Conte
+@@ -324,7 +324,7 @@ api::enterprise_reporting_private::Conte
  }
  
  bool AllowClientCertificateReportingForUsers() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
    return base::FeatureList::IsEnabled(
        enterprise_signals::features::kAllowClientCertificateReportingForUsers);
  #else
-@@ -167,7 +167,7 @@ bool IsProfilePrefManaged(Profile* profi
+@@ -337,7 +337,7 @@ bool IsProfilePrefManaged(Profile* profi
    return pref && pref->IsManaged();
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
  
  device_signals::SignalsAggregationRequest CreateAggregationRequest(
      device_signals::SignalName signal_name) {
-@@ -229,7 +229,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
+@@ -399,7 +399,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
  
  // getPersistentSecret
  
@@ -42,9 +42,9 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
  
  EnterpriseReportingPrivateGetPersistentSecretFunction::
      EnterpriseReportingPrivateGetPersistentSecretFunction() = default;
-@@ -669,7 +669,7 @@ void EnterpriseReportingPrivateEnqueueRe
+@@ -716,7 +716,7 @@ void EnterpriseReportingPrivateGetCertif
+   Respond(WithArguments(ret.ToValue()));
  }
- #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

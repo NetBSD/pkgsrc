@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.h,v 1.21 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.h,v 1.22 2026/07/06 13:07:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/views/controls/textfield/textfield.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/views/controls/textfield/textfield.h
-@@ -51,7 +51,7 @@
+@@ -52,7 +52,7 @@
  #include "ui/views/view_observer.h"
  #include "ui/views/word_lookup_client.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.h,v 1.21 2026/06/08 13:12:5
  #include <vector>
  #endif
  
-@@ -484,7 +484,7 @@ class VIEWS_EXPORT Textfield : public Vi
+@@ -497,7 +497,7 @@ class VIEWS_EXPORT Textfield : public Vi
    // Set whether the text should be used to improve typing suggestions.
    void SetShouldDoLearning(bool value) { should_do_learning_ = value; }
  

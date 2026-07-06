@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_xml_xslt__processor__libxslt.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_xml_xslt__processor__libxslt.cc,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc
 @@ -68,7 +68,11 @@ void XSLTProcessor::GenericErrorFunc(voi
    // It would be nice to do something with this error message.

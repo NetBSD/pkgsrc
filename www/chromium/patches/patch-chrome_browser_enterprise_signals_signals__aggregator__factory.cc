@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.17 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.18 2026/07/06 13:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/enterprise/signals/signals_aggregator_factory.cc
-@@ -49,7 +49,7 @@
+@@ -54,7 +54,7 @@
  #include "components/device_signals/core/browser/settings_client.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,16 @@ $NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc
  #include "components/device_signals/core/browser/agent_signals_collector.h"
  #include "components/device_signals/core/browser/crowdstrike_client.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -113,7 +113,7 @@ SignalsAggregatorFactory::BuildServiceIn
+@@ -93,7 +93,7 @@ SignalsAggregatorFactory::SignalsAggrega
+ #endif  // !BUILDFLAG(IS_ANDROID)
+   DependsOn(UserPermissionServiceFactory::GetInstance());
+   DependsOn(enterprise::ProfileIdServiceFactory::GetInstance());
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   DependsOn(ProfileNetworkContextServiceFactory::GetInstance());
+ #endif
+ }
+@@ -121,7 +121,7 @@ SignalsAggregatorFactory::BuildServiceIn
            service_host));
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -24,3 +33,12 @@ $NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc
    collectors.push_back(std::make_unique<device_signals::AgentSignalsCollector>(
        device_signals::CrowdStrikeClient::Create()));
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -132,7 +132,7 @@ SignalsAggregatorFactory::BuildServiceIn
+           CreateSettingsClient()));
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (enterprise_signals::features::IsCertificateCollectionEnabled()) {
+     auto* profile_network_service =
+         ProfileNetworkContextServiceFactory::GetForContext(profile);

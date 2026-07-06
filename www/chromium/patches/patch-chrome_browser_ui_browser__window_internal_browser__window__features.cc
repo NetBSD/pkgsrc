@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.13 2026/06/08 13:12:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.14 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
-@@ -206,7 +206,7 @@
+@@ -213,7 +213,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__featu
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_controller.h"
  #endif
  
-@@ -540,7 +540,7 @@ void BrowserWindowFeatures::Init(Browser
+@@ -577,7 +577,7 @@ void BrowserWindowFeatures::Init(Browser
    call_to_action_lock_ =
        GetUserDataFactory().CreateInstance<CallToActionLock>(*browser, browser);
  

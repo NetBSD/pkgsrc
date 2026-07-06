@@ -1,10 +1,10 @@
-$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.21 2026/06/08 13:12:38 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_connection__info.h,v 1.22 2026/07/06 13:06:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
 @@ -15,7 +15,12 @@
  #include "base/win/scoped_handle.h"

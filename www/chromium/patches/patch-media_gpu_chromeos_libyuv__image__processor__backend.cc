@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -48,7 +48,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \
@@ -15,7 +15,7 @@ $NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.21 20
      CONV(NV12, AR24, kConversion, Supported),
  #endif
      CONV(NV12, NV12, kConversion, Supported),
-@@ -409,7 +409,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -422,7 +422,7 @@ int LibYUVImageProcessorBackend::DoConve
            fr->GetWritableVisibleData(VideoFrame::Plane::kUV)), \
        fr->stride(VideoFrame::Plane::kUV)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.21 20
  #define ARGB_DATA(fr)                                   \
    fr->GetWritableVisibleData(VideoFrame::Plane::kARGB), \
        fr->stride(VideoFrame::Plane::kARGB)
-@@ -571,7 +571,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -584,7 +584,7 @@ int LibYUVImageProcessorBackend::DoConve
      }
    }
  

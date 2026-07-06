@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_chromoting__host__services__client.cc,v 1.21 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-remoting_host_chromoting__host__services__client.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_client.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/chromoting_host_services_client.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/chromoting_host_services_client.cc
-@@ -74,7 +74,7 @@ mojo::PendingRemote<mojom::ChromotingHos
+@@ -78,7 +78,7 @@ mojo::PendingRemote<mojom::ChromotingHos
  
  ChromotingHostServicesClient::ChromotingHostServicesClient()
      : ChromotingHostServicesClient(
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_chromoting__host__services__client.cc,v 1.21 2026/0
            std::vector{GetChromotingHostServicesServerName(),
                        GetLegacyChromotingHostServicesServerName()}
  #else
-@@ -163,7 +163,7 @@ bool ChromotingHostServicesClient::Ensur
+@@ -147,7 +147,7 @@ bool ChromotingHostServicesClient::Ensur
    if (session_services_remote_.is_bound()) {
      return true;
    }

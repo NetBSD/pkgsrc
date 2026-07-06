@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
-@@ -53,7 +53,7 @@
+@@ -54,7 +54,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
  #include "third_party/skia/include/core/SkRefCnt.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.21 2
  #include "ui/gfx/font_fallback_linux.h"
  #endif
  
-@@ -150,7 +150,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -148,7 +148,7 @@ class PLATFORM_EXPORT FontCache final {
  
    static void MaybePreloadSystemFonts();
  

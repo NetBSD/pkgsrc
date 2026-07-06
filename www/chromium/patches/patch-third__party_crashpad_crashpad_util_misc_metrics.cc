@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_util_misc_metrics.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_util_misc_metrics.cc,v 1.22 2026/07/06 13:06:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/metrics.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/crashpad/crashpad/util/misc/metrics.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/crashpad/crashpad/util/misc/metrics.cc
 @@ -25,7 +25,7 @@
  #define METRICS_OS_NAME "Win"

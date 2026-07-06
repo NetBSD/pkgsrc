@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_test_supervised__user_google__auth__state__waiter__mixin.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
+$NetBSD: patch-chrome_test_supervised__user_google__auth__state__waiter__mixin.cc,v 1.22 2026/07/06 13:06:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/supervised_user/google_auth_state_waiter_mixin.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/test/supervised_user/google_auth_state_waiter_mixin.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/test/supervised_user/google_auth_state_waiter_mixin.cc
 @@ -24,7 +24,7 @@ GoogleAuthStateWaiterMixin::GoogleAuthSt
  GoogleAuthStateWaiterMixin::~GoogleAuthStateWaiterMixin() = default;

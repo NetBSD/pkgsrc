@@ -1,10 +1,10 @@
-$NetBSD: patch-net_proxy__resolution_proxy__config__service.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-net_proxy__resolution_proxy__config__service.cc,v 1.22 2026/07/06 13:06:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- net/proxy_resolution/proxy_config_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ net/proxy_resolution/proxy_config_service.cc
 @@ -19,20 +19,20 @@
  #include "net/proxy_resolution/proxy_config_service_ios.h"

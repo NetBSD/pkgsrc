@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.20 2026/06/08 13:12:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.21 2026/07/06 13:06:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
 @@ -219,7 +219,7 @@ BrowserView* GetBrowserViewForContext(co
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
    ref->can_release_capture_ = false;
  #endif
    ref->start_point_in_screen_ =
-@@ -1035,7 +1035,7 @@ TabDragController::Liveness TabDragContr
+@@ -1051,7 +1051,7 @@ TabDragController::Liveness TabDragContr
        CHECK_EQ(SetCapture(target_context), Liveness::kAlive);
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2270,7 +2270,7 @@ void TabDragController::CompleteDrag() {
+@@ -2303,7 +2303,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // Keeping maximized state breaks snap to Grid on Windows when dragging
      // tabs from maximized windows. TODO:(crbug.com/41321838) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2698,7 +2698,7 @@ TabDragController::Liveness TabDragContr
+@@ -2724,7 +2724,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

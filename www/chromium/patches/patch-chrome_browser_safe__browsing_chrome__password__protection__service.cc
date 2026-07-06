@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_safe__browsing_chrome__password__protection__service.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_safe__browsing_chrome__password__protection__service.cc,v 1.22 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/safe_browsing/chrome_password_protection_service.cc
-@@ -1316,7 +1316,7 @@ std::string ChromePasswordProtectionServ
+@@ -1385,7 +1385,7 @@ std::string ChromePasswordProtectionServ
      ReusedPasswordAccountType password_type) const {
    if (base::FeatureList::IsEnabled(
            safe_browsing::kEnterprisePasswordReuseUiRefresh)) {

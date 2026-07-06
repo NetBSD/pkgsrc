@@ -1,10 +1,10 @@
-$NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.21 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.22 2026/07/06 13:06:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/audio/audio_sandbox_hook_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- services/audio/audio_sandbox_hook_linux.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ services/audio/audio_sandbox_hook_linux.cc
 @@ -146,6 +146,7 @@ void AddPulseAudioFilePermissions(
  }

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
 @@ -74,7 +74,7 @@
  #include "ui/base/l10n/l10n_util.h"
@@ -15,25 +15,34 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
  #include "components/device_signals/core/browser/user_permission_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -386,7 +386,7 @@ void ManagementUIHandler::AddReportingIn
-       report_sources->Append(std::move(data));
-     }
+@@ -197,7 +197,7 @@ void AddThreatProtectionPermission(const
+ #endif  // BUILDFLAG(ENTERPRISE_CLOUD_CONTENT_ANALYSIS)
+ 
+ bool IsSaasReportingEnabled(content::WebUI* web_ui) {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return !Profile::FromWebUI(web_ui)
+               ->GetPrefs()
+               ->GetList(enterprise_reporting::kSaasUsageDomainUrlsForProfile)
+@@ -398,7 +398,7 @@ void ManagementUIHandler::AddBrowserRepo
+     report_sources->Append(std::move(data));
+   }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     auto device_signal_data = GetDeviceSignalGrantedMessage();
-     if (!device_signal_data.empty()) {
-       report_sources->Append(std::move(device_signal_data));
-@@ -408,7 +408,7 @@ void ManagementUIHandler::AddReportingIn
-       report_sources->Append(std::move(data));
-     }
+   auto device_signal_data = GetDeviceSignalGrantedMessage();
+   if (!device_signal_data.empty()) {
+     report_sources->Append(std::move(device_signal_data));
+@@ -430,7 +430,7 @@ void ManagementUIHandler::AddProfileRepo
+     report_sources->Append(std::move(data));
+   }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     auto device_signal_data = GetDeviceSignalGrantedMessage();
-     if (!device_signal_data.empty()) {
-       report_sources->Append(std::move(device_signal_data));
-@@ -599,7 +599,7 @@ policy::PolicyService* ManagementUIHandl
+   auto device_signal_data = GetDeviceSignalGrantedMessage();
+   if (!device_signal_data.empty()) {
+     report_sources->Append(std::move(device_signal_data));
+@@ -620,7 +620,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

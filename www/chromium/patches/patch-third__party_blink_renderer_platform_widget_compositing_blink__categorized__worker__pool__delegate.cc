@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_widget_compositing_blink__categorized__worker__pool__delegate.cc,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_widget_compositing_blink__categorized__worker__pool__delegate.cc,v 1.22 2026/07/06 13:06:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc
 @@ -27,7 +27,7 @@ BlinkCategorizedWorkerPoolDelegate& Blin
  

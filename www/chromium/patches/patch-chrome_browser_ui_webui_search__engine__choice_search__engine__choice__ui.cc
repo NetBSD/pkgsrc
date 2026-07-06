@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_search__engine__choice_search__engine__choice__ui.cc,v 1.3 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_search__engine__choice_search__engine__choice__ui.cc,v 1.4 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/search_engine_choice/search_engine_choice_ui.cc
 @@ -136,7 +136,7 @@ SearchEngineChoiceUI::SearchEngineChoice
        search_engine_choice_service->IsDsePropagationAllowedForGuest());

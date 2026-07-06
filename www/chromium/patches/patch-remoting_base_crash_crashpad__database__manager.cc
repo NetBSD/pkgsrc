@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_crash_crashpad__database__manager.cc,v 1.3 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-remoting_base_crash_crashpad__database__manager.cc,v 1.4 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/crash/crashpad_database_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/base/crash/crashpad_database_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/base/crash/crashpad_database_manager.cc
 @@ -24,7 +24,7 @@
  #if BUILDFLAG(IS_WIN)
@@ -20,7 +20,7 @@ $NetBSD: patch-remoting_base_crash_crashpad__database__manager.cc,v 1.3 2026/06/
  namespace {
  
 -#if !BUILDFLAG(IS_LINUX)
-+#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
++#if !BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  const base::FilePath::CharType kChromotingCrashpadDatabasePath[] =
      FILE_PATH_LITERAL("crashpad");
  #endif

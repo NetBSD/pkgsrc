@@ -1,0 +1,18 @@
+$NetBSD: patch-ui_webui_webui__features.gni,v 1.1 2026/07/06 13:07:02 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/webui/webui_features.gni.orig	2026-06-23 23:37:18.000000000 +0000
++++ ui/webui/webui_features.gni
+@@ -44,7 +44,8 @@ if (enable_cast_receiver || is_cast_andr
+     # Enable the WebUI version of the New Tab Page.
+     enable_webui_ntp =
+         target_os == "win" || target_os == "mac" || target_os == "linux" ||
+-        target_os == "chromeos" || is_desktop_android
++        target_os == "chromeos" || is_desktop_android || target_os == "openbsd" ||
++        target_os == "freebsd" || target_os == "netbsd"
+   }
+   declare_args() {
+     # Enable WebUI Contextual Tasks Composebox.

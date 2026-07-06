@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.21 2026/06/08 13:12:41 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__backing__factory.cc,v 1.22 2026/07/06 13:06:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -20,7 +20,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_angle__vulkan__image__b
      SHARED_IMAGE_USAGE_SCANOUT |
  #endif
      SHARED_IMAGE_USAGE_GLES2_READ | SHARED_IMAGE_USAGE_GLES2_WRITE |
-@@ -124,7 +124,7 @@ bool AngleVulkanImageBackingFactory::IsG
+@@ -103,7 +103,7 @@ bool AngleVulkanImageBackingFactory::IsG
      // usage?
      case gfx::EMPTY_BUFFER:
        return HasGLES2ReadOrWriteUsage(usage);

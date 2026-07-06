@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__internal.h,v 1.21 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__internal.h,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_internal.h
 @@ -15,6 +15,13 @@
  namespace angle

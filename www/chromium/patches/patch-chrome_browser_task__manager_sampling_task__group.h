@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.21 2026/06/08 13:12:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.22 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
 @@ -40,7 +40,7 @@ inline constexpr int kUnsupportedVMRefre
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |

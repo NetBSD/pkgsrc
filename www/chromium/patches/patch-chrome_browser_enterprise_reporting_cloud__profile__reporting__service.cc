@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_reporting_cloud__profile__reporting__service.cc,v 1.12 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_reporting_cloud__profile__reporting__service.cc,v 1.13 2026/07/06 13:06:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/enterprise/reporting/cloud_profile_reporting_service.cc
 @@ -41,7 +41,7 @@
  #include "chrome/browser/enterprise/reporting/reporting_delegate_factory_desktop.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_reporting_cloud__profile__reporting__se
  #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_delegate_factory_desktop.h"
  #include "components/enterprise/browser/reporting/reporting_features.h"
  #include "components/enterprise/browser/reporting/saas_usage/saas_usage_report_scheduler.h"
-@@ -122,7 +122,7 @@ void CloudProfileReportingService::Creat
+@@ -123,7 +123,7 @@ void CloudProfileReportingService::Creat
  #endif
    report_scheduler_ = std::make_unique<ReportScheduler>(std::move(params));
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.21 2026/06/08 13:12:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.22 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
 @@ -91,7 +91,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
    registry->RegisterTimePref(prefs::kPinInfoBarLastShown, base::Time());
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.21 2026/06/08 13:12:3
    registry->RegisterIntegerPref(prefs::kSessionRestoreInfoBarTimesShown, 0);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
-@@ -230,7 +230,7 @@ void RegisterBrowserUserPrefs(user_prefs
+@@ -234,7 +234,7 @@ void RegisterBrowserUserPrefs(user_prefs
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeFallbacks);
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeNavigations);
    registry->RegisterBooleanPref(prefs::kHttpsOnlyModeAutoEnabled, false);

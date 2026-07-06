@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_sandbox_print__backend__sandbox__hook__linux.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-printing_sandbox_print__backend__sandbox__hook__linux.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ printing/sandbox/print_backend_sandbox_hook_linux.cc
 @@ -10,20 +10,27 @@
  #include "base/path_service.h"

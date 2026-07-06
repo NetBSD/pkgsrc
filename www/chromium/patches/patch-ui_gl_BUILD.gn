@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_BUILD.gn,v 1.16 2026/06/08 13:12:49 kikadf Exp $
+$NetBSD: patch-ui_gl_BUILD.gn,v 1.17 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/BUILD.gn.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/gl/BUILD.gn.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/gl/BUILD.gn
 @@ -389,7 +389,7 @@ component("gl") {
      ]

@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__power__save__blocker.cc,v 1.13 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-remoting_host_host__power__save__blocker.cc,v 1.14 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_power_save_blocker.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/host_power_save_blocker.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/host_power_save_blocker.cc
 @@ -29,7 +29,7 @@ HostPowerSaveBlocker::~HostPowerSaveBloc
  

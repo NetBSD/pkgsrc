@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_host__settings.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-remoting_base_host__settings.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/host_settings.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/base/host_settings.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/base/host_settings.cc
 @@ -7,7 +7,7 @@
  #include "base/no_destructor.h"

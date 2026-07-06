@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.21 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/mojo_caller_security_checker.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/mojo_caller_security_checker.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/mojo_caller_security_checker.cc
-@@ -32,7 +32,7 @@
+@@ -40,7 +40,7 @@
  namespace remoting {
  namespace {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.21 2026/06/0
  constexpr auto kAllowedCallerProgramNames =
      base::MakeFixedFlatSet<base::FilePath::StringViewType>({
          "remote-open-url",
-@@ -62,7 +62,7 @@ bool IsTrustedMojoEndpoint(
+@@ -136,7 +136,7 @@ bool IsTrustedMojoEndpoint(
      const named_mojo_ipc_server::ConnectionInfo& caller) {
  #if BUILDFLAG(IS_MAC)
    return IsProcessTrusted(caller.audit_token, kAllowedIdentifiers);
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_mojo__caller__security__checker.cc,v 1.21 2026/06/0
  
    static base::NoDestructor<base::FilePath> current_process_image_path(
        GetProcessImagePath(base::GetCurrentProcId()));
-@@ -99,7 +99,7 @@ bool IsTrustedMojoEndpoint(
+@@ -173,7 +173,7 @@ bool IsTrustedMojoEndpoint(
    base::FilePath::StringType program_name =
        caller_process_image_path.BaseName().value();
    if (!kAllowedCallerProgramNames.contains(program_name)) {
