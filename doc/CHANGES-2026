@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4260 2026/07/06 06:55:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4261 2026/07/06 06:59:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6375,3 +6375,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 3.29.5 [wiz 2026-07-06]
 	Added www/py-httpcore2 version 2.5.0 [wiz 2026-07-06]
 	Added www/py-httpx2 version 2.5.0 [wiz 2026-07-06]
+	Updated audio/py-last to 7.1.0 [wiz 2026-07-06]
