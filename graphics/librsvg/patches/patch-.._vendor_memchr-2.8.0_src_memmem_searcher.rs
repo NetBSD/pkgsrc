@@ -1,13 +1,13 @@
-$NetBSD: patch-.._vendor_memchr-2.7.6_src_memmem_searcher.rs,v 1.1 2025/12/08 12:40:16 adam Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.0_src_memmem_searcher.rs,v 1.1 2026/07/06 13:49:07 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- ../vendor/memchr-2.7.6/src/memmem/searcher.rs.orig	2025-02-15 20:54:13.327453262 +0000
-+++ ../vendor/memchr-2.7.6/src/memmem/searcher.rs
+--- ../vendor/memchr-2.8.0/src/memmem/searcher.rs.orig	2025-02-15 20:54:13.327453262 +0000
++++ ../vendor/memchr-2.8.0/src/memmem/searcher.rs
 @@ -3,7 +3,7 @@ use crate::arch::all::{
      rabinkarp, twoway,
  };
- 
+
 -#[cfg(target_arch = "aarch64")]
 +#[cfg(all(target_arch = "aarch64", target_endian = "little"))]
  use crate::arch::aarch64::neon::packedpair as neon;
@@ -39,7 +39,7 @@ Don't try to do neon / SIMD on big-endian aarch64.
 +    #[cfg(all(target_arch = "aarch64", target_endian = "little"))]
      neon: crate::arch::aarch64::neon::packedpair::Finder,
  }
- 
+
 @@ -421,7 +421,7 @@ unsafe fn searcher_kind_simd128(
  /// # Safety
  ///
@@ -51,7 +51,7 @@ Don't try to do neon / SIMD on big-endian aarch64.
      _prestate: &mut PrefilterState,
 @@ -686,7 +686,7 @@ impl Prefilter {
      }
- 
+
      /// Return a prefilter using a aarch64 neon vector algorithm.
 -    #[cfg(target_arch = "aarch64")]
 +    #[cfg(all(target_arch = "aarch64", target_endian = "little"))]
@@ -66,7 +66,7 @@ Don't try to do neon / SIMD on big-endian aarch64.
 +    #[cfg(all(target_arch = "aarch64", target_endian = "little"))]
      neon: crate::arch::aarch64::neon::packedpair::Finder,
  }
- 
+
 @@ -852,7 +852,7 @@ unsafe fn prefilter_kind_simd128(
  /// # Safety
  ///
