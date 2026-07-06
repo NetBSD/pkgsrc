@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2024/08/19 11:51:48 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/07/06 17:03:43 adam Exp $
 
-BLAKE2s (msgpack-c-6.1.0.tar.gz) = 88328bb3f9bc390853b9f1d9bc476d96822067dc13f99a30060ee1f7cc3e0b94
-SHA512 (msgpack-c-6.1.0.tar.gz) = 436a7db1c31fe2fab6172f557f4f88cc9c8d907422e53531340c078480ba76f72171ea0f6ead36b48ea86b4a72a95022388f1f5a3048ee3aa0c5bd6c5359105c
-Size (msgpack-c-6.1.0.tar.gz) = 70522 bytes
+BLAKE2s (msgpack-c-7.0.1.tar.gz) = b1ed3df7ce4410698aca3c6f648f6e9a1251166674f4648d7cb968a242402d9b
+SHA512 (msgpack-c-7.0.1.tar.gz) = a0ea9139a3cd5dc798c825a12ce2bfb27da74b28f86ffe5066e46e0264198c00b417737b26a9e48e632768dab671c00bde830bc3e2f8dba8c4a076c4cb6503d5
+Size (msgpack-c-7.0.1.tar.gz) = 70469 bytes
 SHA1 (patch-include_msgpack_vrefbuffer.h) = 610e2230020aaf0c6fa33bd92fa9618e9534b57e

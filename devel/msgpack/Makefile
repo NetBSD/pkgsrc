@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/02/08 04:23:34 taca Exp $
+# $NetBSD: Makefile,v 1.26 2026/07/06 17:03:43 adam Exp $
 
-DISTNAME=	msgpack-c-6.1.0
+DISTNAME=	msgpack-c-7.0.1
 PKGNAME=	${DISTNAME:S/-c-/-/}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
 GITHUB_PROJECT=	msgpack-c
