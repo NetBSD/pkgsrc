@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/13 10:38:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/07/06 05:38:50 wiz Exp $
 include/jansson.h
 include/jansson_config.h
-lib/libjansson.la
+lib/cmake/jansson/janssonConfig.cmake
+lib/cmake/jansson/janssonConfigVersion.cmake
+lib/cmake/jansson/janssonTargets-noconfig.cmake
+lib/cmake/jansson/janssonTargets.cmake
+lib/libjansson.so
+lib/libjansson.so.4
+lib/libjansson.so.4.15.1
 lib/pkgconfig/jansson.pc
