@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/07/01 15:42:44 gdt Exp $
+$NetBSD: distinfo,v 1.9 2026/07/06 12:36:09 gdt Exp $
 
-BLAKE2s (proj-doc-9.8.pdf) = a2356e0f578aa28800759444cdd6858f0aeb0f4fac4bc7a2bd198a67ee6bf21d
-SHA512 (proj-doc-9.8.pdf) = 7d2791585286e4a74240efedc6461b8a993601c1939ae73325311343d55b88c52a5ece1c47a4b5214c4e250244444a01616312a4ebc0b69f2b17d6f7e23fd5cd
-Size (proj-doc-9.8.pdf) = 48630680 bytes
+BLAKE2s (proj-doc-9.8.1.pdf) = e9d4bdeacbd0cab31f3035ca55f44205a6378ba98c9c465db3538ff41696feb4
+SHA512 (proj-doc-9.8.1.pdf) = 6b191a48eb09483cce085bb2b8ff04609bbfaf450576c3fee1a34188b2fe9f62f2ba9b03131f2e3dd99fb95e88da64b6a863eb7a667ee938860ebcfd72e625fa
+Size (proj-doc-9.8.1.pdf) = 48630679 bytes
