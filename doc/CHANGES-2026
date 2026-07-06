@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4283 2026/07/06 12:42:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4284 2026/07/06 12:49:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6404,3 +6404,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/proj-doc to 9.8.1 [gdt 2026-07-06]
 	Updated textproc/dblatex to 0.3.12 [adam 2026-07-06]
 	Updated misc/py-tibs to 0.12.0 [adam 2026-07-06]
+	Updated textproc/py-pyaml to 26.7.0 [adam 2026-07-06]
+	Updated graphics/py-pygal to 3.1.3 [adam 2026-07-06]
