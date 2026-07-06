@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/10/22 13:14:53 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/07/06 12:15:42 adam Exp $
 
-BLAKE2s (pangomm-2.46.4.tar.xz) = 7905cd61a9db09a72634a940dae170b3ba834fd76370d91c94e62ff0bb1d335e
-SHA512 (pangomm-2.46.4.tar.xz) = e4e57b835af270af9b98ae3feb25087cb8f8ab9b0028195db3d2dbf48df360de1f92c4e7c9dfba9a80d4a6aa47234b3112eea52586328386bbc0eb0d5cc09856
-Size (pangomm-2.46.4.tar.xz) = 695088 bytes
+BLAKE2s (pangomm-2.46.5.tar.xz) = c1f87094b9932d71fdc3a764101941a93fd038d894a0b8c6d178c620ee650c8a
+SHA512 (pangomm-2.46.5.tar.xz) = 0e14d3f48717944f7a9fd69fdf31e540aaebf1f98f733b3491367236244dede857b170dcad53a0ad597bac9d5a28e7e85b9d2cc5d0128f5d2c67c02aa46c6737
+Size (pangomm-2.46.5.tar.xz) = 633812 bytes
