@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4273 2026/07/06 09:15:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4274 2026/07/06 09:22:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6389,3 +6389,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/dmarc-report-viewer to 2.5.2 [wiz 2026-07-06]
 	Updated devel/ast-grep to 0.44.1 [wiz 2026-07-06]
 	Updated textproc/rumdl to 0.2.28 [wiz 2026-07-06]
+	Updated mail/rspamd to 4.1.1 [wiz 2026-07-06]
