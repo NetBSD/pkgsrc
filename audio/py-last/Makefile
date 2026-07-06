@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/01/19 14:20:04 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/06 06:59:11 wiz Exp $
 
-DISTNAME=	pylast-7.0.2
+DISTNAME=	pylast-7.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-httpx2-[0-9]*:../../www/py-httpx2
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -24,7 +24,9 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# 93 failed, 44 passed, 9 skipped, 1 xfailed, 2 warnings
+# 'For integration tests you need a test account at Last.fm'
+# without that, as of 7.1.0
+# 94 failed, 56 passed, 9 skipped, 1 xfailed, 2 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
