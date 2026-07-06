@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2026/07/06 18:24:29 wiz Exp $
+
+Do not build files during installation.
+
+--- Makefile.orig	2026-07-06 18:22:43.453387248 +0000
++++ Makefile
+@@ -126,7 +126,7 @@ doc:
+ 	$(MAKE) -C docs RELEASE=${VERSION} TOOL_NAME=$(TOOL_NAME) man html
+ 	find docs/_build -type d -exec chmod u+x {} \; # apparent permissions bug??
+ 
+-install: doc
++install:
+ 	$(INSTALL) -d -m 755 $(BIN_INST_DIR)
+ 	for b in $(EXES) ; do                                    \
+ 		$(call echocmd,"  INSTALL $(BIN_INST_DIR)/$$b")  \
