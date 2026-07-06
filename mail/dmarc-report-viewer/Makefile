@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/05/28 16:13:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/06 08:56:35 wiz Exp $
 
-DISTNAME=	dmarc-report-viewer-2.5.1
+DISTNAME=	dmarc-report-viewer-2.5.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cry-inc/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
