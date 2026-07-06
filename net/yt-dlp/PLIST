@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/06/10 07:09:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/07/06 08:25:46 wiz Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -101,9 +101,6 @@ ${PYSITELIB}/yt_dlp/downloader/niconico.pyo
 ${PYSITELIB}/yt_dlp/downloader/rtmp.py
 ${PYSITELIB}/yt_dlp/downloader/rtmp.pyc
 ${PYSITELIB}/yt_dlp/downloader/rtmp.pyo
-${PYSITELIB}/yt_dlp/downloader/rtsp.py
-${PYSITELIB}/yt_dlp/downloader/rtsp.pyc
-${PYSITELIB}/yt_dlp/downloader/rtsp.pyo
 ${PYSITELIB}/yt_dlp/downloader/soop.py
 ${PYSITELIB}/yt_dlp/downloader/soop.pyc
 ${PYSITELIB}/yt_dlp/downloader/soop.pyo
@@ -992,9 +989,6 @@ ${PYSITELIB}/yt_dlp/extractor/godresource.pyo
 ${PYSITELIB}/yt_dlp/extractor/godtube.py
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyc
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyo
-${PYSITELIB}/yt_dlp/extractor/gofile.py
-${PYSITELIB}/yt_dlp/extractor/gofile.pyc
-${PYSITELIB}/yt_dlp/extractor/gofile.pyo
 ${PYSITELIB}/yt_dlp/extractor/golem.py
 ${PYSITELIB}/yt_dlp/extractor/golem.pyc
 ${PYSITELIB}/yt_dlp/extractor/golem.pyo
@@ -1745,6 +1739,9 @@ ${PYSITELIB}/yt_dlp/extractor/oktoberfesttv.pyo
 ${PYSITELIB}/yt_dlp/extractor/olympics.py
 ${PYSITELIB}/yt_dlp/extractor/olympics.pyc
 ${PYSITELIB}/yt_dlp/extractor/olympics.pyo
+${PYSITELIB}/yt_dlp/extractor/omnyfm.py
+${PYSITELIB}/yt_dlp/extractor/omnyfm.pyc
+${PYSITELIB}/yt_dlp/extractor/omnyfm.pyo
 ${PYSITELIB}/yt_dlp/extractor/on24.py
 ${PYSITELIB}/yt_dlp/extractor/on24.pyc
 ${PYSITELIB}/yt_dlp/extractor/on24.pyo
@@ -2495,9 +2492,6 @@ ${PYSITELIB}/yt_dlp/extractor/toutv.pyo
 ${PYSITELIB}/yt_dlp/extractor/toypics.py
 ${PYSITELIB}/yt_dlp/extractor/toypics.pyc
 ${PYSITELIB}/yt_dlp/extractor/toypics.pyo
-${PYSITELIB}/yt_dlp/extractor/trovo.py
-${PYSITELIB}/yt_dlp/extractor/trovo.pyc
-${PYSITELIB}/yt_dlp/extractor/trovo.pyo
 ${PYSITELIB}/yt_dlp/extractor/trtcocuk.py
 ${PYSITELIB}/yt_dlp/extractor/trtcocuk.pyc
 ${PYSITELIB}/yt_dlp/extractor/trtcocuk.pyo
@@ -3002,6 +2996,9 @@ ${PYSITELIB}/yt_dlp/extractor/youtube/pot/utils.pyo
 ${PYSITELIB}/yt_dlp/extractor/zaiko.py
 ${PYSITELIB}/yt_dlp/extractor/zaiko.pyc
 ${PYSITELIB}/yt_dlp/extractor/zaiko.pyo
+${PYSITELIB}/yt_dlp/extractor/zan.py
+${PYSITELIB}/yt_dlp/extractor/zan.pyc
+${PYSITELIB}/yt_dlp/extractor/zan.pyo
 ${PYSITELIB}/yt_dlp/extractor/zapiks.py
 ${PYSITELIB}/yt_dlp/extractor/zapiks.pyc
 ${PYSITELIB}/yt_dlp/extractor/zapiks.pyo
