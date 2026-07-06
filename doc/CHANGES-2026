@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4256 2026/07/06 06:28:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4257 2026/07/06 06:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6371,3 +6371,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.17 [taca 2026-07-05]
 	Updated textproc/jansson to 2.15.1 [wiz 2026-07-06]
 	Updated textproc/libxmlb to 0.3.28 [wiz 2026-07-06]
+	Updated textproc/tree-sitter to 0.26.10 [wiz 2026-07-06]
