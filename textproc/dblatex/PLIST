@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/08/16 11:35:20 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/07/06 12:36:37 adam Exp $
 bin/dblatex
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,6 +99,9 @@ ${PYSITELIB}/dbtexmf/dblatex/grubber/xindylang.xml
 ${PYSITELIB}/dbtexmf/dblatex/grubber/xr-hyper.py
 ${PYSITELIB}/dbtexmf/dblatex/grubber/xr-hyper.pyc
 ${PYSITELIB}/dbtexmf/dblatex/grubber/xr-hyper.pyo
+${PYSITELIB}/dbtexmf/dblatex/rawlabel.py
+${PYSITELIB}/dbtexmf/dblatex/rawlabel.pyc
+${PYSITELIB}/dbtexmf/dblatex/rawlabel.pyo
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.py
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.pyc
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.pyo
@@ -273,7 +276,6 @@ share/dblatex/xsl/common/mn.xml
 share/dblatex/xsl/common/nb.xml
 share/dblatex/xsl/common/nl.xml
 share/dblatex/xsl/common/nn.xml
-share/dblatex/xsl/common/no.xml
 share/dblatex/xsl/common/olink.xsl
 share/dblatex/xsl/common/or.xml
 share/dblatex/xsl/common/pa.xml
@@ -282,6 +284,7 @@ share/dblatex/xsl/common/pt.xml
 share/dblatex/xsl/common/pt_br.xml
 share/dblatex/xsl/common/ro.xml
 share/dblatex/xsl/common/ru.xml
+share/dblatex/xsl/common/se.xml
 share/dblatex/xsl/common/sk.xml
 share/dblatex/xsl/common/sl.xml
 share/dblatex/xsl/common/sq.xml
@@ -553,6 +556,7 @@ share/doc/dblatex/xhtml/manual/images/colorsvg/tip.svg
 share/doc/dblatex/xhtml/manual/images/colorsvg/up.svg
 share/doc/dblatex/xhtml/manual/images/colorsvg/warning.svg
 share/doc/dblatex/xhtml/manual/images/draft.png
+share/doc/dblatex/xhtml/manual/images/draft.svg
 share/doc/dblatex/xhtml/manual/images/home.gif
 share/doc/dblatex/xhtml/manual/images/home.png
 share/doc/dblatex/xhtml/manual/images/home.svg
@@ -641,7 +645,7 @@ share/doc/dblatex/xhtml/manual/page.margin.inner.html
 share/doc/dblatex/xhtml/manual/page.margin.outer.html
 share/doc/dblatex/xhtml/manual/page.margin.top.html
 share/doc/dblatex/xhtml/manual/page.width.html
-share/doc/dblatex/xhtml/manual/pagesetup2.png
+share/doc/dblatex/xhtml/manual/pagesetup2.svg
 share/doc/dblatex/xhtml/manual/paper.type.html
 share/doc/dblatex/xhtml/manual/pdf.annot.options.html
 share/doc/dblatex/xhtml/manual/pi-bibtex.html
@@ -655,7 +659,7 @@ share/doc/dblatex/xhtml/manual/pi-dblatex_table-width.html
 share/doc/dblatex/xhtml/manual/pi-latex.html
 share/doc/dblatex/xhtml/manual/pi-texmath_delimiters.html
 share/doc/dblatex/xhtml/manual/preface.tocdepth.html
-share/doc/dblatex/xhtml/manual/processus.png
+share/doc/dblatex/xhtml/manual/processus.svg
 share/doc/dblatex/xhtml/manual/qanda.defaultlabel.html
 share/doc/dblatex/xhtml/manual/ref-dblatex.html
 share/doc/dblatex/xhtml/manual/refclass.suppress.html
@@ -740,6 +744,9 @@ share/doc/dblatex/xhtml/release-notes/sec-changes-02pre.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-03.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-031.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-0310.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-0311.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-0311py3.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-0312.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-032.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-033.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-034.html

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:21:48 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/07/06 12:36:37 adam Exp $
 
-BLAKE2s (dblatex-0.3.10.tar.bz2) = 606eecfe3832c8fb0182c863d7dd2a3f8ff2e05a8a503816680c11021cd7bf7c
-SHA512 (dblatex-0.3.10.tar.bz2) = 33a5ee3d23d3b9a1576be248a312ca741ea7cb629334a98fb6cb49e0f0f932334506ea934312de04ec645c86ec52699687bd2574b1802d3c23815b44c8514b7b
-Size (dblatex-0.3.10.tar.bz2) = 1668202 bytes
-SHA1 (patch-aa) = 31713727ed0501f22fb571b25013b377e668e226
+BLAKE2s (dblatex3-0.3.12.tar.bz2) = 4c67e62a03a6735f89689756c125f827cb33f00106fbecbaef6b2c460d8d964d
+SHA512 (dblatex3-0.3.12.tar.bz2) = 5bfa774c8dbe362775f6bbb5e1196e5a2bb1af239778133c12ddc725406ced67f3ff422433a2a1aa02d4431e9be58ba12e918379deb81fcd5b96533d2bdf029a
+Size (dblatex3-0.3.12.tar.bz2) = 1693272 bytes
+SHA1 (patch-setup.py) = 5091a3f4b41fb30f1e85f4656b700553832197ca
