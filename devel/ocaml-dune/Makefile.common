@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.14 2026/05/17 14:19:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2026/07/06 09:26:55 wiz Exp $
 
 # used by devel/ocaml-dune-configurator/Makefile
 
-DUNE_VERSION=	3.23.1
+DUNE_VERSION=	3.24.0
 DISTNAME=	${GITHUB_PROJECT}-${DUNE_VERSION}
 
 LICENSE=	mit
