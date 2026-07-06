@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4262 2026/07/06 07:12:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4263 2026/07/06 07:13:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6377,3 +6377,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/py-httpx2 version 2.5.0 [wiz 2026-07-06]
 	Updated audio/py-last to 7.1.0 [wiz 2026-07-06]
 	Updated math/py-numpy to 2.5.1 [wiz 2026-07-06]
+	Updated devel/py-project-metadata to 0.12.1 [wiz 2026-07-06]
