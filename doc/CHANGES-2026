@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4263 2026/07/06 07:13:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4264 2026/07/06 07:57:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6378,3 +6378,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-last to 7.1.0 [wiz 2026-07-06]
 	Updated math/py-numpy to 2.5.1 [wiz 2026-07-06]
 	Updated devel/py-project-metadata to 0.12.1 [wiz 2026-07-06]
+	Updated devel/cargo-nextest to 0.9.140 [adam 2026-07-06]
+	Updated devel/py-dulwich to 1.2.8 [adam 2026-07-06]
