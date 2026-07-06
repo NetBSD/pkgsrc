@@ -1,9 +1,9 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/06/24 08:51:16 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/07/06 12:39:03 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.102
 CARGO_CRATE_DEPENDS+=	bitflags-2.11.0
-CARGO_CRATE_DEPENDS+=	bitvec-1.0.1
+CARGO_CRATE_DEPENDS+=	bitvec-1.1.1
 CARGO_CRATE_DEPENDS+=	block-buffer-0.12.0
 CARGO_CRATE_DEPENDS+=	bytemuck-1.25.0
 CARGO_CRATE_DEPENDS+=	cc-1.2.60
