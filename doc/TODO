@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27539 2026/07/06 08:27:59 wiz Exp $
+$NetBSD: TODO,v 1.27540 2026/07/06 08:46:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1142,7 +1142,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0
 	o py-readme_renderer-45.0
-	o py-setuptools-83.0.0
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-3.12.1
 	o py-sybase-0.37
@@ -1171,7 +1170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
-	o reposurgeon-5.8
+	o reposurgeon-5.9
 	o resize_image-0.7
 	o restic-0.19.1
 	o restish-2.3.0
@@ -1305,6 +1304,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o torrentzip-2.1.0
+	o tp-note-1.26.5
 	o trafficserver-9.0.1
 	o transmission-4.1.1
 	o trimmomatic-0.39
