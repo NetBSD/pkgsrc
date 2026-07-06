@@ -1,21 +1,26 @@
-# $NetBSD: Makefile,v 1.23 2025/12/28 21:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/06 18:24:29 wiz Exp $
 
-DISTNAME=	lcov-2.4
+DISTNAME=	lcov-2.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://github.com/linux-test-project/lcov
 COMMENT=	Front-end for GCC's coverage testing tool gcov
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
 USE_TOOLS+=	bash:run gmake perl
 
+BUILD_TARGET=	doc
+
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	CFG_INST_DIR=${DESTDIR}${PREFIX}/share/examples/lcov
 
@@ -51,4 +56,5 @@ REPLACE_PYTHON+=	bin/xml2lcovutil.py
 REPLACE_PYTHON+=	scripts/*.py
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
