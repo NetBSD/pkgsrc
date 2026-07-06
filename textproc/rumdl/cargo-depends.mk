@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2026/06/22 13:16:51 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2026/07/06 09:15:48 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -12,7 +12,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-1.0.14
 CARGO_CRATE_DEPENDS+=	anstyle-parse-1.0.0
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.1.5
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.11
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.102
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.103
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.9
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.6
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.2.0
