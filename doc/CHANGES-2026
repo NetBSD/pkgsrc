@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4287 2026/07/06 13:07:27 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4288 2026/07/06 13:07:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6409,3 +6409,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.1.7 [ktnb 2026-07-06]
 	Updated www/resterm to 0.44.7 [drixter 2026-07-06]
 	Updated www/chromium to 150.0.7871.46 [kikadf 2026-07-06]
+	Updated www/php-nextcloud to 32.0.12 [gdt 2026-07-06]
