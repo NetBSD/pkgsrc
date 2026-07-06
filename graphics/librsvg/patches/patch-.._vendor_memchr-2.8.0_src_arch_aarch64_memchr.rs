@@ -1,18 +1,18 @@
-$NetBSD: patch-.._vendor_memchr-2.7.6_src_arch_aarch64_memchr.rs,v 1.1 2025/12/08 12:40:15 adam Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.0_src_arch_aarch64_memchr.rs,v 1.1 2026/07/06 13:49:07 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs.orig	2025-02-15 20:48:25.871984028 +0000
-+++ ../vendor/memchr-2.7.6/src/arch/aarch64/memchr.rs
+--- ../vendor/memchr-2.8.0/src/arch/aarch64/memchr.rs.orig	2025-02-15 20:48:25.871984028 +0000
++++ ../vendor/memchr-2.8.0/src/arch/aarch64/memchr.rs
 @@ -8,7 +8,7 @@ available for `aarch64` targets.)
- 
+
  macro_rules! defraw {
      ($ty:ident, $find:ident, $start:ident, $end:ident, $($needles:ident),+) => {{
 -        #[cfg(target_feature = "neon")]
 +        #[cfg(all(target_feature = "neon", target_endian = "little"))]
          {
              use crate::arch::aarch64::neon::memchr::$ty;
- 
+
 @@ -19,7 +19,7 @@ macro_rules! defraw {
              // enabled.
              $ty::new_unchecked($($needles),+).$find($start, $end)
@@ -21,4 +21,3 @@ Don't try to do neon / SIMD on big-endian aarch64.
 +        #[cfg(not(all(target_feature = "neon", target_endian = "little")))]
          {
              use crate::arch::all::memchr::$ty;
- 

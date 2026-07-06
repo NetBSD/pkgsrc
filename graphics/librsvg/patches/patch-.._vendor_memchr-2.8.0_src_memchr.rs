@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.6_src_memchr.rs,v 1.1 2025/12/08 12:40:16 adam Exp $
+$NetBSD: patch-.._vendor_memchr-2.8.0_src_memchr.rs,v 1.1 2026/07/06 13:49:07 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
---- ../vendor/memchr-2.7.6/src/memchr.rs.orig	2025-02-15 20:50:05.328306921 +0000
-+++ ../vendor/memchr-2.7.6/src/memchr.rs
+--- ../vendor/memchr-2.8.0/src/memchr.rs.orig	2025-02-15 20:50:05.328306921 +0000
++++ ../vendor/memchr-2.8.0/src/memchr.rs
 @@ -518,14 +518,14 @@ unsafe fn memchr_raw(
      {
          crate::arch::wasm32::memchr::memchr_raw(needle, start, end)
