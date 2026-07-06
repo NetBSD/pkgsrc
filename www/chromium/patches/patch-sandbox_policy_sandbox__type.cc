@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.21 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-sandbox_policy_sandbox__type.cc,v 1.22 2026/07/06 13:06:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox_type.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -13,7 +13,7 @@
  #include "sandbox/policy/mojom/sandbox.mojom.h"

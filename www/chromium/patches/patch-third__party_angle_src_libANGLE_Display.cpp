@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -64,7 +64,7 @@
  #        include "libANGLE/renderer/gl/wgl/DisplayWGL.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:
  #        include "libANGLE/renderer/gl/egl/DisplayEGL.h"
  #        if defined(ANGLE_USE_X11)
  #            include "libANGLE/renderer/gl/glx/DisplayGLX_api.h"
-@@ -427,7 +427,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -435,7 +435,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
              impl = new rx::DisplayCGL(state);
              break;
  
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:
  #        if defined(ANGLE_USE_GBM) || defined(ANGLE_USE_WAYLAND)
              if (platformType == 0)
              {
-@@ -478,7 +478,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -493,7 +493,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
  #if defined(ANGLE_ENABLE_OPENGL)
  #    if defined(ANGLE_PLATFORM_WINDOWS)
              impl = new rx::DisplayWGL(state);
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:
  #        if defined(ANGLE_USE_GBM) || defined(ANGLE_USE_WAYLAND)
              if (platformType == 0)
              {
-@@ -534,7 +534,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
+@@ -556,7 +556,7 @@ rx::DisplayImpl *CreateDisplayFromAttrib
                  impl = rx::CreateVulkanWin32Display(state);
              }
              break;
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2185,7 +2185,7 @@ static ClientExtensions GenerateClientEx
+@@ -2207,7 +2207,7 @@ static ClientExtensions GenerateClientEx
      extensions.platformWaylandEXT = true;
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_angle_src_libANGLE_Display.cpp,v 1.21 2026/06/08 13:
      extensions.platformSurfacelessMESA = true;
  #endif
  
-@@ -2232,7 +2232,7 @@ static ClientExtensions GenerateClientEx
+@@ -2254,7 +2254,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

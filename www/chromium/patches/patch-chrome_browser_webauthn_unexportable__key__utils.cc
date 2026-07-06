@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_webauthn_unexportable__key__utils.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_unexportable__key__utils.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/unexportable_key_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/webauthn/unexportable_key_utils.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/webauthn/unexportable_key_utils.cc
 @@ -42,7 +42,7 @@ GetWebAuthnUnexportableKeyProvider() {
    // If there is a scoped UnexportableKeyProvider configured, we always use

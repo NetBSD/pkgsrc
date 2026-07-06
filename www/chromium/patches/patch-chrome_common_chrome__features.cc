@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__features.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/common/chrome_features.cc
-@@ -85,7 +85,7 @@ BASE_FEATURE(kUseKeychainKeyProvider, ba
+@@ -72,7 +72,7 @@ BASE_FEATURE(kUseKeychainKeyProvider, ba
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.21 2026/06/08 13:12:36 kika
  // Enables or disables the Autofill survey triggered by opening a prompt to
  // save address info.
  BASE_FEATURE(kAutofillAddressSurvey, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -178,7 +178,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
+@@ -174,7 +174,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
  // Enables the new reset banner on the settings page.
  BASE_FEATURE(kShowResetProfileBannerV2, base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -24,16 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.21 2026/06/08 13:12:36 kika
  // Controls whether Chrome Apps are supported. See https://crbug.com/40186761.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -724,7 +724,7 @@ BASE_FEATURE(kGlicWarming, base::FEATURE
- // Killswitch that controls whether the guest WebContents visibility state is
- // set to hidden when the Glic panel is warming.
- BASE_FEATURE(kGlicGuestContentsVisibilityState,
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1196,7 +1196,7 @@ BASE_FEATURE(kIsolatedWebAppManagedGuest
+@@ -1279,7 +1279,7 @@ BASE_FEATURE(kIsolatedWebAppManagedGuest
  BASE_FEATURE(kIsolatedWebAppBundleCache, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -42,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.21 2026/06/08 13:12:36 kika
  BASE_FEATURE(kLinuxLowMemoryMonitor, base::FEATURE_DISABLED_BY_DEFAULT);
  // Values taken from the low-memory-monitor documentation and also apply to the
  // portal API:
-@@ -1207,7 +1207,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1290,7 +1290,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

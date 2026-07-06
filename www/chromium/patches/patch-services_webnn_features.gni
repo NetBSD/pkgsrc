@@ -1,10 +1,10 @@
-$NetBSD: patch-services_webnn_features.gni,v 1.7 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-services_webnn_features.gni,v 1.8 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/features.gni.orig	2026-05-28 23:24:11.000000000 +0000
+--- services/webnn/features.gni.orig	2026-06-23 23:37:18.000000000 +0000
 +++ services/webnn/features.gni
 @@ -9,7 +9,7 @@ assert(use_blink)
  
@@ -13,5 +13,5 @@ $NetBSD: patch-services_webnn_features.gni,v 1.7 2026/06/08 13:12:45 kikadf Exp 
 -  webnn_use_tflite = is_android || is_chromeos || is_linux || is_apple || is_win
 +  webnn_use_tflite = !is_bsd && (is_android || is_chromeos || is_linux || is_apple || is_win)
  
-   # LiteRT matches TFLite except for arm.
-   # TODO(b/454732289): Add arm support once APK size issue is resolved.
+   # LiteRT matches TFLite.
+   webnn_use_litert = is_android || is_chromeos || is_linux || is_apple || is_win

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_signin_profile__picker__handler.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_signin_profile__picker__handler.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
-@@ -178,7 +178,7 @@ base::DictValue CreateProfileState(const
+@@ -177,7 +177,7 @@ base::DictValue CreateProfileState(const
        IDS_PROFILE_PICKER_PROFILE_CARD_LABEL, local_profile_name);
    if (entry->GetIsManaged() == signin::Tribool::kTrue) {
      profile_entry.Set("avatarBadge", "cr:domain");

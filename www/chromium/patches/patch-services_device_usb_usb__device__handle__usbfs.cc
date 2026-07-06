@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.20 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.21 2026/07/06 13:06:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
 @@ -33,7 +33,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.20 2026/06/
    if (base::FeatureList::IsEnabled(features::kAutomaticUsbDetach)) {
      const mojom::UsbConfigurationInfo* config =
          device_->GetActiveConfiguration();
-@@ -975,7 +975,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
+@@ -982,7 +982,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
      return;
    }
  #endif

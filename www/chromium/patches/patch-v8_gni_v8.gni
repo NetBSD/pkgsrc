@@ -1,0 +1,17 @@
+$NetBSD: patch-v8_gni_v8.gni,v 1.1 2026/07/06 13:07:02 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- v8/gni/v8.gni.orig	2026-06-23 23:37:18.000000000 +0000
++++ v8/gni/v8.gni
+@@ -351,7 +351,7 @@ is_drumbrake_supported =
+     (v8_current_cpu == "x64" || v8_current_cpu == "arm64" ||
+      v8_current_cpu == "riscv64") &&
+     (target_os == "win" || target_os == "linux" || target_os == "mac" ||
+-     target_os == "ios")
++     target_os == "ios" || target_os == "openbsd" || target_os == "freebsd" || target_os == "netbsd")
+ 
+ # Turbofan is enabled by default, except in lite mode.
+ if (v8_enable_turbofan == "") {

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_policy_device__management__service__configuration.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_policy_device__management__service__configuration.cc,v 1.22 2026/07/06 13:06:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/device_management_service_configuration.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/policy/device_management_service_configuration.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/policy/device_management_service_configuration.cc
 @@ -22,7 +22,7 @@
  

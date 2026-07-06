@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.13 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.14 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_content_client.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/common/chrome_content_client.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/common/chrome_content_client.cc
 @@ -61,12 +61,12 @@
  #include "url/url_constants.h"
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.13 2026/06/08 13:12:
  #include <fcntl.h>
  #include "sandbox/linux/services/credentials.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -189,7 +189,7 @@ static const char* const kChromeStandard
+@@ -188,7 +188,7 @@ static const char* const kChromeStandard
      extensions::kExtensionScheme,
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.13 2026/06/08 13:12:
      webapps::kIsolatedAppScheme,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -214,7 +214,7 @@ void ChromeContentClient::AddAdditionalS
+@@ -213,7 +213,7 @@ void ChromeContentClient::AddAdditionalS
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.13 2026/06/08 13:12:
    schemes->isolated_app_schemes.push_back(webapps::kIsolatedAppScheme);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -263,7 +263,7 @@ void ChromeContentClient::AddAdditionalS
+@@ -262,7 +262,7 @@ void ChromeContentClient::AddAdditionalS
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

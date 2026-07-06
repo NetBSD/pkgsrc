@@ -1,10 +1,10 @@
-$NetBSD: patch-ipc_param__traits__utils.h,v 1.11 2026/06/08 13:12:41 kikadf Exp $
+$NetBSD: patch-ipc_param__traits__utils.h,v 1.12 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/param_traits_utils.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- ipc/param_traits_utils.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ipc/param_traits_utils.h
 @@ -174,7 +174,7 @@ struct ParamTraits<unsigned int> {
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have

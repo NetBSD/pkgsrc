@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_dragdrop_os__exchange__data__provider__non__backed.cc,v 1.21 2026/06/08 13:12:49 kikadf Exp $
+$NetBSD: patch-ui_base_dragdrop_os__exchange__data__provider__non__backed.cc,v 1.22 2026/07/06 13:07:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
-@@ -104,7 +104,7 @@ void OSExchangeDataProviderNonBacked::Se
+@@ -105,7 +105,7 @@ void OSExchangeDataProviderNonBacked::Se
  
  std::optional<std::u16string> OSExchangeDataProviderNonBacked::GetString()
      const {

@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_libsampler_sampler.cc,v 1.20 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-v8_src_libsampler_sampler.cc,v 1.21 2026/07/06 13:07:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/libsampler/sampler.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- v8/src/libsampler/sampler.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ v8/src/libsampler/sampler.cc
 @@ -529,6 +529,16 @@ void SignalHandler::FillRegisterState(vo
    state->pc = reinterpret_cast<void*>(mcontext.__gregs[_REG_PC]);

@@ -1,13 +1,13 @@
-$NetBSD: patch-components_regional__capabilities_regional__capabilities__service.h,v 1.5 2026/06/08 13:12:38 kikadf Exp $
+$NetBSD: patch-components_regional__capabilities_regional__capabilities__service.h,v 1.6 2026/07/06 13:06:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/regional_capabilities/regional_capabilities_service.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/regional_capabilities/regional_capabilities_service.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/regional_capabilities/regional_capabilities_service.h
-@@ -117,7 +117,7 @@ class RegionalCapabilitiesService : publ
-   static bool IsInSearchEngineChoiceScreenRegion(
+@@ -123,7 +123,7 @@ class RegionalCapabilitiesService : publ
+   static bool IsInAnySearchEngineChoiceScreenRegion(
        const country_codes::CountryId& tested_country_id);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)

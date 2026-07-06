@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_chromoting__host__services__server.cc,v 1.3 2026/06/08 13:12:44 kikadf Exp $
+$NetBSD: patch-remoting_host_chromoting__host__services__server.cc,v 1.4 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_server.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/chromoting_host_services_server.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/chromoting_host_services_server.cc
 @@ -16,7 +16,7 @@
  #include "remoting/host/mojo_caller_security_checker.h"
@@ -15,16 +15,16 @@ $NetBSD: patch-remoting_host_chromoting__host__services__server.cc,v 1.3 2026/06
  #include <unistd.h>
  #endif
  
-@@ -44,7 +44,7 @@ named_mojo_ipc_server::EndpointOptions C
-   options.security_descriptor =
-       base::StrCat({L"O:", user_sid, L"G:", user_sid, L"D:(A;;GA;;;AU)"});
+@@ -47,7 +47,7 @@ named_mojo_ipc_server::EndpointOptions C
    options.include_peer_process_info = true;
+   options.extra_send_invitation_flags =
+       MOJO_SEND_INVITATION_FLAG_UNTRUSTED_PROCESS;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Allow the endpoint to be connected by any users iff the server is run as
    // root.
    options.require_same_peer_user = (getuid() != 0);
-@@ -57,7 +57,7 @@ named_mojo_ipc_server::EndpointOptions C
+@@ -60,7 +60,7 @@ named_mojo_ipc_server::EndpointOptions C
  ChromotingHostServicesServer::ChromotingHostServicesServer(
      BindChromotingHostServicesCallback bind_chromoting_host_services)
      : ChromotingHostServicesServer(

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_native__theme_features_native__theme__features.cc,v 1.20 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-ui_native__theme_features_native__theme__features.cc,v 1.21 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/features/native_theme_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/native_theme/features/native_theme_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/native_theme/features/native_theme_features.cc
 @@ -46,7 +46,7 @@ bool IsFluentOverlayScrollbarEnabled() {
  

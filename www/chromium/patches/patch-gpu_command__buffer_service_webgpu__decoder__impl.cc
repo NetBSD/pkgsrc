@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_service_webgpu__decoder__impl.cc,v 1.21 2026/06/08 13:12:41 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_webgpu__decoder__impl.cc,v 1.22 2026/07/06 13:06:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
-@@ -1775,7 +1775,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
+@@ -1776,7 +1776,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreateP
        backend_types = {wgpu::BackendType::D3D12};
  #elif BUILDFLAG(IS_APPLE)
        backend_types = {wgpu::BackendType::Metal};
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_webgpu__decoder__impl.cc,v 1.21 2026/
        if (shared_context_state_->GrContextIsVulkan() ||
            webgpu_on_vk_gl_interop_ ||
            shared_context_state_->IsGraphiteDawnVulkan()) {
-@@ -2101,7 +2101,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
+@@ -2102,7 +2102,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
    }
  
  #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

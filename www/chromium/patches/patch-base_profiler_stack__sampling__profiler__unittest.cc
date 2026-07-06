@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_stack__sampling__profiler__unittest.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
+$NetBSD: patch-base_profiler_stack__sampling__profiler__unittest.cc,v 1.22 2026/07/06 13:06:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_sampling_profiler_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/profiler/stack_sampling_profiler_unittest.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/profiler/stack_sampling_profiler_unittest.cc
 @@ -46,7 +46,7 @@
  

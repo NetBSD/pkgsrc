@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__override__impl.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
-@@ -50,7 +50,7 @@
+@@ -49,7 +49,7 @@
  #include "testing/gtest/include/gtest/gtest.h"
  #include "third_party/skia/include/core/SkBitmap.h"
  #include "third_party/skia/include/core/SkColor.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  #include "base/nix/xdg_util.h"
  #endif
  
-@@ -125,7 +125,7 @@ std::vector<std::wstring> GetFileExtensi
+@@ -123,7 +123,7 @@ std::vector<std::wstring> GetFileExtensi
  }
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  // Performs a blocking read of app icons from the disk.
  std::optional<SkBitmap> IconManagerReadIconForSize(
      WebAppIconManager& icon_manager,
-@@ -310,7 +310,7 @@ bool OsIntegrationTestOverrideImpl::Simu
+@@ -308,7 +308,7 @@ bool OsIntegrationTestOverrideImpl::Simu
        GetShortcutPath(profile, chrome_apps_folder(), app_id, app_name);
    CHECK(base::PathExists(app_folder_shortcut_path));
    return base::DeletePathRecursively(app_folder_shortcut_path);
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    base::FilePath desktop_shortcut_path =
        GetShortcutPath(profile, desktop(), app_id, app_name);
    LOG(INFO) << desktop_shortcut_path;
-@@ -357,7 +357,7 @@ bool OsIntegrationTestOverrideImpl::Dele
+@@ -355,7 +355,7 @@ bool OsIntegrationTestOverrideImpl::Dele
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  bool OsIntegrationTestOverrideImpl::DeleteDesktopDirOnLinux() {
    if (desktop_.IsValid()) {
      return desktop_.Delete();
-@@ -371,7 +371,7 @@ bool OsIntegrationTestOverrideImpl::IsRu
+@@ -369,7 +369,7 @@ bool OsIntegrationTestOverrideImpl::IsRu
      Profile* profile,
      const webapps::AppId& app_id,
      const std::string& app_name) {
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    std::string shortcut_filename =
        "chrome-" + app_id + "-" + profile->GetBaseName().value() + ".desktop";
    base::i18n::ReplaceIllegalCharactersInPath(&shortcut_filename, '_');
-@@ -428,7 +428,7 @@ bool OsIntegrationTestOverrideImpl::IsFi
+@@ -426,7 +426,7 @@ bool OsIntegrationTestOverrideImpl::IsFi
    is_file_handled =
        shell_integration::CanApplicationHandleURL(app_path, test_file_url);
    base::DeleteFile(test_file_path);
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    base::FilePath user_applications_dir = applications();
    bool database_update_called = false;
    for (const LinuxFileRegistration& command : linux_file_registration_) {
-@@ -477,7 +477,7 @@ std::optional<SkBitmap> OsIntegrationTes
+@@ -475,7 +475,7 @@ std::optional<SkBitmap> OsIntegrationTes
      return std::nullopt;
    }
    return GetIconFromShortcutFile(shortcut_path);
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    WebAppProvider* provider = WebAppProvider::GetForLocalAppsUnchecked(profile);
    if (!provider) {
      return std::nullopt;
-@@ -545,7 +545,7 @@ base::FilePath OsIntegrationTestOverride
+@@ -543,7 +543,7 @@ base::FilePath OsIntegrationTestOverride
        return bundle.bundle_path();
      }
    }
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    std::string shortcut_filename =
        "chrome-" + app_id + "-" + profile->GetBaseName().value() + ".desktop";
    base::i18n::ReplaceIllegalCharactersInPath(&shortcut_filename, '_');
-@@ -572,7 +572,7 @@ bool OsIntegrationTestOverrideImpl::IsSh
+@@ -570,7 +570,7 @@ bool OsIntegrationTestOverrideImpl::IsSh
    base::FilePath app_shortcut_path =
        GetShortcutPath(profile, chrome_apps_folder(), app_id, app_name);
    return base::PathExists(app_shortcut_path);
@@ -87,7 +87,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    base::FilePath desktop_shortcut_path =
        GetShortcutPath(profile, desktop(), app_id, app_name);
    return base::PathExists(desktop_shortcut_path);
-@@ -786,7 +786,7 @@ void OsIntegrationTestOverrideImpl::Enab
+@@ -784,7 +784,7 @@ void OsIntegrationTestOverrideImpl::Enab
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -96,7 +96,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
  base::FilePath OsIntegrationTestOverrideImpl::desktop() {
    return desktop_.GetPath();
  }
-@@ -837,7 +837,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
+@@ -835,7 +835,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
    success = chrome_apps_folder_.CreateUniqueTempDirUnderPath(
        outer_temp_dir_.GetPath());
    CHECK(success);
@@ -105,7 +105,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    success = desktop_.CreateUniqueTempDirUnderPath(outer_temp_dir_.GetPath());
    CHECK(success);
    success = startup_.CreateUniqueTempDirUnderPath(outer_temp_dir_.GetPath());
-@@ -850,7 +850,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
+@@ -848,7 +848,7 @@ OsIntegrationTestOverrideImpl::OsIntegra
    CHECK(success);
  #endif
  
@@ -114,7 +114,7 @@ $NetBSD: patch-chrome_browser_web__applications_test_os__integration__test__over
    auto callback = base::BindRepeating([](base::FilePath filename_in,
                                           std::string xdg_command,
                                           std::string file_contents) {
-@@ -922,7 +922,7 @@ OsIntegrationTestOverrideImpl::~OsIntegr
+@@ -920,7 +920,7 @@ OsIntegrationTestOverrideImpl::~OsIntegr
    EXPECT_TRUE(!startup_.IsValid() || startup_.Delete());
  #elif BUILDFLAG(IS_MAC)
    EXPECT_TRUE(!chrome_apps_folder_.IsValid() || DeleteChromeAppsDir());

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_linux_gbm__wrapper.cc,v 1.21 2026/06/08 13:12:49 kikadf Exp $
+$NetBSD: patch-ui_gfx_linux_gbm__wrapper.cc,v 1.22 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/linux/gbm_wrapper.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/gfx/linux/gbm_wrapper.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/gfx/linux/gbm_wrapper.cc
 @@ -341,7 +341,7 @@ class Device final : public ui::GbmDevic
      // of 1x1 BOs which are destroyed before creating the final BO creation used

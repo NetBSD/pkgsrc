@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.1 2026/06/08 13:12:47 kikadf Exp $
+$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.2 2026/07/06 13:06:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h
 @@ -22,7 +22,7 @@
  // Note that I18N_PHONENUMBERS_NO_THREAD_SAFETY must be defined only to let the

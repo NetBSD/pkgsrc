@@ -1,12 +1,12 @@
-$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.21 2026/06/08 13:12:39 kikadf Exp $
+$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.22 2026/07/06 13:06:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
-@@ -269,7 +269,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
+@@ -272,7 +272,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the
  // primary window is minimized by closing the help bubble. Remove this code when
  // the issue is solved at the Views framework level.
@@ -15,7 +15,7 @@ $NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.21 202
  class HelpBubbleView::PrimaryWidgetObserver : public views::WidgetObserver {
   public:
    explicit PrimaryWidgetObserver(HelpBubbleView& help_bubble)
-@@ -748,7 +748,7 @@ void HelpBubbleView::InitializeAndShow(b
+@@ -751,7 +751,7 @@ void HelpBubbleView::InitializeAndShow(b
      event_relay_->Init(this);
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.21 202
    primary_widget_observer_ = std::make_unique<PrimaryWidgetObserver>(*this);
  #endif
  
-@@ -865,7 +865,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
+@@ -868,7 +868,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,
                                                views::Widget* widget) const {
    BubbleDialogDelegateView::OnBeforeBubbleWidgetInit(params, widget);

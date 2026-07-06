@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_skia_src_ports_SkMemory__malloc.cpp,v 1.21 2026/06/08 13:12:48 kikadf Exp $
+$NetBSD: patch-third__party_skia_src_ports_SkMemory__malloc.cpp,v 1.22 2026/07/06 13:06:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/skia/src/ports/SkMemory_malloc.cpp
 @@ -15,7 +15,8 @@
  

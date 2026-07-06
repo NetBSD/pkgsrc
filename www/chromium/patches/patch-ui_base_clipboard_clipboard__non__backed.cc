@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_clipboard_clipboard__non__backed.cc,v 1.21 2026/06/08 13:12:49 kikadf Exp $
+$NetBSD: patch-ui_base_clipboard_clipboard__non__backed.cc,v 1.22 2026/07/06 13:07:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_non_backed.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/base/clipboard/clipboard_non_backed.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/base/clipboard/clipboard_non_backed.cc
 @@ -459,7 +459,7 @@ ClipboardNonBacked::ClipboardNonBacked()
    // so create internal clipboards for platform supported clipboard buffers.

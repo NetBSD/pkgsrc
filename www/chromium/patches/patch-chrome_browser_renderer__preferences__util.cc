@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.22 2026/07/06 13:06:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -37,12 +37,12 @@
  #include "ui/base/ui_base_features.h"
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.21 2026/06/08 1
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -111,7 +111,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -109,7 +109,7 @@ void UpdateFromSystemSettings(blink::Ren
                                Profile* profile) {
    const PrefService* pref_service = profile->GetPrefs();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.21 2026/06/08 1
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
    prefs->focus_ring_color = BUILDFLAG(IS_MAC) ? SkColorSetRGB(0x00, 0x5F, 0xCC)
-@@ -125,7 +125,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -123,7 +123,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->inactive_selection_fg_color = SK_ColorBLACK;
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.21 2026/06/08 1
    if (auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile)) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
        linux_ui_theme->GetFocusRingColor(&prefs->focus_ring_color);
-@@ -142,7 +142,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -140,7 +140,7 @@ void UpdateFromSystemSettings(blink::Ren
  #endif  // BUILDFLAG(IS_LINUX)
  #endif  // BUILDFLAG(USE_AURA)
  

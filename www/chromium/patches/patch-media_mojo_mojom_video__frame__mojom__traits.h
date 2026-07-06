@@ -1,12 +1,12 @@
-$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.h,v 1.20 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.h,v 1.21 2026/07/06 13:06:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.h
-@@ -19,7 +19,7 @@
+@@ -18,7 +18,7 @@
  
  namespace mojo {
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_host__resolver__proc.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-net_dns_host__resolver__proc.cc,v 1.22 2026/07/06 13:06:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/host_resolver_proc.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- net/dns/host_resolver_proc.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ net/dns/host_resolver_proc.cc
 @@ -16,10 +16,6 @@
  #include "net/base/net_errors.h"

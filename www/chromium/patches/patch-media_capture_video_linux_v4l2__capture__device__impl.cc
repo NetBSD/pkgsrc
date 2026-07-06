@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_v4l2__capture__device__impl.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_v4l2__capture__device__impl.cc,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_device_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_device_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_device_impl.cc
 @@ -22,7 +22,7 @@ int V4L2CaptureDeviceImpl::close(int fd)
    return ::close(fd);

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.22 2026/07/06 13:06:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -138,7 +138,7 @@ enum class NetworkSandboxState {
  // The global instance of the SystemNetworkContextManager.
@@ -110,7 +110,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.21 20
    registry->RegisterBooleanPref(prefs::kAuthNegotiateDelegateByKdcPolicy,
                                  false);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -762,11 +762,11 @@ void SystemNetworkContextManager::Regist
+@@ -765,11 +765,11 @@ void SystemNetworkContextManager::Regist
  
    registry->RegisterListPref(prefs::kExplicitlyAllowedNetworkPorts);
  
@@ -124,7 +124,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.21 20
    registry->RegisterBooleanPref(prefs::kReceivedHttpAuthNegotiateHeader, false);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -823,7 +823,7 @@ void SystemNetworkContextManager::OnNetw
+@@ -826,7 +826,7 @@ void SystemNetworkContextManager::OnNetw
    OnNewHttpAuthDynamicParams(http_auth_dynamic_params);
    network_service->ConfigureHttpAuthPrefs(std::move(http_auth_dynamic_params));
  
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.21 20
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -1069,7 +1069,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -1072,7 +1072,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  

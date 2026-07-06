@@ -1,10 +1,10 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.21 2026/06/08 13:12:37 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.22 2026/07/06 13:06:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -283,7 +283,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -24,16 +24,16 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.21 2026/06
    return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -583,7 +583,7 @@ bool GetMobileBitForUAMetadata() {
- }
+@@ -592,7 +592,7 @@ std::string GetPlatformVersion() {
  
- std::string GetPlatformVersion() {
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) 
-   // TODO(crbug.com/40245146): Remove this Blink feature
-   if (base::FeatureList::IsEnabled(
-           blink::features::kReduceUserAgentDataLinuxPlatformVersion)) {
-@@ -637,6 +637,9 @@ std::string GetPlatformForUAMetadata() {
+ #if BUILDFLAG(IS_WIN)
+   return GetWindowsPlatformVersion();
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   return std::string();
+ #else
+ 
+@@ -629,6 +629,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -43,7 +43,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.21 2026/06
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -819,6 +822,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -811,6 +814,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.21 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.22 2026/07/06 13:06:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
 @@ -42,7 +42,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"
@@ -30,10 +30,10 @@ $NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__pro
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
-     if (base::GetCurrentProcId() !=
-         base::trace_event::TraceLog::GetInstance()->process_id()) {
+     if (base::GetCurrentProcId() != perfetto::Platform::GetCurrentProcessId()) {
        auto* chrome_thread = track_descriptor->set_chrome_thread();
-@@ -656,7 +656,7 @@ bool TracingSamplerProfiler::IsStackUnwi
+       chrome_thread->set_is_sandboxed_tid(true);
+@@ -655,7 +655,7 @@ bool TracingSamplerProfiler::IsStackUnwi
      ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
      (BUILDFLAG(IS_CHROMEOS) &&                                              \
       (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \

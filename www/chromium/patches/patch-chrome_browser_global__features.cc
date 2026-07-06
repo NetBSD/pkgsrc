@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.21 2026/06/08 13:12:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.22 2026/07/06 13:06:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/global_features.cc
-@@ -36,7 +36,7 @@
+@@ -38,7 +38,7 @@
  #include "chrome/browser/background/glic/glic_background_mode_manager.h"  // nogncheck
  #endif
  
@@ -15,16 +15,16 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.21 2026/06/08 13:12:32 kik
  // This causes a gn error on Android builds, because gn does not understand
  // buildflags, so we include it only on platforms where it is used.
  #include "chrome/browser/default_browser/default_browser_manager.h"
-@@ -164,7 +164,7 @@ void GlobalFeatures::PostBrowserProcessI
- 
- void GlobalFeatures::PostBrowserProcessInitCore() {
+@@ -175,7 +175,7 @@ void GlobalFeatures::PostBrowserProcessI
+             *g_browser_process, g_browser_process);
+   }
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // TODO(crbug.com/463742800): Migrate WhatsNewRegistry (and other non-core
    // features) to Init().
    whats_new_registry_ = CreateWhatsNewRegistry();
-@@ -238,7 +238,7 @@ void GlobalFeatures::PostMainMessageLoop
+@@ -249,7 +249,7 @@ void GlobalFeatures::PostMainMessageLoop
  
    application_advanced_protection_status_detector_.reset();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.21 2026/06/08 13:12:32 kik
    DefaultBrowserPromptManager::GetInstance()->CloseAllPrompts(
        DefaultBrowserPromptManager::CloseReason::kDismiss);
  #endif
-@@ -257,7 +257,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -268,7 +268,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

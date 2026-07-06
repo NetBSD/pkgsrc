@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.21 2026/06/08 13:12:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.22 2026/07/06 13:06:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -324,7 +324,7 @@ bool WebAppUiManagerImpl::IsAppMigration
+@@ -325,7 +325,7 @@ bool WebAppUiManagerImpl::IsAppMigration
      return false;
    }
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
    BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(window);
    return browser_view &&
           browser_view->GetProperty(kIsPwaUpdateDialogShowingKey) &&
-@@ -648,7 +648,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
+@@ -649,7 +649,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      Browser* browser,
      Profile* profile,
      const std::string& app_id) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
    WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
    CHECK(provider);
  
-@@ -866,7 +866,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -867,7 +867,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
    }
  }
  

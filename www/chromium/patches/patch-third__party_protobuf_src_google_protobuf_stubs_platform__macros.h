@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_protobuf_src_google_protobuf_stubs_platform__macros.h,v 1.21 2026/06/08 13:12:48 kikadf Exp $
+$NetBSD: patch-third__party_protobuf_src_google_protobuf_stubs_platform__macros.h,v 1.22 2026/07/06 13:06:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
 @@ -99,7 +99,7 @@ GOOGLE_PROTOBUF_PLATFORM_ERROR
  

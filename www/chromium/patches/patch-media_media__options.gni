@@ -1,10 +1,10 @@
-$NetBSD: patch-media_media__options.gni,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_media__options.gni,v 1.22 2026/07/06 13:06:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/media_options.gni.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/media_options.gni.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/media_options.gni
 @@ -209,12 +209,18 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.
@@ -23,6 +23,6 @@ $NetBSD: patch-media_media__options.gni,v 1.21 2026/06/08 13:12:42 kikadf Exp $
    # desktop Chromecast builds.
 -  if (is_posix && !is_android && !is_apple &&
 +  if (is_posix && !is_android && !is_apple && !is_bsd &&
-       (!is_castos || (target_cpu == "x86" || target_cpu == "x64") ||
-        is_cast_audio_only)) {
+       (!is_castos || (target_cpu == "x86" || target_cpu == "x64"))) {
      use_alsa = true
+ 

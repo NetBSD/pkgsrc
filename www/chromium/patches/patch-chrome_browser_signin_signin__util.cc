@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.21 2026/06/08 13:12:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.22 2026/07/06 13:06:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -49,7 +49,7 @@
  #include "services/network/public/mojom/cookie_manager.mojom.h"
@@ -12,10 +12,10 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.21 2026/06/08 13:12:33 
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/dialogs/browser_dialogs.h"
  #include "components/strings/grit/components_strings.h"
-@@ -100,7 +100,7 @@ CookiesMover::CookiesMover(base::WeakPtr
+ #include "ui/base/interaction/element_identifier.h"
+@@ -99,7 +99,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;
  
  void CookiesMover::StartMovingCookies() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.21 2026/06/08 13:12:33 
    bool allow_cookies_to_be_moved = base::FeatureList::IsEnabled(
        profile_management::features::kThirdPartyProfileManagement);
  #else
-@@ -402,7 +402,7 @@ bool IsSyncingUserSelectableTypesAllowed
+@@ -401,7 +401,7 @@ bool IsSyncingUserSelectableTypesAllowed
    return true;
  }
  

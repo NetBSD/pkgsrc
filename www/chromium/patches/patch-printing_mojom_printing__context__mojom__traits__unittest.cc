@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.20 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.21 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits_unittest.cc
 @@ -80,7 +80,7 @@ base::DictValue GenerateSampleSystemPrin
               "file:///foo/bar.pdf");

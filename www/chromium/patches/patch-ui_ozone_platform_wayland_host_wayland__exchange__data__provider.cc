@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.cc,v 1.6 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.cc,v 1.7 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_exchange_data_provider.cc
-@@ -74,7 +74,7 @@ int MimeTypeToFormat(const std::string& 
+@@ -76,7 +76,7 @@ int MimeTypeToFormat(const std::string& 
    if (mime_type == ui::kMimeTypeDataTransferCustomData) {
      return OSExchangeData::PICKLED_DATA;
    }
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.
    if (mime_type == ui::kMimeTypePortalFileTransfer ||
        mime_type == ui::kMimeTypePortalFiles) {
      return OSExchangeData::PICKLED_DATA;
-@@ -210,7 +210,7 @@ std::unique_ptr<OSExchangeDataProvider> 
+@@ -211,7 +211,7 @@ std::unique_ptr<OSExchangeDataProvider> 
      const {
    auto clone = std::make_unique<WaylandExchangeDataProvider>();
    CopyData(clone.get());
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.
    clone->additional_data_ = additional_data_;
  #endif
    return clone;
-@@ -254,7 +254,7 @@ std::vector<std::string> WaylandExchange
+@@ -255,7 +255,7 @@ std::vector<std::string> WaylandExchange
      mime_types.push_back(mime_type);
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.
    for (const auto& item : additional_data_) {
      mime_types.push_back(item.first);
    }
-@@ -272,7 +272,7 @@ void WaylandExchangeDataProvider::AddDat
+@@ -273,7 +273,7 @@ void WaylandExchangeDataProvider::AddDat
    DCHECK(data);
    DCHECK(IsMimeTypeSupported(mime_type));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__exchange__data__provider.
    if (mime_type == ui::kMimeTypePortalFileTransfer ||
        mime_type == ui::kMimeTypePortalFiles) {
      additional_data_[mime_type] = base::as_string_view(*data);
-@@ -345,7 +345,7 @@ bool WaylandExchangeDataProvider::Extrac
+@@ -349,7 +349,7 @@ bool WaylandExchangeDataProvider::Extrac
      *out_content = std::string(pickle->AsStringView());
      return true;
    }

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.21 2026/06/08 13:12:30 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.22 2026/07/06 13:06:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ base/system/sys_info_freebsd.cc
 @@ -10,20 +10,72 @@
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/audio_manager_sndio.cc.orig	2026-06-06 07:58:20.129351653 +0000
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2026-07-05 17:05:15.966639953 +0000
 +++ media/audio/sndio/audio_manager_sndio.cc
-@@ -0,0 +1,215 @@
+@@ -0,0 +1,217 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -58,15 +58,17 @@ $NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.21 2026/06/08 13:1
 +  return true;
 +}
 +
-+void AudioManagerSndio::GetAudioInputDeviceNames(
++bool AudioManagerSndio::GetAudioInputDeviceNames(
 +    AudioDeviceNames* device_names) {
 +  DCHECK(device_names->empty());
 +  AddDefaultDevice(device_names);
++  return true;
 +}
 +
-+void AudioManagerSndio::GetAudioOutputDeviceNames(
++bool AudioManagerSndio::GetAudioOutputDeviceNames(
 +    AudioDeviceNames* device_names) {
 +  AddDefaultDevice(device_names);
++  return true;
 +}
 +
 +#if defined(USE_SNDIO)

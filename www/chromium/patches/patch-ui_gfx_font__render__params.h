@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_font__render__params.h,v 1.21 2026/06/08 13:12:49 kikadf Exp $
+$NetBSD: patch-ui_gfx_font__render__params.h,v 1.22 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_render_params.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/gfx/font_render_params.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/gfx/font_render_params.h
 @@ -115,7 +115,7 @@ COMPONENT_EXPORT(GFX)
  FontRenderParams GetFontRenderParams(const FontRenderParamsQuery& query,

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.21 2026/06/08 13:12:45 kikadf Exp $
+$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.22 2026/07/06 13:06:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2026-06-06 07:58:20.444818073 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2026-07-05 17:05:16.190388898 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
 @@ -0,0 +1,69 @@
 +// Copyright 2022 The Chromium Authors. All rights reserved.

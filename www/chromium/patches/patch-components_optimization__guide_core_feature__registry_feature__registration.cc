@@ -1,12 +1,12 @@
-$NetBSD: patch-components_optimization__guide_core_feature__registry_feature__registration.cc,v 1.14 2026/06/08 13:12:38 kikadf Exp $
+$NetBSD: patch-components_optimization__guide_core_feature__registry_feature__registration.cc,v 1.15 2026/07/06 13:06:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/feature_registry/feature_registration.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/optimization_guide/core/feature_registry/feature_registration.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/optimization_guide/core/feature_registry/feature_registration.cc
-@@ -87,7 +87,7 @@ BASE_FEATURE(kProductSpecificationsMqlsL
+@@ -78,7 +78,7 @@ BASE_FEATURE(kProductSpecificationsMqlsL
  
  BASE_FEATURE(kFormsClassificationsMqlsLogging,
               BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) ||

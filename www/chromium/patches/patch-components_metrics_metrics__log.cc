@@ -1,12 +1,12 @@
-$NetBSD: patch-components_metrics_metrics__log.cc,v 1.21 2026/06/08 13:12:38 kikadf Exp $
+$NetBSD: patch-components_metrics_metrics__log.cc,v 1.22 2026/07/06 13:06:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- components/metrics/metrics_log.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ components/metrics/metrics_log.cc
-@@ -60,7 +60,7 @@
+@@ -61,7 +61,7 @@
  #include "base/win/current_module.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_metrics_metrics__log.cc,v 1.21 2026/06/08 13:12:38 kik
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #endif
-@@ -156,7 +156,7 @@ void RecordCurrentTime(
+@@ -157,7 +157,7 @@ void RecordCurrentTime(
    }
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_metrics_metrics__log.cc,v 1.21 2026/06/08 13:12:38 kik
  metrics::SystemProfileProto::OS::XdgSessionType ToProtoSessionType(
      base::nix::SessionType session_type) {
    switch (session_type) {
-@@ -444,7 +444,7 @@ void MetricsLog::RecordCoreSystemProfile
+@@ -446,7 +446,7 @@ void MetricsLog::RecordCoreSystemProfile
  // OperatingSystemVersion refers to the ChromeOS release version.
  #if BUILDFLAG(IS_CHROMEOS)
    os->set_kernel_version(base::SysInfo::KernelVersion());
@@ -33,7 +33,7 @@ $NetBSD: patch-components_metrics_metrics__log.cc,v 1.21 2026/06/08 13:12:38 kik
    // Linux operating system version is copied over into kernel version to be
    // consistent.
    os->set_kernel_version(base::SysInfo::OperatingSystemVersion());
-@@ -461,7 +461,7 @@ void MetricsLog::RecordCoreSystemProfile
+@@ -465,7 +465,7 @@ void MetricsLog::RecordCoreSystemProfile
    os->set_build_number(base::SysInfo::GetIOSBuildNumber());
  #endif
  

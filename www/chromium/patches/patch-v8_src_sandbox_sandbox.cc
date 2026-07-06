@@ -1,12 +1,12 @@
-$NetBSD: patch-v8_src_sandbox_sandbox.cc,v 1.21 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-v8_src_sandbox_sandbox.cc,v 1.22 2026/07/06 13:07:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/sandbox/sandbox.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- v8/src/sandbox/sandbox.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ v8/src/sandbox/sandbox.cc
-@@ -80,7 +80,7 @@ static Address DetermineAddressSpaceLimi
+@@ -82,7 +82,7 @@ static Address DetermineAddressSpaceLimi
    }
  #endif  // V8_TARGET_ARCH_X64
  

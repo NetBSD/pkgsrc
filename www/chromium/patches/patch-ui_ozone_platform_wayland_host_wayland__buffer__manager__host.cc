@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__buffer__manager__host.cc,v 1.9 2026/06/08 13:12:50 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__buffer__manager__host.cc,v 1.10 2026/07/06 13:07:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_buffer_manager_host.cc
 @@ -46,9 +46,13 @@ std::string NumberToString(uint32_t numb
  }

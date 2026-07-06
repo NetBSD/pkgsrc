@@ -1,21 +1,21 @@
-$NetBSD: patch-remoting_host_audio__injector.cc,v 1.1 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-remoting_host_audio__injector.cc,v 1.2 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/audio_injector.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- remoting/host/audio_injector.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ remoting/host/audio_injector.cc
-@@ -8,7 +8,7 @@
+@@ -7,7 +7,7 @@
  #include "build/build_config.h"
- #include "remoting/proto/audio.pb.h"
+ #include "remoting/base/fifo_buffer.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "remoting/host/linux/pipewire_audio_injector.h"
  #endif
  
-@@ -26,7 +26,7 @@ void AudioInjector::ProcessAudioPacket(s
+@@ -19,7 +19,7 @@ AudioInjector::~AudioInjector() = defaul
  
  // static
  bool AudioInjector::IsSupported() {
@@ -24,3 +24,12 @@ $NetBSD: patch-remoting_host_audio__injector.cc,v 1.1 2026/06/08 13:12:43 kikadf
    // On Linux, we check if PipeWire is available and can be initialized.
    // Note that in multi-process mode, this may return true in the network
    // process because the libraries are loadable, even though the virtual audio
+@@ -34,7 +34,7 @@ bool AudioInjector::IsSupported() {
+ // static
+ std::unique_ptr<AudioInjector> AudioInjector::Create(
+     std::unique_ptr<FifoBufferReader> audio_reader) {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return PipewireAudioInjector::Create(std::move(audio_reader));
+ #else
+   return nullptr;

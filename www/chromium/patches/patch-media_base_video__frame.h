@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.h,v 1.22 2026/07/06 13:06:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2026-05-28 23:24:11.000000000 +0000
+--- media/base/video_frame.h.orig	2026-06-23 23:37:18.000000000 +0000
 +++ media/base/video_frame.h
 @@ -40,7 +40,7 @@
  #include "ui/gfx/geometry/size.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
  #include "base/files/scoped_file.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -91,7 +91,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -87,7 +87,7 @@ class MEDIA_EXPORT VideoFrame : public b
      STORAGE_UNOWNED_MEMORY = 2,  // External, non owned data pointers.
      STORAGE_OWNED_MEMORY = 3,  // VideoFrame has allocated its own data buffer.
      STORAGE_SHMEM = 4,         // Backed by read-only shared memory.
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
      STORAGE_DMABUFS = 5,  // Each plane is stored into a DmaBuf.
  #endif
      STORAGE_MAPPABLE_SHARED_IMAGE = 6,
-@@ -312,7 +312,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -308,7 +308,7 @@ class MEDIA_EXPORT VideoFrame : public b
        base::span<const uint8_t> uv_data,
        base::TimeDelta timestamp);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -631,7 +631,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -616,7 +616,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // wait for the included sync point.
    scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.21 2026/06/08 13:12:42 kikadf Exp $
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -836,7 +836,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -821,7 +821,7 @@ class MEDIA_EXPORT VideoFrame : public b
    base::ReadOnlySharedMemoryRegion owned_shm_region_;
    base::ReadOnlySharedMemoryMapping owned_shm_mapping_;
  

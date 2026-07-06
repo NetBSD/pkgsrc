@@ -1,11 +1,11 @@
-$NetBSD: patch-third__party_dawn_src_dawn_common_Platform.h,v 1.21 2026/06/08 13:12:46 kikadf Exp $
+$NetBSD: patch-third__party_dawn_src_utils_platform.h,v 1.1 2026/07/06 13:06:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/src/dawn/common/Platform.h.orig	2026-05-28 23:24:11.000000000 +0000
-+++ third_party/dawn/src/dawn/common/Platform.h
+--- third_party/dawn/src/utils/platform.h.orig	2026-06-23 23:37:18.000000000 +0000
++++ third_party/dawn/src/utils/platform.h
 @@ -60,6 +60,11 @@
  #error "Unsupported Windows platform."
  #endif

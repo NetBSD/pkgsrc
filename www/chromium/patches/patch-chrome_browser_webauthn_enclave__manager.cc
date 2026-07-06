@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_webauthn_enclave__manager.cc,v 1.21 2026/06/08 13:12:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_enclave__manager.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/enclave_manager.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- chrome/browser/webauthn/enclave_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ chrome/browser/webauthn/enclave_manager.cc
-@@ -750,7 +750,7 @@ base::flat_set<GaiaId> GetGaiaIDs(
+@@ -748,7 +748,7 @@ base::flat_set<GaiaId> GetGaiaIDs(
  
  std::string UserVerifyingLabelToString(crypto::UserVerifyingKeyLabel label) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_webauthn_enclave__manager.cc,v 1.21 2026/06/08 13:
    return label;
  #else
    return std::string("placeholder");
-@@ -760,7 +760,7 @@ std::string UserVerifyingLabelToString(c
+@@ -758,7 +758,7 @@ std::string UserVerifyingLabelToString(c
  std::optional<crypto::UserVerifyingKeyLabel> UserVerifyingKeyLabelFromString(
      std::string saved_label) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_backend_cups__ipp__helper.cc,v 1.21 2026/06/08 13:12:43 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__ipp__helper.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_ipp_helper.cc.orig	2026-05-28 23:24:11.000000000 +0000
+--- printing/backend/cups_ipp_helper.cc.orig	2026-06-23 23:37:18.000000000 +0000
 +++ printing/backend/cups_ipp_helper.cc
 @@ -199,7 +199,7 @@ void ExtractResolutions(const CupsOption
    // Provide a default DPI if no valid DPI is found.
