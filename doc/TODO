@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27546 2026/07/06 09:22:29 wiz Exp $
+$NetBSD: TODO,v 1.27547 2026/07/06 09:27:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-bz2-0.8.0
 	o ocaml-cppo-1.6.9
 	o ocaml-cudf-0.10
-	o ocaml-dune-3.24.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1138,7 +1137,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
-	o py-pydantic-core-2.47.0
+	o py-pydantic-core-2.47.0 [waiting for py-pydantic release that works with this]
 	o py-readme_renderer-45.0
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-3.12.1
