@@ -1,0 +1,1 @@
+bin/httpx2 @PREFIX@/bin/httpx2-@PYVERSSUFFIX@
