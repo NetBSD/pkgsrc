@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/11/17 11:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/07/06 12:36:37 adam Exp $
 
-DISTNAME=	dblatex-0.3.10
-PKGREVISION=	9
+DISTNAME=	dblatex3-0.3.12
+PKGNAME=	${DISTNAME:S/tex3/tex/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dblatex.sourceforge.net/
 COMMENT=	DocBook to LaTeX Publishing
 LICENSE=	gnu-gpl-v2
+
+EGG_NAME=	${DISTNAME:S/tex3/tex/}
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
@@ -41,12 +43,15 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 DEPENDS+=	tex-eepic-[0-9]*:../../graphics/tex-eepic
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake:test
+
+# As of 0.3.12, needs imp module which has been removed in Python 3.12.
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "options.mk"
 
-REPLACE_PYTHON+=		scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.3.2
+REPLACE_PYTHON+=	lib/dbtexmf/dblatex/xetex/*.py
+REPLACE_PYTHON+=	scripts/dblatex
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing man page installation path.
@@ -56,8 +61,9 @@ SUBST_SED.man+=		-e 's,share/man/man1,${PKGMANDIR}/man1,'
 SUBST_SED.man+=		-e "s,'python','${PYTHONBIN}',"
 
 do-test:
-	cd ${WRKSRC}/tests/mathml && gmake
+	cd ${WRKSRC}/tests/mathml && ${GMAKE}
 
 .include "../../lang/python/application.mk"
+# wheel.mk doesn't install "dblatex" script
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
