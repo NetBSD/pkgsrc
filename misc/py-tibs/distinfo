@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/06/28 08:07:13 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/07/06 12:39:03 adam Exp $
 
 BLAKE2s (allocator-api2-0.2.21.crate) = 19229533116e7c08961658159a3a9779307bf1241963efefbcb34168b00ed036
 SHA512 (allocator-api2-0.2.21.crate) = 1bb5711ed6041b0d7eae2ec784b8aa9d215db0f49cf79c692946eeb0db545d358cbcaa8156ae34e51d05287c08574f1da251ee574f2392949e4ed26d04770d03
@@ -9,9 +9,9 @@ Size (anyhow-1.0.102.crate) = 48658 bytes
 BLAKE2s (bitflags-2.11.0.crate) = cec5149472f1a67672f4bd830d0cea28a3258f8feda5b464acef8a2c737cbefd
 SHA512 (bitflags-2.11.0.crate) = d6c0de6c06ed8d1249dd69de035dfe5b23d9f1a8fcdc7535756622cf660807c5e1c692dee1ac832c06be1ce41b225e3d60f36be4d1896bab7d986d18946f6c48
 Size (bitflags-2.11.0.crate) = 48906 bytes
-BLAKE2s (bitvec-1.0.1.crate) = a905d786a2b567b464d433de34f400310ddb3d60a2195db6a52c332e6cbe0d88
-SHA512 (bitvec-1.0.1.crate) = 83d643c5aca020ebbe9094b5aaba6a796e7c3c509228a4348444e57a06bc3a5dd042eed57a2254d91661e73bdab2bc0d1bd02be376906acc6b6d75b5354a8d8e
-Size (bitvec-1.0.1.crate) = 224375 bytes
+BLAKE2s (bitvec-1.1.1.crate) = f3171e0ae3198390700d97167e8116844503a79da91285a64c00558bb79e5812
+SHA512 (bitvec-1.1.1.crate) = 4f3bd010ca5eccc766d5611b7770d9d047d61495938694d0a6a1e163845326af51ff7c85e281b9a2f84b9a2e5d376d03fe530b82f8e4a120de9ff28a9b2299d8
+Size (bitvec-1.1.1.crate) = 225850 bytes
 BLAKE2s (block-buffer-0.12.0.crate) = e57deef98f0ea479fffc48bf76ba323eb65cdb12ecc1c8312412a1b5afaeee9a
 SHA512 (block-buffer-0.12.0.crate) = 3ebe9faa231d777f76dbb7b78c72eebd913b109cf929b0a66399758d06829a7c1cc9ab06f8ac951739d91be0cb402a49bff918228359399367ce8e69a112da78
 Size (block-buffer-0.12.0.crate) = 14926 bytes
@@ -186,9 +186,9 @@ Size (tap-1.0.1.crate) = 11316 bytes
 BLAKE2s (target-lexicon-0.13.5.crate) = 68bf6c69ac036b1df41f1073b8a85e072da1e13c570340afe4f59722e4c95fd0
 SHA512 (target-lexicon-0.13.5.crate) = 956df27c01e1186c5356117ffd07810fc0b62fb919d5bfd215955ba85be00ef675212a3c0dc36679986be7b825442fec5c93c7643b7e1e19c04572e6463546fc
 Size (target-lexicon-0.13.5.crate) = 26928 bytes
-BLAKE2s (tibs-0.11.0.tar.gz) = e7d6cdd67c8e3103c95daa96f8e0a46878a1433ce8141c6159ea085dbbd20d94
-SHA512 (tibs-0.11.0.tar.gz) = 28b6af737198cecae38a985588f9ea14ad7763fa0f32475b4ee6654adf02bd7f042387ae0810e3d866fed7f3b93b2f1eb13f14a4a6b77891093c3f8532a34196
-Size (tibs-0.11.0.tar.gz) = 1930081 bytes
+BLAKE2s (tibs-0.12.0.tar.gz) = 1bba54c019c7195784616dba5a2502c7a62e9cc3b674277d79ea7287309ae8ee
+SHA512 (tibs-0.12.0.tar.gz) = 58d8161c5eb553b3e211777da67fdb0fd6dac326b9ccb4dccf917fd0ec24b79f395a214f53829e129267b6830a4d557d4b4bac85a2edbaefaef5eb25ae4667fa
+Size (tibs-0.12.0.tar.gz) = 2164862 bytes
 BLAKE2s (typenum-1.20.1.crate) = 934ab6c421561d93f1a27032be23ce74c9597f8b3a400b3a67b50af525e91ff3
 SHA512 (typenum-1.20.1.crate) = ad4768b49dc06808e3135411ffaf21453572d152f71d73c34b7fe5d00e276d3e121dc78ebed57d620cf46b5ab24b5b5e0787f38ad9ce8bd12330b499cbbde5e1
 Size (typenum-1.20.1.crate) = 105479 bytes
