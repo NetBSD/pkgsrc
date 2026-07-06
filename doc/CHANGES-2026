@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4282 2026/07/06 12:36:16 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4283 2026/07/06 12:42:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6402,3 +6402,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtkmm3 to 3.24.11 [adam 2026-07-06]
 	Updated textproc/yq to 4.1.1 [adam 2026-07-06]
 	Updated geography/proj-doc to 9.8.1 [gdt 2026-07-06]
+	Updated textproc/dblatex to 0.3.12 [adam 2026-07-06]
+	Updated misc/py-tibs to 0.12.0 [adam 2026-07-06]
