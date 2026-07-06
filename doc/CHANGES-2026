@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4292 2026/07/06 16:59:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4293 2026/07/06 17:08:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6418,3 +6418,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-nh3 to 0.3.6 [adam 2026-07-06]
 	Updated textproc/py-readme_renderer to 45.0 [adam 2026-07-06]
 	Updated net/py-responses to 0.26.2 [adam 2026-07-06]
+	Updated devel/msgpack to 7.0.1 [adam 2026-07-06]
+	Updated editors/neovim to 0.12.4 [adam 2026-07-06]
