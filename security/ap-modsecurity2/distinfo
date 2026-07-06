@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:16:59 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/07/06 19:05:05 drixter Exp $
 
-BLAKE2s (modsecurity-apache_2.7.7.tar.gz) = 396cb59d03ccf22faf502cf2d3f6e53b9a18f4b2738025fa68c3e265b02a4747
-SHA512 (modsecurity-apache_2.7.7.tar.gz) = 859f72580b6acaae5db180f98ee32ad2cb0f3ef24321d0c2df20ddd9fcfbc6c09c98b672012dc4931a6fd14f3c21c38ed31ab8900940382fcb48b37f30005a7d
-Size (modsecurity-apache_2.7.7.tar.gz) = 1003835 bytes
-SHA1 (patch-apache2_msc__crypt.c) = 01bdb8291c83a8abbd1e990d96a768d9bec0ef89
-SHA1 (patch-apache2_msc__crypt.h) = dc83f494f81823deddf00dd005a632d085039664
+BLAKE2s (modsecurity-v2.9.14.tar.gz) = e2bb921b92c75e15c23251ca4f08991262d29ebd61eb0e6c527f81ca28af6a2f
+SHA512 (modsecurity-v2.9.14.tar.gz) = 788acc877295daa82d8e1aed7845e904194e54fda66ee5f6c24e57b2d9cf073feff124048942f1551ea1730e3d288818c57f6db27ea2b2c21d841267680535ff
+Size (modsecurity-v2.9.14.tar.gz) = 6644472 bytes
