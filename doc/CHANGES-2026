@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4264 2026/07/06 07:57:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4265 2026/07/06 08:22:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6380,3 +6380,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-project-metadata to 0.12.1 [wiz 2026-07-06]
 	Updated devel/cargo-nextest to 0.9.140 [adam 2026-07-06]
 	Updated devel/py-dulwich to 1.2.8 [adam 2026-07-06]
+	Updated textproc/py-sphinx-argparse to 0.6.0 [wiz 2026-07-06]
