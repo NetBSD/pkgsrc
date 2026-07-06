@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/06/07 21:32:58 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/07/06 08:52:45 wiz Exp $
 
 BLAKE2s (github.com__thales_ignite_crypto11_@v_v1.2.5.mod) = 7a069559ce794b5e3e1d960de992bc29f46e96cf802309a27f2387a1f2876bdd
 SHA512 (github.com__thales_ignite_crypto11_@v_v1.2.5.mod) = 1cddcfeedf575c0b4ba8520a05db19d58a691602f448e1b16f0c5460f653cbd8b34e2880620eb0802d0d5e7122f26697a60c3c0424806979d58104b51a6d8af1
@@ -414,6 +414,6 @@ Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
-BLAKE2s (restish-2.2.0.tar.gz) = 43304408b91f5b70b15b76963ff9beea133cafbeb2fc839b4e9d2a9ff0869143
-SHA512 (restish-2.2.0.tar.gz) = 250d87cf2a82f40b8ca3fca994d86457c24867b1111192822e364341a5e64c497de7172b63338feaeaf3bb880c58850e8cf37fd980ca9700249b57108fcac8e6
-Size (restish-2.2.0.tar.gz) = 2303145 bytes
+BLAKE2s (restish-2.3.0.tar.gz) = 73ea1dbad41bfe7600614f8d98a5275402d1abbe577e9bea009cf87c6de5c22f
+SHA512 (restish-2.3.0.tar.gz) = 7b8e9912f437a152ee0a5f0440bb36bf1aeedc4062c9f7a2ffc4dea0c11f12aae8f4ad60a79bfeba9049197673474eb98e931671feb425537123d25af29759e0
+Size (restish-2.3.0.tar.gz) = 2364717 bytes
