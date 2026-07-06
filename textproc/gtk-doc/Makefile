@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2026/01/17 21:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/07/06 13:50:09 adam Exp $
 
-DISTNAME=	gtk-doc-1.34.0
-PKGREVISION=	7
+DISTNAME=	gtk-doc-1.36.1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,10 +15,10 @@ DEPENDS+=	docbook-xsl>=1.79.2nb6:../../textproc/docbook-xsl
 DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
-MESON_REQD+=		0.55
+MESON_REQD+=		0.64
 USE_TOOLS+=		itstool msgfmt pkg-config:run
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 
