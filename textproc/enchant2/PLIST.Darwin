@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.Darwin,v 1.5 2025/07/18 16:25:39 schmonz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.6 2026/07/06 05:26:34 wiz Exp $
 lib/enchant-2/enchant_applespell.so
-share/enchant-2/AppleSpell.config
