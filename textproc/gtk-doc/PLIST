@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/05/11 18:58:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/07/06 13:50:09 adam Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
@@ -71,10 +71,14 @@ share/help/gu/gtk-doc-manual/fdl-appendix.xml
 share/help/gu/gtk-doc-manual/index.docbook
 share/help/hu/gtk-doc-manual/fdl-appendix.xml
 share/help/hu/gtk-doc-manual/index.docbook
+share/help/kk/gtk-doc-manual/fdl-appendix.xml
+share/help/kk/gtk-doc-manual/index.docbook
 share/help/pt_BR/gtk-doc-manual/fdl-appendix.xml
 share/help/pt_BR/gtk-doc-manual/index.docbook
 share/help/sl/gtk-doc-manual/fdl-appendix.xml
 share/help/sl/gtk-doc-manual/index.docbook
+share/help/sr/gtk-doc-manual/fdl-appendix.xml
+share/help/sr/gtk-doc-manual/index.docbook
 share/help/sv/gtk-doc-manual/fdl-appendix.xml
 share/help/sv/gtk-doc-manual/index.docbook
 share/help/ta/gtk-doc-manual/fdl-appendix.xml
