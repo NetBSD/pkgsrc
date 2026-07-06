@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.8 2025/01/19 19:01:22 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/07/06 14:51:54 wiz Exp $
 
 BLAKE2s (lablgtk-3.1.5.tar.gz) = b59de086517387d5ba9d5dd914b93f53f06b68e92b219f79f672fdc335abd25e
 SHA512 (lablgtk-3.1.5.tar.gz) = 750f57ea2ccb0534123596aca04a4ba12bbf67bafb521a7978e6acc8027b2b3b822d373bf3fabb4018640c5e2d5bc3d5a336e91ceb8ff037b1f7a048440df03a
 Size (lablgtk-3.1.5.tar.gz) = 1045721 bytes
 SHA1 (patch-src_dune) = 47d9fb3af9dbcdff95fa99511889586d5a6b122b
+SHA1 (patch-tools_introspection_propcc.ml) = 16c13f230552fadb0c67903731f4595e88e7b63e
+SHA1 (patch-tools_introspection_propcc.ml4) = 809953048871c3db90c969e8c8078a7ec143fa6a
+SHA1 (patch-tools_propcc.ml) = e9c9b7fe1c6e20741d75b61355039f3b2c8a68b5
+SHA1 (patch-tools_propcc.ml4) = d16c71aaff542e6aba243fe03a5ea3438432c855
