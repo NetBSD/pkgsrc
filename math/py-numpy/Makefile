@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.153 2026/06/28 15:40:18 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2026/07/06 07:11:59 wiz Exp $
 
-DISTNAME=	numpy-2.5.0
+DISTNAME=	numpy-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -82,8 +82,8 @@ SUBST_MESSAGE.paths=	Fixing path to numpy-configure (for tests).
 SUBST_FILES.paths=	numpy/tests/test_configtool.py
 SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
 
-# as of 2.5.0
-# 35 failed, 47765 passed, 336 skipped, 3634 deselected, 33 xfailed, 1 xpassed, 14 warnings
+# as of 2.5.1
+# 35 failed, 47794 passed, 336 skipped, 3634 deselected, 33 xfailed, 1 xpassed, 14 warnings
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
