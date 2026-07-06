@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2026/01/17 21:33:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/06 06:28:35 wiz Exp $
 bin/xb-tool
 include/libxmlb-2/libxmlb/xb-builder-fixup.h
 include/libxmlb-2/libxmlb/xb-builder-node.h
 include/libxmlb-2/libxmlb/xb-builder-source-ctx.h
 include/libxmlb-2/libxmlb/xb-builder-source.h
 include/libxmlb-2/libxmlb/xb-builder.h
+include/libxmlb-2/libxmlb/xb-compile-glib-2-62.h
 include/libxmlb-2/libxmlb/xb-compile.h
 include/libxmlb-2/libxmlb/xb-machine.h
 include/libxmlb-2/libxmlb/xb-node-query.h
