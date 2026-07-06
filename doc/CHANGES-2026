@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4270 2026/07/06 08:52:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4271 2026/07/06 08:56:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-setuptools to 83.0.0 [wiz 2026-07-06]
 	Updated sysutils/restic to 0.19.1 [wiz 2026-07-06]
 	Updated www/restish to 2.3.0 [wiz 2026-07-06]
+	Updated mail/dmarc-report-viewer to 2.5.2 [wiz 2026-07-06]
