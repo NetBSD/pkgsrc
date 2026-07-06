@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4294 2026/07/06 18:24:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4295 2026/07/06 18:27:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6421,3 +6421,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/msgpack to 7.0.1 [adam 2026-07-06]
 	Updated editors/neovim to 0.12.4 [adam 2026-07-06]
 	Updated devel/lcov to 2.5 [wiz 2026-07-06]
+	Updated wayland/foot to 1.27.0 [bsiegert 2026-07-06]
