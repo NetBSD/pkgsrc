@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.12 2026/06/13 05:36:38 adam Exp $
+# $NetBSD: go-modules.mk,v 1.13 2026/07/06 08:49:45 wiz Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.25.1.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.25.1.zip
@@ -104,8 +104,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/golang-lru/v2/@v/v2.0.7.zip
 GO_MODULE_FILES+=	github.com/ianlancetaylor/demangle/@v/v0.0.0-20210905161508-09a460cdf81d.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.18.4.mod
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.18.4.zip
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.18.6.mod
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.18.6.zip
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.11.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.11.zip
