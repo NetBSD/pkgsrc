@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2026/06/24 21:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2026/07/06 14:33:22 adam Exp $
 
-DISTNAME=	xournalpp-1.3.3
-PKGREVISION=	3
+DISTNAME=	xournalpp-1.3.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,17 +10,16 @@ HOMEPAGE=	https://github.com/xournalpp/xournalpp
 COMMENT=	Take notes, sketch and annotate PDFs
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++17 filesystem
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		msgfmt msgmerge pkg-config xgettext
 
-BUILD_TARGET=		translations xournalpp
-CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
-CMAKE_REQD+=		3.18
-
-USE_CXX_FEATURES+=	c++17 filesystem
 # downloads files during configure stage
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_CPPTRACE=OFF
+# Always install desktop file for consistent PLIST.
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_DESKTOP_FILES=ON
+# Let PkgSrc handle man page compression.
+CMAKE_CONFIGURE_ARGS+=	-DMAN_COMPRESS=OFF
 
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
@@ -30,16 +28,11 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
-
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
@@ -48,12 +41,10 @@ post-install:
 .include "../../lang/lua54/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/qpdf/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtksourceview4/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

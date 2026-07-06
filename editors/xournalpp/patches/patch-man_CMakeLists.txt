@@ -1,0 +1,33 @@
+$NetBSD: patch-man_CMakeLists.txt,v 1.1 2026/07/06 14:33:22 adam Exp $
+
+Install man pages on Darwin.
+Use proper path for man pages.
+
+--- man/CMakeLists.txt.orig	2026-07-06 13:59:22.316035582 +0000
++++ man/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ cmake_minimum_required(VERSION 3.12)
+ cmake_policy(VERSION 3.12)
+ 
+-if (WIN32 OR APPLE)
++if (WIN32)
+   # Windows does not support man pages and has no thumbnailer like this
+   # MacOS does not have help2man so no man pages can be generated
+   return ()
+@@ -38,7 +38,7 @@ if(WITH_MAN)
+ 
+   if (NOT MAN_COMPRESS)
+     add_custom_target(manpage ALL DEPENDS ${MAN_PAGE} ${MAN_PAGE_THUMB})
+-    install(FILES ${MAN_PAGE} ${MAN_PAGE_THUMB} DESTINATION "share/man/man1")
++    install(FILES ${MAN_PAGE} ${MAN_PAGE_THUMB} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+   else()
+     set(MAN_FILE "${MAN_PAGE}.gz")
+     set(MAN_FILE_THUMB "${MAN_PAGE_THUMB}.gz")
+@@ -50,6 +50,6 @@ if(WITH_MAN)
+     )
+ 
+     add_custom_target(manpage ALL DEPENDS ${MAN_FILE} ${MAN_FILE_THUMB})
+-    install(FILES ${MAN_FILE} ${MAN_FILE_THUMB} DESTINATION "share/man/man1")
++    install(FILES ${MAN_FILE} ${MAN_FILE_THUMB} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+   endif()
+ endif()
