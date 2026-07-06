@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4293 2026/07/06 17:08:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4294 2026/07/06 18:24:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6420,3 +6420,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-responses to 0.26.2 [adam 2026-07-06]
 	Updated devel/msgpack to 7.0.1 [adam 2026-07-06]
 	Updated editors/neovim to 0.12.4 [adam 2026-07-06]
+	Updated devel/lcov to 2.5 [wiz 2026-07-06]
