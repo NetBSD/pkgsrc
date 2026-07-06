@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4274 2026/07/06 09:22:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4275 2026/07/06 09:27:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6390,3 +6390,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ast-grep to 0.44.1 [wiz 2026-07-06]
 	Updated textproc/rumdl to 0.2.28 [wiz 2026-07-06]
 	Updated mail/rspamd to 4.1.1 [wiz 2026-07-06]
+	Updated devel/ocaml-dune to 3.24.0 [wiz 2026-07-06]
