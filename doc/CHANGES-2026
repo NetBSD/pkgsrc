@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4266 2026/07/06 08:25:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4267 2026/07/06 08:27:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6382,3 +6382,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dulwich to 1.2.8 [adam 2026-07-06]
 	Updated textproc/py-sphinx-argparse to 0.6.0 [wiz 2026-07-06]
 	Updated net/yt-dlp to 2026.7.4 [wiz 2026-07-06]
+	Updated devel/jjui to 0.10.8 [wiz 2026-07-06]
