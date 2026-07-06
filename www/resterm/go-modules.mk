@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2026/06/23 11:34:17 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.2 2026/07/06 13:01:38 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.zip
@@ -244,14 +244,14 @@ GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20250910181357-589584f1c912.mod
 GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20250910181357-589584f1c912.zip
 GO_MODULE_FILES+=	k8s.io/utils/@v/v0.0.0-20251002143259-bc988d571ff4.mod
 GO_MODULE_FILES+=	k8s.io/utils/@v/v0.0.0-20251002143259-bc988d571ff4.zip
-GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.3.mod
-GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.3.zip
+GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.4.mod
+GO_MODULE_FILES+=	modernc.org/libc/@v/v1.73.4.zip
 GO_MODULE_FILES+=	modernc.org/mathutil/@v/v1.7.1.mod
 GO_MODULE_FILES+=	modernc.org/mathutil/@v/v1.7.1.zip
 GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.mod
 GO_MODULE_FILES+=	modernc.org/memory/@v/v1.11.0.zip
-GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.mod
-GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.52.1-0.20260614085003-e62c32f2abc6.zip
+GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.53.0.mod
+GO_MODULE_FILES+=	modernc.org/sqlite/@v/v1.53.0.zip
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.mod
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.zip
 GO_MODULE_FILES+=	sigs.k8s.io/json/@v/v0.0.0-20250730193827-2d320260d730.mod
