@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27534 2026/07/06 06:59:22 wiz Exp $
+$NetBSD: TODO,v 1.27535 2026/07/06 07:12:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-nh3-0.3.6
-	o py-numpy-2.5.1
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
