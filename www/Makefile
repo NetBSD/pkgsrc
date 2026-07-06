@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1925 2026/07/04 11:49:00 gdt Exp $
+# $NetBSD: Makefile,v 1.1926 2026/07/06 06:54:55 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -852,12 +852,14 @@ SUBDIR+=	py-hishel
 SUBDIR+=	py-http_ece
 SUBDIR+=	py-httpbin
 SUBDIR+=	py-httpcore
+SUBDIR+=	py-httpcore2
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-httpretty
 SUBDIR+=	py-httptools
 SUBDIR+=	py-httpx
 SUBDIR+=	py-httpx-socks
+SUBDIR+=	py-httpx2
 SUBDIR+=	py-hypercorn
 SUBDIR+=	py-hyperframe
 SUBDIR+=	py-hyperkitty
