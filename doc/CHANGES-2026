@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4296 2026/07/06 19:04:32 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4297 2026/07/06 21:03:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6423,3 +6423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lcov to 2.5 [wiz 2026-07-06]
 	Updated wayland/foot to 1.27.0 [bsiegert 2026-07-06]
 	Updated security/ap-modsecurity2 to 2.9.14 [drixter 2026-07-06]
+	Updated net/libcares to 1.34.7 [wiz 2026-07-06]
