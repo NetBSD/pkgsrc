@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27544 2026/07/06 09:01:11 wiz Exp $
+$NetBSD: TODO,v 1.27545 2026/07/06 09:15:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -824,7 +824,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o krita-6.0.2.1
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
-	o labwc-0.20.1
+	o labwc-0.20.1 [wip]
 	o latexmk-486
 	o lbdb-49
 	o lcc-4.2
@@ -1186,7 +1186,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.28
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1247,7 +1246,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sup-0.4
 	o svt-av1-4.0
 	o swapd-1.0.5
-	o sway-1.12
+	o sway-1.12 [wip]
 	o swi-prolog-9.2.9
 	o swi-prolog-lite-9.2.9
 	o swi-prolog-packages-9.2.9
