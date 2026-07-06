@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 11:27:55 kim Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/06 12:28:46 adam Exp $
 bin/tomlq
 bin/xq
 bin/yq
@@ -7,7 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/yq/__init__.py
 ${PYSITELIB}/yq/__init__.pyc
 ${PYSITELIB}/yq/__init__.pyo
@@ -23,18 +22,21 @@ ${PYSITELIB}/yq/loader.pyo
 ${PYSITELIB}/yq/parser.py
 ${PYSITELIB}/yq/parser.pyc
 ${PYSITELIB}/yq/parser.pyo
+${PYSITELIB}/yq/toml_support.py
+${PYSITELIB}/yq/toml_support.pyc
+${PYSITELIB}/yq/toml_support.pyo
 ${PYSITELIB}/yq/tomlq/__init__.py
 ${PYSITELIB}/yq/tomlq/__init__.pyc
 ${PYSITELIB}/yq/tomlq/__init__.pyo
 ${PYSITELIB}/yq/tomlq/__main__.py
 ${PYSITELIB}/yq/tomlq/__main__.pyc
 ${PYSITELIB}/yq/tomlq/__main__.pyo
-${PYSITELIB}/yq/version.py
-${PYSITELIB}/yq/version.pyc
-${PYSITELIB}/yq/version.pyo
 ${PYSITELIB}/yq/xq/__init__.py
 ${PYSITELIB}/yq/xq/__init__.pyc
 ${PYSITELIB}/yq/xq/__init__.pyo
 ${PYSITELIB}/yq/xq/__main__.py
 ${PYSITELIB}/yq/xq/__main__.pyc
 ${PYSITELIB}/yq/xq/__main__.pyo
+${PYSITELIB}/yq/yaml_support.py
+${PYSITELIB}/yq/yaml_support.pyc
+${PYSITELIB}/yq/yaml_support.pyo
