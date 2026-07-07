@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4330 2026/07/07 17:11:31 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4331 2026/07/07 20:39:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6474,3 +6474,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/split-thai to 2.43 [scole 2026-07-07]
 	Updated net/nsd to 4.15.0 [he 2026-07-07]
 	Updated chat/matrix-synapse to 1.156.0 [gdt 2026-07-07]
+	Updated www/p5-HTTP-Tiny to 0.096 [wiz 2026-07-07]
