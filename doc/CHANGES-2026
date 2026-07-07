@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4304 2026/07/07 08:30:45 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4305 2026/07/07 08:41:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6432,3 +6432,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/mkvtoolnix to 100.0 [adam 2026-07-07]
 	Updated devel/patchelf to 0.19.1 [adam 2026-07-07]
 	Updated www/resterm to 0.45.1 [drixter 2026-07-07]
+	Updated security/dropbear to 2026.92 [adam 2026-07-07]
+	Updated sysutils/ansible to 14.1.0 [adam 2026-07-07]
