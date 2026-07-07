@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2025/05/17 06:38:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/07 14:05:56 taca Exp $
 bin/iruby${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGES.md
@@ -8,11 +9,6 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/ci/Dockerfile.base.erb
-${GEM_LIBDIR}/ci/Dockerfile.main.erb
-${GEM_LIBDIR}/ci/requirements.txt
-${GEM_LIBDIR}/docker/setup.sh
-${GEM_LIBDIR}/docker/test.sh
 ${GEM_LIBDIR}/exe/iruby
 ${GEM_LIBDIR}/iruby.gemspec
 ${GEM_LIBDIR}/lib/iruby.rb
@@ -52,20 +48,16 @@ ${GEM_LIBDIR}/lib/iruby/kernel_app.rb
 ${GEM_LIBDIR}/lib/iruby/logger.rb
 ${GEM_LIBDIR}/lib/iruby/ostream.rb
 ${GEM_LIBDIR}/lib/iruby/session.rb
-${GEM_LIBDIR}/lib/iruby/session/cztop.rb
-${GEM_LIBDIR}/lib/iruby/session/ffi_rzmq.rb
-${GEM_LIBDIR}/lib/iruby/session/mixin.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/cztop_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/ffirzmq_adapter.rb
 ${GEM_LIBDIR}/lib/iruby/session_adapter/test_adapter.rb
+${GEM_LIBDIR}/lib/iruby/session_serializer.rb
 ${GEM_LIBDIR}/lib/iruby/utils.rb
 ${GEM_LIBDIR}/lib/iruby/version.rb
 ${GEM_LIBDIR}/logo/logo-32x32.png
 ${GEM_LIBDIR}/logo/logo-64x64.png
 ${GEM_LIBDIR}/logo/ruby.svg
-${GEM_LIBDIR}/run-test.sh
-${GEM_LIBDIR}/tasks/ci.rake
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/integration_test.rb
 ${GEM_LIBDIR}/test/iruby/application/application_test.rb
