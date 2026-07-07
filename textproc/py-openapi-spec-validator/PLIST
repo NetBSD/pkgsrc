@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/10/01 19:44:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/07 13:10:21 adam Exp $
 bin/openapi-spec-validator-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,15 +23,28 @@ ${PYSITELIB}/openapi_spec_validator/resources/schemas/v2.0/schema.json
 ${PYSITELIB}/openapi_spec_validator/resources/schemas/v3.0.0/schema.json
 ${PYSITELIB}/openapi_spec_validator/resources/schemas/v3.0/schema.json
 ${PYSITELIB}/openapi_spec_validator/resources/schemas/v3.1/schema.json
+${PYSITELIB}/openapi_spec_validator/resources/schemas/v3.2/schema.json
 ${PYSITELIB}/openapi_spec_validator/schemas/__init__.py
 ${PYSITELIB}/openapi_spec_validator/schemas/__init__.pyc
 ${PYSITELIB}/openapi_spec_validator/schemas/__init__.pyo
+${PYSITELIB}/openapi_spec_validator/schemas/backend/__init__.py
+${PYSITELIB}/openapi_spec_validator/schemas/backend/__init__.pyc
+${PYSITELIB}/openapi_spec_validator/schemas/backend/__init__.pyo
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema.py
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema.pyc
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema.pyo
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema_rs.py
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema_rs.pyc
+${PYSITELIB}/openapi_spec_validator/schemas/backend/jsonschema_rs.pyo
 ${PYSITELIB}/openapi_spec_validator/schemas/types.py
 ${PYSITELIB}/openapi_spec_validator/schemas/types.pyc
 ${PYSITELIB}/openapi_spec_validator/schemas/types.pyo
 ${PYSITELIB}/openapi_spec_validator/schemas/utils.py
 ${PYSITELIB}/openapi_spec_validator/schemas/utils.pyc
 ${PYSITELIB}/openapi_spec_validator/schemas/utils.pyo
+${PYSITELIB}/openapi_spec_validator/settings.py
+${PYSITELIB}/openapi_spec_validator/settings.pyc
+${PYSITELIB}/openapi_spec_validator/settings.pyo
 ${PYSITELIB}/openapi_spec_validator/shortcuts.py
 ${PYSITELIB}/openapi_spec_validator/shortcuts.pyc
 ${PYSITELIB}/openapi_spec_validator/shortcuts.pyo
