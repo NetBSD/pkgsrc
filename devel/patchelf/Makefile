@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:12:13 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/07 07:48:11 adam Exp $
 
-DISTNAME=	patchelf-0.19.0
+DISTNAME=	patchelf-0.19.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
