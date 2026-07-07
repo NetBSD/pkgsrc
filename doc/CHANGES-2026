@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4320 2026/07/07 14:06:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4321 2026/07/07 14:10:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6463,3 +6463,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-corefoundation to 0.3.19 [taca 2026-07-07]
 	Updated devel/ruby-hoe to 4.7.1 [taca 2026-07-07]
 	Updated devel/ruby-iruby to 0.8.3 [taca 2026-07-07]
+	Updated devel/ruby-rugged to 1.9.4 [taca 2026-07-07]
