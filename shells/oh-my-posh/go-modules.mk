@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.133 2026/07/03 18:56:08 pin Exp $
+# $NetBSD: go-modules.mk,v 1.134 2026/07/07 06:36:44 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -117,8 +117,8 @@ GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.16.0.zip
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.mod
 GO_MODULE_FILES+=	github.com/pb33f/ordered-map/v2/@v/v2.3.1.zip
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.2.mod
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.2.zip
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.3.mod
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.4.3.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.mod

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.309 2026/07/03 18:56:08 pin Exp $
+$NetBSD: distinfo,v 1.310 2026/07/07 06:36:44 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -351,12 +351,12 @@ Size (github.com_pb33f_ordered-map_v2_@v_v2.3.1.mod) = 354 bytes
 BLAKE2s (github.com_pb33f_ordered-map_v2_@v_v2.3.1.zip) = 096dd1073348e493b21bc0caf03ea703d65c7472bfcd8e540ed013ca6058c751
 SHA512 (github.com_pb33f_ordered-map_v2_@v_v2.3.1.zip) = 2c5ecd68fb1c39c85c7b7a689c1fd07b600af7a7c37f7231e88a6ff722ff8fac7ff43663be624213fe7c3adaae8c39990e0bb8f829f2176fd5a15c85bf9d210a
 Size (github.com_pb33f_ordered-map_v2_@v_v2.3.1.zip) = 29249 bytes
-BLAKE2s (github.com_pelletier_go-toml_v2_@v_v2.4.2.mod) = 02715994e6424f40241ab28de8270632d46ff562c762e06366d1c4c898f73028
-SHA512 (github.com_pelletier_go-toml_v2_@v_v2.4.2.mod) = afd06e00f97d30134e934f4937ec5b7fc5dd0476e4e1186733900e1830988be03d5a3e4d36bdc3c4deff9e76da7bc8dd115d3a391504038f8b0c5fdacbbb741a
-Size (github.com_pelletier_go-toml_v2_@v_v2.4.2.mod) = 50 bytes
-BLAKE2s (github.com_pelletier_go-toml_v2_@v_v2.4.2.zip) = affdefbfc89d01ca2cbcf2aa337546dac5f7e5b63045b5f9d8d6248d79f2c014
-SHA512 (github.com_pelletier_go-toml_v2_@v_v2.4.2.zip) = b96da2064119b164ebe23893b253d243b8ff74403a5f9bf0755337ab98d0e8d9e763aa2fea5235f587b0fb437921becea4e2602e72446e7d3bd3500fa36cd73b
-Size (github.com_pelletier_go-toml_v2_@v_v2.4.2.zip) = 1002615 bytes
+BLAKE2s (github.com_pelletier_go-toml_v2_@v_v2.4.3.mod) = 02715994e6424f40241ab28de8270632d46ff562c762e06366d1c4c898f73028
+SHA512 (github.com_pelletier_go-toml_v2_@v_v2.4.3.mod) = afd06e00f97d30134e934f4937ec5b7fc5dd0476e4e1186733900e1830988be03d5a3e4d36bdc3c4deff9e76da7bc8dd115d3a391504038f8b0c5fdacbbb741a
+Size (github.com_pelletier_go-toml_v2_@v_v2.4.3.mod) = 50 bytes
+BLAKE2s (github.com_pelletier_go-toml_v2_@v_v2.4.3.zip) = a5afc1b6924ea098eed6b9d01ff6e0ca26ad8a0d72c0290204794edb21fab000
+SHA512 (github.com_pelletier_go-toml_v2_@v_v2.4.3.zip) = 285f402efa4fce6446e86ac2f884f0b2ed99879e20a66e18ed803aa31fd82a644e836e89be2aa8cd6e1cf7e006004087510057a11501f0f97580b22a2d23f3e1
+Size (github.com_pelletier_go-toml_v2_@v_v2.4.3.zip) = 1025455 bytes
 BLAKE2s (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 365dee34dcd09f0fbcccb2fff0be74a00fe71a80b9104b1ad3a3c199a48f5a28
 SHA512 (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = c3d5c48cdb8ba6af7071a07cfede06e0ab67e3726d9de592a952fad40167dcbdd9621dc2c4df1bd3c28eb99d70b1b6d8d812441237c35bf492e5b7f07bd33902
 Size (github.com_pmezard_go-difflib_@v_v1.0.0.mod) = 37 bytes
@@ -612,8 +612,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-29.20.0.tar.gz) = b3e155b6a6c59830680025d6837c27e03b3dc96e08882d19e69b97e795950c90
-SHA512 (oh-my-posh-29.20.0.tar.gz) = caa61e7a78ee32ce9a41487938cb01b451a97099dc0d77ef07cfb562de617ab07cf636e43f4378eb0b6b92167fab196ecd44f790e70a5deea3a0996bbcfde15f
-Size (oh-my-posh-29.20.0.tar.gz) = 7115792 bytes
+BLAKE2s (oh-my-posh-29.21.0.tar.gz) = 430afef0f21c3c6685750515056d655bc83a9fb6c08d7c2b2063605da54fe281
+SHA512 (oh-my-posh-29.21.0.tar.gz) = fe2daba0e503009509d76b9d22e0ee2590c71099bea7478e11d6ad9e218d894d62671de5557714f331b784832751e7c0504e483eb05d2496851d648e4b3d3ce8
+Size (oh-my-posh-29.21.0.tar.gz) = 7125833 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
