@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4327 2026/07/07 14:29:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4328 2026/07/07 15:47:28 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6471,3 +6471,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-train-core to 3.16.5 [taca 2026-07-07]
 	Updated audio/strawberry to 1.2.22 [adam 2026-07-07]
 	Updated devel/py-dulwich to 1.2.10 [adam 2026-07-07]
+	Updated textproc/split-thai to 2.43 [scole 2026-07-07]
