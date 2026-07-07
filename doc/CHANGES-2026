@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4326 2026/07/07 14:19:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4327 2026/07/07 14:29:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6469,3 +6469,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-dnsruby to 1.74.0 [taca 2026-07-07]
 	Updated net/ruby-recog to 3.1.31 [taca 2026-07-07]
 	Updated net/ruby-train-core to 3.16.5 [taca 2026-07-07]
+	Updated audio/strawberry to 1.2.22 [adam 2026-07-07]
+	Updated devel/py-dulwich to 1.2.10 [adam 2026-07-07]
