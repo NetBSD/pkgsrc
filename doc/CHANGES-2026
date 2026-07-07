@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4298 2026/07/07 05:48:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4299 2026/07/07 06:34:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6425,3 +6425,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ap-modsecurity2 to 2.9.14 [drixter 2026-07-06]
 	Updated net/libcares to 1.34.7 [wiz 2026-07-06]
 	Updated net/libcares to 1.34.7nb1 [wiz 2026-07-07]
+	Updated editors/tp-note to 1.26.5 [pin 2026-07-07]
