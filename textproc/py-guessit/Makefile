@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/07/03 11:04:45 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/07 12:58:13 adam Exp $
 
-DISTNAME=	guessit-4.0.2
+DISTNAME=	guessit-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.6.1:../../textproc/py-babelfish
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-rebulk>=6:../../textproc/py-rebulk
+DEPENDS+=	${PYPKGPREFIX}-rebulk>=6.0.1:../../textproc/py-rebulk
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
