@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2026/01/07 08:47:10 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/07/07 09:17:27 prlw1 Exp $
 
-PKGVERSION=	1.2.1
+PKGVERSION=	1.3.1
 PKGNAME=	widelands-${PKGVERSION}
-PKGREVISION=	4
 DISTNAME=	v${PKGVERSION:C/rc/-rc/}
 CATEGORIES=	games
 MASTER_SITES=	https://codeberg.org/wl/widelands/archive/
@@ -13,7 +12,6 @@ COMMENT=	Fantasy real-time strategy game inspired by Settlers II
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
@@ -24,13 +22,9 @@ CMAKE_ARG_PATH=	..
 CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
 CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_BINDIR=${PREFIX}/bin
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/boost
 
-BUILDLINK_TRANSFORM+=	rm:-Werror=shadow
-
-# too much spam from boost headers
+# Silence spam from asio headers
 BUILDLINK_TRANSFORM+=	rm:-Wold-style-cast
-BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -41,15 +35,6 @@ DIST_SUBDIR=	widelands
 WRKSRC=		${WRKDIR}/widelands
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX: The following trick might not work everywhere!
-#      Some systems, like Darwin, do not provide pgettext(),
-#      and devel/gettext-lib does not provide it either.
-pre-configure:
-.if ${OPSYS} != "Darwin"
-	${PRINTF} '#include <libintl.h>\n' > ${WRKSRC}/src/third_party/gettext/gettext.h
-.endif
-	${MKDIR} ${WRKSRC}/build
 
 post-install:
 	${MV}	${DESTDIR}${PREFIX}/VERSION \
