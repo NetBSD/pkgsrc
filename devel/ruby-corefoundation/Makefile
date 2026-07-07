@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/11/29 12:42:00 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/07 13:59:30 taca Exp $
 
-DISTNAME=	corefoundation-0.3.13
+DISTNAME=	corefoundation-0.3.19
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
