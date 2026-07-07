@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2023/11/01 20:33:31 adam Exp $
+# $NetBSD: options.mk,v 1.12 2026/07/07 07:33:45 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mkvtoolnix
 PKG_SUPPORTED_OPTIONS=	doc gui
@@ -13,6 +13,11 @@ PLIST.gui=		yes
 CONFIGURE_ARGS+=	--enable-gui
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.  if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	SOUND_EXT=caf
+.  else
+PLIST_SUBST+=	SOUND_EXT=webm
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-gui
 .endif
