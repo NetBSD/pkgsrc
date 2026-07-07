@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/11/01 08:41:17 prlw1 Exp $
+$NetBSD: distinfo,v 1.9 2026/07/07 07:02:32 prlw1 Exp $
 
-BLAKE2s (asio-1.24.0.tar.bz2) = 76790eea77f4bdb0a1760cdc7cb9f43f142cd61678a09b3dfd077218200dfeca
-SHA512 (asio-1.24.0.tar.bz2) = c877968229bc5c4c21156b2bbb9775c7b11c3878cd62e8df3afaa70b2f221c59c6e4fa425cfb028cd170f9453ac1c32c5229f89437b13ac39142e4b52304c820
-Size (asio-1.24.0.tar.bz2) = 3150924 bytes
+BLAKE2s (asio-1.36.0.tar.bz2) = 9fff3dea667a2dfaa9cc0d4fb3e3a45cf7349b82d2c86768d0e9611df9f845b2
+SHA512 (asio-1.36.0.tar.bz2) = 87cfe606a38d3b697a15dacc35e367f556fb9e36b3d80785ddf3b59b6d214417ea7d483586077e7023f732b57a1369e2eb9b0f13be8b3f9f8bfdd59005683510
+Size (asio-1.36.0.tar.bz2) = 3217022 bytes
