@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2026/01/17 17:10:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/07 14:13:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.mise.toml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
