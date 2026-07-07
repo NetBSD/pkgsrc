@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/01/16 07:28:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/07/07 13:14:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -192,6 +192,9 @@ ${PYSITELIB}/openapi_core/deserializing/media_types/util.pyo
 ${PYSITELIB}/openapi_core/deserializing/styles/__init__.py
 ${PYSITELIB}/openapi_core/deserializing/styles/__init__.pyc
 ${PYSITELIB}/openapi_core/deserializing/styles/__init__.pyo
+${PYSITELIB}/openapi_core/deserializing/styles/casters.py
+${PYSITELIB}/openapi_core/deserializing/styles/casters.pyc
+${PYSITELIB}/openapi_core/deserializing/styles/casters.pyo
 ${PYSITELIB}/openapi_core/deserializing/styles/datatypes.py
 ${PYSITELIB}/openapi_core/deserializing/styles/datatypes.pyc
 ${PYSITELIB}/openapi_core/deserializing/styles/datatypes.pyo
@@ -262,12 +265,6 @@ ${PYSITELIB}/openapi_core/security/providers.pyo
 ${PYSITELIB}/openapi_core/shortcuts.py
 ${PYSITELIB}/openapi_core/shortcuts.pyc
 ${PYSITELIB}/openapi_core/shortcuts.pyo
-${PYSITELIB}/openapi_core/spec/__init__.py
-${PYSITELIB}/openapi_core/spec/__init__.pyc
-${PYSITELIB}/openapi_core/spec/__init__.pyo
-${PYSITELIB}/openapi_core/spec/paths.py
-${PYSITELIB}/openapi_core/spec/paths.pyc
-${PYSITELIB}/openapi_core/spec/paths.pyo
 ${PYSITELIB}/openapi_core/templating/__init__.py
 ${PYSITELIB}/openapi_core/templating/__init__.pyc
 ${PYSITELIB}/openapi_core/templating/__init__.pyo
@@ -478,6 +475,9 @@ ${PYSITELIB}/openapi_core/validation/response/validators.pyo
 ${PYSITELIB}/openapi_core/validation/schemas/__init__.py
 ${PYSITELIB}/openapi_core/validation/schemas/__init__.pyc
 ${PYSITELIB}/openapi_core/validation/schemas/__init__.pyo
+${PYSITELIB}/openapi_core/validation/schemas/_validators.py
+${PYSITELIB}/openapi_core/validation/schemas/_validators.pyc
+${PYSITELIB}/openapi_core/validation/schemas/_validators.pyo
 ${PYSITELIB}/openapi_core/validation/schemas/datatypes.py
 ${PYSITELIB}/openapi_core/validation/schemas/datatypes.pyc
 ${PYSITELIB}/openapi_core/validation/schemas/datatypes.pyo

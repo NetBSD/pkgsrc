@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/06/28 15:41:41 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/07/07 13:14:22 adam Exp $
 
-DISTNAME=	openapi_core-0.22.0
+DISTNAME=	openapi_core-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-core/}
@@ -13,17 +13,16 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.23.0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-path>=0.3.4:../../textproc/py-jsonschema-path
+DEPENDS+=	${PYPKGPREFIX}-jsonschema-path>=0.4.5:../../textproc/py-jsonschema-path
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
-DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.6.0:../../textproc/py-openapi-schema-validator
-DEPENDS+=	${PYPKGPREFIX}-openapi-spec-validator>=0.7.1:../../textproc/py-openapi-spec-validator
-DEPENDS+=	${PYPKGPREFIX}-parse-[0-9]*:../../textproc/py-parse
+DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.9.0:../../textproc/py-openapi-schema-validator
+DEPENDS+=	${PYPKGPREFIX}-openapi-spec-validator>=0.8.0:../../textproc/py-openapi-spec-validator
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.8.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.1.0:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-#TEST_DEPENDS+=	${PYPKGPREFIX}-falcon-[0-9]*:../../devel/py-falcon
+TEST_DEPENDS+=	${PYPKGPREFIX}-falcon-[0-9]*:../../devel/py-falcon
 #TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
