@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4305 2026/07/07 08:41:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4306 2026/07/07 08:48:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6434,3 +6434,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.45.1 [drixter 2026-07-07]
 	Updated security/dropbear to 2026.92 [adam 2026-07-07]
 	Updated sysutils/ansible to 14.1.0 [adam 2026-07-07]
+	Updated devel/py-types-setuptools to 83.0.0.20260706 [adam 2026-07-07]
+	Updated devel/py-test-rerunfailures to 16.4 [adam 2026-07-07]
