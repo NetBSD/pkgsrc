@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4302 2026/07/07 07:02:51 prlw1 Exp $
+$NetBSD: CHANGES-2026,v 1.4303 2026/07/07 07:48:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6429,3 +6429,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/rex to 0.2.9 [pin 2026-07-07]
 	Updated shells/oh-my-posh to 29.21.0 [pin 2026-07-07]
 	Updated devel/asio to 1.36.0 [prlw1 2026-07-07]
+	Updated multimedia/mkvtoolnix to 100.0 [adam 2026-07-07]
+	Updated devel/patchelf to 0.19.1 [adam 2026-07-07]
