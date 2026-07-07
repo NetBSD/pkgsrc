@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/07/03 11:04:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/07/07 12:58:13 adam Exp $
 bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -179,6 +179,9 @@ ${PYSITELIB}/guessit/schema.pyo
 ${PYSITELIB}/guessit/test/__init__.py
 ${PYSITELIB}/guessit/test/__init__.pyc
 ${PYSITELIB}/guessit/test/__init__.pyo
+${PYSITELIB}/guessit/test/_cross_parser.py
+${PYSITELIB}/guessit/test/_cross_parser.pyc
+${PYSITELIB}/guessit/test/_cross_parser.pyo
 ${PYSITELIB}/guessit/test/config/dummy.txt
 ${PYSITELIB}/guessit/test/config/test.json
 ${PYSITELIB}/guessit/test/config/test.yaml
@@ -186,6 +189,13 @@ ${PYSITELIB}/guessit/test/config/test.yml
 ${PYSITELIB}/guessit/test/conftest.py
 ${PYSITELIB}/guessit/test/conftest.pyc
 ${PYSITELIB}/guessit/test/conftest.pyo
+${PYSITELIB}/guessit/test/cross_parser/NOTICE.md
+${PYSITELIB}/guessit/test/cross_parser/anitomy.json
+${PYSITELIB}/guessit/test/cross_parser/baseline.json
+${PYSITELIB}/guessit/test/cross_parser/go-ptn.json
+${PYSITELIB}/guessit/test/cross_parser/ptn.json
+${PYSITELIB}/guessit/test/cross_parser/ptt.json
+${PYSITELIB}/guessit/test/cross_parser/thcolin.json
 ${PYSITELIB}/guessit/test/enable_disable_properties.yml
 ${PYSITELIB}/guessit/test/episodes.yml
 ${PYSITELIB}/guessit/test/movies.yml
@@ -230,6 +240,9 @@ ${PYSITELIB}/guessit/test/test_archive_metadata.pyo
 ${PYSITELIB}/guessit/test/test_benchmark.py
 ${PYSITELIB}/guessit/test/test_benchmark.pyc
 ${PYSITELIB}/guessit/test/test_benchmark.pyo
+${PYSITELIB}/guessit/test/test_cross_parser.py
+${PYSITELIB}/guessit/test/test_cross_parser.pyc
+${PYSITELIB}/guessit/test/test_cross_parser.pyo
 ${PYSITELIB}/guessit/test/test_keys.py
 ${PYSITELIB}/guessit/test/test_keys.pyc
 ${PYSITELIB}/guessit/test/test_keys.pyo
