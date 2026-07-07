@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/11/13 13:43:29 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/07 12:52:26 adam Exp $
 
-DISTNAME=	pyleri-1.5.0
+DISTNAME=	pyleri-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyleri/}
