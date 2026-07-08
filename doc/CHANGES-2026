@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4346 2026/07/08 10:16:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4347 2026/07/08 11:48:38 micha Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6497,3 +6497,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pamqp to 4.0.1 [adam 2026-07-08]
 	Updated audio/libdiscid to 0.7.0 [adam 2026-07-08]
 	Updated multimedia/libva to 2.24.1 [adam 2026-07-08]
+	Updated news/libcanlock to 3.3.3 [micha 2026-07-08]
