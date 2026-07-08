@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/02/25 14:35:14 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/07/08 07:55:51 adam Exp $
 
-BLAKE2s (ijson-3.5.0.tar.gz) = 82f170c971cc9ae651bd55fabcabf551ab235bfb3aeee8a27cc6c143ac9df8c1
-SHA512 (ijson-3.5.0.tar.gz) = 2a50ce4837ced0dc026c477c1efccb021795839b26b1d2bebfafafba8109d424a1aac3b374f6c122f116b3f419cab77c22c5a5fa5ffeacf4281ae9677cd46a41
-Size (ijson-3.5.0.tar.gz) = 68658 bytes
+BLAKE2s (ijson-3.5.1.tar.gz) = 07589fdd6617c128a743fd39b1969fd59fd927db055a9d7299f10607b6d61569
+SHA512 (ijson-3.5.1.tar.gz) = 5eaa1699a29ebc3659be7ddc36779b0994d59fa0c02b4581ac213b2d85cae36b0c868ae9137e5004ccd6f5018696dbbb7c34d6a6910dc49b9423975ca2af7921
+Size (ijson-3.5.1.tar.gz) = 69913 bytes
