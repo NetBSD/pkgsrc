@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4355 2026/07/08 19:20:16 osa Exp $
+$NetBSD: CHANGES-2026,v 1.4356 2026/07/08 19:36:00 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6508,3 +6508,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go125 to 1.25.12 [bsiegert 2026-07-08]
 	Updated lang/go126 to 1.26.5 [bsiegert 2026-07-08]
 	Updated www/freenginx to 1.30.1nb1 [osa 2026-07-08]
+	Updated www/freenginx-devel to 1.31.3 [osa 2026-07-08]
