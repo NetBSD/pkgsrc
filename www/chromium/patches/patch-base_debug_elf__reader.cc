@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_elf__reader.cc,v 1.22 2026/07/06 13:06:41 kikadf Exp $
+$NetBSD: patch-base_debug_elf__reader.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/elf_reader.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- base/debug/elf_reader.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ base/debug/elf_reader.cc
 @@ -45,6 +45,10 @@ using Xword = Elf64_Xword;
  

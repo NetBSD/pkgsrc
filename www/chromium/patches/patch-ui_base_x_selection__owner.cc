@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_selection__owner.cc,v 1.4 2026/07/06 13:07:00 kikadf Exp $
+$NetBSD: patch-ui_base_x_selection__owner.cc,v 1.5 2026/07/08 13:42:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/selection_owner.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/base/x/selection_owner.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/base/x/selection_owner.cc
 @@ -18,7 +18,7 @@
  #include "ui/gfx/x/window_event_manager.h"

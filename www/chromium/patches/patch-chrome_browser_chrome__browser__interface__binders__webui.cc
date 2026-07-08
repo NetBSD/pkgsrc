@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.21 2026/07/06 13:06:42 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.22 2026/07/08 13:42:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -90,13 +90,13 @@
  #endif  // !BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_DESKTOP_ANDROID)

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_web__authentication__proxy_web__authentication__proxy__api.h,v 1.4 2026/07/06 13:06:43 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_web__authentication__proxy_web__authentication__proxy__api.h,v 1.5 2026/07/08 13:42:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h
 @@ -15,7 +15,7 @@
  #include "extensions/browser/extension_function_histogram_value.h"

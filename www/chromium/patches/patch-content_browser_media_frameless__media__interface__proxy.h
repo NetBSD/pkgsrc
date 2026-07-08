@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_media_frameless__media__interface__proxy.h,v 1.22 2026/07/06 13:06:51 kikadf Exp $
+$NetBSD: patch-content_browser_media_frameless__media__interface__proxy.h,v 1.23 2026/07/08 13:42:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/frameless_media_interface_proxy.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/browser/media/frameless_media_interface_proxy.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
 @@ -19,7 +19,7 @@
  #include "mojo/public/cpp/bindings/receiver_set.h"

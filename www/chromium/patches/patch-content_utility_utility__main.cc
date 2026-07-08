@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.22 2026/07/06 13:06:51 kikadf Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/utility/utility_main.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/utility/utility_main.cc
 @@ -38,22 +38,31 @@
  #include "services/on_device_model/public/mojom/on_device_model_service.mojom.h"

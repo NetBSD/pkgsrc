@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_passwords_password__bubble__view__base.cc,v 1.22 2026/07/06 13:06:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_passwords_password__bubble__view__base.cc,v 1.23 2026/07/08 13:42:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/ui/views/passwords/password_bubble_view_base.cc
 @@ -43,7 +43,7 @@
  #include "ui/base/metadata/metadata_impl_macros.h"

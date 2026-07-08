@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__context.cc,v 1.22 2026/07/06 13:06:56 kikadf Exp $
+$NetBSD: patch-services_network_network__context.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/network/network_context.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/network/network_context.cc
 @@ -651,7 +651,7 @@ NetworkContext::NetworkContextHttpAuthPr
  NetworkContext::NetworkContextHttpAuthPreferences::

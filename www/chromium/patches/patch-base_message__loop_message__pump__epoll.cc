@@ -1,10 +1,10 @@
-$NetBSD: patch-base_message__loop_message__pump__epoll.cc,v 1.22 2026/07/06 13:06:41 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__epoll.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_epoll.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- base/message_loop/message_pump_epoll.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ base/message_loop/message_pump_epoll.cc
 @@ -44,7 +44,7 @@ std::atomic_bool g_use_batched_version =
  std::atomic_bool g_use_poll = false;

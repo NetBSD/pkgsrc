@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.18 2026/07/06 13:06:43 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.19 2026/07/08 13:42:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/enterprise/signals/signals_aggregator_factory.cc
 @@ -54,7 +54,7 @@
  #include "components/device_signals/core/browser/settings_client.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-sql_database.cc,v 1.12 2026/07/06 13:06:57 kikadf Exp $
+$NetBSD: patch-sql_database.cc,v 1.13 2026/07/08 13:42:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sql/database.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- sql/database.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ sql/database.cc
 @@ -118,7 +118,7 @@ bool FilePathIsFixedSSD(const base::File
  

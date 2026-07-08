@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_render__text__fuzzer.cc,v 1.22 2026/07/06 13:07:01 kikadf Exp $
+$NetBSD: patch-ui_gfx_render__text__fuzzer.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_fuzzer.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/gfx/render_text_fuzzer.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/gfx/render_text_fuzzer.cc
 @@ -22,7 +22,7 @@
  #include "base/test/test_support_android.h"

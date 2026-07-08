@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_display_screen.cc,v 1.22 2026/07/06 13:07:00 kikadf Exp $
+$NetBSD: patch-ui_display_screen.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/display/screen.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/display/screen.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/display/screen.cc
 @@ -82,7 +82,7 @@ void Screen::SetDisplayForNewWindows(int
    display_id_for_new_windows_ = display_id;

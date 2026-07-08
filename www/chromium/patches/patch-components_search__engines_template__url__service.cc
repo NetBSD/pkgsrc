@@ -1,10 +1,10 @@
-$NetBSD: patch-components_search__engines_template__url__service.cc,v 1.22 2026/07/06 13:06:50 kikadf Exp $
+$NetBSD: patch-components_search__engines_template__url__service.cc,v 1.23 2026/07/08 13:42:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/search_engines/template_url_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/search_engines/template_url_service.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/search_engines/template_url_service.cc
 @@ -3716,7 +3716,7 @@ bool TemplateURLService::MatchesDefaultS
  std::unique_ptr<EnterpriseSearchManager>
