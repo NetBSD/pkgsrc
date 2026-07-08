@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.23 2022/02/17 15:42:00 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/07/08 10:05:25 jperkin Exp $
 
 BLAKE2s (findutils-4.9.0.tar.xz) = 25fda192a6405e79fd213de5fce7d67ab1e98d7e42c9db1f89ef0dcd5e89e132
 SHA512 (findutils-4.9.0.tar.xz) = ba4844f4403de0148ad14b46a3dbefd5a721f6257c864bf41a6789b11705408524751c627420b15a52af95564d8e5b52f0978474f640a62ab86a41d20cf14be9
 Size (findutils-4.9.0.tar.xz) = 2046252 bytes
 SHA1 (patch-aa) = 7dbe72494e1b52b317541db320f19f78c6c2c48a
+SHA1 (patch-gnulib-tests_localename.c) = 16b85b9844d74c155e0ae0f2e2ff0cb9629963c1
