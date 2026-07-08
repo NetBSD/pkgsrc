@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2026/05/03 06:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/07/08 16:53:59 is Exp $
 
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
+PKGREVISION=	1
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -119,4 +120,5 @@ do-test:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
