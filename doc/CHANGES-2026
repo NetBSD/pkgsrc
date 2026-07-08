@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4348 2026/07/08 11:52:27 micha Exp $
+$NetBSD: CHANGES-2026,v 1.4349 2026/07/08 12:43:41 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6499,3 +6499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libva to 2.24.1 [adam 2026-07-08]
 	Updated news/libcanlock to 3.3.3 [micha 2026-07-08]
 	Updated news/canlock-hp to 3.3.3 [micha 2026-07-08]
+	Updated www/davical to 1.1.13 [hauke 2026-07-08]
