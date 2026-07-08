@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/06/05 10:18:24 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/07/08 18:31:11 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go126/CONTRIBUTING.md
@@ -1932,6 +1932,7 @@ go126/src/cmd/go/testdata/mod/example.com_fuzzfail_v0.1.0.txt
 go126/src/cmd/go/testdata/mod/example.com_fuzzfail_v0.2.0.txt
 go126/src/cmd/go/testdata/mod/example.com_generics_v1.0.0.txt
 go126/src/cmd/go/testdata/mod/example.com_ignore_v1.0.0.txt
+go126/src/cmd/go/testdata/mod/example.com_importcrypto_v1.0.0.txt
 go126/src/cmd/go/testdata/mod/example.com_incompatiblewithsub_v1.0.0.txt
 go126/src/cmd/go/testdata/mod/example.com_incompatiblewithsub_v2.0.0+incompatible.txt
 go126/src/cmd/go/testdata/mod/example.com_invalidpath_v1_v1.0.0.txt
@@ -2543,6 +2544,7 @@ go126/src/cmd/go/testdata/script/mod_get_errors.txt
 go126/src/cmd/go/testdata/script/mod_get_exec_toolchain.txt
 go126/src/cmd/go/testdata/script/mod_get_extra.txt
 go126/src/cmd/go/testdata/script/mod_get_fallback.txt
+go126/src/cmd/go/testdata/script/mod_get_fips140_issue73649.txt
 go126/src/cmd/go/testdata/script/mod_get_fossil.txt
 go126/src/cmd/go/testdata/script/mod_get_future.txt
 go126/src/cmd/go/testdata/script/mod_get_go_file.txt
@@ -14114,6 +14116,7 @@ go126/test/fixedbugs/issue78641.go
 go126/test/fixedbugs/issue7867.go
 go126/test/fixedbugs/issue7884.go
 go126/test/fixedbugs/issue79182.go
+go126/test/fixedbugs/issue79186.go
 go126/test/fixedbugs/issue7921.go
 go126/test/fixedbugs/issue7944.go
 go126/test/fixedbugs/issue7995.go
@@ -14123,6 +14126,7 @@ go126/test/fixedbugs/issue7995b.go
 go126/test/fixedbugs/issue7996.go
 go126/test/fixedbugs/issue7997.go
 go126/test/fixedbugs/issue7998.go
+go126/test/fixedbugs/issue80004.go
 go126/test/fixedbugs/issue8004.go
 go126/test/fixedbugs/issue8011.go
 go126/test/fixedbugs/issue8017.go
