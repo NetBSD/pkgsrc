@@ -1,10 +1,10 @@
-$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.22 2026/07/06 13:06:42 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -13,6 +13,7 @@
  #include "base/notreached.h"

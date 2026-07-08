@@ -1,10 +1,10 @@
-$NetBSD: patch-content_public_browser_zygote__host_zygote__host__linux.h,v 1.22 2026/07/06 13:06:51 kikadf Exp $
+$NetBSD: patch-content_public_browser_zygote__host_zygote__host__linux.h,v 1.23 2026/07/08 13:42:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/zygote_host/zygote_host_linux.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- content/public/browser/zygote_host/zygote_host_linux.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ content/public/browser/zygote_host/zygote_host_linux.h
 @@ -34,11 +34,13 @@ class ZygoteHost {
    // after the first render has been forked.

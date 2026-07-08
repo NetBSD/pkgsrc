@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.h,v 1.22 2026/07/06 13:06:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.h,v 1.23 2026/07/08 13:42:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/global_features.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/global_features.h
 @@ -23,7 +23,7 @@ class GlobalBrowserCollection;
  namespace system_permission_settings {

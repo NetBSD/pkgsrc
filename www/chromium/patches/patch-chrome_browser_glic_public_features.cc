@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_glic_public_features.cc,v 1.4 2026/07/06 13:06:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_glic_public_features.cc,v 1.5 2026/07/08 13:42:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/public/features.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/glic/public/features.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/glic/public/features.cc
 @@ -64,7 +64,7 @@ BASE_FEATURE(kGlicCreateTabAdjacent, bas
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_fontconfig_include_meson-config.h,v 1.20 2026/07/06 13:06:58 kikadf Exp $
+$NetBSD: patch-third__party_fontconfig_include_meson-config.h,v 1.21 2026/07/08 13:42:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/fontconfig/include/meson-config.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/fontconfig/include/meson-config.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/fontconfig/include/meson-config.h
 @@ -17,7 +17,7 @@
  

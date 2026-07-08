@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_modules_media_audio_audio__renderer__mixer__manager__test.cc,v 1.22 2026/07/06 13:06:57 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_media_audio_audio__renderer__mixer__manager__test.cc,v 1.23 2026/07/08 13:42:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc
 @@ -857,7 +857,7 @@ TEST_F(AudioRendererMixerManagerTest, Mi
              mixer->get_output_params_for_testing().sample_rate());

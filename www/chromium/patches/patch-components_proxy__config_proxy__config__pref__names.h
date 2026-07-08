@@ -1,10 +1,10 @@
-$NetBSD: patch-components_proxy__config_proxy__config__pref__names.h,v 1.9 2026/07/06 13:06:49 kikadf Exp $
+$NetBSD: patch-components_proxy__config_proxy__config__pref__names.h,v 1.10 2026/07/08 13:42:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_config_pref_names.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/proxy_config/proxy_config_pref_names.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/proxy_config/proxy_config_pref_names.h
 @@ -19,7 +19,7 @@ inline constexpr char kUseSharedProxies[
  // Preference to store the value of the "ProxyOverrideRules" policy.

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_boringssl_src_crypto_cpu__aarch64__openbsd.cc,v 1.7 2026/07/06 13:06:58 kikadf Exp $
+$NetBSD: patch-third__party_boringssl_src_crypto_cpu__aarch64__openbsd.cc,v 1.8 2026/07/08 13:42:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/boringssl/src/crypto/cpu_aarch64_openbsd.cc
 @@ -43,3 +43,67 @@ void bssl::OPENSSL_cpuid_setup() {
  }

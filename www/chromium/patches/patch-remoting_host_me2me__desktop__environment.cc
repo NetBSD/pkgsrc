@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.22 2026/07/06 13:06:55 kikadf Exp $
+$NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -125,7 +125,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kMicrophoneRemotingCapability;

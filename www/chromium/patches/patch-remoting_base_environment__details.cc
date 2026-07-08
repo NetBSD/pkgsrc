@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_environment__details.cc,v 1.9 2026/07/06 13:06:55 kikadf Exp $
+$NetBSD: patch-remoting_base_environment__details.cc,v 1.10 2026/07/08 13:42:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/environment_details.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- remoting/base/environment_details.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ remoting/base/environment_details.cc
 @@ -9,7 +9,7 @@
  #include "build/build_config.h"

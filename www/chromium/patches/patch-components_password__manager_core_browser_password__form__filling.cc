@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__form__filling.cc,v 1.20 2026/07/06 13:06:49 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__form__filling.cc,v 1.21 2026/07/08 13:42:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_filling.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/password_manager/core/browser/password_form_filling.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/password_manager/core/browser/password_form_filling.cc
 @@ -177,7 +177,7 @@ LikelyFormFilling SendFillInformationToR
  #endif

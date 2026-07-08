@@ -1,10 +1,10 @@
-$NetBSD: patch-components_metrics_private__metrics_puma__service.cc,v 1.9 2026/07/06 13:06:49 kikadf Exp $
+$NetBSD: patch-components_metrics_private__metrics_puma__service.cc,v 1.10 2026/07/08 13:42:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/private_metrics/puma_service.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- components/metrics/private_metrics/puma_service.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ components/metrics/private_metrics/puma_service.cc
 @@ -71,7 +71,7 @@ Platform GetCurrentPlatform() {
    return Platform::PLATFORM_WINDOWS;

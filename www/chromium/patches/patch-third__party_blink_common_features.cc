@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_common_features.cc,v 1.18 2026/07/06 13:06:57 kikadf Exp $
+$NetBSD: patch-third__party_blink_common_features.cc,v 1.19 2026/07/08 13:42:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/features.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/blink/common/features.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/blink/common/features.cc
 @@ -692,7 +692,7 @@ BASE_FEATURE(kDevToolsAdsPanel, base::FE
  

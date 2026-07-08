@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_client_crashpad__client__posix.cc,v 1.22 2026/07/06 13:06:58 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_client_crashpad__client__posix.cc,v 1.23 2026/07/08 13:42:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-07-05 17:05:16.315640751 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-07-08 12:43:23.719604484 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.

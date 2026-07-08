@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_widget_widget.h,v 1.21 2026/07/06 13:07:02 kikadf Exp $
+$NetBSD: patch-ui_views_widget_widget.h,v 1.22 2026/07/08 13:42:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- ui/views/widget/widget.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ ui/views/widget/widget.h
 @@ -489,7 +489,7 @@ class VIEWS_EXPORT Widget : public inter
      bool dont_show_in_taskbar = false;

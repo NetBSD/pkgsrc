@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.14 2026/07/06 13:06:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.15 2026/07/08 13:42:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_widget.cc
 @@ -53,7 +53,7 @@
  #include "ui/aura/window.h"

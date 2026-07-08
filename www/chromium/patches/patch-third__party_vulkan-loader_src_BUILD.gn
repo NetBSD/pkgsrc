@@ -1,0 +1,24 @@
+$NetBSD: patch-third__party_vulkan-loader_src_BUILD.gn,v 1.1 2026/07/08 13:42:31 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/vulkan-loader/src/BUILD.gn.orig	2026-07-06 22:58:46.000000000 +0000
++++ third_party/vulkan-loader/src/BUILD.gn
+@@ -53,11 +53,11 @@ config("vulkan_internal_config") {
+       "EXTRASYSCONFDIR=\"/pkg/data\"",
+     ]
+   }
+-  if (is_linux || is_chromeos || is_mac) {
++  if (is_linux || is_chromeos || is_mac || is_bsd) {
+     defines += [
+-      "SYSCONFDIR=\"/etc\"",
+-      "FALLBACK_CONFIG_DIRS=\"/etc/xdg\"",
+-      "FALLBACK_DATA_DIRS=\"/usr/local/share:/usr/share\"",
++      "SYSCONFDIR=\"@PKG_SYSCONFBASE@\"",
++      "FALLBACK_CONFIG_DIRS=\"@PKG_SYSCONFBASE@/xdg\"",
++      "FALLBACK_DATA_DIRS=\"@X11BASE@/share:@PREFIX@/share:/usr/share\"",
+     ]
+   }
+   if (is_apple && !vulkan_loader_shared) {

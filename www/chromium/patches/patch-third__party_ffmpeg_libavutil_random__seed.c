@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_ffmpeg_libavutil_random__seed.c,v 1.22 2026/07/06 13:06:58 kikadf Exp $
+$NetBSD: patch-third__party_ffmpeg_libavutil_random__seed.c,v 1.23 2026/07/08 13:42:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/random_seed.c.orig	2026-06-23 23:37:18.000000000 +0000
+--- third_party/ffmpeg/libavutil/random_seed.c.orig	2026-07-06 22:58:46.000000000 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
 @@ -20,6 +20,10 @@
  

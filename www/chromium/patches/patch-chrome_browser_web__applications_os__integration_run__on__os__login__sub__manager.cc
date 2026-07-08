@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_os__integration_run__on__os__login__sub__manager.cc,v 1.22 2026/07/06 13:06:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_os__integration_run__on__os__login__sub__manager.cc,v 1.23 2026/07/08 13:42:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc
 @@ -54,7 +54,7 @@ proto::os_state::RunOnOsLogin::Mode Conv
  // different from other platforms, see web_app_run_on_os_login_manager.h for

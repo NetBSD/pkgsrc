@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_dns__reloader.cc,v 1.22 2026/07/06 13:06:54 kikadf Exp $
+$NetBSD: patch-net_dns_dns__reloader.cc,v 1.23 2026/07/08 13:42:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_reloader.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- net/dns/dns_reloader.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ net/dns/dns_reloader.cc
 @@ -10,6 +10,7 @@
  // - there's not guarantee it exists at all. :(

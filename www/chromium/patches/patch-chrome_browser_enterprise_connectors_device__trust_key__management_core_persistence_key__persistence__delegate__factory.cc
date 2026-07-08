@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_key__management_core_persistence_key__persistence__delegate__factory.cc,v 1.22 2026/07/06 13:06:43 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_key__management_core_persistence_key__persistence__delegate__factory.cc,v 1.23 2026/07/08 13:42:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/key_management/core/persistence/key_persistence_delegate_factory.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/key_management/core/persistence/key_persistence_delegate_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/key_management/core/persistence/key_persistence_delegate_factory.cc
 @@ -13,7 +13,7 @@
  #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/persistence/win_key_persistence_delegate.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.2 2026/07/06 13:06:57 kikadf Exp $
+$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.3 2026/07/08 13:42:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-06-23 23:37:18.000000000 +0000
+--- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-07-06 22:58:46.000000000 +0000
 +++ services/webnn/webnn_graph_impl_fuzzer.cc
 @@ -1053,7 +1053,7 @@ std::optional<Conv2dDescriptors> SetUpCo
      params.groups = params.input_channels;

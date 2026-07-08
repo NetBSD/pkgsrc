@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_public_browser__window__features.h,v 1.14 2026/07/06 13:06:45 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_public_browser__window__features.h,v 1.15 2026/07/08 13:42:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-06-23 23:37:18.000000000 +0000
+--- chrome/browser/ui/browser_window/public/browser_window_features.h.orig	2026-07-06 22:58:46.000000000 +0000
 +++ chrome/browser/ui/browser_window/public/browser_window_features.h
 @@ -122,7 +122,7 @@ class PinInfoBarController;
  }  // namespace default_browser
