@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/08/02 07:05:03 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/07/08 07:30:41 wiz Exp $
 
-BLAKE2s (libXfont2-2.0.7.tar.xz) = ee85bbc6062bd5f9f795a27d52c9d57c5b980c4b0b98e7cf362ce83e8eb368be
-SHA512 (libXfont2-2.0.7.tar.xz) = f703127df5d5b1093c9b73e019153ed7799523573d52e61d344209f0acfd4df42e11be12bdd1880479c47c2b70de581a4f2ef74e199e9b1ac438f426593d56b0
-Size (libXfont2-2.0.7.tar.xz) = 453012 bytes
+BLAKE2s (libXfont2-2.0.8.tar.xz) = a92289a9c38d013cce4bc58892d1f3a70e25491fd18ce7a0b0a5f0da18efb65c
+SHA512 (libXfont2-2.0.8.tar.xz) = e14cc3fa03d7baa4554ee5754ab33f69ac1da3d509c686a5f705fde8cd07772be564d68cc18d9fd0beb5ed7b2f864fcd7f6bf4983f5c0db08a9c747d0e001531
+Size (libXfont2-2.0.8.tar.xz) = 474560 bytes
