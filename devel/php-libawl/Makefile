@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2025/12/11 14:14:12 hauke Exp $
+# $NetBSD: Makefile,v 1.23 2026/07/08 10:56:45 hauke Exp $
 #
 
 LIBAWL_VERSION=	0.65
 DISTNAME=	libawl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
 GITLAB_PROJECT=	awl
-GITLAB_TAG=	a3b9ae16	# v0.65
+GITLAB_TAG=	r${LIBAWL_VERSION}
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://gitlab.com/davical-project/awl
