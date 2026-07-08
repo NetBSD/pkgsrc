@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/07/08 15:44:41 micha Exp $
 
-BLAKE2s (ajbsp-v1.01.tar.gz) = cb04a5c486f23ef210b143670090f04621a6c1a9075ef2d6f30a77b38f780139
-SHA512 (ajbsp-v1.01.tar.gz) = a554cd11f95afe351769a78878b8717354750dc2165b8b4f2ab37cf92125aa058c4b08d0e4df5e7c82a9b0c0be578f12bbdf03df8c620295449982271544cba9
-Size (ajbsp-v1.01.tar.gz) = 77251 bytes
-SHA1 (patch-Makefile) = a53066b6ada4271c709e9d69f2038819a2d47158
+BLAKE2s (ajbsp-v1.05.tar.gz) = 63853bbccfbfa37dc5b72a3563fcc7b8ae66ad227cc44564a1659f692a0cf0e3
+SHA512 (ajbsp-v1.05.tar.gz) = cc16a424311336d7d9e55eb27b924c089af19ef9d20db3b47312a146ba0519d3eb5e0272fe8baecd00ded9c331c3a9595c1f129b75b3f4b8490345eaad4e9d95
+Size (ajbsp-v1.05.tar.gz) = 73150 bytes
+SHA1 (patch-Makefile) = fe67c9a4d21baddfae516cc4b0e73372b45b9f19
