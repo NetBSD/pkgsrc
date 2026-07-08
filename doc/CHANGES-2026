@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4333 2026/07/08 07:21:12 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4334 2026/07/08 07:24:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6479,3 +6479,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/log4cplus to 2.2.0.1 [adam 2026-07-08]
 	Updated net/qbittorrent to 5.2.3 [adam 2026-07-08]
 	Updated www/chromium to 150.0.7871.46nb1 [kikadf 2026-07-08]
+	Updated x11/xkbutils to 1.0.7 [wiz 2026-07-08]
