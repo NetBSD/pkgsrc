@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2026/06/05 10:21:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.75 2026/07/08 18:32:28 bsiegert Exp $
 
 DISTNAME=	micro-2.0.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=micro-editor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

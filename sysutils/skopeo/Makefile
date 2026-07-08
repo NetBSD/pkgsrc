@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2026/06/05 10:21:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/08 18:32:41 bsiegert Exp $
 
 DISTNAME=	skopeo-1.14.3
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 

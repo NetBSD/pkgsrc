@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2026/06/05 10:21:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.47 2026/07/08 18:32:31 bsiegert Exp $
 
 DISTNAME=	czds-1.2.14
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lanrat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

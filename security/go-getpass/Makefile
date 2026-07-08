@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/06/05 10:21:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/08 18:32:37 bsiegert Exp $
 
 DISTNAME=	getpass-0.2.3
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	28
+PKGREVISION=	29
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jschauma/}
 CATEGORIES=	security
 GITHUB_PROJECT=	getpass
