@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2026/07/06 13:06:40 kikadf Exp $
+# $NetBSD: Makefile,v 1.66 2026/07/08 07:20:46 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			150.0.7871.46
+PKGREVISION=			1
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -69,6 +70,7 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
+TOOL_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=			esbuild-[0-9]*:../../www/esbuild
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
