@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2025/05/21 12:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/08 10:10:21 adam Exp $
 
-DISTNAME=	libdiscid-0.6.5
+DISTNAME=	libdiscid-0.7.0
 CATEGORIES=	audio
-MASTER_SITES=	http://ftp.musicbrainz.org/pub/musicbrainz/libdiscid/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=metabrainz/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://musicbrainz.org/doc/libdiscid
