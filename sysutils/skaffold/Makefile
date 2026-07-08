@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/06/05 10:21:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/08 18:32:41 bsiegert Exp $
 
 DISTNAME=	skaffold-2.16.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GoogleContainerTools/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
