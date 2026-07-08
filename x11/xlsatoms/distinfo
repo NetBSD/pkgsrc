@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/13 21:20:05 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/07/08 07:26:36 wiz Exp $
 
-BLAKE2s (xlsatoms-1.1.4.tar.xz) = 5a55d6860ec0927b92ac505184a3ed9acb7f8719de409a41528270b36c347765
-SHA512 (xlsatoms-1.1.4.tar.xz) = 82f0d1e17850770537eac82947eff4514639f8122bd864e02685ede49db110a4c90c7782702ffb677a2b581f3eacd10dba80e63e29e7a1ed1c9255ee163fe0c4
-Size (xlsatoms-1.1.4.tar.xz) = 120480 bytes
+BLAKE2s (xlsatoms-1.1.5.tar.xz) = 6ddf0582bf0b0a2231036885a82d972b6aebb268093f1ddf9048d013cd361ba9
+SHA512 (xlsatoms-1.1.5.tar.xz) = a3e91814d6484f7bd6bb55d49ab898e685beb0bb5c86209cfc3e2f3b9aa85c81e09322f25b315bb0afe2ce86b8344adb81c47ed38730a1d4ffa15ce07c230631
+Size (xlsatoms-1.1.5.tar.xz) = 127500 bytes
