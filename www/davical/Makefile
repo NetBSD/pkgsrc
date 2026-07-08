@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.53 2025/02/08 04:00:53 taca Exp $
+# $NetBSD: Makefile,v 1.54 2026/07/08 12:43:27 hauke Exp $
 
-DAVICAL_VERSION=	1.1.11
+DAVICAL_VERSION=	1.1.13
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
 GITLAB_PROJECT=	davical
 GITLAB_TAG=	r${DAVICAL_VERSION}
-GITLAB_REV=	9da21ad116a2913bf788bd4b0b8c58c0de83d9da
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://www.davical.org/
@@ -61,6 +59,8 @@ CONF_FILES_PERMS+=	${EGDIR}/config/example-administration.yml	\
 CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${PKG_SYSCONFDIR}/config.php		\
 			${APACHE_USER} ${APACHE_GROUP} 0640
+
+PRINT_PLIST_AWK+=	{ gsub(/^share\/doc\/davical\/api\/.+$$/, "$${PLIST.doxygen}&"); }
 
 REPLACE_PERL=		dba/update-davical-database scripts/davical-cli
 
