@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4331 2026/07/07 20:39:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4332 2026/07/08 06:41:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6475,3 +6475,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nsd to 4.15.0 [he 2026-07-07]
 	Updated chat/matrix-synapse to 1.156.0 [gdt 2026-07-07]
 	Updated www/p5-HTTP-Tiny to 0.096 [wiz 2026-07-07]
+	Updated devel/catch2 to 3.15.2 [adam 2026-07-08]
+	Updated devel/log4cplus to 2.2.0.1 [adam 2026-07-08]
+	Updated net/qbittorrent to 5.2.3 [adam 2026-07-08]
