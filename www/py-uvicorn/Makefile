@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2026/06/28 15:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/07/08 08:04:04 adam Exp $
 
-DISTNAME=	uvicorn-0.49.0
+DISTNAME=	uvicorn-0.50.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.13:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.8.0:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.2:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-watchfiles>=0.20:../../misc/py-watchfiles
-DEPENDS+=	${PYPKGPREFIX}-websockets>=10.4:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-websockets>=13.0:../../www/py-websockets
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.2:../../www/py-httpx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.0:../../devel/py-test-mock
