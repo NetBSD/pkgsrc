@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2026/05/12 08:13:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/07/08 09:12:15 adam Exp $
 
-DISTNAME=	pamqp-4.0.0
+DISTNAME=	pamqp-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pamqp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pamqp.readthedocs.io/
+HOMEPAGE=	https://github.com/gmr/pamqp
 COMMENT=	RabbitMQ Focused AMQP low-level library
 LICENSE=	modified-bsd
 
