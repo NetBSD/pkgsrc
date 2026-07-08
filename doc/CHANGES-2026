@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4350 2026/07/08 13:45:43 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4351 2026/07/08 14:05:34 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6501,3 +6501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated news/canlock-hp to 3.3.3 [micha 2026-07-08]
 	Updated www/davical to 1.1.13 [hauke 2026-07-08]
 	Updated www/chromium to 150.0.7871.100 [kikadf 2026-07-08]
+	Updated x11/mlterm to 3.9.5 [tsutsui 2026-07-08]
