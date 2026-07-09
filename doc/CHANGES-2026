@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4372 2026/07/09 12:10:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4373 2026/07/09 12:13:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6562,3 +6562,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-test-utils [adam 2026-07-09]
 	Removed devel/py-traceback2 [adam 2026-07-09]
 	Removed devel/py-unittest-mixins [adam 2026-07-09]
+	Removed devel/py-uuid [adam 2026-07-09]
+	Removed devel/py-vcversioner [adam 2026-07-09]
+	Removed devel/py-whichcraft [adam 2026-07-09]
+	Removed editors/py-editor [adam 2026-07-09]
