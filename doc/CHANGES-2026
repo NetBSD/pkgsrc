@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4360 2026/07/09 05:45:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4361 2026/07/09 08:00:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6516,3 +6516,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testfixtures to 12.3.0 [adam 2026-07-09]
 	Updated net/gupnp-tools to 0.12.4 [adam 2026-07-09]
 	Updated devel/libffi to 3.7.0 [adam 2026-07-09]
+	Removed devel/py-args [adam 2026-07-09]
+	Removed devel/py-cachy [adam 2026-07-09]
+	Removed devel/py-characteristic [adam 2026-07-09]
+	Removed devel/py-checker [adam 2026-07-09]
