@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:19:14 nia Exp $
-
-BLAKE2s (uuid-1.30.tar.gz) = 3ba102d010859aba1b808dd6b3e5ab31dee4ca3f37cc3ad130410688a07e2db8
-SHA512 (uuid-1.30.tar.gz) = 9a748fe9acbe228cbf2f477b73d8358803452d7cb18a829ccc9bb80796d9d14d9c16ccc3f34af0d3550586c8f3618c88550a98689d491477199c5898a72b5826
-Size (uuid-1.30.tar.gz) = 5811 bytes
