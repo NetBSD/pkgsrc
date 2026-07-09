@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/06/28 15:08:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/07/09 05:38:26 adam Exp $
 bin/gssdp-discover
 bin/gupnp-av-cp
 bin/gupnp-event-dumper
@@ -20,12 +20,12 @@ share/gupnp-tools/pixmaps/upnp-state-variable.png
 share/gupnp-tools/xml/Dimming-scpd.xml
 share/gupnp-tools/xml/SwitchPower-scpd.xml
 share/gupnp-tools/xml/network-light-desc.xml
-share/icons/hicolor/256x256/apps/av-cp.png
-share/icons/hicolor/256x256/apps/network-light.png
-share/icons/hicolor/256x256/apps/universal-cp.png
-share/icons/hicolor/64x64/apps/av-cp.png
-share/icons/hicolor/64x64/apps/network-light.png
-share/icons/hicolor/64x64/apps/universal-cp.png
+share/icons/hicolor/256x256/apps/gupnp-av-cp.png
+share/icons/hicolor/256x256/apps/gupnp-network-light.png
+share/icons/hicolor/256x256/apps/gupnp-universal-cp.png
+share/icons/hicolor/64x64/apps/gupnp-av-cp.png
+share/icons/hicolor/64x64/apps/gupnp-network-light.png
+share/icons/hicolor/64x64/apps/gupnp-universal-cp.png
 share/locale/bg/LC_MESSAGES/gupnp-tools.mo
 share/locale/bs/LC_MESSAGES/gupnp-tools.mo
 share/locale/cs/LC_MESSAGES/gupnp-tools.mo
