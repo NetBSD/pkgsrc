@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4653 2026/07/09 11:47:19 adam Exp $
+# $NetBSD: Makefile,v 1.4654 2026/07/09 11:51:53 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2517,7 +2517,6 @@ SUBDIR+=	pthread-sem
 SUBDIR+=	purpose
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
-SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-Optik
 SUBDIR+=	py-ParamUnittest
 SUBDIR+=	py-Pympler
@@ -2730,7 +2729,6 @@ SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
 SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-google-api-core
-SUBDIR+=	py-google-apputils
 SUBDIR+=	py-google-i18n-address
 SUBDIR+=	py-googleapis-common-protos
 SUBDIR+=	py-greenlet
@@ -2750,7 +2748,6 @@ SUBDIR+=	py-hg-cinnabarclone
 SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
-SUBDIR+=	py-hglib
 SUBDIR+=	py-housekeeping
 SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
@@ -2767,7 +2764,6 @@ SUBDIR+=	py-iniconfig
 SUBDIR+=	py-inline-snapshot
 SUBDIR+=	py-intelhex
 SUBDIR+=	py-intervaltree
-SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipykernel
 SUBDIR+=	py-ipython
