@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4654 2026/07/09 11:51:53 adam Exp $
+# $NetBSD: Makefile,v 1.4655 2026/07/09 11:55:13 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2764,13 +2764,10 @@ SUBDIR+=	py-iniconfig
 SUBDIR+=	py-inline-snapshot
 SUBDIR+=	py-intelhex
 SUBDIR+=	py-intervaltree
-SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipykernel
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython-pygments-lexers
 SUBDIR+=	py-ipython_genutils
-SUBDIR+=	py-iso-639
-SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
 SUBDIR+=	py-itanium_demangler
 SUBDIR+=	py-iterable-io
@@ -2817,7 +2814,6 @@ SUBDIR+=	py-libusb1
 SUBDIR+=	py-license-expression
 SUBDIR+=	py-limits
 SUBDIR+=	py-line_profiler
-SUBDIR+=	py-linecache2
 SUBDIR+=	py-littleutils
 SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lockfile
