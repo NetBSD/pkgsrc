@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4648 2026/07/01 22:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4649 2026/07/09 07:59:45 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2548,7 +2548,6 @@ SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argparse
 SUBDIR+=	py-argparse-addons
 SUBDIR+=	py-argparse-manpage
-SUBDIR+=	py-args
 SUBDIR+=	py-assertpy
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
@@ -2597,7 +2596,6 @@ SUBDIR+=	py-cachecontrol
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-cachetools
-SUBDIR+=	py-cachy
 SUBDIR+=	py-calver
 SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-canvasapi
@@ -2607,8 +2605,6 @@ SUBDIR+=	py-cattrs
 SUBDIR+=	py-cbor2
 SUBDIR+=	py-cddl
 SUBDIR+=	py-cffi
-SUBDIR+=	py-characteristic
-SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah3
 SUBDIR+=	py-cle
 SUBDIR+=	py-click
