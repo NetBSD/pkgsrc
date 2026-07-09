@@ -1,1 +1,0 @@
-bin/radon @PREFIX@/bin/radon-@PYVERSSUFFIX@

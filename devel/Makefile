@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4656 2026/07/09 12:00:20 adam Exp $
+# $NetBSD: Makefile,v 1.4657 2026/07/09 12:03:35 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2895,7 +2895,6 @@ SUBDIR+=	py-polib
 SUBDIR+=	py-pooch
 SUBDIR+=	py-pprintpp
 SUBDIR+=	py-pqueue
-SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
 SUBDIR+=	py-process-tests
 SUBDIR+=	py-progress
@@ -3083,18 +3082,15 @@ SUBDIR+=	py-pyproject_hooks
 SUBDIR+=	py-pyrsistent
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
-SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pytokens
 SUBDIR+=	py-pytype
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvcd
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
-SUBDIR+=	py-radon
 SUBDIR+=	py-random2
 SUBDIR+=	py-rauth
 SUBDIR+=	py-re-assert
-SUBDIR+=	py-rednose
 SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru
 SUBDIR+=	py-requests
