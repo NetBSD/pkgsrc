@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.26 2026/07/06 13:49:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/07/09 11:34:41 adam Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/rsvg-cairo.h
 include/librsvg-2.0/librsvg/rsvg-features.h
 include/librsvg-2.0/librsvg/rsvg-pixbuf.h
 include/librsvg-2.0/librsvg/rsvg-version.h
 include/librsvg-2.0/librsvg/rsvg.h
+lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so
 lib/girepository-1.0/Rsvg-2.0.typelib
 lib/librsvg-2.so
 lib/librsvg-2.so.${PKGVERSION}
@@ -139,3 +140,4 @@ ${PLIST.doc}share/doc/Rsvg-2.0/style.css
 ${PLIST.doc}share/doc/Rsvg-2.0/type_func.Error.quark.html
 ${PLIST.doc}share/doc/Rsvg-2.0/urlmap.js
 share/gir-1.0/Rsvg-2.0.gir
+share/thumbnailers/librsvg.thumbnailer

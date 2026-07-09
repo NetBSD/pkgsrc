@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2026/07/06 13:49:06 adam Exp $
+# $NetBSD: Makefile,v 1.185 2026/07/09 11:34:41 adam Exp $
 
 DISTNAME=	librsvg-2.62.3
 CATEGORIES=	graphics gnome
@@ -16,6 +16,7 @@ TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	check
+MESON_ARGS+=	-Dpixbuf-loader=enabled
 MESON_REQD+=	1.3.0
 RUST_REQ=	1.92.0
 
@@ -37,13 +38,13 @@ SUBST_SED.rst2man=	-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${OPSYS} == "Darwin"
-#post-install:
-#	install_name_tool			\
-#	  -change @rpath/librsvg-2.2.dylib	\
-#	  ${PREFIX}/lib/librsvg-2.2.dylib	\
-#	  ${DESTDIR}${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib
-#.endif
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool			\
+	  -change @rpath/librsvg-2.2.dylib	\
+	  ${PREFIX}/lib/librsvg-2.2.dylib	\
+	  ${DESTDIR}${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib
+.endif
 
 .include "options.mk"
 
