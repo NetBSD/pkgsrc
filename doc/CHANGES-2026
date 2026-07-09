@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4364 2026/07/09 08:25:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4365 2026/07/09 10:04:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6529,3 +6529,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-daemonize [adam 2026-07-09]
 	Removed devel/py-dialog [adam 2026-07-09]
 	Removed devel/py-dictpath [adam 2026-07-09]
+	Removed devel/py-distorm3 [adam 2026-07-09]
+	Removed devel/py-fields [adam 2026-07-09]
+	Removed devel/py-filechunkio [adam 2026-07-09]
+	Removed devel/py-funcsigs [adam 2026-07-09]
