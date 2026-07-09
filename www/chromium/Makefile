@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2026/07/08 13:42:13 kikadf Exp $
+# $NetBSD: Makefile,v 1.68 2026/07/09 07:41:45 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			150.0.7871.100
@@ -24,7 +24,6 @@ CARGO_WRKSRC=			${WRKSRC}/rollup/rust
 EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 EB_VER=				${EB_DISTNAME:sh:C/^.*-//}
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
-#GITHUB_SUBMODULES+=		evanw esbuild v${EB_DISTNAME:sh:C/^.*-//} esbuild
 
 # LLVM_MAJOR_VERSION
 LLVM_MV=			21
@@ -73,7 +72,7 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
-TOOL_DEPENDS+=			esbuild-${EB_VER}:../../www/esbuild
+TOOL_DEPENDS+=			esbuild>=${EB_VER}:../../www/esbuild
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
