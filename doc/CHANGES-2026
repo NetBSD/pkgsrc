@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4367 2026/07/09 11:52:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4368 2026/07/09 11:55:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6542,3 +6542,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-hglib [adam 2026-07-09]
 	Removed devel/py-InlineEgg [adam 2026-07-09]
 	Removed devel/py-iowait [adam 2026-07-09]
+	Removed devel/py-ipaddr [adam 2026-07-09]
+	Removed devel/py-iso-639 [adam 2026-07-09]
+	Removed devel/py-iso3166 [adam 2026-07-09]
+	Removed devel/py-linecache2 [adam 2026-07-09]
