@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4363 2026/07/09 08:19:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4364 2026/07/09 08:25:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6525,3 +6525,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-cooldict [adam 2026-07-09]
 	Removed devel/py-crayons [adam 2026-07-09]
 	Removed devel/py-cyordereddict [adam 2026-07-09]
+	Removed devel/py-d2to1 [adam 2026-07-09]
+	Removed devel/py-daemonize [adam 2026-07-09]
+	Removed devel/py-dialog [adam 2026-07-09]
+	Removed devel/py-dictpath [adam 2026-07-09]
