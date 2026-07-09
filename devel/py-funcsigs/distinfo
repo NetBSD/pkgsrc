@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:29 nia Exp $
-
-BLAKE2s (funcsigs-1.0.2.tar.gz) = 09b0288e9bf4b3d7ee6ad9d8467fc3ad8852fa487e533f42c9fb307ace30b871
-SHA512 (funcsigs-1.0.2.tar.gz) = 4e583bb7081bb1d6c0fe5a6935ca03032d562b93ef5c11b51a72ce9e7ac12902451cc2233c7e6f70440629d88d8e6e9625965ee408100b80b0024f3a6204afda
-Size (funcsigs-1.0.2.tar.gz) = 27947 bytes
