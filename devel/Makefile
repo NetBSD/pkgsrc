@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4655 2026/07/09 11:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.4656 2026/07/09 12:00:20 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2517,8 +2517,6 @@ SUBDIR+=	pthread-sem
 SUBDIR+=	purpose
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
-SUBDIR+=	py-Optik
-SUBDIR+=	py-ParamUnittest
 SUBDIR+=	py-Pympler
 SUBDIR+=	py-Pyro
 SUBDIR+=	py-SDL2
@@ -2817,7 +2815,6 @@ SUBDIR+=	py-line_profiler
 SUBDIR+=	py-littleutils
 SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lockfile
-SUBDIR+=	py-logan
 SUBDIR+=	py-logbook
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-looseversion
@@ -2844,7 +2841,6 @@ SUBDIR+=	py-mock
 SUBDIR+=	py-mocket
 SUBDIR+=	py-modulegraph
 SUBDIR+=	py-more-itertools
-SUBDIR+=	py-mox
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-msgspec
 SUBDIR+=	py-mulpyplexer
