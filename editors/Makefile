@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2026/06/13 15:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2026/07/09 12:13:22 adam Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -127,7 +127,6 @@ SUBDIR+=	pico
 SUBDIR+=	pluma
 SUBDIR+=	poedit
 SUBDIR+=	poke
-SUBDIR+=	py-editor
 SUBDIR+=	py-jedi
 SUBDIR+=	qemacs
 SUBDIR+=	qtcreator
