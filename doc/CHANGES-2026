@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4365 2026/07/09 10:04:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4366 2026/07/09 11:47:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6533,3 +6533,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-fields [adam 2026-07-09]
 	Removed devel/py-filechunkio [adam 2026-07-09]
 	Removed devel/py-funcsigs [adam 2026-07-09]
+	Removed devel/py-fuzzywuzzy [adam 2026-07-09]
+	Removed devel/py-generate [adam 2026-07-09]
+	Removed devel/py-gflags [adam 2026-07-09]
+	Removed devel/py-gitinspector-devel [adam 2026-07-09]
+	Removed devel/py-gitinspector [adam 2026-07-09]
