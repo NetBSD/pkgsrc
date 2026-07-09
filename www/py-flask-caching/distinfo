@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2026/05/27 05:12:49 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/07/09 04:27:26 adam Exp $
 
-BLAKE2s (flask_caching-2.4.0.tar.gz) = ade09d9cd01f77ba6084835700f80a71467061181cf122431c1efec2eadc238c
-SHA512 (flask_caching-2.4.0.tar.gz) = 87b87591b55cfd805c6a4656d29667061bf86aaef575d6b412fc471b90ebb8caa47eda20902200e081df15f13fddb70316df12c58ed8db35abf9795bd7f8ec14
-Size (flask_caching-2.4.0.tar.gz) = 153673 bytes
+BLAKE2s (flask_caching-2.4.1.tar.gz) = 7ca0a08b9b271358289384c8f95a544a21916485fc9639a4e16dec5cc6299b68
+SHA512 (flask_caching-2.4.1.tar.gz) = 9f76d73e37765035a39abb37bf0bb1266167b68d153f56b207b2b7f4626e60a55fee44c18ba2c687cef255aa8251c807b9abfb35488ea3bd8bb10692378ae9d2
+Size (flask_caching-2.4.1.tar.gz) = 165380 bytes
