@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4371 2026/07/09 12:07:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4372 2026/07/09 12:10:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6558,3 +6558,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-rply [adam 2026-07-09]
 	Removed devel/py-scandir [adam 2026-07-09]
 	Removed devel/py-simplegeneric [adam 2026-07-09]
+	Removed devel/py-Spans [adam 2026-07-09]
+	Removed devel/py-test-utils [adam 2026-07-09]
+	Removed devel/py-traceback2 [adam 2026-07-09]
+	Removed devel/py-unittest-mixins [adam 2026-07-09]
