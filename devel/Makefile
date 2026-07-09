@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4649 2026/07/09 07:59:45 adam Exp $
+# $NetBSD: Makefile,v 1.4650 2026/07/09 08:19:14 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2616,7 +2616,6 @@ SUBDIR+=	py-click-option-group
 SUBDIR+=	py-click-plugins
 SUBDIR+=	py-click-repl
 SUBDIR+=	py-click-threading
-SUBDIR+=	py-clickclick
 SUBDIR+=	py-codespell
 SUBDIR+=	py-codestyle
 SUBDIR+=	py-cogapp
@@ -2634,7 +2633,6 @@ SUBDIR+=	py-construct
 SUBDIR+=	py-construct-classes
 SUBDIR+=	py-contextlib2
 SUBDIR+=	py-cookiecutter
-SUBDIR+=	py-cooldict
 SUBDIR+=	py-covdefaults
 SUBDIR+=	py-coverage
 SUBDIR+=	py-coverage-enable-subprocess
@@ -2643,14 +2641,12 @@ SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
 SUBDIR+=	py-cram
-SUBDIR+=	py-crayons
 SUBDIR+=	py-crc
 SUBDIR+=	py-cucumber-expressions
 SUBDIR+=	py-cucumber-tag-expressions
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cwcwidth
 SUBDIR+=	py-cykhash
-SUBDIR+=	py-cyordereddict
 SUBDIR+=	py-cython
 SUBDIR+=	py-cytoolz
 SUBDIR+=	py-d2to1

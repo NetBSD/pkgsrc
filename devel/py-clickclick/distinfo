@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2022/02/01 10:21:16 wiz Exp $
-
-BLAKE2s (clickclick-20.10.2.tar.gz) = e6b0dce12877f822f41386f903365936baa469e69fd52192689f3cb13e1d644d
-SHA512 (clickclick-20.10.2.tar.gz) = c566634a1a0cc2a1ff96a76af8545f386a0bfce993cec0edad5d847ccd247f3728dadf436ee2dabd28bd05b4be5075e97b0ea41d5c135d1a3c06db960d2f72eb
-Size (clickclick-20.10.2.tar.gz) = 9914 bytes
