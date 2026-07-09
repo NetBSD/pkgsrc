@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.582 2026/05/30 17:06:09 ryoon Exp $
+$NetBSD: distinfo,v 1.583 2026/07/09 20:07:10 jklos Exp $
 
 BLAKE2s (firefox-151.0.2.source.tar.xz) = f222da7bbef5f86e1b21395c46f39a3f6c05cc2d9ca19c1280738dd6e7b59ff8
 SHA512 (firefox-151.0.2.source.tar.xz) = 87308953ed354a2799a9a45be40033bf9ff8d80fa220f034aacfbd6e754716901d4164c37fa56032c659b259116603e0ba2b566c1f3651ab9cc0835d502cd739
@@ -30,6 +30,7 @@ SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_editline_editline.c) = ba44a33cc19d19aeaa777548ac74fc7144ea7d70
 SHA1 (patch-js_src_intgemm_moz.build) = 460d64d188e145dae2a917cef116e0483d86552e
 SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
+SHA1 (patch-js_src_jit_arm64_vixl_Registers-vixl.h) = 0e64f5b7ebc92ba12949181f78f716d88adcb67e
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = d0bdc30d23447bd56185eb9dc5c86de591f9cc02
