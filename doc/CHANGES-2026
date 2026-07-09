@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4369 2026/07/09 12:00:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4370 2026/07/09 12:03:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6550,3 +6550,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-mox [adam 2026-07-09]
 	Removed devel/py-Optik [adam 2026-07-09]
 	Removed devel/py-ParamUnittest [adam 2026-07-09]
+	Removed devel/py-prefixspan [adam 2026-07-09]
+	Removed devel/py-pytemplate [adam 2026-07-09]
+	Removed devel/py-radon [adam 2026-07-09]
+	Removed devel/py-rednose [adam 2026-07-09]
