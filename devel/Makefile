@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4650 2026/07/09 08:19:14 adam Exp $
+# $NetBSD: Makefile,v 1.4651 2026/07/09 08:25:14 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2649,9 +2649,7 @@ SUBDIR+=	py-cwcwidth
 SUBDIR+=	py-cykhash
 SUBDIR+=	py-cython
 SUBDIR+=	py-cytoolz
-SUBDIR+=	py-d2to1
 SUBDIR+=	py-daemon
-SUBDIR+=	py-daemonize
 SUBDIR+=	py-dash
 SUBDIR+=	py-ddt
 SUBDIR+=	py-debugpy
@@ -2660,10 +2658,8 @@ SUBDIR+=	py-deepmerge
 SUBDIR+=	py-deprecat
 SUBDIR+=	py-deprecated
 SUBDIR+=	py-deprecation
-SUBDIR+=	py-dialog
 SUBDIR+=	py-dict2xml
 SUBDIR+=	py-dictdiffer
-SUBDIR+=	py-dictpath
 SUBDIR+=	py-dirty-equals
 SUBDIR+=	py-distlib
 SUBDIR+=	py-distorm3
