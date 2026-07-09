@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4657 2026/07/09 12:03:35 adam Exp $
+# $NetBSD: Makefile,v 1.4658 2026/07/09 12:06:51 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3091,7 +3091,6 @@ SUBDIR+=	py-queuelib
 SUBDIR+=	py-random2
 SUBDIR+=	py-rauth
 SUBDIR+=	py-re-assert
-SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru
 SUBDIR+=	py-requests
 SUBDIR+=	py-requests-cache
@@ -3108,14 +3107,12 @@ SUBDIR+=	py-rich-click
 SUBDIR+=	py-rlp
 SUBDIR+=	py-rope
 SUBDIR+=	py-rpds-py
-SUBDIR+=	py-rply
 SUBDIR+=	py-rstr
 SUBDIR+=	py-ruamel-yaml
 SUBDIR+=	py-ruamel-yaml-clib
 SUBDIR+=	py-ruff
 SUBDIR+=	py-ruff-lsp
 SUBDIR+=	py-sarge
-SUBDIR+=	py-scandir
 SUBDIR+=	py-scard
 SUBDIR+=	py-scikit-build
 SUBDIR+=	py-scikit-build-core
@@ -3131,7 +3128,6 @@ SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools44
 SUBDIR+=	py-setuptools_scm
 SUBDIR+=	py-setuptools_trial
-SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-slugify
 SUBDIR+=	py-smmap
 SUBDIR+=	py-snappy
