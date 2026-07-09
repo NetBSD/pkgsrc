@@ -1,2 +1,0 @@
-Spans is a pure Python implementation of PostgreSQL's range types.
-Range types are convenient when working with intervals of any kind.
