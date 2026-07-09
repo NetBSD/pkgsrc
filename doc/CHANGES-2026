@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4359 2026/07/09 04:31:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4360 2026/07/09 05:45:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6514,3 +6514,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-asn1 to 0.6.4 [adam 2026-07-09]
 	Updated www/py-flask-caching to 2.4.1 [adam 2026-07-09]
 	Updated devel/py-testfixtures to 12.3.0 [adam 2026-07-09]
+	Updated net/gupnp-tools to 0.12.4 [adam 2026-07-09]
+	Updated devel/libffi to 3.7.0 [adam 2026-07-09]
