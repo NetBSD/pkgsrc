@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4373 2026/07/09 12:13:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4374 2026/07/09 12:47:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6566,3 +6566,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-vcversioner [adam 2026-07-09]
 	Removed devel/py-whichcraft [adam 2026-07-09]
 	Removed editors/py-editor [adam 2026-07-09]
+	Updated net/wireshark to 4.6.7 [adam 2026-07-09]
+	Updated net/libcares to 1.34.8 [adam 2026-07-09]
