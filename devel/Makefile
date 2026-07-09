@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4651 2026/07/09 08:25:14 adam Exp $
+# $NetBSD: Makefile,v 1.4652 2026/07/09 10:03:44 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2662,7 +2662,6 @@ SUBDIR+=	py-dict2xml
 SUBDIR+=	py-dictdiffer
 SUBDIR+=	py-dirty-equals
 SUBDIR+=	py-distlib
-SUBDIR+=	py-distorm3
 SUBDIR+=	py-distro
 SUBDIR+=	py-dm-tree
 SUBDIR+=	py-doc8
@@ -2693,9 +2692,7 @@ SUBDIR+=	py-falcon
 SUBDIR+=	py-fann2
 SUBDIR+=	py-fasteners
 SUBDIR+=	py-fastimport
-SUBDIR+=	py-fields
 SUBDIR+=	py-filebytes
-SUBDIR+=	py-filechunkio
 SUBDIR+=	py-filelock
 SUBDIR+=	py-fire
 SUBDIR+=	py-fixtures
@@ -2715,7 +2712,6 @@ SUBDIR+=	py-freezegun
 SUBDIR+=	py-frozendict
 SUBDIR+=	py-frozenlist
 SUBDIR+=	py-funcparserlib
-SUBDIR+=	py-funcsigs
 SUBDIR+=	py-funcy
 SUBDIR+=	py-future
 SUBDIR+=	py-fuzzywuzzy
