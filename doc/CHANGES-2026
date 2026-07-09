@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4362 2026/07/09 08:08:57 is Exp $
+$NetBSD: CHANGES-2026,v 1.4363 2026/07/09 08:19:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6521,3 +6521,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-cachy [adam 2026-07-09]
 	Removed devel/py-characteristic [adam 2026-07-09]
 	Removed devel/py-checker [adam 2026-07-09]
+	Removed devel/py-clickclick [adam 2026-07-09]
+	Removed devel/py-cooldict [adam 2026-07-09]
+	Removed devel/py-crayons [adam 2026-07-09]
+	Removed devel/py-cyordereddict [adam 2026-07-09]
