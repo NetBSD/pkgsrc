@@ -1,10 +1,53 @@
-$NetBSD: patch-Wnn_jutil_atof.c,v 1.1 2026/06/28 06:16:28 tsutsui Exp $
+$NetBSD: patch-Wnn_jutil_atof.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
+- Remove unnecessary old style function declarations
+- Use proper variadic arguments to print error messages
 
 --- Wnn/jutil/atof.c.orig	2013-09-02 11:01:39.000000000 +0000
 +++ Wnn/jutil/atof.c
-@@ -596,15 +596,18 @@ read_id ()
+@@ -121,6 +121,7 @@ static char *rcs_id = "$Id: atof.c,v 1.8
+ #    include <strings.h>
+ #  endif
+ #endif /* STDC_HEADERS */
++#include <stdarg.h>
+ #if HAVE_UNISTD_H
+ #  include <unistd.h>
+ #endif
+@@ -289,15 +290,17 @@ static void set_id FRWNN_PARAMS((int, in
+ static void pre_clear_jiritugo_v FRWNN_PARAMS((int));
+ static void init FRWNN_PARAMS((int, char **));
+ 
+-extern int wnn_loadhinsi (), create_file_header ();
+-
+ static void
+-error_format (s, d1, d2, d3, d4, d5)
+-     char *s;
+-     int d1, d2, d3, d4, d5;
++error_format (const char *fmt, ...)
+ {
++  va_list ap;
++
+   fprintf (stderr, "Bad format near line %d \"%s\".\n", line_no, buf);
+-  fprintf (stderr, s, d1, d2, d3, d4, d5);
++
++  va_start (ap, fmt);
++  vfprintf (stderr, fmt, ap);
++  va_end (ap);
++
+   exit (1);
+ }
+ 
+@@ -522,8 +525,6 @@ read_attr ()
+     }
+ }
+ 
+-extern char *wnn_get_hinsi_name ();
+-
+ static void
+ read_id ()
+ {
+@@ -596,15 +597,18 @@ read_id ()
  
  static int
  sort_func_id (a, b)
@@ -26,7 +69,7 @@ $NetBSD: patch-Wnn_jutil_atof.c,v 1.1 2026/06/28 06:16:28 tsutsui Exp $
  }
  
  #ifdef nodef
-@@ -741,17 +744,20 @@ bsch (c, st, end)
+@@ -741,17 +745,20 @@ bsch (c, st, end)
  #ifndef NO_FZK
  static int
  sort_func_fz (a, b)
@@ -51,7 +94,7 @@ $NetBSD: patch-Wnn_jutil_atof.c,v 1.1 2026/06/28 06:16:28 tsutsui Exp $
          {
            return (-1);
          }
-@@ -763,7 +769,7 @@ sort_func_fz (a, b)
+@@ -763,7 +770,7 @@ sort_func_fz (a, b)
  static void
  sort ()
  {

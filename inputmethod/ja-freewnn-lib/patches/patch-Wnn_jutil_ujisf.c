@@ -1,10 +1,19 @@
-$NetBSD: patch-Wnn_jutil_ujisf.c,v 1.3 2026/06/28 06:16:28 tsutsui Exp $
+$NetBSD: patch-Wnn_jutil_ujisf.c,v 1.4 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
+- Remove unnecessary old style function declaration
 
 --- Wnn/jutil/ujisf.c.orig	2013-09-02 11:01:39.000000000 +0000
 +++ Wnn/jutil/ujisf.c
-@@ -716,27 +716,27 @@ sisheng_num (a, p)
+@@ -76,7 +76,6 @@ extern unsigned char kanjiaddr (unsigned
+ extern void Print_entry (w_char* yomi, w_char* kstr, w_char* cstr,
+ 		int hindo, int ima, int hinsi, int serial,
+ 		FILE* ofpter, int esc_exp);
+-extern int  w_stradd ();
+ 
+ static void Kanjistradd FRWNN_PARAMS((w_char *, w_char *, w_char *, register UCHAR **));
+ static void bunpou_num FRWNN_PARAMS((register char *, register int *));
+@@ -716,27 +715,27 @@ sisheng_num (a, p)
  
  int
  sort_func_je (a, b)
@@ -37,7 +46,7 @@ $NetBSD: patch-Wnn_jutil_ujisf.c,v 1.3 2026/06/28 06:16:28 tsutsui Exp $
    if (pa->hinsi == SAKUJO_HINSI)
      {
        if (pb->hinsi == SAKUJO_HINSI)
-@@ -808,13 +808,13 @@ sort_func (a, b, which)
+@@ -808,13 +807,13 @@ sort_func (a, b, which)
  void
  sort ()
  {
@@ -53,7 +62,7 @@ $NetBSD: patch-Wnn_jutil_ujisf.c,v 1.3 2026/06/28 06:16:28 tsutsui Exp $
      {
        sort ();
      }
-@@ -823,12 +823,12 @@ sort_if_not_sorted ()
+@@ -823,12 +822,12 @@ sort_if_not_sorted ()
  void
  sort_kanji ()
  {
@@ -68,7 +77,7 @@ $NetBSD: patch-Wnn_jutil_ujisf.c,v 1.3 2026/06/28 06:16:28 tsutsui Exp $
  {
    int k;
    struct je **prev, **jep;
-@@ -839,7 +839,7 @@ uniq_je (func)
+@@ -839,7 +838,7 @@ uniq_je (func)
    for (k = 1; k < jt.maxserial; k++)
      {
        jep = &jeary[k];
@@ -77,7 +86,7 @@ $NetBSD: patch-Wnn_jutil_ujisf.c,v 1.3 2026/06/28 06:16:28 tsutsui Exp $
          {
            w_char tmp[LENGTHYOMI];
            char tmp1[LENGTHYOMI];
-@@ -990,15 +990,16 @@ read_kanji_str_w (c, o)
+@@ -990,15 +989,16 @@ read_kanji_str_w (c, o)
  
  int
  Sorted (st, lc, size, sort_fun)

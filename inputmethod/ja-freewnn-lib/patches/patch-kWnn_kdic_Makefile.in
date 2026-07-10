@@ -1,0 +1,16 @@
+$NetBSD: patch-kWnn_kdic_Makefile.in,v 1.3 2026/07/10 23:32:38 tsutsui Exp $
+
+- Set LC_ALL=C before egrep(1) against EUC files to avoid unexpected
+  errors for EUC files
+
+--- kWnn/kdic/Makefile.in.orig	2010-02-22 17:06:55.000000000 +0000
++++ kWnn/kdic/Makefile.in
+@@ -62,7 +62,7 @@ all:: $(ALLTGT)
+ $(DICS): $(HINSI)
+ 
+ $(FULL):: $(FZK_SRCS) fzk.master-.c
+-	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) fzk.master-.c | egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
++	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) fzk.master-.c | LC_ALL=C egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
+ 
+ # To avoid circular dependency, we don't use 'fzk.master.c'
+ fzk.master-.c: fzk.master

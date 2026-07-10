@@ -1,0 +1,116 @@
+$NetBSD: patch-configure.in,v 1.3 2026/07/10 23:32:38 tsutsui Exp $
+
+- Explicitly check stdlib.h and string.h
+- Make tgoto(3) tests work even in -std=gnu23 case
+- Make libwrap checks work with -std=gnu23
+- Use _DEFAULT_SOURCE for Linux as suggested by newer glibc
+
+--- configure.in.orig	2015-05-17 17:24:59.000000000 +0000
++++ configure.in
+@@ -395,7 +395,7 @@ dnl Now that we are using autoconf, CCOP
+ dnl But please report if your system needs specific settings (CCOPTIONS etc.)
+ case $host in
+ *-*-linux*)
+-    CCOPTIONS="-Dlinux -D_GNU_SOURCE -D_POSIX_SOURCE -D_BSD_SOURCE"
++    CCOPTIONS="-Dlinux -D_GNU_SOURCE -D_POSIX_SOURCE -D_DEFAULT_SOURCE"
+     ;;
+ *-*-*-gnu)
+     # Non-Linux kernel with GNU libc.
+@@ -509,7 +509,7 @@ AC_HEADER_SYS_WAIT
+ AC_HEADER_TIME
+ AC_CHECK_HEADERS(fcntl.h syslog.h unistd.h utmp.h utmpx.h \
+ 	sys/file.h sys/ioctl.h sys/time.h sys/types.h sys/param.h \
+-	malloc.h strings.h memory.h \
++	malloc.h stdlib.h string.h strings.h memory.h \
+ 	curses.h ncurses.h sgtty.h term.h termio.h termios.h \
+ 	termcap.h sys/termio.h libutil.h\
+ )
+@@ -546,10 +546,17 @@ else
+       dnl compile and run a test program to be sure
+       LIBS="${LIBS} -l${libname}"
+       AC_TRY_RUN([
++#ifdef HAVE_NCURSES_H
++# include <ncurses.h>
++#elif defined(HAVE_CURSES_H)
++# include <curses.h>
++#endif
+ #ifdef HAVE_TERMCAP_H
+ # include <termcap.h>
++#elif defined(HAVE_TERM_H)
++# include <term.h>
+ #endif
+-main() {char *s; s=(char *)tgoto("%p1%d", 0, 1); exit(0); }],
++int main(void) { return tgoto("%p1%d", 0, 1) == 0; }],
+ 	res="OK", res="FAIL", res="FAIL")
+       if test "$res" = "OK"; then
+ 	TERMLIB="${TERMLIB} -l${libname}"
+@@ -568,11 +575,22 @@ if test "x$TERMLIB" != "x"; then
+   LIBS="${LIBS} ${TERMLIB}"
+   AC_MSG_CHECKING(whether we talk terminfo)
+   AC_TRY_RUN([
++#include <string.h>
++#ifdef HAVE_NCURSES_H
++# include <ncurses.h>
++#elif defined(HAVE_CURSES_H)
++# include <curses.h>
++#endif
+ #ifdef HAVE_TERMCAP_H
+ # include <termcap.h>
++#elif defined(HAVE_TERM_H)
++# include <term.h>
+ #endif
+-main()
+-{char *s; s=(char *)tgoto("%p1%d", 0, 1); exit(!strcmp(s==0 ? "" : s, "1")); }],
++int main(void)
++{
++  const char *s = tgoto("%p1%d", 0, 1);
++  return strcmp(s == 0 ? "" : s, "1") == 0;
++}],
+ 	[ AC_MSG_RESULT([no -- we are in termcap land])
+ 	  CNVFILE_SUBDIR=bsd ],
+ 	[ AC_DEFINE(HAVE_TERMINFO, 1, [terminfo spoken here])
+@@ -857,21 +875,40 @@ if test "$WRAP_TRY" = yes -o "$WRAP_TRY"
+     OLDLIBS="$LIBS"
+     WRAPLIB=${WRAPLIB:-"-lwrap"}
+     LIBS="$WRAPLIB $OLDLIBS"
+-    AC_MSG_CHECKING([libwrap is working])
+-    AC_TRY_LINK([ int allow_severity; int deny_severity; ],
+-		[ hosts_access(); ],
++
++    AC_CHECK_HEADER([tcpd.h],
++        [have_tcpd_h=yes],
++        [have_tcpd_h=no])
++
++    if test "$have_tcpd_h" = yes; then
++        AC_MSG_CHECKING([libwrap is working])
++        AC_TRY_LINK([
++#include <tcpd.h>
++int allow_severity;
++int deny_severity;
++],
++        [ return hosts_access((struct request_info *)0); ],
+ 		[ AC_MSG_RESULT(yes)
+ 		  AC_DEFINE(HAVE_LIBWRAP, 1,
+ 		           [Define if you have libwrap (TCP wrapper) support.])
+ 		  AC_SUBST(WRAPLIB)],
+ 		[ AC_MSG_RESULT(no)
+ 		  if test "$WRAP_TRY" = yes; then
+-		    AC_MSG_ERROR([Could not find libwrap. Please check config.log.])
++		    AC_MSG_ERROR([Could not find working libwrap. Please check config.log.])
+ 		  else
+ 		    # recover old flag / clear needless WRAPLIB and continue
+ 		    CFLAGS=$OLDCFLAGS
+ 		    WRAPLIB=
+ 		  fi] )
++    else
++        if test "$WRAP_TRY" = yes; then
++            AC_MSG_ERROR([Could not find tcpd.h for libwrap.])
++        else
++            # recover old flag / clear needless WRAPLIB and continue
++            CFLAGS=$OLDCFLAGS
++            WRAPLIB=
++        fi
++    fi
+     # only jserver needs libwrap, recover LIBS also
+     LIBS=$OLDLIBS
+ fi
