@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/12/04 15:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/10 16:08:30 wiz Exp $
 
-DISTNAME=		xset-1.2.5
+DISTNAME=		xset-1.2.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
@@ -10,11 +10,9 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 user preferences utility
 LICENSE=		mit
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
-
+.include "../../devel/meson/build.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
