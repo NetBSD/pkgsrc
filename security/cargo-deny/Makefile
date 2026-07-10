@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/06/22 05:58:01 pin Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/10 12:03:07 adam Exp $
 
-DISTNAME=	cargo-deny-0.19.9
+DISTNAME=	cargo-deny-0.20.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
