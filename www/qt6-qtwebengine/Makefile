@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/05/14 16:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2026/07/10 16:03:13 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
@@ -8,6 +8,8 @@ CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 CMAKE_GENERATORS_INCOMPATIBLE=	make
+
+NODE_VERSIONS_ACCEPTED=	26
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
