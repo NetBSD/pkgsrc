@@ -1,6 +1,6 @@
-$NetBSD: patch-Wnn_jserver_jishoop.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_jserver_jishoop.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Appease "comparison between pointer and integer" warning
+- Appease -Wpointer-compare warning
 
 --- Wnn/jserver/jishoop.c.orig	2013-09-02 11:01:39.000000000 +0000
 +++ Wnn/jserver/jishoop.c

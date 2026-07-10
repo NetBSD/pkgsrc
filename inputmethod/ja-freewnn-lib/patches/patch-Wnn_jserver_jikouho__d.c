@@ -1,6 +1,7 @@
-$NetBSD: patch-Wnn_jserver_jikouho__d.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_jserver_jikouho__d.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
+- Remove unnecessary old stype function declarations
 
 --- Wnn/jserver/jikouho_d.c.orig	2013-09-02 11:01:39.000000000 +0000
 +++ Wnn/jserver/jikouho_d.c
@@ -36,3 +37,14 @@ $NetBSD: patch-Wnn_jserver_jikouho__d.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
  }
  
  static void
+@@ -480,10 +482,6 @@ zen_sbn (yomi_sno, yomi_eno, endvect, en
+   int *vector1;
+ #endif
+ 
+-#ifndef NO_KATA
+-  struct JKT_SBN *get_kata_kouho ();
+-#endif
+-  struct JKT_SBN *get_hira_kouho ();
+   struct SYO_BNSETSU *giji_sbn;
+   struct SYO_BNSETSU *getsbnsp ();
+ 

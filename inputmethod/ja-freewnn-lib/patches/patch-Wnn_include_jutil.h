@@ -1,6 +1,6 @@
-$NetBSD: patch-Wnn_include_jutil.h,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_include_jutil.h,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Use proper function prototypes including function pointers
 
 --- Wnn/include/jutil.h.orig	2014-08-01 22:04:26.000000000 +0000
 +++ Wnn/include/jutil.h
@@ -8,7 +8,7 @@ $NetBSD: patch-Wnn_include_jutil.h,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
  #define FRWNN_PARAMS(paramlist)	()
  #endif	/* __STDC__ */
  
-+typedef int (*WNN_CompareFunc)(const void *, const void *);
++typedef int (*WNN_CompareFunc) FRWNN_PARAMS((const void *, const void *));
 +
  /* -- macro  -- */
  /* ujisf.c  */

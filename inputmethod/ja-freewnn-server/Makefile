@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2026/06/28 06:16:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/10 23:32:38 tsutsui Exp $
 
 .include "../../inputmethod/ja-freewnn-lib/Makefile.common"
 
 PKGNAME=	ja-FreeWnn-server-1.11alpha23
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT+=	(Japanese server)
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-Wnn_jserver_snd__rcv.c,v 1.1 2026/06/28 06:16:28 tsutsui Exp $
+$NetBSD: patch-Wnn_jserver_snd__rcv.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Appease -Wincompatible-pointer-types warning
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
 
 --- Wnn/jserver/snd_rcv.c.orig	2003-05-11 18:43:16.000000000 +0000
 +++ Wnn/jserver/snd_rcv.c

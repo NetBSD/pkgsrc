@@ -1,8 +1,9 @@
-$NetBSD: patch-Wnn_jlib_jl.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_jlib_jl.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
+- Remove unnecessary old style declarations for standard C functions
 
---- Wnn/jlib/jl.c.orig	2026-06-25 14:24:34.268341077 +0000
+--- Wnn/jlib/jl.c.orig	2015-05-10 01:39:27.000000000 +0000
 +++ Wnn/jlib/jl.c
 @@ -2623,17 +2623,19 @@ jl_dic_list_e (env, dicinfo)
  
@@ -51,3 +52,20 @@ $NetBSD: patch-Wnn_jlib_jl.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
    *jdp = jd;
    return (cnt);
  }
+@@ -2971,7 +2973,6 @@ expand_expr_all (s, env)
+ static char *
+ getlogname ()
+ {
+-  struct passwd *getpwuid ();
+   return getpwuid (getuid ())->pw_name;
+ }
+ 
+@@ -2988,8 +2989,6 @@ expand_expr (s, env)
+   char tmp[EXPAND_PATH_LENGTH];
+   int noerr, expandsuc;
+   struct passwd *u;
+-  extern char *getenv ();
+-  extern struct passwd *getpwnam ();
+ 
+   if (*s != '~' && *s != '@')
+     return (0);

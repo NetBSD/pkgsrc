@@ -1,6 +1,6 @@
-$NetBSD: patch-Wnn_jserver_jikouho.c,v 1.1 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_jserver_jikouho.c,v 1.2 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
 
 --- Wnn/jserver/jikouho.c.orig	2013-09-02 11:01:39.000000000 +0000
 +++ Wnn/jserver/jikouho.c

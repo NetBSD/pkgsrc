@@ -1,0 +1,20 @@
+$NetBSD: patch-cWnn_tdic_Makefile.in,v 1.3 2026/07/10 23:32:38 tsutsui Exp $
+
+- Set LC_ALL=C before egrep(1) against EUC files to avoid unexpected
+  errors for EUC files
+
+--- cWnn/tdic/Makefile.in.orig	2010-02-22 17:06:54.000000000 +0000
++++ cWnn/tdic/Makefile.in
+@@ -64,10 +64,10 @@ all:: $(ALLTGT)
+ $(DICS): $(HINSI)
+ 
+ $(FULL):: $(FZK_SRCS) con.master-.c
+-	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) con.master-.c | egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
++	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) con.master-.c | LC_ALL=C egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
+ 
+ $(FULLR):: $(FZK_SRCS) con.masterR-.c
+-	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) con.masterR-.c | egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
++	$(FZK_PP) -I$(srcdir) $(FZK_FLAG) con.masterR-.c | LC_ALL=C egrep -v '^(# |#line |#pragma |$$)' | $(ATOF) -h $(HINSI) $@
+ 
+ # To avoid circular dependency, we don't use 'con.master?.c'
+ con.master-.c: con.master

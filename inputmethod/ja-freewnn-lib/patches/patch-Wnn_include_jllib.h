@@ -1,6 +1,6 @@
-$NetBSD: patch-Wnn_include_jllib.h,v 1.3 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-Wnn_include_jllib.h,v 1.4 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Use proper function prototypes including function pointers
 
 --- Wnn/include/jllib.h.orig	2015-05-10 01:39:27.000000000 +0000
 +++ Wnn/include/jllib.h

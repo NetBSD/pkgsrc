@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2026/06/28 06:16:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/10 23:32:36 tsutsui Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ja-FreeWnn-lib-1.11alpha23
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(Japanese client library)
 

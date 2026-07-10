@@ -1,10 +1,11 @@
-$NetBSD: patch-PubdicPlus_pod.c,v 1.3 2026/06/28 06:16:27 tsutsui Exp $
+$NetBSD: patch-PubdicPlus_pod.c,v 1.4 2026/07/10 23:32:37 tsutsui Exp $
 
-- Fix build with -std=gnu23 (i.e. gcc14 and later)
+- Appease -Wincompatible-pointer-types that are fatal on gcc14 and later
+- Add a proper function prototype declaration
 
---- PubdicPlus/pod.c.orig	2026-06-24 03:14:59.387777641 +0000
+--- PubdicPlus/pod.c.orig	2005-12-10 18:50:43.000000000 +0000
 +++ PubdicPlus/pod.c
-@@ -154,7 +154,7 @@ static struct descpack *searchdesc (Wcha
+@@ -154,17 +154,18 @@ static struct descpack *searchdesc (Wcha
  static void store_description (void);
  static long internkind (Wchar *s);
  static void listkinds (void);
@@ -12,8 +13,10 @@ $NetBSD: patch-PubdicPlus_pod.c,v 1.3 2026/06/28 06:16:27 tsutsui Exp $
 +static int kindcompar (const void *k1, const void *k2);
  static void sortkind (void);
  static struct dicpack *intern (int key, Wchar *yomi, Wchar *kouho, Wchar *hinshi, int hindo, long kind, int *stat, long flags);
++static void for_all_interned (void (*fn)(struct dicpack *));
  static void storepd (FILE *file);
-@@ -163,8 +163,8 @@ static void canna_output (FILE *cf, stru
+ static void comparepd (FILE *file);
+ static void canna_output (FILE *cf, struct dicpack *p, Wchar *h, int n);
  static void entry_out (FILE *cf, struct dicpack *p, Wchar *h, int n, Wchar *ex);
  static void printentry (FILE *cf, struct dicpack *p);
  static void showentry (struct dicpack **pd, int n);
@@ -24,7 +27,7 @@ $NetBSD: patch-PubdicPlus_pod.c,v 1.3 2026/06/28 06:16:27 tsutsui Exp $
  void shrinkargs (char **argv, int n, int count);
  static void parseargs (int argc, char *argv[]);
  #endif
-@@ -823,9 +823,11 @@ listkinds ()
+@@ -823,9 +824,11 @@ listkinds ()
  
  static int
  kindcompar (k1, k2)
@@ -38,6 +41,16 @@ $NetBSD: patch-PubdicPlus_pod.c,v 1.3 2026/06/28 06:16:27 tsutsui Exp $
  }
  
  static void
+@@ -978,8 +981,7 @@ intern (key, yomi, kouho, hinshi, hindo,
+ /* 登録されているエントリに対して fn を実行する */
+ 
+ static void
+-for_all_interned (fn)
+-     void (*fn) ();
++for_all_interned (void (*fn)(struct dicpack *))
+ {
+   int i;
+   struct dicpack *p;
 @@ -1365,18 +1367,20 @@ showentry (pd, n)
  
  static int
