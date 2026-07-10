@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/03 18:36:12 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/07/10 16:06:18 wiz Exp $
 
-BLAKE2s (xrdb-1.2.2.tar.xz) = ae9c69828f3ca6bc802c4b4f876bae22e25d1e843ddecde16fa0edf24fef7721
-SHA512 (xrdb-1.2.2.tar.xz) = c8a6fc94e270e9cb5602e055150553de103d545298285157ecd8924f163a10ebeb9acfff56d1fafbf48d339809c76340213792478cdf3270012d3cd05486001c
-Size (xrdb-1.2.2.tar.xz) = 136768 bytes
+BLAKE2s (xrdb-1.2.3.tar.xz) = d23cae7a711f17cb05d80548e208d2b104e661f1dd0caad42d29b243f1f835ad
+SHA512 (xrdb-1.2.3.tar.xz) = 4dbbfd38afc9c795de3671a37e377247dc598b9c1352f6f07158fb716437f0465fb5db4eee22d74ebee93dff4a3ef1c1e4268f333cea0d8f02d1fa10104ac748
+Size (xrdb-1.2.3.tar.xz) = 144084 bytes
