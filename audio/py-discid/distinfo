@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/06/26 13:47:41 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/07/10 12:09:42 adam Exp $
 
-BLAKE2s (discid-1.4.1.tar.gz) = c46da49045e3c15654f8ef9d4f0972597803aca67ed3ebf221c10d0fdff01d5c
-SHA512 (discid-1.4.1.tar.gz) = 3485472a0c5ffaa5bc999414f2e5c28e7467ae7de867911a9be34c05d81bc9049a1b0d9659e7118d57143857b9abc078dc932c3cb6edee54ee071f8dd802b18a
-Size (discid-1.4.1.tar.gz) = 36750 bytes
+BLAKE2s (discid-1.4.2.tar.gz) = d1124fa9ec921ea6793fd82eba7b48d1c736e03126b8d0f7c0ad4c15d5917f3b
+SHA512 (discid-1.4.2.tar.gz) = 0579fdf79e7e77322851ce23f0b3676276224ecb65a329dd4c0e6d858bf7c0ac18c58a2f853a115069aa0bb271686fd898937ebb7df0fe6c820c53a78d20fea7
+Size (discid-1.4.2.tar.gz) = 36763 bytes
