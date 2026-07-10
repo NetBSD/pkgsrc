@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 10:54:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/07/10 08:30:02 adam Exp $
 bin/stone-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,6 +9,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/stone/__init__.py
 ${PYSITELIB}/stone/__init__.pyc
 ${PYSITELIB}/stone/__init__.pyo
+${PYSITELIB}/stone/__main__.py
+${PYSITELIB}/stone/__main__.pyc
+${PYSITELIB}/stone/__main__.pyo
 ${PYSITELIB}/stone/backend.py
 ${PYSITELIB}/stone/backend.pyc
 ${PYSITELIB}/stone/backend.pyo

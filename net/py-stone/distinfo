@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/04/15 10:54:17 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/07/10 08:30:02 adam Exp $
 
-BLAKE2s (stone-3.3.9.tar.gz) = b29c573af6fa3d77909fc89bfb0d487ead58957a1d575eb137d60a1e64b74b66
-SHA512 (stone-3.3.9.tar.gz) = 95da54f233b858e05be13a87f917e66a4c69b588b312d6eed79e3e0276bf163958b7fd1d6ecc719fdcd9bbe560d636024e5b30dac30e7bcbad3691196e5194f6
-Size (stone-3.3.9.tar.gz) = 194103 bytes
-SHA1 (patch-setup.py) = 095845d650cf242b4c26785f8ed0bdb8a437993c
-SHA1 (patch-test_requirements.txt) = 7b160453cb63be7741073d3c36469b0aef59825c
+BLAKE2s (stone-3.4.0.tar.gz) = dbc36678920aa1b9e555de30a2673c5c3a73d875ad293a24929ebd0c5e2e1c56
+SHA512 (stone-3.4.0.tar.gz) = 34cf55fef802207e5b4c546de0cd590665122e6459be767cfe989516572364cc47c6cda1352f157819143c8077b86950e51b154ea63be33550aef4f2effa4912
+Size (stone-3.4.0.tar.gz) = 195972 bytes
