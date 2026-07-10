@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/06/22 17:36:27 dogcow Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/07/10 03:39:42 dogcow Exp $
 bin/transmission-create
 bin/transmission-daemon
 bin/transmission-edit
@@ -54,6 +54,7 @@ share/doc/transmission/news/news-4.1.0-beta.4.md
 share/doc/transmission/news/news-4.1.0-beta.5.md
 share/doc/transmission/news/news-4.1.0.md
 share/doc/transmission/news/news-4.1.1.md
+share/doc/transmission/news/news-4.1.2.md
 share/doc/transmission/news/news-5.0.0-draft.md
 share/doc/transmission/news/news-${PKGVERSION}.md
 share/doc/transmission/rpc-spec.md
