@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2026/07/07 08:30:27 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.4 2026/07/10 13:35:54 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.zip
@@ -192,6 +192,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.44.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.44.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20250620022241-b7579e27df2b.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20250620022241-b7579e27df2b.zip
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.mod
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.zip
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.47.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.47.0.zip
 GO_MODULE_FILES+=	golang.org/x/oauth2/@v/v0.30.0.mod

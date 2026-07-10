@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/07/07 12:34:26 drixter Exp $
+$NetBSD: distinfo,v 1.11 2026/07/10 13:35:54 drixter Exp $
 
 BLAKE2s (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 6ac20d45dc73571467fbfa4fb284b576f5877808bb8938b2c883fc48fca05429
 SHA512 (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 283a7606aaa0d7463b9744a13a6c2064ca5d815077622a5d36e43be704c17403d80e6a5e106f544baaacf922b14d106843d99c1af174808960cc27a3fc26db91
@@ -576,6 +576,12 @@ Size (golang.org_x_exp_@v_v0.0.0-20250620022241-b7579e27df2b.mod) = 182 bytes
 BLAKE2s (golang.org_x_exp_@v_v0.0.0-20250620022241-b7579e27df2b.zip) = 0d179cab5ed755c0b5a28c45819f9dcda5aa3d198b70a1e7b7c343ee16ab08ce
 SHA512 (golang.org_x_exp_@v_v0.0.0-20250620022241-b7579e27df2b.zip) = b22fd7a9439e98d30a94df01bad89e61f37c89e82153f660dea48eb193f80666a5098dd1ec52bf57c3cede8969fd2e71125419550dda2d303ea452ea47bbea73
 Size (golang.org_x_exp_@v_v0.0.0-20250620022241-b7579e27df2b.zip) = 622423 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.37.0.mod) = b40be60bf08f6b5044185949ca3746ffa2d647d8982dff0c8dadcf0c03d03962
+SHA512 (golang.org_x_mod_@v_v0.37.0.mod) = 549b77912604a950cc9c0db67d3f65b23676d8ec12c1c1844485b8696ec0e59815bd31751b3f8e7c38b5f58e7559fef991f401e0f5875621d78a7e01919dd7c8
+Size (golang.org_x_mod_@v_v0.37.0.mod) = 86 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.37.0.zip) = b3b823b2deaf30dd100835cae07d5f8a6c5eeb92b018d5bc9431db749d4960ac
+SHA512 (golang.org_x_mod_@v_v0.37.0.zip) = c469f42a7d530e6adee7c2e36b528f163a91ae37fdcdadecbda4cba07ec078f3ccae684ac34432b7c24715aa8efffd14f0039fb0148e2022908efa4de514235a
+Size (golang.org_x_mod_@v_v0.37.0.zip) = 174531 bytes
 BLAKE2s (golang.org_x_net_@v_v0.47.0.mod) = e3f2f468f49eefcf5df0751189b31292712142563ac54c882ffaab5c5b91ce65
 SHA512 (golang.org_x_net_@v_v0.47.0.mod) = 0cee4f8c6e2e8d0ecc9ce9c6ef30f97037fa1dccf728aed8afb37d35aedc7bc68a02bc4cea01c847e2ce82c8a654b9bb27bfac571bb010c225b192581d866c8a
 Size (golang.org_x_net_@v_v0.47.0.mod) = 157 bytes
@@ -762,9 +768,9 @@ Size (nhooyr.io_websocket_@v_v1.8.7.mod) = 427 bytes
 BLAKE2s (nhooyr.io_websocket_@v_v1.8.7.zip) = f4ed468617b351c6663eaae8b75c1e32c4b53b2c6d3b964c0cc1a65070784c0f
 SHA512 (nhooyr.io_websocket_@v_v1.8.7.zip) = bf99fcf8e3797080ea6c486dab6f677d00b22865cce152c98d350f429d75c25ffce1266c3ed0429172879e1725d770e651174d18b4438aa8fd40b2357d3bca31
 Size (nhooyr.io_websocket_@v_v1.8.7.zip) = 74216 bytes
-BLAKE2s (resterm-0.45.2.tar.gz) = dc561ba4aa33354130ac4a4f530679918818f77860c932352312289d8f2b45cc
-SHA512 (resterm-0.45.2.tar.gz) = 243c32e69d8a9b97ee34011df4ea880a8deab3f7d8ad6ee0a5492a9bb5138b18dd090c7ee70dff4a9b704614d02b1cb537941807303793a3398b8f7356d72ae1
-Size (resterm-0.45.2.tar.gz) = 25415504 bytes
+BLAKE2s (resterm-0.46.2.tar.gz) = 8eca3e826a70c40334e00cd9a1cb262921b012e71ea4d0aed15ccb1d5d6a7d5f
+SHA512 (resterm-0.46.2.tar.gz) = 3ea074aa060dfa848906ff25701037b9ae2a9fcba7d5043f4b3b2e1fbcdd2e105e59993d69c2cb6dcf927337074874563beb8e8bc0f6db1c30c99c195edfcb31
+Size (resterm-0.46.2.tar.gz) = 25428032 bytes
 BLAKE2s (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 0b1238d89c77686f02002092d6c14b461423ce7c2fa906f554deffefd727014d
 SHA512 (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = ca8b000bb3d6dce184fd01445782fa95557ec7ff6328dcd225dc26a14fc1d2d69baacaebe9d8703c867c8902f846950f9aefcc80af4530735f4b4432b77e4490
 Size (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 33 bytes
