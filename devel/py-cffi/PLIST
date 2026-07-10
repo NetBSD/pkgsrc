@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.13 2025/09/21 15:31:05 wiz Exp $
-${PYSITELIB}/_cffi_backend.so
+@comment $NetBSD: PLIST,v 1.14 2026/07/10 09:42:35 adam Exp $
+bin/cffi-gen-src-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/_cffi_backend.so
 ${PYSITELIB}/cffi/__init__.py
 ${PYSITELIB}/cffi/__init__.pyc
 ${PYSITELIB}/cffi/__init__.pyo
 ${PYSITELIB}/cffi/_cffi_errors.h
+${PYSITELIB}/cffi/_cffi_gen_src.py
+${PYSITELIB}/cffi/_cffi_gen_src.pyc
+${PYSITELIB}/cffi/_cffi_gen_src.pyo
 ${PYSITELIB}/cffi/_cffi_include.h
 ${PYSITELIB}/cffi/_embedding.h
 ${PYSITELIB}/cffi/_imp_emulation.py
@@ -40,6 +43,9 @@ ${PYSITELIB}/cffi/error.pyo
 ${PYSITELIB}/cffi/ffiplatform.py
 ${PYSITELIB}/cffi/ffiplatform.pyc
 ${PYSITELIB}/cffi/ffiplatform.pyo
+${PYSITELIB}/cffi/gen_src.py
+${PYSITELIB}/cffi/gen_src.pyc
+${PYSITELIB}/cffi/gen_src.pyo
 ${PYSITELIB}/cffi/lock.py
 ${PYSITELIB}/cffi/lock.pyc
 ${PYSITELIB}/cffi/lock.pyo
