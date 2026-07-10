@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4381 2026/07/10 12:11:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4382 2026/07/10 13:36:14 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6587,3 +6587,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/cargo-deny to 0.20.2 [adam 2026-07-10]
 	Updated audio/py-discid to 1.4.2 [adam 2026-07-10]
 	Updated time/py-tzdata to 2026.3 [adam 2026-07-10]
+	Updated www/resterm to 0.46.2 [drixter 2026-07-10]
