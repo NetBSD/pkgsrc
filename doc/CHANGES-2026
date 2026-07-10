@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4384 2026/07/10 16:06:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4385 2026/07/10 16:07:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libffi to 3.7.1 [adam 2026-07-10]
 	Updated security/p11-kit to 0.26.4 [adam 2026-07-10]
 	Updated x11/xrdb to 1.2.3 [wiz 2026-07-10]
+	Updated x11/xrefresh to 1.1.1 [wiz 2026-07-10]
