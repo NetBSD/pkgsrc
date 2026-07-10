@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/09/21 15:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/07/10 09:42:35 adam Exp $
 
-DISTNAME=	cffi-2.0.0
+DISTNAME=	cffi-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 USE_LANGUAGES=	c c++ # c++ for testing only
 USE_TOOLS+=	pkg-config
+
+PY_RENAME_BINARIES=	cffi-gen-src
 
 # as of 2.0.0
 # 8 failed, 1914 passed, 131 skipped, 4 xfailed, 19 warnings
