@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/07/10 08:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/11 08:20:41 wiz Exp $
 
-DISTNAME=	stone-3.4.0
+DISTNAME=	stone-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stone/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
-# doesn't work:
-# E   ModuleNotFoundError: No module named 'test.backend_test_util'
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.1.0:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
