@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/05/14 16:42:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/12 16:53:28 wiz Exp $
 
 DISTNAME=	sequoia-sq-1.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-sq
@@ -18,6 +18,9 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
+CARGO_NO_DEFAULT_FEATURES=	yes
+CARGO_FEATURES+=		crypto-openssl
+
 TOOL_DEPENDS+=	capnproto-[0-9]*:../../devel/capnproto
 
 .include "cargo-depends.mk"
@@ -28,7 +31,6 @@ USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nettle}/lib
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/bash-completion/completions
@@ -43,5 +45,4 @@ post-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/nettle/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
