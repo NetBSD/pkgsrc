@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/12 20:22:39 wiz Exp $
+
+BLAKE2s (colorsym-v1.0.0.zip) = d28881e1317ff287bae412075d9c3e9c9e589e40b77a8e024acd5d7a90f88aa2
+SHA512 (colorsym-v1.0.0.zip) = 86f55697d127bbb0b9c32a9b5b354df72654c2f25d6b25944889a5615250a419c64657008c585ccddc865540427bd7fa14fb5ad4a2fb42538aad1764076dde73
+Size (colorsym-v1.0.0.zip) = 61683 bytes

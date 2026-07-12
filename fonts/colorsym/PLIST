@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/07/12 20:22:39 wiz Exp $
+share/fonts/X11/OTF/ColorSym-Bold.otf
+share/fonts/X11/OTF/ColorSym-Calligraphic.otf
+share/fonts/X11/OTF/ColorSym-LCD.otf
+share/fonts/X11/OTF/ColorSym-Pencil.otf
+share/fonts/X11/OTF/ColorSym-Sharp.otf
+share/fonts/X11/OTF/ColorSym-Styled.otf
+share/fonts/X11/OTF/ColorSym.otf
+@pkgdir share/fonts/X11/TTF
