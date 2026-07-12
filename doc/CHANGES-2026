@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4400 2026/07/12 20:04:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4401 2026/07/12 20:05:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6608,3 +6608,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-TimeZone to 2.69 [wiz 2026-07-12]
 	Updated www/p5-HTTP-Date to 6.08 [wiz 2026-07-12]
 	Updated x11/xstdcmap to 1.0.6 [wiz 2026-07-12]
+	Updated x11/xvinfo to 1.1.6 [wiz 2026-07-12]
