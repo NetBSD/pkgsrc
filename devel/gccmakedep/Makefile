@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/03/03 10:08:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/12 20:08:35 wiz Exp $
 
-DISTNAME=	gccmakedep-1.0.4
+DISTNAME=	gccmakedep-1.0.5
 CATEGORIES=	devel
-MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/util/
+MASTER_SITES=	${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,5 @@ HOMEPAGE=	https://cgit.freedesktop.org/xorg/util/gccmakedep/
 COMMENT=	Create dependencies in Makefiles using gcc
 #LICENSE=	no idea
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c
-
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
