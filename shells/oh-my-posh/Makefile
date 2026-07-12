@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.342 2026/07/08 18:32:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.343 2026/07/12 17:14:28 pin Exp $
 
-DISTNAME=		oh-my-posh-29.21.0
-PKGREVISION=		1
+DISTNAME=		oh-my-posh-29.25.1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
