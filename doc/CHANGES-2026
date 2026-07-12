@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4399 2026/07/12 20:02:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4400 2026/07/12 20:04:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6607,3 +6607,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.25.1 [pin 2026-07-12]
 	Updated time/p5-DateTime-TimeZone to 2.69 [wiz 2026-07-12]
 	Updated www/p5-HTTP-Date to 6.08 [wiz 2026-07-12]
+	Updated x11/xstdcmap to 1.0.6 [wiz 2026-07-12]
