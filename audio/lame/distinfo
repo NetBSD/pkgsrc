@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 09:59:03 nia Exp $
+$NetBSD: distinfo,v 1.34 2026/07/12 12:54:39 thor Exp $
 
-BLAKE2s (lame-3.100.tar.gz) = ce4c0ac95eb460eb2b88ac6d8375fd4eab1a2ad0fb93df64c823eb55b8ea61c5
-SHA512 (lame-3.100.tar.gz) = 0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a589da0b7a23899310afd4e4d81114b9912aa97832621d20588034715573d417b2923948c08634b
-Size (lame-3.100.tar.gz) = 1524133 bytes
-SHA1 (patch-ab) = ef244006f1b172a0027de65a95fa11f5bce62da8
-SHA1 (patch-ad) = 9783edc46232eeb14f1174606963cdd3a2c601fc
-SHA1 (patch-include_libmp3lame.sym) = 2278fa631fb8ce05864d3ef09a45c0b3d73ab065
+BLAKE2s (lame-4.0.tar.gz) = ee14c01c3707ba0f11744780f3239ed2ca1e5353216399ab0f498bdc54a316bb
+SHA512 (lame-4.0.tar.gz) = 70fa51fe84dd499d171ebf6c05ec82399eb8b0148fb4c08470a61efe9cf826474132ee98166dc63ee5c3646b2c8e955680e4306dd26f590b7810732ab486dd8b
+Size (lame-4.0.tar.gz) = 1496810 bytes
+SHA1 (patch-ab) = 58386a008e8c2c59574440a7d5f4356b764dda1a
+SHA1 (patch-ad) = aee2ea463394dd636966001c5e134801cdbcc09e
 SHA1 (patch-libmp3lame_lame.c) = ed64ba64c857dc6acb008105546699c95ac125b5

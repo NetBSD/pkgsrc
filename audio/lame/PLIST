@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2011/11/29 20:26:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/12 12:54:39 thor Exp $
 bin/lame
 ${PLIST.gtk}bin/mp3x
 include/lame/lame.h
 lib/libmp3lame.la
+lib/pkgconfig/lame.pc
 man/man1/lame.1
 share/doc/lame/about.html
 share/doc/lame/abr.html
