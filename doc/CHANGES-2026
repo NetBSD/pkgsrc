@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4391 2026/07/11 20:17:30 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4392 2026/07/12 11:35:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6598,3 +6598,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-stone to 3.5.0 [wiz 2026-07-11]
 	Updated www/resterm to 0.46.3 [drixter 2026-07-11]
 	Updated www/resterm to 0.46.4 [drixter 2026-07-11]
+	Updated textproc/libzim to 9.8.1 [adam 2026-07-12]
+	Updated textproc/yq to 4.1.2 [adam 2026-07-12]
