@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/12/04 15:46:39 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/07/12 20:04:53 wiz Exp $
 
-BLAKE2s (xvinfo-1.1.5.tar.xz) = 9fd9b9be7daaddcd35c99592fe2694bc2fac45f03dcc168e4affb2be4f9545c3
-SHA512 (xvinfo-1.1.5.tar.xz) = 18467161b248c68f6bde15e1c1b4b8cf812daf46777602558aee5fb7cb4d2649218de88fa93842fea4f316d954440f03a37d71fa4fda92eda3c7d80970e19cbb
-Size (xvinfo-1.1.5.tar.xz) = 120700 bytes
+BLAKE2s (xvinfo-1.1.6.tar.xz) = 0055703be76c37d3c991145d6d7a7ead51fd69706b2f429908dda0879f1a57ed
+SHA512 (xvinfo-1.1.6.tar.xz) = f57655e3c7cb72e9b7db6831255b4b1e1e3e1a6bc227eec3c3d2da81871708743a3582385ddaa63c39080440331a541c11564d76f6d5ec056c0b2a091f7f0084
+Size (xvinfo-1.1.6.tar.xz) = 127084 bytes
