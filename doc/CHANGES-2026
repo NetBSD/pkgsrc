@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4402 2026/07/12 20:05:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4403 2026/07/12 20:06:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xstdcmap to 1.0.6 [wiz 2026-07-12]
 	Updated x11/xvinfo to 1.1.6 [wiz 2026-07-12]
 	Updated x11/xwd to 1.0.10 [wiz 2026-07-12]
+	Updated x11/xwud to 1.0.8 [wiz 2026-07-12]
