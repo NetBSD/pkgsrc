@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2025/04/21 16:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/07/12 12:54:39 thor Exp $
 
-DISTNAME=	lame-3.100
+DISTNAME=	lame-4.0
 CATEGORIES=	audio
-PKGREVISION=	7
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +11,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_FEATURES+=		strnlen
@@ -36,6 +36,7 @@ TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-nasm
 .endif
 
+.include "../../audio/mpg123/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

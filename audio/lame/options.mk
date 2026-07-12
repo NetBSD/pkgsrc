@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2010/11/07 15:27:26 shattered Exp $
+# $NetBSD: options.mk,v 1.6 2026/07/12 12:54:39 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lame
 PKG_SUPPORTED_OPTIONS=	gtk sndfile unicode
+# We really want to work with unicode (ID3 Tags) in 2026.
+PKG_SUGGESTED_OPTIONS=	unicode
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,7 +18,6 @@ PLIST.gtk=		yes
 
 .if !empty(PKG_OPTIONS:Msndfile)
 CONFIGURE_ARGS+=	--with-fileio=sndfile
-CONFIGURE_ARGS+=	--with-sndfile-prefix=${BUILDLINK_PREFIX.libsndfile}
 USE_TOOLS+=		pkg-config
 .  include "../../audio/libsndfile/buildlink3.mk"
 .endif
