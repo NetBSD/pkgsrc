@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2021/02/12 07:27:48 nia Exp $
-#
+# $NetBSD: Makefile,v 1.14 2026/07/12 20:18:33 drixter Exp $
 
-DISTNAME=	zutils-1.10
+DISTNAME=	zutils-1.16
 CATEGORIES=	archivers
-MASTER_SITES=	https://download.savannah.gnu.org/releases/zutils/
+MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/zutils/
 EXTRACT_SUFX=	.tar.lz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.nongnu.org/zutils/zutils.html
 COMMENT=	Utilities for any combination of compressed and non-compressed files
 LICENSE=	gnu-gpl-v3
@@ -19,21 +18,16 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 USE_LANGUAGES=		c++
-AUTO_MKDIRS=		yes
+USE_TOOLS+=		gmake
 
 INFO_FILES=		yes
+
+CONF_FILES+=	${PREFIX}/share/examples/zutils/zutils.conf ${PKG_SYSCONFDIR}/zutils.conf
+
 EGDIR=			${PREFIX}/share/examples/zutils
-CONF_FILES=		${EGDIR}/zutilsrc ${PREFIX}/etc/zutilsrc
-
-SUBST_CLASSES+=			sysconfdir
-SUBST_STAGE.sysconfdir=		pre-configure
-SUBST_FILES.sysconfdir=		zutilsrc
-SUBST_MESSAGE.sysconfdir=	path of sysconfdir in example (zutilsrc)
-SUBST_SED.sysconfdir=		-e '/sysconfdir/s,$${sysconfdir},${PREFIX}/etc,'
-
-TEST_TARGET=	check
+INSTALLATION_DIRS=	${EGDIR}
 
 post-install:
-	${MV}	${DESTDIR}${PREFIX}/etc/zutilsrc ${DESTDIR}${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/zutils.conf ${DESTDIR}${EGDIR}/zutils.conf
 
 .include "../../mk/bsd.pkg.mk"

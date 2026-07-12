@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 09:57:20 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/07/12 20:18:33 drixter Exp $
 
-BLAKE2s (zutils-1.10.tar.lz) = 526ec96b766c61c204c328f9904a61ca460f8227bca315edf6df12ced651c558
-SHA512 (zutils-1.10.tar.lz) = 9ee2dd8dbfcaff2129c5d78fe0ec7c71c601dd298fa84448c1e3835db06a017809384dcdba537c9016b05e448f8cc9ab21332616dee5bb680de151bdffb815f3
-Size (zutils-1.10.tar.lz) = 55080 bytes
+BLAKE2s (zutils-1.16.tar.lz) = fd19b00d0d76b57e866c650de0dd35ab3b9a8a66e15fe6c750f8dff4cbde7e03
+SHA512 (zutils-1.16.tar.lz) = 2f89a6366c107bf3e316bc79a1d7e02a39b4efc74bad81951a153076f4e0b0b1f4f7e8bd239c8f43a9ccda9d721238d6877e19cce231c27f0ddb43852a8da1d8
+Size (zutils-1.16.tar.lz) = 66011 bytes
