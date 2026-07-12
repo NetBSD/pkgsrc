@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2026/04/21 20:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.460 2026/07/12 20:23:10 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -54,6 +54,7 @@ SUBDIR+=	cantarell-fonts
 SUBDIR+=	cascadia-ttf
 SUBDIR+=	chkfontpath
 SUBDIR+=	cmvnd-fonts
+SUBDIR+=	colorsym
 SUBDIR+=	comic-neue
 SUBDIR+=	consolamono-ttf
 SUBDIR+=	courier-prime
