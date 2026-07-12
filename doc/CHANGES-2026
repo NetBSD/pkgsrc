@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4395 2026/07/12 16:58:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4396 2026/07/12 17:13:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6603,3 +6603,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/lame to 4.0 [thor 2026-07-12]
 	Updated security/sequoia-sq to 1.3.1nb5 [wiz 2026-07-12]
 	Updated security/sequoia-chameleon-gnupg to 0.13.1nb5 [wiz 2026-07-12]
+	Updated sysutils/broot to 1.58.0 [pin 2026-07-12]
