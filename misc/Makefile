@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2026/05/20 14:22:02 pin Exp $
+# $NetBSD: Makefile,v 1.682 2026/07/13 12:00:24 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -299,6 +299,7 @@ SUBDIR+=	py-immutables
 SUBDIR+=	py-installer
 SUBDIR+=	py-lazy_loader
 SUBDIR+=	py-libtmux
+SUBDIR+=	py-narwhals
 SUBDIR+=	py-pbs-installer
 SUBDIR+=	py-pep440
 SUBDIR+=	py-platformdirs
