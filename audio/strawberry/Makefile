@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2026/07/13 04:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/07/13 06:30:23 adam Exp $
 
-DISTNAME=	strawberry-1.2.22
-PKGREVISION=	1
+DISTNAME=	strawberry-1.2.23
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -32,8 +31,6 @@ DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
 .if ${OPSYS} != "Darwin"
 DEPENDS+=	gst-plugins1-alsa-[0-9]*:../../audio/gst-plugins1-alsa
 .  include "../../audio/alsa-lib/buildlink3.mk"
-#.else
-#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=TRUE
 .endif
 
 .if ${OPSYS} != "Linux" && ${OSS_TYPE} != "none"
