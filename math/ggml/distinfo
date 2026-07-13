@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/07/13 10:16:36 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/07/13 14:35:20 wiz Exp $
 
 BLAKE2s (ggml-0.16.0.tar.gz) = de9a303430f31b4cd3cf7d6de4c618ed379c50ebc766146f9100bef4794beb91
 SHA512 (ggml-0.16.0.tar.gz) = bf573ba140bbbc60d31436c736cf2f7f1bcb49fbd681d512641bce1127004a676a814336f822c2dcce920c5b154f78426a35456826f8bd41fcdcf1f939a73a17
 Size (ggml-0.16.0.tar.gz) = 3317288 bytes
-SHA1 (patch-include_ggml.h) = c342dfeafcf9987298b35140e978aeed619f0bfe
