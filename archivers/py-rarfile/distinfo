@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/11 09:04:30 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/07/13 12:14:41 adam Exp $
 
-BLAKE2s (rarfile-4.2.tar.gz) = a452e11ade9a9695e875a394e6e9e6055feea44c6d27c89451d722aca1387dce
-SHA512 (rarfile-4.2.tar.gz) = fed3943a6d201d4832ee5377069ea400e58394590dd5022cdd7b6f6944c9bf1b6c26387aa0db4c56d5d82f6d10d0cecd2e438e224287cdbdb3314770848c14d8
-Size (rarfile-4.2.tar.gz) = 153476 bytes
+BLAKE2s (rarfile-4.3.tar.gz) = 7008545a44d50c37279dd3875bb4da3afdbfa33170a6d278f88e61538f20bfdb
+SHA512 (rarfile-4.3.tar.gz) = 9bf8e878a7e1182bdad1d9551a1d6d0503f4396159e4dd154f808a33300d52acfa51f93c202a861553c094166a26cd637982cb7ab42a37a4f51c57031be67baa
+Size (rarfile-4.3.tar.gz) = 154855 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/13 08:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/07/13 12:14:41 adam Exp $
 
-DISTNAME=	rarfile-4.2
+DISTNAME=	rarfile-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rarfile/}
 
@@ -12,7 +11,7 @@ COMMENT=	RAR archive reader for Python
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	bsdtar-[0-9]*:../../archivers/bsdtar
+DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
 
 USE_LANGUAGES=	# none
 
