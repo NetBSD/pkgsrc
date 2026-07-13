@@ -1,0 +1,16 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2026/07/13 09:09:31 adam Exp $
+
+CARGO_CRATE_DEPENDS+=	heck-0.5.0
+CARGO_CRATE_DEPENDS+=	libc-0.2.186
+CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
+CARGO_CRATE_DEPENDS+=	portable-atomic-1.13.1
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
+CARGO_CRATE_DEPENDS+=	pyo3-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.0
+CARGO_CRATE_DEPENDS+=	quote-1.0.45
+CARGO_CRATE_DEPENDS+=	syn-2.0.117
+CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.5
+CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.24
