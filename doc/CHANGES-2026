@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4440 2026/07/13 12:18:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4441 2026/07/13 12:18:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6656,3 +6656,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/py-narwhals version 2.23.0 [adam 2026-07-13]
 	Updated math/py-astropy to 8.0.1 [adam 2026-07-13]
 	Updated lang/py-librt to 0.13.0 [wiz 2026-07-13]
+	Updated textproc/py-mistune to 3.3.3 [wiz 2026-07-13]
