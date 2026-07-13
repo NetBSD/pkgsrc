@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4406 2026/07/12 20:23:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4407 2026/07/13 02:35:22 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gccmakedep to 1.0.5 [wiz 2026-07-12]
 	Updated archivers/zutils to 1.16 [drixter 2026-07-12]
 	Added fonts/colorsym version 1.0.0 [wiz 2026-07-12]
+	Updated databases/mysql80-client to 8.0.46 [jnemeth 2026-07-13]
