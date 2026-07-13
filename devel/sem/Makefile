@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/06/25 12:50:39 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/13 10:12:06 wiz Exp $
 
-DISTNAME=	sem-0.14.1
-PKGREVISION=	1
+DISTNAME=	sem-0.21.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ataraxy-Labs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +13,9 @@ LICENSE=	apache-2.0 OR mit
 USE_TOOLS+=	pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/crates/sem-cli
+
+# needed for 'print-cargo-depends'
+#WRKSRC=		${WRKDIR}/${DISTNAME}/crates
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 
