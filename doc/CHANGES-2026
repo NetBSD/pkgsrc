@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4435 2026/07/13 11:18:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4436 2026/07/13 11:20:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6649,3 +6649,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-deepmerge to 2.1.0 [wiz 2026-07-13]
 	Updated devel/py-filelock to 3.29.7 [wiz 2026-07-13]
 	Updated security/py-google-auth to 2.55.2 [wiz 2026-07-13]
+	Updated devel/py-hatchling to 1.31.0 [wiz 2026-07-13]
