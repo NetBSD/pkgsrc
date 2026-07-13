@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4413 2026/07/13 07:28:30 fox Exp $
+$NetBSD: CHANGES-2026,v 1.4414 2026/07/13 07:30:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6622,3 +6622,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/strawberry to 1.2.23 [adam 2026-07-13]
 	Updated devel/meson to 1.11.2 [adam 2026-07-13]
 	Updated sysutils/eza to 0.23.5 [fox 2026-07-13]
+	Updated security/defguard to 2.0.2 [adam 2026-07-13]
+	Updated security/defguard-gateway to 2.0.2 [adam 2026-07-13]
+	Updated security/defguard-proxy to 2.0.2 [adam 2026-07-13]
