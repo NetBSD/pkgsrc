@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.34 2026/07/12 12:54:39 thor Exp $
+$NetBSD: distinfo,v 1.35 2026/07/13 16:47:59 thor Exp $
 
 BLAKE2s (lame-4.0.tar.gz) = ee14c01c3707ba0f11744780f3239ed2ca1e5353216399ab0f498bdc54a316bb
 SHA512 (lame-4.0.tar.gz) = 70fa51fe84dd499d171ebf6c05ec82399eb8b0148fb4c08470a61efe9cf826474132ee98166dc63ee5c3646b2c8e955680e4306dd26f590b7810732ab486dd8b
 Size (lame-4.0.tar.gz) = 1496810 bytes
 SHA1 (patch-ab) = 58386a008e8c2c59574440a7d5f4356b764dda1a
 SHA1 (patch-ad) = aee2ea463394dd636966001c5e134801cdbcc09e
-SHA1 (patch-libmp3lame_lame.c) = ed64ba64c857dc6acb008105546699c95ac125b5

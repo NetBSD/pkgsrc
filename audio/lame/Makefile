@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2026/07/13 04:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/07/13 16:47:59 thor Exp $
 
 DISTNAME=	lame-4.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/}
 
