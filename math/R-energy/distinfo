@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/05/26 13:33:03 mef Exp $
+$NetBSD: distinfo,v 1.9 2026/07/13 13:52:25 mef Exp $
 
 BLAKE2s (R/energy_1.7-12.tar.gz) = fe834acdb29cb8a378910d4a06840f0d5243e2503f480f8f53b5f54483071479
 SHA512 (R/energy_1.7-12.tar.gz) = ef74badfc4198457a3663d6ba7a10f081f793aa11fa5f46b05654501dfb1633deb0894bfe4c93386a50b4cef8f7983626204d9f44d1725b1e64030eccbfa4899
 Size (R/energy_1.7-12.tar.gz) = 58015 bytes
-SHA1 (patch-src_Makevars) = e80c4fd04a046d1c9f6bd371959a197365706a0f
