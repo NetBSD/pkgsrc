@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4439 2026/07/13 12:03:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4440 2026/07/13 12:18:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6655,3 +6655,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xarray to 2026.7.0 [adam 2026-07-13]
 	Added misc/py-narwhals version 2.23.0 [adam 2026-07-13]
 	Updated math/py-astropy to 8.0.1 [adam 2026-07-13]
+	Updated lang/py-librt to 0.13.0 [wiz 2026-07-13]
