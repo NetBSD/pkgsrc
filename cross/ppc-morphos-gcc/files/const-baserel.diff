@@ -1,13 +1,186 @@
-Also use baserel for const - after all, something in a const might refer to
-something that gets relocated, so needs to be accessed baserel as well.
+Also use baserel for const pointers - after all, something in a const pointer
+might refer to something that gets relocated, so needs to be accessed baserel
+as well.
 
---- gcc/config/rs6000/rs6000.cc.orig	2026-04-04 01:09:46.269295661 +0000
+--- gcc/config/rs6000/rs6000.cc.orig	2026-07-08 22:28:47.622168096 +0000
 +++ gcc/config/rs6000/rs6000.cc
-@@ -20973,7 +20973,6 @@ rs6000_elf_encode_section_info (tree dec
+@@ -20940,6 +20940,67 @@ rs6000_elf_select_rtx_section (machine_m
+ static int
+ rs6000_elf_reloc_rw_mask (void);
+ 
++/* Copied from varasm.cc */
++static bool
++contains_pointers_p (tree type)
++{
++  switch (TREE_CODE (type))
++    {
++    case POINTER_TYPE:
++    case REFERENCE_TYPE:
++      /* I'm not sure whether OFFSET_TYPE needs this treatment,
++	 so I'll play safe and return 1.  */
++    case OFFSET_TYPE:
++      return true;
++
++    case RECORD_TYPE:
++    case UNION_TYPE:
++    case QUAL_UNION_TYPE:
++      {
++	tree fields;
++	/* For a type that has fields, see if the fields have pointers.  */
++	for (fields = TYPE_FIELDS (type); fields; fields = DECL_CHAIN (fields))
++	  if (TREE_CODE (fields) == FIELD_DECL
++	      && contains_pointers_p (TREE_TYPE (fields)))
++	    return true;
++	return false;
++      }
++
++    case ARRAY_TYPE:
++      /* An array type contains pointers if its element type does.  */
++      return contains_pointers_p (TREE_TYPE (type));
++
++    default:
++      return false;
++    }
++}
++
++static bool
++rs6000_decl_needs_baserel_p (const_tree decl)
++{
++  if (TREE_CODE (decl) != VAR_DECL)
++    return false;
++
++  const char *section = DECL_SECTION_NAME (decl);
++  if (section)
++    {
++      if (strncmp (section, ".data", 5) == 0
++          || strncmp (section, ".bss", 4) == 0
++          || strncmp (section, ".sdata", 6) == 0
++          || strncmp (section, ".sbss", 5) == 0)
++        return true;
++      if (strncmp (section, ".ctdt", 5) == 0
++          || strncmp (section, ".ctors", 6) == 0
++          || strncmp (section, ".dtors", 6) == 0
++          || strncmp (section, ".eh_frame", 9) == 0)
++        return false;
++    }
++  else if (contains_pointers_p (TREE_TYPE (decl)))
++    return true;
++
++  return !TREE_READONLY (decl);
++}
++
+ /* For a SYMBOL_REF, set generic flags and then perform some
+    target-specific processing.
+ 
+@@ -20972,32 +21032,36 @@ rs6000_elf_encode_section_info (tree dec
+     {
        rtx symbol = XEXP (rtl, 0);
  
-       if(TREE_CODE (decl) == VAR_DECL &&
+-      if(TREE_CODE (decl) == VAR_DECL &&
 -			!TREE_READONLY(decl) &&
- 			GET_CODE (symbol) == SYMBOL_REF)
+-			GET_CODE (symbol) == SYMBOL_REF)
++      if (rs6000_decl_needs_baserel_p (decl) && GET_CODE (symbol) == SYMBOL_REF)
          {
-           const char *name = DECL_SECTION_NAME (decl);
+-          const char *name = DECL_SECTION_NAME (decl);
+-          if (name == NULL || (strncmp(name, ".ctors", 6) != 0 && strncmp(name, ".dtors", 6) != 0))
++          switch (categorize_decl_for_section (decl, rs6000_elf_reloc_rw_mask()))
+             {
+-              switch (categorize_decl_for_section (decl, rs6000_elf_reloc_rw_mask()))
+-                {
+-                  case SECCAT_DATA:
+-                  case SECCAT_SDATA:
+-                  case SECCAT_TDATA:
+-                  case SECCAT_BSS:
+-                  case SECCAT_SBSS:
+-                  case SECCAT_TBSS:
+-                    SYMBOL_REF_FLAGS (symbol) |= SYMBOL_FLAG_MORPHOS_BASEREL;
+-                    break;
+-                  default:
+-                    break;
+-                }
++              case SECCAT_DATA:
++              case SECCAT_SDATA:
++              case SECCAT_TDATA:
++              case SECCAT_BSS:
++              case SECCAT_SBSS:
++              case SECCAT_TBSS:
++                SYMBOL_REF_FLAGS (symbol) |= SYMBOL_FLAG_MORPHOS_BASEREL;
++                break;
++              default:
++                break;
+             }
+         }
+     }
+ #endif
+ }
+ 
++static section *
++rs6000_morphos_select_section (tree decl, int reloc,
++                               unsigned HOST_WIDE_INT align)
++{
++  if (TARGET_BASEREL && rs6000_decl_needs_baserel_p (decl))
++    return data_section;
++
++  return default_elf_select_section (decl, reloc, align);
++}
++
+ static inline bool
+ compare_section_name (const char *section, const char *templ)
+ {
+--- gcc/config/rs6000/morphos.h.orig	2026-07-08 22:28:52.717136366 +0000
++++ gcc/config/rs6000/morphos.h
+@@ -320,3 +320,6 @@ mclib=default|!mclib=*: %(endfile_morpho
+ /* Use morphos.opt */
+ extern const char *morphos_mclib_name;
+ #define TARGET_USES_MORPHOS_OPT 1
++
++#undef TARGET_ASM_SELECT_SECTION
++#define TARGET_ASM_SELECT_SECTION rs6000_morphos_select_section
+--- libgcc/crtstuff.c.orig	2026-07-12 23:00:42.504285022 +0000
++++ libgcc/crtstuff.c
+@@ -377,6 +377,18 @@ extern void __cxa_finalize (void *) TARG
+ 
+    This routine does not need to be run if none of the following clauses are
+    true, as it will not do anything, so can be removed.  */
++
++#if defined(__MORPHOS__) && !defined(DTOR_LIST_END) \
++  && defined(HIDDEN_DTOR_LIST_END)
++func_ptr __DTOR_END__[] __attribute__ ((used,
++#ifndef __LIBGCC_DTORS_SECTION_ASM_OP__
++                                        section (".dtors"),
++#endif
++					aligned (sizeof (func_ptr)),
++					visibility ("hidden")))
++  = { (func_ptr) 0 };
++#endif
++
+ #if defined(CRTSTUFFS_O) || !defined(FINI_ARRAY_SECTION_ASM_OP) \
+   || USE_TM_CLONE_REGISTRY || defined(USE_EH_FRAME_REGISTRY)
+ static void __attribute__((used))
+@@ -401,7 +413,9 @@ __do_global_dtors_aux (void)
+   {
+     /* Safer version that makes sure only .dtors function pointers are
+        called even if the static variable is maliciously changed.  */
+-    extern const func_ptr __DTOR_END__[] __attribute__((visibility ("hidden")));
++#ifndef __MORPHOS__
++    extern func_ptr __DTOR_END__[] __attribute__((visibility ("hidden")));
++#endif
+     static size_t dtor_idx;
+     const size_t max_idx = __DTOR_END__ - __DTOR_LIST__ - 1;
+     func_ptr *dtor_list;
+@@ -640,6 +654,7 @@ DTOR_LIST_END;
+ #ifdef __LIBGCC_DTORS_SECTION_ASM_OP__
+ asm (__LIBGCC_DTORS_SECTION_ASM_OP__);
+ #endif
++#ifndef __MORPHOS__
+ func_ptr __DTOR_END__[1]
+   __attribute__ ((used,
+ #ifndef __LIBGCC_DTORS_SECTION_ASM_OP__
+@@ -647,6 +662,7 @@ func_ptr __DTOR_END__[1]
+ #endif
+ 		  aligned(__alignof__(func_ptr)), visibility ("hidden")))
+   = { (func_ptr) 0 };
++#endif
+ #elif defined(__LIBGCC_DTORS_SECTION_ASM_OP__)
+ asm (__LIBGCC_DTORS_SECTION_ASM_OP__);
+ STATIC func_ptr __DTOR_END__[1]
