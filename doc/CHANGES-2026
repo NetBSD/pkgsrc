@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4449 2026/07/13 18:44:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4450 2026/07/13 18:47:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6666,3 +6666,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.50 [wiz 2026-07-13]
 	Updated math/ggml to 0.16.0nb1 [wiz 2026-07-13]
 	Updated lang/perl5 to 5.42.2nb4 [wiz 2026-07-13]
+	Updated graphics/vv to 3.2.20260713 [wiz 2026-07-13]
