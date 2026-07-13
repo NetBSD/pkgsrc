@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_os_SunOS.cmake,v 1.2 2022/11/02 17:02:10 jperkin Exp $
+$NetBSD: patch-cmake_os_SunOS.cmake,v 1.3 2026/07/13 02:35:09 jnemeth Exp $
 
 Disable a whole bunch of broken SunOS detection.
 
---- cmake/os/SunOS.cmake.orig	2022-09-13 16:15:16.000000000 +0000
+--- cmake/os/SunOS.cmake.orig	2026-04-07 15:27:15.000000000 +0000
 +++ cmake/os/SunOS.cmake
-@@ -25,6 +25,7 @@ INCLUDE(CheckCSourceRuns)
+@@ -26,6 +26,7 @@ INCLUDE(CheckCXXSourceCompiles)
  INCLUDE(CheckCSourceCompiles) 
  INCLUDE(CheckCXXSourceCompiles)
  
@@ -12,11 +12,11 @@ Disable a whole bunch of broken SunOS detection.
  IF(CMAKE_SYSTEM_PROCESSOR MATCHES "sparc")
    SET(SOLARIS_SPARC 1)
  ELSE()
-@@ -60,6 +61,7 @@ IF(NOT FORCE_UNSUPPORTED_COMPILER)
+@@ -61,6 +62,7 @@ IF(NOT FORCE_UNSUPPORTED_COMPILER)
+   ELSE()
      MESSAGE(FATAL_ERROR "Unsupported compiler!")
    ENDIF()
- ENDIF()
 +ENDIF()
+ ENDIF()
  
  # Enable 64 bit file offsets
- ADD_DEFINITIONS(-D_FILE_OFFSET_BITS=64)

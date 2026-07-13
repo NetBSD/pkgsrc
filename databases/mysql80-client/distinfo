@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.19 2026/04/11 08:31:06 taca Exp $
+$NetBSD: distinfo,v 1.20 2026/07/13 02:35:09 jnemeth Exp $
 
-BLAKE2s (mysql-boost-8.0.44.tar.gz) = 17489835c71b9be2ba352f1ac4bc56200696beff13b0c8f84216b2986ab5bbf3
-SHA512 (mysql-boost-8.0.44.tar.gz) = f6881d6f88a4060796e1eac47c1ffe3ea005c27f1b0509fd97774ba5b1e7bf86d0f8c4e13126750f0cc3dd86af92c26459ae8fecf9e8f0f058dab43e93bb3b42
-Size (mysql-boost-8.0.44.tar.gz) = 492448984 bytes
+BLAKE2s (mysql-boost-8.0.46.tar.gz) = 159961abb6bd98dacf14d7daabdddd9d6740c609782dee21ee8d36eaf55d5043
+SHA512 (mysql-boost-8.0.46.tar.gz) = b90ee9ad03ddc4732d2942ae4918010a7c398b2080f0e11750df0e61ec07a17bf26ce6aea8806729250b015607e398a8608363ed0830f4f613fafd09dbab7412
+Size (mysql-boost-8.0.46.tar.gz) = 492495969 bytes
 SHA1 (patch-CMakeLists.txt) = ecca84044c0b5901918ed1a3b0d073584c19185e
 SHA1 (patch-client_CMakeLists.txt) = 2fd4a0146ccbab24a0c37f9b78e042c162f34024
 SHA1 (patch-cmake_ldap.cmake) = 46f0df1109ca0886e0d0903a39e25278139f1849
-SHA1 (patch-cmake_os_SunOS.cmake) = 66a7d4386f07c68ae85a94d467465e6d1bec6b57
+SHA1 (patch-cmake_os_SunOS.cmake) = 8dc3a7f9f7e1ec546d1855485a776ab2d2660701
 SHA1 (patch-cmake_pkg-config.cmake) = 82498a310f8f428e26b722a40031bc1d6d272242
 SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
 SHA1 (patch-cmake_zlib.cmake) = dc4b8965c7ee9cd0f419574687b6148e54c543db
 SHA1 (patch-config.h.cmake) = e6debea316c5bb8338afb693d704007d45b3941f
-SHA1 (patch-configure.cmake) = b03de49ecb8d6ce58ef24f5dcd8f0a8c95eab592
+SHA1 (patch-configure.cmake) = 1a6fad5facb0ae024c2bd8b1214d069eec5f58e9
 SHA1 (patch-include_CMakeLists.txt) = 289c1454d1b7e7fe8566187b3cefc722260993b6
 SHA1 (patch-include_my__compare.h) = b66c8cebef8ab3328201fe4c7433a484ba83e203
 SHA1 (patch-include_my__thread.h) = a88fee119c9a9e2c89e54c8b59555b0d5100cbcc
@@ -22,18 +22,19 @@ SHA1 (patch-libmysql_CMakeLists.txt) = 7b83faf1751ad40f20bca1ebcdac0cebb1370443
 SHA1 (patch-mysys_kqueue__timers.cc) = 837474b779c24dd0af67444c2adbcf07b73e0d36
 SHA1 (patch-mysys_stacktrace.cc) = 6792ceaae3c3b0d70bd8b6c848a128d50397e6f4
 SHA1 (patch-packaging_solaris_CMakeLists.txt) = 135c4aa07d9b20a9b56b8f1616821abfedb52ecb
+SHA1 (patch-plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__vp__platform.h) = 1ffe4b870c4eeb8550b1d29ce1e09fc67cff7471
 SHA1 (patch-router_CMakeLists.txt) = 9bfd1278c42070ada0606dfff34a66b8b95d0413
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_impl_netif.h) = ade643148787438d6d6f1f7b2636bbd0af87d70f
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019236423aaa77b71b273d009404e4fbafe73
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_local.h) = d2149f9840dc8b65a4d9d8332bcd5088b4f9b919
 SHA1 (patch-router_src_harness_include_mysql_harness_tty.h) = ca883b2ed83b623922b58cf96f896de9847d37cb
 SHA1 (patch-router_src_harness_src_stdx_io_file_handle.cc) = 5349b05663179e4ef049cfb1532514e48a3885c9
-SHA1 (patch-scripts_CMakeLists.txt) = d60000b5213d70b42c61a704c4f36581588f5c84
+SHA1 (patch-scripts_CMakeLists.txt) = c4a24c4bf5ed406e8d05fb1e0c6d79d9e02b663a
 SHA1 (patch-scripts_mysqld_safe.sh) = 3d10c84e6fef391b5e7cd9a3ed0223bd8b18c42e
 SHA1 (patch-sql_CMakeLists.txt) = 94809ea12966392b9ea317da42f2b84219d36cc0
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = 91f2f707576618396579809b83f931e51385d2a2
 SHA1 (patch-sql_join__optimizer_bit__utils.h) = 3e75331da6b50935f082b2f738e6c6964afef5f7
-SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = e08ed53790ac8b03b38d566fee3a2688ca6065b3
+SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = 2c9db4ff3fb769d5ba97a0291a23aac2ca087772
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__solaris.cc) = 1ce0aec798a22f966c37d9ee38b3dee3d855a7e3
 SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-linux.h) = cc5bdab29e542f172dc6d4c0d4af1f264e37ba35
 SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-solaris.h) = 2b41381af66e22231e897ebc97346c13b1f1e3a7
