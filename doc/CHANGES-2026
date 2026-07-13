@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4412 2026/07/13 06:33:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4413 2026/07/13 07:28:30 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6621,3 +6621,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/asterisk23 to 23.4.1 [jnemeth 2026-07-13]
 	Updated audio/strawberry to 1.2.23 [adam 2026-07-13]
 	Updated devel/meson to 1.11.2 [adam 2026-07-13]
+	Updated sysutils/eza to 0.23.5 [fox 2026-07-13]
