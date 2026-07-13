@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/11/16 09:39:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/07/13 09:55:02 wiz Exp $
 
-BLAKE2s (samurai-1.2.tar.gz) = 97ec3ac8efd246ad9fdc87fef27161ce6ba95b82564fd8aabc0adc75a8583077
-SHA512 (samurai-1.2.tar.gz) = bbe6a582c34b04f1df53b76c1647aa3e03c4698ebf7591a203935f11ffa05971bbcb86dc1a8c06aeb904cdc741abb08918122810fc47216fed0a6d9f87fd1225
-Size (samurai-1.2.tar.gz) = 32709 bytes
-SHA1 (patch-util.c) = 6d2e792d0c5138139c72ca2889e06c9ff99aa8a4
+BLAKE2s (samurai-1.3.tar.gz) = 3f61d92cff8349d36a9451b981a389bae095fad242678652f1c31cb43038b204
+SHA512 (samurai-1.3.tar.gz) = f155745fdb90cca07d8e7178e60337173fee3a8f1dadc3773a80fe189f5864229afb409d946fb2a418820d7e6ef8332cd9e3e3627abd170146802277f30b4b4e
+Size (samurai-1.3.tar.gz) = 33562 bytes
