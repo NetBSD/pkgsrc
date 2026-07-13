@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4441 2026/07/13 12:18:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4442 2026/07/13 12:20:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6657,3 +6657,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-astropy to 8.0.1 [adam 2026-07-13]
 	Updated lang/py-librt to 0.13.0 [wiz 2026-07-13]
 	Updated textproc/py-mistune to 3.3.3 [wiz 2026-07-13]
+	Updated archivers/py-rarfile to 4.3 [adam 2026-07-13]
+	Updated devel/py-lupa to 2.8 [adam 2026-07-13]
