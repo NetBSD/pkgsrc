@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/13 04:35:37 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../emulators/gnuboy/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-sdl-/}

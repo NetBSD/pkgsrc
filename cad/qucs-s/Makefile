@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/05/14 16:40:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/13 04:35:26 wiz Exp $
 
 DISTNAME=	qucs-s-25.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ra3xdh/}
 GITHUB_PROJECT=	qucs_s

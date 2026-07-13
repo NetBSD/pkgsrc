@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/03/27 09:37:22 pin Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/07/13 04:35:23 wiz Exp $
 
 BUILDLINK_TREE+=	rubberband
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rubberband
 RUBBERBAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rubberband+=	rubberband>=1.8.1
-BUILDLINK_ABI_DEPENDS.rubberband+=	rubberband>=4.0.0
+BUILDLINK_ABI_DEPENDS.rubberband+=	rubberband>=4.0.0nb1
 BUILDLINK_PKGSRCDIR.rubberband?=	../../audio/rubberband
 
 .include "../../audio/ladspa/buildlink3.mk"

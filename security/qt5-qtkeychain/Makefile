@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2026/01/07 08:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/07/13 04:36:28 wiz Exp $
 
 DISTNAME=	qtkeychain-0.15.0
 PKGNAME=	qt5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=frankosterfeld/}
 GITHUB_PROJECT=	qtkeychain

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2026/01/07 08:48:14 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2026/07/13 04:36:24 wiz Exp $
 #
 
 DISTNAME=	choqok-1.7.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_KDE:=choqok/1.7/src/}
 

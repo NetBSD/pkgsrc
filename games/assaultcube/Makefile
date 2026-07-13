@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2026/05/14 16:40:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2026/07/13 04:35:43 wiz Exp $
 
-PKGREVISION=	16
+PKGREVISION=	17
 
 COMMENT=	Cube-based FPS with realistic environments
 

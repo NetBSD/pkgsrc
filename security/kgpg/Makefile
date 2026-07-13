@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2026/06/11 07:17:35 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2026/07/13 04:36:27 wiz Exp $
 
 DISTNAME=	kgpg-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 
 HOMEPAGE=	https://kde.org/applications/utilities/kgpg/

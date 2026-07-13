@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/10/23 20:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/13 04:36:24 wiz Exp $
 
 DISTNAME=	SDL2_net-2.2.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 

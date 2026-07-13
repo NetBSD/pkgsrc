@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2025/06/06 23:03:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/07/13 04:35:17 wiz Exp $
 
 BUILDLINK_TREE+=	jack
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jack
 JACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jack+=	jack>=1.9.19
-BUILDLINK_ABI_DEPENDS.jack?=	jack>=1.9.21nb4
+BUILDLINK_ABI_DEPENDS.jack?=	jack>=1.9.22nb1
 BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
 
 .include "../../mk/bsd.fast.prefs.mk"

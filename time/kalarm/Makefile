@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/06/11 07:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/13 04:36:33 wiz Exp $
 
 DISTNAME=	kalarm-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org/

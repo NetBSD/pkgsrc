@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/06/11 07:17:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/13 04:36:04 wiz Exp $
 
 DISTNAME=	breeze-${PLASMAVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

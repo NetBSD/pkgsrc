@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/01/05 21:34:55 ktnb Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/13 04:35:43 wiz Exp $
 
 DISTNAME=	batrachians-0.2.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2026/07/13 04:24:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/07/13 04:35:12 wiz Exp $
 
 BUILDLINK_TREE+=	lame
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lame
 LAME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lame+=	lame>=3.93.1nb2
-BUILDLINK_ABI_DEPENDS.lame+=	lame>=3.96.1nb4
+BUILDLINK_ABI_DEPENDS.lame+=	lame>=4.0
 BUILDLINK_PKGSRCDIR.lame?=	../../audio/lame
 
 pkgbase:= lame
