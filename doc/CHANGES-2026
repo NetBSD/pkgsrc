@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4416 2026/07/13 08:36:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4417 2026/07/13 09:10:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6628,3 +6628,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.21 [fox 2026-07-13]
 	Updated www/py-vcrpy to 8.3.0 [adam 2026-07-13]
 	Updated www/py-websockets to 16.1 [adam 2026-07-13]
+	Updated devel/py-hypothesis to 6.156.6 [adam 2026-07-13]
+	Updated math/py-astropy-iers-data to 0.2026.7.13.0.54.2 [adam 2026-07-13]
