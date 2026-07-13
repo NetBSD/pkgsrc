@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/06/11 07:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/07/13 04:36:14 wiz Exp $
 
 DISTNAME=	kdialog-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 
 HOMEPAGE=	https://www.kde.org/

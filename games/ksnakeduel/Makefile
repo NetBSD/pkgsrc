@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2026/05/14 16:41:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2026/07/13 04:35:52 wiz Exp $
 
 DISTNAME=	ksnakeduel-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksnakeduel/

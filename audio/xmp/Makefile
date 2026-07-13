@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2026/06/30 16:29:51 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/07/13 04:35:26 wiz Exp $
 
 DISTNAME=	xmp-4.3.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 

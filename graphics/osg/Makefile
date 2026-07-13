@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.210 2026/06/24 21:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2026/07/13 04:36:04 wiz Exp $
 
 DISTNAME=	osg-3.6.5
-PKGREVISION=	83
+PKGREVISION=	84
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscenegraph/}
 GITHUB_PROJECT=	OpenSceneGraph

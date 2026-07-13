@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/01/29 16:59:56 ktnb Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/13 04:35:43 wiz Exp $
 
+PKGREVISION= 1
 .include "../../games/angband/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/angband-/angband-sdl-/}

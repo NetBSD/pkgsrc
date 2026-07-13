@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2026/01/07 08:49:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2026/07/13 04:36:39 wiz Exp $
 
 BUILDLINK_TREE+=	plasma-framework
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma-framework
 PLASMA_FRAMEWORK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma-framework+=	plasma-framework>=5.21.0
-BUILDLINK_ABI_DEPENDS.plasma-framework?=	plasma-framework>=5.116.0nb9
+BUILDLINK_ABI_DEPENDS.plasma-framework?=	plasma-framework>=5.116.0nb10
 BUILDLINK_PKGSRCDIR.plasma-framework?=		../../x11/plasma-framework
 
 .include "../../devel/kdeclarative/buildlink3.mk"

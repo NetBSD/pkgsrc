@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2026/05/14 16:40:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2026/07/13 04:35:45 wiz Exp $
 
 DISTNAME=	crossfire-client-1.75.3
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 

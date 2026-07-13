@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/02/12 06:44:29 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/07/13 04:35:24 wiz Exp $
 
 BUILDLINK_TREE+=	sphinxbase
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sphinxbase
 SPHINXBASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sphinxbase+=	sphinxbase>=0.8
-BUILDLINK_ABI_DEPENDS.sphinxbase+=	sphinxbase>=0.8nb13
+BUILDLINK_ABI_DEPENDS.sphinxbase+=	sphinxbase>=0.8nb14
 BUILDLINK_PKGSRCDIR.sphinxbase?=	../../audio/sphinxbase
 BUILDLINK_INCDIRS.sphinxbase+=		include/sphinxbase
 

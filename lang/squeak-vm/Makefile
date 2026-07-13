@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2026/01/27 08:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/07/13 04:36:09 wiz Exp $
 
 SQUEAK_VERSION=	4.10.2.2614
 DISTNAME=	Squeak-${SQUEAK_VERSION}-src
 PKGNAME=	squeak-vm-${SQUEAK_VERSION:C/-/./}
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	lang
 MASTER_SITES=	https://files.squeak.org/
 DIST_SUBDIR=	squeak

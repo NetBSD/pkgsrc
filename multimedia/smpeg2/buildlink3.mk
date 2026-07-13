@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/10/23 20:38:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/07/13 04:36:23 wiz Exp $
 
 BUILDLINK_TREE+=	smpeg2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	smpeg2
 SMPEG2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.smpeg2+=	smpeg2>=2.0.0
-BUILDLINK_ABI_DEPENDS.smpeg2?=	smpeg2>=2.0.0nb15
+BUILDLINK_ABI_DEPENDS.smpeg2?=	smpeg2>=2.0.0nb16
 BUILDLINK_PKGSRCDIR.smpeg2?=	../../multimedia/smpeg2
 
 .include "../../devel/SDL2/buildlink3.mk"

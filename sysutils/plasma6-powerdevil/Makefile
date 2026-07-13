@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/06/11 07:17:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/13 04:36:30 wiz Exp $
 
 DISTNAME=	powerdevil-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

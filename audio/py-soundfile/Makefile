@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2026/06/28 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/13 04:35:22 wiz Exp $
 
 DISTNAME=	soundfile-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soundfile/}
 
