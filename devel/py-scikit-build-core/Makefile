@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/07/13 13:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/07/13 14:44:15 wiz Exp $
 
 DISTNAME=	scikit_build_core-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -50,5 +50,5 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 
 .include "../../lang/python/wheel.mk"
 # only needed for testing, but this is not supported by buildlink3, so make it build dependency
-.include "../../devel/py-pybind11/buildlink3.mk"
+#.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
