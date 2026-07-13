@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4443 2026/07/13 12:25:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4444 2026/07/13 12:26:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6660,3 +6660,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-rarfile to 4.3 [adam 2026-07-13]
 	Updated devel/py-lupa to 2.8 [adam 2026-07-13]
 	Updated lang/py-mypy to 2.2.0 [wiz 2026-07-13]
+	Updated devel/py-proto-plus to 1.28.1 [wiz 2026-07-13]
