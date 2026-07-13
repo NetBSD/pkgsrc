@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.59 2026/07/13 09:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/07/13 11:48:00 ryoon Exp $
 
 DISTNAME=		enchant-2.8.19
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rrthomas/}
 GITHUB_PROJECT=		enchant
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://rrthomas.github.io/enchant/
