@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27571 2026/07/13 10:23:20 wiz Exp $
+$NetBSD: TODO,v 1.27572 2026/07/13 10:26:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o distccmon-gtk-3.3.5
 	o diylc-4.44.0
 	o dmalloc-5.6.5
-	o dmarc-report-viewer-2.6.0
 	o dnsbl-milter-6.78
 	o doas-6.4 [project migrated to Codeberg]
 	o dotclear-2.53

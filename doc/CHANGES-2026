@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4428 2026/07/13 10:23:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4429 2026/07/13 10:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6642,3 +6642,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sem to 0.21.0 [wiz 2026-07-13]
 	Updated math/ggml to 0.16.0 [wiz 2026-07-13]
 	Updated sysutils/node_exporter to 1.12.0 [wiz 2026-07-13]
+	Updated mail/dmarc-report-viewer to 2.6.0 [wiz 2026-07-13]
