@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/01/06 08:48:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/13 04:19:06 wiz Exp $
 
 DISTNAME=	liveice
 PKGNAME=	liveice-0.20001121
@@ -12,7 +12,7 @@ COMMENT=	Source client for Icecast
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mpg123-1.*:../../audio/mpg123
-DEPENDS+=	lame-3.*:../../audio/lame
+DEPENDS+=	lame>=3:../../audio/lame
 DEPENDS+=	tk>=8.0:../../x11/tk
 
 GNU_CONFIGURE=	YES
