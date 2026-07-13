@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2026/05/12 10:53:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2026/07/13 12:25:05 wiz Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -584,7 +584,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_ast.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_asyncio.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_bisect.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_blake2.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/_bootlocale.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_bz2.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_codecs.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_collections_abc.pyi
@@ -622,6 +621,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_py_abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_pydecimal.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_queue.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_random.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_remote_debugging.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_sitebuiltins.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_socket.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_sqlite3.pyi
@@ -770,7 +770,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/bdist_dumb.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/bdist_msi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/bdist_packager.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/bdist_rpm.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/bdist_wininst.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/build.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/build_clib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/command/build_ext.pyi
@@ -966,7 +965,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/fcntl.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/filecmp.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/fileinput.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/fnmatch.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/formatter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/fractions.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ftplib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/functools.pyi
@@ -1098,7 +1096,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/lzma.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mailbox.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mailcap.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/marshal.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/math.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/math/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/math/integer.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mimetypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mmap.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/modulefinder.pyi
@@ -1143,7 +1142,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/optparse.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/os/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/os/path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ossaudiodev.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/parser.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pathlib/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pathlib/types.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pdb.pyi
@@ -1158,6 +1156,16 @@ ${PYSITELIB}/mypy/typeshed/stdlib/posix.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/posixpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pprint.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/profile.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/gecko_collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/heatmap_collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/jsonl_collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/pstats_collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/stack_collector.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/sampling/string_table.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/profiling/tracing.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pstats.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pty.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pwd.pyi
@@ -1209,9 +1217,9 @@ ${PYSITELIB}/mypy/typeshed/stdlib/stringprep.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/struct.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/subprocess.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sunau.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/symbol.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/symtable.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sys/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/sys/__jit.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sys/_monitoring.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sysconfig.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/syslog.pyi
@@ -1309,6 +1317,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/expatreader.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/handler.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/saxutils.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/xmlreader.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/xml/utils.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xmlrpc/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xmlrpc/client.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xmlrpc/server.pyi
