@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/07/03 07:38:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/07/13 13:49:26 wiz Exp $
 bin/zensical
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -63,6 +63,9 @@ ${PYSITELIB}/zensical/extensions/links.pyo
 ${PYSITELIB}/zensical/extensions/macros.py
 ${PYSITELIB}/zensical/extensions/macros.pyc
 ${PYSITELIB}/zensical/extensions/macros.pyo
+${PYSITELIB}/zensical/extensions/mkdocstrings.py
+${PYSITELIB}/zensical/extensions/mkdocstrings.pyc
+${PYSITELIB}/zensical/extensions/mkdocstrings.pyo
 ${PYSITELIB}/zensical/extensions/preview.py
 ${PYSITELIB}/zensical/extensions/preview.pyc
 ${PYSITELIB}/zensical/extensions/preview.pyo
@@ -16565,11 +16568,11 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.ee611ef6.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.d7f30b55.min.js
 ${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.b6b7e04f.min.js
-${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.82a87433.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.f62f0af6.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.7dc9a0ad.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.19d3147f.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.62c9b9cc.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/modern/palette.dfe2e883.min.css
 ${PYSITELIB}/zensical/templates/base.html
 ${PYSITELIB}/zensical/templates/main.html
