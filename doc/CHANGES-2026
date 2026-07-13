@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4408 2026/07/13 02:35:34 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.4409 2026/07/13 04:14:29 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6616,3 +6616,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added fonts/colorsym version 1.0.0 [wiz 2026-07-12]
 	Updated databases/mysql80-client to 8.0.46 [jnemeth 2026-07-13]
 	Updated databases/mysql80-server to 8.0.46 [jnemeth 2026-07-13]
+	Updated comms/asterisk21 to 21.12.3 [jnemeth 2026-07-13]
