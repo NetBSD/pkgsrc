@@ -1,0 +1,2 @@
+bin/scikit-build @PREFIX@/bin/scikit-build-@PYVERSSUFFIX@
+bin/scikit-build-core @PREFIX@/bin/scikit-build-core-@PYVERSSUFFIX@
