@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/03/01 12:38:35 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2026/07/13 06:06:06 adam Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.6.5
 PKGREVISION=	8
@@ -35,13 +35,18 @@ pre-configure:
 	${SED} -e "s,.*#define *OCAML_CAIRO_HAS_FT .*,#define OCAML_CAIRO_HAS_FT," \
 		${WRKSRC}/src/cairo_ocaml.h.p > ${WRKSRC}/src/cairo_ocaml.h
 
-# (See options.mk.)  Upstream says that lablgtk is required, but it is
-# not.
-#   https://github.com/Chris00/ocaml-cairo/issues/29
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/lib/ocaml/site-lib/stublibs/dllcairo_stubs.so \
+		${DESTDIR}${PREFIX}/lib/ocaml/site-lib/stublibs/dllcairo_stubs.so
+.endif
 
 do-test:
 	cd ${WRKSRC} && dune test
 
+# (See options.mk.) Upstream says that lablgtk is required, but it is not.
+# https://github.com/Chris00/ocaml-cairo/issues/29
 .include "options.mk"
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../graphics/cairo/buildlink3.mk"
