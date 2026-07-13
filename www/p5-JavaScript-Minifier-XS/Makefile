@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/07/04 08:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13.8.1 2026/07/13 13:43:07 bsiegert Exp $
 
-DISTNAME=	JavaScript-Minifier-XS-0.15
+DISTNAME=	JavaScript-Minifier-XS-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GT/GTERMARS/}
 
