@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/06/07 17:45:46 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/13 19:21:39 adam Exp $
 
-VERSION=	1.11.2
+VERSION=	1.11.3
 DISTNAME=	radsecproxy-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radsecproxy/}
