@@ -1,21 +1,14 @@
-$NetBSD: patch-src_Makevars,v 1.1 2026/05/26 21:33:01 mef Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2026/07/13 14:33:23 mef Exp $
 
 symbol backtrace_symbols is defined in /usr/lib/libexecinfo
 
---- src/Makevars.orig	2024-10-03 06:31:38.000000000 +0900
-+++ src/Makevars	2026-05-27 06:28:29.894023422 +0900
-@@ -15,6 +15,14 @@ LIBHUNSPELL=parsers/textparser.o parsers
+--- src/Makevars.orig	2026-07-13 23:25:32.501709589 +0900
++++ src/Makevars	2026-07-13 23:26:51.338836123 +0900
+@@ -4,6 +4,7 @@ PKG_CXXFLAGS=$(C_VISIBILITY)
+ #Add Windows-only flags (ifeq is a GNU extension...)
+ WINRICONV=$(subst 64,-lRiconv,$(subst 32,64,$(WIN)))
+ PKG_LIBS=-Lhunspell -lstathunspell $(WINRICONV)
++@@PKG_LIBS@@
  
- STATLIB = hunspell/libstathunspell.a
- 
-+UNAME := $(shell uname)
-+
-+ifneq ($(UNAME), Linux)
-+ifneq ($(UNAME), SunOS)
-+PKG_LIBS += -lexecinfo
-+endif
-+endif
-+
- $(SHLIB): $(STATLIB)
- 
- $(STATLIB): $(LIBHUNSPELL)
+ LIBHUNSPELL=parsers/textparser.o parsers/latexparser.o parsers/manparser.o \
+ 	parsers/xmlparser.o parsers/htmlparser.o \
