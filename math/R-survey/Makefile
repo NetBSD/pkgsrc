@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/06/10 22:00:47 mef Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/13 14:09:26 mef Exp $
 
 R_PKGNAME=	survey
 R_PKGVER=	4.5
@@ -23,7 +23,7 @@ GCC_REQD+=	8
 
 .include "../../mk/bsd.prefs.mk"
 pre-patch:
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
 	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src/
 .endif
 .include "../../math/R-RcppArmadillo/buildlink3.mk"
