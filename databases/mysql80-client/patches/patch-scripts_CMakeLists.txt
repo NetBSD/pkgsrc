@@ -1,10 +1,10 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2023/05/28 16:44:25 wiz Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.3 2026/07/13 02:35:09 jnemeth Exp $
 
 Split configuration between mysql-client and mysql-server.
 
---- scripts/CMakeLists.txt.orig	2023-03-16 17:22:37.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2026-04-07 15:27:15.000000000 +0000
 +++ scripts/CMakeLists.txt
-@@ -315,6 +315,10 @@ MACRO(EXTRACT_LINK_LIBRARIES target var)
+@@ -321,6 +321,10 @@ MACRO(EXTRACT_LINK_LIBRARIES target var)
      FOREACH(lib ${TARGET_LIB_DEPENDS})
        IF (lib MATCHES "^\\-l")
          SET(${var} "${${var}} ${lib} ")
@@ -15,7 +15,7 @@ Split configuration between mysql-client and mysql-server.
        ELSEIF (lib MATCHES "^ext::")
          STRING(REGEX MATCH "ext::([a-z]+)" MATCH_LIB "${lib}")
          SET(SYSTEM_LIB ${CMAKE_MATCH_1})
-@@ -409,7 +413,7 @@ ELSE()
+@@ -424,7 +428,7 @@ ELSE()
      ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
      ESCAPE_QUOTES @ONLY)
  
@@ -24,7 +24,7 @@ Split configuration between mysql-client and mysql-server.
      MESSAGE(STATUS "INSTALL ${PKGCONFIG_FILE} ${INSTALL_PKGCONFIGDIR}")
      INSTALL(FILES
        ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
-@@ -422,19 +426,24 @@ ELSE()
+@@ -437,18 +441,23 @@ ELSE()
    # mysqld_safe used in mtr even for systemd platforms
    IF(WITH_SYSTEMD)
      SET(BIN_SCRIPTS
@@ -40,14 +40,13 @@ Split configuration between mysql-client and mysql-server.
        mysqld_safe
        )
    ENDIF()
- 
++
 +  IF(NOT WITHOUT_CLIENTLIBS)
 +    SET(BIN_SCRIPTS
 +      ${BIN_SCRIPTS}
 +      mysql_config
 +    )
 +  ENDIF(NOT WITHOUT_CLIENTLIBS)
-+
+ 
    FOREACH(file ${BIN_SCRIPTS})
      IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${file}.sh)
-       CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/${file}.sh

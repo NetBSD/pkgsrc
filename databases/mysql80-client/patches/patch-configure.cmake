@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.cmake,v 1.2 2021/06/22 10:12:37 nia Exp $
+$NetBSD: patch-configure.cmake,v 1.3 2026/07/13 02:35:09 jnemeth Exp $
 
 * check for ffsll and provide a portable version if not found
 * check for EVFILT_USER, if missing disable kqueue (necessary on NetBSD 9.x)
 
---- configure.cmake.orig	2021-03-22 08:44:50.000000000 +0000
+--- configure.cmake.orig	2026-04-07 15:27:15.000000000 +0000
 +++ configure.cmake
-@@ -186,13 +186,9 @@ ENDIF()
+@@ -183,13 +183,9 @@ INCLUDE (CheckIncludeFiles)
  #
  INCLUDE (CheckIncludeFiles)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-configure.cmake,v 1.2 2021/06/22 10:12:37 nia Exp $
  CHECK_INCLUDE_FILES (dlfcn.h HAVE_DLFCN_H)
  CHECK_INCLUDE_FILES (endian.h HAVE_ENDIAN_H)
  CHECK_INCLUDE_FILES (execinfo.h HAVE_EXECINFO_H)
-@@ -241,6 +237,7 @@ CHECK_FUNCTION_EXISTS (fcntl HAVE_FCNTL)
+@@ -241,6 +237,7 @@ CHECK_FUNCTION_EXISTS (fedisableexcept HAVE_FEDISABLEE
  CHECK_FUNCTION_EXISTS (fdatasync HAVE_FDATASYNC)
  CHECK_SYMBOL_EXISTS(fdatasync "unistd.h" HAVE_DECL_FDATASYNC)
  CHECK_FUNCTION_EXISTS (fedisableexcept HAVE_FEDISABLEEXCEPT)
@@ -28,7 +28,7 @@ $NetBSD: patch-configure.cmake,v 1.2 2021/06/22 10:12:37 nia Exp $
  CHECK_FUNCTION_EXISTS (fsync HAVE_FSYNC)
  CHECK_FUNCTION_EXISTS (gethrtime HAVE_GETHRTIME)
  CHECK_FUNCTION_EXISTS (getpass HAVE_GETPASS)
-@@ -300,6 +297,7 @@ CHECK_SYMBOL_EXISTS(TIOCGWINSZ "sys/ioct
+@@ -301,6 +298,7 @@ CHECK_SYMBOL_EXISTS(MADV_DONTDUMP "sys/mman.h" HAVE_MA
  CHECK_SYMBOL_EXISTS(FIONREAD "sys/ioctl.h" FIONREAD_IN_SYS_IOCTL)
  CHECK_SYMBOL_EXISTS(FIONREAD "sys/filio.h" FIONREAD_IN_SYS_FILIO)
  CHECK_SYMBOL_EXISTS(MADV_DONTDUMP "sys/mman.h" HAVE_MADV_DONTDUMP)
@@ -36,18 +36,18 @@ $NetBSD: patch-configure.cmake,v 1.2 2021/06/22 10:12:37 nia Exp $
  CHECK_CXX_SOURCE_COMPILES(
  "#include <sys/types.h>
   #include <sys/stat.h>
-@@ -332,6 +330,14 @@ ELSEIF(HAVE_TIMER_CREATE AND HAVE_TIMER_
+@@ -331,6 +329,14 @@ ELSEIF(HAVE_TIMER_CREATE AND HAVE_TIMER_SETTIME)
+   SET(HAVE_KQUEUE_TIMERS 1 CACHE INTERNAL "Have kqueue timer-related filter")
+ ELSEIF(HAVE_TIMER_CREATE AND HAVE_TIMER_SETTIME)
    SET(HAVE_POSIX_TIMERS 1 CACHE INTERNAL "Have POSIX timer-related functions")
- ENDIF()
- 
++ENDIF()
++
 +IF (NOT HAVE_EVFILT_USER)
 +  SET(HAVE_KQUEUE 0)
 +  SET(HAVE_KQUEUE_TIMERS 0)
 +  IF(HAVE_TIMER_CREATE AND HAVE_TIMER_SETTIME)
 +    SET(HAVE_POSIX_TIMERS 1 CACHE INTERNAL "Have POSIX timer-related functions")
 +  ENDIF()
-+ENDIF()
-+
- IF(NOT HAVE_POSIX_TIMERS AND NOT HAVE_KQUEUE_TIMERS AND NOT WIN32)
-   MESSAGE(FATAL_ERROR "No mysys timer support detected!")
  ENDIF()
+ 
+ IF(NOT HAVE_POSIX_TIMERS AND NOT HAVE_KQUEUE_TIMERS AND NOT WIN32)
