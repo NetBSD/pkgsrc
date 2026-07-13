@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/06/07 14:19:48 mef Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/13 13:11:27 mef Exp $
 
 R_PKGNAME=	bayesm
 R_PKGVER=	3.1-7
@@ -19,8 +19,18 @@ TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++ fortran
 # only for bmake/gmake compatibility on patch-src_Makevars
-USE_TOOLS+=	gmake
 GCC_REQD+=	8
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		pkglibs
+SUBST_STAGE.pkglibs=	pre-configure
+SUBST_FILES.pkglibs=	src/Makevars
+SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
+.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
+.else
+SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
