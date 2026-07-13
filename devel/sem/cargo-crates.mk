@@ -1,4 +1,4 @@
-# $NetBSD: cargo-crates.mk,v 1.2 2026/06/24 07:27:56 pin Exp $
+# $NetBSD: cargo-crates.mk,v 1.3 2026/07/13 10:12:06 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -219,6 +219,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-dart-0.2.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-elixir-0.3.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-elm-5.9.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-embedded-template-0.25.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-fish-3.6.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-fortran-0.5.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.23.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.23.1
@@ -228,6 +229,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.23.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-ng-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
+CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-nix-0.3.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-ocaml-0.24.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.23.11
@@ -327,3 +329,6 @@ CARGO_CRATE_DEPENDS+=	zerotrie-0.2.4
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.6
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.3
 CARGO_CRATE_DEPENDS+=	zmij-1.0.21
+CARGO_CRATE_DEPENDS+=	zstd-0.13.3
+CARGO_CRATE_DEPENDS+=	zstd-safe-7.2.4
+CARGO_CRATE_DEPENDS+=	zstd-sys-2.0.16+zstd.1.5.7
