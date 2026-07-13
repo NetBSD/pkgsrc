@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.172 2026/06/25 12:01:27 adam Exp $
+# $NetBSD: Makefile,v 1.173 2026/07/13 09:09:30 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
-DISTNAME=	hypothesis-6.155.7
+DISTNAME=	hypothesis-6.156.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -12,10 +12,7 @@ HOMEPAGE=	https://github.com/HypothesisWorks/hypothesis
 COMMENT=	Python library for property based testing
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.1.0:../../devel/py-sortedcontainers
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
@@ -24,5 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 
 PY_RENAME_BINARIES=	hypothesis
 
+CARGO_WRKSRC=	${WRKSRC}/rust
+
+.include "cargo-depends.mk"
+
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.52 2026/05/20 07:57:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2026/07/13 09:09:30 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_hypothesis_ftz_detector.py
 ${PYSITELIB}/_hypothesis_ftz_detector.pyc
 ${PYSITELIB}/_hypothesis_ftz_detector.pyo
@@ -18,6 +17,7 @@ ${PYSITELIB}/_hypothesis_pytestplugin.pyo
 ${PYSITELIB}/hypothesis/__init__.py
 ${PYSITELIB}/hypothesis/__init__.pyc
 ${PYSITELIB}/hypothesis/__init__.pyo
+${PYSITELIB}/hypothesis/_native.so
 ${PYSITELIB}/hypothesis/_settings.py
 ${PYSITELIB}/hypothesis/_settings.pyc
 ${PYSITELIB}/hypothesis/_settings.pyo
@@ -102,9 +102,6 @@ ${PYSITELIB}/hypothesis/internal/__init__.pyo
 ${PYSITELIB}/hypothesis/internal/cache.py
 ${PYSITELIB}/hypothesis/internal/cache.pyc
 ${PYSITELIB}/hypothesis/internal/cache.pyo
-${PYSITELIB}/hypothesis/internal/cathetus.py
-${PYSITELIB}/hypothesis/internal/cathetus.pyc
-${PYSITELIB}/hypothesis/internal/cathetus.pyo
 ${PYSITELIB}/hypothesis/internal/charmap.py
 ${PYSITELIB}/hypothesis/internal/charmap.pyc
 ${PYSITELIB}/hypothesis/internal/charmap.pyo
