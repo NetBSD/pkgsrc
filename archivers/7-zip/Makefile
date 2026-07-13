@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/04/28 08:11:54 adam Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2026/07/13 13:31:46 bsiegert Exp $
 
-DISTNAME=	7z2601-src
-PKGNAME=	7-zip-26.01
+DISTNAME=	7z2602-src
+PKGNAME=	7-zip-26.02
 CATEGORIES=	archivers
 MASTER_SITES=	https://7-zip.org/a/
 EXTRACT_SUFX=	.tar.xz
