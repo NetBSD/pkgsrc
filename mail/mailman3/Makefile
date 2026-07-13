@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/06/28 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/13 21:09:15 wiz Exp $
 
 DISTNAME=	mailman-3.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -78,7 +78,7 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 # uses nntplib, removed from Python 3.13
 # https://gitlab.com/mailman/mailman/-/issues/1176
-PYTHON_VERSIONS_ACCEPTED=	311
+#PYTHON_VERSIONS_ACCEPTED=	311
 
 post-patch:
 	${CP} ${FILESDIR}/crontab.sample ${WRKSRC}/crontab.sample
