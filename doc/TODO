@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27583 2026/07/13 12:28:18 wiz Exp $
+$NetBSD: TODO,v 1.27584 2026/07/13 13:39:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1140,7 +1140,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0 [waiting for py-pydantic release that works with this]
-	o py-scikit-build-core-1.0.2
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-3.12.1
 	o py-sybase-0.37
