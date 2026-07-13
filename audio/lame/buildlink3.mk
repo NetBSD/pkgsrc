@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2024/05/16 09:21:37 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/07/13 04:24:53 wiz Exp $
 
 BUILDLINK_TREE+=	lame
 
@@ -21,6 +21,7 @@ pkgbase:= lame
 .  include "../../math/libffm/buildlink3.mk"
 .endif
 
+.include "../../audio/mpg123/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 
