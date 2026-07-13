@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/07/04 21:44:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/07/13 14:43:11 wiz Exp $
 
 BLAKE2s (moderncore-20260704-c84fe419ca4be928505b0e1af67a87e61b0aa525.tar.gz) = 891d5dbaa4a82a570b495789ade71b4507ac1e4d24f46d53d0f94238595dd307
 SHA512 (moderncore-20260704-c84fe419ca4be928505b0e1af67a87e61b0aa525.tar.gz) = a2544590f486e72de2b37652d444552097e6f9421f776201f9b9c3f9f2b43a3e09b6f6e0be163251fbea1ee0c072ce1b6e32ecdb799bb964bd5b8c7f78a3fe1f
@@ -9,5 +9,5 @@ Size (nothings-stb-f1c79c02822848a9bed4315b12c8c8f3761e1296.tar.gz) = 1514727 by
 BLAKE2s (wolfpld-tracy-853fff614eb2deffd7c86853b517c8021a3efd1f.tar.gz) = bec059d573559be72087408aaa63435fa064ee4b7da7552fbd74ac5106c0f2af
 SHA512 (wolfpld-tracy-853fff614eb2deffd7c86853b517c8021a3efd1f.tar.gz) = d7aa161030dc8b792f4b2f4ba173446371b35d055d343b5024b770911a0495a25d440bc8350575136c85abb48353c91f5f9444f46dd58f6f9de5542341fac83c
 Size (wolfpld-tracy-853fff614eb2deffd7c86853b517c8021a3efd1f.tar.gz) = 6122641 bytes
-SHA1 (patch-CMakeLists.txt) = e973eaaac47a125578487456016a3105e86270e1
-SHA1 (patch-cmake_git-ref.py) = 4bed94f3dd71dff142f81a63ec3079daf4f4b195
+SHA1 (patch-CMakeLists.txt) = d123c5dfafc72dc43d4c4abd056fb762ea8c5258
+SHA1 (patch-cmake_git-ref.py) = e17776824d34c8fa565ba6e3d2c472c63ede88e3

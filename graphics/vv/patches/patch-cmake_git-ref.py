@@ -1,6 +1,7 @@
-$NetBSD: patch-cmake_git-ref.py,v 1.1 2026/07/04 21:44:31 wiz Exp $
+$NetBSD: patch-cmake_git-ref.py,v 1.2 2026/07/13 14:43:11 wiz Exp $
 
 Pass in commit id.
+Refused by upstream.
 https://github.com/wolfpld/moderncore/issues/5
 
 --- cmake/git-ref.py.orig	2026-07-04 20:57:10.000000000 +0000

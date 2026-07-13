@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/04 21:44:31 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/07/13 14:43:11 wiz Exp $
 
 Pass in commit id.
+Refused by upstream.
 https://github.com/wolfpld/moderncore/issues/5
 
 --- CMakeLists.txt.orig	2026-07-04 21:27:09.225353916 +0000
