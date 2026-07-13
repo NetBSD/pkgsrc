@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/07/12 12:54:39 thor Exp $
+# $NetBSD: Makefile,v 1.96 2026/07/13 04:20:49 wiz Exp $
 
 DISTNAME=	lame-4.0
 CATEGORIES=	audio
@@ -18,6 +18,9 @@ USE_FEATURES+=		strnlen
 
 LDFLAGS.SunOS+=		-lm
 LDFLAGS.NetBSD+=	-ltermcap
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "options.mk"
 
