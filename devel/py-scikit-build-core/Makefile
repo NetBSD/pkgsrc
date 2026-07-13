@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/03/09 11:54:16 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/13 13:39:10 wiz Exp $
 
-DISTNAME=	scikit_build_core-0.12.2
+DISTNAME=	scikit_build_core-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -15,6 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.24:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TEST_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.8:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs>=22.2.0:../../devel/py-cattrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=24.1:../../devel/py-pip
@@ -29,6 +30,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 # only needed for tests
 USE_LANGUAGES=	c c++
 
+# as of 1.0.3
+# 15 failed, 941 passed, 80 skipped
+# with pybind11 from below:
+# 19 failed, 943 passed, 74 skipped
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
+
+PY_RENAME_BINARIES+=	scikit-build
+PY_RENAME_BINARIES+=	scikit-build-core
+
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0:../../devel/py-exceptiongroup
@@ -38,5 +50,5 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 
 .include "../../lang/python/wheel.mk"
 # only needed for testing, but this is not supported by buildlink3, so make it build dependency
-#.include "../../devel/py-pybind11/buildlink3.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
