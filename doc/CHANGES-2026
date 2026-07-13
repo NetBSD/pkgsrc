@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4426 2026/07/13 10:12:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4427 2026/07/13 10:16:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6640,3 +6640,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libpsl to 0.23.0 [wiz 2026-07-13]
 	Updated textproc/tree-sitter to 0.26.11 [wiz 2026-07-13]
 	Updated devel/sem to 0.21.0 [wiz 2026-07-13]
+	Updated math/ggml to 0.16.0 [wiz 2026-07-13]
