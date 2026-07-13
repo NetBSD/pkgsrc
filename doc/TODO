@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27558 2026/07/12 20:01:58 wiz Exp $
+$NetBSD: TODO,v 1.27559 2026/07/13 04:35:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -864,6 +864,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
+	o libpsl-0.23.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
@@ -1024,6 +1025,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
+	o ov-0.54.0
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
@@ -1206,7 +1208,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.30
+	o rumdl-2.2.31
 	o rust-1.97.0 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1326,6 +1328,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.1.1
+	o tree-sitter-0.26.11
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
