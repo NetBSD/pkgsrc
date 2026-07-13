@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/01/11 09:57:53 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/07/13 08:30:57 adam Exp $
 
-DISTNAME=	websockets-16.0
+DISTNAME=	websockets-16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/websockets/}
@@ -15,9 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # even after 'make install', testing doesn't work at all
 # 9 errors
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} websockets websockets-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	websockets
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
