@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2026/05/15 09:02:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/13 07:29:18 adam Exp $
 
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-proxy-2.0.1
+DISTNAME=	defguard-proxy-2.0.2
 GITHUB_PROJECT=	proxy
 
 COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
 
-# For defguard-version crate.
+# Building web requires pnpm, which can't be easily build.
+EXTRA_DIST+=	${DISTNAME}-web-dist${EXTRACT_SUFX}
+# For internal crates.
 EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}${EXTRACT_SUFX}
 
 INSTALLATION_DIRS=	bin

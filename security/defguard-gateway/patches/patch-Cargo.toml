@@ -1,28 +1,28 @@
-$NetBSD: patch-Cargo.toml,v 1.5 2026/05/18 06:38:05 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.6 2026/07/13 07:29:18 adam Exp $
 
 Paths to local crates.
 
---- Cargo.toml.orig	2026-04-30 13:52:31.000000000 +0000
+--- Cargo.toml.orig	2026-07-13 06:54:46.564395618 +0000
 +++ Cargo.toml
 @@ -8,9 +8,9 @@ axum = "0.8"
  base64 = "0.22"
  chrono = "0.4"
  clap = { version = "4.6", features = ["derive", "env"] }
--defguard_certs = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
--defguard_grpc_tls = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
--defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "dc0b70e69335c4be98d5b17615003922c9464994" }
-+defguard_certs = { path = "../defguard-2.0.1/crates/defguard_certs" }
-+defguard_grpc_tls = { path = "../defguard-2.0.1/crates/defguard_grpc_tls" }
-+defguard_version = { path = "../defguard-2.0.1/crates/defguard_version" }
+-defguard_certs = { git = "https://github.com/DefGuard/defguard.git", rev = "f5ae25dc6810b92ce9bd8dafddefc03f336a69bf" }
+-defguard_grpc_tls = { git = "https://github.com/DefGuard/defguard.git", rev = "f5ae25dc6810b92ce9bd8dafddefc03f336a69bf" }
+-defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "f5ae25dc6810b92ce9bd8dafddefc03f336a69bf" }
++defguard_certs = { path = "../defguard-2.0.2/crates/defguard_certs" }
++defguard_grpc_tls = { path = "../defguard-2.0.2/crates/defguard_grpc_tls" }
++defguard_version = { path = "../defguard-2.0.2/crates/defguard_version" }
+ defguard_wireguard_rs = "0.10"
  rustls = { version = "0.23", default-features = false, features = ["ring"] }
  rustls-pki-types = "1"
- rustls-webpki = { version = "0.103", features = ["ring", "std"] }
 @@ -43,7 +43,7 @@ tracing = "0.1"
  tracing-subscriber = "0.3"
  
  [target.'cfg(target_os = "linux")'.dependencies]
--nftnl = { git = "https://github.com/DefGuard/nftnl-rs.git", rev = "a5cf4c9965118e27795f4ad94ea5fbbde2687ff7" }
-+nftnl = { path = "../nftnl-rs-a5cf4c9965118e27795f4ad94ea5fbbde2687ff7/nftnl" }
+-nftnl = { git = "https://github.com/DefGuard/nftnl-rs.git", rev = "abd34b08c53b88a47346da6362e360d522cf8ca2" }
++nftnl = { path = "../nftnl-rs-abd34b08c53b88a47346da6362e360d522cf8ca2/nftnl" }
  mnl = "0.3"
  
- [target.'cfg(any(target_os = "freebsd", target_os = "macos", target_os = "netbsd"))'.dependencies]
+ [dev-dependencies]
