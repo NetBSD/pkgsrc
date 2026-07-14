@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4475 2026/07/14 19:01:29 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4476 2026/07/14 19:06:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6699,3 +6699,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Mojolicious to 9.48 [wiz 2026-07-14]
 	Updated editors/ed to 1.22.5 [drixter 2026-07-14]
 	Updated www/php-nextcloud to 33.0.6 [gdt 2026-07-14]
+	Removed www/php-nextcloud31 [gdt 2026-07-14]
