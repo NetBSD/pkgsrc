@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/06/06 06:03:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/07/14 09:29:06 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -2519,6 +2519,9 @@ ${PYSITELIB}/ansible_test/_internal/venv.pyo
 ${PYSITELIB}/ansible_test/_util/__init__.py
 ${PYSITELIB}/ansible_test/_util/__init__.pyc
 ${PYSITELIB}/ansible_test/_util/__init__.pyo
+${PYSITELIB}/ansible_test/_util/controller/ansible_collections/ansible_test/_internal/plugins/callback/timeout.py
+${PYSITELIB}/ansible_test/_util/controller/ansible_collections/ansible_test/_internal/plugins/callback/timeout.pyc
+${PYSITELIB}/ansible_test/_util/controller/ansible_collections/ansible_test/_internal/plugins/callback/timeout.pyo
 ${PYSITELIB}/ansible_test/_util/controller/sanity/code-smell/action-plugin-docs.json
 ${PYSITELIB}/ansible_test/_util/controller/sanity/code-smell/action-plugin-docs.py
 ${PYSITELIB}/ansible_test/_util/controller/sanity/code-smell/action-plugin-docs.pyc
