@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/07/26 09:01:03 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/07/14 11:04:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -70,6 +70,7 @@ CARGO_CRATE_DEPENDS+=	lru-0.12.5
 CARGO_CRATE_DEPENDS+=	lscolors-0.9.0
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
 CARGO_CRATE_DEPENDS+=	mio-0.8.11
+CARGO_CRATE_DEPENDS+=	natord-1.0.9
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
@@ -98,6 +99,7 @@ CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.219
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.143
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.18
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
