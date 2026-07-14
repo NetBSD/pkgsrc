@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/02/16 08:20:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/14 17:59:22 he Exp $
 
 DISTNAME=	userspace-rcu-0.15.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://lttng.org/files/urcu/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,13 +21,6 @@ TEST_TARGET=		check
 # liburcu requires thread local storage support; thus,
 # only NetBSD-6 or later is supported.
 NOT_FOR_PLATFORM=	NetBSD-[0-5].*-*
-
-PKGCONFIG_OVERRIDE+=	liburcu-bp.pc.in
-PKGCONFIG_OVERRIDE+=	liburcu-cds.pc.in
-PKGCONFIG_OVERRIDE+=	liburcu-mb.pc.in
-PKGCONFIG_OVERRIDE+=	liburcu-qsbr.pc.in
-PKGCONFIG_OVERRIDE+=	liburcu-signal.pc.in
-PKGCONFIG_OVERRIDE+=	liburcu.pc.in
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
