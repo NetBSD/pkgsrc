@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4473 2026/07/14 17:29:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4474 2026/07/14 18:58:58 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/toxic to 0.16.3 [ktnb 2026-07-14]
 	Updated databases/p5-DBI to 1.651 [wiz 2026-07-14]
 	Updated www/p5-Mojolicious to 9.48 [wiz 2026-07-14]
+	Updated editors/ed to 1.22.5 [drixter 2026-07-14]
