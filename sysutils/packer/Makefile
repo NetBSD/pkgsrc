@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2026/06/05 10:21:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2026/07/14 00:36:05 maya Exp $
 #
 # XXX: Note that newer versions use an unacceptable license.
 #
 
 DISTNAME=	packer-1.9.5
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

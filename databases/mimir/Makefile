@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/06/05 10:21:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2026/07/14 00:35:42 maya Exp $
 
 DISTNAME=	mimir-2.15.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	${DISTNAME}

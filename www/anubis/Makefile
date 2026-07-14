@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2026/06/05 10:21:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2026/07/14 00:36:08 maya Exp $
 
 DISTNAME=	anubis-src-vendor-npm-1.25.0
 PKGNAME=	${DISTNAME:S/anubis-src-vendor-npm-/anubis-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TecharoHQ/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

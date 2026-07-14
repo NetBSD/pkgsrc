@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2026/06/05 10:21:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.76.2.1 2026/07/14 00:35:43 maya Exp $
 
 DISTNAME=	postgres_exporter-0.15.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus-community/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
