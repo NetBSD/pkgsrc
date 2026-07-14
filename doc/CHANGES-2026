@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4458 2026/07/14 09:33:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4459 2026/07/14 11:00:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6681,3 +6681,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-OpenSSL-X509 to 2.1.3 [wiz 2026-07-14]
 	Updated devel/capnproto to 1.5.0 [adam 2026-07-14]
 	Updated sysutils/ansible-core to 2.21.2 [adam 2026-07-14]
+	Updated devel/garden to 2.6.1 [pin 2026-07-14]
