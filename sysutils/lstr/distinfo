@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/07/26 09:01:03 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/07/14 11:04:47 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -204,15 +204,18 @@ Size (lru-0.12.5.crate) = 16047 bytes
 BLAKE2s (lscolors-0.9.0.crate) = 40df275c3e934688e798aae7d99f8d79eb32a64623b7328e0066b7a63085deda
 SHA512 (lscolors-0.9.0.crate) = eafca6524657ffd16a77d05c7bf4a2e6eb842618767be39c516ad1b14ea181c9dff4d02b78e246194a2088798ebd6e22b1aa6ff1498df7de1f43cb3920a47d7f
 Size (lscolors-0.9.0.crate) = 20899 bytes
-BLAKE2s (lstr-0.2.1.tar.gz) = d0ffabbc3fce3bf0251953be2d9e7d96a3983a978b476240f57a48fe67975ae5
-SHA512 (lstr-0.2.1.tar.gz) = 5922be838cfb559edfe185ed3118dd587b62c7c7a854bf65f545356240f0460fe6a3c02e909d9ca6f8363063390ed3e5fdc514f8dc2e241293ea4597b49d6354
-Size (lstr-0.2.1.tar.gz) = 456818 bytes
+BLAKE2s (lstr-0.3.0.tar.gz) = 13854fef407d57a7fb06f50eb4bd0d1695014863b4aba54d37c19e2c167ceb09
+SHA512 (lstr-0.3.0.tar.gz) = d77cf27bc74b792edd893bc5778e5872c4d1ef5b319c1c38041aa29e3e69cfc0b62b50ab8a2b832694e5342b51eac27cb362a13c6ca91b362f9d6dae1c8c0c0e
+Size (lstr-0.3.0.tar.gz) = 506673 bytes
 BLAKE2s (memchr-2.7.4.crate) = 87799dee61c273cba812d73b67f6ccaf05d8f18d4cc33e0f70986a1485ee0d64
 SHA512 (memchr-2.7.4.crate) = 8d0e8b9c30208897d4b1b920f1bdcccd0c2b75d92a06abe4a1b2407938768abb6487d63de56c6a80419798fe69517210643dfaf11f5f5540185f0eccf220adb2
 Size (memchr-2.7.4.crate) = 96670 bytes
 BLAKE2s (mio-0.8.11.crate) = 659fce154676d01c5515641898ac4d103d6c8fe5a40b175e29edfb05fe043098
 SHA512 (mio-0.8.11.crate) = 9a2806ea78b0637d0cf92448abcd50bc5d09bd80da0f37752c847bc98d014baae7a5cc4d929de98be6283c76d82ccab1f1467aa6ab583a4e782d97d5592b0bb1
 Size (mio-0.8.11.crate) = 102983 bytes
+BLAKE2s (natord-1.0.9.crate) = 0e3a2b5077d1f66f232fcd853c5d90cb8f4542783661fafa384bb66dbb44546e
+SHA512 (natord-1.0.9.crate) = bf58eda54c759fecca1fd310bece370f26555bde1096081adc5bb1e9446a538f1652fb3049a52f898f4f62a2608805b72cb72dd52ff3fc9b88fe0a7c9071025a
+Size (natord-1.0.9.crate) = 3866 bytes
 BLAKE2s (normalize-line-endings-0.3.0.crate) = d148e24dadfbeccefd806b3d8f5426498c5118471813392b089158daffe2c77f
 SHA512 (normalize-line-endings-0.3.0.crate) = f8e2a6e333b0e8972febe8b9cf058c8d899c384fd177e0b6ef1c5f94e0fa18192963970cb1a2ba80e3135a8cca66cdae6796e4d84ac6b325bb369575bdfc6eea
 Size (normalize-line-endings-0.3.0.crate) = 5737 bytes
@@ -297,6 +300,9 @@ Size (serde-1.0.219.crate) = 78983 bytes
 BLAKE2s (serde_derive-1.0.219.crate) = 871c98d0a22904b21fc4ed9b6f67689ffd45b15bfaef16d7b9853542fcf568c8
 SHA512 (serde_derive-1.0.219.crate) = 1676bbf09e11273705a35c540d52d35d1bba7cdf1f347d40a364d7ae9269167f9f0f62ff4fa384aaa613c83e432a8eb3c016587ea643bb11434c00664a5c116b
 Size (serde_derive-1.0.219.crate) = 57798 bytes
+BLAKE2s (serde_json-1.0.143.crate) = 4925ffb074acdf1e6f90ddbec9b257aa6d5db2243fc35ba2be8465e095f167ad
+SHA512 (serde_json-1.0.143.crate) = 084fa35adc0d720c3868d57b2d4a2f30af08b650e876ee88014cf1b98d49079f5ddfe5b14743c63ebc5b9bd8291c6d03fd34f07b770a25874f00ea7c42bdde8b
+Size (serde_json-1.0.143.crate) = 155342 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
