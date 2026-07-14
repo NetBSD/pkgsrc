@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.2 2026/06/28 18:51:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.3 2026/07/14 19:19:45 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -31,4 +31,46 @@ p5-Bytes-Random-Secure-Tiny: security fix
 
 Pullup ticket #7149 - requested by taca
 security/wolfssl: security fix
+
+Pullup ticket #7150 - requested by scole
+www/chromium: NetBSD 10 build fix
+
+Pullup ticket #7152 - requested by taca
+net/dnsdist: security fix
+
+Pullup ticket #7157 - requested by taca
+devel/ruby-concurrent-ruby: security fix
+
+Pullup ticket #7158 - requested by taca
+archivers/7-zip: security fix
+
+Pullup ticket #7159 - requested by taca
+www/ruby-crass: security fix
+
+Pullup ticket #7155 - requested by taca
+lang/nodejs22: security fix
+
+Pullup ticket #7160 - requested by taca
+graphics/GraphicsMagick: security fix
+
+Pullup ticket #7161 - requested by taca
+www/p5-JavaScript-Minifier-XS: security fix
+
+Pullup ticket #7162 - requested by taca
+security/clamav: security fix
+
+Pullup ticket #7163 - requested by taca
+lang/php82: security fix
+
+Pullup ticket #7164 - requested by taca
+lang/php83: security fix
+
+Pullup ticket #7165 - requested by taca
+lang/php84: security fix
+
+Pullup ticket #7166 - requested by taca
+lang/php85: security fix
+
+Pullup ticket #7168 - requested by taca
+mail/roundcube: security fix
 
