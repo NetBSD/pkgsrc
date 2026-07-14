@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2025/09/07 13:10:19 pin Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/14 11:02:02 pin Exp $
 
-DISTNAME=	kalker-2.2.2
+DISTNAME=	kalker-2.2.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaddiM8/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://kalker.strct.net/
+HOMEPAGE=	https://kalker.xyz/
 COMMENT=	CLI calculator supporting math-like syntax with user-defined variables
 LICENSE=	mit
 
@@ -16,9 +16,9 @@ SUPERSEDES+=	kalk-[0-9]*
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.80.1
+#RUST_REQ=	1.97.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.80.1 on amd64
+#This package is confirmed to build with Rust 1.97.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	m4
 
