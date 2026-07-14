@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2026/06/25 08:51:55 adam Exp $
+$NetBSD: distinfo,v 1.33 2026/07/14 09:08:48 adam Exp $
 
-BLAKE2s (anyio-4.14.1.tar.gz) = 1e1dd0a7361b995d8039b1f2ac4ec90573130bda8f6a655516b4e96dcee4ec7f
-SHA512 (anyio-4.14.1.tar.gz) = 46561cd8e551953237ad079fc0669fbf21fc9f8bcf5e1a3dbd44f52248a9dbcb54a34a801d094994b4a22fb5470439be681f6c743b02f73dbdc27ebb1de911ce
-Size (anyio-4.14.1.tar.gz) = 254831 bytes
+BLAKE2s (anyio-4.14.2.tar.gz) = 5db93b44be803767a54283d7475e48be6e2cf8b5b8b16b74a7339563a672f517
+SHA512 (anyio-4.14.2.tar.gz) = 94f52ab81fbfab5d30937a0a7f4714f5cc9d8265f5450ccce1fff1f953f234f8c286d484f06f91e8737fa8d4d325275a1a62cce31fd66d4447c55eddcca87f2e
+Size (anyio-4.14.2.tar.gz) = 260176 bytes
