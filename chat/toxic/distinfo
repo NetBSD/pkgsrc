@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2026/05/21 13:52:08 ktnb Exp $
+$NetBSD: distinfo,v 1.3 2026/07/14 16:05:09 ktnb Exp $
 
-BLAKE2s (toxic-0.16.2.tar.gz) = 18a5145690093c1a8f039164275562f6b28580bd81db5719704c6437edfe0bff
-SHA512 (toxic-0.16.2.tar.gz) = 5033afdefea4771f0a8f4e4a79953b48087087ff6de08f4685067ff2ec439bcdf6c3f276aa915168f4a0df4cca5c276f9b7f0a12413a9e98b69bc664960e3750
-Size (toxic-0.16.2.tar.gz) = 1257173 bytes
+BLAKE2s (toxic-0.16.3.tar.gz) = 171acfcbae39c071443d53e7265c614ca9f17a5c2096dddd1664c6aecf68081f
+SHA512 (toxic-0.16.3.tar.gz) = 0f71ee6bb1308ad67ede9bd3912bb82deba0929774124094cb37ba71e7c0279c4e277a98f64b4165a62eb9f51a5a85368f25b28c6367d2c0aed2025a9204aebb
+Size (toxic-0.16.3.tar.gz) = 1257798 bytes
 SHA1 (patch-Makefile) = 85e9ed289f28a0e529dc03097ad726e13e327c2f
 SHA1 (patch-src_init__queue.c) = 88d854fe7968d1166bda690e8effb01c561b447a
