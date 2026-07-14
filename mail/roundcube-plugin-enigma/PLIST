@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/07/07 12:57:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.6.24.1 2026/07/14 19:17:24 bsiegert Exp $
 share/examples/roundcube/plugins/enigma/config.inc.php
 share/roundcube/plugins/enigma/README
 share/roundcube/plugins/enigma/bin/import_keys.sh
@@ -12,6 +12,7 @@ share/roundcube/plugins/enigma/lib/enigma_driver_phpssl.php
 share/roundcube/plugins/enigma/lib/enigma_engine.php
 share/roundcube/plugins/enigma/lib/enigma_error.php
 share/roundcube/plugins/enigma/lib/enigma_key.php
+share/roundcube/plugins/enigma/lib/enigma_key_lookup.php
 share/roundcube/plugins/enigma/lib/enigma_mime_message.php
 share/roundcube/plugins/enigma/lib/enigma_signature.php
 share/roundcube/plugins/enigma/lib/enigma_subkey.php
