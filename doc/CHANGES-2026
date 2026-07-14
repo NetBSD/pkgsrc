@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4461 2026/07/14 11:06:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4462 2026/07/14 11:08:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6684,3 +6684,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/garden to 2.6.1 [pin 2026-07-14]
 	Updated math/kalker to 2.2.3 [pin 2026-07-14]
 	Updated sysutils/lstr to 0.3.0 [pin 2026-07-14]
+	Updated shells/oh-my-posh to 29.27.0 [pin 2026-07-14]
