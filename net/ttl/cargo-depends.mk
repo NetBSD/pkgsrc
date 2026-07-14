@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/06/28 11:55:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/07/14 11:13:04 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -9,7 +9,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-1.0.14
 CARGO_CRATE_DEPENDS+=	anstyle-parse-1.0.0
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.1.5
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.11
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.102
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.103
 CARGO_CRATE_DEPENDS+=	approx-0.5.1
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.89
 CARGO_CRATE_DEPENDS+=	atomic-0.6.1
@@ -40,7 +40,7 @@ CARGO_CRATE_DEPENDS+=	chacha20-0.10.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.45
 CARGO_CRATE_DEPENDS+=	clap-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.0
-CARGO_CRATE_DEPENDS+=	clap_complete-4.6.5
+CARGO_CRATE_DEPENDS+=	clap_complete-4.6.7
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.0
 CARGO_CRATE_DEPENDS+=	cmake-0.1.58
@@ -58,7 +58,7 @@ CARGO_CRATE_DEPENDS+=	cpufeatures-0.3.0
 CARGO_CRATE_DEPENDS+=	crc32fast-1.5.0
 CARGO_CRATE_DEPENDS+=	critical-section-1.2.0
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
-CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	crossterm-0.29.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
@@ -180,7 +180,7 @@ CARGO_CRATE_DEPENDS+=	log-0.4.29
 CARGO_CRATE_DEPENDS+=	lru-0.18.0
 CARGO_CRATE_DEPENDS+=	lru-slab-0.1.2
 CARGO_CRATE_DEPENDS+=	mac_address-1.1.8
-CARGO_CRATE_DEPENDS+=	maxminddb-0.28.1
+CARGO_CRATE_DEPENDS+=	maxminddb-0.29.0
 CARGO_CRATE_DEPENDS+=	memchr-2.8.0
 CARGO_CRATE_DEPENDS+=	memmem-0.1.1
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
