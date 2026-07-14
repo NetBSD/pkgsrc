@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4466 2026/07/14 11:20:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4467 2026/07/14 11:23:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6689,3 +6689,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ttl to 0.21.0 [pin 2026-07-14]
 	Updated net/xfr to 0.9.21 [pin 2026-07-14]
 	Updated misc/tui-journal to 0.17.0 [pin 2026-07-14]
+	Updated textproc/xan to 0.60.0 [pin 2026-07-14]
