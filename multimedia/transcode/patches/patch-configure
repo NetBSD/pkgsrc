@@ -1,13 +1,14 @@
-$NetBSD: patch-configure,v 1.3 2023/11/16 23:54:31 mrg Exp $
+$NetBSD: patch-configure,v 1.4 2026/07/14 04:56:59 wiz Exp $
 
 Fixes for ImageMagic v7.
 Add DragonFly support.
 Make use of PTHREAD_LDFLAGS.
 Portability fix.
+Remove lame version check, lame 4 reports '40' < '393'
 
---- configure.orig	2011-11-19 10:50:37.000000000 -0600
-+++ configure	2023-11-16 17:52:19.858940713 -0600
-@@ -1868,7 +1868,7 @@
+--- configure.orig	2011-11-19 16:50:37.000000000 +0000
++++ configure
+@@ -1868,7 +1868,7 @@ Optional Packages:
    --with-imagemagick-prefix=PFX
                            prefix where imagemagick is installed (/usr)
    --with-imagemagick-includes=DIR
@@ -16,7 +17,7 @@ Portability fix.
                            are installed (/usr/include)
    --with-imagemagick-libs=DIR
                            directory where imagemagick libraries (libnone.so)
-@@ -5096,7 +5096,7 @@
+@@ -5096,7 +5096,7 @@ $as_echo "#define OS_LINUX 1" >>confdefs.h
  $as_echo "#define OS_LINUX 1" >>confdefs.h
  
      ;;
@@ -25,7 +26,7 @@ Portability fix.
      is_bsd=yes
  
  $as_echo "#define OS_BSD 1" >>confdefs.h
-@@ -19431,7 +19431,7 @@
+@@ -19431,7 +19431,7 @@ if test -n "$PTHREAD_LIBS" ; then
  esac
  # let user override
  if test -n "$PTHREAD_LIBS" ; then
@@ -34,7 +35,38 @@ Portability fix.
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
-@@ -27651,7 +27651,7 @@
+@@ -23318,30 +23318,8 @@ fi
+   CFLAGS="$ac_save_CFLAGS"
+   LIBS="$ac_save_LIBS"
+ 
+-  if test 393 -ge "$lame_version" ; then
+-    have_lame="no"
+-
+-this_pkg_err="yes"
+-if test x"yes" != x"optional" ; then
+-  tc_pkg_err="yes"
+-
+-  prob=""
+-  if test x"yes" = x"required" ; then
+-    prob="requirement failed"
+-  else
+-    prob="option '--enable-lame' failed"
+-  fi
+-  msg="ERROR: $prob: lame version < 3.93
+-lame.h can be found in the following packages:
+-  lame  http://www.mp3dev.org/
+-
+-"
+-  tc_pkg_err_text="$tc_pkg_err_text$msg"
+ fi
+ 
+-  fi
+-fi
+-
+ if test x"$have_lame" = x"yes" ; then
+ 
+ $as_echo "#define HAVE_LAME 1" >>confdefs.h
+@@ -27651,7 +27629,7 @@ $as_echo_n "checking for pkgconfig support for imagema
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pkgconfig support for imagemagick" >&5
  $as_echo_n "checking for pkgconfig support for imagemagick... " >&6; }
    if test x"$PKG_CONFIG" != x"no" ; then
@@ -43,7 +75,7 @@ Portability fix.
        pkg_config_imagemagick="yes"
      fi
    fi
-@@ -27720,7 +27720,7 @@
+@@ -27720,7 +27698,7 @@ $as_echo "user" >&6; }
  $as_echo "user" >&6; }
    else
      if test x"$pkg_config_imagemagick" != x"no" ; then
@@ -52,7 +84,7 @@ Portability fix.
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: pkg-config" >&5
  $as_echo "pkg-config" >&6; }
      else
-@@ -27753,12 +27753,12 @@
+@@ -27753,12 +27731,12 @@ $as_echo "default" >&6; }
    IMAGEMAGICK_EXTRA_CFLAGS="$IMAGEMAGICK_EXTRA_CFLAGS $xi"
    IMAGEMAGICK_EXTRA_CFLAGS="`echo $IMAGEMAGICK_EXTRA_CFLAGS | sed -e 's/  */ /g'`"
  
@@ -69,7 +101,7 @@ Portability fix.
  else
  
  this_pkg_err="yes"
-@@ -27771,8 +27771,8 @@
+@@ -27771,8 +27749,8 @@ if test x"no" != x"optional" ; then
    else
      prob="option '--enable-imagemagick' failed"
    fi
@@ -80,7 +112,7 @@ Portability fix.
    Wand  http://www.imagemagick.org/
  
  "
-@@ -27784,7 +27784,7 @@
+@@ -27784,7 +27762,7 @@ fi
  
      CPPFLAGS="$save_CPPFLAGS"
    elif test x"$pkg_config_imagemagick" != x"no" ; then
@@ -89,7 +121,7 @@ Portability fix.
    fi
  
    # get and test the _LIBS
-@@ -27797,7 +27797,7 @@
+@@ -27797,7 +27775,7 @@ $as_echo "user" >&6; }
  $as_echo "user" >&6; }
    else
      if test x"$pkg_config_imagemagick" != x"no" ; then
@@ -98,7 +130,7 @@ Portability fix.
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: pkg-config" >&5
  $as_echo "pkg-config" >&6; }
      else
-@@ -27900,7 +27900,7 @@
+@@ -27900,7 +27878,7 @@ fi
  
      LDFLAGS="$save_LDFLAGS"
    elif test x"$pkg_config_imagemagick" != x"no" ; then
@@ -107,7 +139,7 @@ Portability fix.
    fi
  
    if test x"$this_pkg_err" = x"no" ; then
-@@ -29507,7 +29507,7 @@
+@@ -29507,7 +29485,7 @@ if test "${enable_nuv+set}" = set; then :
      yes) if test yes != "$have_lzo"; then
             as_fn_error $? "liblzo2 is required for NuppelVideo support, try --enable-lzo" "$LINENO" 5
           fi

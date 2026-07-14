@@ -1,10 +1,10 @@
-$NetBSD: patch-export_export_ffmpeg.c,v 1.3 2019/12/29 10:23:53 markd Exp $
+$NetBSD: patch-export_export_ffmpeg.c,v 1.4 2026/07/14 04:56:59 wiz Exp $
 
 Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
 
 --- export/export_ffmpeg.c.orig	2011-11-19 16:50:27.000000000 +0000
 +++ export/export_ffmpeg.c
-@@ -122,6 +122,7 @@ static uint8_t             *img_buffer =
+@@ -122,6 +122,7 @@ static AVCodec             *lavc_venc_codec = NULL;
  static AVFrame             *lavc_convert_frame = NULL;
  
  static AVCodec             *lavc_venc_codec = NULL;
@@ -12,7 +12,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
  static AVFrame             *lavc_venc_frame = NULL;
  static AVCodecContext      *lavc_venc_context;
  static avi_t               *avifile = NULL;
-@@ -180,7 +181,7 @@ static char *tc_strchrnul(const char *s,
+@@ -180,7 +181,7 @@ static char *tc_strchrnul(const char *s, int c) {
  
  
  /* START: COPIED FROM ffmpeg-0.5_p22846(ffmpeg.c, cmdutils.c) */
@@ -21,7 +21,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
  #include <libavutil/avstring.h>
  #include <libswscale/swscale.h>
  
-@@ -249,9 +250,9 @@ int opt_default(const char *opt, const c
+@@ -249,9 +250,9 @@ int opt_default(const char *opt, const char *arg){
      for(type=0; type<AVMEDIA_TYPE_NB && ret>= 0; type++){
  		/* GLUE: +if */
  		if (type == AVMEDIA_TYPE_VIDEO) {
@@ -34,7 +34,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
  		/* GLUE: +if */
  		}
      }
-@@ -266,7 +267,10 @@ int opt_default(const char *opt, const c
+@@ -266,7 +267,10 @@ int opt_default(const char *opt, const char *arg){
          if(opt[0] == 'a')
              ret = av_set_string3(avcodec_opts[AVMEDIA_TYPE_AUDIO], opt+1, arg, 1, &o);
          else */ if(opt[0] == 'v')
@@ -283,8 +283,8 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
      }
  
 -    lavc_venc_context->me_method = ME_ZERO + lavc_param_vme;
--
  
+-
  	/* FIXME: transcode itself contains "broken ffmpeg default settings", thus we need to override them! */
 -	if (lavc_param_video_preset) {
 +	if (lavc_param_video_preset && strcmp(lavc_param_video_preset, "none")) {
@@ -298,7 +298,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
 +    if (lavc_param_scan_offset) {
 +      av_dict_set(&lavc_venc_opts, "scan_offset", "1", 0);
 +    }
-+
+ 
 +    if (lavc_param_ss) {
 +      av_dict_set(&lavc_venc_opts, "structured_slices", "1", 0);
 +    }
@@ -314,7 +314,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
 +    if (lavc_param_data_partitioning) {
 +      av_dict_set(&lavc_venc_opts, "vdpart", "1", 0);
 +    }
- 
++
      //-- open codec --
      //----------------
      TC_LOCK_LIBAVCODEC;
@@ -370,7 +370,7 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
                             lavc_venc_context->height);
      	    ac_imgconvert(&param->buffer, IMG_RGB_DEFAULT,
                                lavc_venc_frame->data, IMG_YUV420P,
-@@ -1652,13 +1682,17 @@ MOD_encode
+@@ -1652,12 +1682,16 @@ MOD_encode
                return TC_EXPORT_ERROR;
      }
  
@@ -385,9 +385,8 @@ Fixes building against FFmpeg version >= 4.0.0 (gentoo patch).
 +    ret = avcodec_encode_video2(lavc_venc_context, &pkt,
 +                                    lavc_venc_frame, &got_packet);
      TC_UNLOCK_LIBAVCODEC;
- 
-+    out_size = ret ? ret : pkt.size;
 +
++    out_size = ret ? ret : pkt.size;
+ 
      if (out_size < 0) {
        tc_log_warn(MOD_NAME, "encoder error: size (%d)", out_size);
-       return TC_EXPORT_ERROR;
