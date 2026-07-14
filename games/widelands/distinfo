@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2026/07/07 09:17:27 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2026/07/14 05:09:31 wiz Exp $
 
-BLAKE2s (widelands/v1.3.1.tar.gz) = a7e6577e72694dfdf3b2fc5e88678eb1087d94bef3758e5c3b73e8bd657b6b4b
-SHA512 (widelands/v1.3.1.tar.gz) = 47d72aabac1dc873dd6f6fa86ba0bf2b0dd13c298f10df89b47654397ab5b3a55c06d4e8cf6a0da807e3402a7bff0839b7b0b18a6f8611ee83d252b8e0d61f15
-Size (widelands/v1.3.1.tar.gz) = 468420954 bytes
+BLAKE2s (widelands-v1.3.1.tar.gz) = 9913ab43317d95e44b387cf3cf0a0ccbe631a0b6f07fe2bd8e886b505b5dac6b
+SHA512 (widelands-v1.3.1.tar.gz) = 7a253d6ce27421b6485b392d33c963054a08982353622e280357762120cf9330446c4bf974ea8a5a9c7410e0b6dd7634ecea9c77d8cc023a61b8705cc46e23b4
+Size (widelands-v1.3.1.tar.gz) = 468133569 bytes
 SHA1 (patch-src_base_string.cc) = f6f288f8f56c6eefe63b96a050ebbe81ce4dbeb3
 SHA1 (patch-xdg_CMakeLists.txt) = d1f96cc92068ca5962ce3b8f7b045fa7c6150591

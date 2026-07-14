@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.53 2026/07/13 04:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/07/14 05:09:31 wiz Exp $
 
-PKGVERSION=	1.3.1
-PKGNAME=	widelands-${PKGVERSION}
-PKGREVISION=	1
-DISTNAME=	v${PKGVERSION:C/rc/-rc/}
+# use file name generated when clicking on the 'Source code' download
+# link at https://www.widelands.org/wiki/Download/
+DISTNAME=	widelands-v1.3.1
+PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	https://codeberg.org/wl/widelands/archive/
+# direct links time out
+#MASTER_SITES=	-https://codeberg.org/wl/widelands/archive/v1.3.1.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.widelands.org/
@@ -32,7 +34,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/widelands
 
-DIST_SUBDIR=	widelands
 WRKSRC=		${WRKDIR}/widelands
 
 .include "../../mk/bsd.prefs.mk"
