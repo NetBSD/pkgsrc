@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4477 2026/07/14 19:53:55 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4478 2026/07/14 20:43:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6701,3 +6701,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 33.0.6 [gdt 2026-07-14]
 	Removed www/php-nextcloud31 [gdt 2026-07-14]
 	Updated geography/py-rtcm to 1.2.0 [gdt 2026-07-14]
+	Updated net/tailscale to 1.98.8nb2 [schmonz 2026-07-14]
