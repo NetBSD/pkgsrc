@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 13:30:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/14 07:09:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/scm_file_list.json
+${PYSITELIB}/${WHEEL_INFODIR}/scm_version.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/formtools/__init__.py
 ${PYSITELIB}/formtools/__init__.pyc
