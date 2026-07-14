@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2026/06/05 10:21:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2026/07/14 00:36:01 maya Exp $
 
 DISTNAME=	dnsx-1.2.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
