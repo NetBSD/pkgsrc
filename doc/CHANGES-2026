@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4463 2026/07/14 11:12:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4464 2026/07/14 11:14:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6686,3 +6686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lstr to 0.3.0 [pin 2026-07-14]
 	Updated shells/oh-my-posh to 29.27.0 [pin 2026-07-14]
 	Updated net/piratebay to 0.4.1 [pin 2026-07-14]
+	Updated net/ttl to 0.21.0 [pin 2026-07-14]
