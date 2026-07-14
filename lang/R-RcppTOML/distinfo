@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/05/26 21:40:13 mef Exp $
+$NetBSD: distinfo,v 1.3 2026/07/14 12:55:59 mef Exp $
 
 BLAKE2s (R/RcppTOML_0.2.2.tar.gz) = 0777083706a2b65cf5aad48690a50459ec66d765e16872d5e737748c42f849fc
 SHA512 (R/RcppTOML_0.2.2.tar.gz) = bfd175993f7f105c5cdb50b3da6d487955a8372a7f4662f8a171752f0e952e810af41100e1be1241f6f26684286c41597f84ff4952c319774c3e0543ade80f47
 Size (R/RcppTOML_0.2.2.tar.gz) = 141195 bytes
-SHA1 (patch-src_Makevars) = edee77b14e7bfe9988dd63cb9e00b3298d7dfe73
+SHA1 (patch-src_Makevars) = 444ad40fad7b7b81f8893c4dacb86d5c400b1379
