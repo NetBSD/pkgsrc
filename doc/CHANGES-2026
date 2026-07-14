@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4470 2026/07/14 16:01:41 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4471 2026/07/14 16:05:21 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6694,3 +6694,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-svglib to 2.0.2 [adam 2026-07-14]
 	Updated devel/py-urwid to 4.0.4 [adam 2026-07-14]
 	Updated audio/kew to 4.2.2 [ktnb 2026-07-14]
+	Updated chat/toxic to 0.16.3 [ktnb 2026-07-14]
