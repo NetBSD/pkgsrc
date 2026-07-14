@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2026/07/08 18:32:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/14 20:43:31 schmonz Exp $
 
 DISTNAME=	tailscale
 PKGNAME=	tailscale-1.98.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NuclearKev/}
 GITHUB_PROJECT=	tailscale
@@ -16,10 +16,19 @@ LICENSE=	modified-bsd
 GO_BUILD_PATTERN+=	tailscale.com/cmd/tailscale
 GO_BUILD_PATTERN+=	tailscale.com/cmd/tailscaled
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	paths/paths_unix.go paths/paths.go
+SUBST_VARS.paths=	VARBASE
+
+OWN_DIRS_PERMS+=	${VARBASE}/db/tailscale ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+
+BUILD_DEFS+=		VARBASE
+
 RCD_SCRIPTS+=	tailscaled
 
-GOFLAGS=      -ldflags "-X tailscale.com/version.longStamp=${PKGVERSION} \
-	    -X tailscale.com/version.shortStamp=${PKGVERSION}"
+GOFLAGS=	-ldflags "-X tailscale.com/version.longStamp=${PKGVERSION_NOREV} \
+		-X tailscale.com/version.shortStamp=${PKGVERSION_NOREV}"
 
 .include "go-modules.mk"
 

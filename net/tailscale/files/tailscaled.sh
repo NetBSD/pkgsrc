@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tailscaled.sh,v 1.2 2026/05/15 19:57:33 ktnb Exp $
+# $NetBSD: tailscaled.sh,v 1.3 2026/07/14 20:43:31 schmonz Exp $
 #
 # PROVIDE: tailscaled
 # REQUIRE: DAEMON
@@ -19,11 +19,17 @@ start_precmd="tailscaled_precmd"
 start_cmd="tailscaled_start"
 start_postcmd="tailscaled_poststart"
 tailscaled_socket="@VARBASE@/run/tailscale/${name}.sock"
+tailscaled_statedir="@VARBASE@/db/tailscale"
+tailscaled_logfile="@VARBASE@/log/tailscale"
 
 tailscaled_precmd()
 {
 	if [ ! -d @VARBASE@/run/tailscale ]; then
 		@MKDIR@ @VARBASE@/run/tailscale
+	fi
+
+	if [ ! -d @VARBASE@/log ]; then
+		@MKDIR@ @VARBASE@/log
 	fi
 
 	if [ -e ${tailscaled_socket} ]; then
@@ -33,7 +39,7 @@ tailscaled_precmd()
 
 tailscaled_start()
 {
-	${command} &
+	${command} --statedir=${tailscaled_statedir} --socket=${tailscaled_socket} >>${tailscaled_logfile} 2>&1 &
 }
 
 tailscaled_poststart() {
