@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4452 2026/07/13 19:25:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4453 2026/07/14 04:56:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6671,3 +6671,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/adguardhome to 0.107.78 [adam 2026-07-13]
 	Updated net/radsecproxy to 1.11.3 [adam 2026-07-13]
 	Updated textproc/py-tree-sitter to 0.26.0 [adam 2026-07-13]
+	Updated devel/pkgconf to 3.0.2 [wiz 2026-07-14]
