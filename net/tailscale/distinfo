@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/07/02 19:55:14 ktnb Exp $
+$NetBSD: distinfo,v 1.7 2026/07/14 20:43:31 schmonz Exp $
 
 BLAKE2s (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 467abef409ed18697f6f4f07f1d9c469cc7ba77b6b985e440b141c9ba37d0505
 SHA512 (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 661d501b50181f5af0dfff7e269b704eaa97bc2659dc5f95f22dd886e71f8f8a13ae9ce36cddfff3a1c68a312b445291ba67c7a976841d12216cbc4caefaea80
@@ -4845,3 +4845,7 @@ Size (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = 342 bytes
 BLAKE2s (tailscale.com_client_tailscale_v2_@v_v2.9.0.zip) = e8e59c792f0285ed6c2ad33c9ad12ad30899a2519d8a10555443b69c5d6d8121
 SHA512 (tailscale.com_client_tailscale_v2_@v_v2.9.0.zip) = 8b38b0533fc246a2d18df785182db5d7566db1de3f81e7af1564a03992188e553655000271abd00cb523161595af5b3e4f5b9d0ce2c823266dd26088b63af04e
 Size (tailscale.com_client_tailscale_v2_@v_v2.9.0.zip) = 58407 bytes
+SHA1 (patch-cmd_tailscaled_tailscaled.go) = 49b09d743ffb3cc54679c9ca341cbfa9de881ebb
+SHA1 (patch-hostinfo_hostinfo__darwin.go) = c2cbe558a9b6ce2debefc95ab7ea3b9e783d9d8d
+SHA1 (patch-paths_paths.go) = 078e6430535d369c6a06dd1d4b8490c3ce8abeaf
+SHA1 (patch-paths_paths__unix.go) = cd42bd6efdd21f667fc6b060cec9fe9e17178650
