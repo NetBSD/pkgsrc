@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/22 07:59:07 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/14 11:21:17 pin Exp $
 bin/xan
 share/doc/xan/LOVE_LETTER.md
 share/doc/xan/NOTES.md
@@ -84,7 +84,17 @@ share/doc/xan/cookbook/img/dataviz/flatten-sotu.png
 share/doc/xan/cookbook/img/dataviz/flatten-split.png
 share/doc/xan/cookbook/img/dataviz/flatten.png
 share/doc/xan/cookbook/img/dataviz/generate-gif.sh
+share/doc/xan/cookbook/img/dataviz/generate-grid.sh
 share/doc/xan/cookbook/img/dataviz/generate-screenshots.sh
+share/doc/xan/cookbook/img/dataviz/grid/flatten-split.png
+share/doc/xan/cookbook/img/dataviz/grid/heatmap-conditional-formatting.png
+share/doc/xan/cookbook/img/dataviz/grid/heatmap-custom-decades.png
+share/doc/xan/cookbook/img/dataviz/grid/hist-categorical1.png
+share/doc/xan/cookbook/img/dataviz/grid/plot-scatter-categorical-grid.png
+share/doc/xan/cookbook/img/dataviz/grid/plot-time-categorical-grid.png
+share/doc/xan/cookbook/img/dataviz/grid/spark-gradient.png
+share/doc/xan/cookbook/img/dataviz/grid/stats-report-long.png
+share/doc/xan/cookbook/img/dataviz/grid/view-grouped.png
 share/doc/xan/cookbook/img/dataviz/heatmap-adj.png
 share/doc/xan/cookbook/img/dataviz/heatmap-conditional-formatting.png
 share/doc/xan/cookbook/img/dataviz/heatmap-corr-renamed.png
@@ -114,6 +124,7 @@ share/doc/xan/cookbook/img/dataviz/plot-layout-gradient-unzoomed.png
 share/doc/xan/cookbook/img/dataviz/plot-layout-gradient.png
 share/doc/xan/cookbook/img/dataviz/plot-layout.png
 share/doc/xan/cookbook/img/dataviz/plot-regression.png
+share/doc/xan/cookbook/img/dataviz/plot-scatter-categorical-grid.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter-categorical.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter-grid.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter-small-multiples-horizontal.png
@@ -121,6 +132,7 @@ share/doc/xan/cookbook/img/dataviz/plot-scatter-small-multiples-unshared.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter-small-multiples-vertical.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter-ys.png
 share/doc/xan/cookbook/img/dataviz/plot-scatter.png
+share/doc/xan/cookbook/img/dataviz/plot-time-categorical-grid.png
 share/doc/xan/cookbook/img/dataviz/plot-time-categorical.png
 share/doc/xan/cookbook/img/dataviz/plot-time-small-multiples.png
 share/doc/xan/cookbook/img/dataviz/plot-time-y.png
@@ -148,6 +160,7 @@ share/doc/xan/cookbook/img/dataviz/spark-time.png
 share/doc/xan/cookbook/img/dataviz/spark-vertical-gradient.png
 share/doc/xan/cookbook/img/dataviz/spark-vertical-hist.png
 share/doc/xan/cookbook/img/dataviz/stats-flat.png
+share/doc/xan/cookbook/img/dataviz/stats-report-long.png
 share/doc/xan/cookbook/img/dataviz/stats-report.png
 share/doc/xan/cookbook/img/dataviz/unknown-pleasures.jpeg
 share/doc/xan/cookbook/img/dataviz/view-borderless.png
