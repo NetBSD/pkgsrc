@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/07/13 16:47:59 thor Exp $
+# $NetBSD: Makefile,v 1.98 2026/07/15 07:09:51 adam Exp $
 
 DISTNAME=	lame-4.0
 PKGREVISION=	1
@@ -10,12 +10,13 @@ HOMEPAGE=	https://lame.sourceforge.io/
 COMMENT=	Fast, high quality MP3 encoder
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_TOOLS+=		pkg-config
-USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
 USE_FEATURES+=		strnlen
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+# Fix for faulty detection of iconv.
+CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
 
 LDFLAGS.SunOS+=		-lm
 LDFLAGS.NetBSD+=	-ltermcap
