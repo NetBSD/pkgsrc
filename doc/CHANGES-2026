@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4487 2026/07/15 16:28:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4488 2026/07/15 16:36:38 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6718,3 +6718,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/clojure to 1.12.5.1654 [ktnb 2026-07-15]
 	Updated www/py-httpcore2 to 2.7.0 [adam 2026-07-15]
 	Updated www/py-httpx2 to 2.7.0 [adam 2026-07-15]
+	Updated lang/ecl to 26.5.5 [ktnb 2026-07-15]
