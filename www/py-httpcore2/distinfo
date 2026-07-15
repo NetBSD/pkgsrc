@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/07/06 06:54:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/07/15 16:28:01 adam Exp $
 
-BLAKE2s (httpcore2-2.5.0.tar.gz) = 07dd51ac649dc33540ef5ace9cbb19bff1f9022850336a644280c8bbcb81cfd7
-SHA512 (httpcore2-2.5.0.tar.gz) = 0ec068cb854a9144410ea81ea9b43cfa1f856c9e89c5e045f8ba13bc79cc71062dbee91a3f97154f35ce6ed27f82f4b3a84dd8e783be1aacb24d3c095de86a79
-Size (httpcore2-2.5.0.tar.gz) = 64808 bytes
+BLAKE2s (httpcore2-2.7.0.tar.gz) = e79f63b3a40a1f346cde5bfbae4a5db8bdb866a448b117cb601a86ce9306bbc1
+SHA512 (httpcore2-2.7.0.tar.gz) = 1434eb63cfbd9567c903d77654b9e47ab75422d029edbbdfb5b94845af6788020d6a4282cb978c7f3dcc801d3697a508503ae263c2b998f63ae6388653ad5170
+Size (httpcore2-2.7.0.tar.gz) = 65593 bytes
