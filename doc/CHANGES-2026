@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4480 2026/07/15 06:17:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4481 2026/07/15 06:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6710,3 +6710,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-narwhals to 2.24.0 [adam 2026-07-15]
 	Updated textproc/py-regex to 2026.7.10 [adam 2026-07-15]
 	Updated devel/py-kafka-python to 3.0.8 [adam 2026-07-15]
+	Updated devel/cargo-c to 0.10.24 [wiz 2026-07-15]
