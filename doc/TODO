@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27588 2026/07/15 20:00:38 wiz Exp $
+$NetBSD: TODO,v 1.27589 2026/07/15 20:20:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-5.12.4
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
-	o opencv-5.0.0 [wip]
+	o opencv-5.0.0 [wip; wait for https://bugs.kde.org/show_bug.cgi?id=522887]
 	o opendnssec-2.1.8
 	o openfst-1.8.4
 	o opengrok-1.7.1
