@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.71 2026/06/29 13:34:02 adam Exp $
+$NetBSD: distinfo,v 1.72 2026/07/15 06:15:04 adam Exp $
 
-BLAKE2s (regex-2026.6.28.tar.gz) = 3604fda8f1562094ab325fc0e3334d51b6762bdb26674c6d9529528527c6fbee
-SHA512 (regex-2026.6.28.tar.gz) = 2f0cbe5c45a69f00e33190fdbfc2faf2b6c4c66cf8cb13fc6dde55dbed8506548db89d7b6bceb66ae31912655c8cb984813a6bdbea89e975735316833b4edd14
-Size (regex-2026.6.28.tar.gz) = 416101 bytes
+BLAKE2s (regex-2026.7.10.tar.gz) = af93c9f75b9c1fe9537f9aa17938c83443fffd8a9b59896506cb8db964ce72c2
+SHA512 (regex-2026.7.10.tar.gz) = aae3e083d972a18eec000150c9858e8ff835d447193ec5df5b9e3afd330b7c67b6f4825f0773a2e744b77380aaff7a43be5034168bba7f497fa39798eb40822f
+Size (regex-2026.7.10.tar.gz) = 416282 bytes
