@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/04/19 16:09:22 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/07/15 06:04:34 adam Exp $
 
-BLAKE2s (relativetimebuilder-3.0.2.tar.gz) = 9000cc7f112f03f894c367f91accfdf96276b5d4d0d98ae57bae199311ab0904
-SHA512 (relativetimebuilder-3.0.2.tar.gz) = 6df48cfa2dc2c97e65ffdb2c5740939070c053e4e717189b25efd31005da9bc6b86b046182b22f9365c328cf7028e81cd50f6bfbf2637bdfcb0ae1dee2a1f29b
-Size (relativetimebuilder-3.0.2.tar.gz) = 13788 bytes
+BLAKE2s (relativetimebuilder-3.0.3.tar.gz) = fdf56d5c4179c8b235d23ea044c024cfd2b2c3c92f0760284e2cf441ec26705c
+SHA512 (relativetimebuilder-3.0.3.tar.gz) = 691e47dbef38e9292354b3f06e966b74b21e66c279670bf68ac27930474e69a7adf3b9ede366da7411c8772708703f7c22a89c39aeccf31d72d96ce7c9d27d2b
+Size (relativetimebuilder-3.0.3.tar.gz) = 13591 bytes

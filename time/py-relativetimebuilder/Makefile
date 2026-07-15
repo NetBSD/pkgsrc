@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2025/04/19 16:09:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/15 06:04:34 adam Exp $
 
-DISTNAME=	relativetimebuilder-3.0.2
+DISTNAME=	relativetimebuilder-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/relativetimebuilder/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/nielsenb/relativetimebuilder
+HOMEPAGE=	https://codeberg.org/nielsenb-jf/relativetimebuilder
 COMMENT=	Dateutil relativedeltas for calendar precision with aniso8601
 LICENSE=	modified-bsd
 
