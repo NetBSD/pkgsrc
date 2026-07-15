@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_zeroize-1.8.2_src_lib.rs,v 1.3 2026/04/07 18:45:59 pin Exp $
+$NetBSD: patch-.._vendor_zeroize-1.9.0_src_lib.rs,v 1.1 2026/07/15 06:56:26 wiz Exp $
 
 Do not try to use neon on big-endian aarch64.
 
---- ../vendor/zeroize-1.8.2/src/lib.rs.orig	2025-02-17 09:10:19.704961007 +0000
-+++ ../vendor/zeroize-1.8.2/src/lib.rs
+--- ../vendor/zeroize-1.9.0/src/lib.rs.orig	2025-02-17 09:10:19.704961007 +0000
++++ ../vendor/zeroize-1.9.0/src/lib.rs
 @@ -245,7 +245,7 @@ extern crate std;
  #[cfg(feature = "zeroize_derive")]
  pub use zeroize_derive::{Zeroize, ZeroizeOnDrop};
