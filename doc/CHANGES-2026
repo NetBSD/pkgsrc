@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4479 2026/07/15 06:06:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4480 2026/07/15 06:17:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6706,3 +6706,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-apsw to 3.53.3.1 [adam 2026-07-15]
 	Updated time/py-relativetimebuilder to 3.0.3 [adam 2026-07-15]
 	Updated lang/py-asttokens to 3.0.2 [adam 2026-07-15]
+	Updated lang/py-mypy to 2.3.0 [adam 2026-07-15]
+	Updated misc/py-narwhals to 2.24.0 [adam 2026-07-15]
+	Updated textproc/py-regex to 2026.7.10 [adam 2026-07-15]
+	Updated devel/py-kafka-python to 3.0.8 [adam 2026-07-15]
