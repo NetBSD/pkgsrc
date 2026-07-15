@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.1834.2.1 2026/07/14 17:59:54 he Exp $
+$NetBSD: CHANGES-2026,v 1.1834.2.2 2026/07/15 08:43:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -2495,4 +2495,3 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.14.1 [adam 2026-03-25]
 	Updated lang/nodejs22 to 22.22.2 [adam 2026-03-25]
 	Updated lang/nodejs20 to 20.20.2 [adam 2026-03-25]
-	Updated devel/userspace-rcu to 0.15.3nb1 [he 2026-07-14]
