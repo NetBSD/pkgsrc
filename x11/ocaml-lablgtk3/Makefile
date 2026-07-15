@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/06/11 07:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/07/15 06:49:19 wiz Exp $
 
 DISTNAME=	lablgtk-3.1.5
 PKGNAME=	ocaml-${DISTNAME:S/lablgtk/lablgtk3/}
@@ -21,6 +21,17 @@ OPAM_INSTALL_FILES=	${OCAML_FINDLIB_DIRS}
 DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 
 .include "../../lang/ocaml/ocaml.mk"
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_gtkspell3_stubs.so \
+		${DESTDIR}${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_gtkspell3_stubs.so
+	install_name_tool -id ${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_sourceview3_stubs.so \
+		${DESTDIR}${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_sourceview3_stubs.so
+	install_name_tool -id ${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_stubs.so \
+		${DESTDIR}${PREFIX}/lib/ocaml/site-lib/stublibs/dlllablgtk3_stubs.so
+.endif
 
 .include "options.mk"
 
