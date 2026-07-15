@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2026/07/12 12:54:39 thor Exp $
+$NetBSD: patch-libmp3lame_machine.h,v 1.1 2026/07/15 07:09:51 adam Exp $
 
 Add <float.h> include.
 

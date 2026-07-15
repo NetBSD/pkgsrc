@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2026/07/12 12:54:39 thor Exp $
+# $NetBSD: options.mk,v 1.7 2026/07/15 07:09:51 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lame
 PKG_SUPPORTED_OPTIONS=	gtk sndfile unicode
@@ -18,7 +18,6 @@ PLIST.gtk=		yes
 
 .if !empty(PKG_OPTIONS:Msndfile)
 CONFIGURE_ARGS+=	--with-fileio=sndfile
-USE_TOOLS+=		pkg-config
 .  include "../../audio/libsndfile/buildlink3.mk"
 .endif
 

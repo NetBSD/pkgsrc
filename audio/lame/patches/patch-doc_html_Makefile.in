@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2026/07/12 12:54:39 thor Exp $
+$NetBSD: patch-doc_html_Makefile.in,v 1.1 2026/07/15 07:09:51 adam Exp $
 
 Change where html doc files are installed.
 
