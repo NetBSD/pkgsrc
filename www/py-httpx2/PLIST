@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/07/06 06:54:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/07/15 16:28:01 adam Exp $
 bin/httpx2-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -78,3 +78,18 @@ ${PYSITELIB}/httpx2/_utils.py
 ${PYSITELIB}/httpx2/_utils.pyc
 ${PYSITELIB}/httpx2/_utils.pyo
 ${PYSITELIB}/httpx2/py.typed
+${PYSITELIB}/httpx2/websockets/__init__.py
+${PYSITELIB}/httpx2/websockets/__init__.pyc
+${PYSITELIB}/httpx2/websockets/__init__.pyo
+${PYSITELIB}/httpx2/websockets/_api.py
+${PYSITELIB}/httpx2/websockets/_api.pyc
+${PYSITELIB}/httpx2/websockets/_api.pyo
+${PYSITELIB}/httpx2/websockets/_exceptions.py
+${PYSITELIB}/httpx2/websockets/_exceptions.pyc
+${PYSITELIB}/httpx2/websockets/_exceptions.pyo
+${PYSITELIB}/httpx2/websockets/_ping.py
+${PYSITELIB}/httpx2/websockets/_ping.pyc
+${PYSITELIB}/httpx2/websockets/_ping.pyo
+${PYSITELIB}/httpx2/websockets/_transport.py
+${PYSITELIB}/httpx2/websockets/_transport.pyc
+${PYSITELIB}/httpx2/websockets/_transport.pyo
