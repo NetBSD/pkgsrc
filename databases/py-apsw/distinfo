@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.64 2026/07/03 06:09:13 adam Exp $
+$NetBSD: distinfo,v 1.65 2026/07/15 06:02:33 adam Exp $
 
-BLAKE2s (apsw-3.53.3.0.zip) = 7f044476c29889bfda7cb1c490ce6c0f2005eac4dc61a5866ca9b283cd8b64a7
-SHA512 (apsw-3.53.3.0.zip) = fd5f8f0a956a4afea20dfb28c7ff8ab3535cf509a107a201b2b0408d70abfee7ecea42f419e622adc608175c8e636ef6c28730dc1327a0a9d9564c590737ad89
-Size (apsw-3.53.3.0.zip) = 2870330 bytes
+BLAKE2s (apsw-3.53.3.1.zip) = 1ab1bf31d9c2769f48804fe99936a02d302a639a614393be42cef8cc9346c9ee
+SHA512 (apsw-3.53.3.1.zip) = 5341ec535a0cb45573fc1a7a0243eb4e9d877f2b0987d68849163939d5babd925b17fc5f7c21741e3bc512b707c7ff4156de34c49a4eb16be914bd87cdf1c6a0
+Size (apsw-3.53.3.1.zip) = 2870366 bytes
