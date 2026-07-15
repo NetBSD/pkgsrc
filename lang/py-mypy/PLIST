@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2026/07/13 12:25:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2026/07/15 06:12:19 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -1336,6 +1336,7 @@ ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/base64.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/internal.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/random.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/strings.pyi
+${PYSITELIB}/mypy/typeshed/stubs/librt/librt/threading.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/time.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/librt/librt/vecs.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/mypy-extensions/mypy_extensions.pyi
@@ -1644,6 +1645,10 @@ ${PYSITELIB}/mypyc/lib-rt/strings/librt_strings_api.h
 ${PYSITELIB}/mypyc/lib-rt/strings/librt_strings_common.h
 ${PYSITELIB}/mypyc/lib-rt/stringwriter_extra_ops.c
 ${PYSITELIB}/mypyc/lib-rt/stringwriter_extra_ops.h
+${PYSITELIB}/mypyc/lib-rt/threading/librt_threading.c
+${PYSITELIB}/mypyc/lib-rt/threading/librt_threading.h
+${PYSITELIB}/mypyc/lib-rt/threading/librt_threading_api.c
+${PYSITELIB}/mypyc/lib-rt/threading/librt_threading_api.h
 ${PYSITELIB}/mypyc/lib-rt/time/librt_time.c
 ${PYSITELIB}/mypyc/lib-rt/time/librt_time.h
 ${PYSITELIB}/mypyc/lib-rt/time/librt_time_api.c
@@ -1680,6 +1685,9 @@ ${PYSITELIB}/mypyc/lower/misc_ops.pyo
 ${PYSITELIB}/mypyc/lower/registry.py
 ${PYSITELIB}/mypyc/lower/registry.pyc
 ${PYSITELIB}/mypyc/lower/registry.pyo
+${PYSITELIB}/mypyc/lower/vec_ops.py
+${PYSITELIB}/mypyc/lower/vec_ops.pyc
+${PYSITELIB}/mypyc/lower/vec_ops.pyo
 ${PYSITELIB}/mypyc/namegen.py
 ${PYSITELIB}/mypyc/namegen.pyc
 ${PYSITELIB}/mypyc/namegen.pyo
@@ -1716,6 +1724,9 @@ ${PYSITELIB}/mypyc/primitives/librt_random_ops.pyo
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.py
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.pyc
 ${PYSITELIB}/mypyc/primitives/librt_strings_ops.pyo
+${PYSITELIB}/mypyc/primitives/librt_threading_ops.py
+${PYSITELIB}/mypyc/primitives/librt_threading_ops.pyc
+${PYSITELIB}/mypyc/primitives/librt_threading_ops.pyo
 ${PYSITELIB}/mypyc/primitives/librt_time_ops.py
 ${PYSITELIB}/mypyc/primitives/librt_time_ops.pyc
 ${PYSITELIB}/mypyc/primitives/librt_time_ops.pyo
@@ -1744,6 +1755,9 @@ ${PYSITELIB}/mypyc/primitives/weakref_ops.py
 ${PYSITELIB}/mypyc/primitives/weakref_ops.pyc
 ${PYSITELIB}/mypyc/primitives/weakref_ops.pyo
 ${PYSITELIB}/mypyc/py.typed
+${PYSITELIB}/mypyc/rt_expandtype.py
+${PYSITELIB}/mypyc/rt_expandtype.pyc
+${PYSITELIB}/mypyc/rt_expandtype.pyo
 ${PYSITELIB}/mypyc/rt_subtype.py
 ${PYSITELIB}/mypyc/rt_subtype.pyc
 ${PYSITELIB}/mypyc/rt_subtype.pyo
@@ -1798,6 +1812,9 @@ ${PYSITELIB}/mypyc/test/test_emitwrapper.pyo
 ${PYSITELIB}/mypyc/test/test_exceptions.py
 ${PYSITELIB}/mypyc/test/test_exceptions.pyc
 ${PYSITELIB}/mypyc/test/test_exceptions.pyo
+${PYSITELIB}/mypyc/test/test_expand_rtype.py
+${PYSITELIB}/mypyc/test/test_expand_rtype.pyc
+${PYSITELIB}/mypyc/test/test_expand_rtype.pyo
 ${PYSITELIB}/mypyc/test/test_external.py
 ${PYSITELIB}/mypyc/test/test_external.pyc
 ${PYSITELIB}/mypyc/test/test_external.pyo
