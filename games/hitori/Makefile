@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2026/06/11 07:16:59 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/07/15 10:28:58 prlw1 Exp $
 
-DISTNAME=	hitori-3.38.3
-PKGREVISION=	17
+DISTNAME=	hitori-44.0
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hitori/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	https://wiki.gnome.org/Apps/Hitori
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/hitori
 COMMENT=	Logic game similar to Sudoku
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 
