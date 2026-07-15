@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/07/14 04:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/07/15 07:11:23 adam Exp $
 
-DISTNAME=	pkgconf-3.0.2
+DISTNAME=	pkgconf-3.0.3
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
