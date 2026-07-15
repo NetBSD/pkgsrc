@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/09/10 06:28:21 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/07/15 16:36:22 ktnb Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -20,6 +20,7 @@ include/ecl/impl/math_fenv.h
 include/ecl/impl/math_fenv_msvc.h
 include/ecl/internal.h
 include/ecl/legacy.h
+include/ecl/nucleus.h
 include/ecl/number.h
 include/ecl/object.h
 include/ecl/page.h

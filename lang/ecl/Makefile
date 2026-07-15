@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/09/10 06:28:21 yhardy Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/15 16:36:22 ktnb Exp $
 
-DISTNAME=		ecl-23.9.9
+DISTNAME=		ecl-26.5.5
 CATEGORIES=		lang
 MASTER_SITES=		https://common-lisp.net/project/ecl/static/files/release/
 EXTRACT_SUFX=		.tgz
