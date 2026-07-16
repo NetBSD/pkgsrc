@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/10/26 23:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/07/16 06:07:48 wiz Exp $
 
-DISTNAME=	ripgrep-15.1.0
+DISTNAME=	ripgrep-15.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
 
@@ -11,7 +11,7 @@ LICENSE=	unlicense
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.85.0
+#RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
