@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.76 2026/05/08 12:07:33 adam Exp $
+$NetBSD: distinfo,v 1.77 2026/07/16 08:21:27 adam Exp $
 
-BLAKE2s (awscli-1.45.6.tar.gz) = 5b7ab0980e07c2a816b626f366d2a7f331e486d6f2362d6ec3c1bfb56a30e239
-SHA512 (awscli-1.45.6.tar.gz) = 3aa9b9ebbb1fe0f7c71fcb52affa3993702a7f4383cd4c40d5c85587af3d15c3629a99eaed27c8d8bb627000260b2e9739f447e48171fc53d9a1fdc4baf32ceb
-Size (awscli-1.45.6.tar.gz) = 1889019 bytes
+BLAKE2s (awscli-1.45.49.tar.gz) = d3d477a069d17983b2ded7bbe9b99775d7fe6d96a1b67c03e25ec4af63445f04
+SHA512 (awscli-1.45.49.tar.gz) = 7403277e198e0050f6b90d31fca1332de02ed63dac780faf41cd3d6691a6667e661c2d7d22fe9f91955fca0568923b6d57622da853fca61a6a53af23bc5fc4bd
+Size (awscli-1.45.49.tar.gz) = 1903360 bytes
