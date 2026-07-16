@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/08/12 06:11:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/16 11:34:41 adam Exp $
 
-DISTNAME=	cloudflare-4.3.1
+DISTNAME=	cloudflare-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudflare/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-distro>=1.7.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.23.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.0:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-sniffio>0:../../misc/py-sniffio
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-respx>0:../../www/py-respx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>0:../../devel/py-test-asyncio
 
