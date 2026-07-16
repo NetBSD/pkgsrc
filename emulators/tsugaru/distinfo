@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2026/07/16 11:03:32 nia Exp $
+
+BLAKE2s (captainys-public-8cabce7e045b23ad68fdb8592aeacd8d9101e362.tar.gz) = c3140ec02976f33c588de97ab2a8dac7774e294a6f1c31f446a22cddb4d2aabb
+SHA512 (captainys-public-8cabce7e045b23ad68fdb8592aeacd8d9101e362.tar.gz) = 946768d7993bb73dc536ef0d5194f8e233e4c0d1a5c94f7a55370673c065b8fe3cc46d68155595e24b3b1fef722b05781019ed44b75d5fc73e14de99d3fad179
+Size (captainys-public-8cabce7e045b23ad68fdb8592aeacd8d9101e362.tar.gz) = 6718947 bytes
+BLAKE2s (tsugaru-20260522.tar.gz) = 92c87f04cba95d41db55d02f205ebe06a273289a897da4079e9ced0df2392ba0
+SHA512 (tsugaru-20260522.tar.gz) = 82f2e2a76519f5e2e6926ed626cf10d4b0a337accb5154e1bcfc3fb1bfd1591cd9ef7cb8cea55dcbbcba38149b1f35ec336ccc8065471ac818f7a2884131dcf1
+Size (tsugaru-20260522.tar.gz) = 2704445 bytes
+SHA1 (patch-src_cpu_i486.h) = 6dda3d114a6f2ce86599f3f697838ee12a66610f
+SHA1 (patch-src_cpu_i487.cpp) = 8cbac1850f479fc6cd6faa4e0501b854aceb556a
+SHA1 (patch-src_towns_highrespcm_highrespcm.cpp) = 508b77fc15b54898db695bf616b214b3a8bdab81

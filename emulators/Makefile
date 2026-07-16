@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2026/04/27 10:23:49 adam Exp $
+# $NetBSD: Makefile,v 1.382 2026/07/16 11:03:32 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -431,6 +431,7 @@ SUBDIR+=	swarm
 SUBDIR+=	sys161
 SUBDIR+=	tcl-hp-15c
 SUBDIR+=	tme
+SUBDIR+=	tsugaru
 SUBDIR+=	tuxnes
 SUBDIR+=	twin
 SUBDIR+=	uae

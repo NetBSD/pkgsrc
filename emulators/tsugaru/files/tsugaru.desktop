@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Tsugaru
+GenericName=FM Towns Emulator
+Comment=Run old FM Towns applications
+Icon=tsugaru
+Exec=tsugaru
+Terminal=false
+Categories=Game;Emulator;
