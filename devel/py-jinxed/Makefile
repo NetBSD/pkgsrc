@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/06/28 08:55:07 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/16 11:30:39 adam Exp $
 
-DISTNAME=	jinxed-2.0.4
+DISTNAME=	jinxed-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jinxed/}
