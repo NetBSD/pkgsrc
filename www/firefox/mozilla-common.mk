@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.316 2026/07/16 13:11:48 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.317 2026/07/16 22:28:23 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -45,7 +45,7 @@ CFLAGS+=		-msse2
 CKSUM_CRATES+=		third_party/rust/mtu
 
 CKSUMS+=		9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
-CKSUMS+=		497ea06144675260c47a2379c91019c7933bab0c9fa8340021734945556466b9
+CKSUMS+=		4c8629a6f530ccd50005ca6f8ee054d8e75f343ecf01849e40b16582309a19e1
 
 SUBST_CLASSES+=	cksum
 SUBST_STAGE.cksum=	pre-configure
