@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4505 2026/07/16 18:58:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4506 2026/07/16 19:27:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6749,3 +6749,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-XML-Bare to 0.53nb14 [wiz 2026-07-16]
 	Updated lang/perl5 to 5.44.0 [wiz 2026-07-16]
 	Updated databases/p5-gdbm to 5.44.0 [wiz 2026-07-16]
+	Added devel/py-test-dependency version 0.6.1 [wiz 2026-07-16]
