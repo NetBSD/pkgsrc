@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/16 19:04:41 wiz Exp $
 #
 
 DISTNAME=	BSD-arc4random-1.50
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SJ/SJSZ/}
 

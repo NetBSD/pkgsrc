@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/09/28 07:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/07/16 19:02:24 wiz Exp $
 
 DISTNAME=	ExtUtils-InstallPaths-0.015
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 

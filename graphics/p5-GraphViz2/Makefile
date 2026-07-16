@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/07/04 08:47:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/16 19:03:56 wiz Exp $
 
 DISTNAME=	GraphViz2-2.66
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
 

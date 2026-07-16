@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2025/07/04 08:47:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/07/16 19:04:02 wiz Exp $
 #
 
 DISTNAME=	Email-MIME-Attachment-Stripper-1.317
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 

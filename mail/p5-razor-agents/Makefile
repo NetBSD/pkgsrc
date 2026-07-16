@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2025/11/17 11:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/07/16 19:04:10 wiz Exp $
 
 DISTNAME=	razor-agents-2.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=razor/}
 EXTRACT_SUFX=	.tar.bz2

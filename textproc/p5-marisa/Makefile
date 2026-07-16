@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/07/04 08:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/16 19:05:30 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../textproc/marisa/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}

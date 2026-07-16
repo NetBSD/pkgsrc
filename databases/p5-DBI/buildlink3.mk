@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2025/07/04 08:44:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2026/07/16 19:01:37 wiz Exp $
 
 BUILDLINK_TREE+=	p5-DBI
 
@@ -8,7 +8,7 @@ P5_DBI_BUILDLINK3_MK:=
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.612
-BUILDLINK_ABI_DEPENDS.p5-DBI?=	p5-DBI>=1.647nb1
+BUILDLINK_ABI_DEPENDS.p5-DBI?=	p5-DBI>=1.651nb1
 BUILDLINK_PKGSRCDIR.p5-DBI?=	../../databases/p5-DBI
 BUILDLINK_INCDIRS.p5-DBI?=	${PERL5_SUB_INSTALLVENDORARCH}/auto/DBI
 

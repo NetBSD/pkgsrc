@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/07/04 08:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/07/16 19:02:53 wiz Exp $
 
 DISTNAME=	MooX-Locale-Passthrough-0.001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 

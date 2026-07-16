@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/16 19:04:08 wiz Exp $
 
 DISTNAME=		Net-SMTP-SSL-1.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail perl5 security
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 

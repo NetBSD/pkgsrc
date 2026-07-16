@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2025/07/04 08:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/16 19:04:53 wiz Exp $
 #
 
 DISTNAME=	Config-Simple-4.59
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHERZODR/}
 

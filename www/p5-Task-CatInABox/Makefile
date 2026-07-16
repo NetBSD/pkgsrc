@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/07/04 08:49:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/16 19:06:17 wiz Exp $
 
 DISTNAME=	Task-CatInABox-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Task/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/16 19:02:52 wiz Exp $
 
 GITHUB_PROJECT=	Mojo-IOLoop-ForkCall
-PKGREVISION=	4
+PKGREVISION=	5
 DISTNAME=	Mojo-IOLoop-ForkCall-0.21
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5

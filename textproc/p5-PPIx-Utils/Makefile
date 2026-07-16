@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2026/02/18 07:33:15 wen Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/16 19:05:05 wiz Exp $
 
 DISTNAME=	PPIx-Utils-0.004
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DB/DBOOK/}
 

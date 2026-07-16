@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/07/04 08:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/07/16 19:02:04 wiz Exp $
 
 DISTNAME=	Class-Std-Fast-v0.0.8
 PKGNAME=	p5-${DISTNAME:S,-v,-,}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AC/ACID/}
 

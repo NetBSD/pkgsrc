@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/07/04 08:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/07/16 19:03:47 wiz Exp $
 
 DISTNAME=	namespace-autoclean-0.31
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=namespace/}
 

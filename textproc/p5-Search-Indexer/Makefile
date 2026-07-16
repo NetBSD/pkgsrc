@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:48:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/16 19:05:08 wiz Exp $
 
 DISTNAME=	Search-Indexer-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Search/}
 

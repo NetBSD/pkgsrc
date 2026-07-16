@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/01/14 12:03:52 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/07/16 19:03:53 wiz Exp $
 
 DISTNAME=	openmortal-0.7
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openmortal/}
 EXTRACT_SUFX=	.tar.bz2

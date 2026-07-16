@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/03/27 13:18:36 wen Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/16 19:05:34 wiz Exp $
 
 DISTNAME=	DateTime-Format-ISO8601-0.19
 PKGNAME=	p5-${DISTNAME}00
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TI/TIMLEGGE/}
 

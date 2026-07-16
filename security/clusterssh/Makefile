@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/07/04 08:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/16 19:04:39 wiz Exp $
 
 DISTNAME=	App-ClusterSSH-4.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DU/DUNCS/}
 
