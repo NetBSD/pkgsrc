@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2026/07/06 09:15:48 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2026/07/16 06:11:07 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -63,7 +63,7 @@ CARGO_CRATE_DEPENDS+=	criterion-0.8.2
 CARGO_CRATE_DEPENDS+=	criterion-plot-0.8.2
 CARGO_CRATE_DEPENDS+=	critical-section-1.2.0
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
-CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
 CARGO_CRATE_DEPENDS+=	dashmap-5.5.3
@@ -249,12 +249,10 @@ CARGO_CRATE_DEPENDS+=	rustversion-1.0.22
 CARGO_CRATE_DEPENDS+=	rusty-fork-0.3.1
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
-CARGO_CRATE_DEPENDS+=	scc-2.4.0
 CARGO_CRATE_DEPENDS+=	schannel-0.1.29
 CARGO_CRATE_DEPENDS+=	schemars-1.2.1
 CARGO_CRATE_DEPENDS+=	schemars_derive-1.2.1
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
-CARGO_CRATE_DEPENDS+=	sdd-3.0.10
 CARGO_CRATE_DEPENDS+=	security-framework-3.7.0
 CARGO_CRATE_DEPENDS+=	security-framework-sys-2.17.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.28
@@ -267,8 +265,8 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.149
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.20
 CARGO_CRATE_DEPENDS+=	serde_spanned-1.1.1
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
-CARGO_CRATE_DEPENDS+=	serial_test-3.4.0
-CARGO_CRATE_DEPENDS+=	serial_test_derive-3.4.0
+CARGO_CRATE_DEPENDS+=	serial_test-3.5.0
+CARGO_CRATE_DEPENDS+=	serial_test_derive-3.5.0
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.8
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.9
@@ -276,7 +274,7 @@ CARGO_CRATE_DEPENDS+=	siphasher-1.0.2
 CARGO_CRATE_DEPENDS+=	slab-0.4.12
 CARGO_CRATE_DEPENDS+=	smallvec-1.15.1
 CARGO_CRATE_DEPENDS+=	socket2-0.6.3
-CARGO_CRATE_DEPENDS+=	spin-0.9.8
+CARGO_CRATE_DEPENDS+=	spin-0.9.9
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.1
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	subtle-2.6.1
