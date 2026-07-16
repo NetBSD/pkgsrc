@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4494 2026/07/16 09:13:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4495 2026/07/16 11:03:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6730,3 +6730,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/xournalpp to 1.3.6 [adam 2026-07-16]
 	Updated devel/lazygit to 0.63.1 [adam 2026-07-16]
 	Updated devel/py-awscrt to 0.35.0 [adam 2026-07-16]
+	Added emulators/tsugaru version 20260522 [nia 2026-07-16]
