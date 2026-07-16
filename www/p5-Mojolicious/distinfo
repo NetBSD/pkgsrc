@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.143 2026/01/31 01:50:13 wen Exp $
+$NetBSD: distinfo,v 1.143.4.1 2026/07/16 21:13:41 maya Exp $
 
-BLAKE2s (Mojolicious-9.42.tar.gz) = 9e17fc57effb09fc1ac9836c975a72ff40cd2cc5873f431fc2d5631d3d077c65
-SHA512 (Mojolicious-9.42.tar.gz) = 7ae852d6dc899a5cbf3c919baffea05955cf516fdabafe375ef4629d45223dbc50f484de74096cce6a04ce9c544e9723226506ab243e60c5c37aa1ac6de6d76b
-Size (Mojolicious-9.42.tar.gz) = 954148 bytes
+BLAKE2s (Mojolicious-9.48.tar.gz) = 2762af912041d81017eece0a86c72fe5b3b94fdfa0e426a05cde48bb4b5a90ed
+SHA512 (Mojolicious-9.48.tar.gz) = f9bd7e6af0017dc3895367a956c9b0273f011229c55a0efd010ea7497b7a54e37989f307df561cccf1a9abbebdeb45dc4d828f90f279927077fa3d243435bf2f
+Size (Mojolicious-9.48.tar.gz) = 966181 bytes
