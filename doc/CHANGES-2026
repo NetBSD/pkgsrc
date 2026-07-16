@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4492 2026/07/16 06:11:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4493 2026/07/16 08:21:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6723,3 +6723,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-codespell to 2.4.3 [wiz 2026-07-16]
 	Updated textproc/ripgrep to 15.2.0 [wiz 2026-07-16]
 	Updated textproc/rumdl to 0.2.34 [wiz 2026-07-16]
+	Updated net/py-botocore to 1.43.49 [adam 2026-07-16]
+	Updated net/py-s3transfer to 0.19.1 [adam 2026-07-16]
+	Updated net/py-boto3 to 1.43.49 [adam 2026-07-16]
+	Updated net/py-awscli to 1.45.49 [adam 2026-07-16]
