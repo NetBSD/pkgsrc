@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4491 2026/07/16 06:07:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4492 2026/07/16 06:11:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6722,3 +6722,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/fheroes2 to 1.1.17 [wiz 2026-07-16]
 	Updated devel/py-codespell to 2.4.3 [wiz 2026-07-16]
 	Updated textproc/ripgrep to 15.2.0 [wiz 2026-07-16]
+	Updated textproc/rumdl to 0.2.34 [wiz 2026-07-16]
