@@ -1,0 +1,1 @@
+bin/subvertpy-fast-export @PREFIX@/bin/subvertpy-fast-export-@PYVERSSUFFIX@

@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/14 17:51:55 wiz Exp $
-bin/subvertpy-fast-export
-${PYSITELIB}/${EGG_INFODIR}
+@comment $NetBSD: PLIST,v 1.7 2026/07/16 12:49:23 adam Exp $
+bin/subvertpy-fast-export-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/subvertpy/__init__.py
 ${PYSITELIB}/subvertpy/__init__.pyc
 ${PYSITELIB}/subvertpy/__init__.pyo
@@ -25,6 +30,7 @@ ${PYSITELIB}/subvertpy/repos.so
 ${PYSITELIB}/subvertpy/server.py
 ${PYSITELIB}/subvertpy/server.pyc
 ${PYSITELIB}/subvertpy/server.pyo
+${PYSITELIB}/subvertpy/subr.so
 ${PYSITELIB}/subvertpy/tests/__init__.py
 ${PYSITELIB}/subvertpy/tests/__init__.pyc
 ${PYSITELIB}/subvertpy/tests/__init__.pyo
@@ -46,12 +52,18 @@ ${PYSITELIB}/subvertpy/tests/test_properties.pyo
 ${PYSITELIB}/subvertpy/tests/test_ra.py
 ${PYSITELIB}/subvertpy/tests/test_ra.pyc
 ${PYSITELIB}/subvertpy/tests/test_ra.pyo
+${PYSITELIB}/subvertpy/tests/test_ra_svn.py
+${PYSITELIB}/subvertpy/tests/test_ra_svn.pyc
+${PYSITELIB}/subvertpy/tests/test_ra_svn.pyo
 ${PYSITELIB}/subvertpy/tests/test_repos.py
 ${PYSITELIB}/subvertpy/tests/test_repos.pyc
 ${PYSITELIB}/subvertpy/tests/test_repos.pyo
 ${PYSITELIB}/subvertpy/tests/test_server.py
 ${PYSITELIB}/subvertpy/tests/test_server.pyc
 ${PYSITELIB}/subvertpy/tests/test_server.pyo
+${PYSITELIB}/subvertpy/tests/test_subr.py
+${PYSITELIB}/subvertpy/tests/test_subr.pyc
+${PYSITELIB}/subvertpy/tests/test_subr.pyo
 ${PYSITELIB}/subvertpy/tests/test_wc.py
 ${PYSITELIB}/subvertpy/tests/test_wc.pyc
 ${PYSITELIB}/subvertpy/tests/test_wc.pyo
