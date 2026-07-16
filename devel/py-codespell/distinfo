@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/03/09 16:54:19 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/07/16 06:05:03 wiz Exp $
 
-BLAKE2s (codespell-2.4.2.tar.gz) = a201714da607fd7f43aa416e4bb13c520b253224a4f9b61484f3902ba1f11c62
-SHA512 (codespell-2.4.2.tar.gz) = ff67f3b0e6630cb95bd804fd9b0732add500a06c6fd4d50a796b9b5f944b3ea6fc3b8408c7cbc8cf4ff4d7673c023b9346fdbfd0fe3c193b64e7b94637019706
-Size (codespell-2.4.2.tar.gz) = 352058 bytes
+BLAKE2s (codespell-2.4.3.tar.gz) = 4b068c925a0e574f2358a4eb7bddfed55ecdc809c96755eb6b606da1abeb06f1
+SHA512 (codespell-2.4.3.tar.gz) = 2423c2bd057dd314108a297af284341bfa466c68092a5cf68e9992c1a489cac92bde633d71b8addef361a931112d4f8af64130a21d8c2be8ad99be2dcacbd780
+Size (codespell-2.4.3.tar.gz) = 352773 bytes

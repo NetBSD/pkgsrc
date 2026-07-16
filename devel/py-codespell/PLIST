@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2026/03/09 16:54:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/07/16 06:05:03 wiz Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/scm_file_list.json
+${PYSITELIB}/${WHEEL_INFODIR}/scm_version.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/codespell_lib/__init__.py
 ${PYSITELIB}/codespell_lib/__init__.pyc
@@ -37,15 +39,3 @@ ${PYSITELIB}/codespell_lib/data/dictionary_rare.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_usage.txt
 ${PYSITELIB}/codespell_lib/data/linux-kernel.exclude
 ${PYSITELIB}/codespell_lib/py.typed
-${PYSITELIB}/codespell_lib/tests/__init__.py
-${PYSITELIB}/codespell_lib/tests/__init__.pyc
-${PYSITELIB}/codespell_lib/tests/__init__.pyo
-${PYSITELIB}/codespell_lib/tests/data/en_GB-additional.wordlist
-${PYSITELIB}/codespell_lib/tests/data/en_US-additional.wordlist
-${PYSITELIB}/codespell_lib/tests/test_basic.py
-${PYSITELIB}/codespell_lib/tests/test_basic.pyc
-${PYSITELIB}/codespell_lib/tests/test_basic.pyo
-${PYSITELIB}/codespell_lib/tests/test_dictionary.py
-${PYSITELIB}/codespell_lib/tests/test_dictionary.pyc
-${PYSITELIB}/codespell_lib/tests/test_dictionary.pyo
-${PYSITELIB}/tools/gen_OX.sh

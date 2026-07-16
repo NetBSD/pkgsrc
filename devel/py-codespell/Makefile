@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/03/09 16:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/16 06:05:03 wiz Exp $
 
-DISTNAME=	codespell-2.4.2
+DISTNAME=	codespell-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
@@ -19,9 +19,11 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON=	bin/codespell
 REPLACE_BASH+=	tools/gen_OX.sh
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} codespell codespell-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	codespell
+
+# test status as of 2.4.3
+# 1 error
+# https://github.com/codespell-project/codespell/issues/3977
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
