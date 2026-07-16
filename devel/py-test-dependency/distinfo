@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/16 19:27:05 wiz Exp $
+
+BLAKE2s (pytest_dependency-0.6.1.tar.gz) = 2d186d72716fd6b23db3a45e1e00ebc4aaa028380469b0554a9c9a9548981c0e
+SHA512 (pytest_dependency-0.6.1.tar.gz) = fdb4df0e56bcde7157200e351dd623413226258d7345f6e8ca6126a426f24cc6224c77f2852d2cc6523e4518a11394df2511ca90c268fe5884a961c668db1603
+Size (pytest_dependency-0.6.1.tar.gz) = 20837 bytes
