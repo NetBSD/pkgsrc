@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/06/28 08:55:07 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/07/16 11:30:39 adam Exp $
 
-BLAKE2s (jinxed-2.0.4.tar.gz) = e3ce87175698f9aada779d83ce465ac67641afceb5cca550bdc03dabc068f643
-SHA512 (jinxed-2.0.4.tar.gz) = eb6df36e19ae0a40bc8894cb3332d98beda2ac63daff2a639d4f79a22d09a5f044778148a7447905d9d936a2c431f9cee338b91bfd0cbc911a532ae7634fad35
-Size (jinxed-2.0.4.tar.gz) = 135991 bytes
+BLAKE2s (jinxed-2.1.0.tar.gz) = aa820dcce4ddc4e5e36aeed1538b04dbbeb01e093917b2d1ced5e400f1908c9b
+SHA512 (jinxed-2.1.0.tar.gz) = 35475afaebdf0f850389031f143fcac70fa54ffee32955f214a6667db675fbdddf99e08b60c5b9f4530c908958b8d0310618e5006593ca70c938633551820fb8
+Size (jinxed-2.1.0.tar.gz) = 61287 bytes
