@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.266 2026/06/22 09:41:42 adam Exp $
+$NetBSD: distinfo,v 1.267 2026/07/16 11:14:00 adam Exp $
 
-BLAKE2s (cmake-4.3.4.tar.gz) = e83baa28e7771ba4584175d4564f2faf4bfd0a79707d87141169255abac83189
-SHA512 (cmake-4.3.4.tar.gz) = 3194f604432549eacd8bf0def22798eb84356e7c63ce288a4d60cbf31f63405ded0a1c004682fd5e1507f2a709ea9fe93df40d8fb16a9681f4c56b35afc83e06
-Size (cmake-4.3.4.tar.gz) = 12976016 bytes
+BLAKE2s (cmake-4.4.0.tar.gz) = ecac48ba97edca0c0e52152c1ff399a42b81c5736c4c915de5652cb59f67b2a7
+SHA512 (cmake-4.4.0.tar.gz) = 1d5840738813743bdafd30dcb8680e4bc72aacc61466abaedbc2dbfe5397da59a3e34d0016555e6a7b63b2f05e58dee4c97716a51750150dd0618a263e173e31
+Size (cmake-4.4.0.tar.gz) = 13275398 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 98a11bd91a09b344ccef2a7c6e883731ab345778
 SHA1 (patch-Modules_Compiler_GNU.cmake) = 745b3a5cd44b4a6eb2dc9452f78f9de3976f37b1
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
@@ -13,9 +13,9 @@ SHA1 (patch-Modules_FindPython_Support.cmake) = ba030d0ae88448b3ca024e5ea7ae24f6
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_FortranCInterface_CMakeLists.txt) = f5477f5c94ebab82caea6db702b449032ba3dc75
 SHA1 (patch-Modules_Platform_Darwin.cmake) = 7629f034111ff64b144ff41316299d5edcfe081a
-SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 911271546d3ac52be0e8000857bdb236ac50ec1c
+SHA1 (patch-Modules_Platform_UnixPaths.cmake) = ca65ab3824718709c2f69a2de42b6edbb24d7828
 SHA1 (patch-Source_CMakeInstallDestinations.cmake) = 04578ff9845d1b6f2284b4371ec4cf88f8dd2460
-SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 934b06396b826416e69f07f7e42721e5e096d42f
+SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 414a83100624c46974b29e3cb1ece27efc9e71c4
 SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = 530ee1300595e64c97630d27792cc2dca3b9049a
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_Modules_CMakeBuildUtilities.cmake) = e4f2ad39f0899074c2b66d97ef12d03c48e82950
