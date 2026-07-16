@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.24 2025/10/27 14:24:33 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.25 2026/07/16 13:11:48 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
@@ -30,8 +30,8 @@ each one.
 +pref("midi.prompt.testing", true);
 +pref("media.navigator.permission.disabled", true);
 +
-+// Avoid runtime error from WebGL for NetBSD systems
-+pref("webgl.out-of-process", false);
++// Avoid runtime error from WebGL for NetBSD systems. webgl.out-of-process was removed.
++pref("webgl.disabled", true);
 +
 +// Avoid unfunctional video and audio codecs
 +pref("media.allow-audio-non-utility", true);
