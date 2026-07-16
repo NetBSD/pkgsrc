@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4496 2026/07/16 11:14:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4497 2026/07/16 11:24:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6733,3 +6733,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added emulators/tsugaru version 20260522 [nia 2026-07-16]
 	Updated devel/cmake to 4.4.0 [adam 2026-07-16]
 	Updated devel/cmake-gui to 4.4.0 [adam 2026-07-16]
+	Updated net/opentofu to 1.12.4 [adam 2026-07-16]
+	Updated databases/py-lmdb to 2.3.0 [adam 2026-07-16]
+	Updated www/py-uvicorn to 0.51.0 [adam 2026-07-16]
