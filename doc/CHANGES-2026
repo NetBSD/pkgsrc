@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4501 2026/07/16 13:12:05 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4502 2026/07/16 13:16:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6745,3 +6745,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-subvertpy to 0.11.1 [adam 2026-07-16]
 	Updated devel/py-gitpython to 3.1.52 [adam 2026-07-16]
 	Updated www/firefox to 152.0.6 [ryoon 2026-07-16]
+	Updated www/firefox-l10n to 152.0.6 [ryoon 2026-07-16]
