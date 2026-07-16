@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2025/07/04 08:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/07/16 19:06:10 wiz Exp $
 
 DISTNAME=	LWP-Protocol-https-6.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 

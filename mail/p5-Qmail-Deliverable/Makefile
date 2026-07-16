@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/07/04 08:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/16 19:04:09 wiz Exp $
 
 DISTNAME=		Qmail-Deliverable-1.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSIMERSON/}
 

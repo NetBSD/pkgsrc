@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2025/07/04 08:48:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/07/16 19:05:24 wiz Exp $
 
 DISTNAME=	XML-Filter-DetectWS-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TJ/TJMATHER/}
 

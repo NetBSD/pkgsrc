@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/12/31 23:29:10 wen Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/16 19:03:21 wiz Exp $
 
 DISTNAME=	Syntax-Keyword-Junction-0.003009
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Syntax/}
 

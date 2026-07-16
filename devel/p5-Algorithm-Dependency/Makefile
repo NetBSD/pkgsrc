@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2025/07/04 08:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/07/16 19:01:49 wiz Exp $
 
 DISTNAME=	Algorithm-Dependency-1.112
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 

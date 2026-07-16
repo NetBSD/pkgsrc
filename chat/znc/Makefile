@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2026/05/15 09:58:42 adam Exp $
+# $NetBSD: Makefile,v 1.62 2026/07/16 19:01:27 wiz Exp $
 
 DISTNAME=	znc-1.10.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://znc.in/releases/archive/
 DISTFILES=	${DEFAULT_DISTFILES} znc-palaver-1.2.2.tar.gz

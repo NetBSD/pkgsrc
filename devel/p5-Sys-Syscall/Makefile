@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/16 19:03:22 wiz Exp $
 #
 
 DISTNAME=	Sys-Syscall-0.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 

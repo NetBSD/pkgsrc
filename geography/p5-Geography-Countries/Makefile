@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2025/07/04 08:47:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/07/16 19:03:54 wiz Exp $
 #
 
 DISTNAME=		Geography-Countries-2009041301
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		geography perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Geography/}
 

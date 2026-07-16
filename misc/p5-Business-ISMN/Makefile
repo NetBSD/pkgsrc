@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/16 19:04:18 wiz Exp $
 
 DISTNAME=	Business-ISMN-1.204
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Business/}
 

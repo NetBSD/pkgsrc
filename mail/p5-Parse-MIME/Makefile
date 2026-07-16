@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/07/04 08:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/16 19:04:09 wiz Exp $
 
 DISTNAME=	Parse-MIME-1.006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AR/ARISTOTLE/}
 

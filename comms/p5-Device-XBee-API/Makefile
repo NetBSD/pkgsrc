@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2025/07/04 08:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/16 19:01:28 wiz Exp $
 #
 
 DISTNAME=	Device-XBee-API-0.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JE/JEAGLE/}
 

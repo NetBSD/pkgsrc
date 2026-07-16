@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2025/10/23 20:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/07/16 19:03:59 wiz Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 
 CONFLICTS+=	esmtp>=1.2 postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*

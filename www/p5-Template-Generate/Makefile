@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2025/07/04 08:49:32 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/07/16 19:06:17 wiz Exp $
 
 DISTNAME=		Template-Generate-0.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Template/}
 

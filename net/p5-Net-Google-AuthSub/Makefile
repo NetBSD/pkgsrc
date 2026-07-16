@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/16 19:04:28 wiz Exp $
 
 DISTNAME=		Net-Google-AuthSub-0.5
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 

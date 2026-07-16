@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2025/08/28 12:41:05 pho Exp $
+# $NetBSD: Makefile,v 1.59 2026/07/16 19:04:35 wiz Exp $
 
 DISTNAME=		Socket6-0.29
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Socket6/}
 

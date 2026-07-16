@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/07/04 08:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/16 19:05:16 wiz Exp $
 
 DISTNAME=	Text-Morse-0.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

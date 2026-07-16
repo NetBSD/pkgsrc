@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2025/07/04 08:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/07/16 19:04:10 wiz Exp $
 
 VERSION=	6.2.56
 DISTNAME=	sympa-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/sympa-community/sympa/releases/download/${VERSION}/
 

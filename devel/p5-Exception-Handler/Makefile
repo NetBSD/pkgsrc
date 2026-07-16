@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/07/04 08:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/07/16 19:02:22 wiz Exp $
 
 DISTNAME=	Exception-Handler-1.004
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Exception/}
 

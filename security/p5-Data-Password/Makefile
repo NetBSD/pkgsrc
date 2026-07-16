@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/06/02 13:26:17 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/16 19:04:47 wiz Exp $
 
 DISTNAME=	Data-Password-1.12
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 

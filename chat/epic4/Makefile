@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2025/12/09 08:32:29 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/07/16 19:01:26 wiz Exp $
 
 DISTNAME=	epic4-2.10.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	chat
 MASTER_SITES=	https://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2

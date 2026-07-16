@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2025/07/04 08:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/07/16 19:03:05 wiz Exp $
 
 DISTNAME=	Package-Stash-0.40
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 

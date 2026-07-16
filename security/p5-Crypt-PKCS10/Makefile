@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/07/04 08:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/16 19:04:45 wiz Exp $
 
 DISTNAME=	Crypt-PKCS10-2.005
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MR/MRSCOTTY/}
 

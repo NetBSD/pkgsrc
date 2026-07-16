@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:48:26 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/16 19:05:12 wiz Exp $
 #
 
 DISTNAME=	Text-Affixes-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

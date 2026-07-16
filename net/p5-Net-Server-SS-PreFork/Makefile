@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2025/07/04 08:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/07/16 19:04:31 wiz Exp $
 #
 
 DISTNAME=	Net-Server-SS-PreFork-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

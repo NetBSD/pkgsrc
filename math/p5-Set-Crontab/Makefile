@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/07/04 08:47:31 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/07/16 19:04:16 wiz Exp $
 
 DISTNAME=	Set-Crontab-1.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Set/}
 

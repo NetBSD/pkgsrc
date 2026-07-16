@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/07/04 08:48:54 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/07/16 19:05:40 wiz Exp $
 
 DISTNAME=	CGI-SpeedyCGI-2.22
 PKGNAME=	SpeedyCGI-2.22
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	www
 MASTER_SITES=	http://daemoninc.com/SpeedyCGI/
 

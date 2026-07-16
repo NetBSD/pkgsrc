@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/07/04 08:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/16 19:03:01 wiz Exp $
 
 DISTNAME=	Net-LDAP-Class-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases devel net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

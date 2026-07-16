@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/16 19:01:24 wiz Exp $
 
 DISTNAME=	Compress-LZMA-Simple-0.2
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
 

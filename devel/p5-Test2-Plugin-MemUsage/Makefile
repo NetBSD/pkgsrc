@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/11/15 06:58:00 wen Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/16 19:03:39 wiz Exp $
 
 DISTNAME=		Test2-Plugin-MemUsage-0.002003
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXODIST/}
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2025/07/04 08:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/07/16 19:05:31 wiz Exp $
 #
 
 .include "../../textproc/hyperestraier/Makefile.common"
 
 PKGNAME=	p5-native-hyperestraier-1.0.0.${HYPERESTRAIER_VERSION}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	databases perl5
 
 COMMENT=	Perl native interface of Hyper Estraier

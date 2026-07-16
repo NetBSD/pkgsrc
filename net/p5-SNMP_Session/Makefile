@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2025/07/04 08:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/07/16 19:04:35 wiz Exp $
 
 DISTNAME=	SNMP_Session-1.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	net perl5
 MASTER_SITES=	http://snmp-session.googlecode.com/files/
 

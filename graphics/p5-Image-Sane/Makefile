@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/08/30 22:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/07/16 19:03:57 wiz Exp $
 
 DISTNAME=	Image-Sane-5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/R/RA/RATCLIFFE/
 

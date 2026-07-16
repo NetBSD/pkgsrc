@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/07/04 08:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/16 19:03:14 wiz Exp $
 
 DISTNAME=	Role-Basic-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Attribute/OVID/}
 

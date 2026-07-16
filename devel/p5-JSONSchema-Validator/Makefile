@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/07/04 08:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/07/16 19:02:41 wiz Exp $
 
 DISTNAME=	JSONSchema-Validator-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PU/PUTINTSEV/}
 

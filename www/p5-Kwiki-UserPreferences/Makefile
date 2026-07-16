@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/07/04 08:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/16 19:06:08 wiz Exp $
 
 DISTNAME=	Kwiki-UserPreferences-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 

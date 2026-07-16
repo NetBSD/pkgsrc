@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/09/29 15:48:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2026/07/16 19:05:30 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/libhighlight/Makefile.common"
 
 PKGNAME=		p5-highlight-${VERSION}

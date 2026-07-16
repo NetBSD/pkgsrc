@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/07/04 08:48:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/16 19:05:04 wiz Exp $
 
 DISTNAME=	Number-Bytes-Human-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 # This expression is crazy but MASTER_SITE_PERL_CPAN has modules/by-module/
 # baked into it, and the distfile is at

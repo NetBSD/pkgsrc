@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/07/04 08:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/07/16 19:06:23 wiz Exp $
 
 DISTNAME=	Web-Scraper-0.38
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Web/}
 

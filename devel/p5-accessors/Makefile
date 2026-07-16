@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/07/04 08:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/07/16 19:03:44 wiz Exp $
 
 DISTNAME=	accessors-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SP/SPURKIS/}
 

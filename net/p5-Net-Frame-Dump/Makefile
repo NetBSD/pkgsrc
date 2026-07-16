@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/16 19:04:27 wiz Exp $
 
 DISTNAME=	Net-Frame-Dump-1.18
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

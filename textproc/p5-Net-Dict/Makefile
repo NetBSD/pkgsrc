@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2025/07/04 08:48:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/07/16 19:05:04 wiz Exp $
 
 DISTNAME=		Net-Dict-2.22
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
