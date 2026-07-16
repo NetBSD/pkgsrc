@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.1 2026/07/16 13:11:49 ryoon Exp $
+$NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.2 2026/07/16 15:18:46 ryoon Exp $
 
 * Fix build under NetBSD/i386 10.
 
@@ -19,13 +19,13 @@ $NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.1 2026/07/16 13:
  }
  #[allow(clippy::unnecessary_operation, clippy::identity_op)]
  const _: () = {
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Size of timespec"][::std::mem::size_of::<timespec>() - 16usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Size of timespec"][::std::mem::size_of::<timespec>() - 12usize];
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Alignment of timespec"][::std::mem::align_of::<timespec>() - 8usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Alignment of timespec"][::std::mem::align_of::<timespec>() - 4usize];
      ["Offset of field: timespec::tv_sec"][::std::mem::offset_of!(timespec, tv_sec) - 0usize];
      ["Offset of field: timespec::tv_nsec"][::std::mem::offset_of!(timespec, tv_nsec) - 8usize];
@@ -34,13 +34,13 @@ $NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.1 2026/07/16 13:
  }
  #[allow(clippy::unnecessary_operation, clippy::identity_op)]
  const _: () = {
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Size of if_data"][::std::mem::size_of::<if_data>() - 136usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Size of if_data"][::std::mem::size_of::<if_data>() - 132usize];
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Alignment of if_data"][::std::mem::align_of::<if_data>() - 8usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Alignment of if_data"][::std::mem::align_of::<if_data>() - 4usize];
      ["Offset of field: if_data::ifi_type"][::std::mem::offset_of!(if_data, ifi_type) - 0usize];
      ["Offset of field: if_data::ifi_addrlen"]
@@ -49,9 +49,9 @@ $NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.1 2026/07/16 13:
  #[allow(clippy::unnecessary_operation, clippy::identity_op)]
  const _: () = {
      ["Size of rt_metrics"][::std::mem::size_of::<rt_metrics>() - 80usize];
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Alignment of rt_metrics"][::std::mem::align_of::<rt_metrics>() - 8usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Alignment of rt_metrics"][::std::mem::align_of::<rt_metrics>() - 4usize];
      ["Offset of field: rt_metrics::rmx_locks"]
          [::std::mem::offset_of!(rt_metrics, rmx_locks) - 0usize];
@@ -60,9 +60,9 @@ $NetBSD: patch-third__party_rust_mtu_src_bindings_netbsd.rs,v 1.1 2026/07/16 13:
  #[allow(clippy::unnecessary_operation, clippy::identity_op)]
  const _: () = {
      ["Size of rt_msghdr"][::std::mem::size_of::<rt_msghdr>() - 120usize];
-+    #[cfg(all(target_arch = "x86_64", target_pointer_width = "32"))]
++    #[cfg(all(target_arch = "x86_64", target_pointer_width = "64"))]
      ["Alignment of rt_msghdr"][::std::mem::align_of::<rt_msghdr>() - 8usize];
-+    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "32")))]
++    #[cfg(not(all(target_arch = "x86_64", target_pointer_width = "64")))]
 +    ["Alignment of rt_msghdr"][::std::mem::align_of::<rt_msghdr>() - 4usize];
      ["Offset of field: rt_msghdr::rtm_msglen"]
          [::std::mem::offset_of!(rt_msghdr, rtm_msglen) - 0usize];
