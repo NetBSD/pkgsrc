@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/22 08:22:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/16 09:13:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,9 +9,6 @@ ${PYSITELIB}/_awscrt.abi3.so
 ${PYSITELIB}/awscrt/__init__.py
 ${PYSITELIB}/awscrt/__init__.pyc
 ${PYSITELIB}/awscrt/__init__.pyo
-${PYSITELIB}/awscrt/_aws_iot_metrics.py
-${PYSITELIB}/awscrt/_aws_iot_metrics.pyc
-${PYSITELIB}/awscrt/_aws_iot_metrics.pyo
 ${PYSITELIB}/awscrt/_test.py
 ${PYSITELIB}/awscrt/_test.pyc
 ${PYSITELIB}/awscrt/_test.pyo
@@ -24,6 +21,9 @@ ${PYSITELIB}/awscrt/aio/http.pyo
 ${PYSITELIB}/awscrt/auth.py
 ${PYSITELIB}/awscrt/auth.pyc
 ${PYSITELIB}/awscrt/auth.pyo
+${PYSITELIB}/awscrt/aws_iot_metrics.py
+${PYSITELIB}/awscrt/aws_iot_metrics.pyc
+${PYSITELIB}/awscrt/aws_iot_metrics.pyo
 ${PYSITELIB}/awscrt/cbor.py
 ${PYSITELIB}/awscrt/cbor.pyc
 ${PYSITELIB}/awscrt/cbor.pyo
