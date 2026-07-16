@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.53 2026/03/30 08:57:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.54 2026/07/16 18:57:37 wiz Exp $
 #
 # used by lang/perl5/Makefile
 # used by databases/p5-gdbm/Makefile
 
-DISTNAME=	perl-5.42.2
+DISTNAME=	perl-5.44.0
 CATEGORIES=	lang devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHAY/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.295 2026/07/13 18:44:24 wiz Exp $
+# $NetBSD: Makefile,v 1.296 2026/07/16 18:57:37 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
 COMMENT=	Practical Extraction and Report Language
-PKGREVISION=	4
 
 CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
 
@@ -54,18 +53,10 @@ LDFLAGS.QNX+=		-lm
 
 CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 
-# As of 5.42.0
-# with
-#ALLOW_NETWORK_ACCESS=	yes
-# Failed 1 test out of 2750, 99.96% okay.
-#         ../cpan/Sys-Syslog/t/syslog-inet-udp.t
-# without network
-# Failed 5 tests out of 2748, 99.82% okay.
-#         ../cpan/HTTP-Tiny/t/003_agent.t
-#         ../cpan/HTTP-Tiny/t/004_timeout.t
-#         ../cpan/HTTP-Tiny/t/070_cookie_jar.t
-#         ../cpan/HTTP-Tiny/t/141_no_proxy.t
-#         ../cpan/HTTP-Tiny/t/180_verify_SSL.t
+# As of 5.44.0: All tests successful.
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 TEST_TARGET=		test
 
 # Policy.sh generation
