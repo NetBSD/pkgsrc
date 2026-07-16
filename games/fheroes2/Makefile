@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/07/13 04:35:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/07/16 05:53:08 wiz Exp $
 
-DISTNAME=	fheroes2-1.1.1
-PKGREVISION=	3
+DISTNAME=	fheroes2-1.1.17
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ihhub/}
 
@@ -10,7 +9,7 @@ HOMEPAGE=	https://ihhub.github.io/fheroes2/
 COMMENT=	Recreation of Heroes of Might and Magic II game engine
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17 filesystem
