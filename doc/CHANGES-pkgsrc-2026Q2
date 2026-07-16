@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.3 2026/07/14 19:19:45 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.4 2026/07/16 06:47:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -73,4 +73,10 @@ lang/php85: security fix
 
 Pullup ticket #7168 - requested by taca
 mail/roundcube: security fix
+
+Pullup ticket #7170 - requested by is
+sysutils/qemu-guest-agent: i386 build fix
+
+Pullup ticket #7171 - requested by is
+graphics/zxing-cpp: build fix
 
