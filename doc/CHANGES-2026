@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4503 2026/07/16 17:46:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4504 2026/07/16 18:57:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6747,3 +6747,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 152.0.6 [ryoon 2026-07-16]
 	Updated www/firefox-l10n to 152.0.6 [ryoon 2026-07-16]
 	Updated textproc/p5-XML-Bare to 0.53nb14 [wiz 2026-07-16]
+	Updated lang/perl5 to 5.44.0 [wiz 2026-07-16]
