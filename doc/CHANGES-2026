@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4499 2026/07/16 11:37:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4500 2026/07/16 12:51:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6742,3 +6742,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jinxed to 2.1.0 [adam 2026-07-16]
 	Updated net/py-cloudflare to 5.5.0 [adam 2026-07-16]
 	Updated misc/py-tibs to 1.0.0 [adam 2026-07-16]
+	Updated devel/py-subvertpy to 0.11.1 [adam 2026-07-16]
+	Updated devel/py-gitpython to 3.1.52 [adam 2026-07-16]
