@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4511 2026/07/17 05:24:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4512 2026/07/17 05:25:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6755,3 +6755,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.9.1 [pin 2026-07-17]
 	Updated devel/hexpatch to 1.13.0 [pin 2026-07-17]
 	Updated shells/oh-my-posh to 29.31.1 [pin 2026-07-17]
+	Updated sysutils/dua-cli to 2.38.0 [pin 2026-07-17]
