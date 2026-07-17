@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4521 2026/07/17 15:48:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4522 2026/07/17 15:59:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6785,3 +6785,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.2.6 [ktnb 2026-07-17]
 	Updated multimedia/gstreamer1 to 1.28.5 [adam 2026-07-17]
 	Updated graphics/p5-GD-SecurityImage to 1.75nb9 [wiz 2026-07-17]
+	Updated www/p5-Mojo-JWT to 1.02 [wiz 2026-07-17]
