@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/07/16 19:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/07/17 06:06:00 wiz Exp $
 
 DISTNAME=	rakudo-2026.05
 PKGREVISION=	1
@@ -47,8 +47,8 @@ INSTALLATION_DIRS=	share/perl6/bin
 # hard coding should be corrected ..
 pre-build:
 	${MKDIR} -p  ${WRKSRC}/3rdparty/nqp-configure/lib/NQP
-	cp -p ${PREFIX}/lib/perl5/site_perl/5.42.0/NQP/Config.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
-	cp -p ${PREFIX}/lib/perl5/site_perl/5.42.0/NQP/Macros.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.44.0/NQP/Config.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.44.0/NQP/Macros.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
 
 
 post-install:
