@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4517 2026/07/17 10:21:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4518 2026/07/17 12:28:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6765,3 +6765,20 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nsis to 3.12 [adam 2026-07-17]
 	Updated net/libtorrent to 0.16.18 [adam 2026-07-17]
 	Updated net/rtorrent to 0.16.18 [adam 2026-07-17]
+	Updated security/py-acme to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-apache to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-cloudflare to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-digitalocean to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-dnsimple to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-dnsmadeeasy to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-gehirn to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-google to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-linode to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-luadns to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-nsone to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-ovh to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-rfc2136 to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-route53 to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-dns-sakuracloud to 5.7.0 [adam 2026-07-17]
+	Updated security/py-certbot-nginx to 5.7.0 [adam 2026-07-17]
