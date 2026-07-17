@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4524 2026/07/17 20:50:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4525 2026/07/17 23:41:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6788,3 +6788,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Mojo-JWT to 1.02 [wiz 2026-07-17]
 	Updated emulators/dynamips to 0.2.24 [wiz 2026-07-17]
 	Updated lang/nodejs24 to 24.18.0nb1 [wiz 2026-07-17]
+	Removed databases/mongodb3 [gdt 2026-07-17]
