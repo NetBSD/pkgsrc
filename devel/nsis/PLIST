@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/02 21:35:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/07/17 10:16:04 adam Exp $
 bin/makensis
 share/nsis/Bin/GenPat.exe
 share/nsis/Bin/MakeLangId.exe
@@ -280,6 +280,7 @@ share/nsis/Docs/makensisw/Readme.txt
 share/nsis/Docs/nsDialogs/Readme.html
 share/nsis/Docs/nsExec/nsExec.txt
 share/nsis/Examples/AdvSplash/Example.nsi
+share/nsis/Examples/AppGen.nsi
 share/nsis/Examples/Banner/Example.nsi
 share/nsis/Examples/BgImage/Example.nsi
 share/nsis/Examples/FileFunc.ini
@@ -305,6 +306,7 @@ share/nsis/Examples/Modern UI/HeaderBitmap.nsi
 share/nsis/Examples/Modern UI/MultiLanguage.nsi
 share/nsis/Examples/Modern UI/StartMenu.nsi
 share/nsis/Examples/Modern UI/WelcomeFinish.nsi
+share/nsis/Examples/MultiUser.nsi
 share/nsis/Examples/NSISMenu.nsi
 share/nsis/Examples/Plugin/exdll-vs2008.sln
 share/nsis/Examples/Plugin/exdll-vs2008.vcproj
@@ -331,7 +333,6 @@ share/nsis/Examples/TextFunc.ini
 share/nsis/Examples/TextFunc.nsi
 share/nsis/Examples/TextFuncTest.nsi
 share/nsis/Examples/UserInfo/UserInfo.nsi
-share/nsis/Examples/UserVars.nsi
 share/nsis/Examples/VPatch/example.nsi
 share/nsis/Examples/VPatch/newfile.txt
 share/nsis/Examples/VPatch/oldfile.txt
@@ -344,6 +345,8 @@ share/nsis/Examples/bigtest.nsi
 share/nsis/Examples/example1.nsi
 share/nsis/Examples/example2.nsi
 share/nsis/Examples/gfx.nsi
+share/nsis/Examples/install-per-user.nsi
+share/nsis/Examples/install-shared.nsi
 share/nsis/Examples/languages.nsi
 share/nsis/Examples/makensis.nsi
 share/nsis/Examples/nsDialogs/InstallOptions.nsi
@@ -356,11 +359,11 @@ share/nsis/Examples/primes.nsi
 share/nsis/Examples/rtest.nsi
 share/nsis/Examples/silent.nsi
 share/nsis/Examples/unicode.nsi
-share/nsis/Examples/viewhtml.nsi
 share/nsis/Examples/waplugin.nsi
 share/nsis/Include/Colors.nsh
 share/nsis/Include/FileFunc.nsh
 share/nsis/Include/InstallOptions.nsh
+share/nsis/Include/Integration.nsh
 share/nsis/Include/LangFile.nsh
 share/nsis/Include/Library.nsh
 share/nsis/Include/LogicLib.nsh
@@ -377,6 +380,7 @@ share/nsis/Include/VB6RunTime.nsh
 share/nsis/Include/VPatchLib.nsh
 share/nsis/Include/Win/COM.nsh
 share/nsis/Include/Win/Propkey.nsh
+share/nsis/Include/Win/RestartManager.nsh
 share/nsis/Include/Win/WinDef.nsh
 share/nsis/Include/Win/WinError.nsh
 share/nsis/Include/Win/WinNT.nsh
@@ -388,6 +392,7 @@ share/nsis/Include/WordFunc.nsh
 share/nsis/Include/nsDialogs.nsh
 share/nsis/Include/x64.nsh
 share/nsis/NSIS.chm
+share/nsis/NSIS.exe
 share/nsis/Plugins/x86-ansi/AdvSplash.dll
 share/nsis/Plugins/x86-ansi/Banner.dll
 share/nsis/Plugins/x86-ansi/BgImage.dll
