@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.4 2026/07/16 06:47:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.5 2026/07/17 02:05:44 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -74,9 +74,57 @@ lang/php85: security fix
 Pullup ticket #7168 - requested by taca
 mail/roundcube: security fix
 
+Pullup ticket #7169 - requested by bsiegert
+lang/go125: Security fix
+lang/go126: Security fix
+
 Pullup ticket #7170 - requested by is
 sysutils/qemu-guest-agent: i386 build fix
 
 Pullup ticket #7171 - requested by is
 graphics/zxing-cpp: build fix
 
+Pullup ticket #7172 - requested by taca
+security/openssh: Security fix
+
+Pullup ticket #7173 - requested by taca
+net/libcares: Security fix
+
+Pullup ticket #7174 - requested by taca
+mail/postfix: Security fix
+
+Pullup ticket #7175 - requested by taca
+databases/p5-DBI: Security fix
+
+Pullup ticket #7176 - requested by taca
+devel/p5-String-Util: Security fix
+
+Pullup ticket #7177 - requested by taca
+textproc/p5-YAML-PP: Security fix
+
+Pullup ticket #7178 - requested by taca
+textproc/p5-ack: Security fix
+
+Pullup ticket #7179 - requested by taca
+security/p11-kit: Security fix
+
+Pullup ticket #7180 - requested by taca
+www/p5-HTTP-Date: Security fix
+
+Pullup ticket #7181 - requested by taca
+mail/dmarc-report-viewer: Security fix
+
+Pullup ticket #7182 - requested by taca
+lang/perl5: Security fix
+
+Pullup ticket #7183 - requested by taca
+security/adguardhome: Security fix
+
+Pullup ticket #7184 - requested by taca
+security/p5-Crypt-OpenSSL-X509: Security fix
+
+Pullup ticket #7185 - requested by taca
+www/p5-Mojolicious: Security fix
+
+Pullup ticket #7186 - requested by taca
+security/ap-modsecurity2: Security fix
