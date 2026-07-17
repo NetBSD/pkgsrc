@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4516 2026/07/17 07:30:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4517 2026/07/17 10:21:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6762,3 +6762,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dulwich to 1.2.11 [adam 2026-07-17]
 	Updated devel/roundup to 2.6.0 [adam 2026-07-17]
 	Updated sysutils/ansible to 14.2.0 [adam 2026-07-17]
+	Updated devel/nsis to 3.12 [adam 2026-07-17]
+	Updated net/libtorrent to 0.16.18 [adam 2026-07-17]
+	Updated net/rtorrent to 0.16.18 [adam 2026-07-17]
