@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/06/02 11:01:49 pin Exp $
+# $NetBSD: Makefile,v 1.14 2026/07/17 05:16:58 pin Exp $
 
-DISTNAME=	cargo-edit-0.13.11
+DISTNAME=	cargo-edit-0.13.13
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=killercup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
