@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/06/12 10:07:25 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/07/17 23:33:31 gdt Exp $
 
-DISTNAME=	bulk-test-boost-20260516
+DISTNAME=	bulk-test-boost-20260717
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,7 +47,6 @@ DEPENDS+=	libclucene-[0-9]*:../../textproc/libclucene
 DEPENDS+=	libftdi1-[0-9]*:../../devel/libftdi1
 DEPENDS+=	librecad-[0-9]*:../../cad/librecad
 DEPENDS+=	libreoffice-[0-9]*:../../misc/libreoffice
-DEPENDS+=	mongodb-3*:../../databases/mongodb3
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
 DEPENDS+=	mumble-[0-9]*:../../chat/mumble
 DEPENDS+=	ncmpcpp-[0-9]*:../../audio/ncmpcpp
