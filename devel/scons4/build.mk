@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.8 2024/07/14 13:53:16 wiz Exp $
+# $NetBSD: build.mk,v 1.9 2026/07/17 09:01:43 adam Exp $
 #
 # This Makefile fragment supports building using the SCons build tool.
 #
@@ -36,7 +36,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scons>=4.5.2nb1:../../devel/scons4
 SCONSBIN=	scons-${PYVERSSUFFIX}
 
 _SCONS_BUILD_ARGS+=	PREFIX=${PREFIX}
+.if ${MAKE_JOBS_SAFE:U:tl} != no
 _SCONS_BUILD_ARGS+=	-j${MAKE_JOBS:U1}
+.endif
 _SCONS_BUILD_ARGS+=	${SCONS_BUILD_ARGS}
 _SCONS_INSTALL_ARGS+=	${_SCONS_BUILD_ARGS}
 _SCONS_INSTALL_ARGS+=	${SCONS_INSTALL_ARGS}
