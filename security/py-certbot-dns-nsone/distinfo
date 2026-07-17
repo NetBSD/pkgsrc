@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.77 2026/05/22 09:15:14 adam Exp $
+$NetBSD: distinfo,v 1.78 2026/07/17 12:24:20 adam Exp $
 
-BLAKE2s (certbot_dns_nsone-5.6.0.tar.gz) = 4f947ef18ea1fa317c0a381d9068dbcfdab83a35b4577cb201fe85d4949f3c16
-SHA512 (certbot_dns_nsone-5.6.0.tar.gz) = cf75149ea5d7bbd189168828e3ba51eb2d72de2d50a04edcd39bd12ad6193f0de8de7d7dfd38a85c267d09b073e3f149b1e0534dd2a218dbedd54bfc29f016cc
-Size (certbot_dns_nsone-5.6.0.tar.gz) = 12261 bytes
+BLAKE2s (certbot_dns_nsone-5.7.0.tar.gz) = 3cac773bb9916e093f11fad83fdbe0d885704c938f4a877002494a2029b36ee8
+SHA512 (certbot_dns_nsone-5.7.0.tar.gz) = 6897ff6bfe86c1136f45e31b0f0d14702ed21861fcbb96624c4e6d58e251360e87e13d1a3cb8f0d12290fc656d9d549449f334ae4e223c1b82be5a7ecea619e6
+Size (certbot_dns_nsone-5.7.0.tar.gz) = 12260 bytes
