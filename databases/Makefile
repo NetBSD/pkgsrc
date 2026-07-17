@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2026/06/09 15:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.753 2026/07/17 23:39:01 gdt Exp $
 
 COMMENT=	Databases
 
@@ -115,7 +115,6 @@ SUBDIR+=	mimir
 SUBDIR+=	mongo-c-driver
 SUBDIR+=	mongo-tools
 SUBDIR+=	mongodb
-SUBDIR+=	mongodb3
 SUBDIR+=	mongodb4
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-connector-c++
