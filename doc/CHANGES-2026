@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4509 2026/07/17 05:20:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4510 2026/07/17 05:22:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/bacon to 3.24.0 [pin 2026-07-17]
 	Updated devel/cargo-edit to 0.13.13 [pin 2026-07-17]
 	Updated devel/gitpane to 0.9.1 [pin 2026-07-17]
+	Updated devel/hexpatch to 1.13.0 [pin 2026-07-17]
