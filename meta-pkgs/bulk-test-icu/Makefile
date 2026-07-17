@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/17 23:31:23 gdt Exp $
 
-DISTNAME=	bulk-test-icu-20260307
+DISTNAME=	bulk-test-icu-20260717
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -40,7 +40,6 @@ DEPENDS+=	mongo-c-driver-[0-9]*:../../databases/mongo-c-driver
 # See NOT_FOR_PLATFORM in databases/mongodb*/Makefile
 .if ${MACHINE_ARCH} != "i386"
 #DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
-DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
 #DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb4
 .endif
 DEPENDS+=	mysql-client-[0-9]*:../../databases/mysql80-client
