@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/04/30 11:43:09 pin Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/17 05:21:51 pin Exp $
 
-DISTNAME=	HexPatch-1.12.6
+DISTNAME=	HexPatch-1.13.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Etto48/}
@@ -9,17 +9,17 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://etto48.github.io/HexPatch/
 COMMENT=	Binary patcher and editor with TUI interface
-LICENSE=	mit
+LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/HexPatch-1.12.6
+WRKSRC=		${WRKDIR}/HexPatch-1.13.0
 
-#RUST_REQ=	1.96.0-beta.4
+#RUST_REQ=	1.97.0-beta.4
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.96.0-beta.4 on amd64
+#This package is confirmed to build with Rust 1.97.0-beta.4 on amd64
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake
