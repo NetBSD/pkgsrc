@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/01/01 11:19:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/07/17 07:23:08 adam Exp $
 bin/roundup-admin
 bin/roundup-demo
 bin/roundup-gettext
@@ -56,9 +56,6 @@ ${PYSITELIB}/roundup/anypy/my_input.pyo
 ${PYSITELIB}/roundup/anypy/random_.py
 ${PYSITELIB}/roundup/anypy/random_.pyc
 ${PYSITELIB}/roundup/anypy/random_.pyo
-${PYSITELIB}/roundup/anypy/scandir_.py
-${PYSITELIB}/roundup/anypy/scandir_.pyc
-${PYSITELIB}/roundup/anypy/scandir_.pyo
 ${PYSITELIB}/roundup/anypy/ssl_.py
 ${PYSITELIB}/roundup/anypy/ssl_.pyc
 ${PYSITELIB}/roundup/anypy/ssl_.pyo
@@ -287,6 +284,9 @@ ${PYSITELIB}/roundup/install_util.pyo
 ${PYSITELIB}/roundup/instance.py
 ${PYSITELIB}/roundup/instance.pyc
 ${PYSITELIB}/roundup/instance.pyo
+${PYSITELIB}/roundup/logcontext.py
+${PYSITELIB}/roundup/logcontext.pyc
+${PYSITELIB}/roundup/logcontext.pyo
 ${PYSITELIB}/roundup/mailer.py
 ${PYSITELIB}/roundup/mailer.pyc
 ${PYSITELIB}/roundup/mailer.pyo
@@ -408,6 +408,8 @@ share/doc/roundup/html/_static/custom.css
 share/doc/roundup/html/_static/doctools.js
 share/doc/roundup/html/_static/documentation_options.js
 share/doc/roundup/html/_static/file.png
+share/doc/roundup/html/_static/forkme_right_darkblue_121621.png
+share/doc/roundup/html/_static/github-banner.svg
 share/doc/roundup/html/_static/language_data.js
 share/doc/roundup/html/_static/minus.png
 share/doc/roundup/html/_static/plus.png
@@ -417,6 +419,7 @@ share/doc/roundup/html/_static/sphinx_highlight.js
 share/doc/roundup/html/_static/style.css
 share/doc/roundup/html/_static/tabs.css
 share/doc/roundup/html/_static/tabs.js
+share/doc/roundup/html/accessibility-statement_2025-10-08.html
 share/doc/roundup/html/acknowledgements.html
 share/doc/roundup/html/admin_guide.html
 share/doc/roundup/html/customizing.html
@@ -435,6 +438,7 @@ share/doc/roundup/html/objects.inv
 share/doc/roundup/html/original_overview.html
 share/doc/roundup/html/overview.html
 share/doc/roundup/html/postgresql.html
+share/doc/roundup/html/py-modindex.html
 share/doc/roundup/html/pydoc.html
 share/doc/roundup/html/reference.html
 share/doc/roundup/html/rest.html
@@ -485,6 +489,7 @@ share/roundup/templates/classic/html/_generic.help.html
 share/roundup/templates/classic/html/_generic.index.html
 share/roundup/templates/classic/html/_generic.item.html
 share/roundup/templates/classic/html/_generic.keywords_expr.html
+share/roundup/templates/classic/html/_generic.reauth.html
 share/roundup/templates/classic/html/_generic.translation
 share/roundup/templates/classic/html/classhelper.css
 share/roundup/templates/classic/html/classhelper.js
@@ -539,6 +544,7 @@ share/roundup/templates/devel/html/_generic.index.html
 share/roundup/templates/devel/html/_generic.item.html
 share/roundup/templates/devel/html/_generic.keywords_expr.html
 share/roundup/templates/devel/html/_generic.query.html
+share/roundup/templates/devel/html/_generic.reauth.html
 share/roundup/templates/devel/html/bug.index.html
 share/roundup/templates/devel/html/bug.item.html
 share/roundup/templates/devel/html/bug.search.html
@@ -592,6 +598,7 @@ share/roundup/templates/jinja2/html/_generic.404.html
 share/roundup/templates/jinja2/html/_generic.collision.html
 share/roundup/templates/jinja2/html/_generic.help-empty.html
 share/roundup/templates/jinja2/html/_generic.index.html
+share/roundup/templates/jinja2/html/_generic.reauth.html
 share/roundup/templates/jinja2/html/datecopy.js
 share/roundup/templates/jinja2/html/datecopy.min.js
 share/roundup/templates/jinja2/html/file.index.html
@@ -641,6 +648,7 @@ share/roundup/templates/minimal/html/_generic.collision.html
 share/roundup/templates/minimal/html/_generic.help.html
 share/roundup/templates/minimal/html/_generic.index.html
 share/roundup/templates/minimal/html/_generic.item.html
+share/roundup/templates/minimal/html/_generic.reauth.html
 share/roundup/templates/minimal/html/datecopy.js
 share/roundup/templates/minimal/html/datecopy.min.js
 share/roundup/templates/minimal/html/help_controls.js
@@ -679,6 +687,7 @@ share/roundup/templates/responsive/html/_generic.index.html
 share/roundup/templates/responsive/html/_generic.item.html
 share/roundup/templates/responsive/html/_generic.keywords_expr.html
 share/roundup/templates/responsive/html/_generic.query.html
+share/roundup/templates/responsive/html/_generic.reauth.html
 share/roundup/templates/responsive/html/bug.index.html
 share/roundup/templates/responsive/html/bug.item.html
 share/roundup/templates/responsive/html/bug.search.html

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2026/01/01 11:19:14 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/07/17 07:23:08 adam Exp $
 
-BLAKE2s (roundup-2.5.0.tar.gz) = 7c9b44f8dc627f69ade3e5e255d6c83d2e3c44606deb8a6f864c1f2ca6115b1a
-SHA512 (roundup-2.5.0.tar.gz) = 296a46c8e8ece31013c799208cb80962008afe9f35ac61d20a6e5e9c5a603d7e5da12c4c42adc31ac633b6ded23f08527e3b98144ec01eb238aa600274b30f32
-Size (roundup-2.5.0.tar.gz) = 4660956 bytes
+BLAKE2s (roundup-2.6.0.tar.gz) = 1a4dd925e669e38d84216e1454cf8bcd87fcbb3758bbca65640ea64bfb6beffc
+SHA512 (roundup-2.6.0.tar.gz) = 83701062fbf8546e0c138b3f9a7fff4bb4a6cb3a49209747eae13dc7645f5714a11747282a1340141cfaf801ebe7c0dfee9c871f12c2e4e2dae56b624a9951e9
+Size (roundup-2.6.0.tar.gz) = 4829062 bytes
