@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/07/17 23:31:23 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2026/07/17 23:36:50 gdt Exp $
 
 DISTNAME=	bulk-test-icu-20260717
 CATEGORIES=	meta-pkgs
@@ -36,7 +36,7 @@ DEPENDS+=	libvisio-[0-9]*:../../converters/libvisio
 DEPENDS+=	libzmf-[0-9]*:../../converters/libzmf
 DEPENDS+=	couchdb-[0-9]*:../../databases/couchdb
 DEPENDS+=	mongo-c-driver-[0-9]*:../../databases/mongo-c-driver
-# Testing mongodb3
+# Testing mongodb
 # See NOT_FOR_PLATFORM in databases/mongodb*/Makefile
 .if ${MACHINE_ARCH} != "i386"
 #DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
