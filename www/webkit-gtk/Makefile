@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.281 2026/06/11 07:17:49 wiz Exp $
+# $NetBSD: Makefile,v 1.282 2026/07/17 05:52:30 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
-PKGREVISION=	2
+PKGREVISION=	30
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	29
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -76,7 +75,6 @@ REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/compiler/translator/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/libANGLE/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/scripts/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/test/*.py
-REPLACE_PYTHON+=	Source/ThirdParty/gtest/xcode/Scripts/*.py
 REPLACE_PYTHON+=	Source/WebCore/css/*.py
 REPLACE_PYTHON+=	Source/WebCore/html/parser/create-html-entity-table
 REPLACE_PYTHON+=	Source/WebCore/platform/network/create-http-header-name-table
@@ -89,13 +87,11 @@ REPLACE_BASH+=		Source/ThirdParty/ANGLE/adjust-angle-include-paths-rule
 REPLACE_BASH+=		Source/ThirdParty/gtest/xcode/Samples/FrameworkSample/runtests.sh
 REPLACE_BASH+=		Source/ThirdParty/gtest/xcode/Scripts/runtests.sh
 REPLACE_BASH+=		Source/WebKit/Scripts/copy-webcontent-resources-to-private-headers.sh
-REPLACE_BASH+=		Source/WebKit/Scripts/generate-https-upgrade-database.sh
 REPLACE_BASH+=		Source/WebKit/Scripts/process-entitlements.sh
 REPLACE_BASH+=		Tools/gtk/install-dependencies
 
 REPLACE_RUBY+=		Source/JavaScriptCore/b3/air/*.rb
 REPLACE_RUBY+=		Source/JavaScriptCore/offlineasm/*.rb
-REPLACE_RUBY+=		Source/WebCore/Scripts/*.rb
 REPLACE_RUBY+=		Source/WebCore/domjit/*.rb
 REPLACE_RUBY+=		Source/WebInspectorUI/Scripts/*.rb
 REPLACE_RUBY+=		Source/WebKit/Scripts/*.rb
