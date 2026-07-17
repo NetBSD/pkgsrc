@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2024/10/16 01:49:38 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/07/17 16:42:13 wiz Exp $
 
-BLAKE2s (dynamips-0.2.23.tar.gz) = e5235e93c28f8282e169563eebd2849f4a78c6f1dced4dbfd4a6df616f9da73c
-SHA512 (dynamips-0.2.23.tar.gz) = b68af39cd66f10555d860437f55e63887aefdb5a949bacacf3a308cc0c4eaaab3bb9a496c5ac32fd19d3920bada807bff2af8eb66b01d8d735419fec5d134746
-Size (dynamips-0.2.23.tar.gz) = 835736 bytes
+BLAKE2s (dynamips-0.2.24.tar.gz) = 2171c81d45cb95f097545a8fe3ce811d5157638cccd273f0472d17e4dce57d32
+SHA512 (dynamips-0.2.24.tar.gz) = 960a748a43373512c64035a6fd79e24a171c490d31e55c23fd931d30dcd08fbee5e288050cdfbd36e6ca574b02fd3f4f6ed3a1e557d5053b79df4a6cd48112d2
+Size (dynamips-0.2.24.tar.gz) = 845465 bytes
+SHA1 (patch-cmake_dependencies.cmake) = 7d2fe023ce87f4684e1cda030f1eef8145f891b3
