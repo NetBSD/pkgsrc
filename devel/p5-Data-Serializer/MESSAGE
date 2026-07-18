@@ -1,12 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2020/09/04 12:05:14 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2026/07/18 08:45:51 wiz Exp $
 
 Recommended packages (Perl 5 modules) for use with the Perl 5 module
 Data::Serializer:
 
 converters/p5-JSON
 converters/p5-JSON-XS
-devel/p5-Compress-PPMd
 devel/p5-Compress-Zlib
 devel/p5-Config-General
 devel/p5-Data-Denter
