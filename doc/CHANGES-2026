@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4544 2026/07/18 22:53:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4545 2026/07/18 23:14:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6809,3 +6809,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-simplecov to 1.0.2 [taca 2026-07-18]
 	Removed devel/ruby-simplecov-html [taca 2026-07-18]
 	Updated time/xclock to 1.2.1 [wiz 2026-07-18]
+	Updated x11/xlockmore to 5.89 [wiz 2026-07-18]
