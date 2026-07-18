@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.28 2026/04/02 08:31:28 wiz Exp $
+# $NetBSD: eol-packages,v 1.29 2026/07/18 15:31:35 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1264,3 +1264,7 @@ eol date: March 31, 2026
 URL: https://www.ruby-lang.org/en/downloads/branches/
 Description: Update to Ruby 3.3 or later.
 
+Package: ruby-simplecov-html
+eol date: April 4, 2026
+URL: https://github.com/simplecov-ruby/simplecov-html
+Description: Use ruby-simple-cov to 1.0.0 or later.
