@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4535 2026/07/18 14:09:18 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4536 2026/07/18 14:11:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6800,3 +6800,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-ja-wordpress to 6.9.5 [taca 2026-07-18]
 	Updated lang/ruby40 to 4.0.6 [taca 2026-07-18]
 	Updated lang/ruby33 to 3.3.12 [taca 2026-07-18]
+	Updated devel/ruby-version_gem to 1.1.14 [taca 2026-07-18]
