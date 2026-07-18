@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4662 2026/07/18 08:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4663 2026/07/18 15:27:39 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3351,6 +3351,7 @@ SUBDIR+=	ruby-activesupport72
 SUBDIR+=	ruby-activesupport80
 SUBDIR+=	ruby-algorithms
 SUBDIR+=	ruby-amstd
+SUBDIR+=	ruby-anonymous_loader
 SUBDIR+=	ruby-approvaltests
 SUBDIR+=	ruby-assistance
 SUBDIR+=	ruby-ast
