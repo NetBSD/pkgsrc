@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/07/13 12:18:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/07/18 08:56:26 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,8 @@ ${PYSITELIB}/lupa/lua52.so
 ${PYSITELIB}/lupa/lua53.so
 ${PYSITELIB}/lupa/lua54.so
 ${PYSITELIB}/lupa/lua55.so
+${PYSITELIB}/lupa/luajit20.so
+${PYSITELIB}/lupa/luajit21.so
 ${PYSITELIB}/lupa/version.py
 ${PYSITELIB}/lupa/version.pyc
 ${PYSITELIB}/lupa/version.pyo
