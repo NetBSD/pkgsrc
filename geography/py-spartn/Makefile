@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/03/11 11:55:36 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/18 12:21:58 gdt Exp $
 
-VERSION=	1.0.9
+VERSION=	1.1.0
 DISTTAIL=	spartn
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
@@ -17,6 +17,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
