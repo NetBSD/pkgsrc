@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4540 2026/07/18 15:05:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4541 2026/07/18 15:07:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6805,3 +6805,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/nabud to 1.4.2 [thorpej 2026-07-18]
 	Updated devel/ruby-bindata to 3.0.0 [taca 2026-07-18]
 	Updated devel/ruby-console to 1.37.0 [taca 2026-07-18]
+	Updated devel/ruby-io-event to 1.19.2 [taca 2026-07-18]
