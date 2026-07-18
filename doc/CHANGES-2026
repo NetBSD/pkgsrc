@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4528 2026/07/18 08:56:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4529 2026/07/18 09:14:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6792,3 +6792,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/p5-Compress-PPMd [wiz 2026-07-18]
 	Updated devel/p5-Data-Alias to 1.30 [wiz 2026-07-18]
 	Updated devel/py-lupa to 2.8nb1 [wiz 2026-07-18]
+	Updated lang/gcc12 to 12.5.0nb3 [he 2026-07-18]
+	Updated lang/gcc12-libs to 12.5.0nb4 [he 2026-07-18]
