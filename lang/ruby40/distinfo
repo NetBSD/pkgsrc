@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2026/05/20 13:13:37 taca Exp $
+$NetBSD: distinfo,v 1.10 2026/07/18 14:04:38 taca Exp $
 
-BLAKE2s (ruby-4.0.5.tar.xz) = 654cd56c0e98273f2b5e1985eafa2518de957415985c2dbb4b477511b2dea802
-SHA512 (ruby-4.0.5.tar.xz) = 379d78a6d1af0455df60da46551f43438ad3ee81f83787554fc34cb1c8febb1bd363e3dc1a057b34a69f96526efc308d3dccc4b87d368897c2d1ccf179096463
-Size (ruby-4.0.5.tar.xz) = 17893756 bytes
+BLAKE2s (ruby-4.0.6.tar.xz) = 6e92c9aea4ef38b0969693b889fcf67b250573ca95c01d70ebe8918dfbe385de
+SHA512 (ruby-4.0.6.tar.xz) = c9c391675a098b5a27dd687571ab0a164c788cbb8ddcbab6d17a3e8b3c4ba389346b2e6d7807d38db3e74d225c70e378a296d60d0f465cb0fcec9702242c83c6
+Size (ruby-4.0.6.tar.xz) = 17968092 bytes
 SHA1 (patch-.bundle_gems_rdoc-7.0.4_lib_rdoc_encoding.rb) = 896fc0825d59174b508bcfc5d17727f0d0b1050f
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = ff1b1e659ddc7cb1d62a71e1447df55f1f7b07c2
