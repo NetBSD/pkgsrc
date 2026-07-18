@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/01/08 04:16:08 wen Exp $
+$NetBSD: distinfo,v 1.16 2026/07/18 08:50:56 wiz Exp $
 
-BLAKE2s (Data-Alias-1.28.tar.gz) = 58d11881b7084ad0381da34100f709fbd2edd874fe2460c6ad8691a1698e1971
-SHA512 (Data-Alias-1.28.tar.gz) = 7c42d0af8fdbbc67ee3a3c4f98b6a30f87778753fadfc3fac06f4f6c48123ca45c99fe148299db99cd3b9c342c6df1d4785193e5c08526ade8426543687f7f0f
-Size (Data-Alias-1.28.tar.gz) = 56979 bytes
+BLAKE2s (Data-Alias-1.30.tar.gz) = 06edfefe2e50ea6a902510fa7fccc9efb18e15fdecfd8cb9e0592a85354e27d7
+SHA512 (Data-Alias-1.30.tar.gz) = 7ce382de7962946346f8452b41a8f2817865f4ea0ea015e1728d9b5094b91a5156ba602c6bb61f7750a783dd6e96eda890990ae4f553100f8660709fa81f2763
+Size (Data-Alias-1.30.tar.gz) = 57120 bytes
