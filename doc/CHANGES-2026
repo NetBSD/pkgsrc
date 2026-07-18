@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4526 2026/07/18 08:49:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4527 2026/07/18 08:51:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6790,3 +6790,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.18.0nb1 [wiz 2026-07-17]
 	Removed databases/mongodb3 [gdt 2026-07-17]
 	Removed devel/p5-Compress-PPMd [wiz 2026-07-18]
+	Updated devel/p5-Data-Alias to 1.30 [wiz 2026-07-18]
