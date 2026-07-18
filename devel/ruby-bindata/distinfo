@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/05/17 06:15:32 taca Exp $
+$NetBSD: distinfo,v 1.16 2026/07/18 15:03:52 taca Exp $
 
-BLAKE2s (bindata-2.5.1.gem) = d3fdbbf2351f3e189ecece226cb5af122aea2a868688554ad55fd4e91648dc14
-SHA512 (bindata-2.5.1.gem) = c6070a37bbe20ac67d6c5438b889b6542caaeb0a2f475de53a54ca9e006b5a452a5cf5ea5462d128599f2f89f1625c1c5140014101659e9208696e276bc9cb0b
-Size (bindata-2.5.1.gem) = 83456 bytes
+BLAKE2s (bindata-3.0.0.gem) = 55fd9241a34437abaad03416f1d8b8f8219ba55a2130c08f04e2f992dcc082b8
+SHA512 (bindata-3.0.0.gem) = 3cbbc2e287ec07adb89730f09d039d1d81b0e70843b67def6bc672a71b4c495a1ebeae9ef2235c18b5367f1944e81683788416ac86f5976aaa92f2901c386580
+Size (bindata-3.0.0.gem) = 85504 bytes
