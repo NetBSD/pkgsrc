@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/19 14:58:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/18 14:04:38 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -369,6 +369,7 @@ ${RUBY_LIB}/bundler/plugin/installer/git.rb
 ${RUBY_LIB}/bundler/plugin/installer/path.rb
 ${RUBY_LIB}/bundler/plugin/installer/rubygems.rb
 ${RUBY_LIB}/bundler/plugin/source_list.rb
+${RUBY_LIB}/bundler/plugin/unloaded_source.rb
 ${RUBY_LIB}/bundler/process_lock.rb
 ${RUBY_LIB}/bundler/remote_specification.rb
 ${RUBY_LIB}/bundler/resolver.rb
@@ -516,7 +517,6 @@ ${RUBY_LIB}/bundler/vendor/thor/lib/thor/shell/terminal.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/shell/wrapped_printer.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/util.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/version.rb
-${RUBY_LIB}/bundler/vendor/tsort/lib/tsort.rb
 ${RUBY_LIB}/bundler/vendor/uri/lib/uri.rb
 ${RUBY_LIB}/bundler/vendor/uri/lib/uri/common.rb
 ${RUBY_LIB}/bundler/vendor/uri/lib/uri/file.rb
@@ -2899,17 +2899,6 @@ ${RUBY_DOC}/BSDL
 ${RUBY_DOC}/CONTRIBUTING.md
 ${RUBY_DOC}/COPYING
 ${RUBY_DOC}/COPYING.ja
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.06_to_0.52
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.50_to_0.60
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-0.60_to_1.1
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-1.8.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-1.9.3
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.0.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.1.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.2.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.3.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-2.4.0
-${RUBY_DOC}/ChangeLog.prev/ChangeLog-YARV
 ${RUBY_DOC}/GPL
 ${RUBY_DOC}/KNOWNBUGS.rb
 ${RUBY_DOC}/LEGAL
