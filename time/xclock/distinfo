@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/06/30 09:49:22 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/07/18 22:52:48 wiz Exp $
 
-BLAKE2s (xclock-1.2.0.tar.xz) = cf90e7c198a852fcec29abd376ad33bc377a210bbda7ffc042958af5fe7ae355
-SHA512 (xclock-1.2.0.tar.xz) = acfe4000fc84f511145404ef1f98058d0cdd1d2238942a7a4beaf4781238c2085364e78449418fa46e7957700befeb720efa6f49382e1f8a5759829456d391c2
-Size (xclock-1.2.0.tar.xz) = 177848 bytes
-SHA1 (patch-Clock.c) = 3ad0a3f83d582900754ad3a351050de47f513c69
+BLAKE2s (xclock-1.2.1.tar.xz) = 312d955eff994993c8c0d38b9408b88e06c36b3bf17ba9c1a9944832add966bc
+SHA512 (xclock-1.2.1.tar.xz) = 0e94fd7e6c1e1c9e914991f3a8e3bf44b055a93066a153b05ec25fa4f8b6ec2c3b836bb8e1e6bc98c38a8e55f2070f225d358e7a771a97d27e2df119e0511b41
+Size (xclock-1.2.1.tar.xz) = 180196 bytes

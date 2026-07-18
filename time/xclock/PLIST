@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/27 10:51:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/07/18 22:52:48 wiz Exp $
 bin/xclock
 lib/X11/app-defaults/XClock
+lib/X11/app-defaults/XClock-ampm
 lib/X11/app-defaults/XClock-color
+lib/X11/app-defaults/XClock-grandfather
 man/man1/xclock.1
