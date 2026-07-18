@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/07/16 19:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/07/18 08:45:51 wiz Exp $
 
 DISTNAME=	Data-Serializer-0.65
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,6 @@ PERL5_PACKLIST=		auto/Data/Serializer/.packlist
 
 # Commented dependencies are recommended packages/modules for use with
 # this package/module
-#DEPENDS+=	p5-Compress-PPMd-[0-9]*:../../devel/p5-Compress-PPMd
 #DEPENDS+=	p5-Config-General-[0-9]*:../../devel/p5-Config-General
 #DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 #DEPENDS+=	p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
