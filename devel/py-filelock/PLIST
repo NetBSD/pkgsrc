@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/04/16 13:39:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/19 10:45:47 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,18 +9,36 @@ ${PYSITELIB}/filelock/__init__.pyo
 ${PYSITELIB}/filelock/_api.py
 ${PYSITELIB}/filelock/_api.pyc
 ${PYSITELIB}/filelock/_api.pyo
+${PYSITELIB}/filelock/_async.py
+${PYSITELIB}/filelock/_async.pyc
+${PYSITELIB}/filelock/_async.pyo
 ${PYSITELIB}/filelock/_async_read_write.py
 ${PYSITELIB}/filelock/_async_read_write.pyc
 ${PYSITELIB}/filelock/_async_read_write.pyo
+${PYSITELIB}/filelock/_descriptor.py
+${PYSITELIB}/filelock/_descriptor.pyc
+${PYSITELIB}/filelock/_descriptor.pyo
 ${PYSITELIB}/filelock/_error.py
 ${PYSITELIB}/filelock/_error.pyc
 ${PYSITELIB}/filelock/_error.pyo
+${PYSITELIB}/filelock/_identity.py
+${PYSITELIB}/filelock/_identity.pyc
+${PYSITELIB}/filelock/_identity.pyo
+${PYSITELIB}/filelock/_lease.py
+${PYSITELIB}/filelock/_lease.pyc
+${PYSITELIB}/filelock/_lease.pyo
+${PYSITELIB}/filelock/_marker.py
+${PYSITELIB}/filelock/_marker.pyc
+${PYSITELIB}/filelock/_marker.pyo
 ${PYSITELIB}/filelock/_read_write.py
 ${PYSITELIB}/filelock/_read_write.pyc
 ${PYSITELIB}/filelock/_read_write.pyo
 ${PYSITELIB}/filelock/_soft.py
 ${PYSITELIB}/filelock/_soft.pyc
 ${PYSITELIB}/filelock/_soft.pyo
+${PYSITELIB}/filelock/_soft_protocol.py
+${PYSITELIB}/filelock/_soft_protocol.pyc
+${PYSITELIB}/filelock/_soft_protocol.pyo
 ${PYSITELIB}/filelock/_soft_rw/__init__.py
 ${PYSITELIB}/filelock/_soft_rw/__init__.pyc
 ${PYSITELIB}/filelock/_soft_rw/__init__.pyo
@@ -30,6 +48,9 @@ ${PYSITELIB}/filelock/_soft_rw/_async.pyo
 ${PYSITELIB}/filelock/_soft_rw/_sync.py
 ${PYSITELIB}/filelock/_soft_rw/_sync.pyc
 ${PYSITELIB}/filelock/_soft_rw/_sync.pyo
+${PYSITELIB}/filelock/_strict.py
+${PYSITELIB}/filelock/_strict.pyc
+${PYSITELIB}/filelock/_strict.pyo
 ${PYSITELIB}/filelock/_unix.py
 ${PYSITELIB}/filelock/_unix.pyc
 ${PYSITELIB}/filelock/_unix.pyo
