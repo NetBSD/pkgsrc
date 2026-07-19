@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4564 2026/07/19 10:52:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4565 2026/07/19 11:18:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6832,3 +6832,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.56.0 [wiz 2026-07-19]
 	Updated misc/py-platformdirs to 4.10.1 [wiz 2026-07-19]
 	Updated textproc/py-tomlkit to 0.15.1 [wiz 2026-07-19]
+	Updated lang/gcc15 to 15.3.0 [adam 2026-07-19]
