@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/07/13 13:49:26 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/07/19 11:47:32 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -168,14 +168,14 @@ CARGO_CRATE_DEPENDS+=	zerotrie-0.2.4
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.6
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.3
 CARGO_CRATE_DEPENDS+=	zmij-1.0.21
-CARGO_CRATE_DEPENDS+=	zrx-0.0.24
+CARGO_CRATE_DEPENDS+=	zrx-0.0.26
 CARGO_CRATE_DEPENDS+=	zrx-diagnostic-0.0.2
 CARGO_CRATE_DEPENDS+=	zrx-executor-0.0.6
-CARGO_CRATE_DEPENDS+=	zrx-graph-0.0.12
-CARGO_CRATE_DEPENDS+=	zrx-id-0.0.20
-CARGO_CRATE_DEPENDS+=	zrx-module-0.0.8
+CARGO_CRATE_DEPENDS+=	zrx-graph-0.0.13
+CARGO_CRATE_DEPENDS+=	zrx-id-0.0.22
+CARGO_CRATE_DEPENDS+=	zrx-module-0.0.10
 CARGO_CRATE_DEPENDS+=	zrx-path-0.0.1
-CARGO_CRATE_DEPENDS+=	zrx-scheduler-0.0.21
+CARGO_CRATE_DEPENDS+=	zrx-scheduler-0.0.22
 CARGO_CRATE_DEPENDS+=	zrx-storage-0.0.4
 CARGO_CRATE_DEPENDS+=	zrx-store-0.0.10
-CARGO_CRATE_DEPENDS+=	zrx-stream-0.0.21
+CARGO_CRATE_DEPENDS+=	zrx-stream-0.0.23
