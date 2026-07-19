@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/08/27 05:20:53 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/07/19 20:09:41 wiz Exp $
 
-BLAKE2s (xclipboard-1.1.5.tar.xz) = 7fbfaa7b70f824f55f349a08298207c91bfcdbeeab2bd4c4afa03a8a93585cc1
-SHA512 (xclipboard-1.1.5.tar.xz) = 9962b8d19e6387c9af87a47d66d81577ec3e2ba1d0aa6f6ca8fa89664ccfb0dd20906e143a4d19a303a4eded4f29c4bd40868477fbf754a79cdb48256846a8d3
-Size (xclipboard-1.1.5.tar.xz) = 132420 bytes
+BLAKE2s (xclipboard-1.1.6.tar.xz) = 133e121404b2ec1d02055faa74e23775b112357e20421ae65a86cafa2be8d9b2
+SHA512 (xclipboard-1.1.6.tar.xz) = c7d14f9997e7ab7741f5694fe04d413ef92d479160533ac46dc9ebb25d727d649b9a624ab82f8fadef072645c967a80bc2b7305f0a50a2a3b4cb927525f64aeb
+Size (xclipboard-1.1.6.tar.xz) = 136460 bytes
