@@ -1,4 +1,4 @@
-$NetBSD: patch-kde-modules_KDECompilerSettings.cmake,v 1.4 2019/11/11 06:38:05 markd Exp $
+$NetBSD: patch-kde-modules_KDECompilerSettings.cmake,v 1.5 2026/07/19 10:30:38 wiz Exp $
 
 Do not hard-code --enable-new-dtags. It is completely broken on systems like
 NetBSD implementing the sane rpath semantic and just have a new enough binutils
@@ -7,7 +7,7 @@ choice is.
 
 --- kde-modules/KDECompilerSettings.cmake.orig	2017-11-30 07:42:14.000000000 +0000
 +++ kde-modules/KDECompilerSettings.cmake
-@@ -229,14 +224,6 @@ if (POLICY CMP0063)
+@@ -229,14 +229,6 @@ if (POLICY CMP0063)
      cmake_policy(SET CMP0063 NEW)
  endif()
  
