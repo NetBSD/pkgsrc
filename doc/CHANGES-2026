@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4552 2026/07/19 08:28:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4553 2026/07/19 09:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6819,3 +6819,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/wiredtiger [adam 2026-07-19]
 	Updated archivers/dar to 2.8.5 [adam 2026-07-19]
 	Removed devel/scons successor devel/scons4 [adam 2026-07-19]
+	Updated devel/libgit2 to 1.9.6 [adam 2026-07-19]
+	Updated audio/strawberry to 1.2.24 [adam 2026-07-19]
