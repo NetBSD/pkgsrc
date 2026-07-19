@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/07/13 10:23:09 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/07/19 10:28:16 wiz Exp $
 
 BLAKE2s (cyphar.com_go-pathrs_@v_v0.2.2.mod) = 182c53393b3efcca9da885427b63bee052193cdf0bca063085a98598aa205594
 SHA512 (cyphar.com_go-pathrs_@v_v0.2.2.mod) = 747c3c228e55a5c14081d6bc6882750a521eabf8a5d2b3d0694a5a98d5447f000a9886ebec8813ff8546447b41bd02ccc26a8a507a93f1d3ee8f543c8f394f4c
@@ -381,8 +381,8 @@ Size (howett.net_plist_@v_v1.0.1.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.1.zip) = 43dd213cd6f655b89cb6074acf972bc2e134c71fb991af59c14ebaf6747c2545
 SHA512 (howett.net_plist_@v_v1.0.1.zip) = 4f8b07bebf808ff4bbc1b2fdcf501d60731e26e048c1e7e2f21cfb9816fab8937e9f1915b44ff693a6a5b0f91cff470f40c4d7a71d7728afe2d0a3bca99432cd
 Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
-BLAKE2s (node_exporter-1.12.0.tar.gz) = b32374121af215ac92b944c60e7f7a92dbb87138889418715b9542fe00d0d2a6
-SHA512 (node_exporter-1.12.0.tar.gz) = d9556ce9a71a45776d410877aa82f490119fb6509b85972f6d9038b7b32f5f81fa964859c71a43a40bb4cc06b0f834727dfe13c1ff030becf276009498e42b66
-Size (node_exporter-1.12.0.tar.gz) = 415525 bytes
+BLAKE2s (node_exporter-1.12.1.tar.gz) = c144ad2fe437bb8731cb6f597c9b0a9b8b7763e2e8b80c1b39a5d23c5ed370a0
+SHA512 (node_exporter-1.12.1.tar.gz) = baaa6e34203960e54c50bb6a1e89f287adaa4fc0a2758517bac9dc84272b12e13196388edd7bb0442c59eee30ef54e4ede83dfefb0ba536c9689d5301d33b749
+Size (node_exporter-1.12.1.tar.gz) = 415688 bytes
 SHA1 (patch-collector_netdev__common.go) = 35772210c4e89ea166a4aeec258ecf1caf4c3c88
 SHA1 (patch-collector_netdev__netbsd.go) = 890ad5d2a3532284102a2c7dbc110531a249aad5
