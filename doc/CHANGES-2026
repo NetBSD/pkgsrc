@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4561 2026/07/19 10:47:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4562 2026/07/19 10:50:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6829,3 +6829,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/oxygen-icons to 6.28.0 [wiz 2026-07-19]
 	Updated devel/py-filelock to 3.31.0 [wiz 2026-07-19]
 	Updated devel/py-google-api-core to 2.32.0 [wiz 2026-07-19]
+	Updated security/py-google-auth to 2.56.0 [wiz 2026-07-19]
