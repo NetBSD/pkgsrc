@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/04/09 20:02:55 wiz Exp $
+$NetBSD: distinfo,v 1.13 2026/07/19 17:03:50 wiz Exp $
 
-BLAKE2s (xwininfo-1.1.6.tar.xz) = e9b849e8c263222a25c5603a30fc028c333e9e62b5ab977a43f821f7024dcdf3
-SHA512 (xwininfo-1.1.6.tar.xz) = c6df4ed3dcf97772450612f2786ecab8313a43bb78e0b8020cc9ec228b3f466f55090313ad02c8159a73a6892d117322ad85e28d9d76e38bb84c9750712c20bc
-Size (xwininfo-1.1.6.tar.xz) = 161660 bytes
+BLAKE2s (xwininfo-1.1.7.tar.xz) = ebf06551ee6a74a9f26211b639bdbb3a878727c45295e5a52a6dc40ee046cbb5
+SHA512 (xwininfo-1.1.7.tar.xz) = 116e53bdd5c40b6162e98057fc1c7981a4c4fb894adeb31197984d5408489195f9eb621635036e17194f4e50c7eed9e3624d044cab14b975988200f6883b9a66
+Size (xwininfo-1.1.7.tar.xz) = 174060 bytes
