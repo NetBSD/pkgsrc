@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4569 2026/07/19 11:53:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4570 2026/07/19 13:36:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6837,3 +6837,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.51 [wiz 2026-07-19]
 	Updated textproc/rumdl to 0.2.36 [wiz 2026-07-19]
 	Updated www/resterm to 0.47.1 [wiz 2026-07-19]
+	Updated devel/ruby-rugged to 1.9.6 [taca 2026-07-19]
