@@ -1,11 +1,80 @@
-$NetBSD: patch-libgcc_config.host,v 1.1 2025/11/08 07:04:02 mrg Exp $
+$NetBSD: patch-libgcc_config.host,v 1.2 2026/07/19 11:17:44 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
 
 Fix NetBSD/arm64.
 
-
---- libgcc/config.host.orig	2025-08-07 23:51:44.833420855 -0700
-+++ libgcc/config.host	2025-11-07 03:15:28.811881325 -0800
-@@ -424,6 +424,7 @@ aarch64*-*-freebsd*)
+--- libgcc/config.host.orig	2026-06-12 06:09:09.987578090 +0000
++++ libgcc/config.host
+@@ -85,7 +85,7 @@ m32c*-*-*)
+         cpu_type=m32c
+ 	tmake_file=t-fdpbit
+         ;;
+-aarch64*-*-*)
++aarch64*-*-* | arm64*-*-*)
+ 	cpu_type=aarch64
+ 	;;
+ alpha*-*-*)
+@@ -236,16 +236,16 @@ case ${host} in
+   esac
+   tmake_file="$tmake_file t-slibgcc-darwin"
+   case ${host} in
+-    x86_64-*-darwin2[0-2]*)
+-      tmake_file="t-darwin-min-11 t-darwin-libgccs1 $tmake_file"
+-      ;;
+     *-*-darwin2*)
+       tmake_file="t-darwin-min-11 $tmake_file"
+       ;;
+     *-*-darwin1[89]*)
+-      tmake_file="t-darwin-min-8 t-darwin-libgccs1 $tmake_file"
++      tmake_file="t-darwin-min-8 $tmake_file"
++      ;;
++    *-*-darwin1[67]*)
++      tmake_file="t-darwin-min-5 $tmake_file"
+       ;;
+-    *-*-darwin9* | *-*-darwin1[0-7]*)
++    *-*-darwin9* | *-*-darwin1[0-5]*)
+       tmake_file="t-darwin-min-5 t-darwin-libgccs1 $tmake_file"
+       ;;
+     *-*-darwin[4-8]*)
+@@ -280,7 +280,7 @@ case ${host} in
+   if test "x$enable_darwin_at_rpath" = "xyes"; then
+     tmake_file="$tmake_file t-darwin-rpath "
+   fi
+-  extra_parts="crt3.o libd10-uwfef.a crttms.o crttme.o libemutls_w.a"
++  extra_parts="crt3.o crttms.o crttme.o libemutls_w.a "
+   ;;
+ *-*-dragonfly*)
+   tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-eh-dw2-dip"
+@@ -386,8 +386,8 @@ case ${host} in
+ esac
+ 
+ case ${host} in
+-*-*-darwin* | *-*-dragonfly* | *-*-freebsd* | *-*-netbsd* | *-*-openbsd* | \
+-  *-*-solaris2*)
++i[34567]86-*-darwin* | powerpc*-*-darwin* | x86_64-*-darwin* | \
++*-*-dragonfly* | *-*-freebsd* | *-*-netbsd* | *-*-openbsd* | *-*-solaris2*)
+   enable_execute_stack=enable-execute-stack-mprotect.c
+   ;;
+ i[34567]86-*-mingw* | x86_64-*-mingw*)
+@@ -412,6 +412,15 @@ aarch64*-*-elf | aarch64*-*-rtems*)
+ 	md_unwind_def_header=aarch64/aarch64-unwind-def.h
+ 	md_unwind_header=aarch64/aarch64-unwind.h
+ 	;;
++aarch64*-*-darwin*)
++	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-lse"
++	tmake_file="${tmake_file} t-crtfm t-dfprules"
++	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp"
++	tmake_file="${tmake_file} ${cpu_type}/t-heap-trampoline"
++	tmake_file="${tmake_file} ${cpu_type}/t-no-eh"
++	;;
+ aarch64*-*-freebsd*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
+@@ -424,6 +433,7 @@ aarch64*-*-freebsd*)
  aarch64*-*-netbsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
@@ -13,3 +82,35 @@ Fix NetBSD/arm64.
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
  	tmake_file="${tmake_file} t-dfprules"
  	md_unwind_def_header=aarch64/aarch64-unwind-def.h
+@@ -740,14 +750,14 @@ i[34567]86-*-darwin*)
+ 	tmake_file="$tmake_file i386/t-crtpc t-crtfm i386/t-msabi"
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	extra_parts="$extra_parts crtprec32.o crtprec64.o crtprec80.o"
+-	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	extra_parts="$extra_parts crtfastmath.o libd10-uwfef.a libheapt_w.a"
+ 	tmake_file="${tmake_file} i386/t-heap-trampoline"
+ 	;;
+ x86_64-*-darwin*)
+ 	tmake_file="$tmake_file i386/t-crtpc t-crtfm i386/t-msabi"
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	extra_parts="$extra_parts crtprec32.o crtprec64.o crtprec80.o"
+-	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	extra_parts="$extra_parts crtfastmath.o libd10-uwfef.a libheapt_w.a"
+ 	tmake_file="${tmake_file} i386/t-heap-trampoline"
+ 	;;
+ i[34567]86-*-elfiamcu)
+@@ -1221,12 +1231,14 @@ powerpc-*-darwin*)
+ 	# We build the darwin10 EH shim for Rosetta (running on x86 machines).
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	tmake_file="$tmake_file rs6000/t-ppc64-fp rs6000/t-ibm-ldouble"
++	extra_parts="$extra_parts libd10-uwfef.a "
+ 	extra_parts="$extra_parts crt2.o crt3_2.o libef_ppc.a dw_ppc.o"
+ 	;;
+ powerpc64-*-darwin*)
+ 	# We build the darwin10 EH shim for Rosetta (running on x86 machines).
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	tmake_file="$tmake_file rs6000/t-darwin64 rs6000/t-ibm-ldouble"
++	extra_parts="$extra_parts libd10-uwfef.a "
+ 	extra_parts="$extra_parts crt2.o crt3_2.o libef_ppc.a dw_ppc.o"
+ 	;;
+ powerpc*-*-freebsd*)

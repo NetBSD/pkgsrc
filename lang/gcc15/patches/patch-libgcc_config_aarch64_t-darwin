@@ -1,0 +1,13 @@
+$NetBSD: patch-libgcc_config_aarch64_t-darwin,v 1.1 2026/07/19 11:17:45 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
+
+--- libgcc/config/aarch64/t-darwin.orig	2026-07-19 09:48:42.303097912 +0000
++++ libgcc/config/aarch64/t-darwin
+@@ -0,0 +1,5 @@
++# Ensure we have a suitable minimum OS version.
++
++HOST_LIBGCC2_CFLAGS += -mmacosx-version-min=11.0
++
++LIB2_SIDITI_CONV_FUNCS = yes

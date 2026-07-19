@@ -1,16 +1,18 @@
-$NetBSD: patch-libgcobol_configure.tgt,v 1.1 2025/11/08 07:04:02 mrg Exp $
+$NetBSD: patch-libgcobol_configure.tgt,v 1.2 2026/07/19 11:17:45 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
 
 Enable libgcobol on NetBSD amd64, arm64, and riscv64.
 
-
---- libgcobol/configure.tgt.orig	2025-08-07 23:51:44.929422457 -0700
-+++ libgcobol/configure.tgt	2025-11-06 11:01:55.070054980 -0800
+--- libgcobol/configure.tgt.orig	2026-06-12 06:09:10.070579374 +0000
++++ libgcobol/configure.tgt
 @@ -26,7 +26,7 @@
  LIBGCOBOL_SUPPORTED=no
- 
+
  case "${target}" in
 -    aarch64*-*-linux*)
-+    aarch64*-*-linux* | aarch64*-*-netbsd*)
++    aarch64*-*-linux* | aarch64-*-darwin* | aarch64*-*-netbsd*)
  	LIBGCOBOL_SUPPORTED=yes
  	;;
      powerpc64le-*-linux*)
@@ -29,3 +31,4 @@ Enable libgcobol on NetBSD amd64, arm64, and riscv64.
  	if test x$ac_cv_sizeof_void_p = x8; then
  		LIBGCOBOL_SUPPORTED=yes
  	fi
+
