@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4571 2026/07/19 13:41:03 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4572 2026/07/19 15:23:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6839,3 +6839,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.47.1 [wiz 2026-07-19]
 	Updated devel/ruby-rugged to 1.9.6 [taca 2026-07-19]
 	Updated graphics/ruby-mini-magick to 5.3.2 [taca 2026-07-19]
+	Updated mail/ruby-roadie to 5.3.1 [taca 2026-07-19]
