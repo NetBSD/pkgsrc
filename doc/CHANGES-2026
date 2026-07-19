@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4558 2026/07/19 10:30:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4559 2026/07/19 10:34:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6826,3 +6826,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libcbor to 0.14.0 [wiz 2026-07-19]
 	Updated sysutils/node_exporter to 1.12.1 [wiz 2026-07-19]
 	Updated devel/extra-cmake-modules to 6.28.0 [wiz 2026-07-19]
+	Updated graphics/oxygen-icons to 6.28.0 [wiz 2026-07-19]
