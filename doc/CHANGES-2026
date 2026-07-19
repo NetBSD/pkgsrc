@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4548 2026/07/19 06:53:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4549 2026/07/19 06:54:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6813,3 +6813,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xlockmore-lite to 5.89 [wiz 2026-07-18]
 	Updated x11/kitty to 0.48.0 [ktnb 2026-07-19]
 	Updated devel/p5-CPAN-Requirements-Dynamic to 0.003 [wiz 2026-07-19]
+	Updated net/p5-Net-DNS to 1.56 [wiz 2026-07-19]
