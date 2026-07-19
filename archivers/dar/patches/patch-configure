@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2022/10/03 13:59:05 nros Exp $
+$NetBSD: patch-configure,v 1.2 2026/07/19 08:23:59 adam Exp $
 
-* compatability fix
+Portability fix
 
---- configure.orig	2022-08-07 10:42:43.000000000 +0000
+--- configure.orig	2026-04-27 14:22:54.000000000 +0000
 +++ configure
-@@ -27616,7 +27616,7 @@ $as_echo "$as_me: WARNING: python bindin
+@@ -30067,7 +30067,7 @@ printf "%s\n" "$as_me: WARNING: python b
  
- else
+ else $as_nop
  
 -                 if test "x$enable_shared" != "xyes" -o "$debug_static" == "yes" ; then
 +                 if test "x$enable_shared" != "xyes" -o "$debug_static" = "yes" ; then
-                    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Cannot build python binding without shared library support" >&5
- $as_echo "$as_me: WARNING: Cannot build python binding without shared library support" >&2;}
+                    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: Cannot build python binding without shared library support" >&5
+ printf "%s\n" "$as_me: WARNING: Cannot build python binding without shared library support" >&2;}
                     local_python="no"
