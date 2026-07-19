@@ -1,0 +1,73 @@
+$NetBSD: patch-gcc_doc_invoke.texi,v 1.1 2026/07/19 11:17:44 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
+
+--- gcc/doc/invoke.texi.orig	2026-06-12 06:09:06.426522970 +0000
++++ gcc/doc/invoke.texi
+@@ -757,7 +757,7 @@ Objective-C and Objective-C++ Dialects}.
+ -freg-struct-return  -fshort-enums  -fshort-wchar
+ -fverbose-asm  -fpack-struct[=@var{n}]
+ -fleading-underscore  -ftls-model=@var{model}
+--fstack-reuse=@var{reuse_level}
++-fstack-reuse=@var{reuse_level} -fstack-use-cumulative-args
+ -ftrampolines -ftrampoline-impl=@r{[}stack@r{|}heap@r{]}
+ -ftrapv  -fwrapv
+ -fvisibility=@r{[}default@r{|}internal@r{|}hidden@r{|}protected@r{]}
+@@ -986,7 +986,7 @@ Objective-C and Objective-C++ Dialects}.
+ -twolevel_namespace  -umbrella  -undefined
+ -unexported_symbols_list  -weak_reference_mismatches
+ -whatsloaded  -F  -gused  -gfull  -mmacosx-version-min=@var{version}
+--mkernel  -mone-byte-bool}
++-mkernel  -mone-byte-bool -munreachable-traps}
+
+ @emph{DEC Alpha Options} (@ref{DEC Alpha Options})
+ @gccoptlist{-mno-fp-regs  -msoft-float
+@@ -19680,6 +19680,17 @@ the behavior of older compilers in which
+ not reused, the aggressive stack reuse can lead to runtime errors. This
+ option is used to control the temporary stack reuse optimization.
+
++@opindex fstack_use_cumulative_args
++@item -fstack-use-cumulative-args
++This option instructs the compiler to use the
++@code{cumulative_args_t}-based stack layout target hooks,
++@code{TARGET_FUNCTION_ARG_BOUNDARY_CA} and
++@code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY_CA}. If a given target does
++not define these hooks, the default behaviour is to fallback to using
++the standard non-@code{_CA} variants instead. Certain targets (such as
++AArch64 Darwin) require using the more advanced @code{_CA}-based
++hooks: For these targets this option should be enabled by default.
++
+ @opindex ftrapv
+ @item -ftrapv
+ This option generates traps for signed overflow on addition, subtraction,
+@@ -22026,7 +22037,7 @@ performance of the code.  Permissible va
+ @samp{cortex-a520}, @samp{cortex-a520ae}, @samp{cortex-a710}, @samp{cortex-a715},
+ @samp{cortex-a720}, @samp{cortex-a720ae}, @samp{ampere1}, @samp{ampere1a},
+ @samp{ampere1b}, @samp{cobalt-100}, @samp{apple-m1}, @samp{apple-m2},
+-@samp{apple-m3} and @samp{native}.
++@samp{apple-m3}, @samp{apple-m4} and @samp{native}.
+
+ The values @samp{cortex-a57.cortex-a53}, @samp{cortex-a72.cortex-a53},
+ @samp{cortex-a73.cortex-a35}, @samp{cortex-a73.cortex-a53},
+@@ -24107,7 +24118,7 @@ Permissible names are: @samp{arm7tdmi},
+ @samp{neoverse-n1}, @samp{neoverse-n2}, @samp{neoverse-v1}, @samp{xscale},
+ @samp{iwmmxt}, @samp{iwmmxt2}, @samp{ep9312}, @samp{fa526}, @samp{fa626},
+ @samp{fa606te}, @samp{fa626te}, @samp{fmp626}, @samp{fa726te}, @samp{star-mc1},
+-@samp{xgene1}.
++@samp{xgene1}, @samp{apple-m1}, @samp{apple-m2}, @samp{apple-m3}.
+
+ Additionally, this option can specify that GCC should tune the performance
+ of the code for a big.LITTLE system.  Permissible names are:
+@@ -26171,6 +26182,11 @@ without that switch.  Using this switch
+ other modules in a program, including system libraries.  Use this
+ switch to conform to a non-default data model.
+
++@opindex munreachable-traps
++@item -munreachable-traps
++Causes @code{__builtin_unreachable} to be rendered as a trap.  This is the
++default for all Darwin architectures.
++
+ @opindex mfix-and-continue
+ @opindex ffix-and-continue
+ @opindex findirect-data

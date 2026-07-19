@@ -1,0 +1,30 @@
+$NetBSD: patch-gcc_config_aarch64_aarch64-cores.def,v 1.1 2026/07/19 11:17:42 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
+
+--- gcc/config/aarch64/aarch64-cores.def.orig	2026-06-12 06:09:06.108518048 +0000
++++ gcc/config/aarch64/aarch64-cores.def
+@@ -177,7 +177,8 @@ AARCH64_CORE("cortex-r82ae", cortexr82ae
+ /* Apple (A12 and M) cores.
+    Known part numbers as listed in other public sources.
+    Placeholders for schedulers, generic_armv8_a for costs.
+-   A12 seems mostly 8.3, M1 is 8.5 without BTI, M2 and M3 are 8.6
++   A12 seems mostly 8.3, M1 is 8.5 without BTI, M2 and M3 are 8.6.
++   M4 is 9.2 but without SVE, so the closest match is 8.7.
+    From measurements made so far the odd-number core IDs are performance.  */
+ AARCH64_CORE("apple-a12", applea12, cortexa53, V8_3A,  (), generic_armv8_a, 0x61, 0x12, -1)
+ AARCH64_CORE("apple-m1", applem1_0, cortexa57, V8_5A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x21, 0x20), -1)
+@@ -188,7 +189,12 @@ AARCH64_CORE("apple-m2", applem2_0, cort
+ AARCH64_CORE("apple-m2", applem2_1, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x33, 0x32), -1)
+ AARCH64_CORE("apple-m2", applem2_2, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x35, 0x34), -1)
+ AARCH64_CORE("apple-m2", applem2_3, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x39, 0x38), -1)
+-AARCH64_CORE("apple-m3", applem3_0, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x49, 0x48), -1)
++AARCH64_CORE("apple-m3", applem3_0, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x43, 0x42), -1)
++AARCH64_CORE("apple-m3", applem3_1, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x45, 0x44), -1)
++AARCH64_CORE("apple-m3", applem3_2, cortexa57, V8_6A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x49, 0x48), -1)
++AARCH64_CORE("apple-m4", applem4_0, cortexa57, V8_7A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x53, 0x52), -1)
++AARCH64_CORE("apple-m4", applem4_1, cortexa57, V8_7A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x55, 0x54), -1)
++AARCH64_CORE("apple-m4", applem4_2, cortexa57, V8_7A,  (), generic_armv8_a, 0x61, AARCH64_BIG_LITTLE (0x59, 0x58), -1)
+
+ /* Armv9.0-A Architecture Processors.  */

@@ -1,10 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.1 2025/11/08 07:04:02 mrg Exp $
+$NetBSD: patch-configure.ac,v 1.2 2026/07/19 11:17:41 adam Exp $
 
 Enable COBOL on NetBSD amd64/arm64/riscv64.
 
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
 
---- configure.ac.orig	2025-08-07 23:51:39.874338130 -0700
-+++ configure.ac	2025-11-05 19:22:39.706058829 -0800
+--- configure.ac.orig	2026-06-12 06:09:05.615510417 +0000
++++ configure.ac
 @@ -801,14 +801,14 @@ case ,${enable_languages}, in
      ;;
    *)
@@ -22,3 +24,12 @@ Enable COBOL on NetBSD amd64/arm64/riscv64.
          ;;
        *-*-*)
          unsupported_languages="$unsupported_languages cobol"
+@@ -819,6 +819,8 @@ esac
+
+ # Disable libffi for some systems.
+ case "${target}" in
++  aarch64*-*-darwin2*)
++    ;;
+   powerpc-*-darwin*)
+     ;;
+   i[[3456789]]86-*-darwin*)

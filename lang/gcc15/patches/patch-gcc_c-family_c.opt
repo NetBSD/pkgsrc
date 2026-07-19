@@ -1,0 +1,26 @@
+$NetBSD: patch-gcc_c-family_c.opt,v 1.1 2026/07/19 11:17:42 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
+
+--- gcc/c-family/c.opt.orig	2026-06-12 06:09:06.076517552 +0000
++++ gcc/c-family/c.opt
+@@ -1806,6 +1806,18 @@ static-libmpxwrappers
+ Driver WarnRemoved
+ Removed in GCC 9.  This switch has no effect.
+
++fallow-const-var-array-size
++C ObjC C++ ObjC++ LTO Var(flag_allow_const_var_array_size) Init(0)
++Allow arrays sizes to be const-qualified vars in C and Objective-C.
++
++fallow-extended-attribute-placement
++C ObjC C++ ObjC++ LTO Var(flag_allow_ext_attr_placement) Init(0)
++Allow placement of attributes on function definitions.
++
++fallow-extra-keywords
++C ObjC C++ ObjC++ LTO Var(flag_allow_extra_keywords) Init(0)
++Allow additional C keywords in C++ and vice versa.
++
+ fcilkplus
+ C ObjC C++ ObjC++ LTO Undocumented Ignore
+ Removed in GCC 8.  This switch has no effect.

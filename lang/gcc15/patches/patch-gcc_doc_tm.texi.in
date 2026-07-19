@@ -1,0 +1,38 @@
+$NetBSD: patch-gcc_doc_tm.texi.in,v 1.1 2026/07/19 11:17:44 adam Exp $
+
+Support Darwin/aarch64.
+https://github.com/Homebrew/homebrew-core/blob/main/Patches/gcc/gcc-15.3.0.diff
+
+--- gcc/doc/tm.texi.in.orig	2026-06-12 06:09:06.435523110 +0000
++++ gcc/doc/tm.texi.in
+@@ -951,6 +951,8 @@ applied.
+
+ @hook TARGET_PROMOTE_FUNCTION_MODE
+
++@hook TARGET_PROMOTE_FUNCTION_MODE_CA
++
+ @defmac PARM_BOUNDARY
+ Normal alignment required for function parameters on the stack, in
+ bits.  All stack parameters receive at least this much alignment
+@@ -3435,8 +3437,12 @@ required.
+
+ @hook TARGET_FUNCTION_ARG_BOUNDARY
+
++@hook TARGET_FUNCTION_ARG_BOUNDARY_CA
++
+ @hook TARGET_FUNCTION_ARG_ROUND_BOUNDARY
+
++@hook TARGET_FUNCTION_ARG_ROUND_BOUNDARY_CA
++
+ @defmac FUNCTION_ARG_REGNO_P (@var{regno})
+ A C expression that is nonzero if @var{regno} is the number of a hard
+ register in which function arguments are sometimes passed.  This does
+@@ -8122,6 +8128,8 @@ maintainer is familiar with.
+
+ @hook TARGET_RUN_TARGET_SELFTESTS
+
++@hook TARGET_UNREACHABLE_SHOULD_TRAP
++
+ @hook TARGET_MEMTAG_CAN_TAG_ADDRESSES
+
+ @hook TARGET_MEMTAG_TAG_SIZE
