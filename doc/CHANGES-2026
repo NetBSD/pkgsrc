@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4566 2026/07/19 11:45:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4567 2026/07/19 11:47:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6834,3 +6834,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-tomlkit to 0.15.1 [wiz 2026-07-19]
 	Updated lang/gcc15 to 15.3.0 [adam 2026-07-19]
 	Updated www/py-websockets to 16.1.1 [wiz 2026-07-19]
+	Updated www/py-zensical to 0.0.51 [wiz 2026-07-19]
