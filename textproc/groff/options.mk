@@ -1,20 +1,16 @@
-# $NetBSD: options.mk,v 1.15 2025/04/21 21:26:46 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2026/07/19 08:05:45 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
-PKG_SUPPORTED_OPTIONS=	groff-docs x11
-PKG_SUGGESTED_OPTIONS=	groff-docs x11
+PKG_SUPPORTED_OPTIONS=	ghostscript x11
+PKG_SUGGESTED_OPTIONS=	ghostscript x11
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mgroff-docs)
-DEPENDS+=		netpbm>=10.0:../../graphics/netpbm
-DEPENDS+=		${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
+.if !empty(PKG_OPTIONS:Mghostscript)
 USE_TOOLS+=		gs:run
 PLIST_SRC+=		PLIST.docs
-
-.include "../../lang/python/pyversion.mk"
 .else
-CONFIGURE_ENV+=		with_doc=no
+CONFIGURE_ARGS+=	--without-gs
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
