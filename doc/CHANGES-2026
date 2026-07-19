@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4550 2026/07/19 07:50:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4551 2026/07/19 08:10:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6815,3 +6815,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-CPAN-Requirements-Dynamic to 0.003 [wiz 2026-07-19]
 	Updated net/p5-Net-DNS to 1.56 [wiz 2026-07-19]
 	Updated math/ggml to 0.17.0 [wiz 2026-07-19]
+	Updated textproc/groff to 1.24.1 [adam 2026-07-19]
+	Removed databases/wiredtiger [adam 2026-07-19]
