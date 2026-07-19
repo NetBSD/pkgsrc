@@ -1,9 +1,9 @@
-$NetBSD: patch-setup.py,v 1.6 2026/06/08 18:26:18 ktnb Exp $
+$NetBSD: patch-setup.py,v 1.7 2026/07/19 00:35:25 ktnb Exp $
 
 Only point to the pkgsrc fonts for Darwin.
 Don't crash on colored emoji render on NetBSD.
 
---- setup.py.orig	2026-06-07 04:07:24.000000000 +0000
+--- setup.py.orig	2026-07-18 02:07:54.000000000 +0000
 +++ setup.py
 @@ -544,6 +544,9 @@ def init_env(
      )
