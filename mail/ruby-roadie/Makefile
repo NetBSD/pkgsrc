@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/04/19 14:14:17 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/19 15:23:01 taca Exp $
 
-DISTNAME=	roadie-5.3.0
+DISTNAME=	roadie-5.3.1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Making HTML emails comfortable for the Ruby rockstars
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.15<2:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-css-parser>=1.4<3:../../www/ruby-css-parser
+DEPENDS+=	${RUBY_PKGPREFIX}-css-parser>=1.4<4:../../www/ruby-css-parser
 
 USE_LANGUAGES=	# none
 
