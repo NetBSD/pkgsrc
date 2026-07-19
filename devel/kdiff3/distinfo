@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.32 2026/04/11 10:49:14 wiz Exp $
+$NetBSD: distinfo,v 1.33 2026/07/19 10:19:06 wiz Exp $
 
-BLAKE2s (kdiff3-1.12.4.tar.xz) = ebcb2e8bb77b66086b706f39a84ce4b7b9c0ade0e986bb40c369af64c9c89772
-SHA512 (kdiff3-1.12.4.tar.xz) = 6ce32d11f218a712583ae7b07654958d88d3b0721052dfba0599d3130287442c64bdb411f0f1e6857d8ef5b07f89956eb9b0c484fb192402cdaec4a858ec3046
-Size (kdiff3-1.12.4.tar.xz) = 1224576 bytes
-SHA1 (patch-src_diff.cpp) = c599523be7d8f99d379b8b856b683b2315621d79
-SHA1 (patch-src_gnudiff__io.cpp) = d47950e6c64ac8fabd050128eb14d47d4a4b1ea7
+BLAKE2s (kdiff3-1.12.5.tar.xz) = 5dd8c54501082de4ed75d2e6c2cd15712da1d61f2676398556e2fb2dc99843e1
+SHA512 (kdiff3-1.12.5.tar.xz) = 9b854461bcb44111e9780dd58d8aafdad393b185147731f89ce4c96aeff2eb7f8567df6a851e6d54577b110266e09242177f6986a166271f83327963675bdfc8
+Size (kdiff3-1.12.5.tar.xz) = 1225020 bytes
