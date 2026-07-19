@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/05/01 19:31:21 cheusov Exp $
+# $NetBSD: options.mk,v 1.5 2026/07/19 08:23:59 adam Exp $
 
 ## Our threading check here is the same as the one used in devel/perl5.
 #
@@ -10,7 +10,7 @@ PLIST_VARS+=		nls
 
 ## XXX I'm following the USE_FEATURES semantics used in security/openssl.
 #
-.if !empty(USE_BUILTIN.pthread:tl:Myes)
+.if ${USE_BUILTIN.pthread:tl} == yes
 USE_FEATURES.dar=	threads
 .else
 USE_FEATURES.dar=	# empty
