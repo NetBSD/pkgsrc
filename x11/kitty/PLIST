@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/05/19 14:59:16 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/07/19 00:35:25 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -689,7 +689,7 @@ share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
 share/doc/kitty/html/_images/social_previews/summary_build_e554a463.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_fcc7547c.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_fa6a3b75.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png

@@ -1,13 +1,13 @@
-$NetBSD: patch-glfw_wl__client__side__decorations.c,v 1.1 2024/05/30 15:00:54 ktnb Exp $
+$NetBSD: patch-glfw_wl__client__side__decorations.c,v 1.2 2026/07/19 00:35:25 ktnb Exp $
 
 Support non-evdev platforms.
 
---- glfw/wl_client_side_decorations.c.orig	2024-05-25 03:37:36.000000000 +0000
+--- glfw/wl_client_side_decorations.c.orig	2026-07-18 02:07:54.000000000 +0000
 +++ glfw/wl_client_side_decorations.c
-@@ -12,6 +12,11 @@
- #include <errno.h>
- #include <string.h>
- #include <stdlib.h>
+@@ -22,6 +22,11 @@
+ #else
+ #include <linux/input.h>
+ #endif
 +#ifndef BTN_LEFT
 +#define BTN_LEFT	(0x110)
 +#define BTN_RIGHT	(0x111)
