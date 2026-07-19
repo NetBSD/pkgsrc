@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.753 2026/07/17 23:39:01 gdt Exp $
+# $NetBSD: Makefile,v 1.754 2026/07/19 08:07:38 adam Exp $
 
 COMMENT=	Databases
 
@@ -519,7 +519,6 @@ SUBDIR+=	tokyocabinet
 SUBDIR+=	tokyotyrant
 SUBDIR+=	unixodbc
 SUBDIR+=	vsqlite++
-SUBDIR+=	wiredtiger
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yap2lc
 SUBDIR+=	yasql
