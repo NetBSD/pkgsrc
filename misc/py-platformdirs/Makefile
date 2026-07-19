@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2026/05/28 04:01:34 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/07/19 10:50:57 wiz Exp $
 
-DISTNAME=	platformdirs-4.10.0
+DISTNAME=	platformdirs-4.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
@@ -18,9 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.15.1:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-# as of 4.9.2
-# 1 failed, 752 passed, 71 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
