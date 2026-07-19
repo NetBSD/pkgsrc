@@ -1,44 +1,40 @@
-# $NetBSD: Makefile,v 1.103 2026/06/30 08:12:08 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/07/19 08:05:45 adam Exp $
 
-DISTNAME=	groff-1.23.0
-PKGREVISION=	1
+DISTNAME=	groff-1.24.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/groff/groff.html
 COMMENT=	GNU roff text processing suite
 LICENSE=	gnu-gpl-v3
 
-CHECK_PERMS=		NO
-MAKE_JOBS_SAFE=		NO
 OVERRIDE_DIRDEPTH=	4
 
-DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
+DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
+DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
-TEXINFO_REQD+=		4.8
-USE_TOOLS+=		perl sed:run awk:run gmake makeinfo yacc
-EXTRACT_USING=		bsdtar
 USE_FEATURES=		getopt_long
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		awk:run gmake perl pkg-config sed:run yacc
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-urw-fonts-dir=${PREFIX}/share/fonts/urw
-
-INFO_FILES=		YES
+CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
+INFO_FILES=		yes
+TEXINFO_REQD+=		4.8
 
 REPLACE_PERL+=		contrib/*/*.pl
 
 .include "options.mk"
 
-PLIST_SRC+=		${WRKDIR}/PLIST-local
-PLIST_SRC+=		PLIST
+PLIST_SRC+=	${WRKDIR}/PLIST-local PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=	PAPERSIZE
 .if defined(PAPERSIZE)
-CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
+CONFIGURE_ENV+=	PAGE=${PAPERSIZE}
 .endif
 
 post-extract:
@@ -104,6 +100,5 @@ post-install:
 	fi
 .endfor
 
-# we only want the charset.alias file, so no buildlinkery for libiconv
-#DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
+.include "../../textproc/uchardet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
