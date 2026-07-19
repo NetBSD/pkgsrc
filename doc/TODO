@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27603 2026/07/19 08:10:43 adam Exp $
+$NetBSD: TODO,v 1.27604 2026/07/19 10:14:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -815,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o kdiff3-1.12.5
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -838,6 +839,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcbor-0.14.0
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
@@ -966,6 +968,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
 	o nios2-binutils-2.36.1
+	o node_exporter-1.12.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsca-ng-1.6
@@ -1019,6 +1022,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
+	o oxygen-icons-6.28.0
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
@@ -1134,12 +1138,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-filelock-3.31.0
+	o py-google-api-core-2.32.0
+	o py-google-auth-2.56.0
 	o py-grpcio-1.82.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-platformdirs-4.10.1
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0 [waiting for py-pydantic release that works with this]
 	o py-simpletal-5.1
@@ -1148,10 +1156,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
+	o py-tomlkit-0.15.1
 	o py-torch-2.10
 	o py-uliweb-0.6
+	o py-uv-build-0.11.29
 	o py-wat-0.6.0
+	o py-websockets-16.1.1
 	o py-yubiauth-0.3.10
+	o py-zensical-0.0.51
 	o pythontidy-1.23
 	o q5go-2.1.3
 	o qca2-2.3.9
@@ -1172,6 +1184,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-5.9
 	o resize_image-0.7
+	o resterm-0.47.1
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
@@ -1187,6 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
+	o rumdl-0.2.36
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
