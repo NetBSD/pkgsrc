@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/09/22 07:44:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/07/19 10:52:28 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -34,9 +34,6 @@ ${PYSITELIB}/tomlkit/py.typed
 ${PYSITELIB}/tomlkit/source.py
 ${PYSITELIB}/tomlkit/source.pyc
 ${PYSITELIB}/tomlkit/source.pyo
-${PYSITELIB}/tomlkit/toml_char.py
-${PYSITELIB}/tomlkit/toml_char.pyc
-${PYSITELIB}/tomlkit/toml_char.pyo
 ${PYSITELIB}/tomlkit/toml_document.py
 ${PYSITELIB}/tomlkit/toml_document.pyc
 ${PYSITELIB}/tomlkit/toml_document.pyo
