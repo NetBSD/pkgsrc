@@ -1109,6 +1109,7 @@ xterm-toolbar		Enable toolbar support in xterm.
 xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 xvideo			Enable X-Video Motion Compensation library support.
+xwayland		Enable Xwayland support for running X11 applications on Wayland.
 z3			Enable support for the Z3 theorem prover.
 zbar			Enable support for zbar.
 zenmap			Enable nmap GUI frontend.
