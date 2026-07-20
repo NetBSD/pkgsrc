@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/07/20 05:27:56 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/ssrf_filter.rb
+${GEM_LIBDIR}/lib/ssrf_filter/ssrf_filter.rb
+${GEM_LIBDIR}/lib/ssrf_filter/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
