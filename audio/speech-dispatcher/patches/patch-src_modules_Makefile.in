@@ -1,0 +1,41 @@
+$NetBSD: patch-src_modules_Makefile.in,v 1.3 2026/07/20 20:31:18 wiz Exp $
+
+Honor LDFLAGS.
+
+--- src/modules/Makefile.in.orig	2025-05-06 19:08:40.000000000 +0000
++++ src/modules/Makefile.in
+@@ -262,7 +262,7 @@ libspeechd_module_la_LINK = $(LIBTOOL) $(AM_V_lt) --ta
+ libspeechd_module_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+ 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+ 	$(AM_CFLAGS) $(CFLAGS) $(libspeechd_module_la_LDFLAGS) \
+-	$(LDFLAGS) -o $@
++	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ am__sd_baratinoo_SOURCES_DIST = baratinoo.c baratinoo_compat.h \
+ 	module_config.c module_utils.c module_utils.h
+ am__objects_1 = module_config.$(OBJEXT) module_utils.$(OBJEXT)
+@@ -647,7 +647,7 @@ LD = @LD@
+ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ LD = @LD@
+-LDFLAGS = $(am__append_1)
++LDFLAGS = @LDFLAGS@ $(am__append_1)
+ LIBAO_CFLAGS = @LIBAO_CFLAGS@
+ LIBAO_LIBS = @LIBAO_LIBS@
+ LIBICONV = @LIBICONV@
+@@ -1838,13 +1838,13 @@ uninstall-am: uninstall-dist_snddataDATA uninstall-lib
+ @espeak_ng_support_TRUE@install-exec-hook: install-exec-hook-espeak
+ 
+ @baratinoo_shim_TRUE@@baratinoo_support_TRUE@libbaratinoo.so: $(srcdir)/baratinoo_shim.c
+-@baratinoo_shim_TRUE@@baratinoo_support_TRUE@	$(CC) -fPIC -shared $< -o $@
++@baratinoo_shim_TRUE@@baratinoo_support_TRUE@	$(CC) $(LDFLAGS) -fPIC -shared $< -o $@
+ 
+ @kali_shim_TRUE@@kali_support_TRUE@lib%.so: $(srcdir)/kali_%_shim.cpp
+-@kali_shim_TRUE@@kali_support_TRUE@	$(CXX) -fPIC -shared $< -o $@ -I$(srcdir)/kali_shim
++@kali_shim_TRUE@@kali_support_TRUE@	$(CXX) $(LDFLAGS) -fPIC -shared $< -o $@ -I$(srcdir)/kali_shim
+ 
+ @voxin_shim_TRUE@@voxin_support_TRUE@libvoxin.so: $(srcdir)/voxin_shim.c
+-@voxin_shim_TRUE@@voxin_support_TRUE@	$(CC) -fPIC -shared $< -o $@
++@voxin_shim_TRUE@@voxin_support_TRUE@	$(CC) $(LDFLAGS) -fPIC -shared $< -o $@
+ 
+ #
+ # Dummy module speech message
