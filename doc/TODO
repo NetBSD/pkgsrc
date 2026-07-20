@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27620 2026/07/20 09:54:39 wiz Exp $
+$NetBSD: TODO,v 1.27621 2026/07/20 17:27:40 kikadf Exp $
 
 Suggested new packages
 ======================
@@ -1351,7 +1351,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-11.5
 	o wine-devel-9.22
 	o wkhtmltopdf-0.12.6
-	o wlroots-0.20 [wip]
 	o wmi-11
 	o wordpress-7.0.2
 	o wordwarvi-1.0.4
