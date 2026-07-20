@@ -1,0 +1,4 @@
+Auth::Sanitizer
+
+auth-sanitizer provides small, dependency-light helpers for keeping OAuth
+and authentication secrets out of object inspection and log output.

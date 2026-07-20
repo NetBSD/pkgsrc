@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/20 05:13:18 taca Exp $
+
+BLAKE2s (auth-sanitizer-0.2.3.gem) = 0bdc8f1f8972ac6063f44ada9f62f921df5c2be6bd6ca8495a60bdd634911322
+SHA512 (auth-sanitizer-0.2.3.gem) = 67d0411b7e418845c238025e988a79e2ec9fedbd37330e0f8dd862d62c139a8a314d6a4a647e4fb30b49ae18486d5781978331cf8420903a82b13a699059ec02
+Size (auth-sanitizer-0.2.3.gem) = 44544 bytes
