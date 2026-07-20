@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27621 2026/07/20 17:27:40 kikadf Exp $
+$NetBSD: TODO,v 1.27622 2026/07/20 17:33:56 kikadf Exp $
 
 Suggested new packages
 ======================
@@ -1249,7 +1249,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sup-0.4
 	o svt-av1-4.0
 	o swapd-1.0.5
-	o sway-1.12 [wip]
 	o swi-prolog-9.2.9
 	o swi-prolog-lite-9.2.9
 	o swi-prolog-packages-9.2.9
