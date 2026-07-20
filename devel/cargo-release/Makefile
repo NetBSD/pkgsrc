@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/04/02 12:11:19 pin Exp $
+# $NetBSD: Makefile,v 1.18 2026/07/20 12:55:36 pin Exp $
 
-DISTNAME=	cargo-release-1.1.2
+DISTNAME=	cargo-release-1.1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crate-ci/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0 AND mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.91.0
+RUST_REQ=	1.92.0
 USE_TOOLS+=	pkg-config perl gmake
 USE_LANGUAGES+=	c c++
 
