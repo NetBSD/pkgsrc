@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4614 2026/07/20 17:33:55 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4615 2026/07/20 17:36:06 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6886,3 +6886,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chromium to 150.0.7871.128 [kikadf 2026-07-20]
 	Updated wayland/wlroots to 0.20.2 [kikadf 2026-07-20]
 	Updated wayland/sway to 1.12 [kikadf 2026-07-20]
+	Updated wayland/swaylock to 1.8.6 [kikadf 2026-07-20]
