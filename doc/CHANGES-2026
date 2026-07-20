@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4584 2026/07/20 05:31:46 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4585 2026/07/20 05:34:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6852,3 +6852,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-snaky_hash to 2.0.7 [taca 2026-07-20]
 	Added security/ruby-ssrf_filter version 1.5.0 [taca 2026-07-20]
 	Updated security/ruby-oauth-tty to 1.0.13 [taca 2026-07-20]
+	Updated security/ruby-oauth to 1.1.8 [taca 2026-07-20]
