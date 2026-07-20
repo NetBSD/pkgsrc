@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4601 2026/07/20 08:05:08 he Exp $
+$NetBSD: CHANGES-2026,v 1.4602 2026/07/20 09:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6870,3 +6870,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xload to 1.2.1 [wiz 2026-07-20]
 	Updated lang/gcc14 to 14.3.0nb2 [he 2026-07-20]
 	Updated lang/gcc14-libs to 14.3.0nb3 [he 2026-07-20]
+	Updated textproc/rumdl to 0.2.37 [wiz 2026-07-20]
