@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4592 2026/07/20 05:47:24 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4593 2026/07/20 05:53:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6860,3 +6860,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-tilt to 2.8.0 [taca 2026-07-20]
 	Updated textproc/ruby-yard to 0.9.45 [taca 2026-07-20]
 	Updated time/ruby-tzinfo-data to 1.2026.3 [taca 2026-07-20]
+	Updated www/ruby-aws-partitions to 1.1271.0 [taca 2026-07-20]
