@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4578 2026/07/20 05:11:19 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4579 2026/07/20 05:14:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6846,3 +6846,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ruby-windows_error to 0.1.6 [taca 2026-07-20]
 	Updated net/ruby-recog to 3.1.33 [taca 2026-07-20]
 	Updated security/ruby-airbrussh to 1.6.2 [taca 2026-07-20]
+	Added security/ruby-auth-sanitizer version 0.2.3 [taca 2026-07-20]
