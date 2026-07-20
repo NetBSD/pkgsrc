@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/04/14 13:27:07 kikadf Exp $
+$NetBSD: distinfo,v 1.2 2026/07/20 17:35:50 kikadf Exp $
 
-BLAKE2s (swaylock-1.8.5.tar.gz) = 171b673fb6990a417412b990af01b1029f760d0e82dff58c5a654f30e8de1b74
-SHA512 (swaylock-1.8.5.tar.gz) = efa0bd0839b4086e7519ce486452b5e9ac54d1cde5a10f4e3dff8165f94c3863102ce708c3ec1107f134f202929ca8744ca4c02394e2ab1da9a53fdfe48fc548
-Size (swaylock-1.8.5.tar.gz) = 34125 bytes
+BLAKE2s (swaylock-1.8.6.tar.gz) = 5fb53fabcc947c53b269f274d1027c1e2ac8935c1e9f2c7690017555c7e7712c
+SHA512 (swaylock-1.8.6.tar.gz) = 833d25d580ed082e3fcce7366867fa931f3588e38d7dedd692039c41510dcb364f2bbe6941a7173aacb746827643da4feff94ec62790fe5094b38fff71048ef2
+Size (swaylock-1.8.6.tar.gz) = 34314 bytes
