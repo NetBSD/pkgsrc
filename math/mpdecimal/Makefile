@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/05/06 16:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/20 18:12:24 ryoon Exp $
 
 DISTNAME=	mpdecimal-4.0.1
 CATEGORIES=	math
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		default
 TEST_TARGET=		check_local
 # Let libmpdec++.so find libmpdec.so
-CONFIGURE_ENV+=		LDXXFLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+CONFIGURE_ENV+=		LDXXFLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib ${LDFLAGS}"
 PKGCONFIG_OVERRIDE+=	libmpdec/.pc/libmpdec.pc.in
 PKGCONFIG_OVERRIDE+=	libmpdec++/.pc/libmpdec++.pc.in
 
