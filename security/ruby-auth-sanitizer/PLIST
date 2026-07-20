@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2026/07/20 05:13:18 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CITATION.cff
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/FUNDING.md
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/MIT.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/RUBOCOP.md
+${GEM_LIBDIR}/SECURITY.md
+${GEM_LIBDIR}/certs/pboling.pem
+${GEM_LIBDIR}/lib/auth/sanitizer.rb
+${GEM_LIBDIR}/lib/auth/sanitizer/core.rb
+${GEM_LIBDIR}/lib/auth/sanitizer/filtered_attributes.rb
+${GEM_LIBDIR}/lib/auth/sanitizer/sanitized_logger.rb
+${GEM_LIBDIR}/lib/auth/sanitizer/thing_filter.rb
+${GEM_LIBDIR}/lib/auth/sanitizer/version.rb
+${GEM_LIBDIR}/lib/auth_sanitizer/loader.rb
+${GEM_LIBDIR}/sig/auth/sanitizer.rbs
+${GEM_LIBDIR}/sig/auth/sanitizer/version.rbs
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
