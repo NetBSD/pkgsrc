@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 11:32:14 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/20 17:33:35 kikadf Exp $
 
-DISTNAME=	sway-1.11
+DISTNAME=	sway-1.12
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://swaywm.org/
 COMMENT=	Tilling, i3-compatible Wayland compositor
 LICENSE=	mit
