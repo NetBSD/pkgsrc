@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.115 2026/06/23 13:39:43 wiz Exp $
+# $NetBSD: compiler.mk,v 1.116 2026/07/20 14:42:11 wiz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -314,10 +314,6 @@ CWRAPPERS_PREPEND.cxx+=	${_MKREPRO_CFLAGS}
 .if (${_PKGSRC_USE_RELRO} == "partial" || ${_PKGSRC_USE_RELRO} == "full") \
      && defined(_RELRO_LDFLAGS)
 LDFLAGS+=		${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+= ${_RELRO_LDFLAGS}
 .endif
 
 # Enable position-independent executables if the user has chosen to and
