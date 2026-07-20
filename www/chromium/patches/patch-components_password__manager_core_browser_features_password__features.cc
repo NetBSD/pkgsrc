@@ -1,4 +1,4 @@
-$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.23 2026/07/08 13:42:21 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.24 2026/07/20 13:53:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -12,15 +12,6 @@ $NetBSD: patch-components_password__manager_core_browser_features_password__feat
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_IOS) || \
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -115,7 +115,7 @@ BASE_FEATURE(kFetchChangePasswordUrlForP
- BASE_FEATURE(kFillOnAccountSelect,
-              "fill-on-account-select",
- // TODO(504600482): Disable the feature again upon fixing the bug.
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
