@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/03/07 13:30:46 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/20 05:11:09 taca Exp $
 
-DISTNAME=	airbrussh-1.6.1
+DISTNAME=	airbrussh-1.6.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
