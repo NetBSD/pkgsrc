@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/06/28 15:08:18 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/20 05:25:12 taca Exp $
 
-DISTNAME=	snaky_hash-2.0.6
+DISTNAME=	snaky_hash-2.0.7
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Hashie::Mash joint to make #snakelife better
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=0.1.0<6:../../misc/ruby-hashie
-DEPENDS+=	${RUBY_PKGPREFIX}-version_gem>=1.1.8<2:../../devel/ruby-version_gem
+DEPENDS+=	${RUBY_PKGPREFIX}-version_gem>=1.1.14<2:../../devel/ruby-version_gem
 
 USE_LANGUAGES=	# none
 
