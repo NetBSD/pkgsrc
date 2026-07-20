@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4600 2026/07/20 07:10:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4601 2026/07/20 08:05:08 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6868,3 +6868,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-css-parser to 3.0.0 [taca 2026-07-20]
 	Updated x11/xkbprint to 1.0.8 [wiz 2026-07-20]
 	Updated x11/xload to 1.2.1 [wiz 2026-07-20]
+	Updated lang/gcc14 to 14.3.0nb2 [he 2026-07-20]
+	Updated lang/gcc14-libs to 14.3.0nb3 [he 2026-07-20]
