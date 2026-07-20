@@ -1,0 +1,16 @@
+$NetBSD: patch-gcc_config_rs6000_t-rs6000,v 1.1 2026/07/20 08:02:51 he Exp $
+
+Carry over changes from in-tree gcc in an attempt at
+making this build on NetBSD/powerpc.
+
+--- gcc/config/rs6000/t-rs6000.orig	13 Sep 2025 23:45:31 -0000	1.1.1.13
++++ gcc/config/rs6000/t-rs6000	14 Sep 2025 00:07:23 -0000	1.11
+@@ -93,6 +93,8 @@
+ 
+ $(srcdir)/config/rs6000/rs6000-tables.opt: $(srcdir)/config/rs6000/genopt.sh \
+   $(srcdir)/config/rs6000/rs6000-cpus.def
++	@echo "NOT REBUILDING $@"
++NetBSD_DISABLED_rs6000-tables.opt:
+ 	$(SHELL) $(srcdir)/config/rs6000/genopt.sh $(srcdir)/config/rs6000 > \
+ 		$(srcdir)/config/rs6000/rs6000-tables.opt
+ 

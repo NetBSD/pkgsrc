@@ -1,0 +1,28 @@
+$NetBSD: patch-gcc_config_rs6000_t-netbsd,v 1.1 2026/07/20 08:02:51 he Exp $
+
+Carry over changes from in-tree gcc in an attempt at
+making this build on NetBSD/powerpc.
+
+--- gcc/config/rs6000/t-netbsd.orig	13 Sep 2025 23:45:31 -0000	1.1.1.12
++++ gcc/config/rs6000/t-netbsd	14 Sep 2025 00:07:23 -0000	1.13
+@@ -18,6 +18,10 @@
+ # along with GCC; see the file COPYING3.  If not see
+ # <http://www.gnu.org/licenses/>.
+ 
++# It is important that crtbegin.o, etc., aren't surprised by stuff in .sdata.
++CRTSTUFF_T_CFLAGS += -msdata=none
++CRTSTUFF_T_CFLAGS_S += -msdata=none
++
+ # Switch synonyms
+ MULTILIB_MATCHES_FLOAT	= msoft-float=mcpu?401 \
+ 			  msoft-float=mcpu?403 \
+@@ -34,3 +38,9 @@
+ MULTILIB_EXCEPTIONS	=
+ 
+ MULTILIB_MATCHES	= ${MULTILIB_MATCHES_FLOAT}
++
++LIBGCC = stmp-multilib
++
++INSTALL_LIBGCC = install-multilib
++EXTRA_MULTILIB_PARTS = crtbegin$(objext) crtend$(objext) \
++  crtbeginS$(objext) crtendS$(objext) crtbeginT$(objext)
