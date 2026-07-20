@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/04 12:26:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/07/20 05:02:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.pullreview.yml
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/lib/windows_error.rb
 ${GEM_LIBDIR}/lib/windows_error/error_code.rb
 ${GEM_LIBDIR}/lib/windows_error/h_result.rb
@@ -18,6 +19,8 @@ ${GEM_LIBDIR}/lib/windows_error/nt_status.rb
 ${GEM_LIBDIR}/lib/windows_error/version.rb
 ${GEM_LIBDIR}/lib/windows_error/win32.rb
 ${GEM_LIBDIR}/spec/lib/windows_error/error_code_spec.rb
+${GEM_LIBDIR}/spec/lib/windows_error/h_result/facility_spec.rb
+${GEM_LIBDIR}/spec/lib/windows_error/h_result_spec.rb
 ${GEM_LIBDIR}/spec/lib/windows_error/nt_status_spec.rb
 ${GEM_LIBDIR}/spec/lib/windows_error/win32_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
