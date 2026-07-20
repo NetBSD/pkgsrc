@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2026/07/08 13:42:13 kikadf Exp $
+$NetBSD: distinfo,v 1.51 2026/07/20 13:53:51 kikadf Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -66,12 +66,12 @@ Size (cc-1.2.61.crate) = 97163 bytes
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
 Size (cfg-if-1.0.4.crate) = 9360 bytes
-BLAKE2s (chromium-150.0.7871.100-lite.tar.xz) = 08e1068a8861caa608b6868fe5d6c3d5db0610990a527d3306b03d59785a00e7
-SHA512 (chromium-150.0.7871.100-lite.tar.xz) = a965cedb12bf98116cd86d15cb8b7fd5250c36c6e8d6ba111fcce2335b91c3125c19cab9c7d799e0cad6fe7fe0d0da51833edb5cc750b0d5ce9b0fdfffd16a24
-Size (chromium-150.0.7871.100-lite.tar.xz) = 1668003676 bytes
-BLAKE2s (chromium-150.0.7871.100-testdata.tar.xz) = 0ba28e89646352f44fc49180b0ec2a91739a285ad9f2bbe8753bbb8ffbdd755f
-SHA512 (chromium-150.0.7871.100-testdata.tar.xz) = b09a630a200b4f1eb68e950dfd993546af5ce42971c7fe335ed832ed004dd72b949ac2c9642f1541caa446d7e9245761a723ac6b4d6ec0263b90506520166579
-Size (chromium-150.0.7871.100-testdata.tar.xz) = 1314438252 bytes
+BLAKE2s (chromium-150.0.7871.128-lite.tar.xz) = 51664bfdfcefa3d720cea0f69c531a606c85fc01d1c6425ad9ffc1b37710d876
+SHA512 (chromium-150.0.7871.128-lite.tar.xz) = ee69d03ee170eb57a2e2fd9b6ce691d08a5cd72a738044d7ac2d58c53cbec33d39369b6f543bf9d44934f62e33240e2e5a0f0b093ee5b846de1a0e9d1ad48b0d
+Size (chromium-150.0.7871.128-lite.tar.xz) = 1670339852 bytes
+BLAKE2s (chromium-150.0.7871.128-testdata.tar.xz) = 10aaa0ec680d6f7b300682f3b353b925bda2337068b208433304ae230aa1f1da
+SHA512 (chromium-150.0.7871.128-testdata.tar.xz) = ac983c117b51925a068b97a14bef33b0cececc268137426bcef5680fb642a4d9485490ed66a61307ba0b67b27a705a00661c42484d7022680eda09c8a00873d9
+Size (chromium-150.0.7871.128-testdata.tar.xz) = 1314346616 bytes
 BLAKE2s (cmake-0.1.58.crate) = a4568b73f30075a127114fb24a891b182573483d81080643888ecbd5e954efe7
 SHA512 (cmake-0.1.58.crate) = 49420a5d7d71ddccc21b71373769e1e28ab98c9af1a0c5d59fc3127e6dcc45cb1b7c6b5a37c9110907daceda7fd10bb59344f2bb8f041b18d62b16c22c5d0d60
 Size (cmake-0.1.58.crate) = 20474 bytes
@@ -1299,7 +1299,7 @@ SHA1 (patch-components_paint__preview_browser_paint__preview__client.cc) = d0546
 SHA1 (patch-components_paint__preview_browser_paint__preview__client__unittest.cc) = eb4e8df66fe0c4748471e861d84e2818df92d6a8
 SHA1 (patch-components_paint__preview_common_proto_paint__preview.proto) = 533c5d0a3a99a57f1edb61c5e81d502fa5169ef5
 SHA1 (patch-components_paint__preview_player_player__compositor__delegate.cc) = 728e1b82477670e87d012280ae56d25782294463
-SHA1 (patch-components_password__manager_core_browser_features_password__features.cc) = 4e3998ea34d7f965b00a4ea36bf3c566c981f21c
+SHA1 (patch-components_password__manager_core_browser_features_password__features.cc) = 95f59f57861fb8a679fe7cab0ce2318010cc6d74
 SHA1 (patch-components_password__manager_core_browser_features_password__features.h) = 3099f4dfcd81d0721da2a24f62ea5a33076ecf1e
 SHA1 (patch-components_password__manager_core_browser_password__autofill__manager.cc) = 78a87f611561a1b78192fc9c3780d996ea1277e6
 SHA1 (patch-components_password__manager_core_browser_password__autofill__manager.h) = 3eb9396b297283061d6f45ce0caf1cb0c6d82b81
