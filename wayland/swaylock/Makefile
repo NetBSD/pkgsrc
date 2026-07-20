@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 13:27:07 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/20 17:35:50 kikadf Exp $
 
-DISTNAME=	swaylock-1.8.5
+DISTNAME=	swaylock-1.8.6
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://swaywm.org/
 COMMENT=	Screen locker for Wayland compositors
 LICENSE=	mit
