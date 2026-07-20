@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1016 2026/07/05 05:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1017 2026/07/20 05:13:49 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -603,6 +603,7 @@ SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
 SUBDIR+=	ruby-airbrussh
+SUBDIR+=	ruby-auth-sanitizer
 SUBDIR+=	ruby-bcrypt
 SUBDIR+=	ruby-bcrypt_pbkdf
 SUBDIR+=	ruby-certified
