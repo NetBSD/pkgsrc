@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4604 2026/07/20 12:14:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4605 2026/07/20 12:22:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6874,3 +6874,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/gurk to 0.10.0 [wiz 2026-07-20]
 	Updated audio/taglib to 2.3.1 [adam 2026-07-20]
 	Updated time/py-croniter to 6.2.4 [adam 2026-07-20]
+	Updated devel/py-pebble to 5.2.1 [adam 2026-07-20]
+	Updated databases/py-peewee to 4.2.6 [adam 2026-07-20]
+	Updated devel/py-coverage to 7.15.2 [adam 2026-07-20]
