@@ -1,0 +1,22 @@
+ssrf_filter makes it easy to defend against server side request forgery
+(SSRF) attacks.  SSRF vulnerabilities happen when you accept URLs as user
+input and fetch them on your server (for instance, when a user enters a link
+into a Twitter/Facebook status update and a content preview is generated).
+
+Users can pass in URLs or IPs such that your server will make requests to
+the internal network.  For example if you're hosted on AWS they can request
+the instance metadata endpoint http://169.254.169.254/latest/meta-data/ and
+get your IAM credentials.
+
+Attempts to guard against this are often implemented incorrectly, by
+blocking all ip addresses, not handling IPv6 or http redirects correctly, or
+having TOCTTOU bugs and other issues.
+
+This gem provides a safe and easy way to fetch content from user-submitted
+urls. It:
+
+* handles URIs/IPv4/IPv6, redirects, DNS, etc, correctly
+* has 0 runtime dependencies
+* has a comprehensive test suite (100% code coverage)
+* is tested against ruby 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0, and
+  ruby-head
