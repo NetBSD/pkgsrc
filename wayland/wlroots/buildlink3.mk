@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/04/13 17:20:09 kikadf Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/07/20 17:27:15 kikadf Exp $
 
 BUILDLINK_TREE+=	wlroots
 
 .if !defined(WLROOTS_BUILDLINK3_MK)
 WLROOTS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.wlroots+=	wlroots>=0.19.2
+BUILDLINK_API_DEPENDS.wlroots+=	wlroots>=0.20.2
 BUILDLINK_PKGSRCDIR.wlroots?=	../../wayland/wlroots
 
 .include "../../devel/libopeninput/buildlink3.mk"
