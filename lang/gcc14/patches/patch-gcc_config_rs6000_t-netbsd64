@@ -1,0 +1,38 @@
+$NetBSD: patch-gcc_config_rs6000_t-netbsd64,v 1.1 2026/07/20 08:02:51 he Exp $
+
+Carry over changes from in-tree gcc in an attempt at
+making this build on NetBSD/powerpc.
+
+--- gcc/config/rs6000/t-netbsd64.aorig	2026-07-18 05:30:38.502894936 +0000
++++ gcc/config/rs6000/t-netbsd64	2014-08-23 02:17:47.000000000 +0000
+@@ -0,0 +1,30 @@
++# Support for NetBSD PowerPC64 ELF targets (ELF64 ABI).
++
++LIB2FUNCS_EXTRA = $(srcdir)/config/rs6000/tramp.asm \
++	$(srcdir)/config/rs6000/ppc64-fp.c \
++	$(srcdir)/config/rs6000/darwin-ldouble.c
++
++TARGET_LIBGCC2_CFLAGS += -mno-minimal-toc
++
++MULTILIB_OPTIONS        = m64/m32
++MULTILIB_DIRNAMES       = 64 32
++MULTILIB_OSDIRNAMES	= . ../lib/powerpc
++
++MULTILIB_MATCHES        = $(MULTILIB_MATCHES_FLOAT)
++
++# We want fine grained libraries, so use the new code to build the
++# floating point emulation libraries.
++# fp-bit is only to be used by 32-bit multilibs
++FPBIT = fp-bit32.c
++DPBIT = dp-bit32.c
++
++dp-bit32.c: $(srcdir)/config/fp-bit.c
++	( echo '#ifndef __powerpc64__'; \
++	  cat $(srcdir)/config/fp-bit.c; \
++	  echo '#endif' ) > dp-bit32.c
++
++fp-bit32.c: $(srcdir)/config/fp-bit.c
++	( echo '#ifndef __powerpc64__'; \
++	  echo '#define FLOAT'; \
++	  cat $(srcdir)/config/fp-bit.c; \
++	  echo '#endif' ) > fp-bit32.c

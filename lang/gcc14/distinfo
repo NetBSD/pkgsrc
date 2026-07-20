@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/10/12 21:44:57 mrg Exp $
+$NetBSD: distinfo,v 1.12 2026/07/20 08:02:51 he Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -26,7 +26,7 @@ SHA1 (patch-gcc_calls.h) = 89b4b16d1c6d05358208ce321a00c30a9292c70d
 SHA1 (patch-gcc_collect2.cc) = 0afb813670c91221416a69a84295efe122a3b258
 SHA1 (patch-gcc_common.opt) = 1aa40a7919fc55f085316ebda18f0e8f4e724da8
 SHA1 (patch-gcc_common_config_aarch64_aarch64-common.cc) = e37205308e70a45bda90244c733e30adaef787d5
-SHA1 (patch-gcc_config.gcc) = 9b09ccade2a617943d7c84e8385fb4f840bf160a
+SHA1 (patch-gcc_config.gcc) = fe3a9babf89f6de5b6884afa03a09aaee0b7ebc5
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.cc) = 6a1d686275eec3598ffefb14973bf768846ab4a1
 SHA1 (patch-gcc_config_aarch64_aarch64-c.cc) = 32c31e906263e7790112140a528e1ca0337e43ff
@@ -53,6 +53,14 @@ SHA1 (patch-gcc_config_darwin-protos.h) = dc33fd8f7e70f08b4f723b669b6fd46ce49f09
 SHA1 (patch-gcc_config_darwin.cc) = 2e6f967fbff313ff16fe95edeaa4380f740512ee
 SHA1 (patch-gcc_config_darwin.h) = 5ffb2337cb94148be1b2e486227761cfcefbda87
 SHA1 (patch-gcc_config_darwin.opt) = 79044a713a91254e904708dc1ad19b8aaa1565e8
+SHA1 (patch-gcc_config_rs6000_netbsd.h) = 125d662332457115541a9143d2dc9a7958e0300e
+SHA1 (patch-gcc_config_rs6000_netbsd64.h) = 52c4fc08df72eb78230b6f856c204db0a90009ee
+SHA1 (patch-gcc_config_rs6000_rs6000-logue.cc) = c316d588f578269bbdd3dc068d34c65ddd56e37b
+SHA1 (patch-gcc_config_rs6000_rs6000.cc) = 5b3160df655d90eb4c4ef0f5251d5b1d1d05991d
+SHA1 (patch-gcc_config_rs6000_sysv4.h) = 1cbe846ac436a1a79847b724793e69a94e252177
+SHA1 (patch-gcc_config_rs6000_t-netbsd) = 1c35ae8e1024706ea35522dc81c2350463902dff
+SHA1 (patch-gcc_config_rs6000_t-netbsd64) = 753bcadf91a8be0b1aad234be2062c60b59c5245
+SHA1 (patch-gcc_config_rs6000_t-rs6000) = 206733074016983dc11cb2ad7231b95d4e89010f
 SHA1 (patch-gcc_configure) = 25597cfd04d9146597450ec9cb2ce40d432382cd
 SHA1 (patch-gcc_configure.ac) = a520e53aa0e1609e74cb95fa921091a4141c9433
 SHA1 (patch-gcc_cp_decl2.cc) = 3a567e76950b7a9adcea97a2df5179ca96e1dc8b
