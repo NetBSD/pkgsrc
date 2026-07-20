@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4587 2026/07/20 05:38:39 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4588 2026/07/20 05:40:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6855,3 +6855,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-oauth to 1.1.8 [taca 2026-07-20]
 	Updated security/ruby-rex-socket to 0.1.70 [taca 2026-07-20]
 	Updated sysutils/ruby-specinfra to 2.95.1 [taca 2026-07-20]
+	Updated textproc/ruby-commonmarker to 2.9.0 [taca 2026-07-20]
