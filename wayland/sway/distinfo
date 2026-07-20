@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2026/04/14 11:32:14 kikadf Exp $
+$NetBSD: distinfo,v 1.2 2026/07/20 17:33:35 kikadf Exp $
 
-BLAKE2s (sway-1.11.tar.gz) = 08578ebdaaafd31f89219294389dcad8e918b80181444b47f927a09e1132c737
-SHA512 (sway-1.11.tar.gz) = 7366b494308b8773e6051a67286e7abe422bb390f58def8df143d6334b949ef4c5df7e8086332053ff57ec65518f5b04f11a2c31bb57a31dd234eda82457aed5
-Size (sway-1.11.tar.gz) = 5583731 bytes
+BLAKE2s (sway-1.12.tar.gz) = 9d5401d642e6a186f0f9baf76f692d946baa2965fd0e2b3b6cdcf304d466b08e
+SHA512 (sway-1.12.tar.gz) = 797a99ce108df21ada805f1169260a7a75051449af533d7659ecd63954e80ffe76afe7b406bf71db2f6edf6cca467ea083f03c9e6fba396ef317b5f7a9c48663
+Size (sway-1.12.tar.gz) = 5590239 bytes
 SHA1 (patch-common_stringop.c) = 1d89d81d0e665dec83b312e4d47645923dedbea3
 SHA1 (patch-common_util.c) = 6092b87d425096740409e00b0d9dac3bc5dae8f7
 SHA1 (patch-meson.build) = 40b74709af65b55b4f3e93a5fa45b783f88b6463
