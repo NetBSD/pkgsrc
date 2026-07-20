@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4581 2026/07/20 05:22:12 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4582 2026/07/20 05:29:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6849,3 +6849,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/ruby-auth-sanitizer version 0.2.3 [taca 2026-07-20]
 	Updated security/ruby-metasploit-payloads to 2.0.246 [taca 2026-07-20]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.47 [taca 2026-07-20]
+	Added security/ruby-ssrf_filter version 1.5.0 [taca 2026-07-20]
