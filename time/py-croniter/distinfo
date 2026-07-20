@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/07/03 06:14:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/07/20 12:14:11 adam Exp $
 
-BLAKE2s (croniter-6.2.3.tar.gz) = bdcf4cf132906f2899b544201f2fd14199f0ec803cde4981b4e4d014cc192580
-SHA512 (croniter-6.2.3.tar.gz) = 371d68d4edeb1830a9f4ad1a75788c6f4895e1236af106547838808b4e993ee7a5d47cf850c340483f33037eb7973d11d2e2b724b0855aa0332019e6b90c5e02
-Size (croniter-6.2.3.tar.gz) = 166174 bytes
+BLAKE2s (croniter-6.2.4.tar.gz) = 901228fb97991fe143ae1bdb3156c1c32837c9e3c2f5771a922c151701ae5ec7
+SHA512 (croniter-6.2.4.tar.gz) = a94b0f9e21f37639a98b806c6be1064b3d0deb6237243a151edc7ab55c13ddf027d750e30107be828772f178366cbac9beab2e40fd3ee6b800f1dd2bb9b4ee8e
+Size (croniter-6.2.4.tar.gz) = 166267 bytes

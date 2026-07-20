@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/07/03 06:14:47 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/20 12:14:11 adam Exp $
 
-DISTNAME=	croniter-6.2.3
+DISTNAME=	croniter-6.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/croniter/}
