@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2026/04/18 09:31:41 kikadf Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/20 17:42:40 kikadf Exp $
 
-DISTNAME=	labwc-0.9.7
+DISTNAME=	labwc-0.20.1
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=labwc/}
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://labwc.github.io/
 COMMENT=	Wlroots-based compositor for Wayland, inspired by Openbox
 LICENSE=	gnu-gpl-v2
