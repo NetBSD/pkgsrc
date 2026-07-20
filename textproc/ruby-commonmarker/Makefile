@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/05/31 14:04:50 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/20 05:40:15 taca Exp $
 
-DISTNAME=	commonmarker-2.8.2
+DISTNAME=	commonmarker-2.9.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
