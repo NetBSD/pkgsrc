@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4610 2026/07/20 13:06:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4611 2026/07/20 13:09:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6882,3 +6882,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/jgenesis to 0.13.1 [pin 2026-07-20]
 	Updated shells/oh-my-posh to 29.33.0 [pin 2026-07-20]
 	Updated sysutils/dua-cli to 2.38.1 [pin 2026-07-20]
+	Updated textproc/typst to 0.15.1 [pin 2026-07-20]
