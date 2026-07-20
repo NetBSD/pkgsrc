@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27618 2026/07/19 17:04:04 wiz Exp $
+$NetBSD: TODO,v 1.27619 2026/07/20 09:47:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
-	o Sigil-2.8.0
+	o Sigil-2.8.1
 	o SOGo-5.12.9
 	o SOPE-5.12.9
 	o TiffIO-140a
@@ -739,6 +739,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gtl-3.6
 	o guacamole-server-1.3.0
 	o guile-gtk-2.1
+	o gurk-0.10.0
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
 	o gzip-1.14
