@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4603 2026/07/20 09:54:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4604 2026/07/20 12:14:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6872,3 +6872,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/gcc14-libs to 14.3.0nb3 [he 2026-07-20]
 	Updated textproc/rumdl to 0.2.37 [wiz 2026-07-20]
 	Updated chat/gurk to 0.10.0 [wiz 2026-07-20]
+	Updated audio/taglib to 2.3.1 [adam 2026-07-20]
+	Updated time/py-croniter to 6.2.4 [adam 2026-07-20]
