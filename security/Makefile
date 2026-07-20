@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1017 2026/07/20 05:13:49 taca Exp $
+# $NetBSD: Makefile,v 1.1018 2026/07/20 05:28:44 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -662,6 +662,7 @@ SUBDIR+=	ruby-snaky_hash
 SUBDIR+=	ruby-sshkey
 SUBDIR+=	ruby-sshkit
 SUBDIR+=	ruby-sslshake
+SUBDIR+=	ruby-ssrf_filter
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	ruby-twitter_oauth
 SUBDIR+=	ruby-vault
