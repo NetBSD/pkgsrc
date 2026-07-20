@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/06/22 07:56:09 pin Exp $
+$NetBSD: distinfo,v 1.22 2026/07/20 13:07:51 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -960,15 +960,15 @@ Size (typed-arena-2.0.2.crate) = 11848 bytes
 BLAKE2s (typed-path-0.12.3.crate) = e7b936efb579ac3ba734cd7e122786d989b5607acff60c8950066ac9beae4fdf
 SHA512 (typed-path-0.12.3.crate) = ea582d83e0623a871990af261c60747d5f0b546a1d7398ad4e665e756267cea4e8cac1b2f9d4918de4a399e25ec34d7e4a704edbfbbfeedb056c5385a7d776b5
 Size (typed-path-0.12.3.crate) = 112964 bytes
-BLAKE2s (typst-0.15.0.tar.gz) = d8bad8db24b77e6549abfdcfb2692a968dac21ca4d18f2c20500e49f43468c18
-SHA512 (typst-0.15.0.tar.gz) = e7479cdbfd5f14efe1b8465c0c833117ec2bf60fa8a069d648c696dd452f855c8a6479196ba8dba57f90675a313005241ca86a706863109c1acd6d9580d43732
-Size (typst-0.15.0.tar.gz) = 4867968 bytes
-BLAKE2s (typst-assets-0.15.0.crate) = d355e8cd28ef14533c342401c142a627febcab499cc90d955e22c940bb4356b2
-SHA512 (typst-assets-0.15.0.crate) = 6ae50d0cc01b8aef38bd6e3fa377c74296e97ba7ec0f6c42327eeddad2ae9401bdb9ddec0e84a45daa5c679a2967f396c773362632a764c79ed34071f1d3868f
-Size (typst-assets-0.15.0.crate) = 6671606 bytes
-BLAKE2s (typst-dev-assets-a2e29ed9393121735ce56d9d06deeab701cf35e0.tar.gz) = 0d1eb75d13a7139990ceb65c151cf478acc2603419ef164c53ef9f6bbe7e70ba
-SHA512 (typst-dev-assets-a2e29ed9393121735ce56d9d06deeab701cf35e0.tar.gz) = 1b2d048758e768e5d75721d761c2dc87d01e03d3f0246db8c134dbf3a871976f154bad4257f9d4e8cfaaa77cb846f232b2ef0d4d4bf3bc68d4b8cea813026cbe
-Size (typst-dev-assets-a2e29ed9393121735ce56d9d06deeab701cf35e0.tar.gz) = 38107312 bytes
+BLAKE2s (typst-0.15.1.tar.gz) = acb0093cd28302800c8ab240473c32a2eaee3f0982e42f650dc24d65d4ac9579
+SHA512 (typst-0.15.1.tar.gz) = 646548f03c198ff85a7adb6c71260b6d5f4a482d415c571bafa47fd24f61f875744503decb6f279020b7cd48b4b2841ccb5256b3c37b387b9e68ec98d202a751
+Size (typst-0.15.1.tar.gz) = 4873084 bytes
+BLAKE2s (typst-assets-0.15.1.crate) = 05de89e69297424a46610ae72984e9646ae424b7db99ae7783735121b4e7b183
+SHA512 (typst-assets-0.15.1.crate) = 2441c9adf0a63e2cfafc4ba73b931979afa59fb57d211a6dc85cee5167e9c327635ddd9fcf859090781a172bb0689f4bd6f85841ab4c2f3a6da3a15a7296c008
+Size (typst-assets-0.15.1.crate) = 6671805 bytes
+BLAKE2s (typst-dev-assets-79ba7c354e39d9cd0a074bc41becc05f0119eee3.tar.gz) = 8a3a096eba60cdf4b1da6b126e988186eb6d9b9142963027b24e29269ac12356
+SHA512 (typst-dev-assets-79ba7c354e39d9cd0a074bc41becc05f0119eee3.tar.gz) = 0012ffeea171655c5b5589a09aacc31b903ef66ff7ff7c6149a4caca004726619d0663ebc243b9e6cd346a9307c5b87b3d56ac4f2a2048e3b708b24cd4a7e70e
+Size (typst-dev-assets-79ba7c354e39d9cd0a074bc41becc05f0119eee3.tar.gz) = 38131679 bytes
 BLAKE2s (unic-langid-0.9.6.crate) = c816e3de04df924231cca6c81097a4f7ed6023e6263228e97db4095ecb12b6ff
 SHA512 (unic-langid-0.9.6.crate) = dab095e4db5a227f5f578b9e5ca2a028766aa5ddbbbc7654155c682e7a31fa302a6575e44bab17ebbf5e9fc3fbd87a2e5fa3410674c7a8448b98b62cef6e321e
 Size (unic-langid-0.9.6.crate) = 9031 bytes
@@ -1215,4 +1215,4 @@ Size (zune-core-0.5.1.crate) = 27883 bytes
 BLAKE2s (zune-jpeg-0.5.15.crate) = a84f7dadac3e88940bbacdbca0735a6db3062999448469d4434c5b6fbfe352a5
 SHA512 (zune-jpeg-0.5.15.crate) = 99f072129bc11873b25886d73392012a08636575c85ed9237fb8ad247a66ff188b2bd67aa303931f94501735c24ceac24d414186e7ef5010a639f08fbdc855af
 Size (zune-jpeg-0.5.15.crate) = 88879 bytes
-SHA1 (patch-Cargo.toml) = 2a4e170caec9df5b1f6e6ba549cadd3f9946056a
+SHA1 (patch-Cargo.toml) = 659f079bb621ff06296e26ab2d8bea0fd82f6f07

@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.20 2026/06/22 07:56:09 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.21 2026/07/20 13:07:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -320,8 +320,8 @@ CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
 CARGO_CRATE_DEPENDS+=	two-face-0.4.3
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	typed-path-0.12.3
-CARGO_CRATE_DEPENDS+=	typst-assets-0.15.0
-#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.15.0
+CARGO_CRATE_DEPENDS+=	typst-assets-0.15.1
+#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.15.1
 CARGO_CRATE_DEPENDS+=	unic-langid-0.9.6
 CARGO_CRATE_DEPENDS+=	unic-langid-impl-0.9.6
 CARGO_CRATE_DEPENDS+=	unic-langid-macros-0.9.6
