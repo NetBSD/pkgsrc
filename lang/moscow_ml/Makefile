@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/02/25 17:55:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2026/07/21 14:07:29 ryoon Exp $
 
 DISTNAME=	mosml-ver-2.10.1
 PKGNAME=	${DISTNAME:S/mosml-ver-/moscow_ml-/}
@@ -10,6 +10,7 @@ GITHUB_TAG=	ver-${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mosml.org/
 COMMENT=	Moscow ML, a version of Standard ML
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gmake perl
@@ -19,7 +20,7 @@ BUILD_TARGET=	world
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 BUILD_MAKE_FLAGS+=	GMPLIBDIR=${BUILDLINK_DIR}/lib
 
 .include "../../mk/dlopen.buildlink3.mk"
