@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/06/13 02:39:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/07/21 17:05:37 gutteridge Exp $
 bin/thunar
 bin/thunar-settings
 include/thunarx-3/thunarx/thunarx-config.h
@@ -228,6 +228,7 @@ share/locale/ja/LC_MESSAGES/thunar.mo
 share/locale/ka/LC_MESSAGES/thunar.mo
 share/locale/kk/LC_MESSAGES/thunar.mo
 share/locale/ko/LC_MESSAGES/thunar.mo
+share/locale/lo/LC_MESSAGES/thunar.mo
 share/locale/lt/LC_MESSAGES/thunar.mo
 share/locale/lv/LC_MESSAGES/thunar.mo
 share/locale/ms/LC_MESSAGES/thunar.mo
