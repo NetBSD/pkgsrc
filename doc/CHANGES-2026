@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4650 2026/07/21 16:31:37 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.4651 2026/07/21 16:41:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6936,3 +6936,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox-l10n to 153.0 [ryoon 2026-07-21]
 	Updated www/firefox140 to 140.13.0 [gutteridge 2026-07-21]
 	Updated www/firefox140-l10n to 140.13.0 [gutteridge 2026-07-21]
+	Updated devel/nss to 3.126 [wiz 2026-07-21]
