@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4622 2026/07/21 09:01:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4623 2026/07/21 09:06:24 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6895,3 +6895,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numexpr to 2.14.2 [adam 2026-07-21]
 	Updated textproc/rumdl to 0.2.38 [wiz 2026-07-21]
 	Updated databases/p5-BDB to 1.92nb10 [wiz 2026-07-21]
+	Updated lang/gcc10 to 10.5.0nb5 [he 2026-07-21]
+	Updated lang/gcc10-libs to 10.5.0nb6 [he 2026-07-21]
