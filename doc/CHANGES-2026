@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4628 2026/07/21 10:31:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4629 2026/07/21 10:38:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6910,3 +6910,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/jimtcl to 0.84 [adam 2026-07-21]
 	Updated devel/buf to 1.72.0 [adam 2026-07-21]
 	Updated net/icinga2 to 2.16.4 [adam 2026-07-21]
+	Updated misc/py-tqdm to 4.69.0 [adam 2026-07-21]
+	Updated devel/py-jaraco.functools to 4.6.0 [adam 2026-07-21]
