@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4632 2026/07/21 12:56:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4633 2026/07/21 13:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6916,3 +6916,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jaraco.test to 5.7.0 [adam 2026-07-21]
 	Updated textproc/py-jsonrpclib-pelix to 1.1.0 [adam 2026-07-21]
 	Updated devel/gettext to 1.0 [adam 2026-07-21]
+	Updated devel/py-boltons to 26.1.0 [adam 2026-07-21]
+	Updated textproc/py-bracex to 3.0.1 [adam 2026-07-21]
