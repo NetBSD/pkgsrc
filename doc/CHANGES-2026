@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4638 2026/07/21 14:04:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4639 2026/07/21 14:10:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6924,3 +6924,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-io-event to 1.19.3 [taca 2026-07-21]
 	Updated lang/smlnj to 110.99.9 [ryoon 2026-07-21]
 	Updated www/ruby-http to 6.0.4 [taca 2026-07-21]
+	Updated www/ruby-llhttp to 0.6.2 [taca 2026-07-21]
