@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configs/certs/CA/burp_ca.in.orig	2026-07-21 12:44:39.659616295 +0000
++++ configs/certs/CA/burp_ca.in
+@@ -66,7 +66,7 @@ esac
+ # Try NetBSD style.
+ [ -n "$name" ] || name="$(hostname)"
+ 
+-etc="@sysconfdir@"
++etc="@PKG_SYSCONFDIR@"
+ dir="$etc"/CA
+ conf="$etc"/CA.cnf
+ days=

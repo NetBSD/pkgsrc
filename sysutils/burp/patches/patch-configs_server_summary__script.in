@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- configs/server/summary_script.in.orig	2026-07-21 13:03:50.453327968 +0000
++++ configs/server/summary_script.in
+@@ -9,5 +9,5 @@ fi
+  echo "From: @name@"
+  echo "Subject: $3"
+  echo "Content-Type: text/plain; charset=utf-8"
+- @sbindir@/@name@ -c "$1" -a S
++ @SBINDIR@/@name@ -c "$1" -a S
+  echo) | /usr/sbin/sendmail -t

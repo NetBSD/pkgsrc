@@ -1,19 +1,15 @@
 $NetBSD: distinfo,v 1.7 2021/10/26 11:19:23 nia Exp $
 
-BLAKE2s (burp-1.4.40.tar.bz2) = d7a7a6f413fc36d9b7d6ec32d0203ba5ebaca8c14995017648115b0174804033
-SHA512 (burp-1.4.40.tar.bz2) = b44ba3a63d3b75f6fee55bbfef70ac07fa87e78ddb22a398e31a86670dfa3f2db1c9dbc58de3d0038cdc409bd5ae52c8e901cb26975fd7dbe0f773c4841af10c
-Size (burp-1.4.40.tar.bz2) = 712937 bytes
-SHA1 (patch-Makefile.in) = 3df0458b1fc50cc03d8f69a864830ab52e9d0f8d
-SHA1 (patch-configs_certs_CA_CA.cnf) = e58da075d16ecd16454b8b08dd6070101fa24475
-SHA1 (patch-configs_certs_CA_burp__ca) = cdcb697e0a40c612ef3881a0abdcbce89aa78980
-SHA1 (patch-configs_client_burp.conf) = b61837e0a4c358a12060ebb6b4a42e26a9667d0d
-SHA1 (patch-configs_server_burp.conf) = bf5a41c09117519b3b198ca1a13951a552a100c1
-SHA1 (patch-configs_server_summary__script) = 068cec66b0634f0746f94891e1390097ec0ef96c
-SHA1 (patch-manpages_Makefile.in) = 710bf51bd43c0ecbe8987a843b27fd0e460342f5
-SHA1 (patch-manpages_bedup.8) = 5e1a2e3c42118d98c9b66a0bc5cafb2eb9c09f11
-SHA1 (patch-manpages_burp.8) = 81879e11cf917c36467513aeb440d0ab2dbad142
-SHA1 (patch-manpages_burp__ca.8) = f9ac9ffe1f67df040c939bb1afcf614869695034
-SHA1 (patch-src-xattr.c) = 105aa2c67fde7007b525d6ff93e0d9ce67ee2f4f
-SHA1 (patch-src_handy.c) = 6d3fe34734c6392a28a59ed1491688d2f12e0a66
-SHA1 (patch-src_msg.c) = 2a8f542f801f2d4ace5d9335d3abb7490cba82d7
-SHA1 (patch-src_server.c) = 3dc518b24bd866d0ff7cc9c834d4fde810cacb74
+BLAKE2s (burp-3.2.0.tar.gz) = 1f79d602e34f4d03b2052fbd5853b054ad571afd0b59c7a802f65bbdd9f55766
+SHA512 (burp-3.2.0.tar.gz) = 13affe243f1bb50460ae6bcece580a18718acb01695e2ef804ce519335a733f02c6a89d5c3263963794ff3714a0c693dd8a2f69ae43774088c3b2c63570162df
+Size (burp-3.2.0.tar.gz) = 550673 bytes
+SHA1 (patch-Makefile.am) = 7ba740c6e77d38684bbe984dd14838feec55755c
+SHA1 (patch-configs_certs_CA_CA.cnf.in) = f0945a96f18d2ebab70affdfd70f3c66a876cd50
+SHA1 (patch-configs_certs_CA_burp__ca.in) = e6043ca0b28fd6755b6c69824aa6466719d94ffd
+SHA1 (patch-configs_client_burp.conf.in) = a75e642ec2ee9aeecbe042b19e674acac7761273
+SHA1 (patch-configs_server_burp.conf.in) = 8b37b26262b3bdb748f1bfc0e746138dc00ba7ff
+SHA1 (patch-configs_server_summary__script.in) = 4c825ff342421f92f04926664dce6ab4e362b526
+SHA1 (patch-manpages_bedup.8.in) = 93c12f03cec4a3dff8621472b021fe3ff223de6c
+SHA1 (patch-manpages_burp.8.in) = fd8d3440e16a1a53d66298f58f17d213af8ce13e
+SHA1 (patch-manpages_burp__ca.8.in) = 75590d44c979c6abbe95504d4cb87901cfaf7a68
+

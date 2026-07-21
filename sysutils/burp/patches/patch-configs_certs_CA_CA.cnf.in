@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- configs/certs/CA/CA.cnf.in.orig	2026-07-21 12:36:40.240762309 +0000
++++ configs/certs/CA/CA.cnf.in
+@@ -1,6 +1,6 @@
+ # simple config for burp_ca
+ 
+-CA_DIR                  = @sysconfdir@/CA
++CA_DIR                  = @PKG_SYSCONFDIR@/CA
+ 
+ 
+ [ ca ]

@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- manpages/burp.8.in.orig	2026-07-21 13:09:21.747319462 +0000
++++ manpages/burp.8.in
+@@ -17,7 +17,7 @@ BackUp and Restore Program.
+ .TP
+ \fB\-c\fR \fB[path]\fR
+ Short for 'config file'. The argument is a path to the config file. The default
+-is /etc/@name@/@name@.conf.
++is @PKG_SYSCONFDIR@/@name@/@name@.conf.
+ .TP
+ \fB\-F\fR \fB\fR
+ Foreground mode. The server will fork into the background and run as a daemon if you do not give this option.
+@@ -70,7 +70,7 @@ backups.
+ .TP
+ \fB\-c\fR \fB[path]\fR
+ Short for 'config file'. The argument is a path to the config file. The default
+-is /etc/@name@/@name@.conf, or %PROGRAMFILES%\\@human_name@\\@name@.conf on Windows.
++is @PKG_SYSCONFDIR@/@name@/@name@.conf, or %PROGRAMFILES%\\@human_name@\\@name@.conf on Windows.
+ .TP
+ \fB\-C\fR \fB[client]\fR
+ Allows you to specify an alternative client to list or restore from. Requires that the server configuration of the alternative client permits your client to do this. See the 'restore_client' and 'super_client' options.
+@@ -497,7 +497,7 @@ If this is set to 1, server_script_post
+ Path to autoupgrade directory from which upgrades are downloaded. The option can be left unset in order not to autoupgrade clients. Please see docs/autoupgrade.txt in the source package for more help with this option.
+ .TP
+ \fBca_conf=[path]\fR
+-Path to certificate authority configuration file. The CA configuration file will usually be /etc/@name@/CA.cnf. The CA directory indicated by CA.cnf will usually be /etc/@name@/CA. If ca_conf is set and the CA directory does not exist, the server will create, populate it, and the paths indicated by ssl_cert_ca, ssl_cert, ssl_key and ssl_dhfile will be overwritten. For more detailed information on this and the other ca_* options, please see docs/@name@_ca.txt.
++Path to certificate authority configuration file. The CA configuration file will usually be @PKG_SYSCONFDIR@/@name@/CA.cnf. The CA directory indicated by CA.cnf will usually be @PKG_SYSCONFDIR@/@name@/CA. If ca_conf is set and the CA directory does not exist, the server will create, populate it, and the paths indicated by ssl_cert_ca, ssl_cert, ssl_key and ssl_dhfile will be overwritten. For more detailed information on this and the other ca_* options, please see docs/@name@_ca.txt.
+ .TP
+ \fBca_name=[name]\fR
+ Name of the CA that the server will generate when using the ca_conf option.
