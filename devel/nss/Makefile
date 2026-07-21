@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.297 2026/05/15 17:02:47 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2026/07/21 16:40:52 wiz Exp $
 #
 # Release Notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
-DISTNAME=		nss-3.124
+DISTNAME=		nss-3.126
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${PKGVERSION_NOREV:S/./_/g}_RTM/src/}
 
@@ -133,7 +133,7 @@ MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
-NSPR_MINIMUM_VERSION=	4.38.2
+NSPR_MINIMUM_VERSION=	4.39
 
 PKGCONFIG_OVERRIDE=	nss.pc
 
