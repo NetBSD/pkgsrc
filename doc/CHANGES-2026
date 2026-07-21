@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4630 2026/07/21 10:42:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4631 2026/07/21 11:00:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6913,3 +6913,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-tqdm to 4.69.0 [adam 2026-07-21]
 	Updated devel/py-jaraco.functools to 4.6.0 [adam 2026-07-21]
 	Updated textproc/groff to 1.24.1nb1 [wiz 2026-07-21]
+	Updated devel/py-jaraco.test to 5.7.0 [adam 2026-07-21]
+	Updated textproc/py-jsonrpclib-pelix to 1.1.0 [adam 2026-07-21]
