@@ -1,10 +1,84 @@
-$NetBSD: patch-af,v 1.13 2016/02/29 17:13:06 jperkin Exp $
+$NetBSD: patch-af,v 1.14 2026/07/21 21:17:39 rjs Exp $
 
 Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
 
 --- configure.orig	2015-02-22 14:16:23.000000000 +0000
 +++ configure
-@@ -15277,20 +15277,24 @@ else
+@@ -9545,6 +9545,7 @@ else
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
++int
+ main() {
+   struct stat st;
+   char tpl[20]="/tmp/test.XXXXXX";
+@@ -9657,6 +9658,7 @@ else
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <stdlib.h>
++#include <string.h>
+ void foo(const char *format, ...) {
+        va_list ap;
+        int len;
+@@ -9683,6 +9685,7 @@ void foo(const char *format, ...) {
+ 
+        exit(0);
+ }
++int
+ main() { foo("hello"); }
+ 
+ _ACEOF
+@@ -10366,7 +10369,8 @@ else
+ 
+ #include <sys/time.h>
+ #include <unistd.h>
+-main() { struct timeval tv; exit(gettimeofday(&tv, NULL));}
++#include <stdlib.h>
++int main() { struct timeval tv; exit(gettimeofday(&tv, NULL));}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+   libreplace_cv_HAVE_GETTIMEOFDAY_TZ=yes
+@@ -11283,6 +11287,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++		#include <sys/stat.h>
+ 		#include <stdio.h>
+ 		#ifdef HAVE_DIRECT_H
+ 		#include <direct.h>
+@@ -11430,7 +11435,7 @@ else
+ 
+ 	#include <dirent.h>
+ 
+-		long telldir(const DIR *dir)
++		long telldir(DIR *dir)
+ 		{
+ 
+ 	return 0;
+@@ -13156,12 +13161,14 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #ifdef HAVE_ARPA_INET_H
+ #include <arpa/inet.h>
+ #endif
++int
+ main() { struct in_addr ip; ip.s_addr = 0x12345678;
+ if (strcmp(inet_ntoa(ip),"18.52.86.120") &&
+     strcmp(inet_ntoa(ip),"120.86.52.18")) { exit(0); }
+@@ -13715,6 +13722,7 @@ else
+ #include <stdlib.h> /* for NULL */
+ #include <sys/socket.h>
+ #include <sys/types.h>
++#include <net/if.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+ 
+@@ -15277,20 +15285,24 @@ else
      cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -12,13 +86,6 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
 -int
 -main ()
 -{
--
--		if (0) {
--		   this_function_does_not_exist();
--		} else {
--		  return 1;
--		}
--
 +#include <sys/types.h>
 +size_t __unsafe_string_function_usage_here_size_t__(void);
 +#define CHECK_STRING_SIZE(d, len) (sizeof(d) != (len) && sizeof(d) != sizeof(char *))
@@ -26,13 +93,19 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
 +    return 0;
 +}
  
--  ;
--  return 0;
+-		if (0) {
+-		   this_function_does_not_exist();
+-		} else {
+-		  return 1;
+-		}
 +#define push_string_check(dest, src, dest_len) \
 +    (CHECK_STRING_SIZE(dest, dest_len) \
 +    ? __unsafe_string_function_usage_here_size_t__()	\
 +    : push_string_check_fn(dest, src, dest_len))
-+
+ 
+-
+-  ;
+-  return 0;
 +int main(int argc, char **argv) {
 +    char outbuf[1024];
 +    char *p = outbuf;
@@ -42,7 +115,35 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
-@@ -19513,6 +19517,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
+@@ -15487,7 +15499,9 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <errno.h>
++int
+ main() { setresuid(1,1,1); setresuid(2,2,2); exit(errno==EPERM?0:1);}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -15522,7 +15536,9 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <unistd.h>
++#include <stdlib.h>
+ #include <errno.h>
++int
+ main() { errno = 0; setresgid(1,1,1); exit(errno != 0 ? (errno==EPERM ? 0 : 1) : 0);}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -19133,6 +19149,7 @@ int foo;
+ 
+ 		cat > conftest.c <<EOF
+ int foo;
++int
+ main () { return 0;}
+ EOF
+ 		if { ac_try='${CC-cc} $CFLAGS $CPPFLAGS $LDFLAGS -Wl,-z,relro -o conftest conftest.c 1>&5'
+@@ -19513,6 +19530,7 @@ $as_echo "#define DARWINOS 1" >>confdefs.h
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -50,7 +151,7 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -19562,7 +19567,7 @@ fi
+@@ -19562,7 +19580,7 @@ if test "x$enable_as_needed" != xno; then
  
  if test "x$enable_as_needed" != xno; then
      saved_before_as_needed_ldflags="$LDFLAGS"
@@ -59,7 +160,219 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -26638,9 +26643,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -21446,6 +21464,8 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
++#include <stdlib.h>
++int
+ main() { long long x = 1000000; x *= x; exit(((x/1000000) == 1000000)? 0: 1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21537,7 +21557,9 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <time.h>
++int
+ main() { exit((sizeof(time_t) == 8) ? 0 : 1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21569,7 +21591,9 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <time.h>
++int
+ main() {
+ 	struct tm *tm;
+ 	if (sizeof(time_t) == 8) {
+@@ -21619,7 +21643,9 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { exit((sizeof(off_t) == 8) ? 0 : 1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21656,7 +21682,9 @@ else
+ #include <unistd.h>
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { struct stat64 st; off64_t s; if (sizeof(off_t) == sizeof(off64_t)) exit(1); exit((lstat64("/dev/null", &st)==0)?0:1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21693,7 +21721,9 @@ else
+ #include <unistd.h>
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { exit((sizeof(ino_t) == 8) ? 0 : 1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21730,7 +21760,9 @@ else
+ #include <unistd.h>
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { struct stat64 st; ino64_t s; if (sizeof(ino_t) == sizeof(ino64_t)) exit(1); exit((lstat64("/dev/null", &st)==0)?0:1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21767,7 +21799,9 @@ else
+ #include <unistd.h>
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { exit((sizeof(dev_t) == 8) ? 0 : 1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21804,7 +21838,9 @@ else
+ #include <unistd.h>
+ #endif
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main() { struct stat64 st; dev64_t s; if (sizeof(dev_t) == sizeof(dev64_t)) exit(1); exit((lstat64("/dev/null", &st)==0)?0:1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21915,6 +21951,7 @@ else
+ #include <unistd.h>
+ #endif
+ #include <sys/types.h>
++int
+ main() { dev_t dev; int i = major(dev); return 0; }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21951,6 +21988,7 @@ else
+ #include <unistd.h>
+ #endif
+ #include <sys/types.h>
++int
+ main() { dev_t dev; int i = minor(dev); return 0; }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -21987,6 +22025,7 @@ else
+ #include <unistd.h>
+ #endif
+ #include <sys/types.h>
++int
+ main() { dev_t dev = makedev(1,2); return 0; }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -22019,6 +22058,8 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
++#include <stdlib.h>
++int
+ main() { char c; c=250; exit((c > 0)?0:1); }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+@@ -22121,7 +22162,9 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <sys/types.h>
++#include <stdlib.h>
+ #include <dirent.h>
++int
+ main() { struct dirent *di; DIR *d = opendir("."); di = readdir(d);
+ if (di && di->d_name[-2] == '.' && di->d_name[-1] == 0 &&
+ di->d_name[0] == 0) exit(0); exit(1);}
+@@ -22153,6 +22196,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <sys/types.h>
++#include <stdlib.h>
+ #include <utime.h>
+ int
+ main ()
+@@ -22977,6 +23021,7 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <$jm_cv_include>
++int
+ main(){
+     iconv_t cd = iconv_open("$j", "UCS-2LE");
+     if (cd == 0 || cd == (iconv_t)-1) {
+@@ -23211,6 +23256,7 @@ else
+ #ifndef F_GETLEASE
+ #define F_GETLEASE	1025
+ #endif
++int
+ main() {
+        int fd = open("/dev/null", O_RDONLY);
+        return fcntl(fd, F_GETLEASE, 0) == -1;
+@@ -23248,11 +23294,13 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <sys/types.h>
++#include <stdlib.h>
+ #include <fcntl.h>
+ #include <signal.h>
+ #ifndef F_NOTIFY
+ #define F_NOTIFY 1026
+ #endif
++int
+ main() {
+        	exit(fcntl(open("/tmp", O_RDONLY), F_NOTIFY, 0) == -1 ?  1 : 0);
+ }
+@@ -23880,6 +23928,7 @@ else
+ /* end confdefs.h.  */
+ 
+ #include <sys/types.h>
++#include <stdlib.h>
+ #include <fcntl.h>
+ #include <signal.h>
+ #include <sys/file.h>
+@@ -23887,6 +23936,7 @@ else
+ #define LOCK_MAND	32
+ #define LOCK_READ	64
+ #endif
++int
+ main() {
+        	exit(flock(open("/dev/null", O_RDWR), LOCK_MAND|LOCK_READ) != 0);
+ }
+@@ -24805,6 +24855,7 @@ else
+ #ifdef HAVE_SYS_FCNTL_H
+ #include <sys/fcntl.h>
+ #endif
++int
+ main() { struct flock64 fl64;
+ #if defined(F_SETLKW64) && defined(F_SETLK64) && defined(F_GETLK64)
+ exit(0);
+@@ -25049,7 +25100,9 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#include <sys/param.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <limits.h>
+ #include <signal.h>
+ 
+@@ -25057,6 +25110,7 @@ void exit_on_core(int ignored) {
+ 	exit(1);
+ }
+ 
++int
+ main() {
+ 	char *newpath;
+ 	signal(SIGSEGV, exit_on_core);
+@@ -26638,9 +26692,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -72,7 +385,7 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -26652,31 +26657,31 @@ else
+@@ -26652,31 +26706,31 @@ extern "C"
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -112,7 +425,26 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
  _ACEOF
  
  fi
-@@ -36049,31 +36054,39 @@ case "$host_os" in
+@@ -31438,6 +31492,7 @@ else
+ /* end confdefs.h.  */
+ 
+ #include<krb5.h>
++  int
+   main()
+   {
+     krb5_context context;
+@@ -33596,8 +33651,10 @@ else
+ #if defined(HAVE_UNISTD_H)
+ #include <unistd.h>
+ #endif
++#include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/statvfs.h>
++  int
+   main ()
+   {
+     struct statvfs64 fsd;
+@@ -36049,32 +36106,40 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
@@ -150,7 +482,7 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
 -		fi
 +			;;
 +		esac
-+		;;
+ 		;;
 +
 +	*netbsd*)
 +		case "$UNAME_R" in
@@ -171,6 +503,43 @@ Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
 +			fi
 +			;;
 +		esac
- 		;;
++		;;
  	*irix*)
  		# IRIX has differently named shared libraries
+ 		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_irix.o"
+@@ -37144,7 +37209,7 @@ main ()
+ int
+ main ()
+ {
+-char *dom, *user,*host; getnetgrent(&dom,&user,&host)
++const char *dom, *user,*host; getnetgrent(&dom,&user,&host)
+   ;
+   return 0;
+ }
+@@ -41513,6 +41578,26 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
