@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.14 2023/12/30 15:47:03 wiz Exp $
+$NetBSD: patch-gettext-tools_gnulib-lib_Makefile.in,v 1.1 2026/07/21 12:55:54 adam Exp $
 
 --- gettext-tools/gnulib-lib/Makefile.in.orig	2023-11-19 20:23:04.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in

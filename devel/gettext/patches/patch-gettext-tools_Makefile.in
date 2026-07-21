@@ -1,0 +1,24 @@
+$NetBSD: patch-gettext-tools_Makefile.in,v 1.1 2026/07/21 12:55:53 adam Exp $
+
+Don't install stuff handled by devel/gettext, and skip examples.
+
+--- gettext-tools/Makefile.in.orig	2026-01-28 23:39:43.000000000 +0000
++++ gettext-tools/Makefile.in
+@@ -4014,7 +4014,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = 1.5 gnu
+ ACLOCAL_AMFLAGS = -I m4 -I ../gettext-runtime/m4 -I ../m4 -I gnulib-m4 -I libgrep/gnulib-m4 -I libgettextpo/gnulib-m4 -I tests/gnulib-m4
+-SUBDIRS = gnulib-lib libgrep src libgettextpo po its projects styles wizard autotools misc emacs man m4 tests system-tests gnulib-tests install-tests examples doc
++SUBDIRS = gnulib-lib libgrep src libgettextpo po its styles wizard autotools misc emacs man tests system-tests gnulib-tests install-tests doc
+ 
+ # Files imported from tree-sitter.
+ 
+@@ -4631,7 +4631,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-examplesbuildauxDATA install-pkgdataSCRIPTS
++install-data-am:
+ 
+ install-dvi: install-dvi-recursive
+ 

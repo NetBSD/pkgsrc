@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2025/07/02 11:00:57 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2026/07/21 12:55:53 adam Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -6,7 +6,7 @@
 # used by devel/gettext-m4/Makefile
 # used by devel/gettext-tools/Makefile
 
-DISTNAME=	gettext-0.22.5
+DISTNAME=	gettext-1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
 
@@ -19,6 +19,8 @@ CONFLICTS=	gettext<=0.10.35
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures
+# Fix for faulty detection of iconv.
+CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
 
 TEST_TARGET=	check
 
