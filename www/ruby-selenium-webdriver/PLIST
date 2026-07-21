@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/02/23 15:32:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/07/21 14:14:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -29,8 +29,30 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_item.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_request.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_response.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/url_pattern.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/bluetooth.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browser.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browsing_context.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/domain.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/emulation.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/input.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/log.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/network.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/permissions.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/script.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/session.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/speculation.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/storage.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/user_agent_client_hints.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/web_extension.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/serialization.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/serialization/record.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/serialization/union.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/struct.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/support/bidi_generate.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/support/check_generated.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/transport.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/features.rb
@@ -46,6 +68,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/alert.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/child_process.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/client_config.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/downloads_files.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/full_page_screenshot.rb
