@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2026/07/13 18:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/21 09:12:12 wiz Exp $
 
 # not a release, but we want the change fixing the build with libjxl 0.12.0
-DISTNAME=	moderncore-20260713
+DISTNAME=	moderncore-20260719
 PKGNAME=	${DISTNAME:S/moderncore-/vv-3.2./}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 GITHUB_PROJECT=	moderncore
 #GITHUB_TAG=	${DISTNAME:S/moderncore-//}
-GITHUB_TAG=	6b297b814a89a1c9192684a43f898068c19ad157
+GITHUB_TAG=	5b775746c6d152cd3cfc2896576ec888a30d4b73
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wolfpld/moderncore/
