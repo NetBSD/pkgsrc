@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2023/02/25 17:58:39 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/07/21 14:03:27 ryoon Exp $
 #
 # used by lang/smlnj/Makefile
 
@@ -58,4 +58,4 @@ BOX=		x86
 PLIST.nlffi=	yes
 .endif
 
-PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q} NLFFI=${NLFFI}
+PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q}

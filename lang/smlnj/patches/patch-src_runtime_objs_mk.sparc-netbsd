@@ -1,27 +1,18 @@
-$NetBSD: patch-an,v 1.4 2026/07/21 14:03:28 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.sparc-netbsd,v 1.1 2026/07/21 14:03:28 ryoon Exp $
 
-Honor pkgsrc CFLAGS.
-
---- src/runtime/objs/mk.sparc-solaris.orig	2026-07-21 09:51:27.690026281 +0000
-+++ src/runtime/objs/mk.sparc-solaris
-@@ -8,13 +8,14 @@ CC =		$(GCC)
- AR =		/usr/ccs/bin/ar
+--- src/runtime/objs/mk.sparc-netbsd.orig	2026-07-21 09:51:27.691010504 +0000
++++ src/runtime/objs/mk.sparc-netbsd
+@@ -8,7 +8,7 @@ CFLAGS =	@CFLAGS@ 
  GCC =		gcc
- CC =		$(GCC)
--CFLAGS =	-O3
-+CFLAGS =	@CFLAGS@
- #CFLAGS =	-g
- CPP =		$(GCC) -x c -E -P
- RANLIB =	$(AR) ts
- 
- XOBJS =
- XLIBS =		../c-libs/dl/libunix-dynload.a
+ ARFLAGS =	Trcv
+ CFLAGS =	@CFLAGS@ 
+-LDFLAGS=
 +LDFLAGS =	@LDFLAGS@
- LD_LIBS =	-lm -lsocket -lnsl -ldl
- XDEFS =
- BASE_DEFS =	-D__STDC__=0
-@@ -25,4 +26,4 @@ all:
- RUNTIME =	run.sparc-solaris
+ CPP =		$(GCC) -x c -E -P
+ 
+ #XOBJS =	xmonitor.o
+@@ -22,4 +22,4 @@ all:
+ RUNTIME =	run.sparc-netbsd
  
  all:
 -	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))

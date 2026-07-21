@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-netbsd,v 1.5 2024/12/09 14:07:09 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.x86-netbsd,v 1.6 2026/07/21 14:03:28 ryoon Exp $
 
 Configure for pkgsrc. Build as 32-bit.
 
---- src/runtime/objs/mk.x86-netbsd.orig	2024-10-25 16:47:18.000000000 +0000
+--- src/runtime/objs/mk.x86-netbsd.orig	2026-07-21 09:51:27.690802174 +0000
 +++ src/runtime/objs/mk.x86-netbsd
-@@ -9,7 +9,7 @@ MAKE =		gmake
+@@ -9,19 +9,21 @@ CC =		gcc -ansi
  
  ARFLAGS =	Trcv
  CC =		gcc -ansi
@@ -13,8 +13,9 @@ Configure for pkgsrc. Build as 32-bit.
  CPP =		gcc -x assembler-with-cpp -E -P
  #CPP =		/usr/bin/cpp -P
  
-@@ -17,8 +17,9 @@ XOBJS =
+ XOBJS =
  XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
  LD_LIBS =	-lm
  BASE_DEFS =
 -DEFS =          $(XDEFS) $(BASE_DEFS) -DARCH_X86 -DDSIZE_32  -DALIGN_STACK_16 \
@@ -25,3 +26,7 @@ Configure for pkgsrc. Build as 32-bit.
  TARGET =	X86
  VERSION =	v-x86-netbsd
  RUNTIME =	run.x86-netbsd
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

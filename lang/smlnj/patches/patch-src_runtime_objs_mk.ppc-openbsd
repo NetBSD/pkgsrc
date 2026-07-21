@@ -1,26 +1,17 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-openbsd,v 1.2 2026/07/21 14:03:28 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.ppc-openbsd,v 1.1 2026/07/21 14:03:28 ryoon Exp $
 
-Honor pkgsrc CFLAGS.
-
---- src/runtime/objs/mk.x86-openbsd.orig	2026-07-21 09:51:27.690866765 +0000
-+++ src/runtime/objs/mk.x86-openbsd
-@@ -9,12 +9,13 @@ CC =		gcc -ansi
- 
- ARFLAGS =	Trcv
- CC =		gcc -ansi
--CFLAGS =	-O2
-+CFLAGS =	@CFLAGS@
- CPP =		gcc -x assembler-with-cpp -E -P
- #CPP =		/usr/bin/cpp -P
+--- src/runtime/objs/mk.ppc-openbsd.orig	2026-07-21 09:51:27.690966602 +0000
++++ src/runtime/objs/mk.ppc-openbsd
+@@ -14,6 +14,7 @@ XLIBS =		../c-libs/dl/libunix-dynload.a
  
  XOBJS =
  XLIBS =		../c-libs/dl/libunix-dynload.a
 +LDFLAGS =	@LDFLAGS@
  LD_LIBS =	-lm
  BASE_DEFS =
- DEFS =		$(XDEFS) $(BASE_DEFS) -DARCH_X86 -DDSIZE_32  -DALIGN_STACK_16 \
-@@ -24,4 +25,4 @@ all:
- RUNTIME =	run.x86-openbsd
+ DEFS =          $(XDEFS) $(BASE_DEFS) -DARCH_PPC -DDSIZE_32 -DOPSYS_UNIX -DOPSYS_OPENBSD -DDLOPEN
+@@ -22,4 +23,4 @@ all:
+ RUNTIME =	run.ppc-openbsd
  
  all:
 -	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))

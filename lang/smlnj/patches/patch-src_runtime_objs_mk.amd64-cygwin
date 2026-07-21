@@ -1,8 +1,8 @@
-$NetBSD: patch-src_runtime_objs_mk.amd64-cygwin,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.amd64-cygwin,v 1.2 2026/07/21 14:03:28 ryoon Exp $
 
---- src/runtime/objs/mk.amd64-cygwin.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/objs/mk.amd64-cygwin.orig	2026-07-21 09:51:27.690071636 +0000
 +++ src/runtime/objs/mk.amd64-cygwin
-@@ -5,7 +5,7 @@ SHELL =		/bin/sh
+@@ -5,10 +5,11 @@ CC =		gcc -std=gnu99
  
  MAKE =		make
  CC =		gcc -std=gnu99
@@ -11,3 +11,13 @@ $NetBSD: patch-src_runtime_objs_mk.amd64-cygwin,v 1.1 2023/02/25 17:58:39 ryoon 
  CPP =		gcc -x assembler-with-cpp -E -P
  XOBJS =
  XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm
+ XDEFS =
+ BASE_DEFS =
+@@ -19,4 +20,4 @@ all:
+ RUNTIME =	run.amd64-cygwin
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

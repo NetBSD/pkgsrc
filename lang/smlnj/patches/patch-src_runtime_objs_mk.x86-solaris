@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-solaris,v 1.1 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: patch-src_runtime_objs_mk.x86-solaris,v 1.2 2026/07/21 14:03:28 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.x86-solaris~	2004-01-31 14:24:42.000000000 +0000
+--- src/runtime/objs/mk.x86-solaris.orig	2026-07-21 09:51:27.690920155 +0000
 +++ src/runtime/objs/mk.x86-solaris
-@@ -12,7 +12,7 @@ AS =		gas
+@@ -12,12 +12,13 @@ CC =		$(GCC)
  AR =		/usr/ccs/bin/ar
  GCC =		gcc
  CC =		$(GCC)
@@ -13,3 +13,15 @@ Honor pkgsrc CFLAGS.
  CPP =		gcc -x assembler-with-cpp -E -P
  RANLIB =	$(AR) ts
  
+ XOBJS =
+ XLIBS =
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm -lsocket -lnsl
+ BASE_DEFS =	-D__STDC__=0
+ DEFS =		$(BASE_DEFS) -DARCH_X86 -DDSIZE_32  -DALIGN_STACK_16 \
+@@ -27,4 +28,4 @@ all:
+ RUNTIME =	run.x86-solaris
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

@@ -1,8 +1,8 @@
-$NetBSD: patch-src_runtime_objs_mk.amd64-freebsd,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.amd64-freebsd,v 1.2 2026/07/21 14:03:28 ryoon Exp $
 
---- src/runtime/objs/mk.amd64-freebsd.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/objs/mk.amd64-freebsd.orig	2026-07-21 09:51:27.690176923 +0000
 +++ src/runtime/objs/mk.amd64-freebsd
-@@ -8,7 +8,7 @@ SHELL =		/bin/sh
+@@ -8,10 +8,11 @@ CC =		cc -std=gnu99
  MAKE =		make
  AS =		as --64
  CC =		cc -std=gnu99
@@ -11,3 +11,15 @@ $NetBSD: patch-src_runtime_objs_mk.amd64-freebsd,v 1.1 2023/02/25 17:58:39 ryoon
  CPP =		cc -x assembler-with-cpp -E -P
  XOBJS =
  XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm -ldl
+ #CHECK_HEAP =	check-heap.o
+ XDEFS =
+@@ -26,6 +27,6 @@ all:
+ RUNTIME_A =	run.amd64-freebsd.a
+ 
+ all:
+-	($(MAKE) CHECK_HEAP=$(CHECK_HEAP) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) CHECK_HEAP=$(CHECK_HEAP) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))
+ #	($(MAKE) RUNTIME="$(RUNTIME_SO)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-shared" $(RUNTIME_SO))
+ #	($(MAKE) RUNTIME_A="$(RUNTIME_A)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="" $(RUNTIME_A))
