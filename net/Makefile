@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1633 2026/06/27 20:46:20 drixter Exp $
+# $NetBSD: Makefile,v 1.1634 2026/07/21 17:18:51 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -1098,7 +1098,6 @@ SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
 SUBDIR+=	yaydl
 SUBDIR+=	yaz
-SUBDIR+=	youtube-dl
 SUBDIR+=	yt-dlp
 SUBDIR+=	yt-dlp-ejs
 SUBDIR+=	ytalk
