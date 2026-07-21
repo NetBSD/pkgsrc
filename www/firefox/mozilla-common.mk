@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.318 2026/07/17 18:21:44 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.319 2026/07/21 15:25:01 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,7 @@ USE_CXX_FEATURES+=	c++20
 # XXX: As of 145.0
 GCC_REQD+=		10
 
-TOOL_DEPENDS+=		cbindgen>=0.29.1<0.29.4:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.29.4:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 BUILDLINK_DEPMETHOD.nodejs=	build
@@ -266,7 +266,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 BUILDLINK_API_DEPENDS.icu+=	icu>=78.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.124
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.125
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"

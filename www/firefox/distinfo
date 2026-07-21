@@ -1,21 +1,19 @@
-$NetBSD: distinfo,v 1.585 2026/07/16 15:18:46 ryoon Exp $
+$NetBSD: distinfo,v 1.586 2026/07/21 15:25:01 ryoon Exp $
 
-BLAKE2s (firefox-152.0.6.source.tar.xz) = 825eccafa3d1b7735f684b375d7cda3420f31014c7e728f8a9450be3835318cf
-SHA512 (firefox-152.0.6.source.tar.xz) = c4d877837d7007fb611c38d49d9b6dd3bc4c5c9ca900b54e722e140ce7ecd0924f69b5cedc7f8c1fe602e7efe1d7159b019de27999e29235cd631821bb13e6b0
-Size (firefox-152.0.6.source.tar.xz) = 801138984 bytes
-BLAKE2s (nodejs-output-152.0.5.tgz) = 2023698e3d888d3d9cf69929ddbe8906317a48ab364c07047d13aaa40cc5ef89
-SHA512 (nodejs-output-152.0.5.tgz) = 11ddf7c07affd1597706f24164984406215d79ab0c6bbf25532b3d54ce4a061073434b808e3525bb3a5e8852ad380fb8918282bef6401a5cde54e8402cb4285d
-Size (nodejs-output-152.0.5.tgz) = 248204 bytes
+BLAKE2s (firefox-153.0.source.tar.xz) = 147e639d25dca1b57791d240c36a2ed484a02726493eca4a6f58908b15111541
+SHA512 (firefox-153.0.source.tar.xz) = a1af5866e1c9a732818123f2f041bfd5993d093e96dd743b583312fb11d2b39d429df750f9ec22ded64b58a209bb1ecabc7aaf73057d7a64c7349e4da043d66d
+Size (firefox-153.0.source.tar.xz) = 804256908 bytes
+BLAKE2s (nodejs-output-153.0.tgz) = 55a9ae8d1b743f57148a3b763bce2bc9afe2bd902f5b5d6a07a3e597c569aca1
+SHA512 (nodejs-output-153.0.tgz) = 2513c4c47c9bb619a1702a36b8ec316a6c48d6b641656abf86ff33c5ae9e146721947b26a3a1af8295a005daeffb0c77e5f82f36ca9a717decc6850b3518c275
+Size (nodejs-output-153.0.tgz) = 247910 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 44c1fe360411e5946824aa4c814eaf5929e3648d
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = f2d19349e2e93c0f82db0a76124103e6ae6bba9d
 SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
-SHA1 (patch-config_system-headers.mozbuild) = 8a628765291085efe6a22da28c0ff99fbc3c5e6f
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
-SHA1 (patch-dom_media_mediacapabilities_MediaCapabilitiesValidation.cpp) = b7f8d8b82e4545b97643fbbea7fa72a4cc2ecaf8
-SHA1 (patch-dom_media_platforms_ffmpeg_FFmpegVulkanVideoDecoder.cpp) = 997e33cc1e28c624e8e24702e6009fe1c98dab88
+SHA1 (patch-dom_media_mediacapabilities_MediaCapabilitiesValidation.cpp) = 2f471067387bb63d530ba1299f0542d3b3a785b6
 SHA1 (patch-dom_media_webrtc_libwebrtc__overrides_moz.build) = a2ff7cf1e6aaf888ee78581d89c7e658f46c3fcd
 SHA1 (patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp) = b93b4c6367bd2fb3d1868ab7d97ca56c100be414
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
@@ -40,7 +38,7 @@ SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
-SHA1 (patch-python_sites_build.txt) = f60f28480179edb47c8dcf84e3247aa6704c2610
+SHA1 (patch-python_sites_build.txt) = f03f059bbe79bfdf7f1db5475279edb3c9d6ebed
 SHA1 (patch-python_sites_mach.txt) = f1568a4a7e65a6811e97f8c9c76148c9cdb7e02a
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = b1067a6804470f7e365f347683b7d505853fd799
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
@@ -58,7 +56,7 @@ SHA1 (patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc) = 6909
 SHA1 (patch-third__party_libwebrtc_rtc__base_platform__thread__types.cc) = 8ae75100775037347008d168eedc151e0e993b0f
 SHA1 (patch-third__party_python_dlmanager_check.py) = 69054522d8ced8cb47e65e5a8b1a87ed5ce6708e
 SHA1 (patch-third__party_rust_mtu_src_bindings_netbsd.rs) = c22e6994a925fbcccf54ac8a7308382e54bd5d0c
-SHA1 (patch-third__party_sqlite3_ext_moz.build) = 026483e9cdc61eda80b699978b1677e1b6d3ff6d
+SHA1 (patch-third__party_sqlite3_ext_moz.build) = 4d94ea324617a20b3524016dd02fb717e518ece1
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_c-writer.cc) = 38eb2ee0e00722aa1380540b83648b43723719aa
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
