@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/05/01 14:24:13 ktnb Exp $
+# $NetBSD: Makefile,v 1.20 2026/07/21 16:08:38 wiz Exp $
 
 DISTNAME=	chafa-1.18.2
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/hpjansson/chafa/
 COMMENT=	Command-line utility for displaying images in a terminal
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config autoconf automake
+USE_TOOLS+=	pkg-config autoconf automake gmake
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
