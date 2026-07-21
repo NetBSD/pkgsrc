@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4621 2026/07/21 08:47:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4622 2026/07/21 09:01:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6894,3 +6894,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-oath to 1.4.5 [adam 2026-07-21]
 	Updated math/py-numexpr to 2.14.2 [adam 2026-07-21]
 	Updated textproc/rumdl to 0.2.38 [wiz 2026-07-21]
+	Updated databases/p5-BDB to 1.92nb10 [wiz 2026-07-21]
