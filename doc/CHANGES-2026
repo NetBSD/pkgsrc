@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4625 2026/07/21 09:12:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4626 2026/07/21 09:25:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6902,3 +6902,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-types-python-dateutil to 2.9.0.20260716 [adam 2026-07-21]
 	Updated devel/py-types-setuptools to 83.0.0.20260716 [adam 2026-07-21]
 	Updated graphics/vv to 3.2.20260719 [wiz 2026-07-21]
+	Updated devel/py-urwid to 4.0.5 [adam 2026-07-21]
+	Updated www/py-yarl to 1.24.5 [adam 2026-07-21]
+	Updated textproc/py-html5tagger to 2.0.0 [adam 2026-07-21]
+	Updated devel/py-tracerite to 2.6.3 [adam 2026-07-21]
