@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4618 2026/07/21 03:42:16 kim Exp $
+$NetBSD: CHANGES-2026,v 1.4619 2026/07/21 04:17:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6890,3 +6890,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/labwc to 0.20.1 [kikadf 2026-07-20]
 	Updated audio/speech-dispatcher to 0.12.1nb3 [wiz 2026-07-20]
 	Updated www/nginx to 1.30.4nb1 [kim 2026-07-21]
+	Updated misc/sesh to 2.27.0 [kim 2026-07-21]
