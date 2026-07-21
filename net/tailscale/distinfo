@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/07/14 20:43:31 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2026/07/21 13:21:54 ktnb Exp $
 
 BLAKE2s (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 467abef409ed18697f6f4f07f1d9c469cc7ba77b6b985e440b141c9ba37d0505
 SHA512 (4d63.com_gocheckcompilerdirectives_@v_v1.2.1.mod) = 661d501b50181f5af0dfff7e269b704eaa97bc2659dc5f95f22dd886e71f8f8a13ae9ce36cddfff3a1c68a312b445291ba67c7a976841d12216cbc4caefaea80
@@ -4836,9 +4836,9 @@ Size (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.mod) = 100 bytes
 BLAKE2s (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = b26f48ccbf09250e193e0a5ff46b5e65509fcbe977d1b635b4fcf310127a0c1a
 SHA512 (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = 25b95c81b6f03ac8a0a0bedfe5206926f290588192bba1264fd0cbd0ee00766e6d2715300ce921a82d81579feb546b20cca7f0d001aa97b9a4a5a05e8ccbd7eb
 Size (software.sslmate.com_src_go-pkcs12_@v_v0.4.0.zip) = 45988 bytes
-BLAKE2s (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = cd8cb5908c6ef3c5fca6d54ba6f6229101e521a05953dd9cc59d233b8a37014f
-SHA512 (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = 2bfd320e54fcfab30c726012830359bd7448027938e0b41c0d99f3e135559bf0d311ee2baee719a8fd35d02d5430fdcd8afe2c9de6cc3b737b0fae870b46a7d5
-Size (tailscale-4c2110d6535b7fb5e031520d6ac55bea5c7ae865.tar.gz) = 4772120 bytes
+BLAKE2s (tailscale-f12cd2dc0393431706c9f4b8452cb91de420fe0c.tar.gz) = 9428ac25bb76b7fb8471ef6ed946ea143e61357f80392c9f3d18ce7c7ffa9871
+SHA512 (tailscale-f12cd2dc0393431706c9f4b8452cb91de420fe0c.tar.gz) = eb8ca62e1eddb77e1304e196739599bb5993c8b8c8cca93a57666ad145d3fc3d0ab7fd8c29e643b9d6d441b92e9190f0892f221630af1053f284245cb552f595
+Size (tailscale-f12cd2dc0393431706c9f4b8452cb91de420fe0c.tar.gz) = 4776856 bytes
 BLAKE2s (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = b1d0294e5bda7181a77ce77868e0d6b09cdf51f2f0a896c2d187432f1f81dcae
 SHA512 (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = cb40ef264651843145bf639dbe1a42da0357dd75d646c8a860801e96acdeb26f21d3eec3e8f8ee044af3aa8a80a511b5a3130ea5cc244721c5e5d292314498fa
 Size (tailscale.com_client_tailscale_v2_@v_v2.9.0.mod) = 342 bytes
