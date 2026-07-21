@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4623 2026/07/21 09:06:24 he Exp $
+$NetBSD: CHANGES-2026,v 1.4624 2026/07/21 09:10:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6897,3 +6897,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-BDB to 1.92nb10 [wiz 2026-07-21]
 	Updated lang/gcc10 to 10.5.0nb5 [he 2026-07-21]
 	Updated lang/gcc10-libs to 10.5.0nb6 [he 2026-07-21]
+	Updated textproc/py-types-docutils to 0.22.3.20260712 [adam 2026-07-21]
+	Updated devel/py-types-gdb to 16.3.0.20260712 [adam 2026-07-21]
+	Updated time/py-types-python-dateutil to 2.9.0.20260716 [adam 2026-07-21]
+	Updated devel/py-types-setuptools to 83.0.0.20260716 [adam 2026-07-21]
