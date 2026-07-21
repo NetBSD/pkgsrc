@@ -1,0 +1,13 @@
+$NetBSD: patch-gettext-tools_po_Makefile.in.in,v 1.1 2026/07/21 12:55:54 adam Exp $
+
+--- gettext-tools/po/Makefile.in.in.orig	2026-01-28 23:36:19.000000000 +0000
++++ gettext-tools/po/Makefile.in.in
+@@ -366,7 +366,7 @@ $(POFILES):
+ 	fi
+ 
+ 
+-install: install-exec install-data
++install: install-exec install-data-@USE_NLS@
+ install-exec:
+ install-data: install-data-@USE_NLS@
+ install-data-no: all

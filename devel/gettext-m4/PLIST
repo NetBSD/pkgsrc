@@ -1,20 +1,12 @@
-@comment $NetBSD: PLIST,v 1.14 2023/06/28 21:14:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/07/21 12:55:54 adam Exp $
 share/aclocal/build-to-host.m4
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
 share/aclocal/extern-inline.m4
-share/aclocal/fcntl-o.m4
-share/aclocal/flexmember.m4
 share/aclocal/gettext.m4
 share/aclocal/glibc2.m4
 share/aclocal/host-cpu-c-abi.m4
 share/aclocal/hostname.m4
-share/aclocal/iconv.m4
-share/aclocal/intdiv0.m4
-share/aclocal/intl.m4
-share/aclocal/intlmacosx.m4
-share/aclocal/intmax.m4
-share/aclocal/inttypes_h.m4
 share/aclocal/lcmessage.m4
 share/aclocal/lib-ld.m4
 share/aclocal/lib-link.m4
@@ -23,14 +15,6 @@ share/aclocal/locale-de.m4
 share/aclocal/lock.m4
 share/aclocal/nls.m4
 share/aclocal/po.m4
-share/aclocal/printf-posix.m4
 share/aclocal/progtest.m4
-share/aclocal/siginfo.m4
-share/aclocal/size_max.m4
-share/aclocal/stdint_h.m4
 share/aclocal/threadlib.m4
-share/aclocal/uintmax_t.m4
-share/aclocal/visibility.m4
-share/aclocal/wchar_t.m4
 share/aclocal/wint_t.m4
-share/aclocal/xsize.m4

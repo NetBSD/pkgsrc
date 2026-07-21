@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/11/07 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/07/21 12:55:54 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -19,13 +19,7 @@ CFLAGS.gnu-iconv+=	-DHAVE_GNU_ICONV
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} localedir=${EGDIR}
 INSTALL_MAKE_FLAGS+=	includedir=${PREFIX}/include/gettext
 
-#CONFIGURE_DIRS=	gettext-runtime
 BUILD_DIRS=		gettext-runtime/intl
-EGDIR=			${PREFIX}/share/examples/gettext
-LOCALEDIR=		${PREFIX}/${PKGLOCALEDIR}/locale
-
-REQD_DIRS+=		${LOCALEDIR}
-REQD_FILES+=		${EGDIR}/locale.alias ${LOCALEDIR}/locale.alias
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

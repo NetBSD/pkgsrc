@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/07/02 11:00:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.89 2026/07/21 12:55:53 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -6,7 +6,6 @@ COMMENT=	Tools for providing messages in different languages
 
 DEPENDS+=	gettext-m4-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-m4
 DEPENDS+=	gettext-tools-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-tools
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.18
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
@@ -26,7 +25,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=		no # force use of pkgsrc gettext-lib
 
 do-install:
-	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools && ${MAKE} install-pkgdataSCRIPTS DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
 

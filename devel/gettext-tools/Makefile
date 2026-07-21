@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2025/07/02 11:01:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2026/07/21 12:55:54 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
-PKGREVISION=	1
 COMMENT=	Tools for providing messages in different languages
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
@@ -14,17 +13,16 @@ USE_TOOLS+=		xz:run
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--disable-java
-CONFIGURE_ARGS+=	--with-included-libcroco
-CONFIGURE_ARGS+=	--without-git
-CONFIGURE_ARGS+=	--with-xz
-CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--without-emacs
 CONFIGURE_ARGS+=	--disable-openmp
+CONFIGURE_ARGS+=	--with-included-libcroco
+CONFIGURE_ARGS+=	--with-xz
+CONFIGURE_ARGS+=	--without-git
+CONFIGURE_ARGS+=	--without-emacs
+CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
-GNU_CONFIGURE_STRICT=	no # because of gettext-runtime
 LDFLAGS.AIX+=		-Wl,-brtl
 
 # This is defined in the source but broken include ordering means it is not
@@ -61,6 +59,8 @@ PLIST_VARS+=	glibc
 PLIST.glibc=	yes
 .endif
 
+REPLACE_PYTHON=	gettext-tools/src/spit.py.in
+
 post-install:
 	cd ${WRKSRC}/gettext-tools/its && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
@@ -70,5 +70,6 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
