@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.26 2026/05/30 14:04:55 adam Exp $
+# $NetBSD: go-module.mk,v 1.27 2026/07/21 13:58:56 ryoon Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -122,7 +122,7 @@ post-extract: post-extract-go
 post-extract-go:
 .for i in ${GO_MODULE_FILES}
 	@${MKDIR} ${WRKDIR}/.goproxy/${i:H}
-	@cp ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
 .endfor
 
 .PHONY: pre-clean-go
