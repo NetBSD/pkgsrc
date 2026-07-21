@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4629 2026/07/21 10:38:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4630 2026/07/21 10:42:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/icinga2 to 2.16.4 [adam 2026-07-21]
 	Updated misc/py-tqdm to 4.69.0 [adam 2026-07-21]
 	Updated devel/py-jaraco.functools to 4.6.0 [adam 2026-07-21]
+	Updated textproc/groff to 1.24.1nb1 [wiz 2026-07-21]
