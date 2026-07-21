@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/03/05 20:19:11 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/07/21 14:26:00 ryoon Exp $
 
-BLAKE2s (polyml-5.9.tar.gz) = f28611281e1ebf90118a159f276cc19fbd161fe6bceacc58a02136b4f71e0e6f
-SHA512 (polyml-5.9.tar.gz) = e996cbe820216e854a50ba214f2a2a0291ee3279eb35be4126b6558bc1582732a236156fb8d0f548b31fca4a496db62ece83d902b6f5e72de64507fdef602e45
-Size (polyml-5.9.tar.gz) = 3764115 bytes
+BLAKE2s (polyml-5.9.2.tar.gz) = c55f5f42cd3687311bcf962dc7b280f130a19fc7e01f057cd7cfdf51eb78464f
+SHA512 (polyml-5.9.2.tar.gz) = 71aa5375c185b59f1da7805d610ceeb388472a204b0a88f2b42f100005cfe76cdd73e8fb1d15f518843218e5e075563b76e1f28082910c74c8e16892adce5996
+Size (polyml-5.9.2.tar.gz) = 3878657 bytes
