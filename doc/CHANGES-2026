@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4635 2026/07/21 13:22:14 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4636 2026/07/21 14:02:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6921,3 +6921,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.11.30 [adam 2026-07-21]
 	Updated devel/py-uv-build to 0.11.30 [adam 2026-07-21]
 	Updated net/tailscale to 1.98.9 [ktnb 2026-07-21]
+	Updated devel/ruby-io-event to 1.19.3 [taca 2026-07-21]
