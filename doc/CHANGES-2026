@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4640 2026/07/21 14:12:33 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4641 2026/07/21 14:13:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6926,3 +6926,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-http to 6.0.4 [taca 2026-07-21]
 	Updated www/ruby-llhttp to 0.6.2 [taca 2026-07-21]
 	Updated www/ruby-loofah to 2.25.2 [taca 2026-07-21]
+	Updated sysutils/py-borgbackup to 1.4.4nb1 [he 2026-07-21]
