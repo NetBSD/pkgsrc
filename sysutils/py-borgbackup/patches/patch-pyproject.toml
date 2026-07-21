@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.3.2.2 2026/07/21 18:35:28 maya Exp $
+
+Reinstate a patch to accept newer py-msgpack versions.
+
+--- pyproject.toml.orig	2026-07-21 13:28:54.888622385 +0000
++++ pyproject.toml
+@@ -35,7 +35,7 @@ dependencies = [
+     # Please note:
+     # Using any other msgpack version is not supported by Borg development and
+     # any feedback related to issues caused by this will be ignored.
+-    "msgpack >=1.0.3, <=1.1.2",
++    "msgpack >=1.0.3, <=1.2.1",
+     "packaging",
+ ]
+ 
