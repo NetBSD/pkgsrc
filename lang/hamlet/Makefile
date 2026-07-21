@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:44 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/21 14:31:13 ryoon Exp $
 
-DISTNAME=	hamlet-2.0.0
+DISTNAME=	hamlet-2.0.1
 CATEGORIES=	lang
 MASTER_SITES=	https://people.mpi-sws.org/~rossberg/hamlet/
 
