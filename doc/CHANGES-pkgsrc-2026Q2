@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.5 2026/07/17 02:05:44 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.6 2026/07/21 18:36:01 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -128,3 +128,12 @@ www/p5-Mojolicious: Security fix
 
 Pullup ticket #7186 - requested by taca
 security/ap-modsecurity2: Security fix
+
+Pullup ticket #7187 - requested by taca
+www/wordpress: Security fix
+
+Pullup ticket #7188 - requested by taca
+www/php-ja-wordpress: Security fix
+
+Pullup ticket #7189 - requested by he
+sysutils/py-borgbackup: Build fix
