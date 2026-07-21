@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.108 2021/10/26 11:06:54 nia Exp $
+$NetBSD: distinfo,v 1.109 2026/07/21 21:17:39 rjs Exp $
 
 BLAKE2s (samba-3.6.25.tar.gz) = efd22cae10ddacdebdcf088dd5f58d298f15b0ec31ad13674bcfb9d5e568b003
 SHA512 (samba-3.6.25.tar.gz) = 25a5c56dae4517e82e196b59fa301b661ec75db57effbb0ede35fb23b018f78cdea6513e8760966caf58abc43335fcebda77fe5bf5bb9d4b27fd3ca6e5a3b626
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = eb680f72ab0118e57d1b322aba869ac798b27e17
 SHA1 (patch-ac) = 25edbd616199b7dcb41f87aa1374d0bdf19cafec
 SHA1 (patch-ad) = 750b0c08d9975a257bec09088cb38414a1299070
 SHA1 (patch-ae) = de70580b293f4b964bc39b95c6a27511faaf088a
-SHA1 (patch-af) = 380980f6c7d3f9ca6b472cfd2142d6d8bdb0f390
+SHA1 (patch-af) = c538460a2911ed8ef0445c8ec23f1b06aa6ccf5d
 SHA1 (patch-ag) = d84aeab73f22e372f0d275276f4a1160b240199c
 SHA1 (patch-ah) = d4dc5c01fae6b72fb8902b32c0c5b668a918ce49
 SHA1 (patch-ai) = 2161f55d4f1ffe13fa24387349bb9ac71dae5521
@@ -30,6 +30,16 @@ SHA1 (patch-bd) = b78324305bbf67fa4a7dd627e0af1618d2bf7b47
 SHA1 (patch-be) = 2b298e596f2f57a595b83619ba68f6ad95febaaa
 SHA1 (patch-bf) = 19932332d11ce447293b061cd47506fef3d01853
 SHA1 (patch-eg) = af5ebab1c8e183020bb9a5914d0a218ad91d1a0b
+SHA1 (patch-include_proto.h) = 3652c89b6fe6d278d5221d54956ca07cb9179478
 SHA1 (patch-lib_crypto_sha256.h) = f4bd82ba7e63d078543e388621bf30f6f31e0d18
+SHA1 (patch-lib_replace_test_strptime.c) = 7bf743bbb43ef4f0d85dc397d393f27c990f1f09
+SHA1 (patch-lib_util__sec.c) = 784bbb55fd95f452742a66d7759dc98b43e7feac
 SHA1 (patch-smbd_notify__inotify.c) = b950f16f4284e1bc4096c10c24a490e5b2b66915
+SHA1 (patch-smbd_password.c) = a5f23b32629e3b6aa75eba4fba745ba091eb5b7e
 SHA1 (patch-source3_rpc__server_srv__pipe.c) = dcf7dbce59de071d1d6f574cdba0f9e0231be2c3
+SHA1 (patch-tests_ftruncate.c) = c4539f7fc48557dd03ec39e675a6291c34def804
+SHA1 (patch-tests_getgroups.c) = 658c21f1e4c081518f00a83a5715b5eb7dccbd40
+SHA1 (patch-tests_readlink.c) = eda5f90b324dd0f7e9a85c88bd3a42fb9b4f3453
+SHA1 (patch-tests_shared__mmap.c) = 25fb03962e4a29a08db04b0608910207e2ced7c0
+SHA1 (patch-tests_summary.c) = 2d192e27bb0f8e1d573d6cfd85f5399893605abd
+SHA1 (patch-tests_trivial.c) = 2c2b08e7889303862bdbb0e3ed93433a3692965e
