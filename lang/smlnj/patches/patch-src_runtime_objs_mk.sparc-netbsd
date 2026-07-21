@@ -1,0 +1,19 @@
+$NetBSD: patch-src_runtime_objs_mk.sparc-netbsd,v 1.1 2026/07/21 14:03:28 ryoon Exp $
+
+--- src/runtime/objs/mk.sparc-netbsd.orig	2026-07-21 09:51:27.691010504 +0000
++++ src/runtime/objs/mk.sparc-netbsd
+@@ -8,7 +8,7 @@ CFLAGS =	@CFLAGS@ 
+ GCC =		gcc
+ ARFLAGS =	Trcv
+ CFLAGS =	@CFLAGS@ 
+-LDFLAGS=
++LDFLAGS =	@LDFLAGS@
+ CPP =		$(GCC) -x c -E -P
+ 
+ #XOBJS =	xmonitor.o
+@@ -22,4 +22,4 @@ all:
+ RUNTIME =	run.sparc-netbsd
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

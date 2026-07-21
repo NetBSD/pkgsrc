@@ -1,8 +1,8 @@
-$NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.2 2024/12/09 14:07:09 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.3 2026/07/21 14:03:28 ryoon Exp $
 
---- src/runtime/objs/mk.amd64-darwin.orig	2024-10-25 16:47:18.000000000 +0000
+--- src/runtime/objs/mk.amd64-darwin.orig	2026-07-21 09:51:27.690130125 +0000
 +++ src/runtime/objs/mk.amd64-darwin
-@@ -14,7 +14,7 @@ MAKE =		make
+@@ -14,13 +14,14 @@ CC =		/usr/bin/clang -m64 -std=c99 -target x86_64-appl
  # and assembler.
  AS =		/usr/bin/as -target x86_64-apple-darwin
  CC =		/usr/bin/clang -m64 -std=c99 -target x86_64-apple-darwin
@@ -11,3 +11,18 @@ $NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.2 2024/12/09 14:07:09 ryoon 
  CPP =           /usr/bin/clang -x assembler-with-cpp -E -P -std=c99
  AR =		/usr/bin/ar
  RANLIB =	/usr/bin/ranlib
+ 
+ XOBJS =
+ XLIBS =         ../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =
+ XDEFS =
+ BASE_DEFS =
+@@ -32,5 +33,5 @@ all:
+ RUNTIMEX =	runx.amd64-darwin
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
+-	($(MAKE) RUNTIME="$(RUNTIMEX)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-Xlinker -r" $(RUNTIMEX))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIMEX)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-Xlinker -r $(LDFLAGS)" $(RUNTIMEX))

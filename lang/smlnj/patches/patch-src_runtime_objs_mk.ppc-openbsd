@@ -1,0 +1,18 @@
+$NetBSD: patch-src_runtime_objs_mk.ppc-openbsd,v 1.1 2026/07/21 14:03:28 ryoon Exp $
+
+--- src/runtime/objs/mk.ppc-openbsd.orig	2026-07-21 09:51:27.690966602 +0000
++++ src/runtime/objs/mk.ppc-openbsd
+@@ -14,6 +14,7 @@ XLIBS =		../c-libs/dl/libunix-dynload.a
+ 
+ XOBJS =
+ XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm
+ BASE_DEFS =
+ DEFS =          $(XDEFS) $(BASE_DEFS) -DARCH_PPC -DDSIZE_32 -DOPSYS_UNIX -DOPSYS_OPENBSD -DDLOPEN
+@@ -22,4 +23,4 @@ all:
+ RUNTIME =	run.ppc-openbsd
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_objs_mk.ppc-darwin,v 1.1 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: patch-src_runtime_objs_mk.ppc-darwin,v 1.2 2026/07/21 14:03:28 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.ppc-darwin~	2007-10-31 16:04:18.000000000 +0000
+--- src/runtime/objs/mk.ppc-darwin.orig	2026-07-21 09:51:27.690365807 +0000
 +++ src/runtime/objs/mk.ppc-darwin
-@@ -11,7 +11,7 @@ SHELL =		/bin/sh
+@@ -11,10 +11,11 @@ CC =		cc -ansi
  
  MAKE =		make
  CC =		cc -ansi
@@ -13,3 +13,15 @@ Honor pkgsrc CFLAGS.
  CPP =           cc -x assembler-with-cpp -E -P -ansi
  XOBJS =
  XLIBS =         ../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =       -ldl
+ XDEFS =
+ BASE_DEFS =
+@@ -25,5 +26,5 @@ all:
+ RUNTIMEX =	runx.ppc-darwin
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
+-	($(MAKE) RUNTIME="$(RUNTIMEX)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-Xlinker -r" $(RUNTIMEX))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIMEX)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-Xlinker -r $(LDFLAGS)" $(RUNTIMEX))

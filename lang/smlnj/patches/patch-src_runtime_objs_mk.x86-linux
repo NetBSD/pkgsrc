@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_objs_mk.x86-linux,v 1.2 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.x86-linux,v 1.3 2026/07/21 14:03:28 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.x86-linux.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/objs/mk.x86-linux.orig	2026-07-21 09:51:27.690677030 +0000
 +++ src/runtime/objs/mk.x86-linux
-@@ -6,7 +6,7 @@ SHELL =		/bin/sh
+@@ -6,13 +6,14 @@ CC =		gcc -std=gnu99
  MAKE =		make
  AS =		as --32
  CC =		gcc -std=gnu99
@@ -13,3 +13,20 @@ Honor pkgsrc CFLAGS.
  CPP =		gcc -x assembler-with-cpp -E -P
  #XOBJS =	xmonitor.o
  #LD_LIBS =	-lX11
+ #BASE_DEFS =	-DHEAP_MONITOR
+ XOBJS =
+ XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm -ldl
+ XDEFS =
+ BASE_DEFS =
+@@ -25,6 +26,6 @@ all:
+ RUNTIME_A =	run.x86-linux.a
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
+-	($(MAKE) RUNTIME="$(RUNTIME_SO)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-shared" $(RUNTIME_SO))
+-	($(MAKE) RUNTIME_A="$(RUNTIME_A)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="" $(RUNTIME_A))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME_SO)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="-shared $(LDFLAGS)" $(RUNTIME_SO))
++	($(MAKE) RUNTIME_A="$(RUNTIME_A)" VERSION="$(VERSION)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME_A))

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_mach-dep_signal-sysdep.h,v 1.3 2024/12/09 14:07:09 ryoon Exp $
+$NetBSD: patch-src_runtime_mach-dep_signal-sysdep.h,v 1.4 2026/07/21 14:03:28 ryoon Exp $
 
 Support for NetBSD, and for NetBSD on PPC.
 
---- src/runtime/mach-dep/signal-sysdep.h.orig	2024-10-25 16:47:18.000000000 +0000
+--- src/runtime/mach-dep/signal-sysdep.h.orig	2025-11-04 15:48:25.000000000 +0000
 +++ src/runtime/mach-dep/signal-sysdep.h
-@@ -172,7 +172,7 @@ extern void SetFSR(int);
+@@ -177,7 +177,7 @@ extern void SetFSR(int);
    /* disable all FP exceptions */
  #  define SIG_InitFPE()    SetFSR(0)
  
@@ -13,7 +13,7 @@ Support for NetBSD, and for NetBSD on PPC.
      /** SPARC, SOLARIS **/
  #    define SIG_OVERFLOW        SIGFPE
  
-@@ -251,6 +251,21 @@ extern void SetFSR(int);
+@@ -256,6 +256,21 @@ extern void SetFSR(int);
  
      typedef void SigReturn_t;
  
@@ -35,7 +35,7 @@ Support for NetBSD, and for NetBSD on PPC.
  #  endif /* ARCH_PPC */
  
  #elif defined(ARCH_X86)
-@@ -321,9 +336,9 @@ extern void SetFSR(int);
+@@ -335,9 +350,9 @@ extern void SetFSR(int);
  #    define SIG_OVERFLOW                SIGFPE  /* maybe this should be SIGBUS? */
  
  #    define SIG_GetCode(info, scp)      (info)
@@ -48,7 +48,7 @@ Support for NetBSD, and for NetBSD on PPC.
  
       typedef void SigReturn_t;
  
-@@ -428,12 +443,10 @@ extern void SetFSR(int);
+@@ -422,11 +437,9 @@ extern void SetFSR(int);
  #    define SIG_OVERFLOW                SIGFPE
  
  #    define SIG_GetCode(info, scp)      (info)
@@ -57,9 +57,8 @@ Support for NetBSD, and for NetBSD on PPC.
 +#    define SIG_GetPC(scp)              ((scp)->uc_mcontext.__gregs[_REG_RIP])
 +#    define SIG_SetPC(scp, addr)        { (scp)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
  #    define SIG_ZeroLimitPtr(scp)       { (scp)->uc_mcontext.__gregs[_REG_R14] = 0; }
- 
--#    error NetBSD/AMD64 not supported yet
 -
+-#    error NetBSD/AMD64 not supported yet
+ 
  #  elif defined(OPSYS_OPENBSD)
      /** amd64, OpenBSD **/
- #    define SIG_OVERFLOW                SIGFPE

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/02/26 13:44:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2026/07/21 14:03:27 ryoon Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -42,8 +42,6 @@ USE_TOOLS+=	gmake pax
 CONFLICTS=	sml-nj-[0-9]*
 
 SML_BASE=	${PREFIX}/lib/smlnj
-SML_LIBDIR=	${SML_BASE}/lib
-SML_BINDIR=	${SML_BASE}/bin
 SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
 # -ansi does not know 'inline' keyword.
@@ -52,10 +50,10 @@ BUILDLINK_TRANSFORM+=	rm:-ansi
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 # while building, the work directory is the "installation"
-BUILD_ENV+=	SMLNJ_HOME="${WRKDIR}"
+PKGSRC_MAKE_ENV+=	SMLNJ_HOME="${WRKDIR}"
 
 # the build uses patch directly (yuk)
-BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
+PKGSRC_MAKE_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 
 # useful for debugging
 #CFLAGS+=	-Wall
@@ -66,8 +64,8 @@ BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
 BOXES=	amd64 x86 ppc sparc
 
 .if make(distinfo) || make(makesum) || make(mdi)
-.  for B in ${BOXES}
-DISTFILES+=	boot.${B}-unix.tgz
+.  for b in ${BOXES}
+DISTFILES+=	boot.${b}-unix.tgz
 .  endfor
 .endif
 
@@ -88,17 +86,17 @@ pre-extract:
 
 # make it easier to patch the runtime system
 do-extract:
-	${RUN} extract_file="${_DISTDIR}/config.tgz";	\
+	${RUN} extract_file="${DISTDIR}/${DIST_SUBDIR}/config.tgz";	\
 		export extract_file;			\
 		cd ${WRKDIR}; ${EXTRACT_CMD}
-	${RUN} extract_file="${_DISTDIR}/runtime.tgz";	\
+	${RUN} extract_file="${DISTDIR}/${DIST_SUBDIR}/runtime.tgz";	\
 		export extract_file;			\
 		cd ${WRKDIR}/src; ${EXTRACT_CMD}
 
 # symlink the rest of the distfiles
 # also copy in new configs
 post-extract:
-	cd ${WRKDIR} && ${LN} -sf ${_DISTDIR}/* .
+	cd ${WRKDIR} && ${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/* .
 	cp ${FILESDIR}/mk.* ${WRKDIR}/src/runtime/objs/
 
 # make the necessary copy of the runtime, _after_ patching src
@@ -116,9 +114,9 @@ SUBST_VARS.smlbase=	SML_BASE
 # (note that we need to do this in both src/runtime and base/runtime)
 SUBST_CLASSES+=		cflags
 SUBST_STAGE.cflags=	pre-configure
-SUBST_MESSAGE.cflags=	Setting CFLAGS
+SUBST_MESSAGE.cflags=	Setting CFLAGS and LDFLAGS
 SUBST_FILES.cflags=	src/runtime/objs/* base/runtime/objs/*
-SUBST_VARS.cflags=	CFLAGS
+SUBST_VARS.cflags=	CFLAGS LDFLAGS
 
 # use the proper shell
 SUBST_CLASSES+=		shell
@@ -133,7 +131,7 @@ do-configure:
 
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
-	cd ${WRKDIR} && unset PWD && ${SETENV} ${BUILD_ENV} \
+	cd ${WRKDIR} && unset PWD && ${SETENV} ${PKGSRC_MAKE_ENV} \
 		${CONFIG_SHELL} ./config/install.sh
 
 # install target

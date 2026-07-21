@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.3 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-an,v 1.4 2026/07/21 14:03:28 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.sparc-solaris.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/objs/mk.sparc-solaris.orig	2026-07-21 09:51:27.690026281 +0000
 +++ src/runtime/objs/mk.sparc-solaris
-@@ -8,7 +8,7 @@ AS =		/usr/ccs/bin/as
+@@ -8,13 +8,14 @@ CC =		$(GCC)
  AR =		/usr/ccs/bin/ar
  GCC =		gcc
  CC =		$(GCC)
@@ -13,3 +13,16 @@ Honor pkgsrc CFLAGS.
  #CFLAGS =	-g
  CPP =		$(GCC) -x c -E -P
  RANLIB =	$(AR) ts
+ 
+ XOBJS =
+ XLIBS =		../c-libs/dl/libunix-dynload.a
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm -lsocket -lnsl -ldl
+ XDEFS =
+ BASE_DEFS =	-D__STDC__=0
+@@ -25,4 +26,4 @@ all:
+ RUNTIME =	run.sparc-solaris
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))

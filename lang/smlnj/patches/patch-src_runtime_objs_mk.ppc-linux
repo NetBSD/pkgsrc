@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_objs_mk.ppc-linux,v 1.1 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: patch-src_runtime_objs_mk.ppc-linux,v 1.2 2026/07/21 14:03:28 ryoon Exp $
 
 Honor pkgsrc CFLAGS.
 
---- src/runtime/objs/mk.ppc-linux~	2000-11-10 14:04:49.000000000 +0000
+--- src/runtime/objs/mk.ppc-linux.orig	2026-07-21 09:51:27.690410631 +0000
 +++ src/runtime/objs/mk.ppc-linux
-@@ -6,7 +6,7 @@ SHELL =		/bin/sh
+@@ -6,13 +6,14 @@ CC =		gcc -ansi
  
  MAKE =		make
  CC =		gcc -ansi
@@ -13,3 +13,16 @@ Honor pkgsrc CFLAGS.
  CPP =		gcc -x c -E -P -ansi
  #XOBJS =	xmonitor.o
  #LD_LIBS =	-lX11
+ #BASE_DEFS =	-DHEAP_MONITOR
+ XOBJS =
+ XLIBS =
++LDFLAGS =	@LDFLAGS@
+ LD_LIBS =	-lm
+ XDEFS =
+ BASE_DEFS =
+@@ -23,4 +24,4 @@ all:
+ RUNTIME =	run.ppc-linux
+ 
+ all:
+-	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
++	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" LDFLAGS="$(LDFLAGS)" $(RUNTIME))
