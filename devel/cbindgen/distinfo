@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2026/06/12 07:25:28 wiz Exp $
+$NetBSD: distinfo,v 1.39 2026/07/21 16:45:36 wiz Exp $
 
 BLAKE2s (anstream-0.6.19.crate) = 7b29be428f4fb4a071ee21dca3114bed5b74c387f5026b0e80adad32a0cc3209
 SHA512 (anstream-0.6.19.crate) = 75a27cd003f44c1dd74dec416f78e0d1027d7f6b0b9735d3fd60e8d7e07d1db870b1d1e037ae4093881854b300b95ccce47a3a7da9a4dd5d0ac1912e53f45175
@@ -21,9 +21,9 @@ Size (autocfg-1.5.0.crate) = 18729 bytes
 BLAKE2s (bitflags-2.9.1.crate) = a7963a6b45e1b55cea5f5872e5f3a1a4d91933dd71ed71007c208a57ea97e414
 SHA512 (bitflags-2.9.1.crate) = 6baeac42e4227e58030e317125a3c23997beceb44f9262f029e59c6dc36dd1733f2e88b3c3c8ad22f806245ef404512a880b16f3c8c52fa5c4aab287bb3cfe27
 Size (bitflags-2.9.1.crate) = 47913 bytes
-BLAKE2s (cbindgen-0.29.2.tar.gz) = 6fb9be14b02ac1d168e785b67c4e6069e08bbdad06d96fee427f863cd53049c6
-SHA512 (cbindgen-0.29.2.tar.gz) = 79264c940672b418a59debf1e8c1c672879fd766e21c0a491c9eeeee9895ba4e448173e6a7539c11cf05ca2145637717b8be06749c1a274e4f2e1d0485617885
-Size (cbindgen-0.29.2.tar.gz) = 245826 bytes
+BLAKE2s (cbindgen-0.29.4.tar.gz) = 7066c1317afd415eac11e39a6f96efba5d3fdc9db5f3ef0ea6181666f79dc77d
+SHA512 (cbindgen-0.29.4.tar.gz) = c2b22a094c4caf993b03ea712eb1c5c057254615aca9d657eb9e768458f1aa35390aba49a86a54d4bf8fde7e17422a3c1107661e880d50e23a3d6082e549b3bf
+Size (cbindgen-0.29.4.tar.gz) = 252643 bytes
 BLAKE2s (cfg-if-1.0.1.crate) = 49583828bd63de9e4722022bc5fd336ef8a4845879f0d29e2fb5e2744b9e0ba8
 SHA512 (cfg-if-1.0.1.crate) = 56af0d562fe60022e8df9c5b4e9b2eed6d7ca1874c4d3bbb52148d6f3c6f7d30e0b63d4b1e652ccfc8881a663fb6f450a48447d5a8cce0c2e5a2ac12c6ac655f
 Size (cfg-if-1.0.1.crate) = 8683 bytes
