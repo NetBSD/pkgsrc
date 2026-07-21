@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/06/11 07:17:02 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/07/21 16:01:53 wiz Exp $
 
 DISTNAME=	gpsd-3.27.5
 PKGREVISION=	2
@@ -79,3 +79,14 @@ PLIST_SUBST+=	PLIST_DYLIB=
 #.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if defined(_RELRO_LDFLAGS)
+# XXX: hack
+# These should be taken from LDFLAGS, but that happens inconsistently here.
+# most programs:
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+# lib/libgps.so.*:
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
+.endif
