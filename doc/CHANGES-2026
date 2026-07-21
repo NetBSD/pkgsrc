@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4642 2026/07/21 14:14:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4643 2026/07/21 14:26:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6928,3 +6928,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-loofah to 2.25.2 [taca 2026-07-21]
 	Updated sysutils/py-borgbackup to 1.4.4nb1 [he 2026-07-21]
 	Updated www/ruby-selenium-webdriver to 4.46.0 [taca 2026-07-21]
+	Updated lang/polyml to 5.9.2 [ryoon 2026-07-21]
