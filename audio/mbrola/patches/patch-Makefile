@@ -1,10 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2024/01/26 12:58:05 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2026/07/21 13:47:57 ryoon Exp $
 
-Let pkgsrc define CC and don't force endianess.
+* Allow CC override.
+* Let pkgsrc define CC and don't force endianess.
+* Honor LDFLAGS. If is provided by pkgsrc framework.
 
 --- Makefile.orig	2019-12-17 16:05:14.000000000 +0000
 +++ Makefile
-@@ -4,7 +4,7 @@
+@@ -4,7 +4,7 @@ VERSION=3.3
  VERSION=3.3
  
  # To test strict C ANSI compliance
@@ -22,3 +24,12 @@ Let pkgsrc define CC and don't force endianess.
  #CFLAGS += -DBIG_ENDIAN
  
  #######################
+@@ -128,7 +128,7 @@ $(PROJ): install_dir  $(BINOBJS) 
+ PROJ = mbrola
+ 
+ $(PROJ): install_dir  $(BINOBJS) 
+-	$(CCPURE) $(CFLAGS) -o $(MBRDIR)/$(PROJ) $(BINOBJS) $(LIB)	
++	$(CCPURE) $(CFLAGS) $(LDFLAGS) -o $(MBRDIR)/$(PROJ) $(BINOBJS) $(LIB)	
+ 
+ clean:
+ 	\rm -f $(MBRDIR)/$(PROJ) $(PROJ).a core demo* TAGS $(BIN)/lib*.o $(BINOBJS) 
