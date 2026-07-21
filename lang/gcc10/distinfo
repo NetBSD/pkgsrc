@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2025/01/10 11:57:07 riastradh Exp $
+$NetBSD: distinfo,v 1.21 2026/07/21 09:03:20 he Exp $
 
 BLAKE2s (gcc-10.5.0.tar.xz) = af4a8b262d9d4e534e8e1c311897e68e7d64f147ad1eed42e77f9674da188bf3
 SHA512 (gcc-10.5.0.tar.xz) = d86dbc18b978771531f4039465e7eb7c19845bf607dc513c97abf8e45ffe1086a99d98f83dfb7b37204af22431574186de9d5ff80c8c3c3a98dbe3983195bffd
@@ -19,6 +19,7 @@ SHA1 (patch-gcc_config_arm_bpabi.h) = 0b0de5ad95442e34397cb46739ef6e36048d6f45
 SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 367d83c808fd7b5b1989d0490b532ad06b425b31
+SHA1 (patch-gcc_config_rs6000_netbsd.h) = b3f405f3dfdb5590b79f069b380291d2382c8ff7
 SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
