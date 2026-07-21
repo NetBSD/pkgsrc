@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4627 2026/07/21 09:56:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4628 2026/07/21 10:31:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6908,3 +6908,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tracerite to 2.6.3 [adam 2026-07-21]
 	Updated audio/libmysofa to 1.3.5 [adam 2026-07-21]
 	Updated lang/jimtcl to 0.84 [adam 2026-07-21]
+	Updated devel/buf to 1.72.0 [adam 2026-07-21]
+	Updated net/icinga2 to 2.16.4 [adam 2026-07-21]
