@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2026/07/19 08:05:45 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/07/21 10:42:16 wiz Exp $
 
 DISTNAME=	groff-1.24.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 EXTRACT_USING=	bsdtar
@@ -100,5 +101,4 @@ post-install:
 	fi
 .endfor
 
-.include "../../textproc/uchardet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
