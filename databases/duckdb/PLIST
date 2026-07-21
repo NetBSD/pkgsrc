@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/05/30 15:37:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/07/21 14:54:38 ryoon Exp $
 bin/duckdb
 include/duckdb.h
 include/duckdb.hpp
@@ -1283,6 +1283,7 @@ include/duckdb/storage/table/delete_state.hpp
 include/duckdb/storage/table/geo_column_data.hpp
 include/duckdb/storage/table/in_memory_checkpoint.hpp
 include/duckdb/storage/table/list_column_data.hpp
+include/duckdb/storage/table/per_column_metadata_blocks.hpp
 include/duckdb/storage/table/persistent_table_data.hpp
 include/duckdb/storage/table/row_group.hpp
 include/duckdb/storage/table/row_group_collection.hpp
@@ -1361,3 +1362,8 @@ lib/libjson_extension.a
 lib/libparquet_extension.a
 lib/libtpcds_extension.a
 lib/libtpch_extension.a
+@pkgdir include/duckdb/storage/serialization
+@pkgdir include/duckdb/main/capi/header_generation/schemata
+@pkgdir include/duckdb/main/capi/header_generation/functions
+@pkgdir include/duckdb/main/capi/header_generation/apis/v1/v1.2
+@pkgdir include/duckdb/main/capi/header_generation/apis/v1/unstable
