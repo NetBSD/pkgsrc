@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/07/21 14:07:29 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2026/07/21 14:23:51 ryoon Exp $
 
 BLAKE2s (mosml-ver-2.10.1.tar.gz) = b1cce201c3011a27f8f80be3a563b87ec67855f9600978059e76141cb0041f8b
 SHA512 (mosml-ver-2.10.1.tar.gz) = 1463ee8dbcd979795ceca0439c7b2d545520590e036bd0c428d9617802a4e40efba82caf0afd5e24761b857cceb63a69269bf765c91df27c3e5f84242519af60
@@ -8,5 +8,9 @@ SHA1 (patch-src_config_auto-aux_align.c) = 3dfe7a8bb084595cee37af3c573663b42311d
 SHA1 (patch-src_config_auto-aux_endian.c) = 675b46c2f09b194c3231241a1078ae41abd5d42d
 SHA1 (patch-src_config_auto-aux_sizes.c) = 587e08f01eb68b92661f3208bd81eb9638f0bdf3
 SHA1 (patch-src_dynlibs_intinf_Makefile) = c0ad341de2dff6a81164d30d65fbcde48318b0ed
+SHA1 (patch-src_dynlibs_msocket_Makefile) = cdf92b246999e4264a3f2ddf781013bf464eccde
+SHA1 (patch-src_dynlibs_munix_Makefile) = c68db4774362f5786554952f14259502cf4db859
+SHA1 (patch-src_mosmlyac_Makefile) = 887f5d4fa6659bbd196fcc6754ec54b9bc5d979a
+SHA1 (patch-src_runtime_Makefile) = 4ef174ef0b1a44a52fb94bf6471fe95885086830
 SHA1 (patch-src_runtime_config.h) = 6b556f7e73000f09e34aa774187011b721cae41e
 SHA1 (patch-src_runtime_mosml.c) = bcf57b7387e63e5461ceda9def7e1cd58cb0e8df
