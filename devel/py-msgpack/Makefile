@@ -1,6 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2026/06/21 06:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/07/21 14:16:09 he Exp $
 
 DISTNAME=	msgpack-1.2.1
+# Please note that py-borgackup has a "maximally supported version"
+# of this particular package coded into it, potentially causing
+# a run-time error for py-borgbackup after a package upgrade.
+# Ref. the two recently re-instated patches to py-borbackup.
+# So when updating this package, py-borgbackup will probably
+# require attention too(!)
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgpack/}
