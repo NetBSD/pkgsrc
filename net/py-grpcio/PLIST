@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/04/16 09:58:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/07/22 12:34:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,6 +28,7 @@ ${PYSITELIB}/grpc/_cython/_cygrpc/__init__.pyc
 ${PYSITELIB}/grpc/_cython/_cygrpc/__init__.pyo
 ${PYSITELIB}/grpc/_cython/_cygrpc/private_key_signing/private_key_signer_py_wrapper.cc
 ${PYSITELIB}/grpc/_cython/_cygrpc/private_key_signing/private_key_signer_py_wrapper.h
+${PYSITELIB}/grpc/_cython/cygrpc.pyi
 ${PYSITELIB}/grpc/_cython/cygrpc.so
 ${PYSITELIB}/grpc/_grpcio_metadata.py
 ${PYSITELIB}/grpc/_grpcio_metadata.pyc
