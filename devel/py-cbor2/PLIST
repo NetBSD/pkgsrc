@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2026/07/05 10:15:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/07/22 08:24:14 adam Exp $
 bin/cbor2-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/scm_file_list.json
-${PYSITELIB}/${WHEEL_INFODIR}/scm_version.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cbor2/__init__.py
 ${PYSITELIB}/cbor2/__init__.pyc
