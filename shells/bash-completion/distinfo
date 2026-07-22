@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2026/01/07 18:31:54 leot Exp $
+$NetBSD: distinfo,v 1.12 2026/07/22 07:39:53 adam Exp $
 
-BLAKE2s (bash-completion-2.17.0.tar.xz) = cd19e71e9f19924d1279c0c5208ed715897153578974ea4348b2ab2ef3989ef0
-SHA512 (bash-completion-2.17.0.tar.xz) = 79f7a22de7df7a6a5cad2e8088ce7e013a3cd5542f3af825c04b2607c824022913dd775202ddab7964dd759e50d5bdf9be6451c70d488efaef10f7cf2f7ac73e
-Size (bash-completion-2.17.0.tar.xz) = 482896 bytes
-SHA1 (patch-Makefile.in) = b6af5eb9c66546e80aa909aabdaae3ae67f7fc88
+BLAKE2s (bash-completion-2.18.0.tar.xz) = b9c66adaf84cb30b39b523943ff4ee9ca40d653f3993a89a4437eb6b0c3c60c6
+SHA512 (bash-completion-2.18.0.tar.xz) = 82060ef5664d99ee0c35de132a2a75df31e253276f0fc7040b2c2293f9942873afaeede9428b1990007e4a6fa6452c7942d34f3884e7cedebfa9b0d24e719ebe
+Size (bash-completion-2.18.0.tar.xz) = 492024 bytes
+SHA1 (patch-Makefile.in) = c512ccba0fea8e4979bb3499a75ae976f7cc93ac
 SHA1 (patch-bash__completion) = 218e09660696a93c499e023b024c0042c021a9df

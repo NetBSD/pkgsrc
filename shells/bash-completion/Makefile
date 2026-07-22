@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2026/01/07 18:31:54 leot Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/22 07:39:53 adam Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
 # them into ${DESTDIR}${PREFIX}/share/bash-completion/completions
 # with the name of the package as file name.
 
-DISTNAME=	bash-completion-2.17.0
-PKGREVISION=	1
+DISTNAME=	bash-completion-2.18.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

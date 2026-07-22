@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2026/01/06 20:20:55 adam Exp $
-share/bash-completion/completions/pkg_deinstall
-share/bash-completion/completions/pkg_delete
-share/bash-completion/completions/pkg_info
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2026/07/22 07:39:53 adam Exp $
+share/bash-completion/completions-core/pkg_deinstall.bash
+share/bash-completion/completions-core/pkg_delete.bash
+share/bash-completion/completions-core/pkg_info.bash
