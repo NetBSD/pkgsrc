@@ -1,0 +1,2 @@
+cargo-machete is a Cargo tool that detects unused dependencies in Rust
+projects, in a fast (yet imprecise) way.
