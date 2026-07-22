@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4663 2026/07/22 12:41:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4664 2026/07/22 12:57:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6959,3 +6959,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-tools to 1.82.1 [adam 2026-07-22]
 	Updated devel/py-amaranth to 0.5.9 [adam 2026-07-22]
 	Updated misc/py-pbs-installer to 2026.7.18 [adam 2026-07-22]
+	Removed www/py-beautifulsoup successor www/py-beautifulsoup4 [adam 2026-07-22]
+	Updated devel/py-plumbum to 2.0.2 [adam 2026-07-22]
