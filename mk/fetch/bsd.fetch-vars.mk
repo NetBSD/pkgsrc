@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.29 2024/10/22 06:29:21 jperkin Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.30 2026/07/22 15:06:51 ryoon Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -74,6 +74,12 @@ DISTFILES+=			${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRAC
 .if !empty(GITLAB_SUBMODULES)
 .  for _GITLAB_SM_USER _GITLAB_SM_PROJECT _GITLAB_SM_TAG _GITLAB_SM_PLACE in ${GITLAB_SUBMODULES}
 DISTFILES+=			${_GITLAB_SM_USER}-${_GITLAB_SM_PROJECT}-${_GITLAB_SM_TAG}${EXTRACT_SUFX}
+.  endfor
+.endif
+
+.if !empty(CODEBERG_SUBMODULES)
+.  for _CODEBERG_SM_USER _CODEBERG_SM_PROJECT _CODEBERG_SM_TAG _CODEBERG_SM_PLACE in ${CODEBERG_SUBMODULES}
+DISTFILES+=			${_CODEBERG_SM_USER}-${_CODEBERG_SM_PROJECT}-${_CODEBERG_SM_TAG}${EXTRACT_SUFX}
 .  endfor
 .endif
 
