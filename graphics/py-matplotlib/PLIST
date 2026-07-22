@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2026/06/29 11:25:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2026/07/22 08:29:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -3494,6 +3494,7 @@ ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/axes3d_ortho
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/axes3d_primary_views.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/axes3d_rotated.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/axis_positions.png
+${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/axis_positions_inverted.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/bar3d.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/bar3d_notshaded.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/bar3d_shaded.png
