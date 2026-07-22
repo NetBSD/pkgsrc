@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/07/16 19:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/22 17:23:55 ryoon Exp $
 
-DISTNAME=	LaTeXML-0.8.2
-PKGREVISION=	13
+DISTNAME=	LaTeXML-0.8.8
 CATEGORIES=	textproc www
 MASTER_SITES=	https://dlmf.nist.gov/LaTeXML/releases/
 
@@ -28,6 +27,8 @@ DEPENDS+=	p5-UUID-Tiny-[0-9]*:../../devel/p5-UUID-Tiny
 DEPENDS+=	texlive-collection-latexrecommended-[0-9]*:../../meta-pkgs/texlive-collection-latexrecommended
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
+
+REPLACE_PERL+=	bin/*
 
 PERL5_PACKLIST=	auto/LaTeXML/.packlist
 
