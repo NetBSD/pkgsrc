@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4656 2026/07/22 06:32:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4657 2026/07/22 07:12:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6942,3 +6942,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/youtube-dl successor net/yt-dlp [gdt 2026-07-21]
 	Updated editors/redox to 0.8.0 [pin 2026-07-22]
 	Updated shells/oh-my-posh to 29.34.0 [pin 2026-07-22]
+	Updated devel/pkgconf to 3.0.4 [adam 2026-07-22]
+	Updated lang/py-pydemumble to 0.1.3 [adam 2026-07-22]
+	Updated misc/py-tibs to 1.1.0 [adam 2026-07-22]
