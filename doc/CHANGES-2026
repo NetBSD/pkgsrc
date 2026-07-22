@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4669 2026/07/22 14:46:06 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4670 2026/07/22 15:07:24 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6967,3 +6967,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/gitea to 1.25.5 [khorben 2026-07-22]
 	Updated www/resterm to 0.47.3 [drixter 2026-07-22]
 	Updated net/dnscontrol to 4.43.3 [drixter 2026-07-22]
+	Updated net/knot to 3.5.6 [drixter 2026-07-22]
