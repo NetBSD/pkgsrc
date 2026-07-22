@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/04/17 15:49:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/07/22 07:02:10 adam Exp $
 
-BLAKE2s (pydemumble-0.0.1.tar.gz) = fb9db9aa845cc611252728369e64bdf8e1c6ddbdf5ec5afd0551a1c88be1c8f0
-SHA512 (pydemumble-0.0.1.tar.gz) = 691574fea4d1d986bc60b4b928e20f4bf077b69182210db9a0183874bd748bbaa5d49daaa68a66dafbd0e64ccfd24995ffe97d08bc2bcde0884d4c69c6a97f41
-Size (pydemumble-0.0.1.tar.gz) = 1298294 bytes
+BLAKE2s (pydemumble-0.1.3.tar.gz) = 2371a8c65c2a26fb9b2d408eeeb1406588f80e768f1e3d1a5b8165bb4c717d12
+SHA512 (pydemumble-0.1.3.tar.gz) = 773060893fb51452a7aef0e3a66c68d8e4714bb8cc16723385ef0186dc05787427deb560bb79e53e1e260e1c856de9e099521b65329d1116af75848a9969752b
+Size (pydemumble-0.1.3.tar.gz) = 1324539 bytes
