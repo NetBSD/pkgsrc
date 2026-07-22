@@ -1,0 +1,7 @@
+cargo-sweep is a Cargo subcommand for deleting old or unused build artifacts
+from target/ without doing a full cargo clean.
+
+It is useful when you want to:
+* shrink large target/ directories
+* avoid bloated CI caches
+* clean many Rust projects at once
