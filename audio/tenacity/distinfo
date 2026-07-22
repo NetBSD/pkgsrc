@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/07/22 15:24:33 ryoon Exp $
+
+BLAKE2s (tenacity-v1.3.5.tar.gz) = e2659c8bae2244eb42fb50a0a10ae0a05a542c483173c8df9204e1cfa1d22557
+SHA512 (tenacity-v1.3.5.tar.gz) = c6f1d99f6e83f0bb89bef15a878cfe5f0c5c100ea842a57b8ca47f096e07db7ae5a678b385f485f65f98d96c46a7b559b1c522f943677368c787a7cbd24de776
+Size (tenacity-v1.3.5.tar.gz) = 48864127 bytes
+BLAKE2s (tenacityteam-libnyquist-aaf654f44192240170cdb5ed4dc2f004dad2b1e2.tar.gz) = 2c54f15e23a14c8dfa69e261002c5d923446d619cb323d9f6ff2afde8a727620
+SHA512 (tenacityteam-libnyquist-aaf654f44192240170cdb5ed4dc2f004dad2b1e2.tar.gz) = ad07bbae134f9e626e14c8f5a094d8676078465e2b61c7a57853c9eebdca95029d6f0bcb67d6bc57242b1adaaac3d59342f3d7d742f3153ac25841031245a75a
+Size (tenacityteam-libnyquist-aaf654f44192240170cdb5ed4dc2f004dad2b1e2.tar.gz) = 705278 bytes
+SHA1 (patch-src_effects_Compressor2.cpp) = a2d841de127ac0374a3b684c3d00c2a5985aa91b
