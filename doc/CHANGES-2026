@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4678 2026/07/22 19:29:52 he Exp $
+$NetBSD: CHANGES-2026,v 1.4679 2026/07/22 20:38:23 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6977,3 +6977,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/dav1d to 1.5.4 [ryoon 2026-07-22]
 	Updated lang/gcc15 to 15.3.0nb1 [he 2026-07-22]
 	Updated lang/gcc15-libs to 15.3.0nb2 [he 2026-07-22]
+	Updated net/knot-resolver to 6.4.1 [drixter 2026-07-22]
