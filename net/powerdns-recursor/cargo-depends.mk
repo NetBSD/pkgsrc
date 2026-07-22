@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/06/07 19:06:31 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/07/22 15:22:35 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.13
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
