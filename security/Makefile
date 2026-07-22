@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2026/07/20 05:28:44 taca Exp $
+# $NetBSD: Makefile,v 1.1019 2026/07/22 16:15:40 ryoon Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -422,6 +422,7 @@ SUBDIR+=	passphrase
 SUBDIR+=	password-store
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
+SUBDIR+=	pdfrip
 SUBDIR+=	pear-Crypt_GPG
 SUBDIR+=	pev
 SUBDIR+=	pgp2
