@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.682 2026/07/13 12:00:24 adam Exp $
+# $NetBSD: Makefile,v 1.683 2026/07/22 13:35:04 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -35,6 +35,8 @@ SUBDIR+=	buffer
 SUBDIR+=	byobu
 SUBDIR+=	cabal-install
 SUBDIR+=	calibre
+SUBDIR+=	cargo-machete
+SUBDIR+=	cargo-sweep
 SUBDIR+=	catpoint
 SUBDIR+=	celestia
 SUBDIR+=	chatgpt-shell-cli
