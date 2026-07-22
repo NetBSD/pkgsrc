@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.6 2026/07/21 18:36:01 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.7 2026/07/22 15:15:48 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -137,3 +137,10 @@ www/php-ja-wordpress: Security fix
 
 Pullup ticket #7189 - requested by he
 sysutils/py-borgbackup: Build fix
+
+Pullup ticket #7190 - requested by gutteridge
+www/firefox140-l10n: Security fix
+www/firefox140: Security fix
+
+Pullup ticket #7191 - requested by khorben
+net/libslirp: Security fix
