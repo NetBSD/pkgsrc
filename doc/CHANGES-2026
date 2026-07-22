@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4662 2026/07/22 12:35:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4663 2026/07/22 12:41:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6957,3 +6957,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio to 1.82.1 [adam 2026-07-22]
 	Updated net/py-grpcio-testing to 1.82.1 [adam 2026-07-22]
 	Updated net/py-grpcio-tools to 1.82.1 [adam 2026-07-22]
+	Updated devel/py-amaranth to 0.5.9 [adam 2026-07-22]
+	Updated misc/py-pbs-installer to 2026.7.18 [adam 2026-07-22]
