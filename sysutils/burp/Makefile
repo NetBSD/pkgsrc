@@ -39,6 +39,8 @@ USE_LIBTOOL=	yes
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -vif
 
+INSTALL_TARGET=		install-all
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--mandir=${PREFIX}/${PKGMANDIR} \
 			--sbindir=${PREFIX}/sbin

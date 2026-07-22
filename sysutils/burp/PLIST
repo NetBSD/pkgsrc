@@ -40,8 +40,6 @@ share/doc/burp/tests.txt
 share/doc/burp/timer_script.txt
 share/doc/burp/working_dir.txt
 share/examples/burp/CA.cnf
-share/examples/burp/autoupgrade/server/win32/script
-share/examples/burp/autoupgrade/server/win64/script
 share/examples/burp/burp-server.conf
 share/examples/burp/burp.conf
 share/examples/burp/clientconfdir/incexc/example
