@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/01/12 21:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/07/22 13:51:41 adam Exp $
 
 DISTNAME=	pycares-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -19,8 +19,10 @@ LICENSE=	mit
 #    Fix py-cares or cffi to work with a packed definition.
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
 
+MAKE_ENV+=	PYCARES_USE_SYSTEM_LIB=1
+
 .include "../../lang/python/wheel.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
