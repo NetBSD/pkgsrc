@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/10/09 07:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/07/22 07:02:10 adam Exp $
 
-DISTNAME=	pydemumble-0.0.1
+DISTNAME=	pydemumble-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydemumble/}
