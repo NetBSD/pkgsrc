@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4675 2026/07/22 16:14:52 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4676 2026/07/22 17:24:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6973,3 +6973,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird to 152.0.1 [ryoon 2026-07-22]
 	Updated mail/thunderbird-l10n to 152.0.1 [ryoon 2026-07-22]
 	Added security/pdfrip version 3.0.0 [ryoon 2026-07-22]
+	Updated print/LaTeXML to 0.8.8 [ryoon 2026-07-22]
