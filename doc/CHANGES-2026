@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4665 2026/07/22 13:36:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4666 2026/07/22 13:48:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6963,3 +6963,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-plumbum to 2.0.2 [adam 2026-07-22]
 	Added misc/cargo-machete version 0.9.2 [adam 2026-07-22]
 	Added misc/cargo-sweep version 0.8.0 [adam 2026-07-22]
+	Updated net/coturn to 4.15.0 [gdt 2026-07-22]
