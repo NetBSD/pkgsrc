@@ -1,0 +1,4 @@
+pdfrip is a fast multithreaded PDF password cracking utility written
+in Rust with support for wordlist-based dictionary attacks, date,
+number range, and alphanumeric brute-forcing, and a custom query
+builder for password formats.
