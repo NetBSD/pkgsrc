@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1927 2026/07/14 19:05:35 gdt Exp $
+# $NetBSD: Makefile,v 1.1928 2026/07/22 12:51:42 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -718,7 +718,6 @@ SUBDIR+=	py-aiohttp-socks
 SUBDIR+=	py-aioquic
 SUBDIR+=	py-asgiref
 SUBDIR+=	py-autobahn
-SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-betamax
 SUBDIR+=	py-bleach
