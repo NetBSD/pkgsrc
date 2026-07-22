@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4655 2026/07/22 06:30:04 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4656 2026/07/22 06:32:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6941,3 +6941,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xfce4-thunar to 4.20.9 [gutteridge 2026-07-21]
 	Removed net/youtube-dl successor net/yt-dlp [gdt 2026-07-21]
 	Updated editors/redox to 0.8.0 [pin 2026-07-22]
+	Updated shells/oh-my-posh to 29.34.0 [pin 2026-07-22]
