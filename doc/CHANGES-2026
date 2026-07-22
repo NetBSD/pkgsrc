@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4659 2026/07/22 08:05:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4660 2026/07/22 08:15:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6949,3 +6949,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/bash-completion to 2.18.0 [adam 2026-07-22]
 	Updated finance/bitcoin to 31.1 [adam 2026-07-22]
 	Updated databases/postgresql-timescaledb to 2.28.3 [adam 2026-07-22]
+	Updated devel/py-setuptools_scm to 10.2.1 [adam 2026-07-22]
+	Updated textproc/py-regex to 2026.7.19 [adam 2026-07-22]
