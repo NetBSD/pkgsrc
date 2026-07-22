@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4661 2026/07/22 08:29:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4662 2026/07/22 12:35:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6953,3 +6953,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.7.19 [adam 2026-07-22]
 	Updated security/py-certifi to 2026.7.22 [adam 2026-07-22]
 	Updated graphics/py-matplotlib to 3.11.1 [adam 2026-07-22]
+	Updated net/grpc to 1.82.1 [adam 2026-07-22]
+	Updated net/py-grpcio to 1.82.1 [adam 2026-07-22]
+	Updated net/py-grpcio-testing to 1.82.1 [adam 2026-07-22]
+	Updated net/py-grpcio-tools to 1.82.1 [adam 2026-07-22]
