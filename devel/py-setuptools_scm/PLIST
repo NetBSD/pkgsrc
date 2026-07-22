@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/06/23 05:36:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/07/22 08:14:03 adam Exp $
 bin/setuptools-scm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -25,6 +25,9 @@ ${PYSITELIB}/setuptools_scm/_integration/__init__.pyo
 ${PYSITELIB}/setuptools_scm/_integration/_discover.py
 ${PYSITELIB}/setuptools_scm/_integration/_discover.pyc
 ${PYSITELIB}/setuptools_scm/_integration/_discover.pyo
+${PYSITELIB}/setuptools_scm/_integration/bdist_wheel.py
+${PYSITELIB}/setuptools_scm/_integration/bdist_wheel.pyc
+${PYSITELIB}/setuptools_scm/_integration/bdist_wheel.pyo
 ${PYSITELIB}/setuptools_scm/_integration/build_py.py
 ${PYSITELIB}/setuptools_scm/_integration/build_py.pyc
 ${PYSITELIB}/setuptools_scm/_integration/build_py.pyo
