@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2026/06/27 14:49:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2026/07/22 06:28:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -105,6 +105,7 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.149
+CARGO_CRATE_DEPENDS+=	serde_spanned-1.1.1
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.18
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.5
@@ -122,6 +123,10 @@ CARGO_CRATE_DEPENDS+=	thiserror-2.0.18
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.18
 CARGO_CRATE_DEPENDS+=	tiff-0.11.3
 CARGO_CRATE_DEPENDS+=	tinystr-0.8.3
+CARGO_CRATE_DEPENDS+=	toml-0.9.12+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_datetime-0.7.5+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_parser-1.1.2+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_writer-1.1.1+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.26.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.24.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.23.4
@@ -167,6 +172,8 @@ CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.53.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.53.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.53.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.53.1
+CARGO_CRATE_DEPENDS+=	winnow-0.7.15
+CARGO_CRATE_DEPENDS+=	winnow-1.0.3
 CARGO_CRATE_DEPENDS+=	wit-bindgen-0.51.0
 CARGO_CRATE_DEPENDS+=	wit-bindgen-0.57.1
 CARGO_CRATE_DEPENDS+=	wit-bindgen-core-0.51.0
