@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4679 2026/07/22 20:38:23 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4680 2026/07/23 05:57:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6978,3 +6978,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/gcc15 to 15.3.0nb1 [he 2026-07-22]
 	Updated lang/gcc15-libs to 15.3.0nb2 [he 2026-07-22]
 	Updated net/knot-resolver to 6.4.1 [drixter 2026-07-22]
+	Updated shells/oh-my-posh to 29.35.0 [pin 2026-07-23]
