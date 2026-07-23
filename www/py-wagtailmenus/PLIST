@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/12/28 08:28:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/07/23 10:21:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -312,6 +312,9 @@ ${PYSITELIB}/wagtailmenus/tests/test_flatmenu_class.pyo
 ${PYSITELIB}/wagtailmenus/tests/test_hooks.py
 ${PYSITELIB}/wagtailmenus/tests/test_hooks.pyc
 ${PYSITELIB}/wagtailmenus/tests/test_hooks.pyo
+${PYSITELIB}/wagtailmenus/tests/test_localization.py
+${PYSITELIB}/wagtailmenus/tests/test_localization.pyc
+${PYSITELIB}/wagtailmenus/tests/test_localization.pyo
 ${PYSITELIB}/wagtailmenus/tests/test_mainmenu_class.py
 ${PYSITELIB}/wagtailmenus/tests/test_mainmenu_class.pyc
 ${PYSITELIB}/wagtailmenus/tests/test_mainmenu_class.pyo
