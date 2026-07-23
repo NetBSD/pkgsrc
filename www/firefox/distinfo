@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.586 2026/07/21 15:25:01 ryoon Exp $
+$NetBSD: distinfo,v 1.587 2026/07/23 13:33:40 ryoon Exp $
 
 BLAKE2s (firefox-153.0.source.tar.xz) = 147e639d25dca1b57791d240c36a2ed484a02726493eca4a6f58908b15111541
 SHA512 (firefox-153.0.source.tar.xz) = a1af5866e1c9a732818123f2f041bfd5993d093e96dd743b583312fb11d2b39d429df750f9ec22ded64b58a209bb1ecabc7aaf73057d7a64c7349e4da043d66d
@@ -35,6 +35,7 @@ SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = d0bdc30d23447bd56185eb9dc5c86de591f9cc02
 SHA1 (patch-media_libpng_pngpriv.h) = ee952a703ee08e8ff2269c7178e55e00b12faa29
 SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645a6ada27db
+SHA1 (patch-mozglue_misc_Now.cpp) = 760724be1bdc4ca6e19edaf2c8df6dd84192d93f
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
