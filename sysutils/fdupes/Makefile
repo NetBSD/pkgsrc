@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2026/04/08 12:30:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/07/23 15:56:28 ryoon Exp $
 
-DISTNAME=	fdupes-2.2.1
-PKGREVISION=	1
+DISTNAME=	fdupes-2.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adrianlopezroche/}
+GITHUB_PROJECT=	fdupes
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ef@math.uni-bonn.de
