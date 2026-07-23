@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.64 2026/07/05 07:52:10 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.65 2026/07/23 07:25:17 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -136,11 +136,11 @@ CARGO_CRATE_DEPENDS+=	cpufeatures-0.3.0
 CARGO_CRATE_DEPENDS+=	crc-2.1.0
 CARGO_CRATE_DEPENDS+=	crc-catalog-1.1.1
 CARGO_CRATE_DEPENDS+=	crc32fast-1.5.0
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
-CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
-CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
-CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.12
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.16
+CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.7
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
+CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.13
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.22
 CARGO_CRATE_DEPENDS+=	crossterm-0.29.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
