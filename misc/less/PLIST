@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:44 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/23 15:03:18 ryoon Exp $
 bin/less
-bin/lessecho
 bin/lesskey
+libexec/less-osc8-open
+libexec/lessecho
 man/man1/less.1
 man/man1/lessecho.1
 man/man1/lesskey.1
