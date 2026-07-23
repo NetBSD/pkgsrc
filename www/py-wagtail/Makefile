@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2026/06/28 15:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/07/23 10:14:20 adam Exp $
 
-DISTNAME=	wagtail-7.2.1
+DISTNAME=	wagtail-7.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}
@@ -14,18 +14,18 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Willow>=1.11.0:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-anyascii>=0.1.5:../../textproc/py-anyascii
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.13.3:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-django>=5.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-filter>=23.3:../../www/py-django-filter
-DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=6.2.1:../../www/py-django-modelcluster
+DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=6.5:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-permissionedforms>=0.1:../../www/py-django-permissionedforms
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=5.0:../../www/py-django-taggit
-DEPENDS+=	${PYPKGPREFIX}-django-tasks>=0.8:../../www/py-django-tasks
-DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.5.1:../../www/py-django-treebeard
+DEPENDS+=	${PYPKGPREFIX}-django-tasks>=0.9:../../www/py-django-tasks
+DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.8:../../www/py-django-treebeard
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.15.1:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-draftjs_exporter>=2.1.5:../../www/py-draftjs_exporter
 DEPENDS+=	${PYPKGPREFIX}-laces>=0.1:../../www/py-laces
-DEPENDS+=	${PYPKGPREFIX}-modelsearch>=1.1:../../www/py-modelsearch
+DEPENDS+=	${PYPKGPREFIX}-modelsearch>=1.3:../../www/py-modelsearch
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=3.0.10:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-telepath>=0.3.1:../../www/py-telepath
@@ -33,7 +33,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.28:../../net/py-boto3
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.7.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-doc8>=0.8.1:../../devel/py-doc8
-TEST_DEPENDS+=	${PYPKGPREFIX}-factory_boy>=3.2:../../devel/py-factory_boy
 TEST_DEPENDS+=	${PYPKGPREFIX}-factory_boy>=3.2:../../devel/py-factory_boy
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.8:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
