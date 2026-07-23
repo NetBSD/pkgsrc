@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4693 2026/07/23 11:44:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4694 2026/07/23 11:52:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7005,3 +7005,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 2.9.1 [adam 2026-07-23]
 	Updated textproc/py-pugjs to 7.0.0 [adam 2026-07-23]
 	Updated sysutils/py-psleak to 0.1.6 [adam 2026-07-23]
+	Updated net/opentofu to 1.12.5 [adam 2026-07-23]
+	Updated devel/py-cachetools to 7.1.5 [adam 2026-07-23]
