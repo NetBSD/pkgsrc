@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.19 2025/07/30 10:40:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/07/23 11:12:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/vendor/llhttp/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/aiohttp/.hash/_cparser.pxd.hash
-${PYSITELIB}/aiohttp/.hash/_find_header.pxd.hash
-${PYSITELIB}/aiohttp/.hash/_http_parser.pyx.hash
-${PYSITELIB}/aiohttp/.hash/_http_writer.pyx.hash
-${PYSITELIB}/aiohttp/.hash/hdrs.py.hash
 ${PYSITELIB}/aiohttp/__init__.py
 ${PYSITELIB}/aiohttp/__init__.pyc
 ${PYSITELIB}/aiohttp/__init__.pyo
@@ -23,9 +18,6 @@ ${PYSITELIB}/aiohttp/_http_parser.pyx
 ${PYSITELIB}/aiohttp/_http_parser.so
 ${PYSITELIB}/aiohttp/_http_writer.pyx
 ${PYSITELIB}/aiohttp/_http_writer.so
-${PYSITELIB}/aiohttp/_websocket/.hash/mask.pxd.hash
-${PYSITELIB}/aiohttp/_websocket/.hash/mask.pyx.hash
-${PYSITELIB}/aiohttp/_websocket/.hash/reader_c.pxd.hash
 ${PYSITELIB}/aiohttp/_websocket/__init__.py
 ${PYSITELIB}/aiohttp/_websocket/__init__.pyc
 ${PYSITELIB}/aiohttp/_websocket/__init__.pyo
