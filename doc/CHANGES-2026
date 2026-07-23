@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4712 2026/07/23 20:33:57 markd Exp $
+$NetBSD: CHANGES-2026,v 1.4713 2026/07/23 22:22:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7027,3 +7027,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mc to 4.8.33 [ryoon 2026-07-23]
 	Updated audio/aeneas to 1.7.3nb23 [wiz 2026-07-23]
 	Added textproc/py-comrak version 0.0.12 [markd 2026-07-23]
+	Updated textproc/py-readme_renderer to 45.0nb1 [wiz 2026-07-23]
