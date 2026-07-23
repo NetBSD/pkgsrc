@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4682 2026/07/23 07:25:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4683 2026/07/23 07:41:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -6984,3 +6984,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/appstream to 1.1.4 [adam 2026-07-23]
 	Updated devel/gflags to 2.3.1 [adam 2026-07-23]
 	Updated shells/nushell to 0.114.1 [adam 2026-07-23]
+	Updated archivers/py-rarfile to 4.4 [adam 2026-07-23]
+	Updated www/py-scrapy to 2.17.0 [adam 2026-07-23]
