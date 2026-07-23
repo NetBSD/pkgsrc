@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.66 2026/01/05 02:53:35 wiz Exp $
+$NetBSD: distinfo,v 1.67 2026/07/23 10:05:03 adam Exp $
 
-BLAKE2s (opencv-4.13.0.tar.gz) = a47e3cab99067912dbae87950a2d775bd610c9c44165b57e0769e6b3f52701a9
-SHA512 (opencv-4.13.0.tar.gz) = ad677353cc1a4e51f2b9790724890eb65ec7633e0a658d63862767365b83d46e85791d691733e88c0f53d2b7294029c1b1ad8e5509c27d2edba8af7d63ade21e
-Size (opencv-4.13.0.tar.gz) = 95420275 bytes
+BLAKE2s (opencv-4.14.0.tar.gz) = 682cc579dd2bee0df41ff901598ee366259cf021572d29539c61d173947c51d5
+SHA512 (opencv-4.14.0.tar.gz) = 4f1e606cd24f74b49227a32bd1558882d3b01dbbadca8b49a0e07dd9fc6291b4c584d7f2c3951409758c3128dc53d38d84c4c7642c7a6f6a054a5eb9d5c6f91e
+Size (opencv-4.14.0.tar.gz) = 96287941 bytes
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
 SHA1 (patch-modules_core_src_system.cpp) = e7e5c7eb79d875556a380bff19d03434ae46553b
