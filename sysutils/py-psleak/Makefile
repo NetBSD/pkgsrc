@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/01/30 12:59:38 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/23 11:44:13 adam Exp $
 
-DISTNAME=	psleak-0.1.5
+DISTNAME=	psleak-0.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psleak/}
