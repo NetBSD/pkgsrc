@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4695 2026/07/23 12:29:06 prlw1 Exp $
+$NetBSD: CHANGES-2026,v 1.4696 2026/07/23 12:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7008,3 +7008,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/opentofu to 1.12.5 [adam 2026-07-23]
 	Updated devel/py-cachetools to 7.1.5 [adam 2026-07-23]
 	Updated parallel/threadingbuildingblocks to 2023.1.0 [prlw1 2026-07-23]
+	Updated audio/py-discogs-client to 2.9 [adam 2026-07-23]
+	Updated textproc/py-mistune to 3.3.4 [adam 2026-07-23]
