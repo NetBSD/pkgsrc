@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.16 2025/08/10 13:58:35 ryoon Exp $
+$NetBSD: patch-ac,v 1.17 2026/07/23 14:47:04 ryoon Exp $
 
---- conf.d/Makefile.in.orig	2025-07-02 04:53:19.334247000 +0000
+--- conf.d/Makefile.in.orig	2026-07-09 11:50:30.085991600 +0000
 +++ conf.d/Makefile.in
-@@ -404,7 +404,7 @@ CONF_LINKS = 10-hinting-$(PREFERRED_HINT
- 	70-$(PREFERRED_BITMAP).conf
- EXTRA_DIST = $(template_DATA) $(DOC_SOURCES)
+@@ -408,7 +408,7 @@ CLEANFILES = $(DOC_FILES)
+ 	70-$(PREFERRED_BITMAP).conf $(am__append_1)
+ EXTRA_DIST = $(template_DATA) 05-macos.conf $(DOC_SOURCES)
  CLEANFILES = $(DOC_FILES)
 -configdir = $(CONFIGDIR)
 +configdir = $(prefix)/share/examples/fontconfig/conf.d
  config_DATA = $(DOC_FILES)
  templatedir = $(TEMPLATEDIR)
- template_DATA = \
-@@ -710,6 +710,7 @@ README: $(srcdir)/README.in
+ template_DATA = 05-reset-dirs-sample.conf \
+@@ -688,6 +688,7 @@ install-data-hook:
  	cd ../fc-lang && $(MAKE) $(AM_MAKEFLAGS) $(top_builddir)/conf.d/35-lang-normalize.conf
  
  install-data-hook:
