@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4691 2026/07/23 11:15:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4692 2026/07/23 11:27:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7001,3 +7001,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-aiohttp to 3.14.3 [adam 2026-07-23]
 	Updated geography/py-geoip2 to 5.3.0 [adam 2026-07-23]
 	Updated misc/py-platformdirs to 4.11.0 [adam 2026-07-23]
+	Updated net/py-moto to 5.2.2 [adam 2026-07-23]
+	Updated www/py-soupsieve to 2.9.1 [adam 2026-07-23]
