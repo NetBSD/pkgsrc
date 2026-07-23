@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/08/10 06:42:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/07/23 12:50:46 adam Exp $
 
-BLAKE2s (dictdiffer-0.9.0.tar.gz) = 1e76c85287757095915f33f7d1b4b26f09d1abe447e8071a5bb73cfef7316210
-SHA512 (dictdiffer-0.9.0.tar.gz) = 7985b4d69d3cb08b7cf0fc8f878ac594b72c1f1e3482157c204027fff90afd9b19041e85fced12a47d5624e0b8cc1b2d6643a88295a6d212aeead76c09c24f86
-Size (dictdiffer-0.9.0.tar.gz) = 31513 bytes
-SHA1 (patch-setup.py) = e577aad3b30d932666f2b31a46938fa7e16c7e8b
+BLAKE2s (dictdiffer-0.10.0.tar.gz) = 19dc6f187528352035c76c2dfef0bd7fd3d1e60405ce975af0657ac525cc8211
+SHA512 (dictdiffer-0.10.0.tar.gz) = eaa5b8b87064be5b4803302f2bd1c976dfcf0d8d2a7099f32a18c549d123d39b56b4f08b59fe05320b4ad0e2d24dd3da9dc62cf894ae76a7833d76a28b632d65
+Size (dictdiffer-0.10.0.tar.gz) = 12451 bytes
