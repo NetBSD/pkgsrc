@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2024/01/25 14:15:16 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/23 19:14:03 gdt Exp $
 #
 
 DISTNAME=	7pl225sr
 PKGNAME=	7plus-225
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	ham
 MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 DISTFILES=	7pl225sr.tgz \

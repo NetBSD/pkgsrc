@@ -1,4 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2006/01/09 20:02:02 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2026/07/23 19:14:04 gdt Exp $
+
+Support modern 64-bit Linux (amd64 etc): add __linux__ to the _IOCTL_
+definition so Linux uses the ioctl() terminal path. Inner ioctl selectors
+stay NetBSD/DragonFly-only, so Linux takes the TCGETA/TCSETAW branch
+(glibc lacks the BSD TIOCGETA/TIOCSETAW names).
+
 
 --- utils.c.orig	2006-01-09 19:56:59.000000000 +0000
 +++ utils.c
@@ -16,7 +22,7 @@ $NetBSD: patch-ac,v 1.1 2006/01/09 20:02:02 joerg Exp $
  #ifndef _HAVE_GETCH
  
 - #if defined(SYSV) || defined(__EMX__) || defined(__NetBSD__)/* use ioctl() */
-+ #if defined(SYSV) || defined(__EMX__) || defined(__NetBSD__) || defined(__DragonFly__) /* use ioctl() */
++ #if defined(SYSV) || defined(__EMX__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__linux__) /* use ioctl() */
    #define _IOCTL_
   #endif
  
