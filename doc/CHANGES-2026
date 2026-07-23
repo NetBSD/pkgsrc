@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4703 2026/07/23 14:17:35 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4704 2026/07/23 14:47:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7018,3 +7018,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-game_sdl2 to 2.1.0.8.5.3.26051504 [ryoon 2026-07-23]
 	Updated games/py-renpy to 8.5.3 [ryoon 2026-07-23]
 	Updated devel/at-spi2-core to 2.60.5 [ryoon 2026-07-23]
+	Updated fonts/fontconfig to 2.18.2 [ryoon 2026-07-23]
