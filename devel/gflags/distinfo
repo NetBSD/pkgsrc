@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/12/22 14:29:52 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/07/23 07:16:11 adam Exp $
 
-BLAKE2s (gflags-2.3.0.tar.gz) = ce2030e85b021d5afb1fe4b4b59445e31e38a5ea000498496522ca86939ed6d4
-SHA512 (gflags-2.3.0.tar.gz) = d1e3971c2db6e0cba16fc6438213866c3e031bed73b3332ae3ca3a6e6f14fd17c8881ad8fa9716a4c468171c8d7cbd26d4049fc4af8ed4888c3a0ad913ea24da
-Size (gflags-2.3.0.tar.gz) = 120715 bytes
+BLAKE2s (gflags-2.3.1.tar.gz) = 03ff6ee0486fcb3a38df098cbf59384a62e8a7d487ceec16feb969d86bea47ca
+SHA512 (gflags-2.3.1.tar.gz) = fb8d90848ff846d0e67d3b8381699c9f0a0ea88ab77f1bd84beffc1c23639a676238cbdb27542cbe91e30dfd7e1624556a49386eac25bd5a0ef5317ed662019e
+Size (gflags-2.3.1.tar.gz) = 121197 bytes
