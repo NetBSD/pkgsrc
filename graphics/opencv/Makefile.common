@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.27 2026/01/05 02:53:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2026/07/23 10:05:03 adam Exp $
 #
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 
-OPENCV_VERSION=	4.13.0
+OPENCV_VERSION=	4.14.0
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}

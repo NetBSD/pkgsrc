@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.35 2026/01/05 02:53:36 wiz Exp $
+$NetBSD: distinfo,v 1.36 2026/07/23 10:05:03 adam Exp $
 
-BLAKE2s (opencv-4.13.0.tar.gz) = a47e3cab99067912dbae87950a2d775bd610c9c44165b57e0769e6b3f52701a9
-SHA512 (opencv-4.13.0.tar.gz) = ad677353cc1a4e51f2b9790724890eb65ec7633e0a658d63862767365b83d46e85791d691733e88c0f53d2b7294029c1b1ad8e5509c27d2edba8af7d63ade21e
-Size (opencv-4.13.0.tar.gz) = 95420275 bytes
-BLAKE2s (opencv-4.13.0_face_landmark_model.dat) = 27a36ff06273b7bf77d3a01742348482c129788e6baaa08c07d4d5b3803e57b0
-SHA512 (opencv-4.13.0_face_landmark_model.dat) = c16e60a6c4bb4de3ab39b876ae3c3f320ea56f69c93e9303bd2dff8760841dcd71be4161fff8bc71e8fe4fe8747fa8465d49d6bd8f5ebcdaea161f4bc2da7c93
-Size (opencv-4.13.0_face_landmark_model.dat) = 72368157 bytes
-BLAKE2s (opencv_contrib-4.13.0.tar.gz) = ac725990a2dbe0d8c2d375bb703a543609cecbdf703a34a5de1761e9cdc0e57e
-SHA512 (opencv_contrib-4.13.0.tar.gz) = e8e8588f885ade13db715f79b483b112c8c25b005f07e202ed93d65d5b6abb90fa379808fd9a4c67bec176f1dfdfefefc4a770d5c55441e128f0f7c8ed813297
-Size (opencv_contrib-4.13.0.tar.gz) = 55516112 bytes
-SHA1 (patch-.._opencv__contrib-4.13.0_modules_face_CMakeLists.txt) = fdfbdca3b7a611c6acb5584aadfc43c1322d7826
+BLAKE2s (opencv-4.14.0.tar.gz) = 682cc579dd2bee0df41ff901598ee366259cf021572d29539c61d173947c51d5
+SHA512 (opencv-4.14.0.tar.gz) = 4f1e606cd24f74b49227a32bd1558882d3b01dbbadca8b49a0e07dd9fc6291b4c584d7f2c3951409758c3128dc53d38d84c4c7642c7a6f6a054a5eb9d5c6f91e
+Size (opencv-4.14.0.tar.gz) = 96287941 bytes
+BLAKE2s (opencv-4.14.0_face_landmark_model.dat) = 27a36ff06273b7bf77d3a01742348482c129788e6baaa08c07d4d5b3803e57b0
+SHA512 (opencv-4.14.0_face_landmark_model.dat) = c16e60a6c4bb4de3ab39b876ae3c3f320ea56f69c93e9303bd2dff8760841dcd71be4161fff8bc71e8fe4fe8747fa8465d49d6bd8f5ebcdaea161f4bc2da7c93
+Size (opencv-4.14.0_face_landmark_model.dat) = 72368157 bytes
+BLAKE2s (opencv_contrib-4.14.0.tar.gz) = 601f27f377698462107f7d74b5c6bc4373e405a5b2060f3c31fa1579f86331af
+SHA512 (opencv_contrib-4.14.0.tar.gz) = 7fa7ecaacc2ef4e8634f0e4558dae94fed862cdf7c6a3ab1724598a9b9a33a39d73f587b0bcd377201c0f96ebaf6708c884dc33afbcaa2cd95d376b9d62eaead
+Size (opencv_contrib-4.14.0.tar.gz) = 55515587 bytes
+SHA1 (patch-.._opencv__contrib-4.14.0_modules_face_CMakeLists.txt) = 71a6e0fce49b06ae67878ef58d82859dc0a146a1
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
