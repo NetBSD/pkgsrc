@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/06/10 04:22:40 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/23 09:26:52 wiz Exp $
 
 DISTNAME=	bird-3.3.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://bird.nic.cz/download/
 
