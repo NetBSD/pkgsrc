@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/06/22 16:49:14 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/07/23 06:51:07 adam Exp $
 
-DISTNAME=	appstream-1.1.3
+DISTNAME=	appstream-1.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -37,6 +37,13 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	meson.build
 SUBST_SED.paths=	-e 's,/usr/include,${PREFIX}/include,g'
+
+.include "../../devel/wayland/platform.mk"
+.if !empty(PLATFORM_SUPPORTS_WAYLAND:Myes)
+.include "../../devel/wayland/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dwayland=false
+.endif
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
