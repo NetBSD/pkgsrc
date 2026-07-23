@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/05/25 07:07:36 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/23 11:27:26 adam Exp $
 
-DISTNAME=	soupsieve-2.8.4
+DISTNAME=	soupsieve-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soupsieve/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/facelessuser/soupsieve
 COMMENT=	CSS4 selector implementation for Beautiful Soup
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
