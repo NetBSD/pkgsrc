@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/24 05:25:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/23 12:30:55 adam Exp $
 bin/mistune-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,15 @@ ${PYSITELIB}/mistune/__init__.pyo
 ${PYSITELIB}/mistune/__main__.py
 ${PYSITELIB}/mistune/__main__.pyc
 ${PYSITELIB}/mistune/__main__.pyo
+${PYSITELIB}/mistune/_inline/__init__.py
+${PYSITELIB}/mistune/_inline/__init__.pyc
+${PYSITELIB}/mistune/_inline/__init__.pyo
+${PYSITELIB}/mistune/_inline/emphasis.py
+${PYSITELIB}/mistune/_inline/emphasis.pyc
+${PYSITELIB}/mistune/_inline/emphasis.pyo
+${PYSITELIB}/mistune/_inline/links.py
+${PYSITELIB}/mistune/_inline/links.pyc
+${PYSITELIB}/mistune/_inline/links.pyo
 ${PYSITELIB}/mistune/block_parser.py
 ${PYSITELIB}/mistune/block_parser.pyc
 ${PYSITELIB}/mistune/block_parser.pyo
