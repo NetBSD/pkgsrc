@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27629 2026/07/22 13:50:31 khorben Exp $
+$NetBSD: TODO,v 1.27630 2026/07/23 07:07:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -721,7 +721,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-12.3.1 [wip]
-	o grafana-13.1.0
+	o grafana-13.1.1
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
@@ -1053,7 +1053,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-u2f-1.3.1
-	o pandoc-3.10
+	o pandoc-3.10.1
 	o pandoc-cli-3.9.0.2
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
@@ -1135,6 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pillow_heif-1.5.0
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0 [waiting for py-pydantic release that works with this]
 	o py-simpletal-5.1
@@ -1182,6 +1183,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
+	o rumdl-0.2.40
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
