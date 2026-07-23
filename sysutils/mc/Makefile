@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2025/10/23 20:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2026/07/23 16:29:18 ryoon Exp $
 
-DISTNAME=	mc-4.8.31
-PKGREVISION=	1
+DISTNAME=	mc-4.8.33
 CATEGORIES=	sysutils
 # Supports HTTPS, but cert is invalid...
 MASTER_SITES=	http://ftp.midnight-commander.org/
@@ -18,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 # don't want to pull in python
 CHECK_INTERPRETER_SKIP+=	libexec/mc/extfs.d/s3+
+CHECK_INTERPRETER_SKIP+=	libexec/mc/extfs.d/torrent
 CHECK_INTERPRETER_SKIP+=	libexec/mc/extfs.d/uc1541
 
 # save copies of the configure arguments, harmless
