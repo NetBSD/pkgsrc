@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.364 2026/07/22 15:46:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.365 2026/07/23 13:52:23 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-TB_VER=		152.0.1
+TB_VER=		153.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
