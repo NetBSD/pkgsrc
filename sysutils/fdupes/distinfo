@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/09/11 17:59:15 fcambus Exp $
+$NetBSD: distinfo,v 1.12 2026/07/23 15:56:28 ryoon Exp $
 
-BLAKE2s (fdupes-2.2.1.tar.gz) = 96fc9750a9061986e1fe5056b4c7b860755f728aa62525c5c5105a3d6419e46b
-SHA512 (fdupes-2.2.1.tar.gz) = 4911d2f776480691e7bd7045c181d49159add5b479188b05f0878a7af365cee0e430093e71ff172c04b876c58efc3be0f24c9d25f0cdebf1c869931175bc8608
-Size (fdupes-2.2.1.tar.gz) = 144719 bytes
+BLAKE2s (fdupes-2.4.0.tar.gz) = edcf27a3c71a40e6f7e3163e7c256bd6012711251ac7b7b9dcc04940ba50311e
+SHA512 (fdupes-2.4.0.tar.gz) = a33548d0e0ef9df1961dfcdeea79113896b3e4ffb38c369f05f80783815c82c51eb22d7b964a889757fcbed4873ecb53df6e8c1a7d867028b7664484aebe78f1
+Size (fdupes-2.4.0.tar.gz) = 155792 bytes
