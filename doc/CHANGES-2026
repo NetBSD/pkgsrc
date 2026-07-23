@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.3852 2026/06/21 21:24:41 js Exp $
+$NetBSD: CHANGES-2026,v 1.3852.2.1 2026/07/23 23:24:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -5823,3 +5823,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jq to 1.8.2 [wiz 2026-06-21]
 	Updated ham/hamlib to 4.7.2 [gdt 2026-06-21]
 	Updated textproc/gemtext2html to 1.1 [js 2026-06-21]
+	Updated textproc/scdoc to 1.11.5 [gdt 2026-07-23]
