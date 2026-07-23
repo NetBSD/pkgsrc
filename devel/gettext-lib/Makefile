@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/07/21 12:55:54 adam Exp $
+# $NetBSD: Makefile,v 1.63 2026/07/23 20:10:39 tnn Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -7,6 +7,7 @@ COMMENT=	Internationalized Message Handling Library (libintl)
 
 USE_LANGUAGES=		c
 CONFIGURE_ARGS+=	--with-included-gettext
+CONFIGURE_ARGS+=	--with-included-libintl
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--disable-c++
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
