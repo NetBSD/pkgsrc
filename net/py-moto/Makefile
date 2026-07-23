@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/06/28 15:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/07/23 11:25:15 adam Exp $
 
-DISTNAME=	moto-5.1.22
+DISTNAME=	moto-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.201:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.35.47:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.1:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-responses>=0.25.6:../../net/py-responses
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.2:../../www/py-werkzeug
@@ -35,13 +33,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PY_RENAME_BINARIES=	moto_proxy moto_server
 
-post-install:
-.for bin in moto_proxy moto_server
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"

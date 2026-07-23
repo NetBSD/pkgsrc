@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/03/09 08:52:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/07/23 11:25:15 adam Exp $
 bin/moto_proxy-${PYVERSSUFFIX}
 bin/moto_server-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -359,6 +359,36 @@ ${PYSITELIB}/moto/bedrockagent/responses.pyo
 ${PYSITELIB}/moto/bedrockagent/urls.py
 ${PYSITELIB}/moto/bedrockagent/urls.pyc
 ${PYSITELIB}/moto/bedrockagent/urls.pyo
+${PYSITELIB}/moto/bedrockagentcorecontrol/__init__.py
+${PYSITELIB}/moto/bedrockagentcorecontrol/__init__.pyc
+${PYSITELIB}/moto/bedrockagentcorecontrol/__init__.pyo
+${PYSITELIB}/moto/bedrockagentcorecontrol/exceptions.py
+${PYSITELIB}/moto/bedrockagentcorecontrol/exceptions.pyc
+${PYSITELIB}/moto/bedrockagentcorecontrol/exceptions.pyo
+${PYSITELIB}/moto/bedrockagentcorecontrol/models.py
+${PYSITELIB}/moto/bedrockagentcorecontrol/models.pyc
+${PYSITELIB}/moto/bedrockagentcorecontrol/models.pyo
+${PYSITELIB}/moto/bedrockagentcorecontrol/responses.py
+${PYSITELIB}/moto/bedrockagentcorecontrol/responses.pyc
+${PYSITELIB}/moto/bedrockagentcorecontrol/responses.pyo
+${PYSITELIB}/moto/bedrockagentcorecontrol/urls.py
+${PYSITELIB}/moto/bedrockagentcorecontrol/urls.pyc
+${PYSITELIB}/moto/bedrockagentcorecontrol/urls.pyo
+${PYSITELIB}/moto/bedrockruntime/__init__.py
+${PYSITELIB}/moto/bedrockruntime/__init__.pyc
+${PYSITELIB}/moto/bedrockruntime/__init__.pyo
+${PYSITELIB}/moto/bedrockruntime/exceptions.py
+${PYSITELIB}/moto/bedrockruntime/exceptions.pyc
+${PYSITELIB}/moto/bedrockruntime/exceptions.pyo
+${PYSITELIB}/moto/bedrockruntime/models.py
+${PYSITELIB}/moto/bedrockruntime/models.pyc
+${PYSITELIB}/moto/bedrockruntime/models.pyo
+${PYSITELIB}/moto/bedrockruntime/responses.py
+${PYSITELIB}/moto/bedrockruntime/responses.pyc
+${PYSITELIB}/moto/bedrockruntime/responses.pyo
+${PYSITELIB}/moto/bedrockruntime/urls.py
+${PYSITELIB}/moto/bedrockruntime/urls.pyc
+${PYSITELIB}/moto/bedrockruntime/urls.pyo
 ${PYSITELIB}/moto/budgets/__init__.py
 ${PYSITELIB}/moto/budgets/__init__.pyc
 ${PYSITELIB}/moto/budgets/__init__.pyo
@@ -428,6 +458,7 @@ ${PYSITELIB}/moto/cloudformation/urls.pyo
 ${PYSITELIB}/moto/cloudformation/utils.py
 ${PYSITELIB}/moto/cloudformation/utils.pyc
 ${PYSITELIB}/moto/cloudformation/utils.pyo
+${PYSITELIB}/moto/cloudfront/2020-05-31/service-2.moto-extras.json.gz
 ${PYSITELIB}/moto/cloudfront/__init__.py
 ${PYSITELIB}/moto/cloudfront/__init__.pyc
 ${PYSITELIB}/moto/cloudfront/__init__.pyo
@@ -671,6 +702,9 @@ ${PYSITELIB}/moto/core/common_models.pyo
 ${PYSITELIB}/moto/core/common_types.py
 ${PYSITELIB}/moto/core/common_types.pyc
 ${PYSITELIB}/moto/core/common_types.pyo
+${PYSITELIB}/moto/core/compat.py
+${PYSITELIB}/moto/core/compat.pyc
+${PYSITELIB}/moto/core/compat.pyo
 ${PYSITELIB}/moto/core/config.py
 ${PYSITELIB}/moto/core/config.pyc
 ${PYSITELIB}/moto/core/config.pyo
@@ -686,6 +720,9 @@ ${PYSITELIB}/moto/core/decorator.pyo
 ${PYSITELIB}/moto/core/errors.py
 ${PYSITELIB}/moto/core/errors.pyc
 ${PYSITELIB}/moto/core/errors.pyo
+${PYSITELIB}/moto/core/eventstream.py
+${PYSITELIB}/moto/core/eventstream.pyc
+${PYSITELIB}/moto/core/eventstream.pyo
 ${PYSITELIB}/moto/core/exceptions.py
 ${PYSITELIB}/moto/core/exceptions.pyc
 ${PYSITELIB}/moto/core/exceptions.pyo
@@ -704,12 +741,15 @@ ${PYSITELIB}/moto/core/model_instances.pyo
 ${PYSITELIB}/moto/core/models.py
 ${PYSITELIB}/moto/core/models.pyc
 ${PYSITELIB}/moto/core/models.pyo
-${PYSITELIB}/moto/core/parsers.py
-${PYSITELIB}/moto/core/parsers.pyc
-${PYSITELIB}/moto/core/parsers.pyo
+${PYSITELIB}/moto/core/parse.py
+${PYSITELIB}/moto/core/parse.pyc
+${PYSITELIB}/moto/core/parse.pyo
 ${PYSITELIB}/moto/core/request.py
 ${PYSITELIB}/moto/core/request.pyc
 ${PYSITELIB}/moto/core/request.pyo
+${PYSITELIB}/moto/core/resource_tagging.py
+${PYSITELIB}/moto/core/resource_tagging.pyc
+${PYSITELIB}/moto/core/resource_tagging.pyo
 ${PYSITELIB}/moto/core/responses.py
 ${PYSITELIB}/moto/core/responses.pyc
 ${PYSITELIB}/moto/core/responses.pyo
@@ -1060,6 +1100,9 @@ ${PYSITELIB}/moto/ec2/models/subnets.pyo
 ${PYSITELIB}/moto/ec2/models/tags.py
 ${PYSITELIB}/moto/ec2/models/tags.pyc
 ${PYSITELIB}/moto/ec2/models/tags.pyo
+${PYSITELIB}/moto/ec2/models/traffic_mirrors.py
+${PYSITELIB}/moto/ec2/models/traffic_mirrors.pyc
+${PYSITELIB}/moto/ec2/models/traffic_mirrors.pyo
 ${PYSITELIB}/moto/ec2/models/transit_gateway.py
 ${PYSITELIB}/moto/ec2/models/transit_gateway.pyc
 ${PYSITELIB}/moto/ec2/models/transit_gateway.pyo
@@ -1338,6 +1381,9 @@ ${PYSITELIB}/moto/ec2/responses/subnets.pyo
 ${PYSITELIB}/moto/ec2/responses/tags.py
 ${PYSITELIB}/moto/ec2/responses/tags.pyc
 ${PYSITELIB}/moto/ec2/responses/tags.pyo
+${PYSITELIB}/moto/ec2/responses/traffic_mirrors.py
+${PYSITELIB}/moto/ec2/responses/traffic_mirrors.pyc
+${PYSITELIB}/moto/ec2/responses/traffic_mirrors.pyo
 ${PYSITELIB}/moto/ec2/responses/transit_gateway_attachments.py
 ${PYSITELIB}/moto/ec2/responses/transit_gateway_attachments.pyc
 ${PYSITELIB}/moto/ec2/responses/transit_gateway_attachments.pyo
@@ -1671,6 +1717,7 @@ ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.1.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.10.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.11.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.12.0.json.gz
+${PYSITELIB}/moto/emr/resources/instance-types-emr-7.13.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.2.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.3.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.4.0.json.gz
@@ -1679,6 +1726,7 @@ ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.6.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.7.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.8.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance-types-emr-7.9.0.json.gz
+${PYSITELIB}/moto/emr/resources/instance-types-emr-spark-8.0.0.json.gz
 ${PYSITELIB}/moto/emr/resources/instance_types.json.gz
 ${PYSITELIB}/moto/emr/resources/release-labels-af-south-1.json.gz
 ${PYSITELIB}/moto/emr/resources/release-labels-ap-east-1.json.gz
@@ -1722,6 +1770,7 @@ ${PYSITELIB}/moto/emr/urls.pyo
 ${PYSITELIB}/moto/emr/utils.py
 ${PYSITELIB}/moto/emr/utils.pyc
 ${PYSITELIB}/moto/emr/utils.pyo
+${PYSITELIB}/moto/emrcontainers/2020-10-01/paginators-1.moto-extras.json.gz
 ${PYSITELIB}/moto/emrcontainers/__init__.py
 ${PYSITELIB}/moto/emrcontainers/__init__.pyc
 ${PYSITELIB}/moto/emrcontainers/__init__.pyo
@@ -1740,6 +1789,7 @@ ${PYSITELIB}/moto/emrcontainers/urls.pyo
 ${PYSITELIB}/moto/emrcontainers/utils.py
 ${PYSITELIB}/moto/emrcontainers/utils.pyc
 ${PYSITELIB}/moto/emrcontainers/utils.pyo
+${PYSITELIB}/moto/emrserverless/2021-07-13/paginators-1.moto-extras.json.gz
 ${PYSITELIB}/moto/emrserverless/__init__.py
 ${PYSITELIB}/moto/emrserverless/__init__.pyc
 ${PYSITELIB}/moto/emrserverless/__init__.pyo
@@ -1806,6 +1856,21 @@ ${PYSITELIB}/moto/firehose/responses.pyo
 ${PYSITELIB}/moto/firehose/urls.py
 ${PYSITELIB}/moto/firehose/urls.pyc
 ${PYSITELIB}/moto/firehose/urls.pyo
+${PYSITELIB}/moto/fis/__init__.py
+${PYSITELIB}/moto/fis/__init__.pyc
+${PYSITELIB}/moto/fis/__init__.pyo
+${PYSITELIB}/moto/fis/exceptions.py
+${PYSITELIB}/moto/fis/exceptions.pyc
+${PYSITELIB}/moto/fis/exceptions.pyo
+${PYSITELIB}/moto/fis/models.py
+${PYSITELIB}/moto/fis/models.pyc
+${PYSITELIB}/moto/fis/models.pyo
+${PYSITELIB}/moto/fis/responses.py
+${PYSITELIB}/moto/fis/responses.pyc
+${PYSITELIB}/moto/fis/responses.pyo
+${PYSITELIB}/moto/fis/urls.py
+${PYSITELIB}/moto/fis/urls.pyc
+${PYSITELIB}/moto/fis/urls.pyo
 ${PYSITELIB}/moto/forecast/__init__.py
 ${PYSITELIB}/moto/forecast/__init__.pyc
 ${PYSITELIB}/moto/forecast/__init__.pyo
@@ -2232,6 +2297,7 @@ ${PYSITELIB}/moto/mediaconnect/responses.pyo
 ${PYSITELIB}/moto/mediaconnect/urls.py
 ${PYSITELIB}/moto/mediaconnect/urls.pyc
 ${PYSITELIB}/moto/mediaconnect/urls.pyo
+${PYSITELIB}/moto/medialive/2017-10-14/paginators-1.moto-extras.json.gz
 ${PYSITELIB}/moto/medialive/__init__.py
 ${PYSITELIB}/moto/medialive/__init__.pyc
 ${PYSITELIB}/moto/medialive/__init__.pyo
@@ -2799,6 +2865,9 @@ ${PYSITELIB}/moto/resourcegroups/urls.pyo
 ${PYSITELIB}/moto/resourcegroupstaggingapi/__init__.py
 ${PYSITELIB}/moto/resourcegroupstaggingapi/__init__.pyc
 ${PYSITELIB}/moto/resourcegroupstaggingapi/__init__.pyo
+${PYSITELIB}/moto/resourcegroupstaggingapi/exceptions.py
+${PYSITELIB}/moto/resourcegroupstaggingapi/exceptions.pyc
+${PYSITELIB}/moto/resourcegroupstaggingapi/exceptions.pyo
 ${PYSITELIB}/moto/resourcegroupstaggingapi/models.py
 ${PYSITELIB}/moto/resourcegroupstaggingapi/models.pyc
 ${PYSITELIB}/moto/resourcegroupstaggingapi/models.pyo
@@ -2808,6 +2877,7 @@ ${PYSITELIB}/moto/resourcegroupstaggingapi/responses.pyo
 ${PYSITELIB}/moto/resourcegroupstaggingapi/urls.py
 ${PYSITELIB}/moto/resourcegroupstaggingapi/urls.pyc
 ${PYSITELIB}/moto/resourcegroupstaggingapi/urls.pyo
+${PYSITELIB}/moto/route53/2013-04-01/service-2.moto-extras.json.gz
 ${PYSITELIB}/moto/route53/__init__.py
 ${PYSITELIB}/moto/route53/__init__.pyc
 ${PYSITELIB}/moto/route53/__init__.pyo
@@ -2865,6 +2935,7 @@ ${PYSITELIB}/moto/route53resolver/utils.pyo
 ${PYSITELIB}/moto/route53resolver/validations.py
 ${PYSITELIB}/moto/route53resolver/validations.pyc
 ${PYSITELIB}/moto/route53resolver/validations.pyo
+${PYSITELIB}/moto/s3/2006-03-01/service-2.moto-extras.json.gz
 ${PYSITELIB}/moto/s3/__init__.py
 ${PYSITELIB}/moto/s3/__init__.pyc
 ${PYSITELIB}/moto/s3/__init__.pyo
@@ -2901,6 +2972,7 @@ ${PYSITELIB}/moto/s3bucket_path/__init__.pyo
 ${PYSITELIB}/moto/s3bucket_path/utils.py
 ${PYSITELIB}/moto/s3bucket_path/utils.pyc
 ${PYSITELIB}/moto/s3bucket_path/utils.pyo
+${PYSITELIB}/moto/s3control/2018-08-20/service-2.moto-extras.json.gz
 ${PYSITELIB}/moto/s3control/__init__.py
 ${PYSITELIB}/moto/s3control/__init__.pyc
 ${PYSITELIB}/moto/s3control/__init__.pyo
