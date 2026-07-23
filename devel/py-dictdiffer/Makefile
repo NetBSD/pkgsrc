@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/01/06 11:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/07/23 12:50:46 adam Exp $
 
-DISTNAME=	dictdiffer-0.9.0
+DISTNAME=	dictdiffer-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dictdiffer/}
 
@@ -11,16 +10,13 @@ HOMEPAGE=	https://github.com/inveniosoftware/dictdiffer
 COMMENT=	Library that helps you to diff and patch dictionaries
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.1.0:../../devel/py-setuptools_scm
-#TEST_DEPENDS+=	${PYPKGPREFIX}-check-manifest>=0.42:../../wip/py-check-manifest
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort>=1.2.0:../../devel/py-test-isort
 # unpackaged
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-codestyle>=2.2.0:../../devel/py-test-codestyle
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-docstyle>=2.2.0:../../devel/py-test-docstyle
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-pydocstyle>=2.2.0:../../devel/py-test-pydocstyle
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=3:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=3.7.0:../../devel/py-tox
 
