@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/05/15 20:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/23 15:31:44 ryoon Exp $
 
-DISTNAME=	libplacebo-v6.338.2
+DISTNAME=	libplacebo-v7.360.1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://code.videolan.org/videolan/libplacebo/-/archive/v${PKGVERSION_NOREV}/
@@ -13,7 +13,7 @@ DISTFILES=		${DEFAULT_DISTFILES} ${FAST_FLOAT_H}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.videolan.org/videolan/libplacebo
+HOMEPAGE=	https://libplacebo.org/
 COMMENT=	GPU-accelerated image/video processing primitives and shaders
 LICENSE=	gnu-lgpl-v2.1
 
