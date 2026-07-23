@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.771 2026/07/18 15:32:20 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.772 2026/07/23 16:58:27 khorben Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30392,3 +30392,36 @@ putty<0.84	double-free		https://nvd.nist.gov/vuln/detail/CVE-2026-48850
 putty<0.84	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-48851
 libslirp<4.9.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-9539
 ruby{33,34,40}-simplecov-html-*	eol	https://github.com/simplecov-ruby/simplecov-html
+nginx{,-devel}>=1.3.0<1.28.2	remote-data-manipulation	https://nvd.nist.gov/vuln/detail/CVE-2026-1642
+nginx{,-devel}>=1.29.0<1.29.5	remote-data-manipulation	https://nvd.nist.gov/vuln/detail/CVE-2026-1642
+nginx{,-devel}>=1.27.2<1.28.3	improper-certificate-verification	https://nvd.nist.gov/vuln/detail/CVE-2026-28755
+nginx{,-devel}>=1.29.0<1.29.7	improper-certificate-verification	https://nvd.nist.gov/vuln/detail/CVE-2026-28755
+nginx{,-devel}>=0.6.27<1.28.3	smtp-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-28753
+nginx{,-devel}>=1.29.0<1.29.7	smtp-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-28753
+nginx{,-devel}>=0.5.15<1.28.3	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-27651
+nginx{,-devel}>=1.29.0<1.29.7	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-27651
+nginx{,-devel}>=1.1.19<1.28.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-32647
+nginx{,-devel}>=1.29.0<1.29.7	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-32647
+nginx{,-devel}>=1.1.19<1.28.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27784
+nginx{,-devel}>=1.29.0<1.29.7	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27784
+nginx{,-devel}>=0.5.13<1.28.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27654
+nginx{,-devel}>=1.29.0<1.29.7	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-27654
+nginx{,-devel}>=1.19.0<1.30.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-40701
+nginx{,-devel}>=1.25.0<1.30.1	spoof-authenticated-packets	https://nvd.nist.gov/vuln/detail/CVE-2026-40460
+nginx{,-devel}>=0.3.50<1.30.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-42934
+nginx{,-devel}>=0.8.42<1.30.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-42946
+nginx{,-devel}>=0.6.27<1.30.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42945
+nginx{,-devel}>=1.29.4<1.30.1	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-42926
+nginx{,-devel}>=0.1.17<1.30.2	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-9256
+nginx{,-devel}>=1.31.0<1.31.1	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-9256
+nginx{,-devel}>=0.3.50<1.30.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-48142
+nginx{,-devel}>=1.31.0<1.31.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-48142
+nginx{,-devel}>=1.13.10<1.30.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42055
+nginx{,-devel}>=1.31.0<1.31.2	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42055
+nginx{,-devel}>=1.31.0<1.31.2	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-42530
+nginx{,-devel}>=0.8.11<1.30.4	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-56434
+nginx{,-devel}>=1.31.0<1.31.3	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-56434
+nginx{,-devel}>=1.15.8<1.30.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-60005
+nginx{,-devel}>=1.31.0<1.31.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-60005
+nginx{,-devel}>=0.9.6<1.30.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
+nginx{,-devel}>=1.31.0<1.31.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
