@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/07/18 04:53:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/07/23 16:29:18 ryoon Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -33,6 +33,7 @@ libexec/mc/extfs.d/patchsetfs
 libexec/mc/extfs.d/rpm
 libexec/mc/extfs.d/rpms+
 libexec/mc/extfs.d/s3+
+libexec/mc/extfs.d/torrent
 libexec/mc/extfs.d/trpm
 libexec/mc/extfs.d/u7z
 libexec/mc/extfs.d/uace
@@ -74,6 +75,7 @@ ${PLIST.nls}man/es/man1/mc.1
 ${PLIST.nls}man/hu/man1/mc.1
 ${PLIST.nls}man/it/man1/mc.1
 man/man1/mc.1
+man/man1/mcdiff.1
 man/man1/mcedit.1
 man/man1/mcview.1
 ${PLIST.nls}man/pl/man1/mc.1
@@ -86,6 +88,7 @@ share/examples/mc/mc.emacs.keymap
 share/examples/mc/mc.ext.ini
 share/examples/mc/mc.keymap
 share/examples/mc/mc.menu
+share/examples/mc/mc.vim.keymap
 share/examples/mc/mcedit.menu
 share/examples/mc/sfs.ini
 ${PLIST.nls}share/locale/af/LC_MESSAGES/mc.mo
@@ -212,14 +215,23 @@ share/mc/skins/gotar.ini
 share/mc/skins/gray-green-purple256.ini
 share/mc/skins/gray-orange-blue256.ini
 share/mc/skins/julia256.ini
+share/mc/skins/julia256root.ini
 share/mc/skins/mc46.ini
+share/mc/skins/modarcon16-defbg-thin.ini
 share/mc/skins/modarcon16-defbg.ini
+share/mc/skins/modarcon16-thin.ini
 share/mc/skins/modarcon16.ini
+share/mc/skins/modarcon16root-defbg-thin.ini
 share/mc/skins/modarcon16root-defbg.ini
+share/mc/skins/modarcon16root-thin.ini
 share/mc/skins/modarcon16root.ini
+share/mc/skins/modarin256-defbg-thin.ini
 share/mc/skins/modarin256-defbg.ini
+share/mc/skins/modarin256-thin.ini
 share/mc/skins/modarin256.ini
+share/mc/skins/modarin256root-defbg-thin.ini
 share/mc/skins/modarin256root-defbg.ini
+share/mc/skins/modarin256root-thin.ini
 share/mc/skins/modarin256root.ini
 share/mc/skins/nicedark.ini
 share/mc/skins/sand256.ini
@@ -227,7 +239,9 @@ share/mc/skins/seasons-autumn16M.ini
 share/mc/skins/seasons-spring16M.ini
 share/mc/skins/seasons-summer16M.ini
 share/mc/skins/seasons-winter16M.ini
+share/mc/skins/xoria256-thin.ini
 share/mc/skins/xoria256.ini
+share/mc/skins/xoria256root-thin.ini
 share/mc/skins/yadt256-defbg.ini
 share/mc/skins/yadt256.ini
 share/mc/syntax/PKGBUILD.syntax
