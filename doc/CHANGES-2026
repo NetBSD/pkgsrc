@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4710 2026/07/23 16:29:33 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4711 2026/07/23 17:29:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7025,3 +7025,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libplacebo to 7.360.1 [ryoon 2026-07-23]
 	Updated sysutils/fdupes to 2.4.0 [ryoon 2026-07-23]
 	Updated sysutils/mc to 4.8.33 [ryoon 2026-07-23]
+	Updated audio/aeneas to 1.7.3nb23 [wiz 2026-07-23]
