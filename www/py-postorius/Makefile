@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2026/05/07 20:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/23 20:39:30 markd Exp $
 
 DISTNAME=	postorius-1.3.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postorius/}
 
@@ -12,6 +12,7 @@ COMMENT=	The New Mailman Web UI
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+DEPENDS+=	${PYPKGPREFIX}-comrak-[0-9]*:../../textproc/py-comrak
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.13:../../www/py-django-mailman3
 DEPENDS+=	${PYPKGPREFIX}-mailmanclient>=3.3.3:../../mail/py-mailmanclient
