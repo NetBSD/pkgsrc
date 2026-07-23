@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/22 16:49:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/07/23 06:51:07 adam Exp $
 bin/appstreamcli
 include/appstream/appstream.h
 include/appstream/as-agreement-section.h
@@ -29,6 +29,7 @@ include/appstream/as-relation.h
 include/appstream/as-release-list.h
 include/appstream/as-release.h
 include/appstream/as-review.h
+include/appstream/as-reviews-client.h
 include/appstream/as-screenshot.h
 include/appstream/as-spdx.h
 include/appstream/as-suggested.h
