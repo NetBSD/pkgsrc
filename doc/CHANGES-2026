@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4698 2026/07/23 13:33:58 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4699 2026/07/23 13:52:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7013,3 +7013,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/raqm to 0.11.0 [adam 2026-07-23]
 	Updated devel/py-dictdiffer to 0.10.0 [adam 2026-07-23]
 	Updated www/firefox to 153.0nb1 [ryoon 2026-07-23]
+	Updated mail/thunderbird to 153.0 [ryoon 2026-07-23]
