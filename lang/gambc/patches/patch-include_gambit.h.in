@@ -1,0 +1,28 @@
+$NetBSD: patch-include_gambit.h.in,v 1.1 2026/07/23 17:47:36 ktnb Exp $
+
+Fix buliding on Darwin
+
+--- include/gambit.h.in.orig	2026-07-20 19:02:55.326942565 +0000
++++ include/gambit.h.in
+@@ -2224,10 +2224,21 @@ typedef union ___U64_F64_union { ___U64
+ 
+ #ifdef __cplusplus
+ 
++#ifdef __APPLE__
++static inline ___U32 ___F32_TO_U32_fn(___F32 x) { ___F32_U32 u; u.f32 = x; return u.u32; }
++static inline ___F32 ___F32_FROM_U32_fn(___U32 x) { ___U32_F32 u; u.u32 = x; return u.f32; }
++static inline ___U64 ___F64_TO_U64_fn(___F64 x) { ___F64_U64 u; u.f64 = x; return u.u64; }
++static inline ___F64 ___F64_FROM_U64_fn(___U64 x) { ___U64_F64 u; u.u64 = x; return u.f64; }
++#define ___F32_TO_U32(x)___F32_TO_U32_fn(x)
++#define ___F32_FROM_U32(x)___F32_FROM_U32_fn(x)
++#define ___F64_TO_U64(x)___F64_TO_U64_fn(x)
++#define ___F64_FROM_U64(x)___F64_FROM_U64_fn(x)
++#else
+ #define ___F32_TO_U32(x)___F32_U32{x}.u32
+ #define ___F32_FROM_U32(x)___U32_F32{x}.f32
+ #define ___F64_TO_U64(x)___F64_U64{x}.u64
+ #define ___F64_FROM_U64(x)___U64_F64{x}.f64
++#endif
+ 
+ #else
+ 

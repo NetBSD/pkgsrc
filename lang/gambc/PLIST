@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/26 02:57:44 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/23 17:47:36 ktnb Exp $
 bin/gambdoc
 bin/gambuild-C
 bin/gambuild-arm
@@ -51,6 +51,7 @@ lib/_eval#.scm
 lib/_fifo#.scm
 lib/_gambit#.scm
 lib/_gambit.c
+${PLIST.js}lib/_gambit.js
 lib/_gambitgsc.c
 lib/_gambitgsi.c
 lib/_geiser/_geiser#.scm

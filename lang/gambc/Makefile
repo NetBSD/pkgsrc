@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/04/11 15:19:10 ktnb Exp $
+# $NetBSD: Makefile,v 1.26 2026/07/23 17:47:36 ktnb Exp $
 #
 
 DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
@@ -74,6 +74,7 @@ PACKAGE_VERSION=	${PKGVERSION_NOREV}
 PACKAGE_STRING=		${${PKGBASE} ${PKGVERSION_NOREV}:L}
 
 .include "version.mk"
+.include "options.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
