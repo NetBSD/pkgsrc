@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4713 2026/07/23 22:22:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4714 2026/07/23 22:24:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7028,3 +7028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/aeneas to 1.7.3nb23 [wiz 2026-07-23]
 	Added textproc/py-comrak version 0.0.12 [markd 2026-07-23]
 	Updated textproc/py-readme_renderer to 45.0nb1 [wiz 2026-07-23]
+	Updated www/py-postorius to 1.3.13nb3 [wiz 2026-07-23]
