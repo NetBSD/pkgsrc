@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2025/05/12 05:18:50 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2026/07/23 14:02:43 ryoon Exp $
 
-BLAKE2s (pygame_sdl2-2.1.0+renpy8.3.7.tar.gz) = 092c94632d3a076b31eb44f75ec239793d5d13c81b85acac881b3dff7c07f84b
-SHA512 (pygame_sdl2-2.1.0+renpy8.3.7.tar.gz) = bfb06ad1c5a9d6c034f3cc032015e3c27faab73983983a53e3e5eb2735020cba06d4e06240a58feb82f6bae4946300440e37bfa81290d15983f21b0093ccc117
-Size (pygame_sdl2-2.1.0+renpy8.3.7.tar.gz) = 4248764 bytes
+BLAKE2s (pygame_sdl2-renpy-8.5.3.26051504.tar.gz) = c5ef83b911521d8228251ca72effa0326b942be917deacd4db330d6a4d5aa5c5
+SHA512 (pygame_sdl2-renpy-8.5.3.26051504.tar.gz) = 9625c6cddfb77d3214bb81b1517a713b8d4b288923d25f0bfdefea423abd5240141e7b7f6262e3f14cfe153ea86b4c1ea1e8225258eabaef7bb0a50a5964fea2
+Size (pygame_sdl2-renpy-8.5.3.26051504.tar.gz) = 935003 bytes
 SHA1 (patch-setup.py) = 85773908c6b170ee54a0cbbc8dae358d97f4a4ed
-SHA1 (patch-src_pygame__sdl2_event.pyx) = 20f090c2db81bfdaf42493b15b1ce083fbe5840b
 SHA1 (patch-src_pygame__sdl2_image.pyx) = 91bd8fb9da47d4e70837d78fabb9adeb3e2ea25b
