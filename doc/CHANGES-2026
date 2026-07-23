@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4696 2026/07/23 12:31:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4697 2026/07/23 12:51:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7010,3 +7010,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/threadingbuildingblocks to 2023.1.0 [prlw1 2026-07-23]
 	Updated audio/py-discogs-client to 2.9 [adam 2026-07-23]
 	Updated textproc/py-mistune to 3.3.4 [adam 2026-07-23]
+	Updated graphics/raqm to 0.11.0 [adam 2026-07-23]
+	Updated devel/py-dictdiffer to 0.10.0 [adam 2026-07-23]
