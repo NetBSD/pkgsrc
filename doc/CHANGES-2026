@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4694 2026/07/23 11:52:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4695 2026/07/23 12:29:06 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7007,3 +7007,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-psleak to 0.1.6 [adam 2026-07-23]
 	Updated net/opentofu to 1.12.5 [adam 2026-07-23]
 	Updated devel/py-cachetools to 7.1.5 [adam 2026-07-23]
+	Updated parallel/threadingbuildingblocks to 2023.1.0 [prlw1 2026-07-23]
