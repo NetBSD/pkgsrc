@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4697 2026/07/23 12:51:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4698 2026/07/23 13:33:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7012,3 +7012,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-mistune to 3.3.4 [adam 2026-07-23]
 	Updated graphics/raqm to 0.11.0 [adam 2026-07-23]
 	Updated devel/py-dictdiffer to 0.10.0 [adam 2026-07-23]
+	Updated www/firefox to 153.0nb1 [ryoon 2026-07-23]
