@@ -1,6 +1,7 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/07/24 18:39:20 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2026/07/24 21:26:20 wiz Exp $
 
 Treat NetBSD like Linux.
+https://github.com/leanprover/lean4/pull/14543
 
 --- src/CMakeLists.txt.orig	2026-07-22 17:50:04.000000000 +0000
 +++ src/CMakeLists.txt

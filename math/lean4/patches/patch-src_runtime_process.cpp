@@ -1,7 +1,8 @@
-$NetBSD: patch-src_runtime_process.cpp,v 1.1 2026/07/24 18:39:20 wiz Exp $
+$NetBSD: patch-src_runtime_process.cpp,v 1.2 2026/07/24 21:26:20 wiz Exp $
 
 Set proper thread id on NetBSD.
 clearenv() does not exist on NetBSD.
+https://github.com/leanprover/lean4/pull/14543
 
 --- src/runtime/process.cpp.orig	2026-07-23 16:38:08.850506865 +0000
 +++ src/runtime/process.cpp
