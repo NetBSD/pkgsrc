@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4728 2026/07/24 03:06:11 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4729 2026/07/24 03:12:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Cpanel-JSON-XS to 4.43 [wen 2026-07-24]
 	Updated converters/p5-JSON-Any to 1.42 [wen 2026-07-24]
 	Updated converters/p5-JSON-MaybeXS to 1.004008 [wen 2026-07-24]
+	Updated databases/p5-BerkeleyDB to 0.67 [wen 2026-07-24]
