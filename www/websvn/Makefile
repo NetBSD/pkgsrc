@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/02/16 08:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/07/24 15:48:19 taca Exp $
 
 DISTNAME=	websvn-2.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	#
 
