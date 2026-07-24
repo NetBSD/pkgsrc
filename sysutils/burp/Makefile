@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 PKG_SYSCONFSUBDIR=	burp
 
 SUBST_CLASSES+=		dirs
-SUBST_STAGE.dirs=	pre-install
+SUBST_STAGE.dirs=	pre-configure
 SUBST_MESSAGE.dirs=	Fixing directories
 SUBST_FILES.dirs=	configs/server/burp.conf.in \
 			configs/server/summary_script.in \
@@ -41,7 +41,8 @@ pre-configure:
 
 INSTALL_TARGET=		install-all
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+CONFIGURE_ARGS+=	--runstatedir=${VARBASE}/run \
+			--sysconfdir=${PKG_SYSCONFDIR} \
 			--mandir=${PREFIX}/${PKGMANDIR} \
 			--sbindir=${PREFIX}/sbin
 
