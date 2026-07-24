@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4747 2026/07/24 15:13:19 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4748 2026/07/24 16:24:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7068,3 +7068,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/p5-Crypt-URandom-Token version 0.005 [wen 2026-07-24]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.11 [wen 2026-07-24]
 	Updated audio/kew to 4.2.7 [ktnb 2026-07-24]
+	Updated chat/matrix-synapse to 1.157.1 [gdt 2026-07-24]
