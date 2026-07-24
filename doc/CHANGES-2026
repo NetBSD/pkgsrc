@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4753 2026/07/24 18:39:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4754 2026/07/24 21:38:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7074,3 +7074,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/leantar version 0.1.20 [wiz 2026-07-24]
 	Added math/cadical3 version 3.0.1 [wiz 2026-07-24]
 	Added math/lean4 version 4.32.1 [wiz 2026-07-24]
+	Updated www/gotosocial to 0.22.1 [wiz 2026-07-24]
