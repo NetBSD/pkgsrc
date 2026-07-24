@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/07/24 18:38:00 wiz Exp $
+
+BLAKE2s (cadical-3.0.1.tar.gz) = 871fd58882d77725d02be3fd6f225318f631500ae42c198a10ee4fead935d479
+SHA512 (cadical-3.0.1.tar.gz) = aa1838b58cce726776fc73cd9c54b55af2faf4389b97f672a4dcff007e62aed795ebe3f5862fd292b082e47747eb7672e076e1d5f849ff9cf6ab81210ca2b1f4
+Size (cadical-3.0.1.tar.gz) = 889912 bytes
+SHA1 (patch-makefile.in) = ddd727b1fcd5ff6f8623a56e0d9dab178fa6ed96
