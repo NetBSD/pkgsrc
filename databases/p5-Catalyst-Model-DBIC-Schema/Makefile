@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/07/16 19:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/07/24 12:14:49 wen Exp $
 
-DISTNAME=	Catalyst-Model-DBIC-Schema-0.65
+DISTNAME=	Catalyst-Model-DBIC-Schema-0.66
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -34,9 +33,10 @@ DEPENDS+=	p5-DBIx-Class-Cursor-Cached-[0-9]*:../../databases/p5-DBIx-Class-Curso
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-#TOOL_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
-
 USE_LANGUAGES=		# empty
+EXTRACT_USING=		bsdtar
+EXTRACT_OPTS_TAR.Catalyst-Model-DBIC-Schema-0.66.tar.gz=	--no-xattr
+
 PERL5_PACKLIST=		auto/Catalyst/Model/DBIC/Schema/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
