@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/01/08 02:36:37 ktnb Exp $
+# $NetBSD: Makefile,v 1.12 2026/07/24 15:56:05 taca Exp $
 
 DISTNAME=	sigscheme-0.9.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uim/}
 GITHUB_PROJECT=	sigscheme

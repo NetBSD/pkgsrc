@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2026/02/14 07:41:01 taca Exp $
+# $NetBSD: Makefile,v 1.108 2026/07/24 15:56:07 taca Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Multilingualized version of a pager/text-based browser w3m
 
