@@ -1,19 +1,26 @@
-# $NetBSD: options.mk,v 1.17 2026/07/21 10:42:16 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2026/07/24 11:29:33 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	ghostscript uchardet x11
-PKG_SUGGESTED_OPTIONS=	ghostscript x11
+PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mghostscript)
+# Consequently, groff's HTML output driver, 'grohtml', will not work
+# properly.  It will not be possible to prepare or install
+# groff-generated documentation in HTML format.
 USE_TOOLS+=		gs:run
 PLIST_SRC+=		PLIST.docs
+DEPENDS+=		netpbm>=10.0:../../graphics/netpbm
 .else
 CONFIGURE_ARGS+=	--without-gs
 .endif
 
 .if !empty(PKG_OPTIONS:Muchardet)
+# The 'preconv' preprocessor program will be unable to attempt automatic
+# inference of an input file's character encoding.  See the preconv(1)
+# man page.
 .include "../../textproc/uchardet/buildlink3.mk"
 .endif
 
