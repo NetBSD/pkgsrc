@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4717 2026/07/24 00:40:13 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4718 2026/07/24 00:43:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7032,3 +7032,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-HTTP-Tinyish to 0.20 [wen 2026-07-23]
 	Updated textproc/scdoc to 1.11.5 [gdt 2026-07-23]
 	Updated www/p5-Alien-LibGumbo to 0.06 [wen 2026-07-24]
+	Updated www/p5-HTML-Gumbo to 0.20 [wen 2026-07-24]
