@@ -1,0 +1,24 @@
+$NetBSD: patch-stage0_src_CMakeLists.txt,v 1.1 2026/07/24 18:39:20 wiz Exp $
+
+Treat NetBSD like Linux.
+
+--- stage0/src/CMakeLists.txt.orig	2026-07-22 17:50:04.000000000 +0000
++++ stage0/src/CMakeLists.txt
+@@ -502,7 +502,7 @@ set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LIN
+ 
+ # flags for user binaries = flags for toolchain binaries + Lake
+ set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LINKER_FLAGS} -lLake")
+-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
++if(CMAKE_SYSTEM_NAME MATCHES "Linux|NetBSD")
+   set(LEANC_SHARED_LINKER_FLAGS " ${TOOLCHAIN_SHARED_LINKER_FLAGS} -Wl,--as-needed -lLake_shared -Wl,--no-as-needed")
+ else()
+   set(LEANC_SHARED_LINKER_FLAGS " ${TOOLCHAIN_SHARED_LINKER_FLAGS} -lLake_shared")
+@@ -549,7 +549,7 @@ endif()
+   string(APPEND LEAN_EXTRA_LINKER_FLAGS " -lm")
+ endif()
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
++if(CMAKE_SYSTEM_NAME MATCHES "Linux|NetBSD")
+   if(BSYMBOLIC)
+     string(APPEND LEANC_SHARED_LINKER_FLAGS " -Wl,-Bsymbolic")
+     string(APPEND TOOLCHAIN_SHARED_LINKER_FLAGS " -Wl,-Bsymbolic")
