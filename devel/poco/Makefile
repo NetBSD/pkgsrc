@@ -1,31 +1,29 @@
-# $NetBSD: Makefile,v 1.15 2023/10/24 22:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/24 12:15:52 adam Exp $
 
 PKGNAME=	poco-${POCO_VERSION}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 COMMENT=	POCO C++ Foundation libraries
 
 .include "../../devel/poco/Makefile.common"
 
-CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.expat}/lib
-CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.pcre}/lib
-CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.openssl}/lib
+CMAKE_CONFIGURE_ARGS+=	-DPOCO_MINIMAL_BUILD=ON
+# exceptions from the mininal build
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_CRYPTO=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_ENCODINGS=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_JSON=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_JWT=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_NET=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_NETSSL=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PAGECOMPILER=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PAGECOMPILER_FILE2PAGE=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_UTIL=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_XML=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_ZIP=ON
 
-CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.expat}/include
-CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.pcre}/include
-CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.zlib}/include
-CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.openssl}/include
-
-# remove patch backup files.
-# XXX: this should delete in post-install ${DESTDIR}${PREFIX} instead
-pre-install:
-	${RM} -f ${WRKSRC}/Foundation/include/Poco/Platform.h.orig
-
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../converters/utf8proc/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

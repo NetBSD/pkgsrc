@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/01/16 12:15:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/24 12:15:54 adam Exp $
 include/Poco/Data/MySQL/Binder.h
 include/Poco/Data/MySQL/Connector.h
 include/Poco/Data/MySQL/Extractor.h
@@ -10,5 +10,9 @@ include/Poco/Data/MySQL/SessionHandle.h
 include/Poco/Data/MySQL/SessionImpl.h
 include/Poco/Data/MySQL/StatementExecutor.h
 include/Poco/Data/MySQL/Utility.h
+lib/cmake/Poco/PocoDataMySQLConfig.cmake
+lib/cmake/Poco/PocoDataMySQLConfigVersion.cmake
+lib/cmake/Poco/PocoDataMySQLTargets-relwithdebinfo.cmake
+lib/cmake/Poco/PocoDataMySQLTargets.cmake
 lib/libPocoDataMySQL.so
-lib/libPocoDataMySQL.so.31
+lib/libPocoDataMySQL.so.123
