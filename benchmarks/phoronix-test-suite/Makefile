@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2025/08/31 14:00:57 taca Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/24 15:48:17 taca Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
 PTS_VERSION=	10.8.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phoronix-test-suite/}
 GITHUB_PROJECT=	phoronix-test-suite

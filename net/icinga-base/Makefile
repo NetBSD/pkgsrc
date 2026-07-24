@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2026/07/16 19:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/07/24 15:48:18 taca Exp $
 
 DISTNAME=	icinga-1.9.4
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icinga/}
 

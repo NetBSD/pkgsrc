@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 03:44:47 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/07/24 15:48:17 taca Exp $
 
 .include "../../mail/vmailmgr/Makefile.common"
 
 PKGNAME=		${PHP_PKG_PREFIX}-vmailmgr-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 
 MAINTAINER=		schmonz@NetBSD.org

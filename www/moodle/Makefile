@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2026/02/13 15:42:10 taca Exp $
+# $NetBSD: Makefile,v 1.108 2026/07/24 15:48:19 taca Exp $
 
 DISTNAME=	moodle-5.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://download.moodle.org/download.php/stable500/ \
 		https://packaging.moodle.org/stable500/ \
