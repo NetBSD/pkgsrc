@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4725 2026/07/24 02:55:29 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4726 2026/07/24 02:59:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7040,3 +7040,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal to 5.009 [wen 2026-07-24]
 	Updated converters/p5-Sereal-Encoder to 5.009 [wen 2026-07-24]
 	Updated converters/p5-Sereal-Decoder to 5.009 [wen 2026-07-24]
+	Updated converters/p5-Cpanel-JSON-XS to 4.43 [wen 2026-07-24]
