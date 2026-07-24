@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4739 2026/07/24 12:36:40 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4740 2026/07/24 12:49:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7059,3 +7059,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.304 [wen 2026-07-24]
 	Updated databases/p5-CatalystX-CRUD to 0.58 [wen 2026-07-24]
 	Updated databases/p5-DBD-CSV to 0.64 [wen 2026-07-24]
+	Updated devel/py-cython to 3.2.9 [adam 2026-07-24]
+	Updated devel/py-urwid to 4.0.7 [adam 2026-07-24]
