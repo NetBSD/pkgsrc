@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4719 2026/07/24 02:08:33 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4720 2026/07/24 02:11:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7034,3 +7034,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Alien-LibGumbo to 0.06 [wen 2026-07-24]
 	Updated www/p5-HTML-Gumbo to 0.20 [wen 2026-07-24]
 	Updated www/p5-Catalyst-Action-REST to 1.22 [wen 2026-07-24]
+	Updated time/p5-DateTime-Calendar-Julian to 0.108 [wen 2026-07-24]
