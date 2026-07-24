@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/07/16 19:01:31 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/07/24 02:52:47 wen Exp $
 
-DISTNAME=	Sereal-5.004
+DISTNAME=	Sereal-5.009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YV/YVES/}
 
