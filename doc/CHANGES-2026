@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4740 2026/07/24 12:49:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4741 2026/07/24 12:53:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7061,3 +7061,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-DBD-CSV to 0.64 [wen 2026-07-24]
 	Updated devel/py-cython to 3.2.9 [adam 2026-07-24]
 	Updated devel/py-urwid to 4.0.7 [adam 2026-07-24]
+	Updated devel/p5-Acme-Damn to 0.09 [wen 2026-07-24]
