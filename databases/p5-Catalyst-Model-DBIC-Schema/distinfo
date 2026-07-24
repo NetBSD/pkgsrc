@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:09:27 nia Exp $
+$NetBSD: distinfo,v 1.18 2026/07/24 12:14:49 wen Exp $
 
-BLAKE2s (Catalyst-Model-DBIC-Schema-0.65.tar.gz) = e041c54d4e0ae595d032dd270002d9e70bc46ba9c13d8f94e8a1e3d844a5cee1
-SHA512 (Catalyst-Model-DBIC-Schema-0.65.tar.gz) = 26b9efbcabb1d32e073ab4c67dd5daba568170261a7e99a5a7ade03412860b860a0216a011c170fc3b2db2ca8cee80d8c557eb5fb24a1696b91c4adc598ec171
-Size (Catalyst-Model-DBIC-Schema-0.65.tar.gz) = 57406 bytes
+BLAKE2s (Catalyst-Model-DBIC-Schema-0.66.tar.gz) = 5e6b93c0c0b04b5ceb02db92835dbd25c1263959c3bdd2e2be3c1e6f25893ac5
+SHA512 (Catalyst-Model-DBIC-Schema-0.66.tar.gz) = bc85b92f30f6931430f6311c5ff0d26432774abca36d856ebe5279b4ac1827a654664ebe0bf2319ffe858ba4e8923737fafeb7429d05f6b8afdde3e9a40a86b2
+Size (Catalyst-Model-DBIC-Schema-0.66.tar.gz) = 58388 bytes
