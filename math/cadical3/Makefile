@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/07/24 18:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/24 20:27:54 wiz Exp $
 
 DISTNAME=	cadical-3.0.1
 CATEGORIES=	math
@@ -19,6 +19,10 @@ USE_TOOLS+=		gmake
 MAKE_FILE=		makefile
 
 INSTALLATION_DIRS=	bin include lib
+
+# LDFLAGS are ignored, but this works
+# https://github.com/arminbiere/cadical/pull/88#issuecomment-5073528194
+CONFIGURE_ARGS+=	${LDFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/cadical ${DESTDIR}${PREFIX}/bin
