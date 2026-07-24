@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4731 2026/07/24 05:20:09 dkazankov Exp $
+$NetBSD: CHANGES-2026,v 1.4732 2026/07/24 09:04:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7046,3 +7046,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-BerkeleyDB to 0.67 [wen 2026-07-24]
 	Updated lang/gcc15-gnat to 15.3.0 [dkazankov 2026-07-24]
 	Updated lang/gcc15-gnat-libs to 15.3.0nb1 [dkazankov 2026-07-24]
+	Updated security/defguard-gateway to 2.0.3 [adam 2026-07-24]
