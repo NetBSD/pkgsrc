@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/07/24 13:59:29 wen Exp $
+
+BLAKE2s (Crypt-URandom-Token-0.005.tar.gz) = eaac6dff3b2f28694b1c933f7d681f29c5c6e99aada3e4c0bbbd5ff76e4a90a6
+SHA512 (Crypt-URandom-Token-0.005.tar.gz) = 72288dd4341f2f130a5a9b78a03dfa0fc6d132a5e2af0427c3542c873074e365fc1c85b6a5b5f09ecfab999146fa5c59696c523b9edf71462ea59ddd9703c86a
+Size (Crypt-URandom-Token-0.005.tar.gz) = 12939 bytes

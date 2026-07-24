@@ -1,0 +1,10 @@
+This module provides a secure way to generate a random token for passwords
+and similar using Crypt::URandom as the source of random bits.
+
+By default, it generates a 44 character alphanumeric token with more than
+256 bits of entropy. A custom alphabet with between 2 and 256 elements can
+be provided.
+
+Modulo reduction and rejection sampling is used to prevent modulus bias. Keep
+in mind that bias will be introduced if duplicate elements are provided in
+the alphabet.
