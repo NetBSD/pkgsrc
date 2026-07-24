@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.643 2026/07/24 18:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.644 2026/07/24 18:39:46 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -286,6 +286,7 @@ SUBDIR+=	lapack
 SUBDIR+=	lapack64
 SUBDIR+=	lapacke
 SUBDIR+=	lapacke64
+SUBDIR+=	lean4
 SUBDIR+=	leantar
 SUBDIR+=	libffm
 SUBDIR+=	libfixmath
