@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2026/07/19 00:35:25 ktnb Exp $
+$NetBSD: distinfo,v 1.46 2026/07/24 16:49:39 ktnb Exp $
 
 BLAKE2s (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = ed554d44b1070ae79986f3ff61e6ad4ed12060fb78fe6f2273733f762721d1e0
 SHA512 (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = 09bbd28b9ce42a919f22339bdeb2b798a728cf3b7f5f7fd61bec418fa360893c4ebd72f0957be4c855621f96d9a146ef8f0074f5ac4154c04f537ae3ad3592c4
@@ -228,9 +228,9 @@ Size (howett.net_plist_@v_v1.0.1.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.1.zip) = 43dd213cd6f655b89cb6074acf972bc2e134c71fb991af59c14ebaf6747c2545
 SHA512 (howett.net_plist_@v_v1.0.1.zip) = 4f8b07bebf808ff4bbc1b2fdcf501d60731e26e048c1e7e2f21cfb9816fab8937e9f1915b44ff693a6a5b0f91cff470f40c4d7a71d7728afe2d0a3bca99432cd
 Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
-BLAKE2s (kitty-0.48.0.tar.xz) = c4ed556d60fdb6fe37f05751bc7c177c1f73164773ede6540bdf1b6bbcdc3527
-SHA512 (kitty-0.48.0.tar.xz) = ca29416ca9f9fd2a3940a4b4865285a1247cceb8ca7c2e116b4d9f4ff4b468a628ca9c033afecef191e6a7167335427280f8ebdb32c4d044d1581d202ef02557
-Size (kitty-0.48.0.tar.xz) = 11745084 bytes
+BLAKE2s (kitty-0.48.1.tar.xz) = 5ebc08dd678b50a265917f60e4bf2e668a3e30cd24f9c2b7e78f24afd5da623c
+SHA512 (kitty-0.48.1.tar.xz) = e8583db669aea92a13a27ff1809ec58ffc0cf143709a9f6959307418b24287fe2406ac1920bf1b034e01f50dc09821e0e72a72fec83c5f7a773a03239a47e57a
+Size (kitty-0.48.1.tar.xz) = 11747820 bytes
 SHA1 (patch-glfw_wl__client__side__decorations.c) = c30259e0833cfe054e5e532cad58216243c7b773
 SHA1 (patch-glfw_wl__init.c) = 3dc143fba1a5fa5c15563aecc027cd6af872a0e0
 SHA1 (patch-kitty_binary.h) = e8e6e9b16a1bd7d0304bca919ad10dd932142da5
