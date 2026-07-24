@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/03/22 16:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/07/24 18:20:09 wiz Exp $
 
-DISTNAME=		lowdown-3.0.1
+DISTNAME=		lowdown-3.1.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_TAG=		refs/tags/VERSION_${PKGVERSION_NOREV:S/./_/g}
@@ -13,7 +13,6 @@ LICENSE=		isc
 WRKSRC=			${WRKDIR}/${PKGBASE}-${GITHUB_TAG:C/.*\///}
 
 HAS_CONFIGURE=		yes
-USE_LIBTOOL=		yes
 
 SUBST_CLASSES+=		install
 SUBST_SED.install=	-e 's|/usr/local|${PREFIX}|'
@@ -25,8 +24,7 @@ SUBST_FILES.install+=	configure
 SUBST_STAGE.install=	pre-configure
 SUBST_MESSAGE.install=	Fixing installation path.
 
-INSTALL_TARGET=		install install_pkgsrc
-
+INSTALL_TARGET=		install install_libs
 TEST_TARGET=		regress
 
 pre-configure:
