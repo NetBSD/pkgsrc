@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4730 2026/07/24 05:19:36 dkazankov Exp $
+$NetBSD: CHANGES-2026,v 1.4731 2026/07/24 05:20:09 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7045,3 +7045,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-JSON-MaybeXS to 1.004008 [wen 2026-07-24]
 	Updated databases/p5-BerkeleyDB to 0.67 [wen 2026-07-24]
 	Updated lang/gcc15-gnat to 15.3.0 [dkazankov 2026-07-24]
+	Updated lang/gcc15-gnat-libs to 15.3.0nb1 [dkazankov 2026-07-24]
