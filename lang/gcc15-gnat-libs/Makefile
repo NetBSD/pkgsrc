@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2026/06/06 06:17:15 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/24 05:18:38 dkazankov Exp $
 
 GNAT_PKGNAME=	gcc15-gnat
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
-PKGNAME=	${GNAT_PKGNAME}-libs-15.2.0
+PKGNAME=	${GNAT_PKGNAME}-libs-15.3.0
 
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc15-gnat package so that with the dependence pattern
 ## '{gcc15-gnat,gcc15-gnat-libs}>=15.1.*' pkg_add will choose gcc15-gnat-libs over gcc15-gnat.
-PKGREVISION=	3
+PKGREVISION=	1
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2026/06/06 06:15:50 dkazankov Exp $
+$NetBSD: distinfo,v 1.5 2026/07/24 05:18:38 dkazankov Exp $
 
-BLAKE2s (gcc-15.2.0.tar.xz) = ee9b2705b03ef8e6b5a41cf523dad26dcdaa8047be3743121b1673ce2fcc8832
-SHA512 (gcc-15.2.0.tar.xz) = 89047a2e07bd9da265b507b516ed3635adb17491c7f4f67cf090f0bd5b3fc7f2ee6e4cc4008beef7ca884b6b71dffe2bb652b21f01a702e17b468cca2d10b2de
-Size (gcc-15.2.0.tar.xz) = 101056276 bytes
+BLAKE2s (gcc-15.3.0.tar.xz) = 4230d4aaa5a4740a3101d5a06478d92d265796df542be1ddd6985be695a3e6ee
+SHA512 (gcc-15.3.0.tar.xz) = 0de9e296153b52c021b1c7e63c9c62151d7a0ac03f23ce6e9f772c1b0eb783f6acdd81cc4567bfe4128a6f64968c2cfc8eff40b36229cba7425349f7d637c654
+Size (gcc-15.3.0.tar.xz) = 101253696 bytes
 BLAKE2s (gcc-bootstrap-x86_64--netbsd-10.5.0.tar.bz2) = 90d731f859fde9db5e416a233eea6fe487bf9c45b974708a5913cbd0cafed0d3
 SHA512 (gcc-bootstrap-x86_64--netbsd-10.5.0.tar.bz2) = e649dc8473c6c526bb447f42235abe7d4abf57d3ab2fe22bb5ca4303f2f08f85a501121c61e0104b17a3dd8c76d54b6925a25401bdccd5590ddab92bed948d70
 Size (gcc-bootstrap-x86_64--netbsd-10.5.0.tar.bz2) = 70613322 bytes
