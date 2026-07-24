@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2026/07/17 12:40:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.29 2026/07/24 15:13:03 ktnb Exp $
 
-DISTNAME=	kew-4.2.6
+DISTNAME=	kew-4.2.7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ravachol/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+DIST_SUBDIR=	kew
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/ravachol/kew/
@@ -21,6 +22,7 @@ MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/512x512/apps
+INSTALLATION_DIRS+=	share/kew
 
 .include "options.mk"
 

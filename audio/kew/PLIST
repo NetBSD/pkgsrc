@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2026/07/02 18:24:00 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/07/24 15:13:03 ktnb Exp $
 bin/kew
 man/man1/kew.1
 share/applications/kew.desktop
 share/icons/hicolor/512x512/apps/kew.png
+${PLIST.artists}share/kew/artists.db
 share/kew/layouts/LAYOUTS-HOWTO.md
 share/kew/layouts/alt.layout
 share/kew/layouts/current.layout
