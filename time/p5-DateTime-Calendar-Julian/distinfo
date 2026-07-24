@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/02/14 14:28:02 wen Exp $
+$NetBSD: distinfo,v 1.10 2026/07/24 02:10:56 wen Exp $
 
-BLAKE2s (DateTime-Calendar-Julian-0.107.tar.gz) = 431cc6c3f276cd85be7c3ebe28d89d7a2851617b7e6c235a019020d54ebe5dca
-SHA512 (DateTime-Calendar-Julian-0.107.tar.gz) = 8219c4d8e998ebeb536d46f2d81b40a5ff21a3fc3c6e8c2c063b334e7a9f2cb73f14cdb5c82cac60bc9b1c6eb6ff43235f955f7775e47aaf4f903db654a34a5b
-Size (DateTime-Calendar-Julian-0.107.tar.gz) = 19669 bytes
+BLAKE2s (DateTime-Calendar-Julian-0.108.tar.gz) = 032fc389a63b1cccf77c183f7b882ef62e08616990652b84b351e66164742ed3
+SHA512 (DateTime-Calendar-Julian-0.108.tar.gz) = a8cd9467f76f51214e75e2c7149a7aac7b562f0e59a97406ad353d7d0ec58d374628228454bdb5e7a63ac5213b703974dc398ed87938653ad4fbb028a8a0aac7
+Size (DateTime-Calendar-Julian-0.108.tar.gz) = 21707 bytes
