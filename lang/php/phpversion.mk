@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.506 2026/07/04 06:24:45 taca Exp $
+# $NetBSD: phpversion.mk,v 1.507 2026/07/24 15:39:08 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -11,7 +11,7 @@
 #	the package.
 #
 #	Possible: 56 74 82 83 84 85
-#	Default: 83
+#	Default: 84
 #
 # === Infrastructure variables ===
 #
@@ -28,7 +28,7 @@
 #	The PHP versions that are accepted by the package.
 #
 #	Possible: 56 74 82 83 84 85
-#	Default: 83 82 84 85 74 56
+#	Default: 84 85 83 82 74 56
 #
 # PHP_VERSIONS_INCOMPATIBLE
 #	The PHP versions that are not supported by the package.
@@ -67,7 +67,7 @@
 #	The directory of the PHP implementation, relative to the
 #	package directory.
 #
-#	Example: ../../lang/php83
+#	Example: ../../lang/php84
 #
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
@@ -77,29 +77,29 @@
 # PHP_INCDIR
 #	PHP include directory path relative to ${PREFIX}.
 #
-#	Example: include/php/8.3
+#	Example: include/php/8.4
 #
 # PHP_LIBDIR
 #	PHP library directory path relative to ${PREFIX}.
 #
-#	Example: lib/php/8.3
+#	Example: lib/php/8.4
 #
 # PHP_EGDIR
 #	PHP example directory path relative to ${PREFIX}.
 #
-#	Example: share/example/php/8.3
+#	Example: share/example/php/8.4
 #
 # PHP_SHAREDIR
 #	PHP share directory path relative to ${PREFIX}.
 #
-#	Example: share/share/php/8.3
+#	Example: share/share/php/8.4
 #
 #
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
 #	MACHINE_GNU_ARCH.
 #
-#	Example: lib/php/8.3/x86_64
+#	Example: lib/php/8.4/x86_64
 #
 # Keywords: php
 #
@@ -122,8 +122,8 @@ _SYS_VARS.php=	PHP_VERSION_PHP PHPPKGSRCDIR PHP_PKG_PREFIX PHP_VER PHP_MAJOR_VER
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP_VERSION_DEFAULT?=		83
-PHP_VERSIONS_ACCEPTED?=		83 82 84 85 74 56
+PHP_VERSION_DEFAULT?=		84
+PHP_VERSIONS_ACCEPTED?=		84 85 83 82 74 56
 .for pv in ${PHP_VERSIONS_ACCEPTED}
 .  if empty(PHP_VERSIONS_INCOMPATIBLE:M${pv})
 _PHP_VERSIONS_ACCEPTED+=	${pv}
