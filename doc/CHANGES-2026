@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4742 2026/07/24 12:56:44 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4743 2026/07/24 13:04:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7063,3 +7063,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.0.7 [adam 2026-07-24]
 	Updated devel/p5-Acme-Damn to 0.09 [wen 2026-07-24]
 	Updated devel/p5-App-Cmd to 0.340 [wen 2026-07-24]
+	Updated devel/p5-App-cpanminus to 1.7049 [wen 2026-07-24]
