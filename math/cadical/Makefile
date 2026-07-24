@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/30 22:52:48 alnsn Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/24 18:37:35 wiz Exp $
 
 DISTNAME=	cadical-2.1.3
 CATEGORIES=	math
@@ -7,7 +7,7 @@ GITHUB_TAG=	rel-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arminbiere/cadical/
-COMMENT=	SAT Solver
+COMMENT=	SAT Solver (v2)
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/cadical-rel-${PKGVERSION_NOREV}
