@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1019 2026/07/22 16:15:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.1020 2026/07/24 14:00:55 wen Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -361,6 +361,7 @@ SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Crypt-SysRandom
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Crypt-URandom
+SUBDIR+=	p5-Crypt-URandom-Token
 SUBDIR+=	p5-Crypt-X509
 SUBDIR+=	p5-CryptX
 SUBDIR+=	p5-Dancer-Plugin-Auth-RBAC
