@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4723 2026/07/24 02:53:37 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4724 2026/07/24 02:54:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7038,3 +7038,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-Format-Natural to 1.27 [wen 2026-07-24]
 	Updated time/p5-MooseX-Types-DateTime to 0.14 [wen 2026-07-24]
 	Updated converters/p5-Sereal to 5.009 [wen 2026-07-24]
+	Updated converters/p5-Sereal-Encoder to 5.009 [wen 2026-07-26]
