@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/07/24 18:39:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/07/24 18:41:55 wiz Exp $
 
 DISTNAME=	lean4-4.32.1
 CATEGORIES=	math
@@ -11,7 +11,7 @@ HOMEPAGE=	https://lean-lang.org/
 COMMENT=	Programming language for theorem proving
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	leantar-[0-9]*:../../math/leantar
+_DEPENDS+=	leantar-[0-9]*:../../math/leantar
 DEPENDS+=	cadical>=3:../../math/cadical3
 
 USE_LANGUAGES=	c c++
