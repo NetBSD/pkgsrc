@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4745 2026/07/24 14:02:03 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4746 2026/07/24 14:06:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7066,3 +7066,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-App-cpanminus to 1.7049 [wen 2026-07-24]
 	Updated databases/p5-DBD-MariaDB to 1.24 [wen 2026-07-24]
 	Added security/p5-Crypt-URandom-Token version 0.005 [wen 2026-07-24]
+	Updated databases/p5-DBIx-Class-EncodedColumn to 0.11 [wen 2026-07-24]
