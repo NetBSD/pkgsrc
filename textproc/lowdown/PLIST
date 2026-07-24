@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2026/03/09 17:32:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/07/24 18:20:09 wiz Exp $
 bin/lowdown
 bin/lowdown-diff
 include/lowdown.h
-lib/liblowdown.la
+lib/liblowdown.a
+lib/liblowdown.so
+lib/liblowdown.so.4
 lib/pkgconfig/lowdown.pc
 man/man1/lowdown-diff.1
 man/man1/lowdown.1
