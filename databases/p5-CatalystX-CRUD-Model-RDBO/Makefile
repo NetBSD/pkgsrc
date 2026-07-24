@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2026/07/16 19:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/07/24 12:29:13 wen Exp $
 
-DISTNAME=	CatalystX-CRUD-Model-RDBO-0.302
+DISTNAME=	CatalystX-CRUD-Model-RDBO-0.304
 # separate the last digit by '.', like  0.31 > 0.30.2
 #   (if 0.310 will be used for 0.31, no trick is necessary)
 PKGNAME=	p5-${DISTNAME:C/0.([0-9][0-9])([0-9])/0.\1.\2/}
-PKGREVISION=	12
 CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARMAN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/CatalystX-CRUD-Model-RDBO
 COMMENT=	Rose::DB::Object CRUD
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-CatalystX-CRUD>=0.43:../../databases/p5-CatalystX-CRUD
+DEPENDS+=	p5-CatalystX-CRUD>=0.56:../../databases/p5-CatalystX-CRUD
+DEPENDS+=	p5-CatalystX-CRUD-Controller-REST>=0.005:../../www/p5-CatalystX-CRUD-Controller-REST
 DEPENDS+=	p5-Catalyst-Runtime>=5.80000:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Rose-DB-Object>=0:../../databases/p5-Rose-DB-Object
