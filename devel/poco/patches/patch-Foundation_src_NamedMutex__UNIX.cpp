@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2016/01/16 12:15:12 ryoon Exp $
+$NetBSD: patch-Foundation_src_NamedMutex__UNIX.cpp,v 1.1 2026/07/24 12:15:53 adam Exp $
 
-# include NetBSD with the HP-UX portion of the event handling
+Support NetBSD
 
---- Foundation/src/NamedEvent_UNIX.cpp.orig	2015-08-04 05:20:55.000000000 +0000
-+++ Foundation/src/NamedEvent_UNIX.cpp
+--- Foundation/src/NamedMutex_UNIX.cpp.orig	2015-08-04 05:20:55.000000000 +0000
++++ Foundation/src/NamedMutex_UNIX.cpp
 @@ -41,7 +41,7 @@ namespace Poco {
  		unsigned short int* array;
  		struct seminfo*     __buf;

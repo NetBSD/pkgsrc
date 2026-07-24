@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2025/03/30 15:42:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2026/07/24 12:15:52 adam Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -6,57 +6,42 @@
 # used by databases/poco-data-mysql/Makefile
 # used by databases/poco-data-odbc/Makefile
 
-POCO_VERSION=	1.6.1
+POCO_VERSION=	1.15.3
 
 DISTNAME=	poco-${POCO_VERSION}-all
 MASTER_SITES=	https://pocoproject.org/releases/poco-${POCO_VERSION}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pocoproject.org/
-
-LICENSE=		boost-license
+HOMEPAGE=	https://pocoproject.org/
+LICENSE=	boost-license
 
 PATCHDIR=	${.CURDIR}/../../devel/poco/patches
 DISTINFO_FILE=	${.CURDIR}/../../devel/poco/distinfo
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_CXX_FEATURES=	c++20
+USE_FEATURES+=		strnlen
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config #gmake
 
-# Various places have:
-# error: unable to open output file '.../poco-1.4.2p1-all/Foundation/obj/NetBSD/amd64/debug_shared/Ascii.o'
-MAKE_JOBS_SAFE=	no
-
-# Fix Net/sample build at least.
-BUILDLINK_TRANSFORM+=	l:PocoUtil:PocoUtil:PocoJSON
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data,MongoDB
-# don't use the bundled versions of SQLite, zlib, etc..
-CONFIGURE_ARGS+=	--unbundled
+CMAKE_CONFIGURE_ARGS+=	-DPOCO_MINIMAL_BUILD=ON
+CMAKE_CONFIGURE_ARGS+=	-DPOCO_UNBUNDLED=ON
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--config=FreeBSD
+post-install:
+.if "${PKGPATH}" == "devel/poco"
+	${RM}	${DESTDIR}${PREFIX}/include/Poco/Platform.h.orig
+	${RM}	${DESTDIR}${PREFIX}/include/Poco/Types.h.orig
+.else
+	cd ${DESTDIR}${PREFIX} && \
+	${RM}	include/Poco/ordered_hash.h \
+		include/Poco/ordered_map.h \
+		include/Poco/ordered_set.h \
+		lib/cmake/Poco/PocoConfig.cmake \
+		lib/cmake/Poco/PocoConfigVersion.cmake
 .endif
 
-# NetBSD doesn't have fenv.h. We should add one.
-CONFIGURE_ARGS.NetBSD+=	--no-fpenvironment
-CONFIGURE_ARGS.NetBSD+=	--no-sharedmemory
-
-.if ${OPSYS} == "SunOS"
-.include "../../mk/compiler.mk"
-.  if ${PKGSRC_COMPILER:Msunpro}
-CONFIGURE_ARGS+=	--config=SunOS-SunStudio
-.  else
-CONFIGURE_ARGS+=	--config=SunOS-GCC
-# GCC 4.6 and newer forces c99 for C++, need _XOPEN_SOURCE=600
-.    if !empty(CC_VERSION:Mgcc-4.[6-9].*) || !empty(CC_VERSION:Mgcc-[5-9].*) || !empty(CC_VERSION:Mgcc-1[0-9].*) || !empty(PKGSRC_COMPILER:Mclang)
-MAKE_ENV+=		XOPEN_SOURCE=600
-.    else
-MAKE_ENV+=		XOPEN_SOURCE=500
-.    endif
-.  endif
-.endif
-
-MAKE_FLAGS+=		POCO_BASE=${WRKSRC}
+.include "../../converters/utf8proc/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/pcre2/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/01/16 12:15:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/07/24 12:15:54 adam Exp $
 include/Poco/Data/AbstractBinder.h
 include/Poco/Data/AbstractBinding.h
 include/Poco/Data/AbstractExtraction.h
@@ -21,6 +21,7 @@ include/Poco/Data/Date.h
 include/Poco/Data/DynamicDateTime.h
 include/Poco/Data/DynamicLOB.h
 include/Poco/Data/Extraction.h
+include/Poco/Data/JSONRowFormatter.h
 include/Poco/Data/LOB.h
 include/Poco/Data/LOBStream.h
 include/Poco/Data/Limit.h
@@ -47,6 +48,11 @@ include/Poco/Data/StatementCreator.h
 include/Poco/Data/StatementImpl.h
 include/Poco/Data/Time.h
 include/Poco/Data/Transaction.h
+include/Poco/Data/Transcoder.h
 include/Poco/Data/TypeHandler.h
+lib/cmake/Poco/PocoDataConfig.cmake
+lib/cmake/Poco/PocoDataConfigVersion.cmake
+lib/cmake/Poco/PocoDataTargets-relwithdebinfo.cmake
+lib/cmake/Poco/PocoDataTargets.cmake
 lib/libPocoData.so
-lib/libPocoData.so.31
+lib/libPocoData.so.123

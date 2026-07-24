@@ -1,0 +1,66 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/24 12:15:52 adam Exp $
+
+Make Foundation optional, so other poco packages can depend on it.
+
+Allow builing database components with external Poco data.
+
+--- CMakeLists.txt.orig	2026-05-20 16:41:39.000000000 +0000
++++ CMakeLists.txt
+@@ -230,7 +230,10 @@ else()
+ endif()
+ 
+ # Foundation is always required; force it ON regardless of user setting
+-set(ENABLE_FOUNDATION ON CACHE BOOL "Enable Foundation (required)" FORCE)
++set(ENABLE_FOUNDATION ON CACHE BOOL "Enable Foundation (required)")
++if (NOT ENABLE_FOUNDATION)
++	find_package(Poco REQUIRED COMPONENTS Foundation)
++endif()
+ 
+ # Allow enabling and disabling optional components
+ 
+@@ -387,8 +390,10 @@ if(ENABLE_ACTIVERECORD)
+ 	set(ENABLE_XML ON CACHE BOOL "Enable XML" FORCE)
+ endif()
+ 
+-if(ENABLE_DATA_MYSQL OR ENABLE_DATA_ODBC OR ENABLE_DATA_POSTGRESQL)
+-	set(ENABLE_DATA ON CACHE BOOL "Enable Data" FORCE)
++if(ENABLE_DATA_MYSQL OR ENABLE_DATA_ODBC OR ENABLE_DATA_POSTGRESQL OR ENABLE_DATA_SQLITE)
++	if(NOT ENABLE_DATA)
++		find_package(Poco REQUIRED COMPONENTS Data)
++	endif()
+ endif()
+ 
+ if (ENABLE_DNSSD)
+@@ -450,7 +455,7 @@ if(ENABLE_TESTS)
+ endif()
+ 
+ if(ENABLE_DATA_SQLITE)
+-	set(ENABLE_DATA ON CACHE BOOL "Enable Data" FORCE)
++	add_subdirectory(Data/SQLite)
+ endif()
+ 
+ # - find external dependencies
+@@ -467,14 +472,23 @@ endif()
+ 
+ if(ENABLE_DATA_MYSQL)
+ 	find_package(MySQL REQUIRED)
++	if(NOT ENABLE_DATA)
++		add_subdirectory(Data/MySQL)
++	endif()
+ endif()
+ 
+ if(ENABLE_DATA_POSTGRESQL)
+ 	find_package(PostgreSQL REQUIRED)
++	if(NOT ENABLE_DATA)
++		add_subdirectory(Data/PostgreSQL)
++	endif()
+ endif()
+ 
+ if(ENABLE_DATA_ODBC)
+ 	find_package(ODBC REQUIRED)
++	if(NOT ENABLE_DATA)
++		add_subdirectory(Data/ODBC)
++	endif()
+ endif()
+ 
+ # Feature-gated dep subdirs must run after the enablement cascade so

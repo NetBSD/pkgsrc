@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2011/10/17 02:10:31 schnoebe Exp $
+$NetBSD: patch-Foundation_src_SharedMemory__POSIX.cpp,v 1.1 2026/07/24 12:15:53 adam Exp $
 
-# comment out the atttempts at shared memory (at least for NetBSD)
+Comment out the atttempts at shared memory (at least for NetBSD).
 
 --- Foundation/src/SharedMemory_POSIX.cpp.orig	2011-02-09 09:12:55.000000000 +0000
 +++ Foundation/src/SharedMemory_POSIX.cpp
