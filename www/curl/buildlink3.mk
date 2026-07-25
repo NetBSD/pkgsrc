@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.72 2026/05/14 16:42:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.73 2026/07/25 20:59:06 wiz Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -23,9 +23,6 @@ BUILDLINK_API_DEPENDS.openssl+= openssl>=3.0
 .endif
 .if ${PKG_BUILD_OPTIONS.curl:Mldap}
 .  include "../../databases/openldap-client/buildlink3.mk"
-.endif
-.if ${PKG_BUILD_OPTIONS.curl:Mrtmp}
-.  include "../../net/rtmpdump/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.curl:Midn}
 .  include "../../devel/libidn2/buildlink3.mk"
