@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/07/08 18:32:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/25 10:23:43 drixter Exp $
 
-DISTNAME=	miniflux-2.3.2
-PKGREVISION=	1
+DISTNAME=	miniflux-2.3.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=miniflux/}
 GITHUB_PROJECT=	v2
