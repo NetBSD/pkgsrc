@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/07/24 21:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/07/25 09:40:53 wiz Exp $
 
 DISTNAME=	lean4-4.32.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leanprover/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,10 +18,7 @@ DEPENDS+=	cadical>=3:../../math/cadical3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run gmake pkg-config
 
-USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++20
-# for alloca()
-FORCE_C_STD=		gnu99
 
 # needed for stage0 tools that are called during build and installation
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/stage0/lib/lean:${WRKSRC}/${CMAKE_BUILD_DIR}/stage0/lib
