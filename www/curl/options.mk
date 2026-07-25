@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2026/06/01 10:10:12 leot Exp $
+# $NetBSD: options.mk,v 1.31 2026/07/25 20:55:05 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 openssl libssh2 gssapi ldap rtmp idn http2
@@ -51,9 +51,6 @@ CONFIGURE_ARGS+=	--disable-ldap
 
 .if !empty(PKG_OPTIONS:Mrtmp)
 .include "../../net/rtmpdump/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-librtmp
-.else
-CONFIGURE_ARGS+=	--without-librtmp
 .endif
 
 .if !empty(PKG_OPTIONS:Midn)
