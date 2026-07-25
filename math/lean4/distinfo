@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.2 2026/07/24 21:26:20 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/07/25 09:40:53 wiz Exp $
 
 BLAKE2s (lean4-4.32.1.tar.gz) = 9d98b0fcb0d958bdbbe110d108c6138c5e6f9c3e335dd16095761a13eb2da43e
 SHA512 (lean4-4.32.1.tar.gz) = c180c406c6d9b6c28705f93ac3fad64b1a975f76cc11ae8ba2b4447ff668e2babac2bf3dd997bae2a38b196767353b484b1674a6a21a145e9a37dc3879d3029f
 Size (lean4-4.32.1.tar.gz) = 75094335 bytes
 SHA1 (patch-src_CMakeLists.txt) = c6620d0ca4c6f5d2fccf4e8e97462661c1a9d38d
 SHA1 (patch-src_Leanc.lean) = 156025c502ceb1afc67288c107cdca99b6968cc6
+SHA1 (patch-src_include_lean_lean.h) = 8051d7be7f01bb5a48974bcf777ea5bed0240f25
 SHA1 (patch-src_lake_Lake_Build_Common.lean) = 2fd83850d22ba26beb56b8bd26bb3473b897aee8
 SHA1 (patch-src_runtime_process.cpp) = fc4aeaf89ab47b0d0f6b086219a92fdc1badc2c4
 SHA1 (patch-stage0_src_CMakeLists.txt) = 9605c8287537786cec326e6d6f041faa4ce3f1ae
+SHA1 (patch-stage0_src_include_lean_lean.h) = 19e6c3e23705e03d6bb33e2e21330f007b64d761
 SHA1 (patch-stage0_src_runtime_process.cpp) = 2f4fe1485a110d545eb10bc57cd9dc9153e395c8
