@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4758 2026/07/25 10:31:48 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4759 2026/07/25 15:09:18 jun Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7080,3 +7080,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/lean4 to 4.32.1nb1 [wiz 2026-07-25]
 	Updated www/miniflux to 2.3.3 [drixter 2026-07-25]
 	Updated net/dnscontrol to 4.44.1 [drixter 2026-07-25]
+	Updated emulators/nono to 1.8.2 [jun 2026-07-26]
