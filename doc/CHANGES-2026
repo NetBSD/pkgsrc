@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4754 2026/07/24 21:38:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4755 2026/07/25 08:40:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7075,3 +7075,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/cadical3 version 3.0.1 [wiz 2026-07-24]
 	Added math/lean4 version 4.32.1 [wiz 2026-07-24]
 	Updated www/gotosocial to 0.22.1 [wiz 2026-07-24]
+	Updated devel/appstream to 1.1.5 [adam 2026-07-25]
+	Updated audio/fluidsynth to 2.5.7 [adam 2026-07-25]
