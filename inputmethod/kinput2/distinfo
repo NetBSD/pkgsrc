@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:49:36 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/07/25 12:57:02 wiz Exp $
 
 BLAKE2s (kinput2-v3.1-canna37.diff) = 38ea3d379d9e1be74286295481aebca098254ec430971ba4796f6db7f8821847
 SHA512 (kinput2-v3.1-canna37.diff) = d7047eb1861b68abe9265a6b99b7953ea3405e01c2d24899e7da925b9781b1e318fd9d5262b03e3c54f4b7e85cceb2c295decad8287c337f173e986c1b1e1584
@@ -6,7 +6,6 @@ Size (kinput2-v3.1-canna37.diff) = 993 bytes
 BLAKE2s (kinput2-v3.1.tar.gz) = 2ae561f3637389f1df53a609e97dc7cb90f05ee04cc42e745130fb4eac69f260
 SHA512 (kinput2-v3.1.tar.gz) = 5950f7294fa2bf915e6591290a3deb2c95f27706f3a180a084d14fbc008f3cf363b155b29c8103a8b999e44ae98182ff35bcfda85725b2c565f3e37f54788731
 Size (kinput2-v3.1.tar.gz) = 512177 bytes
-SHA1 (patch-Imakefile) = 2ec731b5ff7ef4cac3497c60b179e0f1ce0a4a05
 SHA1 (patch-aa) = 3eaca25000c756d71fcafbb09a8ad8fd15142437
 SHA1 (patch-ab) = a084421f399e753f25040fd0cba6d43a391fc15b
 SHA1 (patch-ac) = 83d74ddffa6ddb870b3de1755a94e1258e06f793
