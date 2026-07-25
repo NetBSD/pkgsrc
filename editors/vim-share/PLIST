@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2026/06/29 19:14:13 morr Exp $
+@comment $NetBSD: PLIST,v 1.94 2026/07/25 18:15:50 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -97,6 +97,7 @@ share/vim/${VIM_SUBDIR}/colors/lists/default.vim
 share/vim/${VIM_SUBDIR}/colors/lunaperche.vim
 share/vim/${VIM_SUBDIR}/colors/morning.vim
 share/vim/${VIM_SUBDIR}/colors/murphy.vim
+share/vim/${VIM_SUBDIR}/colors/novum.vim
 share/vim/${VIM_SUBDIR}/colors/pablo.vim
 share/vim/${VIM_SUBDIR}/colors/peachpuff.vim
 share/vim/${VIM_SUBDIR}/colors/quiet.vim
@@ -161,6 +162,7 @@ share/vim/${VIM_SUBDIR}/compiler/groff.vim
 share/vim/${VIM_SUBDIR}/compiler/haml.vim
 share/vim/${VIM_SUBDIR}/compiler/hare.vim
 share/vim/${VIM_SUBDIR}/compiler/hp_acc.vim
+share/vim/${VIM_SUBDIR}/compiler/iar.vim
 share/vim/${VIM_SUBDIR}/compiler/icc.vim
 share/vim/${VIM_SUBDIR}/compiler/icon.vim
 share/vim/${VIM_SUBDIR}/compiler/ifort.vim
@@ -541,6 +543,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/gitcommit.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitignore.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitrebase.vim
+share/vim/${VIM_SUBDIR}/ftplugin/gitrevlist.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitsendemail.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gleam.vim
 share/vim/${VIM_SUBDIR}/ftplugin/go.vim
@@ -563,6 +566,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/hcl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/heex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/help.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hgcommit.vim
+share/vim/${VIM_SUBDIR}/ftplugin/hip.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hlsplaylist.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hostconf.vim
@@ -585,6 +589,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/java.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javacc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javascript.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javascriptreact.vim
+share/vim/${VIM_SUBDIR}/ftplugin/jinja.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jjdescription.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jproperties.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jq.vim
@@ -918,6 +923,7 @@ share/vim/${VIM_SUBDIR}/indent/hamster.vim
 share/vim/${VIM_SUBDIR}/indent/handlebars.vim
 share/vim/${VIM_SUBDIR}/indent/hare.vim
 share/vim/${VIM_SUBDIR}/indent/hcl.vim
+share/vim/${VIM_SUBDIR}/indent/hip.vim
 share/vim/${VIM_SUBDIR}/indent/hog.vim
 share/vim/${VIM_SUBDIR}/indent/html.vim
 share/vim/${VIM_SUBDIR}/indent/htmldjango.vim
@@ -1416,6 +1422,7 @@ share/vim/${VIM_SUBDIR}/syntax/gitconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/gitignore.vim
 share/vim/${VIM_SUBDIR}/syntax/gitolite.vim
 share/vim/${VIM_SUBDIR}/syntax/gitrebase.vim
+share/vim/${VIM_SUBDIR}/syntax/gitrevlist.vim
 share/vim/${VIM_SUBDIR}/syntax/gitsendemail.vim
 share/vim/${VIM_SUBDIR}/syntax/gkrellmrc.vim
 share/vim/${VIM_SUBDIR}/syntax/gleam.vim
@@ -1456,6 +1463,7 @@ share/vim/${VIM_SUBDIR}/syntax/help_ru.vim
 share/vim/${VIM_SUBDIR}/syntax/hercules.vim
 share/vim/${VIM_SUBDIR}/syntax/hex.vim
 share/vim/${VIM_SUBDIR}/syntax/hgcommit.vim
+share/vim/${VIM_SUBDIR}/syntax/hip.vim
 share/vim/${VIM_SUBDIR}/syntax/hitest.vim
 share/vim/${VIM_SUBDIR}/syntax/hlsplaylist.vim
 share/vim/${VIM_SUBDIR}/syntax/hog.vim
