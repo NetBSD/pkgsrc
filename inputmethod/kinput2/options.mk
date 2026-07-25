@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/02 22:56:54 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2026/07/25 12:57:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kinput2
 PKG_OPTIONS_NONEMPTY_SETS=	inputmethod
@@ -25,13 +25,13 @@ KINPUT2_DEFS+=	-Dport_CANNALIB="${LDFLAGS} -lcanna16"
 KINPUT2_DEFS+=	-DUseWnn
 KINPUT2_DEFS+=	-Dport_WNNINCDIR=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn
 KINPUT2_DEFS+=	-Dport_WNNLIB="${LDFLAGS} -lwnn -lcrypt"
-PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
+PLIST_SRC+=	${PKGDIR}/PLIST.freewnn
 .endif
 
 .if !empty(PKG_OPTIONS:Msj3)
 .include "../../inputmethod/sj3-client/buildlink3.mk"
 KINPUT2_DEFS+=	-DUseSj3
-KINPUT2_DEFS+=	-Dport_SJ3SRC=${BUILDLINK_PREFIX.sj3-lib}/include
+KINPUT2_DEFS+=	-Dport_SJ3SRC=${BUILDLINK_PREFIX.sj3-client}/include
 KINPUT2_DEFS+=	-Dport_SJ3LIB="${LDFLAGS} -lsj3lib"
-PLIST_SRC+=	${PKGDIR}/PLIST-sj3
+PLIST_SRC+=	${PKGDIR}/PLIST.sj3
 .endif
