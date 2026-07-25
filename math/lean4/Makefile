@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/07/25 09:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/07/25 09:57:45 wiz Exp $
 
 DISTNAME=	lean4-4.32.1
 PKGREVISION=	1
@@ -30,7 +30,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_MIMALLOC=no
 # stage0/stage1 options need to be passed explicitly
 CMAKE_CONFIGURE_ARGS+=	-DSTAGE0_CMAKE_PREFIX_PATH=${BUILDLINK_DIR}
 CMAKE_CONFIGURE_ARGS+=	-DSTAGE1_CMAKE_INSTALL_PREFIX=${PREFIX}
-# not install these binaries, they are dependencies
+# don't install these binaries, they are dependencies
 CMAKE_CONFIGURE_ARGS+=	-DSTAGE1_INSTALL_CADICAL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DSTAGE1_INSTALL_LEANTAR=OFF
 
