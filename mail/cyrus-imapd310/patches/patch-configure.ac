@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/07/25 06:11:48 mef Exp $
+
+Fix SunOS build of the libcyrus.a library.
+
+--- configure.ac.orig	2025-06-27 11:57:17.000000000 +0900
++++ configure.ac	2026-07-25 14:26:32.044348402 +0900
+@@ -2129,7 +2129,7 @@ dnl add perl cccdlflags when building li
+ dnl libraries will be compiled as PIC if perl requires PIC objects
+ dnl -- this is needed on NetBSD and Linux, but seems to cause problems on atleast Solaris --
+     case "${target_os}" in
+-        linux*|netbsd*|freebsd*|dragonfly*|openbsd*)
++        linux*|netbsd*|freebsd*|dragonfly*|openbsd*|solaris2*)
+             AC_MSG_CHECKING(for perl cccdlflags needed on "${target_os}")
+             eval `${PERL} -V:cccdlflags`
+             PERL_CCCDLFLAGS="$cccdlflags"
