@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2026/07/26 06:14:12 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2026/07/26 18:24:38 rillig Exp $
 
 DISTNAME=	otter-3.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://www.cs.unm.edu/~mccune/otter/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cs.unm.edu/~mccune/otter/
 COMMENT=	Automated Deduction System
+LICENSE=	public-domain
 
 BUILD_DIRS=	source
 BUILD_TARGET=	otter
@@ -16,18 +17,18 @@ AUTO_MKDIRS=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/otter ${DESTDIR}${PREFIX}/bin
-	cd ${WRKDIR}/${PKGNAME_NOREV} && ${INSTALL_DATA} Announce Changelog \
+	cd ${WRKSRC} && ${INSTALL_DATA} Announce Changelog		\
 		Copying README* ${DESTDIR}${PREFIX}/share/doc/otter
 	for d in auto fringe ivy kalman misc program split wos;	do	\
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/otter/$$d;\
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/examples/$$d/*	\
+	${INSTALL_DATA} ${WRKSRC}/examples/$$d/*			\
 		${DESTDIR}${PREFIX}/share/examples/otter/$$d;		\
 	done
-	cd ${WRKDIR}/${PKGNAME_NOREV}/examples && ${INSTALL_SCRIPT} Run_all \
+	cd ${WRKSRC}/examples && ${INSTALL_DATA} Run_all \
 		objects	summary ${DESTDIR}${PREFIX}/share/examples/otter
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/examples/README 	\
+	${INSTALL_DATA} ${WRKSRC}/examples/README 			\
 		${DESTDIR}${PREFIX}/share/examples/otter
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/document/* 		\
+	${INSTALL_DATA} ${WRKSRC}/document/* 				\
 		${DESTDIR}${PREFIX}/share/doc/otter
 
 .include "../../mk/bsd.pkg.mk"
