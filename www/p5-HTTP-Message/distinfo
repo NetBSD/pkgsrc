@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/06/07 11:53:50 wiz Exp $
+$NetBSD: distinfo,v 1.28 2026/07/26 17:52:28 wiz Exp $
 
-BLAKE2s (HTTP-Message-7.02.tar.gz) = 60b1b6044e57fa787942a4016f8042585c4780b9b428cb57c2a48b97c8d19bf6
-SHA512 (HTTP-Message-7.02.tar.gz) = 49b474fb3f12d2a979bf1adcb14bd772ee2c947fca950541c2e12091393870cda67ba3ff9a784314987c642511380b19e8991680e7aca05e5ec77fc2e4225671
-Size (HTTP-Message-7.02.tar.gz) = 95857 bytes
+BLAKE2s (HTTP-Message-7.04.tar.gz) = 9924211ce76edceb243115dcc31091483a996ef8d74093503300fe344a88ff05
+SHA512 (HTTP-Message-7.04.tar.gz) = 36e0f2a3819bcba799fa3cd424266c5667af943adf6e3dae2bff0f6cdb3b63a9bda47ac627e1fe3f4da2adb8f9f090dd0a1c810ceb340e842221a07d18159f14
+Size (HTTP-Message-7.04.tar.gz) = 96779 bytes
