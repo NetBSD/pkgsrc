@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/07/16 19:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/26 03:09:35 mef Exp $
 
 DISTNAME=	cyrus-imapd-3.2.12
 PKGREVISION=	1
@@ -94,7 +94,7 @@ PERL5_PACKLIST= \
 	auto/Cyrus/IMAP/.packlist			\
 	auto/Cyrus/SIEVE/managesieve/.packlist
 
-post-extract:
+post-patch:
 #	set -e; cd ${WRKSRC} && automake -acf
 	set -e; cd ${WRKSRC} && autoreconf -fi
 
