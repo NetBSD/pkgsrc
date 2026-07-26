@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4767 2026/07/26 14:19:49 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4768 2026/07/26 14:21:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7089,3 +7089,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-rex-socket to 0.1.71 [taca 2026-07-26]
 	Updated security/ruby-sshkit to 1.25.1 [taca 2026-07-26]
 	Updated www/ruby-aws-partitions to 1.1273.0 [taca 2026-07-26]
+	Updated www/ruby-aws-sdk-s3 to 1.228.1 [taca 2026-07-26]
