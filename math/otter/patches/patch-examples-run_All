@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 18:19:21 jtb Exp $
+$NetBSD: patch-examples-run_All,v 1.1 2026/07/26 06:14:13 rillig Exp $
 
---- ../examples/Run_all.orig	Tue Oct 10 12:00:04 2000
-+++ ../examples/Run_all
+Adjust path of executable file, assuming it is in the PATH.
+
+--- examples/Run_all.orig	Tue Oct 10 12:00:04 2000
++++ examples/Run_all
 @@ -1,4 +1,4 @@
 -#
 +#!/bin/csh
