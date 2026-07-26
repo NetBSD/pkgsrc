@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4773 2026/07/26 17:54:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4774 2026/07/26 19:32:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7095,3 +7095,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-HTTP-Cookies to 6.12 [wiz 2026-07-26]
 	Updated www/p5-HTTP-Message to 7.04 [wiz 2026-07-26]
 	Updated devel/p5-Module-Pluggable to 6.4 [wiz 2026-07-26]
+	Updated shells/oh-my-posh to 29.36.0 [pin 2026-07-26]
