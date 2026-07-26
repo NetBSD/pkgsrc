@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4771 2026/07/26 17:52:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4772 2026/07/26 17:52:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7093,3 +7093,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-cgi to 0.5.2 [taca 2026-07-26]
 	Updated www/ruby-sass-embedded to 1.102.0 [taca 2026-07-26]
 	Updated www/p5-HTTP-Cookies to 6.12 [wiz 2026-07-26]
+	Updated www/p5-HTTP-Message to 7.04 [wiz 2026-07-26]
