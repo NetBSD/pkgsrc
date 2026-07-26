@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2026/07/18 15:02:24 thorpej Exp $
+# $NetBSD: Makefile,v 1.17 2026/07/26 20:51:14 thorpej Exp $
 #
 
-NABUD_VERS=	1.4.2
+NABUD_VERS=	1.4.3
 
 GITHUB_PROJECT=	nabud
 GITHUB_TAG=	v${NABUD_VERS}
@@ -19,6 +19,9 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
 NABUD_USER?=	nabu
 NABUD_GROUP?=	nabu
 
@@ -27,8 +30,6 @@ PKG_GROUPS=		${NABUD_GROUP}
 PKG_GECOS.${NABUD_USER}=NABU user
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-.include "../../mk/bsd.prefs.mk"
 
 #
 # nabud uses CommonCrypto and SecureTransport on Darwin.  It relies
