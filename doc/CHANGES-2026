@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4764 2026/07/26 14:04:13 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4765 2026/07/26 14:07:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7086,3 +7086,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-async to 2.43.0 [taca 2026-07-26]
 	Updated devel/ruby-tins to 1.56.0 [taca 2026-07-26]
 	Updated net/ruby-net-ping to 2.0.9 [taca 2026-07-26]
+	Updated security/ruby-rex-socket to 0.1.71 [taca 2026-07-26]
