@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27637 2026/07/26 06:18:38 wiz Exp $
+$NetBSD: TODO,v 1.27638 2026/07/26 18:01:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -526,6 +526,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o clusterssh-4.16
 	o colortail-0.3.3
 	o commit-patch-2.6
+	o compiledb-go-1.6.2
 	o compiz-0.9.14.2
 	o cone-0.92
 	o conserver8-8.2.6
@@ -798,6 +799,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jdom-2.0.6
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.10.9
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -812,6 +814,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o kdiff3-1.12.6
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -828,6 +831,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lbdb-49
 	o lcc-4.2
 	o ldapsdk-6.0.7
+	o lerc-4.2.0
 	o lgeneral-1.3.1
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
@@ -843,7 +847,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
-	o libical4-4.0.3
+	o libical4-4.0.4
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -869,7 +873,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
 	o lighttpd-1.4.85
-	o lima-2.1.4
+	o lima-2.2.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
@@ -960,6 +964,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nethack-5.0
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp3-1.18.0
 	o nginx-devel-1.29.7
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
@@ -979,6 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-cppo-1.6.9
 	o ocaml-cudf-0.10
 	o ocaml-dune-3.24.0 [breaks coq-8]
+	o ocaml-dune-3.24.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1126,14 +1132,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-annotated-types-0.8.0
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-confuse-2.2.1
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-filelock-3.32.0
+	o py-google-api-core-2.33.0
+	o py-google-auth-2.56.2
+	o py-grpcio-1.83.0
+	o py-h2-4.4.0
 	o py-hgview-1.9.0
+	o py-httpcore2-2.9.1
+	o py-httpx2-2.9.1
+	o py-icalendar-7.2.2
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
@@ -1149,6 +1165,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
 	o py-uliweb-0.6
+	o py-urwid-4.0.8
+	o py-uv-build-0.11.32
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1182,6 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-4.1.3
 	o rsyslog-8.2606.0
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
