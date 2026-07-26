@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2026/07/16 19:02:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.43 2026/07/26 17:54:12 wiz Exp $
 
-EXTRACT_USING=	gtar	# XXX avoid extended attributes in distfile
-			# https://rt.cpan.org/Ticket/Display.html?id=156825
-
-DISTNAME=	Module-Pluggable-6.3
+DISTNAME=	Module-Pluggable-6.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SI/SIMONW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Module-Pluggable
