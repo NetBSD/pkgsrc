@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4762 2026/07/26 13:59:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4763 2026/07/26 14:02:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7084,3 +7084,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.0854 [morr 2026-07-25]
 	Downgraded devel/ocaml-dune to 3.23.1 [wiz 2026-07-25]
 	Updated devel/ruby-async to 2.43.0 [taca 2026-07-26]
+	Updated devel/ruby-tins to 1.56.0 [taca 2026-07-26]
