@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.123 2025/05/01 12:56:45 wiz Exp $
+# $NetBSD: license.mk,v 1.124 2026/07/26 06:20:42 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -288,12 +288,12 @@ PKG_FAIL_REASON+= \
 .endif
 
 # guess-license:
-#	Extracts the current package and tries to guess its license.
+#	Extracts the current package and guess its license.
 #	This is useful for package developers.
 #
 # Keywords: license
 guess-license: .PHONY
-	@# Running "make extract" would fetch and build the dependencies
+	# Running "make extract" would fetch and build the dependencies
 	${RUN} [ -d ${WRKSRC} ] \
 	|| ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} makedirs fetch pre-extract do-extract
 
