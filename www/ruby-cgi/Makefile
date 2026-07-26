@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/01/18 14:55:55 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/26 14:23:43 taca Exp $
 
-DISTNAME=	cgi-0.5.1
+DISTNAME=	cgi-0.5.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
