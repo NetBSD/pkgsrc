@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.124 2026/07/26 06:20:42 rillig Exp $
+# $NetBSD: license.mk,v 1.125 2026/07/26 06:22:25 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -288,7 +288,7 @@ PKG_FAIL_REASON+= \
 .endif
 
 # guess-license:
-#	Extracts the current package and guess its license.
+#	Extracts the current package and guesses its license.
 #	This is useful for package developers.
 #
 # Keywords: license
