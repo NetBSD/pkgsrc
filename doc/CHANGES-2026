@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4780 2026/07/27 13:33:08 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4781 2026/07/27 14:02:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7102,3 +7102,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/groff to 1.24.1nb3 [wiz 2026-07-27]
 	Updated security/vaultwarden to 1.37.0 [hauke 2026-07-27]
 	Updated geography/py-gnssutils to 1.2.6 [gdt 2026-07-27]
+	Updated devel/ast-grep to 0.45.0 [wiz 2026-07-27]
