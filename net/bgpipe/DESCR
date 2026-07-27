@@ -1,0 +1,19 @@
+bgpipe: BGP pipeline processor
+
+Open-source tool that processes BGP messages through
+a pipeline of composable stages.
+
+What is bgpipe?
+
+bgpipe sits between routers as a transparent proxy, auditing,
+filtering, and transforming BGP sessions on the fly.
+Think of it as a scriptable BGP firewall and traffic processor.
+
+Use cases:
+- BGP firewall with RPKI validation, prefix limits, and rate limiting
+- Bidirectional BGP to JSON translation including Flowspec - pipe through
+  jq, Python, anything
+- MRT file processing and conversion at scale, incl. RIB snapshots (table dumps)
+- Scriptable pipeline - chain stages or pipe through external programs
+- Live BGP monitoring from RIPE RIS Live or RouteViews with real-time filters
+- Secure transport - add TCP-MD5 to sessions, proxy over encrypted WebSockets
