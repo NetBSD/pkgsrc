@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.8 2026/07/27 13:57:10 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.9 2026/07/27 23:13:19 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -153,3 +153,6 @@ lang/gcc10: Bug fix
 
 Pullup ticket #7196 - requested by morr
 editors/vim-share: Security fix
+
+Pullup ticket #7197 - requested by leot
+x11/slock: Bug fix
