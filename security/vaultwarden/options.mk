@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.12 2026/06/03 09:26:37 adam Exp $
+# $NetBSD: options.mk,v 1.13 2026/07/27 13:32:04 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vaultwarden
 PKG_SUPPORTED_OPTIONS=		s3 web-vault
 PKG_OPTIONS_REQUIRED_GROUPS=	database
-PKG_OPTIONS_GROUP.database=	sqlite pgsql mysql
+PKG_OPTIONS_GROUP.database=	sqlite pgsql mysql s3
 PKG_SUGGESTED_OPTIONS=		sqlite web-vault
 
 .include "../../mk/bsd.options.mk"
