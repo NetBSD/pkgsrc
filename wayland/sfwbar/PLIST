@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/14 12:53:47 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/07/27 09:08:38 kikadf Exp $
 bin/sfwbar
 lib/sfwbar/appmenu.so
 lib/sfwbar/bluez.so
@@ -164,6 +164,7 @@ share/sfwbar/mpd-module.widget
 share/sfwbar/mpd.source
 share/sfwbar/mpd.widget
 share/sfwbar/ncenter.widget
+share/sfwbar/netbsd.config
 share/sfwbar/network.widget
 share/sfwbar/oneline.config
 share/sfwbar/privacy.widget
