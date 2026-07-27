@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/05/14 16:41:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2026/07/27 18:50:28 wiz Exp $
 
 PKGREVISION= 1
 .include "../../print/cups/Makefile.common"
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--enable-libpaper
-CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
 CONFIGURE_ARGS+=	--with-tls=gnutls
