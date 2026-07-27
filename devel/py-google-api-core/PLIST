@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/10/30 13:14:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/07/27 14:55:17 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -71,6 +71,9 @@ ${PYSITELIB}/google/api_core/gapic_v1/method.pyo
 ${PYSITELIB}/google/api_core/gapic_v1/method_async.py
 ${PYSITELIB}/google/api_core/gapic_v1/method_async.pyc
 ${PYSITELIB}/google/api_core/gapic_v1/method_async.pyo
+${PYSITELIB}/google/api_core/gapic_v1/requests.py
+${PYSITELIB}/google/api_core/gapic_v1/requests.pyc
+${PYSITELIB}/google/api_core/gapic_v1/requests.pyo
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.py
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.pyc
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.pyo
