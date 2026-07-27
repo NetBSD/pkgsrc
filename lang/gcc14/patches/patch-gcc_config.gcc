@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config.gcc,v 1.4 2026/07/20 08:02:51 he Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.5 2026/07/27 08:40:18 tnn Exp $
 
 Pull over change between gcc 14.3.0 and what's in-tree in -current.
 
@@ -47,7 +47,7 @@ other platforms.
 +aarch64*-*-darwin2*)
 +  # This applies to arm64 Darwin variadic funtions.
 +  tm_defines="$tm_defines STACK_USE_CUMULATIVE_ARGS_INIT=1"
-+  # Executable stack is forbidden.
++  # Executable stack is forbidden.
 +  tm_defines="$tm_defines HEAP_TRAMPOLINES_INIT=1"
 +  ;;
  *-*-darwin2*)
