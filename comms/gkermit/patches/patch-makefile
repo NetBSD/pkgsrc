@@ -1,0 +1,28 @@
+$NetBSD: patch-makefile,v 1.1 2026/07/27 12:15:59 mef Exp $
+
+Fix following issue
+  => Checking for PIE in gkermit-2.01
+  => Checking for RELRO in gkermit-2.01
+  ERROR: bin/gkermit: missing RELRO
+  *** Error code 1
+
+--- makefile.orig	1999-12-27 05:28:38.000000000 +0900
++++ makefile	2026-07-27 21:08:08.898454013 +0900
+@@ -67,7 +67,7 @@ gkermit:	gproto.o gkermit.o gunixio.o gcmdline.o
+ gcmdline.o:	gcmdline.c gkermit.h
+ 
+ gkermit:	gproto.o gkermit.o gunixio.o gcmdline.o
+-		$(CC) -o gkermit $(OBJECTS)
++		$(CC) $(LDFLAGS) -o gkermit $(OBJECTS)
+ 
+ bsd:		gwart
+ 		$(MAKE) "CC=$(CC)" "CFLAGS=-DBSD -O $(KFLAGS)" gkermit
+@@ -91,7 +91,7 @@ bsd211:		gwart
+ 		cc -DBSD $(KFLAGS) -c gproto.c
+ 		cc -DBSD $(KFLAGS) -c gcmdline.c
+ 		cc -DBSD $(KFLAGS) -c gunixio.c
+-		cc -o gkermit $(OBJECTS)
++		cc $(LDFLAGS) -o gkermit $(OBJECTS)
+ 
+ clean:
+ 		rm -f $(OBJECTS) gproto.o gproto.c gwart.o gwart

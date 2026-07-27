@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2022/01/01 18:53:02 rhialto Exp $
+$NetBSD: distinfo,v 1.11 2026/07/27 12:15:58 mef Exp $
 
 BLAKE2s (gku201.tar.gz) = 9013ac67c575d3d3cdc16051f9db95a2b89bf1fd4ab07ee065430b0ec6831f62
 SHA512 (gku201.tar.gz) = df44f55fc1444518599f0d06b1473c35d80bbc8e26c8f1d9bf57fc958b9601b270a29ebcc33b0c5e080e23461afcc6689b94694254cd8c460d1fb2c8a37711cf
 Size (gku201.tar.gz) = 62877 bytes
+SHA1 (patch-makefile) = 53f9d66be251124954f2d1324d21d14c1571f5e2
