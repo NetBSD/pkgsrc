@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/02/01 17:55:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/07/27 14:46:24 wiz Exp $
 
-BLAKE2s (confuse-2.2.0.tar.gz) = 29b5126a754e3c95551a60a63c7672ffa6fc44c3e131d7937727bac7ff96e74f
-SHA512 (confuse-2.2.0.tar.gz) = 1602d37ad38f6afb05919faec5db1fd80a7df56d90f7630060d81e023f32472c1876d4c883799f0326d0700ab93a03884b2642a803990d8b25f2fcd6a392b63b
-Size (confuse-2.2.0.tar.gz) = 52496 bytes
+BLAKE2s (confuse-2.2.1.tar.gz) = 4f4460cf29c58051c50f51effd0efdb7fc065d53cb4811f29267193c566a054d
+SHA512 (confuse-2.2.1.tar.gz) = 87de310a373c1615ded76a16a584c1967f71e430789b6cb5bf6a1b97f97eac1c1cf0b9f83a25874314866d3764e2e98c1078448f1f2d19fbdd3cfb66d140070b
+Size (confuse-2.2.1.tar.gz) = 52837 bytes
