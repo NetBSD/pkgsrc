@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4782 2026/07/27 14:04:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4783 2026/07/27 14:32:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7104,3 +7104,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-gnssutils to 1.2.6 [gdt 2026-07-27]
 	Updated devel/ast-grep to 0.45.0 [wiz 2026-07-27]
 	Updated devel/compiledb-go to 1.6.2 [wiz 2026-07-27]
+	Updated devel/jjui to 0.10.9 [wiz 2026-07-27]
