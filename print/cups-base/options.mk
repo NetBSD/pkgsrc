@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2022/11/16 16:24:36 hauke Exp $
+# $NetBSD: options.mk,v 1.9 2026/07/27 18:50:17 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cups-base
-PKG_SUPPORTED_OPTIONS=		acl kerberos pam tcpwrappers
-PKG_SUGGESTED_OPTIONS=		dnssd kerberos
+PKG_SUPPORTED_OPTIONS=		acl kerberos pam tcpwrappers debug
+PKG_SUGGESTED_OPTIONS=		debug dnssd kerberos
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	mdns
 PKG_OPTIONS_GROUP.mdns=		dnssd
@@ -98,4 +98,8 @@ MESSAGE_SRC+=		${.CURDIR}/MESSAGE
 CONFIGURE_ARGS+=	--enable-tcp-wrappers
 .else
 CONFIGURE_ARGS+=	--disable-tcp-wrappers
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug-printfs
 .endif
