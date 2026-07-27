@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4797 2026/07/27 15:17:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4798 2026/07/27 15:21:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7119,3 +7119,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.16.0 [wiz 2026-07-27]
 	Updated devel/py-urwid to 4.0.8 [wiz 2026-07-27]
 	Updated www/py-httpx2 to 2.9.1 [wiz 2026-07-27]
+	Updated textproc/rumdl to 0.2.43 [wiz 2026-07-27]
