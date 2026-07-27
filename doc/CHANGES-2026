@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4778 2026/07/27 11:07:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4779 2026/07/27 13:32:21 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7100,3 +7100,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/wvkbd to 0.20 [kikadf 2026-07-27]
 	Updated www/resterm to 0.48.1 [drixter 2026-07-27]
 	Updated textproc/groff to 1.24.1nb3 [wiz 2026-07-27]
+	Updated security/vaultwarden to 1.37.0 [hauke 2026-07-27]
