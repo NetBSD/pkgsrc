@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4779 2026/07/27 13:32:21 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.4780 2026/07/27 13:33:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7101,3 +7101,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.48.1 [drixter 2026-07-27]
 	Updated textproc/groff to 1.24.1nb3 [wiz 2026-07-27]
 	Updated security/vaultwarden to 1.37.0 [hauke 2026-07-27]
+	Updated geography/py-gnssutils to 1.2.6 [gdt 2026-07-27]
