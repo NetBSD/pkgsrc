@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/06/28 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/07/27 14:46:24 wiz Exp $
 
-DISTNAME=	confuse-2.2.0
+DISTNAME=	confuse-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/confuse/}
