@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/12/18 09:15:10 nia Exp $
+# $NetBSD: Makefile,v 1.15 2026/07/27 22:07:21 leot Exp $
 
-DISTNAME=		slock-1.6
+DISTNAME=		slock-1.7
 CATEGORIES=		x11
 MASTER_SITES=		https://dl.suckless.org/tools/
 
