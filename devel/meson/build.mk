@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.33 2026/05/14 08:16:05 wiz Exp $
+# $NetBSD: build.mk,v 1.34 2026/07/27 12:27:28 wiz Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -33,6 +33,19 @@ MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
 
 MESON_NATIVE_FILE=	${WRKDIR}/.meson_native
 MESON_NATIVE_ARGS+=	--native-file ${MESON_NATIVE_FILE:Q}
+
+# pass CFLAGS/LDFLAGS/CXXFLAGS the recommended way
+# https://mesonbuild.com/Reference-tables.html#language-arguments-parameter-names
+.for lang in ${USE_LANGUAGES}
+.if ${lang} == "c"
+MESON_ARGS+=		-Dc_args=${CFLAGS:Q}\ ${CPPFLAGS:Q}
+MESON_ARGS+=		-Dc_link_args=${LDFLAGS:Q}
+.elif ${lang} == "c++"
+MESON_ARGS+=		-Dcpp_args=${CXXFLAGS:Q}\ ${CPPFLAGS:Q}
+MESON_ARGS+=		-Dcpp_link_args=${LDFLAGS:Q}
+.endif
+.endfor
+
 meson-configure: ${MESON_NATIVE_FILE}
 ${MESON_NATIVE_FILE}:
 	@${STEP_MSG} Creating meson native file
