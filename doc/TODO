@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27644 2026/07/27 14:42:35 wiz Exp $
+$NetBSD: TODO,v 1.27645 2026/07/27 14:43:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nethack-5.0
 	o netramet-50
 	o newmail-1.0.2
-	o nghttp3-1.18.0
 	o nginx-devel-1.29.7
 	o nicotine-plus-3.3.10
 	o nim-2.2.6
