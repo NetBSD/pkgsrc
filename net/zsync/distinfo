@@ -1,5 +1,15 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:07:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/07/27 15:38:30 ryoon Exp $
 
 BLAKE2s (zsync-0.6.2.tar.bz2) = d5dfb49daf3b0320c9abff810f81b8c4c21e9cb63f878e3bd02bcbba89defb82
 SHA512 (zsync-0.6.2.tar.bz2) = 56437594831f2320c532759805b5c51116c53c8848f14b54cfd9b76676d1d061abe7fc914264f496ed1c7922fbbd5b884166c855a2fb9eb1285f216e478c5f0d
 Size (zsync-0.6.2.tar.bz2) = 245592 bytes
+SHA1 (patch-client.c) = 948ece2c70234f754bc9e56c8432101a2c4f35eb
+SHA1 (patch-http.c) = 289756cddec3b868019d414b5ad86cd02c225f61
+SHA1 (patch-http.h) = 82994f73b0dbe648cb4c430b57535d8ab5578a75
+SHA1 (patch-libzsync_sha1.c) = 50114434d694733c3a94da18038d1de275b5e771
+SHA1 (patch-libzsync_zsync.c) = fd4f4ccdead3b2d82c9c7bc3e114576cfdf61f72
+SHA1 (patch-libzsync_zsync.h) = 1058dd6b2dd80c22672a7f26f2153030c89518c1
+SHA1 (patch-make.c) = 06d44161c2f3f522078c3795fdb49708a5e6dc18
+SHA1 (patch-url.c) = ecace30a5e022eec933cedd2b5600551da289abf
+SHA1 (patch-url.h) = 5f46c1b285c520b854692e99ded7825e50780bf5
+SHA1 (patch-zlib_inflate.c) = 87c5e066f6ac49d373734d03c0d07e084ea9a9ef

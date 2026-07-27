@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2013/10/29 10:54:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/27 15:38:30 ryoon Exp $
 
 DISTNAME=	zsync-0.6.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://zsync.moria.org.uk/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://zsync.moria.org.uk/index
+HOMEPAGE=	https://zsync.moria.org.uk/
 COMMENT=	Optimising file distribution program, a 1-to-many rsync
 LICENSE=	artistic-2.0
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
+FORCE_C_STD=	c99
+
+# for strcasecmp(3)
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 .include "../../mk/bsd.pkg.mk"
