@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/06/28 14:14:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/07/27 15:06:49 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -68,6 +68,9 @@ ${PYSITELIB}/icalendar/cli.pyo
 ${PYSITELIB}/icalendar/compatibility.py
 ${PYSITELIB}/icalendar/compatibility.pyc
 ${PYSITELIB}/icalendar/compatibility.pyo
+${PYSITELIB}/icalendar/config.py
+${PYSITELIB}/icalendar/config.pyc
+${PYSITELIB}/icalendar/config.pyo
 ${PYSITELIB}/icalendar/enums.py
 ${PYSITELIB}/icalendar/enums.pyc
 ${PYSITELIB}/icalendar/enums.pyo
@@ -591,6 +594,9 @@ ${PYSITELIB}/icalendar/tests/test_free_busy_duration.pyo
 ${PYSITELIB}/icalendar/tests/test_funding_json.py
 ${PYSITELIB}/icalendar/tests/test_funding_json.pyc
 ${PYSITELIB}/icalendar/tests/test_funding_json.pyo
+${PYSITELIB}/icalendar/tests/test_ghsa_qjcq_q7h7_r74v_repeat_dos.py
+${PYSITELIB}/icalendar/tests/test_ghsa_qjcq_q7h7_r74v_repeat_dos.pyc
+${PYSITELIB}/icalendar/tests/test_ghsa_qjcq_q7h7_r74v_repeat_dos.pyo
 ${PYSITELIB}/icalendar/tests/test_icalendar.py
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyc
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyo
