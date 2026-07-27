@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4784 2026/07/27 14:41:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4785 2026/07/27 14:42:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7106,3 +7106,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/compiledb-go to 1.6.2 [wiz 2026-07-27]
 	Updated devel/jjui to 0.10.9 [wiz 2026-07-27]
 	Updated devel/kdiff3 to 1.12.6 [wiz 2026-07-27]
+	Updated graphics/lerc to 4.2.0 [wiz 2026-07-27]
