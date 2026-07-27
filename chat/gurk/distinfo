@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/07/27 15:57:39 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/07/27 16:07:54 wiz Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1965,4 +1965,4 @@ Size (zvariant_utils-3.5.0.crate) = 16990 bytes
 SHA1 (patch-.._libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f_Cargo.toml) = 0bd86cb4700804690b524ab6ca75d35832f95e85
 SHA1 (patch-.._libsignal-service-rs-f449930178bcf7c8b193329e00343e0b71cde0ab_Cargo.toml) = 32b6b5c29445b407ff30202c091c72e3a71f7dc2
 SHA1 (patch-.._presage-9e1f0b8d4d96b4aa9bdf6055b8a18c27083e2975_presage_Cargo.toml) = c1d48939cd3be2de075db5e6ef28afacef3a90f4
-SHA1 (patch-Cargo.toml) = 90969602b72fe31b327a889ef69cad3c3fabd9e6
+SHA1 (patch-Cargo.toml) = 9109c98cd9303d0908b3eaf1b50658703f5dd570
