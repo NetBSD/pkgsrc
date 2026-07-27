@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4777 2026/07/27 10:05:06 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4778 2026/07/27 11:07:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7099,3 +7099,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/nabud to 1.4.3 [thorpej 2026-07-26]
 	Updated wayland/wvkbd to 0.20 [kikadf 2026-07-27]
 	Updated www/resterm to 0.48.1 [drixter 2026-07-27]
+	Updated textproc/groff to 1.24.1nb3 [wiz 2026-07-27]
