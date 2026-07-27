@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4776 2026/07/27 08:42:08 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4777 2026/07/27 10:05:06 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7098,3 +7098,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.36.0 [pin 2026-07-26]
 	Updated sysutils/nabud to 1.4.3 [thorpej 2026-07-26]
 	Updated wayland/wvkbd to 0.20 [kikadf 2026-07-27]
+	Updated www/resterm to 0.48.1 [drixter 2026-07-27]
