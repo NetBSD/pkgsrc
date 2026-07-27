@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4790 2026/07/27 14:55:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4791 2026/07/27 14:58:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7112,3 +7112,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-confuse to 2.2.1 [wiz 2026-07-27]
 	Updated devel/py-filelock to 3.32.0 [wiz 2026-07-27]
 	Updated devel/py-google-api-core to 2.33.0 [wiz 2026-07-27]
+	Updated security/py-google-auth to 2.56.2 [wiz 2026-07-27]
