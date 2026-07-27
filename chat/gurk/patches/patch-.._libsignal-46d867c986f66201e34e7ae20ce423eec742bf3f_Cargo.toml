@@ -1,9 +1,9 @@
-$NetBSD: patch-.._libsignal-8418be45dba3ebc17127b5c6b76ce02886350524_Cargo.toml,v 1.1 2026/04/30 08:36:58 wiz Exp $
+$NetBSD: patch-.._libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f_Cargo.toml,v 1.1 2026/07/27 15:57:40 wiz Exp $
 
 Use pkgsrc distfile instead of fetch during build.
 
---- ../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/Cargo.toml.orig	2026-04-01 19:00:16.000000000 +0000
-+++ ../libsignal-8418be45dba3ebc17127b5c6b76ce02886350524/Cargo.toml
+--- ../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/Cargo.toml.orig	2026-04-01 19:00:16.000000000 +0000
++++ ../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/Cargo.toml
 @@ -87,8 +87,8 @@ boring-signal = { git = "https://github.com/signalapp/
  # that want to use the real things can depend on those directly.
  

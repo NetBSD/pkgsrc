@@ -1,0 +1,15 @@
+$NetBSD: patch-.._presage-9e1f0b8d4d96b4aa9bdf6055b8a18c27083e2975_presage_Cargo.toml,v 1.1 2026/07/27 15:57:40 wiz Exp $
+
+Use pkgsrc distfile instead of fetch during build.
+
+--- ../presage-9e1f0b8d4d96b4aa9bdf6055b8a18c27083e2975/presage/Cargo.toml.orig	2026-07-22 08:17:38.000000000 +0000
++++ ../presage-9e1f0b8d4d96b4aa9bdf6055b8a18c27083e2975/presage/Cargo.toml
+@@ -12,7 +12,7 @@ cdsi = ["libsignal-service/cdsi"]
+ cdsi = ["libsignal-service/cdsi"]
+ 
+ [dependencies]
+-libsignal-service = { git = "https://github.com/whisperfish/libsignal-service-rs", rev = "f449930178bcf7c8b193329e00343e0b71cde0ab", default-features = false, features = [
++libsignal-service = { path = "../../libsignal-service-rs-f449930178bcf7c8b193329e00343e0b71cde0ab", default-features = false, features = [
+     "phonenumber",
+ ] }
+ 

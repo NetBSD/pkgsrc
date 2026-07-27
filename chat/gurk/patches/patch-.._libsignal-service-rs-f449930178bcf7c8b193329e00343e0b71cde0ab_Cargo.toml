@@ -1,0 +1,29 @@
+$NetBSD: patch-.._libsignal-service-rs-f449930178bcf7c8b193329e00343e0b71cde0ab_Cargo.toml,v 1.1 2026/07/27 15:57:40 wiz Exp $
+
+Adapt for pkgsrc fetching.
+
+--- ../libsignal-service-rs-f449930178bcf7c8b193329e00343e0b71cde0ab/Cargo.toml.orig	2026-07-09 05:09:27.000000000 +0000
++++ ../libsignal-service-rs-f449930178bcf7c8b193329e00343e0b71cde0ab/Cargo.toml
+@@ -10,14 +10,14 @@ readme = "README.md"
+ readme = "README.md"
+ 
+ [dependencies]
+-libsignal-protocol = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
+-libsignal-core = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
+-libsignal-account-keys = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
+-libsignal-net = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4", optional = true }
+-libsignal-net-infra = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4", optional = true }
+-signal-crypto = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
+-zkgroup = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
+-usernames = { git = "https://github.com/signalapp/libsignal", tag = "v0.94.4" }
++libsignal-protocol = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/protocol" }
++libsignal-core = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/core" }
++libsignal-account-keys = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/account-keys" }
++libsignal-net = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/net", optional = true }
++libsignal-net-infra = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/net/infra", optional = true }
++signal-crypto = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/crypto" }
++zkgroup = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/zkgroup" }
++usernames = { path = "../libsignal-46d867c986f66201e34e7ae20ce423eec742bf3f/rust/usernames" }
+ 
+ aes = "0.8"
+ aes-gcm = "0.10"
