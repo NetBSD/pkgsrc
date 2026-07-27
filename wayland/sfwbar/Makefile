@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/11 07:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/07/27 09:08:38 kikadf Exp $
 
 DISTNAME=	sfwbar-1.0_beta17
 PKGREVISION=	1
@@ -31,7 +31,7 @@ MESON_ARGS+=	-Ddbus=enabled
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/sfwbar/memory.source.orig
-
+	${INSTALL_DATA} ${FILESDIR}/netbsd.config ${DESTDIR}${PREFIX}/share/sfwbar
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
