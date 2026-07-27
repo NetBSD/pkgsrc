@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/27 14:45:01 wiz Exp $
 
-DISTNAME=	annotated_types-0.7.0
+DISTNAME=	annotated_types-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/annotated-types/}
