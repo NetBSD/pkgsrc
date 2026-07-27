@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.19 2026/07/26 17:49:46 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2026/07/27 11:07:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	groff-docs uchardet x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	groff-docs x11
 
 .include "../../mk/bsd.options.mk"
 
