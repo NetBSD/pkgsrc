@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2026/07/27 18:50:17 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2026/07/27 18:53:32 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cups-base
 PKG_SUPPORTED_OPTIONS=		acl kerberos pam tcpwrappers debug
-PKG_SUGGESTED_OPTIONS=		debug dnssd kerberos
+PKG_SUGGESTED_OPTIONS=		dnssd kerberos
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	mdns
 PKG_OPTIONS_GROUP.mdns=		dnssd
