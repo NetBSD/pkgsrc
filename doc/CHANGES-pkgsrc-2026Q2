@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.7 2026/07/22 15:15:48 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.8 2026/07/27 13:57:10 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -144,3 +144,12 @@ www/firefox140: Security fix
 
 Pullup ticket #7191 - requested by khorben
 net/libslirp: Security fix
+
+Pullup ticket #7192 - requested by he
+lang/gcc12: Bug fix
+
+Pullup ticket #7193 - requested by he
+lang/gcc10: Bug fix
+
+Pullup ticket #7196 - requested by morr
+editors/vim-share: Security fix
