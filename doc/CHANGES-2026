@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4804 2026/07/27 20:00:26 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4805 2026/07/27 22:07:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7126,3 +7126,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/cups-filters to 2.0.1nb9 [wiz 2026-07-27]
 	Updated print/libppd to 2.1.1nb7 [wiz 2026-07-27]
 	Added net/bgpipe version 0.22.0 [drixter 2026-07-27]
+	Updated x11/slock to 1.7 [leot 2026-07-27]
