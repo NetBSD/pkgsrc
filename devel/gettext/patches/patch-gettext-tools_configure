@@ -1,4 +1,6 @@
-$NetBSD: patch-gettext-tools_configure,v 1.1 2026/07/21 12:55:54 adam Exp $
+$NetBSD: patch-gettext-tools_configure,v 1.2 2026/07/28 16:21:26 jperkin Exp $
+
+Do not use bundled libintl.
 
 --- gettext-tools/configure.orig	2026-01-28 23:37:49.000000000 +0000
 +++ gettext-tools/configure

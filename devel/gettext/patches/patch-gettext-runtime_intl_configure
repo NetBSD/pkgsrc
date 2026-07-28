@@ -1,0 +1,20 @@
+$NetBSD: patch-gettext-runtime_intl_configure,v 1.1 2026/07/28 16:21:26 jperkin Exp $
+
+Do not use bundled libintl.
+
+--- gettext-runtime/intl/configure.orig	2026-07-28 15:53:45.712657369 +0000
++++ gettext-runtime/intl/configure
+@@ -20138,13 +20138,6 @@ printf "%s\n" "$ac_res" >&6; }
+       fi
+ 
+ 
+-      if test "$gt_cv_use_gnu_libintl" = "yes" \
+-         || case "$host_os" in cygwin*) true;; *) false;; esac; then
+-                                USE_INCLUDED_LIBINTL=yes
+-        LIBINTL="\${top_builddir}/intl/libintl.la $LIBICONV $LIBTHREAD"
+-        LTLIBINTL="\${top_builddir}/intl/libintl.la $LTLIBICONV $LTLIBTHREAD"
+-        LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
+-      fi
+ 
+       CATOBJEXT=
+       if test "$gt_use_preinstalled_gnugettext" = "yes" \

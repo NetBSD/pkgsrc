@@ -1,4 +1,6 @@
-$NetBSD: patch-gettext-runtime_configure,v 1.1 2026/07/21 12:55:53 adam Exp $
+$NetBSD: patch-gettext-runtime_configure,v 1.2 2026/07/28 16:21:26 jperkin Exp $
+
+Do not use bundled libintl.
 
 --- gettext-runtime/configure.orig	2026-01-28 23:39:29.000000000 +0000
 +++ gettext-runtime/configure
