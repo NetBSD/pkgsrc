@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/07/27 09:08:38 kikadf Exp $
+# $NetBSD: Makefile,v 1.4 2026/07/28 05:33:12 kikadf Exp $
 
 DISTNAME=	sfwbar-1.0_beta17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LBCrion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
