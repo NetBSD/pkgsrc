@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2026/07/21 15:47:06 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2026/07/28 05:40:24 wiz Exp $
 
 DISTNAME=	geeqie-2.9
 CATEGORIES=	graphics
@@ -22,7 +22,6 @@ MESON_ARGS+=	-Dpandoc=disabled
 # Do not build html documentation.
 # \todo Consider depending on yelp instead
 MESON_ARGS+=	-Dyelp-build=disabled
-MESON_ARGS+=	-Dcpp_link_args=${LDFLAGS:Q}
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
