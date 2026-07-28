@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4813 2026/07/28 21:06:27 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4814 2026/07/28 21:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7135,3 +7135,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/anubis to 1.26.2 [ryoon 2026-07-28]
 	Updated math/suitesparse to 7.12.3 [ktnb 2026-07-28]
 	Updated chat/matrix-synapse to 1.157.2 [gdt 2026-07-28]
+	Updated net/xymonclient to 4.3.30nb2 [wiz 2026-07-28]
