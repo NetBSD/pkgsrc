@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4806 2026/07/28 05:33:39 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4807 2026/07/28 07:24:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7128,3 +7128,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/bgpipe version 0.22.0 [drixter 2026-07-27]
 	Updated x11/slock to 1.7 [leot 2026-07-27]
 	Updated wayland/sfwbar to 1.0_beta17nb2 [kikadf 2026-07-28]
+	Updated lang/py-lsp-server to 1.15.0 [wiz 2026-07-28]
