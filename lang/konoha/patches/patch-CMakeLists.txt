@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/28 14:57:09 ryoon Exp $
+
+* Find sysctlbyname(3).
+
+--- CMakeLists.txt.orig	2026-07-28 10:47:15.559339935 +0000
++++ CMakeLists.txt
+@@ -141,7 +141,7 @@ if(UNIX)
+ 
+ set(_HEADERS stdio.h stdlib.h string.h ctype.h)
+ if(UNIX)
+-	set(_HEADERS ${_HEADERS} sys/mman.h unistd.h)
++	set(_HEADERS ${_HEADERS} sys/mman.h unistd.h sys/sysctl.h)
+ endif(UNIX)
+ 
+ if(APPLE)

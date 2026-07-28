@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/08/26 14:07:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/07/28 14:57:09 ryoon Exp $
 bin/konoha
 bin/konoha2js
 bin/konohac
@@ -34,8 +34,6 @@ konoha/package/1.0/konoha.math/math.k
 konoha/package/1.0/konoha.math/math.so
 konoha/package/1.0/konoha.ntrace/ntrace.k
 konoha/package/1.0/konoha.ntrace/ntrace.so
-konoha/package/1.0/konoha.opengl/opengl.k
-konoha/package/1.0/konoha.opengl/opengl.so
 konoha/package/1.0/konoha.posix/posix.k
 konoha/package/1.0/konoha.posix/posix.so
 konoha/package/1.0/konoha.proc/proc.k
