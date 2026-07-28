@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4812 2026/07/28 17:09:10 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4813 2026/07/28 21:06:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7134,3 +7134,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/konoha to 1.0.0.952nb64 [ryoon 2026-07-28]
 	Updated www/anubis to 1.26.2 [ryoon 2026-07-28]
 	Updated math/suitesparse to 7.12.3 [ktnb 2026-07-28]
+	Updated chat/matrix-synapse to 1.157.2 [gdt 2026-07-28]
