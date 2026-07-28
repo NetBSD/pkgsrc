@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/01/06 11:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/07/28 07:24:03 wiz Exp $
 
-DISTNAME=	python_lsp_server-1.14.0
+DISTNAME=	python_lsp_server-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
@@ -41,8 +41,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-rope -> py-toolconfig -> py-sphinx
 
-# as of 1.13.2
-# 1 failed, 197 passed, 8 skipped, 12 warnings, 1 error
+# as of 1.15.0
+# 1 failed, 202 passed, 8 skipped, 14 warnings, 1 error
 # but 'make test' never finishes after displaying that
 
 post-install:
