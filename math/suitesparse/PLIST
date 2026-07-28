@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/02/14 15:11:59 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/07/28 17:08:28 ktnb Exp $
 bin/suitesparse_mongoose
 include/suitesparse/GraphBLAS.h
 include/suitesparse/LAGraph.h
@@ -168,7 +168,7 @@ lib/libccolamd.so.3.3.5
 lib/libcholmod.a
 lib/libcholmod.so
 lib/libcholmod.so.5
-lib/libcholmod.so.5.3.4
+lib/libcholmod.so.5.3.5
 lib/libcolamd.a
 lib/libcolamd.so
 lib/libcolamd.so.3
@@ -179,7 +179,7 @@ lib/libcxsparse.so.4
 lib/libcxsparse.so.4.4.2
 lib/libgraphblas.so
 lib/libgraphblas.so.10
-lib/libgraphblas.so.10.3.1
+lib/libgraphblas.so.10.3.2
 lib/libklu.a
 lib/libklu.so
 lib/libklu.so.2
@@ -191,11 +191,11 @@ lib/libklu_cholmod.so.2.3.6
 lib/liblagraph.a
 lib/liblagraph.so
 lib/liblagraph.so.1
-lib/liblagraph.so.1.2.1
+lib/liblagraph.so.1.2.2
 lib/liblagraphx.a
 lib/liblagraphx.so
 lib/liblagraphx.so.1
-lib/liblagraphx.so.1.2.1
+lib/liblagraphx.so.1.2.2
 lib/libldl.a
 lib/libldl.so
 lib/libldl.so.3
@@ -203,7 +203,7 @@ lib/libldl.so.3.3.3
 lib/libparu.a
 lib/libparu.so
 lib/libparu.so.1
-lib/libparu.so.1.1.0
+lib/libparu.so.1.1.1
 lib/librbio.a
 lib/librbio.so
 lib/librbio.so.4
@@ -230,7 +230,7 @@ lib/libsuitesparseconfig.so.${PKGVERSION}
 lib/libumfpack.a
 lib/libumfpack.so
 lib/libumfpack.so.6
-lib/libumfpack.so.6.3.7
+lib/libumfpack.so.6.3.8
 lib/pkgconfig/AMD.pc
 lib/pkgconfig/BTF.pc
 lib/pkgconfig/CAMD.pc
