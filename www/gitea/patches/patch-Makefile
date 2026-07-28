@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile,v 1.7 2025/07/22 01:03:54 khorben Exp $
+$NetBSD: patch-Makefile,v 1.8 2026/07/28 13:51:12 khorben Exp $
 
 Exclude LDFLAGS, this is not C.
 
---- Makefile.orig	2025-07-21 23:58:48.837468497 +0000
+--- Makefile.orig	2026-07-27 18:43:03.000000000 +0000
 +++ Makefile
-@@ -107,7 +107,7 @@ ifeq ($(VERSION),main)
+@@ -109,7 +109,7 @@ ifeq ($(VERSION),main)
  	VERSION := main-nightly
  endif
  
--LDFLAGS := $(LDFLAGS) -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)"
-+LDFLAGS := -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)"
+-LDFLAGS := $(LDFLAGS) -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)"
++LDFLAGS := -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)"
  
  LINUX_ARCHS ?= linux/amd64,linux/386,linux/arm-5,linux/arm-6,linux/arm64,linux/riscv64
  
