@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4815 2026/07/28 21:45:38 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4816 2026/07/28 23:38:57 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7137,3 +7137,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/matrix-synapse to 1.157.2 [gdt 2026-07-28]
 	Updated net/xymonclient to 4.3.30nb2 [wiz 2026-07-28]
 	Updated chat/element-web to 1.12.24 [gdt 2026-07-28]
+	Updated devel/chrono-date to 3.0.5 [kikadf 2026-07-28]
