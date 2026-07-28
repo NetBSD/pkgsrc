@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4809 2026/07/28 13:51:29 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.4810 2026/07/28 14:57:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7131,3 +7131,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-lsp-server to 1.15.0 [wiz 2026-07-28]
 	Updated www/chromium to 150.0.7871.186 [kikadf 2026-07-28]
 	Updated www/gitea to 1.26.1 [khorben 2026-07-28]
+	Updated lang/konoha to 1.0.0.952nb64 [ryoon 2026-07-28]
