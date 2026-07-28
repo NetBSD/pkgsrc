@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27659 2026/07/27 15:57:57 wiz Exp $
+$NetBSD: TODO,v 1.27660 2026/07/28 21:23:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -896,6 +896,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o makeztxt-1.60
 	o man-pages-5.11
 	o manedit-1.2.1
+	o mari0-1.6.2
 	o mariadb-10.6.27
 	o mariadb-10.11.18
 	o mariadb-11.4.12
@@ -1194,6 +1195,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
+	o sbcl-2.6.7
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f3 [dholland has a partial update]
