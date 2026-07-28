@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.43 2024/12/12 15:14:35 ryoon Exp $
+$NetBSD: distinfo,v 1.44 2026/07/28 15:34:42 ryoon Exp $
 
 BLAKE2s (Gauche-0.9.15.tgz) = d5df786fd017900356d7732af9f8036479bd10c3ca147263dfb1d37286723c93
 SHA512 (Gauche-0.9.15.tgz) = fc246a9ba937eba642621a5707f0e7a02d62191749360b9b15e2563c9ceb13e18f236c736172d05c177df8b7220ff0e973f568aaf9eb92e92643af0823f0f865
 Size (Gauche-0.9.15.tgz) = 9444756 bytes
 SHA1 (patch-af) = 06811370a51119d90ca6f9181dc7d4811e9c0dcb
 SHA1 (patch-ag) = b9944ee2f3c2b8ea9591f4fa62538e438dbeb96c
-SHA1 (patch-ext_Makefile.ext.in) = 8f8caa432bf56c0b69902cd31ee86ca55d18ecde
+SHA1 (patch-ext_Makefile.ext.in) = 320015880bddcfa44458e5122a8191fced707078
 SHA1 (patch-ext_zlib_Makefile.in) = f410916b9aaf62d734e5f4049585adab59f74662

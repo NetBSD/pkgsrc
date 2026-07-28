@@ -1,8 +1,8 @@
-$NetBSD: patch-ext_Makefile.ext.in,v 1.1 2024/12/12 15:14:35 ryoon Exp $
+$NetBSD: patch-ext_Makefile.ext.in,v 1.2 2026/07/28 15:34:43 ryoon Exp $
 
---- ext/Makefile.ext.in.orig	2024-12-11 14:18:52.342355951 +0000
+--- ext/Makefile.ext.in.orig	2024-04-23 23:27:26.000000000 +0000
 +++ ext/Makefile.ext.in
-@@ -14,6 +14,8 @@ GAUCHE_ABI_VERSION = @GAUCHE_ABI_VERSION
+@@ -14,6 +14,8 @@ HOST        = @host@
  BUILD       = @build@
  HOST        = @host@
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ext_Makefile.ext.in,v 1.1 2024/12/12 15:14:35 ryoon Exp $
  # These may be overridden by make invocators
  DESTDIR      =
  CC           = @CC@
+@@ -22,7 +24,7 @@ CPPFLAGS     = @CPPFLAGS@ $(XCPPFLAGS)
+ LIBS         = $(XLIBS) @LIBS@
+ CFLAGS       = @CFLAGS@ @SHLIB_SO_CFLAGS@ $(XCFLAGS)
+ CPPFLAGS     = @CPPFLAGS@ $(XCPPFLAGS)
+-LDFLAGS      = $(LOCAL_LFLAGS) $(XLDFLAGS) @SHLIB_SO_LDFLAGS@
++LDFLAGS      = $(LOCAL_LFLAGS) $(XLDFLAGS) @LDFLAGS@ @SHLIB_SO_LDFLAGS@
+ BUILD_GOSH_FLAGS =
+ 
+ # These are set by configure
