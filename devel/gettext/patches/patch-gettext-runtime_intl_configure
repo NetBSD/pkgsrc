@@ -1,10 +1,10 @@
-$NetBSD: patch-gettext-runtime_configure,v 1.2 2026/07/28 16:21:26 jperkin Exp $
+$NetBSD: patch-gettext-runtime_intl_configure,v 1.1 2026/07/28 16:21:26 jperkin Exp $
 
 Do not use bundled libintl.
 
---- gettext-runtime/configure.orig	2026-01-28 23:39:29.000000000 +0000
-+++ gettext-runtime/configure
-@@ -26035,13 +26035,6 @@ printf "%s\n" "$ac_res" >&6; }
+--- gettext-runtime/intl/configure.orig	2026-07-28 15:53:45.712657369 +0000
++++ gettext-runtime/intl/configure
+@@ -20138,13 +20138,6 @@ printf "%s\n" "$ac_res" >&6; }
        fi
  
  
