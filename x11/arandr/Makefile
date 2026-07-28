@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/05/06 12:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/07/28 10:54:38 abs Exp $
 
 DISTNAME=	arandr-0.1.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://christian.amsuess.com/tools/arandr/files/
 
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 .if ${X11_TYPE} != "native"
 DEPENDS+=	xrandr>=1.2:../../x11/xrandr
 .endif
+.include "../../x11/gtk3/buildlink3.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
