@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2026/07/24 11:47:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.72 2026/07/28 20:54:16 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -253,6 +253,9 @@ ${PYSITELIB}/synapse/config/password_auth_providers.pyo
 ${PYSITELIB}/synapse/config/push.py
 ${PYSITELIB}/synapse/config/push.pyc
 ${PYSITELIB}/synapse/config/push.pyo
+${PYSITELIB}/synapse/config/push_rules.py
+${PYSITELIB}/synapse/config/push_rules.pyc
+${PYSITELIB}/synapse/config/push_rules.pyo
 ${PYSITELIB}/synapse/config/ratelimiting.py
 ${PYSITELIB}/synapse/config/ratelimiting.pyc
 ${PYSITELIB}/synapse/config/ratelimiting.pyo

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2026/07/24 11:47:14 gdt Exp $
+$NetBSD: distinfo,v 1.95 2026/07/28 20:54:16 gdt Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -228,9 +228,9 @@ Size (log-0.4.33.crate) = 52997 bytes
 BLAKE2s (lru-slab-0.1.2.crate) = aa3f3674478a76b09b52e1c77b3fc8382ad771a643b4184baf095d0dd7f35d1b
 SHA512 (lru-slab-0.1.2.crate) = eb93796ffaccafd2e2530efeaf60dab1eeb17fe61652a9299c220cea4dd9099239eb549ae1259ac272c5aa807eebfaec6db4dc5efc95ee59365d3fd1d413f60f
 Size (lru-slab-0.1.2.crate) = 9090 bytes
-BLAKE2s (matrix-synapse-1.157.1.tar.gz) = 8abd581624b68526132d9d0a61be8fcf422c652ba367299a8b1beda2061bbf68
-SHA512 (matrix-synapse-1.157.1.tar.gz) = 9144b93512ce4e52b4f34b7721e978e6ee7c1b1150ec888db3428459ddaca8f0b14a4bec93c6a4486f277a24d9cfc14d7fe84b9d403a506e093c68f0e6d9a17c
-Size (matrix-synapse-1.157.1.tar.gz) = 9482495 bytes
+BLAKE2s (matrix-synapse-1.157.2.tar.gz) = 8bbc648b35f83a00411522e54f653549c6fd3a0be2ba846ca11f5899f991d6a8
+SHA512 (matrix-synapse-1.157.2.tar.gz) = 63642d087689d032486f12317015333148a53ca61a0f9b41f6ab512c92dc551a87cd88e8927970e7fe8a39fe1407c837169c3919858b9b726393a8cac1533682
+Size (matrix-synapse-1.157.2.tar.gz) = 9501470 bytes
 BLAKE2s (memchr-2.7.5.crate) = 741834638b9ed49c5a8ab61a0aeac280a8d91d104fafe3c7219d313131694001
 SHA512 (memchr-2.7.5.crate) = 2606ee16a7dc02db95dac17cebd2cac9deb2e23d7ea62972cdb19145c06eaf75631347a49c4e6ceeff89fb6e90e992f9bca0a9c955eb5130f89ba2bd865936e1
 Size (memchr-2.7.5.crate) = 97603 bytes
