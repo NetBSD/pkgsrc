@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4807 2026/07/28 07:24:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4808 2026/07/28 11:42:17 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7129,3 +7129,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/slock to 1.7 [leot 2026-07-27]
 	Updated wayland/sfwbar to 1.0_beta17nb2 [kikadf 2026-07-28]
 	Updated lang/py-lsp-server to 1.15.0 [wiz 2026-07-28]
+	Updated www/chromium to 150.0.7871.186 [kikadf 2026-07-28]
