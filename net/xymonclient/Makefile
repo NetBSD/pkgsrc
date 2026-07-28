@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2025/04/11 01:40:17 maya Exp $
+# $NetBSD: Makefile,v 1.30 2026/07/28 21:23:16 wiz Exp $
 
 DISTNAME=		xymon-4.3.30
 PKGNAME=		${DISTNAME:S/xymon/xymonclient/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
 MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		https://xymon.sourceforge.io/
 COMMENT=		Network services monitor a la Big Brother
-
 LICENSE=		gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		NO
