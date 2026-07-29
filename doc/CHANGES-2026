@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4825 2026/07/29 13:58:13 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4826 2026/07/29 13:58:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7147,3 +7147,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-headers to 1.4.357.0 [kikadf 2026-07-29]
 	Updated parallel/spirv-tools to 1.4.357.0 [kikadf 2026-07-29]
 	Updated graphics/glslang to 1.4.357.0 [kikadf 2026-07-29]
+	Updated www/firefox to 153.0.1 [ryoon 2026-07-29]
