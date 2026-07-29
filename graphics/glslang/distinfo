@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/06/22 08:21:25 kikadf Exp $
+$NetBSD: distinfo,v 1.4 2026/07/29 13:57:57 kikadf Exp $
 
-BLAKE2s (glslang-1.4.350.1.tar.gz) = f5a35a72be56631c4ccb5d092f8c5df92cb795a84d62b52771ee72e87135f0fd
-SHA512 (glslang-1.4.350.1.tar.gz) = 9f23e72ae459c61ca7b10c98b4c2013c27bb31e595efd09c271b211e7fdcd78b55511d4608feb25bf656b16921eaf96ea574b29b26e43cbc8fe3510468e4ada4
-Size (glslang-1.4.350.1.tar.gz) = 4328863 bytes
+BLAKE2s (glslang-1.4.357.0.tar.gz) = d11f0b382fdaee915dbebfbf4ffd1bc6bc57c668ee977e03ac39ec16ae740696
+SHA512 (glslang-1.4.357.0.tar.gz) = 471ea08f786564fd08469f79544c1959c7ccbd62f422d2a03b464410e265914d607b97e6dbec54ecbb601270d58528f01238faa55ca5387ddf0cdecb626d0ec4
+Size (glslang-1.4.357.0.tar.gz) = 4412438 bytes
