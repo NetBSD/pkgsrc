@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.127 2026/07/01 07:27:25 adam Exp $
+$NetBSD: distinfo,v 1.128 2026/07/29 17:22:49 jperkin Exp $
 
 BLAKE2s (samba-4.24.4.tar.gz) = b3bba50ea3da90441f5fb733a7f1004c745be7ef5076d985c417991873183698
 SHA512 (samba-4.24.4.tar.gz) = 3f6b8a99491d82fcb90115288e547b330afd452f7ed15f288085644a0ea9ccbd45645c5a75f2d5db6d2d888ff280e87ec252b48e0c064a0ca33cac39f24f123d
@@ -7,7 +7,7 @@ SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e7
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = b9015694b80c0e6382d75c806fd6e0eb92e5f998
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
-SHA1 (patch-buildtools_wafsamba_wscript) = 0ca4c3a9d2e07f9165784e495f6f6b2b21db2758
+SHA1 (patch-buildtools_wafsamba_wscript) = e39a904e7bbb129e3ba497d61cea0b317ac907c3
 SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_pthreadpool_pthreadpool.c) = 4b0c3d49d578b5ab12f5bad1ebeb50efb43e756c
@@ -40,6 +40,7 @@ SHA1 (patch-source3_utils_net__offlinejoin.c) = defb3ad930ba88ec040bda8899efd24e
 SHA1 (patch-source4_auth_gensec_wscript__build) = 01f3cdf787833e05f2e0b49ff0af7c8bbad2c161
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
 SHA1 (patch-source4_scripting_wscript__build) = aac6894d49f5c17a28d26cb627be8cef1902bb1e
+SHA1 (patch-source4_torture_local_nss__tests.c) = c68325fdd4f65532de60c1a40e9cbe4173ea1711
 SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
 SHA1 (patch-third__party_heimdal_include_heim__threads.h) = 5ad13530cf9688e46f9ad487bb0fddab668c8276
 SHA1 (patch-third__party_heimdal_lib_hcrypto_evp.c) = 8e8e23198ef4afdc24a6930bd57aa5a898f1826f

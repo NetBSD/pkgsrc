@@ -1,16 +1,18 @@
-$NetBSD: patch-buildtools_wafsamba_wscript,v 1.3 2019/11/10 17:01:58 adam Exp $
+$NetBSD: patch-buildtools_wafsamba_wscript,v 1.4 2026/07/29 17:22:49 jperkin Exp $
 
 Define _POSIX_PTHREAD_SEMANTICS on SunOS to pick up re-entrant functions.
 
---- buildtools/wafsamba/wscript.orig	2019-07-09 10:08:41.000000000 +0000
+--- buildtools/wafsamba/wscript.orig	2026-01-20 15:42:53.850815000 +0000
 +++ buildtools/wafsamba/wscript
-@@ -458,6 +458,10 @@ def configure(conf):
+@@ -601,6 +601,12 @@ def configure(conf):
      if conf.CHECK_CFLAGS(['-D__STDC_WANT_LIB_EXT1__=1']):
          conf.ADD_CFLAGS('-D__STDC_WANT_LIB_EXT1__=1')
  
 +    # Use POSIX getpwnam_r and friends.
 +    if conf.env['SYSTEM_UNAME_SYSNAME'] == 'SunOS':
 +        conf.DEFINE('_POSIX_PTHREAD_SEMANTICS', 1, add_to_cflags=True)
++        conf.DEFINE('_XOPEN_SOURCE', 600, add_to_cflags=True)
++        conf.DEFINE('__EXTENSIONS__', 1, add_to_cflags=True)
 +
      # on Tru64 certain features are only available with _OSF_SOURCE set to 1
      # and _XOPEN_SOURCE set to 600
