@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/07/29 13:48:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.39 2026/07/29 13:50:39 ktnb Exp $
 
 DISTNAME=	0.22.0
 PKGNAME=	aerc-${DISTNAME}
@@ -58,4 +58,5 @@ do-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/go/go-module.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
