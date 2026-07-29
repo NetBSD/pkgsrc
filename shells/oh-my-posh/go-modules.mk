@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.136 2026/07/26 19:31:47 pin Exp $
+# $NetBSD: go-modules.mk,v 1.137 2026/07/29 11:15:06 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -101,8 +101,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.24.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.24.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.27.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.27.zip
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.mod
@@ -168,7 +168,8 @@ GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.zip
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.17.0.mod
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.17.0.zip
 GO_MODULE_FILES+=	go.yaml.in/yaml/v3/@v/v3.0.4.mod
-GO_MODULE_FILES+=	go.yaml.in/yaml/v3/@v/v3.0.4.zip
+GO_MODULE_FILES+=	go.yaml.in/yaml/v3/@v/v3.0.5.mod
+GO_MODULE_FILES+=	go.yaml.in/yaml/v3/@v/v3.0.5.zip
 GO_MODULE_FILES+=	go.yaml.in/yaml/v4/@v/v4.0.0-rc.2.mod
 GO_MODULE_FILES+=	go.yaml.in/yaml/v4/@v/v4.0.0-rc.2.zip
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.52.0.mod
