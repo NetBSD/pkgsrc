@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2026/07/02 10:56:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2026/07/29 13:45:38 kikadf Exp $
 #
 # used by graphics/glslang/Makefile
 # used by graphics/vulkan-headers/Makefile
@@ -8,7 +8,7 @@
 # used by parallel/spirv-tools/Makefile
 # used by graphics/shaderc/Makefile
 
-SDK_VERSION=	1.4.350.1
+SDK_VERSION=	1.4.357.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	vulkan-sdk-${SDK_VERSION}
 
