@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/07/17 23:36:50 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2026/07/29 06:27:08 wiz Exp $
 
 DISTNAME=	bulk-test-icu-20260717
 CATEGORIES=	meta-pkgs
@@ -15,6 +15,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PHP_VERSIONS_ACCEPTED=		82 83 # php-http4
 
 # All of these (primarily leaf) packages depend on ICU.
 # Feel free to add one if you care about it not breaking.
