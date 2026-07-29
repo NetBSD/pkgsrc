@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2026/07/02 10:55:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/07/29 14:01:02 kikadf Exp $
 
-BLAKE2s (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.350.1.tar.gz) = 3afb3a428623ab729c270d7941cf377804db03f07a90827c9fe6e35b2f44caaa
-SHA512 (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.350.1.tar.gz) = 97732eccca2292e80c1c2ca3d1a24fdd89ec342a4c312cb06949b29033c70b4ac3abc1551d8dacafe843e3719e4e160d4dd153195f7483584f40a646ecb74905
-Size (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.350.1.tar.gz) = 3472729 bytes
-BLAKE2s (shaderc-2026.2.tar.gz) = 729d2b0ae3424ee3955666dc6d47118472b57ae15f58026d3563e50ee625ac6f
-SHA512 (shaderc-2026.2.tar.gz) = 733f85a83db4b71814c7f251c44e6010b485ed03d7e2389db5c14f8426942bebf6c95a35e5eaef80e51c29f8efa28cc0577226344630a427553200c6a87349ec
-Size (shaderc-2026.2.tar.gz) = 228959 bytes
+BLAKE2s (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.357.0.tar.gz) = 70b9719e8ffb4f7e1d6345e109dacf0901ea1e2914e95d8de7145726ad60195f
+SHA512 (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.357.0.tar.gz) = e853b7a08d1d1001a45e8d8f7179be7b02d803959d598bd9d097f096b33fd2a380bcecc8c9c1c446941b9df41018271b45d7995f79f8d360e15feb0c32d43f39
+Size (KhronosGroup-SPIRV-Tools-vulkan-sdk-1.4.357.0.tar.gz) = 3518451 bytes
+BLAKE2s (shaderc-2026.3.tar.gz) = ca7e77c30abeaecc186b5fd4a086c9604d862a014bafa3d99eb0beb4e7773acf
+SHA512 (shaderc-2026.3.tar.gz) = 795a2c59c31b11c23e7110fd01fc7ee7c07cadae621c9a11c2df56bc85fcb43c25a1c5504fab36e3df21bad1eb1a2af28872ee9bcf745cd2dec815acd189bcfd
+Size (shaderc-2026.3.tar.gz) = 230772 bytes
 SHA1 (patch-CMakeLists.txt) = 2bd347afc30d601779d945d48a763267cc05f68b
