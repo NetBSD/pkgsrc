@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.6 2026/07/29 07:34:50 wiz Exp $
+
+CMake: handle required flags with CMake 4.4
+https://github.com/pocl/pocl/commit/566d6c839c303232abe7906cb2732f31e9dfa404
+
+--- CMakeLists.txt.orig	2025-10-08 11:14:14.000000000 +0000
++++ CMakeLists.txt
+@@ -816,7 +816,7 @@ if(UNIX OR MINGW)
+   include(CheckSymbolExists)
+ 
+   # don't allow implicit function declarations
+-  set(CMAKE_REQUIRED_FLAGS "-std=c99 ${FORBID_IMPLICIT_FUNCTIONS}")
++  string(JOIN " " CMAKE_REQUIRED_FLAGS "-std=c99" ${FORBID_IMPLICIT_FUNCTIONS})
+   if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+     set(CMAKE_REQUIRED_LIBRARIES "rt")
+   endif ()

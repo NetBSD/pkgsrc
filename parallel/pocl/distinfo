@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2025/10/09 14:51:57 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/07/29 07:34:50 wiz Exp $
 
 BLAKE2s (pocl-7.1.tar.gz) = 96cd63c60dfa735d444047780194b33375d9ac9f10776eb177732217706bd462
 SHA512 (pocl-7.1.tar.gz) = f53c80d9179b350c6fe10550b359f80be03202dd416bf848dd7d200579e29c13339bc1eeafd9f71a8f8b58369ce0644e2227ed84faddbb2254e38ca86a297bbb
 Size (pocl-7.1.tar.gz) = 3889905 bytes
+SHA1 (patch-CMakeLists.txt) = dde70cb9ee6e3bc02c7376ecbe5867137f55d2a8
 SHA1 (patch-lib_CL_devices_CMakeLists.txt) = 8e3bc72f8e1787de3cc0f052679cc8a372cb6435
 SHA1 (patch-lib_CL_pocl__cl.h) = 919b76aea30270d03158a4d20fe3acf30d0956ae
