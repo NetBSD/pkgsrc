@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/07/28 21:45:28 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2026/07/29 10:24:07 gdt Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
 PKGNAME=	element-web-1.12.24
@@ -28,5 +28,9 @@ verify-signature:
 	gpgv --keyring ${FILESDIR}/gpgkey-element.gpg \
 		${DISTDIR}/${DISTNAME}.tar.gz.asc \
 		${DISTDIR}/${DISTNAME}.tar.gz
+
+# Upstream bugs:
+#   - user is notified about pre-releases
+#     https://github.com/element-hq/element-web/issues/33763
 
 .include "../../mk/bsd.pkg.mk"
