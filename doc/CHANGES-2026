@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4819 2026/07/29 13:45:55 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4820 2026/07/29 13:52:10 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7141,3 +7141,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 29.37.0 [pin 2026-07-29]
 	Updated textproc/treemd to 0.6.0 [pin 2026-07-29]
 	Updated graphics/vulkan-headers to 1.4.357.0 [kikadf 2026-07-29]
+	Updated mail/aerc to 0.22.0 [ktnb 2026-07-29]
