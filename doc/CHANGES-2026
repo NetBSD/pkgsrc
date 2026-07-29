@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4827 2026/07/29 13:59:32 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4828 2026/07/29 14:01:19 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/glslang to 1.4.357.0 [kikadf 2026-07-29]
 	Updated www/firefox to 153.0.1 [ryoon 2026-07-29]
 	Updated www/firefox-l10n to 153.0.1 [ryoon 2026-07-29]
+	Updated graphics/shaderc to 2026.3 [kikadf 2026-07-29]
