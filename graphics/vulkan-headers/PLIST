@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/10/04 12:39:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/07/29 13:45:38 kikadf Exp $
 include/vk_video/vulkan_video_codec_av1std.h
 include/vk_video/vulkan_video_codec_av1std_decode.h
 include/vk_video/vulkan_video_codec_av1std_encode.h
@@ -40,6 +40,7 @@ include/vulkan/vulkan_shared.hpp
 include/vulkan/vulkan_static_assertions.hpp
 include/vulkan/vulkan_structs.hpp
 include/vulkan/vulkan_to_string.hpp
+include/vulkan/vulkan_ubm.h
 include/vulkan/vulkan_vi.h
 include/vulkan/vulkan_video.cppm
 include/vulkan/vulkan_video.hpp
