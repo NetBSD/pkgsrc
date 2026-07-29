@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/04 15:36:07 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/07/29 13:48:45 ktnb Exp $
 bin/aerc
 bin/carddav-query
 libexec/aerc/filters/calendar
@@ -41,3 +41,5 @@ share/aerc/templates/forward_as_body
 share/aerc/templates/new_message
 share/aerc/templates/quoted_reply
 share/applications/aerc.desktop
+share/icons/hicolor/scalable/apps/aerc.svg
+
