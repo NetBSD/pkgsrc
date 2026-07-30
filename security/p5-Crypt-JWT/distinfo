@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/05/10 12:25:19 wen Exp $
+$NetBSD: distinfo,v 1.8 2026/07/30 10:51:41 wen Exp $
 
-BLAKE2s (Crypt-JWT-0.037.tar.gz) = f438891de67f5ca847301f305dc70dfa7053b9d0651798a42c34e96ce9766d86
-SHA512 (Crypt-JWT-0.037.tar.gz) = 99e27643bdbd3647382d958660ba1199922acddd72e5e097f53f68c86b6b2d959955f90c6d32c1257ca0e243a9af637646808615fcde483ef9c8ea041c152ffe
-Size (Crypt-JWT-0.037.tar.gz) = 86387 bytes
+BLAKE2s (Crypt-JWT-0.038.tar.gz) = dec1108bf7aadbdc763e87c46486d24aef215130fc9aa1f8f3c1c9e0682d29e2
+SHA512 (Crypt-JWT-0.038.tar.gz) = 55f194f21759247f20b903defff347d5dff9fe2dc7b6559d0e4707ee8caaf945d8c04f555b314b5c5cc5ce3f93a85fb8b12b8f8be359295a6f65afad669eea66
+Size (Crypt-JWT-0.038.tar.gz) = 127069 bytes
