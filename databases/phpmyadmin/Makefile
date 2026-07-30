@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2025/02/08 03:33:12 taca Exp $
+# $NetBSD: Makefile,v 1.171 2026/07/30 16:19:20 taca Exp $
 
 DISTNAME=	phpMyAdmin-4.9.10-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -19,6 +19,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+
+PHP_REQUIRE_MODULE=	mcrypt
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
@@ -77,12 +79,6 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/phpmyadmin \
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PHP_VER} < 71
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
-.else
-DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
-.endif
-
 post-extract:
 	${CP} ${FILESDIR}/phpmyadmin.conf ${WRKDIR}
 
@@ -97,5 +93,5 @@ do-install:
 			${DESTDIR}${PREFIX}/share/doc/phpmyadmin
 	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${DESTDIR}${EXDIR}/apache.conf
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
