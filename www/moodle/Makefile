@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2026/07/24 15:48:19 taca Exp $
+# $NetBSD: Makefile,v 1.109 2026/07/30 13:17:11 wen Exp $
 
-DISTNAME=	moodle-5.0.1
-PKGREVISION=	2
+DISTNAME=	moodle-5.2.1
 CATEGORIES=	www
 MASTER_SITES=	https://download.moodle.org/download.php/stable500/ \
 		https://packaging.moodle.org/stable500/ \
@@ -65,12 +64,6 @@ SUBST_VARS.conf+=	MOODLEDATADIR
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
 .endif
-
-SUBST_CLASSES+=		perl
-SUBST_MESSAGE.perl=	Fixing the path of perl.
-SUBST_STAGE.perl=	pre-configure
-SUBST_FILES.perl=	filter/algebra/algebra2tex.pl
-SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 WRKSRC=			${WRKDIR}/moodle
 
