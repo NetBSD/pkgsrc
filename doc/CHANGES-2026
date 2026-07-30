@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4842 2026/07/30 15:21:42 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4843 2026/07/30 15:24:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7176,3 +7176,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-actionmailbox72 to 7.2.3.2 [taca 2026-07-30]
 	Updated textproc/ruby-actiontext72 to 7.2.3.2 [taca 2026-07-30]
 	Updated www/ruby-rails72 to 7.2.3.2 [taca 2026-07-30]
+	Updated devel/ruby-activesupport80 to 8.0.5.1 [taca 2026-07-30]
+	Updated devel/ruby-activemodel80 to 8.0.5.1 [taca 2026-07-30]
+	Updated devel/ruby-activejob80 to 8.0.5.1 [taca 2026-07-30]
+	Updated databases/ruby-activerecord80 to 8.0.5.1 [taca 2026-07-30]
+	Updated www/ruby-actionview80 to 8.0.5.1 [taca 2026-07-30]
+	Updated www/ruby-actionpack80 to 8.0.5.1 [taca 2026-07-30]
+	Updated www/ruby-actioncable80 to 8.0.5.1 [taca 2026-07-30]
+	Updated devel/ruby-railties80 to 8.0.5.1 [taca 2026-07-30]
+	Updated devel/ruby-activestorage80 to 8.0.5.1 [taca 2026-07-30]
+	Updated mail/ruby-actionmailer80 to 8.0.5.1 [taca 2026-07-30]
+	Updated mail/ruby-actionmailbox80 to 8.0.5.1 [taca 2026-07-30]
+	Updated textproc/ruby-actiontext80 to 8.0.5.1 [taca 2026-07-30]
+	Updated www/ruby-rails80 to 8.0.5.1 [taca 2026-07-30]
