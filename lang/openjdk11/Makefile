@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2026/05/14 16:41:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2026/07/30 16:20:42 jperkin Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -50,8 +50,8 @@ BOOT_JVMARGS=	-XX:+UnlockDiagnosticVMOptions \
 		-XX:-UseSemaphoreGCThreadsSynchronization
 
 # ${WRKSRC}/doc/building.mk explicitly states that its Makefiles are unsafe
-# to use -j.
-MAKE_JOBS_SAFE=	no
+# to use -j.  Disable it and configure ourselves via configure arguments.
+MAKE_JOBS_METHOD=	manual
 
 CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
