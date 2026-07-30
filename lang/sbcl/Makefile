@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2026/07/15 15:56:26 ktnb Exp $
+# $NetBSD: Makefile,v 1.119 2026/07/30 12:03:59 ktnb Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-2.6.6
+PKGNAME=		sbcl-2.6.7
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +23,7 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
