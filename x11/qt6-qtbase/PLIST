@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2026/05/17 15:40:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/07/30 12:31:06 jperkin Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -3240,20 +3240,20 @@ qt6/lib/cmake/Qt6FbSupportPrivate/Qt6FbSupportPrivateTargets.cmake
 qt6/lib/cmake/Qt6FbSupportPrivate/Qt6FbSupportPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6FbSupportPrivate/Qt6FbSupportPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6FbSupportPrivate/Qt6FbSupportPrivateVersionlessTargets.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginAdditionalTargetInfo.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfig.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfigVersion.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfigVersionImpl.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets-release.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginAdditionalTargetInfo.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfig.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfigVersion.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfigVersionImpl.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargets-release.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargets.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargetsPrecheck.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginAdditionalTargetInfo.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfig.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfigVersion.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfigVersionImpl.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets-release.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginAdditionalTargetInfo.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfig.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfigVersion.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfigVersionImpl.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargets-release.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargets.cmake
+${PLIST.wayland}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake
