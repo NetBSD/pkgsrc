@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4839 2026/07/30 12:28:22 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.4840 2026/07/30 12:36:15 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7161,3 +7161,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/groff to 1.24.1nb4 [jperkin 2026-07-30]
 	Updated lang/sbcl to 2.6.7 [ktnb 2026-07-30]
 	Updated textproc/xmlto to 0.0.29nb3 [jperkin 2026-07-30]
+	Updated security/zoneminder to 1.38.3nb1 [gdt 2026-07-30]
