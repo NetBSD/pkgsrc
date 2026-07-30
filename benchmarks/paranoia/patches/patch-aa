@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1 1999/03/16 08:54:32 agc Exp $
+$NetBSD: patch-aa,v 1.2 2026/07/30 23:12:19 gdt Exp $
 
 The sigfpe function clashes with the gcc one. Rename it for now.
 
---- paranoia.c	1999/03/16 08:41:31	1.1
-+++ paranoia.c	1999/03/16 08:42:30
-@@ -213,7 +213,7 @@
+Declare main with int return type.
+
+--- paranoia.c.orig	2026-07-30 23:07:35.097693690 +0000
++++ paranoia.c
+@@ -213,7 +213,7 @@ s/$/\
  /^jmp_buf/s/^/extern /
  /^Sig_type/s/^/extern /
  s/$/\
@@ -13,7 +15,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  w paranoia.h
  q
  
-@@ -381,7 +381,7 @@
+@@ -381,7 +381,7 @@ int Break, Done, NotMonot, Monot, Anomaly, IEEE,
  
  /* floating point exception receiver */
   void
@@ -22,7 +24,15 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  {
  	fpecount++;
  	printf("\n* * * FLOATING-POINT ERROR %d * * *\n", x);
-@@ -422,7 +422,7 @@
+@@ -396,6 +396,7 @@ sigfpe(INT x)
+ 	exit(1);
+ }
+ 
++int
+ main(VOID)
+ {
+ 	/* First two assignments use integer right-hand sides. */
+@@ -422,7 +423,7 @@ main(VOID)
  	Milestone = 0;
  	/*=============================================*/
  #ifndef NOSIGNAL
@@ -31,7 +41,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  #endif
  	Instructions();
  	Pause();
-@@ -1493,7 +1493,7 @@
+@@ -1493,7 +1494,7 @@ void part6(VOID){
  		}
  	if (UfNGrad) {
  		printf("\n");
@@ -40,7 +50,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  		if (setjmp(ovfl_buf)) {
  			printf("Underflow / UfThold failed!\n");
  			R = H + H;
-@@ -1519,7 +1519,7 @@
+@@ -1519,7 +1520,7 @@ void part6(VOID){
  			printf("    if (X == Z)  ...  else");
  			printf("  ... (f(X) - f(Z)) / (X - Z) ...\n");
  			printf("encounter Division by Zero although actually\n");
@@ -49,7 +59,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  			if (setjmp(ovfl_buf)) printf("X / Z fails!\n");
  			else printf("X / Z = 1 + %g .\n", (X / Z - Half) - Half);
  			sigsave = 0;
-@@ -1563,7 +1563,7 @@
+@@ -1563,7 +1564,7 @@ void part7(VOID){
  		BadCond(Serious, "trap on underflow.\n");
  		}
  	else {
@@ -58,7 +68,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  		V9 = POW(HInvrse, Y2);
  		sigsave = 0;
  		printf(" %.17e .\n", V9);
-@@ -1670,7 +1670,7 @@
+@@ -1670,7 +1671,7 @@ void part7(VOID){
  	printf("This may generate an error.\n");
  	Y = - CInvrse;
  	V9 = HInvrse * Y;
@@ -67,7 +77,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  	if (setjmp(ovfl_buf)) { I = 0; V9 = Y; goto overflow; }
  	do {
  		V = Y;
-@@ -1792,7 +1792,7 @@
+@@ -1792,7 +1793,7 @@ int part8(VOID){
  			case 5: X = Radix;
  			}
  		Y = X;
@@ -76,7 +86,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  		if (setjmp(ovfl_buf))
  			printf("  X / X  traps when X = %g\n", X);
  		else {
-@@ -1819,7 +1819,7 @@
+@@ -1819,7 +1820,7 @@ int part8(VOID){
  	read (KEYBOARD, ch, 8);
  	if ((ch[0] == 'Y') || (ch[0] == 'y')) {
  #endif
@@ -85,7 +95,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  		printf("    Trying to compute 1 / 0 produces ...");
  		if (!setjmp(ovfl_buf)) printf("  %.7e .\n", One / MyZero);
  		sigsave = 0;
-@@ -1831,7 +1831,7 @@
+@@ -1831,7 +1832,7 @@ int part8(VOID){
  	read (KEYBOARD, ch, 80);
  	if ((ch[0] == 'Y') || (ch[0] == 'y')) {
  #endif
@@ -94,7 +104,7 @@ The sigfpe function clashes with the gcc one. Rename it for now.
  		printf("\n    Trying to compute 0 / 0 produces ...");
  		if (!setjmp(ovfl_buf)) printf("  %.7e .\n", Zero / MyZero);
  		sigsave = 0;
-@@ -2071,7 +2071,7 @@
+@@ -2071,7 +2072,7 @@ TstPtUf(VOID)
  	if (Z != Zero) {
  		printf("Since comparison denies Z = 0, evaluating ");
  		printf("(Z + Z) / Z should be safe.\n");
