@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4850 2026/07/30 21:21:36 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4851 2026/07/30 21:23:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7196,3 +7196,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-http4 to 4.3.1 [taca 2026-07-30]
 	Updated x11/kitty to 0.48.2 [ktnb 2026-07-30]
 	Updated graphics/simp to 3.10.4 [pin 2026-07-30]
+	Updated shells/oh-my-posh to 30.0.0 [pin 2026-07-30]
