@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2026/07/19 00:35:25 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.40 2026/07/30 18:50:14 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -621,6 +621,7 @@ man/man1/kitten-@-remove-marker.1
 man/man1/kitten-@-resize-os-window.1
 man/man1/kitten-@-resize-window.1
 man/man1/kitten-@-run.1
+man/man1/kitten-@-screenshot.1
 man/man1/kitten-@-scroll-window.1
 man/man1/kitten-@-select-window.1
 man/man1/kitten-@-send-key.1
