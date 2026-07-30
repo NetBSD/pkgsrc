@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2026/07/24 15:13:03 ktnb Exp $
+# $NetBSD: options.mk,v 1.5 2026/07/30 18:20:55 ktnb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kew
 PKG_SUPPORTED_OPTIONS=	dbus artist-db
@@ -35,6 +35,6 @@ SITES.${ARTIST_DB}= \
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${ARTIST_DB} ${DESTDIR}${PREFIX}/share/akew/artists.db
+	${INSTALL_DATA} ${WRKDIR}/${ARTIST_DB} ${DESTDIR}${PREFIX}/share/kew/artists.db
 
 .endif
