@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4834 2026/07/30 10:56:33 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4835 2026/07/30 11:00:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7156,3 +7156,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/p5-Text-Transliterator to 1.06 [wen 2026-07-30]
 	Updated security/p5-Crypt-JWT to 0.038 [wen 2026-07-30]
 	Updated security/p5-Crypt-OpenSSL-AES to 0.23 [wen 2026-07-30]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.41 [wen 2026-07-30]
