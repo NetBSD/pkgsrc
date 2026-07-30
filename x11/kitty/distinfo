@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2026/07/24 16:49:39 ktnb Exp $
+$NetBSD: distinfo,v 1.47 2026/07/30 18:50:14 ktnb Exp $
 
 BLAKE2s (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = ed554d44b1070ae79986f3ff61e6ad4ed12060fb78fe6f2273733f762721d1e0
 SHA512 (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = 09bbd28b9ce42a919f22339bdeb2b798a728cf3b7f5f7fd61bec418fa360893c4ebd72f0957be4c855621f96d9a146ef8f0074f5ac4154c04f537ae3ad3592c4
@@ -30,12 +30,12 @@ Size (github.com_dlclark_regexp2_v2_@v_v2.2.1.mod) = 46 bytes
 BLAKE2s (github.com_dlclark_regexp2_v2_@v_v2.2.1.zip) = 8e899228078a27847e97a128965dad028f9211801c827d66828eae22efbcfc0c
 SHA512 (github.com_dlclark_regexp2_v2_@v_v2.2.1.zip) = e8eb0885e8da895d8fd0cd057f6a06cc290c6612503f2ad3a01c0d7b1b84fc4d2c45e9d815f0eeff426e4d85df479f99f83c19ce92bd5b2a50271bdd39c66a96
 Size (github.com_dlclark_regexp2_v2_@v_v2.2.1.zip) = 897401 bytes
-BLAKE2s (github.com_ebitengine_purego_@v_v0.10.1.mod) = b3f159c6da0f8477a076feb54efd909db2fac7b38c807d8093fb58a1e34f3481
-SHA512 (github.com_ebitengine_purego_@v_v0.10.1.mod) = d3908e9afd58320eed21d15fd0442cc918efb456e946e8985a6e2312570b0926e424ebb1ddf24910ad1dcadde870cc69739571456066619662abdcf82059a158
-Size (github.com_ebitengine_purego_@v_v0.10.1.mod) = 45 bytes
-BLAKE2s (github.com_ebitengine_purego_@v_v0.10.1.zip) = e3989c407a36056db3d853f2dc2cccd77406e3610148110d5a0b53e651a39f88
-SHA512 (github.com_ebitengine_purego_@v_v0.10.1.zip) = 75048a1feb4630d36febc4e1309e96b0ba07da41fd68a153e52ffb31a7d317cef596554e1ef49675583a0f52831eb8756c9de94f36a575cbff93b834a1d69e84
-Size (github.com_ebitengine_purego_@v_v0.10.1.zip) = 219128 bytes
+BLAKE2s (github.com_ebitengine_purego_@v_v0.10.2.mod) = b3f159c6da0f8477a076feb54efd909db2fac7b38c807d8093fb58a1e34f3481
+SHA512 (github.com_ebitengine_purego_@v_v0.10.2.mod) = d3908e9afd58320eed21d15fd0442cc918efb456e946e8985a6e2312570b0926e424ebb1ddf24910ad1dcadde870cc69739571456066619662abdcf82059a158
+Size (github.com_ebitengine_purego_@v_v0.10.2.mod) = 45 bytes
+BLAKE2s (github.com_ebitengine_purego_@v_v0.10.2.zip) = 94294b36defbb2cecf3ebda1fa3ad7c46bb6048ca8939e3e339af094cea89c50
+SHA512 (github.com_ebitengine_purego_@v_v0.10.2.zip) = 9791bde43bf822d6cc214062fb75d284ca0e92216ab23890d9d7f4680a4045e0daebb80b01e159ebd73554d94ccbd852f6ba3f2788c757778083f9506eef336b
+Size (github.com_ebitengine_purego_@v_v0.10.2.zip) = 219238 bytes
 BLAKE2s (github.com_emmansun_base64_@v_v0.10.0.mod) = 0c322bc6d77c836664a63f78d85b19b81b4e964f6b5e41893b2ee0a179bd2f98
 SHA512 (github.com_emmansun_base64_@v_v0.10.0.mod) = 49b90c837aee8ddf5bd4077467fed5304f8f3b141b7ea74ba8adc8a604994c3af6dc1ed1b91bd6c79ae58202a0a9c32e8077f2b814a20a89ac1416b3d8fb9c81
 Size (github.com_emmansun_base64_@v_v0.10.0.mod) = 79 bytes
@@ -228,9 +228,9 @@ Size (howett.net_plist_@v_v1.0.1.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.1.zip) = 43dd213cd6f655b89cb6074acf972bc2e134c71fb991af59c14ebaf6747c2545
 SHA512 (howett.net_plist_@v_v1.0.1.zip) = 4f8b07bebf808ff4bbc1b2fdcf501d60731e26e048c1e7e2f21cfb9816fab8937e9f1915b44ff693a6a5b0f91cff470f40c4d7a71d7728afe2d0a3bca99432cd
 Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
-BLAKE2s (kitty-0.48.1.tar.xz) = 5ebc08dd678b50a265917f60e4bf2e668a3e30cd24f9c2b7e78f24afd5da623c
-SHA512 (kitty-0.48.1.tar.xz) = e8583db669aea92a13a27ff1809ec58ffc0cf143709a9f6959307418b24287fe2406ac1920bf1b034e01f50dc09821e0e72a72fec83c5f7a773a03239a47e57a
-Size (kitty-0.48.1.tar.xz) = 11747820 bytes
+BLAKE2s (kitty-0.48.2.tar.xz) = b7c77649a2c57cf5875f1cb76cd00fcf0790c399907b5e94c13aec953126b9fe
+SHA512 (kitty-0.48.2.tar.xz) = 3db48d38f47e92c37b715955afb60dbeb7e1f70c0911f4ed37491b07c701f9819bea561efd0f99804e5b6358e31ec74d971020c8bea0f587185cec71ba5c183f
+Size (kitty-0.48.2.tar.xz) = 11751860 bytes
 SHA1 (patch-glfw_wl__client__side__decorations.c) = c30259e0833cfe054e5e532cad58216243c7b773
 SHA1 (patch-glfw_wl__init.c) = 3dc143fba1a5fa5c15563aecc027cd6af872a0e0
 SHA1 (patch-kitty_binary.h) = e8e6e9b16a1bd7d0304bca919ad10dd932142da5

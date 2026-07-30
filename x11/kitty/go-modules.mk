@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.21 2026/07/19 00:35:25 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.22 2026/07/30 18:50:14 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.zip
@@ -10,8 +10,8 @@ GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.12.0.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.12.0.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.2.1.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.2.1.zip
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.1.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.1.zip
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.2.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.2.zip
 GO_MODULE_FILES+=	github.com/emmansun/base64/@v/v0.10.0.mod
 GO_MODULE_FILES+=	github.com/emmansun/base64/@v/v0.10.0.zip
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.2.6.mod
