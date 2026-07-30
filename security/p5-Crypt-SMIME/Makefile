@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/07/16 19:04:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/07/30 22:11:19 wen Exp $
 
-DISTNAME=	Crypt-SMIME-0.31
+DISTNAME=	Crypt-SMIME-0.33
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIKAGE/}
 
