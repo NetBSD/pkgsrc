@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2026/07/01 03:50:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.52 2026/07/30 12:28:07 jperkin Exp $
 
 DISTNAME=	xmlto-0.0.29
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
+DEPENDS+=	libpaper>=2.2.8:../../print/libpaper
 DEPENDS+=	libxml2>=2.6.2:../../textproc/libxml2
 
 USE_GCC_RUNTIME=	yes
@@ -22,6 +23,7 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ENV+=		GCP=${TOOLS_PATH.cp}
 CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
+CONFIGURE_ENV+=		PAPER_CONF=${PREFIX}/bin/paperconf
 CONFIGURE_ENV+=		TAIL=${TOOLS_PATH.tail}
 CONFIGURE_ENV+=		XMLTO_BASH_PATH=${TOOLS_PATH.sh}
 
