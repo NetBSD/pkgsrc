@@ -1,8 +1,10 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm,v 1.3 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm,v 1.4 2026/07/30 12:36:00 gdt Exp $
 
-Adjust for (more) modern perl.
+Add a comment leftover from a previous debugging attempt.
+This entire patchfile is a deletion candidate.
 
-Not submitted upstream because pkgsrc is woefully out of date.
+Not submitted upstream because pkgsrc does not have a coherent story
+about this proposed patch.
 
 --- scripts/ZoneMinder/lib/ZoneMinder/Memory/Shared.pm.orig	2023-02-23 21:44:01.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/Memory/Shared.pm
