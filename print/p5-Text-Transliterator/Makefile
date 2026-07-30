@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/07/16 19:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/07/30 10:48:32 wen Exp $
 
-DISTNAME=	Text-Transliterator-1.04
+DISTNAME=	Text-Transliterator-1.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
