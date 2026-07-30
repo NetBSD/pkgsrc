@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4836 2026/07/30 11:04:30 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4837 2026/07/30 11:22:13 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7158,3 +7158,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-OpenSSL-AES to 0.23 [wen 2026-07-30]
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.41 [wen 2026-07-30]
 	Updated security/p5-Crypt-PasswdMD5 to 1.46 [wen 2026-07-30]
+	Updated textproc/groff to 1.24.1nb4 [jperkin 2026-07-30]
