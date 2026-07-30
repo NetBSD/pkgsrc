@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4852 2026/07/30 21:24:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4853 2026/07/30 21:49:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7198,3 +7198,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/simp to 3.10.4 [pin 2026-07-30]
 	Updated shells/oh-my-posh to 30.0.0 [pin 2026-07-30]
 	Updated sysutils/dua-cli to 2.39.1 [pin 2026-07-30]
+	Updated www/mediawiki to 1.46.0 [wen 2026-07-30]
