@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2024/04/29 07:57:02 wen Exp $
+$NetBSD: distinfo,v 1.19 2026/07/30 22:57:00 wen Exp $
 
-BLAKE2s (GnuPG-Interface-1.04.tar.gz) = 2d4f62fde1a992997e0a3ac871fd2051359f247e6ff782fca044ad2455a07d7a
-SHA512 (GnuPG-Interface-1.04.tar.gz) = 27394f08210aa1581c91640aa18006f1946098cfbe13870706cbc910de39dfa80985d265e4541cdebee70149d59c89361297f76aab0417bf904cf47ba10d1afd
-Size (GnuPG-Interface-1.04.tar.gz) = 77435 bytes
+BLAKE2s (GnuPG-Interface-1.07.tar.gz) = 2787ed053ee1aaaf09337546805dcdc61e345a286c39e11848b1dddf5096410b
+SHA512 (GnuPG-Interface-1.07.tar.gz) = be6e827ba5ef543f650d170846c523a2b68e59151b19ad05f854aed9e7474054797668d50415e4ce03749bb4a599762cce03b844532f650400a30dd7a0cd341b
+Size (GnuPG-Interface-1.07.tar.gz) = 77684 bytes
 SHA1 (patch-Makefile.PL) = db48ace347c859d561b4bb4f4ab0a7af82b15e41
