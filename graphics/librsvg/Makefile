@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2026/07/09 19:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2026/07/30 09:53:28 jperkin Exp $
 
 DISTNAME=	librsvg-2.62.3
 PKGREVISION=	1
@@ -26,6 +26,8 @@ PYTHON_FOR_BUILD_ONLY=		tool
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo}/lib
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/output/rsvg/librsvg-2.0.def
 LDFLAGS.SunOS+=			-lsocket
 
 PKGCONFIG_OVERRIDE=		output/meson-private/librsvg-2.0.pc
