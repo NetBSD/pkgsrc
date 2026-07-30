@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4844 2026/07/30 15:37:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4845 2026/07/30 15:40:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7190,3 +7190,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-actiontext80 to 8.0.5.1 [taca 2026-07-30]
 	Updated www/ruby-rails80 to 8.0.5.1 [taca 2026-07-30]
 	Updated net/samba4 to 4.24.5 [taca 2026-07-30]
+	Updated mail/rspamd to 4.1.4 [taca 2026-07-30]
