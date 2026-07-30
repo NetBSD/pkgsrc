@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2026/07/16 19:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/07/30 06:34:21 wen Exp $
 
-DISTNAME=	LaTeX-Driver-1.2.0
+DISTNAME=	LaTeX-Driver-1.3.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EH/EHUELS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/LaTeX-Driver
