@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2026/06/24 12:54:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.388 2026/07/30 22:05:05 jperkin Exp $
 
 VERREL=		26.2.4
 VERRC=		2
@@ -198,15 +198,9 @@ CXXFLAGS.NetBSD+=	-DNO_CPLUSPLUS_ALLOCA
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 CONFIGURE_ENV+=		ANT_LIB=${PREFIX}/lib/java/ant
 
-MAKE_JOBS_SAFE=		no # --with-parallelism conficts with -jN
-.if !empty(MAKE_JOBS.${PKGPATH})
-CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS.${PKGPATH}}
-.elif !empty(MAKE_JOBS)
-CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS}
-.else
-CONFIGURE_ARGS+=	--with-parallelism=1
-.endif
-
+# Use --with-parallelism instead of -j
+MAKE_JOBS_METHOD=	manual
+CONFIGURE_ARGS+=	--with-parallelism=${_MAKE_JOBS_N}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
