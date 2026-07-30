@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/07/29 06:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/07/30 16:26:08 taca Exp $
 
 DISTNAME=	osticket-v1.18.3
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=osTicket/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -25,14 +24,15 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
-PHP_VERSIONS_ACCEPTED=	74 82 83 # does not support 5.6, 84+ unsupported because of php-imap
+PHP_REQUIRE_MODULE=	imap
+
+PHP_VERSIONS_ACCEPTED=	82 83 84 # does not support 5.6
 
 REPLACE_PHP+=	manage.php
 REPLACE_PHP+=	setup/scripts/api_ticket_create.php
@@ -89,5 +89,5 @@ do-install:
 
 .include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
