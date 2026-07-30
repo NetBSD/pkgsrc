@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4854 2026/07/30 21:50:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4855 2026/07/30 21:59:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.39.1 [pin 2026-07-30]
 	Updated www/mediawiki to 1.46.0 [wen 2026-07-30]
 	Updated devel/py-filelock to 3.32.2 [wiz 2026-07-30]
+	Updated devel/p5-IO-Prompter to 0.005004nb2 [wiz 2026-07-30]
