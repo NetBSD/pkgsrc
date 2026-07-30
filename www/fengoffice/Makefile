@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/02/11 08:18:58 taca Exp $
+# $NetBSD: Makefile,v 1.49 2026/07/30 16:17:52 taca Exp $
 
 DISTNAME=	fengoffice-${FO_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:C/.rc$/rc1/}
@@ -19,11 +19,10 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
+
+PHP_REQUIRE_MODULE=	imap
 
 FO_VERSION=	3.11.13.11
-
-PHP_VERSIONS_INCOMPATIBLE=	84 85 # php-imap
 
 USE_TOOLS=	pax
 NO_BUILD=	yes
@@ -66,5 +65,5 @@ do-install:
 	cd ${WRKSRC}; ${FIND} . -type f \! -name '*.orig' -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${FO_DIR}
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
