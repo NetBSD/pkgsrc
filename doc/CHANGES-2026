@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4856 2026/07/30 22:13:49 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4857 2026/07/30 22:17:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7202,3 +7202,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 3.32.2 [wiz 2026-07-30]
 	Updated devel/p5-IO-Prompter to 0.005004nb2 [wiz 2026-07-30]
 	Updated security/p5-Crypt-SMIME to 0.33 [wen 2026-07-30]
+	Updated security/p5-Digest-Perl-MD5 to 1.91 [wen 2026-07-30]
