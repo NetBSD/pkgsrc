@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4841 2026/07/30 13:18:41 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4842 2026/07/30 15:21:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7163,3 +7163,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xmlto to 0.0.29nb3 [jperkin 2026-07-30]
 	Updated security/zoneminder to 1.38.3nb1 [gdt 2026-07-30]
 	Updated www/moodle to 5.2.1 [wen 2026-07-30]
+	Updated devel/ruby-activesupport72 to 7.2.3.2 [taca 2026-07-30]
+	Updated devel/ruby-activemodel72 to 7.2.3.2 [taca 2026-07-30]
+	Updated devel/ruby-activejob72 to 7.2.3.2 [taca 2026-07-30]
+	Updated databases/ruby-activerecord72 to 7.2.3.2 [taca 2026-07-30]
+	Updated www/ruby-actionview72 to 7.2.3.2 [taca 2026-07-30]
+	Updated www/ruby-actionpack72 to 7.2.3.2 [taca 2026-07-30]
+	Updated www/ruby-actioncable72 to 7.2.3.2 [taca 2026-07-30]
+	Updated devel/ruby-railties72 to 7.2.3.2 [taca 2026-07-30]
+	Updated devel/ruby-activestorage72 to 7.2.3.2 [taca 2026-07-30]
+	Updated mail/ruby-actionmailer72 to 7.2.3.2 [taca 2026-07-30]
+	Updated mail/ruby-actionmailbox72 to 7.2.3.2 [taca 2026-07-30]
+	Updated textproc/ruby-actiontext72 to 7.2.3.2 [taca 2026-07-30]
+	Updated www/ruby-rails72 to 7.2.3.2 [taca 2026-07-30]
