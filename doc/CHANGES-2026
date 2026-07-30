@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4849 2026/07/30 18:50:46 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4850 2026/07/30 21:21:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7195,3 +7195,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/php-mailparse to 3.2.0 [taca 2026-07-30]
 	Updated www/php-http4 to 4.3.1 [taca 2026-07-30]
 	Updated x11/kitty to 0.48.2 [ktnb 2026-07-30]
+	Updated graphics/simp to 3.10.4 [pin 2026-07-30]
