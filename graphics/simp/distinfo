@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/03/27 22:38:33 tnn Exp $
+$NetBSD: distinfo,v 1.22 2026/07/30 21:20:53 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.32.crate) = a1bd2a114f0cae7af4e1dc5f86421476ddc0abc68c8cc8f85baffa7375db8c88
 SHA512 (ab_glyph-0.2.32.crate) = aa28fc87201abc6cd14bfb2371420be102e82f9317d952db5e0f576e867dcee61e3a54d65e39489459e3dd238baef77b46418ff20a2a9c9cf9e4a6ddf1277fb0
@@ -1104,9 +1104,9 @@ Size (simd-adler32-0.3.8.crate) = 17294 bytes
 BLAKE2s (simd_helpers-0.1.0.crate) = 7c7e676c5f45e81e76270d43e706d7394caf3ffee7f4d17f445af5f8e7fb0ec6
 SHA512 (simd_helpers-0.1.0.crate) = 20577ab7615f955ee3a88c617630fc6c88703d455629d5b3838a551baebbeae8c64a2587871ec5a4fb6bc203945cace50593a238e4765b5fa2313bac30237ca7
 Size (simd_helpers-0.1.0.crate) = 1527 bytes
-BLAKE2s (simp-3.10.3.tar.gz) = 296259bb6bce9c5684785c1760760fc5a712f3306610fde2a965528f7bce8eb7
-SHA512 (simp-3.10.3.tar.gz) = af44e638207c03c7731918e4c2d6e5884e1ad8013418e1c598190da0a7f91ca9a98a82571464ee52de0630535172a540561c6d31ed4266e8ea7bd49999ffd3e5
-Size (simp-3.10.3.tar.gz) = 151367 bytes
+BLAKE2s (simp-3.10.4.tar.gz) = c33e936e5bb64ddbbb0c5329fcae29eddb7e3f2921a108536816139da7562dd9
+SHA512 (simp-3.10.4.tar.gz) = a41630a34fab01621792e04a780edd78c079fc54c80fb4ed273d7c2ed632d7b603d82b00e10411324c0d81e1effd4d09f664fc69e260f370eac45a11befd3eb6
+Size (simp-3.10.4.tar.gz) = 151394 bytes
 BLAKE2s (simplecss-0.2.2.crate) = 82f2af9f63722b4517096fa603a4e59f12f91bc1347dd2baef8e374caa1753b2
 SHA512 (simplecss-0.2.2.crate) = b3ef9f211cdda5651ff6fcfecd1def43209404e56507272b02c2563284acd14b9800757f3afc55433b2814279770dcadaf875e9463a9701df23148665cdd2ac0
 Size (simplecss-0.2.2.crate) = 22136 bytes
