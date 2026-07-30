@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.99 2026/07/24 15:48:19 taca Exp $
+# $NetBSD: Makefile,v 1.100 2026/07/30 21:48:06 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
-PKGREVISION=	4
 CATEGORIES=	www
-MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/
+MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/ \
+		http://distcache.freebsd.org/local-distfiles/wen/
 
-MAINTAINER=	wen@NetBSD.org
+MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
@@ -14,7 +14,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 
-PHP_VERSION_ACCEPTED=	82 83
+#PHP_VERSION_ACCEPTED=	82 83
 
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
@@ -23,8 +23,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-VER=			1.42
-PVER=			3
+VER=			1.46
+PVER=			0
 
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 

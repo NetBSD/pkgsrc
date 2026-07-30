@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.68 2024/10/04 12:52:58 wen Exp $
+$NetBSD: distinfo,v 1.69 2026/07/30 21:48:06 wen Exp $
 
-BLAKE2s (mediawiki-1.42.3.tar.gz) = e910a16ff48f5bf0b7809d7ecd33539896b41e0ad20a7dba4043632bc21a3e72
-SHA512 (mediawiki-1.42.3.tar.gz) = 3d8e65cf58df61ab9d9d4e90751d795c22215a91ae670687480a274a036cf124fa0bfb9487c50ca8c4a16f78e74976509f94537533321769853e583a2dbfeae2
-Size (mediawiki-1.42.3.tar.gz) = 89632118 bytes
+BLAKE2s (mediawiki-1.46.0.tar.gz) = f7cce56449cd1cbf864155e84882e91e7843f78bb43db096a3823c80471220df
+SHA512 (mediawiki-1.46.0.tar.gz) = 7dd1cb2aaf27c18f35f4fb713244d8a129813c3c674be2d312fe0d1bcba8842abca1b5605952d8a50a67f4c026e8ea8af4635a24f40572e7492d9aa0fd7167e2
+Size (mediawiki-1.46.0.tar.gz) = 98615738 bytes
