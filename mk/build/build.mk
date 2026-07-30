@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.34 2020/06/12 17:33:23 rillig Exp $
+# $NetBSD: build.mk,v 1.35 2026/07/30 16:16:31 jperkin Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -16,6 +16,15 @@
 #
 # BUILD_TARGET is the target from ${MAKE_FILE} that should be invoked
 #	to build the sources.
+#
+# MAKE_JOBS_METHOD
+#	How the MAKE_JOBS value should be passed to the build.  The vast
+#	majority of packages use the "-j" argument to make, and so the
+#	default is "make-j".  This variable is left deliberately open-ended
+#	to allow for future build system support.  If a package has its own
+#	method for using MAKE_JOBS, it should set this value to "manual".
+#
+#	Keywords: parallel
 #
 # MAKE_JOBS_SAFE
 #	Whether the package supports parallel builds. If set to yes,
@@ -40,13 +49,15 @@
 _VARGROUPS+=		build
 _DEF_VARS.build=	_MAKE_JOBS_N
 _USER_VARS.build=	MAKE_JOBS BUILD_ENV_SHELL
-_PKG_VARS.build=	MAKE_ENV MAKE_FLAGS BUILD_MAKE_FLAGS BUILD_TARGET MAKE_JOBS_SAFE
+_PKG_VARS.build=	MAKE_ENV MAKE_FLAGS BUILD_MAKE_FLAGS BUILD_TARGET
+_PKG_VARS.build+=	MAKE_JOBS_METHOD MAKE_JOBS_SAFE
 _SYS_VARS.build=	BUILD_MAKE_CMD
 _SORTED_VARS.build=	*_ENV
 _LISTED_VARS.build=	*_FLAGS *_CMD
 
 BUILD_MAKE_FLAGS?=	# none
 BUILD_TARGET?=		all
+MAKE_JOBS_METHOD?=	make-j
 
 BUILD_MAKE_CMD= \
 	${PKGSRC_SETENV} ${MAKE_ENV}					\
@@ -54,14 +65,18 @@ BUILD_MAKE_CMD= \
 			${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}		\
 			-f ${MAKE_FILE}
 
-.if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
+.if ${MAKE_JOBS_SAFE:U:tl} == no
 _MAKE_JOBS=	# nothing
 _MAKE_JOBS_N=	1
 .elif defined(MAKE_JOBS.${PKGPATH})
+.  if ${MAKE_JOBS_METHOD} == "make-j"
 _MAKE_JOBS=	-j${MAKE_JOBS.${PKGPATH}}
+.  endif
 _MAKE_JOBS_N=	${MAKE_JOBS.${PKGPATH}}
 .elif defined(MAKE_JOBS)
+.  if ${MAKE_JOBS_METHOD} == "make-j"
 _MAKE_JOBS=	-j${MAKE_JOBS}
+.  endif
 _MAKE_JOBS_N=	${MAKE_JOBS}
 .else
 _MAKE_JOBS_N=	1
