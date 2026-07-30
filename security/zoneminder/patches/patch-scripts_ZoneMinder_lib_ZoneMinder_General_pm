@@ -1,23 +1,28 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.4 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.5 2026/07/30 12:36:00 gdt Exp $
 
-Perl doesn't really support "> /dev/null", so just capture into $output.
+Comment that appears no longer relevant, probably because upstream has
+avoided the problem it was about.  Deletion  candidate.
 
-% ktruss -i perl -e 'qx(does-not-exist >/dev/null 2>&1);'|egrep 'dup2.*2'
-does-not-exist: not found
-% ktruss -i perl -e 'qx(does-not-exist 2>&1);'|egrep 'dup2.*2'           
- 16954      1 perl     dup2(0x1, 0x2)              = 2
+  Perl doesn't really support "> /dev/null", so just capture into $output.
 
-The problem is that, whilst Perl supports 2>&1 internally (and does not use
-the shell at all) if there is no other redirection, it does not support file
-redirection - it defers that (and therefore necessarily must also defer the
-stderr redirection) to the shell.  If the system's shell happens to report
-"Not found" errors before redirection is processed (E.g. NetBSD shell) then
-the stderr redirection is happening too late to be captured.
+  % ktruss -i perl -e 'qx(does-not-exist >/dev/null 2>&1);'|egrep 'dup2.*2'
+  does-not-exist: not found
+  % ktruss -i perl -e 'qx(does-not-exist 2>&1);'|egrep 'dup2.*2'           
+   16954      1 perl     dup2(0x1, 0x2)              = 2
 
-That leads to unintended errors reported on stderr - primarily if sudo is not
-installed on the system, or not in the $PATH.
+  The problem is that, whilst Perl supports 2>&1 internally (and does not use
+  the shell at all) if there is no other redirection, it does not support file
+  redirection - it defers that (and therefore necessarily must also defer the
+  stderr redirection) to the shell.  If the system's shell happens to report
+  "Not found" errors before redirection is processed (E.g. NetBSD shell) then
+  the stderr redirection is happening too late to be captured.
+
+  That leads to unintended errors reported on stderr - primarily if sudo is not
+  installed on the system, or not in the $PATH.
 
 Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
+
+\todo Assess and report upstream.
 
 --- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2023-02-23 21:44:01.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/General.pm

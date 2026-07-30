@@ -1,28 +1,44 @@
-$NetBSD: patch-src_zm_signal_cpp,v 1.4 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-src_zm_signal_cpp,v 1.5 2026/07/30 12:36:00 gdt Exp $
 
 Don't assume machine-dependent IP register details are available for any
 platform except Linux.  Only Linux is sure to have this style of mcontext_t.
+Instead, add an #else for NetBSD.
 
-Resolves build on systems that have ucontext_t but an mcontext_t that
-doesn't look like Linux.
+\todo File upstream.
 
---- src/zm_signal.cpp.orig	2018-12-08 14:22:36.000000000 +0000
+--- src/zm_signal.cpp.orig	2026-05-28 12:42:49.000000000 +0000
 +++ src/zm_signal.cpp
-@@ -66,13 +66,17 @@ RETSIGTYPE zm_die_handler(int signal)
- 	    #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__) 
- 		ip = (void *)(uc->uc_mcontext.mc_rip);
- 	    #else
-+		#if defined(__linux__)
- 		ip = (void *)(uc->uc_mcontext.gregs[REG_RIP]);
-+		#endif
- 	    #endif
-     #else
- 	    #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
- 		ip = (void *)(uc->uc_mcontext.mc_eip);
- 	    #else
-+		#if defined(__linux__)
- 		ip = (void *)(uc->uc_mcontext.gregs[REG_EIP]);
-+		#endif
- 	    #endif
-     #endif				// defined(__x86_64__)
- 
+@@ -118,6 +118,8 @@ RETSIGTYPE zm_die_handler(int signal)
+ #if defined(__x86_64__)
+ #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
+     ip = (void *)(uc->uc_mcontext.mc_rip);
++#elif defined(__NetBSD__)
++    ip = (void *) _UC_MACHINE_PC(uc);
+ #elif defined(__OpenBSD__)
+     ip = (void *)(uc->sc_rip);
+ #else
+@@ -126,18 +128,24 @@ RETSIGTYPE zm_die_handler(int signal)
+ #elif defined(__i386__)
+ #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
+     ip = (void *)(uc->uc_mcontext.mc_eip);
++#elif defined(__NetBSD__)
++    ip = (void *) _UC_MACHINE_PC(uc);
+ #else
+     ip = (void *)(uc->uc_mcontext.gregs[REG_EIP]);
+ #endif
+ #elif defined(__aarch64__)
+ #if defined(__FreeBSD__)
+     ip = (void *)(uc->uc_mcontext.mc_gpregs.gp_elr);
++#elif defined(__NetBSD__)
++    ip = (void *) _UC_MACHINE_PC(uc);
+ #else
+     ip = (void *)(uc->uc_mcontext.pc);
+ #endif
+ #elif defined(__arm__)
+ #if defined(__FreeBSD__)
+     ip = (void *)(uc->uc_mcontext.__gregs[_REG_PC]);
++#elif defined(__NetBSD__)
++    ip = (void *) _UC_MACHINE_PC(uc);
+ #else
+     ip = (void *)(uc->uc_mcontext.arm_pc);
+ #endif

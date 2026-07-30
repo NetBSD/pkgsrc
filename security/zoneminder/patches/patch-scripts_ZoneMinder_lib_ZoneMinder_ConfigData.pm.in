@@ -1,10 +1,10 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in,v 1.2 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in,v 1.3 2026/07/30 12:36:00 gdt Exp $
 
-Inhibit a couple of "phone home" options that are enabled by default.  These
-should be opt-in rather than opt-out.
+Disable check-for-updates ("phone home") by default.  pkgsrc doctrine is
+that phone-home behavior, unless opted into by the user, is a bug.
 
-The ConfigData.pm module determines what the default setting is for new
-options during an upgrade as well as on an initial installation.
+\todo Perhaps discuss with upstream, but this is a difference in
+judgement rather than a clear bug.
 
 --- scripts/ZoneMinder/lib/ZoneMinder/ConfigData.pm.in.orig	2018-12-08 14:22:36.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/ConfigData.pm.in

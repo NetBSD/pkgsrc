@@ -1,12 +1,14 @@
-$NetBSD: patch-src_zm__utils.cpp,v 1.4 2024/12/01 13:49:48 gdt Exp $
+$NetBSD: patch-src_zm__utils.cpp,v 1.5 2026/07/30 12:36:00 gdt Exp $
 
-Avoid assuming linux on arm.  For now, assume neon.
+Fix time types.
 
-Fix time types (sizes).
+Hack around arm detection woes.
 
---- src/zm_utils.cpp.orig	2023-02-23 21:44:01.000000000 +0000
+\todo Send time upstream and fix arm problems.
+
+--- src/zm_utils.cpp.orig	2026-05-28 12:42:49.000000000 +0000
 +++ src/zm_utils.cpp
-@@ -183,7 +183,7 @@ std::string TimevalToString(timeval tv) 
+@@ -215,7 +215,7 @@ std::string TimevalToString(timeval tv) 
      return "";
    }
  
@@ -15,21 +17,14 @@ Fix time types (sizes).
  }
  
  /* Detect special hardware features, such as SIMD instruction sets */
-@@ -231,13 +231,15 @@ void HwCapsDetect() {
-   unsigned long auxval = 0;
+@@ -264,8 +264,8 @@ void HwCapsDetect() {
    elf_aux_info(AT_HWCAP, &auxval, sizeof(auxval));
    if (auxval & HWCAP_NEON) {
--  #error Unsupported OS.
--  #endif
+ #else
+-  {
+-#error Unsupported OS.
++#   warning COULD NOT DETECT NEON - ASSUMING NOT PRESENT
++    if (0) {
+ #endif
      Debug(1,"Detected ARM (AArch32) processor with Neon");
      neonversion = 1;
-   } else {
-     Debug(1,"Detected ARM (AArch32) processor");
-   }
-+#  else
-+    Debug(1,"!!ASSUMING!! ARM (AArch32) processor with Neon");
-+    neonversion = 1;
-+#  endif
- #elif defined(__aarch64__)
-   // ARM processor in 64bit mode
-   // Neon is mandatory, no need to check for it
