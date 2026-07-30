@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4838 2026/07/30 12:04:21 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4839 2026/07/30 12:28:22 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7160,3 +7160,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Crypt-PasswdMD5 to 1.46 [wen 2026-07-30]
 	Updated textproc/groff to 1.24.1nb4 [jperkin 2026-07-30]
 	Updated lang/sbcl to 2.6.7 [ktnb 2026-07-30]
+	Updated textproc/xmlto to 0.0.29nb3 [jperkin 2026-07-30]
