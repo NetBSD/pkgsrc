@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4871 2026/07/31 10:47:34 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4872 2026/07/31 11:31:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7217,3 +7217,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/homebank to 5.10.2 [wen 2026-07-31]
 	Updated security/p5-Net-DNS-SEC to 1.27 [wen 2026-07-31]
 	Updated www/drupal11 to 11.4.4 [wen 2026-07-31]
+	Updated net/coturn to 4.16.0 [gdt 2026-07-31]
