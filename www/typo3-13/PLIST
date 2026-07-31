@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/06/09 13:11:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/07/31 01:18:52 wen Exp $
 share/examples/typo3/typo3.conf
 share/typo3/CODE_OF_CONDUCT.md
 share/typo3/CONTRIBUTING.md
@@ -12685,7 +12685,6 @@ share/typo3/vendor/guzzlehttp/guzzle/LICENSE
 share/typo3/vendor/guzzlehttp/guzzle/README.md
 share/typo3/vendor/guzzlehttp/guzzle/UPGRADING.md
 share/typo3/vendor/guzzlehttp/guzzle/composer.json
-share/typo3/vendor/guzzlehttp/guzzle/package-lock.json
 share/typo3/vendor/guzzlehttp/guzzle/src/BodySummarizer.php
 share/typo3/vendor/guzzlehttp/guzzle/src/BodySummarizerInterface.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Client.php
