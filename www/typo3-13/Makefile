@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2026/07/31 01:18:52 wen Exp $
+# $NetBSD: Makefile,v 1.16 2026/07/31 08:52:20 wen Exp $
 
 DISTNAME=	typo3_src-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://cdn.typo3.com/typo3/${VER}/
 
