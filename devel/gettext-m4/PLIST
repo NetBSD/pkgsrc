@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/07/21 12:55:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/07/31 13:56:38 kikadf Exp $
 share/aclocal/build-to-host.m4
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
@@ -7,6 +7,7 @@ share/aclocal/gettext.m4
 share/aclocal/glibc2.m4
 share/aclocal/host-cpu-c-abi.m4
 share/aclocal/hostname.m4
+share/aclocal/iconv.m4
 share/aclocal/lcmessage.m4
 share/aclocal/lib-ld.m4
 share/aclocal/lib-link.m4
