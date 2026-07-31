@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4874 2026/07/31 13:57:07 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.4875 2026/07/31 22:25:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7220,3 +7220,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/coturn to 4.16.0 [gdt 2026-07-31]
 	Updated editors/vim-share to 9.2.0859 [morr 2026-07-31]
 	Updated devel/gettext-m4 to 1.0nb1 [kikadf 2026-07-31]
+	Updated devel/feluda to 1.15.0 [pin 2026-07-31]
