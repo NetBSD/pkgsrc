@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/06/22 15:08:22 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/07/31 22:26:50 pin Exp $
 
-DISTNAME=	eilmeldung-1.6.0
+DISTNAME=	eilmeldung-1.7.1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=christo-auer/}
 
@@ -17,9 +17,9 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.97.0-beta.2
+#RUST_REQ=	1.98.0-beta.5
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.97.0-beta.2 on amd64
+#This package is confirmed to build with Rust 1.98.0-beta.5 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
 
