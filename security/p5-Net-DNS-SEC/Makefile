@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2026/07/16 19:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/07/31 10:32:58 wen Exp $
 
-DISTNAME=		Net-DNS-SEC-1.26
+DISTNAME=		Net-DNS-SEC-1.27
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		security net perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NL/NLNETLABS/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.net-dns.org/
