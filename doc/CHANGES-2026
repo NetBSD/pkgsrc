@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4861 2026/07/31 01:33:17 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4862 2026/07/31 04:47:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7207,3 +7207,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wordpress to 7.0.2 [wen 2026-07-30]
 	Updated www/typo3-13 to 13.4.33 [wen 2026-07-31]
 	Added www/typo3-14 version 14.3.5 [wen 2026-07-31]
+	Updated lang/php82 to 8.2.33 [taca 2026-07-31]
