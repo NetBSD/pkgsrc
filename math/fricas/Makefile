@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2025/11/17 11:01:07 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/07/31 06:58:29 wen Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-full
-PKGNAME=		fricas-1.3.5
-PKGREVISION=		2
+PKGNAME=		fricas-1.3.13
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
