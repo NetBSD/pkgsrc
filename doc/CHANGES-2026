@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4863 2026/07/31 04:49:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4864 2026/07/31 04:52:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7209,3 +7209,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/typo3-14 version 14.3.5 [wen 2026-07-31]
 	Updated lang/php82 to 8.2.33 [taca 2026-07-31]
 	Updated lang/php83 to 8.3.33 [taca 2026-07-31]
+	Updated lang/php84 to 8.4.24 [taca 2026-07-31]
