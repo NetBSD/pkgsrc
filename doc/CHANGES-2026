@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4870 2026/07/31 10:33:41 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4871 2026/07/31 10:47:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7216,3 +7216,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-13 to 13.4.33nb1 [wen 2026-07-31]
 	Updated finance/homebank to 5.10.2 [wen 2026-07-31]
 	Updated security/p5-Net-DNS-SEC to 1.27 [wen 2026-07-31]
+	Updated www/drupal11 to 11.4.4 [wen 2026-07-31]
