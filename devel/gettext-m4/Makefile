@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2026/07/21 12:55:54 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/07/31 13:56:38 kikadf Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-m4-/}
+PKGREVISION=	1
 COMMENT=	Autoconf/automake m4 files for GNU NLS library
 LICENSE=	gnu-gpl-v2
 
@@ -18,6 +19,7 @@ GNULIB_M4_FILES=		\
 	codeset.m4		\
 	extern-inline.m4	\
 	host-cpu-c-abi.m4	\
+	iconv.m4		\
 	lcmessage.m4		\
 	lib-ld.m4		\
 	lib-link.m4		\
