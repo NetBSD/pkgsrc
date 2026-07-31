@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4859 2026/07/30 23:13:15 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4860 2026/07/31 01:20:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7205,3 +7205,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-Digest-Perl-MD5 to 1.91 [wen 2026-07-30]
 	Updated security/p5-GnuPG-Interface to 1.07 [wen 2026-07-30]
 	Updated www/wordpress to 7.0.2 [wen 2026-07-30]
+	Updated www/typo3-13 to 13.4.33 [wen 2026-07-31]
