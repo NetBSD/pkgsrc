@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/07/22 13:48:50 gdt Exp $
+$NetBSD: distinfo,v 1.6 2026/07/31 11:31:25 gdt Exp $
 
-BLAKE2s (coturn-4.15.0.tar.gz) = 4c5fe26a9b924758f0f0a06598c9e838f95700a443b1cd48b8c50cec30ec6711
-SHA512 (coturn-4.15.0.tar.gz) = 82fd0b1741dfb8e40a55e64f481fa9ab87b331262d397b3addc26ee4a0048420938868001b89facd8c8c2644082e6509e9b5f45a43819887e9eb5c3eaea8dd14
-Size (coturn-4.15.0.tar.gz) = 744080 bytes
+BLAKE2s (coturn-4.16.0.tar.gz) = 78c72de6ea23a968a844ea2a792c77903f77c586fdf0c20da5164ccd2728cdbc
+SHA512 (coturn-4.16.0.tar.gz) = 4cbf8dc8e18c288abed39a05898128ac683030a6b06c66f5452fcbaf16177db303d84e8bffa51e3a4006b3dfa587b4faa450e7aa2322bb6b41223db5241c4f76
+Size (coturn-4.16.0.tar.gz) = 788671 bytes
