@@ -2,7 +2,7 @@ Also use baserel for const pointers - after all, something in a const pointer
 might refer to something that gets relocated, so needs to be accessed baserel
 as well.
 
---- gcc/config/rs6000/rs6000.cc.orig	2026-07-08 22:28:47.622168096 +0000
+--- gcc/config/rs6000/rs6000.cc.orig	2026-08-01 15:24:38.007091067 +0000
 +++ gcc/config/rs6000/rs6000.cc
 @@ -20940,6 +20940,67 @@ rs6000_elf_select_rtx_section (machine_m
  static int
@@ -72,19 +72,17 @@ as well.
  /* For a SYMBOL_REF, set generic flags and then perform some
     target-specific processing.
  
-@@ -20972,32 +21032,36 @@ rs6000_elf_encode_section_info (tree dec
+@@ -20972,32 +21033,22 @@ rs6000_elf_encode_section_info (tree dec
      {
        rtx symbol = XEXP (rtl, 0);
  
 -      if(TREE_CODE (decl) == VAR_DECL &&
 -			!TREE_READONLY(decl) &&
 -			GET_CODE (symbol) == SYMBOL_REF)
-+      if (rs6000_decl_needs_baserel_p (decl) && GET_CODE (symbol) == SYMBOL_REF)
-         {
+-        {
 -          const char *name = DECL_SECTION_NAME (decl);
 -          if (name == NULL || (strncmp(name, ".ctors", 6) != 0 && strncmp(name, ".dtors", 6) != 0))
-+          switch (categorize_decl_for_section (decl, rs6000_elf_reloc_rw_mask()))
-             {
+-            {
 -              switch (categorize_decl_for_section (decl, rs6000_elf_reloc_rw_mask()))
 -                {
 -                  case SECCAT_DATA:
@@ -98,18 +96,10 @@ as well.
 -                  default:
 -                    break;
 -                }
-+              case SECCAT_DATA:
-+              case SECCAT_SDATA:
-+              case SECCAT_TDATA:
-+              case SECCAT_BSS:
-+              case SECCAT_SBSS:
-+              case SECCAT_TBSS:
-+                SYMBOL_REF_FLAGS (symbol) |= SYMBOL_FLAG_MORPHOS_BASEREL;
-+                break;
-+              default:
-+                break;
-             }
-         }
+-            }
+-        }
++      if (rs6000_decl_needs_baserel_p (decl) && GET_CODE (symbol) == SYMBOL_REF)
++        SYMBOL_REF_FLAGS (symbol) |= SYMBOL_FLAG_MORPHOS_BASEREL;
      }
  #endif
  }
@@ -127,6 +117,22 @@ as well.
  static inline bool
  compare_section_name (const char *section, const char *templ)
  {
+@@ -21022,6 +21073,15 @@ rs6000_elf_in_small_data_p (const_tree d
+   if (TREE_CODE (decl) == FUNCTION_DECL)
+     return false;
+ 
++#ifdef TARGET_BASEREL
++  /* We can never access .rodata via r13 on baserel. We move out pointers of
++     .rodata into .sdata so that that relocating per opener works. However, we
++     never move out non-pointers and those stay in .rodata - and are never
++     copied, so not reachable via r13. */
++  if (TARGET_BASEREL && TREE_READONLY (decl))
++    return false;
++#endif
++
+   if (VAR_P (decl) && DECL_SECTION_NAME (decl))
+     {
+       const char *section = DECL_SECTION_NAME (decl);
 --- gcc/config/rs6000/morphos.h.orig	2026-07-08 22:28:52.717136366 +0000
 +++ gcc/config/rs6000/morphos.h
 @@ -320,3 +320,6 @@ mclib=default|!mclib=*: %(endfile_morpho

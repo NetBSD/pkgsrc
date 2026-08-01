@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/07/13 22:04:11 js Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/01 15:45:19 js Exp $
 
 DISTNAME=	gcc-15.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 PKGNAME=	ppc-morphos-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
