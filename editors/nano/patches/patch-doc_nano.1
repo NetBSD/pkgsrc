@@ -1,19 +1,19 @@
-$NetBSD: patch-doc_nano.1,v 1.6 2026/02/07 16:25:05 schwarz Exp $
+$NetBSD: patch-doc_nano.1,v 1.7 2026/08/01 22:05:31 schwarz Exp $
 
 * Fix hard-coded paths.
 
---- doc/nano.1.orig	2026-02-04 08:49:22.000000000 +0100
-+++ doc/nano.1	2026-02-07 16:11:47.000000000 +0100
-@@ -435,7 +435,7 @@
+--- doc/nano.1.orig	2026-08-01 23:48:46.000000000 +0200
++++ doc/nano.1	2026-08-01 23:51:23.000000000 +0200
+@@ -471,7 +471,7 @@
  .BR nanorc (5)
  for more information on the possible contents of those files.
  .sp
--See \fI/usr/share/nano/\fR and \fI/usr/share/nano/extra/\fR
-+See \fI@PREFIX@/share/nano/\fR and \fI@PREFIX@/share/nano/extra/\fR
+-See \fI/usr/\:share/\:nano/\fR and \fI/usr/\:share/\:nano/\:extra/\fR
++See \fI@PREFIX@/\:share/\:nano/\fR and \fI@PREFIX@/\:share/\:nano/\:extra/\fR
  for available syntax-coloring definitions.
  
  .SH EXIT STATUS
-@@ -497,4 +497,4 @@
+@@ -537,4 +537,4 @@
  .SH SEE ALSO
  .BR nanorc (5)
  .sp

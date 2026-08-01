@@ -1,19 +1,19 @@
-$NetBSD: patch-doc_nanorc.5,v 1.5 2025/04/08 14:44:02 nia Exp $
+$NetBSD: patch-doc_nanorc.5,v 1.6 2026/08/01 22:05:31 schwarz Exp $
 
 * Fix hard-coded paths.
 
---- doc/nanorc.5.orig	2025-04-02 08:53:51.000000000 +0000
-+++ doc/nanorc.5
-@@ -25,7 +25,7 @@ nanorc \- GNU nano's configuration file
+--- doc/nanorc.5.orig	2026-08-01 23:53:29.000000000 +0200
++++ doc/nanorc.5	2026-08-01 23:56:23.000000000 +0200
+@@ -25,7 +25,7 @@
  The \fInanorc\fR files contain the default settings for \fBnano\fR,
- a small and friendly text editor.  During startup, if \fB\-\-rcfile\fR
+ a small and friendly text editor.  During startup, if \fB\-\-\%rcfile\fR
  is not given, \fBnano\fR reads two files: first the system-wide settings,
--from \fI/etc/nanorc\fR (the exact path might be different on your system),
+-from \fI/etc/\:nanorc\fR (the exact path might be different on your system),
 +from \fI@PKG_SYSCONFDIR@/nanorc\fR,
- and then the user-specific settings, either from \fI~/.nanorc\fR or from
- \fI$XDG_CONFIG_HOME/nano/nanorc\fR or from \fI~/.config/nano/nanorc\fR,
- whichever is encountered first.  If \fB\-\-rcfile\fR is given,
-@@ -1091,13 +1091,13 @@ To make \fBShift+Alt+C\fR copy the marke
+ and then the user-specific settings, either from \fI\[ti]/.nanorc\fR or from
+ \fI\%$XDG_CONFIG_HOME/\:nano/\:nanorc\fR or from \fI\[ti]\%/.config/\:nano/\:nanorc\fR,
+ whichever is encountered first.  If \fB\-\-\%rcfile\fR is given,
+@@ -1123,13 +1123,13 @@
  
  .SH FILES
  .TP
@@ -21,11 +21,11 @@ $NetBSD: patch-doc_nanorc.5,v 1.5 2025/04/08 14:44:02 nia Exp $
 +.I @PKG_SYSCONFDIR@/nanorc
  System-wide configuration file.
  .TP
- .IR ~/.nanorc " or " $XDG_CONFIG_HOME/nano/nanorc " or " ~/.config/nano/nanorc
+ .IR \[ti]/.nanorc " or " $XDG_CONFIG_HOME/nano/nanorc " or " \[ti]/.config/nano/nanorc
  Per-user configuration file.
  .TP
 -.I /usr/share/nano/*
 +.I @PREFIX@/share/nano/*
  Syntax definitions for the syntax coloring of common file types
- (and for less common file types in the \fIextra/\fR subdirectory).
+ (and for less common file types in the \fI\%extra/\fR subdirectory).
  
