@@ -601,6 +601,9 @@
 /* Define to 1 if you have the 'getresuid' function. */
 #undef HAVE_GETRESUID
 
+/* Define to 1 if you have the 'gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
 /* Define to 1 if you have the 'getvfsbyname' function. */
 #undef HAVE_GETVFSBYNAME
 
@@ -839,9 +842,6 @@
 /* Define to 1 if you have the 'mbr_uuid_to_id' function. */
 #undef HAVE_MBR_UUID_TO_ID
 
-/* Define to 1 if you have the <md5.h> header file. */
-#undef HAVE_MD5_H
-
 /* Define to 1 if you have the <membership.h> header file. */
 #undef HAVE_MEMBERSHIP_H
 
@@ -971,9 +971,6 @@
 /* Define to 1 if you have the 'richacl_set_file' function. */
 #undef HAVE_RICHACL_SET_FILE
 
-/* Define to 1 if you have the <ripemd.h> header file. */
-#undef HAVE_RIPEMD_H
-
 /* Define to 1 if you have the 'select' function. */
 #undef HAVE_SELECT
 
@@ -985,15 +982,6 @@
 
 /* Define to 1 if you have the 'setxattr' function. */
 #undef HAVE_SETXATTR
-
-/* Define to 1 if you have the <sha256.h> header file. */
-#undef HAVE_SHA256_H
-
-/* Define to 1 if you have the <sha512.h> header file. */
-#undef HAVE_SHA512_H
-
-/* Define to 1 if you have the <sha.h> header file. */
-#undef HAVE_SHA_H
 
 /* Define to 1 if you have the 'sigaction' function. */
 #undef HAVE_SIGACTION

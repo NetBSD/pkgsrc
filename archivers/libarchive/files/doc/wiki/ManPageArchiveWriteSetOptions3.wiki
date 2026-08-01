@@ -516,7 +516,21 @@ used when translating file names.
 </dd></dl> 
 </dd><dt>Format pax</dt><dd> 
 <dl> 
-<dt>'''hdrcharset'''</dt><dd> 
+<dt>'''align'''</dt><dd> 
+Pad the extended header of each regular file so that the file data that 
+follows begins on a multiple of the given number of bytes within the 
+uncompressed archive stream. 
+The value must be a power of two and a multiple of 512. 
+Because the alignment is applied to the uncompressed stream, it is 
+independent of any compression filter: the decompressed archive is 
+aligned regardless of whether the archive is compressed. 
+This allows tools to share file contents out of an 
+uncompressed archive (or an uncompressed copy of one) using 
+reflinks or 
+[[copy_file_range(2)|http://www.freebsd.org/cgi/man.cgi?query=copy_file_range&sektion=2]], 
+at the cost of some extra padding. 
+Files shorter than the alignment are not padded. 
+</dd><dt>'''hdrcharset'''</dt><dd> 
 The value is used as a character set name that will be 
 used when translating file, group and user names. 
 The value is one of 
@@ -569,9 +583,11 @@ as file checksum method.
 Supported values are 
 "none", 
 "md5", 
-and 
 "sha1" 
-(default.) 
+(default,) 
+"sha256", 
+and 
+"sha512". 
 </dd><dt>'''compression'''=''type''</dt><dd> 
 Use 
 ''type'' 
@@ -592,10 +608,12 @@ Use
 as table of contents checksum method. 
 Supported values are 
 "none", 
-"md5" 
-and 
+"md5", 
 "sha1" 
-(default.) 
+(default,) 
+"sha256", 
+and 
+"sha512". 
 </dd></dl> 
 </dd><dt>Format zip</dt><dd> 
 <dl> 
