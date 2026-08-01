@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2011/09/18 16:51:32 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2026/08/01 18:11:29 ryoon Exp $
 
 BSD-style Makefile (with libtool support)
 
---- Makefile.orig	2011-09-18 15:50:11.000000000 +0000
+--- Makefile.orig	2026-08-01 18:07:41.936023886 +0000
 +++ Makefile
 @@ -0,0 +1,70 @@
 +LIBTOOL= libtool
@@ -30,16 +30,16 @@ BSD-style Makefile (with libtool support)
 +all: ${LIBNAME} rexx rxque rxstack rxmathfn.rxfn
 +
 +${LIBNAME}: ${LIBFILES}
-+	${LIBTOOL} --mode=link --tag=CC ${CC} -o ${.TARGET:.a=.la} ${LIBFILES:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:7
++	${LIBTOOL} --mode=link --tag=CC ${CC} -o ${.TARGET:.a=.la} ${LIBFILES:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:7 ${LDFLAGS}
 +
 +rexx: ${LIBNAME} main.o
-+	${LIBTOOL} --mode=link ${CC} main.o ${LIBNAME:.a=.la} -L${LIBDIR} -o rexx
++	${LIBTOOL} --mode=link ${CC} main.o ${LIBNAME:.a=.la} ${LDFLAGS} -L${LIBDIR} -o rexx
 +
 +rxque: ${LIBNAME} rxque.o
-+	${LIBTOOL} --mode=link ${CC} rxque.o ${LIBNAME:.a=.la} -L${LIBDIR} -o rxque
++	${LIBTOOL} --mode=link ${CC} rxque.o ${LIBNAME:.a=.la} ${LDFLAGS} -L${LIBDIR} -o rxque
 +
 +rxstack: ${LIBNAME} rxstack.o
-+	${LIBTOOL} --mode=link ${CC} rxstack.o ${LIBNAME:.a=.la} -L${LIBDIR} -o rxstack
++	${LIBTOOL} --mode=link ${CC} rxstack.o ${LIBNAME:.a=.la} ${LDFLAGS} -L${LIBDIR} -o rxstack
 +
 +rxmathfn.rxfn: rxmathfn.c const.h functions.h
 +	${LIBTOOL} --mode=compile $(CC) $(OPTFLAG) $(CCFLAGS) ${DATE} ${FILEDEFS} -I. -c rxmathfn.c
