@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/08/01 18:23:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/01 18:38:41 ryoon Exp $
 #
 
 DISTNAME=	regina397
@@ -28,6 +28,11 @@ REPLACE_INTERPRETER+=	regina
 REPLACE.regina.old=	regina
 REPLACE.regina.new=	${PREFIX}/bin/regina
 REPLACE_FILES.regina=	demo/*.rexx regutil/*.rexx
+
+REPLACE_INTERPRETER+=	rexx
+REPLACE.rexx.old=	/usr/bin/rexx
+REPLACE.rexx.new=	${PREFIX}/bin/rexx
+REPLACE_FILES.rexx=	demo/*.rexx
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-configure
