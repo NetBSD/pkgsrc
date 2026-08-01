@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4883 2026/08/01 16:27:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4884 2026/08/01 17:26:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7237,3 +7237,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/nghttp2-tools to 1.70.0 [adam 2026-08-01]
 	Updated devel/cmake to 4.4.2 [adam 2026-08-01]
 	Updated devel/cmake-gui to 4.4.2 [adam 2026-08-01]
+	Updated devel/glib2 to 2.88.3 [adam 2026-08-01]
+	Updated devel/glib2-introspection to 2.88.3 [adam 2026-08-01]
+	Updated devel/glib2-tools to 2.88.3 [adam 2026-08-01]
+	Updated devel/gdbus-codegen to 2.88.3 [adam 2026-08-01]
