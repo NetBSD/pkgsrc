@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4889 2026/08/01 19:34:03 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4890 2026/08/01 22:05:31 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7248,3 +7248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rexx-regina to 3.9.6 [ryoon 2026-08-01]
 	Updated lang/rexx-regina to 3.9.7 [ryoon 2026-08-01]
 	Updated net/dnscontrol to 4.45.0 [drixter 2026-08-01]
+	Updated editors/nano to 9.2 [schwarz 2026-08-01]
