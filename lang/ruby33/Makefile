@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/05/19 14:45:52 taca Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2026/08/01 20:29:29 maya Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -49,7 +48,7 @@ CFLAGS+=	-fno-ipa-modref
 .  endif
 .endif
 
-DOCS=		BSDL CONTRIBUTING.md COPYING COPYING.ja ChangeLog GPL \
+DOCS=		BSDL CONTRIBUTING.md COPYING COPYING.ja GPL \
 		KNOWNBUGS.rb LEGAL NEWS.md README.ja.md README.md \
 		README.EXT README.EXT.ja
 EXT_DOCS=	syslog/syslog.txt
@@ -87,9 +86,7 @@ pre-configure:
 	${CHMOD} -x ${WRKSRC}/sample/test.rb
 
 pre-install:
-#	cd ${WRKSRC}/lib; \
-#		${FIND} . \( -name '*.orig' -o -name '*.orig_dist' \) \
-#		-exec ${RM} -f {} \;
+	${RM} -fr ${WRKSRC}/doc/ChangeLog
 .for f in ${EMPTY_DIRS}
 	${RMDIR} ${WRKSRC}/lib/rdoc/${f} 2>/dev/null || ${TRUE}
 .endfor
@@ -100,7 +97,6 @@ post-install:
 			-o -name '*.o' -o -name 'gem_make.out' \
 			-o -name 'mkmf.log' \) -exec rm {} \;
 	cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/${RUBY_DOC}
-	${MV} ${DESTDIR}${PREFIX}/${RUBY_DOC}/ChangeLog  ${DESTDIR}${PREFIX}/${RUBY_DOC}/ChangeLog.prev
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}
 .endfor
