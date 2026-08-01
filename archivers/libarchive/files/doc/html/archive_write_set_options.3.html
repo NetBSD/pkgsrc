@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jun 23 09:58:14 2026 -->
+<!-- CreationDate: Tue Jul 28 09:31:54 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -662,7 +662,23 @@ character set name that will be used when translating file
 names.</p>
 
 <p>Format pax <b><br>
-hdrcharset</b></p>
+align</b></p>
+
+<p style="margin-left:29%; margin-top: 1em">Pad the
+extended header of each regular file so that the file data
+that follows begins on a multiple of the given number of
+bytes within the uncompressed archive stream. The value must
+be a power of two and a multiple of 512. Because the
+alignment is applied to the uncompressed stream, it is
+independent of any compression filter: the decompressed
+archive is aligned regardless of whether the archive is
+compressed. This allows tools to share file contents out of
+an uncompressed archive (or an uncompressed copy of one)
+using reflinks or <i>copy_file_range</i>(2), at the cost of
+some extra padding. Files shorter than the alignment are not
+padded.</p>
+
+<p><b>hdrcharset</b></p>
 
 <p style="margin-left:29%;">The value is used as a
 character set name that will be used when translating file,
@@ -705,7 +721,8 @@ checksum</b>=<i>type</i></p>
 
 <p style="margin-left:29%;">Use <i>type</i> as file
 checksum method. Supported values are &ldquo;none&rdquo;,
-&ldquo;md5&rdquo;, and &ldquo;sha1&rdquo; (default).</p>
+&ldquo;md5&rdquo;, &ldquo;sha1&rdquo; (default),
+&ldquo;sha256&rdquo;, and &ldquo;sha512&rdquo;.</p>
 
 <p><b>compression</b>=<i>type</i></p>
 
@@ -723,8 +740,9 @@ from 1 to 9 specifying the compression level.</p>
 
 <p style="margin-left:29%;">Use <i>type</i> as table of
 contents checksum method. Supported values are
-&ldquo;none&rdquo;, &ldquo;md5&rdquo; and &ldquo;sha1&rdquo;
-(default).</p>
+&ldquo;none&rdquo;, &ldquo;md5&rdquo;, &ldquo;sha1&rdquo;
+(default), &ldquo;sha256&rdquo;, and
+&ldquo;sha512&rdquo;.</p>
 
 <p>Format zip <b><br>
 compression</b></p>
