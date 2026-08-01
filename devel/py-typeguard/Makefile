@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/05/17 09:04:16 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/01 14:48:16 adam Exp $
 
-DISTNAME=	typeguard-4.5.2
+DISTNAME=	typeguard-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
