@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:51:53 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/08/01 18:11:29 ryoon Exp $
 
 BLAKE2s (rexx-imc-1.76.tar.gz) = 52d13703c6fdc680a003c3e31aed7a30e7986f830dfcfa2dbd4249cc507d5a66
 SHA512 (rexx-imc-1.76.tar.gz) = 2a69fe2863a9170906eda7602227d5a1550c9758805a5f935032e43b2b0e12beb9eca8c74cc694d4a9adc87ca981d6b7bf3742e290d90ad9fd9c54230a681035
 Size (rexx-imc-1.76.tar.gz) = 251581 bytes
-SHA1 (patch-aa) = 605cdc657cb85f944b5e46b8ea837bae938301d3
-SHA1 (patch-ab) = b79ee604da977922e320059c01ccb51434deb958
+SHA1 (patch-aa) = db718ef2eebe84bb114f8552e2178900595db88a
+SHA1 (patch-ab) = 5925ca04c35be441f869cddfad9d694e001c09f5
+SHA1 (patch-interface.c) = b1023b1a4a7c1870bb0e57f47318f0ad5241918c
+SHA1 (patch-main.c) = 8a418300a0f827ea6f71a50818f5964b9360f220
+SHA1 (patch-rxmathfn.c) = ae426755331d34a444287105656bd86b800a4b26
+SHA1 (patch-rxque.c) = efb384ee5d4d7ab0d66dd4ed979b5dd2537aaca4
+SHA1 (patch-rxstack.c) = 6d77e1da96a486ce3466105e74931df9e00e324c
+SHA1 (patch-shell.c) = e59f90add20828313e15aa8572db7cdaf6f3fae4
