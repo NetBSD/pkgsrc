@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4885 2026/08/01 17:29:06 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.4886 2026/08/01 17:30:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7242,3 +7242,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-tools to 2.88.3 [adam 2026-08-01]
 	Updated devel/gdbus-codegen to 2.88.3 [adam 2026-08-01]
 	Updated www/osticket to 1.18.4 [hauke 2026-08-01]
+	Updated lang/nodejs to 26.5.1 [adam 2026-08-01]
+	Updated lang/nodejs24 to 24.18.1 [adam 2026-08-01]
+	Updated lang/nodejs22 to 22.23.2 [adam 2026-08-01]
