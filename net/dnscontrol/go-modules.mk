@@ -1,5 +1,4 @@
-===> Extracting for dnscontrol-4.45.0
-# $NetBSD: go-modules.mk,v 1.6 2026/08/01 19:33:40 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/08/01 19:50:13 drixter Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.22.0.mod
