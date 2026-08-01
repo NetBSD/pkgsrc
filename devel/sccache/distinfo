@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/06/22 07:20:59 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/08/01 15:03:32 adam Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -849,9 +849,9 @@ Size (same-file-1.0.6.crate) = 10183 bytes
 BLAKE2s (scc-2.1.0.crate) = d32c93547bb7fa67365f02b9ede8d42b30da21592a6f93b3dc10effdf6bd73b2
 SHA512 (scc-2.1.0.crate) = 8ac3754d63e350d43404bcaf1ef79657194e4188fd026f0f504196b5f27552dd380614966bb75d43282d57f0d1bc050d5417abd7774353088eeecc84201d5bdd
 Size (scc-2.1.0.crate) = 122739 bytes
-BLAKE2s (sccache-0.16.0.tar.gz) = 8e2350572cff9442500cbb830b70a650525da1dbddf55113ae7917fe7bbe0a50
-SHA512 (sccache-0.16.0.tar.gz) = ecc994181fbdfde6ed1fecc6663716a24bd2c0846bd6b8b1b1b79f74b02c632143c89d053a53b25ce2f17272187118f504cf697ee7daf451caf1e2ea31185f20
-Size (sccache-0.16.0.tar.gz) = 476256 bytes
+BLAKE2s (sccache-0.17.0.tar.gz) = 638c2b1eb2958844bbb691f2c01f9654e2c3b2f7ead175f896d0a2121a831082
+SHA512 (sccache-0.17.0.tar.gz) = 727eb61174604cccb378842dbd42702af8b9dbee8e8c0bb3c54d52eda1b08adb603beccdc9ddb817076489093b55156239a18a14bd1d03e4c8d8ec765ca290d1
+Size (sccache-0.17.0.tar.gz) = 489499 bytes
 BLAKE2s (schannel-0.1.23.crate) = 300766840b634e9736905099a99d498adfc435892a7612ebed101acf0c382e82
 SHA512 (schannel-0.1.23.crate) = dfce25e3b8bc09d8dd1fce2783fe02ec83f74697cb24aa212ef9369a628685ba488f821cb3e5f863798e0e59995038c8d748f74b89f7929eb8cfd804d5066b84
 Size (schannel-0.1.23.crate) = 41667 bytes
@@ -1074,9 +1074,9 @@ Size (tokio-rustls-0.26.0.crate) = 34253 bytes
 BLAKE2s (tokio-serde-0.9.0.crate) = a2659b37f7d04706350744cbcc5e4d6d1ceb28305bed5cc39b4877916ed141c9
 SHA512 (tokio-serde-0.9.0.crate) = dac171392e8fcfb0d997b1eb0f17f5dfbf954783e47fd66aae0a0f70d3a2a913888979ee169c6c64f51d1fc2a5881876570a552a5010426175e7df9da96c55b3
 Size (tokio-serde-0.9.0.crate) = 16122 bytes
-BLAKE2s (tokio-util-0.7.10.crate) = 72abccf6c7398c78ca4f51a72b4c130eaa527b7cd7215c1b4274996062512054
-SHA512 (tokio-util-0.7.10.crate) = d77db36cfa5a2ace3090874d8996b9e94058ac31648308da8dd92a7bdc9b9b61adb703dbd2131adfef0b428cd61b4de76fbdb674f718e89b297f762af11ec50c
-Size (tokio-util-0.7.10.crate) = 110508 bytes
+BLAKE2s (tokio-util-0.7.18.crate) = f948deec6ec1aa76861876e066545dc421ff5973181c426a8457215be38b9797
+SHA512 (tokio-util-0.7.18.crate) = 619504b1c7b10ef79da38b99e7c17affc0dbb984dc671bd1ca0c4b1ad3d1d86f80feee67b78fdb7fcf7ea989a0e9bd5d52714467f4881f31ef5f60cb989ec671
+Size (tokio-util-0.7.18.crate) = 140550 bytes
 BLAKE2s (toml-0.9.11+spec-1.1.0.crate) = 1aaaa0aa30681cba6ee49873d205de92f45f3c8208e01e0174e37b1a656b82f7
 SHA512 (toml-0.9.11+spec-1.1.0.crate) = 635b45316d55c1e9634319ce1e7f79312c9acf03a8292c08e3a08662c4da47021203049fe18bf3487dc92d0312671b309f5ac50bc2c10e3fdea38c3e899c0e0f
 Size (toml-0.9.11+spec-1.1.0.crate) = 56484 bytes
