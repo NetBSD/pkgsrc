@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/08/01 13:14:46 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2026/08/01 13:50:35 gdt Exp $
 
 DISTNAME=	EasyRSA-3.2.6
 PKGNAME=	${DISTNAME:S/EasyRSA/easy-rsa/}
@@ -14,9 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 # The 3.2.6 distfile has extended attributes.
 # https://github.com/OpenVPN/easy-rsa/issues/1455
-
-# \todo Clean this up, if it is indeed no longer relevant.
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix//}
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
