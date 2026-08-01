@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.90 2026/07/16 11:14:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.91 2026/08/01 14:28:07 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -3186,6 +3186,7 @@ share/cmake-${CMAKE_API}/Modules/Internal/CPack/NSIS.InstallOptions.ini.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/NSIS.template.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/WIX-v3/WIX.template.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/WIX.template.in
+share/cmake-${CMAKE_API}/Modules/Internal/CheckCommon.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CheckCompilerFlag.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CheckFlagCommonConfig.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CheckLinkerFlag.cmake
