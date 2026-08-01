@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4879 2026/08/01 14:29:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4880 2026/08/01 14:48:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7227,3 +7227,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/haproxy to 3.4.3 [adam 2026-08-01]
 	Updated devel/cmake to 4.4.1 [adam 2026-08-01]
 	Updated graphics/GraphicsMagick to 1.3.48 [adam 2026-08-01]
+	Updated devel/py-zope.testrunner to 8.3 [adam 2026-08-01]
+	Updated devel/py-typeguard to 4.6.0 [adam 2026-08-01]
