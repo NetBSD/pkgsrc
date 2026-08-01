@@ -395,25 +395,38 @@
 		       The value is used as a character set name that will  be
 		       used when translating file names.
        Format pax
+	       1malign	 22mPad	 the  extended	header of each regular file so that
+		       the file data that follows begins on a multiple of  the
+		       given  number  of bytes within the uncompressed archive
+		       stream.	The value must be a power of two and a	multi‐
+		       ple  of	512.   Because the alignment is applied to the
+		       uncompressed stream, it is independent of any  compres‐
+		       sion  filter:  the  decompressed archive is aligned re‐
+		       gardless of whether the archive	is  compressed.	  This
+		       allows  tools  to  share file contents out of an uncom‐
+		       pressed archive (or an uncompressed copy of one)	 using
+		       reflinks or 4mcopy_file_range24m(2), at the cost of some ex‐
+		       tra  padding.  Files shorter than the alignment are not
+		       padded.
 	       1mhdrcharset0m
-		       The  value is used as a character set name that will be
-		       used when translating file, group and user names.   The
-		       value  is  one  of  “BINARY” or “UTF-8”.	 With “BINARY”
-		       there is no character conversion,  with	“UTF-8”	 names
+		       The value is used as a character set name that will  be
+		       used  when translating file, group and user names.  The
+		       value is one of “BINARY”	 or  “UTF-8”.	With  “BINARY”
+		       there  is  no  character conversion, with “UTF-8” names
 		       are converted to UTF-8.
 	       1mxattrheader0m
-		       When  storing  extended attributes, this option config‐
-		       ures which headers should be written. The value is  one
-		       of  “all”, “LIBARCHIVE”, or “SCHILY”.  By default, both
+		       When storing extended attributes, this  option  config‐
+		       ures  which headers should be written. The value is one
+		       of “all”, “LIBARCHIVE”, or “SCHILY”.  By default,  both
 		       “LIBARCHIVE.xattr” and “SCHILY.xattr” headers are writ‐
 		       ten.
        Format ustar
 	       1mhdrcharset0m
-		       The value is used as a character set name that will  be
+		       The  value is used as a character set name that will be
 		       used when translating file, group and user names.
        Format v7tar
 	       1mhdrcharset0m
-		       The  value is used as a character set name that will be
+		       The value is used as a character set name that will  be
 		       used when translating file, group and user names.
        Format warc
 	       1momit-warcinfo0m
@@ -421,7 +434,8 @@
        Format xar
 	       1mchecksum22m=4mtype0m
 		       Use 4mtype24m as file checksum method.  Supported values are
-		       “none”, “md5”, and “sha1” (default).
+		       “none”,	 “md5”,	  “sha1”   (default),	“sha256”,  and
+		       “sha512”.
 	       1mcompression22m=4mtype0m
 		       Use 4mtype24m as compression method.  Supported	values	are
 		       “none”, “bzip2”, “gzip” (default), “lzma” and “xz”.
@@ -430,75 +444,76 @@
 		       the compression level.
 	       1mtoc-checksum22m=4mtype0m
 		       Use 4mtype24m as table of contents  checksum  method.   Sup‐
-		       ported values are “none”, “md5” and “sha1” (default).
+		       ported  values  are  “none”,  “md5”,  “sha1” (default),
+		       “sha256”, and “sha512”.
        Format zip
 	       1mcompression0m
-		       The   value  is	either	“store”,  “deflate”,  “bzip2”,
-		       “lzma”, “xz”, or “zstd” to indicate how	the  following
-		       entries	should	be compressed.	Note that this setting
-		       is ignored for directories, symbolic links,  and	 other
+		       The  value  is  either  “store”,	 “deflate”,   “bzip2”,
+		       “lzma”,	“xz”,  or “zstd” to indicate how the following
+		       entries should be compressed.  Note that	 this  setting
+		       is  ignored  for directories, symbolic links, and other
 		       special entries.
 	       1mcompression-level0m
-		       The  value is interpreted as a decimal integer specify‐
-		       ing the compression level.  Values between 0 and 9  are
-		       supported.   A compression level of 0 switches the com‐
-		       pression method to “store”, other  values  will	enable
-		       “deflate”,  “bzip2”,  “lzma”, or “zstd” compression (in
-		       order of priority,  depending  on  what	libraries  are
+		       The value is interpreted as a decimal integer  specify‐
+		       ing  the compression level.  Values between 0 and 9 are
+		       supported.  A compression level of 0 switches the  com‐
+		       pression	 method	 to  “store”, other values will enable
+		       “deflate”, “bzip2”, “lzma”, or “zstd”  compression  (in
+		       order  of  priority,  depending	on  what libraries are
 		       linked) with the given level.
 	       1mthreads0m
-		       The  value is interpreted as a decimal integer specify‐
-		       ing the number of threads to use for  compression.   It
-		       is  supported  only  for “xz” or “zstd” compression and
-		       ignored for any other.  A threads value of 0 is a  spe‐
-		       cial  one  requesting to detect and use as many threads
+		       The value is interpreted as a decimal integer  specify‐
+		       ing  the	 number of threads to use for compression.  It
+		       is supported only for “xz” or  “zstd”  compression  and
+		       ignored	for any other.	A threads value of 0 is a spe‐
+		       cial one requesting to detect and use as	 many  threads
 		       as the number of active physical CPU cores.
 	       1mencryption0m
 		       Enable encryption using traditional zip encryption.
 	       1mencryption22m=4mtype0m
-		       Use 4mtype24m as	 encryption  type.   Supported	values	are
-		       “zipcrypt”   (traditional   zip	encryption),  “aes128”
-		       (WinZip	AES-128	 encryption)  and   “aes256”   (WinZip
+		       Use  4mtype24m  as  encryption  type.   Supported values are
+		       “zipcrypt”  (traditional	 zip   encryption),   “aes128”
+		       (WinZip	 AES-128   encryption)	and  “aes256”  (WinZip
 		       AES-256 encryption).
 	       1mexperimental0m
-		       This  boolean  option  enables or disables experimental
-		       Zip features that may not be compatible with other  Zip
+		       This boolean option enables  or	disables  experimental
+		       Zip  features that may not be compatible with other Zip
 		       implementations.
 	       1mfakecrc320m
 		       This boolean option disables CRC calculations.  All CRC
-		       fields  are  set to zero.  It should not be used except
+		       fields are set to zero.	It should not be  used	except
 		       for testing purposes.
 	       1mhdrcharset0m
-		       The value is used as a character set name that will  be
+		       The  value is used as a character set name that will be
 		       used when translating file names.
-	       1mzip64	 22mZip64  extensions provide additional file size informa‐
-		       tion for entries larger than 4 GiB.  They also  provide
-		       extended	 file offset and archive size information when
-		       archives exceed 4 GiB.  By default, the Zip writer  se‐
-		       lectively  enables these extensions only as needed.  In
+	       1mzip64	 22mZip64 extensions provide additional file size  informa‐
+		       tion  for entries larger than 4 GiB.  They also provide
+		       extended file offset and archive size information  when
+		       archives	 exceed 4 GiB.	By default, the Zip writer se‐
+		       lectively enables these extensions only as needed.   In
 		       particular, if the file size is unknown, the Zip writer
 		       will include Zip64 extensions to guard against the pos‐
 		       sibility that the file might be larger than 4 GiB.
 
-		       Setting this boolean option will force  the  writer  to
-		       use  Zip64  extensions  even for small files that would
-		       not otherwise require them.  This is  primarily	useful
+		       Setting	this  boolean  option will force the writer to
+		       use Zip64 extensions even for small  files  that	 would
+		       not  otherwise  require them.  This is primarily useful
 		       for testing.
 
-		       Disabling  this	option	with 1m!zip64 22mwill force the Zip
-		       writer to avoid Zip64 extensions: It will reject	 files
-		       with  size  greater  than 4 GiB, it will reject any new
-		       entries once the total archive size reaches 4 GiB,  and
+		       Disabling this option with 1m!zip64 22mwill  force  the	Zip
+		       writer  to avoid Zip64 extensions: It will reject files
+		       with size greater than 4 GiB, it will  reject  any  new
+		       entries	once the total archive size reaches 4 GiB, and
 		       it will not use Zip64 extensions for files with unknown
-		       size.   In  particular,	this can improve compatibility
-		       when generating archives where the entry sizes are  not
+		       size.  In particular, this  can	improve	 compatibility
+		       when  generating archives where the entry sizes are not
 		       known in advance.
 
 1mEXAMPLES0m
        The following example creates an archive write handle to create a gzip-
        compressed ISO9660 format image.	 The two options here specify that the
-       ISO9660	archive	 will  use  4mkernel.img24m as the boot image for El Torito
-       booting, and that the gzip compressor should use the  maximum  compres‐
+       ISO9660 archive will use 4mkernel.img24m as the boot  image  for	 El  Torito
+       booting,	 and  that the gzip compressor should use the maximum compres‐
        sion level.
 
 	     a = archive_write_new();
@@ -508,7 +523,7 @@
 	     archive_write_open_filename(a, filename, blocksize);
 
 1mERRORS0m
-       More  detailed  error codes and textual descriptions are available from
+       More detailed error codes and textual descriptions are  available  from
        the 1marchive_errno22m() and 1marchive_error_string22m() functions.
 
 1mSEE ALSO0m
@@ -518,7 +533,7 @@
        The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
 
 1mAUTHORS0m
-       The options  support  for  libarchive  was  originally  implemented  by
+       The  options  support  for  libarchive  was  originally	implemented by
        Michihiro NAKAJIMA.
 
 1mBUGS0m
