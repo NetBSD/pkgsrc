@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.133 2026/06/28 08:11:16 adam Exp $
+# $NetBSD: Makefile.common,v 1.134 2026/08/01 13:45:51 adam Exp $
 #
 # used by databases/sqlite3/Makefile
 # used by databases/sqlite3-diff/Makefile -- please `bmake makesum` there
@@ -6,8 +6,8 @@
 # used by databases/sqlite3-tcl/Makefile
 # used by devel/lemon/Makefile
 
-SQLITE3_DISTVERSION=	3530300
-SQLITE3_VERSION=	3.53.3
+SQLITE3_DISTVERSION=	3530400
+SQLITE3_VERSION=	3.53.4
 
 MASTER_SITES=	https://www.sqlite.org/2026/
 
