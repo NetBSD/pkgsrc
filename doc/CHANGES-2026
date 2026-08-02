@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4900 2026/08/02 07:34:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4901 2026/08/02 09:29:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7264,3 +7264,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ngtcp2 to 1.25.0 [adam 2026-08-02]
 	Updated graphics/tesseract to 5.5.3 [adam 2026-08-02]
 	Updated security/py-OpenSSL to 26.4.0 [adam 2026-08-02]
+	Updated www/py-daphne to 4.2.3 [adam 2026-08-02]
+	Updated devel/py-wrapt to 2.3.0 [adam 2026-08-02]
