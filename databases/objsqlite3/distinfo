@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/08/01 22:56:42 js Exp $
+$NetBSD: distinfo,v 1.5 2026/08/02 02:27:47 js Exp $
 
-BLAKE2s (objsqlite3/1.1-release.tar.gz) = fe03541ad015c4b61672941b5d431a3a095e4743721d9ec1a3fb7b231e2f36df
-SHA512 (objsqlite3/1.1-release.tar.gz) = eaffbb70718df173bf942b6990f6b8e74a0f0a70f01bd36298afefff97e85bd29e9e1576a70dafb812eebe671a0a1ddec4ec4b7921d13de54d24cdd8652d8752
-Size (objsqlite3/1.1-release.tar.gz) = 50884 bytes
+BLAKE2s (objsqlite3/1.1.2-release.tar.gz) = 670a08e2f3446f90704759aadcae07920cddd2bda4520e8b0a9c278f6acbca4d
+SHA512 (objsqlite3/1.1.2-release.tar.gz) = 6e2b34c1c71a6a7a9b6cbdcfdbadcf3137988f5587daae25685c7795b9e3205638b5c8af3d9ff0e17bec32af6434ac568f8961254f98a8cc73ba27bf6f62cc0c
+Size (objsqlite3/1.1.2-release.tar.gz) = 51141 bytes
