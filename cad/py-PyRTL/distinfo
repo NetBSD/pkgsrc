@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/06/22 20:20:56 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2026/08/02 06:57:40 ryoon Exp $
 
-BLAKE2s (pyrtl-1.0.0.tar.gz) = da337e716a8d8b491aa864af380306f671116f41f7a52181cb0671faaa4ec5c3
-SHA512 (pyrtl-1.0.0.tar.gz) = d29535b4ced77ab6989a1551a0e40f99b222ac7bf3f1e958cd00bd3096d9f909e5fad35d30887c37bef2d229c373d97a374374cc27efca37e66e55629f827fc5
-Size (pyrtl-1.0.0.tar.gz) = 593420 bytes
+BLAKE2s (pyrtl-1.0.2.tar.gz) = 6d73a6eb2baca46b92a02c45b1b4d413ab13397b49153ee723efe6d13460d64d
+SHA512 (pyrtl-1.0.2.tar.gz) = b4e4cfec5c52247864f39ac1522e8517c2140c1abb309acb01fa69dc0c9b957022c66e93735a2074d9d24c0a668821f440a13559cc798d4ed78e2609e99a1357
+Size (pyrtl-1.0.2.tar.gz) = 648173 bytes
