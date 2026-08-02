@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.framework,v 1.1 2026/08/02 20:24:28 js Exp $
+Library/Frameworks/ObjSQLite3.framework/Headers
+Library/Frameworks/ObjSQLite3.framework/ObjSQLite3
+Library/Frameworks/ObjSQLite3.framework/Resources
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/ObjSQLite3.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3BindObjectFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3ClearBindingsFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3Connection.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3Exception.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3ExecuteStatementFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3OpenFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3PrepareStatementFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3PreparedStatement.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Headers/SL3ResetStatementFailedException.h
+Library/Frameworks/ObjSQLite3.framework/Versions/1/ObjSQLite3
+Library/Frameworks/ObjSQLite3.framework/Versions/1/Resources/Info.plist
+Library/Frameworks/ObjSQLite3.framework/Versions/1/_CodeSignature/CodeResources
+Library/Frameworks/ObjSQLite3.framework/Versions/Current
