@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/08/02 02:27:47 js Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/02 20:08:01 js Exp $
 
-PKGNAME=	objsqlite3-1.1.2
+PKGNAME=	objsqlite3-1.1.3
 DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
 MASTER_SITES=	https://git.nil.im/ObjFW/ObjSQLite3/archive/
@@ -21,6 +21,11 @@ USE_TOOLS+=		autoconf automake
 
 .if ${OPSYS} != "Darwin"
 TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
+.endif
+
+PLIST_SRC=	PLIST
+.if ${OPSYS} == "Darwin"
+PLIST_SRC+=	PLIST.framework
 .endif
 
 pre-configure:
