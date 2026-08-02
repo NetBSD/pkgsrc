@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/05/06 07:48:56 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2026/08/02 01:43:28 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.chromaprint
 
@@ -8,8 +8,6 @@ PKG_SUPPORTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mtests)
-# googletest requires at least C++14. It bundles its own copy.
-USE_CXX_FEATURES+=	c++14
 TEST_TARGET=		check
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=ON
 .else

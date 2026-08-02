@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2025/12/22 06:08:04 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/02 01:43:28 adam Exp $
 
-DISTNAME=	chromaprint-1.6.0
-PKGREVISION=	1
+DISTNAME=	chromaprint-1.6.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=acoustid/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,12 +10,11 @@ HOMEPAGE=	https://acoustid.org/chromaprint
 COMMENT=	Audio fingerprinting
 LICENSE=	mit
 
+USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 # build and install "fpcalc"
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS=ON
 CMAKE_CONFIGURE_ARGS+=	-DFFT_LIB=fftw3
-
-USE_CXX_FEATURES+=	c++11
 
 .for lib in AVCODEC AVFORMAT AVUTIL SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg8}/include/ffmpeg8
