@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4892 2026/08/02 01:52:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4893 2026/08/02 02:08:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7252,3 +7252,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/objsqlite3 to 1.1 [js 2026-08-01]
 	Updated audio/chromaprint to 1.6.1 [adam 2026-08-02]
 	Updated textproc/ugrep to 7.8.3 [adam 2026-08-02]
+	Updated security/vaultwarden to 1.37.1 [adam 2026-08-02]
+	Updated devel/mimalloc to 3.4.4 [adam 2026-08-02]
