@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4899 2026/08/02 06:57:51 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.4900 2026/08/02 07:34:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7261,3 +7261,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libreoffice to 26.2.5.2 [ryoon 2026-08-02]
 	Updated www/resterm to 0.49.4 [drixter 2026-08-02]
 	Updated cad/py-PyRTL to 1.0.2 [ryoon 2026-08-02]
+	Updated net/ngtcp2 to 1.25.0 [adam 2026-08-02]
+	Updated graphics/tesseract to 5.5.3 [adam 2026-08-02]
+	Updated security/py-OpenSSL to 26.4.0 [adam 2026-08-02]
