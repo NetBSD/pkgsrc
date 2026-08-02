@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.13 2026/07/27 13:32:04 hauke Exp $
+# $NetBSD: options.mk,v 1.14 2026/08/02 02:04:03 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vaultwarden
 PKG_SUPPORTED_OPTIONS=		s3 web-vault
 PKG_OPTIONS_REQUIRED_GROUPS=	database
-PKG_OPTIONS_GROUP.database=	sqlite pgsql mysql s3
+PKG_OPTIONS_GROUP.database=	sqlite mysql pgsql
 PKG_SUGGESTED_OPTIONS=		sqlite web-vault
 
 .include "../../mk/bsd.options.mk"
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=		sqlite web-vault
 PLIST_VARS+=		web-vault
 
 .if !empty(PKG_OPTIONS:Msqlite)
-CARGO_FEATURES+=	sqlite
+CARGO_FEATURES+=	sqlite_system
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 .  include "../../databases/sqlite3/buildlink3.mk"
 .endif
@@ -34,7 +34,7 @@ CARGO_FEATURES+=	s3
 
 .if !empty(PKG_OPTIONS:Mweb-vault)
 WEB_VAULT_FILE=		bw_web_v${WEB_VAULT_VERS}.tar.gz
-WEB_VAULT_VERS=		2026.4.1
+WEB_VAULT_VERS=		2026.6.4
 DISTFILES+=		${WEB_VAULT_FILE}
 SITES.${WEB_VAULT_FILE}= ${MASTER_SITE_GITHUB:=dani-garcia/bw_web_builds/releases/download/v${WEB_VAULT_VERS}/}
 
