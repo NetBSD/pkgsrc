@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2026/08/01 12:26:36 drixter Exp $
+$NetBSD: distinfo,v 1.19 2026/08/02 06:54:46 drixter Exp $
 
 BLAKE2s (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 6ac20d45dc73571467fbfa4fb284b576f5877808bb8938b2c883fc48fca05429
 SHA512 (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 283a7606aaa0d7463b9744a13a6c2064ca5d815077622a5d36e43be704c17403d80e6a5e106f544baaacf922b14d106843d99c1af174808960cc27a3fc26db91
@@ -768,9 +768,9 @@ Size (nhooyr.io_websocket_@v_v1.8.7.mod) = 427 bytes
 BLAKE2s (nhooyr.io_websocket_@v_v1.8.7.zip) = f4ed468617b351c6663eaae8b75c1e32c4b53b2c6d3b964c0cc1a65070784c0f
 SHA512 (nhooyr.io_websocket_@v_v1.8.7.zip) = bf99fcf8e3797080ea6c486dab6f677d00b22865cce152c98d350f429d75c25ffce1266c3ed0429172879e1725d770e651174d18b4438aa8fd40b2357d3bca31
 Size (nhooyr.io_websocket_@v_v1.8.7.zip) = 74216 bytes
-BLAKE2s (resterm-0.49.3.tar.gz) = d5efc0bad82d4e4587f8878b29393c96e16a16f6bf7ec44e54edce2302fe41e5
-SHA512 (resterm-0.49.3.tar.gz) = ff007ea4b079646797ec380e043a3298dbe17736a091d2ae642815954c80dcaa943a83260f1e997bacca672a7c7c7dbcd8ec378f87ff554421ec428b7214ef16
-Size (resterm-0.49.3.tar.gz) = 25610583 bytes
+BLAKE2s (resterm-0.49.4.tar.gz) = 2c7e9c6aa53396133a8544335b962cac0e3e2bb2e5756c2968834ece402fc8cf
+SHA512 (resterm-0.49.4.tar.gz) = 7970b08ae5df015d13e1a3384df6794af1f35f5a303e4ad1afd10e1dc82d4e597d92b88057a9c3133b3c0397489edb0859f05badef079d6791ed3f289637997c
+Size (resterm-0.49.4.tar.gz) = 25597829 bytes
 BLAKE2s (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 0b1238d89c77686f02002092d6c14b461423ce7c2fa906f554deffefd727014d
 SHA512 (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = ca8b000bb3d6dce184fd01445782fa95557ec7ff6328dcd225dc26a14fc1d2d69baacaebe9d8703c867c8902f846950f9aefcc80af4530735f4b4432b77e4490
 Size (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 33 bytes
