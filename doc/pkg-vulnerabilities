@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.772 2026/07/23 16:58:27 khorben Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.773 2026/08/02 12:15:30 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30358,10 +30358,10 @@ spotifyd-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/ta
 suckit-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 taplo-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 tealdeer-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-termscp-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-termusic-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+termscp<1.1.1	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+termusic<0.13.2	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 twitch-tui-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-typst-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+typst<0.15.1	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 usenet_reborn-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 vaultwarden-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 wezterm-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
