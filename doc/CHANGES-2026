@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4903 2026/08/02 12:12:50 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4904 2026/08/02 13:30:37 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7269,3 +7269,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-libcst to 1.9.0 [adam 2026-08-02]
 	Updated devel/py-vcs-versioning to 2.2.3 [adam 2026-08-02]
 	Updated shells/oh-my-posh to 30.2.0 [pin 2026-08-02]
+	Updated news/newsraft to 0.37 [ktnb 2026-08-02]
