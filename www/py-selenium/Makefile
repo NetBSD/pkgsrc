@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/10/10 17:09:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/02 03:11:55 adam Exp $
 
-DISTNAME=	selenium-4.14.0
+DISTNAME=	selenium-4.46.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/selenium/}
@@ -10,16 +10,20 @@ HOMEPAGE=	https://github.com/SeleniumHQ/selenium
 COMMENT=	Python bindings for Selenium
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
+DEPENDS+=	${PYPKGPREFIX}-certifi>=2026.2.25:../../security/py-certifi
+DEPENDS+=	${PYPKGPREFIX}-trio>=0.31.0:../../devel/py-trio
+DEPENDS+=	${PYPKGPREFIX}-trio-websocket>=0.12.2:../../www/py-trio-websocket
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.15.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.6.3:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-websocket-client>=1.8.0:../../www/py-websocket-client
 
-USE_LANGUAGES=	# none
+USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+.include "cargo-depends.mk"
 
-# these are for Linux only; see selenium/webdriver/firefox/firefox_binary.py
-CHECK_SHLIBS_SKIP+=	${PYSITELIB}/selenium/webdriver/firefox/amd64/x_ignore_nofocus.so
-CHECK_SHLIBS_SKIP+=	${PYSITELIB}/selenium/webdriver/firefox/x86/x_ignore_nofocus.so
-CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
-
-.include "../../lang/python/egg.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
