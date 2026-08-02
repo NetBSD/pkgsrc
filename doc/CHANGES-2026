@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4891 2026/08/01 22:57:17 js Exp $
+$NetBSD: CHANGES-2026,v 1.4892 2026/08/02 01:52:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7250,3 +7250,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnscontrol to 4.45.0 [drixter 2026-08-01]
 	Updated editors/nano to 9.2 [schwarz 2026-08-01]
 	Updated databases/objsqlite3 to 1.1 [js 2026-08-01]
+	Updated audio/chromaprint to 1.6.1 [adam 2026-08-02]
+	Updated textproc/ugrep to 7.8.3 [adam 2026-08-02]
