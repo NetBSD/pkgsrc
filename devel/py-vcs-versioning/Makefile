@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/06/30 05:46:26 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/02 11:31:33 adam Exp $
 
-DISTNAME=	vcs_versioning-2.2.2
+DISTNAME=	vcs_versioning-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcs_versioning/}
