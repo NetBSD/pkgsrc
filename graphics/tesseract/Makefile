@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2026/01/27 08:39:50 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/08/02 07:32:05 adam Exp $
 
-DISTNAME=	tesseract-5.5.2
-PKGREVISION=	2
+DISTNAME=	tesseract-5.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -53,4 +52,5 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/leptonica/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
