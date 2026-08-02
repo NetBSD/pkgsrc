@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/05/14 16:41:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2026/08/02 13:30:22 ktnb Exp $
 
-DISTNAME=	newsraft-0.36
-PKGREVISION=	1
+DISTNAME=	newsraft-0.37
 CATEGORIES=	news
-MASTER_SITES=	https://codeberg.org/newsraft/newsraft/archive/
+MASTER_SITES=	${MASTER_SITE_CODEBERG:=newsraft/newsraft/archive/}
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://codeberg.org/newsraft
@@ -11,6 +10,8 @@ COMMENT=	Terminal based feed reader
 LICENSE=	isc
 
 WRKSRC=	${WRKDIR}/newsraft
+
+RELRO_SUPPORTED=	no
 
 USE_TOOLS+=	pkg-config pax
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
