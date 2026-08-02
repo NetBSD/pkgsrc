@@ -1,4 +1,4 @@
-$NetBSD: patch-rexxapi_server_platform_unix_APIService.cpp,v 1.1 2025/01/17 17:44:22 rhialto Exp $
+$NetBSD: patch-rexxapi_server_platform_unix_APIService.cpp,v 1.2 2026/08/02 06:39:27 ryoon Exp $
 
 A combination of changes to make it possible to terminate the rxapi process
 which is auto-started:
@@ -8,9 +8,9 @@ which is auto-started:
 - let the signal handler continue running so that cleanup code can run.
 https://sourceforge.net/p/oorexx/bugs/1993/
 
---- rexxapi/server/platform/unix/APIService.cpp.orig	2023-04-19 14:25:29.000000000 +0000
+--- rexxapi/server/platform/unix/APIService.cpp.orig	2025-05-03 09:08:48.000000000 +0000
 +++ rexxapi/server/platform/unix/APIService.cpp
-@@ -64,7 +64,8 @@ void Stop(int signo)
+@@ -65,7 +65,8 @@ void Stop(int signo)
  {
      apiServer.terminateServer();     // shut everything down
  
@@ -20,24 +20,27 @@ https://sourceforge.net/p/oorexx/bugs/1993/
  }
  
  
-@@ -118,9 +119,15 @@ void releaseLock (const char *lockFileNa
+@@ -123,11 +124,17 @@ int main(int argc, char *argv[])
   */
  int main(int argc, char *argv[])
  {
 +    int stopflag = 0;
 +
+     bool dryrun = false; // handy (undocumented) test option
      if (argc > 1)
      {
--        printf("rxapi: no args allowed\n");
-+	if (strcmp(argv[1], "stop") == 0) {
-+	    stopflag = 1;
-+	} else {
-+	    printf("rxapi: no args allowed\n");
-+	}
+-        dryrun = strcmp(argv[1], "--dryrun") == 0;
+-        printf(dryrun ? "rxapi: dryrun\n" : "rxapi: no args allowed\n");
++        if (strcmp(argv[1], "stop") == 0) {
++            stopflag = 1;
++        } else {
++            dryrun = strcmp(argv[1], "--dryrun") == 0;
++            printf(dryrun ? "rxapi: dryrun\n" : "rxapi: no args allowed\n");
++        }
      }
  
-     // a buffer for generating the name
-@@ -138,10 +145,30 @@ int main(int argc, char *argv[])
+     // neither our lock file nor our socket should give access to group or world
+@@ -159,10 +166,30 @@ int main(int argc, char *argv[])
      int fd;
      if ((fd = acquireLock(lockFileName)) == -1)
      {
@@ -66,5 +69,5 @@ https://sourceforge.net/p/oorexx/bugs/1993/
 +	write(fd, pidstring, strlen(pidstring));
 +    }
  
-     struct sigaction sa;
- 
+     try
+     {

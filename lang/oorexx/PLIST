@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2024/04/02 18:59:15 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/02 06:39:27 ryoon Exp $
 bin/csvStream.cls
 bin/dateparser.cls
 bin/json.cls
+bin/json.dtd
+bin/json.xsd
 bin/mime.cls
 bin/ncurses.cls
 bin/rexx
@@ -15,6 +17,11 @@ bin/rxsubcom
 bin/smtp.cls
 bin/socket.cls
 bin/streamsocket.cls
+bin/xmlToJson.xsl
+bin/xmlToYaml.xsl
+bin/yaml.cls
+bin/yaml.dtd
+bin/yaml.xsd
 include/oorexxapi.h
 include/oorexxerrors.h
 include/rexx.h
@@ -129,6 +136,7 @@ share/ooRexx/samples/constrained.rex
 share/ooRexx/samples/delegation.rex
 share/ooRexx/samples/dynamicMethod.rex
 share/ooRexx/samples/factor.rex
+share/ooRexx/samples/getOoRexxDocs.rex
 share/ooRexx/samples/greply.rex
 share/ooRexx/samples/guess.rex
 share/ooRexx/samples/interface.rex

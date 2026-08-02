@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/11/17 11:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/02 06:39:27 ryoon Exp $
 #
 
-DISTNAME=	oorexx-5.0.0-12583
+DISTNAME=	oorexx-5.2.0-13156
 PKGNAME=	${DISTNAME:C/-[0-9]*$//}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx/${PKGVERSION_NOREV}/}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx-docs/${PKGVERSION_NOREV}/}
@@ -22,8 +21,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	sh:run
 MAKE_JOBS_SAFE=	no
 
-WRKSRC=		${WRKDIR}
-
 # Runs the built executable bin/rexx during build.
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
@@ -31,6 +28,8 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 CMAKE_CONFIGURE_ARGS+=	-DORX_SHEBANG=${PREFIX}/bin/rexx
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Subversion:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+INSTALLATION_DIRS+=	share/ooRexx/doc
 
 post-install:
 	# Fix up bad permissions.
@@ -40,12 +39,11 @@ post-install:
 	    find share/ooRexx/samples/api -name '*.rex' -exec chmod -x {} \; && \
 	    find share/ooRexx/samples -name '*.cls' -exec chmod -x {} \;
 	# Install pdf documentation.
-	cd ${WRKDIR}/ooRexx-${PKGVERSION_NOREV}-pdf && \
+	cd ${WRKDIR} && \
 	    ${RM} -f oodguide.pdf oodialog.pdf oorexxbuild.pdf oosqlite.pdf \
 	          winextensions.pdf
 	cd ${WRKDIR} && \
-	    ${MV} ooRexx-${PKGVERSION_NOREV}-pdf  ${DESTDIR}${PREFIX}/share/ooRexx/doc
-
+	    ${INSTALL_DATA} *.pdf  ${DESTDIR}${PREFIX}/share/ooRexx/doc
 
 # We really want ncurses!
 PREFER.curses=	pkgsrc
