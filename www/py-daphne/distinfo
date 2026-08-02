@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/06/11 12:44:39 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/08/02 09:28:10 adam Exp $
 
-BLAKE2s (daphne-4.2.2.tar.gz) = d154eb1958bf520ac034b1624ebb22e4a5415e53682803cbb2db09b6a66c1212
-SHA512 (daphne-4.2.2.tar.gz) = f005bbbd88f5a87967f6ebe744b6cba99df5b7cdd90199ec2375ec985a0317f5f2b75842a00f046208d75979d2dd253d7784dea0868e8805093f493e3bafec77
-Size (daphne-4.2.2.tar.gz) = 47601 bytes
+BLAKE2s (daphne-4.2.3.tar.gz) = 889da202fd45abfc8bc2fc91f812f022c09d40eaef9f02d24031f21422ba9b5e
+SHA512 (daphne-4.2.3.tar.gz) = 378f584f300635b9dfb3ecb842abda03b6e16df586c4542ae561210c465c4ddf27ce8563a15123945d307cb21c0305043f24e45b9b688f35000002eebe0deb56
+Size (daphne-4.2.3.tar.gz) = 47898 bytes
