@@ -1,0 +1,15 @@
+$NetBSD: patch-.._vendor_apple-xar-0.20.0_Cargo.toml,v 1.1 2026/08/02 03:11:55 adam Exp $
+
+Prefer non-static lzma-sys, to fix build on NetBSD.
+https://github.com/alexcrichton/xz2-rs/pull/134
+
+--- ../vendor/apple-xar-0.20.0/Cargo.toml.orig	2026-08-02 02:51:40.585924086 +0000
++++ ../vendor/apple-xar-0.20.0/Cargo.toml
+@@ -110,7 +110,6 @@ version = "0.8.23"
+ 
+ [dependencies.xz2]
+ version = "0.1.7"
+-features = ["static"]
+ 
+ [features]
+ default = ["signing"]
