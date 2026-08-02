@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4895 2026/08/02 03:14:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4896 2026/08/02 06:39:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7257,3 +7257,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/objsqlite3 to 1.1.2 [js 2026-08-02]
 	Updated www/py-selenium to 4.46.0 [adam 2026-08-02]
 	Updated graphics/py-tifffile to 2026.7.31 [adam 2026-08-02]
+	Updated lang/oorexx to 5.2.0 [ryoon 2026-08-02]
