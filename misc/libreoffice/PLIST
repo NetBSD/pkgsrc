@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2026/02/09 16:59:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.67 2026/08/02 06:43:13 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -7066,10 +7066,9 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-cs/hyph_cs_CZ.dic
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-cs/thes_cs_CZ.dat
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-cs/thes_cs_CZ.idx
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/HYPH_da_DK_README.txt
+${PKGNAME}/lib/libreoffice/share/extensions/dict-da/Images/Trold_42x42.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/META-INF/manifest.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/README_da_DK.txt
-${PKGNAME}/lib/libreoffice/share/extensions/dict-da/README_th_da_DK.txt
-${PKGNAME}/lib/libreoffice/share/extensions/dict-da/Trold_42x42.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/da_DK.aff
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/da_DK.dic
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-da/desc_da_DK.txt
@@ -7673,16 +7672,15 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ne/ne_NP.aff
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ne/ne_NP.dic
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ne/th_ne_NP_v2.dat
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ne/th_ne_NP_v2.idx
+${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/LICENSE.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/META-INF/manifest.xml
-${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/OpenTaal.png
-${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/README_NL.txt
+${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/README.md
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/description.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/dictionaries.xcu
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/hyph_nl_NL.dic
-${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/license_en_EN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/licentie_nl_NL.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/nl_NL.aff
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/nl_NL.dic
+${PKGNAME}/lib/libreoffice/share/extensions/dict-nl/opentaal-logo.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-no/COPYING
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-no/META-INF/manifest.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-no/README_hyph_NO.txt
