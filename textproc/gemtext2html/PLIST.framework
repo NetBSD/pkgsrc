@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.framework,v 1.1 2026/08/02 20:26:26 js Exp $
+Library/Frameworks/Gemtext2HTML.framework/Gemtext2HTML
+Library/Frameworks/Gemtext2HTML.framework/Headers
+Library/Frameworks/Gemtext2HTML.framework/Resources
+Library/Frameworks/Gemtext2HTML.framework/Versions/1/Gemtext2HTML
+Library/Frameworks/Gemtext2HTML.framework/Versions/1/Headers/G2HConverter.h
+Library/Frameworks/Gemtext2HTML.framework/Versions/1/Headers/Gemtext2HTML.h
+Library/Frameworks/Gemtext2HTML.framework/Versions/1/Resources/Info.plist
+Library/Frameworks/Gemtext2HTML.framework/Versions/1/_CodeSignature/CodeResources
+Library/Frameworks/Gemtext2HTML.framework/Versions/Current
