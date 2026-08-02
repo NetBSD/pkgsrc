@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2025/01/17 17:44:22 rhialto Exp $
+$NetBSD: distinfo,v 1.3 2026/08/02 06:39:27 ryoon Exp $
 
-BLAKE2s (ooRexx-5.0.0-pdf.zip) = 3921164b946553f5af2ab2880b88ff3f60b4089ccdc4da67d7b28ca00d7742f3
-SHA512 (ooRexx-5.0.0-pdf.zip) = 9ba7cc5f80590a75b9b59545d8ce3c2ae6a29cb4440d3c06ce4987cbf56946d6302da37f82ffc01a04a539ec80d797c9c611b8a623154c103c7139a34f0ea8a0
-Size (ooRexx-5.0.0-pdf.zip) = 17985018 bytes
-BLAKE2s (oorexx-5.0.0-12583.tar.gz) = 0d889b43ce033718ba530dccfa5e4ae2732968a9de1d7b850b4b0d5db8854d0e
-SHA512 (oorexx-5.0.0-12583.tar.gz) = 141af22e0a99731d50492940d5db55cc59099e5a7fa8acba918d1ae82bcd6e2983fb0ca71bbbf044cc4fc89e740c8a0ac81237eea5812d7a570f825bba5d08b9
-Size (oorexx-5.0.0-12583.tar.gz) = 6398458 bytes
+BLAKE2s (ooRexx-5.2.0-pdf.zip) = 7e3242e665a8d0550d364d5a5214d848e25a0c2fb7166c32f54d921befea5191
+SHA512 (ooRexx-5.2.0-pdf.zip) = 9fd740eb217e640d7d51250c1a74528db6fe2d127ec31b1df7e3e593b376f29fcd923f0a56c80d00ced6214fb9123be04f8f3b78e4117130149fb93bb25f0d3b
+Size (ooRexx-5.2.0-pdf.zip) = 18330505 bytes
+BLAKE2s (oorexx-5.2.0-13156.tar.gz) = f60a535d403f11d4eb3a7abf4d978533bf86a503c7a219c32df8134297fb83e4
+SHA512 (oorexx-5.2.0-13156.tar.gz) = 2880d93f4a26044e670e1bc9697439d2362baf3c275d46ff233bf7db0e9085963370b99b270f4a8692f5feea1db657dddff5cad15094bee7993ff2df978744eb
+Size (oorexx-5.2.0-13156.tar.gz) = 6749614 bytes
 SHA1 (patch-CMakeLists.txt) = f0e93b60861cf48a0ce452bae0c2694af8fb5755
 SHA1 (patch-rexxapi_server_APIServer.cpp) = 36d33ec3afc9488eba93cb7f0554da5329953a8f
-SHA1 (patch-rexxapi_server_platform_unix_APIService.cpp) = efa9af95c8f6f69b4aef0ca087cf57591b211a0d
+SHA1 (patch-rexxapi_server_platform_unix_APIService.cpp) = 8fa265a5acad03946aeb528c0d833536734c1b97
