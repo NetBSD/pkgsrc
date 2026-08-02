@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/06/28 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/02 11:30:29 adam Exp $
 
-DISTNAME=	libcst-1.8.6
+DISTNAME=	libcst-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libcst/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.3:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesmith>=0.0.4:../../devel/py-hypothesmith
 
 USE_LANGUAGES=	c c++	# Rust, but needs toolchain for linking

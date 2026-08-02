@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/10/03 05:56:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/08/02 11:30:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -579,6 +579,9 @@ ${PYSITELIB}/libcst/codemod/tests/test_codemod.pyo
 ${PYSITELIB}/libcst/codemod/tests/test_codemod_cli.py
 ${PYSITELIB}/libcst/codemod/tests/test_codemod_cli.pyc
 ${PYSITELIB}/libcst/codemod/tests/test_codemod_cli.pyo
+${PYSITELIB}/libcst/codemod/tests/test_command_helpers.py
+${PYSITELIB}/libcst/codemod/tests/test_command_helpers.pyc
+${PYSITELIB}/libcst/codemod/tests/test_command_helpers.pyo
 ${PYSITELIB}/libcst/codemod/tests/test_metadata.py
 ${PYSITELIB}/libcst/codemod/tests/test_metadata.pyc
 ${PYSITELIB}/libcst/codemod/tests/test_metadata.pyo
