@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4898 2026/08/02 06:55:02 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4899 2026/08/02 06:57:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7260,3 +7260,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/oorexx to 5.2.0 [ryoon 2026-08-02]
 	Updated misc/libreoffice to 26.2.5.2 [ryoon 2026-08-02]
 	Updated www/resterm to 0.49.4 [drixter 2026-08-02]
+	Updated cad/py-PyRTL to 1.0.2 [ryoon 2026-08-02]
