@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2026/07/27 15:21:12 wiz Exp $
+$NetBSD: distinfo,v 1.47 2026/08/03 18:07:05 wiz Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -219,6 +219,9 @@ Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (dyn-clone-1.0.20.crate) = 7231af3126aa2ebfd0a5bf5c1e248ace0ec3bfbbc32a153249c69da91018c828
 SHA512 (dyn-clone-1.0.20.crate) = 5910c39f1ce031fb89d4974530a60b66848038e2f2bc78bdb3d34e6f40075fb4457b8a604309bedc4012fa46b17212e81dfb376cc6b45fa2dee823a86264690f
 Size (dyn-clone-1.0.20.crate) = 13134 bytes
+BLAKE2s (ec4rs-1.2.0.crate) = 32866bf0818f3b583140527dbd2a89f4f3811cfb8fc97d96eabaefb7887171fb
+SHA512 (ec4rs-1.2.0.crate) = 2af0819f024ac111b5db0002e773dbf677c26f7d1cca0a6f39e3f0317242fbd3058d2beaab18f5f3849f6eba83681dd25c0673c24fec60edce1af4b0e7ed3cfe
+Size (ec4rs-1.2.0.crate) = 24350 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
@@ -711,9 +714,9 @@ Size (reqwest-0.13.2.crate) = 158064 bytes
 BLAKE2s (ring-0.17.14.crate) = 1480ea4de12099a897e831682ebaf48ed6e688e06f58e79e496a06e227ed58bd
 SHA512 (ring-0.17.14.crate) = 88d38205dc1a1f89bd4ae887ec5c168e68a4b749b3ac0612674092331e99d14a9b8d0f4a98d72c1a3853bcc9da420402336da3ee053bedcfd598da8de93afa14
 Size (ring-0.17.14.crate) = 1502610 bytes
-BLAKE2s (rumdl-0.2.43.tar.gz) = ed00a8ee96f81bc89c9d26d531fed34fbae13cf6cd0b5df37d75322ef458a50c
-SHA512 (rumdl-0.2.43.tar.gz) = c7247900f0f17f76ac72520961af4bb51492ad0c7efad264e384393fbb835209baba3818a706358dd4bea014d8a6fc48fc05b1f89f3a16c09cc21d63a2f1a7c7
-Size (rumdl-0.2.43.tar.gz) = 2981111 bytes
+BLAKE2s (rumdl-0.2.49.tar.gz) = 410169d4ccc1bea151b920b0a166539908d6395139d23161e217163e3e26c3b2
+SHA512 (rumdl-0.2.49.tar.gz) = 6fbaa483e08e9b2775249dae3e763f7b2896643e2f3c703b2c3af261329f1fb9ea5452e1c7cf17636ded7b69f8ec2f178e510ca341faa3371dbacf5ed1189300
+Size (rumdl-0.2.49.tar.gz) = 3190276 bytes
 BLAKE2s (rustc_version-0.4.1.crate) = f0d198d0457135ca7572b41cd2440f1b0ca075013f53b384d07c00db8c5d2e84
 SHA512 (rustc_version-0.4.1.crate) = 7aa8a487ca7411b6d23cae62f7568fa3474a7b1fd1589621071be3428a550ed3b7c4ad68277a8f86849e5900397d7d0e9d678f5d423742a045dc7c660fa6c598
 Size (rustc_version-0.4.1.crate) = 12245 bytes

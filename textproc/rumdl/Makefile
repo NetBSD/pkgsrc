@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/07/27 15:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/08/03 18:07:05 wiz Exp $
 
-DISTNAME=	rumdl-0.2.43
+DISTNAME=	rumdl-0.2.49
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvben/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
