@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/06/28 14:52:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/08/03 09:49:35 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -37,6 +37,9 @@ ${PYSITELIB}/playhouse/fields.pyo
 ${PYSITELIB}/playhouse/flask_utils.py
 ${PYSITELIB}/playhouse/flask_utils.pyc
 ${PYSITELIB}/playhouse/flask_utils.pyo
+${PYSITELIB}/playhouse/fts_parser.py
+${PYSITELIB}/playhouse/fts_parser.pyc
+${PYSITELIB}/playhouse/fts_parser.pyo
 ${PYSITELIB}/playhouse/hybrid.py
 ${PYSITELIB}/playhouse/hybrid.pyc
 ${PYSITELIB}/playhouse/hybrid.pyo
