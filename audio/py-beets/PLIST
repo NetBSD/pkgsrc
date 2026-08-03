@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2026/06/29 06:28:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2026/08/03 17:48:45 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -109,6 +109,9 @@ ${PYSITELIB}/beets/test/__init__.pyo
 ${PYSITELIB}/beets/test/_common.py
 ${PYSITELIB}/beets/test/_common.pyc
 ${PYSITELIB}/beets/test/_common.pyo
+${PYSITELIB}/beets/test/fixtures.py
+${PYSITELIB}/beets/test/fixtures.pyc
+${PYSITELIB}/beets/test/fixtures.pyo
 ${PYSITELIB}/beets/test/helper.py
 ${PYSITELIB}/beets/test/helper.pyc
 ${PYSITELIB}/beets/test/helper.pyo
@@ -371,6 +374,7 @@ ${PYSITELIB}/beetsplug/kodiupdate.pyo
 ${PYSITELIB}/beetsplug/lastgenre/__init__.py
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
+${PYSITELIB}/beetsplug/lastgenre/aliases.yaml
 ${PYSITELIB}/beetsplug/lastgenre/client.py
 ${PYSITELIB}/beetsplug/lastgenre/client.pyc
 ${PYSITELIB}/beetsplug/lastgenre/client.pyo
