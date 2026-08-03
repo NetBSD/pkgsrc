@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4946 2026/08/03 18:09:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4947 2026/08/03 18:16:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7322,3 +7322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/zxing-cpp to 3.1.1 [wiz 2026-08-03]
 	Updated textproc/rumdl to 0.2.49 [wiz 2026-08-03]
 	Updated graphics/OpenJPH to 0.31.0 [wiz 2026-08-03]
+	Updated textproc/moor to 2.16.2 [wiz 2026-08-03]
