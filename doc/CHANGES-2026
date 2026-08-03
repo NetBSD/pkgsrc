@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4912 2026/08/03 09:59:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4913 2026/08/03 10:18:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7287,3 +7287,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-fastbencode to 0.3.11 [adam 2026-08-03]
 	Updated math/py-pandas to 3.0.5 [adam 2026-08-03]
 	Updated graphics/py-imageio to 2.37.4 [adam 2026-08-03]
+	Updated mail/offlineimap to 8.0.3 [adam 2026-08-03]
+	Removed devel/py-selectors2 [adam 2026-08-03]
