@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4913 2026/08/03 10:18:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4914 2026/08/03 12:32:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7289,3 +7289,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-imageio to 2.37.4 [adam 2026-08-03]
 	Updated mail/offlineimap to 8.0.3 [adam 2026-08-03]
 	Removed devel/py-selectors2 [adam 2026-08-03]
+	Updated security/mozilla-rootcerts to 1.1.20260715 [wiz 2026-08-03]
