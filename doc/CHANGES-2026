@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4936 2026/08/03 17:26:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4937 2026/08/03 17:47:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7312,3 +7312,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxmlb to 0.3.29 [wiz 2026-08-03]
 	Updated sysutils/py-Glances to 4.5.6 [wiz 2026-08-03]
 	Updated textproc/py-annotated-doc to 0.0.5 [wiz 2026-08-03]
+	Added devel/py-test-factoryboy version 2.8.1 [wiz 2026-08-03]
