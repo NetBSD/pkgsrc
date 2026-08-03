@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4948 2026/08/03 19:40:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4949 2026/08/03 19:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7324,3 +7324,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/OpenJPH to 0.31.0 [wiz 2026-08-03]
 	Updated textproc/moor to 2.16.2 [wiz 2026-08-03]
 	Updated emulators/mame to 0.289 [wiz 2026-08-03]
+	Updated security/libssh to 0.12.1 [wiz 2026-08-03]
