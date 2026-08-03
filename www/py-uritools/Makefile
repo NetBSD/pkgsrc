@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/05/22 08:25:05 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/03 09:46:26 adam Exp $
 
-DISTNAME=	uritools-6.1.2
+DISTNAME=	uritools-6.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritools/}
