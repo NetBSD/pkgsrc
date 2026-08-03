@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.60 2026/03/15 06:31:16 wiz Exp $
+$NetBSD: distinfo,v 1.61 2026/08/03 13:16:45 wiz Exp $
 
+BLAKE2s (CVE-2026-60074-r1.patch) = fc42ff2f2efdc949f6550526f585e4f81505ba243d052d74ff92c6d0e0e2bfee
+SHA512 (CVE-2026-60074-r1.patch) = 30f6f719ac71b3cdb930cc9efa8279ad195bb9b4e5e1857d23b0bb4a6be1149842cd094189b6f4502cb2af9cd264dfe84c7ae1171036cd9e1a0deba7e884bc5e
+Size (CVE-2026-60074-r1.patch) = 10226 bytes
+BLAKE2s (CVE-2026-60075-r1.patch) = db63b206e590e813fe4a31f5c25d80c0c2ea180c0ed0d53019ad7e7744ae0e11
+SHA512 (CVE-2026-60075-r1.patch) = e90a6e2d8f987fc5af298a05bfde2aa190b4218b6b7f3c22daccb95da7eb0b367f4487ed4e9d5a4275731682e2812c5c66b3b6ef68da48baf1cd0aad046e59dc
+Size (CVE-2026-60075-r1.patch) = 2450 bytes
 BLAKE2s (Date-Manip-6.99.tar.gz) = 56fada4f88b91af880c09cd19f3f6edd29aa2a25f89a23ea1750aab1f266e807
 SHA512 (Date-Manip-6.99.tar.gz) = 5326bc51ed962479fc1decbb3a7aa20f6777769ac914f9ea01717ecbecc48ae6b7e0a496219f2ea4c0f7d7a622fa28b0bfd4026db851b0f10beee281d576cc35
 Size (Date-Manip-6.99.tar.gz) = 1865443 bytes
