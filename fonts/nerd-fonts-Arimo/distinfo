@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/05/15 06:47:12 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/08/03 21:46:26 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.4.0/Arimo.tar.xz) = 510067317d8000c2a65f3675e1d67a9df3f2b1f9ba163d96360a236ad0f5c787
-SHA512 (nerd-fonts/3.4.0/Arimo.tar.xz) = 1617bb22726ef415cad3e8ba8e90f86fab6b4405c7d3a15343a4a4e9d40d226c1ff43179df4ea011d7fbf8afd419aaa89ac91c7931f3064eb9c92460531aa890
-Size (nerd-fonts/3.4.0/Arimo.tar.xz) = 1896012 bytes
+BLAKE2s (nerd-fonts/3.5.0/Arimo.tar.xz) = 8c0e25948b9b715cb41b7260ba980f064c8dc168666fa90596a9c39d86175f3e
+SHA512 (nerd-fonts/3.5.0/Arimo.tar.xz) = d20426bffba191c9860030dcbef0dc3f63a893ddeccf555384e8824492fef994380451e3f00479939303acb63c4e78ccf2d7b2c3d307ebfe584834de73f6f1ca
+Size (nerd-fonts/3.5.0/Arimo.tar.xz) = 2066296 bytes

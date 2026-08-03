@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/05/15 06:47:13 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/08/03 21:46:28 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.4.0/SourceCodePro.tar.xz) = d82e129f748da062dff865b04b7e704c0408634a735c899cf2268d1bbabcbf65
-SHA512 (nerd-fonts/3.4.0/SourceCodePro.tar.xz) = 088b18e7c0480b03c57e17d19ebd9b177df1616e4e36dd3fae26cb8471da44dcac081574f7d83384f28a1142651abbffa0353b991a74e00968af095abb74e16a
-Size (nerd-fonts/3.4.0/SourceCodePro.tar.xz) = 3163416 bytes
+BLAKE2s (nerd-fonts/3.5.0/SourceCodePro.tar.xz) = 096bb357ea21a5b7f8b917751ecee551650000b7f1fd853289498e8df96dbcb2
+SHA512 (nerd-fonts/3.5.0/SourceCodePro.tar.xz) = 2944df4c19ea23ff54c1d99da820573cc030c1a24133ceca404da76f2033e705efe1446df2bc87b2029aa1911dd5f6c31c1efd6d538ffcf6f70a9eae737f931b
+Size (nerd-fonts/3.5.0/SourceCodePro.tar.xz) = 3258940 bytes
