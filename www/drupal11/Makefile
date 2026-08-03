@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/08/01 16:05:44 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/03 23:38:50 wen Exp $
 
 DISTNAME=	drupal-11.4.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -40,12 +40,13 @@ CONF_FILES_PERMS+=	share/examples/drupal/default.settings.php \
 			${DRUPAL}/sites/default/settings.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
-REPLACE_PHP+=	core/scripts/drupal core/scripts/password-hash.sh
+REPLACE_PHP+=	core/scripts/dr core/scripts/drupal core/scripts/password-hash.sh
 REPLACE_PHP+=	core/scripts/rebuild_token_calculator.sh
 REPLACE_PHP+=	core/scripts/update-countries.sh
-REPLACE_PHP+=	vendor/bin/var-dump-server
-REPLACE_PHP+=	vendor/bin/patch-type-declarations
+REPLACE_PHP+=	vendor/bin/dr vendor/bin/var-dump-server
+REPLACE_PHP+=	vendor/bin/patch-type-declarations vendor/bin/validate-json
 REPLACE_PHP+=	vendor/bin/yaml-lint
+REPLACE_PHP+=	vendor/justinrainbow/json-schema/bin/validate-json
 REPLACE_PHP+=	vendor/pear/archive_tar/scripts/phptar.in
 REPLACE_PHP+=	vendor/symfony/error-handler/Resources/bin/extract-tentative-return-types.php
 REPLACE_PHP+=	vendor/symfony/error-handler/Resources/bin/patch-type-declarations
@@ -53,6 +54,9 @@ REPLACE_PHP+=	vendor/symfony/var-dumper/Resources/bin/var-dump-server
 REPLACE_PHP+=	vendor/symfony/yaml/Resources/bin/yaml-lint
 
 REPLACE_BASH+=		core/scripts/dev/commit-code-check.sh
+REPLACE_BASH+=		vendor/justinrainbow/json-schema/bin/extract-release-notes.sh
+REPLACE_BASH+=		vendor/justinrainbow/json-schema/bin/prepare-release.sh
+REPLACE_BASH+=		vendor/justinrainbow/json-schema/bin/update-changelog.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
