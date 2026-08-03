@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2026/06/29 06:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/08/03 17:48:45 wiz Exp $
 
-DISTNAME=	beets-2.12.0
+DISTNAME=	beets-2.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://beets.io/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-dynamic-versioning>=0:../../devel/py-poetry-dynamic-versioning
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-confuse>=2.2.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
 DEPENDS+=	${PYPKGPREFIX}-lap>=0.5.12:../../math/py-lap
@@ -23,6 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.5:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-ratelimiter>=0.7.0:../../net/py-requests-ratelimiter
+DEPENDS+=	${PYPKGPREFIX}-titlecase>=0:../../devel/py-titlecase
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # lastgenre
@@ -32,11 +33,14 @@ DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.33:../../audio/py-mutagen
 # ffprobe
 DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 TEST_DEPENDS+=	${PYPKGPREFIX}-discogs-client-[0-9]*:../../audio/py-discogs-client
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpd2-[0-9]*:../../audio/py-mpd2
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0.3.0:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-factoryboy-[0-9]*:../../devel/py-test-factoryboy
+TEST_DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	git
@@ -56,6 +60,8 @@ SUBST_MESSAGE.ffprobe=	Fixing ffprobe file name.
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
+# as of 2.13.1
+# 2460 passed, 178 skipped, 200 warnings, 91 errors
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
