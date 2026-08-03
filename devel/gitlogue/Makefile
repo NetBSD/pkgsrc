@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/04/20 18:30:07 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/03 14:03:02 pin Exp $
 
-DISTNAME=	gitlogue-0.9.0
+DISTNAME=	gitlogue-0.10.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unhappychoice/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	isc
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.95.0
+#RUST_REQ=	1.98.0-beta.6
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.95.0 on amd64
+#This package is confirmed to build with Rust 1.98.0-beta.6 on amd64
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config perl gmake
 
