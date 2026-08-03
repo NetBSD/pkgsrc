@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4908 2026/08/03 08:26:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4909 2026/08/03 08:49:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7275,3 +7275,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/mpg123 to 1.33.7 [thor 2026-08-02]
 	Updated net/nanomsg to 1.2.4 [adam 2026-08-03]
 	Updated net/bird to 3.3.2 [adam 2026-08-03]
+	Updated net/libtorrent to 0.16.19 [adam 2026-08-03]
+	Updated net/rtorrent to 0.16.19 [adam 2026-08-03]
