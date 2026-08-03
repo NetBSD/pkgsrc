@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.54 2026/07/19 10:14:14 wiz Exp $
+$NetBSD: distinfo,v 1.55 2026/08/03 17:13:48 wiz Exp $
 
-BLAKE2s (fzf-0.74.1.tar.gz) = 12d97d827f64be1e776f9e336d56884a5f8c1be71e4db7c539b5eb5edb269fe4
-SHA512 (fzf-0.74.1.tar.gz) = f9ed7469d19de45a370dd0d24640760cf2e7c73ffaa7916ebe04b02b5c639cd30d2abd7c1cf09c4b33c7d20264896e0413de5c43168b36e32f6b6bec40507a49
-Size (fzf-0.74.1.tar.gz) = 451508 bytes
+BLAKE2s (fzf-0.74.2.tar.gz) = 9ff79a394e90659e56c2351634e2fb8e003122d9bb4e946ea6353d510f7760c0
+SHA512 (fzf-0.74.2.tar.gz) = 6917fd11828cc9f9faeca587298f73f7e23389c5e30dc2c5ecdd82bc2479f5bda0c388cced1d2dbf754bb8ba26a36548ba68dc22eee0e542a4fdcb6cce8c8efe
+Size (fzf-0.74.2.tar.gz) = 461367 bytes
 BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 8225a56cd73ef07f4f34aa10fb819ecd8b5334c43a456c4520977b5120f76512
 SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 3ce875eb677a95df738a185ba9af982e9e48162218a809b2af9e4237c2ad0d65d959c3930d99b960f6483d88930f597d222b71f6f339e694ce24fdb9e98199ff
 Size (github.com_charlievieth_fastwalk_@v_v1.0.14.mod) = 92 bytes
@@ -33,12 +33,12 @@ Size (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.mod) = 51 bytes
 BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 0f232c68cb4dd7dc05417a7ba38cab8dc8baa14e554cc49b2868ee9ecfdf9eed
 SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 89b52255dd45791100b58a693036c772d27b26011754caa15df2badc4a93038b70060c7358aa12e01494e2f24e94533cd4ea7f7cb78686e61540383d1680ba2f
 Size (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.zip) = 958042 bytes
-BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.22.mod) = 4b4dc0b8bec3aec5ccb634e8c47e07d1d21608ec72d1ae614c682802f81b99ca
-SHA512 (github.com_mattn_go-isatty_@v_v0.0.22.mod) = f41fd7659eefda9fbb7c7cadd24f94ae577911a243c437e17c0379575fad2e0adead4ea78b31ce073c3ba6995b7fb008a61262441466adf5167e553eeaefc05c
-Size (github.com_mattn_go-isatty_@v_v0.0.22.mod) = 77 bytes
-BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 9909f559991198a7f157d646f6210049fd25579847e926f00652fad9f229197a
-SHA512 (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 54078a59a98866153a50eb341a85c11dc46aab993d568d678b5ccc53221d8d0190f73172d3ddde795f6460c76a6a0ee0a431774ba8e765cef5b7bfc90de714bd
-Size (github.com_mattn_go-isatty_@v_v0.0.22.zip) = 9030 bytes
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.24.mod) = 1eff83ddb02607cf0d6e8fce4447854681c1db32c1b8d586a78c1bd0749e0acf
+SHA512 (github.com_mattn_go-isatty_@v_v0.0.24.mod) = 16dfdce18942ab8c91c5ea7df136c407aa1c7c039504d20ba8c03d823bd0861053f59c936a62f39b3e7efdc08d1f804a86d45876ae496c5046b6d34c1731b9b0
+Size (github.com_mattn_go-isatty_@v_v0.0.24.mod) = 77 bytes
+BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.24.zip) = 7dd161f7ac213b571937b5e10411578d71ea7e24d7aaf29b16cd389721a90d6e
+SHA512 (github.com_mattn_go-isatty_@v_v0.0.24.zip) = 0624471c074a321294b098c6f1f60c01f7da5f6f7b14487c66eb5cbf7462db022ddfb6732ea824da52e30e3868314ccbfe66f9c264c17b40cb25d43a469bf8e4
+Size (github.com_mattn_go-isatty_@v_v0.0.24.zip) = 9195 bytes
 BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = 8df0af400904d313f84666016bb58fa961611b14296a6ee0b534ea7942608632
 SHA512 (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = b96cca212a7024f0039ddd3a744fe818ab2e028b8ac2fd4472ce76ee9b496de3abb0960718c1106a98cf7e6df652dcf2884fe5ed95979bd9016399ea4abd324d
 Size (github.com_mattn_go-runewidth_@v_v0.0.16.mod) = 84 bytes
