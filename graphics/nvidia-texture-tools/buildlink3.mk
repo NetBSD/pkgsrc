@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2026/06/23 09:37:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/08/03 18:10:26 wiz Exp $
 
 BUILDLINK_TREE+=	nvidia-texture-tools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nvidia-texture-tools
 NVIDIA_TEXTURE_TOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nvidia-texture-tools+=	nvidia-texture-tools>=2.0.8
-BUILDLINK_ABI_DEPENDS.nvidia-texture-tools?=	nvidia-texture-tools>=2.1.0nb16
+BUILDLINK_ABI_DEPENDS.nvidia-texture-tools?=	nvidia-texture-tools>=2.1.0nb17
 BUILDLINK_PKGSRCDIR.nvidia-texture-tools?=	../../graphics/nvidia-texture-tools
 
 .include "../../graphics/openexr/buildlink3.mk"

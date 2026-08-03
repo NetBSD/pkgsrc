@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2026/07/13 04:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2026/08/03 18:10:29 wiz Exp $
 
 DISTNAME=	kstars-3.8.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=kstars/${PKGVERSION_NOREV}/}
 

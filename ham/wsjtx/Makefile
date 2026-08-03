@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/07/13 04:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/03 18:10:28 wiz Exp $
 
 DISTNAME=	wsjtx-2.5.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	ham
 MASTER_SITES=	https://sourceforge.net/projects/wsjt/files/wsjtx-2.5.4/wsjtx-2.5.4.tgz/
 # for 2.6.1

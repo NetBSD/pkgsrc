@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/06/23 09:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/03 18:10:24 wiz Exp $
 
 DISTNAME=	dmtx-utils-0.7.6
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dmtx/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
