@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/06/23 09:35:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/08/03 18:09:31 wiz Exp $
 bin/ojph_compress
 bin/ojph_expand
 include/openjph/ojph_arch.h
@@ -10,13 +10,12 @@ include/openjph/ojph_file.h
 include/openjph/ojph_mem.h
 include/openjph/ojph_message.h
 include/openjph/ojph_params.h
-include/openjph/ojph_simd_vsx.h
 include/openjph/ojph_version.h
 lib/cmake/openjph/openjph-config-version.cmake
 lib/cmake/openjph/openjph-config.cmake
 lib/cmake/openjph/openjph-targets-release.cmake
 lib/cmake/openjph/openjph-targets.cmake
 lib/libopenjph.so
-lib/libopenjph.so.0.30
+lib/libopenjph.so.0.31
 lib/libopenjph.so.${PKGVERSION}
 lib/pkgconfig/openjph.pc
