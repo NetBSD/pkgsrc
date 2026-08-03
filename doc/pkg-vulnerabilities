@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.773 2026/08/02 12:15:30 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.774 2026/08/03 14:12:29 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30353,7 +30353,7 @@ sequoia-chameleon-gnupg-[0-9]*	unknown	https://github.com/rust-openssl/rust-open
 sequoia-sq-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 sniffnet<1.5.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 so-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-spotify-player-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+spotify-player<0.24.1	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 spotifyd-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 suckit-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 taplo-cli-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
