@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4947 2026/08/03 18:16:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4948 2026/08/03 19:40:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7323,3 +7323,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.49 [wiz 2026-08-03]
 	Updated graphics/OpenJPH to 0.31.0 [wiz 2026-08-03]
 	Updated textproc/moor to 2.16.2 [wiz 2026-08-03]
+	Updated emulators/mame to 0.289 [wiz 2026-08-03]
