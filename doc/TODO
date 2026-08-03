@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27683 2026/08/03 18:07:20 wiz Exp $
+$NetBSD: TODO,v 1.27684 2026/08/03 18:09:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-25.2.7 [wip]
 	o MesaLib-26.2
 	o OdfConverter-4.0
-	o OpenJPH-0.31.0
 	o PACK-0.0.4
 	o PageEdit-2.7.6
 	o R-GRASS-0.3.9
