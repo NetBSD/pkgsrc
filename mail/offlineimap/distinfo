@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/06/30 09:58:48 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/08/03 10:11:58 adam Exp $
 
-BLAKE2s (offlineimap3-8.0.2.tar.gz) = 2cd87725398d68a1884ff0dfd23c1bc29198a6c82516d4dba87f7e4ae11f97d6
-SHA512 (offlineimap3-8.0.2.tar.gz) = 971fe76cd5e58fe13faf00ffd069e8de931c1503ef37b9b9e871fdd2f578fb4b56a2e254f160a47531206811b92001ac8e4ec95c744cfa6f7ab35fcb9bab0648
-Size (offlineimap3-8.0.2.tar.gz) = 709438 bytes
+BLAKE2s (offlineimap-8.0.3.tar.gz) = c3315a9e494e35fcf49b5334bea4f1cffa62766719b26e17646a3971a1762766
+SHA512 (offlineimap-8.0.3.tar.gz) = 6cf64d8fff9fb47e58f23b9d9cb609b288c05640a6ae17659bce087ce74c81a2d5255cbf46f15d58441a2515dbddfcb7c6bcb5905a47c6c5f8b0752748759225
+Size (offlineimap-8.0.3.tar.gz) = 224924 bytes
