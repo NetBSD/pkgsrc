@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/01/11 09:57:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/08/03 17:58:08 wiz Exp $
 bin/websockets-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -15,15 +15,9 @@ ${PYSITELIB}/websockets/__main__.pyo
 ${PYSITELIB}/websockets/asyncio/__init__.py
 ${PYSITELIB}/websockets/asyncio/__init__.pyc
 ${PYSITELIB}/websockets/asyncio/__init__.pyo
-${PYSITELIB}/websockets/asyncio/async_timeout.py
-${PYSITELIB}/websockets/asyncio/async_timeout.pyc
-${PYSITELIB}/websockets/asyncio/async_timeout.pyo
 ${PYSITELIB}/websockets/asyncio/client.py
 ${PYSITELIB}/websockets/asyncio/client.pyc
 ${PYSITELIB}/websockets/asyncio/client.pyo
-${PYSITELIB}/websockets/asyncio/compatibility.py
-${PYSITELIB}/websockets/asyncio/compatibility.pyc
-${PYSITELIB}/websockets/asyncio/compatibility.pyo
 ${PYSITELIB}/websockets/asyncio/connection.py
 ${PYSITELIB}/websockets/asyncio/connection.pyc
 ${PYSITELIB}/websockets/asyncio/connection.pyo
@@ -69,9 +63,6 @@ ${PYSITELIB}/websockets/frames.pyo
 ${PYSITELIB}/websockets/headers.py
 ${PYSITELIB}/websockets/headers.pyc
 ${PYSITELIB}/websockets/headers.pyo
-${PYSITELIB}/websockets/http.py
-${PYSITELIB}/websockets/http.pyc
-${PYSITELIB}/websockets/http.pyo
 ${PYSITELIB}/websockets/http11.py
 ${PYSITELIB}/websockets/http11.pyc
 ${PYSITELIB}/websockets/http11.pyo
@@ -142,6 +133,27 @@ ${PYSITELIB}/websockets/sync/server.pyo
 ${PYSITELIB}/websockets/sync/utils.py
 ${PYSITELIB}/websockets/sync/utils.pyc
 ${PYSITELIB}/websockets/sync/utils.pyo
+${PYSITELIB}/websockets/trio/__init__.py
+${PYSITELIB}/websockets/trio/__init__.pyc
+${PYSITELIB}/websockets/trio/__init__.pyo
+${PYSITELIB}/websockets/trio/client.py
+${PYSITELIB}/websockets/trio/client.pyc
+${PYSITELIB}/websockets/trio/client.pyo
+${PYSITELIB}/websockets/trio/connection.py
+${PYSITELIB}/websockets/trio/connection.pyc
+${PYSITELIB}/websockets/trio/connection.pyo
+${PYSITELIB}/websockets/trio/messages.py
+${PYSITELIB}/websockets/trio/messages.pyc
+${PYSITELIB}/websockets/trio/messages.pyo
+${PYSITELIB}/websockets/trio/router.py
+${PYSITELIB}/websockets/trio/router.pyc
+${PYSITELIB}/websockets/trio/router.pyo
+${PYSITELIB}/websockets/trio/server.py
+${PYSITELIB}/websockets/trio/server.pyc
+${PYSITELIB}/websockets/trio/server.pyo
+${PYSITELIB}/websockets/trio/utils.py
+${PYSITELIB}/websockets/trio/utils.pyc
+${PYSITELIB}/websockets/trio/utils.pyo
 ${PYSITELIB}/websockets/typing.py
 ${PYSITELIB}/websockets/typing.pyc
 ${PYSITELIB}/websockets/typing.pyo
