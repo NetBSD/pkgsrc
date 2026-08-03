@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4668 2026/08/03 15:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4669 2026/08/03 17:47:48 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3160,6 +3160,7 @@ SUBDIR+=	py-test-doctestplus
 SUBDIR+=	py-test-env
 SUBDIR+=	py-test-examples
 SUBDIR+=	py-test-expect
+SUBDIR+=	py-test-factoryboy
 SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
@@ -3209,6 +3210,7 @@ SUBDIR+=	py-testscenarios
 SUBDIR+=	py-testtools
 SUBDIR+=	py-thrift
 SUBDIR+=	py-timeout-decorator
+SUBDIR+=	py-titlecase
 SUBDIR+=	py-tlsh
 SUBDIR+=	py-tlv8
 SUBDIR+=	py-toolconfig
