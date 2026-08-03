@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2026/04/26 09:01:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/08/03 17:52:28 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -11,6 +11,9 @@ ${PYSITELIB}/cryptography/__about__.pyo
 ${PYSITELIB}/cryptography/__init__.py
 ${PYSITELIB}/cryptography/__init__.pyc
 ${PYSITELIB}/cryptography/__init__.pyo
+${PYSITELIB}/cryptography/cobblestone.py
+${PYSITELIB}/cryptography/cobblestone.pyc
+${PYSITELIB}/cryptography/cobblestone.pyo
 ${PYSITELIB}/cryptography/exceptions.py
 ${PYSITELIB}/cryptography/exceptions.pyc
 ${PYSITELIB}/cryptography/exceptions.pyo
@@ -45,6 +48,7 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/__init__.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/_openssl.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/asn1.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/cobblestone.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/declarative_asn1.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/exceptions.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/ocsp.pyi
@@ -62,6 +66,7 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/hmac.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/hpke.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/kdf.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/keys.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/keywrap.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/mldsa.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/mlkem.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/poly1305.pyi
