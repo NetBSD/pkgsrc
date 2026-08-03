@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2026/03/30 09:26:16 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/03 09:55:18 adam Exp $
 
-BLAKE2s (fastbencode-0.3.10.tar.gz) = 90da9e8596f583ddd5e2ae094e52c516ae20104e47fb1d8f09bc5cbc2f1dd4a5
-SHA512 (fastbencode-0.3.10.tar.gz) = 9d24a12c5d12ec4c76233304bc9611c3f59c4eaf690490ff545fa2b04e83a03092cc5aed093172a8ce2244d6b335fead606f794a5cebb9aa4b19e1f1b72cbf47
-Size (fastbencode-0.3.10.tar.gz) = 17005 bytes
+BLAKE2s (fastbencode-0.3.11.tar.gz) = 65b2c71f9edae60f1b7b48148d29f4b872693a82841f652fc10e3c60060ded2a
+SHA512 (fastbencode-0.3.11.tar.gz) = e21b7e5a9333f1e350f359145716656ebf824ef9a607007cb8268b8884b90a4f5b8507f4523457ff7ac89e6b34e071bc7c53aa57f4118d1f43f8418e3604af0a
+Size (fastbencode-0.3.11.tar.gz) = 20011 bytes
 BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
 SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
 Size (heck-0.5.0.crate) = 11517 bytes
