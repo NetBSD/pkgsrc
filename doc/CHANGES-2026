@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4909 2026/08/03 08:49:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4910 2026/08/03 09:44:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7277,3 +7277,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bird to 3.3.2 [adam 2026-08-03]
 	Updated net/libtorrent to 0.16.19 [adam 2026-08-03]
 	Updated net/rtorrent to 0.16.19 [adam 2026-08-03]
+	Updated www/py-zensical to 0.0.52 [adam 2026-08-03]
+	Updated devel/py-traitlets to 5.16.0 [adam 2026-08-03]
