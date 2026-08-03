@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4935 2026/08/03 17:24:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4936 2026/08/03 17:26:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7311,3 +7311,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz-docs to 14.3.0 [wiz 2026-08-03]
 	Updated textproc/libxmlb to 0.3.29 [wiz 2026-08-03]
 	Updated sysutils/py-Glances to 4.5.6 [wiz 2026-08-03]
+	Updated textproc/py-annotated-doc to 0.0.5 [wiz 2026-08-03]
