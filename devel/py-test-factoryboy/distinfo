@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/03 17:47:34 wiz Exp $
+
+BLAKE2s (pytest_factoryboy-2.8.1.tar.gz) = d1945fce8c600bf529fa4934771dcfaafd2a3d48dd9b215fd0aedd1c9e62dd63
+SHA512 (pytest_factoryboy-2.8.1.tar.gz) = 809f940df7b788ae19f0e56799de5cdb4245cdc6640b31c8274abe806c298f51741e7392ee6fbe837717921c7678b695a925cd69ba56ec0feb1477063c0f8159
+Size (pytest_factoryboy-2.8.1.tar.gz) = 16906 bytes

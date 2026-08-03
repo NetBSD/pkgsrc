@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/03 17:47:34 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
+${PYSITELIB}/pytest_factoryboy/__init__.py
+${PYSITELIB}/pytest_factoryboy/__init__.pyc
+${PYSITELIB}/pytest_factoryboy/__init__.pyo
+${PYSITELIB}/pytest_factoryboy/compat.py
+${PYSITELIB}/pytest_factoryboy/compat.pyc
+${PYSITELIB}/pytest_factoryboy/compat.pyo
+${PYSITELIB}/pytest_factoryboy/fixture.py
+${PYSITELIB}/pytest_factoryboy/fixture.pyc
+${PYSITELIB}/pytest_factoryboy/fixture.pyo
+${PYSITELIB}/pytest_factoryboy/fixturegen.py
+${PYSITELIB}/pytest_factoryboy/fixturegen.pyc
+${PYSITELIB}/pytest_factoryboy/fixturegen.pyo
+${PYSITELIB}/pytest_factoryboy/hooks.py
+${PYSITELIB}/pytest_factoryboy/hooks.pyc
+${PYSITELIB}/pytest_factoryboy/hooks.pyo
+${PYSITELIB}/pytest_factoryboy/plugin.py
+${PYSITELIB}/pytest_factoryboy/plugin.pyc
+${PYSITELIB}/pytest_factoryboy/plugin.pyo
+${PYSITELIB}/pytest_factoryboy/py.typed
