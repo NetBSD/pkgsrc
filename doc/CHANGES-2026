@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4942 2026/08/03 17:56:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4943 2026/08/03 17:58:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-cryptography to 50.0.0 [wiz 2026-08-03]
 	Updated security/py-cryptography_vectors to 50.0.0 [wiz 2026-08-03]
 	Updated time/py-pytz to 2026.3.0.1 [wiz 2026-08-03]
+	Updated www/py-websockets to 17.0.1 [wiz 2026-08-03]
