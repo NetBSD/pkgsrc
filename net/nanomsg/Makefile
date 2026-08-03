@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/08/03 07:58:25 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/03 08:50:18 adam Exp $
 
 DISTNAME=	nanomsg-1.2.4
 CATEGORIES=	net
@@ -17,10 +17,6 @@ TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	src/pkgconfig.in
-
-# Fix for https://github.com/nanomsg/nanomsg/issues/1126
-post-extract:
-	${ECHO} ${PKGVERSION_NOREV} > ${WRKSRC}/.version
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
