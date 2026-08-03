@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/07/06 06:28:35 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/08/03 17:21:42 wiz Exp $
 
-BLAKE2s (libxmlb-0.3.28.tar.xz) = 3a7db4685fb6e7e7151a5997d0c36afd44609a42e8c081aad0b0997aeb709247
-SHA512 (libxmlb-0.3.28.tar.xz) = ff32f82e82425af20bd27a16e3f022dd43503f11843579a0f80699d0a54a3bbb057a35096939d83d134a88834763a48907cc3efba7fec3ec43a8e81e972aad68
-Size (libxmlb-0.3.28.tar.xz) = 107344 bytes
+BLAKE2s (libxmlb-0.3.29.tar.xz) = 79d0c4f7f6f826bcda149f9f879732d88b1b7a5cdf93f0bca7b4cf03b07dfe54
+SHA512 (libxmlb-0.3.29.tar.xz) = f133a9e42b35d59bbc592fe9350cec465b42f33fcaddb42bff5c40e694bd8c60cd352833ae8c942f1df589e6066ba14159ec813f1bf4dada765fd69af09295b9
+Size (libxmlb-0.3.29.tar.xz) = 108240 bytes
