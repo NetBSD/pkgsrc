@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4944 2026/08/03 18:03:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4945 2026/08/03 18:07:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7320,3 +7320,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-pytz to 2026.3.0.1 [wiz 2026-08-03]
 	Updated www/py-websockets to 17.0.1 [wiz 2026-08-03]
 	Updated graphics/zxing-cpp to 3.1.1 [wiz 2026-08-03]
+	Updated textproc/rumdl to 0.2.49 [wiz 2026-08-03]
