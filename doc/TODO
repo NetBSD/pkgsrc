@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27666 2026/08/02 06:43:29 ryoon Exp $
+$NetBSD: TODO,v 1.27667 2026/08/03 08:56:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,6 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-25.2.7 [wip]
 	o MesaLib-26.2
 	o OdfConverter-4.0
+	o OpenJPH-0.31.0
 	o PACK-0.0.4
 	o PageEdit-2.7.6
 	o R-GRASS-0.3.9
@@ -650,6 +651,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-ntfs-3g-2026.7.7
 	o fuse-sshfs-3.7.6
+	o fzf-0.74.2
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
@@ -666,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ggml-0.18.0
 	o ghc-9.14.1
 	o git-cinnabar-0.7.3
 	o gjs-1.70.1
@@ -743,6 +746,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-14.3.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -756,6 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hplip-3.26.4
 	o html2wml-0.4.11
 	o htslib-1.24
+	o hwdata-0.410
 	o hydrogen-1.2.6
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -854,6 +859,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
+	o libpsl-0.23.1
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
@@ -864,6 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
+	o libxmlb-0.3.29
 	o lighttpd-1.4.85
 	o lima-2.2.0
 	o lincvs-2.1.4 [now called CrossVC]
@@ -891,6 +898,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o magic-8.3.309
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.289
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mari0-1.6.2
@@ -934,6 +942,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
+	o moor-2.16.1
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1120,12 +1129,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-Glances-4.5.6
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-annotated-doc-0.0.5
+	o py-beets-2.13.1
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptography-50.0.0
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
@@ -1133,11 +1146,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-grpcio-1.83.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-markdown-3.10.3
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pip-26.2
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.47.0 [waiting for py-pydantic release that works with this]
+	o py-pytz-2026.3.post1
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-3.12.1
 	o py-sybase-0.37
@@ -1147,9 +1163,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-torch-2.10
 	o py-uliweb-0.6
 	o py-uv-0.12.0
-	o py-uv-build-0.12.0
+	o py-uv-build-0.12.1
 	o py-wat-0.6.0
+	o py-websockets-17.0.1
 	o py-yubiauth-0.3.10
+	o py-zensical-0.0.52
 	o pythontidy-1.23
 	o q5go-2.1.3
 	o qca2-2.3.9
@@ -1185,7 +1203,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.45
+	o rumdl-0.2.48
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1414,6 +1432,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zls-0.14.0
 	o zookeeper-3.8.5
 	o zopeedit-0.8
+	o zxing-cpp-3.1.1
 
 Licenses of packages
 ====================
