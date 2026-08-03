@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2026/07/16 06:11:07 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2026/08/03 18:07:05 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -73,6 +73,7 @@ CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.5
 CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	dyn-clone-1.0.20
+CARGO_CRATE_DEPENDS+=	ec4rs-1.2.0
 CARGO_CRATE_DEPENDS+=	either-1.15.0
 CARGO_CRATE_DEPENDS+=	email_address-0.2.9
 CARGO_CRATE_DEPENDS+=	embedded-io-0.4.0
