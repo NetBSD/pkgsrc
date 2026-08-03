@@ -1,0 +1,23 @@
+Disable shrink wrap for baserel code.
+
+--- gcc/config/rs6000/rs6000.cc.orig	2026-08-03 18:26:50.698811534 +0000
++++ gcc/config/rs6000/rs6000.cc
+@@ -3646,6 +3646,18 @@ rs6000_option_override_internal (bool gl
+ 	     " it is incompatible with the installed C and C++ libraries",
+ 	     "-malign-power");
+ 
++#ifdef TARGET_BASEREL
++  /* Shrink wrap does not play well with __restore_r13, which cannot be
++     reordered.  */
++  if (TARGET_BASEREL)
++    {
++      if (!OPTION_SET_P (flag_shrink_wrap))
++        flag_shrink_wrap = 0;
++      if (!OPTION_SET_P (flag_shrink_wrap_separate))
++        flag_shrink_wrap_separate = 0;
++    }
++#endif
++
+   /* Numerous experiment shows that IRA based loop pressure
+      calculation works better for RTL loop invariant motion on targets
+      with enough (>= 32) registers.  It is an expensive optimization.
