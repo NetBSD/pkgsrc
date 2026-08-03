@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2026/06/07 21:09:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.106 2026/08/03 19:39:59 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -189,6 +189,7 @@ share/mame/hash/c64_cart.xml
 share/mame/hash/c64_cass.xml
 share/mame/hash/c64_flop_misc.xml
 share/mame/hash/c64_flop_orig.xml
+share/mame/hash/c64_quik.xml
 share/mame/hash/c65_flop.xml
 share/mame/hash/camplynx_cass.xml
 share/mame/hash/camplynx_flop.xml
@@ -296,6 +297,7 @@ share/mame/hash/gbcolor.xml
 share/mame/hash/gcslottv.xml
 share/mame/hash/generic_cdrom.xml
 share/mame/hash/generic_flop_525.xml
+share/mame/hash/genie3_flop.xml
 share/mame/hash/ggm.xml
 share/mame/hash/gimix.xml
 share/mame/hash/gj4000.xml
@@ -485,6 +487,7 @@ share/mame/hash/mtx_cass.xml
 share/mame/hash/mtx_flop.xml
 share/mame/hash/mtx_hdd.xml
 share/mame/hash/mtx_rom.xml
+share/mame/hash/mylife_cart.xml
 share/mame/hash/myvision.xml
 share/mame/hash/mz2000_cass.xml
 share/mame/hash/mz2000_flop.xml
@@ -550,6 +553,9 @@ share/mame/hash/pc200.xml
 share/mame/hash/pc6001_cart.xml
 share/mame/hash/pc6001_cass.xml
 share/mame/hash/pc6001mk2_cass.xml
+share/mame/hash/pc6001mk2_flop.xml
+share/mame/hash/pc6001mk2sr_cass.xml
+share/mame/hash/pc6001mk2sr_flop.xml
 share/mame/hash/pc8001_flop.xml
 share/mame/hash/pc8001mk2_flop.xml
 share/mame/hash/pc8001mk2sr_flop.xml
@@ -557,6 +563,7 @@ share/mame/hash/pc8201.xml
 share/mame/hash/pc8801_cass.xml
 share/mame/hash/pc8801_cdrom.xml
 share/mame/hash/pc8801_flop.xml
+share/mame/hash/pc8801_flop_orig.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc88va_flop_orig.xml
 share/mame/hash/pc98.xml
@@ -658,6 +665,7 @@ share/mame/hash/sat_cart.xml
 share/mame/hash/sat_vccart.xml
 share/mame/hash/saturn.xml
 share/mame/hash/sawatte.xml
+share/mame/hash/sb80_flop.xml
 share/mame/hash/sbrain.xml
 share/mame/hash/sc3000_cart.xml
 share/mame/hash/sc3000_cass.xml
