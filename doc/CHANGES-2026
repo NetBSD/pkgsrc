@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4915 2026/08/03 13:16:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4916 2026/08/03 13:25:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7291,3 +7291,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-selectors2 [adam 2026-08-03]
 	Updated security/mozilla-rootcerts to 1.1.20260715 [wiz 2026-08-03]
 	Updated devel/p5-Date-Manip to 6.99nb2 [wiz 2026-08-03]
+	Added devel/p5-Devel-Deprecate version 0.01 [wiz 2026-08-03]
