@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/05/30 15:13:14 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/03 13:12:27 wiz Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	122
@@ -22,7 +22,6 @@ USE_TOOLS+=	bash perl pax
 # Patch to fix linker errors on i386
 PATCH_SITES=		https://github.com/golang/go/commit/
 PATCHFILES=		9ba0948172cbb05308fb2a9db823a720f8ffb9ad.patch
-PATCH_DIST_STRIP=	-p1
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp

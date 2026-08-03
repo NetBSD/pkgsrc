@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/11/04 21:12:58 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/03 13:12:31 wiz Exp $
 
 DISTNAME=		pks-0.9.4
 PKGREVISION=		5
@@ -8,7 +8,6 @@ MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pks/}
 #PATCH_SITES=		http://www.mit.edu/people/marc/pks/
 PATCHFILES=		pks094-patch2 \
 			pks094-patch3
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.mit.edu/people/marc/pks/

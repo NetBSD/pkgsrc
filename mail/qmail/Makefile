@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2023/11/16 23:13:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.131 2026/08/03 13:12:29 wiz Exp $
 
 DISTNAME=		notqmail-1.08
 PKGNAME=		qmail-1.03
@@ -131,6 +131,8 @@ PKG_HOME.${user}=		${QMAILDIR}
 PKG_HOME.${QMAIL_ALIAS_USER}=	${QMAILDIR}/alias
 
 READMES=		README.pkgsrc
+
+PATCH_DIST_STRIP=		-p0
 
 # Record all patches applied, starting with the non-optional ones:
 QMAILPATCHES=			notqmail:${DEFAULT_DISTFILES}

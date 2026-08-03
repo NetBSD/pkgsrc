@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/11/17 11:00:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2026/08/03 13:12:23 wiz Exp $
 
 DISTNAME=		synce-rra-0.9.1
 PKGREVISION=		2
@@ -8,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 
 PATCHFILES=		rra-fixes-after-V0_9_1.diff
 PATCH_SITES=		http://synce.sourceforge.net/tmp/
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://synce.sourceforge.net/

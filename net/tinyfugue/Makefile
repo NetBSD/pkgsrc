@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/11/17 11:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/08/03 13:12:30 wiz Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -17,7 +17,6 @@ MAKE_ENV+=	TFVER=${DISTNAME:S/^tf-//}
 
 PATCH_SITES=		http://discworld.imaginary.com/external/taffyd/
 PATCHFILES=		tf-40s1-mccp-patch.gz
-PATCH_DIST_STRIP=	-p1
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

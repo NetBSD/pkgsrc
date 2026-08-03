@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/12/01 09:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=	cpia2_driver-1.0
 PKGNAME=	cpia2view-0.03
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 PATCH_SITES=		http://home.384.jp/takam/bsd/
 PATCHFILES=		cpia2_driver-1.0-bsd-0.03.patch.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/cpia2/

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/09/03 08:36:54 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.42 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=		nighthawk-2.1
 PKGREVISION=		5
@@ -9,7 +8,6 @@ EXTRACT_SUFX=		.tgz
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		nighthawk-2.1a.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/02/15 09:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -9,7 +9,6 @@ DISTFILES=	urt-3.1b.tar.Z urt-doc.tar.Z urt-img.tar.Z
 
 PATCH_SITES=		http://www.funet.fi/pub/graphics/packages/urt/rel2/
 PATCHFILES=		urt-3.1b-3.1b1.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	https://www.cs.utah.edu/gdc/projects/urt/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/03 13:12:24 wiz Exp $
 
 # using configure options and sources from
 # https://github.com/earlephilhower/esp-quick-toolchain
@@ -41,7 +41,6 @@ PATCH_SITES+= https://raw.githubusercontent.com/earlephilhower/esp-quick-toolcha
 
 PATCHFILES+= gcc-001-jump-tables-in-text-section-earlephilhower.patch
 PATCH_SITES+= https://github.com/earlephilhower/esp-quick-toolchain/raw/master/patches/
-PATCH_DIST_STRIP= -p1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		https://github.com/espressif/gcc

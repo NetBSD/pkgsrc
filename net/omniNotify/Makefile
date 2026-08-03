@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/11/17 11:01:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2026/08/03 13:12:30 wiz Exp $
 
 DISTNAME=	omniNotify-2.1
 PKGREVISION=	1
@@ -8,7 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omninotify/}
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/omniNotify/
 PATCHFILES=		omniNotify-jumbo-patch-20151224.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://omninotify.sourceforge.net/

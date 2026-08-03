@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/01/27 20:47:19 rillig Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/03 13:12:23 wiz Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -8,7 +8,6 @@ CATEGORIES=		benchmarks
 
 PATCH_SITES=		http://www.eecs.harvard.edu/~dholland/netbsd/
 PATCHFILES=		hbench-OS-1.1-provisional-patch1.diff
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/

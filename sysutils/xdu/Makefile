@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2026/08/03 13:12:32 wiz Exp $
 
 DISTNAME=	xdu-3.0
 PKGREVISION=	8
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/xdu/
 PATCHFILES+=	xdu-3.0.dirname.patch \
 		xdu-3.0.i18n.patch
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	hubertf@NetBSD.org
 #HOMEPAGE=	http://sd.wareonearth.com/~phil/xdu/

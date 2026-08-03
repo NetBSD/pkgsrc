@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/04/03 17:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/08/03 13:12:24 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
@@ -17,7 +17,6 @@ PATCH_SITES=		https://foss.heptapod.net/mercurial/evolve/-/commit/
 PATCHFILES=		8ec80fb4b0ce4247b61051014a4fb891bf327a89.diff \
 			0144bd9214df0457a966177eb7217e2b2991965a.diff \
 			1c1cd671da5c3c547184b0b13dbb59b8c848d09c.diff
-PATCH_DIST_STRIP=	-p1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial

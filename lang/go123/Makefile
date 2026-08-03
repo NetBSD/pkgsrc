@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/05/30 15:13:14 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/03 13:12:27 wiz Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
@@ -22,7 +22,6 @@ USE_TOOLS+=	bash perl pax
 # Patch to stop requiring /proc to be mounted on NetBSD
 PATCH_SITES=		https://github.com/golang/go/commit/
 PATCHFILES=		80344887818a2321296ce7fa71cca8ca2520611d.diff
-PATCH_DIST_STRIP=	-p1
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2026/03/27 18:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2026/08/03 13:12:27 wiz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	33
@@ -13,6 +13,7 @@ PATCH_DIST_STRIP.${JUMBO_PATCHES}=	-p1
 SITES.${JUMBO_PATCHES}=			${MASTER_SITE_SOURCEFORGE:=png-mng/}
 PATCHFILES+=				xv-3.10a-enhancements.20070520-20081216.diff
 PATCH_SITES=				http://www.gregroelofs.com/code/
+PATCH_DIST_STRIP=			-p0
 
 MAINTAINER=	tsutsui@NetBSD.org
 #HOMEPAGE=	http://www.trilon.com/xv/

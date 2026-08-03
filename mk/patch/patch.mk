@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.20 2026/01/11 16:12:49 wiz Exp $
+# $NetBSD: patch.mk,v 1.21 2026/08/03 13:12:30 wiz Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -16,7 +16,7 @@
 #
 #    PATCH_DIST_STRIP is a patch(1) argument that sets the pathname
 #	strip count to help find the correct files to patch.  See the
-#	patch(1) man page for more details.  Defaults to "-p0".
+#	patch(1) man page for more details.  Defaults to "-p1".
 #
 #    PATCH_DIST_ARGS is the base set of arguments passed to patch(1).
 #	The default set of arguments will apply the patches to the
@@ -207,7 +207,7 @@ fi; exit 1
 # may be set, i.e. PATCH_DIST_STRIP.<patch>, PATCH_DIST_ARGS.<patch>,
 # PATCH_DIST_CAT.<patch>.
 #
-PATCH_DIST_STRIP?=		-p0
+PATCH_DIST_STRIP?=		-p1
 .for i in ${PATCHFILES}
 PATCH_DIST_STRIP.${i:S/=/--/}?=	${PATCH_DIST_STRIP}
 .  if defined(PATCH_DIST_ARGS)

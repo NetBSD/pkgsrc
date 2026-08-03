@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.50 2024/07/23 06:38:22 wiz Exp $
+# $NetBSD: options.mk,v 1.51 2026/08/03 13:12:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam openssh-legacymodsz
@@ -43,7 +43,6 @@ CONFIGURE_ARGS+=	CPPFLAGS="${CPPFLAGS} -DSSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ=768"
 #.if !empty(PKG_OPTIONS:Mhpn-patch)
 #PATCHFILES=		openssh-7.1p1-hpn-20150822.diff.bz2
 #PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/openssh/
-#PATCH_DIST_STRIP=	-p1
 #.endif
 
 PLIST_VARS+=	pam

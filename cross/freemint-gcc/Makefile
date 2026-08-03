@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/24 10:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/03 13:12:24 wiz Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -13,6 +13,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 PATCH_SITES=	http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
 PATCHFILES=	gcc-4.6.4-mint-20130415.patch.bz2
+PATCH_DIST_STRIP=	-p0
 
 WRKSRC=		${WRKDIR}
 

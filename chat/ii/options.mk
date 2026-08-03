@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/09/02 20:24:02 vins Exp $
+# $NetBSD: options.mk,v 1.2 2026/08/03 13:12:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ii
 PKG_SUPPORTED_OPTIONS=	tls
@@ -9,6 +9,5 @@ PKG_SUGGESTED_OPTIONS=	tls
 .if !empty(PKG_OPTIONS:Mtls)
 PATCH_SITES=            ${HOMEPAGE}/patches/tls/
 PATCHFILES+=            ${DISTNAME}-tls.diff
-PATCH_DIST_STRIP=	-p1
 .  include "../../security/libretls/buildlink3.mk"
 .endif

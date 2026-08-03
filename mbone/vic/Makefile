@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/11/12 13:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/03 13:12:30 wiz Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -13,6 +13,7 @@ MAKE_JOBS_SAFE=		no
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=	ftp://tink.ims.ac.jp/pub/NetBSD/vic/
 PATCHFILES=	vic-2.8_ov511p0.diff.gz
+PATCH_DIST_STRIP=	-p0
 .endif
 
 MAINTAINER=	is@NetBSD.org

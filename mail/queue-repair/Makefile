@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/08/14 05:24:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/08/03 13:12:29 wiz Exp $
 
 DISTNAME=		queue-repair-0.9.0
 PKGREVISION=		11
@@ -13,6 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 SYMLINK3_PATCH=		queue-repair-0.9.0-symlink3-20180724.patch
 PATCHFILES+=		${SYMLINK3_PATCH}
+PATCH_DIST_STRIP=	-p0
 SITES.${SYMLINK3_PATCH}= https://schmonz.com/qmail/queuerepairsymlink3/
 
 REPLACE_PYTHON=		queue_repair.py

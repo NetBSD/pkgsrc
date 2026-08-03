@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/21 20:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/03 13:12:27 wiz Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		${DISTNAME:S/gcc/gcc2/}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
+PATCH_DIST_STRIP=	-p0
 
 #
 # Synced from patches against main source tree as of 2002-03-28

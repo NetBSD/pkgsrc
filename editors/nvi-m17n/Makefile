@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/07/04 08:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.bostic.com/files/
 
 #PATCH_SITES=	ftp://ftp.itojun.org/pub/nvi/
 PATCHFILES=	nvi-m17n-1.79-20040608.diff.gz
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Clone of vi/ex, with multilingual patch

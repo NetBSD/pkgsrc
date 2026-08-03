@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/21 19:23:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/03 13:12:30 wiz Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://archive.debian.org/debian//pool/main/t/traceroute-nanog/
 # for the man page:
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	traceroute-nanog_6.4.2-1.diff.gz
+PATCH_DIST_STRIP=	-p0
 
 COMMENT=	Traceroute implementation with extended features
 MAINTAINER=	schwarz@NetBSD.org

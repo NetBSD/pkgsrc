@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.72 2023/11/16 23:13:16 schmonz Exp $
+# $NetBSD: options.mk,v 1.73 2026/08/03 13:12:29 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai pam syncdir tai-system-clock tls
@@ -13,6 +13,7 @@ PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
 QMAILPATCHES+=			eai:${EAI_PATCH}
 EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch
 PATCHFILES+=			${EAI_PATCH}
+PATCH_DIST_STRIP=		-p0
 SITES.${EAI_PATCH}=		https://schmonz.com/software/eai/
 CPPFLAGS+=			-DEHLO=1
 .endif

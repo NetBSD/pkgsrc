@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/07/04 08:27:41 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=	ng-1.4.4
 PKGREVISION=	1
@@ -7,6 +7,7 @@ MASTER_SITES=	http://tt.sakura.ne.jp/~amura/archives/ng/
 
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	ng-1.4.4-replace_bug.patch
+PATCH_DIST_STRIP=       -p0
 
 MAINTAINER=	fk200329@fsinet.or.jp
 HOMEPAGE=	http://tt.sakura.ne.jp/~amura/ng/
