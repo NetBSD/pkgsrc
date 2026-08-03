@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/07/13 13:49:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/08/03 09:41:22 adam Exp $
 bin/zensical
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -92,6 +92,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/LICENSE.txt
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/11ty.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/42-group.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/500px.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/a11y-project.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/accessible-icon.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/accusoft.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/adn.svg
@@ -145,6 +146,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/brave-reverse.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/brave.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/btc.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/buffer.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/build-awesome.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/buromobelexperte.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/buy-n-large.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/buysellads.svg
@@ -171,11 +173,13 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cloudscale.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cloudsmith.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cloudversify.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cmplid.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/codeberg.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/codepen.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/codiepie.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/confluence.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/connectdevelop.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/contao.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/copilot.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cotton-bureau.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/cpanel.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/creative-commons-by.svg
@@ -209,6 +213,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/deploydog.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/deskpro.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dev.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/deviantart.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/devpost.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dhl.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/diaspora.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/digg.svg
@@ -218,6 +223,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/discourse.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/disqus.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dochub.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/docker.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dolibarr.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/draft2digital.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dribbble-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/dribbble.svg
@@ -332,6 +338,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/instagram-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/instagram.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/instalod.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/intercom.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/internet-archive.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/internet-explorer.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/invision.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/ioxhost.svg
@@ -364,6 +371,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/lastfm.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/leanpub.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/leetcode.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/less.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/lets-encrypt.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/letterboxd.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/line.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/linkedin-in.svg
@@ -379,6 +387,8 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/mailchimp.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/mandalorian.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/markdown.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/mastodon.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/matrix.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/mattermost.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/maxcdn.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/mdb.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/medapps.svg
@@ -400,6 +410,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/modx.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/monero.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/napster.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/neos.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/nextcloud.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/nfc-directional.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/nfc-symbol.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/nimblr.svg
@@ -409,6 +420,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/notion.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/npm.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/ns8.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/nutritionix.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/obs-studio.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/obsidian.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/octopus-deploy.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/odnoklassniki-square.svg
@@ -474,8 +486,10 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/replyd.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/researchgate.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/resolving.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/rev.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/roblox-creator-studio.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/rocketchat.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/rockrms.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/ror.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/rust.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/safari.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/salesforce.svg
@@ -515,6 +529,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/speaker-deck.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/spotify.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-behance.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-bluesky.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-build-awesome-stroke.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-deskpro.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-dribbble.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/square-facebook.svg
@@ -559,6 +574,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/steam-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/steam-symbol.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/steam.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/sticker-mule.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/storybook.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/strava.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/stripe-s.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/stripe.svg
@@ -566,6 +582,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/stubber.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/studiovinari.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/stumbleupon-circle.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/stumbleupon.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/substack.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/superpowers.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/supple.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/supportnow.svg
@@ -579,6 +596,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/teamspeak.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/telegram-plane.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/telegram.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/tencent-weibo.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/tesla.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/tex.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/the-red-yeti.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/themeco.svg
@@ -629,6 +647,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vimeo-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vimeo-v.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vimeo.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vine.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/visual-studio.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vk.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vnv.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/vsco.svg
@@ -663,6 +682,8 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xbox.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xing-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xing.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xmpp.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xrp.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/xrpl.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/y-combinator.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yahoo.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yammer.svg
@@ -671,6 +692,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yandex.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yarn.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yelp.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/yoast.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/youtube-shorts.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/youtube-square.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/youtube.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/brands/zhihu.svg
@@ -2039,6 +2061,7 @@ ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/long-arrow-down.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/long-arrow-left.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/long-arrow-right.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/long-arrow-up.svg
+${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/lotus.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/low-vision.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/luggage-cart.svg
 ${PYSITELIB}/zensical/templates/.icons/fontawesome/solid/lungs-virus.svg
@@ -3396,6 +3419,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/circle-dot-dashed.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-dot.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-ellipsis.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-equal.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/circle-euro.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-fading-arrow-up.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-fading-plus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/circle-gauge.svg
@@ -3542,8 +3566,14 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/curly-braces.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/currency.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/cylinder.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/dam.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-arrow-down.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-arrow-up.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/database-backup.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-check.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-minus.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-plus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/database-search.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/database-x.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/database-zap.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/database.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/decimals-arrow-left.svg
@@ -3975,6 +4005,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/layers-minus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layers-plus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layers.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layout-dashboard.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/layout-freeform.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layout-grid.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layout-list.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/layout-panel-left.svg
@@ -4118,7 +4149,9 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/message-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/messages-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/metronome.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mic-2.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/mic-audio-lines.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mic-off.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/mic-signal.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mic-vocal.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mic.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/microchip.svg
@@ -4152,6 +4185,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/moon-star.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/moon.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/more-horizontal.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/more-vertical.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/mosque.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/motorbike.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mountain-snow.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/mountain.svg
@@ -4253,6 +4287,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/panels-left-right.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/panels-right-bottom.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/panels-top-bottom.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/panels-top-left.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/paper-bag.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/paperclip.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/parasol.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/parentheses.svg
@@ -4284,6 +4319,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/percent-diamond.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/percent-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/percent.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/person-standing.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/phi.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/philippine-peso.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/phone-call.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/phone-forwarded.svg
@@ -4401,9 +4437,11 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/roller-coaster.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rose.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-3-d.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-3d.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/rotate-ccw-clock.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-ccw-key.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-ccw-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-ccw.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/rotate-cw-fading-clock.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-cw-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/rotate-cw.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/route-off.svg
@@ -4434,12 +4472,14 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/scale-3d.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scale.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scaling.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-barcode.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/scan-box.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-eye.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-face.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-heart.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-line.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-qr-code.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-search.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/scan-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan-text.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scan.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/scatter-chart.svg
@@ -4470,6 +4510,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/separator-vertical.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/server-cog.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/server-crash.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/server-off.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/server-plus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/server.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/settings-2.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/settings.svg
@@ -4487,6 +4528,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/shield-cog-corner.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-cog.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-ellipsis.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-half.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/shield-keyhole.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-minus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-off.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/shield-plus.svg
@@ -4607,6 +4649,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/square-m.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-menu.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-minus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-mouse-pointer.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/square-off.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-parking-off.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-parking.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-pause.svg
@@ -4835,6 +4878,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/user-round-search.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-round-x.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-round.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-search.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/user-shield.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-square-2.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/user-star.svg
@@ -12707,6 +12751,8 @@ ${PYSITELIB}/zensical/templates/.icons/octicons/graph-bar-horizontal-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/graph-bar-horizontal-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/graph-bar-vertical-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/graph-bar-vertical-24.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/graph-stacked-area-16.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/graph-stacked-area-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/hash-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/hash-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/heading-16.svg
@@ -12885,6 +12931,8 @@ ${PYSITELIB}/zensical/templates/.icons/octicons/plus-circle-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/plus-circle-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/project-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/project-24.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/project-check-16.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/project-check-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/project-roadmap-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/project-roadmap-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/project-symlink-16.svg
@@ -12895,6 +12943,8 @@ ${PYSITELIB}/zensical/templates/.icons/octicons/pulse-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/pulse-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/question-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/question-24.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/question-bubble-16.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/question-bubble-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/quote-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/quote-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/read-16.svg
@@ -13097,6 +13147,8 @@ ${PYSITELIB}/zensical/templates/.icons/octicons/versions-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/versions-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/video-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/video-24.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/view-files-16.svg
+${PYSITELIB}/zensical/templates/.icons/octicons/view-files-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/vscode-16.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/vscode-24.svg
 ${PYSITELIB}/zensical/templates/.icons/octicons/webhook-16.svg
@@ -13682,6 +13734,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/coda.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codacy.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codeberg.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codeblocks.svg
+${PYSITELIB}/zensical/templates/.icons/simple/codebuddy.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codecademy.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codeceptjs.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/codechef.svg
@@ -14249,6 +14302,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/gitlfs.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gitpod.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gitter.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/glance.svg
+${PYSITELIB}/zensical/templates/.icons/simple/glass.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/glassdoor.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gldotinet.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gleam.svg
@@ -14686,6 +14740,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/kicad.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kick.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kickstarter.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kik.svg
+${PYSITELIB}/zensical/templates/.icons/simple/kimi.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kingstontechnology.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kinopoisk.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/kinsta.svg
@@ -16532,6 +16587,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zazzle.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zcash.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zcool.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zdf.svg
+${PYSITELIB}/zensical/templates/.icons/simple/zdotai.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zebpay.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zebratechnologies.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zedindustries.svg
@@ -16568,11 +16624,11 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.d7f30b55.min.js
-${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.b6b7e04f.min.js
-${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.f62f0af6.min.css
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.ed145cee.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.7d14d953.min.js
+${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.4c04d108.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.7dc9a0ad.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.62c9b9cc.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.8b3b5a67.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/modern/palette.dfe2e883.min.css
 ${PYSITELIB}/zensical/templates/base.html
 ${PYSITELIB}/zensical/templates/main.html
