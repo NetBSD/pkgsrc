@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/21 20:53:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/03 17:20:57 wiz Exp $
 share/gtk-doc/html/harfbuzz/HarfBuzz.png
 share/gtk-doc/html/harfbuzz/HarfBuzz.svg
 share/gtk-doc/html/harfbuzz/a-clustering-example-for-levels-0-and-1.html
@@ -57,6 +57,7 @@ share/gtk-doc/html/harfbuzz/api-index-13-2-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-0-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-1-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-2-0.html
+share/gtk-doc/html/harfbuzz/api-index-14-3-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
@@ -99,6 +100,7 @@ share/gtk-doc/html/harfbuzz/building.html
 share/gtk-doc/html/harfbuzz/clusters.html
 share/gtk-doc/html/harfbuzz/core-api.html
 share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
+share/gtk-doc/html/harfbuzz/depend-api.html
 share/gtk-doc/html/harfbuzz/deprecated-api-index.html
 share/gtk-doc/html/harfbuzz/favicon.ico
 share/gtk-doc/html/harfbuzz/fonts-and-faces-custom-functions.html
@@ -129,6 +131,7 @@ share/gtk-doc/html/harfbuzz/harfbuzz-hb-graphite2.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-icu.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-map.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-color.html
+share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-fetch.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-font.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-layout.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-math.html
@@ -143,6 +146,7 @@ share/gtk-doc/html/harfbuzz/harfbuzz-hb-set.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape-plan.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-shape.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-style.html
+share/gtk-doc/html/harfbuzz/harfbuzz-hb-subset-depend.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-subset.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-unicode.html
 share/gtk-doc/html/harfbuzz/harfbuzz-hb-uniscribe.html
