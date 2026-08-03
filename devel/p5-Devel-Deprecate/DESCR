@@ -1,0 +1,9 @@
+Many times we find ourselves needing to deprecate code or have a
+deadline and just don't have time to refactor. Instead of trying
+to remember about this, posting it to a wiki or sending an email,
+it's better to have an automatic way to deprecate something. This
+module allows you to do that and embeds the deprecation directly
+in the code you wish to deprecate.
+
+As we don't want to break production code, deprecations are only
+triggered when running tests.

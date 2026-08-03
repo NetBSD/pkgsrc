@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/03 13:24:41 wiz Exp $
+
+BLAKE2s (Devel-Deprecate-0.01.tar.gz) = 4e740801e20085b0ee5a04895003974f81c471a54af2f4c8288bb84118c514d2
+SHA512 (Devel-Deprecate-0.01.tar.gz) = c8178d16d929a734a55b12ae9270ea9c1a3dc52f47cf4f0da237348d8d608301999d858dea07d51d9ba619e032572fd57de0f2a5257e61a3d3513d201a0bd0b5
+Size (Devel-Deprecate-0.01.tar.gz) = 7105 bytes
