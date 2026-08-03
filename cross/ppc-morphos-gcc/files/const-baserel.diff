@@ -63,7 +63,7 @@ as well.
 +          || strncmp (section, ".eh_frame", 9) == 0)
 +        return false;
 +    }
-+  else if (contains_pointers_p (TREE_TYPE (decl)))
++  else if (!DECL_ARTIFICIAL (decl) && contains_pointers_p (TREE_TYPE (decl)))
 +    return true;
 +
 +  return !TREE_READONLY (decl);
