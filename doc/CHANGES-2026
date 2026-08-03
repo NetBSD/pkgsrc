@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4924 2026/08/03 15:03:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4925 2026/08/03 15:33:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7300,3 +7300,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/spotify-player to 0.24.1 [pin 2026-08-03]
 	Updated net/xfr to 0.9.25 [pin 2026-08-03]
 	Updated math/lean4 to 4.32.2 [wiz 2026-08-03]
+	Removed devel/kbuild [wiz 2026-08-03]

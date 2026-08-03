@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4667 2026/08/03 13:25:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4668 2026/08/03 15:33:29 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -904,7 +904,6 @@ SUBDIR+=	junit
 SUBDIR+=	kafka
 SUBDIR+=	kapptemplate
 SUBDIR+=	kbookmarks
-SUBDIR+=	kbuild
 SUBDIR+=	kcachegrind
 SUBDIR+=	kcmutils
 SUBDIR+=	kconfig

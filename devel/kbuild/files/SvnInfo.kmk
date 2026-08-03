@@ -1,2 +1,0 @@
-KBUILD_SVN_URL := http://svn.netlabs.org/repos/kbuild/trunk
-KBUILD_SVN_REV := 3127
