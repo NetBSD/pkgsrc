@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4920 2026/08/03 14:06:00 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4921 2026/08/03 14:07:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7296,3 +7296,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.41.0 [pin 2026-08-03]
 	Updated devel/gitlogue to 0.10.0 [pin 2026-08-03]
 	Updated sysutils/gravityfile to 0.3.0 [pin 2026-08-03]
+	Updated shells/oh-my-posh to 30.4.0 [pin 2026-08-03]
