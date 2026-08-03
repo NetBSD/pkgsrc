@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4926 2026/08/03 17:13:04 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.4927 2026/08/03 17:13:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7302,3 +7302,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/lean4 to 4.32.2 [wiz 2026-08-03]
 	Removed devel/kbuild [wiz 2026-08-03]
 	Updated www/resterm to 0.50.0 [drixter 2026-08-03]
+	Updated sysutils/fzf to 0.74.2 [wiz 2026-08-03]
