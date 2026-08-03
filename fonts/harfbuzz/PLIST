@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2026/04/21 20:53:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.95 2026/08/03 17:20:06 wiz Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-raster
 ${PLIST.introspection}bin/hb-shape
@@ -26,6 +26,7 @@ ${PLIST.graphite2}include/harfbuzz/hb-graphite2.h
 include/harfbuzz/hb-map.h
 include/harfbuzz/hb-ot-color.h
 include/harfbuzz/hb-ot-deprecated.h
+include/harfbuzz/hb-ot-fetch.h
 include/harfbuzz/hb-ot-font.h
 include/harfbuzz/hb-ot-layout.h
 include/harfbuzz/hb-ot-math.h
@@ -42,6 +43,7 @@ include/harfbuzz/hb-set.h
 include/harfbuzz/hb-shape-plan.h
 include/harfbuzz/hb-shape.h
 include/harfbuzz/hb-style.h
+include/harfbuzz/hb-subset-depend.h
 include/harfbuzz/hb-subset-serialize.h
 include/harfbuzz/hb-subset.h
 include/harfbuzz/hb-unicode.h
