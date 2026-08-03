@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/03/30 21:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/08/03 13:12:28 wiz Exp $
 
 DISTNAME=	cucipop-1.31
 PKGREVISION=	3
@@ -7,7 +7,6 @@ MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/
 
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		cucipop-1.31-v6-20010223.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The Cubic Circle POP3 mail server

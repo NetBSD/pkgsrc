@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/07/13 04:35:41 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=		xnp2-0.86
 PKGREVISION=		35
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 PATCHFILES=		xnp2-r2805.patch
 PATCHFILES+=		xnp2-r2846.patch
 #PATCH_SITES=		https://www.nonakap.org/np2/
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=		tsutsui@NetBSD.org
 #HOMEPAGE=		https://www.nonakap.org/np2/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2026/01/27 08:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/08/03 13:12:22 wiz Exp $
 #
 
 DISTNAME=	bmp-0.9.7.1
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCH_SITES=		http://izb.knu.ac.kr/~bh/diffs/
 PATCHFILES=		bmp-0.9.7-ipv6-simple.diff
-PATCH_DIST_STRIP=	-p1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2026/06/15 07:36:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2026/08/03 13:12:30 wiz Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -8,7 +8,6 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 
 #PATCH_SITES=		https://github.com/proftpd/proftpd/commit/
-#PATCH_DIST_STRIP=	-p1
 # For CVE-2017-7418
 #PATCHFILES=		ecff21e0d0e84f35c299ef91d7fda088e516d4ed.patch
 

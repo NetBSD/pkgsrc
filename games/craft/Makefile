@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/11/29 03:11:54 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.Z
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/craft/
 PATCHFILES=		craft-jumbo-patch-20140913.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # Gone as of 20130120, no obvious replacement

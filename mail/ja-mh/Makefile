@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/04/24 08:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/03 13:12:28 wiz Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -11,6 +11,7 @@ PATCHFILES=	mh-6.8.4-JP-3.05-20030114.patch.gz \
 		mh-6.8.4-JP-3.05-20030326.patch.gz \
 		mh-6.8.4-JP-3.05-20031023.patch.gz \
 		mh-6.8.4-JP-3.05-20031106.patch.gz
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://media.laic.u-hyogo.ac.jp/%7Ehayashi/internet/mh-plus.html

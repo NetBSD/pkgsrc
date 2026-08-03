@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/03/01 12:38:35 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/03 13:12:28 wiz Exp $
 
 DISTNAME=	pict-4.1
 PKGREVISION=	20
@@ -7,7 +7,6 @@ MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/papers/pict/pict-4.1/
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/pict/
 PATCHFILES=		pict-jumbo-patch-20180316.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/papers/pict/Html/Pict.html

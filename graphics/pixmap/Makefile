@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/12/04 10:40:37 nros Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4
@@ -12,6 +12,7 @@ PATCHFILES=		pixmap_2.6.patch1.gz \
 			pixmap_2.6.patch2.gz \
 			pixmap_2.6.patch3.gz \
 			pixmap_2.6.patch4.gz
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Pixmap editor based on XPM library

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/01/21 23:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/03 13:12:24 wiz Exp $
 
 DISTNAME=		pml-2.03
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}
 PATCH_SITES=	http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
 PATCHFILES=	gcc-4.6.4-mint-20130415.patch.bz2
 PATCHFILES+=	pml-2.03-mint-20110207.patch.bz2
+PATCH_DIST_STRIP=	-p0
 
 # for http://gcc.gnu.org/bugzilla/attachment.cgi?id=15133 ,
 # use makeinfo from pkgsrc/devel/gtexinfo.

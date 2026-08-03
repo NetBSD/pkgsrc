@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/08/03 13:12:28 wiz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -24,7 +24,6 @@ USE_TOOLS+=	perl:run
 
 MAN1=			distribute.1
 DIST_SUBDIR=		distribute
-PATCH_DIST_STRIP=	-p1
 
 # customize below if you would like to
 # this needs to be the same as majordomo uses

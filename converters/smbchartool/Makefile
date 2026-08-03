@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/03 13:12:23 wiz Exp $
 
 DISTNAME=	smbchartool-2.3a
 PKGREVISION=	13
@@ -8,7 +8,6 @@ DIST_SUBDIR=	smbchartool-2.3anb5
 
 PATCH_SITES=		http://www.miraclelinux.com/technet/samba30/download/
 PATCHFILES=		smbchartool-2.3a_3.0a.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.miraclelinux.com/technet/samba30/migration.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/12/02 08:02:33 nia Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/03 13:12:32 wiz Exp $
 
 DISTNAME=	xfm-1.4.3
 PKGREVISION=	9
@@ -7,7 +7,6 @@ MASTER_SITES=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 
 PATCHFILES=		xfm-jumbo-patch-20181125.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xfm/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	https://www.musikinformatik.uni-mainz.de/ag/xfm/xfm.html

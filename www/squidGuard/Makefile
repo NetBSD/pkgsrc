@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2026/02/10 08:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=		squidGuard-1.4
 PKGREVISION=		18
@@ -10,7 +10,6 @@ DISTFILES=		${DEFAULT_DISTFILES} \
 # http://bugs.squid-cache.org/show_bug.cgi?id=3978
 PATCH_SITES=		-http://bugs.squid-cache.org/attachment.cgi?id=2988
 PATCHFILES=		squidGuard-1.4_upgrade.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.squidguard.org/

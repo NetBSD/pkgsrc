@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/08/02 19:20:19 nia Exp $
-#
+# $NetBSD: Makefile,v 1.28 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=		tvision-0.8
 PKGREVISION=		3
@@ -7,7 +6,6 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/c++/}
 
 PATCHFILES=		tvision-0.8-freebsd-patches-20040910.diff.bz2
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sigala.it/sergio/tvision/

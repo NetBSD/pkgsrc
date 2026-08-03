@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/06/14 15:46:14 nia Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		blt2.4z-patch-2
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	https://blt.sourceforge.net/

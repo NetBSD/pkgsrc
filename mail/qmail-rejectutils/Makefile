@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/24 00:38:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/03 13:12:29 wiz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-rejectutils-${RJPATCHVERSION}
@@ -14,6 +14,7 @@ LICENSE=		public-domain
 RJPATCHVERSION=		20201215
 RJPATCH=		${DISTNAME}-rejectutils-${RJPATCHVERSION}.patch
 PATCHFILES+=		${RJPATCH}
+PATCH_DIST_STRIP=	-p0
 SITES.${RJPATCH}=	${HOMEPAGE}
 
 CONFLICTS+=		qmail<=1.03nb32

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 17:14:24 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/03 13:12:23 wiz Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -10,7 +10,6 @@ PATCH_SITES=		${MASTER_SITE_LOCAL}
 #PATCH_SITES=		ftp://ftp.web.ad.jp/pub/TeX/akiu/dviwares/dvi2tty/
 PATCHFILES=		dvi2tty-ascii-jtex-patch \
 			dvi2tty.c-patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files (ASCII Japanese TeX)

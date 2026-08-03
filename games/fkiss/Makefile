@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/12/22 19:41:42 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.31 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=		fkiss-0.33
 PKGNAME=		fkiss-0.33a
@@ -13,7 +12,6 @@ COMMENT=		Kisekae viewer
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		fkiss-0.33a.diff
-PATCH_DIST_STRIP=	-p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 

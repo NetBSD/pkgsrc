@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/01/27 18:59:08 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=		oneko-1.1b
 PKGNAME=		oneko-1.2
@@ -9,7 +9,6 @@ EXTRACT_SUFX=		.tar.Z
 
 PATCH_SITES=		http://www.bsddiary.net/oneko/
 PATCHFILES=		oneko-1.2.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		johnam@mail.kemper.org
 COMMENT=		Like xneko except on the desktop and with other animals

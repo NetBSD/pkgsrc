@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.68 2026/04/10 08:41:35 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.69 2026/08/03 13:12:25 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -91,7 +91,7 @@ converters    games         mbone         print         x11
     <listitem><para><varname>PATCH_DIST_STRIP</varname>:
     an argument to &man.patch.1; that sets the pathname strip count to
     help find the correct files to patch. It defaults to
-    <command>-p0</command>.</para>
+    <command>-p1</command>.</para>
     </listitem>
   </itemizedlist></para>
   <para>The third section contains the following variables.

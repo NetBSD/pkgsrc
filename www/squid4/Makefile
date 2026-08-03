@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/05/14 16:42:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=	squid-4.17
 PKGREVISION=	19
@@ -8,7 +8,6 @@ EXTRACT_SUFX=	.tar.xz
 
 PATCH_SITES=		http://www.squid-cache.org/Versions/v4/changesets/
 PATCHFILES=		SQUID-2022_1.patch SQUID-2022_2.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/11/12 13:23:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2026/08/03 13:12:32 wiz Exp $
 
 DISTNAME=		WordNet-3.0
 PKGREVISION=		11
@@ -8,7 +7,6 @@ MASTER_SITES=		https://wordnetcode.princeton.edu/3.0/
 
 PATCHFILES=		wordnet.patch.2
 PATCH_SITES=		http://www.ocert.org/analysis/2008-014/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://wordnet.princeton.edu/

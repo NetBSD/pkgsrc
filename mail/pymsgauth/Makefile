@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/08/14 05:24:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2026/08/03 13:12:29 wiz Exp $
 
 DISTNAME=		pymsgauth-2.1.0
 PKGREVISION=		16
@@ -13,6 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 FILTER3_PATCH+=		pymsgauth-2.1.0-filter3-20180806.patch
 PATCHFILES+=		${FILTER3_PATCH}
+PATCH_DIST_STRIP=	-p0
 SITES.${FILTER3_PATCH}=	https://schmonz.com/qmail/pymsgauthfilter/
 
 PYMSGAUTH_PROGRAMS=	pymsgauth-*

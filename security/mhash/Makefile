@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/11/17 11:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/03 13:12:31 wiz Exp $
 
 DISTNAME=	mhash-0.9.9
 PKGREVISION=	14
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCHFILES+=	mhash-freebsd-patches-20081108.diff.gz
 PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mhash.sourceforge.net/

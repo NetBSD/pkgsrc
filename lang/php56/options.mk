@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/02/08 02:57:59 taca Exp $
+# $NetBSD: options.mk,v 1.4 2026/08/03 13:12:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php56
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline disable-filter-url php-embed
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .  endif
 PATCH_SITES+=		http://zettasystem.com/
 PATCHFILES+=		PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch
-PATCH_DIST_STRIP=	-p1
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif

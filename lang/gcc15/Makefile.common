@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2026/07/19 11:17:41 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/08/03 13:12:27 wiz Exp $
 # used by lang/gcc15-libjit/Makefile
 
 GCC_PKGNAME=	gcc15
@@ -60,7 +60,6 @@ CONFIGURE_ARGS+=	--disable-darwin-at-rpath
 # This has to be done manually to avoid conflicts.
 #PATCHFILES=		gcc-15.3.0.diff
 #PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/homebrew-core/6e8384b/Patches/gcc/
-#PATCH_DIST_STRIP=	-p1
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)

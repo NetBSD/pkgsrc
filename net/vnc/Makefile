@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/06/28 11:35:22 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/03 13:12:31 wiz Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -35,7 +35,6 @@ PKG_SUGGESTED_OPTIONS=	inet6
 .if !empty(PKG_OPTIONS:Minet6)
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		vnc-3.3.3r2-v6-20010421.diff.gz
-PATCH_DIST_STRIP=	-p1
 USE_TOOLS+=		patch
 post-patch: patch-sockets
 .PHONY: patch-sockets

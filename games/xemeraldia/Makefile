@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/04/21 15:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/03 13:12:26 wiz Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
@@ -8,7 +8,6 @@ CATEGORIES=	games
 
 #PATCH_SITES=		ftp://ftp.lab.kdd.co.jp/Usenet/fj.sources/1995/apr/
 PATCHFILES=		xemeraldia-0.3to0.31.patch.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Game of breaking blocks

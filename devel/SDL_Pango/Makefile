@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/01/27 08:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/03 13:12:24 wiz Exp $
 
 DISTNAME=	SDL_Pango-0.1.2
 PKGREVISION=	38
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlpango/}
 
 PATCHFILES+=	SDL_Pango-0.1.2-API-adds.patch
 PATCH_SITES+=	http://zarb.org/~gc/t/
+PATCH_DIST_STRIP=       -p0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sdlpango.sourceforge.net/

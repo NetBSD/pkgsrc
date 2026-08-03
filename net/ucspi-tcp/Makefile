@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/05/22 04:51:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.50 2026/08/03 13:12:31 wiz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		6
@@ -13,6 +13,7 @@ LICENSE=		public-domain
 
 DESTDIR_PATCH=		ucspi-tcp-0.88-destdir-20180725.patch
 PATCHFILES+=		${DESTDIR_PATCH}
+PATCH_DIST_STRIP=	-p0
 SITES.${DESTDIR_PATCH}=	https://schmonz.com/qmail/ucspitcpdestdir/
 
 MANPAGES=		${DISTNAME}-man-20020317.tar.gz

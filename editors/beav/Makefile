@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/06/08 10:40:53 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=	beav_1.40.orig
 PKGNAME=	beav-1.40.18
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/beav/}
 
 PATCHFILES=		beav_1.40-18.diff.gz
 PATCH_SITES=		${MASTER_SITE_DEBIAN:=pool/main/b/beav/}
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Binary Editor And Viewer, a full featured binary file editor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/09/25 20:08:32 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2026/08/03 13:12:25 wiz Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -23,8 +23,6 @@ PATCHFILES+=		emacs20-xim-20000713.diff
 PATCHFILES+=		emacs20-jumbo-patch-20170723.gz
 SITES.emacs20-jumbo-patch-20170723.gz= \
 			http://www.NetBSD.org/~dholland/patchkits/emacs20/
-
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/02/10 10:49:42 pin Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/03 13:12:30 wiz Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262.03
@@ -12,7 +12,6 @@ PATCHFILES+=		less-382-iso259-260.patch.gz
 PATCHFILES+=		less-382-iso260-261.patch.gz
 PATCHFILES+=		less-382-iso261-262.patch.gz
 PATCHFILES+=		less-382-iso262.ext03.patch.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	komine@cc.meisei-u.ac.jp
 # HOMEPAGE is gone.

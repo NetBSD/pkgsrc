@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/12/13 12:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/03 13:12:32 wiz Exp $
 
 DISTNAME=		RTF-1.10
 PKGNAME=		rtf-tools-1.10
@@ -9,7 +9,6 @@ EXTRACT_SUFX=		.tar.Z
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/rtf-tools/
 PATCHFILES=		rtf-tools-jumbo-patch-20111006.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		${MASTER_SITES}

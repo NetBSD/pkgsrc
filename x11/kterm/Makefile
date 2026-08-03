@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/11/03 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	24
@@ -11,7 +11,6 @@ PATCHFILES=		kterm-6.2.0-termios-wd0.2.patch2 \
 			kterm-6.2.0-scroll-wd0.2.patch \
 			kterm-6.2.0.NFS-xauth.patch \
 			kterm-6.2.0.ext06.patch.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none

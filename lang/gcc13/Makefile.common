@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2025/04/21 20:26:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2026/08/03 13:12:27 wiz Exp $
 # used by lang/gcc13-libjit/Makefile
 
 GCC_PKGNAME=		gcc13
@@ -59,7 +59,6 @@ BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
 PATCHFILES=		gcc-13.3.0.diff
 PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
-PATCH_DIST_STRIP=	-p1
 .endif
 
 ## For graphite support.

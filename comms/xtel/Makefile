@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/04/27 08:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/03 13:12:23 wiz Exp $
 
 DISTNAME=		xtel-3.3.0
 PKGREVISION=		15
@@ -7,7 +7,6 @@ MASTER_SITES=		http://pficheux.free.fr/xtel/download/ # https times out
 
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xtel/
 PATCHFILES=		xtel-jumbo-patch-20111008.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://pficheux.free.fr/xtel/

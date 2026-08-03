@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/02/15 09:13:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/03 13:12:33 wiz Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
@@ -7,7 +7,6 @@ CATEGORIES=		textproc
 #MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/unroff/dist/
 
 PATCHFILES=		me-misc-patch misc-patch-2
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		https://www-rn.informatik.uni-bremen.de/software/unroff/
