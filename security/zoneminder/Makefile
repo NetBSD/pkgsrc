@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/07/30 12:35:59 gdt Exp $
+# $NetBSD: Makefile,v 1.106 2026/08/03 15:14:03 gdt Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -8,7 +8,7 @@ VERSION=	1.38.3
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
 CATEGORIES=	security
@@ -178,30 +178,62 @@ PERL5_CONFIGURE=	no
 # Override perl detection so proper perl path is in installed binaries.
 CMAKE_CONFIGURE_ARGS+=	-DPERL_EXECUTABLE=${PREFIX}/bin/perl
 
-DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
-DEPENDS+=	p5-Class-Std-[0-9]*:../../devel/p5-Class-Std
+# \todo Align perl dependencies to zoneminder 1.38 reality
+# May be helpful or horrifying:
+#   pkg_info -L zoneminder | egrep  \\.pm\$ | xargs cat | egrep '^use.*::' | egrep -v '(IO|ZoneMinder|ONVIF)::' | sed -e 's/ qw(.*)//' | sed -e 's/ base//' | sort | uniq -c
+
+# perl modules form CMakeLists.txt, in order, either commented or
+# DEPENDed on:
+#   builtin?	Sys::Syslog
+#   option	DBI/DBD
+#		Getopt::Long
+#		Time::HiRes
+DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+#		LWP::UserAgent
+#		ExtUtils::MakeMaker
+DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
+
+# Non-builtin perl modules referenced in installed .pm but not checked
+# for by CMakeLists.txt:
 DEPENDS+=	p5-Class-Std-Fast-[0-9]*:../../devel/p5-Class-Std-Fast
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
+DEPENDS+=	p5-Data-UUID-[0-9]*:../../devel/p5-Data-UUID
+# Date::format (p5-Time-Date)
+DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
+# HTTP::Cookies
+# HTTP::Request
+# MIME::Base64
+DEPENDS+=	p5-SOAP-WSDL-[0-9]*:../../net/p5-SOAP-WSDL
+# Scalar::Util
+# Sys::Mmap
+# Sys::Syslog
+# Time::Local
+# URI::Encode
+# URI::Escape
+DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
+
+# perl modules not referenced in installed .pm.  These are either
+# inexplicably needed, or leftover from historical zoneminder
+# packages.
+# (Left for now; to be removed/addressed.)
+DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+DEPENDS+=	p5-Class-Std-[0-9]*:../../devel/p5-Class-Std
 DEPENDS+=	p5-Data-Entropy-[0-9]*:../../devel/p5-Data-Entropy
 DEPENDS+=	p5-Data-Float-[0-9]*:../../devel/p5-Data-Float
-DEPENDS+=	p5-Data-UUID-[0-9]*:../../devel/p5-Data-UUID
-DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-PHP-Serialization-[0-9]*:../../devel/p5-PHP-Serialization
-DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-IO-Socket-Multicast-[0-9]*:../../net/p5-IO-Socket-Multicast
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
-DEPENDS+=	p5-SOAP-WSDL-[0-9]*:../../net/p5-SOAP-WSDL
 DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-# A large subset of perl scripts set PATH explicitly and need to patched.
+# A large subset of perl scripts set PATH explicitly and need to be patched.
 # See "PATH FIXUPS" below.
 # \todo Teach pkglint that this variable is a list.
 ZM_PERL_PATH=	scripts/zmaudit.pl.in
