@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.97 2026/07/16 19:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/08/03 13:16:45 wiz Exp $
 
 DISTNAME=	Date-Manip-6.99
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SB/SBECK/}
+
+PATCH_SITES+=	https://security.metacpan.org/patches/D/Date-Manip/6.99/
+PATCHFILES+=	CVE-2026-60074-r1.patch
+PATCHFILES+=	CVE-2026-60075-r1.patch
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Date-Manip
