@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/03 17:46:56 wiz Exp $
+
+BLAKE2s (titlecase-2.4.1.tar.gz) = 9d2db0e5d481e5f233639806adf57b313b15b2cf2b282f5fb200efc67efde099
+SHA512 (titlecase-2.4.1.tar.gz) = 5c726d5d46852196ab0f04b18b733e7fe0c5af09004f1f90107cf14b24cad6349d63d3fbe368285cbe1456e40aac344bf19191ac5dabed52da6492273304f778
+Size (titlecase-2.4.1.tar.gz) = 14434 bytes

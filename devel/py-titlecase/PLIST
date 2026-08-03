@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/03 17:46:56 wiz Exp $
+bin/titlecase
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/titlecase/__init__.py
+${PYSITELIB}/titlecase/__init__.pyc
+${PYSITELIB}/titlecase/__init__.pyo
+${PYSITELIB}/titlecase/tests.py
+${PYSITELIB}/titlecase/tests.pyc
+${PYSITELIB}/titlecase/tests.pyo
