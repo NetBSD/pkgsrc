@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.50 2024/02/22 17:33:04 adam Exp $
+$NetBSD: distinfo,v 1.51 2026/08/03 15:24:32 wiz Exp $
 
 BLAKE2s (mongo-c-driver-1.26.0.tar.gz) = b750a9128911a84b93484a0685c9fd888d128384f337cd01ce171d83970703e4
 SHA512 (mongo-c-driver-1.26.0.tar.gz) = 3ad7ad67284b8900432c8df6b00a96bb8ee265a0d8bdf689d7ab48a0949fd14f69deff30c6db86d39f9a1729e4884d8e91eb2d21dfc5172a3edb3d950df432fd
 Size (mongo-c-driver-1.26.0.tar.gz) = 7328972 bytes
 SHA1 (patch-src_libbson_src_bson_bson-error.c) = 09ffbcb5e345668d0db3158f41cddc408845e9ee
+SHA1 (patch-src_libmongoc_CMakeLists.txt) = ff5330e6d57e96b23ed4987354758c64ec49b98b
 SHA1 (patch-src_libmongoc_tests_test-mongoc-stream-tls-error.c) = 856e4b44414e1ff6db12440c41d1aae9bf8046aa
