@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4928 2026/08/03 17:14:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4929 2026/08/03 17:14:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7304,3 +7304,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.50.0 [drixter 2026-08-03]
 	Updated sysutils/fzf to 0.74.2 [wiz 2026-08-03]
 	Updated sysutils/hwdata to 0.410 [wiz 2026-08-03]
+	Updated math/ggml to 0.18.0 [wiz 2026-08-03]
