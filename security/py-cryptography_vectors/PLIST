@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2026/06/22 19:50:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/08/03 17:52:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -61,6 +61,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhkey_rfc5114_2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhkey_rfc5114_2.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp_privatevaluelength.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp_rfc5114_2.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp_rfc5114_2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub.der
@@ -89,6 +90,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigVer.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/custom/nilpotent.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/compressed_points.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/ec-missing-curve.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/ec_private_key_non_zero_unused_bits.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_wap_wsg_idm_ecid_wtls11_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/high-bit-set.pem
@@ -135,6 +137,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pub-non-zero-unused-bits.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/sign.input
@@ -348,6 +351,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/dsa.pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.pem
+${PYSITELIB}/cryptography_vectors/chunked-encryption/vectors.json
 ${PYSITELIB}/cryptography_vectors/ciphers/3DES/CBC/TCBCIMMT1.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/3DES/CBC/TCBCIMMT2.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/3DES/CBC/TCBCIMMT3.rsp
@@ -731,6 +735,7 @@ ${PYSITELIB}/cryptography_vectors/pkcs12/no-password.p12
 ${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.der
 ${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.p7b
 ${PYSITELIB}/cryptography_vectors/pkcs7/ascii-san.pem
+${PYSITELIB}/cryptography_vectors/pkcs7/authenticode.der
 ${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-no-content.der
 ${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-rsa-oaep.pem
 ${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-triple-des.pem
@@ -2362,6 +2367,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relative_user_all_reasons.
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relativename_only.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_inner_outer_mismatch.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_inval_cert_issuer_entry_ext.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_inval_date_fractional_seconds.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_invalid_time.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_issuer_invalid_printable_string.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_md2_unknown_crit_entry_ext.pem
@@ -2390,6 +2396,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/malformed-ian.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/malformed-san.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/mismatch_inner_outer_sig_algorithm.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/ms-certificate-template.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/name_attribute_unsupported_tag.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_excluded.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip4_netmask.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip_netmask.pem
@@ -2457,10 +2464,12 @@ ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-duplicate-ext.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-nonce.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-unknown-oid.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-hash-alg.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-version.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-multi-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-delegate-unknown-cert.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-invalid-signature-oid.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-invalid-version.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-responder-key-hash.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-response-type-unknown-oid.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-no-next-update.der
