@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/06/23 09:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/03 18:10:26 wiz Exp $
 
 DISTNAME=	nvidia-texture-tools-2.1.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	graphics
 # NOTE: abandoned upstream, archived.
 MASTER_SITES=	${MASTER_SITE_GITHUB:=castano/}
