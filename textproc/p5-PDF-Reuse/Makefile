@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/07/16 19:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/04 01:05:54 wen Exp $
 
-DISTNAME=	PDF-Reuse-0.43
+DISTNAME=	PDF-Reuse-0.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc print perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CN/CNIGHS/}
 

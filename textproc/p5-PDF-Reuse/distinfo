@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/02/18 07:27:22 wen Exp $
+$NetBSD: distinfo,v 1.8 2026/08/04 01:05:54 wen Exp $
 
-BLAKE2s (PDF-Reuse-0.43.tar.gz) = d6b03890cd5e1151666a28582ce9d2c842fc708c8860e9f40ffa04d73afbeb44
-SHA512 (PDF-Reuse-0.43.tar.gz) = f00a96a96715d2d24e2e6455c790ffe49ca42990721cd2d1f677cc0793fdaceb7614b438ef683d3e9c31742792944a461f94aeeb328f55b04431234d3fb661fa
-Size (PDF-Reuse-0.43.tar.gz) = 69523 bytes
+BLAKE2s (PDF-Reuse-0.44.tar.gz) = 037f9e87d080561b31e16f222e2d54eb72ed16e848c5797762cd0e7e0a965288
+SHA512 (PDF-Reuse-0.44.tar.gz) = 18f765b8bba045c092c348a4d805de9e6faff00d0cc18d92f5d664d2f9eeac6e8f005634af79f0458dc9e773eea9d8950fba1a742fe425aba1d9342dffaa8ee4
+Size (PDF-Reuse-0.44.tar.gz) = 74992 bytes
