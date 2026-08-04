@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4975 2026/08/04 15:43:05 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.4976 2026/08/04 19:04:07 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7370,3 +7370,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-s3 to 1.228.2 [taca 2026-08-04]
 	Updated www/ruby-html-proofer to 5.2.2 [taca 2026-08-04]
 	Updated x11/mlterm to 3.9.5nb1 [tsutsui 2026-08-04]
+	Updated net/tailscale to 1.102.1 [ktnb 2026-08-04]
