@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4973 2026/08/04 14:37:39 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4974 2026/08/04 14:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7368,3 +7368,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-haml to 7.2.2 [taca 2026-08-04]
 	Updated www/ruby-aws-partitions to 1.1277.0 [taca 2026-08-04]
 	Updated www/ruby-aws-sdk-s3 to 1.228.2 [taca 2026-08-04]
+	Updated www/ruby-html-proofer to 5.2.2 [taca 2026-08-04]
