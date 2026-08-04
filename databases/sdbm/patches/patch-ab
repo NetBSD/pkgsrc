@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2012/04/16 04:01:10 dholland Exp $
+$NetBSD: patch-ab,v 1.5 2026/08/04 14:59:11 ryoon Exp $
 
 - Configure for pkgsrc.
 - libtoolize, build as shared library.
 - Provide working install target.
+- Honor LDFLAGS to enable RELRO for pkgsrc.
 
---- makefile	2008/08/12 12:14:05	1.1
-+++ makefile	2008/08/12 11:24:23
+--- /usr/tmp/pkgsrc/databases/sdbm/work/makefile.orig	2026-08-04 12:26:30.375274615 +0000
++++ /usr/tmp/pkgsrc/databases/sdbm/work/makefile
 @@ -2,37 +2,42 @@
  # makefile for public domain ndbm-clone: sdbm
  # DUFF: use duff's device (loop unroll) in parts of the code
@@ -31,26 +32,25 @@ $NetBSD: patch-ab,v 1.4 2012/04/16 04:01:10 dholland Exp $
 -dbu: dbu.o sdbm util.o
 -	cc $(LDFLAGS) -o dbu dbu.o util.o libsdbm.a
 +dbu: dbu.o ${LIBS} util.o
-+	${LIBTOOL} --mode=link --tag=CC ${CC} dbu.o util.o ${LIBS:.a=.la} -o dbu
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} dbu.o util.o ${LIBS:.a=.la} -o dbu
  
  dba: dba.o util.o
 -	cc $(LDFLAGS) -o dba dba.o util.o
-+	${LIBTOOL} --mode=link --tag=CC ${CC} dba.o util.o ${LIBS:.a=.la} -o dba
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} dba.o util.o ${LIBS:.a=.la} -o dba
  dbd: dbd.o util.o
 -	cc $(LDFLAGS) -o dbd dbd.o util.o
 -dbe: dbe.o sdbm
 -	cc $(LDFLAGS) -o dbe dbe.o libsdbm.a
--
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} dbd.o util.o ${LIBS:.a=.la} -o dbd
++dbe: dbe.o ${LIBS}
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} dbe.o ${LIBS:.a=.la} -o dbe
+ 
 -sdbm: $(OBJS)
 -	ar cr libsdbm.a $(OBJS)
 -	ranlib libsdbm.a
 -###	cp libsdbm.a /usr/lib/libsdbm.a
-+	${LIBTOOL} --mode=link --tag=CC ${CC} dbd.o util.o ${LIBS:.a=.la} -o dbd
-+dbe: dbe.o ${LIBS}
-+	${LIBTOOL} --mode=link --tag=CC ${CC} dbe.o ${LIBS:.a=.la} -o dbe
-+
 +$(LIBS): $(OBJS)
-+	${LIBTOOL} --mode=link  --tag=CC ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	${LIBTOOL} --mode=link  --tag=CC ${CC} ${LDFLAGS} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
  dba.o: sdbm.h
  dbu.o: sdbm.h
@@ -61,7 +61,7 @@ $NetBSD: patch-ab,v 1.4 2012/04/16 04:01:10 dholland Exp $
  
  #
  # dbu using berkelezoid ndbm routines [if you have them] for testing
-@@ -53,3 +58,16 @@
+@@ -53,3 +58,16 @@ readme:
  
  readme:
  	nroff -ms readme.ms | col -b >README

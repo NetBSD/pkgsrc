@@ -1,12 +1,13 @@
-$NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
+$NetBSD: patch-af,v 1.6 2026/08/04 14:59:11 ryoon Exp $
 
 - Use standard headers.
 - Don't provide own getopt on BSD platforms, or on Solaris.
 - Use <ctype.h> functions correctly.
 - Avoid signed bitwise operations.
 - Use the modern regexp library interface.
+- Fix build with GCC 14.
 
---- dbe.c.orig	2013-04-14 01:29:53.000000000 +0000
+--- dbe.c.orig	2026-08-04 12:10:25.478063515 +0000
 +++ dbe.c
 @@ -1,6 +1,12 @@
 +#include <sys/types.h>
@@ -22,7 +23,7 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  #include <ndbm.h>
  #else
  #include "file.h"
-@@ -51,6 +57,7 @@ char *optarg;			       /* Global argumen
+@@ -51,6 +57,7 @@ char *optarg;			       /* Global argument pointer. */
  #define index  strchr
  #endif
  
@@ -30,10 +31,12 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  char
  getopt(argc, argv, optstring)
  int argc;
-@@ -128,23 +135,26 @@ char *optstring;
+@@ -128,23 +135,28 @@ char *optstring;
  	}
  	return c;
  }
++#else
++#include <unistd.h>
 +#endif
  
  
@@ -62,7 +65,7 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  		}
  	}
  	putchar('"');
-@@ -171,7 +181,9 @@ char *s;
+@@ -171,7 +183,9 @@ char *s;
  				*p = '\f';
  			else if (*s == 't')
  				*p = '\t';
@@ -73,7 +76,15 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  				i = (*s++ - '0') << 6;
  				i |= (*s++ - '0') << 3;
  				i |= *s - '0';
-@@ -211,6 +223,8 @@ char **argv;
+@@ -204,6 +218,7 @@ datum db;
+ }
+ 
+ 
++int
+ main(argc, argv)
+ int argc;
+ char **argv;
+@@ -211,6 +226,8 @@ char **argv;
  	typedef enum {
  		YOW, FETCH, STORE, DELETE, SCAN, REGEXP
  	} commands;
@@ -82,7 +93,7 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  	char opt;
  	int flags;
  	int giveusage = 0;
-@@ -333,7 +347,8 @@ char **argv;
+@@ -333,7 +350,8 @@ char **argv;
  			fprintf(stderr, "Missing regular expression.\n");
  			goto db_exit;
  		}
@@ -92,7 +103,7 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  			fprintf(stderr, "Invalid regular expression\n");
  			goto db_exit;
  		}
-@@ -343,7 +358,7 @@ char **argv;
+@@ -343,7 +361,7 @@ char **argv;
  			goto db_exit;
  		}
  		while (key.dptr != NULL) {
@@ -101,7 +112,7 @@ $NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
  				content = dbm_fetch(db, key);
  				if (dbm_error(db)) {
  					fprintf(stderr, "Error when fetching ");
-@@ -362,6 +377,7 @@ char **argv;
+@@ -362,6 +380,7 @@ char **argv;
  			}
  			key = dbm_nextkey(db);
  		}

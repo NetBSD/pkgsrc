@@ -1,9 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2012/04/16 03:50:38 dholland Exp $
+$NetBSD: patch-ad,v 1.5 2026/08/04 14:59:11 ryoon Exp $
 
 - use standard headers
 - don't declare own errno
+- fix build with GCC 14
 
---- util.c.orig	2012-04-16 03:53:49.000000000 +0000
+--- util.c.orig	2026-08-04 12:05:46.864661412 +0000
 +++ util.c
 @@ -1,4 +1,7 @@
  #include <stdio.h>
@@ -13,7 +14,7 @@ $NetBSD: patch-ad,v 1.4 2012/04/16 03:50:38 dholland Exp $
  #ifdef SDBM
  #include "sdbm.h"
  #else
-@@ -10,15 +13,13 @@ oops(s1, s2)
+@@ -10,15 +13,13 @@ register char *s2;
  register char *s1;
  register char *s2;
  {
@@ -31,3 +32,12 @@ $NetBSD: patch-ad,v 1.4 2012/04/16 03:50:38 dholland Exp $
  	fprintf(stderr, "\n");
  	exit(1);
  }
+@@ -28,7 +29,7 @@ char *pag;
+ char *pag;
+ {
+ 	register unsigned n;
+-	register off;
++	register int off;
+ 	register short *ino = (short *) pag;
+ 
+ 	if ((n = ino[0]) > PBLKSIZ / sizeof(short))

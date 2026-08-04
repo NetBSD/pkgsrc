@@ -1,10 +1,11 @@
-$NetBSD: patch-ai,v 1.4 2012/06/18 02:15:52 dholland Exp $
+$NetBSD: patch-ai,v 1.5 2026/08/04 14:59:11 ryoon Exp $
 
 Use standard headers.
+Fix build with GCC 14
 
---- dbd.c.orig	2012-06-18 02:26:06.000000000 +0000
+--- dbd.c.orig	2026-08-04 12:10:25.469494081 +0000
 +++ dbd.c
-@@ -3,7 +3,10 @@
+@@ -3,17 +3,24 @@
   */
  
  #include <stdio.h>
@@ -16,3 +17,57 @@ Use standard headers.
  #include "sdbm.h"
  
  char *progname;
+ extern void oops();
+ 
++void sdump();
++int okpage();
++void dispage();
+ 
+ #define empty(page)	(((short *) page)[0] == 0)
+ 
+ int
+ main(argc, argv)
++int argc;
+ char **argv;
+ {
+ 	int n;
+@@ -38,12 +45,13 @@ char **argv;
+ 	return 0;
+ }
+ 
++void
+ sdump(pagf)
+ int pagf;
+ {
+-	register r;
+-	register n = 0;
+-	register o = 0;
++	register int r;
++	register int n = 0;
++	register int o = 0;
+ 	char pag[PBLKSIZ];
+ 
+ 	while ((r = read(pagf, pag, PBLKSIZ)) > 0) {
+@@ -64,6 +72,7 @@ int pagf;
+ 
+ 
+ #ifdef OLD
++void
+ dispage(pag)
+ char *pag;
+ {
+@@ -86,11 +95,12 @@ char *pag;
+ 	}
+ }
+ #else
++void
+ dispage(pag)
+ char *pag;
+ {
+-	register i, n;
+-	register off;
++	register int i, n;
++	register int off;
+ 	register short *ino = (short *) pag;
+ 
+ 	off = PBLKSIZ;
