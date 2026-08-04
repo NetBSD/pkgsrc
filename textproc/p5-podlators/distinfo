@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/04/19 12:51:02 wen Exp $
+$NetBSD: distinfo,v 1.18 2026/08/04 00:54:47 wen Exp $
 
-BLAKE2s (podlators-v6.0.2.tar.gz) = 27d10a4f0022dd19ae01b670fc0868318b60d5437f31897caec907af65732824
-SHA512 (podlators-v6.0.2.tar.gz) = e21de42d9512638a263c875878b98b57cf2e2e1963145fdf3d2b18acd2a1aed71b4f883cd9313b1162c1f0ceee4436e776a6a1b6bede0976a878d8506ba38686
-Size (podlators-v6.0.2.tar.gz) = 155778 bytes
+BLAKE2s (podlators-v6.1.0.tar.gz) = 82f5eab26ea83dc295debe7900c52e8bae3f7da8e5f7574b6fadd6cb5e973022
+SHA512 (podlators-v6.1.0.tar.gz) = 6e01aabfc1340d8d425de94684d274f5eb3fed5ca07725105d6b91f118be8ee6fe46cc328708ed0d4c2133e5a3687833fd78e5abe49687c5a33aed7670a6e603
+Size (podlators-v6.1.0.tar.gz) = 159286 bytes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2026/07/16 19:05:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/04 00:54:47 wen Exp $
 
-DISTNAME=	podlators-v6.0.2
+DISTNAME=	podlators-v6.1.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
-PKGREVISION=	2
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RR/RRA/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/podlators
