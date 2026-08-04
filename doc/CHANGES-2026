@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4976 2026/08/04 19:04:07 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.4977 2026/08/04 20:21:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7371,3 +7371,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-html-proofer to 5.2.2 [taca 2026-08-04]
 	Updated x11/mlterm to 3.9.5nb1 [tsutsui 2026-08-04]
 	Updated net/tailscale to 1.102.1 [ktnb 2026-08-04]
+	Updated devel/py-cffi to 2.1.1 [adam 2026-08-04]
+	Updated net/py-test-remotedata to 0.4.2 [adam 2026-08-04]
+	Updated net/py-scp to 0.16.1 [adam 2026-08-04]
