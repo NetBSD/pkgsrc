@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4969 2026/08/04 14:30:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4970 2026/08/04 14:32:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7364,3 +7364,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-version_gem to 1.1.15 [taca 2026-08-04]
 	Updated devel/ruby-zeitwerk to 2.8.3 [taca 2026-08-04]
 	Updated graphics/ruby-RMagick to 7.1.0 [taca 2026-08-04]
+	Updated net/ruby-ruby_smb to 3.3.22 [taca 2026-08-04]
