@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/08/04 20:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/04 21:39:47 wiz Exp $
 
 DISTNAME=	7z2602-src
 PKGNAME=	7-zip-26.02
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	https://7-zip.org/a/
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +21,8 @@ MAKE_FILE=	makefile.gcc
 
 # Disable -Werror.
 MAKE_FLAGS+=	CFLAGS_WARN_WALL=${CFLAGS:Q}
+# pass in LDFLAGS
+MAKE_FLAGS+=	MY_LIBS=${LDFLAGS:Q}
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
@@ -46,11 +49,5 @@ pre-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/CPP/7zip/Bundles/Alone2/_o/7zz \
 		${DESTDIR}${PREFIX}/bin
-
-# FIXME: replace by proper LDFLAGS handling
-_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"
