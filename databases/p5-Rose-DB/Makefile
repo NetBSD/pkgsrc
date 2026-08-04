@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2026/07/16 19:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/08/04 01:12:25 wen Exp $
 
-DISTNAME=	Rose-DB-0.783
+DISTNAME=	Rose-DB-0.788
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JS/JSIRACUSA/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Rose-DB
