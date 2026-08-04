@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2026/01/27 08:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/08/04 20:29:05 wiz Exp $
 #
 
 DISTNAME=		netbiff-0.9.18
@@ -24,6 +24,12 @@ DOCDIR=			${DESTDIR}${PREFIX}/share/doc/netbiff
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/CONFIG ${DOCDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/11/17 11:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:28:43 wiz Exp $
 #
 
 DISTNAME=	blop-0.2.8
@@ -15,6 +15,12 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-ladspa-prefix=${BUILDLINK_PREFIX.ladspa}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"

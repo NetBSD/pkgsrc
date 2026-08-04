@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2025/04/21 20:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/08/04 20:29:04 wiz Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	15
@@ -57,6 +57,12 @@ SUBST_FILES.prefix=							\
 		scripts/facesall					\
 		scripts/mkfacesindex
 SUBST_VARS.prefix=	PREFIX
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

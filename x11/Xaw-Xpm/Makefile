@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/02/18 08:00:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/04 20:29:20 wiz Exp $
 
 DISTNAME=		Xaw-XPM-1.1
 PKGNAME=		Xaw-Xpm-1.1
@@ -24,6 +24,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.xpm ${DESTDIR}${PREFIX}/share/pixmaps
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${DESTDIR}${PREFIX} && ${LS} lib/libXaw3d* >> ${PLIST_SRC}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

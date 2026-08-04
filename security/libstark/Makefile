@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/09/24 08:17:16 nia Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/04 20:29:14 wiz Exp $
 
 DISTNAME=	libstark-20191018
 CATEGORIES=	security devel
@@ -26,6 +26,12 @@ do-install:
 	for f in stark-dpm stark-tinyram; do				\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin/; \
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/googletest/buildlink3.mk"
 

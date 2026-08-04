@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/21 20:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/08/04 20:29:02 wiz Exp $
 
 DISTNAME=	chicken-4.13.0
 CATEGORIES=	lang
@@ -51,5 +51,11 @@ MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL:Q}
 
 TEST_TARGET=	check
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

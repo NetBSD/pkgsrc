@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/01/27 08:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/08/04 20:28:53 wiz Exp $
 #
 
 DISTNAME=		gice-0.6.2
@@ -22,5 +22,11 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gice ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

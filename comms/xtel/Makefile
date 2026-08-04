@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/08/03 13:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=		xtel-3.3.0
 PKGREVISION=		15
@@ -34,6 +34,12 @@ INSTALL_MAKE_FLAGS=	PPPDIR=${PREFIX}/share/examples/xtel
 SPECIAL_PERMS+=		bin/mdmdetect ${SETUID_ROOT_PERMS}
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-lucb
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

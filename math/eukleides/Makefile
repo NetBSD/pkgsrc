@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/11/25 12:51:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/04 20:29:06 wiz Exp $
 
 DISTNAME=	eukleides-1.5.4
 PKGREVISION=	3
@@ -36,6 +36,12 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 
 pre-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"

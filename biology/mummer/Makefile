@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/11/17 11:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/04 20:28:45 wiz Exp $
 #
 
 DISTNAME=		MUMmer3.20
@@ -34,5 +34,11 @@ do-install:
 .endfor
 	cd ${WRKSRC}/docs && pax -wr -s ',^Makefile$$,,' * \
 		${DESTDIR}${PREFIX}/share/doc/mummer
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

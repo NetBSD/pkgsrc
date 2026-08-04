@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/05/14 11:17:34 nia Exp $
+# $NetBSD: Makefile,v 1.44 2026/08/04 20:29:17 wiz Exp $
 
 DISTNAME=	glimpse-4.18.6
 CATEGORIES=	textproc databases
@@ -22,5 +22,11 @@ INSTALLATION_DIRS=	share/doc/glimpse
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/glimpse
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/glimpse
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

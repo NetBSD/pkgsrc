@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/04 20:28:51 wiz Exp $
 #
 
 DISTNAME=		uuid-1.6.2
@@ -25,5 +25,11 @@ CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-perl-compat
 CONFIGURE_ARGS+=	--without-php
 CONFIGURE_ARGS+=	--without-pgsql
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

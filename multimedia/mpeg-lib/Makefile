@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/01/10 07:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/04 20:29:10 wiz Exp $
 
 DISTNAME=	mpeg_lib-1.3.1
 PKGNAME=	mpeg-1.3.1
@@ -23,5 +23,11 @@ INSTALLATION_DIRS+=	include lib
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/mpeg.h ${DESTDIR}${PREFIX}/include
 	libtool --mode=install ${INSTALL_LIB} ${WRKSRC}/libmpeg_lib.la ${DESTDIR}${PREFIX}/lib
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

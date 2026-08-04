@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:59 asau Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=	xbl-1.1.6
@@ -21,6 +21,12 @@ INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 SPECIAL_PERMS+=		bin/xbl ${SETGID_GAMES_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/lib/X11/xbl ${GAMEDIR_PERMS}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

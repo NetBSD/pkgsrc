@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2026/05/14 16:40:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=	unrealircd-5.2.4
 PKGREVISION=	16
@@ -126,6 +126,12 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/src/modules/chanmodes/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/chanmodes
 	${INSTALL_LIB} ${WRKSRC}/src/modules/snomasks/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/snomasks
 	${INSTALL_LIB} ${WRKSRC}/src/modules/extbans/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/extbans
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

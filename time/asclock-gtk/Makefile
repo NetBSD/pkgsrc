@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/07/04 16:18:40 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/04 20:29:18 wiz Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -34,6 +34,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.THEMES ${DESTDIR}${PREFIX}/share/doc/asclock-gtk
 	${CP} -R ${WRKSRC}/themes/* ${DESTDIR}${PREFIX}/share/asclock-gtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/asclock-gtk
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:29:10 wiz Exp $
 #
 
 DISTNAME=	gtranscode-v0.3
@@ -19,6 +19,12 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gtranscode ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

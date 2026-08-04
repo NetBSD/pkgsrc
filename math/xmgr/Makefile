@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2026/05/14 16:41:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2026/08/04 20:29:08 wiz Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		53
@@ -19,6 +19,12 @@ INSTALL_TARGET=		install
 
 REPLACE_PERL+=		auxiliary/fdf2fit
 USE_TOOLS+=		perl:run bison
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/04/21 16:22:09 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/04 20:28:45 wiz Exp $
 
 DISTNAME=	iozone3_493
 PKGNAME=	${DISTNAME:S/3_/-3./}
@@ -80,6 +80,12 @@ benchmark:
 results:
 	${MKDIR} /tmp/benches/`domainname`
 	${CP} ${WRKSRC}/iozone.out /tmp/benches/`domainname`/iozone.`uname`-`uname -m`-`uname -r`.`hostname`
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

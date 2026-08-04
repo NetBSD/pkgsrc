@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/26 11:11:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/04 20:28:48 wiz Exp $
 
 PKGREVISION= 1
 .include "../../databases/lua-sql-mysql/Makefile.common"
@@ -12,6 +12,12 @@ BUILD_TARGET=	postgres
 
 # Abuse DRIVER_INCS to get our compiler flags into the build
 MAKE_FLAGS+=	DRIVER_INCS="${CFLAGS} ${COMPILER_RPATH_FLAG}${PGSQL_PREFIX}/lib -L${PGSQL_PREFIX}/lib"
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

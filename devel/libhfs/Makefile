@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:28:50 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -39,5 +39,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/libhfs
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} charset.txt libhfs.txt librsrc.txt \
 	  ${DESTDIR}${PREFIX}/share/doc/libhfs
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

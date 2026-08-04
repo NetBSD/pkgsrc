@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/07/27 17:32:51 nia Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/04 20:29:12 wiz Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -38,6 +38,12 @@ INSTALLATION_DIRS+=	${EGDIR}
 # modules/*/README will be installed.
 post-extract:
 	${RUN}cd ${WRKSRC}/modules/mediaproxy && ${MV} Readme README;
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/01/07 08:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:29:01 wiz Exp $
 
 DISTNAME=	fcitx5-configtool-5.1.3
 PKGREVISION=	9
@@ -24,6 +24,12 @@ SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Setting RPATH
 SUBST_FILES.rpath+=	src/migrator/lib/CMakeLists.txt
 SUBST_VARS.rpath+=	COMPILER_RPATH_FLAG PREFIX QTDIR
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
 #.include "../../devel/kcoreaddons/buildlink3.mk"

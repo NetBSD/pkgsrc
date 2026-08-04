@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/08/02 19:20:16 nia Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/04 20:28:43 wiz Exp $
 
 DISTNAME=	ppmdi1
 PKGNAME=	ppmd-9.1
@@ -33,5 +33,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/ppmd
 	${INSTALL_DATA} ${WRKSRC:Q}/read_me.txt \
 		${DESTDIR}${PREFIX:Q}/share/doc/ppmd/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

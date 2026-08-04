@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/02/21 05:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:28:58 wiz Exp $
 
 DISTNAME=	xsokoban-3.3c
 PKGREVISION=	1
@@ -43,6 +43,12 @@ AUTOCONF_REQD=		2.59
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

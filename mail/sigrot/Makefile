@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/04 20:29:06 wiz Exp $
 
 DISTNAME=	sigrot_1.2-1
 PKGNAME=	sigrot-1.2
@@ -31,5 +31,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/prefix ${DESTDIR}${EGDIR}/prefix
 	${INSTALL_DATA} ${WRKSRC}/examples/sig_archive ${DESTDIR}${EGDIR}/sig_archive
 	${INSTALL_DATA} ${WRKSRC}/examples/suffix ${DESTDIR}${EGDIR}/suffix
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

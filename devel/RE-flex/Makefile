@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/02/16 09:40:42 mef Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/04 20:28:49 wiz Exp $
 
 DISTNAME=	RE-flex-5.2.2
 CATEGORIES=	devel
@@ -41,5 +41,11 @@ post-install: post-install-doxygen post-install-examples
 .for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/RE-flex
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

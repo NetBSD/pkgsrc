@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/05/20 06:09:08 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/04 20:28:52 wiz Exp $
 
 DISTNAME=	sgb-2007-03.28
 PKGNAME=	sgb-20070328
@@ -38,5 +38,11 @@ post-install:
 .for f in abstract.dvi README ERRATA
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/sgb
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

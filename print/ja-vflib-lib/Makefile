@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 13:24:19 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/04 20:29:13 wiz Exp $
 
 .include "Makefile.common"
 
@@ -32,5 +32,11 @@ post-install:
 		-exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${DESTDIR}${PREFIX}/share/VFlib/${VFLIB_VERSION} -type f -print \
 		-exec ${CHMOD} ${SHAREMODE} {} \;
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

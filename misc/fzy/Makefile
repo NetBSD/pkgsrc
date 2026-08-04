@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/08/31 10:19:45 leot Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:09 wiz Exp $
 
 DISTNAME=	fzy-1.1
 PKGREVISION=	1
@@ -15,6 +15,12 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 
 USE_LANGUAGES=	c99
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

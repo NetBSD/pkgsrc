@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/07/08 18:32:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.60 2026/08/04 20:29:11 wiz Exp $
 #
 
 DISTNAME=		nats-server-2.1.9
@@ -60,5 +60,11 @@ MAKE_DIRS_PERMS+=	${NATS_LOGDIR} ${NATS_USER} ${NATS_GROUP} 0700
 post-install:
 	${ECHO} "# Example config, see https://docs.nats.io/nats-server/configuration" > \
 		${DESTDIR}/${EGDIR}/nats-server.conf
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

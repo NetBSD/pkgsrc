@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/02/22 08:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/04 20:29:04 wiz Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		5
@@ -33,6 +33,12 @@ PLIST_VARS+=		horus
 .if ${OPSYS} != "OpenBSD"
 PLIST.horus=		yes
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

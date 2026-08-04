@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/04/22 23:26:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.39 2026/08/04 20:29:06 wiz Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -54,5 +54,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ssmtp.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/revaliases ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

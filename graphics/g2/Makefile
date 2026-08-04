@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2026/07/16 19:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/08/04 20:28:59 wiz Exp $
 
 DISTNAME=		g2-0.50
 PKGREVISION=		42
@@ -28,6 +28,12 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/g2
 	cd ${WRKSRC}/demo && ${INSTALL_DATA} *.c *.f *.inc  \
 		${DESTDIR}${PREFIX}/share/examples/g2
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/04/24 14:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2026/08/04 20:29:07 wiz Exp $
 
 DISTNAME=	pari-2.15.3
 PKGREVISION=	2
@@ -38,6 +38,12 @@ SUBST_FILES.fix-cfg=	config/get_*
 SUBST_SED.fix-cfg=	-e 's,$$CC $$extraflag,$$CC $$CFLAGS $$extraflag,g'
 
 .include "options.mk"
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 # rl_save_prompt()
 .include "../../devel/readline/buildlink3.mk"

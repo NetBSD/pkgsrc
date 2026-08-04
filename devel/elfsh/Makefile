@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/04 20:28:50 wiz Exp $
 #
 
 VERS=		0.51b3
@@ -47,6 +47,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/elfsh/elfsh-ref.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt \
 		${DESTDIR}${PREFIX}/share/doc/elfsh/libelfsh-ref.txt
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

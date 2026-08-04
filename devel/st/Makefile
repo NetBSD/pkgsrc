@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/11/17 11:00:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/04 20:28:52 wiz Exp $
 #
 
 DISTNAME=	st-1.9
@@ -34,5 +34,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/public.h ${DESTDIR}${PREFIX}/include/st.h
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} *.html *.gif \
 		${DESTDIR}${PREFIX}/share/doc/st
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

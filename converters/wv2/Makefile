@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/01/07 08:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/08/04 20:28:47 wiz Exp $
 #
 
 DISTNAME=		wv2-0.2.3
@@ -29,6 +29,12 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"

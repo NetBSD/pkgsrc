@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/01 17:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/04 20:29:04 wiz Exp $
 #
 
 DISTNAME=	autorespond-2.0.5
@@ -28,5 +28,11 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/autorespond
 	${INSTALL_DATA} ${WRKSRC}/qmail-auto \
 		${DESTDIR}${PREFIX}/share/doc/autorespond
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/06 21:49:17 ktnb Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -40,6 +40,12 @@ SUBST_MESSAGE.data=	Fixing installation directories.
 .if !empty(OPSYS:MNetBSD) || !empty(OPSYS:MOpenBSD)
 CONFIGURE_ENV+=		ac_cv_header_sys_audioio_h=no
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

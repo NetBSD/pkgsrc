@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/22 19:25:13 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/04 20:29:08 wiz Exp $
 #
 
 DISTNAME=	statist-1.0.1
@@ -31,5 +31,11 @@ do-install:
 		${INSTALL_PROGRAM} statist ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/*.ps				\
 		${DESTDIR}${PREFIX}/share/doc/statist
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

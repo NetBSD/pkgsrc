@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/01/27 08:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/04 20:28:47 wiz Exp $
 
 DISTNAME=	gbase-0.5
 PKGREVISION=	32
@@ -18,6 +18,12 @@ BUILD_TARGET=	gbase
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gbase ${DESTDIR}${PREFIX}/bin/gbase
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

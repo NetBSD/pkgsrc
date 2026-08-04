@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/05/14 16:40:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2026/08/04 20:28:52 wiz Exp $
 
 DISTNAME=	radare2-5.9.6
 PKGREVISION=	5
@@ -43,6 +43,12 @@ post-extract:
 		${WRKSRC}/libr/arch/p/arm/v35/arch-arm64
 	${MV} ${WRKDIR}/vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024 \
 		${WRKSRC}/libr/arch/p/arm/v35/arch-armv7
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 

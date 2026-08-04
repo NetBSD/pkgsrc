@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/07/13 04:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/04 20:28:53 wiz Exp $
 
 DISTNAME=	8aeac7bd9fa7
 PKGNAME=	blastem-0.6.2
@@ -86,6 +86,12 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/144x144/apps/blastem.png
 	${INSTALL_DATA} ${WRKDIR}/blastem.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/blastem.desktop
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/01/06 21:49:13 ktnb Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/04 20:28:56 wiz Exp $
 
 DISTNAME=	icebreaker-1.9.8
 PKGREVISION=	1
@@ -50,6 +50,12 @@ do-install:
 .for file in ChangeLog README LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/share/doc/icebreaker
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

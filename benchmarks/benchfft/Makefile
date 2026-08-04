@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/01/31 15:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/04 20:28:44 wiz Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		5
@@ -61,5 +61,11 @@ benchmark:
 results:
 	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/submit.txt /tmp/benches/`domainname`/fft.`uname`-`uname -m`-`uname -r`.`hostname`
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

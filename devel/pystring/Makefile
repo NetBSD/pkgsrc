@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/10/16 12:55:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:28:52 wiz Exp $
 
 DISTNAME=	pystring-1.1.4
 CATEGORIES=	devel
@@ -20,5 +20,11 @@ INSTALLATION_DIRS+=	include/pystring lib
 post-install:
 	${RUN} ${INSTALL_DATA} ${WRKSRC}/pystring.h \
 		${DESTDIR}${PREFIX}/include/pystring
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

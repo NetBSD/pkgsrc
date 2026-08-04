@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/12/22 17:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:29:05 wiz Exp $
 
 COMMENT=		Postfix SMTP server PCRE map module
 
@@ -12,6 +12,12 @@ POSTFIX_LIB_MKMAP=	no
 CCARGS+=		-I${BUILDLINK_PREFIX.pcre}/include
 AUXLIBS_MODULE=		-L${BUILDLINK_PREFIX.pcre}/lib -lpcre			\
 			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

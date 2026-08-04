@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/01/04 10:47:27 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/04 20:29:02 wiz Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -23,6 +23,12 @@ CFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=0
 CFLAGS+=	-Wno-incompatible-pointer-types
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/pth/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

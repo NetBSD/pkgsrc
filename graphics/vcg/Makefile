@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:36 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/04 20:29:00 wiz Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
@@ -32,6 +32,12 @@ INSTALLATION_DIRS+=	share/doc/vcg share/examples/vcg
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/visual.ps ${DESTDIR}${PREFIX}/share/doc/vcg
 	${INSTALL_DATA} ${WRKSRC}/expl/*.vcg ${DESTDIR}${PREFIX}/share/examples/vcg
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

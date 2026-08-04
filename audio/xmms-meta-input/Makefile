@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/02/20 12:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/04 20:28:44 wiz Exp $
 
 DISTNAME=		xmms-meta-input-0.4
 PKGREVISION=		8
@@ -25,6 +25,12 @@ do-install:
 	cd ${WRKSRC}/Examples && ${INSTALL_SCRIPT} dsp_input esound_link midi \
 		modules mp3 spc vorbis \
 		${DESTDIR}${PREFIX}/share/examples/xmms-meta-input
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

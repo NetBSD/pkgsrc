@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/09/03 08:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:28:48 wiz Exp $
 
 DISTNAME=		edb-1.0.5
 CATEGORIES=		databases
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=	--enable-cxx --disable-gtk
 
 INCOMPAT_CURSES+=	NetBSD-[0-4].*-*
 FAKE_NCURSES=		yes
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

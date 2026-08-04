@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/11/12 13:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/08/04 20:29:12 wiz Exp $
 
 DISTNAME=	ttt-1.8.2
 PKGREVISION=	12
@@ -26,6 +26,12 @@ REPLACE_FILES.sys-BLTWISH=	ttt.tcl
 
 CFLAGS+=		-DUSE_INTERP_RESULT
 CONFIGURE_ARGS+=	ttt_cv_prog_cflags=${CFLAGS:Q}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 .include "../../net/libpcap/buildlink3.mk"

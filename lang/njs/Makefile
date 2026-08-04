@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/01/07 08:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/04 20:29:03 wiz Exp $
 
 DISTNAME=	njs-0.9.1
 PKGREVISION=	2
@@ -30,6 +30,12 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/njs ${DESTDIR}${PREFIX}/bin/njs
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

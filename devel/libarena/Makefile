@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/01/03 22:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:28:50 wiz Exp $
 
 DISTNAME=	libarena-${SNAPSHOT_DATE}
 CATEGORIES=	devel
@@ -30,5 +30,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR} && \
 	${INSTALL_DATA} ${WRKSRC}/regress/stacked.c \
 	    ${DESTDIR}${EGDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/08/03 13:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/08/04 20:28:44 wiz Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -70,5 +70,11 @@ results:
 	@${MKDIR} /tmp/benches/`domainname`
 	-@cd ${WRKSRC} ; \
 	tar -cf /tmp/benches/`domainname`/hbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results conf
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

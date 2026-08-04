@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/12/31 16:35:25 chuck Exp $
+# $NetBSD: Makefile,v 1.49 2026/08/04 20:29:06 wiz Exp $
 #
 
 DISTNAME=	calc-2.12.7.1
@@ -24,6 +24,12 @@ FAKE_NCURSES=	yes
 INSTALL_MAKE_FLAGS+=	T=${DESTDIR}
 
 TEST_TARGET=	check
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"

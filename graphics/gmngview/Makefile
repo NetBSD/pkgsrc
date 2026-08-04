@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/01/27 08:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/08/04 20:28:59 wiz Exp $
 #
 
 DISTNAME=	libmng-1.0.10
@@ -21,6 +21,12 @@ USE_TOOLS+=		pkg-config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmngview ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"

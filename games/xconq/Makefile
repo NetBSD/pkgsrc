@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/02/18 08:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/08/04 20:28:58 wiz Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		17
@@ -38,6 +38,12 @@ post-build:
 post-install:
 	cd ${WRKSRC}/doc && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 	\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install-info
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

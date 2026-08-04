@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/23 10:03:26 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:16 wiz Exp $
 #
 
 DISTNAME=		oak-1.5.0
@@ -22,5 +22,11 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/oak
 post-install:
 	${INSTALL_DATA}	${FILESDIR}/oak.conf* ${DESTDIR}${PREFIX}/share/examples/oak/
 	${INSTALL_DATA} ${FILESDIR}/oak.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

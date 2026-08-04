@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/02 22:18:22 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=	i2cb-6.0_ALPHA
 PKGREVISION=	7
@@ -33,6 +33,12 @@ do-install:
 		${WRKSRC}/contrib/confuse \
 		${WRKSRC}/contrib/echofile \
 		${DESTDIR}${PREFIX}/libdata/i2cb
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

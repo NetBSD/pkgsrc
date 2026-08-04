@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/11/17 11:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=		stratagus-2.1-src
@@ -36,6 +36,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DESTDIR}${PREFIX}/share/doc/stratagus
 	${INSTALL_DATA} ${WRKSRC}/doc/graphics/* \
 		${DESTDIR}${PREFIX}/share/doc/stratagus/graphics
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"

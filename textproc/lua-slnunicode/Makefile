@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/07/02 10:26:19 nia Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/04 20:29:17 wiz Exp $
 
 DISTNAME=	slnunicode-1.1apl1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -20,6 +20,12 @@ INSTALLATION_DIRS=	${LUA_CDIR}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/unicode.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"

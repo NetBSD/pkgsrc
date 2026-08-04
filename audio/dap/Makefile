@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/08/30 22:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/08/04 20:28:43 wiz Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	9
@@ -25,6 +25,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main/DAP ${DESTDIR}${PREFIX}/bin/dap
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/TODO ${WRKSRC}/COPYING \
 		${WRKSRC}/FEATURES ${DESTDIR}${PREFIX}/share/doc/dap
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

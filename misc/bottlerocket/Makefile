@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/04 20:29:08 wiz Exp $
 
 DISTNAME=	bottlerocket-0.04c
 PKGREVISION=	1
@@ -17,5 +17,11 @@ BUILD_TARGET=	br
 X10_PORT?=		${DEFAULT_SERIAL_DEVICE}
 CONFIGURE_ARGS+=	--with-x10port=${X10_PORT:Q}
 BUILD_DEFS+=		X10_PORT
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

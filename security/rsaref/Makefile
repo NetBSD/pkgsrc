@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/01/02 05:37:24 maya Exp $
+# $NetBSD: Makefile,v 1.45 2026/08/04 20:29:14 wiz Exp $
 #
 
 DISTNAME=		rsaref
@@ -38,5 +38,11 @@ do-install:
 .endfor
 	cd ${WRKDIR}/doc && ${INSTALL_DATA} info.txt rsaref.txt \
 	    ${DESTDIR}${PREFIX}/share/doc/rsaref/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

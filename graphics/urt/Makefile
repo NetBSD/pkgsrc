@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2026/08/03 13:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/08/04 20:29:00 wiz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -44,6 +44,12 @@ post-install:
 	    chown -R ${ROOT_USER}:${ROOT_GROUP} share/doc/urt share/examples/urt && \
 	    find share/doc/urt share/examples/urt -type d -print | xargs chmod 755 && \
 	    find share/doc/urt share/examples/urt -type f -print | xargs chmod 444
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

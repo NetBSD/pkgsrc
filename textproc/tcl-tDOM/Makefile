@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/10/06 03:25:17 kamil Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:17 wiz Exp $
 #
 
 DISTNAME=	tdom-${VERSION}-src
@@ -21,6 +21,12 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 WRKSRC=		${WRKDIR}/tdom-${VERSION}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

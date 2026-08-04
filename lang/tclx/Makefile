@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/26 13:13:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:29:03 wiz Exp $
 
 DISTNAME=	tclx-8.6.3
 CATEGORIES=	lang
@@ -19,6 +19,12 @@ CONFIGURE_ARGS+=	--enable-64bit
 .elif ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--enable-64bit-vis
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

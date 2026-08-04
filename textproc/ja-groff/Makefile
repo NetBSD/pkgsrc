@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/08/03 13:12:32 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/04 20:29:17 wiz Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -32,5 +32,11 @@ REPLACE_PERL+=	afmtodit/afmtodit.pl
 
 # 'checking for working mmap...' conftest hangs
 BROKEN_ON_PLATFORM+=	Darwin-*-aarch64
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

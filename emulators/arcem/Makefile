@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/11/17 11:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/04 20:28:53 wiz Exp $
 #
 
 DISTNAME=	arcem-1.50-src
@@ -56,6 +56,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/arcem/scrollwheel,ffa
 	${INSTALL_DATA} ${WRKSRC}/support_modules/support/support,ffa \
 		${DESTDIR}${PREFIX}/share/arcem/support,ffa
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

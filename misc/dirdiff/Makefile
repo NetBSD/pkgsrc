@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/01/20 19:20:08 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/04 20:29:09 wiz Exp $
 #
 
 DISTNAME=	dirdiff-2.1
@@ -19,6 +19,12 @@ USE_LIBTOOL=	yes
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=	-DUSE_INTERP_RESULT
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

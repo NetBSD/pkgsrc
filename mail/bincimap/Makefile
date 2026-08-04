@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/10 20:02:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/04 20:29:04 wiz Exp $
 
 DISTNAME=		bincimap-2.0.16
 CATEGORIES=		mail
@@ -70,6 +70,12 @@ do-install:
 		${INSTALL_MAN} $${f}					\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$(${ECHO} $${f} | ${AWK} -F. '{print $$NF}'); \
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/01/06 21:49:18 ktnb Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -24,6 +24,12 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/README.txt ${DESTDIR}${PREFIX}/share/doc/tuxmath/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

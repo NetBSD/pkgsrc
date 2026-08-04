@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/05/06 08:40:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/04 20:29:02 wiz Exp $
 
 DISTNAME=		mercury-srcdist-14.01.1
 PKGNAME=		mercury-14.01.1
@@ -59,6 +59,12 @@ do-install:
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" -print | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/samples && \
 	pax -rw . ${DESTDIR}${PREFIX}/share/examples/mercury
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 # rl_prep_term_function
 .include "../../devel/readline/buildlink3.mk"

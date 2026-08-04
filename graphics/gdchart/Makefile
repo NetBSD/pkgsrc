@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/06/14 15:56:38 nia Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/04 20:28:59 wiz Exp $
 
 DISTNAME=	gdchart0.11.5dev
 PKGNAME=	gdchart-0.11.5
@@ -41,6 +41,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/gdchart
 	${INSTALL_DATA} ${WRKSRC}/gdc_pie_samp.c \
 		${DESTDIR}${PREFIX}/share/examples/gdchart
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"

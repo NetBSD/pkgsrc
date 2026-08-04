@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2026/07/23 06:40:04 adam Exp $
+# $NetBSD: Makefile,v 1.221 2026/08/04 20:29:04 wiz Exp $
 
 DISTNAME=	exim-4.99.5
 CATEGORIES=	mail net
@@ -26,6 +26,12 @@ MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 MAKE_ENV+=	INST_CHOWN=${CHOWN:Q}
 MAKE_FLAGS+=	FULLECHO=''
 MAKE_JOBS_SAFE=	no
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 

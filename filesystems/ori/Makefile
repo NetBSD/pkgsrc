@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/01/07 08:46:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/04 20:28:54 wiz Exp $
 
 DISTNAME=	ori-0.8.2
 PKGREVISION=	15
@@ -31,6 +31,12 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 _WRAP_EXTRA_ARGS.CXX+=	-D_KERNTYPES
 CWRAPPERS_APPEND.cxx+=	-D_KERNTYPES
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../archivers/xz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0

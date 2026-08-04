@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/11/17 11:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/04 20:29:21 wiz Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
@@ -46,6 +46,12 @@ post-install:
 	done
 	(cd ${WRKSRC}/docs; tar cf - . ) | \
 		(cd ${DESTDIR}${PREFIX}/lib/Tix${TIX_VERSION}/docs; tar xfpB -)
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"

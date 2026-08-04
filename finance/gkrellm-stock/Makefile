@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2026/01/27 08:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/08/04 20:28:54 wiz Exp $
 #
 
 DISTNAME=		gkrellstock-0.5.1
@@ -23,6 +23,12 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/GetQuote2 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/gkrellstock.so \
 		${DESTDIR}${PREFIX}/lib/gkrellm2/plugins
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

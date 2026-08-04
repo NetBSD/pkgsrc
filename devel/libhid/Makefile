@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/01/07 08:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/04 20:28:51 wiz Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	20
@@ -23,6 +23,12 @@ PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.16
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/libusb.buildlink3.mk"

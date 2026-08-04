@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/06/08 13:08:19 mef Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/04 20:28:49 wiz Exp $
 
 R_PKGNAME=	pak
 R_PKGVER=	0.9.5
@@ -49,6 +49,12 @@ USE_LANGUAGES=	c
 
 REPLACE_R+=	src/library/cli/inst/examples/apps/*.R
 REPLACE_R+=	src/library/cli/exec/*.R
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../math/R/Makefile.extension"
 .include "../../www/curl/buildlink3.mk"

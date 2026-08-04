@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/11/17 11:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/04 20:29:03 wiz Exp $
 
 DISTNAME=	otcl-src-1.14
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -43,5 +43,11 @@ post-install:
 .for _file_ in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${_file_} ${DESTDIR}${DOCDIR}
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

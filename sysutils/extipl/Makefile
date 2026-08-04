@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/03/27 21:27:47 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/04 20:29:16 wiz Exp $
 
 DISTNAME=	extipl-5.04
 PKGREVISION=	2
@@ -19,5 +19,11 @@ TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 USE_TOOLS+=	gmake
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

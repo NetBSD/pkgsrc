@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/02/08 06:53:43 mef Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/04 20:28:42 wiz Exp $
 
 R_PKGNAME=	zip
 R_PKGVER=	2.3.2
@@ -24,6 +24,12 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"

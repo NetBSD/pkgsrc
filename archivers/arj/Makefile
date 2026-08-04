@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/11/17 11:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/04 20:28:42 wiz Exp $
 
 DISTNAME=	arj-3.10.22
 PKGREVISION=	3
@@ -37,5 +37,11 @@ post-install:
 .for i in arjl.txt arjs.txt history.txt readme.txt unix.txt
 	${INSTALL_DATA} ${WRKSRC}/resource/en/${i:Q} ${DESTDIR}${ARJ_DOCSDIR}
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

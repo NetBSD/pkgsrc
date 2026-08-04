@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/06/04 00:47:46 mef Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/04 20:29:15 wiz Exp $
 
 DISTNAME=	dd_rescue-1.33
 CATEGORIES=	sysutils
@@ -21,5 +21,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dd_rescue ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/README.dd_rescue \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/README
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

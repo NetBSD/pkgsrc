@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/05/15 09:58:50 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/04 20:28:56 wiz Exp $
 
 DISTNAME=	pingus-0.7.6
 PKGREVISION=	19
@@ -27,6 +27,12 @@ SUBST_VARS.data=	DATADIR
 SCONS_DO_INSTALL=	no
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${MAKE} install
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/11/17 11:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:28:48 wiz Exp $
 #
 
 DISTNAME=	datadraw3.1.1
@@ -22,5 +22,11 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 BUILD_TARGET=	datadraw
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

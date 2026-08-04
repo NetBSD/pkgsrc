@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/07/13 04:35:45 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/08/04 20:28:55 wiz Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
 PKGREVISION=		14
@@ -35,6 +35,12 @@ CONFIGURE_ARGS+=	--disable-sdlimage
 CONFIGURE_ARGS+=	--disable-openal
 
 CFLAGS+=		-DWITH_JOYSTICK
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

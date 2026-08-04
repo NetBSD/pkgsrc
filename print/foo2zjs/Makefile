@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/12/14 09:04:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:13 wiz Exp $
 
 DISTNAME=	foo2zjs
 PKGNAME=	${DISTNAME}-20120516
@@ -34,5 +34,11 @@ do-install:
 	# cheaper than upstream's "portable" Makefile
 	${INSTALL_DATA} ${WRKSRC}/PPD/*.ppd	\
 		${DESTDIR}${PREFIX}/share/foomatic/ppd/foo2zjs
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"
