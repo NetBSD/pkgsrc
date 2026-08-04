@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/07/16 19:05:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/04 00:58:48 wen Exp $
 
-DISTNAME=	Pod-POM-View-Restructured-1.000003
+DISTNAME=	Pod-POM-View-Restructured-1.000004
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	https://cpan.org/authors/id/A/AL/ALEXM/
 
