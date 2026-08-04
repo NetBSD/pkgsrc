@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4957 2026/08/04 01:14:19 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4958 2026/08/04 02:16:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7352,3 +7352,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Pod-POM-View-Restructured to 1.000004 [wen 2026-08-04]
 	Updated textproc/p5-PDF-Reuse to 0.44 [wen 2026-08-04]
 	Updated databases/p5-Rose-DB to 0.788 [wen 2026-08-04]
+	Updated textproc/p5-PDF-Reuse-Barcode to 0.11 [wen 2026-08-04]
