@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2026/04/12 15:25:34 taca Exp $
+$NetBSD: distinfo,v 1.20 2026/08/04 14:39:10 taca Exp $
 
-BLAKE2s (html-proofer-5.2.1.gem) = dff3aa7d4f36ae354d491bcb7bb695478df5f901477a361e8e7161a0daf242c8
-SHA512 (html-proofer-5.2.1.gem) = b00e7a0f433d30e98c3345c8b7b72236e0d5e2072913950bb90ab8663de1908a740cf66ea5807912aa76fefdc0a3c7571046397314cd820f6bca8600039f8f6c
-Size (html-proofer-5.2.1.gem) = 25088 bytes
+BLAKE2s (html-proofer-5.2.2.gem) = db44e1fc93923f074e84a244ff2cc32402280fc82abde842e68c3d1885169c26
+SHA512 (html-proofer-5.2.2.gem) = 20e43de954981f6aac754c814776f6dbfeaa5f78a6aa51512dd348441399e7f2b93303c431fcfbf915f94d416927946155702528d7873954ae2c739b82e47a95
+Size (html-proofer-5.2.2.gem) = 24576 bytes
