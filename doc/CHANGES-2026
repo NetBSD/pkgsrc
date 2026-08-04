@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4960 2026/08/04 14:08:35 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4961 2026/08/04 14:10:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7355,3 +7355,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-PDF-Reuse-Barcode to 0.11 [wen 2026-08-04]
 	Updated www/resterm to 0.51.1 [drixter 2026-08-04]
 	Updated databases/ruby-sequel to 5.107.0 [taca 2026-08-04]
+	Updated devel/ruby-io-event to 1.19.4 [taca 2026-08-04]
