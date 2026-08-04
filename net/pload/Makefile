@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/04/12 23:59:42 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/04 20:29:12 wiz Exp $
 #
 
 DISTNAME=	pload-0.9.5
@@ -14,6 +14,12 @@ LICENSE=	gnu-gpl-v2
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	imake
 INSTALL_TARGET=	install install.man
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

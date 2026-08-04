@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/11/17 11:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/04 20:28:45 wiz Exp $
 #
 
 VERS=		2.3.6
@@ -38,5 +38,11 @@ do-install:
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

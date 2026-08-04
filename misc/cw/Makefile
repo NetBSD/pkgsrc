@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/11/17 11:01:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/04 20:29:08 wiz Exp $
 
 DISTNAME=	cw-1.0.16
 CATEGORIES=	misc
@@ -17,5 +17,11 @@ SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Updating intepreter path
 SUBST_FILES.path=	def/*
 SUBST_SED.path=		-e 's,/cw,${PREFIX}/bin/cw,1'
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

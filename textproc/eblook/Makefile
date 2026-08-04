@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/12/08 09:57:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/04 20:29:17 wiz Exp $
 
 DISTNAME=	eblook-1.6.1
 PKGREVISION=	2
@@ -13,6 +13,12 @@ GNU_CONFIGURE=		YES
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
 LIBS+=			${BUILDLINK_LDADD.iconv}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

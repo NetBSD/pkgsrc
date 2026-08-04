@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/01/04 00:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:28:56 wiz Exp $
 
 DISTNAME=		kajaani-kombat-0.7
 PKGREVISION=		14
@@ -21,6 +21,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.ogg ${DESTDIR}${PREFIX}/share/kajaani-kombat
 	${INSTALL_DATA} ${WRKSRC}/*.png ${DESTDIR}${PREFIX}/share/kajaani-kombat
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${DESTDIR}${PREFIX}/share/kajaani-kombat
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/06/06 12:40:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.102 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
@@ -94,5 +94,11 @@ post-extract:
 
 do-configure:
 	mv ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

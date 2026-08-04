@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/10 11:18:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:28:51 wiz Exp $
 
 DISTNAME=	rings-1.3.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -30,6 +30,12 @@ do-test:
 		LUA_CPATH=${WRKSRC}/src/?.so \
 		LUA_PATH=${WRKSRC}/src/?.lua \
 		${LUA_INTERPRETER} sample_state.lua
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"

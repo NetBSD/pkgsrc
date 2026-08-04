@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/09/06 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/04 20:28:52 wiz Exp $
 #
 
 DISTNAME=	tpasm1.7
@@ -22,5 +22,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tpasm ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${PREFIX}/libdata/tpasm
 	${INSTALL_DATA} ${WRKSRC}/MANUAL.TXT ${DESTDIR}${PREFIX}/share/doc/tpasm
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

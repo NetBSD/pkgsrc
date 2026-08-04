@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/01/16 04:38:04 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/04 20:29:02 wiz Exp $
 
 DISTNAME=	ATS2-Postiats-0.4.2
 PKGNAME=	${DISTNAME:S/ATS2-Postiats/ats2/}
@@ -29,5 +29,11 @@ pre-configure:
 	${INSTALL_DATA} ${WRKSRC}/utils/emacs/ats2-mode.e* \
 		${DESTDIR}${EMACS_LISPPREFIX}/ats2-mode
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

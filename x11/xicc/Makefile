@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/10/23 20:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/04 20:29:21 wiz Exp $
 #
 
 DISTNAME=	xicc-0.1
@@ -23,6 +23,12 @@ do-build:
 
 do-install:
 	${LIBTOOL} --tag=CC --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/xicc ${DESTDIR}${PREFIX}/bin/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

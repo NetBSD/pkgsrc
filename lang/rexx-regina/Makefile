@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/08/01 18:38:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/04 20:29:03 wiz Exp $
 #
 
 DISTNAME=	regina397
@@ -39,5 +39,11 @@ SUBST_STAGE.etc=	pre-configure
 SUBST_MESSAGE.etc=	Fixing etc directory path
 SUBST_FILES.etc=	rxstack.c
 SUBST_SED.etc=		-e 's;/etc/;${PKG_SYSCONFDIR}/;'
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

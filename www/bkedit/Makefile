@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/01/07 08:49:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=		bk_edit-0.6.23
 PKGNAME=		${DISTNAME:S/_//}
@@ -21,6 +21,12 @@ MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:Q}
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-export-dynamic
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

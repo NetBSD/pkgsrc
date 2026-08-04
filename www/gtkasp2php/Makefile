@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/06/23 01:25:14 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/04 20:29:19 wiz Exp $
 #
 
 DISTNAME=	asp2php-0.76.17
@@ -15,6 +15,12 @@ MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		all gui
 INSTALLATION_DIRS+=	bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk/buildlink3.mk"
 

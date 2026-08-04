@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/28 09:36:54 rxg Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/04 20:28:43 wiz Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
@@ -28,6 +28,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/cmp3
 	${INSTALL_DATA} ${WRKSRC}/cmp3rc \
 		${DESTDIR}${PREFIX}/share/doc/cmp3/sample.cmp3rc
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

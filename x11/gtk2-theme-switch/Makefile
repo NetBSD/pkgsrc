@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2026/01/27 08:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/08/04 20:29:21 wiz Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -21,6 +21,12 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/gtk2-theme-switch
 	${INSTALL_MAN} ${WRKSRC}/switch.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtk2-theme-switch.1
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

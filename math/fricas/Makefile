@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/07/31 06:58:29 wen Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/04 20:29:06 wiz Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-full
 PKGNAME=		fricas-1.3.13
@@ -31,5 +31,11 @@ CHECK_PIE_SKIP=		lib/fricas/target/*/bin/AXIOMsys
 INSTALL_UNSTRIPPED=	yes
 CHECK_WRKREF_SKIP=	lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D lib/*/viewman
 .endif
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

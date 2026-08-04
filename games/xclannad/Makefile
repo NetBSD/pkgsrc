@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/03/04 10:27:19 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/04 20:28:58 wiz Exp $
 #
 
 DISTNAME=	xclannad-7hc
@@ -39,6 +39,12 @@ SUBST_MESSAGE.ar=	Fixing ar(1) arguments.
 SUBST_STAGE.ar=		pre-configure
 SUBST_FILES.ar=		*/Makefile.in
 SUBST_SED.ar=		-e 's| clq | cq |g'
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=    gtk2+>=2.6.0

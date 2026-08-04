@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/11/03 10:39:31 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2026/08/04 20:28:52 wiz Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -52,6 +52,12 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${DOCDIR}
 	${FIND} ${DESTDIR}${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

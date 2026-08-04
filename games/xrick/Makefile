@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/01/06 21:49:19 ktnb Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/04 20:28:58 wiz Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -35,6 +35,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/xrick.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xrick
 	${INSTALL_DATA} ${WRKSRC}/data.zip ${DESTDIR}${PREFIX}/share/xrick
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

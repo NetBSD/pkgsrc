@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/08/30 22:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/08/04 20:29:08 wiz Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		14
@@ -18,6 +18,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/xldlas.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xldlas
 	${CP} -R ${WRKSRC}/help ${DESTDIR}${PREFIX}/share/xldlas
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

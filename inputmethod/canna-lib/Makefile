@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/07/03 15:05:59 tsutsui Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:29:02 wiz Exp $
 
 CANNA_MODULE=	lib
 
@@ -24,5 +24,11 @@ post-configure:
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/forcpp ${DESTDIR}${PREFIX}/bin/kpdic
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

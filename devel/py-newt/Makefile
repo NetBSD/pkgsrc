@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/05/06 20:35:02 vins Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/04 20:28:51 wiz Exp $
 
 DISTNAME=	newt-0.52.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,6 +33,12 @@ SUBST_CLASSES+=		inst-po
 SUBST_STAGE.inst-po=	pre-build
 SUBST_FILES.inst-po=	po/Makefile
 SUBST_VARS.inst-po=	INSTALL PKGLOCALEDIR
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

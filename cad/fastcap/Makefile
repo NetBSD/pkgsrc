@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/09/21 21:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=	fastcap-2.0-18Sep92
 PKGNAME=	fastcap-2.0.19920918
@@ -88,5 +88,11 @@ do-install:
 #	${INSTALL_DATA} ${WRKSRC}/doc/tcad.ps  ${DESTDIR}${PREFIX}/share/doc/fastcap
 #	${INSTALL_DATA} ${WRKSRC}/doc/ug.ps  ${DESTDIR}${PREFIX}/share/doc/fastcap
 #	${INSTALL_DATA} ${WRKSRC}/README.docs ${DESTDIR}${PREFIX}/share/doc/fastcap
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:10 asau Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/04 20:28:50 wiz Exp $
 #
 
 DISTNAME=	libbegemot-1.11
@@ -13,5 +13,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 CFLAGS.SunOS=	-Du_int64_t=uint64_t
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

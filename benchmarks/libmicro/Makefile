@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/03/30 15:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:28:45 wiz Exp $
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
 CATEGORIES=	benchmarks
@@ -69,6 +69,12 @@ results:
 	${MKDIR} /tmp/benches/`domainname`
 	cd ${WRKSRC} && \
 	./multiview libmicro.output > /tmp/benches/`domainname`/libmicro.`uname`-`uname -m`-`uname -r`.`hostname`.html
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/21 08:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/04 20:28:47 wiz Exp $
 
 DISTNAME=	pstotext-1.9
 PKGREVISION=	2
@@ -26,5 +26,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pstotext.hlp ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/pstotext.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/01/27 08:40:05 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/04 20:29:07 wiz Exp $
 
 DISTNAME=	grpn_1.3.3-1
 PKGNAME=	grpn-1.3.3
@@ -13,6 +13,12 @@ COMMENT=	Graphical reverse polish notation (RPN) calculator
 BUILD_TARGET=	grpn
 USE_TOOLS+=	mkdirhier pkg-config
 WRKSRC=		${WRKDIR}/grpn-1.3.3
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

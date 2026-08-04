@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2026/01/27 08:39:54 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/08/04 20:29:01 wiz Exp $
 #
 
 DISTNAME=		gcin-1.1.7
@@ -31,6 +31,12 @@ REPLACE_FILES.sh=	configure
 REPLACE_FILES.sh+=	scripts/gcin-user-setup
 REPLACE_FILES.sh+=	scripts/modify-XIM
 REPLACE_FILES.sh+=	scripts/utf8-edit
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

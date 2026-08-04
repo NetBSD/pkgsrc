@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/07/04 14:44:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/04 20:29:13 wiz Exp $
 
 DISTNAME=	rtf2latex2e-2-2-3
 PKGNAME=	${DISTNAME:S/-/./g:S/./-/}
@@ -20,5 +20,11 @@ INSTALLATION_DIRS=	${PREFIX}/share/doc/${PKGBASE}/html
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

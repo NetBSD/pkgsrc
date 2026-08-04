@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/21 21:24:33 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=	stumpwm-24.11
 CATEGORIES=	wm
@@ -57,6 +57,12 @@ pre-configure:
 pre-build:
 	${ECHO} '(declaim (sb-ext:muffle-conditions cl:warning))' \
 		> ${WRKDIR}/.home/.sbclrc
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

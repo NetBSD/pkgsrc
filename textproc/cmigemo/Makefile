@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:29:17 wiz Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -44,5 +44,11 @@ INSTALL_TARGET=	gcc-install
 
 post-extract:
 	${MV} ${WRKDIR}/${JISYOFILE:R} ${WRKSRC}/dict/SKK-JISYO.L
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

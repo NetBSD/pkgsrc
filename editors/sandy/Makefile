@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/02/07 08:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/04 20:28:53 wiz Exp $
 
 DISTNAME=	sandy-0.4
 PKGREVISION=	3
@@ -18,6 +18,12 @@ SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-paths+=		-e 's,/usr/include,${BUILDLINK_PREFIX.ncurses}/include,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/lib,${BUILDLINK_PREFIX.ncurses}/lib -Wl\,-R${BUILDLINK_PREFIX.ncurses}/lib,g'
 SUBST_SED.fix-paths+=		-e 's,share/man,${PKGMANDIR},g'
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

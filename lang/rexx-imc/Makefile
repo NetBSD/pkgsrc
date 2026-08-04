@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/04 18:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/04 20:29:03 wiz Exp $
 #
 
 DISTNAME=	rexx-imc-1.76
@@ -18,5 +18,11 @@ USE_LIBTOOL=	yes
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1
 
 CONFLICTS=	rexx-regina-[0-9]*
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

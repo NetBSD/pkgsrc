@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/22 20:01:49 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:28:48 wiz Exp $
 
 DISTNAME=		espressif-binutils-gdb-${GITHUB_TAG}
 PKGNAME=		xtensa-esp-elf-binutils-2.41.0
@@ -57,5 +57,11 @@ post-install:
 	set -e; for f in ${WRKDIR}/crosstool-NG-esp-13.2.0_20240530-src/xtensa-dynconfig/*.so; do	\
 		${INSTALL_PROGRAM} $$f ${DESTDIR}${GNU_CONFIGURE_PREFIX}/lib;				\
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

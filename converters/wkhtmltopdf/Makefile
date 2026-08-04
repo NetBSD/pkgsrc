@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/24 14:13:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/04 20:28:47 wiz Exp $
 
 DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
@@ -60,6 +60,12 @@ do-install:
 	cd ${WKHTMLTOX_LIB} && 					\
 	    ln -sf libwkhtmltox.so.0.12.4 libwkhtmltox.so.0.1 && \
 	    ln -sf libwkhtmltox.so.0.12.4 libwkhtmltox.so.0
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/python/application.mk"

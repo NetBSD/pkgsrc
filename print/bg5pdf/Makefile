@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/08/30 22:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/04 20:29:13 wiz Exp $
 
 DISTNAME=	bg5pdf-1.0.0
 PKGREVISION=	23
@@ -30,6 +30,12 @@ MAKE_ENV+=	PYINC=${PYINC:Q} PYSITELIB=${PYSITELIB:Q}
 
 post-extract:
 	${RM} -f ${WRKSRC}/bg5pdflib.so
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

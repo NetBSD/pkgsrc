@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/07/28 09:36:28 nat Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/04 20:29:21 wiz Exp $
 
 VERSION=	0.8
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
@@ -36,6 +36,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kdrive/wscons/${f} ${DESTDIR}${PREFIX}/sbin
 .endfor
 
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/14 13:22:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/04 20:29:14 wiz Exp $
 #
 
 DISTNAME=	duo_unix-2.0.2
@@ -40,6 +40,12 @@ SUBST_SED.paths=	-e 's,/etc/duo,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
 
 TEST_TARGET=	check
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

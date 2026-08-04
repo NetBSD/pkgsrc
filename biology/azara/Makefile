@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/08/11 05:08:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:28:45 wiz Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -28,6 +28,12 @@ PROGFILES=	azara bin2asc combine connect contours deflate \
 do-install:
 	set -e; cd ${WRKSRC}/bin; \
 	${INSTALL_PROGRAM} ${PROGFILES} ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"

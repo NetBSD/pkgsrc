@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/11/26 08:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/04 20:29:13 wiz Exp $
 
 DISTNAME=	bww2tex-2.00
 CATEGORIES=	print
@@ -22,5 +22,11 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/bww2tex \
 		${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

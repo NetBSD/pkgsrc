@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/02/12 11:41:44 micha Exp $
+# $NetBSD: Makefile,v 1.50 2026/08/04 20:29:11 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVER}
 PKGREVISION=	1
@@ -56,6 +56,12 @@ SBINARY=		mdnsd
 BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		mdnsd
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 

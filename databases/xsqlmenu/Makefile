@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/02/21 05:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/08/04 20:28:49 wiz Exp $
 
 DISTNAME=	xsqlmenu-2.10
 PKGREVISION=	20
@@ -25,9 +25,14 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS CHANGES COPYING TODO \
 		${DESTDIR}${PREFIX}/share/doc/xsqlmenu
 
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
+
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xforms/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

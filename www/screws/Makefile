@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/02/07 08:30:34 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=	screws-0.56
 PKGREVISION=	29
@@ -53,6 +53,12 @@ CHECK_INTERPRETER_SKIP+=	*.hsml
 
 post-extract:
 	${CP} ${FILESDIR}/*.[158] ${WRKSRC}/doc/manpage/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 

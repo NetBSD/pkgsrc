@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/12/01 09:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/04 20:29:16 wiz Exp $
 
 DISTNAME=	nvramtool-4.0-9989-gf2dfef0-08bda29
 PKGNAME=	nvramtool-0pre20150613
@@ -31,5 +31,11 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nvramtool ${DESTDIR}${PREFIX}/sbin/nvramtool
 	${INSTALL_MAN} ${WRKSRC}/cli/nvramtool.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/nvramtool.8
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

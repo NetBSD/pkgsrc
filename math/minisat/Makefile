@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/02 19:21:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:07 wiz Exp $
 
 DISTNAME=	minisat-2.2.0
 CATEGORIES=	math
@@ -26,6 +26,12 @@ INSTALLATION_DIRS+=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/simp/minisat \
 		${DESTDIR}${PREFIX}/bin/minisat
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

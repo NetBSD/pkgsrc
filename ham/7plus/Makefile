@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/07/23 19:14:03 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:29:00 wiz Exp $
 #
 
 DISTNAME=	7pl225sr
@@ -29,5 +29,11 @@ INSTALLATION_DIRS=	bin share/doc/7plus
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/*.txt ${DESTDIR}${PREFIX}/share/doc/7plus && \
 	${INSTALL_DATA} ${WRKDIR}/readme.now ${DESTDIR}${PREFIX}/share/doc/7plus
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

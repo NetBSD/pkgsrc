@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/12/15 07:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/04 20:28:54 wiz Exp $
 
 DISTNAME=	fsx-2009
 CATEGORIES=	filesystems
@@ -21,5 +21,11 @@ INSTALLATION_DIRS=	bin share/doc/fsx
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fsx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/APPLE_LICENSE ${DESTDIR}${PREFIX}/share/doc/fsx
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

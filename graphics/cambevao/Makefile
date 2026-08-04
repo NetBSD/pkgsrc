@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/24 14:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/04 20:28:59 wiz Exp $
 #
 
 DISTNAME=		cambevao-2.2
@@ -29,6 +29,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cambevao ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/cambevao.xml ${DESTDIR}${PREFIX}/share/examples/cambevao
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cambevao.README
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/20 00:52:49 nia Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/04 20:28:43 wiz Exp $
 
 DISTNAME=	lzsa-1.4.1
 CATEGORIES=	archivers
@@ -21,5 +21,11 @@ pre-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lzsa ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

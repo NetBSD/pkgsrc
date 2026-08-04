@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/05/30 08:03:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/04 20:28:55 wiz Exp $
 
 DISTNAME=	unifont-15.0.03
 CATEGORIES=	fonts
@@ -34,5 +34,11 @@ REPLACE_PERL+=	src/unifontksx
 REPLACE_PERL+=	src/unihex2png
 REPLACE_PERL+=	src/unihexrotate
 REPLACE_PERL+=	src/unipng2hex
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

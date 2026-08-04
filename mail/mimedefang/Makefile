@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/07/16 19:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/08/04 20:29:05 wiz Exp $
 
 DISTNAME=		mimedefang-3.4.1
 PKGREVISION=		4
@@ -77,6 +77,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${DESTDIR}${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${DESTDIR}${EGDIR}/mimedefang-filter
 	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${DESTDIR}${EGDIR}/sa-mimedefang.cf
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"

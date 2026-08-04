@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/02/24 15:40:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:28:42 wiz Exp $
 
 DISTNAME=	lzlib-1.15
 CATEGORIES=	archivers devel
@@ -21,5 +21,11 @@ BUILDLINK_TRANSFORM.Darwin+=	opt:-Wl,--soname=liblz.so.1:-Wl,-install_name,${PRE
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--soname=liblz.so.1:-Wl,-soname,liblz.so.1
 
 TEST_TARGET=	check
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/02/10 08:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:20 wiz Exp $
 
 DISTNAME=		squirm-1.0betaB
 CATEGORIES=		www
@@ -33,5 +33,11 @@ CONF_FILES+=		${EGDIR}/squirm.patterns.dist ${PKG_SYSCONFDIR}/squirm.patterns.di
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/squirm ${DESTDIR}${PREFIX}/bin/
 	cd ${WRKSRC} && ${INSTALL_DATA} squirm.local.dist squirm.patterns.dist ${DESTDIR}${EGDIR}/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

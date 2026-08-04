@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/08/02 13:30:22 ktnb Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:29:12 wiz Exp $
 
 DISTNAME=	newsraft-0.37
 CATEGORIES=	news
@@ -27,6 +27,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/newsraft.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
 	cd ${WRKSRC}/doc/examples && ${PAX} -wr . ${DESTDIR}${EGDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

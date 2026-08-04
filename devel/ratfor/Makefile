@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/04 18:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/04 20:28:52 wiz Exp $
 
 DISTNAME=		ratfor77
 PKGNAME=		ratfor-1.0
@@ -18,5 +18,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ratfor77 ${DESTDIR}${PREFIX}/bin/ratfor
 	${INSTALL_MAN} ${WRKSRC}/ratfor.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ratfor.1
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

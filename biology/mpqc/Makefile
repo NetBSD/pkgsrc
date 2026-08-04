@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/04 20:28:45 wiz Exp $
 
 DISTNAME=	mpqc-2.3.1
 PKGREVISION=	12
@@ -30,6 +30,12 @@ REPLACE_PERL=	src/bin/mpqc/ccarun.in src/bin/mpqc/mpqcrun.in
 # Don't introduce Tk dependency for minor things, just leave a hook:
 REPLACE_WISH=		src/bin/molrender/tkmolrender.in
 CHECK_INTERPRETER_SKIP=	bin/tkmolrender
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 # optional:
 # MPI, niama-config, libr12, libderiv

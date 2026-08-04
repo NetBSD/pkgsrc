@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/01/02 09:17:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/04 20:28:56 wiz Exp $
 
 DISTNAME=		kapooka_0.2
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -42,6 +42,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/kapooka/sound
 	${INSTALL_DATA} ${WRKSRC}/data/sprites/*.png \
 		${DESTDIR}${PREFIX}/share/kapooka/sprites
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"

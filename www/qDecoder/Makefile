@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/02/01 09:03:44 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=	qDecoder-9.0.1
 CATEGORIES=	www
@@ -24,5 +24,11 @@ post-install:
 		*.html ${DESTDIR}${PREFIX}/share/examples/qDecoder
 	cd ${WRKSRC}/examples/qDecoder-upload; ${INSTALL_DATA} *.html *.js \
 		${DESTDIR}${PREFIX}/share/examples/qDecoder/qDecoder-upload
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/01/15 08:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/04 20:29:07 wiz Exp $
 
 ORDCALCVER=	0.2
 PKGNAME=	ordCalc-${ORDCALCVER}
@@ -31,6 +31,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ordinal.pdf ${DOCS}
 
 
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/17 16:06:22 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/04 20:28:52 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -18,6 +18,12 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.3:../../devel/py-cffi
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	PYSITELIB=${PYSITELIB}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/04 20:29:12 wiz Exp $
 
 DISTNAME=	pptpd-1.3.4
 PKGNAME=	${DISTNAME:S/pptpd/poptop/}
@@ -27,6 +27,12 @@ SUBST_SED.logwtmp=	-e s,@@PREFIX@@,${PREFIX},
 
 RCD_SCRIPTS=	pptpd
 CHECK_PORTABILITY_SKIP+=	version
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

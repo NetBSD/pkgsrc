@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/01/25 14:41:59 gdt Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/04 20:29:07 wiz Exp $
 
 DISTNAME=	gap4r3
 PKGNAME=	gap-4.3.5
@@ -57,5 +57,11 @@ do-install:
 	for I in cnf doc etc grp lib pkg prim small trans tst; do	\
 		${CP} -R ${WRKSRC}/$$I ${DESTDIR}${GAP_DIRECTORY};	\
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

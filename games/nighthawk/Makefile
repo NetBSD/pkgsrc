@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/08/03 13:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/04 20:28:56 wiz Exp $
 
 DISTNAME=		nighthawk-2.1
 PKGREVISION=		5
@@ -45,5 +45,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nighthawk ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/nighthawk/README
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

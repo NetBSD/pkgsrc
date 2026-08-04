@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:07 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/04 20:28:54 wiz Exp $
 
 DISTNAME=	quasi88-0.6.4
 PKGREVISION=	1
@@ -21,6 +21,12 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
 
 INSTALLATION_DIRS+=	bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

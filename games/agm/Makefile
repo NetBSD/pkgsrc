@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/27 20:37:27 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/04 20:28:55 wiz Exp $
 
 DISTNAME=	agm-1.3.1
 CATEGORIES=	games
@@ -37,5 +37,11 @@ REPLACE.wish.new=	${PREFIX}/bin/wish
 REPLACE_FILES.wish=	xagm
 
 DEPENDS+=	tk-[0-9]*:../../x11/tk
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

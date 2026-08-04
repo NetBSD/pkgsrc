@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/10/12 20:09:24 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/04 20:29:04 wiz Exp $
 #
 
 DISTNAME=	hypermail-2.3.0
@@ -25,6 +25,12 @@ CONFIGURE_ARGS+=	--with-htmldir=${DESTDIR}${PREFIX}/share/doc/hypermail
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"

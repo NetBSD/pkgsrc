@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:15 agc Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/04 20:29:03 wiz Exp $
 
 DISTNAME=	vscmV1R2
 PKGNAME=	vscm-1.4
@@ -26,5 +26,11 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/vscm/vscm-boot
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL DESCRIPTION	\
 		${DESTDIR}${PREFIX}/share/doc/vscm
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

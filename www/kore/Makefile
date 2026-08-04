@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/05/14 16:42:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=	kore-4.2.3
 PKGREVISION=	15
@@ -25,6 +25,12 @@ post-build:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kore-serve ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/06/28 15:18:14 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/04 20:28:42 wiz Exp $
 
 DISTNAME=	7z2602-src
 PKGNAME=	7-zip-26.02
@@ -46,5 +46,11 @@ pre-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/CPP/7zip/Bundles/Alone2/_o/7zz \
 		${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

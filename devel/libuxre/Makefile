@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/27 08:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/04 20:28:51 wiz Exp $
 
 PKGNAME=	libuxre-${HEIRLOOM_VER}
 CATEGORIES=	devel
@@ -44,6 +44,12 @@ do-install:
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/libuxre/"${i}" ${DESTDIR}${DOC_DIR}
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

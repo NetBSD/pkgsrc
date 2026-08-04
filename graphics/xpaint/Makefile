@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/01/04 10:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/08/04 20:29:00 wiz Exp $
 
 DISTNAME=	xpaint-3.1.4
 PKGREVISION=	7
@@ -56,6 +56,12 @@ pre-install:
 	for file in ${WRKSRC}/bitmaps/toolicons/*.xpm.gz ; do \
 		${GUNZIP_CMD} $$file ; \
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

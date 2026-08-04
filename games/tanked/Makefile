@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -30,6 +30,12 @@ post-patch:
 	@${MV} ${WRKSRC}/server/maps.list ${WRKSRC}/server/maps.list.bak
 	@${SED} -e 's@XXX@${PREFIX}/share/tanked/@' \
 		< ${WRKSRC}/server/maps.list.bak > ${WRKSRC}/server/maps.list
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

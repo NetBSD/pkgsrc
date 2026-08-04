@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/01/22 08:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/04 20:29:00 wiz Exp $
 
 DISTNAME=	png2html-1.1
 PKGREVISION=	31
@@ -21,6 +21,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/png2html
 	${INSTALL_MAN} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/png2html
 	${INSTALL_PROGRAM} ${WRKSRC}/png2html ${DESTDIR}${PREFIX}/bin
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

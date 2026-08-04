@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/11/19 00:14:21 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/04 20:29:11 wiz Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
@@ -28,6 +28,12 @@ MESSAGE_SUBST+=	OPENVPN_PLUGINSDIR=${PREFIX}/${OPENVPN_PLUGINSDIR}
 SPECIAL_PERMS+=	bin/logwtmpx ${SETUID_ROOT_PERMS}
 
 DEPENDS+=	openvpn>=2.4.2:../../net/openvpn
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

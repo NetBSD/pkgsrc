@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/08/14 01:55:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:29:01 wiz Exp $
 #
 
 DISTNAME=	dbskkd-cdb-3.00
@@ -47,6 +47,12 @@ post-install:
 .for filename in ${INSTALL_SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${filename} ${DESTDIR}${DOCSDIR}
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../databases/tinycdb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

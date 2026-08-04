@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/11/12 13:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/08/04 20:28:46 wiz Exp $
 #
 
 DISTNAME=	magic-7.5.188
@@ -57,6 +57,12 @@ REPLACE_INTERPRETER+=	wish
 REPLACE.wish.old=	.*wish
 REPLACE.wish.new=	${PREFIX}/bin/wish
 REPLACE_FILES.wish=	tcltk/tkshell.tcl
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 # uses rl_*_completion_function
 .include "../../devel/readline/buildlink3.mk"

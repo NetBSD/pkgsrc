@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/11/17 11:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/04 20:29:04 wiz Exp $
 #
 
 DISTNAME=	enma-1.2.0
@@ -25,6 +25,12 @@ BUILD_DEFS+=	VARBASE
 
 CONF_FILES+=	share/examples/enma/enma.conf.sample ${PKG_SYSCONFDIR}/enma.conf
 RCD_SCRIPTS=	enma
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 

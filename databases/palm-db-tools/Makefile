@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/03 08:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/04 20:28:49 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
@@ -32,5 +32,11 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/manual.* ${DESTDIR}${PREFIX}/share/doc/palm-db-tools
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

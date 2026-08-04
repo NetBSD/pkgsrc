@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/02/17 08:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/08/04 20:29:00 wiz Exp $
 
 DISTNAME=	wmphoto-0.3a
 PKGREVISION=	1
@@ -18,6 +18,12 @@ INSTALLATION_DIRS+=	bin share/doc/wmphoto
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/HINTS \
 	    ${DESTDIR}${PREFIX}/share/doc/wmphoto
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

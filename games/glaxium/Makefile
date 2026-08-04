@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/06 21:49:13 ktnb Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/04 20:28:55 wiz Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -39,6 +39,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/glaxium/samples/
 	${INSTALL_DATA} ${WRKSRC}/textures/*.png \
 		${DESTDIR}${PREFIX}/share/glaxium/textures/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

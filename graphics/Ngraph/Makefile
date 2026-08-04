@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:11 agc Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/04 20:28:58 wiz Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
@@ -25,6 +25,12 @@ post-extract:
 
 post-install:
 	${GTAR} -C ${DESTDIR}${PREFIX}/libexec/Ngraph -xzf ${DISTDIR}/Ngraph-6.3.30-doc.tar.gz
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

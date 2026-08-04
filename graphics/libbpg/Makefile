@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/24 14:14:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/04 20:28:59 wiz Exp $
 
 DISTNAME=	libbpg-0.9.2
 PKGREVISION=	1
@@ -23,6 +23,12 @@ SUBST_VARS.config=	PREFIX
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2025/11/17 11:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/08/04 20:28:46 wiz Exp $
 
 DISTNAME=	fidogate-4.4.10
 PKGREVISION=	15
@@ -66,5 +66,11 @@ post-install:
 		${DESTDIR}${PREFIX}/share/fidogate/sendmail/mailer
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${DESTDIR}${PREFIX}/share/doc/fidogate
 	${INSTALL_DATA} ${WRKSRC}/fidogate.conf ${DESTDIR}${EGDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

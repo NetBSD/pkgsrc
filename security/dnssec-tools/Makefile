@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/07/16 19:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/08/04 20:29:14 wiz Exp $
 
 DISTNAME=	dnssec-tools-2.2.3
 PKGREVISION=	7
@@ -56,6 +56,12 @@ CONF_FILES+=	${EGDIR}/resolv.conf ${PKG_SYSCONFDIR}/resolv.conf
 CONF_FILES+=	${EGDIR}/root.hints ${PKG_SYSCONFDIR}/root.hints
 
 INSTALLATION_DIRS=	${EGDIR}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 

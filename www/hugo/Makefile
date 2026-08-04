@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2026/07/08 18:32:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.145 2026/08/04 20:29:19 wiz Exp $
 
 DISTNAME=	hugo-0.157.0
 PKGNAME=	go-${DISTNAME}
@@ -20,6 +20,12 @@ MAKE_ENV+=	"CGO_ENABLED=1"
 MAKE_ENV+=	"CGO_LDFLAGS=-lm"
 USE_LANGUAGES+=	c c++
 LIBS+=		-lm
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "go-modules.mk"
 

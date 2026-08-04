@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/03/20 11:04:14 nia Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/04 20:29:10 wiz Exp $
 
 DISTNAME=		hping3-alpha-2
 PKGNAME=		hping3-3a2
@@ -31,6 +31,12 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping3 ${DESTDIR}${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/11/17 11:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/04 20:29:03 wiz Exp $
 
 DISTNAME=	tinyscheme-1.40
 CATEGORIES=	lang
@@ -25,6 +25,12 @@ SUBST_STAGE.initpath=	pre-configure
 SUBST_MESSAGE.initpath=	Fix location of init.scm file
 SUBST_FILES.initpath=	scheme.c
 SUBST_VARS.initpath=	PREFIX
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

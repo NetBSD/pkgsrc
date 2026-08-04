@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/23 22:08:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/04 20:29:07 wiz Exp $
 
 DISTNAME=	liblbfgs-1.10
 CATEGORIES=	math
@@ -16,6 +16,12 @@ AUTOCONF_REQD+=	2.50
 USE_TOOLS+=	autoconf
 pre-configure:
 	set -e; cd ${WRKSRC}; autoconf
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

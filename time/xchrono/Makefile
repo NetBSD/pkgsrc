@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 13:04:31 asau Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/04 20:29:18 wiz Exp $
 #
 
 DISTNAME=		xchrono
@@ -17,6 +17,12 @@ INSTALLATION_DIRS=	share/doc/xchrono
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xchrono/
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/07/10 07:55:51 nia Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/04 20:29:01 wiz Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -74,5 +74,11 @@ CONF_FILES=	${EGDIR}/dpbox.ini ${PKG_SYSCONFDIR}/dpbox.ini \
 post-build:
 	${SED} -e 's#@prefix@#${PREFIX}#g' \
 		< ${FILESDIR}/dpbox.ini > ${WRKDIR}/dpbox-6.00.00/dpbox.ini
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

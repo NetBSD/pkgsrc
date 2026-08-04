@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/03/03 09:52:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/04 20:28:54 wiz Exp $
 #
 
 DISTNAME=	pcf2bdf-1.07
@@ -23,5 +23,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pcf2bdf ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pcf2bdf.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pcf2bdf.1
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

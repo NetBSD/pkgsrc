@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/04 20:28:47 wiz Exp $
 
 DISTNAME=	cn2jp1.4b
 PKGNAME=	cn2jp-1.4b
@@ -25,5 +25,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cn2jp
 	${INSTALL_DATA} ${WRKSRC}/lib/jp-util.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/lib/lang-util.h ${DESTDIR}${PREFIX}/include
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

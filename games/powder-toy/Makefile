@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/07/13 04:35:56 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/08/04 20:28:57 wiz Exp $
 
 DISTNAME=	powder-toy-95.0
 PKGREVISION=	30
@@ -53,6 +53,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/icon/powder-${size}.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${size}x${size}/apps/powder-toy.png
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

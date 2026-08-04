@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/01/07 08:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/04 20:28:50 wiz Exp $
 
 DISTNAME=	dumpet-2.1
 PKGREVISION=	14
@@ -14,6 +14,12 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake pkg-config
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

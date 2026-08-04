@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/02/16 08:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:28:44 wiz Exp $
 
 DISTNAME=	vcf-0.0.5
 CATEGORIES=	audio
@@ -14,6 +14,12 @@ INSTALLATION_DIRS+=	lib/ladspa
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/vcf.so ${DESTDIR}${BUILDLINK_PREFIX.ladspa}/lib/ladspa
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

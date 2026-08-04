@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/01/10 07:42:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/04 20:28:49 wiz Exp $
 
 VERSION=	2.4.9.7
 DISTNAME=	metakit-${VERSION}
@@ -21,5 +21,11 @@ TEST_TARGET=		test
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/mk4io.h ${DESTDIR}${PREFIX}/include
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

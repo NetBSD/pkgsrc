@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/07/14 18:58:35 drixter Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/04 20:28:53 wiz Exp $
 
 DISTNAME=		ed-1.22.5
 CATEGORIES=		editors
@@ -31,5 +31,11 @@ post-install:
 	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2026/01/27 08:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/08/04 20:29:09 wiz Exp $
 
 DISTNAME=		gperiodic-2.0.10
 PKGREVISION=		43
@@ -22,6 +22,12 @@ MAKE_FLAGS+=		bindir=${PREFIX}/bin
 MAKE_FLAGS+=		datadir=${PREFIX}/share
 MAKE_FLAGS+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 BUILD_TARGET=		gperiodic
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

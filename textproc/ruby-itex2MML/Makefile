@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/04 20:29:17 wiz Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
@@ -22,6 +22,12 @@ INSTALL_TARGET=		install_ruby
 
 INSTALLATION_DIRS+=	${RUBY_SITEARCHLIB}
 MAKE_ENV+=		RUBY=${RUBY:Q}
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

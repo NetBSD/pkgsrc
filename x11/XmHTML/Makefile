@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/04/24 14:16:07 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/08/04 20:29:20 wiz Exp $
 #
 
 DISTNAME=	XmHTML-1.1.10
@@ -22,6 +22,12 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/lib/libXmHTML.la ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/include/XmHTML/*.h ${DESTDIR}${PREFIX}/include/XmHTML
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

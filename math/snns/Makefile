@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/02/12 07:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/04 20:29:08 wiz Exp $
 
 DISTNAME=	SNNSv4.3
 PKGNAME=	snns-4.3
@@ -45,6 +45,12 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/examples/$$i \
 		    ${DESTDIR}${PREFIX}/share/examples/snns; \
 	done
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

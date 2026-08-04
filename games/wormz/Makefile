@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/12/19 22:16:52 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/04 20:28:57 wiz Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -25,6 +25,12 @@ post-extract:
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

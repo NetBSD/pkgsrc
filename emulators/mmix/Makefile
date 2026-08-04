@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/04 20:28:54 wiz Exp $
 
 DISTNAME=	mmix-20060918
 PKGREVISION=	1
@@ -30,5 +30,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mmix
 	cd ${WRKSRC} && ${INSTALL_DATA} *.mms *.mmix *.mmconfig 	\
 		${DESTDIR}${PREFIX}/share/examples/mmix
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

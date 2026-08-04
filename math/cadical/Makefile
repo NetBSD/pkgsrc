@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/07/24 18:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/04 20:29:06 wiz Exp $
 
 DISTNAME=	cadical-2.1.3
 CATEGORIES=	math
@@ -24,5 +24,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/tracer.hpp ${DESTDIR}${PREFIX}/include/cadical
 	${INSTALL_DATA} ${WRKSRC}/src/cadical.hpp ${DESTDIR}${PREFIX}/include/cadical
 	${INSTALL_DATA} ${WRKSRC}/build/libcadical.a ${DESTDIR}${PREFIX}/lib
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

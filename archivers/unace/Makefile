@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/01/27 19:12:38 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/04 20:28:43 wiz Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -30,5 +30,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/unace
 	${INSTALL_MAN} ${WRKSRC}/readme.txt \
 		${DESTDIR}${PREFIX}/share/doc/unace
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"

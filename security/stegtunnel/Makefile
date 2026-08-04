@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/04 20:29:14 wiz Exp $
 
 DISTNAME=	stegtunnel-0.4
 PKGREVISION=	1
@@ -13,6 +13,12 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 LIBS.SunOS+=	-lrt
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

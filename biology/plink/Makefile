@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/12/24 16:26:42 bacon Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/04 20:28:45 wiz Exp $
 
 DISTNAME=	plink-1.07-src
 PKGNAME=	${DISTNAME:-src=}
@@ -39,6 +39,12 @@ do-test:
 	cd ${WRKSRC} && ./plink --file test --freq
 	cd ${WRKSRC} && ./plink --file test --assoc
 	cd ${WRKSRC} && ./plink --file test --make-bed
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
