@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4954 2026/08/04 00:55:48 wen Exp $
+$NetBSD: CHANGES-2026,v 1.4955 2026/08/04 01:00:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7349,3 +7349,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Encode-IMAPUTF7 to 1.07 [wen 2026-08-03]
 	Updated textproc/p5-PPIx-QuoteLike to 0.024 [wen 2026-08-03]
 	Updated textproc/p5-podlators to 6.1.0 [wen 2026-08-04]
+	Updated textproc/p5-Pod-POM-View-Restructured to 1.000004 [wen 2026-08-04]
