@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4961 2026/08/04 14:10:27 taca Exp $
+$NetBSD: CHANGES-2026,v 1.4962 2026/08/04 14:12:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7356,3 +7356,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.51.1 [drixter 2026-08-04]
 	Updated databases/ruby-sequel to 5.107.0 [taca 2026-08-04]
 	Updated devel/ruby-io-event to 1.19.4 [taca 2026-08-04]
+	Updated devel/ruby-async to 2.44.0 [taca 2026-08-04]
