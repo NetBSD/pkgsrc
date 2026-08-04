@@ -1,8 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2023/12/28 22:47:13 zafer Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/08/04 12:04:27 gdt Exp $
 # used by comms/p5-pilot-link/Makefile
 # used by comms/pilot-link/Makefile
 # used by comms/pilot-link-libs/Makefile
 
+# This claims to be upstream; the old domain is gone.
+#   https://github.com/desrod/pilot-link/releases/tag/v0.15.0
 DISTNAME=		pilot-link-${PILOT_LINK_VERS}
 CATEGORIES=		comms
 MASTER_SITES=		#
