@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/01 16:17:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/04 20:18:59 adam Exp $
 
-DISTNAME=	pytest-remotedata-0.4.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+DISTNAME=	pytest_remotedata-0.4.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pytest_/test-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-remotedata/}
 
@@ -10,17 +10,12 @@ HOMEPAGE=	https://github.com/astropy/pytest-remotedata
 COMMENT=	Pytest plugin for controlling remote data access
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# needs 'make install'
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
