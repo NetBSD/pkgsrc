@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/08/24 14:14:56 taca Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/04 14:18:22 taca Exp $
 
-DISTNAME=	multi_test-1.1.0
+DISTNAME=	multi_test-2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
