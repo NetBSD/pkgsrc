@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2026/01/18 13:58:07 taca Exp $
+$NetBSD: distinfo,v 1.33 2026/08/04 14:34:20 taca Exp $
 
-BLAKE2s (haml-7.2.0.gem) = da32158147a8a08479742d1761413aef90ed2592fa6ac11f6edee631e08dc400
-SHA512 (haml-7.2.0.gem) = fb5dd80b96b4b6bb4fcbd305267dd47e98471c474e6416b5fdd44789221ce6a28de75f4aa076e59508b54855c3f37ff94532a7e3c415cee29b30cc935bed619b
-Size (haml-7.2.0.gem) = 73728 bytes
+BLAKE2s (haml-7.2.2.gem) = f5fec0a73b458a28237d66b9019c81faa0f48703df47e8f45bdad68ec8a47f2b
+SHA512 (haml-7.2.2.gem) = 32431bf82b1d8d323de7401adbaf882ebaa67cafd365719da079cf5d0dea2e4fcaf3623a025c2906dc55b8a4f2a3e867aa3c008d7a6b958b327c8a0df33fadca
+Size (haml-7.2.2.gem) = 73728 bytes
