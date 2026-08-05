@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 12:06:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/05 02:57:27 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -20,6 +20,9 @@ ${PYSITELIB}/fastjsonschema/draft06.pyo
 ${PYSITELIB}/fastjsonschema/draft07.py
 ${PYSITELIB}/fastjsonschema/draft07.pyc
 ${PYSITELIB}/fastjsonschema/draft07.pyo
+${PYSITELIB}/fastjsonschema/draft2019.py
+${PYSITELIB}/fastjsonschema/draft2019.pyc
+${PYSITELIB}/fastjsonschema/draft2019.pyo
 ${PYSITELIB}/fastjsonschema/exceptions.py
 ${PYSITELIB}/fastjsonschema/exceptions.pyc
 ${PYSITELIB}/fastjsonschema/exceptions.pyo
