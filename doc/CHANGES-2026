@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4986 2026/08/05 09:19:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4987 2026/08/05 09:22:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7387,3 +7387,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ggml to 0.18.1 [wiz 2026-08-05]
 	Updated www/resterm to 0.51.2 [drixter 2026-08-05]
 	Updated archivers/arqiver to 1.0.2 [pin 2026-08-05]
+	Updated biology/openbabel to 3.2.1 [pin 2026-08-05]
