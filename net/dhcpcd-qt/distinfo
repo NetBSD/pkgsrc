@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/24 00:07:47 roy Exp $
+$NetBSD: distinfo,v 1.12 2026/08/05 11:48:11 roy Exp $
 
-BLAKE2s (dhcpcd-ui-0.7.9.tar.xz) = 5112a06f26b2a13fd66933e10319c31c6b49b3344e81c2e0f03ef98b38c5cf8e
-SHA512 (dhcpcd-ui-0.7.9.tar.xz) = fe0c9ff2f777e7b97438eb50507fce765b8e18b1a71883d76e9b6570a18e6f13414f8e64d8034f9c3352496775c283a0540e331ec449d6fbe48ddc8d64e14691
-Size (dhcpcd-ui-0.7.9.tar.xz) = 104100 bytes
+BLAKE2s (dhcpcd-ui-0.8.0.tar.xz) = d3827adca42e094f56ee295ecf2da4d757741b28e35e3a373bc7f8ed9bb4db91
+SHA512 (dhcpcd-ui-0.8.0.tar.xz) = 005fe4ac66ac484b6e00a0fe6e2f577e5d3065aef42808c6e0feb65ee9ccf916e65f17b5a641fa6b22eb239c8cdeb9339f83761811635574cde95cafc525b510
+Size (dhcpcd-ui-0.8.0.tar.xz) = 104456 bytes
