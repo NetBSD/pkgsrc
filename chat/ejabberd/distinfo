@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.76 2026/02/07 01:58:53 gdt Exp $
+$NetBSD: distinfo,v 1.77 2026/08/05 18:19:22 gdt Exp $
 
-BLAKE2s (ejabberd-26.01.tar.gz) = 57c3960519106d2b1d46cc988f69967b52513b70fe021fd6e813d017cbe9bb4c
-SHA512 (ejabberd-26.01.tar.gz) = 97ef4210fb6376f3ae2dc8c4a7d42274e04536f1d24191b68bf4e43434f9e5fac4ffb1fd5334000388bc3ecc076604a5f5e0c35158adba5e4198b785d48d5f29
-Size (ejabberd-26.01.tar.gz) = 2908713 bytes
+BLAKE2s (ejabberd-26.02.tar.gz) = 0dd9d4f11150a30a9b8a6010731f5af9fa9e9a5532591e54a6090167fcb7301c
+SHA512 (ejabberd-26.02.tar.gz) = 0057f73ce996173365e73ca3779027ff656f0c678ee632b50815703c5593a9c94818fa3eb635e73739f42af9e4beb955dcbbd9bf76451b768f345156e9cdbc9f
+Size (ejabberd-26.02.tar.gz) = 2918404 bytes
 SHA1 (patch-aa) = a0a21134adae1f2bbad58a001fb527ea18b70c99
