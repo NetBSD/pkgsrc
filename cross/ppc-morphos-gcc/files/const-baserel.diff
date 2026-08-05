@@ -2,9 +2,9 @@ Also use baserel for const pointers - after all, something in a const pointer
 might refer to something that gets relocated, so needs to be accessed baserel
 as well.
 
---- gcc/config/rs6000/rs6000.cc.orig	2026-08-01 15:24:38.007091067 +0000
+--- gcc/config/rs6000/rs6000.cc.orig	2026-08-05 20:11:06.081111229 +0000
 +++ gcc/config/rs6000/rs6000.cc
-@@ -20940,6 +20940,67 @@ rs6000_elf_select_rtx_section (machine_m
+@@ -20952,6 +20952,82 @@ rs6000_elf_select_rtx_section (machine_m
  static int
  rs6000_elf_reloc_rw_mask (void);
  
@@ -43,6 +43,24 @@ as well.
 +    }
 +}
 +
++/* Copied from varasm.cc */
++static inline tree
++ultimate_transparent_alias_target (tree *alias)
++{
++  tree target = *alias;
++
++  if (IDENTIFIER_TRANSPARENT_ALIAS (target))
++    {
++      gcc_assert (TREE_CHAIN (target));
++      target = ultimate_transparent_alias_target (&TREE_CHAIN (target));
++      gcc_assert (! IDENTIFIER_TRANSPARENT_ALIAS (target)
++		  && ! TREE_CHAIN (target));
++      *alias = target;
++    }
++
++  return target;
++}
++
 +static bool
 +rs6000_decl_needs_baserel_p (const_tree decl)
 +{
@@ -57,13 +75,10 @@ as well.
 +          || strncmp (section, ".sdata", 6) == 0
 +          || strncmp (section, ".sbss", 5) == 0)
 +        return true;
-+      if (strncmp (section, ".ctdt", 5) == 0
-+          || strncmp (section, ".ctors", 6) == 0
-+          || strncmp (section, ".dtors", 6) == 0
-+          || strncmp (section, ".eh_frame", 9) == 0)
++      else
 +        return false;
 +    }
-+  else if (!DECL_ARTIFICIAL (decl) && contains_pointers_p (TREE_TYPE (decl)))
++  else if (contains_pointers_p (TREE_TYPE (decl)))
 +    return true;
 +
 +  return !TREE_READONLY (decl);
@@ -72,7 +87,7 @@ as well.
  /* For a SYMBOL_REF, set generic flags and then perform some
     target-specific processing.
  
-@@ -20972,32 +21033,22 @@ rs6000_elf_encode_section_info (tree dec
+@@ -20984,32 +21060,49 @@ rs6000_elf_encode_section_info (tree dec
      {
        rtx symbol = XEXP (rtl, 0);
  
@@ -114,10 +129,37 @@ as well.
 +  return default_elf_select_section (decl, reloc, align);
 +}
 +
++static void
++rs6000_morphos_unique_section (tree decl, int reloc)
++{
++  if (TARGET_BASEREL && rs6000_decl_needs_baserel_p (decl))
++    {
++      bool one_only = DECL_ONE_ONLY (decl) && !HAVE_COMDAT_GROUP;
++      tree id;
++      const char *name, *linkonce;
++      char *string;
++
++      id = DECL_ASSEMBLER_NAME (decl);
++      ultimate_transparent_alias_target (&id);
++      name = IDENTIFIER_POINTER (id);
++      name = targetm.strip_name_encoding (name);
++
++      /* If we're using one_only, then there needs to be a .gnu.linkonce
++         prefix to the section name.  */
++      linkonce = one_only ? ".gnu.linkonce" : "";
++
++      string = ACONCAT ((linkonce, ".sdata.", name, NULL));
++
++      set_decl_section_name (decl, string);
++    }
++  else
++    default_unique_section (decl, reloc);
++}
++
  static inline bool
  compare_section_name (const char *section, const char *templ)
  {
-@@ -21022,6 +21073,15 @@ rs6000_elf_in_small_data_p (const_tree d
+@@ -21034,6 +21127,15 @@ rs6000_elf_in_small_data_p (const_tree d
    if (TREE_CODE (decl) == FUNCTION_DECL)
      return false;
  
@@ -135,13 +177,16 @@ as well.
        const char *section = DECL_SECTION_NAME (decl);
 --- gcc/config/rs6000/morphos.h.orig	2026-07-08 22:28:52.717136366 +0000
 +++ gcc/config/rs6000/morphos.h
-@@ -320,3 +320,6 @@ mclib=default|!mclib=*: %(endfile_morpho
+@@ -320,3 +320,9 @@ mclib=default|!mclib=*: %(endfile_morpho
  /* Use morphos.opt */
  extern const char *morphos_mclib_name;
  #define TARGET_USES_MORPHOS_OPT 1
 +
 +#undef TARGET_ASM_SELECT_SECTION
 +#define TARGET_ASM_SELECT_SECTION rs6000_morphos_select_section
++
++#undef TARGET_ASM_UNIQUE_SECTION
++#define TARGET_ASM_UNIQUE_SECTION rs6000_morphos_unique_section
 --- libgcc/crtstuff.c.orig	2026-07-12 23:00:42.504285022 +0000
 +++ libgcc/crtstuff.c
 @@ -377,6 +377,18 @@ extern void __cxa_finalize (void *) TARG
