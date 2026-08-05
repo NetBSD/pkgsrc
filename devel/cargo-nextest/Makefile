@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/07/06 07:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/05 09:24:42 pin Exp $
 
-DISTNAME=	cargo-nextest-0.9.140
+DISTNAME=	cargo-nextest-0.9.143
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextest-rs/}
 GITHUB_PROJECT=	nextest
