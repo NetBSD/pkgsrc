@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2026/02/07 01:58:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.66 2026/08/05 18:19:22 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -203,7 +203,6 @@ lib/${PKGNAME}/ebin/mod_muc_admin_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_log.beam
 lib/${PKGNAME}/ebin/mod_muc_log_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_mnesia.beam
-lib/${PKGNAME}/ebin/mod_muc_occupantid.beam
 lib/${PKGNAME}/ebin/mod_muc_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_room.beam
 lib/${PKGNAME}/ebin/mod_muc_rtbl.beam
@@ -368,6 +367,41 @@ lib/${PKGNAME}/priv/img/vcss.png
 lib/${PKGNAME}/priv/js/admin.js
 lib/${PKGNAME}/priv/js/muc.js
 lib/${PKGNAME}/priv/js/sortable.min.js
+lib/${PKGNAME}/priv/mod_invites/HOWTO.md
+lib/${PKGNAME}/priv/mod_invites/apps.html
+lib/${PKGNAME}/priv/mod_invites/apps.json
+lib/${PKGNAME}/priv/mod_invites/base.html
+lib/${PKGNAME}/priv/mod_invites/base_min.html
+lib/${PKGNAME}/priv/mod_invites/client.html
+lib/${PKGNAME}/priv/mod_invites/copyright
+lib/${PKGNAME}/priv/mod_invites/invite.html
+lib/${PKGNAME}/priv/mod_invites/invite_invalid.html
+lib/${PKGNAME}/priv/mod_invites/register.html
+lib/${PKGNAME}/priv/mod_invites/register_error.html
+lib/${PKGNAME}/priv/mod_invites/register_success.html
+lib/${PKGNAME}/priv/mod_invites/roster.html
+lib/${PKGNAME}/priv/mod_invites/static/bootstrap/css/bootstrap.min.css
+lib/${PKGNAME}/priv/mod_invites/static/bootstrap/js/bootstrap.min.js
+lib/${PKGNAME}/priv/mod_invites/static/favicon.png
+lib/${PKGNAME}/priv/mod_invites/static/illus-empty.svg
+lib/${PKGNAME}/priv/mod_invites/static/invite.css
+lib/${PKGNAME}/priv/mod_invites/static/invite.js
+lib/${PKGNAME}/priv/mod_invites/static/logos/apple_as.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/beagle-im.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/conversations.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/converse-js.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/dino.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/fdroid.png
+lib/${PKGNAME}/priv/mod_invites/static/logos/gajim.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/generic.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/google_ps.png
+lib/${PKGNAME}/priv/mod_invites/static/logos/monal-tmp.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/monal.png
+lib/${PKGNAME}/priv/mod_invites/static/logos/renga.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/siskin-im.svg
+lib/${PKGNAME}/priv/mod_invites/static/logos/yaxim.svg
+lib/${PKGNAME}/priv/mod_invites/static/platform.min.js
+lib/${PKGNAME}/priv/mod_invites/static/qrcode.min.js
 lib/${PKGNAME}/priv/msgs/ar.msg
 lib/${PKGNAME}/priv/msgs/bg.msg
 lib/${PKGNAME}/priv/msgs/ca.msg
