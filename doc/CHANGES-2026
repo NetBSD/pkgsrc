@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4993 2026/08/05 11:49:06 roy Exp $
+$NetBSD: CHANGES-2026,v 1.4994 2026/08/05 11:49:36 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7394,3 +7394,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 2.41.1 [pin 2026-08-05]
 	Updated net/dhcpcd-icons to 0.8.0 [roy 2026-08-05]
 	Updated net/dhcpcd-gtk to 0.8.0 [roy 2026-08-05]
+	Updated net/dhcpcd-qt to 0.8.0 [roy 2026-08-05]
