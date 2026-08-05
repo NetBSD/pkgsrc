@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/06/11 12:13:39 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/08/05 15:56:04 adam Exp $
 
-BLAKE2s (python-3.14.6-docs-html.tar.bz2) = 2daf46d31248eac1cdac908970583c82a10d201006e22e0b7623442ba6dd7708
-SHA512 (python-3.14.6-docs-html.tar.bz2) = 6056edd3aa02f013163b6a12a1981de32a7ce784c215b4315b27bb2e9abe1a3276e76d21763020ffacc7c19dd99ee7863af637294da49afd0b7acdc9f5f438b7
-Size (python-3.14.6-docs-html.tar.bz2) = 11003726 bytes
+BLAKE2s (python-3.14.7-docs-html.tar.bz2) = df5bde293cd58b7b72b24ae7af88cc4e854e809f14baf3b5e865764f7a38a084
+SHA512 (python-3.14.7-docs-html.tar.bz2) = 2bd30188aa291bef884f7a6a43e0b4e21cc774925b21d7fc6bfaeffd104db7c745aba11612de7858fbb279640678674627763a9727be6936d1f844874ea6efdd
+Size (python-3.14.7-docs-html.tar.bz2) = 11177897 bytes

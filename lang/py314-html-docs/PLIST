@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/04/09 07:17:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/05 15:56:04 adam Exp $
 share/doc/python3.14/.buildinfo
 share/doc/python3.14/404.html
 share/doc/python3.14/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -193,6 +193,8 @@ share/doc/python3.14/_sources/library/asyncio-stream.rst.txt
 share/doc/python3.14/_sources/library/asyncio-subprocess.rst.txt
 share/doc/python3.14/_sources/library/asyncio-sync.rst.txt
 share/doc/python3.14/_sources/library/asyncio-task.rst.txt
+share/doc/python3.14/_sources/library/asyncio-threading.rst.txt
+share/doc/python3.14/_sources/library/asyncio-tools.rst.txt
 share/doc/python3.14/_sources/library/asyncio.rst.txt
 share/doc/python3.14/_sources/library/asyncore.rst.txt
 share/doc/python3.14/_sources/library/atexit.rst.txt
@@ -786,6 +788,8 @@ share/doc/python3.14/library/asyncio-stream.html
 share/doc/python3.14/library/asyncio-subprocess.html
 share/doc/python3.14/library/asyncio-sync.html
 share/doc/python3.14/library/asyncio-task.html
+share/doc/python3.14/library/asyncio-threading.html
+share/doc/python3.14/library/asyncio-tools.html
 share/doc/python3.14/library/asyncio.html
 share/doc/python3.14/library/asyncore.html
 share/doc/python3.14/library/atexit.html
