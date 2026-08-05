@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5000 2026/08/05 16:55:14 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.5001 2026/08/05 18:19:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7402,3 +7402,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py314-html-docs to 3.14.7 [adam 2026-08-05]
 	Updated net/knot-resolver to 6.4.2 [drixter 2026-08-05]
 	Updated net/tailscale to 1.102.2 [ktnb 2026-08-05]
+	Updated chat/ejabberd to 26.02 [gdt 2026-08-05]
