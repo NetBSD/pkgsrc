@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5001 2026/08/05 18:19:28 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5002 2026/08/05 21:05:26 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7403,3 +7403,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/knot-resolver to 6.4.2 [drixter 2026-08-05]
 	Updated net/tailscale to 1.102.2 [ktnb 2026-08-05]
 	Updated chat/ejabberd to 26.02 [gdt 2026-08-05]
+	Updated www/resterm to 0.51.3 [drixter 2026-08-05]
