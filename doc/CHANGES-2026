@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4982 2026/08/05 03:26:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4983 2026/08/05 04:14:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7383,3 +7383,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-GeoIP successor geography/py-geoip2 [adam 2026-08-05]
 	Removed net/py-ipaddress [adam 2026-08-05]
 	Removed net/py-IP [adam 2026-08-05]
+	Updated x11/libXfont2 to 2.0.9 [wiz 2026-08-05]
