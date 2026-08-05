@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/12/30 13:45:04 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/05 02:35:38 adam Exp $
 
-DISTNAME=	flufl_lock-9.0.0
+DISTNAME=	flufl_lock-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.lock/}
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
