@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4995 2026/08/05 11:52:12 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.4996 2026/08/05 14:34:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7396,3 +7396,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd-gtk to 0.8.0 [roy 2026-08-05]
 	Updated net/dhcpcd-qt to 0.8.0 [roy 2026-08-05]
 	Updated net/coturn to 4.17.0 [gdt 2026-08-05]
+	Updated shells/zsh-completions to 0.36.0 [wiz 2026-08-05]
