@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.140 2026/08/03 14:06:49 pin Exp $
+# $NetBSD: go-modules.mk,v 1.141 2026/08/05 09:26:36 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -23,8 +23,8 @@ GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.2.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.0.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.0.zip
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.2.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.10.2.zip
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.mod
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.zip
 GO_MODULE_FILES+=	github.com/go-git/go-billy/v5/@v/v5.9.0.mod
@@ -72,8 +72,8 @@ GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.6.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.6.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.7.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.7.zip
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.10.0.mod
