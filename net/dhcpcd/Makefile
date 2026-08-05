@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2026/05/20 05:27:36 adam Exp $
+# $NetBSD: Makefile,v 1.131 2026/08/05 12:07:06 roy Exp $
 
-DISTNAME=	dhcpcd-10.3.2
+DISTNAME=	dhcpcd-10.5.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NetworkConfiguration/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

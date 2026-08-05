@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.124 2026/05/20 05:27:36 adam Exp $
+$NetBSD: distinfo,v 1.125 2026/08/05 12:07:06 roy Exp $
 
-BLAKE2s (dhcpcd-10.3.2.tar.xz) = c327046ec7a994bcd3370f706c48dd99d11d460139830b929e8e1350d807baca
-SHA512 (dhcpcd-10.3.2.tar.xz) = 5944fa141bd40c8aabb2c3c46748d736f69f6fd0a773386508cbff868d8f69d88305a0fd97dff4da21c5662918016b36d8327498e5b0509804dbec80603f6d6d
-Size (dhcpcd-10.3.2.tar.xz) = 279368 bytes
+BLAKE2s (dhcpcd-10.5.0.tar.xz) = 3aa87eb27d5648de5d005746295e6b588c3ee77bf9d4d08b5de3d86b1b1546fd
+SHA512 (dhcpcd-10.5.0.tar.xz) = c662b7a81a83560add7bc6aee80f9dacdd2871d02e0b42a289b3e7f049cd7d656a1c03621d3fd24e1f1af5e65e7a7764bcdf6c6511a43eb9a20172ebdbc4b0ff
+Size (dhcpcd-10.5.0.tar.xz) = 288760 bytes
