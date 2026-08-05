@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4994 2026/08/05 11:49:36 roy Exp $
+$NetBSD: CHANGES-2026,v 1.4995 2026/08/05 11:52:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7395,3 +7395,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd-icons to 0.8.0 [roy 2026-08-05]
 	Updated net/dhcpcd-gtk to 0.8.0 [roy 2026-08-05]
 	Updated net/dhcpcd-qt to 0.8.0 [roy 2026-08-05]
+	Updated net/coturn to 4.17.0 [gdt 2026-08-05]
