@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/09/30 23:41:55 wen Exp $
+$NetBSD: distinfo,v 1.11.30.1 2026/08/05 15:40:37 maya Exp $
 
-BLAKE2s (Cpanel-JSON-XS-4.32.tar.gz) = 9dfac6d89c6fb3b046f5a9fcf32ee044afdb62af4db74e115c167f62ceed5e16
-SHA512 (Cpanel-JSON-XS-4.32.tar.gz) = f17809bb12c388e6344ef738abddd471d541e3854ca8775f518a4cda62f129a703bbaf85e4bf2fa960390df060a161f1ff61a3d3a35c269ae1dc4fe9af8389dd
-Size (Cpanel-JSON-XS-4.32.tar.gz) = 256502 bytes
+BLAKE2s (Cpanel-JSON-XS-4.43.tar.gz) = 8f41ef16be92fefedb83adc83c76a58dad64954f38180e9c9be8965e97bcbe00
+SHA512 (Cpanel-JSON-XS-4.43.tar.gz) = 42105fd0ee07fbd77e34572a9035e1e1837ce04e89bcd0191585eefdb2095b07f2c5a4ee0a64c261f63902cb7d25ce05edd11c9e66e14db46d06d28f8898e7ed
+Size (Cpanel-JSON-XS-4.43.tar.gz) = 270227 bytes
