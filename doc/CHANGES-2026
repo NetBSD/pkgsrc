@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4984 2026/08/05 05:35:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4985 2026/08/05 07:48:07 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7385,3 +7385,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-IP [adam 2026-08-05]
 	Updated x11/libXfont2 to 2.0.9 [wiz 2026-08-05]
 	Updated math/ggml to 0.18.1 [wiz 2026-08-05]
+	Updated www/resterm to 0.51.2 [drixter 2026-08-05]
