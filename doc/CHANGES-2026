@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4981 2026/08/05 03:08:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4982 2026/08/05 03:26:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7381,3 +7381,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-fastjsonschema to 2.22.1 [adam 2026-08-05]
 	Removed math/py-cdecimal [adam 2026-08-05]
 	Removed net/py-GeoIP successor geography/py-geoip2 [adam 2026-08-05]
+	Removed net/py-ipaddress [adam 2026-08-05]
+	Removed net/py-IP [adam 2026-08-05]
