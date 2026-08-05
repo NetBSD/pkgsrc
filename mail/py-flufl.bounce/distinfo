@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/05/08 20:35:35 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/08/05 02:30:44 adam Exp $
 
-BLAKE2s (flufl.bounce-4.0.tar.gz) = f535b1dc8285b5f76ff19f038f29eccca2c54c3be63b0f3a5b4735787e00c082
-SHA512 (flufl.bounce-4.0.tar.gz) = c6dd8cf2f4f0ea7c8698054042dfc9da3bd1a2d9cae082e01a0be9c39018fefba07154e2c9c15b1a00c896e58bb0a6d2063a3c067bec6b464d201bb7b3220e9e
-Size (flufl.bounce-4.0.tar.gz) = 108623 bytes
+BLAKE2s (flufl_bounce-5.0.1.tar.gz) = 9060d7bd129ffb569d9f2de686b0fe35c46aa23f7f8415713aa2f36743e35a27
+SHA512 (flufl_bounce-5.0.1.tar.gz) = cdeae4728a25b8aa81560344990c31f04d5c9794ffaab01abf0df35eb62911faa8741b8abeedd470c856ab6640871c823157c005c3d21e57ba8bd891c8b07be8
+Size (flufl_bounce-5.0.1.tar.gz) = 98935 bytes

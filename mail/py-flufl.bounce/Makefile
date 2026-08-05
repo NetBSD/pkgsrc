@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/05 02:30:44 adam Exp $
 
-DISTNAME=	flufl.bounce-4.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	mail
+DISTNAME=	flufl_bounce-5.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
+CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.bounce/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,12 +10,11 @@ HOMEPAGE=	https://fluflbounce.readthedocs.io/en/latest/
 COMMENT=	Email bounce detectors
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
-DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
+TEST_DEPENDS+=	${PYPKGPREFIX}-sybil>=0:../../devel/py-sybil
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
