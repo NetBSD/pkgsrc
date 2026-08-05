@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.135 2026/04/15 20:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.135.2.1 2026/08/05 15:39:49 maya Exp $
 #
 # When updating this, run 'make cfgfiles'.
-# XXX: as of 4.0.1 this adds two extra entries (worker-hs_helper*)
-# XXX: removed manually
 
-DISTNAME=	rspamd-4.0.1
+DISTNAME=	rspamd-4.1.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -100,7 +98,8 @@ cfgfiles:
 	${RUN} ${RECURSIVE_MAKE} extract
 	@${ECHO} "# \$$NetBSD\$$" > ${.CURDIR}/cfgfiles.mk
 	@${ECHO} "# Do not edit, regenerate using 'make cfgfiles'" >> ${.CURDIR}/cfgfiles.mk
-	${RUN} cd ${WRKSRC}/conf && ${FIND} * -type f | ${SORT} \
+# as of 4.0.1 two extra entries (worker-hs_helper*) need to be manually removed
+	${RUN} cd ${WRKSRC}/conf && ${FIND} * -type f | ${GREP} -v worker-hs_helper | ${SORT} \
 	| ${TR} '\n' ' ' | ${SED} 's, $$,,' \
 	| ${AWK} '{print("CFGFILES=\t" $$0)}' >> ${.CURDIR}/cfgfiles.mk
 	@${ECHO} >> ${.CURDIR}/cfgfiles.mk
@@ -112,8 +111,8 @@ post-extract:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
 
-# as of 4.0.1
-# 952 tests 946 passed 2244 assertions 2 failed 0 errors 4 unassertive 0 pending
+# as of 4.1.1
+# 1058 tests 1054 passed 2586 assertions 0 failed 0 errors 4 unassertive 0 pending
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/replxx:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/aho-corasick:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/libev:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/kann
 
