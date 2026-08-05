@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4978 2026/08/04 21:40:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.4979 2026/08/05 02:36:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7375,3 +7375,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-test-remotedata to 0.4.2 [adam 2026-08-04]
 	Updated net/py-scp to 0.16.1 [adam 2026-08-04]
 	Updated archivers/7-zip to 26.02nb1 [wiz 2026-08-04]
+	Updated mail/py-flufl.bounce to 5.0.1 [adam 2026-08-05]
+	Updated devel/py-flufl.lock to 9.1.0 [adam 2026-08-05]
