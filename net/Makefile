@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1635 2026/07/27 19:59:59 drixter Exp $
+# $NetBSD: Makefile,v 1.1636 2026/08/05 03:07:03 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -707,7 +707,6 @@ SUBDIR+=	puf
 SUBDIR+=	pulledpork
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
-SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
 SUBDIR+=	py-Socks
 SUBDIR+=	py-aio-pika
