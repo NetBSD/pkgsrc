@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.5 2026/08/04 14:59:11 ryoon Exp $
+$NetBSD: patch-ab,v 1.6 2026/08/05 10:54:14 wiz Exp $
 
 - Configure for pkgsrc.
 - libtoolize, build as shared library.
 - Provide working install target.
 - Honor LDFLAGS to enable RELRO for pkgsrc.
 
---- /usr/tmp/pkgsrc/databases/sdbm/work/makefile.orig	2026-08-04 12:26:30.375274615 +0000
-+++ /usr/tmp/pkgsrc/databases/sdbm/work/makefile
+--- makefile.orig	2026-08-04 12:26:30.375274615 +0000
++++ makefile
 @@ -2,37 +2,42 @@
  # makefile for public domain ndbm-clone: sdbm
  # DUFF: use duff's device (loop unroll) in parts of the code
