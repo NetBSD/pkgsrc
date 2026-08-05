@@ -1,8 +1,8 @@
-$NetBSD: patch-tests_torture.c,v 1.1 2020/01/06 12:04:13 pho Exp $
+$NetBSD: patch-tests_torture.c,v 1.1.52.1 2026/08/05 14:31:37 maya Exp $
 
 Fix build on NetBSD 8.1: Don't try to use PATH_MAX without #include <limits.h>
 
---- tests/torture.c.orig	2020-01-06 12:01:16.440174806 +0000
+--- tests/torture.c.orig	2026-07-16 10:56:26.000000000 +0000
 +++ tests/torture.c
 @@ -29,6 +29,7 @@
  #include <sys/stat.h>
