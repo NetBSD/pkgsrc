@@ -2,20 +2,21 @@ Also use baserel for const pointers - after all, something in a const pointer
 might refer to something that gets relocated, so needs to be accessed baserel
 as well.
 
---- gcc/config/rs6000/rs6000.cc.orig	2026-08-05 20:11:06.081111229 +0000
+--- gcc/config/rs6000/rs6000.cc.orig	2026-08-05 21:32:54.304949687 +0000
 +++ gcc/config/rs6000/rs6000.cc
-@@ -20952,6 +20952,82 @@ rs6000_elf_select_rtx_section (machine_m
+@@ -20952,6 +20952,106 @@ rs6000_elf_select_rtx_section (machine_m
  static int
  rs6000_elf_reloc_rw_mask (void);
  
-+/* Copied from varasm.cc */
++/* Copied from varasm.cc, but modified to ignore function pointers */
 +static bool
-+contains_pointers_p (tree type)
++contains_data_pointers_p (tree type)
 +{
 +  switch (TREE_CODE (type))
 +    {
 +    case POINTER_TYPE:
 +    case REFERENCE_TYPE:
++      return !FUNC_OR_METHOD_TYPE_P (TREE_TYPE (type));
 +      /* I'm not sure whether OFFSET_TYPE needs this treatment,
 +	 so I'll play safe and return 1.  */
 +    case OFFSET_TYPE:
@@ -29,15 +30,34 @@ as well.
 +	/* For a type that has fields, see if the fields have pointers.  */
 +	for (fields = TYPE_FIELDS (type); fields; fields = DECL_CHAIN (fields))
 +	  if (TREE_CODE (fields) == FIELD_DECL
-+	      && contains_pointers_p (TREE_TYPE (fields)))
++	      && contains_data_pointers_p (TREE_TYPE (fields)))
 +	    return true;
 +	return false;
 +      }
 +
 +    case ARRAY_TYPE:
 +      /* An array type contains pointers if its element type does.  */
-+      return contains_pointers_p (TREE_TYPE (type));
++      return contains_data_pointers_p (TREE_TYPE (type));
 +
++    default:
++      return false;
++    }
++}
++
++static bool
++is_cxx_metadata_name_p (const char *name)
++{
++  if (strncmp(name, "_ZT", 3) != 0)
++    return false;
++
++  switch (name[3])
++    {
++    case 'I':
++    case 'S':
++    case 'V':
++    case 'T':
++    case 'C':
++      return true;
 +    default:
 +      return false;
 +    }
@@ -62,7 +82,7 @@ as well.
 +}
 +
 +static bool
-+rs6000_decl_needs_baserel_p (const_tree decl)
++rs6000_decl_needs_baserel_p (tree decl)
 +{
 +  if (TREE_CODE (decl) != VAR_DECL)
 +    return false;
@@ -78,16 +98,20 @@ as well.
 +      else
 +        return false;
 +    }
-+  else if (contains_pointers_p (TREE_TYPE (decl)))
++
++  if (!TREE_READONLY (decl))
 +    return true;
 +
-+  return !TREE_READONLY (decl);
++  if (is_cxx_metadata_name_p (IDENTIFIER_POINTER (DECL_ASSEMBLER_NAME (decl))))
++    return false;
++
++  return contains_data_pointers_p (TREE_TYPE (decl));
 +}
 +
  /* For a SYMBOL_REF, set generic flags and then perform some
     target-specific processing.
  
-@@ -20984,32 +21060,49 @@ rs6000_elf_encode_section_info (tree dec
+@@ -20984,32 +21084,49 @@ rs6000_elf_encode_section_info (tree dec
      {
        rtx symbol = XEXP (rtl, 0);
  
@@ -159,7 +183,7 @@ as well.
  static inline bool
  compare_section_name (const char *section, const char *templ)
  {
-@@ -21034,6 +21127,15 @@ rs6000_elf_in_small_data_p (const_tree d
+@@ -21034,6 +21151,15 @@ rs6000_elf_in_small_data_p (const_tree d
    if (TREE_CODE (decl) == FUNCTION_DECL)
      return false;
  
