@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4991 2026/08/05 09:29:55 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4992 2026/08/05 11:48:40 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7392,3 +7392,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.143 [pin 2026-08-05]
 	Updated shells/oh-my-posh to 30.5.0 [pin 2026-08-05]
 	Updated sysutils/dua-cli to 2.41.1 [pin 2026-08-05]
+	Updated net/dhcpcd-icons to 0.8.0 [roy 2026-08-05]
