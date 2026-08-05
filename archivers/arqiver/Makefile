@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2026/05/14 16:40:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/05 09:18:34 pin Exp $
 
-DISTNAME=	Arqiver-1.0.1
+DISTNAME=	Arqiver-1.0.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	6
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -39,4 +38,5 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
