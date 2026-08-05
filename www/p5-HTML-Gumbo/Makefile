@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2025/07/04 08:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9.8.1 2026/08/05 15:11:54 maya Exp $
 
-DISTNAME=	HTML-Gumbo-0.18
+DISTNAME=	HTML-Gumbo-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RU/RUZ/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BP/BPS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/HTML-Gumbo
 COMMENT=	HTML5 parser based on gumbo C library
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Alien-LibGumbo-[0-9]*:../../www/p5-Alien-LibGumbo
+BUILD_DEPENDS+=	p5-Alien-LibGumbo-[0-9]*:../../www/p5-Alien-LibGumbo
 TOOL_DEPENDS+=	p5-PkgConfig-[0-9]*:../../devel/p5-PkgConfig
 
 PERL5_MODULE_TYPE=	Module::Build

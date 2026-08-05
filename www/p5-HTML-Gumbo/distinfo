@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/31 20:34:02 markd Exp $
+$NetBSD: distinfo,v 1.1.34.1 2026/08/05 15:11:54 maya Exp $
 
-BLAKE2s (HTML-Gumbo-0.18.tar.gz) = 8d901685d628f475f099bace1383902b319ba90ce0420e2abf7a5a4d417475cb
-SHA512 (HTML-Gumbo-0.18.tar.gz) = d2845368bbda81de41f5d4c15c08b5720c388c72cbbfb9062999abdf1d800af4bb24e92df5d41470d611e50b460512630121fa6a8984e76df8eed3f20d149a10
-Size (HTML-Gumbo-0.18.tar.gz) = 17716 bytes
+BLAKE2s (HTML-Gumbo-0.20.tar.gz) = 96e9bd80052c22eaf04b0c54570fdd3d0dbfbcb0c6e7bbbc2e00bca7ad5e1dd0
+SHA512 (HTML-Gumbo-0.20.tar.gz) = 8af8a9ade77aec9aee4a0a0f1d0960ebccf994eab65bbbfc43fbe8cef3b898d5ff0d399409e51a9642aa919b7aa2444316ce7657e894b0ffbf2fed65b9d29453
+Size (HTML-Gumbo-0.20.tar.gz) = 19471 bytes
