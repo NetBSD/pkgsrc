@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.26 2025/04/19 07:58:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26.10.1 2026/08/05 14:31:37 maya Exp $
 
 BUILDLINK_TREE+=	libssh
 
 .if !defined(LIBSSH_BUILDLINK3_MK)
 LIBSSH_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libssh+=	libssh>=0.54
-BUILDLINK_ABI_DEPENDS.libssh+=	libssh>=0.111nb1
+BUILDLINK_API_DEPENDS.libssh+=	libssh>=0.11.5<0.100
+BUILDLINK_ABI_DEPENDS.libssh?=	libssh>=0.11.5
 BUILDLINK_PKGSRCDIR.libssh?=	../../security/libssh
 
 pkgbase := libssh
