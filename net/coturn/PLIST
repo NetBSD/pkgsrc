@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/07/31 11:31:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/08/05 11:52:05 gdt Exp $
 bin/turnadmin
 bin/turnserver
 bin/turnutils_natdiscovery
@@ -78,6 +78,7 @@ share/examples/coturn/scripts/mobile/mobile_relay.sh
 share/examples/coturn/scripts/mobile/mobile_tcp_client.sh
 share/examples/coturn/scripts/mobile/mobile_tls_client_c2c_tcp_relay.sh
 share/examples/coturn/scripts/mobile/mobile_udp_client.sh
+share/examples/coturn/scripts/mobility_quota_flood.py
 share/examples/coturn/scripts/mobility_resume_flood.py
 share/examples/coturn/scripts/oauth.sh
 share/examples/coturn/scripts/pack.sh
@@ -93,4 +94,6 @@ share/examples/coturn/scripts/restapi/secure_udp_client_with_secret.sh
 share/examples/coturn/scripts/restapi/shared_secret_maintainer.pl
 share/examples/coturn/scripts/selfloadbalance/secure_dos_attack.sh
 share/examples/coturn/scripts/selfloadbalance/secure_relay.sh
+share/examples/coturn/scripts/stateless_binding_probe.py
+share/examples/coturn/scripts/stateless_nonce_forged_mi.py
 @pkgdir etc
