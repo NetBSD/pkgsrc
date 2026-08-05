@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.218 2026/06/11 07:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.218.2.1 2026/08/05 14:54:59 maya Exp $
 
 # XXX: Fails to build when mit-krb5 is installed.
-DISTNAME=	samba-4.24.3
-PKGREVISION=	1
+DISTNAME=	samba-4.24.5
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
