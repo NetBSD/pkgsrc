@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2026/08/04 14:59:11 ryoon Exp $
+$NetBSD: distinfo,v 1.21 2026/08/05 10:54:14 wiz Exp $
 
 BLAKE2s (sdbm.tar.Z) = 9825cf5366caec26e56638579a2367a948bb9a65d48cfcafdd75456538245cc1
 SHA512 (sdbm.tar.Z) = f1de2eaf50826d1446e2f8b9b27adeb07363373b81aecd990eba6ae112dfc3d642dfff6ba27f74aa2eb27ee4d5bee04d2b0a830582d790fef63a1ccfd5661c8d
 Size (sdbm.tar.Z) = 63557 bytes
 SHA1 (patch-aa) = 9ebe008e7119939b5d47abdb1c15cc03e4548698
-SHA1 (patch-ab) = 41a09d59bb247fb80ca428bbb3440689bc8b098a
+SHA1 (patch-ab) = 74453b2e947d7c48430a27009c8da9230a024db8
 SHA1 (patch-ac) = dccfcb2b7a2f68188bb55bb514021cc091274678
 SHA1 (patch-ad) = 3b9c0f8780c048ca3a06ae3cd01ea910f22ef77d
 SHA1 (patch-ae) = 69e4e40277ecae8e6023d72dbbd4a738583f46dd
