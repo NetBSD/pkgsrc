@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/06/07 13:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/05 16:00:21 wiz Exp $
 
 DISTNAME=	fish-4.7.1
 PKGREVISION=	1
@@ -51,6 +51,8 @@ PKGSRC_MAKE_ENV+=	FISH_BUILD_VERSION=${PKGVERSION_NOREV}
 TEST_TARGET=		fish_run_tests
 TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_ENV+=		LC_ALL=C.UTF-8		# requires a UTF-8 locale
+# test status as of 4.7.1
+# 230 / 237 passed (11 skipped)
 
 post-install:
 	cd ${WRKSRC}/share/themes && ${PAX} -wr * \
@@ -58,6 +60,7 @@ post-install:
 	cd ${WRKSRC}/share/prompts && ${PAX} -wr * \
 		${DESTDIR}/${PREFIX}/share/prompts
 
+.include "../../lang/python/tool.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
