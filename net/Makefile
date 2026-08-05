@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1636 2026/08/05 03:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.1637 2026/08/05 03:23:53 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -751,7 +751,6 @@ SUBDIR+=	py-hatop
 SUBDIR+=	py-hpack
 SUBDIR+=	py-ifaddr
 SUBDIR+=	py-impacket
-SUBDIR+=	py-ipaddress
 SUBDIR+=	py-ipcalc
 SUBDIR+=	py-irclib
 SUBDIR+=	py-junos-eznc
