@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/15 13:44:31 nikita Exp $
+$NetBSD: distinfo,v 1.5 2026/08/05 14:34:27 wiz Exp $
 
-BLAKE2s (zsh-completions-0.35.0.tar.gz) = 5fcd734c048144494d59b9b2e3cfec2b0c3df6b015e92355dff0c2271c93c8b8
-SHA512 (zsh-completions-0.35.0.tar.gz) = d6ab46db72b311731abca41e82fded954a43a1e13b81deb7b0acf7d85402ef575c69ead66af97dc2c148a1e681f39e48cfcab53993207f2b786bfe20228587e6
-Size (zsh-completions-0.35.0.tar.gz) = 329686 bytes
+BLAKE2s (zsh-completions-0.36.0.tar.gz) = 3233d99124eff79d1da188ea6868ca569166ba1910afd38a4e407aa43d246f8f
+SHA512 (zsh-completions-0.36.0.tar.gz) = 05d9d69dc849303a2bb2afb4614dc58c2e064889b6f1bf2673532fba441cc45816fca4694de8c7c6960744be449901317a1cb61d0ebd76c80f4741e82542d22a
+Size (zsh-completions-0.36.0.tar.gz) = 401928 bytes
