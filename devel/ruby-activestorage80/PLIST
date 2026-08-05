@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/02 07:15:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.12.1 2026/08/05 15:07:12 maya Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -98,5 +98,6 @@ ${GEM_LIBDIR}/lib/active_storage/service/s3_service.rb
 ${GEM_LIBDIR}/lib/active_storage/transformers/image_processing_transformer.rb
 ${GEM_LIBDIR}/lib/active_storage/transformers/transformer.rb
 ${GEM_LIBDIR}/lib/active_storage/version.rb
+${GEM_LIBDIR}/lib/active_storage/vips.rb
 ${GEM_LIBDIR}/lib/tasks/activestorage.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
