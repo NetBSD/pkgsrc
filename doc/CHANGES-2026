@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4990 2026/08/05 09:27:52 pin Exp $
+$NetBSD: CHANGES-2026,v 1.4991 2026/08/05 09:29:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7391,3 +7391,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/neonmodem to 1.1.0 [pin 2026-08-05]
 	Updated devel/cargo-nextest to 0.9.143 [pin 2026-08-05]
 	Updated shells/oh-my-posh to 30.5.0 [pin 2026-08-05]
+	Updated sysutils/dua-cli to 2.41.1 [pin 2026-08-05]
