@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.4979 2026/08/05 02:36:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.4980 2026/08/05 02:57:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7377,3 +7377,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/7-zip to 26.02nb1 [wiz 2026-08-04]
 	Updated mail/py-flufl.bounce to 5.0.1 [adam 2026-08-05]
 	Updated devel/py-flufl.lock to 9.1.0 [adam 2026-08-05]
+	Updated devel/py-faker to 40.36.0 [adam 2026-08-05]
+	Updated textproc/py-fastjsonschema to 2.22.1 [adam 2026-08-05]
