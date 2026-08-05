@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/08/15 06:30:32 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/08/05 02:57:27 adam Exp $
 
-BLAKE2s (fastjsonschema-2.21.2.tar.gz) = 37af11a9ff7f7f4d8c314c103dfefea2ee207bd2409954d89ced7e993de01d03
-SHA512 (fastjsonschema-2.21.2.tar.gz) = 9e16f533065267ba48eeda70e8a41fdc10b1b99832a3ddaa0d48d01a783e4555d2fb790201ca3f47b959d3e1f06f68b9f83672f90cc1969355d28f0f24cb9837
-Size (fastjsonschema-2.21.2.tar.gz) = 374130 bytes
+BLAKE2s (fastjsonschema-2.22.1.tar.gz) = 206738f185a88f3293d8e81142fa1c4702cdffbd9097c86f334cba27d1715d86
+SHA512 (fastjsonschema-2.22.1.tar.gz) = 975246cee87cea677cb87873d3ad7b81dd30370a5c860dd59527bd3793925693cd63e666250fcdcc70d7cbf4deb42733cd0606a63d6665c58b72b53d699fd847
+Size (fastjsonschema-2.22.1.tar.gz) = 382291 bytes
