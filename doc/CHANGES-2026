@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5017 2026/08/06 13:09:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5018 2026/08/06 13:11:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7423,3 +7423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/erlang-xmpp to 1.13.4 [gdt 2026-08-06]
 	Updated chat/ejabberd to 26.03nb1 [gdt 2026-08-06]
 	Added textproc/go-transifex-cli version 1.6.17 [taca 2026-08-06]
+	Updated devel/cargo-modules to 0.27.0 [pin 2026-08-06]
