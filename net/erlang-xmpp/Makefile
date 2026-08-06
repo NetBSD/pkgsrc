@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/02/15 18:22:32 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/06 11:34:15 gdt Exp $
 
-DISTNAME=	xmpp-1.12.0
-PKGREVISION=	1
+DISTNAME=	xmpp-1.13.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	xmpp
@@ -12,12 +11,12 @@ COMMENT=	XMPP parsing and serialization library on top of Fast XML
 LICENSE=	apache-2.0
 
 # from rebar.config
-DEPENDS+=	erlang-p1_utils>=1.0.26:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-fast_xml>=1.1.51:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_tls>=1.1.19:../../security/erlang-fast_tls
-DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
+DEPENDS+=	erlang-p1_utils>=1.0.29:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-fast_xml>=1.1.58:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_tls>=1.1.26:../../security/erlang-fast_tls
+DEPENDS+=	erlang-ezlib>=1.0.16:../../devel/erlang-ezlib
 DEPENDS+=	erlang-idna>=6.0:../../net/erlang-idna
-DEPENDS+=	erlang-stringprep>=1.0.29:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stringprep>=1.0.34:../../textproc/erlang-stringprep
 
 BUILD_TARGET=	src
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/02/07 00:53:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/08/06 11:34:15 gdt Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/XmppAddr.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/captcha_form.beam
@@ -108,6 +108,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0445.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0480.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0484.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0485.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0513.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.app
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec.beam
