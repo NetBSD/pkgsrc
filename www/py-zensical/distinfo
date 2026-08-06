@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/08/03 09:41:22 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/08/06 11:14:53 adam Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -480,9 +480,9 @@ Size (yoke-0.8.3.crate) = 33132 bytes
 BLAKE2s (yoke-derive-0.8.2.crate) = 5552ca3b0c844667a0532da6e6a4bbfc41777d56d6615f80ca4c90020a50dedf
 SHA512 (yoke-derive-0.8.2.crate) = ed37289fe2dfcafda13be24b3e4aae1fbbdd6f52c42a1f2d770771f458af0d17b4cbe487941381b4bd692388e9818b45c686bdcd6229918e0f5b6fced1068ca3
 Size (yoke-derive-0.8.2.crate) = 15077 bytes
-BLAKE2s (zensical-0.0.52.tar.gz) = ee5b1f43d38556d2db660d0539edc04b4efca06639b746b1e211e7271b29361f
-SHA512 (zensical-0.0.52.tar.gz) = 2b51febdfa690ecb2885c366cd0c56f24c7d5044065fdc872d2065ef8be0326aea2cbb67976341dd04aaec4fbe568b715ade36b61d8b5ef37fb3c9010812aeac
-Size (zensical-0.0.52.tar.gz) = 3991761 bytes
+BLAKE2s (zensical-0.0.53.tar.gz) = 8e70c29f1dced5fe412165fd0e9cbd83896afd0fd5c56432e8e6a7b4bf226530
+SHA512 (zensical-0.0.53.tar.gz) = eeb1cc003e90217f212aa4491651992fc768289296eaa41676192119fb651e8f7d132c2578864801e5e94ddc63ff50fbbbdf40ce57b815c749cd96c399b6794f
+Size (zensical-0.0.53.tar.gz) = 3988318 bytes
 BLAKE2s (zerocopy-0.8.53.crate) = e54df3825c175c34ea7e8018039c860ce591756435ed3afa8735ddfefd16917c
 SHA512 (zerocopy-0.8.53.crate) = c2f1fabfcc5ce8badb1b69b395ef1394bc4cc88b795e095b22347fd4cefc5c195a4013e8a05a2327ef1e45aad65f6e562a08c7c03a62d3aec149701cb6da0be8
 Size (zerocopy-0.8.53.crate) = 284705 bytes
