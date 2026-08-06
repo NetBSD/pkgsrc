@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5010 2026/08/06 11:12:34 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5011 2026/08/06 11:29:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7414,3 +7414,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.64.0 [adam 2026-08-06]
 	Updated databases/erlang-p1_mysql to 1.0.28 [gdt 2026-08-06]
 	Updated databases/erlang-p1_pgsql to 1.1.41 [gdt 2026-08-06]
+	Updated textproc/erlang-fast_xml to 1.1.60 [gdt 2026-08-06]
