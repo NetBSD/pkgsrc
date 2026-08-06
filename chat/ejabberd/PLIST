@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2026/08/06 14:35:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.69 2026/08/06 16:22:59 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -118,6 +118,7 @@ lib/${PKGNAME}/ebin/mod_antispam_rtbl.beam
 lib/${PKGNAME}/ebin/mod_auth_fast.beam
 lib/${PKGNAME}/ebin/mod_auth_fast_mnesia.beam
 lib/${PKGNAME}/ebin/mod_auth_fast_opt.beam
+lib/${PKGNAME}/ebin/mod_auth_fast_sql.beam
 lib/${PKGNAME}/ebin/mod_avatar.beam
 lib/${PKGNAME}/ebin/mod_avatar_opt.beam
 lib/${PKGNAME}/ebin/mod_block_strangers.beam
@@ -374,11 +375,15 @@ lib/${PKGNAME}/priv/mod_invites/base.html
 lib/${PKGNAME}/priv/mod_invites/base_min.html
 lib/${PKGNAME}/priv/mod_invites/client.html
 lib/${PKGNAME}/priv/mod_invites/copyright
+lib/${PKGNAME}/priv/mod_invites/index.html
 lib/${PKGNAME}/priv/mod_invites/invite.html
 lib/${PKGNAME}/priv/mod_invites/invite_invalid.html
 lib/${PKGNAME}/priv/mod_invites/register.html
 lib/${PKGNAME}/priv/mod_invites/register_error.html
 lib/${PKGNAME}/priv/mod_invites/register_success.html
+lib/${PKGNAME}/priv/mod_invites/reset_error.html
+lib/${PKGNAME}/priv/mod_invites/reset_success.html
+lib/${PKGNAME}/priv/mod_invites/reset_token.html
 lib/${PKGNAME}/priv/mod_invites/roster.html
 lib/${PKGNAME}/priv/mod_invites/static/bootstrap/css/bootstrap.min.css
 lib/${PKGNAME}/priv/mod_invites/static/bootstrap/js/bootstrap.min.js
