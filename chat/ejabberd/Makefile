@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2026/08/06 12:09:11 gdt Exp $
+# $NetBSD: Makefile,v 1.117 2026/08/06 14:35:50 gdt Exp $
 
-DISTNAME=	ejabberd-26.03
-PKGREVISION=	1
+DISTNAME=	ejabberd-26.04
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -96,7 +95,7 @@ DEPENDS+=	erlang-erlydtl>=0.14.0:../../textproc/erlang-erlydtl
 DEPENDS+=	erlang-esip>=1.0.59:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.16:../../devel/erlang-ezlib
 DEPENDS+=	erlang-fast_tls>=1.1.25:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.57:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_xml>=1.1.60:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.39:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-idna>=7.1:../../net/erlang-idna
 DEPENDS+=	erlang-jose>=1.11.12:../../security/erlang-jose
