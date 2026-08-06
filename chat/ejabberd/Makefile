@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2026/08/06 16:01:10 gdt Exp $
+# $NetBSD: Makefile,v 1.119 2026/08/06 16:22:59 gdt Exp $
 
-DISTNAME=	ejabberd-26.04
+DISTNAME=	ejabberd-26.07
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -77,7 +77,7 @@ DEPENDS+=	erlang-pkix>=1.0.10:../../security/erlang-pkix
 # sqlite3: options.mk
 DEPENDS+=	erlang-stringprep>=1.0.33:../../textproc/erlang-stringprep
 DEPENDS+=	erlang-stun>=1.2.21:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.13.1:../../net/erlang-xmpp
+DEPENDS+=	erlang-xmpp>=1.13.4:../../net/erlang-xmpp
 DEPENDS+=	erlang-yconf>=1.0.22:../../textproc/erlang-yconf
 
 # dl_invites_page_deps.sh uses sha256sum which is a linuxism; patch it
