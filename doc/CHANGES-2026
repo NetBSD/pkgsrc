@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5026 2026/08/06 13:25:17 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5027 2026/08/06 13:27:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7431,3 +7431,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/tetris-cli to 26.61.1 [pin 2026-08-06]
 	Updated misc/tailspin to 7.0.0 [pin 2026-08-06]
 	Updated net/gping to 1.20.4 [pin 2026-08-06]
+	Updated net/sniffnet to 1.5.1 [pin 2026-08-06]
