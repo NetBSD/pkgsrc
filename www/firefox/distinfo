@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.588 2026/07/29 13:58:19 ryoon Exp $
+$NetBSD: distinfo,v 1.589 2026/08/06 18:17:20 tnn Exp $
 
 BLAKE2s (firefox-153.0.1.source.tar.xz) = 6f1f0f7801c8fdb23a8b8f200e90134a3a957948dc571ef0b7220dada197db54
 SHA512 (firefox-153.0.1.source.tar.xz) = 310d1aa27b7902ef5e052962e3b7d2819d0f5f6e596fddeafee53f09e9390d4801f5b654f4ca1e9fd4c15c71241fc31844afaa4d086f82c51b516a401fbe7f40
@@ -56,7 +56,7 @@ SHA1 (patch-third__party_libwebrtc_rtc__base_memory__usage.cc) = a831145ba15b30d
 SHA1 (patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc) = 6909c4da9e7b3785252e5bce9be0ff47ebb87e01
 SHA1 (patch-third__party_libwebrtc_rtc__base_platform__thread__types.cc) = 8ae75100775037347008d168eedc151e0e993b0f
 SHA1 (patch-third__party_python_dlmanager_check.py) = 69054522d8ced8cb47e65e5a8b1a87ed5ce6708e
-SHA1 (patch-third__party_rust_mtu_src_bindings_netbsd.rs) = c22e6994a925fbcccf54ac8a7308382e54bd5d0c
+SHA1 (patch-third__party_rust_mtu_src_bindings_netbsd.rs) = dc28ab3a4b6a5bee76ea6fd2485e34b9d6f1b195
 SHA1 (patch-third__party_sqlite3_ext_moz.build) = 4d94ea324617a20b3524016dd02fb717e518ece1
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_c-writer.cc) = 38eb2ee0e00722aa1380540b83648b43723719aa
