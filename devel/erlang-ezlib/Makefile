@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/02/15 18:22:31 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/06 00:15:44 gdt Exp $
 
-DISTNAME=	ezlib-1.0.15
-PKGREVISION=	1
+DISTNAME=	ezlib-1.0.16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	ezlib
