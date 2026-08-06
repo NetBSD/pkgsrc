@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2026/02/07 00:19:53 gdt Exp $
+$NetBSD: distinfo,v 1.22 2026/08/06 11:29:06 gdt Exp $
 
-BLAKE2s (fast_xml-1.1.57.tar.gz) = 5c39a4c5021a1ed0d1b9e34c229094eb5d4ad7373535084737d9e7fe528cd2e8
-SHA512 (fast_xml-1.1.57.tar.gz) = 97108c6d2df5c3254331a4e6870e9b2eada54c0b4cff35e004e28a00e7e668f68d3436d967f793ae0113c8e3cfeabe217a31492f7c4da655dc79481d20ebef3f
-Size (fast_xml-1.1.57.tar.gz) = 105912 bytes
+BLAKE2s (fast_xml-1.1.60.tar.gz) = d95738767c34e8545e8e9e1f9eff6f7c915a7dbcde976f6e38fe1d7a6aa07cbe
+SHA512 (fast_xml-1.1.60.tar.gz) = c33fc804846f93726214af28ff0de3a5f3fd5708aca2e01679b0910824fee69134a6cbd294df5f314c8faf9ea00ec3b759d74571fb4ee6a88446208d67254483
+Size (fast_xml-1.1.60.tar.gz) = 107038 bytes
