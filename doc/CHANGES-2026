@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5003 2026/08/06 00:12:10 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5004 2026/08/06 00:12:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7405,3 +7405,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/ejabberd to 26.02 [gdt 2026-08-05]
 	Updated www/resterm to 0.51.3 [drixter 2026-08-05]
 	Updated misc/erlang-p1_utils to 1.0.29 [gdt 2026-08-06]
+	Updated devel/erlang-cache_tab to 1.0.34 [gdt 2026-08-06]
