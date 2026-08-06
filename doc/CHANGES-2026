@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5008 2026/08/06 08:19:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5009 2026/08/06 11:07:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7412,3 +7412,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py313-html-docs to 3.13.15 [adam 2026-08-06]
 	Updated devel/protobuf-language-server to 0.1.5 [adam 2026-08-06]
 	Updated devel/lazygit to 0.64.0 [adam 2026-08-06]
+	Updated databases/erlang-p1_mysql to 1.0.28 [gdt 2026-08-06]
