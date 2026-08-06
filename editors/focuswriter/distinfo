@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2026/02/20 08:46:41 pin Exp $
+$NetBSD: distinfo,v 1.16 2026/08/06 13:16:19 pin Exp $
 
-BLAKE2s (focuswriter-1.9.0.tar.gz) = 1260c3550e4f02a1b1869a71115c25ea770be742481bb4fb4de087707fc0642d
-SHA512 (focuswriter-1.9.0.tar.gz) = 0899e370b2cf9090084e7a558152c37aa0b83c7f0622b330f8ee41560bfb913cfc82ce6f62da2edcc83e379299715657f6519ce8b303e290d9993f49cb6917b2
-Size (focuswriter-1.9.0.tar.gz) = 10982965 bytes
-SHA1 (patch-CMakeLists.txt) = 44ccefe812ca278df785fd0b61bb0e0c07b5bf81
+BLAKE2s (focuswriter-1.9.1.tar.gz) = 4ba298596738be3f6df3be5cd09ebeef227879a74fb426fd9896a11cf2103225
+SHA512 (focuswriter-1.9.1.tar.gz) = 4ec5fb1d5f7d1a4459cbe2b50d1086c25b7f4a2f77f7cbdc0bf154abec5f2ef21f5f566251d4a537e775cd530fb03720c0f386836eafa0bdd455d277ee675407
+Size (focuswriter-1.9.1.tar.gz) = 10994797 bytes
+SHA1 (patch-CMakeLists.txt) = 2a8a424e16d3f4b3e41c8d6f5e34498be95eed13
 SHA1 (patch-src_text__codec.cpp) = e37c7b08316a86ef9a9637e39f59fa12aa660f01
