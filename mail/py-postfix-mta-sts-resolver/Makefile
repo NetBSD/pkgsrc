@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/08/05 02:48:52 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/06 07:44:19 adam Exp $
 
-DISTNAME=	postfix_mta_sts_resolver-1.5.1
+.include "version.mk"
+
+DISTNAME=	postfix_mta_sts_resolver-${VERSION}
 PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	mail python
