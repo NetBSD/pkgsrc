@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.16 2021/12/26 05:04:42 taca Exp $
-
-BLAKE2s (transifex-client-0.14.4.tar.gz) = c3e3ada883fa92797e09ff0468a6c7f57be75807969bffe3f41e52f1228a36e7
-SHA512 (transifex-client-0.14.4.tar.gz) = 7bf394330219a667534a32bcd235a45bc15bc7ed274dc74e1d402bedd68934c751998e9c4583da59ccbfb7d7f1eed3142b0e2c8fdd60be91bcd2c8f72cf8200f
-Size (transifex-client-0.14.4.tar.gz) = 215792 bytes
-SHA1 (patch-requirements.txt) = 7b2c993df0701fbf5ced0925cc19c55665278513
