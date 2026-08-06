@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/20 08:46:41 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/08/06 13:16:19 pin Exp $
 bin/focuswriter
 man/man1/focuswriter.1
 share/applications/focuswriter.desktop
@@ -289,6 +289,7 @@ share/focuswriter/translations/focuswriter_fr.qm
 share/focuswriter/translations/focuswriter_fur.qm
 share/focuswriter/translations/focuswriter_gl.qm
 share/focuswriter/translations/focuswriter_he.qm
+share/focuswriter/translations/focuswriter_hr.qm
 share/focuswriter/translations/focuswriter_hu.qm
 share/focuswriter/translations/focuswriter_hy.qm
 share/focuswriter/translations/focuswriter_id.qm
