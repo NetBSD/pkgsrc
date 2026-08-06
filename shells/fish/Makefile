@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/08/05 16:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/08/06 11:24:30 jperkin Exp $
 
 DISTNAME=	fish-4.7.1
 PKGREVISION=	1
@@ -47,6 +47,18 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_DOCS=ON
 CMAKE_CONFIGURE_ARGS+=	-DSPHINX_EXECUTABLE=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 PKGSRC_MAKE_ENV+=	FISH_BUILD_VERSION=${PKGVERSION_NOREV}
+
+INSTALLATION_DIRS+=	share/prompts
+INSTALLATION_DIRS+=	share/themes
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	mac notmac
+.if ${OPSYS} == "Darwin"
+PLIST.mac=	yes
+.else
+PLIST.notmac=	yes
+.endif
 
 TEST_TARGET=		fish_run_tests
 TEST_DEPENDS+=		${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
