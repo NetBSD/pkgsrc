@@ -1,1 +1,0 @@
-bin/tx @PREFIX@/bin/tx-@PYVERSSUFFIX@

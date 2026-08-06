@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4669 2026/08/03 17:47:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4670 2026/08/06 13:12:40 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3721,7 +3721,6 @@ SUBDIR+=	tomlplusplus
 SUBDIR+=	topgit
 SUBDIR+=	tpasm
 SUBDIR+=	tradcpp
-SUBDIR+=	transifex-client
 SUBDIR+=	tre
 SUBDIR+=	treecc
 SUBDIR+=	trio
