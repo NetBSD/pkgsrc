@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5002 2026/08/05 21:05:26 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5003 2026/08/06 00:12:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7404,3 +7404,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tailscale to 1.102.2 [ktnb 2026-08-05]
 	Updated chat/ejabberd to 26.02 [gdt 2026-08-05]
 	Updated www/resterm to 0.51.3 [drixter 2026-08-05]
+	Updated misc/erlang-p1_utils to 1.0.29 [gdt 2026-08-06]
