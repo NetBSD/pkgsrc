@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2026/08/06 14:35:50 gdt Exp $
+# $NetBSD: Makefile,v 1.118 2026/08/06 16:01:10 gdt Exp $
 
 DISTNAME=	ejabberd-26.04
 CATEGORIES=	chat
@@ -32,59 +32,25 @@ USE_TOOLS+=		aclocal autoconf automake bash:run gmake patch perl
 # In general the erlang ecosystem is troubled by language-specific
 # packaging disease, but this isn't particularly about ejabberd.
 # Useful info at https://github.com/processone/ejabberd/issues/4431
-
-#Tries to download, objecting to p1_utils
+#   mix
+#     Tries to download, objecting to p1_utils
 #TOOL_DEPENDS+=		elixir-[0-9]*:../../lang/elixir
-
-# Works.
+#  rebar2
+#     Works, chosen approach.
 TOOL_DEPENDS+=		rebar>=2:../../devel/rebar
 CONFIGURE_ARGS+=	--with-rebar=rebar
-
-# Fetches dependencies even though they are present.
+#   rebar3
+#     Fetches dependencies even though they are present.
+#     \todo Recheck and file upstream bugs.
 #TOOL_DEPENDS+=		rebar3>=3:../../devel/rebar3
 #CONFIGURE_ARGS+=	--with-rebar=rebar3
-# Throws an error on the forced bad proxy, but with
-# https://127.0.0.1:65535/ errors on not being able to update
-# rebar3_hexpm.
+#     Throws an error on the forced bad proxy, but with
+#     https://127.0.0.1:65535/ errors on not being able to update
+#     rebar3_hexpm.
 #ALLOW_NETWORK_ACCESS=	yes
-
-# This script uses sha256sum which is a linuxism; patch it to use a g
-# prefix to align with our TOOLS requirements of coreutils.  Not yet
-# addressed upstream.
-TOOL_DEPENDS+=		coreutils-*:../../sysutils/coreutils
-SUBST_CLASSES+=		invites
-SUBST_MESSAGE.invites=	Fixing Linuxism of sha256sum
-SUBST_STAGE.invites=	pre-configure
-SUBST_FILES.invites=	tools/dl_invites_page_deps.sh
-SUBST_SED.invites=	-e 's/sha256sum/g&/'
-# Leave network usage at build time unremediated, on the theory that
-# updating for security fixes is more important than ick reduction.
-ALLOW_NETWORK_ACCESS=	yes
-
-# We intend to use the erlang packages DEPENDed on below, rather than
-# having ejabberd's build system download and build them.  The
-# configure option seems to work for rebar(2), but not for mix or
-# rebar3.
-# \todo Recheck with rebar3 and file upstream bug report.
-CONFIGURE_ARGS+=	--enable-system-deps
-
-CONFIGURE_ARGS+=	--disable-debug			# debug is default on (a clue?)
-CONFIGURE_ARGS+=	--enable-mysql
-CONFIGURE_ARGS+=	--enable-odbc
-CONFIGURE_ARGS+=	--enable-pam
-CONFIGURE_ARGS+=	--enable-pgsql
-CONFIGURE_ARGS+=	--enable-sip
-CONFIGURE_ARGS+=	--enable-stun
-CONFIGURE_ARGS+=	--enable-zlib
-CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
-CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 # Dependencies from rebar.config
 # (We assume erlang >= 27; it is too painful to accomodate old erlang.)
-BUILDLINK_API_DEPENDS.erlang+=	erlang>=27.0
-
 # (Any deps for < 27 are omitted.)
 DEPENDS+=	erlang-cache_tab>=1.0.33:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-eimp>=1.0.26:../../graphics/erlang-eimp
@@ -114,12 +80,42 @@ DEPENDS+=	erlang-stun>=1.2.21:../../net/erlang-stun
 DEPENDS+=	erlang-xmpp>=1.13.1:../../net/erlang-xmpp
 DEPENDS+=	erlang-yconf>=1.0.22:../../textproc/erlang-yconf
 
-RCD_SCRIPTS=		ejabberd
+# dl_invites_page_deps.sh uses sha256sum which is a linuxism; patch it
+# to use a g prefix to align with our TOOLS requirements of coreutils.
+# Not yet addressed upstream.
+TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
+SUBST_CLASSES+=		invites
+SUBST_MESSAGE.invites=	Fixing Linuxism of sha256sum
+SUBST_STAGE.invites=	pre-configure
+SUBST_FILES.invites=	tools/dl_invites_page_deps.sh
+SUBST_SED.invites=	-e 's/sha256sum/g&/'
+# Leave network usage at build time unremediated, on the theory that
+# updating for security fixes is more important than ick reduction.
+ALLOW_NETWORK_ACCESS=	yes
 
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
 BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
+
+# We intend to use the erlang packages DEPENDed on below, rather than
+# having ejabberd's build system download and build them.
+CONFIGURE_ARGS+=	--enable-system-deps
+
+CONFIGURE_ARGS+=	--disable-debug			# debug is default on (a clue?)
+CONFIGURE_ARGS+=	--enable-mysql
+CONFIGURE_ARGS+=	--enable-odbc
+CONFIGURE_ARGS+=	--enable-pam
+CONFIGURE_ARGS+=	--enable-pgsql
+CONFIGURE_ARGS+=	--enable-sip
+CONFIGURE_ARGS+=	--enable-stun
+CONFIGURE_ARGS+=	--enable-zlib
+CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
+CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+
+RCD_SCRIPTS=		ejabberd
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -189,5 +185,6 @@ post-install:
 	cd ${WRKSRC}/sql && ${INSTALL_DATA} *.sql			\
 		${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/priv/sql
 
+BUILDLINK_API_DEPENDS.erlang+=	erlang>=27.0
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
