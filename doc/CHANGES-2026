@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5009 2026/08/06 11:07:32 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5010 2026/08/06 11:12:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/protobuf-language-server to 0.1.5 [adam 2026-08-06]
 	Updated devel/lazygit to 0.64.0 [adam 2026-08-06]
 	Updated databases/erlang-p1_mysql to 1.0.28 [gdt 2026-08-06]
+	Updated databases/erlang-p1_pgsql to 1.1.41 [gdt 2026-08-06]
