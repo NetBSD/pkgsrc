@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/01/07 08:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/08/06 20:02:00 wiz Exp $
 
-DISTNAME=	apr-util-1.6.3
-PKGREVISION=	9
+DISTNAME=	apr-util-1.6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +27,11 @@ CONFIGURE_ENV.SunOS+=	apu_cv_memset_s=no
 CHECK_INTERPRETER_SKIP=	lib/aprutil.exp
 
 MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR}
+
+# test status as of 1.6.4:
+# Failed Tests   		Total	Fail	Failed %
+# ===================================================
+# testxlate      		    7	   1	 14.29%
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
