@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5035 2026/08/06 14:35:56 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5036 2026/08/06 14:42:08 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7442,3 +7442,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnsdist to 2.1.1 [drixter 2026-08-06]
 	Updated net/powerdns to 5.1.4 [drixter 2026-08-06]
 	Updated chat/ejabberd to 26.04 [gdt 2026-08-06]
+	Updated net/powerdns-recursor to 5.4.5 [drixter 2026-08-06]
