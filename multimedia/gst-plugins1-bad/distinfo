@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.78 2026/07/17 13:42:16 adam Exp $
+$NetBSD: distinfo,v 1.79 2026/08/06 19:11:10 adam Exp $
 
-BLAKE2s (gst-plugins-bad-1.28.5.tar.xz) = 85dd0e0772ca2212d4c9392e85877861ccf652e59ff5a08525d8f95d22231541
-SHA512 (gst-plugins-bad-1.28.5.tar.xz) = 8c52c1d8c3fd59a18c5b1bdfdb3e6e5c420ef45994415424b123aa2074985e363da0c20bdec627cd35aa9df3f38f3a131a03dea6bd3532af9d67b29a74ef518e
-Size (gst-plugins-bad-1.28.5.tar.xz) = 8335024 bytes
+BLAKE2s (gst-plugins-bad-1.28.6.tar.xz) = 77749fd3d726a96cf466958031fcb4d86d6bcd0524a63cf0b1ce8e634380bada
+SHA512 (gst-plugins-bad-1.28.6.tar.xz) = 233c88e50af78204f1a707eba67350df1140d4293ae1bfe7a6f64ee9ce423968c4d9a515aed397cc88f302f69c86e11f3d6a7d43c406dbd30e34febc934b83d8
+Size (gst-plugins-bad-1.28.6.tar.xz) = 8343524 bytes
 SHA1 (patch-ext_gtk_meson.build) = 170b411794fdbce39249437ccd1a4017976289b5
 SHA1 (patch-ext_wayland_meson.build) = 5cb65148ba22af5ce206cb66a7a7430822ceb494
 SHA1 (patch-ext_webrtc_meson.build) = dc0179ebea4b8f1f990951a8a860dac3c3ac5385
