@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.56 2026/07/02 12:34:19 adam Exp $
+$NetBSD: distinfo,v 1.57 2026/08/06 19:13:40 adam Exp $
 
-BLAKE2s (openvpn-2.7.5.tar.gz) = 3c972e9377aebde2f2a7458d481431fbc99e42365a2381aecad5d7a0ddea8ccd
-SHA512 (openvpn-2.7.5.tar.gz) = cc671df2582b0eb2eb1a73d5466dec7593b94518bb6ab31cc31b3d6b14cbc91942fa55e3865b861626acc866bb329cbed0d7a73a37963bd32a2ebece7ba938d2
-Size (openvpn-2.7.5.tar.gz) = 2101063 bytes
+BLAKE2s (openvpn-2.7.6.tar.gz) = 428ead434e134d5126f50aef890a792b74b3268d3f4e8ad6e1b206e59c9bc5ae
+SHA512 (openvpn-2.7.6.tar.gz) = 2e45d147f0983b6f343b6772c20b17e67bff0143e7bcf3c2a10551b77d9929c64c86e53b4ade5493023517f3ccd92b0c1011d03cb3543321d0f9faea408e6020
+Size (openvpn-2.7.6.tar.gz) = 2105678 bytes
 BLAKE2s (openvpn-acct-wtmpx-20130210.tgz) = 2bb02a4e6adb7ce1d189271a6fbb6cbffd6a37d7b5e75cccebfc8dfac6dbaddd
 SHA512 (openvpn-acct-wtmpx-20130210.tgz) = 7b8fd4929e65d8d84158f62e5a17ff3adb3b4a6cff63b29038acfb368750719f2f593786ed9b02402824c19d872b188d2a46740a5c5f853e8873a71481b13aaf
 Size (openvpn-acct-wtmpx-20130210.tgz) = 2778 bytes
