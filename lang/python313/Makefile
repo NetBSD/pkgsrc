@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/03/25 22:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/06 08:14:27 adam Exp $
 
 .include "dist.mk"
 
@@ -32,9 +32,9 @@ PRINT_PLIST_AWK+=	sub(/\.cpython-313/, "")}
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.opt-1.pyc$$/ {
 PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 
+USE_CC_FEATURES=	c11
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
-USE_CC_FEATURES+=	c11
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-shared
@@ -94,10 +94,6 @@ LIBS.DragonFly+=	-lcrypt
 LIBS.NetBSD+=		-lcrypt
 
 PY_VER_SUFFIX=		3.13
-
-.if ${OPSYS} == "Darwin"
-USE_TOOLS+=	gmake
-.endif
 
 .include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
