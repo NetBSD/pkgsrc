@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5029 2026/08/06 13:37:38 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5030 2026/08/06 13:46:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7435,3 +7435,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 30.6.2 [pin 2026-08-06]
 	Updated lang/nodejs24 to 24.19.0 [adam 2026-08-06]
 	Updated lang/nodejs to 26.7.0 [adam 2026-08-06]
+	Updated sysutils/uutils-coreutils to 0.10.0 [pin 2026-08-06]
