@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/02/15 18:22:32 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/06 00:30:38 gdt Exp $
 
-DISTNAME=	idna-6.1.1
-PKGREVISION=	6
+DISTNAME=	idna-7.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benoitc/}
 
@@ -9,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/erlang-idna/
 COMMENT=	Pure Erlang IDNA implementation following the RFC5891
 LICENSE=	mit
+
+# It is mysterious why this package does not build in a normal manner
+# and lacks build instructions.
 
 # TODO: this downloads files during build
 
@@ -24,13 +26,6 @@ do-build:
 
 pre-install:
 	${MV} ${WRKSRC}/_build/default/lib/idna/ebin ${WRKSRC}
-	# Apparently this package depends on unicode_util_compat, but
-	# doesn't say that in the README.md, and includes (by
-	# downloading from the net at build time) a version.  Rather
-	# than fixing this, wait until the next release which will no
-	# longer have this problem.
-	# https://github.com/benoitc/erlang-idna/issues/39
-	${MV} ${WRKSRC}/_build/default/lib/unicode_util_compat/ebin/* ${WRKSRC}/ebin
 	${RM} -rf ${WRKSRC}/_build
 
 .include "../../lang/erlang/module.mk"
