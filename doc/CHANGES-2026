@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5024 2026/08/06 13:21:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5025 2026/08/06 13:23:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7429,3 +7429,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.8.2 [pin 2026-08-06]
 	Updated editors/focuswriter to 1.9.1 [pin 2026-08-06]
 	Updated games/tetris-cli to 26.61.1 [pin 2026-08-06]
+	Updated misc/tailspin to 7.0.0 [pin 2026-08-06]
