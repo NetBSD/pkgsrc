@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2025/04/28 12:38:17 gdt Exp $
+# $NetBSD: options.mk,v 1.8 2026/08/06 14:35:50 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ejabberd
 PKG_SUPPORTED_OPTIONS=	sqlite
@@ -21,5 +21,5 @@ PKG_SUGGESTED_OPTIONS=	#
 #
 .if !empty(PKG_OPTIONS:Msqlite)
 CONFIGURE_ARGS+=	--enable-sqlite
-DEPENDS+=		erlang-sqlite3>=1.1.13:../../databases/erlang-sqlite3
+DEPENDS+=		erlang-sqlite3>=1.1.15:../../databases/erlang-sqlite3
 .endif
