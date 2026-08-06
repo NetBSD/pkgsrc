@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/02/15 18:22:31 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/06 00:12:47 gdt Exp $
 
-DISTNAME=	cache_tab-1.0.33
-PKGREVISION=	1
+DISTNAME=	cache_tab-1.0.34
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	cache_tab
