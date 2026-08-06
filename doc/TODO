@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27697 2026/08/06 16:23:05 gdt Exp $
+$NetBSD: TODO,v 1.27698 2026/08/06 20:02:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-2.5.0
+	o arti-2.5.1
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -1186,6 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
+	o rumdl-0.2.52
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
