@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2025/09/29 21:24:22 nia Exp $
+# $NetBSD: options.mk,v 1.9 2026/08/06 16:04:27 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libssh
 PKG_SUPPORTED_OPTIONS=		gssapi tests
@@ -17,6 +17,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_GSSAPI:BOOL=OFF
 
 .if !empty(PKG_OPTIONS:Mopenssl)
 CMAKE_CONFIGURE_ARGS+=		-DWITH_GCRYPT:BOOL=OFF
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.5.0
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
