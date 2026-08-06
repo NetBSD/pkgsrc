@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5004 2026/08/06 00:12:52 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5005 2026/08/06 00:15:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7406,3 +7406,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.51.3 [drixter 2026-08-05]
 	Updated misc/erlang-p1_utils to 1.0.29 [gdt 2026-08-06]
 	Updated devel/erlang-cache_tab to 1.0.34 [gdt 2026-08-06]
+	Updated devel/erlang-ezlib to 1.0.16 [gdt 2026-08-06]
