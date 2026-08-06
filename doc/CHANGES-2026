@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5032 2026/08/06 14:07:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5033 2026/08/06 14:12:17 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7439,3 +7439,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/xh to 0.26.2 [pin 2026-08-06]
 	Updated devel/jj to 0.44.0 [adam 2026-08-06]
 	Updated graphics/gnuplot to 6.0.5 [adam 2026-08-06]
+	Updated net/dnsdist to 2.1.1 [drixter 2026-08-06]
