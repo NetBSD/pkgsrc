@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/02/07 00:44:56 gdt Exp $
+$NetBSD: distinfo,v 1.16 2026/08/06 11:07:26 gdt Exp $
 
-BLAKE2s (p1_mysql-1.0.27.tar.gz) = 49a81d53ecccdcce472923a732d007844ce076f83838ee135677ef2b571247bc
-SHA512 (p1_mysql-1.0.27.tar.gz) = 28d180a7f02c050a4cf6497773b40b06406687741d0b08b8d8ec39d5bef748760135c05352ac792e9ce7c2045223e0e07b9b17af269e0045c8c7e29612bceb6d
-Size (p1_mysql-1.0.27.tar.gz) = 30093 bytes
+BLAKE2s (p1_mysql-1.0.28.tar.gz) = 261fe37fae75a98a4962693aaf190607c2d754c7eda46b5314e244cad7ac2776
+SHA512 (p1_mysql-1.0.28.tar.gz) = 393fa2d83309ba8d438094cc0e939b9aa73d0185d5be9f0befd1bbff2b46b7c08b3df63507d716f1a52886cd354adf5b7f2356e2cdbf4bad77de8d524edad506
+Size (p1_mysql-1.0.28.tar.gz) = 30198 bytes
