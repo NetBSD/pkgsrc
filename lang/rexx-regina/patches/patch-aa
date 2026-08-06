@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
+$NetBSD: patch-aa,v 1.7 2026/08/06 14:10:20 ryoon Exp $
 
 - try to defang the building for 32 bits
 - use our $LDFLAGS
 - portability fix of `test ==`
 - enable version numbered shared library on {Net,Open,Free}BSD
 
---- configure.orig	2024-05-03 23:01:20.000000000 +0000
+--- configure.orig	2025-03-23 22:25:31.000000000 +0000
 +++ configure
-@@ -3508,8 +3508,8 @@ fi
+@@ -3454,8 +3454,8 @@ fi
  #
  # Now do platform specific tests
  #
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
  on_osx="no"
  osis64bit=no
  bitflag="32"
-@@ -9110,21 +9110,14 @@ case "$target" in
+@@ -9089,21 +9089,14 @@ case "$target" in
        SHLPRE="lib"
        SHL_LD="ld -assert pure-text -o ${SHLPRE}${SHLFILE}${SHLPST} "'$('SHOFILES')'
        ;;
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
        STATIC_LDFLAGS="-static"
        SHLPRE="lib"
        ;;
-@@ -9323,13 +9316,13 @@ if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"
+@@ -9302,13 +9295,13 @@ if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; } && test -s conftest.o; then
@@ -64,7 +64,7 @@ $NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
     else
        mh_dyn_link='ld -G -o conftest.so.1.0 conftest.o 1>&5'
        if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$mh_dyn_link\""; } >&5
-@@ -9411,15 +9404,15 @@ if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"
+@@ -9390,15 +9383,15 @@ if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; } && test -s conftest.o; then
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
        LD_RXLIB_B1="-L. -l${SHLFILE}"
        LD_RXLIB_B2="-L. -l${SHLFILE}"
        LD_RXLIB_UTILB="-L. -l${SHLFILE}"
-@@ -10005,7 +9998,7 @@ PACKAGE_RELEASE=`echo $PACKAGE_RELEASE`
+@@ -9994,7 +9987,7 @@ PACKAGE_RELEASE=`echo $PACKAGE_RELEASE`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking getting PACKAGE_RELEASE value" >&5
  $as_echo_n "checking getting PACKAGE_RELEASE value... " >&6; }
  PACKAGE_RELEASE=`echo $PACKAGE_RELEASE`
@@ -93,3 +93,12 @@ $NetBSD: patch-aa,v 1.6 2026/08/01 18:12:23 ryoon Exp $
     PACKAGE_RELEASE=`date +%y%m%d.%H%M`
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PACKAGE_RELEASE" >&5
+@@ -10232,7 +10225,7 @@ $as_echo "$mh_rg_c23_variadic" >&6; }
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $mh_rg_c23_variadic" >&5
+ $as_echo "$mh_rg_c23_variadic" >&6; }
+-if test  $mh_rg_c23_variadic == yes ; then
++if test  $mh_rg_c23_variadic = yes ; then
+    $as_echo "#define HAVE_C23_VARIADIC_SUPPORT 1" >>confdefs.h
+ 
+ fi
