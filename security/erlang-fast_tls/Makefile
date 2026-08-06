@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/02/15 18:22:33 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/06 11:31:05 gdt Exp $
 
-DISTNAME=	fast_tls-1.1.25
-PKGREVISION=	1
+DISTNAME=	fast_tls-1.1.26
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	fast_tls
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/processone/fast_tls
 COMMENT=	TLS / SSL OpenSSL-based native driver for Erlang / Elixir
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.29:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
