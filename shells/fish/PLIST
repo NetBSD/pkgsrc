@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/05/10 18:46:48 vins Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/08/06 11:24:30 jperkin Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -1586,7 +1586,7 @@ share/fish/man/man1/jobs.1
 share/fish/man/man1/math.1
 share/fish/man/man1/nextd.1
 share/fish/man/man1/not.1
-share/fish/man/man1/open.1
+${PLIST.notmac}share/fish/man/man1/open.1
 share/fish/man/man1/or.1
 share/fish/man/man1/path.1
 share/fish/man/man1/popd.1
@@ -1600,6 +1600,7 @@ share/fish/man/man1/pushd.1
 share/fish/man/man1/pwd.1
 share/fish/man/man1/random.1
 share/fish/man/man1/read.1
+${PLIST.mac}share/fish/man/man1/realpath.1
 share/fish/man/man1/return.1
 share/fish/man/man1/set.1
 share/fish/man/man1/set_color.1
