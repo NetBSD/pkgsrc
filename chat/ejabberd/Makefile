@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2026/08/05 18:19:22 gdt Exp $
+# $NetBSD: Makefile,v 1.116 2026/08/06 12:09:11 gdt Exp $
 
-DISTNAME=	ejabberd-26.02
+DISTNAME=	ejabberd-26.03
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -8,6 +9,14 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
+
+# NB: The build of ejabberd will succeed even though installed erlang
+# packages do not meet the requirements in rebar.config.  This
+# sometimes results in an ejabberd which starts and has mysterious
+# stack backtraces or other failures.  On every update, patrol the
+# manifest deps in the sources against the deps in this Makefile, and
+# update any erlang-foo as needed, recursively checking those packages
+# deps.
 
 # As of 2025-04, no one responded to a query on pkgsrc-users@ asking
 # if anyone else used ejabberd.  Thus, gdt intends to commit updates
@@ -57,6 +66,7 @@ ALLOW_NETWORK_ACCESS=	yes
 # having ejabberd's build system download and build them.  The
 # configure option seems to work for rebar(2), but not for mix or
 # rebar3.
+# \todo Recheck with rebar3 and file upstream bug report.
 CONFIGURE_ARGS+=	--enable-system-deps
 
 CONFIGURE_ARGS+=	--disable-debug			# debug is default on (a clue?)
@@ -76,32 +86,33 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # (We assume erlang >= 27; it is too painful to accomodate old erlang.)
 BUILDLINK_API_DEPENDS.erlang+=	erlang>=27.0
 
+# (Any deps for < 27 are omitted.)
 DEPENDS+=	erlang-cache_tab>=1.0.33:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-eimp>=1.0.26:../../graphics/erlang-eimp
 DEPENDS+=	erlang-epam>=1.0.14:../../security/erlang-epam
 # pkgsrc eredis is too old, so no redis for now
 #DEPENDS+=	erlang-eredis>=1.7.1:../../databases/erlang-eredis
-DEPENDS+=	erlang-erlydtl>=0.15.0:../../textproc/erlang-erlydtl
+DEPENDS+=	erlang-erlydtl>=0.14.0:../../textproc/erlang-erlydtl
 DEPENDS+=	erlang-esip>=1.0.59:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.15:../../devel/erlang-ezlib
+DEPENDS+=	erlang-ezlib>=1.0.16:../../devel/erlang-ezlib
 DEPENDS+=	erlang-fast_tls>=1.1.25:../../security/erlang-fast_tls
 DEPENDS+=	erlang-fast_xml>=1.1.57:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.39:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
-# <27: jiffy (skipped)
+DEPENDS+=	erlang-idna>=7.1:../../net/erlang-idna
 DEPENDS+=	erlang-jose>=1.11.12:../../security/erlang-jose
 # --enable-lua, default off (used for importing from prosody)
 #DEPENDS+=	erlang-luerl>=1.2.0:../../lang/erlang-luerl
 DEPENDS+=	erlang-mqtree>=1.0.19:../../devel/erlang-mqtree
 DEPENDS+=	erlang-p1_acme>=1.0.30:../../security/erlang-p1_acme
-DEPENDS+=	erlang-p1_mysql>=1.0.27:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_mysql>=1.0.28:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.14:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.38:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_pgsql>=1.1.40:../../databases/erlang-p1_pgsql
 DEPENDS+=	erlang-p1_utils>=1.0.28:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-pkix>=1.0.10:../../security/erlang-pkix
+# sqlite3: options.mk
 DEPENDS+=	erlang-stringprep>=1.0.33:../../textproc/erlang-stringprep
 DEPENDS+=	erlang-stun>=1.2.21:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.12.0:../../net/erlang-xmpp
+DEPENDS+=	erlang-xmpp>=1.13.1:../../net/erlang-xmpp
 DEPENDS+=	erlang-yconf>=1.0.22:../../textproc/erlang-yconf
 
 RCD_SCRIPTS=		ejabberd

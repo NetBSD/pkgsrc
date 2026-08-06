@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2026/08/05 18:19:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.67 2026/08/06 12:09:11 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -367,7 +367,6 @@ lib/${PKGNAME}/priv/img/vcss.png
 lib/${PKGNAME}/priv/js/admin.js
 lib/${PKGNAME}/priv/js/muc.js
 lib/${PKGNAME}/priv/js/sortable.min.js
-lib/${PKGNAME}/priv/mod_invites/HOWTO.md
 lib/${PKGNAME}/priv/mod_invites/apps.html
 lib/${PKGNAME}/priv/mod_invites/apps.json
 lib/${PKGNAME}/priv/mod_invites/base.html
@@ -386,6 +385,7 @@ lib/${PKGNAME}/priv/mod_invites/static/favicon.png
 lib/${PKGNAME}/priv/mod_invites/static/illus-empty.svg
 lib/${PKGNAME}/priv/mod_invites/static/invite.css
 lib/${PKGNAME}/priv/mod_invites/static/invite.js
+lib/${PKGNAME}/priv/mod_invites/static/jquery/jquery.min.js
 lib/${PKGNAME}/priv/mod_invites/static/logos/apple_as.svg
 lib/${PKGNAME}/priv/mod_invites/static/logos/beagle-im.svg
 lib/${PKGNAME}/priv/mod_invites/static/logos/conversations.svg
