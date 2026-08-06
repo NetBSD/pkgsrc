@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/05/20 14:18:25 pin Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/06 13:22:24 pin Exp $
 
-DISTNAME=	tailspin-6.1.0
+DISTNAME=	tailspin-7.0.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bensadeh/}
 
