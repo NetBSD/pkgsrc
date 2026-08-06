@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/02/06 21:41:17 gdt Exp $
+$NetBSD: distinfo,v 1.18 2026/08/06 00:12:47 gdt Exp $
 
-BLAKE2s (cache_tab-1.0.33.tar.gz) = 88de721f081252759c6502db51006304d96d8a2cabdfe96d6f700e07bff43433
-SHA512 (cache_tab-1.0.33.tar.gz) = f9dcfd7de43080a3b669e05d6b6fe7d1bdaaac371d6346d9bb3bb3ac789de046780e6056c0c56eeadcf06073721a26e0d81af301f6f27c19c4fe29eb6d48e181
-Size (cache_tab-1.0.33.tar.gz) = 61041 bytes
+BLAKE2s (cache_tab-1.0.34.tar.gz) = 3dd48c2eaeed9b21d0f9305a897e2292cd549fb78689ffc9809acd149cd2bc3d
+SHA512 (cache_tab-1.0.34.tar.gz) = 2369e46247373ef14a6ccf9772c2d7e19fab832e6515d108783e4bc576f93cb3901793eeabfa9626a2740762c98793e07a3f734f9587fbb9ddc9fe8f4178fd5c
+Size (cache_tab-1.0.34.tar.gz) = 61255 bytes
