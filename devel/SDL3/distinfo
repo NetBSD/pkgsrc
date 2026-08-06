@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2026/07/03 06:48:08 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/06 19:18:53 adam Exp $
 
-BLAKE2s (SDL3-3.4.12.tar.gz) = 2142ecddb99d06e9323f05880305d03fa4ff6e0a95f9f8305671ba377bcc9229
-SHA512 (SDL3-3.4.12.tar.gz) = c53cb5d82f6a9b7221bfd4f64d5352fd0c91837b7cb88ccf4898657b241189e25b7d405aa0c5c42ee25bad9a19c1da5c2daca6f8fde493ae26cb3e5f2883c0f5
-Size (SDL3-3.4.12.tar.gz) = 15629574 bytes
+BLAKE2s (SDL3-3.4.14.tar.gz) = ec08ddfadebba029f8cc17ac79f8a34ae1fd9f70d8ea8a9f659036dbe5a3130c
+SHA512 (SDL3-3.4.14.tar.gz) = 4105d57b3581d9d1e98c0bbd38d69cc5015b2b3d358fff0a617f9a89b37f5dd3e32e95b6ffc01cb865b9c599956cffa5cfcb96812fe7ed4afad632872c617e87
+Size (SDL3-3.4.14.tar.gz) = 15636700 bytes
 SHA1 (patch-CMakeLists.txt) = 5aba59473b4dbc97ead9c70a33e7fb3239763373
