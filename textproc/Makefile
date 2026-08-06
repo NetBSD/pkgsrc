@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1595 2026/08/06 06:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1596 2026/08/06 13:08:41 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -267,6 +267,7 @@ SUBDIR+=	gnatformat
 SUBDIR+=	gnome-dictionary
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
+SUBDIR+=	go-transifex-cli
 SUBDIR+=	grep
 SUBDIR+=	grepcidr
 SUBDIR+=	groff
