@@ -1,22 +1,22 @@
-$NetBSD: patch-Makefile.pre.in,v 1.3 2025/08/07 11:39:16 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.4 2026/08/06 08:14:27 adam Exp $
 
 Use only one optimisation level; needed for PLIST and setuptools compatibility.
 Do not build/install libpython3.so.
 Simplify _sysconfigdata to include only platform name.
 Swap targets libinstall and libainstall, to byte-compile python-config.py.
 
---- Makefile.pre.in.orig	2025-08-06 13:05:20.000000000 +0000
+--- Makefile.pre.in.orig	2026-08-05 12:25:43.000000000 +0000
 +++ Makefile.pre.in
-@@ -270,7 +270,7 @@ DIST=		$(DISTFILES) $(DISTDIRS)
- LIBRARY=	@LIBRARY@
+@@ -271,7 +271,7 @@ LIBRARY=	@LIBRARY@
  LDLIBRARY=      @LDLIBRARY@
  BLDLIBRARY=     @BLDLIBRARY@
+ MODULE_LDFLAGS_SHARED=$(if $(LIBPYTHON),$(BLDLIBRARY))
 -PY3LIBRARY=     @PY3LIBRARY@
 +PY3LIBRARY=
  DLLLIBRARY=	@DLLLIBRARY@
  LDLIBRARYDIR=   @LDLIBRARYDIR@
  INSTSONAME=	@INSTSONAME@
-@@ -2154,7 +2154,7 @@ altinstall: commoninstall
+@@ -2160,7 +2160,7 @@ altinstall: commoninstall
  
  .PHONY: commoninstall
  commoninstall:  check-clean-src @FRAMEWORKALTINSTALLFIRST@ \
@@ -25,7 +25,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		sharedinstall altmaninstall @FRAMEWORKALTINSTALLLAST@
  
  # Install shared libraries enabled by Setup
-@@ -2217,7 +2217,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -2223,7 +2223,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  			if test -n "$(PY3LIBRARY)"; then \
  				$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  			fi; \
@@ -35,7 +35,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		fi; \
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
-@@ -2558,7 +2559,7 @@ libinstall:	all $(srcdir)/Modules/xxmodu
+@@ -2564,7 +2565,7 @@ libinstall:	all $(srcdir)/Modules/xxmodu
  			esac; \
  		done; \
  	done
@@ -44,7 +44,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		$(DESTDIR)$(LIBDEST); \
  	$(INSTALL_DATA) $(srcdir)/LICENSE $(DESTDIR)$(LIBDEST)/LICENSE.txt
  	@ # If app store compliance has been configured, apply the patch to the
-@@ -2572,12 +2573,12 @@ libinstall:	all $(srcdir)/Modules/xxmodu
+@@ -2578,12 +2579,12 @@ libinstall:	all $(srcdir)/Modules/xxmodu
  	@ # Build PYC files for the 3 optimization levels (0, 1, 2)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
