@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5038 2026/08/06 19:15:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5039 2026/08/06 19:21:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7447,3 +7447,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/gstreamer1 to 1.28.6 [adam 2026-08-06]
 	Updated net/openvpn to 2.7.6 [adam 2026-08-06]
 	Updated security/p11-kit to 0.26.5 [adam 2026-08-06]
+	Updated devel/SDL3 to 3.4.14 [adam 2026-08-06]
+	Updated devel/mimalloc to 3.4.5 [adam 2026-08-06]
