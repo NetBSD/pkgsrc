@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5012 2026/08/06 11:29:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5013 2026/08/06 11:31:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7418,3 +7418,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.53 [adam 2026-08-06]
 	Updated devel/py-uv to 0.12.2 [adam 2026-08-06]
 	Updated devel/py-uv-build to 0.12.2 [adam 2026-08-06]
+	Updated security/erlang-fast_tls to 1.1.26 [gdt 2026-08-06]
