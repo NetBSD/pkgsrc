@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5027 2026/08/06 13:27:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5028 2026/08/06 13:28:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7432,3 +7432,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/tailspin to 7.0.0 [pin 2026-08-06]
 	Updated net/gping to 1.20.4 [pin 2026-08-06]
 	Updated net/sniffnet to 1.5.1 [pin 2026-08-06]
+	Updated lang/nodejs24 to 24.19.0 [adam 2026-08-06]
+	Updated lang/nodejs to 26.7.0 [adam 2026-08-06]
