@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2026/07/30 17:12:04 taca Exp $
+# $NetBSD: Makefile,v 1.111 2026/08/06 14:18:58 mef Exp $
 
 DISTNAME=	moodle-5.2.1
 CATEGORIES=	www
@@ -49,6 +49,7 @@ OWN_DIRS_PERMS+=	${MOODLEDATADIR} ${APACHE_USER} ${APACHE_GROUP} 0750
 
 USE_TOOLS+=		pax
 NO_BUILD=		yes
+REPLACE_PERL+=		public/filter/algebra/algebra2tex.pl
 
 PLIST_SRC+=		${PKGDIR}/PLIST ${WRKDIR}/PLIST.AUTO
 
