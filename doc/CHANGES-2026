@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5022 2026/08/06 13:17:34 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5023 2026/08/06 13:20:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7428,3 +7428,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/transifex-client [taca 2026-08-06]
 	Updated devel/mise to 2026.8.2 [pin 2026-08-06]
 	Updated editors/focuswriter to 1.9.1 [pin 2026-08-06]
+	Updated games/tetris-cli to 26.61.1 [pin 2026-08-06]
+	Updated games/tetris-cli to 26.61.1 [pin 2026-08-06]
