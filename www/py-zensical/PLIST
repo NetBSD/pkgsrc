@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/08/03 09:41:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/06 11:14:53 adam Exp $
 bin/zensical
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -16234,6 +16234,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/tplink.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/tqdm.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/traccar.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/tradingview.svg
+${PYSITELIB}/zensical/templates/.icons/simple/trae.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/traefikmesh.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/traefikproxy.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/trailforks.svg
@@ -16590,6 +16591,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zdf.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zdotai.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zebpay.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zebratechnologies.svg
+${PYSITELIB}/zensical/templates/.icons/simple/zectrix.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zedindustries.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zelle.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zenbrowser.svg
@@ -16620,15 +16622,16 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zorin.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zotero.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zsh.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zulip.svg
+${PYSITELIB}/zensical/templates/.icons/simple/zx.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.ed145cee.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.69c251d7.min.js
 ${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.7d14d953.min.js
-${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.4c04d108.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.39e53929.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.7dc9a0ad.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.8b3b5a67.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.20815dad.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/modern/palette.dfe2e883.min.css
 ${PYSITELIB}/zensical/templates/base.html
 ${PYSITELIB}/zensical/templates/main.html

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/08/03 09:41:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/06 11:14:53 adam Exp $
 
-DISTNAME=	zensical-0.0.52
+DISTNAME=	zensical-0.0.53
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zensical/}
@@ -16,11 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-deepmerge>=2.0:../../devel/py-deepmerge
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.7:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.20:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-pymdown-extensions>=10.21.3:../../textproc/py-pymdown-extensions
+DEPENDS+=	${PYPKGPREFIX}-pymdown-extensions>=11.0:../../textproc/py-pymdown-extensions
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.2:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-tomli>=2.4.0:../../textproc/py-tomli
-
-USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
