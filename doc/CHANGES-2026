@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5037 2026/08/06 16:23:05 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5038 2026/08/06 19:15:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7444,3 +7444,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/ejabberd to 26.04 [gdt 2026-08-06]
 	Updated net/powerdns-recursor to 5.4.5 [drixter 2026-08-06]
 	Updated chat/ejabberd to 26.07 [gdt 2026-08-06]
+	Updated multimedia/gstreamer1 to 1.28.6 [adam 2026-08-06]
+	Updated net/openvpn to 2.7.6 [adam 2026-08-06]
+	Updated security/p11-kit to 0.26.5 [adam 2026-08-06]
