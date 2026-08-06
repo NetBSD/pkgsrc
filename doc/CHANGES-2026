@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5015 2026/08/06 11:34:20 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5016 2026/08/06 12:09:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7421,3 +7421,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/erlang-fast_tls to 1.1.26 [gdt 2026-08-06]
 	Updated textproc/erlang-stringprep to 1.0.34 [gdt 2026-08-06]
 	Updated net/erlang-xmpp to 1.13.4 [gdt 2026-08-06]
+	Updated chat/ejabberd to 26.03nb1 [gdt 2026-08-06]
