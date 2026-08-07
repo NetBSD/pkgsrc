@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/02/23 15:02:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/08/07 18:51:43 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -78,6 +78,9 @@ ${PYSITELIB}/greenlet/tests/_test_extension.c
 ${PYSITELIB}/greenlet/tests/_test_extension.so
 ${PYSITELIB}/greenlet/tests/_test_extension_cpp.cpp
 ${PYSITELIB}/greenlet/tests/_test_extension_cpp.so
+${PYSITELIB}/greenlet/tests/fail_c_stack_refs_suspended_gc.py
+${PYSITELIB}/greenlet/tests/fail_c_stack_refs_suspended_gc.pyc
+${PYSITELIB}/greenlet/tests/fail_c_stack_refs_suspended_gc.pyo
 ${PYSITELIB}/greenlet/tests/fail_clearing_run_switches.py
 ${PYSITELIB}/greenlet/tests/fail_clearing_run_switches.pyc
 ${PYSITELIB}/greenlet/tests/fail_clearing_run_switches.pyo
@@ -87,9 +90,15 @@ ${PYSITELIB}/greenlet/tests/fail_cpp_exception.pyo
 ${PYSITELIB}/greenlet/tests/fail_initialstub_already_started.py
 ${PYSITELIB}/greenlet/tests/fail_initialstub_already_started.pyc
 ${PYSITELIB}/greenlet/tests/fail_initialstub_already_started.pyo
+${PYSITELIB}/greenlet/tests/fail_issue_515_freethread_gc.py
+${PYSITELIB}/greenlet/tests/fail_issue_515_freethread_gc.pyc
+${PYSITELIB}/greenlet/tests/fail_issue_515_freethread_gc.pyo
 ${PYSITELIB}/greenlet/tests/fail_slp_switch.py
 ${PYSITELIB}/greenlet/tests/fail_slp_switch.pyc
 ${PYSITELIB}/greenlet/tests/fail_slp_switch.pyo
+${PYSITELIB}/greenlet/tests/fail_switch_critical_section.py
+${PYSITELIB}/greenlet/tests/fail_switch_critical_section.pyc
+${PYSITELIB}/greenlet/tests/fail_switch_critical_section.pyo
 ${PYSITELIB}/greenlet/tests/fail_switch_three_greenlets.py
 ${PYSITELIB}/greenlet/tests/fail_switch_three_greenlets.pyc
 ${PYSITELIB}/greenlet/tests/fail_switch_three_greenlets.pyo
