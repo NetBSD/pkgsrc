@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5044 2026/08/07 08:25:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5045 2026/08/07 08:31:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7459,3 +7459,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-traitlets to 5.16.1 [adam 2026-08-07]
 	Updated devel/py-coverage to 7.15.4 [adam 2026-08-07]
 	Updated devel/py-gitpython to 3.1.58 [adam 2026-08-07]
+	Updated devel/py-absl-py to 2.5.0 [adam 2026-08-07]
+	Updated www/py-tornado to 6.5.8 [adam 2026-08-07]
+	Updated www/py-soupsieve to 2.9.2 [adam 2026-08-07]
+	Updated time/py-dateparser to 1.4.2 [adam 2026-08-07]
