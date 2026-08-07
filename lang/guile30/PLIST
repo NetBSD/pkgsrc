@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/14 21:28:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/08/07 09:14:56 adam Exp $
 guile/3.0/bin/guild
 guile/3.0/bin/guile
 guile/3.0/bin/guile-config
@@ -478,8 +478,8 @@ guile/3.0/lib/guile/3.0/ccache/web/server.go
 guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
+guile/3.0/lib/libguile-3.0.${GUILE_LIBNAME}-gdb.scm
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.7.1-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
