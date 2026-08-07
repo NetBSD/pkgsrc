@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/04/09 06:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/07 09:03:53 adam Exp $
 
 DISTNAME=	libunistring-1.4.2
 CATEGORIES=	textproc
@@ -13,6 +13,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 INFO_FILES=	yes
 TEST_TARGET=	check
+
+# Fix for iconv detection in gettext 1.0.
+CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
