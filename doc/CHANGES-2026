@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5047 2026/08/07 09:19:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5048 2026/08/07 09:21:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7466,3 +7466,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-packaging to 26.3 [adam 2026-08-07]
 	Updated databases/py-tinydb to 4.9.0 [adam 2026-08-07]
 	Updated devel/gitnr to 0.3.0 [pin 2026-08-07]
+	Updated devel/gitpane to 0.10.3 [pin 2026-08-07]
