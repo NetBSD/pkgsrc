@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2026/07/29 14:01:02 kikadf Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/07 10:40:06 kikadf Exp $
 
 # to get current vulkan SDK version, but we need to override GITHUB_TAG locally
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=	shaderc-2026.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,7 +31,10 @@ PKGCONFIG_OVERRIDE+=	cmake/shaderc_static.pc.in
 
 .include "../../lang/python/tool.mk"
 .include "../../devel/cmake/build.mk"
+BUILDLINK_API_DEPENDS.glslang+=		glslang>=${SDK_VERSION}
 .include "../../graphics/glslang/buildlink3.mk"
+BUILDLINK_API_DEPENDS.spirv-headers+=	spirv-headers>=${SDK_VERSION}
 .include "../../parallel/spirv-headers/buildlink3.mk"
+BUILDLINK_API_DEPENDS.spirv-tools+=	spirv-tools>=${SDK_VERSION}
 .include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
