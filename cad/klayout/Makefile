@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2026/07/24 15:56:04 taca Exp $
+# $NetBSD: Makefile,v 1.108 2026/08/07 00:57:21 mef Exp $
 
-DISTNAME=	klayout-0.29.12
-PKGREVISION=	7
+DISTNAME=	klayout-0.30.10
 CATEGORIES=	cad
 MASTER_SITES=	https://www.klayout.org/downloads/source/
 
@@ -13,8 +12,12 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash pax
 
-CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
-NO_CONFIGURE=	yes
+CFLAGS+=		-I${PREFIX}/include/python${PYVERSUFFIX}
+NO_CONFIGURE=		yes
+CXXFLAGS+=		-Wno-template-id-cdtor
+#SE_CXX_FEATURES+=	c++17
+# build time debug only
+# MAKE_JOBS_SAFE=		no
 
 CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
 			lib/klayout/plugins/tools/net_tracer/unit_tests/*
@@ -47,6 +50,7 @@ do-build:
 	cd ${WRKSRC} && ${MKDIR} ${REL_DIR} && \
 	${PKGSRC_SETENV} ${MAKE_ENV} ${BASH} build.sh \
 	-python python${PYVERSSUFFIX} \
+	-qt5 \
 	-qmake ${PREFIX}/qt5/bin/qmake \
 	-ruby ${PREFIX}/bin/${RUBY_NAME} \
 	${MAKE_JOBS_FLAG} \
