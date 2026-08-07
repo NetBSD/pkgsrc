@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5043 2026/08/07 08:16:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5044 2026/08/07 08:25:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7455,3 +7455,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/libiscsi to 1.20.3 [adam 2026-08-07]
 	Updated emulators/qemu to 11.0.3 [adam 2026-08-07]
 	Updated sysutils/qemu-guest-agent to 11.0.3 [adam 2026-08-07]
+	Updated devel/py-argcomplete to 3.7.2 [adam 2026-08-07]
+	Updated devel/py-traitlets to 5.16.1 [adam 2026-08-07]
+	Updated devel/py-coverage to 7.15.4 [adam 2026-08-07]
+	Updated devel/py-gitpython to 3.1.58 [adam 2026-08-07]
