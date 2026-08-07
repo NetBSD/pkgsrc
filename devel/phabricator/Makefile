@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/07/24 15:48:17 taca Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/07 01:41:55 taca Exp $
 
 DISTNAME=	phabricator-20170609
 PKGREVISION=	5
@@ -24,9 +24,10 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_BASE_VERS}:../../devel/php-pcntl
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	libphutil-[0-9]*:../../devel/libphutil
 DEPENDS+=	arcanist-[0-9]*:../../devel/arcanist
+
+PHP_REQUIRE_MODULE=	apcu opcache
 
 REPLACE_PHP=	externals/httpful/build
 REPLACE_PHP+=	externals/restful/build-phar
@@ -55,13 +56,6 @@ REPLACE_PHP+=	scripts/almanac/manage_almanac.php \
 REPLACE_BASH+=	scripts/install/install_rhel-derivs.sh \
 		scripts/install/install_ubuntu.sh
 
-.include "../../lang/php/phpversion.mk"
-.if ${PHP_VER} < 70
-DEPENDS+=		${PHP_PKG_PREFIX}-apcu<5:../../www/php-apcu4
-.else
-DEPENDS+=		${PHP_PKG_PREFIX}-apcu>=5:../../www/php-apcu
-.endif
-
 NO_BUILD=	yes
  
 RCD_SCRIPTS=	phd
@@ -86,4 +80,5 @@ do-install:
 	${PAX} -rw * -s',.*\.orig$$,,' \
 		${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
 
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"

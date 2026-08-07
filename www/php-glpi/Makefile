@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/09/17 00:45:00 taca Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/07 01:41:56 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -24,7 +24,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=${PHP_BASE_VERS}:../../security/php-sodium
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
@@ -32,6 +31,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 
 PHP_VERSIONS_ACCEPTED=	82 83 84
+PHP_REQUIRE_MODULE=	opcache
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -102,8 +102,7 @@ do-install:
 	cd ${WRKSRC} && rm -r files
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${GLPI_DIR}
 
-.include "../../lang/php/json.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
