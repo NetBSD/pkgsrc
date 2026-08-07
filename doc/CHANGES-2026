@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5058 2026/08/07 11:21:37 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5059 2026/08/07 11:35:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7477,3 +7477,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/shaderc to 2026.3nb1 [kikadf 2026-08-07]
 	Updated parallel/spirv-tools to 1.4.357.0nb1 [kikadf 2026-08-07]
 	Updated geography/qgis to 3.44.13 [gdt 2026-08-07]
+	Updated chat/matrix-synapse to 1.158.0 [gdt 2026-08-07]
