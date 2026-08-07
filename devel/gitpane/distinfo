@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/08/06 13:12:11 pin Exp $
+$NetBSD: distinfo,v 1.8 2026/08/07 09:20:26 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -303,9 +303,9 @@ Size (gimli-0.32.3.crate) = 289789 bytes
 BLAKE2s (git2-0.21.0.crate) = a2e93ada354032544e89b79dd7c631314be96697dcbae037a864decc3be7721b
 SHA512 (git2-0.21.0.crate) = c105b5a05ab3a0a291a30fdc627ac3b72196b93cadb91c62ae5395d2f469517fbcd32954972d62691590d3cad6a8aa5fc514ca966cc0ad2225d04fb5a53dfd26
 Size (git2-0.21.0.crate) = 242222 bytes
-BLAKE2s (gitpane-0.10.1.tar.gz) = ba33303bf186f9033d2ff9c47c18e3ddbb208cdf8cf1a9b0ad766131205f4713
-SHA512 (gitpane-0.10.1.tar.gz) = 6fa57c3be8a96a6bc80c41017bbe18a9f7e2f3b8fb7f9f574fdc61a01ff4c1b24d2a4c33a0b771f6d319f0a7a84f200acf6c8f24d2eb7425808bf8120a6db9d2
-Size (gitpane-0.10.1.tar.gz) = 4076565 bytes
+BLAKE2s (gitpane-0.10.3.tar.gz) = 6935d4c3dbaec50d23c04d8935ebe9d004c9adab6cdbae33f6f3572b0fed65d4
+SHA512 (gitpane-0.10.3.tar.gz) = dea3ca66f9ecade45b0769d0323d3cf9ef1f20fc5bfcd5c6e48a9c6f9b14766e2e308fc93c6d75042dc43c9c2c578caf4c2134232cb665ffcddb7245c8929139
+Size (gitpane-0.10.3.tar.gz) = 4086621 bytes
 BLAKE2s (globset-0.4.18.crate) = e11bcd40201278f23b7b3aa74f96441bf85cc94e4c3364847ce6c15c4e5d1115
 SHA512 (globset-0.4.18.crate) = 44afbcdaff506dba351b967ff435752988f7d980e0b908c248c2aa462dcc95c94907a6d9ec7aec28599dc29d3fbd421cdf0bc8082042263b6af69b36fc1a2c54
 Size (globset-0.4.18.crate) = 28970 bytes
@@ -804,15 +804,15 @@ Size (tokio-macros-2.7.0.crate) = 15859 bytes
 BLAKE2s (tokio-util-0.7.19.crate) = b15080c04cdd447b860e81a81cad6361c7dc5c842c249415d695c641d739b55f
 SHA512 (tokio-util-0.7.19.crate) = 32bfa93c6090d45f2ec8c7169375a8b18885025c825172b9470f3df62566f709067c242c34e357ab2ec76f0f452864dbf75f1d91f23bd34ac8e890f1f661951e
 Size (tokio-util-0.7.19.crate) = 147245 bytes
-BLAKE2s (toml-1.1.3+spec-1.1.0.crate) = a3e5405f3a39e8ddd60337a514fdf404e358731d07e89e1ec204bbae7065ac84
-SHA512 (toml-1.1.3+spec-1.1.0.crate) = a688160c68baf1d5ca46f6547b18af2681f2355f31c2f7b42fe444a6813631bec40492e00232e2189fb4db815acf7975890510829c3b1fe0c836543155397115
-Size (toml-1.1.3+spec-1.1.0.crate) = 56358 bytes
+BLAKE2s (toml-1.1.4+spec-1.1.0.crate) = 1834d41879adcf32cbac6fe8ffd6dd7204aa3d9ed9e9d79326fcddb4477b5e70
+SHA512 (toml-1.1.4+spec-1.1.0.crate) = 6f389ff3868896b709fc2e7219252b8feb90735bf82088ffd5365e13b6232777c5e79fd059bc001b9c4a2b877feab99e84762f283a1d94cce39a6782dc2149a2
+Size (toml-1.1.4+spec-1.1.0.crate) = 56447 bytes
 BLAKE2s (toml_datetime-1.1.1+spec-1.1.0.crate) = a2a968ab233e2ebef7f3500035b8fed66c430cc4abb3059ef2458da88cfc7c41
 SHA512 (toml_datetime-1.1.1+spec-1.1.0.crate) = 74e13bc2f616b407d11e445e3a416dc7cd819774a5d747baede2d71ac42573ea29fd77cedd2648ff1b286b879053e764b8ad07cd9e9fe1164f6cc26f12931808
 Size (toml_datetime-1.1.1+spec-1.1.0.crate) = 17982 bytes
-BLAKE2s (toml_parser-1.1.2+spec-1.1.0.crate) = 56c1ddb383e72126795c3bf6731fd49d4f3143154593ee5d8b9911b46ce2f72f
-SHA512 (toml_parser-1.1.2+spec-1.1.0.crate) = 11d4a5489337f9e2eed3f47b04376b0d00f9962a8fe6fa59518a4b5f0c7886aa8416f4e34ba640102a3abc45fe7ce628d1fc5327a4453dd7866a7f16fb45cd9b
-Size (toml_parser-1.1.2+spec-1.1.0.crate) = 35485 bytes
+BLAKE2s (toml_parser-1.1.3+spec-1.1.0.crate) = d620ca8be1c6e6f7fa73186bef037a8722ebe5659547a7692e84a0cf8849842b
+SHA512 (toml_parser-1.1.3+spec-1.1.0.crate) = 1e59ee837016e095f93adb4a6ef63c33adc94c09c005cb68a0ac310c32696e4c342f3eabae9fc4f23d4f0fa1d6a958bbf61938ff214e03830f95e24b6066b164
+Size (toml_parser-1.1.3+spec-1.1.0.crate) = 35888 bytes
 BLAKE2s (toml_writer-1.1.2+spec-1.1.0.crate) = 82fac48406208585159c0dcae942c01f1e8d0010ec0879ee933a9b43e971e99b
 SHA512 (toml_writer-1.1.2+spec-1.1.0.crate) = baedae17f16c3b8f1780ac2936c60c3fe12b3df254b1f58ae50081e1e8a260b8bccbfd2299b93df2c58e97df8006ed6debb6351a3276a3020431b1da3f90e25f
 Size (toml_writer-1.1.2+spec-1.1.0.crate) = 18968 bytes

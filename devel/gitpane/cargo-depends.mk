@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2026/08/06 13:12:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2026/08/07 09:20:26 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -267,9 +267,9 @@ CARGO_CRATE_DEPENDS+=	time-core-0.1.9
 CARGO_CRATE_DEPENDS+=	tokio-1.53.1
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.7.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.19
-CARGO_CRATE_DEPENDS+=	toml-1.1.3+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml-1.1.4+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-1.1.1+spec-1.1.0
-CARGO_CRATE_DEPENDS+=	toml_parser-1.1.2+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tracing-0.1.44
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.31
