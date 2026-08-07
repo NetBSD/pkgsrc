@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5061 2026/08/07 16:53:57 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5062 2026/08/07 18:52:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7480,3 +7480,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/matrix-synapse to 1.158.0 [gdt 2026-08-07]
 	Updated print/qpdfview to 0.5 [ryoon 2026-08-07]
 	Updated net/coturn to 4.17.1 [gdt 2026-08-07]
+	Updated devel/py-ruff to 0.16.2 [adam 2026-08-07]
+	Updated devel/py-typer to 0.27.1 [adam 2026-08-07]
+	Updated devel/py-greenlet to 3.5.4 [adam 2026-08-07]
