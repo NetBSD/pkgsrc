@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5050 2026/08/07 09:26:33 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5051 2026/08/07 09:28:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7469,3 +7469,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.10.3 [pin 2026-08-07]
 	Updated mail/himalaya to 2.0.0 [pin 2026-08-07]
 	Updated news/bulletty to 0.3.0 [pin 2026-08-07]
+	Updated shells/oh-my-posh to 30.6.3 [pin 2026-08-07]
