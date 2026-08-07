@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2026/07/01 13:15:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/07 10:30:48 kikadf Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=	vulkan-loader-${SDK_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 GITHUB_PROJECT=	Vulkan-Loader
 EXTRACT_USING=	bsdtar
@@ -34,6 +34,7 @@ PKGCONFIG_OVERRIDE+=	loader/vulkan.pc.in
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+BUILDLINK_API_DEPENDS.vulkan-headers+=	vulkan-headers>=${SDK_VERSION}
 .include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
