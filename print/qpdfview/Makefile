@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.146 2026/06/24 21:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2026/08/07 16:22:09 ryoon Exp $
 
-DISTNAME=	qpdfview-0.4.18
-PKGREVISION=	62
+DISTNAME=	qpdfview-0.5
 CATEGORIES=	print
-MASTER_SITES=	https://launchpad.net/qpdfview/trunk/${PKGVERSION_NOREV}/+download/
+MASTER_SITES=	https://launchpad.net/qpdfview/trunk/0.5.0/+download/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/qpdfview
@@ -28,11 +27,11 @@ do-configure:
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
-.include "../../print/poppler-qt5/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../print/poppler-qt6/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
