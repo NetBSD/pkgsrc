@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/08/07 08:14:44 adam Exp $
 
-BLAKE2s (libiscsi-1.19.0.tar.gz) = de0bce0acdbb34988dd4bf69e9dd6845e47eda6123dc1ffc4e493a4ed045a35d
-SHA512 (libiscsi-1.19.0.tar.gz) = 2c0e70b7ecf66204524e57edf557a014b5141a8819e5d663b6e50cb2e756fd634ae1db0b1ca6915444d80a9babd54a82619bdd98726d16d4eeaf7b3c89cf3d53
-Size (libiscsi-1.19.0.tar.gz) = 284969 bytes
-SHA1 (patch-configure.ac) = 44b797fae92942ba6886b7ed5d158fd920aab9a5
+BLAKE2s (libiscsi-1.20.3.tar.gz) = 49df8577055ab6a5789bef3d6650f2cc87674e845b4fc5ce46b4db47e84ab1aa
+SHA512 (libiscsi-1.20.3.tar.gz) = 3ce33c028dc92b902d08e30dd6ec71ca7eff9f729c7a62fd463d687286a10b068327ddc9a929b0102fcd0483a755370d2194af6f7ba65e66d17ac571b44b4ae9
+Size (libiscsi-1.20.3.tar.gz) = 327211 bytes
+SHA1 (patch-include_sha.h) = e6ba3b5b48fa9f69b125696caccc7dd74a1c28fa
+SHA1 (patch-lib_multithreading.c) = c7b21dc62b517e5d4d727a384ea2ff352381530f
