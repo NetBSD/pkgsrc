@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5056 2026/08/07 10:40:21 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5057 2026/08/07 10:42:37 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7475,3 +7475,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/vulkan-tools to 1.4.357.0nb1 [kikadf 2026-08-07]
 	Updated graphics/glslang to 1.4.357.0nb1 [kikadf 2026-08-07]
 	Updated graphics/shaderc to 2026.3nb1 [kikadf 2026-08-07]
+	Updated parallel/spirv-tools to 1.4.357.0nb1 [kikadf 2026-08-07]
