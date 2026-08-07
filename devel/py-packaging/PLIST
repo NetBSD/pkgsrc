@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/04/26 10:35:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/08/07 09:10:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -20,6 +20,9 @@ ${PYSITELIB}/packaging/_musllinux.pyo
 ${PYSITELIB}/packaging/_parser.py
 ${PYSITELIB}/packaging/_parser.pyc
 ${PYSITELIB}/packaging/_parser.pyo
+${PYSITELIB}/packaging/_ranges.py
+${PYSITELIB}/packaging/_ranges.pyc
+${PYSITELIB}/packaging/_ranges.pyo
 ${PYSITELIB}/packaging/_structures.py
 ${PYSITELIB}/packaging/_structures.pyc
 ${PYSITELIB}/packaging/_structures.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/packaging/py.typed
 ${PYSITELIB}/packaging/pylock.py
 ${PYSITELIB}/packaging/pylock.pyc
 ${PYSITELIB}/packaging/pylock.pyo
+${PYSITELIB}/packaging/ranges.py
+${PYSITELIB}/packaging/ranges.pyc
+${PYSITELIB}/packaging/ranges.pyo
 ${PYSITELIB}/packaging/requirements.py
 ${PYSITELIB}/packaging/requirements.pyc
 ${PYSITELIB}/packaging/requirements.pyo
