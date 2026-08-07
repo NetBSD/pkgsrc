@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.774 2026/08/03 14:12:29 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.775 2026/08/07 10:30:38 pin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30313,7 +30313,7 @@ ruby32-*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 opensmtpd<7.8.0p1	denial-of-service	https://www.openbsd.org/errata78.html
 arti-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 asuka-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-bulletty-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+bulletty<0.3.0	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-c<0.10.22	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-licenses-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 cargo-nextest<0.9.135	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
@@ -30367,7 +30367,7 @@ vaultwarden-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases
 wezterm-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 wiki-tui-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 wthrr-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
-xh-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
+xh<0.26.2	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 yaydl-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 zola-[0-9]*	unknown	https://github.com/rust-openssl/rust-openssl/releases/tag/openssl-v0.10.78
 perl<5.42.2nb3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-12087
