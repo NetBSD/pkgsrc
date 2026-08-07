@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/04/13 14:38:43 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/07 10:37:29 kikadf Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=	glslang-${SDK_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,5 +17,6 @@ CMAKE_CONFIGURE_ARGS+=	-DALLOW_EXTERNAL_SPIRV_TOOLS=ON
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
+BUILDLINK_API_DEPENDS.spirv-tools+=	spirv-tools>=${SDK_VERSION}
 .include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
