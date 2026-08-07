@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2026/07/28 20:54:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.73 2026/08/07 11:35:52 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -709,6 +709,9 @@ ${PYSITELIB}/synapse/module_api/callbacks/__init__.pyo
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.py
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.pyc
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.pyo
+${PYSITELIB}/synapse/module_api/callbacks/federation.py
+${PYSITELIB}/synapse/module_api/callbacks/federation.pyc
+${PYSITELIB}/synapse/module_api/callbacks/federation.pyo
 ${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.py
 ${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.pyc
 ${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.pyo
@@ -870,6 +873,7 @@ ${PYSITELIB}/synapse/res/templates/mail-Element.css
 ${PYSITELIB}/synapse/res/templates/mail-Vector.css
 ${PYSITELIB}/synapse/res/templates/mail-expiry.css
 ${PYSITELIB}/synapse/res/templates/mail.css
+${PYSITELIB}/synapse/res/templates/media_upload_limit_exceeded.html
 ${PYSITELIB}/synapse/res/templates/notice_expiry.html
 ${PYSITELIB}/synapse/res/templates/notice_expiry.txt
 ${PYSITELIB}/synapse/res/templates/notif.html
@@ -1174,6 +1178,9 @@ ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.py
 ${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.pyo
+${PYSITELIB}/synapse/rest/synapse/client/media_upload_limit_exceeded.py
+${PYSITELIB}/synapse/rest/synapse/client/media_upload_limit_exceeded.pyc
+${PYSITELIB}/synapse/rest/synapse/client/media_upload_limit_exceeded.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.py
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.pyo
