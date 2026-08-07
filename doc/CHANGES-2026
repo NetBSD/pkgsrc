@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5045 2026/08/07 08:31:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5046 2026/08/07 09:14:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7463,3 +7463,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-tornado to 6.5.8 [adam 2026-08-07]
 	Updated www/py-soupsieve to 2.9.2 [adam 2026-08-07]
 	Updated time/py-dateparser to 1.4.2 [adam 2026-08-07]
+	Updated devel/py-packaging to 26.3 [adam 2026-08-07]
+	Updated databases/py-tinydb to 4.9.0 [adam 2026-08-07]
