@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.141 2026/08/05 09:26:36 pin Exp $
+# $NetBSD: go-modules.mk,v 1.142 2026/08/07 09:27:26 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -49,8 +49,8 @@ GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.3.0.zip
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/kr/pty/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/kr/text/@v/v0.1.0.mod
-GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.zip
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.mod
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.zip
 GO_MODULE_FILES+=	github.com/lufia/plan9stats/@v/v0.0.0-20251013123823-9fd1530e3ec3.mod
 GO_MODULE_FILES+=	github.com/lufia/plan9stats/@v/v0.0.0-20251013123823-9fd1530e3ec3.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod

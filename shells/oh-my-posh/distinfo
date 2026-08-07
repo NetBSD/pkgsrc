@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.323 2026/08/06 13:27:43 pin Exp $
+$NetBSD: distinfo,v 1.324 2026/08/07 09:27:26 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -147,12 +147,12 @@ Size (github.com_kr_pty_@v_v1.1.1.mod) = 25 bytes
 BLAKE2s (github.com_kr_text_@v_v0.1.0.mod) = 680f50a44801214a99d92a8314fc050a200f0c8ee971e7c64ba69346c5554425
 SHA512 (github.com_kr_text_@v_v0.1.0.mod) = 11d2502a7d241a0edf4e67bcb651a890a12f49d00f8b944cc9eb8f6e9cf5fbb2b2827e696021649bc795ffa275e95ee700e4a1706e03e88fa9ae079f5b9f48ce
 Size (github.com_kr_text_@v_v0.1.0.mod) = 64 bytes
-BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.mod) = d659ba07c1540d9564017c785739d2bf124b20eaaf3ffd78fbb38efe21ec5321
-SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.mod) = 270b19446ac9a396f5ce7a000873928a44edb1457f86d294971dae08be37cd64ddb8edc0293e100ee60d56c504851aa69ab11db0b4cfd46649c5f79459e40011
-Size (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.mod) = 51 bytes
-BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.zip) = c61362d959bd4ebdf863123447c26410a4dae98affa399d29da530c35d934425
-SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.zip) = e3a52044a0d37a58f0c32ef3a9c0dcb6e0bccb12b4f74aefcea405cf83eb2067d07cd75fc3afeb6a843d978356049964ab24d8093eff8c6ae92788193276b69f
-Size (github.com_lucasb-eyer_go-colorful_@v_v1.4.0.zip) = 976519 bytes
+BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.mod) = d659ba07c1540d9564017c785739d2bf124b20eaaf3ffd78fbb38efe21ec5321
+SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.mod) = 270b19446ac9a396f5ce7a000873928a44edb1457f86d294971dae08be37cd64ddb8edc0293e100ee60d56c504851aa69ab11db0b4cfd46649c5f79459e40011
+Size (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.mod) = 51 bytes
+BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.zip) = f1e28c6c443f0072e6340db665931e7094193c29440977e14e462f7442584019
+SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.zip) = 0e6cf37291cf462898dbfad6eba699742d64e3b10f59a065db8579fb41758b9a83120802767a42719af830d162ffd1dae89766dd0b2541e3f66c21f562847de9
+Size (github.com_lucasb-eyer_go-colorful_@v_v1.4.1.zip) = 1006604 bytes
 BLAKE2s (github.com_lufia_plan9stats_@v_v0.0.0-20251013123823-9fd1530e3ec3.mod) = 22eff8f92d568140e1095292773de5352779814055420ccbb91688566e6049fe
 SHA512 (github.com_lufia_plan9stats_@v_v0.0.0-20251013123823-9fd1530e3ec3.mod) = 4250ae715d292fed41d72ade26b2cfad1eeb3915b84936bd7a13bbab349842dcce877e6b42790fb6b9df583512dd40df35c6cf6861621a27d1d047feffab8d3e
 Size (github.com_lufia_plan9stats_@v_v0.0.0-20251013123823-9fd1530e3ec3.mod) = 105 bytes
@@ -357,7 +357,7 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-30.6.2.tar.gz) = 3da03679014de12e3b0fc870993dfed3233afcaf26c387ce339de1e1b4903119
-SHA512 (oh-my-posh-30.6.2.tar.gz) = d99e8da3915b229c26ae6bb54617ecf553f06290d38e6695436074f10137662a336d41856f887915e78bb049d21d5d8f77fd3902c58735505ebcec5c52505d8f
-Size (oh-my-posh-30.6.2.tar.gz) = 7612175 bytes
+BLAKE2s (oh-my-posh-30.6.3.tar.gz) = 51cd4dab5b09e3292a264a260881a2e6b00ed57a880a092903f3479c5b504a8a
+SHA512 (oh-my-posh-30.6.3.tar.gz) = 2825eb3e836b3ac14134b3d9b04109e656eb9f010532d8251d93253d99a1231ccc5080edc5046c5003080923ee77e41ea297af0a47bbb6637b78594c14f255af
+Size (oh-my-posh-30.6.3.tar.gz) = 7613335 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
