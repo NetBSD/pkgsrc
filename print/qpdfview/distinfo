@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:12:16 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/08/07 16:22:09 ryoon Exp $
 
-BLAKE2s (qpdfview-0.4.18.tar.gz) = 6e55682712213b4eb4e7fb0184147526b94a819952cc63b33a2f77f06e7556de
-SHA512 (qpdfview-0.4.18.tar.gz) = 38741520b20e3ed7100e52982930abac26e994a69df68c54dfa7180be8b2a4f377b91ba03993bab67b0a505ad79d62164f0f168a6715f4306b635ceba6840d66
-Size (qpdfview-0.4.18.tar.gz) = 786577 bytes
-SHA1 (patch-application.pro) = 11dd983ed4814f1c4913663b0bca13170fd8edfe
-SHA1 (patch-qpdfview.pri) = d569e92af7ee8baa80eec93df46d927f9bde3374
-SHA1 (patch-sources_model.h) = 9638186f83b3ebb311ef15a89a3be44530abd9db
+BLAKE2s (qpdfview-0.5.tar.gz) = 4754b35fed527c600e39ef9cdd6782d6cdca075624ae149ced91e36f457401ab
+SHA512 (qpdfview-0.5.tar.gz) = 1b6b479bb42f4568c21b5f6cb0c552c4323739ba9fe46cea80cc199f48b0b49a278e0a2fb0d21f83bafb467e43dd37352b99ef41795d140220bb82d704e03926
+Size (qpdfview-0.5.tar.gz) = 925408 bytes
+SHA1 (patch-application.pro) = 03ab557e86885d493fe72661107d2c2fc073f9a2
+SHA1 (patch-qpdfview.pri) = b2bb4a90e647af8c53eb9290bb76897f333b088e
 SHA1 (patch-sources_pdfmodel.cpp) = a718b01601d69bd4dfc4d3c4da0a19cd3f3f21ad

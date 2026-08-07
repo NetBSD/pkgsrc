@@ -1,4 +1,4 @@
-$NetBSD: patch-application.pro,v 1.2 2019/11/08 13:38:48 nia Exp $
+$NetBSD: patch-application.pro,v 1.3 2026/08/07 16:22:10 ryoon Exp $
 
 * install png icons (makes the icon visible in xfce)
 
@@ -8,29 +8,30 @@ $${size} is that when done messages like:
 WARNING: icon16.path is not defined: install target not created
 appear when the .pro file is processed and the icons won't be installed.
 
---- application.pro.orig	2015-11-14 20:48:59.000000000 +0000
+--- application.pro.orig	2023-01-28 10:40:47.229000000 +0000
 +++ application.pro
-@@ -254,6 +254,13 @@ APPDATA_FILE = miscellaneous/qpdfview.ap
+@@ -278,7 +278,14 @@ system("sed -e \"s:DATA_INSTALL_PATH:$${DATA_INSTALL_P
  
  system("sed -e \"s:DATA_INSTALL_PATH:$${DATA_INSTALL_PATH}:\" -e \"s:MIME_TYPES:$$join(MIME_TYPES,";","",";"):\" $${DESKTOP_FILE}.in > $${DESKTOP_FILE}")
  
 +iconsizes = 16 22 24 32 36 48 64 72 96 128 160 192 256
-+
+ 
 +system(mkdir tmp)
 +for(size, iconsizes) {
 +    system(mkdir tmp/$${size})
 +    system(rsvg-convert -w $${size} -h $${size} -f png -o tmp/$${size}/qpdfview.png icons/qpdfview.svg)
 +}
- 
++
  target.path = $${TARGET_INSTALL_PATH}
  
-@@ -264,7 +271,46 @@ manual.files = miscellaneous/qpdfview.1
+ data.files = translations/*.qm help/help*.html
+@@ -288,8 +295,47 @@ icon.files = icons/qpdfview.svg
  manual.path = $${MANUAL_INSTALL_PATH}
  
  icon.files = icons/qpdfview.svg
 -icon.path = $${ICON_INSTALL_PATH}
 +icon.path = $${ICON_INSTALL_PATH}/scalable/apps
-+
+ 
 +icon16.files = tmp/16/qpdfview.png
 +icon16.path = $${ICON_INSTALL_PATH}/16x16/apps
 +
@@ -69,10 +70,11 @@ appear when the .pro file is processed and the icons won't be installed.
 +
 +icon256.files = tmp/256/qpdfview.png
 +icon256.path = $${ICON_INSTALL_PATH}/256x256/apps
- 
++
  launcher.files = $${DESKTOP_FILE}
  launcher.path = $${LAUNCHER_INSTALL_PATH}
-@@ -273,6 +319,8 @@ appdata.files = $${APPDATA_FILE}
+ 
+@@ -297,6 +343,8 @@ INSTALLS += target data manual icon launcher appdata
  appdata.path = $${APPDATA_INSTALL_PATH}
  
  INSTALLS += target data manual icon launcher appdata
