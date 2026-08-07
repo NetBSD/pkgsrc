@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5053 2026/08/07 10:31:10 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5054 2026/08/07 10:35:03 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7472,3 +7472,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 30.6.3 [pin 2026-08-07]
 	Updated textproc/inlyne to 0.5.3 [pin 2026-08-07]
 	Updated graphics/vulkan-loader to 1.4.357.0nb2 [kikadf 2026-08-07]
+	Updated graphics/vulkan-tools to 1.4.357.0nb1 [kikadf 2026-08-07]
