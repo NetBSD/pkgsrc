@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/08/07 01:41:56 taca Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/07 01:44:04 taca Exp $
 
 DISTNAME=	osticket-v1.18.4
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -19,7 +19,6 @@ USE_LANGUAGES=	# none
 
 USE_TOOLS+=	chmod find pax perl
 
-DEPENDS+=	${PHP_PKG_PREFIX}-apcu>=5.1:../../www/php-apcu
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
@@ -29,7 +28,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
-PHP_REQUIRE_MODULE=	imap opcache
+PHP_REQUIRE_MODULE=	apcu imap opcache
 
 PHP_VERSIONS_ACCEPTED=	82 83 84 # does not support 5.6
 
