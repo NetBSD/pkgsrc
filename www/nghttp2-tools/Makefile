@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/03/21 12:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/07 09:12:28 wiz Exp $
 
 .include "../../www/nghttp2/Makefile.common"
 
@@ -19,7 +19,8 @@ CONFIGURE_ARGS+=	--disable-python-bindings
 CONFIGURE_ARGS+=	--enable-app
 CONFIGURE_ARGS+=	--enable-hpack-tools
 
-GCC_REQD+=		12
+# for '#include <print>'
+GCC_REQD+=		14
 
 INSTALL_DIRS+=		src
 
