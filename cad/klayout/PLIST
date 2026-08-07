@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2024/04/21 20:27:18 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/08/07 00:57:21 mef Exp $
 bin/klayout
 bin/strm2cif
 bin/strm2dxf
 bin/strm2gds
 bin/strm2gdstxt
+bin/strm2lstr
 bin/strm2mag
 bin/strm2oas
 bin/strm2txt
@@ -27,10 +28,18 @@ lib/klayout/db_plugins/liblefdef.${RUBY_DLEXT}
 lib/klayout/db_plugins/liblefdef.so.0
 lib/klayout/db_plugins/liblefdef.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/db_plugins/liblefdef.so.${PKGVERSION}
+lib/klayout/db_plugins/liblstream.${RUBY_DLEXT}
+lib/klayout/db_plugins/liblstream.so.0
+lib/klayout/db_plugins/liblstream.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/db_plugins/liblstream.so.${PKGVERSION}
 lib/klayout/db_plugins/libmag.${RUBY_DLEXT}
 lib/klayout/db_plugins/libmag.so.0
 lib/klayout/db_plugins/libmag.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/db_plugins/libmag.so.${PKGVERSION}
+lib/klayout/db_plugins/libmaly.${RUBY_DLEXT}
+lib/klayout/db_plugins/libmaly.so.0
+lib/klayout/db_plugins/libmaly.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/db_plugins/libmaly.so.${PKGVERSION}
 lib/klayout/db_plugins/libnet_tracer.${RUBY_DLEXT}
 lib/klayout/db_plugins/libnet_tracer.so.0
 lib/klayout/db_plugins/libnet_tracer.so.${PKGVERSION_MAJOR_MINOR}
@@ -59,6 +68,10 @@ lib/klayout/lay_plugins/libd25_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/libd25_ui.so.0
 lib/klayout/lay_plugins/libd25_ui.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/lay_plugins/libd25_ui.so.${PKGVERSION}
+lib/klayout/lay_plugins/libdensity_map_ui.${RUBY_DLEXT}
+lib/klayout/lay_plugins/libdensity_map_ui.so.0
+lib/klayout/lay_plugins/libdensity_map_ui.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/lay_plugins/libdensity_map_ui.so.${PKGVERSION}
 lib/klayout/lay_plugins/libdiff_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/libdiff_ui.so.0
 lib/klayout/lay_plugins/libdiff_ui.so.${PKGVERSION_MAJOR_MINOR}
@@ -75,6 +88,10 @@ lib/klayout/lay_plugins/libimport_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/libimport_ui.so.0
 lib/klayout/lay_plugins/libimport_ui.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/lay_plugins/libimport_ui.so.${PKGVERSION}
+lib/klayout/lay_plugins/liblay_plugin.${RUBY_DLEXT}
+lib/klayout/lay_plugins/liblay_plugin.so.0
+lib/klayout/lay_plugins/liblay_plugin.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/lay_plugins/liblay_plugin.so.${PKGVERSION}
 lib/klayout/lay_plugins/liblefdef_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/liblefdef_ui.so.0
 lib/klayout/lay_plugins/liblefdef_ui.so.${PKGVERSION_MAJOR_MINOR}
@@ -83,6 +100,10 @@ lib/klayout/lay_plugins/libmag_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/libmag_ui.so.0
 lib/klayout/lay_plugins/libmag_ui.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/lay_plugins/libmag_ui.so.${PKGVERSION}
+lib/klayout/lay_plugins/libmaly_ui.${RUBY_DLEXT}
+lib/klayout/lay_plugins/libmaly_ui.so.0
+lib/klayout/lay_plugins/libmaly_ui.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/lay_plugins/libmaly_ui.so.${PKGVERSION}
 lib/klayout/lay_plugins/libnet_tracer_ui.${RUBY_DLEXT}
 lib/klayout/lay_plugins/libnet_tracer_ui.so.0
 lib/klayout/lay_plugins/libnet_tracer_ui.so.${PKGVERSION_MAJOR_MINOR}
@@ -211,6 +232,10 @@ lib/klayout/libklayout_lym.${RUBY_DLEXT}
 lib/klayout/libklayout_lym.so.0
 lib/klayout/libklayout_lym.so.${PKGVERSION_MAJOR_MINOR}
 lib/klayout/libklayout_lym.so.${PKGVERSION}
+lib/klayout/libklayout_pex.${RUBY_DLEXT}
+lib/klayout/libklayout_pex.so.0
+lib/klayout/libklayout_pex.so.${PKGVERSION_MAJOR_MINOR}
+lib/klayout/libklayout_pex.so.${PKGVERSION}
 lib/klayout/libklayout_pya.${RUBY_DLEXT}
 lib/klayout/libklayout_pya.so.0
 lib/klayout/libklayout_pya.so.${PKGVERSION_MAJOR_MINOR}
@@ -251,6 +276,8 @@ lib/klayout/pymod/klayout/lay/__init__.py
 lib/klayout/pymod/klayout/laycore.so
 lib/klayout/pymod/klayout/lib/__init__.py
 lib/klayout/pymod/klayout/libcore.${RUBY_DLEXT}
+lib/klayout/pymod/klayout/pex/__init__.py
+lib/klayout/pymod/klayout/pexcore.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/pya/__init__.py
 lib/klayout/pymod/klayout/pyacore.so
 lib/klayout/pymod/klayout/rdb/__init__.py
