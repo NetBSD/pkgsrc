@@ -7,13 +7,21 @@
 #	list of key words which speicifies conditionally depending
 #	php packages.
 #
-#	Possible:	imap json mcrypt
+#	Possible:	apcu imap json mcrypt opcache
 #	Default:	(empty)
 #
 .if !defined(PHP_COMPAT_MK)
 PHP_COMPAT_MK:=	# empty
 
 .include "../../lang/php/phpversion.mk"
+
+.if ${PHP_REQUIRE_MODULE:Mapcu}
+. if ${PHP_VER} < 70
+DEPENDS+=	${PHP_PKG_PREFIX}-apcu<5:../../www/php-apcu4
+. else
+DEPENDS+=	${PHP_PKG_PREFIX}-apcu>=5:../../www/php-apcu
+. endif
+.endif # apcu
 
 .if ${PHP_REQUIRE_MODULE:Mimap}
 . if ${PHP_VER} < 84
@@ -36,5 +44,11 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 .  endif
 .endif # mcrypt
+
+.if ${PHP_REQUIRE_MODULE:Mopcache}
+. if ${PHP_VER} < 85
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
+. endif
+.endif # opcache
 
 .endif	# PHP_COMPAT_MK
