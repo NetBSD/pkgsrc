@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/04/23 18:12:56 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/07 09:25:41 pin Exp $
 
-DISTNAME=	bulletty-0.2.2
+DISTNAME=	bulletty-0.3.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CrociDB/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
