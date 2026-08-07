@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/05/17 14:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/07 17:28:28 he Exp $
 
 DISTNAME=	libkiwix-14.2.1
 CATEGORIES=	www textproc
@@ -30,4 +30,5 @@ BUILDLINK_API_DEPENDS.libzim+=	libzim>=9.4.0
 .include "../../textproc/libzim/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
