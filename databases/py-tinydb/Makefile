@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/06/28 15:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/07 09:14:19 adam Exp $
 
-DISTNAME=	tinydb-4.8.2
+DISTNAME=	tinydb-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tinydb/}
 
