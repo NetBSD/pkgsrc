@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/05/03 16:39:13 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2026/08/07 15:54:24 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -11,6 +11,13 @@ SUBST_STAGE.man-so=	pre-build
 SUBST_FILES.man-so=	docs/man/*.[0-9]
 SUBST_SED.man-so=	-e 's,^\.so \([^/]*\)\.\([0-9]\)$$,.so man\2/\1.\2,'
 SUBST_NOOP_OK.man-so=	yes
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded TOOLS_DIR references.
+SUBST_STAGE.paths=	post-build
+SUBST_FILES.paths=	scripts/upsdrvsvcctl/nut-driver-enumerator.sh
+SUBST_SED.paths=	-e 's,${TOOLS_CMD.tail},${TOOLS_PATH.tail},'
+SUBST_NOOP_OK.paths=	yes
 
 # Don't regenerate any files in tools/.
 TOOLS_SCRIPT.perl=	exit 1
