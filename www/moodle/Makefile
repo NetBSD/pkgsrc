@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2026/08/06 14:18:58 mef Exp $
+# $NetBSD: Makefile,v 1.112 2026/08/07 01:41:55 taca Exp $
 
 DISTNAME=	moodle-5.2.1
 CATEGORIES=	www
@@ -20,8 +20,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=${PHP_BASE_VERS}:../../security/php-sodium
+
+PHP_REQUIRE_MODULE=	json opcache
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
@@ -85,6 +86,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${MOODLEDATADIR}
 	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MOODLEDATADIR}
 
-.include "../../lang/php/json.mk"
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"

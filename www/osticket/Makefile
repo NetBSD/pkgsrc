@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/08/01 17:28:51 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/07 01:41:56 taca Exp $
 
 DISTNAME=	osticket-v1.18.4
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -27,10 +27,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
-PHP_REQUIRE_MODULE=	imap
+PHP_REQUIRE_MODULE=	imap opcache
 
 PHP_VERSIONS_ACCEPTED=	82 83 84 # does not support 5.6
 

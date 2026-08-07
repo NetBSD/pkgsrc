@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/08/03 23:38:50 wen Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/07 01:41:55 taca Exp $
 
 DISTNAME=	drupal-11.4.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -11,12 +11,12 @@ COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 PHP_VERSIONS_ACCEPTED=	83 84 85
+PHP_REQUIRE_MODULE=	opcache
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
@@ -87,5 +87,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${DRUPAL}
 
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
