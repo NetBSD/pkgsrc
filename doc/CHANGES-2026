@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5041 2026/08/06 20:13:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5042 2026/08/07 00:57:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7451,3 +7451,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mimalloc to 3.4.5 [adam 2026-08-06]
 	Updated devel/apr-util to 1.6.4 [wiz 2026-08-06]
 	Updated net/arti to 2.5.1 [wiz 2026-08-06]
+	Updated cad/klayout to 0.30.10 [mef 2026-08-07]
