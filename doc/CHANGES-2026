@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5063 2026/08/08 06:10:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5064 2026/08/08 06:41:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7486,3 +7486,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-prompt_toolkit to 3.0.53 [adam 2026-08-08]
 	Updated devel/py-cachetools to 7.1.7 [adam 2026-08-08]
 	Updated misc/py-platformdirs to 4.11.1 [adam 2026-08-08]
+	Updated emulators/libspectrum to 1.6.3 [adam 2026-08-08]
+	Updated emulators/fuse-emulator to 1.9.1 [adam 2026-08-08]
+	Updated emulators/fuse-emulator-utils to 1.4.6 [adam 2026-08-08]
