@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.88 2026/01/31 19:21:31 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.89 2026/08/08 08:16:29 dsainty Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -46,6 +46,9 @@ CONFIGURE_ARGS+=	--with-charset=US-ASCII
 
 # This *should* be set at run-time.
 CONFIGURE_ARGS+=	--disable-messagel10n
+
+# Disable NLS to ensure build consistency (and match the current PLIST)
+CONFIGURE_ARGS+=	--disable-nls
 
 CONFIGURE_ARGS+=	--disable-help_cgi
 CONFIGURE_ARGS+=	--enable-color
