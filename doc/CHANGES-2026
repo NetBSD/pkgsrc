@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5067 2026/08/08 07:47:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5068 2026/08/08 11:59:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7493,3 +7493,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pip to 26.2.1 [wiz 2026-08-08]
 	Updated textproc/ugrep to 7.8.4 [adam 2026-08-08]
 	Updated net/rclone to 1.75.0 [adam 2026-08-08]
+	Updated www/palemoon-gtk3 to 34.3.2 [nia 2026-08-08]
+	Updated www/palemoon to 34.3.2nb1 [nia 2026-08-08]
