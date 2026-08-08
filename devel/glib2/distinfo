@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.348 2026/08/01 17:26:11 adam Exp $
+$NetBSD: distinfo,v 1.349 2026/08/08 22:59:54 mef Exp $
 
 BLAKE2s (glib-2.88.3.tar.xz) = 44b95662b78afc2bd2e1f839da7cc00e790495c481a13d5332fc6a35bacbd258
 SHA512 (glib-2.88.3.tar.xz) = 9e2b4985d5e4e06c6897a33cf8c100b9303528ebd72152c10e4cb734fa62fc011c84b816b20f686a3b2aac9a4a5a46f33e7517b4c4c7f3c25c75ac3ddc11f844
@@ -23,6 +23,7 @@ SHA1 (patch-glib_gthread.c) = 2485f63f27090f99e846c3b58432f6450cc95158
 SHA1 (patch-glib_tests_hash.c) = a7e19ca55fcbbc0b188c34755cae5b6b65b67f1a
 SHA1 (patch-glib_tests_include.c) = 12d98caebfb87c1146821d518c37c45f97fc7be0
 SHA1 (patch-glib_tests_meson.build) = 40ce43a49ae7084116facac6b3926c5e545f6721
+SHA1 (patch-glib_tests_testing.c) = b70675d41c6f6d1530bcce29b05d5649ef6b299b
 SHA1 (patch-glib_tests_thread.c) = 84f46a31cbc7cdfd9503da73f8b4f9654201964f
 SHA1 (patch-gmodule_gmodule-dl.c) = a4b562db74a861abc7e2c7033237cd34c27626d4
 SHA1 (patch-gmodule_gmodule.c) = b5105399d693d3e127abfde9b32e643b8150aa94
