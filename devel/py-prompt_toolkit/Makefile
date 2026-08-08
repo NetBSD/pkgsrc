@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/08/27 20:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/08/08 06:07:15 adam Exp $
 
-DISTNAME=	prompt_toolkit-3.0.52
+DISTNAME=	prompt_toolkit-3.0.53
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prompt_toolkit/}
@@ -11,7 +11,7 @@ COMMENT=	Library for building powerful interactive command lines
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
+DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.4:../../devel/py-wcwidth
 
 USE_LANGUAGES=	# none
 
