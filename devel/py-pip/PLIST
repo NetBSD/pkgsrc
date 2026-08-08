@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/05/10 13:50:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/08/08 07:40:20 wiz Exp $
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -38,9 +38,24 @@ ${PYSITELIB}/pip/__pip-runner__.pyo
 ${PYSITELIB}/pip/_internal/__init__.py
 ${PYSITELIB}/pip/_internal/__init__.pyc
 ${PYSITELIB}/pip/_internal/__init__.pyo
-${PYSITELIB}/pip/_internal/build_env.py
-${PYSITELIB}/pip/_internal/build_env.pyc
-${PYSITELIB}/pip/_internal/build_env.pyo
+${PYSITELIB}/pip/_internal/build_env/__init__.py
+${PYSITELIB}/pip/_internal/build_env/__init__.pyc
+${PYSITELIB}/pip/_internal/build_env/__init__.pyo
+${PYSITELIB}/pip/_internal/build_env/base.py
+${PYSITELIB}/pip/_internal/build_env/base.pyc
+${PYSITELIB}/pip/_internal/build_env/base.pyo
+${PYSITELIB}/pip/_internal/build_env/installer.py
+${PYSITELIB}/pip/_internal/build_env/installer.pyc
+${PYSITELIB}/pip/_internal/build_env/installer.pyo
+${PYSITELIB}/pip/_internal/build_env/noop.py
+${PYSITELIB}/pip/_internal/build_env/noop.pyc
+${PYSITELIB}/pip/_internal/build_env/noop.pyo
+${PYSITELIB}/pip/_internal/build_env/venv.py
+${PYSITELIB}/pip/_internal/build_env/venv.pyc
+${PYSITELIB}/pip/_internal/build_env/venv.pyo
+${PYSITELIB}/pip/_internal/build_env/virtual.py
+${PYSITELIB}/pip/_internal/build_env/virtual.pyc
+${PYSITELIB}/pip/_internal/build_env/virtual.pyo
 ${PYSITELIB}/pip/_internal/cache.py
 ${PYSITELIB}/pip/_internal/cache.pyc
 ${PYSITELIB}/pip/_internal/cache.pyo
@@ -483,6 +498,7 @@ ${PYSITELIB}/pip/_vendor/README.rst
 ${PYSITELIB}/pip/_vendor/__init__.py
 ${PYSITELIB}/pip/_vendor/__init__.pyc
 ${PYSITELIB}/pip/_vendor/__init__.pyo
+${PYSITELIB}/pip/_vendor/bom.cdx.json
 ${PYSITELIB}/pip/_vendor/cachecontrol/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/cachecontrol/__init__.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/__init__.pyc
@@ -570,6 +586,12 @@ ${PYSITELIB}/pip/_vendor/idna/LICENSE.md
 ${PYSITELIB}/pip/_vendor/idna/__init__.py
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyc
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyo
+${PYSITELIB}/pip/_vendor/idna/__main__.py
+${PYSITELIB}/pip/_vendor/idna/__main__.pyc
+${PYSITELIB}/pip/_vendor/idna/__main__.pyo
+${PYSITELIB}/pip/_vendor/idna/cli.py
+${PYSITELIB}/pip/_vendor/idna/cli.pyc
+${PYSITELIB}/pip/_vendor/idna/cli.pyo
 ${PYSITELIB}/pip/_vendor/idna/codec.py
 ${PYSITELIB}/pip/_vendor/idna/codec.pyc
 ${PYSITELIB}/pip/_vendor/idna/codec.pyo
@@ -680,6 +702,9 @@ ${PYSITELIB}/pip/_vendor/platformdirs/__init__.pyo
 ${PYSITELIB}/pip/_vendor/platformdirs/__main__.py
 ${PYSITELIB}/pip/_vendor/platformdirs/__main__.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/__main__.pyo
+${PYSITELIB}/pip/_vendor/platformdirs/_xdg.py
+${PYSITELIB}/pip/_vendor/platformdirs/_xdg.pyc
+${PYSITELIB}/pip/_vendor/platformdirs/_xdg.pyo
 ${PYSITELIB}/pip/_vendor/platformdirs/android.py
 ${PYSITELIB}/pip/_vendor/platformdirs/android.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/android.pyo
@@ -793,6 +818,9 @@ ${PYSITELIB}/pip/_vendor/requests/__version__.pyo
 ${PYSITELIB}/pip/_vendor/requests/_internal_utils.py
 ${PYSITELIB}/pip/_vendor/requests/_internal_utils.pyc
 ${PYSITELIB}/pip/_vendor/requests/_internal_utils.pyo
+${PYSITELIB}/pip/_vendor/requests/_types.py
+${PYSITELIB}/pip/_vendor/requests/_types.pyc
+${PYSITELIB}/pip/_vendor/requests/_types.pyo
 ${PYSITELIB}/pip/_vendor/requests/adapters.py
 ${PYSITELIB}/pip/_vendor/requests/adapters.pyc
 ${PYSITELIB}/pip/_vendor/requests/adapters.pyo
@@ -826,6 +854,7 @@ ${PYSITELIB}/pip/_vendor/requests/models.pyo
 ${PYSITELIB}/pip/_vendor/requests/packages.py
 ${PYSITELIB}/pip/_vendor/requests/packages.pyc
 ${PYSITELIB}/pip/_vendor/requests/packages.pyo
+${PYSITELIB}/pip/_vendor/requests/py.typed
 ${PYSITELIB}/pip/_vendor/requests/sessions.py
 ${PYSITELIB}/pip/_vendor/requests/sessions.pyc
 ${PYSITELIB}/pip/_vendor/requests/sessions.pyo

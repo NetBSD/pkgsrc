@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2026/06/01 07:33:11 adam Exp $
+# $NetBSD: Makefile,v 1.93 2026/08/08 07:40:20 wiz Exp $
 
-DISTNAME=	pip-26.1.2
+DISTNAME=	pip-26.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -24,7 +24,7 @@ PY_RENAME_BINARIES+=	pip
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/pip/_internal && \
-	${RM} build_env.py.orig commands/install.py.orig \
+	${RM} build_env/virtual.py.orig commands/install.py.orig \
 		operations/install/wheel.py.orig \
 		req/__init__.py.orig req/req_install.py.orig
 	${RM} -f ${DESTDIR}${PREFIX}/bin/pip3
