@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/07/04 04:00:48 taca Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/08/08 13:24:33 taca Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -41,7 +41,7 @@ CARGO_CRATE_DEPENDS+=	core2-0.4.0
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.12
 CARGO_CRATE_DEPENDS+=	crc32fast-1.4.0
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
-CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.19
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.2
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6

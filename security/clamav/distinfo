@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2026/07/04 04:00:48 taca Exp $
+$NetBSD: distinfo,v 1.50 2026/08/08 13:24:33 taca Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -102,9 +102,9 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.38.crate) = cd804c8f2c3ec8027f1a28fc2406b92e8cb27989956cf7e27fb98f6e338704cf
 SHA512 (chrono-0.4.38.crate) = 858e47e3facebd5383e71898f26b27d92fe4a69027e2cc47da2af59975ead7767355e0b699f4228eabe76a3eff8b2519c7cecf8b60dc3fc60fbf9b28e2f3d4d9
 Size (chrono-0.4.38.crate) = 220559 bytes
-BLAKE2s (clamav-1.4.5.tar.gz) = e1fda10df1b5546d7d4c7e581dc5cf8a5fc4cc46c22411611b683687ce25e885
-SHA512 (clamav-1.4.5.tar.gz) = 1b20b51c532892287dcefc7bdd4a154b33147bee3e39650993b6bbe93995ec3f3491c32d247b507cc2e5de42e7da98fc4060c3606e364c91bdd3425637b50d7c
-Size (clamav-1.4.5.tar.gz) = 46095554 bytes
+BLAKE2s (clamav-1.4.6.tar.gz) = 088ae5ff536c73898518b2cf5f75deef1a32eb257b4e74216d554f6bbcffea9e
+SHA512 (clamav-1.4.6.tar.gz) = 5e1978befd63eb1095fc203b41ca5e9084e6eeae350660012fb19e68c74a454c11adae69459dd6f521c5a99d0ff57fd976b19b9e768776a94684fa186440a894
+Size (clamav-1.4.6.tar.gz) = 45990124 bytes
 BLAKE2s (clang-sys-1.7.0.crate) = e2d4f063bac7ae563cef9363b02884fc718864129c02ae62606757b232db9c22
 SHA512 (clang-sys-1.7.0.crate) = e544984d5bd76824ea2093f43f98b59a99e1ca8a5de40e49164b870ed4a91a530f3492faf0678190b91e74aa5d122bdbb32c649998d0ce24912dfb0b83ed6b81
 Size (clang-sys-1.7.0.crate) = 42088 bytes
@@ -126,9 +126,9 @@ Size (crc32fast-1.4.0.crate) = 38665 bytes
 BLAKE2s (crossbeam-deque-0.8.5.crate) = b7cdbff28b832e07a9d55043d30d145d09bbe2e0216369b37a8491e1005e9c98
 SHA512 (crossbeam-deque-0.8.5.crate) = 0f0c9745763ab156136227cf1415de514952a3f8282ffe413cc249f9f4b345b029940e6a6c87b3be8331a7c783655a35b89c7a2547360ea5ae10aa64ba7ae864
 Size (crossbeam-deque-0.8.5.crate) = 21726 bytes
-BLAKE2s (crossbeam-epoch-0.9.18.crate) = 6c1696682cc558719ff48faa4ffdc28b562cafea7f084f9b09a99f317def636e
-SHA512 (crossbeam-epoch-0.9.18.crate) = 0a8a199b9d77f4e28e91fe0a0cbff7e0dec58cac283631fd972477fa912d2f6ddfddaed2c695e4978b01cb5440b702822af6333e7c3dfbcb9a2c2086999516b2
-Size (crossbeam-epoch-0.9.18.crate) = 46875 bytes
+BLAKE2s (crossbeam-epoch-0.9.20.crate) = 1d1909914a24b2ef00bc6aa301497170fb0ac5424990c9324867ed32b4269eeb
+SHA512 (crossbeam-epoch-0.9.20.crate) = ee89c4953aae073b6607a3938b9fea812f222a8d8f321806d5150880a171ea01acd5d1cbbcc46d92f2ac7a788f6f20b7cfaf5845bdbd1a21938c7070ce6f4fc9
+Size (crossbeam-epoch-0.9.20.crate) = 47545 bytes
 BLAKE2s (crossbeam-utils-0.8.19.crate) = e27f270c104f15e0674d86fb6a78b976eac1b5c4c45904489c78bc24c394770d
 SHA512 (crossbeam-utils-0.8.19.crate) = 6e742fbb0d2a6371db87e81f8ac583259530a288237d0e8347394581c60004703a822318ec945936c410bb44001b115d8d986bb264e5b2d8091bb63a8edd93a9
 Size (crossbeam-utils-0.8.19.crate) = 42328 bytes
