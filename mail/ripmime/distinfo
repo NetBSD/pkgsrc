@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:54:26 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/08/08 22:18:57 mef Exp $
 
 BLAKE2s (ripmime-1.4.0.10.tar.gz) = d73b69b5d76e1ec3063595d0f485d1dd28861634943afc3ddbe7626205afafc4
 SHA512 (ripmime-1.4.0.10.tar.gz) = e1eae0ad93a50e19ab1966a6f95ae8704e59bc081f89da1e2894a3bb2a2eaea8b0fc4709ec29d126053517d56c72d6ee2a77f0d8e3fb5f223255d45e0b515ab0
 Size (ripmime-1.4.0.10.tar.gz) = 174610 bytes
-SHA1 (patch-aa) = b2e0bbabbf58307458c830cbd816685c14565546
+SHA1 (patch-aa) = 46a824b3201e7067dadb0868da30332a7887bcec
 SHA1 (patch-ab) = cde9aed0e6df4540b4e563953a77fae69944facc
 SHA1 (patch-ac) = 71fe6aaaf08c2b2c79f5d554be8a37fd26cdf796
 SHA1 (patch-ripOLE_Makefile) = 50af6c9f8ee0a93efdfe03ef6fc2bc7b5c9f03f8
