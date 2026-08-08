@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5068 2026/08/08 11:59:22 nia Exp $
+$NetBSD: CHANGES-2026,v 1.5069 2026/08/08 12:00:31 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7495,3 +7495,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rclone to 1.75.0 [adam 2026-08-08]
 	Updated www/palemoon-gtk3 to 34.3.2 [nia 2026-08-08]
 	Updated www/palemoon to 34.3.2nb1 [nia 2026-08-08]
+	Updated audio/din to 65 [fox 2026-08-08]
