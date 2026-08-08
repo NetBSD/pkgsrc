@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5066 2026/08/08 07:40:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5067 2026/08/08 07:47:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7491,3 +7491,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator-utils to 1.4.6 [adam 2026-08-08]
 	Updated math/ggml to 0.19.0 [wiz 2026-08-08]
 	Updated devel/py-pip to 26.2.1 [wiz 2026-08-08]
+	Updated textproc/ugrep to 7.8.4 [adam 2026-08-08]
+	Updated net/rclone to 1.75.0 [adam 2026-08-08]
