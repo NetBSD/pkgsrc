@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2026/05/19 12:58:01 adam Exp $
+# $NetBSD: options.mk,v 1.6 2026/08/08 06:40:46 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fuse
 PKG_SUPPORTED_OPTIONS=		# empty
@@ -19,5 +19,4 @@ CONFIGURE_ARGS+=	--without-gtk
 .if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--with-sdl
 PLIST.sdl=		yes
-.include "../../devel/SDL/buildlink3.mk"
 .endif
