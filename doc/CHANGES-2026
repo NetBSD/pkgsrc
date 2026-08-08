@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5073 2026/08/08 15:52:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5074 2026/08/08 19:16:38 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7501,3 +7501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/clamav to 1.4.6 [taca 2026-08-08]
 	Updated security/clamav-doc to 1.4.6 [taca 2026-08-08]
 	Updated lang/py-cmake-language-server to 0.1.11nb1 [wiz 2026-08-08]
+	Updated net/dnscontrol to 4.46.0 [drixter 2026-08-08]
