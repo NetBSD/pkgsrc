@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2025/02/12 06:15:59 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/08 15:52:29 wiz Exp $
 
 DISTNAME=	cmake_language_server-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmake-language-server/}
 
@@ -20,9 +21,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-datadir>=1.4.1:../../devel/py-test-datadir
 # only for tests
 USE_LANGUAGES=	c c++
 
+PY_RENAME_BINARIES=	cmake-language-server
+
+# as of 0.1.11nb1
+# 2 failed, 7 passed, 67 warnings, 7 errors
+
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} cmake-language-server cmake-language-server-${PYVERSSUFFIX} || ${TRUE}
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/cmake_language_server/server.py.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
