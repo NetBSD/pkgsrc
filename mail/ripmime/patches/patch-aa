@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2013/08/30 16:53:45 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2026/08/08 22:18:57 mef Exp $
 
---- Makefile.orig	2011-12-05 08:46:23.000000000 +0000
-+++ Makefile
+To honor pkgsrc FLAGS, LIBS,CFLAGS,LDFLAGS
+
+--- Makefile.orig	2011-12-05 17:46:23.000000000 +0900
++++ Makefile	2026-08-09 07:15:23.417250901 +0900
 @@ -15,7 +15,7 @@ VERSION=0.1.14
  #	use our recommended settings.
  #CFLAGS ?= -Wall -g -O2 -Werror $(CPU_OPTS)
@@ -20,3 +22,12 @@ $NetBSD: patch-aa,v 1.6 2013/08/30 16:53:45 joerg Exp $
  #COMPONENTS= 
  
  #  DEBUGGING Related Flags
+@@ -66,7 +66,7 @@ sco: ${OFILES}
+ 	${CC} ${CFLAGS} ripmime.c ${OFILES} -o ripmime -lsocket
+ 
+ ripmime: ${OFILES} ripmime.c buildcodes.h
+-	${CC} ${CFLAGS} $(COMPONENTS) ripmime.c ${OFILES} -o ripmime ${LIBS}
++	${CC} ${CFLAGS} ${LDFLAGS} $(COMPONENTS) ripmime.c ${OFILES} -o ripmime ${LIBS}
+ 
+ riptest: ${OFILES}
+ 	${CC} ${CFLAGS} riptest.c ${OFILES} -o riptest
