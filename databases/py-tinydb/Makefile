@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/08/07 09:14:19 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/08 18:03:02 wiz Exp $
 
 DISTNAME=	tinydb-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/msiemens/tinydb
 COMMENT=	Tiny, document oriented database optimized for your happiness
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4nb1:../../devel/py-poetry
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
