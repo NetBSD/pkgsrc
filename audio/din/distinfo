@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2026/05/10 06:26:14 fox Exp $
+$NetBSD: distinfo,v 1.39 2026/08/08 12:00:08 fox Exp $
 
-BLAKE2s (din-64.2.tar.gz) = a2c9414608ef7a8e777ce20e42667329ecbc06082adb19a4db603345978edb94
-SHA512 (din-64.2.tar.gz) = e340388f7dc3131c7f3d188e5a05084e5e34331e4572843537e8656aa3db0d750799f2283afc4d62d807f35a7a5c401967c8b3f852f2a5b60a2de7e0d5fbafbc
-Size (din-64.2.tar.gz) = 3717056 bytes
+BLAKE2s (din-65.tar.gz) = b0c20b5863419bb4f8c0ec4593482aa3bae356a07280ef305d0b572fed5aecb2
+SHA512 (din-65.tar.gz) = 2b56e03fb07f2d2d74f6e77822ac255eb500e384f469ff7f19aa37602d76cbe8237c4ee964d944193f0f1dbd54dab736c7396b2aef26e6fa9a16e3f1017d1435
+Size (din-65.tar.gz) = 3717290 bytes
 SHA1 (patch-src_Makefile.am) = a6db4140657854fef11f8b1b512485974fc63e93
 SHA1 (patch-src_Makefile.in) = bc3021e082be0ed88c7679098a9361e4a5d893e1
 SHA1 (patch-src_RtMidi.h) = 526074e156deef377bd8daf95f799b6c0db32e0b
