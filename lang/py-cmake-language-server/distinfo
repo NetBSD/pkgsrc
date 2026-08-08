@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.11 2025/02/12 06:15:59 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/08 15:52:29 wiz Exp $
 
+BLAKE2s (107.patch) = 4e77cb090e4b3815c038e7e738fff1db0abeb81436fd4ae28b5125fdb8f688ed
+SHA512 (107.patch) = 34a1068f22a569f737c25ee3aecbc0d2caf1a482ca720b8b3c5c4cbacc034f0d830b9ca6248a6fb44902d5ca1b236aa8fd9f737e1910ffc7ef992b26da9e2d4f
+Size (107.patch) = 204040 bytes
 BLAKE2s (cmake_language_server-0.1.11.tar.gz) = e2ce92be1b201156092669fb23f0defb1e80bff9c67eccca1bdd67a7ea2573b4
 SHA512 (cmake_language_server-0.1.11.tar.gz) = 25ecacf06330d2dd081773ae6b3e4a0c2b61f0ed81658555b1905330c2249bd894ca91c884b2322a16b82572d2f124410a8326d0d2ddcc9e1ce3e2140caeb970
 Size (cmake_language_server-0.1.11.tar.gz) = 11849 bytes
+SHA1 (patch-cmake__language__server_server.py) = f43b0db8a65838e9a2c04486426004d35042e494
+SHA1 (patch-tests_conftest.py) = ace870781553adb490035b655b8183dbf94c99ae
+SHA1 (patch-tests_test__server.py) = 90334599f85d4bf70b50c36089601b49e7f669f0
