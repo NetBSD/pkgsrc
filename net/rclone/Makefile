@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2026/07/10 09:10:39 adam Exp $
+# $NetBSD: Makefile,v 1.107 2026/08/08 07:46:52 adam Exp $
 
 # When updating changelog is available in
 # ${WRKSRC}/docs/content/changelog.md
-DISTNAME=	rclone-1.74.4
+DISTNAME=	rclone-1.75.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rclone/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
