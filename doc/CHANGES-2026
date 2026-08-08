@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5071 2026/08/08 12:40:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5072 2026/08/08 13:25:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7498,3 +7498,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/din to 65 [fox 2026-08-08]
 	Updated audio/fasttracker2 to 2.22 [fox 2026-08-08]
 	Updated devel/ast-grep to 0.45.1 [wiz 2026-08-08]
+	Updated security/clamav to 1.4.6 [taca 2026-08-08]
+	Updated security/clamav-doc to 1.4.6 [taca 2026-08-08]
