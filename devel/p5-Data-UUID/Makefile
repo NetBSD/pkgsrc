@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/07/16 19:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/08/08 03:27:30 dsainty Exp $
 
 DISTNAME=	Data-UUID-1.227
 PKGNAME=	p5-${DISTNAME}
@@ -15,9 +15,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Data/UUID/.packlist
-
-OPSYSVARS+=		MAKE_PARAMS
-MAKE_PARAMS.Darwin+=	DEFINE=-D_POSIX_C_SOURCE
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
