@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2026/07/22 12:34:33 adam Exp $
+# $NetBSD: Makefile,v 1.109 2026/08/09 21:21:10 wiz Exp $
 
 DISTNAME=	grpcio-1.82.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
@@ -24,6 +25,12 @@ MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_CARES=1
 MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
 MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_RE2=1
 MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+
+SUBST_CLASSES+=		prefix
+SUBST_SED.prefix=	-e 's,"/usr","'${PREFIX:Q}'",'
+SUBST_FILES.prefix=	setup.py
+SUBST_MESSAGE.prefix=	Adapting search path for pkgsrc.
+SUBST_STAGE.prefix=	pre-configure
 
 pre-test:
 	${RM} -f ${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/googlemock/test/*py
