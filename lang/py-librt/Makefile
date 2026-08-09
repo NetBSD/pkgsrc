@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/07/13 12:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/09 14:14:35 wiz Exp $
 
-DISTNAME=	librt-0.13.0
+DISTNAME=	librt-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/librt/}
