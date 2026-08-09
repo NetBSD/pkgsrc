@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5108 2026/08/09 17:06:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5109 2026/08/09 17:10:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7549,3 +7549,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-proto-plus to 1.28.3 [wiz 2026-08-09]
 	Updated print/py-pspdfutils to 3.3.16 [wiz 2026-08-09]
 	Updated devel/py-setuptools to 84.0.0 [wiz 2026-08-09]
+	Updated databases/rrdtool to 1.11.0 [wiz 2026-08-09]
