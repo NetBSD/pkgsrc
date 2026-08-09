@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_browser_api_networking__private_networking__private__delegate__factory.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp $
+$NetBSD: patch-extensions_browser_api_networking__private_networking__private__delegate__factory.cc,v 1.24 2026/08/09 06:31:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ extensions/browser/api/networking_private/networking_private_delegate_factory.cc
 @@ -12,7 +12,7 @@
  

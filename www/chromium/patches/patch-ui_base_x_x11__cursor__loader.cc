@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.24 2026/08/09 06:31:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
-@@ -38,7 +38,7 @@
+@@ -39,7 +39,7 @@
  #include "ui/gfx/x/connection.h"
  #include "ui/gfx/x/xproto.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.23 2026/07/08 13:42:33 kikad
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -80,7 +80,11 @@ std::string CursorPathFromLibXcursor() {
+@@ -81,7 +81,11 @@ std::string CursorPathFromLibXcursor() {
      void operator()(void* ptr) const { dlclose(ptr); }
    };
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.23 2026/07/08 13:42:33 kikad
    if (!lib)
      return "";
  
-@@ -235,7 +239,7 @@ scoped_refptr<base::RefCountedMemory> Re
+@@ -234,7 +238,7 @@ scoped_refptr<base::RefCountedMemory> Re
      const std::string& rm_xcursor_theme) {
    constexpr const char kDefaultTheme[] = "default";
    std::string themes[] = {
@@ -36,7 +36,7 @@ $NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.23 2026/07/08 13:42:33 kikad
      // The toolkit theme has the highest priority.
      LinuxUi::instance() ? LinuxUi::instance()->GetCursorThemeName()
                          : std::string(),
-@@ -429,7 +433,7 @@ uint32_t XCursorLoader::GetPreferredCurs
+@@ -428,7 +432,7 @@ uint32_t XCursorLoader::GetPreferredCurs
      return size;
    }
  

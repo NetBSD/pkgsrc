@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_file__utils.cc,v 1.9 2026/07/08 13:42:31 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_file__utils.cc,v 1.10 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/file_utils.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/perfetto/src/base/file_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/perfetto/src/base/file_utils.cc
 @@ -60,8 +60,11 @@
  #include <unistd.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-third__party_perfetto_src_base_file__utils.cc,v 1.9 2026/07/08 13
  // For inotify. QNX doesn't have full support for inotify_init1().
  #include <sys/inotify.h>
  #endif
-@@ -640,8 +643,11 @@ std::optional<uint64_t> GetFileSize(Plat
+@@ -649,8 +652,11 @@ std::optional<uint64_t> GetFileSize(Plat
  
  // LinuxFileWatch
  

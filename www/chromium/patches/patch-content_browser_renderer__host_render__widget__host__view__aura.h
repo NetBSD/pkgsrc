@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.h,v 1.23 2026/07/08 13:42:24 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.h,v 1.24 2026/08/09 06:31:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.h
-@@ -293,7 +293,7 @@ class CONTENT_EXPORT RenderWidgetHostVie
+@@ -299,7 +299,7 @@ class CONTENT_EXPORT RenderWidgetHostVie
    ukm::SourceId GetClientSourceForMetrics() const override;
    bool ShouldDoLearning() override;
  

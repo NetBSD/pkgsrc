@@ -1,17 +1,17 @@
-$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.3 2026/07/08 13:42:30 kikadf Exp $
+$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.4 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/libphonenumber/src/cpp/src/phonenumbers/base/thread_checker.h
 @@ -22,7 +22,7 @@
  // Note that I18N_PHONENUMBERS_NO_THREAD_SAFETY must be defined only to let the
  // user of the library know that it can't be used in a thread-safe manner when
  // it is not depending on Boost.
 -#if !defined(__linux__) && !defined(__APPLE__) && !defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD) && \
-+#if !defined(__linux__) && !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD) && \
++#if !defined(__linux__) && !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__) &&  !defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD) && \
      !defined(I18N_PHONENUMBERS_NO_THREAD_SAFETY) && \
  	!((__cplusplus >= 201103L) && defined(I18N_PHONENUMBERS_USE_STDMUTEX)) && \
  	!defined(WIN32)
@@ -20,7 +20,7 @@ $NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread_
  
  #if !defined(NDEBUG) && !defined(I18N_PHONENUMBERS_USE_BOOST) && \
 -    (defined(__linux__) || defined(__APPLE__) || defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD))
-+    (defined(__linux__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD))
++    (defined(__linux__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(I18N_PHONENUMBERS_HAVE_POSIX_THREAD))
  
  #include <pthread.h>
  

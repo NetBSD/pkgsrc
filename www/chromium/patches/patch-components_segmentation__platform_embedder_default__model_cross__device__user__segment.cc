@@ -1,10 +1,10 @@
-$NetBSD: patch-components_segmentation__platform_embedder_default__model_cross__device__user__segment.cc,v 1.23 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_segmentation__platform_embedder_default__model_cross__device__user__segment.cc,v 1.24 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc
 @@ -122,7 +122,7 @@ void CrossDeviceUserSegment::ExecuteMode
  // Check for current device type and subtract it from the device count

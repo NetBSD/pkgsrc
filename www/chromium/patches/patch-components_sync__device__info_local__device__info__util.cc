@@ -1,12 +1,12 @@
-$NetBSD: patch-components_sync__device__info_local__device__info__util.cc,v 1.23 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_sync__device__info_local__device__info__util.cc,v 1.24 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/sync_device_info/local_device_info_util.cc
-@@ -84,7 +84,7 @@ void OnMachineStatisticsLoaded(LocalDevi
+@@ -91,7 +91,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  DeviceInfo::DeviceType GetLocalDeviceType() {
  #if BUILDFLAG(IS_CHROMEOS)
    return DeviceInfo::DeviceType::kChromeOS;
@@ -15,7 +15,7 @@ $NetBSD: patch-components_sync__device__info_local__device__info__util.cc,v 1.23
    return DeviceInfo::DeviceType::kLinux;
  #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
    switch (ui::GetDeviceFormFactor()) {
-@@ -107,7 +107,7 @@ DeviceInfo::DeviceType GetLocalDeviceTyp
+@@ -114,7 +114,7 @@ DeviceInfo::DeviceType GetLocalDeviceTyp
  DeviceInfo::OsType GetLocalDeviceOSType() {
  #if BUILDFLAG(IS_CHROMEOS)
    return DeviceInfo::OsType::kChromeOsAsh;

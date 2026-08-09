@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__drag__context.cc,v 1.8 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__drag__context.cc,v 1.9 2026/08/09 06:31:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_drag_context.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/base/x/x11_drag_context.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/base/x/x11_drag_context.cc
 @@ -15,7 +15,7 @@
  #include "ui/gfx/x/connection.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_sync__control__vsync__provider.h,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_gl_sync__control__vsync__provider.h,v 1.24 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/sync_control_vsync_provider.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/gl/sync_control_vsync_provider.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/gl/sync_control_vsync_provider.h
 @@ -31,7 +31,7 @@ class SyncControlVSyncProvider : public 
    bool SupportGetVSyncParametersIfAvailable() const override;

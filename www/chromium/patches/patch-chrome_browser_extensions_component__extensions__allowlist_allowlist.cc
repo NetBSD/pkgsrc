@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_component__extensions__allowlist_allowlist.cc,v 1.22 2026/07/08 13:42:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_component__extensions__allowlist_allowlist.cc,v 1.23 2026/08/09 06:31:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/component_extensions_allowlist/allowlist.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/extensions/component_extensions_allowlist/allowlist.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/extensions/component_extensions_allowlist/allowlist.cc
-@@ -53,7 +53,7 @@ bool IsComponentExtensionAllowlisted(con
+@@ -55,7 +55,7 @@ bool IsComponentExtensionAllowlisted(con
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  #endif  // BUILDFLAG(IS_CHROMEOS)
        extension_misc::kReadingModeGDocsHelperExtensionId,

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_modules_media_audio_audio__device__factory.cc,v 1.23 2026/07/08 13:42:29 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_media_audio_audio__device__factory.cc,v 1.24 2026/08/09 06:31:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_device_factory.cc
 @@ -33,7 +33,7 @@ namespace {
  // Set when the default factory is overridden.

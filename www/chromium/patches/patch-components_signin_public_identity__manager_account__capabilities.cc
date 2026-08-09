@@ -1,12 +1,12 @@
-$NetBSD: patch-components_signin_public_identity__manager_account__capabilities.cc,v 1.5 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_signin_public_identity__manager_account__capabilities.cc,v 1.6 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/signin/public/identity_manager/account_capabilities.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/signin/public/identity_manager/account_capabilities.cc
-@@ -146,7 +146,7 @@ signin::Tribool AccountCapabilities::can
+@@ -192,7 +192,7 @@ signin::Tribool AccountCapabilities::can
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

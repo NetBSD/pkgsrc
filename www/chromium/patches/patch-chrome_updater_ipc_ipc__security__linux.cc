@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_updater_ipc_ipc__security__linux.cc,v 1.12 2026/07/08 13:42:20 kikadf Exp $
+$NetBSD: patch-chrome_updater_ipc_ipc__security__linux.cc,v 1.13 2026/08/09 06:31:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/ipc/ipc_security_linux.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/updater/ipc/ipc_security_linux.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/updater/ipc/ipc_security_linux.cc
 @@ -16,7 +16,11 @@ namespace updater {
  

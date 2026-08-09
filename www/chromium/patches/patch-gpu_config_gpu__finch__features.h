@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.h,v 1.8 2026/07/08 13:42:25 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.h,v 1.9 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- gpu/config/gpu_finch_features.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ gpu/config/gpu_finch_features.h
-@@ -105,7 +105,7 @@ GPU_CONFIG_EXPORT BASE_DECLARE_FEATURE(k
+@@ -179,7 +179,7 @@ GPU_CONFIG_EXPORT BASE_DECLARE_FEATURE(k
  
  GPU_CONFIG_EXPORT BASE_DECLARE_FEATURE(kRemoveGPULegacyIPC);
  

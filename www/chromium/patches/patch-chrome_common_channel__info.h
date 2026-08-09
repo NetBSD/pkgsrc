@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_channel__info.h,v 1.23 2026/07/08 13:42:20 kikadf Exp $
+$NetBSD: patch-chrome_common_channel__info.h,v 1.24 2026/08/09 06:31:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/common/channel_info.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/common/channel_info.h
 @@ -11,7 +11,7 @@
  #include "build/branding_buildflags.h"

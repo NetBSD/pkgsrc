@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_accessibility_view__accessibility.cc,v 1.22 2026/07/08 13:42:34 kikadf Exp $
+$NetBSD: patch-ui_views_accessibility_view__accessibility.cc,v 1.23 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/accessibility/view_accessibility.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/views/accessibility/view_accessibility.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/views/accessibility/view_accessibility.cc
 @@ -36,7 +36,7 @@
  #include "ui/views/accessibility/view_ax_platform_node_delegate_win.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_focus_focus__manager.cc,v 1.23 2026/07/08 13:42:34 kikadf Exp $
+$NetBSD: patch-ui_views_focus_focus__manager.cc,v 1.24 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/focus/focus_manager.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/views/focus/focus_manager.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/views/focus/focus_manager.cc
-@@ -622,7 +622,7 @@ bool FocusManager::RedirectAcceleratorTo
+@@ -627,7 +627,7 @@ bool FocusManager::RedirectAcceleratorTo
      return false;
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_focus_focus__manager.cc,v 1.23 2026/07/08 13:42:34 kikad
    // Processing an accelerator can delete things. Because we
    // need these objects afterwards on Linux, save widget_ as weak pointer and
    // save the close_on_deactivate property value of widget_delegate in a
-@@ -640,7 +640,7 @@ bool FocusManager::RedirectAcceleratorTo
+@@ -645,7 +645,7 @@ bool FocusManager::RedirectAcceleratorTo
    const bool accelerator_processed =
        focus_manager->ProcessAccelerator(accelerator);
  

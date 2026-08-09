@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_ffmpeg_libavutil_cpu.c,v 1.23 2026/07/08 13:42:30 kikadf Exp $
+$NetBSD: patch-third__party_ffmpeg_libavutil_cpu.c,v 1.24 2026/08/09 06:31:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/cpu.c.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/ffmpeg/libavutil/cpu.c.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/ffmpeg/libavutil/cpu.c
 @@ -38,10 +38,7 @@
  #if HAVE_GETPROCESSAFFINITYMASK || HAVE_WINRT

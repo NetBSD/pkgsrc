@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_app__settings_web__app__settings__ui.h,v 1.23 2026/07/08 13:42:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_app__settings_web__app__settings__ui.h,v 1.24 2026/08/09 06:31:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/app_settings/web_app_settings_ui.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/webui/app_settings/web_app_settings_ui.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/webui/app_settings/web_app_settings_ui.h
 @@ -14,13 +14,13 @@
  #include "ui/webui/mojo_web_ui_controller.h"

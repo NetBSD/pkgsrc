@@ -1,10 +1,10 @@
-$NetBSD: patch-build_dotfile__settings.gni,v 1.14 2026/07/08 13:42:15 kikadf Exp $
+$NetBSD: patch-build_dotfile__settings.gni,v 1.15 2026/08/09 06:31:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/dotfile_settings.gni.orig	2026-07-06 22:58:46.000000000 +0000
+--- build/dotfile_settings.gni.orig	2026-08-05 20:17:42.000000000 +0000
 +++ build/dotfile_settings.gni
 @@ -24,6 +24,7 @@ build_dotfile_settings = {
      "//build/config/mac/mac_sdk.gni",

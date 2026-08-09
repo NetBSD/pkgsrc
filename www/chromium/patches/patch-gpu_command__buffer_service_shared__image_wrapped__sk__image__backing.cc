@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_wrapped__sk__image__backing.cc,v 1.23 2026/07/08 13:42:25 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_wrapped__sk__image__backing.cc,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc
 @@ -204,7 +204,7 @@ bool WrappedSkImageBacking::Initialize(c
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_ipc__desktop__environment.h,v 1.7 2026/07/08 13:42:27 kikadf Exp $
+$NetBSD: patch-remoting_host_ipc__desktop__environment.h,v 1.8 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/ipc_desktop_environment.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.h
 @@ -130,7 +130,7 @@ class IpcDesktopEnvironmentFactory : pub
        int terminal_id,

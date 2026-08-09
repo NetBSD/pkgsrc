@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_tracing_track.cc,v 1.23 2026/07/08 13:42:31 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_tracing_track.cc,v 1.24 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/track.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/perfetto/src/tracing/track.cc
 @@ -60,8 +60,9 @@ protos::gen::TrackDescriptor ProcessTrac
    auto desc = Track::Serialize();
@@ -18,7 +18,7 @@ $NetBSD: patch-third__party_perfetto_src_tracing_track.cc,v 1.23 2026/07/08 13:4
    std::string cmdline;
    if (base::ReadFile("/proc/self/cmdline", &cmdline)) {
      // Since cmdline is a zero-terminated list of arguments, this ends up
-@@ -179,7 +180,7 @@ namespace internal {
+@@ -176,7 +177,7 @@ namespace internal {
  namespace {
  
  uint64_t GetProcessStartTime() {

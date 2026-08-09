@@ -1,12 +1,21 @@
-$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.23 2026/07/08 13:42:26 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
-@@ -1134,7 +1134,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -682,7 +682,7 @@ void VideoDecoderPipeline::InitializeTas
+           &OOPVideoDecoder::GetOriginalFrame,
+           base::Unretained(static_cast<OOPVideoDecoder*>(decoder_.get())));
+     } else {
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_V4L2_CODEC)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_V4L2_CODEC)
+       if (!main_frame_pool_) {
+         get_original_frame_cb = base::NullCallback();
+       } else
+@@ -1141,7 +1141,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }
  #endif
  
@@ -15,7 +24,7 @@ $NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.23 2026/07/08 
    // Linux should always use a custom allocator (to allocate buffers using
    // libva) and a PlatformVideoFramePool.
    CHECK(allocator.has_value());
-@@ -1143,7 +1143,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1150,7 +1150,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    // VideoFrame::StorageType of VideoFrame::STORAGE_DMABUFS.
    main_frame_pool_->AsPlatformVideoFramePool()->SetCustomFrameAllocator(
        *allocator, VideoFrame::STORAGE_DMABUFS);
@@ -24,7 +33,7 @@ $NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.23 2026/07/08 
    // Linux w/ V4L2 should not use a custom allocator
    // Only tested with video_decode_accelerator_tests
    // TODO(wenst@) Test with full Chromium Browser
-@@ -1317,7 +1317,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1324,7 +1324,7 @@ VideoDecoderPipeline::PickDecoderOutputF
               << " VideoFrames";
      auxiliary_frame_pool_->set_parent_task_runner(decoder_task_runner_);
  

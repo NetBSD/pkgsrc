@@ -1,11 +1,11 @@
-$NetBSD: patch-remoting_tools_magi-mode_tests_testdata_mock__app.cc,v 1.2 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-agents_skills_magi-mode_tests_testdata_mock__app.cc,v 1.1 2026/08/09 06:31:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/tools/magi-mode/tests/testdata/mock_app.cc.orig	2026-07-06 22:58:46.000000000 +0000
-+++ remoting/tools/magi-mode/tests/testdata/mock_app.cc
+--- agents/skills/magi-mode/tests/testdata/mock_app.cc.orig	2026-08-05 20:17:42.000000000 +0000
++++ agents/skills/magi-mode/tests/testdata/mock_app.cc
 @@ -14,7 +14,7 @@
  #include "file_manager_win.h"
  #endif

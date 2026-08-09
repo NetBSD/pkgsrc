@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_switches.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-sandbox_policy_switches.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- sandbox/policy/switches.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ sandbox/policy/switches.cc
 @@ -40,7 +40,9 @@ const char kGpuSandboxFailuresFatal[] = 
  // Meant to be used as a browser-level switch for testing purposes only.

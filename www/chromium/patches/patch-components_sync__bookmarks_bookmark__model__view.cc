@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync__bookmarks_bookmark__model__view.cc,v 1.15 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_sync__bookmarks_bookmark__model__view.cc,v 1.16 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_bookmarks/bookmark_model_view.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/sync_bookmarks/bookmark_model_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/sync_bookmarks/bookmark_model_view.cc
 @@ -9,7 +9,7 @@
  #include "components/bookmarks/browser/bookmark_model.h"

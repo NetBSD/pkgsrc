@@ -1,12 +1,12 @@
-$NetBSD: patch-media_base_media__switches.h,v 1.23 2026/07/08 13:42:25 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.h,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- media/base/media_switches.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ media/base/media_switches.h
-@@ -88,7 +88,7 @@ MEDIA_EXPORT extern const char kMinVideo
+@@ -92,7 +92,7 @@ MEDIA_EXPORT extern const char kMinVideo
  #endif  // BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.23 2026/07/08 13:42:25 kikadf Ex
  MEDIA_EXPORT extern const char kAlsaInputDevice[];
  MEDIA_EXPORT extern const char kAlsaOutputDevice[];
  #endif  // BUILDFLAG(IS_LINUX) || ...
-@@ -326,13 +326,26 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kMedia
+@@ -331,13 +331,26 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kMedia
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPlaybackSpeedButton);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMediaEngagementData);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMetadataSuspend);
@@ -44,7 +44,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.23 2026/07/08 13:42:25 kikadf Ex
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kReduceHardwareVideoDecoderBuffers);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kResumeBackgroundVideo);
-@@ -351,7 +364,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUnifi
+@@ -356,7 +369,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUnifi
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseAndroidOverlayForSecureOnly);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseFakeDeviceForMediaStream);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kMediaStreamAccurateDroppedFrameCount);
@@ -53,7 +53,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.23 2026/07/08 13:42:25 kikadf Ex
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinux);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinuxGL);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoEncodeLinux);
-@@ -368,7 +381,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
+@@ -373,7 +386,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVp9SModeHWEncoding);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVSyncMjpegDecoding);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -62,7 +62,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.23 2026/07/08 13:42:25 kikadf Ex
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kV4L2H264TemporalLayerHWEncoding);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVideoBlitColorAccuracy);
-@@ -477,7 +490,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOu
+@@ -484,7 +497,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOu
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseSharedImageInOOPVDProcess);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  

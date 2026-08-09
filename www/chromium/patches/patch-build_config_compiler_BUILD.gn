@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf Exp $
+$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.24 2026/08/09 06:31:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2026-07-06 22:58:46.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -203,7 +203,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -53,19 +53,19 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf 
    # Linux-specific compiler flags setup.
    # ------------------------------------
    if (is_linux || is_chromeos) {
-@@ -576,9 +583,9 @@ config("compiler") {
-   if (is_clang) {
+@@ -577,9 +584,9 @@ config("compiler") {
      # Flags for diagnostics.
      cflags += [ "-fcolor-diagnostics" ]
--    if (!is_win) {
-+    if (!is_win && !is_bsd) {
-       cflags += [ "-fdiagnostics-show-inlining-chain" ]
--    } else {
-+    } else if (!is_bsd) {
-       # Combine after https://github.com/llvm/llvm-project/pull/192241
-       cflags += [ "/clang:-fdiagnostics-show-inlining-chain" ]
-     }
-@@ -603,7 +610,7 @@ config("compiler") {
+     if (!is_wasm) {
+-      if (!is_win) {
++      if (!is_win && !is_bsd) {
+         cflags += [ "-fdiagnostics-show-inlining-chain" ]
+-      } else {
++      } else if (!is_bsd) {
+         # Combine after https://github.com/llvm/llvm-project/pull/192241
+         cflags += [ "/clang:-fdiagnostics-show-inlining-chain" ]
+       }
+@@ -605,7 +612,7 @@ config("compiler") {
      }
    }
  
@@ -74,7 +74,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf 
      cflags += [ "-fcrash-diagnostics-dir=" + clang_diagnostic_dir ]
      if (save_reproducers_on_lld_crash && use_lld) {
        ldflags += [
-@@ -1458,7 +1465,7 @@ config("compiler_deterministic") {
+@@ -1464,7 +1471,7 @@ config("compiler_deterministic") {
  }
  
  config("clang_revision") {
@@ -83,34 +83,34 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf 
        current_os != "zos") {
      _perform_consistency_checks = current_toolchain == default_toolchain
      if (llvm_force_head_revision) {
-@@ -1572,7 +1579,7 @@ config("clang_warning_suppression") {
+@@ -1578,7 +1585,7 @@ config("clang_warning_suppression") {
  # See also: https://crbug.com/40891132#comment10
  ubsan_hardening("c_array_bounds") {
    sanitizer = "array-bounds"
--  condition = !(is_asan && target_cpu == "x86")
-+  condition = !(is_bsd || (is_asan && target_cpu == "x86"))
+-  condition = !(is_asan && target_cpu == "x86") && !is_wasm
++  condition = !(is_asan && target_cpu == "x86") && !is_wasm && !is_bsd
  
    # Because we've enabled array-bounds sanitizing we also want to suppress
    # the related warning about "unsafe-buffer-usage-in-static-sized-array",
-@@ -1586,6 +1593,7 @@ ubsan_hardening("c_array_bounds") {
+@@ -1592,7 +1599,7 @@ ubsan_hardening("c_array_bounds") {
  # `NOTREACHED()` at the end of such functions.
  ubsan_hardening("return") {
    sanitizer = "return"
-+  condition = !is_bsd
+-  condition = !is_wasm
++  condition = !is_wasm && !is_bsd
  }
  
  config("rustc_revision") {
-@@ -1920,9 +1928,6 @@ config("default_warnings") {
- 
-       # TODO(crbug.com/432275627): Fix and re-enable.
-       "-Wno-uninitialized-const-pointer",
--
--      # TODO(crbug.com/495753203): Fix and re-enable.
--      "-Wno-unused-but-set-global",
+@@ -1929,7 +1936,7 @@ config("default_warnings") {
+       "-Wno-nontrivial-memcall",
      ]
  
-     cflags_cc += [
-@@ -2293,7 +2298,7 @@ config("export_dynamic") {
+-    if (!is_wasm) {
++    if (!is_wasm && !is_bsd) {
+       cflags += [
+         # TODO(crbug.com/432275627): Fix and re-enable.
+         "-Wno-uninitialized-const-pointer",
+@@ -2314,7 +2321,7 @@ config("export_dynamic") {
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
    if ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix" ||
@@ -119,7 +119,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf 
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -2736,7 +2741,7 @@ config("afdo_optimize_size") {
+@@ -2755,7 +2762,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -128,7 +128,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.23 2026/07/08 13:42:15 kikadf 
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2763,7 +2768,7 @@ config("afdo") {
+@@ -2782,7 +2789,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }

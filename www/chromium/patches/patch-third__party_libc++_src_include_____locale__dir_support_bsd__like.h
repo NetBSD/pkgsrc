@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.16 2026/07/08 13:42:30 kikadf Exp $
+$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.17 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/support/bsd_like.h
 @@ -61,22 +61,22 @@ inline _LIBCPP_HIDE_FROM_ABI char* __set
    return ::setlocale(__category, __locale);

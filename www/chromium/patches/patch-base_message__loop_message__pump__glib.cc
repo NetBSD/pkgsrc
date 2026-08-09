@@ -1,14 +1,14 @@
-$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.24 2026/08/09 06:31:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
-@@ -8,6 +8,15 @@
+@@ -7,6 +7,15 @@
+ #include <fcntl.h>
  #include <glib.h>
- #include <math.h>
  
 +#if BUILDFLAG(IS_BSD)
 +#if BUILDFLAG(IS_NETBSD)
@@ -28,15 +28,15 @@ $NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.23 2026/07/08 13:42
  bool RunningOnMainThread() {
 +#if BUILDFLAG(IS_BSD)
 +#if BUILDFLAG(IS_NETBSD)
-+  auto pid = getpid();
-+  auto tid = _lwp_self();
++  pid_t pid = getpid();
++  lwpid_t tid = _lwp_self();
 +  return pid > 0 && tid > 0 && pid == tid;
 +#else
 +  return pthread_main_np();
 +#endif
 +#else
-   auto pid = getpid();
-   auto tid = PlatformThread::CurrentId().raw();
+   pid_t pid = getpid();
+   pid_t tid = PlatformThread::CurrentId().raw();
    return pid > 0 && tid > 0 && pid == tid;
 +#endif
  }

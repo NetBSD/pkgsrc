@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__navigation__observer.cc,v 1.23 2026/07/08 13:42:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__navigation__observer.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
 @@ -54,7 +54,7 @@
  #include "components/supervised_user/core/browser/android/android_parental_controls.h"

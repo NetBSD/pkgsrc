@@ -1,13 +1,13 @@
-$NetBSD: patch-base_process_kill__posix.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
+$NetBSD: patch-base_process_kill__posix.cc,v 1.24 2026/08/09 06:31:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/kill_posix.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/process/kill_posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/process/kill_posix.cc
-@@ -160,7 +160,7 @@ void EnsureProcessTerminated(Process pro
-       0, new BackgroundReaper(std::move(process), Seconds(2)));
+@@ -169,7 +169,7 @@ void EnsureProcessTerminated(Process pro
+       0, MakeSelfDeleting<BackgroundReaper>(std::move(process), Seconds(2)));
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

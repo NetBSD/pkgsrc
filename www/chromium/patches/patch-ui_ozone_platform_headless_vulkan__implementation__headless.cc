@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 1.24 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
 @@ -117,7 +117,7 @@ VulkanImplementationHeadless::ExportVkFe
  

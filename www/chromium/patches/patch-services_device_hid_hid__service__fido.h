@@ -1,12 +1,12 @@
-$NetBSD: patch-services_device_hid_hid__service__fido.h,v 1.23 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-services_device_hid_hid__service__fido.h,v 1.24 2026/08/09 06:31:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_fido.h.orig	2026-07-08 12:43:23.631703636 +0000
+--- services/device/hid/hid_service_fido.h.orig	2026-08-07 09:53:45.816413094 +0000
 +++ services/device/hid/hid_service_fido.h
-@@ -0,0 +1,65 @@
+@@ -0,0 +1,56 @@
 +// Copyright 2014 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -49,16 +49,7 @@ $NetBSD: patch-services_device_hid_hid__service__fido.h,v 1.23 2026/07/08 13:42:
 +// opening a device. Because this operation crosses multiple threads these
 +// functions are static and the necessary parameters are passed as a single
 +// struct.
-+#if BUILDFLAG(IS_CHROMEOS_ASH)
-+  static void OnPathOpenComplete(std::unique_ptr<ConnectParams> params,
-+                                 base::ScopedFD fd);
-+  static void OnPathOpenError(const std::string& device_path,
-+                              ConnectCallback callback,
-+                              const std::string& error_name,
-+                              const std::string& error_message);
-+#else
 +  static void OpenOnBlockingThread(std::unique_ptr<ConnectParams> params);
-+#endif
 +  static void FinishOpen(std::unique_ptr<ConnectParams> params);
 +
 +  const scoped_refptr<base::SequencedTaskRunner> blocking_task_runner_;

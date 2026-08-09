@@ -1,21 +1,27 @@
-$NetBSD: patch-ui_gfx_font__render__params.h,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_gfx_font__render__params.h,v 1.24 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_render_params.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/gfx/font_render_params.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/gfx/font_render_params.h
-@@ -115,7 +115,7 @@ COMPONENT_EXPORT(GFX)
+@@ -115,12 +115,12 @@ COMPONENT_EXPORT(GFX)
  FontRenderParams GetFontRenderParams(const FontRenderParamsQuery& query,
                                       std::string* family_out);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- // Clears GetFontRenderParams()'s cache. Intended to be called by tests that are
- // changing Fontconfig's configuration.
- COMPONENT_EXPORT(GFX) void ClearFontRenderParamsCacheForTest();
-@@ -125,7 +125,7 @@ COMPONENT_EXPORT(GFX) void ClearFontRend
+ // Clears GetFontRenderParams()'s cache.
+ COMPONENT_EXPORT(GFX) void ClearFontRenderParamsCache();
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ // TODO(crbug.com/517630459) Return this to `ForTesting()` after per display
+ // subpixel rendering is implemented.
+ COMPONENT_EXPORT(GFX) bool GetFontRenderParamsSubpixelRenderingEnabled();
+@@ -130,7 +130,7 @@ COMPONENT_EXPORT(GFX) bool GetFontRender
  COMPONENT_EXPORT(GFX) float GetFontRenderParamsDeviceScaleFactor();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

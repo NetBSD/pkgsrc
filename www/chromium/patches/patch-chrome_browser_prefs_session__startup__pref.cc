@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_prefs_session__startup__pref.cc,v 1.15 2026/07/08 13:42:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_prefs_session__startup__pref.cc,v 1.16 2026/08/09 06:31:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/session_startup_pref.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/prefs/session_startup_pref.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/prefs/session_startup_pref.cc
 @@ -70,7 +70,7 @@ SessionStartupPref::Type SessionStartupP
  #if BUILDFLAG(IS_CHROMEOS)

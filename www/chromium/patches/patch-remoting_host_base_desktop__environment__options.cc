@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_base_desktop__environment__options.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp $
+$NetBSD: patch-remoting_host_base_desktop__environment__options.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/desktop_environment_options.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/base/desktop_environment_options.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/base/desktop_environment_options.cc
-@@ -109,7 +109,7 @@ bool DesktopEnvironmentOptions::capture_
+@@ -117,7 +117,7 @@ bool DesktopEnvironmentOptions::capture_
    // TODO(joedow): Determine whether we can migrate additional platforms to
    // using the DesktopCaptureWrapper instead of the DesktopCaptureProxy. Then
    // clean up DesktopCapturerProxy::Core::CreateCapturer().

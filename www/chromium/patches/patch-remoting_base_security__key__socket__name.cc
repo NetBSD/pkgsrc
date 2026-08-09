@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_security__key__socket__name.cc,v 1.5 2026/07/08 13:42:27 kikadf Exp $
+$NetBSD: patch-remoting_base_security__key__socket__name.cc,v 1.6 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/security_key_socket_name.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/base/security_key_socket_name.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/base/security_key_socket_name.cc
 @@ -25,7 +25,7 @@ base::FilePath GetDefaultSecurityKeySock
    if (!GetSocketNameOverride().empty()) {

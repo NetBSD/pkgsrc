@@ -1,20 +1,20 @@
-$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.23 2026/07/08 13:42:23 kikadf Exp $
+$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.24 2026/08/09 06:31:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -6,6 +6,7 @@
  
  #include "base/linux_util.h"
  #include "base/logging.h"
 +#include "base/notimplemented.h"
+ #include "base/metrics/histogram_macros.h"
  #include "base/process/process_handle.h"
  #include "base/task/single_thread_task_runner.h"
- #include "base/threading/platform_thread.h"
-@@ -20,6 +21,9 @@ void SetThreadTypeOnLauncherThread(base:
+@@ -21,6 +22,9 @@ void SetThreadTypeOnLauncherThread(base:
                                     base::ThreadType thread_type) {
    DCHECK(CurrentlyOnProcessLauncherTaskRunner());
  
@@ -24,20 +24,11 @@ $NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.23 20
    bool ns_pid_supported = false;
    pid_t peer_tid =
        base::FindThreadID(peer_pid, ns_tid.raw(), &ns_pid_supported);
-@@ -41,6 +45,7 @@ void SetThreadTypeOnLauncherThread(base:
+@@ -42,6 +46,7 @@ void SetThreadTypeOnLauncherThread(base:
  
    base::PlatformThread::SetThreadType(
        peer_pid, base::PlatformThreadId(peer_tid), thread_type);
 +#endif
  }
  
- }  // namespace
-@@ -69,7 +74,7 @@ void ChildThreadTypeSwitcher::SetPid(bas
-   }
- }
- 
--void ChildThreadTypeSwitcher::SetThreadType(int32_t ns_tid,
-+void ChildThreadTypeSwitcher::SetThreadType(uint64_t ns_tid,
-                                             base::ThreadType thread_type) {
-   // This function is only used on platforms with 32-bit thread ids.
-   static_assert(sizeof(ns_tid) == sizeof(base::PlatformThreadId));
+ void SetThreadTypesOnLauncherThread(

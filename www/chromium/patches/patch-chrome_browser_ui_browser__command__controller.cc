@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/08 13:42:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -168,7 +168,7 @@
+@@ -171,7 +171,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
  #include "ui/base/ime/text_edit_commands.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -178,7 +178,7 @@
+@@ -181,7 +181,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -477,7 +477,7 @@ bool BrowserCommandController::IsReserve
+@@ -485,7 +485,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,16 +33,16 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -792,7 +792,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -818,7 +818,7 @@ void BrowserCommandController::HandleCom
        break;
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
      case IDC_MINIMIZE_WINDOW:
-       browser_->window()->Minimize();
+       browser_->GetWindow()->Minimize();
        break;
-@@ -805,7 +805,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -831,7 +831,7 @@ void BrowserCommandController::HandleCom
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -1059,7 +1059,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -1092,7 +1092,7 @@ void BrowserCommandController::HandleCom
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -1274,7 +1274,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -1307,7 +1307,7 @@ void BrowserCommandController::HandleCom
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -69,15 +69,15 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1674,13 +1674,13 @@ void BrowserCommandController::InitComma
-   command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
-   command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
+@@ -1737,13 +1737,13 @@ void BrowserCommandController::InitComma
+   command_updater_->UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
+   command_updater_->UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   command_updater_.UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
-   command_updater_.UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
-   command_updater_.UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
+   command_updater_->UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
+   command_updater_->UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
+   command_updater_->UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
@@ -85,12 +85,12 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.23 2026/07/
    bool use_system_title_bar = true;
  #if BUILDFLAG(IS_OZONE)
    use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -2066,7 +2066,7 @@ void BrowserCommandController::UpdateCom
+@@ -2136,7 +2136,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
-   command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
+   command_updater_->UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   command_updater_.UpdateCommandEnabled(
+   command_updater_->UpdateCommandEnabled(
        IDC_CREATE_SHORTCUT,
        shortcuts::CanCreateDesktopShortcut(current_web_contents));

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp $
+$NetBSD: patch-content_common_features.cc,v 1.24 2026/08/09 06:31:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/common/features.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/common/features.cc
-@@ -204,7 +204,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
+@@ -209,7 +209,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,7 +15,7 @@ $NetBSD: patch-content_common_features.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp 
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -308,12 +308,12 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+@@ -320,12 +320,12 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
                          FontDataServiceTypefaceType::kDwrite,
                          &font_data_service_typeface);
  #endif  // BUILDFLAG(IS_WIN)
@@ -30,9 +30,9 @@ $NetBSD: patch-content_common_features.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp 
  BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_ENABLED_BY_DEFAULT);
  BASE_FEATURE_ENUM_PARAM(FontDataServiceTypefaceType,
                          kFontDataServiceTypefaceType,
-@@ -332,11 +332,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
- #endif  // BUILDFLAG(IS_LINUX)
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+@@ -348,11 +348,11 @@ BASE_FEATURE_ENUM_PARAM(FontDataServiceT
+ BASE_FEATURE(kFontDataServiceForCSSLocalFonts,
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

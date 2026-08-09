@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.24 2026/08/09 06:31:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_shm_image_pool.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/base/x/x11_shm_image_pool.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@
  #include "base/functional/callback.h"
@@ -57,7 +57,7 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.23 2026/07/08 13:42:33 kik
  }
  #endif  // !BUILDFLAG(IS_CHROMEOS)
  
-@@ -182,7 +193,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -191,7 +202,7 @@ bool XShmImagePool::Resize(const gfx::Si
          shmctl(state.shmid, IPC_RMID, nullptr);
          return false;
        }
@@ -66,7 +66,7 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.23 2026/07/08 13:42:33 kik
        // On Linux, a shmid can still be attached after IPC_RMID if otherwise
        // kept alive.  Detach before XShmAttach to prevent a memory leak in case
        // the process dies.
-@@ -201,7 +212,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -210,7 +221,7 @@ bool XShmImagePool::Resize(const gfx::Si
          return false;
        state.shmseg = shmseg;
        state.shmem_attached_to_server = true;

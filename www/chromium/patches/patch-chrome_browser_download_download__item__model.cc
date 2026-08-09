@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.23 2026/07/08 13:42:15 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.24 2026/08/09 06:31:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/download/download_item_model.cc
-@@ -725,7 +725,7 @@ bool DownloadItemModel::IsCommandChecked
+@@ -724,7 +724,7 @@ bool DownloadItemModel::IsCommandChecked
        return download_->GetOpenWhenComplete() || IsExtensionDownload();
      case DownloadCommands::ALWAYS_OPEN_TYPE:
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.23 2026/07/0
        if (download_commands->CanOpenPdfInSystemViewer()) {
          DownloadPrefs* prefs = DownloadPrefs::FromBrowserContext(profile());
          return prefs->ShouldOpenPdfInSystemReader();
-@@ -773,7 +773,7 @@ void DownloadItemModel::ExecuteCommand(D
+@@ -772,7 +772,7 @@ void DownloadItemModel::ExecuteCommand(D
                                           DownloadCommands::ALWAYS_OPEN_TYPE);
        DownloadPrefs* prefs = DownloadPrefs::FromBrowserContext(profile());
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.23 2026/07/0
        if (download_commands->CanOpenPdfInSystemViewer()) {
          prefs->SetShouldOpenPdfInSystemReader(!is_checked);
          SetShouldPreferOpeningInBrowser(is_checked);
-@@ -1184,7 +1184,7 @@ void DownloadItemModel::DetermineAndSetS
+@@ -1183,7 +1183,7 @@ void DownloadItemModel::DetermineAndSetS
      return;
    }
  

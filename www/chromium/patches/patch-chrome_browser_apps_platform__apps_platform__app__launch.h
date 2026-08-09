@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.h,v 1.23 2026/07/08 13:42:15 kikadf Exp $
+$NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.h,v 1.24 2026/08/09 06:31:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.h
 @@ -38,7 +38,7 @@ bool OpenExtensionApplicationWindow(Prof
  content::WebContents* OpenExtensionApplicationTab(Profile* profile,

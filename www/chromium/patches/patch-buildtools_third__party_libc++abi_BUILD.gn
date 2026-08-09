@@ -1,0 +1,17 @@
+$NetBSD: patch-buildtools_third__party_libc++abi_BUILD.gn,v 1.1 2026/08/09 06:31:07 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- buildtools/third_party/libc++abi/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
++++ buildtools/third_party/libc++abi/BUILD.gn
+@@ -62,7 +62,7 @@ target(libcxxabi_target_type, "libc++abi
+   # TODO(crbug.com/469458284): Remove this once libc++abi is rolled again.
+   defines += [ "_LIBCPP_CONSTINIT=constinit" ]
+ 
+-  if (is_linux || is_android) {
++  if ((is_linux || is_android) && !is_netbsd) {
+     defines += [ "_LIBCXXABI_USE_FUTEX" ]
+   }
+ 

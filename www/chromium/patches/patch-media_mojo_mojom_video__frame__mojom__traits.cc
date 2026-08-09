@@ -1,12 +1,12 @@
-$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.23 2026/07/08 13:42:26 kikadf Exp $
+$NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.24 2026/08/09 06:31:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
  #include "ui/gfx/mojom/hdr_metadata_mojom_traits.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.23 2026/07/08
  #include "base/posix/eintr_wrapper.h"
  #include "media/gpu/buffer_validation.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -144,7 +144,7 @@ media::mojom::VideoFrameDataPtr MakeVide
+@@ -145,7 +145,7 @@ media::mojom::VideoFrameDataPtr MakeVide
          media::mojom::OpaqueVideoFrameData::New());
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.23 2026/07/08
    if (input->storage_type() == media::VideoFrame::STORAGE_DMABUFS) {
      // Duplicates the DMA buffer FDs to a new vector since this cannot take
      // ownership of the FDs in |input| due to constness.
-@@ -175,7 +175,7 @@ media::mojom::VideoFrameDataPtr MakeVide
+@@ -189,7 +189,7 @@ std::string PlanesToString(const std::ve
  
  }  // namespace
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.23 2026/07/08
  // static
  bool StructTraits<
      media::mojom::ColorPlaneLayoutDataView,
-@@ -378,7 +378,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -438,7 +438,7 @@ bool StructTraits<media::mojom::VideoFra
  
      bool is_mappable = shared_image_data.is_mappable();
      if (is_mappable) {
@@ -42,7 +42,7 @@ $NetBSD: patch-media_mojo_mojom_video__frame__mojom__traits.cc,v 1.23 2026/07/08
        // TODO(crbug.com/513289253): Avoid CloneGpuMemoryBufferHandle() only for
        // validation.
        const auto video_pixel_format =
-@@ -416,7 +416,7 @@ bool StructTraits<media::mojom::VideoFra
+@@ -477,7 +477,7 @@ bool StructTraits<media::mojom::VideoFra
      frame = media::VideoFrame::WrapTrackingToken(
          format, *metadata.tracking_token, coded_size, visible_rect,
          natural_size, timestamp);

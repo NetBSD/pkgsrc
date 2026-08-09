@@ -1,10 +1,10 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.23 2026/07/08 13:42:26 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-07-06 22:58:46.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-08-05 20:17:42.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -43,7 +43,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.23 2026/07/08 13:42:26 
          pre_make_rewrites += [
              (r'(#define HAVE_SYSCTL [01])',
               r'#define HAVE_SYSCTL 0 /* \1 -- forced to 0 for Fuchsia */'),
-@@ -598,7 +601,7 @@ def main(argv):
+@@ -604,7 +607,7 @@ def main(argv):
      configure_args = args[2:]
  
      if target_os not in ('android', 'linux', 'linux-noasm', 'mac', 'win',
@@ -52,7 +52,15 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.23 2026/07/08 13:42:26 
          parser.print_help()
          return 1
  
-@@ -712,7 +715,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -678,7 +681,6 @@ def ConfigureAndBuild(target_arch, targe
+         '--disable-faan',
+         '--disable-alsa',
+         '--disable-iamf',
+-        '--disable-checkasm',
+ 
+ 
+         # Disable automatically detected external libraries. This prevents
+@@ -720,7 +722,7 @@ def ConfigureAndBuild(target_arch, targe
              '--optflags="-O2"',
          ])
  
@@ -61,7 +69,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.23 2026/07/08 13:42:26 
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -808,9 +811,6 @@ def ConfigureAndBuild(target_arch, targe
+@@ -816,9 +818,6 @@ def ConfigureAndBuild(target_arch, targe
  
                  configure_flags['Common'].extend([
                      '--target-os=linux',
@@ -71,7 +79,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.23 2026/07/08 13:42:26 
                      # See crbug.com/1467681. These could be removed eventually
                      '--disable-dotprod',
                      '--disable-i8mm',
-@@ -916,7 +916,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -924,7 +923,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp $
+$NetBSD: patch-remoting_host_host__main.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/host_main.cc
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  #include "remoting/base/crash/crash_reporting_crashpad.h"
  #include "remoting/base/logging.h"
  
@@ -15,23 +15,14 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp
  #include <sys/stat.h>
  #include <unistd.h>
  
-@@ -57,7 +57,7 @@ namespace remoting {
- // Known entry points.
- int SingleProcessHostProcessMain();
- int NetworkProcessMain();
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- int DaemonProcessMain();
- int DesktopProcessMain();
- #endif
-@@ -66,13 +66,13 @@ int FileChooserMain();
+@@ -69,13 +69,13 @@ int FileChooserMain();
  int RdpDesktopSessionMain();
  int UrlForwarderConfiguratorMain();
  #endif  // BUILDFLAG(IS_WIN)
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  int XSessionChooserMain();
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ #endif  // BUILDFLAG(IS_LINUX)
  
  namespace {
  
@@ -40,7 +31,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp
  void EnsureVarLibDirectory() {
    if (getuid() != 0) {
      // Only do this in the daemon process, which is always run as root.
-@@ -109,7 +109,7 @@ void Usage(const base::FilePath& program
+@@ -112,7 +112,7 @@ void Usage(const base::FilePath& program
        "\n"
        "Options:\n"
  
@@ -49,25 +40,16 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp
        "  --audio-pipe-name=<pipe> - Sets the pipe name to capture audio on "
        "Linux.\n"
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -189,7 +189,7 @@ MainRoutineFn SelectMainRoutine(const st
-     main_routine = &SingleProcessHostProcessMain;
-   } else if (process_type == kProcessTypeNetwork) {
-     main_routine = &NetworkProcessMain;
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   } else if (process_type == kProcessTypeDaemon) {
-     main_routine = &DaemonProcessMain;
-   } else if (process_type == kProcessTypeDesktop) {
-@@ -203,7 +203,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -208,7 +208,7 @@ MainRoutineFn SelectMainRoutine(const st
    } else if (process_type == kProcessTypeUrlForwarderConfigurator) {
      main_routine = &UrlForwarderConfiguratorMain;
  #endif  // BUILDFLAG(IS_WIN)
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -264,7 +264,7 @@ int HostMain(int argc, char** argv) {
+ #endif  // BUILDFLAG(IS_LINUX)
+@@ -272,7 +272,7 @@ int HostMain(int argc, char** argv) {
    // Enable debug logs.
    InitHostLogging();
  
@@ -76,7 +58,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp
    EnsureVarLibDirectory();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -275,7 +275,7 @@ int HostMain(int argc, char** argv) {
+@@ -283,7 +283,7 @@ int HostMain(int argc, char** argv) {
    // Note that we enable crash reporting only if the user has opted in to having
    // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {
@@ -85,12 +67,3 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.23 2026/07/08 13:42:27 kikadf Exp
      InitializeCrashpadReporting();
  #elif BUILDFLAG(IS_WIN)
      // TODO: joedow - Enable crash reporting for the RDP process.
-@@ -319,7 +319,7 @@ int HostMain(int argc, char** argv) {
-   // Mac, where the broker process is the agent process broker.
-   is_broker_process |= main_routine == &SingleProcessHostProcessMain;
- #endif
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // For multi-process hosts, the daemon process acts as the broker.
-   is_broker_process |= main_routine == &DaemonProcessMain;
- #endif

@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host.cc,v 1.2 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host.cc,v 1.3 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/me2me_native_messaging_host.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/setup/me2me_native_messaging_host.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/setup/me2me_native_messaging_host.cc
 @@ -331,7 +331,7 @@ void Me2MeNativeMessagingHost::ProcessSt
                                                    base::DictValue response) {

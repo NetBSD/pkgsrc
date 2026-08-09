@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.15 2026/07/08 13:42:26 kikadf Exp $
+$NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.16 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/v4l2/v4l2_utils.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- media/gpu/v4l2/v4l2_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ media/gpu/v4l2/v4l2_utils.cc
 @@ -15,7 +15,7 @@
  
@@ -23,4 +23,4 @@ $NetBSD: patch-media_gpu_v4l2_v4l2__utils.cc,v 1.15 2026/07/08 13:42:26 kikadf E
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (video_fourcc == Fourcc(Fourcc::MM21)) {
      modifiers = DRM_FORMAT_MOD_MTK_16L_32S_TILE;
-   }
+   } else {
