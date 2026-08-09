@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/02/17 21:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/09 06:36:48 adam Exp $
 
-DISTNAME=	python-unidiff-0.7.5
+DISTNAME=	python-unidiff-1.0.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matiasb/}
@@ -12,13 +12,13 @@ HOMEPAGE=	https://pypi.python.org/pypi/unidiff
 COMMENT=	Unified diff python parsing/metadata extraction library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+WHEEL_NAME=	${DISTNAME:S/python-//}
 
 USE_LANGUAGES=	# none
 
-post-install:
-	${RUN} ${MV} ${DESTDIR}${PREFIX}/bin/unidiff \
-		${DESTDIR}${PREFIX}/bin/unidiff${PYVERSSUFFIX}
+PY_RENAME_BINARIES=	unidiff
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
