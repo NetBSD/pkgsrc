@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2026/04/18 15:00:16 ktnb Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/09 18:51:48 wiz Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
 DISTNAME=	wezterm-20260117.154428
 VERSION=	${PKGVERSION_NOREV:S/./-/}-${GITHUB_TAG:C/(........).*/\1/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
 GITHUB_TAG=	05343b387085842b434d267f91b6b0ec157e4331
@@ -43,7 +44,7 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/examples/wezterm
-INSTALLATION_DIRS+=	share/fish/completions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/icons/hicolor/symbolic/apps
 INSTALLATION_DIRS+=	share/metainfo
 INSTALLATION_DIRS+=	share/zsh/site-functions
@@ -81,7 +82,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/wezterm
 	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/fish \
-		${DESTDIR}${PREFIX}/share/fish/completions/wezterm.fish
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/wezterm.fish
 	${INSTALL_DATA} ${WRKSRC}/assets/shell-completion/zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_wezterm
 	${INSTALL_DATA} ${WRKSRC}/assets/icon/wezterm-icon.svg \
