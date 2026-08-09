@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.4 2025/01/31 15:18:58 pho Exp $
+# $NetBSD: application.mk,v 1.5 2026/08/09 18:47:57 wiz Exp $
 #
 # Generate shell completion scripts automatically.
 #
@@ -58,7 +58,7 @@ OA.shell-types=	bash fish zsh
 # The paths to completion script for each shell. "@exec@" will be
 # substituted later.
 OA.script.bash=	share/bash-completion/completions/@exec@
-OA.script.fish=	share/fish/completions/@exec@.fish
+OA.script.fish=	share/fish/vendor_completions.d/@exec@.fish
 OA.script.zsh=	share/zsh/site-functions/_@exec@
 
 # Completion scripts should be excluded from PLIST files because the exact
