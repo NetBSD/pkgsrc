@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2026/07/27 14:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/08/09 14:04:45 wiz Exp $
 
-DISTNAME=	google_auth-2.56.2
+DISTNAME=	google_auth-2.56.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
@@ -32,8 +32,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
 
-# as of 2.56.2
-# 1756 passed, 22 skipped, 110 warnings
+# as of 2.56.3
+# 1760 passed, 23 skipped, 110 warnings
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
