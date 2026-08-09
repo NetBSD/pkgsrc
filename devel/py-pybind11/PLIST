@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/02/17 06:36:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/08/09 06:12:46 adam Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,7 @@ ${PYSITELIB}/pybind11/include/pybind11/detail/descr.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/exception_translation.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/function_record_pyobject.h
+${PYSITELIB}/pybind11/include/pybind11/detail/function_ref.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/holder_caster_foreign_helpers.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/init.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/internals.h
