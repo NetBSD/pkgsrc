@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/06/22 05:32:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/08/09 04:28:04 wiz Exp $
 
-BLAKE2s (Math-Prime-Util-GMP-0.53.tar.gz) = b86c338280ca2c185a5b9e49e4e52ff74c4031f9ec8d53fdf0b0cae0bfb4de19
-SHA512 (Math-Prime-Util-GMP-0.53.tar.gz) = 385c5b427d960cfe29e808fef07777afa40b41aa1839211ede95e54acaebb125255d802420db429db9eecd40df4da6d962a79873a68c79250112356b27d91608
-Size (Math-Prime-Util-GMP-0.53.tar.gz) = 399067 bytes
+BLAKE2s (Math-Prime-Util-GMP-0.54.tar.gz) = 863f76865f4a04889f14abb9c74d612f0064aa9bcc7fa980966062d764375d2f
+SHA512 (Math-Prime-Util-GMP-0.54.tar.gz) = 240041d0322b8e4206f44c561f6b5ad10bb144e943b4c42e7c50a4aae775918a0b6a2f2876404e2dd2814a57fd58fb8b8dadc2c860c00e11af38d4731c6c05d0
+Size (Math-Prime-Util-GMP-0.54.tar.gz) = 439468 bytes
