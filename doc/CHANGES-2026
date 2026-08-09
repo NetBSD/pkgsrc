@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5090 2026/08/09 11:06:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5091 2026/08/09 13:44:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7531,3 +7531,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/translate-toolkit to 3.19.17 [adam 2026-08-09]
 	Updated graphics/py-svglib to 2.1.0 [adam 2026-08-09]
 	Updated net/py-tldextract to 5.3.2 [adam 2026-08-09]
+	Updated lang/py-ast-serialize to 0.8.0 [wiz 2026-08-09]
