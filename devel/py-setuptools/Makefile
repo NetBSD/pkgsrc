@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.277 2026/07/06 08:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.278 2026/08/09 17:06:21 wiz Exp $
 
-DISTNAME=	setuptools-83.0.0
+DISTNAME=	setuptools-84.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -32,13 +32,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=13.0.0:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.44.0:../../devel/py-wheel
 # pyproject-hooks
 
-REPLACE_PYTHON+=	setuptools/_vendor/bin/wheel
-
 # Pick setuptools.tests which are not built nor installed.
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
 
-# as of 83.0.0
-# 3 failed, 1002 passed, 31 skipped, 14 xfailed, 3 xpassed
+# as of 84.0.0 (make sure previous version is not installed by test dependency)
+# 1006 passed, 31 skipped, 13 xfailed, 3 xpassed
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
