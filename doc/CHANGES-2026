@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5096 2026/08/09 14:05:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5097 2026/08/09 14:06:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7537,3 +7537,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-flit to 4.0.2 [wiz 2026-08-09]
 	Updated devel/py-google-api-core to 2.34.0 [wiz 2026-08-09]
 	Updated security/py-google-auth to 2.56.3 [wiz 2026-08-09]
+	Updated security/py-google-auth-httplib2 to 0.4.1 [wiz 2026-08-09]
