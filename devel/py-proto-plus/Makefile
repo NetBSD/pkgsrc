@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/07/23 10:24:55 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/09 16:49:57 wiz Exp $
 
-DISTNAME=	proto_plus-1.28.2
+DISTNAME=	proto_plus-1.28.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/proto-plus/}
@@ -17,6 +17,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-google-api-core>=1.31.5:../../devel/py-google-api-
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none
+
+# as of 1.28.3
+# 2 failed, 272 passed, 2 skipped, 12 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
