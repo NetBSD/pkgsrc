@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5076 2026/08/08 23:09:57 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5077 2026/08/09 04:28:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7504,3 +7504,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnscontrol to 4.46.0 [drixter 2026-08-08]
 	Updated graphics/digikam-gmic-qt to 4.0.3.20260806 [wiz 2026-08-08]
 	Updated net/coturn to 4.17.2 [gdt 2026-08-08]
+	Updated math/p5-Math-Prime-Util-GMP to 0.54 [wiz 2026-08-09]
