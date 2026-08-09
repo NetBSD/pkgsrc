@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.133 2026/08/03 08:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.134 2026/08/09 06:05:34 adam Exp $
 
-DISTNAME=	rtorrent-0.16.19
+DISTNAME=	rtorrent-0.16.20
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,10 +10,9 @@ HOMEPAGE=	https://github.com/rakshasa/rtorrent
 COMMENT=	Ncurses based torrent client with support for sessions
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
 # Upstream does not document c++20, but configure.ac insists on it.
 USE_CXX_FEATURES=	c++20
-
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
