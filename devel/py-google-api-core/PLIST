@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2026/07/27 14:55:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/08/09 14:02:22 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
+${PYSITELIB}/google/api_core/_feature_gating_helpers.py
+${PYSITELIB}/google/api_core/_feature_gating_helpers.pyc
+${PYSITELIB}/google/api_core/_feature_gating_helpers.pyo
 ${PYSITELIB}/google/api_core/_python_package_support.py
 ${PYSITELIB}/google/api_core/_python_package_support.pyc
 ${PYSITELIB}/google/api_core/_python_package_support.pyo
