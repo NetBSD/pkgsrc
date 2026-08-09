@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5078 2026/08/09 05:32:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5079 2026/08/09 06:00:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7507,3 +7507,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/p5-Math-Prime-Util-GMP to 0.54 [wiz 2026-08-09]
 	Updated graphics/oxipng to 10.2.0 [adam 2026-08-09]
 	Updated net/py-smb to 1.2.15 [adam 2026-08-09]
+	Updated devel/libffi to 3.8.0 [adam 2026-08-09]
+	Updated devel/py-dulwich to 1.2.12 [adam 2026-08-09]
+	Updated devel/py-dunamai to 1.26.2 [adam 2026-08-09]
+	Updated devel/py-vcs-versioning to 2.2.4 [adam 2026-08-09]
