@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/24 07:18:17 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/08/09 06:26:53 adam Exp $
 
-BLAKE2s (pytest-forked-1.6.0.tar.gz) = 151b48422199e699157c77484763a65876ccffe57b970ba68f1ada9f73ab30dc
-SHA512 (pytest-forked-1.6.0.tar.gz) = 28fedc56fd696a4e7cf528034056849eff14094d5e7f0e94c7c477a7e91e42c08988769cf6f40d25fe8823399e552253cde2198121dd6a9e475fb6a8ce358cad
-Size (pytest-forked-1.6.0.tar.gz) = 9977 bytes
+BLAKE2s (pytest_forked-1.7.5.tar.gz) = 99b075667784ad393970739c40cfef1c969107e0a49c2fc2c821f816546c16b5
+SHA512 (pytest_forked-1.7.5.tar.gz) = 0aa6748a24e7e2fb6e4d217e4a0fb8b0a2c9f680a8c7db1dfd168a646ca15c5f303db9be4aa459d02d5686b7cf580b20f73a4ce8911bb9ae2d45ca0450ed63a5
+Size (pytest_forked-1.7.5.tar.gz) = 12981 bytes
