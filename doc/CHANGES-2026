@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5124 2026/08/09 21:24:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5125 2026/08/09 21:30:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7565,3 +7565,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio to 1.82.1nb1 [wiz 2026-08-09]
 	Added net/py-grpcio-status version 1.82.1 [wiz 2026-08-09]
 	Updated devel/py-google-api-core to 2.34.0nb1 [wiz 2026-08-09]
+	Updated lang/perl5 to 5.44.0nb1 [wiz 2026-08-09]
