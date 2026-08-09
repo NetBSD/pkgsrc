@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27724 2026/08/09 17:28:40 wiz Exp $
+$NetBSD: TODO,v 1.27725 2026/08/09 17:30:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1002,7 +1002,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-5.0.0 [wip; wait for https://bugs.kde.org/show_bug.cgi?id=522887]
 	o opendnssec-2.1.8
-	o openexr-3.4.14
 	o openfst-1.8.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
