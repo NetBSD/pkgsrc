@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/05/20 06:01:16 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/08/09 06:49:35 adam Exp $
 
-BLAKE2s (pystrich-0.14.tar.gz) = 6bcf3b56aa986355bfccfa01fc5a52ef9d27881abdea9b0ca9f60870364aff2f
-SHA512 (pystrich-0.14.tar.gz) = 2ff651bf2f7e9c4674098c794e0d1956a8b20e65e83f5faf48bcd4cb0846f3cf3e03490e75eb5f1ed8792f8bac0e633a6eb9279ee601c2b778c45f81c0a1edf6
-Size (pystrich-0.14.tar.gz) = 820610 bytes
+BLAKE2s (pystrich-0.19.tar.gz) = 50e25d274f889621e61fd8f000aa03b740eca1e30ae0859f224cbb009bc04264
+SHA512 (pystrich-0.19.tar.gz) = 4bcb366824608811ed9dfc89bc47931a22c0418a8d9ef7d62cfbc0d3a10820892de035a16ebfc23dcc1162ada4cb972a7d952724e568ea5cfa4a54fa83f9bfbd
+Size (pystrich-0.19.tar.gz) = 290768 bytes
