@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.47 2026/08/09 17:28:28 wiz Exp $
+$NetBSD: distinfo,v 1.48 2026/08/09 17:42:34 wiz Exp $
 
 BLAKE2s (geeqie-3.1.tar.xz) = 2b93333da8ee671bb693579a34ae71333c46d4224355b0c7e2ce8ba3e94f3909
 SHA512 (geeqie-3.1.tar.xz) = b0d70bf49446eebc5b4a741099cf81cc7010c72633d38eac5154f5683c653724ee8934a3b20413b1b963b109c3592fdbf437f5c660491421a0ce97f9f19f64a8
 Size (geeqie-3.1.tar.xz) = 1937624 bytes
-SHA1 (patch-src_cellrenderericon.cc) = f462d37f6fae1b54fce3dc9a0ecb95b35c591573
+SHA1 (patch-src_cellrenderericon.cc) = df506c8c3114b92f7c62a99159c398545311435d
