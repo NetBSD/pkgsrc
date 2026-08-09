@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/17 10:39:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/09 18:51:48 wiz Exp $
 bin/open-wezterm-here
 bin/strip-ansi-escapes
 bin/wezterm
@@ -7,7 +7,7 @@ bin/wezterm-mux-server
 share/applications/wezterm.desktop
 share/bash-completion/completions/wezterm
 share/examples/wezterm/wezterm.sh
-share/fish/completions/wezterm.fish
+share/fish/vendor_completions.d/wezterm.fish
 share/icons/hicolor/symbolic/apps/org.wezfurlong.wezterm.svg
 share/metainfo/wezterm.appdata.xml
 share/zsh/site-functions/_wezterm
