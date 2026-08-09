@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/23 17:58:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/08/09 13:55:26 wiz Exp $
 bin/flit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -41,6 +41,9 @@ ${PYSITELIB}/flit/logo.pyo
 ${PYSITELIB}/flit/sdist.py
 ${PYSITELIB}/flit/sdist.pyc
 ${PYSITELIB}/flit/sdist.pyo
+${PYSITELIB}/flit/sdist_rules.py
+${PYSITELIB}/flit/sdist_rules.pyc
+${PYSITELIB}/flit/sdist_rules.pyo
 ${PYSITELIB}/flit/tomlify.py
 ${PYSITELIB}/flit/tomlify.pyc
 ${PYSITELIB}/flit/tomlify.pyo

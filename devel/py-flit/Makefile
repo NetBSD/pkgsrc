@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/04/21 06:53:53 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/09 13:55:26 wiz Exp $
 
-DISTNAME=	flit-3.12.0
+DISTNAME=	flit-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flit/}
@@ -22,9 +22,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} flit flit-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	flit
+
+# as of 4.0.2
+# 1 failed, 324 passed, 2 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
