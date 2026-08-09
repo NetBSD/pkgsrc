@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2026/08/09 06:31:05 kikadf Exp $
+$NetBSD: distinfo,v 1.54 2026/08/09 14:41:09 kikadf Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -108,9 +108,9 @@ Size (either-1.15.0.crate) = 20114 bytes
 BLAKE2s (equivalent-1.0.2.crate) = ecc976834a05d886b02d4691be4fa79ccdc19070d8548d36b740fe8f3f137bd6
 SHA512 (equivalent-1.0.2.crate) = 8e0e2dc070794a85b276e93f9e4a65d3bbb8587b33fda211c34479a0b88504c913d8bef9e84d7996254aeabe1efe4ff1ef6259ff4fe3f9ccb90dd90070b3e4d4
 Size (equivalent-1.0.2.crate) = 7419 bytes
-BLAKE2s (evanw-esbuild-v0.28.1.tar.gz) = 3c4c5db42b953e476801797b415dd331d3dfb69fcbc6870235a936e14a84a8ce
-SHA512 (evanw-esbuild-v0.28.1.tar.gz) = 04f90dd08c16b3ce3e2fed9282d49f64cf2ebcf9868539802b783afe1d33ba7e773d2e1d4358aa31d978cf4ffce2e74a84659a14517d98550f2de581d3ea1986
-Size (evanw-esbuild-v0.28.1.tar.gz) = 1997481 bytes
+BLAKE2s (evanw-esbuild-v0.28.2.tar.gz) = 0a4c994d6121c5b7d2615c7ad1759a8e76822c61a1c632349e6cb03feb3b0b36
+SHA512 (evanw-esbuild-v0.28.2.tar.gz) = c4cb2ef32e147ebc5099ab501ebcb5fb4e3f16a143a0fd1f9b74efb90e0c24309ab61b236b6e6cf86a235187368bed660ae19403bbda9a84328157fe45ffc5b8
+Size (evanw-esbuild-v0.28.2.tar.gz) = 2008796 bytes
 BLAKE2s (find-msvc-tools-0.1.9.crate) = a62ce966e69815f44f2749cda23bae8872df3012f2bfd0c3c9b0fc988ed3bfae
 SHA512 (find-msvc-tools-0.1.9.crate) = 729b3c1c1d520dffe5d88fc8b58e47fb7e86dc26e568fc317eea5ca8de0ee953fbafaa20ab34a6bfb43173bab39a90ff6954c11dab8d545e902305dafc8cd3de
 Size (find-msvc-tools-0.1.9.crate) = 31493 bytes
