@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5117 2026/08/09 17:56:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5118 2026/08/09 18:49:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7558,3 +7558,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.14 [wiz 2026-08-09]
 	Updated textproc/rumdl to 0.2.52 [wiz 2026-08-09]
 	Added textproc/libspelling version 0.4.10 [wiz 2026-08-09]
+	Updated security/password-store to 1.7.4nb1 [wiz 2026-08-09]
