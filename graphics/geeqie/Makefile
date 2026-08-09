@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.169 2026/07/28 05:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2026/08/09 17:28:28 wiz Exp $
 
-DISTNAME=	geeqie-2.9
+DISTNAME=	geeqie-3.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -36,6 +36,10 @@ MESON_ARGS+=	--localedir='${PKGLOCALEDIR}/locale'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
+# test status as of 3.1
+# Ok:                1058
+# Fail:              1
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 post-install:
@@ -54,5 +58,5 @@ post-install:
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
