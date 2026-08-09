@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/09 21:21:58 wiz Exp $
+${PYSITELIB}/grpc_status/__init__.py
+${PYSITELIB}/grpc_status/__init__.pyc
+${PYSITELIB}/grpc_status/__init__.pyo
+${PYSITELIB}/grpc_status/_async.py
+${PYSITELIB}/grpc_status/_async.pyc
+${PYSITELIB}/grpc_status/_async.pyo
+${PYSITELIB}/grpc_status/_common.py
+${PYSITELIB}/grpc_status/_common.pyc
+${PYSITELIB}/grpc_status/_common.pyo
+${PYSITELIB}/grpc_status/rpc_status.py
+${PYSITELIB}/grpc_status/rpc_status.pyc
+${PYSITELIB}/grpc_status/rpc_status.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
