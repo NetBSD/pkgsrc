@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.296 2026/07/16 18:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2026/08/09 21:30:06 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
+PKGREVISION=	1
+
 COMMENT=	Practical Extraction and Report Language
 
 CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
+
+PATCHFILES+=	568e6fd238867bb9e99fa3f47cba3169009239e0.patch
+PATCHFILES+=	54cf3d44cbbedd17d774e9a37921963e8fd5d0cb.patch
+PATCH_SITES=	https://github.com/Perl/perl5/commit/
 
 # when updating perl, you can remove packages that are included
 # in perl core, see
