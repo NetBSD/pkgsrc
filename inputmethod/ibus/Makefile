@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2026/06/11 07:17:13 wiz Exp $
+# $NetBSD: Makefile,v 1.123.2.1 2026/08/09 18:36:12 bsiegert Exp $
 
 DISTNAME=	ibus-1.5.34
 PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
@@ -78,7 +78,10 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 # wayland or not
 PLIST_VARS+=		wayland
 .include "../../devel/wayland/platform.mk"
-.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+# XXX PR pkg/60476
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes" && \
+    (${OPSYS} != "NetBSD" || ${X11_TYPE} != "native" || \
+     exists(${X11BASE}/lib/modules/libglamoregl.so))
 CONFIGURE_ARGS+=	--enable-wayland
 PLIST.wayland=		yes
 .else
