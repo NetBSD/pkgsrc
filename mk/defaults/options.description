@@ -562,6 +562,7 @@ libpcap			Enable libpcap support.
 libproxy		Use libproxy for automatic proxy configuration.
 libraw			Enable libraw support.
 libressl		Enable LibreSSL support.
+libshumate		Enable libshumate support (for showing maps).
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
 libsoxr			Enable libsoxr (resample) support.
