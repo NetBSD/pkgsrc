@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync_service_device__statistics__tracker.cc,v 1.5 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_sync_service_device__statistics__tracker.cc,v 1.6 2026/08/09 06:31:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/device_statistics_tracker.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/sync/service/device_statistics_tracker.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/sync/service/device_statistics_tracker.cc
 @@ -139,7 +139,7 @@ std::optional<DeviceStatisticsTracker::P
    return DeviceStatisticsTracker::Platform::kWindows;

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_media_media__keys__listener__manager__impl.cc,v 1.23 2026/07/08 13:42:23 kikadf Exp $
+$NetBSD: patch-content_browser_media_media__keys__listener__manager__impl.cc,v 1.24 2026/08/09 06:31:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/media_keys_listener_manager_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/media/media_keys_listener_manager_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/media/media_keys_listener_manager_impl.cc
-@@ -332,7 +332,7 @@ void MediaKeysListenerManagerImpl::Start
+@@ -326,7 +326,7 @@ void MediaKeysListenerManagerImpl::Start
      return;
    }
  

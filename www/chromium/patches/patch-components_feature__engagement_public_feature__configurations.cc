@@ -1,36 +1,26 @@
-$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.23 2026/07/08 13:42:21 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__configurations.cc,v 1.24 2026/08/09 06:31:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
-@@ -101,7 +101,7 @@ std::optional<FeatureConfig> CreateNewUs
- 
+@@ -102,7 +102,7 @@ std::optional<FeatureConfig> CreateNewUs
  std::optional<FeatureConfig> GetClientSideFeatureConfig(
      const base::Feature* feature) {
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- 
-   // The IPH bubble for link capturing has a trigger set to ANY so that it
-   // always shows up. The per app specific guardrails are independently stored
-@@ -120,7 +120,7 @@ std::optional<FeatureConfig> GetClientSi
- 
- #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (kIPHPasswordsManagementBubbleAfterSaveFeature.name == feature->name) {
      FeatureConfig config;
      config.valid = true;
-@@ -2259,7 +2259,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -2357,7 +2357,7 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
-+    BUILDFLAG(IS_BSD)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  
    if (kIPHAutofillCreditCardBenefitFeature.name == feature->name) {
      // The credit card benefit IPH appears up to three times over 10 years and

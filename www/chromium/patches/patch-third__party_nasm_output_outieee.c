@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_nasm_output_outieee.c,v 1.1 2026/07/08 13:42:30 kikadf Exp $
+$NetBSD: patch-third__party_nasm_output_outieee.c,v 1.2 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/output/outieee.c.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/nasm/output/outieee.c.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/nasm/output/outieee.c
 @@ -1245,8 +1245,10 @@ static int32_t ieee_putlr(struct ieeeFix
  static void ieee_unqualified_name(char *dest, char *source)

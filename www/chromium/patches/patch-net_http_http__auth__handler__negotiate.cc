@@ -1,12 +1,12 @@
-$NetBSD: patch-net_http_http__auth__handler__negotiate.cc,v 1.23 2026/07/08 13:42:26 kikadf Exp $
+$NetBSD: patch-net_http_http__auth__handler__negotiate.cc,v 1.24 2026/08/09 06:31:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_handler_negotiate.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- net/http/http_auth_handler_negotiate.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ net/http/http_auth_handler_negotiate.cc
-@@ -119,7 +119,7 @@ int HttpAuthHandlerNegotiate::Factory::C
+@@ -120,7 +120,7 @@ int HttpAuthHandlerNegotiate::Factory::C
  #elif BUILDFLAG(IS_POSIX)
    if (is_unsupported_)
      return ERR_UNSUPPORTED_AUTH_SCHEME;

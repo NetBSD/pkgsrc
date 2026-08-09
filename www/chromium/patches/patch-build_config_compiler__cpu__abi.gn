@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_compiler__cpu__abi.gn,v 1.2 2026/07/08 13:42:15 kikadf Exp $
+$NetBSD: patch-build_config_compiler__cpu__abi.gn,v 1.3 2026/08/09 06:31:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler_cpu_abi.gn.orig	2026-07-06 22:58:46.000000000 +0000
+--- build/config/compiler_cpu_abi.gn.orig	2026-08-05 20:17:42.000000000 +0000
 +++ build/config/compiler_cpu_abi.gn
 @@ -48,7 +48,7 @@ if (is_chromeos_device && is_chromeos) {
  if ((is_posix && !is_apple) || is_fuchsia) {

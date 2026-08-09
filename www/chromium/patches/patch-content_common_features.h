@@ -1,21 +1,21 @@
-$NetBSD: patch-content_common_features.h,v 1.23 2026/07/08 13:42:24 kikadf Exp $
+$NetBSD: patch-content_common_features.h,v 1.24 2026/08/09 06:31:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/common/features.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/common/features.h
 @@ -82,7 +82,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(
-     kDocumentIsolationPolicyWithoutSiteIsolation);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEditContextSelectionSync);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kKillOnUnexpectedOriginHeader);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceSameDocumentOriginInvariants);
-@@ -120,8 +120,8 @@ enum class FontDataServiceTypefaceType {
+@@ -122,8 +122,8 @@ enum class FontDataServiceTypefaceType {
  CONTENT_EXPORT BASE_DECLARE_FEATURE_PARAM(FontDataServiceTypefaceType,
                                            kFontDataServiceTypefaceType);
  #endif  // BUILDFLAG(IS_WIN)
@@ -26,9 +26,9 @@ $NetBSD: patch-content_common_features.h,v 1.23 2026/07/08 13:42:24 kikadf Exp $
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceLinux);
  #else
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceChromeOS);
-@@ -134,7 +134,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
-                                           kFontDataServiceTypefaceType);
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+@@ -138,7 +138,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
+ 
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceForCSSLocalFonts);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

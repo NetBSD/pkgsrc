@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.19 2026/07/08 13:42:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.20 2026/08/09 06:31:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/widget/glic_widget.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/glic/widget/glic_widget.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/glic/widget/glic_widget.cc
-@@ -54,7 +54,7 @@
+@@ -53,7 +53,7 @@
  #include "ui/views/win/hwnd_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.19 2026/07/08 13:4
  #include "chrome/browser/shell_integration_linux.h"
  #include "chrome/browser/ui/views/frame/opaque_browser_frame_view_layout.h"
  #endif
-@@ -109,7 +109,7 @@ class GlicClientView : public views::Cli
+@@ -108,7 +108,7 @@ class GlicClientView : public views::Cli
    GlicView* glic_view() { return static_cast<GlicView*>(contents_view()); }
  };
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.19 2026/07/08 13:4
  class GlicFrameView : public views::NativeFrameView {
   public:
    explicit GlicFrameView(views::Widget* widget)
-@@ -128,7 +128,7 @@ class GlicFrameView : public views::Nati
+@@ -127,7 +127,7 @@ class GlicFrameView : public views::Nati
  #if BUILDFLAG(IS_WIN)
      int resize_border = resize_border =
          display::win::GetScreenWin()->GetSystemMetricsInDIP(SM_CXSIZEFRAME);
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.19 2026/07/08 13:4
      int resize_border = OpaqueBrowserFrameViewLayout::kFrameBorderThickness;
  #endif
      const bool can_resize = GetWidget()->widget_delegate()->CanResize();
-@@ -356,7 +356,7 @@ std::unique_ptr<views::WidgetDelegate> G
+@@ -358,7 +358,7 @@ std::unique_ptr<views::WidgetDelegate> G
          return std::make_unique<GlicClientView>(widget, contents_view);
        }));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.19 2026/07/08 13:4
    delegate->SetFrameViewFactory(base::BindRepeating(
        [](views::Widget* widget) -> std::unique_ptr<views::FrameView> {
          return std::make_unique<GlicFrameView>(widget);
-@@ -436,7 +436,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
+@@ -438,7 +438,7 @@ std::unique_ptr<GlicWidget> GlicWidget::
  #if BUILDFLAG(IS_MAC)
    params.animation_enabled = true;
  #endif  // BUILDFLAG(IS_MAC)

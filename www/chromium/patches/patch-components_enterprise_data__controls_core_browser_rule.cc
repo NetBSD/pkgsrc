@@ -1,10 +1,10 @@
-$NetBSD: patch-components_enterprise_data__controls_core_browser_rule.cc,v 1.19 2026/07/08 13:42:21 kikadf Exp $
+$NetBSD: patch-components_enterprise_data__controls_core_browser_rule.cc,v 1.20 2026/08/09 06:31:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/enterprise/data_controls/core/browser/rule.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/enterprise/data_controls/core/browser/rule.cc
 @@ -549,7 +549,7 @@ bool Rule::AddUnsupportedAttributeErrors
                },

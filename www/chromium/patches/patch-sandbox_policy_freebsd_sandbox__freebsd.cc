@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2026-07-08 12:43:23.620638415 +0000
+--- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2026-08-07 09:53:45.813872935 +0000
 +++ sandbox/policy/freebsd/sandbox_freebsd.cc
 @@ -0,0 +1,210 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -108,7 +108,7 @@ $NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.23 2026/07/08 13:4
 +  const std::string process_type =
 +      command_line->GetSwitchValueASCII(switches::kProcessType);
 +
-+  base::SysInfo::AmountOfPhysicalMemory();
++  base::SysInfo::AmountOfTotalPhysicalMemory();
 +  base::SysInfo::NumberOfProcessors();
 +  base::SysInfo::CPUModelName();
 +

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__manual__fallback__flow.cc,v 1.23 2026/07/08 13:42:21 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__manual__fallback__flow.cc,v 1.24 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.cc
-@@ -50,7 +50,7 @@ std::u16string GetUsernameFromLabel(cons
+@@ -52,7 +52,7 @@ std::u16string GetUsernameFromLabel(cons
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manual__fallb
  // Returns the password form corresponding to the `payload` data. In most
  // cases there is only one such form stored, but having more than one or no
  // forms is also possible. If there is more than one form, showing any of them
-@@ -324,7 +324,7 @@ void PasswordManualFallbackFlow::DidAcce
+@@ -344,7 +344,7 @@ void PasswordManualFallbackFlow::DidAcce
      }
      case autofill::SuggestionType::kViewPasswordDetails: {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manual__fallb
        std::optional<password_manager::PasswordForm> credentials =
            GetCorrespondingPasswordForm(
                suggestion.GetPayload<Suggestion::PasswordSuggestionDetails>(),
-@@ -478,7 +478,7 @@ void PasswordManualFallbackFlow::EnsureC
+@@ -491,7 +491,7 @@ void PasswordManualFallbackFlow::EnsureC
      const Suggestion::PasswordSuggestionDetails& payload,
      base::OnceClosure on_allowed) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_utility_services.cc,v 1.23 2026/07/08 13:42:20 kikadf Exp $
+$NetBSD: patch-chrome_utility_services.cc,v 1.24 2026/08/09 06:31:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/utility/services.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/utility/services.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/utility/services.cc
-@@ -51,7 +51,7 @@
+@@ -52,7 +52,7 @@
  #include "services/proxy_resolver_mac/mac_system_proxy_resolver_impl.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_utility_services.cc,v 1.23 2026/07/08 13:42:20 kikadf Exp 
  #include "chrome/services/system_signals/linux/linux_system_signals_service.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -208,7 +208,7 @@ auto RunMacSystemProxyResolver(
+@@ -209,7 +209,7 @@ auto RunMacSystemProxyResolver(
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_utility_services.cc,v 1.23 2026/07/08 13:42:20 kikadf Exp 
  auto RunSystemSignalsService(
      mojo::PendingReceiver<device_signals::mojom::SystemSignalsService>
          receiver) {
-@@ -465,7 +465,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -475,7 +475,7 @@ void RegisterMainThreadServices(mojo::Se
    services.Add(RunWindowsIconReader);
  #endif  // BUILDFLAG(IS_WIN)
  

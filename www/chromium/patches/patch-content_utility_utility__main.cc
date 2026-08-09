@@ -1,14 +1,14 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikadf Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.24 2026/08/09 06:31:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/utility/utility_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/utility/utility_main.cc
-@@ -38,22 +38,31 @@
- #include "services/on_device_model/public/mojom/on_device_model_service.mojom.h"
+@@ -44,22 +44,31 @@
  #include "services/tracing/public/cpp/trace_startup.h"
+ #include "services/video_capture/public/mojom/video_capture_service.mojom.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -39,7 +39,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
  #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION)
  #include "gpu/config/gpu_info_collector.h"
  #include "media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h"
-@@ -112,7 +121,7 @@ sandbox::TargetServices* g_utility_targe
+@@ -118,7 +127,7 @@ sandbox::TargetServices* g_utility_targe
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && \
@@ -48,7 +48,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
  #include "components/on_device_translation/service/sandbox_hook.h"
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) &&  (BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS))
-@@ -121,7 +130,7 @@ namespace content {
+@@ -127,7 +136,7 @@ namespace content {
  
  namespace {
  
@@ -57,7 +57,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -276,7 +285,7 @@ int UtilityMain(MainFunctionParams param
+@@ -286,7 +295,7 @@ int UtilityMain(MainFunctionParams param
      CHECK(on_device_model::PreSandboxInit());
    }
  
@@ -66,7 +66,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
  
  #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION) && BUILDFLAG(USE_VAAPI)
    // Regardless of the sandbox status, the VaapiWrapper needs to be initialized
-@@ -291,7 +300,10 @@ int UtilityMain(MainFunctionParams param
+@@ -301,7 +310,10 @@ int UtilityMain(MainFunctionParams param
    // thread type change in ChildProcess constructor. It also needs to be
    // registered before the process has multiple threads, which may race with
    // application of the sandbox.
@@ -77,7 +77,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
  
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
-@@ -324,7 +336,7 @@ int UtilityMain(MainFunctionParams param
+@@ -334,7 +346,7 @@ int UtilityMain(MainFunctionParams param
            base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
        break;
  #if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && \
@@ -86,7 +86,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
      case sandbox::mojom::Sandbox::kOnDeviceTranslation:
        pre_sandbox_hook = base::BindOnce(
            &on_device_translation::OnDeviceTranslationSandboxHook);
-@@ -341,7 +353,7 @@ int UtilityMain(MainFunctionParams param
+@@ -351,7 +363,7 @@ int UtilityMain(MainFunctionParams param
  #else
        NOTREACHED();
  #endif
@@ -95,7 +95,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
      case sandbox::mojom::Sandbox::kShapeDetection:
        pre_sandbox_hook =
            base::BindOnce(&shape_detection::ShapeDetectionPreSandboxHook);
-@@ -370,6 +382,7 @@ int UtilityMain(MainFunctionParams param
+@@ -380,6 +392,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -103,7 +103,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.23 2026/07/08 13:42:24 kikad
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -377,6 +390,11 @@ int UtilityMain(MainFunctionParams param
+@@ -387,6 +400,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }

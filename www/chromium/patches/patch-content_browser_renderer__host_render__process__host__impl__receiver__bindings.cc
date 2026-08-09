@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.23 2026/07/08 13:42:23 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.24 2026/08/09 06:31:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
 @@ -56,7 +56,7 @@
  #include "content/browser/renderer_host/p2p/socket_dispatcher_host.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
  #include "components/services/font_data/font_data_service_impl.h"
  #endif
  
-@@ -345,7 +345,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -350,7 +350,7 @@ void RenderProcessHostImpl::IOThreadHost
      }
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
    if (features::IsFontDataServiceEnabled()) {
      if (auto font_data_receiver =
              receiver.As<font_data_service::mojom::FontDataService>()) {
-@@ -356,7 +356,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -361,7 +361,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
    if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
      ConnectToFontService(std::move(font_receiver));
      return;
-@@ -384,7 +384,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -389,7 +389,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  

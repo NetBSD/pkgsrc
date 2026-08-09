@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_accessibility_accessibility__features.cc,v 1.22 2026/07/08 13:42:32 kikadf Exp $
+$NetBSD: patch-ui_accessibility_accessibility__features.cc,v 1.23 2026/08/09 06:31:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/accessibility/accessibility_features.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/accessibility/accessibility_features.cc
-@@ -467,7 +467,7 @@ bool IsScreenAITestModeEnabled() {
+@@ -480,7 +480,7 @@ bool IsScreenAITestModeEnabled() {
    return base::FeatureList::IsEnabled(::features::kScreenAITestMode);
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_accessibility_accessibility__features.cc,v 1.22 2026/07/08 13:
  BASE_FEATURE(kScreenAIPartitionAllocAdvancedChecksEnabled,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
-@@ -508,7 +508,7 @@ bool IsMacAccessibilityTextOperationEnab
+@@ -521,7 +521,7 @@ bool IsMacAccessibilityTextOperationEnab
  }
  #endif  // BUILDFLAG(IS_MAC)
  

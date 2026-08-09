@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libaom_source_config_linux_arm64-cpu-detect_config_av1__rtcd.h,v 1.9 2026/07/08 13:42:30 kikadf Exp $
+$NetBSD: patch-third__party_libaom_source_config_linux_arm64-cpu-detect_config_av1__rtcd.h,v 1.10 2026/08/09 06:31:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h
 @@ -194,8 +194,10 @@ RTCD_EXTERN void (*av1_dist_wtd_convolve
  

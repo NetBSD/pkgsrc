@@ -1,30 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_webui_cr__components_searchbox_searchbox__handler.cc,v 1.10 2026/07/08 13:42:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_cr__components_searchbox_searchbox__handler.cc,v 1.11 2026/08/09 06:31:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/cr_components/searchbox/searchbox_handler.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/webui/cr_components/searchbox/searchbox_handler.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/webui/cr_components/searchbox/searchbox_handler.cc
-@@ -206,7 +206,7 @@ const char* kMacShareIconResourceName =
+@@ -219,7 +219,7 @@ constexpr char kMacShareIconResourceName
  #elif BUILDFLAG(IS_WIN)
- const char* kWinShareIconResourceName =
-     "//resources/cr_components/searchbox/icons/win_share.svg";
+ constexpr char kWinShareIconResourceName[] =
+     "//resources/cr_components/searchbox/icons/win_share_cr23.svg";
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- const char* kLinuxShareIconResourceName =
-     "//resources/cr_components/searchbox/icons/share.svg";
+ constexpr char kLinuxShareIconResourceName[] =
+     "//resources/cr_components/searchbox/icons/share_cr23.svg";
  #else
-@@ -264,7 +264,7 @@ static void DefineChromeRefreshRealboxIc
- #elif BUILDFLAG(IS_WIN)
-   kWinShareIconResourceName =
-       "//resources/cr_components/searchbox/icons/win_share_cr23.svg";
--#elif BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   kLinuxShareIconResourceName =
-       "//resources/cr_components/searchbox/icons/share_cr23.svg";
- #else
-@@ -781,7 +781,7 @@ std::string SearchboxHandler::Autocomple
+@@ -740,7 +740,7 @@ std::string SearchboxHandler::Autocomple
                          : omnibox::kShareWinChromeRefreshOldIcon.name)) {
      return kWinShareIconResourceName;
    }

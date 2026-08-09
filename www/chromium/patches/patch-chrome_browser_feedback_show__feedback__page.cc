@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_feedback_show__feedback__page.cc,v 1.5 2026/07/08 13:42:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_feedback_show__feedback__page.cc,v 1.6 2026/08/09 06:31:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/show_feedback_page.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/feedback/show_feedback_page.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/feedback/show_feedback_page.cc
 @@ -256,7 +256,7 @@ bool CanShowFeedback(const Profile* prof
      return false;

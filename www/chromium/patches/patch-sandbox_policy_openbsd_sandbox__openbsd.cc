@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-07-08 12:43:23.621545382 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2026-08-07 09:53:45.814271240 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,445 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -122,7 +122,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.23 2026/07/08 13:4
 +  const std::string process_type =
 +      command_line->GetSwitchValueASCII(switches::kProcessType);
 +
-+  base::SysInfo::AmountOfPhysicalMemory();
++  base::SysInfo::AmountOfTotalPhysicalMemory();
 +  base::SysInfo::NumberOfProcessors();
 +  base::SysInfo::CPUModelName();
 +
@@ -392,7 +392,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.23 2026/07/08 13:4
 +    // up to 64 GB.
 +    constexpr rlim_t GB = 1024 * 1024 * 1024;
 +    const rlim_t physical_memory =
-+        base::SysInfo::AmountOfPhysicalMemory().InBytes();
++        base::SysInfo::AmountOfTotalPhysicalMemory().InBytes();
 +    rlim_t limit;
 +    if ((sandbox_type == sandbox::mojom::Sandbox::kGpu ||
 +         sandbox_type == sandbox::mojom::Sandbox::kOnDeviceModelExecution) &&  

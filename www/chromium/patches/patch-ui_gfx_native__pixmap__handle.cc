@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.23 2026/07/08 13:42:33 kikadf Exp $
+$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.24 2026/08/09 06:31:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- ui/gfx/native_pixmap_handle.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@
  #include "components/viz/common/resources/shared_image_format_utils.h"

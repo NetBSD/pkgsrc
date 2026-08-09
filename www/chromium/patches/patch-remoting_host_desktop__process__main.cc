@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_desktop__process__main.cc,v 1.7 2026/07/08 13:42:27 kikadf Exp $
+$NetBSD: patch-remoting_host_desktop__process__main.cc,v 1.8 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_process_main.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- remoting/host/desktop_process_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ remoting/host/desktop_process_main.cc
 @@ -29,7 +29,7 @@
  #include "remoting/host/desktop_process.h"

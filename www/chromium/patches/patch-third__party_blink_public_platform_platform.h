@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_public_platform_platform.h,v 1.23 2026/07/08 13:42:29 kikadf Exp $
+$NetBSD: patch-third__party_blink_public_platform_platform.h,v 1.24 2026/08/09 06:31:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/platform/platform.h.orig	2026-07-06 22:58:46.000000000 +0000
+--- third_party/blink/public/platform/platform.h.orig	2026-08-05 20:17:42.000000000 +0000
 +++ third_party/blink/public/platform/platform.h
 @@ -382,7 +382,7 @@ class BLINK_PLATFORM_EXPORT Platform {
      return nullptr;

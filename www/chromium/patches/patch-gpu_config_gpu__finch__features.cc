@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.23 2026/07/08 13:42:25 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
-@@ -111,7 +111,7 @@ const base::FeatureParam<std::string>
+@@ -176,7 +176,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.
  BASE_FEATURE(kRemoveGPULegacyIPC, base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.23 2026/07/08 13:42:25 kik
  // Feature flag to control whether SharedImageStub sequence uses high priority
  // on ChromeOS and Linux. Enabled by default.
  BASE_FEATURE(kSharedImageStubHighPriority, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -120,7 +120,7 @@ BASE_FEATURE(kSharedImageStubHighPriorit
+@@ -185,7 +185,7 @@ BASE_FEATURE(kSharedImageStubHighPriorit
  // Disables hardware YUV conversion on NVIDIA + Wayland to workaround a driver
  // bug.
  BASE_FEATURE(kNvidiaWaylandYuvHardwareConversionWorkaround,
@@ -24,7 +24,7 @@ $NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.23 2026/07/08 13:42:25 kik
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -449,7 +449,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
+@@ -515,7 +515,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
  const base::FeatureParam<int> kGPUDriverBugListTestGroupId{
      &kGPUDriverBugListTestGroup, "test_group", 0};
  

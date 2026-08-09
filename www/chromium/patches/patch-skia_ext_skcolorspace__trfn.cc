@@ -1,10 +1,10 @@
-$NetBSD: patch-skia_ext_skcolorspace__trfn.cc,v 1.23 2026/07/08 13:42:29 kikadf Exp $
+$NetBSD: patch-skia_ext_skcolorspace__trfn.cc,v 1.24 2026/08/09 06:31:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/skcolorspace_trfn.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- skia/ext/skcolorspace_trfn.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ skia/ext/skcolorspace_trfn.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

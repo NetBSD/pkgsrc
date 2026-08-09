@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_glic_service_glic__instance__impl.cc,v 1.3 2026/07/08 13:42:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_glic_service_glic__instance__impl.cc,v 1.4 2026/08/09 06:31:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/glic/service/glic_instance_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/glic/service/glic_instance_impl.cc
-@@ -18,7 +18,7 @@
- #include "chrome/browser/actor/actor_keyed_service_factory.h"
- #include "chrome/browser/background/glic/glic_launcher_configuration.h"
- #include "chrome/browser/browser_process.h"
+@@ -72,7 +72,7 @@
+ #include "third_party/abseil-cpp/absl/functional/overload.h"
+ #include "ui/base/l10n/l10n_util.h"
+ 
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/enterprise/reporting/saas_usage/saas_usage_reporting_controller_factory.h"
  #endif
- #include "chrome/browser/glic/common/future_browser_features.h"
-@@ -132,7 +132,7 @@ EmbedderKey CreateSidePanelEmbedderKey(t
+ 
+@@ -139,7 +139,7 @@ EmbedderKey CreateSidePanelEmbedderKey(t
  
  enterprise_reporting::SaasUsageReportingController*
  GetSaasUsageReportingController(Profile* profile) {

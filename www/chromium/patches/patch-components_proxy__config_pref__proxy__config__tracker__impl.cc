@@ -1,10 +1,10 @@
-$NetBSD: patch-components_proxy__config_pref__proxy__config__tracker__impl.cc,v 1.10 2026/07/08 13:42:22 kikadf Exp $
+$NetBSD: patch-components_proxy__config_pref__proxy__config__tracker__impl.cc,v 1.11 2026/08/09 06:31:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ components/proxy_config/pref_proxy_config_tracker_impl.cc
 @@ -527,7 +527,7 @@ void PrefProxyConfigTrackerImpl::Registe
    registry->RegisterDictionaryPref(proxy_config::prefs::kProxy,

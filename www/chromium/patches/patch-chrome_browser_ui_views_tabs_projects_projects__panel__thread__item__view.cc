@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_projects_projects__panel__thread__item__view.cc,v 1.7 2026/07/08 13:42:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_projects_projects__panel__thread__item__view.cc,v 1.8 2026/08/09 06:31:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/views/tabs/projects/projects_panel_thread_item_view.cc
-@@ -117,7 +117,7 @@ void ProjectsPanelThreadItemView::OnMous
+@@ -114,7 +114,7 @@ void ProjectsPanelThreadItemView::OnMous
  }
  
  void ProjectsPanelThreadItemView::OnMouseExited(const ui::MouseEvent& event) {

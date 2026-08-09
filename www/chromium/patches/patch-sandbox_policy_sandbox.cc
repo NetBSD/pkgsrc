@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_sandbox.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
+$NetBSD: patch-sandbox_policy_sandbox.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/sandbox.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- sandbox/policy/sandbox.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ sandbox/policy/sandbox.cc
-@@ -20,6 +20,10 @@
+@@ -22,6 +22,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -17,7 +17,7 @@ $NetBSD: patch-sandbox_policy_sandbox.cc,v 1.23 2026/07/08 13:42:28 kikadf Exp $
  #if BUILDFLAG(IS_MAC)
  #include "sandbox/mac/seatbelt.h"
  #endif  // BUILDFLAG(IS_MAC)
-@@ -36,7 +40,7 @@
+@@ -38,7 +42,7 @@
  namespace sandbox {
  namespace policy {
  

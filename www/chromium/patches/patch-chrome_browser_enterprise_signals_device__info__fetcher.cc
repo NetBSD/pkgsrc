@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_device__info__fetcher.cc,v 1.23 2026/07/08 13:42:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_device__info__fetcher.cc,v 1.24 2026/08/09 06:31:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher.cc
 @@ -10,7 +10,7 @@
  #include "chrome/browser/enterprise/signals/device_info_fetcher_mac.h"

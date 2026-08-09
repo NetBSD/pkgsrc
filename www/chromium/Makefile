@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2026/07/28 11:41:53 kikadf Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/09 06:31:05 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			150.0.7871.186
+VERSION=			151.0.7922.108
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -12,7 +12,7 @@ DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			v150.0
+NB_VERSION=			v151.0
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
@@ -123,6 +123,7 @@ SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	third_party/dawn/tools/generate-sources-gn.py
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
 SUBST_FILES.path+=	third_party/test_fonts/fontconfig/BUILD.gn
@@ -232,6 +233,16 @@ EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true
 GN_ARGS+=	rust_sysroot_absolute=\"${PREFIX}\"
+
+# go (third_party/dawn)
+.include "../../lang/go/version.mk"
+TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
+MAKE_ENV+=		GOCACHE=${WRKDIR}/.cache/go-build
+SUBST_CLASSES+=		go
+SUBST_STAGE.go=		pre-configure
+SUBST_MESSAGE.go=	Set path of go executable
+SUBST_FILES.go+=	third_party/dawn/tools/generate-sources-gn.py
+SUBST_SED.go+=		-e 's,@GOBIN@,${GO},g'
 
 PLIST_VARS+=		swiftshader
 FFMPEG_PARTS=		config.h config_components.h libavcodec libavformat libavutil

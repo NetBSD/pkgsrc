@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.15 2026/07/08 13:42:20 kikadf Exp $
+$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.16 2026/08/09 06:31:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/renderer/chrome_content_renderer_client.cc
 @@ -187,7 +187,7 @@
  #include "v8/include/v8-isolate.h"

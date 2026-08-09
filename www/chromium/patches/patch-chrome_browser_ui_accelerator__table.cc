@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.16 2026/07/08 13:42:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.17 2026/08/09 06:31:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/accelerator_table.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/accelerator_table.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/accelerator_table.cc
 @@ -77,11 +77,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
@@ -29,8 +29,8 @@ $NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.16 2026/07/08 13:42:1
      {ui::VKEY_1, ui::EF_ALT_DOWN, IDC_SELECT_TAB_0},
      {ui::VKEY_NUMPAD1, ui::EF_ALT_DOWN, IDC_SELECT_TAB_0},
      {ui::VKEY_2, ui::EF_ALT_DOWN, IDC_SELECT_TAB_1},
-@@ -161,7 +161,7 @@ const AcceleratorMapping kAcceleratorMap
-      IDC_SHOW_AVATAR_MENU},
+@@ -163,7 +163,7 @@ const AcceleratorMapping kAcceleratorMap
+      IDC_TOGGLE_VERTICAL_TABS_COLLAPSE},
  
  // Platform-specific key maps.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.16 2026/07/08 13:42:1
      {ui::VKEY_BROWSER_BACK, ui::EF_NONE, IDC_BACK},
      {ui::VKEY_BROWSER_FORWARD, ui::EF_NONE, IDC_FORWARD},
      {ui::VKEY_BROWSER_HOME, ui::EF_NONE, IDC_HOME},
-@@ -316,7 +316,7 @@ std::vector<AcceleratorMapping> GetAccel
+@@ -318,7 +318,7 @@ std::vector<AcceleratorMapping> GetAccel
                           std::begin(kDevToolsAcceleratorMap),
                           std::end(kDevToolsAcceleratorMap));
  

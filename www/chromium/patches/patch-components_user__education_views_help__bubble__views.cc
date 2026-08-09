@@ -1,0 +1,26 @@
+$NetBSD: patch-components_user__education_views_help__bubble__views.cc,v 1.1 2026/08/09 06:31:16 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/user_education/views/help_bubble_views.cc.orig	2026-08-05 20:17:42.000000000 +0000
++++ components/user_education/views/help_bubble_views.cc
+@@ -127,7 +127,7 @@ bool HelpBubbleViews::ToggleFocusForAcce
+ 
+   if (auto* const anchor = GetAnchorView()) {
+     if (anchor->GetViewAccessibility().IsAccessibilityFocusable()) {
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       // Mac and Linux do not automatically pass activation on focus, so we have
+       // to do it manually.
+       anchor->GetWidget()->Activate();
+@@ -143,7 +143,7 @@ bool HelpBubbleViews::ToggleFocusForAcce
+       // An AccessiblePaneView can receive focus, but is not necessarily itself
+       // accessibility focusable. Use the built-in functionality for focusing
+       // elements of AccessiblePaneView instead.
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       // Mac and Linux do not automatically pass activation on focus, so we have
+       // to do it manually.
+       anchor->GetWidget()->Activate();

@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__info__collector.cc,v 1.23 2026/07/08 13:42:25 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__info__collector.cc,v 1.24 2026/08/09 06:31:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_info_collector.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- gpu/config/gpu_info_collector.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ gpu/config/gpu_info_collector.cc
-@@ -366,7 +366,7 @@ void ReportWebGPUAdapterMetrics(dawn::na
+@@ -364,7 +364,7 @@ void ReportWebGPUAdapterMetrics(dawn::na
  void ReportWebGPUSupportMetrics(dawn::native::Instance* instance) {
    static BASE_FEATURE(kCollectWebGPUSupportMetrics,
                        "CollectWebGPUSupportMetrics",

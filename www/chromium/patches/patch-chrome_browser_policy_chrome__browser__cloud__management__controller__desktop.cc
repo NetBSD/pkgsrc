@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__controller__desktop.cc,v 1.23 2026/07/08 13:42:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__controller__desktop.cc,v 1.24 2026/08/09 06:31:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
 @@ -59,7 +59,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__control
  #include "chrome/browser/enterprise/client_certificates/browser_context_delegate.h"
  #include "chrome/browser/enterprise/client_certificates/cert_utils.h"
  #include "chrome/browser/enterprise/connectors/device_trust/key_management/browser/device_trust_key_manager_impl.h"
-@@ -115,7 +115,7 @@ void ChromeBrowserCloudManagementControl
+@@ -116,7 +116,7 @@ void ChromeBrowserCloudManagementControl
  
  #if BUILDFLAG(IS_MAC)
    storage_delegate = std::make_unique<BrowserDMTokenStorageMac>();
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__control
    storage_delegate = std::make_unique<BrowserDMTokenStorageLinux>();
  #elif BUILDFLAG(IS_WIN)
    storage_delegate = std::make_unique<BrowserDMTokenStorageWin>();
-@@ -292,7 +292,7 @@ ChromeBrowserCloudManagementControllerDe
+@@ -300,7 +300,7 @@ ChromeBrowserCloudManagementControllerDe
  
  std::unique_ptr<enterprise_connectors::DeviceTrustKeyManager>
  ChromeBrowserCloudManagementControllerDesktop::CreateDeviceTrustKeyManager() {
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_policy_chrome__browser__cloud__management__control
    auto* browser_dm_token_storage = BrowserDMTokenStorage::Get();
    auto* device_management_service = GetDeviceManagementService();
    auto shared_url_loader_factory = GetSharedURLLoaderFactory();
-@@ -314,7 +314,7 @@ ChromeBrowserCloudManagementControllerDe
+@@ -322,7 +322,7 @@ ChromeBrowserCloudManagementControllerDe
  std::unique_ptr<client_certificates::CertificateProvisioningService>
  ChromeBrowserCloudManagementControllerDesktop::
      CreateCertificateProvisioningService() {

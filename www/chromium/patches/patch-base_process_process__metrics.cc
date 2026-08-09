@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics.cc,v 1.23 2026/07/08 13:42:14 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics.cc,v 1.24 2026/08/09 06:31:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- base/process/process_metrics.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {
@@ -15,7 +15,7 @@ $NetBSD: patch-base_process_process__metrics.cc,v 1.23 2026/07/08 13:42:14 kikad
  int CalculateEventsPerSecond(uint64_t event_count,
                               uint64_t* last_event_count,
                               base::TimeTicks* last_calculated) {
-@@ -54,7 +54,7 @@ SystemMetrics SystemMetrics::Sample() {
+@@ -56,7 +56,7 @@ SystemMetrics SystemMetrics::Sample() {
    SystemMetrics system_metrics;
  
    system_metrics.committed_memory_ = GetSystemCommitCharge();
@@ -24,7 +24,7 @@ $NetBSD: patch-base_process_process__metrics.cc,v 1.23 2026/07/08 13:42:14 kikad
    GetSystemMemoryInfo(&system_metrics.memory_info_);
    GetVmStatInfo(&system_metrics.vmstat_info_);
    GetSystemDiskInfo(&system_metrics.disk_info_);
-@@ -79,7 +79,7 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -81,7 +81,7 @@ std::unique_ptr<ProcessMetrics> ProcessM
  #endif  // !BUILDFLAG(IS_MAC)
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-base_process_process__metrics.cc,v 1.23 2026/07/08 13:42:14 kikad
  double ProcessMetrics::GetPlatformIndependentCPUUsage(
      TimeDelta cumulative_cpu) {
    TimeTicks time = TimeTicks::Now();
-@@ -112,7 +112,7 @@ ProcessMetrics::GetPlatformIndependentCP
+@@ -114,7 +114,7 @@ ProcessMetrics::GetPlatformIndependentCP
  #endif
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

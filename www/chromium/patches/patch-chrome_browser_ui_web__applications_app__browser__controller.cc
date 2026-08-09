@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_app__browser__controller.cc,v 1.15 2026/07/08 13:42:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_app__browser__controller.cc,v 1.16 2026/08/09 06:31:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2026-07-06 22:58:46.000000000 +0000
+--- chrome/browser/ui/web_applications/app_browser_controller.cc.orig	2026-08-05 20:17:42.000000000 +0000
 +++ chrome/browser/ui/web_applications/app_browser_controller.cc
-@@ -557,7 +557,7 @@ std::u16string AppBrowserController::Get
+@@ -562,7 +562,7 @@ std::u16string AppBrowserController::Get
    // web bundle. The flash text is not needed on platforms that already display
    // the app name in the title bar (e.g. Mac, Windows, and Linux).
    if (IsIsolatedWebApp()) {
