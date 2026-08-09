@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5101 2026/08/09 14:15:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5102 2026/08/09 14:15:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7542,3 +7542,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-h2 to 4.4.1 [wiz 2026-08-09]
 	Updated textproc/tree-sitter to 0.26.12 [wiz 2026-08-09]
 	Updated lang/py-librt to 0.15.0 [wiz 2026-08-09]
+	Updated graphics/py-cairo to 1.29.1 [wiz 2026-08-09]
