@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27709 2026/08/09 14:03:19 wiz Exp $
+$NetBSD: TODO,v 1.27710 2026/08/09 14:05:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
-	o py-google-auth-2.56.3
 	o py-google-auth-httplib2-0.4.1
 	o py-googleapis-common-protos-1.75.1
 	o py-grpcio-1.83.0
