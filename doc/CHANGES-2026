@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5122 2026/08/09 21:21:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5123 2026/08/09 21:22:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7563,3 +7563,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/restic to 0.19.1nb2 [wiz 2026-08-09]
 	Updated x11/wezterm to 20260117.154428nb1 [wiz 2026-08-09]
 	Updated net/py-grpcio to 1.82.1nb1 [wiz 2026-08-09]
+	Added net/py-grpcio-status version 1.82.1 [wiz 2026-08-09]
