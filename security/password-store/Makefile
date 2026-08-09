@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/04/28 18:35:12 nikita Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/09 18:48:58 wiz Exp $
 
 DISTNAME=	password-store-1.7.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +24,7 @@ EGDIR=			share/examples/password-store
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${EGDIR}/contrib
 INSTALLATION_DIRS+=	share/bash-completion/completions
-INSTALLATION_DIRS+=	share/fish/completions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/zsh/site-functions
 
 REPLACE_BASH+=	src/password-store.sh
@@ -54,7 +55,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.bash-completion \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/pass
 	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.fish-completion \
-		${DESTDIR}${PREFIX}/share/fish/completions/pass.fish
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/pass.fish
 	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.zsh-completion \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_pass
 
