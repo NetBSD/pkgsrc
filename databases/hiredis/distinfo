@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/06/07 05:33:59 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/08/09 17:12:28 wiz Exp $
 
-BLAKE2s (hiredis-1.4.0.tar.gz) = 2195fc41562037bcb201d49a3efca18ccdd63ecc9c924baab5dee11fda99ac35
-SHA512 (hiredis-1.4.0.tar.gz) = 0273e17d69919013a5ad0b400bd527c0f42dfd529777e059a3994803520b4229f6da77da89ab2d41b021ce8a7e5a43bd1ea8357cda8dc1fb8b50845cba5285a7
-Size (hiredis-1.4.0.tar.gz) = 171943 bytes
+BLAKE2s (hiredis-1.4.1.tar.gz) = adf2ecb6514aa094c4097f1e7df6295c0513702ead9ec0040539e52c279a3826
+SHA512 (hiredis-1.4.1.tar.gz) = 2f7a826032bedb85473b06684e075d9e57105068c44f21b00217f94a7ebbefaa8700c7bf4675c382060a7b00aceb01c90023fdfbe4024a412e05432b852d6dc2
+Size (hiredis-1.4.1.tar.gz) = 175407 bytes
