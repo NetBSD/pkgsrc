@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/02/16 11:03:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/08/09 13:51:54 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -62,6 +62,9 @@ ${PYSITELIB}/astroid/brain/brain_datetime.pyo
 ${PYSITELIB}/astroid/brain/brain_dateutil.py
 ${PYSITELIB}/astroid/brain/brain_dateutil.pyc
 ${PYSITELIB}/astroid/brain/brain_dateutil.pyo
+${PYSITELIB}/astroid/brain/brain_decimal.py
+${PYSITELIB}/astroid/brain/brain_decimal.pyc
+${PYSITELIB}/astroid/brain/brain_decimal.pyo
 ${PYSITELIB}/astroid/brain/brain_functools.py
 ${PYSITELIB}/astroid/brain/brain_functools.pyc
 ${PYSITELIB}/astroid/brain/brain_functools.pyo
