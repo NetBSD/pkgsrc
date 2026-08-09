@@ -1,13 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/17 21:59:11 wiz Exp $
-bin/unidiff${PYVERSSUFFIX}
-${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/licenses/LICENSE
-${PYSITELIB}/unidiff-${PKGVERSION}.dist-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2026/08/09 06:36:48 adam Exp $
+bin/unidiff-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/unidiff/__init__.py
 ${PYSITELIB}/unidiff/__init__.pyc
 ${PYSITELIB}/unidiff/__init__.pyo
+${PYSITELIB}/unidiff/__main__.py
+${PYSITELIB}/unidiff/__main__.pyc
+${PYSITELIB}/unidiff/__main__.pyo
 ${PYSITELIB}/unidiff/__version__.py
 ${PYSITELIB}/unidiff/__version__.pyc
 ${PYSITELIB}/unidiff/__version__.pyo
@@ -20,3 +25,4 @@ ${PYSITELIB}/unidiff/errors.pyo
 ${PYSITELIB}/unidiff/patch.py
 ${PYSITELIB}/unidiff/patch.pyc
 ${PYSITELIB}/unidiff/patch.pyo
+${PYSITELIB}/unidiff/py.typed
