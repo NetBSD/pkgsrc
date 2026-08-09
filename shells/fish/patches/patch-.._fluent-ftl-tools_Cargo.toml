@@ -1,0 +1,17 @@
+$NetBSD: patch-.._fluent-ftl-tools_Cargo.toml,v 1.1 2026/08/09 16:45:24 wiz Exp $
+
+Do not attempt to fetch sources at build time.
+
+--- ../fluent-ftl-tools/Cargo.toml.orig	2026-08-09 16:23:35.177573148 +0000
++++ ../fluent-ftl-tools/Cargo.toml
+@@ -42,8 +42,8 @@ anyhow = "1.0.102"
+ 
+ [workspace.dependencies]
+ anyhow = "1.0.102"
+-fluent = { git = "https://github.com/danielrainer/fluent-rs", rev = "cf712bced280b217b6307edabc2089b3e57204ab" }
+-fluent-syntax = { git = "https://github.com/danielrainer/fluent-rs", rev = "cf712bced280b217b6307edabc2089b3e57204ab" }
++fluent = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab/fluent" }
++fluent-syntax = { path = "../fluent-rs-cf712bced280b217b6307edabc2089b3e57204ab/fluent-syntax" }
+ gettext-po-file-parser = { path = "crates/gettext-po-file-parser" }
+ nix = { version = "0.30", features = ["fs"] }
+ unic-langid = "0.9.6"
