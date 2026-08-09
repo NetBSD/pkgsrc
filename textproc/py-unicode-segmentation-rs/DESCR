@@ -1,0 +1,3 @@
+Python bindings for the Rust unicode-segmentation and unicode-width crates,
+providing Unicode text segmentation and width calculation according to Unicode
+standards.
