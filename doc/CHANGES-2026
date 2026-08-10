@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5135 2026/08/10 09:51:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5136 2026/08/10 10:50:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7589,3 +7589,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed editors/p5-Acme-Padre-PlayCode [wiz 2026-08-10]
 	Updated meta-pkgs/bulk-large to 20260810 [wiz 2026-08-10]
 	Removed x11/p5-Wx-Perl-ProcessStream [wiz 2026-08-10]
+	Updated security/defguard-gateway to 2.0.4 [adam 2026-08-10]
