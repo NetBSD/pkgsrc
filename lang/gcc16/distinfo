@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.1 2026/08/10 21:41:34 wiz Exp $
+
+BLAKE2s (gcc-16.1.0.tar.xz) = 037fe6c26509be014b26e0c16b07c2faac0c9894491b4525582d45ff88c66970
+SHA512 (gcc-16.1.0.tar.xz) = b3454958891ab47e1e5b6cb9396c0ad3b04f32fe2a7bf1153a143f21013fdb6b295ca94c98964698a688e4c1d7555ffd8ffbc20187507cce6b1c32cbcc09897a
+Size (gcc-16.1.0.tar.xz) = 102456900 bytes
+BLAKE2s (isl-0.24.tar.xz) = a3013b0d39b7fe68a1b3e15dc7e925b347d555348ee946a80f5319a76973cd61
+SHA512 (isl-0.24.tar.xz) = ff6bdcff839e1cd473f2a0c1e4dd4a3612ec6fee4544ccbc62b530a7248db2cf93b4b99bf493a86ddf2aba00e768927265d5d411f92061ea85fd7929073428e8
+Size (isl-0.24.tar.xz) = 1930956 bytes
+SHA1 (patch-configure) = 21d5a86e097a6c355ae41203f223f2930d33a392
+SHA1 (patch-configure.ac) = b72e07578678926dca9ce5b008bacbfcecb68cbb
+SHA1 (patch-gcc_Makefile.in) = abc7d605ef21c213c5b71ef37d1ce790097f7660
+SHA1 (patch-gcc_config.gcc) = 65126c56f0cd9027f66b5f677773dfa9973b451c
+SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
+SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
+SHA1 (patch-gcc_config_arm_arm.h) = 9d554349869d67d6393552c33a7824f0dd53cb11
+SHA1 (patch-gcc_config_arm_bpabi.h) = 0b0de5ad95442e34397cb46739ef6e36048d6f45
+SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
+SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
+SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 1930d8bf8f4d5cbd6ee1c7a48150edcd3c92b647
+SHA1 (patch-gcc_config_i386_t-netbsd64) = 914b4d2fd65f5e46681aa2ea592d0bc75299f09a
+SHA1 (patch-gcc_config_netbsd.h) = ada05409eacb33bc1e7a659f3090f2f43551a35d
+SHA1 (patch-isl_configure) = 6b7f5f6dea42bca0f90e6f9ce1131f93d607495d
+SHA1 (patch-libffi_configure) = 0ed41a6bde6987f5e6be4847e02f02abd09c176d
+SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
+SHA1 (patch-libgcc_config.host) = c9ea8bda0e6a1a8c4c39e4b8320a34b86e1da278
+SHA1 (patch-libgcc_crtstuff.c) = dd7808497b058bcac4aa8d91388d6a7685bb5e5c
+SHA1 (patch-libgcobol_configure.tgt) = d5a0e35e03ff8c835cbcb6cf17725ae82fd727af
+SHA1 (patch-libgcobol_posix_shim_open.cc) = ad9cdffb26023e84abb2f0b272ecad6674b50b1f
+SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
+SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
+SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
