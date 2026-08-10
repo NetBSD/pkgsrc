@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/12/22 10:05:18 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/10 11:42:43 adam Exp $
 
-DISTNAME=	time_machine-3.2.0
+DISTNAME=	time_machine-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/time-machine/}
