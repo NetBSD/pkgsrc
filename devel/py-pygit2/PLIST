@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/03/31 13:10:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/08/10 11:38:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -57,6 +57,7 @@ ${PYSITELIB}/pygit2/decl/oid.h
 ${PYSITELIB}/pygit2/decl/options.h
 ${PYSITELIB}/pygit2/decl/pack.h
 ${PYSITELIB}/pygit2/decl/proxy.h
+${PYSITELIB}/pygit2/decl/rebase.h
 ${PYSITELIB}/pygit2/decl/refspec.h
 ${PYSITELIB}/pygit2/decl/remote.h
 ${PYSITELIB}/pygit2/decl/repository.h
@@ -82,9 +83,6 @@ ${PYSITELIB}/pygit2/filter.pyo
 ${PYSITELIB}/pygit2/index.py
 ${PYSITELIB}/pygit2/index.pyc
 ${PYSITELIB}/pygit2/index.pyo
-${PYSITELIB}/pygit2/legacyenums.py
-${PYSITELIB}/pygit2/legacyenums.pyc
-${PYSITELIB}/pygit2/legacyenums.pyo
 ${PYSITELIB}/pygit2/options.py
 ${PYSITELIB}/pygit2/options.pyc
 ${PYSITELIB}/pygit2/options.pyo
@@ -92,6 +90,9 @@ ${PYSITELIB}/pygit2/packbuilder.py
 ${PYSITELIB}/pygit2/packbuilder.pyc
 ${PYSITELIB}/pygit2/packbuilder.pyo
 ${PYSITELIB}/pygit2/py.typed
+${PYSITELIB}/pygit2/rebase.py
+${PYSITELIB}/pygit2/rebase.pyc
+${PYSITELIB}/pygit2/rebase.pyo
 ${PYSITELIB}/pygit2/references.py
 ${PYSITELIB}/pygit2/references.pyc
 ${PYSITELIB}/pygit2/references.pyo
