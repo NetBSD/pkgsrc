@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/10/20 07:22:50 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/08/10 11:40:52 adam Exp $
 
-BLAKE2s (tablib-3.9.0.tar.gz) = 71b75fb1710263f252160cacefa5fbfc56384d95009f87bbbcf82701beb5aa44
-SHA512 (tablib-3.9.0.tar.gz) = e2f6f4bd7f3762d5c46585e8e135fc97211eb1bd2adbdb3a8b0ec512790ecb5f2cc3d692d59c564d6a733cb76e0b092542f9de4d6ec3bae9c8dcc35293b3db3e
-Size (tablib-3.9.0.tar.gz) = 125565 bytes
+BLAKE2s (tablib-3.10.0.tar.gz) = 541570b45df0b25d70ba212ea19f38fc1301134798a827518059885628ac740b
+SHA512 (tablib-3.10.0.tar.gz) = fd3e844018e99286cc0dfd9bb43d7288abaa3fcac160645d5bb0d6d884b5eacfe476a7f45c5cf7e55755f0149d9ba62c95b914abfdaebc265d6a253fb96fbd4c
+Size (tablib-3.10.0.tar.gz) = 127128 bytes
