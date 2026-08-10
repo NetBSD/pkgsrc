@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4671 2026/08/10 09:49:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4672 2026/08/10 19:02:05 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -967,6 +967,7 @@ SUBDIR+=	lcc
 SUBDIR+=	lcdis
 SUBDIR+=	lcov
 SUBDIR+=	ldapsdk
+SUBDIR+=	ldis
 SUBDIR+=	ldpc
 SUBDIR+=	leahneukirchen-redo
 SUBDIR+=	lemon
