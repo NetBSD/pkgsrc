@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/10 21:42:39 wiz Exp $
+gcc16/include/libgccjit++.h
+gcc16/include/libgccjit.h
+gcc16/info/libgccjit.info
+gcc16/lib/libgccjit.so
+gcc16/lib/libgccjit.so.0
+gcc16/lib/libgccjit.so.0.0.1
