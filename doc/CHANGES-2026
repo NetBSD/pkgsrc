@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5137 2026/08/10 11:43:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5138 2026/08/10 11:47:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7593,3 +7593,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pygit2 to 1.20.0 [adam 2026-08-10]
 	Updated textproc/py-tablib to 3.10.0 [adam 2026-08-10]
 	Updated time/py-time-machine to 3.3.1 [adam 2026-08-10]
+	Updated devel/py-pyvcd to 0.4.2 [adam 2026-08-10]
+	Updated net/py-pika to 1.4.4 [adam 2026-08-10]
