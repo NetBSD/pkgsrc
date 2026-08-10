@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/07/24 09:03:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/08/10 10:49:30 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -249,9 +249,9 @@ Size (data-encoding-2.11.0.crate) = 22677 bytes
 BLAKE2s (defguard-2.0.2.tar.gz) = cd5e0646fe00dc2aed975898308a7918fb38cd04824228f46cb8c756177fefd2
 SHA512 (defguard-2.0.2.tar.gz) = 76e727772ae3e367342c0a1effb306e541c9483387c5c2461090f2f4e8994c946b5434aa488057a3e6ebea45c6cf810ea7d9909a82f79b77b633b6044e4571d2
 Size (defguard-2.0.2.tar.gz) = 6716326 bytes
-BLAKE2s (defguard-gateway-2.0.3.tar.xz) = 9209aed102b66b51bd7a1cc0f1956d9e4566e9d41cbd86e582681b56fa6da44a
-SHA512 (defguard-gateway-2.0.3.tar.xz) = 9433c4672f484c5b7db31641fe4edca06bb79ab87255ced9e955d55535aa211836242a54900814c1f5a8ba28cddf081d058f0068c4bbe491862b7af04a83a1b0
-Size (defguard-gateway-2.0.3.tar.xz) = 210064 bytes
+BLAKE2s (defguard-gateway-2.0.4.tar.xz) = c05e8638b1227c1951851542030a7558cd8a8a5e814c3a174536335184f70561
+SHA512 (defguard-gateway-2.0.4.tar.xz) = e91504fdc003de5b568129fbb20cfe70344a9786a59b453889e228ae5a9a23601e0507ccdf9d4317fbef1003e60cdc6c087f19e2fbf81c9bc6b5fb529b9bb802
+Size (defguard-gateway-2.0.4.tar.xz) = 211308 bytes
 BLAKE2s (defguard_boringtun-0.6.8.crate) = 3cbeba13470e9abe4c2ee67ff48d0d5a215a78794415f2721a81ae9c0e78077d
 SHA512 (defguard_boringtun-0.6.8.crate) = 13dac73981cd484da8afc93289ab84d247253127efad6f4bbeb7017eb623672f62752678b2fab02e45578a170ede809ee563416ca28b611afeac18a4f936387d
 Size (defguard_boringtun-0.6.8.crate) = 77811 bytes

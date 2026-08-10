@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/07/24 09:03:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/10 10:49:30 adam Exp $
 
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-gateway-2.0.3
+DISTNAME=	defguard-gateway-2.0.4
 EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	gateway
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -17,6 +17,8 @@ NFTNL_REV=	abd34b08c53b88a47346da6362e360d522cf8ca2
 DISTFILES+=	nftnl-${NFTNL_REV}.tar.gz
 
 SITES.nftnl-${NFTNL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=defguard/}nftnl-rs/archive/${NFTNL_REV}.tar.gz
+
+RUST_REQ=	1.95
 
 INSTALLATION_DIRS=	bin
 
