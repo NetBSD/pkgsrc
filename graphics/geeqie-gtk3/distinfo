@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/10 07:30:58 wiz Exp $
+
+BLAKE2s (geeqie-2.9.tar.xz) = a27f2760635d6dfbebb0feed78914ddf90bdd8b119511367f51860e15f9901fb
+SHA512 (geeqie-2.9.tar.xz) = 642d705556ef96bddf86349de097aee8375b57804d1341329e05d5e205301407ed7e57acfefa0e5ad04e45c4a14c281496c574f4f9302705204cc1bc8e50d670
+Size (geeqie-2.9.tar.xz) = 1920800 bytes
