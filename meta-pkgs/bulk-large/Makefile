@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2026/02/23 14:29:20 taca Exp $
+# $NetBSD: Makefile,v 1.80 2026/08/10 09:50:09 wiz Exp $
 
-DISTNAME=	bulk-large-20260223
+DISTNAME=	bulk-large-20260810
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -74,7 +74,6 @@ DEPENDS+=	mariadb-server>=10.11<10.12:../../databases/mariadb1011-server
 DEPENDS+=	postgresql16-[0-9]*:../../databases/postgresql16
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
-DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
 DEPENDS+=	glusterfs-[0-9]*:../../filesystems/glusterfs
 DEPENDS+=	tahoe-lafs-[0-9]*:../../filesystems/tahoe-lafs
 DEPENDS+=	blender-[0-9]*:../../graphics/blender
