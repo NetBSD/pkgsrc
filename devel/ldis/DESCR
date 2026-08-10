@@ -1,0 +1,13 @@
+This is ldis, a disassembler for lua binary files.  It works for
+binaries compiled by the 5.4 and 5.5 branches of lua, discovering the
+compiler used to compile into the opcodes, and delivers the assembly
+opcodes and data in an easy to read form.  It is similar to the output
+produced by luac -l -l, but of course, does not need the lua source
+code around to be able to recover the opcodes, constants, upvals and
+local variables.
+
+In general, there is little lua consistency between major releases.
+Bytecodes are numbered differently, and so there is little
+consistency, and compiled programs usually need to be recompiled.
+This disassembler tries to bridge that gap, by being able to
+disassemble both 5.4 and 5.5-compiled binaries.

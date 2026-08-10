@@ -1,0 +1,15 @@
+$NetBSD: patch-bin-Makefile,v 1.1 2026/08/10 19:01:25 agc Exp $
+
+Remove hardcoded bindir setting
+
+--- bin/Makefile	2026/08/10 18:17:02	1.1
++++ bin/Makefile	2026/08/10 18:17:19
+@@ -23,7 +23,7 @@
+ LDFLAGS+=	-g -O0
+ .endif
+ 
+-BINDIR=	/usr/bin
++#BINDIR=	/usr/bin
+ 
+ .include <bsd.prog.mk>
+ 
