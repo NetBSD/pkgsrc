@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5136 2026/08/10 10:50:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5137 2026/08/10 11:43:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7590,3 +7590,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/bulk-large to 20260810 [wiz 2026-08-10]
 	Removed x11/p5-Wx-Perl-ProcessStream [wiz 2026-08-10]
 	Updated security/defguard-gateway to 2.0.4 [adam 2026-08-10]
+	Updated devel/py-pygit2 to 1.20.0 [adam 2026-08-10]
+	Updated textproc/py-tablib to 3.10.0 [adam 2026-08-10]
+	Updated time/py-time-machine to 3.3.1 [adam 2026-08-10]
