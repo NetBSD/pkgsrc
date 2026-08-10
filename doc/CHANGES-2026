@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5132 2026/08/10 09:49:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5133 2026/08/10 09:49:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7586,3 +7586,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed editors/p5-Padre-Plugin-XS [wiz 2026-08-10]
 	Removed x11/p5-Wx [wiz 2026-08-10]
 	Removed devel/p5-Wx-Perl-DataWalker [wiz 2026-08-10]
+	Removed editors/p5-Acme-Padre-PlayCode [wiz 2026-08-10]

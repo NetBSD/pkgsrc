@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2026/08/10 09:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.267 2026/08/10 09:49:40 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -108,7 +108,6 @@ SUBDIR+=	ng
 SUBDIR+=	nvi
 SUBDIR+=	nvi-m17n
 SUBDIR+=	nvi2
-SUBDIR+=	p5-Acme-Padre-PlayCode
 SUBDIR+=	p5-PPIx-EditorTools
 SUBDIR+=	pico
 SUBDIR+=	pluma
