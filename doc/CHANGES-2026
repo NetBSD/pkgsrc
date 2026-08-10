@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5129 2026/08/10 08:56:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5130 2026/08/10 09:46:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7571,3 +7571,16 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinxcontrib-jquery to 4.1nb3 [wiz 2026-08-10]
 	Updated net/ncdc to 1.25 [adam 2026-08-10]
 	Updated sysutils/ncdu to 1.22 [adam 2026-08-10]
+	Removed editors/p5-Padre [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Autoformat [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Catalyst [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-DataWalker [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Ecliptic [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Encrypt [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Git [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-HG [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-Kate [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-PerlCritic [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-PerlTidy [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-SVN [wiz 2026-08-10]
+	Removed editors/p5-Padre-Plugin-XS [wiz 2026-08-10]
