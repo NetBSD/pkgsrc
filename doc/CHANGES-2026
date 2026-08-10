@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5143 2026/08/10 20:25:48 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5144 2026/08/10 21:43:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7602,3 +7602,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-nmeagps to 1.1.7 [gdt 2026-08-10]
 	Added devel/ldis version 20260810 [agc 2026-08-10]
 	Updated www/resterm to 0.53.1 [drixter 2026-08-10]
+	Added lang/gcc16 version 16.1.0 [wiz 2026-08-10]
