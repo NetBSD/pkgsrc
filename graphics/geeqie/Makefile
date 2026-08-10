@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2026/08/09 17:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2026/08/10 07:31:10 wiz Exp $
 
 DISTNAME=	geeqie-3.1
 CATEGORIES=	graphics
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	webp-pixbuf-loader-[0-9]*:../../graphics/webp-pixbuf-loader
+
+CONFLICTS=	geeqie-gtk3-[0-9]*
 
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
