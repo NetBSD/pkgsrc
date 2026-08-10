@@ -1,0 +1,14 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/08/10 07:50:48 wiz Exp $
+
+Fix build with flit_core 4.x.
+
+--- pyproject.toml.orig	2026-08-10 07:47:48.741529930 +0000
++++ pyproject.toml
+@@ -4,7 +4,6 @@ license = { file = "LICENSE.txt" }
+ description = "Simple and extensible admin interface framework for Flask"
+ readme = "README.md"
+ license = { file = "LICENSE.txt" }
+-author = [{ name = "Flask-Admin team" }]
+ maintainers = [{ name = "Pallets Ecosystem", email = "contact@palletsprojects.com" }]
+ classifiers = [
+     'Development Status :: 5 - Production/Stable',
