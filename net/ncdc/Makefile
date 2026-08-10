@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/05/14 16:41:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2026/08/10 08:54:44 adam Exp $
 
-DISTNAME=	ncdc-1.24.1
-PKGREVISION=	5
+DISTNAME=	ncdc-1.25
 CATEGORIES=	net
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
@@ -10,14 +9,14 @@ HOMEPAGE=	https://dev.yorhel.nl/ncdc
 COMMENT=	Modern and lightweight direct connect client (curses interface)
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	yes
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
