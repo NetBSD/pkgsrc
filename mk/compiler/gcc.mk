@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.312 2026/07/02 13:35:39 gdt Exp $
+# $NetBSD: gcc.mk,v 1.313 2026/08/10 21:51:52 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -92,7 +92,7 @@ _DEF_VARS.gcc=	\
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
-	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 _NEED_GCC14 _NEED_GCC15 \
+	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 _NEED_GCC14 _NEED_GCC15 _NEED_GCC16 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
 	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT _NEED_GCC14_GNAT _NEED_GCC15_GNAT \
 	_GNAT_NAME \
@@ -127,7 +127,7 @@ _USE_VARS.gcc=	\
 	_OPSYS_INCLUDE_DIRS _OPSYS_LIB_DIRS
 _IGN_VARS.gcc=	\
 	_GCC6_PATTERNS _GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS \
-	_GCC10_PATTERNS _GCC12_PATTERNS _GCC13_PATTERNS _GCC14_PATTERNS _GCC15_PATTERNS \
+	_GCC10_PATTERNS _GCC12_PATTERNS _GCC13_PATTERNS _GCC14_PATTERNS _GCC15_PATTERNS _GCC16_PATTERNS \
 	_GCC_AUX_PATTERNS
 _LISTED_VARS.gcc= \
 	MAKEFLAGS IMAKEOPTS LDFLAGS PREPEND_PATH
@@ -327,7 +327,7 @@ GCC_REQD+=	14
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
-_GCC_DIST_NAME:=	gcc15
+_GCC_DIST_NAME:=	gcc16
 .include "../../lang/${_GCC_DIST_NAME}/version.mk"
 _GCC_DIST_VERSION:=	${${_GCC_DIST_NAME:tu}_DIST_VERSION}
 
@@ -358,6 +358,9 @@ _GCC14_PATTERNS= 14 14.*
 
 # _GCC15_PATTERNS matches N s.t. 15.0 <= N < 16.
 _GCC15_PATTERNS= 15 15.*
+
+# _GCC16_PATTERNS matches N s.t. 16.0 <= N < 17.
+_GCC16_PATTERNS= 16 16.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -620,6 +623,20 @@ PKG_FAIL_REASON+=	"Package requires at least gcc 15 to build"
 _NEED_GCC15=	yes
 .  endif
 .endfor
+_NEED_GCC16?=	no
+.for _pattern_ in ${_GCC16_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+# XXX: pin to a version when NetBSD switches to gcc16
+.    if ${OPSYS} == "NetBSD" && ${_NEED_GCC_AUX:tl} != "yes"
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.    endif
+.    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
+PKG_FAIL_REASON+=	"Package requires at least gcc 16 to build"
+.    endif
+_NEED_GCC16=	yes
+.  endif
+.endfor
 # AUX patterns really don't work starting from gcc10-aux
 #_NEED_GCC_AUX?=	no
 #.for _pattern_ in ${_GCC_AUX_PATTERNS}
@@ -632,7 +649,7 @@ _NEED_GCC15=	yes
     !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
     !empty(_NEED_GCC10:M[nN][oO]) && !empty(_NEED_GCC12:M[nN][oO]) && \
     !empty(_NEED_GCC13:M[nN][oO]) && !empty(_NEED_GCC14:M[nN][oO]) && \
-    !empty(_NEED_GCC15:M[nN][oO]) && \
+    !empty(_NEED_GCC15:M[nN][oO]) && !empty(_NEED_GCC16:M[nN][oO]) && \
     !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC8=	yes
 .endif
@@ -650,6 +667,7 @@ _NEED_GCC12=	yes
 _NEED_GCC13=	yes
 _NEED_GCC14=	yes
 _NEED_GCC15=	yes
+_NEED_GCC16=	yes
 .endif
 
 _NEED_GCC6_AUX?=no
@@ -713,6 +731,7 @@ _NEED_GCC12=no
 _NEED_GCC13=no
 _NEED_GCC14=	no
 _NEED_GCC15=	no
+_NEED_GCC16=	no
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -734,6 +753,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC14:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC15:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
+.elif !empty(_NEED_GCC16:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 #.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
@@ -953,6 +974,26 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc15
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC16:M[yY][eE][sS])
+#
+# We require gcc-16.x in the lang/gcc16-* directory.
+#
+_GCC_PKGBASE=		gcc16
+.  if ${PKGPATH} == lang/gcc16
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc16
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -1342,6 +1383,8 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .      include "../../lang/gcc14-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc15)
 .      include "../../lang/gcc15-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc16)
+.      include "../../lang/gcc16-libs/buildlink3.mk"
 .    else
 PKG_FAIL_REASON+=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
 .    endif
