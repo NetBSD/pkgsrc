@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/10 19:01:24 agc Exp $
+bin/ldis
+lib/libldis.a
+lib/libldis.so
+lib/libldis.so.1
+lib/libldis.so.1.0
+lib/libldis_p.a
+man/man1/ldis.1
+man/man3/libldis.3
