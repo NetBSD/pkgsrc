@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5140 2026/08/10 16:46:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5141 2026/08/10 18:05:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7599,3 +7599,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/protobuf-language-server to 0.1.6 [adam 2026-08-10]
 	Updated devel/talloc to 2.5.0 [adam 2026-08-10]
 	Updated devel/tevent to 0.17.2 [adam 2026-08-10]
+	Updated geography/py-nmeagps to 1.1.7 [gdt 2026-08-10]
