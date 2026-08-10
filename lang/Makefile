@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.788 2026/05/18 10:18:54 adam Exp $
+# $NetBSD: Makefile,v 1.789 2026/08/10 21:42:54 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -97,6 +97,9 @@ SUBDIR+=	gcc15-gnat
 SUBDIR+=	gcc15-gnat-libs
 SUBDIR+=	gcc15-libjit
 SUBDIR+=	gcc15-libs
+SUBDIR+=	gcc16
+SUBDIR+=	gcc16-libjit
+SUBDIR+=	gcc16-libs
 SUBDIR+=	gcc2
 SUBDIR+=	gcc5-aux
 SUBDIR+=	gcc6
