@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5128 2026/08/10 07:47:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5129 2026/08/10 08:56:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7569,3 +7569,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 0.52.1 [drixter 2026-08-10]
 	Added graphics/geeqie-gtk3 version 2.9 [wiz 2026-08-10]
 	Updated textproc/py-sphinxcontrib-jquery to 4.1nb3 [wiz 2026-08-10]
+	Updated net/ncdc to 1.25 [adam 2026-08-10]
+	Updated sysutils/ncdu to 1.22 [adam 2026-08-10]
