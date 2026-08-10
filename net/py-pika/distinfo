@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/05/25 13:05:12 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/08/10 11:46:47 adam Exp $
 
-BLAKE2s (pika-1.4.1.tar.gz) = 4ff6a67124eb1daff14cfce1ae73a4e600059852726c0d988a7d9e1fa04ea548
-SHA512 (pika-1.4.1.tar.gz) = 379228989a1b9ff910627235998d7894789b82fc9bbfca62540f8ae256ed13c5f031b07fec510819b4361f98e615054df89794eccab4453f72ea2540855f6113
-Size (pika-1.4.1.tar.gz) = 154268 bytes
+BLAKE2s (pika-1.4.4.tar.gz) = da315ed27babbbc72e19ef3f0fcc1fb3278ab0bf99b1b08689759703bf8a87ed
+SHA512 (pika-1.4.4.tar.gz) = 148b5e47fa1127b913a59ccec92f323ebda0ae3c77a5fcc1f030e7121bce0a0efbe372d0e8d058f301662d322f33ad947e8e5098276e62d22cbdaaf637656d0f
+Size (pika-1.4.4.tar.gz) = 154713 bytes
