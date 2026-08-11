@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2024/10/22 11:41:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/08/11 09:47:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pylint_django/LICENSE
 ${PYSITELIB}/pylint_django/__init__.py
 ${PYSITELIB}/pylint_django/__init__.pyc
@@ -24,6 +25,9 @@ ${PYSITELIB}/pylint_django/checkers/django_installed.pyo
 ${PYSITELIB}/pylint_django/checkers/foreign_key_strings.py
 ${PYSITELIB}/pylint_django/checkers/foreign_key_strings.pyc
 ${PYSITELIB}/pylint_django/checkers/foreign_key_strings.pyo
+${PYSITELIB}/pylint_django/checkers/format_html.py
+${PYSITELIB}/pylint_django/checkers/format_html.pyc
+${PYSITELIB}/pylint_django/checkers/format_html.pyo
 ${PYSITELIB}/pylint_django/checkers/forms.py
 ${PYSITELIB}/pylint_django/checkers/forms.pyc
 ${PYSITELIB}/pylint_django/checkers/forms.pyo
