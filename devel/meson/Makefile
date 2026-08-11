@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2026/07/13 06:33:01 adam Exp $
+# $NetBSD: Makefile,v 1.95 2026/08/11 11:43:05 wiz Exp $
 #
 # Release notes in markdown format:
 # https://github.com/mesonbuild/meson/tree/master/docs/markdown/
 
-DISTNAME=	meson-1.11.2
+DISTNAME=	meson-1.12.0
 CATEGORIES=	devel python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesonbuild/}
@@ -39,10 +39,10 @@ REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
-# as of 1.11.0
-# Total passed tests:  503
-# Total failed tests:  13
-# Total skipped tests: 113
+# as of 1.12.0
+# Total passed tests:  528
+# Total failed tests:  14
+# Total skipped tests: 114
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
