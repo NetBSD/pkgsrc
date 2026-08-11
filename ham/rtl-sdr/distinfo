@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2024/09/04 18:05:41 gdt Exp $
+$NetBSD: distinfo,v 1.17 2026/08/11 23:29:31 gdt Exp $
 
-BLAKE2s (rtl-sdr-2.0.2.tar.gz) = f8a3ad211b61a5229afd4ffb785b3c6f79fe65a2dce447525af90f28ff0a6304
-SHA512 (rtl-sdr-2.0.2.tar.gz) = 20a1630df7d4da5d263c5ffd4d83a7c2a6fc674e3838bf02b2b59c1da8d946dafc48790d410ab2fcbc0362c2ac70e5cdcae9391c5f04803bf2cdddafd6f58483
-Size (rtl-sdr-2.0.2.tar.gz) = 136512 bytes
+BLAKE2s (rtl-sdr-2.0.3.tar.gz) = c90bf2715250a6fe7f5c9a58038a3bcdf7ea11abd904ff9da90b202c42fabb88
+SHA512 (rtl-sdr-2.0.3.tar.gz) = 1bb2a2b65a68afb2402e900526092eb544aa8155156c75cba201581d58fe616016e9742d4736854e8658a48a5375413f5a7d474502e128cbaf94ee0da32d8937
+Size (rtl-sdr-2.0.3.tar.gz) = 138261 bytes
 SHA1 (patch-src_rtl__fm_c) = 04ec7142f38f26d2ed431765017f53e8e79a3a36
