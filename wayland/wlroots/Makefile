@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/07/20 17:27:15 kikadf Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/11 17:32:34 wiz Exp $
 
 DISTNAME=		wlroots-0.20.2
 CATEGORIES=		wayland
@@ -26,6 +26,8 @@ SUBST_VARS.path+=	PREFIX X11BASE
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 110000
 PKG_FAIL_REASON+=	"DRM_IOCTL_GET_UNIQUE is not allowed on render nodes"
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "options.mk"
 
