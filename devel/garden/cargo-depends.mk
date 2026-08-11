@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2026/07/14 10:58:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2026/08/11 13:12:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.32
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.10
@@ -377,7 +377,7 @@ CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
 CARGO_CRATE_DEPENDS+=	url-2.5.8
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.2
-CARGO_CRATE_DEPENDS+=	uuid-1.23.5
+CARGO_CRATE_DEPENDS+=	uuid-1.23.4
 CARGO_CRATE_DEPENDS+=	version_check-0.9.5
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
 CARGO_CRATE_DEPENDS+=	wasi-0.11.1+wasi-snapshot-preview1
@@ -455,7 +455,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.53.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.53.1
 CARGO_CRATE_DEPENDS+=	winit-0.30.13
-CARGO_CRATE_DEPENDS+=	winnow-1.0.4
+CARGO_CRATE_DEPENDS+=	winnow-1.0.3
 CARGO_CRATE_DEPENDS+=	wit-bindgen-0.57.1
 CARGO_CRATE_DEPENDS+=	writeable-0.6.3
 CARGO_CRATE_DEPENDS+=	x11-dl-2.21.0
@@ -483,7 +483,7 @@ CARGO_CRATE_DEPENDS+=	zerofrom-derive-0.1.7
 CARGO_CRATE_DEPENDS+=	zerotrie-0.2.4
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.6
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.3
-CARGO_CRATE_DEPENDS+=	zmij-1.0.23
+CARGO_CRATE_DEPENDS+=	zmij-1.0.21
 CARGO_CRATE_DEPENDS+=	zune-core-0.5.1
 CARGO_CRATE_DEPENDS+=	zune-jpeg-0.5.15
 CARGO_CRATE_DEPENDS+=	zvariant-5.13.0
