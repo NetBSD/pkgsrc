@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2026/04/22 07:25:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2026/08/11 05:52:52 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1339,6 +1339,7 @@ ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user/change_password.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/base.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/base_site.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/change_form.html
+${PYSITELIB}/django/contrib/admin/templates/admin/change_form_actions.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/change_form_object_tools.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/change_list.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/change_list_object_tools.html
@@ -1382,6 +1383,9 @@ ${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_form.htm
 ${PYSITELIB}/django/contrib/admin/templatetags/__init__.py
 ${PYSITELIB}/django/contrib/admin/templatetags/__init__.pyc
 ${PYSITELIB}/django/contrib/admin/templatetags/__init__.pyo
+${PYSITELIB}/django/contrib/admin/templatetags/admin_filters.py
+${PYSITELIB}/django/contrib/admin/templatetags/admin_filters.pyc
+${PYSITELIB}/django/contrib/admin/templatetags/admin_filters.pyo
 ${PYSITELIB}/django/contrib/admin/templatetags/admin_list.py
 ${PYSITELIB}/django/contrib/admin/templatetags/admin_list.pyc
 ${PYSITELIB}/django/contrib/admin/templatetags/admin_list.pyo
@@ -4297,6 +4301,9 @@ ${PYSITELIB}/django/core/checks/database.pyo
 ${PYSITELIB}/django/core/checks/files.py
 ${PYSITELIB}/django/core/checks/files.pyc
 ${PYSITELIB}/django/core/checks/files.pyo
+${PYSITELIB}/django/core/checks/mail.py
+${PYSITELIB}/django/core/checks/mail.pyc
+${PYSITELIB}/django/core/checks/mail.pyo
 ${PYSITELIB}/django/core/checks/messages.py
 ${PYSITELIB}/django/core/checks/messages.pyc
 ${PYSITELIB}/django/core/checks/messages.pyo
@@ -4414,6 +4421,15 @@ ${PYSITELIB}/django/core/mail/backends/locmem.pyo
 ${PYSITELIB}/django/core/mail/backends/smtp.py
 ${PYSITELIB}/django/core/mail/backends/smtp.pyc
 ${PYSITELIB}/django/core/mail/backends/smtp.pyo
+${PYSITELIB}/django/core/mail/deprecation.py
+${PYSITELIB}/django/core/mail/deprecation.pyc
+${PYSITELIB}/django/core/mail/deprecation.pyo
+${PYSITELIB}/django/core/mail/exceptions.py
+${PYSITELIB}/django/core/mail/exceptions.pyc
+${PYSITELIB}/django/core/mail/exceptions.pyo
+${PYSITELIB}/django/core/mail/handler.py
+${PYSITELIB}/django/core/mail/handler.pyc
+${PYSITELIB}/django/core/mail/handler.pyo
 ${PYSITELIB}/django/core/mail/message.py
 ${PYSITELIB}/django/core/mail/message.pyc
 ${PYSITELIB}/django/core/mail/message.pyo
@@ -4810,6 +4826,9 @@ ${PYSITELIB}/django/db/models/enums.pyo
 ${PYSITELIB}/django/db/models/expressions.py
 ${PYSITELIB}/django/db/models/expressions.pyc
 ${PYSITELIB}/django/db/models/expressions.pyo
+${PYSITELIB}/django/db/models/fetch_modes.py
+${PYSITELIB}/django/db/models/fetch_modes.pyc
+${PYSITELIB}/django/db/models/fetch_modes.pyo
 ${PYSITELIB}/django/db/models/fields/__init__.py
 ${PYSITELIB}/django/db/models/fields/__init__.pyc
 ${PYSITELIB}/django/db/models/fields/__init__.pyo
@@ -4867,6 +4886,9 @@ ${PYSITELIB}/django/db/models/functions/mixins.pyo
 ${PYSITELIB}/django/db/models/functions/text.py
 ${PYSITELIB}/django/db/models/functions/text.pyc
 ${PYSITELIB}/django/db/models/functions/text.pyo
+${PYSITELIB}/django/db/models/functions/uuid.py
+${PYSITELIB}/django/db/models/functions/uuid.pyc
+${PYSITELIB}/django/db/models/functions/uuid.pyo
 ${PYSITELIB}/django/db/models/functions/window.py
 ${PYSITELIB}/django/db/models/functions/window.pyc
 ${PYSITELIB}/django/db/models/functions/window.pyo
