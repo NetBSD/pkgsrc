@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/08/11 14:21:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.56 2026/08/11 14:23:14 riastradh Exp $
 
 PKGREVISION=	1
 
@@ -32,6 +32,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/transmission \
 # https://github.com/transmission/transmission/issues/4864
 post-install:
 	${RM} -R ${DESTDIR}${PREFIX}/share/transmission/public_html
+
+TEST_TARGET=	test
 
 .include "../../net/transmission/Makefile.common"
 .include "../../devel/cmake/build.mk"
