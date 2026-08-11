@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.27 2026/01/31 17:39:20 wiz Exp $
+# $NetBSD: builtin.mk,v 1.28 2026/08/11 16:18:02 wiz Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -97,6 +97,7 @@ pre-configure: override-expat-pkgconfig
 BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
 EXPAT_PKGCFGF=	expat.pc
 
+.PHONY: override-expat-pkgconfig override-message-expat-pkgconfig override-expat-pkgconfig
 override-expat-pkgconfig: override-message-expat-pkgconfig
 override-message-expat-pkgconfig:
 	@${STEP_MSG} "Generating pkg-config file for builtin expat package."
