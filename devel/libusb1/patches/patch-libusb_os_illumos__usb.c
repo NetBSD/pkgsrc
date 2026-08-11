@@ -1,4 +1,4 @@
-$NetBSD: patch-libusb_os_illumos__usb.c,v 1.1 2024/02/16 08:13:13 nia Exp $
+$NetBSD: patch-libusb_os_illumos__usb.c,v 1.2 2026/08/11 09:07:42 jperkin Exp $
 
 illumos support; via OmniOS.
 
@@ -7,13 +7,12 @@ From: "Joshua M. Clulow" <josh@sysmgr.org>
 Date: Mon, 27 Dec 2021 16:08:38 -0800
 Subject: [PATCH] illumos: split off from Solaris backend
 
---- libusb/os/illumos_usb.c.orig	2024-02-16 08:09:37.472034604 +0000
+--- libusb/os/illumos_usb.c.orig	2026-08-06 12:39:03.187773814 +0000
 +++ libusb/os/illumos_usb.c
-@@ -0,0 +1,1711 @@
+@@ -0,0 +1,1856 @@
 +/*
-+ *
 + * Copyright (c) 2016, Oracle and/or its affiliates.
-+ * Copyright 2021 Oxide Computer Company
++ * Copyright 2024 Oxide Computer Company
 + *
 + * This library is free software; you can redistribute it and/or
 + * modify it under the terms of the GNU Lesser General Public
@@ -54,16 +53,21 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +#include "libusbi.h"
 +#include "illumos_usb.h"
 +
-+#define	UPDATEDRV_PATH	"/usr/sbin/update_drv"
-+#define	UPDATEDRV	"update_drv"
++#define	DEVICES_PREFIX	"/devices"
 +
-+#define	DEFAULT_LISTSIZE	6
++#if !defined(ARRAY_SIZE)
++#define	ARRAY_SIZE(x)	(sizeof (x) / sizeof (x[0]))
++#endif
 +
-+typedef struct {
-+	int	nargs;
-+	int	listsize;
-+	char	**string;
-+} string_list_t;
++struct {
++	const char *name;
++	enum libusb_speed speed;
++} illumos_speed_props[] = {
++	{ .name = "low-speed",		.speed = LIBUSB_SPEED_LOW },
++	{ .name = "high-speed",		.speed = LIBUSB_SPEED_HIGH },
++	{ .name = "full-speed",		.speed = LIBUSB_SPEED_FULL },
++	{ .name = "super-speed",	.speed = LIBUSB_SPEED_SUPER },
++};
 +
 +/*
 + * Backend functions
@@ -88,173 +92,148 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +static int illumos_cancel_transfer(struct usbi_transfer *);
 +static int illumos_handle_transfer_completion(struct usbi_transfer *);
 +static int illumos_kernel_driver_active(struct libusb_device_handle *, uint8_t);
-+static int illumos_detach_kernel_driver(struct libusb_device_handle *, uint8_t);
-+static int illumos_attach_kernel_driver(struct libusb_device_handle *, uint8_t);
-+static int illumos_usb_open_ep0(illumos_dev_handle_priv_t *hpriv,
-+    illumos_dev_priv_t *dpriv);
-+static int illumos_usb_ioctl(struct libusb_device *dev, int cmd);
++static int illumos_usb_open_ep0(struct libusb_context *,
++    illumos_dev_handle_priv_t *ihp, illumos_dev_priv_t *idp);
 +
-+static int
-+illumos_get_link(di_devlink_t devlink, void *arg)
++static void
++illumos_ensure_closed(struct libusb_context *ctx, int *fd)
 +{
-+	walk_link_t *larg = (walk_link_t *)arg;
-+	const char *p;
-+	const char *q;
-+
-+	if (larg->path) {
-+		char *content = (char *)di_devlink_content(devlink);
-+		char *start = strstr(content, "/devices/");
-+		start += strlen("/devices");
-+		usbi_dbg(NULL, "%s", start);
-+
-+		/* line content must have minor node */
-+		if (start == NULL ||
-+		    strncmp(start, larg->path, larg->len) != 0 ||
-+		    start[larg->len] != ':') {
-+			return (DI_WALK_CONTINUE);
-+		}
++	if (*fd < 0) {
++		return;
 +	}
 +
-+	p = di_devlink_path(devlink);
-+	q = strrchr(p, '/');
-+	usbi_dbg(NULL, "%s", q);
++	if (close(*fd) != 0) {
++		usbi_err(ctx, "close fd %d failed: errno %d", *fd, errno);
++	}
++	*fd = -1;
++}
 +
-+	*(larg->linkpp) = strndup(p, strlen(p) - strlen(q));
++static int
++illumos_gdl_find_ugenpath_walk(di_devlink_t devlink, void *arg)
++{
++	struct libusb_device *dev = arg;
++	illumos_dev_priv_t *idp = usbi_get_device_priv(dev);
++
++	const char *content = di_devlink_content(devlink);
++	if (content == NULL) {
++		return (DI_WALK_CONTINUE);
++	}
++
++	usbi_dbg(DEVICE_CTX(dev), "link content: %s", content);
++
++	/*
++	 * Links from /dev are relative links back up out and down into
++	 * the parallel /devices tree.  Strip the prefix off so that
++	 * our path is anchored directly below /devices:
++	 */
++	const char *start = strstr(content, DEVICES_PREFIX);
++	if (start == NULL) {
++		return (DI_WALK_CONTINUE);
++	}
++	start += strlen(DEVICES_PREFIX);
++	if (start[0] != '/') {
++		return (DI_WALK_CONTINUE);
++	}
++
++	/*
++	 * Make sure that this link targets the same /devices path as the one
++	 * we were passed, and that it has a minor node suffix (after the
++	 * separating colon):
++	 */
++	size_t len = strlen(idp->idp_physpath);
++	if (strncmp(start, idp->idp_physpath, len) != 0 || start[len] != ':') {
++		return (DI_WALK_CONTINUE);
++	}
++
++	/*
++	 * Get the link name; e.g., "/dev/usb/483.3754/0/cntrl0":
++	 */
++	const char *p = di_devlink_path(devlink);
++	if (p == NULL) {
++		return (DI_WALK_CONTINUE);
++	}
++
++	usbi_dbg(DEVICE_CTX(dev), "link path: %s", p);
++
++	/*
++	 * Trim out the last path component to get the containing directory:
++	 */
++	const char *q = strrchr(p, '/');
++	if (q == NULL || (idp->idp_ugenpath = strndup(p, q - p)) == NULL) {
++		return (DI_WALK_CONTINUE);
++	}
 +
 +	return (DI_WALK_TERMINATE);
 +}
 +
-+
++/*
++ * Given a device with a base /devices path (no minor node suffix) locate the
++ * /dev directory that contains the ugen(4D) device nodes; e.g.,
++ * "/dev/usb/483.3754/0".  We do this by walking devlinks to look for one that
++ * targets a minor node for that /devices path.
++ */
 +static int
-+illumos_physpath_to_devlink(
-+    const char *node_path, const char *match, char **link_path)
++illumos_gdl_find_ugenpath(illumos_get_device_list_t *gdl,
++    struct libusb_device *dev)
 +{
-+	walk_link_t larg;
-+	di_devlink_handle_t hdl;
++	illumos_dev_priv_t *idp = usbi_get_device_priv(dev);
 +
-+	*link_path = NULL;
-+	larg.linkpp = link_path;
-+	if ((hdl = di_devlink_init(NULL, 0)) == NULL) {
-+		usbi_dbg(NULL, "di_devlink_init failure");
++	if (idp->idp_ugenpath != NULL) {
++		free(idp->idp_ugenpath);
++		idp->idp_ugenpath = NULL;
++	}
++
++	/*
++	 * We only wish to consider /dev links for our vendor and product ID:
++	 */
++	char match[PATH_MAX];
++	(void) snprintf(match, sizeof (match), "^usb/%x.%x",
++	    dev->device_descriptor.idVendor,
++	    dev->device_descriptor.idProduct);
++	usbi_dbg(DEVICE_CTX(dev), "/dev match regex is \"%s\"", match);
++
++	if (di_devlink_walk(gdl->gdl_devlink, match, NULL, DI_PRIMARY_LINK,
++	    dev, illumos_gdl_find_ugenpath_walk) != 0) {
++		usbi_err(DEVICE_CTX(dev), "di_devlink_walk() failed: "
++		    "errno %d (%s)", errno, strerror(errno));
 +		return (-1);
 +	}
 +
-+	larg.len = strlen(node_path);
-+	larg.path = (char *)node_path;
-+
-+	(void) di_devlink_walk(hdl, match, NULL, DI_PRIMARY_LINK,
-+	    (void *)&larg, illumos_get_link);
-+
-+	(void) di_devlink_fini(&hdl);
-+
-+	if (*link_path == NULL) {
-+		usbi_dbg(NULL, "there is no devlink for this path");
++	if (idp->idp_ugenpath == NULL) {
++		usbi_err(DEVICE_CTX(dev), "ugen path not found for "
++		    "device (match \"%s\", physpath \"%s\")", match,
++		    idp->idp_physpath);
 +		return (-1);
 +	}
 +
++	usbi_dbg(DEVICE_CTX(dev), "selected ugen path: %s", idp->idp_ugenpath);
 +	return (0);
-+}
-+
-+static int
-+illumos_usb_ioctl(struct libusb_device *dev, int cmd)
-+{
-+	int fd;
-+	nvlist_t *nvlist;
-+	char *end;
-+	char *phypath;
-+	char *hubpath;
-+	char path_arg[PATH_MAX];
-+	illumos_dev_priv_t *dpriv;
-+	devctl_ap_state_t devctl_ap_state;
-+	struct devctl_iocdata iocdata;
-+
-+	dpriv = usbi_get_device_priv(dev);
-+	phypath = dpriv->phypath;
-+
-+	end = strrchr(phypath, '/');
-+	if (end == NULL)
-+		return (-1);
-+	hubpath = strndup(phypath, end - phypath);
-+	if (hubpath == NULL)
-+		return (-1);
-+
-+	end = strrchr(hubpath, '@');
-+	if (end == NULL) {
-+		free(hubpath);
-+		return (-1);
-+	}
-+	end++;
-+	usbi_dbg(DEVICE_CTX(dev), "unitaddr: %s", end);
-+
-+	nvlist_alloc(&nvlist, NV_UNIQUE_NAME_TYPE, KM_NOSLEEP);
-+	nvlist_add_int32(nvlist, "port", dev->port_number);
-+	//find the hub path
-+	snprintf(path_arg, sizeof(path_arg), "/devices%s:hubd", hubpath);
-+	usbi_dbg(DEVICE_CTX(dev), "ioctl hub path: %s", path_arg);
-+
-+	fd = open(path_arg, O_RDONLY);
-+	if (fd < 0) {
-+		usbi_err(DEVICE_CTX(dev), "open failed: errno %d (%s)",
-+		    errno, strerror(errno));
-+		nvlist_free(nvlist);
-+		free(hubpath);
-+		return (-1);
-+	}
-+
-+	memset(&iocdata, 0, sizeof(iocdata));
-+	memset(&devctl_ap_state, 0, sizeof(devctl_ap_state));
-+
-+	nvlist_pack(nvlist, (char **)&iocdata.nvl_user, &iocdata.nvl_usersz,
-+	    NV_ENCODE_NATIVE, 0);
-+
-+	iocdata.cmd = DEVCTL_AP_GETSTATE;
-+	iocdata.flags = 0;
-+	iocdata.c_nodename = (char *)"hub";
-+	iocdata.c_unitaddr = end;
-+	iocdata.cpyout_buf = &devctl_ap_state;
-+	usbi_dbg(DEVICE_CTX(dev), "%p, %" PRIuPTR, iocdata.nvl_user,
-+	    iocdata.nvl_usersz);
-+
-+	errno = 0;
-+	if (ioctl(fd, DEVCTL_AP_GETSTATE, &iocdata) == -1) {
-+		usbi_err(DEVICE_CTX(dev),
-+		    "ioctl failed: fd %d, cmd %x, errno %d (%s)",
-+		    fd, DEVCTL_AP_GETSTATE, errno, strerror(errno));
-+	} else {
-+		usbi_dbg(DEVICE_CTX(dev), "dev rstate: %d",
-+		    devctl_ap_state.ap_rstate);
-+		usbi_dbg(DEVICE_CTX(dev), "dev ostate: %d",
-+		    devctl_ap_state.ap_ostate);
-+	}
-+
-+	errno = 0;
-+	iocdata.cmd = cmd;
-+	if (ioctl(fd, (int)cmd, &iocdata) != 0) {
-+		usbi_err(DEVICE_CTX(dev),
-+		    "ioctl failed: fd %d, cmd %x, errno %d (%s)",
-+		    fd, cmd, errno, strerror(errno));
-+		sleep(2);
-+	}
-+
-+	close(fd);
-+	free(iocdata.nvl_user);
-+	nvlist_free(nvlist);
-+	free(hubpath);
-+
-+	return (-errno);
 +}
 +
 +static int
 +illumos_kernel_driver_active(struct libusb_device_handle *dev_handle,
 +    uint8_t interface)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(dev_handle->dev);
++	illumos_dev_priv_t *idp = usbi_get_device_priv(dev_handle->dev);
 +
 +	UNUSED(interface);
 +
-+	usbi_dbg(HANDLE_CTX(dev_handle), "%s", dpriv->ugenpath);
++	usbi_dbg(HANDLE_CTX(dev_handle), "ugenpath: %s", idp->idp_ugenpath);
 +
-+	return (dpriv->ugenpath == NULL);
++	/*
++	 * The only way for libusb to take control of a USB device is if it has
++	 * ugen(4D) device nodes.  Some drivers, like hid(4D), expose ugen
++	 * nodes even though there is a kernel driver attached to the device.
++	 * Such drivers are willing to mediate between in-kernel access and
++	 * access from user programs.  Other devices may be explictly bound to
++	 * ugen, or ugen nodes may be exposed as a fall-back by usb_mid(4D)
++	 * when no other driver ends up matching the device.
++	 *
++	 * In summary: if we were able to find ugen(4D) nodes device
++	 * enumeration, we treat the device as something we can try to open.
++	 * Otherwise, we report that the kernel is holding the device.
++	 */
++	return (idp->idp_ugenpath == NULL);
 +}
 +
 +/*
@@ -263,240 +242,259 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +static int _errno_to_libusb(int);
 +static int illumos_usb_get_status(struct libusb_context *ctx, int fd);
 +
-+static string_list_t *
-+illumos_new_string_list(void)
++static int
++illumos_gdl_bus_number(illumos_get_device_list_t *gdl, di_node_t root_hub,
++    illumos_make_session_id_t *msi)
 +{
-+	string_list_t *list;
-+
-+	list = calloc(1, sizeof(string_list_t));
-+	if (list == NULL)
-+		return (NULL);
-+	list->string = calloc(DEFAULT_LISTSIZE, sizeof(char *));
-+	if (list->string == NULL) {
-+		free(list);
-+		return (NULL);
++	/*
++	 * Determine the driver name and instance number for the root hub.
++	 * We will use this to assign a USB bus number.
++	 */
++	char *driver;
++	int inum;
++	if ((driver = di_driver_name(root_hub)) == NULL ||
++	    (inum = di_instance(root_hub)) < 0) {
++		usbi_err(gdl->gdl_ctx, "could not get driver/instance");
++		return (EIO);
 +	}
-+	list->nargs = 0;
-+	list->listsize = DEFAULT_LISTSIZE;
 +
-+	return (list);
++	char *instance;
++	if (asprintf(&instance, "%s%d", driver, inum) < 0) {
++		usbi_err(gdl->gdl_ctx, "could not make driver/instance string");
++		return (EIO);
++	}
++
++	/*
++	 * Walk through to check if we have assigned this already:
++	 */
++	for (uint_t n = 0; n < MAX_BUSES; n++) {
++		if (gdl->gdl_buses[n] == NULL) {
++			/*
++			 * If we reach an unused slot, use that slot for
++			 * this root hub:
++			 */
++			usbi_dbg(gdl->gdl_ctx, "new bus: %s -> bus %u",
++			    instance, n);
++			gdl->gdl_buses[n] = instance;
++			msi->msi_bus_number = n;
++			return (0);
++		} else if (strcmp(gdl->gdl_buses[n], instance) == 0) {
++			/*
++			 * This root hub was already assigned a device:
++			 */
++			free(instance);
++			msi->msi_bus_number = n;
++			return (0);
++		}
++	}
++
++	/*
++	 * We have run out of bus IDs!
++	 */
++	free(instance);
++	usbi_err(gdl->gdl_ctx, "ran out of bus IDs!");
++	return (EOVERFLOW);
 +}
 +
++/*
++ * Our 64-bit session IDs for devices other than root hubs have the
++ * following format:
++ *
++ *	BITS
++ *	0-7		device assigned-address
++ *	8-15		hub level 0 (immediate parent) assigned-address
++ *	16-23		hub level 1 (if present)
++ *	24-31		hub level 2 (if present)
++ *	32-39		hub level 3 (if present)
++ *	40-47		hub level 4 (if present)
++ *	48-50		root hub PCI function
++ *	51-55		root hub PCI device
++ *	56-63		root hub PCI bus
++ *
++ * For a root hub, only bits 48-63 will be populated and the rest will be
++ * zero.
++ */
 +static int
-+illumos_append_to_string_list(string_list_t *list, const char *arg)
++illumos_gdl_make_session_id(illumos_get_device_list_t *gdl, di_node_t node,
++     illumos_make_session_id_t *msi)
 +{
-+	char *str = strdup(arg);
++	uint_t byt = 0;
 +
-+	if (str == NULL)
-+		return (-1);
++	/*
++	 * Devices are assumed to be root hubs until we discover otherwise:
++	 */
++	msi->msi_is_root_hub = 1;
 +
-+	if ((list->nargs + 1) == list->listsize) { /* +1 is for NULL */
-+		char **tmp = realloc(list->string,
-+		    sizeof(char *) * (list->listsize + 1));
-+		if (tmp == NULL) {
-+			free(str);
-+			return (-1);
++	while (node != DI_NODE_NIL) {
++		int r;
++		int *unused;
++		int has_root_hub_prop = 0;
++
++		usbi_dbg(NULL, "loop %p", node);
++
++		/*
++		 * Look for the "root-hub" property on this device node.
++		 * The property is a boolean, so its mere existence
++		 * represents "true".  If true, this node is a root hub.
++		 */
++		if ((r = di_prop_lookup_ints(DDI_DEV_T_ANY, node,
++		    "root-hub", &unused)) == 0) {
++			has_root_hub_prop = 1;
++		} else if (r >= 1) {
++			/*
++			 * This should never happen for a boolean property.
++			 */
++			usbi_err(NULL, "unexpected root-hub "
++			    "lookup return %d", r);
++			return (EIO);
++		} else if (r < 0 && errno != ENXIO) {
++			/*
++			 * Report errors other than a failure to find the
++			 * property.
++			 */
++			usbi_err(NULL, "unexpected root-hub "
++			    "lookup error %d", errno);
++			return (EIO);
 +		}
-+		list->string = tmp;
-+		list->string[list->listsize++] = NULL;
-+	}
-+	list->string[list->nargs++] = str;
 +
-+	return (0);
++		if (!has_root_hub_prop) {
++			int *addr;
++
++			/*
++			 * If we see any other device, this is not a root hub.
++			 */
++			msi->msi_is_root_hub = 0;
++
++			/*
++			 * Get the "assigned-address" value of the current
++			 * node.  Root hubs don't have this property, but
++			 * all other USB devices (including external hubs)
++			 * must.
++			 */
++			if ((r = di_prop_lookup_ints(DDI_DEV_T_ANY, node,
++			    "assigned-address", &addr)) < 0) {
++				/*
++				 * XXX report error
++				 */
++				usbi_err(NULL, "unexpected address "
++				    "lookup error %d", errno);
++				return (EIO);
++			} else if (r != 1) {
++				/*
++				 * XXX Expected just one integer here, not a
++				 * boolean or a list.
++				 */
++				usbi_err(NULL, "unexpected address "
++				    "lookup return %d", r);
++				return (EIO);
++			} else if (*addr > UINT8_MAX || *addr < 1) {
++				/*
++				 * We need USB addresses to fit in a byte
++				 * and to be non-zero.
++				 */
++				usbi_err(NULL, "unexpected address %d",
++				    *addr);
++				return (EIO);
++			}
++
++			/*
++			 * Store the USB address in the session ID in the
++			 * next available byte.
++			 */
++			if (byt >= 5) {
++				/*
++				 * We have run out of slots.
++				 */
++				usbi_err(NULL, "ran out of slots");
++				return (EIO);
++			}
++			usbi_dbg(NULL, "slot %u = %x", byt, *addr & 0xFF);
++			msi->msi_session_id |= (*addr & 0xFF) << (byt++ * 8);
++
++			/*
++			 * Walk one node up the device tree.
++			 */
++			node = di_parent_node(node);
++			continue;
++		}
++
++		/*
++		 * Assign a bus number to this root hub if we have not done
++		 * that already.
++		 */
++		if ((r = illumos_gdl_bus_number(gdl, node, msi)) != 0) {
++			usbi_err(NULL, "bus number failure %d", r);
++			return (r);
++		}
++
++		/*
++		 * This is the USB host controller.  Determine the PCI BDF
++		 * for this device and include it at the top of the session
++		 * ID:
++		 */
++		int *regs;
++		if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "reg",
++		    &regs) <= 0) {
++			/*
++			 * XXX
++			 */
++			usbi_err(NULL, "reg lookup failure %d %d", r, errno);
++			return (EIO);
++		}
++		msi->msi_session_id |=
++		    ((uint64_t)(PCI_REG_FUNC_G(regs[0])) << 48) |
++		    ((uint64_t)(PCI_REG_DEV_G(regs[0])) << 51) |
++		    ((uint64_t)(PCI_REG_BUS_G(regs[0])) << 56);
++
++		/*
++		 * Once we have found the root hub, the session ID is complete.
++		 */
++		return (0);
++	}
++
++	/*
++	 * If we get down here, it means we have walked out of the tree without
++	 * finding the root hub.
++	 */
++	usbi_err(NULL, "could not find root hub!");
++	return (ENOENT);
 +}
 +
 +static void
-+illumos_free_string_list(string_list_t *list)
++illumos_dev_priv_reset(illumos_dev_priv_t *idp)
 +{
-+	int i;
++	free(idp->idp_raw_cfgdescr);
++	idp->idp_raw_cfgdescr = NULL;
++	idp->idp_cfgvalue = 0;
 +
-+	for (i = 0; i < list->nargs; i++) {
-+		free(list->string[i]);
-+	}
++	free(idp->idp_ugenpath);
++	idp->idp_ugenpath = NULL;
 +
-+	free(list->string);
-+	free(list);
-+}
-+
-+static char **
-+illumos_build_argv_list(string_list_t *list)
-+{
-+	return (list->string);
-+}
-+
-+
-+static int
-+illumos_exec_command(struct libusb_context *ctx, const char *path,
-+    string_list_t *list)
-+{
-+	pid_t pid;
-+	int status;
-+	int waitstat;
-+	int exit_status;
-+	char **argv_list;
-+
-+	argv_list = illumos_build_argv_list(list);
-+	if (argv_list == NULL)
-+		return (-1);
-+
-+	pid = fork();
-+	if (pid == 0) {
-+		/* child */
-+		execv(path, argv_list);
-+		_exit(127);
-+	} else if (pid > 0) {
-+		/* parent */
-+		do {
-+			waitstat = waitpid(pid, &status, 0);
-+		} while ((waitstat == -1 && errno == EINTR) ||
-+		    (waitstat == 0 && !WIFEXITED(status) &&
-+		    !WIFSIGNALED(status)));
-+
-+		if (waitstat == 0) {
-+			if (WIFEXITED(status))
-+				exit_status = WEXITSTATUS(status);
-+			else
-+				exit_status = WTERMSIG(status);
-+		} else {
-+			usbi_err(ctx, "waitpid failed: errno %d (%s)", errno,
-+			    strerror(errno));
-+			exit_status = -1;
-+		}
-+	} else {
-+		/* fork failed */
-+		usbi_err(ctx, "fork failed: errno %d (%s)", errno,
-+		    strerror(errno));
-+		exit_status = -1;
-+	}
-+
-+	return (exit_status);
++	/*
++	 * This string is allocated with di_devfs_path(3DEVINFO) and thus must
++	 * be freed accordingly:
++	 */
++	di_devfs_path_free(idp->idp_physpath);
++	idp->idp_physpath = NULL;
 +}
 +
 +static int
-+illumos_detach_kernel_driver(struct libusb_device_handle *dev_handle,
-+    uint8_t interface_number)
-+{
-+	struct libusb_context *ctx = HANDLE_CTX(dev_handle);
-+	string_list_t *list;
-+	char path_arg[PATH_MAX];
-+	illumos_dev_priv_t *dpriv;
-+	int r;
-+
-+	UNUSED(interface_number);
-+
-+	dpriv = usbi_get_device_priv(dev_handle->dev);
-+	snprintf(path_arg, sizeof(path_arg), "\'\"%s\"\'", dpriv->phypath);
-+	usbi_dbg(HANDLE_CTX(dev_handle), "%s", path_arg);
-+
-+	list = illumos_new_string_list();
-+	if (list == NULL)
-+		return (LIBUSB_ERROR_NO_MEM);
-+
-+	/* attach ugen driver */
-+	r = 0;
-+	r |= illumos_append_to_string_list(list, UPDATEDRV);
-+	r |= illumos_append_to_string_list(list, "-a"); /* add rule */
-+	r |= illumos_append_to_string_list(list, "-i"); /* specific device */
-+	r |= illumos_append_to_string_list(list, path_arg); /* physical path */
-+	r |= illumos_append_to_string_list(list, "ugen");
-+	if (r) {
-+		illumos_free_string_list(list);
-+		return (LIBUSB_ERROR_NO_MEM);
-+	}
-+
-+	r = illumos_exec_command(ctx, UPDATEDRV_PATH, list);
-+	illumos_free_string_list(list);
-+	if (r < 0)
-+		return (LIBUSB_ERROR_OTHER);
-+
-+	/* reconfigure the driver node */
-+	r = 0;
-+	r |= illumos_usb_ioctl(dev_handle->dev, DEVCTL_AP_DISCONNECT);
-+	r |= illumos_usb_ioctl(dev_handle->dev, DEVCTL_AP_CONFIGURE);
-+	if (r)
-+		usbi_warn(HANDLE_CTX(dev_handle), "one or more ioctls failed");
-+
-+	snprintf(path_arg, sizeof(path_arg), "^usb/%x.%x",
-+	    dev_handle->dev->device_descriptor.idVendor,
-+	    dev_handle->dev->device_descriptor.idProduct);
-+	illumos_physpath_to_devlink(dpriv->phypath, path_arg, &dpriv->ugenpath);
-+
-+	if (access(dpriv->ugenpath, F_OK) == -1) {
-+		usbi_err(HANDLE_CTX(dev_handle),
-+		    "fail to detach kernel driver");
-+		return (LIBUSB_ERROR_IO);
-+	}
-+
-+	return (illumos_usb_open_ep0(usbi_get_device_handle_priv(dev_handle),
-+	    dpriv));
-+}
-+
-+static int
-+illumos_attach_kernel_driver(struct libusb_device_handle *dev_handle,
-+    uint8_t interface_number)
-+{
-+	struct libusb_context *ctx = HANDLE_CTX(dev_handle);
-+	string_list_t *list;
-+	char path_arg[PATH_MAX];
-+	illumos_dev_priv_t *dpriv;
-+	int r;
-+
-+	UNUSED(interface_number);
-+
-+	/* we open the dev in detach driver, so we need close it first. */
-+	illumos_close(dev_handle);
-+
-+	dpriv = usbi_get_device_priv(dev_handle->dev);
-+	snprintf(path_arg, sizeof(path_arg), "\'\"%s\"\'", dpriv->phypath);
-+	usbi_dbg(HANDLE_CTX(dev_handle), "%s", path_arg);
-+
-+	list = illumos_new_string_list();
-+	if (list == NULL)
-+		return (LIBUSB_ERROR_NO_MEM);
-+
-+	/* detach ugen driver */
-+	r = 0;
-+	r |= illumos_append_to_string_list(list, UPDATEDRV);
-+	r |= illumos_append_to_string_list(list, "-d"); /* add rule */
-+	r |= illumos_append_to_string_list(list, "-i"); /* specific device */
-+	r |= illumos_append_to_string_list(list, path_arg); /* physical path */
-+	r |= illumos_append_to_string_list(list, "ugen");
-+	if (r) {
-+		illumos_free_string_list(list);
-+		return (LIBUSB_ERROR_NO_MEM);
-+	}
-+
-+	r = illumos_exec_command(ctx, UPDATEDRV_PATH, list);
-+	illumos_free_string_list(list);
-+	if (r < 0)
-+		return (LIBUSB_ERROR_OTHER);
-+
-+	/* reconfigure the driver node */
-+	r = 0;
-+	r |= illumos_usb_ioctl(dev_handle->dev, DEVCTL_AP_CONFIGURE);
-+	r |= illumos_usb_ioctl(dev_handle->dev, DEVCTL_AP_DISCONNECT);
-+	r |= illumos_usb_ioctl(dev_handle->dev, DEVCTL_AP_CONFIGURE);
-+	if (r)
-+		usbi_warn(HANDLE_CTX(dev_handle), "one or more ioctls failed");
-+
-+	return (0);
-+}
-+
-+static int
-+illumos_fill_in_dev_info(di_node_t node, struct libusb_device *dev)
++illumos_gdl_dev_load(illumos_get_device_list_t *gdl, di_node_t node,
++    struct libusb_device *dev)
 +{
 +	int proplen;
-+	int *i, n, *addr, *port_prop;
-+	char *phypath;
++	int n, *addr, *port_prop;
 +	uint8_t *rdata;
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(dev);
-+	char match_str[PATH_MAX];
++	illumos_dev_priv_t *idp = usbi_get_device_priv(dev);
++	di_node_t parent;
++	int r = LIBUSB_ERROR_IO;
 +
 +	/* Device descriptors */
 +	proplen = di_prop_lookup_bytes(DDI_DEV_T_ANY, node,
 +	    "usb-dev-descriptor", &rdata);
 +	if (proplen <= 0) {
-+		return (LIBUSB_ERROR_IO);
++		usbi_err(DEVICE_CTX(dev), "could not get device descriptor");
++		goto bail;
 +	}
 +	bcopy(rdata, &dev->device_descriptor, LIBUSB_DT_DEVICE_SIZE);
 +
@@ -504,316 +502,404 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	proplen = di_prop_lookup_bytes(DDI_DEV_T_ANY, node,
 +	    "usb-raw-cfg-descriptors", &rdata);
 +	if (proplen <= 0) {
-+		usbi_dbg(DEVICE_CTX(dev), "can't find raw config descriptors");
-+
-+		return (LIBUSB_ERROR_IO);
++		usbi_err(DEVICE_CTX(dev), "could not get raw config");
++		goto bail;
 +	}
-+	dpriv->raw_cfgdescr = calloc(1, proplen);
-+	if (dpriv->raw_cfgdescr == NULL) {
-+		return (LIBUSB_ERROR_NO_MEM);
-+	} else {
-+		bcopy(rdata, dpriv->raw_cfgdescr, proplen);
-+		dpriv->cfgvalue = ((struct libusb_config_descriptor *)
-+		    rdata)->bConfigurationValue;
++	free(idp->idp_raw_cfgdescr);
++	if ((idp->idp_raw_cfgdescr = calloc(1, proplen)) == NULL) {
++		r = LIBUSB_ERROR_NO_MEM;
++		goto bail;
 +	}
 +
++	bcopy(rdata, idp->idp_raw_cfgdescr, proplen);
++	idp->idp_cfgvalue = ((struct libusb_config_descriptor *)
++	    rdata)->bConfigurationValue;
++
++	/*
++	 * The "reg" property contains the port number that this device
++	 * is connected to, which is of course only unique within the hub
++	 * to which the device is attached.
++	 */
 +	n = di_prop_lookup_ints(DDI_DEV_T_ANY, node, "reg", &port_prop);
-+
-+	if ((n != 1) || (*port_prop <= 0)) {
-+		return (LIBUSB_ERROR_IO);
++	if (n != 1 || *port_prop <= 0) {
++		usbi_err(DEVICE_CTX(dev), "could not get reg property");
++		goto bail;
 +	}
 +	dev->port_number = *port_prop;
 +
-+	/* device physical path */
-+	phypath = di_devfs_path(node);
-+	if (phypath) {
-+		dpriv->phypath = strdup(phypath);
-+		snprintf(match_str, sizeof(match_str), "^usb/%x.%x",
-+		    dev->device_descriptor.idVendor,
-+		    dev->device_descriptor.idProduct);
-+		usbi_dbg(DEVICE_CTX(dev), "match is %s", match_str);
-+		illumos_physpath_to_devlink(dpriv->phypath, match_str,
-+		    &dpriv->ugenpath);
-+		di_devfs_path_free(phypath);
-+
++	/*
++	 * In addition to the port number, we must also populate the
++	 * parent device pointer so that USB devices can be correctly
++	 * treated as a tree.  The parent links are used by
++	 * libusb_get_port_numbers() to construct the full path back to
++	 * the root hub (not just the local port number), which is then
++	 * used by software like hidapi to uniquely identify a device.
++	 */
++	if ((parent = di_parent_node(node)) == DI_NODE_NIL) {
++		usbi_err(DEVICE_CTX(dev), "could not get parent node");
++		goto bail;
 +	} else {
-+		free(dpriv->raw_cfgdescr);
++		illumos_make_session_id_t msi = {};
++		if (illumos_gdl_make_session_id(gdl, parent, &msi) != 0) {
++			usbi_err(DEVICE_CTX(dev), "could not get "
++			    "session ID for parent node");
++			goto bail;
++		}
 +
-+		return (LIBUSB_ERROR_IO);
++		if (msi.msi_is_root_hub) {
++			usbi_dbg(DEVICE_CTX(dev), "parent device %llx "
++			    "for session ID %llx is a root hub",
++			    (unsigned long long)msi.msi_session_id,
++			    (unsigned long long)dev->session_data);
++			dev->parent_dev = NULL;
++		} else if ((dev->parent_dev = usbi_get_device_by_session_id(
++		    gdl->gdl_ctx, msi.msi_session_id)) == NULL) {
++			usbi_err(DEVICE_CTX(dev), "could not locate "
++			    "parent device %llx for session ID %llx",
++			    (unsigned long long)msi.msi_session_id,
++			    (unsigned long long)dev->session_data);
++			goto bail;
++		}
++	}
++
++	/*
++	 * Get the /devices path for this device, and use it to locate the
++	 * ugen(4D) /dev path:
++	 */
++	di_devfs_path_free(idp->idp_physpath);
++	if ((idp->idp_physpath = di_devfs_path(node)) == NULL) {
++		if (errno == EAGAIN) {
++			r = LIBUSB_ERROR_NO_MEM;
++		}
++		usbi_err(DEVICE_CTX(dev), "could not get /devices path: "
++		    "errno %d", errno);
++		goto bail;
++	}
++
++	if (illumos_gdl_find_ugenpath(gdl, dev) != 0) {
++		/*
++		 * Not every device will be accessible via ugen(4D).  We still
++		 * need to enumerate devices even if they cannot currently be
++		 * controlled, so this is not a fatal error.
++		 */
++		usbi_warn(DEVICE_CTX(dev), "could not get ugen path");
 +	}
 +
 +	/* address */
-+	n = di_prop_lookup_ints(DDI_DEV_T_ANY, node, "assigned-address", &addr);
++	n = di_prop_lookup_ints(DDI_DEV_T_ANY, node, "assigned-address",
++	    &addr);
 +	if (n != 1 || *addr == 0) {
-+		usbi_dbg(DEVICE_CTX(dev), "can't get address");
++		usbi_err(DEVICE_CTX(dev), "can't get address");
 +	} else {
 +		dev->device_address = *addr;
 +	}
 +
-+	/* speed */
-+	if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "low-speed", &i) >= 0) {
-+		dev->speed = LIBUSB_SPEED_LOW;
-+	} else if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "high-speed",
-+	    &i) >= 0) {
-+		dev->speed = LIBUSB_SPEED_HIGH;
-+	} else if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "full-speed",
-+	    &i) >= 0) {
-+		dev->speed = LIBUSB_SPEED_FULL;
-+	} else if (di_prop_lookup_ints(DDI_DEV_T_ANY, node, "super-speed",
-+	    &i) >= 0) {
-+		dev->speed = LIBUSB_SPEED_SUPER;
++	/*
++	 * Device speed is reported as a boolean node property; e.g.,
++	 * "high-speed".  Find the highest reported speed property for this
++	 * device:
++	 */
++	dev->speed = LIBUSB_SPEED_UNKNOWN;
++	for (uint_t i = 0; i < ARRAY_SIZE(illumos_speed_props); i++) {
++		int *unused;
++
++		if (di_prop_lookup_ints(DDI_DEV_T_ANY, node,
++		    illumos_speed_props[i].name, &unused) >= 0) {
++			dev->speed = illumos_speed_props[i].speed;
++			break;
++		}
 +	}
 +
 +	usbi_dbg(DEVICE_CTX(dev),
-+	    "vid=%x pid=%x, path=%s, bus_nmber=0x%x, port_number=%d, speed=%d",
-+	    dev->device_descriptor.idVendor, dev->device_descriptor.idProduct,
-+	    dpriv->phypath, dev->bus_number, dev->port_number, dev->speed);
++	    "vid=%x pid=%x, path=%s, bus=%u, port_number=%d, speed=%d",
++	    dev->device_descriptor.idVendor,
++	    dev->device_descriptor.idProduct,
++	    idp->idp_physpath, dev->bus_number, dev->port_number, dev->speed);
 +
 +	return (LIBUSB_SUCCESS);
++
++bail:
++	illumos_dev_priv_reset(idp);
++	return (r);
 +}
 +
 +static int
-+illumos_add_devices(di_devlink_t link, void *arg)
++illumos_gdl_dev_append(illumos_get_device_list_t *gdl,
++    struct libusb_device *dev)
 +{
-+	struct devlink_cbarg *largs = (struct devlink_cbarg *)arg;
-+	struct node_args *nargs;
-+	di_node_t myself, dn;
-+	uint64_t session_id = 0;
-+	uint64_t sid = 0;
-+	uint64_t bdf = 0;
-+	struct libusb_device *dev;
-+	illumos_dev_priv_t *devpriv;
-+	int n, *j;
-+	int i = 0;
-+	int *addr_prop;
-+	uint8_t bus_number = 0;
-+	uint32_t * regbuf = NULL;
-+	uint32_t reg;
-+
-+	UNUSED(link);
-+
-+	nargs = (struct node_args *)largs->nargs;
-+	myself = largs->myself;
++	struct discovered_devs *dd = *gdl->gdl_discdevs;
++	int r = 0;
 +
 +	/*
-+	 * Construct session ID.
-+	 * session ID = dev_addr | hub addr |parent hub addr|...|root hub bdf
-+	 *		8 bits       8bits          8 bits               16bits
++	 * This routine will automatically realloc(3C) the device list if
++	 * required, but unlike realloc() it will automatically free the
++	 * original list on failure.  Either way, we always want to replace our
++	 * pointer with the returned pointer.
 +	 */
-+	if (myself == DI_NODE_NIL)
-+		return (DI_WALK_CONTINUE);
-+
-+	dn = myself;
-+	/* find the root hub */
-+	while (di_prop_lookup_ints(DDI_DEV_T_ANY, dn, "root-hub", &j) != 0) {
-+		usbi_dbg(NULL, "find_root_hub:%s", di_devfs_path(dn));
-+		n = di_prop_lookup_ints(DDI_DEV_T_ANY, dn,
-+				"assigned-address", &addr_prop);
-+		session_id |= ((addr_prop[0] & 0xff) << i++ * 8);
-+		dn = di_parent_node(dn);
++	if ((dd = discovered_devs_append(dd, dev)) == NULL) {
++		usbi_err(NULL, "could not append device");
++		r = -1;
 +	}
 +
-+	/* dn is the root hub node */
-+	n = di_prop_lookup_ints(DDI_DEV_T_ANY, dn, "reg", (int **)&regbuf);
-+	reg = regbuf[0];
-+	bdf = (PCI_REG_BUS_G(reg) << 8) | (PCI_REG_DEV_G(reg) << 3) |
-+	    PCI_REG_FUNC_G(reg);
-+	/* bdf must larger than i*8 bits */
-+	session_id |= (bdf << i * 8);
-+	bus_number = (PCI_REG_DEV_G(reg) << 3) | PCI_REG_FUNC_G(reg);
++	*gdl->gdl_discdevs = dd;
++	return (r);
++}
 +
-+	usbi_dbg(NULL, "device bus address=%s:%x, name:%s",
-+	    di_bus_addr(myself), bus_number, di_node_name(dn));
-+	usbi_dbg(NULL, "session id org:%" PRIx64, session_id);
++static int
++illumos_gdl_scan_hub(illumos_get_device_list_t *gdl, di_node_t hub_node)
++{
++	struct libusb_context *ctx = gdl->gdl_ctx;
++	char *hpath = di_devfs_path(hub_node);
++	usbi_dbg(gdl->gdl_ctx, "scanning under hub: %s", hpath);
++	di_devfs_path_free(hpath);
 +
-+	/* dn is the usb device */
-+	for (dn = di_child_node(myself); dn != DI_NODE_NIL;
-+	    dn = di_sibling_node(dn)) {
-+		usbi_dbg(NULL, "device path:%s", di_devfs_path(dn));
-+		/* skip hub devices, because its driver can not been unload */
-+		if (di_prop_lookup_ints(DDI_DEV_T_ANY, dn, "usb-port-count",
-+		    &addr_prop) != -1) {
-+			continue;
-+		}
-+		/* usb_addr */
-+		n = di_prop_lookup_ints(DDI_DEV_T_ANY, dn,
-+		    "assigned-address", &addr_prop);
-+		if (n != 1 || addr_prop[0] == 0) {
-+			usbi_dbg(NULL, "cannot get valid usb_addr");
++	for (di_node_t node = di_child_node(hub_node); node != DI_NODE_NIL;
++	    node = di_sibling_node(node)) {
++		int r;
++		illumos_make_session_id_t msi = {};
++		if ((r = illumos_gdl_make_session_id(gdl, node, &msi) != 0)) {
++			usbi_err(ctx, "could not generate session ID (%d)", r);
 +			continue;
 +		}
 +
-+		sid = (session_id << 8) | (addr_prop[0] & 0xff) ;
-+		usbi_dbg(NULL, "session id %" PRIX64, sid);
-+
-+		dev = usbi_get_device_by_session_id(nargs->ctx, sid);
-+		if (dev == NULL) {
-+			dev = usbi_alloc_device(nargs->ctx, sid);
-+			if (dev == NULL) {
-+				usbi_dbg(NULL, "can't alloc device");
-+				continue;
-+			}
-+			devpriv = usbi_get_device_priv(dev);
-+			dev->bus_number = bus_number;
-+
-+			if (illumos_fill_in_dev_info(dn, dev) !=
-+			    LIBUSB_SUCCESS) {
-+				libusb_unref_device(dev);
-+				usbi_dbg(NULL, "get information fail");
-+				continue;
-+			}
-+			if (usbi_sanitize_device(dev) < 0) {
-+				libusb_unref_device(dev);
-+				usbi_dbg(NULL, "sanatize failed: ");
-+				return (DI_WALK_TERMINATE);
-+			}
-+		} else {
-+			devpriv = usbi_get_device_priv(dev);
-+			usbi_dbg(NULL, "Dev %s exists", devpriv->ugenpath);
++		char *path = di_devfs_path(node);
++		if (path == NULL) {
++			usbi_err(ctx, "di_devfs_path() failure!");
++			continue;
 +		}
 +
-+		if (discovered_devs_append(*(nargs->discdevs), dev) == NULL) {
-+			usbi_dbg(NULL, "cannot append device");
++		usbi_dbg(ctx,
++		    "bus number = %u, session ID = 0x%llx, path = %s",
++		    (uint_t)msi.msi_bus_number,
++		    (unsigned long long)msi.msi_session_id,
++		    path);
++
++		di_devfs_path_free(path);
++
++		if (msi.msi_is_root_hub) {
++			usbi_dbg(ctx, "skipping root hub (%llx)",
++			    (unsigned long long)msi.msi_session_id);
++			continue;
 +		}
 +
 +		/*
-+		 * we alloc and hence ref this dev. We don't need to ref it
-+		 * hereafter. Front end or app should take care of their ref.
++		 * Whether we locate the device by its session ID, or allocate
++		 * a new device here, we need to unref the device afterwards.
 +		 */
-+		libusb_unref_device(dev);
++		struct libusb_device *dev =
++		    usbi_get_device_by_session_id(gdl->gdl_ctx,
++		    msi.msi_session_id);
++		if (dev == NULL) {
++			if ((dev = usbi_alloc_device(gdl->gdl_ctx,
++			    msi.msi_session_id)) == NULL) {
++				usbi_err(ctx, "can't alloc device");
++				continue;
++			}
 +
-+		usbi_dbg(NULL, "Device %s %s id=0x%" PRIx64
-+		    ", devcount:%" PRIuPTR ", bdf=%" PRIx64,
-+		    devpriv->ugenpath, di_devfs_path(dn), (uint64_t)sid,
-+		    (*nargs->discdevs)->len, bdf);
++			usbi_dbg(DEVICE_CTX(dev), "device allocated");
++		} else {
++			usbi_warn(DEVICE_CTX(dev), "device exists already");
++		}
++
++		dev->bus_number = msi.msi_bus_number;
++
++		if (illumos_gdl_dev_load(gdl, node, dev) !=
++		    LIBUSB_SUCCESS) {
++			usbi_err(ctx, "device info load (id 0x%" PRIx64 ")",
++			    msi.msi_session_id);
++			goto unref;
++		}
++
++		if (usbi_sanitize_device(dev) < 0) {
++			usbi_err(ctx, "sanatize failed");
++			goto unref;
++		}
++
++		if (illumos_gdl_dev_append(gdl, dev) != 0) {
++			goto unref;
++		}
++
++		illumos_dev_priv_t *idp = usbi_get_device_priv(dev);
++		usbi_dbg(ctx, "Device %s %s id=0x%" PRIx64 ", "
++		    "devcount:%" PRIuPTR,
++		    idp->idp_ugenpath, idp->idp_physpath,
++		    msi.msi_session_id, (*gdl->gdl_discdevs)->len);
++
++unref:
++		libusb_unref_device(dev);
 +	}
 +
 +	return (DI_WALK_CONTINUE);
 +}
 +
 +static int
-+illumos_walk_minor_node_link(di_node_t node, void *args)
++illumos_gdl_find_hub_walk(di_devlink_t link, void *arg)
 +{
-+	di_minor_t minor = DI_MINOR_NIL;
-+	char *minor_path;
-+	struct devlink_cbarg arg;
-+	struct node_args *nargs = (struct node_args *)args;
-+	di_devlink_handle_t devlink_hdl = nargs->dlink_hdl;
++	illumos_gdl_find_hubs_t *dlfh = arg;
 +
-+	/* walk each minor to find usb devices */
-+	while ((minor = di_minor_next(node, minor)) != DI_MINOR_NIL) {
-+		minor_path = di_devfs_minor_path(minor);
-+		arg.nargs = args;
-+		arg.myself = node;
-+		arg.minor = minor;
-+		(void) di_devlink_walk(devlink_hdl,
-+		    "^usb/hub[0-9]+", minor_path,
-+		    DI_PRIMARY_LINK, (void *)&arg, illumos_add_devices);
++	usbi_dbg(dlfh->dlfh_ctx, "found hub link: %s -> %s",
++	    di_devlink_path(link) == NULL ? "?" : di_devlink_path(link),
++	    di_devlink_content(link) == NULL ? "?" : di_devlink_content(link));
++
++	dlfh->dlfh_is_hub = 1;
++
++	return (DI_WALK_TERMINATE);
++}
++
++static int
++illumos_gdl_find_hubs(di_node_t node, void *arg)
++{
++	illumos_get_device_list_t *gdl = arg;
++
++	/*
++	 * Walk the minor nodes of this device to see if it is a USB hub:
++	 */
++	for (di_minor_t minor = di_minor_next(node, DI_MINOR_NIL);
++	    minor != DI_MINOR_NIL; minor = di_minor_next(node, minor)) {
++		char *minor_path = di_devfs_minor_path(minor);
++
++		/*usbi_dbg(gdl->gdl_ctx, "finding hubs: %s", minor_path);*/
++
++		illumos_gdl_find_hubs_t dlfh = {
++			.dlfh_ctx = gdl->gdl_ctx,
++		};
++		int r = di_devlink_walk(gdl->gdl_devlink, "^usb/hub[0-9]+",
++		    minor_path, DI_PRIMARY_LINK, &dlfh,
++		    illumos_gdl_find_hub_walk);
++		if (r != 0) {
++			usbi_err(gdl->gdl_ctx, "di_devlink_walk() failed: "
++			    "errno %d (%s)", errno, strerror(errno));
++		}
++
++		if (dlfh.dlfh_is_hub) {
++			illumos_gdl_scan_hub(gdl, node);
++		}
++
 +		di_devfs_path_free(minor_path);
 +	}
 +
-+	/* switch to a different node */
-+	nargs->last_ugenpath = NULL;
-+
 +	return (DI_WALK_CONTINUE);
 +}
 +
++/*
++ * Locate USB devices by locating all USB hub device nodes (linked as
++ * /dev/usb/hub[0-9]+) and then enumerating all child device nodes under the
++ * hub devices.
++ */
 +int
-+illumos_get_device_list(struct libusb_context * ctx,
-+	struct discovered_devs **discdevs)
++illumos_get_device_list(struct libusb_context *ctx,
++    struct discovered_devs **discdevs)
 +{
-+	di_node_t root_node;
-+	struct node_args args;
-+	di_devlink_handle_t devlink_hdl;
++	di_node_t root_node = DI_NODE_NIL;
++	di_devlink_handle_t dlh = NULL;
++	int r = LIBUSB_ERROR_IO;
 +
-+	args.ctx = ctx;
-+	args.discdevs = discdevs;
-+	args.last_ugenpath = NULL;
 +	if ((root_node = di_init("/", DINFOCPYALL)) == DI_NODE_NIL) {
-+		usbi_dbg(ctx, "di_int() failed: errno %d (%s)", errno,
++		usbi_err(ctx, "di_init() failed: errno %d (%s)", errno,
 +		    strerror(errno));
-+		return (LIBUSB_ERROR_IO);
++		goto out;
 +	}
 +
-+	if ((devlink_hdl = di_devlink_init(NULL, 0)) == NULL) {
-+		di_fini(root_node);
-+		usbi_dbg(ctx, "di_devlink_init() failed: errno %d (%s)", errno,
++	if ((dlh = di_devlink_init(NULL, 0)) == NULL) {
++		usbi_err(ctx, "di_devlink_init() failed: errno %d (%s)", errno,
 +		    strerror(errno));
-+		return (LIBUSB_ERROR_IO);
-+	}
-+	args.dlink_hdl = devlink_hdl;
-+
-+	/* walk each node to find USB devices */
-+	if (di_walk_node(root_node, DI_WALK_SIBFIRST, &args,
-+	    illumos_walk_minor_node_link) == -1) {
-+		usbi_dbg(ctx, "di_walk_node() failed: errno %d (%s)", errno,
-+		    strerror(errno));
-+		di_fini(root_node);
-+		return (LIBUSB_ERROR_IO);
++		goto out;
 +	}
 +
-+	di_fini(root_node);
-+	di_devlink_fini(&devlink_hdl);
++	/*
++	 * Walk all device nodes to locate USB hubs.
++	 */
++	illumos_get_device_list_t gdl = {
++		.gdl_ctx = ctx,
++		.gdl_discdevs = discdevs,
++		.gdl_devlink = dlh,
++	};
++	if (di_walk_node(root_node, DI_WALK_SIBFIRST, &gdl,
++	    illumos_gdl_find_hubs) != 0) {
++		usbi_err(ctx, "di_walk_node() failed: errno %d (%s)", errno,
++		    strerror(errno));
++		goto out;
++	}
 +
 +	usbi_dbg(ctx, "%zu devices", (*discdevs)->len);
++	r = (*discdevs)->len;
 +
-+	return ((*discdevs)->len);
++out:
++	if (dlh != NULL) {
++		di_devlink_fini(&dlh);
++	}
++	if (root_node != DI_NODE_NIL) {
++		di_fini(root_node);
++	}
++
++	return (r);
 +}
 +
 +static int
-+illumos_usb_open_ep0(illumos_dev_handle_priv_t *hpriv,
-+    illumos_dev_priv_t *dpriv)
++illumos_usb_open_ep0(struct libusb_context *ctx, illumos_dev_handle_priv_t *ihp,
++    illumos_dev_priv_t *idp)
 +{
 +	char filename[PATH_MAX + 1];
++	int e;
 +
-+	if (hpriv->eps[0].datafd > 0) {
++	/*
++	 * If we get here, the device must be one that we believe we can open;
++	 * viz., we must have found a ugen(4D) device node for it:
++	 */
++	assert(idp->idp_ugenpath != NULL);
++
++	if (ihp->ihp_eps[0].datafd >= 0) {
++		usbi_warn(ctx, "ep0 already open!");
++		assert(ihp->ihp_eps[0].statfd > 0);
 +		return (LIBUSB_SUCCESS);
 +	}
-+	snprintf(filename, PATH_MAX, "%s/cntrl0", dpriv->ugenpath);
 +
-+	usbi_dbg(NULL, "opening %s", filename);
-+	hpriv->eps[0].datafd = open(filename, O_RDWR);
-+	if (hpriv->eps[0].datafd < 0) {
-+		return (_errno_to_libusb(errno));
++	(void) snprintf(filename, PATH_MAX, "%s/cntrl0", idp->idp_ugenpath);
++	usbi_dbg(ctx, "opening default endpoint: %s", filename);
++	if ((ihp->ihp_eps[0].datafd = open(filename, O_RDWR)) < 0) {
++		e = errno;
++		usbi_err(ctx, "failed to open default endpoint: %s: errno %d",
++		    filename, e);
++		goto fail;
++
 +	}
 +
-+	snprintf(filename, PATH_MAX, "%s/cntrl0stat", dpriv->ugenpath);
-+	hpriv->eps[0].statfd = open(filename, O_RDONLY);
-+	if (hpriv->eps[0].statfd < 0) {
-+		close(hpriv->eps[0].datafd);
-+		hpriv->eps[0].datafd = -1;
-+		return (_errno_to_libusb(errno));
++	(void) snprintf(filename, PATH_MAX, "%s/cntrl0stat", idp->idp_ugenpath);
++	if ((ihp->ihp_eps[0].statfd = open(filename, O_RDONLY)) < 0) {
++		e = errno;
++		usbi_err(ctx, "failed to open default endpoint status: %s: "
++		    "errno %d", filename, e);
++		goto fail;
 +	}
 +
 +	return (LIBUSB_SUCCESS);
++
++fail:
++	illumos_ensure_closed(ctx, &ihp->ihp_eps[0].datafd);
++	illumos_ensure_closed(ctx, &ihp->ihp_eps[0].statfd);
++	return (_errno_to_libusb(e));
 +}
 +
 +static void
-+illumos_usb_close_all_eps(illumos_dev_handle_priv_t *hdev)
++illumos_usb_close_all_eps(struct libusb_context *ctx,
++    illumos_dev_handle_priv_t *ihp)
 +{
-+	int i;
-+
-+	/* not close ep0 */
-+	for (i = 1; i < USB_MAXENDPOINTS; i++) {
-+		if (hdev->eps[i].datafd != -1) {
-+			(void) close(hdev->eps[i].datafd);
-+			hdev->eps[i].datafd = -1;
-+		}
-+		if (hdev->eps[i].statfd != -1) {
-+			(void) close(hdev->eps[i].statfd);
-+			hdev->eps[i].statfd = -1;
-+		}
++	/*
++	 * Skip the default endpoint (endpoint 0), closing all the others:
++	 */
++	for (uint_t i = 1; i < USB_MAXENDPOINTS; i++) {
++		illumos_ensure_closed(ctx, &ihp->ihp_eps[i].datafd);
++		illumos_ensure_closed(ctx, &ihp->ihp_eps[i].statfd);
 +	}
 +}
 +
 +static void
-+illumos_usb_close_ep0(illumos_dev_handle_priv_t *hdev)
++illumos_usb_close_ep0(struct libusb_context *ctx,
++    illumos_dev_handle_priv_t *ihp)
 +{
-+	if (hdev->eps[0].datafd >= 0) {
-+		close(hdev->eps[0].datafd);
-+		close(hdev->eps[0].statfd);
-+		hdev->eps[0].datafd = -1;
-+		hdev->eps[0].statfd = -1;
++	if (ihp->ihp_eps[0].datafd >= 0) {
++		illumos_ensure_closed(ctx, &ihp->ihp_eps[0].datafd);
++		illumos_ensure_closed(ctx, &ihp->ihp_eps[0].statfd);
 +	}
 +}
 +
@@ -834,6 +920,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +
 +	r = libusb_get_active_config_descriptor(hdev->dev, &config);
 +	if (r < 0) {
++		usbi_err(HANDLE_CTX(hdev), "could not get active desc");
 +		return (LIBUSB_ERROR_INVALID_PARAM);
 +	}
 +
@@ -842,16 +929,25 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		    &config->interface[iface_idx];
 +		int altsetting_idx;
 +
++		usbi_dbg(HANDLE_CTX(hdev), "check iface %d", iface_idx);
 +		for (altsetting_idx = 0; altsetting_idx < iface->num_altsetting;
 +		    altsetting_idx++) {
 +			const struct libusb_interface_descriptor *altsetting =
 +			    &iface->altsetting[altsetting_idx];
 +			int ep_idx;
 +
++			usbi_dbg(HANDLE_CTX(hdev), "check iface %d alt %d",
++			    iface_idx, altsetting_idx);
 +			for (ep_idx = 0; ep_idx < altsetting->bNumEndpoints;
 +			    ep_idx++) {
 +				const struct libusb_endpoint_descriptor *ep =
-+					&altsetting->endpoint[ep_idx];
++				    &altsetting->endpoint[ep_idx];
++
++				usbi_dbg(HANDLE_CTX(hdev), "check iface %d "
++				    "alt %d ep_idx %d; has epa %02x",
++				    iface_idx, altsetting_idx, ep_idx,
++				    (uint32_t)ep->bEndpointAddress);
++
 +				if (ep->bEndpointAddress == endpoint) {
 +					*interface = iface_idx;
 +					libusb_free_config_descriptor(config);
@@ -875,14 +971,14 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	int fd, fdstat, mode, e;
 +	uint8_t ifc = 0;
 +	uint8_t ep_index;
-+	illumos_dev_handle_priv_t *hpriv;
++	illumos_dev_handle_priv_t *ihp;
 +
 +	usbi_dbg(HANDLE_CTX(hdl), "open ep 0x%02x", ep_addr);
-+	hpriv = usbi_get_device_handle_priv(hdl);
++	ihp = usbi_get_device_handle_priv(hdl);
 +	ep_index = illumos_usb_ep_index(ep_addr);
 +	/* ep already opened */
-+	if ((hpriv->eps[ep_index].datafd > 0) &&
-+	    (hpriv->eps[ep_index].statfd > 0)) {
++	if ((ihp->ihp_eps[ep_index].datafd > 0) &&
++	    (ihp->ihp_eps[ep_index].statfd > 0)) {
 +		usbi_dbg(HANDLE_CTX(hdl),
 +		    "ep 0x%02x already opened, return success", ep_addr);
 +
@@ -890,34 +986,34 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	}
 +
 +	if (illumos_find_interface(hdl, ep_addr, &ifc) < 0) {
-+		usbi_dbg(HANDLE_CTX(hdl),
++		usbi_err(HANDLE_CTX(hdl),
 +		    "can't find interface for endpoint 0x%02x", ep_addr);
 +		return (EACCES);
 +	}
 +
 +	/* create filename */
-+	if (hpriv->config_index > 0) {
++	if (ihp->ihp_config_index > 0) {
 +		(void) snprintf(cfg_num, sizeof(cfg_num), "cfg%d",
-+		    hpriv->config_index + 1);
++		    ihp->ihp_config_index + 1);
 +	} else {
 +		bzero(cfg_num, sizeof(cfg_num));
 +	}
 +
-+	if (hpriv->altsetting[ifc] > 0) {
++	if (ihp->ihp_altsetting[ifc] > 0) {
 +		(void) snprintf(alt_num, sizeof(alt_num), ".%d",
-+		    hpriv->altsetting[ifc]);
++		    ihp->ihp_altsetting[ifc]);
 +	} else {
 +		bzero(alt_num, sizeof(alt_num));
 +	}
 +
 +	if ((e = snprintf(filename, sizeof (filename), "%s/%sif%d%s%s%d",
-+	    hpriv->dpriv->ugenpath, cfg_num, ifc, alt_num,
++	    ihp->ihp_idp->idp_ugenpath, cfg_num, ifc, alt_num,
 +	    (ep_addr & LIBUSB_ENDPOINT_DIR_MASK) ? "in" :
 +	    "out", (ep_addr & LIBUSB_ENDPOINT_ADDRESS_MASK))) < 0 ||
 +	    e >= (int)sizeof (filename) ||
 +	    (e = snprintf(statfilename, sizeof (statfilename), "%sstat",
 +	    filename)) < 0 || e >= (int)sizeof (statfilename)) {
-+		usbi_dbg(HANDLE_CTX(hdl),
++		usbi_err(HANDLE_CTX(hdl),
 +		    "path buffer overflow for endpoint 0x%02x", ep_addr);
 +		return (EINVAL);
 +	}
@@ -941,13 +1037,13 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		mode = O_WRONLY;
 +	}
 +	/* Open the xfer endpoint first */
-+	if ((fd = open(filename, mode)) == -1) {
-+		usbi_dbg(HANDLE_CTX(hdl), "can't open %s: errno %d (%s)",
++	if ((fd = open(filename, mode)) < 0) {
++		usbi_err(HANDLE_CTX(hdl), "can't open %s: errno %d (%s)",
 +		    filename, errno, strerror(errno));
 +		return (errno);
 +	}
 +	/* And immediately close the xfer endpoint */
-+	(void) close(fd);
++	illumos_ensure_closed(HANDLE_CTX(hdl), &fd);
 +
 +	/*
 +	 * Open the status endpoint.
@@ -961,8 +1057,8 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		ssize_t count;
 +
 +		/* Open the status endpoint with RDWR */
-+		if ((fdstat = open(statfilename, O_RDWR)) == -1) {
-+			usbi_dbg(HANDLE_CTX(hdl),
++		if ((fdstat = open(statfilename, O_RDWR)) < 0) {
++			usbi_err(HANDLE_CTX(hdl),
 +			    "can't open %s RDWR: errno %d (%s)",
 +			    statfilename, errno, strerror(errno));
 +			return (errno);
@@ -970,16 +1066,17 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +			count = write(fdstat, &control, sizeof(control));
 +			if (count != 1) {
 +				/* this should have worked */
-+				usbi_dbg(HANDLE_CTX(hdl),
++				e = errno;
++				usbi_err(HANDLE_CTX(hdl),
 +				    "can't write to %s: errno %d (%s)",
-+				    statfilename, errno, strerror(errno));
-+				(void) close(fdstat);
-+				return (errno);
++				    statfilename, e, strerror(e));
++				illumos_ensure_closed(HANDLE_CTX(hdl), &fdstat);
++				return (e);
 +			}
 +		}
 +	} else {
-+		if ((fdstat = open(statfilename, O_RDONLY)) == -1) {
-+			usbi_dbg(HANDLE_CTX(hdl),
++		if ((fdstat = open(statfilename, O_RDONLY)) < 0) {
++			usbi_err(HANDLE_CTX(hdl),
 +			    "can't open %s: errno %d (%s)", statfilename, errno,
 +			    strerror(errno));
 +			return (errno);
@@ -987,15 +1084,16 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	}
 +
 +	/* Re-open the xfer endpoint */
-+	if ((fd = open(filename, mode)) == -1) {
-+		usbi_dbg(HANDLE_CTX(hdl), "can't open %s: errno %d (%s)",
-+		    filename, errno, strerror(errno));
-+		(void) close(fdstat);
-+		return (errno);
++	if ((fd = open(filename, mode)) < 0) {
++		e = errno;
++		usbi_err(HANDLE_CTX(hdl), "can't open %s: errno %d (%s)",
++		    filename, e, strerror(errno));
++		illumos_ensure_closed(HANDLE_CTX(hdl), &fdstat);
++		return (e);
 +	}
 +
-+	hpriv->eps[ep_index].datafd = fd;
-+	hpriv->eps[ep_index].statfd = fdstat;
++	ihp->ihp_eps[ep_index].datafd = fd;
++	ihp->ihp_eps[ep_index].statfd = fdstat;
 +	usbi_dbg(HANDLE_CTX(hdl), "ep=0x%02x datafd=%d, statfd=%d", ep_addr,
 +	    fd, fdstat);
 +	return (0);
@@ -1004,28 +1102,39 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +int
 +illumos_open(struct libusb_device_handle *handle)
 +{
-+	illumos_dev_handle_priv_t *hpriv;
-+	illumos_dev_priv_t *dpriv;
++	struct libusb_context *ctx = HANDLE_CTX(handle);
++	illumos_dev_handle_priv_t *ihp = usbi_get_device_handle_priv(handle);
++	illumos_dev_priv_t *idp = usbi_get_device_priv(handle->dev);
 +	int i;
 +	int ret;
 +
-+	hpriv = usbi_get_device_handle_priv(handle);
-+	dpriv = usbi_get_device_priv(handle->dev);
-+	hpriv->dpriv = dpriv;
++	ihp->ihp_idp = idp;
 +
-+	/* set all file descriptors to "closed" */
++	/*
++	 * Reset the file descriptor state on our device handle object.  We
++	 * assert that the memory was zeroed prior to being handed to us.
++	 */
 +	for (i = 0; i < USB_MAXENDPOINTS; i++) {
-+		hpriv->eps[i].datafd = -1;
-+		hpriv->eps[i].statfd = -1;
++		assert(ihp->ihp_eps[i].datafd == 0);
++		ihp->ihp_eps[i].datafd = -1;
++		assert(ihp->ihp_eps[i].statfd == 0);
++		ihp->ihp_eps[i].statfd = -1;
 +	}
 +
 +	if (illumos_kernel_driver_active(handle, 0)) {
-+		/* pretend we can open the device */
++		/*
++		 * We don't have a ugen(4D) path for the device, so just
++		 * pretend that we can open it.  This allows a program to open
++		 * any enumerated device.  Any subsequent operation that
++		 * requires ugen access will fail, but the consumer won't get
++		 * confused about the inability to open the otherwise
++		 * enumerated device.
++		 */
 +		return (LIBUSB_SUCCESS);
 +	}
 +
-+	if ((ret = illumos_usb_open_ep0(hpriv, dpriv)) != LIBUSB_SUCCESS) {
-+		usbi_dbg(HANDLE_CTX(handle), "fail: %d", ret);
++	if ((ret = illumos_usb_open_ep0(ctx, ihp, idp)) != LIBUSB_SUCCESS) {
++		usbi_err(ctx, "open failed: %d", ret);
 +		return (ret);
 +	}
 +
@@ -1035,21 +1144,20 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +void
 +illumos_close(struct libusb_device_handle *handle)
 +{
-+	illumos_dev_handle_priv_t *hpriv;
++	struct libusb_context *ctx = HANDLE_CTX(handle);
++	illumos_dev_handle_priv_t *ihp = usbi_get_device_handle_priv(handle);
 +
-+	usbi_dbg(HANDLE_CTX(handle), " ");
++	usbi_dbg(ctx, "closing");
 +
-+	hpriv = usbi_get_device_handle_priv(handle);
-+
-+	illumos_usb_close_all_eps(hpriv);
-+	illumos_usb_close_ep0(hpriv);
++	illumos_usb_close_all_eps(ctx, ihp);
++	illumos_usb_close_ep0(ctx, ihp);
 +}
 +
 +int
 +illumos_get_active_config_descriptor(struct libusb_device *dev,
 +    void *buf, size_t len)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(dev);
++	illumos_dev_priv_t *idp = usbi_get_device_priv(dev);
 +	struct libusb_config_descriptor *cfg;
 +	int proplen;
 +	di_node_t node;
@@ -1059,31 +1167,31 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	 * Keep raw configuration descriptors updated, in case config
 +	 * has ever been changed through setCfg.
 +	 */
-+	if ((node = di_init(dpriv->phypath, DINFOCPYALL)) == DI_NODE_NIL) {
-+		usbi_dbg(DEVICE_CTX(dev), "di_int() failed: errno %d (%s)",
++	if ((node = di_init(idp->idp_physpath, DINFOCPYALL)) == DI_NODE_NIL) {
++		usbi_err(DEVICE_CTX(dev), "di_int() failed: errno %d (%s)",
 +		    errno, strerror(errno));
 +		return (LIBUSB_ERROR_IO);
 +	}
 +	proplen = di_prop_lookup_bytes(DDI_DEV_T_ANY, node,
 +	    "usb-raw-cfg-descriptors", &rdata);
 +	if (proplen <= 0) {
-+		usbi_dbg(DEVICE_CTX(dev), "can't find raw config descriptors");
++		usbi_err(DEVICE_CTX(dev), "can't find raw config descriptors");
 +		return (LIBUSB_ERROR_IO);
 +	}
-+	dpriv->raw_cfgdescr = realloc(dpriv->raw_cfgdescr, proplen);
-+	if (dpriv->raw_cfgdescr == NULL) {
++	idp->idp_raw_cfgdescr = realloc(idp->idp_raw_cfgdescr, proplen);
++	if (idp->idp_raw_cfgdescr == NULL) {
 +		return (LIBUSB_ERROR_NO_MEM);
 +	} else {
-+		bcopy(rdata, dpriv->raw_cfgdescr, proplen);
-+		dpriv->cfgvalue = ((struct libusb_config_descriptor *)
++		bcopy(rdata, idp->idp_raw_cfgdescr, proplen);
++		idp->idp_cfgvalue = ((struct libusb_config_descriptor *)
 +		    rdata)->bConfigurationValue;
 +	}
 +	di_fini(node);
 +
-+	cfg = (struct libusb_config_descriptor *)dpriv->raw_cfgdescr;
++	cfg = (struct libusb_config_descriptor *)idp->idp_raw_cfgdescr;
 +	len = MIN(len, libusb_le16_to_cpu(cfg->wTotalLength));
-+	memcpy(buf, dpriv->raw_cfgdescr, len);
-+	usbi_dbg(DEVICE_CTX(dev), "path:%s len %zu", dpriv->phypath, len);
++	memcpy(buf, idp->idp_raw_cfgdescr, len);
++	usbi_dbg(DEVICE_CTX(dev), "path:%s len %zu", idp->idp_physpath, len);
 +
 +	return (len);
 +}
@@ -1100,9 +1208,9 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +int
 +illumos_get_configuration(struct libusb_device_handle *handle, uint8_t *config)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(handle->dev);
++	illumos_dev_priv_t *idp = usbi_get_device_priv(handle->dev);
 +
-+	*config = dpriv->cfgvalue;
++	*config = idp->idp_cfgvalue;
 +
 +	usbi_dbg(HANDLE_CTX(handle), "bConfigurationValue %u", *config);
 +
@@ -1112,20 +1220,20 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +int
 +illumos_set_configuration(struct libusb_device_handle *handle, int config)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(handle->dev);
-+	illumos_dev_handle_priv_t *hpriv;
++	illumos_dev_priv_t *idp = usbi_get_device_priv(handle->dev);
++	illumos_dev_handle_priv_t *ihp;
 +
 +	usbi_dbg(HANDLE_CTX(handle), "bConfigurationValue %d", config);
-+	hpriv = usbi_get_device_handle_priv(handle);
++	ihp = usbi_get_device_handle_priv(handle);
 +
-+	if (dpriv->ugenpath == NULL)
++	if (idp->idp_ugenpath == NULL)
 +		return (LIBUSB_ERROR_NOT_SUPPORTED);
 +
 +	if (config < 1)
 +		return (LIBUSB_ERROR_NOT_SUPPORTED);
 +
-+	dpriv->cfgvalue = config;
-+	hpriv->config_index = config - 1;
++	idp->idp_cfgvalue = config;
++	ihp->ihp_config_index = config - 1;
 +
 +	return (LIBUSB_SUCCESS);
 +}
@@ -1143,12 +1251,12 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +int
 +illumos_release_interface(struct libusb_device_handle *handle, uint8_t iface)
 +{
-+	illumos_dev_handle_priv_t *hpriv = usbi_get_device_handle_priv(handle);
++	illumos_dev_handle_priv_t *ihp = usbi_get_device_handle_priv(handle);
 +
 +	usbi_dbg(HANDLE_CTX(handle), "iface %u", iface);
 +
 +	/* XXX: can we release it? */
-+	hpriv->altsetting[iface] = 0;
++	ihp->ihp_altsetting[iface] = 0;
 +
 +	return (LIBUSB_SUCCESS);
 +}
@@ -1157,38 +1265,50 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +illumos_set_interface_altsetting(struct libusb_device_handle *handle,
 +    uint8_t iface, uint8_t altsetting)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(handle->dev);
-+	illumos_dev_handle_priv_t *hpriv = usbi_get_device_handle_priv(handle);
++	illumos_dev_priv_t *idp = usbi_get_device_priv(handle->dev);
++	illumos_dev_handle_priv_t *ihp = usbi_get_device_handle_priv(handle);
 +
 +	usbi_dbg(HANDLE_CTX(handle), "iface %u, setting %u", iface, altsetting);
 +
-+	if (dpriv->ugenpath == NULL)
++	if (idp->idp_ugenpath == NULL)
 +		return (LIBUSB_ERROR_NOT_FOUND);
 +
 +	/* XXX: can we switch altsetting? */
-+	hpriv->altsetting[iface] = altsetting;
++	ihp->ihp_altsetting[iface] = altsetting;
 +
 +	return (LIBUSB_SUCCESS);
 +}
 +
 +static void
-+usb_dump_data(const void *data, size_t size)
++usb_dump_data(libusb_context *ctx, const void *data, size_t size)
 +{
 +	const uint8_t *p = data;
-+	size_t i;
++	char buf[256];
++	char *l = buf;
 +
-+	if (getenv("LIBUSB_DEBUG") == NULL) {
++	if (ctx->debug < LIBUSB_LOG_LEVEL_DEBUG) {
 +		return;
 +	}
 +
-+	(void) fprintf(stderr, "data dump:");
-+	for (i = 0; i < size; i++) {
++	usbi_dbg(ctx, "data dump:");
++	for (size_t i = 0; i < size; i++) {
 +		if (i % 16 == 0) {
-+			(void) fprintf(stderr, "\n%08zx\t", i);
++			if (l != buf) {
++				usbi_dbg(ctx, "%s", buf);
++				l = buf;
++			}
++
++			l += snprintf(l, sizeof (buf) - (l - buf), "%08zx  ",
++			    i);
 +		}
-+		(void) fprintf(stderr, "%02x ", p[i]);
++
++		l += snprintf(l, sizeof (buf) - (l - buf), "%02x ", p[i]);
 +	}
-+	(void) fprintf(stderr, "\n");
++
++	if (l != buf) {
++		l = buf;
++		usbi_dbg(ctx, "%s", buf);
++	}
 +}
 +
 +static void
@@ -1198,7 +1318,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	struct libusb_transfer *xfer = tpriv->transfer;
 +	struct usbi_transfer *ixfer = LIBUSB_TRANSFER_TO_USBI_TRANSFER(xfer);
 +	struct aiocb *aiocb = &tpriv->aiocb;
-+	illumos_dev_handle_priv_t *hpriv;
++	illumos_dev_handle_priv_t *ihp;
 +	uint8_t ep;
 +	libusb_device_handle *dev_handle;
 +
@@ -1208,15 +1328,15 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	}
 +
 +	if (aio_error(aiocb) != ECANCELED) {
-+		hpriv = usbi_get_device_handle_priv(dev_handle);
++		ihp = usbi_get_device_handle_priv(dev_handle);
 +		ep = illumos_usb_ep_index(xfer->endpoint);
 +
 +		/*
 +		 * Fetch the status for the last command on this endpoint from
-+		 * ugen(7D) so that we can translate and report it later.
++		 * ugen(4D) so that we can translate and report it later.
 +		 */
 +		tpriv->ugen_status = illumos_usb_get_status(TRANSFER_CTX(xfer),
-+		    hpriv->eps[ep].statfd);
++		    ihp->ihp_eps[ep].statfd);
 +	} else {
 +		tpriv->ugen_status = USB_LC_STAT_NOERROR;
 +	}
@@ -1229,7 +1349,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +{
 +	int ret = -1;
 +	struct aiocb *aiocb;
-+	illumos_dev_handle_priv_t *hpriv;
++	illumos_dev_handle_priv_t *ihp;
 +	uint8_t ep;
 +	illumos_xfer_priv_t *tpriv;
 +
@@ -1237,18 +1357,19 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +
 +	tpriv = usbi_get_transfer_priv(
 +	    LIBUSB_TRANSFER_TO_USBI_TRANSFER(transfer));
-+	hpriv = usbi_get_device_handle_priv(transfer->dev_handle);
++	ihp = usbi_get_device_handle_priv(transfer->dev_handle);
 +	ep = illumos_usb_ep_index(transfer->endpoint);
 +
++	tpriv->type = ILLUMOS_XFT_AIO;
 +	tpriv->transfer = transfer;
 +	aiocb = &tpriv->aiocb;
 +	bzero(aiocb, sizeof(*aiocb));
-+	aiocb->aio_fildes = hpriv->eps[ep].datafd;
++	aiocb->aio_fildes = ihp->ihp_eps[ep].datafd;
 +	aiocb->aio_buf = transfer->buffer;
 +	aiocb->aio_nbytes = transfer->length;
 +	aiocb->aio_lio_opcode =
 +	    ((transfer->endpoint & LIBUSB_ENDPOINT_DIR_MASK) ==
-+	    LIBUSB_ENDPOINT_IN) ? LIO_READ:LIO_WRITE;
++	    LIBUSB_ENDPOINT_IN) ? LIO_READ : LIO_WRITE;
 +	aiocb->aio_sigevent.sigev_notify = SIGEV_THREAD;
 +	aiocb->aio_sigevent.sigev_value.sival_ptr = tpriv;
 +	aiocb->aio_sigevent.sigev_notify_function = illumos_async_callback;
@@ -1264,121 +1385,137 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +
 +/* return the number of bytes read/written */
 +static ssize_t
-+usb_do_io(struct libusb_context *ctx, int fd, int stat_fd, void *data,
-+    size_t size, int flag, int *status)
++illumos_usb_do_io(struct libusb_context *ctx, illumos_ep_priv_t *ep,
++    illumos_xfer_priv_t *tpriv, void *data, size_t size, illumos_iodir_t dir)
 +{
 +	int error;
 +	ssize_t ret = -1;
 +
-+	usbi_dbg(ctx, "usb_do_io(): datafd=%d statfd=%d size=0x%zx flag=%s",
-+	    fd, stat_fd, size, flag? "WRITE":"READ");
++	usbi_dbg(ctx,
++	    "illumos_usb_do_io(): datafd=%d statfd=%d size=0x%zx dir=%s",
++	    ep->datafd, ep->statfd, size,
++	    dir == ILLUMOS_DIR_WRITE ? "WRITE" : "READ");
 +
-+	switch (flag) {
-+	case READ:
++	switch (dir) {
++	case ILLUMOS_DIR_READ:
 +		errno = 0;
-+		ret = read(fd, data, size);
-+		usb_dump_data(data, size);
++		ret = read(ep->datafd, data, size);
++		error = errno;
++		usb_dump_data(ctx, data, size);
 +		break;
-+	case WRITE:
-+		usb_dump_data(data, size);
++	case ILLUMOS_DIR_WRITE:
++		usb_dump_data(ctx, data, size);
 +		errno = 0;
-+		ret = write(fd, data, size);
++		ret = write(ep->datafd, data, size);
++		error = errno;
++		break;
++	default:
++		abort();
 +		break;
 +	}
 +
-+	usbi_dbg(ctx, "usb_do_io(): amount=%zd", ret);
++	/*
++	 * Fetch the status for the last command on this endpoint from
++	 * ugen(4D) so that we can translate and report it later.
++	 */
++	tpriv->ugen_status = illumos_usb_get_status(ctx, ep->statfd);
++
++	usbi_dbg(ctx, "illumos_usb_do_io(): amount=%zd error=%d status=%d",
++	    ret, error, tpriv->ugen_status);
 +
 +	if (ret < 0) {
-+		int save_errno = errno;
++		usbi_err(ctx, "TID=%x io %s errno %d (%s)", pthread_self(),
++		    dir == ILLUMOS_DIR_WRITE ? "WRITE" : "READ",
++		    error, strerror(error));
 +
-+		usbi_dbg(ctx, "TID=%x io %s errno %d (%s)", pthread_self(),
-+		    flag?"WRITE":"READ", errno, strerror(errno));
-+
-+		/* illumos_usb_get_status will do a read and overwrite errno */
-+		error = illumos_usb_get_status(ctx, stat_fd);
-+		usbi_dbg(ctx, "io status=%d errno %d (%s)", error,
-+			save_errno, strerror(save_errno));
-+
-+		if (status) {
-+			*status = save_errno;
-+		}
-+
-+		return (save_errno);
-+
-+	} else if (status) {
-+		*status = 0;
++		errno = error;
++		return (-1);
 +	}
 +
 +	return (ret);
 +}
 +
 +static int
-+solaris_submit_ctrl_on_default(struct libusb_transfer *transfer)
++illumos_submit_ctrl_on_default(struct libusb_transfer *xfer)
 +{
-+	ssize_t ret = -1, setup_ret;
-+	int status;
-+	illumos_dev_handle_priv_t *hpriv;
-+	struct libusb_device_handle *hdl = transfer->dev_handle;
-+	uint16_t wLength;
-+	uint8_t *data = transfer->buffer;
++	struct libusb_context *ctx = TRANSFER_CTX(xfer);
++	struct usbi_transfer *ixfer = LIBUSB_TRANSFER_TO_USBI_TRANSFER(xfer);
++	illumos_xfer_priv_t *tpriv = usbi_get_transfer_priv(ixfer);
++	struct libusb_device_handle *hdl = xfer->dev_handle;
++	illumos_dev_handle_priv_t *ihp = usbi_get_device_handle_priv(hdl);
++	uint8_t *data = xfer->buffer;
++	size_t datalen = xfer->length;
++	illumos_iodir_t dir =
++	    (data[0] & LIBUSB_ENDPOINT_DIR_MASK) == LIBUSB_ENDPOINT_IN ?
++	    ILLUMOS_DIR_READ : ILLUMOS_DIR_WRITE;
++	ssize_t ret;
 +
-+	hpriv = usbi_get_device_handle_priv(hdl);
-+	wLength = transfer->length - LIBUSB_CONTROL_SETUP_SIZE;
++	tpriv->type = ILLUMOS_XFT_CTRL;
++	tpriv->transfer = xfer;
++	tpriv->ctrl_len = 0;
 +
-+	if (hpriv->eps[0].datafd == -1) {
-+		usbi_dbg(TRANSFER_CTX(transfer), "ep0 not opened");
-+
++	if (ihp->ihp_eps[0].datafd < 0) {
++		usbi_err(ctx, "ep0 not opened");
 +		return (LIBUSB_ERROR_NOT_FOUND);
 +	}
 +
-+	if ((data[0] & LIBUSB_ENDPOINT_DIR_MASK) == LIBUSB_ENDPOINT_IN) {
-+		usbi_dbg(TRANSFER_CTX(transfer), "IN request");
-+		ret = usb_do_io(TRANSFER_CTX(transfer), hpriv->eps[0].datafd,
-+		    hpriv->eps[0].statfd, data, LIBUSB_CONTROL_SETUP_SIZE,
-+		    WRITE, &status);
-+	} else {
-+		usbi_dbg(TRANSFER_CTX(transfer), "OUT request");
-+		ret = usb_do_io(TRANSFER_CTX(transfer), hpriv->eps[0].datafd,
-+		    hpriv->eps[0].statfd, transfer->buffer, transfer->length,
-+		    WRITE, (int *)&transfer->status);
++	if (dir == ILLUMOS_DIR_READ) {
++		/*
++		 * As per ugen(4D), to perform a control-IN transfer we must
++		 * first write(2) the USB setup data.
++		 */
++		usbi_dbg(ctx, "control IN request: write setup");
++		if ((ret = illumos_usb_do_io(ctx, &ihp->ihp_eps[0], tpriv,
++		    data, LIBUSB_CONTROL_SETUP_SIZE, ILLUMOS_DIR_WRITE)) < 0) {
++			int e = errno;
++			usbi_dbg(ctx, "IN request: setup failed (%d, %s)",
++			    e, strerror(e));
++			return (_errno_to_libusb(e));
++		} else if (ret != LIBUSB_CONTROL_SETUP_SIZE) {
++			usbi_dbg(ctx, "IN request: setup short write (%d)",
++			    (int)ret);
++			return (LIBUSB_ERROR_IO);
++		}
++
++		/*
++		 * Trim the setup data out of the buffer for the subsequent
++		 * read:
++		 */
++		datalen -= LIBUSB_CONTROL_SETUP_SIZE;
++		data += LIBUSB_CONTROL_SETUP_SIZE;
 +	}
 +
-+	setup_ret = ret;
-+	if (ret < (ssize_t)LIBUSB_CONTROL_SETUP_SIZE) {
-+		usbi_dbg(TRANSFER_CTX(transfer),
-+		    "error sending control msg: %zd", ret);
-+		return (LIBUSB_ERROR_IO);
++	usbi_dbg(ctx, "%s request: data",
++	    dir == ILLUMOS_DIR_READ ? "IN" : "OUT");
++	ret = illumos_usb_do_io(ctx, &ihp->ihp_eps[0], tpriv, data, datalen,
++	    dir);
++	if (ret < 0) {
++		int e = errno;
++		usbi_err(ctx, "%s request: failed! error=%d",
++		    dir == ILLUMOS_DIR_READ ? "IN" : "OUT", e);
++		return (_errno_to_libusb(e));
 +	}
 +
-+	ret = transfer->length - LIBUSB_CONTROL_SETUP_SIZE;
++	if (dir == ILLUMOS_DIR_WRITE) {
++		if (ret < (ssize_t)LIBUSB_CONTROL_SETUP_SIZE) {
++			usbi_err(ctx, "%s request: control write shorter than "
++			    "setup size! (%d)\n",
++			    dir == ILLUMOS_DIR_READ ? "IN" : "OUT", (int)ret);
++			return (LIBUSB_ERROR_IO);
++		}
 +
-+	/* Read the remaining bytes for IN request */
-+	if ((wLength) && ((data[0] & LIBUSB_ENDPOINT_DIR_MASK) ==
-+	    LIBUSB_ENDPOINT_IN)) {
-+		usbi_dbg(TRANSFER_CTX(transfer), "DATA: %d",
-+		    transfer->length - (int)setup_ret);
-+		ret = usb_do_io(TRANSFER_CTX(transfer), hpriv->eps[0].datafd,
-+		    hpriv->eps[0].statfd,
-+		    transfer->buffer + LIBUSB_CONTROL_SETUP_SIZE,
-+		    wLength, READ, (int *)&transfer->status);
++		/*
++		 * For a control OUT transfer, we need to subtract the
++		 * size of the header we wrote before the data from the
++		 * caller.
++		 */
++		ret -= LIBUSB_CONTROL_SETUP_SIZE;
 +	}
 +
-+	if (ret >= 0) {
-+		LIBUSB_TRANSFER_TO_USBI_TRANSFER(transfer)->transferred = ret;
-+	}
-+	usbi_dbg(TRANSFER_CTX(transfer), "Done: ctrl data bytes %zd", ret);
-+
-+	/*
-+	 * Sync transfer handling.
-+	 * We should release transfer lock here and later get it back
-+	 * as usbi_handle_transfer_completion() takes its own transfer lock.
-+	 */
-+	usbi_mutex_unlock(&LIBUSB_TRANSFER_TO_USBI_TRANSFER(transfer)->lock);
-+	ret = usbi_handle_transfer_completion(
-+	    LIBUSB_TRANSFER_TO_USBI_TRANSFER(transfer), transfer->status);
-+	usbi_mutex_lock(&LIBUSB_TRANSFER_TO_USBI_TRANSFER(transfer)->lock);
-+
-+	return (ret);
++	tpriv->ctrl_len += ret;
++	usbi_dbg(ctx, "Done: ctrl data bytes %zd", ret);
++	usbi_signal_transfer_completion(ixfer);
++	return (LIBUSB_SUCCESS);
 +}
 +
 +int
@@ -1400,12 +1537,9 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +void
 +illumos_destroy_device(struct libusb_device *dev)
 +{
-+	illumos_dev_priv_t *dpriv = usbi_get_device_priv(dev);
-+
 +	usbi_dbg(DEVICE_CTX(dev), "destroy everything");
-+	free(dpriv->raw_cfgdescr);
-+	free(dpriv->ugenpath);
-+	free(dpriv->phypath);
++
++	illumos_dev_priv_reset(usbi_get_device_priv(dev));
 +}
 +
 +int
@@ -1429,7 +1563,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		/* sync transfer */
 +		usbi_dbg(ITRANSFER_CTX(itransfer),
 +		    "CTRL transfer: %d", transfer->length);
-+		err = solaris_submit_ctrl_on_default(transfer);
++		err = illumos_submit_ctrl_on_default(transfer);
 +		break;
 +
 +	case LIBUSB_TRANSFER_TYPE_BULK:
@@ -1465,7 +1599,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +illumos_cancel_transfer(struct usbi_transfer *itransfer)
 +{
 +	illumos_xfer_priv_t *tpriv;
-+	illumos_dev_handle_priv_t *hpriv;
++	illumos_dev_handle_priv_t *ihp;
 +	struct libusb_transfer *transfer;
 +	struct aiocb *aiocb;
 +	uint8_t ep;
@@ -1474,13 +1608,13 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	tpriv = usbi_get_transfer_priv(itransfer);
 +	aiocb = &tpriv->aiocb;
 +	transfer = USBI_TRANSFER_TO_LIBUSB_TRANSFER(itransfer);
-+	hpriv = usbi_get_device_handle_priv(transfer->dev_handle);
++	ihp = usbi_get_device_handle_priv(transfer->dev_handle);
 +	ep = illumos_usb_ep_index(transfer->endpoint);
 +
-+	ret = aio_cancel(hpriv->eps[ep].datafd, aiocb);
++	ret = aio_cancel(ihp->ihp_eps[ep].datafd, aiocb);
 +
 +	usbi_dbg(ITRANSFER_CTX(itransfer), "aio->fd=%d fd=%d ret = %d, %s",
-+	    aiocb->aio_fildes, hpriv->eps[ep].datafd, ret,
++	    aiocb->aio_fildes, ihp->ihp_eps[ep].datafd, ret,
 +	    (ret == AIO_CANCELED) ? "AIO canceled" : strerror(errno));
 +
 +	if (ret != AIO_CANCELED) {
@@ -1492,6 +1626,36 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	return (ret);
 +}
 +
++static int
++illumos_libusb_status(illumos_xfer_priv_t *tpriv)
++{
++	/*
++	 * Convert the ugen(4D)-level status to a libusb-level status:
++	 */
++	switch (tpriv->ugen_status) {
++	case USB_LC_STAT_TIMEOUT:
++		return (LIBUSB_TRANSFER_TIMED_OUT);
++	case USB_LC_STAT_STALL:
++		return (LIBUSB_TRANSFER_STALL);
++	case USB_LC_STAT_DISCONNECTED:
++		return (LIBUSB_TRANSFER_NO_DEVICE);
++	case USB_LC_STAT_INTERRUPTED:
++		return (LIBUSB_TRANSFER_CANCELLED);
++	case USB_LC_STAT_BUFFER_OVERRUN:
++		/*
++		 * XXX Is this right? (*_DATA_OVERRUN?)
++		 */
++		return (LIBUSB_TRANSFER_OVERFLOW);
++	default:
++		/*
++		 * Not every ugen(4D) status maps to a specific libusb-level
++		 * failure case.  Nonetheless, we must report all failures as
++		 * failures:
++		 */
++		return (LIBUSB_TRANSFER_ERROR);
++	}
++}
++
 +int
 +illumos_handle_transfer_completion(struct usbi_transfer *ixfer)
 +{
@@ -1501,7 +1665,15 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	int ret;
 +	enum libusb_transfer_status status;
 +
-+	if ((ret = aio_error(aiocb)) == 0) {
++	if (tpriv->type == ILLUMOS_XFT_CTRL) {
++		ixfer->transferred = tpriv->ctrl_len;
++		if (tpriv->ugen_status == USB_LC_STAT_NOERROR) {
++			status = LIBUSB_TRANSFER_COMPLETED;
++		} else {
++			status = illumos_libusb_status(tpriv);
++		}
++
++	} else if ((ret = aio_error(aiocb)) == 0) {
 +		/*
 +		 * The command completed.  Update the transferred length:
 +		 */
@@ -1509,7 +1681,8 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +
 +		usbi_dbg(TRANSFER_CTX(xfer), "ret=%d, len=%d, actual_len=%d",
 +		    ret, xfer->length, xfer->actual_length);
-+		usb_dump_data(xfer->buffer, xfer->actual_length);
++		usb_dump_data(TRANSFER_CTX(xfer),
++		    xfer->buffer, xfer->actual_length);
 +
 +		status = LIBUSB_TRANSFER_COMPLETED;
 +
@@ -1525,37 +1698,7 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		status = LIBUSB_TRANSFER_CANCELLED;
 +
 +	} else {
-+		/*
-+		 * Convert the ugen(7D)-level status to a libusb-level status:
-+		 */
-+		switch (tpriv->ugen_status) {
-+		case USB_LC_STAT_TIMEOUT:
-+			status = LIBUSB_TRANSFER_TIMED_OUT;
-+			break;
-+		case USB_LC_STAT_STALL:
-+			status = LIBUSB_TRANSFER_STALL;
-+			break;
-+		case USB_LC_STAT_DISCONNECTED:
-+			status = LIBUSB_TRANSFER_NO_DEVICE;
-+			break;
-+		case USB_LC_STAT_INTERRUPTED:
-+			status = LIBUSB_TRANSFER_CANCELLED;
-+			break;
-+		case USB_LC_STAT_BUFFER_OVERRUN:
-+			/*
-+			 * XXX Is this right? (*_DATA_OVERRUN?)
-+			 */
-+			status = LIBUSB_TRANSFER_OVERFLOW;
-+			break;
-+		default:
-+			/*
-+			 * Not every ugen(7D) status maps to a specific
-+			 * libusb-level failure case.  Nonetheless, we must
-+			 * report all failures as failures:
-+			 */
-+			status = LIBUSB_TRANSFER_ERROR;
-+			break;
-+		}
++		status = illumos_libusb_status(tpriv);
 +	}
 +
 +	if (status == LIBUSB_TRANSFER_CANCELLED) {
@@ -1581,6 +1724,8 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +		return (LIBUSB_ERROR_NO_MEM);
 +	case ETIMEDOUT:
 +		return (LIBUSB_ERROR_TIMEOUT);
++	case EBUSY:
++		return (LIBUSB_ERROR_BUSY);
 +	}
 +
 +	return (LIBUSB_ERROR_OTHER);
@@ -1600,90 +1745,92 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +
 +	usbi_dbg(ctx, "illumos_usb_get_status(): fd=%d", fd);
 +
++	errno = 0;
 +	ret = read(fd, &status, sizeof(status));
-+	if (ret == sizeof(status)) {
++	if (ret == sizeof (status)) {
 +		switch (status) {
 +		case USB_LC_STAT_NOERROR:
 +			usbi_dbg(ctx, "No Error");
 +			break;
 +		case USB_LC_STAT_CRC:
-+			usbi_dbg(ctx, "CRC Timeout Detected\n");
++			usbi_dbg(ctx, "CRC Timeout Detected");
 +			break;
 +		case USB_LC_STAT_BITSTUFFING:
-+			usbi_dbg(ctx, "Bit Stuffing Violation\n");
++			usbi_dbg(ctx, "Bit Stuffing Violation");
 +			break;
 +		case USB_LC_STAT_DATA_TOGGLE_MM:
-+			usbi_dbg(ctx, "Data Toggle Mismatch\n");
++			usbi_dbg(ctx, "Data Toggle Mismatch");
 +			break;
 +		case USB_LC_STAT_STALL:
-+			usbi_dbg(ctx, "End Point Stalled\n");
++			usbi_dbg(ctx, "End Point Stalled");
 +			break;
 +		case USB_LC_STAT_DEV_NOT_RESP:
-+			usbi_dbg(ctx, "Device is Not Responding\n");
++			usbi_dbg(ctx, "Device is Not Responding");
 +			break;
 +		case USB_LC_STAT_PID_CHECKFAILURE:
-+			usbi_dbg(ctx, "PID Check Failure\n");
++			usbi_dbg(ctx, "PID Check Failure");
 +			break;
 +		case USB_LC_STAT_UNEXP_PID:
-+			usbi_dbg(ctx, "Unexpected PID\n");
++			usbi_dbg(ctx, "Unexpected PID");
 +			break;
 +		case USB_LC_STAT_DATA_OVERRUN:
-+			usbi_dbg(ctx, "Data Exceeded Size\n");
++			usbi_dbg(ctx, "Data Exceeded Size");
 +			break;
 +		case USB_LC_STAT_DATA_UNDERRUN:
-+			usbi_dbg(ctx, "Less data received\n");
++			usbi_dbg(ctx, "Less data received");
 +			break;
 +		case USB_LC_STAT_BUFFER_OVERRUN:
-+			usbi_dbg(ctx, "Buffer Size Exceeded\n");
++			usbi_dbg(ctx, "Buffer Size Exceeded");
 +			break;
 +		case USB_LC_STAT_BUFFER_UNDERRUN:
-+			usbi_dbg(ctx, "Buffer Underrun\n");
++			usbi_dbg(ctx, "Buffer Underrun");
 +			break;
 +		case USB_LC_STAT_TIMEOUT:
-+			usbi_dbg(ctx, "Command Timed Out\n");
++			usbi_dbg(ctx, "Command Timed Out");
 +			break;
 +		case USB_LC_STAT_NOT_ACCESSED:
-+			usbi_dbg(ctx, "Not Accessed by h/w\n");
++			usbi_dbg(ctx, "Not Accessed by h/w");
 +			break;
 +		case USB_LC_STAT_UNSPECIFIED_ERR:
-+			usbi_dbg(ctx, "Unspecified Error\n");
++			usbi_dbg(ctx, "Unspecified Error");
 +			break;
 +		case USB_LC_STAT_NO_BANDWIDTH:
-+			usbi_dbg(ctx, "No Bandwidth\n");
++			usbi_dbg(ctx, "No Bandwidth");
 +			break;
 +		case USB_LC_STAT_HW_ERR:
-+			usbi_dbg(ctx, "Host Controller h/w Error\n");
++			usbi_dbg(ctx, "Host Controller h/w Error");
 +			break;
 +		case USB_LC_STAT_SUSPENDED:
-+			usbi_dbg(ctx, "Device was Suspended\n");
++			usbi_dbg(ctx, "Device was Suspended");
 +			break;
 +		case USB_LC_STAT_DISCONNECTED:
-+			usbi_dbg(ctx, "Device was Disconnected\n");
++			usbi_dbg(ctx, "Device was Disconnected");
 +			break;
 +		case USB_LC_STAT_INTR_BUF_FULL:
-+			usbi_dbg(ctx, "Interrupt buffer was full\n");
++			usbi_dbg(ctx, "Interrupt buffer was full");
 +			break;
 +		case USB_LC_STAT_INVALID_REQ:
-+			usbi_dbg(ctx, "Request was Invalid\n");
++			usbi_dbg(ctx, "Request was Invalid");
 +			break;
 +		case USB_LC_STAT_INTERRUPTED:
-+			usbi_dbg(ctx, "Request was Interrupted\n");
++			usbi_dbg(ctx, "Request was Interrupted");
 +			break;
 +		case USB_LC_STAT_NO_RESOURCES:
 +			usbi_dbg(ctx, "No resources available for "
-+			    "request\n");
++			    "request");
 +			break;
 +		case USB_LC_STAT_INTR_POLLING_FAILED:
 +			usbi_dbg(ctx, "Failed to Restart Poll");
 +			break;
 +		default:
-+			usbi_dbg(ctx, "Error Not Determined %d\n",
-+			    status);
++			usbi_err(ctx, "Error Not Determined %d", status);
++			status = USB_LC_STAT_UNSPECIFIED_ERR;
 +			break;
 +		}
 +	} else {
-+		usbi_dbg(ctx, "read stat error: %s",strerror(errno));
-+		status = -1;
++		usbi_err(ctx, "read stat error: (ret %ld, error %d) %s",
++		    (long)ret, errno, strerror(errno));
++		status = USB_LC_STAT_UNSPECIFIED_ERR;
 +	}
 +
 +	return (status);
@@ -1714,10 +1861,8 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +	.handle_transfer_completion = illumos_handle_transfer_completion,
 +
 +	.device_priv_size = sizeof(illumos_dev_priv_t),
-+	.device_handle_priv_size = sizeof(illumos_dev_handle_priv_t),
++	.device_handle_priv_size = sizeof (illumos_dev_handle_priv_t),
 +
 +	.kernel_driver_active = illumos_kernel_driver_active,
-+	.detach_kernel_driver = illumos_detach_kernel_driver,
-+	.attach_kernel_driver = illumos_attach_kernel_driver,
-+	.transfer_priv_size = sizeof(illumos_xfer_priv_t),
++	.transfer_priv_size = sizeof (illumos_xfer_priv_t),
 +};
