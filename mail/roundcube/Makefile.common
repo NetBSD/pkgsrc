@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2026/07/05 16:03:49 taca Exp $
+# $NetBSD: Makefile.common,v 1.46 2026/08/11 15:21:52 taca Exp $
 #
 # used by mail/roundcube/Makefile
 # used by mail/roundcube/plugins.mk
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	roundcubemail
 GITHUB_RELEASE=	${RC_VERS}
 HOMEPAGE=	https://roundcube.net/
 
-RC_VERS=	1.6.17
+RC_VERS=	1.6.18
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax

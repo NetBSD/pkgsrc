@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/05/24 14:01:51 taca Exp $
+# $NetBSD: Makefile,v 1.105 2026/08/11 15:21:52 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
@@ -17,6 +17,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.7.1:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.1:../../net/pear-Net_IDNA2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.10.0:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.6:../../mail/pear-Auth_SASL
+
+PHP_REQUIRE_MODULE=	json
 
 RC_SUBDIRS=	SQL bin installer plugins program skins vendor
 
@@ -110,5 +112,5 @@ do-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/defaults.inc.php
 
 .include "Makefile.common"
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
