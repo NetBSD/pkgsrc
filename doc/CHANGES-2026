@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5152 2026/08/11 06:26:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5153 2026/08/11 07:16:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7624,3 +7624,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-localflavor to 5.1 [adam 2026-08-11]
 	Updated sysutils/py-fsspec to 2026.7.0 [adam 2026-08-11]
 	Updated devel/py-pylint to 4.0.7 [adam 2026-08-11]
+	Updated security/openssh to 10.5p1 [wiz 2026-08-11]
