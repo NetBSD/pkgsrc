@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5151 2026/08/11 06:07:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5152 2026/08/11 06:26:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7622,3 +7622,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-djangorestframework to 3.18.0 [adam 2026-08-11]
 	Updated www/py-drf-nested-routers to 0.95.3 [adam 2026-08-11]
 	Updated www/py-django-localflavor to 5.1 [adam 2026-08-11]
+	Updated sysutils/py-fsspec to 2026.7.0 [adam 2026-08-11]
+	Updated devel/py-pylint to 4.0.7 [adam 2026-08-11]
