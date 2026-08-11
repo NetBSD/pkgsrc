@@ -1,0 +1,7 @@
+Not just where your space went, but when and why.
+
+du and dust tell you what is large now. df tells you a disk is 82% full.
+Neither answers the question you actually have at 2am, 'My disk was fine two
+days ago. What happened?'
+
+disko records a snapshot every time it scans, so it can tell you.
