@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5173 2026/08/11 16:03:51 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5174 2026/08/11 16:04:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7661,3 +7661,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/ruby-with_advisory_lock53 [taca 2026-08-11]
 	Updated devel/ruby-async to 2.44.1 [taca 2026-08-11]
 	Updated devel/ruby-simplecov to 1.1.0 [taca 2026-08-11]
+	Updated devel/py-gitpython to 3.1.59 [adam 2026-08-11]
+	Updated misc/py-pbs-installer to 2026.8.7 [adam 2026-08-11]
