@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2026/05/30 12:56:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/08/11 14:40:33 ktnb Exp $
 bin/mu
+share/bash-completion/completions/mu
 share/doc/mu/IDEAS.org
 share/doc/mu/NEWS.org
+share/icons/hicolor/scalable/apps/mu-icon.svg
+share/zsh/site-functions/_mu

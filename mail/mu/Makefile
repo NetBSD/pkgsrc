@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/06/22 14:48:35 ktnb Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/11 14:40:33 ktnb Exp $
 
-DISTNAME=	mu-1.14.2
+DISTNAME=	mu-1.14.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djcb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ MESON_ARGS+=	-Dinfodir=info
 MESON_ARGS+=	-Dlispdir=${EMACS_LISPPREFIX}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+ICON_THEMES=	yes
 
 PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -28,6 +29,7 @@ USE_CXX_FEATURES+=	c++20 charconv
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../mk/atomic64.mk"
