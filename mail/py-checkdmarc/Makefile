@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/06/29 10:08:58 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/11 15:47:05 adam Exp $
 
-DISTNAME=	checkdmarc-5.17.3
+DISTNAME=	checkdmarc-5.17.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/checkdmarc/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24.2.1:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=45.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=48.0.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expiringdict>=1.1.4:../../devel/py-expiringdict
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=6.0:../../devel/py-importlib-resources
