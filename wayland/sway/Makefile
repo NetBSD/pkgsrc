@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/07/20 17:33:35 kikadf Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/11 19:22:29 wiz Exp $
 
 DISTNAME=	sway-1.12
 CATEGORIES=	wayland
@@ -14,6 +14,8 @@ USE_TOOLS+=	pkg-config
 EGDIR=		${PREFIX}/share/examples/sway
 OWN_DIRS+=	${PKG_SYSCONFDIR}/sway
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/sway/config
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/startsway.sh \
