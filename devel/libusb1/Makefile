@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2026/05/19 13:30:19 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/11 09:07:41 jperkin Exp $
 
 DISTNAME=	libusb-1.0.30
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libusb/}
 GITHUB_PROJECT=	libusb

@@ -1,4 +1,4 @@
-$NetBSD: patch-libusb_os_illumos__usb.h,v 1.1 2024/02/16 08:13:13 nia Exp $
+$NetBSD: patch-libusb_os_illumos__usb.h,v 1.2 2026/08/11 09:07:42 jperkin Exp $
 
 illumos support; via OmniOS.
 
@@ -7,13 +7,12 @@ From: "Joshua M. Clulow" <josh@sysmgr.org>
 Date: Mon, 27 Dec 2021 16:08:38 -0800
 Subject: [PATCH] illumos: split off from Solaris backend
 
---- libusb/os/illumos_usb.h.orig	2024-02-16 08:09:37.474490330 +0000
+--- libusb/os/illumos_usb.h.orig	2026-08-06 12:39:09.177667736 +0000
 +++ libusb/os/illumos_usb.h
-@@ -0,0 +1,81 @@
+@@ -0,0 +1,111 @@
 +/*
-+ *
 + * Copyright (c) 2016, Oracle and/or its affiliates.
-+ * Copyright 2021 Oxide Computer Company
++ * Copyright 2024 Oxide Computer Company
 + *
 + * This library is free software; you can redistribute it and/or
 + * modify it under the terms of the GNU Lesser General Public
@@ -37,55 +36,86 @@ Subject: [PATCH] illumos: split off from Solaris backend
 +#include <pthread.h>
 +#include "libusbi.h"
 +
-+#define	READ	0
-+#define	WRITE	1
++typedef enum illumos_iodir {
++	ILLUMOS_DIR_READ,
++	ILLUMOS_DIR_WRITE,
++} illumos_iodir_t;
 +
-+typedef struct illumos_device_priv {
-+	uint8_t	cfgvalue;		/* active config value */
-+	uint8_t	*raw_cfgdescr;		/* active config descriptor */
-+	char	*ugenpath;		/* name of the ugen(4) node */
-+	char	*phypath;		/* physical path */
++typedef struct illumos_dev_priv {
++	/*
++	 * Active configuration descriptor and value:
++	 */
++	uint8_t			*idp_raw_cfgdescr;
++	uint8_t			idp_cfgvalue;
++
++	/*
++	 * /dev path of the directory that contains the ugen(4D) minor nodes
++	 * for this device; e.g., "/dev/usb/483.3754/0".
++	 */
++	char			*idp_ugenpath;
++
++	/*
++	 * The physical /devices path of this device, without a minor node
++	 * suffix.
++	 */
++	char			*idp_physpath;
 +} illumos_dev_priv_t;
 +
-+typedef	struct endpoint {
++typedef struct illumos_ep_priv {
 +	int datafd;	/* data file */
 +	int statfd;	/* state file */
 +} illumos_ep_priv_t;
 +
-+typedef struct illumos_device_handle_priv {
-+	uint8_t			altsetting[USB_MAXINTERFACES];	/* a interface's alt */
-+	uint8_t			config_index;
-+	illumos_ep_priv_t		eps[USB_MAXENDPOINTS];
-+	illumos_dev_priv_t	*dpriv; /* device private */
++typedef struct illumos_dev_handle_priv {
++	uint8_t			ihp_altsetting[USB_MAXINTERFACES];
++	uint8_t			ihp_config_index;
++	illumos_ep_priv_t	ihp_eps[USB_MAXENDPOINTS];
++	illumos_dev_priv_t	*ihp_idp;
 +} illumos_dev_handle_priv_t;
 +
-+typedef	struct illumos_transfer_priv {
++typedef enum illumos_xfer_type {
++	ILLUMOS_XFT_AIO,
++	ILLUMOS_XFT_CTRL,
++} illumos_xfer_type_t;
++
++typedef struct illumos_transfer_priv {
++	illumos_xfer_type_t	type;
 +	struct aiocb		aiocb;
 +	struct libusb_transfer	*transfer;
 +	int			ugen_status;
++	size_t			ctrl_len;
 +} illumos_xfer_priv_t;
 +
-+struct node_args {
-+	struct libusb_context	*ctx;
-+	struct discovered_devs	**discdevs;
-+	const char		*last_ugenpath;
-+	di_devlink_handle_t	dlink_hdl;
-+};
++#define	MAX_BUSES		256
 +
-+struct devlink_cbarg {
-+	struct node_args	*nargs;	/* di node walk arguments */
-+	di_node_t		myself;	/* the di node */
-+	di_minor_t		minor;
-+};
++typedef struct illumos_get_device_list {
++	struct libusb_context	*gdl_ctx;
++	struct discovered_devs	**gdl_discdevs;
++	di_devlink_handle_t	gdl_devlink;
++	char			*gdl_buses[MAX_BUSES];
++	int			gdl_error;
++} illumos_get_device_list_t;
 +
-+typedef struct walk_link {
-+	char *path;
-+	int len;
-+	char **linkpp;
-+} walk_link_t;
++typedef struct illumos_make_session_id {
++	uint64_t		msi_session_id;
++	uint8_t			msi_bus_number;
++	int			msi_is_root_hub;
++} illumos_make_session_id_t;
++
++typedef struct illumos_gdl_find_hubs {
++	struct libusb_context	*dlfh_ctx;
++	int			dlfh_is_hub;
++} illumos_gdl_find_hubs_t;
++
++typedef struct illumos_gdl_find_ugenpath {
++	const char		*fup_physpath;
++	int			fup_len;
++	struct libusb_device	*fup_dev;
++	illumos_dev_priv_t	fup_idp;
++} illumos_gdl_find_ugenpath_t;
 +
 +/* AIO callback args */
-+struct aio_callback_args{
++struct aio_callback_args {
 +	struct libusb_transfer *transfer;
 +	struct aiocb aiocb;
 +};
