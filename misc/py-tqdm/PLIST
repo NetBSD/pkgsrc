@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/07/22 08:24:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/08/11 05:26:44 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,8 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/images/logo.gif
-${PYSITELIB}/images/tqdm.gif
 ${PYSITELIB}/tqdm/__init__.py
 ${PYSITELIB}/tqdm/__init__.pyc
 ${PYSITELIB}/tqdm/__init__.pyo
