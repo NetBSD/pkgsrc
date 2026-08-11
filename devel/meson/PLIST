@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/04/19 17:14:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/08/11 11:43:05 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -331,6 +331,9 @@ ${PYSITELIB}/mesonbuild/interpreter/__init__.pyo
 ${PYSITELIB}/mesonbuild/interpreter/compiler.py
 ${PYSITELIB}/mesonbuild/interpreter/compiler.pyc
 ${PYSITELIB}/mesonbuild/interpreter/compiler.pyo
+${PYSITELIB}/mesonbuild/interpreter/decorators.py
+${PYSITELIB}/mesonbuild/interpreter/decorators.pyc
+${PYSITELIB}/mesonbuild/interpreter/decorators.pyo
 ${PYSITELIB}/mesonbuild/interpreter/dependencyfallbacks.py
 ${PYSITELIB}/mesonbuild/interpreter/dependencyfallbacks.pyc
 ${PYSITELIB}/mesonbuild/interpreter/dependencyfallbacks.pyo
