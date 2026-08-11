@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5171 2026/08/11 15:58:19 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5172 2026/08/11 16:01:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7659,3 +7659,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mocket to 3.14.3 [adam 2026-08-11]
 	Updated www/py-multipart to 2.0.0 [adam 2026-08-11]
 	Removed databases/ruby-with_advisory_lock53 [taca 2026-08-11]
+	Updated devel/ruby-async to 2.44.1 [taca 2026-08-11]
