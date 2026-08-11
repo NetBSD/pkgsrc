@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5167 2026/08/11 15:52:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5168 2026/08/11 15:54:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7654,3 +7654,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-with_advisory_lock to 7.6.0 [taca 2026-08-11]
 	Updated mail/py-checkdmarc to 5.17.4 [adam 2026-08-11]
 	Updated devel/py-virtualenv to 21.7.4 [adam 2026-08-11]
+	Updated devel/ruby-redmine60 to 6.0.10nb1 [taca 2026-08-11]
