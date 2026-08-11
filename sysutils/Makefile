@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1197 2026/07/05 08:40:50 drixter Exp $
+# $NetBSD: Makefile,v 1.1198 2026/08/11 18:17:49 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -100,6 +100,7 @@ SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkpassword-phpbb
 SUBDIR+=	checkperms
 SUBDIR+=	checkpw
+SUBDIR+=	claptrap
 SUBDIR+=	clex
 SUBDIR+=	collectd
 SUBDIR+=	collectd-CGP
