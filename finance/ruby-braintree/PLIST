@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/05/06 13:36:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/08/11 16:05:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -150,6 +150,7 @@ ${GEM_LIBDIR}/lib/braintree/test/venmo_sdk.rb
 ${GEM_LIBDIR}/lib/braintree/test_transaction.rb
 ${GEM_LIBDIR}/lib/braintree/testing_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/three_d_secure_info.rb
+${GEM_LIBDIR}/lib/braintree/three_d_secure_pass_thru.rb
 ${GEM_LIBDIR}/lib/braintree/transaction.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/address_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/apple_pay_details.rb
