@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5161 2026/08/11 14:28:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5162 2026/08/11 14:40:56 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7636,3 +7636,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.54 [wiz 2026-08-11]
 	Updated sysutils/ansible to 14.3.0 [adam 2026-08-11]
 	Updated devel/py-hatchling to 1.32.0 [adam 2026-08-11]
+	Updated mail/mu to 1.14.3 [ktnb 2026-08-11]
