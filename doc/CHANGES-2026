@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5159 2026/08/11 13:13:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5160 2026/08/11 13:35:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7633,3 +7633,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/lean4 to 4.33.0 [wiz 2026-08-11]
 	Updated print/qpdf to 12.4.0 [wiz 2026-08-11]
 	Updated devel/garden to 2.6.2 [pin 2026-08-11]
+	Updated textproc/rumdl to 0.2.54 [wiz 2026-08-11]
