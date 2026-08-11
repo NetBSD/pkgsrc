@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.52 2026/07/21 10:35:46 adam Exp $
+$NetBSD: distinfo,v 1.53 2026/08/11 05:26:44 adam Exp $
 
-BLAKE2s (tqdm-4.69.0.tar.gz) = f04d2962000b19d2bb199ef998d1a83b47bd8ca516a514381032ddee3eacc7a7
-SHA512 (tqdm-4.69.0.tar.gz) = fb015dd81b1b628c102aa202018f0fec621faa9bb755f56237f4c822c3a8d0646b7de5b599067b99794335b2fe1b7ae2832c45d693050ac6a62a564c522f5e31
-Size (tqdm-4.69.0.tar.gz) = 792569 bytes
+BLAKE2s (tqdm-4.70.0.tar.gz) = b8fc42c0ff99324e9cdb048f99ccf6c5d84f0643a017bbc10b5ddb1ec9c59ccd
+SHA512 (tqdm-4.70.0.tar.gz) = 34f9cde7df0c9c914769c9254800ddf8668ca04a31316752253056a9cbbde9b0ae104517be51259e0220c7a1beb81587f9d91e920841fe7ecd8600c3e3570b51
+Size (tqdm-4.70.0.tar.gz) = 795438 bytes
