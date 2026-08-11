@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/07/30 12:35:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/08/11 19:27:13 gdt Exp $
 bin/zm_rtsp_server
 bin/zmaudit.pl
 bin/zmc
@@ -6494,6 +6494,7 @@ share/zoneminder/db/zm_update-1.37.8.sql
 share/zoneminder/db/zm_update-1.37.80.sql
 share/zoneminder/db/zm_update-1.37.9.sql
 share/zoneminder/db/zm_update-1.38.1.sql
+share/zoneminder/db/zm_update-1.38.4.sql
 share/zoneminder/fonts/default.zmfnt
 ${ZM_HTTPD_ROOT}/ajax/add_monitors.php
 ${ZM_HTTPD_ROOT}/ajax/alarm.php
@@ -8000,25 +8001,8 @@ ${ZM_HTTPD_ROOT}/js/ajaxQueue.js
 ${ZM_HTTPD_ROOT}/js/dms.js
 ${ZM_HTTPD_ROOT}/js/dms.js.URL
 ${ZM_HTTPD_ROOT}/js/fontfaceobserver.standalone.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls-demo.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls-demo.js.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.d.mts
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.d.ts
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.js.d.ts
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.js.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.js.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.min.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.min.js.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.mjs
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.light.mjs.map
 ${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.min.js
 ${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.min.js.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.mjs
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.mjs.map
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.worker.js
-${ZM_HTTPD_ROOT}/js/hls-1.6.13/hls.worker.js.map
 ${ZM_HTTPD_ROOT}/js/logger.js
 ${ZM_HTTPD_ROOT}/js/noUiSlider-15.8.1/README.md
 ${ZM_HTTPD_ROOT}/js/noUiSlider-15.8.1/dist/nouislider.css
