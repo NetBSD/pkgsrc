@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2026/07/05 16:03:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.62 2026/08/11 15:21:52 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2089,7 +2089,6 @@ share/roundcube/vendor/guzzlehttp/guzzle/LICENSE
 share/roundcube/vendor/guzzlehttp/guzzle/README.md
 share/roundcube/vendor/guzzlehttp/guzzle/UPGRADING.md
 share/roundcube/vendor/guzzlehttp/guzzle/composer.json
-share/roundcube/vendor/guzzlehttp/guzzle/package-lock.json
 share/roundcube/vendor/guzzlehttp/guzzle/src/BodySummarizer.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/BodySummarizerInterface.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Client.php
@@ -2117,6 +2116,7 @@ share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/CurlVersion.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/HostValidator.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Handler/ProxyEnvironment.php
@@ -2126,6 +2126,7 @@ share/roundcube/vendor/guzzlehttp/guzzle/src/HandlerStack.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/MessageFormatter.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/MessageFormatterInterface.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Middleware.php
+share/roundcube/vendor/guzzlehttp/guzzle/src/Multiplexing.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/Pool.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php
 share/roundcube/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php
