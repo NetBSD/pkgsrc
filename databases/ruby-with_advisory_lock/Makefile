@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/02/03 14:45:13 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/11 15:42:54 taca Exp $
 
-DISTNAME=	with_advisory_lock-7.5.0
+DISTNAME=	with_advisory_lock-7.6.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,9 +8,7 @@ HOMEPAGE=	https://github.com/ClosureTree/with_advisory_lock
 COMMENT=	Advisory locking for ActiveRecord
 LICENSE=	mit
 
-#DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
-DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-zeitwerk>=2.7:../../devel/ruby-zeitwerk
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
 RUBY_VERSIONS_ACCEPTED=	33 34
 
