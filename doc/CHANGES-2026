@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5154 2026/08/11 09:07:51 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.5155 2026/08/11 09:48:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7626,3 +7626,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pylint to 4.0.7 [adam 2026-08-11]
 	Updated security/openssh to 10.5p1 [wiz 2026-08-11]
 	Updated devel/libusb1 to 1.0.30nb1 [jperkin 2026-08-11]
+	Updated sysutils/ansible-core to 2.21.3 [adam 2026-08-11]
+	Updated textproc/py-guessit to 4.4.0 [adam 2026-08-11]
+	Updated www/py-pylint-django to 2.8.0 [adam 2026-08-11]
