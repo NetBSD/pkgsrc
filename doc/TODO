@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27734 2026/08/11 13:03:53 wiz Exp $
+$NetBSD: TODO,v 1.27735 2026/08/11 13:35:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1188,7 +1188,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.53
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
