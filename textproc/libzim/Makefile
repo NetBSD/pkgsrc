@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/07/12 11:34:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/11 16:33:22 wiz Exp $
 
 DISTNAME=	libzim-9.8.1
 CATEGORIES=	textproc
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libzim.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../lang/python/tool.mk"
 .include "../../devel/meson/build.mk"
