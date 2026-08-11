@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.20 2026/06/22 14:48:35 ktnb Exp $
+$NetBSD: distinfo,v 1.21 2026/08/11 14:40:33 ktnb Exp $
 
-BLAKE2s (mu-1.14.2.tar.gz) = 3fb7bf2438ab668866bb218d0972649a16be0f947d9458af9bdc70e0b6b69d83
-SHA512 (mu-1.14.2.tar.gz) = f99dd9cfef1e885eb61128b32dc9aa8c43bd87965366747d09cec18a4dade6c0d563003487ec448ad02664f03351a01cfe9aa6605b67a8857295ddffd15373a3
-Size (mu-1.14.2.tar.gz) = 1307184 bytes
-SHA1 (patch-lib_message_mu-contact.hh) = dce9b6da318ccb7f6103a9d7796fdf3cf57e187e
-SHA1 (patch-lib_message_mu-labels.cc) = 37f207ccd216d3cec59c07b24a1512a28d46d058
-SHA1 (patch-lib_message_mu-message-part.cc) = 1af584701961a896b9da7368f6019ab883ca4723
-SHA1 (patch-lib_mu-query-processor.cc) = 646bfd73818aff8e87658065d5b8e1c543eeada2
-SHA1 (patch-lib_utils_mu-html-to-text.cc) = 5a2a52c8d31ef7048d597068342831ab93c57c5c
-SHA1 (patch-lib_utils_mu-sexp.cc) = fabb59590e2b9348c3ba9992d67b3739288c591d
-SHA1 (patch-lib_utils_mu-utils.cc) = 2b13a39f9e2c6ff070bd6a26b2804b945204a5ce
-SHA1 (patch-mu4e_meson.build) = 8578ab905d8bb4e26b7ad27cf6cb3d68d353c7e1
+BLAKE2s (mu-1.14.3.tar.gz) = b4937b7df9fd2296ea4b2b12df8dbd7c31a41c854b8f955b78ba3122f33e5167
+SHA512 (mu-1.14.3.tar.gz) = 7ac28e81f646a9bdd0dd1140d7d0517b8a83eb4383c2a2e1b9e44ca1b1130e408c6db15da85b73f0ffd894a1b449bdb70a896fbd7527d79a843b42c4ae4b80fa
+Size (mu-1.14.3.tar.gz) = 1338427 bytes
+SHA1 (patch-lib_message_mu-contact.hh) = cc4cc391ab4bbd16f6c38e222057b392d68485e6
+SHA1 (patch-mu4e_meson.build) = 3581ab81c473ae058869b90e979fc77c96cf0670
