@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2026/08/11 23:29:31 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2026/08/11 23:38:32 gdt Exp $
 
 DISTNAME=		rtl-sdr-2.0.3
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=osmocom/}
 GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
-# There are multiple upstreams:
+# This package tracks the canonical rtl-sdr uptream, at:
 #   https://gitea.osmocom.org/sdr/rtl-sdr/ (official sources)
 #   https://github.com/osmocom/rtl-sdr (official mirror)
-#   https://github.com/steve-m/librtlsdr
+#   https://github.com/steve-m/librtlsdr (unofficial miror?)
+# It is distinct from an apparently unmaintained hard fork:
 #   https://github.com/librtlsdr/librtlsdr (forked from steve-m)
 
 MAINTAINER=		gdt@NetBSD.org
