@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5153 2026/08/11 07:16:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5154 2026/08/11 09:07:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7625,3 +7625,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-fsspec to 2026.7.0 [adam 2026-08-11]
 	Updated devel/py-pylint to 4.0.7 [adam 2026-08-11]
 	Updated security/openssh to 10.5p1 [wiz 2026-08-11]
+	Updated devel/libusb1 to 1.0.30nb1 [jperkin 2026-08-11]
