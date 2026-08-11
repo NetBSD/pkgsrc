@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/09/12 14:04:49 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/08/11 23:14:01 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gstreamer.${RUBY_DLEXT}
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/ext/gstreamer/depend
 ${GEM_LIBDIR}/ext/gstreamer/extconf.rb
 ${GEM_LIBDIR}/ext/gstreamer/rbgst-child-proxy.c
 ${GEM_LIBDIR}/ext/gstreamer/rbgst-element.c
+${GEM_LIBDIR}/ext/gstreamer/rbgst-sample.c
 ${GEM_LIBDIR}/ext/gstreamer/rbgst.c
 ${GEM_LIBDIR}/ext/gstreamer/rbgst.h
 ${GEM_LIBDIR}/extconf.rb
@@ -17,6 +18,7 @@ ${GEM_LIBDIR}/lib/gst.rb
 ${GEM_LIBDIR}/lib/gst/audio-loader.rb
 ${GEM_LIBDIR}/lib/gst/base-loader.rb
 ${GEM_LIBDIR}/lib/gst/bin.rb
+${GEM_LIBDIR}/lib/gst/buffer.rb
 ${GEM_LIBDIR}/lib/gst/bus.rb
 ${GEM_LIBDIR}/lib/gst/caps.rb
 ${GEM_LIBDIR}/lib/gst/controller-loader.rb
@@ -47,11 +49,13 @@ ${GEM_LIBDIR}/test/gstreamer-test-utils.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-audio.rb
 ${GEM_LIBDIR}/test/test-bin.rb
+${GEM_LIBDIR}/test/test-buffer.rb
 ${GEM_LIBDIR}/test/test-bus.rb
 ${GEM_LIBDIR}/test/test-caps.rb
 ${GEM_LIBDIR}/test/test-child-proxy.rb
 ${GEM_LIBDIR}/test/test-element-factory.rb
 ${GEM_LIBDIR}/test/test-map-info.rb
+${GEM_LIBDIR}/test/test-sample.rb
 ${GEM_LIBDIR}/test/test-tag-list.rb
 ${GEM_LIBDIR}/test/test-version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
