@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/07/14 07:05:03 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/11 05:56:46 adam Exp $
 
-DISTNAME=	django_polymorphic-4.11.6
+DISTNAME=	django_polymorphic-4.11.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_polymorphic/}
