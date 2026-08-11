@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1198 2026/08/11 18:17:49 pin Exp $
+# $NetBSD: Makefile,v 1.1199 2026/08/11 18:24:05 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -176,6 +176,7 @@ SUBDIR+=	direvent
 SUBDIR+=	dirsize
 SUBDIR+=	dirvish
 SUBDIR+=	disk-filltest
+SUBDIR+=	disko
 SUBDIR+=	diskscrub
 SUBDIR+=	dmassage
 SUBDIR+=	dmenu-wld
