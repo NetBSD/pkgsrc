@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2026/02/03 14:45:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/11 15:42:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/release.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.release-please-manifest.json
-${GEM_LIBDIR}/.ruby-version
-${GEM_LIBDIR}/.tool-versions
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
