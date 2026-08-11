@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2026/07/22 12:41:32 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/08/11 16:03:25 adam Exp $
 
-BLAKE2s (pbs_installer-2026.7.18.tar.gz) = 0282db104068eb679639295e9301b924f89cb9d8de2043baeaee4b122c8e3d54
-SHA512 (pbs_installer-2026.7.18.tar.gz) = deb4c1ae8d35befc4194bc015781c784dc8998db6fa30ffb8abc82d2b2a7d20ec5ae47733887db5352c6bf9adfe4486182d19fc92750d882297044e52b8860a1
-Size (pbs_installer-2026.7.18.tar.gz) = 74147 bytes
+BLAKE2s (pbs_installer-2026.8.7.tar.gz) = cfbd453a550de10ec3d7c4c791270e03d8d4d92711c473a8192fa9843bfa2a51
+SHA512 (pbs_installer-2026.8.7.tar.gz) = a89d2e820f7ea1d4114427a37d82e9064ad9509915caec14acbf6a49622abf622b4c938de52787c71fc6d590d1f690dc5341c03c23c7378ff97aa64390d664a6
+Size (pbs_installer-2026.8.7.tar.gz) = 75286 bytes
