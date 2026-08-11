@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5163 2026/08/11 14:52:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5164 2026/08/11 15:17:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7639,3 +7639,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mu to 1.14.3 [ktnb 2026-08-11]
 	Updated textproc/py-cssselect to 1.5.0 [adam 2026-08-11]
 	Updated www/py-uvicorn to 0.52.1 [adam 2026-08-11]
+	Updated mail/postfix to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-cdb to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-ldap to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-lmdb to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-mysql to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-pcre to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-pgsql to 3.11.6 [taca 2026-08-11]
+	Updated mail/postfix-sqlite to 3.11.6 [taca 2026-08-11]
