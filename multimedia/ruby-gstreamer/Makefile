@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/01/02 00:19:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/11 23:14:01 tsutsui Exp $
 #
 
 DISTNAME=		gstreamer-${VERSION}
@@ -15,6 +15,7 @@ DEPENDS+=		gst-plugins1-base-[0-9]*:../../multimedia/gst-plugins1-base
 
 .include "../../devel/ruby-gobject-introspection/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome/Makefile.common"
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
