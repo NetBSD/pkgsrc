@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5169 2026/08/11 15:55:13 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5170 2026/08/11 15:56:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7656,3 +7656,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-virtualenv to 21.7.4 [adam 2026-08-11]
 	Updated devel/ruby-redmine60 to 6.0.10nb1 [taca 2026-08-11]
 	Updated devel/ruby-redmine61 to 6.1.3nb1 [taca 2026-08-11]
+	Updated devel/py-mocket to 3.14.3 [adam 2026-08-11]
+	Updated www/py-multipart to 2.0.0 [adam 2026-08-11]
