@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5177 2026/08/11 16:08:24 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5178 2026/08/11 16:10:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7666,3 +7666,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/ruby-braintree to 4.40.0 [taca 2026-08-11]
 	Updated graphics/ruby-RMagick to 7.1.1 [taca 2026-08-11]
 	Updated graphics/ruby-mini-magick to 5.3.3 [taca 2026-08-11]
+	Updated www/php-contao-manager to 1.10.17 [taca 2026-08-11]
