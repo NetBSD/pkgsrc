@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2024/10/22 11:41:48 adam Exp $
+$NetBSD: distinfo,v 1.39 2026/08/11 09:47:47 adam Exp $
 
-BLAKE2s (pylint-django-2.6.1.tar.gz) = e50a0285365901674b2ede88aa12559e3e7adaa77e0a93a971e75b3845a218fb
-SHA512 (pylint-django-2.6.1.tar.gz) = e792f19afae66d61aabb8684dbaa51759f678c3e65f151b046f6aefb33b8e1b5ddffc18fffb05c576b1ae84a13c92034294ee99f1583a1ea16fce98f346b45cb
-Size (pylint-django-2.6.1.tar.gz) = 31970 bytes
+BLAKE2s (pylint_django-2.8.0.tar.gz) = a256933bcc1f32641c802ee3b6420fef1c790b2188a3a6599c4a6e3d8c86f49e
+SHA512 (pylint_django-2.8.0.tar.gz) = 9795c69b847046271bf47d88adeebed8722f18ea8a4d480b71e0899844fd28ca8623d93be0420277df51df8bdba64d7e4b44bbf41e496e431e03ef8e5eb12a22
+Size (pylint_django-2.8.0.tar.gz) = 32038 bytes
