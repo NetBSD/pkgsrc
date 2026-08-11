@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2026/07/17 07:29:15 adam Exp $
+# $NetBSD: Makefile,v 1.113 2026/08/11 14:24:19 adam Exp $
 
-DISTNAME=	ansible-14.2.0
+DISTNAME=	ansible-14.3.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # Each ansible release tracks a specific release branch of ansible-core.
 # Enforce this by using an upper limit for the dependency version.
 # PLEASE KEEP THE UPPER LIMIT WHEN UPGRADING THIS PACKAGE.
-DEPENDS+=	ansible-core>=2.21.2<2.22:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.21.3<2.22:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -32,6 +32,7 @@ REPLACE_PYTHON+=	ansible_collections/*/*/.azure-pipelines/scripts/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*/*.py
+REPLACE_PYTHON+=	ansible_collections/cisco/meraki/run_all_playbooks.py
 REPLACE_PYTHON+=	ansible_collections/cisco/meraki/scripts/sublime-build/build.py.generic
 REPLACE_PYTHON+=	ansible_collections/community/digitalocean/scripts/inventory/*.py
 REPLACE_PYTHON+=	ansible_collections/community/dns/update-docs-fragments.py
@@ -45,6 +46,7 @@ REPLACE_PYTHON+=	ansible_collections/community/okd/ci/doc_fragment_modules.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
 REPLACE_PYTHON+=	ansible_collections/community/routeros/update-docs.py
 REPLACE_PYTHON+=	ansible_collections/community/sap_libs/plugins/module_utils/swpm2_parameters_inifile_generate.py
+REPLACE_PYTHON+=	ansible_collections/hetzner/hcloud/scripts/vendor.py
 REPLACE_PYTHON+=	ansible_collections/lowlydba/sqlserver/plugins/modules/*.py
 REPLACE_PYTHON+=	ansible_collections/ngine_io/cloudstack/scripts/inventory/cloudstack.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/*.py
