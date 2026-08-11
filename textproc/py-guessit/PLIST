@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/07/07 12:58:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/08/11 09:24:51 adam Exp $
 bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -35,6 +35,7 @@ ${PYSITELIB}/guessit/monkeypatch.pyo
 ${PYSITELIB}/guessit/options.py
 ${PYSITELIB}/guessit/options.pyc
 ${PYSITELIB}/guessit/options.pyo
+${PYSITELIB}/guessit/py.typed
 ${PYSITELIB}/guessit/reutils.py
 ${PYSITELIB}/guessit/reutils.pyc
 ${PYSITELIB}/guessit/reutils.pyo
@@ -173,9 +174,12 @@ ${PYSITELIB}/guessit/rules/properties/volume.pyo
 ${PYSITELIB}/guessit/rules/properties/website.py
 ${PYSITELIB}/guessit/rules/properties/website.pyc
 ${PYSITELIB}/guessit/rules/properties/website.pyo
-${PYSITELIB}/guessit/schema.py
-${PYSITELIB}/guessit/schema.pyc
-${PYSITELIB}/guessit/schema.pyo
+${PYSITELIB}/guessit/schema_builder.py
+${PYSITELIB}/guessit/schema_builder.pyc
+${PYSITELIB}/guessit/schema_builder.pyo
+${PYSITELIB}/guessit/schema_generated.py
+${PYSITELIB}/guessit/schema_generated.pyc
+${PYSITELIB}/guessit/schema_generated.pyo
 ${PYSITELIB}/guessit/test/__init__.py
 ${PYSITELIB}/guessit/test/__init__.pyc
 ${PYSITELIB}/guessit/test/__init__.pyo
@@ -243,6 +247,9 @@ ${PYSITELIB}/guessit/test/test_benchmark.pyo
 ${PYSITELIB}/guessit/test/test_cross_parser.py
 ${PYSITELIB}/guessit/test/test_cross_parser.pyc
 ${PYSITELIB}/guessit/test/test_cross_parser.pyo
+${PYSITELIB}/guessit/test/test_forced_type.py
+${PYSITELIB}/guessit/test/test_forced_type.pyc
+${PYSITELIB}/guessit/test/test_forced_type.pyo
 ${PYSITELIB}/guessit/test/test_keys.py
 ${PYSITELIB}/guessit/test/test_keys.pyc
 ${PYSITELIB}/guessit/test/test_keys.pyo
