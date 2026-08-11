@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/10/31 10:53:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/11 06:07:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,21 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/localflavor/__init__.py
 ${PYSITELIB}/localflavor/__init__.pyc
 ${PYSITELIB}/localflavor/__init__.pyo
+${PYSITELIB}/localflavor/ae/__init__.py
+${PYSITELIB}/localflavor/ae/__init__.pyc
+${PYSITELIB}/localflavor/ae/__init__.pyo
+${PYSITELIB}/localflavor/ae/ae_emirates.py
+${PYSITELIB}/localflavor/ae/ae_emirates.pyc
+${PYSITELIB}/localflavor/ae/ae_emirates.pyo
+${PYSITELIB}/localflavor/ae/forms.py
+${PYSITELIB}/localflavor/ae/forms.pyc
+${PYSITELIB}/localflavor/ae/forms.pyo
+${PYSITELIB}/localflavor/ae/models.py
+${PYSITELIB}/localflavor/ae/models.pyc
+${PYSITELIB}/localflavor/ae/models.pyo
+${PYSITELIB}/localflavor/ae/validators.py
+${PYSITELIB}/localflavor/ae/validators.pyc
+${PYSITELIB}/localflavor/ae/validators.pyo
 ${PYSITELIB}/localflavor/ar/__init__.py
 ${PYSITELIB}/localflavor/ar/__init__.pyc
 ${PYSITELIB}/localflavor/ar/__init__.pyo
@@ -757,6 +772,21 @@ ${PYSITELIB}/localflavor/py_/forms.pyo
 ${PYSITELIB}/localflavor/py_/py_department.py
 ${PYSITELIB}/localflavor/py_/py_department.pyc
 ${PYSITELIB}/localflavor/py_/py_department.pyo
+${PYSITELIB}/localflavor/qa/__init__.py
+${PYSITELIB}/localflavor/qa/__init__.pyc
+${PYSITELIB}/localflavor/qa/__init__.pyo
+${PYSITELIB}/localflavor/qa/forms.py
+${PYSITELIB}/localflavor/qa/forms.pyc
+${PYSITELIB}/localflavor/qa/forms.pyo
+${PYSITELIB}/localflavor/qa/models.py
+${PYSITELIB}/localflavor/qa/models.pyc
+${PYSITELIB}/localflavor/qa/models.pyo
+${PYSITELIB}/localflavor/qa/qa_municipalities.py
+${PYSITELIB}/localflavor/qa/qa_municipalities.pyc
+${PYSITELIB}/localflavor/qa/qa_municipalities.pyo
+${PYSITELIB}/localflavor/qa/validators.py
+${PYSITELIB}/localflavor/qa/validators.pyc
+${PYSITELIB}/localflavor/qa/validators.pyo
 ${PYSITELIB}/localflavor/ro/__init__.py
 ${PYSITELIB}/localflavor/ro/__init__.pyc
 ${PYSITELIB}/localflavor/ro/__init__.pyo
@@ -832,6 +862,15 @@ ${PYSITELIB}/localflavor/tr/forms.pyo
 ${PYSITELIB}/localflavor/tr/tr_provinces.py
 ${PYSITELIB}/localflavor/tr/tr_provinces.pyc
 ${PYSITELIB}/localflavor/tr/tr_provinces.pyo
+${PYSITELIB}/localflavor/tw/__init__.py
+${PYSITELIB}/localflavor/tw/__init__.pyc
+${PYSITELIB}/localflavor/tw/__init__.pyo
+${PYSITELIB}/localflavor/tw/forms.py
+${PYSITELIB}/localflavor/tw/forms.pyc
+${PYSITELIB}/localflavor/tw/forms.pyo
+${PYSITELIB}/localflavor/tw/tw_choices.py
+${PYSITELIB}/localflavor/tw/tw_choices.pyc
+${PYSITELIB}/localflavor/tw/tw_choices.pyo
 ${PYSITELIB}/localflavor/ua/__init__.py
 ${PYSITELIB}/localflavor/ua/__init__.pyc
 ${PYSITELIB}/localflavor/ua/__init__.pyo
