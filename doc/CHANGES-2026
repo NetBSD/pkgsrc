@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5183 2026/08/11 23:16:24 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.5184 2026/08/11 23:29:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7688,3 +7688,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/ruby-poppler to 4.3.7 [tsutsui 2026-08-11]
 	Updated x11/ruby-gtk3 to 4.3.7 [tsutsui 2026-08-11]
 	Updated x11/ruby-gtksourceview3 to 4.3.7 [tsutsui 2026-08-11]
+	Updated ham/rtl-sdr to 2.0.3 [gdt 2026-08-11]
