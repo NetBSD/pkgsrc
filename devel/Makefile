@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4673 2026/08/12 21:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4674 2026/08/12 21:55:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2671,7 +2671,6 @@ SUBDIR+=	py-e3-testsuite
 SUBDIR+=	py-editables
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-empty-files
-SUBDIR+=	py-entrypoints
 SUBDIR+=	py-evalidate
 SUBDIR+=	py-exceptiongroup
 SUBDIR+=	py-execnet
