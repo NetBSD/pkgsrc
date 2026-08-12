@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/07/01 09:24:30 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/08/12 08:52:42 adam Exp $
 
-BLAKE2s (pyobjc_framework_intents-12.2.1.tar.gz) = 3263b05250d8be46b1df07743d63d129ed95a5b2341ef7744f782c636fc59caa
-SHA512 (pyobjc_framework_intents-12.2.1.tar.gz) = 6af89b3b865a0059682b5aec84f5aa30489c8ef76d805b88ca02362a26f691a582bc09bfe1cd2e7de97adf6145406ae3621894cdb9ba42a2cb4876431a3b143c
-Size (pyobjc_framework_intents-12.2.1.tar.gz) = 187763 bytes
+BLAKE2s (pyobjc_framework_intents-12.2.2.tar.gz) = 8b2afec96588871430b5c7704ac95a864d80a05027d84fe1bbc322e2f1aa1c2d
+SHA512 (pyobjc_framework_intents-12.2.2.tar.gz) = 31db3efd4ad3261045d5755634727608dc5345f730cb028e372a92992c2753b0e7cc3ea7b832a1848c74b5bc63dede21e56fd7ee6f502b9fde806e323336fe72
+Size (pyobjc_framework_intents-12.2.2.tar.gz) = 188263 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:38 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_speech-12.2.1.tar.gz) = 15d5cfe23b721a0995b8217c0e88c2c45b1848bc899303a8a42964afc7cd0113
-SHA512 (pyobjc_framework_speech-12.2.1.tar.gz) = ab2a4ee746c33260e93d38bc0091f85a15f240331d68bf50f84644b1d5fa6b4c619c2bf807087f35671b9b11c4178e8f7b385097dcf49900498a9e1a5bd3317a
-Size (pyobjc_framework_speech-12.2.1.tar.gz) = 27772 bytes
+BLAKE2s (pyobjc_framework_speech-12.2.2.tar.gz) = 810e8a62c7c3d4541c1f37535d9e02027558ffc77941159d14e29421ea7531cf
+SHA512 (pyobjc_framework_speech-12.2.2.tar.gz) = 05a111ece0220c2a827685edd6dffa46a4e7df707c1b7fade0f75124bf7ee8e6735be38b55255dd47bf07a4b2c9807c9ba241d452e46e1201e1c3b80e7172624
+Size (pyobjc_framework_speech-12.2.2.tar.gz) = 28000 bytes

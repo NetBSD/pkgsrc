@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2026/07/01 09:24:22 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/08/12 08:52:34 adam Exp $
 
-BLAKE2s (pyobjc_framework_addressbook-12.2.1.tar.gz) = fa6bd988dde29a11251c6d0e85e1eb7e1eccdf34e4fab4570b4f934152403a88
-SHA512 (pyobjc_framework_addressbook-12.2.1.tar.gz) = 0f28107067a1f752d2f25c01bcb065d9791ce99bc287bc38ff78dcf220dea3e5958ae8f8383066ae64e102f484a03671ddaf119d49e414b503d3f94fae37b22a
-Size (pyobjc_framework_addressbook-12.2.1.tar.gz) = 47685 bytes
+BLAKE2s (pyobjc_framework_addressbook-12.2.2.tar.gz) = 29eb7bcdef08315960f25a0c3b5594a523bc34e40db0218ba8e76c220e5199da
+SHA512 (pyobjc_framework_addressbook-12.2.2.tar.gz) = 57da7759fdc68e62f1b4dbea68b5c4df38d4a14ae45c7024a79e74ef52a563cdfac7cb21aa64063bef1ff1f8b4ac111c7af43583380552e8a22cea93c0d2af62
+Size (pyobjc_framework_addressbook-12.2.2.tar.gz) = 47950 bytes

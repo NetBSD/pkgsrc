@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:23 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:35 adam Exp $
 
-BLAKE2s (pyobjc_framework_authenticationservices-12.2.1.tar.gz) = 9c6ed07157adcb3c80a8db0b5324ac93ff91e2801de9b1fadcc81696804abc5d
-SHA512 (pyobjc_framework_authenticationservices-12.2.1.tar.gz) = 340054b1f04cf2c7576ec8b4bbb53efc3b84671ef3f31c4afac1b400d91717d98ca89701f9180dab8312a21afc0036d36425a85365057fbd466e15c58889f12d
-Size (pyobjc_framework_authenticationservices-12.2.1.tar.gz) = 75693 bytes
+BLAKE2s (pyobjc_framework_authenticationservices-12.2.2.tar.gz) = 5ecda714e12213a3b9fb49a0bbb292e218c6a64cf20ce2950895c57f7a3344ae
+SHA512 (pyobjc_framework_authenticationservices-12.2.2.tar.gz) = 5a307ac719ee1d3a52c3284676d8cb700bc6105e9fa02cad4ba95149d2f5ca3d440753623da9e13545d780e1f1b478fb9b59674a3a2a1595354dcc46717c3757
+Size (pyobjc_framework_authenticationservices-12.2.2.tar.gz) = 76221 bytes

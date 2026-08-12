@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:30 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:42 adam Exp $
 
-BLAKE2s (pyobjc_framework_intentsui-12.2.1.tar.gz) = 4e17b02bf5ee0326851f89c2c5522db42a9dc8101ccbf9ba03792a4cd40b377b
-SHA512 (pyobjc_framework_intentsui-12.2.1.tar.gz) = 4ebcddda9c2ffc21061294347880d3b613b8f5abc937b556bb05d78046451fa6f54a1c9041f68d46e902b17ddf42b21df85759c67e0a8b3496c43b64de5c1cec
-Size (pyobjc_framework_intentsui-12.2.1.tar.gz) = 20768 bytes
+BLAKE2s (pyobjc_framework_intentsui-12.2.2.tar.gz) = 96caab4cf50a3722737c8ee498062cb19abec2f16d803609bcbe742bca0f5331
+SHA512 (pyobjc_framework_intentsui-12.2.2.tar.gz) = 11cac19d3ac473edef6bf3f571be2758f15f7249bd8e16bbdcea24551f92233989627bcf46b89144c61706df37a444bb70cb6d288f04cc411a9d03af8f000311
+Size (pyobjc_framework_intentsui-12.2.2.tar.gz) = 20943 bytes

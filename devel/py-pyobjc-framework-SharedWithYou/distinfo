@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/07/01 09:24:37 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/12 08:52:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_sharedwithyou-12.2.1.tar.gz) = d65d07746edff1d8332fb71a77b581c17a4d145393cdf5161a396f6eb8b59eac
-SHA512 (pyobjc_framework_sharedwithyou-12.2.1.tar.gz) = 685630a5971f058f61e09ccd0d3a3c81f544f04ca11b8f2ffa38e083c1e3cce6df07da87adfb8c9efaf9136d6859c22c7fdca790ecaabf306ae6236a7ae668a2
-Size (pyobjc_framework_sharedwithyou-12.2.1.tar.gz) = 27310 bytes
+BLAKE2s (pyobjc_framework_sharedwithyou-12.2.2.tar.gz) = a3b660b655ea0efdbee04958e11866f091142a7bbab2e15230ee482710dbc629
+SHA512 (pyobjc_framework_sharedwithyou-12.2.2.tar.gz) = 6381101c7d60e78612f00d96eb0299df91d463af9d4114338459780f35566db218ccc81b25d98c749498cbb7cba0a7aed086af54817d7f0c1d52716981727e0b
+Size (pyobjc_framework_sharedwithyou-12.2.2.tar.gz) = 27511 bytes

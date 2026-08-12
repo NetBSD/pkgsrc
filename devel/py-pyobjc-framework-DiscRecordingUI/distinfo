@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:27 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:40 adam Exp $
 
-BLAKE2s (pyobjc_framework_discrecordingui-12.2.1.tar.gz) = df2b1434d2a44acfacc07cee8108a1902ce4f083336f28c97aa25b3ffe32844a
-SHA512 (pyobjc_framework_discrecordingui-12.2.1.tar.gz) = 8e36dec11b623a69a6959dc690bba70d8c8fe50012d69d7a5ead0382bd657d2798b7d494cd32024efa50479c2c6629c6310db21c87d7bbb09f30c3546f85d918
-Size (pyobjc_framework_discrecordingui-12.2.1.tar.gz) = 19538 bytes
+BLAKE2s (pyobjc_framework_discrecordingui-12.2.2.tar.gz) = f9381ca58fa8acfd7356ce8d93421c92c0fe8dbebbd96b74fc45b4b8fc698942
+SHA512 (pyobjc_framework_discrecordingui-12.2.2.tar.gz) = f3cd97f80573b902538eb000f49a2cd140b05d81d99ebb4911a99cf6945ff5c3d966aefee26c4a2272125e2f765433e4dfc12541b40874cc26fde5090387df79
+Size (pyobjc_framework_discrecordingui-12.2.2.tar.gz) = 19685 bytes
