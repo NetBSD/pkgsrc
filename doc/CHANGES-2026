@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5190 2026/08/12 03:42:27 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5191 2026/08/12 03:43:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7695,3 +7695,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/pango to 1.58.2 [ryoon 2026-08-12]
 	Updated multimedia/svt-av1 to 4.2.0 [ryoon 2026-08-12]
 	Updated multimedia/handbrake to 1.11.2 [ryoon 2026-08-12]
+	Added multimedia/ffmpeg9 version 9.0 [ryoon 2026-08-12]
