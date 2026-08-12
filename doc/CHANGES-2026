@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5215 2026/08/12 08:54:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5216 2026/08/12 09:06:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7728,3 +7728,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added archivers/bmaptool version 3.9.0 [adam 2026-08-12]
 	Updated devel/py-pyobjc to 12.2.2 [adam 2026-08-12]
 	Updated devel/py-typing-inspection to 0.4.3 [adam 2026-08-12]
+	Added shells/shuck version 0.1.1 [wiz 2026-08-12]
