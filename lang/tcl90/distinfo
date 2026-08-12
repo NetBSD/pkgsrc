@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/07/27 09:17:06 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/08/12 03:21:38 ryoon Exp $
 
-BLAKE2s (tcl9.0.2-src.tar.gz) = c359472afb44f6ba917205b5e8ece1216da6ec8357968cc4ca86e60f741a72be
-SHA512 (tcl9.0.2-src.tar.gz) = 4c33095acc884117b2943dd25fbf71ac567a6c396dc9c3fd8394d1fb9d433844ed491d5214b0e5e895dcfd06adc785993f761cc04bcdfea0d360dbf116c0d84b
-Size (tcl9.0.2-src.tar.gz) = 11736366 bytes
+BLAKE2s (tcl9.0.4-src.tar.gz) = 5a51eb42e428a773a786cf7cd162bd22b7d542041100939b91b1da3c22d4c40d
+SHA512 (tcl9.0.4-src.tar.gz) = 86e21bf7c68db3df0f78d75935cfb77320ceed6a124d32ed507c023375fb70dbe2df3c931c97ffa1ae09919ac0d3889c6037741e3e40fe9200c76173f4d1eefc
+Size (tcl9.0.4-src.tar.gz) = 11866337 bytes

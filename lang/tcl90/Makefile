@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/01/07 08:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/12 03:21:38 ryoon Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl90-${TCL_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -90,6 +89,8 @@ SUBST_SED.sqllink=	-e "/LIBS=/s|-lsqlite3|-L${BUILDLINK_PREFIX.sqlite3}/lib ${CO
 
 # install-sh requires $SHELL is an extremely close match to /bin/sh
 MAKE_ENV+=		SHELL=${SH:Q}
+# zipfs support invokes tclsh during build.
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${BUILD_DIRS}
 
 # xxx software that comes with the tcl distribution, could put be put
 # in their own individual pkgsrc packages if they aren't already there
