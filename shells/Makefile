@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2026/06/11 15:19:44 drixter Exp $
+# $NetBSD: Makefile,v 1.82 2026/08/12 09:05:56 wiz Exp $
 #
 
 COMMENT=	Shells
@@ -43,6 +43,7 @@ SUBDIR+=	scponly
 SUBDIR+=	scsh
 SUBDIR+=	sheldon
 SUBDIR+=	shellcheck
+SUBDIR+=	shuck
 SUBDIR+=	standalone-tcsh
 SUBDIR+=	starship
 SUBDIR+=	static-ast-ksh
