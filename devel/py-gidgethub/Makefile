@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/03/02 09:42:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/12 22:00:29 wiz Exp $
 
-DISTNAME=	gidgethub-5.3.0
+DISTNAME=	gidgethub-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gidgethub/}
 
@@ -11,8 +10,7 @@ HOMEPAGE=	https://pypi.org/project/gidgethub/
 COMMENT=	Async GitHub API library
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.1:../../textproc/py-uritemplate
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0.0:../../textproc/py-JWT
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
@@ -31,6 +29,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+# as of 5.4.0
+# 5 failed, 165 passed, 1 warning
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
