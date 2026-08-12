@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/07/13 04:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/08/12 12:52:34 wiz Exp $
 
 DISTNAME=	lilv-0.28.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +34,7 @@ SUBST_SED.sphinx+=	-e "s,'sphinxygen','sphinxygen-${PYVERSSUFFIX}',"
 
 .include "options.mk"
 
+.include "../../audio/libsndfile/buildlink3.mk"
 BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.18.0
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../converters/sratom/buildlink3.mk"
