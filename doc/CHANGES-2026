@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5228 2026/08/12 15:39:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5229 2026/08/12 15:41:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7747,3 +7747,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-13 to 13.4.34 [taca 2026-08-12]
 	Updated www/typo3-14 to 14.3.6 [taca 2026-08-12]
 	Updated print/ruby-pdf-reader to 2.16.0nb1 [taca 2026-08-12]
+	Updated lang/ruby-execjs to 2.10.2 [taca 2026-08-12]
