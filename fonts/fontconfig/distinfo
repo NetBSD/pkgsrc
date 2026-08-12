@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.80 2026/07/23 14:47:03 ryoon Exp $
+$NetBSD: distinfo,v 1.81 2026/08/12 03:24:29 ryoon Exp $
 
-BLAKE2s (fontconfig-2.18.2.tar.xz) = efa9eaa26cd212aeb2454874eead41339dce8982bc11ea356e2ed38639d114a0
-SHA512 (fontconfig-2.18.2.tar.xz) = eba8f7fe5409159d6a9e0fd562dd3a7643da94b41fc0fdb2b742d5f4950ca2d6e636461352b2f148720653c83957373d28329ed20b50e7efd76ecfc60b2f3434
-Size (fontconfig-2.18.2.tar.xz) = 1347988 bytes
+BLAKE2s (fontconfig-2.18.3.tar.xz) = 1545093d46806ebda642b80dd88f8a74742e7ba7c4abc2fa5341400c61077280
+SHA512 (fontconfig-2.18.3.tar.xz) = c3e769f74dc21093ada48084bddaca1ab525b1c4f04c5c11f067b69346fab153cad95de8b8238b20b02e8b9679c314bf2e0e9c4218511d8fe0f1826e4c4c6a24
+Size (fontconfig-2.18.3.tar.xz) = 1172016 bytes
 SHA1 (patch-aa) = 8fec573ffd4bcc976681cae51a4ead1647e521e8
 SHA1 (patch-ac) = 3c310eb904fe2159d9bc325531942939ff927e65
 SHA1 (patch-af) = 542245860fd4f5374a8935f41a757b2ae960633d
