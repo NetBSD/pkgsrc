@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5199 2026/08/12 05:07:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5200 2026/08/12 05:10:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7704,3 +7704,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-recog to 3.1.34 [taca 2026-08-12]
 	Updated print/ruby-pdf-reader to 2.16.0 [taca 2026-08-12]
 	Updated security/ruby-metasploit-payloads to 2.0.250 [taca 2026-08-12]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.48 [taca 2026-08-12]
