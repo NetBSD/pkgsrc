@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/03 13:55:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/08/12 04:45:39 taca Exp $
 bin/commander${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.rubocop_todo.yml
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/DEVELOPMENT
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/commander
@@ -37,14 +37,4 @@ ${GEM_LIBDIR}/lib/commander/platform.rb
 ${GEM_LIBDIR}/lib/commander/runner.rb
 ${GEM_LIBDIR}/lib/commander/user_interaction.rb
 ${GEM_LIBDIR}/lib/commander/version.rb
-${GEM_LIBDIR}/spec/command_spec.rb
-${GEM_LIBDIR}/spec/configure_spec.rb
-${GEM_LIBDIR}/spec/core_ext/array_spec.rb
-${GEM_LIBDIR}/spec/core_ext/object_spec.rb
-${GEM_LIBDIR}/spec/help_formatters/terminal_compact_spec.rb
-${GEM_LIBDIR}/spec/help_formatters/terminal_spec.rb
-${GEM_LIBDIR}/spec/methods_spec.rb
-${GEM_LIBDIR}/spec/runner_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/ui_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
