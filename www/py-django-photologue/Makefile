@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/07/02 11:32:32 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/08/12 08:03:59 adam Exp $
 
-DISTNAME=	django_photologue-3.19
+DISTNAME=	django_photologue-3.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-photologue/}
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=12.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-django>=5.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=4.0.0:../../www/py-django-sortedm2m
-DEPENDS+=	${PYPKGPREFIX}-exifread>=3.5.1:../../graphics/py-exifread
 
 USE_LANGUAGES=	# none
 
