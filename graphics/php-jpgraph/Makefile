@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2026/01/08 14:17:48 taca Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/12 07:07:23 taca Exp $
 
-DISTNAME=	jpgraph-4.4.2
+DISTNAME=	jpgraph-4.4.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics www
-#MASTER_SITES=	https://jpgraph.net/download/download.php?p=57
+#MASTER_SITES=	https://jpgraph.net/download/download.php?p=60
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jpgraph.net/
@@ -26,8 +25,6 @@ PJDIR=		${PREFIX}/share/php-jpgraph
 PKG_SYSCONFSUBDIR?=	php-jpgraph
 
 MESSAGE_SUBST+=	PJCONFFILE=${PJCONFFILE} PJDIR=${PJDIR} EXDIR=${EXDIR}
-
-PHP_VERSIONS_ACCEPTED=	82 74 56
 
 INSTALLATION_DIRS+=	${EXDIR} ${PJDIR} share/doc/php-jpgraph/html
 

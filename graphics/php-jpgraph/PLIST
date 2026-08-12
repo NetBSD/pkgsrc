@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/12 08:02:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/08/12 07:07:23 taca Exp $
 share/doc/php-jpgraph/README
 share/doc/php-jpgraph/html/chunkhtml/admon-bug.png
 share/doc/php-jpgraph/html/chunkhtml/admon-bug2.png
@@ -2310,6 +2310,7 @@ share/examples/php-jpgraph/tableex03.php
 share/examples/php-jpgraph/tableex04.php
 share/examples/php-jpgraph/tableex05.php
 share/examples/php-jpgraph/tabtitleex1.php
+share/examples/php-jpgraph/test.php
 share/examples/php-jpgraph/testsuit.php
 share/examples/php-jpgraph/text-example1.php
 share/examples/php-jpgraph/text-example2.php
