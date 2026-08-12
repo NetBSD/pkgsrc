@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5232 2026/08/12 16:25:29 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5233 2026/08/12 16:27:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7751,3 +7751,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ruby-sprockets to 4.3.0 [taca 2026-08-12]
 	Added cross/ia16-elf-binutils version 2.39pre20260424 [ryoon 2026-08-12]
 	Added cross/ia16-elf-gcc-bootstrap version 6.3.0pre20260612 [ryoon 2026-08-12]
+	Added cross/ia16-elf-newlib-bootstrap version 2.4.0pre20260617 [ryoon 2026-08-12]
