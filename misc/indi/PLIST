@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/06/22 12:34:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/08/12 18:07:31 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -12,6 +12,7 @@ bin/indi_alpaca_server
 bin/indi_alpaca_telescope
 bin/indi_alto
 bin/indi_arduinost4
+bin/indi_askar_waf_focus
 bin/indi_astrolink4
 bin/indi_astrolink4mini2
 bin/indi_astromech_lpm
@@ -114,6 +115,7 @@ bin/indi_optec_wheel
 bin/indi_paramount_telescope
 bin/indi_pegasus_flatmaster
 bin/indi_pegasus_flatmaster_neo
+bin/indi_pegasus_flatmaster_wifi
 bin/indi_pegasus_focuscube
 bin/indi_pegasus_focuscube3
 bin/indi_pegasus_ppb
@@ -127,6 +129,7 @@ bin/indi_pegasusindigo_wheel
 bin/indi_perfectstar_focus
 bin/indi_pinefeat_cef_focus
 bin/indi_planewave_deltat
+bin/indi_planewave_rotator
 bin/indi_planewave_telescope
 bin/indi_pmc8_telescope
 bin/indi_pyxis_rotator
@@ -136,6 +139,7 @@ bin/indi_qhycfw3_wheel
 bin/indi_quantum_wheel
 bin/indi_rainbow_telescope
 bin/indi_rainbowrsf_focus
+bin/indi_rasa_filtercube_wheel
 bin/indi_rbfocus_focus
 bin/indi_rigel_dome
 bin/indi_robo_focus
@@ -186,6 +190,7 @@ bin/indi_teenastro_focus
 bin/indi_temma_telescope
 bin/indi_terrans_powerboxgo_v2
 bin/indi_terrans_powerboxpro_v2
+bin/indi_touptek_sh20
 bin/indi_trutech_wheel
 bin/indi_universalror_dome
 bin/indi_ups_safety
@@ -339,18 +344,18 @@ lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.2.3
+lib/libindiAlignmentDriver.so.2.2.4
 lib/libindiclient.a
 lib/libindiclient.so
 lib/libindiclient.so.2
-lib/libindiclient.so.2.2.3
+lib/libindiclient.so.2.2.4
 lib/libindidriver.a
 lib/libindidriver.so
 lib/libindidriver.so.2
-lib/libindidriver.so.2.2.3
+lib/libindidriver.so.2.2.4
 lib/libindilx200.so
 lib/libindilx200.so.2
-lib/libindilx200.so.2.2.3
+lib/libindilx200.so.2.2.4
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
