@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/08 04:07:18 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/12 15:11:33 taca Exp $
 
 DISTNAME=	soycms_1.4.0c_mysql
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:S/_mysql//}
@@ -18,6 +18,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+
+PHP_REQUIRE_MODULE=	json
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
@@ -51,5 +53,5 @@ do-install:
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${SOYDIR}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
