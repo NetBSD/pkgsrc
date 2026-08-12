@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2026/07/14 19:01:20 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2026/08/12 15:09:34 taca Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -76,6 +76,6 @@ do-install:
 	cd ${WRKDIR} && ${FIND} nextcloud \( -type f -o -type l \) \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
