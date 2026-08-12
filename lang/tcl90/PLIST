@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/27 09:17:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/12 03:21:38 ryoon Exp $
 tcl/9.0/bin/sqlite3_analyzer
 tcl/9.0/bin/tclsh
 tcl/9.0/bin/tclsh${BASEVER}
@@ -280,11 +280,11 @@ tcl/9.0/lib/tcl${BASEVER}/tclIndex
 tcl/9.0/lib/tcl${BASEVER}/tm.tcl
 tcl/9.0/lib/tcl${BASEVER}/word.tcl
 tcl/9.0/lib/tcl${BASEVER}/writefile.tcl
-tcl/9.0/lib/tcl9/${BASEVER}/http-2.10.0.tm
+tcl/9.0/lib/tcl9/${BASEVER}/http-2.10.2.tm
 tcl/9.0/lib/tcl9/${BASEVER}/msgcat-1.7.1.tm
-tcl/9.0/lib/tcl9/${BASEVER}/platform-1.0.19.tm
+tcl/9.0/lib/tcl9/${BASEVER}/platform-1.1.0.tm
 tcl/9.0/lib/tcl9/${BASEVER}/platform/shell-1.1.4.tm
-tcl/9.0/lib/tcl9/${BASEVER}/tcltest-2.5.9.tm
+tcl/9.0/lib/tcl9/${BASEVER}/tcltest-2.5.11.tm
 tcl/9.0/lib/tcl9/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.tm
 tcl/9.0/lib/tcl9/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.uuid
 tcl/9.0/lib/tclConfig.sh
@@ -308,6 +308,7 @@ tcl/9.0/lib/tdbcpostgres${TDBC_VERSION}/libtcl9tdbcpostgres${TDBC_VERSION}.so
 tcl/9.0/lib/tdbcpostgres${TDBC_VERSION}/libtdbcpostgres${TDBC_VERSION}.so
 tcl/9.0/lib/tdbcpostgres${TDBC_VERSION}/pkgIndex.tcl
 tcl/9.0/lib/tdbcpostgres${TDBC_VERSION}/tdbcpostgres.tcl
+tcl/9.0/lib/thread${THREAD_VERSION}/libthread${THREAD_VERSION}.so
 tcl/9.0/lib/thread${THREAD_VERSION}/libtcl9thread${THREAD_VERSION}.so
 tcl/9.0/lib/thread${THREAD_VERSION}/pkgIndex.tcl
 tcl/9.0/man/man1/tclsh.1
@@ -911,7 +912,6 @@ tcl/9.0/man/man3/Tcl_TruncateChannel.3
 tcl/9.0/man/man3/Tcl_Ungets.3
 tcl/9.0/man/man3/Tcl_UniChar.3
 tcl/9.0/man/man3/Tcl_UniCharAtIndex.3
-tcl/9.0/man/man3/Tcl_UniCharCaseMatch.3
 tcl/9.0/man/man3/Tcl_UniCharIsAlnum.3
 tcl/9.0/man/man3/Tcl_UniCharIsAlpha.3
 tcl/9.0/man/man3/Tcl_UniCharIsControl.3
@@ -924,8 +924,6 @@ tcl/9.0/man/man3/Tcl_UniCharIsSpace.3
 tcl/9.0/man/man3/Tcl_UniCharIsUpper.3
 tcl/9.0/man/man3/Tcl_UniCharIsWordChar.3
 tcl/9.0/man/man3/Tcl_UniCharLen.3
-tcl/9.0/man/man3/Tcl_UniCharNcasecmp.3
-tcl/9.0/man/man3/Tcl_UniCharNcmp.3
 tcl/9.0/man/man3/Tcl_UniCharToLower.3
 tcl/9.0/man/man3/Tcl_UniCharToTitle.3
 tcl/9.0/man/man3/Tcl_UniCharToUpper.3
