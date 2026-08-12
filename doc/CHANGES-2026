@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5218 2026/08/12 10:48:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5219 2026/08/12 12:40:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7734,3 +7734,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-trio to 0.34.0 [adam 2026-08-12]
 	Updated devel/py-uv to 0.12.3 [adam 2026-08-12]
 	Updated devel/py-uv-build to 0.12.3 [adam 2026-08-12]
+	Updated multimedia/ffmpeg9 to 9.0.1 [adam 2026-08-12]
+	Updated multimedia/ffplay9 to 9.0.1 [adam 2026-08-12]
