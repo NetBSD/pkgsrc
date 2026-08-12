@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1199 2026/08/11 18:24:05 pin Exp $
+# $NetBSD: Makefile,v 1.1200 2026/08/12 22:12:00 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -628,7 +628,6 @@ SUBDIR+=	py-kazoo
 SUBDIR+=	py-kubernetes
 SUBDIR+=	py-loguru
 SUBDIR+=	py-magic
-SUBDIR+=	py-nkdfu
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify2
 SUBDIR+=	py-pefile
