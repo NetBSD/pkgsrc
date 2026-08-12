@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.23 2025/08/30 04:45:32 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2026/08/12 03:42:13 ryoon Exp $
 
-BLAKE2s (handbrake/HandBrake-1.10.0-source.tar.bz2) = b4e7e0d95fa2eacc6874d93b7ca844b0daa23dede0f1d6244bd3c1a6522d654f
-SHA512 (handbrake/HandBrake-1.10.0-source.tar.bz2) = d03f6c60bde5d968c92044fee68afe533ce394eb9952ec330b06f6250197c99bbef46265393aa346816f3b8e816e453472a8ebd116b7c388a12e8b9142029cfc
-Size (handbrake/HandBrake-1.10.0-source.tar.bz2) = 9452293 bytes
-BLAKE2s (handbrake/ffmpeg-7.1.1.tar.bz2) = 95f62af1eb95f5c8bded7d0876e01a2b34c28879b1532654fa43d0d125e0292a
-SHA512 (handbrake/ffmpeg-7.1.1.tar.bz2) = db2682bd3f7dbfe4a33a5a7f0803010258d14f92e98ff2a5fdd17197422bc5cbfd992a63b93c9c5fb2b2420371a82e34a16e155f135a2aaf03764ed71adbc16b
-Size (handbrake/ffmpeg-7.1.1.tar.bz2) = 13278839 bytes
-BLAKE2s (handbrake/libjpeg-turbo-3.1.1.tar.gz) = b1c21dac0e2a2231ac6e0a63eedf13b6d6ec159899e6abb1275d9d43596756f9
-SHA512 (handbrake/libjpeg-turbo-3.1.1.tar.gz) = 4937b63a27818cdb5087091b2d78837f7f385fd6b4d3e3fcaf4d9ad2944fed4a00020dcacb33e9c2fd4b0f9d9851fb4051ed3da86f606aca5167357262a73e89
-Size (handbrake/libjpeg-turbo-3.1.1.tar.gz) = 2506010 bytes
-BLAKE2s (handbrake/x265-snapshot-20250729-13276.tar.gz) = 122bcf8aa664cdf163a33549d5bc45b27249b2769f52ab3bb2c5b1c7598f68ba
-SHA512 (handbrake/x265-snapshot-20250729-13276.tar.gz) = 50648176cf1e20e384be4145a525c193f515b73d3ff96ae2042b393ebb3ee3a8cab031e1c5314bdd67f53a6a00010226a5709cdb720dec47142a93c6828469af
-Size (handbrake/x265-snapshot-20250729-13276.tar.gz) = 1738652 bytes
+BLAKE2s (handbrake/HandBrake-1.11.2-source.tar.bz2) = 394b1b4c6179a28b0167759d0b7e459f65baec8c7c48f1ba6580709b7b535aaf
+SHA512 (handbrake/HandBrake-1.11.2-source.tar.bz2) = cff45f284b4bda479d0ed5a84859807524fefce3345d8dc1c80ffe0c271559e315f4e6c96b9df07147f02f73d8b309f969d3371f0613221983761f73f26db419
+Size (handbrake/HandBrake-1.11.2-source.tar.bz2) = 11761530 bytes
+BLAKE2s (handbrake/ffmpeg-8.0.2.tar.bz2) = e3c8847f939e9a22652b79e25cd3ec8f03d1a4e0120635db2a7f3dbdd3857326
+SHA512 (handbrake/ffmpeg-8.0.2.tar.bz2) = 23ebb5a3820771aeaa48f03f160476a80dcfe322f95dc2ce9fe0b03618915acf5fc6896d065f9061b2d80665e74206382752782bfa9da10cbf91380c3f7e5c97
+Size (handbrake/ffmpeg-8.0.2.tar.bz2) = 13716142 bytes
+BLAKE2s (handbrake/libjpeg-turbo-3.1.3.tar.gz) = 223fefe2f26be34ab608d85395f61e8b218e1c2c905115554eccf5c721de8265
+SHA512 (handbrake/libjpeg-turbo-3.1.3.tar.gz) = d95bf0689fb2862ad5ea9e902b73724098d911d9c312aa69157bec9de77f32e4d5ac7dfa105d844110cc66dbdb0336056ba7f96781fcbc848b72fd0661604d50
+Size (handbrake/libjpeg-turbo-3.1.3.tar.gz) = 2516606 bytes
+BLAKE2s (handbrake/x265-snapshot-20260216-13309.tar.gz) = b731481450cf3978932dc312096585e2fef569552ec52ffeae510f3ccf210784
+SHA512 (handbrake/x265-snapshot-20260216-13309.tar.gz) = 33d2400059694f689cf6a607291df43eef99f1583e499f9ce6dd82db778ff4d8f53217fdc439f87ec50e4e400c9eaae22d45a5d60ee0672699e655859a3772a4
+Size (handbrake/x265-snapshot-20260216-13309.tar.gz) = 1806557 bytes
 SHA1 (patch-contrib_libjpeg-turbo_module.defs) = ab3829aa63f286854893d0297d0f33707b2698bd
-SHA1 (patch-make-include-main.defs) = 9c0553a25cc8c376287e7272422dcea245b89aef
+SHA1 (patch-gtk_po_zh__CN.po) = 773e748feb3e35a466eb018ca8daee16a7d04116
+SHA1 (patch-make-include-main.defs) = c91777c5af22aa17056b0d27d5a1169955ee13c8

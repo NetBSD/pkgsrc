@@ -1,0 +1,15 @@
+$NetBSD: patch-gtk_po_zh__CN.po,v 1.1 2026/08/12 03:42:13 ryoon Exp $
+
+* Fix for msgfmt(1) of NetBSD.
+
+--- gtk/po/zh_CN.po.orig	2026-08-12 02:16:09.019439873 +0000
++++ gtk/po/zh_CN.po
+@@ -2825,7 +2825,7 @@ msgid "%s in %d seconds…"
+ #: src/callbacks.c:3908
+ #, c-format
+ msgid "%s in %d seconds…"
+-msgstr " 在 %d 秒内 %s…"
++msgstr " 秒内 %s…(在 %d)"
+ 
+ #: src/callbacks.c:4114
+ msgid "Stop Encoding?"
