@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2026/08/02 20:26:26 js Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/12 22:24:36 wiz Exp $
 bin/gemtext2html
 include/Gemtext2HTML/G2HConverter.h
 include/Gemtext2HTML/Gemtext2HTML.h
 lib/libgemtext2html.so
+lib/libgemtext2html.so.1
 lib/libgemtext2html.so.1.2.0
 lib/objfw-config/Gemtext2HTML.oc
