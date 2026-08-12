@@ -1,0 +1,14 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2026/08/12 08:04:35 taca Exp $
+
+conf_old=@PREFIX@/@WEBDIR@/conf.php
+conf=@PKG_SYSCONFDIR@/conf.php
+
+case ${STAGE} in
+POST-INSTALL)
+	if test -f ${conf_old}; then
+		mv ${conf_old} ${conf}
+	fi
+	;;
+esac

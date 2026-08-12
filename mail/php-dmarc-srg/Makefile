@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2026/01/08 14:17:48 taca Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/12 08:04:35 taca Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liuch/}
 GITHUB_PROJECT=	dmarc-srg
@@ -30,22 +31,30 @@ WEBBASE=	dmarc-srg
 WEBDIR=		share/${PHP_PKG_PREFIX}/${WEBBASE}
 EGDIR=		share/examples/${PHP_PKG_PREFIX}/${WEBBASE}
 
-INSTALLATION_DIRS+=	${WEBDIR}/config ${EGDIR}
-OWN_DIRS_PERMS+=	${WEBDIR}/config ${REAL_ROOT_USER} ${APACHE_GROUP} 0750
-CONF_FILES+=		${EGDIR}/conf.php ${WEBDIR}/config/conf.php
+PKG_SYSCONFSUBDIR=	${WEBBASE}
+
+INSTALLATION_DIRS+=	${EGDIR}
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0750
+CONF_FILES+=		${EGDIR}/conf.php ${PKG_SYSCONFDIR}/conf.php
 CONF_FILES+=		${EGDIR}/vendor_config.php \
-			${WEBDIR}/config/vendor_config.php
+			${PKG_SYSCONFDIR}/vendor_config.php
 PLIST_SUBST+=		EGDIR=${EGDIR} WEBDIR=${WEBDIR}
 PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
 			{ gsub(/${EGDIR:S|/|\\/|g}/, "$${EGDIR}") }
 PRINT_PLIST_AWK+=	/^${WEBDIR:S|/|\\/|g}/ \
 			{ gsub(/${WEBDIR:S|/|\\/|g}/, "$${WEBDIR}") }
 
-pre-configure:
-	${MV} ${WRKSRC}/config/conf.sample.php ${WRKDIR}/conf.php
-	${MV} ${WRKSRC}/config/vendor_config.php ${WRKDIR}
+FILES_SUBST+=		WEBDIR=${WEBDIR}
+
+SUBST_CLASSES+=		files
+SUBST_STAGE.files=	do-configure
+SUBST_MESSAGE.files=	Fixing configuration files.
+SUBST_FILES.files=	config/vendor_config.php init.php
+SUBST_VARS.files+=	PKG_SYSCONFDIR
 
 do-install:
+	${MV} ${WRKSRC}/config/conf.sample.php ${WRKDIR}/conf.php
+	${MV} ${WRKSRC}/config/vendor_config.php ${WRKDIR}
 	cd ${WRKSRC} && ${FIND} . -type f \! -name '*.orig' -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${WEBDIR}
 	${INSTALL_DATA} ${WRKDIR}/conf.php ${WRKDIR}/vendor_config.php \
