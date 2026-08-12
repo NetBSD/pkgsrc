@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2026/03/27 21:19:27 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/12 03:41:38 ryoon Exp $
 
-DISTNAME=	svt-av1-3.1.2
+DISTNAME=	svt-av1-4.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITLAB:=AOMediaCodec/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.gnome.org/AOMediaCodec/SVT-AV1
+HOMEPAGE=	https://gitlab.com/AOMediaCodec/SVT-AV1
 COMMENT=	Scalable Video Technology for AV1 (SVT-AV1 Encoder and Decoder)
 LICENSE=	modified-bsd
 
