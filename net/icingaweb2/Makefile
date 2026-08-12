@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/07/24 15:48:18 taca Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/12 08:08:27 taca Exp $
 
 DISTNAME=	icingaweb2-2.8.2
 PKGREVISION=	4
@@ -18,6 +18,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-imagick-[0-9]*:../../graphics/php-imagick
 DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 # For php-*sql see options.mk
+
+PHP_REQUIRE_MODULE=	json
 
 PHP_VERSIONS_INCOMPATIBLE=	56 # php-imagick
 
@@ -282,5 +284,5 @@ PLIST_SUBST+=	EGDIR="${EGDIR:S.${PREFIX}/..}"
 
 GENERATE_PLIST+=	printf "${EGDIR:S.${PREFIX}/..}/%s\n" ${CONFS};
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
