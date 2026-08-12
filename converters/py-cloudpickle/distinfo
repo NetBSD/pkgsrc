@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2025/11/12 17:28:12 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/08/12 21:49:25 wiz Exp $
 
 BLAKE2s (cloudpickle-3.1.2.tar.gz) = e445c0310caf9698439df366b291c4f96b01c726f0e9bbb4daf21a28fbdc275e
 SHA512 (cloudpickle-3.1.2.tar.gz) = 8aa5b2b50a1f232276202da9de79f19161908b948d367d619da58ff957877b91579a89e5a5034f6914fe0e781898b1c806f583897cb7d127ac73ccf2432f83c0
 Size (cloudpickle-3.1.2.tar.gz) = 22330 bytes
+SHA1 (patch-pyproject.toml) = a561396e632680be79a8aa391269572bd295d127
