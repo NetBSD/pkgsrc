@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/02/09 14:46:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/08/12 04:54:48 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -47,6 +47,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/buffer.rb
 ${GEM_LIBDIR}/lib/pdf/reader/cid_widths.rb
 ${GEM_LIBDIR}/lib/pdf/reader/cmap.rb
 ${GEM_LIBDIR}/lib/pdf/reader/encoding.rb
+${GEM_LIBDIR}/lib/pdf/reader/encoding_utils.rb
 ${GEM_LIBDIR}/lib/pdf/reader/encodings/mac_expert.txt
 ${GEM_LIBDIR}/lib/pdf/reader/encodings/mac_roman.txt
 ${GEM_LIBDIR}/lib/pdf/reader/encodings/pdf_doc.txt
@@ -85,6 +86,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/pages_strategy.rb
 ${GEM_LIBDIR}/lib/pdf/reader/parser.rb
 ${GEM_LIBDIR}/lib/pdf/reader/point.rb
 ${GEM_LIBDIR}/lib/pdf/reader/print_receiver.rb
+${GEM_LIBDIR}/lib/pdf/reader/rc4.rb
 ${GEM_LIBDIR}/lib/pdf/reader/rc4_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/rectangle.rb
 ${GEM_LIBDIR}/lib/pdf/reader/reference.rb
