@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5223 2026/08/12 14:41:34 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5224 2026/08/12 15:18:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7742,3 +7742,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/sqlmap to 1.10.8 [adam 2026-08-12]
 	Added cross/ia16-elf-binutils-bootstrap version 2.39pre20260424 [ryoon 2026-08-12]
 	Updated textproc/ruby-rdtool to 0.6.39 [taca 2026-08-12]
+	Updated www/wordpress to 7.0.3 [taca 2026-08-12]
