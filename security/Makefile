@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1020 2026/07/24 14:00:55 wen Exp $
+# $NetBSD: Makefile,v 1.1021 2026/08/12 22:09:56 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -568,7 +568,6 @@ SUBDIR+=	py-simplesha3
 SUBDIR+=	py-slip10
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smbpasswd
-SUBDIR+=	py-solo1
 SUBDIR+=	py-spake2
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
