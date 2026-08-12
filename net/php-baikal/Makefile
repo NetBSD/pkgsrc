@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/02/17 18:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/12 08:09:42 taca Exp $
 
 DISTNAME=	baikal-0.11.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -85,5 +85,5 @@ do-install:
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${BAIKALDIR}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
