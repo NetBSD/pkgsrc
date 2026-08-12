@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/07/02 11:32:32 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/08/12 08:03:59 adam Exp $
 
-BLAKE2s (django_photologue-3.19.tar.gz) = ee47a71d21db66176ec7dd4155cb00e7632e1289da9fb887bcda95455f44ea79
-SHA512 (django_photologue-3.19.tar.gz) = 3828bee18f520024181db0ad914dfa6c700229695cd50ea8b94d230882a32f2b12dff8352ab9821c3ffa50a90fe7e3c1b01d9377b4838bb82952c97d0b020461
-Size (django_photologue-3.19.tar.gz) = 204882 bytes
+BLAKE2s (django_photologue-3.20.tar.gz) = 87e2bdeff9078f087da6cc3cf16f23e3a0aa24e51aa73ad8a1052fc165c0177d
+SHA512 (django_photologue-3.20.tar.gz) = 767b55e1f35412e3933319dcdf756d019a008a15bddab412e22a03bee3d480facd625d2fa46689b4bea0243392bc5b81c1e74eebc926c5b7abdadbd77d9a6a21
+Size (django_photologue-3.20.tar.gz) = 205305 bytes

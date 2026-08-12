@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/07/02 11:32:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/08/12 08:03:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -181,6 +181,9 @@ ${PYSITELIB}/photologue/tests/test_photo.pyo
 ${PYSITELIB}/photologue/tests/test_photosize.py
 ${PYSITELIB}/photologue/tests/test_photosize.pyc
 ${PYSITELIB}/photologue/tests/test_photosize.pyo
+${PYSITELIB}/photologue/tests/test_releaser_hooks.py
+${PYSITELIB}/photologue/tests/test_releaser_hooks.pyc
+${PYSITELIB}/photologue/tests/test_releaser_hooks.pyo
 ${PYSITELIB}/photologue/tests/test_resize.py
 ${PYSITELIB}/photologue/tests/test_resize.pyc
 ${PYSITELIB}/photologue/tests/test_resize.pyo
@@ -220,9 +223,6 @@ ${PYSITELIB}/photologue/views.pyo
 ${PYSITELIB}/scripts/__init__.py
 ${PYSITELIB}/scripts/__init__.pyc
 ${PYSITELIB}/scripts/__init__.pyo
-${PYSITELIB}/scripts/releaser_hooks.py
-${PYSITELIB}/scripts/releaser_hooks.pyc
-${PYSITELIB}/scripts/releaser_hooks.pyo
 ${PYSITELIB}/scripts/run_tests.py
 ${PYSITELIB}/scripts/run_tests.pyc
 ${PYSITELIB}/scripts/run_tests.pyo
