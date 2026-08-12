@@ -1,0 +1,16 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/08/12 22:20:56 wiz Exp $
+
+Fix build with flit_core 4.
+https://github.com/pallets-eco/flask-debugtoolbar/issues/303
+
+--- pyproject.toml.orig	2026-08-12 22:19:08.364157397 +0000
++++ pyproject.toml
+@@ -4,7 +4,7 @@ license = { file = "LICENSE.txt" }
+ description = "A toolbar overlay for debugging Flask applications."
+ readme = "README.md"
+ license = { file = "LICENSE.txt" }
+-author = [{ name = "Michael van Tellingen" }]
++authors = [{ name = "Michael van Tellingen" }]
+ maintainers = [{ name = "Pallets Ecosystem", email = "contact@palletsprojects.com" }]
+ classifiers = [
+     "Development Status :: 4 - Beta",
