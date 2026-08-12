@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2026/08/12 03:43:35 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/08/12 12:39:42 adam Exp $
 # used by multimedia/ffmpeg9/Makefile
 # used by multimedia/ffplay9/Makefile
 
-DISTNAME=	ffmpeg-9.0
+DISTNAME=	ffmpeg-9.0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
