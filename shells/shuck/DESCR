@@ -1,0 +1,11 @@
+A fast shell script linter, formatter, and language server, written
+in Rust.
+
+Shuck parses, analyzes, formats, and powers editor feedback for
+shell scripts. It catches common bugs, style issues, security
+hazards, performance traps, and portability problems; formats shell
+sources with configurable layout rules; and ships a first-party
+Language Server Protocol (LSP) server for editor diagnostics, fixes,
+navigation, symbols, hover, completion, and formatting. It also
+lints shell embedded in supported non-shell files such as GitHub
+Actions workflows. A caching layer keeps incremental runs fast.
