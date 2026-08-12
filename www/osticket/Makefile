@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/08/07 01:44:04 taca Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/12 15:02:31 taca Exp $
 
 DISTNAME=	osticket-v1.18.4
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -28,7 +28,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 
-PHP_REQUIRE_MODULE=	apcu imap opcache
+PHP_REQUIRE_MODULE=	imap opcache
 
 PHP_VERSIONS_ACCEPTED=	82 83 84 # does not support 5.6
 
@@ -87,5 +87,6 @@ do-install:
 
 .include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
+.include "../../www/php-apcu/buildlink3.mk"
 .include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
