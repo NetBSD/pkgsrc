@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/07/21 09:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/08/12 07:39:36 adam Exp $
 
-DISTNAME=	types_python_dateutil-2.9.0.20260716
+DISTNAME=	types_python_dateutil-2.9.0.20260807
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-python-dateutil/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/python/typeshed
 COMMENT=	Typing stubs for python-dateutil
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=82.0.1:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
