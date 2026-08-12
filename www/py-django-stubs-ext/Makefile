@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/08/11 05:54:55 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/12 12:45:58 adam Exp $
 
-DISTNAME=	django_stubs_ext-6.0.9
+DISTNAME=	django_stubs_ext-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-stubs-ext/}
