@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.63 2026/08/04 14:37:27 taca Exp $
+$NetBSD: distinfo,v 1.64 2026/08/12 05:20:00 taca Exp $
 
-BLAKE2s (aws-sdk-s3-1.228.2.gem) = b01ff2463397fe49a8758b32796e1db8aae007368f3e7e2ff61f873f5f1f9dc3
-SHA512 (aws-sdk-s3-1.228.2.gem) = 1e72b3d77c36c0afb3446fbf28e724e1d2b06a80365fde40e148e0a375b2813abed1b7900c292d3697f6fee3724d84dd9558530a102e20f6b323c239104b3f90
-Size (aws-sdk-s3-1.228.2.gem) = 602624 bytes
+BLAKE2s (aws-sdk-s3-1.229.0.gem) = 260b2c02822e9cc21e22086dddbbee862dd89a8e5992bd0bb4a10b0dd048c840
+SHA512 (aws-sdk-s3-1.229.0.gem) = 9f31bc27471d0c203a70197d7dcc95568baeea976401df9a3f195a800ced0a3fcf8ba7f20adfb188c759a7b7dc13ab1bb3573dd04604f06631e9f5e0532798d7
+Size (aws-sdk-s3-1.229.0.gem) = 603648 bytes
