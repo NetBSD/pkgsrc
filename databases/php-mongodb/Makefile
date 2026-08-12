@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/02/11 08:24:49 taca Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/12 05:34:49 taca Exp $
 
 MODNAME=	mongodb
 PECL_VERSION=	1.21.5
@@ -21,6 +21,5 @@ CPPFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=200809L -D_NETBSD_SOURCE
 .include "../../security/openssl/buildlink3.mk"
 #.include "../../databases/mongo-c-driver/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-.include "../../lang/php/json.mk"
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
