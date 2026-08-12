@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2026/02/15 23:23:00 mrg Exp $
+# $NetBSD: Makefile,v 1.129 2026/08/12 13:24:58 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -39,6 +39,7 @@ SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	i586-pc-msdosdjgpp-binutils
 SUBDIR+=	i586-pc-msdosdjgpp-gcc
 SUBDIR+=	i586-pc-msdosdjgpp-sdk
+SUBDIR+=	ia16-elf-binutils-bootstrap
 SUBDIR+=	icdprog
 SUBDIR+=	libdragon-binutils
 SUBDIR+=	lwtools
