@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5210 2026/08/12 07:42:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5211 2026/08/12 07:59:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7719,3 +7719,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-types-python-dateutil to 2.9.0.20260807 [adam 2026-08-12]
 	Updated devel/py-types-setuptools to 84.0.0.20260812 [adam 2026-08-12]
 	Updated textproc/py-types-yaml to 6.0.12.20260724 [adam 2026-08-12]
+	Updated www/py-test-django to 4.14.0 [adam 2026-08-12]
+	Updated devel/py-wheel to 0.48.0 [adam 2026-08-12]
