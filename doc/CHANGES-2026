@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5244 2026/08/12 22:12:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5245 2026/08/12 22:13:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7764,3 +7764,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-pep517 [wiz 2026-08-12]
 	Removed security/py-solo1 [wiz 2026-08-12]
 	Removed sysutils/py-nkdfu [wiz 2026-08-12]
+	Updated textproc/py-sphinx-issues to 6.0.0nb1 [wiz 2026-08-12]
