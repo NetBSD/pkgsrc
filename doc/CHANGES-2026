@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5230 2026/08/12 15:49:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5231 2026/08/12 16:23:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7749,3 +7749,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/ruby-pdf-reader to 2.16.0nb1 [taca 2026-08-12]
 	Updated lang/ruby-execjs to 2.10.2 [taca 2026-08-12]
 	Updated misc/ruby-sprockets to 4.3.0 [taca 2026-08-12]
+	Added cross/ia16-elf-binutils version 2.39pre20260424 [ryoon 2026-08-12]
