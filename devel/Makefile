@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4672 2026/08/10 19:02:05 agc Exp $
+# $NetBSD: Makefile,v 1.4673 2026/08/12 21:52:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2560,7 +2560,6 @@ SUBDIR+=	py-aws-error-utils
 SUBDIR+=	py-aws-sso-lib
 SUBDIR+=	py-awscrt
 SUBDIR+=	py-babel
-SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
 SUBDIR+=	py-backports.shutil_get_terminal_size
 SUBDIR+=	py-bech32
