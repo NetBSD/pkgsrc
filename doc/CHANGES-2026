@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5185 2026/08/12 03:21:55 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5186 2026/08/12 03:22:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7690,3 +7690,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/ruby-gtksourceview3 to 4.3.7 [tsutsui 2026-08-11]
 	Updated ham/rtl-sdr to 2.0.3 [gdt 2026-08-11]
 	Updated lang/tcl90 to 9.0.4 [ryoon 2026-08-12]
+	Updated x11/tk90 to 9.0.4 [ryoon 2026-08-12]
