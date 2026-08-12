@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/01/08 14:17:49 taca Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/12 14:38:14 taca Exp $
 
 PKGREVISION= 3
 .include "../../sysutils/zabbix60-server/Makefile.common"
@@ -51,6 +51,6 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/httpd-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/php-fpm-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/configure/replace-interpreter.mk"
 .include "../../mk/bsd.pkg.mk"
