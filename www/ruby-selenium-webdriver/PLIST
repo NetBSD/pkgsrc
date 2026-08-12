@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/07/21 14:14:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/08/12 05:25:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -7,6 +7,8 @@ ${GEM_LIBDIR}/NOTICE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/linux/selenium-manager
 ${GEM_LIBDIR}/bin/macos/selenium-manager
+${GEM_LIBDIR}/bin/selenium-manager-THIRD-PARTY-NOTICES.txt
+${GEM_LIBDIR}/bin/selenium-manager.cdx.json
 ${GEM_LIBDIR}/bin/windows/selenium-manager.exe
 ${GEM_LIBDIR}/lib/selenium-webdriver.rb
 ${GEM_LIBDIR}/lib/selenium/server.rb
@@ -19,6 +21,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/mutationListener.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browser.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/error.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_handler.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/cookies.rb
@@ -35,6 +38,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browser.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browsing_context.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/domain.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/emulation.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/error_code.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/input.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/log.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/network.rb
@@ -75,7 +79,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/full_page_screensh
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_addons.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_apple_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_authentication.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_bidi.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_casting.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_cdp.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_context.rb
