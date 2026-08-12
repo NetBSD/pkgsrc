@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5241 2026/08/12 22:03:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5242 2026/08/12 22:07:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7761,3 +7761,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-entrypoints [wiz 2026-08-12]
 	Updated devel/py-gidgethub to 5.4.0 [wiz 2026-08-12]
 	Updated devel/py-orderly-set to 5.5.0nb1 [wiz 2026-08-12]
+	Removed devel/py-pep517 [wiz 2026-08-12]
