@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/12 08:12:24 adam Exp $
+
+BLAKE2s (bmaptool-3.9.0.tar.gz) = 24020e2ef71a89c19a2a846191dde391df659a6eaa28e2b536513cebe74762fe
+SHA512 (bmaptool-3.9.0.tar.gz) = 5992e26ec54de5b0ec7992c5fe30acafbd8c5817fdaf992816804c6c0a033cb4357e30a581af85835d9e3fe640d06a77a68602b52499def8761de5c2038df017
+Size (bmaptool-3.9.0.tar.gz) = 104321 bytes

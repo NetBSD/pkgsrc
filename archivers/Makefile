@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2026/07/01 09:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.226 2026/08/12 08:12:24 adam Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -18,7 +18,7 @@ SUBDIR+=	arqiver
 SUBDIR+=	atool
 SUBDIR+=	bicom
 SUBDIR+=	bkcrack
-SUBDIR+=	bmap-tools
+SUBDIR+=	bmaptool
 SUBDIR+=	brotli
 SUBDIR+=	bsdtar
 SUBDIR+=	bunzip
