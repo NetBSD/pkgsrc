@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2024/11/25 07:12:11 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2026/08/12 12:51:34 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lv2
-PKG_SUPPORTED_OPTIONS=	doc
-PKG_SUGGESTED_OPTIONS=	doc
+PKG_SUPPORTED_OPTIONS=	doc gtk2
+PKG_SUGGESTED_OPTIONS=	doc gtk2
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,4 +25,13 @@ doxygen-plist:
 .include "../../lang/python/tool.mk"
 .else
 MESON_ARGS+=	-Ddocs=disabled
+.endif
+
+PLIST_VARS+=	gtk2
+.if !empty(PKG_OPTIONS:Mgtk2)
+PLIST.gtk2=	yes
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.10
+.include "../../graphics/cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2++=	gtk2+>=2.18.0
+.include "../../x11/gtk2/buildlink3.mk"
 .endif
