@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2026/08/11 19:27:13 gdt Exp $
+# $NetBSD: Makefile,v 1.109 2026/08/12 14:33:56 taca Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -292,7 +292,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 
-PHP_REQUIRE_MODULE=	apcu json
+PHP_REQUIRE_MODULE=	json
 
 ## WEB
 
@@ -406,7 +406,6 @@ post-install:
 	# Install pkgsrc README.
 	${INSTALL_DATA} files/README-pkgsrc.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
-.include "../../lang/php/compat.mk"
 .include "../../devel/cmake/build.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
@@ -421,4 +420,6 @@ post-install:
 .include "../../multimedia/mp4v2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../www/php-apcu/buildlink3.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
