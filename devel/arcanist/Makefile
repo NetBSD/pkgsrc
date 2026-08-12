@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/07/24 15:48:17 taca Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/12 07:00:20 taca Exp $
 
 DISTNAME=		arcanist-20170609
 PKGREVISION=		9
@@ -21,6 +21,8 @@ DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 
 CONFLICTS+=		arc-[0-9]*
 
+PHP_REQUIRE_MODULE=	json
+
 REPLACE_PHP=	scripts/arcanist.php
 REPLACE_PHP+=	scripts/hgdaemon/hgdaemon_client.php
 REPLACE_PHP+=	scripts/hgdaemon/hgdaemon_server.php
@@ -41,5 +43,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/arc
 
 .include "../../lang/python/application.mk"
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
