@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5208 2026/08/12 06:47:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5209 2026/08/12 07:07:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7714,3 +7714,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-selenium-webdriver to 4.47.0 [taca 2026-08-12]
 	Updated audio/fluidsynth to 2.6.0 [adam 2026-08-12]
 	Updated devel/mold to 2.42.0 [adam 2026-08-12]
+	Updated graphics/php-jpgraph to 4.4.3 [taca 2026-08-12]
