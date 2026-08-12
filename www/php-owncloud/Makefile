@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/02/08 04:04:41 taca Exp $
+# $NetBSD: Makefile,v 1.85 2026/08/12 15:10:55 taca Exp $
 #
 
 DISTNAME=	owncloud-10.9.1
@@ -22,6 +22,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+
+PHP_REQUIRE_MODULE=	json
 
 .include "options.mk"
 
@@ -61,6 +63,6 @@ do-install:
 	cd ${WRKDIR} && ${FIND} owncloud -type f \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
