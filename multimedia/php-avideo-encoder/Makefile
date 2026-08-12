@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/01/08 14:17:48 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/12 08:07:28 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -14,6 +14,7 @@ HOMEPAGE=	https://github.com/WWBN/AVideo-Encoder/
 COMMENT=	Web-based video encoder for AVideo
 LICENSE=	gnu-agpl-v3
 
+PHP_REQUIRE_MODULE=	json
 PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
@@ -40,5 +41,5 @@ do-install:
                 ${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${AVIDEODIR}
 
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/01/08 14:17:48 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/12 08:07:28 taca Exp $
 
 GITHUB_PROJECT=	AVideo
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -13,6 +13,7 @@ HOMEPAGE=	https://github.com/WWBN/AVideo/
 COMMENT=	Web-based video streaming platform
 LICENSE=	json-license
 
+PHP_REQUIRE_MODULE=	json
 PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
@@ -50,5 +51,5 @@ do-install:
 	    \! -name .gitignore \! -name .gitmodules  -print | \
                 ${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${AVIDEODIR}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
