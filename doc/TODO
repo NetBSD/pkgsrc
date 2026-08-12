@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27736 2026/08/11 15:27:06 taca Exp $
+$NetBSD: TODO,v 1.27737 2026/08/12 00:03:35 gdt Exp $
 
 Suggested new packages
 ======================
@@ -342,6 +342,10 @@ Suggested new packages
 	Kanboard
 	https://kanboard.org
 	Open source Kanban project management software
+
+	libreFS
+	https://github.com/libreFS/libreFS
+	community-maintained S3-compatible object storage server, forked from MinIO at RELEASE.2025-04-22T22-12-26Z
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
