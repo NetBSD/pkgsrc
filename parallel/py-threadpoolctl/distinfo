@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/03/13 15:09:25 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/08/12 21:47:29 wiz Exp $
 
 BLAKE2s (threadpoolctl-3.6.0.tar.gz) = d5bdba6a6e0450c9231d154d51333431697ecb09ed278a88260a91f5c7431f89
 SHA512 (threadpoolctl-3.6.0.tar.gz) = 1fcc39a643db15b7415ad81206078d5ec571d99bab2a8b6c63180f45ce43479876700e3eb36a317b51df18633b2c5455d54553dd710a9c9a8ce2f77bebd5792a
 Size (threadpoolctl-3.6.0.tar.gz) = 21274 bytes
+SHA1 (patch-pyproject.toml) = 6bb5f0a6c08fdc6fdc585d4067cef0c9b88042f3
