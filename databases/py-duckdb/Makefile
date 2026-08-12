@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/07/21 14:55:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2026/08/12 03:52:35 ryoon Exp $
 
-DISTNAME=	duckdb-1.5.4
+DISTNAME=	duckdb-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duckdb/}
