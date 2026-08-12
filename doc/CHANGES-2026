@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5238 2026/08/12 21:52:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5239 2026/08/12 21:55:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7758,3 +7758,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/indi to 2.2.4.2 [adam 2026-08-12]
 	Updated devel/appstream to 1.1.6 [adam 2026-08-12]
 	Removed devel/py-backcall [wiz 2026-08-12]
+	Removed devel/py-entrypoints [wiz 2026-08-12]
