@@ -1,0 +1,18 @@
+$NetBSD: patch-libgloss_ia16_Makefile.in,v 1.1 2026/08/12 16:27:03 ryoon Exp $
+
+* Do not try to strip during install to fix installation.
+
+--- libgloss/ia16/Makefile.in.orig	2026-08-12 08:10:09.431588889 +0000
++++ libgloss/ia16/Makefile.in
+@@ -669,9 +669,9 @@ install: 
+ 	  done; \
+ 	  set -e; for x in ${INSTALL_PROGRAM_FILES}; do\
+ 	    if [ -f $$x ]; then \
+-	      ${INSTALL_PROGRAM} $$x $(DESTDIR)${tooldir}/bin/$$x; \
++	      ${INSTALL_DATA} $$x $(DESTDIR)${tooldir}/bin/$$x; \
+ 	    else \
+-	      ${INSTALL_PROGRAM} $(srcdir)/$$x $(DESTDIR)${tooldir}/bin/$$x; \
++	      ${INSTALL_DATA} $(srcdir)/$$x $(DESTDIR)${tooldir}/bin/$$x; \
+ 	    fi; \
+ 	  done; \
+ 	fi
