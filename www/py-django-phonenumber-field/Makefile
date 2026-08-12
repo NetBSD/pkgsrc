@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/12/26 16:40:40 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/08/12 12:44:21 adam Exp $
 
-DISTNAME=	django_phonenumber_field-8.4.0
+DISTNAME=	django_phonenumber_field-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-phonenumber-field/}
