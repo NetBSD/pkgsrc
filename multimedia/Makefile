@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.361 2026/08/12 03:44:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.362 2026/08/12 03:46:41 ryoon Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -41,6 +41,7 @@ SUBDIR+=	ffplay5
 SUBDIR+=	ffplay6
 SUBDIR+=	ffplay7
 SUBDIR+=	ffplay8
+SUBDIR+=	ffplay9
 SUBDIR+=	flashplayer
 SUBDIR+=	flvstreamer
 SUBDIR+=	frei0r
