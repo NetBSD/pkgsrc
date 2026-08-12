@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/06/29 12:41:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/08/12 08:02:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,6 +15,9 @@ ${PYSITELIB}/treebeard/admin.pyo
 ${PYSITELIB}/treebeard/al_tree.py
 ${PYSITELIB}/treebeard/al_tree.pyc
 ${PYSITELIB}/treebeard/al_tree.pyo
+${PYSITELIB}/treebeard/deprecation.py
+${PYSITELIB}/treebeard/deprecation.pyc
+${PYSITELIB}/treebeard/deprecation.pyo
 ${PYSITELIB}/treebeard/exceptions.py
 ${PYSITELIB}/treebeard/exceptions.pyc
 ${PYSITELIB}/treebeard/exceptions.pyo
@@ -65,20 +68,16 @@ ${PYSITELIB}/treebeard/ns_tree.pyo
 ${PYSITELIB}/treebeard/numconv.py
 ${PYSITELIB}/treebeard/numconv.pyc
 ${PYSITELIB}/treebeard/numconv.pyo
-${PYSITELIB}/treebeard/static/treebeard/expand-collapse.png
+${PYSITELIB}/treebeard/static/treebeard/drag.svg
 ${PYSITELIB}/treebeard/static/treebeard/treebeard-admin.css
 ${PYSITELIB}/treebeard/static/treebeard/treebeard-admin.js
 ${PYSITELIB}/treebeard/templates/admin/tree_change_list.html
-${PYSITELIB}/treebeard/templates/admin/tree_list.html
 ${PYSITELIB}/treebeard/templatetags/__init__.py
 ${PYSITELIB}/treebeard/templatetags/__init__.pyc
 ${PYSITELIB}/treebeard/templatetags/__init__.pyo
 ${PYSITELIB}/treebeard/templatetags/admin_tree.py
 ${PYSITELIB}/treebeard/templatetags/admin_tree.pyc
 ${PYSITELIB}/treebeard/templatetags/admin_tree.pyo
-${PYSITELIB}/treebeard/templatetags/admin_tree_list.py
-${PYSITELIB}/treebeard/templatetags/admin_tree_list.pyc
-${PYSITELIB}/treebeard/templatetags/admin_tree_list.pyo
 ${PYSITELIB}/treebeard/utils.py
 ${PYSITELIB}/treebeard/utils.pyc
 ${PYSITELIB}/treebeard/utils.pyo
