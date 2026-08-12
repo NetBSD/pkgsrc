@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2026/02/16 12:18:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/08/12 07:41:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,13 +23,15 @@ ${PYSITELIB}/distutils-stubs/command/install_data.pyi
 ${PYSITELIB}/distutils-stubs/command/install_lib.pyi
 ${PYSITELIB}/distutils-stubs/command/install_scripts.pyi
 ${PYSITELIB}/distutils-stubs/command/sdist.pyi
-${PYSITELIB}/distutils-stubs/compat/__init__.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/base.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/cygwin.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/errors.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/msvc.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/unix.pyi
 ${PYSITELIB}/distutils-stubs/compilers/C/zos.pyi
+${PYSITELIB}/distutils-stubs/compilers/errors.pyi
+${PYSITELIB}/distutils-stubs/compilers/platform/detect.pyi
+${PYSITELIB}/distutils-stubs/compilers/platform/macos.pyi
 ${PYSITELIB}/distutils-stubs/cygwinccompiler.pyi
 ${PYSITELIB}/distutils-stubs/dep_util.pyi
 ${PYSITELIB}/distutils-stubs/dist.pyi
@@ -63,13 +65,15 @@ ${PYSITELIB}/setuptools-stubs/_distutils/command/install_data.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_lib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_scripts.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/sdist.pyi
-${PYSITELIB}/setuptools-stubs/_distutils/compat/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/base.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/cygwin.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/errors.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/unix.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compilers/C/zos.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/compilers/errors.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/compilers/platform/detect.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/compilers/platform/macos.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cygwinccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dist.pyi
