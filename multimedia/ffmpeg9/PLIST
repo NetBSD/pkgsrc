@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/08/12 03:43:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/12 12:39:42 adam Exp $
 bin/ffmpeg9
 bin/ffprobe9
 include/ffmpeg9/libavcodec/ac3_parser.h
@@ -149,31 +149,31 @@ include/ffmpeg9/libswscale/version_major.h
 lib/ffmpeg9/libavcodec.a
 lib/ffmpeg9/libavcodec.so
 lib/ffmpeg9/libavcodec.so.63
-lib/ffmpeg9/libavcodec.so.63.1.100
+lib/ffmpeg9/libavcodec.so.63.1.101
 lib/ffmpeg9/libavdevice.a
 lib/ffmpeg9/libavdevice.so
 lib/ffmpeg9/libavdevice.so.63
-lib/ffmpeg9/libavdevice.so.63.1.100
+lib/ffmpeg9/libavdevice.so.63.1.101
 lib/ffmpeg9/libavfilter.a
 lib/ffmpeg9/libavfilter.so
 lib/ffmpeg9/libavfilter.so.12
-lib/ffmpeg9/libavfilter.so.12.1.100
+lib/ffmpeg9/libavfilter.so.12.1.101
 lib/ffmpeg9/libavformat.a
 lib/ffmpeg9/libavformat.so
 lib/ffmpeg9/libavformat.so.63
-lib/ffmpeg9/libavformat.so.63.1.100
+lib/ffmpeg9/libavformat.so.63.1.101
 lib/ffmpeg9/libavutil.a
 lib/ffmpeg9/libavutil.so
 lib/ffmpeg9/libavutil.so.61
-lib/ffmpeg9/libavutil.so.61.1.100
+lib/ffmpeg9/libavutil.so.61.1.101
 lib/ffmpeg9/libswresample.a
 lib/ffmpeg9/libswresample.so
 lib/ffmpeg9/libswresample.so.7
-lib/ffmpeg9/libswresample.so.7.1.100
+lib/ffmpeg9/libswresample.so.7.1.101
 lib/ffmpeg9/libswscale.a
 lib/ffmpeg9/libswscale.so
 lib/ffmpeg9/libswscale.so.10
-lib/ffmpeg9/libswscale.so.10.1.100
+lib/ffmpeg9/libswscale.so.10.1.101
 lib/ffmpeg9/pkgconfig/libavcodec.pc
 lib/ffmpeg9/pkgconfig/libavdevice.pc
 lib/ffmpeg9/pkgconfig/libavfilter.pc
