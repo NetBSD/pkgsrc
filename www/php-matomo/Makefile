@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/08 14:17:50 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/12 15:05:53 taca Exp $
 
 DISTNAME=	matomo-5.2.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.matomo.org/
 COMMENT=	Web analytics platform
 LICENSE=	gnu-gpl-v3
 
+PHP_REQUIRE_MODULE=	json
 PHP_VERSIONS_ACCEPTED=	74 82 83
 
 WRKSRC=		${WRKDIR}/matomo
@@ -55,6 +56,6 @@ do-install:
 
 CHECK_INTERPRETER_SKIP+=	${MATOMODIR}/vendor/pear/archive_tar/scripts/phptar.in
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
