@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/08/02 05:13:24 taca Exp $
+$NetBSD: distinfo,v 1.11 2026/08/12 05:15:14 taca Exp $
 
-BLAKE2s (temple-0.10.4.gem) = dd562c3a296b9371ee8f8580b31165059ac81d315639291d30baface7687acc0
-SHA512 (temple-0.10.4.gem) = e35dbe1813f56cacb7befd8326b6f37f2122b7c1f11187d4cb988d843ab424a132ea88d611ccf05f79ab9a9b7cc98b4588ff645ddcc09cc99f17263b435b11bd
-Size (temple-0.10.4.gem) = 32768 bytes
+BLAKE2s (temple-0.10.6.gem) = 85f39e41d327ae5ae5ff93c75fcaaa14e4e74d37094fd3c4823af1e5c5ed3652
+SHA512 (temple-0.10.6.gem) = 0c09ed0affcac70ec246f60c6b5cab64f680042f177a5a1abd4fc8e0b89f7c8cba0f4a7e730fc3e273f59001389aaf5b9cfb4058cde8e692b1cedc96f1c8aa87
+Size (temple-0.10.6.gem) = 34304 bytes
