@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/02/08 03:36:56 taca Exp $
+# $NetBSD: Makefile,v 1.62 2026/08/12 07:01:00 taca Exp $
 
 DISTNAME=	mantisbt-2.25.3
 PKGREVISION=	1
@@ -11,8 +11,9 @@ HOMEPAGE=	https://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 LICENSE=	gnu-gpl-v2
 
-NO_BUILD=	YES
+PHP_REQUIRE_MODULE=	json
 
+NO_BUILD=	YES
 USE_TOOLS+=	bash:run pax
 
 APACHE_USER?=		www
@@ -62,5 +63,5 @@ do-install:
 	cd ${DESTDIR}${MANTIS_HOME} && \
 		${FIND} . -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
