@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:33 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:46 adam Exp $
 
-BLAKE2s (pyobjc_framework_mlcompute-12.2.1.tar.gz) = 5cae89dbf56061cc605c7fbf18be514c6f44e6e6bff76161eec0e70153297066
-SHA512 (pyobjc_framework_mlcompute-12.2.1.tar.gz) = 3b37c77afb547fddd94d60909c333c81c7e0b24efd64c3d8c709de40f39adc03649b9cbc5f9ef72687fb14ee4ead288bdd47908e84cc4f12a586a8de2894e7b4
-Size (pyobjc_framework_mlcompute-12.2.1.tar.gz) = 55020 bytes
+BLAKE2s (pyobjc_framework_mlcompute-12.2.2.tar.gz) = a7629f07eaba21682e4b45a2eee7a35c7ddd4450ea71012b6d62a536fe319878
+SHA512 (pyobjc_framework_mlcompute-12.2.2.tar.gz) = b465b1a4adb8224c9bcfdd29345ef35cf3f27536f34df0937401902e6a7b4117baba3aba4070c7f824343188367a16302195bab240ebdb86a440878423f14fba
+Size (pyobjc_framework_mlcompute-12.2.2.tar.gz) = 55315 bytes

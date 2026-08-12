@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/07/01 09:24:27 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/08/12 08:52:39 adam Exp $
 
-BLAKE2s (pyobjc_framework_cryptotokenkit-12.2.1.tar.gz) = c46601e0b00fe979d466e512022128c059c135901cfe96ee779647ae77537e5a
-SHA512 (pyobjc_framework_cryptotokenkit-12.2.1.tar.gz) = 5417797850cf918276623916cb6c3a8db25496aa7d7d539856feb1b7a33d32ccfbdacdf111feeaf51bdb4e150827c6e0e5a2e1d5c9b4d5371a6e1eb10fb5cd75
-Size (pyobjc_framework_cryptotokenkit-12.2.1.tar.gz) = 38273 bytes
+BLAKE2s (pyobjc_framework_cryptotokenkit-12.2.2.tar.gz) = 24107c77b2b3df97d9e611d5ba36ecb564293d7528d19afc20e02b47299e930d
+SHA512 (pyobjc_framework_cryptotokenkit-12.2.2.tar.gz) = 045dc0b1d09ef1a68154191c8779580a7b74cf4e64fc36e1d83d1279060bb44e83bc3f991d28cd0d391290829f15eb3cde886a5a5f4b590fb104f5cde262dd7b
+Size (pyobjc_framework_cryptotokenkit-12.2.2.tar.gz) = 38474 bytes

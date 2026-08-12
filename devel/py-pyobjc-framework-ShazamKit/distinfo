@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/07/01 09:24:38 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/12 08:52:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_shazamkit-12.2.1.tar.gz) = 68bc73e47fab8bd71830cb38bdd343dcfe8ff1c4ac98a3527655bc6b2da69d69
-SHA512 (pyobjc_framework_shazamkit-12.2.1.tar.gz) = c66583cd9d673507a769e8c28a27608c8668daadec8f1c066313e8ab16d1cbc1714cf154b26ee37934a4f9487adc162056311f58066431f1010927033dfb426b
-Size (pyobjc_framework_shazamkit-12.2.1.tar.gz) = 26062 bytes
+BLAKE2s (pyobjc_framework_shazamkit-12.2.2.tar.gz) = 626e4bde881c2279ec5db04b8f3888ba525d82f6ceb8a75e7871327ab589a0f2
+SHA512 (pyobjc_framework_shazamkit-12.2.2.tar.gz) = b2ed53a2c7d04dca1e5fad6aaab308d4b4fc620833eadb6588f2db9672bd458e0036eb8694036c622c1f63b12df366c6c9b7994394b2b41ee0333856cd191539
+Size (pyobjc_framework_shazamkit-12.2.2.tar.gz) = 26330 bytes

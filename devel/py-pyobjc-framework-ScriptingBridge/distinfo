@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2026/07/01 09:24:37 adam Exp $
+$NetBSD: distinfo,v 1.27 2026/08/12 08:52:49 adam Exp $
 
-BLAKE2s (pyobjc_framework_scriptingbridge-12.2.1.tar.gz) = 52502091bc7d636d757b13247b3067b716800597dc6d82a6073b80628a2004a5
-SHA512 (pyobjc_framework_scriptingbridge-12.2.1.tar.gz) = 3991819e42eff464addc64eb21ae564d1934f31857c69312b4010591d77b8119afecbe1e9375904e30d1e4e6131d850592f988e9a417a48208d562a4001ea01f
-Size (pyobjc_framework_scriptingbridge-12.2.1.tar.gz) = 21226 bytes
+BLAKE2s (pyobjc_framework_scriptingbridge-12.2.2.tar.gz) = cbfd8a73db978dac6bd8895f7badc010fcd2400c987f7d1c18dff9204b7054f8
+SHA512 (pyobjc_framework_scriptingbridge-12.2.2.tar.gz) = c6b7c36d5d251c043729c5434ba2719a2f035a0d2f0886431754c226f3a5ff8cb45245adde9af5b2ee05bd2b4ef28b3b8b3949342bb6b18292961b86b4aa6ead
+Size (pyobjc_framework_scriptingbridge-12.2.2.tar.gz) = 21368 bytes

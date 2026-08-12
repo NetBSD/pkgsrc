@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/01 09:24:32 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/08/12 08:52:45 adam Exp $
 
-BLAKE2s (pyobjc_framework_mediatoolbox-12.2.1.tar.gz) = 50b96695ce57ed4a95ee8e68f8dd342a6398ecf19b331d9baf3b223b2ae939ed
-SHA512 (pyobjc_framework_mediatoolbox-12.2.1.tar.gz) = d3fb27c0fb5442ccfe7c26d0649533f4c1942886443c22cc45d0cc072f5fa9f519d3b43744e959c56e4eda4d3feab3e7ea4a1a330de598a81a613b2f22022d6a
-Size (pyobjc_framework_mediatoolbox-12.2.1.tar.gz) = 22811 bytes
+BLAKE2s (pyobjc_framework_mediatoolbox-12.2.2.tar.gz) = 3b7d069d223678882394d8114cf5e218b52a244179d205b80fcef65fa93005b4
+SHA512 (pyobjc_framework_mediatoolbox-12.2.2.tar.gz) = 8ecbc979466c232e67616ecbef212fdb7e007eeaca98f29088aca7a67dfdd28b2af2ecf08b9c20a3671accb94ff1a05113af5c252113c0c1957f0eb41aa68d76
+Size (pyobjc_framework_mediatoolbox-12.2.2.tar.gz) = 22955 bytes

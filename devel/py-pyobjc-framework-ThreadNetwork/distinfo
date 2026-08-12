@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/07/01 09:24:39 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/08/12 08:52:51 adam Exp $
 
-BLAKE2s (pyobjc_framework_threadnetwork-12.2.1.tar.gz) = e236a52be77ef140ae9c1b22019c273ac8f559138187c7146dbc041c7f8bbcb6
-SHA512 (pyobjc_framework_threadnetwork-12.2.1.tar.gz) = c37f17902e785134b85cb3afc2f6caf3d0009f9bf8e0efa6c413773ab522d94aaf82a0c1df26c99d3a2768796a36349523d3488e3e34c9eb47cbcd47f003d469
-Size (pyobjc_framework_threadnetwork-12.2.1.tar.gz) = 13341 bytes
+BLAKE2s (pyobjc_framework_threadnetwork-12.2.2.tar.gz) = 24aa102d46aa17cb7386dfd7b72b3f07bb50d5857ea4d6aa5dd6547d2f9a07f4
+SHA512 (pyobjc_framework_threadnetwork-12.2.2.tar.gz) = 91d33fda5c4ac6714ea18084257fd818c0ae2985d213d2eae1adff2ecd08258c2f495ce25aadbe650d179c83866490ff054a9c23bcb88ea8b27418c04df75064
+Size (pyobjc_framework_threadnetwork-12.2.2.tar.gz) = 13450 bytes
