@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2026/07/13 04:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2026/08/12 12:52:53 wiz Exp $
 
 # NOTES ON UPDATING
 # - Upstream is insisting that packages use their internal modified
@@ -8,7 +8,7 @@
 #   This should be disabled by default, Audacity is offline software.
 # - Please test usage on NetBSD.
 DISTNAME=	audacity-2.4.1
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
