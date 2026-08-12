@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/12/14 03:35:18 taca Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/12 06:57:47 taca Exp $
 #
 
 MODNAME=	redis
@@ -15,6 +15,8 @@ HOMEPAGE=	https://github.com/nicolasff/phpredis
 COMMENT=	PHP extension for Redis
 LICENSE=	php
 
+PHP_REQUIRE_MODULE=	json
+
 PHP_VERSIONS_INCOMPATIBLE=	56
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
@@ -24,6 +26,6 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
 CFLAGS+=	-Wno-error=return-type
 .endif
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
