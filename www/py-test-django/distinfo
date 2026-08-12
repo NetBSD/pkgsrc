@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2026/04/22 07:32:22 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/08/12 07:57:25 adam Exp $
 
-BLAKE2s (pytest_django-4.12.0.tar.gz) = bfcda75d915a0554de186f35085402282d1cee161110130213dc73a2596b2cda
-SHA512 (pytest_django-4.12.0.tar.gz) = bea12ef29a37c54347587e651e3fc4a61188ad08551ee27a42ba174a0645bcaef5892baf70ccabe3e3b0b420499175cc87affaeb355e0caa6985ee39d9d658e2
-Size (pytest_django-4.12.0.tar.gz) = 91156 bytes
+BLAKE2s (pytest_django-4.14.0.tar.gz) = f31b90907dbb055e358fde9590d922aa7a022f510f68beae8800c0f7ec2bdce3
+SHA512 (pytest_django-4.14.0.tar.gz) = 5be98f075dcff64f2896b9d1d116794c9d27346daa1d92124ac97d27bc9558c4576089cb86749ba46cc87307e7acb029c510a4efbb72e0a2211e0e235237133e
+Size (pytest_django-4.14.0.tar.gz) = 94700 bytes
