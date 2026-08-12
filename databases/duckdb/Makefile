@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/07/21 14:54:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/12 03:51:56 ryoon Exp $
 
-DISTNAME=	duckdb-1.5.4
+DISTNAME=	duckdb-1.5.5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duckdb/}
 GITHUB_PROJECT=	duckdb
