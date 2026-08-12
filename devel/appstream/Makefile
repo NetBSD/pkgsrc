@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/07/25 08:36:34 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/12 18:10:18 adam Exp $
 
-DISTNAME=	appstream-1.1.5
+DISTNAME=	appstream-1.1.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
