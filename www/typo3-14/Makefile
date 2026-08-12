@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/07/31 01:31:23 wen Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/12 15:24:06 taca Exp $
 
 DISTNAME=	typo3_src-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
@@ -25,7 +25,7 @@ REPLACE_PHP+=	vendor/symfony/yaml/Resources/bin/yaml-lint
 REPLACE_PHP+=	vendor/typo3/cms-cli/typo3
 REPLACE_PHP+=	vendor/typo3fluid/fluid/bin/fluid
 
-VER=		14.3.5
+VER=		14.3.6
 
 NO_BUILD=	YES
 TYPO3DIR=	share/typo3
