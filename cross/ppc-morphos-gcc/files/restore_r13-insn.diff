@@ -1,0 +1,57 @@
+Make restore_r13 an insn with properly declared registers and clobbers.
+
+--- gcc/config/rs6000/rs6000.md.orig	2026-08-12 21:46:35.039143013 +0000
++++ gcc/config/rs6000/rs6000.md
+@@ -201,6 +201,7 @@
+    UNSPECV_SPEC_BARRIER         ; Speculation barrier
+    UNSPECV_PLT16_LO
+    UNSPECV_PLT_PCREL
++   UNSPECV_RESTORE_R13
+   ])
+ 
+ ; The three different kinds of epilogue.
+@@ -11341,6 +11342,16 @@
+   [(set (match_dup 0) (high:P (match_dup 1)))
+    (set (match_dup 0) (lo_sum:P (match_dup 0) (match_dup 1)))])
+ 
++
++;; baserel - inspired by load_toc_v4_pic_si
++(define_insn "restore_r13"
++  [(set (reg:SI 13)
++	(unspec_volatile:SI [(reg:SI 12)] UNSPECV_RESTORE_R13))
++   (clobber (reg:SI LR_REGNO))]
++  "TARGET_BASEREL"
++  "bl __restore_r13"
++  [(set_attr "type" "branch")])
++
+ ;;
+ ;;
+ ;;
+--- gcc/config/rs6000/rs6000.cc.orig	2026-08-12 22:19:12.210389558 +0000
++++ gcc/config/rs6000/rs6000.cc
+@@ -10224,6 +10224,9 @@ rs6000_conditional_register_usage (void)
+   if (fixed_regs[2] && (DEFAULT_ABI == ABI_AIX || DEFAULT_ABI == ABI_ELFv2))
+     call_used_regs[2] = 0;
+ 
++  if (TARGET_BASEREL)
++    fixed_regs[13] = call_used_regs[13] = 1;
++
+   if (DEFAULT_ABI == ABI_V4 && flag_pic == 2)
+     fixed_regs[RS6000_PIC_OFFSET_TABLE_REGNUM] = 1;
+ 
+--- gcc/config/rs6000/rs6000-logue.cc.orig	2026-08-12 22:00:17.645715902 +0000
++++ gcc/config/rs6000/rs6000-logue.cc
+@@ -3955,12 +3955,7 @@ rs6000_emit_prologue (void)
+   if (info->baserel_save_p && TARGET_BASEREL)
+     {
+       /* Call __restore_r13 */
+-      rtx restore_r13_ref = gen_rtx_SYMBOL_REF (Pmode, "__restore_r13");
+-      SYMBOL_REF_FLAGS (restore_r13_ref) |= (SYMBOL_FLAG_LOCAL | SYMBOL_FLAG_FUNCTION);
+-
+-      emit_call_insn (gen_call (gen_rtx_MEM (SImode, restore_r13_ref), const0_rtx, const0_rtx));
+-
+-      emit_insn (gen_blockage ());
++      emit_insn (gen_restore_r13 ());
+     }
+ #endif
+ 
