@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/02/08 03:39:10 taca Exp $
+# $NetBSD: Makefile,v 1.32 2026/08/12 07:01:54 taca Exp $
 
 VERSION=	2.2.18
 PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
@@ -16,6 +16,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+
+PHP_REQUIRE_MODULE=	json
 
 NO_BUILD=	yes
 
@@ -36,5 +38,5 @@ do-install:
 	${INSTALL} -m 0644 ${DISTDIR}/${DIST_SUBDIR}/composer.phar \
 		${DESTDIR}${PREFIX}/${PHP_SHAREDIR}
 
-.include "../../lang/php/json.mk"
+.include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"
