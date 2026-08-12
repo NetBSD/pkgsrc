@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2026/08/12 16:29:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2026/08/12 16:30:45 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -43,6 +43,7 @@ SUBDIR+=	ia16-elf-binutils
 SUBDIR+=	ia16-elf-binutils-bootstrap
 SUBDIR+=	ia16-elf-gcc-bootstrap
 SUBDIR+=	ia16-elf-libi86
+SUBDIR+=	ia16-elf-newlib
 SUBDIR+=	ia16-elf-newlib-bootstrap
 SUBDIR+=	icdprog
 SUBDIR+=	libdragon-binutils
