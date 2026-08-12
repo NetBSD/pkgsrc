@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5206 2026/08/12 05:22:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5207 2026/08/12 05:25:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7711,3 +7711,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-core to 3.254.1 [taca 2026-08-12]
 	Updated www/ruby-aws-sdk-s3 to 1.229.0 [taca 2026-08-12]
 	Updated www/ruby-rails-html-sanitizer to 1.7.1 [taca 2026-08-12]
+	Updated www/ruby-selenium-webdriver to 4.47.0 [taca 2026-08-12]
