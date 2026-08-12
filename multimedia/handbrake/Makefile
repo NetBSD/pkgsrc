@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2026/07/13 04:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2026/08/12 03:42:13 ryoon Exp $
 
-DISTNAME=	HandBrake-1.10.0-source
+DISTNAME=	HandBrake-1.11.2-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,16 +17,28 @@ DIST_SUBDIR=	handbrake
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
+.include "../../mk/jpeg.buildlink3.mk"
+.if ${JPEG_TYPE} != "libjpeg-turbo" || make(distinfo)
 # see contrib/libjpeg-turbo/module.defs for required version
-LIBJPEG_TURBO=		libjpeg-turbo-3.1.1.tar.gz
+LIBJPEG_TURBO=		libjpeg-turbo-3.1.3.tar.gz
 EXTRA_FILES+=		${LIBJPEG_TURBO}
 SITES.${LIBJPEG_TURBO}=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/
+NEED_JPEGTURBO=	# empty
+.else
+NEED_JPEGTURBO=	\#
+.endif
 
-FFMPEG=			ffmpeg-7.1.1.tar.bz2
+SUBST_CLASSES+=		jpeg
+SUBST_STAGE.jpeg=	pre-configure
+SUBST_MESSAGE.jpeg=	Selecting libjpeg.
+SUBST_FILES.jpeg+=	make/include/main.defs
+SUBST_VARS.jpeg+=	NEED_JPEGTURBO
+
+FFMPEG=			ffmpeg-8.0.2.tar.bz2
 EXTRA_FILES+=		${FFMPEG}
 SITES.${FFMPEG}=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/
 
-X265=			x265-snapshot-20250729-13276.tar.gz
+X265=			x265-snapshot-20260216-13309.tar.gz
 EXTRA_FILES+=		${X265}
 SITES.${X265}=		https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/
 
@@ -81,7 +92,8 @@ pre-build:
 .endfor
 
 BROKEN_GETTEXT_DETECTION=	yes
-GHB_LOCALES=	bg ca co de es eu fi fr it ja ko nl pt_BR sl_SI sv zh_CN
+GHB_LOCALES=	bg ca co de es eu fi fr gl_ES it ja ko nl pt_BR ru
+GHB_LOCALES+=	sl_SI sv zh_CN
 
 .PHONY: post-build-gtk4
 post-build-gtk4:
@@ -109,7 +121,8 @@ post-build-gtk4:
 .include "../../graphics/zimg/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
-#.include "../../multimedia/ffmpeg5/buildlink3.mk"
+# Th custom patched ffmpeg8 is required.
+#.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libbluray/buildlink3.mk"
@@ -119,6 +132,7 @@ post-build-gtk4:
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../multimedia/svt-av1/buildlink3.mk"
 .include "../../multimedia/x264/buildlink3.mk"
+# Th custom patched x265 is required.
 #.include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

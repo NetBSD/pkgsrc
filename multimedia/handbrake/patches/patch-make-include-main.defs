@@ -1,11 +1,10 @@
-$NetBSD: patch-make-include-main.defs,v 1.6 2025/08/30 04:45:32 ryoon Exp $
+$NetBSD: patch-make-include-main.defs,v 1.7 2026/08/12 03:42:13 ryoon Exp $
 
-Use comon pkgsrc libraries, except for libjpeg-turbo which is required but
-cannot coexist with libjpeg (required by gtk3)
+* Make libjpeg-turbo selectable,
 
---- make/include/main.defs.orig	2025-08-08 16:41:24.000000000 +0000
+--- make/include/main.defs.orig	2026-06-07 13:36:41.000000000 +0000
 +++ make/include/main.defs
-@@ -14,23 +14,6 @@ ifneq ($(HAS.bz2),1)
+@@ -14,23 +14,6 @@ endif
  endif
  endif
  
@@ -29,7 +28,7 @@ cannot coexist with libjpeg (required by gtk3)
  ifeq (1,$(FEATURE.flatpak))
      MODULES += contrib/libass
      MODULES += contrib/jansson
-@@ -48,13 +31,7 @@ ifeq (1,$(FEATURE.x265))
+@@ -48,13 +31,7 @@ endif
      MODULES += contrib/x265_12bit
  endif
  
@@ -43,7 +42,7 @@ cannot coexist with libjpeg (required by gtk3)
  
  ifeq (1,$(FEATURE.qsv))
  ifeq (,$(filter $(HOST.system),freebsd))
-@@ -70,10 +47,6 @@ ifeq (1,$(FEATURE.nvenc))
+@@ -70,10 +47,6 @@ endif
      MODULES += contrib/nvenc
  endif
  
@@ -54,3 +53,15 @@ cannot coexist with libjpeg (required by gtk3)
  ifneq (,$(filter $(HOST.system),darwin))
      MODULES += contrib/xz
      MODULES += contrib/bin2c
+@@ -98,10 +71,7 @@ endif
+     MODULES += contrib/libiconv
+ endif
+ 
+-ifneq (,$(filter $(HOST.system),netbsd))
+-    # needed to avoid conflict with jpeg-9e
+-    MODULES += contrib/libjpeg-turbo
+-endif
++@NEED_JPEGTURBO@MODULES += contrib/libjpeg-turbo
+ 
+ ## these must come after contrib since some contrib modules are optional
+ MODULES += libhb
