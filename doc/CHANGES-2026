@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5239 2026/08/12 21:55:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5240 2026/08/12 22:00:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7759,3 +7759,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/appstream to 1.1.6 [adam 2026-08-12]
 	Removed devel/py-backcall [wiz 2026-08-12]
 	Removed devel/py-entrypoints [wiz 2026-08-12]
+	Updated devel/py-gidgethub to 5.4.0 [wiz 2026-08-12]
