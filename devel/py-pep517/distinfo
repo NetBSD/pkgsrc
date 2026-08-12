@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2023/11/09 06:51:59 adam Exp $
-
-BLAKE2s (pep517-0.13.1.tar.gz) = 9c87d07f491232e833ecb36c5b89cf857e2c55c6c87dd39ea96f410fae7b821c
-SHA512 (pep517-0.13.1.tar.gz) = 0df1fed72812df6533cdde78532c7c425e5d587c0df0647aacda4366cbf16da5c7c63553b0edc31d7aa91db61a6e48530f664ac4ca31c1e14c792ba4d280efae
-Size (pep517-0.13.1.tar.gz) = 26176 bytes

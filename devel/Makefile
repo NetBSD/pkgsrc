@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4674 2026/08/12 21:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4675 2026/08/12 22:07:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2866,7 +2866,6 @@ SUBDIR+=	py-pdm
 SUBDIR+=	py-pdm-build-locked
 SUBDIR+=	py-pdm_backend
 SUBDIR+=	py-pebble
-SUBDIR+=	py-pep517
 SUBDIR+=	py-pep621
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
