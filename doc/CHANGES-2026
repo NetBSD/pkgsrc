@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5213 2026/08/12 08:04:46 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5214 2026/08/12 08:14:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7724,3 +7724,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-treebeard to 7.0.0 [adam 2026-08-12]
 	Updated www/py-django-photologue to 3.20 [adam 2026-08-12]
 	Updated mail/php-dmarc-srg to 2.3nb1 [taca 2026-08-12]
+	Removed archivers/bmap-tools successor archivers/bmaptool [adam 2026-08-12]
+	Added archivers/bmaptool version 3.9.0 [adam 2026-08-12]
