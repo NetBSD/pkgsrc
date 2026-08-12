@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5197 2026/08/12 04:50:17 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5198 2026/08/12 04:55:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7702,3 +7702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sqlite3 to 2.9.6 [taca 2026-08-12]
 	Updated misc/ruby-commander to 6.0.0 [taca 2026-08-12]
 	Updated net/ruby-recog to 3.1.34 [taca 2026-08-12]
+	Updated print/ruby-pdf-reader to 2.16.0 [taca 2026-08-12]
