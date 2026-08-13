@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5250 2026/08/13 07:27:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5251 2026/08/13 07:45:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7772,3 +7772,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libcdio to 2.4.0 [adam 2026-08-13]
 	Updated textproc/py-Levenshtein to 0.27.4 [adam 2026-08-13]
 	Updated net/py-dnsdiag to 2.9.4 [adam 2026-08-13]
+	Updated net/p5-Net-CIDR-Set to 0.23 [wiz 2026-08-13]
