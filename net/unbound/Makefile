@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.136 2026/06/22 19:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2026/08/13 09:26:02 adam Exp $
 
-DISTNAME=	unbound-1.25.1
-PKGREVISION=	1
+DISTNAME=	unbound-1.26.0
 CATEGORIES=	net
 MASTER_SITES=	https://nlnetlabs.nl/downloads/unbound/
 
@@ -45,28 +44,28 @@ PLIST_VARS+=		sha2 gost
 .if defined(USE_BUILTIN.openssl) && ${USE_BUILTIN.openssl:tl} == yes
 PLIST_VARS.gost!=	\
 	if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl}; then \
-		${ECHO} "yes";                                          \
-	else                                                            \
-		${ECHO} "no";                                           \
+		${ECHO} "yes";	\
+	else			\
+		${ECHO} "no";	\
 	fi
 PLIST_VARS.sha2!=	\
 	if ${PKG_ADMIN} pmatch 'openssl>=0.9.8' ${BUILTIN_PKG.openssl}; then \
-		${ECHO} "yes";                                          \
-	else                                                            \
-		${ECHO} "no";                                           \
+		${ECHO} "yes";	\
+	else			\
+		${ECHO} "no";	\
 	fi
 .else
 PLIST_VARS.gost!=	\
-	if ${PKG_INFO} -qe 'openssl>=1.0.0'; then                       \
-		${ECHO} yes;                                            \
-	else                                                            \
-		${ECHO} no;                                             \
+	if ${PKG_INFO} -qe 'openssl>=1.0.0'; then \
+		${ECHO} yes;	\
+	else			\
+		${ECHO} no;	\
 	fi
 PLIST_VARS.sha2!=	\
-	if ${PKG_INFO} -qe 'openssl>=0.9.8'; then                       \
-		${ECHO} yes;                                            \
-	else                                                            \
-		${ECHO} no;                                             \
+	if ${PKG_INFO} -qe 'openssl>=0.9.8'; then \
+		${ECHO} yes;	\
+	else			\
+		${ECHO} no;	\
 	fi
 .endif
 .if ${PLIST_VARS.gost} == "yes"
