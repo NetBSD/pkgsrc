@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/02/09 19:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/13 07:26:59 adam Exp $
 
-DISTNAME=	dnsdiag-2.9.3
+DISTNAME=	dnsdiag-2.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
@@ -20,11 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 
 USE_LANGUAGES=	# none
 
-post-install:
-.for bin in dnseval dnsping dnstraceroute
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	dnseval dnsping dnstraceroute
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
