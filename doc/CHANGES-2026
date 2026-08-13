@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5252 2026/08/13 09:27:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5253 2026/08/13 11:02:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7775,3 +7775,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-CIDR-Set to 0.23 [wiz 2026-08-13]
 	Updated net/unbound to 1.26.0 [adam 2026-08-13]
 	Updated net/wireshark to 4.6.8 [adam 2026-08-13]
+	Updated www/nginx-devel to 1.31.3 [adam 2026-08-13]
+	Updated sysutils/py-ansible-compat to 26.8.0 [adam 2026-08-13]
+	Updated sysutils/ansible-lint to 26.8.0 [adam 2026-08-13]
