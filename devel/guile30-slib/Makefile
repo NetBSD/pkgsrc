@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/12/27 08:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/13 19:20:32 gdt Exp $
 
-SLIBVERSION=	3.2.6
+SLIBVERSION=	3.3.1
 DISTNAME=	guile-slib-${SLIBVERSION}
 PKGNAME=	${DISTNAME:S/guile/guile30/}
 CATEGORIES=	devel
