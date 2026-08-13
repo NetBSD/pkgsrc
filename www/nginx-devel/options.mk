@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2026/03/04 05:56:31 adam Exp $
+# $NetBSD: options.mk,v 1.50 2026/08/13 10:57:14 adam Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -207,7 +207,7 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-luajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.29
+LUA_VERSION=		0.10.31
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
@@ -224,7 +224,7 @@ PLIST.lua=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-echo) || make(makesum) || make(mdi) || make(distclean)
-ECHOMOD_VERSION=		0.63
+ECHOMOD_VERSION=		0.65
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/echo-nginx-module/archive/}v${ECHOMOD_VERSION}.tar.gz
@@ -234,7 +234,7 @@ PLIST.echo=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-set-misc) || make(makesum) || make(mdi) || make(distclean)
-SETMISC_VERSION=		0.33
+SETMISC_VERSION=		0.34
 SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
 SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
 SITES.${SETMISC_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/set-misc-nginx-module/archive/}v${SETMISC_VERSION}.tar.gz
@@ -265,7 +265,7 @@ PLIST.arrayvar=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-encrypted-session) || make(makesum) || make(mdi) || make(distclean)
-ENCSESS_VERSION=		0.09
+ENCSESS_VERSION=		0.10
 ENCSESS_DISTNAME=		encrypted-session-nginx-module-${ENCSESS_VERSION}
 ENCSESS_DISTFILE=		${ENCSESS_DISTNAME}.tar.gz
 SITES.${ENCSESS_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/encrypted-session-nginx-module/archive/}v${ENCSESS_VERSION}.tar.gz
@@ -285,7 +285,7 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-headers-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.39
+HEADMORE_VERSION=		0.40
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
