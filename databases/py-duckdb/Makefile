@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/08/12 03:52:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/13 07:14:39 jperkin Exp $
 
 DISTNAME=	duckdb-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,10 @@ USE_TOOLS+=	cmake
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 WHEEL_ARGS+=	-C skbuild.build-dir=${WRKDIR}/build
+
+# XXX: Belongs in py-scikit-build-core/build.mk or similar as this affects
+# all its dependents, but duckdb is by far the worst offender.
+MAKE_ENV+=	CMAKE_BUILD_PARALLEL_LEVEL=${MAKE_JOBS:U1}
 
 post-patch:
 	${MKDIR} ${WRKSRC}/build
