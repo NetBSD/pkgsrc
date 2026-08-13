@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2025/12/26 11:01:00 adam Exp $
+$NetBSD: distinfo,v 1.38 2026/08/13 06:16:40 adam Exp $
 
-BLAKE2s (libcdio-2.3.0.tar.bz2) = 499d051f1848fcc1e1218fa8fb2eeb8dee84fe2287ea0cecb647d7d5d2a87ff5
-SHA512 (libcdio-2.3.0.tar.bz2) = 42e1659df57b558f5bfc81badf137682793070d1301fdf4926d221eca1fffc8d1b912d23ebe0a2e84a9bbd832f257033ef854b5349cf80fc8184bce759800d6c
-Size (libcdio-2.3.0.tar.bz2) = 1726786 bytes
+BLAKE2s (libcdio-2.4.0.tar.bz2) = dd6d9a39347f886d809f1b04ba5d0fb1b3e104791d98500b52715f5439de865c
+SHA512 (libcdio-2.4.0.tar.bz2) = fd7d397298ab8a8c8e8d2aab5e63d2a7da5b6bb39ab1a6176afe994f56967a0e0bd80b1ad3c8479063a6f49fc706269a76f14cee52e42b1ae5570764b4c7a148
+Size (libcdio-2.4.0.tar.bz2) = 1721595 bytes
 SHA1 (patch-lib_driver_logging.c) = ec74ea317c82737954eb0d66e64810487ed1f222
 SHA1 (patch-src_Makefile.in) = 34a087c9919d487eeae2ffa2885cfd8119d46179
 SHA1 (patch-src_getopt.c) = 98dadf1b2cdcd7f8c1d21d6c25ed0abb67e2f7d3
