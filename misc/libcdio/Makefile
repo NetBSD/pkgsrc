@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2025/12/26 11:01:00 adam Exp $
+# $NetBSD: Makefile,v 1.71 2026/08/13 06:16:40 adam Exp $
 
-DISTNAME=	libcdio-2.3.0
+DISTNAME=	libcdio-2.4.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libcdio/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
