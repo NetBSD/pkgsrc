@@ -1,0 +1,361 @@
+$NetBSD: patch-configure.in,v 1.1 2026/08/13 18:17:58 wiz Exp $
+
+Drop user/group existence checks; pkgsrc handles their creation.
+Improve detection of gethostbyaddr_r and gethostbyname_r by using 
+compile-time checks with implicit function declarations disabled.
+
+--- configure.in.orig	2026-06-02 15:06:25.000000000 +0000
++++ configure.in
+@@ -189,30 +189,12 @@ if test "$host_os" = haiku; then
+   echo "Skipping user and group validity stuff.";
+ 
+ else
+-
+-  $ID privoxy >/dev/null 2>/dev/null
+-  if test $? -ne 0 ; then
+-   AC_MSG_WARN(There is no user 'privoxy' on this system)
+-  fi
+   AC_MSG_CHECKING([for user])
+   AC_ARG_WITH(user,
+         [  --with-user=privoxy          Set user under which privoxy will run],
+         [
+-                if test "x$withval" != "xyes"; then
+-                  if test $ID = no ; then
+-                    AC_MSG_ERROR(There is no 'id' program on this system)
+-                  else
+-                    AC_MSG_RESULT($with_user)
+-                    $ID $with_user 2>/dev/null >/dev/null
+-                    if test $? -eq 0 ; then
+-                      USER=$with_user;
+-                    else
+-                      AC_MSG_ERROR(There is no user '$with_user' on this system)
+-                    fi
+-                  fi
+-                  else
+-                   AC_MSG_ERROR(We need a user if you give me this parameter)
+-                fi
++                AC_MSG_RESULT($with_user)
++                USER=$with_user;
+         ],
+         [
+           if test $ID = no ; then
+@@ -229,29 +211,8 @@ else
+   AC_ARG_WITH(group,
+         [  --with-group=privoxy         Set group for privoxy],
+         [
+-                if test "x$withval" != "xyes"; then
+-                  if test $BGROUPS = no ; then
+-                    AC_MSG_ERROR(There is no 'groups' program on this system)
+-                  else
+-                    AC_MSG_RESULT($with_group)
+-                    $BGROUPS $USER >/dev/null
+-                    if test $? -eq 0 ; then
+-                      for i in `$BGROUPS $USER | sed 's/.*: //' 2>/dev/null`; do
+-                        if test "x$i" = "x$with_group" ; then
+-                          GROUP=$with_group
+-                          break
+-                        fi
+-                      done
+-                      if test "x$GROUP" != "x$with_group" ; then
+-                        AC_MSG_ERROR(The given value '$withval' does not match group entry)
+-                      fi
+-                    else
+-                      AC_MSG_ERROR(There is no group entry for user '$USER')
+-                    fi
+-                  fi
+-                else
+-                   AC_MSG_ERROR(We need a group if you give me this parameter)
+-                fi
++                AC_MSG_RESULT($with_group)
++                GROUP=$with_group
+         ],
+         [
+           if test $BGROUPS = no ; then
+@@ -523,92 +484,192 @@ dnl ====================================
+ dnl Next line needed to find the gethost*_r functions on Solaris
+ AC_CHECK_LIB(nsl, gethostbyname)
+ 
+-AC_CHECK_FUNC(gethostbyaddr_r, [
+-  AC_MSG_CHECKING([signature of gethostbyaddr_r])
+-  AC_TRY_COMPILE([
+-#   include <netdb.h>
+-  ], [
+-    struct hostent *h, *hp;
+-    char *a, *b;
+-    int l, bl, t, e;
+-    (void) gethostbyaddr_r(a, l, t, h, b, bl, &hp, &e)
+-  ], [
+-    AC_DEFINE(HAVE_GETHOSTBYADDR_R_8_ARGS)
+-    AC_MSG_RESULT([8 args])
+-  ], [
+-    AC_TRY_COMPILE([
+-#     include <netdb.h>
+-    ], [
+-      struct hostent *h;
+-      char *a, *b;
+-      int l, bl, t, e;
+-      (void) gethostbyaddr_r(a, l, t, h, b, bl, &e)
+-    ], [
+-      AC_DEFINE(HAVE_GETHOSTBYADDR_R_7_ARGS)
+-      AC_MSG_RESULT([7 args])
+-    ], [
+-      AC_TRY_COMPILE([
+-#       include <netdb.h>
+-      ], [
+-        struct hostent_data *d;
+-        struct hostent *h;
+-        char a,
+-        int l, t;
+-        (void) gethostbyaddr_r(a, l, t, h, d)
+-      ], [
+-        AC_DEFINE(HAVE_GETHOSTBYADDR_R_5_ARGS)
+-        AC_MSG_RESULT([5 args])
+-      ], [
+-        AC_MSG_RESULT(unrecognised)
+-      ])
+-    ])
+-  ])
+-], [
+-  AC_MSG_RESULT(no)
+-])
++AC_MSG_CHECKING([for gethostbyaddr_r])
++AC_COMPILE_IFELSE(
++  [AC_LANG_PROGRAM(
++    [[
++      #include <netdb.h>
++      #if defined(__GNUC__) || defined(__clang__)
++      #pragma GCC diagnostic error "-Wimplicit-function-declaration"
++      #endif
++    ]],
++    [[
++      (void)gethostbyaddr_r;
++    ]]
++  )],
++  [
++    AC_MSG_RESULT([yes])
++    AC_MSG_CHECKING([signature of gethostbyaddr_r])
++
++    AC_COMPILE_IFELSE(
++      [AC_LANG_PROGRAM(
++        [[
++          #include <netdb.h>
++        ]],
++        [[
++          struct hostent *h, *hp;
++          char *a, *b;
++          int l, bl, t, e;
++          (void)gethostbyaddr_r(a, l, t, h, b, bl, &hp, &e);
++        ]]
++      )],
++      [
++        AC_DEFINE([HAVE_GETHOSTBYADDR_R], [1],
++          [Define if gethostbyaddr_r is available.])
++        AC_DEFINE([HAVE_GETHOSTBYADDR_R_8_ARGS], [1],
++          [Define if gethostbyaddr_r has 8 arguments.])
++        AC_MSG_RESULT([8 args])
++      ],
++      [
++        AC_COMPILE_IFELSE(
++          [AC_LANG_PROGRAM(
++            [[
++              #include <netdb.h>
++            ]],
++            [[
++              struct hostent *h;
++              char *a, *b;
++              int l, bl, t, e;
++              (void)gethostbyaddr_r(a, l, t, h, b, bl, &e);
++            ]]
++          )],
++          [
++            AC_DEFINE([HAVE_GETHOSTBYADDR_R], [1],
++              [Define if gethostbyaddr_r is available.])
++            AC_DEFINE([HAVE_GETHOSTBYADDR_R_7_ARGS], [1],
++              [Define if gethostbyaddr_r has 7 arguments.])
++            AC_MSG_RESULT([7 args])
++          ],
++          [
++            AC_COMPILE_IFELSE(
++              [AC_LANG_PROGRAM(
++                [[
++                  #include <netdb.h>
++                ]],
++                [[
++                  struct hostent_data *d;
++                  struct hostent *h;
++                  char *a;
++                  int l, t;
++                  (void)gethostbyaddr_r(a, l, t, h, d);
++                ]]
++              )],
++              [
++                AC_DEFINE([HAVE_GETHOSTBYADDR_R], [1],
++                  [Define if gethostbyaddr_r is available.])
++                AC_DEFINE([HAVE_GETHOSTBYADDR_R_5_ARGS], [1],
++                  [Define if gethostbyaddr_r has 5 arguments.])
++                AC_MSG_RESULT([5 args])
++              ],
++              [
++                AC_MSG_RESULT([unrecognised])
++                AC_MSG_WARN(
++                  [gethostbyaddr_r is declared, but its signature is unrecognised]
++                )
++              ]
++            )
++          ]
++        )
++      ]
++    )
++  ],
++  [
++    AC_MSG_RESULT([no])
++  ]
++)
+ 
+-AC_CHECK_FUNC(gethostbyname_r, [
+-  AC_MSG_CHECKING([signature of gethostbyname_r])
+-  AC_TRY_COMPILE([
+-#   include <netdb.h>
+-  ], [
+-    struct hostent *h, *r;
+-    char *n, *b;
+-    int bl, e;
+-    (void) gethostbyname_r(n, h, b, bl, &r, &e)
+-  ], [
+-    AC_DEFINE(HAVE_GETHOSTBYNAME_R_6_ARGS)
+-    AC_MSG_RESULT([6 args])
+-  ], [
+-    AC_TRY_COMPILE([
+-#     include <netdb.h>
+-    ], [
+-      struct hostent *h;
+-      char *n, *b;
+-      int bl, e;
+-      (void) gethostbyname_r(n, h, b, bl, &e)
+-    ], [
+-      AC_DEFINE(HAVE_GETHOSTBYNAME_R_5_ARGS)
+-      AC_MSG_RESULT([5 args])
+-    ], [
+-      AC_TRY_COMPILE([
+-#       include <netdb.h>
+-      ], [
+-        struct hostent_data *d;
+-        struct hostent *h;
+-        char *n,
+-        (void) gethostbyname_r(n, h, d)
+-      ], [
+-        AC_DEFINE(HAVE_GETHOSTBYNAME_R_3_ARGS)
+-        AC_MSG_RESULT([3 args])
+-      ], [
+-        AC_MSG_RESULT(unrecognised)
+-      ])
+-    ])
+-  ])
+-], [
+-  AC_MSG_RESULT(no)
+-])
++AC_MSG_CHECKING([for gethostbyname_r])
++AC_COMPILE_IFELSE(
++  [AC_LANG_PROGRAM(
++    [[
++      #include <netdb.h>
++      #if defined(__GNUC__) || defined(__clang__)
++      #pragma GCC diagnostic error "-Wimplicit-function-declaration"
++      #endif
++    ]],
++    [[
++      (void)gethostbyname_r;
++    ]]
++  )],
++  [
++    AC_MSG_RESULT([yes])
++    AC_MSG_CHECKING([signature of gethostbyname_r])
++
++    AC_COMPILE_IFELSE(
++      [AC_LANG_PROGRAM(
++        [[
++          #include <netdb.h>
++        ]],
++        [[
++          struct hostent *h, *r;
++          char *n, *b;
++          int bl, e;
++          (void)gethostbyname_r(n, h, b, bl, &r, &e);
++        ]]
++      )],
++      [
++        AC_DEFINE([HAVE_GETHOSTBYNAME_R], [1],
++          [Define if gethostbyname_r is available.])
++        AC_DEFINE([HAVE_GETHOSTBYNAME_R_6_ARGS], [1],
++          [Define if gethostbyname_r has 6 arguments.])
++        AC_MSG_RESULT([6 args])
++      ],
++      [
++        AC_COMPILE_IFELSE(
++          [AC_LANG_PROGRAM(
++            [[
++              #include <netdb.h>
++            ]],
++            [[
++              struct hostent *h;
++              char *n, *b;
++              int bl, e;
++              (void)gethostbyname_r(n, h, b, bl, &e);
++            ]]
++          )],
++          [
++            AC_DEFINE([HAVE_GETHOSTBYNAME_R], [1],
++              [Define if gethostbyname_r is available.])
++            AC_DEFINE([HAVE_GETHOSTBYNAME_R_5_ARGS], [1],
++              [Define if gethostbyname_r has 5 arguments.])
++            AC_MSG_RESULT([5 args])
++          ],
++          [
++            AC_COMPILE_IFELSE(
++              [AC_LANG_PROGRAM(
++                [[
++                  #include <netdb.h>
++                ]],
++                [[
++                  struct hostent_data *d;
++                  struct hostent *h;
++                  char *n;
++                  (void)gethostbyname_r(n, h, d);
++                ]]
++              )],
++              [
++                AC_DEFINE([HAVE_GETHOSTBYNAME_R], [1],
++                  [Define if gethostbyname_r is available.])
++                AC_DEFINE([HAVE_GETHOSTBYNAME_R_3_ARGS], [1],
++                  [Define if gethostbyname_r has 3 arguments.])
++                AC_MSG_RESULT([3 args])
++              ],
++              [
++                AC_MSG_RESULT([unrecognised])
++                AC_MSG_WARN(
++                  [gethostbyname_r is declared, but its signature is unrecognised]
++                )
++              ]
++            )
++          ]
++        )
++      ]
++    )
++  ],
++  [
++    AC_MSG_RESULT([no])
++  ]
++)
+ 
+ AC_CHECK_FUNC(gmtime_r, [
+   AC_MSG_CHECKING([signature of gmtime_r])
+@@ -779,9 +840,7 @@ AC_CHECK_FUNCS([ \
+  calloc \
+  getcwd \
+  gethostbyaddr \
+- gethostbyaddr_r \
+  gethostbyname \
+- gethostbyname_r \
+  gettimeofday \
+  inet_ntoa \
+  memchr \

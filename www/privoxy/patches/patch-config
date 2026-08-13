@@ -1,0 +1,75 @@
+$NetBSD: patch-config,v 1.1 2026/08/13 18:17:58 wiz Exp $
+
+Replace hardcoded paths with paths configured by pkgsrc.
+
+--- config.orig	2026-06-02 15:06:25.000000000 +0000
++++ config
+@@ -109,7 +109,7 @@
+ #      The best all purpose solution is simply to put the full local
+ #      PATH to where the User Manual is located:
+ #
+-#        user-manual  /usr/share/doc/privoxy/user-manual
++#        user-manual  @PRIVOXY_DOCDIR@/user-manual
+ #
+ #      The User Manual is then available to anyone with access to
+ #      Privoxy, by following the built-in URL: http://
+@@ -249,7 +249,7 @@
+ #
+ #  Default value:
+ #
+-#      /etc/privoxy (Unix) or Privoxy installation dir (Windows)
++#      @PKG_SYSCONFDIR@ (Unix) or Privoxy installation dir (Windows)
+ #
+ #  Effect if unset:
+ #
+@@ -259,7 +259,7 @@
+ #
+ #      No trailing "/", please.
+ #
+-confdir .
++confdir @PKG_SYSCONFDIR@
+ #
+ #  2.2. templdir
+ #  ==============
+@@ -334,7 +334,7 @@ confdir .
+ #
+ #  Default value:
+ #
+-#      /var/log/privoxy (Unix) or Privoxy installation dir (Windows)
++#      @PRIVOXY_LOGDIR@ (Unix) or Privoxy installation dir (Windows)
+ #
+ #  Effect if unset:
+ #
+@@ -344,7 +344,7 @@ confdir .
+ #
+ #      No trailing "/", please.
+ #
+-logdir .
++logdir @PRIVOXY_LOGDIR@
+ #
+ #  2.5. actionsfile
+ #  =================
+@@ -2483,9 +2483,9 @@ socket-timeout 300
+ #
+ #  Example:
+ #
+-#      ca-directory /usr/local/etc/privoxy/CA
++#      ca-directory @PKG_SYSCONFDIR@/CA
+ #
+-#ca-directory /usr/local/etc/privoxy/CA
++#ca-directory @PKG_SYSCONFDIR@/CA
+ #
+ #  7.2. ca-cert-file
+ #  ==================
+@@ -2650,9 +2650,9 @@ socket-timeout 300
+ #      +-----------------------------------------------------+
+ #  Example:
+ #
+-#      certificate-directory /usr/local/var/privoxy/certs
++#      certificate-directory @VARBASE@/privoxy/certs
+ #
+-#certificate-directory /usr/local/var/privoxy/certs
++#certificate-directory @VARBASE@/privoxy/certs
+ #
+ #  7.6. elliptic-curve-keys
+ #  =========================
