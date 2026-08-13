@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/07/01 07:47:53 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/13 10:59:24 adam Exp $
 
-DISTNAME=	ansible_compat-26.6.0
+DISTNAME=	ansible_compat-26.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
-DEPENDS+=	ansible-core>=2.16:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.16.19:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
