@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/11/17 07:43:46 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/13 23:06:54 gdt Exp $
 
+# Please do not update to 4.11; breaks gpsd. -gdt
+#   https://gitlab.com/gpsd/gpsd/-/work_items/412
 DISTNAME=	scons-4.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
