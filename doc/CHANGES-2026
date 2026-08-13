@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5247 2026/08/12 22:22:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5248 2026/08/13 06:17:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7767,3 +7767,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-issues to 6.0.0nb1 [wiz 2026-08-12]
 	Updated www/py-django-filter to 26.1nb1 [wiz 2026-08-12]
 	Updated www/py-flask-security to 5.8.1nb1 [wiz 2026-08-12]
+	Updated net/rsync to 3.5.0 [wiz 2026-08-13]
