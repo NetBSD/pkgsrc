@@ -7,12 +7,8 @@ It optionally supports mathematical extensions such as big integers
 overloading.
 
 Main Features:
- * Small and easily embeddable: just a few C files, no external
-   dependency, 190 KiB of x86 code for a simple hello world program.
- * Fast interpreter with very low startup time: runs the 56000
-   tests of the ECMAScript Test Suite in about 100 seconds on a
-   single core of a desktop PC. The complete life cycle of a runtime
-   instance completes in less than 300 microseconds.
+ * Small and easily embeddable
+ * Fast interpreter with very low startup time
  * Almost complete ES2020 support including modules, asynchronous
    generators and full Annex B support (legacy web compatibility).
  * Passes 100% of the ECMAScript Test Suite.
