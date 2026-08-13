@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5249 2026/08/13 06:18:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5250 2026/08/13 07:27:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7770,3 +7770,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rsync to 3.5.0 [wiz 2026-08-13]
 	Updated fonts/harfbuzz to 14.3.1 [adam 2026-08-13]
 	Updated misc/libcdio to 2.4.0 [adam 2026-08-13]
+	Updated textproc/py-Levenshtein to 0.27.4 [adam 2026-08-13]
+	Updated net/py-dnsdiag to 2.9.4 [adam 2026-08-13]
