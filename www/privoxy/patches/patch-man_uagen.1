@@ -1,0 +1,24 @@
+$NetBSD: patch-man_uagen.1,v 1.1 2026/08/13 18:17:58 wiz Exp $
+
+Replace hardcoded paths with paths configured by pkgsrc.
+
+--- man/uagen.1.orig	2026-06-02 15:06:25.000000000 +0000
++++ man/uagen.1
+@@ -91,7 +91,7 @@ used by many Mozilla browsers.
+ .SH OPTIONS
+ .IX Header "OPTIONS"
+ \&\fB\-\-action\-file\fR \fIaction_file\fR Privoxy action file to write the
+-generated actions into. Default is /etc/privoxy/user\-agent.action.
++generated actions into. Default is @PKG_SYSCONFDIR@/user\-agent.action.
+ .PP
+ \&\fB\-\-action\-injection\fR Don\*(Aqt generate a new action file from scratch,
+ but read an old one and just replace the action values. Useful
+@@ -124,7 +124,7 @@ User\-Agent, by default the chosen langu
+ \&\fBhide\-accept\-language\fR parameter.
+ .PP
+ \&\fB\-\-logfile\fR \fIlogfile\fR Logfile to save error messages and the generated
+-User\-Agents. Default is /var/log/uagen.log.
++User\-Agents. Default is @VARBASE@/log/uagen.log.
+ .PP
+ \&\fB\-\-loop\fR Don\*(Aqt exit after the generation of the action file. Sleep for
+ a while and generate a new one instead. Useful if you don\*(Aqt have \fBcron\fR\|(8).

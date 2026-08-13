@@ -1,0 +1,42 @@
+$NetBSD: patch-man_privoxy.8,v 1.1 2026/08/13 18:17:58 wiz Exp $
+
+Replace hardcoded paths with paths configured by pkgsrc.
+
+--- man/privoxy.8.orig	2026-06-02 15:06:25.000000000 +0000
++++ man/privoxy.8
+@@ -122,7 +122,7 @@ be used for locally defined exceptions t
+ \fImatch-all.action\fR and \fIdefault.action\fR,
+ and \fIuser.filter\fR for locally defined filters. These are
+ well commented.  On Unix and Unix-like systems, these are located in
+-\fI/etc/privoxy/\fR by default.
++\fI@PKG_SYSCONFDIR@/\fR by default.
+ .PP
+ \fBPrivoxy\fR uses the concept of \fBactions\fR
+ in order to manipulate the data stream between the browser and remote sites.
+@@ -145,16 +145,16 @@ features and notes on upgrading.
+ .SH "FILES"
+ 
+ .nf
+- \fI/usr/sbin/privoxy\fR
+- \fI/etc/privoxy/config\fR
+- \fI/etc/privoxy/match-all.action\fR
+- \fI/etc/privoxy/default.action\fR
+- \fI/etc/privoxy/user.action\fR
+- \fI/etc/privoxy/default.filter\fR
+- \fI/etc/privoxy/user.filter\fR
+- \fI/etc/privoxy/trust\fR
+- \fI/etc/privoxy/templates/*\fR
+- \fI/var/log/privoxy/logfile\fR
++ \fI@PREFIX@/sbin/privoxy\fR
++ \fI@PKG_SYSCONFDIR@/config\fR
++ \fI@PKG_SYSCONFDIR@/match-all.action\fR
++ \fI@PKG_SYSCONFDIR@/default.action\fR
++ \fI@PKG_SYSCONFDIR@/user.action\fR
++ \fI@PKG_SYSCONFDIR@/default.filter\fR
++ \fI@PKG_SYSCONFDIR@/user.filter\fR
++ \fI@PKG_SYSCONFDIR@/trust\fR
++ \fI@PKG_SYSCONFDIR@/templates/*\fR
++ \fI@PRIVOXY_LOGDIR@/logfile\fR
+ .fi
+ .PP
+ Various other files should be included, but may vary depending on platform

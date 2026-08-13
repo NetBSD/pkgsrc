@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:30:26 nia Exp $
+$NetBSD: distinfo,v 1.29 2026/08/13 18:17:58 wiz Exp $
 
-BLAKE2s (privoxy-3.0.29-stable-src.tar.gz) = a153b3e25d0f286d342bd06384f41030f645e6a3a334a3be67b3edf08323c0a3
-SHA512 (privoxy-3.0.29-stable-src.tar.gz) = 2f483a37d697738815f4c58a775fbf116a34ac5e0e74d19814252c5ff1572350181066d468327189faf20c92d808d551b0017a9525ec98276330ee539554c1ba
-Size (privoxy-3.0.29-stable-src.tar.gz) = 1830550 bytes
-SHA1 (patch-aa) = d5296d7440b92b76c28136453d098c617d4e439b
-SHA1 (patch-ab) = c54a5845ad76d36ea281697cce17237d1d2ee0bd
-SHA1 (patch-ac) = 2d1a1efc53b4cd017d3ce21080adf1bfcc5cc97c
-SHA1 (patch-ag) = 64957682dbb3ff8b78ef47cc936d591facf9eb3a
+BLAKE2s (privoxy-4.2.0-stable-src.tar.gz) = 80f41f73a6b47eef30bfe5c7fe3332e37c0bcfe212e13b190477e04b90731e9d
+SHA512 (privoxy-4.2.0-stable-src.tar.gz) = e727a16ead5759e3e976d42558ad0c0af137a7f74d8ccc83ed53a34320654362489a77d3bd54c9b4d5b84c5b4ecf8e375d2c1d0e3108eb26acce3014dfbefdb0
+Size (privoxy-4.2.0-stable-src.tar.gz) = 1791064 bytes
+SHA1 (patch-GNUmakefile.in) = b8b5d36d63c5b522d46580462cf08d4131fdbaa9
+SHA1 (patch-config) = a111b0d25be9166d64632e8c3b4b5ef61a6f0cb1
+SHA1 (patch-configure.in) = ffbfaf2d1347d9ac7430500078d678ad0e8c7059
+SHA1 (patch-man_privoxy.8) = 3ec0da5655f9ae94b648b9d04511f4e18079fa89
+SHA1 (patch-man_uagen.1) = da9026d395b659bc0634520c0d0bf9365314a8ed
+SHA1 (patch-tools_uagen.pl) = 0f2c1ba3ff40baba1ea2afac1279b776ae3ff505

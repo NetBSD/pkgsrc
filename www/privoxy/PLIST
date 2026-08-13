@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.14 2021/02/04 16:29:14 wiz Exp $
-man/man1/privoxy.1
+@comment $NetBSD: PLIST,v 1.15 2026/08/13 18:17:58 wiz Exp $
+bin/privoxy-log-parser
+bin/privoxy-regression-test
+bin/uagen
+man/man1/privoxy-log-parser.1
+man/man1/privoxy-regression-test.1
+man/man1/uagen.1
+man/man8/privoxy.8
 sbin/privoxy
 share/doc/privoxy/AUTHORS
 share/doc/privoxy/ChangeLog
@@ -23,7 +29,10 @@ share/doc/privoxy/faq/installation.html
 share/doc/privoxy/faq/misc.html
 share/doc/privoxy/faq/trouble.html
 share/doc/privoxy/index.html
+share/doc/privoxy/man-page/privoxy-log-parser.1.html
 share/doc/privoxy/man-page/privoxy-man-page.html
+share/doc/privoxy/man-page/privoxy-regression-test.1.html
+share/doc/privoxy/man-page/uagen.1.html
 share/doc/privoxy/p_doc.css
 share/doc/privoxy/user-manual/actions-file.html
 share/doc/privoxy/user-manual/appendix.html
@@ -33,6 +42,7 @@ share/doc/privoxy/user-manual/contact.html
 share/doc/privoxy/user-manual/copyright.html
 share/doc/privoxy/user-manual/files-in-use.jpg
 share/doc/privoxy/user-manual/filter-file.html
+share/doc/privoxy/user-manual/howto.html
 share/doc/privoxy/user-manual/index.html
 share/doc/privoxy/user-manual/installation.html
 share/doc/privoxy/user-manual/introduction.html
@@ -65,6 +75,7 @@ share/examples/privoxy/templates/default
 share/examples/privoxy/templates/edit-actions-add-url-form
 share/examples/privoxy/templates/edit-actions-for-url
 share/examples/privoxy/templates/edit-actions-for-url-filter
+share/examples/privoxy/templates/edit-actions-for-url-string-action
 share/examples/privoxy/templates/edit-actions-list
 share/examples/privoxy/templates/edit-actions-list-button
 share/examples/privoxy/templates/edit-actions-list-section
@@ -86,7 +97,7 @@ share/examples/privoxy/templates/toggle
 share/examples/privoxy/templates/toggle-mini
 share/examples/privoxy/templates/untrusted
 share/examples/privoxy/templates/url-info-osd.xml
+share/examples/privoxy/templates/wpad.dat
 share/examples/privoxy/trust
 share/examples/privoxy/user.action
 share/examples/privoxy/user.filter
-@pkgdir share/doc/privoxy/images
