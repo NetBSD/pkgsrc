@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5254 2026/08/13 12:27:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5255 2026/08/13 16:30:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7784,3 +7784,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py310-html-docs to 3.10.21 [adam 2026-08-13]
 	Updated lang/py311-html-docs to 3.11.16 [adam 2026-08-13]
 	Updated lang/py312-html-docs to 3.12.14 [adam 2026-08-13]
+	Updated www/ruby-rack to 3.2.7 [taca 2026-08-13]
