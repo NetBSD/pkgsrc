@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5253 2026/08/13 11:02:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5254 2026/08/13 12:27:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7778,3 +7778,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/nginx-devel to 1.31.3 [adam 2026-08-13]
 	Updated sysutils/py-ansible-compat to 26.8.0 [adam 2026-08-13]
 	Updated sysutils/ansible-lint to 26.8.0 [adam 2026-08-13]
+	Updated lang/python310 to 3.10.21 [adam 2026-08-13]
+	Updated lang/python311 to 3.11.16 [adam 2026-08-13]
+	Updated lang/python312 to 3.12.14 [adam 2026-08-13]
+	Updated lang/py310-html-docs to 3.10.21 [adam 2026-08-13]
+	Updated lang/py311-html-docs to 3.11.16 [adam 2026-08-13]
+	Updated lang/py312-html-docs to 3.12.14 [adam 2026-08-13]
