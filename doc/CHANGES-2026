@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5259 2026/08/13 18:04:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5260 2026/08/13 18:11:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7789,3 +7789,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wordpress to 7.0.4 [taca 2026-08-13]
 	Updated www/php-ja-wordpress to 7.0.4 [taca 2026-08-13]
 	Updated devel/nss to 3.126.1 [wiz 2026-08-13]
+	Updated lang/quickjs to 20260604nb1 [wiz 2026-08-13]
