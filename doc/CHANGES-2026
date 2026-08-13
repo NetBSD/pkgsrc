@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5256 2026/08/13 16:34:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5257 2026/08/13 16:40:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7786,3 +7786,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py312-html-docs to 3.12.14 [adam 2026-08-13]
 	Updated www/ruby-rack to 3.2.7 [taca 2026-08-13]
 	Updated www/ruby-rack2 to 2.2.24 [taca 2026-08-13]
+	Updated www/wordpress to 7.0.4 [taca 2026-08-13]
