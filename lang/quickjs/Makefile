@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2026/06/28 17:59:25 osa Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/13 18:11:24 wiz Exp $
 
 NAME=		quickjs
 QJS_DATE=	2026-06-04
 VERSION=	${QJS_DATE:S/-//g}
 DISTNAME=	${NAME}-${QJS_DATE}
 PKGNAME=	${NAME}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://bellard.org/quickjs/
 EXTRACT_SUFX=	.tar.xz
