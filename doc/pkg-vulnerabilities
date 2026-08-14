@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.778 2026/08/14 21:45:08 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.779 2026/08/14 21:48:05 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28884,7 +28884,6 @@ lasso<2.9.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-4
 libarchive-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-60753
 libmicrohttpd<1.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-59777
 libmicrohttpd<1.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62689
-libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-12863
 magento<20.16.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-64174
 openexr<3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64181
 openexr<3.4.3	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-64182
