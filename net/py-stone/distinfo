@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/07/11 08:20:41 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/08/14 11:54:44 adam Exp $
 
-BLAKE2s (stone-3.5.0.tar.gz) = c5fceb6fda5cef081ec42e2e994565729ebc39fb519dceec2130d24a1413f6f9
-SHA512 (stone-3.5.0.tar.gz) = 357451f43a6201901a4df6a6a3769b95350b2f2e5472e314fd14377a8c24bcd3df09c2ba9cb5e3a26b344e738f697d43ab6ab7288e4c2640fd06c8be51cb80fc
-Size (stone-3.5.0.tar.gz) = 192971 bytes
+BLAKE2s (stone-3.5.4.tar.gz) = a74009065d5f1b1ce3f85a8877c3e06a41a86bf7d944d712990c858a18c2fbe8
+SHA512 (stone-3.5.4.tar.gz) = ca4a2d14d2b45f7366b6bdb4693fd94d1bd89ee1d2c077ea18ecab013558d5a2a52bde419916f796a9f5b76f0149b5ceb44b008b39b2d254c3f209b377161da9
+Size (stone-3.5.4.tar.gz) = 335941 bytes
