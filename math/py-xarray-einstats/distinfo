@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/02/24 10:06:44 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/08/14 11:56:50 adam Exp $
 
-BLAKE2s (xarray_einstats-0.10.0.tar.gz) = 1c2cdd3259d6e19fcfd034a05399a446950fe830af358574a20dbcf32e9589fc
-SHA512 (xarray_einstats-0.10.0.tar.gz) = aa241c13e38822413b5748379d1fde5a801f3999b6bf6ea308c028fcfe59e9b27d3f9ab9d7f98ba915eeb1d17763e3ae5c163907bb4d7e63811298e7f4ee31e7
-Size (xarray_einstats-0.10.0.tar.gz) = 33449 bytes
+BLAKE2s (xarray_einstats-0.11.0.tar.gz) = b805b9e9228ab1517238b9c73b9c25635e3254626ee223ee097189b6c8920d3a
+SHA512 (xarray_einstats-0.11.0.tar.gz) = 0f3baf03e889a72ee0801f934caf73160d5eea08305225bd2c2db18ae42d47bd9dfb206b49bd71efb9a496ab76ecc53b9203b9f7610c8bf5e7b2571f3b482b24
+Size (xarray_einstats-0.11.0.tar.gz) = 34290 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/06/28 15:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/08/14 11:56:50 adam Exp $
 
-DISTNAME=	xarray_einstats-0.10.0
+DISTNAME=	xarray_einstats-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray-einstats/}
@@ -12,8 +12,8 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-numpy>=2.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-xarray>=2024.02.0:../../math/py-xarray
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.14:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-xarray>=2024.7.0:../../math/py-xarray
 
 USE_LANGUAGES=	# none
 
