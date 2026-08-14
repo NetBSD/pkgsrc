@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.298 2026/07/23 13:52:23 ryoon Exp $
+$NetBSD: distinfo,v 1.299 2026/08/14 12:35:37 ryoon Exp $
 
-BLAKE2s (thunderbird-153.0.source.tar.xz) = 96434fcfe727fd8036e9342911cab7bfe048619db0e6fd16a28023668bb43baf
-SHA512 (thunderbird-153.0.source.tar.xz) = f77bde3dd0933dd35870a889386c41d55ff0cbe276ec3373b27e9885f7db7e35529e7ecc2fc149ae4f8c5ae53eddb3ad444e7499a850a59a82b8940c7a4c7747
-Size (thunderbird-153.0.source.tar.xz) = 944561040 bytes
+BLAKE2s (thunderbird-153.0.3.source.tar.xz) = 50728581507a7fe7c68d548b7fd4260036283dd5beea179d15463c49b9ab8473
+SHA512 (thunderbird-153.0.3.source.tar.xz) = 6a9271af8473fa6679d4943a35fab0a335e8eb736aebfab4d79e250578faf6090cda19e80708487bec7c2221242b059072dda9ca817478a6d76556594972202b
+Size (thunderbird-153.0.3.source.tar.xz) = 939109308 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
