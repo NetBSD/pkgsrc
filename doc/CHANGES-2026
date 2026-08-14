@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5267 2026/08/14 08:45:26 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5268 2026/08/14 09:34:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7800,3 +7800,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-unearth to 0.18.3 [adam 2026-08-14]
 	Updated devel/gitpane to 0.10.4 [pin 2026-08-14]
 	Updated shells/oh-my-posh to 30.6.5 [pin 2026-08-14]
+	Updated devel/lazygit to 0.64.1 [adam 2026-08-14]
+	Updated devel/protobuf-language-server to 0.1.7 [adam 2026-08-14]
