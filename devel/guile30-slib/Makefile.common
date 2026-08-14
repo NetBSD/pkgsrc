@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2026/08/14 00:35:04 gdt Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/08/14 15:15:16 gdt Exp $
 
 # This file exists to centralize maintainer documentation as much as logic.
 
@@ -25,30 +25,77 @@ COMMENT=	SLIB glue files for ${GUILE_VERSION}
 
 DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
 
-# Instead, we should construct the catalog at build time and copy it
-# to destdir at install time.
+# \todo Construct the catalog at build time and copy it to destdir at
+# install time.
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-# \todo Explain guile's placement rules.
-INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
+# There are two places where slib installation is explained: slib and guile.
+#
+#   slib:
+#     https://people.csail.mit.edu/jaffer/slib/Installation.html
+#
+#   guile (all 3 have the same content):
+#     3.0	https://doc.guix.gnu.org/guile/latest/en/html_node/SLIB-installation.html
+#     2.2	https://doc.guix.gnu.org/guile/2.2.7/en/html_node/SLIB-installation.html
+#     2.0	https://doc.guix.gnu.org/guile/2.0.14/en/html_node/SLIB-installation.html
+#
+# Note that devel/slib installs slib itself, into
+# ${PREFIX}/share/slib (plus doc and info, not related to guile).
+# This corresponds to steps 1,2 out of 5 in the slib manual.
+# slib then lists steps 3-5:
+#   - Configure the Scheme implementation(s) to locate the SLIB
+#     directory and implementation directories.
+#   - Arrange for each Scheme implementation to load its SLIB
+#     initialization file.
+#   - Build the SLIB catalog for each Scheme implementation.
+# Step 3 is handled with a symlink from guile's site dir to slib.
+# Step 4 is not necessary as (ice-9 slib) is built in to guile.
+# Step 5 is handled by building the catalog into the right location.
 
-# See ../guile-slib for comments explaining the choice of paths and
-# how this works.
+# slib says that with modern guile, people wanting to have slib
+# available in guile should invoke guile as
+#    guile -l ${SCHEME_LIBRARY_PATH}guile.init-l ${SCHEME_LIBRARY_PATH}guile.use
+# but notes that guile has a different way.  We reject asking users to
+# invoke guile specially; they should be able to just type
+#   (use-modules (ice-9 slib))
+# in any guile invocation.
+#
+# guile says to either set SCHEME_LIBRARY_PATH in the environment, or
+# symlink slib:
+#   ln -s /usr/local/lib/slib /usr/local/share/guile/3.0/slib
+# (which of course should be ${PREFIX} instead of /usr/local).
+# 
+# SCHEME_LIBARY_PATH is used by slib.  Both slib and guile imply that
+# the value of SCHEME_LIBRARY_PATH should be the pathname where slib
+# is installed, with a trailing /, e.g. `/usr/local/lib/slib/`.  If
+# SCHEME_LIBRARY_PATH is not defined, slib's guile-2.init constructs a
+# path from where guile-2.init was found.  Thus we do nots et
+# SCHEME_LIBRARY_PATH.
+#
+# guile documents that additional scheme files that are not part of
+# guile should be installed in the site directory:
+#   guile -c "(use-modules (ice-9 pretty-print)) (pretty-print (%site-dir))"
+#   "/usr/pkg/guile/3.0/share/guile/site/3.0"
 
-# Create a symlink so guile can find slib, and build the catalog.
-# (The RM commands are superfluous in the normal case, but needed if
-# install fails and one re-runs it.)
+SITE_DIR=		guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
+INSTALLATION_DIRS=	${SITE_DIR}
+
+PRINT_PLIST_AWK+=	{ gsub(/^${SITE_DIR:S|/|\\/|g}/, "$${SITE_DIR}"); }
+PLIST_SUBST+=		SITE_DIR=${SITE_DIR}
+
+# Create symlink to slib from SITE_DIR, and build the catalog.
+# The RM commands are superfluous in the normal case, but needed if
+# install fails and one re-runs it.
+# The GUILE_IMPLEMENTATION_PATH setting is necessary so that slib
+# writes the catalog file in the DESTDIR.
 do-install:
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
+	${RM} -f ${DESTDIR}${PREFIX}/${SITE_DIR}/slib
 	${LN} -sf ${PREFIX}/share/slib \
-		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slibcat
-	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib && \
-		GUILE_LOAD_PATH=${PREFIX}/share \
-		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR} \
-		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
-
-PLIST_SUBST+=	GUILE_DIR=${GUILE_DIR}
+		${DESTDIR}${PREFIX}/${SITE_DIR}/slib
+	${RM} -f ${DESTDIR}${PREFIX}/${SITE_DIR}/slibcat
+	cd ${DESTDIR}${PREFIX}/${SITE_DIR}/slib && \
+		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/${SITE_DIR} \
+		${PREFIX}/guile/${GUILE_DIR}/bin/guile -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
 
 .include "../../lang/${GUILE_VERSION}/buildlink3.mk"
