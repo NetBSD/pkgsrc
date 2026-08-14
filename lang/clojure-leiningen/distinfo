@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2025/11/15 12:08:35 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2026/08/14 12:46:48 ryoon Exp $
 
 BLAKE2s (leiningen-2.12.0-standalone.jar) = 032a572b536d3b29c89cfdd8672e9e6d77bb37b9a3ee08716c5383e915d348fe
 SHA512 (leiningen-2.12.0-standalone.jar) = 89810fa29c6c4cdd99342708eef330e3163654f17a220789de05834204a0dd0b8fae0b950b4f93b99fd66021fbc5ee33b40be3dbced41a2ffdfa9aaafb4fc128
 Size (leiningen-2.12.0-standalone.jar) = 16755522 bytes
-BLAKE2s (leiningen-2.12.0.tar.gz) = b29b36fe358e9c92e4d6a456f00545481a229ce6c9bc54400b3a88824f0013bb
-SHA512 (leiningen-2.12.0.tar.gz) = 2d3b6d04ab0fc3f1e3fae61921ab07aa25d08d953e545d88e5da6b02abb4580f287ad93502845ca55bb37fadf516afabcc32377998aa6e497799ed6c734ad412
-Size (leiningen-2.12.0.tar.gz) = 978904 bytes
+BLAKE2s (leiningen-2.12.0.tar.gz) = a137c17f58da2db4d058ff4614ed0435ceda7741ec3e1f6d2dbf05ffde4a1a79
+SHA512 (leiningen-2.12.0.tar.gz) = e309b936398d136aa299c8eeee4657bf78bf891e4f22fb6500b8f3d5d71baff426ed71ef1df0f7f835c9bdf9893d3bca91c549d29e21e5fea191400897e741e2
+Size (leiningen-2.12.0.tar.gz) = 980976 bytes
 SHA1 (patch-bin_lein-pkg) = 6c75c3d203c2fb5f02de3d4a55d3f48eedfe2116
