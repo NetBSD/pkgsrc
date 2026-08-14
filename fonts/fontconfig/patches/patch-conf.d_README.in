@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2025/08/10 13:58:35 ryoon Exp $
+$NetBSD: patch-conf.d_README.in,v 1.1 2026/08/14 14:01:21 adam Exp $
 
 --- conf.d/README.in.orig	2025-01-17 15:15:05.000000000 +0000
 +++ conf.d/README.in
