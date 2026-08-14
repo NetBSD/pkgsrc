@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/01 14:49:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/08/14 12:52:05 ryoon Exp $
 bin/openjdk21-jar
 bin/openjdk21-jarsigner
 bin/openjdk21-java
@@ -257,6 +257,7 @@ java/openjdk21/legal/java.base/aes.md
 java/openjdk21/legal/java.base/asm.md
 java/openjdk21/legal/java.base/c-libutl.md
 java/openjdk21/legal/java.base/cldr.md
+java/openjdk21/legal/java.base/gcc.md
 java/openjdk21/legal/java.base/icu.md
 java/openjdk21/legal/java.base/public_suffix.md
 java/openjdk21/legal/java.base/siphash.md

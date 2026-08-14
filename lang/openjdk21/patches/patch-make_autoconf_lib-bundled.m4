@@ -1,11 +1,11 @@
-$NetBSD: patch-make_autoconf_lib-bundled.m4,v 1.1 2023/11/22 14:06:50 ryoon Exp $
+$NetBSD: patch-make_autoconf_lib-bundled.m4,v 1.2 2026/08/14 12:52:05 ryoon Exp $
 
 Add rpath for zlib.
 
---- make/autoconf/lib-bundled.m4.orig	2022-11-02 17:07:48.842199354 +0000
+--- make/autoconf/lib-bundled.m4.orig	2026-07-23 23:33:34.000000000 +0000
 +++ make/autoconf/lib-bundled.m4
-@@ -264,7 +264,8 @@ AC_DEFUN_ONCE([LIB_SETUP_ZLIB],
-         LIBZ_CFLAGS="$LIBZ_CFLAGS -DHAVE_UNISTD_H"
+@@ -266,7 +266,8 @@ AC_DEFUN_ONCE([LIB_SETUP_ZLIB],
+         LIBZ_CFLAGS="$LIBZ_CFLAGS -DHAVE_UNISTD_H=1 -DHAVE_STDARG_H=1"
      fi
    else
 -    LIBZ_LIBS="-lz"
