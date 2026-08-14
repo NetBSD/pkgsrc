@@ -1,0 +1,7 @@
+braceexpand implements Bash-style brace expansion for Python,
+as a single braceexpand() function returning an iterator over
+the expansions of a pattern.  It supports comma-separated
+alternatives ({a,b,c}), numeric and alphabetic sequences with
+optional increments ({1..10}, {a..z}, {0..10..2}), zero
+padding ({01..20}), nesting, and backslash escaping of the
+special characters.
