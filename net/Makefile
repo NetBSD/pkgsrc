@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1639 2026/08/09 21:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1640 2026/08/14 19:51:09 kim Exp $
 #
 
 COMMENT=	Networking tools
@@ -856,6 +856,7 @@ SUBDIR+=	rootprobe
 SUBDIR+=	routinator
 SUBDIR+=	rp-l2tp
 SUBDIR+=	rp-pppoe
+SUBDIR+=	rrsync
 SUBDIR+=	rsync
 SUBDIR+=	rt4-cli
 SUBDIR+=	rtmpdump

@@ -1,0 +1,6 @@
+rrsync (restricted rsync) is a helper script for setting up restricted
+rsync users via ssh logins.  Used as a command="rrsync DIR" prefix on
+a key in a user's ~/.ssh/authorized_keys file, it confines any rsync
+transfer made with that key to the declared subdirectory, optionally
+read-only (-ro) or write-only (-wo), and rejects rsync options that
+would allow escaping the restriction.
