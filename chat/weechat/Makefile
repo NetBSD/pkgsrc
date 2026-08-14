@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.166 2026/07/24 15:56:04 taca Exp $
+# $NetBSD: Makefile,v 1.167 2026/08/14 09:35:12 nia Exp $
 
-DISTNAME=	weechat-4.6.2
-PKGREVISION=	8
+DISTNAME=	weechat-4.10.0
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -16,10 +15,9 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
 USE_CC_FEATURES=	c99
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext pkg-config
 FAKE_NCURSES=		yes
 
-#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 CMAKE_CONFIGURE_ARGS+=	-DASCIIDOCTOR_FOUND=ON
 CMAKE_CONFIGURE_ARGS+=	-DASCIIDOCTOR_EXECUTABLE=${PREFIX}/bin/asciidoctor${RUBY_VER}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GUILE=OFF
@@ -43,14 +41,6 @@ LDFLAGS.NetBSD+=	-Wl,--copy-dt-needed-entries
 BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 
 .include "options.mk"
-
-.if !empty(PKG_OPTIONS:Mpython)
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Adjusting pkg-config python checks
-SUBST_FILES.python=	cmake/FindPython.cmake
-SUBST_SED.python=	-e 's,python3,python-${PYVERSSUFFIX},g'
-.endif
 
 pre-configure:
 	# Use the standard cmake mechanism for finding Lua.
