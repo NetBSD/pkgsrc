@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.3 2026/08/14 15:22:13 gdt Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/08/14 15:33:54 gdt Exp $
+# used by devel/guile-slib/Makefile
 # used by devel/guile22-slib/Makefile
 
 # This file exists to centralize maintainer documentation as much as logic.
@@ -14,7 +15,7 @@ GUILE_DIR=	${GUILE_MAJOR}.${GUILE_MINOR}
 SLIBVERSION=	3.3.1
 
 DISTNAME=	guile-slib-${SLIBVERSION}
-PKGNAME=	${DISTNAME:S/guile/${GUILE_VERSION}/}
+PKGNAME?=	${DISTNAME:S/guile/${GUILE_VERSION}/}
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
