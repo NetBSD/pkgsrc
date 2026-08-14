@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/08/14 15:22:13 gdt Exp $
-
-# $NetBSD: Makefile,v 1.12 2026/08/14 15:22:13 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/14 15:33:54 gdt Exp $
 
 GUILE_MAJOR=	2
 GUILE_MINOR=	2
