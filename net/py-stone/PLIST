@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/07/10 08:30:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/08/14 11:54:44 adam Exp $
 bin/stone-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,23 @@ ${PYSITELIB}/stone/__init__.pyo
 ${PYSITELIB}/stone/__main__.py
 ${PYSITELIB}/stone/__main__.pyc
 ${PYSITELIB}/stone/__main__.pyo
+${PYSITELIB}/stone/_vendor/__init__.py
+${PYSITELIB}/stone/_vendor/__init__.pyc
+${PYSITELIB}/stone/_vendor/__init__.pyo
+${PYSITELIB}/stone/_vendor/ply/LICENSE
+${PYSITELIB}/stone/_vendor/ply/README.md
+${PYSITELIB}/stone/_vendor/ply/__init__.py
+${PYSITELIB}/stone/_vendor/ply/__init__.pyc
+${PYSITELIB}/stone/_vendor/ply/__init__.pyo
+${PYSITELIB}/stone/_vendor/ply/lex.py
+${PYSITELIB}/stone/_vendor/ply/lex.pyc
+${PYSITELIB}/stone/_vendor/ply/lex.pyo
+${PYSITELIB}/stone/_vendor/ply/yacc.py
+${PYSITELIB}/stone/_vendor/ply/yacc.pyc
+${PYSITELIB}/stone/_vendor/ply/yacc.pyo
+${PYSITELIB}/stone/_version.py
+${PYSITELIB}/stone/_version.pyc
+${PYSITELIB}/stone/_version.pyo
 ${PYSITELIB}/stone/backend.py
 ${PYSITELIB}/stone/backend.pyc
 ${PYSITELIB}/stone/backend.pyo
