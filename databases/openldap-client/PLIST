@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/05/22 08:43:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/08/14 12:14:46 adam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -19,7 +19,6 @@ include/ldap_schema.h
 include/ldap_utf8.h
 include/ldif.h
 include/openldap.h
-include/slapi-plugin.h
 lib/liblber.la
 lib/libldap.la
 lib/pkgconfig/lber.pc
@@ -232,10 +231,8 @@ man/man5/slapd-meta.5
 man/man5/slapd-monitor.5
 man/man5/slapd-null.5
 man/man5/slapd-passwd.5
-man/man5/slapd-perl.5
 man/man5/slapd-relay.5
 man/man5/slapd-sock.5
-man/man5/slapd-sql.5
 man/man5/slapd-wt.5
 man/man5/slapd.access.5
 man/man5/slapd.backends.5
