@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.20 2026/08/06 08:18:43 adam Exp $
+# $NetBSD: go-modules.mk,v 1.21 2026/08/14 09:31:03 adam Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -65,10 +65,10 @@ GO_MODULE_FILES+=	github.com/kr/logfmt/@v/v0.0.0-20140226030751-b84e30acd515.zip
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.2.1.mod
 GO_MODULE_FILES+=	github.com/kr/pty/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/kr/text/@v/v0.1.0.mod
-GO_MODULE_FILES+=	github.com/kyokomi/emoji/v2/@v/v2.2.13.mod
-GO_MODULE_FILES+=	github.com/kyokomi/emoji/v2/@v/v2.2.13.zip
-GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.0.zip
+GO_MODULE_FILES+=	github.com/kyokomi/emoji/v2/@v/v2.2.14.mod
+GO_MODULE_FILES+=	github.com/kyokomi/emoji/v2/@v/v2.2.14.zip
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.mod
+GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.zip
 GO_MODULE_FILES+=	github.com/mailru/easyjson/@v/v0.7.7.mod
 GO_MODULE_FILES+=	github.com/mailru/easyjson/@v/v0.7.7.zip
 GO_MODULE_FILES+=	github.com/mattn/go-colorable/@v/v0.1.0.mod
