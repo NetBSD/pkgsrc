@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5281 2026/08/14 12:51:10 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5282 2026/08/14 12:52:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7824,3 +7824,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/openjdk8 to 1.8.502 [ryoon 2026-08-14]
 	Updated lang/openjdk11 to 1.11.0.32.9 [ryoon 2026-08-14]
 	Updated lang/openjdk17 to 1.17.0.20.8 [ryoon 2026-08-14]
+	Updated lang/openjdk21 to 1.21.0.12.8 [ryoon 2026-08-14]
