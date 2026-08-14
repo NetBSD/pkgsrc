@@ -1,0 +1,54 @@
+# $NetBSD: Makefile.common,v 1.1 2026/08/14 00:35:04 gdt Exp $
+
+# This file exists to centralize maintainer documentation as much as logic.
+
+# Before including this file, set
+#   GUILE_MAJOR
+#   GUILE_MINOR
+
+# Construct needed variations on guile version numbers.
+GUILE_VERSION=	guile${GUILE_MAJOR}${GUILE_MINOR}
+GUILE_DIR=	${GUILE_MAJOR}.${GUILE_MINOR}
+
+SLIBVERSION=	3.3.1
+
+DISTNAME=	guile-slib-${SLIBVERSION}
+PKGNAME=	${DISTNAME:S/guile/${GUILE_VERSION}/}
+CATEGORIES=	devel
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	https://people.csail.mit.edu/jaffer/SLIB
+COMMENT=	SLIB glue files for ${GUILE_VERSION}
+#LICENSE=	[slib's license for the catalog]
+
+DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
+
+# Instead, we should construct the catalog at build time and copy it
+# to destdir at install time.
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}
+
+# \todo Explain guile's placement rules.
+INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
+
+# See ../guile-slib for comments explaining the choice of paths and
+# how this works.
+
+# Create a symlink so guile can find slib, and build the catalog.
+# (The RM commands are superfluous in the normal case, but needed if
+# install fails and one re-runs it.)
+do-install:
+	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
+	${LN} -sf ${PREFIX}/share/slib \
+		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
+	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slibcat
+	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib && \
+		GUILE_LOAD_PATH=${PREFIX}/share \
+		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR} \
+		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
+
+PLIST_SUBST+=	GUILE_DIR=${GUILE_DIR}
+
+.include "../../lang/${GUILE_VERSION}/buildlink3.mk"
