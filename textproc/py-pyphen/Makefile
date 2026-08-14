@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/02/23 19:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/14 07:43:06 adam Exp $
 
-DISTNAME=	pyphen-0.17.2
+DISTNAME=	pyphen-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphen/}
 
@@ -12,10 +11,6 @@ COMMENT=	Pure Python module to hyphenate text
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
