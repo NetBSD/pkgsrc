@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 19:12:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/08/14 12:20:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -22,3 +22,4 @@ ${PYSITELIB}/httpx_socks/_sync_stream.pyo
 ${PYSITELIB}/httpx_socks/_sync_transport.py
 ${PYSITELIB}/httpx_socks/_sync_transport.pyc
 ${PYSITELIB}/httpx_socks/_sync_transport.pyo
+${PYSITELIB}/httpx_socks/py.typed
