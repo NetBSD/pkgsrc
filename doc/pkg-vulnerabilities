@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.777 2026/08/14 21:38:06 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.778 2026/08/14 21:45:08 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27355,7 +27355,7 @@ varnish>=7<7.7.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-86
 jasper<4.2.6	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8835
 jasper<4.2.7	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8836
 jasper<4.2.8	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-8837
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8732
+libxml2<2.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8732
 nasm-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8842
 nasm-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8843
 nasm-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8844
@@ -29383,9 +29383,9 @@ gradle<9.3.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22816
 gradle<9.3.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-22865
 libsndfile-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-56226
 libsoup-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-0716
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0989
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0990
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0992
+libxml2<2.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0989
+libxml2<2.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0990
+libxml2<2.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0992
 metabase<56.3	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-22805
 mit-krb5<1.22	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-24528
 opencolorio<2.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-15506
@@ -29581,7 +29581,7 @@ libsoup-[0-9]*	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-1536
 libsoup-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-1539
 libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-1760
 libsoup-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-1761
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1757
+libxml2<2.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-1757
 mongo-c-driver<2.1.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-14911
 monit-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-36968
 monit-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2020-36969
