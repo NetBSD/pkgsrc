@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.775 2026/08/07 10:30:38 pin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.776 2026/08/14 14:49:56 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22926,7 +22926,7 @@ qemu<6.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3607
 qt5<5.15.9	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-25634
 webmin<1.990	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-0829
 webmin<1.990	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-0824
-haproxy-[0-9]*	http-response-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2022-0711
+haproxy<2.6.0	http-response-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2022-0711
 htmldoc<1.9.12	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-23206
 htmldoc<1.9.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-23191
 htmldoc<1.9.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-23180
