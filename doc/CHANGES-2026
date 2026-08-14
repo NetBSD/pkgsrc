@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5274 2026/08/14 12:26:28 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5275 2026/08/14 12:27:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7817,3 +7817,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pyphen to 0.18.1 [adam 2026-08-14]
 	Updated www/py-httpx-socks to 0.13.1 [adam 2026-08-14]
 	Updated www/firefox to 153.0.4 [ryoon 2026-08-14]
+	Updated www/firefox-l10n to 153.0.4 [ryoon 2026-08-14]
