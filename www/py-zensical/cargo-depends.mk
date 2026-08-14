@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/07/19 11:47:32 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/08/14 07:46:39 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -12,14 +12,13 @@ CARGO_CRATE_DEPENDS+=	bumpalo-3.20.3
 CARGO_CRATE_DEPENDS+=	bytes-1.12.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	combine-4.6.7
-CARGO_CRATE_DEPENDS+=	core-foundation-0.10.1
-CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.4
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.16
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.7
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.13
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.22
+CARGO_CRATE_DEPENDS+=	dispatch2-0.3.1
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.6
 CARGO_CRATE_DEPENDS+=	errno-0.3.14
 CARGO_CRATE_DEPENDS+=	fastrand-2.4.1
@@ -71,6 +70,8 @@ CARGO_CRATE_DEPENDS+=	notify-8.2.0
 CARGO_CRATE_DEPENDS+=	notify-types-2.1.0
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.3
 CARGO_CRATE_DEPENDS+=	objc2-0.6.4
+CARGO_CRATE_DEPENDS+=	objc2-app-kit-0.3.2
+CARGO_CRATE_DEPENDS+=	objc2-core-foundation-0.3.2
 CARGO_CRATE_DEPENDS+=	objc2-encode-4.1.0
 CARGO_CRATE_DEPENDS+=	objc2-foundation-0.3.2
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
@@ -141,7 +142,7 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.126
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.126
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.126
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.103
-CARGO_CRATE_DEPENDS+=	webbrowser-1.2.1
+CARGO_CRATE_DEPENDS+=	webbrowser-1.2.4
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.11
 CARGO_CRATE_DEPENDS+=	windows-link-0.2.1
 CARGO_CRATE_DEPENDS+=	windows-sys-0.60.2
