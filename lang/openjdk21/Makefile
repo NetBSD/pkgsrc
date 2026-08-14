@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2026/07/30 16:20:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2026/08/14 12:52:05 ryoon Exp $
 
 DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk21u
-GITHUB_TAG=	jdk-21.0.10+7-1
+GITHUB_TAG=	jdk-21.0.12+8-1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
