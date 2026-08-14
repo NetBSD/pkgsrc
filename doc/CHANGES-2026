@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5265 2026/08/14 08:32:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5266 2026/08/14 08:44:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7798,3 +7798,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.54 [adam 2026-08-14]
 	Updated devel/py-progressbar2 to 4.6.0 [adam 2026-08-14]
 	Updated net/py-unearth to 0.18.3 [adam 2026-08-14]
+	Updated devel/gitpane to 0.10.4 [pin 2026-08-14]
