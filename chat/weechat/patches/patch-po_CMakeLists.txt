@@ -1,12 +1,12 @@
-$NetBSD: patch-po_CMakeLists.txt,v 1.7 2023/12/10 12:00:00 ryoon Exp $
+$NetBSD: patch-po_CMakeLists.txt,v 1.8 2026/08/14 09:35:12 nia Exp $
 
 Drop package-name and package-version args to xgettext.
 Don't run --statistics to /dev/null, it tries to handle it as a regular file
 and aborts.
 
---- po/CMakeLists.txt.orig	2023-10-15 07:02:57.000000000 +0000
+--- po/CMakeLists.txt.orig	2026-08-02 08:40:12.000000000 +0000
 +++ po/CMakeLists.txt
-@@ -56,7 +56,7 @@ endforeach()
+@@ -64,7 +64,7 @@ add_custom_command(
  add_custom_command(
    OUTPUT "${POT_FILE_PATH}"
    COMMAND "${XGETTEXT_EXECUTABLE}"
@@ -15,11 +15,12 @@ and aborts.
    DEPENDS ${POT_DEPENDS}
    COMMENT "Generating ${POT_FILE}"
  )
-@@ -74,7 +74,6 @@ foreach(pofile ${PO_FILES})
+@@ -81,7 +81,7 @@ foreach(pofile ${PO_FILES})
+   add_custom_command(
      OUTPUT "${mofile}"
      COMMAND "${MSGMERGE_EXECUTABLE}" ARGS --quiet -o "${CMAKE_CURRENT_BINARY_DIR}/${pofile}" "${CMAKE_CURRENT_SOURCE_DIR}/${pofile}" ${POT_FILE_PATH}
-     COMMAND "${MSGFMT_EXECUTABLE}" ARGS -o "${mofile}" "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
--    COMMAND "${MSGFMT_EXECUTABLE}" ARGS -c --statistics --verbose --output-file=/dev/null "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
+-    COMMAND "${MSGFMT_EXECUTABLE}" ARGS -c --statistics --verbose -o "${mofile}" "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
++    COMMAND "${MSGFMT_EXECUTABLE}" ARGS -o "${mofile}" "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
      DEPENDS "${POT_FILE_PATH}" "${CMAKE_CURRENT_SOURCE_DIR}/${pofile}"
      COMMENT "Compiling ${polang}.po"
    )
