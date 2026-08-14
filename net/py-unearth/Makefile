@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/12/25 22:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/14 08:32:32 adam Exp $
 
-DISTNAME=	unearth-0.18.2
+DISTNAME=	unearth-0.18.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unearth/}
@@ -21,9 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} unearth unearth-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	unearth
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
