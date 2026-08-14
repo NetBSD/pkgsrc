@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/12/27 08:09:34 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/08/14 15:22:13 gdt Exp $
 
 SLIBVERSION=	3.3.1
 DISTNAME=	guile-slib-${SLIBVERSION}
@@ -19,12 +19,6 @@ DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-# Instructions at
-#   https://www.gnu.org/software/guile/docs/docs-2.0/guile-ref/SLIB-installation.html
-# say
-#   ln -s /usr/local/lib/slib /usr/local/share/guile/2.0/slib
-# However, slib's default catalog location is guile/site/2.0, so we
-# use that.
 
 # There is a residual problem where after slib is used (and scheme
 # code is compiled), building the package again can result in "Unbound

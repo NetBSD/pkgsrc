@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2026/08/14 15:15:16 gdt Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/08/14 15:22:13 gdt Exp $
+# used by devel/guile22-slib/Makefile
 
 # This file exists to centralize maintainer documentation as much as logic.
 
@@ -65,7 +66,7 @@ WRKSRC=		${WRKDIR}
 # symlink slib:
 #   ln -s /usr/local/lib/slib /usr/local/share/guile/3.0/slib
 # (which of course should be ${PREFIX} instead of /usr/local).
-# 
+#
 # SCHEME_LIBARY_PATH is used by slib.  Both slib and guile imply that
 # the value of SCHEME_LIBRARY_PATH should be the pathname where slib
 # is installed, with a trailing /, e.g. `/usr/local/lib/slib/`.  If
@@ -87,6 +88,8 @@ PLIST_SUBST+=		SITE_DIR=${SITE_DIR}
 # Create symlink to slib from SITE_DIR, and build the catalog.
 # The RM commands are superfluous in the normal case, but needed if
 # install fails and one re-runs it.
+# The GUILE_LOAD_PATH setting is necessary so that guile will find
+# slib in the destdir before it is installed.
 # The GUILE_IMPLEMENTATION_PATH setting is necessary so that slib
 # writes the catalog file in the DESTDIR.
 do-install:
@@ -95,6 +98,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${SITE_DIR}/slib
 	${RM} -f ${DESTDIR}${PREFIX}/${SITE_DIR}/slibcat
 	cd ${DESTDIR}${PREFIX}/${SITE_DIR}/slib && \
+		GUILE_LOAD_PATH=${DESTDIR}${PREFIX}/${SITE_DIR} \
 		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/${SITE_DIR} \
 		${PREFIX}/guile/${GUILE_DIR}/bin/guile -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
 

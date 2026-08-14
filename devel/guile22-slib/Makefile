@@ -1,39 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/12/27 08:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/14 15:22:13 gdt Exp $
 
-SLIBVERSION=	3.3.1
-DISTNAME=	guile-slib-${SLIBVERSION}
-PKGNAME=	${DISTNAME:S/guile/guile22/}
-CATEGORIES=	devel
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+# $NetBSD: Makefile,v 1.12 2026/08/14 15:22:13 gdt Exp $
 
-MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://people.csail.mit.edu/jaffer/SLIB
-COMMENT=	SLIB glue files for guile
+GUILE_MAJOR=	2
+GUILE_MINOR=	2
+.include	"../../devel/guile30-slib/Makefile.common"
 
-GUILE_VERSION=	guile22
-GUILE_DIR=	2.2
-PLIST_SUBST+=	GUILE_DIR=${GUILE_DIR}
-
-DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
-
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}
-
-# See ../guile-slib for comments explaining the choice of paths and
-# how this works.
-
-INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
-
-do-install:
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
-	${LN} -sf ${PREFIX}/share/slib \
-		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slibcat
-	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib && \
-		GUILE_LOAD_PATH=${PREFIX}/share \
-		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR} \
-		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
-
-.include "../../lang/${GUILE_VERSION}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
