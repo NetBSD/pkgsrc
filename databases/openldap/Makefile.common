@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.46 2024/05/22 08:43:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.47 2026/08/14 12:14:46 adam Exp $
 #
 # used by databases/openldap-autogroup/Makefile
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
+# used by databases/openldap-memberof/Makefile
 # used by databases/openldap-nops/Makefile
 # used by databases/openldap-server/Makefile
 # used by databases/openldap-smbk5pwd/Makefile

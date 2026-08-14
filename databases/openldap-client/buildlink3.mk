@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2023/10/24 22:08:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/08/14 12:14:46 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,7 +21,7 @@ CHECK_BUILTIN.openldap-client:=	yes
 .include "../../databases/openldap-client/builtin.mk"
 CHECK_BUILTIN.openldap-client:=	no
 
-.if empty(USE_BUILTIN.openldap-client:M[yY][eE][sS])
+.if ${USE_BUILTIN.openldap-client:tl} != yes
 pkgbase := openldap-client
 .  include "../../mk/pkg-build-options.mk"
 

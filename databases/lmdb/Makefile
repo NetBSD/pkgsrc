@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2026/05/29 08:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/14 12:14:46 adam Exp $
 
 .include "../../databases/openldap/Makefile.version"
 
 # get the version from libraries/liblmdb/lmdb.h
-PKGNAME=	lmdb-0.9.35
-PKGREVISION=	1
+PKGNAME=	lmdb-1.0.1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,13 +22,12 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 CHECK_PORTABILITY_SKIP=	configure
-TEST_TARGET=		test
 
 SUBST_CLASSES+=		pc
-SUBST_VARS.pc+=		PREFIX PKGVERSION
-SUBST_FILES.pc+=	lmdb.pc
 SUBST_STAGE.pc=		pre-configure
 SUBST_MESSAGE.pc=	Fixing pkg-config file.
+SUBST_FILES.pc+=	lmdb.pc
+SUBST_VARS.pc+=		PREFIX PKGVERSION
 
 post-extract:
 	${CP} ${FILESDIR}/lmdb.pc ${WRKSRC}

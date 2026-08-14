@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/29 08:57:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/14 12:14:46 adam Exp $
 bin/mdb_copy
+bin/mdb_drop
 bin/mdb_dump
 bin/mdb_load
 bin/mdb_stat
@@ -7,6 +8,7 @@ include/lmdb.h
 lib/liblmdb.la
 lib/pkgconfig/lmdb.pc
 man/man1/mdb_copy.1
+man/man1/mdb_drop.1
 man/man1/mdb_dump.1
 man/man1/mdb_load.1
 man/man1/mdb_stat.1
