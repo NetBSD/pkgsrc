@@ -1,18 +1,19 @@
-$NetBSD: distinfo,v 1.589 2026/08/06 18:17:20 tnn Exp $
+$NetBSD: distinfo,v 1.590 2026/08/14 12:26:11 ryoon Exp $
 
-BLAKE2s (firefox-153.0.1.source.tar.xz) = 6f1f0f7801c8fdb23a8b8f200e90134a3a957948dc571ef0b7220dada197db54
-SHA512 (firefox-153.0.1.source.tar.xz) = 310d1aa27b7902ef5e052962e3b7d2819d0f5f6e596fddeafee53f09e9390d4801f5b654f4ca1e9fd4c15c71241fc31844afaa4d086f82c51b516a401fbe7f40
-Size (firefox-153.0.1.source.tar.xz) = 803443372 bytes
+BLAKE2s (firefox-153.0.4.source.tar.xz) = 3fcff4dc0ae8826dbc775fc1af1a2d30021267d567ef5c8b07c1640f78d4dbfe
+SHA512 (firefox-153.0.4.source.tar.xz) = 9081beed7f08797c2128094169cf95af4a35e208fd22bba709bfb1a19e15d15aa484fccae71154d2ae0ff955bf629cd634cc7ed6b180371aea792daf7c689ff7
+Size (firefox-153.0.4.source.tar.xz) = 803207992 bytes
 BLAKE2s (nodejs-output-153.0.tgz) = 55a9ae8d1b743f57148a3b763bce2bc9afe2bd902f5b5d6a07a3e597c569aca1
 SHA512 (nodejs-output-153.0.tgz) = 2513c4c47c9bb619a1702a36b8ec316a6c48d6b641656abf86ff33c5ae9e146721947b26a3a1af8295a005daeffb0c77e5f82f36ca9a717decc6850b3518c275
 Size (nodejs-output-153.0.tgz) = 247910 bytes
-SHA1 (patch-browser_app_profile_firefox.js) = 44c1fe360411e5946824aa4c814eaf5929e3648d
+SHA1 (patch-browser_app_profile_firefox.js) = f111e03a9c70b6ad5ba64bf95d45302b9256687a
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = f2d19349e2e93c0f82db0a76124103e6ae6bba9d
 SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
+SHA1 (patch-dom_canvas_WebGLMethodDispatcher.h) = 78f6e44116a939615523339fb73ac93f40777749
 SHA1 (patch-dom_media_mediacapabilities_MediaCapabilitiesValidation.cpp) = 2f471067387bb63d530ba1299f0542d3b3a785b6
 SHA1 (patch-dom_media_webrtc_libwebrtc__overrides_moz.build) = a2ff7cf1e6aaf888ee78581d89c7e658f46c3fcd
 SHA1 (patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp) = b93b4c6367bd2fb3d1868ab7d97ca56c100be414
