@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5268 2026/08/14 09:34:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5269 2026/08/14 09:35:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7802,3 +7802,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 30.6.5 [pin 2026-08-14]
 	Updated devel/lazygit to 0.64.1 [adam 2026-08-14]
 	Updated devel/protobuf-language-server to 0.1.7 [adam 2026-08-14]
+	Updated chat/weechat to 4.10.0 [nia 2026-08-14]
