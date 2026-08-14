@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5285 2026/08/14 17:05:53 tsutsui Exp $
+$NetBSD: CHANGES-2026,v 1.5286 2026/08/14 19:16:24 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7828,3 +7828,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/lmdb to 1.0.1nb1 [wiz 2026-08-14]
 	Updated www/chromium to 151.0.7922.137 [kikadf 2026-08-14]
 	Updated emulators/PC6001VX to 4.4.0 [tsutsui 2026-08-14]
+	Updated net/croc to 11.1.0 [drixter 2026-08-14]
