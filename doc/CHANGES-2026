@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5266 2026/08/14 08:44:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5267 2026/08/14 08:45:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7799,3 +7799,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-progressbar2 to 4.6.0 [adam 2026-08-14]
 	Updated net/py-unearth to 0.18.3 [adam 2026-08-14]
 	Updated devel/gitpane to 0.10.4 [pin 2026-08-14]
+	Updated shells/oh-my-posh to 30.6.5 [pin 2026-08-14]
