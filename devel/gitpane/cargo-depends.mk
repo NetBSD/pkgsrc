@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2026/08/07 09:20:26 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/08/14 08:44:08 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -138,7 +138,7 @@ CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.12.1
 CARGO_CRATE_DEPENDS+=	litrs-1.0.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.14
 CARGO_CRATE_DEPENDS+=	log-0.4.33
-CARGO_CRATE_DEPENDS+=	lru-0.18.1
+CARGO_CRATE_DEPENDS+=	lru-0.18.2
 CARGO_CRATE_DEPENDS+=	mac_address-1.1.8
 CARGO_CRATE_DEPENDS+=	matchers-0.2.0
 CARGO_CRATE_DEPENDS+=	memchr-2.8.3
