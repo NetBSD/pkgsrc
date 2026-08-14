@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2026/04/14 11:33:32 jperkin Exp $
+$NetBSD: distinfo,v 1.113 2026/08/14 12:48:02 ryoon Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -24,9 +24,9 @@ Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 379
 BLAKE2s (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 98777d4ff1f864a9ff5a42870b30319abd39488be2abfdc5e7d3d59b016c5807
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-BLAKE2s (openjdk7/jdk8u-jdk8u482-b08.1.tar.gz) = 5700d0cbd9275c9d126d60d8ecb06aed6ad453aa57e710e5ffda165bc1612a61
-SHA512 (openjdk7/jdk8u-jdk8u482-b08.1.tar.gz) = f394b6bda8a8efa6d133b8779246517633810f8d10babd7965122af9a8e6c81b982b3fa92a9213f2da904b4cd4c57c739b00646e87767db99bd505171190c9f6
-Size (openjdk7/jdk8u-jdk8u482-b08.1.tar.gz) = 94499759 bytes
+BLAKE2s (openjdk7/jdk8u-jdk8u502-b07.1.tar.gz) = 544f77b6e6d8ce43b67368bfccd09afcba2c6f886e13227b7535ff4ac37b6e99
+SHA512 (openjdk7/jdk8u-jdk8u502-b07.1.tar.gz) = c7acddc5d4cb8be187db39fd32f46030f83fd9fbf5bcfd52449789bc93a1297cbe5b35d5627759ae382659d341f4ad52f72b2930b547ab50dbd0941c313f1b43
+Size (openjdk7/jdk8u-jdk8u502-b07.1.tar.gz) = 94583506 bytes
 BLAKE2s (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = 4158705dc497273828cfe695afe0563bec279769777868f0017198991eccb314
 SHA512 (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = ec8a7be040804d330c54316c268b4f68702f92a0c314132f5b6e541d901a9175666d85ecbc506af9d4328b15433c9648fa0c0812a62f4142d2775c26c3db4077
 Size (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = 110776752 bytes
@@ -46,7 +46,7 @@ SHA1 (patch-common_autoconf_spec.gmk.in) = 5fbf47f2241b5c898a75fb1741873043f1c98
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 2c0d286c87f8239e8d5aa7fcc21e09b4b1c5a46e
-SHA1 (patch-hotspot_make_bsd_makefiles_saproc.make) = cf90f6a3d170aa7291fb3cfe4df7df20ec377132
+SHA1 (patch-hotspot_make_bsd_makefiles_saproc.make) = 599c8393d4c1edb4f3b83927688205cbbe27c210
 SHA1 (patch-hotspot_make_solaris_makefiles_build__vm__def.sh) = 54d197a94d27406f2957b5c2a7a7982866f99239
 SHA1 (patch-hotspot_make_solaris_makefiles_debug.make) = 7195c97c4f559b2e9410028315de351c5047d59d
 SHA1 (patch-hotspot_make_solaris_makefiles_dtrace.make) = 84e3d6b6603887aaac13747b5c972dd3eec4c7f1
@@ -100,7 +100,6 @@ SHA1 (patch-jdk_make_lib_ServiceabilityLibraries.gmk) = ab0ed14a661412aeb91ecde4
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = b63cf0ebe204acf7264704916df875a31de84393
 SHA1 (patch-jdk_src_share_classes_sun_security_jca_ProviderConfig.java) = b7d53d0c3554eebde8f7180e75259eb25123ce8b
 SHA1 (patch-jdk_src_share_lib_security_java.security-bsd) = 5a64fc1205a5bd2f6586ad65ca21f93dfffb1606
-SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = feceab600355c7ac1a3fd4ff73a714f25cbf838c
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = 5986de69be2eb36546274a8242b8d13ed7599b50
 SHA1 (patch-jdk_src_share_native_sun_awt_libpng_pngpriv.h) = 971acf2d4e0682f7ab3fb830a090225a3a1ba1cc
 SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 18e79e74dc8ec2b24ab91ad8af2195bfd508d1b4
