@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2025/11/15 12:08:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/14 12:46:48 ryoon Exp $
 
 DISTNAME=	leiningen-2.12.0
 PKGNAME=	clojure-${DISTNAME}
 CATEGORIES=	lang
-MASTER_SITES=	-https://codeberg.org/leiningen/leiningen/archive/${PKGVERSION_NOREV}.tar.gz
+MASTER_SITES=		${MASTER_SITE_CODEBERG:=leiningen/}
+CODEBERG_PROJECT=	leiningen
+CODEBERG_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://leiningen.org/
