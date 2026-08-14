@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5262 2026/08/14 07:08:05 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5263 2026/08/14 07:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7792,3 +7792,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/quickjs to 20260604nb1 [wiz 2026-08-13]
 	Updated www/privoxy to 4.2.0 [wiz 2026-08-13]
 	Updated www/resterm to 1.0.0 [drixter 2026-08-14]
+	Updated devel/libgit2 to 1.9.7 [adam 2026-08-14]
+	Updated devel/py-ruff to 0.16.3 [adam 2026-08-14]
