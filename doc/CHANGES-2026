@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5289 2026/08/14 21:23:34 kim Exp $
+$NetBSD: CHANGES-2026,v 1.5290 2026/08/14 23:49:46 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7832,3 +7832,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/py-braceexpand version 0.1.7 [kim 2026-08-14]
 	Added net/rrsync version 3.5.0 [kim 2026-08-14]
 	Updated security/ca-certificates to 20260601 [kim 2026-08-14]
+	Updated www/gitea to 1.27.2 [khorben 2026-08-14]
