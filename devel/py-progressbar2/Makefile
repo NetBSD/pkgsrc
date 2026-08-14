@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/01/06 11:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/14 08:29:09 adam Exp $
 
-DISTNAME=	progressbar2-4.5.0
+DISTNAME=	progressbar2-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
 
@@ -23,16 +22,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-[0-9]*:../../devel/py-test-mypy
 
 USE_LANGUAGES=	# none
 
+PY_RENAME_BINARIES=	progressbar
+
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} progressbar progressbar-${PYVERSSUFFIX} || ${TRUE}
-
 do-test:
-	${LN} -f ${WRKSRC}/examples.py ${WRKSRC}/tests/examples.py
+	${LN} -f -s ${WRKSRC}/examples.py ${WRKSRC}/tests/examples.py
+	${LN} -f -s ${WRKSRC}/docs ${WRKSRC}/tests/docs
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 19:43:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/08/14 08:29:09 adam Exp $
 bin/progressbar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -27,6 +27,9 @@ ${PYSITELIB}/progressbar/base.pyo
 ${PYSITELIB}/progressbar/env.py
 ${PYSITELIB}/progressbar/env.pyc
 ${PYSITELIB}/progressbar/env.pyo
+${PYSITELIB}/progressbar/fast.py
+${PYSITELIB}/progressbar/fast.pyc
+${PYSITELIB}/progressbar/fast.pyo
 ${PYSITELIB}/progressbar/multi.py
 ${PYSITELIB}/progressbar/multi.pyc
 ${PYSITELIB}/progressbar/multi.pyo
