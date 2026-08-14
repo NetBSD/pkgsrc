@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.125 2026/07/13 04:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2026/08/14 17:05:32 tsutsui Exp $
 
-VERSION=		4.3.0
+VERSION=		4.4.0
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
-PKGREVISION=		6
 CATEGORIES=		emulators
 MASTER_SITES=		https://eighttails.up.seesaa.net/bin/
 
@@ -14,29 +13,26 @@ LICENSE=		gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=		qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
-USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c++
 
 INSTALLATION_DIRS+=	bin
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
 # XXX assumes most major Tier-I ports have HZ=100
-QMAKE_ARGS+=		DEFINES+="DELAY_TIMER_MS_DEFAULT=10"
+CMAKE_CONFIGURE_ARGS+=	-DDELAY_TIMER_MS_DEFAULT=10
 .endif
 
-do-configure:
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} \
-		${QTDIR}/bin/qmake -o Makefile ${QMAKE_ARGS} PC6001VX.pro
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/PC6001VX \
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/PC6001VX \
 	    ${DESTDIR}${PREFIX}/bin
 
-.include "../../devel/qt6-qt5compat/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

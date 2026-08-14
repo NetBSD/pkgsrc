@@ -1,0 +1,139 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/08/14 17:05:32 tsutsui Exp $
+
+- Make old qmake options also configurable by CMakefile
+  (XXX: needs more fixes for WIN32 target)
+
+--- CMakeLists.txt.orig	2026-08-14 10:43:36.000000000 +0000
++++ CMakeLists.txt
+@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.16)
+ 
+ project(PC6001VX VERSION 4.4.0 LANGUAGES CXX)
+ 
++# configurable options
++option(NOJOYSTICK "Disable joystick support" OFF)
++option(NOAVI "Disable video capture support" OFF)
++option(NOMONITOR "Disable debug monitor support" OFF)
++set(DELAY_TIMER_MS_DEFAULT 1 CACHE STRING
++    "Default timer resolution in milliseconds"
++)
++
+ if(WIN32)
+     set(CMAKE_FIND_PACKAGE_PREFER_STATIC_LIBS TRUE)
+     set(CMAKE_FIND_LIBRARY_SUFFIXES_OVERRIDE ".a")
+@@ -339,8 +347,13 @@ target_include_directories(PC6001VX PRIV
+ target_compile_definitions(PC6001VX PRIVATE
+     QTP6VX
+     USEFILESYSTEM
++    DELAY_TIMER_MS_DEFAULT=${DELAY_TIMER_MS_DEFAULT}
+ )
+ 
++if(NOMONITOR)
++    target_compile_definitions(PC6001VX PRIVATE NOMONITOR)
++endif()
++
+ if(ANDROID)
+     set(PC6001VX_ANDROID_TARGET_SDK_VERSION "" CACHE STRING
+         "Override Android target SDK version")
+@@ -406,53 +419,61 @@ else()
+             target_link_libraries(PC6001VX PRIVATE ${X11_LIBRARIES})
+         endif()
+ 
+-        pkg_check_modules(SDL2 QUIET sdl2)
+-
+-        if(SDL2_FOUND)
+-            target_include_directories(PC6001VX PRIVATE ${SDL2_INCLUDE_DIRS})
+-            target_link_libraries(PC6001VX PRIVATE ${SDL2_LIBRARIES})
+-        else()
++        if(NOJOYSTICK)
+             target_compile_definitions(PC6001VX PRIVATE NOJOYSTICK)
++        else()
++            pkg_check_modules(SDL2 QUIET sdl2)
++
++            if(SDL2_FOUND)
++                target_include_directories(PC6001VX PRIVATE ${SDL2_INCLUDE_DIRS})
++                target_link_libraries(PC6001VX PRIVATE ${SDL2_LIBRARIES})
++            else()
++                target_compile_definitions(PC6001VX PRIVATE NOJOYSTICK)
++            endif()
+         endif()
+ 
+-        pkg_check_modules(LIBAVFORMAT QUIET libavformat)
+-        pkg_check_modules(LIBAVCODEC QUIET libavcodec)
+-        pkg_check_modules(LIBSWSCALE QUIET libswscale)
+-        pkg_check_modules(LIBSWRESAMPLE QUIET libswresample)
+-        pkg_check_modules(LIBAVUTIL QUIET libavutil)
+-
+-        if(LIBAVFORMAT_FOUND AND LIBAVCODEC_FOUND AND LIBSWSCALE_FOUND AND LIBSWRESAMPLE_FOUND AND LIBAVUTIL_FOUND)
+-            set(PC6001VX_FFMPEG_LIBRARY_DIRS
+-                ${LIBAVFORMAT_LIBRARY_DIRS}
+-                ${LIBAVCODEC_LIBRARY_DIRS}
+-                ${LIBSWSCALE_LIBRARY_DIRS}
+-                ${LIBSWRESAMPLE_LIBRARY_DIRS}
+-                ${LIBAVUTIL_LIBRARY_DIRS}
+-            )
+-            list(REMOVE_DUPLICATES PC6001VX_FFMPEG_LIBRARY_DIRS)
++        if(NOAVI)
++            target_compile_definitions(PC6001VX PRIVATE NOAVI)
++        else()
++            pkg_check_modules(LIBAVFORMAT QUIET libavformat)
++            pkg_check_modules(LIBAVCODEC QUIET libavcodec)
++            pkg_check_modules(LIBSWSCALE QUIET libswscale)
++            pkg_check_modules(LIBSWRESAMPLE QUIET libswresample)
++            pkg_check_modules(LIBAVUTIL QUIET libavutil)
++
++            if(LIBAVFORMAT_FOUND AND LIBAVCODEC_FOUND AND LIBSWSCALE_FOUND AND LIBSWRESAMPLE_FOUND AND LIBAVUTIL_FOUND)
++                set(PC6001VX_FFMPEG_LIBRARY_DIRS
++                    ${LIBAVFORMAT_LIBRARY_DIRS}
++                    ${LIBAVCODEC_LIBRARY_DIRS}
++                    ${LIBSWSCALE_LIBRARY_DIRS}
++                    ${LIBSWRESAMPLE_LIBRARY_DIRS}
++                    ${LIBAVUTIL_LIBRARY_DIRS}
++                )
++                list(REMOVE_DUPLICATES PC6001VX_FFMPEG_LIBRARY_DIRS)
+ 
+-            target_compile_definitions(PC6001VX PRIVATE __STDC_CONSTANT_MACROS __STDC_FORMAT_MACROS)
+-            target_include_directories(PC6001VX PRIVATE
+-                ${LIBAVFORMAT_INCLUDE_DIRS}
+-                ${LIBAVCODEC_INCLUDE_DIRS}
+-                ${LIBSWSCALE_INCLUDE_DIRS}
+-                ${LIBSWRESAMPLE_INCLUDE_DIRS}
+-                ${LIBAVUTIL_INCLUDE_DIRS}
+-            )
++                target_compile_definitions(PC6001VX PRIVATE __STDC_CONSTANT_MACROS __STDC_FORMAT_MACROS)
++                target_include_directories(PC6001VX PRIVATE
++                    ${LIBAVFORMAT_INCLUDE_DIRS}
++                    ${LIBAVCODEC_INCLUDE_DIRS}
++                    ${LIBSWSCALE_INCLUDE_DIRS}
++                    ${LIBSWRESAMPLE_INCLUDE_DIRS}
++                    ${LIBAVUTIL_INCLUDE_DIRS}
++                )
+ 
+-            if(PC6001VX_FFMPEG_LIBRARY_DIRS)
+-                target_link_directories(PC6001VX PRIVATE ${PC6001VX_FFMPEG_LIBRARY_DIRS})
+-            endif()
++                if(PC6001VX_FFMPEG_LIBRARY_DIRS)
++                    target_link_directories(PC6001VX PRIVATE ${PC6001VX_FFMPEG_LIBRARY_DIRS})
++                endif()
+ 
+-            target_link_libraries(PC6001VX PRIVATE
+-                ${LIBAVFORMAT_LIBRARIES}
+-                ${LIBAVCODEC_LIBRARIES}
+-                ${LIBSWSCALE_LIBRARIES}
+-                ${LIBSWRESAMPLE_LIBRARIES}
+-                ${LIBAVUTIL_LIBRARIES}
+-            )
+-        else()
+-            target_compile_definitions(PC6001VX PRIVATE NOAVI)
++                target_link_libraries(PC6001VX PRIVATE
++                    ${LIBAVFORMAT_LIBRARIES}
++                    ${LIBAVCODEC_LIBRARIES}
++                    ${LIBSWSCALE_LIBRARIES}
++                    ${LIBSWRESAMPLE_LIBRARIES}
++                    ${LIBAVUTIL_LIBRARIES}
++                )
++            else()
++                target_compile_definitions(PC6001VX PRIVATE NOAVI)
++            endif()
+         endif()
+     else()
+         target_compile_definitions(PC6001VX PRIVATE NOJOYSTICK NOAVI)
