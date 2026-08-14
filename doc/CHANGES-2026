@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5271 2026/08/14 11:57:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5272 2026/08/14 12:15:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7810,3 +7810,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql18 to 18.6 [adam 2026-08-14]
 	Updated net/py-stone to 3.5.4 [adam 2026-08-14]
 	Updated math/py-xarray-einstats to 0.11.0 [adam 2026-08-14]
+	Updated databases/openldap to 2.7.0 [adam 2026-08-14]
+	Updated databases/lmdb to 1.0.1 [adam 2026-08-14]
