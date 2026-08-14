@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2026/08/09 14:41:09 kikadf Exp $
+$NetBSD: distinfo,v 1.55 2026/08/14 16:37:52 kikadf Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -66,12 +66,12 @@ Size (cc-1.2.61.crate) = 97163 bytes
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
 Size (cfg-if-1.0.4.crate) = 9360 bytes
-BLAKE2s (chromium-151.0.7922.108-lite.tar.xz) = b3e0ac1a932bcd45f4601ebf3cad059d9a3ee729c9a47ccd65c89a87a45bc9ef
-SHA512 (chromium-151.0.7922.108-lite.tar.xz) = 8c68056914f598f4c828c610fa909f7ceaad9fca25d33908ee82c49b70b744ff93fd8ae3e5beefd41e13580d8d47311e27862ec18de612623ce275d9652d27f5
-Size (chromium-151.0.7922.108-lite.tar.xz) = 1711817516 bytes
-BLAKE2s (chromium-151.0.7922.108-testdata.tar.xz) = 4584432d9dac3d1783c68296f626addc80373fb8d1c1a666647a9f02e62c36c5
-SHA512 (chromium-151.0.7922.108-testdata.tar.xz) = cdedf55fcfe3cb0e8b07e025c1d71be12fd38c0982506c304fdfd562a07130bcae0af612e05b4dedbf3e0f3c6314908e5a03822f198753b6e412a10aab47ade3
-Size (chromium-151.0.7922.108-testdata.tar.xz) = 1305256684 bytes
+BLAKE2s (chromium-151.0.7922.137-lite.tar.xz) = 7ba5b403bc28140df645c2f92b414a940d4c2339a59d17a7f0b8f04044ff8974
+SHA512 (chromium-151.0.7922.137-lite.tar.xz) = 61ec7b654342a68394ff0907e5b344d97cecbca2bced851e4ead0fa93f05f7b2d6d8dc8953cc7d86204ddcf49a3b2f401626b79cbcf4b023628a721d6c543b29
+Size (chromium-151.0.7922.137-lite.tar.xz) = 1712008940 bytes
+BLAKE2s (chromium-151.0.7922.137-testdata.tar.xz) = e94c71794ab9cdc58b43802b44648392d995f090678737c39b17fb332936d5b7
+SHA512 (chromium-151.0.7922.137-testdata.tar.xz) = 918adbad034b5e083c9e211a908e8e8aee57e792f8267f2b14adcad46ff21cefed1dd187c18cbd5bd79d72202c11515177df73469312ea7e8274f5d824bfc340
+Size (chromium-151.0.7922.137-testdata.tar.xz) = 1305247952 bytes
 BLAKE2s (cmake-0.1.58.crate) = a4568b73f30075a127114fb24a891b182573483d81080643888ecbd5e954efe7
 SHA512 (cmake-0.1.58.crate) = 49420a5d7d71ddccc21b71373769e1e28ab98c9af1a0c5d59fc3127e6dcc45cb1b7c6b5a37c9110907daceda7fd10bb59344f2bb8f041b18d62b16c22c5d0d60
 Size (cmake-0.1.58.crate) = 20474 bytes
@@ -219,9 +219,9 @@ Size (itoa-1.0.18.crate) = 15935 bytes
 BLAKE2s (js-sys-0.3.98.crate) = e9b382a9356de4c5fe798e8976d38babf522d7b75481c3f448385e53fdf81bfb
 SHA512 (js-sys-0.3.98.crate) = afeec49d8a6894d1c7a10d80a6d6500d8677f0c769f74beae8da820932da8ff91ff0e9abcc48fde251e617903578e65af4a9cf88972510e78ae8e1284780675c
 Size (js-sys-0.3.98.crate) = 108519 bytes
-BLAKE2s (kikadf-chromium-nb-v151.0.tar.gz) = 96eded607f59d6fc811547bcfd6ab4f2d286533e138546b4ba28a02627f7f09a
-SHA512 (kikadf-chromium-nb-v151.0.tar.gz) = ee9df31f6e5a8c79c9c0c84078ea06f23f1c8622b303d2bd03b23ed08e9e3585e03c782a9032ec9a59b381a1b60977cdaa00a5da2726aeda5d063ebb2cf6dd4b
-Size (kikadf-chromium-nb-v151.0.tar.gz) = 22412 bytes
+BLAKE2s (kikadf-chromium-nb-v151.1.tar.gz) = 7be745647b792185cb8e178bb6bffac2e42b28307788843944baeed4d8b80670
+SHA512 (kikadf-chromium-nb-v151.1.tar.gz) = 1b0917bfe37ae6b861f9b6bd7ea71c520933d6332b0e703e122d37c681edcb0be526aa398ad1944ee93e54bd03695c9f22cb1e8e1e6f4591efd5600561017bae
+Size (kikadf-chromium-nb-v151.1.tar.gz) = 22480 bytes
 BLAKE2s (libc-0.2.186.crate) = e4ae2a7c2182c3a4f54e39cfed3d574220b3a6d54af5a40aadfd814bb8a12c6a
 SHA512 (libc-0.2.186.crate) = 6a58e671ec6811dff9a0d7d4db8f37d38bcbca9efff20dad4706190e5cdb77b426567754bcf0ef0f2d0c31d6506401f724f3ca500b9bed57bb8605b1141ed690
 Size (libc-0.2.186.crate) = 821883 bytes
