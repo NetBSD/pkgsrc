@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2026/08/12 03:24:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.142 2026/08/14 14:01:21 adam Exp $
 
 DISTNAME=	fontconfig-2.18.3
 CATEGORIES=	fonts
@@ -19,7 +19,6 @@ MESON_ARGS+=		-Ddefault-fonts-dirs=${PREFIX}/share/fonts/X11
 MESON_ARGS+=		-Dbaseconfig-dir=${PKG_SYSCONFDIR}
 MESON_ARGS+=		-Dcache-dir=${VARBASE}/cache/fontconfig
 MESON_ARGS+=		-Ddoc=disabled # docbook2man and docbook2html are required.
-CONFIGURE_ENV+=		HASDOCBOOK=no
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
@@ -106,7 +105,7 @@ CHECK_PORTABILITY_SKIP+=	.gitlab-ci/fedora-cross.sh
 TEST_TARGET=	check
 
 pre-configure:
-	-cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
+	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
