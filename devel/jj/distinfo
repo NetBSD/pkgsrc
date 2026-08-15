@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2026/08/06 13:44:44 adam Exp $
+$NetBSD: distinfo,v 1.38 2026/08/15 19:26:07 he Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -1630,3 +1630,4 @@ BLAKE2s (zmij-1.0.21.crate) = a2d1e7214230c8f4e8c946d28215765c131da3aac89f1001da
 SHA512 (zmij-1.0.21.crate) = a488f11ec8721ddfe42e61d028a128818551de8fccd69d7824504e4ae2efccdc38f716fa5a10ef4de07a8a087e75e819c4a1e0790817e8539b5db697bde14585
 Size (zmij-1.0.21.crate) = 26665 bytes
 SHA1 (patch-.._vendor_nix-0.29.0_src_net_if__.rs) = ac9072a65be112e8ea12db9a7c7340da57900e19
+SHA1 (patch-.._vendor_serde__bser-0.4.0_src_ser_mod.rs) = 378016e9accb5082d624f2a0bba32265c47acbac
