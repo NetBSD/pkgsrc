@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2026/04/30 05:44:15 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/08/15 06:46:44 wiz Exp $
 
 BLAKE2s (inetutils-2.8.tar.gz) = 4c862ef324da6b9b1ad62d24e56de4918425776fd7d204efaaecd7cdf595e80c
 SHA512 (inetutils-2.8.tar.gz) = 00b33c9d712cf670f16dbefc963fed880088ff67f506df54fd02fdfc0f8c05d379faba5d602c8772c4dc4fd72e1fa8733777d5840784aa86e092eeb5d0f905f7
@@ -7,3 +7,6 @@ SHA1 (patch-libinetutils_libinetutils.h) = 4fd40c71340a90cbe606b71655555d98dfc7e
 SHA1 (patch-ping_Makefile.in) = bfc193800d353496ce2dc639803c356eef7a655a
 SHA1 (patch-src_Makefile.in) = a8321822fdd68db4ec86ad232b59aaad92583297
 SHA1 (patch-src_syslogd.c) = 608579f47456d85b29520e7021c86cf80f6faa1c
+SHA1 (patch-talkd_announce.c) = 2fdb64c69c97b230a5ffe4be7fb3716d3d261f40
+SHA1 (patch-talkd_intalkd.h) = 6c0f7169bbbea1013cf8553fe7103cc88b44b672
+SHA1 (patch-talkd_talkd.c) = 8dd3979e9cfca8e1d13f7e6800325f931bc78ca4
