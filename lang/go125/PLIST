@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/07/08 18:31:11 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/08/15 12:26:19 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go125/CONTRIBUTING.md
@@ -13629,6 +13629,7 @@ go125/test/fixedbugs/issue79182.go
 go125/test/fixedbugs/issue79186.go
 go125/test/fixedbugs/issue7921.go
 go125/test/fixedbugs/issue7944.go
+go125/test/fixedbugs/issue79874.go
 go125/test/fixedbugs/issue7995.go
 go125/test/fixedbugs/issue7995b.dir/x1.go
 go125/test/fixedbugs/issue7995b.dir/x2.go
@@ -13637,8 +13638,11 @@ go125/test/fixedbugs/issue7996.go
 go125/test/fixedbugs/issue7997.go
 go125/test/fixedbugs/issue7998.go
 go125/test/fixedbugs/issue8004.go
+go125/test/fixedbugs/issue80097.go
 go125/test/fixedbugs/issue8011.go
+go125/test/fixedbugs/issue80127.go
 go125/test/fixedbugs/issue8017.go
+go125/test/fixedbugs/issue80188.go
 go125/test/fixedbugs/issue8028.go
 go125/test/fixedbugs/issue8036.go
 go125/test/fixedbugs/issue8039.go
@@ -13646,6 +13650,10 @@ go125/test/fixedbugs/issue8042.go
 go125/test/fixedbugs/issue8047.go
 go125/test/fixedbugs/issue8047b.go
 go125/test/fixedbugs/issue8048.go
+go125/test/fixedbugs/issue80517_1.go
+go125/test/fixedbugs/issue80517_2.go
+go125/test/fixedbugs/issue80517_3.go
+go125/test/fixedbugs/issue80577.go
 go125/test/fixedbugs/issue8060.dir/a.go
 go125/test/fixedbugs/issue8060.dir/b.go
 go125/test/fixedbugs/issue8060.go
