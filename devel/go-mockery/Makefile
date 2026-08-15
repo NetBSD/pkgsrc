@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2026/07/08 18:32:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/15 12:53:19 bsiegert Exp $
 
 DISTNAME=	mockery-3.5.4
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vektra/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}

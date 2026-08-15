@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/07/08 18:32:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2026/08/15 12:53:37 bsiegert Exp $
 
 DISTNAME=	gron-0.7.1
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tomnomnom/}
 GITHUB_PROJECT=	gron
