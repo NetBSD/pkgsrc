@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5298 2026/08/15 12:27:23 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.5299 2026/08/15 16:46:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7842,3 +7842,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xplr to 1.1.1 [pin 2026-08-15]
 	Updated lang/go125 to 1.25.13 [bsiegert 2026-08-15]
 	Updated lang/go126 to 1.26.6 [bsiegert 2026-08-15]
+	Updated databases/p5-DBI to 1.652 [wiz 2026-08-15]
