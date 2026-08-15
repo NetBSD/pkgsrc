@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2026/07/30 09:53:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.188 2026/08/15 13:39:55 tnn Exp $
 
 DISTNAME=	librsvg-2.62.3
 PKGREVISION=	1
@@ -46,6 +46,7 @@ post-install:
 	install_name_tool			\
 	  -change @rpath/librsvg-2.2.dylib	\
 	  ${PREFIX}/lib/librsvg-2.2.dylib	\
+	  -id       ${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib	\
 	  ${DESTDIR}${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib
 .endif
 
