@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5297 2026/08/15 11:22:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5298 2026/08/15 12:27:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7840,3 +7840,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ggml to 0.20.0 [wiz 2026-08-15]
 	Updated sysutils/dua-cli to 2.42.1 [pin 2026-08-15]
 	Updated sysutils/xplr to 1.1.1 [pin 2026-08-15]
+	Updated lang/go125 to 1.25.13 [bsiegert 2026-08-15]
+	Updated lang/go126 to 1.26.6 [bsiegert 2026-08-15]
