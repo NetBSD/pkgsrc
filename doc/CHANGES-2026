@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5293 2026/08/15 06:46:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5294 2026/08/15 07:20:51 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7836,3 +7836,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxml2 to 2.15.3 [wiz 2026-08-15]
 	Updated textproc/py-libxml2 to 2.15.3 [wiz 2026-08-15]
 	Updated net/inetutils to 2.8nb1 [wiz 2026-08-15]
+	Updated www/resterm to 1.1.0 [drixter 2026-08-15]
