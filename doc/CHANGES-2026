@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5291 2026/08/15 02:24:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5292 2026/08/15 02:24:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7834,3 +7834,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ca-certificates to 20260601 [kim 2026-08-14]
 	Updated www/gitea to 1.27.2 [khorben 2026-08-14]
 	Updated textproc/libxml2 to 2.15.3 [wiz 2026-08-15]
+	Updated textproc/py-libxml2 to 2.15.3 [wiz 2026-08-15]
