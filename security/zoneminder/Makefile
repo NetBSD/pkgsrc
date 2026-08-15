@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2026/08/12 14:33:56 taca Exp $
+# $NetBSD: Makefile,v 1.110 2026/08/15 16:41:36 gdt Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -8,6 +8,7 @@ VERSION=	1.38.4
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
+PKGREVISION=	1
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}
 CATEGORIES=	security
@@ -146,10 +147,10 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
 # \todo Move to higher ffmpeg.
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE SWRESAMPLE
-CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg6}/include/ffmpeg6
-CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SHLIB_EXT}
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg8}/include/ffmpeg8
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg8}/lib/ffmpeg8/lib${lib:tl}.${SHLIB_EXT}
 .endfor
 
 # \todo Recheck if this is needed.
@@ -205,7 +206,6 @@ DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 # MIME::Base64
 DEPENDS+=	p5-SOAP-WSDL-[0-9]*:../../net/p5-SOAP-WSDL
 # Scalar::Util
-# Sys::Mmap
 # Sys::Syslog
 # Time::Local
 # URI::Encode
