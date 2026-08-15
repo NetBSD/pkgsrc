@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/04/30 05:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/15 06:46:44 wiz Exp $
 
 DISTNAME=	inetutils-2.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=inetutils/}
 
