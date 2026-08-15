@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5300 2026/08/15 18:27:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5301 2026/08/15 18:43:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7844,3 +7844,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go126 to 1.26.6 [bsiegert 2026-08-15]
 	Updated databases/p5-DBI to 1.652 [wiz 2026-08-15]
 	Updated devel/compiledb-go to 1.7.0 [wiz 2026-08-15]
+	Updated sysutils/yazi to 26.8.15 [wiz 2026-08-15]
