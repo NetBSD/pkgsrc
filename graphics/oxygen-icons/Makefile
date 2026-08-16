@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/07/19 10:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/16 11:44:29 wiz Exp $
 
-DISTNAME=	oxygen-icons-6.28.0
+DISTNAME=	oxygen-icons-6.29.0
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
