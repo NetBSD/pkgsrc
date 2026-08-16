@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5326 2026/08/16 15:01:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5327 2026/08/16 15:24:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7870,3 +7870,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/rspamd to 4.1.5 [wiz 2026-08-16]
 	Updated devel/sem to 0.21.1 [wiz 2026-08-16]
 	Updated textproc/rumdl to 0.2.55 [wiz 2026-08-16]
+	Updated net/p5-Net-OAuth to 0.32 [wiz 2026-08-16]
