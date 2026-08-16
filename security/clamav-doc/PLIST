@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13.4.1 2026/07/13 14:08:44 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.13.4.2 2026/08/16 21:01:34 maya Exp $
 share/doc/clamav/html/404.html
 share/doc/clamav/html/Introduction.html
 share/doc/clamav/html/ace-2a3cd908.js
@@ -115,7 +115,7 @@ share/doc/clamav/html/mermaid-init-ccf746f1.js
 share/doc/clamav/html/mode-rust-2c9d5c9a.js
 share/doc/clamav/html/print.html
 share/doc/clamav/html/searcher-09f2665d.js
-share/doc/clamav/html/searchindex-d348bbbb.js
+share/doc/clamav/html/searchindex-f120d447.js
 share/doc/clamav/html/sitemap.xml
 share/doc/clamav/html/theme-dawn-4493f9c8.js
 share/doc/clamav/html/theme-tomorrow_night-9dbe62a9.js
