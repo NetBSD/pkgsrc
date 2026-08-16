@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5306 2026/08/16 07:43:13 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5307 2026/08/16 08:40:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7850,3 +7850,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Log-Log4perl to 1.58 [wiz 2026-08-16]
 	Updated security/p5-Mozilla-CA to 20260813 [wiz 2026-08-16]
 	Updated net/croc to 11.1.1 [drixter 2026-08-16]
+	Updated shells/zsh to 5.9.2 [wiz 2026-08-16]
