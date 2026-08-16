@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.83 2026/06/07 19:22:44 wiz Exp $
+$NetBSD: distinfo,v 1.84 2026/08/16 08:40:34 wiz Exp $
 
-BLAKE2s (zsh-5.9.1.tar.xz) = 0f4518ee59acd3427b8f11b41a9d99162878fa847992bf4ba2344c0a7dd8f142
-SHA512 (zsh-5.9.1.tar.xz) = e16c13559262577e725b290c35ce6598d58c2acdd204eac619e8ed9b6a918bce39bfbf9d3ef4c5eb877af7d3279c8a4b15439eba6a38c4e4d47d5555d5f79872
-Size (zsh-5.9.1.tar.xz) = 3414612 bytes
+BLAKE2s (zsh-5.9.2.tar.xz) = ce3b5a71cf976ac548ffc69836a45ef4a3460b789a7718ef19ca83667cd363db
+SHA512 (zsh-5.9.2.tar.xz) = 40bb5eb2cf217e6bcff342fcc9314f082a5d8975abcb56897e86eba5839ddf0ec1ac3feed1e797d4c68cea22228197342916f14bb87309bbcc026a87622bc015
+Size (zsh-5.9.2.tar.xz) = 3439480 bytes
 SHA1 (patch-Completion_BSD_Command___bsd__pkg) = fe0d9cc399fe185ce71a64431e4086ed07920cb8
 SHA1 (patch-Completion_Unix_Command___gpg) = 8eba031838b1cfb0bfadf0fa539e760fd1cb539c
 SHA1 (patch-Config_installfns.sh) = ef0b250a0121c0e4925022e02553aefa23e6cc8d
-SHA1 (patch-Src_jobs.c) = d4be7424283f22a5ce26ba6aebfe51f105c033ce
 SHA1 (patch-configure.ac) = a786f2819c03ae33f8060f33f8de05dbeeac36bf

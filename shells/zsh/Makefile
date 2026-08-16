@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/06/07 19:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/08/16 08:40:34 wiz Exp $
 
-DISTNAME=	zsh-5.9.1
+DISTNAME=	zsh-5.9.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz

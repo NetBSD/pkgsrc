@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2026/06/07 19:22:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2026/08/16 08:40:34 wiz Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -114,6 +114,7 @@ share/zsh/${PKGVERSION}/functions/_acroread
 share/zsh/${PKGVERSION}/functions/_adb
 share/zsh/${PKGVERSION}/functions/_add-zle-hook-widget
 share/zsh/${PKGVERSION}/functions/_add-zsh-hook
+share/zsh/${PKGVERSION}/functions/_age
 share/zsh/${PKGVERSION}/functions/_alias
 share/zsh/${PKGVERSION}/functions/_aliases
 share/zsh/${PKGVERSION}/functions/_all_labels
@@ -454,6 +455,7 @@ share/zsh/${PKGVERSION}/functions/_guard
 share/zsh/${PKGVERSION}/functions/_guilt
 share/zsh/${PKGVERSION}/functions/_gv
 share/zsh/${PKGVERSION}/functions/_gzip
+share/zsh/${PKGVERSION}/functions/_hardlink
 share/zsh/${PKGVERSION}/functions/_hash
 share/zsh/${PKGVERSION}/functions/_have_glob_qual
 share/zsh/${PKGVERSION}/functions/_hdiutil
@@ -625,6 +627,7 @@ share/zsh/${PKGVERSION}/functions/_my_accounts
 share/zsh/${PKGVERSION}/functions/_myrepos
 share/zsh/${PKGVERSION}/functions/_mysql_utils
 share/zsh/${PKGVERSION}/functions/_mysqldiff
+share/zsh/${PKGVERSION}/functions/_namei
 share/zsh/${PKGVERSION}/functions/_nano
 share/zsh/${PKGVERSION}/functions/_nautilus
 share/zsh/${PKGVERSION}/functions/_nbsd_architectures
