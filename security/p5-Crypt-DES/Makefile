@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2026/07/16 19:04:42 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.40 2026/08/16 06:15:20 wiz Exp $
 
-DISTNAME=		Crypt-DES-2.07
+DISTNAME=		Crypt-DES-2.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		13
 CATEGORIES=		security perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TI/TIMLEGGE/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Crypt-DES
