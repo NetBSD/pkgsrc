@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/08/03 17:15:23 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/08/16 12:13:03 wiz Exp $
 
-BLAKE2s (libpsl-0.23.1.tar.lz) = 0eb59f8739f00913dcc5ba5e15f2380e890e2e482e36f641c17556698bf2dca5
-SHA512 (libpsl-0.23.1.tar.lz) = 43981bd41e0c4f673a0a8f7a0abe4037d023b9ca6bd52f9cff6c5418edcd52cdb9049d18648030fdf1299b530977be7f53839feabb8eb88f9cec21707be5d5ab
-Size (libpsl-0.23.1.tar.lz) = 2123990 bytes
+BLAKE2s (libpsl-0.23.3.tar.lz) = 540c9878c9f8a91a946cd71c1baf5804eb603c0dcf5cb44b800f7ebbd52d46d7
+SHA512 (libpsl-0.23.3.tar.lz) = 6be0756215631504632c52fb3e44e80d56a3be32ca625506780af294a0c7a47c144fc84c5e64d82f1a4aa7fe9939642153c4cc7598e4cf76ff841decd3c9a55f
+Size (libpsl-0.23.3.tar.lz) = 2126455 bytes
