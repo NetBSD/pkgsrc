@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5310 2026/08/16 12:12:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5311 2026/08/16 12:13:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7854,3 +7854,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/extra-cmake-modules to 6.29.0 [wiz 2026-08-16]
 	Updated graphics/oxygen-icons to 6.29.0 [wiz 2026-08-16]
 	Updated devel/googletest to 1.18.0 [wiz 2026-08-16]
+	Updated www/libpsl to 0.23.3 [wiz 2026-08-16]
