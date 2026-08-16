@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5329 2026/08/16 16:07:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5330 2026/08/16 16:11:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7873,3 +7873,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-OAuth to 0.32 [wiz 2026-08-16]
 	Updated devel/ruby-io-event to 1.19.5 [taca 2026-08-16]
 	Updated devel/ruby-simplecov to 1.1.1 [taca 2026-08-16]
+	Updated net/ruby-net-ping to 2.1.1 [taca 2026-08-16]
