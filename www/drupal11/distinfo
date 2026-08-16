@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/12/14 03:52:33 taca Exp $
+$NetBSD: distinfo,v 1.4.6.1 2026/08/16 21:27:14 maya Exp $
 
-BLAKE2s (drupal-11.1.9.tar.gz) = 4ce1f7eea6d8d7960297923b9eda1d3ecd60cf7f238afde6db335cdc9c5c3bee
-SHA512 (drupal-11.1.9.tar.gz) = d9abbc7900ca74291cf6d05345550922bab3866b09758b005f11a8e0bae0641f68cd34441936504e5b0d5eaa85f2cf58f654922339925cdb65f4bf8568beb7a4
-Size (drupal-11.1.9.tar.gz) = 19766555 bytes
+BLAKE2s (drupal-11.4.4.tar.gz) = f3fd58659d5da768b290d573221b214bdcfcf15a832ccd4898a17c267a73ed1e
+SHA512 (drupal-11.4.4.tar.gz) = 2c08801a5ffada5a49ba2482ac239ac4e09a757ab920d3cbb9453e3e30162240010d0bb01992279732b51cd70eb0ee4eedc61c3ffa3edd359f2ae7083ca2b212
+Size (drupal-11.4.4.tar.gz) = 23111628 bytes
