@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/07/19 10:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/16 11:43:12 wiz Exp $
 
-DISTNAME=	extra-cmake-modules-6.28.0
+DISTNAME=	extra-cmake-modules-6.29.0
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
