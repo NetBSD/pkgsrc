@@ -1,20 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2024/04/30 09:05:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/08/16 12:56:40 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/webencodings/__init__.py
 ${PYSITELIB}/webencodings/__init__.pyc
 ${PYSITELIB}/webencodings/__init__.pyo
+${PYSITELIB}/webencodings/custom.py
+${PYSITELIB}/webencodings/custom.pyc
+${PYSITELIB}/webencodings/custom.pyo
 ${PYSITELIB}/webencodings/labels.py
 ${PYSITELIB}/webencodings/labels.pyc
 ${PYSITELIB}/webencodings/labels.pyo
-${PYSITELIB}/webencodings/mklabels.py
-${PYSITELIB}/webencodings/mklabels.pyc
-${PYSITELIB}/webencodings/mklabels.pyo
-${PYSITELIB}/webencodings/tests.py
-${PYSITELIB}/webencodings/tests.pyc
-${PYSITELIB}/webencodings/tests.pyo
-${PYSITELIB}/webencodings/x_user_defined.py
-${PYSITELIB}/webencodings/x_user_defined.pyc
-${PYSITELIB}/webencodings/x_user_defined.pyo
