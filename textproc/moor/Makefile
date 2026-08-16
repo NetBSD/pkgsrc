@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/08/15 12:53:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2026/08/16 12:17:37 wiz Exp $
 
-DISTNAME=		moor-2.16.2
-PKGREVISION=		1
+DISTNAME=		moor-2.17.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=walles/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
