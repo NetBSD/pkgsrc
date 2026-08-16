@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.10 2026/08/03 18:15:55 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.11 2026/08/16 12:17:37 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
@@ -6,6 +6,8 @@ GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.22.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.22.0.zip
 GO_MODULE_FILES+=	github.com/charlievieth/strcase/@v/v0.0.6.mod
 GO_MODULE_FILES+=	github.com/charlievieth/strcase/@v/v0.0.6.zip
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.24.mod
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.24.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip

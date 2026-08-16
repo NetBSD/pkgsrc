@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2026/08/03 18:15:55 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/08/16 12:17:37 wiz Exp $
 
 BLAKE2s (github.com_adrg_xdg_@v_v0.5.3.mod) = d6562994850ff49646864144f83c4ce6db7f136692b1d986787ee15b68e4d496
 SHA512 (github.com_adrg_xdg_@v_v0.5.3.mod) = 392cf3f009a48dab138d1e2b3d1d2563e616a43ae7c2e0bb00f0029073b758706ebb882e96a3400dc4b6a25fef07370c960fdd197d366bc9757d29f20c89cbe3
@@ -18,6 +18,12 @@ Size (github.com_charlievieth_strcase_@v_v0.0.6.mod) = 82 bytes
 BLAKE2s (github.com_charlievieth_strcase_@v_v0.0.6.zip) = a7725675e3cbd9059ffe5b1e8ae9e9c235885ca4f177cbe4e4b0a3330fb4e5c2
 SHA512 (github.com_charlievieth_strcase_@v_v0.0.6.zip) = 0100c78781990accff1d70e62e1f0b1c73b8b865e6a198a5e38266787ad062ed1c11d6f460557acc87cb4d829b632fad5923de9bba486269e49f4ffe402a0db2
 Size (github.com_charlievieth_strcase_@v_v0.0.6.zip) = 602623 bytes
+BLAKE2s (github.com_creack_pty_@v_v1.1.24.mod) = 2fc15d9b0ccbfe0fcc12cdfbac84a8aa13448af9752eff151b99bedee2754cd2
+SHA512 (github.com_creack_pty_@v_v1.1.24.mod) = 6aa0da5daae2fb3eb26ac9a6bbf5f9c7feb289b62c00f4707184dba576247bacf63dfb9b1b81c52918eb6c6619ab23d657107387a5b89f76f433e1776315fed5
+Size (github.com_creack_pty_@v_v1.1.24.mod) = 38 bytes
+BLAKE2s (github.com_creack_pty_@v_v1.1.24.zip) = a329832e0f3858866ebb1c1558e75b62483221acff5660b51c6ee827af247caa
+SHA512 (github.com_creack_pty_@v_v1.1.24.zip) = dd497a10bb6be220bc20bf69f3b8cd55d8bb5e0c033a09ab1cc705707e84002aa3c808aa42074b3a704438c4f6d5e98c74abc6660c1aa6a735d7be7f4132cd6c
+Size (github.com_creack_pty_@v_v1.1.24.zip) = 40880 bytes
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.0.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
 Size (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 34 bytes
@@ -132,6 +138,6 @@ Size (gotest.tools_v3_@v_v3.5.2.mod) = 195 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.5.2.zip) = 582bab822c0d8279b3758825d276fbab77af2972fa7cbd8159993c7ca81c6c13
 SHA512 (gotest.tools_v3_@v_v3.5.2.zip) = eec814fc0f8e39fd10051f659859fb9c0016fb51e798968ae53617da5f29e441c5fd0a719cbbbe4416ebc0e9eac5b09ddebb99a8434cf602728f0c37b72534d5
 Size (gotest.tools_v3_@v_v3.5.2.zip) = 101104 bytes
-BLAKE2s (moor-2.16.2.tar.gz) = a79fd580ac1f427cb5d2efe9dc12a468e00d4c348cf9da220bb604e6fb379139
-SHA512 (moor-2.16.2.tar.gz) = ed60401c3005103ad7e1cbecdd2a6a2b2054ea1afd7279790a4e282279f528ff94d1e5fa53ab545738004708c73e20d890624d1ac2e0573741bb51e94e0343f8
-Size (moor-2.16.2.tar.gz) = 5365952 bytes
+BLAKE2s (moor-2.17.0.tar.gz) = a0827a947a82b10d4e02969fc16f02c51dfc25af29e9d8850cc3a410504b2051
+SHA512 (moor-2.17.0.tar.gz) = b54593fed976b706b06b170f889aca7cf277f0b3ce5b154cda19865216c032c07411462d6ec17a7ab47a8171278ad884f04ef12d924d56f3800144ab3a620ae0
+Size (moor-2.17.0.tar.gz) = 5381789 bytes
