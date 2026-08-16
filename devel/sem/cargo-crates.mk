@@ -1,4 +1,4 @@
-# $NetBSD: cargo-crates.mk,v 1.3 2026/07/13 10:12:06 wiz Exp $
+# $NetBSD: cargo-crates.mk,v 1.4 2026/08/16 13:22:17 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -26,7 +26,7 @@ CARGO_CRATE_DEPENDS+=	clap-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.0
 CARGO_CRATE_DEPENDS+=	clap_complete-4.6.5
 CARGO_CRATE_DEPENDS+=	clap_complete_command-0.6.1
-CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.6.0
+CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.1
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.5
@@ -224,7 +224,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-fortran-0.5.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.23.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.23.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-hcl-1.1.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-htmlx-svelte-0.1.8
+CARGO_CRATE_DEPENDS+=	tree-sitter-htmlx-svelte-0.1.16
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.23.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-ng-1.1.0
