@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5322 2026/08/16 12:55:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5323 2026/08/16 12:56:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-orjson to 3.12.0 [wiz 2026-08-16]
 	Updated textproc/py-pdf to 6.16.1 [wiz 2026-08-16]
 	Updated misc/py-platformdirs to 4.11.3 [wiz 2026-08-16]
+	Updated textproc/py-webencodings to 0.6.1 [wiz 2026-08-16]
