@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/07/08 13:25:51 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2026/08/16 06:15:20 wiz Exp $
 
-BLAKE2s (Crypt-DES-2.07.tar.gz) = 41f8589c401eedeaba700352383fe22e29474221f8ba7993f03d4b14772a12d8
-SHA512 (Crypt-DES-2.07.tar.gz) = 95d40280850290fb2f9b2f26be2f47f2241e0aeeb842bd02c56d667062d65b3b65b9a87c045cbee50604f95f8a0d0b033c92334520de19022decaf77f77c7678
-Size (Crypt-DES-2.07.tar.gz) = 16720 bytes
-SHA1 (patch-__des.h) = 228717db193bd9605a3f3e1267003161301f9501
+BLAKE2s (Crypt-DES-2.09.tar.gz) = f2442d526b6ed2e0f757fd3d2a5e6f465d6223f087bda4d43ee943d59fd1f05c
+SHA512 (Crypt-DES-2.09.tar.gz) = a2f699d38adab350e6297de5cdd5f22544543f9be4558a0cab310712bcaf41b11cfc4954881faa910a687f94771dc81cb396f02b7e381be499bd28fc4ebdfdf8
+Size (Crypt-DES-2.09.tar.gz) = 20635 bytes
