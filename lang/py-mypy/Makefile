@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2026/07/15 06:12:19 adam Exp $
+# $NetBSD: Makefile,v 1.75 2026/08/16 12:41:03 wiz Exp $
 
-DISTNAME=	mypy-2.3.0
+DISTNAME=	mypy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -24,8 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	c # for tests
 
-# as of 2.2.0
-# 14 failed, 14059 passed, 403 skipped, 12 xfailed
+# as of 2.3.1
+# 14 failed, 14150 passed, 403 skipped, 12 xfailed
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
