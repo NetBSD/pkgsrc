@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5308 2026/08/16 11:44:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5309 2026/08/16 11:44:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7852,3 +7852,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/croc to 11.1.1 [drixter 2026-08-16]
 	Updated shells/zsh to 5.9.2 [wiz 2026-08-16]
 	Updated devel/extra-cmake-modules to 6.29.0 [wiz 2026-08-16]
+	Updated graphics/oxygen-icons to 6.29.0 [wiz 2026-08-16]
