@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5313 2026/08/16 12:17:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5314 2026/08/16 12:20:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7857,3 +7857,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libpsl to 0.23.3 [wiz 2026-08-16]
 	Updated textproc/libzim to 9.8.2 [wiz 2026-08-16]
 	Updated textproc/moor to 2.17.0 [wiz 2026-08-16]
+	Updated security/py-cyclonedx-python-lib to 11.12.0 [wiz 2026-08-16]
