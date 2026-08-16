@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/08/11 16:03:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/08/16 16:07:23 taca Exp $
 bin/simplecov${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -130,7 +130,5 @@ ${GEM_LIBDIR}/lib/simplecov/unloaded_file_injector.rb
 ${GEM_LIBDIR}/lib/simplecov/useless_results_remover.rb
 ${GEM_LIBDIR}/lib/simplecov/version.rb
 ${GEM_LIBDIR}/lib/simplecov_json_formatter.rb
-${GEM_LIBDIR}/schemas/coverage-v1.0.schema.json
-${GEM_LIBDIR}/schemas/coverage.schema.json
 ${GEM_LIBDIR}/sig/simplecov.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
