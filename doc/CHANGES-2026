@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5303 2026/08/16 06:16:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5304 2026/08/16 06:19:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7847,3 +7847,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/yazi to 26.8.15 [wiz 2026-08-15]
 	Updated security/p5-Crypt-DES to 2.09 [wiz 2026-08-16]
 	Updated security/p5-CryptX to 0.091 [wiz 2026-08-16]
+	Updated devel/p5-Log-Log4perl to 1.58 [wiz 2026-08-16]
