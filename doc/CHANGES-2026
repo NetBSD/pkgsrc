@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5317 2026/08/16 12:29:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5318 2026/08/16 12:29:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7861,3 +7861,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-charset-normalizer to 3.5.1 [wiz 2026-08-16]
 	Updated devel/py-filelock to 3.32.3 [wiz 2026-08-16]
 	Updated www/py-httpcore2 to 2.10.0 [wiz 2026-08-16]
+	Updated www/py-httpx2 to 2.10.0 [wiz 2026-08-16]
