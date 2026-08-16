@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5327 2026/08/16 15:24:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5328 2026/08/16 16:04:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7871,3 +7871,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sem to 0.21.1 [wiz 2026-08-16]
 	Updated textproc/rumdl to 0.2.55 [wiz 2026-08-16]
 	Updated net/p5-Net-OAuth to 0.32 [wiz 2026-08-16]
+	Updated devel/ruby-io-event to 1.19.5 [taca 2026-08-16]
