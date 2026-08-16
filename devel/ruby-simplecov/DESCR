@@ -1,7 +1,7 @@
 SimpleCov is a code coverage analysis tool for Ruby.  It uses Ruby's
 built-in Coverage library to gather coverage data, but makes processing the
 results much easier by providing a clean API to filter, group, merge,
-format, and display them — a complete coverage suite you can set up in just
+format, and display them -- a complete coverage suite you can set up in just
 a couple of lines.
 
 SimpleCov tracks covered Ruby code; gathering coverage for templating
@@ -9,7 +9,7 @@ solutions like ERB, Slim, and Haml is not supported (though see Eval
 coverage for ERB).
 
 In most cases you'll want overall coverage results spanning all of your
-tests — unit tests, Cucumber features, and so on.  SimpleCov handles this
+tests -- unit tests, Cucumber features, and so on.  SimpleCov handles this
 automatically by caching and merging results as it generates reports, so a
 report reflects coverage across your whole test suite and gives you a truer
 picture of your blank spots.
