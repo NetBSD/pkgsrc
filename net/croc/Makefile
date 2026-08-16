@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/08/15 12:53:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/16 07:42:56 drixter Exp $
 
-DISTNAME=	croc-11.1.0
-PKGREVISION=	1
+DISTNAME=	croc-11.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schollz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

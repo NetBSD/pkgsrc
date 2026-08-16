@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2026/08/14 19:15:58 drixter Exp $
+$NetBSD: distinfo,v 1.4 2026/08/16 07:42:56 drixter Exp $
 
-BLAKE2s (croc-11.1.0.tar.gz) = 0789f9b25c5acacc1c3424f0a6cbed98fb1f427c3ef09b4897d78ade05043a92
-SHA512 (croc-11.1.0.tar.gz) = 11a91971b8a080298bad6051ed4a95746a4806040a2afb26c09b03c21ad7fb9c8cc36427e9b0246ffe712dd6943a87cb81f1a4a688de5818e7c33fb38b2a67ce
-Size (croc-11.1.0.tar.gz) = 2762420 bytes
+BLAKE2s (croc-11.1.1.tar.gz) = 39cbb05f2db9c357575701389674cf245c1de3e92af2e497a8217d9ec8b352dd
+SHA512 (croc-11.1.1.tar.gz) = 5bfcf8e7445767e60bc79f17fd2aff9b663c53eced6a8c0615eb06e12ce00e4d534749243a31994025458100ccd5ada804320cff149a165c58bc94b5b729e62c
+Size (croc-11.1.1.tar.gz) = 2789124 bytes
 BLAKE2s (filippo.io_edwards25519_@v_v1.2.0.mod) = c5ceaac323b473009f82cc55819d006f766cbfe07fe2e4a13410b8507983c86a
 SHA512 (filippo.io_edwards25519_@v_v1.2.0.mod) = 84a78015e8a8917496964cdce8ee304c247756701eed88b33dcb7c2b86fe8b24dd5a2b9cfe15653eebe84e27053f4822efe564248744fcfead9b525ec9e3e307
 Size (filippo.io_edwards25519_@v_v1.2.0.mod) = 42 bytes
