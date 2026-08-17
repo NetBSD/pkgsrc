@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2025/04/12 10:59:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/17 20:22:30 js Exp $
 
-DISTNAME=	fx2-0.13
-PKGREVISION=	2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=whitequark/}
-GITHUB_PROJECT=	libfx2
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	v${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-fx2-0.16
+MASTER_SITES=	https://codeberg.org/GlasgowEmbedded/libfx2/archive/
 CATEGORIES=	devel python
+WRKSRC=		${WRKDIR}/libfx2
 PYSETUPSUBDIR=	software
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
