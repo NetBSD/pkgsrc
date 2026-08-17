@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2026/08/03 13:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/08/17 12:10:06 hubertf Exp $
 
 DISTNAME=	mhash-0.9.9
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mhash/}
 EXTRACT_SUFX=	.tar.bz2
