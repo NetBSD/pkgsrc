@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:25:16 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/08/17 16:37:58 ryoon Exp $
 
 BLAKE2s (obconf-2.0.4.tar.gz) = 2c1bd05699fb2c71d368cc8ef0077e923ae334abf6b213e05aa6263cb605001e
 SHA512 (obconf-2.0.4.tar.gz) = b8cf6f363fa8c2f1d21142a3f79687a72f683f564285b05751c822ddf7a421b09c3440cbc5b08eb09d151601c6ada835ff5cc940bf5abeec2210cca26b552294
 Size (obconf-2.0.4.tar.gz) = 456523 bytes
 SHA1 (patch-aa) = 0de087b762e8f545fa361f480a0e2e30e0ac40ee
+SHA1 (patch-src_appearance.c) = d7898da92495d0961353fda62bbde23aa578c043
+SHA1 (patch-src_desktops.h) = f051829b6404f55be08cee382c1be228605d708c
+SHA1 (patch-src_main.c) = 9946ad73b97c5c1c1cf2261a88277ad9c1460134
