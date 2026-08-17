@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5350 2026/08/17 15:36:40 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.5351 2026/08/17 15:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7899,3 +7899,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/mergiraf version 0.19.0 [wiz 2026-08-17]
 	Updated lang/racket-textual to 9.3 [ktnb 2026-08-17]
 	Updated lang/racket to 9.3 [ktnb 2026-08-17]
+	Updated sysutils/ansible to 14.3.1 [adam 2026-08-17]
+	Updated textproc/py-types-yaml to 6.0.12.20260815 [adam 2026-08-17]
