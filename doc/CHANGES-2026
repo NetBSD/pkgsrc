@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5337 2026/08/17 07:14:44 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5338 2026/08/17 07:15:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7881,3 +7881,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/makedepend to 1.0.10 [wiz 2026-08-17]
 	Updated devel/gitpane to 0.11.0 [pin 2026-08-17]
 	Updated devel/sem to 0.22.1 [pin 2026-08-17]
+	Updated editors/redox to 0.8.1 [pin 2026-08-17]
