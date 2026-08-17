@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/08/12 07:07:23 taca Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/17 08:37:48 wiz Exp $
+#
+# when updating this, run 'make upload'
 
 DISTNAME=	jpgraph-4.4.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
