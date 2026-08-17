@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/08/15 12:53:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/17 13:14:54 wiz Exp $
 
 DISTNAME=	rest-server-0.14.0
 PKGNAME=	restic-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	rest-server
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://restic.net/
+HOMEPAGE=	https://github.com/restic/rest-server
 COMMENT=	REST server for restic
 LICENSE=	mit
 
