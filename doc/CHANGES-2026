@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5351 2026/08/17 15:43:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5352 2026/08/17 17:19:51 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7901,3 +7901,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/racket to 9.3 [ktnb 2026-08-17]
 	Updated sysutils/ansible to 14.3.1 [adam 2026-08-17]
 	Updated textproc/py-types-yaml to 6.0.12.20260815 [adam 2026-08-17]
+	Updated devel/py-tortoisehg to 7.2.2 [rhialto 2026-08-17]
