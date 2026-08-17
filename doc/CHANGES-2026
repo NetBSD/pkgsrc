@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5342 2026/08/17 09:14:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5343 2026/08/17 09:31:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7888,3 +7888,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-prometheus_client to 0.26.0 [adam 2026-08-17]
 	Updated devel/py-project-api to 1.11.0 [adam 2026-08-17]
 	Updated textproc/py-fastjsonschema to 2.22.2 [adam 2026-08-17]
+	Updated math/py-numpy to 2.5.2 [adam 2026-08-17]
+	Updated www/py-zensical to 0.0.55 [adam 2026-08-17]
