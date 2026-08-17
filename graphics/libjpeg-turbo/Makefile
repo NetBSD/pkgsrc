@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/07/08 09:50:24 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/08/17 15:27:47 ryoon Exp $
 
 DISTNAME=	libjpeg-turbo-3.2.0
 PKGREVISION=	2
@@ -43,6 +43,10 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_JPEG8=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_ZLIB=ON
 
 CHECK_PORTABILITY_SKIP+=	release/makemacpkg.in
+
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-msse2
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
