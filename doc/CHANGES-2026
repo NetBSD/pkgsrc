@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5333 2026/08/17 04:20:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5334 2026/08/17 05:29:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7877,3 +7877,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-rex-bin_tools to 0.1.17 [taca 2026-08-16]
 	Updated www/ruby-aws-partitions to 1.1281.0 [taca 2026-08-16]
 	Updated www/php-ja-wordpress to 7.0.4nb1 [taca 2026-08-17]
+	Updated security/putty to 0.85 [wiz 2026-08-17]
