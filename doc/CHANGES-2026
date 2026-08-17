@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5343 2026/08/17 09:31:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5344 2026/08/17 09:54:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7890,3 +7890,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-fastjsonschema to 2.22.2 [adam 2026-08-17]
 	Updated math/py-numpy to 2.5.2 [adam 2026-08-17]
 	Updated www/py-zensical to 0.0.55 [adam 2026-08-17]
+	Updated www/py-uvicorn to 0.52.3 [adam 2026-08-17]
+	Updated textproc/py-wcmatch to 11.0.1 [adam 2026-08-17]
