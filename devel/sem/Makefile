@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/08/16 13:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/17 07:14:26 pin Exp $
 
-DISTNAME=	sem-0.21.1
+DISTNAME=	sem-0.22.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ataraxy-Labs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
