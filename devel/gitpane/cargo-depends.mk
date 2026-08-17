@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2026/08/14 08:44:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2026/08/17 07:13:23 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -30,8 +30,8 @@ CARGO_CRATE_DEPENDS+=	castaway-0.2.4
 CARGO_CRATE_DEPENDS+=	cc-1.2.67
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
-CARGO_CRATE_DEPENDS+=	clap-4.6.4
-CARGO_CRATE_DEPENDS+=	clap_builder-4.6.2
+CARGO_CRATE_DEPENDS+=	clap-4.6.5
+CARGO_CRATE_DEPENDS+=	clap_builder-4.6.5
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.4
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.1
@@ -110,7 +110,7 @@ CARGO_CRATE_DEPENDS+=	hex-0.4.3
 CARGO_CRATE_DEPENDS+=	http-1.4.2
 CARGO_CRATE_DEPENDS+=	httparse-1.10.1
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
-CARGO_CRATE_DEPENDS+=	ignore-0.4.31
+CARGO_CRATE_DEPENDS+=	ignore-0.4.33
 CARGO_CRATE_DEPENDS+=	indenter-0.3.4
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
@@ -212,7 +212,7 @@ CARGO_CRATE_DEPENDS+=	ratatui-widgets-0.3.2
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
 CARGO_CRATE_DEPENDS+=	redox_users-0.5.2
 CARGO_CRATE_DEPENDS+=	regex-1.13.0
-CARGO_CRATE_DEPENDS+=	regex-automata-0.4.15
+CARGO_CRATE_DEPENDS+=	regex-automata-0.4.18
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.11
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.28
