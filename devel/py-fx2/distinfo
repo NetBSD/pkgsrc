@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/08/13 15:25:56 js Exp $
+$NetBSD: distinfo,v 1.3 2026/08/17 20:22:30 js Exp $
 
-BLAKE2s (fx2-0.13.tar.gz) = 79dfdf73bcb50073e80e04ac4c1e802615b0be0246973efd9ba5abcdc28dd64a
-SHA512 (fx2-0.13.tar.gz) = 81cd6fdeaed11ea433278eaf02597acca16e161eb765c50dbf3dca7cf6b5bf1758ebc8055e0f30f96b2c9f6edce4f35cf5ba876452dfff313d9d8d9f53534335
-Size (fx2-0.13.tar.gz) = 87722 bytes
+BLAKE2s (v0.16.tar.gz) = 6a173c684f31f935bd4d4e7bba469915faa79758c4501316adfe55ac0eef7d01
+SHA512 (v0.16.tar.gz) = de1b9b5eb1eb808aa9f5b48a78545a5721aa3b77f804656928949f028882f910e74ce43d066fb10d8b4f8fadc0062a456bf34ac10b2211c43d73737e89ba9b22
+Size (v0.16.tar.gz) = 102234 bytes

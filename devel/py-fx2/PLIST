@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/10 14:18:49 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/17 20:22:30 js Exp $
 bin/fx2tool
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/fx2-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/fx2-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/fx2-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/fx2-${PKGVERSION}.dist-info/entry_points.txt
+${PYSITELIB}/fx2-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/fx2/__init__.py
 ${PYSITELIB}/fx2/__init__.pyc
 ${PYSITELIB}/fx2/__init__.pyo
