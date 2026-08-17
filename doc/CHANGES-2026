@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5346 2026/08/17 12:28:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5347 2026/08/17 13:09:44 roy Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7895,3 +7895,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd to 10.5.1 [roy 2026-08-17]
 	Updated time/py-time-machine to 3.4.0 [adam 2026-08-17]
 	Updated devel/py-kafka-python to 3.0.11 [adam 2026-08-17]
+	Updated net/dhcpcd to 10.5.2 [roy 2026-08-17]
