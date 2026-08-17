@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5335 2026/08/17 05:35:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5336 2026/08/17 07:13:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7879,3 +7879,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-ja-wordpress to 7.0.4nb1 [taca 2026-08-17]
 	Updated security/putty to 0.85 [wiz 2026-08-17]
 	Updated devel/makedepend to 1.0.10 [wiz 2026-08-17]
+	Updated devel/gitpane to 0.11.0 [pin 2026-08-17]
