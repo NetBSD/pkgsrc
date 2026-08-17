@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2026/08/16 07:42:56 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/08/17 21:08:45 drixter Exp $
 
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.mod
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.zip
@@ -7,8 +7,6 @@ GO_MODULE_FILES+=	github.com/cespare/xxhash/v2/@v/v2.3.0.zip
 GO_MODULE_FILES+=	github.com/coder/websocket/@v/v1.8.15.mod
 GO_MODULE_FILES+=	github.com/coder/websocket/@v/v1.8.15.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
-GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
-GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/denisbrodbeck/machineid/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/denisbrodbeck/machineid/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
@@ -25,7 +23,6 @@ GO_MODULE_FILES+=	github.com/minio/highwayhash/@v/v1.0.4.zip
 GO_MODULE_FILES+=	github.com/mitchellh/colorstring/@v/v0.0.0-20190213212951-d06e56a500db.mod
 GO_MODULE_FILES+=	github.com/mitchellh/colorstring/@v/v0.0.0-20190213212951-d06e56a500db.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
-GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
 GO_MODULE_FILES+=	github.com/sabhiram/go-gitignore/@v/v0.0.0-20210923224102-525f6e181f06.mod
@@ -41,8 +38,8 @@ GO_MODULE_FILES+=	github.com/schollz/progressbar/v3/@v/v3.19.1.zip
 GO_MODULE_FILES+=	github.com/skip2/go-qrcode/@v/v0.0.0-20200617195104-da1b6568686e.mod
 GO_MODULE_FILES+=	github.com/skip2/go-qrcode/@v/v0.0.0-20200617195104-da1b6568686e.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.12.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.12.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.6.1.mod
 GO_MODULE_FILES+=	github.com/tscholl2/siec/@v/v0.0.0-20240310163802-c2c6f6198406.mod
 GO_MODULE_FILES+=	github.com/tscholl2/siec/@v/v0.0.0-20240310163802-c2c6f6198406.zip
@@ -71,8 +68,8 @@ GO_MODULE_FILES+=	golang.org/x/net/@v/v0.15.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.21.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.25.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.34.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.57.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.57.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.zip
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220722155255-886fb9371eb4.mod
