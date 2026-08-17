@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/06/28 15:40:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/08/17 09:27:49 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -226,10 +226,8 @@ ${PYSITELIB}/numpy/_core/tests/examples/cython/meson.build
 ${PYSITELIB}/numpy/_core/tests/examples/cython/setup.py
 ${PYSITELIB}/numpy/_core/tests/examples/cython/setup.pyc
 ${PYSITELIB}/numpy/_core/tests/examples/cython/setup.pyo
-${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api1.c
-${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api2.pyx
-${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api_latest.c
-${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api_opaque.c
+${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api.c
+${PYSITELIB}/numpy/_core/tests/examples/limited_api/limited_api_cython.pyx
 ${PYSITELIB}/numpy/_core/tests/examples/limited_api/meson.build
 ${PYSITELIB}/numpy/_core/tests/examples/limited_api/setup.py
 ${PYSITELIB}/numpy/_core/tests/examples/limited_api/setup.pyc
