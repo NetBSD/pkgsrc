@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4675 2026/08/12 22:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4676 2026/08/17 14:18:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1230,6 +1230,7 @@ SUBDIR+=	mell
 SUBDIR+=	memcached
 SUBDIR+=	menhir
 SUBDIR+=	mercurial
+SUBDIR+=	mergiraf
 SUBDIR+=	meson
 SUBDIR+=	metslib
 SUBDIR+=	mgdiff
