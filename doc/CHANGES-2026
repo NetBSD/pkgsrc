@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5349 2026/08/17 15:36:11 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.5350 2026/08/17 15:36:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7898,3 +7898,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dhcpcd to 10.5.2 [roy 2026-08-17]
 	Added devel/mergiraf version 0.19.0 [wiz 2026-08-17]
 	Updated lang/racket-textual to 9.3 [ktnb 2026-08-17]
+	Updated lang/racket to 9.3 [ktnb 2026-08-17]
