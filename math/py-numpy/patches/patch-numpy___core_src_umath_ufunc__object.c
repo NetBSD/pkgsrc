@@ -1,6 +1,7 @@
-$NetBSD: patch-numpy___core_src_umath_ufunc__object.c,v 1.1 2026/08/17 09:27:49 adam Exp $
+$NetBSD: patch-numpy___core_src_umath_ufunc__object.c,v 1.2 2026/08/17 09:58:06 wiz Exp $
 
 Avoid static_assert in C.
+https://github.com/numpy/numpy/issues/32308
 
 --- numpy/_core/src/umath/ufunc_object.c.orig	2026-08-14 12:42:43.705330610 +0000
 +++ numpy/_core/src/umath/ufunc_object.c
