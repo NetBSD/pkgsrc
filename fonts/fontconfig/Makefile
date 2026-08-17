@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2026/08/14 14:01:21 adam Exp $
+# $NetBSD: Makefile,v 1.143 2026/08/17 01:30:38 pgoyette Exp $
 
 DISTNAME=	fontconfig-2.18.3
 CATEGORIES=	fonts
@@ -105,7 +105,7 @@ CHECK_PORTABILITY_SKIP+=	.gitlab-ci/fedora-cross.sh
 TEST_TARGET=	check
 
 pre-configure:
-	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
+	-cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
