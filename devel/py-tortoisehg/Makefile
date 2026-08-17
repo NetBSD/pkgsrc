@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2026/01/06 11:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/08/17 17:19:40 rhialto Exp $
 
-DISTNAME=	tortoisehg-7.0.1
+DISTNAME=	tortoisehg-7.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	https://www.mercurial-scm.org/release/tortoisehg/targz/
 
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=9.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
-DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.0.0:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.3<7.3:../../devel/py-mercurial
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-qt6-qscintilla-[0-9]*:../../x11/py-qt6-qscintilla
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
