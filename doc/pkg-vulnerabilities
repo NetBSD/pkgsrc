@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.779 2026/08/14 21:48:05 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.780 2026/08/17 17:11:00 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -29475,8 +29475,8 @@ python314<3.14.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-1528
 python310-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
 python311-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
 python312-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
-python313-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
-python314-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
+python313<3.13.15	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
+python314<3.14.7	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15366
 python310-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15367
 python311-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15367
 python312-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-15367
@@ -30178,16 +30178,16 @@ py{27,310,311,312,313,314}-pdf<6.8.0	denial-of-service	https://nvd.nist.gov/vuln
 py{27,310,311,312,313,314}-tornado<6.5.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-31958
 py{27,310,311,312,313,314}-wagtail<7.2.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-28222
 py{27,310,311,312,313,314}-wagtail<7.2.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2026-28223
-python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
-python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
-python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
-python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
-python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
-python310-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
-python311-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
-python312-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
-python313-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
-python314-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
+python310<3.10.21	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
+python311<3.11.16	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
+python312<3.12.14	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
+python313<3.13.13	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
+python314<3.14.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-13462
+python310<3.10.21	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
+python311<3.11.16	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
+python312<3.12.14	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
+python313<3.13.13	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
+python314<3.14.4	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
 quickjs<20251212	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69653
 quickjs<20251212	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69654
 rustdesk-server-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-30784
@@ -30278,16 +30278,16 @@ python311-[0-9]*	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-3479
 python312-[0-9]*	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-3479
 python313-[0-9]*	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-3479
 python314-[0-9]*	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2026-3479
-python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
-python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
-python312-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
-python313-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
-python314-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
-python310-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
-python311-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
-python312-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
-python313-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
-python314-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
+python310<3.10.21	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
+python311<3.11.16	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
+python312<3.12.14	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
+python313<3.13.13	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
+python314<3.14.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2026-3644
+python310<3.10.21	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
+python311<3.11.16	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
+python312<3.12.14	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
+python313<3.13.13	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
+python314<3.14.4	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-4224
 radare2<6.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-4174
 samtools<1.21.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2026-31972
 samtools<1.21.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2026-31973
