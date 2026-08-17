@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2026/08/16 11:44:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/08/17 05:40:26 wiz Exp $
+#
+# changelog:
+# https://kde.org/announcements/frameworks/6/6.nn.0/
 
 DISTNAME=	oxygen-icons-6.29.0
 CATEGORIES=	graphics kde
