@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5339 2026/08/17 07:16:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5340 2026/08/17 07:45:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7883,3 +7883,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sem to 0.22.1 [pin 2026-08-17]
 	Updated editors/redox to 0.8.1 [pin 2026-08-17]
 	Updated sysutils/lla to 0.5.12 [pin 2026-08-17]
+	Updated security/putty to 0.85nb1 [wiz 2026-08-17]
