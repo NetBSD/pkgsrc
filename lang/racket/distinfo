@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2026/06/01 01:09:26 ktnb Exp $
+$NetBSD: distinfo,v 1.34 2026/08/17 13:27:14 ktnb Exp $
 
-BLAKE2s (racket-9.2-src.tgz) = adc58b24b4bff478dbb9e27528abe41a3cb255fa3bf996af3d9689c03aee3c8a
-SHA512 (racket-9.2-src.tgz) = 7bffaab000298b9c70f9e5c7d320dbe809c17e13aeea40070d9dee2819933481cbbe059a02b66d8b6e06a5e0eb60fcf00ba0a674e966c282a3354755eb9ddb19
-Size (racket-9.2-src.tgz) = 34737316 bytes
+BLAKE2s (racket-9.3-src.tgz) = fb2957c3c0e10efd7245e013e03b49e193c8928f01421a9270b7129d92fbe6ef
+SHA512 (racket-9.3-src.tgz) = 595d517af9c27687d1c74dd5a9ec18efa9669dda6fb6908d6ae925a42e4e24ecefda1b7e894b26a00a80d6ec6b4489923356e63a933f3bad6fde4396fd388701
+Size (racket-9.3-src.tgz) = 34788390 bytes
 SHA1 (patch-src_ChezScheme_c_prim5.c) = 93d016e4e7b0542e8c9ad13db04441f4484dda67
 SHA1 (patch-src_ChezScheme_c_self-exe.c) = 3625cbcf6c7df2c5ee8968db127e1461eb500407
 SHA1 (patch-src_bc_configure) = 9c9e996e24fbfe38ee98e857f72af8e7fda724f8
