@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.156 2026/08/17 09:27:49 adam Exp $
+# $NetBSD: Makefile,v 1.157 2026/08/17 18:12:57 wiz Exp $
 
 DISTNAME=	numpy-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 
@@ -16,11 +17,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
+USE_CC_FEATURES=	c11
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
-# error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=		c99
 # meson checks for gcc 10.3
 GCC_REQD+=		10
 
