@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/07/15 06:16:37 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/08/17 12:28:16 adam Exp $
 
-BLAKE2s (kafka_python-3.0.8.tar.gz) = 625c09da89c81e3d415e1f011085b563cc464b5ba6e9e87cef70c9e13df62a61
-SHA512 (kafka_python-3.0.8.tar.gz) = 5c3325dc6ce5cb441dae5d406316e78382ef42ed6251bab25fedcc701dc7e0567afff314aba1034b6218c9dc988b93b9bb2b2de0f9c14ac9e0db824383f3f604
-Size (kafka_python-3.0.8.tar.gz) = 513378 bytes
+BLAKE2s (kafka_python-3.0.11.tar.gz) = af537ef29c034e539d1f00202fbf626c09e54f2df3e8b7b0b4c6091b5914f045
+SHA512 (kafka_python-3.0.11.tar.gz) = 15ef7d7035547477c398bd75a38df77ea1190dd09b9d4cc8dc22ad4fd196038f2513bab6da9ba0fc9642e38d755983bb972eba92b942a6e3c63f807397f0a170
+Size (kafka_python-3.0.11.tar.gz) = 514717 bytes
