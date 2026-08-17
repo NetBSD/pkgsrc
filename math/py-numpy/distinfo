@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.117 2026/07/06 07:11:59 wiz Exp $
+$NetBSD: distinfo,v 1.118 2026/08/17 09:27:49 adam Exp $
 
-BLAKE2s (numpy-2.5.1.tar.gz) = 1c173220f43bd37043ccaf322f9bb76c547d4d018c7fe610f3e35a9536ef83ad
-SHA512 (numpy-2.5.1.tar.gz) = cbb1f844bc7feb845de24c4951bc378b0d4d96a1ac7eaa9fe1f615aaf470f33c81e94fddbbd83f555b7d9248b5db60b641a4582b9f39b0f6d906f7a8acdd7add
-Size (numpy-2.5.1.tar.gz) = 20755553 bytes
+BLAKE2s (numpy-2.5.2.tar.gz) = 5d85089a4c6f2305bc7ccdcecf01b29ec11a485bb7d52f6f1a12974342619e2f
+SHA512 (numpy-2.5.2.tar.gz) = 30d0581b90a88f80de49202e9dace7605363e66d1141229cc85a4aef5aad185de4d24820cb7ec8e8860b1e2c593b7795649675ef850d35ef3883b386b5381231
+Size (numpy-2.5.2.tar.gz) = 20773161 bytes
 SHA1 (patch-numpy___core_feature__detection__misc.h) = c0f4d318c93fcd0e36c34c549c7778350b8a6ea5
 SHA1 (patch-numpy___core_include_numpy_npy__common.h) = 175cd8f64af681949c3e8bfde064c93908433ea2
+SHA1 (patch-numpy___core_src_multiarray_arrayobject.c) = df6b7998b2321b01d7e7534e917745a479d96d0c
 SHA1 (patch-numpy___core_src_npymath_npy__math.c) = b28f1a9730d98a18b2f4f97c1c356ca8ad80903d
+SHA1 (patch-numpy___core_src_umath_ufunc__object.c) = 161e7631f95c5b9557fcb05c4ea9daa7f7f884e7
 SHA1 (patch-numpy_linalg_lapack__litemodule.c) = e97ec871c2f33c3121b3c8471a9e5a74c3c798c8
