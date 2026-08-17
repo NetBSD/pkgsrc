@@ -1,6 +1,7 @@
-$NetBSD: patch-numpy___core_src_multiarray_arrayobject.c,v 1.1 2026/08/17 09:27:49 adam Exp $
+$NetBSD: patch-numpy___core_src_multiarray_arrayobject.c,v 1.2 2026/08/17 09:58:06 wiz Exp $
 
 Avoid static_assert in C.
+https://github.com/numpy/numpy/issues/32308
 
 --- numpy/_core/src/multiarray/arrayobject.c.orig	2026-08-14 12:32:59.056345672 +0000
 +++ numpy/_core/src/multiarray/arrayobject.c
