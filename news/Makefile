@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2026/04/23 18:17:45 pin Exp $
+# $NetBSD: Makefile,v 1.57 2026/08/18 18:14:38 pin Exp $
 #
 
 COMMENT=	Network news
 
+SUBDIR+=	brochure
 SUBDIR+=	bulletty
 SUBDIR+=	bystand
 SUBDIR+=	canlock-hp
