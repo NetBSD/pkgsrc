@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/06/28 08:02:12 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/18 14:42:19 kim Exp $
 
-DISTNAME=	libtmux-0.59.0
+DISTNAME=	libtmux-0.61.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libtmux/}
