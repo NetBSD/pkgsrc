@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5359 2026/08/18 10:16:54 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5360 2026/08/18 10:19:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7909,3 +7909,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/suitesparse to 7.14.0 [ktnb 2026-08-18]
 	Updated x11/xload to 1.2.2 [wiz 2026-08-18]
 	Updated devel/gitpane to 0.12.0 [pin 2026-08-18]
+	Updated shells/nushell to 0.115.0 [pin 2026-08-18]
