@@ -1,10 +1,16 @@
-$NetBSD: patch-Misc_common.h,v 1.3 2024/09/29 09:23:31 adam Exp $
+$NetBSD: patch-Misc_common.h,v 1.4 2026/08/18 10:07:28 adam Exp $
 
+On Darwin, don't redefine swab().
 Add NetBSD support and check for _LITTLE_ENDIAN
 
 --- Misc/common.h.orig	2019-12-17 16:05:14.000000000 +0000
 +++ Misc/common.h
-@@ -70,11 +70,11 @@
+@@ -66,15 +66,15 @@
+ #endif
+ 
+ /* For beboxes and Mac use a hand-made version of swab */
+-#if defined(TARGET_OS_VMS) || defined(TARGET_OS_BEOS) || defined(TARGET_OS_MAC) || defined(__STRICT_ANSI__)
++#if defined(TARGET_OS_VMS) || defined(TARGET_OS_BEOS) || defined(__STRICT_ANSI__)
  void swab( const char *from, char *to, int nbytes);
  #endif
  
