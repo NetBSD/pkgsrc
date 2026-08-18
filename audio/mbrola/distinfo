@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2026/07/21 13:47:57 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2026/08/18 10:07:28 adam Exp $
 
 BLAKE2s (mbrola-3.3.tar.gz) = 0b5fe781e2480a7ab03e84d79e9dc84cd38aeda35ba45335c580aeee59e514a6
 SHA512 (mbrola-3.3.tar.gz) = 4c15481d2afc7f459c511d2f2791ae1f0f89893ea86fcde113c73f9b5509b893bc7beac8ec5fa76ca0f4e0aca35982ff1db15e8611514d91991608aee004c3f2
 Size (mbrola-3.3.tar.gz) = 345444 bytes
-SHA1 (patch-Makefile) = d4329a39f3533504b810625f67ce53fb219f29c6
-SHA1 (patch-Misc_common.h) = 1b5806c924e23acd7f481080be43e3ce03220180
+SHA1 (patch-Makefile) = 06c7df6e31adb407e97e86559d5976aabf192d26
+SHA1 (patch-Misc_common.c) = b31eda27abadc943f70463bcb809694879ec4c71
+SHA1 (patch-Misc_common.h) = 0b1f11b44002b4ce36387224e3f42f41e0011727
