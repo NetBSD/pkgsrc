@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/03/26 00:15:57 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/18 23:21:21 gdt Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	bin
 CFLAGS+=	-fexcess-precision=standard
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o paranoia paranoia.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} ${LDFLAGS} -o paranoia paranoia.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/paranoia ${DESTDIR}${PREFIX}/bin
