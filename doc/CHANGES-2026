@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5375 2026/08/18 18:50:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5376 2026/08/18 19:01:29 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7936,3 +7936,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.2.0 [drixter 2026-08-18]
 	Updated security/adguardhome to 0.107.79 [adam 2026-08-18]
 	Updated net/icinga2 to 2.16.5 [adam 2026-08-18]
+	Updated net/knot to 3.5.7 [drixter 2026-08-18]
