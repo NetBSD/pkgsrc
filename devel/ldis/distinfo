@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2026/08/10 19:01:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2026/08/18 16:44:58 agc Exp $
 
-BLAKE2s (ldis-20260810.tar.gz) = 1ec3af3773c1e7f273addd6d8dc0f6dcdb9e3f54c2bcdc0081f3e18e5b58270f
-SHA512 (ldis-20260810.tar.gz) = 51ea5c18915000ad8883224f1e7d6d9dfb76772f61dc8fae2e5fd5aca654c7112a81191442ab6d00c274cfc413a58f72ef463591d18a572d6f88e565e1e85387
-Size (ldis-20260810.tar.gz) = 39415 bytes
+BLAKE2s (ldis-20260818.tar.gz) = 70f4160a7cb45fccdff0082d91d3f9a0af71b427256cdfc1cf7bf56d9e5e3fa3
+SHA512 (ldis-20260818.tar.gz) = 0517e9aad71f759211a0c68d26deadcb3c30837b442a019b5e5afb96053c5bedca7212500adc112cc09faa9c380db7d53c62c67bfdb6aa2006ff7e19df92b121
+Size (ldis-20260818.tar.gz) = 39687 bytes
 SHA1 (patch-bin-Makefile) = c233bcd084ada93a419cd322d4393ec3fd18dba3
