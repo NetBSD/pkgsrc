@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5369 2026/08/18 16:47:42 agc Exp $
+$NetBSD: CHANGES-2026,v 1.5370 2026/08/18 18:15:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7923,3 +7923,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/tmuxp to 1.74.0 [kim 2026-08-18]
 	Updated misc/sesh to 2.28.0 [kim 2026-08-18]
 	Updated devel/ldis to 20260818 [agc 2026-08-18]
+	Added news/brochure version 0.10.0 [pin 2026-08-18]
