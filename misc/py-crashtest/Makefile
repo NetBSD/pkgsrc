@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/08/12 12:08:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/18 07:20:29 wiz Exp $
 
 DISTNAME=	crashtest-0.4.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/sdispater/crashtest
 COMMENT=	Manage Python errors with ease
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
