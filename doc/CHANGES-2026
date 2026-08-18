@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5371 2026/08/18 18:31:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5372 2026/08/18 18:34:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7927,3 +7927,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/qt6 to 6.11.2 [adam 2026-08-18]
 	Updated devel/py-astroid to 4.3.1 [adam 2026-08-18]
 	Updated www/py-modelsearch to 1.3.2 [adam 2026-08-18]
+	Updated net/grpc to 1.83.0 [adam 2026-08-18]
+	Updated net/py-grpcio to 1.83.0 [adam 2026-08-18]
+	Updated net/py-grpcio-status to 1.83.0 [adam 2026-08-18]
+	Updated net/py-grpcio-testing to 1.83.0 [adam 2026-08-18]
+	Updated net/py-grpcio-tools to 1.83.0 [adam 2026-08-18]
