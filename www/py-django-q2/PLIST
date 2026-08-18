@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/22 09:31:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/08/18 12:39:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/django_q/__init__.py
 ${PYSITELIB}/django_q/__init__.pyc
 ${PYSITELIB}/django_q/__init__.pyo
@@ -46,10 +45,15 @@ ${PYSITELIB}/django_q/exceptions.pyo
 ${PYSITELIB}/django_q/humanhash.py
 ${PYSITELIB}/django_q/humanhash.pyc
 ${PYSITELIB}/django_q/humanhash.pyo
+${PYSITELIB}/django_q/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_q/locale/de/LC_MESSAGES/django.po
+${PYSITELIB}/django_q/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_q/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/django_q/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_q/locale/ru/LC_MESSAGES/django.po
+${PYSITELIB}/django_q/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_q/locale/tr/LC_MESSAGES/django.po
+${PYSITELIB}/django_q/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_q/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/django_q/management/__init__.py
 ${PYSITELIB}/django_q/management/__init__.pyc
