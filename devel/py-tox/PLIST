@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/05/27 12:44:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/08/18 12:46:39 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -373,6 +373,9 @@ ${PYSITELIB}/tox/util/file_view.pyo
 ${PYSITELIB}/tox/util/graph.py
 ${PYSITELIB}/tox/util/graph.pyc
 ${PYSITELIB}/tox/util/graph.pyo
+${PYSITELIB}/tox/util/json_types.py
+${PYSITELIB}/tox/util/json_types.pyc
+${PYSITELIB}/tox/util/json_types.pyo
 ${PYSITELIB}/tox/util/path.py
 ${PYSITELIB}/tox/util/path.pyc
 ${PYSITELIB}/tox/util/path.pyo
