@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5364 2026/08/18 12:56:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5365 2026/08/18 15:24:37 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7918,3 +7918,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-admin-rangefilter to 0.14.0 [adam 2026-08-18]
 	Updated devel/py-tox to 4.60.0 [adam 2026-08-18]
 	Updated graphics/gdk-pixbuf2 to 2.44.8 [adam 2026-08-18]
+	Updated misc/py-libtmux to 0.61.0 [kim 2026-08-18]
