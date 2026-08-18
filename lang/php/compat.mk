@@ -20,6 +20,7 @@ PHP_COMPAT_MK:=	# empty
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu<5:../../www/php-apcu4
 . else
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu>=5:../../www/php-apcu
+. include "../../www/php-apcu/buildlink3.mk"
 . endif
 .endif # apcu
 
@@ -34,6 +35,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-imap>=1.0.3:../../mail/php-pecl-imap
 .if ${PHP_REQUIRE_MODULE:Mjson}
 . if ${PHP_VER} < 80
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+. include "../../textproc/php-json/buildlink3.mk"
 . endif
 .endif # json
 
