@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.3 2026/04/30 06:39:44 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.4 2026/08/18 18:26:06 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
+--- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2026-08-11 12:42:19.000000000 +0000
 +++ src/3rdparty/chromium/third_party/zlib/BUILD.gn
 @@ -140,7 +140,7 @@ if (use_arm_neon_optimizations) {
      defines = [ "CRC32_ARMV8_CRC32" ]
      if (is_android) {
        defines += [ "ARMV8_OS_ANDROID" ]
--    } else if (is_linux || is_chromeos) {
-+    } else if ((is_linux || is_chromeos) && !is_bsd) {
+-    } else if (is_linux || is_chromeos || is_ohos) {
++    } else if ((is_linux || is_chromeos || is_ohos) && !is_bsd) {
        defines += [ "ARMV8_OS_LINUX" ]
      } else if (is_mac) {
        defines += [ "ARMV8_OS_MACOS" ]
@@ -28,7 +28,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.3 2026/04/30
      } else {
        assert(false, "Unsupported ARM OS")
      }
-@@ -473,7 +479,7 @@ static_library("bundled_minizip") {
+@@ -475,7 +481,7 @@ static_library("bundled_minizip") {
      ]
    }
  

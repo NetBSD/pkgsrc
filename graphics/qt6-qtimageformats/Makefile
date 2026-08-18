@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2026/05/14 16:41:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2026/08/18 18:26:03 adam Exp $
 
 DISTNAME=	qtimageformats-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtimageformats-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Additional image handlers for Qt6
 CATEGORIES=	graphics
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

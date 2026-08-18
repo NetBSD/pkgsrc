@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2026/05/13 05:31:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/08/18 18:26:04 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -81,6 +81,7 @@ ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstream
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreameraudiooutput_p.h
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreamerbufferprobe_p.h
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreamercamera_p.h
+${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreameregldisplay_p.h
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreamerformatinfo_p.h
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreamerimagecapture_p.h
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/${PKGVERSION}/QtGstreamerMediaPluginImpl/private/qgstreamerintegration_p.h

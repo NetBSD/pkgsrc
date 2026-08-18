@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/04/30 06:39:35 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.3 2026/08/18 18:26:06 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2026-03-16 11:40:07.000000000 +0000
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2026-08-11 12:42:19.000000000 +0000
 +++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
 @@ -200,7 +200,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -42,7 +42,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
  }
  
  # compiler ---------------------------------------------------------------------
-@@ -626,6 +629,10 @@ config("compiler") {
+@@ -628,6 +631,10 @@ config("compiler") {
      }
    }
  
@@ -53,7 +53,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
    # Linux-specific compiler flags setup.
    # ------------------------------------
    if (use_gold) {
-@@ -709,7 +716,7 @@ config("compiler") {
+@@ -711,7 +718,7 @@ config("compiler") {
      ldflags += [ "-Wl,-z,keep-text-section-prefix" ]
    }
  
@@ -62,7 +62,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
      cflags += [ "-fcrash-diagnostics-dir=" + clang_diagnostic_dir ]
      if (save_reproducers_on_lld_crash && use_lld) {
        ldflags += [
-@@ -1375,7 +1382,7 @@ config("compiler_cpu_abi") {
+@@ -1377,7 +1384,7 @@ config("compiler_cpu_abi") {
      # CPU architecture. We may or may not be doing a cross compile now, so for
      # simplicity we always explicitly set the architecture.
      if (current_cpu == "x64") {
@@ -71,7 +71,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
          cflags += [ "--target=x86_64-unknown-linux-gnu" ]
          ldflags += [ "--target=x86_64-unknown-linux-gnu" ]
        } else {
-@@ -1384,7 +1391,7 @@ config("compiler_cpu_abi") {
+@@ -1386,7 +1393,7 @@ config("compiler_cpu_abi") {
        }
        cflags += [ "-msse3" ]
      } else if (current_cpu == "x86") {
@@ -80,7 +80,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
          cflags += [ "--target=i386-unknown-linux-gnu" ]
          ldflags += [ "--target=i386-unknown-linux-gnu" ]
        } else {
-@@ -1396,7 +1403,7 @@ config("compiler_cpu_abi") {
+@@ -1398,7 +1405,7 @@ config("compiler_cpu_abi") {
          "-msse3",
        ]
      } else if (current_cpu == "arm") {
@@ -89,16 +89,16 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
          cflags += [ "--target=arm-linux-gnueabihf" ]
          ldflags += [ "--target=arm-linux-gnueabihf" ]
        }
-@@ -1411,7 +1418,7 @@ config("compiler_cpu_abi") {
+@@ -1413,7 +1420,7 @@ config("compiler_cpu_abi") {
          cflags += [ "-mtune=$arm_tune" ]
        }
      } else if (current_cpu == "arm64") {
--      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device) {
-+      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_bsd) {
+-      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_ohos) {
++      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_ohos && !is_bsd) {
          cflags += [ "--target=aarch64-linux-gnu" ]
          ldflags += [ "--target=aarch64-linux-gnu" ]
        }
-@@ -1810,7 +1817,7 @@ config("compiler_deterministic") {
+@@ -1812,7 +1819,7 @@ config("compiler_deterministic") {
  }
  
  config("clang_revision") {
@@ -107,7 +107,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
        current_os != "zos") {
      _perform_consistency_checks = current_toolchain == default_toolchain
      if (llvm_force_head_revision) {
-@@ -2399,9 +2406,6 @@ config("default_warnings") {
+@@ -2403,9 +2410,6 @@ config("default_warnings") {
  
        # TODO(crbug.com/40284799): Fix and re-enable.
        "-Wno-thread-safety-reference-return",
@@ -117,7 +117,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
      ]
  
      cflags += [ "-Wno-deprecated-declarations" ]
-@@ -2759,7 +2763,7 @@ config("export_dynamic") {
+@@ -2763,7 +2767,7 @@ config("export_dynamic") {
  # 2. Remove the thin_archive config, so that the .a file actually contains all
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
@@ -126,7 +126,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -3197,7 +3201,7 @@ config("afdo_optimize_size") {
+@@ -3201,7 +3205,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -135,7 +135,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -3224,7 +3228,7 @@ config("afdo") {
+@@ -3228,7 +3232,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }
@@ -144,7 +144,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2026/0
      cflags = [ "-fauto-profile=${auto_profile_path}" ]
      inputs = [ auto_profile_path ]
    }
-@@ -3403,7 +3407,7 @@ config("symbols") {
+@@ -3407,7 +3411,7 @@ config("symbols") {
      cflags += [ "-gomit-unreferenced-methods" ]
    }
  

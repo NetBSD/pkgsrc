@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__main.cc,v 1.2 2026/04/30 06:39:40 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__main.cc,v 1.3 2026/08/18 18:26:06 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/gpu/gpu_main.cc.orig	2026-03-16 11:40:07.000000000 +0000
+--- src/3rdparty/chromium/content/gpu/gpu_main.cc.orig	2026-08-11 12:42:19.000000000 +0000
 +++ src/3rdparty/chromium/content/gpu/gpu_main.cc
 @@ -107,10 +107,14 @@
  #include "sandbox/win/src/sandbox.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__main.cc,v 1.2 2026/04/30 0
      return StartSandboxWindows(sandbox_info_);
 @@ -306,7 +310,7 @@ int GpuMain(MainFunctionParams parameter
            std::make_unique<base::SingleThreadTaskExecutor>(
-               gpu_preferences.message_pump_type);
+               gpu_preferences.message_pump_type, /*is_main_thread=*/true);
      }
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
