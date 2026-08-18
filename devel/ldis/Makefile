@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2026/08/18 07:16:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/18 16:44:58 agc Exp $
 
-DISTNAME=		ldis-20260810
+DISTNAME=		ldis-${VERSION}
+VERSION=		20260818
 CATEGORIES=		devel
-MASTER_SITES=		-${MASTER_SITE_CODEBERG:=agc-codeberg/ldis/archive/20260810.tar.gz}
+MASTER_SITES=		-${MASTER_SITE_CODEBERG:=agc-codeberg/ldis/archive/${VERSION}.tar.gz}
 
 MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		https://codeberg.org/agc-codeberg/ldis/
@@ -16,8 +17,5 @@ USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
 AUTO_MKDIRS=		yes
 TEST_TARGET=		t
-
-# make[1]: don't know how to make /pbulk/work/devel/ldis/work/ldis/lib/libldis.a. Stop
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.pkg.mk"
