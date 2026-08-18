@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/03 20:34:45 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/08/18 14:51:28 kim Exp $
 bin/tmuxp-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -95,9 +95,18 @@ ${PYSITELIB}/tmuxp/util.pyo
 ${PYSITELIB}/tmuxp/workspace/__init__.py
 ${PYSITELIB}/tmuxp/workspace/__init__.pyc
 ${PYSITELIB}/tmuxp/workspace/__init__.pyo
-${PYSITELIB}/tmuxp/workspace/builder.py
-${PYSITELIB}/tmuxp/workspace/builder.pyc
-${PYSITELIB}/tmuxp/workspace/builder.pyo
+${PYSITELIB}/tmuxp/workspace/builder/__init__.py
+${PYSITELIB}/tmuxp/workspace/builder/__init__.pyc
+${PYSITELIB}/tmuxp/workspace/builder/__init__.pyo
+${PYSITELIB}/tmuxp/workspace/builder/classic.py
+${PYSITELIB}/tmuxp/workspace/builder/classic.pyc
+${PYSITELIB}/tmuxp/workspace/builder/classic.pyo
+${PYSITELIB}/tmuxp/workspace/builder/protocol.py
+${PYSITELIB}/tmuxp/workspace/builder/protocol.pyc
+${PYSITELIB}/tmuxp/workspace/builder/protocol.pyo
+${PYSITELIB}/tmuxp/workspace/builder/registry.py
+${PYSITELIB}/tmuxp/workspace/builder/registry.pyc
+${PYSITELIB}/tmuxp/workspace/builder/registry.pyo
 ${PYSITELIB}/tmuxp/workspace/constants.py
 ${PYSITELIB}/tmuxp/workspace/constants.pyc
 ${PYSITELIB}/tmuxp/workspace/constants.pyo
@@ -113,6 +122,9 @@ ${PYSITELIB}/tmuxp/workspace/importers.pyo
 ${PYSITELIB}/tmuxp/workspace/loader.py
 ${PYSITELIB}/tmuxp/workspace/loader.pyc
 ${PYSITELIB}/tmuxp/workspace/loader.pyo
+${PYSITELIB}/tmuxp/workspace/options.py
+${PYSITELIB}/tmuxp/workspace/options.pyc
+${PYSITELIB}/tmuxp/workspace/options.pyo
 ${PYSITELIB}/tmuxp/workspace/validation.py
 ${PYSITELIB}/tmuxp/workspace/validation.pyc
 ${PYSITELIB}/tmuxp/workspace/validation.pyo
