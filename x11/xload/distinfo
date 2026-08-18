@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/07/20 07:10:35 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/08/18 06:41:59 wiz Exp $
 
-BLAKE2s (xload-1.2.1.tar.xz) = 1b60fec0dc8d3efa2e7dee89f5a5bf2227aacb6c608cbde326496f8aff33d8dd
-SHA512 (xload-1.2.1.tar.xz) = 55bdf254d7521a54a9dc771a7e8d3d2750a64d8ec8274c3d2394cbe40358b03525a39d1e10c637bd9e66ee7f956d9aa55ae6c416a2611a35718e01f3b491fde1
-Size (xload-1.2.1.tar.xz) = 141716 bytes
-SHA1 (patch-meson.build) = 0e6b24e2f439b225478b86a0bd3e2f357680019e
+BLAKE2s (xload-1.2.2.tar.xz) = 020e5176fd846f56cfad86be57542907842865d645705434f57ebafdcd585e8b
+SHA512 (xload-1.2.2.tar.xz) = 98d853543da8a1b86fc474a6748425861bac01c4888087d052c3f00baca6aade2d4ecfa3ee96feb32ed4fbaa4f89816888fe03a022b8fa19c71f147a0a9a4a48
+Size (xload-1.2.2.tar.xz) = 141784 bytes
