@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5360 2026/08/18 10:19:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5361 2026/08/18 11:37:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7910,3 +7910,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xload to 1.2.2 [wiz 2026-08-18]
 	Updated devel/gitpane to 0.12.0 [pin 2026-08-18]
 	Updated shells/nushell to 0.115.0 [pin 2026-08-18]
+	Updated geography/py-gdal to 3.13.3 [gdt 2026-08-18]
+	Updated geography/gdal-lib to 3.13.3 [gdt 2026-08-18]
