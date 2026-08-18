@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/05/22 09:31:20 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/08/18 12:39:52 adam Exp $
 
-BLAKE2s (django_q2-1.10.0.tar.gz) = 79f29d1a695a6c500c3843d443607f76ca5da533b64fd449769491d1fc7846ae
-SHA512 (django_q2-1.10.0.tar.gz) = bb4b87fb15ef461cc570e5c49cd47b3a3b71f84eee57be3fd8b37e8dfd029bac368d39c94faa4f8e799a9889cba96f0da750e0d077b7261252127a9b887a0a6b
-Size (django_q2-1.10.0.tar.gz) = 86438 bytes
+BLAKE2s (django_q2-1.11.0.tar.gz) = f82e29fc99ccd55d44a8965bc7de8615be72e995c795ad2b0b30cc7710175a36
+SHA512 (django_q2-1.11.0.tar.gz) = 00b59a8f4544e3f8dccadf02b06b137099946e9e18b927121bc59e8eaa313d63ab50b366ce13a10be587c9458b850abe64efd1b4f5d48eada2db84698a66bf9a
+Size (django_q2-1.11.0.tar.gz) = 100288 bytes
