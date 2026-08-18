@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/07/30 12:31:06 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/08/18 18:26:02 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -68,7 +68,7 @@ qt6/doc/config/exampleurl-qtwinextras.qdocconf
 qt6/doc/config/exampleurl-qtx11extras.qdocconf
 qt6/doc/config/exampleurl-qtxmlpatterns.qdocconf
 qt6/doc/global/app-examples-template/README.md
-qt6/doc/global/app-examples-template/app-examples-template.qdoc
+qt6/doc/global/app-examples-template/app-examples.qdoc.template
 qt6/doc/global/compat.qdocconf
 qt6/doc/global/config.qdocconf
 qt6/doc/global/cpp-doc-macros.qdocconf
@@ -79,6 +79,7 @@ qt6/doc/global/externalsites/qt-webpages.qdoc
 qt6/doc/global/externalsites/qtcreator.qdoc
 qt6/doc/global/externalsites/qtdesignstudio.qdoc
 qt6/doc/global/externalsites/rfc.qdoc
+qt6/doc/global/externalsites/vscodeext.qdoc
 qt6/doc/global/fileextensions.qdocconf
 qt6/doc/global/grid.qdocconf
 qt6/doc/global/html-config.qdocconf
@@ -704,6 +705,7 @@ qt6/include/QtCore/QTransposeProxyModel
 qt6/include/QtCore/QTypeInfo
 qt6/include/QtCore/QTypeInfoMerger
 qt6/include/QtCore/QTypeRevision
+qt6/include/QtCore/QTypedArrayAllocationResult
 qt6/include/QtCore/QTypedArrayData
 qt6/include/QtCore/QUnhandledException
 qt6/include/QtCore/QUntypedBindable
@@ -1862,6 +1864,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtldurl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtlsbackend_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetwork-config_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetworkglobal_p.h
+qt6/include/QtNetwork/6.11.2/QtNetwork/private/qhttp2configuration_p.h
 qt6/include/QtNetwork/QAbstractNetworkCache
 qt6/include/QtNetwork/QAbstractSocket
 qt6/include/QtNetwork/QAuthenticator
@@ -2933,6 +2936,7 @@ qt6/lib/cmake/Qt6/FindWrapSystemJpeg.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemMd4c.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPCRE2.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPNG.cmake
+qt6/lib/cmake/Qt6/FindWrapSystemSQLite3.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemZLIB.cmake
 qt6/lib/cmake/Qt6/FindWrapVulkan.cmake
 qt6/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake
@@ -3029,12 +3033,14 @@ qt6/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicAppleHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicCMakeIncludeGuardHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicGitHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicJsonHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake

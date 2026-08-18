@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/05/14 16:40:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/18 18:26:02 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-psql-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 PostgreSQL driver
 CATEGORIES=	databases
 
@@ -21,6 +20,6 @@ QTCONFDIR=		src/plugins/sqldrivers
 
 .include "../../x11/qt6-qtbase/Makefile.common"
 
-.include "../../mk/pgsql.buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

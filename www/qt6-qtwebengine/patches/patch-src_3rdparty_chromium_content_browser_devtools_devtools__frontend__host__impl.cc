@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_devtools_devtools__frontend__host__impl.cc,v 1.1 2025/12/21 09:38:26 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_devtools_devtools__frontend__host__impl.cc,v 1.2 2026/08/18 18:26:06 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- src/3rdparty/chromium/content/browser/devtools/devtools_frontend_host_impl.cc.orig	2026-08-11 12:42:19.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/devtools/devtools_frontend_host_impl.cc
-@@ -27,7 +27,7 @@
+@@ -25,7 +25,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
  #include "ui/base/webui/resource_path.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_devtools_devtools__frontend
  #include "components/crash/content/browser/error_reporting/javascript_error_report.h"  // nogncheck
  #include "components/crash/content/browser/error_reporting/js_error_report_processor.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -42,7 +42,7 @@ const char kCompatibilityScriptSourceURL
+@@ -37,7 +37,7 @@ const char kCompatibilityScriptSourceURL
      "\n//# "
      "sourceURL=devtools://devtools/bundled/devtools_compatibility.js";
  
@@ -24,16 +24,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_devtools_devtools__frontend
  // Remove the pieces of the URL we don't want to send back with the error
  // reports. In particular, do not send query or fragments as those can have
  // privacy-sensitive information in them.
-@@ -112,7 +112,7 @@ DevToolsFrontendHostImpl::DevToolsFronte
-     const HandleMessageCallback& handle_message_callback)
-     : web_contents_(WebContents::FromRenderFrameHost(frame_host)),
-       handle_message_callback_(handle_message_callback) {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   Observe(web_contents_);
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-   mojo::AssociatedRemote<blink::mojom::DevToolsFrontend> frontend;
-@@ -137,7 +137,7 @@ void DevToolsFrontendHostImpl::DispatchE
+@@ -133,7 +133,7 @@ void DevToolsFrontendHostImpl::DispatchE
    handle_message_callback_.Run(std::move(message));
  }
  

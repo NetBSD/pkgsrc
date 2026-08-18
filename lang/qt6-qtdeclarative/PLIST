@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/04/30 06:38:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/08/18 18:26:03 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -796,6 +796,19 @@ qt6/include/QtQmlXmlListModel/QtQmlXmlListModelDepends
 qt6/include/QtQmlXmlListModel/QtQmlXmlListModelVersion
 qt6/include/QtQmlXmlListModel/qtqmlxmllistmodelexports.h
 qt6/include/QtQmlXmlListModel/qtqmlxmllistmodelversion.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltccodewriter_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltccommandlineutils_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltccompiler_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltccompilerpieces_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltcoutputir_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltcoutputprimitives_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltcpropertyutils_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltctyperesolver_p.h
+qt6/include/QtQmltc/${PKGVERSION}/QtQmltc/private/qqmltcvisitor_p.h
+qt6/include/QtQmltc/QtQmltc
+qt6/include/QtQmltc/QtQmltcDepends
+qt6/include/QtQmltc/QtQmltcVersion
+qt6/include/QtQmltc/qtqmltcversion.h
 qt6/include/QtQuick/${PKGVERSION}/QtQuick/private/qaccessiblequickitem_p.h
 qt6/include/QtQuick/${PKGVERSION}/QtQuick/private/qaccessiblequicktextedit_p.h
 qt6/include/QtQuick/${PKGVERSION}/QtQuick/private/qaccessiblequicktextinput_p.h
@@ -2507,6 +2520,16 @@ qt6/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6QmlXmlListModelPrivateTargets.cmake
 qt6/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6QmlXmlListModelPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6QmlXmlListModelPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6QmlXmlListModelPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateConfig.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateDependencies.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateTargets-release.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateTargets.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateTargetsPrecheck.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6QmltcPrivate/Qt6QmltcPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake
 qt6/lib/cmake/Qt6Quick/Qt6QuickConfigVersion.cmake
@@ -3124,6 +3147,8 @@ qt6/lib/libQt6QmlXmlListModel.prl
 qt6/lib/libQt6QmlXmlListModel.so
 qt6/lib/libQt6QmlXmlListModel.so.${PKGVERSION}
 qt6/lib/libQt6QmlXmlListModel.so.6
+qt6/lib/libQt6Qmltc.a
+qt6/lib/libQt6Qmltc.prl
 qt6/lib/libQt6Quick.prl
 qt6/lib/libQt6Quick.so
 qt6/lib/libQt6Quick.so.${PKGVERSION}
@@ -3312,6 +3337,7 @@ qt6/metatypes/qt6qmllsprivate_metatypes.json
 qt6/metatypes/qt6qmlmeta_metatypes.json
 qt6/metatypes/qt6qmlmodels_metatypes.json
 qt6/metatypes/qt6qmlnetwork_metatypes.json
+qt6/metatypes/qt6qmltcprivate_metatypes.json
 qt6/metatypes/qt6qmltoolingsettingsprivate_metatypes.json
 qt6/metatypes/qt6qmltyperegistrarprivate_metatypes.json
 qt6/metatypes/qt6qmlworkerscript_metatypes.json
@@ -3389,6 +3415,7 @@ qt6/mkspecs/modules/qt_lib_qmlmodels.pri
 qt6/mkspecs/modules/qt_lib_qmlmodels_private.pri
 qt6/mkspecs/modules/qt_lib_qmlnetwork.pri
 qt6/mkspecs/modules/qt_lib_qmlnetwork_private.pri
+qt6/mkspecs/modules/qt_lib_qmltc_private.pri
 qt6/mkspecs/modules/qt_lib_qmltest.pri
 qt6/mkspecs/modules/qt_lib_qmltest_private.pri
 qt6/mkspecs/modules/qt_lib_qmltoolingsettings_private.pri
@@ -3476,6 +3503,7 @@ qt6/modules/QmlToolingSettingsPrivate.json
 qt6/modules/QmlTypeRegistrarPrivate.json
 qt6/modules/QmlWorkerScript.json
 qt6/modules/QmlXmlListModel.json
+qt6/modules/QmltcPrivate.json
 qt6/modules/Quick.json
 qt6/modules/QuickControls2.json
 qt6/modules/QuickControls2Basic.json
@@ -4637,6 +4665,8 @@ qt6/qml/QtQuick/Controls/Imagine/HorizontalHeaderViewDelegate.qml
 qt6/qml/QtQuick/Controls/Imagine/ItemDelegate.qml
 qt6/qml/QtQuick/Controls/Imagine/Label.qml
 qt6/qml/QtQuick/Controls/Imagine/Menu.qml
+qt6/qml/QtQuick/Controls/Imagine/MenuBar.qml
+qt6/qml/QtQuick/Controls/Imagine/MenuBarItem.qml
 qt6/qml/QtQuick/Controls/Imagine/MenuItem.qml
 qt6/qml/QtQuick/Controls/Imagine/MenuSeparator.qml
 qt6/qml/QtQuick/Controls/Imagine/Page.qml
