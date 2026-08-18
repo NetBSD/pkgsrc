@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5367 2026/08/18 15:25:15 kim Exp $
+$NetBSD: CHANGES-2026,v 1.5368 2026/08/18 15:25:31 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7921,3 +7921,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-libtmux to 0.61.0 [kim 2026-08-18]
 	Updated misc/py-tmuxp to 1.74.0 [kim 2026-08-18]
 	Updated misc/tmuxp to 1.74.0 [kim 2026-08-18]
+	Updated misc/sesh to 2.28.0 [kim 2026-08-18]
