@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5356 2026/08/17 21:09:03 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5357 2026/08/18 00:59:06 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7906,3 +7906,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numpy to 2.5.2nb1 [wiz 2026-08-17]
 	Updated www/resterm to 1.1.1 [drixter 2026-08-17]
 	Updated net/croc to 11.1.2 [drixter 2026-08-17]
+	Updated math/suitesparse to 7.14.0 [ktnb 2026-08-18]
