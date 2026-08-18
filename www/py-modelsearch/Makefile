@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/05/25 11:42:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/08/18 18:31:31 adam Exp $
 
-DISTNAME=	modelsearch-1.3.1
+DISTNAME=	modelsearch-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modelsearch/}
