@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2026/07/04 04:49:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2026/08/19 11:07:44 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -34,7 +34,7 @@ CARGO_CRATE_DEPENDS+=	core-foundation-0.10.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.17
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
-CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.7
 CARGO_CRATE_DEPENDS+=	darling-0.20.11
