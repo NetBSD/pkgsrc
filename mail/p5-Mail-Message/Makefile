@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2026/07/16 19:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/19 01:09:55 wen Exp $
 
-DISTNAME=	Mail-Message-3.017
+DISTNAME=	Mail-Message-4.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
 
 MAINTAINER=	angelmadames@gmail.com
 HOMEPAGE=	https://metacpan.org/release/Mail-Message
@@ -19,6 +18,7 @@ DEPENDS+=	p5-MIME-Types>=2.1:../../mail/p5-MIME-Types
 DEPENDS+=	p5-MailTools>=2.1:../../mail/p5-MailTools
 DEPENDS+=	p5-TimeDate>=2.3:../../time/p5-TimeDate
 DEPENDS+=	p5-User-Identity>=0.94:../../mail/p5-User-Identity
+DEPENDS+=	p5-Hash-Case>=1.050:../../devel/p5-Hash-Case
 
 PERL5_PACKLIST=	auto/Mail/Message/.packlist
 
