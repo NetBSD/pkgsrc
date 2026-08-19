@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5386 2026/08/19 02:24:57 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5387 2026/08/19 02:29:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7947,3 +7947,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-Mail-Box-IMAP4 to 4.01 [wen 2026-08-19]
 	Updated mail/p5-Mail-Box-POP3 to 4.02 [wen 2026-08-19]
 	Updated mail/p5-Mail-DMARC to 2.2060724 [wen 20260819]
+	Updated mail/p5-Mail-Sendmail to 0.83 [wen 2026-08-19]
