@@ -1,0 +1,363 @@
+$NetBSD: patch-youtube-fix.diff,v 1.1 2026/08/19 15:57:23 ryoon Exp $
+
+* Fix 403 error from youtube.com after 2026-08.
+  From upstream.
+
+--- yt_dlp/extractor/youtube/_base.py	2020-02-02 09:00:00.000000000 +0900
++++ yt_dlp/extractor/youtube/_base.py	2026-08-20 00:27:15.536832077 +0900
+@@ -99,7 +99,7 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'WEB',
+-                'clientVersion': '2.20260114.08.00',
++                'clientVersion': '2.20260708.00.00',
+             },
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 1,
+@@ -107,11 +107,12 @@
+         **WEB_PO_TOKEN_POLICIES,
+     },
+     # Safari UA returns pre-merged video+audio 144p/240p/360p/720p/1080p HLS formats
++    # Since 2026.07, HLS formats are only returned with some logged-in or "trusted" sessions
+     'web_safari': {
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'WEB',
+-                'clientVersion': '2.20260114.08.00',
++                'clientVersion': '2.20260708.00.00',
+                 'userAgent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15,gzip(gfe)',
+             },
+         },
+@@ -123,7 +124,7 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'WEB_EMBEDDED_PLAYER',
+-                'clientVersion': '1.20260115.01.00',
++                'clientVersion': '2.20260708.00.00',
+             },
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 56,
+@@ -134,7 +135,7 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'WEB_REMIX',
+-                'clientVersion': '1.20260114.03.00',
++                'clientVersion': '1.20260707.12.00',
+             },
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 67,
+@@ -164,7 +165,7 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'WEB_CREATOR',
+-                'clientVersion': '1.20260114.05.00',
++                'clientVersion': '1.20260708.06.00',
+             },
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 62,
+@@ -193,9 +194,9 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'ANDROID',
+-                'clientVersion': '21.02.35',
++                'clientVersion': '21.26.364',
+                 'androidSdkVersion': 30,
+-                'userAgent': 'com.google.android.youtube/21.02.35 (Linux; U; Android 11) gzip',
++                'userAgent': 'com.google.android.youtube/21.26.364 (Linux; U; Android 11) gzip',
+                 'osName': 'Android',
+                 'osVersion': '11',
+             },
+@@ -223,6 +224,8 @@
+     },
+     # "Made for kids" videos aren't available with this client
+     # Using a clientVersion>1.65 may return SABR streams only
++    # Since 2026.07, intermittent/selective POT enforcement has been observed for non-HLS formats
++    # Since 2026.08.17, ALL formats (including live HLS and itag 18) are 403'd with version 1.65.10
+     'android_vr': {
+         'INNERTUBE_CONTEXT': {
+             'client': {
+@@ -238,6 +241,24 @@
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 28,
+         'REQUIRE_JS_PLAYER': False,
++        'GVS_PO_TOKEN_POLICY': {
++            StreamingProtocol.HTTPS: GvsPoTokenPolicy(
++                required=True,
++                recommended=True,
++                not_required_with_player_token=True,
++            ),
++            StreamingProtocol.DASH: GvsPoTokenPolicy(
++                required=True,
++                recommended=True,
++                not_required_with_player_token=True,
++            ),
++            StreamingProtocol.HLS: GvsPoTokenPolicy(
++                required=False,
++                recommended=True,
++                not_required_with_player_token=True,
++            ),
++        },
++        'PLAYER_PO_TOKEN_POLICY': PlayerPoTokenPolicy(required=False, recommended=True),
+     },
+     # iOS clients have HLS live streams. Setting device model to get 60fps formats.
+     # See: https://github.com/TeamNewPipe/NewPipeExtractor/issues/680#issuecomment-1002724558
+@@ -245,10 +266,10 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'IOS',
+-                'clientVersion': '21.02.3',
++                'clientVersion': '21.26.4',
+                 'deviceMake': 'Apple',
+                 'deviceModel': 'iPhone16,2',
+-                'userAgent': 'com.google.ios.youtube/21.02.3 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)',
++                'userAgent': 'com.google.ios.youtube/21.26.4 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)',
+                 'osName': 'iPhone',
+                 'osVersion': '18.3.2.22D82',
+             },
+@@ -270,13 +291,29 @@
+         'PLAYER_PO_TOKEN_POLICY': PlayerPoTokenPolicy(required=False, recommended=True),
+         'REQUIRE_JS_PLAYER': False,
+     },
++    # "Made for kids" videos aren't available with this client
++    'visionos': {
++        'INNERTUBE_CONTEXT': {
++            'client': {
++                'clientName': 'VISIONOS',
++                'clientVersion': '1.02',
++                'deviceMake': 'Apple',
++                'deviceModel': 'RealityDevice17,1',
++                'userAgent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 15_7_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15',
++                'osName': 'visionOS',
++                'osVersion': '26.5.23O471',
++            },
++        },
++        'INNERTUBE_CONTEXT_CLIENT_NAME': 101,
++        'REQUIRE_JS_PLAYER': False,
++    },
+     # mweb has 'ultralow' formats
+     # See: https://github.com/yt-dlp/yt-dlp/pull/557
+     'mweb': {
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'MWEB',
+-                'clientVersion': '2.20260115.01.00',
++                'clientVersion': '2.20260708.05.00',
+                 # mweb previously did not require PO Token with this UA
+                 'userAgent': 'Mozilla/5.0 (iPad; CPU OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1,gzip(gfe)',
+             },
+@@ -307,7 +344,7 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'TVHTML5',
+-                'clientVersion': '7.20260114.12.00',
++                'clientVersion': '7.20260707.07.00',
+                 # See: https://github.com/youtube/cobalt/blob/main/cobalt/browser/user_agent/user_agent_platform_info.cc#L506
+                 'userAgent': 'Mozilla/5.0 (ChromiumStylePlatform) Cobalt/25.lts.30.1034943-gold (unlike Gecko), Unknown_TV_Unknown_0/Unknown (Unknown, Unknown)',
+             },
+@@ -319,12 +356,11 @@
+         'INNERTUBE_CONTEXT': {
+             'client': {
+                 'clientName': 'TVHTML5',
+-                'clientVersion': '5.20260114',
++                'clientVersion': '5.20260707',
+                 'userAgent': 'Mozilla/5.0 (ChromiumStylePlatform) Cobalt/Version',
+             },
+         },
+         'INNERTUBE_CONTEXT_CLIENT_NAME': 7,
+-        'REQUIRE_AUTH': True,
+         'SUPPORTS_COOKIES': True,
+     },
+     'tv_simply': {
+diff -urN yt_dlp-2026.7.4/yt_dlp/extractor/youtube/_tab.py yt-dlp/yt_dlp/extractor/youtube/_tab.py
+--- yt_dlp/extractor/youtube/_tab.py	2020-02-02 09:00:00.000000000 +0900
++++ yt_dlp/extractor/youtube/_tab.py	2026-08-20 00:27:15.538018146 +0900
+@@ -2198,6 +2198,49 @@
+             'extract_flat': True,
+             'playlist_items': '75',
+         },
++    }, {
++        # YoutubeTab_52
++        # "UUMO" is a prefix that can be used for any channel to get a members-only playlist
++        'note': 'flat playlist entry of subscriber_only video',
++        'url': 'https://www.youtube.com/playlist?list=UUMOXuqSBlHAE6Xw-yeJA0Tunw',
++        'info_dict': {
++            'id': 'UUMOXuqSBlHAE6Xw-yeJA0Tunw',
++            'availability': 'public',
++            'title': 'Members-only videos',
++            'description': 'Videos available to members of this channel. Automatically updated.',
++            'tags': [],
++            'modified_date': r're:\d{8}',
++            'channel': 'Linus Tech Tips',
++            'view_count': int,
++            'channel_id': 'UCXuqSBlHAE6Xw-yeJA0Tunw',
++            'channel_url': 'https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw',
++            'uploader_url': 'https://www.youtube.com/@LinusTechTips',
++            'uploader_id': '@LinusTechTips',
++            'uploader': 'Linus Tech Tips',
++        },
++        'playlist': [{
++            'info_dict': {
++                # availability is the only value we are testing for here
++                'availability': 'subscriber_only',
++                'id': str,
++                '_type': 'url',
++                'title': str,
++                'duration': int,
++                'url': str,
++                'uploader': str,
++                'uploader_id': str,
++                'uploader_url': str,
++                'channel': str,
++                'channel_id': str,
++                'channel_url': str,
++                'ie_key': 'Youtube',
++            },
++        }],
++        'playlist_mincount': 1,
++        'params': {
++            'extract_flat': True,
++            'playlist_items': '1',
++        },
+     }]
+ 
+     @classmethod
+diff -urN yt_dlp-2026.7.4/yt_dlp/extractor/youtube/_video.py yt-dlp/yt_dlp/extractor/youtube/_video.py
+--- yt_dlp/extractor/youtube/_video.py	2020-02-02 09:00:00.000000000 +0900
++++ yt_dlp/extractor/youtube/_video.py	2026-08-20 00:27:15.538437864 +0900
+@@ -28,6 +28,7 @@
+ from .jsc.provider import JsChallengeRequest, JsChallengeType, NChallengeInput, SigChallengeInput
+ from .pot._director import initialize_pot_director
+ from .pot.provider import PoTokenContext, PoTokenRequest
++from ...networking import HEADRequest
+ from ...utils import (
+     NO_DEFAULT,
+     ExtractorError,
+@@ -139,13 +140,13 @@
+     _RETURN_TYPE = 'video'  # XXX: How to handle multifeed?
+ 
+     _SUBTITLE_FORMATS = ('json3', 'srv1', 'srv2', 'srv3', 'ttml', 'srt', 'vtt')
+-    _DEFAULT_CLIENTS = ('android_vr', 'web_safari')
+-    _DEFAULT_JSLESS_CLIENTS = ('android_vr',)
+-    _DEFAULT_AUTHED_CLIENTS = ('tv_downgraded', 'web_safari')
++    _DEFAULT_CLIENTS = ('visionos', 'web')
++    _DEFAULT_JSLESS_CLIENTS = ('visionos',)
++    _DEFAULT_AUTHED_CLIENTS = ('web_embedded', 'tv_downgraded', 'web')
+     # Premium does not require POT (except for subtitles)
+-    _DEFAULT_PREMIUM_CLIENTS = ('tv_downgraded', 'web_creator')
++    _DEFAULT_PREMIUM_CLIENTS = ('web_creator', 'tv_downgraded', 'web')
+     _WEBPAGE_CLIENTS = ('web', 'web_safari')
+-    _DEFAULT_WEBPAGE_CLIENT = 'web_safari'
++    _DEFAULT_WEBPAGE_CLIENT = 'web'
+ 
+     _GEO_BYPASS = False
+ 
+@@ -1599,13 +1600,13 @@
+         'info_dict': {
+             'id': 'brhfDfLdDZ8',
+             'ext': 'mp4',
+-            'title': 'This is the WORST Movie Science We\'ve Ever Seen',
++            'title': 'Scientists React to Terrible Movie Science | Moonfall (2021)',
+             'description': 'md5:8afd0a3cd69ec63438fc573580436f92',
+             'media_type': 'video',
+-            'uploader': 'Open Sauce',
+-            'uploader_id': '@opensaucelive',
+-            'uploader_url': 'https://www.youtube.com/@opensaucelive',
+-            'channel': 'Open Sauce',
++            'uploader': 'Sauce +',
++            'uploader_id': '@sauceplusofficial',
++            'uploader_url': 'https://www.youtube.com/@sauceplusofficial',
++            'channel': 'Sauce +',
+             'channel_id': 'UC2EiGVmCeD79l_vZ204DUSw',
+             'channel_url': 'https://www.youtube.com/channel/UC2EiGVmCeD79l_vZ204DUSw',
+             'comment_count': int,
+@@ -1613,15 +1614,17 @@
+             'like_count': int,
+             'age_limit': 0,
+             'duration': 1664,
+-            'thumbnail': 'https://i.ytimg.com/vi/brhfDfLdDZ8/hqdefault.jpg',
++            'thumbnail': 'https://i.ytimg.com/vi/brhfDfLdDZ8/sddefault.jpg',
+             'categories': ['Entertainment'],
+             'tags': ['Moonfall', 'Bad Science', 'Open Sauce', 'Sauce+', 'The Backyard Scientist', 'William Osman', 'Allen Pan'],
+-            'creators': ['Open Sauce', 'William Osman 2'],
++            'creators': ['Sauce +', 'William Osman 2'],
+             'timestamp': 1759452918,
+             'upload_date': '20251003',
+             'playable_in_embed': True,
+             'availability': 'public',
+             'live_status': 'not_live',
++            'channel_follower_count': int,
++            'heatmap': 'count:100',
+         },
+         'params': {'skip_download': True},
+     }, {
+@@ -1655,6 +1658,7 @@
+             'playable_in_embed': True,
+             'availability': 'public',
+             'live_status': 'not_live',
++            'channel_follower_count': int,
+         },
+         'params': {'skip_download': True},
+     }, {
+@@ -2036,8 +2040,11 @@
+                 last_seq = last_seq_cache[cache_key]
+             else:
+                 try:
+-                    urlh = self._request_webpage(base_url, None, note=False, errnote=False, fatal=False)
+-                except ExtractorError:
++                    urlh = self._request_webpage(
++                        HEADRequest(base_url), None,
++                        note=False, errnote='Fragment request failed')
++                except ExtractorError as e:
++                    self.write_debug(e.msg)
+                     urlh = None
+                 last_seq = try_get(urlh, lambda x: int_or_none(x.headers['X-Head-Seqnum']))
+                 if urlh:
+@@ -2900,6 +2907,10 @@
+     def _is_unplayable(player_response):
+         return traverse_obj(player_response, ('playabilityStatus', 'status')) == 'UNPLAYABLE'
+ 
++    @staticmethod
++    def _is_error_response(player_response):
++        return traverse_obj(player_response, ('playabilityStatus', 'status')) == 'ERROR'
++
+     def _extract_player_response(self, client, video_id, webpage_ytcfg, player_ytcfg, player_url, initial_pr, visitor_data, data_sync_id, po_token):
+         headers = self.generate_api_headers(
+             ytcfg=player_ytcfg,
+@@ -3132,13 +3143,15 @@
+                     prs.append(pr)
+ 
+             if (
+-                # Is this a "made for kids" video that can't be downloaded with android_vr?
+-                client == 'android_vr' and self._is_unplayable(pr)
++                # Is this a "made for kids" video that can't be downloaded with android_vr/visionos?
++                client in {'android_vr', 'visionos'}
++                and (self._is_unplayable(pr) or self._is_error_response(pr))
+                 and webpage and 'made for kids' in webpage
+                 # ...and is a JS runtime is available?
+                 and any(p.is_available() for p in self._jsc_director.providers.values())
+             ):
+                 append_client('web_embedded')
++                append_client('tv_downgraded')
+ 
+             # web_embedded can work around age-gate and age-verification for some embeddable videos
+             if self._is_agegated(pr) and variant != 'web_embedded':
+@@ -4459,13 +4472,16 @@
+         vsir = get_first(contents, 'videoSecondaryInfoRenderer')
+         if vsir:
+             vor = traverse_obj(vsir, ('owner', 'videoOwnerRenderer'))
+-            collaborators = traverse_obj(vor, (
++            collab_view_models = traverse_obj(vor, (
+                 'attributedTitle', 'commandRuns', ..., 'onTap', 'innertubeCommand', 'showDialogCommand',
+                 'panelLoadingStrategy', 'inlineContent', 'dialogViewModel', 'customContent', 'listViewModel',
+-                'listItems', ..., 'listItemViewModel', 'title', 'content', {str}))
++                'listItems', ..., 'listItemViewModel', {dict}))
++            collaborators = traverse_obj(collab_view_models, (..., 'title', 'content', {str}))
+             info.update({
+                 'channel': self._get_text(vor, 'title') or (collaborators[0] if collaborators else None),
+-                'channel_follower_count': self._get_count(vor, 'subscriberCountText'),
++                'channel_follower_count': (
++                    self._get_count(vor, 'subscriberCountText')
++                    or traverse_obj(collab_view_models, (0, 'rendererContext', 'accessibilityContext', 'label', {parse_count}))),
+                 'creators': collaborators if collaborators else None,
+             })
+ 
