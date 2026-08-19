@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.2 2023/07/10 03:16:45 pho Exp $
+# $NetBSD: features.mk,v 1.3 2026/08/19 15:12:51 tsutsui Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -28,7 +28,15 @@ MESALIB_SUPPORTS_XA?=		yes
 .    endif
 .  endif
 .else
-.  if exists(${X11BASE}/include/EGL/egl.h)
+.  if ${OPSYS} == "NetBSD"
+.    if defined(HAVE_XORG_EGL)
+MESALIB_SUPPORTS_EGL?=		${HAVE_XORG_EGL}
+.    else
+# NetBSD 10 and earlier built native libepoxy EGL support
+# conditional on Xorg GLAMOR support.
+MESALIB_SUPPORTS_EGL?=		${HAVE_XORG_GLAMOR:Uno}
+.    endif
+.  elif exists(${X11BASE}/include/EGL/egl.h)
 MESALIB_SUPPORTS_EGL?=		yes
 .  endif
 .  if exists(${X11BASE}/lib/libOSMesa.so)
