@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5397 2026/08/19 06:29:19 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5398 2026/08/19 06:32:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7958,3 +7958,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Plack to 1.0054 [wen 2026-08-19]
 	Updated textproc/p5-Template-Tiny to 1.16 [wen 2026-08-19]
 	Updated devel/p5-Tree-DAG_Node to 1.39 [wen 2026-08-19]
+	Updated devel/p5-Tie-Cycle to 1.233 [wen 2026-08-19]
