@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/11/15 01:07:55 wen Exp $
+$NetBSD: distinfo,v 1.6 2026/08/19 02:24:02 wen Exp $
 
-BLAKE2s (Mail-DMARC-1.20250805.tar.gz) = 320db14369b98e08171aea91107ae4d688cdaee7a736fa24edfd860c3f17458d
-SHA512 (Mail-DMARC-1.20250805.tar.gz) = 537f586b9a9c801491dfef5b0888dc2bbcebcc06c2b8b901f1681c6563d81a83fa51f567def3ba729167ad0a953cdfcd989cef50bb34e0f2cf8fc90f1fd74adf
-Size (Mail-DMARC-1.20250805.tar.gz) = 809901 bytes
+BLAKE2s (Mail-DMARC-2.20260724.tar.gz) = d1dd76a54b44055a154da9b4ff2b54c91b4faaaccbb14cfce22abda9ab65da69
+SHA512 (Mail-DMARC-2.20260724.tar.gz) = 212c43be4ebfeed4e0839dfe6f4cd14d5a08140d420e80095c0e196a5f99a560d5e0557dd7ce646347a091ff79389e912380a0c8ac3dfd7bd462d7edcafd66b0
+Size (Mail-DMARC-2.20260724.tar.gz) = 587105 bytes
