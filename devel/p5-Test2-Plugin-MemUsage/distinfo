@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/15 06:58:00 wen Exp $
+$NetBSD: distinfo,v 1.2 2026/08/19 06:34:51 wen Exp $
 
-BLAKE2s (Test2-Plugin-MemUsage-0.002003.tar.gz) = 8e5df3c3b1fd6b4c89d821e59adfb8dac3c9eab239baca934963ecb2caef680c
-SHA512 (Test2-Plugin-MemUsage-0.002003.tar.gz) = 6a076431e54f80ade47a25323b19cfd73a27ede8027f5c541cbcb671dfe7561d345893d20c3770296c87a31e63781920a0258910218fdb3b3b7d4c7e3273722d
-Size (Test2-Plugin-MemUsage-0.002003.tar.gz) = 11114 bytes
+BLAKE2s (Test2-Plugin-MemUsage-0.002006.tar.gz) = 749f3e991d6016847f546b810b5a6553dac5f7aa278b9d0b7e7d69e33b80e539
+SHA512 (Test2-Plugin-MemUsage-0.002006.tar.gz) = 0026581f4d1fdf86e95b8544b81f9d9429fdc89ad0947d54fba3c31548a8c949877751a833a04a789e763d9dc3ec8c81bef4a45b8f83d3329729f5d5da6814e0
+Size (Test2-Plugin-MemUsage-0.002006.tar.gz) = 19571 bytes
