@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27774 2026/08/19 06:58:30 wen Exp $
+$NetBSD: TODO,v 1.27775 2026/08/19 08:55:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -587,6 +587,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
+	o elinks-0.20.0
 	o elixir-1.20
 	o elm-me-2.4.127
 	o elscreen-1.5.3
