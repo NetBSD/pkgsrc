@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2026/07/16 19:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/19 03:16:59 wen Exp $
 #
 
-DISTNAME=	Sendmail-PMilter-1.27
+DISTNAME=	Sendmail-PMilter-1.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GW/GWHAYWOOD/}
 
