@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27773 2026/08/18 18:34:22 adam Exp $
+$NetBSD: TODO,v 1.27774 2026/08/19 06:58:30 wen Exp $
 
 Suggested new packages
 ======================
@@ -1414,7 +1414,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zabbix-agent-6.4.1
 	o zenicb-1.31 [needs merge with lots of local changes]
 	o zeroconf-ioslave-20.12.3
-	o zim-0.75.2
 	o zlib-1.3.2
 	o zls-0.14.0
 	o zookeeper-3.8.5
