@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5407 2026/08/19 16:53:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5408 2026/08/19 18:33:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7969,3 +7969,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-about to 0.9.2 [pin 2026-08-19]
 	Updated net/yt-dlp to 2026.7.4nb1 [ryoon 2026-08-19]
 	Updated time/py-icalendar to 7.3.0 [wiz 2026-08-19]
+	Updated net/p5-Net-OAuth to 0.33 [wiz 2026-08-19]
