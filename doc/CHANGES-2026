@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5399 2026/08/19 06:35:36 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5400 2026/08/19 06:58:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7960,3 +7960,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Tree-DAG_Node to 1.39 [wen 2026-08-19]
 	Updated devel/p5-Tie-Cycle to 1.233 [wen 2026-08-19]
 	Updated devel/p5-Test2-Plugin-MemUsage to 0.002006 [wen 2026-08-19]
+	Updated editors/zim to 0.77.2 [wen 2026-08-19]
