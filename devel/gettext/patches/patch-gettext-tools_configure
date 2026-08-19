@@ -1,6 +1,7 @@
-$NetBSD: patch-gettext-tools_configure,v 1.2 2026/07/28 16:21:26 jperkin Exp $
+$NetBSD: patch-gettext-tools_configure,v 1.3 2026/08/19 16:24:05 tnn Exp $
 
 Do not use bundled libintl.
+Do not autodetect libcurl and libjson.
 
 --- gettext-tools/configure.orig	2026-01-28 23:37:49.000000000 +0000
 +++ gettext-tools/configure
@@ -18,3 +19,48 @@ Do not use bundled libintl.
  
        CATOBJEXT=
        if test "$gt_use_preinstalled_gnugettext" = "yes" \
+@@ -123846,7 +123839,7 @@ printf %s "checking for the libjson-c li
+ LIBJSON_C=?
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <json-c/json_c_version.h>
++#include <_/json-c/json_c_version.h>
+        int version_check[2 * (JSON_C_MAJOR_VERSION + (JSON_C_MINOR_VERSION >= 13) > 0) - 1];
+ 
+ int
+@@ -123871,7 +123864,7 @@ if test "$LIBJSON_C" = "?"; then
+   LIBS="$LIBS -ljson-c"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <json-c/json_c_version.h>
++#include <_/json-c/json_c_version.h>
+ int
+ main (void)
+ {
+@@ -123899,7 +123892,7 @@ if test -n "$LIBJSON_C"; then
+ 
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <json-c/json_c_version.h>
++#include <_/json-c/json_c_version.h>
+ _ACEOF
+                 case "$host_os" in
+     aix*) gl_absname_cpp="$ac_cpp -C" ;;
+@@ -123949,7 +123942,7 @@ INCCURL=
+ LIBCURL=?
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <curl/curlver.h>
++#include <_/curl/curlver.h>
+ int
+ main (void)
+ {
+@@ -123972,7 +123965,7 @@ if test "$LIBCURL" = "?"; then
+   LIBS="$LIBS -lcurl"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-#include <curl/curl.h>
++#include <_/curl/curl.h>
+ int
+ main (void)
+ {

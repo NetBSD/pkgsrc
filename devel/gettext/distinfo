@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2026/07/28 16:21:26 jperkin Exp $
+$NetBSD: distinfo,v 1.53 2026/08/19 16:24:05 tnn Exp $
 
 BLAKE2s (gettext-1.0.tar.gz) = 9277ec2cb3676b657eb719c952d0b2481dd0991aa3253eac350db9c2d2575cb5
 SHA512 (gettext-1.0.tar.gz) = 664c3b1985cb7d1e7ed443e036a6c7f8c1f47354720d13c2db2c2cf8a85136d0ffc2cc920dce1240d688f706653f647749ce29f69eb0bb659e043b499f9c47eb
@@ -9,7 +9,7 @@ SHA1 (patch-gettext-runtime_configure) = d8a8899768f1f2aa73a578e60766c2d7d748358
 SHA1 (patch-gettext-runtime_intl_configure) = 6bbc0bcc3cadd0bc98eefc8c5fd77abc5dae7473
 SHA1 (patch-gettext-runtime_m4_gettext.m4) = a154919e5da2013c3a2eaa965dc5f12460b1d4f4
 SHA1 (patch-gettext-tools_Makefile.in) = f93519ba8e17d905bbc5abac25caf3d756805230
-SHA1 (patch-gettext-tools_configure) = dea3e01e3b8cd01c56fa0397afab937bc00640cf
+SHA1 (patch-gettext-tools_configure) = 64a1e6cabd7d244c5dc6a33008f26bf61beaa245
 SHA1 (patch-gettext-tools_gnulib-lib_Makefile.in) = 1e2ae3e92fa4b530649ec938cffee6743219ce1c
 SHA1 (patch-gettext-tools_po_Makefile.in.in) = a425dd4b5e9705438d01f4ebb92e4c74f0ec1579
 SHA1 (patch-gettext-tools_tests_Makefile.in) = af9c9ecbecfafc1c34d0bd3347d3d399122aaa80
