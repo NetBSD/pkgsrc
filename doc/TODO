@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27775 2026/08/19 08:55:23 wiz Exp $
+$NetBSD: TODO,v 1.27776 2026/08/19 09:17:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -727,7 +727,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-12.3.1 [wip]
-	o grafana-13.1.3
+	o grafana-13.2.0
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
@@ -1120,7 +1120,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profanity-0.15.1
 	o profit-2.5.3
 	o proftpd-1.3.9a
-	o prometheus-3.13.2
+	o prometheus-3.14.0
 	o prosody-13.0.5
 	o pspp-1.4.1
 	o ptlib-2.16.2
@@ -1190,6 +1190,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
+	o rumdl-0.2.57
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1261,6 +1262,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
+	o tabiew-0.14.2
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
