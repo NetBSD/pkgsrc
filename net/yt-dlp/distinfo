@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.85 2026/07/06 08:25:46 wiz Exp $
+$NetBSD: distinfo,v 1.86 2026/08/19 15:57:23 ryoon Exp $
 
 BLAKE2s (yt_dlp-2026.7.4.tar.gz) = feda41f9c8f72c7a1c94d55fab15a8cefe29fc55f72d2415245df7c658c4a4be
 SHA512 (yt_dlp-2026.7.4.tar.gz) = b6895848fd17ae69414c22d6104473789d1601a612012567a1d1247801cdf654ab2b1702fd0fadc9c701d5faba3a03b74dcabb4f85d3972031126fff96856f34
 Size (yt_dlp-2026.7.4.tar.gz) = 3049326 bytes
+SHA1 (patch-youtube-fix.diff) = 5087a450489286cd7293aad7471ac724a2ad5408
