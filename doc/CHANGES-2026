@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5404 2026/08/19 09:44:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5405 2026/08/19 11:08:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7966,3 +7966,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachelib to 0.15.4 [adam 2026-08-19]
 	Updated math/ggml to 0.20.2 [wiz 2026-08-19]
 	Updated textproc/tabiew to 0.14.2 [wiz 2026-08-19]
+	Updated devel/cargo-about to 0.9.2 [pin 2026-08-19]
