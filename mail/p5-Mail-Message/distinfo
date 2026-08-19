@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/05/30 06:28:56 wen Exp $
+$NetBSD: distinfo,v 1.17 2026/08/19 01:09:55 wen Exp $
 
-BLAKE2s (Mail-Message-3.017.tar.gz) = d68aaefdf355d98d07dff778510c69c88aa8952fb4889e2ac83342649211ccf2
-SHA512 (Mail-Message-3.017.tar.gz) = ba365be43c62ffb8dac1a953b363d54008daaa5e0e4d19d68b1b355b7c8e9bdd8646a96da3af8490296c3392f22c7b1dae3a665acd338193a36321f498ab5a5e
-Size (Mail-Message-3.017.tar.gz) = 270107 bytes
+BLAKE2s (Mail-Message-4.05.tar.gz) = ecf55340ee8a77a18db3d6988682d509b67589d452266f089131bd42cb972664
+SHA512 (Mail-Message-4.05.tar.gz) = 79b36ebc0d6772d5a79459ce10460df24ee5597de6c8d10b0a56596c1f261e7f0a565df04c39d3461c5ceaa9f91a550f72df19e38fdce183d08f444695fda366
+Size (Mail-Message-4.05.tar.gz) = 263026 bytes
