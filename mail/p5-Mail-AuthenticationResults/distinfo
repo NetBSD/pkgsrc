@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/11/15 01:00:35 wen Exp $
+$NetBSD: distinfo,v 1.11 2026/08/19 00:49:57 wen Exp $
 
-BLAKE2s (Mail-AuthenticationResults-2.20250709.tar.gz) = 314b203c7f1f2aaf9490aeddba8097b0b1584dec6c2578a308d5c90857717743
-SHA512 (Mail-AuthenticationResults-2.20250709.tar.gz) = 79b691daa41a2c265243e4a25b9b3bf3815187549b2213272b04f2c2335c3e536441b17c878c4b8068c2367a9912358072c15695d9d6ef5d02b5dc48cfac969b
-Size (Mail-AuthenticationResults-2.20250709.tar.gz) = 33533 bytes
+BLAKE2s (Mail-AuthenticationResults-2.20260216.tar.gz) = 24fe7f8ca978de5ffd6f6efd47f4c6e092196e8065c37b6a57f7c49b33ea9c95
+SHA512 (Mail-AuthenticationResults-2.20260216.tar.gz) = 960ac7d77a2f65c44a1ea29347e2d5895a90ee12b43c5fb5210dc24fd74ecaad13ced86d19325cbf6b2e43de161907d54822f4b4541e1f6196ac86c4c17f8367
+Size (Mail-AuthenticationResults-2.20260216.tar.gz) = 34119 bytes
