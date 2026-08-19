@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/07/29 03:16:32 wen Exp $
+$NetBSD: distinfo,v 1.12 2026/08/19 03:16:59 wen Exp $
 
-BLAKE2s (Sendmail-PMilter-1.27.tar.gz) = b5aecd4583614e938cec9450c7b48739d0f31ae5512fcb4725e49ed87490fb2d
-SHA512 (Sendmail-PMilter-1.27.tar.gz) = 22853f04295b19d3b0c24248c54ccbbeb061e28b89e96eb4de4e0ebd7d58a39dd8c5113eb08f018eb5515e3134623ca1c9623e2cb214b05d1f84f70e79825727
-Size (Sendmail-PMilter-1.27.tar.gz) = 39605 bytes
+BLAKE2s (Sendmail-PMilter-1.28.tar.gz) = 39d400e26fa9d53a8666270dbdbe72420413dc6fa4dd65502a52ff3d300aa11e
+SHA512 (Sendmail-PMilter-1.28.tar.gz) = e9834729dfe27f1987db7031fdb8c3039d4e5eca9a06238532c74b85e5e11a068a18f7bac828d48f917cfc03ec14288692277b24a88ee2c167da2670a0240b9e
+Size (Sendmail-PMilter-1.28.tar.gz) = 39605 bytes
