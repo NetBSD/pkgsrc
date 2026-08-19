@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5402 2026/08/19 08:38:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5403 2026/08/19 09:18:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7964,3 +7964,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ggml to 0.20.1 [wiz 2026-08-19]
 	Updated textproc/py-lxml to 6.1.2 [adam 2026-08-19]
 	Updated devel/py-cachelib to 0.15.4 [adam 2026-08-19]
+	Updated math/ggml to 0.20.2 [wiz 2026-08-19]
