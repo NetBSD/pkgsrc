@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5390 2026/08/19 02:37:38 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5391 2026/08/19 02:39:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7951,3 +7951,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-Mail-SPF to 3.20260331 [wen 2026-08-19]
 	Updated mail/p5-Mail-Transport to 4.01 [wen 2026-08-19]
 	Updated www/firefox140 to 140.14.0 [gutteridge 2026-08-19]
+	Updated www/firefox140-l10n to 140.14.0 [gutteridge 2026-08-19]
