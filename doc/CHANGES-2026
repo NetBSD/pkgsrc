@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5380 2026/08/19 00:57:55 msaitoh Exp $
+$NetBSD: CHANGES-2026,v 1.5381 2026/08/19 01:01:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7941,3 +7941,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-Email-Address-List to 0.07 [wen 2026-08-19]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20260216 [wen 2026-08-19]
 	Updated sysutils/intel-microcode-netbsd to 20260812 [msaitoh 2026-08-19]
+	Updated devel/p5-Log-Report to 1.46 [wen 2026-08-19]
