@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/05/12 05:26:41 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/19 08:27:42 adam Exp $
 
-DISTNAME=	cachelib-0.14.0
+DISTNAME=	cachelib-0.15.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachelib/}
