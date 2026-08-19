@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.3 2007/10/13 11:04:19 dsl Exp $
+# $NetBSD: common.mk,v 1.4 2026/08/19 09:22:27 jperkin Exp $
 #
 # This file contains the definitions that are used in all directories of
 # pkgsrc -- the top-level, the categories and the packages themselves.
@@ -7,6 +7,11 @@
 #
 # PKG_DEBUG_LEVEL
 #	(See mk/help/debug.help)
+#
+# ULIMIT_PRECMD
+#	Command that is prepended to all RUN commands.  Primarily useful for
+#	setting to e.g. "ulimit -S -t 3600" to ensure no build process uses
+#	over an hour of CPU time, helping to avoid infinite loop hangs.
 #
 # System-provided variables:
 #
@@ -31,6 +36,7 @@ PKG_DEBUG_LEVEL?=	0
 _PKG_SILENT=		@
 _PKG_DEBUG=		# empty
 _PKG_DEBUG_SCRIPT=	${SH}
+ULIMIT_PRECMD?=		:
 
 .if ${PKG_DEBUG_LEVEL} > 0
 _PKG_SILENT=		# empty
@@ -41,7 +47,7 @@ _PKG_DEBUG=		: commands for target ${.TARGET:Q}; set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
-RUN=			${_PKG_SILENT}${_PKG_DEBUG} set -e;
+RUN=			${_PKG_SILENT}${_PKG_DEBUG} set -e; ${ULIMIT_PRECMD};
 
 .if make(help)
 .include "../help/help.mk"
