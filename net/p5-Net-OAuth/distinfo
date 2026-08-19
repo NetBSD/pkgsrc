@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/08/16 15:24:31 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/08/19 18:33:03 wiz Exp $
 
-BLAKE2s (Net-OAuth-0.32.tar.gz) = a6a8ccba243437ff724b4e867964b899f1c40f59f52fcd4dd7fb9adaa4d876e0
-SHA512 (Net-OAuth-0.32.tar.gz) = 4fb48f6d210f62eec85694fd040b1593293b0035df659e6d5bec21a79155c6fbf3ffdd02766deda02833fbffc07eb3153e83fab517362bdb104ea0bf5d8d440f
-Size (Net-OAuth-0.32.tar.gz) = 32274 bytes
+BLAKE2s (Net-OAuth-0.33.tar.gz) = 431a728559925c1e7d076a346164176d9427a6d2942fa7e0f51fd14cb5f41caa
+SHA512 (Net-OAuth-0.33.tar.gz) = f2f9f122a68e64b54cd2892ac92d6443bd21a839b5caf689703d1d609dfb2f81e8a9076f099eb8bfae232cd2fd333b497951043028f7a3238ba3c2df1f367e4c
+Size (Net-OAuth-0.33.tar.gz) = 32999 bytes
