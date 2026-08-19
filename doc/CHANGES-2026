@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5378 2026/08/19 00:47:12 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5379 2026/08/19 00:50:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7939,3 +7939,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/knot to 3.5.7 [drixter 2026-08-18]
 	Updated devel/nss to 3.127 [wiz 2026-08-18]
 	Updated mail/p5-Email-Address-List to 0.07 [wen 2026-08-19]
+	Updated mail/p5-Mail-AuthenticationResults to 2.20260216 [wen 2026-08-19]
