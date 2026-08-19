@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5395 2026/08/19 04:30:34 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5396 2026/08/19 05:56:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7956,3 +7956,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-Sendmail-PMilter to 1.28 [wen 2026-08-19]
 	Updated mail/p5-User-Identity to 4.00 [wen 2026-08-19]
 	Updated www/p5-Plack to 1.0054 [wen 2026-08-19]
+	Updated textproc/p5-Template-Tiny to 1.16 [wen 2026-08-19]
