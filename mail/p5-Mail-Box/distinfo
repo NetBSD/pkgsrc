@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/05/30 02:43:46 wen Exp $
+$NetBSD: distinfo,v 1.24 2026/08/19 01:12:28 wen Exp $
 
-BLAKE2s (Mail-Box-3.011.tar.gz) = 3f95aba94528f2fe776c9807c508de2beeb4b0f53cda15717d22a0c8d9464819
-SHA512 (Mail-Box-3.011.tar.gz) = eeb1e7a4abdb5f570baea2abac9e67682430bdb323d06021f6a59dbef1cd561f1e844bc35617b7f67cee0de35f6c334fd99fac36b30d30689f07dd62c4eeff07
-Size (Mail-Box-3.011.tar.gz) = 295217 bytes
+BLAKE2s (Mail-Box-4.02.tar.gz) = de6fe1f2fde153742d9e4bfb4aa5ee482588f9489c9ece700b93012161f07a0b
+SHA512 (Mail-Box-4.02.tar.gz) = d149a4b3a2e1971d12ad5ea7d9e21abf2c3f0196e935850c9168b0c87eada81cb291f7efe69a9f63eb61f2c5eec75caedea6e6bd3bdf33f3840b02946415c012
+Size (Mail-Box-4.02.tar.gz) = 288432 bytes
