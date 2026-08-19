@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2026/07/16 19:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/19 06:31:48 wen Exp $
 
-DISTNAME=	Tie-Cycle-1.231
+DISTNAME=	Tie-Cycle-1.233
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BR/BRIANDFOY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/distribution/Tie-Cycle/lib/Tie/Cycle.pm
