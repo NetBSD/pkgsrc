@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5393 2026/08/19 03:17:47 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5394 2026/08/19 03:20:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7954,3 +7954,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140-l10n to 140.14.0 [gutteridge 2026-08-19]
 	Updated mail/p5-MIME-tools to 5.517 [wen 2026-08-19]
 	Updated mail/p5-Sendmail-PMilter to 1.28 [wen 2026-08-19]
+	Updated mail/p5-User-Identity to 4.00 [wen 2026-08-19]
