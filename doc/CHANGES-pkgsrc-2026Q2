@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.12 2026/08/20 02:08:56 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.13 2026/08/20 02:14:59 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -159,6 +159,72 @@ x11/slock: Bug fix
 
 Pullup ticket #7198 - requested by hauke
 security/vaultwarden: Security fix
+
+Pullup ticket #7199 - requested by taca
+devel/usrespace-rcu: Bug fix
+
+Pullup ticket #7200 - requested by taca
+textproc/p5-XML-Bare: Security fix
+
+Pullup ticket #7202 - requested by morr
+editors/vim-share: Bug fix
+
+Pullup ticket #7204 - requested by taca
+textproc/p5-YAML-Syck: Security fix
+
+Pullup ticket #7205 - requested by taca
+graphics/p5-GD-SecurityImage: Security fix
+
+Pullup ticket #7206 - requested by taca
+lang/ruby33: Security fix
+
+Pullup ticket #7207 - requested by taca
+www/nginx: Security fix
+
+Pullup ticket #7208 - requested by hauke
+www/osticket: Security fix
+
+Pullup ticket #7209 - requested by taca
+www/ruby-http: Security fix
+
+Pullup ticket #7210 - requested by taca
+www/ruby-loofah: Security fix
+
+Pullup ticket #7211 - requested by taca
+net/powerdns-recursor: Security fix
+
+Pullup ticket #7212 - requested by taca
+security/libssh: Security fix
+
+Pullup ticket #7213 - requested by taca
+www/p5-HTML-Gumbo: Security fix
+
+Pullup ticket #7214 - requested by taca
+www/ruby-rails72: Security fix
+
+Pullup ticket #7215 - requested by taca
+www/ruby-rails80: Security fix
+
+Pullup ticket #7216 - requested by taca
+net/samba4: Security fix
+
+Pullup ticket #7217 - requested by taca
+lang/php82: Security fix
+
+Pullup ticket #7218 - requested by taca
+lang/php83: Security fix
+
+Pullup ticket #7219 - requested by taca
+lang/php84: Security fix
+
+Pullup ticket #7220 - requested by taca
+lang/php85: Security fix
+
+Pullup ticket #7221 - requested by taca
+mail/rpsmad: Security fix
+
+Pullup ticket #7222 - requested by taca
+converters/c5-Cpanel-JSON-XS: Security fix
 
 Pullup ticket #7223 - requested by tsutsui
 inputmethod/ibus: build fix
