@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2026/08/19 15:57:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.95 2026/08/20 05:22:20 adam Exp $
 
-DISTNAME=	yt_dlp-2026.7.4
+DISTNAME=	yt_dlp-2026.8.19
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
 
@@ -29,9 +28,6 @@ ALLOW_NETWORK_ACCESS=	yes
 
 # as of 2026.2.21
 # 2483 failed, 3819 passed, 1121 skipped, 3 warnings, 39 subtests passed
-
-post-patch:
-	${RM} -f ${WRKSRC}/yt_dlp/extractor/youtube/*.py.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
