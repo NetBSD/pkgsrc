@@ -1,11 +1,11 @@
 # $NetBSD$
 #
-# Support for dependency several php packages which was contained
+# Depencency support for several PHP packages which were contained
 # in base PHP distributions.
 #
 # PHP_REQUIRE_MODULE
 #	list of key words which speicifies conditionally depending
-#	php packages.
+#	PHP packages.
 #
 #	Possible:	apcu imap json mcrypt opcache
 #	Default:	(empty)
