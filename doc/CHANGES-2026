@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5409 2026/08/20 05:28:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5410 2026/08/20 05:42:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7974,3 +7974,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-zipstream-ng to 1.9.3 [adam 2026-08-20]
 	Updated textproc/py-validate-pyproject to 0.26 [adam 2026-08-20]
 	Updated devel/py-dotenv to 1.2.3 [adam 2026-08-20]
+	Updated sysutils/py-borgmatic to 2.1.7 [adam 2026-08-20]
+	Updated graphics/py-svglib to 2.2.0 [adam 2026-08-20]
+	Updated devel/py-syrupy to 5.5.3 [adam 2026-08-20]
