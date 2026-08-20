@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27778 2026/08/20 10:45:57 adam Exp $
+$NetBSD: TODO,v 1.27779 2026/08/20 19:10:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -527,6 +527,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clusterssh-4.16
+	o coccinelle-1.3.2
 	o colortail-0.3.3
 	o commit-patch-2.6
 	o compiz-0.9.14.2
@@ -633,6 +634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ffmpeg-9.0
 	o fifengine-0.4.3
 	o filerunner-14.06.18.10
+	o filezilla-3.71.0
 	o flashplayer-0.4.13
 	o flops-2.2
 	o flow-tools-0.411
@@ -1189,13 +1191,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.57
+	o rumdl-0.2.58
 	o rust-1.97.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
 	o salt-3008.2
-	o samba4-4.24.6
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
