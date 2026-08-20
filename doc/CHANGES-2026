@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5421 2026/08/20 12:41:58 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5422 2026/08/20 21:05:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7997,3 +7997,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/simp to 3.11.0 [pin 2026-08-20]
 	Updated sysutils/dust to 1.2.5 [pin 2026-08-20]
 	Updated sysutils/uutils-coreutils to 0.10.0nb1 [pin 2026-08-20]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.38nb1 [wiz 2026-08-20]
