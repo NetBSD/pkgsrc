@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5408 2026/08/19 18:33:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5409 2026/08/20 05:28:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7970,3 +7970,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/yt-dlp to 2026.7.4nb1 [ryoon 2026-08-19]
 	Updated time/py-icalendar to 7.3.0 [wiz 2026-08-19]
 	Updated net/p5-Net-OAuth to 0.33 [wiz 2026-08-19]
+	Updated net/yt-dlp to 2026.8.19 [adam 2026-08-20]
+	Updated archivers/py-zipstream-ng to 1.9.3 [adam 2026-08-20]
+	Updated textproc/py-validate-pyproject to 0.26 [adam 2026-08-20]
+	Updated devel/py-dotenv to 1.2.3 [adam 2026-08-20]
