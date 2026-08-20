@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5410 2026/08/20 05:42:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5411 2026/08/20 07:52:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7977,3 +7977,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-borgmatic to 2.1.7 [adam 2026-08-20]
 	Updated graphics/py-svglib to 2.2.0 [adam 2026-08-20]
 	Updated devel/py-syrupy to 5.5.3 [adam 2026-08-20]
+	Updated graphics/graphviz to 15.1.1 [adam 2026-08-20]
+	Updated devel/doxygen to 1.18.0 [adam 2026-08-20]
+	Updated databases/redis to 8.10.1 [adam 2026-08-20]
