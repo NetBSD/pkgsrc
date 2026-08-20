@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5411 2026/08/20 07:52:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5412 2026/08/20 08:11:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7980,3 +7980,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/graphviz to 15.1.1 [adam 2026-08-20]
 	Updated devel/doxygen to 1.18.0 [adam 2026-08-20]
 	Updated databases/redis to 8.10.1 [adam 2026-08-20]
+	Updated net/radsecproxy to 1.11.4 [adam 2026-08-20]
+	Updated net/samba4 to 4.24.6 [adam 2026-08-20]
