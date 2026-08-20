@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2026/04/17 08:35:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2026/08/20 08:11:02 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -135,7 +135,7 @@ lib/libndr-standard.so.0
 lib/libndr-standard.so.0.0.1
 lib/libndr.so
 lib/libndr.so.6
-lib/libndr.so.6.0.0
+lib/libndr.so.6.1.0
 lib/libnetapi.so
 lib/libnetapi.so.1
 lib/libnetapi.so.1.0.0
