@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5418 2026/08/20 11:21:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5419 2026/08/20 12:38:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7994,3 +7994,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-widgetsnbextension to 4.0.16 [adam 2026-08-20]
 	Updated www/py-aiohttp-socks to 0.12.0 [adam 2026-08-20]
 	Updated devel/py-awscrt to 0.36.2 [adam 2026-08-20]
+	Updated graphics/simp to 3.11.0 [pin 2026-08-20]
