@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/06/24 18:14:13 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/08/20 10:16:52 adam Exp $
 
-BLAKE2s (webob-1.8.10.tar.gz) = 4500add35d9f268fdefee507b1b89c6a904e3f1095ede028ac0c68328a5567ef
-SHA512 (webob-1.8.10.tar.gz) = a37333d95763b24cd6d435e4dd59a18a8cb3c10c23075d6c79114654c84f38b9e41b36d868e4e3200fba93774529f6f4506b29a04411acaa90a2d14cc668a7ed
-Size (webob-1.8.10.tar.gz) = 280796 bytes
+BLAKE2s (webob-1.8.11.tar.gz) = ae1a4ae7789da7bde17b51912a58f465fee2dbde099739501b2aff98402c940d
+SHA512 (webob-1.8.11.tar.gz) = 0cf296c667c2450f0fff393b2eb5bc8e5cceb0bcdb9b751200855db08a63dded6babd6c2c2ab1f801dd01dbac8ead0e8a6c74cc77bebd17fb30567f6eac60829
+Size (webob-1.8.11.tar.gz) = 286047 bytes
