@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/05/22 09:25:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/08/20 11:02:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -157,6 +157,9 @@ ${PYSITELIB}/debug_toolbar/panels/sql/views.pyo
 ${PYSITELIB}/debug_toolbar/panels/staticfiles.py
 ${PYSITELIB}/debug_toolbar/panels/staticfiles.pyc
 ${PYSITELIB}/debug_toolbar/panels/staticfiles.pyo
+${PYSITELIB}/debug_toolbar/panels/tasks.py
+${PYSITELIB}/debug_toolbar/panels/tasks.pyc
+${PYSITELIB}/debug_toolbar/panels/tasks.pyo
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.py
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.pyc
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.pyo
@@ -212,6 +215,7 @@ ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/sql_explain.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/sql_profile.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/sql_select.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/staticfiles.html
+${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/tasks.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/template_source.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/templates.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/timer.html

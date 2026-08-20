@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/05/22 09:25:19 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/08/20 11:02:39 adam Exp $
 
-BLAKE2s (django_debug_toolbar-6.3.0.tar.gz) = be20834207747e6ca15e4da0a5239fc7fb7946538cd4e24398c4619e52c5e5c4
-SHA512 (django_debug_toolbar-6.3.0.tar.gz) = 07db996bdb044855ba011c58e3d9b90a43dbb9b54ec170ab22b97ede2ccaff06de9a3fe9823beaddb681c4f11d5df060f8655307c346af02b15a32c70fc7241b
-Size (django_debug_toolbar-6.3.0.tar.gz) = 334079 bytes
+BLAKE2s (django_debug_toolbar-7.1.1.tar.gz) = 0af6ca3f7ebce623d6e43dec55356002c5eba71333f820f7d9c84c3c613ed568
+SHA512 (django_debug_toolbar-7.1.1.tar.gz) = ba69f482f96d2a492c5e1ec06f39f51745b93e486c179882f51c986964f7de83edd3731d877657a3396dd330e3fde42cf47bf5550d18285c85abfd55b063b982
+Size (django_debug_toolbar-7.1.1.tar.gz) = 363531 bytes
