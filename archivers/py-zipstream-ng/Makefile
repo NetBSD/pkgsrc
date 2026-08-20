@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/05/18 13:17:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/20 05:24:04 adam Exp $
 
-DISTNAME=	zipstream_ng-1.9.2
+DISTNAME=	zipstream_ng-1.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipstream-ng/}
