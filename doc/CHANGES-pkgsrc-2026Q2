@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.11 2026/08/10 12:05:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.12 2026/08/20 02:08:56 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -169,3 +169,39 @@ lang/perl5: security fix
 Pullup ticket #7225 - requested by nia
 www/palemoon: security fix
 
+Pullup ticket #7226 - requested by taca
+security/p11-kit: Security fix
+
+Pullup ticket #7227 - requested by taca
+security/clamav: Security fix
+
+Pullup ticket #7228 - requested by taca
+mail/postfix: Security fix
+
+Pullup ticket #7229 - requested by taca
+mail/roundcube: Security fix
+mail/roundcube-plugin-password: Security fix
+
+Pullup ticket #7230 - requested by taca
+www/drupal11: Security fix
+
+Pullup ticket #7231 - requested by taca
+textproc/expat: Security fix
+
+Pullup ticket #7232 - requested by taca
+www/ruby-rails-html-sanitizer: Security fix
+
+Pullup ticket #7233 - requested by taca
+www/wordpress: Security fix
+
+Pullup ticket #7235 - requested by taca
+www/typo3-13: Security fix
+
+Pullup ticket #7236 - requested by taca
+www/php-ja-wordpress: Security fix
+
+Pullup ticket #7237 - requested by wiz
+textproc/libxml2: Security fix
+
+Pullup ticket #7239 - requested by taca
+lang/php: New mk file to ease pull-ups to PHP packages
