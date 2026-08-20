@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/11/02 21:35:31 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/20 11:16:20 adam Exp $
 
-DISTNAME=	widgetsnbextension-4.0.15
+DISTNAME=	widgetsnbextension-4.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/widgetsnbextension/}
