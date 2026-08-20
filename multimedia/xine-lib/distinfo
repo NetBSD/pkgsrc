@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.121 2026/01/03 14:10:39 nia Exp $
+$NetBSD: distinfo,v 1.122 2026/08/20 07:12:18 mrg Exp $
 
 BLAKE2s (xine-lib-1.2.13.tar.xz) = e066b7515caf4388d0bf2a73e6d51a1f8acf646e5f198395cb26ad9bcf9384f8
 SHA512 (xine-lib-1.2.13.tar.xz) = 088a446dd962c3cef621b56edd48fa2e1b47566108b4097d74899a9e5316a1f205993041d3070f45b706f168837579811e5e98c7e52ec278c683379407084bc4
@@ -10,6 +10,7 @@ SHA1 (patch-include_xine_attributes.h) = e7cb5f50d95a2523e2de83250fe11a12f0126a7
 SHA1 (patch-include_xine_post.h) = 3ada327a7f171bdf680074b30f005099011a201c
 SHA1 (patch-include_xine_xineutils.h) = 0c8ec0959c82862b31435396e24ceee4ccbcd51a
 SHA1 (patch-m4_decoders.m4) = 4a5703b56336a033110aaff5294be80f1621dad3
+SHA1 (patch-src-input-input__file.c) = 12095b1ea8f9709c0f010120fdec20cd797e831f
 SHA1 (patch-src-post-audio-stretch.c) = 6f950bcd47fdf68b691744dc105f59f821748ce1
 SHA1 (patch-src-post-audio-upmix.c) = 70ca6babfa9a7add0ac70a6024fcff429e1bc49d
 SHA1 (patch-src-post-audio-upmix_mono.c) = 2c70ded10118cbeed5be3c948886f7311ddb7bbd
