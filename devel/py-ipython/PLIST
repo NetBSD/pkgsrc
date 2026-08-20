@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/07/17 08:16:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/08/20 11:11:07 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -101,6 +101,9 @@ ${PYSITELIB}/IPython/core/inputtransformer2.pyo
 ${PYSITELIB}/IPython/core/interactiveshell.py
 ${PYSITELIB}/IPython/core/interactiveshell.pyc
 ${PYSITELIB}/IPython/core/interactiveshell.pyo
+${PYSITELIB}/IPython/core/kitty.py
+${PYSITELIB}/IPython/core/kitty.pyc
+${PYSITELIB}/IPython/core/kitty.pyo
 ${PYSITELIB}/IPython/core/latex_symbols.py
 ${PYSITELIB}/IPython/core/latex_symbols.pyc
 ${PYSITELIB}/IPython/core/latex_symbols.pyo
@@ -292,6 +295,12 @@ ${PYSITELIB}/IPython/sphinxext/ipython_console_highlighting.pyo
 ${PYSITELIB}/IPython/sphinxext/ipython_directive.py
 ${PYSITELIB}/IPython/sphinxext/ipython_directive.pyc
 ${PYSITELIB}/IPython/sphinxext/ipython_directive.pyo
+${PYSITELIB}/IPython/sphinxext/tests/__init__.py
+${PYSITELIB}/IPython/sphinxext/tests/__init__.pyc
+${PYSITELIB}/IPython/sphinxext/tests/__init__.pyo
+${PYSITELIB}/IPython/sphinxext/tests/test_ansi_stripping.py
+${PYSITELIB}/IPython/sphinxext/tests/test_ansi_stripping.pyc
+${PYSITELIB}/IPython/sphinxext/tests/test_ansi_stripping.pyo
 ${PYSITELIB}/IPython/terminal/__init__.py
 ${PYSITELIB}/IPython/terminal/__init__.pyc
 ${PYSITELIB}/IPython/terminal/__init__.pyo
@@ -361,6 +370,12 @@ ${PYSITELIB}/IPython/terminal/shortcuts/auto_suggest.pyo
 ${PYSITELIB}/IPython/terminal/shortcuts/filters.py
 ${PYSITELIB}/IPython/terminal/shortcuts/filters.pyc
 ${PYSITELIB}/IPython/terminal/shortcuts/filters.pyo
+${PYSITELIB}/IPython/terminal/tests/__init__.py
+${PYSITELIB}/IPython/terminal/tests/__init__.pyc
+${PYSITELIB}/IPython/terminal/tests/__init__.pyo
+${PYSITELIB}/IPython/terminal/tests/test_ptutils.py
+${PYSITELIB}/IPython/terminal/tests/test_ptutils.pyc
+${PYSITELIB}/IPython/terminal/tests/test_ptutils.pyo
 ${PYSITELIB}/IPython/testing/__init__.py
 ${PYSITELIB}/IPython/testing/__init__.pyc
 ${PYSITELIB}/IPython/testing/__init__.pyo
@@ -415,9 +430,6 @@ ${PYSITELIB}/IPython/utils/PyColorize.pyo
 ${PYSITELIB}/IPython/utils/__init__.py
 ${PYSITELIB}/IPython/utils/__init__.pyc
 ${PYSITELIB}/IPython/utils/__init__.pyo
-${PYSITELIB}/IPython/utils/_process_cli.py
-${PYSITELIB}/IPython/utils/_process_cli.pyc
-${PYSITELIB}/IPython/utils/_process_cli.pyo
 ${PYSITELIB}/IPython/utils/_process_common.py
 ${PYSITELIB}/IPython/utils/_process_common.pyc
 ${PYSITELIB}/IPython/utils/_process_common.pyo
@@ -430,9 +442,6 @@ ${PYSITELIB}/IPython/utils/_process_posix.pyo
 ${PYSITELIB}/IPython/utils/_process_win32.py
 ${PYSITELIB}/IPython/utils/_process_win32.pyc
 ${PYSITELIB}/IPython/utils/_process_win32.pyo
-${PYSITELIB}/IPython/utils/_process_win32_controller.py
-${PYSITELIB}/IPython/utils/_process_win32_controller.pyc
-${PYSITELIB}/IPython/utils/_process_win32_controller.pyo
 ${PYSITELIB}/IPython/utils/_sysinfo.py
 ${PYSITELIB}/IPython/utils/_sysinfo.pyc
 ${PYSITELIB}/IPython/utils/_sysinfo.pyo
@@ -460,9 +469,6 @@ ${PYSITELIB}/IPython/utils/docs.pyo
 ${PYSITELIB}/IPython/utils/encoding.py
 ${PYSITELIB}/IPython/utils/encoding.pyc
 ${PYSITELIB}/IPython/utils/encoding.pyo
-${PYSITELIB}/IPython/utils/eventful.py
-${PYSITELIB}/IPython/utils/eventful.pyc
-${PYSITELIB}/IPython/utils/eventful.pyo
 ${PYSITELIB}/IPython/utils/frame.py
 ${PYSITELIB}/IPython/utils/frame.pyc
 ${PYSITELIB}/IPython/utils/frame.pyo
@@ -478,12 +484,6 @@ ${PYSITELIB}/IPython/utils/io.pyo
 ${PYSITELIB}/IPython/utils/ipstruct.py
 ${PYSITELIB}/IPython/utils/ipstruct.pyc
 ${PYSITELIB}/IPython/utils/ipstruct.pyo
-${PYSITELIB}/IPython/utils/jsonutil.py
-${PYSITELIB}/IPython/utils/jsonutil.pyc
-${PYSITELIB}/IPython/utils/jsonutil.pyo
-${PYSITELIB}/IPython/utils/log.py
-${PYSITELIB}/IPython/utils/log.pyc
-${PYSITELIB}/IPython/utils/log.pyo
 ${PYSITELIB}/IPython/utils/module_paths.py
 ${PYSITELIB}/IPython/utils/module_paths.pyc
 ${PYSITELIB}/IPython/utils/module_paths.pyo
@@ -496,9 +496,6 @@ ${PYSITELIB}/IPython/utils/path.pyo
 ${PYSITELIB}/IPython/utils/process.py
 ${PYSITELIB}/IPython/utils/process.pyc
 ${PYSITELIB}/IPython/utils/process.pyo
-${PYSITELIB}/IPython/utils/py3compat.py
-${PYSITELIB}/IPython/utils/py3compat.pyc
-${PYSITELIB}/IPython/utils/py3compat.pyo
 ${PYSITELIB}/IPython/utils/sentinel.py
 ${PYSITELIB}/IPython/utils/sentinel.pyc
 ${PYSITELIB}/IPython/utils/sentinel.pyo
