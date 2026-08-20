@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.93 2026/04/15 09:57:02 adam Exp $
+$NetBSD: distinfo,v 1.94 2026/08/20 07:46:56 adam Exp $
 
-BLAKE2s (graphviz-14.1.5.tar.xz) = f6f2177166fdf384e73f8e473884d858fce809ba18c738edcac713a8db2a3d3e
-SHA512 (graphviz-14.1.5.tar.xz) = 70d90736d91bb3fefc869cb39d0531879f4486d653a3cef496077547c8369873734a318169c73b4cb447f1ff13d201ed96e6bc80ef1b08550d298d97155f2ed4
-Size (graphviz-14.1.5.tar.xz) = 20984816 bytes
+BLAKE2s (graphviz-15.1.1.tar.xz) = c2e9279e5612204e36af2e604275fc2304d6eafd38d990565c06deb89c78c6db
+SHA512 (graphviz-15.1.1.tar.xz) = af3335e30270994b9402e79a2f317ec7fc31374e612f8a58ece9a40eb7799a5f792dd12eea1d54d2e8b8f622ac3046f8be47ccebf135ffba357b1fa09da3108a
+Size (graphviz-15.1.1.tar.xz) = 20974000 bytes
 SHA1 (patch-config_config__perl.pl) = 430acb7d7ee3e149de0af9832c5a29602884f83e
 SHA1 (patch-configure.ac) = dcb9fd2822d3eb5dddcda5a55746d51114f92d06
 SHA1 (patch-lib_gvc_Makefile.am) = 8a25c16a31923fc42138773f308f3b3fc5ee662b
