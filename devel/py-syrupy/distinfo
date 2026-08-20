@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/06/26 12:35:22 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/08/20 05:42:21 adam Exp $
 
-BLAKE2s (syrupy-5.3.4.tar.gz) = c53b41e978aad96c65dd5285ba5f343a0704a72e42d31deca45a0d30d17ae0d7
-SHA512 (syrupy-5.3.4.tar.gz) = c5caabfcd17862c352efe49035ebd68960dcfe6b5fb0830d67350eae3236c2f385e9bd6c046a4bd0216e2f8e8609d4f1aebdf12083598ba14f213c65ebd40f4a
-Size (syrupy-5.3.4.tar.gz) = 87078 bytes
+BLAKE2s (syrupy-5.5.3.tar.gz) = bc8482435d6d9443ad1d7aa910445e6c98c3f28ed15956cb0a1e484b1355dc28
+SHA512 (syrupy-5.5.3.tar.gz) = b2c5a1d1d0f9651b3781a0e647cf988a0b30e7836355d803bfe90f816f8dc16d8a0cc252b2108642862e3d4140eca1c796af27d7d189bcb3e258cc78545f870d
+Size (syrupy-5.5.3.tar.gz) = 91614 bytes
