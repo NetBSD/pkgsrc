@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2026/05/26 05:39:34 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/08/20 07:52:06 adam Exp $
 
-DISTNAME=	redis-8.8.0
+DISTNAME=	redis-8.10.1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -60,7 +60,9 @@ SUBST_VARS.fix-paths=		REDIS_DATADIR REDIS_LOGDIR REDIS_PIDDIR
 
 CHECK_PORTABILITY_SKIP+=	deps/jemalloc/configure
 
+# Don't build modules. These require cmake, clang and rust.
 post-extract:
+	${RM} -f -r ${WRKSRC}/modules/*/src
 	${CHMOD} -R g-w ${WRKSRC}
 
 post-install:
