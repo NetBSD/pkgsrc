@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.88 2026/05/11 15:54:05 adam Exp $
+$NetBSD: distinfo,v 1.89 2026/08/20 07:48:05 adam Exp $
 
-BLAKE2s (doxygen-1.17.0.src.tar.gz) = fd3e8cc09fa25a7a4906d8bbedfb705bb5d8e2f355effc8a34fd91ba53f3b5de
-SHA512 (doxygen-1.17.0.src.tar.gz) = dacaddc74919941f82ec7c80bb7a49267cad34f0dcc98f41bb5563a6537530b5669145e142855083cfac335b43b3e3063701092366440a57ab5c762310996b20
-Size (doxygen-1.17.0.src.tar.gz) = 9350308 bytes
+BLAKE2s (doxygen-1.18.0.src.tar.gz) = ffa83a9df67d8b76634d9ac3c2a062f8cc8d912a6e6e5c2df36509f19bc1d3e9
+SHA512 (doxygen-1.18.0.src.tar.gz) = c5f009ed91394870940aeb21d1094f7e610324f8e0f07b232fb9399040b083fc7a0be8c90dee484ccc3d38bf00f204a01484e0e2f5a63b62d2fb97337840b746
+Size (doxygen-1.18.0.src.tar.gz) = 9905783 bytes
 SHA1 (patch-deps_filesystem_filesystem.hpp) = cab313f9b520db2764f611b117b21c5d6cc43741
-SHA1 (patch-src_dirdef.cpp) = bcf5c4cbc6d94673a0e39b2887d1c3498544976d
+SHA1 (patch-src_dirdef.cpp) = 26ac84dd2357975baa77889b6a8cae0446166d58
