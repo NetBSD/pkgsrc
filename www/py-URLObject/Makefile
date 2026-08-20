@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/20 10:13:14 adam Exp $
 
-DISTNAME=	URLObject-2.4.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	urlobject-3.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/urlo/URLO/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/URLObject/}
 
@@ -11,7 +10,9 @@ HOMEPAGE=	https://github.com/zacharyvoase/urlobject
 COMMENT=	Utility class for manipulating URLs
 LICENSE=	unlicense
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
