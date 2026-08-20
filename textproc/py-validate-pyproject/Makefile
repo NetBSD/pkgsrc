@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/02/09 14:15:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/08/20 05:26:09 adam Exp $
 
-DISTNAME=	validate_pyproject-0.25
+DISTNAME=	validate_pyproject-0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-pyproject/}
@@ -19,9 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} validate-pyproject validate-pyproject-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	validate-pyproject
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
