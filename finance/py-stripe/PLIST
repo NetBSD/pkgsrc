@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2026/05/28 04:06:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/08/20 09:19:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -588,6 +588,9 @@ ${PYSITELIB}/stripe/_tax_rate_service.pyo
 ${PYSITELIB}/stripe/_tax_service.py
 ${PYSITELIB}/stripe/_tax_service.pyc
 ${PYSITELIB}/stripe/_tax_service.pyo
+${PYSITELIB}/stripe/_telemetry_id.py
+${PYSITELIB}/stripe/_telemetry_id.pyc
+${PYSITELIB}/stripe/_telemetry_id.pyo
 ${PYSITELIB}/stripe/_terminal_service.py
 ${PYSITELIB}/stripe/_terminal_service.pyc
 ${PYSITELIB}/stripe/_terminal_service.pyo
@@ -874,6 +877,9 @@ ${PYSITELIB}/stripe/financial_connections/_account_ownership.pyo
 ${PYSITELIB}/stripe/financial_connections/_account_service.py
 ${PYSITELIB}/stripe/financial_connections/_account_service.pyc
 ${PYSITELIB}/stripe/financial_connections/_account_service.pyo
+${PYSITELIB}/stripe/financial_connections/_authorization.py
+${PYSITELIB}/stripe/financial_connections/_authorization.pyc
+${PYSITELIB}/stripe/financial_connections/_authorization.pyo
 ${PYSITELIB}/stripe/financial_connections/_session.py
 ${PYSITELIB}/stripe/financial_connections/_session.pyc
 ${PYSITELIB}/stripe/financial_connections/_session.pyo
@@ -1078,6 +1084,9 @@ ${PYSITELIB}/stripe/params/_account_retrieve_person_params.pyo
 ${PYSITELIB}/stripe/params/_account_session_create_params.py
 ${PYSITELIB}/stripe/params/_account_session_create_params.pyc
 ${PYSITELIB}/stripe/params/_account_session_create_params.pyo
+${PYSITELIB}/stripe/params/_account_unreject_params.py
+${PYSITELIB}/stripe/params/_account_unreject_params.pyc
+${PYSITELIB}/stripe/params/_account_unreject_params.pyo
 ${PYSITELIB}/stripe/params/_account_update_params.py
 ${PYSITELIB}/stripe/params/_account_update_params.pyc
 ${PYSITELIB}/stripe/params/_account_update_params.pyo
@@ -1672,6 +1681,9 @@ ${PYSITELIB}/stripe/params/_payment_method_retrieve_params.pyo
 ${PYSITELIB}/stripe/params/_payment_method_update_params.py
 ${PYSITELIB}/stripe/params/_payment_method_update_params.pyc
 ${PYSITELIB}/stripe/params/_payment_method_update_params.pyo
+${PYSITELIB}/stripe/params/_payment_record_list_params.py
+${PYSITELIB}/stripe/params/_payment_record_list_params.pyc
+${PYSITELIB}/stripe/params/_payment_record_list_params.pyo
 ${PYSITELIB}/stripe/params/_payment_record_report_payment_attempt_canceled_params.py
 ${PYSITELIB}/stripe/params/_payment_record_report_payment_attempt_canceled_params.pyc
 ${PYSITELIB}/stripe/params/_payment_record_report_payment_attempt_canceled_params.pyo
