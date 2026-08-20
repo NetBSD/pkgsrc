@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2026/08/18 18:47:15 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/08/20 21:58:08 drixter Exp $
 
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.mod
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.zip
