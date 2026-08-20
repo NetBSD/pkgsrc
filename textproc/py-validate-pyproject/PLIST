@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/12 11:36:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/08/20 05:26:09 adam Exp $
 bin/validate-pyproject-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,6 +14,9 @@ ${PYSITELIB}/validate_pyproject/__init__.pyo
 ${PYSITELIB}/validate_pyproject/__main__.py
 ${PYSITELIB}/validate_pyproject/__main__.pyc
 ${PYSITELIB}/validate_pyproject/__main__.pyo
+${PYSITELIB}/validate_pyproject/_resources.py
+${PYSITELIB}/validate_pyproject/_resources.pyc
+${PYSITELIB}/validate_pyproject/_resources.pyo
 ${PYSITELIB}/validate_pyproject/_tomllib.py
 ${PYSITELIB}/validate_pyproject/_tomllib.pyc
 ${PYSITELIB}/validate_pyproject/_tomllib.pyo
