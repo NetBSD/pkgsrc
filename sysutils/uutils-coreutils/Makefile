@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2026/08/06 13:45:50 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/20 12:40:58 pin Exp $
 
 DISTNAME=	coreutils-0.10.0
+PKGREVISION=	1
 PKGNAME=	uutils-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uutils/}
 GITHUB_PROJECT=	coreutils
+GITHUB_TAG=	dba580dc057007bc153098b7a5aac3f0bd9aeea7
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://uutils.github.io/coreutils/
