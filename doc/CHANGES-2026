@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5422 2026/08/20 21:05:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5423 2026/08/20 21:31:01 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -7998,3 +7998,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dust to 1.2.5 [pin 2026-08-20]
 	Updated sysutils/uutils-coreutils to 0.10.0nb1 [pin 2026-08-20]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.38nb1 [wiz 2026-08-20]
+	Updated www/resterm to 1.2.1 [drixter 2026-08-20]
