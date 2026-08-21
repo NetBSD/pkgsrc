@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/08/12 22:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/21 17:00:52 adam Exp $
 
-DISTNAME=	flask_security-5.8.1
+DISTNAME=	flask_security-5.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Security/}
 
