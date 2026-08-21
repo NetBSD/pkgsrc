@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/06/09 17:57:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/08/21 12:34:05 wiz Exp $
 
 BUILDLINK_TREE+=	fzssh
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fzssh
 FZSSH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fzssh+=	fzssh>=1.2.1
-BUILDLINK_ABI_DEPENDS.fzssh+=	fzssh>=1.3.0
+BUILDLINK_ABI_DEPENDS.fzssh+=	fzssh>=1.4.0
 BUILDLINK_PKGSRCDIR.fzssh?=	../../net/fzssh
 
 .include "../../net/libfilezilla/buildlink3.mk"
