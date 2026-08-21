@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5442 2026/08/21 15:05:21 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5443 2026/08/21 16:05:53 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8022,3 +8022,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zmq to 27.2.0 [adam 2026-08-21]
 	Updated devel/py-ruff to 0.16.4 [adam 2026-08-21]
 	Updated www/chromium to 151.0.7922.173 [kikadf 2026-08-21]
+	Updated games/luanti to 5.17.0 [ktnb 2026-08-21]
