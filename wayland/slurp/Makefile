@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 13:35:41 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/21 06:47:46 wiz Exp $
 
 DISTNAME=	slurp-1.5.0
 CATEGORIES=	wayland
@@ -11,6 +11,8 @@ COMMENT=	Tool to select a region in a Wayland compositor
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
