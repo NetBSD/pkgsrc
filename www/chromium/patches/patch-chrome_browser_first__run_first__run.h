@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.9 2026/08/09 06:31:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.10 2026/08/21 15:04:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -12,7 +12,7 @@ $NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.9 2026/08/09 06:31:08 
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   bool eula_required = false;
+   bool eula_required = true;
  #endif
  };
 @@ -145,7 +145,7 @@ ProcessInitialPreferencesResult ProcessI
