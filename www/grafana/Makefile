@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2026/08/21 18:11:37 tnn Exp $
+# $NetBSD: Makefile,v 1.146 2026/08/21 20:59:04 tnn Exp $
 
-DISTNAME=	grafana-13.1.3
+DISTNAME=	grafana-13.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -71,7 +71,7 @@ CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
 GO_MODULE_EXTRACT+=	github.com_coreos_go-systemd_v22_@v_v22.7.0.zip
-GO_MODULE_EXTRACT+=	k8s.io_apiserver_@v_v0.36.0.zip
+GO_MODULE_EXTRACT+=	k8s.io_apiserver_@v_v0.36.2.zip
 
 post-extract:
 	${FIND} ${WRKDIR}/linux -type f -a -exec ${CHMOD} -x "{}" \;
