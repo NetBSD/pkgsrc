@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/14 07:36:11 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/21 16:59:01 adam Exp $
 
-DISTNAME=	appnope-0.1.4
+DISTNAME=	appnope-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/appnope/}
 
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
