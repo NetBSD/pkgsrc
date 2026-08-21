@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/04/12 11:28:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/08/21 12:52:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -86,6 +86,9 @@ ${PYSITELIB}/zmq/backend/select.pyo
 ${PYSITELIB}/zmq/constants.py
 ${PYSITELIB}/zmq/constants.pyc
 ${PYSITELIB}/zmq/constants.pyo
+${PYSITELIB}/zmq/curve_keygen.py
+${PYSITELIB}/zmq/curve_keygen.pyc
+${PYSITELIB}/zmq/curve_keygen.pyo
 ${PYSITELIB}/zmq/decorators.py
 ${PYSITELIB}/zmq/decorators.pyc
 ${PYSITELIB}/zmq/decorators.pyo
