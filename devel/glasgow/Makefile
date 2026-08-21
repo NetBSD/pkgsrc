@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/08/17 20:23:06 js Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/21 06:42:16 wiz Exp $
 
 # There are no release tags for glasgow
 DISTNAME=	glasgow-0.0.20260817
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-fx2>=0.16<1:../../devel/py-fx2
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.67.3:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-pyvcd>=0.4.1<0.5:../../devel/py-pyvcd
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6<0.5:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
 DEPENDS+=	yosys>=0.31.0.13:../../devel/yosys
 DEPENDS+=	nextpnr-ice40>=0.1:../../devel/nextpnr-ice40
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.0:../../www/py-aiohttp
