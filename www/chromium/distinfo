@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2026/08/14 16:37:52 kikadf Exp $
+$NetBSD: distinfo,v 1.56 2026/08/21 15:04:58 kikadf Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -66,12 +66,12 @@ Size (cc-1.2.61.crate) = 97163 bytes
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
 Size (cfg-if-1.0.4.crate) = 9360 bytes
-BLAKE2s (chromium-151.0.7922.137-lite.tar.xz) = 7ba5b403bc28140df645c2f92b414a940d4c2339a59d17a7f0b8f04044ff8974
-SHA512 (chromium-151.0.7922.137-lite.tar.xz) = 61ec7b654342a68394ff0907e5b344d97cecbca2bced851e4ead0fa93f05f7b2d6d8dc8953cc7d86204ddcf49a3b2f401626b79cbcf4b023628a721d6c543b29
-Size (chromium-151.0.7922.137-lite.tar.xz) = 1712008940 bytes
-BLAKE2s (chromium-151.0.7922.137-testdata.tar.xz) = e94c71794ab9cdc58b43802b44648392d995f090678737c39b17fb332936d5b7
-SHA512 (chromium-151.0.7922.137-testdata.tar.xz) = 918adbad034b5e083c9e211a908e8e8aee57e792f8267f2b14adcad46ff21cefed1dd187c18cbd5bd79d72202c11515177df73469312ea7e8274f5d824bfc340
-Size (chromium-151.0.7922.137-testdata.tar.xz) = 1305247952 bytes
+BLAKE2s (chromium-151.0.7922.173-lite.tar.xz) = 7b287613625ee0cfa6a885b1820d10ea3b996f13b685d85d9c80ecf26627fb3b
+SHA512 (chromium-151.0.7922.173-lite.tar.xz) = aa121805df437cf59e108c7a519edc3f43d391a5537f69176c23685f525288dc20d211849f9714c01fcb76a00b3f6033987b80ce98bbfe399774f063b698a985
+Size (chromium-151.0.7922.173-lite.tar.xz) = 1712173636 bytes
+BLAKE2s (chromium-151.0.7922.173-testdata.tar.xz) = 3378f4cd1bada15b16663749d13750bb9e91593a49499f746b4a9d0585980ed2
+SHA512 (chromium-151.0.7922.173-testdata.tar.xz) = 9150e7ecc696df10d36676dbc3ab48502f90951c3e6c76851dc50dd1740e5e530e5569752c167333de51e3727eb1b8ef31dfde14164796a160aa0cfea5fdb7c0
+Size (chromium-151.0.7922.173-testdata.tar.xz) = 1305407120 bytes
 BLAKE2s (cmake-0.1.58.crate) = a4568b73f30075a127114fb24a891b182573483d81080643888ecbd5e954efe7
 SHA512 (cmake-0.1.58.crate) = 49420a5d7d71ddccc21b71373769e1e28ab98c9af1a0c5d59fc3127e6dcc45cb1b7c6b5a37c9110907daceda7fd10bb59344f2bb8f041b18d62b16c22c5d0d60
 Size (cmake-0.1.58.crate) = 20474 bytes
@@ -886,7 +886,7 @@ SHA1 (patch-chrome_browser_feedback_system__logs_about__system__logs__fetcher.cc
 SHA1 (patch-chrome_browser_feedback_system__logs_chrome__system__logs__fetcher.cc) = 70ff94a73bd00de0eeff56c1c804436f2e92e307
 SHA1 (patch-chrome_browser_file__system__access_chrome__file__system__access__permission__context.cc) = 1b2007dfe8cc521d32bc6bce6006d13c13af8248
 SHA1 (patch-chrome_browser_first__run_first__run.cc) = 3ac0309b205f6163823227441ddbcdf4aa04b2be
-SHA1 (patch-chrome_browser_first__run_first__run.h) = f02b9207ba5d906b608f32a6aaa7a16752d0fe0f
+SHA1 (patch-chrome_browser_first__run_first__run.h) = 6a43d0cdf5c805fc6405c58b0de14debf69fe335
 SHA1 (patch-chrome_browser_first__run_first__run__dialog.h) = 5f02340efa9d7b20ffaeea5e584e1795b5f6526d
 SHA1 (patch-chrome_browser_first__run_first__run__internal.h) = 1e610c248e093ff297e4dfef436bc7f1d8ac7331
 SHA1 (patch-chrome_browser_flag__descriptions.h) = 85fa0c672ca5aded74c2bb74893155815573efee
