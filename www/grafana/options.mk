@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/08/21 18:04:05 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2026/08/21 21:47:37 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqlite3
 PKG_SUPPORTED_OPTIONS=	sqlite3
@@ -8,6 +8,7 @@ PKG_SUPPORTED_OPTIONS=	sqlite3
 # Please compile-test before adding platforms.
 .if \
 	${MACHINE_PLATFORM:MLinux-*-x86_64} || \
+	${MACHINE_PLATFORM:MNetBSD-*-x86_64} || \
 	${MACHINE_PLATFORM:MDarwin-*-aarch64}
 PKG_SUGGESTED_OPTIONS=	sqlite3
 .endif
