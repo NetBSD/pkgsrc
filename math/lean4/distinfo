@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2026/08/11 12:55:48 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/08/21 18:43:46 wiz Exp $
 
-BLAKE2s (lean4-4.33.0.tar.gz) = b927ea9d3bb6b62527cecdf4c898702d0783a2a2328413b6d2f6b9b74bab5953
-SHA512 (lean4-4.33.0.tar.gz) = 76cc04f43fd25c482fab228264ed69045e2fe1c0b4de265d43d74a2565f18467393e76002f2029016a86d7ec90e1a5ec585f328a60556cd0d4003c4a710a7b5e
-Size (lean4-4.33.0.tar.gz) = 86677749 bytes
+BLAKE2s (lean4-4.33.1.tar.gz) = 8639ccf7f54d47e4e90e21cd266b71698f7f9009fb2126b48553195308a4d335
+SHA512 (lean4-4.33.1.tar.gz) = 72808891827abfa02c52e15cf64fc96c48a02738f5aac0331a009772512e8cad0cae18373615a734e850328d8422d32e374289805bfcaef2852efc8234867c76
+Size (lean4-4.33.1.tar.gz) = 86700313 bytes
 SHA1 (patch-src_CMakeLists.txt) = c6620d0ca4c6f5d2fccf4e8e97462661c1a9d38d
 SHA1 (patch-src_Leanc.lean) = 156025c502ceb1afc67288c107cdca99b6968cc6
 SHA1 (patch-src_include_lean_lean.h) = 017a9c5b5ac185a122a831f6fe4a64e94d9caad9
