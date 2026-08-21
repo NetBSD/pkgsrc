@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2026/04/17 12:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/08/21 09:38:08 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	clang-${LLVM_VERSION}
+PKGREVISION=	1
 
 COMMENT=	C language family frontend for LLVM
 
