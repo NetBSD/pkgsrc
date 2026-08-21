@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/05/25 11:42:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/08/21 06:50:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -160,6 +160,12 @@ ${PYSITELIB}/modelsearch/test/testapp/migrations/0006_alter_novel_protagonist.py
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.py
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.pyc
 ${PYSITELIB}/modelsearch/test/testapp/migrations/0007_agendaitem_speaker.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0008_mp_animal.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0008_mp_animal.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0008_mp_animal.pyo
+${PYSITELIB}/modelsearch/test/testapp/migrations/0009_nsanimal.py
+${PYSITELIB}/modelsearch/test/testapp/migrations/0009_nsanimal.pyc
+${PYSITELIB}/modelsearch/test/testapp/migrations/0009_nsanimal.pyo
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.py
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.pyc
 ${PYSITELIB}/modelsearch/test/testapp/migrations/__init__.pyo
