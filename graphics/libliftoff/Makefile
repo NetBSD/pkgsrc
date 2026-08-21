@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/13 15:43:44 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/21 06:46:37 wiz Exp $
 
 DISTNAME=		libliftoff-0.5.0
 CATEGORIES=		graphics
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 WRKSRC=		${WRKDIR}/libliftoff-${GITLAB_TAG}
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/libdrm/buildlink3.mk"
