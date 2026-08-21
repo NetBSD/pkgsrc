@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4676 2026/08/17 14:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4677 2026/08/21 18:59:28 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -509,7 +509,6 @@ SUBDIR+=	go-swagger
 SUBDIR+=	go-sys
 SUBDIR+=	go-tcr
 SUBDIR+=	go-tools
-SUBDIR+=	go-wire
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golangci-lint
