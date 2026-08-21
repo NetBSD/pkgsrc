@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.111 2026/08/14 07:28:13 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.112 2026/08/21 13:00:08 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -18,6 +18,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-svg-0.1.11
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.10
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.104
 CARGO_CRATE_DEPENDS+=	approx-0.5.1
+CARGO_CRATE_DEPENDS+=	ar_archive_writer-0.5.3
 CARGO_CRATE_DEPENDS+=	arc-swap-1.9.2
 CARGO_CRATE_DEPENDS+=	argfile-1.0.0
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.8
@@ -235,6 +236,7 @@ CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
 CARGO_CRATE_DEPENDS+=	objc2-0.6.3
 CARGO_CRATE_DEPENDS+=	objc2-encode-4.1.0
+CARGO_CRATE_DEPENDS+=	object-0.39.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
 CARGO_CRATE_DEPENDS+=	once_cell_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.5
@@ -282,6 +284,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro-error-attr2-2.0.0
 CARGO_CRATE_DEPENDS+=	proc-macro-error2-2.0.1
 CARGO_CRATE_DEPENDS+=	proc-macro-utils-0.10.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.107
+CARGO_CRATE_DEPENDS+=	psm-0.1.32
 CARGO_CRATE_DEPENDS+=	ptr_meta-0.3.1
 CARGO_CRATE_DEPENDS+=	ptr_meta_derive-0.3.1
 CARGO_CRATE_DEPENDS+=	pyproject-toml-0.13.7
@@ -351,6 +354,7 @@ CARGO_CRATE_DEPENDS+=	smallvec-1.15.2
 CARGO_CRATE_DEPENDS+=	snapbox-1.0.0
 CARGO_CRATE_DEPENDS+=	snapbox-macros-1.0.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
+CARGO_CRATE_DEPENDS+=	stacker-0.1.25
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	statrs-0.18.0
 CARGO_CRATE_DEPENDS+=	strip-ansi-escapes-0.2.1
