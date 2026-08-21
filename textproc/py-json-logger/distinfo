@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/05/27 08:07:26 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/08/21 17:02:42 adam Exp $
 
-BLAKE2s (python_json_logger-4.1.0.tar.gz) = 2c3c89ad261c93ce9852c2684fc3e4dbcef6ff33edfc1c82c8cfe45546e5d11c
-SHA512 (python_json_logger-4.1.0.tar.gz) = 082d99f4e3c5503c1b8e1e40d33422fe98716e4e0019d94995ea937096b2c449a30889a91006899cf91f0489d6b51f559148ee29d490254f588b675e7a31354a
-Size (python_json_logger-4.1.0.tar.gz) = 17573 bytes
+BLAKE2s (python_json_logger-4.2.0.tar.gz) = 46962ebcfdd41f0d3e6f9d00f8a1af95da1eaf0a65e37f52ccfd3a01c9f754a3
+SHA512 (python_json_logger-4.2.0.tar.gz) = 29772063bbd7ac9ba9eb25e5a5b7e91457564d7d660f0d3813dfa3850e7a2b3ea686959d9f3c97d7a9e827802bb7b0a5b2f4d6c407a3399e96b4c9abed6ffc2f
+Size (python_json_logger-4.2.0.tar.gz) = 18211 bytes

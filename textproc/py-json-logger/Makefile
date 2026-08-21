@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/05/27 08:07:26 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/21 17:02:42 adam Exp $
 
-DISTNAME=	python_json_logger-4.1.0
+DISTNAME=	python_json_logger-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-json-logger/}
