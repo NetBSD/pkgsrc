@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.22 2026/08/21 11:21:36 wiz Exp $
+$NetBSD: distinfo,v 1.23 2026/08/21 12:17:32 wiz Exp $
 
 BLAKE2s (python-dateutil-2.9.0.post0.tar.gz) = 853dce8ffa2bb628e0d82444793adb394e9962ddca529ce1dea814e30384b416
 SHA512 (python-dateutil-2.9.0.post0.tar.gz) = f76522de0ff21547327eaf6966e80a15c57f8f92588d520eabd354a732e5c4b51d9c3ac5effd9eaa6dd451d1bce329a54a3f4c6bf4f1bd08ff06b0305c994e5a
 Size (python-dateutil-2.9.0.post0.tar.gz) = 342432 bytes
+SHA1 (patch-src_dateutil_parser___parser.py) = fe00859ca998812df85ba5e800f5c673cf38987b
+SHA1 (patch-src_dateutil_tz_tz.py) = c14680fe7347d5b5e3d507f064728bdd4df55a62
+SHA1 (patch-src_dateutil_zoneinfo_rebuild.py) = d01e7abce705dffb1bd7624099cfe5e3f4340fb7
 SHA1 (patch-tests_test__isoparser.py) = d4cee0a18d24001746ad65ce5bad1f72ad253e7b
+SHA1 (patch-tests_test__tz.py) = 896c50c2739a725acf6c380592f8ec9b0b5a22a2
