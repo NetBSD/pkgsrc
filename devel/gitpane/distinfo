@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/08/18 10:15:50 pin Exp $
+$NetBSD: distinfo,v 1.12 2026/08/21 08:12:50 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -303,9 +303,9 @@ Size (gimli-0.32.3.crate) = 289789 bytes
 BLAKE2s (git2-0.21.0.crate) = a2e93ada354032544e89b79dd7c631314be96697dcbae037a864decc3be7721b
 SHA512 (git2-0.21.0.crate) = c105b5a05ab3a0a291a30fdc627ac3b72196b93cadb91c62ae5395d2f469517fbcd32954972d62691590d3cad6a8aa5fc514ca966cc0ad2225d04fb5a53dfd26
 Size (git2-0.21.0.crate) = 242222 bytes
-BLAKE2s (gitpane-0.12.0.tar.gz) = 9106e61a5ad6d9d94768049c42fa718c4623ae4b8f4a95146aebbc83058744d1
-SHA512 (gitpane-0.12.0.tar.gz) = abb46dceea75c1c5e9a89b23cc0b5b4c96ec693e11ff9e27412a1ef1ce1949f4c931b6361aa2d59c678db6934a42ba9b8891f1f9a7639024b3829346db8f8e39
-Size (gitpane-0.12.0.tar.gz) = 4102805 bytes
+BLAKE2s (gitpane-0.13.0.tar.gz) = cdee93c05cb83beaed2a4e34273f3d1a1cdef52c04d4c3b01b523fcff7645981
+SHA512 (gitpane-0.13.0.tar.gz) = af7ad9c720b35946a0a56a1ee62f7ad38095d9aca8eaa6f88c198e37c2de6a76beccdd7bdd3f25bb73f95aa891bf19e06c7f71f624dce04222db8fb0723e037f
+Size (gitpane-0.13.0.tar.gz) = 4116901 bytes
 BLAKE2s (globset-0.4.18.crate) = e11bcd40201278f23b7b3aa74f96441bf85cc94e4c3364847ce6c15c4e5d1115
 SHA512 (globset-0.4.18.crate) = 44afbcdaff506dba351b967ff435752988f7d980e0b908c248c2aa462dcc95c94907a6d9ec7aec28599dc29d3fbd421cdf0bc8082042263b6af69b36fc1a2c54
 Size (globset-0.4.18.crate) = 28970 bytes
