@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/01/04 19:55:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/08/21 11:52:39 adam Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -89,8 +89,10 @@ share/doc/gammu/examples/php/smsd-mysql-list/sms.php
 share/doc/gammu/examples/sms-read.c
 share/doc/gammu/examples/sms-send.c
 share/doc/gammu/examples/smsd.c
+share/doc/gammu/examples/sql/mssql.sql
 share/doc/gammu/examples/sql/mysql-legacy.sql
 share/doc/gammu/examples/sql/mysql.sql
+share/doc/gammu/examples/sql/oracle.sql
 share/doc/gammu/examples/sql/pgsql.sql
 share/doc/gammu/examples/sql/sqlite.sql
 share/doc/gammu/manual/c/api.rst
@@ -173,7 +175,6 @@ share/doc/gammu/manual/protocol/samsung.rst
 share/doc/gammu/manual/protocol/sonim.rst
 share/doc/gammu/manual/protocol/tdma_5120.rst
 share/doc/gammu/manual/python/data.rst
-share/doc/gammu/manual/python/examples.rst
 share/doc/gammu/manual/python/exceptions.rst
 share/doc/gammu/manual/python/gammu.rst
 share/doc/gammu/manual/python/index.rst

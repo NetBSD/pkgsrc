@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.69 2026/05/14 16:40:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2026/08/21 11:52:39 adam Exp $
 
-DISTNAME=	gammu-1.42.0
-PKGREVISION=	3
+DISTNAME=	Gammu-1.44.1
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	comms
-MASTER_SITES=	https://dl.cihar.com/gammu/releases/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gammu/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wammu.eu/gammu/
