@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5444 2026/08/21 17:03:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5445 2026/08/21 17:04:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8026,3 +8026,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-appnope to 1.0.0 [adam 2026-08-21]
 	Updated www/py-flask-security to 5.8.2 [adam 2026-08-21]
 	Updated textproc/py-json-logger to 4.2.0 [adam 2026-08-21]
+	Updated textproc/rumdl to 0.2.58 [wiz 2026-08-21]
