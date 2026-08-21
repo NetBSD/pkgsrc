@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/10/20 10:22:53 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/21 16:57:11 wiz Exp $
 
 DISTNAME=	arrow-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,8 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
-# as of 1.3.0
-# 24 failed, 1813 passed, 2 xpassed, 31 warnings
+# as of 1.4.0
+# 1863 passed
 
 USE_LANGUAGES=	# none
 
