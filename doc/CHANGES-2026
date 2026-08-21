@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5434 2026/08/21 11:54:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5435 2026/08/21 12:17:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8013,3 +8013,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/qtcreator to 20.0.1 [adam 2026-08-21]
 	Updated comms/gammu to 1.44.1 [adam 2026-08-21]
 	Updated comms/py-gammu to 3.4.1 [adam 2026-08-21]
+	Updated time/py-dateutil to 2.9.0.0.0.0nb3 [wiz 2026-08-21]
