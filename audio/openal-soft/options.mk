@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/12/16 15:09:09 vins Exp $
+# $NetBSD: options.mk,v 1.5 2026/08/21 15:03:24 ktnb Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openal-soft
 PKG_SUPPORTED_OPTIONS=		jack pulseaudio sndio
@@ -32,6 +32,7 @@ CMAKE_CONFIGURE_ARGS+=	-DALSOFT_BACKEND_JACK=OFF
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 CMAKE_CONFIGURE_ARGS+=	-DALSOFT_BACKEND_PULSEAUDIO=ON
+LDFLAGS+=	-lpulse -lpulse-simple
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DALSOFT_BACKEND_PULSEAUDIO=OFF
