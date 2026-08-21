@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2026/06/09 18:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2026/08/21 10:27:56 adam Exp $
 
-DISTNAME=	dialog-1.3-20260107
+DISTNAME=	dialog-1.3-20260721
 PKGNAME=	${DISTNAME:C/-2/.2/}
 CATEGORIES=	misc
 MASTER_SITES=	https://invisible-island.net/archives/dialog/ \
