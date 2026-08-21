@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/05/10 18:46:12 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/08/21 12:36:12 wiz Exp $
 
-BLAKE2s (mcomix-3.1.1.tar.gz) = 9f15973053d6e0116b8c0343e29b830ef2a7b59ba5904dfc13aa7e4b9c47f283
-SHA512 (mcomix-3.1.1.tar.gz) = 8298776a82120e63d0c02312c8878d0ac0adac11ddef101b5bc0f9d5db6e47364408edbbc5fa6342ccb3c0fe79ccb6827138aabf7a121d3423e3d3e79be674c6
-Size (mcomix-3.1.1.tar.gz) = 669463 bytes
+BLAKE2s (mcomix-3.2.0.tar.gz) = e9e3e8feeb5f3b8771338cfa57fad5c781e31a66c6b50b971329982332ea6b4d
+SHA512 (mcomix-3.2.0.tar.gz) = ac426f7d25e2dbd2f0be7f6c010686915478a5fda6fe22a798b05d472d9becfe6197f1ee6488e26f5184ec3585cf917ba2420dc0cb8a10f855a55252ea0560e1
+Size (mcomix-3.2.0.tar.gz) = 671058 bytes
