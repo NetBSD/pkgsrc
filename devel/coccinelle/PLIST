@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/01/25 23:50:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/08/21 12:25:18 wiz Exp $
 bin/spatch
 bin/spgen
 lib/coccinelle/dllpyml_stubs.so
@@ -26,6 +26,8 @@ lib/coccinelle/ocaml/flag.cmi
 lib/coccinelle/ocaml/flag.cmx
 lib/coccinelle/ocaml/flag_parsing_c.cmi
 lib/coccinelle/ocaml/flag_parsing_c.cmx
+lib/coccinelle/ocaml/internal_print_c.cmi
+lib/coccinelle/ocaml/internal_print_c.cmx
 lib/coccinelle/ocaml/iteration.cmi
 lib/coccinelle/ocaml/iteration.cmx
 lib/coccinelle/ocaml/lexer_c.cmi
