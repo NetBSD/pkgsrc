@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/08/19 16:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/21 12:20:09 wiz Exp $
 
 DISTNAME=	icalendar-7.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,9 +25,8 @@ REPLACE_PYTHON+=	src/icalendar/cli.py
 PY_RENAME_BINARIES=	icalendar
 
 # as of 7.3.0
-# 24 failed, 18102 passed, 28 skipped, 527 xfailed, 47 warnings
-# https://github.com/collective/icalendar/issues/731
-# https://github.com/collective/icalendar/issues/1493
+# 2 failed, 18124 passed, 28 skipped, 527 xfailed, 47 warnings
+# https://github.com/collective/icalendar/issues/1708
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
