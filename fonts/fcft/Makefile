@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 12:06:06 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/21 06:45:59 wiz Exp $
 
 DISTNAME=	fcft-3.3.3
 CATEGORIES=	fonts
@@ -10,6 +10,8 @@ COMMENT=	Simple library for font loading and glyph rasterization
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
