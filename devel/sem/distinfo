@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/08/17 07:14:26 pin Exp $
+$NetBSD: distinfo,v 1.7 2026/08/22 17:35:29 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -672,9 +672,9 @@ Size (schemars_derive-1.2.1.crate) = 31319 bytes
 BLAKE2s (scopeguard-1.2.0.crate) = 4daf97de7fabaf7fe5ba6000f7132a46cc0bab2a297127580d9ac127d0a8fcec
 SHA512 (scopeguard-1.2.0.crate) = 6247719a15fe1e4e2d179127b9a934bd2f99367724f41175ed9522f58824b6bc69b35002eae66b35880375ff61d77ac43ddaa78cbde7160a35183a1da32d3fbb
 Size (scopeguard-1.2.0.crate) = 11619 bytes
-BLAKE2s (sem-0.22.1.tar.gz) = 169fc7654f5392f4f5a9cf081786551a4be66b39560767c565b1a0df3a661e56
-SHA512 (sem-0.22.1.tar.gz) = a9a11f050d8ea6a06c27f307477e4f9d09055d21f7323e1b93ce786579cee91b39101204c837ab8d5540d857162384d8407e3be0835bdbc7fbf1f6c31a175d84
-Size (sem-0.22.1.tar.gz) = 1835828 bytes
+BLAKE2s (sem-0.23.0.tar.gz) = 1019c1d565ff1c7b3628459991d4078d17d964b326049764a71d93a04a0dd71c
+SHA512 (sem-0.23.0.tar.gz) = 37b366b31b2bccaf5da1ac5075c6a1c10297f641f13b6254cfe1db66bc493156ae54d90207c006da6271f4d45649d941ec6305ee106fff6ecb59a4ad7256cfb9
+Size (sem-0.23.0.tar.gz) = 2018651 bytes
 BLAKE2s (semver-1.0.28.crate) = cc54fd8b7e1ad8e773e58137625a19c3ca7c46fec285a7eec1685230a1e9b88f
 SHA512 (semver-1.0.28.crate) = bb44373e60fccb83bc95e4277ea0abdd756a3f77b3334cf6d6b5fceac086910661ab94eb326cdc8fefce0c09220933bdf03bfd142c1594a92c9c1e4e931114b7
 Size (semver-1.0.28.crate) = 33064 bytes
