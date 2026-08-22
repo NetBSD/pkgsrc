@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5452 2026/08/22 11:37:29 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.5453 2026/08/22 12:53:29 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8035,3 +8035,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.2.2 [drixter 2026-08-22]
 	Updated databases/mimir to 3.2.0 [tnn 2026-08-22]
 	Added www/grafana-prometheus-datasource version 13.1.7 [tnn 2026-08-22]
+	Updated editors/ed to 1.22.6 [drixter 2026-08-22]
