@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/08/15 12:53:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/22 09:37:35 tnn Exp $
 
-DISTNAME=	mimir-2.15.0
-PKGREVISION=	16
+DISTNAME=	mimir-3.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	${DISTNAME}
@@ -19,15 +18,13 @@ CHECK_PORTABILITY_SKIP+=	vendor/cloud.google.com/go/internal/gen_info.sh
 .include "go-modules.mk"
 
 MIMIR_VERSION=	github.com/grafana/mimir/pkg/util/version
-GO_FLAGS=	-ldflags "-X ${MIMIR_VERSION}.Branch=${PKGVERSION_NOREV} -X ${MIMIR_VERSION}.Revision=${PKGREVISION} -X ${MIMIR_VERSION}.Version=${PKGVERSION_NOREV} -extldflags \"-static\" -s -w" -tags netgo,stringlabels
+GOFLAGS=	-ldflags "-X ${MIMIR_VERSION}.Branch=${PKGVERSION_NOREV} -X ${MIMIR_VERSION}.Revision=${PKGREVISION} -X ${MIMIR_VERSION}.Version=${PKGVERSION_NOREV} -extldflags \"-static\" -s -w" -tags netgo,stringlabels
 
-MIMIR_BINARIES=				\
+GO_BUILD_PATTERN=			\
 	./cmd/mimirtool			\
 	./cmd/mimir			\
-	./cmd/query-tee			\
 	./cmd/metaconvert		\
-	./cmd/mimir-continuous-test	\
-	./tools/markblocks
+	./cmd/query-tee
 
 EXAMPLE_DIR=	share/examples/mimir
 
@@ -55,16 +52,7 @@ INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR}
 
 CONF_FILES+=	${EXAMPLE_DIR}/mimir.yaml ${PKG_SYSCONFDIR}/mimir.yaml
 
-do-build:
-.for b in ${MIMIR_BINARIES}
-	@${ECHO_MSG} "Building ${b}"
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build ${GO_FLAGS} ${b}
-.endfor
-
-do-install:
-.for b in ${MIMIR_BINARIES:C,.*/,,}
-	${INSTALL_PROGRAM} ${WRKSRC}/${b} ${DESTDIR}${PREFIX}/bin
-.endfor
+post-install:
 	${INSTALL_DATA} ${FILESDIR}/mimir.yaml		\
 		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 
