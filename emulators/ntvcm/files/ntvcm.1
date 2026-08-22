@@ -1,4 +1,4 @@
-.\"	$NetBSD: ntvcm.1,v 1.2 2026/08/15 11:49:11 hauke Exp $
+.\"	$NetBSD: ntvcm.1,v 1.3 2026/08/22 17:43:47 hauke Exp $
 .\"
 .\" Creative Commons Legal Code
 .\" 
@@ -186,14 +186,14 @@ translate escape sequences to VT-100 where X can be one of
 for vt-52 escape sequences, use e.g. with CalcStar
 .It Cm  k
 for Kaypro II/Lear-Siegler ADM-3A escape sequences, use with strtrk
-.It Cm  z:X
+.El
+.It Fl  z:X
 applies X as a hex mask to SetProcessAffinityMask, e.g.:
 .Bl -tag compact  -width indent 
 .It Cm 11
 2 performance cores on an i7-1280P, or random good cores on a 5950x
 .It Cm 3000
 2 efficiency cores on an i7-1280P
-.El
 .El
 .It Fl 8
 use only i8080 instruction set, not the Z80 extensions
