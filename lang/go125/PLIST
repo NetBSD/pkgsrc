@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/08/15 12:26:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/08/22 15:15:20 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go125/CONTRIBUTING.md
@@ -8614,6 +8614,7 @@ go125/src/net/http/h2_error_test.go
 go125/src/net/http/header.go
 go125/src/net/http/header_test.go
 go125/src/net/http/http.go
+go125/src/net/http/http2_test.go
 go125/src/net/http/http_test.go
 go125/src/net/http/httptest/example_test.go
 go125/src/net/http/httptest/httptest.go
@@ -8645,6 +8646,7 @@ go125/src/net/http/mapping_test.go
 go125/src/net/http/method.go
 go125/src/net/http/netconn_test.go
 go125/src/net/http/omithttp2.go
+go125/src/net/http/omithttp2_test.go
 go125/src/net/http/pattern.go
 go125/src/net/http/pattern_test.go
 go125/src/net/http/pprof/pprof.go
