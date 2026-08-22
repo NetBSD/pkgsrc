@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5449 2026/08/22 06:44:33 iquiw Exp $
+$NetBSD: CHANGES-2026,v 1.5450 2026/08/22 09:03:59 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8032,3 +8032,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/go-wire [tnn 2026-08-21]
 	Updated www/grafana to 13.2.0 [tnn 2026-08-21]
 	Updated devel/task to 3.53.1 [iquiw 2026-08-22]
+	Updated www/resterm to 1.2.2 [drixter 2026-08-22]
