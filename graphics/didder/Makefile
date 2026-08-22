@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/08/15 12:53:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/22 15:19:03 bsiegert Exp $
 
 DISTNAME=	didder-1.3.0
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makew0rld/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

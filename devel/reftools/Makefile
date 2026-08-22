@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2026/08/15 12:53:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.61 2026/08/22 15:19:02 bsiegert Exp $
 
 GITHUB_TAG=	01cf781a
 DISTNAME=	reftools-0.0.20201119
-PKGREVISION=	59
+PKGREVISION=	60
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davidrjenni/}
 

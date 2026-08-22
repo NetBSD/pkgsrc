@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/08/15 12:53:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/22 15:19:16 bsiegert Exp $
 
 DISTNAME=	kepubify-4.0.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pgaskin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

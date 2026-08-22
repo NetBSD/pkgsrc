@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/08/15 12:53:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2026/08/22 15:19:03 bsiegert Exp $
 
 DISTNAME=	filter-senderscore-0.1.2
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=poolpOrg/}
 GITHUB_PROJECT=	filter-senderscore
