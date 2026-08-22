@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5454 2026/08/22 15:17:56 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.5455 2026/08/22 17:35:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8038,3 +8038,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/ed to 1.22.6 [drixter 2026-08-22]
 	Updated lang/go125 to 1.25.14 [bsiegert 2026-08-22]
 	Updated lang/go126 to 1.26.7 [bsiegert 2026-08-22]
+	Updated devel/sem to 0.23.0 [pin 2026-08-22]
