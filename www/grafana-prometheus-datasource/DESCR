@@ -1,0 +1,16 @@
+Prometheus is an open-source time series database and alerting system.
+The Prometheus data source plugin lets Grafana query, visualize, and alert
+on metrics stored in Prometheus or any Prometheus-compatible backend
+(for example Grafana Mimir, Cortex, Thanos).
+
+To install this plugin, do
+# ln -s /usr/pkg/share/grafana/plugins/prometheus /var/lib/grafana/plugins
+
+Ensure the following settings are present in grafana's configuration file:
+[plugins]
+preinstall_disabled = true
+preinstall_auto_update = false
+allow_loading_unsigned_plugins = prometheus
+
+[plugin.prometheus]
+as_external = true
