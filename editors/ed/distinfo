@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/07/14 18:58:35 drixter Exp $
+$NetBSD: distinfo,v 1.16 2026/08/22 12:53:04 drixter Exp $
 
-BLAKE2s (ed-1.22.5.tar.lz) = 232cbcc3cf84880fb22db5ca1b40b0db33db10121e7d4686d5c2e23d935aca07
-SHA512 (ed-1.22.5.tar.lz) = 5f879be3819b6e989cdf9e415b6ad65f24275cc7a6c63f81fb849c92cd97beac088b1dfef37e9eb3f2c1a3e84ffaa553f611a1e7bdd9c1cb5646283f814637b1
-Size (ed-1.22.5.tar.lz) = 71517 bytes
+BLAKE2s (ed-1.22.6.tar.lz) = 60cf3e86589cac1d5d26e920bc04e84e169763c5c455352b19ebef1868a5e5ba
+SHA512 (ed-1.22.6.tar.lz) = 50917800c9a27cc3eb131b79f3833b0090ff99fe9cf78f639d706db4bb1eb6568517c04911576a6f1f23e9b1fa5364af1bf2ca50091b7a84d15daa6f30249191
+Size (ed-1.22.6.tar.lz) = 71973 bytes
