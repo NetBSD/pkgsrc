@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5483 2026/08/23 08:33:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5484 2026/08/23 08:56:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8086,3 +8086,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/nerd-fonts-SourceCodePro to 3.5.1 [wiz 2026-08-23]
 	Updated fonts/nerd-fonts-Symbols to 3.5.1 [wiz 2026-08-23]
 	Updated fonts/nerd-fonts-iA-Writer to 3.5.1 [wiz 2026-08-23]
+	Updated time/libical4 to 4.0.5 [wiz 2026-08-23]
