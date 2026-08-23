@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27790 2026/08/23 00:38:52 gdt Exp $
+$NetBSD: TODO,v 1.27791 2026/08/23 06:59:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -535,6 +535,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o commit-patch-2.6
 	o compiz-0.9.14.2
 	o cone-0.92
+	o confuse-3.4
 	o conserver8-8.2.6
 	o consul-1.9.5
 	o cook-2.31
@@ -625,6 +626,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-mapi-0.32.2
 	o ex-20050325
 	o exult-1.10.1
+	o faad2-2.11.3
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
@@ -660,6 +662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-ntfs-3g-2026.7.7
 	o fuse-sshfs-3.7.6
+	o fzf-0.74.3
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
@@ -675,6 +678,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ggml-0.21.0
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.3
@@ -774,6 +778,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.2.3
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o influxdb-2.0.4
@@ -822,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
+	o khal-0.14.1
 	o kicad-9.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
@@ -843,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libdeflate-1.26
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libfakekey-0.3
@@ -1011,6 +1018,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-5.0.0 [wip; wait for https://bugs.kde.org/show_bug.cgi?id=522887]
 	o opendnssec-2.1.8
+	o openexr-3.4.15
 	o openfst-1.8.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
@@ -1124,6 +1132,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o proftpd-1.3.9a
 	o prometheus-3.14.0
 	o prosody-13.0.5
+	o protobuf-36.0
 	o pspp-1.4.1
 	o ptlib-2.16.2
 	o pvs-6.0
@@ -1132,29 +1141,43 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-brotlicffi-1.2.0.2
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
+	o py-cython-3.3.0
+	o py-deepmerge-3.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-google-api-python-client-2.199.0
 	o py-hgview-1.9.0
+	o py-httpcore2-2.12.0
+	o py-httpx2-2.12.0
+	o py-idna-3.19
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
+	o py-protobuf-7.36.0
 	o py-pydantic-core-2.48.0 [waiting for py-pydantic release that works with this]
+	o py-pygments-2.21.0
+	o py-pymdown-extensions-11.0.2
 	o py-simpletal-5.1
+	o py-sphinx-argparse-0.6.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
 	o py-uliweb-0.6
+	o py-urwid-4.0.11
+	o py-vcs-versioning-2.3.1
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
+	o py-zensical-0.0.57
 	o pythontidy-1.23
 	o q5go-2.1.3
 	o qca2-2.3.9
