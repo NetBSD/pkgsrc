@@ -1,0 +1,23 @@
+Feature-rich terminal wikipedia client.
+
+Features
+ - rich launch dashboard: big ascii logo, live wikipedia metrics and a continue
+ reading section.
+ - tabs & splits: work with multiple articles side-by-side or in tabs.
+ - smart status bar: 3-segment layout with active history trails and contextual
+ action hints.
+ - vim-like navigation: intuitive keybindings for fast scrolling, jumping,
+ heading traversal and pane management.
+ - table of contents (o): pop-up outline modal with hierarchical section
+ numbering.
+ - zen mode (z): distraction-free reading canvas with no borders, tab bars, or
+ status indicators.
+ - personalized recommendation feed (F): article discovery feed tailored to
+ your reading history. inspired by xikipedia.
+ - random article discovery (r): instantly fetch and explore random wikipedia 
+ articles in new tabs.
+ - in-page search (/): exact substring search with live match highlighting
+ and cycling (n / N).
+ - custom saved lists (m / M): save articles into custom lists stored in
+ ~/.config/wikid/saved_articles.json.
+ - live settings (,): in-app settings modal with instant hot-reloading.
