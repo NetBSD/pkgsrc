@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5458 2026/08/23 04:39:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5459 2026/08/23 07:00:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8042,3 +8042,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/go127 version 1.27.0 [bsiegert 2026-08-22]
 	Updated www/p5-URI to 5.36 [wiz 2026-08-23]
 	Updated devel/p5-Variable-Magic to 0.65 [wiz 2026-08-23]
+	Updated games/naev to 0.12.6nb10 [wiz 2026-08-23]
