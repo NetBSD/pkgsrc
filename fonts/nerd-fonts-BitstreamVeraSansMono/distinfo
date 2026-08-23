@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/08/03 21:46:27 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/08/23 08:31:44 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.5.0/BitstreamVeraSansMono.tar.xz) = aad3a90d0e9f89555f9b9e77f979d5076d460667a25b93372652e047bb13c3c2
-SHA512 (nerd-fonts/3.5.0/BitstreamVeraSansMono.tar.xz) = 7b7db74ad3286b1bfd1a00e642db12f9e7c73e2bfff677446c1cd1cf753d6da0e70991eab1427105cb689e42d41bbf2635a75a21d60e8816f2be1b987a943059
-Size (nerd-fonts/3.5.0/BitstreamVeraSansMono.tar.xz) = 2446332 bytes
+BLAKE2s (nerd-fonts/3.5.1/BitstreamVeraSansMono.tar.xz) = 3fa48d76e9796ee892c88c40a9d4935a20adb38ceebf2e21b35b6c13371fd2f7
+SHA512 (nerd-fonts/3.5.1/BitstreamVeraSansMono.tar.xz) = a94f481ebeded5333ecb6824c03257efc47bddc26d568af64e5eb6cf15cbba5a52a5b8342f091b4056cc47ffaadde81c65f92d686f729902fc162c3006400f67
+Size (nerd-fonts/3.5.1/BitstreamVeraSansMono.tar.xz) = 2498960 bytes
