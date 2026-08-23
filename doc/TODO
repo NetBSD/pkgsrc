@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27789 2026/08/21 20:59:37 tnn Exp $
+$NetBSD: TODO,v 1.27790 2026/08/23 00:38:52 gdt Exp $
 
 Suggested new packages
 ======================
@@ -346,6 +346,10 @@ Suggested new packages
 	libreFS
 	https://github.com/libreFS/libreFS
 	community-maintained S3-compatible object storage server, forked from MinIO at RELEASE.2025-04-22T22-12-26Z
+
+	LumoSQL
+	https://codeberg.org/lumosql/lumosql
+	sqlite3 not-fork with LMDB integration
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
