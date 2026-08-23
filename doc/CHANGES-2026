@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5487 2026/08/23 12:09:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5488 2026/08/23 18:47:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8090,3 +8090,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/croc to 11.2.5 [drixter 2026-08-23]
 	Added sysutils/smartctl_exporter version 0.14.0 [tnn 2026-08-23]
 	Added www/wikid version 2.2.0 [pin 2026-08-23]
+	Updated archivers/gzip to 1.14nb1 [wiz 2026-08-23]
