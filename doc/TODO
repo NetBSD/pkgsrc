@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27793 2026/08/23 07:42:02 wiz Exp $
+$NetBSD: TODO,v 1.27794 2026/08/23 07:43:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -660,7 +660,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-ntfs-3g-2026.7.7
 	o fuse-sshfs-3.7.6
-	o fzf-0.74.3
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
