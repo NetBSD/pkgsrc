@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5464 2026/08/23 07:44:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5465 2026/08/23 07:45:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8048,3 +8048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/faad2 to 2.11.3 [wiz 2026-08-23]
 	Updated sysutils/fzf to 0.74.3 [wiz 2026-08-23]
 	Updated math/ggml to 0.21.0 [wiz 2026-08-23]
+	Updated math/imath to 3.2.3 [wiz 2026-08-23]
