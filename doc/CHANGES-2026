@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5482 2026/08/23 08:30:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5483 2026/08/23 08:33:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8066,3 +8066,23 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-vcs-versioning to 2.3.1 [wiz 2026-08-23]
 	Updated www/py-zensical to 0.0.57 [wiz 2026-08-23]
 	Updated textproc/rumdl to 0.2.60 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-3270 to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Agave to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-AnonymousPro to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Arimo to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-AurulentSansMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-BigBlueTerminal to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-BitstreamVeraSansMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-CascadiaCode to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-CodeNewRoman to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Cousine to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-DaddyTimeMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-FantasqueSansMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Hack to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-IBMPlexMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-JetBrainsMono to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Meslo to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-NerdFontsSymbolsOnly to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-SourceCodePro to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-Symbols to 3.5.1 [wiz 2026-08-23]
+	Updated fonts/nerd-fonts-iA-Writer to 3.5.1 [wiz 2026-08-23]
