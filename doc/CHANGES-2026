@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5456 2026/08/22 18:50:04 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.5457 2026/08/23 04:38:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8040,3 +8040,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go126 to 1.26.7 [bsiegert 2026-08-22]
 	Updated devel/sem to 0.23.0 [pin 2026-08-22]
 	Added lang/go127 version 1.27.0 [bsiegert 2026-08-22]
+	Updated www/p5-URI to 5.36 [wiz 2026-08-23]
