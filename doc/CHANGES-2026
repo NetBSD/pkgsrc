@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5481 2026/08/23 08:27:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5482 2026/08/23 08:30:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8065,3 +8065,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.0.11 [wiz 2026-08-23]
 	Updated devel/py-vcs-versioning to 2.3.1 [wiz 2026-08-23]
 	Updated www/py-zensical to 0.0.57 [wiz 2026-08-23]
+	Updated textproc/rumdl to 0.2.60 [wiz 2026-08-23]
