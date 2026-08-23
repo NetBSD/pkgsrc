@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2026/08/23 12:08:30 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/23 14:36:11 pin Exp $
 
 DISTNAME=	wikid-2.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkthakftw/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/sharkthakftw/wikid/
 COMMENT=	Feature-rich terminal wikipedia client
 LICENSE=	mit
