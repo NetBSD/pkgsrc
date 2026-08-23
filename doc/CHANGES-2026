@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5462 2026/08/23 07:42:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5463 2026/08/23 07:43:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8046,3 +8046,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libjwt to 3.6.1nb1 [wiz 2026-08-23]
 	Updated devel/confuse to 3.4 [wiz 2026-08-23]
 	Updated audio/faad2 to 2.11.3 [wiz 2026-08-23]
+	Updated sysutils/fzf to 0.74.3 [wiz 2026-08-23]
