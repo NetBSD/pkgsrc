@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/08/03 21:46:28 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/08/23 08:31:45 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.5.0/Meslo.tar.xz) = 3119510b0e5cb64b6a848f5459ec8057e103a5a19aeb44a028c90ebcec010874
-SHA512 (nerd-fonts/3.5.0/Meslo.tar.xz) = 47c72c9a57dd3c9d3db99d52defc685bd0ebb615c83dbce3528b4c71876adfb17900782f2a73d7a3c907148d9a4cd98cc063c851e2a53393cd92cc934ffdb012
-Size (nerd-fonts/3.5.0/Meslo.tar.xz) = 5959312 bytes
+BLAKE2s (nerd-fonts/3.5.1/Meslo.tar.xz) = 2e50c47d97718a13ef0727376a61adf750abba5a7b0ab9cc443a72c842267779
+SHA512 (nerd-fonts/3.5.1/Meslo.tar.xz) = e24f64aa92649299d4db3cf1de43faad4915d6890e3510c9ed01b3a85b120b44b48c452c44e3d0136b7b91739a82e654604ee13d0962828f1e9510ac8b018115
+Size (nerd-fonts/3.5.1/Meslo.tar.xz) = 5241168 bytes

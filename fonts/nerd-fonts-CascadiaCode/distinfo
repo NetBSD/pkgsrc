@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/08/03 21:46:27 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/08/23 08:31:44 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.5.0/CascadiaCode.tar.xz) = 7f47a0ff2b01ebf171eaac20c81aadc6e37de981182b430d95a5a0c32f61b650
-SHA512 (nerd-fonts/3.5.0/CascadiaCode.tar.xz) = 4b96f33efd8910d3999790a8b01e0d42f19a77c1c76ba8f3e3d41d185db7d20b477fec0cf7d7d98c8de170bd7f604369eef32f2f195a1a3e24395cadffe97ddd
-Size (nerd-fonts/3.5.0/CascadiaCode.tar.xz) = 3532128 bytes
+BLAKE2s (nerd-fonts/3.5.1/CascadiaCode.tar.xz) = ea178284dfe0f720e616192567d944ca35607e7a21cc9b866bf40ad753714360
+SHA512 (nerd-fonts/3.5.1/CascadiaCode.tar.xz) = b3a108d0060ae885b846f41920d8c1b58ed8c6bafb6eb1c793c5700902b66ddba81b7bc6fc59b85791c952173eac716b97b1f70a2a6d52a418da8a37ce704f99
+Size (nerd-fonts/3.5.1/CascadiaCode.tar.xz) = 3592604 bytes
