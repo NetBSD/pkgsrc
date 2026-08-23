@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1930 2026/08/22 11:36:58 tnn Exp $
+# $NetBSD: Makefile,v 1.1931 2026/08/23 12:09:28 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1220,6 +1220,7 @@ SUBDIR+=	websockify
 SUBDIR+=	websvn
 SUBDIR+=	weex
 SUBDIR+=	whisker
+SUBDIR+=	wikid
 SUBDIR+=	wiki-tui
 SUBDIR+=	wiliki
 SUBDIR+=	wmd
