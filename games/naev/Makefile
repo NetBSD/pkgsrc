@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/07/13 04:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/23 07:00:23 wiz Exp $
 
 DISTNAME=		naev-0.12.6
 PKGREVISION=		10
@@ -21,7 +21,7 @@ HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	doxygen>=1.17:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.18:../../devel/doxygen
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_TOOLS+=	bash:run pkg-config cmake
