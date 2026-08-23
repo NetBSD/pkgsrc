@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5475 2026/08/23 08:11:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5476 2026/08/23 08:13:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8059,3 +8059,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httpcore2 to 2.12.0 [wiz 2026-08-23]
 	Updated www/py-httpx2 to 2.12.0 [wiz 2026-08-23]
 	Updated www/py-idna to 3.19 [wiz 2026-08-23]
+	Updated textproc/py-pygments to 2.21.0 [wiz 2026-08-23]
