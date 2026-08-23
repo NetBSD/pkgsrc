@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.13 2022/04/08 06:24:00 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/08/23 18:46:55 wiz Exp $
 
-BLAKE2s (gzip-1.12.tar) = 1edddfdf2946083367ef0295fb2c8d191a6ddc5777f6a2c48629bd25ad8b6033
-SHA512 (gzip-1.12.tar) = 79a54c63c3442061f3e47de7bdd5bfee2d2d40d1f09b8eabbbabe96295f9eb8fc2e0dd580f6bad528fd0e7e336f6e759ddf52863c0f0da733d1a184e57fde90f
-Size (gzip-1.12.tar) = 6041600 bytes
+BLAKE2s (gzip-1.14.tar) = 85d37d51b9935221ed7121beec44ea6be4ec6b658e11e714c60fe634969514b5
+SHA512 (gzip-1.14.tar) = a2a18dd06695bfcdfc8a2c229f6a4880a1f1287f98bc381aefd07951f9e8d15ce7608b0e4acaa9748431e1fb12710f4ba8bb719c83fcd8d6e449607bb3c04d6d
+Size (gzip-1.14.tar) = 6594560 bytes
+SHA1 (patch-lib_utimens.h) = fba5ec8e9fcb87642247a68ee6a4568a00d4f413
+SHA1 (patch-unlzh.c) = f9c44260e71e60e439045219500c499cbfbc43b5
