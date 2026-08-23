@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5473 2026/08/23 08:08:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5474 2026/08/23 08:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8057,3 +8057,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-deepmerge to 3.0 [wiz 2026-08-23]
 	Updated www/py-google-api-python-client to 2.199.0 [wiz 2026-08-23]
 	Updated www/py-httpcore2 to 2.12.0 [wiz 2026-08-23]
+	Updated www/py-httpx2 to 2.12.0 [wiz 2026-08-23]
