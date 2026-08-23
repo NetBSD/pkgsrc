@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2026/07/24 12:45:21 adam Exp $
+# $NetBSD: Makefile,v 1.121 2026/08/23 08:03:49 wiz Exp $
 
-DISTNAME=	cython-3.2.9
+DISTNAME=	cython-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
@@ -25,8 +25,8 @@ USE_CC_FEATURES=	c99
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD+=		c99
 
-# as of 3.2.2
-# 13 failed, 757 passed, 12 skipped, 2 warnings
+# as of 3.3.0
+# 13 failed, 859 passed, 13 skipped, 3 warnings
 
 # remove tests that are so broken they break collecting the other tests
 pre-test:
