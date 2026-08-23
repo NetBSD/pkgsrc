@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5486 2026/08/23 11:57:18 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.5487 2026/08/23 12:09:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8089,3 +8089,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/libical4 to 4.0.5 [wiz 2026-08-23]
 	Updated net/croc to 11.2.5 [drixter 2026-08-23]
 	Added sysutils/smartctl_exporter version 0.14.0 [tnn 2026-08-23]
+	Added www/wikid version 2.2.0 [pin 2026-08-23]
