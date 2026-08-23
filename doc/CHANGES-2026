@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5479 2026/08/23 08:17:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5480 2026/08/23 08:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8063,3 +8063,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pymdown-extensions to 11.0.2 [wiz 2026-08-23]
 	Updated textproc/py-sphinx-argparse to 0.6.1 [wiz 2026-08-23]
 	Updated devel/py-urwid to 4.0.11 [wiz 2026-08-23]
+	Updated devel/py-vcs-versioning to 2.3.1 [wiz 2026-08-23]
