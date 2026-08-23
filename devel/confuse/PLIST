@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/03 19:32:50 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/23 07:40:58 wiz Exp $
 include/confuse.h
 lib/libconfuse.la
 lib/pkgconfig/libconfuse.pc
@@ -8,4 +8,5 @@ share/doc/confuse/LICENSE
 share/doc/confuse/README.md
 share/locale/de/LC_MESSAGES/confuse.mo
 share/locale/fr/LC_MESSAGES/confuse.mo
+share/locale/ka/LC_MESSAGES/confuse.mo
 share/locale/sv/LC_MESSAGES/confuse.mo

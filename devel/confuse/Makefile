@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/05/05 14:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/23 07:40:58 wiz Exp $
 
-DISTNAME=	confuse-3.3
-PKGREVISION=	1
+DISTNAME=	confuse-3.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libconfuse/}
 GITHUB_PROJECT=	libconfuse
@@ -24,9 +23,8 @@ USE_TOOLS+=		pkg-config msgfmt autoconf automake flex
 PKGCONFIG_OVERRIDE+=	libconfuse.pc.in
 INSTALLATION_DIRS=	lib include
 
-# the included, but generated, lexer.c includes a
-# definition of a function which is then not used.
-BUILDLINK_TRANSFORM+=	rm:-Werror
+# as of 3.4, 1 test failure
+TEST_TARGET=		check
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
