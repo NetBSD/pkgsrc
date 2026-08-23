@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/23 11:56:02 tnn Exp $
+bin/smartctl_exporter
