@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 04:18:37 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2026/08/23 06:30:30 wiz Exp $
+
+Honor LDFLAGS, don't override pkgsrc defaults.
 
 --- Makefile.in.orig	Wed Feb  7 21:16:07 2001
 +++ Makefile.in

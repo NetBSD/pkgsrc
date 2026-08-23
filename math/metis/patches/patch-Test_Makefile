@@ -1,0 +1,15 @@
+$NetBSD: patch-Test_Makefile,v 1.1 2026/08/23 06:30:30 wiz Exp $
+
+Honor CFLAGS.
+
+--- Test/Makefile.orig	2026-08-23 06:27:43.529439957 +0000
++++ Test/Makefile
+@@ -3,7 +3,7 @@ INCLUDES = -I../Lib 
+ BINDIR = ../Graphs
+ 
+ INCLUDES = -I../Lib 
+-CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
++CFLAGS += $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
+ 
+ LIBS = -lmetis -lm
+ LD = $(CC) $(LDOPTIONS) -L. -L..

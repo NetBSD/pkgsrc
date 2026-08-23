@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:18:37 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2026/08/23 06:30:30 wiz Exp $
+
+Honor CFLAGS, avoid deprecated ar flags.
 
 --- Lib/Makefile.orig	Wed Feb  7 21:14:38 2001
 +++ Lib/Makefile
