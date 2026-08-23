@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5460 2026/08/23 07:01:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5461 2026/08/23 07:41:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8044,3 +8044,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Variable-Magic to 0.65 [wiz 2026-08-23]
 	Updated games/naev to 0.12.6nb10 [wiz 2026-08-23]
 	Updated security/libjwt to 3.6.1nb1 [wiz 2026-08-23]
+	Updated devel/confuse to 3.4 [wiz 2026-08-23]
