@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/11/10 09:30:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/08/23 08:03:49 wiz Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
@@ -169,6 +169,7 @@ ${PYSITELIB}/Cython/Compiler/Scanning.so
 ${PYSITELIB}/Cython/Compiler/StringEncoding.py
 ${PYSITELIB}/Cython/Compiler/StringEncoding.pyc
 ${PYSITELIB}/Cython/Compiler/StringEncoding.pyo
+${PYSITELIB}/Cython/Compiler/StringEncoding.so
 ${PYSITELIB}/Cython/Compiler/Symtab.py
 ${PYSITELIB}/Cython/Compiler/Symtab.pyc
 ${PYSITELIB}/Cython/Compiler/Symtab.pyo
@@ -323,6 +324,7 @@ ${PYSITELIB}/Cython/Includes/cpython/dict.pxd
 ${PYSITELIB}/Cython/Includes/cpython/exc.pxd
 ${PYSITELIB}/Cython/Includes/cpython/fileobject.pxd
 ${PYSITELIB}/Cython/Includes/cpython/float.pxd
+${PYSITELIB}/Cython/Includes/cpython/frozendict.pxd
 ${PYSITELIB}/Cython/Includes/cpython/function.pxd
 ${PYSITELIB}/Cython/Includes/cpython/genobject.pxd
 ${PYSITELIB}/Cython/Includes/cpython/getargs.pxd
@@ -346,6 +348,7 @@ ${PYSITELIB}/Cython/Includes/cpython/pyport.pxd
 ${PYSITELIB}/Cython/Includes/cpython/pystate.pxd
 ${PYSITELIB}/Cython/Includes/cpython/pythread.pxd
 ${PYSITELIB}/Cython/Includes/cpython/ref.pxd
+${PYSITELIB}/Cython/Includes/cpython/sentinel.pxd
 ${PYSITELIB}/Cython/Includes/cpython/sequence.pxd
 ${PYSITELIB}/Cython/Includes/cpython/set.pxd
 ${PYSITELIB}/Cython/Includes/cpython/slice.pxd
@@ -433,6 +436,10 @@ ${PYSITELIB}/Cython/Includes/posix/types.pxd
 ${PYSITELIB}/Cython/Includes/posix/uio.pxd
 ${PYSITELIB}/Cython/Includes/posix/unistd.pxd
 ${PYSITELIB}/Cython/Includes/posix/wait.pxd
+${PYSITELIB}/Cython/LZSS.py
+${PYSITELIB}/Cython/LZSS.pyc
+${PYSITELIB}/Cython/LZSS.pyo
+${PYSITELIB}/Cython/LZSS.so
 ${PYSITELIB}/Cython/Plex/Actions.pxd
 ${PYSITELIB}/Cython/Plex/Actions.py
 ${PYSITELIB}/Cython/Plex/Actions.pyc
@@ -477,7 +484,6 @@ ${PYSITELIB}/Cython/Runtime/refnanny.pyx
 ${PYSITELIB}/Cython/Runtime/refnanny.so
 ${PYSITELIB}/Cython/Shadow.py
 ${PYSITELIB}/Cython/Shadow.pyc
-${PYSITELIB}/Cython/Shadow.pyi
 ${PYSITELIB}/Cython/Shadow.pyo
 ${PYSITELIB}/Cython/StringIOTree.py
 ${PYSITELIB}/Cython/StringIOTree.pyc
@@ -536,10 +542,13 @@ ${PYSITELIB}/Cython/Utility/CythonFunction.c
 ${PYSITELIB}/Cython/Utility/Dataclasses.c
 ${PYSITELIB}/Cython/Utility/Embed.c
 ${PYSITELIB}/Cython/Utility/Exceptions.c
+${PYSITELIB}/Cython/Utility/Exceptions_Cy.pyx
 ${PYSITELIB}/Cython/Utility/ExtensionTypes.c
 ${PYSITELIB}/Cython/Utility/FunctionArguments.c
 ${PYSITELIB}/Cython/Utility/FusedFunction.pyx
 ${PYSITELIB}/Cython/Utility/ImportExport.c
+${PYSITELIB}/Cython/Utility/MatchCase.c
+${PYSITELIB}/Cython/Utility/MatchCase_Cy.pyx
 ${PYSITELIB}/Cython/Utility/MemoryView.pxd
 ${PYSITELIB}/Cython/Utility/MemoryView.pyx
 ${PYSITELIB}/Cython/Utility/MemoryView_C.c
@@ -548,7 +557,6 @@ ${PYSITELIB}/Cython/Utility/NumpyImportArray.c
 ${PYSITELIB}/Cython/Utility/ObjectHandling.c
 ${PYSITELIB}/Cython/Utility/Optimize.c
 ${PYSITELIB}/Cython/Utility/Overflow.c
-${PYSITELIB}/Cython/Utility/Printing.c
 ${PYSITELIB}/Cython/Utility/Profile.c
 ${PYSITELIB}/Cython/Utility/StringTools.c
 ${PYSITELIB}/Cython/Utility/Synchronization.c
@@ -569,8 +577,8 @@ ${PYSITELIB}/Cython/Utils.pyo
 ${PYSITELIB}/Cython/Utils.so
 ${PYSITELIB}/Cython/__init__.py
 ${PYSITELIB}/Cython/__init__.pyc
-${PYSITELIB}/Cython/__init__.pyi
 ${PYSITELIB}/Cython/__init__.pyo
+${PYSITELIB}/Cython/_shared.so
 ${PYSITELIB}/Cython/py.typed
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
