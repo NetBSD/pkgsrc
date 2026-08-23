@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5467 2026/08/23 07:47:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5468 2026/08/23 07:48:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8051,3 +8051,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/imath to 3.2.3 [wiz 2026-08-23]
 	Updated time/khal to 0.14.1 [wiz 2026-08-23]
 	Updated devel/libdeflate to 1.26 [wiz 2026-08-23]
+	Updated graphics/openexr to 3.4.15 [wiz 2026-08-23]
