@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/05 14:52:00 wiz Exp $
+$NetBSD: distinfo,v 1.14 2026/08/23 07:40:58 wiz Exp $
 
-BLAKE2s (confuse-3.3.tar.gz) = 2d74ad1e3582901d2f888ade7d6be765cf5477d920e7527de2b39e852c74b2fe
-SHA512 (confuse-3.3.tar.gz) = 07f994ca670778ea3dd667b96e1109a90f1f886184b124a9249b60c724d35e423600ed33b46d46ef9299b8b531784e8023af6fad4c88b72791c86c0b1b7c370e
-Size (confuse-3.3.tar.gz) = 775369 bytes
-SHA1 (patch-src_lexer.c) = 27aec50a046526260783566612ebc5ef3a415729
+BLAKE2s (confuse-3.4.tar.gz) = e27d68b8ad8e5296526e335ce2cd76868faf2080b3e7a1198b8687dbeb4c905f
+SHA512 (confuse-3.4.tar.gz) = 3d803c0296454e8b3c03bd5d391859a00e805d351ed94296cfac39f3a5524aaf1907d25b3fa711f8bd71de92d44d55cbc10d934d480c01f39f324ef81a39e4cc
+Size (confuse-3.4.tar.gz) = 1028703 bytes
