@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1200 2026/08/12 22:12:00 wiz Exp $
+# $NetBSD: Makefile,v 1.1201 2026/08/23 11:57:19 tnn Exp $
 #
 
 COMMENT=	System utilities
@@ -745,6 +745,7 @@ SUBDIR+=	skopeo
 SUBDIR+=	slay
 SUBDIR+=	sleepwatcher
 SUBDIR+=	slocate
+SUBDIR+=	smartctl_exporter
 SUBDIR+=	smartmontools
 SUBDIR+=	smbldap-tools
 SUBDIR+=	snmp_exporter

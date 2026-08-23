@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5485 2026/08/23 10:59:10 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5486 2026/08/23 11:57:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8088,3 +8088,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/nerd-fonts-iA-Writer to 3.5.1 [wiz 2026-08-23]
 	Updated time/libical4 to 4.0.5 [wiz 2026-08-23]
 	Updated net/croc to 11.2.5 [drixter 2026-08-23]
+	Added sysutils/smartctl_exporter version 0.14.0 [tnn 2026-08-23]
