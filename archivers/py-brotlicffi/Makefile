@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/03/07 11:46:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/23 07:52:58 wiz Exp $
 
-DISTNAME=	brotlicffi-1.2.0.1
+DISTNAME=	brotlicffi-1.2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotlicffi/}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 MAKE_ENV+=	USE_SHARED_BROTLI=1
+
+# tests need libbrotli sources in ${WRKSRC}/libbrotli
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
