@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/05/24 18:12:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/08/23 08:56:16 wiz Exp $
 
-BLAKE2s (libical-4.0.1.tar.gz) = 66fd16e4bd8c5ac4a6905331d2cfdad33bb8360d31df98c4d28cc15bfc6f330e
-SHA512 (libical-4.0.1.tar.gz) = 5b5557d22f4bb7922fb56162d56a86f9995c4daa1407fdbbc73b57f19fd847b9c8f6640f5904f6e471d1a2fe0a4178a49b011085547d400cef35876f20421efb
-Size (libical-4.0.1.tar.gz) = 1871999 bytes
+BLAKE2s (libical-4.0.5.tar.gz) = 9e3319ffb4bcfce6150cbf93c37bb2bf805c2f31238a5b666acd115640715e58
+SHA512 (libical-4.0.5.tar.gz) = 8d5282f78c3185f1439d8b5d713ba015c358da0cec5e2b3564dbb96643d083376234aff8740563de11bad8029464f24c05c3d52434770ddaa2bc0b5a7946ef1e
+Size (libical-4.0.5.tar.gz) = 1890218 bytes
 SHA1 (patch-src_libical_CMakeLists.txt) = ea7c07a4dca826a7c7e13a252811723ea1f45825
