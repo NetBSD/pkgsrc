@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/07/03 11:31:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/08/23 07:01:45 wiz Exp $
 bin/jwe-decrypt
 bin/jwe-encrypt
 bin/jwk2key
@@ -340,6 +340,7 @@ man/man3/jwt_token_hash.3
 man/man3/jwt_token_hash_half.3
 man/man3/jwt_value_error_t.3
 man/man3/jwt_value_t.3
+man/man3/jwt_value_t_[union].__unnamed0__.3
 man/man3/jwt_value_type_t.3
 man/man3/jwt_verify_policy_t.3
 share/doc/LibJWT/LICENSE
@@ -510,3 +511,4 @@ share/doc/LibJWT/html/svg.min.js
 share/doc/LibJWT/html/tabs.css
 share/doc/LibJWT/html/topics.html
 share/doc/LibJWT/html/topics.js
+share/doc/LibJWT/html/unionjwt__value__t_1_1_0funion_0e_8____unnamed0____.html
