@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2026/08/09 17:30:46 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2026/08/23 07:48:26 wiz Exp $
 
-DISTNAME=	openexr-3.4.14
+DISTNAME=	openexr-3.4.15
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
 GITHUB_PROJECT=	openexr
