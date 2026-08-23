@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/04/05 07:30:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/08/23 08:13:35 wiz Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -225,6 +225,9 @@ ${PYSITELIB}/pygments/lexers/berry.pyo
 ${PYSITELIB}/pygments/lexers/bibtex.py
 ${PYSITELIB}/pygments/lexers/bibtex.pyc
 ${PYSITELIB}/pygments/lexers/bibtex.pyo
+${PYSITELIB}/pygments/lexers/bitbake.py
+${PYSITELIB}/pygments/lexers/bitbake.pyc
+${PYSITELIB}/pygments/lexers/bitbake.pyo
 ${PYSITELIB}/pygments/lexers/blueprint.py
 ${PYSITELIB}/pygments/lexers/blueprint.pyc
 ${PYSITELIB}/pygments/lexers/blueprint.pyo
@@ -252,6 +255,9 @@ ${PYSITELIB}/pygments/lexers/carbon.pyo
 ${PYSITELIB}/pygments/lexers/cddl.py
 ${PYSITELIB}/pygments/lexers/cddl.pyc
 ${PYSITELIB}/pygments/lexers/cddl.pyo
+${PYSITELIB}/pygments/lexers/cel.py
+${PYSITELIB}/pygments/lexers/cel.pyc
+${PYSITELIB}/pygments/lexers/cel.pyo
 ${PYSITELIB}/pygments/lexers/chapel.py
 ${PYSITELIB}/pygments/lexers/chapel.pyc
 ${PYSITELIB}/pygments/lexers/chapel.pyo
@@ -615,6 +621,9 @@ ${PYSITELIB}/pygments/lexers/prql.pyo
 ${PYSITELIB}/pygments/lexers/ptx.py
 ${PYSITELIB}/pygments/lexers/ptx.pyc
 ${PYSITELIB}/pygments/lexers/ptx.pyo
+${PYSITELIB}/pygments/lexers/purescript.py
+${PYSITELIB}/pygments/lexers/purescript.pyc
+${PYSITELIB}/pygments/lexers/purescript.pyo
 ${PYSITELIB}/pygments/lexers/python.py
 ${PYSITELIB}/pygments/lexers/python.pyc
 ${PYSITELIB}/pygments/lexers/python.pyo
@@ -957,6 +966,9 @@ ${PYSITELIB}/pygments/styles/murphy.pyo
 ${PYSITELIB}/pygments/styles/native.py
 ${PYSITELIB}/pygments/styles/native.pyc
 ${PYSITELIB}/pygments/styles/native.pyo
+${PYSITELIB}/pygments/styles/night_owl.py
+${PYSITELIB}/pygments/styles/night_owl.pyc
+${PYSITELIB}/pygments/styles/night_owl.pyo
 ${PYSITELIB}/pygments/styles/nord.py
 ${PYSITELIB}/pygments/styles/nord.pyc
 ${PYSITELIB}/pygments/styles/nord.pyo
