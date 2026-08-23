@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/07/06 08:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/23 08:16:00 wiz Exp $
 
-DISTNAME=	sphinx_argparse-0.6.0
+DISTNAME=	sphinx_argparse-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-argparse/}
