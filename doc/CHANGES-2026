@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5470 2026/08/23 08:03:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5471 2026/08/23 08:06:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8054,3 +8054,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.4.15 [wiz 2026-08-23]
 	Updated archivers/py-brotlicffi to 1.2.0.2 [wiz 2026-08-23]
 	Updated devel/py-cython to 3.3.0 [wiz 2026-08-23]
+	Updated devel/py-deepmerge to 3.0 [wiz 2026-08-23]
