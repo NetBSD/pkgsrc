@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:06:41 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/08/24 08:35:04 adam Exp $
 
-BLAKE2s (libcdr-0.1.7.tar.xz) = ab5c8e89bf41745f9e05e57aeb86ca78d29385b25831b89b53334a29fa327219
-SHA512 (libcdr-0.1.7.tar.xz) = 9af327fcf9f3f3ef1c446e92f4d2ff06ebaccb54d4c65b021960a212bf416f7098006324625f3e1c00500597eaa9da39832cc27b83a6cd593e97b76b1eb63d38
-Size (libcdr-0.1.7.tar.xz) = 618528 bytes
+BLAKE2s (libcdr-0.1.9.tar.xz) = 0a459afc57d6be0b1219abd589ae8c15aea0161986d8f14272791f4d1faf7561
+SHA512 (libcdr-0.1.9.tar.xz) = cb187da2543ffff7c61679a25dabfc3837a2725c6c3855f38879122f0898ebcabb31bd93a3017c1275b870e3af0ac2e0f8426a3a65f50db1ec6961dce5567de4
+Size (libcdr-0.1.9.tar.xz) = 632896 bytes
