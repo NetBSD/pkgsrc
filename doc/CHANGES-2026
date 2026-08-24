@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5498 2026/08/24 11:15:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5499 2026/08/24 11:47:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8109,3 +8109,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-lap to 0.5.13nb1 [wiz 2026-08-24]
 	Updated textproc/utf8-cpp to 4.2.0 [adam 2026-08-24]
 	Updated devel/pkgconf to 3.0.6 [adam 2026-08-24]
+	Updated mail/exim to 4.100 [adam 2026-08-24]
+	Updated mail/exim-html to 4.100 [adam 2026-08-24]
