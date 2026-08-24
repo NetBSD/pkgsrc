@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/05/15 09:13:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/08/24 07:41:49 adam Exp $
 share/b2/build-system.jam
 share/b2/build/ac.jam
 share/b2/build/alias.jam
@@ -27,6 +27,7 @@ share/b2/tools/auto-index.jam
 share/b2/tools/bison.jam
 share/b2/tools/boostbook.jam
 share/b2/tools/borland.jam
+share/b2/tools/brotli.jam
 share/b2/tools/builtin.jam
 share/b2/tools/bzip2.jam
 share/b2/tools/cast.jam
@@ -115,6 +116,7 @@ share/b2/tools/features/variant-feature.jam
 share/b2/tools/features/version-feature.jam
 share/b2/tools/features/visibility-feature.jam
 share/b2/tools/features/warnings-feature.jam
+share/b2/tools/filc.jam
 share/b2/tools/flags.jam
 share/b2/tools/fop.jam
 share/b2/tools/fortran.jam
