@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.321 2026/08/14 12:26:11 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.322 2026/08/24 12:51:47 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -47,7 +47,7 @@ CKSUM_CRATES+=		third_party/rust/mtu
 CKSUMS+=		9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
 CKSUMS+=		986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
 
-SUBST_CLASSES+=	cksum
+SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
 .for crate in ${CKSUM_CRATES}
 SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
@@ -238,8 +238,12 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
 CONFIGURE_ARGS.NetBSD+=	--disable-sandbox
 
-# XXX
-#CONFIGURE_ARGS.NetBSD+=	--disable-memfd_create
+PRINT_PLIST_AWK+=	/\/${MOZILLA}\// { gsub(/\/${MOZILLA}\//, "/$${MOZILLA}/") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.png$$/ { gsub(/\/${MOZILLA}.png$$/, "/$${MOZILLA}.png") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.desktop$$/ { gsub(/\/${MOZILLA}.desktop$$/, "/$${MOZILLA}.desktop") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}$$/ { gsub(/\/${MOZILLA}$$/, "/$${MOZILLA}") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}-bin$$/ { gsub(/\/${MOZILLA}-bin$$/, "/$${MOZILLA}-bin") }
+PLIST_SUBST+=		MOZILLA=${MOZILLA}
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -266,7 +270,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 BUILDLINK_API_DEPENDS.icu+=	icu>=78.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.125
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.126
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -281,7 +285,7 @@ RUST_REQ=	1.90.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
-.include "../../multimedia/ffmpeg8/buildlink3.mk"
+.include "../../multimedia/ffmpeg9/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40

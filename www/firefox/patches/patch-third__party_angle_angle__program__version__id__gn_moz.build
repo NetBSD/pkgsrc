@@ -1,0 +1,31 @@
+$NetBSD: patch-third__party_angle_angle__program__version__id__gn_moz.build,v 1.1 2026/08/24 12:51:47 ryoon Exp $
+
+* Add FreeBSD and NetBSD file with SHA256 hash.
+
+--- third_party/angle/angle_program_version_id_gn/moz.build.orig	2026-08-14 14:09:56.486273570 +0000
++++ third_party/angle/angle_program_version_id_gn/moz.build
+@@ -69,6 +69,24 @@ if CONFIG["OS_TARGET"] == "OpenBSD":
+         script="/python/mozbuild/mozbuild/action/write_path_list.py",
+     )
+ 
++if CONFIG["OS_TARGET"] == "FreeBSD":
++
++    GeneratedFile(
++        "/third_party/angle/gen/ANGLEShaderProgramVersion.h.rsp",
++        entry_point="write_paths",
++        inputs=['ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in'],
++        script="/python/mozbuild/mozbuild/action/write_path_list.py",
++    )
++
++if CONFIG["OS_TARGET"] == "NetBSD":
++
++    GeneratedFile(
++        "/third_party/angle/gen/ANGLEShaderProgramVersion.h.rsp",
++        entry_point="write_paths",
++        inputs=['ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in'],
++        script="/python/mozbuild/mozbuild/action/write_path_list.py",
++    )
++
+ if CONFIG["OS_TARGET"] == "WINNT":
+ 
+     DEFINES["UNICODE"] = True
