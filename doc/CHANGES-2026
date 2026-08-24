@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5508 2026/08/24 14:27:56 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5509 2026/08/24 15:11:11 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8126,3 +8126,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/dropbear to 2026.94 [adam 2026-08-24]
 	Updated security/py-joserfc to 1.7.4 [adam 2026-08-24]
 	Added wayland/waybar version 0.15.0 [kikadf 2026-08-24]
+	Updated net/croc to 11.3.0 [drixter 2026-08-24]
