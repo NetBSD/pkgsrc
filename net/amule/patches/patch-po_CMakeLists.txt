@@ -1,0 +1,15 @@
+$NetBSD: patch-po_CMakeLists.txt,v 1.1 2026/08/24 08:42:27 adam Exp $
+
+On Darwin, don't build app bundle.
+
+--- po/CMakeLists.txt.orig	2026-06-24 13:12:57.405588825 +0000
++++ po/CMakeLists.txt
+@@ -69,7 +69,7 @@ foreach (PO_FILE ${PO_FILES})
+ 		# the .mo catalogs need to live there — not under share/locale.
+ 		# Linux/*BSD use libintl's system search paths under
+ 		# ${CMAKE_INSTALL_LOCALEDIR}.
+-		if (APPLE)
++		if (FALSE)
+ 			# Bundling into the .app happens in src/CMakeLists.txt
+ 			# via a POST_BUILD on the amule target, since `po` is
+ 			# processed before `src` and the target doesn't exist yet.

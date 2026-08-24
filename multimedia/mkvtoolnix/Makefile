@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.267 2026/07/13 04:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2026/08/24 08:42:26 adam Exp $
 
 DISTNAME=	mkvtoolnix-100.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +19,6 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 # If you are using the GNU C compiler collection (gcc), you need
 # at least v8; for clang v7 and newer should work.'
 USE_CXX_FEATURES=	c++17 filesystem
-
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
@@ -27,7 +26,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-optimization
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-update-check
-CONFIGURE_ARGS+=	--enable-qt6
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook
 CONFIGURE_ARGS+=	--with-qmake=${QTDIR}/bin/qmake

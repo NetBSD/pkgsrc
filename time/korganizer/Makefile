@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/07/13 04:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/24 08:42:31 adam Exp $
 
 DISTNAME=	korganizer-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org/

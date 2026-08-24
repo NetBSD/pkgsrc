@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2026/06/11 07:16:45 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2026/08/24 08:42:11 adam Exp $
 
 V=		8.0.9
 DISTNAME=	kicad-${V}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
 GITLAB_PROJECT=	kicad

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/05/15 09:58:56 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/08/24 08:42:24 adam Exp $
 
 DISTNAME=	libime-1.1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/libime/
 EXTRACT_SUFX=	.tar.xz

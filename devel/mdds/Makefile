@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/05/15 09:58:46 adam Exp $
+# $NetBSD: Makefile,v 1.63 2026/08/24 08:42:15 adam Exp $
 
 DISTNAME=	mdds-3.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/07/13 04:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/24 08:42:25 adam Exp $
 
 DISTNAME=	kmail-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

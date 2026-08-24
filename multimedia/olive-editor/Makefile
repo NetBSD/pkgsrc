@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2026/08/03 18:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/24 08:42:27 adam Exp $
 
 DISTNAME=	olive-editor-0.2.0pre20230924
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=olive-editor/}
 GITHUB_PROJECT=	olive

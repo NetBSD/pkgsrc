@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2026/05/15 09:58:44 adam Exp $
+# $NetBSD: Makefile,v 1.57 2026/08/24 08:42:13 adam Exp $
 
 DISTNAME=	liborcus-0.21.0
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
