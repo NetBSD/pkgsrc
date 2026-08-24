@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5500 2026/08/24 11:57:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5501 2026/08/24 12:07:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8112,3 +8112,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim to 4.100 [adam 2026-08-24]
 	Updated mail/exim-html to 4.100 [adam 2026-08-24]
 	Updated shells/nushell to 0.115.1 [adam 2026-08-24]
+	Updated math/py-asteval to 1.0.10 [adam 2026-08-24]
+	Updated archivers/py-cramjam to 2.12.0 [adam 2026-08-24]
