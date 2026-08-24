@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123.2.1 2026/08/09 18:36:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.123.2.2 2026/08/24 20:55:25 maya Exp $
 
 DISTNAME=	ibus-1.5.34
 PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
@@ -88,14 +88,16 @@ PLIST.wayland=		yes
 CONFIGURE_ARGS+=	--disable-wayland
 .endif
 
-# Explicitly clean .c files generated from .vala sources that contain
-# "#if USE_GDK_WAYLAND" preprocessing directives since we
-# might be on a platform where gtk3 is not built with Wayland.
+# Explicitly regenerate .c sources from .vala where the generated sources
+# depend on configure result.  Generated sources in the distfile may have
+# been created with different options.
 # See also https://github.com/ibus/ibus/issues/2767
+#
 # Also make sure to regenerate portal/ibus-portal-dbus.[ch] to
 # sync with system glib2 version.
 pre-build:
 	(cd ${WRKSRC} && ${MAKE_PROGRAM} -C ui/gtk3 maintainer-clean-generic)
+	(cd ${WRKSRC} && ${MAKE_PROGRAM} -C tools maintainer-clean-generic)
 	(cd ${WRKSRC} && ${MAKE_PROGRAM} -C portal maintainer-clean-generic)
 
 .include "../../devel/glib2/schemas.mk"
