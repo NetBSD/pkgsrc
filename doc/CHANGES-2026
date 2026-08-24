@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5505 2026/08/24 12:52:05 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5506 2026/08/24 12:54:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8122,3 +8122,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-narwhals to 2.25.0 [adam 2026-08-24]
 	Updated databases/py-peewee to 4.4.0 [adam 2026-08-24]
 	Updated www/firefox to 154.0 [ryoon 2026-08-24]
+	Updated www/firefox-l10n to 154.0 [ryoon 2026-08-24]
