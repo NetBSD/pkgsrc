@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/08/23 18:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/08/24 18:35:28 drixter Exp $
 
 DISTNAME=	gzip-1.14
 PKGREVISION=	1
@@ -13,7 +13,7 @@ HOMEPAGE=	https://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 LICENSE=	gnu-gpl-v3
 
-CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]*
+CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]* zutils-[0-9]*
 
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	manlinks=so
