@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5492 2026/08/24 08:03:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5493 2026/08/24 08:10:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8097,3 +8097,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ccache to 4.14 [adam 2026-08-24]
 	Updated audio/strawberry to 1.2.27 [adam 2026-08-24]
 	Updated games/wesnoth to 1.18.8 [adam 2026-08-24]
+	Updated converters/librevenge to 0.0.6 [adam 2026-08-24]
+	Updated converters/libvisio to 0.1.9 [adam 2026-08-24]
