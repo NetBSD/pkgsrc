@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/04/07 18:16:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/08/24 07:41:49 adam Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -130,8 +130,10 @@ lib/cmake/boost_random-${PKGVERSION}/libboost_random-variant-shared.cmake
 lib/cmake/boost_random-${PKGVERSION}/libboost_random-variant-static.cmake
 lib/cmake/boost_regex-${PKGVERSION}/boost_regex-config-version.cmake
 lib/cmake/boost_regex-${PKGVERSION}/boost_regex-config.cmake
-lib/cmake/boost_regex-${PKGVERSION}/libboost_regex-variant-shared.cmake
-lib/cmake/boost_regex-${PKGVERSION}/libboost_regex-variant-static.cmake
+lib/cmake/boost_regex_old-${PKGVERSION}/boost_regex_old-config-version.cmake
+lib/cmake/boost_regex_old-${PKGVERSION}/boost_regex_old-config.cmake
+lib/cmake/boost_regex_old-${PKGVERSION}/libboost_regex_old-variant-shared.cmake
+lib/cmake/boost_regex_old-${PKGVERSION}/libboost_regex_old-variant-static.cmake
 lib/cmake/boost_serialization-${PKGVERSION}/boost_serialization-config-version.cmake
 lib/cmake/boost_serialization-${PKGVERSION}/boost_serialization-config.cmake
 lib/cmake/boost_serialization-${PKGVERSION}/libboost_serialization-variant-shared.cmake
@@ -144,6 +146,10 @@ lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config-ver
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/libboost_stacktrace_basic-variant-shared.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/libboost_stacktrace_basic-variant-static.cmake
+lib/cmake/boost_stacktrace_dump-${PKGVERSION}/boost_stacktrace_dump-config-version.cmake
+lib/cmake/boost_stacktrace_dump-${PKGVERSION}/boost_stacktrace_dump-config.cmake
+lib/cmake/boost_stacktrace_dump-${PKGVERSION}/libboost_stacktrace_dump-variant-shared.cmake
+lib/cmake/boost_stacktrace_dump-${PKGVERSION}/libboost_stacktrace_dump-variant-static.cmake
 ${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/boost_stacktrace_from_exception-config-version.cmake
 ${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/boost_stacktrace_from_exception-config.cmake
 ${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/libboost_stacktrace_from_exception-variant-shared.cmake
@@ -152,6 +158,8 @@ lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config-versi
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/libboost_stacktrace_noop-variant-shared.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/libboost_stacktrace_noop-variant-static.cmake
+lib/cmake/boost_system-${PKGVERSION}/boost_system-config-version.cmake
+lib/cmake/boost_system-${PKGVERSION}/boost_system-config.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/boost_test_exec_monitor-config-version.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/boost_test_exec_monitor-config.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/libboost_test_exec_monitor-variant-shared.cmake
@@ -284,6 +292,9 @@ ${PLIST.stacktrace_addr2line}lib/libboost_stacktrace_addr2line.so.${PKGVERSION}
 lib/libboost_stacktrace_basic.a
 lib/libboost_stacktrace_basic.so
 lib/libboost_stacktrace_basic.so.${PKGVERSION}
+lib/libboost_stacktrace_dump.a
+lib/libboost_stacktrace_dump.so
+lib/libboost_stacktrace_dump.so.${PKGVERSION}
 ${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.a
 ${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.so
 ${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.so.${PKGVERSION}

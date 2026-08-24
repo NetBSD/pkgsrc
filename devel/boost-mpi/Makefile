@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/12/25 22:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/24 07:41:50 adam Exp $
 
 BOOST_PACKAGE=		mpi
 BOOST_COMMENT=		(Boost.MPI binary library)
@@ -23,9 +23,10 @@ do-install: boost-install-libs
 
 # These are already in boost-libs
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*container.*
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*graph.*
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*serialization.*
+.for libname in atomic chrono container date_time exception graph math math_c99 math_c99f \
+                math_c99l math_tr1 math_tr1f math_tr1l random serialization thread
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*${libname}.*
+.endfor
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/mpi.buildlink3.mk"

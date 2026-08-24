@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/06/28 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/24 07:41:50 adam Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -41,15 +41,16 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/Boost-*/*.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/BoostDetectToolset-*.cmake
-	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_container-*/*.cmake
-	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_graph-*/*.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_headers-*/*.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_numpy-*/*-config-version.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_numpy-*/*-config.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_python-*/*-config-version.cmake
 	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_python-*/*-config.cmake
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*container.*
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*graph.*
+.for libname in atomic chrono container exception date_time graph math math_c99 math_c99f \
+		math_c99l math_tr1 math_tr1f math_tr1l random serialization thread wserialization
+	${RM} -f ${DESTDIR}${PREFIX}/lib/cmake/boost_${libname}-*/*.cmake
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*${libname}.*
+.endfor
 
 BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs-${BOOST_VERSION}{,nb[0-9]*}
 .include "../../devel/boost-libs/buildlink3.mk"

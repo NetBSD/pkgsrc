@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.164 2026/05/15 09:13:49 adam Exp $
+$NetBSD: distinfo,v 1.165 2026/08/24 07:41:50 adam Exp $
 
-BLAKE2s (boost_1_91_0.tar.bz2) = 60c7a38dff009350fa69f8977972016d36184211866acc038f89b5b2966f25c9
-SHA512 (boost_1_91_0.tar.bz2) = 25b3c1434d4c561ff568581356d1f240ef12218be62281f34fe7482487c5328ee6902ef158b7cf8daafe84943cf6f46485a8710a6da74475f11da023ec7b5559
-Size (boost_1_91_0.tar.bz2) = 204579466 bytes
+BLAKE2s (boost_1_92_0.tar.bz2) = 6f3402e35816533deda29fca748fdeab3d9d03e405b079ed08a679d79178d907
+SHA512 (boost_1_92_0.tar.bz2) = 408d1d96996e576d74dabfa43b01c94d46c1eff7452015c4c4eb75e89b70502bb29fea0c08b54a64dd24cc14ffe50cf30f423279524f4a820e864f5da9a8331c
+Size (boost_1_92_0.tar.bz2) = 199030664 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 1f809170538f83252dc2f368825622f7a9df96f9
 SHA1 (patch-boost_asio_detail_config.hpp) = 493de647c6832027bac563549653ba2b8f75b83c
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
