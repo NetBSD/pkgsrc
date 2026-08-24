@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.89 2026/01/09 15:59:38 wiz Exp $
+# $NetBSD: NetBSD.mk,v 1.90 2026/08/24 21:40:17 wiz Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -16,8 +16,10 @@ TYPE?=		type				# Shell builtin
 # pax-as-tar, found on <=8, and optionally later, fails on many archives.
 EXTRACT_USING?=	bsdtar
 
-.if ${OPSYS_VERSION} < 090000
+.if ${OPSYS_VERSION} < 100000
 EXTRACT_ENV+=	LC_CTYPE=en_US.UTF-8
+.else
+EXTRACT_ENV+=	LC_CTYPE=C.UTF-8
 .endif
 
 USERADD?=	/usr/sbin/useradd
