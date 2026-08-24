@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27817 2026/08/24 11:47:49 adam Exp $
+$NetBSD: TODO,v 1.27818 2026/08/24 12:25:14 kikadf Exp $
 
 Suggested new packages
 ======================
@@ -831,7 +831,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kronolith-4.2.14
 	o kstars-3.8.4
 	o ktorrent3-3.3.4
-	o labwc-0.20.2
 	o latexmk-486
 	o lbdb-49
 	o lcc-4.2

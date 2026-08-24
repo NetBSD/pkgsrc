@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5501 2026/08/24 12:07:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5502 2026/08/24 12:25:13 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8114,3 +8114,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/nushell to 0.115.1 [adam 2026-08-24]
 	Updated math/py-asteval to 1.0.10 [adam 2026-08-24]
 	Updated archivers/py-cramjam to 2.12.0 [adam 2026-08-24]
+	Updated wayland/labwc to 0.20.2 [kikadf 2026-08-24]
