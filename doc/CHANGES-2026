@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5507 2026/08/24 13:13:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5508 2026/08/24 14:27:56 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8125,3 +8125,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox-l10n to 154.0 [ryoon 2026-08-24]
 	Updated security/dropbear to 2026.94 [adam 2026-08-24]
 	Updated security/py-joserfc to 1.7.4 [adam 2026-08-24]
+	Added wayland/waybar version 0.15.0 [kikadf 2026-08-24]
