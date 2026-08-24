@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5509 2026/08/24 15:11:11 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5510 2026/08/24 22:10:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8127,3 +8127,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-joserfc to 1.7.4 [adam 2026-08-24]
 	Added wayland/waybar version 0.15.0 [kikadf 2026-08-24]
 	Updated net/croc to 11.3.0 [drixter 2026-08-24]
+	Updated meta-pkgs/bulk-test-go to 20260825 [wiz 2026-08-24]
