@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5496 2026/08/24 08:49:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5497 2026/08/24 11:06:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8106,3 +8106,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/libcdr to 0.1.9 [adam 2026-08-24]
 	Updated net/libtorrent-rasterbar to 2.0.14 [adam 2026-08-24]
 	Updated devel/ast-grep to 0.45.2 [wiz 2026-08-24]
+	Updated math/py-lap to 0.5.13nb1 [wiz 2026-08-24]
