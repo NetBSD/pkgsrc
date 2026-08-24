@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:06:43 nia Exp $
+$NetBSD: distinfo,v 1.20 2026/08/24 08:10:39 adam Exp $
 
-BLAKE2s (libvisio-0.1.7.tar.xz) = a44c0818c42a9ffdfdb656d7fff00b64490d242eb6d95c2b5dc2afc1705bf11e
-SHA512 (libvisio-0.1.7.tar.xz) = c26f67a09fa6a6d0bf6f3fff5590d5cf16983630d4f7cfcf86d9461baec58dbdf7989fd934be6db0639ca043c160aac2d008275afb9e047766bc878ac579a9ea
-Size (libvisio-0.1.7.tar.xz) = 854296 bytes
+BLAKE2s (libvisio-0.1.9.tar.xz) = 243c58d9792e0a7d32544054b8d8ff59446e2309a8d5c99c6aa879d3a0a4ed56
+SHA512 (libvisio-0.1.9.tar.xz) = 861f71eae3c7189e834326bec6efc577672b7f5099bb15d1d4c7ced7498fd7aa5a288841b4be70718b6a6c45c5c504d13a80853200c69e4e3c72f83af086af63
+Size (libvisio-0.1.9.tar.xz) = 2007560 bytes
