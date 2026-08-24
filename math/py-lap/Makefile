@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/08/24 11:05:37 wiz Exp $
 
 DISTNAME=	lap-0.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lap/}
 
