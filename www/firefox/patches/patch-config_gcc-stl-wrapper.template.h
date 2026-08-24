@@ -1,4 +1,4 @@
-$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.6 2026/05/30 17:06:09 ryoon Exp $
+$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.7 2026/08/24 12:51:47 ryoon Exp $
 
 --- config/gcc-stl-wrapper.template.h.orig	2026-04-15 13:12:19.000000000 +0000
 +++ config/gcc-stl-wrapper.template.h
@@ -18,7 +18,7 @@ $NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.6 2026/05/30 17:06:09 ryoon
  // have been preprocessed.
  #if !defined(MOZ_INCLUDE_MOZALLOC_H) && \
 -    !defined(moz_dont_include_mozalloc_for_${HEADER})
-+    !defined(moz_dont_include_mozalloc_for_cstdlib)
++    !defined(moz_dont_include_mozalloc_for_${HEADER})
  #  define MOZ_INCLUDE_MOZALLOC_H
  #  define MOZ_INCLUDE_MOZALLOC_H_FROM_${HEADER}
  #endif

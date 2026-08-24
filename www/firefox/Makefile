@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.669 2026/08/14 12:26:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.670 2026/08/24 12:51:47 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		153.0
-MOZ_BRANCH_MINOR=	.4
+MOZ_BRANCH=		154.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -11,7 +11,7 @@ MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-153.0.tgz
+NODEJSKIT=		nodejs-output-154.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -68,8 +68,8 @@ LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
 # Should revisit to complete mprotect support.
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}-bin
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
