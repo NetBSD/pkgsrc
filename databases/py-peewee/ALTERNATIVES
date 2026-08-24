@@ -1,1 +1,2 @@
 bin/pwiz @PREFIX@/bin/pwiz-@PYVERSSUFFIX@
+bin/pwmigrate @PREFIX@/bin/pwmigrate-@PYVERSSUFFIX@

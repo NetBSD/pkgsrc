@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.29 2026/08/03 09:49:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/08/24 12:40:22 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
+bin/pwmigrate-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -49,6 +50,9 @@ ${PYSITELIB}/playhouse/kv.pyo
 ${PYSITELIB}/playhouse/migrate.py
 ${PYSITELIB}/playhouse/migrate.pyc
 ${PYSITELIB}/playhouse/migrate.pyo
+${PYSITELIB}/playhouse/migrations.py
+${PYSITELIB}/playhouse/migrations.pyc
+${PYSITELIB}/playhouse/migrations.pyo
 ${PYSITELIB}/playhouse/mysql_ext.py
 ${PYSITELIB}/playhouse/mysql_ext.pyc
 ${PYSITELIB}/playhouse/mysql_ext.pyo
@@ -67,6 +71,9 @@ ${PYSITELIB}/playhouse/pydantic_utils.pyo
 ${PYSITELIB}/playhouse/reflection.py
 ${PYSITELIB}/playhouse/reflection.pyc
 ${PYSITELIB}/playhouse/reflection.pyo
+${PYSITELIB}/playhouse/schema_diff.py
+${PYSITELIB}/playhouse/schema_diff.pyc
+${PYSITELIB}/playhouse/schema_diff.pyo
 ${PYSITELIB}/playhouse/shortcuts.py
 ${PYSITELIB}/playhouse/shortcuts.pyc
 ${PYSITELIB}/playhouse/shortcuts.pyo
