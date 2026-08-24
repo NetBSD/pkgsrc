@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5503 2026/08/24 12:28:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5504 2026/08/24 12:40:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8117,3 +8117,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/labwc to 0.20.2 [kikadf 2026-08-24]
 	Updated math/py-scipy to 1.18.1 [adam 2026-08-24]
 	Updated graphics/py-tifffile to 2026.8.23 [adam 2026-08-24]
+	Updated devel/py-queuelib to 1.10.0 [adam 2026-08-24]
+	Updated databases/py-redis to 8.1.0 [adam 2026-08-24]
+	Updated misc/py-narwhals to 2.25.0 [adam 2026-08-24]
+	Updated databases/py-peewee to 4.4.0 [adam 2026-08-24]
