@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5489 2026/08/23 19:05:49 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5490 2026/08/24 07:01:02 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8092,3 +8092,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/wikid version 2.2.0 [pin 2026-08-23]
 	Updated archivers/gzip to 1.14nb1 [wiz 2026-08-23]
 	Updated www/resterm to 1.2.3 [drixter 2026-08-23]
+	Updated www/resterm to 1.2.4 [drixter 2026-08-24]
