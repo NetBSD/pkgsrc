@@ -1,39 +1,30 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2025/09/30 09:14:24 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2026/08/24 08:02:43 adam Exp $
 
-Don't use boost_system library.
 Do not look for X11 on macOS.
 We don't have readline as a module.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2025-05-20 22:28:48.000000000 +0000
+--- CMakeLists.txt.orig	2026-08-18 15:07:28.000000000 +0000
 +++ CMakeLists.txt
-@@ -93,14 +93,16 @@ if(APPLE)
- 	find_library(SECURITY_LIBRARY Security REQUIRED)
- endif()
- 
--find_package(Boost ${BOOST_VERSION} REQUIRED COMPONENTS iostreams program_options regex system thread random coroutine locale filesystem graph)
-+find_package(Boost ${BOOST_VERSION} REQUIRED COMPONENTS iostreams program_options regex thread random coroutine locale filesystem graph)
- find_package(ICU REQUIRED COMPONENTS data i18n uc)
- 
- # no, gettext executables are not required when NLS is deactivated
+@@ -113,7 +113,9 @@ find_package(ICU REQUIRED COMPONENTS dat
  find_package(Gettext)
  find_package(Python)
  
 +if(NOT APPLE)
  find_package(X11)
-+endif(NOT APPLE)
++endif()
  
  if(NOT WIN32 AND NOT ENABLE_SYSTEM_LUA)
  	# Use the safer `mkstemp' instead of `tmpnam' on POSIX systems.
-@@ -542,7 +544,6 @@ if(ENABLE_GAME OR ENABLE_TESTS)
+@@ -555,7 +557,6 @@ if(ENABLE_GAME OR ENABLE_TESTS)
  	pkg_check_modules(CAIRO REQUIRED cairo>=1.10)
  	pkg_check_modules(PANGOCAIRO REQUIRED pangocairo>=1.44.0)
  	pkg_check_modules(PANGO REQUIRED pango>=1.44.0)
 -	pkg_check_modules(LIBREADLINE readline)
  endif()
  
- if(ENABLE_TESTS)
-@@ -625,11 +626,6 @@ endif()
+ if(ENABLE_GAME)
+@@ -634,11 +635,6 @@ endif()
  # uninstall
  #
  
