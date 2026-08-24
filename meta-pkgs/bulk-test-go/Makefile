@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/12/26 14:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/24 22:09:28 wiz Exp $
 
-DISTNAME=	bulk-test-go-20251226
+DISTNAME=	bulk-test-go-20260825
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -53,7 +53,6 @@ DEPENDS+=	go-swagger-[0-9]*:../../devel/go-swagger
 DEPENDS+=	go-sys-[0-9]*:../../devel/go-sys
 DEPENDS+=	go-tcr-[0-9]*:../../devel/go-tcr
 DEPENDS+=	go-tools-[0-9]*:../../devel/go-tools
-DEPENDS+=	go-wire-[0-9]*:../../devel/go-wire
 DEPENDS+=	golangci-lint-[0-9]*:../../devel/golangci-lint
 DEPENDS+=	golint-[0-9]*:../../devel/golint
 DEPENDS+=	gomodifytags-[0-9]*:../../devel/gomodifytags
