@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2026/05/15 09:58:42 adam Exp $
+# $NetBSD: Makefile,v 1.68 2026/08/24 08:29:06 adam Exp $
 
-DISTNAME=	libfreehand-0.1.2
-PKGREVISION=	30
+DISTNAME=	libfreehand-0.1.3
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -13,17 +12,14 @@ LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl:build pkg-config
-USE_LANGUAGES=	c c++11
-
-USE_CXX_FEATURES+=	c++11
-
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		perl:build pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-werror
-
 PKGCONFIG_OVERRIDE+=	libfreehand.pc.in
 
 .include "../../converters/libwpd/buildlink3.mk"
