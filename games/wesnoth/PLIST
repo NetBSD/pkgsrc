@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2026/01/21 11:19:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.73 2026/08/24 08:02:43 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/ar/man6/wesnoth.6
@@ -16,6 +16,8 @@ man/es/man6/wesnoth.6
 man/es/man6/wesnothd.6
 man/fr/man6/wesnoth.6
 man/fr/man6/wesnothd.6
+man/he/man6/wesnoth.6
+man/he/man6/wesnothd.6
 man/it/man6/wesnoth.6
 man/it/man6/wesnothd.6
 man/ja/man6/wesnoth.6
@@ -110,6 +112,7 @@ share/doc/wesnoth/html/manual.et.html
 share/doc/wesnoth/html/manual.fi.html
 share/doc/wesnoth/html/manual.fr.html
 share/doc/wesnoth/html/manual.gl.html
+share/doc/wesnoth/html/manual.he.html
 share/doc/wesnoth/html/manual.hu.html
 share/doc/wesnoth/html/manual.id.html
 share/doc/wesnoth/html/manual.it.html
@@ -298,6 +301,7 @@ share/wesnoth/data/campaigns/Dead_Water/images/items/storm-trident-buried.png
 share/wesnoth/data/campaigns/Dead_Water/images/items/underwater_rock1.png
 share/wesnoth/data/campaigns/Dead_Water/images/maps/dw.webp
 share/wesnoth/data/campaigns/Dead_Water/images/maps/l10n/de/dw--overlay.webp
+share/wesnoth/data/campaigns/Dead_Water/images/maps/l10n/es/dw--overlay.webp
 share/wesnoth/data/campaigns/Dead_Water/images/maps/l10n/gl/dw--overlay.webp
 share/wesnoth/data/campaigns/Dead_Water/images/maps/l10n/it/dw--overlay.webp
 share/wesnoth/data/campaigns/Dead_Water/images/maps/l10n/pt/dw--overlay.webp
@@ -442,6 +446,7 @@ share/wesnoth/data/campaigns/Descent_Into_Darkness/images/items/ball-dark.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/items/potion-clear.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/did.webp
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/l10n/de/did--overlay.webp
+share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/l10n/es/did--overlay.webp
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/l10n/gl/did--overlay.webp
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/l10n/it/did--overlay.webp
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/maps/l10n/lt/did--overlay.webp
@@ -721,6 +726,7 @@ share/wesnoth/data/campaigns/Eastern_Invasion/images/items/whitefang-flag.png
 share/wesnoth/data/campaigns/Eastern_Invasion/images/items/yeti-meat.png
 share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/ei.webp
 share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/l10n/de/ei--overlay.webp
+share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/l10n/es/ei--overlay.webp
 share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/l10n/it/ei--overlay.webp
 share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/l10n/pt/ei--overlay.webp
 share/wesnoth/data/campaigns/Eastern_Invasion/images/maps/l10n/ru/ei--overlay.webp
@@ -1179,9 +1185,11 @@ share/wesnoth/data/campaigns/Eastern_Invasion/utils/sound_sources.cfg
 share/wesnoth/data/campaigns/Eastern_Invasion/utils/traits.cfg
 share/wesnoth/data/campaigns/Heir_To_The_Throne/_main.cfg
 share/wesnoth/data/campaigns/Heir_To_The_Throne/achievements.cfg
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/bigmap/l10n/es/preview-shroud.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/campaign_image.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/httt.webp
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/l10n/de/httt--overlay.webp
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/l10n/es/httt--overlay.webp
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/l10n/gd/httt--overlay.webp
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/l10n/gl/httt--overlay.webp
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/maps/l10n/it/httt--overlay.webp
@@ -1418,6 +1426,7 @@ share/wesnoth/data/campaigns/Legend_of_Wesmere/images/l10n/pt/low-map--overlay.w
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/l10n/ru/low-map--overlay.webp
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/l10n/zh_CN/low-map--overlay.webp
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/low-map.png
+share/wesnoth/data/campaigns/Legend_of_Wesmere/images/maps/l10n/es/low--overlay.webp
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/portraits/aldar.webp
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/portraits/cleodil.webp
 share/wesnoth/data/campaigns/Legend_of_Wesmere/images/portraits/crelanu.webp
@@ -1508,6 +1517,7 @@ share/wesnoth/data/campaigns/Liberty/images/halo/shadow-mage-halo7.png
 share/wesnoth/data/campaigns/Liberty/images/halo/shadow-mage-halo8.png
 share/wesnoth/data/campaigns/Liberty/images/halo/shadow-mage-halo9.png
 share/wesnoth/data/campaigns/Liberty/images/maps/l10n/de/liberty--overlay.webp
+share/wesnoth/data/campaigns/Liberty/images/maps/l10n/es/liberty--overlay.webp
 share/wesnoth/data/campaigns/Liberty/images/maps/l10n/gl/liberty--overlay.webp
 share/wesnoth/data/campaigns/Liberty/images/maps/l10n/it/liberty--overlay.webp
 share/wesnoth/data/campaigns/Liberty/images/maps/l10n/pt/liberty--overlay.webp
@@ -1586,6 +1596,7 @@ share/wesnoth/data/campaigns/Northern_Rebirth/achievements.cfg
 share/wesnoth/data/campaigns/Northern_Rebirth/images/campaign_image.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/floor-corpse.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/maps/l10n/de/nr--overlay.webp
+share/wesnoth/data/campaigns/Northern_Rebirth/images/maps/l10n/es/nr--overlay.webp
 share/wesnoth/data/campaigns/Northern_Rebirth/images/maps/l10n/gd/nr--overlay.webp
 share/wesnoth/data/campaigns/Northern_Rebirth/images/maps/l10n/gl/nr--overlay.webp
 share/wesnoth/data/campaigns/Northern_Rebirth/images/maps/l10n/it/nr--overlay.webp
@@ -1653,6 +1664,7 @@ share/wesnoth/data/campaigns/Sceptre_of_Fire/images/items/coal.png
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/items/gold.png
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/items/ruby.png
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/maps/l10n/de/sof--overlay.webp
+share/wesnoth/data/campaigns/Sceptre_of_Fire/images/maps/l10n/es/sof--overlay.webp
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/maps/l10n/gl/sof--overlay.webp
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/maps/l10n/it/sof--overlay.webp
 share/wesnoth/data/campaigns/Sceptre_of_Fire/images/maps/l10n/pt/sof--overlay.webp
@@ -2064,6 +2076,7 @@ share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/flags/black-flag-3.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/flags/black-flag-icon.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/items/barrel-floating.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/maps/l10n/de/sotbe--overlay.webp
+share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/maps/l10n/es/sotbe--overlay.webp
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/maps/l10n/gl/sotbe--overlay.webp
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/maps/l10n/it/sotbe--overlay.webp
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/maps/l10n/pt/sotbe--overlay.webp
@@ -2156,6 +2169,7 @@ share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/halo/karrag-ranged8_
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/halo/karrag-ranged9_halo.png
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/halo/karrag_halo.png
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/maps/l10n/de/thot--overlay.webp
+share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/maps/l10n/es/thot--overlay.webp
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/maps/l10n/gl/thot--overlay.webp
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/maps/l10n/it/thot--overlay.webp
 share/wesnoth/data/campaigns/The_Hammer_of_Thursagan/images/maps/l10n/pt/thot--overlay.webp
@@ -2369,6 +2383,7 @@ share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/campaign_image.png
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/great_continent.webp
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/green_isle.webp
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/de/green_isle--overlay.webp
+share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/es/trow--overlay.webp
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/hu/green_isle--overlay.webp
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/it/green_isle--overlay.webp
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/pt/green_isle--overlay.webp
@@ -2631,6 +2646,7 @@ share/wesnoth/data/campaigns/The_South_Guard/images/flag/SG-flag-3.png
 share/wesnoth/data/campaigns/The_South_Guard/images/flag/SG-flag-4.png
 share/wesnoth/data/campaigns/The_South_Guard/images/flag/SG-flag-icon.png
 share/wesnoth/data/campaigns/The_South_Guard/images/maps/l10n/de/tsg--overlay.webp
+share/wesnoth/data/campaigns/The_South_Guard/images/maps/l10n/es/tsg--overlay.webp
 share/wesnoth/data/campaigns/The_South_Guard/images/maps/l10n/gd/tsg--overlay.webp
 share/wesnoth/data/campaigns/The_South_Guard/images/maps/l10n/gl/tsg--overlay.webp
 share/wesnoth/data/campaigns/The_South_Guard/images/maps/l10n/it/tsg--overlay.webp
@@ -2708,6 +2724,7 @@ share/wesnoth/data/campaigns/Two_Brothers/achievements.cfg
 share/wesnoth/data/campaigns/Two_Brothers/ai/ca_muff_toras_move.lua
 share/wesnoth/data/campaigns/Two_Brothers/images/campaign_image.png
 share/wesnoth/data/campaigns/Two_Brothers/images/maps/l10n/de/tb--overlay.webp
+share/wesnoth/data/campaigns/Two_Brothers/images/maps/l10n/es/tb--overlay.webp
 share/wesnoth/data/campaigns/Two_Brothers/images/maps/l10n/gl/tb--overlay.webp
 share/wesnoth/data/campaigns/Two_Brothers/images/maps/l10n/it/tb--overlay.webp
 share/wesnoth/data/campaigns/Two_Brothers/images/maps/l10n/pt/tb--overlay.webp
@@ -4229,6 +4246,7 @@ share/wesnoth/data/core/images/maps/EDITING-HOWTO
 share/wesnoth/data/core/images/maps/background.webp
 share/wesnoth/data/core/images/maps/l10n/de/titlescreen--overlay.webp
 share/wesnoth/data/core/images/maps/l10n/de/wesnoth--overlay.webp
+share/wesnoth/data/core/images/maps/l10n/es/titlescreen--overlay.webp
 share/wesnoth/data/core/images/maps/l10n/es/wesnoth--overlay.webp
 share/wesnoth/data/core/images/maps/l10n/fr/wesnoth--overlay.webp
 share/wesnoth/data/core/images/maps/l10n/gd/titlescreen--overlay.webp
