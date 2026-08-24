@@ -1,9 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/31 08:50:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/08/24 12:07:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cramjam/__init__.py
 ${PYSITELIB}/cramjam/__init__.pyc
+${PYSITELIB}/cramjam/__init__.pyi
 ${PYSITELIB}/cramjam/__init__.pyo
+${PYSITELIB}/cramjam/blosc2.pyi
+${PYSITELIB}/cramjam/brotli.pyi
+${PYSITELIB}/cramjam/bzip2.pyi
 ${PYSITELIB}/cramjam/cramjam.so
+${PYSITELIB}/cramjam/deflate.pyi
+${PYSITELIB}/cramjam/experimental.pyi
+${PYSITELIB}/cramjam/gzip.pyi
+${PYSITELIB}/cramjam/ideflate.pyi
+${PYSITELIB}/cramjam/igzip.pyi
+${PYSITELIB}/cramjam/izlib.pyi
+${PYSITELIB}/cramjam/lz4.pyi
+${PYSITELIB}/cramjam/py.typed
+${PYSITELIB}/cramjam/snappy.pyi
+${PYSITELIB}/cramjam/xz.pyi
+${PYSITELIB}/cramjam/zlib.pyi
+${PYSITELIB}/cramjam/zstd.pyi
