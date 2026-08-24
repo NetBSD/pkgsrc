@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/05/15 09:58:43 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/08/24 08:07:02 adam Exp $
 
-DISTNAME=	librevenge-0.0.5
-PKGREVISION=	4
+DISTNAME=	librevenge-0.0.6
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,8 +25,6 @@ TEST_TARGET=		check
 PKGCONFIG_OVERRIDE+=	librevenge-generators.pc.in
 PKGCONFIG_OVERRIDE+=	librevenge-stream.pc.in
 PKGCONFIG_OVERRIDE+=	librevenge.pc.in
-
-PTHREAD_AUTO_VARS=	yes
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
