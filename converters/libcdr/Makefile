@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2026/05/23 18:07:58 yurix Exp $
+# $NetBSD: Makefile,v 1.76 2026/08/24 08:35:03 adam Exp $
 
-DISTNAME=	libcdr-0.1.7
-PKGREVISION=	22
+DISTNAME=	libcdr-0.1.9
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/libcdr/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE=	libcdr.pc.in
+
 LDFLAGS.Darwin += -licuuc
 
 .include "../../converters/libwpd/buildlink3.mk"
