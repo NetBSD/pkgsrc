@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/05/29 13:23:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/08/24 12:36:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/redis/__init__.pyo
 ${PYSITELIB}/redis/_defaults.py
 ${PYSITELIB}/redis/_defaults.pyc
 ${PYSITELIB}/redis/_defaults.pyo
+${PYSITELIB}/redis/_himport_exec.py
+${PYSITELIB}/redis/_himport_exec.pyc
+${PYSITELIB}/redis/_himport_exec.pyo
 ${PYSITELIB}/redis/_parsers/__init__.py
 ${PYSITELIB}/redis/_parsers/__init__.pyc
 ${PYSITELIB}/redis/_parsers/__init__.pyo
@@ -42,6 +45,9 @@ ${PYSITELIB}/redis/_parsers/socket.pyo
 ${PYSITELIB}/redis/asyncio/__init__.py
 ${PYSITELIB}/redis/asyncio/__init__.pyc
 ${PYSITELIB}/redis/asyncio/__init__.pyo
+${PYSITELIB}/redis/asyncio/_himport_exec.py
+${PYSITELIB}/redis/asyncio/_himport_exec.pyc
+${PYSITELIB}/redis/asyncio/_himport_exec.pyo
 ${PYSITELIB}/redis/asyncio/client.py
 ${PYSITELIB}/redis/asyncio/client.pyc
 ${PYSITELIB}/redis/asyncio/client.pyo
@@ -63,6 +69,9 @@ ${PYSITELIB}/redis/asyncio/keyspace_notifications.pyo
 ${PYSITELIB}/redis/asyncio/lock.py
 ${PYSITELIB}/redis/asyncio/lock.pyc
 ${PYSITELIB}/redis/asyncio/lock.pyo
+${PYSITELIB}/redis/asyncio/maint_notifications.py
+${PYSITELIB}/redis/asyncio/maint_notifications.pyc
+${PYSITELIB}/redis/asyncio/maint_notifications.pyo
 ${PYSITELIB}/redis/asyncio/multidb/__init__.py
 ${PYSITELIB}/redis/asyncio/multidb/__init__.pyc
 ${PYSITELIB}/redis/asyncio/multidb/__init__.pyo
@@ -270,6 +279,9 @@ ${PYSITELIB}/redis/event.pyo
 ${PYSITELIB}/redis/exceptions.py
 ${PYSITELIB}/redis/exceptions.pyc
 ${PYSITELIB}/redis/exceptions.pyo
+${PYSITELIB}/redis/himport.py
+${PYSITELIB}/redis/himport.pyc
+${PYSITELIB}/redis/himport.pyo
 ${PYSITELIB}/redis/http/__init__.py
 ${PYSITELIB}/redis/http/__init__.pyc
 ${PYSITELIB}/redis/http/__init__.pyo
