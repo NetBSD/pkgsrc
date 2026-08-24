@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2026/08/03 18:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2026/08/24 08:42:29 adam Exp $
 
 DISTNAME=	scribus-1.7.0.20260624
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 #EXTRACT_SUFX=	.tar.xz

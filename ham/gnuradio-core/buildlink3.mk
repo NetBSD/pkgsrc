@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2026/05/15 09:58:53 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2026/08/24 08:42:22 adam Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
@@ -16,7 +16,7 @@ USE_CXX_FEATURES+=	c++17
 FORCE_CXX_STD=		c++17
 
 BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.10.2
-BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.10.12.0nb12
+BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.10.12.0nb15
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 
 .include "../../devel/boost-libs/buildlink3.mk"

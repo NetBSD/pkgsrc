@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2026/05/15 09:58:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/08/24 08:42:12 adam Exp $
 
 BUILDLINK_TREE+=	libmwaw
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmwaw
 LIBMWAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmwaw+=	libmwaw>=0.2.0
-BUILDLINK_ABI_DEPENDS.libmwaw+=	libmwaw>=0.3.21nb7
+BUILDLINK_ABI_DEPENDS.libmwaw+=	libmwaw>=0.3.21nb8
 BUILDLINK_PKGSRCDIR.libmwaw?=	../../converters/libmwaw
 
 .include "../../converters/libwpg/buildlink3.mk"

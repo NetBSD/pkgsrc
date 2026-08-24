@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2026/05/15 09:58:47 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/08/24 08:42:16 adam Exp $
 
 DISTNAME=	vera++-1.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=verateam/}
 GITHUB_PROJECT=	vera

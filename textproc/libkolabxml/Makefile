@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2026/05/15 09:59:01 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/08/24 08:42:30 adam Exp $
 
 DISTNAME=	libkolabxml-1.1.6
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	textproc
 MASTER_SITES=	https://mirror.kolabenterprise.com/pub/releases/
 
