@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/08/27 09:18:12 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/08/24 12:07:33 adam Exp $
 
-DISTNAME=	cramjam-2.11.0
+DISTNAME=	cramjam-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cramjam/}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 # for isal-sys-0.3.1+496255c
 USE_TOOLS+=	autoconf automake
 USE_LIBTOOL=	yes
+
+RUST_REQ=	1.83
 
 .include "cargo-depends.mk"
 
