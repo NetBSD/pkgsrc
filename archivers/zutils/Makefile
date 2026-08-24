@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/08/04 20:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/08/24 18:38:26 drixter Exp $
 
 DISTNAME=	zutils-1.16
 CATEGORIES=	archivers
@@ -10,13 +10,17 @@ HOMEPAGE=	https://www.nongnu.org/zutils/zutils.html
 COMMENT=	Utilities for any combination of compressed and non-compressed files
 LICENSE=	gnu-gpl-v3
 
-CONFLICTS=		lzip<1.12
+CONFLICTS=		lzip<1.12 gzip-[0-9]*
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
+CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	CPPFLAGS=${CPPFLAGS:Q}
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
+
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 
@@ -29,11 +33,5 @@ INSTALLATION_DIRS=	${EGDIR}
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/zutils.conf ${DESTDIR}${EGDIR}/zutils.conf
-
-# FIXME: replace by proper LDFLAGS handling
-_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"
