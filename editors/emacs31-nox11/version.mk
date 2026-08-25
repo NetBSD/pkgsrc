@@ -1,0 +1,7 @@
+# $NetBSD: version.mk,v 1.1 2026/08/25 17:23:51 wiz Exp $
+
+_EMACS_FLAVOR=	emacs
+_EMACS_REQD=	emacs31-nox11>=31.1<32
+
+_EMACS_VERSION_MAJOR=	31
+_EMACS_VERSION_MINOR=	1
