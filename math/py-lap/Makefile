@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2026/08/24 11:05:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/08/25 10:51:52 wiz Exp $
 
 DISTNAME=	lap-0.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lap/}
 
@@ -20,6 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
+BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=3.3.0nb1
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
