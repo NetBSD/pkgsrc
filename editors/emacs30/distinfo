@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.3 2025/12/21 06:35:26 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/08/25 17:44:23 wiz Exp $
 
 BLAKE2s (emacs-30.2.tar.xz) = f88fd83bf4d3c4ef6c2240c50e23ca570c3219da9e9a463951aaf83ef9dc931f
 SHA512 (emacs-30.2.tar.xz) = 313432d11e95c74f8cd35c5b1da442e6223f5d40f9173c55883c0339ecbfb97a0bedf79177ef8902afd3e33c078a233777bed01f5caffa1e7524f17d58bfc9a2
 Size (emacs-30.2.tar.xz) = 55320324 bytes
+SHA1 (patch-doc_misc_tramp.texi) = 5ace7a462953478e1fcce0e3237ead16670d0b36
+SHA1 (patch-lisp_net_tramp-gvfs.el) = 92e0007d6d1b8c2359eb0de5f5d763fc683b0330
+SHA1 (patch-lisp_net_tramp-rclone.el) = ca52b50099cb06259be32e40045848164b96fca7
+SHA1 (patch-lisp_net_tramp-smb.el) = 4cbf31f75638a2ad97260d4c1c41fd3549848a8b
+SHA1 (patch-lisp_net_tramp.el) = 783c3303b40e9404a8ec3c01828b401ace217b0f
 SHA1 (patch-src_treesit.c) = fc3165a2febcb4dda2e87d031524fa5b90721c38
+SHA1 (patch-test_lisp_net_tramp-tests.el) = d37ffc57f21fda19121f7a0e3339cbd299e43d51

@@ -1,0 +1,18 @@
+$NetBSD: patch-doc_misc_tramp.texi,v 1.1 2026/08/25 17:44:23 wiz Exp $
+
+CVE-2026-79992: Fix local command execution vulnerability in tramp
+https://gitweb.gentoo.org/proj/emacs-patches.git/commit/emacs/30.2/05_all_tramp.patch?id=2a6292f81affedcc468c594c60808e652ae87118
+
+--- doc/misc/tramp.texi.orig	2025-04-05 11:01:10.000000000 +0000
++++ doc/misc/tramp.texi
+@@ -3601,7 +3601,9 @@ different name using the proper syntax will override t
+ By default, @value{tramp} will use the current local user name as the
+ remote user name for log in to the remote host.  Specifying a
+ different name using the proper syntax will override this default
+-behavior: @file{@trampfn{method,user@@host,path/to/file}}.
++behavior: @file{@trampfn{method,user@@host,path/to/file}}.  The user
++name can also be taken from an environment variable, like
++@file{@trampfn{method,@env{$MY_REMOTE_USER}@@host,path/to/file}}.
+ 
+ @file{@trampfn{ssh,daniel@@melancholia,.emacs}} is for file
+ @file{.emacs} in @samp{daniel}'s home directory on the host,
