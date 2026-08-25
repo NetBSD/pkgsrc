@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/03/09 17:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/08/25 12:59:14 adam Exp $
 
-DISTNAME=	imagesize-2.0.0
+DISTNAME=	imagesize-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imagesize/}

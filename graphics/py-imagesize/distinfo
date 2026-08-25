@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/03/09 17:04:50 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/08/25 12:59:14 adam Exp $
 
-BLAKE2s (imagesize-2.0.0.tar.gz) = 19c66f736819a29f568027488db39f82024dd627391a0836985e471e0be40893
-SHA512 (imagesize-2.0.0.tar.gz) = 55aa54194190bf7a0182237698d3ad36ba2e390f90c3ee35ad76fca808b08e1a794df10c3d8cac18e3c42f97c911cd5bb758458eb6efdf9b626e0d5946c1427c
-Size (imagesize-2.0.0.tar.gz) = 1773045 bytes
+BLAKE2s (imagesize-2.0.1.tar.gz) = 73ed5f8aa18ab8b784edbb0c9411a0fe31fd4d704e45c9b80c5f6669dde698fd
+SHA512 (imagesize-2.0.1.tar.gz) = 7a518e6c7b0b36169cc62b5467283ccd02d68537e6572fe6dd37a9ab3f368834dec58f6a25e94ed60fdb6549b26fa454e49ad34738fce2c7d201ae5b4f3e2b63
+Size (imagesize-2.0.1.tar.gz) = 1883774 bytes
