@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2026/08/24 15:10:48 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.10 2026/08/25 12:40:05 drixter Exp $
 
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.mod
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.2.0.zip
@@ -58,6 +58,8 @@ GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
 GO_MODULE_FILES+=	github.com/sabhiram/go-gitignore/@v/v0.0.0-20210923224102-525f6e181f06.mod
 GO_MODULE_FILES+=	github.com/sabhiram/go-gitignore/@v/v0.0.0-20210923224102-525f6e181f06.zip
+GO_MODULE_FILES+=	github.com/schollz/derphole/@v/v0.18.2-croc.1.mod
+GO_MODULE_FILES+=	github.com/schollz/derphole/@v/v0.18.2-croc.1.zip
 GO_MODULE_FILES+=	github.com/schollz/logger/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/schollz/logger/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/schollz/pake/v3/@v/v3.2.0.mod
@@ -66,8 +68,6 @@ GO_MODULE_FILES+=	github.com/schollz/peerdiscovery/@v/v1.7.6.mod
 GO_MODULE_FILES+=	github.com/schollz/peerdiscovery/@v/v1.7.6.zip
 GO_MODULE_FILES+=	github.com/schollz/progressbar/v3/@v/v3.19.1.mod
 GO_MODULE_FILES+=	github.com/schollz/progressbar/v3/@v/v3.19.1.zip
-GO_MODULE_FILES+=	github.com/shayne/derphole/@v/v0.18.2.mod
-GO_MODULE_FILES+=	github.com/shayne/derphole/@v/v0.18.2.zip
 GO_MODULE_FILES+=	github.com/skip2/go-qrcode/@v/v0.0.0-20200617195104-da1b6568686e.mod
 GO_MODULE_FILES+=	github.com/skip2/go-qrcode/@v/v0.0.0-20200617195104-da1b6568686e.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
