@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2022/09/13 23:36:13 wiz Exp $
-
-BLAKE2s (emacs-28.2.tar.xz) = aa9ff1134cdabf7890231a4f9c9d4839603a9cae9ec9d252414b364d14064012
-SHA512 (emacs-28.2.tar.xz) = a7cec7e3e82367815a1442f69af54102dbfc434069810a9dec5938a6660cb8b076e6f1fb0bfff9695b15603dbbe05eb9c7dfd92e90cf40fc4d1e5746bce83bd8
-Size (emacs-28.2.tar.xz) = 47722600 bytes
