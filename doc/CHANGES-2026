@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5523 2026/08/25 12:58:07 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5524 2026/08/25 12:59:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8143,3 +8143,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.3.1 [drixter 2026-08-25]
 	Updated net/croc to 11.3.2 [drixter 2026-08-25]
 	Removed www/wiki-tui [pin 2026-08-25]
+	Updated security/openssl to 3.6.4 [adam 2026-08-25]
+	Updated graphics/py-imagesize to 2.0.1 [adam 2026-08-25]
