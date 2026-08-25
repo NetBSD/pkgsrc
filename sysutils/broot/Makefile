@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2026/07/12 17:12:06 pin Exp $
+# $NetBSD: Makefile,v 1.133 2026/08/25 11:10:11 pin Exp $
 
-DISTNAME=	broot-1.58.0
+DISTNAME=	broot-1.59.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=			1.83.0
+RUST_REQ=			1.85.0
 USE_TOOLS+=			pkg-config
 PYTHON_FOR_BUILD_ONLY=		tool
 
