@@ -1,34 +1,28 @@
-# $NetBSD: Makefile,v 1.62 2026/03/01 12:38:36 gdt Exp $
+# $NetBSD: Makefile,v 1.63 2026/08/25 18:07:44 wiz Exp $
 
-DISTNAME=	opam-2.1.3
-PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	12
+DISTNAME=	opam-full-2.5.2
+PKGNAME=	ocaml-${DISTNAME:S/-full//}
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
-GITHUB_PROJECT=	opam
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/opam/releases/download/${PKGVERSION_NOREV}/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kit-ty-kate@exn.st
 HOMEPAGE=	https://opam.ocaml.org/
 COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3
 
+TOOL_DEPENDS+=	ocaml-dune-[0-9]*:../../devel/ocaml-dune
+
 DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 MAKE_JOBS_SAFE=	no
-
-USE_LANGUAGES+=	c++
-
+USE_LANGUAGES+=	c c++
 HAS_CONFIGURE=	yes
-OCAML_USE_DUNE=	yes
+USE_TOOLS+=	gmake
 
-OCAML_FINDLIB_DIRS+=	opam-installer opam-solver
-OPAM_INSTALL_FILES=	opam opam-installer opam-solver
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--with-vendored-deps --with-mccs
 
-.include "../../devel/ocaml-cmdliner/buildlink3.mk"
-.include "../../devel/ocaml-re/buildlink3.mk"
-.include "../../devel/ocamlgraph/buildlink3.mk"
-.include "../../misc/dose3/buildlink3.mk" # with ocamlgraph option
-.include "../../misc/ocaml-cudf/buildlink3.mk"
-.include "../../misc/ocaml-opam-file-format/buildlink3.mk"
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
