@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2023/12/23 16:15:02 bacon Exp $
+$NetBSD: distinfo,v 1.5 2026/08/25 09:26:21 wiz Exp $
 
 BLAKE2s (MACS2-2.2.9.1.tar.gz) = a4563cb4e23096b972941c55eb416ec7db9b05b207c82747dee31657c00d79c3
 SHA512 (MACS2-2.2.9.1.tar.gz) = 6d001d95bac6b6c8ac99592a9345a6ac6836eeb61ff522129c9660ac9bf42bf293af56bd84824b721793a0ec2c73d0a062adb171e5a5a033045aa7552fa28e8b
 Size (MACS2-2.2.9.1.tar.gz) = 133109075 bytes
-SHA1 (patch-MACS2_IO_CallPeakUnit.pyx) = 7a9b53f97fd468eca87f5b7f677d624a069d3062
+SHA1 (patch-MACS2_IO_CallPeakUnit.pyx) = b5fbe662c9f1e0f94a4be3ec9341606a161ea2d5
 SHA1 (patch-MACS2_IO_FixWidthTrack.pyx) = fa5814d2218868c0a317861e9083b9adcda257d6
