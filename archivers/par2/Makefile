@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2026/06/12 07:46:28 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/25 10:30:30 adam Exp $
 
-DISTNAME=	par2cmdline-1.2.0
+DISTNAME=	par2cmdline-1.3.0
 PKGNAME=	${DISTNAME:S/cmdline//}
 CATEGORIES=	archivers misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Parchive/}
