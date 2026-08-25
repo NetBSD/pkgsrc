@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5525 2026/08/25 13:59:51 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5526 2026/08/25 14:12:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8146,3 +8146,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssl to 3.6.4 [adam 2026-08-25]
 	Updated graphics/py-imagesize to 2.0.1 [adam 2026-08-25]
 	Updated security/acmesh to 3.1.4 [ryoon 2026-08-25]
+	Updated www/anubis to 1.27.0nb2 [ryoon 2026-08-25]
