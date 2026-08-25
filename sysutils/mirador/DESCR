@@ -1,0 +1,7 @@
+An opinionated personal dashboard for your terminal: world clocks, a calendar,
+weather, a real task list, notes, a market watchlist, and live CPU and network
+charts, laid out how you want them.
+
+It is built for one job, to sit in a terminal tab you leave open all day and
+glance at. That single constraint drives every decision below: nothing blinks,
+nothing shimmers, and nothing is designed to pull you back to it.
