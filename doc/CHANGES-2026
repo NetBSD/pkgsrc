@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5528 2026/08/25 16:11:41 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5529 2026/08/25 17:25:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8149,3 +8149,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/anubis to 1.27.0nb2 [ryoon 2026-08-25]
 	Added sysutils/mirador version 1.6.1 [pin 2026-08-25]
 	Updated shells/oh-my-posh to 30.7.0 [pin 2026-08-25]
+	Added editors/emacs31 version 31.1 [wiz 2026-08-25]
+	Added editors/emacs31-nox11 version 31.1 [wiz 2026-08-25]
