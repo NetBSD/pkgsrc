@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2025/10/26 12:00:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2026/08/25 21:50:04 riastradh Exp $
 
 DISTNAME=	fossil-src-2.27
 PKGNAME=	${DISTNAME:S/-src//}
@@ -35,6 +35,33 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/extsrc/linenoise.h \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+
+# https://fossil-scm.org/home/doc/tip/test/release-checklist.wiki
+#
+# Test results on netbsd-9:
+#
+#	***** Final results: 6 errors out of 42077 tests
+#	***** Considered failures: settings-valid-local-anon-cookie-lifespan settings-valid-local-regexp-limit settings-valid-local-robot-exception settings-valid-global-anon-cookie-lifespan settings-valid-global-regexp-limit settings-valid-global-robot-exception
+#	***** Ignored results: 0 ignored errors out of 42077 tests
+#	***** Skipped tests: json merge5 set-manifest th1-docs th1-hooks th1-tcl unversioned
+#
+
+TEST_DEPENDS+=	tcl>=0:../../lang/tcl
+
+# If USER is not defined, some tests fail and insist that you specify a
+# user somehow.
+#
+TEST_ENV+=	USER=fossiltest
+
+# Must run the tests out of a directory other than the source tree.
+#
+pre-test:
+	${RUN}${MKDIR} ${WRKDIR}/test
+
+do-test:
+	${RUN}cd ${WRKDIR}/test && \
+	${PKGSRC_SETENV} ${TEST_ENV} \
+	    tclsh ${WRKSRC}/test/tester.tcl ${WRKSRC}/fossil
 
 .if ${OPSYS} == "Darwin"
 .include "../../converters/libiconv/buildlink3.mk"
