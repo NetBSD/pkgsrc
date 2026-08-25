@@ -1,36 +1,26 @@
-$NetBSD: patch-CMakeLists.txt,v 1.11 2026/03/14 11:29:36 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.12 2026/08/25 08:02:32 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
---- CMakeLists.txt.orig	2025-09-17 18:17:34.000000000 +0000
+--- CMakeLists.txt.orig	2026-08-23 10:26:06.000000000 +0000
 +++ CMakeLists.txt
-@@ -32,9 +32,6 @@ find_package(Threads REQUIRED)
- target_link_libraries(ft2-clone
-     PRIVATE m Threads::Threads ${SDL2_LIBRARIES})
- 
--target_compile_definitions(ft2-clone
--    PRIVATE HAS_MIDI)
--
- if(UNIX)
-     if(APPLE)
-         find_library(COREAUDIO CoreAudio REQUIRED)
-@@ -46,7 +42,7 @@ if(UNIX)
-             PRIVATE ${COREAUDIO} ${COREMIDI} ${COREFOUNDATION} ${ICONV})
-         target_compile_definitions(ft2-clone
-             PRIVATE __MACOSX_CORE__)
--    else()
-+    elseif(LINUX)
-         # musl systems need musl-fts installed, others have it with glibc
-         find_library(FTS fts)
-         if (FTS)
-@@ -56,6 +52,10 @@ if(UNIX)
-             PRIVATE asound)
-         target_compile_definitions(ft2-clone
-             PRIVATE __LINUX_ALSA__)
-+    else()
-+        target_compile_definitions(ft2-clone
-+            PRIVATE HAS_MIDI
-+            PRIVATE HAS_LIBFLAC)	    	    
-     endif()
+@@ -40,7 +40,7 @@ if(UNIX)
+ 		find_library(ICONV iconv REQUIRED)
+ 		target_link_libraries(ft2-clone PRIVATE ${COREAUDIO} ${COREMIDI} ${COREFOUNDATION} ${ICONV})
+ 		target_compile_definitions(ft2-clone PRIVATE __MACOSX_CORE__)
+-	else()
++	elseif(LINUX)
+ 		# musl systems need musl-fts installed, others have it with glibc
+ 		find_library(FTS fts)
+ 		if(FTS)
+@@ -48,6 +48,10 @@ if(UNIX)
+ 		endif()
+ 		target_link_libraries(ft2-clone PRIVATE asound)
+ 		target_compile_definitions(ft2-clone PRIVATE __LINUX_ALSA__)
++	else()
++		target_compile_definitions(ft2-clone
++		PRIVATE HAS_MIDI
++		PRIVATE HAS_LIBFLAC)
+ 	endif()
  endif()
  
