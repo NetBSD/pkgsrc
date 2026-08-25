@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/08/22 15:19:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2026/08/25 14:12:32 ryoon Exp $
 
-DISTNAME=	anubis-src-vendor-npm-1.26.2
+DISTNAME=	anubis-src-vendor-npm-1.27.0
 PKGNAME=	${DISTNAME:S/anubis-src-vendor-npm-/anubis-/}
 PKGREVISION=	2
 CATEGORIES=	www
