@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.13 2026/08/20 02:14:59 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q2,v 1.1.2.14 2026/08/25 02:23:03 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q2 branch:
 
@@ -271,3 +271,14 @@ textproc/libxml2: Security fix
 
 Pullup ticket #7239 - requested by taca
 lang/php: New mk file to ease pull-ups to PHP packages
+
+Pullup ticket #7240 - requested by gutteridge
+www/firefox140: Security fix
+www/firefox140-l10n: Security fix
+
+Pullup ticket #7241 - requested by tsutsuii
+inputmethod/ibus: Build fix
+
+Pullup ticket #7243 - requested by wiz
+net/libcares: Bug fix
+
