@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/08/14 09:34:00 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/08/25 09:50:49 adam Exp $
 
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.0.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
@@ -111,6 +111,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = 04d74632486e9040cbbd56b8326afb1971f28972ea65f9aa5be2a5f9692ad77f
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = f9c0400f1f5590d7185ae3fdac7adf1787a5f5198e52ebd02841b7df5113c5e34de6a66fa01b2f5735be4b21190dffb46e9d8b084ad5c00ebd99599a39ff73db
 Size (gopkg.in_yaml.v3_@v_v3.0.0-20210107192922-496545a6307b.zip) = 105245 bytes
-BLAKE2s (protobuf-language-server-0.1.7.tar.gz) = 33c16163f9b1a5021a8b335a86462de2c1759496c477c62dce98e3f1eae3736e
-SHA512 (protobuf-language-server-0.1.7.tar.gz) = 346414f92b955fcdd553937ad72a371383d59d7a7c8b43eacc07394f39be407a833b959923d39b530d81dbfedeedd22f39328f8bb3873f88d906be4200eb43be
-Size (protobuf-language-server-0.1.7.tar.gz) = 2179718 bytes
+BLAKE2s (protobuf-language-server-0.1.8.tar.gz) = 0274acc35a43f6e6ed5d48cb44f9bb4e98253a7e1c565bc9fb8da83c16a2c4f1
+SHA512 (protobuf-language-server-0.1.8.tar.gz) = 5daadb8696622df0aa6d79ce0ce35272bbc8b28d6dce441bf333eb6201548c1fa57ad5e648c18c1a272a2f37feed026d77adea74e0dd183cc2f3cf24ea9cc784
+Size (protobuf-language-server-0.1.8.tar.gz) = 2180987 bytes
