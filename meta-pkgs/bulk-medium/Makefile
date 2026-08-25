@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2026/04/13 13:05:33 tnn Exp $
+# $NetBSD: Makefile,v 1.124 2026/08/25 02:23:09 brook Exp $
 
 DISTNAME=	bulk-medium-20260413
 CATEGORIES=	meta-pkgs
@@ -166,9 +166,6 @@ DEPENDS+=	pango-[0-9]*:../../devel/pango
 DEPENDS+=	pcre-[0-9]*:../../devel/pcre
 DEPENDS+=	popt-[0-9]*:../../devel/popt
 DEPENDS+=	fuse-[0-9]*:../../filesystems/fuse
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	perfuse-[0-9]*:../../filesystems/perfuse
-.endif
 DEPENDS+=	SDL2_image-[0-9]*:../../graphics/SDL2_image
 DEPENDS+=	cairo-[0-9]*:../../graphics/cairo
 DEPENDS+=	gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
