@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5533 2026/08/25 18:08:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5534 2026/08/25 18:11:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8160,3 +8160,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/emacs30 to 30.2nb13 [wiz 2026-08-25]
 	Updated editors/emacs30-nox11 to 30.2nb1 [wiz 2026-08-25]
 	Updated misc/ocaml-opam to 2.5.2 [wiz 2026-08-25]
+	Updated devel/fq to 0.18.0 [wiz 2026-08-25]
