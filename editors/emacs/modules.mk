@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.38 2025/04/30 12:37:40 ryoon Exp $
+# $NetBSD: modules.mk,v 1.39 2026/08/25 17:27:27 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -42,6 +42,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
+#			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox emacs28 emacs28nox
 #			emacs27 emacs27nox emacs26 emacs26nox
@@ -66,6 +67,7 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
+#			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox emacs28 emacs28nox
 #			emacs27 emacs27nox emacs26 emacs26nox
@@ -73,6 +75,7 @@
 #			emacs20 xemacs215 xemacs215nox
 #			xemacs214 xemacs214nox
 #		Default value:
+#			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox emacs28 emacs28nox
 #			emacs27 emacs27nox emacs26 emacs26nox
@@ -141,7 +144,7 @@
 #		Description:
 #			Emacs major version.
 #		Possible values:
-#			20, 21, 26, 27, 28, 29, 30, <integers more than that in the future>
+#			20, 21, 26, 27, 28, 29, 30, 31, <integers more than that in the future>
 #
 #	EMACS_VERSION_MINOR
 #		Description:
@@ -187,10 +190,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs30,emacs30nox,emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs31,emacs31nox,emacs30,emacs30nox,emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs30, emacs30nox,emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs31,emacs31nox,emacs30, emacs30nox,emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
@@ -239,7 +242,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs26 emacs26nox \
 	emacs27 emacs27nox emacs28 emacs28nox emacs29 emacs29nox  \
-	emacs30 emacs30nox \
+	emacs30 emacs30nox emacs31 emacs31nox \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -256,6 +259,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs29nox@../../editors/emacs29-nox11 \
 	emacs30@../../editors/emacs30 \
 	emacs30nox@../../editors/emacs30-nox11 \
+	emacs31@../../editors/emacs31 \
+	emacs31nox@../../editors/emacs31-nox11 \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
