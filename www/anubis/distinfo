@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2026/07/28 15:27:17 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2026/08/25 14:12:32 ryoon Exp $
 
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6b700bc0ea1a5a9070b79e2df5ee41bda8994973fbf2a4deac2a482ec151279b
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6e2becc6b0294a2ce097ef7bb8ddedfc9793e9e5281620bf920644fb9bef3bb69ad0367e7ffb706acf955c48bf46b118360107241014555562985337a0bbd051
@@ -6,9 +6,9 @@ Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 113 bytes
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = f4ae9bc566614fbd5cb79005682b5a5854d9481b019b2be01c028e9091b81d79
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 11b50ef421f8c618e0a7bb448a771cd11da851eafe6679d848d19725f37c71b0c61936fd0b0c2668624a40beba31a40971e50fbce7fc23aaac3c9ac1236e0460
 Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 16137 bytes
-BLAKE2s (anubis-src-vendor-npm-1.26.2.tar.gz) = 2c0fd964dc9305f414eaf878ebc33fad139d493169c1b49c9e692e7af51186fe
-SHA512 (anubis-src-vendor-npm-1.26.2.tar.gz) = 779bb77d7db7e9cd3b03518fbf9d4ab461d80651e170f0ddce474e562ed0d90e6cc63fa20c5f90c073fd3045a105d976f98df27badccdc0755003d66f0d6f71a
-Size (anubis-src-vendor-npm-1.26.2.tar.gz) = 16491280 bytes
+BLAKE2s (anubis-src-vendor-npm-1.27.0.tar.gz) = 6e507375577194164996a58b4b1826354c1c55fa7ff773940a656ca23ed3252c
+SHA512 (anubis-src-vendor-npm-1.27.0.tar.gz) = 7ba729e04adb91150fa988cf73a72f1e9e14edb6bd4076a4dda16342d0268ed6a54911f08969f5a748cf1edbb75f62232c4d2738be3b624c0fb1396c72c3b4bf
+Size (anubis-src-vendor-npm-1.27.0.tar.gz) = 16623622 bytes
 BLAKE2s (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = fed5fd7a70778e00e8634cf66d37da9d261314e4d1141f604cab46a0f69cc91e
 SHA512 (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = 51c619f5360d3735235fc110bfb321054e5f9e10a0ec552f93a96d068049601d64aae228ee3223e9b7e1d5dd5c134d01fe00a7e081946999ace9bf758b551b16
 Size (buf.build_gen_go_bufbuild_protovalidate_protocolbuffers_go_@v_v1.36.11-20251209175733-2a1774d88802.1.mod) = 120 bytes
@@ -444,6 +444,12 @@ Size (github.com_fsnotify_fsnotify_@v_v1.9.0.mod) = 279 bytes
 BLAKE2s (github.com_fsnotify_fsnotify_@v_v1.9.0.zip) = 1171f4ecbd7153721c414af151c147f771e93d28c3300fc3582d5ceb90f7e4d5
 SHA512 (github.com_fsnotify_fsnotify_@v_v1.9.0.zip) = 6e4c23ac1bc5068ec17bc2e8c449211a719dee77c4687e91b0781c99e14292bf5e7054076d908121e7951daf5c205355c38ca1fed42ae62b877511dc6a7be849
 Size (github.com_fsnotify_fsnotify_@v_v1.9.0.zip) = 116946 bytes
+BLAKE2s (github.com_fvbommel_sortorder_@v_v1.1.0.mod) = be3fabe90d2a2a6f7ba4c8560ee4c25fce57df0c433c6c3f2f456c938a94f9f5
+SHA512 (github.com_fvbommel_sortorder_@v_v1.1.0.mod) = 31cadc1939053cabcc279f7db17b5a6f9455856fc41ebd74599ab3156970b2256165492fc007bb022731943bfe8523a2e4822a7f3e1dd538ff8b90823d64c4a7
+Size (github.com_fvbommel_sortorder_@v_v1.1.0.mod) = 46 bytes
+BLAKE2s (github.com_fvbommel_sortorder_@v_v1.1.0.zip) = df4ef0069f9ede7536c5c1ecac74278cdf364294b1c680338e69906b4be2c341
+SHA512 (github.com_fvbommel_sortorder_@v_v1.1.0.zip) = cf11aab96e5bedf2b2bdf605ace3c67b7ab7bcefabbc17676ccc01a2b93c3ed0c177aa3710a31f2c10ecdd4f88a16e2421d6e3d18b604825e261fd4e25d24b86
+Size (github.com_fvbommel_sortorder_@v_v1.1.0.zip) = 10379 bytes
 BLAKE2s (github.com_gaissmai_bart_@v_v0.28.0.mod) = 1b3da201fd7634ca929fd0175a1e197b665b5ff0427360befbc0a3667810c99f
 SHA512 (github.com_gaissmai_bart_@v_v0.28.0.mod) = d5be8aac6442242f612fb29813c59daf3d73b02372b9bdf008e192945c7e9227b0a341cccc4ca15862feaf7e7829626aba4b5a3188cd75a714b2e347139f10b6
 Size (github.com_gaissmai_bart_@v_v0.28.0.mod) = 97 bytes

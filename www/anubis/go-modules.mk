@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.8 2026/07/28 15:27:17 ryoon Exp $
+# $NetBSD: go-modules.mk,v 1.9 2026/08/25 14:12:32 ryoon Exp $
 
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.mod
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.zip
@@ -147,6 +147,8 @@ GO_MODULE_FILES+=	github.com/felixge/httpsnoop/@v/v1.0.4.mod
 GO_MODULE_FILES+=	github.com/felixge/httpsnoop/@v/v1.0.4.zip
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.9.0.zip
+GO_MODULE_FILES+=	github.com/fvbommel/sortorder/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/fvbommel/sortorder/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/gaissmai/bart/@v/v0.28.0.mod
 GO_MODULE_FILES+=	github.com/gaissmai/bart/@v/v0.28.0.zip
 GO_MODULE_FILES+=	github.com/go-git/gcfg/@v/v1.5.1-0.20230307220236-3a3c6141e376.mod
