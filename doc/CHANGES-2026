@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5529 2026/08/25 17:25:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5530 2026/08/25 17:33:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8151,3 +8151,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 30.7.0 [pin 2026-08-25]
 	Added editors/emacs31 version 31.1 [wiz 2026-08-25]
 	Added editors/emacs31-nox11 version 31.1 [wiz 2026-08-25]
+	Removed editors/emacs26 successor editors/emacs31 [wiz 2026-08-25]
+	Removed editors/emacs26-nox11 successor editors/emacs31-nox11 [wiz 2026-08-25]
+	Removed editors/emacs27 successor editors/emacs31 [wiz 2026-08-25]
+	Removed editors/emacs27-nox11 successor editors/emacs31-nox11 [wiz 2026-08-25]
+	Removed editors/emacs28 successor editors/emacs31 [wiz 2026-08-25]
+	Removed editors/emacs28-nox11 successor editors/emacs31-nox11 [wiz 2026-08-25]
