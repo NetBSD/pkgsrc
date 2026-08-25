@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5510 2026/08/24 22:10:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5511 2026/08/25 08:03:19 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8128,3 +8128,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added wayland/waybar version 0.15.0 [kikadf 2026-08-24]
 	Updated net/croc to 11.3.0 [drixter 2026-08-24]
 	Updated meta-pkgs/bulk-test-go to 20260825 [wiz 2026-08-24]
+	Updated audio/fasttracker2 to 2.23 [fox 2026-08-25]
