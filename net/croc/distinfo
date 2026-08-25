@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2026/08/24 15:10:48 drixter Exp $
+$NetBSD: distinfo,v 1.10 2026/08/25 12:40:05 drixter Exp $
 
-BLAKE2s (croc-11.3.0.tar.gz) = f432655a70d7258b16a82d64909dc052059b5c0e1bfb6551016d5cd6db894380
-SHA512 (croc-11.3.0.tar.gz) = 50ff9121f88130af4c587bdb6e19ddfc562843a2e9d45f9a464ae8acf082f44bcbbc6406a8e0a00290785b6777cde9f823c34acae5d5237fb6c41b1ad5675cd3
-Size (croc-11.3.0.tar.gz) = 3007134 bytes
+BLAKE2s (croc-11.3.2.tar.gz) = edb7bf81d88e327727d73daa82239d5424dd4ae261002b316a2299a7cde3ec00
+SHA512 (croc-11.3.2.tar.gz) = 601a9408238e28b2fc738f123851fc73485b7713b311e544f708698eaf15b11b14fad42f13082a2170dd11dd45b6f3001ed43fffccb8314a2f955c516ccdd2a8
+Size (croc-11.3.2.tar.gz) = 3058146 bytes
 BLAKE2s (filippo.io_edwards25519_@v_v1.2.0.mod) = c5ceaac323b473009f82cc55819d006f766cbfe07fe2e4a13410b8507983c86a
 SHA512 (filippo.io_edwards25519_@v_v1.2.0.mod) = 84a78015e8a8917496964cdce8ee304c247756701eed88b33dcb7c2b86fe8b24dd5a2b9cfe15653eebe84e27053f4822efe564248744fcfead9b525ec9e3e307
 Size (filippo.io_edwards25519_@v_v1.2.0.mod) = 42 bytes
@@ -177,6 +177,12 @@ Size (github.com_sabhiram_go-gitignore_@v_v0.0.0-20210923224102-525f6e181f06.mod
 BLAKE2s (github.com_sabhiram_go-gitignore_@v_v0.0.0-20210923224102-525f6e181f06.zip) = 1c8d7625f9c997e04bedba886228dffd6523e318b558598cb097571fa5a8e4fd
 SHA512 (github.com_sabhiram_go-gitignore_@v_v0.0.0-20210923224102-525f6e181f06.zip) = c0c7d3f68d8f6e1d71ca50616aa2a9c655f42a25e5f9770b7607c3d5833194b0bdc507daa58e92a04a76b073dbc360bc16b43f5af2a7e8ebe17a44adb1e66378
 Size (github.com_sabhiram_go-gitignore_@v_v0.0.0-20210923224102-525f6e181f06.zip) = 11606 bytes
+BLAKE2s (github.com_schollz_derphole_@v_v0.18.2-croc.1.mod) = 89fb4abb55021e99ef9efc791844a5a552e426c9b1c8a1ef0a347b28cddd328a
+SHA512 (github.com_schollz_derphole_@v_v0.18.2-croc.1.mod) = a7c4f7427f994f6ca31f4f6e261c0213f3ddf340119423037475ab77fe38950a16b42ba3adc2cb707f953355caba2f84235afdbe6d89364a46c7d6cbedd4f624
+Size (github.com_schollz_derphole_@v_v0.18.2-croc.1.mod) = 3833 bytes
+BLAKE2s (github.com_schollz_derphole_@v_v0.18.2-croc.1.zip) = 7b1243cb07ac5b2a0d3527158829181e4003c7a8f1a501633e9e2d26c7b9fc45
+SHA512 (github.com_schollz_derphole_@v_v0.18.2-croc.1.zip) = 807fb41768ca1bb9ed686e49d104fbd6917d405548a1dcb8db53a3468f0882abb69d49b8be1c8576b11722ceeffe0d525dab277b1b50b24f9b82e5869f40da5e
+Size (github.com_schollz_derphole_@v_v0.18.2-croc.1.zip) = 26871245 bytes
 BLAKE2s (github.com_schollz_logger_@v_v1.2.0.mod) = 23692022091e94c50684c65950d6f9c3b9e8c0621e31cfb6de2398772cdadbdf
 SHA512 (github.com_schollz_logger_@v_v1.2.0.mod) = db5dd8742ef68cf0e1710f2065435b07f44899cca8c2bcd4df2a127596ff778661531f45a35a59b981b4fcb246757beea26835ddab8e3f5d24954af616067124
 Size (github.com_schollz_logger_@v_v1.2.0.mod) = 42 bytes
@@ -201,12 +207,6 @@ Size (github.com_schollz_progressbar_v3_@v_v3.19.1.mod) = 616 bytes
 BLAKE2s (github.com_schollz_progressbar_v3_@v_v3.19.1.zip) = acece2d603bad7f3085470d2c09745974a93e07db07615d41c390ff648aeaa6b
 SHA512 (github.com_schollz_progressbar_v3_@v_v3.19.1.zip) = 6e7a6997e9efe4ca00f7ea599a9649c666fe3bd23ec1b9a381b7c261e4e817c553c7150b24a36ecf15221833a566a2e79578349ee8d59badd4207884aacb75a6
 Size (github.com_schollz_progressbar_v3_@v_v3.19.1.zip) = 1049207 bytes
-BLAKE2s (github.com_shayne_derphole_@v_v0.18.2.mod) = 89fb4abb55021e99ef9efc791844a5a552e426c9b1c8a1ef0a347b28cddd328a
-SHA512 (github.com_shayne_derphole_@v_v0.18.2.mod) = a7c4f7427f994f6ca31f4f6e261c0213f3ddf340119423037475ab77fe38950a16b42ba3adc2cb707f953355caba2f84235afdbe6d89364a46c7d6cbedd4f624
-Size (github.com_shayne_derphole_@v_v0.18.2.mod) = 3833 bytes
-BLAKE2s (github.com_shayne_derphole_@v_v0.18.2.zip) = 3ec9df5dbef6d8ebb88ad80175e2902ddba9953874efaf9fb86cd0b0f3ce456f
-SHA512 (github.com_shayne_derphole_@v_v0.18.2.zip) = a019ac6d3b95fd650f613caf6d01737cdda788704d43736848b9b5bfb2f4105ef76123b69c40763ec0133fd3811cb1c881a172b58acce7a83430d2ae068a8ded
-Size (github.com_shayne_derphole_@v_v0.18.2.zip) = 26833984 bytes
 BLAKE2s (github.com_skip2_go-qrcode_@v_v0.0.0-20200617195104-da1b6568686e.mod) = fbcc8137278605c3d4b6dce3f69b7c478282087851ff0d40cc627634c29b2ea2
 SHA512 (github.com_skip2_go-qrcode_@v_v0.0.0-20200617195104-da1b6568686e.mod) = f40e45d730137deb85788b5b5f63140d6e02b5af6892a10352e14599f9eaaf6315b10c8497568f965253b995fe7fa454101db5cd4a8378f0ad3eb10bad9e51ce
 Size (github.com_skip2_go-qrcode_@v_v0.0.0-20200617195104-da1b6568686e.mod) = 43 bytes
