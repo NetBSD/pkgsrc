@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5531 2026/08/25 17:45:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5532 2026/08/25 17:47:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8158,3 +8158,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed editors/emacs28 successor editors/emacs31 [wiz 2026-08-25]
 	Removed editors/emacs28-nox11 successor editors/emacs31-nox11 [wiz 2026-08-25]
 	Updated editors/emacs30 to 30.2nb13 [wiz 2026-08-25]
+	Updated editors/emacs30-nox11 to 30.2nb1 [wiz 2026-08-25]
