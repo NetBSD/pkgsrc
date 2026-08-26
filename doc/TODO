@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27822 2026/08/26 10:08:31 drixter Exp $
+$NetBSD: TODO,v 1.27823 2026/08/26 10:12:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -1121,7 +1121,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o proftpd-1.3.9a
 	o prometheus-3.14.0
 	o prosody-13.0.5
-	o protobuf-36.0
 	o pspp-1.4.1
 	o ptlib-2.16.2
 	o pvs-6.0
@@ -1143,7 +1142,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
-	o py-protobuf-7.36.0
 	o py-pydantic-core-2.48.0 [waiting for py-pydantic release that works with this]
 	o py-simpletal-5.1
 	o py-sybase-0.37

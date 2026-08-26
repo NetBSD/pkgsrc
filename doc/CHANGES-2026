@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5541 2026/08/26 10:08:31 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5542 2026/08/26 10:12:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8172,3 +8172,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssl to 3.6.4nb1 [wiz 2026-08-26]
 	Updated devel/fq to 0.18.0nb1 [wiz 2026-08-26]
 	Updated parallel/pdsh to 2.36 [drixter 2026-08-26]
+	Updated devel/abseil to 20260817.0 [adam 2026-08-26]
+	Updated devel/protobuf to 36.0 [adam 2026-08-26]
+	Updated devel/py-protobuf to 7.36.0 [adam 2026-08-26]
