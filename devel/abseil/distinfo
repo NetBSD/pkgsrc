@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.40 2026/06/22 19:38:10 wiz Exp $
+$NetBSD: distinfo,v 1.41 2026/08/26 10:09:07 adam Exp $
 
-BLAKE2s (abseil-20260526.0-20260526.0.tar.gz) = c5b42a847084131a30845fbd78daa7472f21348ca71db5eb81b3cd6feb3f0e3e
-SHA512 (abseil-20260526.0-20260526.0.tar.gz) = fe85ebdd451b126117df1c3a312a1d5b29fc3557d07bb248854639b2a0180e91003fd2331a0d938f4ffeae8966f1df67a488fa3bdab072e840bbfdc6e8a4f01b
-Size (abseil-20260526.0-20260526.0.tar.gz) = 2391476 bytes
+BLAKE2s (abseil-20260817.0-20260817.0.tar.gz) = 50bb39b79e8257ac7ffd059bde0d7f68e1ab0daa07bbb12296f83521c080c060
+SHA512 (abseil-20260817.0-20260817.0.tar.gz) = 27e2db9269aff1c114c3fd26e501fcc186678102326f580a81c4c04392175523eb13967ffa36a43acfdf92498377d80d849558cf0c341fae1f83e677ab87a08e
+Size (abseil-20260817.0-20260817.0.tar.gz) = 2430876 bytes
 SHA1 (patch-absl_base_internal_sysinfo.cc) = c96dd302dde0f6071a8353a5877a3bac37949467
 SHA1 (patch-absl_base_internal_unscaledcycleclock.cc) = 13151a6cf8a5052ca07ee7745a04c0a6577e2858
 SHA1 (patch-absl_debugging_internal_elf__mem__image.cc) = 163decf88e1c39d94b3e93a7a9c758b18310fc5d
 SHA1 (patch-absl_debugging_internal_vdso__support.cc) = 2292c5b0f2b41679039a1697508343ff5b6cc401
-SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = affced054b20ee6c20f5160e38a13a9a2d7961fa
+SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = 34d0585a7239121b04818a74241aa1fea84e6413
