@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2026/08/15 11:21:13 pin Exp $
+# $NetBSD: Makefile,v 1.56 2026/08/26 10:58:24 pin Exp $
 
-DISTNAME=	dua-cli-2.42.1
+DISTNAME=	dua-cli-2.43.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.98.0-beta.7
+#RUST_REQ=	1.99.0-beta.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.98.0-beta.7 on amd64
+#This package is confirmed to build with Rust 1.99.0-beta.1 on amd64
 
 INSTALLATION_DIRS=	bin
 
