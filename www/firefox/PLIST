@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.193 2026/08/24 12:51:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.194 2026/08/26 09:37:26 rjs Exp $
 bin/${MOZILLA}
 lib/${MOZILLA}/application.ini
 lib/${MOZILLA}/browser/chrome/icons/default/default128.png
@@ -22,7 +22,7 @@ lib/${MOZILLA}/libmozavutil.so
 lib/${MOZILLA}/libmozgtk.so
 lib/${MOZILLA}/libmozinference.so
 lib/${MOZILLA}/libmozsqlite3.so
-lib/${MOZILLA}/libmozwayland.so
+${PLIST.wayland}lib/${MOZILLA}/libmozwayland.so
 lib/${MOZILLA}/libxul.so
 lib/${MOZILLA}/omni.ja
 lib/${MOZILLA}/pingsender
