@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2026/08/26 18:19:56 js Exp $
+Applications/Lagrange.app/Contents/Info.plist
+Applications/Lagrange.app/Contents/MacOS/Lagrange
+Applications/Lagrange.app/Contents/Resources/Lagrange.icns
+Applications/Lagrange.app/Contents/Resources/resources.lgr
