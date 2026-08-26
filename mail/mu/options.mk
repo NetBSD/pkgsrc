@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2026/03/30 15:11:36 ktnb Exp $
+# $NetBSD: options.mk,v 1.4 2026/08/26 14:37:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mu
 PKG_SUPPORTED_OPTIONS=	mu-emacs guile
@@ -18,7 +18,7 @@ INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs
 EMACS_VERSIONS_ACCEPTED=	emacs30 emacs30nox emacs29 emacs29nox
-EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
+EMACS_VERSIONS_ACCEPTED+=	emacs31 emacs31nox
 .else
 MESON_ARGS+=	-Demacs=disabled
 .endif
