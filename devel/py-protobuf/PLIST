@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/06/30 14:47:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/08/26 10:11:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,9 @@ ${PYSITELIB}/google/protobuf/api_pb2.pyo
 ${PYSITELIB}/google/protobuf/compiler/__init__.py
 ${PYSITELIB}/google/protobuf/compiler/__init__.pyc
 ${PYSITELIB}/google/protobuf/compiler/__init__.pyo
+${PYSITELIB}/google/protobuf/compiler/descriptor_pb2.py
+${PYSITELIB}/google/protobuf/compiler/descriptor_pb2.pyc
+${PYSITELIB}/google/protobuf/compiler/descriptor_pb2.pyo
 ${PYSITELIB}/google/protobuf/compiler/plugin_pb2.py
 ${PYSITELIB}/google/protobuf/compiler/plugin_pb2.pyc
 ${PYSITELIB}/google/protobuf/compiler/plugin_pb2.pyo
@@ -77,6 +80,9 @@ ${PYSITELIB}/google/protobuf/internal/extension_dict.pyo
 ${PYSITELIB}/google/protobuf/internal/field_mask.py
 ${PYSITELIB}/google/protobuf/internal/field_mask.pyc
 ${PYSITELIB}/google/protobuf/internal/field_mask.pyo
+${PYSITELIB}/google/protobuf/internal/message_benchmark.py
+${PYSITELIB}/google/protobuf/internal/message_benchmark.pyc
+${PYSITELIB}/google/protobuf/internal/message_benchmark.pyo
 ${PYSITELIB}/google/protobuf/internal/message_listener.py
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyc
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyo
@@ -98,9 +104,15 @@ ${PYSITELIB}/google/protobuf/internal/well_known_types.pyo
 ${PYSITELIB}/google/protobuf/internal/wire_format.py
 ${PYSITELIB}/google/protobuf/internal/wire_format.pyc
 ${PYSITELIB}/google/protobuf/internal/wire_format.pyo
+${PYSITELIB}/google/protobuf/json_enumvalue_options_pb2.py
+${PYSITELIB}/google/protobuf/json_enumvalue_options_pb2.pyc
+${PYSITELIB}/google/protobuf/json_enumvalue_options_pb2.pyo
 ${PYSITELIB}/google/protobuf/json_format.py
 ${PYSITELIB}/google/protobuf/json_format.pyc
 ${PYSITELIB}/google/protobuf/json_format.pyo
+${PYSITELIB}/google/protobuf/json_options_pb2.py
+${PYSITELIB}/google/protobuf/json_options_pb2.pyc
+${PYSITELIB}/google/protobuf/json_options_pb2.pyo
 ${PYSITELIB}/google/protobuf/message.py
 ${PYSITELIB}/google/protobuf/message.pyc
 ${PYSITELIB}/google/protobuf/message.pyo
