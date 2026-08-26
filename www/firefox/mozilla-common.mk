@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.322 2026/08/24 12:51:47 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.323 2026/08/26 21:44:35 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -219,7 +219,6 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 PLIST_VARS+=	v4l2_decode ffvpx
 
-PLIST_VARS+=		v4l2_decode
 .if ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH:M*arm*} || \
     ${MACHINE_ARCH} == riscv64

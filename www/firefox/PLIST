@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.194 2026/08/26 09:37:26 rjs Exp $
+@comment $NetBSD: PLIST,v 1.195 2026/08/26 21:44:35 gutteridge Exp $
 bin/${MOZILLA}
 lib/${MOZILLA}/application.ini
 lib/${MOZILLA}/browser/chrome/icons/default/default128.png
@@ -17,8 +17,8 @@ lib/${MOZILLA}/gmp-clearkey/0.1/libclearkey.so
 lib/${MOZILLA}/gmp-clearkey/0.1/manifest.json
 lib/${MOZILLA}/libgkcodecs.so
 lib/${MOZILLA}/liblgpllibs.so
-lib/${MOZILLA}/libmozavcodec.so
-lib/${MOZILLA}/libmozavutil.so
+${PLIST.ffvpx}lib/${MOZILLA}/libmozavcodec.so
+${PLIST.ffvpx}lib/${MOZILLA}/libmozavutil.so
 lib/${MOZILLA}/libmozgtk.so
 lib/${MOZILLA}/libmozinference.so
 lib/${MOZILLA}/libmozsqlite3.so
@@ -28,6 +28,7 @@ lib/${MOZILLA}/omni.ja
 lib/${MOZILLA}/pingsender
 lib/${MOZILLA}/platform.ini
 lib/${MOZILLA}/removed-files
+${PLIST.v4l2_decode}lib/${MOZILLA}/v4l2test
 lib/${MOZILLA}/vaapitest
 lib/${MOZILLA}/vulkantest
 share/applications/${MOZILLA}.desktop
