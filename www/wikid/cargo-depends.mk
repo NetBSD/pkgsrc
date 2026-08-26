@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/08/23 12:08:30 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/08/26 11:02:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
 CARGO_CRATE_DEPENDS+=	base64-0.22.1
