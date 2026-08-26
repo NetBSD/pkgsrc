@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27821 2026/08/25 18:08:24 wiz Exp $
+$NetBSD: TODO,v 1.27822 2026/08/26 10:08:31 drixter Exp $
 
 Suggested new packages
 ======================
@@ -1069,7 +1069,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
-	o pdsh-2.32
 	o pear-SOAP-0.14.0
 	o pgbuildfarm-12
 	o phoronix-9.2.1
