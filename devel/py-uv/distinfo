@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2026/08/18 12:37:17 adam Exp $
+$NetBSD: distinfo,v 1.36 2026/08/26 08:10:44 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -117,12 +117,12 @@ Size (atomic-waker-1.1.2.crate) = 12422 bytes
 BLAKE2s (autocfg-1.5.0.crate) = d9738bc6755bf80a73705691ef930ca883cd58e4a2d1162b5c0a09cdc7029304
 SHA512 (autocfg-1.5.0.crate) = f279856f234d39d369623576acf9546a1ca24d7fe449f36d4fb93ea75a7efaf2c4015b9616a69bbbed358c5e5882e16b045352f046aa4c049b3d13b1e8257b08
 Size (autocfg-1.5.0.crate) = 18729 bytes
-BLAKE2s (aws-lc-rs-1.16.2.crate) = 28cda60351251e49f7f8205677d6904ea4471fb8116b0c0775a538cbfa970163
-SHA512 (aws-lc-rs-1.16.2.crate) = 9276c8db3730ebe4d173dbaff2a4ffad4b4df30510aeb2393e37327e906f53d1235f8fd8da4f1ec90402fa072ecd5a7209ab20bfcda60fa351bedfaafb1ba299
-Size (aws-lc-rs-1.16.2.crate) = 224799 bytes
-BLAKE2s (aws-lc-sys-0.39.0.crate) = 521bf29854497bb871a5654bc198cb3b5b607dc211d8bdf3dee6668e43e752de
-SHA512 (aws-lc-sys-0.39.0.crate) = 59f4739bc9812736a264ca3499c38e41cfb9f2d31de547b463e24fbe766bc0786d49fc46f0909afe5fc937a327cc67b05b6658830a7b5edb80aceeee7ba68751
-Size (aws-lc-sys-0.39.0.crate) = 9461007 bytes
+BLAKE2s (aws-lc-rs-1.18.0.crate) = 7fb9f6435ab9b42dec343e052128b992bf5659796720c5ad54d77a2975359bdd
+SHA512 (aws-lc-rs-1.18.0.crate) = c29e03db9744fdab235369405275a9bb78adbca71a0ea6dd4acbfbe1b314ffc65cabcf51083564e6ddfda1adc4b510510bfe8234c42a55ea573810dc17f40e76
+Size (aws-lc-rs-1.18.0.crate) = 246295 bytes
+BLAKE2s (aws-lc-sys-0.44.0.crate) = 74dfe560c82b3775398140fc114df34d1b4cc2b38ad30fb0df745e0de9537548
+SHA512 (aws-lc-sys-0.44.0.crate) = cfac12450ac16085279ad33a78492448e10d17c98bbc3280a0cd77be6b0201a715aded0a382bfe8604dba9341abdfeaee538d244b6b5f01916c5377ac4c37080
+Size (aws-lc-sys-0.44.0.crate) = 9679450 bytes
 BLAKE2s (axoasset-2.0.1.crate) = 7398487c745f8435559c0d959c1c8e19507f23fd7870c8833f422747abce5a22
 SHA512 (axoasset-2.0.1.crate) = 1adf5c99c15954f9bacacefc7edca5357d53340a2d5ddfe44e253582a9e559c5594411ca22fe60f8b3e36d326cd5cfb86e170be39e756897e574b72f3009eb8f
 Size (axoasset-2.0.1.crate) = 68337 bytes
@@ -1776,9 +1776,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.24.0.crate) = 50fa1f60ba24315c340edda9af4fc3f16226af0c070cede423cc820baaad6a58
 SHA512 (uuid-1.24.0.crate) = 03e613e906a3d3cc6f27495b2bf239ae4cf40dd921a213e5a770c39ca3bdf4109942f75db14382400f0a15bac077cb3457948335ee0eb50add61b2b51c03f701
 Size (uuid-1.24.0.crate) = 63882 bytes
-BLAKE2s (uv-0.12.5.tar.gz) = b6af1bf21a38276525e19d166c3ac409aef2ce4507e45a8853f29325eaec20ec
-SHA512 (uv-0.12.5.tar.gz) = 9d1158f5001592bc711cd0d4414bee26bc4c013f980cc78804929673c82bb1762ddad5a090e507538082211af51a0bfd1e0223cccfc4457579aca2ee8182eb24
-Size (uv-0.12.5.tar.gz) = 7101936 bytes
+BLAKE2s (uv-0.12.6.tar.gz) = 153e446f69b3324e306dd2e22ad9ebbdbd2918a28b585bc11de1312379bda681
+SHA512 (uv-0.12.6.tar.gz) = 21989281eed71ea2c4af335c5ed2391bfd603b2c70ed836ccc77f0fb4491b2d58b67d5a5f4f89fd2a72def029b7f35517ea3976628c8e2f6db08a306789704e6
+Size (uv-0.12.6.tar.gz) = 7117263 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes
