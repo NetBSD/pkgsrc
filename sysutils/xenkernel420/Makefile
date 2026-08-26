@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/11/13 16:54:19 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/26 11:10:45 bouyer Exp $
 # VERSION is set in version.mk as it is shared with other packages
 
 XENKERNEL:=
@@ -52,6 +52,8 @@ EXTRA_CFLAGS+=	 -falign-functions=16
 MAKE_ENV+=	EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
 do-build:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} -C xen defconfig
+	echo "CONFIG_SHADOW_PAGING=y" >> ${WRKSRC}/xen/.config
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} build-xen
 	${CP} ${WRKSRC}/xen/xen.gz ${WRKDIR}/xen.gz
 	cd ${WRKSRC} && ${MAKE_PROGRAM} clean
