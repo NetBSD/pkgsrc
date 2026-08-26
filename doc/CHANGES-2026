@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5546 2026/08/26 10:58:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5547 2026/08/26 11:00:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8179,3 +8179,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ggml to 0.22.0 [wiz 2026-08-26]
 	Updated news/eilmeldung to 1.7.3 [pin 2026-08-26]
 	Updated sysutils/dua-cli to 2.43.0 [pin 2026-08-26]
+	Updated sysutils/mirador to 1.8.0 [pin 2026-08-26]
