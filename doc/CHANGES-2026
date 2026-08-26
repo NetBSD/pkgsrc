@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5549 2026/08/26 11:02:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5550 2026/08/26 11:12:24 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8182,3 +8182,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mirador to 1.8.0 [pin 2026-08-26]
 	Updated textproc/treemd to 0.7.0 [pin 2026-08-26]
 	Updated www/wikid to 2.3.0 [pin 2026-08-26]
+	Updated sysutils/xenkernel420 to 20260825 [bouyer 2026-08-26]
+	Updated sysutils/xentools420 to 20260825 [bouyer 2026-08-26]
+	Updated sysutils/xenstoretools to 20260825 [bouyer 2026-08-26]
+	Updated sysutils/xenkernel418 to 20260825 [bouyer 2026-08-26]
+	Updated sysutils/xentools418 to 20260825 [bouyer 2026-08-26]
