@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2026/08/03 19:42:41 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/08/26 08:13:36 wiz Exp $
 
-DISTNAME=	libssh-0.12.1
+DISTNAME=	libssh-0.12.2
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh.org/files/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
