@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2026/06/22 19:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/26 10:19:10 adam Exp $
 
 DISTNAME=	riemann-c-client-2.2.0
 PKGNAME=	${DISTNAME:S/c-//}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.madhouse-project.org/algernon/riemann-c-client/archive/
 

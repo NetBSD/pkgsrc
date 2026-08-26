@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/08/09 17:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/26 10:19:06 adam Exp $
 
 DISTNAME=	libshumate-1.6.2
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libshumate/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
