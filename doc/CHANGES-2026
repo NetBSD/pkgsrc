@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5542 2026/08/26 10:12:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5543 2026/08/26 10:15:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8175,3 +8175,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/abseil to 20260817.0 [adam 2026-08-26]
 	Updated devel/protobuf to 36.0 [adam 2026-08-26]
 	Updated devel/py-protobuf to 7.36.0 [adam 2026-08-26]
+	Updated graphics/digikam-gmic-qt to 4.0.3.20260824 [wiz 2026-08-26]
