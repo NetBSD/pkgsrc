@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.33 2026/08/18 12:37:17 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.34 2026/08/26 08:10:43 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -39,8 +39,8 @@ CARGO_CRATE_DEPENDS+=	async-recursion-1.1.1
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.91
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.5.0
-CARGO_CRATE_DEPENDS+=	aws-lc-rs-1.16.2
-CARGO_CRATE_DEPENDS+=	aws-lc-sys-0.39.0
+CARGO_CRATE_DEPENDS+=	aws-lc-rs-1.18.0
+CARGO_CRATE_DEPENDS+=	aws-lc-sys-0.44.0
 CARGO_CRATE_DEPENDS+=	axoasset-2.0.1
 CARGO_CRATE_DEPENDS+=	axoprocess-0.2.1
 CARGO_CRATE_DEPENDS+=	axotag-0.3.0
