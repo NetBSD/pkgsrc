@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5536 2026/08/26 08:11:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5537 2026/08/26 08:12:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8166,3 +8166,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-maturin to 1.15.0 [adam 2026-08-26]
 	Updated devel/py-uv to 0.12.6 [adam 2026-08-26]
 	Updated devel/py-uv-build to 0.12.6 [adam 2026-08-26]
+	Updated security/py-cryptography to 50.0.1 [adam 2026-08-26]
+	Updated security/py-cryptography_vectors to 50.0.1 [adam 2026-08-26]
