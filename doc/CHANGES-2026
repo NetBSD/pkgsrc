@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5544 2026/08/26 10:28:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5545 2026/08/26 10:57:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8177,3 +8177,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-protobuf to 7.36.0 [adam 2026-08-26]
 	Updated graphics/digikam-gmic-qt to 4.0.3.20260824 [wiz 2026-08-26]
 	Updated math/ggml to 0.22.0 [wiz 2026-08-26]
+	Updated news/eilmeldung to 1.7.3 [pin 2026-08-26]
