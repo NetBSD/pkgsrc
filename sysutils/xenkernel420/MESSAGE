@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2025/08/22 09:00:11 bouyer Exp $
+$NetBSD: MESSAGE,v 1.2 2026/08/26 11:10:45 bouyer Exp $
 
 The Xen hypervisor is installed under the following locations:
 	${XENKERNELDIR}/xen.gz		(standard hypervisor)
@@ -11,4 +11,7 @@ but then you can't boot NetBSD in PV mode.
 
 32bits PV guests are not officially supported any more.
 Switch to pvshim (for netbsd-9 or older) or pvh (for netbsd-10 or newer).
+
+Unline upstream, SHADOW_PAGING is enabled by default as NetBSD PV guests
+relies on it. Note that this is not security-supported upstream any more.
 ===========================================================================
