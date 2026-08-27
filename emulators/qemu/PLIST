@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.106 2026/05/11 14:01:35 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.107 2026/08/27 07:27:38 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -41,6 +41,7 @@ ${PLIST.lp64}bin/qemu-system-aarch64
 ${PLIST.lp64}bin/qemu-system-alpha
 bin/qemu-system-arm
 bin/qemu-system-avr
+bin/qemu-system-hexagon
 ${PLIST.lp64}bin/qemu-system-hppa
 bin/qemu-system-i386
 ${PLIST.lp64}bin/qemu-system-loongarch64
@@ -73,6 +74,7 @@ ${PLIST.plugins}include/qemu-plugin.h
 ${PLIST.bridge-helper}libexec/qemu-bridge-helper
 ${PLIST.doc}man/man1/qemu-img.1
 ${PLIST.doc}man/man1/qemu-storage-daemon.1
+${PLIST.doc}man/man1/qemu-vnc.1
 ${PLIST.doc}man/man1/qemu.1
 ${PLIST.doc}man/man7/qemu-block-drivers.7
 ${PLIST.doc}man/man7/qemu-cpu-models.7
@@ -82,8 +84,8 @@ ${PLIST.doc}man/man8/qemu-nbd.8
 ${PLIST.doc}man/man8/qemu-pr-helper.8
 share/applications/qemu.desktop
 ${PLIST.doc}share/doc/qemu/.buildinfo
-share/doc/qemu/Makefile.multinode-NetBSD
-share/doc/qemu/README.NetBSD
+${PLIST.doc}share/doc/qemu/Makefile.multinode-NetBSD
+${PLIST.doc}share/doc/qemu/README.NetBSD
 ${PLIST.doc}share/doc/qemu/about/build-platforms.html
 ${PLIST.doc}share/doc/qemu/about/deprecated.html
 ${PLIST.doc}share/doc/qemu/about/emulation.html
@@ -106,6 +108,7 @@ ${PLIST.doc}share/doc/qemu/devel/crypto.html
 ${PLIST.doc}share/doc/qemu/devel/decodetree.html
 ${PLIST.doc}share/doc/qemu/devel/docs.html
 ${PLIST.doc}share/doc/qemu/devel/ebpf_rss.html
+${PLIST.doc}share/doc/qemu/devel/hexagon-sys.html
 ${PLIST.doc}share/doc/qemu/devel/index-api.html
 ${PLIST.doc}share/doc/qemu/devel/index-build.html
 ${PLIST.doc}share/doc/qemu/devel/index-internals.html
@@ -150,6 +153,7 @@ ${PLIST.doc}share/doc/qemu/devel/rust.html
 ${PLIST.doc}share/doc/qemu/devel/s390-cpu-topology.html
 ${PLIST.doc}share/doc/qemu/devel/s390-dasd-ipl.html
 ${PLIST.doc}share/doc/qemu/devel/secure-coding-practices.html
+${PLIST.doc}share/doc/qemu/devel/ssi.html
 ${PLIST.doc}share/doc/qemu/devel/stable-process.html
 ${PLIST.doc}share/doc/qemu/devel/style.html
 ${PLIST.doc}share/doc/qemu/devel/submitting-a-patch.html
@@ -173,6 +177,7 @@ ${PLIST.doc}share/doc/qemu/devel/trivial-patches.html
 ${PLIST.doc}share/doc/qemu/devel/uefi-vars.html
 ${PLIST.doc}share/doc/qemu/devel/ui.html
 ${PLIST.doc}share/doc/qemu/devel/vfio-iommufd.html
+${PLIST.doc}share/doc/qemu/devel/vfio-mdpy.html
 ${PLIST.doc}share/doc/qemu/devel/virtio-backends.html
 ${PLIST.doc}share/doc/qemu/devel/writing-monitor-commands.html
 ${PLIST.doc}share/doc/qemu/devel/zoned-storage.html
@@ -183,6 +188,7 @@ ${PLIST.doc}share/doc/qemu/interop/barrier.html
 ${PLIST.doc}share/doc/qemu/interop/bitmaps.html
 ${PLIST.doc}share/doc/qemu/interop/dbus-display.html
 ${PLIST.doc}share/doc/qemu/interop/dbus-vmstate.html
+${PLIST.doc}share/doc/qemu/interop/dbus-vnc.html
 ${PLIST.doc}share/doc/qemu/interop/dbus.html
 ${PLIST.doc}share/doc/qemu/interop/index.html
 ${PLIST.doc}share/doc/qemu/interop/live-block-operations.html
@@ -255,9 +261,8 @@ ${PLIST.doc}share/doc/qemu/system/arm/digic.html
 ${PLIST.doc}share/doc/qemu/system/arm/emcraft-sf2.html
 ${PLIST.doc}share/doc/qemu/system/arm/emulation.html
 ${PLIST.doc}share/doc/qemu/system/arm/exynos.html
-${PLIST.doc}share/doc/qemu/system/arm/fby35.html
 ${PLIST.doc}share/doc/qemu/system/arm/imx25-pdk.html
-${PLIST.doc}share/doc/qemu/system/arm/imx8mp-evk.html
+${PLIST.doc}share/doc/qemu/system/arm/imx8m.html
 ${PLIST.doc}share/doc/qemu/system/arm/integratorcp.html
 ${PLIST.doc}share/doc/qemu/system/arm/kzm.html
 ${PLIST.doc}share/doc/qemu/system/arm/max78000.html
@@ -315,6 +320,8 @@ ${PLIST.doc}share/doc/qemu/system/devices/virtio/virtio-snd.html
 ${PLIST.doc}share/doc/qemu/system/gdb.html
 ${PLIST.doc}share/doc/qemu/system/generic-loader.html
 ${PLIST.doc}share/doc/qemu/system/guest-loader.html
+${PLIST.doc}share/doc/qemu/system/hexagon/cdsp.html
+${PLIST.doc}share/doc/qemu/system/hexagon/emulation.html
 ${PLIST.doc}share/doc/qemu/system/i386/amd-memory-encryption.html
 ${PLIST.doc}share/doc/qemu/system/i386/cpu.html
 ${PLIST.doc}share/doc/qemu/system/i386/hyperv.html
@@ -356,11 +363,13 @@ ${PLIST.doc}share/doc/qemu/system/qemu-colo.html
 ${PLIST.doc}share/doc/qemu/system/qemu-cpu-models.html
 ${PLIST.doc}share/doc/qemu/system/qemu-manpage.html
 ${PLIST.doc}share/doc/qemu/system/replay.html
+${PLIST.doc}share/doc/qemu/system/riscv/k230.html
 ${PLIST.doc}share/doc/qemu/system/riscv/microblaze-v-generic.html
 ${PLIST.doc}share/doc/qemu/system/riscv/microchip-icicle-kit.html
 ${PLIST.doc}share/doc/qemu/system/riscv/mips.html
 ${PLIST.doc}share/doc/qemu/system/riscv/shakti-c.html
 ${PLIST.doc}share/doc/qemu/system/riscv/sifive_u.html
+${PLIST.doc}share/doc/qemu/system/riscv/tt_atlantis.html
 ${PLIST.doc}share/doc/qemu/system/riscv/virt.html
 ${PLIST.doc}share/doc/qemu/system/riscv/xiangshan-kunminghu.html
 ${PLIST.doc}share/doc/qemu/system/s390x/3270.html
@@ -376,6 +385,7 @@ ${PLIST.doc}share/doc/qemu/system/security.html
 ${PLIST.doc}share/doc/qemu/system/sriov.html
 ${PLIST.doc}share/doc/qemu/system/target-arm.html
 ${PLIST.doc}share/doc/qemu/system/target-avr.html
+${PLIST.doc}share/doc/qemu/system/target-hexagon.html
 ${PLIST.doc}share/doc/qemu/system/target-i386.html
 ${PLIST.doc}share/doc/qemu/system/target-loongarch.html
 ${PLIST.doc}share/doc/qemu/system/target-m68k.html
@@ -401,6 +411,7 @@ ${PLIST.doc}share/doc/qemu/tools/qemu-pr-helper.html
 ${PLIST.doc}share/doc/qemu/tools/qemu-storage-daemon.html
 ${PLIST.doc}share/doc/qemu/tools/qemu-trace-stap.html
 ${PLIST.doc}share/doc/qemu/tools/qemu-vmsr-helper.html
+${PLIST.doc}share/doc/qemu/tools/qemu-vnc.html
 ${PLIST.doc}share/doc/qemu/user/index.html
 ${PLIST.doc}share/doc/qemu/user/main.html
 share/icons/hicolor/128x128/apps/qemu.png

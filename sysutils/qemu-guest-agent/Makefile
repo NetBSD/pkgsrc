@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/08/07 08:15:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/27 07:27:39 adam Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -64,7 +64,6 @@ CONFIGURE_ARGS+=	--disable-coroutine-pool
 CONFIGURE_ARGS+=	--disable-curses
 CONFIGURE_ARGS+=	--disable-fdt
 CONFIGURE_ARGS+=	--disable-gcrypt
-CONFIGURE_ARGS+=	--disable-glusterfs
 CONFIGURE_ARGS+=	--disable-libnfs
 CONFIGURE_ARGS+=	--disable-libusb
 CONFIGURE_ARGS+=	--disable-lzo
