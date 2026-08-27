@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1125 2026/08/10 07:31:27 wiz Exp $
+# $NetBSD: Makefile,v 1.1126 2026/08/27 07:11:39 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -511,7 +511,6 @@ SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
 SUBDIR+=	py-imageio
 SUBDIR+=	py-imagesize
-SUBDIR+=	py-imaging
 SUBDIR+=	py-japanize-matplotlib
 SUBDIR+=	py-leather
 SUBDIR+=	py-matplotlib
@@ -604,7 +603,6 @@ SUBDIR+=	silgraphite-ft
 SUBDIR+=	silgraphite-xft
 SUBDIR+=	simage
 SUBDIR+=	simp
-SUBDIR+=	skencil
 SUBDIR+=	slim-themes
 SUBDIR+=	spcaview
 SUBDIR+=	stitchy
