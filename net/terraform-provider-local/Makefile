@@ -1,27 +1,23 @@
-# $NetBSD: Makefile,v 1.72 2026/08/22 15:19:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.73 2026/08/27 20:23:11 leot Exp $
 
-DISTNAME=	terraform-provider-local-1.4.0
-PKGREVISION=	68
+DISTNAME=	terraform-provider-local-2.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://registry.terraform.io/providers/hashicorp/local/latest/docs
+HOMEPAGE=	https://www.terraform.io/docs/providers/local/
 COMMENT=	Terraform provider for local resources
 LICENSE=	mpl-2.0
 
-DEPENDS+=	terraform-[0-9]*:../../net/terraform
+TERRAFORM_PROVIDER_BIN=		terraform-provider-local
+TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
+TERRAFORM_PROVIDER_TYPE=	local
 
-UNLIMIT_RESOURCES=	datasize virtualsize
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
+.include "go-modules.mk"
 
-GO_BUILD_PATTERN?=	${GO_SRCPATH}/.
-
-USE_TOOLS+=	bash
-REPLACE_BASH+=	scripts/*.sh
-
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
+.include "../../net/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
