@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1659 2026/08/27 20:50:20 leot Exp $
+# $NetBSD: Makefile,v 1.1660 2026/08/27 20:51:16 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -980,13 +980,6 @@ SUBDIR+=	teamspeak-server
 SUBDIR+=	tektoncd-cli
 SUBDIR+=	telescope
 SUBDIR+=	termscp
-SUBDIR+=	terraform012
-SUBDIR+=	terraform013
-SUBDIR+=	terraform014
-SUBDIR+=	terraform015
-SUBDIR+=	terraform11
-SUBDIR+=	terraform13
-SUBDIR+=	terraform15
 SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws3
 SUBDIR+=	terraform-provider-kubernetes1
@@ -995,6 +988,13 @@ SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-random2
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform-provider-vultr
+SUBDIR+=	terraform012
+SUBDIR+=	terraform013
+SUBDIR+=	terraform014
+SUBDIR+=	terraform015
+SUBDIR+=	terraform11
+SUBDIR+=	terraform13
+SUBDIR+=	terraform15
 SUBDIR+=	tigervnc
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
