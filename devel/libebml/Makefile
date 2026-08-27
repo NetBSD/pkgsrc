@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/08/15 11:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.61 2026/08/27 06:36:13 adam Exp $
 
-DISTNAME=	libebml-1.4.5
+DISTNAME=	libebml-1.4.7
 CATEGORIES=	devel
 MASTER_SITES=	https://dl.matroska.org/downloads/libebml/
 EXTRACT_SUFX=	.tar.xz
@@ -10,11 +10,11 @@ HOMEPAGE=	https://matroska-org.github.io/libebml/
 COMMENT=	Extensible Binary Meta Language support library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=YES
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 PKGCONFIG_OVERRIDE=	libebml.pc.in
 
 .include "../../devel/cmake/build.mk"
+.include "../../textproc/utf8-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
