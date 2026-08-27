@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.147 2026/08/14 12:14:46 adam Exp $
+$NetBSD: distinfo,v 1.148 2026/08/27 16:11:18 jperkin Exp $
 
 BLAKE2s (openldap-2.7.0.tgz) = 177e508e7d0558a7f85a71e016d482e5c3ec182e5bda0abdb2fc3d98ac3ba198
 SHA512 (openldap-2.7.0.tgz) = a266f8a9a24f18174595c699d0da51bbfde15068160740193d21fe6fdf585c45a6ff7ab9e7829dfe8bbd7bf87494b7996c1470a0d84bf79b557b377e800aa551
@@ -15,5 +15,6 @@ SHA1 (patch-libraries_libldap_cyrus.c) = 1e47cdf4b1f1cc4eef36cf40a6beec1bed167f8
 SHA1 (patch-libraries_libldap_ldap-int.h) = 967499db16d31cbf47deff330d97efd0a360ac7f
 SHA1 (patch-libraries_libldap_os-local.c) = 7cd4f8638456fae12499de0d36d7802e47d3d688
 SHA1 (patch-libraries_libldap_thr__posix.c) = 21f0efe8f7d2f4c4fecf0a970ce5259ae28e26cb
+SHA1 (patch-libraries_libldap_tls__o.c) = 40a46eb16c8c9e201619aac4f8dc887dce840690
 SHA1 (patch-libraries_liblutil_sha1.c) = 10deca5c2f0431dd51d9137f14b5070be1264dcd
 SHA1 (patch-servers_slapd_Makefile.in) = 40043fdaecac7b591b462f7af32149a93e88eaf5
