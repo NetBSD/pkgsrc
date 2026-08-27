@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5592 2026/08/27 20:23:18 leot Exp $
+$NetBSD: CHANGES-2026,v 1.5593 2026/08/27 20:24:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8265,3 +8265,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/terraform-provider-random2 version 2.3.0 [leot 2026-08-27]
 	Updated net/terraform-provider-archive to 2.1.0nb60 [leot 2026-08-27]
 	Updated net/terraform-provider-local to 2.1.0 [leot 2026-08-27]
+	Updated net/terraform-provider-null to 3.0.0 [leot 2026-08-27]
