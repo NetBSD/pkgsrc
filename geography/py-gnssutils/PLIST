@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/06/24 13:11:00 gdt Exp $
-bin/gnssmqttclient
+@comment $NetBSD: PLIST,v 1.8 2026/08/27 10:58:56 gdt Exp $
 bin/gnssntripclient
 bin/gnssserver
 bin/gnssstreamer
@@ -22,12 +21,6 @@ ${PYSITELIB}/pygnssutils/exceptions.pyo
 ${PYSITELIB}/pygnssutils/globals.py
 ${PYSITELIB}/pygnssutils/globals.pyc
 ${PYSITELIB}/pygnssutils/globals.pyo
-${PYSITELIB}/pygnssutils/gnssmqttclient.py
-${PYSITELIB}/pygnssutils/gnssmqttclient.pyc
-${PYSITELIB}/pygnssutils/gnssmqttclient.pyo
-${PYSITELIB}/pygnssutils/gnssmqttclient_cli.py
-${PYSITELIB}/pygnssutils/gnssmqttclient_cli.pyc
-${PYSITELIB}/pygnssutils/gnssmqttclient_cli.pyo
 ${PYSITELIB}/pygnssutils/gnssntripclient.py
 ${PYSITELIB}/pygnssutils/gnssntripclient.pyc
 ${PYSITELIB}/pygnssutils/gnssntripclient.pyo
@@ -52,9 +45,6 @@ ${PYSITELIB}/pygnssutils/gnssstreamer_cli.pyo
 ${PYSITELIB}/pygnssutils/helpers.py
 ${PYSITELIB}/pygnssutils/helpers.pyc
 ${PYSITELIB}/pygnssutils/helpers.pyo
-${PYSITELIB}/pygnssutils/mqttmessage.py
-${PYSITELIB}/pygnssutils/mqttmessage.pyc
-${PYSITELIB}/pygnssutils/mqttmessage.pyo
 ${PYSITELIB}/pygnssutils/rawnav.py
 ${PYSITELIB}/pygnssutils/rawnav.pyc
 ${PYSITELIB}/pygnssutils/rawnav.pyo
