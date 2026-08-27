@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5564 2026/08/27 08:10:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5565 2026/08/27 08:30:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8218,3 +8218,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/py-argparse [adam 2026-08-27]
 	Removed lang/py-js2py [adam 2026-08-27]
 	Removed lang/py-jsparser [adam 2026-08-27]
+	Removed devel/tailor [adam 2026-08-27]
+	Removed games/py-trueskill [adam 2026-08-27]
+	Removed games/py-ranking [adam 2026-08-27]
+	Removed net/mimms [adam 2026-08-27]
