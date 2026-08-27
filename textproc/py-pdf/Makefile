@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2026/08/16 12:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2026/08/27 05:46:37 adam Exp $
 
-DISTNAME=	pypdf-6.16.1
+DISTNAME=	pypdf-6.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -30,11 +30,6 @@ ALLOW_NETWORK_ACCESS=	yes
 .endif
 # as of 6.16.1
 # 98 failed, 1296 passed, 24 skipped, 3 xfailed
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
