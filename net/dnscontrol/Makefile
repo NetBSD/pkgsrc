@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2026/08/22 15:19:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/27 07:40:46 drixter Exp $
 
-DISTNAME=	dnscontrol-4.46.0
-PKGREVISION=	2
+DISTNAME=	dnscontrol-5.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=StackExchange/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +15,8 @@ INSTALLATION_DIRS+=	bin
 # Only build dnscontrol, not the development tools `build', `generate',
 # and `validate', which appear to be not terribly useful to install.
 GO_BUILD_PATTERN=	.
+
+GO_VERSION_REQD=	127
 
 .include "go-modules.mk"
 
