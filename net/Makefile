@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1641 2026/08/27 08:30:06 adam Exp $
+# $NetBSD: Makefile,v 1.1642 2026/08/27 20:10:57 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -980,7 +980,6 @@ SUBDIR+=	telescope
 SUBDIR+=	termscp
 SUBDIR+=	terraform
 SUBDIR+=	terraform-provider-archive
-SUBDIR+=	terraform-provider-aws
 SUBDIR+=	terraform-provider-kubernetes
 SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
