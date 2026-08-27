@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5583 2026/08/27 12:07:35 wen Exp $
+$NetBSD: CHANGES-2026,v 1.5584 2026/08/27 12:22:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8256,3 +8256,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/py-swish-e [adam 2026-08-27]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.15 [wen 2026-08-27]
 	Updated www/p5-CSS-Minifier-XS to 0.15 [wen 2026-08-27]
+	Updated security/vaultwarden to 1.37.2 [adam 2026-08-27]
