@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5572 2026/08/27 09:33:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5573 2026/08/27 09:42:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8240,3 +8240,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed math/py-munkres [adam 2026-08-27]
 	Removed math/py-noise [adam 2026-08-27]
 	Updated net/py-zeroconf to 0.150.0nb2 [wiz 2026-08-27]
+	Updated print/hplip to 3.19.12nb39 [wiz 2026-08-27]
