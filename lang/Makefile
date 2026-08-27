@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.791 2026/08/27 08:10:34 adam Exp $
+# $NetBSD: Makefile,v 1.792 2026/08/27 08:38:22 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -264,12 +264,9 @@ SUBDIR+=	purescript
 SUBDIR+=	py-annotated-types
 SUBDIR+=	py-ast-serialize
 SUBDIR+=	py-asttokens
-SUBDIR+=	py-basicproperty
-SUBDIR+=	py-byterun
 SUBDIR+=	py-cmake-language-server
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-cxxheaderparser
-SUBDIR+=	py-execjs
 SUBDIR+=	py-executing
 SUBDIR+=	py-findpython
 SUBDIR+=	py-hy
@@ -282,7 +279,6 @@ SUBDIR+=	py-lsprotocol
 SUBDIR+=	py-mypy
 SUBDIR+=	py-mypy_extensions
 SUBDIR+=	py-parso
-SUBDIR+=	py-paver
 SUBDIR+=	py-pure-eval
 SUBDIR+=	py-py3c
 SUBDIR+=	py-pydemumble
