@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2026/01/06 17:17:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2026/08/27 08:54:21 adam Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -52,8 +52,6 @@ SUBDIR+=	py-eth-typing
 SUBDIR+=	py-eth-utils
 SUBDIR+=	py-fecon235
 SUBDIR+=	py-ofxparse
-SUBDIR+=	py-pyevmasm
-SUBDIR+=	py-pyfolio
 SUBDIR+=	py-quickbooks
 SUBDIR+=	py-stripe
 SUBDIR+=	rex
