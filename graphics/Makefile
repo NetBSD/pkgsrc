@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1126 2026/08/27 07:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.1127 2026/08/27 07:14:30 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -533,12 +533,10 @@ SUBDIR+=	py-railroad-diagrams
 SUBDIR+=	py-scour
 SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
-SUBDIR+=	py-sk1libs
 SUBDIR+=	py-spectra
 SUBDIR+=	py-strich
 SUBDIR+=	py-svglib
 SUBDIR+=	py-tifffile
-SUBDIR+=	py-uniconvertor
 SUBDIR+=	py-wand
 SUBDIR+=	py-wcag-contrast-ratio
 SUBDIR+=	qimageblitz
