@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5556 2026/08/27 06:38:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5557 2026/08/27 07:14:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8201,3 +8201,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libmatroska to 1.7.2 [adam 2026-08-27]
 	Updated multimedia/mkvtoolnix to 101.0 [adam 2026-08-27]
 	Updated audio/strawberry to 1.2.28 [adam 2026-08-27]
+	Removed graphics/skencil [adam 2026-08-27]
+	Removed graphics/py-imaging [adam 2026-08-27]
+	Removed graphics/py-uniconvertor [adam 2026-08-27]
+	Removed graphics/py-sk1libs [adam 2026-08-27]
