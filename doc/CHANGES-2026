@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5555 2026/08/27 06:25:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5556 2026/08/27 06:38:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8197,3 +8197,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libksba to 1.8.1 [adam 2026-08-27]
 	Updated time/py-time-machine to 3.5.0 [adam 2026-08-27]
 	Updated devel/py-test-lazy-fixtures to 1.4.1 [adam 2026-08-27]
+	Updated devel/libebml to 1.4.7 [adam 2026-08-27]
+	Updated multimedia/libmatroska to 1.7.2 [adam 2026-08-27]
+	Updated multimedia/mkvtoolnix to 101.0 [adam 2026-08-27]
+	Updated audio/strawberry to 1.2.28 [adam 2026-08-27]
