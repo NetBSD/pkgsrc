@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5578 2026/08/27 11:25:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5579 2026/08/27 11:34:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8245,3 +8245,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/filezilla to 3.71.1 [wiz 2026-08-27]
 	Updated geography/py-gnssutils to 1.2.7 [gdt 2026-08-27]
 	Added sysutils/leaves version 0.2.0 [drixter 2026-08-27]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.10028 [wen 2026-08-27]
