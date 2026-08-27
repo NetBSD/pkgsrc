@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5558 2026/08/27 07:26:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5559 2026/08/27 07:42:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8207,3 +8207,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed graphics/py-sk1libs [adam 2026-08-27]
 	Updated lang/nodejs24 to 24.20.0 [adam 2026-08-27]
 	Updated lang/nodejs to 26.8.1 [adam 2026-08-27]
+	Updated net/dnscontrol to 5.0.0 [drixter 2026-08-27]
