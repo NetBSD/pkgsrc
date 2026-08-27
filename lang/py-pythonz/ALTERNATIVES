@@ -1,2 +1,0 @@
-bin/pythonz @PREFIX@/bin/pythonz@PYVERSSUFFIX@
-bin/pythonz_install @PREFIX@/bin/pythonz_install@PYVERSSUFFIX@
