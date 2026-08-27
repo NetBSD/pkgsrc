@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5561 2026/08/27 07:49:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5562 2026/08/27 07:54:47 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8213,3 +8213,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/qemu-guest-agent to 11.1.0 [adam 2026-08-27]
 	Updated textproc/tree-sitter to 0.26.13 [adam 2026-08-27]
 	Updated editors/neovim to 0.12.5 [adam 2026-08-27]
+	Updated www/resterm to 1.4.1 [drixter 2026-08-27]
