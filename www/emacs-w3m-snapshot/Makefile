@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/08/26 14:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/08/27 11:15:37 wiz Exp $
 
 VERSION=	1.4.632
 DATE_TIME=	20210106.2144
@@ -36,7 +36,7 @@ SUBST_SED.paths=	-e 's|@W3M@|${PREFIX}/bin/w3m|g'
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
 
-EMACS_VERSIONS_ACCEPTED=	emacs31 emacs31nox emacs30 emacs30nox emacs29 emacs29nox emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "options.mk"
 
