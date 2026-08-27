@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2025/08/15 11:05:49 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/08/27 06:36:51 adam Exp $
 
-DISTNAME=	libmatroska-1.7.1
+DISTNAME=	libmatroska-1.7.2
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 PKGCONFIG_OVERRIDE=	libmatroska.pc.in
 
 .include "../../devel/cmake/build.mk"
