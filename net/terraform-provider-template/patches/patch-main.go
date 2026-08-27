@@ -1,4 +1,4 @@
-$NetBSD: patch-main.go,v 1.1 2021/03/10 23:24:00 tpaul Exp $
+$NetBSD: patch-main.go,v 1.2 2026/08/27 20:25:58 leot Exp $
 
 The template provider has been archived and is only available on the Hashicorp
 Github account.
