@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2026/08/05 03:03:56 adam Exp $
+# $NetBSD: Makefile,v 1.646 2026/08/27 09:09:59 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -411,9 +411,6 @@ SUBDIR+=	plumed
 SUBDIR+=	ppl
 SUBDIR+=	prng
 SUBDIR+=	pspp
-SUBDIR+=	py-Keras-Applications
-SUBDIR+=	py-Keras-Preprocessing
-SUBDIR+=	py-almost
 SUBDIR+=	py-arviz
 SUBDIR+=	py-asdf
 SUBDIR+=	py-asdf-standard
@@ -429,7 +426,6 @@ SUBDIR+=	py-bottleneck
 SUBDIR+=	py-claripy
 SUBDIR+=	py-colormath
 SUBDIR+=	py-ephem
-SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-hmmlearn
