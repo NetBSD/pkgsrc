@@ -1,0 +1,37 @@
+$NetBSD: patch-libshaderc__util_CMakeLists.txt,v 1.1 2026/08/27 11:17:19 adam Exp $
+
+Install libshaderc_util.a, which is required by libsharedrc.a.
+
+--- libshaderc_util/CMakeLists.txt.orig	2026-07-16 15:11:57.000000000 +0000
++++ libshaderc_util/CMakeLists.txt
+@@ -64,6 +64,30 @@ shaderc_add_tests(
+     mutex
+     version_profile)
+ 
++if(SHADERC_ENABLE_INSTALL)
++  install(
++    FILES
++      include/libshaderc_util/counting_includer.h
++      include/libshaderc_util/file_finder.h
++      include/libshaderc_util/format.h
++      include/libshaderc_util/io_shaderc.h
++      include/libshaderc_util/mutex.h
++      include/libshaderc_util/message.h
++      include/libshaderc_util/resources.h
++      include/libshaderc_util/spirv_tools_wrapper.h
++      include/libshaderc_util/string_piece.h
++      include/libshaderc_util/universal_unistd.h
++      include/libshaderc_util/version_profile.h
++    DESTINATION
++      ${CMAKE_INSTALL_INCLUDEDIR}/shaderc)
++
++  install(TARGETS shaderc_util
++    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
++    BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR}
++    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
++endif(SHADERC_ENABLE_INSTALL)
++
+ if(${SHADERC_ENABLE_TESTS})
+   target_include_directories(shaderc_util_counting_includer_test
+     PRIVATE ${glslang_SOURCE_DIR})
