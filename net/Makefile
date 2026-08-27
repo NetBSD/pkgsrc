@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1646 2026/08/27 20:18:26 leot Exp $
+# $NetBSD: Makefile,v 1.1647 2026/08/27 20:20:27 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -984,6 +984,7 @@ SUBDIR+=	terraform-provider-aws3
 SUBDIR+=	terraform-provider-kubernetes1
 SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
+SUBDIR+=	terraform-provider-random2
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform-provider-vultr
 SUBDIR+=	tigervnc
