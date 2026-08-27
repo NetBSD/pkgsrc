@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1660 2026/08/27 20:51:16 leot Exp $
+# $NetBSD: Makefile,v 1.1661 2026/08/27 21:43:28 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -518,6 +518,7 @@ SUBDIR+=	openrsync
 SUBDIR+=	openslp
 SUBDIR+=	opentofu110
 SUBDIR+=	opentofu111
+SUBDIR+=	opentofu112
 SUBDIR+=	opentofu16
 SUBDIR+=	opentracker
 SUBDIR+=	openvmps
