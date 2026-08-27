@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4678 2026/08/27 08:04:56 adam Exp $
+# $NetBSD: Makefile,v 1.4679 2026/08/27 08:26:05 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3639,7 +3639,6 @@ SUBDIR+=	syft
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
 SUBDIR+=	tack
-SUBDIR+=	tailor
 SUBDIR+=	talloc
 SUBDIR+=	taplo-lsp
 SUBDIR+=	task
