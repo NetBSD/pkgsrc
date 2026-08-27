@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5584 2026/08/27 12:22:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5585 2026/08/27 20:08:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8257,3 +8257,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.15 [wen 2026-08-27]
 	Updated www/p5-CSS-Minifier-XS to 0.15 [wen 2026-08-27]
 	Updated security/vaultwarden to 1.37.2 [adam 2026-08-27]
+	Removed net/terraform-provider-aws [leot 2026-08-27]
