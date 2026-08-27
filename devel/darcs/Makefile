@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/08/13 11:06:26 pho Exp $
+# $NetBSD: Makefile,v 1.81 2026/08/27 07:40:41 wiz Exp $
 
 DISTNAME=	darcs-2.18.5
 PKGNAME=	${DISTNAME}
@@ -34,11 +34,18 @@ HASKELL_ENABLE_LIBRARY_PROFILING=	no
 
 INSTALLATION_DIRS+=	share/zsh/site-functions
 INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/_darcs.zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_darcs
 	${INSTALL_DATA} ${WRKSRC}/contrib/darcs_completion \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/darcs
+.if ${PKGMANDIR} != "man"
+	${MV} ${DESTDIR}${PREFIX}/man/man1/darcs.* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endif
 
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
