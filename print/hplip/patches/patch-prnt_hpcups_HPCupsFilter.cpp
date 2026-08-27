@@ -1,4 +1,4 @@
-$NetBSD: patch-prnt_hpcups_HPCupsFilter.cpp,v 1.1 2020/01/04 04:24:12 khorben Exp $
+$NetBSD: patch-prnt_hpcups_HPCupsFilter.cpp,v 1.2 2026/08/27 09:39:59 wiz Exp $
 
 Avoid using libImageProcessing.so (binary blob)
 
@@ -16,7 +16,7 @@ https://bugs.archlinux.org/task/59548#comment172098
  #include <signal.h>
  #include <sys/wait.h>
  #include <sys/utsname.h>
-@@ -637,16 +635,9 @@ int HPCupsFilter::processRasterData(cups
+@@ -637,16 +635,9 @@ int HPCupsFilter::processRasterData(cups_raster_t *cup
  
  
      sprintf(hpPreProcessedRasterFile, "%s/hp_%s_cups_SwapedPagesXXXXXX",CUPS_TMP_DIR, m_JA.user_name);
@@ -33,7 +33,7 @@ https://bugs.archlinux.org/task/59548#comment172098
          current_page_number++;
  
          if (current_page_number == 1) {
-@@ -745,12 +736,6 @@ int HPCupsFilter::processRasterData(cups
+@@ -745,12 +736,6 @@ int HPCupsFilter::processRasterData(cups_raster_t *cup
              color_raster = rgbRaster;
              black_raster = kRaster;
  
@@ -46,7 +46,7 @@ https://bugs.archlinux.org/task/59548#comment172098
              if ((y == 0) && !is_ljmono) {
                  //For ljmono, make sure that first line is not a blankRaster line.Otherwise printer
                  //may not skip blank lines before actual data
-@@ -780,12 +765,6 @@ int HPCupsFilter::processRasterData(cups
+@@ -780,12 +765,6 @@ int HPCupsFilter::processRasterData(cups_raster_t *cup
              }
          }  // for() loop end
  
@@ -59,12 +59,12 @@ https://bugs.archlinux.org/task/59548#comment172098
          m_Job.NewPage();
          if (err != NO_ERROR) {
              break;
-@@ -800,8 +779,6 @@ int HPCupsFilter::processRasterData(cups
+@@ -799,8 +778,6 @@ int HPCupsFilter::processRasterData(cups_raster_t *cup
+         kRaster = NULL;
          rgbRaster = NULL;
      }
- 
--    imageProcessorDestroy(imageProcessor);
 -
+-    imageProcessorDestroy(imageProcessor);
+ 
      unlink(hpPreProcessedRasterFile);
      return ret_status;
- }
