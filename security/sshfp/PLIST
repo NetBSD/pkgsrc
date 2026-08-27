@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/26 21:18:14 khorben Exp $
-bin/dane
-bin/sshfp
-man/man1/dane.1
-man/man1/sshfp.1

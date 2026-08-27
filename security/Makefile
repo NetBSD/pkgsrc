@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1021 2026/08/12 22:09:56 wiz Exp $
+# $NetBSD: Makefile,v 1.1022 2026/08/27 08:03:27 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -696,7 +696,6 @@ SUBDIR+=	srm
 SUBDIR+=	ssdeep
 SUBDIR+=	ssh-askpass
 SUBDIR+=	ssh-audit
-SUBDIR+=	sshfp
 SUBDIR+=	sshguard
 SUBDIR+=	sshpass
 SUBDIR+=	sshs
