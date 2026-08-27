@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5602 2026/08/27 20:38:10 leot Exp $
+$NetBSD: CHANGES-2026,v 1.5603 2026/08/27 20:39:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8274,3 +8274,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/terraform014 version 0.14.11 [leot 2026-08-27]
 	Updated net/terraform015 to 0.15.5 [leot 2026-08-27]
 	Added net/terraform015 version 0.15.5 [leot 2026-08-27]
+	Added net/terraform11 version 1.1.9 [leot 2026-08-27]
