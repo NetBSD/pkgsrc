@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1127 2026/08/27 07:14:30 adam Exp $
+# $NetBSD: Makefile,v 1.1128 2026/08/27 09:00:29 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -499,14 +499,12 @@ SUBDIR+=	py-cairo
 SUBDIR+=	py-cairo-shared
 SUBDIR+=	py-cairo118
 SUBDIR+=	py-cairocffi
-SUBDIR+=	py-chart
 SUBDIR+=	py-contourpy
 SUBDIR+=	py-cycler
 SUBDIR+=	py-dot
 SUBDIR+=	py-exifread
 SUBDIR+=	py-freetype-py
 SUBDIR+=	py-gdchart
-SUBDIR+=	py-ggplot
 SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
 SUBDIR+=	py-imageio
