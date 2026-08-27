@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1202 2026/08/25 16:01:17 pin Exp $
+# $NetBSD: Makefile,v 1.1203 2026/08/27 11:00:32 drixter Exp $
 #
 
 COMMENT=	System utilities
@@ -411,6 +411,7 @@ SUBDIR+=	ksystemlog
 SUBDIR+=	lambd
 SUBDIR+=	lastfss
 SUBDIR+=	lavaps
+SUBDIR+=	leaves
 SUBDIR+=	lf
 SUBDIR+=	libayatana-indicator
 SUBDIR+=	libburn
