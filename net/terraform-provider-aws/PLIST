@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/29 06:29:03 adam Exp $
-bin/terraform-provider-aws
