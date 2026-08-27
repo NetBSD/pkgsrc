@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5567 2026/08/27 08:48:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5568 2026/08/27 08:54:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8228,3 +8228,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/py-paver [adam 2026-08-27]
 	Removed lang/py-pythonz [adam 2026-08-27]
 	Removed lang/py-python-lua [adam 2026-08-27]
+	Removed finance/py-pyevmasm [adam 2026-08-27]
+	Removed finance/py-pyfolio [adam 2026-08-27]
