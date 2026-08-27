@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5563 2026/08/27 08:05:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5564 2026/08/27 08:10:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8216,3 +8216,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.4.1 [drixter 2026-08-27]
 	Removed security/sshfp [adam 2026-08-27]
 	Removed devel/py-argparse [adam 2026-08-27]
+	Removed lang/py-js2py [adam 2026-08-27]
+	Removed lang/py-jsparser [adam 2026-08-27]
