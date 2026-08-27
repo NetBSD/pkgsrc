@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/07/07 07:33:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/08/27 06:37:13 adam Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -128,7 +128,7 @@ share/locale/uk/LC_MESSAGES/mkvtoolnix.mo
 share/locale/zh_CN/LC_MESSAGES/mkvtoolnix.mo
 share/locale/zh_SG/LC_MESSAGES/mkvtoolnix.mo
 share/locale/zh_TW/LC_MESSAGES/mkvtoolnix.mo
-${PLIST.gui}share/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
+${PLIST.gui}share/metainfo/org.bunkus.mkvtoolnix-gui.metainfo.xml
 ${PLIST.gui}share/mime/packages/org.bunkus.mkvtoolnix-gui.xml
 ${PLIST.gui}share/mkvtoolnix/qt_resources.rcc
 ${PLIST.gui}share/mkvtoolnix/sounds/finished-1.${SOUND_EXT}
