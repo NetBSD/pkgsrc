@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.792 2026/08/27 08:38:22 adam Exp $
+# $NetBSD: Makefile,v 1.793 2026/08/27 08:48:09 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -286,8 +286,6 @@ SUBDIR+=	py-pyformlang
 SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
 SUBDIR+=	py-python-discovery
-SUBDIR+=	py-python-lua
-SUBDIR+=	py-pythonz
 SUBDIR+=	py-six
 SUBDIR+=	py-solc-select
 SUBDIR+=	py-spark-parser
