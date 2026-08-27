@@ -1,0 +1,31 @@
+$NetBSD: patch-python_sites_mach.txt,v 1.1 2026/08/27 01:23:17 gutteridge Exp $
+
+* We are offline, so do not try to download from pypi.
+  No need to wait a timeout.
+* Use pyyaml from vendored unconditionally.
+
+--- python/sites/mach.txt.orig	2026-06-15 11:44:55.169043237 +0000
++++ python/sites/mach.txt
+@@ -58,15 +58,16 @@ pth:xpcom/idl-parser
+ pth:xpcom/idl-parser
+ # glean-sdk may not be installable if a wheel isn't available
+ # and it has to be built from source.
+-pypi-optional:glean-sdk==67.3.2:telemetry will not be collected
+-pypi-optional:orjson>=3.10:json operations will be slower in various tools
++#pypi-optional:glean-sdk==67.3.2:telemetry will not be collected
++#pypi-optional:orjson>=3.10:json operations will be slower in various tools
+ # Mach gracefully handles the case where `psutil` is unavailable.
+ # We aren't (yet) able to pin packages in automation, so we have to
+ # support down to the oldest locally-installed version (5.4.2).
+-pypi-optional:psutil>=5.4.2:telemetry will be missing some data
+-pypi-optional:rtoml>=0.11.0:toml operations will be slower in various tools
+-pypi-optional:zstandard>=0.11.1,<=0.25.0:zstd archives will not be possible to extract
+-vendored-fallback:pyyaml:third_party/python/pyyaml/lib/:faster native loading is disabled
++#pypi-optional:psutil>=5.4.2:telemetry will be missing some data
++#pypi-optional:rtoml>=0.11.0:toml operations will be slower in various tools
++#pypi-optional:zstandard>=0.11.1,<=0.25.0:zstd archives will not be possible to extract
++#vendored-fallback:pyyaml:third_party/python/pyyaml/lib/:faster native loading is disabled
++vendored:third_party/python/pyyaml/lib/
+ vendored:third_party/python/ansicon
+ vendored:third_party/python/appdirs
+ vendored:third_party/python/async_timeout
