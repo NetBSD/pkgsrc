@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.70 2026/08/22 15:19:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.71 2026/08/27 20:27:07 leot Exp $
 
-DISTNAME=	terraform-provider-vultr-2.11.3
-PKGREVISION=	44
+DISTNAME=	terraform-provider-vultr-2.30.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
-GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://registry.terraform.io/providers/vultr/vultr/latest/docs
-COMMENT=	Terraform provider for Vultr
+HOMEPAGE=	https://www.terraform.io/docs/providers/vultr/
+COMMENT=	Terraform Vultr provider
 LICENSE=	mpl-2.0
 
-DEPENDS+=	terraform-[0-9]*:../../net/terraform
+GO_BUILD_PATTERN=	.
 
-UNLIMIT_RESOURCES=	datasize virtualsize
+TERRAFORM_PROVIDER_BIN=		terraform-provider-vultr
+TERRAFORM_PROVIDER_NAMESPACE=	vultr
+TERRAFORM_PROVIDER_TYPE=	vultr
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/vultr/${GITHUB_PROJECT}
+TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
 
-GO_BUILD_PATTERN=	${GO_SRCPATH}/.
+.include "go-modules.mk"
 
-USE_TOOLS+=	bash
-REPLACE_BASH+=	scripts/*.sh
-
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
+.include "../../wip/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
