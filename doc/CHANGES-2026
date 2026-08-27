@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5608 2026/08/27 20:47:22 leot Exp $
+$NetBSD: CHANGES-2026,v 1.5609 2026/08/27 20:48:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8278,3 +8278,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/terraform15 version 1.5.7 [leot 2026-08-27]
 	Removed net/opentofu [leot 2026-08-27]
 	Added net/opentofu16 version 1.6.3 [leot 2026-08-27]
+	Added net/opentofu110 version 1.10.10 [leot 2026-08-27]
