@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5569 2026/08/27 09:00:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5570 2026/08/27 09:10:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8232,3 +8232,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed finance/py-pyfolio [adam 2026-08-27]
 	Removed graphics/py-chart [adam 2026-08-27]
 	Removed graphics/py-ggplot [adam 2026-08-27]
+	Removed mail/archivemail [adam 2026-08-27]
+	Removed math/py-almost [adam 2026-08-27]
+	Removed math/py-fpconst [adam 2026-08-27]
+	Removed math/py-Keras-Applications [adam 2026-08-27]
+	Removed math/py-Keras-Preprocessing [adam 2026-08-27]
