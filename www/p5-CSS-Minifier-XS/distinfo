@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/06/30 09:55:07 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/08/27 12:06:57 wen Exp $
 
-BLAKE2s (CSS-Minifier-XS-0.14.tar.gz) = 57b7b162e84e5f6b97ea3d3b9ba8016b79071087b0c47dbc30fb42c3d91ac643
-SHA512 (CSS-Minifier-XS-0.14.tar.gz) = fef3c649fab9dae2e0a01294f46925b8659dfdba333273d23e39b4c3be1b74f4b7a66860107a624b3b2a7663382caa31a7d48abad976cf07890483a302d279e5
-Size (CSS-Minifier-XS-0.14.tar.gz) = 27031 bytes
+BLAKE2s (CSS-Minifier-XS-0.15.tar.gz) = 887ad913578bdbdaf54875bff3ca8cb8f19ec57ac4ee6ac95252bb4e91c72a9d
+SHA512 (CSS-Minifier-XS-0.15.tar.gz) = fc81f083e907d9481a88bac78ee06e532c561df65aa68d96c32e4d3f3950ef8f67e98f7cc4e1a8d225a3d9075e34c082c4ea67ab9d34994b26e14e0202e64442
+Size (CSS-Minifier-XS-0.15.tar.gz) = 28396 bytes
