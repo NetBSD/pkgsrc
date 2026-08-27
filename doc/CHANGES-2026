@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5586 2026/08/27 20:12:50 leot Exp $
+$NetBSD: CHANGES-2026,v 1.5587 2026/08/27 20:14:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8259,3 +8259,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/vaultwarden to 1.37.2 [adam 2026-08-27]
 	Removed net/terraform-provider-aws [leot 2026-08-27]
 	Removed net/terraform-provider-kubernetes [leot 2026-08-27]
+	Removed net/terraform-provider-random [leot 2026-08-27]
