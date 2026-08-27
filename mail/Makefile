@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.694 2026/06/30 09:59:51 wiz Exp $
+# $NetBSD: Makefile,v 1.695 2026/08/27 09:07:40 adam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -15,7 +15,6 @@ SUBDIR+=	alpine
 SUBDIR+=	amavisd-milter
 SUBDIR+=	amavisd-new
 SUBDIR+=	anomy-sanitizer
-SUBDIR+=	archivemail
 SUBDIR+=	autorespond
 SUBDIR+=	avenger
 SUBDIR+=	balsa
