@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/11/24 08:31:11 wen Exp $
+$NetBSD: distinfo,v 1.17 2026/08/27 11:32:49 wen Exp $
 
-BLAKE2s (Catalyst-Plugin-Authentication-0.10024.tar.gz) = 6b3c461bcda191fdba88959ef7577ec543f57d48932fe35ce66e240caa3d72ee
-SHA512 (Catalyst-Plugin-Authentication-0.10024.tar.gz) = 882f3e2c1b6e6f3a896915dcd82ab67fad5816f1869ded03cfa63516ffb18e2bd1ca07f0a851c7c2270ce5bf2874c2aec6376b0a64ffe44c71fe08d762954e03
-Size (Catalyst-Plugin-Authentication-0.10024.tar.gz) = 63038 bytes
+BLAKE2s (Catalyst-Plugin-Authentication-0.10028.tar.gz) = 7cf01794fbc9f797d3f391b7c74125e1eccc4d9dd838aa66eefd580d99e7acd6
+SHA512 (Catalyst-Plugin-Authentication-0.10028.tar.gz) = edf6951edc9470b5a0f3c78796f712e5e7a08a67b5a8246461ddc3ceaa8124ce3eee9b3190e8f1bfadff22ddd7a3c42d8932094e1945d0a7cdfabfea2463b0c9
+Size (Catalyst-Plugin-Authentication-0.10028.tar.gz) = 63552 bytes
