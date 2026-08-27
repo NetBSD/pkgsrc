@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5611 2026/08/27 21:43:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5612 2026/08/27 22:04:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8281,3 +8281,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/opentofu110 version 1.10.10 [leot 2026-08-27]
 	Added net/opentofu111 version 1.11.14 [leot 2026-08-27]
 	Updated devel/nss to 3.128 [wiz 2026-08-27]
+	Added net/opentofu112 version 1.12.6 [leot 2026-08-27]
