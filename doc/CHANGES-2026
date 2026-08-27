@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5566 2026/08/27 08:38:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5567 2026/08/27 08:48:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8226,3 +8226,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/py-byterun [adam 2026-08-27]
 	Removed lang/py-execjs [adam 2026-08-27]
 	Removed lang/py-paver [adam 2026-08-27]
+	Removed lang/py-pythonz [adam 2026-08-27]
+	Removed lang/py-python-lua [adam 2026-08-27]
