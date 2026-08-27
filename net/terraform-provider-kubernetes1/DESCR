@@ -1,0 +1,4 @@
+The Kubernetes provider for Terraform is a plugin that enables full lifecycle
+management of Kubernetes resources.
+
+This package track Kubernetes provider version 1.x.
