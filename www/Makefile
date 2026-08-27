@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1934 2026/08/25 12:57:00 pin Exp $
+# $NetBSD: Makefile,v 1.1935 2026/08/27 01:33:32 gutteridge Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -132,6 +132,8 @@ SUBDIR+=	firefox128
 SUBDIR+=	firefox128-l10n
 SUBDIR+=	firefox140
 SUBDIR+=	firefox140-l10n
+SUBDIR+=	firefox153
+SUBDIR+=	firefox153-l10n
 SUBDIR+=	firefox52
 SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox_decrypt
