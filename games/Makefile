@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2026/06/29 15:29:05 jnemeth Exp $
+# $NetBSD: Makefile,v 1.567 2026/08/27 08:27:21 adam Exp $
 #
 
 COMMENT=	Games
@@ -357,7 +357,6 @@ SUBDIR+=	py-easyAI
 SUBDIR+=	py-pysol_cards
 SUBDIR+=	py-ranking
 SUBDIR+=	py-renpy
-SUBDIR+=	py-trueskill
 SUBDIR+=	pysolfc
 SUBDIR+=	q5go
 SUBDIR+=	qonk

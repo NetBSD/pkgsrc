@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/12/17 18:47:48 adam Exp $
-
-BLAKE2s (trueskill-0.4.5.tar.gz) = dec842dfac9a79939bfb0b0f4720cc626ace971dc4605cc3c9ef34a9f94f60be
-SHA512 (trueskill-0.4.5.tar.gz) = 10840659b12043b91289c0ea8cfff6c6fd5456cc4885119ac0eefb71376c781ec2cecb1749a7940a39a4d91168ee5a097f237e450820043ec83c8264e4c64533
-Size (trueskill-0.4.5.tar.gz) = 21315 bytes
