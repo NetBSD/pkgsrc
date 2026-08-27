@@ -1,16 +1,35 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2026/07/02 10:55:48 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/08/27 11:17:18 adam Exp $
 
-We provide the dependencies manually or from pkgsrc,
+We provide the dependencies and build version manually or from pkgsrc,
 avoid hacking detection.
+Fix linking in pkgconfig file.
 
---- CMakeLists.txt.orig	2026-07-01 09:30:46.386568682 +0000
+--- CMakeLists.txt.orig	2026-07-16 15:11:57.000000000 +0000
 +++ CMakeLists.txt
-@@ -130,7 +130,7 @@ endif(MSVC)
+@@ -135,7 +135,6 @@ endif(MSVC)
  
  # Configure subdirectories.
  # We depend on these for later projects, so they should come first.
 -add_subdirectory(third_party)
-+#add_subdirectory(third_party)
  
  add_subdirectory(libshaderc_util)
  add_subdirectory(libshaderc)
+@@ -144,11 +143,6 @@ if(${SHADERC_ENABLE_EXAMPLES})
+     add_subdirectory(examples)
+ endif()
+ 
+-add_custom_target(build-version
+-  ${Python_EXECUTABLE}
+-  ${CMAKE_CURRENT_SOURCE_DIR}/utils/update_build_version.py
+-  ${shaderc_SOURCE_DIR} ${spirv-tools_SOURCE_DIR} ${glslang_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}/build-version.inc
+-  COMMENT "Update build-version.inc in the Shaderc build directory (if necessary).")
+ 
+ function(define_pkg_config_file NAME LIBS)
+   add_custom_target(${NAME}-pkg-config ALL
+@@ -173,5 +167,5 @@ function(define_pkg_config_file NAME LIB
+ endfunction()
+ 
+ define_pkg_config_file(shaderc -lshaderc_shared)
+-define_pkg_config_file(shaderc_static "-lshaderc ${EXTRA_STATIC_PKGCONFIG_LIBS} -lshaderc_util")
++define_pkg_config_file(shaderc_static "-lshaderc -lshaderc_util -lglslang -lSPIRV-Tools-opt -lSPIRV-Tools -lSPIRV-Tools-link")
+ define_pkg_config_file(shaderc_combined -lshaderc_combined)
