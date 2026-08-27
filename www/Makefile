@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1935 2026/08/27 01:33:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1936 2026/08/27 11:56:01 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -701,10 +701,8 @@ SUBDIR+=	pound
 SUBDIR+=	privoxy
 SUBDIR+=	pup
 SUBDIR+=	py-BrowserID
-SUBDIR+=	py-ClientForm
 SUBDIR+=	py-FormEncode
 SUBDIR+=	py-FxA
-SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-MechanicalSoup
 SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-PasteScript
@@ -724,7 +722,6 @@ SUBDIR+=	py-autobahn
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-betamax
 SUBDIR+=	py-bleach
-SUBDIR+=	py-blosxom
 SUBDIR+=	py-bottle
 SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
@@ -867,7 +864,6 @@ SUBDIR+=	py-hyperkitty
 SUBDIR+=	py-hyperlink
 SUBDIR+=	py-idna
 SUBDIR+=	py-ipywidgets
-SUBDIR+=	py-jonpy
 SUBDIR+=	py-jupyter-lsp
 SUBDIR+=	py-jupyter_server
 SUBDIR+=	py-jupyterhub
@@ -918,7 +914,6 @@ SUBDIR+=	py-python-multipart
 SUBDIR+=	py-quart
 SUBDIR+=	py-quart-trio
 SUBDIR+=	py-rcssmin
-SUBDIR+=	py-recaptcha
 SUBDIR+=	py-requests-wsgi-adapter
 SUBDIR+=	py-respx
 SUBDIR+=	py-rfc3986
@@ -934,12 +929,10 @@ SUBDIR+=	py-scgi
 SUBDIR+=	py-scrapy
 SUBDIR+=	py-selenium
 SUBDIR+=	py-sigal
-SUBDIR+=	py-simpletal
 SUBDIR+=	py-soupsieve
 SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-starlette
 SUBDIR+=	py-swiftclient
-SUBDIR+=	py-swish-e
 SUBDIR+=	py-sydent
 SUBDIR+=	py-telepath
 SUBDIR+=	py-terminado
