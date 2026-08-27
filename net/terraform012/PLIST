@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/27 20:32:26 leot Exp $
+bin/terraform012
