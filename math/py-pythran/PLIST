@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/16 07:56:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/08/28 08:39:04 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,6 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSEn
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/omp/__init__.py
 ${PYSITELIB}/omp/__init__.pyc
@@ -2353,6 +2354,9 @@ ${PYSITELIB}/pythran/optimizations/tuple_to_shape.pyo
 ${PYSITELIB}/pythran/passmanager.py
 ${PYSITELIB}/pythran/passmanager.pyc
 ${PYSITELIB}/pythran/passmanager.pyo
+${PYSITELIB}/pythran/preprocessor.py
+${PYSITELIB}/pythran/preprocessor.pyc
+${PYSITELIB}/pythran/preprocessor.pyo
 ${PYSITELIB}/pythran/pythonic/__dispatch__/append.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/clear.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/conjugate.hpp
@@ -2455,7 +2459,6 @@ ${PYSITELIB}/pythran/pythonic/builtins/file/close.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/fileno.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/flush.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/isatty.hpp
-${PYSITELIB}/pythran/pythonic/builtins/file/next.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/read.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/readline.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/file/readlines.hpp
@@ -2551,7 +2554,6 @@ ${PYSITELIB}/pythran/pythonic/builtins/str/upper.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/sum.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/tuple.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/type.hpp
-${PYSITELIB}/pythran/pythonic/builtins/xrange.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/zip.hpp
 ${PYSITELIB}/pythran/pythonic/cmath/acos.hpp
 ${PYSITELIB}/pythran/pythonic/cmath/acosh.hpp
@@ -2678,7 +2680,6 @@ ${PYSITELIB}/pythran/pythonic/include/builtins/file/close.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/fileno.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/flush.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/isatty.hpp
-${PYSITELIB}/pythran/pythonic/include/builtins/file/next.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/read.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/readline.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/file/readlines.hpp
@@ -2774,7 +2775,6 @@ ${PYSITELIB}/pythran/pythonic/include/builtins/str/upper.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/sum.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/tuple.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/type.hpp
-${PYSITELIB}/pythran/pythonic/include/builtins/xrange.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/zip.hpp
 ${PYSITELIB}/pythran/pythonic/include/cmath/acos.hpp
 ${PYSITELIB}/pythran/pythonic/include/cmath/acosh.hpp
@@ -2802,7 +2802,6 @@ ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/close.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/fileno.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/flush.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/isatty.hpp
-${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/next.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/read.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/readline.hpp
 ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/readlines.hpp
@@ -2814,7 +2813,6 @@ ${PYSITELIB}/pythran/pythonic/include/io/_io/TextIOWrapper/writelines.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/combinations.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/common.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/count.hpp
-${PYSITELIB}/pythran/pythonic/include/itertools/ifilter.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/islice.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/permutations.hpp
 ${PYSITELIB}/pythran/pythonic/include/itertools/product.hpp
@@ -2930,6 +2928,7 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/complex.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/complex128.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/complex256.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/complex64.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/concat.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/concatenate.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/conj.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/conjugate.hpp
@@ -3054,8 +3053,10 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/less/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/less_equal.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/less_equal/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/lexsort.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/linalg/matrix_norm.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/linalg/matrix_power.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/linalg/norm.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/linalg/vector_norm.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/linspace.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/log.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/log10.hpp
@@ -3101,8 +3102,10 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/astype.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/fill.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/flatten.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/item.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/prod.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/reshape.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/sort.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/sum.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tofile.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tostring.hpp
@@ -3137,7 +3140,6 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/random/binomial.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/bytes.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/chisquare.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/choice.hpp
-${PYSITELIB}/pythran/pythonic/include/numpy/random/dirichlet.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/exponential.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/f.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/random/gamma.hpp
@@ -3437,8 +3439,10 @@ ${PYSITELIB}/pythran/pythonic/include/types/numpy_texpr.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/numpy_ufunc.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/numpy_unary_op.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/numpy_vexpr.hpp
+${PYSITELIB}/pythran/pythonic/include/types/pkg/numpy.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/pointer.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/raw_array.hpp
+${PYSITELIB}/pythran/pythonic/include/types/reduce_expr.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/set.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/slice.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/static_if.hpp
@@ -3461,7 +3465,6 @@ ${PYSITELIB}/pythran/pythonic/include/utils/functor.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/fwd.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/int_.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/iterator.hpp
-${PYSITELIB}/pythran/pythonic/include/utils/meta.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/nested_container.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/neutral.hpp
 ${PYSITELIB}/pythran/pythonic/include/utils/numpy_conversion.hpp
@@ -3475,7 +3478,6 @@ ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/close.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/fileno.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/flush.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/isatty.hpp
-${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/next.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/read.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/readline.hpp
 ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/readlines.hpp
@@ -3487,7 +3489,6 @@ ${PYSITELIB}/pythran/pythonic/io/_io/TextIOWrapper/writelines.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/combinations.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/common.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/count.hpp
-${PYSITELIB}/pythran/pythonic/itertools/ifilter.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/islice.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/permutations.hpp
 ${PYSITELIB}/pythran/pythonic/itertools/product.hpp
@@ -3604,6 +3605,7 @@ ${PYSITELIB}/pythran/pythonic/numpy/complex.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/complex128.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/complex256.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/complex64.hpp
+${PYSITELIB}/pythran/pythonic/numpy/concat.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/concatenate.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/conj.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/conjugate.hpp
@@ -3730,8 +3732,10 @@ ${PYSITELIB}/pythran/pythonic/numpy/less/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/less_equal.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/less_equal/accumulate.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/lexsort.hpp
+${PYSITELIB}/pythran/pythonic/numpy/linalg/matrix_norm.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/linalg/matrix_power.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/linalg/norm.hpp
+${PYSITELIB}/pythran/pythonic/numpy/linalg/vector_norm.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/linspace.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/log.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/log10.hpp
@@ -3777,8 +3781,10 @@ ${PYSITELIB}/pythran/pythonic/numpy/ndarray/astype.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/fill.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/flatten.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/item.hpp
+${PYSITELIB}/pythran/pythonic/numpy/ndarray/prod.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/reshape.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/sort.hpp
+${PYSITELIB}/pythran/pythonic/numpy/ndarray/sum.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tofile.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tostring.hpp
@@ -3813,7 +3819,6 @@ ${PYSITELIB}/pythran/pythonic/numpy/random/binomial.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/bytes.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/chisquare.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/choice.hpp
-${PYSITELIB}/pythran/pythonic/numpy/random/dirichlet.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/exponential.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/f.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/random/gamma.hpp
@@ -4114,8 +4119,10 @@ ${PYSITELIB}/pythran/pythonic/types/numpy_operators.hpp
 ${PYSITELIB}/pythran/pythonic/types/numpy_texpr.hpp
 ${PYSITELIB}/pythran/pythonic/types/numpy_unary_op.hpp
 ${PYSITELIB}/pythran/pythonic/types/numpy_vexpr.hpp
+${PYSITELIB}/pythran/pythonic/types/pkg/numpy.hpp
 ${PYSITELIB}/pythran/pythonic/types/pointer.hpp
 ${PYSITELIB}/pythran/pythonic/types/raw_array.hpp
+${PYSITELIB}/pythran/pythonic/types/reduce_expr.hpp
 ${PYSITELIB}/pythran/pythonic/types/set.hpp
 ${PYSITELIB}/pythran/pythonic/types/slice.hpp
 ${PYSITELIB}/pythran/pythonic/types/static_if.hpp
@@ -4139,7 +4146,6 @@ ${PYSITELIB}/pythran/pythonic/utils/functor.hpp
 ${PYSITELIB}/pythran/pythonic/utils/fwd.hpp
 ${PYSITELIB}/pythran/pythonic/utils/int_.hpp
 ${PYSITELIB}/pythran/pythonic/utils/iterator.hpp
-${PYSITELIB}/pythran/pythonic/utils/meta.hpp
 ${PYSITELIB}/pythran/pythonic/utils/nested_container.hpp
 ${PYSITELIB}/pythran/pythonic/utils/neutral.hpp
 ${PYSITELIB}/pythran/pythonic/utils/numpy_conversion.hpp
@@ -4273,14 +4279,18 @@ ${PYSITELIB}/pythran/utils.pyo
 ${PYSITELIB}/pythran/version.py
 ${PYSITELIB}/pythran/version.pyc
 ${PYSITELIB}/pythran/version.pyo
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_arithmetic.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_complex.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_details.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_logical.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_math.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_memory.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_rounding.hpp
-${PYSITELIB}/pythran/xsimd/arch/generic/xsimd_generic_trigo.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_arithmetic.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_bit.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_cast.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_complex.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_details.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_logical.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_math.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_memory.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_rounding.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_swizzle.hpp
+${PYSITELIB}/pythran/xsimd/arch/common/xsimd_common_trigo.hpp
+${PYSITELIB}/pythran/xsimd/arch/utils/shifts.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512bw.hpp
@@ -4291,22 +4301,24 @@ ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512f.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512ifma.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512pf.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512vbmi.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512vbmi2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512vnni_avx512bw.hpp
-${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512vnni_avx512vbmi.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_avx512vnni_avx512vbmi2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_avxvnni.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_common.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_common_fwd.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_constants.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_emulated.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_avx.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_avx2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_fma3_sse.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_fma4.hpp
-${PYSITELIB}/pythran/xsimd/arch/xsimd_generic.hpp
-${PYSITELIB}/pythran/xsimd/arch/xsimd_generic_fwd.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_i8mm_neon64.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_isa.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_neon.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_neon64.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_rvv.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_rvzve64f.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_scalar.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse3.hpp
@@ -4314,9 +4326,11 @@ ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_1.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_ssse3.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sve.hpp
+${PYSITELIB}/pythran/xsimd/arch/xsimd_vsx.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_wasm.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_arch.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_config.hpp
+${PYSITELIB}/pythran/xsimd/config/xsimd_cpu_features_x86.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_cpuid.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_inline.hpp
 ${PYSITELIB}/pythran/xsimd/math/xsimd_rem_pio2.hpp
@@ -4332,24 +4346,26 @@ ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512er_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512f_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512ifma_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512pf_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_avx512vbmi2_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512vbmi_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx512vnni_avx512bw_register.hpp
-${PYSITELIB}/pythran/xsimd/types/xsimd_avx512vnni_avx512vbmi_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_avx512vnni_avx512vbmi2_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avx_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_avxvnni_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_batch.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_batch_constant.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_common_arch.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_emulated_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_avx2_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_avx_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_fma3_sse_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_fma4_register.hpp
-${PYSITELIB}/pythran/xsimd/types/xsimd_generic_arch.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_i8mm_neon64_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_neon64_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_neon_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_rvv_register.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_rvzve64f_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sse2_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sse3_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sse4_1_register.hpp
@@ -4358,5 +4374,7 @@ ${PYSITELIB}/pythran/xsimd/types/xsimd_ssse3_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_sve_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_traits.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_utils.hpp
+${PYSITELIB}/pythran/xsimd/types/xsimd_vsx_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_wasm_register.hpp
+${PYSITELIB}/pythran/xsimd/utils/bits.hpp
 ${PYSITELIB}/pythran/xsimd/xsimd.hpp
