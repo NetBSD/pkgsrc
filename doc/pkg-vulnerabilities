@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.784 2026/08/28 10:19:20 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.785 2026/08/28 10:24:23 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -12126,8 +12126,8 @@ libreoffice<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
 libreoffice5-bin<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
 libreoffice<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
 libreoffice5-bin<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
-php{56,70,71}-owncloud>=9.0<9.058	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
-php{56,70,71}-owncloud>=9.1<9.1.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
+php{56,70,71}-owncloud>=9.0<9.0.58	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
+php{56,70,71}-owncloud>=9.1<9.1.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
 php{56,70,71}-wordpress<4.7.5	cross-site-scripting	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-9061
 php{56,70,71}-wordpress<4.7.5	input-validation	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-9062
 php{56,70,71}-wordpress<4.7.5	cross-site-scripting	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-9063
@@ -19987,7 +19987,7 @@ mediawiki<1.34.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-
 mediawiki<1.34.4	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-26121
 py{27,36,37,38}-rpyc>=4.1.0<4.1.2	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-16328
 py{27,36,37,38}-djangorestframework<3.12.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25626
-grafana<8.3.1		signature-forgery	https://nvd.nist.gov/vuln/detail/CVE-2020-15216
+grafana<7.3.6		signature-forgery	https://nvd.nist.gov/vuln/detail/CVE-2020-15216
 vault>=1.5.0<1.5.4	access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-25816
 vault>=1.4.0<1.4.7	access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-25816
 mantis<2.24.3		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25288
@@ -21519,7 +21519,7 @@ php{56,72,73,74,80}-nextcloud<21.0.3	information-disclosure	https://nvd.nist.gov
 php{56,72,73,74,80}-nextcloud<21.0.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-32680
 php{56,72,73,74,80}-nextcloud<21.0.3	remote-security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-32678
 php{56,72,73,74,80}-nextcloud<21.0.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-32679
-prometheus<2.50.1	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2021-3538
+#prometheus<2.50.1	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2021-3538	# prometheus never shipped satori/go.uuid (unused indirect go.mod entry only)
 grafana<11	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2021-3538
 apache-ant<1.9.16		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-36373
 apache-ant>=1.10<1.10.11	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-36373
@@ -23997,7 +23997,7 @@ vim<9.0.0579	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-3297
 vim<8.2.4959	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-1725
 vim<9.0.0614	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-3352
 vim<9.0.0805	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-3705
-vim<9.0.0946	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-4141
+vim<9.0.0947	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-4141
 vim<9.0.0789	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-3591
 vim<9.0.0765	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-3520
 vim<9.0.0742	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-3491
@@ -25750,7 +25750,7 @@ gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-20
 gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40475
 gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40476
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-44429
-gst-plugins1-bad<1.22.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-44446
+gst-plugins1-bad<1.22.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-44446
 vim<9.0.2106	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-48231
 vim<9.0.2112	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-48237
 gnutls<3.8.2	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-5981
@@ -25824,7 +25824,7 @@ libheif<1.17.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49462
 libde265<1.0.15	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49468
 gst-plugins1-bad<1.22.8	buffer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0011.html
 modular-xorg-server<21.1.11	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-6816
-coreutils<9.4		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
+coreutils>=9.2<9.5		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
 gnutls<3.8.3	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-0553
 py{27,38,39,310,311,312}-Pillow<10.2.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-50447
 postgresql11-*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
@@ -27534,7 +27534,7 @@ py{27,39,310,311,312,313}-django>=5.2<5.2.6	sql-injection	https://nvd.nist.gov/v
 py{27,39,310,311,312,313}-xmltodict<0.15.1	xml-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-9375
 sqlite3<3.50.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7709
 tcpreplay<4.5.3	divide-by-zero		https://nvd.nist.gov/vuln/detail/CVE-2025-9649
-vault<1.20.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6203
+vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6203
 wireshark<4.4.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9817
 ffmpeg6-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 ffmpeg7-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
@@ -27657,9 +27657,9 @@ go123<1.23.12	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-47906
 go124<1.24.6	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-47906
 go123<1.23.12	race-condition		https://nvd.nist.gov/vuln/detail/CVE-2025-47910
 go124<1.24.6	race-condition		https://nvd.nist.gov/vuln/detail/CVE-2025-47910
-jenkins<2.516.2	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59474
-jenkins<2.516.2	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59475
-jenkins<2.516.2	log-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-59476
+jenkins<2.516.3	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59474
+jenkins<2.516.3	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59475
+jenkins<2.516.3	log-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-59476
 libsoup-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11021
 libvips<8.17.2	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59933
 libxslt-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-10911
@@ -27801,7 +27801,7 @@ binutils<2.46	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11495
 python39-[0-9]*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 apache-cassandra>=4<4.0.15	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2024-27137
 apache-cassandra<3.11.18	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-23015
-apache-cassandra>=4<4.0.	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-24860
+apache-cassandra>=4<4.0.16	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-24860
 apache-roller<6.1.3	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2024-25090
 apache-roller<6.1.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-46911
 apache-roller<6.1.5	improper-session-handling	https://nvd.nist.gov/vuln/detail/CVE-2025-24859
@@ -30230,7 +30230,7 @@ htslib<1.21.1	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-31970
 htslib<1.21.1	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-31971
 inetutils-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-32772
 jenkins<2.541.3	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-33001
-jenkins<2.426.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-33002
+jenkins>=2.426.3<2.541.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-33002
 libarchive-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-4424
 libarchive-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-4426
 libexif-[0-9]*	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2026-32775
@@ -30415,6 +30415,8 @@ nginx{,-devel}>=1.15.8<1.30.4	sensitive-information-disclosure	https://nvd.nist.
 nginx{,-devel}>=1.31.0<1.31.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-60005
 nginx{,-devel}>=0.9.6<1.30.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
 nginx{,-devel}>=1.31.0<1.31.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
+apache-cassandra>=4.1<4.1.8	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-24860
+apache-cassandra>=5<5.0.3	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-24860
 gst-plugins1-bad<1.26.3	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6663
 postgresql13-client<13.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
 postgresql13-server<13.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12817
