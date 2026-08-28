@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/31 19:38:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/08/28 18:57:15 ryoon Exp $
 bin/bd_info
 bin/bd_list_titles
 bin/bd_splice
@@ -11,5 +11,8 @@ include/libbluray/log_control.h
 include/libbluray/meta_data.h
 include/libbluray/overlay.h
 include/libbluray/player_settings.h
-lib/libbluray.la
+lib/libbluray.a
+lib/libbluray.so
+lib/libbluray.so.4
+lib/libbluray.so.4.0.0
 lib/pkgconfig/libbluray.pc
