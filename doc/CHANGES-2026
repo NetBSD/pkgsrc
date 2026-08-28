@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5617 2026/08/28 08:33:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5618 2026/08/28 08:41:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8289,3 +8289,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/qemu-guest-agent to 11.1.1 [adam 2026-08-28]
 	Updated devel/py-stevedore to 5.9.1 [adam 2026-08-28]
 	Updated converters/py-simplejson to 4.1.2 [adam 2026-08-28]
+	Updated math/py-pythran to 0.19.0 [adam 2026-08-28]
+	Updated devel/py-gitpython to 3.1.60 [adam 2026-08-28]
