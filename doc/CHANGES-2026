@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5629 2026/08/28 16:15:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5630 2026/08/28 18:35:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8307,3 +8307,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/php85 to 8.5.10 [taca 2026-08-28]
 	Updated www/squid7 to 7.7 [taca 2026-08-28]
 	Updated net/py-zeroconf to 0.150.2 [wiz 2026-08-28]
+	Updated math/lean4 to 4.33.1nb1 [wiz 2026-08-28]
