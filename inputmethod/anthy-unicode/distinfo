@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/08/28 11:30:25 wiz Exp $
+
+BLAKE2s (anthy-unicode-1.0.0.20260213.tar.gz) = 184005918110fb3381927d20052ff541fb826e5e376ee4aa7c55715f19c201db
+SHA512 (anthy-unicode-1.0.0.20260213.tar.gz) = fcb7651c3d1cfa389fc1d25606c088528154e659668af92908c202b5cf936f81fc28b616f3bc764be4835a8016c347c1a7e0a14691bd1a7697bac3df842d694e
+Size (anthy-unicode-1.0.0.20260213.tar.gz) = 5184155 bytes
+SHA1 (patch-src-util_anthy-unicode.el) = 28229a7355057ed5e7464920683079e2c0b7a2bf

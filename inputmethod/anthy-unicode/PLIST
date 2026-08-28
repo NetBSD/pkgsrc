@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/28 11:30:25 wiz Exp $
+bin/anthy-agent-unicode
+bin/anthy-dic-tool-unicode
+bin/anthy-morphological-analyzer-unicode
+include/anthy-unicode-1.0/anthy/anthy.h
+include/anthy-unicode-1.0/anthy/dicutil.h
+include/anthy-unicode-1.0/anthy/input.h
+lib/libanthy-unicode.la
+lib/libanthydic-unicode.la
+lib/libanthyinput-unicode.la
+lib/pkgconfig/anthy-unicode.pc
+share/anthy-unicode/anthy.dic
+share/anthy-unicode/dic-tool-usage.txt
+share/anthy-unicode/typetab
+share/anthy-unicode/zipcode.t
+share/doc/anthy-unicode/DICUTIL
+share/doc/anthy-unicode/ELISP
+share/doc/anthy-unicode/GUIDE.english
+share/doc/anthy-unicode/README
+share/doc/anthy-unicode/README.en
+share/examples/anthy-unicode/anthy-unicode.conf

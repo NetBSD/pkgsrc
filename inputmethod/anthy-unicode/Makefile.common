@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2026/08/28 11:30:25 wiz Exp $
+# used by inputmethod/anthy-unicode/Makefile
+# used by inputmethod/anthy-unicode-elisp/Makefile
+
+ANTHY_UNICODE_VERSION=	1.0.0.20260213
+DISTNAME=		anthy-unicode-${ANTHY_UNICODE_VERSION}
+CATEGORIES=		inputmethod
+MASTER_SITES=		${MASTER_SITE_GITHUB:=fujiwarat/}
+GITHUB_PROJECT=		anthy-unicode
+GITHUB_RELEASE=		${ANTHY_UNICODE_VERSION}
+
+DISTINFO_FILE=		${.CURDIR}/../../inputmethod/anthy-unicode/distinfo
+PATCHDIR=		${.CURDIR}/../../inputmethod/anthy-unicode/patches
+
+HOMEPAGE=		https://github.com/fujiwarat/anthy-unicode/
+LICENSE=		gnu-gpl-v2
+
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c
