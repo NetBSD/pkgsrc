@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5626 2026/08/28 15:18:56 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5627 2026/08/28 15:19:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8304,3 +8304,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ipython to 9.17.0 [adam 2026-08-28]
 	Updated devel/py-jupyter_client to 8.10.0 [adam 2026-08-28]
 	Updated lang/php84 to 8.4.25 [taca 2026-08-28]
+	Updated lang/php85 to 8.5.10 [taca 2026-08-28]
