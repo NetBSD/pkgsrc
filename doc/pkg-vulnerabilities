@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.783 2026/08/28 08:10:50 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.784 2026/08/28 10:19:20 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -3829,7 +3829,7 @@ ap13-perl<1.29nb2	cross-site-scripting		https://cve.mitre.org/cgi-bin/cvename.cg
 ap{2,22}-perl<2.0.4nb5	cross-site-scripting		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0796
 unrealircd<3.2.7nb2	denial-of-service		http://forums.unrealircd.com/viewtopic.php?t=6204
 ntp<4.2.4p7		arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0159
-pptp>1.7.2		information-disclosure		https://bugzilla.redhat.com/show_bug.cgi?id=492090
+#pptp-[0-9]*		information-disclosure		https://bugzilla.redhat.com/show_bug.cgi?id=492090 # pkgsrc does not install the config file
 geeklog<1.5.2.2		sql-injection			http://www.geeklog.net/article.php/geeklog-1.5.2sr2
 geeklog<1.5.2.3		sql-injection			http://www.geeklog.net/article.php/webservices-exploit
 ghostscript<8.64	arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-6679
@@ -4850,7 +4850,7 @@ mysql-server>=5.1<5.1.49	multiple-vulnerabilities	http://dev.mysql.com/doc/refma
 libgdiplus<2.6nb1	remote-system-access	http://secunia.com/advisories/40792/
 quagga<0.99.17		remote-system-access	http://secunia.com/advisories/41038/
 squid>=3.1.5.1<3.1.7	denial-of-service	http://bugs.squid-cache.org/show_bug.cgi?id=3021
-kdegraphics>=4.3.0	remote-system-access	http://secunia.com/advisories/40952/
+kdegraphics>=4.3.0<4.5.1	remote-system-access	https://kde.org/info/security/advisory-20100825-1.txt
 fuse-encfs<1.7		multiple-vulnerabilities	http://secunia.com/advisories/41158/
 qt4-libs<4.7.0rc1	ssl-certificate-spoofing	http://secunia.com/advisories/41236/
 nss<3.12.8		ssl-certificate-spoofing	http://secunia.com/advisories/41237/
@@ -5054,7 +5054,10 @@ asterisk<1.6.2.16.1	buffer-overflow		http://downloads.digium.com/pub/security/AS
 asterisk>=1.8<1.8.2.2	buffer-overflow		http://downloads.digium.com/pub/security/AST-2011-001.html
 p5-Convert-UUlib<1.4	denial-of-service	http://secunia.com/advisories/42998/
 pango<1.28.3nb2		denial-of-service	http://secunia.com/advisories/42934/
-fuse>=2.0		denial-of-service	http://secunia.com/advisories/42961/
+fuse>=2.0<2.8.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2010-3879
+fuse>=2.0<2.8.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2011-0541
+fuse>=2.0<2.8.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2011-0542
+fuse>=2.0<2.8.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2011-0543
 maradns<1.4.06		remote-system-access	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0520
 dpkg<1.14.31		remote-system-access	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0402
 suse{,32}_openssl<11.3nb2	remote-security-bypass	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4180
@@ -6832,7 +6835,7 @@ adobe-flash-plugin>=11<11.2.202.280	multiple-vulnerabilities	http://www.adobe.co
 php{53,54}-owncloud<5.0.6	multiple-vulnerabilities	http://secunia.com/advisories/53392/
 ruby193-base<1.9.3p429	local-security-bypass		http://secunia.com/advisories/53432/
 acroread9<9.5.5		multiple-vulnerabilities	https://www.adobe.com/support/security/bulletins/apsb13-15.html
-libvirt>1.0.0		denial-of-service		http://secunia.com/advisories/53440/
+libvirt>1.0.0<1.0.6		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2013-1962
 wireshark<1.8.7		denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2486
 wireshark<1.8.7		denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2487
 wireshark<1.8.7		denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2488
@@ -14759,7 +14762,7 @@ gnupg2<2.2.6		verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-9234
 ncmpc<0.30		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-9240
 jasper<2.0.19		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-9252
 libxml2>=2.9.6<2.9.8nb1	infinite-loop		https://nvd.nist.gov/vuln/detail/CVE-2018-9251
-pam-yubico>=2.18	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-9275
+pam-yubico>=2.18<2.26	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-9275
 moodle<3.4.2		verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-1081
 moodle<3.4.2		verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-1082
 exiv2<0.27		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-9303
@@ -17138,7 +17141,7 @@ sqlite3<3.25.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-201
 cups<2.2.10	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2018-4300
 podofo<0.9.7	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-10723
 py{27,34,35,36,37,38}-notebook<5.7.8	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2019-10856
-libvirt>=4.8.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-3886
+libvirt>=4.8.0<5.3.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-3886
 py27-trytond<4.2.21	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2019-10868
 poppler<0.81.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-10871
 poppler<0.77.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-10872
@@ -17497,7 +17500,7 @@ apache-tomcat>=8.5.0<8.5.41	denial-of-service	https://nvd.nist.gov/vuln/detail/C
 apache-tomcat>=9.0.0.M1<9.0.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-10072
 postgresql10-server<10.9	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-10164
 postgresql11-server<11.4	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-10164
-libvirt>=0.9.4		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-10161
+libvirt>=0.9.4<5.4.1		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-10161
 libvirt-[0-9]*		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-10166
 libvirt-[0-9]*		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-10167
 libvirt-[0-9]*		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-10168
@@ -17570,7 +17573,7 @@ ImageMagick6<6.9.10.50	uninitialized-memory-read	https://nvd.nist.gov/vuln/detai
 ImageMagick<7.0.8.50	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-13136
 ImageMagick<7.0.8.50	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-13137
 ImageMagick6<6.9.10.50	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-13137
-virt-manager>=2.2.0	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2019-10183
+virt-manager>=2.2.0<2.2.1	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2019-10183
 qemu<4.1.0		acl-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-13164
 SDL2_image<2.0.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-5052
 SDL2_image<2.0.5	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-5051
@@ -18443,7 +18446,7 @@ gnupg2<2.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2015-1606
 gnupg<1.4.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2015-1607
 gnupg2<2.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2015-1607
 ikiwiki<3.20150329	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2015-2793
-lilo>=23.1	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2011-1934
+lilo>=23.1<23.2	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2011-1934
 mediawiki<1.20.3	remote-denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2013-1816
 mediawiki<1.20.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2013-1817
 moodle<2.2.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2012-1155
@@ -18885,7 +18888,7 @@ qemu<5.0.0	heap-overflow				https://nvd.nist.gov/vuln/detail/CVE-2020-1711
 py{27,34,35,36,37,38}-django>=1.11<1.11.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-7471
 py{34,35,36,37,38}-django>=2.2<2.2.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-7471
 py{27,36,37,38}-waitress>=1.4.2<1.4.3	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-5236
-pppd>=2.4.2				buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-8597
+pppd>=2.4.2<2.4.9				buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-8597
 qt5-qtbase<5.14.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-0569
 qt5-qtbase<5.14.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-0570
 mariadb-server>=10.4.7<10.4.12		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2020-7221
@@ -19717,7 +19720,7 @@ firefox78<78.1		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/
 mozjs78<78.1		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2020-32/
 thunderbird<78.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2020-33/
 webkit-gtk<2.28.4	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2020-0007.html
-opendmarc>=1.3.2	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-12460
+opendmarc>=1.3.2<1.4.0	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-12460
 cherokee>=0.4.27<1.2.104        null-pointer-dereference        https://nvd.nist.gov/vuln/detail/CVE-2020-12845
 freerdp<2.2.0		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-15103
 ghostscript-agpl<9.53.0	memory-corruption               https://nvd.nist.gov/vuln/detail/CVE-2020-15900
@@ -27283,8 +27286,8 @@ openexr<3.3.3		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-4807
 php{56,74,81,82,83,84}-piwigo<15.0.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-43018
 # https://github.com/jpadilla/pyjwt/issues/1080
 #py{27,39,310,311,312,313}-JWT-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45768
-qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54566
-qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54567
+qemu>=10.0.0<10.1.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54566
+qemu>=10.0.0<10.1.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54567
 sqlite3<3.42.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7458
 squid<6.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-54574
 tiff<4.7.0nb2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-13978
