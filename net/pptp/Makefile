@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/11/17 11:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/08/28 09:18:08 wiz Exp $
 
 DISTNAME=	pptp-1.7.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 

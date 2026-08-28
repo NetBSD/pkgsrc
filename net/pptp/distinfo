@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:06:31 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/08/28 09:18:08 wiz Exp $
 
 BLAKE2s (pptp-1.7.1.tar.gz) = f1881ae0fe2bbef5cc72960a1ba802d8e48a800c84de4d3c6374425f4c45f15e
 SHA512 (pptp-1.7.1.tar.gz) = cb22cb33d2e422e7ca1976ae431b8bf7f231e561a02f6cf1274e68cc7e510781879b034f11ae2d5d3e5cee940239970f3ff16ab6cab3ab3c4f2623dc5bfe8bf3
@@ -6,4 +6,4 @@ Size (pptp-1.7.1.tar.gz) = 229024 bytes
 SHA1 (patch-ab) = 01d8346064bee226adb11035d98c2f06523b8e4a
 SHA1 (patch-ac) = 8a0dd645ed0a766375a803fecda80d716c441d52
 SHA1 (patch-ad) = a037ba927c181f812ecd5c1ea2d344483d8ad4bf
-SHA1 (patch-ah) = 51dd733794ed8c3c30aeb908487767cb6fef3e9a
+SHA1 (patch-ah) = 5f9296d2d5c6c9eb7c4c3f1e2d2b0c9441c1c685

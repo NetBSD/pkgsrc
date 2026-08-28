@@ -1,17 +1,28 @@
-$NetBSD: patch-ah,v 1.3 2010/10/24 16:55:03 pettai Exp $
+$NetBSD: patch-ah,v 1.4 2026/08/28 09:18:08 wiz Exp $
 
---- Makefile.orig	2005-07-28 01:15:10.000000000 +0000
+--- Makefile.orig	2006-02-13 03:07:42.000000000 +0000
 +++ Makefile
-@@ -4,7 +4,7 @@
-
+@@ -4,7 +4,7 @@ RELEASE=
+ 
  #################################################################
  # CHANGE THIS LINE to point to the location of your pppd binary.
 -PPPD = /usr/sbin/pppd
 +#PPPD = /usr/sbin/pppd
  #################################################################
-
+ 
  BINDIR=$(DESTDIR)/usr/sbin
-@@ -54,12 +54,12 @@ distclean: clobber
+@@ -16,9 +16,8 @@ INCLUDE =
+ OPTIMIZE= -O0
+ DEBUG	= -g
+ INCLUDE =
+-CFLAGS  = -Wall $(OPTIMIZE) $(DEBUG) $(INCLUDE)
++CFLAGS  += -Wall $(OPTIMIZE) $(DEBUG) $(INCLUDE)
+ LIBS	= -lutil
+-LDFLAGS	=
+ 
+ PPTP_BIN = pptp
+ 
+@@ -54,12 +53,12 @@ install:
  test: vector_test
  
  install:
