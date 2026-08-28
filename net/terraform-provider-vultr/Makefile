@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/08/27 20:27:07 leot Exp $
+# $NetBSD: Makefile,v 1.72 2026/08/28 06:52:06 wiz Exp $
 
 DISTNAME=	terraform-provider-vultr-2.30.1
 CATEGORIES=	net
@@ -21,5 +21,5 @@ TERRAFORM_PROVIDER_LEGACY_INSTALL=	yes
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
-.include "../../wip/terraform/provider.mk"
+.include "../../net/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
