@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2026/08/28 07:54:20 adam Exp $
+# used by emulators/qemu/Makefile
+# used by sysutils/qemu-guest-agent/Makefile
+
+QEMU_VERSION?=	11.1.1
+
+DISTNAME=	qemu-${QEMU_VERSION}
+MASTER_SITES=	https://download.qemu.org/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.qemu.org/
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
+
+# From pythondeps.toml
+TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+# From python/scripts/mkvenv.py
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pycotap>=1.1.0:../../devel/py-pycotap
+DEPENDS+=	${PYPKGPREFIX}-pip>=20.3.4:../../devel/py-pip
+DEPENDS+=	${PYPKGPREFIX}-qemu.qmp>=0.0.5:../../emulators/py-qemu.qmp
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.1.1:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34.2:../../devel/py-wheel
+
+DISTINFO_FILE=	../../emulators/qemu/distinfo
+PATCHDIR=	../../emulators/qemu/patches
+
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+
+CHECK_PORTABILITY_SKIP+=	scripts/gitlab-map-update
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
+ALL_ENV+=		MESON_RSP_THRESHOLD=262144
