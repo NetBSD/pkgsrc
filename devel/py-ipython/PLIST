@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2026/08/20 11:11:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/08/28 14:06:07 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -17,6 +17,9 @@ ${PYSITELIB}/IPython/__main__.pyo
 ${PYSITELIB}/IPython/core/__init__.py
 ${PYSITELIB}/IPython/core/__init__.pyc
 ${PYSITELIB}/IPython/core/__init__.pyo
+${PYSITELIB}/IPython/core/_dunder_ops.py
+${PYSITELIB}/IPython/core/_dunder_ops.pyc
+${PYSITELIB}/IPython/core/_dunder_ops.pyo
 ${PYSITELIB}/IPython/core/alias.py
 ${PYSITELIB}/IPython/core/alias.pyc
 ${PYSITELIB}/IPython/core/alias.pyo
@@ -122,6 +125,9 @@ ${PYSITELIB}/IPython/core/magic_arguments.pyo
 ${PYSITELIB}/IPython/core/magics/__init__.py
 ${PYSITELIB}/IPython/core/magics/__init__.pyc
 ${PYSITELIB}/IPython/core/magics/__init__.pyo
+${PYSITELIB}/IPython/core/magics/_table.py
+${PYSITELIB}/IPython/core/magics/_table.pyc
+${PYSITELIB}/IPython/core/magics/_table.pyo
 ${PYSITELIB}/IPython/core/magics/ast_mod.py
 ${PYSITELIB}/IPython/core/magics/ast_mod.pyc
 ${PYSITELIB}/IPython/core/magics/ast_mod.pyo

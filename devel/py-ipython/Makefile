@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2026/08/20 11:11:07 adam Exp $
+# $NetBSD: Makefile,v 1.123 2026/08/28 14:06:07 adam Exp $
 
-DISTNAME=	ipython-9.16.1
+DISTNAME=	ipython-9.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -21,9 +21,9 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-stack-data>=0.6.0:../../sysutils/py-stack-data
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.13.0:../../devel/py-traitlets
-TEST_DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
+TEST_DEPENDS+=	${PYPKGPREFIX}-pickleshare>=0:../../databases/py-pickleshare
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
 
