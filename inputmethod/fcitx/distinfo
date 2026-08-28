@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2026/06/20 09:29:04 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/08/28 01:52:12 tsutsui Exp $
 
 BLAKE2s (en_dict-20121020.tar.gz) = 9945545f2402d0eb35bd46701e51f191da0b740854d0c8da11d7670aa1ad014f
 SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
@@ -22,6 +22,7 @@ SHA1 (patch-CMakeLists.txt) = 226734589590cd9ac9c4e08de3459904d38fae98
 SHA1 (patch-cmake_FcitxMacro.cmake) = e3dcba315711fc6b96f5620de1e03e096635bab2
 SHA1 (patch-cmake_FindEnchant.cmake) = e2a2572d60515c80ec736dd1d8d07779aa324da0
 SHA1 (patch-src_im_pinyin_data_CMakeLists.txt) = dd17df37a5b6781a645a4190cb8111811f804189
+SHA1 (patch-src_im_pinyin_sp.c) = 4b86b6cde68da23d6d3f525dcd620497aedebd70
 SHA1 (patch-src_im_table_data_CMakeLists.txt) = 3ef3d05ee036f9bb845b69c97c50ac76cc11478e
 SHA1 (patch-src_lib_fcitx-config_hotkey.c) = bacd46f4d716c8175e5ab86cb08b95212e1e6df3
 SHA1 (patch-src_lib_fcitx-utils_utils.c) = 15c0f9d9123edd44b95aaf0b2f7b636779f98df6
@@ -36,3 +37,4 @@ SHA1 (patch-src_module_vk_vk.c) = cc3f2170fa3b930baea59b806b7c2c1f3319d079
 SHA1 (patch-src_ui_classic_skin.c) = 7d14955a3503a6d866b0a6495722c78be0029e0d
 SHA1 (patch-src_ui_kimpanel_kimpanel.c) = a0325039b35271d297a1b2ec1eeaa10899072f48
 SHA1 (patch-tools_cli_mb2txt.c) = 3eb771cb13ed9b6f0dc28ec301460314a4966639
+SHA1 (patch-tools_cli_txt2mb.c) = 767eff65d9bab6b11b457851f2cfa29172d6a5ce
