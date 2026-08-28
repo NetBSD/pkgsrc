@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2026/08/27 05:28:02 adam Exp $
+# $NetBSD: Makefile,v 1.126 2026/08/28 07:18:58 adam Exp $
 
 DISTNAME=	libgcrypt-1.12.3
 CATEGORIES=	security
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
+# Error: operand size mismatch for `vsm4rnds4'
+CONFIGURE_ARGS+=	--disable-avx512-support
 TEST_TARGET=		check
 TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
