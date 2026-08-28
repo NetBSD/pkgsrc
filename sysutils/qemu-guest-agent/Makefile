@@ -1,38 +1,20 @@
-# $NetBSD: Makefile,v 1.13 2026/08/27 07:27:39 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/28 07:54:20 adam Exp $
 
-.include "../../emulators/qemu/version.mk"
+.include "../../emulators/qemu/Makefile.common"
 
-DISTNAME=	qemu-${QEMU_VERSION}
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
 CATEGORIES=	sysutils emulators
-MASTER_SITES=	https://download.qemu.org/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.qemu.org/
 COMMENT=	QEMU guest agent
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 # meson.build: unsupported OS for QEMU guest agent
 NOT_FOR_PLATFORM=	Darwin-*-*
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-DEPENDS+=	${PYPKGPREFIX}-qemu.qmp-[0-9]*:../../emulators/py-qemu.qmp
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config perl
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
-PATCHDIR=		../../emulators/qemu/patches
-DISTINFO_FILE=		../../emulators/qemu/distinfo
 RCD_SCRIPTS=		qemu-guest-agent
 
 CONFLICTS+=		qemu-[0-9]*
@@ -43,14 +25,6 @@ GCC_REQD+=		7
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--python=${TOOL_PYTHONBIN}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
-ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
 CONFIGURE_ARGS+=	--enable-guest-agent
 CONFIGURE_ARGS+=	--disable-tools

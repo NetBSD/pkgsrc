@@ -1,27 +1,10 @@
-# $NetBSD: Makefile,v 1.411 2026/08/07 08:15:32 adam Exp $
+# $NetBSD: Makefile,v 1.412 2026/08/28 07:54:20 adam Exp $
 
-.include "../../emulators/qemu/version.mk"
+.include "../../emulators/qemu/Makefile.common"
 
-DISTNAME=	qemu-${QEMU_VERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.qemu.org/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.qemu.org/
 COMMENT=	Machine emulator and virtualizer
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
-
-# From pythondeps.toml
-TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-# From python/scripts/mkvenv.py
-TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pycotap>=1.1.0:../../devel/py-pycotap
-DEPENDS+=	${PYPKGPREFIX}-pip>=20.3.4:../../devel/py-pip
-DEPENDS+=	${PYPKGPREFIX}-qemu.qmp>=0.0.5:../../emulators/py-qemu.qmp
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.1.1:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34.2:../../devel/py-wheel
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -31,13 +14,6 @@ HAS_CONFIGURE=		yes
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
-.endif
 
 .include "options.mk"
 
@@ -53,17 +29,9 @@ DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		${PALCODE_CLIPPER}
 SITES.${PALCODE_CLIPPER}= http://ftp.NetBSD.org/pub/NetBSD/arch/alpha/qemu/
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--python=${PYTHONBIN}
-CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-fdt=system
 CONFIGURE_ARGS+=	--disable-guest-agent
-CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
-ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
 .if ${PKGSRC_USE_SSP:Uno:tl} != "no"
 # do not add flags to everything
