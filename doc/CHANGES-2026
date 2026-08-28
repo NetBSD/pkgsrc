@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5615 2026/08/28 04:01:22 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5616 2026/08/28 07:54:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8285,3 +8285,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/opentofu112 version 1.12.6 [leot 2026-08-27]
 	Updated sysutils/pcmanfm-qt to 2.4.1 [gutteridge 2026-08-28]
 	Updated meta-pkgs/lxqt to 2.4.0nb2 [gutteridge 2026-08-28]
+	Updated emulators/qemu to 11.1.1 [adam 2026-08-28]
+	Updated sysutils/qemu-guest-agent to 11.1.1 [adam 2026-08-28]
