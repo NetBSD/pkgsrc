@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2026/08/27 09:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/08/28 16:15:24 wiz Exp $
 
-DISTNAME=	zeroconf-0.150.0
+DISTNAME=	zeroconf-0.150.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
-
-# .so files are missing from PLIST with Cython 3.3.0
-# https://github.com/python-zeroconf/python-zeroconf/issues/1818
-PATCHFILES+=	1820.diff
-PATCH_SITES=	https://patch-diff.githubusercontent.com/raw/python-zeroconf/python-zeroconf/pull/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/jstasiak/python-zeroconf
@@ -26,9 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
-
-post-install:
-	find ${DESTDIR}${PREFIX} -name *.orig_dist -delete
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
