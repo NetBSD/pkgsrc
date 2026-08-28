@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5613 2026/08/28 03:56:19 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5614 2026/08/28 03:57:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8283,3 +8283,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nss to 3.128 [wiz 2026-08-27]
 	Added net/opentofu112 version 1.12.6 [leot 2026-08-27]
 	Updated sysutils/pcmanfm-qt to 2.4.1 [gutteridge 2026-08-28]
+	Updated meta-pkgs/lxqt to 2.4.0nb2 [gutteridge 2026-08-28]
