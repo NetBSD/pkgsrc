@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5632 2026/08/28 18:50:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5633 2026/08/28 18:57:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8310,3 +8310,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/lean4 to 4.33.1nb1 [wiz 2026-08-28]
 	Updated textproc/rumdl to 0.2.62 [wiz 2026-08-28]
 	Updated graphics/digikam-gmic-qt to 4.0.3.20260825 [wiz 2026-08-28]
+	Updated multimedia/libbluray to 1.5.0 [ryoon 2026-08-28]
