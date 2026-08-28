@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5616 2026/08/28 07:54:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5617 2026/08/28 08:33:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8287,3 +8287,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/lxqt to 2.4.0nb2 [gutteridge 2026-08-28]
 	Updated emulators/qemu to 11.1.1 [adam 2026-08-28]
 	Updated sysutils/qemu-guest-agent to 11.1.1 [adam 2026-08-28]
+	Updated devel/py-stevedore to 5.9.1 [adam 2026-08-28]
+	Updated converters/py-simplejson to 4.1.2 [adam 2026-08-28]
