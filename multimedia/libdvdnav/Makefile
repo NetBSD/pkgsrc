@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2021/05/04 07:27:17 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/28 19:05:57 ryoon Exp $
 
-DISTNAME=	libdvdnav-6.1.1
+DISTNAME=	libdvdnav-7.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://download.videolan.org/pub/videolan/libdvdnav/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dvdnav.mplayerhq.hu/
@@ -11,11 +11,10 @@ COMMENT=	Library to navigate DVDs
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c99
-USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE=	misc/dvdnav.pc.in
+PKGCONFIG_OVERRIDE=	output/meson-private/dvdnav.pc.in
 
+.include "../../devel/meson/build.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
