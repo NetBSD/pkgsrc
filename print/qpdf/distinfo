@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.53 2026/08/11 13:03:44 wiz Exp $
+$NetBSD: distinfo,v 1.54 2026/08/28 19:46:59 wiz Exp $
 
-BLAKE2s (qpdf-12.4.0.tar.gz) = cb507658586d8bcb73e0c4e0bd08ec38e7834f60ea817fc2e0f7e69af5eda3be
-SHA512 (qpdf-12.4.0.tar.gz) = c4af8af31595bc5fe35a46d0e482746013d8f3dbef13a8bba26702a5f00cb4ea7c241542c0be9b3996a36dd8a8fde5afa59b9824077e85592708bf3d1fbb1c35
-Size (qpdf-12.4.0.tar.gz) = 19675978 bytes
+BLAKE2s (qpdf-12.4.1.tar.gz) = 9c31d01dade142ed98a4c67461038529c21389a2fc015441c529db25806e01e7
+SHA512 (qpdf-12.4.1.tar.gz) = 5559bc662f82346fbc2967aa6c994eef786931aaa0c56432a107d4bb71a4c8ab479144e5c03ee9f05b9060b474001c608a4c5d4136cd3d16d1e60e1ced54a576
+Size (qpdf-12.4.1.tar.gz) = 19713921 bytes
 SHA1 (patch-libqpdf.pc.in) = 99a532531daba9308ab1e025fac044e7333fd0c4
