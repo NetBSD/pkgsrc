@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5624 2026/08/28 11:31:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5625 2026/08/28 14:16:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8300,3 +8300,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-types-docutils to 0.23.0.20260827 [adam 2026-08-28]
 	Added inputmethod/anthy-unicode version 1.0.0.20260213 [wiz 2026-08-28]
 	Added inputmethod/anthy-unicode-elisp version 1.0.0.20260213 [wiz 2026-08-28]
+	Updated audio/faac to 1.50 [adam 2026-08-28]
+	Updated devel/py-ipython to 9.17.0 [adam 2026-08-28]
+	Updated devel/py-jupyter_client to 8.10.0 [adam 2026-08-28]
