@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5639 2026/08/28 20:13:52 morr Exp $
+$NetBSD: CHANGES-2026,v 1.5640 2026/08/28 20:55:57 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8317,3 +8317,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/qpdf to 12.4.1 [wiz 2026-08-28]
 	Updated devel/py-ruff to 0.16.5 [wiz 2026-08-28]
 	Updated editors/vim-share to 9.2.1020 [morr 2026-08-28]
+	Updated net/dnscontrol to 5.0.2 [drixter 2026-08-28]
