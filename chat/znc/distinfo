@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/02/24 14:47:18 triaxx Exp $
+$NetBSD: distinfo,v 1.16 2026/08/28 12:44:14 plunky Exp $
 
 BLAKE2s (znc-1.10.1.tar.gz) = 0fdffc750d4c3c3727f244540445bea4bb775b5cd264cf73350258e9ace383b6
 SHA512 (znc-1.10.1.tar.gz) = f125eef5a9f8bfcd278951971638fe8a937261001bfd8f6438fc51fda666b97c00780c5c6f1a921b3db79cb7656bc9675eb3881b18b22b7738e0976ebcca7cb3
@@ -6,3 +6,4 @@ Size (znc-1.10.1.tar.gz) = 2310976 bytes
 BLAKE2s (znc-palaver-1.2.2.tar.gz) = 4b5a222eb3aa298dbb783a53f81ded4699da1976a26e2e90ef17037c9e34d4f5
 SHA512 (znc-palaver-1.2.2.tar.gz) = b91ba7200cac393557252874293f131c83a4cea83203457e8f6f91a129d8207c16951b983e52848ce4f54750752f69765ca26b8e3f50e74da2a11138eaf2bdce
 Size (znc-palaver-1.2.2.tar.gz) = 14649 bytes
+SHA1 (patch-src_ZNCString.cpp) = e5ac2422ce28712e34a0e43d799ca7e929f988f7
