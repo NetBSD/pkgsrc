@@ -1,0 +1,5 @@
+Anthy is a Japanese kana-kanji conversion engine.  anthy-unicode is the
+maintained fork of anthy 9100h, whose last release was in 2009.  It moves
+the internal encoding from EUC-JP to UTF-8, from which it takes its name,
+and installs everything under -unicode names so that it can be used
+alongside the original.
