@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5614 2026/08/28 03:57:24 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5615 2026/08/28 04:01:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8189,6 +8189,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xentools418 to 20260825 [bouyer 2026-08-26]
 	Added www/firefox153 version 153.1.0 [gutteridge 2026-08-27]
 	Added www/firefox153-l10n version 153.1.0 [gutteridge 2026-08-27]
+	Updated meta-pkgs/xfce4 to 4.20.0nb19 [gutteridge 2026-08-27]
 	Updated devel/py-urwid to 4.0.13 [adam 2026-08-27]
 	Updated devel/py-click to 8.5.0 [adam 2026-08-27]
 	Updated misc/py-platformdirs to 4.11.4 [adam 2026-08-27]
