@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/07/10 09:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/28 19:02:37 wiz Exp $
 
-DISTNAME=	build-1.5.1
+DISTNAME=	build-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -31,8 +31,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pyproject-build pyproject-build-${PYVERSSUFFIX} || ${TRUE}
 
-# as of 1.5.0
-# 36 failed, 159 passed, 67 skipped, 1 xfailed, 1 error, 15 rerun
+# as of 1.6.0
+# 31 failed, 254 passed, 69 skipped, 1 xfailed, 1 error, 45 rerun
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
