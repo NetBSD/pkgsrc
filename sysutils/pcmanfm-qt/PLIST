@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/04/28 08:42:48 pin Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/08/28 03:56:08 gutteridge Exp $
 bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
@@ -56,6 +56,7 @@ share/pcmanfm-qt/translations/pcmanfm-qt_sk_SK.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sl.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sv.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_ug.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_uk.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_vi.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_zh_CN.qm

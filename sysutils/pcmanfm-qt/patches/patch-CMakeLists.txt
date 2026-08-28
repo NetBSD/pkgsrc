@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/08/28 03:56:08 gutteridge Exp $
+
+Temporarily revert a Wayland-only change that requires a newer version
+of plasma6-layer-shell-qt than pkgsrc carries.
+
+--- CMakeLists.txt.orig	2026-08-26 15:41:04.000000000 +0000
++++ CMakeLists.txt
+@@ -17,7 +17,7 @@ set(QT_MINIMUM_VERSION "6.6.0")
+ set(LIBFMQT_MINIMUM_VERSION "2.4.0")
+ set(LXQTBT_MINIMUM_VERSION "2.4.0")
+ set(QT_MINIMUM_VERSION "6.6.0")
+-set(SHELLQT_MINIMUM_VERSION "6.6.0")
++set(SHELLQT_MINIMUM_VERSION "6.0.0")
+ 
+ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
+ 
