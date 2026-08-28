@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/06/13 06:22:47 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/08/28 09:33:46 adam Exp $
 
-DISTNAME=	starlette-1.3.1
+DISTNAME=	starlette-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/starlette/}
@@ -10,14 +10,15 @@ HOMEPAGE=	https://github.com/encode/starlette
 COMMENT=	Little ASGI library that shines
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.6.2:../../devel/py-anyio
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
-TEST_DEPENDS+=	${PYPKGPREFIX}-itsdangerous-[0-9]*:../../security/py-itsdangerous
-TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+TEST_DEPENDS+=	${PYPKGPREFIX}-httpx2>=2.0.0:../../www/py-httpx2
+TEST_DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=0:../../security/py-itsdangerous
+TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
 TEST_DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.18:../../www/py-python-multipart
-TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
-TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0:../../devel/py-trio
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
