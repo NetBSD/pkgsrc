@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.781 2026/08/27 15:04:53 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.782 2026/08/28 07:58:26 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -2724,7 +2724,7 @@ exiftags<1.01		arbitrary-code-execution	http://secunia.com/advisories/28110/
 py{15,20,21,22,23,24,25,26,27,31}-django<0.96.1	denial-of-service		http://www.djangoproject.com/weblog/2007/oct/26/security-fix/
 cups<1.3.5		remote-code-execution		http://www.cups.org/str.php?L2589
 cups<1.3.5		arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-{4352,5392,5393}
-clamav<0.92		integer-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5759
+#clamav<0.92		integer-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5759	# rejected, duplicate of CVE-2007-6335
 dovecot>=1.0.rc11<1.0.9nb1	unauthorized-access	http://www.dovecot.org/list/dovecot-news/2007-December/000057.html
 opera<9.25		cross-site-scripting		http://www.opera.com/support/search/view/875/
 php<4.4.8	security-bypass		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3378
@@ -7511,7 +7511,7 @@ openjpeg15<1.5.2	arbitrary-code-execution		https://cve.mitre.org/cgi-bin/cvename
 openjpeg15<1.5.2	arbitrary-code-execution		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6052
 openjpeg15<1.5.2	arbitrary-code-execution		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6053
 openjpeg15<1.5.2	sensitive-information-exposure	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6054
-openjpeg15<1.5.2	denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6087
+#openjpeg15<1.5.2	denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6087	# rejected, withdrawn by CNA
 cups<1.5.4nb11		cross-site-scripting		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2856
 openafs<1.6.7		denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0159
 openafs>=1.7<1.7.31		denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0159
@@ -11707,7 +11707,7 @@ apache-tomcat>=8.0<8.0.42 	information-disclosure	https://web.nvd.nist.gov/view/
 tiff<4.0.7		out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-8127
 tiff<4.0.7		out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8665
 tiff<4.0.7		out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8683
-tiff<4.0.7		buffer-overflow		https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-5875
+#tiff<4.0.7		buffer-overflow		https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-5875	# rejected, duplicate of CVE-2016-5314
 tiff<4.0.7		out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-9273
 ImageMagick<7.0.4.8	out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9829
 ImageMagick6<6.9.7.9	out-of-bounds-read	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9829
@@ -12380,7 +12380,7 @@ gnuplot<5.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9670
 libstaroffice<0.0.4	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-9432
 php{56,70,71}-piwigo<2.9.1	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2017-9464
 php{56,70,71}-piwigo<2.9.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2017-9463
-php{56,70,71}-piwigo-[0-9]*	authentication-bypass	 https://nvd.nist.gov/vuln/detail/CVE-2017-9837
+#php{56,70,71}-piwigo-[0-9]*	authentication-bypass	 https://nvd.nist.gov/vuln/detail/CVE-2017-9837	# rejected, not a vulnerability
 php{56,70,71}-piwigo-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-9836
 libthrift<0.9.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2015-3254
 samba<4.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9461
@@ -12936,8 +12936,8 @@ xenkernel48<4.8.2	multiple-vulnerabilities	https://xenbits.xen.org/xsa/advisory-
 py{27,33,34,35}-numpy-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-12852
 mantis<2.5.2		cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2017-12061
 mantis<2.5.2		cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2017-12062
-lame<3.100	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9410
-lame<3.100	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9411
+#lame<3.100	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9410	# rejected, duplicate of CVE-2015-9101
+#lame<3.100	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9411	# rejected, duplicate of CVE-2015-9100
 lame<3.100	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9412
 lame<3.100	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-9412
 taglib<1.11.1nb1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-12678
@@ -13843,8 +13843,8 @@ openssl<1.0.2n	multiple-vulnerabilities	https://www.openssl.org/news/secadv/2017
 openjpeg<2.3.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-17479
 openjpeg<2.3.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-17480
 libsndfile<1.0.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-16942
-libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-17456
-libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-17457
+#libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-17456	# rejected, duplicate of CVE-2017-14245
+#libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-17457	# rejected, duplicate of CVE-2017-14246
 libextractor<1.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-17440
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-16883
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-16898
@@ -14246,7 +14246,7 @@ irssi<1.0.7		multiple-vulnerabilities	https://irssi.org/security/html/irssi_sa_2
 irssi>=1.1.0<1.1.1	multiple-vulnerabilities	https://irssi.org/security/html/irssi_sa_2018_02/
 zziplib<0.13.68	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-6381
 pound<2.8	http-response-smuggling		https://nvd.nist.gov/vuln/detail/CVE-2016-10711
-gcpio-[0-9]*	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2017-7516
+#gcpio-[0-9]*	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2017-7516	# rejected, duplicate of CVE-2015-1197
 ptex<2.1.33	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-3835
 ffmpeg2<2.8.14	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-6392
 ffmpeg3<3.4.2	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-6392
@@ -14962,7 +14962,7 @@ p7zip<17.01	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-1
 lrzip-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10685
 libgxps-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10733
 libgxps-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10767
-ncurses<6.1nb3	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-10754
+#ncurses<6.1nb3	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-10754	# rejected, not a vulnerability
 jasper<2.0.19	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-9154
 abcm2ps<8.13.21	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-10753
 abcm2ps<8.13.21	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-10771
@@ -15258,7 +15258,7 @@ binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12641
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12697
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12698
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12699
-binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12700
+#binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12700	# rejected, not a vulnerability
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12934
 php72-exif<7.2.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2018-12882
 php{56,70,71,72}-basercms<3.0.16	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-0569
@@ -15281,7 +15281,7 @@ py{27,34,35,36}-yaml<4.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/deta
 wine-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-12932
 wine-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-12933
 apache-cassandra<3.11.2	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-8016
-openslp-[0-9]*		double-free			https://nvd.nist.gov/vuln/detail/CVE-2018-12938
+#openslp-[0-9]*		double-free			https://nvd.nist.gov/vuln/detail/CVE-2018-12938	# rejected, duplicate of CVE-2017-17833
 p5-Archive-Zip<1.61	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2018-10860
 xenkernel42-[0-9]*	denial-of-service	https://xenbits.xen.org/xsa/advisory-264.html
 xenkernel45-[0-9]*	denial-of-service	https://xenbits.xen.org/xsa/advisory-264.html
@@ -15326,7 +15326,7 @@ hdf5-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-13874
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-13875
 hdf5-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-13876
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14031
-hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14032
+#hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14032	# rejected, duplicate of CVE-2018-11206
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14033
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14034
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14035
@@ -15460,7 +15460,7 @@ ImageMagick6<6.9.10.6	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-1443
 confuse<3.2.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14447
 mp4v2<4.1.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14446
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-14460
-npm<6.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-3736
+#npm<6.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-3736	# rejected, duplicate of CVE-2018-3739
 adobe-flash-player<30.0.0.134	multiple-vulnerabilities	https://helpx.adobe.com/security/products/flash-player/apsb18-24.html
 mitmproxy<4.0.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-14505
 aubio<0.4.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14521
@@ -15661,7 +15661,7 @@ nodejs>=10<10.9.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-
 ImageMagick<7.0.8.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15607
 ImageMagick6<6.9.10.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15607
 hdf5-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15671
-hdf5-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15672
+#hdf5-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15672	# rejected, duplicate of CVE-2018-11207
 gnutls<3.6.3	timing-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-10844
 gnutls<3.6.3	timing-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-10845
 gnutls<3.6.3	timing-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-10846
@@ -15723,7 +15723,7 @@ libxkbcommon<0.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1
 libxkbcommon<0.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15863
 libxkbcommon<0.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15864
 ap{22,24}-perl<2.0.11	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2011-2767
-podofo<0.9.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15889
+#podofo<0.9.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15889	# rejected, duplicate of CVE-2018-5783
 ghostscript-agpl<9.24	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2018-15908
 ghostscript-gpl-[0-9]*	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2018-15908
 ghostscript-agpl<9.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15909
@@ -16244,7 +16244,7 @@ exiv2<0.27	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-19607
 samba>=4.0.0<4.9.3	denial-of-service	https://www.samba.org/samba/security/CVE-2018-14629.html
 samba>=4.3.0<4.9.3	double-free		https://www.samba.org/samba/security/CVE-2018-16841.html
 samba>=4.0.0<4.9.3	denial-of-service	https://www.samba.org/samba/security/CVE-2018-16851.html
-avahi<0.8		traffic-amplification		https://nvd.nist.gov/vuln/detail/CVE-2018-1000845
+#avahi<0.8		traffic-amplification		https://nvd.nist.gov/vuln/detail/CVE-2018-1000845	# rejected, duplicate of CVE-2017-6519
 nodejs<6.15.0		http-response-splitting		https://nvd.nist.gov/vuln/detail/CVE-2018-12116
 nodejs>=8<8.14.0	http-response-splitting		https://nvd.nist.gov/vuln/detail/CVE-2018-12116
 nodejs<6.15.0		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-12120
@@ -16302,7 +16302,7 @@ libsixel<1.8.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1976
 libsixel<1.8.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19763
 confuse<3.3		memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-19760
 libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19758
-mxml-[0-9]*		memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-19764
+#mxml-[0-9]*		memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-19764	# rejected, not a vulnerability
 mupdf-[0-9]*		infinite-loop		https://nvd.nist.gov/vuln/detail/CVE-2018-19777
 py{27,34,35,36,37,38}-lxml<4.2.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-19787
 libsass<3.6.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19797
@@ -16951,7 +16951,7 @@ xentools46-[0-9]*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packa
 trafficserver<7.1.6	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-11783
 gdk-pixbuf2<2.38.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-12447
 libjpeg-turbo<2.0.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-14498
-binutils<2.31		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14038
+#binutils<2.31		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14038	# rejected, duplicate of CVE-2018-7642
 go-dns<1.0.10		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-17419
 ImageMagick6<6.9.10.25	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-7175
 ImageMagick<7.0.8.25	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-7175
@@ -17933,7 +17933,7 @@ djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019
 djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15145
 adplug<2.3.3		double-free		https://nvd.nist.gov/vuln/detail/CVE-2019-15151
 ruby{22,23,24,25,26}-rest-client>=1.6.10<1.6.14  remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-15224
-webmin<1.930				remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-15231
+#webmin<1.930				remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-15231	# rejected, duplicate of CVE-2019-15107
 php{56,70,71,72,73}-roundcube-[0-9]*	homograph-attack	https://nvd.nist.gov/vuln/detail/CVE-2019-15237
 faad2<2.8.8nb1				buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-15296
 vlc<3.0.8	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-14437
@@ -18758,7 +18758,7 @@ thunderbird<68.4.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/securi
 ansible<1.5.4		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2014-2686
 bftpd<5.4		out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-6162
 bftpd<5.4		out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-6835
-curl<7.68.0		remote-file-view		https://nvd.nist.gov/vuln/detail/CVE-2019-15601
+#curl<7.68.0		remote-file-view		https://nvd.nist.gov/vuln/detail/CVE-2019-15601	# rejected, not a vulnerability
 dnsmasq<2.81		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-14834
 e2fsprogs<1.45.5	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-5188
 ganglia-webfrontend-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-20378
@@ -18812,8 +18812,8 @@ slurm-wlm<18.08.9	privilege-escalation			https://nvd.nist.gov/vuln/detail/CVE-20
 spamdyke<4.2.1		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2012-0070
 wireshark>=3.2.0<3.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-7044
 wireshark>=3.0.0<3.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-7045
-wordpress<5.3.1		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-16773
-wordpress<5.3.1		unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2019-16788
+#wordpress<5.3.1		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-16773	# rejected, duplicate of CVE-2019-20042
+#wordpress<5.3.1		unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2019-16788	# rejected, duplicate of CVE-2019-20043
 p5-Template-Toolkit<3.004	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2019-19781
 mariadb-server>=5.5<5.5.66	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-2974
 mariadb-client>=5.5<5.5.67	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-2574
@@ -18958,7 +18958,7 @@ dovecot2<2.3.9.3	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-70
 dovecot2<2.3.9.3	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-7957
 weechat<2.7.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-8955
 adobe-flash-player<32.0.0.255	type-confusion		https://helpx.adobe.com/security/products/flash-player/apsb20-06.html
-echoping-[0-9]*		buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2013-4448
+#echoping-[0-9]*		buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2013-4448	# rejected, duplicate of CVE-2010-5111
 lvm2-[0-9]*		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2020-8991
 pcre2<10.34		out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2019-20454
 firefox<73.0		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2020-05/
@@ -19085,7 +19085,7 @@ py{27,36,37,38}-twisted<20.3.0rc1	http-request-smuggling			https://nvd.nist.gov/
 py{27,36,37,38}-twisted<20.3.0rc1	http-request-smuggling			https://nvd.nist.gov/vuln/detail/CVE-2020-10109
 python27<2.7.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2013-1753
 qemu<4.1.0	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-15034
-tcpdump-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-19325
+#tcpdump-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-19325	# rejected, duplicate of CVE-2018-14466
 yarn<1.19.0	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-15608
 tor<0.4.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-10592
 tor<0.4.2.7	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2020-10593
@@ -19486,7 +19486,7 @@ sane-backends<1.0.30	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020
 sane-backends<1.0.30	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-12866
 bison<3.5.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-14150
 caddy<0.10.13	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-21246
-jpeg<9d		unspecified		https://nvd.nist.gov/vuln/detail/CVE-2020-14151
+#jpeg<9d		unspecified		https://nvd.nist.gov/vuln/detail/CVE-2020-14151	# rejected, duplicate of CVE-2018-11813
 jpeg<9d		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-14152
 jpeg<9d		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-14153
 mutt<1.14.3	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2020-14093
@@ -19881,8 +19881,8 @@ rebar3<3.14.0	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-13802
 squid<4.13	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2020-15810
 squid<4.13	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2020-15811
 gnupg2>=2.2.21<2.2.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-25125
-bison<3.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24979
-bison<3.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24980
+#bison<3.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24979	# rejected, not a vulnerability
+#bison<3.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24980	# rejected, not a vulnerability
 ghostscript-agpl<9.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-14373
 gnutls<3.6.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24659
 libxml2<2.9.11	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-24977
@@ -19993,7 +19993,7 @@ mantis<2.24.3		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25
 py{27,36,37,38}-urllib3<1.25.9	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2020-26137
 go-jwt-go<4.0.0		security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-26160
 libproxy<0.4.16		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-26154
-oniguruma<6.9.6rc1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-26159
+#oniguruma<6.9.6rc1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-26159	# rejected, not a vulnerability
 apache-ant<1.10.9	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2020-11979
 powerdns<4.3.1		uninitialized-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2020-17482
 powerdns<4.4.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-24697
@@ -20311,7 +20311,7 @@ binutils<2.35	double-free			https://nvd.nist.gov/vuln/detail/CVE-2020-16590
 binutils<2.35	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-16591
 binutils<2.35	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2020-16592
 binutils<2.35	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16593
-binutils<2.35.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16598
+#binutils<2.35.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16598	# rejected, not a vulnerability
 binutils<2.35	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-16599
 jasper<2.0.23		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-27828
 matrix-synapse<1.23.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-26257
@@ -20532,7 +20532,7 @@ guacamole-server<1.3.0		information-disclosure	https://nvd.nist.gov/vuln/detail/
 modular-xorg-server<1.20.10	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2020-14360
 php{56,72,73,74}-pear<1.10.12nb2	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2020-36193
 py{27,36,37,38,39}-bottle<0.12.19	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2020-28473
-py{27,36,37,38,39}-tornado-[0-9]*	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2020-28476
+#py{27,36,37,38,39}-tornado-[0-9]*	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2020-28476	# rejected, duplicate of CVE-2021-23336 (a CPython issue, see python entries)
 python27<2.7.18nb4	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3177
 python36<3.6.13	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3177
 python37<3.7.10	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3177
@@ -20970,11 +20970,11 @@ py{36,37,38,39}-djangocms-text-ckeditor-[0-9]*	denial-of-service	https://nvd.nis
 py{36,37,38,39}-djangocms-text-ckeditor-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-26271
 py{36,37,38,39}-djangocms-text-ckeditor-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-21254
 ampache<4.4.1	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2021-21399
-binutils<2.36	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3487
+#binutils<2.36	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3487	# rejected, not a vulnerability
 ezxml-[0-9]*	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-31229
 ezxml-[0-9]*	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-31347
 ezxml-[0-9]*	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-31348
-fluidsynth<2.1.8	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2021-28421
+#fluidsynth<2.1.8	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2021-28421	# rejected, duplicate of CVE-2021-21417
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-28300
 gradle<7.0	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-29427
 gradle<7.0	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2021-29428
@@ -21503,7 +21503,7 @@ postgresql12<12.7	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2021
 postgresql13<13.3	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2021-32027
 libaom<3.1.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-30474
 xdg-utils<1.1.3	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2015-1877
-fuse<2.9.8	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-33805
+#fuse<2.9.8	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-33805	# rejected, duplicate of CVE-2018-10906
 py{36,37,38,39}-wagtail<2.12.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32681
 ruby-addressable<2.8.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32740
 go<1.0.2	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2012-2666
@@ -21529,7 +21529,7 @@ apache-tomcat>=9.0<9.0.46	authentication-bypass	https://nvd.nist.gov/vuln/detail
 apache-tomcat<8.5.67		http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2021-33037
 apache-tomcat>=9.0<9.0.47	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2021-33037
 bat<0.18.2			arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-36753
-exiv2<0.27.3			integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-19715
+#exiv2<0.27.3			integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-19715	# rejected, duplicate of CVE-2019-13110
 exiv2<0.27.2			buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-19716
 fail2ban<0.11.3			remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2021-32749
 go115<1.15.14			denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-34558
@@ -21624,7 +21624,7 @@ webkit-gtk<2.32.3	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-20
 ap24-auth-openidc<2.4.9 insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2021-32791
 ap24-auth-openidc<2.4.9	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2021-32792
 claws-mail<3.18.0	clickjacking			https://nvd.nist.gov/vuln/detail/CVE-2021-37746
-exiv2<0.27.4		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-31291
+#exiv2<0.27.4		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-31291	# rejected, duplicate of CVE-2021-29457
 exiv2<0.27.4		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-31292
 fetchmail<6.4.20	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-36386
 go115<1.15.13		invalid-validation		https://nvd.nist.gov/vuln/detail/CVE-2021-33195
@@ -21711,7 +21711,7 @@ libsixel<1.8.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21677
 perl>=5.32.0<5.34.0nb3	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2021-36770
 php{56,72,73,74,80}-typo3<7.6.53	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32768
 py{27,36,37,38,39}-notebook<6.4.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32798
-qt5-qtbase<5.14.1	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-24741
+#qt5-qtbase<5.14.1	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-24741	# rejected, duplicate of CVE-2020-0570
 qt5-qtbase<5.14.0	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-24742
 qt5-qtbase<5.15.6	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-38593
 trojita-[0-9]*	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2021-38372
@@ -22139,7 +22139,7 @@ ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38094
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38093
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38092
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38091
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38089
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38089	# rejected, duplicate of CVE-2020-22035
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38090
 libgig-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-32294
 faad2<2.10.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-32278
@@ -22154,16 +22154,16 @@ gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-32270
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-32269
 gpac-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-32268
 icu<67.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-21913
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20901
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20900
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20899
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20901	# rejected, duplicate of CVE-2020-22022
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20900	# rejected, duplicate of CVE-2020-22032
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20899	# rejected, duplicate of CVE-2020-22036
 ffmpeg4-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-20902
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20897
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20897	# rejected, duplicate of CVE-2020-22035
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20898
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20896
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20895
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20894
-ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20893
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20895	# rejected, duplicate of CVE-2020-22028
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20894	# rejected, duplicate of CVE-2020-22025
+#ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20893	# rejected, duplicate of CVE-2020-22030
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20891
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20892
 #redis-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21468 Disputed, see https://github.com/redis/redis/issues/6633
@@ -22611,7 +22611,7 @@ mediawiki<1.36.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-461
 mediawiki<1.36.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-46147
 mediawiki<1.36.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-46148
 mediawikit<1.36.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-46146
-vim<8.2.3883	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-46059
+#vim<8.2.3883	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-46059	# rejected, not a vulnerability
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46051
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46049
 gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-46047
@@ -22731,7 +22731,7 @@ moodle<3.11.5	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-20
 py{36,37,38,39,310}-wagtail<2.15.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-21683
 vim<8.2.4120	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-0261
 wolfssl>=5<5.1.1	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2022-23408
-py{36,37,38,39,310}-loguru<0.6.0	remote-code-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-0329
+#py{36,37,38,39,310}-loguru<0.6.0	remote-code-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-0329	# rejected, withdrawn by CNA
 vim<8.2.4151	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-0318
 php{56,70,71,72,73,74,80}-phpmyadmin<4.9.8	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-23807
 xerces-j<2.12.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-23437
@@ -22760,7 +22760,7 @@ varnish>=6.0<6.6.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2
 varnish>=7.0<7.0.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-23959
 qemu<6.2.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-4145
 protobuf<3.15.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-22570
-tightvnc-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-23967
+#tightvnc-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-23967	# rejected, duplicate of CVE-2019-15679
 glpi<9.5.7	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-21720
 glpi<9.5.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-21719
 php{56,73,74,80}-piwigo<2.8.1	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2016-3735
@@ -23226,9 +23226,9 @@ mariadb-server>=10.4<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/
 mariadb-server>=10.6<10.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27377
 mariadb-server>=10.5<10.5.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27377
 mariadb-server>=10.4<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27377
-mariadb-server>=10.6<10.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458
-mariadb-server>=10.5<10.5.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458
-mariadb-server>=10.4<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458
+#mariadb-server>=10.6<10.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458	# rejected, duplicate of CVE-2022-27447
+#mariadb-server>=10.5<10.5.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458	# rejected, duplicate of CVE-2022-27447
+#mariadb-server>=10.4<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27458	# rejected, duplicate of CVE-2022-27447
 mariadb-server>=10.6<10.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27457
 mariadb-server>=10.5<10.5.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27457
 mariadb-server>=10.4<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27457
@@ -23738,7 +23738,7 @@ glpi<10.0.2	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-31056
 mediawiki<1.39.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-34750
 mediawiki<1.38.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-34912
 mediawiki<1.38.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-34911
-salt<3004.2.	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-2282
+#salt<3004.2.	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-2282	# rejected, mis-assigned; correct entry with CVE-2022-22967 exists
 jetty<9.4.47	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2048
 jetty<9.4.47	improper-session-handling	https://nvd.nist.gov/vuln/detail/CVE-2022-2047
 webmin<1.997	escape-sequence-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-36446
@@ -24488,8 +24488,8 @@ gpac-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-23144
 gpac-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-23143
 gpac-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-0760
 gpac-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-0770
-htmldoc<1.9.12	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-33235
-htmldoc<1.9.12	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-33236
+#htmldoc<1.9.12	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-33235	# rejected, duplicate of CVE-2022-34035
+#htmldoc<1.9.12	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-33236	# rejected, duplicate of CVE-2022-34033
 htmldoc<1.9.15	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-0137
 go117<1.17.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-32189
 go118<1.18.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-32189
@@ -25828,7 +25828,7 @@ postgresql-server>=11<12	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eo
 nodejs>=16<18	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 py{27,37,38,39,310,311,312}-aiohttp<3.9.2	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-23334
 py{27,37,38,39,310,311,312}-aiohttp<3.9.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23829
-curl<8.6.0	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2023-52071
+#curl<8.6.0	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2023-52071	# rejected, not a vulnerability
 mbedtls<2.28.7	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-23170
 mbedtls>=3<3.5.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-23170
 mbedtls<2.28.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23775
@@ -25889,7 +25889,7 @@ wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-2447
 wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24476
 wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24479
 routinator<0.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1622
-yasm-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-25760
+#yasm-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-25760	# rejected, not a vulnerability
 fontforge<20230101nb6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25081
 fontforge<20230101nb6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25082
 opendmarc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-25768
@@ -25975,7 +25975,7 @@ keepassxc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/deta
 py{27,37,38,39,310,311,312}-requests<2.32.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-35195
 py{37,38,39,310,311,312}-mysql<1.1.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-36039
 gst-plugins1-base<1.24.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-4453
-lighttpd-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-3708
+#lighttpd-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-3708	# rejected, withdrawn by CNA
 libarchive<3.7.4	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-26256
 nginx<1.26.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-31079
 nginx<1.26.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34161
@@ -26081,7 +26081,7 @@ olm-[0-9]*		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47176
 cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47076
 cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47175
-cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47177
+#cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47177	# rejected, duplicate of CVE-2024-47076
 unbound<1.21.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8508
 powerdns-recursor<4.9.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25590
 libgsf<1.14.53		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-42415
@@ -27139,7 +27139,7 @@ hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7067
 hdf5-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-7068
 hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7069
 liboqs<0.14.0	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-52473
-libsoup-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7370
+#libsoup-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7370	# rejected, not a vulnerability
 libssh<0.112	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5351
 libssh<0.112	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-5372
 libssh<0.112	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-5987
@@ -27274,7 +27274,7 @@ glpi<10.0.19	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2025-
 glpi<10.0.19	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-53357
 go123<1.23.11		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
 go124<1.24.5		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
-libsoup-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8197
+#libsoup-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8197	# rejected, withdrawn by CNA
 libssh<0.112		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-5449
 libssh<0.113		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8114
 openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48071
@@ -27323,8 +27323,8 @@ apache-tomcat>=11<11.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE
 apache-tomcat>=9<9.0.108	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
 apache-tomcat>=10<10.1.42	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
 apache-tomcat>=11<11.0.8	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
-bison-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8733
-bison-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8734
+#bison-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8733	# rejected, not a vulnerability
+#bison-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8734	# rejected, not a vulnerability
 cflow-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8735
 cflow-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8736
 chromium<139.0.7258.66	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8576
@@ -27501,7 +27501,7 @@ cJSON<1.7.19		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-26819
 cJSON<1.7.19		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-57052
 cacti<0.8.7	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2005-10004
 chromium<139.0.7258.154	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9478
-chromium<140.0.7339.80	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9864
+#chromium<140.0.7339.80	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9864	# rejected, withdrawn by CNA
 chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9865
 chromium<140.0.7339.80	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-9866
 chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9867
@@ -28522,7 +28522,7 @@ glslang<1.4.350.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-
 # disputed by upstream, considered a feature
 #gnome-settings-daemon-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2024-38394
 gnome-shell<44.5	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-43090
-gnome-shell<44.5	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-50977
+#gnome-shell<44.5	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-50977	# rejected, withdrawn by CNA
 gnome-shell<48.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-36472
 gnupg2<2.5.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-30258
 gnuplot<6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-31176
@@ -28765,7 +28765,7 @@ py{27,39,310,311,312,313,314}-pdf<6.1.3	denial-of-service	https://nvd.nist.gov/v
 py{27,39,310,311,312,313,314}-pdf<6.1.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62708
 py{27,39,310,311,312,313,314}-starlette<0.49.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62727
 rt5>=5.0.4<5.0.9	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-9158
-sqlite3<3.50.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52099
+#sqlite3<3.50.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52099	# rejected, duplicate of CVE-2025-29088
 vault<1.21.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-11621
 vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12044
 py{27,39,310,311,312,313,314}-brotli<1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6176
@@ -29159,7 +29159,7 @@ openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12495
 openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12839
 openexr<3.4.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-12840
 ruby{32,33,34}-httparty-[0-9]*	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-68696
-barcode-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-25153
+#barcode-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-25153	# rejected, withdrawn by CNA
 barcode-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-25154
 kermit-[0-9]*	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2025-68920
 gitea<1.25.2	incorrect-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-68938
@@ -29217,7 +29217,7 @@ matio-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-50343
 php{56,74,81,82,83,84}-composer<2.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67746
 py{27,39,310,311,312,313,314}-cbor2<5.8.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-68131
 ruby{32,33,34}-uri<1.0.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61594
-sox-[0-9]*	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2022-50798
+#sox-[0-9]*	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2022-50798	# rejected, duplicate of CVE-2017-11359
 lua51-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 lua52-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 lua53-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
@@ -29499,7 +29499,7 @@ openjdk21<21.0.10	multiple-vulnerabilities	https://www.oracle.com/security-alert
 bind<9.18.44		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-13878
 glib2<2.87.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-0988
 moodle-[0-9]*		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-47857
-php{56,74,81,82,83,84}-phppgadmin-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-47853
+#php{56,74,81,82,83,84}-phppgadmin-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-47853	# rejected, withdrawn by CNA
 proftpd-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-47865
 python310-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
 python311-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12781
@@ -30064,7 +30064,7 @@ capnproto<1.4.0	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026
 capnproto<1.4.0	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-32240
 chromium<145.0.7632.159	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-3536
 chromium<145.0.7632.159	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-3538
-chromium<145.0.7632.159	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2026-3539
+#chromium<145.0.7632.159	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2026-3539	# rejected, not a vulnerability
 chromium<145.0.7632.159	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3540
 chromium<145.0.7632.159	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3541
 chromium<145.0.7632.159	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-3542
@@ -30190,8 +30190,8 @@ python313<3.13.13	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
 python314<3.14.4	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2026-2297
 quickjs<20251212	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69653
 quickjs<20251212	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-69654
-rustdesk-server-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-30784
-rustdesk-server-[0-9]*	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2026-30790
+#rustdesk-server-[0-9]*	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2026-30784	# rejected, withdrawn by CNA
+#rustdesk-server-[0-9]*	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2026-30790	# rejected, withdrawn by CNA
 rustdesk-server-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-30796
 sqlite3<3.51.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-70873
 vaultwarden<1.35.0	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-27801
@@ -30424,3 +30424,6 @@ nginx{,-devel}>=1.15.8<1.30.4	sensitive-information-disclosure	https://nvd.nist.
 nginx{,-devel}>=1.31.0<1.31.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-60005
 nginx{,-devel}>=0.9.6<1.30.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
 nginx{,-devel}>=1.31.0<1.31.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
+clamav<0.92		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2007-6335
+echoping-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2010-5111
+sqlite3>=3.49.0<3.49.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29088
