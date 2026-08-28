@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/21 16:24:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/08/28 19:03:25 ryoon Exp $
+include/dvdread/attributes.h
 include/dvdread/bitreader.h
+include/dvdread/dvd_filesystem.h
 include/dvdread/dvd_reader.h
 include/dvdread/dvd_udf.h
 include/dvdread/ifo_print.h
@@ -9,11 +11,12 @@ include/dvdread/nav_print.h
 include/dvdread/nav_read.h
 include/dvdread/nav_types.h
 include/dvdread/version.h
-lib/libdvdread.la
+lib/libdvdread.a
+lib/libdvdread.so
+lib/libdvdread.so.8
+lib/libdvdread.so.8.2.0
 lib/pkgconfig/dvdread.pc
 share/doc/libdvdread/AUTHORS
 share/doc/libdvdread/COPYING
-share/doc/libdvdread/ChangeLog
 share/doc/libdvdread/NEWS
-share/doc/libdvdread/README
-share/doc/libdvdread/TODO
+share/doc/libdvdread/README.md
