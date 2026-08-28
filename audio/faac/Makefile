@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/03/05 11:59:14 nia Exp $
+# $NetBSD: Makefile,v 1.20 2026/08/28 14:03:01 adam Exp $
 
-DISTNAME=	faac-1.31.1
+DISTNAME=	faac-1.50
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=knik0/}
 GITHUB_TAG=	${DISTNAME}
@@ -10,13 +10,9 @@ HOMEPAGE=	https://github.com/knik0/faac
 COMMENT=	AAC audio encoder
 LICENSE=	gnu-lgpl-v2
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf autoreconf automake
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libfaac/faac.pc.in
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
-
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

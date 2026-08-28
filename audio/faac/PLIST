@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2025/03/05 11:59:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/08/28 14:03:01 adam Exp $
 bin/faac
 include/faac.h
 include/faaccfg.h
-lib/libfaac.la
-lib/libfaac_drm.la
+lib/libfaac.a
+lib/libfaac.so
+lib/libfaac.so.0
+lib/libfaac.so.0.0.0
 lib/pkgconfig/faac.pc
 man/man1/faac.1
