@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/08/24 22:09:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/28 09:08:55 leot Exp $
 
-DISTNAME=	bulk-test-go-20260825
+DISTNAME=	bulk-test-go-20260828
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -113,22 +113,31 @@ DEPENDS+=	mangos-[0-9]*:../../net/mangos
 #DEPENDS+=	minikube-[0-9]*:../../net/minikube
 DEPENDS+=	nats-server-[0-9]*:../../net/nats-server
 DEPENDS+=	obfs4proxy-[0-9]*:../../net/obfs4proxy
-DEPENDS+=	opentofu-[0-9]*:../../net/opentofu
+DEPENDS+=	opentofu110-[0-9]*:../../net/opentofu110
+DEPENDS+=	opentofu111-[0-9]*:../../net/opentofu111
+DEPENDS+=	opentofu112-[0-9]*:../../net/opentofu112
+DEPENDS+=	opentofu16-[0-9]*:../../net/opentofu16
 DEPENDS+=	qrcp-[0-9]*:../../net/qrcp
 DEPENDS+=	rclone-[0-9]*:../../net/rclone
 DEPENDS+=	scaleway-cli-[0-9]*:../../net/scaleway-cli
 DEPENDS+=	snowflake-[0-9]*:../../net/snowflake
 DEPENDS+=	stern-[0-9]*:../../net/stern
 DEPENDS+=	syncthing-[0-9]*:../../net/syncthing
-DEPENDS+=	terraform-[0-9]*:../../net/terraform
 DEPENDS+=	terraform-provider-archive-[0-9]*:../../net/terraform-provider-archive
-DEPENDS+=	terraform-provider-aws-[0-9]*:../../net/terraform-provider-aws
-DEPENDS+=	terraform-provider-kubernetes-[0-9]*:../../net/terraform-provider-kubernetes
+DEPENDS+=	terraform-provider-aws3-[0-9]*:../../net/terraform-provider-aws3
+DEPENDS+=	terraform-provider-kubernetes1-[0-9]*:../../net/terraform-provider-kubernetes1
 DEPENDS+=	terraform-provider-local-[0-9]*:../../net/terraform-provider-local
 DEPENDS+=	terraform-provider-null-[0-9]*:../../net/terraform-provider-null
-DEPENDS+=	terraform-provider-random-[0-9]*:../../net/terraform-provider-random
+DEPENDS+=	terraform-provider-random2-[0-9]*:../../net/terraform-provider-random2
 DEPENDS+=	terraform-provider-template-[0-9]*:../../net/terraform-provider-template
 DEPENDS+=	terraform-provider-vultr-[0-9]*:../../net/terraform-provider-vultr
+DEPENDS+=	terraform012-[0-9]*:../../net/terraform012
+DEPENDS+=	terraform013-[0-9]*:../../net/terraform013
+DEPENDS+=	terraform014-[0-9]*:../../net/terraform014
+DEPENDS+=	terraform015-[0-9]*:../../net/terraform015
+DEPENDS+=	terraform11-[0-9]*:../../net/terraform11
+DEPENDS+=	terraform13-[0-9]*:../../net/terraform13
+DEPENDS+=	terraform15-[0-9]*:../../net/terraform15
 DEPENDS+=	tut-[0-9]*:../../net/tut
 DEPENDS+=	vultr-cli-[0-9]*:../../net/vultr-cli
 DEPENDS+=	wireguard-go-[0-9]*:../../net/wireguard-go
