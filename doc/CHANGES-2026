@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5637 2026/08/28 19:47:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5638 2026/08/28 19:52:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8315,3 +8315,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libdvdread to 7.1.1 [ryoon 2026-08-28]
 	Updated multimedia/libdvdnav to 7.0.0 [ryoon 2026-08-28]
 	Updated print/qpdf to 12.4.1 [wiz 2026-08-28]
+	Updated devel/py-ruff to 0.16.5 [wiz 2026-08-28]
