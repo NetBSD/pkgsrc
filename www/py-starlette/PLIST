@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/21 14:15:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/08/28 09:33:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -51,6 +51,9 @@ ${PYSITELIB}/starlette/middleware/authentication.pyo
 ${PYSITELIB}/starlette/middleware/base.py
 ${PYSITELIB}/starlette/middleware/base.pyc
 ${PYSITELIB}/starlette/middleware/base.pyo
+${PYSITELIB}/starlette/middleware/body_limit.py
+${PYSITELIB}/starlette/middleware/body_limit.pyc
+${PYSITELIB}/starlette/middleware/body_limit.pyo
 ${PYSITELIB}/starlette/middleware/cors.py
 ${PYSITELIB}/starlette/middleware/cors.pyc
 ${PYSITELIB}/starlette/middleware/cors.pyo
