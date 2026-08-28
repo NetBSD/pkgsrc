@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2026/06/28 15:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/08/28 14:15:57 adam Exp $
 
-DISTNAME=	jupyter_client-8.9.1
+DISTNAME=	jupyter_client-8.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -18,9 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-zmq>=25.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.14:../../devel/py-ipykernel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-jupyter>=0.4.1:../../www/py-test-jupyter
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
