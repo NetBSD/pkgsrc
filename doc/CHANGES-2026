@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5623 2026/08/28 11:30:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5624 2026/08/28 11:31:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8299,3 +8299,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-jsonrpclib-pelix to 1.2.0 [adam 2026-08-28]
 	Updated textproc/py-types-docutils to 0.23.0.20260827 [adam 2026-08-28]
 	Added inputmethod/anthy-unicode version 1.0.0.20260213 [wiz 2026-08-28]
+	Added inputmethod/anthy-unicode-elisp version 1.0.0.20260213 [wiz 2026-08-28]
