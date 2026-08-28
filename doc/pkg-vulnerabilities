@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.787 2026/08/28 10:32:46 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.788 2026/08/28 10:46:05 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16406,7 +16406,7 @@ couchdb<2.3.0	remote-privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2
 nagios-base<4.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18245
 icinga-base>=2<2.6.2	cross-site-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2018-18246
 icinga-base>=2<2.6.2	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2018-18247
-icinga-base>=2		cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2018-18248
+#icinga-base>=2		cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2018-18248	# CVE is for Icinga Web 2, not Icinga 1.x; corrected entry added at end of file
 icinga-base>=2<2.6.2	code-injection				https://nvd.nist.gov/vuln/detail/CVE-2018-18249
 icinga-base>=2<2.6.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-18250
 yara-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-19974
@@ -20217,7 +20217,7 @@ php{56,70,71,72,73,74}-drupal>=8.9<8.9.9	remote-code-execution	https://nvd.nist.
 xpdf-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-25725
 webkit-gtk<2.30.3	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2020-0008.html
 webkit-gtk<2.30.3	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2020-0009.html
-blosc-[0-9]*	heap-overflow				https://nvd.nist.gov/vuln/detail/CVE-2020-29367
+blosc2<2.0.0rc1	heap-overflow				https://nvd.nist.gov/vuln/detail/CVE-2020-29367
 consul<1.6.10	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-28053
 gitea<1.12.6	crlf-attack				https://nvd.nist.gov/vuln/detail/CVE-2020-28991
 jetty<9.4.35.20201120	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2020-27218
@@ -20431,7 +20431,8 @@ ffmpeg4<4.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-35965
 gdm<3.38.2.1	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-27837
 go-text-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-28851
 go-text-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-28852
-icinga-base>=2<2.12.3	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-29663
+icinga2>=2.8<2.11.8	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-29663
+icinga2>=2.12<2.12.3	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-29663
 mantis<2.24.4	sql-injection				https://nvd.nist.gov/vuln/detail/CVE-2020-28413
 mantis<2.24.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-35849
 mediawiki<1.35.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2020-35474
@@ -24813,10 +24814,10 @@ php{56,73,74,80,81}-gd>=7.4.0<7.4.33	sensitive-information-disclosure	https://nv
 php{56,73,74,80,81}-gd>=8.0.0<8.0.25	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-31630
 php{56,73,74,80,81}-gd>=8.1.0<8.1.12	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-31630
 php{73,74,80,81}-phpmyadmin>=5<5.2.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-22452
-phppgadmin<6.17	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-4223
+#phppgadmin<6.17	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-4223	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 php{56,73,74,80,81}-phpmyadmin<4.9.11	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-25727
 php{73,74,80,81}-phpmyadmin>=5<5.2.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-25727
-phppgadmin>=4<6.14	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-22298
+#phppgadmin>=4<6.14	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-22298	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 phoronix-test-suite-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-40704
 mplayer<15.0	division-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2022-38865
 mencoder<15.0	division-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2022-38865
@@ -26162,8 +26163,8 @@ firefox<136			use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 thunderbird<128.8		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 tinyxml2<10.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50615
 freetype2<2.13.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-27363
-php81<8.1.32	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
-php82<8.2.28	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
+#php81<8.1.32	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235	# CVE-2024-11235 affects only PHP 8.3/8.4 (see entries below)
+#php82<8.2.28	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235	# CVE-2024-11235 affects only PHP 8.3/8.4 (see entries below)
 php83<8.3.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 php84<8.4.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 expat<2.7.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8176
@@ -26379,7 +26380,7 @@ gimp<3.0.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-5473
 go124<1.24.4	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4673
 go123<1.23.10	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4673
 go124<1.24.4	insecure-key-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-22874
-go123<1.23.10	insecure-key-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-22874
+#go123<1.23.10	insecure-key-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-22874	# CVE-2025-22874 affects only Go 1.24 (see previous entry)
 assimp<6.0.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2750
 assimp<6.0.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-2751
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-2757
@@ -27533,7 +27534,7 @@ p5-CGI-Simple<1.282	http-response-splitting	https://nvd.nist.gov/vuln/detail/CVE
 p5-Cpanel-JSON-XS<4.40	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40929
 p5-JSON-XS<4.04		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40928
 pcre2<10.46	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-58050
-php{56,74,81,82,83,84}-phppgadmin<9.8	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2025-9636
+#php{56,74,81,82,83,84}-phppgadmin<9.8	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2025-9636	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 podman>=4.0.0<5.6.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-9566
 py{27,39,310,311,312,313}-deepdiff<8.6.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-58367
 py{27,39,310,311,312,313}-django<4.2.24		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-57833
@@ -27548,7 +27549,7 @@ ffmpeg6-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 ffmpeg7-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 ffmpeg8-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9951
 libssh<0.113	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8277
-py{27,39,310,311,312,313}-installer<6.0.0	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-59042
+#py{27,39,310,311,312,313}-installer<6.0.0	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-59042	# CVE is for PyInstaller, not pypa/installer; pkgsrc does not package PyInstaller
 py{27,39,310,311,312,313}-octoprint<1.11.3	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-58180
 shibboleth-sp<3.5.1	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-9943
 php{56,74,81,82,83,84}-typo3<13.4.18	open-redirect		https://nvd.nist.gov/vuln/detail/CVE-2025-59013
@@ -28922,10 +28923,10 @@ chromium<136.0.7103.59	sandbox-escape		https://nvd.nist.gov/vuln/detail/CVE-2025
 chromium<140.0.7339.80	ui-spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-13107
 chromium<133.0.6943.141	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9479
 jitsi-meet<2.0.10532	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-64754
-php{56,74,81,82,83,84}-phppgadmin<9.10	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-12762
-php{56,74,81,82,83,84}-phppgadmin<9.10	command-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-12763
-php{56,74,81,82,83,84}-phppgadmin<9.10	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-12764
-php{56,74,81,82,83,84}-phppgadmin<9.10	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12765
+#php{56,74,81,82,83,84}-phppgadmin<9.10	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-12762	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
+#php{56,74,81,82,83,84}-phppgadmin<9.10	command-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-12763	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
+#php{56,74,81,82,83,84}-phppgadmin<9.10	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-12764	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
+#php{56,74,81,82,83,84}-phppgadmin<9.10	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-12765	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 postgresql14-client<14.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
 postgresql15-client<15.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
 postgresql16-client<16.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12818
@@ -29105,7 +29106,7 @@ jenkins<2.540	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6
 jenkins<2.540	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-67639
 libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-14523
 miniflux<2.2.15	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2025-67713
-php{56,74,81,82,83,84}-phppgadmin<9.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-13780
+#php{56,74,81,82,83,84}-phppgadmin<9.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-13780	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 py{27,39,310,311,312,313,314}-tornado<6.5.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-67724
 py{27,39,310,311,312,313,314}-tornado<6.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67725
 py{27,39,310,311,312,313,314}-tornado<6.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-67726
@@ -29713,7 +29714,7 @@ moodle<5.0.4	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-67
 moodle<5.0.4	privilege-escalation			https://nvd.nist.gov/vuln/detail/CVE-2025-67856
 moodle<5.0.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-67857
 mupdf<1.27.1	double-free	https://nvd.nist.gov/vuln/detail/CVE-2026-25556
-php{56,74,81,82,83,84}-phppgadmin<9.122	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1707
+#php{56,74,81,82,83,84}-phppgadmin<9.122	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2026-1707	# CVE is for pgAdmin 4, not phpPgAdmin; pkgsrc has no pgAdmin 4 package
 py{27,310,311,312,313,314}-django<4.2.28	timing-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-13473
 py{27,310,311,312,313,314}-django>=5<5.2.11	timing-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-13473
 py{27,310,311,312,313,314}-django<4.2.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-14550
@@ -30424,6 +30425,7 @@ nginx{,-devel}>=1.15.8<1.30.4	sensitive-information-disclosure	https://nvd.nist.
 nginx{,-devel}>=1.31.0<1.31.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2026-60005
 nginx{,-devel}>=0.9.6<1.30.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
 nginx{,-devel}>=1.31.0<1.31.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2026-42533
+icingaweb2-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18248
 libreoffice<5.1.6		arbitrary-file-disclosure	https://www.libreoffice.org/about-us/security/advisories/cve-2017-3157/
 libreoffice>=5.2<5.2.2	arbitrary-file-disclosure	https://www.libreoffice.org/about-us/security/advisories/cve-2017-3157/
 zabbix-server-{mysql,postgresql}>=7.0.0alpha1<7.0.0rc3	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-22116
