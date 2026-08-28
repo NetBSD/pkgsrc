@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2026/06/28 15:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/08/28 10:41:14 adam Exp $
 
-DISTNAME=	ipykernel-7.2.0
+DISTNAME=	ipykernel-7.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -14,14 +14,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.22:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.1:../../net/py-comm
 DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.6.5:../../devel/py-debugpy
 DEPENDS+=	${PYPKGPREFIX}-ipython>=7.23.1:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=8.8.0:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=8.9.0:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1:../../graphics/py-matplotlib-inline
-DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.4:../../devel/py-nest-asyncio
+DEPENDS+=	${PYPKGPREFIX}-nest-asyncio2>=1.7.0:../../devel/py-nest-asyncio2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.4.1:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=25:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
