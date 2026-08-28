@@ -1,0 +1,4 @@
+Emacs lisp files for anthy-unicode, the maintained Unicode fork of anthy.
+They install as anthy-unicode.el and friends and talk to
+anthy-agent-unicode, so they do not collide with inputmethod/anthy-elisp
+and both can be installed at once.

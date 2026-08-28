@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2026/08/28 11:30:35 wiz Exp $
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-azik.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-azik.elc
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-conf.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-conf.elc
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-dic.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-dic.elc
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-isearch.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-isearch.elc
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-kyuri.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode-kyuri.elc
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode.el
+${EMACS_LISPPREFIX}/anthy-unicode/anthy-unicode.elc
+${EMACS_LISPPREFIX}/anthy-unicode/leim-list.el
