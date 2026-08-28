@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/04/10 07:35:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/08/28 09:36:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -30,6 +30,9 @@ ${PYSITELIB}/jwcrypto/tests-cookbook.pyo
 ${PYSITELIB}/jwcrypto/tests.py
 ${PYSITELIB}/jwcrypto/tests.pyc
 ${PYSITELIB}/jwcrypto/tests.pyo
+${PYSITELIB}/jwcrypto/tests_mldsa.py
+${PYSITELIB}/jwcrypto/tests_mldsa.pyc
+${PYSITELIB}/jwcrypto/tests_mldsa.pyo
 ${PYSITELIB}/jwcrypto/version.py
 ${PYSITELIB}/jwcrypto/version.pyc
 ${PYSITELIB}/jwcrypto/version.pyo
