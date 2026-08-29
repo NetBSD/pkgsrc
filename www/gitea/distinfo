@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2026/08/14 23:48:56 khorben Exp $
+$NetBSD: distinfo,v 1.46 2026/08/29 19:02:04 khorben Exp $
 
 BLAKE2s (cloud.google.com_go_compute_metadata_@v_v0.9.0.mod) = 6d6f2a02dedc26ee6e1b57da8f97bdd5aa512716eb8c2cd7311a69f452a33e15
 SHA512 (cloud.google.com_go_compute_metadata_@v_v0.9.0.mod) = 9e96965b9a4aacd90b41e0716d4089c31c4fee4e2147fa0aaf9afc504c9d0da6379d5b1e13fb628fef403784e9a3a36edcb59ac400b2abab1ed3668a1dd2fb42
@@ -33,9 +33,9 @@ Size (filippo.io_edwards25519_@v_v1.2.0.zip) = 56057 bytes
 BLAKE2s (gitea-1.27.2-frontend.tar.gz) = 6912f3513a324992c7761129b04891b37ab313fa21832c905b91281918100401
 SHA512 (gitea-1.27.2-frontend.tar.gz) = 6055edaf725ac4820d3f61ae9dc3c60ba8f3147abbb53928df619b0cac45506f798407300e3378f22a6c2d96b278fdf7e13b57a6a74d8dbfeeae7308e7522c3a
 Size (gitea-1.27.2-frontend.tar.gz) = 5536202 bytes
-BLAKE2s (gitea-1.27.2.tar.gz) = 70197543cc6b770eb0bc18e2b8512866a58dc3a192f786cead7665f47b12cecb
-SHA512 (gitea-1.27.2.tar.gz) = 4446d8d6fc9d705bca021b9f988e775ae090616ecc858d8fbb74fcd06a24df18d8776e422472b4b8e37aeb9451934e18328d49a22d3e0935ca64130be3a40113
-Size (gitea-1.27.2.tar.gz) = 7286210 bytes
+BLAKE2s (gitea-1.27.3.tar.gz) = c5784b48149f186cd44496b9b53dfb5a79145bd4fb9db5ba4773e50f618af265
+SHA512 (gitea-1.27.3.tar.gz) = ea8fcf6be14b06eee20bd7d8236fc31ceaa26fb7f7c3c4a908ebb761320884a33630e47f2b15cdd8bb121d1c285cc146169b7e4556374d48194dc72de3b1b87a
+Size (gitea-1.27.3.tar.gz) = 7296457 bytes
 BLAKE2s (gitea.com_gitea_runner_@v_v1.0.8.mod) = cf6a32cffdbc2d0577dd2408a6e987e77c05109f8710879f093b8ad5a3e9c59d
 SHA512 (gitea.com_gitea_runner_@v_v1.0.8.mod) = a41a6c741eb3eca5658924c936d7efc1d96d83752db58ead79e740c225e9e4cd9c00f130c58869beeb012effa05829fbe3a27e26f72fc7c77f06079134d2af0f
 Size (gitea.com_gitea_runner_@v_v1.0.8.mod) = 4867 bytes
