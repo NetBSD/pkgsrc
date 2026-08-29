@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5641 2026/08/29 19:02:18 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.5642 2026/08/29 19:49:55 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8319,3 +8319,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.1020 [morr 2026-08-28]
 	Updated net/dnscontrol to 5.0.2 [drixter 2026-08-28]
 	Updated www/gitea to 1.27.3 [khorben 2026-08-29]
+	Updated mail/sympa to 6.2.80 [bouyer 2026-08-29]
