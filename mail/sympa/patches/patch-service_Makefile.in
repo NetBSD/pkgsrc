@@ -1,0 +1,13 @@
+$NetBSD: patch-service_Makefile.in,v 1.1 2026/08/29 19:47:06 bouyer Exp $
+
+--- service/Makefile.in.orig	2026-08-28 11:29:49.946997657 +0200
++++ service/Makefile.in	2026-08-28 11:29:54.096222538 +0200
+@@ -539,7 +539,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-initSCRIPTS install-unitsDATA
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 

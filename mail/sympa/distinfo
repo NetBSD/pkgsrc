@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:54:31 nia Exp $
+$NetBSD: distinfo,v 1.24 2026/08/29 19:47:06 bouyer Exp $
 
-BLAKE2s (sympa-6.2.56.tar.gz) = af69dbe7eaca31ea56c7d531bb8e14d8c650e0eee98e68d54b1d62299372eb9f
-SHA512 (sympa-6.2.56.tar.gz) = eb83e773bc23f1e5100fac8efd6091b7767f67ffbeeac42b26d6ec42629c61ff8e8372541924afbaccd5f34d208f53454dec40581dbd162fa58c85301e1a3414
-Size (sympa-6.2.56.tar.gz) = 12864493 bytes
-SHA1 (patch-aa) = 5a9dbd15705665e2c897b5f295cd8facab3ebcf1
-SHA1 (patch-ab) = 4dc1d7e4b5dccf21397783607acf854017301a7b
-SHA1 (patch-ac) = d66d8bc45ddcd5aacc22f213f3249dd6faa706b6
+BLAKE2s (sympa-6.2.80.tar.gz) = 55a3287bbc36516110a7803e6db62a42613bf7a1ecbdfb03ee2922e9f7234193
+SHA512 (sympa-6.2.80.tar.gz) = 825d5fc8b1a1f570df904988044dcbc9664e52b84600a578d4db3eb1d9fb88b300120082733ded148f44776bdfe7e3f96de384e8ddb00b0f41522078743e86dd
+Size (sympa-6.2.80.tar.gz) = 13640755 bytes
+SHA1 (patch-Makefile.in) = 7d84cd0a3e499e95a10df1c246f8bea31ace0f98
+SHA1 (patch-service_Makefile.in) = c8deb1526d1d19f6982f7186c171f458ef41b8f5

@@ -1,26 +1,33 @@
-$NetBSD: patch-aa,v 1.10 2020/04/27 17:57:52 bouyer Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2026/08/29 19:47:06 bouyer Exp $
 
---- Makefile.in.orig	2019-09-29 11:02:14.000000000 +0200
-+++ Makefile.in	2019-10-17 14:40:43.000000000 +0200
-@@ -958,59 +958,30 @@
- 		$(confdir) $(sysconfdir); do \
+--- Makefile.in.orig	2026-08-14 07:06:17.723111300 +0200
++++ Makefile.in	2026-08-28 11:44:24.576665046 +0200
+@@ -1020,62 +1020,22 @@
+ 	@for dir in $(modulesdir)/Sympa/Template/Plugin; do \
  		if [ ! -d $(DESTDIR)$$dir ] ; then \
  			echo "Creating $(DESTDIR)$$dir"; \
 -			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
 +			$(INSTALL) -o $(USER) -g $(GROUP) -d -m 755 $(DESTDIR)$$dir; \
  		fi; \
+ 	done
+-	@echo "Creating writable directories"
+-	-@for dir in $(expldir) $(spooldir) $(bouncedir) $(arcdir) $(piddir) \
+-		$(confdir) $(sysconfdir); do \
+-		if [ ! -d $(DESTDIR)$$dir ] ; then \
+-			echo "Creating $(DESTDIR)$$dir"; \
+-			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
+-		fi; \
 -		chown $(USER) $(DESTDIR)$$dir; \
 -		chgrp $(GROUP) $(DESTDIR)$$dir; \
- 	done
- 	-@for subdir in automatic bounce msg task tmp; do \
- 		if [ ! -d $(DESTDIR)$(spooldir)/$$subdir ] ; then \
- 			echo "Creating $(DESTDIR)$(spooldir)/$$subdir"; \
+-	done
+-	-@for subdir in automatic bounce msg task tmp; do \
+-		if [ ! -d $(DESTDIR)$(spooldir)/$$subdir ] ; then \
+-			echo "Creating $(DESTDIR)$(spooldir)/$$subdir"; \
 -			$(INSTALL) -d -m 750 $(DESTDIR)$(spooldir)/$$subdir; \
-+			$(INSTALL) -o $(USER) -g $(GROUP) -d -m 750 $(DESTDIR)$(spooldir)/$$subdir; \
- 		fi; \
+-		fi; \
 -		chown $(USER) $(DESTDIR)$(spooldir)/$$subdir; \
 -		chgrp $(GROUP) $(DESTDIR)$(spooldir)/$$subdir; \
- 	done
+-	done
  
  installconfig: installdir
 -	@echo "Installing basic configuration ..."
@@ -30,11 +37,6 @@ $NetBSD: patch-aa,v 1.10 2020/04/27 17:57:52 bouyer Exp $
 -		chown $(USER) $(DESTDIR)$(confdir)/sympa.conf; \
 -		chgrp $(GROUP) $(DESTDIR)$(confdir)/sympa.conf; \
 -	fi
- 	@echo "Installing configuration template ..."
- 	-@echo "installing sympa.conf-dist"; \
--	$(INSTALL) -m 644 -T sympa.conf-dist $(DESTDIR)$(confdir)/sympa.conf-dist; \
--	chown $(USER) $(DESTDIR)$(confdir)/sympa.conf-dist; \
--	chgrp $(GROUP) $(DESTDIR)$(confdir)/sympa.conf-dist
 -	-@if [ ! -f $(DESTDIR)$(sysconfdir)/data_structure.version ]; then \
 -		cd $(DESTDIR)$(sysconfdir); \
 -		echo "# automatically created file" >> data_structure.version; \
@@ -62,16 +64,16 @@ $NetBSD: patch-aa,v 1.10 2020/04/27 17:57:52 bouyer Exp $
 -		chmod 644 $(DESTDIR)$(sysconfdir)/README; \
 -	fi
 +	$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
-+	$(INSTALL) -m 644 sympa.conf-dist $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf; \
-+	cd $(DESTDIR)$(prefix)/share/examples/sympa; \
-+	echo "# automatically created file" >> data_structure.version; \
-+	echo "# you should not modify it" >> data_structure.version; \
-+	echo $(VERSION) >> data_structure.version;
++	$(INSTALL) -m 644 sympa.conf $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf; \
 +	echo "Creating $(DESTDIR)$(prefix)share/examples/sympa/README"; \
 +	$(SED) \
 +		-e 's|--sysconfdir--|$(sysconfdir)|' \
 +		-e 's|--defaultdir--|$(defaultdir)|' \
-+		$(srcdir)/etc_README > README; \
++		$(srcdir)/etc_README > $(DESTDIR)$(sysconfdir)/README; \
++	cd $(DESTDIR)$(prefix)/share/examples/sympa; \
++	echo "# automatically created file" >> data_structure.version; \
++	echo "# you should not modify it" >> data_structure.version; \
++	echo $(VERSION) >> data_structure.version; \
  
  nextstep: 
  	@echo ""
