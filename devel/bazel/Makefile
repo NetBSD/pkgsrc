@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/05/03 08:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/08/29 08:41:01 wiz Exp $
 
 # Java project does not work as follows:
 # Error: could not find libjava.so
@@ -27,10 +27,10 @@ HOMEPAGE=	https://bazel.build/
 COMMENT=	Fast and correct build automation tool
 LICENSE=	apache-2.0
 
-BROKEN_ON_PLATFORM=	${LP32PLATFORMS}
+BROKEN_ON_PLATFORM+=	${LP32PLATFORMS}
 # external/com_google_absl/absl/debugging/internal/elf_mem_image.cc:355:43: error: member reference base type 'const Elf64_Versym' (aka 'const unsigned short') is not a structure or union
 # needs equivalent of devel/abseil/patches/patch-absl_debugging_internal_elf__mem__image.cc
-BROKEN_ON_PLATFORM=	NetBSD-11.99.*-*
+BROKEN_ON_PLATFORM+=	NetBSD-11.99.*-*
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	bash:run pkg-config unzip zip
