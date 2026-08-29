@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2026/08/18 19:01:10 drixter Exp $
+# $NetBSD: Makefile,v 1.102 2026/08/29 19:55:15 drixter Exp $
 
 DISTNAME=	knot-3.5.7
 CATEGORIES=	net
@@ -29,6 +29,9 @@ CONFIGURE_ARGS.NetBSD+=	--enable-recvmmsg=no
 .if ${MACHINE_ARCH} == "i386"
 CFLAGS+=	-march=i586
 .endif
+
+CFLAGS.SunOS+=	-D_XPG4_2
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake pkg-config
