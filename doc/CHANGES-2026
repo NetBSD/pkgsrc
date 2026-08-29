@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5643 2026/08/29 20:03:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5644 2026/08/29 21:39:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8321,3 +8321,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/gitea to 1.27.3 [khorben 2026-08-29]
 	Updated mail/sympa to 6.2.80 [bouyer 2026-08-29]
 	Updated sysutils/netbsd_exporter to 0.9.4nb1 [wiz 2026-08-29]
+	Updated textproc/R-stringi to 1.8.9 [mef 2026-08-29]
