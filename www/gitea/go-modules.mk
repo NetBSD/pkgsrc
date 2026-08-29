@@ -1,5 +1,4 @@
-===> Extracting for gitea-1.27.2
-# $NetBSD: go-modules.mk,v 1.13 2026/08/14 23:48:56 khorben Exp $
+# $NetBSD: go-modules.mk,v 1.14 2026/08/29 19:02:04 khorben Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/compute/metadata/@v/v0.9.0.zip
