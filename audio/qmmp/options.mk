@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2025/03/31 16:50:45 nia Exp $
+# $NetBSD: options.mk,v 1.6 2026/08/30 16:07:36 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmmp
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
-PKG_SUPPORTED_OPTIONS+=		ffmpeg musepack wavpack sidplay
+PKG_SUPPORTED_OPTIONS+=		cdio ffmpeg musepack wavpack sidplay
 PKG_SUGGESTED_OPTIONS+=		ffmpeg wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
@@ -30,6 +30,14 @@ PLIST.jack=	yes
 .  include "../../audio/jack/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DUSE_JACK=OFF
+.endif
+
+PLIST_VARS+=	cdio
+.if !empty(PKG_OPTIONS:Mcdio)
+PLIST.cdio=	yes
+.  include "../../misc/libcdio-paranoia/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DUSE_CDA=OFF
 .endif
 
 PLIST_VARS+=	ffmpeg

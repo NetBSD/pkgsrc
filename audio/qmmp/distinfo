@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2025/03/31 16:50:45 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/08/30 16:07:36 ryoon Exp $
 
-BLAKE2s (qmmp-1.7.4.tar.bz2) = ef55a056b4e45bfe1f0ceffdebf14084997306f6240caf7430fda01800019cc2
-SHA512 (qmmp-1.7.4.tar.bz2) = 4a73b32fa66aca8443005b60b08ae2e6c32a49ea4c4cc6897858c86bc3f463276356a8dd3fd5e3c77583f9cdbdd96d1b25f65c7e6afa9d68da56aaf0d7115ab8
-Size (qmmp-1.7.4.tar.bz2) = 1424474 bytes
+BLAKE2s (qmmp-1.7.11.tar.bz2) = 5bb7cddd3a35892777b99a896c2c9cccb846405b1175e622b988b5a0c8e94354
+SHA512 (qmmp-1.7.11.tar.bz2) = b73f8b014e0342b46b08c0c09e4c7ebfc0631479a07d021b88501e7a30c72009cff958b43b67482c5a76c5fd595733d63b219ba37e158d2c196b6829f435051f
+Size (qmmp-1.7.11.tar.bz2) = 1436995 bytes
 SHA1 (patch-src_qmmp_output.cpp) = f41527c9005f6f345df3dd2e8bc7a497c99dd949
