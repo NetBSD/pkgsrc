@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2026/08/25 10:30:30 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/08/30 01:13:18 gdt Exp $
 
 BLAKE2s (par2cmdline-1.3.0.tar.gz) = 3fff543aaf238e89fc97019951e0f5f64b054144f6bb165c256d5450df5145a4
 SHA512 (par2cmdline-1.3.0.tar.gz) = 297dedcd160f897772aec7bc2ca7466565f4cf16cc9e09c9a6eb788124fa114ec3f0a06befc3b58511eda959bee6f7db4c4e6f5d856b690f0caa9f0e4557570b
 Size (par2cmdline-1.3.0.tar.gz) = 3739505 bytes
+SHA1 (patch-src_par2repairer.cpp) = 8503314fc1914c5fb6ff115e8b64fd464c846627
