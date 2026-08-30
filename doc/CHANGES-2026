@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5665 2026/08/30 15:04:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5666 2026/08/30 15:05:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8343,3 +8343,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/yelp-xsl to 42.4 [wiz 2026-08-30]
 	Updated misc/yelp3 to 42.3 [wiz 2026-08-30]
 	Updated www/grafana-prometheus-datasource to 13.1.9 [wiz 2026-08-30]
+	Updated textproc/jsongrep to 0.10.0 [wiz 2026-08-30]
