@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/31 16:50:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/08/30 16:07:36 ryoon Exp $
 bin/qmmp-1
 include/qmmp-1/qmmp/abstractengine.h
 include/qmmp-1/qmmp/audioconverter.h
@@ -99,6 +99,7 @@ lib/qmmp-${QMMP_VER}/General/libstreambrowser.so
 lib/qmmp-${QMMP_VER}/General/libtrackchange.so
 lib/qmmp-${QMMP_VER}/General/libudisks.so
 lib/qmmp-${QMMP_VER}/Input/libaac.so
+${PLIST.cdio}lib/qmmp-1.7/Input/libcdaudio.so
 lib/qmmp-${QMMP_VER}/Input/libcue.so
 ${PLIST.ffmpeg}lib/qmmp-${QMMP_VER}/Input/libffmpeg.so
 lib/qmmp-${QMMP_VER}/Input/libflac.so
@@ -142,4 +143,5 @@ share/metainfo/com.ylsoftware.qmmp-1.metainfo.xml
 share/qmmp-1/images/app_icon.png
 share/qmmp-1/images/empty_cover.png
 share/qmmp-1/scripts/kwin.sh
+share/qmmp-1/scripts/kwin6.sh
 share/solid/actions/qmmp-opencda-1.desktop
