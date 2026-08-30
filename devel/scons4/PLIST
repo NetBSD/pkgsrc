@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/10/11 22:03:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/08/30 22:02:38 gdt Exp $
 bin/scons-${PYVERSSUFFIX}
 bin/scons-configure-cache-${PYVERSSUFFIX}
 bin/sconsign-${PYVERSSUFFIX}
@@ -59,6 +59,9 @@ ${PYSITELIB}/SCons/Platform/__init__.pyo
 ${PYSITELIB}/SCons/Platform/aix.py
 ${PYSITELIB}/SCons/Platform/aix.pyc
 ${PYSITELIB}/SCons/Platform/aix.pyo
+${PYSITELIB}/SCons/Platform/bsd.py
+${PYSITELIB}/SCons/Platform/bsd.pyc
+${PYSITELIB}/SCons/Platform/bsd.pyo
 ${PYSITELIB}/SCons/Platform/cygwin.py
 ${PYSITELIB}/SCons/Platform/cygwin.pyc
 ${PYSITELIB}/SCons/Platform/cygwin.pyo
@@ -1855,12 +1858,6 @@ ${PYSITELIB}/SCons/Tool/pdftex.pyo
 ${PYSITELIB}/SCons/Tool/python.py
 ${PYSITELIB}/SCons/Tool/python.pyc
 ${PYSITELIB}/SCons/Tool/python.pyo
-${PYSITELIB}/SCons/Tool/qt.py
-${PYSITELIB}/SCons/Tool/qt.pyc
-${PYSITELIB}/SCons/Tool/qt.pyo
-${PYSITELIB}/SCons/Tool/qt3.py
-${PYSITELIB}/SCons/Tool/qt3.pyc
-${PYSITELIB}/SCons/Tool/qt3.pyo
 ${PYSITELIB}/SCons/Tool/rmic.py
 ${PYSITELIB}/SCons/Tool/rmic.pyc
 ${PYSITELIB}/SCons/Tool/rmic.pyo
