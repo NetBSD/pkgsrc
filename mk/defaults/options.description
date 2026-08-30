@@ -100,6 +100,7 @@ catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
 cdb			Enable CDB support.
+cdio			Enable CD-DA support with libcdio.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cerf			Enable libcerf support.
 cg			Add support for the Cg compiler.
