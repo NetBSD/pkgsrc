@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/08/30 07:37:52 bouyer Exp $
+
+BLAKE2s (Unicode-UTF8-0.75.tar.gz) = b42f6ddd22b224984ed8ee7481e8270463fdb904f19c3afd66c04204a93f9266
+SHA512 (Unicode-UTF8-0.75.tar.gz) = fc6ff23f1aaf13b0bde9642539e757cb96d75d2944b326f59865cfe106ca881a39ebceead1fc6d344be650bd59c80db1eb460673a5394cc148e7ff78a5a4b6e3
+Size (Unicode-UTF8-0.75.tar.gz) = 175996 bytes
