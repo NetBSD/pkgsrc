@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.29 2026/08/14 12:35:37 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.30 2026/08/30 10:26:05 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -21,6 +21,7 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	c++20
 
 # XXX: As of 145.0, Mozilla source code requires GCC 10.
 # XXX: Hoewever internal botan 3.8.1 requires GCC 11.
@@ -28,7 +29,7 @@ GCC_REQD+=		11
 # To find vscanf, vfscanf, isblank and so on under NetBSD 9.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
-TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.29.4:../../devel/cbindgen
 
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
@@ -80,7 +81,7 @@ CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-test
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/libwebrtc/tools_webrtc/iwyu/apply-iwyu
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}comm/third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
-CHECK_PORTABILITY_SKIP+=	third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/rust/dogear/.github/workflows/upload-to-codecov.sh
 
 CONFIGURE_ARGS+=	--enable-release
 # Disable Rust SIMD option to fix build with lang/rust-1.33.0
@@ -138,15 +139,15 @@ SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
-SQLITE3OPTFLAG=		'-O0',
+SQLITE3OPTFLAG=			'-O0',
 .else
-SQLITE3OPTFLAG=		# empty
+SQLITE3OPTFLAG=			# empty
 .endif
-SUBST_CLASSES+=				sqlite3-opt
-SUBST_STAGE.sqlite3-opt=		pre-configure
-SUBST_MESSAGE.sqlite3-opt=		Fixing segfault in libmozsqlite3.so
-SUBST_FILES.sqlite3-opt+=		${MOZILLA_DIR}third_party/sqlite3/src/moz.build
-SUBST_VARS.sqlite3-opt+=		SQLITE3OPTFLAG
+SUBST_CLASSES+=			sqlite3-opt
+SUBST_STAGE.sqlite3-opt=	pre-configure
+SUBST_MESSAGE.sqlite3-opt=	Fixing segfault in libmozsqlite3.so
+SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
+SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
 
 # Don't use ASM functions using SVE2 instructions, otherwise it will result
 # in a linkage failure. When the build system detects that the assembler on
@@ -226,6 +227,13 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
 CONFIGURE_ARGS.NetBSD+=	--disable-sandbox
 
+PRINT_PLIST_AWK+=	/\/${MOZILLA}\// { gsub(/\/${MOZILLA}\//, "/$${MOZILLA}/") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.png$$/ { gsub(/\/${MOZILLA}.png$$/, "/$${MOZILLA}.png") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.desktop$$/ { gsub(/\/${MOZILLA}.desktop$$/, "/$${MOZILLA}.desktop") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}$$/ { gsub(/\/${MOZILLA}$$/, "/$${MOZILLA}") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}-bin$$/ { gsub(/\/${MOZILLA}-bin$$/, "/$${MOZILLA}-bin") }
+PLIST_SUBST+=		MOZILLA=${MOZILLA}
+
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
 pre-configure: create-rm-wrapper
@@ -250,7 +258,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.122.2
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.126
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -261,11 +269,11 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.82.0
+RUST_REQ=	1.90.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
-.include "../../multimedia/ffmpeg8/buildlink3.mk"
+.include "../../multimedia/ffmpeg9/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40
