@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.webdriver,v 1.1 2026/08/30 14:25:05 wiz Exp $
+bin/WebKitWebDriver
