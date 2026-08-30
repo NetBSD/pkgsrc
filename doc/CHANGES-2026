@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5647 2026/08/30 08:12:06 he Exp $
+$NetBSD: CHANGES-2026,v 1.5648 2026/08/30 08:27:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8325,3 +8325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.5.0 [drixter 2026-08-29]
 	Added converters/p5-Unicode-UTF8 version 0.75 [bouyer 2026-08-30]
 	Updated www/crates-io-cli to 4.0.3nb7 [he 2026-08-30]
+	Updated time/p5-DateTime-Locale to 1.46 [wiz 2026-08-30]
