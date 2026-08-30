@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.25 2024/08/25 06:19:18 wiz Exp $
+# $NetBSD: options.mk,v 1.26 2026/08/30 11:47:38 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
-PKG_SUPPORTED_OPTIONS=	debug enchant opengl webkit-jit wayland
+PKG_SUPPORTED_OPTIONS=	debug enchant opengl wayland webkit-jit webkit-gtk-webdriver
 PKG_SUGGESTED_OPTIONS=	enchant opengl
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
@@ -10,6 +10,8 @@ PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+PLIST_SRC=	${.CURDIR}/../../www/webkit-gtk/PLIST
 
 #
 # Platforms that support the webkit-jit option
@@ -79,4 +81,14 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_WPE_RENDERER=OFF # TODO
 .include "../../devel/wayland/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_WAYLAND_TARGET=OFF
+.endif
+
+#
+# Tool for interacting with the browser from Python. Mostly for testing.
+#
+.if !empty(PKG_OPTIONS:Mwebkit-gtk-webdriver)
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_WEBDRIVER=ON
+PLIST_SRC+=		${.CURDIR}/../../www/webkit-gtk/PLIST.webdriver
+.else
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_WEBDRIVER=OFF
 .endif
