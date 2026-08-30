@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/02/22 13:31:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/08/30 15:28:44 wiz Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -12,6 +12,9 @@ ${PYSITELIB}/isort/__init__.pyo
 ${PYSITELIB}/isort/__main__.py
 ${PYSITELIB}/isort/__main__.pyc
 ${PYSITELIB}/isort/__main__.pyo
+${PYSITELIB}/isort/_parse_utils.py
+${PYSITELIB}/isort/_parse_utils.pyc
+${PYSITELIB}/isort/_parse_utils.pyo
 ${PYSITELIB}/isort/_vendored/tomli/LICENSE
 ${PYSITELIB}/isort/_vendored/tomli/__init__.py
 ${PYSITELIB}/isort/_vendored/tomli/__init__.pyc
@@ -22,6 +25,9 @@ ${PYSITELIB}/isort/_vendored/tomli/_parser.pyo
 ${PYSITELIB}/isort/_vendored/tomli/_re.py
 ${PYSITELIB}/isort/_vendored/tomli/_re.pyc
 ${PYSITELIB}/isort/_vendored/tomli/_re.pyo
+${PYSITELIB}/isort/_vendored/tomli/_types.py
+${PYSITELIB}/isort/_vendored/tomli/_types.pyc
+${PYSITELIB}/isort/_vendored/tomli/_types.pyo
 ${PYSITELIB}/isort/_vendored/tomli/py.typed
 ${PYSITELIB}/isort/_version.py
 ${PYSITELIB}/isort/_version.pyc
@@ -114,6 +120,9 @@ ${PYSITELIB}/isort/stdlibs/py313.pyo
 ${PYSITELIB}/isort/stdlibs/py314.py
 ${PYSITELIB}/isort/stdlibs/py314.pyc
 ${PYSITELIB}/isort/stdlibs/py314.pyo
+${PYSITELIB}/isort/stdlibs/py315.py
+${PYSITELIB}/isort/stdlibs/py315.pyc
+${PYSITELIB}/isort/stdlibs/py315.pyo
 ${PYSITELIB}/isort/stdlibs/py36.py
 ${PYSITELIB}/isort/stdlibs/py36.pyc
 ${PYSITELIB}/isort/stdlibs/py36.pyo

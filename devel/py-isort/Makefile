@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/03/02 12:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/30 15:28:44 wiz Exp $
 
-DISTNAME=	isort-8.0.1
+DISTNAME=	isort-9.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -17,7 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-black>=0:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-colorama>=0:../../comms/py-colorama
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.10.1:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesmith>=0.1.3:../../devel/py-hypothesmith
-TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.7:../../devel/py-lama
 TEST_DEPENDS+=	${PYPKGPREFIX}-libcst>=0.3.18:../../lang/py-libcst
 TEST_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
@@ -26,8 +25,8 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 8.0.1
-# 5 failed, 553 passed, 1 skipped, 1 xpassed, 2 errors
+# as of 9.0.1
+# 5 failed, 632 passed, 2 skipped, 2 errors
 
 post-install:
 .for bin in isort isort-identify-imports
