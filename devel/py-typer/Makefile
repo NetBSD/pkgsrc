@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/08/07 18:49:37 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/08/30 15:40:40 wiz Exp $
 
-DISTNAME=	typer-0.27.1
+DISTNAME=	typer-0.27.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
@@ -22,8 +22,8 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	typer
 
-# as of 0.25.1
-# 22 errors
+# as of 0.27.2
+# 27 errors
 # due to py-shellingham looking for /proc/R/stat
 # https://github.com/sarugaku/shellingham/issues/99
 
