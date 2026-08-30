@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5669 2026/08/30 15:15:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5670 2026/08/30 15:18:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8347,3 +8347,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.23.2 [wiz 2026-08-30]
 	Updated shells/oh-my-posh to 30.9.0 [pin 2026-08-30]
 	Updated devel/py-filelock to 3.32.4 [wiz 2026-08-30]
+	Updated security/py-google-auth to 2.57.0 [wiz 2026-08-30]
