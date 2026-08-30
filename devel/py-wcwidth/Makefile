@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/06/30 05:40:39 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/08/30 15:42:59 wiz Exp $
 
-DISTNAME=	wcwidth-0.8.2
+DISTNAME=	wcwidth-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcwidth/}
@@ -15,8 +15,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-# as of 0.7.0
-# 1 failed, 1133 passed, 10 skipped
+# as of 0.8.3
+# 1 failed, 1363 passed, 10 skipped
+# after installation, no errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
