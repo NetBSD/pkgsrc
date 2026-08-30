@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/06/11 07:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/30 18:21:59 jperkin Exp $
 
 .include "../../math/xylib/Makefile.common"
 
@@ -7,8 +7,8 @@ PKGREVISION=	23
 COMMENT=	Converter for x-y (powder diffraction) data files
 BUILD_TARGET=	gui/xyconvert
 
-DISTINFO_FILE=	../../math/xylib/distinfo
-PATCHDIR=	../../math/xylib/patches
+DISTINFO_FILE=	${.CURDIR}/../../math/xylib/distinfo
+PATCHDIR=	${.CURDIR}/../../math/xylib/patches
 
 USE_LANGUAGES+=	c++11
 
