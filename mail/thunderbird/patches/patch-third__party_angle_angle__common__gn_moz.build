@@ -1,0 +1,40 @@
+$NetBSD: patch-third__party_angle_angle__common__gn_moz.build,v 1.1 2026/08/30 10:26:06 ryoon Exp $
+
+--- third_party/angle/angle_common_gn/moz.build.orig	2026-08-12 13:09:20.000000000 +0000
++++ third_party/angle/angle_common_gn/moz.build
+@@ -134,7 +134,7 @@ if CONFIG["OS_TARGET"] == "Linux":
+         "/third_party/angle/src/common/system_utils_posix.cpp"
+     ]
+ 
+-if CONFIG["OS_TARGET"] == "OpenBSD":
++if CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD" or CONFIG["OS_TARGET"] == "NetBSD":
+ 
+     DEFINES["USE_GLIB"] = "1"
+     DEFINES["USE_OZONE"] = "1"
+@@ -144,6 +144,17 @@ if CONFIG["OS_TARGET"] == "OpenBSD":
+     DEFINES["__STDC_CONSTANT_MACROS"] = True
+     DEFINES["__STDC_FORMAT_MACROS"] = True
+ 
++    if CONFIG["OS_TARGET"] == "FreeBSD":
++        OS_LIBS += {
++            "dl"
++        }
++
++    UNIFIED_SOURCES += [
++        "/third_party/angle/src/common/system_utils_linux.cpp",
++        "/third_party/angle/src/common/system_utils_posix.cpp"
++    ]
++
++
+ if CONFIG["OS_TARGET"] == "WINNT":
+ 
+     DEFINES["ANGLE_IS_WIN"] = True
+@@ -208,7 +219,7 @@ if CONFIG["MOZ_DEBUG"] == "1" and CONFIG["OS_TARGET"] 
+ 
+     DEFINES["_DEBUG"] = True
+ 
+-if CONFIG["MOZ_DEBUG"] == "1" and CONFIG["OS_TARGET"] == "OpenBSD":
++if CONFIG["MOZ_DEBUG"] == "1" and (CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD" or CONFIG["OS_TARGET"] == "NetBSD"):
+ 
+     DEFINES["_DEBUG"] = True
+ 

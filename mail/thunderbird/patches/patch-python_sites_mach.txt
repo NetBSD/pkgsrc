@@ -1,18 +1,18 @@
-$NetBSD: patch-python_sites_mach.txt,v 1.2 2026/07/22 15:46:01 ryoon Exp $
+$NetBSD: patch-python_sites_mach.txt,v 1.3 2026/08/30 10:26:06 ryoon Exp $
 
 * We are offline, so do not try to download from pypi.
   No need to wait a timeout.
 * Use pyyaml from vendored unconditionally.
 
---- python/sites/mach.txt.orig	2026-06-15 11:44:55.169043237 +0000
+--- python/sites/mach.txt.orig	2026-08-14 13:12:29.655766457 +0000
 +++ python/sites/mach.txt
 @@ -58,15 +58,16 @@ pth:xpcom/idl-parser
  pth:xpcom/idl-parser
  # glean-sdk may not be installable if a wheel isn't available
  # and it has to be built from source.
--pypi-optional:glean-sdk==67.3.2:telemetry will not be collected
+-pypi-optional:glean-sdk==68.0.1:telemetry will not be collected
 -pypi-optional:orjson>=3.10:json operations will be slower in various tools
-+#pypi-optional:glean-sdk==67.3.2:telemetry will not be collected
++#pypi-optional:glean-sdk==68.0.1:telemetry will not be collected
 +#pypi-optional:orjson>=3.10:json operations will be slower in various tools
  # Mach gracefully handles the case where `psutil` is unavailable.
  # We aren't (yet) able to pin packages in automation, so we have to

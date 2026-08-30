@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.366 2026/08/14 12:35:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.367 2026/08/30 10:26:05 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-TB_VER=		153.0.3
+TB_VER=		154.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +17,7 @@ LICENSE=	mpl-1.1
 # overflowing even a biggish tmpfs).
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/thunderbird-${TB_VER:C/b.*//}
+WRKSRC=		${WRKDIR}/thunderbird-${TB_VER:C/b.*//:S/esr//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -75,6 +75,11 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
 #CKSUMS+=	ffc0cce90e856d4f4bdb3bd3c950c9e59501a45ebd5022b91cfe8c07c79ef1ac
 #CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
+CKSUM_CRATES+=	third_party/rust/mtu
+
+CKSUMS+=	9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
+CKSUMS+=	986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
+
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
 .for crate in ${CKSUM_CRATES}
@@ -83,6 +88,13 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 .for from to in ${CKSUMS}
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
+
+PRINT_PLIST_AWK+=	/\/${MOZILLA}\// { gsub(/\/${MOZILLA}\//, "/$${MOZILLA}/") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.png$$/ { gsub(/\/${MOZILLA}.png$$/, "/$${MOZILLA}.png") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}.desktop$$/ { gsub(/\/${MOZILLA}.desktop$$/, "/$${MOZILLA}.desktop") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}$$/ { gsub(/\/${MOZILLA}$$/, "/$${MOZILLA}") }
+PRINT_PLIST_AWK+=	/\/${MOZILLA}-bin$$/ { gsub(/\/${MOZILLA}-bin$$/, "/$${MOZILLA}-bin") }
+PLIST_SUBST+=		MOZILLA=${MOZILLA}
 
 post-extract:
 	#${TOUCH} ${WRKSRC}/comm/third_party/rust/minimal-lexical/.gitmodules
@@ -95,6 +107,10 @@ pre-patch:
 	do \
 		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
 	done
+	for f in $$(find ${WRKSRC}/third_party/abseil-cpp -name moz.build -type f) ; \
+	do \
+		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
+	done
 
 pre-configure:
 	cd ${WRKSRC} && mkdir -p ${OBJDIR}
@@ -103,7 +119,7 @@ do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
 	${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${_MAKE_JOBS_N:U1}
 
-MOZILLA=	thunderbird
+MOZILLA=	${PKGBASE}
 MOZILLA_NAME=	${PKGBASE}
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
