@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2026/08/30 08:30:36 he Exp $
+$NetBSD: distinfo,v 1.13 2026/08/30 08:57:44 he Exp $
 
 BLAKE2s (anstream-0.6.7.crate) = 7c579e4bfdef804a378bbe0a671d61f70ac8ddd145fbdadb74723d3ed7a5c731
 SHA512 (anstream-0.6.7.crate) = 54231141acec85947e4b24f2a27c02c406a2cfe40e92a39b4f38c4b5234e1ca8a27021bb15c759c927d40448ad6203656a3841cc51e480b962fb1ebf199a3522
@@ -123,4 +123,4 @@ Size (windows_x86_64_msvc-0.48.0.crate) = 671422 bytes
 BLAKE2s (windows_x86_64_msvc-0.52.0.crate) = 9d872bb0e5202fd2b745fd8cd1252c44600ec04c398d0199ef0b0d014b41cb81
 SHA512 (windows_x86_64_msvc-0.52.0.crate) = 3aaee31533a1a48a6ab5cd15b3cadfbd906a93a153e53919d0aa74e440d11e29830554e4e014c215f5b88a475bb733fa8ba4ce9d773d3e23a40ea9ad37ddd0a7
 Size (windows_x86_64_msvc-0.52.0.crate) = 821600 bytes
-SHA1 (patch-src_stats.rs) = 112749cf6045ac55afe79f1b113d8335b3e044fb
+SHA1 (patch-src_stats.rs) = c3b20af00fdf4248e03711050b3ad79ad0813641
