@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1936 2026/08/27 11:56:01 adam Exp $
+# $NetBSD: Makefile,v 1.1937 2026/08/30 14:27:06 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1209,6 +1209,8 @@ SUBDIR+=	webalizer
 SUBDIR+=	webbrowser
 SUBDIR+=	webby
 SUBDIR+=	webkit-gtk
+SUBDIR+=	webkit-gtk41
+SUBDIR+=	webkit-gtk60
 SUBDIR+=	weblint
 SUBDIR+=	webnew
 SUBDIR+=	websockify
