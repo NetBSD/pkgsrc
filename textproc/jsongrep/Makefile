@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/04/19 16:08:20 pin Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/30 15:05:45 wiz Exp $
 
-DISTNAME=	jsongrep-0.9.0
-PKGREVISION=	1
+DISTNAME=	jsongrep-0.10.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=micahkepe/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
