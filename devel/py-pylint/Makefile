@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.121 2026/08/11 06:25:50 adam Exp $
+# $NetBSD: Makefile,v 1.122 2026/08/30 15:37:15 wiz Exp $
 #
 # Changes: https://github.com/pylint-dev/pylint/releases
 
-DISTNAME=	pylint-4.0.7
+DISTNAME=	pylint-4.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
