@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2026/03/29 17:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/08/30 15:32:04 wiz Exp $
 
-DISTNAME=	re2c-4.5.1
+DISTNAME=	re2c-4.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skvadrik/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -27,6 +27,9 @@ SUBST_MESSAGE.man=	Fixing man page path.
 
 # can't use ninja, since ninja tool-depends on this
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
+
+# test status as of 4.6:
+# FAIL       bug61_i_empty_class_match_none_eager_skip.re
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
