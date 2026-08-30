@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.385 2026/08/24 08:42:17 adam Exp $
+# $NetBSD: Makefile,v 1.386 2026/08/30 14:28:52 wiz Exp $
 
 DISTNAME=		gnucash-5.16
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 GITHUB_RELEASE=		${PKGVERSION_NOREV}
@@ -83,8 +83,7 @@ BUILDLINK_API_DEPENDS.googletest+=	googletest>=1.8.0
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9.4
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=2.14.1
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk41/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.30
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
