@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/08/12 09:04:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/08/30 15:52:00 wiz Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -567,9 +567,9 @@ Size (sharded-slab-0.1.7.crate) = 58227 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
-BLAKE2s (shuck-0.1.1.tar.gz) = 6af83bbc904dac9a97b2739320865944c22c47b26a793cdb482e053cb88df9a6
-SHA512 (shuck-0.1.1.tar.gz) = 60319a23b3e89982f8f632cd32672a3b37d876c24e5130cab633acf5d70e6797658e191913b318097b2d6bcdcb31cd6aa9c1fb16964ca93017ac1d7fa18cd28e
-Size (shuck-0.1.1.tar.gz) = 3296681 bytes
+BLAKE2s (shuck-0.1.3.tar.gz) = 48e2630dfe67d1131e3a369e70dcc3b0ddfb2534a86d7fa4a776558c92fb79c0
+SHA512 (shuck-0.1.3.tar.gz) = 26f8e357b36040db22ef66a4bf76a67f177d71821e7be533967e5345c0e075d84da48ac5f81980d83017dcb8ad79105afc6cdc444bb712d612d0b9d4ea428bc7
+Size (shuck-0.1.3.tar.gz) = 3308889 bytes
 BLAKE2s (similar-2.7.0.crate) = cbcc450d798ccb4a8000a81702e71e2c6542770e5933810ac5831548bc696020
 SHA512 (similar-2.7.0.crate) = 4a2559d2e47e7747eb2bde0f02a0e652ff0e116d1d3c3756dd86fd48f114e2b42157b860165e5cc29c2123cf19c64ebd17f023aaa05950de03ab5752562206b3
 Size (similar-2.7.0.crate) = 53928 bytes
