@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4680 2026/08/28 10:34:23 adam Exp $
+# $NetBSD: Makefile,v 1.4681 2026/08/30 16:55:47 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -471,6 +471,7 @@ SUBDIR+=	git-lfs
 SUBDIR+=	git-perlscripts
 SUBDIR+=	git-remote-hg
 SUBDIR+=	git-svn
+SUBDIR+=	gitea-runner
 SUBDIR+=	gitlogue
 SUBDIR+=	gitnr
 SUBDIR+=	gitolite
