@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2026/08/13 23:06:54 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2026/08/30 22:02:38 gdt Exp $
 
-# Please do not update to 4.11; breaks gpsd. -gdt
-#   https://gitlab.com/gpsd/gpsd/-/work_items/412
-DISTNAME=	scons-4.10.1
+# Updates must be tested not to break gpsd (history:
+#   https://gitlab.com/gpsd/gpsd/-/work_items/412 )
+# and should be tested against databses/mongodb.
+DISTNAME=	scons-4.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
