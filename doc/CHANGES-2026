@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5650 2026/08/30 08:51:40 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.5651 2026/08/30 09:15:06 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8328,3 +8328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-Locale to 1.46 [wiz 2026-08-30]
 	Updated sysutils/dusage to 0.4.0nb1 [he 2026-08-30]
 	Updated misc/screen to 5.0.2 [ryoon 2026-08-30]
+	Updated misc/dvorakng to 0.6.0rc1nb5 [he 2026-08-30]
