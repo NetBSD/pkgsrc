@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/03/02 12:18:48 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/08/30 15:32:56 wiz Exp $
 
-BLAKE2s (linkify_it_py-2.1.0.tar.gz) = c251287673d10e2ca803684549cc1c58539d3a38ba4116ed54977a901426ca12
-SHA512 (linkify_it_py-2.1.0.tar.gz) = 298d25a9bd9df57b6caf6157b642018e828c2b5fbacaa2ff11c0007b48f2090d7f14680efe3a365d9bb0f2a97660eb9e95424c8b63dfd8f9aeee6a5a5c70211d
-Size (linkify_it_py-2.1.0.tar.gz) = 29158 bytes
+BLAKE2s (linkify_it_py-2.2.0.tar.gz) = 720dd4c6b1256dda8aaedfe635bba4b80dedb9013cd06cdec744a62ce23dc6f5
+SHA512 (linkify_it_py-2.2.0.tar.gz) = 2325d0ada021b49715362492dcb278ae7cdfa593d22c8d1e2c0943cb75a9d8449187513fa39854093bc135b4acfce456f1b07007ab57b8e93d0bffb1d575a173
+Size (linkify_it_py-2.2.0.tar.gz) = 32939 bytes
