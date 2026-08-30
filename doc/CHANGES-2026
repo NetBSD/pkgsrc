@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5659 2026/08/30 14:28:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5660 2026/08/30 14:29:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8337,3 +8337,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/webkit-gtk to 2.36.8nb32 [wiz 2026-08-30]
 	Added www/webkit-gtk41 version 2.52.6 [wiz 2026-08-30]
 	Added www/webkit-gtk60 version 2.52.6 [wiz 2026-08-30]
+	Updated finance/gnucash to 5.16nb2 [wiz 2026-08-30]
