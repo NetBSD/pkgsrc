@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2026/08/27 21:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.302 2026/08/30 08:43:36 wiz Exp $
 #
 # Release Notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -128,6 +128,8 @@ MAKE_ENV+=	USE_SYSTEM_ZLIB=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4 "${LDFLAGS:Q}
 MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
 MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
+# regression in 3.128
+MAKE_ENV.Darwin+=	LITTLE_ENDIAN=1
 .include "../../mk/compiler.mk"
 .if ${CC_VERSION:Mgcc-4.[0-7]*}
 CFLAGS+=	-DNSS_NO_GCC48
