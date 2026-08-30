@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5687 2026/08/30 15:45:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5688 2026/08/30 15:52:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8365,3 +8365,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libcue to 2.3.0 [ryoon 2026-08-30]
 	Updated devel/py-wcwidth to 0.8.3 [wiz 2026-08-30]
 	Updated www/py-websockets to 17.1 [wiz 2026-08-30]
+	Updated shells/shuck to 0.1.3 [wiz 2026-08-30]
