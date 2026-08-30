@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2022/09/16 19:56:33 leot Exp $
-bin/WebKitWebDriver
+@comment $NetBSD: PLIST,v 1.90 2026/08/30 11:47:38 wiz Exp $
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
 include/webkitgtk-4.0/JavaScriptCore/JSObjectRef.h
