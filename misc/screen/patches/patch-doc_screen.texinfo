@@ -1,67 +1,38 @@
-$NetBSD: patch-doc_screen.texinfo,v 1.4 2025/01/09 20:07:03 ktnb Exp $
+$NetBSD: patch-doc_screen.texinfo,v 1.5 2026/08/30 08:51:27 ryoon Exp $
 
-Fix: Node `Window Settings' lacks menu item for `Mousetrack'
+* Fix regeneration of the texinfo file.
 
---- doc/screen.texinfo.orig	2024-08-28 19:55:03.000000000 +0000
+--- doc/screen.texinfo.orig	2026-07-11 12:23:46.000000000 +0000
 +++ doc/screen.texinfo
-@@ -2417,6 +2417,7 @@ terminal emulation itself.
- * Login::                       Control @file{/etc/utmp} logging
- * Mode::                        Control the file mode of the pty
- * Monitor::                     Watch for activity or inactivity in a window
-+* Mousetrack::			Set whether screen should track mouse events
- * Windows::			List the active windows
- * Hardstatus::			Set a window's hardstatus line
- @end menu
-@@ -5248,7 +5249,7 @@ Exchanges windows positions on window li
- Changes windows numbers, so there is no gaps between them.
- @end deffn
+@@ -4722,9 +4722,9 @@ makes @kbd{C-a - 0} select window 10, @kbd{C-a - 1} wi
  
--@node License, Collapse, Miscellaneous
-+@node License, Nonblock, Collapse, Miscellaneous
- @section License
- @kindex ,
- @deffn Command license
-@@ -5257,7 +5258,7 @@ Display the disclaimer page. This is don
- started without options, which should be often enough.
- @end deffn
+ @c ----------------------------------------------------------------
+ @node Command Character
++@section Command Character
+ @cindex escape character
+ @cindex command character
+-@section Command Character
  
--@node Nonblock, Number, Miscellaneous
-+@node Nonblock, Number, License, Miscellaneous
- @section Nonblock
- @deffn Command nonblock [@var{state}|@var{numsecs}]
- Tell screen how to deal with user interfaces (displays) that cease to
-@@ -5277,7 +5278,7 @@ Same as the @code{nonblock} command exce
- displays is changed. Initial setting is @code{off}.
- @end deffn
- 
--@node Number, Nonblock, Miscellaneous
-+@node Number, Verbose, Nonblock, Miscellaneous
- @section Number
- @kindex N
- @deffn Command number [[+|-]@var{n}]
-@@ -5289,7 +5290,7 @@ plus (`+') or minus (`-') will change th
- amount specified.
- @end deffn
- 
--@node Verbose, Version, Miscellaneous
-+@node Verbose, Version, Number, Miscellaneous
- @section Verbose
- @deffn Command verbose [on|off]
- If verbose is switched on, the command name is echoed, whenever a window
-@@ -5412,14 +5413,14 @@ The default is @code{on}, of course. Thi
- only in rare circumstances.
- @end deffn
- 
--@node Eval, , Setsid, Miscellaneous
-+@node Eval, Backtick, Setsid, Miscellaneous
- @section Eval
- @deffn Command eval @var{command1} [@var{command2} ...]
+ @deffn Command escape xy
  (none)@*
- Parses and executes each argument as separate command.
- @end deffn
+@@ -6324,6 +6324,12 @@ Program for locking the terminal.
+ @node Credits
+ @chapter Credits
  
--@node Backtick, Screen Saver, , Miscellaneous
-+@node Backtick, Screen Saver, Eval, Miscellaneous
- @section Backtick
- @deffn Command backtick @var{id} @var{lifespan} @var{autorefresh} @var{command} [@var{args}]
- @deffnx Command backtick @var{id}
++@menu
++* Authors::                     Historical and current authors
++* Contributors::                List of contributors
++* Old Version::                 About old versions
++@end menu
++
+ @node Authors
+ @section Authors
+ @cindex authors
+@@ -6395,7 +6401,6 @@ found a bug not mentioned here.
+ @menu
+ * Known Bugs::                  Problems we know about.
+ * Reporting Bugs::              How to contact the maintainers.
+-* Availability::                Where to find the latest screen version.
+ @end menu
+ 
+ @node Known Bugs
