@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/13 16:06:53 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2026/08/30 15:32:56 wiz Exp $
 ${PYSITELIB}/linkify_it/__init__.py
 ${PYSITELIB}/linkify_it/__init__.pyc
 ${PYSITELIB}/linkify_it/__init__.pyo
+${PYSITELIB}/linkify_it/_ucre_data.py
+${PYSITELIB}/linkify_it/_ucre_data.pyc
+${PYSITELIB}/linkify_it/_ucre_data.pyo
 ${PYSITELIB}/linkify_it/main.py
 ${PYSITELIB}/linkify_it/main.pyc
 ${PYSITELIB}/linkify_it/main.pyo
@@ -16,3 +14,8 @@ ${PYSITELIB}/linkify_it/tlds.pyo
 ${PYSITELIB}/linkify_it/ucre.py
 ${PYSITELIB}/linkify_it/ucre.pyc
 ${PYSITELIB}/linkify_it/ucre.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
