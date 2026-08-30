@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2026/08/30 11:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2026/08/30 14:26:48 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGREVISION=	32
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.webkitgtk.org/
-COMMENT=	GTK port of the WebKit browser engine
+COMMENT=	GTK port of the WebKit browser engine (deprecated API 4.0)
 LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 
 # shm_open(3) and shm_unlink(3) appeared in NetBSD 7.0
