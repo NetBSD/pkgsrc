@@ -1,6 +1,9 @@
-$NetBSD: patch-src_Xaction.cc,v 1.1 2016/06/23 15:17:28 prlw1 Exp $
+$NetBSD: patch-src_Xaction.cc,v 1.2 2026/08/30 11:57:13 he Exp $
 
 https://bugs.launchpad.net/bugs/1595562
+
+...and fix a type incompatibility by adding a static_cast.
+Fixes build on NetBSD/macppc 11.0, at least.
 
 --- src/Xaction.cc.orig	2015-11-09 01:33:00.000000000 +0000
 +++ src/Xaction.cc
@@ -13,6 +16,15 @@ https://bugs.launchpad.net/bugs/1595562
      libecap::host::Xaction *aHostX):
      serviceRegistration(0),
      service(aService),
+@@ -302,7 +302,7 @@ libecap::Area Adapter::Xaction::abConten
+         // We are here because we are or were trickling. If we stopped trickling,
+         // we should not give more than we had trickled (until the final action).
+         const Size tricklingMax = (trickledSize > pos) ? trickledSize - pos : 0;
+-        bufSize = std::min(bufSize, tricklingMax);
++        bufSize = std::min(static_cast<Size>(bufSize), tricklingMax);
+         // fall through to also obey actAllow limits
+     }
+ 
 @@ -347,7 +347,7 @@ void Adapter::Xaction::noteVbContentDone
  
      vbFile->flush();
