@@ -1,0 +1,2 @@
+gitea-runner is a runner for Gitea actions, compatible with GitHub's actions.
+It is based on act.
