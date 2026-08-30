@@ -1060,6 +1060,7 @@ wavpack			Enable wavpack support.
 wayland			Enable support for the Wayland display server protocol.
 webcollage		Install webcollage screensaver.
 webdav			Enable WebDAV support.
+webkit-webdriver	Enable WebDriver (for interacting with webkit-gtk from Python).
 webkit-jit		Enable JIT compilation.
 webrtc			Enable web realtime communications API.
 websocket		Websocket protocol support (as specified in RFC6455)
