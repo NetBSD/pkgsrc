@@ -1,9 +1,9 @@
-$NetBSD: patch-src_utils_knotc_interactive.c,v 1.1 2026/08/29 19:55:15 drixter Exp $
+$NetBSD: patch-src_utils_knotc_interactive.c,v 1.2 2026/08/30 09:15:36 drixter Exp $
 
 Fix from upstream to properly compile on SunOS
 
---- /usr/work/amd64/wip/knot/work/knot-3.5.7/src/utils/knotc/interactive.c.orig	2026-08-29 19:17:24.182700199 +0000
-+++ /usr/work/amd64/wip/knot/work/knot-3.5.7/src/utils/knotc/interactive.c
+--- src/utils/knotc/interactive.c.orig	2026-08-29 19:17:24.182700199 +0000
++++ src/utils/knotc/interactive.c
 @@ -359,11 +359,16 @@ static void path_lookup(EditLine *el, co
  	struct stat sb;
  	for (int i = 0; i < nnames; ++i) {
