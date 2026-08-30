@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5675 2026/08/30 15:29:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5676 2026/08/30 15:32:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8353,3 +8353,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-importlib-metadata to 9.0.1 [wiz 2026-08-30]
 	Updated devel/py-isort to 9.0.1 [wiz 2026-08-30]
 	Updated math/py-kiwisolver to 1.5.1 [wiz 2026-08-30]
+	Updated devel/re2c to 4.6 [wiz 2026-08-30]
