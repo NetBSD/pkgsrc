@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2026/08/28 07:54:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/08/30 17:47:59 wiz Exp $
 # used by emulators/qemu/Makefile
 # used by sysutils/qemu-guest-agent/Makefile
 
@@ -23,8 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-qemu.qmp>=0.0.5:../../emulators/py-qemu.qmp
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.1.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34.2:../../devel/py-wheel
 
-DISTINFO_FILE=	../../emulators/qemu/distinfo
-PATCHDIR=	../../emulators/qemu/patches
+DISTINFO_FILE=	${.CURDIR}/../../emulators/qemu/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/qemu/patches
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
