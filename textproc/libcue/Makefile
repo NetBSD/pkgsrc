@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/08/20 11:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/30 15:42:00 ryoon Exp $
 
-DISTNAME=	libcue-2.2.1
-PKGREVISION=	1
+DISTNAME=	libcue-2.3.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lipnitsk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
