@@ -1,0 +1,297 @@
+# Every option with its default value, all commented out. Read this file, do not copy it.
+# `gitea-runner config init` writes a config file to copy the lines you change into.
+
+# Logging for the runner process itself (messages printed to stderr), plus the copy of
+# each task's log kept under log.job. Neither controls how workflow step output is streamed
+# to the Gitea UI; tune that with runner.log_report_* below.
+log:
+  # logrus severity: trace, debug, info, warn, error, fatal, panic.
+  # trace and debug turn on caller/file:line in log lines. Default if omitted: info.
+  #level: info
+  # Write a copy of each task's log to dir as <start time>-task-<id>.log, so a job's output
+  # survives a failure to send it to Gitea. A path turns them on, empty turns them off.
+  # retention is how long a log is kept (0s keeps all), max_size caps one log (0 is no limit).
+  #job:
+  #  dir: ""
+  #  retention: 168h
+  #  max_size: 1GB
+
+runner:
+  # Where to store the registration result.
+  file: @VARBASE@/db/gitea-runner/runner
+  # Execute how many tasks concurrently at the same time.
+  # With `container.network` empty, each concurrent docker job takes a subnet from the
+  # daemon's address pool, so a high capacity can exhaust it. See `default-address-pools`
+  # in the docker daemon config.
+  #capacity: 1
+  # Extra environment variables to run jobs.
+  #envs:
+  #  A_TEST_ENV_NAME_1: a_test_env_value_1
+  #  A_TEST_ENV_NAME_2: a_test_env_value_2
+  # Extra environment variables to run jobs from a file.
+  # It will be ignored if it's empty or the file doesn't exist.
+  #env_file: .env
+  # The timeout for a job to be finished.
+  # Please note that the Gitea instance also has a timeout (3h by default) for the job.
+  # So the job could be stopped by the Gitea instance if its timeout is shorter than this.
+  #timeout: 3h
+  # The timeout for the runner to wait for running jobs to finish when shutting down.
+  # Any running jobs that haven't finished after this timeout will be cancelled.
+  #shutdown_timeout: 0s
+  # Whether skip verifying the TLS certificate of the Gitea instance.
+  #insecure: false
+  # The timeout for fetching the job from the Gitea instance.
+  # Values above the 60s RPC timeout are capped to it.
+  #fetch_timeout: 5s
+  # The interval for fetching the job from the Gitea instance.
+  #fetch_interval: 2s
+  # The maximum interval for fetching the job from the Gitea instance.
+  # The runner uses exponential backoff when idle, increasing the interval up to this maximum.
+  # Set to 0 or same as fetch_interval to disable backoff.
+  #fetch_interval_max: 5s
+  # While idle, remove stale bind-workdir task directories and orphaned host-mode
+  # scratch directories (left behind when a host cleanup delete stalls) older than
+  # this duration. Setting either workdir_cleanup_age or idle_cleanup_interval to 0
+  # (or any non-positive value) disables stale-directory cleanup entirely, along with
+  # the docker network cleanup below.
+  #workdir_cleanup_age: 24h
+  # Cadence for the idle cleanup pass. Besides the directories above, on runners that use
+  # docker it removes the per-job networks of jobs this runner did not live to tear down,
+  # which would otherwise hold a subnet of the daemon address pool until the host is rebuilt.
+  #idle_cleanup_interval: 10m
+  # The base interval for periodic log flush to the Gitea instance.
+  # Logs may be sent earlier if the buffer reaches log_report_batch_size
+  # or if log_report_max_latency expires after the first buffered row.
+  #log_report_interval: 5s
+  # The maximum time a log row can wait before being sent.
+  # This ensures even a single log line appears on the frontend within this duration.
+  # Must be less than log_report_interval to have any effect.
+  #log_report_max_latency: 3s
+  # Flush logs immediately when the buffer reaches this many rows.
+  # This ensures bursty output (e.g., npm install) is delivered promptly.
+  #log_report_batch_size: 100
+  # The interval for reporting task state (step status, timing) to the Gitea instance.
+  # State is also reported immediately on step transitions (start/stop).
+  #state_report_interval: 5s
+  # Per-attempt deadline for flushing the final logs and task state when a job
+  # finishes, on a detached context so a server cancel can't block the acknowledgement.
+  #report_close_timeout: 10s
+  # The github_mirror of a runner is used to specify the mirror address of the github that pulls the action repository.
+  # It works when something like `uses: actions/checkout@v4` is used and DEFAULT_ACTIONS_URL is set to github,
+  # and github_mirror is not empty. In this case,
+  # it replaces https://github.com with the value here, which is useful for some special network environments.
+  #github_mirror: ''
+  # When true (the default), fetch only the requested ref of an action repository (e.g. actions/checkout@v4) at depth 1 instead of cloning every branch's full history.
+  # Set to false to clone the full history.
+  #action_shallow_clone: true
+  # When true (the default), inject the ACT=true environment variable into jobs.
+  # Set to false so workflows gated on `if: ${{ !env.ACT }}` behave like they do on GitHub.
+  #set_act_env: true
+  # When true (the default), apply compatibility patches to the actions a job runs, so actions
+  # written for GitHub work against this instance. Set to false to run them exactly as published,
+  # at the price of the stock artifact actions refusing and the cache client keeping to v1.
+  #patch_actions: true
+  # The labels of a runner are used to determine which jobs the runner can run, and how to run them.
+  # Like: "macos-arm64:host" or "ubuntu-latest:docker://docker.gitea.com/runner-images:ubuntu-latest"
+  # Find more images provided by Gitea at https://gitea.com/gitea/runner-images .
+  # If it's empty when registering, it will ask for inputting labels.
+  # If it's empty when execute `daemon`, will use labels in `.runner` file.
+  #labels:
+  #  - "ubuntu-latest:docker://docker.gitea.com/runner-images:ubuntu-latest"
+  #  - "ubuntu-24.04:docker://docker.gitea.com/runner-images:ubuntu-24.04"
+  #  - "ubuntu-22.04:docker://docker.gitea.com/runner-images:ubuntu-22.04"
+  # Allocate a pseudo-TTY for each step's process. Applies to both host and docker backends.
+  # Default false matches GitHub actions/runner. Enable only for jobs that need an interactive
+  # terminal; tools like `docker build` emit redrawing progress frames into the captured log
+  # when a TTY is present.
+  #allocate_pty: false
+  # Image for a job whose runs-on matches none of the labels above. A runner without a
+  # docker daemon runs such a job on the host instead.
+  #default_image: "docker.gitea.com/runner-images:ubuntu-latest"
+  # What to mount at RUNNER_TOOL_CACHE (/opt/hostedtoolcache), where setup actions install tools:
+  #   none:   nothing. A docker job sees what its image ships there, a host job an empty dir, and
+  #           either way what it installs is gone when the job ends.
+  #   shared: one tool cache every job reuses. Two jobs writing the same tool version at once
+  #           corrupt it, so use it only with capacity 1.
+  #tool_cache_mode: none
+  # Optional executable on the host, run once after each task's built-in cleanup
+  # (post-steps, container teardown, bind-workdir removal). Additive only.
+  #
+  # IMPORTANT: While this script runs the runner stops task heartbeats and stays
+  # offline from Gitea's perspective until the script exits. A script that never
+  # returns blocks new work until post_task_script_timeout kills it (default 5m).
+  # Keep scripts short; set post_task_script_timeout to a safe upper bound.
+  #
+  # Output -> runner process log (not the job log). Non-zero exit -> warning only.
+  # Windows: use .exe, .bat, or .cmd. PowerShell (.ps1) is not supported yet as
+  # the configured path; wrap PowerShell commands in a .cmd file instead.
+  # Full guide: docs/post-task-script.md
+  #post_task_script: ''
+  # Hard limit on post_task_script runtime. Default if omitted: 5m.
+  #post_task_script_timeout: 5m
+  # Scripts run inside the job environment before the job's first step and after its last
+  # one, the equivalent of GitHub's ACTIONS_RUNNER_HOOK_JOB_STARTED and
+  # ACTIONS_RUNNER_HOOK_JOB_COMPLETED, which are read when these are unset. The paths are
+  # resolved inside the job environment. Either one failing fails the job.
+  # Full guide: docs/job-hooks.md
+  #hooks:
+  #  job_started: ''
+  #  job_completed: ''
+
+cache:
+  # Enable the built-in cache server (used by actions/cache and similar actions).
+  #enabled: true
+  # Directory where cache blobs are stored on disk. Default: $HOME/.cache/actcache
+  # Ignored when external_server is set.
+  #dir: ""
+  # Outbound IP or hostname that job containers use to reach this runner's cache server.
+  # Leave empty to detect automatically. 0.0.0.0 is not valid here.
+  # If the runner itself runs in Docker, automatic detection can choose an
+  # address on the runner container's network that job containers cannot reach
+  # when the runner creates a separate per-job network. In that case, set this
+  # to a hostname/IP reachable from job containers, and set port to a fixed
+  # published port or put the job containers on a shared Docker network.
+  # Ignored when external_server is set.
+  #host: ""
+  # Port for the built-in cache server. 0 picks a random free port.
+  # Ignored when external_server is set.
+  #port: 0
+  # URL of a shared `gitea-runner cache-server` to use instead of starting a local one.
+  # Set on every runner that should share a cache pool. A trailing slash is optional.
+  # Jobs reach the server at this URL too, so set it to the reverse proxy when one fronts the server.
+  # Example: "http://cache-host:8088/"
+  # Requires external_secret (below) to match the value on the cache-server.
+  #external_server: ""
+  # Shared secret between this runner and the external cache-server.
+  # Required when external_server is set. Must be identical on every runner and the cache-server.
+  # Generate with: openssl rand -hex 32
+  #external_secret: ""
+  # Path to a file containing the shared secret, as an alternative to external_secret.
+  # Use this to keep the secret out of this file.
+  # Surrounding whitespace is trimmed, so a trailing newline in the file is fine.
+  # Setting both external_secret and external_secret_file is an error.
+  #external_secret_file: ""
+  # When true, reuse a cached action instead of fetching from the remote on every job.
+  # A moved tag (e.g. a re-tagged "v6") or an updated branch stays at the cached commit
+  # until its cache entry expires or is manually removed.
+  #offline_mode: false
+  # Serve the actions cache service v2 API. The actions that use it refuse any host they do not
+  # take for GitHub, so reaching it means editing that check out of their own bundle, undone
+  # whenever it is downloaded again. That edit is made either way, this only governs the API
+  # advertised. A bundle that does not match is left alone.
+  #v2: true
+  # How the cache server discards entries, ignored when external_server is set since that
+  # server applies its own. Leave a setting out for its default; 0s or 0 turns the three
+  # limits off. Sizes accept 10GB, 512mb, 1TiB or a plain byte count, binary either way.
+  # Whatever these allow, the cache still sheds entries to keep free space on its volume
+  # above health_check.min_free_disk_space_mb when health checks are enabled.
+  # Remove entries nothing has read or written within this window. Only last access counts.
+  #retention: 168h
+  # Cap one repository, removing its least recently accessed entries until it fits. An entry
+  # larger than the limit is dropped rather than emptying the repository to make room.
+  #repo_size_limit: 10GB
+  # Cap the whole cache the same way. Off by default, since the free space floor bounds it.
+  #size_limit: 0
+  # Minimum time between two eviction sweeps. This one has no "off".
+  #sweep_interval: 1h
+
+container:
+  # Specifies the network to which the container will connect.
+  # Could be host, bridge or the name of a custom network.
+  # If it's empty, runner will create a network automatically.
+  # For dockerized runners using the built-in cache server, a custom shared
+  # network can be required so job containers can reach cache.host/cache.port.
+  # Deprecated: `network_mode` is still accepted for old configs; use `network` instead.
+  #network: ""
+  # network_create_options only apply when `network` is left empty and the runner
+  # auto-creates a per-job network that does not already exist. They have no effect
+  # when a custom `network` name is set, because that network is used as-is and never
+  # created by the runner. Omit the entire block to use Docker's defaults. An auto-created
+  # network is labelled com.gitea.runner.uuid=<this runner's uuid>, which is how the idle
+  # cleanup tells its own leftovers apart from those of other runners on the same daemon.
+  #network_create_options:
+  #  enable_ipv4: true # Omit to use Docker's default (IPv4 enabled). Set false to disable IPv4.
+  #  enable_ipv6: false # Omit to use Docker's default (IPv6 disabled). Enabling it requires dockerd started with --ipv6.
+  # Whether to use privileged mode or not when launching task containers (privileged mode is required for Docker-in-Docker).
+  #privileged: false
+  # Any other options to be used when the container is started, for example:
+  #   options: --add-host=my.gitea.url:host-gateway
+  # A volume declared here replaces the one the runner would mount on the same container path, so the
+  # tool cache can be kept on the host. Its source must also be allowed by valid_volumes below:
+  #   options: --volume /host/toolcache:/opt/hostedtoolcache
+  #options:
+  # The parent directory of a job's working directory.
+  # NOTE: There is no need to add the first '/' of the path as runner will add it automatically.
+  # If the path starts with '/', the '/' will be trimmed.
+  # For example, if the parent directory is /path/to/my/dir, workdir_parent should be path/to/my/dir
+  # If it's empty, /workspace will be used.
+  # Purely numeric subdirectories under this path are reserved for task workspaces and may be removed by idle cleanup.
+  #workdir_parent:
+  # Volumes (including bind mounts) can be mounted to containers. Glob syntax is supported, see https://github.com/gobwas/glob
+  # You can specify multiple volumes. If the sequence is empty, no volumes can be mounted.
+  # For example, if you only allow containers to mount the `data` volume and all the json files in `/src`, you should change the config to:
+  # valid_volumes:
+  #   - data
+  #   - /src/*.json
+  # If you want to allow any volume, please use the following configuration:
+  # valid_volumes:
+  #   - '**'
+  #valid_volumes: []
+  # Overrides the docker client host with the specified one.
+  # If it's empty, runner will find an available docker host automatically.
+  # If it's "-", runner will find an available docker host automatically, but the docker host won't be mounted to the job containers and service containers.
+  # If it's not empty or "-", the specified docker host will be used. An error will be returned if it doesn't work.
+  #docker_host: ""
+  # Pull docker image(s) even if already present.
+  # Defaults to false when the key is omitted.
+  # Two exceptions: an image pinned by digest (image@sha256:...) cannot change, so it is never
+  # re-pulled, and a pull that fails while a copy is already on the host does not fail the job,
+  # which runs on that copy with a warning in its log.
+  #force_pull: false
+  # Rebuild docker image(s) even if already present
+  #force_rebuild: false
+  # Always require a reachable docker daemon, even if not required by runner
+  #require_docker: false
+  # Timeout to wait for the docker daemon to be reachable, if docker is required by require_docker or runner
+  #docker_timeout: 0s
+  # Bind the workspace to the host filesystem instead of using Docker volumes.
+  # This is required for Docker-in-Docker (DinD) setups when jobs use docker compose
+  # with bind mounts (e.g., ".:/app"), as volume-based workspaces are not accessible
+  # from the DinD daemon's filesystem. When enabled, ensure the workspace parent
+  # directory is also mounted into the runner container and listed in valid_volumes.
+  #bind_workdir: false
+  # How long a job waits for a service container that declares a healthcheck to become
+  # healthy. A negative value (e.g. -1s) starts the steps without waiting.
+  #service_ready_timeout: 5m
+
+host:
+  # The parent directory of a job's working directory.
+  # If it's empty, $HOME/.cache/act/ will be used.
+  #workdir_parent:
+
+# Optional local task-admission checks. Disabled by default. When enabled, low
+# disk space or a failing script pauses new task fetching; existing jobs continue.
+# No health checks run while any job is active; the last result is reused until idle.
+health_check:
+  #enabled: false
+  # Minimum free space required on the filesystem holding runner workspaces.
+  # Defaults to 1024 MiB when omitted or set to zero.
+  #min_free_disk_space_mb: 1024
+  # Optional additional executable. A non-zero exit, timeout, or startup failure
+  # marks the runner unavailable.
+  #script: ''
+  # How long a script result is cached and its maximum execution time.
+  #interval: 30s
+  #timeout: 10s
+
+metrics:
+  # Enable the Prometheus metrics endpoint.
+  # When enabled, metrics are served at /metrics, liveness at /healthz, and
+  # task-admission readiness at /readyz.
+  #enabled: false
+  # The address for the metrics HTTP server to listen on.
+  # Defaults to localhost only. Set to ":9101" to allow external access,
+  # but ensure the port is firewall-protected as there is no authentication.
+  #addr: "127.0.0.1:9101"
+  # Consecutive polling failures may last this long before /readyz returns 503.
+  #readiness_grace: 30s
