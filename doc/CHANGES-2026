@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5691 2026/08/30 16:56:05 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.5692 2026/08/30 17:56:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8369,3 +8369,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cad/py-PyRTL to 1.0.3 [ryoon 2026-08-30]
 	Updated audio/qmmp to 1.7.11 [ryoon 2026-08-30]
 	Added devel/gitea-runner version 3.3.1 [khorben 2026-08-30]
+	Added devel/scons version 3.1.2nb7 [wiz 2026-08-30]
