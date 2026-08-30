@@ -1,4 +1,7 @@
-$NetBSD: patch-src_stats.rs,v 1.1 2026/08/30 08:30:36 he Exp $
+$NetBSD: patch-src_stats.rs,v 1.2 2026/08/30 08:57:44 he Exp $
+
+Improve portability to 32-bit CPUs.
+Reported upstream at https://github.com/mihaigalos/dusage/pull/67
 
 --- src/stats.rs.orig	2026-08-30 08:17:54.285693493 +0000
 +++ src/stats.rs
