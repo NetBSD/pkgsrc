@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5672 2026/08/30 15:20:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5673 2026/08/30 15:22:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8350,3 +8350,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.57.0 [wiz 2026-08-30]
 	Updated security/py-google-auth-httplib2 to 0.4.2 [wiz 2026-08-30]
 	Updated devel/py-googleapis-common-protos to 1.75.2 [wiz 2026-08-30]
+	Updated devel/py-importlib-metadata to 9.0.1 [wiz 2026-08-30]
