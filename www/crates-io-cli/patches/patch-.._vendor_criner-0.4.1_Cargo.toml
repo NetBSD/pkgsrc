@@ -1,0 +1,16 @@
+$NetBSD: patch-.._vendor_criner-0.4.1_Cargo.toml,v 1.1 2026/08/30 08:11:25 he Exp $
+
+Support 32-bit CPUs.
+
+--- ../vendor/criner-0.4.1/Cargo.toml.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/criner-0.4.1/Cargo.toml
+@@ -40,6 +40,9 @@ name = "criner"
+ path = "src/lib.rs"
+ doctest = false
+ 
++[dependencies]
++portable-atomic = "1"
++
+ [dependencies.async-channel]
+ version = "2.5.0"
+ 
