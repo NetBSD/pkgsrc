@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5657 2026/08/30 11:49:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5658 2026/08/30 14:27:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8335,3 +8335,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird to 154.0 [ryoon 2026-08-30]
 	Updated mail/mutt to 2.4.2 [tron 2026-08-30]
 	Updated www/webkit-gtk to 2.36.8nb32 [wiz 2026-08-30]
+	Added www/webkit-gtk41 version 2.52.6 [wiz 2026-08-30]
