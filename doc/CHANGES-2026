@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5721 2026/08/31 15:15:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5722 2026/08/31 16:29:15 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8410,3 +8410,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-nbclient to 0.11.0 [adam 2026-08-31]
 	Updated net/openrsync to 0.20260730 [vins 2026-08-31]
 	Updated archivers/ruby-zip to 3.5.0 [taca 2026-08-31]
+	Updated sysutils/fastfetch to 2.67.1 [vins 2026-08-31]
