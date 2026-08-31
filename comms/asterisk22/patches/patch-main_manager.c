@@ -1,8 +1,8 @@
-$NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
+$NetBSD: patch-main_manager.c,v 1.2 2026/08/31 05:33:32 jnemeth Exp $
 
---- main/manager.c.orig	2024-01-25 16:23:00.000000000 +0000
+--- main/manager.c.orig	2026-08-27 15:29:40.000000000 +0000
 +++ main/manager.c
-@@ -2779,7 +2779,7 @@ static char *handle_showmanconn(struct a
+@@ -1464,7 +1464,7 @@ static char *handle_showmanconn(struct ast_cli_entry *
  	struct mansession_session *session;
  	time_t now = time(NULL);
  #define HSMCONN_FORMAT1 "  %-15.15s  %-55.55s  %-10.10s  %-10.10s  %-8.8s  %-8.8s  %-10.10s  %-10.10s\n"
@@ -11,7 +11,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  	int count = 0;
  	struct ao2_iterator i;
  
-@@ -2805,8 +2805,8 @@ static char *handle_showmanconn(struct a
+@@ -1490,8 +1490,8 @@ static char *handle_showmanconn(struct ast_cli_entry *
  			ao2_lock(session);
  			ast_cli(a->fd, HSMCONN_FORMAT2, session->username,
  				ast_sockaddr_stringify_addr(&session->addr),
@@ -22,7 +22,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  				session->stream ? ast_iostream_get_fd(session->stream) : -1,
  				session->inuse,
  				session->readperm,
-@@ -3732,9 +3732,9 @@ static int action_ping(struct mansession
+@@ -2389,9 +2389,9 @@ static int action_ping(struct mansession *s, const str
  	astman_append(
  		s,
  		"Ping: Pong\r\n"
@@ -34,7 +34,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  	return 0;
  }
  
-@@ -4936,7 +4936,7 @@ static void generate_status(struct manse
+@@ -3757,7 +3757,7 @@ static void generate_status(struct mansession *s, stru
  		"DNID: %s\r\n"
  		"EffectiveConnectedLineNum: %s\r\n"
  		"EffectiveConnectedLineName: %s\r\n"
@@ -43,7 +43,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  		"BridgeID: %s\r\n"
  		"Application: %s\r\n"
  		"Data: %s\r\n"
-@@ -4956,7 +4956,7 @@ static void generate_status(struct manse
+@@ -3777,7 +3777,7 @@ static void generate_status(struct mansession *s, stru
  		S_OR(ast_channel_dialed(chan)->number.str, ""),
  		S_COR(effective_id.number.valid, effective_id.number.str, "<unknown>"),
  		S_COR(effective_id.name.valid, effective_id.name.str, "<unknown>"),
@@ -52,10 +52,10 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  		bridge ? bridge->uniqueid : "",
  		ast_channel_appl(chan),
  		ast_channel_data(chan),
-@@ -7816,8 +7816,8 @@ static int __attribute__((format(printf,
- 	if (timestampevents) {
+@@ -7662,8 +7662,8 @@ static int __attribute__((format(printf, 9, 0))) __man
+ 
  		now = ast_tvnow();
- 		ast_str_append(&buf, 0,
+ 		ast_str_append(&event->message, 0,
 -			"Timestamp: %ld.%06lu\r\n",
 -			(long)now.tv_sec, (unsigned long) now.tv_usec);
 +			"Timestamp: %jd.%06lu\r\n",
@@ -63,7 +63,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  	}
  	if (manager_debug) {
  		static int seq;
-@@ -8329,13 +8329,13 @@ static void xml_copy_escape(struct ast_s
+@@ -8200,13 +8200,13 @@ static void xml_copy_escape(struct ast_str **out, cons
  		}
  
  		if (mode & 2) {
@@ -79,7 +79,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2024/10/21 05:12:47 jnemeth Exp $
  				/* Replace non-alphanumeric with an underscore */
  				*dst++ = '_';
  				space--;
-@@ -8370,7 +8370,7 @@ static void xml_copy_escape(struct ast_s
+@@ -8241,7 +8241,7 @@ static void xml_copy_escape(struct ast_str **out, cons
  			break;
  
  		default:

@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.11 2026/07/13 04:56:57 jnemeth Exp $
+$NetBSD: distinfo,v 1.12 2026/08/31 05:33:32 jnemeth Exp $
 
-BLAKE2s (asterisk-22.10.1/asterisk-22.10.1.tar.gz) = 56ddcac1f067faeb879506ea7d924c8096b56d7b61069fd847fb080f99566645
-SHA512 (asterisk-22.10.1/asterisk-22.10.1.tar.gz) = d2ffc95d6e8e3f5ea3ccb5cd40ead62323978b1af563c338b53a03ba45d4f40cee4eabd6f7aa4cd48e59c5741f4fa05dea5905593d1971371f77205ebe4bd967
-Size (asterisk-22.10.1/asterisk-22.10.1.tar.gz) = 26672088 bytes
-BLAKE2s (asterisk-22.10.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
-SHA512 (asterisk-22.10.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-22.10.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-BLAKE2s (asterisk-22.10.1/pjproject-2.17.md5) = 40b4cd26a5101f81b6d57f5d8b8a74fe4b296292b21677e02a1bcc73d0d3a3c3
-SHA512 (asterisk-22.10.1/pjproject-2.17.md5) = 8946eebc9d7d472e001d03602a8a6b12632734dbc665acb5aca60c0f83ebbd4d69d31c06096fde44907ce2040be5fd4145ff7fcaaa2f681f90600faa0ed5f294
-Size (asterisk-22.10.1/pjproject-2.17.md5) = 166 bytes
-BLAKE2s (asterisk-22.10.1/pjproject-2.17.tar.bz2) = 3909b745c89a119f41126ee49ea196d5bf6889fdcbeb22d266dabc3fd339dd96
-SHA512 (asterisk-22.10.1/pjproject-2.17.tar.bz2) = b523b3761aab8931ad2a940d107861caf346e3c5cf9b12d23b5b267b8f3b4758ee842b401f1199c3ceb7e78bbaf0d2a167d2574222c51e6016586eb2caa1e33d
-Size (asterisk-22.10.1/pjproject-2.17.tar.bz2) = 8975382 bytes
+BLAKE2s (asterisk-22.11.0/asterisk-22.11.0.tar.gz) = 301a080094ad2585fd9c57c89720446fb2580bc40b3e74e96d1a6144ab215920
+SHA512 (asterisk-22.11.0/asterisk-22.11.0.tar.gz) = 00cfcca62052c2240f67a50e52701f724a6e0406892010f789d9e2e72d1f8180fc6b68307f1397873c1c409c509e9df0d7765a842c85d84019bf8438c6577d87
+Size (asterisk-22.11.0/asterisk-22.11.0.tar.gz) = 26724408 bytes
+BLAKE2s (asterisk-22.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
+SHA512 (asterisk-22.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-22.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+BLAKE2s (asterisk-22.11.0/pjproject-2.17.md5) = 40b4cd26a5101f81b6d57f5d8b8a74fe4b296292b21677e02a1bcc73d0d3a3c3
+SHA512 (asterisk-22.11.0/pjproject-2.17.md5) = 8946eebc9d7d472e001d03602a8a6b12632734dbc665acb5aca60c0f83ebbd4d69d31c06096fde44907ce2040be5fd4145ff7fcaaa2f681f90600faa0ed5f294
+Size (asterisk-22.11.0/pjproject-2.17.md5) = 166 bytes
+BLAKE2s (asterisk-22.11.0/pjproject-2.17.tar.bz2) = 3909b745c89a119f41126ee49ea196d5bf6889fdcbeb22d266dabc3fd339dd96
+SHA512 (asterisk-22.11.0/pjproject-2.17.tar.bz2) = b523b3761aab8931ad2a940d107861caf346e3c5cf9b12d23b5b267b8f3b4758ee842b401f1199c3ceb7e78bbaf0d2a167d2574222c51e6016586eb2caa1e33d
+Size (asterisk-22.11.0/pjproject-2.17.tar.bz2) = 8975382 bytes
 SHA1 (patch-Makefile) = 5cf3b6937ec23a82e4d056b91e493a36bc1089b9
 SHA1 (patch-addons_chan__ooh323.c) = 1775da7ca2129a962ed460bd1e78ba3ce6afa62c
 SHA1 (patch-apps_app__adsiprog.c) = 031139e5cd1ef6bb2afb0a74fee3d752eded0a2c
@@ -63,7 +63,7 @@ SHA1 (patch-main_features.c) = 6e50ea4c6ee26f56edca22611aeed44787459968
 SHA1 (patch-main_http.c) = b36f1f3f0da25456a17888d34ea2bf7b61c1acf4
 SHA1 (patch-main_indications.c) = 511b4c270e4a4a71517109f959121777caf2aa36
 SHA1 (patch-main_logger.c) = 321a52b3015af85ea13055953cec5a5d9da05ec8
-SHA1 (patch-main_manager.c) = 2f88c51f4ca62985a1824efd60a39542925adf95
+SHA1 (patch-main_manager.c) = 8a7c0098c85baf469be44e09589d1ded1907dd65
 SHA1 (patch-main_pbx.c) = 8e7ced268edb29238f96418e8b21456364c4ae1f
 SHA1 (patch-main_pbx__builtins.c) = 3e5ede8a62821fda498f2bea94af386aca01798c
 SHA1 (patch-main_pbx__timing.c) = a4657330086c5b0e8fd271d5676fb897badea452
