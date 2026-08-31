@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5719 2026/08/31 12:50:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5720 2026/08/31 14:03:40 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8408,3 +8408,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-pyspnego to 0.12.2 [adam 2026-08-31]
 	Updated www/py-nbformat to 5.11.1 [adam 2026-08-31]
 	Updated www/py-nbclient to 0.11.0 [adam 2026-08-31]
+	Updated net/openrsync to 0.20260730 [vins 2026-08-31]
