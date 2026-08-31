@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/08/30 15:03:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/08/31 06:59:17 wiz Exp $
 share/grafana/plugins/prometheus/1414.js
 share/grafana/plugins/prometheus/1450.js
 share/grafana/plugins/prometheus/1450.js.map
@@ -193,7 +193,7 @@ share/grafana/plugins/prometheus/LICENSE.txt
 share/grafana/plugins/prometheus/README.md
 share/grafana/plugins/prometheus/b797181c93b3755f4fa1.ttf
 share/grafana/plugins/prometheus/go_plugin_build_manifest
-share/grafana/plugins/prometheus/gpx_grafana-prometheus-datasource_netbsd_amd64
+share/grafana/plugins/prometheus/gpx_grafana-prometheus-datasource_${GO_PLATFORM}
 share/grafana/plugins/prometheus/img/prometheus_logo.svg
 share/grafana/plugins/prometheus/module.js
 share/grafana/plugins/prometheus/module.js.map
