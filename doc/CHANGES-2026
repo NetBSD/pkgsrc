@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5708 2026/08/31 08:59:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5709 2026/08/31 09:35:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8391,3 +8391,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-testing to 1.83.1 [adam 2026-08-31]
 	Updated net/py-grpcio-tools to 1.83.1 [adam 2026-08-31]
 	Updated devel/ast-grep to 0.45.3 [wiz 2026-08-31]
+	Updated textproc/py-rapidfuzz to 3.14.6 [adam 2026-08-31]
+	Updated devel/py-utils to 4.0.1 [adam 2026-08-31]
+	Updated devel/py-poetry to 2.4.2 [adam 2026-08-31]
