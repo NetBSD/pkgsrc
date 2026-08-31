@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/01/06 16:37:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2026/08/31 10:58:38 adam Exp $
 
-DISTNAME=	pkginfo-1.12.1.2
+DISTNAME=	pkginfo-1.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pkginfo/}
 
@@ -12,13 +11,11 @@ COMMENT=	Query metadata from sdists / bdists / installed packages
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pkginfo pkginfo-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pkginfo
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
