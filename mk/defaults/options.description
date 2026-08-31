@@ -271,6 +271,7 @@ freeswitch-32k		32000Hz Audio Files
 freeswitch-48k		48000Hz Audio Files
 freetype		Enable freetype support.
 fribidi			Enable BIDI support using fribidi.
+frotz			Curses-based interpreter for Infocom-compatible games.
 ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
 fuse			Enable Filesystem in Userspace support.
@@ -1114,6 +1115,7 @@ xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 xvideo			Enable X-Video Motion Compensation library support.
 xwayland		Enable Xwayland support for running X11 applications on Wayland.
+xzip			Z-code interpreter for X11 (Infocom game format).
 z3			Enable support for the Z3 theorem prover.
 zbar			Enable support for zbar.
 zenmap			Enable nmap GUI frontend.
@@ -1122,6 +1124,7 @@ zip			Support zip archives.
 ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
 zlib-ng			Enable support for zlib-ng compression with SIMD optimizations.
+zoom			Plays Infocom-compatible games, with graphics support.
 zrtp			Enable ZRTP support.
 zsh-multibyte		Enable multibyte support in Zsh.
 zstd			Enable Zstandard (de)compression support.
