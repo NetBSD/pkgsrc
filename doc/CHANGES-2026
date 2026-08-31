@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5698 2026/08/31 07:25:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5699 2026/08/31 08:30:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8377,3 +8377,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/exiv2 to 0.28.9 [wiz 2026-08-31]
 	Updated net/libtorrent to 0.16.21 [adam 2026-08-31]
 	Updated net/rtorrent to 0.16.21 [adam 2026-08-31]
+	Updated devel/feluda to 1.16.0 [pin 2026-08-31]
