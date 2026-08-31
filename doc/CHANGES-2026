@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5715 2026/08/31 10:39:50 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5716 2026/08/31 10:45:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8401,3 +8401,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wrapt to 2.4.0 [adam 2026-08-31]
 	Updated security/py-joserfc to 1.7.5 [adam 2026-08-31]
 	Updated www/resterm to 1.5.1 [drixter 2026-08-31]
+	Updated devel/orc to 0.4.43 [adam 2026-08-31]
