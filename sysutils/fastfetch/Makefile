@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2026/08/03 18:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/08/31 16:28:48 vins Exp $
 
-DISTNAME=	fastfetch-2.64.2
-PKGREVISION=	4
+DISTNAME=	fastfetch-2.67.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -13,7 +12,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c23
 
 # prop_dictionary_keysym_value
 NOT_FOR_PLATFORM+=	NetBSD-[0-8].*-* NetBSD-9.*-*
