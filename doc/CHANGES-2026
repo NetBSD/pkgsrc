@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5726 2026/08/31 18:16:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5727 2026/08/31 20:52:28 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8417,3 +8417,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/got to 0.127 [vins 2026-08-31]
 	Updated editors/emacs31 to 31.1nb1 [wiz 2026-08-31]
 	Updated textproc/expat to 2.8.4 [wiz 2026-08-31]
+	Removed multimedia/sickgear [js 2026-08-31]
