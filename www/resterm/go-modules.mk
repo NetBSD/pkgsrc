@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.28 2026/08/29 22:18:41 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.29 2026/08/31 10:39:31 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!make!now!just/heredoc/@v/v1.0.0.zip
