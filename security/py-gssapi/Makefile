@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/06/28 15:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/08/31 12:03:25 adam Exp $
 
-DISTNAME=	gssapi-1.11.1
+DISTNAME=	gssapi-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.2.4:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
 # unpackaged: k5test
-TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized>=0:../../devel/py-parameterized
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
