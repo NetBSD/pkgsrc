@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5717 2026/08/31 10:58:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5718 2026/08/31 12:04:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8404,3 +8404,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/orc to 0.4.43 [adam 2026-08-31]
 	Updated devel/py-dulwich to 1.2.14 [adam 2026-08-31]
 	Updated devel/py-pkginfo to 1.13 [adam 2026-08-31]
+	Updated security/py-gssapi to 1.12.0 [adam 2026-08-31]
+	Updated security/py-pyspnego to 0.12.2 [adam 2026-08-31]
