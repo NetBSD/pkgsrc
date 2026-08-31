@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/06/28 15:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/08/31 12:04:07 adam Exp $
 
-DISTNAME=	pyspnego-0.12.1
+DISTNAME=	pyspnego-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspnego/}
@@ -17,12 +17,10 @@ DEPENDS+=	${PYPKGPREFIX}-krb5>=0.3.0:../../security/py-krb5
 
 USE_LANGUAGES=	# none
 
+PY_RENAME_BINARIES=	pyspnego-parse
+
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pyspnego-parse pyspnego-parse-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
