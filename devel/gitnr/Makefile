@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/08/07 09:18:26 pin Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/31 08:31:47 pin Exp $
 
-DISTNAME=	gitnr-0.3.0
+DISTNAME=	gitnr-0.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reemus-dev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
