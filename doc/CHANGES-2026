@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5697 2026/08/31 07:09:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5698 2026/08/31 07:25:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8375,3 +8375,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/asterisk22 to 22.11.0 [jnemeth 2026-08-31]
 	Updated comms/asterisk23 to 23.5.0 [jnemeth 2026-08-31]
 	Updated graphics/exiv2 to 0.28.9 [wiz 2026-08-31]
+	Updated net/libtorrent to 0.16.21 [adam 2026-08-31]
+	Updated net/rtorrent to 0.16.21 [adam 2026-08-31]
