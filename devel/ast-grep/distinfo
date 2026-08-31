@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.88 2026/08/24 08:48:22 wiz Exp $
+$NetBSD: distinfo,v 1.89 2026/08/31 08:59:13 wiz Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -30,9 +30,9 @@ Size (anyhow-1.0.104.crate) = 48819 bytes
 BLAKE2s (assert_cmd-2.2.2.crate) = 10885bdc41e4ad4df013b9fb65141d72bc5c3a5e14c457f0f6069b5cb0303086
 SHA512 (assert_cmd-2.2.2.crate) = 9840d542c00a4df5bdf324ee7fb7120612480d758d8923d54455a93815b5f1d576c8968956bd0cf3f31d4ac457e78b421051b3d9af6e4737c2fec7437d5bb44d
 Size (assert_cmd-2.2.2.crate) = 27683 bytes
-BLAKE2s (ast-grep-0.45.2.tar.gz) = e038a76ddf9bf07d8c84391ef301ef1db9fd92f1975aad3186cb7ff9eeec724e
-SHA512 (ast-grep-0.45.2.tar.gz) = fb12e489118fc134c23078d3d5010d1dd1673b0e5f9cff8dfd84b36ae1267d898a88af744814cd76ee46649cfbeb36a4f1bc8dfc208d8a8a6ffc3aa3799cc453
-Size (ast-grep-0.45.2.tar.gz) = 586869 bytes
+BLAKE2s (ast-grep-0.45.3.tar.gz) = 461f522f9a57ac5bbe8922160cd8a16eac63161cceeacc44a20d0fd621b5c48e
+SHA512 (ast-grep-0.45.3.tar.gz) = 11dc550a63a439b23e70864ed5ea9b44bdc40fbb712842da7a508bb43088c6b7d300577acd0d37b174883106c8a9671c859b3020430e412df598301c4c704b30
+Size (ast-grep-0.45.3.tar.gz) = 589614 bytes
 BLAKE2s (async-trait-0.1.92.crate) = 744ca81d2134221154761342593dc84e24325970aca2360fccf291af904748ea
 SHA512 (async-trait-0.1.92.crate) = 149fe66a9abb5d84af57fd4c7cd82d85a4d41d0816eefc5e23dddda2007ead0f500c316ca9312db19178273d8f8a5b91c9609ac94633bd1401885d7618218177
 Size (async-trait-0.1.92.crate) = 32039 bytes
@@ -609,9 +609,9 @@ Size (tracing-log-0.2.0.crate) = 17561 bytes
 BLAKE2s (tracing-subscriber-0.3.23.crate) = 29d9591aa60e5817ad5cb49ca0de1203d21ea408badceee74a7f36650613b032
 SHA512 (tracing-subscriber-0.3.23.crate) = 9d69512c39fe2a4d9f4e27f373e3c79d2b23dc6a8e10e8388c5bba87d6f80048edd1e70541fb4311b9708d53510a53dfe69f32c1e3e36ea85c6dfaafc2c01f74
 Size (tracing-subscriber-0.3.23.crate) = 213773 bytes
-BLAKE2s (tree-sitter-0.26.13.crate) = d0b973405736c0cb889bdc08ebc1d1a4291fbef3fab0e67fcbfada63633b0ecd
-SHA512 (tree-sitter-0.26.13.crate) = 0103b739703fb33ef543c008029f5668042d5ad86c9166fab5932017d268841e5cb5e2ee4d85f025bc540d9b89e926f68ab5737e0f76b631a92868857cf71727
-Size (tree-sitter-0.26.13.crate) = 202675 bytes
+BLAKE2s (tree-sitter-0.27.0.crate) = 4e88079653d58f435a02b3878e68b5ce6dc6d55ce6d8702aef728eaad4366e62
+SHA512 (tree-sitter-0.27.0.crate) = 170e07f26c6ccac1c441ef3a72a50ba87998467f5a25389837b67beade420d4e76598de83d5e5a055ecfc7359e68b7d39399b0c76d552b7573fe11545af47004
+Size (tree-sitter-0.27.0.crate) = 229415 bytes
 BLAKE2s (tree-sitter-bash-0.25.1.crate) = 834e6061d8db260dd1f082f08def1b36729323795ad999bee80d84240d3a8906
 SHA512 (tree-sitter-bash-0.25.1.crate) = 64bdb945061fa42d722d58aa14a70a361c5b47db6be72bc887003a24b3eb577516db8d25e08b0dfc7a80728378d1b8d7cba5e169362bd594c819fa89363a3bbf
 Size (tree-sitter-bash-0.25.1.crate) = 438310 bytes
@@ -657,9 +657,9 @@ Size (tree-sitter-json-0.24.8.crate) = 13236 bytes
 BLAKE2s (tree-sitter-kotlin-sg-0.4.1.crate) = 5d59aa8145c3b1411fef809f18f23b9528f378f5204a322c6e64918b9f567152
 SHA512 (tree-sitter-kotlin-sg-0.4.1.crate) = 5d1146010fbfcd32cafb98675c651b81168d1c4ac8bbce748ea654c0eb051c6f19e127ce60dffd2da25a919c2108b2705c5958d554e4234d02bc56b95b0f88a2
 Size (tree-sitter-kotlin-sg-0.4.1.crate) = 1869359 bytes
-BLAKE2s (tree-sitter-language-0.1.7.crate) = c2a82ef5548282bbaec00d7aa18ad4ea7d776856b8ec7781347863cffe353e97
-SHA512 (tree-sitter-language-0.1.7.crate) = 0b4416abf967e92fa7fa2069061deffe1727b9135c57508a1ba5a9bd5383a7ff7df5834d13b6939759cb5a2c003a7809e5863512b1c0660f5f9d58782362b7a8
-Size (tree-sitter-language-0.1.7.crate) = 7945 bytes
+BLAKE2s (tree-sitter-language-0.1.8.crate) = 1d175c03f53330997cd77aa670b05d19b7e408d8cd086e47875e78bdf468a552
+SHA512 (tree-sitter-language-0.1.8.crate) = c48af01564c6f5fd4fe6d8ad5e6b6fc0707dd20fdc2f52087fe19e719bd0938d4e4ba0b8495d3a0165e45c3b83b01cd70720b8c58c5d47dbafc9856351f7d138
+Size (tree-sitter-language-0.1.8.crate) = 5279 bytes
 BLAKE2s (tree-sitter-lua-0.5.0.crate) = eae3f4b55491f9c78bbc4459b883607fdd1cc17233337609e0f939a178700847
 SHA512 (tree-sitter-lua-0.5.0.crate) = 107577826d85ebd2e658e9a5a5809c6196bfbfd93a5660956740a0f0e5e2412d0974a3a1de56ecade76ea107aaa6460fe4bf9c971a45c61168981b8823a5060d
 Size (tree-sitter-lua-0.5.0.crate) = 47065 bytes
