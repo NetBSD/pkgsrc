@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2025/11/30 11:46:38 vins Exp $
+# $NetBSD: Makefile,v 1.5 2026/08/31 14:02:04 vins Exp $
 
-DISTNAME=	openrsync-0.20250127
-PKGREVISION=	1
+DISTNAME=	openrsync-0.20260730
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
-GITHUB_TAG=	a257c0f495af2b5ee6b41efc6724850a445f87ed
+GITHUB_TAG=	8235c68f11b4fad5e24849a01d04ea153c29ee28
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/kristapsdz/openrsync
