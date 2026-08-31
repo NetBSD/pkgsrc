@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2026/08/12 03:46:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.363 2026/08/31 20:51:04 js Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -187,7 +187,6 @@ SUBDIR+=	ruby-gstreamer
 SUBDIR+=	ruby-ming
 SUBDIR+=	schroedinger
 SUBDIR+=	sfml
-SUBDIR+=	sickgear
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
 SUBDIR+=	ssr
