@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.83 2026/08/24 08:48:22 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.84 2026/08/31 08:59:13 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -202,7 +202,7 @@ CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.31
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.36
 CARGO_CRATE_DEPENDS+=	tracing-log-0.2.0
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.23
-CARGO_CRATE_DEPENDS+=	tree-sitter-0.26.13
+CARGO_CRATE_DEPENDS+=	tree-sitter-0.27.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.25.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.24.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.23.5
@@ -218,7 +218,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.24.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-sg-0.4.1
-CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
+CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-md-0.5.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-nix-0.3.0
