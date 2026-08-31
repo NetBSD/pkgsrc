@@ -1,9 +1,9 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2026/07/07 14:24:31 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2026/08/31 10:56:29 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	bstr-1.12.3
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.186
-CARGO_CRATE_DEPENDS+=	memchr-2.8.2
+CARGO_CRATE_DEPENDS+=	memchr-2.8.3
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.13.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
