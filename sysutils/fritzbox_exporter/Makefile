@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/08/22 15:19:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/31 19:19:05 bsiegert Exp $
 
 DISTNAME=	fritzbox_exporter-1.1.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	sysutils
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ndecker/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

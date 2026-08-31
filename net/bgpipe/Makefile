@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/08/22 15:19:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2026/08/31 19:18:55 bsiegert Exp $
 
 DISTNAME=	bgpipe-0.22.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bgpfix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

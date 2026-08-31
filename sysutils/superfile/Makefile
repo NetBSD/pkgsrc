@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/08/22 15:19:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2026/08/31 19:19:07 bsiegert Exp $
 
 DISTNAME=	superfile-1.1.2
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MHNightCat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.211 2026/08/22 15:19:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.212 2026/08/31 19:18:59 bsiegert Exp $
 
 DISTNAME=	syncthing-source-v2.0.16
 PKGNAME=	${DISTNAME:S,source-v,,}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
