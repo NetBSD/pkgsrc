@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5724 2026/08/31 18:11:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5725 2026/08/31 18:12:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8415,3 +8415,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/ruby-zip to 3.5.0 [taca 2026-08-31]
 	Updated sysutils/fastfetch to 2.67.1 [vins 2026-08-31]
 	Updated devel/got to 0.127 [vins 2026-08-31]
+	Updated editors/emacs31 to 31.1nb1 [wiz 2026-08-31]
