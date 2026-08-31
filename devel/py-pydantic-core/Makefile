@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2026/05/14 12:22:00 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/08/31 09:58:04 wiz Exp $
 
 # NB: pydantic expresses an exact dependency on pydantic-core.  While
 # unfortunate, it is actually true, and pydantic with non-matching
 # versions of pydantic-core fail to build matrix-synapse.
 # https://github.com/pydantic/pydantic/issues/12189#issuecomment-3227083571
-DISTNAME=	pydantic_core-2.46.4
+DISTNAME=	pydantic_core-2.46.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
@@ -26,8 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.1:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
 
-# as of 2.27.0
-# 4545 passed, 68 skipped, 2 xfailed
+# as of 2.46.5
+# 5763 passed, 127 skipped, 10 xfailed, 34 errors
 
 .include "cargo-depends.mk"
 
