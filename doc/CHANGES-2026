@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5713 2026/08/31 09:58:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5714 2026/08/31 10:26:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8398,3 +8398,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/webkit-gtk60 to 2.52.6nb1 [wiz 2026-08-31]
 	Updated devel/py-pydantic-core to 2.46.5 [wiz 2026-08-31]
 	Updated devel/py-pydantic to 2.13.5 [wiz 2026-08-31]
+	Updated devel/py-wrapt to 2.4.0 [adam 2026-08-31]
+	Updated security/py-joserfc to 1.7.5 [adam 2026-08-31]
