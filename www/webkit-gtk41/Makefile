@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2026/08/30 14:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/08/31 09:44:25 wiz Exp $
 
 PLIST_SRC=	PLIST
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk41/}
+PKGREVISION=	1
 COMMENT=	GTK3 port of the WebKit browser engine (API 4.1)
 
 CMAKE_CONFIGURE_ARGS+=		-DUSE_GTK4=OFF

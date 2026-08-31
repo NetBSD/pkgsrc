@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2026/08/30 14:25:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/08/31 09:44:25 wiz Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -176,6 +176,9 @@ CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
 .include "../../audio/flite/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+# when gettext-lib is installed, it links against it,
+# so force dependency on it.
+PREFER.gettext=	pkgsrc
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
