@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/08/25 17:22:38 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2026/08/31 18:11:55 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -42,12 +42,12 @@ CONFIGURE_ARGS+=	--without-dbus
 ###
 .if !empty(PKG_OPTIONS:Mlibgccjit)
 CONFIGURE_ARGS+=	--with-native-compilation
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc15-libjit}/gcc15/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc16-libjit}/gcc16/lib
 PRINT_PLIST_AWK+=	/lib\/emacs\/${PKGVERSION_NOREV}\/native-lisp/ { next; }
 PRINT_PLIST_AWK+=	/share\/emacs\/${PKGVERSION_NOREV}\/lisp\/native-lisp/ { next; }
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
         ${FIND} share/emacs/${PKGVERSION_NOREV}/lisp/native-lisp lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
-.  include "../../lang/gcc15-libjit/buildlink3.mk"
+.  include "../../lang/gcc16-libjit/buildlink3.mk"
 .endif
 
 ###
