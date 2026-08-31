@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/08/22 15:19:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2026/08/31 19:16:09 bsiegert Exp $
 
 DISTNAME=	scaleway-cli-2.56.1
 PKGREVISION=	4
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.scaleway.com/en/cli/
 COMMENT=	Command Line Interface for Scaleway
 LICENSE=	apache-2.0
+
+# fails to build with Go 1.27
+GO_VERSION_REQD=		126
 
 GOFLAGS+=		-ldflags ' \
 			-X main.Version=${PKGVERSION_NOREV} \
