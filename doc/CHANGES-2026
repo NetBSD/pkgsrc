@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5695 2026/08/31 05:33:39 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.5696 2026/08/31 05:49:32 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8373,3 +8373,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/nono to 1.8.3 [jun 2026-08-31]
 	Updated devel/scons4 to 4.11.1 [gdt 2026-08-30]
 	Updated comms/asterisk22 to 22.11.0 [jnemeth 2026-08-31]
+	Updated comms/asterisk23 to 23.5.0 [jnemeth 2026-08-31]
