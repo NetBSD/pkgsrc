@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5722 2026/08/31 16:29:15 vins Exp $
+$NetBSD: CHANGES-2026,v 1.5723 2026/08/31 16:33:38 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8411,3 +8411,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/openrsync to 0.20260730 [vins 2026-08-31]
 	Updated archivers/ruby-zip to 3.5.0 [taca 2026-08-31]
 	Updated sysutils/fastfetch to 2.67.1 [vins 2026-08-31]
+	Updated devel/got to 0.127 [vins 2026-08-31]
