@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5701 2026/08/31 08:33:13 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5702 2026/08/31 08:34:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8380,3 +8380,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/feluda to 1.16.0 [pin 2026-08-31]
 	Updated devel/gitnr to 0.3.1 [pin 2026-08-31]
 	Updated devel/gitpane to 0.15.0 [pin 2026-08-31]
+	Updated devel/hexpatch to 1.13.1 [pin 2026-08-31]
