@@ -1,0 +1,16 @@
+$NetBSD: patch-gcc_configure,v 1.1 2026/08/31 18:05:08 wiz Exp $
+
+NetBSD ld supports --as-needed, but not -lgcc_s_asneeded.
+
+--- gcc/configure.orig	2026-08-31 17:46:27.753488730 +0000
++++ gcc/configure
+@@ -33278,6 +33278,9 @@ elif test x$gcc_cv_ld != x; then
+       gcc_cv_ld_no_as_needed_option="-z record"
+       gcc_cv_ld_use_as_needed_ldscript=no
+       ;;
++    *-*-netbsd*:*)
++      gcc_cv_ld_use_as_needed_ldscript=no
++      ;;
+   esac
+ fi
+ 

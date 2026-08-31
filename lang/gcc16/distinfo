@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/08/10 21:41:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/08/31 18:05:08 wiz Exp $
 
 BLAKE2s (gcc-16.1.0.tar.xz) = 037fe6c26509be014b26e0c16b07c2faac0c9894491b4525582d45ff88c66970
 SHA512 (gcc-16.1.0.tar.xz) = b3454958891ab47e1e5b6cb9396c0ad3b04f32fe2a7bf1153a143f21013fdb6b295ca94c98964698a688e4c1d7555ffd8ffbc20187507cce6b1c32cbcc09897a
@@ -19,6 +19,7 @@ SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab3590
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 1930d8bf8f4d5cbd6ee1c7a48150edcd3c92b647
 SHA1 (patch-gcc_config_i386_t-netbsd64) = 914b4d2fd65f5e46681aa2ea592d0bc75299f09a
 SHA1 (patch-gcc_config_netbsd.h) = ada05409eacb33bc1e7a659f3090f2f43551a35d
+SHA1 (patch-gcc_configure) = a12d583e8fb94c23fe3a2d8ace3f2d2130b82b61
 SHA1 (patch-isl_configure) = 6b7f5f6dea42bca0f90e6f9ce1131f93d607495d
 SHA1 (patch-libffi_configure) = 0ed41a6bde6987f5e6be4847e02f02abd09c176d
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
