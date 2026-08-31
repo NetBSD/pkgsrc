@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5704 2026/08/31 08:41:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5705 2026/08/31 08:42:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8383,3 +8383,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/hexpatch to 1.13.1 [pin 2026-08-31]
 	Updated shells/oh-my-posh to 31.1.0 [pin 2026-08-31]
 	Updated sysutils/dua-cli to 2.44.0 [pin 2026-08-31]
+	Updated sysutils/onefetch to 2.28.1 [pin 2026-08-31]
