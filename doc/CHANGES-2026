@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5741 2026/09/01 19:17:08 fox Exp $
+$NetBSD: CHANGES-2026,v 1.5742 2026/09/01 19:30:18 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8440,3 +8440,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/joker to 1.10.0 [ktnb 2026-09-01]
 	Updated audio/kew to 4.3.0 [ktnb 2026-09-01]
 	Updated lang/gjs to 1.82.3 [fox 2026-09-01]
+	Updated www/gumbo-parser to 0.14.0 [ktnb 2026-09-01]
