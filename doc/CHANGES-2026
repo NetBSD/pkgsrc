@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5744 2026/09/01 21:30:47 fox Exp $
+$NetBSD: CHANGES-2026,v 1.5745 2026/09/01 23:30:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8443,3 +8443,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/gumbo-parser to 0.14.0 [ktnb 2026-09-01]
 	Updated mail/imapfilter to 2.8.5 [fly 2026-09-01]
 	Updated print/foliate to 3.3.0 [fox 2026-09-01]
+	Updated lang/sbcl to 2.6.8 [ktnb 2026-09-01]
