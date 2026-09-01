@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5739 2026/09/01 18:52:54 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.5740 2026/09/01 19:00:30 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8438,3 +8438,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/geos to 3.15.0 [gdt 2026-09-01]
 	Updated lang/janet to 1.42.0 [ktnb 2026-09-01]
 	Updated lang/joker to 1.10.0 [ktnb 2026-09-01]
+	Updated audio/kew to 4.3.0 [ktnb 2026-09-01]
