@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/03/13 17:52:47 maya Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/01 03:03:39 maya Exp $
 
 DISTNAME=	mpack-1.6
 PKGREVISION=	4
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 .if !empty(PKGSRC_COMPILER:Mgcc)
 CFLAGS+=	-Wno-error=implicit-int
 CFLAGS+=	-Wno-error=implicit-function-declaration
+.elif !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-implicit-function-declaration
 .endif
 
 .include "../../mk/bsd.pkg.mk"
