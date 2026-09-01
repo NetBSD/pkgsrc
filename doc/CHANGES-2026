@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5733 2026/09/01 16:02:49 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5734 2026/09/01 16:03:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8432,3 +8432,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-nh3 to 0.3.7 [adam 2026-09-01]
 	Updated devel/py-gitpython to 3.1.61 [adam 2026-09-01]
 	Updated www/firefox140 to 140.15.0 [gutteridge 2026-09-01]
+	Updated www/firefox140-l10n to 140.15.0 [gutteridge 2026-09-01]
