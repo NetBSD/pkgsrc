@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2026/07/24 15:13:03 ktnb Exp $
+$NetBSD: distinfo,v 1.27 2026/09/01 19:00:15 ktnb Exp $
 
 BLAKE2s (kew/artists-8f0c30b.db) = 70c5be04465795fefab0c25773c8b34a3dadca3bf2eaabd3d7d226dd2f551545
 SHA512 (kew/artists-8f0c30b.db) = 14f3fcf7ccee702cd010de06ab373bd8bfa0716a3dfefc19bd7dd9a01aa45c2628fccc84807c103b6d3166ae926ca669ae94fe9ecbd0102e5ef915b0c8dd2902
 Size (kew/artists-8f0c30b.db) = 9998556 bytes
-BLAKE2s (kew/kew-4.2.7.tar.gz) = 51574a903dacf56c937e04753e93a609dfc7d415a9fb9e3f25843e86d5f5e27f
-SHA512 (kew/kew-4.2.7.tar.gz) = 2a1853ea645f77f1790f8cc665e4a2177eef20046370cc0b189ed6f9a18aafc5b165aca9f6f40fcee8e63d4da51e8820c6b37361f45fcdb583373a40e92964cf
-Size (kew/kew-4.2.7.tar.gz) = 12578676 bytes
+BLAKE2s (kew/kew-4.3.0.tar.gz) = e5c164c64b4c7268e675ae3b981ee94920966784626ffd0dcf776e75346d8179
+SHA512 (kew/kew-4.3.0.tar.gz) = e71c8d245a4db320fc6f8c0f72df182b78cad5cf09decdd4eab8d3b5b2d6986f9ac89515e6210bafb9f82d319524f50c9434e2fd93134913f9f3a6acc8114dc1
+Size (kew/kew-4.3.0.tar.gz) = 70498474 bytes
 SHA1 (patch-Makefile) = a7a3a86242974637b2d37f9223791861d2471d0c
