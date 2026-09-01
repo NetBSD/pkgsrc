@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27861 2026/08/31 09:58:30 wiz Exp $
+$NetBSD: TODO,v 1.27862 2026/09/01 19:17:09 fox Exp $
 
 Suggested new packages
 ======================
@@ -679,7 +679,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.3
-	o gjs-1.70.1
 	o gleam-1.18.0
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
