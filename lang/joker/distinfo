@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2026/07/02 18:44:58 ktnb Exp $
+$NetBSD: distinfo,v 1.19 2026/09/01 18:52:29 ktnb Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.0.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.0.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -255,6 +255,6 @@ Size (gopkg.in_yaml.v2_@v_v2.4.0.zip) = 81183 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (joker-1.9.0.tar.gz) = be3c725f312d4ec0708d6c0fab1235cf3953986570615585564657aa4329fb13
-SHA512 (joker-1.9.0.tar.gz) = 390ba4dd343c438481b70e8257f1ec33efcac4f78b20a24e0aa1c35f292dccac260b0a7dfc4cb114ba7d72e21bfe27a09b3b346bca98772bf6c135b8acc771f0
-Size (joker-1.9.0.tar.gz) = 562453 bytes
+BLAKE2s (joker-1.10.0.tar.gz) = 13686bad809cf7d32579dc095101ebe8ac3e22b80519cbe521654b5020d4c03c
+SHA512 (joker-1.10.0.tar.gz) = d63cf787aa434c11f8baa7cdf0a90802cb84aaa6403a7f0aebc080782aabe955964ffcb123f8675dd2140ab09d20f64e1d71a0a85966ba66187b14e17ae69a1a
+Size (joker-1.10.0.tar.gz) = 578810 bytes
