@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2022/01/16 04:52:09 fox Exp $
+$NetBSD: distinfo,v 1.16 2026/09/01 21:28:14 fox Exp $
 
-BLAKE2s (foliate-2.6.4.tar.gz) = fe46223a9ffe020021adc32148c43f61a5d033bfc00325f6932df9cd40542c44
-SHA512 (foliate-2.6.4.tar.gz) = af58efa2c33451617dbf7327b56551557d762ac80f1b489d5da1c5a46ebbfe329052149deb8b2f4c7729a7fd46deccd5500fd96c0a662b731c871c1ad8061cd3
-Size (foliate-2.6.4.tar.gz) = 4824560 bytes
-SHA1 (patch-src_assets_KindleUnpack_kindleunpack.py) = 2b558fe842669982aec6087e9ce1c72f1fc52315
-SHA1 (patch-src_epubView.js) = de7ab2f79d0d7b6eb379686b6091f6f7bfda95e2
+BLAKE2s (foliate-3.3.0.tar.gz) = ce7d703d6745d4f7b3953c8e076a542e6b7950b3a805e8eed779b22e4e910383
+SHA512 (foliate-3.3.0.tar.gz) = 9940f9e6494ba09488e1ebdcbf444b1510956038d926788e4eda774ad9d3d43ee0b839817ebcd8c1ec892bb56e45c543e66fe6d55952c7820b394cbef3b97645
+Size (foliate-3.3.0.tar.gz) = 7505565 bytes
+BLAKE2s (johnfactotum-foliate-js-052123beafed921a9a2a45ef6330c235289a634e.tar.gz) = 41b2216c95e08bd2ad067dbfa23f2940b456162f9ba0ff96a9ee766575b9faa5
+SHA512 (johnfactotum-foliate-js-052123beafed921a9a2a45ef6330c235289a634e.tar.gz) = 9f93334af0060522556aad75881d34166aefdb48a72d59ad643451b2029a0c50f89447f8711b6f472fba109ae30d3cb7277a992faf563c86b691cb955bc6873d
+Size (johnfactotum-foliate-js-052123beafed921a9a2a45ef6330c235289a634e.tar.gz) = 3628155 bytes
