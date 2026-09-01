@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2026/08/26 10:11:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/09/01 09:04:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -80,6 +80,9 @@ ${PYSITELIB}/google/protobuf/internal/extension_dict.pyo
 ${PYSITELIB}/google/protobuf/internal/field_mask.py
 ${PYSITELIB}/google/protobuf/internal/field_mask.pyc
 ${PYSITELIB}/google/protobuf/internal/field_mask.pyo
+${PYSITELIB}/google/protobuf/internal/json_format_benchmark.py
+${PYSITELIB}/google/protobuf/internal/json_format_benchmark.pyc
+${PYSITELIB}/google/protobuf/internal/json_format_benchmark.pyo
 ${PYSITELIB}/google/protobuf/internal/message_benchmark.py
 ${PYSITELIB}/google/protobuf/internal/message_benchmark.pyc
 ${PYSITELIB}/google/protobuf/internal/message_benchmark.pyo
