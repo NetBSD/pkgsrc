@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5727 2026/08/31 20:52:28 js Exp $
+$NetBSD: CHANGES-2026,v 1.5728 2026/09/01 09:04:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8418,3 +8418,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/emacs31 to 31.1nb1 [wiz 2026-08-31]
 	Updated textproc/expat to 2.8.4 [wiz 2026-08-31]
 	Removed multimedia/sickgear [js 2026-08-31]
+	Updated devel/pcre2 to 10.48 [adam 2026-09-01]
+	Updated devel/protobuf to 36.1 [adam 2026-09-01]
+	Updated devel/py-protobuf to 7.36.1 [adam 2026-09-01]
