@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.96 2026/07/18 23:14:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.97 2026/09/01 08:22:44 jperkin Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -13,17 +13,17 @@ HOMEPAGE=	https://sillycycle.com/xlockmore.html
 # Similar to BSD license, but uses different words (see xlockmore.spec)
 LICENSE=	2-clause-bsd
 
+DISTINFO_FILE=		${.CURDIR}/../../x11/xlockmore/distinfo
+PATCHDIR=		${.CURDIR}/../../x11/xlockmore/patches
+PLIST_SRC=		${.CURDIR}/../../x11/xlockmore/PLIST
+FILESDIR=		${.CURDIR}/../../x11/xlockmore/files
+
 .include "../../mk/bsd.prefs.mk"
 
 # The curl User-Agent is blocked with code 406
 .if ${FETCH_USING} == "curl"
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 .endif
-
-DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
-PATCHDIR?=		${.CURDIR}/../../x11/xlockmore/patches
-PLIST_SRC?=		${.CURDIR}/../../x11/xlockmore/PLIST
-FILESDIR?=		${.CURDIR}/../../x11/xlockmore/files
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xlockmore
 PKG_SUPPORTED_OPTIONS=		xlockmore-allow-root xlockmore-dpms pam
