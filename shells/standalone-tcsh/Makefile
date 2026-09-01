@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/03/17 08:27:31 nia Exp $
+# $NetBSD: Makefile,v 1.44 2026/09/01 08:58:01 jperkin Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -7,16 +7,14 @@ NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
 
-PATCHDIR=		../../shells/tcsh/patches
-PKGDIR=			../../shells/tcsh
-DESCR_SRC=		../../shells/tcsh/DESCR DESCR
+.include "../../shells/tcsh/Makefile.common"
 
 # This package only makes sense on platforms that don't themselves ship tcsh
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
 # anyone wants.
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
-MKPIE_SUPPORTED= no
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,7 +22,6 @@ MKPIE_SUPPORTED= no
 NOT_FOR_PLATFORM+=	SunOS-*-*
 .endif
 
-.include "../../shells/tcsh/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
 
 COMMENT:=		Standalone version of the Extended C-shell
