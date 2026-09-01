@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/06/11 07:17:17 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/09/01 19:16:33 fox Exp $
 
-DISTNAME=	gjs-1.68.4
-PKGREVISION=	28
+DISTNAME=	gjs-1.82.3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +18,7 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gjs@sha:${WRKSRC}/output/gjs-jsapi@sta:${WRKSRC}/output/gjs-console@exe
 MESON_ARGS+=	-Dinstalled_tests=false
 MESON_ARGS+=	-Dprofiler=disabled
+MESON_ARGS+=	-Db_pch=false
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -27,6 +27,10 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
 
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs-console
+
+.include "../../mk/pax.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
@@ -34,7 +38,7 @@ CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/mozjs78/buildlink3.mk"
+.include "../../lang/mozjs128/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
