@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/08/24 12:07:33 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/01 10:10:23 adam Exp $
 
-DISTNAME=	cramjam-2.12.0
+DISTNAME=	cramjam-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cramjam/}
