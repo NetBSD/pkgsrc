@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2026/04/08 16:08:47 sborrill Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/09/01 09:12:20 jperkin Exp $
 #
 # used by net/vnstat/Makefile
 # used by net/vnstati/Makefile
@@ -14,6 +14,10 @@ MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	https://humdi.net/vnstat/
 COMMENT=	Small network traffic monitor
 LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../net/vnstat/distinfo
+PATCHDIR=	${.CURDIR}/../../net/vnstat/patches
+PKGDIR=		${.CURDIR}/../../net/vnstat
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-disable-extra-paths
