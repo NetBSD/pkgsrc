@@ -1,8 +1,8 @@
-$NetBSD: patch-Cargo.toml,v 1.7 2026/07/24 09:03:52 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.8 2026/09/01 10:40:58 adam Exp $
 
 Paths to local crates.
 
---- Cargo.toml.orig	2026-07-13 06:54:46.564395618 +0000
+--- Cargo.toml.orig	2026-08-27 12:09:16.000000000 +0000
 +++ Cargo.toml
 @@ -9,9 +9,9 @@ axum = "0.8"
  base64 = "0.22"
@@ -17,12 +17,3 @@ Paths to local crates.
  defguard_wireguard_rs = "0.11"
  rustls = { version = "0.23", default-features = false, features = ["ring"] }
  rustls-pki-types = "1"
-@@ -44,7 +44,7 @@ tracing = "0.1"
- tracing-subscriber = "0.3"
- 
- [target.'cfg(target_os = "linux")'.dependencies]
--nftnl = { git = "https://github.com/DefGuard/nftnl-rs.git", rev = "abd34b08c53b88a47346da6362e360d522cf8ca2" }
-+nftnl = { path = "../nftnl-rs-abd34b08c53b88a47346da6362e360d522cf8ca2/nftnl" }
- mnl = "0.3"
- 
- [dev-dependencies]

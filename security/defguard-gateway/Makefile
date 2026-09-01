@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/08/10 10:49:30 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/01 10:40:58 adam Exp $
 
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-gateway-2.0.4
+DISTNAME=	defguard-gateway-2.0.5
 EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	gateway
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
