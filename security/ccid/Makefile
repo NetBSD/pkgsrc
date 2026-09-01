@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/06/22 08:58:19 adam Exp $
+# $NetBSD: Makefile,v 1.57 2026/09/01 10:44:22 adam Exp $
 
-DISTNAME=	ccid-1.8.2
+DISTNAME=	ccid-1.8.3
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
