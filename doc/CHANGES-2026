@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5731 2026/09/01 13:55:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5732 2026/09/01 14:16:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8429,3 +8429,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ipython to 9.17.1 [adam 2026-09-01]
 	Updated textproc/py-regex to 2026.9.3 [adam 2026-09-01]
 	Updated devel/py-cachetools to 7.1.8 [adam 2026-09-01]
+	Updated www/py-nh3 to 0.3.7 [adam 2026-09-01]
+	Updated devel/py-gitpython to 3.1.61 [adam 2026-09-01]
