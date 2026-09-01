@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/08/24 12:07:33 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/09/01 10:10:23 adam Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -78,9 +78,9 @@ Size (colorchoice-1.0.3.crate) = 7923 bytes
 BLAKE2s (copy_dir-0.1.3.crate) = bfcead17ff59315496fa2abdc229946fd02c17bed3e39e0c631e74c19a2836e3
 SHA512 (copy_dir-0.1.3.crate) = cd83244960be0bae32ab0480d1057c8a99e4bfd1c4622eb0b85692f2255ccac38678e608c663cf76ccf11d8c0d2415b15ebfd8328efdfbb37bca448245338fa2
 Size (copy_dir-0.1.3.crate) = 5831 bytes
-BLAKE2s (cramjam-2.12.0.tar.gz) = d83f6497266217efdf004ae4270f4cdfa0717f5a630a8038886410801db7861c
-SHA512 (cramjam-2.12.0.tar.gz) = 1dab0f2c6910f4e8613617bfb8e6763785efefaffb7455630ca2b18d71cae0fa8e30b2cf50340ebe1ab022d9790531fce56feca4f1aea92f8858e547c2abc4dc
-Size (cramjam-2.12.0.tar.gz) = 89945 bytes
+BLAKE2s (cramjam-2.12.1.tar.gz) = c5ed3a84e36a1e1917ee9063c985dc8c65708a4fdc9149222a9a8bc2504620cf
+SHA512 (cramjam-2.12.1.tar.gz) = 2b3c59c14e6432b0d68fe56d8ea7b59b549e7503edd9ca7d265100d7b0d1bcacbb73c0c9ef532a432038ea8d11c3a64bc2e61f6762a76af089e25bfe69b1424d
+Size (cramjam-2.12.1.tar.gz) = 89977 bytes
 BLAKE2s (crc32fast-1.4.2.crate) = b1cf168fb32b4405c990cd38e83eb4b908ba0a9005adcc19f1a9022a831702f4
 SHA512 (crc32fast-1.4.2.crate) = c7608d33022062e217d3576f536ffbd51479855a5e5874529c71db2bf6a937ce04d814c39cf777309c38445393bf43cb9996161947e28738abd432f11beb7266
 Size (crc32fast-1.4.2.crate) = 38491 bytes
