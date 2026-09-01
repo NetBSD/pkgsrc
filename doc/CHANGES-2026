@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5728 2026/09/01 09:04:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5729 2026/09/01 10:13:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8421,3 +8421,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/pcre2 to 10.48 [adam 2026-09-01]
 	Updated devel/protobuf to 36.1 [adam 2026-09-01]
 	Updated devel/py-protobuf to 7.36.1 [adam 2026-09-01]
+	Updated archivers/py-cramjam to 2.12.1 [adam 2026-09-01]
+	Updated graphics/py-pillow_heif to 1.6.0 [adam 2026-09-01]
