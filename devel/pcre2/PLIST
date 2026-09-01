@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/10/22 06:40:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/09/01 08:59:33 adam Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -119,6 +119,7 @@ share/doc/pcre2/LICENCE.md
 share/doc/pcre2/NEWS
 share/doc/pcre2/README
 share/doc/pcre2/SECURITY.md
+share/doc/pcre2/SUPPORT-LIFECYCLE.md
 share/doc/pcre2/html/NON-AUTOTOOLS-BUILD.txt
 share/doc/pcre2/html/README.txt
 share/doc/pcre2/html/index.html
