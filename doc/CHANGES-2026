@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5730 2026/09/01 10:48:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5731 2026/09/01 13:55:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8426,3 +8426,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard-gateway to 2.0.5 [adam 2026-09-01]
 	Updated security/ccid to 1.8.3 [adam 2026-09-01]
 	Updated net/py-zeroconf to 0.151.3 [adam 2026-09-01]
+	Updated devel/py-ipython to 9.17.1 [adam 2026-09-01]
+	Updated textproc/py-regex to 2026.9.3 [adam 2026-09-01]
+	Updated devel/py-cachetools to 7.1.8 [adam 2026-09-01]
