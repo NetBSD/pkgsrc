@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2025/01/07 13:03:20 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/02 00:53:37 maya Exp $
 
-DISTNAME=		chezscheme-10.0.0
-PKGREVISION=		1
+DISTNAME=		chezscheme-10.4.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cisco/}
 GITHUB_PROJECT=		ChezScheme
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-GITHUB_SUBMODULES+=	lz4 lz4 d44371841a2f1728a3f36839fd4b7e872d0927d3 lz4
-GITHUB_SUBMODULES+=	nanopass nanopass-framework-scheme 68990d02573faa555ee42919d5809de03f1268a0 nanopass
-GITHUB_SUBMODULES+=	dybvig stex 5e4f0ca67bac448e19a24c09f12fc16d24cd6b6d stex
-GITHUB_SUBMODULES+=	madler zlib 51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf zlib
-GITHUB_SUBMODULES+=	racket zuo ebdc0451c39c70ce88b3b6ab9ba2b8e389ec519a zuo
+GITHUB_SUBMODULES+=	lz4 lz4 ebb370ca83af193212df4dcbadcc5d87bc0de2f0 lz4
+GITHUB_SUBMODULES+=	nanopass nanopass-framework-scheme bb47b5695a5bffdfd4d99ec9b349f0864b08e0d4 nanopass
+GITHUB_SUBMODULES+=	dybvig stex afa607564a5662ffd748e824801277a6b5a3d11c stex
+GITHUB_SUBMODULES+=	madler zlib da607da739fa6047df13e66a2af6b8bec7c2a498 zlib
+GITHUB_SUBMODULES+=	racket zuo a288cbfe350403899311ca7d8267d570e781ed2c zuo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cisco.github.io/ChezScheme/
