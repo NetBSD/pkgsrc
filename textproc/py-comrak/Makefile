@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/07/23 20:32:05 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/02 09:59:29 adam Exp $
 
-DISTNAME=	comrak-0.0.12
+DISTNAME=	comrak-0.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/comrak/}
