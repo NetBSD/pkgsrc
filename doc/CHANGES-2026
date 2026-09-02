@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5769 2026/09/02 15:13:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5770 2026/09/02 15:15:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8505,3 +8505,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-concrete-cms to 9.5.3 [taca 2026-09-02]
 	Updated archivers/ruby-zip to 3.6.0 [taca 2026-09-02]
 	Updated databases/ruby-sequel to 5.108.0 [taca 2026-09-02]
+	Updated devel/py-colorlog to 6.12.0 [adam 2026-09-02]
+	Updated databases/py-sqlalchemy to 2.0.52 [adam 2026-09-02]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.13.5 [adam 2026-09-02]
