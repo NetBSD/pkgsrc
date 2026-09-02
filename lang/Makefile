@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.793 2026/08/27 08:48:09 adam Exp $
+# $NetBSD: Makefile,v 1.794 2026/09/02 20:22:37 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -183,6 +183,7 @@ SUBDIR+=	kotlin
 SUBDIR+=	ksi
 SUBDIR+=	libBlocksRuntime
 SUBDIR+=	libLLVM
+SUBDIR+=	libclc
 SUBDIR+=	libcxx
 SUBDIR+=	libcxxabi
 SUBDIR+=	libduktape

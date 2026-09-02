@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.21 2026/04/16 06:33:52 wiz Exp $
+# $NetBSD: version.mk,v 1.22 2026/09/02 20:22:38 adam Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -6,6 +6,7 @@
 # used by lang/clang-tools-extra
 # used by lang/compiler-rt
 # used by lang/flang
+# used by lang/libclc
 # used by lang/libcxx
 # used by lang/libcxxabi
 # used by lang/libunwind
@@ -37,5 +38,5 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/third-party
 # Gcc 8 (induced elsewhere) blows up on per-process VM space.
 # Ref. https://mail-index.netbsd.org/pkgsrc-users/2025/06/21/msg041678.html
 # Also, the llvm produced by gcc 8 or 10 crashes when building wasi-libc.
-GCC_REQD+=		14
+GCC_REQD+=	14
 .endif
