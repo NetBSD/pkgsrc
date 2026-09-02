@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/07/16 11:34:41 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/09/02 07:23:37 adam Exp $
 
-BLAKE2s (cloudflare-5.5.0.tar.gz) = 56cf1eeb902fe64b8c07474d537f5510d2954054834795c14cfd8d3f9fb08cf4
-SHA512 (cloudflare-5.5.0.tar.gz) = 14cdd4325378d107af822988890c919268f8b1014e1a9f4fc97563bd19d23690955ae66113d1dd3e3c9cb121adaf2d2d0fffd840ad8ed87c53ca5eee87cd6566
-Size (cloudflare-5.5.0.tar.gz) = 3124593 bytes
+BLAKE2s (cloudflare-5.6.0.tar.gz) = 0bedc66ef4a7f561f3aee74198ef658c9779278e41df6381381a9819c8ea5119
+SHA512 (cloudflare-5.6.0.tar.gz) = b4e7ab8d092f6f746a97af1ad8a6271fc5f86746cabcc53716a31de9871f5445df862adc1089f25a12d62ed5b0c5cddeba219bfbc904dc2105f7f62ca33eb802
+Size (cloudflare-5.6.0.tar.gz) = 3319132 bytes
