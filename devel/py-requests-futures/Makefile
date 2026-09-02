@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/12 20:13:33 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 11:48:03 adam Exp $
 
-DISTNAME=	requests_futures-1.0.2
+DISTNAME=	requests_futures-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-futures/}
 
