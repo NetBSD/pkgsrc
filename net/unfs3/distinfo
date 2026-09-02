@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:07:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/09/02 18:47:29 maya Exp $
 
-BLAKE2s (unfs3-0.9.22.tar.gz) = f960cf569c5c9ee56b54a6f8346651864497db2c6dc5f3d11c07bbc037bc0fcb
-SHA512 (unfs3-0.9.22.tar.gz) = b1e4b7f5b7b7de27bb5411c69363a6b40be0fcf1f772e283f0868a2155fa9ea4b9b8e7f05b1706e41cf09dd2ee4baab472a01bc4640ae47e3be2a19d8d3f5f9e
-Size (unfs3-0.9.22.tar.gz) = 168447 bytes
-SHA1 (patch-Makefile_in) = 68e86790c80db6d9cfb5698735ec54163adea68d
+BLAKE2s (unfs3-0.11.0.tar.gz) = a0d5c7c7136253df207c5294a4ffbce020384eaf0ec7a1a283e06eb1d52437ca
+SHA512 (unfs3-0.11.0.tar.gz) = be7298a82ab5680cf6719a8784621034c0e25ed15846fc8ed04bbdf0bae037c5d5985d44416aa932f36435131cafd5797d438fa967607113603c2dbb078f7645
+Size (unfs3-0.11.0.tar.gz) = 110613 bytes
+SHA1 (patch-configure.ac) = 86c07b31245edce7bc77c08d0364a7e342f05446
+SHA1 (patch-daemon.c) = 67dcfb852b395887ad12ec2792dc833332391de1
+SHA1 (patch-nfs.c) = 8b66d408a2531e1e087f528b102d0c897451eb09
+SHA1 (patch-xdr.c) = 6899df775bd68a173db92e1b3484b02fe847407b
