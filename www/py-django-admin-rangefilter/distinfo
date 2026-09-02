@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2026/08/18 12:41:32 adam Exp $
+$NetBSD: distinfo,v 1.39 2026/09/02 15:18:17 adam Exp $
 
-BLAKE2s (django_admin_rangefilter-0.14.0.tar.gz) = 93dd1e453a6a33ad2582093b16d3d6a4b56d5fe8194d2b7a78c404f1fb8205bc
-SHA512 (django_admin_rangefilter-0.14.0.tar.gz) = a8696c17ccb7a784e52792ecd5ce64e91d00b5ff09d6093e715f4fbca6ec819da0a3322e24950030e4c52805250d2a5318a5124a57582ee0e965a434a9652e99
-Size (django_admin_rangefilter-0.14.0.tar.gz) = 24753 bytes
+BLAKE2s (django_admin_rangefilter-0.15.0.tar.gz) = ca6fbcf95ce9344b05890ec0fcb79ab3907c57af1b995a9bb246e2c02eebe5ea
+SHA512 (django_admin_rangefilter-0.15.0.tar.gz) = 40a96c8134fb54d809af8119d8e547db0a022fe027065a679ad3b2a7dfc3223e78e4b8bbc27e4806c009a3f2e9bb422293028636c1f2b5c3b605f0349a2a255b
+Size (django_admin_rangefilter-0.15.0.tar.gz) = 25791 bytes
