@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5755 2026/09/02 11:12:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5756 2026/09/02 11:52:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8484,3 +8484,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-vcs-versioning to 2.3.2 [adam 2026-09-02]
 	Updated net/libnice to 0.1.24 [adam 2026-09-02]
 	Updated graphics/openimageio to 3.1.17.0 [adam 2026-09-02]
+	Updated devel/py-requests-futures to 1.1.0 [adam 2026-09-02]
+	Updated devel/py-virtualenv to 21.7.8 [adam 2026-09-02]
+	Updated devel/py-tox to 4.61.2 [adam 2026-09-02]
