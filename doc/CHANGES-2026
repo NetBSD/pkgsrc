@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5765 2026/09/02 14:53:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5766 2026/09/02 14:54:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8503,3 +8503,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hugo to 0.165.0 [taca 2026-09-02]
 	Updated graphics/libheif to 1.23.3 [ryoon 2026-09-02]
 	Updated www/hugo to 0.165.0 [taca 2026-09-02]
+	Updated www/php-concrete-cms to 9.5.3 [taca 2026-09-02]
