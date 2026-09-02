@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2026/08/11 05:52:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2026/09/02 19:28:40 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -784,6 +784,9 @@ ${PYSITELIB}/django/contrib/admin/exceptions.pyo
 ${PYSITELIB}/django/contrib/admin/filters.py
 ${PYSITELIB}/django/contrib/admin/filters.pyc
 ${PYSITELIB}/django/contrib/admin/filters.pyo
+${PYSITELIB}/django/contrib/admin/formfields.py
+${PYSITELIB}/django/contrib/admin/formfields.pyc
+${PYSITELIB}/django/contrib/admin/formfields.pyo
 ${PYSITELIB}/django/contrib/admin/forms.py
 ${PYSITELIB}/django/contrib/admin/forms.pyc
 ${PYSITELIB}/django/contrib/admin/forms.pyo
