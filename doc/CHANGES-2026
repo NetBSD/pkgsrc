@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5777 2026/09/02 17:01:14 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5778 2026/09/02 17:05:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8517,3 +8517,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-google-protobuf to 4.36.1 [taca 2026-09-02]
 	Updated devel/ruby-redmine60 to 6.0.11 [taca 2026-09-02]
 	Updated devel/ruby-redmine61 to 6.1.4 [taca 2026-09-02]
+	Updated www/snac to 2.95 [schmonz 2026-09-02]
