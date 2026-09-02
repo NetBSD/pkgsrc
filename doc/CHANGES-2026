@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5754 2026/09/02 10:30:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5755 2026/09/02 11:12:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8482,3 +8482,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.11.7 [adam 2026-09-02]
 	Updated math/py-patsy to 1.0.3 [adam 2026-09-02]
 	Updated devel/py-vcs-versioning to 2.3.2 [adam 2026-09-02]
+	Updated net/libnice to 0.1.24 [adam 2026-09-02]
+	Updated graphics/openimageio to 3.1.17.0 [adam 2026-09-02]
