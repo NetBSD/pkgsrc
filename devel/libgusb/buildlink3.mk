@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/05/15 20:08:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/09/02 19:01:37 wiz Exp $
 
 BUILDLINK_TREE+=	libgusb
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libgusb
 LIBGUSB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgusb+=	libgusb>=0.4.9
+BUILDLINK_ABI_DEPENDS.libgusb?=	libgusb>=0.4.9nb1
 BUILDLINK_PKGSRCDIR.libgusb?=	../../devel/libgusb
 
 .include "../../devel/glib2/buildlink3.mk"

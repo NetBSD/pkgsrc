@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2026/07/13 04:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/09/02 19:01:57 wiz Exp $
 
 DISTNAME=		openmsx-17.0
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=openMSX/}
 GITHUB_PROJECT=		openMSX

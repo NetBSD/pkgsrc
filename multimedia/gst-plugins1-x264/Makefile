@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/12/23 11:01:32 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/02 19:03:43 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-ugly/-x264/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - H.264/MPEG-4 encoder plugin

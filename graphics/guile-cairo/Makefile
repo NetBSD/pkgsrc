@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2026/01/27 08:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/02 19:02:41 wiz Exp $
 
 DISTNAME=	guile-cairo-1.11.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.savannah.gnu.org/releases/guile-cairo/
 

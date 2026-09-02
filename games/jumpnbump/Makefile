@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/07/13 04:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/02 19:02:12 wiz Exp $
 
 DISTNAME=	jumpnbump-1.61
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/LibreGames/jumpnbump/uploads/95acdae2a232513f068e260977371dcf/
 EXTRACT_SUFX=	.tar.xz

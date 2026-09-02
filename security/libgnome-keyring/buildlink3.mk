@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/10/23 20:39:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/02 19:04:17 wiz Exp $
 
 BUILDLINK_TREE+=	libgnome-keyring
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnome-keyring
 LIBGNOME_KEYRING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnome-keyring+=	libgnome-keyring>=2.32.0
-BUILDLINK_ABI_DEPENDS.libgnome-keyring+=	libgnome-keyring>=3.12.0nb3
+BUILDLINK_ABI_DEPENDS.libgnome-keyring+=	libgnome-keyring>=3.12.0nb4
 BUILDLINK_PKGSRCDIR.libgnome-keyring?=		../../security/libgnome-keyring
 
 .include "../../devel/glib2/buildlink3.mk"

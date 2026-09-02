@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/10/23 20:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/02 19:04:06 wiz Exp $
 
 DISTNAME=		leafnode-1.12.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
 

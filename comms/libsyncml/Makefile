@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2026/01/07 08:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/02 19:01:12 wiz Exp $
 #
 
 DISTNAME=	libsyncml-0.4.5
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsyncml/}
 EXTRACT_SUFX=	.tar.bz2

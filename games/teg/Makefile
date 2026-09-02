@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/06/11 07:17:02 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/09/02 19:02:24 wiz Exp $
 
 DISTNAME=		teg-0.12.0
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=wfx/}
 

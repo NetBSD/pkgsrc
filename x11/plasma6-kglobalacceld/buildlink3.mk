@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/06/11 07:17:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/02 19:05:22 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-kglobalacceld
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-kglobalacceld
 PLASMA6_KGLOBALACCELD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-kglobalacceld+=	plasma6-kglobalacceld>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-kglobalacceld?=	plasma6-kglobalacceld>=6.5.2nb7
+BUILDLINK_ABI_DEPENDS.plasma6-kglobalacceld?=	plasma6-kglobalacceld>=6.5.2nb8
 BUILDLINK_PKGSRCDIR.plasma6-kglobalacceld?=	../../x11/plasma6-kglobalacceld
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2026/07/13 04:36:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/09/02 19:02:53 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtcharts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtcharts
 QT6_QTCHARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtcharts+=	qt6-qtcharts>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtcharts+=	qt6-qtcharts>=6.11.1nb2
+BUILDLINK_ABI_DEPENDS.qt6-qtcharts+=	qt6-qtcharts>=6.11.2nb1
 BUILDLINK_PKGSRCDIR.qt6-qtcharts?=	../../graphics/qt6-qtcharts
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

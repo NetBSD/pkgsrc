@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2026/07/13 04:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/09/02 19:02:42 wiz Exp $
 
 DISTNAME=	kcolorchooser-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/kcolorchooser/

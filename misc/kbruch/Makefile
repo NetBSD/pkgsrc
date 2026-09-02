@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2026/07/13 04:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/09/02 19:03:28 wiz Exp $
 
 DISTNAME=	kbruch-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kbruch/

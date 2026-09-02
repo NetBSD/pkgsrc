@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2026/07/14 05:09:31 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/02 19:02:25 wiz Exp $
 
 # use file name generated when clicking on the 'Source code' download
 # link at https://www.widelands.org/wiki/Download/
 DISTNAME=	widelands-v1.3.1
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 # direct links time out
 #MASTER_SITES=	-https://codeberg.org/wl/widelands/archive/v1.3.1.tar.gz

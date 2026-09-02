@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/06/11 07:17:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/09/02 19:04:31 wiz Exp $
 
 BUILDLINK_TREE+=	libayatana-indicator
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libayatana-indicator
 LIBAYATANA_INDICATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libayatana-indicator+=	libayatana-indicator>=0.9.4
-BUILDLINK_ABI_DEPENDS.libayatana-indicator?=	libayatana-indicator>=0.9.4nb8
+BUILDLINK_ABI_DEPENDS.libayatana-indicator?=	libayatana-indicator>=0.9.4nb9
 BUILDLINK_PKGSRCDIR.libayatana-indicator?=	../../sysutils/libayatana-indicator
 
 .include "../../devel/glib2/buildlink3.mk"

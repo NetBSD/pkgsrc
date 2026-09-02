@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/08/04 20:29:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/02 19:03:02 wiz Exp $
 
 DISTNAME=	xnecview-1.37
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://www.pa3fwm.nl/software/xnecview/
 EXTRACT_SUFX=	.tgz

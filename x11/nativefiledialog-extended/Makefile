@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/06/11 07:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/02 19:05:21 wiz Exp $
 
 DISTNAME=	nativefiledialog-extended-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=btzy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

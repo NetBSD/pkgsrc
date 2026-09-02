@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/07/13 04:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/02 19:00:43 wiz Exp $
 
 DISTNAME=	SDL2_mixer-2.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio devel
 MASTER_SITES=	https://www.libsdl.org/projects/SDL_mixer/release/
 

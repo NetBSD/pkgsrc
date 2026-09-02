@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/05/14 16:42:05 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/09/02 19:04:26 wiz Exp $
 
 BUILDLINK_TREE+=	dolphin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dolphin
 DOLPHIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dolphin+=	dolphin>=16.04.0
-BUILDLINK_ABI_DEPENDS.dolphin?=	dolphin>=25.08.3nb3
+BUILDLINK_ABI_DEPENDS.dolphin?=	dolphin>=25.08.3nb6
 BUILDLINK_PKGSRCDIR.dolphin?=	../../sysutils/dolphin
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

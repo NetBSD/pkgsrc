@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2026/07/13 04:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/02 19:01:14 wiz Exp $
 
 DISTNAME=	syncterm-1.8-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=syncterm/}
 EXTRACT_SUFX=	.tgz

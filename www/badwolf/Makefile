@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2026/06/11 07:17:46 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/09/02 19:04:56 wiz Exp $
 
 DISTNAME=	badwolf-1.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	https://distfiles.hacktivis.me/releases/badwolf/
 

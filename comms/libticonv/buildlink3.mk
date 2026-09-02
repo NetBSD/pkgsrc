@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/10/23 20:36:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/09/02 19:01:13 wiz Exp $
 
 BUILDLINK_TREE+=	libticonv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libticonv
 LIBTICONV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libticonv+=	libticonv>=1.1.3
-BUILDLINK_ABI_DEPENDS.libticonv?=		libticonv>=1.1.3nb3
+BUILDLINK_ABI_DEPENDS.libticonv?=		libticonv>=1.1.3nb4
 BUILDLINK_PKGSRCDIR.libticonv?=		../../comms/libticonv
 
 .include "../../devel/glib2/buildlink3.mk"

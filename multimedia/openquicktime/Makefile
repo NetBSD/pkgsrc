@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2025/10/23 20:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/02 19:03:47 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
 PKGNAME=		openquicktime-1.0
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openquicktime/}
 EXTRACT_SUFX=		.tgz

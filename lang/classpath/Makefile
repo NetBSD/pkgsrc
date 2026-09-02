@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/10/23 20:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/02 19:03:11 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		8
+PKGREVISION=		9
 
 USE_TOOLS+=	makeinfo zip
 INFO_FILES=	yes

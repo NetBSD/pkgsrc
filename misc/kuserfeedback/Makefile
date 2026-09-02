@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/07/13 04:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/02 19:03:33 wiz Exp $
 
 DISTNAME=	kuserfeedback-1.3.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=kuserfeedback/}
 

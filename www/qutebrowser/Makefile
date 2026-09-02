@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2026/01/07 08:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/02 19:05:02 wiz Exp $
 
 DISTNAME=	qutebrowser-1.13.1
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

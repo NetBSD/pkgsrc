@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2026/06/11 07:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/02 19:04:28 wiz Exp $
 
 DISTNAME=	gnome-font-viewer-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 

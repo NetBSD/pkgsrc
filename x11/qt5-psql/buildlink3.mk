@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2026/01/07 08:49:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2026/09/02 19:05:26 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-psql
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-psql
 QT5_PSQL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-psql+=	qt5-psql>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-psql+=	qt5-psql>=5.15.18nb1
+BUILDLINK_ABI_DEPENDS.qt5-psql+=	qt5-psql>=5.15.19nb1
 BUILDLINK_PKGSRCDIR.qt5-psql?=		../../x11/qt5-psql
 
 BUILDLINK_LIBDIRS.qt5-psql+=		qt5/plugins

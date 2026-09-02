@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2026/07/13 04:36:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/09/02 19:04:17 wiz Exp $
 
 BUILDLINK_TREE+=	libkleo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkleo
 LIBKLEO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkleo+=	libkleo>=25.08.3
-BUILDLINK_ABI_DEPENDS.libkleo?=	libkleo>=25.08.3nb7
+BUILDLINK_ABI_DEPENDS.libkleo?=	libkleo>=25.08.3nb9
 BUILDLINK_PKGSRCDIR.libkleo?=	../../security/libkleo
 
 BUILDLINK_FILES.libkleo+=	share/KPim6Libkleo/find-modules/*

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2026/07/13 04:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/09/02 19:04:01 wiz Exp $
 
 DISTNAME=	nagstamon-3.16.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HenriWahl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

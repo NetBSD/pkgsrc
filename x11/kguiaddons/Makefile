@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2026/01/07 08:49:34 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/09/02 19:05:14 wiz Exp $
 
 DISTNAME=	kguiaddons-${KF5VER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

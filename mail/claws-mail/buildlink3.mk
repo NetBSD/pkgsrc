@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2025/10/23 20:38:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/09/02 19:03:15 wiz Exp $
 
 BUILDLINK_TREE+=	claws-mail
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	claws-mail
 CLAWS_MAIL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.claws-mail+=	claws-mail>=3.7.0
-BUILDLINK_ABI_DEPENDS.claws-mail+=	claws-mail>=4.3.1nb30
+BUILDLINK_ABI_DEPENDS.claws-mail+=	claws-mail>=4.3.1nb36
 BUILDLINK_PKGSRCDIR.claws-mail?=	../../mail/claws-mail
 
 .include "../../textproc/enchant2/buildlink3.mk"

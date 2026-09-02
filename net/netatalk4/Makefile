@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2026/06/11 07:49:11 hauke Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/02 19:04:01 wiz Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
 DISTNAME=	netatalk-${PKGVER:C/\./-/g}
 
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 PKGVER=		4.4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}

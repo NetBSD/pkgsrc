@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2025/10/23 20:39:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/09/02 19:04:21 wiz Exp $
 
 BUILDLINK_TREE+=	qoauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qoauth
 QOAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qoauth+=	qoauth>=1.0.1
-BUILDLINK_ABI_DEPENDS.qoauth?=	qoauth>=1.0.1nb21
+BUILDLINK_ABI_DEPENDS.qoauth?=	qoauth>=1.0.1nb22
 BUILDLINK_PKGSRCDIR.qoauth?=	../../security/qoauth
 
 .include "../../x11/qt4-libs/buildlink3.mk"

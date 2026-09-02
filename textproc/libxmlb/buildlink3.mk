@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/10/23 20:39:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/09/02 19:04:45 wiz Exp $
 
 BUILDLINK_TREE+=	libxmlb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxmlb
 LIBXMLB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxmlb+=	libxmlb>=0.3.14
-BUILDLINK_ABI_DEPENDS.libxmlb?=	libxmlb>=0.3.14nb2
+BUILDLINK_ABI_DEPENDS.libxmlb?=	libxmlb>=0.3.29nb1
 BUILDLINK_PKGSRCDIR.libxmlb?=	../../textproc/libxmlb
 
 .include "../../devel/glib2/buildlink3.mk"

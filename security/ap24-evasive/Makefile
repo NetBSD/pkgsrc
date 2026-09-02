@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/02 19:04:13 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-2.4.0
 PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jvdmr/}
 GITHUB_PROJECT=	mod_evasive

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/07/13 04:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/02 19:03:49 wiz Exp $
 
 DISTNAME=	smpeg2-2.0.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.libsdl.org/projects/smpeg/release/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/10/23 20:38:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/09/02 19:03:59 wiz Exp $
 
 BUILDLINK_TREE+=	libnids
 
@@ -7,7 +7,7 @@ LIBNIDS_BUILDLINK3_MK:=
 
 
 BUILDLINK_API_DEPENDS.libnids+=	libnids>=1.24
-BUILDLINK_ABI_DEPENDS.libnids?=	libnids>=1.24nb3
+BUILDLINK_ABI_DEPENDS.libnids?=	libnids>=1.24nb4
 BUILDLINK_PKGSRCDIR.libnids?=	../../net/libnids
 BUILDLINK_DEPMETHOD.libnids?=	build
 

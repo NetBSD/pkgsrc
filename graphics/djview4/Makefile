@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2026/07/13 04:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2026/09/02 19:02:33 wiz Exp $
 #
 
 DISTNAME=	djview-4.12
 PKGNAME=	${DISTNAME:S/djview/djview4/}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 

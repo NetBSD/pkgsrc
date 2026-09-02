@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2026/05/14 16:41:24 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/09/02 19:03:17 wiz Exp $
 
 BUILDLINK_TREE+=	kmime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kmime
 KMIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kmime+=	kmime>=25.08.2
-BUILDLINK_ABI_DEPENDS.kmime?=	kmime>=25.08.3nb3
+BUILDLINK_ABI_DEPENDS.kmime?=	kmime>=25.08.3nb4
 BUILDLINK_PKGSRCDIR.kmime?=	../../mail/kmime
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2026/06/11 07:17:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/09/02 19:04:53 wiz Exp $
 
 BUILDLINK_TREE+=	mutter
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mutter
 MUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mutter+=	mutter>=40.0
-BUILDLINK_ABI_DEPENDS.mutter?=	mutter>=40.2nb18
+BUILDLINK_ABI_DEPENDS.mutter?=	mutter>=40.2nb19
 BUILDLINK_PKGSRCDIR.mutter?=	../../wm/mutter
 
 .include "../../graphics/graphene/buildlink3.mk"

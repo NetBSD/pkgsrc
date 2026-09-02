@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/10/23 20:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/02 19:01:27 wiz Exp $
 
 DISTNAME=	guile-git-0.10.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=guile-git/}
 GITLAB_PROJECT=	guile-git

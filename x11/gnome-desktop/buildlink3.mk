@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.84 2026/06/11 07:17:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.85 2026/09/02 19:05:06 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-desktop
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-desktop
 GNOME_DESKTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=44
-BUILDLINK_ABI_DEPENDS.gnome-desktop?=	gnome-desktop>=44.0nb14
+BUILDLINK_ABI_DEPENDS.gnome-desktop?=	gnome-desktop>=44.0nb15
 BUILDLINK_PKGSRCDIR.gnome-desktop?=	../../x11/gnome-desktop
 
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/10/23 20:39:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/09/02 19:04:43 wiz Exp $
 #
 
 BUILDLINK_TREE+=	json-glib
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	json-glib
 JSON_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.6.2
-BUILDLINK_ABI_DEPENDS.json-glib+=	json-glib>=1.10.6nb2
+BUILDLINK_ABI_DEPENDS.json-glib+=	json-glib>=1.10.6nb3
 BUILDLINK_PKGSRCDIR.json-glib?=		../../textproc/json-glib
 
 pkgbase := json-glib

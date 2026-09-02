@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2026/07/13 04:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2026/09/02 19:01:26 wiz Exp $
 
 DISTNAME=	gmtk-1.0.9
-PKGREVISION=	58
+PKGREVISION=	59
 CATEGORIES=	devel
 MASTER_SITES=	http://gmtk.googlecode.com/svn/packages/
 

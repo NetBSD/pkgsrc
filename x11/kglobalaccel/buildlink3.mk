@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2026/01/07 08:49:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2026/09/02 19:05:14 wiz Exp $
 
 BUILDLINK_TREE+=	kglobalaccel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kglobalaccel
 KGLOBALACCEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kglobalaccel+=	kglobalaccel>=5.18.0
-BUILDLINK_ABI_DEPENDS.kglobalaccel?=	kglobalaccel>=5.116.0nb9
+BUILDLINK_ABI_DEPENDS.kglobalaccel?=	kglobalaccel>=5.116.0nb11
 BUILDLINK_PKGSRCDIR.kglobalaccel?=	../../x11/kglobalaccel
 
 .include "../../devel/kconfig/buildlink3.mk"

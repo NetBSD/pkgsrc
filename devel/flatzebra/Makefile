@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/07/13 04:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/02 19:01:24 wiz Exp $
 
 DISTNAME=	flatzebra-0.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

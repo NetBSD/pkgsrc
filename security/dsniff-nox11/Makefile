@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2025/10/23 20:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/02 19:04:14 wiz Exp $
 
 .include "../../security/dsniff/Makefile.common"
 
 PKGNAME=	dsniff-nox11-${VERS}
-PKGREVISION=	15
+PKGREVISION=	16
 COMMENT=	Password sniffer
 
 CONFIGURE_ARGS+=	--without-x

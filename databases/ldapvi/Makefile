@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/10/23 20:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/02 19:01:15 wiz Exp $
 
 DISTNAME=		ldapvi-1.7
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		databases
 MASTER_SITES=		http://www.lichteblau.com/download/
 

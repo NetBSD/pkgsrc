@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/08/30 14:25:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/09/02 19:05:03 wiz Exp $
 
 BUILDLINK_TREE+=	webkit-gtk41
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	webkit-gtk41
 WEBKIT_GTK41_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.webkit-gtk41+=	webkit-gtk41>=2.52.6
+BUILDLINK_ABI_DEPENDS.webkit-gtk41?=	webkit-gtk41>=2.52.6nb2
 BUILDLINK_PKGSRCDIR.webkit-gtk41?=	../../www/webkit-gtk41
 
 GCC_REQD+=	11

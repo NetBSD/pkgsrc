@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/10/23 20:36:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/09/02 19:01:40 wiz Exp $
 
 BUILDLINK_TREE+=	p5-glib2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-glib2
 P5_GLIB2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.103
-BUILDLINK_ABI_DEPENDS.p5-glib2+=	p5-glib2>=1.3293nb7
+BUILDLINK_ABI_DEPENDS.p5-glib2+=	p5-glib2>=1.3293nb9
 BUILDLINK_PKGSRCDIR.p5-glib2?=		../../devel/p5-glib2
 
 .include "../../devel/glib2/buildlink3.mk"

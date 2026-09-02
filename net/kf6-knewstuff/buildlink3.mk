@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/05/14 16:41:45 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/02 19:03:58 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-knewstuff
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-knewstuff
 KF6_KNEWSTUFF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-knewstuff+=	kf6-knewstuff>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-knewstuff?=	kf6-knewstuff>=6.18.0nb4
+BUILDLINK_ABI_DEPENDS.kf6-knewstuff?=	kf6-knewstuff>=6.26.0nb1
 BUILDLINK_PKGSRCDIR.kf6-knewstuff?=	../../net/kf6-knewstuff
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/07/13 04:36:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/09/02 19:05:23 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-kscreenlocker
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-kscreenlocker
 PLASMA6_KSCREENLOCKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-kscreenlocker+=	plasma6-kscreenlocker>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-kscreenlocker?=	plasma6-kscreenlocker>=6.5.2nb7
+BUILDLINK_ABI_DEPENDS.plasma6-kscreenlocker?=	plasma6-kscreenlocker>=6.5.2nb8
 BUILDLINK_PKGSRCDIR.plasma6-kscreenlocker?=	../../x11/plasma6-kscreenlocker
 
 BUILDLINK_FILES.plasma6-kscreenlocker+=	share/dbus-1/interfaces/*.xml

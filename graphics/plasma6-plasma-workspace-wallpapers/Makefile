@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/05/14 16:41:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/02 19:02:51 wiz Exp $
 
 DISTNAME=	plasma-workspace-wallpapers-${PLASMAVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

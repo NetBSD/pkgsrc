@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/10/23 20:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/02 19:05:05 wiz Exp $
 #
 
 DISTNAME=	docker-1.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	http://offload1.icculus.org/openbox/2/docker/
 

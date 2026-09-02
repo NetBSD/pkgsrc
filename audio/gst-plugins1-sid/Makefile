@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/10/30 15:35:41 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/02 19:00:52 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-ugly/-sid/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - Commodore 64 audio plugin

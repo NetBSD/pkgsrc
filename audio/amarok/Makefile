@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.218 2026/07/13 04:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2026/09/02 19:00:44 wiz Exp $
 
 DISTNAME=	amarok-3.3.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=amarok/${PKGVERSION_NOREV}/}
 

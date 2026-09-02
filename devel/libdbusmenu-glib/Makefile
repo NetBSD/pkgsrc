@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/05/15 17:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/02 19:01:35 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-glib-/}

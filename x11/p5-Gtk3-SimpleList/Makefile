@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2026/07/16 19:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/02 19:05:21 wiz Exp $
 
 DISTNAME=	Gtk3-SimpleList-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	x11 perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TV/TVIGNAUD/
 

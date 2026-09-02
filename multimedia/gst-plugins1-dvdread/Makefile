@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/10/30 15:35:36 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 19:03:41 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-ugly/-dvdread/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - DVD plugin

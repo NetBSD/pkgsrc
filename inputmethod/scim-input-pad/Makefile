@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2026/06/11 07:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/02 19:03:09 wiz Exp $
 #
 
 DISTNAME=	scim-input-pad-0.1.3
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scim/}
 

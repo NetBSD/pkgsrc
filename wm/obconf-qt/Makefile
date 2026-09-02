@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2026/05/14 16:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2026/09/02 19:04:54 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	obconf-qt-0.16.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

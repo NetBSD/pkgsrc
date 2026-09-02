@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/05/14 16:40:43 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/02 19:01:31 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kpeople
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kpeople
 KF6_KPEOPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kpeople+=	kf6-kpeople>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kpeople?=	kf6-kpeople>=6.18.0nb4
+BUILDLINK_ABI_DEPENDS.kf6-kpeople?=	kf6-kpeople>=6.26.0nb1
 BUILDLINK_PKGSRCDIR.kf6-kpeople?=	../../devel/kf6-kpeople
 
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"

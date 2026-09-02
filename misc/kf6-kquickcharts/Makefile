@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/05/21 08:25:11 markd Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/02 19:03:30 wiz Exp $
 
 DISTNAME=	kquickcharts-${KF6VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

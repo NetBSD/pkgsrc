@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2026/01/27 08:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/02 19:04:41 wiz Exp $
 
 DISTNAME=	artha-1.0.5
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=artha/}
 EXTRACT_SUFX=	.tar.bz2

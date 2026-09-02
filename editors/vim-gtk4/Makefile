@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/06/13 15:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/02 19:01:51 wiz Exp $
 
 PKGNAME=	vim-gtk4-${VIM_VERSION}.${VIM_PATCHLEVEL}
+PKGREVISION=	1
 
 COMMENT=	Vim editor (vi clone) with GTK4 GUI
 

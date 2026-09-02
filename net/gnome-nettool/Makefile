@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2026/06/11 07:17:31 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/09/02 19:03:53 wiz Exp $
 
 DISTNAME=	gnome-nettool-3.8.1
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-nettool/3.8/}
 EXTRACT_SUFX=	.tar.xz
