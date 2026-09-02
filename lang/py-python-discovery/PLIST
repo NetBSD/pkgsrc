@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/06 09:28:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/02 14:14:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,9 @@ ${PYSITELIB}/python_discovery/_discovery.pyo
 ${PYSITELIB}/python_discovery/_py_info.py
 ${PYSITELIB}/python_discovery/_py_info.pyc
 ${PYSITELIB}/python_discovery/_py_info.pyo
+${PYSITELIB}/python_discovery/_py_info_collect.py
+${PYSITELIB}/python_discovery/_py_info_collect.pyc
+${PYSITELIB}/python_discovery/_py_info_collect.pyo
 ${PYSITELIB}/python_discovery/_py_spec.py
 ${PYSITELIB}/python_discovery/_py_spec.pyc
 ${PYSITELIB}/python_discovery/_py_spec.pyo
