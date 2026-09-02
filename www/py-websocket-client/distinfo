@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2025/10/23 15:17:58 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/09/02 07:33:08 adam Exp $
 
-BLAKE2s (websocket_client-1.9.0.tar.gz) = 9500844f616ff29b55d7889654f731b80ed12e63d5f0cef7039ab8b676f89357
-SHA512 (websocket_client-1.9.0.tar.gz) = 63385845aaaf792167d681c4b3089b09ea4dedbf931fa1f4ebc55648b6d864c2a479ac61f758d6a7967ce84e59e197613c976069f64381599c274f89c3edd0b4
-Size (websocket_client-1.9.0.tar.gz) = 70576 bytes
+BLAKE2s (websocket_client-1.9.2.tar.gz) = 2e7b7c9ebbb0732b8c32247683988cc48fbd6fe2d20c964eb3ae270b035be2f1
+SHA512 (websocket_client-1.9.2.tar.gz) = 42da82b95f05fc8f4bbe85027d1ff1e95fc409282de4b1eb732ca871c32530f34e3fe7deeb150a1244777357e42bbc7d040c4875ad6247efacccc79b79829a66
+Size (websocket_client-1.9.2.tar.gz) = 84110 bytes

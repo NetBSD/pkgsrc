@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/10/23 15:17:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/02 07:33:08 adam Exp $
 bin/wsdump-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -82,6 +82,12 @@ ${PYSITELIB}/websocket/tests/test_http.pyo
 ${PYSITELIB}/websocket/tests/test_large_payloads.py
 ${PYSITELIB}/websocket/tests/test_large_payloads.pyc
 ${PYSITELIB}/websocket/tests/test_large_payloads.pyo
+${PYSITELIB}/websocket/tests/test_logging_helpers.py
+${PYSITELIB}/websocket/tests/test_logging_helpers.pyc
+${PYSITELIB}/websocket/tests/test_logging_helpers.pyo
+${PYSITELIB}/websocket/tests/test_reconnect_bad_fd.py
+${PYSITELIB}/websocket/tests/test_reconnect_bad_fd.pyc
+${PYSITELIB}/websocket/tests/test_reconnect_bad_fd.pyo
 ${PYSITELIB}/websocket/tests/test_socket.py
 ${PYSITELIB}/websocket/tests/test_socket.pyc
 ${PYSITELIB}/websocket/tests/test_socket.pyo
