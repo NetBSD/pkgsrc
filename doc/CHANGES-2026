@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5749 2026/09/02 07:51:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5750 2026/09/02 09:02:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8455,3 +8455,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-websocket-client to 1.9.2 [adam 2026-09-02]
 	Updated www/py-google-api-python-client to 2.200.0 [adam 2026-09-02]
 	Updated security/py-google-auth-oauthlib to 1.4.1 [adam 2026-09-02]
+	Updated net/py-botocore to 1.43.86 [adam 2026-09-02]
+	Updated net/py-s3transfer to 0.19.2 [adam 2026-09-02]
+	Updated net/py-boto3 to 1.43.86 [adam 2026-09-02]
+	Updated net/py-awscli to 1.46.1 [adam 2026-09-02]
