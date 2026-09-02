@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.86 2026/08/24 08:42:21 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.87 2026/09/02 11:12:22 adam Exp $
 
 BUILDLINK_TREE+=	openimageio
 
@@ -25,6 +25,7 @@ BUILDLINK_FILES.openimageio+=		bin/testtex
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .endif	# OPENIMAGEIO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-openimageio
