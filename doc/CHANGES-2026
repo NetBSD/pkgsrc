@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5761 2026/09/02 14:41:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5762 2026/09/02 14:46:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8499,3 +8499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-python-multipart to 0.0.32 [adam 2026-09-02]
 	Updated www/py-gunicorn to 26.2.0 [adam 2026-09-02]
 	Updated www/py-uvicorn to 0.52.4 [adam 2026-09-02]
+	Updated www/php-contao-manager to 1.10.18 [taca 2026-09-02]
