@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/10/23 20:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/02 19:04:44 wiz Exp $
 
 DISTNAME=	libpinyin-2.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libpinyin/}
 GITHUB_PROJECT=	libpinyin

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2026/07/13 04:36:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2026/09/02 19:04:23 wiz Exp $
 
 BUILDLINK_TREE+=	baloo5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	baloo5
 BALOO5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.baloo5+=	baloo5>=5.21.0
-BUILDLINK_ABI_DEPENDS.baloo5?=	baloo5>=5.116.0nb10
+BUILDLINK_ABI_DEPENDS.baloo5?=	baloo5>=5.116.0nb11
 BUILDLINK_PKGSRCDIR.baloo5?=	../../sysutils/baloo5
 
 .include "../../databases/lmdb/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/07/13 04:35:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/09/02 19:01:31 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kparts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kparts
 KF6_KPARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kparts+=	kf6-kparts>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kparts?=	kf6-kparts>=6.26.0nb2
+BUILDLINK_ABI_DEPENDS.kf6-kparts?=	kf6-kparts>=6.26.0nb3
 BUILDLINK_PKGSRCDIR.kf6-kparts?=	../../devel/kf6-kparts
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

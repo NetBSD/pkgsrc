@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2026/06/11 07:16:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/09/02 19:00:49 wiz Exp $
 
 BUILDLINK_TREE+=	gsound
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gsound
 GSOUND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gsound+=	gsound>=1.0.2
-BUILDLINK_ABI_DEPENDS.gsound+=	gsound>=1.0.3nb9
+BUILDLINK_ABI_DEPENDS.gsound+=	gsound>=1.0.3nb10
 BUILDLINK_PKGSRCDIR.gsound?=	../../audio/gsound
 
 .include "../../audio/libcanberra/buildlink3.mk"

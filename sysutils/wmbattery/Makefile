@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/04/30 16:25:57 vins Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/02 19:04:38 wiz Exp $
 
 DISTNAME=	wmbattery-2.54
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.dockapps.net/download/
 

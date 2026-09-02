@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/06/25 07:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/02 19:02:07 wiz Exp $
 
 DISTNAME=	corewars-0.9.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corewars/}
 

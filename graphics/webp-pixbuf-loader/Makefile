@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/10/23 20:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 19:02:57 wiz Exp $
 
 DISTNAME=	webp-pixbuf-loader-0.2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aruiz/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}

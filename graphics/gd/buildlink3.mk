@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2025/10/23 20:37:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2026/09/02 19:02:35 wiz Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gd
 GD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.15nb1
-BUILDLINK_ABI_DEPENDS.gd+=	gd>=2.3.3nb17
+BUILDLINK_ABI_DEPENDS.gd+=	gd>=2.3.3nb18
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 
 .include "../../mk/bsd.fast.prefs.mk"

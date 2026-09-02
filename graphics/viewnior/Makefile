@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2026/02/16 08:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/02 19:02:57 wiz Exp $
 
 DISTNAME=	viewnior-1.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hellosiyan/}
 GITHUB_PROJECT=	Viewnior

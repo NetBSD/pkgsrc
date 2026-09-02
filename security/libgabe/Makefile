@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/02 19:04:17 wiz Exp $
 
 DISTNAME=	libgabe-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schanzen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

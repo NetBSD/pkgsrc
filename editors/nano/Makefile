@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2026/08/01 22:05:31 schwarz Exp $
+# $NetBSD: Makefile,v 1.122 2026/09/02 19:01:50 wiz Exp $
 
 DISTNAME=	nano-9.2
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${PKGVERSION_NOREV:C/\..*$//}/
 EXTRACT_SUFX=	.tar.xz

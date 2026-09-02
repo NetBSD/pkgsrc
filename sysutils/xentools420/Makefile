@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2026/08/26 11:10:45 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 19:04:38 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
+PKGREVISION=        1
 .include        "version.mk"
 PKGNAME=		xentools420-${VERSION:S/-//g}
 

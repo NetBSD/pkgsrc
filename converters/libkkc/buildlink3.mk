@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/10/23 20:36:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/02 19:01:14 wiz Exp $
 #
 
 BUILDLINK_TREE+=	libkkc
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libkkc
 LIBKKC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkkc+=	libkkc>=0.3.4
-BUILDLINK_ABI_DEPENDS.libkkc?=	libkkc>=0.3.5nb6
+BUILDLINK_ABI_DEPENDS.libkkc?=	libkkc>=0.3.5nb7
 BUILDLINK_PKGSRCDIR.libkkc?=	../../converters/libkkc
 
 .include "../../devel/glib2/buildlink3.mk"

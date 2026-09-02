@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2026/06/11 07:17:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2026/09/02 19:05:09 wiz Exp $
 
 BUILDLINK_TREE+=	gtkdatabox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkdatabox
 GTKDATABOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkdatabox+=	gtkdatabox>=1.0.0
-BUILDLINK_ABI_DEPENDS.gtkdatabox?=	gtkdatabox>=1.0.0nb17
+BUILDLINK_ABI_DEPENDS.gtkdatabox?=	gtkdatabox>=1.0.0nb18
 BUILDLINK_PKGSRCDIR.gtkdatabox?=	../../x11/gtkdatabox
 
 .include "../../devel/pango/buildlink3.mk"

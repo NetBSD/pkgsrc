@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2026/06/28 20:25:24 adam Exp $
+# $NetBSD: Makefile,v 1.53 2026/09/02 19:02:28 wiz Exp $
 
 DISTNAME=	PDAL-2.10.2-src
 PKGNAME=	${DISTNAME:S/PDAL/pdal-lib/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PDAL/}
 GITHUB_PROJECT=	PDAL

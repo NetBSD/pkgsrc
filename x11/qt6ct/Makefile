@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/05/14 16:42:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/02 19:05:31 wiz Exp $
 
 DISTNAME=	qt6ct-0.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVERSION_NOREV}/
 

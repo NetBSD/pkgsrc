@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/10/30 15:35:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/02 19:03:42 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-libde265/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - HEVC/H.265 decoder plugin

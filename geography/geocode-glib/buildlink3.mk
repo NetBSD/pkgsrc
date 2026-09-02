@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/10/23 20:37:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/09/02 19:02:26 wiz Exp $
 
 BUILDLINK_TREE+=	geocode-glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	geocode-glib
 GEOCODE_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.geocode-glib+=	geocode-glib>=3.26.2
-BUILDLINK_ABI_DEPENDS.geocode-glib?=	geocode-glib>=3.26.2nb17
+BUILDLINK_ABI_DEPENDS.geocode-glib?=	geocode-glib>=3.26.2nb19
 BUILDLINK_PKGSRCDIR.geocode-glib?=	../../geography/geocode-glib
 
 .include "../../devel/glib2/buildlink3.mk"

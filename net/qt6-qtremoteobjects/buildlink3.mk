@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2026/05/14 16:41:50 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/09/02 19:04:02 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtremoteobjects
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtremoteobjects
 QT6_QTREMOTEOBJECTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtremoteobjects+=	qt6-qtremoteobjects>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtremoteobjects+=	qt6-qtremoteobjects>=6.11.1nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtremoteobjects+=	qt6-qtremoteobjects>=6.11.2nb1
 BUILDLINK_PKGSRCDIR.qt6-qtremoteobjects?=	../../net/qt6-qtremoteobjects
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

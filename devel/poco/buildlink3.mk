@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/07/24 12:15:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/02 19:01:41 wiz Exp $
 
 BUILDLINK_TREE+=	poco
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poco
 POCO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poco+=	poco>=1.6.1
-BUILDLINK_ABI_DEPENDS.poco+=	poco>=1.6.1nb4
+BUILDLINK_ABI_DEPENDS.poco+=	poco>=1.15.3nb1
 BUILDLINK_PKGSRCDIR.poco?=	../../devel/poco
 
 .include "../../converters/utf8proc/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2026/01/27 08:39:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2026/09/02 19:01:40 wiz Exp $
 
 BUILDLINK_TREE+=	p5-pango
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-pango
 P5_PANGO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-pango+=	p5-pango>=1.200
-BUILDLINK_ABI_DEPENDS.p5-pango+=	p5-pango>=1.227nb26
+BUILDLINK_ABI_DEPENDS.p5-pango+=	p5-pango>=1.227nb28
 BUILDLINK_PKGSRCDIR.p5-pango?=		../../devel/p5-pango
 
 .include "../../devel/pango/buildlink3.mk"

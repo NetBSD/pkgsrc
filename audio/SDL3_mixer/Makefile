@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/07/13 04:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/02 19:00:43 wiz Exp $
 
 DISTNAME=	SDL3_mixer-3.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL_mixer

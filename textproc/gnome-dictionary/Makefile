@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2026/06/11 07:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/02 19:04:42 wiz Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	textproc gnome
 EXTRACT_SUFX=	.tar.xz
 

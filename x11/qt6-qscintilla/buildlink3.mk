@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2026/05/14 16:42:32 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/09/02 19:05:31 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qscintilla
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qscintilla
 QT6_QSCINTILLA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qscintilla+=	qt6-qscintilla>=2.14.1
-BUILDLINK_ABI_DEPENDS.qt6-qscintilla+=	qt6-qscintilla>=2.14.1nb11
+BUILDLINK_ABI_DEPENDS.qt6-qscintilla+=	qt6-qscintilla>=2.14.1nb12
 BUILDLINK_PKGSRCDIR.qt6-qscintilla?=	../../x11/qt6-qscintilla
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

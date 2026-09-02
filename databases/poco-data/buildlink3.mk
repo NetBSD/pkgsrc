@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/10/24 22:08:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/09/02 19:01:18 wiz Exp $
 
 BUILDLINK_TREE+=	poco-data
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poco-data
 POCO_DATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poco-data+=	poco-data>=1.6.1
-BUILDLINK_ABI_DEPENDS.poco-data+=	poco-data>=1.6.1nb3
+BUILDLINK_ABI_DEPENDS.poco-data+=	poco-data>=1.15.3nb1
 BUILDLINK_PKGSRCDIR.poco-data?=		../../databases/poco-data
 
 .include "../../devel/poco/buildlink3.mk"

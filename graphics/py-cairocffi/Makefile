@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2026/06/28 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/02 19:02:52 wiz Exp $
 
 DISTNAME=	cairocffi-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairocffi/}
 

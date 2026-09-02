@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2026/06/11 07:16:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/02 19:01:58 wiz Exp $
 
 ORICUTRON_VER=	1.2.14
 
 PKGNAME=	oricutron-${ORICUTRON_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

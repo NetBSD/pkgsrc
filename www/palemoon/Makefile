@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2026/07/13 04:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/09/02 19:05:01 wiz Exp $
 
 PM_GTK_VER=	2
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	palemoon-${PM_VER}

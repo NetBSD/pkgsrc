@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2026/05/14 16:42:08 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/09/02 19:04:35 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-libksysguard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-libksysguard
 PLASMA6_LIBKSYSGUARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-libksysguard+=	plasma6-libksysguard>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-libksysguard?=	plasma6-libksysguard>=6.5.2nb3
+BUILDLINK_ABI_DEPENDS.plasma6-libksysguard?=	plasma6-libksysguard>=6.5.2nb4
 BUILDLINK_PKGSRCDIR.plasma6-libksysguard?=	../../sysutils/plasma6-libksysguard
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"

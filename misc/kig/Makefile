@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2026/07/13 04:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2026/09/02 19:03:31 wiz Exp $
 
 DISTNAME=	kig-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kig/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2025/10/23 20:38:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2026/09/02 19:03:25 wiz Exp $
 
 BUILDLINK_TREE+=	attica
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	attica
 ATTICA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.attica+=	attica>=0.1.2
-BUILDLINK_ABI_DEPENDS.attica+=	attica>=0.4.2nb13
+BUILDLINK_ABI_DEPENDS.attica+=	attica>=0.4.2nb14
 BUILDLINK_PKGSRCDIR.attica?=	../../misc/attica
 
 .include "../../x11/qt4-libs/buildlink3.mk"

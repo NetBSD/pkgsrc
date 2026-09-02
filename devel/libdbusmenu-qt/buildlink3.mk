@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2025/10/23 20:36:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/09/02 19:01:35 wiz Exp $
 
 BUILDLINK_TREE+=	libdbusmenu-qt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdbusmenu-qt
 LIBDBUSMENU_QT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdbusmenu-qt+=	libdbusmenu-qt>=0.8.2
-BUILDLINK_ABI_DEPENDS.libdbusmenu-qt+=	libdbusmenu-qt>=0.9.3.16.04.20160218nb10
+BUILDLINK_ABI_DEPENDS.libdbusmenu-qt+=	libdbusmenu-qt>=0.9.3.16.04.20160218nb11
 BUILDLINK_PKGSRCDIR.libdbusmenu-qt?=	../../devel/libdbusmenu-qt
 
 .include "../../x11/qt4-libs/buildlink3.mk"

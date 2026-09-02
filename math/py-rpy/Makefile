@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2026/06/28 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/09/02 19:03:24 wiz Exp $
 
 DISTNAME=	rpy2-3.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
 

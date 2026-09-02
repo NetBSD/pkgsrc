@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/06/13 02:10:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/02 19:05:01 wiz Exp $
 
 DISTNAME=	pound-4.23
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graygnuorg/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

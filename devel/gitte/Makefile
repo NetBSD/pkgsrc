@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/06/22 05:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/02 19:01:25 wiz Exp $
 
 DISTNAME=	gitte-0.7.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeberg.org/ckruse/Gitte/archive/0.7.0.tar.gz
 

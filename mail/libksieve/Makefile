@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/07/13 04:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/02 19:03:18 wiz Exp $
 
 DISTNAME=	libksieve-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

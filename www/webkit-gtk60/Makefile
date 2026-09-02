@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2026/08/31 09:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/02 19:05:03 wiz Exp $
 
 PLIST_SRC=	PLIST
 
 .include "../../www/webkit-gtk41/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk60/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	GTK4 port of the WebKit browser engine (API 6.0)
 
 # this enables the 6.0 API

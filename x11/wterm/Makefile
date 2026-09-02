@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2026/01/27 08:41:06 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/09/02 19:05:34 wiz Exp $
 
 DISTNAME=	wterm-6.2.9
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	x11 windowmaker
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wterm/}
 

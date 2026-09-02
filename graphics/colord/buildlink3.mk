@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/05/15 20:08:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/09/02 19:02:33 wiz Exp $
 
 BUILDLINK_TREE+=	colord
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	colord
 COLORD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.colord+=	colord>=1.4.8
+BUILDLINK_ABI_DEPENDS.colord?=	colord>=1.4.8nb2
 BUILDLINK_PKGSRCDIR.colord?=	../../graphics/colord
 
 .include "../../devel/libgusb/buildlink3.mk"

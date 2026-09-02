@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/05/14 16:41:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/02 19:02:43 wiz Exp $
 
 DISTNAME=	kimageannotator-0.7.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksnip/}
 GITHUB_PROJECT=	kImageAnnotator

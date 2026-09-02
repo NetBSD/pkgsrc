@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2026/06/11 07:17:06 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/09/02 19:02:42 wiz Exp $
 
 DISTNAME=	kdegraphics-thumbnailers-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

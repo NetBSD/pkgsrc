@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2026/07/13 04:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/02 19:01:10 wiz Exp $
 
 .include "Makefile.common"
-PKGREVISION=	29
+PKGREVISION=	30
 COMMENT=	Modern, cross-platform, distributed IRC client
 
 USE_TOOLS+=	bash perl

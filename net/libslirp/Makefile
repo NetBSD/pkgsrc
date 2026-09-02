@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/06/25 04:14:43 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 19:03:59 wiz Exp $
 
 DISTNAME=	libslirp-4.9.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://gitlab.freedesktop.org/-/project/2767/uploads/bdcbb727b502f93d312e631cc0980055/
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/07/13 04:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/02 19:02:12 wiz Exp $
 
 DISTNAME=	julius-1.7.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bvschaik/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

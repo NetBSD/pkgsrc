@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2025/10/23 20:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2026/09/02 19:03:20 wiz Exp $
 
 DISTNAME=	sqwebmail-6.2.5
 PKGREVISION=	
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

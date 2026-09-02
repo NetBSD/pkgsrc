@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/07/13 04:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/02 19:04:55 wiz Exp $
 
 DISTNAME=	akregator-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 
 HOMEPAGE=	https://kontact.kde.org/

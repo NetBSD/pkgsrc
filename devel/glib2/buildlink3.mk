@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2025/10/23 20:36:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2026/09/02 19:01:26 wiz Exp $
 
 BUILDLINK_TREE+=	glib2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glib2
 GLIB2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0
-BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.84.4nb1
+BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.88.3nb1
 BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 BUILDLINK_INCDIRS.glib2+=	include/glib-2.0
 BUILDLINK_INCDIRS.glib2+=	include/gio-unix-2.0

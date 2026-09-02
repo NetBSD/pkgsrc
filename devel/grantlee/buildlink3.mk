@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/10/23 20:36:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/09/02 19:01:27 wiz Exp $
 
 BUILDLINK_TREE+=	grantlee
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	grantlee
 GRANTLEE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grantlee+=	grantlee>=0.3.0
-BUILDLINK_ABI_DEPENDS.grantlee?=	grantlee>=0.5.1nb13
+BUILDLINK_ABI_DEPENDS.grantlee?=	grantlee>=0.5.1nb14
 BUILDLINK_PKGSRCDIR.grantlee?=		../../devel/grantlee
 
 BUILDLINK_FILES.grantlee+=		lib/grantlee/0.5/*.so

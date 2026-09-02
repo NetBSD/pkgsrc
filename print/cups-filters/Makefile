@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.204 2026/07/27 18:59:38 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2026/09/02 19:04:07 wiz Exp $
 
 DISTNAME=	cups-filters-2.0.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 GITHUB_PROJECT=	cups-filters

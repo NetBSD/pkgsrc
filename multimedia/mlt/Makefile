@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.160 2026/07/13 04:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2026/09/02 19:03:46 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "Makefile.common"
 
 COMMENT=	Open source multimedia framework

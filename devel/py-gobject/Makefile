@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2025/10/23 20:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/09/02 19:01:42 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	6
+PKGREVISION=	7
 
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 

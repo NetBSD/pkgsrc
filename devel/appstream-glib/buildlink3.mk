@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/05/15 20:08:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/02 19:01:22 wiz Exp $
 
 BUILDLINK_TREE+=	appstream-glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	appstream-glib
 APPSTREAM_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.appstream-glib+=	appstream-glib>=0.7.17
-BUILDLINK_ABI_DEPENDS.appstream-glib?=	appstream-glib>=0.8.3nb13
+BUILDLINK_ABI_DEPENDS.appstream-glib?=	appstream-glib>=0.8.3nb19
 BUILDLINK_PKGSRCDIR.appstream-glib?=	../../devel/appstream-glib
 
 .include "../../archivers/libarchive/buildlink3.mk"

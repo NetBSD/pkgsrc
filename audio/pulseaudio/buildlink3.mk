@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2026/07/13 04:35:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2026/09/02 19:00:58 wiz Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pulseaudio
 PULSEAUDIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pulseaudio+=	pulseaudio>=16.1
-BUILDLINK_ABI_DEPENDS.pulseaudio+=	pulseaudio>=17.0nb5
+BUILDLINK_ABI_DEPENDS.pulseaudio+=	pulseaudio>=17.0nb6
 BUILDLINK_PKGSRCDIR.pulseaudio?=	../../audio/pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"

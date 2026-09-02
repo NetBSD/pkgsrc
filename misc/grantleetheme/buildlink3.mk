@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/07/13 04:36:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/09/02 19:03:28 wiz Exp $
 
 BUILDLINK_TREE+=	grantleetheme
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	grantleetheme
 GRANTLEETHEME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grantleetheme+=	grantleetheme>=25.08.2
-BUILDLINK_ABI_DEPENDS.grantleetheme?=	grantleetheme>=25.08.3nb4
+BUILDLINK_ABI_DEPENDS.grantleetheme?=	grantleetheme>=25.08.3nb5
 BUILDLINK_PKGSRCDIR.grantleetheme?=	../../misc/grantleetheme
 
 .include "../../net/kf6-knewstuff/buildlink3.mk"

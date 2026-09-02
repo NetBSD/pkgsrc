@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/07/27 19:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/02 19:04:09 wiz Exp $
 
 DISTNAME=	libppd-2.1.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 GITHUB_PROJECT=	libppd

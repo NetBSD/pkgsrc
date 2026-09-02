@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2026/07/13 04:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/02 19:01:59 wiz Exp $
 
 DISTNAME=	shoebill-0.0.5
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pruten/}
 

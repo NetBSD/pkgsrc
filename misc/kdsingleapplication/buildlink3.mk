@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/05/19 14:32:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/09/02 19:03:30 wiz Exp $
 
 BUILDLINK_TREE+=	kdsingleapplication
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	kdsingleapplication
 KDSINGLEAPPLICATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdsingleapplication+=	kdsingleapplication>=1.2.1
+BUILDLINK_ABI_DEPENDS.kdsingleapplication?=	kdsingleapplication>=1.2.1nb1
 BUILDLINK_PKGSRCDIR.kdsingleapplication?=	../../misc/kdsingleapplication
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

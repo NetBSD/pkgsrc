@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2026/01/27 08:40:52 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/02 19:05:05 wiz Exp $
 #
 
 VERSION=	1.4.5
 DISTNAME=	deskmenu_${VERSION}
 PKGNAME=	deskmenu-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/deskmenu/}
 

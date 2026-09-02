@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2026/06/11 07:16:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/09/02 19:01:30 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kio
 KF6_KIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kio+=	kf6-kio>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kio?=	kf6-kio>=6.26.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-kio?=	kf6-kio>=6.26.0nb2
 BUILDLINK_PKGSRCDIR.kf6-kio?=	../../devel/kf6-kio
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
