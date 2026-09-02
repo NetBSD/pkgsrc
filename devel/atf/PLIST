@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/03/30 07:51:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/09/02 15:35:03 adam Exp $
 bin/atf-sh
 include/atf-c++.hpp
 include/atf-c++/build.hpp
@@ -28,7 +28,7 @@ man/man1/atf-test-program.1
 man/man3/atf-c++.3
 man/man3/atf-c.3
 man/man3/atf-sh.3
-man/man4/atf-test-case.4
+man/man7/atf-test-case.7
 man/man7/atf.7
 share/aclocal/atf-c++.m4
 share/aclocal/atf-c.m4

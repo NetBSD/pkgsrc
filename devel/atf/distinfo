@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2025/03/30 07:51:54 wiz Exp $
+$NetBSD: distinfo,v 1.27 2026/09/02 15:35:03 adam Exp $
 
-BLAKE2s (atf-0.23.tar.gz) = c6f2d75a13f65e468cba0342f716ef6d9f8070f6e666e37ce718454c5a8c42a2
-SHA512 (atf-0.23.tar.gz) = d94b6b9b611d9876f9e4cc3f8e6a9f95790a5d8b6b9a54da444ba8d503a89df84eea21d580979d47f793336103a75d6a684a306a9ddfd219c3b3abf1cf1e5337
-Size (atf-0.23.tar.gz) = 633217 bytes
+BLAKE2s (atf-0.24.tar.gz) = 3565ca095815e4220539181165d748bfa29319de07b3a77d8bf5414bb1c99f00
+SHA512 (atf-0.24.tar.gz) = a02768257ea5367ab12d744e06ef9ff6ba8fc9f240b8fdb7df2b826d0e60b9a0cc7651cd15d0424e7694d38cf317686704da687207dfa5c4edfc1fbf0098b878
+Size (atf-0.24.tar.gz) = 631870 bytes
+SHA1 (patch-atf-c_detail_process.c) = 690e6ae102dba2a0a9d72d8485b7fd921bc3df12
 SHA1 (patch-atf-c_tp__test.c) = cfaa36a19ea9d39004c8d5b6099d3de1b2727baa
