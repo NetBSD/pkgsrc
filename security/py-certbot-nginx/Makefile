@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/04/13 12:44:47 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/02 09:13:22 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -7,11 +7,9 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-nginx/}
 
 COMMENT=	Nginx plugin for Certbot
 
-DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=25.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0.0:../../devel/py-pyparsing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

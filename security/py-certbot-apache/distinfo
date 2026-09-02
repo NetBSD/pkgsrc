@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.78 2026/07/17 12:24:19 adam Exp $
+$NetBSD: distinfo,v 1.79 2026/09/02 09:13:20 adam Exp $
 
-BLAKE2s (certbot_apache-5.7.0.tar.gz) = e5541830f2fb4d54b0e7c9e7e5c265f7fcb97e74fb93e9180da1d174c9a1a342
-SHA512 (certbot_apache-5.7.0.tar.gz) = 1dd881717ade1e746439204e6ced6ff824fd1318e6b2aee47834ea1c08ef5c2e7ea9bc0f998acb681c6a1c5a1e114d54e3fe745d484c693e3ab3d2055889fa79
-Size (certbot_apache-5.7.0.tar.gz) = 5931 bytes
+BLAKE2s (certbot_apache-5.8.0.tar.gz) = b26b715e93416b80195a63c181366e489b3a69769548a3826c26f574d62ad919
+SHA512 (certbot_apache-5.8.0.tar.gz) = 19b4b2dddc214e1582a54dfd97083ac290d9872e7dafa61551d10a1f676efaf1d234375e4df6d142a0c16c6ca130b95685ab5f34f419140006ab676d1eb55c83
+Size (certbot_apache-5.8.0.tar.gz) = 6019 bytes
