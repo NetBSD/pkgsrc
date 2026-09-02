@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5772 2026/09/02 15:27:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5773 2026/09/02 15:37:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8511,3 +8511,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-admin-rangefilter to 0.15.0 [adam 2026-09-02]
 	Updated www/py-django-bootstrap5 to 26.3 [adam 2026-09-02]
 	Updated devel/lutok to 0.6.3 [adam 2026-09-02]
+	Updated devel/atf to 0.24 [adam 2026-09-02]
+	Updated devel/py-pyvcd to 0.5.0 [adam 2026-09-02]
