@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5758 2026/09/02 13:50:06 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5759 2026/09/02 14:04:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8489,3 +8489,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tox to 4.61.2 [adam 2026-09-02]
 	Updated www/chromium to 152.0.7977.75 [kikadf 2026-09-02]
 	Updated www/resterm to 1.5.4 [drixter 2026-09-02]
+	Updated net/nmap to 7.991 [adam 2026-09-02]
+	Updated net/ndiff to 7.991 [adam 2026-09-02]
+	Updated net/zenmap to 7.991 [adam 2026-09-02]
+	Updated security/py-krb5 to 0.10.0 [adam 2026-09-02]
+	Updated net/py-responses to 0.26.3 [adam 2026-09-02]
