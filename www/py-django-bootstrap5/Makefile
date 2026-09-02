@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/02/12 14:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/02 15:19:36 adam Exp $
 
-DISTNAME=	django_bootstrap5-26.2
+DISTNAME=	django_bootstrap5-26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-bootstrap5/}
@@ -11,7 +11,7 @@ COMMENT=	Bootstrap 5 for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.9.6:../../devel/py-uv-build
-DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=5.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
