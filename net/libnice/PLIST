@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/11/27 16:27:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/09/02 11:11:18 adam Exp $
 bin/stunbdc
 bin/stund
 include/nice/address.h
@@ -21,6 +21,6 @@ include/stun/win32_common.h
 lib/girepository-1.0/Nice-0.1.typelib
 lib/libnice.so
 lib/libnice.so.10
-lib/libnice.so.10.15.0
+lib/libnice.so.10.16.0
 lib/pkgconfig/nice.pc
 share/gir-1.0/Nice-0.1.gir

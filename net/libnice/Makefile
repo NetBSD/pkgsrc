@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2026/05/15 17:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2026/09/02 11:11:18 adam Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
-TOOL_DEPENDS+=			glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection>=0:../../devel/glib2-introspection
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/nice.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
