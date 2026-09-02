@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/11/16 20:54:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/09/02 11:48:03 adam Exp $
 
-BLAKE2s (requests_futures-1.0.2.tar.gz) = 10200ba7cb8641b643fdc489200c930623dd8f60ae57fb3c46b86718b645c7a3
-SHA512 (requests_futures-1.0.2.tar.gz) = 1d163ffe45a09e0160710cf8bd060f741a524e60d69318af7c03a3b5dc41f27f4f7d115faed227bb710b29ffdb230a7ef5991e33ab2ad4e25b3c52727ef76fc7
-Size (requests_futures-1.0.2.tar.gz) = 10356 bytes
+BLAKE2s (requests_futures-1.1.0.tar.gz) = faa90ef996f314a14715637a99f4ec522274aea73e71fad1d980dcc5f411a3ff
+SHA512 (requests_futures-1.1.0.tar.gz) = 9668d0399f358f84270172cb4258c30fd8a7983ee01e94c6b5266c3683df5886306f62fd304a56369390aaaa57445e12fe8d3f557724bd06488b6e9bb4196d74
+Size (requests_futures-1.1.0.tar.gz) = 17945 bytes
