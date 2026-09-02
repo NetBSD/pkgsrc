@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2026/05/20 14:31:07 abs Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/02 14:01:40 adam Exp $
 
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/zenmap/}
-PKGREVISION=	1
 
 COMMENT=	Nmap Security Scanner GUI
 
@@ -18,9 +17,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-gettext>=0:../../devel/py-setuptools-ge
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
-DEPENDS+=	nmap-[0-9]*:../../net/nmap
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	gtk3+>=0:../../x11/gtk3
+DEPENDS+=	nmap>=0:../../net/nmap
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
