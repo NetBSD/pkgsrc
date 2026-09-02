@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/09/02 18:47:29 maya Exp $
+
+Portability
+
+--- configure.ac.orig	2026-07-24 05:24:37.161821367 +0000
++++ configure.ac
+@@ -8,7 +8,7 @@ AC_PROG_INSTALL
+ AC_PROG_CC([gcc egcs kgcc cc])
+ AC_CHECK_TOOL([AR], [ar])
+ AC_PROG_LEX([noyywrap])
+-AS_IF([test "x$LEX" == "x:"], [
++AS_IF([test "x$LEX" = "x:"], [
+   AC_MSG_ERROR([flex or lex missing.])
+ ])
+ AC_PROG_YACC
