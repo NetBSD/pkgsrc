@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5768 2026/09/02 15:01:27 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5769 2026/09/02 15:13:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8504,3 +8504,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.23.3 [ryoon 2026-09-02]
 	Updated www/php-concrete-cms to 9.5.3 [taca 2026-09-02]
 	Updated archivers/ruby-zip to 3.6.0 [taca 2026-09-02]
+	Updated databases/ruby-sequel to 5.108.0 [taca 2026-09-02]
