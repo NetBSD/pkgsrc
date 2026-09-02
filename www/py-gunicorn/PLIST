@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/05/19 11:50:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/09/02 14:40:03 adam Exp $
 bin/gunicorn-${PYVERSSUFFIX}
 bin/gunicornc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -139,9 +139,15 @@ ${PYSITELIB}/gunicorn/http2/connection.pyo
 ${PYSITELIB}/gunicorn/http2/errors.py
 ${PYSITELIB}/gunicorn/http2/errors.pyc
 ${PYSITELIB}/gunicorn/http2/errors.pyo
+${PYSITELIB}/gunicorn/http2/negotiation.py
+${PYSITELIB}/gunicorn/http2/negotiation.pyc
+${PYSITELIB}/gunicorn/http2/negotiation.pyo
 ${PYSITELIB}/gunicorn/http2/request.py
 ${PYSITELIB}/gunicorn/http2/request.pyc
 ${PYSITELIB}/gunicorn/http2/request.pyo
+${PYSITELIB}/gunicorn/http2/response.py
+${PYSITELIB}/gunicorn/http2/response.pyc
+${PYSITELIB}/gunicorn/http2/response.pyo
 ${PYSITELIB}/gunicorn/http2/stream.py
 ${PYSITELIB}/gunicorn/http2/stream.pyc
 ${PYSITELIB}/gunicorn/http2/stream.pyo
