@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/08/31 19:19:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2026/09/02 13:49:47 drixter Exp $
 
-DISTNAME=	resterm-1.5.1
-PKGREVISION=	1
+DISTNAME=	resterm-1.5.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unkn0wn-root/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
