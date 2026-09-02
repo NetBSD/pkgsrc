@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2026/08/23 08:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2026/09/02 07:49:46 adam Exp $
 
-DISTNAME=	google_api_python_client-2.199.0
+DISTNAME=	google_api_python_client-2.200.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
@@ -12,12 +12,12 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.3.1:../../devel/py-google-api-core
-DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.19.0:../../security/py-google-auth
-DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.1.0:../../security/py-google-auth-httplib2
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.15.0:../../www/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.32.0:../../security/py-google-auth
+DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.2.0:../../security/py-google-auth-httplib2
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.19.0:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.1:../../textproc/py-uritemplate
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized>=0:../../devel/py-parameterized
 
 USE_LANGUAGES=	# none
 
