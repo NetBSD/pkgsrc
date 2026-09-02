@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_test_chromedriver_key__converter__unittest.cc,v 1.24 2026/08/09 06:31:13 kikadf Exp $
+$NetBSD: patch-chrome_test_chromedriver_key__converter__unittest.cc,v 1.25 2026/09/02 13:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/key_converter_unittest.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/test/chromedriver/key_converter_unittest.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/test/chromedriver/key_converter_unittest.cc
 @@ -248,7 +248,7 @@ TEST(KeyConverter, ToggleModifiers) {
    CheckEventsReleaseModifiers(keys, key_events);

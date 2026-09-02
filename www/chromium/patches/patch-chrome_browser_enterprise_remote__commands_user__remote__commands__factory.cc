@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_remote__commands_user__remote__commands__factory.cc,v 1.4 2026/08/09 06:31:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_remote__commands_user__remote__commands__factory.cc,v 1.5 2026/09/02 13:13:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/remote_commands/user_remote_commands_factory.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/enterprise/remote_commands/user_remote_commands_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/enterprise/remote_commands/user_remote_commands_factory.cc
 @@ -22,7 +22,7 @@ UserRemoteCommandsFactory::BuildJobForTy
    switch (type) {

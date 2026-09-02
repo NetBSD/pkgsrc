@@ -1,10 +1,10 @@
-$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_BUILD.gn,v 1.24 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_BUILD.gn,v 1.25 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn
 @@ -27,10 +27,14 @@ component("memory_instrumentation") {
      sources += [ "os_metrics_win.cc" ]

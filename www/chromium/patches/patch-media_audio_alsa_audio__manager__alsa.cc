@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.24 2026/08/09 06:31:18 kikadf Exp $
+$NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.25 2026/09/02 13:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -106,7 +106,9 @@ bool AudioManagerAlsa::GetAlsaAudioDevic
    // Loop through the physical sound cards to get ALSA device hints.
@@ -16,16 +16,16 @@ $NetBSD: patch-media_audio_alsa_audio__manager__alsa.cc,v 1.24 2026/08/09 06:31:
      void** hints = nullptr;
      int hint_result = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!hint_result) {
-@@ -184,7 +186,9 @@ void AudioManagerAlsa::GetAlsaDevicesInf
-       // Store the device information.
-       device_names->push_back(name);
+@@ -119,7 +121,9 @@ bool AudioManagerAlsa::GetAlsaAudioDevic
+       DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
+                     << wrapper_->StrError(hint_result);
      }
-+#if !BUILDFLAG(IS_BSD) 
++#if !BUILDFLAG(IS_BSD)
    }
 +#endif
- }
  
- // static
+   if (card_next_result != 0) {
+     had_error = true;
 @@ -211,7 +215,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
    // goes through software conversion if needed (e.g. incompatible
    // sample rate).

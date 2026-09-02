@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_angle_src_common_system__utils__linux.cpp,v 1.24 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_common_system__utils__linux.cpp,v 1.25 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
-@@ -19,10 +19,17 @@
+@@ -16,10 +16,17 @@
  #include <sys/types.h>
  #include <unistd.h>
  
@@ -24,15 +24,15 @@ $NetBSD: patch-third__party_angle_src_common_system__utils__linux.cpp,v 1.24 202
  std::string GetExecutablePath()
  {
      // We cannot use lstat to get the size of /proc/self/exe as it always returns 0
-@@ -38,6 +45,7 @@ std::string GetExecutablePath()
-     path[result] = '\0';
+@@ -35,6 +42,7 @@ std::string GetExecutablePath()
+     ANGLE_UNSAFE_TODO(path[result]) = '\0';
      return path;
  }
 +#endif
  
  std::string GetExecutableDirectory()
  {
-@@ -63,6 +71,12 @@ void SetCurrentThreadName(const char *na
+@@ -60,6 +68,12 @@ void SetCurrentThreadName(const char *na
      // There's a 15-character (16 including '\0') limit.  If the name is too big (and ERANGE is
      // returned), name will be ignored.
      ASSERT(strlen(name) < 16);

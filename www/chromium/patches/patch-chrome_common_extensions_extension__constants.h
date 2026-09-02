@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_extensions_extension__constants.h,v 1.23 2026/08/09 06:31:13 kikadf Exp $
+$NetBSD: patch-chrome_common_extensions_extension__constants.h,v 1.24 2026/09/02 13:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/extension_constants.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/common/extensions/extension_constants.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/common/extensions/extension_constants.h
-@@ -213,7 +213,7 @@ inline constexpr char kReadingModeGDocsH
+@@ -206,7 +206,7 @@ inline constexpr char kReadingModeGDocsH
  inline constexpr base::FilePath::CharType
      kReadingModeGDocsHelperManifestFilename[] =
          FILE_PATH_LITERAL("reading_mode_gdocs_helper_manifest.json");
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_extensions_extension__constants.h,v 1.23 2026/08/09
  // The extension id of the google tts engine extension to use on-device natural
  // Google voices.
  inline constexpr char kTTSEngineExtensionId[] =
-@@ -264,7 +264,7 @@ inline constexpr auto kBuiltInFirstParty
+@@ -257,7 +257,7 @@ inline constexpr auto kBuiltInFirstParty
          kGoogleSpeechSynthesisExtensionId,
  #endif  // BUILDFLAG(IS_CHROMEOS)
          kReadingModeGDocsHelperExtensionId,

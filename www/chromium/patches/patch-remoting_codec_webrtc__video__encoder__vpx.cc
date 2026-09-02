@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_codec_webrtc__video__encoder__vpx.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
+$NetBSD: patch-remoting_codec_webrtc__video__encoder__vpx.cc,v 1.25 2026/09/02 13:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/codec/webrtc_video_encoder_vpx.cc
 @@ -88,7 +88,7 @@ void SetVp8CodecParameters(vpx_codec_enc
                             const webrtc::DesktopSize& size) {

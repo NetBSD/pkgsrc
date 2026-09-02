@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.16 2026/08/09 06:31:23 kikadf Exp $
+$NetBSD: patch-third__party_skia_rust_png_FFI.rs,v 1.17 2026/09/02 13:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/rust/png/FFI.rs.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/skia/rust/png/FFI.rs.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/skia/rust/png/FFI.rs
 @@ -230,6 +230,7 @@ mod ffi {
          type StreamWriter;

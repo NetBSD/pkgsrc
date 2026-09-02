@@ -1,10 +1,10 @@
-$NetBSD: patch-components_media__router_common_providers_cast_channel_cast__message__util.cc,v 1.24 2026/08/09 06:31:14 kikadf Exp $
+$NetBSD: patch-components_media__router_common_providers_cast_channel_cast__message__util.cc,v 1.25 2026/09/02 13:13:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/cast_message_util.cc
 @@ -167,7 +167,7 @@ int GetVirtualConnectPlatformValue() {
    return 4;

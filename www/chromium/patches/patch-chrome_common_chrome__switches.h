@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__switches.h,v 1.24 2026/08/09 06:31:13 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.h,v 1.25 2026/09/02 13:13:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -287,7 +287,7 @@ extern const char kDebugPrint[];
+@@ -288,7 +288,7 @@ extern const char kDebugPrint[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__switches.h,v 1.24 2026/08/09 06:31:13 kikad
  extern const char kGuest[];
  #endif
  
-@@ -310,7 +310,7 @@ extern const char kGlicGuestUrlPresetSta
+@@ -311,7 +311,7 @@ extern const char kGlicGuestUrlPresetSta
  extern const char kGlicGuestUrlPresetPreprod[];
  extern const char kGlicGuestUrlPresetProd[];
  

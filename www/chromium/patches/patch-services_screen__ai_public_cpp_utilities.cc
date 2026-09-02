@@ -1,12 +1,12 @@
-$NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.24 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.25 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
-@@ -21,7 +21,7 @@ namespace {
+@@ -26,7 +26,7 @@ namespace {
  // The maximum image dimension which is processed without downsampling by OCR.
  constexpr uint32_t kMaxImageDimensionForOcr = 2048;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.24 2026/08/09 06:
  constexpr char kBinaryPathSwitch[] = "screen-ai-binary";
  #endif
  
-@@ -42,7 +42,7 @@ constexpr char kScreenAIDlcRootPath[] =
+@@ -47,7 +47,7 @@ constexpr char kScreenAIDlcRootPath[] =
  #endif
  
  #if BUILDFLAG(ENABLE_SCREEN_AI_BROWSERTESTS)
@@ -24,7 +24,7 @@ $NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.24 2026/08/09 06:
  constexpr base::FilePath::CharType kScreenAIResourcePathForTests[] =
      FILE_PATH_LITERAL("third_party/screen-ai/linux/resources");
  #elif BUILDFLAG(IS_MAC)
-@@ -131,7 +131,7 @@ base::FilePath GetComponentBinaryPathFor
+@@ -170,7 +170,7 @@ base::FilePath GetComponentBinaryPathFor
  
  const char* GetBinaryPathSwitch() {
    // This is only used on Linux and ChromeOS.

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_video_renderable__mappable__shared__image__video__frame__pool.cc,v 1.9 2026/08/09 06:31:19 kikadf Exp $
+$NetBSD: patch-media_video_renderable__mappable__shared__image__video__frame__pool.cc,v 1.10 2026/09/02 13:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/renderable_mappable_shared_image_video_frame_pool.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- media/video/renderable_mappable_shared_image_video_frame_pool.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ media/video/renderable_mappable_shared_image_video_frame_pool.cc
 @@ -199,7 +199,7 @@ bool FrameResources::Initialize(VideoPix
  

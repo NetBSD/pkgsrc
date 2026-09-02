@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_libunwind_src_src_DwarfInstructions.hpp,v 1.10 2026/08/09 06:31:23 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_DwarfInstructions.hpp,v 1.11 2026/09/02 13:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/DwarfInstructions.hpp.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/libunwind/src/src/DwarfInstructions.hpp.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/libunwind/src/src/DwarfInstructions.hpp
-@@ -396,6 +396,23 @@ int DwarfInstructions<A, R>::stepWithDwa
+@@ -408,6 +408,23 @@ int DwarfInstructions<A, R>::stepWithDwa
        if (R::getArch() == REGISTERS_PPC64 && returnAddress != 0) {
          pint_t sp = newRegisters.getRegister(UNW_REG_SP);
          pint_t r2 = 0;
@@ -30,7 +30,7 @@ $NetBSD: patch-third__party_libunwind_src_src_DwarfInstructions.hpp,v 1.10 2026/
          switch (addressSpace.get32(returnAddress)) {
          case PPC64_ELFV1_R2_LOAD_INST_ENCODING:
            r2 = addressSpace.get64(sp + PPC64_ELFV1_R2_OFFSET);
-@@ -404,6 +421,7 @@ int DwarfInstructions<A, R>::stepWithDwa
+@@ -416,6 +433,7 @@ int DwarfInstructions<A, R>::stepWithDwa
            r2 = addressSpace.get64(sp + PPC64_ELFV2_R2_OFFSET);
            break;
          }

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.h,v 1.24 2026/08/09 06:31:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.h,v 1.25 2026/09/02 13:13:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/global_features.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/global_features.h
 @@ -25,7 +25,7 @@ class GlobalBrowserCollection;
  namespace system_permission_settings {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.24 2026/08/09 06:31:09 kika
  namespace whats_new {
  class WhatsNewRegistry;
  }  // namespace whats_new
-@@ -143,7 +143,7 @@ class GlobalFeatures {
+@@ -150,7 +150,7 @@ class GlobalFeatures {
    system_permissions_platform_handle() {
      return system_permissions_platform_handle_.get();
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.24 2026/08/09 06:31:09 kika
    whats_new::WhatsNewRegistry* whats_new_registry() {
      return whats_new_registry_.get();
    }
-@@ -219,7 +219,7 @@ class GlobalFeatures {
+@@ -232,7 +232,7 @@ class GlobalFeatures {
  
    virtual std::unique_ptr<system_permission_settings::PlatformHandle>
    CreateSystemPermissionsPlatformHandle();
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.24 2026/08/09 06:31:09 kika
    virtual std::unique_ptr<whats_new::WhatsNewRegistry> CreateWhatsNewRegistry();
  #endif
    virtual std::unique_ptr<GlobalBrowserCollection>
-@@ -235,7 +235,7 @@ class GlobalFeatures {
+@@ -248,7 +248,7 @@ class GlobalFeatures {
  
    std::unique_ptr<system_permission_settings::PlatformHandle>
        system_permissions_platform_handle_;

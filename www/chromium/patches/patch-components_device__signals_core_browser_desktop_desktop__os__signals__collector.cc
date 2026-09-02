@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_browser_desktop_desktop__os__signals__collector.cc,v 1.20 2026/08/09 06:31:14 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_browser_desktop_desktop__os__signals__collector.cc,v 1.21 2026/09/02 13:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/device_signals/core/browser/desktop/desktop_os_signals_collector.cc
 @@ -44,7 +44,7 @@ std::unique_ptr<OsSignalsResponse> AddAs
      os_signals_response->disk_encryption = device_signals::GetDiskEncrypted();

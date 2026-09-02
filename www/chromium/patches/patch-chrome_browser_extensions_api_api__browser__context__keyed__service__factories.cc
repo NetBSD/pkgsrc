@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_api_api__browser__context__keyed__service__factories.cc,v 1.8 2026/08/09 06:31:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_api__browser__context__keyed__service__factories.cc,v 1.9 2026/09/02 13:13:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
-@@ -56,7 +56,7 @@
+@@ -55,7 +55,7 @@
  
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_extensions_api_api__browser__context__keyed__servi
  #include "chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h"
  #include "chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_service.h"
  #endif
-@@ -152,7 +152,7 @@ void EnsureApiBrowserContextKeyedService
+@@ -150,7 +150,7 @@ void EnsureApiBrowserContextKeyedService
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
    // These APIs are intentionally not supported on desktop Android.

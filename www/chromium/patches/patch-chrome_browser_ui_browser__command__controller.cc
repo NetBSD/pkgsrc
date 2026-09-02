@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.25 2026/09/02 13:13:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -171,7 +171,7 @@
+@@ -170,7 +170,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
  #include "ui/base/ime/text_edit_commands.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -181,7 +181,7 @@
+@@ -180,7 +180,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -485,7 +485,7 @@ bool BrowserCommandController::IsReserve
+@@ -484,7 +484,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -818,7 +818,7 @@ void BrowserCommandController::HandleCom
+@@ -856,7 +856,7 @@ void BrowserCommandController::HandleCom
        break;
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
      case IDC_MINIMIZE_WINDOW:
        browser_->GetWindow()->Minimize();
        break;
-@@ -831,7 +831,7 @@ void BrowserCommandController::HandleCom
+@@ -869,7 +869,7 @@ void BrowserCommandController::HandleCom
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -1092,7 +1092,7 @@ void BrowserCommandController::HandleCom
+@@ -1117,7 +1117,7 @@ void BrowserCommandController::HandleCom
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -1307,7 +1307,7 @@ void BrowserCommandController::HandleCom
+@@ -1332,7 +1332,7 @@ void BrowserCommandController::HandleCom
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1737,13 +1737,13 @@ void BrowserCommandController::InitComma
+@@ -1761,13 +1761,13 @@ void BrowserCommandController::InitComma
    command_updater_->UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
    command_updater_->UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif
@@ -85,7 +85,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.24 2026/08/
    bool use_system_title_bar = true;
  #if BUILDFLAG(IS_OZONE)
    use_system_title_bar = ui::OzonePlatform::GetInstance()
-@@ -2136,7 +2136,7 @@ void BrowserCommandController::UpdateCom
+@@ -2167,7 +2167,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_->UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  

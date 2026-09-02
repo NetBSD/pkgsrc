@@ -1,10 +1,10 @@
-$NetBSD: patch-components_webauthn_core_browser_gpm__user__verification__policy.cc,v 1.11 2026/08/09 06:31:16 kikadf Exp $
+$NetBSD: patch-components_webauthn_core_browser_gpm__user__verification__policy.cc,v 1.12 2026/09/02 13:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/webauthn/core/browser/gpm_user_verification_policy.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/webauthn/core/browser/gpm_user_verification_policy.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/webauthn/core/browser/gpm_user_verification_policy.cc
 @@ -17,7 +17,7 @@ bool GpmWillDoUserVerification(device::U
      case device::UserVerificationRequirement::kPreferred:

@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_api___permission__features.json,v 1.24 2026/08/09 06:31:17 kikadf Exp $
+$NetBSD: patch-extensions_common_api___permission__features.json,v 1.25 2026/09/02 13:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/_permission_features.json.orig	2026-08-05 20:17:42.000000000 +0000
+--- extensions/common/api/_permission_features.json.orig	2026-08-31 22:47:51.000000000 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -61,7 +61,7 @@
      "channel": "stable",
@@ -114,9 +114,9 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.24 2026/08/
 -    "platforms": ["chromeos", "linux", "mac", "win"]
 +    "platforms": ["chromeos", "linux", "mac", "win", "openbsd", "freebsd", "netbsd"]
    },
-   // Note: runtime is not actually a permission, but some systems check these
-   // values to verify restrictions.
-@@ -581,7 +581,7 @@
+   "proxy": [{
+     "channel": "stable",
+@@ -592,7 +592,7 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.
@@ -125,7 +125,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.24 2026/08/
    },
    "storage": [
      {
-@@ -651,7 +651,7 @@
+@@ -662,7 +662,7 @@
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
      // "desktop_android" is not supported.

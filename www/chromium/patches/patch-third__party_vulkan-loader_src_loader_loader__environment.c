@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_vulkan-loader_src_loader_loader__environment.c,v 1.2 2026/08/09 06:31:24 kikadf Exp $
+$NetBSD: patch-third__party_vulkan-loader_src_loader_loader__environment.c,v 1.3 2026/09/02 13:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-loader/src/loader/loader_environment.c.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/vulkan-loader/src/loader/loader_environment.c.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/vulkan-loader/src/loader/loader_environment.c
 @@ -49,7 +49,7 @@ char *loader_getenv(const char *name, co
  }

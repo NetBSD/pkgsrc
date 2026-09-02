@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_feedback_system__logs_chrome__system__logs__fetcher.cc,v 1.23 2026/08/09 06:31:08 kikadf Exp $
+$NetBSD: patch-chrome_browser_feedback_system__logs_chrome__system__logs__fetcher.cc,v 1.24 2026/09/02 13:13:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc
 @@ -46,7 +46,7 @@
  #include "services/network/public/cpp/shared_url_loader_factory.h"

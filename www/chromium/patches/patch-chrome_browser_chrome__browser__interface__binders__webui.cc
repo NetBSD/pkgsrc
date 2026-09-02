@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.23 2026/08/09 06:31:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.24 2026/09/02 13:13:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
-@@ -93,13 +93,13 @@
+@@ -95,13 +95,13 @@
  #endif  // !BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_DESKTOP_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -22,7 +22,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
  #include "chrome/browser/ui/webui/skills/skills.mojom.h"
  #include "chrome/browser/ui/webui/skills/skills_ui.h"
  #endif
-@@ -354,7 +354,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -362,7 +362,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -31,7 +31,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
    RegisterWebUIControllerInterfaceBinder<discards::mojom::DetailsProvider,
                                           DiscardsUI>(map);
  
-@@ -366,7 +366,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -374,7 +374,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

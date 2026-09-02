@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.24 2026/08/09 06:31:14 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.25 2026/09/02 13:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.h
-@@ -31,7 +31,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
+@@ -32,7 +32,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDummyFeature);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.24
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
  #endif
-@@ -417,7 +417,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHiO
+@@ -424,7 +424,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHiO
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.24
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAutofillAtMemoryFeature);
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature);
  FEATURE_CONSTANTS_DECLARE_FEATURE(
-@@ -452,13 +452,13 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHLa
+@@ -458,13 +458,13 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHLa
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_password__manager_factories_password__reuse__manager__factory.cc,v 1.20 2026/08/09 06:31:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_password__manager_factories_password__reuse__manager__factory.cc,v 1.21 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/factories/password_reuse_manager_factory.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/password_manager/factories/password_reuse_manager_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/password_manager/factories/password_reuse_manager_factory.cc
 @@ -125,7 +125,7 @@ PasswordReuseManagerFactory::BuildServic
    // Prepare password hash data for reuse detection.

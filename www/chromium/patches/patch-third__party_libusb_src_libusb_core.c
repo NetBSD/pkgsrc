@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libusb_src_libusb_core.c,v 1.24 2026/08/09 06:31:23 kikadf Exp $
+$NetBSD: patch-third__party_libusb_src_libusb_core.c,v 1.25 2026/09/02 13:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/src/libusb/core.c.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/libusb/src/libusb/core.c.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/libusb/src/libusb/core.c
 @@ -448,7 +448,7 @@ libusb_free_device_list(list, 1);
   * which grows when required. it can be freed once discovery has completed,

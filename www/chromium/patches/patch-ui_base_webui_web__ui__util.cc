@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_webui_web__ui__util.cc,v 1.24 2026/08/09 06:31:24 kikadf Exp $
+$NetBSD: patch-ui_base_webui_web__ui__util.cc,v 1.25 2026/09/02 13:13:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/webui/web_ui_util.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/base/webui/web_ui_util.cc
-@@ -42,7 +42,7 @@ namespace {
+@@ -43,7 +43,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;
  
  std::string GetFontFamilyMd() {
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_base_webui_web__ui__util.cc,v 1.24 2026/08/09 06:31:24 kikadf 
    return "Roboto, " + GetFontFamily();
  #else
    return GetFontFamily();
-@@ -217,7 +217,7 @@ void AppendWebUiCssTextDefaults(std::str
+@@ -227,7 +227,7 @@ void AppendWebUiCssTextDefaults(std::str
  std::string GetFontFamily() {
    std::string font_family = l10n_util::GetStringUTF8(IDS_WEB_FONT_FAMILY);
  

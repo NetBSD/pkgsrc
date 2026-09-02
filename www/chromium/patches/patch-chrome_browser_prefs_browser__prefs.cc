@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -341,7 +341,7 @@
+@@ -342,7 +342,7 @@
  #include "chrome/browser/devtools/devtools_window.h"
  #endif  // BUILDFLAG(ENABLE_DEVTOOLS_FRONTEND)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -528,11 +528,11 @@
+@@ -531,11 +531,11 @@
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -29,7 +29,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
  #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
-@@ -560,7 +560,7 @@
+@@ -563,7 +563,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -38,7 +38,34 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1514,7 +1514,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -994,7 +994,7 @@ inline constexpr char kPendingMetricsRep
+ // Deprecated 07/2026.
+ inline constexpr char kObsoleteMetricsReportingLevel[] =
+     "user_experience_metrics.reporting_level";
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ inline constexpr char kProxyOverrideRulesAffiliation[] =
+     "proxy_override_rules_affiliation";
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+@@ -1117,7 +1117,7 @@ void RegisterLocalStatePrefsForMigration
+ 
+   // Deprecated 07/2026.
+   registry->RegisterIntegerPref(kObsoleteMetricsReportingLevel, 0);
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   registry->RegisterBooleanPref(kProxyOverrideRulesAffiliation, true);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+   registry->RegisterBooleanPref(kMetricsReportingMigrationDone, false);
+@@ -1374,7 +1374,7 @@ void RegisterProfilePrefsForMigration(
+   registry->RegisterIntegerPref(kMetricsUserReportingLevel, 0);
+ #endif  // BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   // Deprecated 07/2026.
+   registry->RegisterBooleanPref(kProxyOverrideRulesAffiliation, true);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+@@ -1539,7 +1539,7 @@ void RegisterLocalState(PrefRegistrySimp
    on_device_translation::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
@@ -47,7 +74,7 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
    WhatsNewUI::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1678,7 +1678,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1706,7 +1706,7 @@ void RegisterLocalState(PrefRegistrySimp
  #endif  // BUILDFLAG(ENABLE_PDF_SAVE_TO_DRIVE)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -56,7 +83,16 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2100,13 +2100,13 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -1833,7 +1833,7 @@ void RegisterProfilePrefs(user_prefs::Pr
+   registry->RegisterIntegerPref(prefs::kVoiceTypingSettings, 0);
+   registry->RegisterBooleanPref(prefs::kPrefDictationOnboardingCompleted,
+                                 false);
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   registry->RegisterStringPref(prefs::kVoiceTypingHotkey, "Ctrl+Space");
+ #else
+   registry->RegisterStringPref(prefs::kVoiceTypingHotkey, "Alt+Space");
+@@ -2138,13 +2138,13 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -72,3 +108,21 @@ $NetBSD: patch-chrome_browser_prefs_browser__prefs.cc,v 1.24 2026/08/09 06:31:09
    browser_switcher::BrowserSwitcherPrefs::RegisterProfilePrefs(registry);
    enterprise_signin::RegisterProfilePrefs(registry);
  #endif
+@@ -2428,7 +2428,7 @@ void MigrateObsoleteLocalStatePrefs(Pref
+ 
+   // Added 07/2026.
+   local_state->ClearPref(kObsoleteMetricsReportingLevel);
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   // Added 07/2026.
+   local_state->ClearPref(kProxyOverrideRulesAffiliation);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+@@ -2707,7 +2707,7 @@ void MigrateObsoleteProfilePrefs(PrefSer
+   syncer::ClearAccountKeyedPrefValue(
+       profile_prefs, autofill::prefs::kAutofillAiOptInStatus, {});
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+   // Added 07/2026.
+   profile_prefs->ClearPref(kProxyOverrideRulesAffiliation);
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

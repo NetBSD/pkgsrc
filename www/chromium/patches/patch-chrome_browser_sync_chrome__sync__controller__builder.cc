@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_sync_chrome__sync__controller__builder.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_chrome__sync__controller__builder.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/sync/chrome_sync_controller_builder.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/sync/chrome_sync_controller_builder.cc
-@@ -309,7 +309,7 @@ ChromeSyncControllerBuilder::Build(synce
+@@ -322,7 +322,7 @@ ChromeSyncControllerBuilder::Build(synce
  #if BUILDFLAG(ENABLE_SPELLCHECK)
      // Chrome prefers OS provided spell checkers where they exist. So only sync
      // the custom dictionary on platforms that typically don't provide one.

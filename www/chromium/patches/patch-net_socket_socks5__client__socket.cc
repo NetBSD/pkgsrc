@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_socks5__client__socket.cc,v 1.24 2026/08/09 06:31:19 kikadf Exp $
+$NetBSD: patch-net_socket_socks5__client__socket.cc,v 1.25 2026/09/02 13:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/socks5_client_socket.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- net/socket/socks5_client_socket.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ net/socket/socks5_client_socket.cc
 @@ -23,6 +23,9 @@
  #include "net/log/net_log_event_type.h"

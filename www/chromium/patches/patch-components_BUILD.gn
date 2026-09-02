@@ -1,12 +1,12 @@
-$NetBSD: patch-components_BUILD.gn,v 1.23 2026/08/09 06:31:13 kikadf Exp $
+$NetBSD: patch-components_BUILD.gn,v 1.24 2026/09/02 13:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/BUILD.gn
-@@ -226,7 +226,6 @@ test("components_unittests") {
+@@ -228,7 +228,6 @@ test("components_unittests") {
      "//components/contextual_search/internal:unit_tests",
      "//components/contextual_tasks:unit_tests",
      "//components/country_codes:unit_tests",
@@ -14,8 +14,8 @@ $NetBSD: patch-components_BUILD.gn,v 1.23 2026/08/09 06:31:13 kikadf Exp $
      "//components/critical_actions/core/browser:unit_tests",
      "//components/cross_device/logging:unit_tests",
      "//components/crx_file:unit_tests",
-@@ -662,7 +661,7 @@ test("components_unittests") {
-       "//components/user_data_importer/content:unit_tests",
+@@ -663,7 +662,7 @@ test("components_unittests") {
+       "//components/user_education/webui:unit_tests",
      ]
  
 -    if (!is_fuchsia) {  #!iOS and!Fuchsia
@@ -23,12 +23,12 @@ $NetBSD: patch-components_BUILD.gn,v 1.23 2026/08/09 06:31:13 kikadf Exp $
        deps += [
          "//components/crash/content/browser:unit_tests",
          "//components/crash/core/app:unit_tests",
-@@ -852,7 +851,7 @@ test("components_unittests") {
+@@ -837,7 +836,7 @@ test("components_unittests") {
      deps += [ "//components/constrained_window:unit_tests" ]
    }
  
--  if (is_win || is_linux || is_chromeos || is_mac) {
-+  if (is_win || (is_linux && !is_bsd) || is_chromeos || is_mac) {
+-  if (is_win || is_mac || is_linux || is_chromeos) {
++  if (is_win || is_mac || (is_linux && !is_bsd) || is_chromeos) {
      deps += [
-       "//components/stability_report:unit_tests",
-       "//components/webapps/isolated_web_apps:unit_tests",
+       "//components/metrics/private_metrics:unit_tests",
+       "//components/metrics/structured:unit_tests",

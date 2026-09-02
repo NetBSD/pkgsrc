@@ -1,12 +1,12 @@
-$NetBSD: patch-media_webrtc_audio__processor.cc,v 1.24 2026/08/09 06:31:19 kikadf Exp $
+$NetBSD: patch-media_webrtc_audio__processor.cc,v 1.25 2026/09/02 13:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/audio_processor.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- media/webrtc/audio_processor.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ media/webrtc/audio_processor.cc
-@@ -518,7 +518,7 @@ std::optional<double> AudioProcessor::Pr
+@@ -523,7 +523,7 @@ std::optional<double> AudioProcessor::Pr
    // controller.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
    DCHECK_LE(volume, 1.0);

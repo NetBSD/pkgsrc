@@ -1,10 +1,10 @@
-$NetBSD: patch-components_performance__manager_decorators_process__metrics__decorator.cc,v 1.24 2026/08/09 06:31:15 kikadf Exp $
+$NetBSD: patch-components_performance__manager_decorators_process__metrics__decorator.cc,v 1.25 2026/09/02 13:13:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/performance_manager/decorators/process_metrics_decorator.cc
 @@ -53,7 +53,7 @@ class ProcessMetricsDecorator::NodeMetri
      auto* process_node = ProcessNodeImpl::FromNode(context.GetProcessNode());

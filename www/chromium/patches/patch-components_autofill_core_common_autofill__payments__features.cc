@@ -1,17 +1,17 @@
-$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.24 2026/08/09 06:31:14 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.25 2026/09/02 13:13:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -32,7 +32,7 @@ BASE_FEATURE(kAutofillDisableBnplCountry
  // page using server-side AI.
  BASE_FEATURE(kAutofillEnableAiBasedAmountExtraction,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -96,16 +96,16 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -300,7 +300,7 @@ BASE_FEATURE(kAutofillEnableWalletBrandi
+@@ -313,7 +313,7 @@ BASE_FEATURE(kAutofillIgnoreEmptyCvcsInS
  // eligibility.
  BASE_FEATURE(kAutofillPreferBuyNowPayLaterBlocklists,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -346,7 +346,7 @@ BASE_FEATURE(kAutofillUpstreamEnforceStr
+@@ -371,7 +371,7 @@ BASE_FEATURE(kAutofillUpstreamEnforceStr
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

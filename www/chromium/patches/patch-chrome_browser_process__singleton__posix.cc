@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.24 2026/08/09 06:31:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/process_singleton_posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/process_singleton_posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/process_singleton_posix.cc
 @@ -102,7 +102,7 @@
  #include "ui/base/l10n/l10n_util.h"
@@ -12,7 +12,7 @@ $NetBSD: patch-chrome_browser_process__singleton__posix.cc,v 1.24 2026/08/09 06:
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/ui/process_singleton_dialog_linux.h"
+ #include "chrome/browser/ui/dialogs/process_singleton_dialog_linux.h"
  #endif
  
 @@ -367,7 +367,7 @@ bool DisplayProfileInUseError(const base

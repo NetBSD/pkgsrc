@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_chromoting__host.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
+$NetBSD: patch-remoting_host_chromoting__host.cc,v 1.25 2026/09/02 13:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/chromoting_host.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/chromoting_host.cc
-@@ -142,7 +142,7 @@ void ChromotingHost::Start(const std::st
+@@ -137,7 +137,7 @@ void ChromotingHost::Start(const std::st
    }
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_chromoting__host.cc,v 1.24 2026/08/09 06:31:20 kika
  void ChromotingHost::StartChromotingHostServices() {
    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
    DCHECK(!ipc_server_);
-@@ -161,7 +161,7 @@ void ChromotingHost::BindChromotingHostS
+@@ -156,7 +156,7 @@ void ChromotingHost::BindChromotingHostS
  }
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_chromoting__host.cc,v 1.24 2026/08/09 06:31:20 kika
  void ChromotingHost::BindChromotingHostServices(
      mojo::PendingReceiver<mojom::ChromotingHostServices> receiver) {
    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-@@ -300,7 +300,7 @@ std::optional<ErrorCode> ChromotingHost:
+@@ -295,7 +295,7 @@ std::optional<ErrorCode> ChromotingHost:
    return per_session_policies_validator_.Run(policies);
  }
  

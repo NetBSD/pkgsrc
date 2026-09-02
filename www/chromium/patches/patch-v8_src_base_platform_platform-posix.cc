@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.24 2026/08/09 06:31:26 kikadf Exp $
+$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.25 2026/09/02 13:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -78,9 +78,11 @@
  #include <sys/syscall.h>
@@ -80,3 +80,43 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.24 2026/08/09 06:31:26
  
  namespace {
  #if DEBUG
+@@ -1486,21 +1500,20 @@ Stack::StackSlot Stack::ObtainCurrentThr
+ #endif  // V8_OS_ZOS
+ }
+ 
++#endif  // !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) &&
++        // !defined(_AIX) && !defined(V8_OS_SOLARIS)
++
+ // static
+ Stack::StackSlot Stack::ObtainCurrentThreadStackReservedLimit() {
+ #if V8_OS_ZOS
+   return nullptr;
+-#elif V8_OS_OPENBSD
+-  stack_t stack;
+-  int error = pthread_stackseg_np(pthread_self(), &stack);
+-  if (error) {
+-    DCHECK(MainThreadIsCurrentThread());
+-    return nullptr;
+-  }
+-  return stack.ss_sp;
+ #else
+   pthread_attr_t attr;
++#if V8_OS_BSD
++  int error = pthread_attr_init(&attr);
++#else
+   int error = pthread_getattr_np(pthread_self(), &attr);
++#endif
+   if (error) {
+     DCHECK(MainThreadIsCurrentThread());
+     return nullptr;
+@@ -1514,10 +1527,6 @@ Stack::StackSlot Stack::ObtainCurrentThr
+ #endif  // V8_OS_ZOS
+ }
+ 
+-#endif  // !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) &&
+-        // !defined(_AIX) && !defined(V8_OS_SOLARIS)
+-
+-
+ 
+ // static
+ void Stack::SetCurrentThreadStackBounds(uintptr_t, uintptr_t) { UNREACHABLE(); }

@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_linux_BUILD.gn,v 1.24 2026/08/09 06:31:20 kikadf Exp $
+$NetBSD: patch-sandbox_linux_BUILD.gn,v 1.25 2026/09/02 13:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
+--- sandbox/linux/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
 +++ sandbox/linux/BUILD.gn
 @@ -10,11 +10,11 @@ if (is_android) {
  }
