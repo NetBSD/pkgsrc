@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2007/12/08 17:41:52 heinz Exp $
+$NetBSD: MESSAGE,v 1.5 2026/09/02 02:17:59 maya Exp $
 
 To actually use rip, you need to set your CDROM device in ~/.riprc (created
 at first start of rip) and install at least one of the following rippers
@@ -12,7 +12,6 @@ Rippers:
 Encoders:
  - audio/bladeenc
  - audio/flac
- - audio/gogo
  - audio/lame
  - audio/vorbis-tools (includes oggenc)
 ===========================================================================
