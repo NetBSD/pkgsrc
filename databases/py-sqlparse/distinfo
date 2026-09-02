@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2025/12/21 21:50:38 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/09/02 19:27:46 adam Exp $
 
-BLAKE2s (sqlparse-0.5.5.tar.gz) = 217d5e979255c77a3e372e97784d1da20e94fe9506978bd120d224a24f55d3e9
-SHA512 (sqlparse-0.5.5.tar.gz) = 1c06211f7a3fbdde9f618885eaec03b7c28e2d8262ef02adab2095e5995aca5500c5b92398bdfbf79d20e2017542abb2358e105ba8a87afdce5834b73524b1cd
-Size (sqlparse-0.5.5.tar.gz) = 120815 bytes
+BLAKE2s (sqlparse-0.6.0.tar.gz) = 5d162168d6ddf492506cc37e86ca91044de51d7ad6baa126cb33b0493841fdb6
+SHA512 (sqlparse-0.6.0.tar.gz) = 39e57d16a3fdb125d26cfa5c1e0e020e105282d74fa404aea9a3d3685751c1b3c4231c148e61acf1c90cf2bd4b5c74c32ff2b9ac8a8f5b69249590d162d18c1a
+Size (sqlparse-0.6.0.tar.gz) = 178477 bytes
