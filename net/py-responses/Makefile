@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2026/07/06 16:59:20 adam Exp $
+# $NetBSD: Makefile,v 1.52 2026/09/02 14:04:03 adam Exp $
 
-DISTNAME=	responses-0.26.2
+DISTNAME=	responses-0.26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
@@ -13,14 +13,14 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.0.0:../../www/py-urllib3
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.0.0:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver-[0-9]*:../../devel/py-test-httpserver
-TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
-TEST_DEPENDS+=	${PYPKGPREFIX}-types-yaml-[0-9]*:../../textproc/py-types-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=0:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=0:../../devel/py-test-httpserver
+TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w>=0:../../textproc/py-tomli_w
+TEST_DEPENDS+=	${PYPKGPREFIX}-types-yaml>=0:../../textproc/py-types-yaml
 
 USE_LANGUAGES=	# none
 
