@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5779 2026/09/02 17:22:48 osa Exp $
+$NetBSD: CHANGES-2026,v 1.5780 2026/09/02 17:29:01 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8520,3 +8520,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/snac to 2.95 [schmonz 2026-09-02]
 	Updated www/freenginx to 1.30.1nb3 [osa 2026-09-02]
 	Updated www/freenginx-devel to 1.31.3nb2 [osa 2026-09-02]
+	Updated www/freenginx-devel to 1.31.4 [osa 2026-09-02]
