@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5775 2026/09/02 16:54:39 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5776 2026/09/02 17:00:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8515,3 +8515,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pyvcd to 0.5.0 [adam 2026-09-02]
 	Updated devel/ruby-curses to 1.7.0 [taca 2026-09-02]
 	Updated devel/ruby-google-protobuf to 4.36.1 [taca 2026-09-02]
+	Updated devel/ruby-redmine60 to 6.0.11 [taca 2026-09-02]
