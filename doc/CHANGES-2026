@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5759 2026/09/02 14:04:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5760 2026/09/02 14:17:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8494,3 +8494,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/zenmap to 7.991 [adam 2026-09-02]
 	Updated security/py-krb5 to 0.10.0 [adam 2026-09-02]
 	Updated net/py-responses to 0.26.3 [adam 2026-09-02]
+	Updated parallel/spirv-llvm-translator to 21.1.11 [adam 2026-09-02]
+	Updated lang/py-python-discovery to 1.6.0 [adam 2026-09-02]
+	Updated www/py-python-multipart to 0.0.32 [adam 2026-09-02]
