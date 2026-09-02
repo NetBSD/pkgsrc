@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2026/09/02 17:21:26 osa Exp $
+$NetBSD: distinfo,v 1.18 2026/09/02 17:28:16 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -12,9 +12,9 @@ Size (fdintino-nginx-upload-module-96e6460_GH.tar.gz) = 42561 bytes
 BLAKE2s (form-input-nginx-module-0.12.tar.gz) = b08fc95c3e15bfdc0846e2d1e8157171954f353bd301f4ac4aca56113620e91d
 SHA512 (form-input-nginx-module-0.12.tar.gz) = 1c5c5ab74156cac09da44a2dcdd84f7c03c9919a23a847e63613e00e3781ecd73d5ad12446174b4fdef9d064257a31570a8dbcccc00d8266f7048e3dcde0362e
 Size (form-input-nginx-module-0.12.tar.gz) = 11090 bytes
-BLAKE2s (freenginx-1.31.3.tar.gz) = 3c6888ed6d89f29f17b8612a413752e0de05390948e1a03731309dfc4fdddcc1
-SHA512 (freenginx-1.31.3.tar.gz) = 2c196e7a6de2a98be833a393e85a34c2089ece70ba4ee1475f4538922a576e3b10e3dbad2c8c3b044b3fc85701c180d5956745c8b5b2bab3700aaee0ff15d111
-Size (freenginx-1.31.3.tar.gz) = 1255777 bytes
+BLAKE2s (freenginx-1.31.4.tar.gz) = 29f435b560b74ec0f19bb3227eddedbe4673659f372c6b1d30dbfd43b3d9318c
+SHA512 (freenginx-1.31.4.tar.gz) = e70fe4ca6b07538fcc2f18b428ab3c2dac574477ed815e6c92d25c2c267b2af29af06489b0e4ec1d7ce8d37a48d78c033393d208013ca9562101e24fe2b2138c
+Size (freenginx-1.31.4.tar.gz) = 1256428 bytes
 BLAKE2s (google-ngx_brotli-a71f931_GH.tar.gz) = c30d6cbd94abb6f5c1d48275ed964e32f43d9cadd602f95b227a40e62dadbd0d
 SHA512 (google-ngx_brotli-a71f931_GH.tar.gz) = 1cb73a89b53b29d37cbc4d811d5d5cd7b051ec4db98900f593abc8d5b53761b95713212e083334785d9625d4705a78ed476113b244476a9cd5f46dcd9f1177ff
 Size (google-ngx_brotli-a71f931_GH.tar.gz) = 16376 bytes
