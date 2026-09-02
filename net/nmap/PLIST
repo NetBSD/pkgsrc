@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/05/15 15:44:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/09/02 14:01:40 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -367,7 +367,6 @@ ${PLIST.lua}share/nmap/scripts/hbase-master-info.nse
 ${PLIST.lua}share/nmap/scripts/hbase-region-info.nse
 ${PLIST.lua}share/nmap/scripts/hddtemp-info.nse
 ${PLIST.lua}share/nmap/scripts/hnap-info.nse
-${PLIST.lua}share/nmap/scripts/hostmap-bfk.nse
 ${PLIST.lua}share/nmap/scripts/hostmap-crtsh.nse
 ${PLIST.lua}share/nmap/scripts/hostmap-robtex.nse
 ${PLIST.lua}share/nmap/scripts/http-adobe-coldfusion-apsa1301.nse
