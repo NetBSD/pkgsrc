@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2026/08/19 08:25:23 adam Exp $
+# $NetBSD: Makefile,v 1.133 2026/09/02 19:31:15 adam Exp $
 
-DISTNAME=	lxml-6.1.2
+DISTNAME=	lxml-6.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.11:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.2.9:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7:../../textproc/py-cssselect
 
