@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2026/09/01 21:28:14 fox Exp $
+# $NetBSD: Makefile,v 1.57 2026/09/02 08:20:42 fox Exp $
 
 DISTNAME=	foliate-3.3.0
 CATEGORIES=	print
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
-RUN_DEPENDS+=	gjs>=1.82.0:../../lang/gjs
+DEPENDS+=	gjs>=1.82.0:../../lang/gjs
 
 GITHUB_SUBMODULES=	johnfactotum foliate-js 052123beafed921a9a2a45ef6330c235289a634e src/foliate-js
 
