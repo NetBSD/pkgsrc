@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5780 2026/09/02 17:29:01 osa Exp $
+$NetBSD: CHANGES-2026,v 1.5781 2026/09/02 18:47:40 maya Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8521,3 +8521,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/freenginx to 1.30.1nb3 [osa 2026-09-02]
 	Updated www/freenginx-devel to 1.31.3nb2 [osa 2026-09-02]
 	Updated www/freenginx-devel to 1.31.4 [osa 2026-09-02]
+	Updated net/unfs3 to 0.11.0 [fly 2026-09-02]
