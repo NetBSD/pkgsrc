@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/08/26 10:19:06 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/02 16:54:26 taca Exp $
 
-DISTNAME=	google-protobuf-4.35.1
-PKGREVISION=	1
+DISTNAME=	google-protobuf-4.36.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
