@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/16 08:04:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/02 16:54:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/google/protobuf_c.${RUBY_DLEXT}
@@ -53,6 +53,8 @@ ${GEM_LIBDIR}/lib/google/protobuf/ffi/repeated_field.rb
 ${GEM_LIBDIR}/lib/google/protobuf/ffi/service_descriptor.rb
 ${GEM_LIBDIR}/lib/google/protobuf/field_mask_pb.rb
 ${GEM_LIBDIR}/lib/google/protobuf/internal/object_cache.rb
+${GEM_LIBDIR}/lib/google/protobuf/json_enumvalue_options_pb.rb
+${GEM_LIBDIR}/lib/google/protobuf/json_options_pb.rb
 ${GEM_LIBDIR}/lib/google/protobuf/message_exts.rb
 ${GEM_LIBDIR}/lib/google/protobuf/plugin_pb.rb
 ${GEM_LIBDIR}/lib/google/protobuf/repeated_field.rb
