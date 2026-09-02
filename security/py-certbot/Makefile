@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/08/03 09:36:28 adam Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/02 09:13:20 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -10,16 +10,17 @@ COMMENT=	Client for the Let's Encrypt CA
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.5.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=47.0.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.7.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=2.0.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.6:../../time/py-parsedatetime
-DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+DEPENDS+=	${PYPKGPREFIX}-rfc3339>=0:../../time/py-rfc3339
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 BUILD_DEFS+=		VARBASE
-
 PKG_SYSCONFSUBDIR=	letsencrypt
+PY_RENAME_BINARIES=	certbot
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
@@ -38,13 +39,9 @@ MAKE_DIRS+=		${VARBASE}/letsencrypt/log
 INSTALLATION_DIRS+=	share/examples/certbot-${PYVERSSUFFIX}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} certbot certbot-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/examples/cli.ini \
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
