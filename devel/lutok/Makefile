@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/12/30 13:11:36 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/02 15:24:34 adam Exp $
 
-DISTNAME=	lutok-0.6.2
+DISTNAME=	lutok-0.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freebsd/}
 GITHUB_RELEASE=	${DISTNAME}

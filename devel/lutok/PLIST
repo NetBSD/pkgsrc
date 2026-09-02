@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/30 13:11:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/02 15:24:34 adam Exp $
 include/lutok/c_gate.hpp
 include/lutok/debug.hpp
 include/lutok/exceptions.hpp
@@ -13,18 +13,18 @@ share/doc/lutok/AUTHORS
 share/doc/lutok/COPYING
 share/doc/lutok/NEWS
 share/doc/lutok/README.md
-share/doc/lutok/html/a00002.html
-share/doc/lutok/html/a00002_source.html
-share/doc/lutok/html/a00029.html
-share/doc/lutok/html/a00029_source.html
-share/doc/lutok/html/a00032.html
-share/doc/lutok/html/a00032_source.html
-share/doc/lutok/html/a00038.html
-share/doc/lutok/html/a00038_source.html
-share/doc/lutok/html/a00041.html
-share/doc/lutok/html/a00041_source.html
-share/doc/lutok/html/a00053.html
-share/doc/lutok/html/a00053_source.html
+share/doc/lutok/html/a00011.html
+share/doc/lutok/html/a00011_source.html
+share/doc/lutok/html/a00014.html
+share/doc/lutok/html/a00014_source.html
+share/doc/lutok/html/a00020.html
+share/doc/lutok/html/a00020_source.html
+share/doc/lutok/html/a00023.html
+share/doc/lutok/html/a00023_source.html
+share/doc/lutok/html/a00035.html
+share/doc/lutok/html/a00035_source.html
+share/doc/lutok/html/a00050.html
+share/doc/lutok/html/a00050_source.html
 share/doc/lutok/html/a00056.html
 share/doc/lutok/html/a00056_source.html
 share/doc/lutok/html/a00064.html
