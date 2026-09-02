@@ -1,12 +1,12 @@
-$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.4 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.5 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- services/webnn/webnn_graph_impl_fuzzer.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ services/webnn/webnn_graph_impl_fuzzer.cc
-@@ -1613,7 +1613,7 @@ std::optional<Conv2dDescriptors> SetUpCo
+@@ -2045,7 +2045,7 @@ std::optional<Conv2dDescriptors> SetUpCo
      params.groups = params.input_channels;
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.4 2026/08/09 06:
    if (params.conv2d_kind == mojom::Conv2d::Kind::kTransposed) {
      // ConvTranspose2d does not support dilation and groups for TFLite backend:
      // https://source.chromium.org/chromium/chromium/src/+/db6bda50f023057ffa82845f232852dea0f271e1:services/webnn/tflite/graph_builder_tflite.cc;l=4125
-@@ -1950,7 +1950,7 @@ std::optional<Pool2dDescriptors> SetUpPo
+@@ -2461,7 +2461,7 @@ std::optional<Pool2dDescriptors> SetUpPo
      Pool2dParams& params) {
    InputOperandLayout input_layout = context_properties.input_operand_layout;
  

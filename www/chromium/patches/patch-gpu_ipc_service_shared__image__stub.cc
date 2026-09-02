@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_ipc_service_shared__image__stub.cc,v 1.9 2026/08/09 06:31:18 kikadf Exp $
+$NetBSD: patch-gpu_ipc_service_shared__image__stub.cc,v 1.10 2026/09/02 13:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/shared_image_stub.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- gpu/ipc/service/shared_image_stub.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ gpu/ipc/service/shared_image_stub.cc
 @@ -48,7 +48,7 @@ SharedImageStub::SharedImageStub(GpuChan
        command_buffer_id_(

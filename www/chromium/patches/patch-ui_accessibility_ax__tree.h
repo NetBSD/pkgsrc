@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_accessibility_ax__tree.h,v 1.23 2026/08/09 06:31:24 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__tree.h,v 1.24 2026/09/02 13:13:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/accessibility/ax_tree.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/accessibility/ax_tree.h
-@@ -64,7 +64,7 @@ enum class AXTreeUnserializeError {
+@@ -63,7 +63,7 @@ enum class AXTreeUnserializeError {
  };
  // LINT.ThenChange(/tools/metrics/histograms/metadata/accessibility/enums.xml:AccessibilityTreeUnserializeError)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.h,v 1.23 2026/08/09 06:31:24 kikadf Exp
  // To support AriaNotify on older versions of ATK, we need to use the ATK
  // signal "Text::text-insert". This signal requires a node that is a
  // text type, and it needs to have aria-live properties set in order for
-@@ -289,7 +289,7 @@ class AX_EXPORT AXTree {
+@@ -283,7 +283,7 @@ class AX_EXPORT AXTree {
  
    void NotifyChildTreeConnectionChanged(AXNode* node, AXTree* child_tree);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.h,v 1.23 2026/08/09 06:31:24 kikadf Exp
    void ClearExtraAnnouncementNodes();
    void CreateExtraAnnouncementNodes();
    ExtraAnnouncementNodes* extra_announcement_nodes() const {
-@@ -548,7 +548,7 @@ class AX_EXPORT AXTree {
+@@ -542,7 +542,7 @@ class AX_EXPORT AXTree {
  
    std::unique_ptr<AXEvent> event_data_;
  

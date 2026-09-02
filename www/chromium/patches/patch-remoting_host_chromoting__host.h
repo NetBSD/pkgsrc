@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikadf Exp $
+$NetBSD: patch-remoting_host_chromoting__host.h,v 1.25 2026/09/02 13:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/chromoting_host.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/chromoting_host.h
 @@ -37,7 +37,7 @@
  #include "remoting/protocol/session_manager.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
  #include "remoting/host/chromoting_host_services_server.h"
  #endif
  
-@@ -82,7 +82,7 @@ class ChromotingHost :
+@@ -73,7 +73,7 @@ class ChromotingHost :
  // multi-process host, ChromotingHostServices is implemented by the daemon
  // process and the ChromotingSessionServices receiver is passed through
  // DesktopSessionConnectionEvents.
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
      public mojom::ChromotingHostServices,
  
  #endif
-@@ -130,7 +130,7 @@ class ChromotingHost :
+@@ -118,7 +118,7 @@ class ChromotingHost :
    // This method can only be called once during the lifetime of this object.
    void Start(const std::string& host_owner);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
    // Starts running the ChromotingHostServices server and listening for incoming
    // IPC binding requests.
    // Currently only the single-process Linux host runs the
-@@ -142,7 +142,7 @@ class ChromotingHost :
+@@ -130,7 +130,7 @@ class ChromotingHost :
        std::unique_ptr<named_mojo_ipc_server::ConnectionInfo> connection_info);
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
    void BindChromotingHostServices(
        mojo::PendingReceiver<mojom::ChromotingHostServices> receiver);
  #endif
-@@ -177,7 +177,7 @@ class ChromotingHost :
+@@ -165,7 +165,7 @@ class ChromotingHost :
    std::optional<ErrorCode> OnSessionPoliciesReceived(
        const SessionPolicies& policies) override;
  
@@ -51,7 +51,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
    // mojom::ChromotingHostServices implementation.
    void BindSessionServices(
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
-@@ -252,7 +252,7 @@ class ChromotingHost :
+@@ -223,7 +223,7 @@ class ChromotingHost :
    // List of host extensions.
    std::vector<std::unique_ptr<HostExtension>> extensions_;
  
@@ -60,7 +60,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.24 2026/08/09 06:31:20 kikad
    // IPC server that runs the CRD host service API. Non-null if the server name
    // is set and the host is started.
    // Currently only Linux runs the ChromotingHostServices server on the host
-@@ -260,7 +260,7 @@ class ChromotingHost :
+@@ -231,7 +231,7 @@ class ChromotingHost :
    std::unique_ptr<ChromotingHostServicesServer> ipc_server_;
  #endif
  

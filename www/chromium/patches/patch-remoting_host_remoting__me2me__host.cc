@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20 kikadf Exp $
+$NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.25 2026/09/02 13:13:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remoting_me2me_host.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- remoting/host/remoting_me2me_host.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ remoting/host/remoting_me2me_host.cc
 @@ -153,7 +153,7 @@
  #include "remoting/host/mac/permission_utils.h"
@@ -60,7 +60,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    std::unique_ptr<HostWtmpdbLogger> host_wtmpdb_logger_;
  #endif
    std::unique_ptr<HostPowerSaveBlocker> power_save_blocker_;
-@@ -867,7 +867,7 @@ void HostProcess::StartOnNetworkThread()
+@@ -868,7 +868,7 @@ void HostProcess::StartOnNetworkThread()
  void HostProcess::ShutdownOnNetworkThread() {
    DCHECK(context_->network_task_runner()->BelongsToCurrentThread());
    config_watcher_.reset();
@@ -69,7 +69,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    cert_watcher_.reset();
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  }
-@@ -951,7 +951,7 @@ void HostProcess::CreateAuthenticatorFac
+@@ -952,7 +952,7 @@ void HostProcess::CreateAuthenticatorFac
              context_->create_client_cert_store_callback(),
              service_account_email_, oauth_refresh_token_));
  
@@ -78,7 +78,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
      if (!cert_watcher_) {
        cert_watcher_ = std::make_unique<CertificateWatcher>(
            base::BindRepeating(&HostProcess::ShutdownHost,
-@@ -1098,7 +1098,7 @@ void HostProcess::StartOnUiThread() {
+@@ -1101,7 +1101,7 @@ void HostProcess::StartOnUiThread() {
        base::BindRepeating(&HostProcess::OnPolicyUpdate, base::Unretained(this)),
        base::BindRepeating(&HostProcess::OnPolicyError, base::Unretained(this)));
  
@@ -87,7 +87,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // If an audio pipe is specific on the command-line then initialize
    // PulseAudioCapturer to capture from it.
    base::FilePath audio_pipe_name =
-@@ -1184,7 +1184,7 @@ void HostProcess::ShutdownOnUiThread() {
+@@ -1187,7 +1187,7 @@ void HostProcess::ShutdownOnUiThread() {
    // It is now safe for the HostProcess to be deleted.
    self_ = nullptr;
  
@@ -96,7 +96,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // Cause the global AudioPipeReader to be freed, otherwise the audio
    // thread will remain in-use and prevent the process from exiting.
    // TODO(wez): DesktopEnvironmentFactory should own the pipe reader.
-@@ -1192,7 +1192,7 @@ void HostProcess::ShutdownOnUiThread() {
+@@ -1195,7 +1195,7 @@ void HostProcess::ShutdownOnUiThread() {
    PulseAudioCapturer::InitializePipeReader(nullptr, base::FilePath());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -105,7 +105,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    context_->input_task_runner()->PostTask(
        FROM_HERE,
        base::BindOnce([]() { delete ui::X11EventSource::GetInstance(); }));
-@@ -1834,7 +1834,7 @@ void HostProcess::InitializeSignaling() 
+@@ -1837,7 +1837,7 @@ void HostProcess::InitializeSignaling() 
    zombie_host_detector_ = std::make_unique<ZombieHostDetector>(base::BindOnce(
        &HostProcess::OnZombieStateDetected, base::Unretained(this)));
  
@@ -114,7 +114,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // TODO: joedow - Remove Linux scope after this codepath has been stabilized.
    const base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    if (cmd_line->HasSwitch(kEnableCorpMessaging)) {
-@@ -1929,7 +1929,7 @@ void HostProcess::StartHost() {
+@@ -1932,7 +1932,7 @@ void HostProcess::StartHost() {
  
    SetState(HOST_STARTED);
  
@@ -123,7 +123,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    if (webrtc::DesktopCapturer::IsRunningUnderWayland()) {
      if (GnomeRemoteDesktopSession::IsRunningUnderGnome()) {
        GnomeRemoteDesktopSession::GetInstance()->Init(
-@@ -2027,7 +2027,7 @@ void HostProcess::StartHost() {
+@@ -2048,7 +2048,7 @@ void HostProcess::StartHost() {
  
    host_->AddExtension(std::make_unique<TestEchoExtension>());
  
@@ -132,7 +132,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    const base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    if (cmd_line->HasSwitch(kEnableWtmpdb)) {
      host_wtmpdb_logger_ =
-@@ -2065,7 +2065,7 @@ void HostProcess::StartHost() {
+@@ -2086,7 +2086,7 @@ void HostProcess::StartHost() {
    // addresses.
    host_->Start(*host_owner_emails_.begin());
  
@@ -141,7 +141,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // For Multi-process hosts and Mac, ChromotingHostServices connections are
    // handled by another process, then the message pipe is forwarded to the
    // network process.
-@@ -2219,7 +2219,7 @@ int HostProcessMain(bool multi_process) 
+@@ -2241,7 +2241,7 @@ int HostProcessMain(bool multi_process) 
                                                     : " (single-process)");
    const base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
  
@@ -150,7 +150,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // For the multi-process host, screen capturing and UI rendering should be
    // done by the desktop process.
    if (!multi_process) {
-@@ -2271,7 +2271,7 @@ int HostProcessMain(bool multi_process) 
+@@ -2293,7 +2293,7 @@ int HostProcessMain(bool multi_process) 
      return kInitializationFailed;
    }
  
@@ -159,7 +159,7 @@ $NetBSD: patch-remoting_host_remoting__me2me__host.cc,v 1.24 2026/08/09 06:31:20
    // Log and cleanup the crash database. We do this after a short delay so that
    // the crash database has a chance to be updated properly if we just got
    // relaunched after a crash.
-@@ -2291,7 +2291,7 @@ int HostProcessMain(bool multi_process) 
+@@ -2313,7 +2313,7 @@ int HostProcessMain(bool multi_process) 
    std::unique_ptr<net::NetworkChangeNotifier> network_change_notifier(
        net::NetworkChangeNotifier::CreateIfNeeded());
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_accessibility_view__accessibility.cc,v 1.23 2026/08/09 06:31:25 kikadf Exp $
+$NetBSD: patch-ui_views_accessibility_view__accessibility.cc,v 1.24 2026/09/02 13:13:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/accessibility/view_accessibility.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- ui/views/accessibility/view_accessibility.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ ui/views/accessibility/view_accessibility.cc
-@@ -36,7 +36,7 @@
+@@ -37,7 +37,7 @@
  #include "ui/views/accessibility/view_ax_platform_node_delegate_win.h"
  #elif BUILDFLAG(IS_MAC)
  #include "ui/views/accessibility/view_ax_platform_node_delegate_mac.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_accessibility_view__accessibility.cc,v 1.23 2026/08/09 0
  #include "ui/views/accessibility/view_ax_platform_node_delegate_auralinux.h"
  #endif
  
-@@ -106,7 +106,7 @@ std::unique_ptr<ViewAccessibility> ViewA
+@@ -107,7 +107,7 @@ std::unique_ptr<ViewAccessibility> ViewA
    return ViewAXPlatformNodeDelegateWin::CreatePlatformSpecific(view);
  #elif BUILDFLAG(IS_MAC)
    return ViewAXPlatformNodeDelegateMac::CreatePlatformSpecific(view);

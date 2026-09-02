@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_launch.h,v 1.24 2026/08/09 06:31:06 kikadf Exp $
+$NetBSD: patch-base_process_launch.h,v 1.25 2026/09/02 13:13:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/process/launch.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/process/launch.h
 @@ -7,6 +7,13 @@
  #ifndef BASE_PROCESS_LAUNCH_H_
@@ -20,7 +20,7 @@ $NetBSD: patch-base_process_launch.h,v 1.24 2026/08/09 06:31:06 kikadf Exp $
  #include <limits.h>
  #include <stddef.h>
  
-@@ -234,7 +241,7 @@ struct BASE_EXPORT LaunchOptions {
+@@ -240,7 +247,7 @@ struct BASE_EXPORT LaunchOptions {
    bool clear_environment = false;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
  

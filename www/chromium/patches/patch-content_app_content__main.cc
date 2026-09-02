@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_content__main.cc,v 1.24 2026/08/09 06:31:16 kikadf Exp $
+$NetBSD: patch-content_app_content__main.cc,v 1.25 2026/09/02 13:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- content/app/content_main.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ content/app/content_main.cc
-@@ -229,7 +229,7 @@ NO_STACK_PROTECTOR int RunContentProcess
+@@ -205,7 +205,7 @@ NO_STACK_PROTECTOR int RunContentProcess
      base::EnableTerminationOnOutOfMemory();
      logging::RegisterAbslAbortHook();
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_app_content__main.cc,v 1.24 2026/08/09 06:31:16 kikadf Ex
      // The various desktop environments set this environment variable that
      // allows the dbus client library to connect directly to the bus. When this
      // variable is not set (test environments like xvfb-run), the dbus client
-@@ -322,7 +322,7 @@ NO_STACK_PROTECTOR int RunContentProcess
+@@ -296,7 +296,7 @@ NO_STACK_PROTECTOR int RunContentProcess
  #endif
  #endif
  

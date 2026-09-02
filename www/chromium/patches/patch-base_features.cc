@@ -1,10 +1,10 @@
-$NetBSD: patch-base_features.cc,v 1.3 2026/08/09 06:31:06 kikadf Exp $
+$NetBSD: patch-base_features.cc,v 1.4 2026/09/02 13:13:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/features.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/features.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/features.cc
 @@ -16,7 +16,7 @@
  #include "build/build_config.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-base_features.cc,v 1.3 2026/08/09 06:31:06 kikadf Exp $
  #include "base/message_loop/message_pump_epoll.h"
  #endif
  
-@@ -240,7 +240,7 @@ void Init() {
+@@ -252,7 +252,7 @@ void Init() {
    debug::StackTrace::InitializeFeatures();
    FilePath::InitializeFeatures();
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:07 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
-@@ -173,7 +173,7 @@
+@@ -175,7 +175,7 @@
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  #include "sql/database.h"
  #endif
  
-@@ -199,12 +199,12 @@
+@@ -201,12 +201,12 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  #include "chrome/browser/headless/headless_mode_metrics.h"  // nogncheck
  #include "chrome/browser/headless/headless_mode_util.h"     // nogncheck
  #include "chrome/browser/metrics/desktop_session_duration/desktop_session_duration_tracker.h"
-@@ -215,7 +215,7 @@
+@@ -217,7 +217,7 @@
  #include "ui/gfx/switches.h"
  #endif
  
@@ -39,16 +39,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  #include "chrome/browser/first_run/upgrade_util.h"
  #endif
  
-@@ -292,7 +292,7 @@
- #include "chrome/browser/chrome_process_singleton.h"
- #include "chrome/browser/ui/startup/startup_browser_creator.h"
- 
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- #include "base/nix/xdg_util.h"
- #endif
- #endif  // BUILDFLAG(ENABLE_PROCESS_SINGLETON)
-@@ -325,7 +325,7 @@
+@@ -324,7 +324,7 @@
  #include "chrome/browser/chrome_browser_main_mac.h"
  #elif BUILDFLAG(IS_CHROMEOS)
  #include "chrome/browser/ash/main_parts/chrome_browser_main_parts_ash.h"
@@ -57,7 +48,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  #include "chrome/browser/chrome_browser_main_linux.h"
  #elif BUILDFLAG(IS_ANDROID)
  #include "chrome/browser/chrome_browser_main_android.h"
-@@ -333,7 +333,7 @@
+@@ -332,7 +332,7 @@
  #include "chrome/browser/chrome_browser_main_posix.h"
  #endif
  
@@ -66,7 +57,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  #include "chrome/browser/chrome_browser_main_extra_parts_linux.h"
  #elif BUILDFLAG(IS_OZONE)
  #include "chrome/browser/chrome_browser_main_extra_parts_ozone.h"
-@@ -355,7 +355,7 @@
+@@ -354,7 +354,7 @@
  namespace {
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -75,16 +66,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
  constexpr base::FilePath::CharType kMediaHistoryDatabaseName[] =
      FILE_PATH_LITERAL("Media History");
  
-@@ -505,7 +505,7 @@ void ProcessSingletonNotificationCallbac
-   }
- #endif
- 
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Set the global activation token sent as a command line switch by another
-   // browser process. This also removes the switch after use to prevent any side
-   // effects of leaving it in the command line after this point.
-@@ -571,7 +571,7 @@ bool ProcessSingletonNotificationCallbac
+@@ -598,7 +598,7 @@ bool ProcessSingletonNotificationCallbac
  
    // Drop the request if headless mode is in effect or the request is from
    // a headless Chrome process.
@@ -93,7 +75,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    if (headless::IsHeadlessMode() ||
        command_line.HasSwitch(switches::kHeadless)) {
      return false;
-@@ -737,7 +737,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -764,7 +764,7 @@ std::unique_ptr<content::BrowserMainPart
  #elif BUILDFLAG(IS_CHROMEOS)
    main_parts = std::make_unique<ash::ChromeBrowserMainPartsAsh>(
        is_integration_test, startup_data);
@@ -102,7 +84,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    main_parts = std::make_unique<ChromeBrowserMainPartsLinux>(
        is_integration_test, startup_data);
  #elif BUILDFLAG(IS_ANDROID)
-@@ -767,7 +767,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -794,7 +794,7 @@ std::unique_ptr<content::BrowserMainPart
    // Construct additional browser parts. Stages are called in the order in
    // which they are added.
  #if defined(TOOLKIT_VIEWS)
@@ -111,7 +93,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    main_parts->AddParts(
        std::make_unique<ChromeBrowserMainExtraPartsViewsLinux>());
  #else
-@@ -784,7 +784,7 @@ std::unique_ptr<content::BrowserMainPart
+@@ -811,7 +811,7 @@ std::unique_ptr<content::BrowserMainPart
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsAsh>());
  #endif
  
@@ -120,7 +102,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsLinux>());
  #elif BUILDFLAG(IS_OZONE)
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsOzone>());
-@@ -1284,7 +1284,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1311,7 +1311,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -129,7 +111,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    // Create directory for user-level Native Messaging manifest files. This
    // makes it less likely that the directory will be created by third-party
    // software with incorrect owner or permission. See crbug.com/41321051 .
-@@ -1328,7 +1328,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1355,7 +1355,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -138,7 +120,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchUIControllerStatsTracker::Initialize(
-@@ -1574,7 +1574,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1601,7 +1601,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -147,7 +129,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    // Delete the media history database if it still exists.
    // TODO(crbug.com/40177301): Remove this.
    base::ThreadPool::PostTask(
-@@ -1625,7 +1625,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1660,7 +1660,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif
  
@@ -156,7 +138,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1712,7 +1712,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1748,7 +1748,7 @@ int ChromeBrowserMainParts::PreMainMessa
  #endif
  
    // Should be done before starting metrics recording.
@@ -165,7 +147,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    // On Linux, the EULA dialog requires Views, so it is shown here rather than
    // when applying the first-run prefs.
    if (first_run::IsChromeFirstRun() && master_prefs_->eula_required &&
-@@ -1748,7 +1748,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1784,7 +1784,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -174,3 +156,12 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.24 2026/08/09 06:31:0
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
+@@ -2105,7 +2105,7 @@ int ChromeBrowserMainParts::PreMainMessa
+     browser_process_->StartAutoupdateTimer();
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     // On Linux, the running exe will be updated if an upgrade becomes
+     // available while the browser is running.  We need to save the last
+     // modified time of the exe, so we can compare to determine if there is

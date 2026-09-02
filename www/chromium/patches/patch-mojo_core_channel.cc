@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_channel.cc,v 1.24 2026/08/09 06:31:19 kikadf Exp $
+$NetBSD: patch-mojo_core_channel.cc,v 1.25 2026/09/02 13:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -74,7 +74,11 @@ const size_t kMaxAttachedHandles = 64;
  const size_t kMaxAttachedHandles = 253;

@@ -1,10 +1,10 @@
-$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.24 2026/08/09 06:31:07 kikadf Exp $
+$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.25 2026/09/02 13:13:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/gcc_toolchain.gni.orig	2026-08-05 20:17:42.000000000 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2026-08-31 22:47:51.000000000 +0000
 +++ build/toolchain/gcc_toolchain.gni
 @@ -46,6 +46,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
@@ -20,7 +20,7 @@ $NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.24 2026/08/09 06:31:07 kik
  # This template defines a toolchain for something that works like gcc
  # (including clang).
  #
-@@ -662,6 +669,11 @@ template("single_gcc_toolchain") {
+@@ -666,6 +673,11 @@ template("single_gcc_toolchain") {
        # to link if not properly ordered or grouped.
        link_command += "$start_group_flag @\"$rspfile\" $end_group_flag {{solibs}} {{libs}} $start_group_flag {{rlibs}} $end_group_flag"
  
@@ -32,7 +32,7 @@ $NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.24 2026/08/09 06:31:07 kik
        # Generate a map file to be used for binary size analysis.
        # Map file adds ~10% to the link time on a z620.
        # With target_os="android", libchrome.so.map.gz is ~20MB.
-@@ -1004,22 +1016,12 @@ template("gcc_toolchain") {
+@@ -1008,22 +1020,12 @@ template("gcc_toolchain") {
  # actually just be doing a native compile.
  template("clang_toolchain") {
    gcc_toolchain(target_name) {

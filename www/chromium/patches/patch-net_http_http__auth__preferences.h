@@ -1,10 +1,10 @@
-$NetBSD: patch-net_http_http__auth__preferences.h,v 1.24 2026/08/09 06:31:19 kikadf Exp $
+$NetBSD: patch-net_http_http__auth__preferences.h,v 1.25 2026/09/02 13:13:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_preferences.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- net/http/http_auth_preferences.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ net/http/http_auth_preferences.h
 @@ -49,7 +49,7 @@ class NET_EXPORT HttpAuthPreferences {
  #if BUILDFLAG(IS_ANDROID)
@@ -24,7 +24,7 @@ $NetBSD: patch-net_http_http__auth__preferences.h,v 1.24 2026/08/09 06:31:19 kik
    void set_allow_gssapi_library_load(bool allow_gssapi_library_load) {
      allow_gssapi_library_load_ = allow_gssapi_library_load;
    }
-@@ -136,7 +136,7 @@ class NET_EXPORT HttpAuthPreferences {
+@@ -134,7 +134,7 @@ class NET_EXPORT HttpAuthPreferences {
    std::string auth_android_negotiate_account_type_;
  #endif  // BUILDFLAG(IS_ANDROID)
  

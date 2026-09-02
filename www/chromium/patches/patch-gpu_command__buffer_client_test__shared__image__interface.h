@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.h,v 1.20 2026/08/09 06:31:17 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.h,v 1.21 2026/09/02 13:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.h
 @@ -136,7 +136,7 @@ class TestSharedImageInterface : public 
        bool premapped,

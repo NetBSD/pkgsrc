@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_include_perfetto_ext_base_event__fd.h,v 1.24 2026/08/09 06:31:23 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_include_perfetto_ext_base_event__fd.h,v 1.25 2026/09/02 13:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/perfetto/include/perfetto/ext/base/event_fd.h
 @@ -58,6 +58,8 @@ class EventFd {
    // On Mac and other non-Linux UNIX platforms a pipe-based fallback is used.

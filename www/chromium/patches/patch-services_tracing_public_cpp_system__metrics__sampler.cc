@@ -1,10 +1,10 @@
-$NetBSD: patch-services_tracing_public_cpp_system__metrics__sampler.cc,v 1.23 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_system__metrics__sampler.cc,v 1.24 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- services/tracing/public/cpp/system_metrics_sampler.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ services/tracing/public/cpp/system_metrics_sampler.cc
 @@ -177,8 +177,8 @@ void SystemMetricsSampler::ProcessSample
      TRACE_COUNTER(TRACE_DISABLED_BY_DEFAULT("system_metrics"),

@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_network__service.h,v 1.24 2026/08/09 06:31:21 kikadf Exp $
+$NetBSD: patch-services_network_network__service.h,v 1.25 2026/09/02 13:13:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- services/network/network_service.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ services/network/network_service.h
-@@ -241,7 +241,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -243,7 +243,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    void SetFirstPartySets(net::GlobalFirstPartySets sets) override;
  
    void SetExplicitlyAllowedPorts(const std::vector<uint16_t>& ports) override;
@@ -15,7 +15,7 @@ $NetBSD: patch-services_network_network__service.h,v 1.24 2026/08/09 06:31:21 ki
    void SetGssapiLibraryLoadObserver(
        mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
            gssapi_library_load_observer) override;
-@@ -308,7 +308,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -313,7 +313,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    std::unique_ptr<net::HttpAuthHandlerFactory> CreateHttpAuthHandlerFactory(
        NetworkContext* network_context);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-services_network_network__service.h,v 1.24 2026/08/09 06:31:21 ki
    // This is called just before a GSSAPI library may be loaded.
    void OnBeforeGssapiLibraryLoad();
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -595,7 +595,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -600,7 +600,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
    // leaking stale listeners between tests.
    std::unique_ptr<net::NetworkChangeNotifier> mock_network_change_notifier_;
  

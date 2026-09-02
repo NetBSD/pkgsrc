@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.11 2026/08/09 06:31:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.12 2026/09/02 13:13:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/ui/prefs/pref_watcher.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/ui/prefs/pref_watcher.cc
-@@ -37,7 +37,7 @@
+@@ -38,7 +38,7 @@
  #include "components/browser_ui/accessibility/android/font_size_prefs_android.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.11 2026/08/09 06:31:
  #include "ui/linux/linux_ui.h"
  #include "ui/linux/primary_paste_pref_observer.h"
  #endif
-@@ -92,7 +92,7 @@ const char* const kWebPrefsToObserve[] =
+@@ -93,7 +93,7 @@ const char* const kWebPrefsToObserve[] =
  
  }  // namespace
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.cc,v 1.11 2026/08/09 06:31:
  // A helper class to handle notifying about changes in the
  // Primary Paste/Middle Click Paste preference on Linux.
  class PrimaryPastePrefHelper : public ui::PrimaryPastePrefObserver {
-@@ -123,7 +123,7 @@ class PrimaryPastePrefHelper : public ui
+@@ -124,7 +124,7 @@ class PrimaryPastePrefHelper : public ui
  PrefWatcher::PrefWatcher(Profile* profile) : profile_(profile) {
    native_theme_observation_.Observe(ui::NativeTheme::GetInstanceForWeb());
  

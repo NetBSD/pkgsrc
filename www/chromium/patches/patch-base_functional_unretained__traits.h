@@ -1,10 +1,10 @@
-$NetBSD: patch-base_functional_unretained__traits.h,v 1.24 2026/08/09 06:31:06 kikadf Exp $
+$NetBSD: patch-base_functional_unretained__traits.h,v 1.25 2026/09/02 13:13:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/functional/unretained_traits.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/functional/unretained_traits.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/functional/unretained_traits.h
 @@ -92,7 +92,7 @@ struct SupportsUnretainedImpl {
  // official builds, and then in non-test code as well.

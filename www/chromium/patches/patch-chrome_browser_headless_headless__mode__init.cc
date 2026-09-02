@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_headless_headless__mode__init.cc,v 1.4 2026/08/09 06:31:09 kikadf Exp $
+$NetBSD: patch-chrome_browser_headless_headless__mode__init.cc,v 1.5 2026/09/02 13:13:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_init.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/headless/headless_mode_init.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/headless/headless_mode_init.cc
 @@ -11,7 +11,7 @@
  // New headless mode is available on Linux, Windows and Mac platforms.

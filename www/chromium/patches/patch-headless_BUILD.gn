@@ -1,10 +1,10 @@
-$NetBSD: patch-headless_BUILD.gn,v 1.23 2026/08/09 06:31:18 kikadf Exp $
+$NetBSD: patch-headless_BUILD.gn,v 1.24 2026/09/02 13:13:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/BUILD.gn.orig	2026-08-05 20:17:42.000000000 +0000
+--- headless/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
 +++ headless/BUILD.gn
 @@ -812,7 +812,7 @@ component("headless_shell_lib") {
      "//v8",

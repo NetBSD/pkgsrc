@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_c++_modules.gni,v 1.16 2026/08/09 06:31:07 kikadf Exp $
+$NetBSD: patch-build_config_c++_modules.gni,v 1.17 2026/09/02 13:13:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/c++/modules.gni.orig	2026-08-05 20:17:42.000000000 +0000
+--- build/config/c++/modules.gni.orig	2026-08-31 22:47:51.000000000 +0000
 +++ build/config/c++/modules.gni
 @@ -16,7 +16,7 @@ declare_args() {
    # Eg. linux arm64 and windows were never supported with manual clang modules,

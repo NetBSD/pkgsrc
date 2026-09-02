@@ -1,10 +1,10 @@
-$NetBSD: patch-components_trusted__vault_trusted__vault__connection__impl.cc,v 1.24 2026/08/09 06:31:16 kikadf Exp $
+$NetBSD: patch-components_trusted__vault_trusted__vault__connection__impl.cc,v 1.25 2026/09/02 13:13:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- components/trusted_vault/trusted_vault_connection_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ components/trusted_vault/trusted_vault_connection_impl.cc
 @@ -105,7 +105,7 @@ GetLocalPhysicalDeviceType() {
    // currently used or even built on all platforms.

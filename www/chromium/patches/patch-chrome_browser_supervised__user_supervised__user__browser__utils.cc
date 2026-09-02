@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_browser_utils.cc
 @@ -38,7 +38,7 @@
  #include "chrome/browser/ash/profiles/profile_helper.h"

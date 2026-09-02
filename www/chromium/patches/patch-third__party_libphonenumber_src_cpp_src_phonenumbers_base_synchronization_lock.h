@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_synchronization_lock.h,v 1.4 2026/08/09 06:31:23 kikadf Exp $
+$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_synchronization_lock.h,v 1.5 2026/09/02 13:13:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libphonenumber/src/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2026-08-05 20:17:42.000000000 +0000
+--- third_party/libphonenumber/src/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2026-08-31 22:47:51.000000000 +0000
 +++ third_party/libphonenumber/src/cpp/src/phonenumbers/base/synchronization/lock.h
 @@ -22,7 +22,7 @@
  #elif (__cplusplus >= 201103L) && defined(I18N_PHONENUMBERS_USE_STDMUTEX)

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.24 2026/08/09 06:31:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -141,7 +141,7 @@ namespace {
  tab_groups::TabGroupSyncService* GetTabGroupSyncService(Profile* profile) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.24 2026/08/09 0
    tab_groups::TabGroupSyncService* service =
        tab_groups::TabGroupSyncServiceFactory::GetForProfile(profile);
    CHECK(service);
-@@ -432,7 +432,7 @@ std::unique_ptr<KeyedService> BuildSyncS
+@@ -434,7 +434,7 @@ std::unique_ptr<KeyedService> BuildSyncS
    bool local_sync_backend_enabled = false;
    // Only check the local sync backend pref on the supported platforms of
    // Windows, Mac and Linux.

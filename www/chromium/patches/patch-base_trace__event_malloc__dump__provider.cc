@@ -1,10 +1,10 @@
-$NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.24 2026/08/09 06:31:07 kikadf Exp $
+$NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.25 2026/09/02 13:13:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2026-08-05 20:17:42.000000000 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2026-08-31 22:47:51.000000000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -29,6 +29,8 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.24 2026/08/09 06:
  #else
  #include <malloc.h>
  #endif
-@@ -222,7 +224,7 @@ void ReportAppleAllocStats(size_t* total
+@@ -227,7 +229,7 @@ void ReportAppleAllocStats(size_t* total
  
  #if (PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && BUILDFLAG(IS_ANDROID)) || \
      (!PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && !BUILDFLAG(IS_WIN) &&    \
@@ -24,7 +24,7 @@ $NetBSD: patch-base_trace__event_malloc__dump__provider.cc,v 1.24 2026/08/09 06:
  void ReportMallinfoStats(ProcessMemoryDump* pmd,
                           size_t* total_virtual_size,
                           size_t* resident_size,
-@@ -436,6 +438,9 @@ bool MallocDumpProvider::OnMemoryDump(co
+@@ -441,6 +443,9 @@ bool MallocDumpProvider::OnMemoryDump(co
                       &allocated_objects_count);
  #elif BUILDFLAG(IS_FUCHSIA)
  // TODO(fuchsia): Port, see https://crbug.com/706592.
