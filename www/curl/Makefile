@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2026/06/25 08:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.309 2026/09/02 19:19:31 wiz Exp $
 
 .include "Makefile.common"
 
@@ -14,10 +14,8 @@ SUPERSEDES+=		wcurl-[0-9]*
 
 .include "options.mk"
 
-# as of 8.17.0
-#TESTDONE: 1890 tests were considered during 498 seconds.
-#TESTDONE: 1622 tests out of 1623 reported OK: 99%
-#
-#FAIL 1510: 'HTTP GET connection cache limit (CURLOPT_MAXCONNECTS)' HTTP, verbose logs, flaky
+# 8.22.0
+# TESTDONE: 2072 tests were considered during 655 seconds.
+# TESTDONE: 1623 tests out of 1623 reported OK: 100%
 
 .include "../../mk/bsd.pkg.mk"
