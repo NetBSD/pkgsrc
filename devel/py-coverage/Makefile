@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2026/08/07 08:20:41 adam Exp $
+# $NetBSD: Makefile,v 1.95 2026/09/02 07:30:00 adam Exp $
 
-DISTNAME=	coverage-7.15.4
+DISTNAME=	coverage-7.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
 
 post-install:
