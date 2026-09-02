@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/08/11 15:54:57 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/02 17:01:01 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	6.1.3
+RM_VERSION=	6.1.4
 
 NO_BUILD=	yes
 
@@ -34,7 +33,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-actionpack-xml_parser>=2.0:../../textproc/ruby-actio
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails33_${RUBY_RAILS}>=3.3.0<3.4:../../mail/ruby-roadie-rails33
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.8.1<2.9:../../mail/ruby-mail
-DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.18.3<1.20:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.19.1<1.20:../../textproc/ruby-nokogiri
 #DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.14.1:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.21.4<1.22:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
@@ -51,7 +50,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-requestjs-rails>=0.0.13<0.1:../../www/ruby-requestjs
 #
 DEPENDS+=	${RUBY_PKGPREFIX}-rotp>=6.2.0:../../security/ruby-rotp
 DEPENDS+=	${RUBY_PKGPREFIX}-rqrcode>=1.2.0:../../textproc/ruby-rqrcode
-DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pipeline
+DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2:../../textproc/ruby-html-pipeline
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0:../../net/ruby-net-ldap
 DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=5.2.0:../../graphics/ruby-mini-magick
