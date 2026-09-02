@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.62 2026/08/23 08:07:52 wiz Exp $
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
+@comment $NetBSD: PLIST,v 1.63 2026/09/02 07:49:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -56,6 +56,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v4.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsenseplatform.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsenseplatform.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/advisorynotifications.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/agenciesandbrands.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/agentidentity.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/agentidentity.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/agentidentity.v1beta.json
@@ -220,6 +221,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/contentwarehouse.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/css.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/curationpartners.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/databasecenter.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
