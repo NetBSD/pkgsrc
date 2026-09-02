@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5756 2026/09/02 11:52:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5757 2026/09/02 13:25:27 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8487,3 +8487,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-requests-futures to 1.1.0 [adam 2026-09-02]
 	Updated devel/py-virtualenv to 21.7.8 [adam 2026-09-02]
 	Updated devel/py-tox to 4.61.2 [adam 2026-09-02]
+	Updated www/chromium to 152.0.7977.75 [kikadf 2026-09-02]
