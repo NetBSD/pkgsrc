@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.90 2026/08/12 15:09:34 taca Exp $
+# $NetBSD: Makefile,v 1.91 2026/09/02 23:44:05 gdt Exp $
 #
 
 # The nextcloud update process only works from one version to the
-# next; one cannot update e.g from 16 to 18.  It is a requirement for
+# next; one cannot update e.g from 32 to 34.  It is a requirement for
 # stable branch users, if they update every stable branch, to have
 # automatic updates work.  Therefore a major update can only be
 # committed to pkgsrc-current if it is one higher than the major
-# version in the previous stable branch.  As an example, if 2020Q1
-# contained 18.0.2, then during April to June it is ok to update to
-# later 18.x.y, to 19.0.0, and to later 19.x.y, but it is not ok to
-# update to 20.
-DISTNAME=	nextcloud-33.0.6
+# version in the previous stable branch.  As an example: if 2026Q2
+# contained 32.0.11, then during July to September it is ok to update to
+# later 32.x.y, to 33.0.0, and to later 33.x.y, but it is not ok to
+# update to 34.
+DISTNAME=	nextcloud-33.0.8
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
