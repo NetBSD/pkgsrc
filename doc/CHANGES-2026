@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5814 2026/09/03 19:05:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5815 2026/09/03 19:08:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8591,3 +8591,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns-recursor to 5.4.6 [drixter 2026-09-03]
 	Updated net/openvpn to 2.7.7 [adam 2026-09-03]
 	Updated devel/jj to 0.45.1 [adam 2026-09-03]
+	Updated geography/qgis to 3.44.14 [gdt 2026-09-03]
