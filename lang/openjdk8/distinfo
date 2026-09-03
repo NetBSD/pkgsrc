@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2026/08/14 12:48:02 ryoon Exp $
+$NetBSD: distinfo,v 1.114 2026/09/03 17:12:42 jperkin Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -41,12 +41,13 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 5409f0944d6f850baeaaa7c64d2e8ad52233e1e9
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = a29767c79544dea243019cc841d834f756172462
-SHA1 (patch-common_autoconf_generated-configure.sh) = e5de25deb787890a00abfa4a36a38042b4499f4d
+SHA1 (patch-common_autoconf_flags.m4) = a0eced3b0c7c7a2b64329724ccda8407723ae577
+SHA1 (patch-common_autoconf_generated-configure.sh) = 3e972f97ec498d70f7290e12486dd72d6a5ddb9f
 SHA1 (patch-common_autoconf_spec.gmk.in) = 5fbf47f2241b5c898a75fb1741873043f1c983f0
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 2c0d286c87f8239e8d5aa7fcc21e09b4b1c5a46e
-SHA1 (patch-hotspot_make_bsd_makefiles_saproc.make) = 599c8393d4c1edb4f3b83927688205cbbe27c210
+SHA1 (patch-hotspot_make_bsd_makefiles_saproc.make) = 5ff2f25fb7c6af539b12dcf59d641efe1f1ba138
 SHA1 (patch-hotspot_make_solaris_makefiles_build__vm__def.sh) = 54d197a94d27406f2957b5c2a7a7982866f99239
 SHA1 (patch-hotspot_make_solaris_makefiles_debug.make) = 7195c97c4f559b2e9410028315de351c5047d59d
 SHA1 (patch-hotspot_make_solaris_makefiles_dtrace.make) = 84e3d6b6603887aaac13747b5c972dd3eec4c7f1
