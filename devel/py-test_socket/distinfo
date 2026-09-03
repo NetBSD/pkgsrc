@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/05/28 11:31:22 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/09/03 09:00:25 adam Exp $
 
-BLAKE2s (pytest_socket-0.8.0.tar.gz) = 2a5f305e281e7c43e8bbd93495ef3d33b69b9f1f0c2ad1121174db96528693c7
-SHA512 (pytest_socket-0.8.0.tar.gz) = 2ae68d3302e90893094a94a842e0c98b71bc9beef9a54465b3177151353048fe582559123679efc45b688b329a175591d217654e8e3fa0ca237b461206263365
-Size (pytest_socket-0.8.0.tar.gz) = 13912 bytes
+BLAKE2s (pytest_socket-0.8.1.tar.gz) = 42a8f0ac0a736329c81454aebf5dbc15272398a5e3ec96bf396552755cd0b905
+SHA512 (pytest_socket-0.8.1.tar.gz) = 417ee6d7c6dc2b8ddaccc4213aad39d0ea0fcfdcabe552602c6602410113e9f1da708997145f10ee05a7dccf787d0b93b2b867de34555a044d3daf05bc2fda95
+Size (pytest_socket-0.8.1.tar.gz) = 17313 bytes

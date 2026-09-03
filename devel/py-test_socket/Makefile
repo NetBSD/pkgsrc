@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/06/01 10:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/03 09:00:25 adam Exp $
 
-DISTNAME=	pytest_socket-0.8.0
+DISTNAME=	pytest_socket-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest_socket/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/miketheman/pytest-socket
 COMMENT=	Pytest Plugin to disable socket calls during tests
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0:../../devel/py-uv-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.7.20:../../devel/py-uv-build
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.15.0:../../devel/py-test-randomly
 
