@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/08/06 19:18:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/09/03 04:54:44 adam Exp $
 include/SDL3/SDL.h
 include/SDL3/SDL_assert.h
 include/SDL3/SDL_asyncio.h
@@ -96,7 +96,7 @@ lib/cmake/SDL3/SDL3testTargets-relwithdebinfo.cmake
 lib/cmake/SDL3/SDL3testTargets.cmake
 lib/libSDL3.so
 lib/libSDL3.so.0
-lib/libSDL3.so.0.4.14
+lib/libSDL3.so.0.4.16
 lib/libSDL3_test.a
 lib/pkgconfig/sdl3.pc
 share/licenses/SDL3/LICENSE.txt
