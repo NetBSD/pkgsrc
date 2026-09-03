@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5788 2026/09/03 04:55:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5789 2026/09/03 05:08:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8534,3 +8534,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/oxipng to 10.2.1 [adam 2026-09-03]
 	Updated devel/SDL3 to 3.4.16 [adam 2026-09-03]
 	Updated multimedia/libde265 to 1.1.2 [adam 2026-09-03]
+	Updated databases/postgresql-timescaledb to 2.29.2 [adam 2026-09-03]
+	Updated devel/catch2 to 3.16.0 [adam 2026-09-03]
