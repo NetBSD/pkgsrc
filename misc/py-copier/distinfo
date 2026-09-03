@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/03 05:13:15 adam Exp $
+
+BLAKE2s (copier-9.18.1.tar.gz) = f3c3dd4b5e49f3f2942881dff67427b95c57bb3db2fe989ec5c7d7adf8dce395
+SHA512 (copier-9.18.1.tar.gz) = df4117bfb1c457342d68a56f38f6f9b6b0540ad138edf138e25cd8b5cea06b67279a50afc0894cf78a52d0def2e10fecefb7af4dfb35ee3af8bdf2d6db6b0503
+Size (copier-9.18.1.tar.gz) = 666917 bytes
