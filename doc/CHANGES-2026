@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5797 2026/09/03 08:35:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5798 2026/09/03 08:52:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8557,3 +8557,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added archivers/py-backports.zstd version 1.7.0 [adam 2026-09-03]
 	Updated devel/py-xopen to 2.1.0 [adam 2026-09-03]
 	Updated www/py-scrapy to 2.18.0 [adam 2026-09-03]
+	Updated devel/py-test-rerunfailures to 16.6 [adam 2026-09-03]
+	Updated devel/py-tracerite to 2.6.5 [adam 2026-09-03]
