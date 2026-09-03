@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/07/01 07:36:04 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/03 11:47:41 adam Exp $
 
-DISTNAME=	inline_snapshot-0.34.2
+DISTNAME=	inline_snapshot-0.35.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inline_snapshot/}
@@ -10,17 +10,17 @@ HOMEPAGE=	https://15r10nk.github.io/inline-snapshot/latest/
 COMMENT=	Golden master/snapshot/approval testing library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.0.5:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-executing>=2.2.0:../../lang/py-executing
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.7.1:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-test>=8.3.4:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=24.3.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-black>=23.3.0:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.75.5:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-isort-[0-9]*:../../devel/py-isort
+TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=0:../../devel/py-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pydantic>=1:../../devel/py-pydantic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezer>=0.4.8:../../devel/py-test-freezer

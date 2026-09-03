@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/07/01 07:36:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/03 11:47:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -91,6 +91,9 @@ ${PYSITELIB}/inline_snapshot/_external/_format/_json.pyo
 ${PYSITELIB}/inline_snapshot/_external/_format/_protocol.py
 ${PYSITELIB}/inline_snapshot/_external/_format/_protocol.pyc
 ${PYSITELIB}/inline_snapshot/_external/_format/_protocol.pyo
+${PYSITELIB}/inline_snapshot/_external/_format/_rich_svg.py
+${PYSITELIB}/inline_snapshot/_external/_format/_rich_svg.pyc
+${PYSITELIB}/inline_snapshot/_external/_format/_rich_svg.pyo
 ${PYSITELIB}/inline_snapshot/_external/_format/_text.py
 ${PYSITELIB}/inline_snapshot/_external/_format/_text.pyc
 ${PYSITELIB}/inline_snapshot/_external/_format/_text.pyo
@@ -109,6 +112,9 @@ ${PYSITELIB}/inline_snapshot/_external/_storage/_protocol.pyo
 ${PYSITELIB}/inline_snapshot/_external/_storage/_uuid.py
 ${PYSITELIB}/inline_snapshot/_external/_storage/_uuid.pyc
 ${PYSITELIB}/inline_snapshot/_external/_storage/_uuid.pyo
+${PYSITELIB}/inline_snapshot/_external/_tracked_files.py
+${PYSITELIB}/inline_snapshot/_external/_tracked_files.pyc
+${PYSITELIB}/inline_snapshot/_external/_tracked_files.pyo
 ${PYSITELIB}/inline_snapshot/_fix_assert.py
 ${PYSITELIB}/inline_snapshot/_fix_assert.pyc
 ${PYSITELIB}/inline_snapshot/_fix_assert.pyo
@@ -218,6 +224,9 @@ ${PYSITELIB}/inline_snapshot/testing/__init__.pyo
 ${PYSITELIB}/inline_snapshot/testing/_example.py
 ${PYSITELIB}/inline_snapshot/testing/_example.pyc
 ${PYSITELIB}/inline_snapshot/testing/_example.pyo
+${PYSITELIB}/inline_snapshot/testing/_terminal_svg.py
+${PYSITELIB}/inline_snapshot/testing/_terminal_svg.pyc
+${PYSITELIB}/inline_snapshot/testing/_terminal_svg.pyo
 ${PYSITELIB}/inline_snapshot/version.py
 ${PYSITELIB}/inline_snapshot/version.pyc
 ${PYSITELIB}/inline_snapshot/version.pyo
