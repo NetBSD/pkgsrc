@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2026/08/06 14:41:50 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2026/09/03 18:08:02 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.13
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
@@ -10,11 +10,11 @@ CARGO_CRATE_DEPENDS+=	clap-4.5.53
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.53
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.6
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.13.1
-CARGO_CRATE_DEPENDS+=	cxx-1.0.191
-CARGO_CRATE_DEPENDS+=	cxx-build-1.0.191
-CARGO_CRATE_DEPENDS+=	cxxbridge-cmd-1.0.191
-CARGO_CRATE_DEPENDS+=	cxxbridge-flags-1.0.191
-CARGO_CRATE_DEPENDS+=	cxxbridge-macro-1.0.191
+CARGO_CRATE_DEPENDS+=	cxx-1.0.196
+CARGO_CRATE_DEPENDS+=	cxx-build-1.0.196
+CARGO_CRATE_DEPENDS+=	cxxbridge-cmd-1.0.196
+CARGO_CRATE_DEPENDS+=	cxxbridge-flags-1.0.196
+CARGO_CRATE_DEPENDS+=	cxxbridge-macro-1.0.196
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
 CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.5
 CARGO_CRATE_DEPENDS+=	foldhash-0.2.0
