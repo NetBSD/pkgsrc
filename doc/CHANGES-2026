@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5799 2026/09/03 09:01:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5800 2026/09/03 09:15:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8562,3 +8562,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/rocksndiamonds to 4.4.2.4 [adam 2026-09-03]
 	Updated devel/py-test-randomly to 5.0.0 [adam 2026-09-03]
 	Updated devel/py-test_socket to 0.8.1 [adam 2026-09-03]
+	Updated textproc/translate-toolkit to 3.19.19 [adam 2026-09-03]
+	Updated devel/py-pipx to 1.17.2 [adam 2026-09-03]
