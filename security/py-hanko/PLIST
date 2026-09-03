@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/02/17 09:30:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/03 10:03:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -186,6 +186,9 @@ ${PYSITELIB}/pyhanko/pdf_utils/xref.pyo
 ${PYSITELIB}/pyhanko/sign/__init__.py
 ${PYSITELIB}/pyhanko/sign/__init__.pyc
 ${PYSITELIB}/pyhanko/sign/__init__.pyo
+${PYSITELIB}/pyhanko/sign/_session_scope.py
+${PYSITELIB}/pyhanko/sign/_session_scope.pyc
+${PYSITELIB}/pyhanko/sign/_session_scope.pyo
 ${PYSITELIB}/pyhanko/sign/ades/__init__.py
 ${PYSITELIB}/pyhanko/sign/ades/__init__.pyc
 ${PYSITELIB}/pyhanko/sign/ades/__init__.pyo
@@ -307,9 +310,6 @@ ${PYSITELIB}/pyhanko/sign/validation/errors.pyo
 ${PYSITELIB}/pyhanko/sign/validation/generic_cms.py
 ${PYSITELIB}/pyhanko/sign/validation/generic_cms.pyc
 ${PYSITELIB}/pyhanko/sign/validation/generic_cms.pyo
-${PYSITELIB}/pyhanko/sign/validation/ltv.py
-${PYSITELIB}/pyhanko/sign/validation/ltv.pyc
-${PYSITELIB}/pyhanko/sign/validation/ltv.pyo
 ${PYSITELIB}/pyhanko/sign/validation/pdf_embedded.py
 ${PYSITELIB}/pyhanko/sign/validation/pdf_embedded.pyc
 ${PYSITELIB}/pyhanko/sign/validation/pdf_embedded.pyo
@@ -328,7 +328,8 @@ ${PYSITELIB}/pyhanko/sign/validation/qualified/eutl_fetch.pyo
 ${PYSITELIB}/pyhanko/sign/validation/qualified/eutl_parse.py
 ${PYSITELIB}/pyhanko/sign/validation/qualified/eutl_parse.pyc
 ${PYSITELIB}/pyhanko/sign/validation/qualified/eutl_parse.pyo
-${PYSITELIB}/pyhanko/sign/validation/qualified/lotl-certs/bootstrap.cert.pem
+${PYSITELIB}/pyhanko/sign/validation/qualified/lotl-certs/bootstrap-0.cert.pem
+${PYSITELIB}/pyhanko/sign/validation/qualified/lotl-certs/bootstrap-1.cert.pem
 ${PYSITELIB}/pyhanko/sign/validation/qualified/lotl-certs/latest.cert.pem
 ${PYSITELIB}/pyhanko/sign/validation/qualified/q_status.py
 ${PYSITELIB}/pyhanko/sign/validation/qualified/q_status.pyc
