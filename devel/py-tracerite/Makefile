@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/07/21 09:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/03 08:51:12 adam Exp $
 
-DISTNAME=	tracerite-2.6.3
+DISTNAME=	tracerite-2.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tracerite/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/sanic-org/tracerite
 COMMENT=	Human-readable HTML tracebacks for Python exceptions
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-html5tagger>=2.0.0:../../textproc/py-html5tagger
 
 USE_LANGUAGES=	# none
