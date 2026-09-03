@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/03/13 15:14:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/03 09:20:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,9 +6,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/js_asset/__init__.py
 ${PYSITELIB}/js_asset/__init__.pyc
 ${PYSITELIB}/js_asset/__init__.pyo
-${PYSITELIB}/js_asset/context_processors.py
-${PYSITELIB}/js_asset/context_processors.pyc
-${PYSITELIB}/js_asset/context_processors.pyo
+${PYSITELIB}/js_asset/_compat.py
+${PYSITELIB}/js_asset/_compat.pyc
+${PYSITELIB}/js_asset/_compat.pyo
 ${PYSITELIB}/js_asset/js.py
 ${PYSITELIB}/js_asset/js.pyc
 ${PYSITELIB}/js_asset/js.pyo
+${PYSITELIB}/js_asset/media.py
+${PYSITELIB}/js_asset/media.pyc
+${PYSITELIB}/js_asset/media.pyo

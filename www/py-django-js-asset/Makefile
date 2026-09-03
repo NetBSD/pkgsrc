@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 08:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/03 09:20:44 adam Exp $
 
-DISTNAME=	django_js_asset-3.1.2
+DISTNAME=	django_js_asset-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-js-asset/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/matthiask/django-js-asset
 COMMENT=	Script tag with additional attributes for django.forms.Media
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
