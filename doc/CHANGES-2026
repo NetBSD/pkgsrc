@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5807 2026/09/03 11:18:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5808 2026/09/03 11:29:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8579,3 +8579,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pyrate-limiter to 4.5.0 [adam 2026-09-03]
 	Updated time/py-dateparser to 1.4.3 [adam 2026-09-03]
 	Updated devel/py-faker to 40.38.0 [adam 2026-09-03]
+	Updated devel/py-crc to 8.0.0 [adam 2026-09-03]
+	Updated devel/py-test-rerunfailures to 16.6.1 [adam 2026-09-03]
