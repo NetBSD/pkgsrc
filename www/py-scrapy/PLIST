@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/05/20 12:47:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/09/03 08:35:37 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -73,9 +73,24 @@ ${PYSITELIB}/scrapy/contracts/default.pyo
 ${PYSITELIB}/scrapy/core/__init__.py
 ${PYSITELIB}/scrapy/core/__init__.pyc
 ${PYSITELIB}/scrapy/core/__init__.pyo
+${PYSITELIB}/scrapy/core/_http2/__init__.py
+${PYSITELIB}/scrapy/core/_http2/__init__.pyc
+${PYSITELIB}/scrapy/core/_http2/__init__.pyo
+${PYSITELIB}/scrapy/core/_http2/agent.py
+${PYSITELIB}/scrapy/core/_http2/agent.pyc
+${PYSITELIB}/scrapy/core/_http2/agent.pyo
+${PYSITELIB}/scrapy/core/_http2/protocol.py
+${PYSITELIB}/scrapy/core/_http2/protocol.pyc
+${PYSITELIB}/scrapy/core/_http2/protocol.pyo
+${PYSITELIB}/scrapy/core/_http2/stream.py
+${PYSITELIB}/scrapy/core/_http2/stream.pyc
+${PYSITELIB}/scrapy/core/_http2/stream.pyo
 ${PYSITELIB}/scrapy/core/downloader/__init__.py
 ${PYSITELIB}/scrapy/core/downloader/__init__.pyc
 ${PYSITELIB}/scrapy/core/downloader/__init__.pyo
+${PYSITELIB}/scrapy/core/downloader/_idna_patch.py
+${PYSITELIB}/scrapy/core/downloader/_idna_patch.pyc
+${PYSITELIB}/scrapy/core/downloader/_idna_patch.pyo
 ${PYSITELIB}/scrapy/core/downloader/contextfactory.py
 ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyc
 ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyo
@@ -124,18 +139,6 @@ ${PYSITELIB}/scrapy/core/downloader/tls.pyo
 ${PYSITELIB}/scrapy/core/engine.py
 ${PYSITELIB}/scrapy/core/engine.pyc
 ${PYSITELIB}/scrapy/core/engine.pyo
-${PYSITELIB}/scrapy/core/http2/__init__.py
-${PYSITELIB}/scrapy/core/http2/__init__.pyc
-${PYSITELIB}/scrapy/core/http2/__init__.pyo
-${PYSITELIB}/scrapy/core/http2/agent.py
-${PYSITELIB}/scrapy/core/http2/agent.pyc
-${PYSITELIB}/scrapy/core/http2/agent.pyo
-${PYSITELIB}/scrapy/core/http2/protocol.py
-${PYSITELIB}/scrapy/core/http2/protocol.pyc
-${PYSITELIB}/scrapy/core/http2/protocol.pyo
-${PYSITELIB}/scrapy/core/http2/stream.py
-${PYSITELIB}/scrapy/core/http2/stream.pyc
-${PYSITELIB}/scrapy/core/http2/stream.pyo
 ${PYSITELIB}/scrapy/core/scheduler.py
 ${PYSITELIB}/scrapy/core/scheduler.pyc
 ${PYSITELIB}/scrapy/core/scheduler.pyo
@@ -375,6 +378,9 @@ ${PYSITELIB}/scrapy/spidermiddlewares/depth.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.py
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/httperror.pyo
+${PYSITELIB}/scrapy/spidermiddlewares/metacopy.py
+${PYSITELIB}/scrapy/spidermiddlewares/metacopy.pyc
+${PYSITELIB}/scrapy/spidermiddlewares/metacopy.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.py
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyo
