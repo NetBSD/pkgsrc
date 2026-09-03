@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/09/02 19:02:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/03 15:27:34 ryoon Exp $
 #
 
 DISTNAME=	xkanon-gtk2-090830
@@ -6,7 +6,7 @@ PKGNAME=	xkanon-090830
 PKGREVISION=	18
 CATEGORIES=	games
 #MASTER_SITES=	http://www.creator.club.ne.jp/~jagarl/
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	https://www.ryoon.net/~ryoon/sfnet-distrib/
 DISTFILES=	${DEFAULT_DISTFILES} xkanon-071209.tar.gz
 
 MAINTAINER=	tsutsui@NetBSD.org
