@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/09/02 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/09/03 06:51:34 adam Exp $
 
-DISTNAME=	weasyprint-68.1
+DISTNAME=	weasyprint-69.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weasyprint/}
 
@@ -21,17 +20,13 @@ DEPENDS+=	${PYPKGPREFIX}-pydyf>=0.11.0:../../print/py-pydyf
 DEPENDS+=	${PYPKGPREFIX}-pyphen>=0.9.1:../../textproc/py-pyphen
 DEPENDS+=	${PYPKGPREFIX}-tinycss2>=1.5.0:../../textproc/py-tinycss2
 DEPENDS+=	${PYPKGPREFIX}-tinyhtml5>=2.0.0:../../textproc/py-tinyhtml5
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0:../../devel/py-test-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort>=0:../../devel/py-test-isort
 
-USE_LANGUAGES=	c
+PY_RENAME_BINARIES=	weasyprint
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} weasyprint weasyprint-${PYVERSSUFFIX} || ${TRUE}
 
 BUILDLINK_API_DEPENDS.pango+=   pango>=1.44.0
 .include "../../devel/pango/buildlink3.mk"
