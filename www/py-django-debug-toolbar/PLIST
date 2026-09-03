@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/08/20 11:02:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/09/03 09:24:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -187,6 +187,30 @@ ${PYSITELIB}/debug_toolbar/settings.pyc
 ${PYSITELIB}/debug_toolbar/settings.pyo
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/css/print.css
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/css/toolbar.css
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/fonts/Alef-Bold.ttf
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/fonts/Alef-Bold.woff2
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/fonts/Geist.woff2
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/fonts/OFL-Alef.txt
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/fonts/OFL-Geist.txt
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/Coloured-Dark.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/Coloured-Light.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/Green.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/alerts.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/cache.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/community.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/headers.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/history.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/profiling.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/redirects.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/request.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/settings.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/signals.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/sql.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/staticfiles.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/tasks.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/templates.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/timer.svg
+${PYSITELIB}/debug_toolbar/static/debug_toolbar/img/versions.svg
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/history.js
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/redirect.js
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/timer.js
@@ -204,6 +228,7 @@ ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/cache.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/community.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/headers.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history.html
+${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history_title_bar.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history_tr.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/profiling.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/request.html
@@ -224,6 +249,9 @@ ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/redirect.html
 ${PYSITELIB}/debug_toolbar/templatetags/__init__.py
 ${PYSITELIB}/debug_toolbar/templatetags/__init__.pyc
 ${PYSITELIB}/debug_toolbar/templatetags/__init__.pyo
+${PYSITELIB}/debug_toolbar/templatetags/debug_toolbar.py
+${PYSITELIB}/debug_toolbar/templatetags/debug_toolbar.pyc
+${PYSITELIB}/debug_toolbar/templatetags/debug_toolbar.pyo
 ${PYSITELIB}/debug_toolbar/toolbar.py
 ${PYSITELIB}/debug_toolbar/toolbar.pyc
 ${PYSITELIB}/debug_toolbar/toolbar.pyo
