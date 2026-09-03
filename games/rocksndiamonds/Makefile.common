@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2023/10/20 09:53:02 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2026/09/03 08:55:34 adam Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
@@ -40,8 +40,8 @@ SPECIAL_PERMS=		bin/${PKGBASE} ${SETGID_GAMES_PERMS}
 
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 
-.if (${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
-      ${MACHINE} == "shark")
+.if ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
+      ${MACHINE} == "shark"
 MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 .endif
 
