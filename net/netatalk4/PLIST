@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/01/08 17:27:55 hauke Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/03 15:06:07 hauke Exp $
 bin/addump
 ${PLIST.appletalk}bin/aecho
 ${PLIST.ldap}bin/afpldaptest
@@ -8,7 +8,6 @@ bin/asip-status
 bin/dbd
 bin/fce_listen
 ${PLIST.appletalk}bin/getzones
-bin/macusers
 bin/nad
 ${PLIST.appletalk}bin/nbplkup
 ${PLIST.appletalk}bin/nbprgstr
@@ -24,6 +23,7 @@ include/atalk/afp_util.h
 include/atalk/asp.h
 include/atalk/atp.h
 include/atalk/cnid.h
+include/atalk/constant_time.h
 include/atalk/ddp.h
 include/atalk/ea.h
 include/atalk/globals.h
@@ -52,8 +52,8 @@ ${PLIST.appletalk}include/netatalk/ddp_var.h
 ${PLIST.appletalk}include/netatalk/endian.h
 ${PLIST.appletalk}include/netatalk/phase2.h
 lib/libatalk.so
-lib/libatalk.so.19
-lib/libatalk.so.19.0.0
+lib/libatalk.so.20
+lib/libatalk.so.20.0.0
 lib/netatalk/uams_clrtxt.so
 lib/netatalk/uams_dhx.so
 lib/netatalk/uams_dhx2.so
@@ -66,6 +66,7 @@ lib/netatalk/uams_guest.so
 ${PLIST.pam}lib/netatalk/uams_pam.so
 lib/netatalk/uams_passwd.so
 lib/netatalk/uams_randnum.so
+lib/netatalk/uams_srp.so
 man/man1/addump.1
 ${PLIST.appletalk}man/man1/aecho.1
 man/man1/afpldaptest.1
@@ -75,7 +76,6 @@ man/man1/asip-status.1
 man/man1/dbd.1
 man/man1/fce_listen.1
 ${PLIST.appletalk}man/man1/getzones.1
-man/man1/macusers.1
 man/man1/nad.1
 ${PLIST.appletalk}man/man1/nbp.1
 ${PLIST.appletalk}man/man1/nbplkup.1
@@ -83,9 +83,6 @@ ${PLIST.appletalk}man/man1/nbprgstr.1
 ${PLIST.appletalk}man/man1/nbpunrgstr.1
 ${PLIST.appletalk}man/man1/pap.1
 ${PLIST.appletalk}man/man1/rtmpqry.1
-man/man3/atalk_aton.3
-man/man3/nbp_name.3
-man/man4/atalk.4
 man/man5/afp.conf.5
 man/man5/afp_signature.conf.5
 man/man5/afp_voluuid.conf.5
@@ -113,7 +110,7 @@ sbin/netatalk
 ${PLIST.appletalk}sbin/papd
 ${PLIST.appletalk}sbin/timelord
 share/doc/netatalk/CODE_OF_CONDUCT.txt
-share/doc/netatalk/COMPILATION.txt
+share/doc/netatalk/CONTAINERS.txt
 share/doc/netatalk/CONTRIBUTING.txt
 share/doc/netatalk/CONTRIBUTORS.txt
 share/doc/netatalk/INSTALL.txt

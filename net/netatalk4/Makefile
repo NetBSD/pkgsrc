@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2026/09/02 19:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/03 15:06:07 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
 DISTNAME=	netatalk-${PKGVER:C/\./-/g}
 
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	2
-PKGVER=		4.4.2
+PKGVER=		4.5.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -65,7 +64,6 @@ LDFLAGS.FreeBSD+=	-lpthread
 # into scripts, so replace manually
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure
-SUBST_FILES.perlpath+=	contrib/bin_utils/macusers.pl
 SUBST_FILES.perlpath+=	contrib/bin_utils/afpstats.pl
 SUBST_FILES.perlpath+=	contrib/bin_utils/addump.pl
 SUBST_FILES.perlpath+=	contrib/bin_utils/asip-status.pl
