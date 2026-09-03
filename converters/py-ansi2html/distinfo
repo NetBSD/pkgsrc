@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/07/28 17:26:31 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2026/09/03 06:03:07 adam Exp $
 
-BLAKE2s (ansi2html-1.9.2.tar.gz) = 3b0f3db58cd04fa2b61472ffbe28471880848e6c10d399bc3e3bca81f4b0b682
-SHA512 (ansi2html-1.9.2.tar.gz) = c465259d4c9ea82725bcd8cd286246b806b1bfde06f89b52b1cc3cd5c514be92a19ffcfd147417d64ce6da6627678baabc7ff05226ed392343cdb0496bd375eb
-Size (ansi2html-1.9.2.tar.gz) = 44300 bytes
+BLAKE2s (ansi2html-1.9.4.tar.gz) = 9b7e6782a65a501ee216b857f29d4db78ed5728711853db327d32d8ccd47e983
+SHA512 (ansi2html-1.9.4.tar.gz) = 11c33415061b526fbf75c436090b58b785123d155e6e7ab630178dfd7ede1c4bf00256a3410c0f72b273fd678f2a0cfcdd5c159781e3ad32cf3e3107d6be9921
+Size (ansi2html-1.9.4.tar.gz) = 44890 bytes
