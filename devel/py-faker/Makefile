@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2026/08/05 02:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.121 2026/09/03 11:18:40 adam Exp $
 
-DISTNAME=	faker-40.36.0
+DISTNAME=	faker-40.38.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # tzdata
-DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
+DEPENDS+=	${PYPKGPREFIX}-tzdata>=0:../../time/py-tzdata
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
 TEST_DEPENDS+=	${PYPKGPREFIX}-validators>=0.13.0:../../textproc/py-validators
 
