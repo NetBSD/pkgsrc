@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1599 2026/08/14 19:46:31 kim Exp $
+# $NetBSD: Makefile,v 1.1600 2026/09/03 05:10:31 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1124,6 +1124,7 @@ SUBDIR+=	py-jade
 SUBDIR+=	py-jaraco.text
 SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
+SUBDIR+=	py-jinja2-ansible-filters
 SUBDIR+=	py-jmespath
 SUBDIR+=	py-jsbeautifier
 SUBDIR+=	py-jschon

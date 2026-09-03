@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/03 05:10:31 adam Exp $
+
+BLAKE2s (jinja2-ansible-filters-1.3.2.tar.gz) = 0cc004f9bf494e4241837b18ce034f9caef9975c54425e6d560cacfc5471c3f3
+SHA512 (jinja2-ansible-filters-1.3.2.tar.gz) = e5dcbd4d563ef49ac08ba9a4988cc46be1490fb87ebc8362d220da93bcc36b762368ed7bcedac6116e5daec3d905eebb0d3356a6de832be65a6ac602971c3757
+Size (jinja2-ansible-filters-1.3.2.tar.gz) = 16945 bytes
