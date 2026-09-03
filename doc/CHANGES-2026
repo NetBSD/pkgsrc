@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5794 2026/09/03 06:45:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5795 2026/09/03 07:02:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8550,3 +8550,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-cssselect2 to 0.10.1 [adam 2026-09-03]
 	Updated www/py-django-q2 to 1.11.1 [adam 2026-09-03]
 	Updated print/py-xhtml2pdf to 0.2.18 [adam 2026-09-03]
+	Updated print/py-weasyprint to 69.0 [adam 2026-09-03]
+	Updated fonts/py-fonttools to 4.64.0 [adam 2026-09-03]
