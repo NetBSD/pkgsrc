@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5803 2026/09/03 10:15:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5804 2026/09/03 10:27:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8572,3 +8572,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-hanko to 0.37.0 [adam 2026-09-03]
 	Updated www/py-notebook to 7.6.2 [adam 2026-09-03]
 	Updated devel/py-ninja to 1.13.2 [adam 2026-09-03]
+	Updated devel/jj to 0.45.0 [adam 2026-09-03]
