@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5791 2026/09/03 05:55:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5792 2026/09/03 06:04:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8544,3 +8544,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-ipywidgets to 8.1.9 [adam 2026-09-03]
 	Updated www/py-jupyter_server to 2.21.0 [adam 2026-09-03]
 	Updated www/py-jupyterlab to 4.6.3 [adam 2026-09-03]
+	Updated converters/py-ansi2html to 1.9.4 [adam 2026-09-03]
+	Updated devel/py-setuptools_scm to 10.2.2 [adam 2026-09-03]
