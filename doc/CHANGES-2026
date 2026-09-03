@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5790 2026/09/03 05:16:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5791 2026/09/03 05:55:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8540,3 +8540,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/py-questionary version 2.1.1 [adam 2026-09-03]
 	Added misc/py-copier version 9.18.1 [adam 2026-09-03]
 	Added devel/py-jupyter-builder version 1.2.2 [adam 2026-09-03]
+	Updated www/py-jupyterlab-widgets to 3.0.17 [adam 2026-09-03]
+	Updated www/py-ipywidgets to 8.1.9 [adam 2026-09-03]
+	Updated www/py-jupyter_server to 2.21.0 [adam 2026-09-03]
+	Updated www/py-jupyterlab to 4.6.3 [adam 2026-09-03]
