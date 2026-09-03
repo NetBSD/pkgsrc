@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.20 2026/06/11 13:38:59 drixter Exp $
+$NetBSD: distinfo,v 1.21 2026/09/03 11:46:23 drixter Exp $
 
 BLAKE2s (ipv6calc-4.4.0.tar.gz) = e11d7bf36230a39686c1033b4d9a5646aad25ddb18facc386a252a50673d4fcd
 SHA512 (ipv6calc-4.4.0.tar.gz) = be14b0d00e789ab065fad3de1622383967d225ca67021acd826d5baf058c1381795dc0379e86e05abf2e5fef2a6ef991f1b6e8435eaf271fc1302dfd48c34e26
 Size (ipv6calc-4.4.0.tar.gz) = 1990779 bytes
+SHA1 (patch-libipv6calc_db_wrapper.c) = c914993f18db4aa774a550386a1fe722fbf809b0
