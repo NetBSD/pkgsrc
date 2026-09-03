@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/02/09 16:54:37 kleink Exp $
+$NetBSD: distinfo,v 1.35 2026/09/03 06:51:34 adam Exp $
 
-BLAKE2s (weasyprint-68.1.tar.gz) = 118bb35ec4dc79c686e6100a115e6bd17c702da54e968d72a292d64f35110c48
-SHA512 (weasyprint-68.1.tar.gz) = b080a40882d0b56dc3696aa4edc403a85c20a7b69a14c0bf179f0897af173945f327bc42f9be354d6734822af54413c56a1fec84b8ecd37e51bb5b752c3c676a
-Size (weasyprint-68.1.tar.gz) = 1542379 bytes
+BLAKE2s (weasyprint-69.0.tar.gz) = 65eec470242d52ce272fdedc82b16b60002588162c1b4c00181e82dd3dc158d8
+SHA512 (weasyprint-69.0.tar.gz) = fb56d7f6173f8a67f8ef4c31408c03625b0a774d0efde003f779e3da054737c88afe9f44ee40b6dda5fc92cfacfa5709d4d96bf1a112862d309eaf2d93881ef6
+Size (weasyprint-69.0.tar.gz) = 1549834 bytes
