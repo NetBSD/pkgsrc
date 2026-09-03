@@ -1,0 +1,2 @@
+bin/jlpm @PREFIX@/bin/jlpm-@PYVERSSUFFIX@
+bin/jupyter-builder @PREFIX@/bin/jupyter-builder-@PYVERSSUFFIX@

@@ -1,0 +1,2 @@
+Build tools for JupyterLab extensions - extracted from the core JupyterLab
+codebase to be maintained and used independently.
