@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/01/28 10:30:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/03 09:56:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -88,9 +88,9 @@ ${PYSITELIB}/pyhanko_certvalidator/path.pyo
 ${PYSITELIB}/pyhanko_certvalidator/policy_decl.py
 ${PYSITELIB}/pyhanko_certvalidator/policy_decl.pyc
 ${PYSITELIB}/pyhanko_certvalidator/policy_decl.pyo
-${PYSITELIB}/pyhanko_certvalidator/policy_tree.py
-${PYSITELIB}/pyhanko_certvalidator/policy_tree.pyc
-${PYSITELIB}/pyhanko_certvalidator/policy_tree.pyo
+${PYSITELIB}/pyhanko_certvalidator/policy_graph.py
+${PYSITELIB}/pyhanko_certvalidator/policy_graph.pyc
+${PYSITELIB}/pyhanko_certvalidator/policy_graph.pyo
 ${PYSITELIB}/pyhanko_certvalidator/py.typed
 ${PYSITELIB}/pyhanko_certvalidator/registry.py
 ${PYSITELIB}/pyhanko_certvalidator/registry.pyc
