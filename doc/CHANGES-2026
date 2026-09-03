@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5787 2026/09/03 04:45:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5788 2026/09/03 04:55:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8532,3 +8532,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 33.0.8 [gdt 2026-09-02]
 	Updated devel/atf to 0.25 [adam 2026-09-03]
 	Updated graphics/oxipng to 10.2.1 [adam 2026-09-03]
+	Updated devel/SDL3 to 3.4.16 [adam 2026-09-03]
+	Updated multimedia/libde265 to 1.1.2 [adam 2026-09-03]
