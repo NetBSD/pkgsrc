@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2026/09/03 14:39:36 leot Exp $
+
+Honor LDFLAGS
+
+--- Makefile.orig	2026-09-03 14:36:06.748585061 +0000
++++ Makefile
+@@ -46,7 +46,7 @@ FILES	= 	Makefile \
+ 		genpasswd.man
+ 
+ $(PROG): genpasswd.o
+-	$(CC) $(CFLAGS) -o $@ $? $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $? $(LIBS)
+ 
+ inst-all: install install.man
+ 
