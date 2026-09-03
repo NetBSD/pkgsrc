@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/08/28 09:36:05 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/09/03 11:43:42 adam Exp $
 
-BLAKE2s (jwcrypto-1.5.9.tar.gz) = 5f095c9d12fe264a7b5e90097513ccf4f44c3bd8ccf5b890b0337c33a2d0f029
-SHA512 (jwcrypto-1.5.9.tar.gz) = a77d7f77dfec3e05b0b07db9d4d6d393cb5be58feb85c019cb561d0ac651a28492c3d509a5ba7724b65f374c608579b1a831b7a5791b92a91250da7aacbb3892
-Size (jwcrypto-1.5.9.tar.gz) = 115793 bytes
+BLAKE2s (jwcrypto-1.6.0.tar.gz) = 691a929e4cfda37d8284066cf5378983cf95dabb417094986393811f90d88293
+SHA512 (jwcrypto-1.6.0.tar.gz) = 8f8fb08fb8ce13c0a11d58aca9a81bdbcad398c300c4e55108ca75c1fa42fc9ab44e8fe149a0e26bb901e40bffa68eab80a3aa2d226c3c0b5fa27897531a11c7
+Size (jwcrypto-1.6.0.tar.gz) = 116186 bytes
