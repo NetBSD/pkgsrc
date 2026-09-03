@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5810 2026/09/03 11:45:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5811 2026/09/03 11:49:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8585,3 +8585,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-djangocms-link to 5.2.0 [adam 2026-09-03]
 	Updated www/py-jwcrypto to 1.6.0 [adam 2026-09-03]
 	Updated devel/py-bitarray to 3.11.0 [adam 2026-09-03]
+	Updated devel/py-inline-snapshot to 0.35.4 [adam 2026-09-03]
+	Updated devel/py-hypothesis to 6.167.1 [adam 2026-09-03]
