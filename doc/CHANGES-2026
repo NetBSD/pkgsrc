@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5811 2026/09/03 11:49:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5812 2026/09/03 15:32:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8587,3 +8587,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-bitarray to 3.11.0 [adam 2026-09-03]
 	Updated devel/py-inline-snapshot to 0.35.4 [adam 2026-09-03]
 	Updated devel/py-hypothesis to 6.167.1 [adam 2026-09-03]
+	Updated net/dnscontrol to 5.0.3 [drixter 2026-09-03]
