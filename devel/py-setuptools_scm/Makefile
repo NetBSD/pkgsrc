@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/07/22 08:14:03 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/09/03 06:04:25 adam Exp $
 
-DISTNAME=	setuptools_scm-10.2.1
+DISTNAME=	setuptools_scm-10.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
@@ -12,12 +12,12 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-vcs-versioning>=2.0.0:../../devel/py-vcs-versioning
-TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-vcs-versioning>=2.3.2:../../devel/py-vcs-versioning
+TEST_DEPENDS+=	git-base>=0:../../devel/git-base
+TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
@@ -25,8 +25,8 @@ PY_RENAME_BINARIES=	setuptools-scm
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
 .endif
 
 # test status as of 10.0.5
