@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/03/11 13:07:57 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/09/03 07:33:23 adam Exp $
 
-BLAKE2s (mmh3-5.2.1.tar.gz) = 3b3a34ed927a4b40684f52d1929fab968931d6cefd2e3eb1ef3eaf63113dfe7b
-SHA512 (mmh3-5.2.1.tar.gz) = cb873c7041e9a460d0e16fb162cc8fb75c01928be0dd35e43ef62688fd5453f0a0babd0beceb84a8f8eeb360b7c68980728f28d571146d9d0f2bbbba69e8a858
-Size (mmh3-5.2.1.tar.gz) = 33775 bytes
+BLAKE2s (mmh3-5.3.0.tar.gz) = 2a1bbc592b183ca485622cafea5c18aeb8649b0e1c0724a8380732e89b16d7c0
+SHA512 (mmh3-5.3.0.tar.gz) = 474575434792622c507d945718a927904f6ddc8c57199ac70e9693f13f9d9d42db27db3a8ee8af86712b39b96bef43cfd56dead80018c0c53b90233b04eea5f1
+Size (mmh3-5.3.0.tar.gz) = 33607 bytes
