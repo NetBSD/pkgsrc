@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5789 2026/09/03 05:08:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5790 2026/09/03 05:16:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8536,3 +8536,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libde265 to 1.1.2 [adam 2026-09-03]
 	Updated databases/postgresql-timescaledb to 2.29.2 [adam 2026-09-03]
 	Updated devel/catch2 to 3.16.0 [adam 2026-09-03]
+	Added textproc/py-jinja2-ansible-filters version 1.3.2 [adam 2026-09-03]
+	Added misc/py-questionary version 2.1.1 [adam 2026-09-03]
+	Added misc/py-copier version 9.18.1 [adam 2026-09-03]
+	Added devel/py-jupyter-builder version 1.2.2 [adam 2026-09-03]
