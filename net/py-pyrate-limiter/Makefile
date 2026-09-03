@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/06/23 11:42:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/03 11:14:17 adam Exp $
 
-DISTNAME=	pyrate_limiter-4.4.0
+DISTNAME=	pyrate_limiter-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrate-limiter/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/vutran1710/PyrateLimiter
 COMMENT=	Rate-Limiter using Leaky-Bucket Algorithm
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-dynamic-versioning>0:../../devel/py-uv-dynamic-versioning
-# optional dependency
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-dynamic-versioning>=0:../../devel/py-uv-dynamic-versioning
+# filelock
 DEPENDS+=	${PYPKGPREFIX}-filelock>=0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=0:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1.1.0:../../devel/py-test-asyncio

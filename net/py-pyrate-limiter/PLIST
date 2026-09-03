@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/06/23 11:42:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/03 11:14:17 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,9 @@ ${PYSITELIB}/pyrate_limiter/abstracts/bucket.pyo
 ${PYSITELIB}/pyrate_limiter/abstracts/rate.py
 ${PYSITELIB}/pyrate_limiter/abstracts/rate.pyc
 ${PYSITELIB}/pyrate_limiter/abstracts/rate.pyo
+${PYSITELIB}/pyrate_limiter/abstracts/store.py
+${PYSITELIB}/pyrate_limiter/abstracts/store.pyc
+${PYSITELIB}/pyrate_limiter/abstracts/store.pyo
 ${PYSITELIB}/pyrate_limiter/abstracts/wrappers.py
 ${PYSITELIB}/pyrate_limiter/abstracts/wrappers.pyc
 ${PYSITELIB}/pyrate_limiter/abstracts/wrappers.pyo
@@ -39,9 +42,15 @@ ${PYSITELIB}/pyrate_limiter/buckets/postgres.pyo
 ${PYSITELIB}/pyrate_limiter/buckets/redis_bucket.py
 ${PYSITELIB}/pyrate_limiter/buckets/redis_bucket.pyc
 ${PYSITELIB}/pyrate_limiter/buckets/redis_bucket.pyo
+${PYSITELIB}/pyrate_limiter/buckets/redis_state.py
+${PYSITELIB}/pyrate_limiter/buckets/redis_state.pyc
+${PYSITELIB}/pyrate_limiter/buckets/redis_state.pyo
 ${PYSITELIB}/pyrate_limiter/buckets/sqlite_bucket.py
 ${PYSITELIB}/pyrate_limiter/buckets/sqlite_bucket.pyc
 ${PYSITELIB}/pyrate_limiter/buckets/sqlite_bucket.pyo
+${PYSITELIB}/pyrate_limiter/buckets/state_bucket.py
+${PYSITELIB}/pyrate_limiter/buckets/state_bucket.pyc
+${PYSITELIB}/pyrate_limiter/buckets/state_bucket.pyo
 ${PYSITELIB}/pyrate_limiter/clocks.py
 ${PYSITELIB}/pyrate_limiter/clocks.pyc
 ${PYSITELIB}/pyrate_limiter/clocks.pyo
@@ -51,6 +60,9 @@ ${PYSITELIB}/pyrate_limiter/extras/__init__.pyo
 ${PYSITELIB}/pyrate_limiter/extras/aiohttp_limiter.py
 ${PYSITELIB}/pyrate_limiter/extras/aiohttp_limiter.pyc
 ${PYSITELIB}/pyrate_limiter/extras/aiohttp_limiter.pyo
+${PYSITELIB}/pyrate_limiter/extras/httpx2_limiter.py
+${PYSITELIB}/pyrate_limiter/extras/httpx2_limiter.pyc
+${PYSITELIB}/pyrate_limiter/extras/httpx2_limiter.pyo
 ${PYSITELIB}/pyrate_limiter/extras/httpx_limiter.py
 ${PYSITELIB}/pyrate_limiter/extras/httpx_limiter.pyc
 ${PYSITELIB}/pyrate_limiter/extras/httpx_limiter.pyo
