@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5808 2026/09/03 11:29:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5809 2026/09/03 11:39:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8581,3 +8581,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-faker to 40.38.0 [adam 2026-09-03]
 	Updated devel/py-crc to 8.0.0 [adam 2026-09-03]
 	Updated devel/py-test-rerunfailures to 16.6.1 [adam 2026-09-03]
+	Updated www/py-django-cms to 5.1.2 [adam 2026-09-03]
+	Updated www/py-djangocms-link to 5.2.0 [adam 2026-09-03]
