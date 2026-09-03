@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5813 2026/09/03 18:08:19 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5814 2026/09/03 19:05:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8589,3 +8589,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hypothesis to 6.167.1 [adam 2026-09-03]
 	Updated net/dnscontrol to 5.0.3 [drixter 2026-09-03]
 	Updated net/powerdns-recursor to 5.4.6 [drixter 2026-09-03]
+	Updated net/openvpn to 2.7.7 [adam 2026-09-03]
+	Updated devel/jj to 0.45.1 [adam 2026-09-03]
