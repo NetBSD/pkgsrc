@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/04/16 06:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/03 06:23:05 adam Exp $
 
 DISTNAME=	bulk-test-llvm-20260410
 CATEGORIES=	meta-pkgs
@@ -26,6 +26,7 @@ DEPENDS+=	clang-[0-9]*:../../lang/clang
 DEPENDS+=	clang-tools-extra-[0-9]*:../../lang/clang-tools-extra
 DEPENDS+=	compiler-rt-[0-9]*:../../lang/compiler-rt
 DEPENDS+=	flang-[0-9]*:../../lang/flang
+DEPENDS+=	libclc-[0-9]*:../../lang/libclc
 DEPENDS+=	libcxx-[0-9]*:../../lang/libcxx
 DEPENDS+=	libcxxabi-[0-9]*:../../lang/libcxxabi
 DEPENDS+=	libunwind-[0-9]*:../../lang/libunwind
