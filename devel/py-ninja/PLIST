@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/24 07:21:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/03 10:15:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE_Apache_20
 ${PYSITELIB}/ninja/__init__.py
 ${PYSITELIB}/ninja/__init__.pyc

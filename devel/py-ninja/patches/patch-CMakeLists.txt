@@ -1,19 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2025/12/27 22:17:02 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2026/09/03 10:15:34 adam Exp $
 
 Don't build ninja binary. Just install a link to the pkgsrc copy in the package
 Makefile instead.
 
 --- CMakeLists.txt.orig	2022-11-09 12:37:21.000000000 +0000
 +++ CMakeLists.txt
-@@ -23,7 +23,6 @@ message(STATUS "")
- message(STATUS "  RUN_NINJA_TEST : ${RUN_NINJA_TEST}")
- message(STATUS "************************************")
+@@ -26,7 +26,6 @@ message(STATUS "************************
+ set(BUILD_TESTING "${RUN_NINJA_TEST}" CACHE BOOL "Build the testing tree." FORCE)
+ set_property(CACHE BUILD_TESTING PROPERTY TYPE INTERNAL)
  
 -add_subdirectory(ninja-upstream)
  
  if(RUN_NINJA_TEST)
    add_custom_target(
-@@ -33,5 +32,5 @@ if(RUN_NINJA_TEST)
+@@ -36,5 +35,5 @@ if(RUN_NINJA_TEST)
    )
  endif()
  
