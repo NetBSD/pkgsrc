@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2026/08/09 08:22:07 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/09/03 09:05:15 adam Exp $
 
-BLAKE2s (translate_toolkit-3.19.17.tar.gz) = 93e8a321f1b97204c7b9f0515f6a379c190e7970c54363049a73888f59818317
-SHA512 (translate_toolkit-3.19.17.tar.gz) = b845e9586224d62247cdbb7509e6896fceb7b8937edab974ba7851b4250b5d8b47b278d2dfae3f633e7fceeefed027b3c351127ea0a5f8ff488dde2646273e54
-Size (translate_toolkit-3.19.17.tar.gz) = 620851 bytes
+BLAKE2s (translate_toolkit-3.19.19.tar.gz) = da5f73e4cf075d1d0c5a1a6e40e2cba831f9ead22f63fbbb75c7b390c29dcb26
+SHA512 (translate_toolkit-3.19.19.tar.gz) = 18ab282071b1a80b27bf24de325fdc3c32ad1247132502e23c8144e679b36df11fe7a40159d46f08704dd0417e4b3aab16bb244827c872e505344570687f212a
+Size (translate_toolkit-3.19.19.tar.gz) = 628319 bytes
