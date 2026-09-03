@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5801 2026/09/03 09:24:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5802 2026/09/03 10:03:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8568,3 +8568,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-js-asset to 4.1.0 [adam 2026-09-03]
 	Updated www/py-django-countries to 9.0.0 [adam 2026-09-03]
 	Updated www/py-django-debug-toolbar to 8.0.0 [adam 2026-09-03]
+	Updated security/py-hanko-certvalidator to 0.32.0 [adam 2026-09-03]
+	Updated security/py-hanko to 0.37.0 [adam 2026-09-03]
