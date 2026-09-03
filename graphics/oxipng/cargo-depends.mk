@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2026/08/09 05:29:05 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2026/09/03 04:42:55 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -14,8 +14,8 @@ CARGO_CRATE_DEPENDS+=	bytemuck-1.25.0
 CARGO_CRATE_DEPENDS+=	byteorder-lite-0.1.0
 CARGO_CRATE_DEPENDS+=	cc-1.2.60
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
-CARGO_CRATE_DEPENDS+=	clap-4.6.4
-CARGO_CRATE_DEPENDS+=	clap_builder-4.6.2
+CARGO_CRATE_DEPENDS+=	clap-4.6.6
+CARGO_CRATE_DEPENDS+=	clap_builder-4.6.6
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.5
 CARGO_CRATE_DEPENDS+=	crc32fast-1.5.0
@@ -37,10 +37,10 @@ CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	itoa-1.0.18
 CARGO_CRATE_DEPENDS+=	libc-0.2.185
-CARGO_CRATE_DEPENDS+=	libdeflate-sys-1.25.2
-CARGO_CRATE_DEPENDS+=	libdeflater-1.25.2
+CARGO_CRATE_DEPENDS+=	libdeflate-sys-1.26.0
+CARGO_CRATE_DEPENDS+=	libdeflater-1.26.0
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.12.1
-CARGO_CRATE_DEPENDS+=	log-0.4.33
+CARGO_CRATE_DEPENDS+=	log-0.4.34
 CARGO_CRATE_DEPENDS+=	memchr-2.8.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9
 CARGO_CRATE_DEPENDS+=	moxcms-0.8.1
