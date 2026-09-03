@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.683 2026/07/22 13:35:04 adam Exp $
+# $NetBSD: Makefile,v 1.684 2026/09/03 05:12:04 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -290,6 +290,7 @@ SUBDIR+=	py-anita
 SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-autocommand
+SUBDIR+=	py-copier
 SUBDIR+=	py-crashtest
 SUBDIR+=	py-dep-logic
 SUBDIR+=	py-domdf-python-tools
@@ -305,6 +306,7 @@ SUBDIR+=	py-narwhals
 SUBDIR+=	py-pbs-installer
 SUBDIR+=	py-pep440
 SUBDIR+=	py-platformdirs
+SUBDIR+=	py-questionary
 SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
 SUBDIR+=	py-stdnum
