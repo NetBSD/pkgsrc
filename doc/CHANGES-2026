@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5804 2026/09/03 10:27:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5805 2026/09/03 10:38:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8573,3 +8573,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-notebook to 7.6.2 [adam 2026-09-03]
 	Updated devel/py-ninja to 1.13.2 [adam 2026-09-03]
 	Updated devel/jj to 0.45.0 [adam 2026-09-03]
+	Updated www/py-draftjs_exporter to 7.1.0 [adam 2026-09-03]
+	Updated misc/py-pbs-installer to 2026.9.1 [adam 2026-09-03]
