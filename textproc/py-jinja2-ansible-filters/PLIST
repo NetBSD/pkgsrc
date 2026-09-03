@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/03 05:10:31 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jinja2_ansible_filters/__init__.py
+${PYSITELIB}/jinja2_ansible_filters/__init__.pyc
+${PYSITELIB}/jinja2_ansible_filters/__init__.pyo
+${PYSITELIB}/jinja2_ansible_filters/ansible_utils.py
+${PYSITELIB}/jinja2_ansible_filters/ansible_utils.pyc
+${PYSITELIB}/jinja2_ansible_filters/ansible_utils.pyo
+${PYSITELIB}/jinja2_ansible_filters/core_filters.py
+${PYSITELIB}/jinja2_ansible_filters/core_filters.pyc
+${PYSITELIB}/jinja2_ansible_filters/core_filters.pyo
+${PYSITELIB}/jinja2_ansible_filters/module_utils.py
+${PYSITELIB}/jinja2_ansible_filters/module_utils.pyc
+${PYSITELIB}/jinja2_ansible_filters/module_utils.pyo
