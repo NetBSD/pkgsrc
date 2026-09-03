@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.61 2026/05/17 15:55:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.62 2026/09/03 07:02:00 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.external
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -572,6 +579,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/E_B_D_T_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/E_B_L_C_.py
 ${PYSITELIB}/fontTools/ttLib/tables/E_B_L_C_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/E_B_L_C_.pyo
+${PYSITELIB}/fontTools/ttLib/tables/E_B_S_C_.py
+${PYSITELIB}/fontTools/ttLib/tables/E_B_S_C_.pyc
+${PYSITELIB}/fontTools/ttLib/tables/E_B_S_C_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/F_F_T_M_.py
 ${PYSITELIB}/fontTools/ttLib/tables/F_F_T_M_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/F_F_T_M_.pyo
@@ -695,9 +705,18 @@ ${PYSITELIB}/fontTools/ttLib/tables/_a_n_k_r.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.py
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/_a_v_a_r.pyo
+${PYSITELIB}/fontTools/ttLib/tables/_b_d_a_t.py
+${PYSITELIB}/fontTools/ttLib/tables/_b_d_a_t.pyc
+${PYSITELIB}/fontTools/ttLib/tables/_b_d_a_t.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.py
 ${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/_b_g_c_l.pyo
+${PYSITELIB}/fontTools/ttLib/tables/_b_h_e_d.py
+${PYSITELIB}/fontTools/ttLib/tables/_b_h_e_d.pyc
+${PYSITELIB}/fontTools/ttLib/tables/_b_h_e_d.pyo
+${PYSITELIB}/fontTools/ttLib/tables/_b_l_o_c.py
+${PYSITELIB}/fontTools/ttLib/tables/_b_l_o_c.pyc
+${PYSITELIB}/fontTools/ttLib/tables/_b_l_o_c.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.py
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/_b_s_l_n.pyo
@@ -1028,11 +1047,4 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.external
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
