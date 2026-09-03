@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/03 05:12:05 adam Exp $
+
+BLAKE2s (questionary-2.1.1.tar.gz) = 7917a82819de74af2c0bc95ae62118da179b77f26cce459db65294b0995bb6b9
+SHA512 (questionary-2.1.1.tar.gz) = a21b046375a7c82374c3e023662ddc9600cdddd9bde68d7f1b6a0d6b87ae7614b99f7fc3f509743ff0ab61036f600be567290ad20a1dbda941e293d397ea1ab2
+Size (questionary-2.1.1.tar.gz) = 25845 bytes
