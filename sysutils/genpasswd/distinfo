@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/09/03 14:38:31 leot Exp $
 
 BLAKE2s (genpasswd-1.5.tar.gz) = 4462cce32d51f274b849daff6c0ea0ac240282ef136d7fbef2af11ec6673d177
 SHA512 (genpasswd-1.5.tar.gz) = 86600e340836a154a249c152145b4e674b6ea203395f3cf2335f4e53ed143735752665228fb5999d058a8ce439304350833f47a6ba30d09407e870e8e27f00a1
 Size (genpasswd-1.5.tar.gz) = 2724 bytes
+SHA1 (patch-Makefile) = 075f6e7f2ba1bc9422d5d49df28eda0777514c5c
