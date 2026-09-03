@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/06/23 11:42:42 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/09/03 11:14:17 adam Exp $
 
-BLAKE2s (pyrate_limiter-4.4.0.tar.gz) = 926303ffaa401da803913846a10b18aa51fa79edd4f52c5bb192c748331edb08
-SHA512 (pyrate_limiter-4.4.0.tar.gz) = e4b6d63ebaec949c154f117ab30d04e3b94cb4b771299a08ba8bad1bd92ed004ceb89c352c66914c9fb8ae29dbe33b8ef5103a74d174dc83398a45f733ac5f84
-Size (pyrate_limiter-4.4.0.tar.gz) = 90955 bytes
+BLAKE2s (pyrate_limiter-4.5.0.tar.gz) = 3a50427db0a4a16a94df12b4f919b29c16d6d37a194fabc03140b44602e86de6
+SHA512 (pyrate_limiter-4.5.0.tar.gz) = 35ee3bef555260df68ad1881d64b72f7a51535e164abf640c133ac96c5caa4073b56a43edc30cdb982d1e322f9b01f6eccc8edbb6d94be84046be11a305074b7
+Size (pyrate_limiter-4.5.0.tar.gz) = 123240 bytes
