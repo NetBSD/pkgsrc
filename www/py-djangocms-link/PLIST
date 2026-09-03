@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 14:17:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/03 11:39:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -34,8 +34,6 @@ ${PYSITELIB}/djangocms_link/locale/bn/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/bn/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/ca/LC_MESSAGES/django.po
-${PYSITELIB}/djangocms_link/locale/cmn/LC_MESSAGES/django.mo
-${PYSITELIB}/djangocms_link/locale/cmn/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/cs/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/cy/LC_MESSAGES/django.mo
@@ -48,10 +46,6 @@ ${PYSITELIB}/djangocms_link/locale/el/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/el/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/en/LC_MESSAGES/django.po
-${PYSITELIB}/djangocms_link/locale/en_GB/LC_MESSAGES/django.mo
-${PYSITELIB}/djangocms_link/locale/en_GB/LC_MESSAGES/django.po
-${PYSITELIB}/djangocms_link/locale/en_US/LC_MESSAGES/django.mo
-${PYSITELIB}/djangocms_link/locale/en_US/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/es/LC_MESSAGES/django.mo
@@ -144,10 +138,10 @@ ${PYSITELIB}/djangocms_link/locale/ur/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/ur/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/vi/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/vi/LC_MESSAGES/django.po
-${PYSITELIB}/djangocms_link/locale/zh-Hans/LC_MESSAGES/django.mo
-${PYSITELIB}/djangocms_link/locale/zh-Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/zh/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/zh/LC_MESSAGES/django.po
+${PYSITELIB}/djangocms_link/locale/zh_Hans/LC_MESSAGES/django.mo
+${PYSITELIB}/djangocms_link/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_link/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_link/migrations/0001_initial.pyo
@@ -205,6 +199,9 @@ ${PYSITELIB}/djangocms_link/migrations/0018_remove_link_anchor_remove_link_exter
 ${PYSITELIB}/djangocms_link/migrations/0019_alter_link_link.py
 ${PYSITELIB}/djangocms_link/migrations/0019_alter_link_link.pyc
 ${PYSITELIB}/djangocms_link/migrations/0019_alter_link_link.pyo
+${PYSITELIB}/djangocms_link/migrations/0020_rename_target_link_link_target.py
+${PYSITELIB}/djangocms_link/migrations/0020_rename_target_link_link_target.pyc
+${PYSITELIB}/djangocms_link/migrations/0020_rename_target_link_link_target.pyo
 ${PYSITELIB}/djangocms_link/migrations/__init__.py
 ${PYSITELIB}/djangocms_link/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_link/migrations/__init__.pyo

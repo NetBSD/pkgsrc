@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/05/20 11:15:20 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/03 11:39:30 adam Exp $
 
-DISTNAME=	djangocms_link-5.1.1
+DISTNAME=	djangocms_link-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-link/}
@@ -11,9 +11,9 @@ COMMENT=	Django CMS plugin that allows to add links
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=4.1.3:../../www/py-django-cms
-DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=1.0:../../www/py-djangocms-attributes-field
+DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=1:../../www/py-djangocms-attributes-field
 
 USE_LANGUAGES=	# none
 
