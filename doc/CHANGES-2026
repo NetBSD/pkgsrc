@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5795 2026/09/03 07:02:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5796 2026/09/03 07:33:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8552,3 +8552,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-xhtml2pdf to 0.2.18 [adam 2026-09-03]
 	Updated print/py-weasyprint to 69.0 [adam 2026-09-03]
 	Updated fonts/py-fonttools to 4.64.0 [adam 2026-09-03]
+	Updated lang/py-ast-serialize to 0.9.0 [adam 2026-09-03]
+	Updated devel/py-mmh3 to 5.3.0 [adam 2026-09-03]
