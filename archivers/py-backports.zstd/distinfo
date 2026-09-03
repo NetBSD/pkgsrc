@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/09/03 08:25:05 adam Exp $
+
+BLAKE2s (backports_zstd-1.7.0.tar.gz) = e30ec6d04b48c701767259e09a6c323d2ec8200f2696c0b3d1117610ccc920b1
+SHA512 (backports_zstd-1.7.0.tar.gz) = acbed29d30ca2093834762fbd904062f7b87e039007f62b7ad8b1667faf688249c6df0f3658cd11e76017fe590fa119092e216fc30d0140a289cac6d76e82677
+Size (backports_zstd-1.7.0.tar.gz) = 1003722 bytes
+SHA1 (patch-setup.py) = 2fcaa8b92946d1fab3fd7fae3cb8077f00c1d389
