@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5828 2026/09/04 22:46:53 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5829 2026/09/04 22:50:24 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8614,3 +8614,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/split-thai to 2.45 [scole 2026-09-04]
 	Updated net/knot to 3.5.8 [drixter 2026-09-04]
 	Updated chat/matrix-synapse to 1.160.0 [gdt 2026-09-04]
+	Added games/unrest version 1.1.0 [charlotte 2026-09-04]
