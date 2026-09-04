@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/05/15 11:55:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/09/04 13:08:27 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -374,6 +374,9 @@ ${PYSITELIB}/chirp/drivers/mml_jc8810.pyo
 ${PYSITELIB}/chirp/drivers/mursv1.py
 ${PYSITELIB}/chirp/drivers/mursv1.pyc
 ${PYSITELIB}/chirp/drivers/mursv1.pyo
+${PYSITELIB}/chirp/drivers/nx800.py
+${PYSITELIB}/chirp/drivers/nx800.pyc
+${PYSITELIB}/chirp/drivers/nx800.pyo
 ${PYSITELIB}/chirp/drivers/puxing.py
 ${PYSITELIB}/chirp/drivers/puxing.pyc
 ${PYSITELIB}/chirp/drivers/puxing.pyo
@@ -639,6 +642,7 @@ ${PYSITELIB}/chirp/kenwood_tone.py
 ${PYSITELIB}/chirp/kenwood_tone.pyc
 ${PYSITELIB}/chirp/kenwood_tone.pyo
 ${PYSITELIB}/chirp/locale/bg_BG/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/cs/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/de/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/el/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
@@ -746,6 +750,9 @@ ${PYSITELIB}/chirp/wxui/__init__.pyo
 ${PYSITELIB}/chirp/wxui/__main__.py
 ${PYSITELIB}/chirp/wxui/__main__.pyc
 ${PYSITELIB}/chirp/wxui/__main__.pyo
+${PYSITELIB}/chirp/wxui/accessibility.py
+${PYSITELIB}/chirp/wxui/accessibility.pyc
+${PYSITELIB}/chirp/wxui/accessibility.pyo
 ${PYSITELIB}/chirp/wxui/bankedit.py
 ${PYSITELIB}/chirp/wxui/bankedit.pyc
 ${PYSITELIB}/chirp/wxui/bankedit.pyo

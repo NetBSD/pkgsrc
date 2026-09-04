@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2026/06/12 14:31:22 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2026/09/04 13:08:27 gdt Exp $
 
-VERSION=	20260612
+VERSION=	20260904
 DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
 # As of sometime after 20251128 and before 20260508, the distfile is not
