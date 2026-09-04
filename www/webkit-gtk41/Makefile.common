@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2026/08/31 09:44:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/09/04 16:05:35 tnn Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -158,13 +158,22 @@ CXXFLAGS.SunOS+=	-fpermissive
 # TODO: fix shell portability issues in these files
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/create-symlink-to-altroot.sh
+CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/create-symlink-to-cryptex.sh
 CHECK_PORTABILITY_SKIP+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Source/WTF/Scripts/audit-spi-if-needed.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/create-symlink-to-altroot.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/create-symlink-to-cryptex.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebCore/Scripts/generate-unified-sources.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebGPU/Scripts/create-symlink-to-cryptex.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/check-xcfilelists.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/compile-sandbox.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/create-symlink-to-altroot.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/create-symlink-to-cryptex.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/copy-binary-plists.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/copy-launchd-plist-and-create-symlink.sh
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-swift-availability-macros
 CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-unified-sources.sh
 CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/check-xcfilelists.sh
 CHECK_PORTABILITY_SKIP+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
