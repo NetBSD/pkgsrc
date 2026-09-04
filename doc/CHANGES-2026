@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5818 2026/09/04 07:00:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5819 2026/09/04 08:46:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8600,3 +8600,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-anyio to 4.15.0 [adam 2026-09-04]
 	Updated net/py-twine to 7.0.0 [adam 2026-09-04]
 	Updated www/py-autobahn to 26.7.1 [adam 2026-09-04]
+	Added misc/py-interface-meta version 2.0.1 [adam 2026-09-04]
+	Added math/py-formulaic version 1.2.2 [adam 2026-09-04]
