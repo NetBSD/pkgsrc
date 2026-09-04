@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5817 2026/09/04 05:29:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5818 2026/09/04 07:00:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8598,3 +8598,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-vdirsyncer to 0.21.0 [adam 2026-09-04]
 	Updated devel/py-joblib to 1.6.0 [adam 2026-09-04]
 	Updated devel/py-anyio to 4.15.0 [adam 2026-09-04]
+	Updated net/py-twine to 7.0.0 [adam 2026-09-04]
+	Updated www/py-autobahn to 26.7.1 [adam 2026-09-04]
