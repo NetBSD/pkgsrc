@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2026/07/29 10:24:07 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2026/09/04 23:39:27 gdt Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
-PKGNAME=	element-web-1.12.24
+PKGNAME=	element-web-1.12.27
 CATEGORIES=	chat
 # Using the normal GitHub fetching only works for one distfile, even when
 # trying to hack around it.
