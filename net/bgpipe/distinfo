@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2026/07/27 19:59:59 drixter Exp $
+$NetBSD: distinfo,v 1.2 2026/09/04 11:52:33 drixter Exp $
 
-BLAKE2s (bgpipe-0.22.0.tar.gz) = 68171f2e00b96ab7ee7f64d5514e297a037ac16a2d061545bd68e5f814c8c7ac
-SHA512 (bgpipe-0.22.0.tar.gz) = 2da61dfade3bd9694155f38a2ccf0790829808750f97f6ba51cc55fd403ebf5d1c9dc4396cf1231797fd7159ca4e166771b82947113ffbfad1c9c24d9e8d46f4
-Size (bgpipe-0.22.0.tar.gz) = 276914 bytes
+BLAKE2s (bgpipe-0.22.1.tar.gz) = 59b6f968de18b3e5fbb279878103bc30dd20eb2d2f05fb4422b9044a01360aaa
+SHA512 (bgpipe-0.22.1.tar.gz) = 77ec39eb2a9d63d6109471ae67d9f99925d4c504dfed3558a1fc9b04c5a909eb43cc82a080258b18fc01e1004652fabfa14ffecc28ec41592d35fad20dda12da
+Size (bgpipe-0.22.1.tar.gz) = 276991 bytes
 BLAKE2s (github.com__victoria_metrics_metrics_@v_v1.44.0.mod) = 2a4188f082b926a3de857c0a34abeea051577a967ba48e3429e686b4ae6c0462
 SHA512 (github.com__victoria_metrics_metrics_@v_v1.44.0.mod) = 8b1875b31e2d88371074e9d1fc37179fb11c6fb8f9bd737d5d91799fa4c76acd00af3b479ba7731e6e2a07e4795010eaa6f3026ebedd013a2503038f4796386d
 Size (github.com__victoria_metrics_metrics_@v_v1.44.0.mod) = 205 bytes

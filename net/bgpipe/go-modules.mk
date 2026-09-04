@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2026/07/27 19:59:59 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.2 2026/09/04 11:52:33 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!victoria!metrics/metrics/@v/v1.44.0.mod
 GO_MODULE_FILES+=	github.com/!victoria!metrics/metrics/@v/v1.44.0.zip
