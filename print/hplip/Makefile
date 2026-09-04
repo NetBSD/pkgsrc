@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2026/09/02 19:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2026/09/04 09:06:18 wiz Exp $
 
 DISTNAME=	hplip-3.19.12
 PKGREVISION=	40
@@ -21,6 +21,10 @@ PKG_GROUPS_VARS+=	CUPS_GROUP
 PKG_USERS_VARS+=	CUPS_USER
 
 BUILD_DEFS+=		CUPS_USER CUPS_GROUP VARBASE
+
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-int-conversion
+CFLAGS+=		-Wno-implicit-int
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
