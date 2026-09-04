@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5826 2026/09/04 17:40:11 scole Exp $
+$NetBSD: CHANGES-2026,v 1.5827 2026/09/04 18:26:05 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8612,3 +8612,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/chirp to 20260904 [gdt 2026-09-04]
 	Updated www/resterm to 1.5.6 [drixter 2026-09-04]
 	Updated textproc/split-thai to 2.45 [scole 2026-09-04]
+	Updated net/knot to 3.5.8 [drixter 2026-09-04]
