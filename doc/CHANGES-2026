@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5821 2026/09/04 09:46:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5822 2026/09/04 11:52:58 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8606,3 +8606,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-obspy to 1.5.1 [adam 2026-09-04]
 	Updated graphics/py-strich to 0.20 [adam 2026-09-04]
 	Updated devel/py-mocket to 3.14.4 [adam 2026-09-04]
+	Updated net/bgpipe to 0.22.1 [drixter 2026-09-04]
