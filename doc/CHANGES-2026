@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5829 2026/09/04 22:50:24 charlotte Exp $
+$NetBSD: CHANGES-2026,v 1.5830 2026/09/04 23:39:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8615,3 +8615,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/knot to 3.5.8 [drixter 2026-09-04]
 	Updated chat/matrix-synapse to 1.160.0 [gdt 2026-09-04]
 	Added games/unrest version 1.1.0 [charlotte 2026-09-04]
+	Updated chat/element-web to 1.12.27 [gdt 2026-09-04]
