@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/06/28 15:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/04 12:23:47 adam Exp $
 
-DISTNAME=	pikepdf-10.5.1
+DISTNAME=	pikepdf-10.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/pikepdf/pikepdf
 COMMENT=	Read and write PDFs with Python, powered by qpdf
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10:../../devel/py-scikit-build-core
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-deprecated-[0-9]*:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.36:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
@@ -26,7 +25,7 @@ USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
-.include "../../devel/py-pybind11/buildlink3.mk"
+.include "../../devel/py-nanobind/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../print/qpdf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
