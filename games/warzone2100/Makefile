@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2026/09/02 19:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/09/04 20:21:01 wiz Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-4.6.3
@@ -25,6 +25,10 @@ FORCE_CXX_STD=	gnu++17
 
 USE_CXX_FEATURES+=	c++17
 USE_CXX_FEATURES+=	unique_ptr
+
+# hanging process
+# ../3rdparty/basis_universal_host_tool/basis_install/bin/basisu -ktx2 -uastc -uastc_level 3 -uastc_rdo_m -mipmap -resample 256 256
+NOT_FOR_BULK_PLATFORM+=	NetBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
