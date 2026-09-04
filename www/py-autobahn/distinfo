@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2026/07/03 07:23:16 adam Exp $
+$NetBSD: distinfo,v 1.37 2026/09/04 06:56:08 adam Exp $
 
-BLAKE2s (autobahn-26.6.2.tar.gz) = 61041713407c82248e0e2f175f31b6682caa8c9696f6dd82eae87efc8817a7bb
-SHA512 (autobahn-26.6.2.tar.gz) = eee85eabb3ea860a1e8cd2294178112176bd6c399fa03daa14747ef525e88e42b23509a2e1beb040a51ef5f1455ee0194175c49d4d71bd2a4fb079b7e5ba942a
-Size (autobahn-26.6.2.tar.gz) = 14041630 bytes
+BLAKE2s (autobahn-26.7.1.tar.gz) = bc1065702fdb8ce4e44f97cb44c18cbf509a87055ecb81333fbeaa08fd1bcce0
+SHA512 (autobahn-26.7.1.tar.gz) = 6c270cf163c59db1febb588ff3fab282a53d81266aa17a237d6b68ad681b92daa4d5ddab15e7e44556cdfd1e93f8fa75741dae7e7809b141794605b65b8797cc
+Size (autobahn-26.7.1.tar.gz) = 14056542 bytes
