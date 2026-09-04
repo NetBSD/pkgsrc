@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5815 2026/09/03 19:08:21 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5816 2026/09/04 05:19:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8592,3 +8592,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/openvpn to 2.7.7 [adam 2026-09-03]
 	Updated devel/jj to 0.45.1 [adam 2026-09-03]
 	Updated geography/qgis to 3.44.14 [gdt 2026-09-03]
+	Updated devel/py-cachelib to 0.17.0 [adam 2026-09-04]
+	Updated devel/py-vcs-versioning to 2.3.4 [adam 2026-09-04]
+	Updated devel/py-setuptools_scm to 10.2.3 [adam 2026-09-04]
+	Updated time/py-vdirsyncer to 0.21.0 [adam 2026-09-04]
