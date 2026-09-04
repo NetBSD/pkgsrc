@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/06/27 20:39:03 drixter Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/04 07:57:46 adam Exp $
 include/libkres/api.h
 include/libkres/array.h
 include/libkres/cdb_api.h
@@ -30,26 +30,26 @@ include/libkres/top.h
 include/libkres/trie.h
 include/libkres/utils.h
 include/libkres/zonecut.h
-lib/knot-resolver/ahocorasick.so
-lib/knot-resolver/debug_opensslkeylog.so
+lib/knot-resolver/ahocorasick.${SOEXT}
+${PLIST.notdarwin}lib/knot-resolver/debug_opensslkeylog.${SOEXT}
 lib/knot-resolver/distro-preconfig.lua
 lib/knot-resolver/kluautil.lua
 lib/knot-resolver/kres-gen.lua
 lib/knot-resolver/kres.lua
-lib/knot-resolver/kres_modules/bogus_log.so
+lib/knot-resolver/kres_modules/bogus_log.${SOEXT}
 lib/knot-resolver/kres_modules/daf.lua
 lib/knot-resolver/kres_modules/daf/daf.js
 lib/knot-resolver/kres_modules/detect_time_jump.lua
 lib/knot-resolver/kres_modules/detect_time_skew.lua
 lib/knot-resolver/kres_modules/dns64.lua
-lib/knot-resolver/kres_modules/dnstap.so
-lib/knot-resolver/kres_modules/edns_keepalive.so
+lib/knot-resolver/kres_modules/dnstap.${SOEXT}
+lib/knot-resolver/kres_modules/edns_keepalive.${SOEXT}
 lib/knot-resolver/kres_modules/etcd.lua
 lib/knot-resolver/kres_modules/experimental_dot_auth.lua
-lib/knot-resolver/kres_modules/extended_error.so
+lib/knot-resolver/kres_modules/extended_error.${SOEXT}
 lib/knot-resolver/kres_modules/fallback.lua
 lib/knot-resolver/kres_modules/graphite.lua
-lib/knot-resolver/kres_modules/hints.so
+lib/knot-resolver/kres_modules/hints.${SOEXT}
 lib/knot-resolver/kres_modules/http.lua
 lib/knot-resolver/kres_modules/http/bootstrap-theme.min.css
 lib/knot-resolver/kres_modules/http/bootstrap.min.css
@@ -71,7 +71,7 @@ lib/knot-resolver/kres_modules/http/topojson.js
 lib/knot-resolver/kres_modules/http_doh.lua
 lib/knot-resolver/kres_modules/http_tls_cert.lua
 lib/knot-resolver/kres_modules/http_trace.lua
-lib/knot-resolver/kres_modules/nsid.so
+lib/knot-resolver/kres_modules/nsid.${SOEXT}
 lib/knot-resolver/kres_modules/policy.lua
 lib/knot-resolver/kres_modules/predict.lua
 lib/knot-resolver/kres_modules/prefetch.lua
@@ -79,10 +79,10 @@ lib/knot-resolver/kres_modules/prefill.lua
 lib/knot-resolver/kres_modules/priming.lua
 lib/knot-resolver/kres_modules/prometheus.lua
 lib/knot-resolver/kres_modules/rebinding.lua
-lib/knot-resolver/kres_modules/refuse_nord.so
+lib/knot-resolver/kres_modules/refuse_nord.${SOEXT}
 lib/knot-resolver/kres_modules/renumber.lua
 lib/knot-resolver/kres_modules/serve_stale.lua
-lib/knot-resolver/kres_modules/stats.so
+lib/knot-resolver/kres_modules/stats.${SOEXT}
 lib/knot-resolver/kres_modules/ta_sentinel.lua
 lib/knot-resolver/kres_modules/ta_signal_query.lua
 lib/knot-resolver/kres_modules/ta_update.lua
