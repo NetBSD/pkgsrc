@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/06/28 15:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/04 09:22:35 adam Exp $
 
-DISTNAME=	obspy-1.5.0
+DISTNAME=	obspy-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/obspy/}
@@ -34,7 +34,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
-.include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

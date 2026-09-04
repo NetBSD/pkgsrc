@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/04/22 11:28:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/09/04 09:22:35 adam Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -1306,6 +1306,7 @@ ${PYSITELIB}/obspy/io/mseed/tests/data/GEOSCOPE16_4_encoding.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/RJOB.BW.EHZ.D.300806.0000.fullseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/SRO_encoding.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/WUQ.XJ.HHN.D.2008.285.first_record
+${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/emptyfile.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.be-header.be-data.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.be-header.le-data.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.le-header.be-data.mseed
