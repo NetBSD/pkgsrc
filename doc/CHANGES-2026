@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5820 2026/09/04 09:22:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5821 2026/09/04 09:46:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8604,3 +8604,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/py-formulaic version 1.2.2 [adam 2026-09-04]
 	Updated math/py-statsmodels to 0.15.0 [adam 2026-09-04]
 	Updated geography/py-obspy to 1.5.1 [adam 2026-09-04]
+	Updated graphics/py-strich to 0.20 [adam 2026-09-04]
+	Updated devel/py-mocket to 3.14.4 [adam 2026-09-04]
