@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.647 2026/08/27 09:19:11 adam Exp $
+# $NetBSD: Makefile,v 1.648 2026/09/04 08:46:01 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -426,6 +426,7 @@ SUBDIR+=	py-bottleneck
 SUBDIR+=	py-claripy
 SUBDIR+=	py-colormath
 SUBDIR+=	py-ephem
+SUBDIR+=	py-formulaic
 SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-hmmlearn

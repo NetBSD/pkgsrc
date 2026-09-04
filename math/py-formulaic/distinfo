@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/04 08:46:01 adam Exp $
+
+BLAKE2s (formulaic-1.2.2.tar.gz) = c382772d2e2b1ff91e5723b5177c3cbc6fdf744ade79b3847bd2e20e28b422c7
+SHA512 (formulaic-1.2.2.tar.gz) = cbaf347731ec9efd337e99c1cdd1cccaa342d767e13be010e81f92e74157c8dc84c9177f5517851a724f883c89e7b2be15623316bf3596b7f0f7be21391d4f12
+Size (formulaic-1.2.2.tar.gz) = 657522 bytes
