@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5822 2026/09/04 11:52:58 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5823 2026/09/04 12:33:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8607,3 +8607,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-strich to 0.20 [adam 2026-09-04]
 	Updated devel/py-mocket to 3.14.4 [adam 2026-09-04]
 	Updated net/bgpipe to 0.22.1 [drixter 2026-09-04]
+	Added devel/py-nanobind version 3.0.1 [adam 2026-09-04]
+	Updated print/py-pikepdf to 10.12.0 [adam 2026-09-04]
