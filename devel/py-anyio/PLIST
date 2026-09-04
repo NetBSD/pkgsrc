@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/07/22 08:24:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/09/04 05:29:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,9 @@ ${PYSITELIB}/anyio/_core/__init__.pyo
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.py
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.pyc
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.pyo
+${PYSITELIB}/anyio/_core/_concurrency_utils.py
+${PYSITELIB}/anyio/_core/_concurrency_utils.pyc
+${PYSITELIB}/anyio/_core/_concurrency_utils.pyo
 ${PYSITELIB}/anyio/_core/_contextmanagers.py
 ${PYSITELIB}/anyio/_core/_contextmanagers.pyc
 ${PYSITELIB}/anyio/_core/_contextmanagers.pyo
@@ -35,6 +38,9 @@ ${PYSITELIB}/anyio/_core/_exceptions.pyo
 ${PYSITELIB}/anyio/_core/_fileio.py
 ${PYSITELIB}/anyio/_core/_fileio.pyc
 ${PYSITELIB}/anyio/_core/_fileio.pyo
+${PYSITELIB}/anyio/_core/_futures.py
+${PYSITELIB}/anyio/_core/_futures.pyc
+${PYSITELIB}/anyio/_core/_futures.pyo
 ${PYSITELIB}/anyio/_core/_resources.py
 ${PYSITELIB}/anyio/_core/_resources.pyc
 ${PYSITELIB}/anyio/_core/_resources.pyo
@@ -65,6 +71,9 @@ ${PYSITELIB}/anyio/_core/_testing.pyo
 ${PYSITELIB}/anyio/_core/_typedattr.py
 ${PYSITELIB}/anyio/_core/_typedattr.pyc
 ${PYSITELIB}/anyio/_core/_typedattr.pyo
+${PYSITELIB}/anyio/_lazyimport.py
+${PYSITELIB}/anyio/_lazyimport.pyc
+${PYSITELIB}/anyio/_lazyimport.pyo
 ${PYSITELIB}/anyio/abc/__init__.py
 ${PYSITELIB}/anyio/abc/__init__.pyc
 ${PYSITELIB}/anyio/abc/__init__.pyo
