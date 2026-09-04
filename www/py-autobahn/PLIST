@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/07/03 07:23:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/09/04 06:56:08 adam Exp $
 bin/flatc-${PYVERSSUFFIX}
 bin/wamp-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -601,9 +601,15 @@ ${PYSITELIB}/autobahn/websocket/protocol.pyo
 ${PYSITELIB}/autobahn/websocket/test/__init__.py
 ${PYSITELIB}/autobahn/websocket/test/__init__.pyc
 ${PYSITELIB}/autobahn/websocket/test/__init__.pyo
+${PYSITELIB}/autobahn/websocket/test/test_websocket_compress.py
+${PYSITELIB}/autobahn/websocket/test/test_websocket_compress.pyc
+${PYSITELIB}/autobahn/websocket/test/test_websocket_compress.pyo
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_frame.py
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_frame.pyc
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_frame.pyo
+${PYSITELIB}/autobahn/websocket/test/test_websocket_max_message_size.py
+${PYSITELIB}/autobahn/websocket/test/test_websocket_max_message_size.pyc
+${PYSITELIB}/autobahn/websocket/test/test_websocket_max_message_size.pyo
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_protocol.py
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_protocol.pyc
 ${PYSITELIB}/autobahn/websocket/test/test_websocket_protocol.pyo
