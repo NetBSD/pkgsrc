@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2026/09/03 05:12:04 adam Exp $
+# $NetBSD: Makefile,v 1.685 2026/09/04 08:38:16 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -300,6 +300,7 @@ SUBDIR+=	py-ghp-import
 SUBDIR+=	py-icecream
 SUBDIR+=	py-immutables
 SUBDIR+=	py-installer
+SUBDIR+=	py-interface-meta
 SUBDIR+=	py-lazy_loader
 SUBDIR+=	py-libtmux
 SUBDIR+=	py-narwhals

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/04 08:38:16 adam Exp $
+
+BLAKE2s (interface_meta-2.0.1.tar.gz) = 24e64dcf2d7a964d2ea7901b2cbe16feee70fa6e61ceaf812de272537a63d815
+SHA512 (interface_meta-2.0.1.tar.gz) = 6800999a3984fdc22c0feb0dff88f8eb0a893650714fd13622f49237b6885cb6feb5ae9608b5964c5520dace06972801c66c370fb6256a509471b12bc863446f
+Size (interface_meta-2.0.1.tar.gz) = 15281 bytes
