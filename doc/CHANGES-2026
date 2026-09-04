@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5824 2026/09/04 13:08:33 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5825 2026/09/04 13:19:32 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8610,3 +8610,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-nanobind version 3.0.1 [adam 2026-09-04]
 	Updated print/py-pikepdf to 10.12.0 [adam 2026-09-04]
 	Updated ham/chirp to 20260904 [gdt 2026-09-04]
+	Updated www/resterm to 1.5.6 [drixter 2026-09-04]
