@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2026/07/14 09:08:48 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/04 05:29:17 adam Exp $
 
-DISTNAME=	anyio-4.14.2
+DISTNAME=	anyio-4.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -20,8 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.2.0:../../devel/py-exceptiongrou
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
-TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
+TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0:../../security/py-trustme
+TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.21:../../devel/py-uvloop
 
