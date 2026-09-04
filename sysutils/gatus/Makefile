@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/08/31 19:19:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/04 20:30:43 drixter Exp $
 
 DISTNAME=	gatus-5.36.0
 PKGREVISION=	4
@@ -12,6 +12,8 @@ COMMENT=	Developer-oriented health dashboard for monitoring services
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
+
+GO_VERSION_REQD=	126
 
 .include "go-modules.mk"
 
