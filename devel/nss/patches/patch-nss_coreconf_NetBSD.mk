@@ -1,6 +1,7 @@
-$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.6 2026/09/01 18:32:59 tnn Exp $
+$NetBSD: patch-nss_coreconf_NetBSD.mk,v 1.7 2026/09/04 09:59:32 tnn Exp $
 
 Match what Linux.mk does for LITTLE_ENDIAN.
+https://bugzilla.mozilla.org/show_bug.cgi?id=2068010
 
 --- nss/coreconf/NetBSD.mk.orig	2026-09-01 18:02:54.826000834 +0000
 +++ nss/coreconf/NetBSD.mk
