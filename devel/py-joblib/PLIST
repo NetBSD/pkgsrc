@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/12 11:33:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/09/04 05:25:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -43,15 +43,6 @@ ${PYSITELIB}/joblib/executor.pyo
 ${PYSITELIB}/joblib/externals/__init__.py
 ${PYSITELIB}/joblib/externals/__init__.pyc
 ${PYSITELIB}/joblib/externals/__init__.pyo
-${PYSITELIB}/joblib/externals/cloudpickle/__init__.py
-${PYSITELIB}/joblib/externals/cloudpickle/__init__.pyc
-${PYSITELIB}/joblib/externals/cloudpickle/__init__.pyo
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.py
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.pyc
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.pyo
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.py
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyc
-${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyo
 ${PYSITELIB}/joblib/externals/loky/__init__.py
 ${PYSITELIB}/joblib/externals/loky/__init__.pyc
 ${PYSITELIB}/joblib/externals/loky/__init__.pyo
@@ -94,6 +85,9 @@ ${PYSITELIB}/joblib/externals/loky/backend/resource_tracker.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.py
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/spawn.pyo
+${PYSITELIB}/joblib/externals/loky/backend/stdlib_py314_resource_tracker.py
+${PYSITELIB}/joblib/externals/loky/backend/stdlib_py314_resource_tracker.pyc
+${PYSITELIB}/joblib/externals/loky/backend/stdlib_py314_resource_tracker.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/synchronize.py
 ${PYSITELIB}/joblib/externals/loky/backend/synchronize.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/synchronize.pyo
