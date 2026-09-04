@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5816 2026/09/04 05:19:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5817 2026/09/04 05:29:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8596,3 +8596,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-vcs-versioning to 2.3.4 [adam 2026-09-04]
 	Updated devel/py-setuptools_scm to 10.2.3 [adam 2026-09-04]
 	Updated time/py-vdirsyncer to 0.21.0 [adam 2026-09-04]
+	Updated devel/py-joblib to 1.6.0 [adam 2026-09-04]
+	Updated devel/py-anyio to 4.15.0 [adam 2026-09-04]
