@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/04 12:22:12 adam Exp $
+
+BLAKE2s (nanobind-3.0.1.tar.gz) = cf9204fa2b3ecda68d9dffa8a2231c25ad526be286dc01a75072da3d3c70f334
+SHA512 (nanobind-3.0.1.tar.gz) = 2aba1bde6db455e22217f91860e6b2fd9c5b6536945e2de7125eef9c395055bc53028bb3d59ca0ef3f7a702e3c7a66175bdedd0d441a7572f1530642af4d35d4
+Size (nanobind-3.0.1.tar.gz) = 1142340 bytes
