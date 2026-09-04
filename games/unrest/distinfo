@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/04 22:48:52 charlotte Exp $
+
+BLAKE2s (unrest-1.1.0.tar.gz) = 47cd04d8363c1aeab4ee9455c989dd50b4388af2b2238c680f75bb0f5cff85e1
+SHA512 (unrest-1.1.0.tar.gz) = 082f3cb2cffc5690b940f37c0108fe6351bef6e6a942a0f68158aed1f46f4f7fd7f0a66188e9c3190491f22894088f1dd7e3832e0d313159a9ce2db48da3e0b4
+Size (unrest-1.1.0.tar.gz) = 315409 bytes
