@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/09/02 19:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/09/05 10:13:11 tnn Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -56,16 +56,12 @@ UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 
-# Try to use less POSIX semaphores (large MAKE_JOBS can consume them all)
-BOOT_JVMARGS=	-XX:+UnlockDiagnosticVMOptions
-
 # ${WRKSRC}/doc/building.mk explicitly states that its Makefiles are unsafe
 # to use -j.  Disable it and configure ourselves via configure arguments.
 MAKE_JOBS_METHOD=	manual
 
 CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
-CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=${BOOT_JVMARGS:Q}
 CONFIGURE_ARGS+=	--with-zlib=system
 CONFIGURE_ARGS+=	--with-giflib=bundled
 CONFIGURE_ARGS+=	--with-lcms=bundled

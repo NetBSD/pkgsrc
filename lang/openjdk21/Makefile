@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/09/02 19:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/05 10:13:11 tnn Exp $
 
 DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -30,8 +30,6 @@ BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
 BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
 BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
 BUILDLINK_TRANSFORM+=		opt:-std=c++11:-std=gnu++11
-# For NetBSD
-#BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,16 +55,12 @@ UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 
-# Try to use less POSIX semaphores (large MAKE_JOBS can consume them all)
-BOOT_JVMARGS=	-XX:+UnlockDiagnosticVMOptions
-
 # ${WRKSRC}/doc/building.mk explicitly states that its Makefiles are unsafe
 # to use -j.  Disable it and configure ourselves via configure arguments.
 MAKE_JOBS_METHOD=	manual
 
 CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
-CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=${BOOT_JVMARGS:Q}
 CONFIGURE_ARGS+=	--with-giflib=bundled
 CONFIGURE_ARGS+=	--with-lcms=bundled
 CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.libcups}/include
