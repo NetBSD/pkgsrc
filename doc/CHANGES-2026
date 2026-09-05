@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5834 2026/09/05 09:44:40 he Exp $
+$NetBSD: CHANGES-2026,v 1.5835 2026/09/05 10:14:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8623,3 +8623,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxml2 to 2.15.4 [wiz 2026-09-05]
 	Updated textproc/py-libxml2 to 2.15.4 [wiz 2026-09-05]
 	Updated net/nsd to 4.15.2 [he 2026-09-05]
+	Updated graphics/feh to 3.12.4 [pin 2026-09-05]
