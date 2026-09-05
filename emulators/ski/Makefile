@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/11/17 11:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/09/05 06:38:59 mrg Exp $
 
 DISTNAME=	ski-1.3.2
 PKGREVISION=	37
@@ -18,6 +18,8 @@ TOOL_DEPENDS+=	libelf>=0.8.13:../../devel/libelf
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+# Not C23 compatible
+FORCE_C_STD=		gnu11
 
 CPPFLAGS+=	-I${PREFIX}/include/libelf -L ${PREFIX}/lib
 
