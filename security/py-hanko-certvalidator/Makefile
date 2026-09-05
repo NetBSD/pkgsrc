@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/09/03 09:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/05 05:12:23 adam Exp $
 #
 # Changelog: https://docs.pyhanko.eu/en/latest/changelog.html#pyhanko-certvalidator
 
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-aiohttp>=1.0.4:../../www/py-test-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=   310 311 # py-aiohttp
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
