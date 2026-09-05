@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/15 16:47:08 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/05 10:28:25 pin Exp $
 bin/oh-my-posh
 share/oh-my-posh/1_shell.omp.json
 share/oh-my-posh/M365Princess.omp.json
@@ -52,6 +52,7 @@ share/oh-my-posh/huvix.omp.json
 share/oh-my-posh/if_tea.omp.json
 share/oh-my-posh/illusi0n.omp.json
 share/oh-my-posh/iterm2.omp.json
+share/oh-my-posh/jandedobbeleer-accessible.omp.json
 share/oh-my-posh/jandedobbeleer.omp.json
 share/oh-my-posh/jblab_2021.omp.json
 share/oh-my-posh/jonnychipz.omp.json
