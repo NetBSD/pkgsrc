@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.364 2026/08/31 19:19:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.365 2026/09/05 10:15:13 pin Exp $
 
-DISTNAME=		oh-my-posh-31.1.0
-PKGREVISION=		1
+DISTNAME=		oh-my-posh-31.1.3
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -10,8 +9,6 @@ MAINTAINER=		pin@NetBSD.org
 HOMEPAGE=		https://ohmyposh.dev/
 COMMENT=		Prompt theme engine for any shell
 LICENSE=		mit
-
-GO_VERSION_REQD+=	127
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
