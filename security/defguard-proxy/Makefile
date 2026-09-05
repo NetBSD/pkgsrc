@@ -1,24 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2026/09/02 19:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/05 05:08:24 adam Exp $
 
-PKGREVISION= 1
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-proxy-2.0.2
+DISTNAME=	defguard-proxy-${DEFGUARD_VERSION}
 GITHUB_PROJECT=	proxy
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
 
-EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}-proto${EXTRACT_SUFX}
-# Building web requires pnpm, which can't be easily build.
-EXTRA_DIST+=	${DISTNAME}-web-dist${EXTRACT_SUFX}
 # For internal crates.
-EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}${EXTRACT_SUFX}
+EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}.tar.xz
+
+WRKSRC=		${WRKDIR}/proxy-${DEFGUARD_VERSION}
 
 INSTALLATION_DIRS=	bin
-
-post-extract:
-	${RMDIR} ${WRKSRC}/proto && ${LN} -f -s ${WRKDIR}/proto ${WRKSRC}/proto
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/defguard-proxy ${DESTDIR}${PREFIX}/bin/
