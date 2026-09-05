@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5836 2026/09/05 10:15:31 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5837 2026/09/05 10:16:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8625,3 +8625,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nsd to 4.15.2 [he 2026-09-05]
 	Updated graphics/feh to 3.12.4 [pin 2026-09-05]
 	Updated shells/oh-my-posh to 31.1.3 [pin 2026-09-05]
+	Updated www/wikid to 3.1.1 [pin 2026-09-05]
