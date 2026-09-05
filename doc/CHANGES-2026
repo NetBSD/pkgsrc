@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5831 2026/09/05 05:09:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5832 2026/09/05 09:22:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8620,3 +8620,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard to 2.1.0 [adam 2026-09-05]
 	Updated security/defguard-gateway to 2.1.0 [adam 2026-09-05]
 	Updated security/defguard-proxy to 2.1.0 [adam 2026-09-05]
+	Updated textproc/libxml2 to 2.15.4 [wiz 2026-09-05]

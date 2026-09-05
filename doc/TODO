@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27863 2026/09/02 05:40:43 adam Exp $
+$NetBSD: TODO,v 1.27864 2026/09/05 09:22:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o HElib-2.1.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-25.2.7 [wip]
+	o MesaLib-25.3.6 [wip]
 	o MesaLib-26.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
@@ -1188,7 +1188,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rust-1.98.0 [wip]
+	o rust-1.98.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
