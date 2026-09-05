@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/09/03 05:13:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/05 05:11:26 adam Exp $
 
 DISTNAME=	copier-9.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,10 +30,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	copier
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=   310 311 # py-yaml
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
