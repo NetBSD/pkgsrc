@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/08/31 08:42:51 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/09/05 10:16:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
