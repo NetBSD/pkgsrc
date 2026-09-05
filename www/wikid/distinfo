@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2026/08/31 08:42:51 pin Exp $
+$NetBSD: distinfo,v 1.4 2026/09/05 10:16:15 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -324,9 +324,9 @@ Size (webpki-roots-0.26.11.crate) = 15557 bytes
 BLAKE2s (webpki-roots-1.0.9.crate) = 8d3fbefa7ee83729f8c00bafad8c1fe9c305c8170cc46643509f0f4c792f3bf7
 SHA512 (webpki-roots-1.0.9.crate) = 4e518fb376704cee9f9691d3abf23bd19d181c018063996d6d83bcb5c05ab80967ee995a5a21eccac4b1765a6f7f7005f9f584d66029c3d17284f7156af48d0f
 Size (webpki-roots-1.0.9.crate) = 217462 bytes
-BLAKE2s (wikid-3.0.0.tar.gz) = 74fd6e2f77e9e480feaa12e42ab61f6e2ba01448cd6e7ee3d95b85794d82af0a
-SHA512 (wikid-3.0.0.tar.gz) = 32fac0c41efea913a99c3af9fb1876d2211a06bbaa419404fcb4cff61afce5c1929c170984e5731847105e70dbab6c06c392a0bf8426a185979527af0499d21a
-Size (wikid-3.0.0.tar.gz) = 126844 bytes
+BLAKE2s (wikid-3.1.1.tar.gz) = 7999d8f9b5e4753bebbf8886248881bff57ea9cd8d76e8bc07a06f93008c18f1
+SHA512 (wikid-3.1.1.tar.gz) = 668be5935320f107f1a4ff1d08df1acc32466f345b23b01b43f4679651afaa941bb41cb9b433bd0eb08a76641d78ced6648a00b72c568415d702a6414397dcc1
+Size (wikid-3.1.1.tar.gz) = 139891 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
