@@ -1,10 +1,11 @@
-# $NetBSD: version.mk,v 1.7 2026/07/24 09:03:52 adam Exp $
+# $NetBSD: version.mk,v 1.8 2026/09/05 05:08:23 adam Exp $
 
-DEFGUARD_VERSION=	2.0.2
+DEFGUARD_VERSION=	2.1.0
 
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=defguard/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://defguard.net/

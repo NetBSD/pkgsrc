@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2026/09/02 19:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/05 05:08:24 adam Exp $
 
-PKGREVISION= 1
 .include "../../security/defguard/version.mk"
 
-DISTNAME=	defguard-gateway-2.0.5
-EXTRACT_SUFX=	.tar.xz
+DISTNAME=	defguard-gateway-${DEFGUARD_VERSION}
 GITHUB_PROJECT=	gateway
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 COMMENT=	True Zero-Trust WireGuard VPN with 2FA/MFA
 
 # For internal crates.
-EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}.tar.gz
+EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}.tar.xz
+
+WRKSRC=		${WRKDIR}/gateway-${DEFGUARD_VERSION}
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 NFTNL_REV=	abd34b08c53b88a47346da6362e360d522cf8ca2
