@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2026/08/14 12:50:58 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2026/09/05 09:44:05 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = cd7cd0c0acc259f55291932fc679388003c3c108257f08f660d328974b764ee5
 SHA512 (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = 26003c0ace59f41b03584ae0bbe79b15041d4c3537d5d4227a3396276943ff95d687de0aa5025b5dddb1d91cf33ffbc7fd57d7cc8de70aef53907fa2c2652811
@@ -21,7 +21,7 @@ SHA1 (patch-make_autoconf_hotspot.m4) = 6370c6cb2a3f225c502e7916342104cf1288f4cf
 SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
 SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd199445f
 SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
-SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 3172d8d76e0e79b127605429fb70dccd164b33c8
+SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 249c1caa37a18016fa268a820989eb6de2f47346
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
 SHA1 (patch-src_hotspot_cpu_aarch64_frame__aarch64.hpp) = 263be050505100a9ff37d75e2aa465e0ffb04d68
 SHA1 (patch-src_hotspot_cpu_aarch64_macroAssembler__aarch64.cpp) = 0b720cdfef884368432b818bb56648b462539125
@@ -31,6 +31,6 @@ SHA1 (patch-src_hotspot_cpu_aarch64_stubGenerator__aarch64.cpp) = 146a6ab0027139
 SHA1 (patch-src_hotspot_cpu_aarch64_templateInterpreterGenerator__aarch64.cpp) = 1a017334bdab5717ea2aaf4ae77a1e3974ebee0e
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491d14ffc
 SHA1 (patch-src_hotspot_share_runtime_threadWXSetters.inline.hpp) = f704bb060803e500415b5d300e26857cf7288ca5
-SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = d7bd8839ecd84459fbd3e7d14ac0e2f48b8b4032
+SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = ff7efbc1d5374a7ea992700d04c6e363b228a3e4
 SHA1 (patch-src_java.desktop_unix_native_libpipewire_include_spa_utils_string.h) = 56090e5f992171db874a1427e8b2905da017fa3c
-SHA1 (patch-src_jdk.attach_bsd_native_libattach_VirtualMachineImpl.c) = ca36f0e40f55f2779a70eb7f32cc2d17d79b9cef
+SHA1 (patch-src_jdk.attach_bsd_native_libattach_VirtualMachineImpl.c) = e08fd5e5dca583c8c73b306e76882f1e2d9a8afd
