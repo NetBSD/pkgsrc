@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.143 2026/08/25 16:11:22 pin Exp $
+# $NetBSD: go-modules.mk,v 1.144 2026/09/05 10:15:13 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -70,8 +70,8 @@ GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.7.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.7.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.8.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.26.8.zip
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.10.0.mod
