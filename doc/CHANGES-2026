@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5830 2026/09/04 23:39:32 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.5831 2026/09/05 05:09:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8616,3 +8616,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/matrix-synapse to 1.160.0 [gdt 2026-09-04]
 	Added games/unrest version 1.1.0 [charlotte 2026-09-04]
 	Updated chat/element-web to 1.12.27 [gdt 2026-09-04]
+	Updated emulators/atari800 to 7.1.2 [adam 2026-09-05]
+	Updated security/defguard to 2.1.0 [adam 2026-09-05]
+	Updated security/defguard-gateway to 2.1.0 [adam 2026-09-05]
+	Updated security/defguard-proxy to 2.1.0 [adam 2026-09-05]
