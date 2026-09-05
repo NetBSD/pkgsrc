@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2026/08/31 19:18:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/05 19:09:43 bsiegert Exp $
 
 DISTNAME=	compiledb-go-1.7.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcying/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

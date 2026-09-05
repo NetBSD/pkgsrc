@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2026/08/31 19:18:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/05 19:09:45 bsiegert Exp $
 
 GITHUB_PROJECT=	go-tools
 GITHUB_TAG=	2025.1.1
 DISTNAME=	go-tools-${GITHUB_TAG}
 PKGNAME=	go-staticcheck-${GITHUB_TAG}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dominikh/}
 

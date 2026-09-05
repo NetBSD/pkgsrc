@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2026/08/31 19:19:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.90 2026/09/05 19:10:02 bsiegert Exp $
 
 DISTNAME=		vultr-2.0.3
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JamesClonk/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

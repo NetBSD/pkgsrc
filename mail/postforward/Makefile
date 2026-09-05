@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2026/08/31 19:18:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.86 2026/09/05 19:09:49 bsiegert Exp $
 
 DISTNAME=		postforward-1.1.1
-PKGREVISION=		27
+PKGREVISION=		28
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=zoni/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

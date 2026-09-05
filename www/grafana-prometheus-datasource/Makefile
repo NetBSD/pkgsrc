@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/08/31 19:19:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/05 19:10:05 bsiegert Exp $
 
 DISTNAME=	grafana-prometheus-datasource-13.1.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2026/08/31 19:19:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/05 19:09:57 bsiegert Exp $
 
 AGH_VERSION=	0.107.79
 DISTNAME=	adguardhome-${AGH_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
