@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5839 2026/09/05 18:57:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5840 2026/09/05 19:09:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8628,3 +8628,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wikid to 3.1.1 [pin 2026-09-05]
 	Updated x11/xterm to 411 [pin 2026-09-05]
 	Updated lang/gjs to 1.82.3nb2 [wiz 2026-09-05]
+	Updated lang/go126 to 1.26.8 [bsiegert 2026-09-05]
+	Updated lang/go127 to 1.27.1 [bsiegert 2026-09-05]
