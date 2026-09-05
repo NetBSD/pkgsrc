@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/08/15 12:26:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/05 19:08:36 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go126/CONTRIBUTING.md
@@ -5969,6 +5969,7 @@ go126/src/debug/elf/testdata/gcc-amd64-openbsd-debug-with-rela.obj
 go126/src/debug/elf/testdata/gcc-riscv64-linux-exec
 go126/src/debug/elf/testdata/go-relocation-test-clang-arm.obj
 go126/src/debug/elf/testdata/go-relocation-test-clang-x86.obj
+go126/src/debug/elf/testdata/go-relocation-test-gcc133-ppc.obj
 go126/src/debug/elf/testdata/go-relocation-test-gcc424-x86-64.obj
 go126/src/debug/elf/testdata/go-relocation-test-gcc441-x86-64.obj
 go126/src/debug/elf/testdata/go-relocation-test-gcc441-x86.obj
@@ -7244,6 +7245,7 @@ go126/src/internal/cpu/cpu_wasm.go
 go126/src/internal/cpu/cpu_x86.go
 go126/src/internal/cpu/cpu_x86.s
 go126/src/internal/cpu/cpu_x86_darwin.go
+go126/src/internal/cpu/cpu_x86_netbsd.go
 go126/src/internal/cpu/cpu_x86_other.go
 go126/src/internal/cpu/cpu_x86_test.go
 go126/src/internal/cpu/datacache_unsupported.go

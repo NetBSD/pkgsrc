@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/08/22 18:49:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/05 19:08:37 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go127/CONTRIBUTING.md
@@ -6236,6 +6236,7 @@ go127/src/debug/elf/testdata/gcc-amd64-openbsd-debug-with-rela.obj
 go127/src/debug/elf/testdata/gcc-riscv64-linux-exec
 go127/src/debug/elf/testdata/go-relocation-test-clang-arm.obj
 go127/src/debug/elf/testdata/go-relocation-test-clang-x86.obj
+go127/src/debug/elf/testdata/go-relocation-test-gcc133-ppc.obj
 go127/src/debug/elf/testdata/go-relocation-test-gcc424-x86-64.obj
 go127/src/debug/elf/testdata/go-relocation-test-gcc441-x86-64.obj
 go127/src/debug/elf/testdata/go-relocation-test-gcc441-x86.obj
@@ -14745,6 +14746,8 @@ go127/test/fixedbugs/issue8073.go
 go127/test/fixedbugs/issue8074.go
 go127/test/fixedbugs/issue8076.go
 go127/test/fixedbugs/issue8079.go
+go127/test/fixedbugs/issue80976.go
+go127/test/fixedbugs/issue81165.go
 go127/test/fixedbugs/issue8132.go
 go127/test/fixedbugs/issue8139.go
 go127/test/fixedbugs/issue8154.go
