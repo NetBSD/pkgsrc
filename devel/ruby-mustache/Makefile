@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/03/01 07:34:14 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/06 14:27:37 taca Exp $
 
-DISTNAME=		mustache-1.1.2
+DISTNAME=		mustache-1.1.3
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 
