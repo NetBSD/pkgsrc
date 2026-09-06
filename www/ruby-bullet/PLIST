@@ -1,17 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2026/01/18 14:58:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 16:13:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/bullet.rb
 ${GEM_LIBDIR}/lib/bullet/active_job.rb
-${GEM_LIBDIR}/lib/bullet/active_record4.rb
-${GEM_LIBDIR}/lib/bullet/active_record41.rb
-${GEM_LIBDIR}/lib/bullet/active_record42.rb
-${GEM_LIBDIR}/lib/bullet/active_record5.rb
-${GEM_LIBDIR}/lib/bullet/active_record52.rb
-${GEM_LIBDIR}/lib/bullet/active_record60.rb
-${GEM_LIBDIR}/lib/bullet/active_record61.rb
 ${GEM_LIBDIR}/lib/bullet/active_record70.rb
 ${GEM_LIBDIR}/lib/bullet/active_record71.rb
 ${GEM_LIBDIR}/lib/bullet/active_record72.rb

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/06/07 04:13:27 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/06 16:13:17 taca Exp $
 
-DISTNAME=	bullet-8.1.3
+DISTNAME=	bullet-8.2.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
