@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4684 2026/09/04 12:22:12 adam Exp $
+# $NetBSD: Makefile,v 1.4685 2026/09/06 09:21:58 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -301,6 +301,7 @@ SUBDIR+=	concurrencykit
 SUBDIR+=	conftest
 SUBDIR+=	confuse
 SUBDIR+=	cook
+SUBDIR+=	corrosion
 SUBDIR+=	cppcheck
 SUBDIR+=	cppcodec
 SUBDIR+=	cppunit

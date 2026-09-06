@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/06 09:21:58 markd Exp $
+lib/cmake/Corrosion/CorrosionConfig.cmake
+lib/cmake/Corrosion/CorrosionConfigVersion.cmake
+share/cmake/Corrosion.cmake
+share/cmake/CorrosionGenerator.cmake
+share/cmake/FindRust.cmake
