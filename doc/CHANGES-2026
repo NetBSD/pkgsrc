@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5850 2026/09/06 14:01:25 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5851 2026/09/06 14:02:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8930,3 +8930,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/gping to 1.21.0 [pin 2026-09-06]
 	Updated net/xfr to 0.10.1 [pin 2026-09-06]
 	Updated news/eilmeldung to 1.8.1 [pin 2026-09-06]
+	Updated sysutils/broot to 1.60.0 [pin 2026-09-06]
