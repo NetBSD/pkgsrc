@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.364 2026/09/06 09:59:29 markd Exp $
+# $NetBSD: Makefile,v 1.365 2026/09/06 11:09:46 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -109,7 +109,6 @@ SUBDIR+=	libflashsupport
 SUBDIR+=	libhdhomerun
 SUBDIR+=	libkate
 SUBDIR+=	libkcddb
-SUBDIR+=	libkcompactdisc
 SUBDIR+=	libmatroska
 SUBDIR+=	libmediaart
 SUBDIR+=	libmediainfo
