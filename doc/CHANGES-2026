@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5852 2026/09/06 14:03:27 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5853 2026/09/06 14:04:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8932,3 +8932,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated news/eilmeldung to 1.8.1 [pin 2026-09-06]
 	Updated sysutils/broot to 1.60.0 [pin 2026-09-06]
 	Updated sysutils/disko to 0.8.1 [pin 2026-09-06]
+	Updated sysutils/dusage to 0.4.1 [pin 2026-09-06]
