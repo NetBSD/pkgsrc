@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/07/20 05:40:15 taca Exp $
+$NetBSD: distinfo,v 1.14 2026/09/06 15:43:43 taca Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -39,9 +39,9 @@ Size (cfg-if-1.0.4.crate) = 9360 bytes
 BLAKE2s (clang-sys-1.8.1.crate) = 214b14004732417ef813d486fe0fa6200e5abbfabb1dcda4ce723f6583911648
 SHA512 (clang-sys-1.8.1.crate) = a68c426c20110fddb8bba07d6631517b0528fad45802e5a34a22561d7e6dad82dc5001387019a03f275e9a671b09ee0a06b6e86793c4fb4ec655700bb0f5e125
 Size (clang-sys-1.8.1.crate) = 44009 bytes
-BLAKE2s (commonmarker-2.9.0.gem) = 25758d13692db97790e0b00f9ab5c95d23f5f8cc6ae7cc907a4665372460ed46
-SHA512 (commonmarker-2.9.0.gem) = 9510e9ff0d27c9107a9040302e290e31e37eb49752f718eeced20fa44ea35229ce8348ea7d04ab555fc446b7dfed4d973d73ec41dac426818655fd873949078b
-Size (commonmarker-2.9.0.gem) = 31744 bytes
+BLAKE2s (commonmarker-2.10.0.gem) = 4cea3a6eaa3d7b8b6d5d038d9d0c2175fd94a81a9aa266468c7f8683d3b701c9
+SHA512 (commonmarker-2.10.0.gem) = 749c4019d735072943d2041fe946c490cee6d5252df17b70a5036c559bb55dbb268814481c65aaf69004faf50ea3e98d5593e5223b39b71ea91ee8f41edc3fa0
+Size (commonmarker-2.10.0.gem) = 33280 bytes
 BLAKE2s (comrak-0.54.0.crate) = a7be64bec0e4d2d03a89162d11a843cdaceeba94c3bd33046bfcda6be245ec71
 SHA512 (comrak-0.54.0.crate) = 3e98e45ee2dce87ee6032728b9482242e6d9711bc30c2e9b65aabe944b19ec045de45ed08fd66e05e1742cbe86673dfb7d73859bbe5fad81a37f68de84cc42f5
 Size (comrak-0.54.0.crate) = 267188 bytes
