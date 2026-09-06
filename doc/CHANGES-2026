@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5888 2026/09/06 17:02:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5889 2026/09/06 17:13:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8971,3 +8971,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-rex-powershell to 0.1.105 [taca 2026-09-06]
 	Added misc/py-forbiddenfruit version 0.1.4 [adam 2026-09-06]
 	Added devel/py-blockbuster version 1.5.27 [adam 2026-09-06]
+	Updated devel/py-anyio to 4.15.1 [adam 2026-09-06]
+	Updated devel/py-configargparse to 1.7.6 [adam 2026-09-06]
