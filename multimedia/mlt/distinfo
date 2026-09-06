@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2025/12/02 20:32:27 markd Exp $
+$NetBSD: distinfo,v 1.21 2026/09/06 09:56:09 markd Exp $
 
-BLAKE2s (mlt-7.34.1.tar.gz) = 7751ed62346f078fa3e57faf60b74959ddf6386cd0398158b2d25cebf80301a7
-SHA512 (mlt-7.34.1.tar.gz) = d14145c033274c669f7437cad39f479e108509f7292a32f469acc146440d8c9b689b78b6cad4ad6da7c74f9e2e3f9041626d7513376943d91f1c85fcfb634f44
-Size (mlt-7.34.1.tar.gz) = 1511970 bytes
-SHA1 (patch-cmake_FindFFmpeg.cmake) = 493c8fb35a15a6079735e4cd8cf02272af7aa539
+BLAKE2s (mlt-7.40.0.tar.gz) = ebcb775d712f3d834983918cfeaed7b9f501d05f83a4e320a18557d2346b85f1
+SHA512 (mlt-7.40.0.tar.gz) = 0f276c371a15decb0814008496206d3314b5d548389dc9e4913cfbc9ae03502f9268b8d22435d501232ac771ee69847ca78bcb707a95784fb9de21ac077128dc
+Size (mlt-7.40.0.tar.gz) = 1691509 bytes
 SHA1 (patch-src_framework_mlt__properties.c) = 387866d6ad5ffb5888a5f12c970c1f3b40dac202
 SHA1 (patch-src_framework_mlt__property.c) = 288d6f128094b281b2037d5ac6403f7ef83d585a
-SHA1 (patch-src_modules_qt_CMakeLists.txt) = 42fbe0531f299a68c341b3259e718dac2ec5593d
+SHA1 (patch-src_melt_io.c) = 461018d90e0e92551e57e15bd227473d59477d71
+SHA1 (patch-src_modules_openfx_factory.c) = 438f8111e6c13008958118ae58754490f87b626b

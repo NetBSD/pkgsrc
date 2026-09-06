@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.161 2026/09/02 19:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.162 2026/09/06 09:56:09 markd Exp $
 
-PKGREVISION= 6
 .include "Makefile.common"
 
 COMMENT=	Open source multimedia framework
 
 CMAKE_CONFIGURE_ARGS+=	-DMOD_VIDSTAB=OFF
-CMAKE_CONFIGURE_ARGS+=	-DMOD_QT=OFF
-CMAKE_CONFIGURE_ARGS+=	-DMOD_QT6=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DMOD_QT=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DMOD_QT6=OFF
+CMAKE_CONFIGURE_ARGS+=	-DMOD_RNNOISE=OFF
 
 SUBST_CLASSES+=		frei0r
 SUBST_STAGE.frei0r=	pre-configure
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE+=	src/framework/mlt-framework.pc.in
 PKGCONFIG_OVERRIDE+=	src/mlt++/mlt++.pc.in
 
 .include "../../devel/cmake/build.mk"
+
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
@@ -31,12 +32,15 @@ PKGCONFIG_OVERRIDE+=	src/mlt++/mlt++.pc.in
 .endif
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/movit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
