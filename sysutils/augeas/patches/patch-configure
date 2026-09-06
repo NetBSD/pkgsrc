@@ -1,0 +1,82 @@
+$NetBSD: patch-configure,v 1.1 2026/09/06 18:44:01 bsiegert Exp $
+
+Two changes to the generated script.
+
+Glob the lens lists here rather than with $(wildcard) in the makefile; see
+patch-Makefile.in.  Doing it in configure rather than leaving a bare glob
+in the makefile is what makes an out-of-tree build work: the install rule
+falls back to $(srcdir)/ only when it can test each name, which it cannot
+do with a pattern.  Sent upstream as hercules-team/augeas#889.
+
+Do not use -fexceptions where the personality routine cannot be linked.
+The flag makes the compiler emit exception tables, and those name
+__gcc_personality_v0.  The check upstream makes is a compile and link of a
+program whose main() is empty, which settles nothing: an empty main() has
+no exception table and so never mentions the routine, the flag is
+accepted, and the link of the real program fails afterwards.  On OpenBSD
+that is what happens; libcompiler_rt.a has the routine but _Unwind_* live
+only in libc++abi, which a C program does not link:
+
+  ld: error: undefined symbol: _Unwind_GetLanguageSpecificData
+  >>> referenced by gcc_personality_v0.c:203
+  >>>   gcc_personality_v0.o:(__gcc_personality_v0)
+  >>>   in archive /usr/lib/libcompiler_rt.a
+
+Asking for the routine itself changes nothing where it links, so NetBSD
+and Linux are unaffected.  Sent upstream as hercules-team/augeas#891,
+which changes acinclude.m4; this is the same check written the way the
+generated script does it, so that autoreconf is not needed here.
+
+--- configure.orig
++++ configure
+@@ -2153,6 +2153,8 @@
+ PACKAGE_NAME
+ PATH_SEPARATOR
+ SHELL
++LENS_FILES
++LENS_TEST_FILES
+ am__quote'
+ ac_subst_files=''
+ ac_user_opts='
+@@ -17842,6 +17844,31 @@
+     warnCFLAGS=
+ 
+     common_flags="-fexceptions -fasynchronous-unwind-tables"
++
++    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether __gcc_personality_v0 can be linked" >&5
++printf %s "checking whether __gcc_personality_v0 can be linked... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++extern void __gcc_personality_v0(void);
++int
++main (void)
++{
++__gcc_personality_v0();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"
++then :
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++printf "%s\n" "yes" >&6; }
++else $as_nop
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
++printf "%s\n" "no" >&6; }
++    common_flags=""
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.beam \
++    conftest$ac_exeext conftest.$ac_ext
+ 
+     case "$enable_compile_warnings" in
+     no)
+@@ -52016,6 +52043,9 @@
+ fi
+ 
+ 
++LENS_FILES=`cd "$srcdir" && echo lenses/*.aug`
++LENS_TEST_FILES=`cd "$srcdir" && echo lenses/tests/*.aug`
++
+ ac_config_files="$ac_config_files Makefile gnulib/lib/Makefile gnulib/tests/Makefile src/Makefile man/Makefile tests/Makefile examples/Makefile doc/Makefile doc/naturaldocs/Makefile augeas.pc augeas.spec"
+ 
+ cat >confcache <<\_ACEOF

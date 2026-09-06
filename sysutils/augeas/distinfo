@@ -1,5 +1,17 @@
-$NetBSD: distinfo,v 1.8 2025/04/28 19:31:33 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/09/06 18:44:01 bsiegert Exp $
 
 BLAKE2s (augeas-1.14.1.tar.gz) = c16626c6d440ab43be0b705f4aef01ebbb109544a23478a780fd563ec27c1004
 SHA512 (augeas-1.14.1.tar.gz) = fddb2e243f979e71fc09f9d45d569d6307b35485b2d885bf7bcbc032ba5617fe7ab2071a041422c3efe2dd62eda74aba41016d248c0636e947d4f1c9144375aa
 Size (augeas-1.14.1.tar.gz) = 2653776 bytes
+SHA1 (patch-CVE-2025-2588) = 64f6fc558930a890b68592b1e41d6f2fffd1a928
+SHA1 (patch-Makefile.in) = 8ea89f64b2f32e96793e95a24b877ca63b0c4d51
+SHA1 (patch-configure) = 0ed1f68fdbf538404bfebd66bae3ee87a90a78f4
+SHA1 (patch-examples_dump.c) = e3a4e38df55a9ca0c9523b7afe1de3f08135c395
+SHA1 (patch-lenses_pg_hba.aug) = c4d7219beaa7c585505cafa7a9e4f3657b6cbddc
+SHA1 (patch-lenses_postgresql.aug) = 7b645f395e2e5e04a23a6bb811cefde5c0610cff
+SHA1 (patch-lenses_rsyslog.aug) = 016c09c8f9746ab028fc710618f65de3fbb5f7df
+SHA1 (patch-lenses_shellvars.aug) = c3d6f20e8f6d53b266716c8f2809c2bac6c4b98b
+SHA1 (patch-lenses_simplevars.aug) = 5cc297f6401b7d1965d368446601047e21c2bc06
+SHA1 (patch-lenses_tests_test_simplevars.aug) = 3ddb6bf8d524f0fda8d717d850c855e9a9eb49f6
+SHA1 (patch-man_Makefile.in) = efc74a71eb28976950b56f79a7cad45c6747d965
+SHA1 (patch-src_augtool.c) = 9369842b7ddfe117fc470eb366f45abeb36e3862

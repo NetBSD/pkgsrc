@@ -1,0 +1,56 @@
+$NetBSD: patch-man_Makefile.in,v 1.1 2026/09/06 18:44:02 bsiegert Exp $
+
+Point the manual pages at the configured lens directory.
+
+augtool.1, augparse.1, augmatch.1 and augprint.1 all say the lenses live
+in /usr/share/augeas/lenses.  What the tools search is AUGEAS_LENS_DIR,
+which src/internal.h builds from DATADIR, which configure sets from
+$(datadir).  The text is therefore only right when the package was
+configured with --prefix=/usr, and wrong for pkgsrc: /usr/pkg by default,
+/opt/pkg on macOS, whatever --prefix says.  There are 15 mentions across
+the four pages.
+
+Rewriting the installed pages rather than the .pod sources keeps the
+sources readable and needs no extra build step: the substitution has
+nothing to do until the paths are known, which is at install time.
+
+Sent upstream as hercules-team/augeas#892, which adds install-data-hook to
+man/Makefile.am.  This is the same change in the generated makefile: the
+hook itself, the line that calls it from install-data-am, and the .PHONY
+entry, all as automake writes them.
+
+--- man/Makefile.in.orig
++++ man/Makefile.in
+@@ -1784,6 +1784,8 @@
+ info-am:
+ 
+ install-data-am: install-man
++	@$(NORMAL_INSTALL)
++	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ 
+ install-dvi: install-dvi-am
+ 
+@@ -1836,7 +1838,8 @@
+ .PHONY: all all-am check check-am clean clean-generic clean-libtool \
+ 	cscopelist-am ctags-am distclean distclean-generic \
+ 	distclean-libtool distdir dvi dvi-am html html-am info info-am \
+-	install install-am install-data install-data-am install-dvi \
++	install install-am install-data install-data-am \
++	install-data-hook install-dvi \
+ 	install-dvi-am install-exec install-exec-am install-html \
+ 	install-html-am install-info install-info-am install-man \
+ 	install-man1 install-pdf install-pdf-am install-ps \
+@@ -1851,6 +1854,13 @@
+ 
+ %.1: %.pod
+ 	pod2man -c "Augeas" -r "Augeas $(VERSION)" $< > $@
++
++install-data-hook:
++	@for f in $(man1_MANS); do \
++	  p=$(DESTDIR)$(man1dir)/$$f; \
++	  sed -e 's|/usr/share/augeas|$(datadir)/augeas|g' $$p > $$p.tmp \
++	    && mv -f $$p.tmp $$p; \
++	done
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
