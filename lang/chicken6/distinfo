@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/09/06 09:44:10 bsiegert Exp $
+
+BLAKE2s (chicken-6.0.0.tar.gz) = 16b06d5c40b240d3acd5c84e12e5e66cd0cd5de1ea2bc964e20838d541a0f020
+SHA512 (chicken-6.0.0.tar.gz) = 781eb458beb0242707b6460a187d6a06178aa19d2062014d753c02be1d9e6f0486d3295ea4f4464179a4bf273e9b6512f03564901670efcf3baa4f269f28c3e7
+Size (chicken-6.0.0.tar.gz) = 4287731 bytes
+SHA1 (patch-Makefile.macosx) = b43e53c6e2acf435458dc6da6dce998fb920ce06
+SHA1 (patch-tests_runtests.sh) = c2bcee720a56cc399c6acdb1e002dbcd82ea272e
