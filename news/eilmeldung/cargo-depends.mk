@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2026/08/26 10:57:06 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2026/09/06 14:01:06 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -301,6 +301,8 @@ CARGO_CRATE_DEPENDS+=	if-watch-3.2.2
 CARGO_CRATE_DEPENDS+=	image-0.25.10
 CARGO_CRATE_DEPENDS+=	image-webp-0.2.4
 CARGO_CRATE_DEPENDS+=	imgref-1.12.2
+CARGO_CRATE_DEPENDS+=	include_dir-0.7.4
+CARGO_CRATE_DEPENDS+=	include_dir_macros-0.7.4
 CARGO_CRATE_DEPENDS+=	indenter-0.3.4
 CARGO_CRATE_DEPENDS+=	indexmap-1.9.3
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
@@ -585,6 +587,7 @@ CARGO_CRATE_DEPENDS+=	serde_toml-0.0.1
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	serde_with-3.22.0
 CARGO_CRATE_DEPENDS+=	serde_with_macros-3.22.0
+CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	servo_arc-0.4.3
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
 CARGO_CRATE_DEPENDS+=	sha2-0.11.0
@@ -693,7 +696,8 @@ CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.24
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.3
 CARGO_CRATE_DEPENDS+=	unicode-truncate-2.0.1
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
-CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
+CARGO_CRATE_DEPENDS+=	unicode-width-0.2.0
+CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
 CARGO_CRATE_DEPENDS+=	url-2.5.8
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
