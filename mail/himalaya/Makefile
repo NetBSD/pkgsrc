@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/08/07 09:23:28 pin Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/06 13:58:06 pin Exp $
 
-DISTNAME=	himalaya-2.0.0
+DISTNAME=	himalaya-2.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pimalaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,7 @@ USE_LANGUAGES+=	c c++
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.89.0
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
