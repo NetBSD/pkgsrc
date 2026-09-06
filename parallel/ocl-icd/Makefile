@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/05/07 08:04:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/06 15:31:25 taca Exp $
 
-DISTNAME=	ocl-icd-2.3.3
+DISTNAME=	ocl-icd-2.3.5
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OCL-dev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
