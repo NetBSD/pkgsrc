@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5867 2026/09/06 15:09:06 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5868 2026/09/06 15:11:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8950,3 +8950,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ruby-mini-magick to 5.4.0 [taca 2026-09-06]
 	Updated misc/ruby-sprockets to 4.4.1 [taca 2026-09-06]
 	Updated net/ruby-amq-protocol to 2.9.0 [taca 2026-09-06]
+	Updated net/ruby-domain_name to 0.6.20260902 [taca 2026-09-06]
