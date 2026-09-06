@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5856 2026/09/06 14:07:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5857 2026/09/06 14:11:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8936,3 +8936,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mirador to 1.9.0 [pin 2026-09-06]
 	Updated sysutils/tealdeer to 1.9.0 [pin 2026-09-06]
 	Updated wm/2bwm to 0.4 [pin 2026-09-06]
+	Updated mail/roundcube to 1.6.19 [taca 2026-09-06]
+	Updated mail/roundcube-plugin-enigma to 1.6.19 [taca 2026-09-06]
+	Updated mail/roundcube-plugin-password to 1.6.19 [taca 2026-09-06]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.19 [taca 2026-09-06]
