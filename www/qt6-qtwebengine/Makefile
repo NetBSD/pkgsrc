@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/06 09:04:05 markd Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
@@ -144,7 +144,7 @@ do-install:
 PYTHON_FOR_BUILD_ONLY=  tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../multimedia/openh264/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
