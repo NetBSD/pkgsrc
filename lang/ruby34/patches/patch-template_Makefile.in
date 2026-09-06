@@ -1,0 +1,30 @@
+$NetBSD: patch-template_Makefile.in,v 1.1 2026/09/06 15:13:58 kikadf Exp $
+
+Try fixing make parallelism/submake problems.
+
+1. make sure no stale probes.o is there when the probes.o is rebuilt
+2. ruby-glommed and probes.stamp depend on the same files, make sure
+   they don't trigger the same objects twice.
+
+https://bugs.ruby-lang.org/issues/22059
+
+--- template/Makefile.in.orig	2026-05-07 20:25:14.644318083 +0000
++++ template/Makefile.in
+@@ -523,7 +523,7 @@ probes.stamp: $(DTRACE_REBUILD_OBJS)
+ 
+ probes.stamp: $(DTRACE_REBUILD_OBJS)
+ 	$(Q) if test -f $@ -o -f probes.$(OBJEXT); then \
+-	  $(RM) $(DTRACE_REBUILD_OBJS) $@; \
++	  $(RM) $(DTRACE_REBUILD_OBJS) $@ probes.$(OBJEXT); \
+ 	  $(ECHO0) "rebuilding objects which were modified by \"dtrace -G\""; \
+ 	  $(MAKE) $(DTRACE_REBUILD_OBJS); \
+ 	fi
+@@ -537,7 +537,7 @@ probes.$(OBJEXT): $(srcdir)/probes.d $(DTRACE_REBUILD:
+ 
+ # DTrace static library hacks described here:
+ # https://marc.info/?l=opensolaris-dtrace-discuss&m=114761203110734&w=4
+-ruby-glommed.$(OBJEXT):
++ruby-glommed.$(OBJEXT): probes.$(OBJEXT)
+ 	@$(ECHO) generating a glommed object with DTrace probes for static library
+ 	$(Q) $(LD) -r -o $@ $(OBJS)
+ 
