@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/06 09:25:21 markd Exp $
+
+BLAKE2s (xsimd-14.3.0.tar.gz) = cecddb368b89d05b93aac3a6a70754d73b8b6519aca2e496e34030ef8603ab08
+SHA512 (xsimd-14.3.0.tar.gz) = a8ba9b60eb12fcd8af63af2ec0184cb44c4fd92774fd16ad370505c6b793727d4da917b72ee993174adb51f5fa6c0b0aee74bfb8b16db37ae201e916b9a6c91d
+Size (xsimd-14.3.0.tar.gz) = 379130 bytes

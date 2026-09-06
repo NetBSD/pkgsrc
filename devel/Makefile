@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4685 2026/09/06 09:21:58 markd Exp $
+# $NetBSD: Makefile,v 1.4686 2026/09/06 09:25:20 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3761,6 +3761,7 @@ SUBDIR+=	xfce4-dev-tools
 SUBDIR+=	xmake
 SUBDIR+=	xorg-util-macros
 SUBDIR+=	xsd
+SUBDIR+=	xsimd
 SUBDIR+=	xxgdb
 SUBDIR+=	xxhash
 SUBDIR+=	yajl
