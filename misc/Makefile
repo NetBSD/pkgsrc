@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.685 2026/09/04 08:38:16 adam Exp $
+# $NetBSD: Makefile,v 1.686 2026/09/06 09:30:44 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -143,6 +143,7 @@ SUBDIR+=	kbruch
 SUBDIR+=	kcharselect
 SUBDIR+=	kcontacts
 SUBDIR+=	kdav
+SUBDIR+=	kddockwidgets
 SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeartwork4
 SUBDIR+=	kdeedu-data

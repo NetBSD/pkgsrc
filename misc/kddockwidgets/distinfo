@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/06 09:30:44 markd Exp $
+
+BLAKE2s (KDDockWidgets-2.4.1.tar.gz) = b3aeea4e827a3ae8230e310838f74de4adda207f5a7fe11de28c54682c868ef6
+SHA512 (KDDockWidgets-2.4.1.tar.gz) = 578b7809e6b080be64c8b0b5e0aa1a68dca8118825cfd900a1edf1b179f30a939f8931729a529df65b56cc7a4cf1c59241ea806b87f880101bd74a40f0487f53
+Size (KDDockWidgets-2.4.1.tar.gz) = 4321566 bytes
