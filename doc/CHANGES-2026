@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5849 2026/09/06 14:00:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5850 2026/09/06 14:01:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8929,3 +8929,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/himalaya to 2.1.0 [pin 2026-09-06]
 	Updated net/gping to 1.21.0 [pin 2026-09-06]
 	Updated net/xfr to 0.10.1 [pin 2026-09-06]
+	Updated news/eilmeldung to 1.8.1 [pin 2026-09-06]
