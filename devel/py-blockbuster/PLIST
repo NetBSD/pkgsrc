@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/06 17:01:36 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/blockbuster/__init__.py
+${PYSITELIB}/blockbuster/__init__.pyc
+${PYSITELIB}/blockbuster/__init__.pyo
+${PYSITELIB}/blockbuster/blockbuster.py
+${PYSITELIB}/blockbuster/blockbuster.pyc
+${PYSITELIB}/blockbuster/blockbuster.pyo
+${PYSITELIB}/blockbuster/py.typed

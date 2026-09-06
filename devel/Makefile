@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4686 2026/09/06 09:25:20 markd Exp $
+# $NetBSD: Makefile,v 1.4687 2026/09/06 17:01:36 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2571,6 +2571,7 @@ SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blessed
 SUBDIR+=	py-blinker
+SUBDIR+=	py-blockbuster
 SUBDIR+=	py-boltons
 SUBDIR+=	py-boolean.py
 SUBDIR+=	py-boost
