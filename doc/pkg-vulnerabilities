@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.788 2026/08/28 10:46:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.789 2026/09/06 18:44:15 bsiegert Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27903,7 +27903,7 @@ asterisk>=21<21.6.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-202
 asterisk>=22<22.1.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-53566
 atril<1.27.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-51698
 atril<1.26.2	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-52076
-augeas-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-2588
+augeas<1.14.1nb2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-2588
 authelia<4.38.19	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-24806
 avahi<0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1981
 avahi<0.9	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2024-52615
