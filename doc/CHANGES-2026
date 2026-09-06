@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5870 2026/09/06 15:31:36 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5871 2026/09/06 15:33:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8953,3 +8953,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-domain_name to 0.6.20260902 [taca 2026-09-06]
 	Updated lang/ruby34 to 3.4.10nb1 [kikadf 2026-09-06]
 	Updated parallel/ocl-icd to 2.3.5 [taca 2026-09-06]
+	Updated net/ruby-recog to 3.1.35 [taca 2026-09-06]
