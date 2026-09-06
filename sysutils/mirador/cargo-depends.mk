@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/08/25 15:59:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/09/06 14:05:00 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -138,7 +138,7 @@ CARGO_CRATE_DEPENDS+=	portable-atomic-1.14.0
 CARGO_CRATE_DEPENDS+=	portable-atomic-util-0.2.7
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.107
-CARGO_CRATE_DEPENDS+=	quick-xml-0.41.0
+CARGO_CRATE_DEPENDS+=	quick-xml-0.42.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.47
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	r-efi-6.0.0
