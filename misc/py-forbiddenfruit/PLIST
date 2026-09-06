@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/06 16:59:48 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.mit
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/forbiddenfruit/__init__.py
+${PYSITELIB}/forbiddenfruit/__init__.pyc
+${PYSITELIB}/forbiddenfruit/__init__.pyo
