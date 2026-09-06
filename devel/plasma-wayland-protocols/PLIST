@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2025/07/07 08:44:27 abs Exp $
-lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfig.cmake
-lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfigVersion.cmake
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 09:34:38 markd Exp $
+share/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfig.cmake
+share/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfigVersion.cmake
 share/plasma-wayland-protocols/appmenu.xml
 share/plasma-wayland-protocols/blur.xml
 share/plasma-wayland-protocols/contrast.xml

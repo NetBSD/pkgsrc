@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/10/06 09:51:52 markd Exp $
+$NetBSD: distinfo,v 1.14 2026/09/06 09:34:38 markd Exp $
 
-BLAKE2s (plasma-wayland-protocols-1.19.0.tar.xz) = 4edfa817d53503501af34c55cf5856ea53362ef790e0fbaecd8738cc8ac17eba
-SHA512 (plasma-wayland-protocols-1.19.0.tar.xz) = 1f703fdbf5a55851232ff59a4028e8d43206ae2ba17ed4123d22240e7f5dac4d103511b42d52ba03ca06cc92061fccb6b772cba6cb8c910326efad8d46f943ad
-Size (plasma-wayland-protocols-1.19.0.tar.xz) = 47784 bytes
+BLAKE2s (plasma-wayland-protocols-1.21.0.tar.xz) = 53752bc5ed7e7aaf955769f5e3f1f043e08669762630eae2f1470aac48d55ee3
+SHA512 (plasma-wayland-protocols-1.21.0.tar.xz) = 07f9c846b4d34090367507b74fbf77e8e3d70e2cba0fc45a188bfc41c7a6aaf9f590c9b844a848e460192b6a3d15e9fb9d835cdb8c79a658aaacdbbd749a4719
+Size (plasma-wayland-protocols-1.21.0.tar.xz) = 49704 bytes
