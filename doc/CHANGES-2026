@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5880 2026/09/06 16:10:58 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5881 2026/09/06 16:13:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8962,3 +8962,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-temple to 0.10.7 [taca 2026-09-06]
 	Updated textproc/ruby-tilt to 2.9.0 [taca 2026-09-06]
 	Updated www/ruby-aws-partitions to 1.1283.0 [taca 2026-09-06]
+	Updated www/ruby-bullet to 8.2.0 [taca 2026-09-06]
