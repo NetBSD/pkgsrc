@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27865 2026/09/06 09:45:03 bsiegert Exp $
+$NetBSD: TODO,v 1.27866 2026/09/06 21:08:25 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1099,7 +1099,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
-	o plasma-6.7.3
 	o ploticus-examples-230
 	o podcastdl-0.3.3
 	o poke-4.0
