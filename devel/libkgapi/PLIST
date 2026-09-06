@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/12/21 10:23:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 11:02:44 markd Exp $
 include/KPim6/KGAPI/KGAPI/Account
 include/KPim6/KGAPI/KGAPI/AccountInfo
 include/KPim6/KGAPI/KGAPI/AccountInfoFetchJob
@@ -366,28 +366,28 @@ lib/cmake/KPim6GAPI/KPim6GAPITargets-noconfig.cmake
 lib/cmake/KPim6GAPI/KPim6GAPITargets.cmake
 lib/libKPim6GAPIBlogger.so
 lib/libKPim6GAPIBlogger.so.6
-lib/libKPim6GAPIBlogger.so.6.5.3
+lib/libKPim6GAPIBlogger.so.6.8.0
 lib/libKPim6GAPICalendar.so
 lib/libKPim6GAPICalendar.so.6
-lib/libKPim6GAPICalendar.so.6.5.3
+lib/libKPim6GAPICalendar.so.6.8.0
 lib/libKPim6GAPICore.so
 lib/libKPim6GAPICore.so.6
-lib/libKPim6GAPICore.so.6.5.3
+lib/libKPim6GAPICore.so.6.8.0
 lib/libKPim6GAPIDrive.so
 lib/libKPim6GAPIDrive.so.6
-lib/libKPim6GAPIDrive.so.6.5.3
+lib/libKPim6GAPIDrive.so.6.8.0
 lib/libKPim6GAPILatitude.so
 lib/libKPim6GAPILatitude.so.6
-lib/libKPim6GAPILatitude.so.6.5.3
+lib/libKPim6GAPILatitude.so.6.8.0
 lib/libKPim6GAPIMaps.so
 lib/libKPim6GAPIMaps.so.6
-lib/libKPim6GAPIMaps.so.6.5.3
+lib/libKPim6GAPIMaps.so.6.8.0
 lib/libKPim6GAPIPeople.so
 lib/libKPim6GAPIPeople.so.6
-lib/libKPim6GAPIPeople.so.6.5.3
+lib/libKPim6GAPIPeople.so.6.8.0
 lib/libKPim6GAPITasks.so
 lib/libKPim6GAPITasks.so.6
-lib/libKPim6GAPITasks.so.6.5.3
+lib/libKPim6GAPITasks.so.6.8.0
 lib/sasl2/libkdexoauth2.so
 lib/sasl2/libkdexoauth2.so.3
 lib/sasl2/libkdexoauth2.so.3.0.0

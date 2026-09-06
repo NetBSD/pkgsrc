@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 13:10:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:55 markd Exp $
 include/KPim6/KMbox/KMbox/MBox
 include/KPim6/KMbox/KMbox/MBoxEntry
 include/KPim6/KMbox/kmbox/kmbox_export.h
@@ -11,6 +11,6 @@ lib/cmake/KPim6Mbox/KPim6MboxTargets-noconfig.cmake
 lib/cmake/KPim6Mbox/KPim6MboxTargets.cmake
 lib/libKPim6Mbox.so
 lib/libKPim6Mbox.so.6
-lib/libKPim6Mbox.so.6.5.3
+lib/libKPim6Mbox.so.6.8.0
 share/qlogging-categories6/kmbox.categories
 share/qlogging-categories6/kmbox.renamecategories

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/12/21 14:46:00 markd Exp $
+$NetBSD: distinfo,v 1.24 2026/09/06 11:03:02 markd Exp $
 
-BLAKE2s (rocs-25.08.3.tar.xz) = c3aa184ee6a7b5a89ab4b1e68a311b9a807ca001e4e7213aef86082bda5ae04c
-SHA512 (rocs-25.08.3.tar.xz) = c265a1ec9d8b69570f37c536720968f95707b982f8e2229a149261b4df0ea88369ee047d64e673461b44511d0d3602a9e279ffe3ba90dda18aa13db9c3e6d889
-Size (rocs-25.08.3.tar.xz) = 1572116 bytes
+BLAKE2s (rocs-26.08.0.tar.xz) = 08c292f0eacdecdfbf9a4261aa721609261f877c418a52b4f9864cc17eb77f70
+SHA512 (rocs-26.08.0.tar.xz) = 75d2b41edfde0555296378a85b8803216c1464bd902d8e203fae5ab504f9b3e6fc62fdc3618afb0ddc9d6987c772dd059c9e88be88f9fbe3bf5ace90d7ba14fe
+Size (rocs-26.08.0.tar.xz) = 1578432 bytes

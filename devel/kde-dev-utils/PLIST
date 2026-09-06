@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 10:12:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:44 markd Exp $
 bin/kpartloader
 bin/kuiviewer
 qt6/plugins/kf6/parts/kuiviewerpart.so
@@ -66,6 +66,7 @@ share/locale/ia/LC_MESSAGES/kpartloader.mo
 share/locale/ia/LC_MESSAGES/kuiviewer.mo
 share/locale/id/LC_MESSAGES/kpartloader.mo
 share/locale/id/LC_MESSAGES/kuiviewer.mo
+share/locale/is/LC_MESSAGES/kpartloader.mo
 share/locale/is/LC_MESSAGES/kuiviewer.mo
 share/locale/it/LC_MESSAGES/kpartloader.mo
 share/locale/it/LC_MESSAGES/kuiviewer.mo

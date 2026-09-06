@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:09:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:47 markd Exp $
 bin/kdiamond
 share/applications/org.kde.kdiamond.desktop
 share/doc/HTML/ca/kdiamond/index.cache.bz2
@@ -26,6 +26,8 @@ share/doc/HTML/pt/kdiamond/index.cache.bz2
 share/doc/HTML/pt/kdiamond/index.docbook
 share/doc/HTML/pt_BR/kdiamond/index.cache.bz2
 share/doc/HTML/pt_BR/kdiamond/index.docbook
+share/doc/HTML/ru/kdiamond/index.cache.bz2
+share/doc/HTML/ru/kdiamond/index.docbook
 share/doc/HTML/sl/kdiamond/index.cache.bz2
 share/doc/HTML/sl/kdiamond/index.docbook
 share/doc/HTML/sv/kdiamond/index.cache.bz2

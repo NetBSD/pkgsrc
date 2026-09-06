@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:32:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:03:02 markd Exp $
 include/KPim6/Libkdepim/Libkdepim/KCheckComboBox
 include/KPim6/Libkdepim/Libkdepim/KWidgetLister
 include/KPim6/Libkdepim/Libkdepim/MultiplyingLine
@@ -26,7 +26,7 @@ lib/cmake/KPim6Libkdepim/KPim6LibkdepimTargets.cmake
 lib/cmake/KPim6MailTransportDBusService/KPim6MailTransportDBusServiceConfig.cmake
 lib/libKPim6Libkdepim.so
 lib/libKPim6Libkdepim.so.6
-lib/libKPim6Libkdepim.so.6.5.3
+lib/libKPim6Libkdepim.so.6.8.0
 qt6/plugins/designer/kdepim6widgets.so
 share/dbus-1/interfaces/org.kde.addressbook.service.xml
 share/dbus-1/interfaces/org.kde.mailtransport.service.xml

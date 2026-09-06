@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 19:27:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/06 11:03:06 markd Exp $
 bin/baloo_filemetadata_temp_extractor
-include/KF6/BalooWidgets/Baloo/FileMetaDataConfigWidget
 include/KF6/BalooWidgets/Baloo/FileMetaDataWidget
 include/KF6/BalooWidgets/Baloo/TagWidget
-include/KF6/BalooWidgets/baloo/filemetadataconfigwidget.h
 include/KF6/BalooWidgets/baloo/filemetadatawidget.h
 include/KF6/BalooWidgets/baloo/tagwidget.h
 include/KF6/BalooWidgets/baloo/widgets_export.h

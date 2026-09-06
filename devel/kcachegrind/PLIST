@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/21 10:07:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 11:02:43 markd Exp $
 bin/dprof2calltree
 bin/hotshot2calltree
 bin/kcachegrind
@@ -52,8 +52,6 @@ share/locale/ar/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/ast/LC_MESSAGES/kcachegrind.mo
 share/locale/ast/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/be/LC_MESSAGES/kcachegrind.mo
-share/locale/bg/LC_MESSAGES/kcachegrind.mo
-share/locale/bg/LC_MESSAGES/kcachegrind_qt.qm
 share/locale/br/LC_MESSAGES/kcachegrind.mo
 share/locale/bs/LC_MESSAGES/kcachegrind.mo
 share/locale/bs/LC_MESSAGES/kcachegrind_qt.qm

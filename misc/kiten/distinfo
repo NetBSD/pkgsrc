@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/12/21 14:14:02 markd Exp $
+$NetBSD: distinfo,v 1.20 2026/09/06 11:03:00 markd Exp $
 
-BLAKE2s (kiten-25.08.3.tar.xz) = af67ecd40e9cbb488c2c028e2968354f35edfcb37b37dd2a583c57a2ec18b14f
-SHA512 (kiten-25.08.3.tar.xz) = 5108f442d1c65509b733954960814bf018500acbdde4804355eceeed26f27481d9acaeffa64d000060410015bbd6eafa0b2c7df6e7b064eac3c7fcf82435353d
-Size (kiten-25.08.3.tar.xz) = 11318120 bytes
+BLAKE2s (kiten-26.08.0.tar.xz) = b25dfe8dc45aebdd97df99823fad60638d8d9f7b0c943f71727f956de0cb243c
+SHA512 (kiten-26.08.0.tar.xz) = 7a0986d6f4d7700bb258014b932b2b527320efcfd0eb45ef229df356d0be4b3eedf1b97fce7056b84ab12f21126af6097818c8454b971c966cd926a659f2b906
+Size (kiten-26.08.0.tar.xz) = 11316312 bytes

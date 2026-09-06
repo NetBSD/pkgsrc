@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/12/21 10:44:28 markd Exp $
+$NetBSD: distinfo,v 1.24 2026/09/06 11:02:45 markd Exp $
 
-BLAKE2s (kate-25.08.3.tar.xz) = 83a1c6f7f108298b50a2da8c618d544eefabf94fcb051ec337541b64c9747a1a
-SHA512 (kate-25.08.3.tar.xz) = 078a05db1e22c171a4c9341f079427ff7c7e4b7c4ec54b65e16d48b6c8139f3ac7fad64dd9fab74cd3602f5fe93cf9e5025e6921e47b157ed81ceaad1eb398f6
-Size (kate-25.08.3.tar.xz) = 8418112 bytes
+BLAKE2s (kate-26.08.0.tar.xz) = e5901241b3206f762a54595c2d5c8cde5ba3436c506654f312c3494e8304627e
+SHA512 (kate-26.08.0.tar.xz) = 6c4a03de7c265dad7a5148db1e293fad81f8a121f4487ad3cf9a26c79e29814bd61c104d65e5ad83f5b5d7fea335f6911efd5a464c7e81476bb97f4a6de4dfb7
+Size (kate-26.08.0.tar.xz) = 8703532 bytes

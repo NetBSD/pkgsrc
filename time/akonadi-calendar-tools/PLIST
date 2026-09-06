@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/12/21 19:53:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/06 11:03:08 markd Exp $
 bin/calendarjanitor
 bin/konsolekalendar
 share/applications/konsolekalendar.desktop
@@ -74,6 +74,7 @@ share/locale/fi/LC_MESSAGES/konsolekalendar.mo
 share/locale/fr/LC_MESSAGES/calendarjanitor.mo
 share/locale/fr/LC_MESSAGES/konsolekalendar.mo
 share/locale/fy/LC_MESSAGES/konsolekalendar.mo
+share/locale/ga/LC_MESSAGES/calendarjanitor.mo
 share/locale/ga/LC_MESSAGES/konsolekalendar.mo
 share/locale/gl/LC_MESSAGES/calendarjanitor.mo
 share/locale/gl/LC_MESSAGES/konsolekalendar.mo
@@ -142,6 +143,7 @@ share/locale/ta/LC_MESSAGES/konsolekalendar.mo
 share/locale/tg/LC_MESSAGES/konsolekalendar.mo
 share/locale/tr/LC_MESSAGES/calendarjanitor.mo
 share/locale/tr/LC_MESSAGES/konsolekalendar.mo
+share/locale/ug/LC_MESSAGES/calendarjanitor.mo
 share/locale/ug/LC_MESSAGES/konsolekalendar.mo
 share/locale/uk/LC_MESSAGES/calendarjanitor.mo
 share/locale/uk/LC_MESSAGES/konsolekalendar.mo

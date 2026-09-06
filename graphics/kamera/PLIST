@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/21 12:03:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/06 11:02:52 markd Exp $
 qt6/plugins/kf6/kio/kio_kamera.so
 qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kamera.so
 share/applications/kcm_kamera.desktop
@@ -80,6 +80,7 @@ share/locale/fr/LC_MESSAGES/kcmkamera.mo
 share/locale/fr/LC_MESSAGES/kio6_kamera.mo
 share/locale/fy/LC_MESSAGES/kcmkamera.mo
 share/locale/ga/LC_MESSAGES/kcmkamera.mo
+share/locale/ga/LC_MESSAGES/kio6_kamera.mo
 share/locale/gl/LC_MESSAGES/kcmkamera.mo
 share/locale/gl/LC_MESSAGES/kio6_kamera.mo
 share/locale/he/LC_MESSAGES/kcmkamera.mo
@@ -147,11 +148,13 @@ share/locale/sq/LC_MESSAGES/kcmkamera.mo
 share/locale/sv/LC_MESSAGES/kcmkamera.mo
 share/locale/sv/LC_MESSAGES/kio6_kamera.mo
 share/locale/ta/LC_MESSAGES/kcmkamera.mo
+share/locale/ta/LC_MESSAGES/kio6_kamera.mo
 share/locale/tg/LC_MESSAGES/kcmkamera.mo
 share/locale/th/LC_MESSAGES/kcmkamera.mo
 share/locale/tr/LC_MESSAGES/kcmkamera.mo
 share/locale/tr/LC_MESSAGES/kio6_kamera.mo
 share/locale/ug/LC_MESSAGES/kcmkamera.mo
+share/locale/ug/LC_MESSAGES/kio6_kamera.mo
 share/locale/uk/LC_MESSAGES/kcmkamera.mo
 share/locale/uk/LC_MESSAGES/kio6_kamera.mo
 share/locale/vi/LC_MESSAGES/kcmkamera.mo

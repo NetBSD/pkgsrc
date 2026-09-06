@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:35:27 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:50 markd Exp $
 
-BLAKE2s (konquest-25.08.3.tar.xz) = e8c6c2342327f93d8772faab33124f1d163793e446e38055dfb773a0e239e6ce
-SHA512 (konquest-25.08.3.tar.xz) = 46fdbb8fec1e845f23fc7ae9dae8bcfbc1331ff4e2b4dd17d769af64cc581b281b6f7006d63601d8387fa680633db05a229e45545a599ff33ed7574e4037383c
-Size (konquest-25.08.3.tar.xz) = 863724 bytes
+BLAKE2s (konquest-26.08.0.tar.xz) = 7114a989dee9b21cccd6f7ed0f6b79004039bf05b49df061c78c77abd3f47563
+SHA512 (konquest-26.08.0.tar.xz) = f11131cf181688a501badeceb8ce494eaa6ce99677405071d1087c425d1fccc04319a2189b9a7dc59d58941606230ed4914e399d214e6e01bc16e470a2dd25d5
+Size (konquest-26.08.0.tar.xz) = 862384 bytes

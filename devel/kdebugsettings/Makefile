@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/09/02 19:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/09/06 11:02:44 markd Exp $
 
 DISTNAME=	kdebugsettings-${KAPPSVER}
-PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://utils.kde.org/

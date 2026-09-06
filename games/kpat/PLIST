@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:36:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/06 11:02:50 markd Exp $
 bin/kpat
 lib/libkcardgame.so
 man/ca/man6/kpat.6
@@ -51,8 +51,6 @@ share/doc/HTML/pt/kpat/index.cache.bz2
 share/doc/HTML/pt/kpat/index.docbook
 share/doc/HTML/pt_BR/kpat/index.cache.bz2
 share/doc/HTML/pt_BR/kpat/index.docbook
-share/doc/HTML/ru/kpat/index.cache.bz2
-share/doc/HTML/ru/kpat/index.docbook
 share/doc/HTML/sl/kpat/index.cache.bz2
 share/doc/HTML/sl/kpat/index.docbook
 share/doc/HTML/sv/kpat/index.cache.bz2

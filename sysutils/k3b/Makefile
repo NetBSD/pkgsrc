@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.179 2026/09/02 19:04:29 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2026/09/06 11:03:06 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b
@@ -54,7 +53,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../devel/kf6-knotifyconfig/buildlink3.mk"
 .include "../../net/kf6-knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../sysutils/kf6-kfilemetadata/buildlink3.mk"

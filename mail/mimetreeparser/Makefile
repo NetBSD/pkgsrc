@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/09/02 19:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/06 11:02:56 markd Exp $
 
 DISTNAME=	mimetreeparser-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -14,8 +13,8 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../mail/kf6-kmime/buildlink3.mk"
 .include "../../mail/kmbox/buildlink3.mk"
-.include "../../mail/kmime/buildlink3.mk"
 .include "../../security/libkleo/buildlink3.mk"
 .include "../../textproc/kf6-kcodecs/buildlink3.mk"
 .include "../../time/kf6-kcalendarcore/buildlink3.mk"

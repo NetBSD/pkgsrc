@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 15:25:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:03:06 markd Exp $
 bin/kwalletmanager5
 libexec/kf6/kauth/kcm_kwallet_helper5
 qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
@@ -71,18 +71,13 @@ share/doc/HTML/uk/kwalletmanager/openwallet-request.png
 share/doc/HTML/uk/kwalletmanager/save-login-information.png
 share/examples/kwalletmanager/org.kde.kcontrol.kcmkwallet5.conf
 share/icons/hicolor/128x128/apps/kwalletmanager.png
-share/icons/hicolor/128x128/apps/kwalletmanager2.png
 share/icons/hicolor/16x16/apps/kwalletmanager.png
-share/icons/hicolor/16x16/apps/kwalletmanager2.png
 share/icons/hicolor/22x22/actions/wallet-closed.png
 share/icons/hicolor/22x22/actions/wallet-open.png
 share/icons/hicolor/22x22/apps/kwalletmanager.png
 share/icons/hicolor/32x32/apps/kwalletmanager.png
-share/icons/hicolor/32x32/apps/kwalletmanager2.png
 share/icons/hicolor/48x48/apps/kwalletmanager.png
-share/icons/hicolor/48x48/apps/kwalletmanager2.png
 share/icons/hicolor/64x64/apps/kwalletmanager.png
-share/icons/hicolor/64x64/apps/kwalletmanager2.png
 share/locale/ar/LC_MESSAGES/kcmkwallet.mo
 share/locale/ar/LC_MESSAGES/kwalletmanager.mo
 share/locale/ast/LC_MESSAGES/kcmkwallet.mo

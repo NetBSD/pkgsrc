@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 19:46:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:03:07 markd Exp $
 include/KPim6/KPIMTextEdit/KPIMTextEdit/AbstractMarkupBuilder
 include/KPim6/KPIMTextEdit/KPIMTextEdit/MarkupDirector
 include/KPim6/KPIMTextEdit/KPIMTextEdit/PlainTextMarkupBuilder
@@ -31,7 +31,7 @@ lib/cmake/KPim6TextEdit/KPim6TextEditTargets-noconfig.cmake
 lib/cmake/KPim6TextEdit/KPim6TextEditTargets.cmake
 lib/libKPim6TextEdit.so
 lib/libKPim6TextEdit.so.6
-lib/libKPim6TextEdit.so.6.5.3
+lib/libKPim6TextEdit.so.6.8.0
 share/locale/ar/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/ast/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/az/LC_MESSAGES/libkpimtextedit6.mo

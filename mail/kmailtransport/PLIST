@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:08:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:55 markd Exp $
 include/KPim6/MailTransport/MailTransport/OutlookOAuthTokenRequester
 include/KPim6/MailTransport/MailTransport/PrecommandJob
 include/KPim6/MailTransport/MailTransport/ServerTest
@@ -37,7 +37,7 @@ lib/cmake/KPim6MailTransport/KPim6MailTransportTargets-noconfig.cmake
 lib/cmake/KPim6MailTransport/KPim6MailTransportTargets.cmake
 lib/libKPim6MailTransport.so
 lib/libKPim6MailTransport.so.6
-lib/libKPim6MailTransport.so.6.5.3
+lib/libKPim6MailTransport.so.6.8.0
 qt6/plugins/pim6/mailtransport/mailtransport_smtpplugin.so
 share/config.kcfg/mailtransport.kcfg
 share/locale/ar/LC_MESSAGES/libmailtransport6.mo

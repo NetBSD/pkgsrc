@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:51:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:58 markd Exp $
 include/KPim6/IncidenceEditor/IncidenceEditor/EditorItemManager
 include/KPim6/IncidenceEditor/IncidenceEditor/GroupwareUiDelegate
 include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceDefaults
@@ -24,7 +24,7 @@ lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorTargets-noconfig.cmake
 lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorTargets.cmake
 lib/libKPim6IncidenceEditor.so
 lib/libKPim6IncidenceEditor.so.6
-lib/libKPim6IncidenceEditor.so.6.5.3
+lib/libKPim6IncidenceEditor.so.6.8.0
 share/locale/ar/LC_MESSAGES/libincidenceeditors6.mo
 share/locale/ast/LC_MESSAGES/libincidenceeditors6.mo
 share/locale/bg/LC_MESSAGES/libincidenceeditors6.mo

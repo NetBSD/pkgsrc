@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/12/21 13:32:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/09/06 11:02:56 markd Exp $
 bin/cantor
 bin/cantor_pythonserver
 bin/cantor_scripteditor
@@ -7,10 +7,7 @@ include/cantor/backend.h
 include/cantor/cantor_export.h
 include/cantor/cantor_macros.h
 include/cantor/cantorlibs_version.h
-include/cantor/completionobject.h
-include/cantor/defaulthighlighter.h
 include/cantor/defaultvariablemodel.h
-include/cantor/epsresult.h
 include/cantor/expression.h
 include/cantor/extension.h
 include/cantor/graphicpackage.h
@@ -18,10 +15,12 @@ include/cantor/helpresult.h
 include/cantor/htmlresult.h
 include/cantor/imageresult.h
 include/cantor/jupyterutils.h
+include/cantor/keywordsmanager.h
 include/cantor/latexresult.h
 include/cantor/mimeresult.h
 include/cantor/panelplugin.h
 include/cantor/panelpluginhandler.h
+include/cantor/pdfresult.h
 include/cantor/renderer.h
 include/cantor/result.h
 include/cantor/session.h
@@ -172,7 +171,6 @@ share/knsrcfiles/cantor_qalculate.knsrc
 share/knsrcfiles/cantor_sage.knsrc
 share/knsrcfiles/cantor_scilab.knsrc
 share/locale/ar/LC_MESSAGES/cantor.mo
-share/locale/bg/LC_MESSAGES/cantor.mo
 share/locale/bs/LC_MESSAGES/cantor.mo
 share/locale/ca/LC_MESSAGES/cantor.mo
 share/locale/ca@valencia/LC_MESSAGES/cantor.mo

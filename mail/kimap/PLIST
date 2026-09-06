@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 13:02:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:54 markd Exp $
 include/KPim6/KIMAP/KIMAP/Acl
 include/KPim6/KIMAP/KIMAP/AclJobBase
 include/KPim6/KIMAP/KIMAP/AppendJob
@@ -28,7 +28,6 @@ include/KPim6/KIMAP/KIMAP/MoveJob
 include/KPim6/KIMAP/KIMAP/MyRightsJob
 include/KPim6/KIMAP/KIMAP/NamespaceJob
 include/KPim6/KIMAP/KIMAP/QuotaJobBase
-include/KPim6/KIMAP/KIMAP/RFCCodecs
 include/KPim6/KIMAP/KIMAP/RenameJob
 include/KPim6/KIMAP/KIMAP/SearchJob
 include/KPim6/KIMAP/KIMAP/SelectJob
@@ -70,7 +69,6 @@ include/KPim6/KIMAP/kimap/MoveJob
 include/KPim6/KIMAP/kimap/MyRightsJob
 include/KPim6/KIMAP/kimap/NamespaceJob
 include/KPim6/KIMAP/kimap/QuotaJobBase
-include/KPim6/KIMAP/kimap/RFCCodecs
 include/KPim6/KIMAP/kimap/RenameJob
 include/KPim6/KIMAP/kimap/SearchJob
 include/KPim6/KIMAP/kimap/SelectJob
@@ -114,7 +112,6 @@ include/KPim6/KIMAP/kimap/myrightsjob.h
 include/KPim6/KIMAP/kimap/namespacejob.h
 include/KPim6/KIMAP/kimap/quotajobbase.h
 include/KPim6/KIMAP/kimap/renamejob.h
-include/KPim6/KIMAP/kimap/rfccodecs.h
 include/KPim6/KIMAP/kimap/searchjob.h
 include/KPim6/KIMAP/kimap/selectjob.h
 include/KPim6/KIMAP/kimap/session.h
@@ -135,7 +132,7 @@ lib/cmake/KPim6IMAP/KPim6IMAPTargets-noconfig.cmake
 lib/cmake/KPim6IMAP/KPim6IMAPTargets.cmake
 lib/libKPim6IMAP.so
 lib/libKPim6IMAP.so.6
-lib/libKPim6IMAP.so.6.5.3
+lib/libKPim6IMAP.so.6.8.0
 lib/libkimaptest6.a
 share/locale/ar/LC_MESSAGES/libkimap6.mo
 share/locale/ast/LC_MESSAGES/libkimap6.mo

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2026/01/25 00:38:18 markd Exp $
+$NetBSD: distinfo,v 1.21 2026/09/06 11:03:03 markd Exp $
 
-BLAKE2s (step-25.08.3.tar.xz) = 05ad24a5c3d901fdf04bae07071d3cc8800bb6a07d47f187803ab1e645c8bd15
-SHA512 (step-25.08.3.tar.xz) = e8c41764cb401c1eb62ae1af8007b37d0952828c2544112f223e4d4f6c87fbf92ce55b481287472c6cfbdafb145df38bbad96937706ddc0a96243819bd835b93
-Size (step-25.08.3.tar.xz) = 1016244 bytes
-SHA1 (patch-stepcore_types.h) = 3384d193695af648bf9b72be7aa70f5aad23f311
+BLAKE2s (step-26.08.0.tar.xz) = 902430aaa0f4c25e74d2e64d3f6cf42a42d6ecb487b32b4f21d89ad45ccc2fbc
+SHA512 (step-26.08.0.tar.xz) = 548ff963f8a4c052e39b9bfbb6d045c5b9e7de7d2facc106277ecdad960506370c04e59244b4be601b083d4d470ba430506d28bc2e026c50e73de0ee296e52db
+Size (step-26.08.0.tar.xz) = 1021276 bytes

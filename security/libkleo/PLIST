@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 15:28:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:03:06 markd Exp $
 include/KPim6/Libkleo/Libkleo/Algorithm
+include/KPim6/Libkleo/Libkleo/AnimatedExpander
 include/KPim6/Libkleo/Libkleo/ApplicationPaletteWatcher
 include/KPim6/Libkleo/Libkleo/Assuan
 include/KPim6/Libkleo/Libkleo/AuditLogEntry
@@ -28,6 +29,7 @@ include/KPim6/Libkleo/Libkleo/ExpiryCheckerConfig
 include/KPim6/Libkleo/Libkleo/ExpiryCheckerSettings
 include/KPim6/Libkleo/Libkleo/FileNameRequester
 include/KPim6/Libkleo/Libkleo/FileSystemWatcher
+include/KPim6/Libkleo/Libkleo/FormTextInput
 include/KPim6/Libkleo/Libkleo/Formatting
 include/KPim6/Libkleo/Libkleo/GnuPG
 include/KPim6/Libkleo/Libkleo/Hex
@@ -77,7 +79,9 @@ include/KPim6/Libkleo/Libkleo/UserIDListProxyModel
 include/KPim6/Libkleo/Libkleo/UserIDProxyModel
 include/KPim6/Libkleo/Libkleo/UserIDSelectionCombo
 include/KPim6/Libkleo/Libkleo/Validation
+include/KPim6/Libkleo/Libkleo/Verification
 include/KPim6/Libkleo/libkleo/algorithm.h
+include/KPim6/Libkleo/libkleo/animatedexpander.h
 include/KPim6/Libkleo/libkleo/applicationpalettewatcher.h
 include/KPim6/Libkleo/libkleo/assuan.h
 include/KPim6/Libkleo/libkleo/auditlogentry.h
@@ -109,6 +113,7 @@ include/KPim6/Libkleo/libkleo/expirycheckersettings.h
 include/KPim6/Libkleo/libkleo/filenamerequester.h
 include/KPim6/Libkleo/libkleo/filesystemwatcher.h
 include/KPim6/Libkleo/libkleo/formatting.h
+include/KPim6/Libkleo/libkleo/formtextinput.h
 include/KPim6/Libkleo/libkleo/gnupg.h
 include/KPim6/Libkleo/libkleo/hex.h
 include/KPim6/Libkleo/libkleo/kconfigbasedkeyfilter.h
@@ -158,6 +163,7 @@ include/KPim6/Libkleo/libkleo/useridlistproxymodel.h
 include/KPim6/Libkleo/libkleo/useridproxymodel.h
 include/KPim6/Libkleo/libkleo/useridselectioncombo.h
 include/KPim6/Libkleo/libkleo/validation.h
+include/KPim6/Libkleo/libkleo/verification.h
 include/KPim6/Libkleo/libkleo_version.h
 lib/cmake/KPim6Libkleo/KPim6LibkleoConfig.cmake
 lib/cmake/KPim6Libkleo/KPim6LibkleoConfigVersion.cmake
@@ -165,9 +171,11 @@ lib/cmake/KPim6Libkleo/KPim6LibkleoTargets-noconfig.cmake
 lib/cmake/KPim6Libkleo/KPim6LibkleoTargets.cmake
 lib/libKPim6Libkleo.so
 lib/libKPim6Libkleo.so.6
-lib/libKPim6Libkleo.so.6.5.3
+lib/libKPim6Libkleo.so.6.8.0
 share/KPim6Libkleo/find-modules/FindLibAssuan.cmake
 share/KPim6Libkleo/find-modules/FindLibGpgError.cmake
+share/KPim6Libkleo/modules/KleoAddGpgCryptoTest.cmake
+share/KPim6Libkleo/modules/KleoGenerateCryptoTestWrapper.cmake
 share/examples/kde-xdg/libkleopatrarc
 share/libkleopatra/pics/smartcard.xpm
 share/locale/ar/LC_MESSAGES/libkleopatra6.mo

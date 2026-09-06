@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/12/21 12:02:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2026/09/06 11:02:52 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/libgwenviewlib.so.4.97.0
@@ -30,6 +30,8 @@ share/doc/HTML/en/gwenview/start-page.png
 share/doc/HTML/en/gwenview/view_mode.png
 share/doc/HTML/es/gwenview/index.cache.bz2
 share/doc/HTML/es/gwenview/index.docbook
+share/doc/HTML/fr/gwenview/index.cache.bz2
+share/doc/HTML/fr/gwenview/index.docbook
 share/doc/HTML/id/gwenview/index.cache.bz2
 share/doc/HTML/id/gwenview/index.docbook
 share/doc/HTML/it/gwenview/browse_mode.png
@@ -103,6 +105,7 @@ share/locale/eo/LC_MESSAGES/gwenview.mo
 share/locale/es/LC_MESSAGES/gwenview.mo
 share/locale/et/LC_MESSAGES/gwenview.mo
 share/locale/eu/LC_MESSAGES/gwenview.mo
+share/locale/fa/LC_MESSAGES/gwenview.mo
 share/locale/fi/LC_MESSAGES/gwenview.mo
 share/locale/fr/LC_MESSAGES/gwenview.mo
 share/locale/ga/LC_MESSAGES/gwenview.mo

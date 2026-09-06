@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2025/12/21 15:14:45 markd Exp $
+$NetBSD: distinfo,v 1.26 2026/09/06 11:03:05 markd Exp $
 
-BLAKE2s (okular-25.08.3.tar.xz) = 3c29f7b7cf0b5aa739986d8df76a31eb3dd0c569f2962ad1c6082950086a2dc7
-SHA512 (okular-25.08.3.tar.xz) = 370aa227ddfc1c08de86a60f0ceeca0fd64bbd57a24f14f6c594b1f2e3c784dc861280ee187451282c8d596995bcd8c9dd5ec78a86f027d2cd2ce0e2097aeb51
-Size (okular-25.08.3.tar.xz) = 8203744 bytes
+BLAKE2s (okular-26.08.0.tar.xz) = 1a0dc53ce7cd5ad199fb8ad2a60cd29bacb2151730ce81e990a526297930dcf1
+SHA512 (okular-26.08.0.tar.xz) = 4b03594e22ec5dc57fdfe5bce67fd842b56b32e1ce41c83d5ac2b99cae03cd6123e1685deed358d0054aa7286b2a9f2f56280ee3b44093c97e330edb3e1f8ce1
+Size (okular-26.08.0.tar.xz) = 8294608 bytes

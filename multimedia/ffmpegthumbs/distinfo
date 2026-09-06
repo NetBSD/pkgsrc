@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2026/05/30 02:43:30 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/09/06 11:03:03 markd Exp $
 
-BLAKE2s (ffmpegthumbs-25.08.3.tar.xz) = 69a9f81164e3750d1839ed96cc37873cc7c826406a829aa9d499651148ae0941
-SHA512 (ffmpegthumbs-25.08.3.tar.xz) = 32ec32603a5dfa283becf872c4ac3cc4a15db6d270a48070c26a58f598dd3cbdcb8abd67e6ea845efbe9af8e4b2077a458eaa90c9b1d981ddb1cfd00c674729f
-Size (ffmpegthumbs-25.08.3.tar.xz) = 33296 bytes
+BLAKE2s (ffmpegthumbs-26.08.0.tar.xz) = 7ef8104428775e62c31336be6f1bbaf794af09a833325d218c1d61c24b7398df
+SHA512 (ffmpegthumbs-26.08.0.tar.xz) = ec57f533e1ab27bbbab675734667c1d06a3185d9678422d34bbebe066b237adf0301448806932c8692a5af797a7157b9c3f8ae7132e7746e07b5b0e2a4fa2bd2
+Size (ffmpegthumbs-26.08.0.tar.xz) = 35312 bytes
 SHA1 (patch-CMakeLists.txt) = 2f4ead4604b894e06f26c7f4c218b7e13fc893b2

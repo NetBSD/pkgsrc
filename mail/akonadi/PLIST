@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/12/21 12:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/09/06 11:02:54 markd Exp $
 bin/akonadi-db-migrator
 bin/akonadi2xml
 bin/akonadi_agent_launcher
@@ -26,14 +26,14 @@ include/KPim6/Akonadi/akonadi/private/protocol_p.h
 include/KPim6/Akonadi/akonadi/private/scope_p.h
 include/KPim6/Akonadi/akonadi/private/standarddirs_p.h
 include/KPim6/Akonadi/akonadi/private/tristate_p.h
-include/KPim6/AkonadiAgentBase/Akonadi/AccountsIntegration
+include/KPim6/AkonadiAgentBase/Akonadi/AccountBase
 include/KPim6/AkonadiAgentBase/Akonadi/AgentBase
 include/KPim6/AkonadiAgentBase/Akonadi/AgentSearchInterface
 include/KPim6/AkonadiAgentBase/Akonadi/PreprocessorBase
 include/KPim6/AkonadiAgentBase/Akonadi/ResourceBase
 include/KPim6/AkonadiAgentBase/Akonadi/ResourceSettings
 include/KPim6/AkonadiAgentBase/Akonadi/TransportResourceBase
-include/KPim6/AkonadiAgentBase/akonadi/accountsintegration.h
+include/KPim6/AkonadiAgentBase/akonadi/accountbase.h
 include/KPim6/AkonadiAgentBase/akonadi/agentbase.h
 include/KPim6/AkonadiAgentBase/akonadi/agentsearchinterface.h
 include/KPim6/AkonadiAgentBase/akonadi/akonadiagentbase_export.h
@@ -82,6 +82,7 @@ include/KPim6/AkonadiCore/Akonadi/CollectionQuotaAttribute
 include/KPim6/AkonadiCore/Akonadi/CollectionStatistics
 include/KPim6/AkonadiCore/Akonadi/CollectionStatisticsJob
 include/KPim6/AkonadiCore/Akonadi/CollectionUtils
+include/KPim6/AkonadiCore/Akonadi/ColorProxyModel
 include/KPim6/AkonadiCore/Akonadi/Control
 include/KPim6/AkonadiCore/Akonadi/DifferencesAlgorithmInterface
 include/KPim6/AkonadiCore/Akonadi/EntityAnnotationsAttribute
@@ -139,6 +140,7 @@ include/KPim6/AkonadiCore/Akonadi/TagFetchJob
 include/KPim6/AkonadiCore/Akonadi/TagFetchScope
 include/KPim6/AkonadiCore/Akonadi/TagModel
 include/KPim6/AkonadiCore/Akonadi/TagModifyJob
+include/KPim6/AkonadiCore/Akonadi/TagSync
 include/KPim6/AkonadiCore/Akonadi/TransactionJobs
 include/KPim6/AkonadiCore/Akonadi/TransactionSequence
 include/KPim6/AkonadiCore/Akonadi/TrashFilterProxyModel
@@ -184,6 +186,7 @@ include/KPim6/AkonadiCore/akonadi/collectionquotaattribute.h
 include/KPim6/AkonadiCore/akonadi/collectionstatistics.h
 include/KPim6/AkonadiCore/akonadi/collectionstatisticsjob.h
 include/KPim6/AkonadiCore/akonadi/collectionutils.h
+include/KPim6/AkonadiCore/akonadi/colorproxymodel.h
 include/KPim6/AkonadiCore/akonadi/config-akonadi.h
 include/KPim6/AkonadiCore/akonadi/control.h
 include/KPim6/AkonadiCore/akonadi/differencesalgorithminterface.h
@@ -244,6 +247,7 @@ include/KPim6/AkonadiCore/akonadi/tagfetchjob.h
 include/KPim6/AkonadiCore/akonadi/tagfetchscope.h
 include/KPim6/AkonadiCore/akonadi/tagmodel.h
 include/KPim6/AkonadiCore/akonadi/tagmodifyjob.h
+include/KPim6/AkonadiCore/akonadi/tagsync.h
 include/KPim6/AkonadiCore/akonadi/transactionjobs.h
 include/KPim6/AkonadiCore/akonadi/transactionsequence.h
 include/KPim6/AkonadiCore/akonadi/trashfilterproxymodel.h
@@ -253,7 +257,6 @@ include/KPim6/AkonadiCore/akonadi/trashsettings.h
 include/KPim6/AkonadiCore/akonadi/unlinkjob.h
 include/KPim6/AkonadiCore/akonadi/vectorhelper.h
 include/KPim6/AkonadiCore/akonadi_version.h
-include/KPim6/AkonadiWidgets/Akonadi/AgentActionManager
 include/KPim6/AkonadiWidgets/Akonadi/AgentConfigurationDialog
 include/KPim6/AkonadiWidgets/Akonadi/AgentConfigurationWidget
 include/KPim6/AkonadiWidgets/Akonadi/AgentInstanceWidget
@@ -281,7 +284,6 @@ include/KPim6/AkonadiWidgets/Akonadi/TagSelectWidget
 include/KPim6/AkonadiWidgets/Akonadi/TagSelectionComboBox
 include/KPim6/AkonadiWidgets/Akonadi/TagSelectionDialog
 include/KPim6/AkonadiWidgets/Akonadi/TagWidget
-include/KPim6/AkonadiWidgets/akonadi/agentactionmanager.h
 include/KPim6/AkonadiWidgets/akonadi/agentconfigurationdialog.h
 include/KPim6/AkonadiWidgets/akonadi/agentconfigurationwidget.h
 include/KPim6/AkonadiWidgets/akonadi/agentinstancewidget.h
@@ -326,22 +328,23 @@ lib/cmake/KPim6Akonadi/KPim6AkonadiTargets.cmake
 lib/cmake/KPim6Akonadi/KPimAkonadiMacros.cmake
 lib/libKPim6AkonadiAgentBase.so
 lib/libKPim6AkonadiAgentBase.so.6
-lib/libKPim6AkonadiAgentBase.so.6.5.3
+lib/libKPim6AkonadiAgentBase.so.6.8.0
 lib/libKPim6AkonadiAgentWidgetBase.so
 lib/libKPim6AkonadiAgentWidgetBase.so.6
-lib/libKPim6AkonadiAgentWidgetBase.so.6.5.3
+lib/libKPim6AkonadiAgentWidgetBase.so.6.8.0
 lib/libKPim6AkonadiCore.so
 lib/libKPim6AkonadiCore.so.6
-lib/libKPim6AkonadiCore.so.6.5.3
+lib/libKPim6AkonadiCore.so.6.8.0
 lib/libKPim6AkonadiPrivate.so
 lib/libKPim6AkonadiPrivate.so.6
-lib/libKPim6AkonadiPrivate.so.6.5.3
+lib/libKPim6AkonadiPrivate.so.6.8.0
 lib/libKPim6AkonadiWidgets.so
 lib/libKPim6AkonadiWidgets.so.6
-lib/libKPim6AkonadiWidgets.so.6.5.3
+lib/libKPim6AkonadiWidgets.so.6.8.0
 lib/libKPim6AkonadiXml.so
 lib/libKPim6AkonadiXml.so.6
-lib/libKPim6AkonadiXml.so.6.5.3
+lib/libKPim6AkonadiXml.so.6.8.0
+lib/systemd/user/akonadi_control.service
 qt6/plugins/designer/akonadi6widgets.so
 qt6/plugins/pim6/akonadi/akonadi_test_searchplugin.so
 qt6/plugins/pim6/akonadi/config/knutconfig.so
@@ -356,15 +359,15 @@ qt6/qml/org/kde/akonadi/libakonadi_quick_plugin.so
 qt6/qml/org/kde/akonadi/qmldir
 share/akonadi/agents/knutresource.desktop
 share/applications/org.kde.akonadi.configdialog.desktop
+share/applications/org.kde.akonadi.desktop
 share/config.kcfg/resourcebase.kcfg
+share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Account.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Control.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Search.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Status.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.AgentManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.ControlManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.DebugInterface.xml
-share/dbus-1/interfaces/org.freedesktop.Akonadi.NotificationManager.xml
-share/dbus-1/interfaces/org.freedesktop.Akonadi.NotificationSource.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Preprocessor.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Resource.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Server.xml
@@ -438,6 +441,7 @@ share/locale/fi/LC_MESSAGES/libakonadi6.mo
 share/locale/fr/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/fr/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/fr/LC_MESSAGES/libakonadi6.mo
+share/locale/ga/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/ga/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/ga/LC_MESSAGES/libakonadi6.mo
 share/locale/gl/LC_MESSAGES/akonadi-db-migrator.mo
@@ -522,7 +526,9 @@ share/locale/sk/LC_MESSAGES/libakonadi6.mo
 share/locale/sl/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/sl/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/sl/LC_MESSAGES/libakonadi6.mo
+share/locale/sq/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/sq/LC_MESSAGES/akonadi_knut_resource.mo
+share/locale/sq/LC_MESSAGES/libakonadi6.mo
 share/locale/sr/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/sr/LC_MESSAGES/libakonadi6.mo
 share/locale/sr@ijekavian/LC_MESSAGES/akonadi_knut_resource.mo
@@ -543,6 +549,7 @@ share/locale/th/LC_MESSAGES/libakonadi6.mo
 share/locale/tr/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/tr/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/tr/LC_MESSAGES/libakonadi6.mo
+share/locale/ug/LC_MESSAGES/akonadi-db-migrator.mo
 share/locale/ug/LC_MESSAGES/akonadi_knut_resource.mo
 share/locale/ug/LC_MESSAGES/libakonadi6.mo
 share/locale/uk/LC_MESSAGES/akonadi-db-migrator.mo

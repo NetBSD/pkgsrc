@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:22:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/06 11:02:48 markd Exp $
 bin/kjumpingcube
 share/applications/org.kde.kjumpingcube.desktop
 share/config.kcfg/kjumpingcube.kcfg
@@ -47,7 +47,6 @@ share/locale/af/LC_MESSAGES/kjumpingcube.mo
 share/locale/ar/LC_MESSAGES/kjumpingcube.mo
 share/locale/ast/LC_MESSAGES/kjumpingcube.mo
 share/locale/be/LC_MESSAGES/kjumpingcube.mo
-share/locale/bg/LC_MESSAGES/kjumpingcube.mo
 share/locale/br/LC_MESSAGES/kjumpingcube.mo
 share/locale/bs/LC_MESSAGES/kjumpingcube.mo
 share/locale/ca/LC_MESSAGES/kjumpingcube.mo

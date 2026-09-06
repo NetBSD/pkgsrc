@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/12/21 14:07:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/06 11:02:59 markd Exp $
 bin/kfind
 man/ca/man1/kfind.1
 man/de/man1/kfind.1
@@ -22,6 +22,8 @@ man/uk/man1/kfind.1
 share/applications/org.kde.kfind.desktop
 share/doc/HTML/ca/kfind/index.cache.bz2
 share/doc/HTML/ca/kfind/index.docbook
+share/doc/HTML/de/kfind/index.cache.bz2
+share/doc/HTML/de/kfind/index.docbook
 share/doc/HTML/en/kfind/index.cache.bz2
 share/doc/HTML/en/kfind/index.docbook
 share/doc/HTML/es/kfind/index.cache.bz2
@@ -32,6 +34,8 @@ share/doc/HTML/it/kfind/index.cache.bz2
 share/doc/HTML/it/kfind/index.docbook
 share/doc/HTML/nl/kfind/index.cache.bz2
 share/doc/HTML/nl/kfind/index.docbook
+share/doc/HTML/pt_BR/kfind/index.cache.bz2
+share/doc/HTML/pt_BR/kfind/index.docbook
 share/doc/HTML/ru/kfind/index.cache.bz2
 share/doc/HTML/ru/kfind/index.docbook
 share/doc/HTML/sl/kfind/index.cache.bz2

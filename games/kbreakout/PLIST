@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:07:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 11:02:47 markd Exp $
 bin/kbreakout
 share/applications/org.kde.kbreakout.desktop
 share/doc/HTML/ca/kbreakout/gameboard.png
@@ -92,7 +92,6 @@ share/kbreakout/themes/web20.svgz
 share/kbreakout/themes/web20_preview.png
 share/locale/ar/LC_MESSAGES/kbreakout.mo
 share/locale/ast/LC_MESSAGES/kbreakout.mo
-share/locale/bg/LC_MESSAGES/kbreakout.mo
 share/locale/bs/LC_MESSAGES/kbreakout.mo
 share/locale/ca/LC_MESSAGES/kbreakout.mo
 share/locale/ca@valencia/LC_MESSAGES/kbreakout.mo

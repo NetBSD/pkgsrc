@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:22:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:03:01 markd Exp $
 include/KPim6/KontactInterface/KontactInterface/Core
 include/KPim6/KontactInterface/KontactInterface/PimUniqueApplication
 include/KPim6/KontactInterface/KontactInterface/Plugin
@@ -19,7 +19,7 @@ lib/cmake/KPim6KontactInterface/KPim6KontactInterfaceTargets-noconfig.cmake
 lib/cmake/KPim6KontactInterface/KPim6KontactInterfaceTargets.cmake
 lib/libKPim6KontactInterface.so
 lib/libKPim6KontactInterface.so.6
-lib/libKPim6KontactInterface.so.6.5.3
+lib/libKPim6KontactInterface.so.6.8.0
 share/locale/ar/LC_MESSAGES/kontactinterfaces6.mo
 share/locale/ast/LC_MESSAGES/kontactinterfaces6.mo
 share/locale/az/LC_MESSAGES/kontactinterfaces6.mo

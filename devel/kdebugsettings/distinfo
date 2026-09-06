@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/21 10:14:23 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/09/06 11:02:44 markd Exp $
 
-BLAKE2s (kdebugsettings-25.08.3.tar.xz) = 28b0388e527e9789ff4bf0e40515b53f5652c9f17490f6dd1c1651243c49bd4a
-SHA512 (kdebugsettings-25.08.3.tar.xz) = 10ff132a482647c13b8f775f2f625db1f4e344d788464eb1722cccd2cdc13a1955b7a7b3e1e31077a15230627f26a27f9ff787cffc7616fcd00b47b3f73da961
-Size (kdebugsettings-25.08.3.tar.xz) = 123224 bytes
+BLAKE2s (kdebugsettings-26.08.0.tar.xz) = c1e8730ebac31679debb709be56ed704f924a34da966912ce385e4bba36e971b
+SHA512 (kdebugsettings-26.08.0.tar.xz) = 5f69f68a74b8f0f7bfcce4e04e1d45eb0d27935118fea02e2a5ab2333e367c92d83afb0ff8be2e355848f01f43af289732e50a828fb86ad5683c19b356b4cd02
+Size (kdebugsettings-26.08.0.tar.xz) = 126528 bytes

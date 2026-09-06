@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/09/02 19:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/06 11:03:06 markd Exp $
 
 DISTNAME=	kleopatra-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	security
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kleopatra/
@@ -27,9 +26,10 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kleopatradebugcommandsrc \
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/kf6-kcmutils/buildlink3.mk"
+.include "../../mail/kf6-kmime/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
-.include "../../mail/kmime/buildlink3.mk"
 .include "../../mail/mimetreeparser/buildlink3.mk"
+.include "../../misc/kdsingleapplication/buildlink3.mk"
 .include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libkleo/buildlink3.mk"

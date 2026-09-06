@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:50 markd Exp $
 bin/ksnakeduel
 share/applications/org.kde.ksnakeduel.desktop
 share/config.kcfg/ksnakeduel.kcfg
@@ -44,7 +44,6 @@ share/ksnakeduel/themes/neon.png
 share/ksnakeduel/themes/neon.svgz
 share/locale/ar/LC_MESSAGES/ksnakeduel.mo
 share/locale/ast/LC_MESSAGES/ksnakeduel.mo
-share/locale/bg/LC_MESSAGES/ksnakeduel.mo
 share/locale/bs/LC_MESSAGES/ksnakeduel.mo
 share/locale/ca/LC_MESSAGES/ksnakeduel.mo
 share/locale/ca@valencia/LC_MESSAGES/ksnakeduel.mo

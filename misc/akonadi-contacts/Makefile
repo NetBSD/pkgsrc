@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/09/02 19:03:25 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/06 11:02:57 markd Exp $
 
 DISTNAME=	akonadi-contacts-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -25,7 +24,7 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../devel/kf6-kcmutils/buildlink3.mk"
 .include "../../graphics/kf6-prison/buildlink3.mk"
 .include "../../mail/akonadi/buildlink3.mk"
-.include "../../mail/kmime/buildlink3.mk"
+.include "../../mail/kf6-kmime/buildlink3.mk"
 .include "../../misc/grantleetheme/buildlink3.mk"
 .include "../../misc/kf6-kcontacts/buildlink3.mk"
 .include "../../textproc/ktextaddons/buildlink3.mk"

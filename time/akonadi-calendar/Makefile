@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/09/02 19:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/06 11:03:07 markd Exp $
 
 DISTNAME=	akonadi-calendar-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -11,6 +10,8 @@ LICENSE=	gnu-lgpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure

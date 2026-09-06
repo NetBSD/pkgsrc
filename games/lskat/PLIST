@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:55:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 11:02:51 markd Exp $
 bin/lskat
 share/applications/org.kde.lskat.desktop
 share/doc/HTML/ca/lskat/index.cache.bz2
@@ -43,7 +43,6 @@ share/locale/af/LC_MESSAGES/lskat.mo
 share/locale/ar/LC_MESSAGES/lskat.mo
 share/locale/ast/LC_MESSAGES/lskat.mo
 share/locale/be/LC_MESSAGES/lskat.mo
-share/locale/bg/LC_MESSAGES/lskat.mo
 share/locale/br/LC_MESSAGES/lskat.mo
 share/locale/bs/LC_MESSAGES/lskat.mo
 share/locale/ca/LC_MESSAGES/lskat.mo

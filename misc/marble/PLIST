@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/01/25 04:00:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/09/06 11:03:02 markd Exp $
 bin/marble
 bin/marble-behaim
 bin/marble-maps
@@ -246,8 +246,13 @@ qt6/plugins/designer/LatLonEditPlugin.so
 qt6/plugins/designer/MarbleNavigatorPlugin.so
 qt6/plugins/designer/MarbleWidgetPlugin.so
 qt6/plugins/kf6/krunner/plasma_runner_marble.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_geojson.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_gpx.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_kml.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_kmz.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_osm.so
+qt6/plugins/kf6/thumbcreator/marble_thumbnail_shp.so
 qt6/plugins/libmarble_part.so
-qt6/plugins/marblethumbnail.so
 qt6/qml/org/kde/marble/imageprovider/kde-qmlmodule.version
 qt6/qml/org/kde/marble/imageprovider/libmarbleimageprovider.so
 qt6/qml/org/kde/marble/imageprovider/marbleimageprovider.qmltypes
@@ -256,17 +261,11 @@ qt6/qml/org/kde/marble/kde-qmlmodule.version
 qt6/qml/org/kde/marble/libmarbledeclarative.so
 qt6/qml/org/kde/marble/marbledeclarative.qmltypes
 qt6/qml/org/kde/marble/qmldir
-share/applications/marble_geo.desktop
 share/applications/marble_geojson.desktop
 share/applications/marble_gpx.desktop
 share/applications/marble_kml.desktop
 share/applications/marble_kmz.desktop
 share/applications/marble_shp.desktop
-share/applications/marble_thumbnail_kml.desktop
-share/applications/marble_thumbnail_kmz.desktop
-share/applications/marble_thumbnail_osm.desktop
-share/applications/marble_thumbnail_shp.desktop
-share/applications/marble_worldwind.desktop
 share/applications/org.kde.marble.behaim.desktop
 share/applications/org.kde.marble.desktop
 share/applications/org.kde.marble.maps.desktop
@@ -374,6 +373,17 @@ share/doc/HTML/nl/marble/search-1.png
 share/doc/HTML/nl/marble/search-2.png
 share/doc/HTML/pt/marble/index.cache.bz2
 share/doc/HTML/pt/marble/index.docbook
+share/doc/HTML/pt_BR/marble/configure-cacheproxy.png
+share/doc/HTML/pt_BR/marble/configure-navigation.png
+share/doc/HTML/pt_BR/marble/configure-plugins.png
+share/doc/HTML/pt_BR/marble/configure-view.png
+share/doc/HTML/pt_BR/marble/index.cache.bz2
+share/doc/HTML/pt_BR/marble/index.docbook
+share/doc/HTML/pt_BR/marble/mapview-1.png
+share/doc/HTML/pt_BR/marble/measure-1.png
+share/doc/HTML/pt_BR/marble/quick-1.png
+share/doc/HTML/pt_BR/marble/search-1.png
+share/doc/HTML/pt_BR/marble/search-2.png
 share/doc/HTML/ru/marble/configure-cacheproxy.png
 share/doc/HTML/ru/marble/configure-navigation.png
 share/doc/HTML/ru/marble/configure-plugins.png
@@ -537,10 +547,13 @@ share/locale/fr/LC_MESSAGES/marble_qt.qm
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/fr/LC_MESSAGES/plasma_runner_marble.mo
 share/locale/fr/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
+share/locale/ga/LC_MESSAGES/marble-behaim.mo
 share/locale/ga/LC_MESSAGES/marble-maps.mo
 share/locale/ga/LC_MESSAGES/marble.mo
 share/locale/ga/LC_MESSAGES/marble_qt.qm
+share/locale/ga/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/ga/LC_MESSAGES/plasma_runner_marble.mo
+share/locale/ga/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
 share/locale/gl/LC_MESSAGES/marble-behaim.mo
 share/locale/gl/LC_MESSAGES/marble-maps.mo
 share/locale/gl/LC_MESSAGES/marble.mo
@@ -620,6 +633,7 @@ share/locale/ko/LC_MESSAGES/marble_qt.qm
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_marble.mo
 share/locale/ko/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
+share/locale/lt/LC_MESSAGES/marble-behaim.mo
 share/locale/lt/LC_MESSAGES/marble-maps.mo
 share/locale/lt/LC_MESSAGES/marble.mo
 share/locale/lt/LC_MESSAGES/marble_qt.qm
@@ -745,10 +759,13 @@ share/locale/tr/LC_MESSAGES/marble_qt.qm
 share/locale/tr/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/tr/LC_MESSAGES/plasma_runner_marble.mo
 share/locale/tr/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
+share/locale/ug/LC_MESSAGES/marble-behaim.mo
 share/locale/ug/LC_MESSAGES/marble-maps.mo
 share/locale/ug/LC_MESSAGES/marble.mo
 share/locale/ug/LC_MESSAGES/marble_qt.qm
+share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/ug/LC_MESSAGES/plasma_runner_marble.mo
+share/locale/ug/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
 share/locale/uk/LC_MESSAGES/marble-behaim.mo
 share/locale/uk/LC_MESSAGES/marble-maps.mo
 share/locale/uk/LC_MESSAGES/marble.mo

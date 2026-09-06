@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/21 11:52:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/06 11:02:51 markd Exp $
 include/KDEGames6/KGameAudioScene
 include/KDEGames6/KGameClock
 include/KDEGames6/KGameDifficulty
@@ -60,10 +60,10 @@ lib/cmake/KDEGames6/KDEGames6Targets-noconfig.cmake
 lib/cmake/KDEGames6/KDEGames6Targets.cmake
 lib/libKDEGames6.so
 lib/libKDEGames6.so.6
-lib/libKDEGames6.so.6.0.250803
+lib/libKDEGames6.so.6.0.260800
 lib/libKDEGames6Private.so
 lib/libKDEGames6Private.so.6
-lib/libKDEGames6Private.so.6.0.250803
+lib/libKDEGames6Private.so.6.0.260800
 qt6/qml/org/kde/games/core/KGameItem.qml
 qt6/qml/org/kde/games/core/corebindingsplugin.qmltypes
 qt6/qml/org/kde/games/core/kde-qmlmodule.version

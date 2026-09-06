@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.15 2025/12/21 14:55:23 markd Exp $
+$NetBSD: distinfo,v 1.16 2026/09/06 11:03:03 markd Exp $
 
-BLAKE2s (kdenlive-25.08.3.tar.xz) = c674f0993b006bbb1793844c3d94f2afe9c776eb0745bbca022003daaf7a4d14
-SHA512 (kdenlive-25.08.3.tar.xz) = 3fcbe372158f78ba53265ac7818db28cbaee72e244637d58e1e6432b8acf1c84a0f37111901959fd27d0138b29d178bb5d0f092067fad2b0675775eb461e88ec
-Size (kdenlive-25.08.3.tar.xz) = 14567324 bytes
+BLAKE2s (kdenlive-26.08.0.tar.xz) = 6e2bfd3f32684c5ba0c0f156dbc75b4354c1aec61515e9a4043e740cc7fb83cb
+SHA512 (kdenlive-26.08.0.tar.xz) = 0d6d3a317eb5e065d47c632185f07fab8bb47e8aaaf34c9361fc2d9306e085a87f15c4df2e316ffea7b39c0f41995b89bd7455b7e5bed4e95db93c8e6ace58ba
+Size (kdenlive-26.08.0.tar.xz) = 19922292 bytes
+SHA1 (patch-Messages.sh) = 504460d5c58ebe340c159fc98b1f907948b12037
+SHA1 (patch-cmake_modules_FindFFmpeg.cmake) = 19e9196220fc1473636e57abdbfe0110c5f83ae4

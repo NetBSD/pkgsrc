@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:04:16 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:47 markd Exp $
 
-BLAKE2s (kblocks-25.08.3.tar.xz) = aa600728297ce88d7ff8c882ea714998dea3e53d3cd2a34e0c9b9464f604153c
-SHA512 (kblocks-25.08.3.tar.xz) = 774a56d1604adecfeea4a714f8f220360c8d804c18f60ce06e7a7c8cfe8beffdf0f73e8b249e55be4b61ed7dc5cbc59f89baba658b4a20a84e11a17627994658
-Size (kblocks-25.08.3.tar.xz) = 2104580 bytes
+BLAKE2s (kblocks-26.08.0.tar.xz) = f4a2072bd1d4b88c3b13978334a0de01e8db3378536847d6a288f3f6c4347e65
+SHA512 (kblocks-26.08.0.tar.xz) = c4b10ab07a1d97f607e1feeef0e3713afbbde710d49789fbcd9332b1c62887b8a691dbb77e0abb817b92d1b491ff3a39323d3eb4fa23b5e1310ba8c30e0dbd5c
+Size (kblocks-26.08.0.tar.xz) = 2104620 bytes

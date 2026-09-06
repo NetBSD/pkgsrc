@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 14:12:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:03:00 markd Exp $
 bin/kig
 bin/pykig.py
 man/ca/man1/kig.1
@@ -419,6 +419,7 @@ share/locale/ja/LC_MESSAGES/kig.mo
 share/locale/ka/LC_MESSAGES/kig.mo
 share/locale/kk/LC_MESSAGES/kig.mo
 share/locale/km/LC_MESSAGES/kig.mo
+share/locale/ko/LC_MESSAGES/kig.mo
 share/locale/lt/LC_MESSAGES/kig.mo
 share/locale/lv/LC_MESSAGES/kig.mo
 share/locale/mai/LC_MESSAGES/kig.mo

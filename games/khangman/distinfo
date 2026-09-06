@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/12/21 11:16:59 markd Exp $
+$NetBSD: distinfo,v 1.20 2026/09/06 11:02:48 markd Exp $
 
-BLAKE2s (khangman-25.08.3.tar.xz) = 3d81649df78639b8d6175092a81865ffa1b00cfc675aac7af11631415b8e9d0a
-SHA512 (khangman-25.08.3.tar.xz) = 88a308e98a59012537dd47915140c63417c81fe5c3d38f3cf0526eb0cdefe1b95095c83d01045c9e8f2ced73947f9dde8af2a7816cc5c7d33daa4acbe9721e96
-Size (khangman-25.08.3.tar.xz) = 7031184 bytes
+BLAKE2s (khangman-26.08.0.tar.xz) = a3ea8e29e1b0ea1b570d08c8f14f232132d236bfd6070976989a54f88ca7e725
+SHA512 (khangman-26.08.0.tar.xz) = 7d8c5e7e8cdfa5f820abd9acd510c60f6253aec86056a4ac47818556cd3713c1d03321fa03a9a92353fd71248b0105ed1d57b97c1ddba62571e8c15c42b95f89
+Size (khangman-26.08.0.tar.xz) = 7030564 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/12/21 14:19:28 markd Exp $
+$NetBSD: distinfo,v 1.20 2026/09/06 11:03:00 markd Exp $
 
-BLAKE2s (kmouth-25.08.3.tar.xz) = 9f6c6df1bdf39845a39f78c0ffd9a4a7629f201805a7c5bb6623083bcbadcf0d
-SHA512 (kmouth-25.08.3.tar.xz) = a5e08b7bdcb246c94aea8dadcfed92c809b0ef2ce20bb044a99495b9732346bd9df95bbd7a6e48651d0c3526e130863e205d03b39789c98d72126af614a1e6cf
-Size (kmouth-25.08.3.tar.xz) = 1945948 bytes
+BLAKE2s (kmouth-26.08.0.tar.xz) = 7ce2cb8bc1f08c5cc7ea30f856e47e7359fcb953df0073cc0bff0fbdbde234e4
+SHA512 (kmouth-26.08.0.tar.xz) = d7d32009bb12ce5d99ce3e9e6a3a004eeb6a0ba20567a9d73534a69367a9d7e5158c5d59841e5da96fcd98cc27569b408fafcaf2c792395af6f762960ed600ca
+Size (kmouth-26.08.0.tar.xz) = 1945860 bytes

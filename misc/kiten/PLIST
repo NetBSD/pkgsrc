@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/12/21 14:14:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/09/06 11:03:00 markd Exp $
 bin/kiten
 bin/kitenkanjibrowser
 bin/kitenradselect
@@ -96,7 +96,6 @@ share/locale/af/LC_MESSAGES/kiten.mo
 share/locale/ar/LC_MESSAGES/kiten.mo
 share/locale/ast/LC_MESSAGES/kiten.mo
 share/locale/be/LC_MESSAGES/kiten.mo
-share/locale/bg/LC_MESSAGES/kiten.mo
 share/locale/br/LC_MESSAGES/kiten.mo
 share/locale/bs/LC_MESSAGES/kiten.mo
 share/locale/ca/LC_MESSAGES/kiten.mo

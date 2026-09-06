@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:22:41 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:48 markd Exp $
 
-BLAKE2s (kjumpingcube-25.08.3.tar.xz) = 1e5c1eda5ef2297fd07749be54bdba2ad02ed63b3b7ea866e525b161f9bbb7e3
-SHA512 (kjumpingcube-25.08.3.tar.xz) = 934f335c7163c2655ed0c0c6a32bd9dcbb3bc4d21a47ecb9b168b050dec4d30d4f30279618d63d059425e9cfbf271464b1031b4b9e3b685c2b95509b120aca1d
-Size (kjumpingcube-25.08.3.tar.xz) = 351300 bytes
+BLAKE2s (kjumpingcube-26.08.0.tar.xz) = d84faa0eb8051a40f395e4b511741bf7dd39d51b3a12ac92ee177498c1a86e1d
+SHA512 (kjumpingcube-26.08.0.tar.xz) = a61b2c7f2d4ab5c9d99b20be575db80d224b5d2cd08f93ddd8e01dc3731381b3cf8bc939ad051f4bbedc141953a5bf2ec5490783906438fb44994a4f2bc8a0f4
+Size (kjumpingcube-26.08.0.tar.xz) = 352900 bytes

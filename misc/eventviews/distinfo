@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/21 13:45:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/09/06 11:02:57 markd Exp $
 
-BLAKE2s (eventviews-25.08.3.tar.xz) = 39b3f662c4d320aac31219a1bcffab5e9b551facb08763040855f3237e025899
-SHA512 (eventviews-25.08.3.tar.xz) = 4157ae6e28dabcd0387a4ed9fa97b6ddf971929174451999b27732d0673a780d268be4e9886f60c8191db4576bf2f4e0b2f75680cf55b496c5aab29ed26646ba
-Size (eventviews-25.08.3.tar.xz) = 523968 bytes
+BLAKE2s (eventviews-26.08.0.tar.xz) = 2f1f9771ee9fa8a54f5a87226701637ae87109b567cf84747bcd57c549302be7
+SHA512 (eventviews-26.08.0.tar.xz) = fd1aeb635be2bd617a75dea517b70d8776e1eb3b01224951c3beb158b3994e91425c09b22b9c376ed004986b1a5bc379f87990234a4a5a5230a46c524eaf66bf
+Size (eventviews-26.08.0.tar.xz) = 564836 bytes

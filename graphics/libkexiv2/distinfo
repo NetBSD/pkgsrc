@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2025/12/21 12:46:26 markd Exp $
+$NetBSD: distinfo,v 1.32 2026/09/06 11:02:53 markd Exp $
 
-BLAKE2s (libkexiv2-25.08.3.tar.xz) = d6f1d9784bcab56934a882f349af3a757e5aab452050ec5ee774a0fe69c95670
-SHA512 (libkexiv2-25.08.3.tar.xz) = 9fc77ecb55c5faeaff7b512f71e5e4704cbb6b66a4113beb52bee7320ed86aa1f33d36ff7043ec5bf24df1b72f30068720b457177b25bcaeaeb531a1646e73be
-Size (libkexiv2-25.08.3.tar.xz) = 60644 bytes
+BLAKE2s (libkexiv2-26.08.0.tar.xz) = afc20aca6f5ccfc9a6f42c4fde177ed5ec8980c487f1cd610bfb6b7607f09837
+SHA512 (libkexiv2-26.08.0.tar.xz) = 4834656c039f6518c9a545ac8c47186edfb427a2eb19e7b2e6f727b72f6ca9c71d5a19fa695c41a5845cb8c8bd938cc4df66d14f8ef3d8555b9190f8ee72e210
+Size (libkexiv2-26.08.0.tar.xz) = 50624 bytes

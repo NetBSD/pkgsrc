@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:42:26 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:50 markd Exp $
 
-BLAKE2s (ksnakeduel-25.08.3.tar.xz) = f8ea489cb2e995eb221172bc6c95f87292089e3da5548831a328bfee8aea8054
-SHA512 (ksnakeduel-25.08.3.tar.xz) = 4f04c7dc39f6afc9bb764228b5d4b9a56fb53d8f41dd7d8c7c3c25778f1fae2cbfd0093760b856f5a2c13f12c3beba78a0b06611cb3ba13f5331f4efd96726b5
-Size (ksnakeduel-25.08.3.tar.xz) = 580528 bytes
+BLAKE2s (ksnakeduel-26.08.0.tar.xz) = 742d82f988248179b1ada04bdbe0458542957adf04be257840482af6dec6f709
+SHA512 (ksnakeduel-26.08.0.tar.xz) = 87e9a9400164cd976d38e42277a4a38685d6fbba6c51c1cbd8f8694d158eb807ffa8425a9088e56b25ad2a55c246b43248028ffc740f4f8a5e2dd72989967507
+Size (ksnakeduel-26.08.0.tar.xz) = 580208 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:20:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:56 markd Exp $
 include/KPim6/MailCommon/MailCommon/AccountConfigOrderDialog
 include/KPim6/MailCommon/MailCommon/AddTagDialog
 include/KPim6/MailCommon/MailCommon/BackupJob
@@ -114,7 +114,7 @@ lib/cmake/KPim6MailCommon/KPim6MailCommonTargets-noconfig.cmake
 lib/cmake/KPim6MailCommon/KPim6MailCommonTargets.cmake
 lib/libKPim6MailCommon.so
 lib/libKPim6MailCommon.so.6
-lib/libKPim6MailCommon.so.6.5.3
+lib/libKPim6MailCommon.so.6.8.0
 qt6/plugins/designer/mailcommon6widgets.so
 share/locale/ar/LC_MESSAGES/libmailcommon6.mo
 share/locale/ast/LC_MESSAGES/libmailcommon6.mo
@@ -146,6 +146,7 @@ share/locale/ka/LC_MESSAGES/libmailcommon6.mo
 share/locale/kk/LC_MESSAGES/libmailcommon6.mo
 share/locale/ko/LC_MESSAGES/libmailcommon6.mo
 share/locale/lt/LC_MESSAGES/libmailcommon6.mo
+share/locale/lv/LC_MESSAGES/libmailcommon6.mo
 share/locale/mr/LC_MESSAGES/libmailcommon6.mo
 share/locale/nb/LC_MESSAGES/libmailcommon6.mo
 share/locale/nds/LC_MESSAGES/libmailcommon6.mo

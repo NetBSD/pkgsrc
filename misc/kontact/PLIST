@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:20:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:03:01 markd Exp $
 bin/kontact
 lib/libkontactprivate.so.6
-lib/libkontactprivate.so.6.5.3
+lib/libkontactprivate.so.6.8.0
 qt6/plugins/pim6/kcms/kontact/kcm_kontact.so
 share/applications/org.kde.kontact.desktop
 share/config.kcfg/kontact.kcfg
@@ -33,6 +33,8 @@ share/doc/HTML/en/kontact/summary-view.png
 share/doc/HTML/en/kontact/todo-list-sidebar-icon.png
 share/doc/HTML/es/kontact/index.cache.bz2
 share/doc/HTML/es/kontact/index.docbook
+share/doc/HTML/fr/kontact/index.cache.bz2
+share/doc/HTML/fr/kontact/index.docbook
 share/doc/HTML/it/kontact/index.cache.bz2
 share/doc/HTML/it/kontact/index.docbook
 share/doc/HTML/nl/kontact/index.cache.bz2
@@ -45,6 +47,8 @@ share/doc/HTML/sl/kontact/index.cache.bz2
 share/doc/HTML/sl/kontact/index.docbook
 share/doc/HTML/sv/kontact/index.cache.bz2
 share/doc/HTML/sv/kontact/index.docbook
+share/doc/HTML/tr/kontact/index.cache.bz2
+share/doc/HTML/tr/kontact/index.docbook
 share/doc/HTML/uk/kontact/index.cache.bz2
 share/doc/HTML/uk/kontact/index.docbook
 share/icons/hicolor/128x128/apps/kontact.png

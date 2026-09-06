@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/12/21 14:27:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/06 11:03:01 markd Exp $
 bin/kwordquiz
 share/applications/org.kde.kwordquiz.desktop
 share/config.kcfg/kwordquiz.kcfg
@@ -291,7 +291,6 @@ share/kwordquiz/icons/hicolor/scalable/actions/unmarkasblank.svgz
 share/locale/ar/LC_MESSAGES/kwordquiz.mo
 share/locale/ast/LC_MESSAGES/kwordquiz.mo
 share/locale/be/LC_MESSAGES/kwordquiz.mo
-share/locale/bg/LC_MESSAGES/kwordquiz.mo
 share/locale/bn/LC_MESSAGES/kwordquiz.mo
 share/locale/br/LC_MESSAGES/kwordquiz.mo
 share/locale/bs/LC_MESSAGES/kwordquiz.mo

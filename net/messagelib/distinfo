@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/01/08 18:51:35 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 11:03:05 markd Exp $
 
-BLAKE2s (messagelib-25.08.3.tar.xz) = 7b066b3a05f84e561c521a49019b159231239045a6137d91215b124b0d2116db
-SHA512 (messagelib-25.08.3.tar.xz) = f96f14e413d3192be0780016063c4da44e5750791df0da349eb275417b2820bf75e4fcc1af11180f8df5e713adac5d3564e00ac9ffb74a3785bc94772563f22e
-Size (messagelib-25.08.3.tar.xz) = 7445392 bytes
-SHA1 (patch-src_checkphishingurl_checkphishingurljob.cpp) = 27c4550682c1664efeaedbc02d1e39648d37c008
-SHA1 (patch-src_checkphishingurl_checkphishingurljob.h) = 9f5752798f79e32a2f004c43cb2c4efaf748d611
-SHA1 (patch-src_checkphishingurl_createphishingurldatabasejob.cpp) = 990710fc221bb8202d6e520b6e8b002bbeee5640
-SHA1 (patch-src_checkphishingurl_createphishingurldatabasejob.h) = 84f4cd7756f844c38c7bcdddb12c0c43e58be2a0
-SHA1 (patch-src_checkphishingurl_searchfullhashjob.cpp) = 8e43c7c59737744614398d651fcbfe771959c521
-SHA1 (patch-src_checkphishingurl_searchfullhashjob.h) = cf1bdb6a326465583ce393be63f91cc4bd9e7de8
+BLAKE2s (messagelib-26.08.0.tar.xz) = 70032926889d2083990fee6b146e3a5108335cfe6348f08f1dc879580c9c0ec4
+SHA512 (messagelib-26.08.0.tar.xz) = b50429f3073ea4ea414374ae8e0487e80d93dbeafc5326731774aa64004c0a83989c5e45705cd442424564b68f27ee7ee61c7f0f014efa8c404afe46c269fda8
+Size (messagelib-26.08.0.tar.xz) = 7419124 bytes

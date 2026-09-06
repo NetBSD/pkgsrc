@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2026/09/02 19:05:15 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/09/06 11:03:09 markd Exp $
 
 DISTNAME=	konsole-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	x11
 
 HOMEPAGE=	https://apps.kde.org/konsole/
@@ -18,6 +17,7 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../devel/kf6-kpty/buildlink3.mk"
 .include "../../net/kf6-knewstuff/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

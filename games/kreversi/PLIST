@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:38:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/06 11:02:50 markd Exp $
 bin/kreversi
 share/applications/org.kde.kreversi.desktop
 share/doc/HTML/ca/kreversi/index.cache.bz2
@@ -79,7 +79,6 @@ share/locale/af/LC_MESSAGES/kreversi.mo
 share/locale/ar/LC_MESSAGES/kreversi.mo
 share/locale/ast/LC_MESSAGES/kreversi.mo
 share/locale/be/LC_MESSAGES/kreversi.mo
-share/locale/bg/LC_MESSAGES/kreversi.mo
 share/locale/bn/LC_MESSAGES/kreversi.mo
 share/locale/br/LC_MESSAGES/kreversi.mo
 share/locale/bs/LC_MESSAGES/kreversi.mo

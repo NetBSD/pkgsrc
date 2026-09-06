@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2026/09/02 19:03:44 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2026/09/06 11:03:03 markd Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://www.kdenlive.org/
@@ -12,15 +11,14 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	kf6-kdoctools>=6.18.0:../../devel/kf6-kdoctools
 DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
-DEPENDS+=	ffplay7-[0-9]*:../../multimedia/ffplay7
-DEPENDS+=	mlt-qt6-[0-9]*:../../multimedia/mlt-qt6
+DEPENDS+=	ffplay8-[0-9]*:../../multimedia/ffplay8
 
 USE_TOOLS+=	msgmerge pkg-config
 
 CXXFLAGS.NetBSD+=	-DHAVE_LOCALE_H
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DFETCH_OTIO=OFF
-CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SUFFIX=7
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SUFFIX=8
 
 .include "../../devel/kf6-kdeclarative/buildlink3.mk"
 .include "../../devel/kf6-kio/buildlink3.mk"
@@ -28,7 +26,8 @@ CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SUFFIX=7
 .include "../../devel/kf6-purpose/buildlink3.mk"
 .include "../../devel/rttr/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../misc/kddockwidgets/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
 .include "../../multimedia/mlt/buildlink3.mk"
 .include "../../multimedia/opentimelineio/buildlink3.mk"

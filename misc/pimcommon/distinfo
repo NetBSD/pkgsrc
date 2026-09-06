@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/21 14:44:08 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/09/06 11:03:02 markd Exp $
 
-BLAKE2s (pimcommon-25.08.3.tar.xz) = cb2001c8d00d0f4b4e5a78eb5cb616fed653f64b08c2ffd911ff0435f1ce7d92
-SHA512 (pimcommon-25.08.3.tar.xz) = e5b51cf9287b79a351cc0d28a593431fd7a7ff7e706ccbeb9eec989aa214effd389bee3f50716fbe754e72507877ae6ebeb9109ce52ee96660dd5d9ff8442697
-Size (pimcommon-25.08.3.tar.xz) = 379448 bytes
+BLAKE2s (pimcommon-26.08.0.tar.xz) = 38e47bf0e3187254fda64db182b9c82232a6adbc42a7d61fbad3b43a525b7c2a
+SHA512 (pimcommon-26.08.0.tar.xz) = 4fcc3e88bcad3b613e33813e2fdbd02bac752049ec0182444aed6dadd8bce1016062214515684391a0f7514614cbc5ea43693709941decea6072f75866da148e
+Size (pimcommon-26.08.0.tar.xz) = 380736 bytes

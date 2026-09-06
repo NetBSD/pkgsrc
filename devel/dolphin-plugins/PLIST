@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/01/19 10:10:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:43 markd Exp $
 qt6/plugins/dolphin/vcs/fileviewbazaarplugin.so
 qt6/plugins/dolphin/vcs/fileviewdropboxplugin.so
 qt6/plugins/dolphin/vcs/fileviewgitplugin.so
@@ -6,6 +6,7 @@ qt6/plugins/dolphin/vcs/fileviewhgplugin.so
 qt6/plugins/dolphin/vcs/fileviewsvnplugin.so
 qt6/plugins/kf6/kfileitemaction/makefileactions.so
 qt6/plugins/kf6/kfileitemaction/mountisoaction.so
+qt6/plugins/kf6/overlayicon/mountedisooverlay.so
 share/config.kcfg/fileviewgitpluginsettings.kcfg
 share/config.kcfg/fileviewhgpluginsettings.kcfg
 share/config.kcfg/fileviewsvnpluginsettings.kcfg
@@ -115,6 +116,8 @@ share/locale/ga/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/ga/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/ga/LC_MESSAGES/fileviewhgplugin.mo
 share/locale/ga/LC_MESSAGES/fileviewsvnplugin.mo
+share/locale/ga/LC_MESSAGES/makefileactions.mo
+share/locale/ga/LC_MESSAGES/mountisoaction.mo
 share/locale/gl/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/gl/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/gl/LC_MESSAGES/fileviewhgplugin.mo
@@ -202,6 +205,7 @@ share/locale/nb/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/nb/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/nb/LC_MESSAGES/fileviewhgplugin.mo
 share/locale/nb/LC_MESSAGES/fileviewsvnplugin.mo
+share/locale/nb/LC_MESSAGES/makefileactions.mo
 share/locale/nb/LC_MESSAGES/mountisoaction.mo
 share/locale/nds/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/nds/LC_MESSAGES/fileviewgitplugin.mo
@@ -215,7 +219,9 @@ share/locale/nl/LC_MESSAGES/makefileactions.mo
 share/locale/nl/LC_MESSAGES/mountisoaction.mo
 share/locale/nn/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/nn/LC_MESSAGES/fileviewgitplugin.mo
+share/locale/nn/LC_MESSAGES/fileviewhgplugin.mo
 share/locale/nn/LC_MESSAGES/fileviewsvnplugin.mo
+share/locale/nn/LC_MESSAGES/makefileactions.mo
 share/locale/nn/LC_MESSAGES/mountisoaction.mo
 share/locale/pa/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/pa/LC_MESSAGES/fileviewhgplugin.mo
@@ -286,6 +292,8 @@ share/locale/ug/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/ug/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/ug/LC_MESSAGES/fileviewhgplugin.mo
 share/locale/ug/LC_MESSAGES/fileviewsvnplugin.mo
+share/locale/ug/LC_MESSAGES/makefileactions.mo
+share/locale/ug/LC_MESSAGES/mountisoaction.mo
 share/locale/uk/LC_MESSAGES/fileviewbazaarplugin.mo
 share/locale/uk/LC_MESSAGES/fileviewgitplugin.mo
 share/locale/uk/LC_MESSAGES/fileviewhgplugin.mo

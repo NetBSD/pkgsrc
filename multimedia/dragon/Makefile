@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2026/09/02 19:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2026/09/06 11:03:03 markd Exp $
 
 DISTNAME=	dragon-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://apps.kde.org/dragonplayer/
@@ -17,7 +16,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../devel/kf6-kio/buildlink3.mk"
 .include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kf6-kirigami/buildlink3.mk"

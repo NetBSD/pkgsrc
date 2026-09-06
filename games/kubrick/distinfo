@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:49:45 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:51 markd Exp $
 
-BLAKE2s (kubrick-25.08.3.tar.xz) = caacb6019c04104dfa921f8d37b4eec2711bd2c4d3a63a57f21db51fd8c75275
-SHA512 (kubrick-25.08.3.tar.xz) = a656710032392d4036d8c1131f5c5c6be3f17f95d27a1aebfb6982ff610a714224cc7f58c58a6cfff6765eba76191a3f4034dc55b32551985826c5bcb7a3c97d
-Size (kubrick-25.08.3.tar.xz) = 384884 bytes
+BLAKE2s (kubrick-26.08.0.tar.xz) = 66af364ae6a1a7fd501edfc5f13208f59ba2ffcbf7f1dab0ccc1412f7f04e3bc
+SHA512 (kubrick-26.08.0.tar.xz) = 08cedc4a8e391eab10b8cbcccde264f1db1c92a9eb986cf85755dcdcde643803c65a06ef7045394f9913b0e0853a1ac0a4a7ad3e1870d091dc517c391db10f07
+Size (kubrick-26.08.0.tar.xz) = 384940 bytes

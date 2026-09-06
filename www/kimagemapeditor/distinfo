@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/12/23 05:52:19 markd Exp $
+$NetBSD: distinfo,v 1.10 2026/09/06 11:03:09 markd Exp $
 
-BLAKE2s (kimagemapeditor-25.08.3.tar.xz) = 6ed70ad2d08a965891011fd9adf9ba6f68488208ab0ab539b6e13fe16165619f
-SHA512 (kimagemapeditor-25.08.3.tar.xz) = 584c89d403d3be90334bc43d03538f8a4676999e059ddfe9d8868f69cee8fb9254d9a946212f90e98d123d4fbca83e45e64a2f1b2e4d6df9d09771594783bfc2
-Size (kimagemapeditor-25.08.3.tar.xz) = 1077308 bytes
+BLAKE2s (kimagemapeditor-26.08.0.tar.xz) = 4f41f3f16c2d838d89342842e26145b1f22d95e1efa628714bc63ff7749b8dfc
+SHA512 (kimagemapeditor-26.08.0.tar.xz) = 387741eb5c56e356844b5cb249242345e50b39baca966509153534da1a7dfc04752a3921edfba0fcfa6503c4bca7ecdbd219e68c934253f463bcbcfa09430921
+Size (kimagemapeditor-26.08.0.tar.xz) = 1077252 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/12/21 09:53:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/09/06 11:02:43 markd Exp $
 bin/konversation
 share/applications/org.kde.konversation.desktop
 share/dbus-1/services/org.kde.konversation.service
@@ -83,6 +83,8 @@ share/doc/HTML/it/konversation/urlcatcher_screen_co.png
 share/doc/HTML/it/konversation/webbrowser_screen_co.png
 share/doc/HTML/nl/konversation/index.cache.bz2
 share/doc/HTML/nl/konversation/index.docbook
+share/doc/HTML/pt_BR/konversation/index.cache.bz2
+share/doc/HTML/pt_BR/konversation/index.docbook
 share/doc/HTML/ru/konversation/index.cache.bz2
 share/doc/HTML/ru/konversation/index.docbook
 share/doc/HTML/sl/konversation/index.cache.bz2
@@ -117,6 +119,8 @@ share/doc/HTML/sv/konversation/quickconnect_screen.png
 share/doc/HTML/sv/konversation/serverlist_co.png
 share/doc/HTML/sv/konversation/urlcatcher_screen_co.png
 share/doc/HTML/sv/konversation/webbrowser_screen_co.png
+share/doc/HTML/tr/konversation/index.cache.bz2
+share/doc/HTML/tr/konversation/index.docbook
 share/doc/HTML/uk/konversation/index.cache.bz2
 share/doc/HTML/uk/konversation/index.docbook
 share/icons/hicolor/128x128/actions/konv_message.png

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2025/12/21 13:32:43 markd Exp $
+$NetBSD: distinfo,v 1.21 2026/09/06 11:02:56 markd Exp $
 
-BLAKE2s (cantor-25.08.3.tar.xz) = 281c0de1e6eb02343fc9e2e6e39e52f3005dd86851483ffaaedb7b475f57395c
-SHA512 (cantor-25.08.3.tar.xz) = 28e1db6e048714a1eabd50f2ff0d21eba808e9833e5a962d9b92be77a64097be0472df2767dc89a40afd7b1e616be06c63ad33b5068c9e041ac7fc6f6933ea5a
-Size (cantor-25.08.3.tar.xz) = 10918180 bytes
+BLAKE2s (cantor-26.08.0.tar.xz) = 6938f5084e20d883d6693e24cc8b2ce49f698b5a0e549a61bd9c1ed0334f2f09
+SHA512 (cantor-26.08.0.tar.xz) = 066cb9bd9107b86d78e5ac1292c0cfd74e9e56ec960fc59bf9ff253b743db04ff0500abcfedbb61103876008808b10b0ff546bcb1d7f18d7dd6e1994f450f4fb
+Size (cantor-26.08.0.tar.xz) = 10922960 bytes
 SHA1 (patch-src_lib_jupyterutils.cpp) = d5af7e37e59bc7475112e22d5b37cc31a134fcbb

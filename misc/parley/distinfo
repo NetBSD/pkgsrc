@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/12/21 14:40:30 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/09/06 11:03:02 markd Exp $
 
-BLAKE2s (parley-25.08.3.tar.xz) = 1fbb6e1f9c28caf521f874797b2895f1504ee926bfd2c4c122b17ce0c3997268
-SHA512 (parley-25.08.3.tar.xz) = 8d3fccb16500f20cddc17ff3e7001fba636c802441b63a6b42b442c26fe6889efc7535949f02fe7c8e432de0233c097d55eda2ac133c0abf19d8181bfaeeda19
-Size (parley-25.08.3.tar.xz) = 8451708 bytes
+BLAKE2s (parley-26.08.0.tar.xz) = b523537c55a4d33f07ca038f4ba11895b1fee7bdfe41c6a6ff63bbe331a31650
+SHA512 (parley-26.08.0.tar.xz) = 0884a0b2bdeab039a33877a02cf4199dfe291fb609140c509b2e03b5cec3ea43839e1ba069f6ac30d023485fef58d38294aeb77d6e21150a44985257ae28d922
+Size (parley-26.08.0.tar.xz) = 8441728 bytes

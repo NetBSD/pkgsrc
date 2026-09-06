@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:30:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:03:01 markd Exp $
 include/KPim6/Gravatar/Gravatar/GravatarCache
 include/KPim6/Gravatar/Gravatar/GravatarConfigureSettingsDialog
 include/KPim6/Gravatar/Gravatar/GravatarConfigureSettingsWidget
@@ -18,7 +18,7 @@ lib/cmake/KPim6Gravatar/KPim6GravatarTargets-noconfig.cmake
 lib/cmake/KPim6Gravatar/KPim6GravatarTargets.cmake
 lib/libKPim6Gravatar.so
 lib/libKPim6Gravatar.so.6
-lib/libKPim6Gravatar.so.6.5.3
+lib/libKPim6Gravatar.so.6.8.0
 share/locale/ar/LC_MESSAGES/libgravatar6.mo
 share/locale/ast/LC_MESSAGES/libgravatar6.mo
 share/locale/bg/LC_MESSAGES/libgravatar6.mo
@@ -35,6 +35,7 @@ share/locale/et/LC_MESSAGES/libgravatar6.mo
 share/locale/eu/LC_MESSAGES/libgravatar6.mo
 share/locale/fi/LC_MESSAGES/libgravatar6.mo
 share/locale/fr/LC_MESSAGES/libgravatar6.mo
+share/locale/ga/LC_MESSAGES/libgravatar6.mo
 share/locale/gl/LC_MESSAGES/libgravatar6.mo
 share/locale/he/LC_MESSAGES/libgravatar6.mo
 share/locale/hi/LC_MESSAGES/libgravatar6.mo
@@ -65,6 +66,7 @@ share/locale/sr@latin/LC_MESSAGES/libgravatar6.mo
 share/locale/sv/LC_MESSAGES/libgravatar6.mo
 share/locale/ta/LC_MESSAGES/libgravatar6.mo
 share/locale/tr/LC_MESSAGES/libgravatar6.mo
+share/locale/ug/LC_MESSAGES/libgravatar6.mo
 share/locale/uk/LC_MESSAGES/libgravatar6.mo
 share/locale/zh_CN/LC_MESSAGES/libgravatar6.mo
 share/locale/zh_TW/LC_MESSAGES/libgravatar6.mo

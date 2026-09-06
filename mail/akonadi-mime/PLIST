@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:01:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:54 markd Exp $
 bin/akonadi_benchmarker
 include/KPim6/AkonadiMime/Akonadi/AddressAttribute
 include/KPim6/AkonadiMime/Akonadi/CommandBase
@@ -56,7 +56,7 @@ lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets-noconfig.cmake
 lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets.cmake
 lib/libKPim6AkonadiMime.so
 lib/libKPim6AkonadiMime.so.6
-lib/libKPim6AkonadiMime.so.6.5.3
+lib/libKPim6AkonadiMime.so.6.8.0
 qt6/plugins/akonadi_serializer_mail.so
 qt6/qml/org/kde/akonadi/mime/akonadi_mime_quick_plugin.qmltypes
 qt6/qml/org/kde/akonadi/mime/kde-qmlmodule.version

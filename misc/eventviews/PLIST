@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:45:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:57 markd Exp $
 include/KPim6/EventViews/EventViews/AgendaView
 include/KPim6/EventViews/EventViews/CalendarDecoration
 include/KPim6/EventViews/EventViews/ConfigDialogInterface
@@ -13,12 +13,6 @@ include/KPim6/EventViews/EventViews/TimeLineView
 include/KPim6/EventViews/EventViews/TodoView
 include/KPim6/EventViews/EventViews/ViewCalendar
 include/KPim6/EventViews/EventViews/WhatsNextView
-include/KPim6/EventViews/EventViews/eventview.h
-include/KPim6/EventViews/EventViews/helper.h
-include/KPim6/EventViews/EventViews/prefs.h
-include/KPim6/EventViews/eventviews/EventView
-include/KPim6/EventViews/eventviews/Helper
-include/KPim6/EventViews/eventviews/Prefs
 include/KPim6/EventViews/eventviews/agendaview.h
 include/KPim6/EventViews/eventviews/calendardecoration.h
 include/KPim6/EventViews/eventviews/configdialoginterface.h
@@ -41,7 +35,7 @@ lib/cmake/KPim6EventViews/KPim6EventViewsTargets-noconfig.cmake
 lib/cmake/KPim6EventViews/KPim6EventViewsTargets.cmake
 lib/libKPim6EventViews.so
 lib/libKPim6EventViews.so.6
-lib/libKPim6EventViews.so.6.5.3
+lib/libKPim6EventViews.so.6.8.0
 share/locale/ar/LC_MESSAGES/libeventviews6.mo
 share/locale/ast/LC_MESSAGES/libeventviews6.mo
 share/locale/bg/LC_MESSAGES/libeventviews6.mo

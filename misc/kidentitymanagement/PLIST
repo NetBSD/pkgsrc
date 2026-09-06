@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 14:11:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:03:00 markd Exp $
 include/KPim6/KIdentityManagementCore/KIdentityManagementCore/Identity
 include/KPim6/KIdentityManagementCore/KIdentityManagementCore/IdentityActivitiesAbstract
 include/KPim6/KIdentityManagementCore/KIdentityManagementCore/IdentityManager
@@ -47,13 +47,13 @@ lib/cmake/KPim6IdentityManagementWidgets/KPim6IdentityManagementWidgetsTargets-n
 lib/cmake/KPim6IdentityManagementWidgets/KPim6IdentityManagementWidgetsTargets.cmake
 lib/libKPim6IdentityManagementCore.so
 lib/libKPim6IdentityManagementCore.so.6
-lib/libKPim6IdentityManagementCore.so.6.5.3
+lib/libKPim6IdentityManagementCore.so.6.8.0
 lib/libKPim6IdentityManagementQuick.so
 lib/libKPim6IdentityManagementQuick.so.6
-lib/libKPim6IdentityManagementQuick.so.6.5.3
+lib/libKPim6IdentityManagementQuick.so.6.8.0
 lib/libKPim6IdentityManagementWidgets.so
 lib/libKPim6IdentityManagementWidgets.so.6
-lib/libKPim6IdentityManagementWidgets.so.6.5.3
+lib/libKPim6IdentityManagementWidgets.so.6.8.0
 qt6/qml/org/kde/kidentitymanagement/BasicIdentityEditorCard.qml
 qt6/qml/org/kde/kidentitymanagement/CryptographyEditorCard.qml
 qt6/qml/org/kde/kidentitymanagement/IdentityConfigurationForm.qml

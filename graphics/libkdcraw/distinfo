@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/12/21 12:35:52 markd Exp $
+$NetBSD: distinfo,v 1.34 2026/09/06 11:02:53 markd Exp $
 
-BLAKE2s (libkdcraw-25.08.3.tar.xz) = d277bd4f51b85db6187bf6e9065ae87f88a3669bdd9ad5e1f21edf676f2db789
-SHA512 (libkdcraw-25.08.3.tar.xz) = e0d2682cf6f02060dc181f3b4e8271f19b144ed701896ebc317e164f67515fd92369f27d869243d8d679df1c71cece1cd680b59ee81a44d30f73f4217d8c5b1a
-Size (libkdcraw-25.08.3.tar.xz) = 37364 bytes
+BLAKE2s (libkdcraw-26.08.0.tar.xz) = 8b9c3a9e94eb3b7a2ce99b97111ec8b71952d9d2e072a1ae4da59a770a634b01
+SHA512 (libkdcraw-26.08.0.tar.xz) = ffb2378fd69cb0a5d9ebae4a34f45eca4acdad04eb7e9b102fd18b0ebb7da679b980566e0a079e5ee7db0d446e1ff7488f99e556381d531b744a2bbd2ed39aab
+Size (libkdcraw-26.08.0.tar.xz) = 37212 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:35:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 11:02:50 markd Exp $
 bin/konquest
 share/applications/org.kde.konquest.desktop
 share/doc/HTML/ca/konquest/index.cache.bz2
@@ -54,7 +54,6 @@ share/locale/af/LC_MESSAGES/konquest.mo
 share/locale/ar/LC_MESSAGES/konquest.mo
 share/locale/ast/LC_MESSAGES/konquest.mo
 share/locale/be/LC_MESSAGES/konquest.mo
-share/locale/bg/LC_MESSAGES/konquest.mo
 share/locale/br/LC_MESSAGES/konquest.mo
 share/locale/bs/LC_MESSAGES/konquest.mo
 share/locale/ca/LC_MESSAGES/konquest.mo

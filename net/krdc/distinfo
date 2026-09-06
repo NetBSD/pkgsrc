@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/12/21 15:06:25 markd Exp $
+$NetBSD: distinfo,v 1.16 2026/09/06 11:03:04 markd Exp $
 
-BLAKE2s (krdc-25.08.3.tar.xz) = 6204e34951e456ddb9cbfe0b832dc424ff9df6bf58ab195a50b87311f19bb997
-SHA512 (krdc-25.08.3.tar.xz) = 6528bea805bca71b57af20b0aed864337fb8586b0f172126bebdb3afc51d05c634d48541ab90f66393852116c2554e1d002703daf10970f50a21ad741539be1f
-Size (krdc-25.08.3.tar.xz) = 1598500 bytes
+BLAKE2s (krdc-26.08.0.tar.xz) = 2198443efcb8cc30cd765dabace2c292d3b4ef00f97f32480399f282e08e885f
+SHA512 (krdc-26.08.0.tar.xz) = d65a818dcb5abb85ca9a96d929a99d37ba7c9810dd41a9faa978f469856070734ecbcc0b055f9febf10420d4eae14eb53add85537a09eb8dd41d76a971bae5ca
+Size (krdc-26.08.0.tar.xz) = 1603388 bytes
 SHA1 (patch-cmake_modules_Findxfreerdp.cmake) = 251ed54bf7b6fac98a290df5d451a08356509006

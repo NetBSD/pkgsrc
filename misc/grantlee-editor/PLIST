@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:47:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:57 markd Exp $
 bin/contactprintthemeeditor
 bin/contactthemeeditor
 bin/headerthemeeditor
 lib/libgrantleethemeeditor.so.6
-lib/libgrantleethemeeditor.so.6.5.3
+lib/libgrantleethemeeditor.so.6.8.0
 share/applications/org.kde.contactprintthemeeditor.desktop
 share/applications/org.kde.contactthemeeditor.desktop
 share/applications/org.kde.headerthemeeditor.desktop
@@ -125,6 +125,10 @@ share/locale/fr/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/fr/LC_MESSAGES/contactthemeeditor.mo
 share/locale/fr/LC_MESSAGES/headerthemeeditor.mo
 share/locale/fr/LC_MESSAGES/libgrantleethemeeditor.mo
+share/locale/ga/LC_MESSAGES/contactprintthemeeditor.mo
+share/locale/ga/LC_MESSAGES/contactthemeeditor.mo
+share/locale/ga/LC_MESSAGES/headerthemeeditor.mo
+share/locale/ga/LC_MESSAGES/libgrantleethemeeditor.mo
 share/locale/gl/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/gl/LC_MESSAGES/contactthemeeditor.mo
 share/locale/gl/LC_MESSAGES/headerthemeeditor.mo
@@ -226,6 +230,7 @@ share/locale/tr/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/tr/LC_MESSAGES/contactthemeeditor.mo
 share/locale/tr/LC_MESSAGES/headerthemeeditor.mo
 share/locale/tr/LC_MESSAGES/libgrantleethemeeditor.mo
+share/locale/ug/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/ug/LC_MESSAGES/contactthemeeditor.mo
 share/locale/ug/LC_MESSAGES/headerthemeeditor.mo
 share/locale/ug/LC_MESSAGES/libgrantleethemeeditor.mo

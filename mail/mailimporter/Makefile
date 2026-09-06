@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/09/02 19:03:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/06 11:02:56 markd Exp $
 
 DISTNAME=	mailimporter-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

@@ -1,6 +1,6 @@
-# $NetBSD: applications.mk,v 1.11 2025/12/21 09:45:08 markd Exp $
+# $NetBSD: applications.mk,v 1.12 2026/09/06 11:02:43 markd Exp $
 
-KAPPSVER?=	25.08.3
+KAPPSVER?=	26.08.0
 CATEGORIES+=	kde
 MASTER_SITES?=	${MASTER_SITE_KDE:=release-service/${KAPPSVER}/src/}
 EXTRACT_SUFX?=	.tar.xz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/21 11:57:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/06 11:02:52 markd Exp $
 bin/palapeli
 include/Pala/Pala/Slicer
 include/Pala/Pala/SlicerJob
@@ -74,7 +74,6 @@ share/kio/servicemenus/palapeli_servicemenu.desktop
 share/knotifications6/palapeli.notifyrc
 share/locale/ar/LC_MESSAGES/palapeli.mo
 share/locale/ast/LC_MESSAGES/palapeli.mo
-share/locale/bg/LC_MESSAGES/palapeli.mo
 share/locale/bs/LC_MESSAGES/palapeli.mo
 share/locale/ca/LC_MESSAGES/palapeli.mo
 share/locale/ca@valencia/LC_MESSAGES/palapeli.mo

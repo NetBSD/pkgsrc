@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/12/21 11:21:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 11:02:48 markd Exp $
 bin/kiriki
 share/applications/org.kde.kiriki.desktop
 share/doc/HTML/ca/kiriki/configuration.png
@@ -51,7 +51,6 @@ share/kiriki/images/dice-none.png
 share/locale/ar/LC_MESSAGES/kiriki.mo
 share/locale/ast/LC_MESSAGES/kiriki.mo
 share/locale/be/LC_MESSAGES/kiriki.mo
-share/locale/bg/LC_MESSAGES/kiriki.mo
 share/locale/bs/LC_MESSAGES/kiriki.mo
 share/locale/ca/LC_MESSAGES/kiriki.mo
 share/locale/ca@valencia/LC_MESSAGES/kiriki.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:31:02 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:49 markd Exp $
 
-BLAKE2s (knetwalk-25.08.3.tar.xz) = 655397c862a57499d8ba270a50fb0c8779fdb03407a3a7e0fd714bd861d15684
-SHA512 (knetwalk-25.08.3.tar.xz) = ca63bcdeae6b003af6adbb9d095d4f41cff23c61e87c22160e1cc4ae244eaf50b03d12b5813dbc1e9ff08e636be8f95b7dbfc7f3947c675ffcc98a32465df36c
-Size (knetwalk-25.08.3.tar.xz) = 1011988 bytes
+BLAKE2s (knetwalk-26.08.0.tar.xz) = b6cd8d8d4ed4652049bb6ed3f99dba357da3386da1a0f6182c5ddbcc98dfafcf
+SHA512 (knetwalk-26.08.0.tar.xz) = 35336e6039fcf15f1128909424b4dcdb40df287401e50b6d151fa4bab3f6166a988a09049c40d7c6831c3b1dca983c9a6b697c11ff60b3d5ea58e9256e939874
+Size (knetwalk-26.08.0.tar.xz) = 1014404 bytes

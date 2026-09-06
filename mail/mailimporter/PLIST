@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:23:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:56 markd Exp $
 include/KPim6/MailImporter/MailImporter/FilterBalsa
 include/KPim6/MailImporter/MailImporter/FilterClawsMail
 include/KPim6/MailImporter/MailImporter/FilterEvolution
@@ -71,10 +71,10 @@ lib/cmake/KPim6MailImporterAkonadi/KPim6MailImporterAkonadiTargets-noconfig.cmak
 lib/cmake/KPim6MailImporterAkonadi/KPim6MailImporterAkonadiTargets.cmake
 lib/libKPim6MailImporter.so
 lib/libKPim6MailImporter.so.6
-lib/libKPim6MailImporter.so.6.5.3
+lib/libKPim6MailImporter.so.6.8.0
 lib/libKPim6MailImporterAkonadi.so
 lib/libKPim6MailImporterAkonadi.so.6
-lib/libKPim6MailImporterAkonadi.so.6.5.3
+lib/libKPim6MailImporterAkonadi.so.6.8.0
 share/locale/af/LC_MESSAGES/libmailimporter6.mo
 share/locale/ar/LC_MESSAGES/libmailimporter6.mo
 share/locale/ast/LC_MESSAGES/libmailimporter6.mo

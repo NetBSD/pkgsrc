@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2025/12/21 20:01:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/06 11:03:08 markd Exp $
 bin/korganizer
 lib/libkorganizer_core.so.6
-lib/libkorganizer_core.so.6.5.3
+lib/libkorganizer_core.so.6.8.0
 lib/libkorganizer_interfaces.so.6
-lib/libkorganizer_interfaces.so.6.5.3
+lib/libkorganizer_interfaces.so.6.8.0
 lib/libkorganizerprivate.so.6
-lib/libkorganizerprivate.so.6.5.3
+lib/libkorganizerprivate.so.6.8.0
 qt6/plugins/korganizerpart.so
 qt6/plugins/pim6/kcms/korganizer/korganizer_configcolorsandfonts.so
 qt6/plugins/pim6/kcms/korganizer/korganizer_configfreebusy.so
@@ -91,6 +91,8 @@ share/doc/HTML/sl/korganizer/index.cache.bz2
 share/doc/HTML/sl/korganizer/index.docbook
 share/doc/HTML/sv/korganizer/index.cache.bz2
 share/doc/HTML/sv/korganizer/index.docbook
+share/doc/HTML/tr/korganizer/index.cache.bz2
+share/doc/HTML/tr/korganizer/index.docbook
 share/doc/HTML/uk/korganizer/index.cache.bz2
 share/doc/HTML/uk/korganizer/index.docbook
 share/icons/hicolor/128x128/apps/korg-journal.png
@@ -114,6 +116,12 @@ share/icons/hicolor/48x48/apps/korg-journal.png
 share/icons/hicolor/48x48/apps/korg-todo.png
 share/icons/hicolor/48x48/apps/korganizer.png
 share/icons/hicolor/48x48/apps/quickview.png
+share/icons/hicolor/48x48/apps/realmoon-full.png
+share/icons/hicolor/48x48/apps/realmoon-new.png
+share/icons/hicolor/48x48/apps/realmoon-waning-last-quarter-north.png
+share/icons/hicolor/48x48/apps/realmoon-waning-last-quarter-south.png
+share/icons/hicolor/48x48/apps/realmoon-waxing-first-quarter-north.png
+share/icons/hicolor/48x48/apps/realmoon-waxing-first-quarter-south.png
 share/icons/hicolor/64x64/apps/korg-journal.png
 share/icons/hicolor/64x64/apps/korg-todo.png
 share/icons/hicolor/64x64/apps/korganizer.png
@@ -122,10 +130,6 @@ share/icons/hicolor/scalable/apps/korg-journal.svgz
 share/icons/hicolor/scalable/apps/korg-todo.svg
 share/icons/hicolor/scalable/apps/korganizer.svg
 share/icons/hicolor/scalable/apps/quickview.svgz
-share/icons/hicolor/scalable/status/moon-phase-first-quarter.svg
-share/icons/hicolor/scalable/status/moon-phase-full.svg
-share/icons/hicolor/scalable/status/moon-phase-last-quarter.svg
-share/icons/hicolor/scalable/status/moon-phase-new.svg
 share/korganizer/sounds/alert.wav
 share/korganizer/sounds/icemag.wav
 share/korganizer/sounds/lightmag.wav

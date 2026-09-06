@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/09/02 19:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/09/06 11:02:45 markd Exp $
 
 DISTNAME=	kate-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	editors
 
 HOMEPAGE=	https://apps.kde.org/kate/
@@ -29,6 +28,8 @@ SUBST_FILES.fix-moc=	_KDE_build/addons/*/CMakeFiles/*_autogen.dir/AutogenInfo.js
 SUBST_FILES.fix-moc+=	_KDE_build/addons/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
+
+REPLACE_SH+=	apps/lib/exec_inspect.sh
 
 # .desktop files should not be executable.
 post-install:

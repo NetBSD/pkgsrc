@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/12/21 10:04:20 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/09/06 11:02:43 markd Exp $
 
-BLAKE2s (kapptemplate-25.08.3.tar.xz) = a093a0a2864577cc02625fc5c77bb74915e6d74923a40cc438094d024e98a8c7
-SHA512 (kapptemplate-25.08.3.tar.xz) = 5cce04c4f082c453388969316f0200074beeae31e50d8dd534ec688016076212f3560f94051cf3051310a11b33f116f023ffecbe54acacf0a954d1f9dde47f33
-Size (kapptemplate-25.08.3.tar.xz) = 481156 bytes
+BLAKE2s (kapptemplate-26.08.0.tar.xz) = 16bb456715cb4d075880565e05862d8e2827900722bff23a168cb3d77f1a29c3
+SHA512 (kapptemplate-26.08.0.tar.xz) = 8e1f469251259dc14a476de7f775c60ad0cb77601cbd9cffce12bfab1746923a344ef9640b5497e36bdb0c5b2ee52ea800bf48958851dd4dfa8ba3ae908fee8c
+Size (kapptemplate-26.08.0.tar.xz) = 482144 bytes

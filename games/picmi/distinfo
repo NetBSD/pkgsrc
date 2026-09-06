@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/12/21 11:59:04 markd Exp $
+$NetBSD: distinfo,v 1.17 2026/09/06 11:02:52 markd Exp $
 
-BLAKE2s (picmi-25.08.3.tar.xz) = 07367c7d4cacc96a6cb86e81fc5fb52df7bff8d2a6e290aa1ca8818a1ab9f1a2
-SHA512 (picmi-25.08.3.tar.xz) = b8d09c54922ea9df16dbb6222717aec04e131b8cbe751a3f33e5fe3b82e94a04c038a146beb774f0d249a5a6046a5063cdfe529b5bfcb52ddcd0c3a890ed0d8c
-Size (picmi-25.08.3.tar.xz) = 1523668 bytes
+BLAKE2s (picmi-26.08.0.tar.xz) = a1500bfe94a62b611aba20c98710ab4430d17ec7cf08bb61692a2d0d28aaea26
+SHA512 (picmi-26.08.0.tar.xz) = f99df2c564f6eb7f92001242f983415922bbd9cbafe2ea74fe3f31b9ade6f4eab4261e420ee7f080b170d7280646c09505fd8e48d38831d56f096b8227936031
+Size (picmi-26.08.0.tar.xz) = 1524112 bytes

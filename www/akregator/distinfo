@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/23 05:48:07 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/09/06 11:03:08 markd Exp $
 
-BLAKE2s (akregator-25.08.3.tar.xz) = 3486e421faf3b3c67117f707c53c38f71d3a6f62848c637f3bf7511a08a91dec
-SHA512 (akregator-25.08.3.tar.xz) = e70c69ae4c4eede2eac52209a9ad5a72c4de73a6e5120c1c84c41a8657d17d37647ba51c32e0f10fb3cd0d8092ade3ded3cec5148fba56d713412d096fb9621c
-Size (akregator-25.08.3.tar.xz) = 2145456 bytes
+BLAKE2s (akregator-26.08.0.tar.xz) = 4cf6994bcc923fa395414ddca367eed2feac43c06203a0a1a857007f5325133d
+SHA512 (akregator-26.08.0.tar.xz) = 05c101d33b447e9d9e56a3f0fd3ab2967c4897d85180565bc0271dd1fe0b5e3e2ed74bd1ed7a65ae840b515101be512b2fa19157dd8f6a17d299a1db571758ad
+Size (akregator-26.08.0.tar.xz) = 2151204 bytes

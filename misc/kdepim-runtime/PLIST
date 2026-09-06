@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 14:02:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:59 markd Exp $
 bin/akonadi_birthdays_resource
 bin/akonadi_contacts_resource
 bin/akonadi_davgroupware_resource
@@ -8,7 +8,6 @@ bin/akonadi_google_resource
 bin/akonadi_ical_resource
 bin/akonadi_icaldir_resource
 bin/akonadi_imap_resource
-bin/akonadi_kolab_resource
 bin/akonadi_maildir_resource
 bin/akonadi_maildispatcher_agent
 bin/akonadi_mbox_resource
@@ -21,19 +20,19 @@ bin/akonadi_vcard_resource
 bin/akonadi_vcarddir_resource
 bin/gidmigrator
 lib/libakonadi-filestore.so.6
-lib/libakonadi-filestore.so.6.5.3
+lib/libakonadi-filestore.so.6.8.0
 lib/libakonadi-singlefileresource-widget.so.6
-lib/libakonadi-singlefileresource-widget.so.6.5.3
+lib/libakonadi-singlefileresource-widget.so.6.8.0
 lib/libakonadi-singlefileresource.so.6
-lib/libakonadi-singlefileresource.so.6.5.3
+lib/libakonadi-singlefileresource.so.6.8.0
 lib/libfolderarchivesettings.so.6
-lib/libfolderarchivesettings.so.6.5.3
+lib/libfolderarchivesettings.so.6.8.0
 lib/libkmindexreader.so.6
-lib/libkmindexreader.so.6.5.3
+lib/libkmindexreader.so.6.8.0
 lib/libmaildir.so.6
-lib/libmaildir.so.6.5.3
+lib/libmaildir.so.6.8.0
 lib/libnewmailnotifier.so.6
-lib/libnewmailnotifier.so.6.5.3
+lib/libnewmailnotifier.so.6.8.0
 qt6/plugins/kf6/kio/akonadi.so
 qt6/plugins/pim6/akonadi/config/birthdaysconfig.so
 qt6/plugins/pim6/akonadi/config/contactsconfig.so
@@ -42,7 +41,6 @@ qt6/plugins/pim6/akonadi/config/googleconfig.so
 qt6/plugins/pim6/akonadi/config/icalconfig.so
 qt6/plugins/pim6/akonadi/config/icaldirconfig.so
 qt6/plugins/pim6/akonadi/config/imapconfig.so
-qt6/plugins/pim6/akonadi/config/kolabconfig.so
 qt6/plugins/pim6/akonadi/config/maildirconfig.so
 qt6/plugins/pim6/akonadi/config/maildispatcherconfig.so
 qt6/plugins/pim6/akonadi/config/mboxconfig.so
@@ -63,7 +61,6 @@ share/akonadi/agents/googleresource.desktop
 share/akonadi/agents/icaldirresource.desktop
 share/akonadi/agents/icalresource.desktop
 share/akonadi/agents/imapresource.desktop
-share/akonadi/agents/kolabresource.desktop
 share/akonadi/agents/maildirresource.desktop
 share/akonadi/agents/maildispatcheragent.desktop
 share/akonadi/agents/mboxresource.desktop
@@ -95,7 +92,6 @@ share/applications/org.kde.akonadi_davgroupware_resource.desktop
 share/applications/org.kde.akonadi_ews_resource.desktop
 share/applications/org.kde.akonadi_google_resource.desktop
 share/applications/org.kde.akonadi_imap_resource.desktop
-share/applications/org.kde.akonadi_kolab_resource.desktop
 share/applications/org.kde.akonadi_openxchange_resource.desktop
 share/applications/org.kde.akonadi_vcard_resource.desktop
 share/applications/org.kde.akonadi_vcarddir_resource.desktop
@@ -106,6 +102,7 @@ share/icons/hicolor/128x128/apps/account-citadel.png
 share/icons/hicolor/128x128/apps/account-davical.png
 share/icons/hicolor/128x128/apps/account-egroupware.png
 share/icons/hicolor/128x128/apps/account-fastmail.png
+share/icons/hicolor/128x128/apps/account-google.png
 share/icons/hicolor/128x128/apps/account-kopano.png
 share/icons/hicolor/128x128/apps/account-mailboxorg.png
 share/icons/hicolor/128x128/apps/account-nextcloud.png
@@ -121,6 +118,7 @@ share/icons/hicolor/16x16/apps/account-citadel.png
 share/icons/hicolor/16x16/apps/account-davical.png
 share/icons/hicolor/16x16/apps/account-egroupware.png
 share/icons/hicolor/16x16/apps/account-fastmail.png
+share/icons/hicolor/16x16/apps/account-google.png
 share/icons/hicolor/16x16/apps/account-kopano.png
 share/icons/hicolor/16x16/apps/account-mailboxorg.png
 share/icons/hicolor/16x16/apps/account-nextcloud.png
@@ -138,6 +136,7 @@ share/icons/hicolor/32x32/apps/account-citadel.png
 share/icons/hicolor/32x32/apps/account-davical.png
 share/icons/hicolor/32x32/apps/account-egroupware.png
 share/icons/hicolor/32x32/apps/account-fastmail.png
+share/icons/hicolor/32x32/apps/account-google.png
 share/icons/hicolor/32x32/apps/account-kopano.png
 share/icons/hicolor/32x32/apps/account-mailboxorg.png
 share/icons/hicolor/32x32/apps/account-nextcloud.png
@@ -153,6 +152,7 @@ share/icons/hicolor/48x48/apps/account-citadel.png
 share/icons/hicolor/48x48/apps/account-davical.png
 share/icons/hicolor/48x48/apps/account-egroupware.png
 share/icons/hicolor/48x48/apps/account-fastmail.png
+share/icons/hicolor/48x48/apps/account-google.png
 share/icons/hicolor/48x48/apps/account-kopano.png
 share/icons/hicolor/48x48/apps/account-mailboxorg.png
 share/icons/hicolor/48x48/apps/account-nextcloud.png
@@ -168,6 +168,7 @@ share/icons/hicolor/64x64/apps/account-citadel.png
 share/icons/hicolor/64x64/apps/account-davical.png
 share/icons/hicolor/64x64/apps/account-egroupware.png
 share/icons/hicolor/64x64/apps/account-fastmail.png
+share/icons/hicolor/64x64/apps/account-google.png
 share/icons/hicolor/64x64/apps/account-kopano.png
 share/icons/hicolor/64x64/apps/account-mailboxorg.png
 share/icons/hicolor/64x64/apps/account-nextcloud.png
@@ -592,6 +593,8 @@ share/locale/ga/LC_MESSAGES/akonadi-filestore.mo
 share/locale/ga/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_contacts_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_davgroupware_resource.mo
+share/locale/ga/LC_MESSAGES/akonadi_etesync_resource.mo
+share/locale/ga/LC_MESSAGES/akonadi_ews_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_google_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_ical_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_icaldir_resource.mo
@@ -599,6 +602,7 @@ share/locale/ga/LC_MESSAGES/akonadi_imap_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_maildir_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_maildispatcher_agent.mo
 share/locale/ga/LC_MESSAGES/akonadi_mbox_resource.mo
+share/locale/ga/LC_MESSAGES/akonadi_migration_agent.mo
 share/locale/ga/LC_MESSAGES/akonadi_mixedmaildir_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_newmailnotifier_agent.mo
 share/locale/ga/LC_MESSAGES/akonadi_openxchange_resource.mo
@@ -606,7 +610,9 @@ share/locale/ga/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_singlefile_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/ga/LC_MESSAGES/akonadi_vcarddir_resource.mo
+share/locale/ga/LC_MESSAGES/gid-migrator.mo
 share/locale/ga/LC_MESSAGES/kio_akonadi.mo
+share/locale/ga/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/gl/LC_MESSAGES/akonadi-filestore.mo
 share/locale/gl/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/gl/LC_MESSAGES/akonadi_contacts_resource.mo
@@ -1373,6 +1379,8 @@ share/locale/ug/LC_MESSAGES/akonadi-filestore.mo
 share/locale/ug/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_contacts_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_davgroupware_resource.mo
+share/locale/ug/LC_MESSAGES/akonadi_etesync_resource.mo
+share/locale/ug/LC_MESSAGES/akonadi_ews_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_google_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_ical_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_icaldir_resource.mo
@@ -1380,6 +1388,7 @@ share/locale/ug/LC_MESSAGES/akonadi_imap_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_maildir_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_maildispatcher_agent.mo
 share/locale/ug/LC_MESSAGES/akonadi_mbox_resource.mo
+share/locale/ug/LC_MESSAGES/akonadi_migration_agent.mo
 share/locale/ug/LC_MESSAGES/akonadi_mixedmaildir_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_newmailnotifier_agent.mo
 share/locale/ug/LC_MESSAGES/akonadi_openxchange_resource.mo
@@ -1387,7 +1396,9 @@ share/locale/ug/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_singlefile_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/ug/LC_MESSAGES/akonadi_vcarddir_resource.mo
+share/locale/ug/LC_MESSAGES/gid-migrator.mo
 share/locale/ug/LC_MESSAGES/kio_akonadi.mo
+share/locale/ug/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/uk/LC_MESSAGES/akonadi-filestore.mo
 share/locale/uk/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/uk/LC_MESSAGES/akonadi_contacts_resource.mo

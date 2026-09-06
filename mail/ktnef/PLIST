@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/12/21 13:16:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 11:02:55 markd Exp $
 include/KPim6/KTNEF/KTNEF/Formatter
 include/KPim6/KTNEF/KTNEF/KTNEFAttach
 include/KPim6/KTNEF/KTNEF/KTNEFDefs
@@ -23,7 +23,7 @@ lib/cmake/KPim6Tnef/KPim6TnefTargets-noconfig.cmake
 lib/cmake/KPim6Tnef/KPim6TnefTargets.cmake
 lib/libKPim6Tnef.so
 lib/libKPim6Tnef.so.6
-lib/libKPim6Tnef.so.6.5.3
+lib/libKPim6Tnef.so.6.8.0
 share/locale/ar/LC_MESSAGES/libktnef6.mo
 share/locale/ast/LC_MESSAGES/libktnef6.mo
 share/locale/be/LC_MESSAGES/libktnef6.mo

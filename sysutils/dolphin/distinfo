@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/01/19 10:08:23 markd Exp $
+$NetBSD: distinfo,v 1.9 2026/09/06 11:03:06 markd Exp $
 
-BLAKE2s (dolphin-25.08.3.tar.xz) = 6e52b5617464cf12b8025b959183f76d351dea01cb8f83adc5df94204ce1239e
-SHA512 (dolphin-25.08.3.tar.xz) = 67e4edf940d066ef4989553527d9e936ea1208d0b70ff66d9899ee5f5f074466170b1dd6cbfd9d1d06c9288d94e47a43d31fc5017883859cb5242be31be14493
-Size (dolphin-25.08.3.tar.xz) = 5819800 bytes
+BLAKE2s (dolphin-26.08.0.tar.xz) = 454b007c32e170e816d5853395e55f5db51eac36ec5c804b1138d56e18ca840c
+SHA512 (dolphin-26.08.0.tar.xz) = 7d252ff17cf9c88df86fbc730aad2c832243ef5e17d44ae616aa1b5c00d77e60371614f9cad99d66379920eab9165494dfa5ecb92b7f01826426aeb2de51e87a
+Size (dolphin-26.08.0.tar.xz) = 5943940 bytes

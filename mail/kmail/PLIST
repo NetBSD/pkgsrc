@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:04:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:54 markd Exp $
 bin/akonadi_archivemail_agent
 bin/akonadi_followupreminder_agent
 bin/akonadi_mailfilter_agent
@@ -9,9 +9,9 @@ bin/kmail
 bin/kmail-refresh-settings
 bin/ktnef
 lib/libkmailprivate.so.6
-lib/libkmailprivate.so.6.5.3
+lib/libkmailprivate.so.6.8.0
 lib/libmailfilteragentprivate.so.6
-lib/libmailfilteragentprivate.so.6.5.3
+lib/libmailfilteragentprivate.so.6.8.0
 qt6/plugins/kmailpart.so
 qt6/plugins/pim6/akonadi/config/archivemailagentconfig.so
 qt6/plugins/pim6/akonadi/config/followupreminderagentconfig.so
@@ -444,6 +444,7 @@ share/knotifications6/akonadi_mailfilter_agent.notifyrc
 share/knotifications6/akonadi_mailmerge_agent.notifyrc
 share/knotifications6/akonadi_sendlater_agent.notifyrc
 share/knotifications6/kmail2.notifyrc
+share/knotifications6/kontact.notifyrc
 share/locale/af/LC_MESSAGES/kmail.mo
 share/locale/ar/LC_MESSAGES/akonadi_archivemail_agent.mo
 share/locale/ar/LC_MESSAGES/akonadi_followupreminder_agent.mo
@@ -616,7 +617,12 @@ share/locale/fr/LC_MESSAGES/kmail.mo
 share/locale/fr/LC_MESSAGES/ktnef.mo
 share/locale/fy/LC_MESSAGES/kmail.mo
 share/locale/ga/LC_MESSAGES/akonadi_archivemail_agent.mo
+share/locale/ga/LC_MESSAGES/akonadi_followupreminder_agent.mo
 share/locale/ga/LC_MESSAGES/akonadi_mailfilter_agent.mo
+share/locale/ga/LC_MESSAGES/akonadi_mailmerge_agent.mo
+share/locale/ga/LC_MESSAGES/akonadi_sendlater_agent.mo
+share/locale/ga/LC_MESSAGES/akonadi_unifiedmailbox_agent.mo
+share/locale/ga/LC_MESSAGES/kmail-refresh-settings.mo
 share/locale/ga/LC_MESSAGES/kmail.mo
 share/locale/ga/LC_MESSAGES/ktnef.mo
 share/locale/gl/LC_MESSAGES/akonadi_archivemail_agent.mo
@@ -888,8 +894,12 @@ share/locale/tr/LC_MESSAGES/kmail-refresh-settings.mo
 share/locale/tr/LC_MESSAGES/kmail.mo
 share/locale/tr/LC_MESSAGES/ktnef.mo
 share/locale/ug/LC_MESSAGES/akonadi_archivemail_agent.mo
+share/locale/ug/LC_MESSAGES/akonadi_followupreminder_agent.mo
 share/locale/ug/LC_MESSAGES/akonadi_mailfilter_agent.mo
+share/locale/ug/LC_MESSAGES/akonadi_mailmerge_agent.mo
 share/locale/ug/LC_MESSAGES/akonadi_sendlater_agent.mo
+share/locale/ug/LC_MESSAGES/akonadi_unifiedmailbox_agent.mo
+share/locale/ug/LC_MESSAGES/kmail-refresh-settings.mo
 share/locale/ug/LC_MESSAGES/kmail.mo
 share/locale/ug/LC_MESSAGES/ktnef.mo
 share/locale/uk/LC_MESSAGES/akonadi_archivemail_agent.mo

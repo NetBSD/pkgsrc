@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:18:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:48 markd Exp $
 bin/kigo
 share/applications/org.kde.kigo.desktop
 share/config.kcfg/kigo.kcfg
@@ -83,7 +83,6 @@ share/knsrcfiles/kigo-games.knsrc
 share/knsrcfiles/kigo.knsrc
 share/locale/ar/LC_MESSAGES/kigo.mo
 share/locale/ast/LC_MESSAGES/kigo.mo
-share/locale/bg/LC_MESSAGES/kigo.mo
 share/locale/bs/LC_MESSAGES/kigo.mo
 share/locale/ca/LC_MESSAGES/kigo.mo
 share/locale/ca@valencia/LC_MESSAGES/kigo.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/12/21 10:57:35 markd Exp $
+$NetBSD: distinfo,v 1.20 2026/09/06 11:02:46 markd Exp $
 
-BLAKE2s (kanagram-25.08.3.tar.xz) = 2d2a2c8a45d4ab9a206a791abaafeb2997082676e75dbb19d76f566f2d3993b2
-SHA512 (kanagram-25.08.3.tar.xz) = 57887f1be72cefe48757a16fe04788f1a46433744269b49a3ea57b1a573e7500cd6d955429ced0cfab19a6a8bf760a71f88427bc19c5640d82a2859fb13aca37
-Size (kanagram-25.08.3.tar.xz) = 7786148 bytes
+BLAKE2s (kanagram-26.08.0.tar.xz) = fa0630ff05e6a4e7486362ee20ae97bcbe7174ecb92e21726815cfd5fa5805b7
+SHA512 (kanagram-26.08.0.tar.xz) = 952bbcac39c0f9b5fb1ed70b9443a7454bbaea14c65972d53b023a161b04ca702c617e9e5c9459aed23a732e11e3d1c0f4257c8da5fcda624f8e418805de273e
+Size (kanagram-26.08.0.tar.xz) = 7786288 bytes

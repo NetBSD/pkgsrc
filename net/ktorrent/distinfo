@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/12/21 15:08:26 markd Exp $
+$NetBSD: distinfo,v 1.24 2026/09/06 11:03:05 markd Exp $
 
-BLAKE2s (ktorrent-25.08.3.tar.xz) = 42f33ba4a181a7c6b41a1f4f9681cda01030de31940489014cff3070c629b3ea
-SHA512 (ktorrent-25.08.3.tar.xz) = 385ee1f877e27cf860738d5eaf7857cd53e0f73793362f3f3eded67af422870bd6095779b707ad142088e34a78bb92282c4dac395f0b85f89b31a42d14a0c38e
-Size (ktorrent-25.08.3.tar.xz) = 2237128 bytes
+BLAKE2s (ktorrent-26.08.0.tar.xz) = 2f6f4c5dc76c53e78a010457187a68f22e13a3a3fa45981f9e4ea7cb77c7d508
+SHA512 (ktorrent-26.08.0.tar.xz) = a35a6fa9b81c34621dbe6d27b6d57d09faec55228aad002c07c5d007e11255729707b67eecbd31f1bd313a770b17e0003830ba8fbfe9fc382239eb71612252b1
+Size (ktorrent-26.08.0.tar.xz) = 2253364 bytes

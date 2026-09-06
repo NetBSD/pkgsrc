@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/12/21 11:49:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/06 11:02:51 markd Exp $
 bin/kubrick
 share/applications/org.kde.kubrick.desktop
 share/doc/HTML/ca/kubrick/index.cache.bz2
@@ -61,7 +61,6 @@ share/kubrick/p333X6.kbk
 share/kubrick/themes/default.svgz
 share/locale/ar/LC_MESSAGES/kubrick.mo
 share/locale/ast/LC_MESSAGES/kubrick.mo
-share/locale/bg/LC_MESSAGES/kubrick.mo
 share/locale/bs/LC_MESSAGES/kubrick.mo
 share/locale/ca/LC_MESSAGES/kubrick.mo
 share/locale/ca@valencia/LC_MESSAGES/kubrick.mo

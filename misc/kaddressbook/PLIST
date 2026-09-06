@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/12/21 13:52:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 11:02:58 markd Exp $
 bin/kaddressbook
 include/KPim6/KAddressBookImportExport/KAddressBookImportExport/ContactFields
 include/KPim6/KAddressBookImportExport/KAddressBookImportExport/ContactList
@@ -26,9 +26,9 @@ lib/cmake/KPim6AddressbookImportExport/KPim6AddressbookImportExportTargets-nocon
 lib/cmake/KPim6AddressbookImportExport/KPim6AddressbookImportExportTargets.cmake
 lib/libKPim6AddressbookImportExport.so
 lib/libKPim6AddressbookImportExport.so.6
-lib/libKPim6AddressbookImportExport.so.6.5.3
+lib/libKPim6AddressbookImportExport.so.6.8.0
 lib/libkaddressbookprivate.so.6
-lib/libkaddressbookprivate.so.6.5.3
+lib/libkaddressbookprivate.so.6.8.0
 qt6/plugins/kaddressbookpart.so
 qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_activities.so
 qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_ldap.so
@@ -38,6 +38,7 @@ qt6/plugins/pim6/kontact/kontact_kaddressbookplugin.so
 share/applications/kaddressbook-importer.desktop
 share/applications/kaddressbook-view.desktop
 share/applications/org.kde.kaddressbook.desktop
+share/config.kcfg/kaddressbook.kcfg
 share/doc/HTML/ca/kaddressbook/docbook-reference.docbook
 share/doc/HTML/ca/kaddressbook/index.cache.bz2
 share/doc/HTML/ca/kaddressbook/index.docbook
@@ -188,6 +189,9 @@ share/doc/HTML/it/kaddressbook/index.docbook
 share/doc/HTML/nl/kaddressbook/docbook-reference.docbook
 share/doc/HTML/nl/kaddressbook/index.cache.bz2
 share/doc/HTML/nl/kaddressbook/index.docbook
+share/doc/HTML/pt_BR/kaddressbook/docbook-reference.docbook
+share/doc/HTML/pt_BR/kaddressbook/index.cache.bz2
+share/doc/HTML/pt_BR/kaddressbook/index.docbook
 share/doc/HTML/ru/kaddressbook/docbook-reference.docbook
 share/doc/HTML/ru/kaddressbook/index.cache.bz2
 share/doc/HTML/ru/kaddressbook/index.docbook
