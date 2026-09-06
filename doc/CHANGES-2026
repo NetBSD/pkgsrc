@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5886 2026/09/06 16:34:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5887 2026/09/06 16:38:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8968,3 +8968,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-sass-embedded to 1.104.0 [taca 2026-09-06]
 	Updated www/ruby-selenium-webdriver to 4.48.0 [taca 2026-09-06]
 	Updated devel/ruby-simplecov to 1.2.0 [taca 2026-09-06]
+	Updated security/ruby-rex-powershell to 0.1.105 [taca 2026-09-06]
