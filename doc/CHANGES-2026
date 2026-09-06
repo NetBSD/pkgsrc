@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5845 2026/09/06 13:56:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5846 2026/09/06 13:57:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8925,3 +8925,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/konsole to 26.08.0 [markd 2026-09-06]
 	Updated graphics/krita to 6.0.3 [markd 2026-09-06]
 	Updated audio/ncspot to 1.4.0 [pin 2026-09-06]
+	Updated graphics/matugen to 4.2.0 [pin 2026-09-06]
