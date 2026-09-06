@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2026/08/11 16:08:13 taca Exp $
+$NetBSD: distinfo,v 1.40 2026/09/06 15:01:45 taca Exp $
 
-BLAKE2s (mini_magick-5.3.3.gem) = 57a327d3fded7f97447bc25f83e2230709ab5f44270876733acf13af5cc89bd1
-SHA512 (mini_magick-5.3.3.gem) = c0e54e87328e966f2515179811e6708a41d527587a3e547a65818a0c3b01dda79b2ab1a6989ba10e2cd8ec4cd83126f4ca8f94efcf492e8f79fbf52ed674e823
-Size (mini_magick-5.3.3.gem) = 22016 bytes
+BLAKE2s (mini_magick-5.4.0.gem) = 210a6a1063cfe3d2bf33c76c7d221d278028ee786f4d65727583af2178fb39b3
+SHA512 (mini_magick-5.4.0.gem) = 3a8e3a2b0d3368773c766695e2fb19da4e842c8a24f40172f598dbfbd91ccad1f4aa70fec7c1f8370089345381c6c9e2645a3a5d50203546613e5a08d351867e
+Size (mini_magick-5.4.0.gem) = 22016 bytes
