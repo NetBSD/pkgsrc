@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5842 2026/09/05 20:10:15 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5843 2026/09/06 09:45:03 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8632,3 +8632,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go127 to 1.27.1 [bsiegert 2026-09-05]
 	Updated devel/bacon to 3.25.0 [pin 2026-09-05]
 	Updated sysutils/uutils-coreutils to 0.11.0 [pin 2026-09-05]
+	Added lang/chicken6 version 6.0.0 [bsiegert 2026-09-06]
