@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/07/26 14:30:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/06 16:23:23 taca Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -181,7 +181,7 @@ ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/dist/tsconfig.build.tsbuildin
 ${GEM_EXTSDIR}/sass/node_modules/sync-message-port/package.json
 ${GEM_EXTSDIR}/sass/package-lock.json
 ${GEM_EXTSDIR}/sass/package.json
-${GEM_EXTSDIR}/sass/sass-1.102.0.tgz
+${GEM_EXTSDIR}/sass/sass-${PKGVERSION_NOREV}.tgz
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/sass
@@ -189,7 +189,7 @@ ${GEM_LIBDIR}/ext/sass/Rakefile
 ${GEM_LIBDIR}/ext/sass/file_utils.rb
 ${GEM_LIBDIR}/ext/sass/package.json
 ${GEM_LIBDIR}/ext/sass/platform.rb
-${GEM_LIBDIR}/ext/sass/sass-1.102.0.tgz
+${GEM_LIBDIR}/ext/sass/sass-${PKGVERSION_NOREV}.tgz
 ${GEM_LIBDIR}/ext/sass/sass_config.rb
 ${GEM_LIBDIR}/ext/sass/utils.rb
 ${GEM_LIBDIR}/lib/sass-embedded.rb

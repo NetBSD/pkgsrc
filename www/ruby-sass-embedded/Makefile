@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/07/26 14:30:52 taca Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/06 16:23:23 taca Exp $
 
-DISTNAME=	sass-embedded-1.102.0
+DISTNAME=	sass-embedded-1.104.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,6 +27,8 @@ GEM_CLEANBUILD=	gem_make.out
 
 # fetch npm files during package build at install stage.
 ALLOW_NETWORK_ACCESS=	YES
+
+PLIST_SUBST+=		PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/nodejs/nodeversion.mk"
