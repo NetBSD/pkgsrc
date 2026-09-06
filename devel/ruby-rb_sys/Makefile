@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/05/05 12:47:02 taca Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/06 14:55:12 taca Exp $
 
-DISTNAME=	rb_sys-0.9.128
+DISTNAME=	rb_sys-0.9.130
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
