@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/05/18 15:36:44 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/06 17:53:14 gdt Exp $
 
 # Do not update to >= 2.1, because of an upstream bug that causes
 # incorrect results in qgis (and arguably, any other user of the
@@ -32,14 +32,12 @@ SUBST_SED.bash=		-e 's,/bin/bash,/bin/sh,g'
 # Testing is not documented and googletest is not described.
 # So far, testing does not seem useful, so left off.
 # https://github.com/libspatialindex/libspatialindex/issues/298
+# https://github.com/libspatialindex/libspatialindex/issues/300
 #TEST_TARGET=	test
 #TEST_DEPENDS+=		googletest-[0-9]*:../../devel/googletest
+#.include "../../devel/googletest/buildlink3.mk"
+#USE_CXX_FEATURES+=	c++17
 
 .include "../../devel/cmake/build.mk"
-
-# \todo Only for tests.
-#.include "../../devel/googletest/buildlink3.mk"
-# \todo Change googletest?  Other reason?
-#USE_CXX_FEATURES+=	c++17
 
 .include "../../mk/bsd.pkg.mk"
