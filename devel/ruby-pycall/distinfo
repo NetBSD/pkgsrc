@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2024/05/26 14:52:24 taca Exp $
+$NetBSD: distinfo,v 1.10 2026/09/06 14:37:28 taca Exp $
 
-BLAKE2s (pycall-1.5.2.gem) = 74737e128fce65c9a4b393813d3c334499f39a1fdc62ef0ad8e3121dc26f6c18
-SHA512 (pycall-1.5.2.gem) = d4689e33080decbf36b6662bc2b0fee5f9abcd5deff5666cb0393ff3b78505d70795b405d617db9ab761f80db8676df68e58ea60a1b12952f4a48f4862f63b5b
-Size (pycall-1.5.2.gem) = 1585152 bytes
+BLAKE2s (pycall-1.5.3.gem) = 06f4dd6dc4e4c278e6c628fc741db113191c7d8548382a3b0cff666c9918aedb
+SHA512 (pycall-1.5.3.gem) = 4f87476f5ef8f2c16ceff997ca4e7d660e7c5f8b753df059aed39c9d6aae28f41b37d416b24e590a245e5d451d85f3324d07d20e81acccf2072529afd96f3d59
+Size (pycall-1.5.3.gem) = 1584640 bytes
 SHA1 (patch-lib_pycall_libpython_finder.rb) = 5f2903481232920acdb394e7b278d8afbe0b6ee5

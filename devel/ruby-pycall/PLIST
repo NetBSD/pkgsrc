@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/26 14:52:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 14:37:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pycall.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.github/workflows/release.yml
 ${GEM_LIBDIR}/.github/workflows/windows.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -13,14 +14,9 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/guard
 ${GEM_LIBDIR}/bin/rspec
 ${GEM_LIBDIR}/bin/runner
 ${GEM_LIBDIR}/bin/setup
-${GEM_LIBDIR}/ci/travis_before_script.sh
-${GEM_LIBDIR}/ci/travis_install.sh
-${GEM_LIBDIR}/ci/travis_retry.sh
-${GEM_LIBDIR}/config/Guardfile
 ${GEM_LIBDIR}/docker/Dockerfile
 ${GEM_LIBDIR}/docker/Gemfile
 ${GEM_LIBDIR}/docker/README.md
