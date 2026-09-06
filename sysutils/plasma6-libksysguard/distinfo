@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/11/23 20:03:56 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:31 markd Exp $
 
-BLAKE2s (libksysguard-6.5.2.tar.xz) = 6fe7ccfd241f31bd6e278b17af2b86c03347e90ea6effead64ff24b421ddcd89
-SHA512 (libksysguard-6.5.2.tar.xz) = 07a82e5d62d0d7f196da28014344b46d42c9f7dee2ae994ee9f02d6d9d940f1ebe50156c95f5a5b805c43f19e39f4bd388b8bf58e5a555928ec2bb341b5cde3d
-Size (libksysguard-6.5.2.tar.xz) = 337284 bytes
+BLAKE2s (libksysguard-6.7.4.tar.xz) = 7d04d3a7febe220b375d99650549165888716a38b097dee5743ef3d46be4dda0
+SHA512 (libksysguard-6.7.4.tar.xz) = d5b3062d63902daf9479ab36c81ba5b39fa24d6238aca23f162cad623c4886e469557e71d524ca7422816fadde8a0efc091097fc50c824fb475e810e7d259e76
+Size (libksysguard-6.7.4.tar.xz) = 344340 bytes
 SHA1 (patch-processcore_CMakeLists.txt) = 03997b796bb97636febfcbaeb83db4e664fe6ee3
 SHA1 (patch-processcore_processes.cpp) = 8ad5ffdf53421a4f5fbe396eab93df3c91c5ccb4
 SHA1 (patch-processcore_processes__netbsd__p.cpp) = 6a2c0547dc035a59fb3989b4ae12e315f98461a5

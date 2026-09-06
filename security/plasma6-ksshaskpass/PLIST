@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/23 09:17:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 10:23:30 markd Exp $
 bin/ksshaskpass
 man/man1/ksshaskpass.1
 share/applications/org.kde.ksshaskpass.desktop
@@ -19,12 +19,14 @@ share/locale/et/LC_MESSAGES/ksshaskpass.mo
 share/locale/eu/LC_MESSAGES/ksshaskpass.mo
 share/locale/fi/LC_MESSAGES/ksshaskpass.mo
 share/locale/fr/LC_MESSAGES/ksshaskpass.mo
+share/locale/ga/LC_MESSAGES/ksshaskpass.mo
 share/locale/gl/LC_MESSAGES/ksshaskpass.mo
 share/locale/he/LC_MESSAGES/ksshaskpass.mo
 share/locale/hi/LC_MESSAGES/ksshaskpass.mo
 share/locale/hu/LC_MESSAGES/ksshaskpass.mo
 share/locale/ia/LC_MESSAGES/ksshaskpass.mo
 share/locale/id/LC_MESSAGES/ksshaskpass.mo
+share/locale/is/LC_MESSAGES/ksshaskpass.mo
 share/locale/it/LC_MESSAGES/ksshaskpass.mo
 share/locale/ja/LC_MESSAGES/ksshaskpass.mo
 share/locale/ka/LC_MESSAGES/ksshaskpass.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 09:17:27 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:30 markd Exp $
 
-BLAKE2s (ksshaskpass-6.5.2.tar.xz) = b12f0594099c4b21049022d3fa4fda9c80c22a4f3fb8da017947c5e08df8f954
-SHA512 (ksshaskpass-6.5.2.tar.xz) = 27a51d743a8e99d7dee1ebe4560e57e18b4079df07267390ceff623498b32bf1b336672073b266a55bbe090d25db8b0dc1618a185cb7c3afbd15cb250e5640e9
-Size (ksshaskpass-6.5.2.tar.xz) = 31004 bytes
+BLAKE2s (ksshaskpass-6.7.4.tar.xz) = f8451ccb9ae75458b991076d559134502df1c6858db10a8a570dbf58b376d896
+SHA512 (ksshaskpass-6.7.4.tar.xz) = 785c3dc36cdaed9955ebcd1318946629901a1cad9346c72e53f85e965b2259578010e872b68f4dd34574bad347363ce17b799dcaf2ef7e21e2e6170a3165b6d1
+Size (ksshaskpass-6.7.4.tar.xz) = 32944 bytes

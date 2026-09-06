@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/09/02 19:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/06 10:23:32 markd Exp $
 
 DISTNAME=	kscreenlocker-${PLASMAVER}
-PKGREVISION=	8
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
@@ -18,6 +17,8 @@ USE_TOOLS+=	msgmerge pkg-config
 EGDIR=		share/examples/pam.d
 
 CONF_FILES+=	${EGDIR}/kde ${PKG_SYSCONFBASEDIR}/pam.d/kde
+
+USE_CXX_FEATURES+=	c++23
 
 INSTALLATION_DIRS+=	${EGDIR}
 

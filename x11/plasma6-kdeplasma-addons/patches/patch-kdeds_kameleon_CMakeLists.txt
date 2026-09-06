@@ -1,0 +1,14 @@
+$NetBSD: patch-kdeds_kameleon_CMakeLists.txt,v 1.1 2026/09/06 10:23:32 markd Exp $
+
+Treat NetBSD like FreeBSD
+
+--- kdeds/kameleon/CMakeLists.txt.orig	2026-08-04 09:20:27.000000000 +0000
++++ kdeds/kameleon/CMakeLists.txt
+@@ -52,6 +52,6 @@ ecm_qt_declare_logging_category(kameleon
+                   )
+ 
+ # FreeBSD is missing dependencies to CI.
+-if(NOT CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++if(NOT CMAKE_SYSTEM_NAME MATCHES FreeBSD AND NOT CMAKE_SYSTEM_NAME MATCHES NetBSD)
+     add_subdirectory(qmk/kameleon-qmk-helper)
+ endif()

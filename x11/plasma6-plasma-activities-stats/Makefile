@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/09/02 19:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/06 10:23:33 markd Exp $
 
 DISTNAME=	plasma-activities-stats-${PLASMAVER}
-PKGREVISION=	4
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

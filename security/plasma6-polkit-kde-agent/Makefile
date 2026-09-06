@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/02 19:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/06 10:23:30 markd Exp $
 
 DISTNAME=	polkit-kde-agent-1-${PLASMAVER}
 PKGNAME=	plasma6-polkit-kde-agent-${PLASMAVER}
-PKGREVISION=	6
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/09/02 19:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/06 10:23:33 markd Exp $
 
 DISTNAME=	plasma-workspace-${PLASMAVER}
-PKGREVISION=	4
 CATEGORIES=	x11
 
 HOMEPAGE=	https://kde.org/plasma-desktop/
@@ -18,6 +17,8 @@ DEPENDS+=	kf6-kded>=6.18.0:../../x11/kf6-kded
 DEPENDS+=	kio-extras>=25.08.3:../../devel/kio-extras
 
 USE_TOOLS+=	msgmerge pkg-config
+
+USE_CXX_FEATURES+=	c++23
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 #CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
@@ -39,7 +40,6 @@ SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg+=	gmenu-dbusmenu-proxy/CMakeLists.txt
 SUBST_FILES.xdg+=	libnotificationmanager/CMakeLists.txt
-SUBST_FILES.xdg+=	libtaskmanager/CMakeLists.txt
 SUBST_FILES.xdg+=	menu/desktop/CMakeLists.txt
 SUBST_FILES.xdg+=	shell/CMakeLists.txt
 SUBST_FILES.xdg+=	startkde/session-restore/CMakeLists.txt
@@ -61,8 +61,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/menus/plasma-applications.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/plasma-applications.menu
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/plasmanotifyrc \
 		${PKG_SYSCONFDIR}/xdg/plasmanotifyrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
-		${PKG_SYSCONFDIR}/xdg/taskmanagerrulesrc
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../devel/kf6-kcmutils/buildlink3.mk"

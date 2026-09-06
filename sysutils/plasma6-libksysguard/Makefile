@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/09/02 19:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/06 10:23:30 markd Exp $
 
 DISTNAME=	libksysguard-${PLASMAVER}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/KSysGuard

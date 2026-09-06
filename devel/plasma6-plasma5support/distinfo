@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/01/02 03:56:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:28 markd Exp $
 
-BLAKE2s (plasma5support-6.5.2.tar.xz) = 22bb6fc15673e337c0de30a4dfb94c8060b76bd06d9365c2c6494f8bec0bc7ba
-SHA512 (plasma5support-6.5.2.tar.xz) = 7d4a37cc851eb2895df1054a6872ba249383105ffdd4630a20b1564552691b0352a890d68453efd9c8911a122e9c79074031aa52cb28a44cf47bbe179d751abe
-Size (plasma5support-6.5.2.tar.xz) = 824792 bytes
+BLAKE2s (plasma5support-6.7.4.tar.xz) = 5777a5a5d469afb6faa9494b9fea331fb577aeedb935fa5cbb2786e90a3e94f8
+SHA512 (plasma5support-6.7.4.tar.xz) = e2ef8cf5497e601f5ba444313ecf530c0a5c781beff80367a9753e7b22689b8c2d8026044db3c46cbe76895a5a2cc84954c2685c7c5191aa7b59efcfdeec4e36
+Size (plasma5support-6.7.4.tar.xz) = 837820 bytes

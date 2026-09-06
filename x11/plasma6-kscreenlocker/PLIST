@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/01/19 10:05:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/06 10:23:32 markd Exp $
 bin/ck-unlock-session
 include/KScreenLocker/KScreenLocker/KsldApp
 include/KScreenLocker/KScreenLocker/kscreenlocker_export.h
@@ -25,7 +25,9 @@ share/locale/ar/LC_MESSAGES/kscreenlocker_greet.mo
 share/locale/ast/LC_MESSAGES/kcm_screenlocker.mo
 share/locale/ast/LC_MESSAGES/kscreenlocker.mo
 share/locale/ast/LC_MESSAGES/kscreenlocker_greet.mo
+share/locale/az/LC_MESSAGES/kcm_screenlocker.mo
 share/locale/az/LC_MESSAGES/kscreenlocker.mo
+share/locale/az/LC_MESSAGES/kscreenlocker_greet.mo
 share/locale/bg/LC_MESSAGES/kcm_screenlocker.mo
 share/locale/bg/LC_MESSAGES/kscreenlocker.mo
 share/locale/bg/LC_MESSAGES/kscreenlocker_greet.mo
@@ -71,6 +73,7 @@ share/locale/fi/LC_MESSAGES/kscreenlocker_greet.mo
 share/locale/fr/LC_MESSAGES/kcm_screenlocker.mo
 share/locale/fr/LC_MESSAGES/kscreenlocker.mo
 share/locale/fr/LC_MESSAGES/kscreenlocker_greet.mo
+share/locale/ga/LC_MESSAGES/kcm_screenlocker.mo
 share/locale/ga/LC_MESSAGES/kscreenlocker.mo
 share/locale/ga/LC_MESSAGES/kscreenlocker_greet.mo
 share/locale/gl/LC_MESSAGES/kcm_screenlocker.mo

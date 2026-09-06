@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 09:58:51 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:29 markd Exp $
 
-BLAKE2s (kwrited-6.5.2.tar.xz) = 9e81f8ea12044628b8bc521cc8c380d9877cfcd6a65a1abdd8a1d22abed1cca7
-SHA512 (kwrited-6.5.2.tar.xz) = 4f999c99f6de1eb2585536fa88297ab59199a1f4749857ddd2b067ecf130e7cebac5bf0b0e04af8dd3021fd3ae2cdee0678d5b6542665014310005bde400022e
-Size (kwrited-6.5.2.tar.xz) = 23668 bytes
+BLAKE2s (kwrited-6.7.4.tar.xz) = b5cb3e8ad775ecfb411069ae8f1a6aa8c147ce0449a804e736fe528716cf50ca
+SHA512 (kwrited-6.7.4.tar.xz) = 47bcba5eb104da78f141d378fdd505a1b69a2686f7b15719ab0ec769321405ec208806c3d5b76b5c6cf987515b649244c8f803d9add11c62ae887fd89e45479b
+Size (kwrited-6.7.4.tar.xz) = 23492 bytes

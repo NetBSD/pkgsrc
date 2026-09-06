@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/02 19:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/06 10:23:28 markd Exp $
 
 DISTNAME=	kwayland-${PLASMAVER}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://invent.kde.org/plasma/kwayland
@@ -23,6 +22,7 @@ CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 PKG_SKIP_REASON+=       "Platform does not support Wayland"
 .endif
 
+.include "../../devel/plasma-wayland-protocols/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../devel/qt6-qtwayland/buildlink3.mk"

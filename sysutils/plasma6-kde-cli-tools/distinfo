@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 08:56:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:30 markd Exp $
 
-BLAKE2s (kde-cli-tools-6.5.2.tar.xz) = 009b7683450e0801cb81964ffb53f35f8cd1394f06eb6fad5249f3a438b0c262
-SHA512 (kde-cli-tools-6.5.2.tar.xz) = b6cdb42c3f046a57c96b707bcf6cb9d82a1102fbc073d9a6a9db7abd16bd9b444d5f8d3d2c926aea053d11f27166ede96f1baf9f3637b0c1944693880ff3bd5a
-Size (kde-cli-tools-6.5.2.tar.xz) = 641652 bytes
+BLAKE2s (kde-cli-tools-6.7.4.tar.xz) = c664089fbc65571061b41eb4489ca79bdd3fa872401f47c14144422d38334962
+SHA512 (kde-cli-tools-6.7.4.tar.xz) = 6587de1da279a8cc997dbaf8643ac0708f9d4839181174d7afabd0569f95b29f2e8e75eae3a056253ec86c06727661af437569234fc1bd542dd7f65b21d62599
+Size (kde-cli-tools-6.7.4.tar.xz) = 639440 bytes
 SHA1 (patch-kdeeject_kdeeject) = 9ede044cc0d58bebbf2dc4ecace0380965c827c5

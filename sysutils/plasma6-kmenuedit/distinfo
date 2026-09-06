@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 09:03:05 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:30 markd Exp $
 
-BLAKE2s (kmenuedit-6.5.2.tar.xz) = 55079701e83513667199083099116c96ee5855d315a63ac355565660d7b624e1
-SHA512 (kmenuedit-6.5.2.tar.xz) = 466ebb8e782ff7fc48cbf7664a235b8607bcd76609594d7f34c83e5556fd3f5766099545721d01159db473482ea4a51c5ae8531d47c07ab3cfb25dda937d4c7d
-Size (kmenuedit-6.5.2.tar.xz) = 885736 bytes
+BLAKE2s (kmenuedit-6.7.4.tar.xz) = 8d98de7d4cd0b352dd3b1162ca60576fdacc356b79401e50642f720a1142d99f
+SHA512 (kmenuedit-6.7.4.tar.xz) = 4368640f3b65c378282ba19a2da300feae1960a9257778b2f40f47280d3b8ffb04a25dc4f5411ab6cdc36f2fd85e2684241c947c955c213bd88ebe0326e48f03
+Size (kmenuedit-6.7.4.tar.xz) = 887704 bytes

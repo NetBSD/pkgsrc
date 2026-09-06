@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/11/23 19:58:25 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:33 markd Exp $
 
-BLAKE2s (plasma-activities-6.5.2.tar.xz) = 9d9a88c8bc3d989073650b746e6d4037e0bdb77987ab4ef7cef19bfaf6e63903
-SHA512 (plasma-activities-6.5.2.tar.xz) = 8c3ec1dfec006b6732dd3b01cbd473c613235c96df4a1ea885a47f94eec7aadc40bf5233d0f055001617292878c792e4a70f69d08c69ce49b70811b94245912e
-Size (plasma-activities-6.5.2.tar.xz) = 63328 bytes
+BLAKE2s (plasma-activities-6.7.4.tar.xz) = 22afdc3d80c5705d0b2faecafb0a9d58f5b0f3c840ac4c5a0be9947db2edc53d
+SHA512 (plasma-activities-6.7.4.tar.xz) = 4a9800d53b4f71998a9b0d79e52efef97c7f7184707c69c1899a4bdac55d93fdb6250158b4c7c0599d55af02351743b91bf9ac2dac76ff54821c8b8b2548eca6
+Size (plasma-activities-6.7.4.tar.xz) = 63592 bytes

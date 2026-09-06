@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/12/23 08:48:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 10:23:30 markd Exp $
 bin/kinfocenter
 lib/libKInfoCenterInternal.so
 libexec/kf6/kauth/kinfocenter-dmidecode-helper
 libexec/kinfocenter-opengl-helper
+libexec/kinfocenter-vulkan-helper
 qt6/plugins/plasma/kcms/kcm_about-distro.so
 qt6/plugins/plasma/kcms/kinfocenter/kcm_audio_information.so
 qt6/plugins/plasma/kcms/kinfocenter/kcm_block_devices.so
@@ -35,6 +36,8 @@ share/dbus-1/system.d/org.kde.kinfocenter.dmidecode.conf
 share/doc/HTML/ca/kinfocenter/index.cache.bz2
 share/doc/HTML/ca/kinfocenter/index.docbook
 share/doc/HTML/ca/kinfocenter/kinfocenter.png
+share/doc/HTML/de/kinfocenter/index.cache.bz2
+share/doc/HTML/de/kinfocenter/index.docbook
 share/doc/HTML/en/kinfocenter/index.cache.bz2
 share/doc/HTML/en/kinfocenter/index.docbook
 share/doc/HTML/en/kinfocenter/kinfocenter.png
@@ -76,6 +79,7 @@ share/kinfocenter/categories/lostfoundcategory.desktop
 share/kinfocenter/categories/networkinfocategory.desktop
 share/kinfocenter/edid/edid.sh
 share/kinfocenter/firmware_security/fwupdmgr.sh
+share/kinfocenter/network/ip.sh
 share/locale/af/LC_MESSAGES/kcm_samba.mo
 share/locale/af/LC_MESSAGES/kcmusb.mo
 share/locale/ar/LC_MESSAGES/kcm_about-distro.mo
@@ -178,8 +182,11 @@ share/locale/fr/LC_MESSAGES/kcmusb.mo
 share/locale/fr/LC_MESSAGES/kinfocenter.mo
 share/locale/fy/LC_MESSAGES/kcm_samba.mo
 share/locale/fy/LC_MESSAGES/kcmusb.mo
+share/locale/ga/LC_MESSAGES/kcm_about-distro.mo
+share/locale/ga/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/ga/LC_MESSAGES/kcm_samba.mo
 share/locale/ga/LC_MESSAGES/kcmusb.mo
+share/locale/ga/LC_MESSAGES/kinfocenter.mo
 share/locale/gl/LC_MESSAGES/kcm_about-distro.mo
 share/locale/gl/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/gl/LC_MESSAGES/kcm_samba.mo

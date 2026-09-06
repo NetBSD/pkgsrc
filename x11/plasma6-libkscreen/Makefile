@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/02 19:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/06 10:23:33 markd Exp $
 
 DISTNAME=	libkscreen-${PLASMAVER}
-PKGREVISION=	4
 CATEGORIES=	x11
 
 HOMEPAGE=	https://invent.kde.org/plasma/libkscreen
@@ -11,6 +10,8 @@ LICENSE=	gnu-gpl-v2
 .include "../../meta-pkgs/kde/plasma6.mk"
 
 USE_PKGLOCALEDIR=	yes
+
+USE_CXX_FEATURES+=	c++23
 
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../devel/kf6-kconfig/buildlink3.mk"

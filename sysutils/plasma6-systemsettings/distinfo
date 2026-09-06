@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 08:40:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:31 markd Exp $
 
-BLAKE2s (systemsettings-6.5.2.tar.xz) = 0417eedd1b2922eeee27b091115226d10007f55a0dc3da2a7d9d883ec773a642
-SHA512 (systemsettings-6.5.2.tar.xz) = 0d2bad23c42ddff04aa21299fd93c759bf3f2e3e1cd4bd814a4fcc227d17fb7180f9eb9d96775cb4af0ea6695bf2e5acd0a277b7efd7f5ebb75cea766023c698
-Size (systemsettings-6.5.2.tar.xz) = 220396 bytes
+BLAKE2s (systemsettings-6.7.4.tar.xz) = 16fd50d4804277285fa089c6293820ce5a8ad41817fbe0941ec8f83b2613f99f
+SHA512 (systemsettings-6.7.4.tar.xz) = 4e8bbd2a3e6f2138a90aa262fba3cd93b155e08334e1ba99f71f5931845531e5fd47e6c1e4461114dad967656fad6e8acbc8f262347a9d2b4d075242ceffe224
+Size (systemsettings-6.7.4.tar.xz) = 223392 bytes

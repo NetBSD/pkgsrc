@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/12/23 09:12:09 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/06 10:23:30 markd Exp $
 
-BLAKE2s (polkit-kde-agent-1-6.5.2.tar.xz) = 822e3cca79e1bc466b83142bb0ef6084ba44fb4ed19aec6f0008566c4b842aa3
-SHA512 (polkit-kde-agent-1-6.5.2.tar.xz) = dd9a18d78d1ef2eab1c5e94846beb09bdca386aeef9ad4872ec8de16153f64097bbc98a9eb6730b12c521ba0b89b6422b48790892a857116f54e2d15f89a5155
-Size (polkit-kde-agent-1-6.5.2.tar.xz) = 57940 bytes
+BLAKE2s (polkit-kde-agent-1-6.7.4.tar.xz) = 55814f1b460418dc4c12f0b6b57661a9dea2563fa09b22a91df7356443881668
+SHA512 (polkit-kde-agent-1-6.7.4.tar.xz) = f9d53f2830cde85d16b0b4941b25a83eea4e0a8b984086d1a350da1060bd1e72d03d93017f08863a54d9316503e506c53198fada0ff2d55da2bf0979ed45a755
+Size (polkit-kde-agent-1-6.7.4.tar.xz) = 57572 bytes
