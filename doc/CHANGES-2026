@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5874 2026/09/06 15:48:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5875 2026/09/06 15:58:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8957,3 +8957,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-metasploit-payloads to 2.0.253 [taca 2026-09-06]
 	Updated textproc/ruby-commonmarker to 2.10.0 [taca 2026-09-06]
 	Updated textproc/ruby-csv to 3.3.6 [taca 2026-09-06]
+	Updated textproc/ruby-haml to 7.5.1 [taca 2026-09-06]
