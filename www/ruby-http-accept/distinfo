@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/05 15:53:07 taca Exp $
+$NetBSD: distinfo,v 1.6 2026/09/06 16:14:49 taca Exp $
 
-BLAKE2s (http-accept-2.2.1.gem) = 65ad5a6cb378b62b2cf6c48eeff0b985c9a0435dc708c8ab61167b16f9813775
-SHA512 (http-accept-2.2.1.gem) = a23f9d84924cfe30f9b4a4ce1779392a44556e2b852b5afad37199f8d724087cfc6e418497acbf24d17393b322ab8854ccb38decf1dcbe60f1e1ad562f350030
-Size (http-accept-2.2.1.gem) = 15360 bytes
+BLAKE2s (http-accept-2.2.2.gem) = c648677236714a6d800670e18c49b34383aa36d7fe248b7cb5c1f9492a53f1f3
+SHA512 (http-accept-2.2.2.gem) = d9a0e78e20a99ac77fd1d98af5678f125f860d60033f3d578cc90c6055ec0887eecd0d0c5798f1a25d736cea6db5895cd8ef1fb2827c0b79503ee6e334cb7a83
+Size (http-accept-2.2.2.gem) = 15360 bytes
