@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2026/08/31 20:51:04 js Exp $
+# $NetBSD: Makefile,v 1.364 2026/09/06 09:59:29 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -137,8 +137,6 @@ SUBDIR+=	minidlna
 SUBDIR+=	mjpegtools
 SUBDIR+=	mkvtoolnix
 SUBDIR+=	mlt
-SUBDIR+=	mlt-qt5
-SUBDIR+=	mlt-qt6
 SUBDIR+=	movit
 SUBDIR+=	mp4tools
 SUBDIR+=	mp4v2
