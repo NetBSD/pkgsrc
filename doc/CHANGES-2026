@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5889 2026/09/06 17:13:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5890 2026/09/06 19:23:46 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8973,3 +8973,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-blockbuster version 1.5.27 [adam 2026-09-06]
 	Updated devel/py-anyio to 4.15.1 [adam 2026-09-06]
 	Updated devel/py-configargparse to 1.7.6 [adam 2026-09-06]
+	Updated www/resterm to 1.6.0 [drixter 2026-09-06]
