@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2026/09/02 19:03:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2026/09/06 09:05:29 markd Exp $
 
 BUILDLINK_TREE+=	qt6-qtdeclarative
 
@@ -17,6 +17,7 @@ BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/metatypes/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*/*
+BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*/*/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*/*/*/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*/*/*/*/*
 BUILDLINK_FILES.qt6-qtdeclarative+=	qt6/qml/*/*/*/*/*/.qt/*/*
