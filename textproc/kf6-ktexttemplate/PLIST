@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:06:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 10:05:19 markd Exp $
 include/KF6/KTextTemplate/KTextTemplate/AbstractLocalizer
 include/KF6/KTextTemplate/KTextTemplate/AbstractNodeFactory
 include/KF6/KTextTemplate/KTextTemplate/AbstractTemplateLoader
@@ -60,4 +60,5 @@ qt6/plugins/kf6/ktexttemplate/ktexttemplate_defaultfilters.so
 qt6/plugins/kf6/ktexttemplate/ktexttemplate_defaulttags.so
 qt6/plugins/kf6/ktexttemplate/ktexttemplate_i18ntags.so
 qt6/plugins/kf6/ktexttemplate/ktexttemplate_loadertags.so
+qt6/plugins/kf6/ktexttemplate/ktexttemplate_scriptabletags.so
 share/qlogging-categories6/ktexttemplate.categories

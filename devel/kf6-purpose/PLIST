@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:14 markd Exp $
 include/KF6/Purpose/Purpose/AlternativesModel
 include/KF6/Purpose/Purpose/Configuration
 include/KF6/Purpose/Purpose/Job
@@ -51,6 +51,11 @@ qt6/qml/org/kde/purpose/kdeconnect/qmldir
 qt6/qml/org/kde/purpose/libpurposequickplugin.so
 qt6/qml/org/kde/purpose/phabricator/libphabricatorquickplugin.so
 qt6/qml/org/kde/purpose/phabricator/qmldir
+qt6/qml/org/kde/purpose/private/widgets/JobDialog.qml
+qt6/qml/org/kde/purpose/private/widgets/KF6PurposeWidgets.qmltypes
+qt6/qml/org/kde/purpose/private/widgets/kde-qmlmodule.version
+qt6/qml/org/kde/purpose/private/widgets/libKF6PurposeWidgetsplugin.so
+qt6/qml/org/kde/purpose/private/widgets/qmldir
 qt6/qml/org/kde/purpose/purposequickplugin.qmltypes
 qt6/qml/org/kde/purpose/qmldir
 qt6/qml/org/kde/purpose/reviewboard/librbpurposequickplugin.so
@@ -684,6 +689,7 @@ share/locale/ta/LC_MESSAGES/libpurpose6_quick.mo
 share/locale/ta/LC_MESSAGES/libpurpose6_widgets.mo
 share/locale/ta/LC_MESSAGES/purpose6_bluetooth.mo
 share/locale/ta/LC_MESSAGES/purpose6_fileitemaction.mo
+share/locale/ta/LC_MESSAGES/purpose6_kdeconnect.mo
 share/locale/ta/LC_MESSAGES/purpose6_kdeconnectsms.mo
 share/locale/ta/LC_MESSAGES/purpose6_pastebin.mo
 share/locale/ta/LC_MESSAGES/purpose6_saveas.mo
@@ -714,6 +720,20 @@ share/locale/tr/LC_MESSAGES/purpose6_phabricator.mo
 share/locale/tr/LC_MESSAGES/purpose6_reviewboard.mo
 share/locale/tr/LC_MESSAGES/purpose6_saveas.mo
 share/locale/tr/LC_MESSAGES/purpose6_youtube.mo
+share/locale/ug/LC_MESSAGES/libpurpose6_quick.mo
+share/locale/ug/LC_MESSAGES/libpurpose6_widgets.mo
+share/locale/ug/LC_MESSAGES/purpose6_barcode.mo
+share/locale/ug/LC_MESSAGES/purpose6_bluetooth.mo
+share/locale/ug/LC_MESSAGES/purpose6_fileitemaction.mo
+share/locale/ug/LC_MESSAGES/purpose6_imgur.mo
+share/locale/ug/LC_MESSAGES/purpose6_kdeconnect.mo
+share/locale/ug/LC_MESSAGES/purpose6_kdeconnectsms.mo
+share/locale/ug/LC_MESSAGES/purpose6_nextcloud.mo
+share/locale/ug/LC_MESSAGES/purpose6_pastebin.mo
+share/locale/ug/LC_MESSAGES/purpose6_phabricator.mo
+share/locale/ug/LC_MESSAGES/purpose6_reviewboard.mo
+share/locale/ug/LC_MESSAGES/purpose6_saveas.mo
+share/locale/ug/LC_MESSAGES/purpose6_youtube.mo
 share/locale/uk/LC_MESSAGES/libpurpose6_quick.mo
 share/locale/uk/LC_MESSAGES/libpurpose6_widgets.mo
 share/locale/uk/LC_MESSAGES/purpose6_barcode.mo

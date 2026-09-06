@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/21 08:25:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 10:05:20 markd Exp $
 include/KF6/KGuiAddons/KColorCollection
 include/KF6/KGuiAddons/KColorMimeData
 include/KF6/KGuiAddons/KColorSchemeWatcher
@@ -45,6 +45,7 @@ lib/libKF6GuiAddons.so
 lib/libKF6GuiAddons.so.6
 lib/libKF6GuiAddons.so.${PKGVERSION}
 lib/pkgconfig/KF6GuiAddons.pc
+qt6/metatypes/qt6kf6guiaddons_metatypes.json
 qt6/qml/org/kde/guiaddons/kde-qmlmodule.version
 qt6/qml/org/kde/guiaddons/kguiaddonsqml.qmltypes
 qt6/qml/org/kde/guiaddons/libkguiaddonsqml.so

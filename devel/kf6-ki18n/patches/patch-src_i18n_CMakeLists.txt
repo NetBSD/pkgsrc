@@ -1,0 +1,14 @@
+$NetBSD: patch-src_i18n_CMakeLists.txt,v 1.1 2026/09/06 10:05:12 markd Exp $
+
+Don't use [[deprecated]] - older gcc's don't like it.
+
+--- src/i18n/CMakeLists.txt.orig	2026-08-07 20:40:34.000000000 +0000
++++ src/i18n/CMakeLists.txt
+@@ -48,6 +48,7 @@ ecm_generate_export_header(KF6I18n
+     GROUP_BASE_NAME KF
+     VERSION ${KF_VERSION}
+     USE_VERSION_HEADER
++    DEPRECATED_ATTRIBUTE_TYPE COMPILER
+     DEPRECATED_BASE_VERSION 0
+     DEPRECATION_VERSIONS 6.8
+     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}

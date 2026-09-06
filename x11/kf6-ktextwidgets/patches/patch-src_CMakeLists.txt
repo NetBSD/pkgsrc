@@ -1,0 +1,14 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/09/06 10:05:21 markd Exp $
+
+Don't use [[deprecated]] - older gcc's (12) don't like it.
+
+--- src/CMakeLists.txt.orig	2026-08-07 20:43:02.000000000 +0000
++++ src/CMakeLists.txt
+@@ -40,6 +40,7 @@ ecm_generate_export_header(KF6TextWidget
+     GROUP_BASE_NAME KF
+     VERSION ${KF_VERSION}
+     USE_VERSION_HEADER
++    DEPRECATED_ATTRIBUTE_TYPE COMPILER
+     DEPRECATED_BASE_VERSION 0
+     DEPRECATION_VERSIONS 6.6
+     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}

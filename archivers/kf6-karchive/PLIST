@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:11 markd Exp $
 include/KF6/KArchive/K7Zip
 include/KF6/KArchive/KAr
 include/KF6/KArchive/KArchive
@@ -73,6 +73,7 @@ share/locale/sl/LC_MESSAGES/karchive6_qt.qm
 share/locale/sv/LC_MESSAGES/karchive6_qt.qm
 share/locale/ta/LC_MESSAGES/karchive6_qt.qm
 share/locale/tr/LC_MESSAGES/karchive6_qt.qm
+share/locale/ug/LC_MESSAGES/karchive6_qt.qm
 share/locale/uk/LC_MESSAGES/karchive6_qt.qm
 share/locale/zh_CN/LC_MESSAGES/karchive6_qt.qm
 share/locale/zh_TW/LC_MESSAGES/karchive6_qt.qm

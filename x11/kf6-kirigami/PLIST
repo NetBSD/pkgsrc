@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:20 markd Exp $
 include/KF6/Kirigami/Platform/PlatformPluginFactory
 include/KF6/Kirigami/Platform/PlatformTheme
 include/KF6/Kirigami/Platform/StyleHints
@@ -71,6 +71,7 @@ lib/libKirigamiPrivate.so.${PKGVERSION}
 lib/libKirigamiTemplates.so
 lib/libKirigamiTemplates.so.6
 lib/libKirigamiTemplates.so.${PKGVERSION}
+qt6/metatypes/qt6kirigamiplatform_metatypes.json
 qt6/qml/org/kde/kirigami/AboutItem.qml
 qt6/qml/org/kde/kirigami/AboutPage.qml
 qt6/qml/org/kde/kirigami/Kirigami.qmltypes
@@ -300,6 +301,7 @@ share/locale/sv/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/ta/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/tg/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/tr/LC_MESSAGES/libkirigami6_qt.qm
+share/locale/ug/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/uk/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/zh_CN/LC_MESSAGES/libkirigami6_qt.qm
 share/locale/zh_TW/LC_MESSAGES/libkirigami6_qt.qm

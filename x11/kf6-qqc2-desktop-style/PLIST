@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:21 markd Exp $
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfig.cmake
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfigVersion.cmake
 qt6/plugins/kf6/kirigami/platform/org.kde.desktop.so
@@ -113,6 +113,7 @@ share/locale/sl/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/sv/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/ta/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/tr/LC_MESSAGES/qqc2desktopstyle_qt.qm
+share/locale/ug/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/uk/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/zh_CN/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/zh_TW/LC_MESSAGES/qqc2desktopstyle_qt.qm

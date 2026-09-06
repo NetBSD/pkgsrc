@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/06 10:05:21 markd Exp $
 include/KF6/KXmlGui/KAboutApplicationDialog
 include/KF6/KXmlGui/KAboutPluginDialog
 include/KF6/KXmlGui/KActionCategory
@@ -50,6 +50,7 @@ lib/libKF6XmlGui.so.6
 lib/libKF6XmlGui.so.${PKGVERSION}
 qt6/plugins/designer/kxmlgui6widgets.so
 share/locale/af/LC_MESSAGES/kxmlgui6.mo
+share/locale/am/LC_MESSAGES/kxmlgui6.mo
 share/locale/ar/LC_MESSAGES/kxmlgui6.mo
 share/locale/as/LC_MESSAGES/kxmlgui6.mo
 share/locale/ast/LC_MESSAGES/kxmlgui6.mo
@@ -106,6 +107,7 @@ share/locale/ko/LC_MESSAGES/kxmlgui6.mo
 share/locale/ku/LC_MESSAGES/kxmlgui6.mo
 share/locale/lb/LC_MESSAGES/kxmlgui6.mo
 share/locale/lg/LC_MESSAGES/kxmlgui6.mo
+share/locale/lo/LC_MESSAGES/kxmlgui6.mo
 share/locale/lt/LC_MESSAGES/kxmlgui6.mo
 share/locale/lv/LC_MESSAGES/kxmlgui6.mo
 share/locale/mai/LC_MESSAGES/kxmlgui6.mo
@@ -114,6 +116,8 @@ share/locale/ml/LC_MESSAGES/kxmlgui6.mo
 share/locale/mr/LC_MESSAGES/kxmlgui6.mo
 share/locale/ms/LC_MESSAGES/kxmlgui6.mo
 share/locale/my/LC_MESSAGES/kxmlgui6.mo
+share/locale/nan_TW/LC_MESSAGES/kxmlgui6.mo
+share/locale/nan_TW@latin/LC_MESSAGES/kxmlgui6.mo
 share/locale/nb/LC_MESSAGES/kxmlgui6.mo
 share/locale/nds/LC_MESSAGES/kxmlgui6.mo
 share/locale/ne/LC_MESSAGES/kxmlgui6.mo

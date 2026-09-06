@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:18 markd Exp $
 
-BLAKE2s (kcodecs-6.26.0.tar.xz) = 30ea4d207433b5f9beba711b95ad8e4d5261c8e15df497a9e062ea381abae92b
-SHA512 (kcodecs-6.26.0.tar.xz) = 13dd327329eaa92bf89fb4fac6ae63146040daa5955edf2f393d26585270b3359e69b8fbf4403829cbe9fa02ec5f71c74856170793126bbf2c6e44192bf2fa75
-Size (kcodecs-6.26.0.tar.xz) = 2476884 bytes
+BLAKE2s (kcodecs-6.29.0.tar.xz) = e14dabf5d4a996a783ece3e60a2c5f39bd08ce644293b01001f2394a6fcbef04
+SHA512 (kcodecs-6.29.0.tar.xz) = dd532e34c495f8c06c16f47a291a4b4a5a95a800abc6c73e973e478e04c0384a7afb4803ab0efcba50bd424d07391a3630eb5dc72925b49d73dbf94530b24c97
+Size (kcodecs-6.29.0.tar.xz) = 2478600 bytes
+SHA1 (patch-src_probers_UnicodeGroupProber.cpp) = 5f545a8ffcd10d033a5a845bb66f162d22cc4eca
+SHA1 (patch-src_probers_nsCharSetProber.cpp) = a4feef5b2b0b6326834becb5584df428f6eca5c5
+SHA1 (patch-src_probers_nsHebrewProber.cpp) = 193f2f5ff28b43bddea2036715c34c5605649d9c
+SHA1 (patch-src_probers_nsLatin1Prober.cpp) = 1aea09638967a2a07466e320102abe4e4f5234cd
+SHA1 (patch-src_probers_nsMBCSGroupProber.cpp) = bcc15c77c1f2df5102362214942f5eb87ba522a1
+SHA1 (patch-src_probers_nsSBCSGroupProber.cpp) = a8a0a753d6a8c6b1b3f985d210aee3bfcfb02692
+SHA1 (patch-src_probers_nsSBCharSetProber.cpp) = ce63b3174a85842f010f5d69d267f2ea41790128
+SHA1 (patch-src_probers_nsUniversalDetector.cpp) = 84b0cb30af8c9146a72ce30304674bf3b6afa07b

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:19 markd Exp $
 
-BLAKE2s (ktexttemplate-6.26.0.tar.xz) = 8ec3768cecc68f90ce9170606b7b5eb626b43f91f5533e50b4e464cce1707071
-SHA512 (ktexttemplate-6.26.0.tar.xz) = 7afe00010ddc9d4e7a6e71a9495b6afecb5fb54c724c0c8f326743d0be7e17e84c1738578f7804d0560b4b2f4e542dd296c6c343dd22255d09bcfb68ee7ee0fe
-Size (ktexttemplate-6.26.0.tar.xz) = 848976 bytes
+BLAKE2s (ktexttemplate-6.29.0.tar.xz) = 430829c4b3d10f3df1bd7126dbf2fc8b06400189eaa0c3f6461ce8e0dedaf808
+SHA512 (ktexttemplate-6.29.0.tar.xz) = c80077846d2f9da6b2cd68f6aab6ce8c70bdc93af8f995684d0a3611484db4bd95c8914ba42a6b81b97574aa6374000991f423c494c76ae6e7bf34e85283ac23
+Size (ktexttemplate-6.29.0.tar.xz) = 849140 bytes

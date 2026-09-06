@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 10:05:12 markd Exp $
 include/KF6/KCoreAddons/KAboutComponent
 include/KF6/KCoreAddons/KAboutData
 include/KF6/KCoreAddons/KAboutLicense
@@ -83,12 +83,14 @@ lib/libKF6CoreAddons.so
 lib/libKF6CoreAddons.so.6
 lib/libKF6CoreAddons.so.${PKGVERSION}
 lib/pkgconfig/KF6CoreAddons.pc
+qt6/metatypes/qt6kf6coreaddons_metatypes.json
 qt6/qml/org/kde/coreaddons/kcoreaddonsplugin.qmltypes
 qt6/qml/org/kde/coreaddons/kde-qmlmodule.version
 qt6/qml/org/kde/coreaddons/libkcoreaddonsplugin.so
 qt6/qml/org/kde/coreaddons/qmldir
 share/kf6/jsonschema/kpluginmetadata.schema.json
 share/locale/af/LC_MESSAGES/kcoreaddons6_qt.qm
+share/locale/am/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ar/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/as/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ast/LC_MESSAGES/kcoreaddons6_qt.qm
@@ -154,6 +156,8 @@ share/locale/ml/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/mr/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ms/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/my/LC_MESSAGES/kcoreaddons6_qt.qm
+share/locale/nan_TW/LC_MESSAGES/kcoreaddons6_qt.qm
+share/locale/nan_TW@latin/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/nb/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/nds/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ne/LC_MESSAGES/kcoreaddons6_qt.qm

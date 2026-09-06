@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:16 markd Exp $
 include/KF6/KDAV/KDAV/DavCollection
+include/KF6/KDAV/KDAV/DavCollectionCreateJob
 include/KF6/KDAV/KDAV/DavCollectionDeleteJob
 include/KF6/KDAV/KDAV/DavCollectionModifyJob
 include/KF6/KDAV/KDAV/DavCollectionsFetchJob
@@ -15,11 +16,14 @@ include/KF6/KDAV/KDAV/DavItemsListJob
 include/KF6/KDAV/KDAV/DavJobBase
 include/KF6/KDAV/KDAV/DavPrincipalHomesetsFetchJob
 include/KF6/KDAV/KDAV/DavPrincipalSearchJob
+include/KF6/KDAV/KDAV/DavPushSupport
+include/KF6/KDAV/KDAV/DavSslUiProxy
 include/KF6/KDAV/KDAV/DavUrl
 include/KF6/KDAV/KDAV/Enums
 include/KF6/KDAV/KDAV/EtagCache
 include/KF6/KDAV/KDAV/ProtocolInfo
 include/KF6/KDAV/kdav/davcollection.h
+include/KF6/KDAV/kdav/davcollectioncreatejob.h
 include/KF6/KDAV/kdav/davcollectiondeletejob.h
 include/KF6/KDAV/kdav/davcollectionmodifyjob.h
 include/KF6/KDAV/kdav/davcollectionsfetchjob.h
@@ -35,6 +39,8 @@ include/KF6/KDAV/kdav/davitemslistjob.h
 include/KF6/KDAV/kdav/davjobbase.h
 include/KF6/KDAV/kdav/davprincipalhomesetsfetchjob.h
 include/KF6/KDAV/kdav/davprincipalsearchjob.h
+include/KF6/KDAV/kdav/davpushsupport.h
+include/KF6/KDAV/kdav/davssluiproxy.h
 include/KF6/KDAV/kdav/davurl.h
 include/KF6/KDAV/kdav/enums.h
 include/KF6/KDAV/kdav/etagcache.h
@@ -94,6 +100,7 @@ share/locale/sr@latin/LC_MESSAGES/libkdav6.mo
 share/locale/sv/LC_MESSAGES/libkdav6.mo
 share/locale/ta/LC_MESSAGES/libkdav6.mo
 share/locale/tr/LC_MESSAGES/libkdav6.mo
+share/locale/ug/LC_MESSAGES/libkdav6.mo
 share/locale/uk/LC_MESSAGES/libkdav6.mo
 share/locale/zh_CN/LC_MESSAGES/libkdav6.mo
 share/locale/zh_TW/LC_MESSAGES/libkdav6.mo

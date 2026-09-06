@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/05/21 08:25:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/06 10:05:15 markd Exp $
 lib/cmake/KF6ImageFormats/KF6ImageFormatsConfig.cmake
 lib/cmake/KF6ImageFormats/KF6ImageFormatsConfigVersion.cmake
 qt6/plugins/imageformats/kimg_ani.so
@@ -6,12 +6,12 @@ qt6/plugins/imageformats/kimg_avif.so
 qt6/plugins/imageformats/kimg_dds.so
 qt6/plugins/imageformats/kimg_eps.so
 qt6/plugins/imageformats/kimg_exr.so
+qt6/plugins/imageformats/kimg_ff.so
 qt6/plugins/imageformats/kimg_hdr.so
 qt6/plugins/imageformats/kimg_iff.so
 qt6/plugins/imageformats/kimg_jp2.so
 qt6/plugins/imageformats/kimg_jxl.so
 qt6/plugins/imageformats/kimg_kra.so
-qt6/plugins/imageformats/kimg_ora.so
 qt6/plugins/imageformats/kimg_pcx.so
 qt6/plugins/imageformats/kimg_pfm.so
 qt6/plugins/imageformats/kimg_pic.so

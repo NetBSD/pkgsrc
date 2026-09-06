@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:56:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 10:05:20 markd Exp $
 include/KF6/KConfigWidgets/KCodecAction
 include/KF6/KConfigWidgets/KColorSchemeMenu
 include/KF6/KConfigWidgets/KCommandBar
@@ -39,6 +39,7 @@ lib/libKF6ConfigWidgets.so.${PKGVERSION}
 qt6/plugins/designer/kconfigwidgets6widgets.so
 share/locale/af/LC_MESSAGES/kconfigwidgets6.mo
 share/locale/af/kf6_entry.desktop
+share/locale/am/kf6_entry.desktop
 share/locale/ar/LC_MESSAGES/kconfigwidgets6.mo
 share/locale/ar/kf6_entry.desktop
 share/locale/as/LC_MESSAGES/kconfigwidgets6.mo
@@ -163,6 +164,8 @@ share/locale/mr/kf6_entry.desktop
 share/locale/ms/LC_MESSAGES/kconfigwidgets6.mo
 share/locale/ms/kf6_entry.desktop
 share/locale/my/kf6_entry.desktop
+share/locale/nan_TW/LC_MESSAGES/kconfigwidgets6.mo
+share/locale/nan_TW@latin/LC_MESSAGES/kconfigwidgets6.mo
 share/locale/nb/LC_MESSAGES/kconfigwidgets6.mo
 share/locale/nb/kf6_entry.desktop
 share/locale/nds/LC_MESSAGES/kconfigwidgets6.mo

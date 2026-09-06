@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:13 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:19 markd Exp $
 
-BLAKE2s (sonnet-6.26.0.tar.xz) = 6dd88f4d75b26690ce318848462dfeb220871d0c52fc16ab0ad3476b3e890358
-SHA512 (sonnet-6.26.0.tar.xz) = 7b03dfcc8d946adc938630bc9137ac7a24e6494bc88fef395d15bdbdb80e581fca82f91e5e9420ba785063bcdcae90b6a9b1289bb6761c85823e91e95b1d9dfe
-Size (sonnet-6.26.0.tar.xz) = 2414668 bytes
+BLAKE2s (sonnet-6.29.0.tar.xz) = 971ddab3ab25d3f630cea73326d43581e985e4ad60197f4ac6c17fcf94457c33
+SHA512 (sonnet-6.29.0.tar.xz) = 05c03572c915ba32f1728a8c7cf582edf91c51be43f6ad4add0cd2c0ef06b6a1a54aaa72067cb55581af37ced996e2e597b5082337106bd8e12d19f06c1b2b26
+Size (sonnet-6.29.0.tar.xz) = 2414292 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:45:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 10:05:21 markd Exp $
 include/KF6/KWindowSystem/KKeyServer
 include/KF6/KWindowSystem/KSelectionOwner
 include/KF6/KWindowSystem/KSelectionWatcher
@@ -110,6 +110,7 @@ share/locale/mk/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/ml/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/mr/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/ms/LC_MESSAGES/kwindowsystem6_qt.qm
+share/locale/nan_TW@latin/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/nb/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/nds/LC_MESSAGES/kwindowsystem6_qt.qm
 share/locale/ne/LC_MESSAGES/kwindowsystem6_qt.qm

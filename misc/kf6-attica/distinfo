@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:10 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:15 markd Exp $
 
-BLAKE2s (attica-6.26.0.tar.xz) = 3840ca315fbe5de2c3b9b5553d26a9df8a88e03c166587201f6d79d586b683b6
-SHA512 (attica-6.26.0.tar.xz) = 47007ae84689e8d62d33f92c30df61b8091703fac094ad9be74874d1f9a0587a3f31fc2aeed870125d01176c98c020631adb5d40f19470b194e01f42e77d5955
-Size (attica-6.26.0.tar.xz) = 68404 bytes
+BLAKE2s (attica-6.29.0.tar.xz) = 78b59ac68a3d167cadf88ff82a36cfaaf3b7367ec37b4be5ebde12306d624d23
+SHA512 (attica-6.29.0.tar.xz) = b04122a04b8b94fdc63eafbc9fd479748db00a1e890d967d9eebf35a9239ce9f8ca1f25629a291f889c9515356f35132a605f9e74f0035f79d3fba4b8936a08d
+Size (attica-6.29.0.tar.xz) = 68408 bytes

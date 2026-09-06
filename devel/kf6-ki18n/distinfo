@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:07 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:12 markd Exp $
 
-BLAKE2s (ki18n-6.26.0.tar.xz) = 3a2666de1aca59e5f4516d681e0ab15830142cb7de78429b60c13d9a0284a450
-SHA512 (ki18n-6.26.0.tar.xz) = 52c8daa5c8bb2be7fb022f131c65bcb9d36d511602cc8a45def1153a2aa78cd0eaa7f0b96daad01f1afdbdb8b26dce3a18e715470045dc3411d567b76933a704
-Size (ki18n-6.26.0.tar.xz) = 3049732 bytes
+BLAKE2s (ki18n-6.29.0.tar.xz) = 7ba743b4563ba771067cec754e12182c890ce89522988ff426ed2dbba43b22c2
+SHA512 (ki18n-6.29.0.tar.xz) = 3619fb393f3d0f283484589612c1bc33bd0d639034e19f9b52d33b907d098571df56295d5173304b89a8c97b35ca447462dbe5fca15585ab48ec7af051038268
+Size (ki18n-6.29.0.tar.xz) = 3048876 bytes
+SHA1 (patch-src_i18n-qml_CMakeLists.txt) = 8e7f03a80d858718d986d2631e85e4fcf528fa5d
+SHA1 (patch-src_i18n_CMakeLists.txt) = 24958983172878b7cc94055e27d5430d90d30b61

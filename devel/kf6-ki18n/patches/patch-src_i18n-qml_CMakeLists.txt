@@ -1,0 +1,14 @@
+$NetBSD: patch-src_i18n-qml_CMakeLists.txt,v 1.1 2026/09/06 10:05:12 markd Exp $
+
+Don't use [[deprecated]] - older gcc's don't like it.
+
+--- src/i18n-qml/CMakeLists.txt.orig	2026-08-07 20:40:34.000000000 +0000
++++ src/i18n-qml/CMakeLists.txt
+@@ -30,6 +30,7 @@ ecm_generate_export_header(KF6I18nQml
+     GROUP_BASE_NAME KF
+     VERSION ${KF_VERSION}
+     USE_VERSION_HEADER
++    DEPRECATED_ATTRIBUTE_TYPE COMPILER
+     VERSION_BASE_NAME KI18n
+     DEPRECATED_BASE_VERSION 0
+     DEPRECATION_VERSIONS

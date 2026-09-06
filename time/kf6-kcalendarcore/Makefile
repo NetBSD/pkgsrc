@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/09/02 19:04:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/06 10:05:19 markd Exp $
 
 DISTNAME=	kcalendarcore-${KF6VER}
-PKGREVISION=	1
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/Frameworks

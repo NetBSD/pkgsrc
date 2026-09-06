@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2026/05/21 08:25:16 markd Exp $
+$NetBSD: distinfo,v 1.22 2026/09/06 10:05:22 markd Exp $
 
-BLAKE2s (breeze-icons-6.26.0.tar.xz) = 00ab4001bc724eec14a6d6f4cfef8e00f31cc3ef215a61d2cf8e46298c83305d
-SHA512 (breeze-icons-6.26.0.tar.xz) = 0dd02a628edb37b87e2b00b7cc90bf77d58948b1ef798f63bd92514996fa318116d6d3b5f99893f4bde7c94c134e2dc5df7a865b3dde018fd558834dad5b7d58
-Size (breeze-icons-6.26.0.tar.xz) = 2109568 bytes
+BLAKE2s (breeze-icons-6.29.0.tar.xz) = 6f66dbabfac591daff6ca2827de504c36d3dea6695691cfcbc328aad292772c2
+SHA512 (breeze-icons-6.29.0.tar.xz) = b30648c2a3d7340d5ece5e84205254793a881d6b208f96fa61d6745daab71c27bb134d14dbb85a9d0d775cdb0401f8cacd5ff2236a1b5dbbf078a609615b9db5
+Size (breeze-icons-6.29.0.tar.xz) = 2106836 bytes

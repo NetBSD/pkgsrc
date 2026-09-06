@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:13 markd Exp $
 bin/ktelnetservice6
 bin/ktrash6
 include/KF6/KIO/kio_version.h
@@ -548,6 +548,7 @@ share/kf6/searchproviders/amazon_mp3.desktop
 share/kf6/searchproviders/amg.desktop
 share/kf6/searchproviders/archpkg.desktop
 share/kf6/searchproviders/archwiki.desktop
+share/kf6/searchproviders/ard.desktop
 share/kf6/searchproviders/backports.desktop
 share/kf6/searchproviders/baidu.desktop
 share/kf6/searchproviders/beolingus.desktop
@@ -585,6 +586,7 @@ share/kf6/searchproviders/es2en.desktop
 share/kf6/searchproviders/facebook.desktop
 share/kf6/searchproviders/fedora.desktop
 share/kf6/searchproviders/feedster.desktop
+share/kf6/searchproviders/flathub.desktop
 share/kf6/searchproviders/flatpak.desktop
 share/kf6/searchproviders/flickr.desktop
 share/kf6/searchproviders/flickrcc.desktop
@@ -648,6 +650,7 @@ share/kf6/searchproviders/nl-telephone.desktop
 share/kf6/searchproviders/nl-teletekst.desktop
 share/kf6/searchproviders/npm.desktop
 share/kf6/searchproviders/opendesktop.desktop
+share/kf6/searchproviders/openstreetmap.desktop
 share/kf6/searchproviders/opensuse.desktop
 share/kf6/searchproviders/pgpkeys.desktop
 share/kf6/searchproviders/php.desktop
@@ -695,7 +698,9 @@ share/kf6/searchproviders/yahoo_shopping.desktop
 share/kf6/searchproviders/yahoo_video.desktop
 share/kf6/searchproviders/yandex.desktop
 share/kf6/searchproviders/youtube.desktop
+share/kf6/searchproviders/zdf.desktop
 share/locale/af/LC_MESSAGES/kio6.mo
+share/locale/am/LC_MESSAGES/kio6.mo
 share/locale/ar/LC_MESSAGES/kio6.mo
 share/locale/ast/LC_MESSAGES/kio6.mo
 share/locale/az/LC_MESSAGES/kio6.mo
@@ -751,6 +756,8 @@ share/locale/ml/LC_MESSAGES/kio6.mo
 share/locale/mr/LC_MESSAGES/kio6.mo
 share/locale/ms/LC_MESSAGES/kio6.mo
 share/locale/my/LC_MESSAGES/kio6.mo
+share/locale/nan_TW/LC_MESSAGES/kio6.mo
+share/locale/nan_TW@latin/LC_MESSAGES/kio6.mo
 share/locale/nb/LC_MESSAGES/kio6.mo
 share/locale/nds/LC_MESSAGES/kio6.mo
 share/locale/ne/LC_MESSAGES/kio6.mo

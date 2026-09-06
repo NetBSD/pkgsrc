@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2026/05/21 08:25:11 markd Exp $
+$NetBSD: distinfo,v 1.4 2026/09/06 10:05:16 markd Exp $
 
-BLAKE2s (kstatusnotifieritem-6.26.0.tar.xz) = c9d8ea0ead03c77aa21c92caa84cf5b817191a405918714ad67a03434d85cf16
-SHA512 (kstatusnotifieritem-6.26.0.tar.xz) = fbdbcde55921d2453ea1a24c662116ac3ec342fbed110843c386382542061c2bda374987d2e6cb2ab4f0beb38c7f7b09d118d41998a63c29022cc168b58e19ea
-Size (kstatusnotifieritem-6.26.0.tar.xz) = 50632 bytes
+BLAKE2s (kstatusnotifieritem-6.29.0.tar.xz) = f799e281598b10e26d3cd0f9177ce07a489892bd965f15bd063aae2a43925376
+SHA512 (kstatusnotifieritem-6.29.0.tar.xz) = 1010e30246172d8d24c000501219fee828b5c340c3cb58c213dea10d33d8bb5ebe0251a5a1542cabfeeba1b230532b7042818d1f9cf0d9c1bb0f16bafc174405
+Size (kstatusnotifieritem-6.29.0.tar.xz) = 50872 bytes
 SHA1 (patch-src_libdbusmenu-qt_dbusmenushortcut__p.cpp) = 2237a32acb9eb0c70e8a8df8814f86e3f21cea3f
 SHA1 (patch-src_libdbusmenu-qt_dbusmenushortcut__p.h) = 3095b6db9519f34f9d56cda530a113918087cf9c

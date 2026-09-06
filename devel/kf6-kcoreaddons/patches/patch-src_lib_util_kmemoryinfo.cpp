@@ -1,8 +1,8 @@
-$NetBSD: patch-src_lib_util_kmemoryinfo.cpp,v 1.1 2025/04/02 19:30:30 markd Exp $
+$NetBSD: patch-src_lib_util_kmemoryinfo.cpp,v 1.2 2026/09/06 10:05:12 markd Exp $
 
 Add NetBSD Memory info
 
---- src/lib/util/kmemoryinfo.cpp.orig	2024-11-02 15:46:04.000000000 +0000
+--- src/lib/util/kmemoryinfo.cpp.orig	2026-08-07 20:39:44.000000000 +0000
 +++ src/lib/util/kmemoryinfo.cpp
 @@ -39,6 +39,9 @@ Q_LOGGING_CATEGORY(LOG_KMEMORYINFO, "kf.
       #include <stdlib.h>
@@ -11,10 +11,10 @@ Add NetBSD Memory info
 +#elif defined(Q_OS_NETBSD)
 +     #include <sys/sysctl.h>
 +     #include <uvm/uvm_extern.h>
- #endif
- // clang-format on
- 
-@@ -502,6 +505,29 @@ bool KMemoryInfo::update()
+ #elif defined(Q_OS_HURD)
+      extern "C" {
+           #include <mach/mach.h>
+@@ -548,6 +551,29 @@ bool KMemoryInfo::update()
  
      return true;
  }

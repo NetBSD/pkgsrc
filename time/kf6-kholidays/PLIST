@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/21 08:25:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/06 10:05:19 markd Exp $
 include/KF6/KHolidays/KHolidays/AstroSeasons
+include/KF6/KHolidays/KHolidays/HebrewConverter
 include/KF6/KHolidays/KHolidays/Holiday
 include/KF6/KHolidays/KHolidays/HolidayCategories
 include/KF6/KHolidays/KHolidays/HolidayRegion
@@ -8,6 +9,7 @@ include/KF6/KHolidays/KHolidays/SunEvents
 include/KF6/KHolidays/KHolidays/SunRiseSet
 include/KF6/KHolidays/KHolidays/Zodiac
 include/KF6/KHolidays/kholidays/astroseasons.h
+include/KF6/KHolidays/kholidays/hebrewconverter.h
 include/KF6/KHolidays/kholidays/holiday.h
 include/KF6/KHolidays/kholidays/holidaycategories.h
 include/KF6/KHolidays/kholidays/holidayregion.h

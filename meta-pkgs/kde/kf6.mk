@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.11 2026/05/21 08:25:16 markd Exp $
+# $NetBSD: kf6.mk,v 1.12 2026/09/06 10:05:11 markd Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -29,6 +29,7 @@
 # used by graphics/kf6-kplotting/Makefile
 # used by graphics/kf6-ksvg/Makefile
 # used by graphics/kf6-prison/Makefile
+# used by mail/kf6-kmime/Makefile
 # used by misc/kf6-attica/Makefile
 # used by misc/kf6-kcontacts/Makefile
 # used by misc/kf6-kdav/Makefile
@@ -67,7 +68,7 @@
 # used by x11/kf6-kxmlgui/Makefile
 # used by x11/kf6-qqc2-desktop-style/Makefile
 
-KF6VER=		6.26.0
+KF6VER=		6.29.0
 CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF6VER:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:18 markd Exp $
 bin/kfilemetadata_dump6
 include/KF6/KFileMetaData/KFileMetaData/EmbeddedImageData
 include/KF6/KFileMetaData/KFileMetaData/ExtractionResult
@@ -114,6 +114,7 @@ share/locale/sv/LC_MESSAGES/kfilemetadata6.mo
 share/locale/ta/LC_MESSAGES/kfilemetadata6.mo
 share/locale/tg/LC_MESSAGES/kfilemetadata6.mo
 share/locale/tr/LC_MESSAGES/kfilemetadata6.mo
+share/locale/ug/LC_MESSAGES/kfilemetadata6.mo
 share/locale/uk/LC_MESSAGES/kfilemetadata6.mo
 share/locale/zh_CN/LC_MESSAGES/kfilemetadata6.mo
 share/locale/zh_TW/LC_MESSAGES/kfilemetadata6.mo

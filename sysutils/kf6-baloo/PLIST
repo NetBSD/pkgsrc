@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/21 08:25:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/06 10:05:17 markd Exp $
 bin/balooctl6
 bin/baloosearch6
 bin/balooshow6
@@ -44,6 +44,7 @@ qt6/qml/org/kde/baloo/experimental/qmldir
 qt6/qml/org/kde/baloo/kde-qmlmodule.version
 qt6/qml/org/kde/baloo/libbalooplugin.so
 qt6/qml/org/kde/baloo/qmldir
+share/config.kcfg/baloosettings.kcfg
 share/dbus-1/interfaces/org.kde.BalooWatcherApplication.xml
 share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
 share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml
@@ -268,6 +269,8 @@ share/locale/hi/LC_MESSAGES/balooshow6.mo
 share/locale/hi/LC_MESSAGES/kio6_baloosearch.mo
 share/locale/hi/LC_MESSAGES/kio6_tags.mo
 share/locale/hi/LC_MESSAGES/kio6_timeline.mo
+share/locale/hr/LC_MESSAGES/kio6_baloosearch.mo
+share/locale/hr/LC_MESSAGES/kio6_timeline.mo
 share/locale/hu/LC_MESSAGES/baloo_file6.mo
 share/locale/hu/LC_MESSAGES/baloo_file_extractor6.mo
 share/locale/hu/LC_MESSAGES/balooctl6.mo
@@ -558,6 +561,16 @@ share/locale/tr/LC_MESSAGES/balooshow6.mo
 share/locale/tr/LC_MESSAGES/kio6_baloosearch.mo
 share/locale/tr/LC_MESSAGES/kio6_tags.mo
 share/locale/tr/LC_MESSAGES/kio6_timeline.mo
+share/locale/ug/LC_MESSAGES/baloo_file6.mo
+share/locale/ug/LC_MESSAGES/baloo_file_extractor6.mo
+share/locale/ug/LC_MESSAGES/balooctl6.mo
+share/locale/ug/LC_MESSAGES/baloodb6.mo
+share/locale/ug/LC_MESSAGES/balooengine6.mo
+share/locale/ug/LC_MESSAGES/baloosearch6.mo
+share/locale/ug/LC_MESSAGES/balooshow6.mo
+share/locale/ug/LC_MESSAGES/kio6_baloosearch.mo
+share/locale/ug/LC_MESSAGES/kio6_tags.mo
+share/locale/ug/LC_MESSAGES/kio6_timeline.mo
 share/locale/uk/LC_MESSAGES/baloo_file6.mo
 share/locale/uk/LC_MESSAGES/baloo_file_extractor6.mo
 share/locale/uk/LC_MESSAGES/balooctl6.mo

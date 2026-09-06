@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/05/21 08:25:15 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/09/06 10:05:20 markd Exp $
 
-BLAKE2s (kjobwidgets-6.26.0.tar.xz) = 932f39942cb9a60e7fd7376d11a913ea4445fdf3c619d2f12fc35e2f82d84c8f
-SHA512 (kjobwidgets-6.26.0.tar.xz) = f78e9cd8b1285aa3ef4ae0adcd02ba62cdcac8b64702244ce36ad9c3003c925247768e412fc65c61f6e83b819e005adf5a8d5b0090fe30d1e89e211f456059ec
-Size (kjobwidgets-6.26.0.tar.xz) = 2198704 bytes
+BLAKE2s (kjobwidgets-6.29.0.tar.xz) = 742105c01c1464fc010ffa845afd2673bc47fdc45b502c6023896b1e0221a1ba
+SHA512 (kjobwidgets-6.29.0.tar.xz) = f5feb69bf803bf33e696f306c3d9d662a1c1b9c0da5099b0cceb8941d729e9dbb0dbc867271a00555fad25ba26f6b2baab09e62cf481ce73e0a6eeadda91be53
+Size (kjobwidgets-6.29.0.tar.xz) = 2198868 bytes
+SHA1 (patch-src_CMakeLists.txt) = 8638a9e760254cf307d704f2ee2f373ca6f26871

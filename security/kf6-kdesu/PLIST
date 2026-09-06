@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/05/21 08:25:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/06 10:05:17 markd Exp $
 include/KF6/KDESu/KDESu/Client
 include/KF6/KDESu/KDESu/PtyProcess
 include/KF6/KDESu/KDESu/SshProcess
@@ -44,6 +44,7 @@ share/locale/gd/LC_MESSAGES/kdesud6.mo
 share/locale/gl/LC_MESSAGES/kdesud6.mo
 share/locale/he/LC_MESSAGES/kdesud6.mo
 share/locale/hi/LC_MESSAGES/kdesud6.mo
+share/locale/hr/LC_MESSAGES/kdesud6.mo
 share/locale/hu/LC_MESSAGES/kdesud6.mo
 share/locale/ia/LC_MESSAGES/kdesud6.mo
 share/locale/id/LC_MESSAGES/kdesud6.mo
@@ -77,6 +78,7 @@ share/locale/sv/LC_MESSAGES/kdesud6.mo
 share/locale/ta/LC_MESSAGES/kdesud6.mo
 share/locale/tg/LC_MESSAGES/kdesud6.mo
 share/locale/tr/LC_MESSAGES/kdesud6.mo
+share/locale/ug/LC_MESSAGES/kdesud6.mo
 share/locale/uk/LC_MESSAGES/kdesud6.mo
 share/locale/vi/LC_MESSAGES/kdesud6.mo
 share/locale/zh_CN/LC_MESSAGES/kdesud6.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:04:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/06 10:05:14 markd Exp $
 include/KF6/KRunner/KRunner/AbstractRunner
 include/KF6/KRunner/KRunner/AbstractRunnerTest
 include/KF6/KRunner/KRunner/Action
@@ -25,6 +25,7 @@ lib/cmake/KF6Runner/KF6RunnerTargets.cmake
 lib/libKF6Runner.so
 lib/libKF6Runner.so.6
 lib/libKF6Runner.so.${PKGVERSION}
+qt6/metatypes/qt6kf6runner_metatypes.json
 share/dbus-1/interfaces/kf6_org.kde.krunner1.xml
 share/kdevappwizard/templates/runner6.tar.bz2
 share/kdevappwizard/templates/runner6python.tar.bz2
