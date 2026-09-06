@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2026/09/05 20:50:27 tnn Exp $
+$NetBSD: distinfo,v 1.20 2026/09/06 16:53:12 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 017a9d787a34faa997d72ac69bcafd9c8ab72354e3a1b751d1cb5d376b364f72
 SHA512 (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 7ec4208363f44a378674a2b87687ab7facb60bf73118ebd4bec35f7912f073365b36efc4c4b3c034bc448139cb81106e18d6d3b1db45f4ab086ce1ed72bc21bf
@@ -12,8 +12,9 @@ Size (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 112607360 byt
 BLAKE2s (jdk21u-jdk-21.0.12-8-1.tar.gz) = 12f7ac748e9df58b220f72e52dc9c7a29b7720a51d8548d8d2276a38e7a3e6a5
 SHA512 (jdk21u-jdk-21.0.12-8-1.tar.gz) = 1e223ac3cd1aac829d68e8875610234632aac05aac4d3d4d84151a965097131aa1d05a2941c51ade46ae2015132ccc6b4aaffc18516cdaacab547fdaaff543d6
 Size (jdk21u-jdk-21.0.12-8-1.tar.gz) = 114259124 bytes
-SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
-SHA1 (patch-make_autoconf_flags-cflags.m4) = 2777471821988895f5ae1be33b1c92b7386b068a
+SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 1f8d482c9e1498dd230bf63abfc0e4d76cfc6e9b
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 88c41225834688de1ff6d4bcf80ab8c4676a0e74
+SHA1 (patch-make_autoconf_flags-ldflags.m4) = 08c7e642272a447378c8877a1311b90a7e88afad
 SHA1 (patch-make_autoconf_hotspot.m4) = 6097c29677f4b84c3821b5cf7ac8c397376027d0
 SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 5f5b638a08abf2f2066a122a825cfa3db9e95139
@@ -21,6 +22,7 @@ SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd19
 SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = c4db01034655302ca686b3ca2a95ab0ade72ce3a
+SHA1 (patch-src_hotspot_os__cpu_bsd__zero_os__bsd__zero.cpp) = c86e92ae0074b46cd623290bcfa5728517875640
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491d14ffc
 SHA1 (patch-src_hotspot_share_runtime_threadWXSetters.inline.hpp) = f704bb060803e500415b5d300e26857cf7288ca5
 SHA1 (patch-src_java.desktop_bsd_data_fontconfig_fontconfig.properties) = 01aff1bb2c14265b0ebcc9d12fba8d48b876d36e

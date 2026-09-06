@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/08/14 12:52:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/06 16:53:12 tnn Exp $
 bin/openjdk21-jar
 bin/openjdk21-jarsigner
 bin/openjdk21-java
@@ -508,6 +508,8 @@ java/openjdk21/lib/libdt_socket${DBGEXT}
 java/openjdk21/lib/libdt_socket.so
 java/openjdk21/lib/libextnet${DBGEXT}
 java/openjdk21/lib/libextnet.so
+${PLIST.zero}java/openjdk21/lib/libfallbackLinker${DBGEXT}
+${PLIST.zero}java/openjdk21/lib/libfallbackLinker.so
 java/openjdk21/lib/libfontmanager${DBGEXT}
 java/openjdk21/lib/libfontmanager.so
 java/openjdk21/lib/libinstrument${DBGEXT}
@@ -569,9 +571,9 @@ java/openjdk21/lib/security/blocked.certs
 java/openjdk21/lib/security/cacerts
 java/openjdk21/lib/security/default.policy
 java/openjdk21/lib/security/public_suffix_list.dat
-java/openjdk21/lib/server/libjsig.so
-java/openjdk21/lib/server/libjvm${DBGEXT}
-java/openjdk21/lib/server/libjvm.so
+java/openjdk21/lib/${BUILD_VARIANT}/libjsig.so
+java/openjdk21/lib/${BUILD_VARIANT}/libjvm${DBGEXT}
+java/openjdk21/lib/${BUILD_VARIANT}/libjvm.so
 java/openjdk21/lib/src.zip
 java/openjdk21/lib/tzdb.dat
 java/openjdk21/man/man1/jar.1
