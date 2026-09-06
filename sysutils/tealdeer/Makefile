@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/01/30 11:12:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/06 14:05:53 pin Exp $
 
-DISTNAME=	tealdeer-1.8.1
+DISTNAME=	tealdeer-1.9.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tealdeer-rs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	mit OR apache-2.0
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
-RUST_REQ=		1.75.0
+RUST_REQ=		1.88.0
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS=	bin share/bash-completion/completions
 
