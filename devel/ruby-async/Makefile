@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2026/08/11 16:01:29 taca Exp $
+# $NetBSD: Makefile,v 1.54 2026/09/06 14:24:28 taca Exp $
 
-DISTNAME=	async-2.44.1
+DISTNAME=	async-2.45.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${RUBY_PKGPREFIX}-console>=1.29<2:../../devel/ruby-console
-DEPENDS+=	${RUBY_PKGPREFIX}-io-event>=1.11<2:../../devel/ruby-io-event
+DEPENDS+=	${RUBY_PKGPREFIX}-io-event>=1.21<2:../../devel/ruby-io-event
 DEPENDS+=	${RUBY_PKGPREFIX}-fiber-annotation>=0:../../devel/ruby-fiber-annotation
 
 .include "../../lang/ruby/gem.mk"
