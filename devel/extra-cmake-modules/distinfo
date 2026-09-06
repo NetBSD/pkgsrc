@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.32 2026/08/16 11:43:12 wiz Exp $
+$NetBSD: distinfo,v 1.33 2026/09/06 09:43:25 markd Exp $
 
 BLAKE2s (extra-cmake-modules-6.29.0.tar.xz) = 15606945727711dfef4cff56b2dd8b2692589d49f7da9ffcc9047778f6830594
 SHA512 (extra-cmake-modules-6.29.0.tar.xz) = 2d93e270d1edd417603718357c7a72f2903d12cb345604da0af4fe4e47533643e60aa47f74c3fdd16606a6386eff3c539594373e64f54c9e487aa41ece92d4a6
 Size (extra-cmake-modules-6.29.0.tar.xz) = 339516 bytes
+SHA1 (patch-find-modules_FindFFmpeg.cmake) = 9ba72e92cbc850592aa1cda03bc8f9a093e215dd
 SHA1 (patch-kde-modules_KDECompilerSettings.cmake) = 0d0c33df8d3207841d48ad2dc51ebe1533866ca1
 SHA1 (patch-kde-modules_KDEMetaInfoPlatformCheck.cmake) = 74a714c25f7c73c2e2d38ae22144cf52574009ae
