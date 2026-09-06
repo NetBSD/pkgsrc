@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/09/04 05:29:17 adam Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/06 17:10:20 adam Exp $
 
-DISTNAME=	anyio-4.15.0
+DISTNAME=	anyio-4.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -13,17 +13,16 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
-#TODO:
-#TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster>=1.5.23
+TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster>=1.5.23:../../devel/py-blockbuster
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.2.0:../../devel/py-exceptiongroup
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.18.2:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0:../../security/py-trustme
-TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0:../../devel/py-trio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.4.0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=1.0.0:../../security/py-trustme
+TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.32.0:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
-TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.21:../../devel/py-uvloop
+TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.22.1:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
 
@@ -36,7 +35,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.2:../../devel/py-exceptiongroup
 .endif
 .if ${PYTHON_VERSION} < 313
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.16.0:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
