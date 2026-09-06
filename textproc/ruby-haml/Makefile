@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/08/12 05:12:45 taca Exp $
+# $NetBSD: Makefile,v 1.34 2026/09/06 15:58:09 taca Exp $
 
-DISTNAME=	haml-7.3.0
+DISTNAME=	haml-7.5.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

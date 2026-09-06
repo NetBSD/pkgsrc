@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/11/03 05:43:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/09/06 15:58:09 taca Exp $
 bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -62,6 +62,7 @@ ${GEM_LIBDIR}/lib/haml/html.rb
 ${GEM_LIBDIR}/lib/haml/identity.rb
 ${GEM_LIBDIR}/lib/haml/object_ref.rb
 ${GEM_LIBDIR}/lib/haml/parser.rb
+${GEM_LIBDIR}/lib/haml/preserver.rb
 ${GEM_LIBDIR}/lib/haml/rails_helpers.rb
 ${GEM_LIBDIR}/lib/haml/rails_template.rb
 ${GEM_LIBDIR}/lib/haml/railtie.rb
