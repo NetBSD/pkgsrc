@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1128 2026/08/27 09:00:29 adam Exp $
+# $NetBSD: Makefile,v 1.1129 2026/09/06 11:06:58 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -334,7 +334,6 @@ SUBDIR+=	libiptcdata
 SUBDIR+=	libjpeg-turbo
 SUBDIR+=	libjxl
 SUBDIR+=	libkdcraw
-SUBDIR+=	libkdcraw-qt5
 SUBDIR+=	libkexiv2
 SUBDIR+=	libksane
 SUBDIR+=	libliftoff
