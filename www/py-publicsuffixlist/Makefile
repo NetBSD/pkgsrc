@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/07/07 12:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/07 16:47:38 adam Exp $
 
-DISTNAME=	publicsuffixlist-1.0.2.20260707
+DISTNAME=	publicsuffixlist-1.0.2.20260906
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/publicsuffixlist/}
@@ -12,7 +12,7 @@ LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # update
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
