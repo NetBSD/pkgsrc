@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/03 06:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/07 11:02:37 adam Exp $
 
-DISTNAME=	ansi2html-1.9.4
+DISTNAME=	ansi2html-1.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansi2html/}
