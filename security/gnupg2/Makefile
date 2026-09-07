@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.179 2026/07/03 11:30:46 adam Exp $
+# $NetBSD: Makefile,v 1.180 2026/09/07 05:19:50 adam Exp $
 
-DISTNAME=	gnupg-2.5.21
+DISTNAME=	gnupg-2.5.22
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnupg/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnupg.org/
 COMMENT=	GnuPG with OpenPGP and S/MIME capabilities
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
+DEPENDS+=	pinentry>=0:../../security/pinentry
 
 CONFLICTS+=	dirmngr-[0-9]*
 SUPERSEDES+=	dirmngr-[0-9]*
