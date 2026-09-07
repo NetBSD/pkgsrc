@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/07/12 18:49:04 sjmulder Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/07 17:29:23 sjmulder Exp $
 
-DISTNAME=	mustach-1.2.9
+DISTNAME=	mustach-1.2.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=jobol/}
 GITLAB_PROJECT=	mustach
