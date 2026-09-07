@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5919 2026/09/07 18:57:59 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5920 2026/09/07 18:59:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9028,3 +9028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-publicsuffixlist to 1.0.2.20260906 [adam 2026-09-07]
 	Updated devel/mustach to 1.2.10 [sjmulder 2026-09-07]
 	Updated devel/mise to 2026.9.1 [pin 2026-09-07]
+	Updated textproc/rumdl to 0.2.68 [pin 2026-09-07]
