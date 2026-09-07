@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/03 05:16:05 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/07 09:45:19 adam Exp $
 
-DISTNAME=	jupyter_builder-1.2.2
+DISTNAME=	jupyter_builder-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-builder/}
