@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2026/08/27 04:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/09/07 05:41:55 adam Exp $
 
-DISTNAME=	urwid-4.0.13
+DISTNAME=	urwid-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -12,14 +12,16 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.8.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1.0:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.4:../../devel/py-wcwidth
-TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
-TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=0:../../devel/py-exceptiongroup
+TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=5:../../www/py-tornado
-TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
-TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-TEST_DEPENDS+=	${PYPKGPREFIX}-zmq-[0-9]*:../../net/py-zmq
+TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0:../../devel/py-trio
+TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
+TEST_DEPENDS+=	${PYPKGPREFIX}-zmq>=0:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 

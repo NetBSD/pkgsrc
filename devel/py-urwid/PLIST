@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/07/22 08:24:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/09/07 05:41:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/urwid/__init__.py
 ${PYSITELIB}/urwid/__init__.pyc
 ${PYSITELIB}/urwid/__init__.pyo
+${PYSITELIB}/urwid/ansi_parser.py
+${PYSITELIB}/urwid/ansi_parser.pyc
+${PYSITELIB}/urwid/ansi_parser.pyo
 ${PYSITELIB}/urwid/canvas.py
 ${PYSITELIB}/urwid/canvas.pyc
 ${PYSITELIB}/urwid/canvas.pyo
@@ -115,6 +118,9 @@ ${PYSITELIB}/urwid/vterm.pyo
 ${PYSITELIB}/urwid/widget/__init__.py
 ${PYSITELIB}/urwid/widget/__init__.pyc
 ${PYSITELIB}/urwid/widget/__init__.pyo
+${PYSITELIB}/urwid/widget/ansi_text.py
+${PYSITELIB}/urwid/widget/ansi_text.pyc
+${PYSITELIB}/urwid/widget/ansi_text.pyo
 ${PYSITELIB}/urwid/widget/attr_map.py
 ${PYSITELIB}/urwid/widget/attr_map.pyc
 ${PYSITELIB}/urwid/widget/attr_map.pyo
@@ -139,6 +145,9 @@ ${PYSITELIB}/urwid/widget/constants.pyo
 ${PYSITELIB}/urwid/widget/container.py
 ${PYSITELIB}/urwid/widget/container.pyc
 ${PYSITELIB}/urwid/widget/container.pyo
+${PYSITELIB}/urwid/widget/deque_walker.py
+${PYSITELIB}/urwid/widget/deque_walker.pyc
+${PYSITELIB}/urwid/widget/deque_walker.pyo
 ${PYSITELIB}/urwid/widget/divider.py
 ${PYSITELIB}/urwid/widget/divider.pyc
 ${PYSITELIB}/urwid/widget/divider.pyo
@@ -157,9 +166,15 @@ ${PYSITELIB}/urwid/widget/grid_flow.pyo
 ${PYSITELIB}/urwid/widget/line_box.py
 ${PYSITELIB}/urwid/widget/line_box.pyc
 ${PYSITELIB}/urwid/widget/line_box.pyo
+${PYSITELIB}/urwid/widget/list_walker.py
+${PYSITELIB}/urwid/widget/list_walker.pyc
+${PYSITELIB}/urwid/widget/list_walker.pyo
 ${PYSITELIB}/urwid/widget/listbox.py
 ${PYSITELIB}/urwid/widget/listbox.pyc
 ${PYSITELIB}/urwid/widget/listbox.pyo
+${PYSITELIB}/urwid/widget/monitored_deque.py
+${PYSITELIB}/urwid/widget/monitored_deque.pyc
+${PYSITELIB}/urwid/widget/monitored_deque.pyo
 ${PYSITELIB}/urwid/widget/monitored_list.py
 ${PYSITELIB}/urwid/widget/monitored_list.pyc
 ${PYSITELIB}/urwid/widget/monitored_list.pyo
