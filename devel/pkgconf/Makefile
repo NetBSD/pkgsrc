@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2026/08/24 11:14:20 adam Exp $
+# $NetBSD: Makefile,v 1.43 2026/09/07 05:15:17 adam Exp $
 
-DISTNAME=	pkgconf-3.0.6
+DISTNAME=	pkgconf-3.0.7
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/pkgconf/pkgconf
 COMMENT=	API-driven pkg-config replacement
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	kyua-[0-9]*:../../devel/kyua
+TEST_DEPENDS+=	kyua>=0:../../devel/kyua
 
 CONFLICTS+=	pkg-config-[0-9]*
 
