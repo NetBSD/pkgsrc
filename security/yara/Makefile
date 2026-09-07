@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2026/06/18 14:43:14 nia Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/07 10:55:39 adam Exp $
 
 .include "../../security/yara/Makefile.common"
 
 DISTNAME=	yara-${YARA_VERSION}
 CATEGORIES=	security
-GITHUB_TAG=	v${YARA_VERSION}
 
 COMMENT=	Pattern matching swiss knife for malware researchers
 LICENSE=	modified-bsd
