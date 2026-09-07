@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/08/26 10:19:04 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/07 06:43:47 jnemeth Exp $
 
 COMMENT=		MySQL Cluster 8.0, a free SQL clustered database
-PKGREVISION=		1
 
 CONFLICTS=		mysql*-{client,server}-[0-9]*
 

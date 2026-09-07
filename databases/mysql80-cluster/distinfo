@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2026/06/29 05:53:09 jnemeth Exp $
+$NetBSD: distinfo,v 1.8 2026/09/07 06:43:47 jnemeth Exp $
 
 BLAKE2s (boost_1_77_0.tar.bz2) = 11f9651d7078e67a69a97f46dce3131af1f1b3ba5976c26435cd17a66161cbf1
 SHA512 (boost_1_77_0.tar.bz2) = 39b45c9b60bc5a2a4c669a4463d1272c1e093376b2fb374d7f20a84ea10a3e23bb04b335a735a83a04575731f874d9bff77e89acd947524b3fbbae1b26ae1f2f
 Size (boost_1_77_0.tar.bz2) = 110361537 bytes
-BLAKE2s (mysql-cluster-8.0.47.tar.gz) = efc9a8c04c76da5af33419740b5c635217f9960836678a9af581bedfe34f5889
-SHA512 (mysql-cluster-8.0.47.tar.gz) = 94543da7fc5882a5fd5431900e240a538ff15701a3cf3f5907b769c5d6019ad7d9f67ff5ff3cf1fb07c21166f9748992d37ede9407eb142ba579d7ee628811a6
-Size (mysql-cluster-8.0.47.tar.gz) = 484393452 bytes
+BLAKE2s (mysql-cluster-8.0.48.tar.gz) = 226a3ba34915474d1c081a96a2bbc0f9b6655b9300638359f55e013e9a38a991
+SHA512 (mysql-cluster-8.0.48.tar.gz) = 2459be1a4275368f129eb7802c2bcc282bec78112824fb518f506c2c6ae33031d603895c5efe696c34870b3fde0c51f33b3d8b997bdf022320f75ad72fa02ee7
+Size (mysql-cluster-8.0.48.tar.gz) = 484417190 bytes
 SHA1 (patch-CMakeLists.txt) = a248b6793028f094143c57fb629a7b80487b4414
 SHA1 (patch-client_mysqladmin.cc) = 5284dce4df36cc1bdac2749306b163bb066d7742
 SHA1 (patch-cmake_readline.cmake) = 4e902e53b2e2ed83320ad3b3faed250db7933be4
