@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5920 2026/09/07 18:59:19 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5921 2026/09/07 21:44:29 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9029,3 +9029,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mustach to 1.2.10 [sjmulder 2026-09-07]
 	Updated devel/mise to 2026.9.1 [pin 2026-09-07]
 	Updated textproc/rumdl to 0.2.68 [pin 2026-09-07]
+	Updated math/bcal to 2.6 [sjmulder 2026-09-07]
