@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/08/20 07:52:06 adam Exp $
+# $NetBSD: Makefile,v 1.106 2026/09/07 08:42:39 jperkin Exp $
 
 DISTNAME=	redis-8.10.1
 CATEGORIES=	databases
@@ -17,6 +17,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 # Don't let LTO kick in as it is not supported on all platforms.
 MAKE_ENV+=		OPTIMIZATION=${DBG:U-O2:Q}
+
+REPLACE_SH=	scripts/build.sh
 
 .include "../../mk/bsd.prefs.mk"
 
