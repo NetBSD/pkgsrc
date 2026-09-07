@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5908 2026/09/07 08:37:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5909 2026/09/07 09:45:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9008,3 +9008,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-peewee to 4.5.0 [adam 2026-09-07]
 	Updated graphics/py-pillow_heif to 1.7.0 [adam 2026-09-07]
 	Updated textproc/py-xmldiff to 3.0 [adam 2026-09-07]
+	Updated devel/py-ruff to 0.16.6 [adam 2026-09-07]
+	Updated devel/py-jupyter-builder to 1.2.3 [adam 2026-09-07]
