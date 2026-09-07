@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/07/15 06:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/07 07:06:27 pin Exp $
 
-DISTNAME=	cargo-c-0.10.24
+DISTNAME=	cargo-c-0.10.25
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.95.0
+RUST_REQ=	1.96.0
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 #RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
