@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/12/26 11:46:00 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/09/07 12:16:39 adam Exp $
 
-BLAKE2s (omemo_dr-1.1.0.tar.gz) = e89ff65d1174a0ffe80a044119e6b5e29540dfc38b0945dfffc3b8a057bb2193
-SHA512 (omemo_dr-1.1.0.tar.gz) = 60897932c709e43b4ce93861c9bfaefe9b2236512c90c8510e5480e240b102183e4c7318a17fa92574d611d619475ffc50640a6030f8e169404500e260ccea82
-Size (omemo_dr-1.1.0.tar.gz) = 152761 bytes
+BLAKE2s (omemo_dr-1.2.0.tar.gz) = 3b870bd4cd01a81e313370bed513be221906c0335f7e991b0d123c605b9f934d
+SHA512 (omemo_dr-1.2.0.tar.gz) = a1551560f19baa07fe8e97dcf6d5b5f1a9626adb64af6beb21f64f9cac891a21b94a7e504bc30649ef20c24ccc155c30fb3c90b9ec6f19a4190a7932e5b8743b
+Size (omemo_dr-1.2.0.tar.gz) = 152804 bytes
