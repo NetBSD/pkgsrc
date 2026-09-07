@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/03 05:16:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/07 09:45:19 adam Exp $
 bin/jlpm-${PYVERSSUFFIX}
 bin/jupyter-builder-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -8,6 +8,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/THIRD_PARTY_LICENSES/semver.LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/THIRD_PARTY_LICENSES/yarn.js.LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/THIRD_PARTY_LICENSES/yarn.js.third-party-licenses.json
 ${PYSITELIB}/jupyter_builder/__init__.py
 ${PYSITELIB}/jupyter_builder/__init__.pyc
 ${PYSITELIB}/jupyter_builder/__init__.pyo
