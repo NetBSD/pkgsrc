@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/15 09:51:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/07 16:14:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -70,15 +70,9 @@ ${PYSITELIB}/python_socks/_version.pyo
 ${PYSITELIB}/python_socks/async_/__init__.py
 ${PYSITELIB}/python_socks/async_/__init__.pyc
 ${PYSITELIB}/python_socks/async_/__init__.pyo
-${PYSITELIB}/python_socks/async_/_proxy_chain.py
-${PYSITELIB}/python_socks/async_/_proxy_chain.pyc
-${PYSITELIB}/python_socks/async_/_proxy_chain.pyo
 ${PYSITELIB}/python_socks/async_/anyio/__init__.py
 ${PYSITELIB}/python_socks/async_/anyio/__init__.pyc
 ${PYSITELIB}/python_socks/async_/anyio/__init__.pyo
-${PYSITELIB}/python_socks/async_/anyio/_chain.py
-${PYSITELIB}/python_socks/async_/anyio/_chain.pyc
-${PYSITELIB}/python_socks/async_/anyio/_chain.pyo
 ${PYSITELIB}/python_socks/async_/anyio/_connect.py
 ${PYSITELIB}/python_socks/async_/anyio/_connect.pyc
 ${PYSITELIB}/python_socks/async_/anyio/_connect.pyo
@@ -94,9 +88,6 @@ ${PYSITELIB}/python_socks/async_/anyio/_stream.pyo
 ${PYSITELIB}/python_socks/async_/anyio/v2/__init__.py
 ${PYSITELIB}/python_socks/async_/anyio/v2/__init__.pyc
 ${PYSITELIB}/python_socks/async_/anyio/v2/__init__.pyo
-${PYSITELIB}/python_socks/async_/anyio/v2/_chain.py
-${PYSITELIB}/python_socks/async_/anyio/v2/_chain.pyc
-${PYSITELIB}/python_socks/async_/anyio/v2/_chain.pyo
 ${PYSITELIB}/python_socks/async_/anyio/v2/_connect.py
 ${PYSITELIB}/python_socks/async_/anyio/v2/_connect.pyc
 ${PYSITELIB}/python_socks/async_/anyio/v2/_connect.pyo
@@ -124,9 +115,6 @@ ${PYSITELIB}/python_socks/async_/asyncio/_stream.pyo
 ${PYSITELIB}/python_socks/async_/asyncio/v2/__init__.py
 ${PYSITELIB}/python_socks/async_/asyncio/v2/__init__.pyc
 ${PYSITELIB}/python_socks/async_/asyncio/v2/__init__.pyo
-${PYSITELIB}/python_socks/async_/asyncio/v2/_chain.py
-${PYSITELIB}/python_socks/async_/asyncio/v2/_chain.pyc
-${PYSITELIB}/python_socks/async_/asyncio/v2/_chain.pyo
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_connect.py
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_connect.pyc
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_connect.pyo
@@ -136,21 +124,6 @@ ${PYSITELIB}/python_socks/async_/asyncio/v2/_proxy.pyo
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_stream.py
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_stream.pyc
 ${PYSITELIB}/python_socks/async_/asyncio/v2/_stream.pyo
-${PYSITELIB}/python_socks/async_/curio/__init__.py
-${PYSITELIB}/python_socks/async_/curio/__init__.pyc
-${PYSITELIB}/python_socks/async_/curio/__init__.pyo
-${PYSITELIB}/python_socks/async_/curio/_connect.py
-${PYSITELIB}/python_socks/async_/curio/_connect.pyc
-${PYSITELIB}/python_socks/async_/curio/_connect.pyo
-${PYSITELIB}/python_socks/async_/curio/_proxy.py
-${PYSITELIB}/python_socks/async_/curio/_proxy.pyc
-${PYSITELIB}/python_socks/async_/curio/_proxy.pyo
-${PYSITELIB}/python_socks/async_/curio/_resolver.py
-${PYSITELIB}/python_socks/async_/curio/_resolver.pyc
-${PYSITELIB}/python_socks/async_/curio/_resolver.pyo
-${PYSITELIB}/python_socks/async_/curio/_stream.py
-${PYSITELIB}/python_socks/async_/curio/_stream.pyc
-${PYSITELIB}/python_socks/async_/curio/_stream.pyo
 ${PYSITELIB}/python_socks/async_/trio/__init__.py
 ${PYSITELIB}/python_socks/async_/trio/__init__.pyc
 ${PYSITELIB}/python_socks/async_/trio/__init__.pyo
@@ -169,9 +142,6 @@ ${PYSITELIB}/python_socks/async_/trio/_stream.pyo
 ${PYSITELIB}/python_socks/async_/trio/v2/__init__.py
 ${PYSITELIB}/python_socks/async_/trio/v2/__init__.pyc
 ${PYSITELIB}/python_socks/async_/trio/v2/__init__.pyo
-${PYSITELIB}/python_socks/async_/trio/v2/_chain.py
-${PYSITELIB}/python_socks/async_/trio/v2/_chain.pyc
-${PYSITELIB}/python_socks/async_/trio/v2/_chain.pyo
 ${PYSITELIB}/python_socks/async_/trio/v2/_connect.py
 ${PYSITELIB}/python_socks/async_/trio/v2/_connect.pyc
 ${PYSITELIB}/python_socks/async_/trio/v2/_connect.pyo
@@ -185,9 +155,6 @@ ${PYSITELIB}/python_socks/py.typed
 ${PYSITELIB}/python_socks/sync/__init__.py
 ${PYSITELIB}/python_socks/sync/__init__.pyc
 ${PYSITELIB}/python_socks/sync/__init__.pyo
-${PYSITELIB}/python_socks/sync/_chain.py
-${PYSITELIB}/python_socks/sync/_chain.pyc
-${PYSITELIB}/python_socks/sync/_chain.pyo
 ${PYSITELIB}/python_socks/sync/_connect.py
 ${PYSITELIB}/python_socks/sync/_connect.pyc
 ${PYSITELIB}/python_socks/sync/_connect.pyo
@@ -203,9 +170,6 @@ ${PYSITELIB}/python_socks/sync/_stream.pyo
 ${PYSITELIB}/python_socks/sync/v2/__init__.py
 ${PYSITELIB}/python_socks/sync/v2/__init__.pyc
 ${PYSITELIB}/python_socks/sync/v2/__init__.pyo
-${PYSITELIB}/python_socks/sync/v2/_chain.py
-${PYSITELIB}/python_socks/sync/v2/_chain.pyc
-${PYSITELIB}/python_socks/sync/v2/_chain.pyo
 ${PYSITELIB}/python_socks/sync/v2/_connect.py
 ${PYSITELIB}/python_socks/sync/v2/_connect.pyc
 ${PYSITELIB}/python_socks/sync/v2/_connect.pyo
