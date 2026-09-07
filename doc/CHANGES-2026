@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5894 2026/09/07 05:36:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5895 2026/09/07 05:43:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8987,3 +8987,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rclone to 1.75.1 [adam 2026-09-07]
 	Updated devel/shfmt to 3.14.1 [adam 2026-09-07]
 	Updated devel/lazygit to 0.65.0 [adam 2026-09-07]
+	Updated textproc/py-rapidjson to 1.25 [adam 2026-09-07]
+	Updated devel/py-urwid to 4.1.1 [adam 2026-09-07]
+	Updated textproc/py-types-yaml to 6.0.12.20260906 [adam 2026-09-07]
