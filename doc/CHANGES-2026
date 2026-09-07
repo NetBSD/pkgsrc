@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5916 2026/09/07 16:36:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5917 2026/09/07 16:47:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9024,3 +9024,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/py-nbxmpp to 7.4.0 [adam 2026-09-07]
 	Updated lang/py-ast-serialize to 0.10.0 [adam 2026-09-07]
 	Updated converters/py-cairosvg to 2.9.1 [adam 2026-09-07]
+	Updated devel/py-falcon to 4.3.1 [adam 2026-09-07]
+	Updated www/py-publicsuffixlist to 1.0.2.20260906 [adam 2026-09-07]
