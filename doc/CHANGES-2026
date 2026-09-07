@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5913 2026/09/07 11:25:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5914 2026/09/07 16:07:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9016,3 +9016,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-ansi2html to 1.9.5 [adam 2026-09-07]
 	Updated devel/py-rich-click to 1.9.9 [adam 2026-09-07]
 	Updated devel/tokei to 15.0.0 [pin 2026-09-07]
+	Updated security/py-omemo-dr to 1.2.0 [adam 2026-09-07]
+	Updated www/py-selenium to 4.48.0 [adam 2026-09-07]
