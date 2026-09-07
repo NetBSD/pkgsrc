@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/04/10 20:35:17 sjmulder Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/07 21:44:14 sjmulder Exp $
 
-DISTNAME=	bcal-2.5
+DISTNAME=	bcal-2.6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +24,7 @@ MAKE_FLAGS+=	CFLAGS_WARNINGS="-Wall -Wextra -Wno-unused-parameter"
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} ./test.py
 
+.include "options.mk"
+
 .include "../../lang/python/pyversion.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
