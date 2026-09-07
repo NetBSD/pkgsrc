@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5918 2026/09/07 17:29:46 sjmulder Exp $
+$NetBSD: CHANGES-2026,v 1.5919 2026/09/07 18:57:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9027,3 +9027,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-falcon to 4.3.1 [adam 2026-09-07]
 	Updated www/py-publicsuffixlist to 1.0.2.20260906 [adam 2026-09-07]
 	Updated devel/mustach to 1.2.10 [sjmulder 2026-09-07]
+	Updated devel/mise to 2026.9.1 [pin 2026-09-07]
