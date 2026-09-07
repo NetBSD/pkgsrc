@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2026/09/02 19:04:34 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/09/07 00:14:15 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	pcmanfm-qt-2.4.1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,6 +35,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 .include "../../sysutils/lxqt-menu-data/buildlink3.mk"
 .include "../../x11/libfm-qt/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.plasma6-layer-shell-qt+=	plasma6-layer-shell-qt>=6.6.0
 .include "../../x11/plasma6-layer-shell-qt/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
