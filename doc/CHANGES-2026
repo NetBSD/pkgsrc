@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5910 2026/09/07 10:57:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5911 2026/09/07 11:00:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9012,3 +9012,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-jupyter-builder to 1.2.3 [adam 2026-09-07]
 	Updated security/yara to 4.5.8 [adam 2026-09-07]
 	Updated security/py-yara to 4.5.5 [adam 2026-09-07]
+	Updated geography/mapserver to 8.6.6 [gdt 2026-09-07]
