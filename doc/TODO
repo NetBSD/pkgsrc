@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27871 2026/09/07 18:59:20 pin Exp $
+$NetBSD: TODO,v 1.27872 2026/09/07 20:34:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -440,6 +440,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ap2-auth-ldap-3.11
 	o ap2-jk-1.2.48
 	o ap2-transform-0.6.0
+	o apache-ant-1.10.18
 	o apache-ant19-1.9.15
 	o apache-cassandra-3.11.10
 	o apache-cassandra2-2.2.19
@@ -1027,6 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oroborus-2.0.18
 	o ortp-0.27.0
 	o p0f-3.09b
+	o p5-Authen-SASL-2.2100
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clipboard-0.28
