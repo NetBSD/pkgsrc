@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5896 2026/09/07 06:43:53 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.5897 2026/09/07 07:06:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8991,3 +8991,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.1.1 [adam 2026-09-07]
 	Updated textproc/py-types-yaml to 6.0.12.20260906 [adam 2026-09-07]
 	Updated databases/mysql80-cluster to 8.0.48 [jnemeth 2026-09-07]
+	Updated devel/cargo-c to 0.10.25 [pin 2026-09-07]
