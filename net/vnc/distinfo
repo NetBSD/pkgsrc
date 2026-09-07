@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:07:08 nia Exp $
+$NetBSD: distinfo,v 1.19 2026/09/07 12:21:10 bouyer Exp $
 
 BLAKE2s (vnc-3.3.3r2_unixsrc.tgz) = 54a7850b03a0d5ef4e7af27e9aa5f1d3d26133bacc8d6d4328e04d5209258ed8
 SHA512 (vnc-3.3.3r2_unixsrc.tgz) = 6939f06f8c39ed4123c66a17b7a350cdebdb05915922dec5d1801226e75a902a3c1b7776eefb12831a98666768a2f05eda18c5531c2081dde6d3d68e2b4d1784
@@ -11,7 +11,7 @@ SHA512 (vnc-3.3.3r2-v6-20010421.diff.gz) = 9596ef07251d8befe61c9adb5cd092ee2e702
 Size (vnc-3.3.3r2-v6-20010421.diff.gz) = 6510 bytes
 SHA1 (patch-Xvnc_config_cf_vnc.def) = afe44d76f10b2453b6d4a93fafc9c4611512594a
 SHA1 (patch-aa) = c642605b62bccc7fca23eda3d00654015bf3b8ab
-SHA1 (patch-ab) = f31282e99502dc50b53c660472aa297ef25e0772
+SHA1 (patch-ab) = 024e4a32066c78579c0cdeb27aa28a1e8d7dae92
 SHA1 (patch-ac) = 78afbdab02d08a292db7790e9d9db2fb719620bc
 SHA1 (patch-ad) = a524db9a403428bd750819d25e6157d4c3cb96f7
 SHA1 (patch-ae) = 399ff1527ff75eee7d181dd4f90f95edab028bd7

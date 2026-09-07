@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.8 2001/09/22 18:07:15 mycroft Exp $
+$NetBSD: patch-ab,v 1.9 2026/09/07 12:21:11 bouyer Exp $
 
 Sync this with what we shipped with NetBSD-1.5 with the exception that 
 HasXdmAuth is set to NO (since vnc doesn't have the Wraphelp.c file).
 This fixes problems on pmax, alpha, and maybe others.
 
---- Xvnc/config/cf/NetBSD.cf.orig	Sat Jul 26 06:30:39 1997
-+++ Xvnc/config/cf/NetBSD.cf	Sat Sep 22 17:59:51 2001
+--- Xvnc/config/cf/NetBSD.cf.orig	1997-07-26 08:30:39.000000000 +0200
++++ Xvnc/config/cf/NetBSD.cf	2026-09-07 11:06:40.308460300 +0200
 @@ -2,9 +2,37 @@
  
  
@@ -129,7 +129,7 @@ This fixes problems on pmax, alpha, and maybe others.
  /* UseElfFormat defaults to YES if __ELF__ set */
  #ifndef UseElfFormat
  # ifdef __ELF__
-@@ -114,60 +168,234 @@
+@@ -114,60 +168,238 @@
  #endif
  
  /*
@@ -210,10 +210,13 @@ This fixes problems on pmax, alpha, and maybe others.
 -#  define ServerExtraDefines GccGasOption -D_XSERVER64
 +# if defined(m68kArchitecture) && OSMajorVersion == 1 && OSMinorVersion <= 3
 +#  define OptimizedCDebugFlags 	-O
- # else
--#  define ServerExtraDefines GccGasOption
++# else
 +#  define OptimizedCDebugFlags 	-O2
 +# endif
++#endif
++
++#if OSMajorVersion >= 11
++#define ArCmd ar cq
 +#endif
 +
 +/*
@@ -229,9 +232,10 @@ This fixes problems on pmax, alpha, and maybe others.
 +# define ServerOSDefines	-DDDXOSINIT
 +# if defined(Sparc64Architecture)
 +#  define ServerExtraDefines	GccGasOption -D_XSERVER64
-+# else
+ # else
+-#  define ServerExtraDefines GccGasOption
 +#  define ServerExtraDefines	GccGasOption
-+# endif
+ # endif
 +# define PexDynamicModule	NO
 +# define XieDynamicModule	NO
 +#endif
@@ -282,7 +286,7 @@ This fixes problems on pmax, alpha, and maybe others.
 +# define ServerExtraDefines	GccGasOption XFree86ServerDefines
 +# ifndef XFree86ConsoleDefines
 +#  define XFree86ConsoleDefines -DPCCONS_SUPPORT
- # endif
++# endif
 +# define PexDynamicModule	NO
 +# define XieDynamicModule	NO
 +#endif
@@ -386,7 +390,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #endif
  
  #define StandardDefines	-DCSRG_BASED
-@@ -177,7 +405,18 @@
+@@ -177,7 +409,18 @@
  #define ExtraLibraries		/**/
  #endif
  #ifndef UseGnuMalloc
@@ -405,7 +409,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #endif
  #ifndef GnuMallocLibrary
  #define GnuMallocLibrary	-lgnumalloc
-@@ -191,6 +430,13 @@
+@@ -191,6 +434,13 @@
  #endif
  #endif 
  
@@ -419,7 +423,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define	AdmDir			/var/log
  
  /*
-@@ -200,8 +446,17 @@
+@@ -200,8 +450,17 @@
  #define StripInstalledPrograms	YES
  #define CompressAllFonts	YES
  #define GzipFontCompression	YES
@@ -439,7 +443,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #ifdef  InstallCmd
  # undef  InstallCmd
-@@ -212,11 +467,23 @@
+@@ -212,11 +471,23 @@
  # define ExtraFilesToClean 	*.core
  #endif
  
@@ -465,7 +469,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define	EqnCmd 			eqn -Tps
  #define TroffCmd        	groff -Tps
  
-@@ -264,7 +531,10 @@
+@@ -264,7 +535,10 @@
  	-@if [ -f file.0 ]; \						@@\
  	then \								@@\
  	$(INSTALL) -c $(INSTMANFLAGS) file.0 $(DESTDIR)destdir/dest.0; \@@\
@@ -477,7 +481,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #define InstallGenManPageLong(file,destdir,dest,suffix)			@@\
  	InstallManPageLong(file,destdir,dest)
-@@ -281,7 +551,16 @@
+@@ -281,7 +555,16 @@
  	done
  
  #define InstallMultipleMan(list,dest)                                   @@\
@@ -495,7 +499,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #define InstallManPageAliases(file,destdir,aliases)                     @@\
  install.man:: 								@@\
-@@ -299,13 +578,10 @@
+@@ -299,13 +582,10 @@
  /*
   * Shared libraries supported starting in 1.0 on a.out platforms,
   * and on all ELF platforms.
@@ -511,7 +515,7 @@ This fixes problems on pmax, alpha, and maybe others.
  # ifndef HasSharedLibraries
  # define HasSharedLibraries	YES
  # endif
-@@ -327,51 +603,179 @@
+@@ -327,51 +607,179 @@
  #include <bsdLib.rules>
  #endif /* HasSharedLibraries */
  
@@ -548,14 +552,14 @@ This fixes problems on pmax, alpha, and maybe others.
 +
 +/*
 + * NetBSD always uses the XFree86 contrib distribution.
-  */
--#ifdef SparcArchitecture
++ */
 +#undef	XF86Contrib
 +#define	XF86Contrib	YES
 +
 +/*
 + * Definitions for the SUN server on NetBSD/sparc or NetBSD/sun3
-+ */
+  */
+-#ifdef SparcArchitecture
 +#if defined(SparcArchitecture) || defined(Sun3Architecture)
  #ifndef Xsun24Server
 +#if defined(SparcArchitecture)
@@ -587,7 +591,7 @@ This fixes problems on pmax, alpha, and maybe others.
 +# ifndef Xmac68kServer
 +#  define Xmac68kServer		YES
 +# endif
- #endif
++#endif
 +
 +/*
 + * Definitions for the NetBSD/vax server.
@@ -602,18 +606,11 @@ This fixes problems on pmax, alpha, and maybe others.
 +# endif
 +# define HasSaberC NO
 +# define UnalignedReferencesAllowed YES         /* if arbitrary deref is okay */
- #endif
- 
- /*
-- * Definition for compiling on MIPS machines
++#endif
++
++/*
 + * Definitions for the NetBSD/amiga server.
-  */
--#ifdef MipsArchitecture
--#define PositionIndependentCFlags
--#define SharedLibraryLoadFlags -x -shared --whole-archive -soname `echo $@ |
--sed 's/\.[0-9]*$$//'`
--#define SharedXtReqs $(XLIBONLY) $(SMLIB) $(ICELIB)
--#define SharedXmuReqs $(LDPRELIB) $(XTOOLONLYLIB) $(XONLYLIB) $(EXTENSIONLIB)
++ */
 +#ifdef amigaArchitecture
 +# ifndef XamigaCCmono
 +#  define XamigaCCmono		NO
@@ -658,17 +655,14 @@ This fixes problems on pmax, alpha, and maybe others.
 +#ifndef XkbServerDefines
 +#define XkbServerDefines	-DXKB_ALWAYS_USES_SOFT_REPEAT
 +#endif
- #endif
- 
- /*
-- * Definition for compiling on Alpha machines
++#endif
++
++/*
 + * Definitions for the NetBSD/arm32 VIDC20 X server.
-  */
--#ifdef AlphaArchitecture
--#define	BuildServer	NO
++ */
 +#if defined(arm32Architecture)
 +# define Xarm32VIDCServer	YES
-+#endif
+ #endif
 +
 +/*
 + * Definitions for the NetBSD/x68k X server.
@@ -689,11 +683,18 @@ This fixes problems on pmax, alpha, and maybe others.
 + */
 +#if defined(pmaxArchitecture)
 +# define XpmaxServer YES
-+#endif
-+
-+/*
+ #endif
+ 
+ /*
+- * Definition for compiling on MIPS machines
 + * Definitions for the NetBSD/hpcmips X server.
-+ */
+  */
+-#ifdef MipsArchitecture
+-#define PositionIndependentCFlags
+-#define SharedLibraryLoadFlags -x -shared --whole-archive -soname `echo $@ |
+-sed 's/\.[0-9]*$$//'`
+-#define SharedXtReqs $(XLIBONLY) $(SMLIB) $(ICELIB)
+-#define SharedXmuReqs $(LDPRELIB) $(XTOOLONLYLIB) $(XONLYLIB) $(EXTENSIONLIB)
 +#if defined(hpcmipsArchitecture)
 +# define XhpcServer		YES
 +#endif
@@ -705,11 +706,14 @@ This fixes problems on pmax, alpha, and maybe others.
 +
 +#ifndef XkbServerDefines
 +#define XkbServerDefines	-DXKB_ALWAYS_USES_SOFT_REPEAT
-+#endif
-+
-+/*
+ #endif
+ 
+ /*
+- * Definition for compiling on Alpha machines
 + * We use rgb.txt with XFree86, so we must use it here to be compatible.
-+ */
+  */
+-#ifdef AlphaArchitecture
+-#define	BuildServer	NO
 +#ifndef UseRgbTxt
 +#define UseRgbTxt	YES
  #endif
