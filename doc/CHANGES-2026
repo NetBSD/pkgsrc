@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5907 2026/09/07 08:28:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5908 2026/09/07 08:37:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9006,3 +9006,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-poetry to 2.4.3 [adam 2026-09-07]
 	Updated devel/py-pebble to 5.2.2 [adam 2026-09-07]
 	Updated databases/py-peewee to 4.5.0 [adam 2026-09-07]
+	Updated graphics/py-pillow_heif to 1.7.0 [adam 2026-09-07]
+	Updated textproc/py-xmldiff to 3.0 [adam 2026-09-07]
