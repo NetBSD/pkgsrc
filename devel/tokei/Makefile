@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/12/30 19:08:21 pin Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/07 11:24:58 pin Exp $
 
-DISTNAME=	tokei-14.0.0
+DISTNAME=	tokei-15.0.0
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
