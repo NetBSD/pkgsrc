@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5891 2026/09/07 00:14:25 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.5892 2026/09/07 05:06:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8975,3 +8975,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-configargparse to 1.7.6 [adam 2026-09-06]
 	Updated www/resterm to 1.6.0 [drixter 2026-09-06]
 	Updated sysutils/pcmanfm-qt to 2.4.1nb2 [gutteridge 2026-09-07]
+	Updated net/nanomsg to 1.2.5 [adam 2026-09-07]
+	Updated audio/taglib to 2.3.2 [adam 2026-09-07]
+	Updated net/libtorrent to 0.16.22 [adam 2026-09-07]
+	Updated net/rtorrent to 0.16.22 [adam 2026-09-07]
