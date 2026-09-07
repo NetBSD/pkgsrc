@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5909 2026/09/07 09:45:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5910 2026/09/07 10:57:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9010,3 +9010,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-xmldiff to 3.0 [adam 2026-09-07]
 	Updated devel/py-ruff to 0.16.6 [adam 2026-09-07]
 	Updated devel/py-jupyter-builder to 1.2.3 [adam 2026-09-07]
+	Updated security/yara to 4.5.8 [adam 2026-09-07]
+	Updated security/py-yara to 4.5.5 [adam 2026-09-07]
