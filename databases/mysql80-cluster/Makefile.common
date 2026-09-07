@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2026/06/29 05:53:09 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.10 2026/09/07 06:43:47 jnemeth Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
-DISTNAME=	mysql-cluster-8.0.47
+DISTNAME=	mysql-cluster-8.0.48
 BOOSTVER=	1.77.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mysql/}
