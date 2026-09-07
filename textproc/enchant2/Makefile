@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.61 2026/09/02 19:04:41 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/09/07 08:11:23 adam Exp $
 
-DISTNAME=		enchant-2.8.19
-PKGNAME=		${DISTNAME:S/enchant/enchant2/}
-PKGREVISION=		2
-CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_GITHUB:=rrthomas/}
-GITHUB_PROJECT=		enchant
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
-DIST_SUBDIR=		${PKGNAME_NOREV}
+DISTNAME=	enchant-2.8.21
+PKGNAME=	${DISTNAME:S/enchant/enchant2/}
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
+GITHUB_PROJECT=	enchant
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://rrthomas.github.io/enchant/
-COMMENT=		Generic spell checking library
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://rrthomas.github.io/enchant/
+COMMENT=	Generic spell checking library
+LICENSE=	gnu-lgpl-v2.1
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++11
-
-USE_TOOLS+=		autoconf gmake groff pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf gmake groff pkg-config
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # Force disable all spell checkers that are not handled in options.mk,
 # to avoid them being unintentionally found if installed.
-CONFIGURE_ARGS+=	--without-nuspell
 CONFIGURE_ARGS+=	--without-hspell	# Hebrew
+CONFIGURE_ARGS+=	--without-nuspell
 CONFIGURE_ARGS+=	--without-voikko	# Finnish
 
 # \todo The package previously relied on finding applespell on mac,
