@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/06/21 08:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/07 07:27:36 adam Exp $
 
-DISTNAME=	ujson-5.13.0
+DISTNAME=	ujson-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/ujson/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/ultrajson/ultrajson
 COMMENT=	Ultra fast JSON encoder and decoder for Python
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=9.2:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c c++
 
