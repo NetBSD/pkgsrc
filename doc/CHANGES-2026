@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5904 2026/09/07 07:15:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5905 2026/09/07 07:34:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8999,3 +8999,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.15.1 [pin 2026-09-07]
 	Updated devel/sem to 0.24.0 [pin 2026-09-07]
 	Updated devel/serie to 0.9.0 [pin 2026-09-07]
+	Updated textproc/py-ujson to 6.0.0 [adam 2026-09-07]
+	Updated devel/py-configargparse to 1.7.7 [adam 2026-09-07]
+	Updated devel/py-cattrs to 26.2.0 [adam 2026-09-07]
