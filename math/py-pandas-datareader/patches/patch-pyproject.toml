@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/09/07 16:26:12 adam Exp $
+
+Install only the package itself.
+
+--- pyproject.toml.orig	2026-09-07 16:22:12.617176593 +0000
++++ pyproject.toml
+@@ -35,7 +35,7 @@ Repository = "https://github.com/pydata/
+ 
+ 
+ [tool.setuptools]
+-package-dir = {"" = "."}
++package-dir = {"pandas_datareader" = "pandas_datareader"}
+ 
+ [tool.setuptools.dynamic]
+ dependencies = {file = ["requirements.txt"]}

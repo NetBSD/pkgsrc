@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/06/28 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/07 16:26:12 adam Exp $
 
-DISTNAME=	pandas-datareader-0.10.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	pandas_datareader-0.11.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas-datareader/}
 
@@ -11,10 +10,11 @@ HOMEPAGE=	https://github.com/pydata/pandas-datareader
 COMMENT=	Remote data access for pandas
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23:../../math/py-pandas
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-lxml>=0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1.4:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.19.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
