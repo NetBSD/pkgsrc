@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/05/29 13:01:37 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/09/07 11:04:54 adam Exp $
 
-BLAKE2s (rich_click-1.9.8.tar.gz) = 871146b97c2584c9a350fc7ec5c5886e1844d79a7ae31bffde17faa83c85d39b
-SHA512 (rich_click-1.9.8.tar.gz) = cae4b93f3f4c47431ae6f30a299102125c883c1b806ae698cac9574a95a2d66db428b31390a7b2c9edd1785cc0eb214f4510e0b434b6c626a9cec5d448039091
-Size (rich_click-1.9.8.tar.gz) = 75363 bytes
+BLAKE2s (rich_click-1.9.9.tar.gz) = 7ce916c7a2beed3dd0f8ede5e40b87a661501c6bd139929da8a7b48efb756e9a
+SHA512 (rich_click-1.9.9.tar.gz) = 74097c48f34ac2d6fd7667bb4d0712e08e7cf097a7226d2215598e9c97766bd15fd77306e7719dbb7fdbd87d90b2a648567e02585787d2f2110b88482fdba981
+Size (rich_click-1.9.9.tar.gz) = 75866 bytes
