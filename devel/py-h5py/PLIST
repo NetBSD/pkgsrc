@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/07/07 06:54:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/09/07 16:18:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -94,6 +94,7 @@ ${PYSITELIB}/h5py/tests/conftest.pyo
 ${PYSITELIB}/h5py/tests/data_files/__init__.py
 ${PYSITELIB}/h5py/tests/data_files/__init__.pyc
 ${PYSITELIB}/h5py/tests/data_files/__init__.pyo
+${PYSITELIB}/h5py/tests/data_files/compound-dtype-complex.h5
 ${PYSITELIB}/h5py/tests/data_files/vlen_string_dset.h5
 ${PYSITELIB}/h5py/tests/data_files/vlen_string_dset_utc.h5
 ${PYSITELIB}/h5py/tests/data_files/vlen_string_s390x.h5
@@ -184,6 +185,9 @@ ${PYSITELIB}/h5py/tests/test_h5t.pyo
 ${PYSITELIB}/h5py/tests/test_h5z.py
 ${PYSITELIB}/h5py/tests/test_h5z.pyc
 ${PYSITELIB}/h5py/tests/test_h5z.pyo
+${PYSITELIB}/h5py/tests/test_native_complex.py
+${PYSITELIB}/h5py/tests/test_native_complex.pyc
+${PYSITELIB}/h5py/tests/test_native_complex.pyo
 ${PYSITELIB}/h5py/tests/test_npystrings.py
 ${PYSITELIB}/h5py/tests/test_npystrings.pyc
 ${PYSITELIB}/h5py/tests/test_npystrings.pyo
