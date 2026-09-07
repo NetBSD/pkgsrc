@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5902 2026/09/07 07:13:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5903 2026/09/07 07:14:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8997,3 +8997,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/git-cliff to 2.14.1 [pin 2026-09-07]
 	Updated devel/gitlogue to 0.11.0 [pin 2026-09-07]
 	Updated devel/gitpane to 0.15.1 [pin 2026-09-07]
+	Updated devel/sem to 0.24.0 [pin 2026-09-07]
