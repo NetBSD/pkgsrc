@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5892 2026/09/07 05:06:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5893 2026/09/07 05:21:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8979,3 +8979,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/taglib to 2.3.2 [adam 2026-09-07]
 	Updated net/libtorrent to 0.16.22 [adam 2026-09-07]
 	Updated net/rtorrent to 0.16.22 [adam 2026-09-07]
+	Updated devel/pkgconf to 3.0.7 [adam 2026-09-07]
+	Updated net/libpcap to 1.10.7 [adam 2026-09-07]
+	Updated security/gnupg2 to 2.5.22 [adam 2026-09-07]
+	Updated security/gpgme to 2.2.0 [adam 2026-09-07]
