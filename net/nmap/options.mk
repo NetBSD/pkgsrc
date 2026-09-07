@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2021/11/24 14:17:58 nia Exp $
+# $NetBSD: options.mk,v 1.24 2026/09/07 02:56:52 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS=	liblinear
 PLIST_VARS+=	lua
 
 .if !empty(PKG_OPTIONS:Mlua)
-LUA_VERSIONS_ACCEPTED=	53	# needs lua_isyieldable, introduced in Lua 5.3
+LUA_VERSIONS_ACCEPTED=	54 53	# needs lua_isyieldable, introduced in Lua 5.3
 .include "../../lang/lua/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-liblua=${BUILDLINK_PREFIX.lua}
 PLIST.lua=		yes
