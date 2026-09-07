@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/08/03 08:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/07 04:54:54 adam Exp $
 
-DISTNAME=	nanomsg-1.2.4
+DISTNAME=	nanomsg-1.2.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nanomsg/}
 
