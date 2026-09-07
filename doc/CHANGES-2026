@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5898 2026/09/07 07:08:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5899 2026/09/07 07:09:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -8993,3 +8993,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/mysql80-cluster to 8.0.48 [jnemeth 2026-09-07]
 	Updated devel/cargo-c to 0.10.25 [pin 2026-09-07]
 	Updated devel/cargo-release to 1.1.5 [pin 2026-09-07]
+	Updated devel/difftastic to 0.70.0 [pin 2026-09-07]
