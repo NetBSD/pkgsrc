@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 LICENSE=	gnu-gpl-v3
 
+# Like devel/gdb this is also broken on M1
+NOT_FOR_PLATFORM+=	Darwin-*-aarch64
 BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=			YES
 GNU_CONFIGURE_STRICT=		no # has sub-configures
