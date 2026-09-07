@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/09/06 17:13:15 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/07 07:29:14 adam Exp $
 
-DISTNAME=	configargparse-1.7.6
+DISTNAME=	configargparse-1.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ConfigArgParse/}
