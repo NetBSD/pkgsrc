@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2025/02/04 13:50:24 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/09/08 10:38:42 adam Exp $
 
-BLAKE2s (eth_abi-5.2.0.tar.gz) = 60ffbe8ccbe495399257b820848b158fd9ff8b611aead7954b97758e0fe54412
-SHA512 (eth_abi-5.2.0.tar.gz) = 4b63eac50a24398c81db87a021894c5fdb87e5bb96e739b795f0cd1b13053b5f637846089d6667cda48865e010f14af8ee85cf736008acc6d112da56433a92da
-Size (eth_abi-5.2.0.tar.gz) = 49797 bytes
+BLAKE2s (eth_abi-6.0.0.tar.gz) = af81d8179a468035fa912f43944c873a499e2a4961f3de10f11e0501987f7109
+SHA512 (eth_abi-6.0.0.tar.gz) = 39aad33943e0fe4944eef43834ed663693b1c4567fec9ead3ac44c474a07cfd1a0422f1089de6c26e9c538203666798ef9432d576562ecc071b836d5c5187ff0
+Size (eth_abi-6.0.0.tar.gz) = 70553 bytes
+SHA1 (patch-pyproject.toml) = 7d6614e9b1e4615c9c8b1ebd87ecd38072556a17
