@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5936 2026/09/08 12:10:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5937 2026/09/08 12:49:10 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9062,3 +9062,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-construct-classes to 0.2.3 [adam 2026-09-08]
 	Updated security/py-cyclonedx-bom to 7.3.1 [adam 2026-09-08]
 	Updated mail/py-mail-parser to 4.6.4 [adam 2026-09-08]
+	Updated www/chromium to 152.0.7977.82 [kikadf 2026-09-08]
