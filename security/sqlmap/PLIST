@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/08/12 12:56:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/09/08 05:07:28 adam Exp $
 bin/sqlmap
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -192,6 +192,9 @@ ${PYSITELIB}/sqlmap/extra/dbwire/postgres.pyo
 ${PYSITELIB}/sqlmap/extra/dbwire/presto.py
 ${PYSITELIB}/sqlmap/extra/dbwire/presto.pyc
 ${PYSITELIB}/sqlmap/extra/dbwire/presto.pyo
+${PYSITELIB}/sqlmap/extra/dbwire/sybase.py
+${PYSITELIB}/sqlmap/extra/dbwire/sybase.pyc
+${PYSITELIB}/sqlmap/extra/dbwire/sybase.pyo
 ${PYSITELIB}/sqlmap/extra/dbwire/tds.py
 ${PYSITELIB}/sqlmap/extra/dbwire/tds.pyc
 ${PYSITELIB}/sqlmap/extra/dbwire/tds.pyo
@@ -549,6 +552,9 @@ ${PYSITELIB}/sqlmap/lib/techniques/blind/__init__.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.py
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.pyo
+${PYSITELIB}/sqlmap/lib/techniques/blind/multibit.py
+${PYSITELIB}/sqlmap/lib/techniques/blind/multibit.pyc
+${PYSITELIB}/sqlmap/lib/techniques/blind/multibit.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.py
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.pyo
@@ -594,6 +600,18 @@ ${PYSITELIB}/sqlmap/lib/techniques/nosql/__init__.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/nosql/inject.py
 ${PYSITELIB}/sqlmap/lib/techniques/nosql/inject.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/nosql/inject.pyo
+${PYSITELIB}/sqlmap/lib/techniques/odata/__init__.py
+${PYSITELIB}/sqlmap/lib/techniques/odata/__init__.pyc
+${PYSITELIB}/sqlmap/lib/techniques/odata/__init__.pyo
+${PYSITELIB}/sqlmap/lib/techniques/odata/inject.py
+${PYSITELIB}/sqlmap/lib/techniques/odata/inject.pyc
+${PYSITELIB}/sqlmap/lib/techniques/odata/inject.pyo
+${PYSITELIB}/sqlmap/lib/techniques/sparql/__init__.py
+${PYSITELIB}/sqlmap/lib/techniques/sparql/__init__.pyc
+${PYSITELIB}/sqlmap/lib/techniques/sparql/__init__.pyo
+${PYSITELIB}/sqlmap/lib/techniques/sparql/inject.py
+${PYSITELIB}/sqlmap/lib/techniques/sparql/inject.pyc
+${PYSITELIB}/sqlmap/lib/techniques/sparql/inject.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/ssti/__init__.py
 ${PYSITELIB}/sqlmap/lib/techniques/ssti/__init__.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/ssti/__init__.pyo
@@ -615,6 +633,12 @@ ${PYSITELIB}/sqlmap/lib/techniques/xpath/__init__.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/xpath/inject.py
 ${PYSITELIB}/sqlmap/lib/techniques/xpath/inject.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/xpath/inject.pyo
+${PYSITELIB}/sqlmap/lib/techniques/xslt/__init__.py
+${PYSITELIB}/sqlmap/lib/techniques/xslt/__init__.pyc
+${PYSITELIB}/sqlmap/lib/techniques/xslt/__init__.pyo
+${PYSITELIB}/sqlmap/lib/techniques/xslt/inject.py
+${PYSITELIB}/sqlmap/lib/techniques/xslt/inject.pyc
+${PYSITELIB}/sqlmap/lib/techniques/xslt/inject.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/xxe/__init__.py
 ${PYSITELIB}/sqlmap/lib/techniques/xxe/__init__.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/xxe/__init__.pyo
@@ -1457,6 +1481,9 @@ ${PYSITELIB}/sqlmap/tamper/blindbinary.pyo
 ${PYSITELIB}/sqlmap/tamper/bluecoat.py
 ${PYSITELIB}/sqlmap/tamper/bluecoat.pyc
 ${PYSITELIB}/sqlmap/tamper/bluecoat.pyo
+${PYSITELIB}/sqlmap/tamper/castprefix.py
+${PYSITELIB}/sqlmap/tamper/castprefix.pyc
+${PYSITELIB}/sqlmap/tamper/castprefix.pyo
 ${PYSITELIB}/sqlmap/tamper/chardoubleencode.py
 ${PYSITELIB}/sqlmap/tamper/chardoubleencode.pyc
 ${PYSITELIB}/sqlmap/tamper/chardoubleencode.pyo
@@ -1541,6 +1568,9 @@ ${PYSITELIB}/sqlmap/tamper/luanginx.pyo
 ${PYSITELIB}/sqlmap/tamper/luanginxmore.py
 ${PYSITELIB}/sqlmap/tamper/luanginxmore.pyc
 ${PYSITELIB}/sqlmap/tamper/luanginxmore.pyo
+${PYSITELIB}/sqlmap/tamper/mid2leftright.py
+${PYSITELIB}/sqlmap/tamper/mid2leftright.pyc
+${PYSITELIB}/sqlmap/tamper/mid2leftright.pyo
 ${PYSITELIB}/sqlmap/tamper/misunion.py
 ${PYSITELIB}/sqlmap/tamper/misunion.pyc
 ${PYSITELIB}/sqlmap/tamper/misunion.pyo
@@ -1550,9 +1580,15 @@ ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.pyo
 ${PYSITELIB}/sqlmap/tamper/modsecurityzeroversioned.py
 ${PYSITELIB}/sqlmap/tamper/modsecurityzeroversioned.pyc
 ${PYSITELIB}/sqlmap/tamper/modsecurityzeroversioned.pyo
+${PYSITELIB}/sqlmap/tamper/mssqlnosemicolon.py
+${PYSITELIB}/sqlmap/tamper/mssqlnosemicolon.pyc
+${PYSITELIB}/sqlmap/tamper/mssqlnosemicolon.pyo
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.py
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyc
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyo
+${PYSITELIB}/sqlmap/tamper/odbcbrace.py
+${PYSITELIB}/sqlmap/tamper/odbcbrace.pyc
+${PYSITELIB}/sqlmap/tamper/odbcbrace.pyo
 ${PYSITELIB}/sqlmap/tamper/oraclequote.py
 ${PYSITELIB}/sqlmap/tamper/oraclequote.pyc
 ${PYSITELIB}/sqlmap/tamper/oraclequote.pyo
@@ -1574,6 +1610,9 @@ ${PYSITELIB}/sqlmap/tamper/plus2concat.pyo
 ${PYSITELIB}/sqlmap/tamper/plus2fnconcat.py
 ${PYSITELIB}/sqlmap/tamper/plus2fnconcat.pyc
 ${PYSITELIB}/sqlmap/tamper/plus2fnconcat.pyo
+${PYSITELIB}/sqlmap/tamper/quote2ltat.py
+${PYSITELIB}/sqlmap/tamper/quote2ltat.pyc
+${PYSITELIB}/sqlmap/tamper/quote2ltat.pyo
 ${PYSITELIB}/sqlmap/tamper/randomcase.py
 ${PYSITELIB}/sqlmap/tamper/randomcase.pyc
 ${PYSITELIB}/sqlmap/tamper/randomcase.pyo
@@ -1592,6 +1631,9 @@ ${PYSITELIB}/sqlmap/tamper/sign.pyo
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.py
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyc
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyo
+${PYSITELIB}/sqlmap/tamper/sleep2hex.py
+${PYSITELIB}/sqlmap/tamper/sleep2hex.pyc
+${PYSITELIB}/sqlmap/tamper/sleep2hex.pyo
 ${PYSITELIB}/sqlmap/tamper/sp_password.py
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyc
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyo
@@ -1637,6 +1679,15 @@ ${PYSITELIB}/sqlmap/tamper/symboliclogical.pyo
 ${PYSITELIB}/sqlmap/tamper/unionalltounion.py
 ${PYSITELIB}/sqlmap/tamper/unionalltounion.pyc
 ${PYSITELIB}/sqlmap/tamper/unionalltounion.pyo
+${PYSITELIB}/sqlmap/tamper/uniontable.py
+${PYSITELIB}/sqlmap/tamper/uniontable.pyc
+${PYSITELIB}/sqlmap/tamper/uniontable.pyo
+${PYSITELIB}/sqlmap/tamper/unionvalues.py
+${PYSITELIB}/sqlmap/tamper/unionvalues.pyc
+${PYSITELIB}/sqlmap/tamper/unionvalues.pyo
+${PYSITELIB}/sqlmap/tamper/unionvaluesrow.py
+${PYSITELIB}/sqlmap/tamper/unionvaluesrow.pyc
+${PYSITELIB}/sqlmap/tamper/unionvaluesrow.pyo
 ${PYSITELIB}/sqlmap/tamper/unmagicquotes.py
 ${PYSITELIB}/sqlmap/tamper/unmagicquotes.pyc
 ${PYSITELIB}/sqlmap/tamper/unmagicquotes.pyo
@@ -1703,6 +1754,9 @@ ${PYSITELIB}/sqlmap/tests/test_comparison_json.pyo
 ${PYSITELIB}/sqlmap/tests/test_compat.py
 ${PYSITELIB}/sqlmap/tests/test_compat.pyc
 ${PYSITELIB}/sqlmap/tests/test_compat.pyo
+${PYSITELIB}/sqlmap/tests/test_configfile.py
+${PYSITELIB}/sqlmap/tests/test_configfile.pyc
+${PYSITELIB}/sqlmap/tests/test_configfile.pyo
 ${PYSITELIB}/sqlmap/tests/test_convert.py
 ${PYSITELIB}/sqlmap/tests/test_convert.pyc
 ${PYSITELIB}/sqlmap/tests/test_convert.pyo
@@ -1721,6 +1775,9 @@ ${PYSITELIB}/sqlmap/tests/test_datatypes.pyo
 ${PYSITELIB}/sqlmap/tests/test_dbms_enum.py
 ${PYSITELIB}/sqlmap/tests/test_dbms_enum.pyc
 ${PYSITELIB}/sqlmap/tests/test_dbms_enum.pyo
+${PYSITELIB}/sqlmap/tests/test_dbwire.py
+${PYSITELIB}/sqlmap/tests/test_dbwire.pyc
+${PYSITELIB}/sqlmap/tests/test_dbwire.pyo
 ${PYSITELIB}/sqlmap/tests/test_decodepage.py
 ${PYSITELIB}/sqlmap/tests/test_decodepage.pyc
 ${PYSITELIB}/sqlmap/tests/test_decodepage.pyo
@@ -1793,6 +1850,9 @@ ${PYSITELIB}/sqlmap/tests/test_hash_crack.pyo
 ${PYSITELIB}/sqlmap/tests/test_hashdb.py
 ${PYSITELIB}/sqlmap/tests/test_hashdb.pyc
 ${PYSITELIB}/sqlmap/tests/test_hashdb.pyo
+${PYSITELIB}/sqlmap/tests/test_heuristic_signatures.py
+${PYSITELIB}/sqlmap/tests/test_heuristic_signatures.pyc
+${PYSITELIB}/sqlmap/tests/test_heuristic_signatures.pyo
 ${PYSITELIB}/sqlmap/tests/test_hql.py
 ${PYSITELIB}/sqlmap/tests/test_hql.pyc
 ${PYSITELIB}/sqlmap/tests/test_hql.pyo
@@ -1811,6 +1871,9 @@ ${PYSITELIB}/sqlmap/tests/test_jitter_stress.pyo
 ${PYSITELIB}/sqlmap/tests/test_jwt.py
 ${PYSITELIB}/sqlmap/tests/test_jwt.pyc
 ${PYSITELIB}/sqlmap/tests/test_jwt.pyo
+${PYSITELIB}/sqlmap/tests/test_kbchars.py
+${PYSITELIB}/sqlmap/tests/test_kbchars.pyc
+${PYSITELIB}/sqlmap/tests/test_kbchars.pyo
 ${PYSITELIB}/sqlmap/tests/test_kerberos.py
 ${PYSITELIB}/sqlmap/tests/test_kerberos.pyc
 ${PYSITELIB}/sqlmap/tests/test_kerberos.pyo
@@ -1826,9 +1889,15 @@ ${PYSITELIB}/sqlmap/tests/test_library.pyo
 ${PYSITELIB}/sqlmap/tests/test_misc.py
 ${PYSITELIB}/sqlmap/tests/test_misc.pyc
 ${PYSITELIB}/sqlmap/tests/test_misc.pyo
+${PYSITELIB}/sqlmap/tests/test_multibit.py
+${PYSITELIB}/sqlmap/tests/test_multibit.pyc
+${PYSITELIB}/sqlmap/tests/test_multibit.pyo
 ${PYSITELIB}/sqlmap/tests/test_nosql.py
 ${PYSITELIB}/sqlmap/tests/test_nosql.pyc
 ${PYSITELIB}/sqlmap/tests/test_nosql.pyo
+${PYSITELIB}/sqlmap/tests/test_odata.py
+${PYSITELIB}/sqlmap/tests/test_odata.pyc
+${PYSITELIB}/sqlmap/tests/test_odata.pyo
 ${PYSITELIB}/sqlmap/tests/test_openapi.py
 ${PYSITELIB}/sqlmap/tests/test_openapi.pyc
 ${PYSITELIB}/sqlmap/tests/test_openapi.pyo
@@ -1850,6 +1919,9 @@ ${PYSITELIB}/sqlmap/tests/test_payload_marking.pyo
 ${PYSITELIB}/sqlmap/tests/test_payloads_structure.py
 ${PYSITELIB}/sqlmap/tests/test_payloads_structure.pyc
 ${PYSITELIB}/sqlmap/tests/test_payloads_structure.pyo
+${PYSITELIB}/sqlmap/tests/test_profiling.py
+${PYSITELIB}/sqlmap/tests/test_profiling.pyc
+${PYSITELIB}/sqlmap/tests/test_profiling.pyo
 ${PYSITELIB}/sqlmap/tests/test_progress.py
 ${PYSITELIB}/sqlmap/tests/test_progress.pyc
 ${PYSITELIB}/sqlmap/tests/test_progress.pyo
@@ -1859,6 +1931,9 @@ ${PYSITELIB}/sqlmap/tests/test_property.pyo
 ${PYSITELIB}/sqlmap/tests/test_purge.py
 ${PYSITELIB}/sqlmap/tests/test_purge.pyc
 ${PYSITELIB}/sqlmap/tests/test_purge.pyo
+${PYSITELIB}/sqlmap/tests/test_reflection.py
+${PYSITELIB}/sqlmap/tests/test_reflection.pyc
+${PYSITELIB}/sqlmap/tests/test_reflection.pyo
 ${PYSITELIB}/sqlmap/tests/test_replication.py
 ${PYSITELIB}/sqlmap/tests/test_replication.pyc
 ${PYSITELIB}/sqlmap/tests/test_replication.pyo
@@ -1883,6 +1958,9 @@ ${PYSITELIB}/sqlmap/tests/test_settings_regex.pyo
 ${PYSITELIB}/sqlmap/tests/test_sgmllib.py
 ${PYSITELIB}/sqlmap/tests/test_sgmllib.pyc
 ${PYSITELIB}/sqlmap/tests/test_sgmllib.pyo
+${PYSITELIB}/sqlmap/tests/test_sparql.py
+${PYSITELIB}/sqlmap/tests/test_sparql.pyc
+${PYSITELIB}/sqlmap/tests/test_sparql.pyo
 ${PYSITELIB}/sqlmap/tests/test_sqlalchemy.py
 ${PYSITELIB}/sqlmap/tests/test_sqlalchemy.pyc
 ${PYSITELIB}/sqlmap/tests/test_sqlalchemy.pyo
@@ -1916,6 +1994,9 @@ ${PYSITELIB}/sqlmap/tests/test_texthelpers.pyo
 ${PYSITELIB}/sqlmap/tests/test_threads.py
 ${PYSITELIB}/sqlmap/tests/test_threads.pyc
 ${PYSITELIB}/sqlmap/tests/test_threads.pyo
+${PYSITELIB}/sqlmap/tests/test_timeless.py
+${PYSITELIB}/sqlmap/tests/test_timeless.pyc
+${PYSITELIB}/sqlmap/tests/test_timeless.pyo
 ${PYSITELIB}/sqlmap/tests/test_union_engine.py
 ${PYSITELIB}/sqlmap/tests/test_union_engine.pyc
 ${PYSITELIB}/sqlmap/tests/test_union_engine.pyo
@@ -1940,6 +2021,9 @@ ${PYSITELIB}/sqlmap/tests/test_wordlist.pyo
 ${PYSITELIB}/sqlmap/tests/test_xpath.py
 ${PYSITELIB}/sqlmap/tests/test_xpath.pyc
 ${PYSITELIB}/sqlmap/tests/test_xpath.pyo
+${PYSITELIB}/sqlmap/tests/test_xslt.py
+${PYSITELIB}/sqlmap/tests/test_xslt.pyc
+${PYSITELIB}/sqlmap/tests/test_xslt.pyo
 ${PYSITELIB}/sqlmap/tests/test_xxe.py
 ${PYSITELIB}/sqlmap/tests/test_xxe.pyc
 ${PYSITELIB}/sqlmap/tests/test_xxe.pyo
