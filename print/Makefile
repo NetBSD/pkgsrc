@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.967 2026/04/03 02:23:43 markd Exp $
+# $NetBSD: Makefile,v 1.968 2026/09/08 21:08:31 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -824,6 +824,8 @@ SUBDIR+=	tex-gincltex
 SUBDIR+=	tex-gincltex-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
+SUBDIR+=	tex-glossaries-extra
+SUBDIR+=	tex-glossaries-extra--doc
 SUBDIR+=	tex-go
 SUBDIR+=	tex-go-doc
 SUBDIR+=	tex-graphics

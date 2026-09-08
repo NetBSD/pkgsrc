@@ -1,0 +1,6 @@
+This package provides improvements and extra features to the
+glossaries package. Some of the default glossaries.sty
+behaviour is changed by glossaries-extra.sty. See the user
+manual glossaries-extra-manual.pdf for further details.
+glossaries-extra.sty requires the glossaries package and,
+naturally, all packages required by glossaries.sty.
