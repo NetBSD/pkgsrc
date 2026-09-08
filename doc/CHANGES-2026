@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5949 2026/09/08 19:59:25 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.5950 2026/09/08 20:50:01 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9085,3 +9085,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.60 [adam 2026-09-08]
 	Updated devel/py-test-env to 1.7.1 [adam 2026-09-08]
 	Updated lang/lua55 to 5.5.1 [alnsn 2026-09-08]
+	Updated www/resterm to 1.7.1 [drixter 2026-09-08]
