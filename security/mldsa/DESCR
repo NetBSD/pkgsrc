@@ -1,0 +1,10 @@
+This is mldsa, a module-lattice-based digital signature algorithm
+utility for generating keypairs, signing and verifying files and data.
+It has an alter ego, mlsignify, implementing the same command line
+switches as signify(1).  The mldsa and mlsignify utilities are based
+on the libmldsa(3) library, which uses parts of liboqs and openssl to
+provide ML-DSA-65 (NIST FIPS 204) post-quantum digital signatures.
+The secret key is usually protected by passphrase-based encryption,
+which uses Argon2id as a KDF, and AES256-GCM.
+
+SHA 3 512 is used for digests.
