@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/05/14 22:25:33 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/08 09:35:07 wiz Exp $
 
 DISTNAME=		zenicb-19981202
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -13,9 +13,9 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/zenicb
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
-.include "../../editors/emacs/modules.mk"
+EMACS_VERSIONS_ACCEPTED=	emacs31 emacs31nox
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+.include "../../editors/emacs/modules.mk"
 
 #PLIST_SUBST+=		ELISPDIR=${ELISPDIR}
 

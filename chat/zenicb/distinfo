@@ -1,7 +1,19 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:05:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/09/08 09:35:07 wiz Exp $
 
 BLAKE2s (zenicb-19981202.tar.gz) = 06a639a04910150c91a913f751feb7deef673402feadc4cb5f3643d9e444655a
 SHA512 (zenicb-19981202.tar.gz) = 98be3475459b0865a06fe8a1b327e3038031a58ad6f38351870f9ef2327777e5738a2063493be1011bda6d251b7493427f0128ad784a548af5d9f86b588821b4
 Size (zenicb-19981202.tar.gz) = 30833 bytes
-SHA1 (patch-aa) = 9077cfcddf33c64c14cd8c609e7921e339d60ce2
-SHA1 (patch-ab) = 26e994ed66a0b0792f9741edaae5a2bf86e39345
+SHA1 (patch-src_zenicb-8ball.el) = 12000cf2487725a1bbdf9f7dc033f2c0a6e31772
+SHA1 (patch-src_zenicb-add.el) = 9afcc05bf2f50300f55ca0dcd244afc707be7e9f
+SHA1 (patch-src_zenicb-away.el) = b1031d631d31dcc61756773ec632bcd53d2dffc4
+SHA1 (patch-src_zenicb-example.el) = b35fb7cf76d24f38993798da478d9ff008e8bdae
+SHA1 (patch-src_zenicb-fortran.el) = feab3d9a537727261b3959cde3d20a489217650c
+SHA1 (patch-src_zenicb-history.el) = b8a49aa28367938c9d17b8c29b59740f40a61066
+SHA1 (patch-src_zenicb-meditate.el) = c4369cef94addaac9958723095449a386d61e27a
+SHA1 (patch-src_zenicb-nologout.el) = 2af8a14a062bae36782de2b44f87f9bc65ba40b0
+SHA1 (patch-src_zenicb-signal.el) = 836fef57fb6733e06e92d3707a362665e8de4928
+SHA1 (patch-src_zenicb-stamp.el) = 48a502dece773cf2feac4630a0d2ea1e2d7fb255
+SHA1 (patch-src_zenicb-trigger.el) = 69798a72d6383cbb291ccafcb081007604c62871
+SHA1 (patch-src_zenicb-whereis.el) = d86a9180e39bb98c2b653b2eb6e0630deb21edf0
+SHA1 (patch-src_zenicb-yow.el) = 023ecf797ae5b350c2c4b183fb9a13ab713ad2c0
+SHA1 (patch-src_zenicb.el) = 6b273c8e1ac2a8e0bb4d27dbeb02d85f82d7a36a
