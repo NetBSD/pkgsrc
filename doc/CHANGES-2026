@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5945 2026/09/08 15:40:04 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5946 2026/09/08 17:52:32 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9080,3 +9080,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.7.0 [drixter 2026-09-08]
 	Updated textproc/ruby-multi_json to 1.21.2 [taca 2026-09-08]
 	Updated audio/faac to 1.50nb1 [kikadf 2026-09-08]
+	Updated net/dnscontrol to 5.0.4 [drixter 2026-09-08]
