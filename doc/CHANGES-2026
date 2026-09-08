@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5929 2026/09/08 09:55:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5930 2026/09/08 10:39:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9049,3 +9049,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-setuptools-git-versioning version 3.1.0 [adam 2026-09-08]
 	Updated devel/py-toolz to 1.1.0 [adam 2026-09-08]
 	Updated devel/py-cytoolz to 1.1.0 [adam 2026-09-08]
+	Updated finance/py-eth-utils to 6.0.0 [adam 2026-09-08]
+	Updated finance/py-eth-abi to 6.0.0 [adam 2026-09-08]
