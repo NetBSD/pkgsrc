@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5939 2026/09/08 13:30:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5940 2026/09/08 14:06:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9067,3 +9067,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.1.2 [adam 2026-09-08]
 	Updated textproc/py-pdf to 6.18.0 [adam 2026-09-08]
 	Updated print/py-pspdfutils to 3.3.17 [adam 2026-09-08]
+	Updated www/typo3-13 to 13.4.35 [taca 2026-09-08]
