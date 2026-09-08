@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/02/05 19:53:12 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/09/08 11:26:04 adam Exp $
 
-BLAKE2s (rlp-4.1.0.tar.gz) = c28351c0268a5189527482da0298e0196768290694480657a40c2b60df4c78ac
-SHA512 (rlp-4.1.0.tar.gz) = 021a27e13896a715ff408a2eee7482c6b286b8284bec7ec028b5cb7a0e8423d23b4e640ac6ceac3896c3de4e7fed0de32b5df01c5d9599a245209b86f061f578
-Size (rlp-4.1.0.tar.gz) = 33429 bytes
+BLAKE2s (rlp-5.0.0.tar.gz) = c5a2701eb30b4be74e3c430bb228aa95ddc83559cdcf7c71eae0bd40c1f445e4
+SHA512 (rlp-5.0.0.tar.gz) = 9f2370bbbb75e378c6a34f792fd258253f0dc9027072919167b393fa798f88d65d9a7735fcb3b02f7e7f80482ffa1cf05d29fd62c96587ac41ee42976ad0de37
+Size (rlp-5.0.0.tar.gz) = 46769 bytes
