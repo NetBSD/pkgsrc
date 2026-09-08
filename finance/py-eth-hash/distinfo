@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/02/04 13:41:21 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/09/08 08:27:22 adam Exp $
 
-BLAKE2s (eth_hash-0.7.1.tar.gz) = c583698b334f454258c4a9033711e1fb993f58d8fc7dd98fa575b1eabd136780
-SHA512 (eth_hash-0.7.1.tar.gz) = 6f33b317a514bc965d3f981af14329fc785d3536e033550a1966530243bcc25176326b949ead2de19df0a4732298ca96a4201e34f649b986b8c0ec04a7e76d3d
-Size (eth_hash-0.7.1.tar.gz) = 12227 bytes
+BLAKE2s (eth_hash-0.8.0.tar.gz) = 8b95b69dd8799d6aafffa2c38e4065c4ea465144de7f291eb4d35f84c7f222c9
+SHA512 (eth_hash-0.8.0.tar.gz) = 231ca10a99170a15d843e43cdb83322740439f9f97fa0ef516975d2cc9ae68a01f1da5bf8c6846eef0bf26f09aa2d0a7ae38e1f630dcd06fc0ac2cf5f7cc4cf1
+Size (eth_hash-0.8.0.tar.gz) = 12225 bytes
