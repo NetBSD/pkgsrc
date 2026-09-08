@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2025/02/05 19:54:35 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/09/08 11:31:50 adam Exp $
 
-BLAKE2s (eth_rlp-2.2.0.tar.gz) = 37d39a7b1a59e9c2f58d49f8cc498e5a3b69991176a6c8387717462b47f94f93
-SHA512 (eth_rlp-2.2.0.tar.gz) = 702d854bf7a2d8ce67427e5f6d8df40c9e9bfbd1a5aecc8ef4b738fad519e20212be5a7e777f1aeb3e5cbe8ff6b7e9abdff9012180916fb511984246afb6d703
-Size (eth_rlp-2.2.0.tar.gz) = 7720 bytes
+BLAKE2s (eth_rlp-3.0.0.tar.gz) = 50fbd47f7e066d7d36e180dd677c964b4b3a3b6164835d550570c9255e533147
+SHA512 (eth_rlp-3.0.0.tar.gz) = 019adf2317b3e7361315de29e31120c9f42371c9dae113a42b153c202fc1f294c2f8147dfac63611189e2a1778b72830cccd182b305211128d60b3672043392b
+Size (eth_rlp-3.0.0.tar.gz) = 17981 bytes
+SHA1 (patch-pyproject.toml) = 61d474794042f95bce9c386bdc1c09a40fa105d7
