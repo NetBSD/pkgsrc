@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5948 2026/09/08 19:21:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5949 2026/09/08 19:59:25 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9084,3 +9084,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/mldsa version 20260908 [agc 2026-09-08]
 	Updated www/py-zensical to 0.0.60 [adam 2026-09-08]
 	Updated devel/py-test-env to 1.7.1 [adam 2026-09-08]
+	Updated lang/lua55 to 5.5.1 [alnsn 2026-09-08]
