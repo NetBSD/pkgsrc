@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/06/03 08:08:44 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/09/08 05:51:13 adam Exp $
 
-BLAKE2s (kubernetes-36.0.2.tar.gz) = 24ae4538306580f5a653e48b1ba610a2dee40402c88002d7ee5c1aa0512ed5a3
-SHA512 (kubernetes-36.0.2.tar.gz) = 1925dd5e74959ab599d816e0acd5e68b0b663292530856efc0330aadd9d121ef56b992512d6f0393213aea8e770d5116592953fad8098e6a71af79a8b4b45fe9
-Size (kubernetes-36.0.2.tar.gz) = 2336738 bytes
+BLAKE2s (kubernetes-36.0.3.tar.gz) = b25a6be187f5854a2b005a38830579eef3f0e214406718ea3733e62996fac010
+SHA512 (kubernetes-36.0.3.tar.gz) = fc53d0610eacb6b37169eeaf7a093e9e6d2c688bd13d9c85421e51e30771aec802ba6b9031e39ef6f4d3065c01c186eb3b871f7fc0dd666da4a48007c74675e5
+Size (kubernetes-36.0.3.tar.gz) = 2337528 bytes
