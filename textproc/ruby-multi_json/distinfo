@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/05/05 13:25:46 taca Exp $
+$NetBSD: distinfo,v 1.26 2026/09/08 14:54:40 taca Exp $
 
-BLAKE2s (multi_json-1.21.1.gem) = 2ce98eed5353b31ba94ba6a1c02199d562e8e9d30e5be78ade6ce5ceaeeaeb49
-SHA512 (multi_json-1.21.1.gem) = 6886a646da691ceed9bab77259738f6a2fc3809bfa39ca6b313dad0b96e5cd7d92121404a37d83716dce66ce1966502660846e74cb25920a2313e0b840f8244d
-Size (multi_json-1.21.1.gem) = 26624 bytes
+BLAKE2s (multi_json-1.21.2.gem) = 3b38fa79cc8be3328542b595331e90513dc7132019efa9a01e6aa2726130d1bd
+SHA512 (multi_json-1.21.2.gem) = 1ad6e94bec11faacbe3258109099e847c56550266c242679ccf0ed9104aa29d247ee782070f16f89518e89c19c4c53713a562551d25d3eed90ea405c9352acf6
+Size (multi_json-1.21.2.gem) = 27648 bytes
