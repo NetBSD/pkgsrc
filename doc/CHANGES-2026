@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5925 2026/09/08 05:51:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5926 2026/09/08 07:01:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9041,3 +9041,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pyquery to 2.1.0 [adam 2026-09-08]
 	Updated devel/py-blessed to 1.49.0 [adam 2026-09-08]
 	Updated sysutils/py-kubernetes to 36.0.3 [adam 2026-09-08]
+	Updated audio/strawberry to 1.2.29 [adam 2026-09-08]
+	Updated devel/py-filelock to 3.32.5 [adam 2026-09-08]
