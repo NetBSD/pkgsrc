@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5938 2026/09/08 13:06:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5939 2026/09/08 13:30:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9065,3 +9065,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chromium to 152.0.7977.82 [kikadf 2026-09-08]
 	Updated graphics/py-pygraphviz to 2.0.1 [adam 2026-09-08]
 	Updated devel/py-urwid to 4.1.2 [adam 2026-09-08]
+	Updated textproc/py-pdf to 6.18.0 [adam 2026-09-08]
+	Updated print/py-pspdfutils to 3.3.17 [adam 2026-09-08]
