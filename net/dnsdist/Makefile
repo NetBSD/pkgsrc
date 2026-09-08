@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2026/08/26 10:19:08 adam Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/08 10:41:07 drixter Exp $
 
-DISTNAME=	dnsdist-2.1.1
-PKGREVISION=	1
+DISTNAME=	dnsdist-2.1.2
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.xz
