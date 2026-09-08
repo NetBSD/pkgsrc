@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 10:14:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/08 09:52:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tlz/__init__.py
@@ -17,9 +16,6 @@ ${PYSITELIB}/toolz/__init__.pyo
 ${PYSITELIB}/toolz/_signatures.py
 ${PYSITELIB}/toolz/_signatures.pyc
 ${PYSITELIB}/toolz/_signatures.pyo
-${PYSITELIB}/toolz/_version.py
-${PYSITELIB}/toolz/_version.pyc
-${PYSITELIB}/toolz/_version.pyo
 ${PYSITELIB}/toolz/compatibility.py
 ${PYSITELIB}/toolz/compatibility.pyc
 ${PYSITELIB}/toolz/compatibility.pyo
@@ -53,6 +49,18 @@ ${PYSITELIB}/toolz/sandbox/core.pyo
 ${PYSITELIB}/toolz/sandbox/parallel.py
 ${PYSITELIB}/toolz/sandbox/parallel.pyc
 ${PYSITELIB}/toolz/sandbox/parallel.pyo
+${PYSITELIB}/toolz/sandbox/tests/__init__.py
+${PYSITELIB}/toolz/sandbox/tests/__init__.pyc
+${PYSITELIB}/toolz/sandbox/tests/__init__.pyo
+${PYSITELIB}/toolz/sandbox/tests/test_core.py
+${PYSITELIB}/toolz/sandbox/tests/test_core.pyc
+${PYSITELIB}/toolz/sandbox/tests/test_core.pyo
+${PYSITELIB}/toolz/sandbox/tests/test_parallel.py
+${PYSITELIB}/toolz/sandbox/tests/test_parallel.pyc
+${PYSITELIB}/toolz/sandbox/tests/test_parallel.pyo
+${PYSITELIB}/toolz/tests/__init__.py
+${PYSITELIB}/toolz/tests/__init__.pyc
+${PYSITELIB}/toolz/tests/__init__.pyo
 ${PYSITELIB}/toolz/tests/test_compatibility.py
 ${PYSITELIB}/toolz/tests/test_compatibility.pyc
 ${PYSITELIB}/toolz/tests/test_compatibility.pyo
@@ -74,6 +82,9 @@ ${PYSITELIB}/toolz/tests/test_inspect_args.pyo
 ${PYSITELIB}/toolz/tests/test_itertoolz.py
 ${PYSITELIB}/toolz/tests/test_itertoolz.pyc
 ${PYSITELIB}/toolz/tests/test_itertoolz.pyo
+${PYSITELIB}/toolz/tests/test_package.py
+${PYSITELIB}/toolz/tests/test_package.pyc
+${PYSITELIB}/toolz/tests/test_package.pyo
 ${PYSITELIB}/toolz/tests/test_recipes.py
 ${PYSITELIB}/toolz/tests/test_recipes.pyc
 ${PYSITELIB}/toolz/tests/test_recipes.pyo
