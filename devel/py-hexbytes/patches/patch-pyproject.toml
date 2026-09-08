@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/09/08 11:21:57 adam Exp $
+
+Don't install docs nor newsfragments.
+
+--- pyproject.toml.orig	2026-09-08 11:18:56.117968613 +0000
++++ pyproject.toml
+@@ -65,7 +65,7 @@ dev = [
+ ]
+ 
+ [tool.setuptools.packages.find]
+-exclude = ["scripts", "scripts.*", "tests", "tests.*"]
++exclude = ["docs", "docs*", "newsfragments", "newsfragments*", "scripts", "scripts.*", "tests", "tests.*"]
+ 
+ [tool.setuptools.package-data]
+ hexbytes = ["py.typed"]
