@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/09/01 14:15:54 adam Exp $
+$NetBSD: distinfo,v 1.35 2026/09/08 11:35:08 adam Exp $
 
-BLAKE2s (gitpython-3.1.61.tar.gz) = 86ecfcb11b683b5bae3d05571591425307c378a2defa16f4cc3e05faaeecea38
-SHA512 (gitpython-3.1.61.tar.gz) = 0ba61c823382c384a3da0549f0a2a2e06335d91a1204bbe3364508d864dcb6f4ad0194dfe56c9b263ce83c58f8284884558910175b1a8bdc8416c1fda2f01711
-Size (gitpython-3.1.61.tar.gz) = 231680 bytes
+BLAKE2s (gitpython-3.1.62.tar.gz) = 7be9fcb28e5cc3e53a00ed0215adb5485bf37b07d35451958d7905b88e9f81eb
+SHA512 (gitpython-3.1.62.tar.gz) = 47545ecf764f16cfc136852f58426c0ee9388fdd831e64b7677a8fdbb1ed2a5fc561f02c0bb6af587d8825b57fc784db6576fc8d26ca2b196d68bf7babb8837b
+Size (gitpython-3.1.62.tar.gz) = 231728 bytes

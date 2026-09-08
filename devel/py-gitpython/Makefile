@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/09/01 14:15:54 adam Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/08 11:35:08 adam Exp $
 
-DISTNAME=	gitpython-3.1.61
+DISTNAME=	gitpython-3.1.62
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitpython/}
