@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/05/05 13:25:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/09/08 14:54:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/lib/multi_json/adapters/oj_common.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/yajl.rb
 ${GEM_LIBDIR}/lib/multi_json/concurrency.rb
 ${GEM_LIBDIR}/lib/multi_json/deprecated.rb
+${GEM_LIBDIR}/lib/multi_json/legacy_constant.rb
 ${GEM_LIBDIR}/lib/multi_json/options.rb
 ${GEM_LIBDIR}/lib/multi_json/options_cache.rb
 ${GEM_LIBDIR}/lib/multi_json/options_cache/mutex_store.rb
