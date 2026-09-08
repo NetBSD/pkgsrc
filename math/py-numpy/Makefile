@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.157 2026/08/17 18:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2026/09/08 05:08:26 adam Exp $
 
-DISTNAME=	numpy-2.5.2
+DISTNAME=	numpy-2.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 
@@ -11,10 +10,10 @@ HOMEPAGE=	https://numpy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
 USE_CC_FEATURES=	c11
