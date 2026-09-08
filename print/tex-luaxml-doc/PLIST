@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/08 21:12:05 markd Exp $
+share/texmf-dist/doc/luatex/luaxml/README
+share/texmf-dist/doc/luatex/luaxml/luaxml.pdf
+share/texmf-dist/doc/luatex/luaxml/luaxml.tex

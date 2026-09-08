@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/08 21:12:05 markd Exp $
+share/texmf-dist/tex/luatex/luaxml/luaxml-cssquery.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-domobject.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-encodings.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-entities.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-htmltemplates.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-mod-handler.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-mod-html.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-mod-xml.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-namedentities.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-parse-query.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-pretty.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-stack.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-sty.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-testxml.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml-transform.lua
+share/texmf-dist/tex/luatex/luaxml/luaxml.sty

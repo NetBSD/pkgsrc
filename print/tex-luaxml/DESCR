@@ -1,0 +1,4 @@
+LuaXML is a pure Lua library for reading and serializing XML
+files. The current release is aimed mainly at support for the
+odsfile package. The documentation was created by automatic
+conversion of original documentation in the source code.

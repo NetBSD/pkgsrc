@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/08 21:12:05 markd Exp $
+
+BLAKE2s (luaxml.r78101.tar.xz) = a0d545abb189c33ea9983d93d40b2514f10a869f76afbc2e0ae401f6bce3063c
+SHA512 (luaxml.r78101.tar.xz) = d18f10e7441077951f0e6591967e0d9bb07db220d6c4be181da8e213d84964eb07535765cfaba548481532389046fb847bc9c32ed1ef12f80b6c0028bd1e0e9c
+Size (luaxml.r78101.tar.xz) = 47992 bytes
