@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5923 2026/09/08 05:10:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5924 2026/09/08 05:32:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9034,3 +9034,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/sqlmap to 1.10.9 [adam 2026-09-08]
 	Updated math/py-numpy to 2.5.3 [adam 2026-09-08]
 	Updated www/py-djangorestframework to 3.18.1 [adam 2026-09-08]
+	Added lang/py-hatch-mypyc version 0.16.0 [adam 2026-09-08]
+	Updated databases/py-alembic to 1.19.2 [adam 2026-09-08]
+	Updated databases/py-peewee to 4.5.1 [adam 2026-09-08]
