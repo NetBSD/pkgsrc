@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.227 2026/08/11 15:15:50 taca Exp $
+$NetBSD: distinfo,v 1.228 2026/09/08 14:17:30 taca Exp $
 
-BLAKE2s (postfix-3.11.6.tar.gz) = ef919017c9f7132b86e05f2c1bc79f2060c29c197aee4a687609c80086616caa
-SHA512 (postfix-3.11.6.tar.gz) = eddb71b7b64a8f9e0fca8a93679e86ac53eebc458a09910e5f3a871523d35361071a391cc904e511835137d4461a6a779c1b24c519e2f6a7de577e55e71a75ba
-Size (postfix-3.11.6.tar.gz) = 5289392 bytes
+BLAKE2s (postfix-3.11.7.tar.gz) = e0f71d98a31638608018c933448ffcc9c5aebcc9d7ff61d577cb40b98863ce5e
+SHA512 (postfix-3.11.7.tar.gz) = 3b4ef7562a24bbab1d0ca361ac0af1037aa3d4ae65a7c825711de9d5d3ed88975aad63cb09991717de334f4382c29039b527a3e8d4e65c5a6d35efd3e782910f
+Size (postfix-3.11.7.tar.gz) = 5293599 bytes
 SHA1 (patch-aa) = c8216f133e202a7bb37682b0dbc1448f021e7c1c
 SHA1 (patch-ag) = 5b6f0e82ce8202d76043130392c4c76737b155d7
 SHA1 (patch-ai) = 765faa3f959ab0669055d3742a2a2cfc3b454235
