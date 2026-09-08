@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/08 05:22:14 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/hatch_mypyc/__about__.py
+${PYSITELIB}/hatch_mypyc/__about__.pyc
+${PYSITELIB}/hatch_mypyc/__about__.pyo
+${PYSITELIB}/hatch_mypyc/__init__.py
+${PYSITELIB}/hatch_mypyc/__init__.pyc
+${PYSITELIB}/hatch_mypyc/__init__.pyo
+${PYSITELIB}/hatch_mypyc/hooks.py
+${PYSITELIB}/hatch_mypyc/hooks.pyc
+${PYSITELIB}/hatch_mypyc/hooks.pyo
+${PYSITELIB}/hatch_mypyc/plugin.py
+${PYSITELIB}/hatch_mypyc/plugin.pyc
+${PYSITELIB}/hatch_mypyc/plugin.pyo
+${PYSITELIB}/hatch_mypyc/utils.py
+${PYSITELIB}/hatch_mypyc/utils.pyc
+${PYSITELIB}/hatch_mypyc/utils.pyo
