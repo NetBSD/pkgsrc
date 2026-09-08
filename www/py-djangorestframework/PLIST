@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/04/22 07:34:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/09/08 05:10:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -64,6 +64,9 @@ ${PYSITELIB}/rest_framework/compat.pyo
 ${PYSITELIB}/rest_framework/decorators.py
 ${PYSITELIB}/rest_framework/decorators.pyc
 ${PYSITELIB}/rest_framework/decorators.pyo
+${PYSITELIB}/rest_framework/deprecation.py
+${PYSITELIB}/rest_framework/deprecation.pyc
+${PYSITELIB}/rest_framework/deprecation.pyo
 ${PYSITELIB}/rest_framework/exceptions.py
 ${PYSITELIB}/rest_framework/exceptions.pyc
 ${PYSITELIB}/rest_framework/exceptions.pyo
