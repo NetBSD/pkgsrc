@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/01/11 10:47:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/09/08 05:31:06 adam Exp $
 bin/alembic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -88,6 +88,12 @@ ${PYSITELIB}/alembic/ddl/sqlite.pyo
 ${PYSITELIB}/alembic/environment.py
 ${PYSITELIB}/alembic/environment.pyc
 ${PYSITELIB}/alembic/environment.pyo
+${PYSITELIB}/alembic/ext/__init__.py
+${PYSITELIB}/alembic/ext/__init__.pyc
+${PYSITELIB}/alembic/ext/__init__.pyo
+${PYSITELIB}/alembic/ext/checkconstraint_byname.py
+${PYSITELIB}/alembic/ext/checkconstraint_byname.pyc
+${PYSITELIB}/alembic/ext/checkconstraint_byname.pyo
 ${PYSITELIB}/alembic/migration.py
 ${PYSITELIB}/alembic/migration.pyc
 ${PYSITELIB}/alembic/migration.pyo
