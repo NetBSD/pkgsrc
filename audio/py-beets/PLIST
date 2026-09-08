@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2026/08/03 17:48:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2026/09/08 05:41:37 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,6 +23,9 @@ ${PYSITELIB}/beets/autotag/hooks.pyo
 ${PYSITELIB}/beets/autotag/match.py
 ${PYSITELIB}/beets/autotag/match.pyc
 ${PYSITELIB}/beets/autotag/match.pyo
+${PYSITELIB}/beets/autotag/source.py
+${PYSITELIB}/beets/autotag/source.pyc
+${PYSITELIB}/beets/autotag/source.pyo
 ${PYSITELIB}/beets/config_default.yaml
 ${PYSITELIB}/beets/context.py
 ${PYSITELIB}/beets/context.pyc
@@ -48,6 +51,9 @@ ${PYSITELIB}/beets/dbcore/sort.pyo
 ${PYSITELIB}/beets/dbcore/types.py
 ${PYSITELIB}/beets/dbcore/types.pyc
 ${PYSITELIB}/beets/dbcore/types.pyo
+${PYSITELIB}/beets/events.py
+${PYSITELIB}/beets/events.pyc
+${PYSITELIB}/beets/events.pyo
 ${PYSITELIB}/beets/exceptions.py
 ${PYSITELIB}/beets/exceptions.pyc
 ${PYSITELIB}/beets/exceptions.pyo
@@ -161,9 +167,6 @@ ${PYSITELIB}/beets/ui/commands/stats.pyo
 ${PYSITELIB}/beets/ui/commands/update.py
 ${PYSITELIB}/beets/ui/commands/update.pyc
 ${PYSITELIB}/beets/ui/commands/update.pyo
-${PYSITELIB}/beets/ui/commands/utils.py
-${PYSITELIB}/beets/ui/commands/utils.pyc
-${PYSITELIB}/beets/ui/commands/utils.pyo
 ${PYSITELIB}/beets/ui/commands/version.py
 ${PYSITELIB}/beets/ui/commands/version.pyc
 ${PYSITELIB}/beets/ui/commands/version.pyo
@@ -176,9 +179,6 @@ ${PYSITELIB}/beets/util/__init__.pyo
 ${PYSITELIB}/beets/util/artresizer.py
 ${PYSITELIB}/beets/util/artresizer.pyc
 ${PYSITELIB}/beets/util/artresizer.pyo
-${PYSITELIB}/beets/util/bluelet.py
-${PYSITELIB}/beets/util/bluelet.pyc
-${PYSITELIB}/beets/util/bluelet.pyo
 ${PYSITELIB}/beets/util/color.py
 ${PYSITELIB}/beets/util/color.pyc
 ${PYSITELIB}/beets/util/color.pyo
