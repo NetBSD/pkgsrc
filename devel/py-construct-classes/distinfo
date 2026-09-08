@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/11/26 11:44:12 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/09/08 11:51:30 adam Exp $
 
-BLAKE2s (construct_classes-0.2.2.tar.gz) = 0ffb89c48a75bc38aea39e8ab2c283bdebb7a5ac87e521d82d37b42de1090ab9
-SHA512 (construct_classes-0.2.2.tar.gz) = b9d262e2604506e52dd997fd9faf9e60506870adf58e2124facbeff025b1e7917ad2604b096adf56955d4365bfe36eb88f0ad75d1c98c2d27175cdad8fb65e7b
-Size (construct_classes-0.2.2.tar.gz) = 4622 bytes
+BLAKE2s (construct_classes-0.2.3.tar.gz) = 4c46f1d1dda9fea7451ec2d2e835fad42931d2e659489b7291c4994dff141db6
+SHA512 (construct_classes-0.2.3.tar.gz) = 0a3da92d798fcbce33b9fd70b0eb9285668a8983f1d037f84a5b606fa4439cbcb34b3de546b0f04b167b1ef4558e395f06edac629e1f3ca8773da1bb6734ab93
+Size (construct_classes-0.2.3.tar.gz) = 5411 bytes
