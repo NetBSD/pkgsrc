@@ -1,0 +1,16 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/09/08 19:19:41 adam Exp $
+
+Avoid crates from git.
+
+--- Cargo.toml.orig	2026-09-08 19:07:15.013202246 +0000
++++ Cargo.toml
+@@ -91,8 +91,7 @@ walkdir = "2.5"
+ webbrowser = "1.2.2"
+ 
+ [workspace.dependencies.zrx]
+-git = "https://github.com/zensical/zrx.git"
+-rev = "60793b586b9e2e2cc65b8f99c88abeda9545c3f9"
++path = "../zrx-60793b586b9e2e2cc65b8f99c88abeda9545c3f9/crates/zrx"
+ 
+ [workspace.dependencies.pyo3]
+ version = "0.29.0"
