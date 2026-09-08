@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5947 2026/09/08 18:56:51 agc Exp $
+$NetBSD: CHANGES-2026,v 1.5948 2026/09/08 19:21:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9082,3 +9082,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/faac to 1.50nb1 [kikadf 2026-09-08]
 	Updated net/dnscontrol to 5.0.4 [drixter 2026-09-08]
 	Added security/mldsa version 20260908 [agc 2026-09-08]
+	Updated www/py-zensical to 0.0.60 [adam 2026-09-08]
+	Updated devel/py-test-env to 1.7.1 [adam 2026-09-08]
