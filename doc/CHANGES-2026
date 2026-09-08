@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5941 2026/09/08 14:08:49 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5942 2026/09/08 14:18:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9069,3 +9069,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-pspdfutils to 3.3.17 [adam 2026-09-08]
 	Updated www/typo3-13 to 13.4.35 [taca 2026-09-08]
 	Updated www/typo3-14 to 14.3.7 [taca 2026-09-08]
+	Updated mail/postfix to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-cdb to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-ldap to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-lmdb to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-mysql to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-pcre to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-pgsql to 3.11.7 [taca 2026-09-08]
+	Updated mail/postfix-sqlite to 3.11.7 [taca 2026-09-08]
