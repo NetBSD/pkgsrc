@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2026/09/02 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/09/08 13:30:00 adam Exp $
 
-DISTNAME=	psutils-3.3.16
+DISTNAME=	psutils-3.3.17
 # renamed from pspdfutils to psutils in 3.3.7
 # TODO: follow suit
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ps/pspdf/}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutils/}
 
@@ -14,7 +13,7 @@ COMMENT=	Manipulate PDF and PostScript documents
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage-[0-9]*:../../devel/py-argparse-manpage
+TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage>=0:../../devel/py-argparse-manpage
 DEPENDS+=	${PYPKGPREFIX}-puremagic>=1.26:../../sysutils/py-puremagic
 DEPENDS+=	${PYPKGPREFIX}-pdf>=4.3.0:../../textproc/py-pdf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-datafiles>=0:../../devel/py-test-datafiles
