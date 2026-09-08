@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/08 05:45:32 adam Exp $
 
-DISTNAME=	pyquery-2.0.1
+DISTNAME=	pyquery-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}
 
@@ -12,9 +11,10 @@ COMMENT=	Python jquery-like library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cssselect>=1.2.0:../../textproc/py-cssselect
+DEPENDS+=	${PYPKGPREFIX}-cssselect>=1.5.0:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.1:../../textproc/py-lxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
+TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest>=0:../../www/py-WebTest
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
