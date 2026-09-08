@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/08 09:55:01 adam Exp $
 
-DISTNAME=	cytoolz-1.0.1
+DISTNAME=	cytoolz-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cytoolz/}
 
@@ -11,8 +10,9 @@ HOMEPAGE=	https://github.com/pytoolz/cytoolz
 COMMENT=	Cython Toolz High performance functional utilities
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-git-versioning>=2.0:../../devel/py-setuptools-git-versioning
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.0:../../devel/py-toolz
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
