@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2026/08/25 02:23:09 brook Exp $
+# $NetBSD: Makefile,v 1.125 2026/09/08 18:28:45 brook Exp $
 
 DISTNAME=	bulk-medium-20260413
 CATEGORIES=	meta-pkgs
@@ -118,8 +118,8 @@ DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
 .if ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
-DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
-DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
+DEPENDS+=	xenkernel420-[0-9]*:../../sysutils/xenkernel420
+DEPENDS+=	xentools420-[0-9]*:../../sysutils/xentools420
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 DEPENDS+=	apache>=2.4:../../www/apache24
