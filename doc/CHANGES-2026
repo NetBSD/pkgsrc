@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5924 2026/09/08 05:32:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5925 2026/09/08 05:51:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9037,3 +9037,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/py-hatch-mypyc version 0.16.0 [adam 2026-09-08]
 	Updated databases/py-alembic to 1.19.2 [adam 2026-09-08]
 	Updated databases/py-peewee to 4.5.1 [adam 2026-09-08]
+	Updated audio/py-beets to 2.14.0 [adam 2026-09-08]
+	Updated textproc/py-pyquery to 2.1.0 [adam 2026-09-08]
+	Updated devel/py-blessed to 1.49.0 [adam 2026-09-08]
+	Updated sysutils/py-kubernetes to 36.0.3 [adam 2026-09-08]
