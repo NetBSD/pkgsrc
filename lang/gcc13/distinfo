@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/01/07 19:55:52 riastradh Exp $
+$NetBSD: distinfo,v 1.6 2026/09/08 13:20:49 sjmulder Exp $
 
 BLAKE2s (gcc-13.3.0.diff) = 9b002a64761cf2f2a6a9a8c8decff8408380c0fe94c2d3013e4d84299bacf814
 SHA512 (gcc-13.3.0.diff) = 6165b6201f4ef94ee254ea40410911f5e5e1a05d80d4da2fce90b3db94000c3d5c5a28c9a4ad1a43387faae68d94fbef8e4d24e1ff049b9c0014c00f6f50757b
@@ -32,4 +32,5 @@ SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
+SHA1 (patch-libsanitizer_sanitizer__common_sanitizer__platform__limits__posix.cpp) = b0e5b0402ff9ba7aeff9daed63ee7f7ce1f97d73
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 891ec8488516592ea2065509b7310c55d7a367ad
