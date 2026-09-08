@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 10:14:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/08 09:55:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cytoolz/__init__.pxd
@@ -12,9 +11,6 @@ ${PYSITELIB}/cytoolz/__init__.pyo
 ${PYSITELIB}/cytoolz/_signatures.py
 ${PYSITELIB}/cytoolz/_signatures.pyc
 ${PYSITELIB}/cytoolz/_signatures.pyo
-${PYSITELIB}/cytoolz/_version.py
-${PYSITELIB}/cytoolz/_version.pyc
-${PYSITELIB}/cytoolz/_version.pyo
 ${PYSITELIB}/cytoolz/compatibility.py
 ${PYSITELIB}/cytoolz/compatibility.pyc
 ${PYSITELIB}/cytoolz/compatibility.pyo
@@ -28,18 +24,25 @@ ${PYSITELIB}/cytoolz/curried/exceptions.pyo
 ${PYSITELIB}/cytoolz/curried/operator.py
 ${PYSITELIB}/cytoolz/curried/operator.pyc
 ${PYSITELIB}/cytoolz/curried/operator.pyo
+${PYSITELIB}/cytoolz/dicttoolz.c
 ${PYSITELIB}/cytoolz/dicttoolz.pxd
 ${PYSITELIB}/cytoolz/dicttoolz.pyx
 ${PYSITELIB}/cytoolz/dicttoolz.so
+${PYSITELIB}/cytoolz/functoolz.c
 ${PYSITELIB}/cytoolz/functoolz.pxd
 ${PYSITELIB}/cytoolz/functoolz.pyx
 ${PYSITELIB}/cytoolz/functoolz.so
+${PYSITELIB}/cytoolz/itertoolz.c
 ${PYSITELIB}/cytoolz/itertoolz.pxd
 ${PYSITELIB}/cytoolz/itertoolz.pyx
 ${PYSITELIB}/cytoolz/itertoolz.so
+${PYSITELIB}/cytoolz/recipes.c
 ${PYSITELIB}/cytoolz/recipes.pxd
 ${PYSITELIB}/cytoolz/recipes.pyx
 ${PYSITELIB}/cytoolz/recipes.so
+${PYSITELIB}/cytoolz/tests/__init__.py
+${PYSITELIB}/cytoolz/tests/__init__.pyc
+${PYSITELIB}/cytoolz/tests/__init__.pyo
 ${PYSITELIB}/cytoolz/tests/dev_skip_test.py
 ${PYSITELIB}/cytoolz/tests/dev_skip_test.pyc
 ${PYSITELIB}/cytoolz/tests/dev_skip_test.pyo
@@ -94,6 +97,7 @@ ${PYSITELIB}/cytoolz/tests/test_tlz.pyo
 ${PYSITELIB}/cytoolz/tests/test_utils.py
 ${PYSITELIB}/cytoolz/tests/test_utils.pyc
 ${PYSITELIB}/cytoolz/tests/test_utils.pyo
+${PYSITELIB}/cytoolz/utils.c
 ${PYSITELIB}/cytoolz/utils.pxd
 ${PYSITELIB}/cytoolz/utils.pyx
 ${PYSITELIB}/cytoolz/utils.so
