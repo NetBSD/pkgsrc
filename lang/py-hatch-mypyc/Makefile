@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/09/08 05:22:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/08 05:23:00 adam Exp $
 
 DISTNAME=	hatch_mypyc-0.16.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-mypyc/}
 
