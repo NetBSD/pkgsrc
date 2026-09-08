@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5934 2026/09/08 11:35:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5935 2026/09/08 11:51:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9058,3 +9058,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-rlp to 5.0.0 [adam 2026-09-08]
 	Updated finance/py-eth-rlp to 3.0.0 [adam 2026-09-08]
 	Updated devel/py-gitpython to 3.1.62 [adam 2026-09-08]
+	Updated devel/py-meson_python to 0.21.0 [adam 2026-09-08]
+	Updated devel/py-construct-classes to 0.2.3 [adam 2026-09-08]
