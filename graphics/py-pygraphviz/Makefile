@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/10/09 08:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/08 13:04:51 adam Exp $
 
-DISTNAME=	pygraphviz-1.14
+DISTNAME=	pygraphviz-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygraphviz/}
 
@@ -11,10 +10,20 @@ HOMEPAGE=	https://pygraphviz.github.io/
 COMMENT=	Python interface to the Graphviz package
 LICENSE=	original-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_TOOLS+=	pkg-config
 
+SUBST_CLASSES+=		libpath
+SUBST_STAGE.libpath=	pre-configure
+SUBST_MESSAGE.libpath=	Fixing absolute paths.
+SUBST_FILES.libpath=	setup.py
+SUBST_SED.libpath=	-e 's,"/usr/local,"${PREFIX},g'
+
+pre-configure:
+	${LN} -fs ${TOOLBASE}/bin/swig4.0 ${BUILDLINK_DIR}/bin/swig
+
+.include "../../devel/swig4/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
