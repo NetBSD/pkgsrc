@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2026/08/28 14:03:01 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/09/08 15:39:45 kikadf Exp $
 
 BLAKE2s (faac-1.50.tar.gz) = 9e9968e5badc3c0f8b9d1faa8e4ba46787dece2619866ceff0043851906bfc69
 SHA512 (faac-1.50.tar.gz) = 2fadbcb4569993d05594e93b69d7e08ee31041c588523a1320fcc4dcceb4a08d486218b9c97bb8e63e02c3df85b9d4ab332bcd0c1bb1771086b8107ad4e1e3a5
 Size (faac-1.50.tar.gz) = 113590 bytes
 SHA1 (patch-frontend_main.c) = 3b0327b636c60cf2a0466d3b38363e364bf504fe
+SHA1 (patch-meson.build) = aacc1722a0ad77e5d9796be82e42c7021b401621

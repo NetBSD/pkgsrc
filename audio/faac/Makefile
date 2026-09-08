@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/08/28 14:03:01 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/08 15:39:45 kikadf Exp $
 
 DISTNAME=	faac-1.50
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=knik0/}
 GITHUB_TAG=	${DISTNAME}

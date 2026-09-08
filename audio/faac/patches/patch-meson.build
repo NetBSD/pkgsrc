@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/09/08 15:39:45 kikadf Exp $
+
+Disable LTO, it breaks the static library
+https://github.com/knik0/faac/commit/ecd5a10122a9ce698516bb587b6036efab0a787d
+
+--- meson.build.orig	2026-09-08 15:27:38.243450215 +0000
++++ meson.build
+@@ -5,7 +5,6 @@ project('faac', 'c',
+         'buildtype=release',
+         'warning_level=1',
+         'c_std=gnu99,c99',
+-        'b_lto=true'
+     ])
+ 
+ add_global_arguments('-DHAVE_CONFIG_H', language: 'c')
