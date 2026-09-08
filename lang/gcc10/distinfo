@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/07/21 09:03:20 he Exp $
+$NetBSD: distinfo,v 1.22 2026/09/08 13:20:35 sjmulder Exp $
 
 BLAKE2s (gcc-10.5.0.tar.xz) = af4a8b262d9d4e534e8e1c311897e68e7d64f147ad1eed42e77f9674da188bf3
 SHA512 (gcc-10.5.0.tar.xz) = d86dbc18b978771531f4039465e7eb7c19845bf607dc513c97abf8e45ffe1086a99d98f83dfb7b37204af22431574186de9d5ff80c8c3c3a98dbe3983195bffd
@@ -52,6 +52,7 @@ SHA1 (patch-libiberty_pex-unix.c) = 52896635b2578e8338a82ad3a3e9fd4d911c8489
 SHA1 (patch-libquadmath_printf_printf_fphex.c) = 4e3927bb2ba9013e1ef69e38d0481c930b77a2fc
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 9c862bd2e07f8724646896a9f93bb8bb15bb4185
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 1a3a419218fb260c1c4a0ed08f5a72bde683d039
+SHA1 (patch-libsanitizer_sanitizer__common_sanitizer__platform__limits__posix.cpp) = 9e8cc7d29eac1257feac8c6fabbca9a2346fb59d
 SHA1 (patch-libstdc++-v3_include_bits_std_abs.h) = 2a32b52dc2d958085525461bd6da0a7b299ee09d
 SHA1 (patch-libstdc++-v3_include_bits_stl_function.h) = 2757a988fb0a19825abb9963dc236effa9e3ea80
 SHA1 (patch-libstdc++-v3_include_c_global_cmath) = 24ec0941fcad205ce090b969a90ce5e85e235775
