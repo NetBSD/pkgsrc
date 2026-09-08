@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/09/08 18:55:26 agc Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/08 23:04:50 agc Exp $
 
 DISTNAME=		mldsa-${VERSION}
-VERSION=		20260908
+VERSION=		20260909
 CATEGORIES=		security
 MASTER_SITES=		-${MASTER_SITE_CODEBERG:=agc-codeberg/mldsa/archive/${VERSION}.tar.gz}
 

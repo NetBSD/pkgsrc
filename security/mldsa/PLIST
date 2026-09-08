@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/08 18:55:26 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/08 23:04:50 agc Exp $
 bin/mldsa
 bin/mlsignify
 lib/libmldsa.a
 lib/libmldsa_p.a
+lib/libmldsa.so
+lib/libmldsa.so.1
+lib/libmldsa.so.1.0
 man/man1/mldsa.1
 man/man3/libmldsa.3
