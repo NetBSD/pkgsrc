@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2026/08/27 05:46:37 adam Exp $
+# $NetBSD: Makefile,v 1.76 2026/09/08 13:13:38 adam Exp $
 
-DISTNAME=	pypdf-6.16.2
+DISTNAME=	pypdf-6.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -21,6 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+# crypto
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=	# none
