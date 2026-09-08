@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/09/08 10:38:42 adam Exp $
+
+Don't install docs.
+
+--- pyproject.toml.orig	2026-09-08 10:36:09.055521726 +0000
++++ pyproject.toml
+@@ -80,7 +80,7 @@ dev = [
+ include-package-data = true
+ 
+ [tool.setuptools.packages.find]
+-exclude = ["scripts", "scripts.*", "tests", "tests.*"]
++exclude = ["docs", "docs*", "scripts", "scripts.*", "tests", "tests.*"]
+ 
+ [tool.setuptools.package-data]
+ eth_abi = ["py.typed"]
