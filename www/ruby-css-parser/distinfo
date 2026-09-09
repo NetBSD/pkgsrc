@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2026/07/20 06:01:38 taca Exp $
+$NetBSD: distinfo,v 1.41 2026/09/09 14:15:53 taca Exp $
 
-BLAKE2s (css_parser-3.0.0.gem) = fd45a5cf3693e6fc98aeee545f8a4cd37cbdb244d92894ce39546019de560432
-SHA512 (css_parser-3.0.0.gem) = 10f2d237038086eb3c592dca04085b82400ac8d35eba23f279b146eb3520831334f7ced966757b112bc513b2d68585ee6de8ce13343762e94c3d05214a2e9bf5
-Size (css_parser-3.0.0.gem) = 23040 bytes
+BLAKE2s (css_parser-3.1.0.gem) = eb20a1a53640dc9624b3c3c03ebeeecddb73bc45ed39a03cd59cde4bd70d7b42
+SHA512 (css_parser-3.1.0.gem) = acdd267e23c7b8fe26bd8bc7348693a849514dfd7710aa21399335e25c18ce434897fe4fe5feea6d507f742a1b19aabccbcdebd0c515648a26a7051d6867bdbb
+Size (css_parser-3.1.0.gem) = 24064 bytes
