@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/07/20 05:27:56 taca Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/09 14:09:32 taca Exp $
 
-DISTNAME=	ssrf_filter-1.5.0
+DISTNAME=	ssrf_filter-1.6.0
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

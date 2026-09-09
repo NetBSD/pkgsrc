@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/07/20 05:27:56 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/09/09 14:09:32 taca Exp $
 
-BLAKE2s (ssrf_filter-1.5.0.gem) = b1eec4ec3e80391999c8a005ba35878978046afcff1d5307d61b8a1016360c96
-SHA512 (ssrf_filter-1.5.0.gem) = 2199208c40b1a31d138becc5153288da43dcda115ea79ae87162a676f0c33c0d2368523839eebcc06c7bf268bde4897abbd6227cceda2533534c4f782b885c90
-Size (ssrf_filter-1.5.0.gem) = 7680 bytes
+BLAKE2s (ssrf_filter-1.6.0.gem) = b236f4ebe3f0c9e319b860a8e9be24f5a6935da572141e5d429be2c8cd4caad7
+SHA512 (ssrf_filter-1.6.0.gem) = 5baa8c75725e02f2c2cbc39c1f92c0f66e0841c863e9a17ccdf92c8480df4b1c414144499adbe830698a463111759742a43e1cebaaff3aca7634d39015bb0fef
+Size (ssrf_filter-1.6.0.gem) = 8192 bytes
