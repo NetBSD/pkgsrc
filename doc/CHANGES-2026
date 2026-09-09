@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5967 2026/09/09 10:51:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5968 2026/09/09 11:09:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9114,3 +9114,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/dpkg to 1.23.10 [adam 2026-09-09]
 	Updated graphics/py-tifffile to 2026.9.9 [adam 2026-09-09]
 	Updated misc/py-copier to 9.18.2 [adam 2026-09-09]
+	Added www/p5-LWP-Protocol-http-SocketUnixAlt version 0.0204 [markd 2026-09-09]
