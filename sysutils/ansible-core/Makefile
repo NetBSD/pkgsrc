@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.64 2026/08/11 09:21:56 adam Exp $
+# $NetBSD: Makefile,v 1.65 2026/09/09 08:00:20 adam Exp $
 
 # When upgrading ansible-core, please also upgrade the ansible package
 # to a version that supports the new version of ansible-core.  At times
 # this may mean not upgrading ansible-core to its latest release branch.
 
-DISTNAME=	ansible_core-2.21.3
+DISTNAME=	ansible_core-2.21.4
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
@@ -18,14 +18,14 @@ CONFLICTS+=	ansible<2.10
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-paramiko>=0:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.8.0:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=   310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 REPLACE_PYTHON=		test/lib/ansible_test/_data/*.py
 REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*.py
@@ -51,8 +51,8 @@ OWN_DIRS=		${PREFIX}/share/ansible
 CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
