@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/09/06 10:23:32 markd Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/09 06:52:52 markd Exp $
 
 DISTNAME=	kscreen-${PLASMAVER}
 CATEGORIES=	x11
@@ -17,6 +17,8 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../devel/kf6-kconfig/buildlink3.mk"
 .include "../../devel/kf6-kcrash/buildlink3.mk"
 .include "../../devel/kf6-ki18n/buildlink3.mk"
+.include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../devel/plasma6-plasma5support/buildlink3.mk"
 .include "../../devel/qt6-qtwayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/kf6-ksvg/buildlink3.mk"
