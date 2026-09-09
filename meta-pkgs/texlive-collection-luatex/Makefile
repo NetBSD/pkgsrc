@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2026/04/03 02:59:04 markd Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/09 10:56:12 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2026pre1
+PKGNAME=	texlive-${DISTNAME}-2026pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	78393
@@ -95,7 +95,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend luatikz
 # depend luatruthtable
 # depend luavlna
-# depend luaxml
+DEPENDS+=	tex-luaxml-[0-9]*:../../print/tex-luaxml
 # depend lutabulartools
 # depend marginalia
 # depend minim
