@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5956 2026/09/09 06:10:47 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5957 2026/09/09 06:54:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9095,3 +9095,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libcyaml to 1.4.2 [charlotte 2026-09-08]
 	Added games/billyfrontier version 1.1.1 [charlotte 2026-09-08]
 	Updated www/resterm to 1.7.2 [drixter 2026-09-09]
+	Updated audio/spotify-player to 0.25.1 [pin 2026-09-09]
