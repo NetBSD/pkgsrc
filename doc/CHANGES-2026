@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5963 2026/09/09 08:05:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5964 2026/09/09 08:11:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9105,3 +9105,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.21.0 [adam 2026-09-09]
 	Updated sysutils/ansible-core to 2.21.4 [adam 2026-09-09]
 	Updated sysutils/ansible to 14.4.0 [adam 2026-09-09]
+	Updated lang/py-ast-serialize to 0.11.0 [adam 2026-09-09]
+	Updated time/py-time-machine to 3.5.1 [adam 2026-09-09]
