@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2026/09/06 11:03:04 markd Exp $
+# $NetBSD: Makefile,v 1.89 2026/09/09 08:11:15 markd Exp $
 
 DISTNAME=	krfb-${KAPPSVER}
 CATEGORIES=	net
@@ -15,7 +15,15 @@ USE_TOOLS+=	msgmerge pkg-config
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_PIPEWIRE=ON
+
+BUILDLINK_TRANSFORM+=	rm:-Wall
+BUILDLINK_TRANSFORM+=	rm:-Werror=undef
+BUILDLINK_TRANSFORM+=	rm:-Wformat-security
+BUILDLINK_TRANSFORM+=	rm:-Wundef
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../net/kf6-kdnssd/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../security/kf6-kwallet/buildlink3.mk"
