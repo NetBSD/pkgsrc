@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/10/24 13:43:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/09/09 14:25:20 drixter Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -6,21 +6,6 @@ bin/knsupdate
 bin/kzonecheck
 bin/kzonesign
 include/knot/module.h
-include/libdnssec/binary.h
-include/libdnssec/crypto.h
-include/libdnssec/digest.h
-include/libdnssec/dnssec.h
-include/libdnssec/error.h
-include/libdnssec/key.h
-include/libdnssec/keyid.h
-include/libdnssec/keystore.h
-include/libdnssec/keytag.h
-include/libdnssec/nsec.h
-include/libdnssec/pem.h
-include/libdnssec/random.h
-include/libdnssec/sign.h
-include/libdnssec/tsig.h
-include/libdnssec/version.h
 include/libknot/attribute.h
 include/libknot/codes.h
 include/libknot/consts.h
@@ -31,6 +16,18 @@ include/libknot/db/db_lmdb.h
 include/libknot/db/db_trie.h
 include/libknot/descriptor.h
 include/libknot/dname.h
+include/libknot/dnssec/binary.h
+include/libknot/dnssec/crypto.h
+include/libknot/dnssec/digest.h
+include/libknot/dnssec/key.h
+include/libknot/dnssec/keyid.h
+include/libknot/dnssec/keystore.h
+include/libknot/dnssec/keytag.h
+include/libknot/dnssec/nsec.h
+include/libknot/dnssec/pem.h
+include/libknot/dnssec/random.h
+include/libknot/dnssec/sign.h
+include/libknot/dnssec/tsig.h
 include/libknot/dynarray.h
 include/libknot/endian.h
 include/libknot/errcode.h
@@ -76,11 +73,9 @@ include/libknot/yparser/yptrafo.h
 include/libzscanner/error.h
 include/libzscanner/scanner.h
 include/libzscanner/version.h
-lib/libdnssec.la
 lib/libknot.la
 lib/libzscanner.la
 lib/pkgconfig/knotd.pc
-lib/pkgconfig/libdnssec.pc
 lib/pkgconfig/libknot.pc
 lib/pkgconfig/libzscanner.pc
 man/man1/kdig.1
