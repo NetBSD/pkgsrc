@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/09/05 10:16:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/09/09 06:59:24 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -19,6 +19,7 @@ CARGO_CRATE_DEPENDS+=	displaydoc-0.2.7
 CARGO_CRATE_DEPENDS+=	either-1.17.0
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
 CARGO_CRATE_DEPENDS+=	errno-0.3.14
+CARGO_CRATE_DEPENDS+=	fast_qr-0.14.0
 CARGO_CRATE_DEPENDS+=	fdeflate-0.3.7
 CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.9
 CARGO_CRATE_DEPENDS+=	flate2-1.1.9
