@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/09/09 02:26:33 charlotte Exp $
+
+BLAKE2s (libxo-2.0.0.tar.gz) = ae6b9ffcde0ded263ed0ee9f8aa809ae075272ebb1e8e683f3e29f8d865a81e4
+SHA512 (libxo-2.0.0.tar.gz) = 6e87121d22bd56225aae555ca301da0b55b3b7157a44261065f4746150b1363cfd5176b7ecb34d00a984c241c33adcc505869f0bb6e577c274a5052435b08fa3
+Size (libxo-2.0.0.tar.gz) = 1106498 bytes
+SHA1 (patch-configure.ac) = 45abb498d35bc55ef226eaff83c3a2101109db2e
