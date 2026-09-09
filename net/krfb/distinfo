@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/09/06 11:03:04 markd Exp $
+$NetBSD: distinfo,v 1.15 2026/09/09 08:11:15 markd Exp $
 
-BLAKE2s (krfb-25.08.3.tar.xz) = 0aff8ea93a9965686a0cd0e65b5bea1f9f058d4a8fe39ca8178f4854dac5f911
-SHA512 (krfb-25.08.3.tar.xz) = 0de331cd25f3b54168b77e98ce0040080d96f500148d7e4d7ba953abd678247ab73a2dfcfdd49feae0350a1360436743af643ad9bd81c93fecde1f0d991e0492
-Size (krfb-25.08.3.tar.xz) = 1221644 bytes
+BLAKE2s (krfb-26.08.0.tar.xz) = 1e424ee42f0be40fe345923acec52d6f6e1053bead7b0ab8f1d4f64fa1c81e07
+SHA512 (krfb-26.08.0.tar.xz) = 13e866474fbf59d8240a334dcb7ff6440313ac0ef60d958eaf6b598f64e5c86f29fb577c4afe96281948bac379a56cae482c5b978bc9c7759902b5d136112d93
+Size (krfb-26.08.0.tar.xz) = 1220616 bytes
