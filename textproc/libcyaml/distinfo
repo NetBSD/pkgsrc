@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/08/22 10:44:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/09/09 04:15:11 charlotte Exp $
 
-BLAKE2s (libcyaml-1.3.1.tar.gz) = 292294d2127f3e5330c62a9d7f9421ae3f3f04157fca385b236169df1dff7a2c
-SHA512 (libcyaml-1.3.1.tar.gz) = 2daa380e579836aae78d442323ca4a13125ba0ac7be2a0ad9fc79d05b5b3c14a4c5041ee50c5c28ed71793d7748e50d68ac3c65cf856afe2614d098ad62b6e88
-Size (libcyaml-1.3.1.tar.gz) = 85605 bytes
+BLAKE2s (libcyaml-1.4.2.tar.gz) = ee1450553d3a3e610cd445ac6378c864854bf6085506b24e949bc73bd6ccdeb1
+SHA512 (libcyaml-1.4.2.tar.gz) = 4b78ba28b47c811d0d15e9e23425eac417d72346359678710115a30f9e75cc6f9c98521849eadf6e6f3a96c5b8d5c1ae976be706887d2961531555e90d35e7cb
+Size (libcyaml-1.4.2.tar.gz) = 87056 bytes
