@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2026/09/06 14:05:00 pin Exp $
+$NetBSD: distinfo,v 1.4 2026/09/09 11:08:30 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -309,9 +309,9 @@ Size (miniz_oxide-0.8.9.crate) = 67132 bytes
 BLAKE2s (mio-1.2.2.crate) = 63f82be1eeda715419c2fc39b6975f9172fa56c01595637d46c38c5bd8cb9482
 SHA512 (mio-1.2.2.crate) = 018a8310768d7f7114f0b017ee85ee028ed5a97e7694826b63e5cc36ed41921cd2f3b03817231892a852b98611555465f78b1cdffb30e88ee4ff1c515c32d532
 Size (mio-1.2.2.crate) = 111363 bytes
-BLAKE2s (mirador-1.9.0.tar.gz) = adcf657c5b776f65c875369d6d0e9066bad5019ba70b621a174e09f5a9273349
-SHA512 (mirador-1.9.0.tar.gz) = b10d96fc754be3531474efbdae6e75c0a4ac80328406fe6a4d817a4e1a874529650722884c13de0907f347bbca697dd200cf32e5796bb0591ac9989163d59a69
-Size (mirador-1.9.0.tar.gz) = 1505974 bytes
+BLAKE2s (mirador-1.10.1.tar.gz) = 0740d9cca6c5d34f2085e462ea7987f74fc2827ac233becd00df5a54199a19dd
+SHA512 (mirador-1.10.1.tar.gz) = 728b8c6209126892fa322ce7afdcc1938cb0429e6d5cf61c5dc47aae44944a92c8d995ca5ec6291f3814d9430f0c370c86129d20640131e9bef88bb98c0b4faf
+Size (mirador-1.10.1.tar.gz) = 1534114 bytes
 BLAKE2s (nix-0.29.0.crate) = 084b04649afac1124562c8c1c209ec5e206278e462f736f3cc9a2b848be8970f
 SHA512 (nix-0.29.0.crate) = 86c05084aa0e6238f8d48df0f5ce6e6d7661b589f4f3fbdad43387c59c0d6afafea4badf25d31db1611615de19a0b9ef18ce614846b79a47cad4e2c9367dbe7f
 Size (nix-0.29.0.crate) = 318248 bytes
@@ -600,9 +600,9 @@ Size (time-0.3.54.crate) = 279146 bytes
 BLAKE2s (time-core-0.1.9.crate) = 84c181dbfc23e925147ca09677afcb9f50d835929371aba572d720a4830973e2
 SHA512 (time-core-0.1.9.crate) = 6ddd5d228fbb1303ee0ee8c59aec19f6bf0f8c481daa2567a4fec68ef79273e19b7ae23df8b331d87384e5e3cf0be0cafb5fcdeb1a6bb780c063f5cc8c95f4dd
 Size (time-core-0.1.9.crate) = 10320 bytes
-BLAKE2s (toml-1.1.4+spec-1.1.0.crate) = 1834d41879adcf32cbac6fe8ffd6dd7204aa3d9ed9e9d79326fcddb4477b5e70
-SHA512 (toml-1.1.4+spec-1.1.0.crate) = 6f389ff3868896b709fc2e7219252b8feb90735bf82088ffd5365e13b6232777c5e79fd059bc001b9c4a2b877feab99e84762f283a1d94cce39a6782dc2149a2
-Size (toml-1.1.4+spec-1.1.0.crate) = 56447 bytes
+BLAKE2s (toml-1.1.5+spec-1.1.0.crate) = edcd484529e56d51d87173e4988701a331c1f2342ccfc9d89874b06a8818c49d
+SHA512 (toml-1.1.5+spec-1.1.0.crate) = 85bbb549c1341abce82a1e60aee1db179bc66c97d308c8e1ee9eadf38a7901a0762f283d9f06f36fca986340ca16e29e0c2ab13fbb941326401ba0d2575cb4bc
+Size (toml-1.1.5+spec-1.1.0.crate) = 55950 bytes
 BLAKE2s (toml_datetime-1.1.1+spec-1.1.0.crate) = a2a968ab233e2ebef7f3500035b8fed66c430cc4abb3059ef2458da88cfc7c41
 SHA512 (toml_datetime-1.1.1+spec-1.1.0.crate) = 74e13bc2f616b407d11e445e3a416dc7cd819774a5d747baede2d71ac42573ea29fd77cedd2648ff1b286b879053e764b8ad07cd9e9fe1164f6cc26f12931808
 Size (toml_datetime-1.1.1+spec-1.1.0.crate) = 17982 bytes
