@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5975 2026/09/09 14:13:35 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5976 2026/09/09 14:16:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9123,3 +9123,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-ssrf_filter to 1.6.0 [taca 2026-09-09]
 	Updated www/ruby-aws-partitions to 1.1284.0 [taca 2026-09-09]
 	Updated www/ruby-aws-sdk-s3 to 1.230.0 [taca 2026-09-09]
+	Updated www/ruby-css-parser to 3.1.0 [taca 2026-09-09]
