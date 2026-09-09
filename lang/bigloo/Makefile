@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/09/02 19:03:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/09 19:57:49 ktnb Exp $
 
-DISTNAME=	bigloo-4.6a
-PKGREVISION=	4
+DISTNAME=	bigloo-4.7a
 CATEGORIES=	lang
 MASTER_SITES=	https://www-sop.inria.fr/indes/fp/Bigloo/download/
 
@@ -11,6 +10,9 @@ COMMENT=	Scheme development environment
 LICENSE=	gnu-gpl-v2
 
 CHECK_PORTABILITY_SKIP+=	api-contribs/bigloo-with-dbus/configure
+
+# there seems to be some intermittent issues using jobs
+MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake autoconf automake pkg-config
@@ -24,7 +26,6 @@ CONFIGURE_ARGS+=	--cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--cpicflags="-fPIC"
 CONFIGURE_ARGS+=	--ldflags=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--customgc=no
-CONFIGURE_ARGS+=	--gccustominstall=skip
 CONFIGURE_ARGS+=	--gclibdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--gcincdir=${PREFIX}/include
 CONFIGURE_ARGS+=	--customlibuv=no
@@ -63,6 +64,13 @@ BUILD_TARGET=	boot
 INSTALL_TARGET=	install
 
 .include "options.mk"
+
+post-configure:
+	${CP} ${WRKSRC}/api/pkgcomp/src/Misc/pkgcomp.init.in ${WRKSRC}/api/pkgcomp/src/Misc/pkgcomp.init
+
+# for some reason the sqlite heap won't automatically get built
+#pre-build:
+#	cd ${WRKSRC}/api/sqlite && ${MAKE_PROGRAM}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"

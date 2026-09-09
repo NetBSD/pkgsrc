@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/09 19:57:49 ktnb Exp $
 ${PLIST.emacs}bin/bdb
 bin/bglafile
 bin/bglafile.sh
@@ -41,6 +41,10 @@ lib/bigloo/${PKGVERSION}/bigloo_int.h
 lib/bigloo/${PKGVERSION}/bigloo_object.h
 lib/bigloo/${PKGVERSION}/bigloo_pair.h
 lib/bigloo/${PKGVERSION}/bigloo_real.h
+lib/bigloo/${PKGVERSION}/bigloo_real_fst.h
+lib/bigloo/${PKGVERSION}/bigloo_real_heap.h
+lib/bigloo/${PKGVERSION}/bigloo_real_nan.h
+lib/bigloo/${PKGVERSION}/bigloo_real_nun.h
 lib/bigloo/${PKGVERSION}/bigloo_saw.h
 lib/bigloo/${PKGVERSION}/bigloo_semaphore.h
 lib/bigloo/${PKGVERSION}/bigloo_string.h

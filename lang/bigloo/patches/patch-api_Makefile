@@ -1,0 +1,48 @@
+$NetBSD: patch-api_Makefile,v 1.1 2026/09/09 19:57:49 ktnb Exp $
+
+sqlite is required for pkglib to be build yet is missing
+
+--- api/Makefile.orig	2026-09-09 16:21:50.001619667 +0000
++++ api/Makefile
+@@ -29,28 +29,28 @@ fullbootstrap:
+ boot: bootall
+ 
+ fullbootstrap:
+-	@ apis="$(APIS)"; \
++	@ apis="sqlite $(APIS)"; \
+           for d in $$apis; do \
+ 	    echo "[0m[1;35m$$d:[0m"; \
+             $(MAKE) -C $$d clean && $(MAKE) -C $$d boot || exit 1; \
+ 	  done
+ 
+ bootall:
+-	@ apis="$(APIS)"; \
++	@ apis="sqlite $(APIS)"; \
+           for d in $$apis; do \
+ 	    echo "[0m[1;35m$$d:[0m"; \
+             $(MAKE) -C $$d boot || exit 1; \
+ 	  done
+ 
+ boot-c:
+-	@ apis="$(APIS)"; \
++	@ apis="sqlite $(APIS)"; \
+           for d in $$apis; do \
+ 	    echo "[0m[1;33m$$d:[0m"; \
+             $(MAKE) -C $$d boot-c || exit 1; \
+           done
+ 
+ boot-jvm:
+-	@ apis="$(APIS)"; \
++	@ apis="sqlite $(APIS)"; \
+           for d in $$apis; do \
+             if [ "$(JVMBACKEND)" = "yes" ]; then \
+ 	      echo "[0m[1;33m$$d:[0m"; \
+@@ -59,7 +59,7 @@ boot-dotnet:
+           done
+ 
+ boot-dotnet:
+-	@ apis="$(APIS)"; \
++	@ apis="sqlite $(APIS)"; \
+           for d in $$apis; do \
+             if [ "$(DOTNETBACKEND)" = "yes" ]; then \
+ 	      echo "[0m[1;33m$$d:[0m"; \
