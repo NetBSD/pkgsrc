@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/09/02 19:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/09/09 11:43:34 markd Exp $
 
 DISTNAME=	qgpgme-2.0.0
 PKGREVISION=	3
@@ -15,6 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT5=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
 
 .include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=2.0.0
