@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/07/08 11:50:45 micha Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/09 16:31:01 micha Exp $
 
 DISTNAME=	libcanlock-3.3.3
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
