@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5965 2026/09/09 09:47:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5966 2026/09/09 10:46:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9110,3 +9110,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/openldap to 2.7.1 [adam 2026-09-09]
 	Updated databases/lmdb to 1.0.2 [adam 2026-09-09]
 	Updated net/tor to 0.4.9.12 [adam 2026-09-09]
+	Updated www/nginx-devel to 1.31.5 [adam 2026-09-09]
+	Updated misc/dpkg to 1.23.10 [adam 2026-09-09]
