@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5971 2026/09/09 13:47:35 taca Exp $
+$NetBSD: CHANGES-2026,v 1.5972 2026/09/09 14:08:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9119,3 +9119,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-dash to 8.1.0 [adam 2026-09-09]
 	Updated devel/py-logbook to 1.10.1 [adam 2026-09-09]
 	Updated devel/ruby-hoe to 4.7.2 [taca 2026-09-09]
+	Updated devel/ruby-red-colors to 0.5.0 [taca 2026-09-09]
