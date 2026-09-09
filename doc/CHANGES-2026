@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5966 2026/09/09 10:46:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5967 2026/09/09 10:51:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9112,3 +9112,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tor to 0.4.9.12 [adam 2026-09-09]
 	Updated www/nginx-devel to 1.31.5 [adam 2026-09-09]
 	Updated misc/dpkg to 1.23.10 [adam 2026-09-09]
+	Updated graphics/py-tifffile to 2026.9.9 [adam 2026-09-09]
+	Updated misc/py-copier to 9.18.2 [adam 2026-09-09]
