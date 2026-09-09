@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/09/06 14:05:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/09/09 11:08:30 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -199,7 +199,7 @@ CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.19
 CARGO_CRATE_DEPENDS+=	time-0.3.54
 CARGO_CRATE_DEPENDS+=	time-core-0.1.9
-CARGO_CRATE_DEPENDS+=	toml-1.1.4+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml-1.1.5+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-1.1.1+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
