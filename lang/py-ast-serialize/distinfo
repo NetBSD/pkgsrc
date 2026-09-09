@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/09/07 16:32:46 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/09/09 08:10:17 adam Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -39,9 +39,9 @@ Size (anyhow-1.0.100.crate) = 54059 bytes
 BLAKE2s (arrayvec-0.7.8.crate) = 887d08fc93cb04624758fa7cf3b7e1b289de1237beb4179c871757ff29a1d3ac
 SHA512 (arrayvec-0.7.8.crate) = fdf282ec313d44e88a27c0b5816c3e41062181800dda07408f2c5e5a439bc511fb16bf6611f143a2b6b6e1f6deba2d09f568def2e055cf6e5360fdf5f3944822
 Size (arrayvec-0.7.8.crate) = 33260 bytes
-BLAKE2s (ast_serialize-0.10.0.tar.gz) = 7ce8f1705a8cd55fcab0ddc0b198f68289df63449df0367b59bebe43b0151f7d
-SHA512 (ast_serialize-0.10.0.tar.gz) = 64c8076ba4a48863996dbeef4bccd0cd464719bb7b1ee06cfdb405e6daf8d11164fb82405a06fe0f6d6c52f253d575abf443b625580a0f3f6e55417f06b49e99
-Size (ast_serialize-0.10.0.tar.gz) = 952608 bytes
+BLAKE2s (ast_serialize-0.11.0.tar.gz) = 7c9ec164687358def6f50bf8ebffd20f6bce3379d3ca08fdd2d15cee5d2066c5
+SHA512 (ast_serialize-0.11.0.tar.gz) = be177f88c945cf939e858dbebf11fbeac8d824815f9d6b37ca258d50674bcabbbff610daa990d77b13572bfeaa81289a444ae8fab2e0b84e8e3956816ad61c8b
+Size (ast_serialize-0.11.0.tar.gz) = 953724 bytes
 BLAKE2s (attribute-derive-0.10.5.crate) = 1c824c6783571d93ca71d604f8cb88bd6ce146029002567a36c30ee668b39fff
 SHA512 (attribute-derive-0.10.5.crate) = 0c08d98f3ec480e4ac7fa6557726a40823c11164bce351da07cd976acc34b2493a55c9908798a6bdb6a5056223a443f6e2cbd38351493672c8faba8212b645a0
 Size (attribute-derive-0.10.5.crate) = 23575 bytes
