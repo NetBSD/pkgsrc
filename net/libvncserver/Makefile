@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2026/05/14 16:41:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/09 08:09:17 markd Exp $
 
 DISTNAME=		LibVNCServer-0.9.15
 PKGNAME=		libVNCServer-0.9.15
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
@@ -37,6 +37,12 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_PNG=ON
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LDFLAGS.SunOS+=		-lsocket
+
+SUBST_CLASSES+=		bl3
+SUBST_SED.bl3+=		-e "s,${BUILDLINK_DIR},${PREFIX},g"
+SUBST_FILES.bl3+=	${CMAKE_BUILD_DIR}/CMakeFiles/Export/*/*.cmake
+SUBST_STAGE.bl3=	post-build
+SUBST_MESSAGE.bl3=	Fix paths to buildlink directories in installed files.
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
