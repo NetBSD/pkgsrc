@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2026/04/03 23:42:36 markd Exp $
+# $NetBSD: Makefile,v 1.104 2026/09/09 10:54:39 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2026pre1
+PKGNAME=	texlive-${DISTNAME}-2026pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	78578
@@ -673,7 +673,7 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend glossaries-dutch
 # depend glossaries-english
 # depend glossaries-estonian
-# depend glossaries-extra
+DEPENDS+=	tex-glossaries-extra-[0-9]*:../../print/tex-glossaries-extra
 # depend glossaries-finnish
 # depend glossaries-french
 # depend glossaries-german
