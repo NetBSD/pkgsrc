@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5960 2026/09/09 07:03:44 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5961 2026/09/09 07:16:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9099,3 +9099,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.16.0 [pin 2026-09-09]
 	Updated www/wikid to 3.2.1 [pin 2026-09-09]
 	Updated shells/oh-my-posh to 31.2.1 [pin 2026-09-09]
+	Updated www/py-cheroot to 11.1.2 [adam 2026-09-09]
+	Updated devel/py-uv to 0.12.11 [adam 2026-09-09]
+	Updated devel/py-uv-build to 0.12.11 [adam 2026-09-09]
