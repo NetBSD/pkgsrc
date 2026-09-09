@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/09 11:07:48 markd Exp $
+
+BLAKE2s (LWP-Protocol-http-SocketUnixAlt-0.0204.tar.gz) = 83f0757414ea111002b982c2a5d9f3adcfa661e67fc4921f78eac9e61abcbb4a
+SHA512 (LWP-Protocol-http-SocketUnixAlt-0.0204.tar.gz) = 0ffe395beb44ea83c9720e7ecad684c65db74b65ce062609c1b25873d82c22240dd2c1dce536bf857a9ad73f0afaf6aa69a2fade2c19027e17c5dd5ccb6f14b5
+Size (LWP-Protocol-http-SocketUnixAlt-0.0204.tar.gz) = 14586 bytes
