@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.17 2025/04/21 16:23:09 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/09/09 11:23:19 mef Exp $
 
 BLAKE2s (unixbench-4.1.0.tgz) = bf26823f6ee38c49a21a0d7193ba9df95535b6c8983754d9bd933198fbc7bfab
 SHA512 (unixbench-4.1.0.tgz) = 4bca36cd2b5425c74aed58b34d2bbc1a4e5db9b9fe0c24946bacc239dc2ef9f643bb088e83c7b4b9682d92328bd3a8c0788855c887334c92f03e0ba9acb09480
 Size (unixbench-4.1.0.tgz) = 63075 bytes
 SHA1 (patch-aa) = 454f70877aeac089451023b05e297148b0087a8d
-SHA1 (patch-ab) = 9e4fdf23a7a665b60ef8b18fe800f9fdbb66fb77
+SHA1 (patch-ab) = 57a69d5378e9f0139686dc31b7acd014dbbd0433
 SHA1 (patch-ac) = ebfb09da84c96f8c6f48293c65a74dcf8a43cff5
 SHA1 (patch-ad) = 3a1b788d9fa51fc168d59d8c87b1f476df2d5f41
 SHA1 (patch-ae) = fbbce3deed7f0421034c1d57b66b1967ad8bddf1

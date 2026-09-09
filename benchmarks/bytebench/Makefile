@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/12/21 13:10:01 zafer Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/09 11:23:19 mef Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		benchmarks
 MASTER_SITES=		https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/byte-unixbench/
 EXTRACT_SUFX=		.tgz
@@ -33,6 +33,7 @@ post-patch:
 	${CHMOD} +x ${WRKSRC}/run-byte
 
 pre-install:
+	mv ${WRKSRC}/Makefile.orig ${WRKSRC}/Makefile.orig-keep
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
