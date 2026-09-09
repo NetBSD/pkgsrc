@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2026/09/07 07:12:46 pin Exp $
+$NetBSD: distinfo,v 1.15 2026/09/09 06:55:35 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -255,6 +255,9 @@ Size (foldhash-0.1.5.crate) = 21901 bytes
 BLAKE2s (foldhash-0.2.0.crate) = 093b2ace06b78950fe9cb5eb123449fc6b9454138ee56a7df3db9b9b46153560
 SHA512 (foldhash-0.2.0.crate) = 1495281089a8a1b7bbacf8004a5e8051bb00bf37718e9ddce9d43e4e198f529135f864b6850ee4422456b0d4731ae58647f0a1aaae0d67921c389f5d108fc163
 Size (foldhash-0.2.0.crate) = 23329 bytes
+BLAKE2s (fs2-0.4.3.crate) = a958bfb93a6720a11bb42f06b672e18176d6ef46558ba2e43b5890612c500ef4
+SHA512 (fs2-0.4.3.crate) = b83fefa9123f304e4813ec1dacbb1aee5dc0c94e1316cd7c8a434aa2a242c9c42523d2bd8232d78e6c84c4e172b5c46ef8605e93b54216a2d4496fdf885dcf50
+Size (fs2-0.4.3.crate) = 13138 bytes
 BLAKE2s (fsevent-sys-4.1.0.crate) = 4e1279298805a19a6406d40192afe20e6dbc6ae9eece212e496ae9eb5724263d
 SHA512 (fsevent-sys-4.1.0.crate) = e702686629557b879efaccd37b03a7ec515eeea29d8f8ba46f82b8b68ad157ef9d6b188be031f806d8fd27d4e9d2689cdd6bfa14e4ff77493a7d0be3ef1238a7
 Size (fsevent-sys-4.1.0.crate) = 4620 bytes
@@ -306,9 +309,9 @@ Size (gimli-0.32.3.crate) = 289789 bytes
 BLAKE2s (git2-0.21.0.crate) = a2e93ada354032544e89b79dd7c631314be96697dcbae037a864decc3be7721b
 SHA512 (git2-0.21.0.crate) = c105b5a05ab3a0a291a30fdc627ac3b72196b93cadb91c62ae5395d2f469517fbcd32954972d62691590d3cad6a8aa5fc514ca966cc0ad2225d04fb5a53dfd26
 Size (git2-0.21.0.crate) = 242222 bytes
-BLAKE2s (gitpane-0.15.1.tar.gz) = f3dc1f80b25556ea707b638529edb80da10d0eac22bdb13361c32be00212992e
-SHA512 (gitpane-0.15.1.tar.gz) = cabff9deb1c4b0624e981d8980a23b631c94c5575f085861421ef6ac5ca86d489d97be320ba41b2dbd2b7d815103337ff3b65b6aefe09aae38e91b7477ccfdea
-Size (gitpane-0.15.1.tar.gz) = 4149322 bytes
+BLAKE2s (gitpane-0.16.0.tar.gz) = 02b0f7426744174c4da5f27a033c06689049db7d4795840d227c61a560d3ece8
+SHA512 (gitpane-0.16.0.tar.gz) = 61d9e27b74246ddb2714245b5efd5e81481a5ad815c37434eb64a55c5290f16b4f445724e565fdf589f2d32da0cc5f68fac4aaf76abbb7f01d87d951ab910ea0
+Size (gitpane-0.16.0.tar.gz) = 4187304 bytes
 BLAKE2s (globset-0.4.18.crate) = e11bcd40201278f23b7b3aa74f96441bf85cc94e4c3364847ce6c15c4e5d1115
 SHA512 (globset-0.4.18.crate) = 44afbcdaff506dba351b967ff435752988f7d980e0b908c248c2aa462dcc95c94907a6d9ec7aec28599dc29d3fbd421cdf0bc8082042263b6af69b36fc1a2c54
 Size (globset-0.4.18.crate) = 28970 bytes
