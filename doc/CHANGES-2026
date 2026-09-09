@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5959 2026/09/09 07:00:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.5960 2026/09/09 07:03:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9098,3 +9098,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/spotify-player to 0.25.1 [pin 2026-09-09]
 	Updated devel/gitpane to 0.16.0 [pin 2026-09-09]
 	Updated www/wikid to 3.2.1 [pin 2026-09-09]
+	Updated shells/oh-my-posh to 31.2.1 [pin 2026-09-09]
