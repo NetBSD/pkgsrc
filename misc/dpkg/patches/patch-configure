@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.3 2025/01/03 13:41:51 adam Exp $
+$NetBSD: patch-configure,v 1.4 2026/09/09 10:46:10 adam Exp $
 
 Allow libdpkg being a shared library.
 Use md5 from OpenSSL.
 
---- configure.orig	2025-01-01 22:27:27.000000000 +0000
+--- configure.orig	2026-09-08 22:27:05.000000000 +0000
 +++ configure
-@@ -17349,12 +17349,6 @@ CC=$lt_save_CC
+@@ -18312,12 +18312,6 @@ CC=$lt_save_CC
  
  
  
@@ -17,8 +17,8 @@ Use md5 from OpenSSL.
 -fi
  
  
-   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for --as-needed linker flag" >&5
-@@ -24372,16 +24366,16 @@ fi
+   { printf '%s\n' "$as_me:${as_lineno-$LINENO}: checking for --as-needed linker flag" >&5
+@@ -25867,16 +25861,16 @@ fi
  
  
    have_libmd="no"
@@ -29,17 +29,17 @@ Use md5 from OpenSSL.
 +  ac_fn_c_check_header_compile "$LINENO" "openssl/md5.h" "ac_cv_header_md5_h" "$ac_includes_default"
  if test "x$ac_cv_header_md5_h" = xyes
  then :
-   printf "%s\n" "#define HAVE_MD5_H 1" >>confdefs.h
+   printf '%s\n' "#define HAVE_MD5_H 1" >>confdefs.h
  
      dpkg_save_libmd_LIBS=$LIBS
--    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for library containing MD5Init" >&5
+-    { printf '%s\n' "$as_me:${as_lineno-$LINENO}: checking for library containing MD5Init" >&5
 -printf %s "checking for library containing MD5Init... " >&6; }
-+    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for library containing MD5_Init" >&5
++    { printf '%s\n' "$as_me:${as_lineno-$LINENO}: checking for library containing MD5_Init" >&5
 +printf %s "checking for library containing MD5_Init... " >&6; }
  if test ${ac_cv_search_MD5Init+y}
  then :
    printf %s "(cached) " >&6
-@@ -24399,16 +24393,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -25894,16 +25888,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #ifdef __cplusplus
  extern "C"
  #endif
