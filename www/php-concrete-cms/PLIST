@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/09/02 14:52:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/09/09 14:18:31 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -1697,7 +1697,6 @@ ${CC_WEBDIR}/concrete/controllers/frontend/stylesheet.php
 ${CC_WEBDIR}/concrete/controllers/frontend/switch_language.php
 ${CC_WEBDIR}/concrete/controllers/install.php
 ${CC_WEBDIR}/concrete/controllers/marketplace.php
-${CC_WEBDIR}/concrete/controllers/oauth2.php
 ${CC_WEBDIR}/concrete/controllers/page_types/core_stack.php
 ${CC_WEBDIR}/concrete/controllers/page_types/core_theme_documentation.php
 ${CC_WEBDIR}/concrete/controllers/page_types/core_theme_documentation_category.php
@@ -7195,7 +7194,6 @@ ${CC_WEBDIR}/concrete/src/Announcement/Slide/Slide.php
 ${CC_WEBDIR}/concrete/src/Announcement/Slide/SlideInterface.php
 ${CC_WEBDIR}/concrete/src/Antispam/Library.php
 ${CC_WEBDIR}/concrete/src/Antispam/Service.php
-${CC_WEBDIR}/concrete/src/Api/Api.php
 ${CC_WEBDIR}/concrete/src/Api/ApiController.php
 ${CC_WEBDIR}/concrete/src/Api/ApiResourceValueInterface.php
 ${CC_WEBDIR}/concrete/src/Api/ApiRouteList.php
@@ -7304,6 +7302,7 @@ ${CC_WEBDIR}/concrete/src/Api/OAuth/Controller.php
 ${CC_WEBDIR}/concrete/src/Api/OAuth/Grant/RefreshTokenGrant.php
 ${CC_WEBDIR}/concrete/src/Api/OAuth/Server/ClaimsSetFactory.php
 ${CC_WEBDIR}/concrete/src/Api/OAuth/Server/IdTokenResponse.php
+${CC_WEBDIR}/concrete/src/Api/OAuth/UserStatusValidator.php
 ${CC_WEBDIR}/concrete/src/Api/OAuth/Validator/DefaultValidator.php
 ${CC_WEBDIR}/concrete/src/Api/OpenApi/Factory/ExpressEntitySpecFactory.php
 ${CC_WEBDIR}/concrete/src/Api/OpenApi/FileContent.php
@@ -8712,6 +8711,8 @@ ${CC_WEBDIR}/concrete/src/File/Component/Chooser/Option/SearchOption.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/OptionInterface.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/OptionSerializableTrait.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/UploaderOptionInterface.php
+${CC_WEBDIR}/concrete/src/File/Document/Xml/Sanitizer.php
+${CC_WEBDIR}/concrete/src/File/Document/Xml/SanitizerException.php
 ${CC_WEBDIR}/concrete/src/File/EditResponse.php
 ${CC_WEBDIR}/concrete/src/File/Event/DeleteFile.php
 ${CC_WEBDIR}/concrete/src/File/Event/DuplicateFile.php
@@ -8771,6 +8772,7 @@ ${CC_WEBDIR}/concrete/src/File/Import/Processor/ProcessorInterface.php
 ${CC_WEBDIR}/concrete/src/File/Import/Processor/SvgProcessor.php
 ${CC_WEBDIR}/concrete/src/File/Import/Processor/ThumbnailGenerator.php
 ${CC_WEBDIR}/concrete/src/File/Import/Processor/ValidatorInterface.php
+${CC_WEBDIR}/concrete/src/File/Import/Processor/XmlProcessor.php
 ${CC_WEBDIR}/concrete/src/File/Import/ProcessorManager.php
 ${CC_WEBDIR}/concrete/src/File/ImportProcessor/AutorotateImageProcessor.php
 ${CC_WEBDIR}/concrete/src/File/ImportProcessor/ConstrainImageProcessor.php
@@ -9061,7 +9063,6 @@ ${CC_WEBDIR}/concrete/src/Http/DefaultServer.php
 ${CC_WEBDIR}/concrete/src/Http/DispatcherInterface.php
 ${CC_WEBDIR}/concrete/src/Http/FlysystemFileResponse.php
 ${CC_WEBDIR}/concrete/src/Http/HttpServiceProvider.php
-${CC_WEBDIR}/concrete/src/Http/Middleware/APIAuthenticatorMiddleware.php
 ${CC_WEBDIR}/concrete/src/Http/Middleware/ApiLoggerMiddleware.php
 ${CC_WEBDIR}/concrete/src/Http/Middleware/ApplicationMiddleware.php
 ${CC_WEBDIR}/concrete/src/Http/Middleware/ContentSecurityPolicyMiddleware.php
@@ -10755,6 +10756,8 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250827152432.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20251120183116.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260203004500.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260811120000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260903000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260908000000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
