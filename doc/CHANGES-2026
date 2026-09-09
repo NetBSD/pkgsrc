@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5953 2026/09/09 02:29:01 charlotte Exp $
+$NetBSD: CHANGES-2026,v 1.5954 2026/09/09 03:20:21 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9092,3 +9092,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added print/tex-luaxml-doc version 0.2c [markd 2026-09-08]
 	Updated security/mldsa to 20260909 [agc 2026-09-08]
 	Added textproc/libxo version 2.0.0 [charlotte 2026-09-08]
+	Updated textproc/libcyaml to 1.4.2 [charlotte 2026-09-08]
