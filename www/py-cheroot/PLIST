@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/04/14 13:30:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/09/09 06:45:53 adam Exp $
 bin/cheroot-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -92,6 +92,9 @@ ${PYSITELIB}/cheroot/test/test_ssl.pyo
 ${PYSITELIB}/cheroot/test/test_wsgi.py
 ${PYSITELIB}/cheroot/test/test_wsgi.pyc
 ${PYSITELIB}/cheroot/test/test_wsgi.pyo
+${PYSITELIB}/cheroot/test/threadleakcheck.py
+${PYSITELIB}/cheroot/test/threadleakcheck.pyc
+${PYSITELIB}/cheroot/test/threadleakcheck.pyo
 ${PYSITELIB}/cheroot/test/webtest.py
 ${PYSITELIB}/cheroot/test/webtest.pyc
 ${PYSITELIB}/cheroot/test/webtest.pyo
