@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2026/09/07 07:12:46 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2026/09/09 06:55:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -85,6 +85,7 @@ CARGO_CRATE_DEPENDS+=	flate2-1.1.9
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foldhash-0.1.5
 CARGO_CRATE_DEPENDS+=	foldhash-0.2.0
+CARGO_CRATE_DEPENDS+=	fs2-0.4.3
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	futures-0.3.34
 CARGO_CRATE_DEPENDS+=	futures-channel-0.3.34
