@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $NetBSD: billyfrontier.template,v 1.1 2026/09/09 03:53:52 charlotte Exp $
+# Launcher script for Billy Frontier.
+#
+set -e
+cd @@PREFIX@@/share/billyfrontier && @@PREFIX@@/libexec/BillyFrontier

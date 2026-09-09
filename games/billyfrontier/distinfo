@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/09/09 03:53:52 charlotte Exp $
+
+BLAKE2s (billyfrontier-1.1.1.tar.gz) = 1e25ecef47bf099b7b55aea20cafb02fe6e63767caccbc7a96ed7e16b05d0709
+SHA512 (billyfrontier-1.1.1.tar.gz) = 896314e8e33b0a64bae0044c0fcd2c2af0cef74c97221a25d5c63421fb8f8e12d7752db60b4f8d130b7dc0366a38e47bba4ae1df50e76eb5b48cbb25b691597e
+Size (billyfrontier-1.1.1.tar.gz) = 84787321 bytes
+BLAKE2s (jorio-Pomme-9fae17d7715314a3a20259ac2e87aa500a977695.tar.gz) = 6edc7765b0e7d4284c9f53dca55f9ba1a8176aa816ddc9635f17e564e580fc3e
+SHA512 (jorio-Pomme-9fae17d7715314a3a20259ac2e87aa500a977695.tar.gz) = 97a8203269d8ea3e5de274a34c11abb814ad82a0c59b4a42f5042f9919294f9342b8727b78e9445abbe0bb408df7fc147b34aca2bd385d5433b24ec336c3370d
+Size (jorio-Pomme-9fae17d7715314a3a20259ac2e87aa500a977695.tar.gz) = 148821 bytes
