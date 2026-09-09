@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/22 10:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/09 03:59:45 charlotte Exp $
 
-DISTNAME=	libcyaml-1.3.1
+DISTNAME=	libcyaml-1.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tlsa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,10 +12,6 @@ LICENSE=	isc
 
 USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
-
-# The Makefile wants to add a bunch of options to install(1) specific to GNU
-# install(1) -- disable those right here.
-INSTALL_MAKE_FLAGS+=	INSTALL="install"
 
 PKGCONFIG_OVERRIDE+=	libcyaml.pc.in
 
