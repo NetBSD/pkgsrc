@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1938 2026/08/30 14:32:10 leot Exp $
+# $NetBSD: Makefile,v 1.1939 2026/09/09 11:07:48 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -547,6 +547,7 @@ SUBDIR+=	p5-LWP-MediaTypes
 SUBDIR+=	p5-LWP-Online
 SUBDIR+=	p5-LWP-Protocol-Net-Curl
 SUBDIR+=	p5-LWP-Protocol-PSGI
+SUBDIR+=	p5-LWP-Protocol-http-SocketUnixAlt
 SUBDIR+=	p5-LWP-Protocol-https
 SUBDIR+=	p5-LWP-UserAgent-Determined
 SUBDIR+=	p5-LWPx-ParanoidAgent
