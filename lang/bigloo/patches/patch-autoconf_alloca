@@ -1,0 +1,17 @@
+$NetBSD: patch-autoconf_alloca,v 1.1 2026/09/09 19:57:49 ktnb Exp $
+
+alloca(3) is in the NetBSD stdlib
+
+--- autoconf/alloca.orig	2026-02-19 08:14:24.000000000 +0000
++++ autoconf/alloca
+@@ -57,8 +57,10 @@ cat > $file.c <<EOF
+ #  include <malloc.h>
+ #endif 
+ 
++#ifndef __NetBSD__
+ #if( !defined( alloca ) )
+ extern int alloca();
++#endif
+ #endif
+ 
+ int main( int argc, char *argv[] ) {

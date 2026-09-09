@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+$NetBSD: patch-configure,v 1.2 2026/09/09 19:57:49 ktnb Exp $
 
 Don't override docdir when prefix is set
 Fixed the lack of build, host, and --x-* options.
@@ -6,9 +6,9 @@ It always failed to find patch even though it's there.
 Turn off dlopen for NetBSD which will cause the bigloo compiler to
 not work once built
 
---- configure.orig	2023-12-22 16:18:46.000000000 +0000
+--- configure.orig	2026-02-19 08:14:24.000000000 +0000
 +++ configure
-@@ -682,8 +682,7 @@ while : ; do
+@@ -696,8 +696,7 @@ while : ; do
        zipdir=$libdir/$fildir;
        dlldir=$libdir/$fildir;
        mandir=$prefix/man/man1;
@@ -18,7 +18,7 @@ not work once built
  
      --bigloo=*)
        bigloo="`echo $1 | sed 's/^[^=]*=//'`";;
-@@ -1120,6 +1119,9 @@ while : ; do
+@@ -1179,6 +1178,9 @@ while : ; do
      --enable-srfi27)
        srfi27force="yes";;
  
@@ -28,7 +28,7 @@ not work once built
      --enable-*)
        api="`echo $1 | sed 's/--[^-]*-//'`";
        add=1;
-@@ -1151,6 +1153,15 @@ while : ; do
+@@ -1210,6 +1212,15 @@ while : ; do
      --hostsh=*)
        hostsh="`echo $1 | sed 's/^[^=]*=//'`";;
  
@@ -44,29 +44,27 @@ not work once built
      -*)
        if [ "$1" != "-h" -a "$1" != "-help" -a "$1" != "--help" ]; then
          echo "*** ERROR: unknown option \"$1\""
-@@ -2119,18 +2130,18 @@ if [ $action = "all" -o $action = "biglo
+@@ -2140,18 +2151,18 @@ fi
  fi
  
  # checking patch
 -patch=$PATCH
--
++#patch=$PATCH
+ 
 -if [ "$patch " = " " ]; then
 -  patch=patch
 -fi
--
++#if [ "$patch " = " " ]; then
++#  patch=patch
++#fi
+ 
 -$patch --help 2> /dev/null > /dev/null
-+#patch=$PATCH
++#$patch --help 2> /dev/null > /dev/null
  
 -if [ $? != 0 ]; then
 -  $echo "*** ERROR: patch ($patch) command not found. Aborting..." >&2;
 -  exit 1;
 -fi
-+#if [ "$patch " = " " ]; then
-+#  patch=patch
-+#fi
-+
-+#$patch --help 2> /dev/null > /dev/null
-+
 +#if [ $? != 0 ]; then
 +#  $echo "*** ERROR: patch ($patch) command not found. Aborting..." >&2;
 +#  exit 1;
@@ -74,7 +72,7 @@ not work once built
    
  #*---------------------------------------------------------------------*/
  #*    Executable names                                                 */
-@@ -2242,7 +2253,7 @@ else
+@@ -2270,7 +2281,7 @@ else
    fi
  
    if [ "$gcparallelmark " = "yes " ]; then
@@ -83,7 +81,34 @@ not work once built
    fi
  
    # thread local storage
-@@ -3478,7 +3489,7 @@ if [ $action = "all" -o $action = "biglo
+@@ -2308,7 +2319,7 @@ if [ "$action" != "bigloo_config_el" ]; then
+ if [ "$action" != "bigloo_config_el" ]; then
+   if [ "$bglnantagging " != "0 " ]; then
+     if [ "$alignment" = "3" ]; then 
+-      customgc=yes;
++      customgc=no;
+       bglnantagging=64;
+       cnanflags="-DBGL_NAN_TAGGING=64";
+       cgcflags="-DPOINTER_MASK=0xffffffffffff $cgcflags";
+@@ -2320,7 +2331,7 @@ if [ "$action" != "bigloo_config_el" ]; then
+ 
+   if [ "$bgltagging " != "BGL_TAGGING_HEAP " ]; then
+     if [ "$alignment" = "3" ]; then 
+-      customgc=yes;
++      customgc=no;
+     else
+       $echo "*** ERROR: fl tagging (floating point tagging) requires 64bit platforms"
+       exit 1
+@@ -2329,7 +2340,7 @@ if [ "$action" != "bigloo_config_el" ]; then
+   
+   if [ "$bglfstagging " != "0 " ]; then
+     if [ "$alignment" = "3" ]; then 
+-      customgc=yes;
++      customgc=no;
+     else
+       $echo "*** ERROR: fl tagging (floating point tagging) requires 64bit platforms"
+       exit 1
+@@ -3509,7 +3520,7 @@ if [ $action = "all" -o $action = "bigloo_config" ]; t
    fi
  
    # Does the system have dlopen?
