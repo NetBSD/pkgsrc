@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5978 2026/09/09 14:25:43 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.5979 2026/09/09 20:01:07 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9126,3 +9126,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-css-parser to 3.1.0 [taca 2026-09-09]
 	Updated www/php-concrete-cms to 9.5.4 [taca 2026-09-09]
 	Updated net/knot to 3.6.0 [drixter 2026-09-09]
+	Updated lang/bigloo to 4.7a [ktnb 2026-09-09]
