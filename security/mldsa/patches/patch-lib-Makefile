@@ -1,0 +1,16 @@
+$NetBSD: patch-lib-Makefile,v 1.1 2026/09/10 03:55:30 agc Exp $
+
+Don't build shared or profiling libs
+
+--- lib/Makefile	2026/09/10 03:47:55	1.1
++++ lib/Makefile	2026/09/10 03:48:23
+@@ -39,6 +39,9 @@
+ CPPFLAGS+=	-I${DIST}/liboqs/include # for "../ossl_helpers.h"
+ CPPFLAGS+=	-DDILITHIUM_MODE=3
+ 
++MKPROFILE=		no
++MKPIC=			no
++
+ .sinclude "../namespace.mk"
+ 
+ DIST=	${.CURDIR}/../dist
