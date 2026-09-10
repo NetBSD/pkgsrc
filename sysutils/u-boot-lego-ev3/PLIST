@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/10 20:03:41 yurix Exp $
+share/u-boot/lego-ev3/installboot.plist
+share/u-boot/lego-ev3/u-boot.bin

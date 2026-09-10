@@ -1,6 +1,7 @@
-$NetBSD: distinfo-2024.10,v 1.2 2026/02/19 09:55:00 wiz Exp $
+$NetBSD: distinfo-2024.10,v 1.3 2026/09/10 20:03:41 yurix Exp $
 
 BLAKE2s (u-boot-2024.10.tar.bz2) = dfec4437e3f21cbd97b0336ce035bc8456da74733e773b8bd32f9c0d8520f147
 SHA512 (u-boot-2024.10.tar.bz2) = ef817c9b5ae8dc6cd9e3f57811e90acc6a4d4394f0356aa5923e3e3c8559168f977bd5bf82824cd3650aa8e5e3c3d1b00e20818d21368151748682f1fc51152c
 Size (u-boot-2024.10.tar.bz2) = 26398495 bytes
+SHA1 (patch-configs_legoev3__defconfig) = de666d8a8ad5df176d30f574eb7307e84be9bc3a
 SHA1 (patch-tools_binman_control.py) = 3f10a04765df27bb1b2f8fe5ff395810c0300753
