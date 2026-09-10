@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6000 2026/09/10 14:21:37 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6001 2026/09/10 20:07:37 yurix Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9155,3 +9155,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-kms to 1.131.0 [taca 2026-09-10]
 	Updated www/ruby-aws-sdk-s3 to 1.231.0 [taca 2026-09-10]
 	Updated www/ruby-selenium-webdriver to 4.49.0 [taca 2026-09-10]
+	Added sysutils/u-boot-lego-ev3 version 2024.10 [yurix 2026-09-10]
