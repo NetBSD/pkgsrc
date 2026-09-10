@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/09/10 00:45:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/10 13:06:43 ktnb Exp $
 
 DISTNAME=	akku-1.1.0
-CATEGORIES=	devel
-MASTER_SITES=	https://gitlab.com/akkuscm/akku/uploads/819fd1f988c6af5e7df0dfa70aa3d3fe/
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITLAB:=akkuscm/akku/uploads/819fd1f988c6af5e7df0dfa70aa3d3fe/}
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://akkuscm.org/
