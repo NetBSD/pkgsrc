@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/08/03 13:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/10 22:24:13 mef Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -22,6 +22,11 @@ DIST_SUBDIR=	ja-dvi2tty
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -DDEFPAGER='\"${PREFIX}/bin/jless\"'"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+SUBST_CLASSES+=		ldflags
+SUBST_STAGE.ldflags=	pre-configure
+SUBST_VARS.ldflags=	LDFLAGS
+SUBST_FILES.ldflags=	Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jdvi2tty ${DESTDIR}${PREFIX}/bin/jdvi2tty
