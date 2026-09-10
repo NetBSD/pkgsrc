@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5981 2026/09/10 03:57:09 agc Exp $
+$NetBSD: CHANGES-2026,v 1.5982 2026/09/10 07:18:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9129,3 +9129,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/bigloo to 4.7a [ktnb 2026-09-09]
 	Updated lang/akku to 1.1.0 [ktnb 2026-09-10]
 	Updated security/mldsa to 20260909nb1 [agc 2026-09-10]
+	Updated archivers/xz to 5.8.4 [adam 2026-09-10]
+	Updated lang/py-ast-serialize to 0.11.1 [adam 2026-09-10]
+	Updated textproc/py-regex to 2026.9.10 [adam 2026-09-10]
+	Updated misc/py-platformdirs to 4.11.8 [adam 2026-09-10]
