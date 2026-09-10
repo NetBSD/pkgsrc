@@ -1,6 +1,7 @@
-$NetBSD: patch-src_modules_cpu__frequency_bsd.cpp,v 1.1 2026/08/24 14:25:32 kikadf Exp $
+$NetBSD: patch-src_modules_cpu__frequency_bsd.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
 
 * Add NetBSD support
+https://github.com/Alexays/Waybar/pull/5318
 
 --- src/modules/cpu_frequency/bsd.cpp.orig	2026-05-25 08:52:26.638052357 +0000
 +++ src/modules/cpu_frequency/bsd.cpp

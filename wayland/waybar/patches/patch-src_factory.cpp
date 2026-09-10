@@ -1,4 +1,4 @@
-$NetBSD: patch-src_factory.cpp,v 1.1 2026/08/24 14:25:32 kikadf Exp $
+$NetBSD: patch-src_factory.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
 
 * Enable battery module on NetBSD
 
