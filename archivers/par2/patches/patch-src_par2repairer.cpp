@@ -1,4 +1,4 @@
-$NetBSD: patch-src_par2repairer.cpp,v 1.1 2026/08/30 01:13:18 gdt Exp $
+$NetBSD: patch-src_par2repairer.cpp,v 1.2 2026/09/10 09:56:15 adam Exp $
 
 Apparently, gcc<=10, when using ostringstream, somehow turns the type
 into ostream after <<, and ostream has no str().
@@ -6,9 +6,9 @@ into ostream after <<, and ostream has no str().
 Not yet filed upstream, because probably upstream does not regard gcc
 10 as reasonable, or they would have CI with it.
 
---- src/par2repairer.cpp.orig	2026-08-30 01:03:00.454241587 +0000
+--- src/par2repairer.cpp.orig	2026-09-09 06:33:53.000000000 +0000
 +++ src/par2repairer.cpp
-@@ -1673,9 +1673,12 @@ bool Par2Repairer::ScanDataFile(DiskFile
+@@ -1943,9 +1943,12 @@ bool Par2Repairer::ScanDataFile(DiskFile
      {
        if (lastmatchoffset < filechecksummer.Offset() && noiselevel > nlNormal)
        {
@@ -24,7 +24,7 @@ Not yet filed upstream, because probably upstream does not regard gcc
        }
  
        // Is this the first match
-@@ -1805,9 +1808,12 @@ bool Par2Repairer::ScanDataFile(DiskFile
+@@ -2073,9 +2076,12 @@ bool Par2Repairer::ScanDataFile(DiskFile
  
    if (lastmatchoffset < filechecksummer.Offset() && noiselevel > nlNormal)
    {
@@ -39,4 +39,4 @@ Not yet filed upstream, because probably upstream does not regard gcc
 +    progress.PrintLine(oss.str());
    }
  
-   // Get the Full and 16k hash values of the file
+   }
