@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5986 2026/09/10 08:37:36 markd Exp $
+$NetBSD: CHANGES-2026,v 1.5987 2026/09/10 09:21:30 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9137,3 +9137,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-checkdmarc to 6.0.1 [adam 2026-09-10]
 	Updated lang/nodejs to 26.8.2 [adam 2026-09-10]
 	Updated editors/texstudio to 4.9.7 [markd 2026-09-10]
+	Updated wayland/waybar to 0.15.0nb2 [kikadf 2026-09-10]
