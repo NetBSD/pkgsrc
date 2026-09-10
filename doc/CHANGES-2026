@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5990 2026/09/10 10:02:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.5991 2026/09/10 11:22:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9142,3 +9142,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/par2 to 1.4.0 [adam 2026-09-10]
 	Updated devel/yyjson to 0.13.0 [adam 2026-09-10]
 	Updated devel/nss to 3.129 [wiz 2026-09-10]
+	Updated devel/py-build to 1.6.1 [adam 2026-09-10]
+	Updated databases/py-multidict to 6.8.0 [adam 2026-09-10]
