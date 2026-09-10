@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/09 08:10:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/10 07:15:27 adam Exp $
 
-DISTNAME=	ast_serialize-0.11.0
+DISTNAME=	ast_serialize-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ast-serialize/}
