@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.222 2026/09/02 19:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.223 2026/09/10 08:25:39 adam Exp $
 
 # XXX: Fails to build when mit-krb5 is installed.
-DISTNAME=	samba-4.24.6
-PKGREVISION=	1
+DISTNAME=	samba-4.24.7
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -15,14 +14,14 @@ CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]* ldb-[0-9]*
 SUPERSEDES+=	ldb-[0-9]*
 
 GCC_REQD+=	4.4
-TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TOOL_DEPENDS+=	libxslt>=0:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xml>=0:../../textproc/docbook-xml
 TOOL_DEPENDS+=	docbook-xsl>=1.79.2:../../textproc/docbook-xsl
 DEPENDS+=	p5-JSON>=4.05:../../converters/p5-JSON
 DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-dns>=0:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-iso8601>=0:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-markdown>=0:../../textproc/py-markdown
 
 BUILD_DEFS+=		VARBASE
 
