@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6002 2026/09/10 20:52:50 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6003 2026/09/10 21:25:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9157,3 +9157,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-selenium-webdriver to 4.49.0 [taca 2026-09-10]
 	Added sysutils/u-boot-lego-ev3 version 2024.10 [yurix 2026-09-10]
 	Updated archivers/unrar to 7.3.1 [drixter 2026-09-10]
+	Updated net/chrony to 4.9 [gutteridge 2026-09-10]
