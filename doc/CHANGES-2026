@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5993 2026/09/10 12:11:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5994 2026/09/10 14:12:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9148,3 +9148,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-publicsuffixlist to 1.0.2.20260910 [adam 2026-09-10]
 	Updated www/py-swiftclient to 4.11.0 [adam 2026-09-10]
 	Updated devel/orc to 0.4.44 [adam 2026-09-10]
+	Updated net/ruby-domain_name to 0.6.20260907 [taca 2026-09-10]
