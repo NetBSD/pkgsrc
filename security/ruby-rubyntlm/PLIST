@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/06/08 15:55:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/10 14:13:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.devcontainer/devcontainer.json
 ${GEM_LIBDIR}/.github/dependabot.yml
@@ -48,6 +48,7 @@ ${GEM_LIBDIR}/spec/lib/net/ntlm/field_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/int16_le_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/int32_le_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/int64_le_spec.rb
+${GEM_LIBDIR}/spec/lib/net/ntlm/md4_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/message/type0_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/message/type1_spec.rb
 ${GEM_LIBDIR}/spec/lib/net/ntlm/message/type2_spec.rb
