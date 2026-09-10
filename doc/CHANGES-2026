@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5987 2026/09/10 09:21:30 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.5988 2026/09/10 09:46:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9136,5 +9136,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-aiostream to 0.7.2 [adam 2026-09-10]
 	Updated mail/py-checkdmarc to 6.0.1 [adam 2026-09-10]
 	Updated lang/nodejs to 26.8.2 [adam 2026-09-10]
+	Updated net/samba4 to 4.24.7 [adam 2026-09-10]
 	Updated editors/texstudio to 4.9.7 [markd 2026-09-10]
 	Updated wayland/waybar to 0.15.0nb2 [kikadf 2026-09-10]
