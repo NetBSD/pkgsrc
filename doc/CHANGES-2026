@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5983 2026/09/10 07:28:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5984 2026/09/10 07:44:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9135,3 +9135,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.11.8 [adam 2026-09-10]
 	Updated devel/py-aiostream to 0.7.2 [adam 2026-09-10]
 	Updated mail/py-checkdmarc to 6.0.1 [adam 2026-09-10]
+	Updated lang/nodejs to 26.8.2 [adam 2026-09-10]
