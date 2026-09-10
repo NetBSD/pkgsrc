@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.217 2026/09/04 09:59:32 tnn Exp $
+$NetBSD: distinfo,v 1.218 2026/09/10 10:02:09 wiz Exp $
 
-BLAKE2s (nss-3.128.tar.gz) = 9164db6c9e4c95725ef6d08aa1e686bcba9557473caf150ec4cb7c9d690b88ac
-SHA512 (nss-3.128.tar.gz) = 9cdddf8b449af50f75c6f1917cfa5a4c693e5105e358146218deee5abc7468b11bca91606194de0583536f708d8c4724a18bc5a4978f7e46f367de09df7c7e2f
-Size (nss-3.128.tar.gz) = 87053743 bytes
+BLAKE2s (nss-3.129.tar.gz) = bda9dba110d063efae30987f5065e88071752716bace7b8c5482f542119d82cd
+SHA512 (nss-3.129.tar.gz) = ffad7bd7dbbd388c88072b21553f533ed721575b1a4dabbbd65a5f62c2f9e4b0e33e45c02d5f3a68b19b364e73f4880ab82924a673bdc2d1754237cde47b6b37
+Size (nss-3.129.tar.gz) = 87255363 bytes
 SHA1 (patch-md) = ebc903bb19456bfa111fad3c101e3f18168b43b3
 SHA1 (patch-me) = 30aa8b8e22bb687b9c71da40ea9e76b56885d1f8
 SHA1 (patch-mf) = 40e58385fb6f944f463bf00b9aad72bc4ea229d0
 SHA1 (patch-mn) = 5b79783e48249044be1a904a6cfd20ba175b5fd4
 SHA1 (patch-nss_cmd_platlibs.mk) = 01f4350de601b29c94e8a791a28daca226866bb6
 SHA1 (patch-nss_cmd_shlibsign_sign.sh) = 7948b7b502a4c148ee185836dde8a84d3aa388af
-SHA1 (patch-nss_coreconf_NetBSD.mk) = 81118eb56f95d6217fecb0c0a9da1b258b630a12
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = 944f71fcaaa7d5b2b3ed008341b1392a65480f2b
 SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
 SHA1 (patch-nss_coreconf_nsinstall_Makefile) = 69981ba7355a4413111754859ef08cbd5e1bf4f4

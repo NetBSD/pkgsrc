@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.302 2026/08/30 08:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.303 2026/09/10 10:02:09 wiz Exp $
 #
 # Release Notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
-DISTNAME=		nss-3.128
+DISTNAME=		nss-3.129
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${PKGVERSION_NOREV:S/./_/g}_RTM/src/}
 
@@ -128,8 +128,6 @@ MAKE_ENV+=	USE_SYSTEM_ZLIB=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4 "${LDFLAGS:Q}
 MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
 MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
-# regression in 3.128
-MAKE_ENV.Darwin+=	LITTLE_ENDIAN=1
 .include "../../mk/compiler.mk"
 .if ${CC_VERSION:Mgcc-4.[0-7]*}
 CFLAGS+=	-DNSS_NO_GCC48
@@ -181,16 +179,20 @@ do-install:
 .endfor
 
 # needed if host is not in DNS
-#TEST_ENV+=	HOST=localhost DOMSUF=localdomain
-# as of 3.120
+TEST_ENV+=	HOST=localhost DOMSUF=localdomain
+# as of 3.129
 # Tests summary:
 # --------------
-# Passed:             11282
-# Failed:             36
+# Passed:             5950
+# Failed:             5
 # Failed with core:   0
 # ASan failures:      0
-# Unknown status:     25
-# TinderboxPrint:Unknown: 25
+# UBSan failures:     0
+# Unknown status:     13
+# TinderboxPrint:Unknown: 13
+# Failed tests:
+#   - STANDARD/ssl
+#   - STANDARD/ssl_gtests
 
 do-test:
 	cd ${WRKSRC}/nss/tests && ${SETENV} ${TEST_ENV} bash ./all.sh
