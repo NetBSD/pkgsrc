@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/10 10:49:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/10 12:10:27 adam Exp $
 bin/swift-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/swiftclient/__init__.py
 ${PYSITELIB}/swiftclient/__init__.pyc
 ${PYSITELIB}/swiftclient/__init__.pyo
@@ -26,6 +26,9 @@ ${PYSITELIB}/swiftclient/exceptions.pyo
 ${PYSITELIB}/swiftclient/multithreading.py
 ${PYSITELIB}/swiftclient/multithreading.pyc
 ${PYSITELIB}/swiftclient/multithreading.pyo
+${PYSITELIB}/swiftclient/requests_compat.py
+${PYSITELIB}/swiftclient/requests_compat.pyc
+${PYSITELIB}/swiftclient/requests_compat.pyo
 ${PYSITELIB}/swiftclient/service.py
 ${PYSITELIB}/swiftclient/service.pyc
 ${PYSITELIB}/swiftclient/service.pyo
