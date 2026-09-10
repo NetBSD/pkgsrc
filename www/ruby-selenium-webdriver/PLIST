@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.25 2026/08/12 05:25:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/09/10 14:21:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTICE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/bin/linux/selenium-manager
+${GEM_LIBDIR}/bin/linux-arm64/selenium-manager
+${GEM_LIBDIR}/bin/linux-x86_64/selenium-manager
 ${GEM_LIBDIR}/bin/macos/selenium-manager
 ${GEM_LIBDIR}/bin/selenium-manager-THIRD-PARTY-NOTICES.txt
 ${GEM_LIBDIR}/bin/selenium-manager.cdx.json
