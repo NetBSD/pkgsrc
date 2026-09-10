@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.bsd,v 1.1 2026/09/10 14:25:21 mef Exp $
+
+Honer pkgsrc LD_FLAGS
+
+--- Makefile.bsd.orig	2024-07-16 14:43:18.000000000 +0900
++++ Makefile.bsd	2026-09-10 21:13:58.552845861 +0900
+@@ -47,7 +47,7 @@ endif
+ endif
+ LINKER_LINK_SHARED_LIBRARY_OPTIONS = -shared
+ LINKER_LINK_SHARED_DLOADABLE_OPTIONS = -shared -Wl,-rpath="$(RUNTIME_LINKER_PATH)" -Wl,-L.
+-LINKER_LINK_SHARED_PROGRAM_OPTIONS = -Wl,-rpath="$(RUNTIME_LINKER_PATH)"
++LINKER_LINK_SHARED_PROGRAM_OPTIONS = -Wl,-rpath="$(RUNTIME_LINKER_PATH)"
+ LIBCHICKEN_SO_LINKER_OPTIONS = -Wl,-soname,lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX).so.$(BINARYVERSION)
+ LIBRARIES = -lm -lpthread
+ NEEDS_RELINKING = yes
+@@ -65,6 +65,7 @@ include $(SRCDIR)/defaults.make
+ #
+ #C_COMPILER_OPTIONS += -I/usr/pkg/lib
+ #LINKER_OPTIONS += -L/usr/pkg/lib -Wl,-R/usr/pkg/lib
++LINKER_OPTIONS += @LDFLAGS@
+ 
+ chicken-config.h: chicken-defaults.h
+ 	echo "/* GENERATED */" >$@
