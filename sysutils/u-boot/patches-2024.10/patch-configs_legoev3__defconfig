@@ -1,0 +1,16 @@
+$NetBSD: patch-configs_legoev3__defconfig,v 1.1 2026/09/10 20:03:41 yurix Exp $
+
+Move the location in memory where u-boot runs to avoid corrupting the stage 1
+u-boot.
+
+--- configs/legoev3_defconfig.orig	2026-09-10 17:05:26.038961199 +0000
++++ configs/legoev3_defconfig
+@@ -1,7 +1,7 @@
+ CONFIG_ARM=y
+ CONFIG_SKIP_LOWLEVEL_INIT=y
+ CONFIG_ARCH_DAVINCI=y
+-CONFIG_TEXT_BASE=0xc1080000
++CONFIG_TEXT_BASE=0xc10c0000
+ CONFIG_SYS_MALLOC_LEN=0x110000
+ CONFIG_SYS_MALLOC_F_LEN=0x400
+ CONFIG_TARGET_LEGOEV3=y
