@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2026/09/08 05:22:14 adam Exp $
+# $NetBSD: Makefile,v 1.797 2026/09/10 00:45:14 ktnb Exp $
 #
 
 COMMENT=	Programming languages
@@ -12,6 +12,7 @@ SUBDIR+=	STk
 SUBDIR+=	a60
 SUBDIR+=	abcl
 SUBDIR+=	adoptopenjdk11-bin
+SUBDIR+=	akku
 SUBDIR+=	algol68g
 SUBDIR+=	asn1c
 SUBDIR+=	ats2

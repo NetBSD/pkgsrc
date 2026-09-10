@@ -1,0 +1,7 @@
+Akku is a language package manager for Scheme. It grabs hold of code
+and vigorously shakes it until it behaves properly.No complicated
+setup to point out where libraries are; Akku finds them! Separately
+declare dependencies and locked versions for your project. Convert
+R7RS libraries for use with Chez Scheme and other R6RS Scheme
+implementations. Numerous R6RS packages, as well as R7RS
+libraries mirrored from Snow.
