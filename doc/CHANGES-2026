@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5989 2026/09/10 09:58:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.5990 2026/09/10 10:02:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9141,3 +9141,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/waybar to 0.15.0nb2 [kikadf 2026-09-10]
 	Updated archivers/par2 to 1.4.0 [adam 2026-09-10]
 	Updated devel/yyjson to 0.13.0 [adam 2026-09-10]
+	Updated devel/nss to 3.129 [wiz 2026-09-10]
