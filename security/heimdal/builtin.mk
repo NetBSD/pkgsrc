@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.22 2024/12/31 02:53:56 markd Exp $
+# $NetBSD: builtin.mk,v 1.23 2026/09/10 09:39:18 markd Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -102,7 +102,7 @@ BUILDLINK_TARGETS+=	fake-heimdal-gssapi-pc
 .PHONY:	fake-heimdal-gssapi-pc
 fake-heimdal-gssapi-pc:
 	${RUN}	\
-        for ff in heimdal-gssapi heimdal-krb5 heimdal-kadm-client heimdal-kadm-server; do\
+        for ff in heimdal-gssapi heimdal-krb5 heimdal-kadm-client heimdal-kadm-server krb5-gssapi; do\
 	sedsrc=../../security/heimdal/files/$${ff}.pc.in;		\
 	src=${BUILDLINK_PREFIX.heimdal:Q}/lib${LIBABISUFFIX}/pkgconfig/$${ff}.pc;\
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/$${ff}.pc;			\
