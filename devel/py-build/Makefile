@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/08/28 19:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/09/10 11:06:31 adam Exp $
 
-DISTNAME=	build-1.6.0
+DISTNAME=	build-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -11,7 +11,7 @@ COMMENT=	Simple, correct PEP517 package builder
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks-[0-9]*:../../devel/py-pyproject_hooks
+DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=0:../../devel/py-pyproject_hooks
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.4:../../devel/py-test
