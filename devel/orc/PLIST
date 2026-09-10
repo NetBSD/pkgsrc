@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/08/31 10:44:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/09/10 12:11:01 adam Exp $
 bin/orc-bugreport
 bin/orcc
 include/orc-0.4/orc-test/orcarray.h
@@ -47,9 +47,9 @@ include/orc-0.4/orc/orcx86.h
 include/orc-0.4/orc/orcx86insn.h
 lib/liborc-0.4.so
 lib/liborc-0.4.so.0
-lib/liborc-0.4.so.0.43.0
+lib/liborc-0.4.so.0.44.0
 lib/liborc-test-0.4.so
 lib/liborc-test-0.4.so.0
-lib/liborc-test-0.4.so.0.43.0
+lib/liborc-test-0.4.so.0.44.0
 lib/pkgconfig/orc-0.4.pc
 lib/pkgconfig/orc-test-0.4.pc

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/08/31 10:44:20 adam Exp $
+$NetBSD: distinfo,v 1.35 2026/09/10 12:11:01 adam Exp $
 
-BLAKE2s (orc-0.4.43.tar.xz) = 8eee6aef78baa2fb1d9e851b03797c75fca9157e32bea11d557885ce0a5d59e0
-SHA512 (orc-0.4.43.tar.xz) = 6597157c3fc474cb8dece0dbdabf3e4cbf277ee5544b806b7043bbd06208be473647604d69c5d84718506fec2faff0bf281dafc92ffeeaa07dfbff526033df1b
-Size (orc-0.4.43.tar.xz) = 317348 bytes
+BLAKE2s (orc-0.4.44.tar.xz) = 3baa2fb54a1674545f962c1f282bf025c78b51bcda84adeeebbe4b6525ee1cfb
+SHA512 (orc-0.4.44.tar.xz) = 8325073add0ab0a6df392a0ffe5b65675084b3ad6728ddd40c54e7d95318d970db691b3949890a81f183e7b4aadeadb0a68471d2c30e2da1f3d684e8c1592935
+Size (orc-0.4.44.tar.xz) = 317600 bytes
