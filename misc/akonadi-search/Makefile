@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/09/06 11:02:57 markd Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/10 21:13:50 markd Exp $
 
 DISTNAME=	akonadi-search-${KAPPSVER}
 CATEGORIES=	misc
@@ -10,6 +10,9 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge pkg-config
+
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Corrosion=ON
 
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
