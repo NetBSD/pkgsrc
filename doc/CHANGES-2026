@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.5980 2026/09/10 00:45:37 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.5981 2026/09/10 03:57:09 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9128,3 +9128,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/knot to 3.6.0 [drixter 2026-09-09]
 	Updated lang/bigloo to 4.7a [ktnb 2026-09-09]
 	Updated lang/akku to 1.1.0 [ktnb 2026-09-10]
+	Updated security/mldsa to 20260909nb1 [agc 2026-09-10]
