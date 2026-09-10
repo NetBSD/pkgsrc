@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2026/09/02 19:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2026/09/10 08:36:13 markd Exp $
 
-DISTNAME=	texstudio-4.9.5
-PKGREVISION=	2
+DISTNAME=	texstudio-4.9.7
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texstudio-org/}
 
@@ -15,6 +14,7 @@ USE_LANGUAGES=	c++ c
 
 .include "../../devel/cmake/build.mk"
 
+.include "../../archivers/quazip1/buildlink3.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
