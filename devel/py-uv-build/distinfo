@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2026/09/09 07:08:26 adam Exp $
+$NetBSD: distinfo,v 1.40 2026/09/11 08:09:08 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -393,6 +393,9 @@ Size (deadpool-0.12.3.crate) = 45380 bytes
 BLAKE2s (deadpool-runtime-0.1.4.crate) = 728cd387708f04f1ba3846f6561f43da6472c6a3b171383711d0ee5618d02f01
 SHA512 (deadpool-runtime-0.1.4.crate) = 830da91a0f7d608c6db5982d39b0c9df0660adff88a7e6a6b7216ccd366701b1aa5dc23f3e7705685ee881b8c43b689934cdb5ac0d4c50f5624d9e05230a120c
 Size (deadpool-runtime-0.1.4.crate) = 7664 bytes
+BLAKE2s (debug-ignore-1.0.5.crate) = fd3e85dee853e144334150e66c3849c7accabcdf0874f31c278d40537dec5bd3
+SHA512 (debug-ignore-1.0.5.crate) = 4102696d1a380692e4a0cff5ebba410a8c70306c9ceaba69d90f441ddecec86a0450f46b6d21866daa962eb1a6deb6b46137b4ad5fc8e3c77474c6161f301be7
+Size (debug-ignore-1.0.5.crate) = 12016 bytes
 BLAKE2s (defmt-1.1.0.crate) = c9d2ba9cf7c68bde671d0e8939bf1be3a8ceb79d9fa046832f3123e4b04c6d4e
 SHA512 (defmt-1.1.0.crate) = 68b8fa97e993334b0b6f41a4377a1d1e0e7d7a54e78223d8cdc3f3d3d7aeb47c3f7caa84f7bbfc43a491bca0da1530e7631556f6ffaafeb415dc0573fea664dc
 Size (defmt-1.1.0.crate) = 34342 bytes
@@ -450,6 +453,9 @@ Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (dyn-clone-1.0.20.crate) = 7231af3126aa2ebfd0a5bf5c1e248ace0ec3bfbbc32a153249c69da91018c828
 SHA512 (dyn-clone-1.0.20.crate) = 5910c39f1ce031fb89d4974530a60b66848038e2f2bc78bdb3d34e6f40075fb4457b8a604309bedc4012fa46b17212e81dfb376cc6b45fa2dee823a86264690f
 Size (dyn-clone-1.0.20.crate) = 13134 bytes
+BLAKE2s (editpe-0.2.4.crate) = ef3bd92871db1c7d112e03de06e0b95cc68825f2b1b0b0b45aecb2fe7199652f
+SHA512 (editpe-0.2.4.crate) = 5b8a46219ecab4856faaa33ed7b9c6a4b6182b172c5391e191a4af8cf30f75c9b6259aef9d978183c23cd6b7befd73a3ca10ee658705d6cfb1ed3e2713c1f198
+Size (editpe-0.2.4.crate) = 30784 bytes
 BLAKE2s (either-1.17.0.crate) = ca57686ab7b227ef97aca59151724dfc04440adec45cdb5859bb0cd1b20837d4
 SHA512 (either-1.17.0.crate) = 32775a1bdd5d204dc0e24afb63b1df1e7ff09323ff4e2e784aee1bf8ed6cd5baa637c4e0548b149cb6945273d7a9c2dbf7afdb92cf0c1698ad95717b664e7a35
 Size (either-1.17.0.crate) = 21820 bytes
@@ -1767,9 +1773,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.24.0.crate) = 50fa1f60ba24315c340edda9af4fc3f16226af0c070cede423cc820baaad6a58
 SHA512 (uuid-1.24.0.crate) = 03e613e906a3d3cc6f27495b2bf239ae4cf40dd921a213e5a770c39ca3bdf4109942f75db14382400f0a15bac077cb3457948335ee0eb50add61b2b51c03f701
 Size (uuid-1.24.0.crate) = 63882 bytes
-BLAKE2s (uv_build-0.12.11.tar.gz) = 3fbd83af03d0462b33ccaa9c1586f351999abaf1f41dc1d2802755dc1c24cae6
-SHA512 (uv_build-0.12.11.tar.gz) = 9ac0d0f512fc7262ae5fbecdc95dfef273e05a12ed6cccca7d9053d19e0a7d72c7aa94332d5c4a4a166450c97a5b73661de4c8c686e69924c0f77640840f2a81
-Size (uv_build-0.12.11.tar.gz) = 424313 bytes
+BLAKE2s (uv_build-0.12.13.tar.gz) = 730db46c64e901032a987fa5fc8b505934771dc04b5e2e774af1fd614a28289e
+SHA512 (uv_build-0.12.13.tar.gz) = 77bf75208e6932b791b42d2a9dc199901a981d3ab8881e58cd5604e3207aef020538ff120770e0eb31646c1c0b7e972c816932c9d3bb0defc6b9583763607584
+Size (uv_build-0.12.13.tar.gz) = 424846 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes

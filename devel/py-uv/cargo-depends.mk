@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.36 2026/09/09 07:08:26 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.37 2026/09/11 08:09:07 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -131,6 +131,7 @@ CARGO_CRATE_DEPENDS+=	data-encoding-2.11.1
 CARGO_CRATE_DEPENDS+=	data-url-0.3.2
 CARGO_CRATE_DEPENDS+=	deadpool-0.12.3
 CARGO_CRATE_DEPENDS+=	deadpool-runtime-0.1.4
+CARGO_CRATE_DEPENDS+=	debug-ignore-1.0.5
 CARGO_CRATE_DEPENDS+=	defmt-1.1.0
 CARGO_CRATE_DEPENDS+=	defmt-macros-1.1.0
 CARGO_CRATE_DEPENDS+=	defmt-parser-1.0.0
@@ -150,6 +151,7 @@ CARGO_CRATE_DEPENDS+=	dlv-list-0.5.2
 CARGO_CRATE_DEPENDS+=	dotenvy-0.15.7
 CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	dyn-clone-1.0.20
+CARGO_CRATE_DEPENDS+=	editpe-0.2.4
 CARGO_CRATE_DEPENDS+=	either-1.17.0
 CARGO_CRATE_DEPENDS+=	embed-manifest-1.5.0
 CARGO_CRATE_DEPENDS+=	encode_unicode-1.0.0
