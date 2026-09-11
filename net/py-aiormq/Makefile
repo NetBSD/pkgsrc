@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/11 08:10:30 adam Exp $
 
-DISTNAME=	aiormq-6.9.4
+DISTNAME=	aiormq-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiormq/}
@@ -11,8 +11,8 @@ COMMENT=	Pure python AMQP asynchronous client library
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.10.4:../../devel/py-uv-build
-DEPENDS+=	${PYPKGPREFIX}-pamqp>=3.3.0:../../net/py-pamqp
-DEPENDS+=	${PYPKGPREFIX}-yarl-[0-9]*:../../www/py-yarl
+DEPENDS+=	${PYPKGPREFIX}-pamqp>=4:../../net/py-pamqp
+DEPENDS+=	${PYPKGPREFIX}-yarl>=0:../../www/py-yarl
 
 USE_LANGUAGES=	# none
 
