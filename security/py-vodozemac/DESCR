@@ -1,0 +1,5 @@
+Python bindings for vodozemac.
+
+vodozemac is a pure Rust implementation of the Olm and Megolm cryptographic
+ratchets, offering a high-level API for straightforward creation of secure
+communication channels using these ratchets.

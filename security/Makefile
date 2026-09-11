@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1023 2026/09/08 18:55:26 agc Exp $
+# $NetBSD: Makefile,v 1.1024 2026/09/11 12:15:17 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -578,6 +578,7 @@ SUBDIR+=	py-trezor-agent
 SUBDIR+=	py-trustme
 SUBDIR+=	py-truststore
 SUBDIR+=	py-u2f
+SUBDIR+=	py-vodozemac
 SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
 SUBDIR+=	py-yubikey-manager
