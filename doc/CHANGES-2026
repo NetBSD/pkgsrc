@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6010 2026/09/11 08:37:13 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6011 2026/09/11 10:31:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9170,3 +9170,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-amaranth to 0.5.10 [adam 2026-09-11]
 	Updated devel/py-lazr.delegates to 4.0.0 [adam 2026-09-11]
 	Updated devel/py-lazr.config to 4.0.0 [adam 2026-09-11]
+	Added misc/py-diff-cover version 10.5.1 [adam 2026-09-11]
+	Updated devel/py-filelock to 3.32.6 [adam 2026-09-11]
+	Updated devel/py-tox to 4.61.4 [adam 2026-09-11]
+	Updated devel/py-virtualenv to 21.7.9 [adam 2026-09-11]
