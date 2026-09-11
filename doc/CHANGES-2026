@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6014 2026/09/11 12:16:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6015 2026/09/11 13:14:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9180,3 +9180,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wrapt to 2.4.1 [adam 2026-09-11]
 	Added security/py-vodozemac version 0.10.0 [adam 2026-09-11]
 	Updated chat/py-matrix-nio to 0.26.0 [adam 2026-09-11]
+	Updated audio/strawberry to 1.2.30 [adam 2026-09-11]
+	Updated misc/dpkg to 1.23.11 [adam 2026-09-11]
