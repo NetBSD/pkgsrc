@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/11 12:15:18 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/vodozemac/__init__.py
+${PYSITELIB}/vodozemac/__init__.pyc
+${PYSITELIB}/vodozemac/__init__.pyi
+${PYSITELIB}/vodozemac/__init__.pyo
+${PYSITELIB}/vodozemac/py.typed
+${PYSITELIB}/vodozemac/vodozemac.so
