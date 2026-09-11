@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/07/13 09:09:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/09/11 11:06:12 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -319,6 +319,7 @@ ${PYSITELIB}/hypothesis/utils/threading.pyo
 ${PYSITELIB}/hypothesis/vendor/__init__.py
 ${PYSITELIB}/hypothesis/vendor/__init__.pyc
 ${PYSITELIB}/hypothesis/vendor/__init__.pyo
+${PYSITELIB}/hypothesis/vendor/leap-seconds.txt
 ${PYSITELIB}/hypothesis/vendor/pretty.py
 ${PYSITELIB}/hypothesis/vendor/pretty.pyc
 ${PYSITELIB}/hypothesis/vendor/pretty.pyo
