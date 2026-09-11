@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/09/03 09:56:21 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/09/11 08:16:19 adam Exp $
 
-BLAKE2s (pyhanko_certvalidator-0.32.0.tar.gz) = 7c4b31e3a49bb40e06b51e93c6c1c669f336e4b5b44ff604bb287769c71e67c3
-SHA512 (pyhanko_certvalidator-0.32.0.tar.gz) = c78d602532931f7d027e6291231633b48d0502b8b55af9fe6e2c35ca8048a51f9f2b63735750ec7a2eb2e4afbef416b7851ae6d586d7101f82e1531d6c619cf6
-Size (pyhanko_certvalidator-0.32.0.tar.gz) = 595383 bytes
+BLAKE2s (pyhanko_certvalidator-0.32.1.tar.gz) = c320809ef12a13ee4ba2f6a6a9dddb60eb891c88cfab023e6347a4e510e659a2
+SHA512 (pyhanko_certvalidator-0.32.1.tar.gz) = 0c4b89a1cacb96ee522164e9f129e9c2e9c72a91e84fd414a1b635668974b24b5f309250cda722860b0b32074a068f8bdc2cba51f765ad3686d84a935fd33dc7
+Size (pyhanko_certvalidator-0.32.1.tar.gz) = 597230 bytes
