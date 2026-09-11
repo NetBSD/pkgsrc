@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/02/11 19:46:01 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/09/11 12:16:39 adam Exp $
 
-BLAKE2s (matrix_nio-0.24.0.tar.gz) = 1e4b40218be27f62d08718a55b25e91d54e9c6ab11ba823d6cc80f7d9e7f1a11
-SHA512 (matrix_nio-0.24.0.tar.gz) = 08838bfa104865197f652f4424a91b28c731e7d408598261aadd83ab2e2a246d8f2d51e0fe6c0082ea7a2531600ba37ea25c710973278f97192d2d4dc4b7ecb3
-Size (matrix_nio-0.24.0.tar.gz) = 150552 bytes
+BLAKE2s (matrix_nio-0.26.0.tar.gz) = 0b502b19d32c4fa01a184033a1d5ed517fac8980c760a1b181a18d2334116d64
+SHA512 (matrix_nio-0.26.0.tar.gz) = c0c83f6429474d0544523561e3adcbeb16ff62798745d284597b794e9374d5f594b3b583e72b3fc22cd8c420aeea9806efcc960049a3bdf1cec75e7435575cd7
+Size (matrix_nio-0.26.0.tar.gz) = 157175 bytes
