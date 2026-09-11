@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/11 10:23:52 adam Exp $
+
+BLAKE2s (diff_cover-10.5.1.tar.gz) = 50cafc6429a534143ee3a9b509abbd62f576a0b2f92a50f8d60eeb6b343be61a
+SHA512 (diff_cover-10.5.1.tar.gz) = d1af590c3dc406b1810140aba84fb4eb62ea3a9498237d9ed61fdcb7d89a7e392ce2233a2cada243db5d80e2cd6b7a1cc8cd8b70d90626787064175294adda5b
+Size (diff_cover-10.5.1.tar.gz) = 113297 bytes

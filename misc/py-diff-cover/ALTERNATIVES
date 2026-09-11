@@ -1,0 +1,2 @@
+bin/diff-cover @PREFIX@/bin/diff-cover-@PYVERSSUFFIX@
+bin/diff-quality @PREFIX@/bin/diff-quality-@PYVERSSUFFIX@
