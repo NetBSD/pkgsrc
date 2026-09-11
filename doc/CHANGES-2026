@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6011 2026/09/11 10:31:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6012 2026/09/11 10:37:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9174,3 +9174,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 3.32.6 [adam 2026-09-11]
 	Updated devel/py-tox to 4.61.4 [adam 2026-09-11]
 	Updated devel/py-virtualenv to 21.7.9 [adam 2026-09-11]
+	Updated textproc/py-xml2rfc to 3.34.1 [adam 2026-09-11]
+	Updated textproc/py-types-docutils to 0.23.0.20260911 [adam 2026-09-11]
