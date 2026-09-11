@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2026/09/02 11:51:55 adam Exp $
+# $NetBSD: Makefile,v 1.71 2026/09/11 10:30:10 adam Exp $
 
-DISTNAME=	tox-4.61.2
+DISTNAME=	tox-4.61.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -27,12 +27,12 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.1:../../devel/py-virtualenv
 # more unpackaged TEST_DEPENDS from pyproject.toml
 # "detect-test-pollution>=1.2",
 # "devpi-process>=1.1",
-# "diff-cover>=10.2",
 # "re-assert>=1.1",
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=1.4:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-distlib>=0.4:../../devel/py-distlib
+TEST_DEPENDS+=	${PYPKGPREFIX}-diff-cover>=10.2:../../misc/py-diff-cover
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.8.1:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=7.1:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.10.2:../../devel/py-setuptools
