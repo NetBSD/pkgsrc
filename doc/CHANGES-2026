@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6012 2026/09/11 10:37:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6013 2026/09/11 11:07:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9176,3 +9176,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-virtualenv to 21.7.9 [adam 2026-09-11]
 	Updated textproc/py-xml2rfc to 3.34.1 [adam 2026-09-11]
 	Updated textproc/py-types-docutils to 0.23.0.20260911 [adam 2026-09-11]
+	Updated devel/py-hypothesis to 6.168.0 [adam 2026-09-11]
+	Updated devel/py-wrapt to 2.4.1 [adam 2026-09-11]
