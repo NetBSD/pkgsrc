@@ -1,0 +1,47 @@
+$NetBSD: patch-tests_knot_test__semantic__check.in,v 1.1 2026/09/11 12:53:14 drixter Exp $
+
+Patch from upstream to work on SmartOS #980
+
+--- tests/knot/test_semantic_check.in.orig	2026-09-11 07:05:07.900805215 +0000
++++ tests/knot/test_semantic_check.in
+@@ -14,12 +14,12 @@ LOG="$TMPDIR/log"
+ # Params: zonefile fatal_error expected_erros_count semcheck_err_msg [AUTO]
+ expect_error()
+ {
+-	local zonefile="$1"
+-	local fatals_exp="$2"
+-	local errors_exp="$3"
+-	local msg="$4"
+-	local auto="$5"
+-	local origin=""
++	zonefile="$1"
++	fatals_exp="$2"
++	errors_exp="$3"
++	msg="$4"
++	auto="$5"
++	origin=""
+ 
+ 	if [ ! -r "$DATA/$zonefile" ]; then
+ 		skip_block 4 "missing zone file for test"
+@@ -46,9 +46,9 @@ expect_error()
+ #param zonefile [AUTO]
+ test_correct()
+ {
+-	local zonefile="$1"
+-	local auto="$2"
+-	local origin=""
++	zonefile="$1"
++	auto="$2"
++	origin=""
+ 
+ 	if [ "$auto" != "AUTO" ]; then
+ 		origin="-o example.com"
+@@ -61,7 +61,7 @@ test_correct()
+ #param zonefile
+ test_correct_no_dnssec()
+ {
+-	local zonefile="$1"
++	zonefile="$1"
+ 
+ 	$KZONECHECK -o example.com -d off "$DATA/$zonefile" > /dev/null 2>&1
+ 	ok "$zonefile - correct zone, without error" test $? -eq 0
