@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.687 2026/09/06 17:00:17 adam Exp $
+# $NetBSD: Makefile,v 1.688 2026/09/11 10:23:52 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -294,6 +294,7 @@ SUBDIR+=	py-autocommand
 SUBDIR+=	py-copier
 SUBDIR+=	py-crashtest
 SUBDIR+=	py-dep-logic
+SUBDIR+=	py-diff-cover
 SUBDIR+=	py-domdf-python-tools
 SUBDIR+=	py-expandvars
 SUBDIR+=	py-fastprogress
