@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6007 2026/09/11 08:09:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6008 2026/09/11 08:14:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9164,3 +9164,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.16.7 [adam 2026-09-11]
 	Updated devel/py-uv to 0.12.13 [adam 2026-09-11]
 	Updated devel/py-uv-build to 0.12.13 [adam 2026-09-11]
+	Updated net/py-aiormq to 7.0.0 [adam 2026-09-11]
+	Updated net/py-aio-pika to 10.0.1 [adam 2026-09-11]
