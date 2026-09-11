@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2026/09/05 10:14:07 pin Exp $
+# $NetBSD: Makefile,v 1.151 2026/09/11 14:25:16 ktnb Exp $
 
 DISTNAME=	feh-3.12.4
 CATEGORIES=	graphics
@@ -10,7 +10,8 @@ HOMEPAGE=	https://feh.finalrewind.org/
 COMMENT=	Imlib2 based image viewer
 LICENSE=	mit
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
 
 USE_TOOLS+=	gmake
 
