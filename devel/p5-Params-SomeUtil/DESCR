@@ -1,0 +1,14 @@
+ksh: /root/.shrc[4]: set: tabcomplete: bad option
+Params::SomeUtil provides a basic set of importable functions that
+makes checking parameters a hell of a lot easier. This module is
+a fork of version 1.07 of Params::Util with some additional bug
+fixes, see "WHY" below.
+
+While they can be (and are) used in other contexts, the main point
+behind this module is that the functions both Do What You Mean,
+and Do The Right Thing, so they are most useful when you are getting
+params passed into your code from someone and/or somewhere else
+and you can't really trust the quality.
+
+Thus, Params::SomeUtil is of most use at the edges of your API,
+where params and data are coming in from outside your code.
