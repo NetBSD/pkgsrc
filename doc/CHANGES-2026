@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6028 2026/09/12 15:29:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6029 2026/09/12 15:45:43 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9204,3 +9204,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/emacs29 to 29.4nb31 [wiz 2026-09-12]
 	Updated net/trickle to 1.07 [wiz 2026-09-12]
 	Updated devel/apache-ant to 1.10.18 [wiz 2026-09-12]
+	Updated filesystems/openafs to 1.8.16.1 [jakllsch 2026-09-12]
