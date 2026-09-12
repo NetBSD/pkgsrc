@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6039 2026/09/12 20:16:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6040 2026/09/12 20:27:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9215,3 +9215,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-simplecov to 1.2.0nb1 [wiz 2026-09-12]
 	Updated mail/himalaya to 2.1.0nb1 [wiz 2026-09-12]
 	Updated devel/compiledb-go to 1.7.1 [wiz 2026-09-12]
+	Updated math/ggml to 0.23.0 [wiz 2026-09-12]
