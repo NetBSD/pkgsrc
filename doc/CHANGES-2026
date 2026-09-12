@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6031 2026/09/12 16:01:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6032 2026/09/12 16:46:01 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9207,3 +9207,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/openafs to 1.8.16.1 [jakllsch 2026-09-12]
 	Updated textproc/treemd to 0.8.0 [pin 2026-09-12]
 	Added misc/rozi version 0.0.18 [pin 2026-09-12]
+	Added net/raven version 0.3.3 [drixter 2026-09-12]
