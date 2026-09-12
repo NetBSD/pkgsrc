@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2026/09/06 16:33:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/09/12 19:54:01 wiz Exp $
 bin/simplecov${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -199,4 +199,3 @@ ${GEM_LIBDIR}/lib/simplecov_json_formatter.rb
 ${GEM_LIBDIR}/man/simplecov.1
 ${GEM_LIBDIR}/sig/simplecov.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-man/man1/simplecov${RUBY_SUFFIX}.1
