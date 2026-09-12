@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/08/12 09:04:14 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/09/12 21:13:49 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -76,6 +76,7 @@ CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
 CARGO_CRATE_DEPENDS+=	getrandom-0.4.2
 CARGO_CRATE_DEPENDS+=	gimli-0.32.3
+CARGO_CRATE_DEPENDS+=	github-actions-expressions-1.30.0-rc1
 CARGO_CRATE_DEPENDS+=	globset-0.4.18
 CARGO_CRATE_DEPENDS+=	half-2.7.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
@@ -181,7 +182,7 @@ CARGO_CRATE_DEPENDS+=	semver-1.0.28
 CARGO_CRATE_DEPENDS+=	serde-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.228
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.228
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.149
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.151
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.20
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.9
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
@@ -196,6 +197,7 @@ CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.1
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	strip-ansi-escapes-0.2.1
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
+CARGO_CRATE_DEPENDS+=	subfeature-1.30.0-rc1
 CARGO_CRATE_DEPENDS+=	syn-2.0.117
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	tempfile-3.27.0
