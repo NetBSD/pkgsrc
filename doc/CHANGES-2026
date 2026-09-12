@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6022 2026/09/12 11:49:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6023 2026/09/12 12:14:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9193,3 +9193,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libuuid to 2.42.3 [wiz 2026-09-12]
 	Updated devel/libblkid to 2.42.3 [wiz 2026-09-12]
 	Updated x11/mcookie to 2.42.3 [wiz 2026-09-12]
+	Updated devel/autogen to 5.18.16nb18 [wiz 2026-09-12]
