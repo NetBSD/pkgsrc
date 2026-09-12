@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6017 2026/09/12 00:59:14 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6018 2026/09/12 11:27:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9188,3 +9188,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenkernel418 to 20260911 [bouyer 2026-09-11]
 	Updated sysutils/xentools418 to 20260911 [bouyer 2026-09-11]
 	Updated net/tailscale to 1.102.4 [ktnb 2026-09-12]
+	Removed devel/scons [wiz 2026-09-12]
