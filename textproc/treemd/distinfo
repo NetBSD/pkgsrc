@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2026/09/12 15:58:04 pin Exp $
+$NetBSD: distinfo,v 1.26 2026/09/12 17:39:07 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -924,9 +924,9 @@ Size (tracing-subscriber-0.3.23.crate) = 213773 bytes
 BLAKE2s (tree_magic_mini-3.2.2.crate) = 963c1acb2d39fa2b75bdb48a69729bd11a709c45e4130e93e9dd0538eef09b9e
 SHA512 (tree_magic_mini-3.2.2.crate) = 37c627d440ae8e0ba9c2d0a322cc68252d6c1e56548483142a1e801c057521cb5a6387e8a7849c25de6d9dfcbaf579fa900b37d93ff023057591d3bbda843a3b
 Size (tree_magic_mini-3.2.2.crate) = 16074 bytes
-BLAKE2s (treemd-0.8.0.tar.gz) = c05c4097249ab9c486ce5a466bef01793d2ac7066c8d1ebeacd1274073367cb9
-SHA512 (treemd-0.8.0.tar.gz) = a5d9aaea371aec5871051322ca2dd76e8aff44f00ef5c1e197a28366a10b6ebb849761f0e166a151d256b33a080b864b502b164daa6140a5ff0304038924dd7b
-Size (treemd-0.8.0.tar.gz) = 4607705 bytes
+BLAKE2s (treemd-0.8.1.tar.gz) = db2b56639f7b4d2f418fd51d7c3be2f2336fe6cc779a2d11c5c6fafda5958fbc
+SHA512 (treemd-0.8.1.tar.gz) = a567a1029dc24e5c9f43df4ad31001adeea6b84bcd967933d014abb7cce93d8600d7b37be8b5a592d69a230a75d3ccd945ee3b4426b1e1c16725f9de6fe76a02
+Size (treemd-0.8.1.tar.gz) = 4612194 bytes
 BLAKE2s (ttf-parser-0.25.1.crate) = a9a17470e40b1a4cc727ce7af1f69c855ffd1033b163fa500275f178c511d0ae
 SHA512 (ttf-parser-0.25.1.crate) = 2483f485ade8a764a279173a3431d7fbfa7c14466c458e44a3a09d249781d200a6880f98f424b3dc1718ffde4988c8be4eb1ada7b255c7ae3b6639449a299c9c
 Size (ttf-parser-0.25.1.crate) = 201121 bytes
