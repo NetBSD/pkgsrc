@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:14:18 nia Exp $
+$NetBSD: distinfo,v 1.19 2026/09/12 12:14:40 wiz Exp $
 
 BLAKE2s (autogen-5.18.16.tar.xz) = a83ce4aa5d9898c1922b274fe730faf7464ceda5201a32978f4f13fdca6a2ae9
 SHA512 (autogen-5.18.16.tar.xz) = 5f12c982dbe27873f5649a96049bf019ff183c90cc0c8a9196556b0ca02e72940cd422f6d6601f68cc7d8763b1124f2765c3b1a6335fc92ba07f84b03d2a53a1
@@ -7,6 +7,12 @@ SHA1 (patch-ae) = 7249600bfc3cdcafdf55a100db775e9d1a9403f0
 SHA1 (patch-agen5_Makefile.in) = 154fe94b21d5189fa94cffbf5e2543cf90a97cc2
 SHA1 (patch-agen5_fmemopen.c) = 1cc126824f6a07fb9be080f8d143a6f2353bea78
 SHA1 (patch-autoopts_mk-tpl-config.sh) = 9c5b1012efeed5db73a4cade08d6a53f410adae2
+SHA1 (patch-autoopts_save.c) = a67dca53d0690df598726bb303b651d3a478d2fc
+SHA1 (patch-autoopts_test_defs.in) = a460d2dd69ca1b4bd5645712638522168e9b7780
+SHA1 (patch-autoopts_tpl_cmd-doc.tlib) = 2f54ebea0400688f67288649134cea7c41a42b58
+SHA1 (patch-autoopts_usage.c) = e53e8e4a7cf87b6f20e4941f4becc56e01b235cb
 SHA1 (patch-columns_Makefile.in) = a1da38b3a0a24ac300a4a7baea968642e449efd2
+SHA1 (patch-compat_pathfind.c) = 6305a89c0170b0e9a9aff1e1fa925fee8164bfe1
 SHA1 (patch-config_config.rpath) = 791aa6bbe52c681b5461205c2341ce015d638ecf
 SHA1 (patch-getdefs_Makefile.in) = c16060d8d69d7c04c9a35ed94af705a39060f8ba
+SHA1 (patch-getdefs_getdefs.c) = b3f692c67ab50f35a891cda48717c06e951a6fb3

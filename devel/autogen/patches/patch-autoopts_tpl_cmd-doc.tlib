@@ -1,0 +1,30 @@
+$NetBSD: patch-autoopts_tpl_cmd-doc.tlib,v 1.1 2026/09/12 12:14:40 wiz Exp $
+
+Apply the same fix to the option-format paths.
+
+Still unfixed upstream.  Reported as Savannah sr #111450.
+
+--- autoopts/tpl/cmd-doc.tlib.orig	2017-09-11 00:00:00.000000000 +0000
++++ autoopts/tpl/cmd-doc.tlib
+@@ -151,7 +151,9 @@
+         (define target-form   (if man-page "man" "mdoc"))
+         (define source-form   (get "option-format" "texi"))
+         (define converter     (string-append source-form "2" target-form ))
+-        (set! tmp-str (find-file converter))
++        (if (= source-form target-form)
++            (set! tmp-str (shell "command -v cat"))
++            (set! tmp-str (find-file converter)) )
+ 
+         (if (not (defined? 'tmp-str))
+             (error (string-append "cannot locate " converter)))
+@@ -586,7 +588,9 @@
+ 
+ (if formatted-doc
+     (shell (string-append
+-    "fn='" (find-file cvt-cmd)
++    "fn='" (if (= (get "option-format") "mdoc")
++               (shell "command -v cat")
++               (find-file cvt-cmd))
+     "'\ntest -f ${fn} || die '" cvt-cmd " not found'\n"
+     "${fn} <<\\_EndOfMdoc_ || die ${fn} failed in $PWD\n"
+     (out-pop #t)
