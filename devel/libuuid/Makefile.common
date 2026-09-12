@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.14 2025/09/14 11:08:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2026/09/12 11:49:21 wiz Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
 
-DISTNAME=	util-linux-2.40.2
+DISTNAME=	util-linux-2.42.3
 MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar

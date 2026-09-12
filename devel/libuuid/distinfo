@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.29 2025/12/18 21:11:16 maya Exp $
+$NetBSD: distinfo,v 1.30 2026/09/12 11:49:21 wiz Exp $
 
-BLAKE2s (util-linux-2.40.2.tar.xz) = e83f6b7f6b202ca27e8829ed7d70c4a37054925652f72de810908c4590f9ae68
-SHA512 (util-linux-2.40.2.tar.xz) = ffe20b915a518a150401d429b0338bc7022190e4ca0ef91a6d9eea345db8c1e11ad01784163b8fcf978506f3f5cad473f29d5d4ef93a4c66a5ae0ebd9fb0c8f2
-Size (util-linux-2.40.2.tar.xz) = 8854820 bytes
-SHA1 (patch-Makefile.in) = 0d581288a8415719722cd095e71cf36a3d8cbf6a
+BLAKE2s (util-linux-2.42.3.tar.xz) = ba8e35d640d0322e480f823bfbee292359534d7100a4a007f32680dcf3236994
+SHA512 (util-linux-2.42.3.tar.xz) = 2a307943d4fbb34ac02131e10ff7260f181dd706b21e68a891d25d6eb30476a612bcc19b674bb2256283c9c716146e0d79909f37324efc9aa9d45a44e0d58988
+Size (util-linux-2.42.3.tar.xz) = 10716216 bytes
+SHA1 (patch-Makefile.in) = db628b1b3161360cda1f995c9c13e44d775b7fa1
 SHA1 (patch-configure) = 578db2e08fa28066732079d4efff3aa97837a7e5
 SHA1 (patch-include_strutils.h) = e993e6a5665b759c596bd1a46217f4c05fdcb120
 SHA1 (patch-include_ttyutils.h) = 6807e1ed50fef80cd9fc139b08f92fdce9a0779e
 SHA1 (patch-lib_canonicalize.c) = 1eee2273016ed673f062f38e80f8a30f1304a7d5
-SHA1 (patch-lib_ismounted.c) = ee9b3ea5dc4173790e3fc5207f860e8b6fbc29d5
+SHA1 (patch-lib_ismounted.c) = de8edeb3b2368da53431c4ca32f26a8844099a58
 SHA1 (patch-lib_mangle.c) = cad7b1fbb51205b973f963b9c372f0884b882db7
 SHA1 (patch-lib_signames.c) = 51b09ef417d96534849f34b97b4057c286ceeca7
 SHA1 (patch-lib_sysfs.c) = d981fb4418197cb2cc9b9fb2a706935827ae9893
@@ -18,5 +18,4 @@ SHA1 (patch-libfdisk_docs_Makefile.in) = 9b6b61aa33833b57159f81b3c662e3d09787051
 SHA1 (patch-libmount_docs_Makefile.in) = cba6e071e4b26896ca6bae47ae47ebe662b2da4a
 SHA1 (patch-libsmartcols_docs_Makefile.in) = c3a77d42252be62b979467f0ad84ed0f44ef6f30
 SHA1 (patch-libuuid_src_gen__uuid.c) = 05dd91d2fe44f4cfd82120e52a7be1dab80d0ea2
-SHA1 (patch-libuuid_src_uuid__time.c) = 7a876b6bb2f4f043c34bfbfdbea1760435442fb8
 SHA1 (patch-tools_config-gen) = f36e05c517d625e5b0b3fce1d5a8b3f2b02c7def
