@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2023/10/24 22:10:36 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/09/12 15:04:23 wiz Exp $
 
-DISTNAME=	trickle-1.06
-PKGREVISION=	17
+DISTNAME=	trickle-1.07
 CATEGORIES=	net
 MASTER_SITES=	https://monkey.org/~marius/trickle/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://monkey.org/~marius/trickle/
+HOMEPAGE=	https://github.com/mariusae/trickle
 COMMENT=	Portable lightweight userspace bandwidth shaper
+LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -26,6 +25,9 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 pre-install:
 	${INSTALL_DATA} ${FILESDIR}/trickled.conf ${DESTDIR}${EGDIR}
+
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
