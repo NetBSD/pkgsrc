@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2025/12/18 21:22:59 maya Exp $
+# $NetBSD: Makefile,v 1.62 2026/09/12 14:31:51 wiz Exp $
 
-DISTNAME=	bulk-small-20231107
-PKGREVISION=	1
+DISTNAME=	bulk-small-20260912
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,10 +38,6 @@ PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT}
 # 1. Applications. These should be either very small or very widely used,
 # or preferably both; all others should go in bulk-medium.
 #
-# Please do not "fix" the emacs reference by updating it to emacs23 or
-# newer, as those versions of emacs take longer to build than this
-# entire package's time budget.
-#
 DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	irssi-[0-9]*:../../chat/irssi
 DEPENDS+=	base64-[0-9]*:../../converters/base64
@@ -70,10 +65,6 @@ DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Darwin"
-DEPENDS+=	emacs21-nox11>=21<22:../../editors/emacs21-nox11
-.endif
 
 # We do not want to build software that's already included.
 
@@ -179,11 +170,6 @@ TRANSITIVE+=	libotr-[0-9]*:../../chat/libotr
 TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt	# via libotr
 TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error	# via libotr
 TRANSITIVE+=	glib2-tools-[0-9]*:../../devel/glib2-tools
-
-# required by editors/emacs21
-TRANSITIVE+=	tradcpp-[0-9]*:../../devel/tradcpp
-TRANSITIVE+=	imake-[0-9]*:../../devel/imake
-TRANSITIVE+=	xorg-cf-files-[0-9]*:../../x11/xorg-cf-files	# via imake
 
 # required by mail/mutt
 TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man	# via autoconf

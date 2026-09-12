@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/08 12:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/12 14:31:50 wiz Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	EMACS=${EMACS_BIN:Q}
 EMACS_MODULES+=	base leim
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
 

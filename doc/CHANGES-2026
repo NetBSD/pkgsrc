@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6023 2026/09/12 12:14:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6024 2026/09/12 14:31:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9194,3 +9194,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libblkid to 2.42.3 [wiz 2026-09-12]
 	Updated x11/mcookie to 2.42.3 [wiz 2026-09-12]
 	Updated devel/autogen to 5.18.16nb18 [wiz 2026-09-12]
+	Removed editors/emacs21 [wiz 2026-09-12]
+	Removed editors/emacs21-nox11 [wiz 2026-09-12]
+	Removed editors/leim21 [wiz 2026-09-12]
+	Removed editors/jde [wiz 2026-09-12]
+	Removed misc/bbdb2 [wiz 2026-09-12]
+	Removed textproc/nxml-mode [wiz 2026-09-12]

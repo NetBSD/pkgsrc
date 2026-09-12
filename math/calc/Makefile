@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/05/14 22:25:39 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/12 14:31:51 wiz Exp $
 
 DISTNAME=	calc-2.02f
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,8 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://directory.fsf.org/project/calc/
 COMMENT=	Advanced Calculator for GNU Emacs
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
-				xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/14 22:25:36 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/12 14:31:50 wiz Exp $
 
 DISTNAME=	Mule-UCS-0.84
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -16,7 +16,7 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/mule-ucs \
 			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/mule-ucs/reldata
 
 # Mule 4.1 feature required by Mule-UCS was added to 20.7nb1.
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs20
 BUILDLINK_API_DEPENDS.emacs20+=	emacs>=20.7nb1
 
 MESSAGE_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}

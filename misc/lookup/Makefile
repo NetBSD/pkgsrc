@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/05/14 22:25:40 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/12 14:31:51 wiz Exp $
 
 DISTNAME=	lookup-1.4.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	eblook>=1.4:../../textproc/eblook
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs214 xemacs215
 EMACS_BUILDLINK=		# defined
 
 GNU_CONFIGURE=	YES

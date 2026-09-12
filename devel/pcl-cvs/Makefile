@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/05/14 22:25:34 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.29 2026/09/12 14:31:49 wiz Exp $
 
 DISTNAME=	pcl-cvs-2.9.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,7 +13,6 @@ COMMENT=	Front-end to CVS for emacs
 DEPENDS+=	emacs20-elib>=1.0:../../devel/emacs20-elib
 
 CONFLICTS=	emacs-21.*
-CONFLICTS+=	emacs21
 
 EMACS_VERSIONS_ACCEPTED=	emacs20
 
