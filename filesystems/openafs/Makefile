@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/01/31 09:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/12 15:45:25 jakllsch Exp $
 
-DISTNAME=	openafs-1.8.13-src
+DISTNAME=	openafs-1.8.16.1-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	filesystems net sysutils
 MASTER_SITES=	http://www.openafs.org/dl/openafs/${PKGVERSION_NOREV}/
@@ -19,7 +19,7 @@ CONFLICTS+=	lwp-[0-9]*
 CONFLICTS+=	rx-[0-9]*
 
 # upstream build system needs to be adapted for each version of an operating system
-NOT_FOR_PLATFORM+=	NetBSD-1[0-9].*-*
+NOT_FOR_PLATFORM+=	NetBSD-1[3-9].*-*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -54,23 +54,12 @@ FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
 
 BUILD_DEFS+=	VARBASE
 
-# attempt to future-proof configuration
-pre-patch:
-	cd ${WRKSRC}/src/config && for i in 80 90; do \
-		${SED} -e 's|nbsd70|nbsd'$$i'|g' param.i386_nbsd70.h > param.i386_nbsd$$i.h; \
-		${SED} -e 's|nbsd70|nbsd'$$i'|g' param.amd64_nbsd70.h > param.amd64_nbsd$$i.h; \
-		${CP} param.nbsd70.h param.nbsd$$i.h; \
-	done
-
-post-patch:
-	${CP} ${WRKSRC}/src/config/param.armv6_nbsd80.h ${WRKSRC}/src/config/param.armv7_nbsd80.h
-
 pre-configure:
 	cd ${WRKSRC} && ./regen.sh -q
 
 MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/lib
 
-# Can't do this yet.  Somehow doesn't work with pkgsrc heimdal,
-# but does with NetBSD base heimdal.
+# Can't do this yet.  Somehow doesn't work on NetBSD with pkgsrc
+# krb5/heimdal, but does with NetBSD base heimdal.
 #.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

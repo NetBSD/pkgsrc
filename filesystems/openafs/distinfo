@@ -1,15 +1,28 @@
-$NetBSD: distinfo,v 1.28 2024/11/15 18:14:42 jakllsch Exp $
+$NetBSD: distinfo,v 1.29 2026/09/12 15:45:26 jakllsch Exp $
 
-BLAKE2s (openafs-1.8.13-src.tar.bz2) = 6a03988d8dba1027a945278b3b985da7836818ae9fda317419c130d687fe85dd
-SHA512 (openafs-1.8.13-src.tar.bz2) = f2b60b3942ba21a4f0fd837dfda1a9659ebe4d2f96edfbe7162e97faa8c5887fbea8fdef958af396356b78793f06e6744566a1aa6b70df2164c9ab37c06e2cd9
-Size (openafs-1.8.13-src.tar.bz2) = 15053864 bytes
+BLAKE2s (openafs-1.8.16.1-src.tar.bz2) = 86e5c051c3b04d9c4860d5d52d741d6410f9c4044d6e9cefd82a04ba8dc73db6
+SHA512 (openafs-1.8.16.1-src.tar.bz2) = 0e926c989e04a2876b8ec89143e4115400552b181cae55a268972cbf235bb586d8702239c3b5922cf695f4eefadec63e7564fa35762666dfdd11103f07441460
+Size (openafs-1.8.16.1-src.tar.bz2) = 15170795 bytes
 SHA1 (patch-src_cf_osconf.m4) = 6eae9ab0821c496f59ebd611c270b46d511a751f
-SHA1 (patch-src_cf_sysname.m4) = 7f45f6387bf959d2026be369cbbfec1a96ff424b
-SHA1 (patch-src_config_afs__sysnames.h) = b13d5f701e9df3d7bd943a97e4c60632c2df1196
+SHA1 (patch-src_cf_sysname.m4) = f9a72336e9d3f7ed33568a1b2106307a29cb5abd
+SHA1 (patch-src_config_afs__sysnames.h) = b57737207b01694c205aae46875a15feb879be4f
+SHA1 (patch-src_config_param.amd64__nbsd100.h) = 6e8b895acd6b2a0d8c40aa7e9a38a38293ecb4e8
+SHA1 (patch-src_config_param.amd64__nbsd110.h) = b733a295a8d5db8a3501ecf681e2af9f67a8a1d0
+SHA1 (patch-src_config_param.amd64__nbsd120.h) = 45b9fde44ee054421a6f3cdc288e84cf072fc039
+SHA1 (patch-src_config_param.amd64__nbsd80.h) = 80f89c0581c49c1b3e9004935030f88e0fc19116
+SHA1 (patch-src_config_param.amd64__nbsd90.h) = e2392b73cedc1b0e1ae9b0033c96deb55db23d75
 SHA1 (patch-src_config_param.armv6_nbsd80.h) = eea7a8f8a141d285ba5a2bb4317950f0b860528f
-SHA1 (patch-src_config_param.nbsd100.h) = 49ba081d163357ade1ad1c409b7276edb6e6e7dc
-SHA1 (patch-src_config_param.nbsd80.h) = 52335bea3c5ae9becab4d9e8248ecc3c2ac24749
-SHA1 (patch-src_config_param.nbsd90.h) = 0a958172a80e694f0b59c0e5e03c0956740b1ddb
+SHA1 (patch-src_config_param.armv7__nbsd80.h) = 4d066199cc11c999621fbbdd502870edbc284bac
+SHA1 (patch-src_config_param.i386__nbsd100.h) = 6cc8619960783caab55e51d70438cbc8bbaff182
+SHA1 (patch-src_config_param.i386__nbsd110.h) = 0704f660bfb6cf6f5a7362151b1858fe99d8523a
+SHA1 (patch-src_config_param.i386__nbsd120.h) = eb2257a7468064dd587b52792a6c755cd6baf798
+SHA1 (patch-src_config_param.i386__nbsd80.h) = 5901a79f839d9c4c7dc7cc8a4bc2e4575c05efa7
+SHA1 (patch-src_config_param.i386__nbsd90.h) = c0e9aa032092cc5479ad488542c3ccf03dc05644
+SHA1 (patch-src_config_param.nbsd100.h) = be7d0e2a6a5ef7d7fb21d46eaa2cbf54d6ede3f5
+SHA1 (patch-src_config_param.nbsd110.h) = 2c8d8f5ce1eb7a4a4ae486bcfd11bbc2056a9421
+SHA1 (patch-src_config_param.nbsd120.h) = c4ab8d46006f910a0d6f9be081616cde6daf5f91
+SHA1 (patch-src_config_param.nbsd80.h) = 638b8f366b06d45422a11867ff10cec10fbf0b1e
+SHA1 (patch-src_config_param.nbsd90.h) = 88b1c6c942882faee778a1abef95f6bfbd7e2c2d
 SHA1 (patch-src_config_param.ppc_nbsd100.h) = 68fbda277f8e1895785b99eee8da36618b7a5d26
 SHA1 (patch-src_lwp_lwp.c) = 6f80b16f5bb73dccc44c0e752be997398bf37f3a
 SHA1 (patch-src_lwp_process.amd64.s) = c0be87a82e201855d9004859e01c90d8016efc7f

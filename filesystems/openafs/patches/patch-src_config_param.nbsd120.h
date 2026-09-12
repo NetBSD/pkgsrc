@@ -1,10 +1,8 @@
-$NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp $
+$NetBSD: patch-src_config_param.nbsd120.h,v 1.1 2026/09/12 15:45:26 jakllsch Exp $
 
-- Add support for NetBSD 9
-
---- src/config/param.nbsd90.h.orig	2026-09-11 23:37:40.029692060 +0000
-+++ src/config/param.nbsd90.h
-@@ -0,0 +1,149 @@
+--- src/config/param.nbsd120.h.orig	2026-09-12 14:58:07.730467903 +0000
++++ src/config/param.nbsd120.h
+@@ -0,0 +1,166 @@
 +/* NetBSD shared section */
 +
 +#ifndef	AFS_PARAM_COMMON_H
@@ -14,6 +12,7 @@ $NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp 
 +#define AFS_64BIT_IOPS_ENV 1	/* Needed for NAMEI */
 +#define AFS_64BIT_CLIENT 1
 +
++#define AFS_MOUNT_AFS "afs"	/* The name of the filesystem type. */
 +#define AFS_SYSCALL 210
 +
 +#define AFS_KALLOC(n)           kmem_alloc(n, KM_SLEEP)
@@ -34,6 +33,9 @@ $NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp 
 +#define AFS_NBSD70_ENV 1
 +#define AFS_NBSD80_ENV 1
 +#define AFS_NBSD90_ENV 1
++#define AFS_NBSD100_ENV 1
++#define AFS_NBSD110_ENV 1
++#define AFS_NBSD120_ENV 1
 +#undef  AFS_NONFSTRANS
 +#define AFS_NONFSTRANS 1
 +
@@ -44,6 +46,8 @@ $NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp 
 +#if	!defined(ASSEMBLER) && !defined(__LANGUAGE_ASSEMBLY__) && !defined(IGNORE_STDS_H)
 +#define AFS_HAVE_STATVFS    1	/* System supports statvfs */
 +#endif
++
++#define ROOTINO UFS_ROOTINO
 +
 +#ifndef UKERNEL
 +
@@ -80,6 +84,7 @@ $NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp 
 +#define	AFS_UIOSYS	UIO_SYSSPACE
 +#define	AFS_UIOUSER	UIO_USERSPACE
 +#define	AFS_CLBYTES	CLBYTES
++#define	osi_GetTime(x)	microtime(x)
 +#define	AFS_KALLOC(x)	kalloc(x)
 +#define	AFS_KFREE(x,y)	kfree(x,y)
 +#define	v_count		v_usecount
@@ -105,6 +110,16 @@ $NetBSD: patch-src_config_param.nbsd90.h,v 1.3 2026/09/12 15:45:26 jakllsch Exp 
 +
 +#if	!defined(ASSEMBLER) && !defined(__LANGUAGE_ASSEMBLY__) && !defined(IGNORE_STDS_H)
 +enum vcexcl { NONEXCL, EXCL };
++
++#ifdef KERNEL
++#ifndef MIN
++#define MIN(A,B) ((A) < (B) ? (A) : (B))
++#endif
++#ifndef MAX
++#define MAX(A,B) ((A) > (B) ? (A) : (B))
++#endif
++#endif /* KERNEL */
++
 +#endif /* ! ASSEMBLER & ! __LANGUAGE_ASSEMBLY__ && !defined(IGNORE_STDS_H) */
 +#endif /* _KERNEL_DEPRECATED */
 +
