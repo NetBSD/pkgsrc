@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2026/08/15 18:26:57 wiz Exp $
+$NetBSD: distinfo,v 1.12 2026/09/12 20:15:52 wiz Exp $
 
-BLAKE2s (compiledb-go-1.7.0.tar.gz) = dba46e69977a6df9d68e30b18920a6dbf1732efef8b75afa124cb6b69c5c83e8
-SHA512 (compiledb-go-1.7.0.tar.gz) = 42a0992c45a7c9face4e70f0078795601f286b8ad72f7ef28bd279b267e992c4542575ccc0427cfabfca892c0331133bd1124b961f89fc9961118b775e19a826
-Size (compiledb-go-1.7.0.tar.gz) = 123060 bytes
+BLAKE2s (compiledb-go-1.7.1.tar.gz) = b432b1bd624c1e4e8b119b7ff36949ec27987f93fcc7a88f205548a9b60712ff
+SHA512 (compiledb-go-1.7.1.tar.gz) = dbe7a46ce967f03f33e2b580bf189b4f41d01baa3b3720d6b05a6b7587dc61d1368624caf63c09f0f1cf80ae95e318d3fafab77ef8e068120671aa1e0b183973
+Size (compiledb-go-1.7.1.tar.gz) = 141416 bytes
 BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 5d28aa7bd4d3be65c094ff1eff00044ed7a895928d188f7a279b5bd9a596d393
 SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = d39412bb14c058291d07276337f802547bfb1a682cc65199cb04334f8089b6ea5d4d73587c2765c518f9e27fa3421c276eaea616d7cfbe36a2a244326edf1cb5
 Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 100 bytes
