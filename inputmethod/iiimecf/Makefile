@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/05/14 22:25:37 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.18 2026/09/12 14:31:50 wiz Exp $
 
 DISTNAME=	IIIMECF-0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}iiimecf-0.6
@@ -11,7 +10,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Emacs Lisp library for IIIM Protocol
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs20
 EMACS_BUILDLINK=		# defined
 
 do-build:

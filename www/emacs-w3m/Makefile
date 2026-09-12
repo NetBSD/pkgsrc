@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/08/26 14:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/09/12 14:31:51 wiz Exp $
 
 DISTNAME=	emacs-w3m-1.4.5
 CATEGORIES=	www
@@ -36,7 +36,7 @@ WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 #SUBST_SED.fix-icondir+=	-e 's|images/w3m|w3m|g'
 
 EMACS_BUILDLINK=		# empty
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
+EMACS_VERSIONS_ACCEPTED=	emacs20 \
 				emacs29 emacs29nox \
 				emacs30 emacs30nox \
 				emacs31 emacs31nox \

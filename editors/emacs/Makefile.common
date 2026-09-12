@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2026/08/25 17:33:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2026/09/12 14:31:50 wiz Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -60,8 +60,6 @@ DEPENDS+=	${EMACS_PACKAGE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
 # set MY_EMACS_VERSION accordingly. The following were the versions at
 # the time the renaming was done:
 #   emacs20		20.7nb16
-#   emacs21		21.4anb26
-#   emacs21-nox11	21.4anb13
 #   emacs25+		n/a
 #
 # Set VER to the version from the above table, and REV to the
@@ -71,12 +69,6 @@ DEPENDS+=	${EMACS_PACKAGE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
 .if ${MY_EMACS_TYPE} == "emacs20"
 VER=	20.7
 REV=	16
-.elif ${MY_EMACS_TYPE} == "emacs21"
-VER=	21.4
-REV=	26
-.elif ${MY_EMACS_TYPE} == "emacs21nox"
-VER=	21.4
-REV=	13
 .else
 VER=	${_EMACS_VERSION_MAJOR}
 REV=	0

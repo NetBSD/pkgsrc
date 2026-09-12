@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/08/28 11:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/12 14:31:50 wiz Exp $
 
 .include	"../../inputmethod/anthy-unicode/Makefile.common"
 
@@ -15,17 +15,17 @@ CONFIGURE_ENV+=		EMACS=${EMACS_BIN:Q}
 EMACS_MODULES+=		base leim
 
 # The accepted versions were measured, not guessed: on NetBSD 11.0/amd64 the
-# package was built with emacs26, 28, 29, 30 and 31, and with emacs20.7 and
-# emacs21.4, and japanese-anthy-unicode was driven through a conversion
+# package was built with emacs26, 28, 29, 30 and 31, and with emacs20.7,
+# and japanese-anthy-unicode was driven through a conversion
 # (nihongo -> the kanji) and deactivate-input-method in each.
 #
-# emacs20 and emacs21 additionally need the patch
+# emacs20 additionally needs the patch
 # (patch-src-util_anthy-unicode.el) and Mule-UCS; see the
 # EMACS_VERSION_MAJOR < 22 block below.
 EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
 EMACS_VERSIONS_ACCEPTED+=	emacs30 emacs30nox
 EMACS_VERSIONS_ACCEPTED+=	emacs31 emacs31nox
-EMACS_VERSIONS_ACCEPTED+=	emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED+=	emacs20
 
 .include "../../editors/emacs/modules.mk"
 

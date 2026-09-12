@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/11/17 11:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/12 14:31:49 wiz Exp $
 
 DISTNAME=		emacs-jabber-0.8.92
 CATEGORIES=		chat
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=		EMACS=${EMACS_BIN}
 
 TEST_TARGET=		check
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 # net-utils, mule-ucs for xemacs
 EMACS_MODULES=		base

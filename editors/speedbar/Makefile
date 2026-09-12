@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/11/17 11:00:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2026/09/12 14:31:50 wiz Exp $
 
 DISTNAME=	speedbar-0.14beta4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}speedbar-0.14rc4
@@ -11,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cedet.sourceforge.net/speedbar.shtml
 COMMENT=	Directory and code browser for emacs
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
 

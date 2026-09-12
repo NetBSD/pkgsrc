@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/08/26 14:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/12 14:31:49 wiz Exp $
 
 DISTNAME=	riece-9.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,9 +14,7 @@ COMMENT=	IRC client for Emacs
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/riece \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 
-EMACS_VERSIONS_ACCEPTED= \
-		emacs21 emacs21nox \
-		xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED= xemacs215 xemacs215nox xemacs214 xemacs214nox
 EMACS_MODULES=	base
 
 GNU_CONFIGURE=	YES

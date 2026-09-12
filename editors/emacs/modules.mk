@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.40 2026/08/25 17:33:12 wiz Exp $
+# $NetBSD: modules.mk,v 1.41 2026/09/12 14:31:50 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -45,7 +45,6 @@
 #			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox
-#			emacs21 emacs21nox
 #			emacs20 xemacs215 xemacs215nox
 #			xemacs214 xemacs214nox
 #		Default value:
@@ -69,14 +68,12 @@
 #			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox
-#			emacs21 emacs21nox
 #			emacs20 xemacs215 xemacs215nox
 #			xemacs214 xemacs214nox
 #		Default value:
 #			emacs31 emacs31nox
 #			emacs30 emacs30nox
 #			emacs29 emacs29nox
-#			emacs21 emacs21nox
 #			emacs20 xemacs215 xemacs215nox
 #			xemacs214 xemacs214nox
 #
@@ -187,19 +184,19 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs31,emacs31nox,emacs30,emacs30nox,emacs29,emacs29nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs31,emacs31nox,emacs30,emacs30nox,emacs29,emacs29nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs31,emacs31nox,emacs30, emacs30nox,emacs29,emacs29nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs31,emacs31nox,emacs30, emacs30nox,emacs29,emacs29nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
 #			These macros will become either an empty string or
 #			"@comment" depending on the Emacs version; when
-#			"emacs21" is used, ${FOR_emacs} and ${FOR_emacs21}
+#			"emacs20" is used, ${FOR_emacs} and ${FOR_emacs20}
 #			become "" (empty), and other macros become
 #			"@comment"; this means that only the PLIST lines
-#			prefixed by ${FOR_emacs} and ${FOR_emacs21} are
+#			prefixed by ${FOR_emacs} and ${FOR_emacs20} are
 #			valid.
 #
 #			NOTFOR_* is the opposite of FOR_*.
@@ -237,14 +234,12 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 #
 
 _EMACS_VERSIONS_ALL= \
-	emacs20 emacs21 emacs21nox emacs29 emacs29nox  \
+	emacs20 emacs29 emacs29nox  \
 	emacs30 emacs30nox emacs31 emacs31nox \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
 	emacs20@../../editors/emacs20 \
-	emacs21@../../editors/emacs21 \
-	emacs21nox@../../editors/emacs21-nox11 \
 	emacs29@../../editors/emacs29 \
 	emacs29nox@../../editors/emacs29-nox11 \
 	emacs30@../../editors/emacs30 \
