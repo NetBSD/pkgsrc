@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/09/06 13:58:06 pin Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/12 20:07:14 wiz Exp $
 
 DISTNAME=	himalaya-2.1.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pimalaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
