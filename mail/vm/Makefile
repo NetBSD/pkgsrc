@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/06/05 02:36:41 mef Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/12 21:48:41 wiz Exp $
 
 DISTNAME=	vm-8.2.0b
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/vm
-COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
+COMMENT=	Advanced mail user agent for Emacs
 
 USE_TOOLS+=	makeinfo gmake gtar
 GNU_CONFIGURE=	yes
@@ -31,5 +31,4 @@ PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
 
 .include "../../editors/emacs/modules.mk"
 
-.include "../../misc/bbdb2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
