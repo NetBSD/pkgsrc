@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/09/04 07:57:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/12 19:52:21 drixter Exp $
 
 DISTNAME=	knot-resolver-6.4.2
 PKGREVISION=	1
@@ -49,7 +49,7 @@ SOEXT.*=	so
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_VARS=	notdarwin
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 # error: call to undeclared function 'malloc_stats_print'
 MESON_ARGS+=		-Dmalloc=disabled
 .else
