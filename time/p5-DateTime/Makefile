@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2026/07/16 19:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/09/12 20:41:28 wiz Exp $
 
-DISTNAME=	DateTime-1.66
+DISTNAME=	DateTime-1.67
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	2
 CATEGORIES=	time perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DR/DROLSKY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/dist/DateTime
