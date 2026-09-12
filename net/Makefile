@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1661 2026/08/27 21:43:28 leot Exp $
+# $NetBSD: Makefile,v 1.1662 2026/09/12 16:45:36 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -847,6 +847,7 @@ SUBDIR+=	radiusclient-ng
 SUBDIR+=	radsecproxy
 SUBDIR+=	rancid
 SUBDIR+=	ratman
+SUBDIR+=	raven
 SUBDIR+=	rbldnsd
 SUBDIR+=	rclone
 SUBDIR+=	rdesktop

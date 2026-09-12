@@ -1,0 +1,5 @@
+RAVEN is an open-source, lightweight, single-binary routing
+security observability tool. It connects directly to your
+routers via BMP, validates every route against RPKI ROV and
+ASPA path validation in real time, and exposes the results
+through a CLI, Prometheus metrics, and Grafana dashboards.
