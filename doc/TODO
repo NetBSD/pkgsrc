@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27878 2026/09/09 10:06:36 wiz Exp $
+$NetBSD: TODO,v 1.27879 2026/09/12 11:27:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -668,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
+	o gcc13-13.5
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gdb-17.1
@@ -680,6 +681,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.3
+	o gitte-0.10.0
 	o gleam-1.18.0
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
@@ -1074,6 +1076,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pandoc-3.10.2
 	o pandoc-cli-3.11
 	o papirus-folders-1.8.0
+	o parallel-20260822
 	o parrot-8.1.0
 	o passenger-6.0.20
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
@@ -1184,7 +1187,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
-	o reposurgeon-5.10
+	o reposurgeon-5.11
 	o resize_image-0.7
 	o rio500-0.8.1
 	o rmtrash-1.14
