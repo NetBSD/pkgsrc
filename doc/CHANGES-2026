@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6026 2026/09/12 14:35:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6027 2026/09/12 15:04:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9202,3 +9202,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed textproc/nxml-mode [wiz 2026-09-12]
 	Updated meta-pkgs/bulk-small to 20260912 [wiz 2026-09-12]
 	Updated editors/emacs29 to 29.4nb31 [wiz 2026-09-12]
+	Updated net/trickle to 1.07 [wiz 2026-09-12]
