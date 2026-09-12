@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6056 2026/09/12 21:05:16 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6057 2026/09/12 21:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9232,3 +9232,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/qca2-qt5 to 2.3.12 [wiz 2026-09-12]
 	Updated security/qca2-qt5-gnupg to 2.3.12 [wiz 2026-09-12]
 	Updated security/qca2-qt5-ossl to 2.3.12 [wiz 2026-09-12]
+	Updated security/qca2-qt6 to 2.3.12 [wiz 2026-09-12]
