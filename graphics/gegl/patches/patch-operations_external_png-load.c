@@ -1,16 +1,16 @@
-$NetBSD: patch-operations_external_png-load.c,v 1.1 2021/01/14 10:16:30 jperkin Exp $
+$NetBSD: patch-operations_external_png-load.c,v 1.2 2026/09/12 21:49:46 wiz Exp $
 
 Fix SunOS flags.
 
---- operations/external/png-load.c.orig	2020-08-02 20:23:44.958153000 +0000
+--- operations/external/png-load.c.orig	2026-09-07 02:51:56.000000000 +0000
 +++ operations/external/png-load.c
-@@ -20,7 +20,9 @@
+@@ -25,7 +25,9 @@
+ #endif
  
- #include "config.h"
  #ifdef HAVE_STRPTIME
 +#  ifndef __sun
  #define _XOPEN_SOURCE
 +#  endif
  #include <time.h>
  #endif
- #include <glib/gi18n-lib.h>
+ 

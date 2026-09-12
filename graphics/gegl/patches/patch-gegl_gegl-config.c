@@ -1,6 +1,6 @@
-$NetBSD: patch-gegl_gegl-config.c,v 1.3 2019/11/02 14:05:46 nia Exp $
+$NetBSD: patch-gegl_gegl-config.c,v 1.4 2026/09/12 21:49:46 wiz Exp $
 
-Support NetBSD.
+Support NetBSD<11.
 
 --- gegl/gegl-config.c.orig	2019-10-26 23:01:07.000000000 +0000
 +++ gegl/gegl-config.c

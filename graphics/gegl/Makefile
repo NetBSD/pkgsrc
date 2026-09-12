@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.166 2026/09/02 19:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2026/09/12 21:49:46 wiz Exp $
 
-DISTNAME=	gegl-0.4.70
-PKGREVISION=	5
+DISTNAME=	gegl-0.4.72
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -53,13 +52,6 @@ PRINT_PLIST_AWK+=	{ if (/x86_64-v/) $$0 = "$${PLIST.x86_64}" $$0 }
 PLIST_SRC+=		PLIST.neon
 PRINT_PLIST_AWK+=	{ if (/arm-neon/) $$0 = "$${PLIST.neon}" $$0 }
 .endif
-
-# ../gegl/opencl/gegl-cl-color.c:32:10: fatal error: opencl/colors.cl.h: No such file or directory
-# race condition in meson?
-pre-build:
-	cd ${WRKSRC}/opencl && for file in $$(ls -1 | grep '\.cl$$'); do \
-		${PYTHONBIN} cltostring.py "$$file" "$$file".h \
-	; done
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
