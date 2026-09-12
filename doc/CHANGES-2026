@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6062 2026/09/12 21:58:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6063 2026/09/12 22:00:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9238,3 +9238,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/babl to 0.1.128 [wiz 2026-09-12]
 	Updated graphics/gegl to 0.4.72 [wiz 2026-09-12]
 	Updated graphics/gimp to 3.2.6 [wiz 2026-09-12]
+	Updated devel/coccinelle to 1.3.3 [wiz 2026-09-12]
