@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.440 2026/09/02 19:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.441 2026/09/12 21:58:33 wiz Exp $
 
-DISTNAME=	gimp-3.2.4
-PKGREVISION=	8
+DISTNAME=	gimp-3.2.6
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -50,6 +49,12 @@ REPLACE_PYTHON+=	plug-ins/python/*.py
 REPLACE_PYTHON+=	plug-ins/python/*/*.py
 REPLACE_PYTHON+=	tools/*.py
 REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
+
+SUBST_CLASSES+=		home
+SUBST_SED.home=		-e "s,${FAKEHOMEDIR},~,"
+SUBST_FILES.home=	output/docs/gimprc-3.2.5
+SUBST_STAGE.home=	post-build
+SUBST_MESSAGE.home=	Fix expanded path to home directory.
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
 EGDIR=			${PREFIX}/share/examples/gimp

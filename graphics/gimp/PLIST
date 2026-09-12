@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2026/04/20 14:41:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.90 2026/09/12 21:58:33 wiz Exp $
 bin/gimp
 bin/gimp-3
 bin/gimp-3.2
@@ -482,34 +482,34 @@ lib/girepository-1.0/Gimp-3.0.typelib
 lib/girepository-1.0/GimpUi-3.0.typelib
 lib/libgimp-3.0.so
 lib/libgimp-3.0.so.0
-lib/libgimp-3.0.so.0.204.0
+lib/libgimp-3.0.so.0.206.0
 lib/libgimp-scriptfu-3.0.so
 lib/libgimp-scriptfu-3.0.so.0
-lib/libgimp-scriptfu-3.0.so.0.204.0
+lib/libgimp-scriptfu-3.0.so.0.206.0
 lib/libgimpbase-3.0.so
 lib/libgimpbase-3.0.so.0
-lib/libgimpbase-3.0.so.0.204.0
+lib/libgimpbase-3.0.so.0.206.0
 lib/libgimpcolor-3.0.so
 lib/libgimpcolor-3.0.so.0
-lib/libgimpcolor-3.0.so.0.204.0
+lib/libgimpcolor-3.0.so.0.206.0
 lib/libgimpconfig-3.0.so
 lib/libgimpconfig-3.0.so.0
-lib/libgimpconfig-3.0.so.0.204.0
+lib/libgimpconfig-3.0.so.0.206.0
 lib/libgimpmath-3.0.so
 lib/libgimpmath-3.0.so.0
-lib/libgimpmath-3.0.so.0.204.0
+lib/libgimpmath-3.0.so.0.206.0
 lib/libgimpmodule-3.0.so
 lib/libgimpmodule-3.0.so.0
-lib/libgimpmodule-3.0.so.0.204.0
+lib/libgimpmodule-3.0.so.0.206.0
 lib/libgimpthumb-3.0.so
 lib/libgimpthumb-3.0.so.0
-lib/libgimpthumb-3.0.so.0.204.0
+lib/libgimpthumb-3.0.so.0.206.0
 lib/libgimpui-3.0.so
 lib/libgimpui-3.0.so.0
-lib/libgimpui-3.0.so.0.204.0
+lib/libgimpui-3.0.so.0.206.0
 lib/libgimpwidgets-3.0.so
 lib/libgimpwidgets-3.0.so.0
-lib/libgimpwidgets-3.0.so.0.204.0
+lib/libgimpwidgets-3.0.so.0.206.0
 lib/pkgconfig/gimp-3.0.pc
 lib/pkgconfig/gimpthumb-3.0.pc
 lib/pkgconfig/gimpui-3.0.pc
@@ -1563,7 +1563,6 @@ share/gimp/3.0/icons/Legacy/12x12/apps/gimp-menu-right.png
 share/gimp/3.0/icons/Legacy/12x12/apps/gimp-quick-mask-off.png
 share/gimp/3.0/icons/Legacy/12x12/apps/gimp-quick-mask-on.png
 share/gimp/3.0/icons/Legacy/12x12/apps/gimp-swap-colors.png
-share/gimp/3.0/icons/Legacy/12x12/apps/gimp-visible.png
 share/gimp/3.0/icons/Legacy/12x12/apps/gimp-zoom-follow-window.png
 share/gimp/3.0/icons/Legacy/16x16/apps/dialog-information.png
 share/gimp/3.0/icons/Legacy/16x16/apps/dialog-warning.png
@@ -1620,7 +1619,6 @@ share/gimp/3.0/icons/Legacy/16x16/apps/gimp-grid.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-histogram-linear.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-histogram-logarithmic.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-histogram.png
-share/gimp/3.0/icons/Legacy/16x16/apps/gimp-image.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-images.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-input-device.png
 share/gimp/3.0/icons/Legacy/16x16/apps/gimp-invert.png
@@ -1708,7 +1706,6 @@ share/gimp/3.0/icons/Legacy/18x18/apps/gimp-color-picker-gray.png
 share/gimp/3.0/icons/Legacy/18x18/apps/gimp-color-picker-white.png
 share/gimp/3.0/icons/Legacy/192x192/apps/gimp-wilber.png
 share/gimp/3.0/icons/Legacy/20x20/apps/gimp-linked.png
-share/gimp/3.0/icons/Legacy/20x20/apps/gimp-visible.png
 share/gimp/3.0/icons/Legacy/22x22/apps/gimp-char-picker.png
 share/gimp/3.0/icons/Legacy/22x22/apps/gimp-dynamics.png
 share/gimp/3.0/icons/Legacy/22x22/apps/gimp-histogram.png
@@ -1794,7 +1791,6 @@ share/gimp/3.0/icons/Legacy/24x24/apps/gimp-hcenter.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-hchain-broken.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-hchain.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-hfill.png
-share/gimp/3.0/icons/Legacy/24x24/apps/gimp-image.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-images.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-layer-mask.png
 share/gimp/3.0/icons/Legacy/24x24/apps/gimp-layer.png
@@ -1829,7 +1825,6 @@ share/gimp/3.0/icons/Legacy/32x32/apps/gimp-channel-indexed.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-channel-red.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-channel.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-floating-selection.png
-share/gimp/3.0/icons/Legacy/32x32/apps/gimp-image.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-layer-mask.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-layer.png
 share/gimp/3.0/icons/Legacy/32x32/apps/gimp-text-layer.png
@@ -1896,6 +1891,7 @@ share/gimp/3.0/icons/Legacy/64x64/apps/gimp-wilber.png
 share/gimp/3.0/icons/Legacy/96x96/apps/gimp-wilber.png
 share/gimp/3.0/icons/Legacy/index.theme
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-business-card.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-close-all.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-color-cmyk.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-color-space-linear.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-color-space-non-linear.svg
@@ -1913,6 +1909,9 @@ share/gimp/3.0/icons/Legacy/scalable/apps/gimp-even-vertical-gap.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-file-manager.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-gegl.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-group-layer.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-image-open.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-image-reload.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-image.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-lock-alpha-symbolic.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-lock-alpha.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-lock-content-symbolic.svg
@@ -2009,6 +2008,7 @@ share/gimp/3.0/icons/Legacy/scalable/apps/gimp-tool-zoom.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-transform-3d-camera.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-transform-3d-move.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-transform-3d-rotate.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-visible.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gtk-cancel.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gtk-no.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gtk-ok.svg
