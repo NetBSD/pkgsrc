@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/12 16:49:53 drixter Exp $
+
+BLAKE2s (bgpq4-1.16.tar.gz) = 4005912270d1ad9cfd688557e1d8af92485e1c01d90b2044eeee4c480a60baeb
+SHA512 (bgpq4-1.16.tar.gz) = 57cb2e1cafada488c85ba8f8103f9bee66ab339ee9c9d5571d240080f44d794b40e75a6bfddcdb096a61d54d7f814b0f5f7ac34aa92ba6ec0b989285dc9c9422
+Size (bgpq4-1.16.tar.gz) = 61067 bytes

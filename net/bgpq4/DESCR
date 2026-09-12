@@ -1,0 +1,3 @@
+The bgpq4 utility is used to generate configurations
+(prefix-lists, extended access-lists, policy-statement
+terms and as-path lists) based on IRR data.
