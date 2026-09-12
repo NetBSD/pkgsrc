@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6043 2026/09/12 20:33:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6044 2026/09/12 20:38:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9219,3 +9219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/hwdata to 0.411 [wiz 2026-09-12]
 	Updated security/p5-Authen-SASL to 2.2100 [wiz 2026-09-12]
 	Added devel/p5-Params-SomeUtil version 1.11 [wiz 2026-09-12]
+	Updated devel/p5-Data-OptList to 0.115 [wiz 2026-09-12]
