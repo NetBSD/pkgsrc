@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6054 2026/09/12 21:04:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6055 2026/09/12 21:05:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9230,3 +9230,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-googleapis-common-protos to 1.75.3 [wiz 2026-09-12]
 	Updated textproc/tree-sitter to 0.27.0 [wiz 2026-09-12]
 	Updated security/qca2-qt5 to 2.3.12 [wiz 2026-09-12]
+	Updated security/qca2-qt5-gnupg to 2.3.12 [wiz 2026-09-12]
