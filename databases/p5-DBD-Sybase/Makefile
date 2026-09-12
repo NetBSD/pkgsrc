@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2026/07/16 19:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/09/12 19:43:15 wiz Exp $
 
 DISTNAME=		DBD-Sybase-1.15
 PKGNAME=		p5-${DISTNAME}
@@ -31,6 +31,8 @@ PERL5_LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
 MAKE_ENV+=		SYBASE=${_SYBASE:Q}
 MAKE_PARAMS+=		--accept_test_defaults
 MAKE_PARAMS+=		--chained Y
+
+CFLAGS+=		-Wno-implicit-function-declaration
 
 .if !defined(USE_SYBASE_OPENCLIENT)
 .  include "../../databases/freetds/buildlink3.mk"
