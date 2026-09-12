@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4688 2026/09/08 09:51:09 adam Exp $
+# $NetBSD: Makefile,v 1.4689 2026/09/12 11:27:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3590,7 +3590,6 @@ SUBDIR+=	samurai
 SUBDIR+=	sccache
 SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
-SUBDIR+=	scons
 SUBDIR+=	scons4
 SUBDIR+=	sdcc
 SUBDIR+=	sdl12-compat
