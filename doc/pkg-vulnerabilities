@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.790 2026/09/11 17:56:08 js Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.791 2026/09/12 12:18:42 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30442,3 +30442,4 @@ clamav<0.92		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2007-6335
 echoping-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2010-5111
 sqlite3>=3.49.0<3.49.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29088
 sickgear-[0-9]*		multiple-vulnerabilities	https://github.com/SickGear/SickGear/issues/1517
+autogen<5.18.16nb18	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8746
