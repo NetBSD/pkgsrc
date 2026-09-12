@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2026/07/16 19:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/12 11:30:39 wiz Exp $
 
 DISTNAME=		HTML-FormFu-2.07
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
+
+PATCHFILES+=		CVE-2026-19873-r1.patch
+PATCH_SITES+=		https://security.metacpan.org/patches/H/HTML-FormFu/2.08/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/HTML-FormFu
@@ -49,7 +52,7 @@ DEPENDS+=	p5-YAML-LibYAML>=0.32:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-libwww>=5:../../www/p5-libwww
 
 #TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
-TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		c
 
