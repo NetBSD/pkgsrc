@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/06/22 05:35:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/12 22:30:19 wiz Exp $
 bin/gitte
 libexec/gitte/gitte-askpass
 share/applications/de.wwwtech.gitte.desktop
@@ -8,6 +8,11 @@ share/glib-2.0/schemas/de.wwwtech.gitte.gschema.xml
 share/icons/hicolor/scalable/apps/de.wwwtech.gitte.svg
 share/icons/hicolor/symbolic/apps/de.wwwtech.gitte-symbolic.svg
 share/locale/de/LC_MESSAGES/gitte.mo
+share/locale/eu/LC_MESSAGES/gitte.mo
+share/locale/fi/LC_MESSAGES/gitte.mo
 share/locale/kw/LC_MESSAGES/gitte.mo
+share/locale/sl/LC_MESSAGES/gitte.mo
+share/locale/sr/LC_MESSAGES/gitte.mo
 share/locale/uk/LC_MESSAGES/gitte.mo
+share/locale/zh_CN/LC_MESSAGES/gitte.mo
 share/metainfo/de.wwwtech.gitte.metainfo.xml
