@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6033 2026/09/12 16:50:15 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6034 2026/09/12 17:19:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9209,3 +9209,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/rozi version 0.0.18 [pin 2026-09-12]
 	Added net/raven version 0.3.3 [drixter 2026-09-12]
 	Added net/bgpq4 version 1.16 [drixter 2026-09-12]
+	Updated www/py-django-allauth to 65.19.2nb1 [wiz 2026-09-12]
