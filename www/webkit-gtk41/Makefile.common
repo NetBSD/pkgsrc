@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2026/09/11 10:43:07 gdt Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/09/12 12:24:19 gdt Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -58,13 +58,50 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBBACKTRACE=OFF
 .if ${OPSYS} == "Darwin"
 CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 .endif
-# Upstream cmake somehow finds the full path to sqlite3 in the
-# buildlink3 dir and that ends up in the library, at least in some
-# build environments.  This argument setting does not appear to work
-# in all situations.
+
+# This setting was used in the past because libsqlite3.so was not
+# found by configure.  As of 2026-09, without it, cmake/ninja finds
+# and uses the path to the bl3 tree.  With it, cmake/ninja puts
+# "$prefix/lib/libsqlite3.so" in NEEDED.  Without it, cmake/make works
+# fine.
+#CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
+
+# When building:
+#   - on NetBSD 10 amd64
+#   - with CMAKE_GENERATOR=ninja
+#   - and perhaps some other conditions (which are not generally
+#     troublesome)
+# somehow, linking of libsqlite3.so into libwebkit2gtk-4.1.so ends up
+# with a bad path.  There is a PKG_DEVELOPER check that finds (with
+# and without the above setting):
+#   => Checking for missing run-time search paths in webkit-gtk41-2.52.6nb2
+#   ERROR: lib/libwebkit2gtk-4.1.so.0.21.10: missing library: /usr/pkg/lib/libsqlite3.so
+#
+#   => Checking for missing run-time search paths in webkit-gtk41-2.52.6nb2
+#   ERROR: lib/libwebkit2gtk-4.1.so.0.21.10: missing library: /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so
+#   *** Error code 1
+#
+# One can inspect the library in the destdir, with and without the
+# above setting:
 #   $ ldd work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10|egrep sqli
-#   /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so => /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so
-CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
+#        /usr/pkg/lib/libsqlite3.so => /usr/pkg/lib/libsqlite3.so
+#
+#   $ ldd work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10|egrep sqli
+#        /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so => /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so
+#
+# And with objdump instead of ldd, with the setting:
+#   $ objdump -x work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10 | egrep 'RPATH|NEEDED'
+#     [many other NEEDED snipped]
+#     NEEDED               libicuuc.so.78
+#     NEEDED               libxml2.so.16
+#     NEEDED               /usr/pkg/lib/libsqlite3.so
+#     NEEDED               libxslt.so.1
+#     NEEDED               libz.so.1
+#     RPATH                /usr/pkg/gcc12/x86_64--netbsd/lib/.:/usr/pkg/gcc12/lib/gcc/x86_64--netbsd/12.5.0:/usr/pkg/lib:/usr/X11R7/lib
+
+# Therefore, to avoid not-understood bugs when using ninja, just
+# don't.
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 # required for faking a better user-agent
 CMAKE_CONFIGURE_ARGS+=		-DUSER_AGENT_BRANDING="Linux ${MACHINE_ARCH}"
