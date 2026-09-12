@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6020 2026/09/12 11:49:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6021 2026/09/12 11:49:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9191,3 +9191,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed devel/scons [wiz 2026-09-12]
 	Updated www/p5-HTML-FormFu to 2.07nb9 [wiz 2026-09-12]
 	Updated devel/libuuid to 2.42.3 [wiz 2026-09-12]
+	Updated devel/libblkid to 2.42.3 [wiz 2026-09-12]
