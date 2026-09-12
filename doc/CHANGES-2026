@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6060 2026/09/12 21:21:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6061 2026/09/12 21:49:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9236,3 +9236,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.73 [wiz 2026-09-12]
 	Updated shells/shuck to 0.2.1 [wiz 2026-09-12]
 	Updated graphics/babl to 0.1.128 [wiz 2026-09-12]
+	Updated graphics/gegl to 0.4.72 [wiz 2026-09-12]
