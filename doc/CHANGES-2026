@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6049 2026/09/12 20:47:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6050 2026/09/12 20:49:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9225,3 +9225,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-DNS to 1.57 [wiz 2026-09-12]
 	Updated devel/p5-Sub-Exporter to 0.992 [wiz 2026-09-12]
 	Updated www/p5-URI to 5.37 [wiz 2026-09-12]
+	Updated devel/py-google-api-core to 2.36.0 [wiz 2026-09-12]
