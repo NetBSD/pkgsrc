@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/31 16:43:09 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/12 14:41:33 wiz Exp $
 bin/cob-config
 bin/cobc
 bin/cobcrun
@@ -10,7 +10,7 @@ include/libcob/exception.def
 include/libcob/statement.def
 include/libcob/version.h
 info/gnucobol.info
-lib/gnucobol/CBL_OC_DUMP.so
+lib/gnucobol/CBL_OC_DUMP.${SHLIB_EXT}
 lib/libcob.la
 man/man1/cob-config.1
 man/man1/cobc.1

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/01/07 08:47:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2026/09/12 14:41:33 wiz Exp $
 
 DISTNAME=	gnucobol-3.2
 PKGREVISION=	8
@@ -30,6 +29,8 @@ SUBST_MESSAGE.bdb=	Detect pkgsrc Berkeley DB library
 SUBST_STAGE.bdb=	pre-configure
 SUBST_FILES.bdb=	configure
 SUBST_SED.bdb=		-e 's,db-$$COB_BDB_HEADER,${BDB_TYPE},g'
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
