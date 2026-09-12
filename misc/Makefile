@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2026/09/12 14:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.690 2026/09/12 16:01:03 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -331,6 +331,7 @@ SUBDIR+=	rocs
 SUBDIR+=	root-tail
 SUBDIR+=	routeplanner-cli
 SUBDIR+=	rox-memo
+SUBDIR+=	rozi
 SUBDIR+=	rpm
 SUBDIR+=	ruby-ansi
 SUBDIR+=	ruby-colorator
