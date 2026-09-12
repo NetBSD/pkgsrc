@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6046 2026/09/12 20:43:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6047 2026/09/12 20:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9222,3 +9222,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Data-OptList to 0.115 [wiz 2026-09-12]
 	Updated time/p5-DateTime to 1.6700 [wiz 2026-09-12]
 	Updated www/p5-LWP-MediaTypes to 6.05 [wiz 2026-09-12]
+	Updated net/p5-Net-DNS to 1.57 [wiz 2026-09-12]
