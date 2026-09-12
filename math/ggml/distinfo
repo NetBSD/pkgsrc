@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/08/26 10:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.13 2026/09/12 20:27:32 wiz Exp $
 
-BLAKE2s (ggml-0.22.0.tar.gz) = c2f40f3079d1d3b54bbdc0fa0bd5f24cf0e3fdb69537f195e6435f5a0604fac3
-SHA512 (ggml-0.22.0.tar.gz) = 61ea7d216c949f0e484f2b4edf1a83226e452079ef0663575c1b2585a2960bc1318bdf64da817a89cbe0b3baa4d7cdec81fe33417d55bb4b2e80428486aebd5a
-Size (ggml-0.22.0.tar.gz) = 3767077 bytes
+BLAKE2s (ggml-0.23.0.tar.gz) = 5d0c4805ea8df62b546455efb40e0bd0175e4f4a80d930512827fd0d75b03b92
+SHA512 (ggml-0.23.0.tar.gz) = 5bab13fbe931e4a78759449e91eadad979d1efaf427439c674ebb22639fde32d1468791488b28ae3dda4952dd8c0514b2c4fee9ecc46033f7aff16de442dffc2
+Size (ggml-0.23.0.tar.gz) = 3931297 bytes
