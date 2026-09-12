@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/09/06 09:30:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/12 19:37:13 wiz Exp $
 
 DISTNAME=	KDDockWidgets-2.4.1
 PKGNAME=	${DISTNAME:tl}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-gpl-v3 AND mit
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 .include "../../devel/cmake/build.mk"
 
