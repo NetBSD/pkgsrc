@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/09/08 19:58:28 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2026/09/12 20:13:24 wiz Exp $
 
 BLAKE2s (lua-5.5.1.tar.gz) = 397e25b1a9857dc32b3e996ed099ea9b6fd9a024308cc0e93695d9b87a05d784
 SHA512 (lua-5.5.1.tar.gz) = 1c8cb3d7194732d7685f80a30e0804cb24dc6aee1f8d1383bb9fd5d0699b84c70b823e686555dfa8fd61a32f32c0c687a8419ff4aa285f39d4f3bf3d5cd635c0
 Size (lua-5.5.1.tar.gz) = 398643 bytes
-SHA1 (patch-src_Makefile) = 2ffc5bf10f9cad4c13b75b7a4d11753b71c0b754
+SHA1 (patch-src_Makefile) = 388edfef61fc8559188b984ddfea94ce6810bcd2
