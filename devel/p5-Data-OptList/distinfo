@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/05/20 06:46:00 wiz Exp $
+$NetBSD: distinfo,v 1.15 2026/09/12 20:38:08 wiz Exp $
 
-BLAKE2s (Data-OptList-0.114.tar.gz) = 128c985e27cb06557b6df68a90aa22cb3f3e2e7fb4e71e1fb0ab10676464521a
-SHA512 (Data-OptList-0.114.tar.gz) = 72f60ad7d9a6d87ffecfbc0f6f6d48dad2816dd4431d7e82e8ab834e0852da27420fd52fb2a1138254d80bf8b98b94b9fa25b878e1bb155221543a78219ee16a
-Size (Data-OptList-0.114.tar.gz) = 19891 bytes
+BLAKE2s (Data-OptList-0.115.tar.gz) = 09cd8bcf0ecc529d0f7a7d66f1bba7684c0a0d22d60b9a1a0b2b98a3d8f81bc0
+SHA512 (Data-OptList-0.115.tar.gz) = 7e648b64288fbffcfd79c8c90293d41350e212dc04510da54241b72f0db66a372851fa0b4a751d2cb284eda512db9b9dc11f1649ba80b163a1451b188ce9e3f2
+Size (Data-OptList-0.115.tar.gz) = 21045 bytes
