@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2026/08/27 07:47:17 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/12 20:58:42 wiz Exp $
 #
 # Changes:
 # https://github.com/tree-sitter/tree-sitter/releases/
 
-DISTNAME=	tree-sitter-0.26.13
+DISTNAME=	tree-sitter-0.27.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
