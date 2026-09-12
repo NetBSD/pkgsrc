@@ -1,16 +1,16 @@
-$NetBSD: patch-operations_external_tiff-load.c,v 1.1 2021/01/14 10:16:30 jperkin Exp $
+$NetBSD: patch-operations_external_tiff-load.c,v 1.2 2026/09/12 21:49:46 wiz Exp $
 
 Fix SunOS flags.
 
---- operations/external/tiff-load.c.orig	2020-08-02 20:23:44.962150300 +0000
+--- operations/external/tiff-load.c.orig	2026-09-07 02:51:56.000000000 +0000
 +++ operations/external/tiff-load.c
-@@ -18,7 +18,9 @@
- 
+@@ -19,7 +19,9 @@
  #include "config.h"
+ 
  #ifdef HAVE_STRPTIME
 +#  ifndef __sun
  #define _XOPEN_SOURCE
 +#  endif
  #include <time.h>
  #endif
- #include <glib/gi18n-lib.h>
+ 
