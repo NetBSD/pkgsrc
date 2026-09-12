@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4689 2026/09/12 11:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4690 2026/09/12 20:33:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2069,6 +2069,7 @@ SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Parallel-Prefork
 SUBDIR+=	p5-Params-Classify
 SUBDIR+=	p5-Params-Coerce
+SUBDIR+=	p5-Params-SomeUtil
 SUBDIR+=	p5-Params-Util
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Params-ValidationCompiler
