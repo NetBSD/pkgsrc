@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6041 2026/09/12 20:28:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6042 2026/09/12 20:29:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9217,3 +9217,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/compiledb-go to 1.7.1 [wiz 2026-09-12]
 	Updated math/ggml to 0.23.0 [wiz 2026-09-12]
 	Updated sysutils/hwdata to 0.411 [wiz 2026-09-12]
+	Updated security/p5-Authen-SASL to 2.2100 [wiz 2026-09-12]
