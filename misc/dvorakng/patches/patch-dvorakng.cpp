@@ -1,12 +1,11 @@
-$NetBSD: patch-dvorakng.cpp,v 1.1 2026/08/30 09:14:25 he Exp $
+$NetBSD: patch-dvorakng.cpp,v 1.2 2026/09/12 19:38:50 wiz Exp $
 
 Do not implicitly assume that "char" is signed.
 Sprinkle "const" to deal with string constants and get rid of warnings.
 
 --- dvorakng.cpp.orig	2026-08-30 08:59:25.654701733 +0000
 +++ dvorakng.cpp
-@@ -117,7 +117,7 @@ char keymap[] = //{{{
-@@ -117,7 +117,7 @@ char keymap[] = //{{{
+@@ -117,7 +117,7 @@
  	0
  }; //}}}
  
