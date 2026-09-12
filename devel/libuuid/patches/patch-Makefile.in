@@ -1,20 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.5 2024/12/28 14:10:23 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2026/09/12 11:49:21 wiz Exp $
 
 Do not install terminal-colors.d.5.
 Fix unportable test(1) operator.
 
---- Makefile.in.orig	2024-07-04 08:01:08.682964852 +0000
+--- Makefile.in.orig	2026-09-01 12:59:13.637395808 +0000
 +++ Makefile.in
-@@ -5782,7 +5782,7 @@ ADOCFILES_COMMON = man-common/bugreports
- 	man-common/footer-lib.adoc man-common/help-version.adoc \
+@@ -6109,7 +6109,7 @@ ADOCFILES_COMMON = man-common/annotate.adoc man-common
+ 	man-common/help-version.adoc man-common/hyperlink.adoc \
  	man-common/in-bytes.adoc man-common/manpage-stub.adoc \
- 	man-common/translation.adoc
--MANPAGES = lib/terminal-colors.d.5 $(am__append_21) $(am__append_32) \
-+MANPAGES = $(am__append_21) $(am__append_32) \
- 	$(am__append_56) $(am__append_90) $(am__append_107) \
- 	$(am__append_110) $(am__append_113) $(am__append_116) \
- 	$(am__append_119) $(am__append_122) $(am__append_125) \
-@@ -19005,7 +19005,7 @@ checklibdoc:
+ 	man-common/env-smartcols.adoc man-common/translation.adoc
+-MANPAGES = lib/terminal-colors.d.5 $(am__append_18) $(am__append_29) \
++MANPAGES = $(am__append_18) $(am__append_29) \
+ 	$(am__append_53) $(am__append_88) $(am__append_105) \
+ 	$(am__append_108) $(am__append_111) $(am__append_114) \
+ 	$(am__append_117) $(am__append_120) $(am__append_123) \
+@@ -19777,7 +19777,7 @@ $(CHANGELOG_FILE):
  	echo $(VERSION) > $@-t && mv $@-t $@
  
  $(CHANGELOG_FILE):
