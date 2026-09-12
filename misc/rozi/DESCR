@@ -1,0 +1,6 @@
+rozi arranges terminal panes with tiling layouts, floating panes,
+fullscreen panes, and nine workspaces. A prefix key controls panes
+without taking ordinary input away from the programs inside them.
+Named sessions keep running when the client detaches, so you can
+return to the same processes and scrollback later. Tiling behavior
+and keyboard flow take their cues from the Hyprland window manager.
