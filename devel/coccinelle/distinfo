@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2026/08/21 12:25:18 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/09/12 22:00:18 wiz Exp $
 
-BLAKE2s (coccinelle-1.3.2.tar.gz) = 9304cb47131d090d7b4ee3e8435d1615144507bf3b498c6f962686dd98c7c8ba
-SHA512 (coccinelle-1.3.2.tar.gz) = 1cbe1c5df126063737464a8615b885cded670cb9cea1b7ed7eb57c9ff63a38c4db7bca1deea2085dfbe13aac98bfe8aa3966a9dc291753a1afea80527dae7216
-Size (coccinelle-1.3.2.tar.gz) = 3160962 bytes
+BLAKE2s (coccinelle-1.3.3.tar.gz) = 7033ac7e2772331d2177ba63818920f5f22e1f03a315303977cae7fabca2b215
+SHA512 (coccinelle-1.3.3.tar.gz) = bd5abb737274e115e4853059b005eb9a70b9247d4a239f0f3e9b6b84096d58059eaaee273d11d4aca31fcd38d80656dbc26c19b47787fdbe82b674e64fb8d505
+Size (coccinelle-1.3.3.tar.gz) = 3161559 bytes
 SHA1 (patch-bundles_pyml_pyml-current_pyml__arch.ml.c) = 873adcc13392de347cb215c9e565a6c24abbe983
