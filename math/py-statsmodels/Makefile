@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/09/04 09:16:49 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/09/12 19:10:32 wiz Exp $
 
 DISTNAME=	statsmodels-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://www.statsmodels.org/
 COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.13:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=9.2.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-formulaic>=1.1.0:../../math/py-formulaic
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
@@ -24,6 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-run-parallel>=0:../../devel/py-test-run-paral
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 REPLACE_PYTHON+=	statsmodels/tools/print_version.py
+REPLACE_PYTHON+=	statsmodels/_build/git_version.py
 REPLACE_PYTHON+=	statsmodels/tsa/ardl/_pss_critical_values/pss.py
 REPLACE_PYTHON+=	statsmodels/tsa/ardl/pss_critical_values.py
 
