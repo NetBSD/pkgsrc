@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27904 2026/09/13 06:51:26 wiz Exp $
+$NetBSD: TODO,v 1.27905 2026/09/13 10:18:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -660,6 +660,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fuse-ntfs-3g-2026.7.7
 	o fuse-sshfs-3.7.6
 	o fuse3-3.18.3
+	o fzf-0.74.4
 	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
@@ -677,6 +678,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghc-9.14.1
+	o ghostscript-agpl-10.08.0
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.3
 	o gleam-1.18.0
@@ -805,6 +807,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jdom-2.0.6
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.10.10
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -830,6 +833,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kqtquickcharts4-20.12.3
 	o krita-6.0.2.1
 	o kronolith-4.2.14
+	o ksanecore-26.08.1
 	o kstars-3.8.4
 	o ktorrent3-3.3.4
 	o latexmk-486
@@ -851,13 +855,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.23.4
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
+	o libksane-26.08.1
 	o liblzo-2.10
 	o libmatchbox-1.14
+	o libmaxminddb-1.14.0
 	o libmcs-0.7.2
 	o libmtag-0.3.6
 	o libobjc2-2.1
@@ -881,6 +888,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lirc-0.9.3
 	o litehtml-0.10 [breaks qt6-qttools]
 	o llvm-22.1.8 [wip]
+	o llvm-23.1.1
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -1000,6 +1008,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
+	o okular-26.08.1
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
@@ -1102,6 +1111,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
+	o plasma6-plasma-activities-6.7.5
 	o ploticus-examples-230
 	o podcastdl-0.3.3
 	o poke-4.0
@@ -1128,32 +1138,42 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o pxp-1.2.9
 	o py-HappyDoc-3.0
+	o py-JWT-2.14.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-contourpy-1.4.0
 	o py-cutadapt-5.2 [wip]
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-fonttools-4.65.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-matplotlib-3.11.2
+	o py-meson_python-0.21.1
 	o py-msgpack-1.2.2
 	o py-omniORBpy-3.7
+	o py-pdf-6.18.1
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pip-api-0.0.35
 	o py-postgresql-5.1.2
-	o py-pydantic-core-2.48.0 [waiting for py-pydantic release that works with this]
+	o py-pydantic-core-2.49.0 [waiting for py-pydantic release that works with this]
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-textual-8.2.5
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
+	o py-tzdata-2026.4
 	o py-uliweb-0.6
+	o py-urwid-4.1.3
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
+	o py-zensical-0.0.61
 	o pythontidy-1.23
 	o q5go-2.1.3
 	o qca2-2.3.9
@@ -1216,6 +1236,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o shelldap-1.5.2
 	o shotwell-0.32.15
 	o showfont-1.0.4 [wip]
+	o shuck-0.2.2
 	o silc-1.1.11
 	o silc-client-1.1.11
 	o silc-server-1.1.19
