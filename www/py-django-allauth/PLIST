@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/09/12 17:19:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/09/13 06:51:15 wiz Exp $
 ${PYSITELIB}/allauth/__init__.py
 ${PYSITELIB}/allauth/__init__.pyc
 ${PYSITELIB}/allauth/__init__.pyo
@@ -2794,6 +2794,4 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/scm_file_list.json
-${PYSITELIB}/${WHEEL_INFODIR}/scm_version.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
