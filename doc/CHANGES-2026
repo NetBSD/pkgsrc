@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6080 2026/09/13 13:05:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6081 2026/09/13 13:07:48 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9258,3 +9258,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-JWT to 2.14.0 [wiz 2026-09-13]
 	Updated graphics/py-contourpy to 1.4.0 [wiz 2026-09-13]
 	Updated fonts/py-fonttools to 4.65.0 [wiz 2026-09-13]
+	Updated net/Radicale2 to 2.1.12nb5 [jakllsch 2026-09-13]
