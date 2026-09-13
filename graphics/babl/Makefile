@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/09/12 21:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/09/13 10:10:10 tnn Exp $
 
 DISTNAME=	babl-0.1.128
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 
-MESON_ARGS+=	-Dwith-docs=false
+MESON_ARGS+=	-Dgi-docgen=disabled
 
 PKGCONFIG_OVERRIDE+=	babl.pc.in
 
