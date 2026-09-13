@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/11/17 11:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/13 08:38:29 bsiegert Exp $
 #
 
 DISTNAME=	isic-0.07
@@ -19,6 +19,9 @@ INSTALLATION_DIRS+=	share/doc
 # XXX: made to apply to all NetBSD platforms without comment in -r1.18.  Check
 # XXX: it is still required.
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-O[0-9]*
+
+# Fix for newer gcc
+CFLAGS+=	-Wno-implicit-int
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/isic.README
