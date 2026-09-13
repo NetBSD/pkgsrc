@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.2 2026/09/13 10:23:25 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2026/09/13 10:52:33 bouyer Exp $
 
 --- Makefile.in.orig	2026-08-14 07:06:17.723111300 +0200
 +++ Makefile.in	2026-08-28 11:44:24.576665046 +0200
@@ -64,11 +64,11 @@ $NetBSD: patch-Makefile.in,v 1.2 2026/09/13 10:23:25 wiz Exp $
 -	fi
 +	$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
 +	$(INSTALL) -m 644 sympa.conf $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf; \
-+	echo "Creating $(DESTDIR)$(prefix)share/examples/sympa/README"; \
++	echo "Creating $(DESTDIR)$(prefix)/share/examples/sympa/README"; \
 +	$(SED) \
 +		-e 's|--sysconfdir--|$(sysconfdir)|' \
 +		-e 's|--defaultdir--|$(defaultdir)|' \
-+		$(srcdir)/etc_README > $(DESTDIR)$(sysconfdir)/README; \
++		$(srcdir)/etc_README > $(DESTDIR)$(prefix)/share/examples/sympa/README; \
 +	cd $(DESTDIR)$(prefix)/share/examples/sympa; \
 +	echo "# automatically created file" >> data_structure.version; \
 +	echo "# you should not modify it" >> data_structure.version; \

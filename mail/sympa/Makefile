@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2026/09/13 10:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2026/09/13 10:52:32 bouyer Exp $
 
 VERSION=	6.2.80
+PKGREVISION=	1
 DISTNAME=	sympa-${VERSION}
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/sympa-community/sympa/releases/download/${VERSION}/
@@ -139,6 +140,8 @@ OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/msg ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/task ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/tmp ${SYMPA_USER} ${SYMPA_GROUP} 770
 
+MAKE_DIRS_PERMS+=	${SYMPA_BIN}/Sympa/Template/Plugin ${SYMPA_USER} ${SYMPA_GROUP} 755
+
 SPECIAL_PERMS+=	${SYMPA_BIN}/sympa_newaliases-wrapper ${REAL_ROOT_USER} ${SYMPA_GROUP} 4550
 SPECIAL_PERMS+=	${SYMPA_BIN}/bouncequeue ${SYMPA_USER} ${SYMPA_GROUP} 4555
 SPECIAL_PERMS+=	${SYMPA_BIN}/familyqueue ${SYMPA_USER} ${SYMPA_GROUP} 4555
@@ -148,7 +151,9 @@ SPECIAL_PERMS+=	${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
 SPECIAL_PERMS+=	${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
 			 ${SYMPA_USER} ${SYMPA_GROUP} 6555
 
-CONF_FILES=	${PREFIX}/share/examples/sympa/sympa.conf \
+CONF_FILES=	${PREFIX}/share/examples/sympa/README \
+		${PKG_SYSCONFDIR}/README
+CONF_FILES+=	${PREFIX}/share/examples/sympa/sympa.conf \
 		${PKG_SYSCONFDIR}/sympa.conf
 .for f in favicon_sympa.png logo_sympa.png
 CONF_FILES+=	${PREFIX}/sympa/static_content/icons/${f} \
