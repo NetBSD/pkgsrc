@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6066 2026/09/13 06:51:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6067 2026/09/13 06:54:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9243,3 +9243,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libgcrypt to 1.12.4 [adam 2026-09-13]
 	Updated devel/mold to 2.42.1 [adam 2026-09-13]
 	Updated www/py-django-allauth to 65.19.2nb2 [wiz 2026-09-13]
+	Updated databases/p5-DBI to 1.653 [wiz 2026-09-13]
