@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/09/04 12:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/13 07:02:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -128,6 +128,9 @@ ${PYSITELIB}/pikepdf/models/metadata/_core.pyo
 ${PYSITELIB}/pikepdf/models/metadata/_docinfo.py
 ${PYSITELIB}/pikepdf/models/metadata/_docinfo.pyc
 ${PYSITELIB}/pikepdf/models/metadata/_docinfo.pyo
+${PYSITELIB}/pikepdf/models/metadata/_schema.py
+${PYSITELIB}/pikepdf/models/metadata/_schema.pyc
+${PYSITELIB}/pikepdf/models/metadata/_schema.pyo
 ${PYSITELIB}/pikepdf/models/metadata/_xmp.py
 ${PYSITELIB}/pikepdf/models/metadata/_xmp.pyc
 ${PYSITELIB}/pikepdf/models/metadata/_xmp.pyo
