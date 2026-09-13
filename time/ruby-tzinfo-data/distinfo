@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2026/07/20 05:47:14 taca Exp $
+$NetBSD: distinfo,v 1.45 2026/09/13 15:42:30 taca Exp $
 
-BLAKE2s (tzinfo-data-1.2026.3.gem) = bdb18fae1c1a1cc593e3a9686068c5dbb1ef5bd741b55954a28f29a6f1b97d85
-SHA512 (tzinfo-data-1.2026.3.gem) = 5102db662f3def99332f2b9df885a8383bb6008af0e701fa38d169c111ecd253ed408f891b1afea0b4d349ae712bf9b9b5adcb57075a065279f281360a82471a
-Size (tzinfo-data-1.2026.3.gem) = 296448 bytes
+BLAKE2s (tzinfo-data-1.2026.4.gem) = 3744e1c23b70ee8ad12334b3692810c552ecd6cf6a66b688b57f12d5c2872466
+SHA512 (tzinfo-data-1.2026.4.gem) = bfc43d26d9e3d362d40206e7e7208bc57c22c16d41caf935562b8d370f03e1fd25bff13c4fee66d0125008b7881d6f67a80c004e4940501852e3e845da6f2dae
+Size (tzinfo-data-1.2026.4.gem) = 303616 bytes
