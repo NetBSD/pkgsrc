@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/03/06 06:21:35 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/09/13 10:45:12 wiz Exp $
 
-BLAKE2s (libmaxminddb-1.13.3.tar.gz) = ec87037cd678c2812c1c4ca8a239060e2ff0a0d0a4c74e2919c23d245dea124a
-SHA512 (libmaxminddb-1.13.3.tar.gz) = 62098af00e7a827c079f169a73f2b259bb3a20144a8d6a17e10f531a77fc836ddd7c93d73c10d775ea50aad134b2461aa2c81b6f7cd208cca7ef2956e4de0f31
-Size (libmaxminddb-1.13.3.tar.gz) = 795830 bytes
+BLAKE2s (libmaxminddb-1.14.0.tar.gz) = 7a3cc1d73818d999f81d88df60fa1aedb9a894e32fa61b28efdb86224feee7bc
+SHA512 (libmaxminddb-1.14.0.tar.gz) = 91a880d7c66c7b022915ceb6cf467515505666381178ac7713e52ac99d0c02fc57e43bf581b3fcb9fa5673c2fdb489b1d7964dbb3ea2f36a15961783490852d1
+Size (libmaxminddb-1.14.0.tar.gz) = 846559 bytes
