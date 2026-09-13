@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6070 2026/09/13 10:34:50 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6071 2026/09/13 10:38:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9248,3 +9248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-allauth to 65.19.3 [adam 2026-09-13]
 	Updated sysutils/dua-cli to 2.45.0 [pin 2026-09-13]
 	Updated sysutils/fzf to 0.74.4 [wiz 2026-09-13]
+	Updated print/ghostscript-agpl to 10.08.0 [wiz 2026-09-13]
