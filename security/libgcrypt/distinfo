@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.108 2026/08/27 05:28:02 adam Exp $
+$NetBSD: distinfo,v 1.109 2026/09/13 06:08:32 adam Exp $
 
-BLAKE2s (libgcrypt-1.12.3.tar.bz2) = 134abaf0f1b8a591d91404d2aced890df2d9798acf031d3a1687ccbb29bfcbb9
-SHA512 (libgcrypt-1.12.3.tar.bz2) = 84c150730af55669e35d3d9109250ae28175da1b506de84117701464ac5c7e542163977a1eb2e5df4cdaa8c723ea759aa8c004cccc98251902482aff7f847cad
-Size (libgcrypt-1.12.3.tar.bz2) = 4472486 bytes
+BLAKE2s (libgcrypt-1.12.4.tar.bz2) = 5b509fb9dfb0fcdb5db238bd8401198d8bece99283d553ad7c37563ca791dfea
+SHA512 (libgcrypt-1.12.4.tar.bz2) = 632bac4146ba6b3d5e4672e28b1a8b276fcc8bf17961021240b080c6ea4470e46016968a39ee943d3dcd496bda5c9617bf7704bdec75be55847b738809053d8d
+Size (libgcrypt-1.12.4.tar.bz2) = 4473329 bytes
 SHA1 (patch-src_libgcrypt-config.in) = 2b791d7ebe51c52ece864b23dcbeae5354701263
