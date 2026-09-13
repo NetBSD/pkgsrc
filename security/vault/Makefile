@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2026/09/05 19:09:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.127 2026/09/13 14:17:13 bsiegert Exp $
 
 DISTNAME=	vault-1.6.6
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -12,16 +12,11 @@ LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-GO_DIST_BASE=		${DISTNAME}
-GO_SRCPATH=		github.com/hashicorp/vault
-# no "..." suffix here, triggered upstream ticket #10330 and #10638
-GO_BUILD_PATTERN=	${GO_SRCPATH}/
+GO_BUILD_PATTERN=	.
 
 USE_TOOLS+=		bash gmake
 
 INSTALLATION_DIRS+=	bin
-
-DEPENDS+=	go>=1.15.15:../../lang/go
 
 # Clumsy workaround for https://github.com/golang/go/issues/22409
 pre-build:
@@ -33,5 +28,7 @@ do-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg ${GO} test -v ./vault
 
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
