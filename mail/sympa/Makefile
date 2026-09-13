@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/08/29 19:47:05 bouyer Exp $
+# $NetBSD: Makefile,v 1.86 2026/09/13 10:23:25 wiz Exp $
 
 VERSION=	6.2.80
 DISTNAME=	sympa-${VERSION}
@@ -9,8 +9,6 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://www.sympa.community/
 COMMENT=	Mailing list manager
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=		mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=		p5-Archive-Zip-SimpleZip>=1.002:../../archivers/p5-Archive-Zip-SimpleZip
