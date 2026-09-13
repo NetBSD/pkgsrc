@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2026/09/12 12:24:19 gdt Exp $
+# $NetBSD: Makefile.common,v 1.6 2026/09/13 00:34:24 gdt Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -64,7 +64,8 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 # and uses the path to the bl3 tree.  With it, cmake/ninja puts
 # "$prefix/lib/libsqlite3.so" in NEEDED.  Without it, cmake/make works
 # fine.
-#CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
+# 20260913: Left enabled at request of wiz@.
+CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
 
 # When building:
 #   - on NetBSD 10 amd64
@@ -101,7 +102,8 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 
 # Therefore, to avoid not-understood bugs when using ninja, just
 # don't.
-CMAKE_GENERATORS_INCOMPATIBLE=	ninja
+# Commented out at request of wiz@
+#CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 # required for faking a better user-agent
 CMAKE_CONFIGURE_ARGS+=		-DUSER_AGENT_BRANDING="Linux ${MACHINE_ARCH}"
