@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/01/02 09:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/13 08:38:45 bsiegert Exp $
 
 DISTNAME=	jumpgate-0.7
 CATEGORIES=	net
@@ -9,6 +9,9 @@ HOMEPAGE=	https://jumpgate.sourceforge.net/
 COMMENT=	TCP connection forwarder with capture and syslog support
 
 GNU_CONFIGURE=	YES
+
+# Fix for newer gcc
+CFLAGS+=	-Wno-implicit-int
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
