@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 12:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/13 13:26:23 wiz Exp $
 
-DISTNAME=	pip_api-0.0.34
+DISTNAME=	pip_api-0.0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip_api/}
 
@@ -19,8 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-# as of 0.0.34
-# 42 passed, 1 xfailed, 4 warnings, 17 errors
+# as of 0.0.35
+# 1 failed, 57 passed, 1 xfailed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
