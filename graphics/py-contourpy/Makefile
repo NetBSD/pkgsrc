@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/13 13:03:04 wiz Exp $
 
-DISTNAME=	contourpy-1.3.3
+DISTNAME=	contourpy-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/contourpy/}
@@ -23,6 +23,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 # https://github.com/contourpy/contourpy/issues/400
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+# as of 1.4.0
+# 8 failed, 2388 passed, 121 skipped, 1 warning
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
