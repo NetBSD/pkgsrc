@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6073 2026/09/13 10:43:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6074 2026/09/13 10:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9251,3 +9251,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/ghostscript-agpl to 10.08.0 [wiz 2026-09-13]
 	Updated devel/jjui to 0.10.10 [wiz 2026-09-13]
 	Updated graphics/libheif to 1.23.4 [wiz 2026-09-13]
+	Updated geography/libmaxminddb to 1.14.0 [wiz 2026-09-13]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27909 2026/09/13 10:43:24 wiz Exp $
+$NetBSD: TODO,v 1.27910 2026/09/13 10:45:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libksane-26.08.1
 	o liblzo-2.10
 	o libmatchbox-1.14
-	o libmaxminddb-1.14.0
 	o libmcs-0.7.2
 	o libmtag-0.3.6
 	o libobjc2-2.1
