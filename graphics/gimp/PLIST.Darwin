@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2026/09/13 10:27:58 wiz Exp $
+lib/gimp/3.0/environ/pygimp.env
+lib/gimp/3.0/interpreters/pygimp.interp
