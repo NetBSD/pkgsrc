@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/09/08 19:19:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/13 13:40:12 wiz Exp $
 bin/zensical-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -16710,7 +16710,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.88ee1349.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.df5d1f2b.min.js
 ${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.7d14d953.min.js
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.e0592429.min.css
 ${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.c7ab7c71.min.css

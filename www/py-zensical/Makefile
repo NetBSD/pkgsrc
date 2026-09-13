@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2026/09/08 19:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/13 13:40:12 wiz Exp $
 #
 # Changelog:
 # https://github.com/zensical/zensical/releases
 
-DISTNAME=	zensical-0.0.60
+DISTNAME=	zensical-0.0.61
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zensical/}
