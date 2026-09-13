@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2026/02/16 18:28:28 maya Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/13 08:38:04 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO14_VERSION}.src
 PKGNAME=	go14-${GO14_VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
