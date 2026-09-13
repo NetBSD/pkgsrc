@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2026/08/29 19:47:06 bouyer Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2026/09/13 10:23:25 wiz Exp $
 
 --- Makefile.in.orig	2026-08-14 07:06:17.723111300 +0200
 +++ Makefile.in	2026-08-28 11:44:24.576665046 +0200
@@ -6,8 +6,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2026/08/29 19:47:06 bouyer Exp $
  	@for dir in $(modulesdir)/Sympa/Template/Plugin; do \
  		if [ ! -d $(DESTDIR)$$dir ] ; then \
  			echo "Creating $(DESTDIR)$$dir"; \
--			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
-+			$(INSTALL) -o $(USER) -g $(GROUP) -d -m 755 $(DESTDIR)$$dir; \
+ 			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
  		fi; \
  	done
 -	@echo "Creating writable directories"

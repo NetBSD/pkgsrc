@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2026/08/29 19:47:06 bouyer Exp $
+$NetBSD: distinfo,v 1.25 2026/09/13 10:23:25 wiz Exp $
 
 BLAKE2s (sympa-6.2.80.tar.gz) = 55a3287bbc36516110a7803e6db62a42613bf7a1ecbdfb03ee2922e9f7234193
 SHA512 (sympa-6.2.80.tar.gz) = 825d5fc8b1a1f570df904988044dcbc9664e52b84600a578d4db3eb1d9fb88b300120082733ded148f44776bdfe7e3f96de384e8ddb00b0f41522078743e86dd
 Size (sympa-6.2.80.tar.gz) = 13640755 bytes
-SHA1 (patch-Makefile.in) = 7d84cd0a3e499e95a10df1c246f8bea31ace0f98
+SHA1 (patch-Makefile.in) = ae72aba32ba085d4d30b949b882acfe25184b2ae
 SHA1 (patch-service_Makefile.in) = c8deb1526d1d19f6982f7186c171f458ef41b8f5
