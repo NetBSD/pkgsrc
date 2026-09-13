@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2026/08/15 16:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/09/13 06:54:19 wiz Exp $
 
-DISTNAME=	DBI-1.652
+DISTNAME=	DBI-1.653
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/H/HM/HMBRAND/}
