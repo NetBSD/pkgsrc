@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/08/29 19:47:06 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/09/13 10:52:32 bouyer Exp $
 man/man1/sympa-add.1
 man/man1/sympa-bouncers-del.1
 man/man1/sympa-bouncers-reset.1
@@ -257,6 +257,7 @@ share/doc/sympa/samples/test/info
 share/doc/sympa/samples/test/message.footer
 share/doc/sympa/samples/test/web_tt2/welcome.tt2
 share/doc/sympa/samples/trusted_applications.conf
+share/examples/sympa/README
 share/examples/sympa/data_structure.version
 share/examples/sympa/sympa.conf
 sympa/bin/Conf.pm
