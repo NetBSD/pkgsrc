@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:51:37 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/09/13 08:38:04 bsiegert Exp $
 
 BLAKE2s (go1.4.3.src.tar.gz) = a4f765aad84be48fa690c042b7511c212b0cb0ecc6aad0318dec1cbf13c3e251
 SHA512 (go1.4.3.src.tar.gz) = 12bade4bce9aa4b34e2b9495ae65a1fc6a2449b3a43bc4de85c8b87ba223c2f999b2f37c1e2fe1188d8521118b5e5357d27afb8b85c0b8ebb4503d4125d25273
@@ -40,6 +40,7 @@ SHA1 (patch-src_runtime_defs__netbsd__arm.h) = 150973e3fdb118e11fadea910f7e9f39a
 SHA1 (patch-src_runtime_defs__openbsd__386.h) = 314a5bdc4ff0ee5f9fb969cdb134fe6183acebb6
 SHA1 (patch-src_runtime_defs__openbsd__amd64.h) = 72335c404604df53b943f3bb3d1088ae784fef0e
 SHA1 (patch-src_runtime_malloc.h) = c41776870b4d95657ad45711b5d921cda4febd29
+SHA1 (patch-src_runtime_mem__freebsd.c) = 2e3db3ea885b6820a476380e3cc45cc01c6c9926
 SHA1 (patch-src_runtime_mem__openbsd.c) = 2800a500d3bd5bde0bb3a05ac6aec5630b098bca
 SHA1 (patch-src_runtime_mgc0.c) = 6cd1a52376efbf3f825fc511044af4a82528eccc
 SHA1 (patch-src_runtime_mheap.c) = 646f4ba1abf407936ec6c3c0783dd59922079fe3
