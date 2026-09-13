@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/09/04 12:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/13 07:02:33 adam Exp $
 
-DISTNAME=	pikepdf-10.12.0
+DISTNAME=	pikepdf-10.13.0.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.5.0:../../devel/py-test-xdist
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		cmake pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
