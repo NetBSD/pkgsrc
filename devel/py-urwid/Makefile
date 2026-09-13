@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2026/09/08 13:06:03 adam Exp $
+# $NetBSD: Makefile,v 1.74 2026/09/13 13:32:26 wiz Exp $
 
-DISTNAME=	urwid-4.1.2
+DISTNAME=	urwid-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zmq>=0:../../net/py-zmq
 USE_LANGUAGES=	# none
 
 # two win32 tests error out, after removing them:
-# 2 failed, 382 passed, 8 skipped, 219 warnings, 301 subtests passed
+# 4 failed, 730 passed, 10 skipped, 224 warnings, 406 subtests passed
 pre-test:
 	${RM} -f ${WRKSRC}/urwid/display/_win32*
 
