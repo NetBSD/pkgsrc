@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2024/05/17 15:49:08 sborrill Exp $
+$NetBSD: distinfo,v 1.8 2026/09/13 13:07:39 jakllsch Exp $
 
 BLAKE2s (Radicale-2.1.12.tar.gz) = 90e686602e4de958eca6da4b0a75b1b2fe4971ecd11922ff78c384d0cf86841b
 SHA512 (Radicale-2.1.12.tar.gz) = a708fb1269f7ba8c9e351e101f613a8adb18c12b1239b832ed9e0287476f30aa7ded30f9bc259da9c4b5f3aefe90bbf9980d0d08d98dd07b79cd19930b0e204c
 Size (Radicale-2.1.12.tar.gz) = 109781 bytes
+SHA1 (patch-radicale_____init____.py) = 2ce0f280f5d402fce9134f80ea64b10abbd73f3b
+SHA1 (patch-radicale_web.py) = ecd079c4ef4b357fb35a4d61c3d5c1fcda9a347f

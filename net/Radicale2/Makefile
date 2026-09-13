@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/01/06 07:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/13 13:07:39 jakllsch Exp $
 
 DISTNAME=	Radicale-2.1.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -10,7 +10,6 @@ HOMEPAGE=	https://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 # for md5 htpasswd_encryption method
 DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
