@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6067 2026/09/13 06:54:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6068 2026/09/13 07:04:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9244,3 +9244,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mold to 2.42.1 [adam 2026-09-13]
 	Updated www/py-django-allauth to 65.19.2nb2 [wiz 2026-09-13]
 	Updated databases/p5-DBI to 1.653 [wiz 2026-09-13]
+	Updated print/py-pikepdf to 10.13.0.post1 [adam 2026-09-13]
+	Updated www/py-django-allauth to 65.19.3 [adam 2026-09-13]
