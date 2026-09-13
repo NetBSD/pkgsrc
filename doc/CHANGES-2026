@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6090 2026/09/13 15:42:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6091 2026/09/13 15:46:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9268,3 +9268,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.61 [wiz 2026-09-13]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2026Q3 branch [maya 2026-09-13]
 	Updated time/ruby-tzinfo-data to 1.2026.4 [taca 2026-09-13]
+	Updated devel/ruby-io-event to 1.22.0 [taca 2026-09-13]
