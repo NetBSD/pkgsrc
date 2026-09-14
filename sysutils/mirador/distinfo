@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/09/13 13:37:34 pin Exp $
+$NetBSD: distinfo,v 1.6 2026/09/14 12:14:18 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -804,3 +804,4 @@ Size (zeroize-1.9.0.crate) = 24480 bytes
 BLAKE2s (zmij-1.0.23.crate) = 09f6f3e1ddf6abff21579db43caec1b708ad2de496f17489b16849f016b7ae5e
 SHA512 (zmij-1.0.23.crate) = 12f8d9726b232b6be68cefbe294505debb7a98715c11b95d89682a596fe1a02d9d7b2a6cdba97f2e8d47fa947ffbce9506a18568f2cab749ca3d03121e5fb66d
 Size (zmij-1.0.23.crate) = 28612 bytes
+SHA1 (patch-.._vendor_starship-battery-0.11.1_src_platform_netbsd_sysmon.rs) = 5d0785c63b34e6cf3620dc7e3d8cf84606be0ee0
