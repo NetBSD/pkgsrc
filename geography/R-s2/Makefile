@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/07/04 23:42:08 mef Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/14 21:33:47 wiz Exp $
 
 R_PKGNAME=	s2
 R_PKGVER=	1.1.7
@@ -19,14 +19,13 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=		c c++
-.include "../../mk/bsd.prefs.mk"
+# somehow, -std=gnu++20 ends up on the compiler command line,
+# but the code is not ready for that (e.g. std::allocator::rebind
+# was removed in C++20); so force C++17
+FORCE_CXX_STD=		gnu++17
+USE_CXX_FEATURES=	c++20
 
-# https://mail-index.netbsd.org/pkgsrc-users/2025/01/02/msg040775.html
-.if ${OPSYS} == "NetBSD"
-.  if ${OPSYS_VERSION} < 090900
-CWRAPPERS_APPEND.cxx=	-D_NETBSD_SOURCE
-.  endif
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		pkglibs
 SUBST_STAGE.pkglibs=	pre-configure
