@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/09/12 19:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/09/14 08:16:58 wiz Exp $
 
 DISTNAME=	statsmodels-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=9.2.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-formulaic>=1.1.0:../../math/py-formulaic
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
