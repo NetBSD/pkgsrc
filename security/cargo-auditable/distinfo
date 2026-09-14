@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/06/03 20:09:26 pin Exp $
+$NetBSD: distinfo,v 1.3 2026/09/14 14:15:36 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -30,9 +30,9 @@ Size (byteorder-0.5.3.crate) = 8643 bytes
 BLAKE2s (camino-1.2.1.crate) = 91402c87e073d3ee3c2a58834ec28645fec5acf4e5a6d6b735c5593c241f8f40
 SHA512 (camino-1.2.1.crate) = baeba86b21f4b720f09ad65fbaa39f9ec32662577844647bc0d63482a1bf2d6c9cf04a997d7452d65d4edbd94185cf5c6b93aac274c6d3b4c0b29ff498af5df4
 Size (camino-1.2.1.crate) = 41364 bytes
-BLAKE2s (cargo-auditable-0.7.5.tar.gz) = aa3796180ab4b62009449b47dbb92c9d9640692489416be51d8b620ed08b00f6
-SHA512 (cargo-auditable-0.7.5.tar.gz) = 6a1130989d1efeb4ed28c0ddced4062bff2099daa093b2830d0aab99d2cff06c1d38a3a00ec2000770bacc7b34fcd00e9f6da6c9162bc2c17a80dc8b77722197
-Size (cargo-auditable-0.7.5.tar.gz) = 83282 bytes
+BLAKE2s (cargo-auditable-0.7.6.tar.gz) = bf90aa42517c14de6cb8496a9e40f8262a3d5a8d4ca7ed766dc56d896096c8ec
+SHA512 (cargo-auditable-0.7.6.tar.gz) = d98b96050e2b42f5eba4b5bb50c123be1d1e5c36dffb109f556decd5f2cb7f5713039f74f30f7f943ba4d0eb267acd4181ddd0a006d0a08de614eede46e3550b
+Size (cargo-auditable-0.7.6.tar.gz) = 85899 bytes
 BLAKE2s (cargo-platform-0.3.1.crate) = b6cf281fea8935562f7d0847ff111786781c1b1d9dee26a8eb8d63fa4b6c428d
 SHA512 (cargo-platform-0.3.1.crate) = 2f707dfcbd5ce5724992c98cb0730ea00fd0cae679b14d66b96d0dcb0a6b415b3a91a427ab9094008a8db8a0f6a006ec6c676591d2576c2025a0be0c76231f5f
 Size (cargo-platform-0.3.1.crate) = 13321 bytes
@@ -108,9 +108,9 @@ Size (linux-raw-sys-0.11.0.crate) = 2659624 bytes
 BLAKE2s (memchr-2.7.6.crate) = a830db86394a8743df7c419957373ffa2ab158d6580c70556213bd109e985d93
 SHA512 (memchr-2.7.6.crate) = 38843817334da88ad74ce679b4401cf948cf8138815f3acc5eb0d005da3aabceb2216e20887e79344396569a2fa136e3aa1f7f3251a00d07dd6934cee79f4fad
 Size (memchr-2.7.6.crate) = 97616 bytes
-BLAKE2s (miniz_oxide-0.8.9.crate) = 33632612132047dfffdc3a73e385f56ddee36860561dd26c08667d8098428449
-SHA512 (miniz_oxide-0.8.9.crate) = 3f6fd786c5fa5b4abafaf21244dd4830d26688d5b6975522bda595206517f354d92d13fb95235667cbc39c0275371c737164d9c7a58e32e09da86eed2f239242
-Size (miniz_oxide-0.8.9.crate) = 67132 bytes
+BLAKE2s (miniz_oxide-0.9.1.crate) = 3b04d551423736d9f3e35cbf2c5c598a1cea40c1a763a8d97165afce7245e40c
+SHA512 (miniz_oxide-0.9.1.crate) = 6f3688acb94d702264f9a244dce31a6e0ed6ffa4ad198aedc04ce6da3a573df96de51c64f1d13ee0af59a7102450c420710eca99d1be8a15cdd2ed5a66819864
+Size (miniz_oxide-0.9.1.crate) = 70519 bytes
 BLAKE2s (num-conv-0.2.0.crate) = 2ff82f5b18fc1fe708725c6edb9a41878d9160b5d0ef61382c1dd5f88576de90
 SHA512 (num-conv-0.2.0.crate) = 5d17b59e4c76ac7732d7d218da18d83dc99fd1f5c396c054d7e40a583a2fc3d15dd9e545d968fea61cdc8a4f7eb2592fd5c02ba734e3361b6ee2686eb9a57fd1
 Size (num-conv-0.2.0.crate) = 7034 bytes
