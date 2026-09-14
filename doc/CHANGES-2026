@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6103 2026/09/14 14:17:03 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6104 2026/09/14 14:18:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9281,3 +9281,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mirador to 1.12.0nb1 [pin 2026-09-14]
 	Updated security/cargo-auditable to 0.7.6 [pin 2026-09-14]
 	Updated shells/oh-my-posh to 31.3.0 [pin 2026-09-14]
+	Updated textproc/treemd to 0.8.2 [pin 2026-09-14]
