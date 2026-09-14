@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2026/09/12 11:49:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2026/09/14 12:28:16 wiz Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -29,6 +29,11 @@ CONFIGURE_ARGS+=	--disable-nls
 
 CONFIGURE_ARGS.SunOS+=	--disable-symvers
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_vfs_h=no
+
+# include/cpuset.h's fallback for a libc without CPU_ALLOC is written
+# against glibc internals, and DragonFly has cpu_set_t without being glibc.
+# Nothing built here needs lib/cpuset.c, so have configure leave it out.
+CONFIGURE_ENV.DragonFly+=	ac_cv_type_cpu_set_t=no
 
 .include "../../mk/bsd.prefs.mk"
 
