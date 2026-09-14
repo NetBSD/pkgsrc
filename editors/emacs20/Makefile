@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2026/08/03 13:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/09/14 12:38:31 wiz Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -76,6 +76,10 @@ MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL:Q}
 .if !empty(CC_VERSION:Mgcc-3.*)
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
+
+CFLAGS+=	-Wno-implicit-int
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
