@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/09 02:26:33 charlotte Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/14 08:21:11 wiz Exp $
 bin/libxo-config
 bin/xo
 bin/xohtml
@@ -9,30 +9,30 @@ include/libxo/xo_encoder.h
 lib/libxo.a
 lib/libxo.so
 lib/libxo.so.0
-lib/libxo.so.0.0
+lib/libxo.so.0.0.0
 lib/libxo/encoder/cbor.enc
 lib/libxo/encoder/csv.enc
 lib/libxo/encoder/libenc_cbor.a
 lib/libxo/encoder/libenc_cbor.so
 lib/libxo/encoder/libenc_cbor.so.0
-lib/libxo/encoder/libenc_cbor.so.0.0
+lib/libxo/encoder/libenc_cbor.so.0.0.0
 lib/libxo/encoder/libenc_csv.a
 lib/libxo/encoder/libenc_csv.so
 lib/libxo/encoder/libenc_csv.so.0
-lib/libxo/encoder/libenc_csv.so.0.0
+lib/libxo/encoder/libenc_csv.so.0.0.0
 lib/libxo/encoder/libenc_test.a
 lib/libxo/encoder/libenc_test.so
 lib/libxo/encoder/libenc_test.so.0
-lib/libxo/encoder/libenc_test.so.0.0
+lib/libxo/encoder/libenc_test.so.0.0.0
 lib/libxo/encoder/test.enc
 lib/libxo/libxo_filter.a
 lib/libxo/libxo_filter.so
 lib/libxo/libxo_filter.so.0
-lib/libxo/libxo_filter.so.0.0
+lib/libxo/libxo_filter.so.0.0.0
 lib/libxo/libxo_format.a
 lib/libxo/libxo_format.so
 lib/libxo/libxo_format.so.0
-lib/libxo/libxo_format.so.0.0
+lib/libxo/libxo_format.so.0.0.0
 lib/libxo/xo_filter.lib
 lib/pkgconfig/libxo.pc
 man/man1/xo.1

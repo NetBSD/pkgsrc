@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/09/09 02:26:33 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/14 08:21:11 wiz Exp $
 
 DISTNAME=	libxo-2.0.0
 CATEGORIES=	textproc
@@ -13,6 +13,9 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
+# 'bool' as variable name
+FORCE_C_STD=	c99
+USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake msgfmt perl:run
 
 REPLACE_PERL+=	xolint/xolint.pl
