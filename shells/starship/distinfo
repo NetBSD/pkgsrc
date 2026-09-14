@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2026/06/29 08:05:37 pin Exp $
+$NetBSD: distinfo,v 1.43 2026/09/14 14:31:42 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -1293,3 +1293,4 @@ Size (zvariant_derive-5.12.0.crate) = 17732 bytes
 BLAKE2s (zvariant_utils-3.4.0.crate) = 03272f0a7135bacdaa1162ec9bdac6e0787afc68d2ca921d411f9ca9f6254892
 SHA512 (zvariant_utils-3.4.0.crate) = bd97f696e7eb03fb1909091f40341b711c490f62148603ba9ede60a932ce92264fb9e9de4b283fe411614c2dacb502436eb228c837a237fa87d0dee4304b54ee
 Size (zvariant_utils-3.4.0.crate) = 15843 bytes
+SHA1 (patch-.._vendor_starship-battery-0.11.0_src_platform_netbsd_sysmon.rs) = 1cb29d0e51549b2abb8ab3b76d07d1116887163c
