@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6105 2026/09/14 14:32:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6106 2026/09/14 14:40:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9283,3 +9283,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 31.3.0 [pin 2026-09-14]
 	Updated textproc/treemd to 0.8.2 [pin 2026-09-14]
 	Updated shells/starship to 1.26.0nb1 [pin 2026-09-14]
+	Updated wm/oatbar to 0.3.1nb1 [pin 2026-09-14]
