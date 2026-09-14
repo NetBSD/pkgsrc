@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.41 2026/09/12 14:31:50 wiz Exp $
+# $NetBSD: modules.mk,v 1.42 2026/09/14 12:45:44 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -138,7 +138,7 @@
 #		Description:
 #			Emacs major version.
 #		Possible values:
-#			20, 21, 29, 30, 31, <integers more than that in the future>
+#			20, 29, 30, 31, <integers more than that in the future>
 #
 #	EMACS_VERSION_MINOR
 #		Description:
