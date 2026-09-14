@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6101 2026/09/14 12:14:40 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6102 2026/09/14 14:15:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9279,3 +9279,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-s3 to 1.232.0 [taca 2026-09-13]
 	Updated net/arti to 2.6.0 [wiz 2026-09-13]
 	Updated sysutils/mirador to 1.12.0nb1 [pin 2026-09-14]
+	Updated security/cargo-auditable to 0.7.6 [pin 2026-09-14]
