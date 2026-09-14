@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/09/09 20:11:30 ktnb Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/14 13:46:40 ktnb Exp $
 
 DISTNAME=		ecl-26.5.5
 CATEGORIES=		lang
@@ -20,12 +20,6 @@ INFO_FILES=		yes
 TEXINFO_REQD+=		5.2
 
 CONFIGURE_ARGS+=	--enable-boehm=system --enable-gmp=system
-
-SUBST_CLASSES+=		libdir
-SUBST_STAGE.libdir=	pre-configure
-SUBST_MESSAGE.libdir=	Fixing libffi layout.
-SUBST_FILES.libdir=	src/c/ffi.d
-SUBST_SED.libdir=	-e '/include.*<ffi/ffi.h>/s:ffi/ffi.h:ffi.h:'
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
