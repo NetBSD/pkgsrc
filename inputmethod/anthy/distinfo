@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2023/09/07 14:44:51 taca Exp $
+$NetBSD: distinfo,v 1.17 2026/09/15 13:00:15 wiz Exp $
 
 BLAKE2s (2ch.t) = 64e9fc0ea6383d0579e088352feef16b525c1a395d38736db9809cc4fcf0a3fd
 SHA512 (2ch.t) = bd6a487b6f90bf5a69ec7a61ea2a0fda07127f6feb8e8662ecc8a4436b3955e3a42c6cda40b0e47e8d7d4d5c76e34f41057bd4400428e561e541bc1ffd236efc
@@ -9,4 +9,9 @@ Size (anthy-9100h.tar.gz) = 4446148 bytes
 BLAKE2s (okinawa-20090801.t) = 723e4e0e6ed7bdd5a9ee309934c2465d5040ad8a5511929dfd9346e0cabe3590
 SHA512 (okinawa-20090801.t) = 03cd20ef12ea25bb462a94e77ee04825c5acd4e9281bfe9c33d390a0106d2e3113c51083389bb21996af9bcf9a74acde6fbcdc6006f737b8a74fc55abc7d6260
 Size (okinawa-20090801.t) = 165520 bytes
+SHA1 (patch-alt-cannadic_g_fname.t) = 8cc6442b616c98fba935ddb7b5a474efe3b8d4b4
 SHA1 (patch-anthy.el) = 3464a065d4dd25f38cd2990e0796eba53e69876a
+SHA1 (patch-mkworddic_compound.t) = abef661d5f6bb8858946e434f153b03e6b093a2c
+SHA1 (patch-mkworddic_name.t) = 0f09fb25bda679db79c5231b11c29955500333da
+SHA1 (patch-src-diclib_xstr.c) = feb498f335c725693b44b54a50e3f7bb5a9f9a7d
+SHA1 (patch-src-worddic_record.c) = 1da8715b1f5b80e9ee2c9744d85f66d839405648
