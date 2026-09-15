@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6113 2026/09/15 13:18:41 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.6114 2026/09/15 13:21:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9291,3 +9291,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/anthy to 9100hnb2 [wiz 2026-09-15]
 	Updated www/firefox140 to 140.16.0 [gutteridge 2026-09-15]
 	Updated www/firefox140-l10n to 140.16.0 [gutteridge 2026-09-15]
+	Updated www/firefox153 to 153.3.0 [gutteridge 2026-09-15]
