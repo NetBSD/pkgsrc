@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6107 2026/09/15 06:29:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6108 2026/09/15 08:59:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9285,3 +9285,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/starship to 1.26.0nb1 [pin 2026-09-14]
 	Updated wm/oatbar to 0.3.1nb1 [pin 2026-09-14]
 	Updated audio/libopus to 1.6.1nb1 [wiz 2026-09-15]
+	Updated emulators/simulavr to 1.0.0nb8 [wiz 2026-09-15]
