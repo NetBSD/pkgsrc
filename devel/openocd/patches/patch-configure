@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2023/05/17 15:29:13 nikita Exp $
+$NetBSD: patch-configure,v 1.3 2026/09/15 07:51:36 wiz Exp $
 
 Fix build on Linux.
 CONFIG_SHELL should ensure that "echo -e" works but for some reason this part
@@ -33,12 +33,3 @@ of the script gets executed with the wrong shell.
  
  
  
-@@ -17819,6 +17819,8 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
