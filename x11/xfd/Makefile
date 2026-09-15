@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/01/25 07:47:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/15 11:36:08 wiz Exp $
 
 DISTNAME=	xfd-1.1.5
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ COMMENT=	Display all the characters in an X font
 
 USE_TOOLS+=	pkg-config xgettext
 
-#MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
+MESON_ARGS+=	-Dappdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
