@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6106 2026/09/14 14:40:07 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6107 2026/09/15 06:29:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9284,3 +9284,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/treemd to 0.8.2 [pin 2026-09-14]
 	Updated shells/starship to 1.26.0nb1 [pin 2026-09-14]
 	Updated wm/oatbar to 0.3.1nb1 [pin 2026-09-14]
+	Updated audio/libopus to 1.6.1nb1 [wiz 2026-09-15]
