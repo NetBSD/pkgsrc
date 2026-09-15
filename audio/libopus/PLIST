@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/06/19 06:08:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/15 06:29:15 wiz Exp $
 include/opus/opus.h
 include/opus/opus_defines.h
 include/opus/opus_multistream.h
@@ -24,19 +24,20 @@ ${PLIST.doc}man/man3/opus_repacketizer.3
 ${PLIST.doc}man/man3/opus_types.h.3
 share/aclocal/opus.m4
 ${PLIST.doc}share/doc/opus/html/clipboard.js
+${PLIST.doc}share/doc/opus/html/codefolding.js
 ${PLIST.doc}share/doc/opus/html/cookie.js
 ${PLIST.doc}share/doc/opus/html/customdoxygen.css
 ${PLIST.doc}share/doc/opus/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
 ${PLIST.doc}share/doc/opus/html/dir_d436eb0fd9de10b54a828ce6435f7e81.js
 ${PLIST.doc}share/doc/opus/html/doxygen.svg
 ${PLIST.doc}share/doc/opus/html/doxygen_crawl.html
-${PLIST.doc}share/doc/opus/html/dynsections.js
 ${PLIST.doc}share/doc/opus/html/files.html
 ${PLIST.doc}share/doc/opus/html/files_dup.js
 ${PLIST.doc}share/doc/opus/html/globals.html
 ${PLIST.doc}share/doc/opus/html/globals_defs.html
 ${PLIST.doc}share/doc/opus/html/globals_func.html
 ${PLIST.doc}share/doc/opus/html/globals_type.html
+${PLIST.doc}share/doc/opus/html/graph_legend.dot.cmapx
 ${PLIST.doc}share/doc/opus/html/graph_legend.html
 ${PLIST.doc}share/doc/opus/html/graph_legend.md5
 ${PLIST.doc}share/doc/opus/html/graph_legend.png
@@ -65,7 +66,6 @@ ${PLIST.doc}share/doc/opus/html/group__opus__multistream__ctls.js
 ${PLIST.doc}share/doc/opus/html/group__opus__repacketizer.html
 ${PLIST.doc}share/doc/opus/html/group__opus__repacketizer.js
 ${PLIST.doc}share/doc/opus/html/index.html
-${PLIST.doc}share/doc/opus/html/jquery.js
 ${PLIST.doc}share/doc/opus/html/menu.js
 ${PLIST.doc}share/doc/opus/html/menudata.js
 ${PLIST.doc}share/doc/opus/html/navtree.css
