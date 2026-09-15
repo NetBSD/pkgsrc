@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/07/02 15:43:11 mef Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/15 09:22:51 wiz Exp $
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.1.1-1.1
+R_PKGVER=	1.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,6 +33,7 @@ USE_CXX_FEATURES+=	c++11
 
 REPLACE_R+=		inst/examples/*/*.r
 REPLACE_R+=		inst/examples/SugarPerformance/sugarBenchmarks.R
+REPLACE_R+=		inst/tinytest/test_dispatch.R
 
 REPLACE_RSCRIPT+=	inst/discovery/cxx0x.R
 
@@ -51,18 +52,6 @@ REPLACE_FILES.Rscript=	${REPLACE_RSCRIPT}
 
 CHECK_SSP_SKIP+=	lib/R/library/Rcpp/*/bin/*/*.deb
 CHECK_RELRO_SKIP+=	${CHECK_SSP_SKIP}
-
-.include "../../mk/bsd.prefs.mk"
-SUBST_CLASSES+=		pkglibs
-SUBST_STAGE.pkglibs=	pre-configure
-SUBST_FILES.pkglibs=	src/Makevars
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
-SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,PKG_LIBS+=-lexecinfo,
-.else
-SUBST_SED.pkglibs= 	-e s,@@PKGLIBS@@,,
-.endif
-SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
-
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
