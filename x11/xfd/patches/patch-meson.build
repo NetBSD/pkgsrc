@@ -1,0 +1,24 @@
+$NetBSD: patch-meson.build,v 1.1 2026/09/15 11:34:22 wiz Exp $
+
+Always check for libintl first.
+
+--- meson.build.orig	2026-09-15 11:32:57.941157609 +0000
++++ meson.build
+@@ -45,13 +45,10 @@ deps = []
+ deps = []
+ 
+ # Internationalization & localization support
+-use_gettext = cc.has_function('gettext')
+-if use_gettext == false
+-  dep_libintl = cc.find_library('intl', required: false)
+-  use_gettext = cc.has_function('gettext', dependencies: dep_libintl)
+-  if use_gettext == true
+-    deps += dep_libintl
+-  endif
++dep_libintl = cc.find_library('intl', required: false)
++use_gettext = cc.has_function('gettext', dependencies: dep_libintl)
++if use_gettext == true
++  deps += dep_libintl
+ endif
+ conf.set('USE_GETTEXT', use_gettext ? 1 : false,
+          description: 'Define to 1 if you want to use the gettext() function.')
