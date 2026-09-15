@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6111 2026/09/15 13:00:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6112 2026/09/15 13:17:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9289,3 +9289,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/R-Rcpp to 1.1.2 [wiz 2026-09-15]
 	Updated math/R-xts to 0.14.3 [wiz 2026-09-15]
 	Updated inputmethod/anthy to 9100hnb2 [wiz 2026-09-15]
+	Updated www/firefox140 to 140.16.0 [gutteridge 2026-09-15]
