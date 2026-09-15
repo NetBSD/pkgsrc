@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/09/15 09:30:07 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/15 09:55:23 wiz Exp $
 
 # not a release, but we want the change fixing the build with libjxl 0.12.0
 DISTNAME=	moderncore-20260719
@@ -16,7 +16,7 @@ COMMENT=	View images in your terminal
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++23
+USE_CXX_FEATURES+=	c++20
 # needs <format> which was added in 13, despite being in C++ 20
 GCC_REQD+=		13
 USE_TOOLS+=		git pkg-config
