@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6114 2026/09/15 13:21:04 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.6115 2026/09/15 13:22:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9292,3 +9292,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.16.0 [gutteridge 2026-09-15]
 	Updated www/firefox140-l10n to 140.16.0 [gutteridge 2026-09-15]
 	Updated www/firefox153 to 153.3.0 [gutteridge 2026-09-15]
+	Updated www/firefox153-l10n to 153.3.0 [gutteridge 2026-09-15]
