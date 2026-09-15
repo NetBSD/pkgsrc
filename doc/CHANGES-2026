@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6110 2026/09/15 09:46:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6111 2026/09/15 13:00:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9288,3 +9288,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/simulavr to 1.0.0nb8 [wiz 2026-09-15]
 	Updated devel/R-Rcpp to 1.1.2 [wiz 2026-09-15]
 	Updated math/R-xts to 0.14.3 [wiz 2026-09-15]
+	Updated inputmethod/anthy to 9100hnb2 [wiz 2026-09-15]
