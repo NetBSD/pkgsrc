@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/15 08:59:37 wiz Exp $
 #
 DISTNAME=		simulavr-1.0.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		emulators
 MASTER_SITES=		https://download.savannah.gnu.org/releases/simulavr/
 
