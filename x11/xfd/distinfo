@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2026/01/25 07:47:08 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/09/15 11:34:22 wiz Exp $
 
 BLAKE2s (xfd-1.1.5.tar.xz) = 026676ced2c64a476e62da07710d8c72ecbbc24767b9ae8777563a9e3c90b772
 SHA512 (xfd-1.1.5.tar.xz) = 6a8838e90c4751ae357832da7856d65d2cc65f3626655e24d22b25e7623f1a47d41dea0d093c0f250ceee2651214a746b3e7bd7f152c5b1718ce28aa5f217fa4
 Size (xfd-1.1.5.tar.xz) = 140548 bytes
+SHA1 (patch-meson.build) = 82db3925ebcd0953b9d6d4df12cda4d9bb3c4fb2
