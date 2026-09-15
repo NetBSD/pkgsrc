@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/09/14 21:33:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/15 10:06:22 wiz Exp $
 
 R_PKGNAME=	s2
 R_PKGVER=	1.1.7
@@ -24,18 +24,6 @@ USE_LANGUAGES=		c c++
 # was removed in C++20); so force C++17
 FORCE_CXX_STD=		gnu++17
 USE_CXX_FEATURES=	c++20
-
-.include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=		pkglibs
-SUBST_STAGE.pkglibs=	pre-configure
-SUBST_FILES.pkglibs=	src/Makevars.in
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
-SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,PKG_LIBS+=-lexecinfo,
-.else
-SUBST_SED.pkglibs=	-e s,@@PKG_LIBS@@,,
-.endif
-SUBST_MESSAGE.pkglibs=	Add -lexecinfo for *BSD
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"

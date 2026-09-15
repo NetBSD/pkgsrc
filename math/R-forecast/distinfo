@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/06/15 14:43:47 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/09/15 10:06:24 wiz Exp $
 
 BLAKE2s (R/forecast_9.0.2.tar.gz) = 527bc06a6cb67531e27630aedf7ac4801f8a30f6e4f6d37e3915d73e577c5487
 SHA512 (R/forecast_9.0.2.tar.gz) = d0b93fa3c7a35e482a2545dfda0fcb1316997f78e06f8fa7c62e840fc7bec59f1351cccb00f274553a5e92bf8b5efd4db1791b134b94c31bf7e19ad0efcc9493
 Size (R/forecast_9.0.2.tar.gz) = 590857 bytes
-SHA1 (patch-src_Makevars) = dc7b21cf1f605050c2f7ee1ca87e6bc0d2ed1114
