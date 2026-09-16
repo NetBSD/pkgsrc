@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.792 2026/09/12 14:38:08 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.793 2026/09/16 14:07:14 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30443,3 +30443,9 @@ echoping-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2010-5111
 sqlite3>=3.49.0<3.49.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29088
 sickgear-[0-9]*		multiple-vulnerabilities	https://github.com/SickGear/SickGear/issues/1517
 autogen<5.18.16nb18	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8746
+ruby33-*		denial-of-service	https://www.cve.org/CVERecord?id=CVE-2026-80212
+ruby34-*		denial-of-service	https://www.cve.org/CVERecord?id=CVE-2026-80212
+ruby40<4.0.7		denial-of-service	https://www.cve.org/CVERecord?id=CVE-2026-80212
+ruby33-*		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
+ruby34-*		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
+ruby40<4.0.7		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
