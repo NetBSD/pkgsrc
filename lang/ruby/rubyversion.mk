@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.330 2026/09/16 14:50:17 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.331 2026/09/16 15:00:09 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -397,7 +397,7 @@ RUBY_PSTORE_VER=		0.2.1
 RUBY_RDOC_VER=			6.14.0
 RUBY_READLINE_VER=		0.0.4
 RUBY_RELINE_VER=		0.6.0
-RUBY_RESOLV_VER=		0.7.1
+RUBY_RESOLV_VER=		0.7.2
 RUBY_RUBY2_KEYWORDS_VER=	0.0.5
 RUBY_SECURERANDOM_VER=		0.4.1
 RUBY_SET_VER=			1.1.1
