@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27925 2026/09/15 22:09:53 wiz Exp $
+$NetBSD: TODO,v 1.27926 2026/09/16 15:31:05 taca Exp $
 
 Suggested new packages
 ======================
@@ -405,8 +405,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-s2-1.1.12
 	o SQLiteCpp-2.5.0
 	o Sigil-2.8.1
-	o SOGo-5.12.10
-	o SOPE-5.12.10
+	o SOGo-5.12.11 [security]
+	o SOPE-5.12.11
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.45
 	o aarch64-none-elf-gcc-14.3.0
@@ -505,7 +505,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-9.14
+	o calibre-9.14.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canna-3.7p5
@@ -571,12 +571,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dnsbl-milter-6.78
 	o doas-6.4 [project migrated to Codeberg]
 	o dotclear-2.53
-	o dovecot-2.4.4 [CVE-2025-30189]
-	o dovecot2-pigeonhole-2.4.4 [needs dovecot2 2.4]
+	o dovecot-2.4.5 [CVE-2025-30189 and more]
+	o dovecot2-pigeonhole-2.4.5 [needs dovecot2 2.4]
 	o drawpile-2.1.20
 	o drivel-3.0.5
-	o drupal-10.0.5
-	o drupal-9.5.5
 	o dvdisaster-0.79.10
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
@@ -911,12 +909,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mari0-1.6.2
-	o mariadb-10.6.27
-	o mariadb-10.11.18
-	o mariadb-11.4.12
-	o mariadb-11.8.8
-	o mariadb-12.1.2
-	o mariadb-12.3.2
+	o mariadb-10.6.28
+	o mariadb-10.11.19
+	o mariadb-11.8.9
+	o mariadb-12.3.3
+	o mariadb-13.0.2
 	o matcha-sns-1.3.8
 	o matchbox-panel-0.9.3
 	o mate-system-monitor-1.26.0
@@ -1081,11 +1078,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pear-SOAP-0.14.0
 	o pgbuildfarm-12
 	o phoronix-9.2.1
-	o php-basercms-5.1.5
-	o php-composer-2.8.5
-	o php-dotclear-2.33
-	o php-nextcloud-31.0.11
-	o php-nextcloud-32.0.2
+	o php-basercms-5.4.0
+	o php-composer-2.10.3
+	o php-dotclear-2.39.3
 	o php-phrasea2-4.1.15
 	o php-piwigo-15.4.0
 	o php-pthreads-3.2.0 [repository archived]
@@ -1188,7 +1183,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o root-tail-1.2
 	o ropper-1.13.6
 	o rosegarden-21.12 [updating wip; audio/rosegarden -> rosegarden-x11]
-	o roundcube-1.7.3
+	o roundcube-1.7.4
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
@@ -1263,7 +1258,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-lite-9.2.9
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
-	o sympa-6.2.76
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1293,6 +1287,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
+	o thrift-0.24.0 [CVE-2026-41608]
 	o thunderbird115-115.18.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
