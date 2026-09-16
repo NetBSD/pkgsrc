@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6121 2026/09/16 13:12:10 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6122 2026/09/16 14:08:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9299,3 +9299,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.8.1 [drixter 2026-09-16]
 	Updated sysutils/mirador to 1.13.1 [pin 2026-09-16]
 	Updated textproc/treemd to 0.9.1 [pin 2026-09-16]
+	Updated lang/ruby40 to 4.0.7 [taca 2026-09-16]
