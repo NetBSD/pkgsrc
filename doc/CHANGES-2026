@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6120 2026/09/16 13:10:14 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6121 2026/09/16 13:12:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9298,3 +9298,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnscontrol to 5.1.0 [drixter 2026-09-16]
 	Updated www/resterm to 1.8.1 [drixter 2026-09-16]
 	Updated sysutils/mirador to 1.13.1 [pin 2026-09-16]
+	Updated textproc/treemd to 0.9.1 [pin 2026-09-16]
