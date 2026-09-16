@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6123 2026/09/16 14:50:36 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6124 2026/09/16 14:58:38 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9301,3 +9301,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/treemd to 0.9.1 [pin 2026-09-16]
 	Updated lang/ruby40 to 4.0.7 [taca 2026-09-16]
 	Updated lang/ruby33 to 3.3.12nb1 [taca 2026-09-16]
+	Updated sysutils/tsm8 to 8.2.2.0 [hauke 2026-09-16]
