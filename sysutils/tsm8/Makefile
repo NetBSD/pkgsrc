@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2025/07/01 11:48:23 hauke Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/16 14:46:38 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.27.0
+PKGVER=		8.2.2.0
 PKGNAME=	${DISTNAME:C/-/8-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8127/
+MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r2/Linux/LinuxX86/BA/v822/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 MAINTAINER=	hauke@NetBSD.org
@@ -50,8 +50,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.60.4.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.60.4.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.60.5.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.60.5.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
