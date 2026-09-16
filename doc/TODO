@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27926 2026/09/16 15:31:05 taca Exp $
+$NetBSD: TODO,v 1.27927 2026/09/16 23:43:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -465,6 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o authelia-4.28.0
 	o autoconvert-0.3.16
 	o autojump-22.5.3
+	o automake-1.19
 	o autosetup-0.7.2
 	o avidemux-2.8.1
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
@@ -487,7 +488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bind-9.20.10
 	o bing-1.3.5
 	o binkd-104
-	o binutils-2.46
+	o binutils-2.47
 	o binutils-mips-current-2.36.1
 	o bioperl-1.7.8
 	o blender-5.2
@@ -538,6 +539,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o coreutils-9.12
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
@@ -663,13 +665,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
+	o gawk-5.4.1
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
 	o gcc13-13.5
+	o gcc14-14.4.0
+	o gcc16-16.2.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
-	o gdb-17.1
+	o gdb-17.2
 	o gdb7-7.12
 	o gedit-50
 	o geneweb-7.0.0
@@ -711,7 +716,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
-	o gnunet-0.27
+	o gnunet-0.29.0
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-ldap-3.3.0
@@ -730,7 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
-	o grafana-13.2.1
+	o grafana-13.2.2
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
@@ -738,6 +743,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.14
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gtexinfo-7.3
 	o gtklevel9-5.1
 	o gtklife-5.3
 	o gtkmagnetic-23
@@ -776,6 +782,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.2.12
 	o inadyn-2.8.1
+	o inetutils-2.8.1
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
@@ -853,6 +860,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libidn-1.44
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -862,6 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liblzo-2.10
 	o libmatchbox-1.14
 	o libmcs-0.7.2
+	o libmicrohttpd-1.0.3
 	o libmtag-0.3.6
 	o libobjc2-2.1
 	o liboobs-2.32.0
@@ -873,11 +882,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libreoffice-26.8
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
+	o libtool-base-2.6.2
 	o libtorrent-rasterbar-2.1.0 [wait for https://github.com/qbittorrent/qBittorrent/issues/24663]
 	o libtrace-4.0.16
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
 	o lighttpd-1.4.85
+	o lilypond-2.26.0
 	o lima-2.2.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
@@ -1315,8 +1326,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o udpcast-20200328
 	o udunits-2.2.28
 	o ufoai-2.5
+	o unbound-1.26.1
 	o unicode-screensaver-0.5.2
-	o unifont-15.0.05
+	o unifont-18.0.01
 	o units-2.21
 	o unrealircd-6.2.7
 	o urlgrabber-3.10.2
@@ -1346,6 +1358,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wap-utils-1.4.1
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
+	o wdiff-1.2.3
+	o webkit-gtk41-2.54.0 [wiz]
 	o webmin-2.600
 	o websvn-2.6.0
 	o weechat-4.10.1
