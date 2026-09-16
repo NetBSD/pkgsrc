@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2026/08/28 20:12:48 morr Exp $
+@comment $NetBSD: PLIST,v 1.96 2026/09/16 23:21:45 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -669,6 +669,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/mss.vim
 share/vim/${VIM_SUBDIR}/ftplugin/muttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mysql.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nanorc.vim
+share/vim/${VIM_SUBDIR}/ftplugin/nasm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/neomuttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/netrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nginx.vim
@@ -740,6 +741,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/rhelp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rmd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rnc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rnoweb.vim
+share/vim/${VIM_SUBDIR}/ftplugin/robot.vim
 share/vim/${VIM_SUBDIR}/ftplugin/roc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/routeros.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rpl.vim
@@ -1861,6 +1863,7 @@ share/vim/${VIM_SUBDIR}/syntax/strace.vim
 share/vim/${VIM_SUBDIR}/syntax/structurizr.vim
 share/vim/${VIM_SUBDIR}/syntax/stylus.vim
 share/vim/${VIM_SUBDIR}/syntax/sudoers.vim
+share/vim/${VIM_SUBDIR}/syntax/svelte.vim
 share/vim/${VIM_SUBDIR}/syntax/svg.vim
 share/vim/${VIM_SUBDIR}/syntax/svn.vim
 share/vim/${VIM_SUBDIR}/syntax/swayconfig.vim
