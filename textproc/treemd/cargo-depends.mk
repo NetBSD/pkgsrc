@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.26 2026/09/14 14:17:46 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.27 2026/09/16 13:11:05 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -242,9 +242,9 @@ CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.28
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-0.38.44
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.42
+CARGO_CRATE_DEPENDS+=	rustls-0.23.45
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.0
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.13
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	safe_arch-0.9.3
@@ -309,8 +309,8 @@ CARGO_CRATE_DEPENDS+=	tracing-error-0.2.1
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.23
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
-CARGO_CRATE_DEPENDS+=	turbovault-core-2.0.0
-CARGO_CRATE_DEPENDS+=	turbovault-parser-2.0.0
+CARGO_CRATE_DEPENDS+=	turbovault-core-2.1.0
+CARGO_CRATE_DEPENDS+=	turbovault-parser-2.1.0
 CARGO_CRATE_DEPENDS+=	typenum-1.20.1
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
 CARGO_CRATE_DEPENDS+=	unicase-2.9.0
@@ -353,16 +353,11 @@ CARGO_CRATE_DEPENDS+=	winapi-util-0.1.11
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	windows-0.58.0
 CARGO_CRATE_DEPENDS+=	windows-core-0.58.0
-CARGO_CRATE_DEPENDS+=	windows-core-0.62.2
 CARGO_CRATE_DEPENDS+=	windows-implement-0.58.0
-CARGO_CRATE_DEPENDS+=	windows-implement-0.60.2
 CARGO_CRATE_DEPENDS+=	windows-interface-0.58.0
-CARGO_CRATE_DEPENDS+=	windows-interface-0.59.3
 CARGO_CRATE_DEPENDS+=	windows-link-0.2.1
 CARGO_CRATE_DEPENDS+=	windows-result-0.2.0
-CARGO_CRATE_DEPENDS+=	windows-result-0.4.1
 CARGO_CRATE_DEPENDS+=	windows-strings-0.1.0
-CARGO_CRATE_DEPENDS+=	windows-strings-0.5.1
 CARGO_CRATE_DEPENDS+=	windows-sys-0.52.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.59.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.60.2
