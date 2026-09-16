@@ -1,6 +1,12 @@
-$NetBSD: patch-gcc_configure,v 1.1 2026/08/31 18:05:08 wiz Exp $
+$NetBSD: patch-gcc_configure,v 1.2 2026/09/16 13:12:46 wiz Exp $
 
-NetBSD ld supports --as-needed, but not -lgcc_s_asneeded.
+This is a workaround.
+
+gcc16 introduces *asneeded.so libraries. When using gcc16-libjit
+with the base compiler, that compiler doesn't know about the asneeded
+libraries.
+
+So disable these ld scripts for easier use of gcc16-libjit.
 
 --- gcc/configure.orig	2026-08-31 17:46:27.753488730 +0000
 +++ gcc/configure
