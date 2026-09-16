@@ -1,24 +1,27 @@
-$NetBSD: patch-meson.build,v 1.1 2026/09/15 11:34:22 wiz Exp $
+$NetBSD: patch-meson.build,v 1.2 2026/09/16 04:35:08 wiz Exp $
 
-Always check for libintl first.
+meson: include libintl.h when checking for gettext()
 
---- meson.build.orig	2026-09-15 11:32:57.941157609 +0000
+Trying to workaround https://github.com/mesonbuild/meson/issues/3740
+which causes meson to fail to detect it needs to link against libintl
+for gettext() on NetBSD.
+
+https://gitlab.freedesktop.org/xorg/app/xfd/-/commit/4261cb09d5aa30f8dce0ee70f565dc242a75873c
+
+--- meson.build.orig	2026-01-25 00:52:23.000000000 +0000
 +++ meson.build
-@@ -45,13 +45,10 @@ deps = []
+@@ -45,10 +45,12 @@ deps = []
  deps = []
  
  # Internationalization & localization support
 -use_gettext = cc.has_function('gettext')
--if use_gettext == false
--  dep_libintl = cc.find_library('intl', required: false)
++libintl_prefix = '#include <libintl.h>'
++use_gettext = cc.has_function('gettext', prefix: libintl_prefix)
+ if use_gettext == false
+   dep_libintl = cc.find_library('intl', required: false)
 -  use_gettext = cc.has_function('gettext', dependencies: dep_libintl)
--  if use_gettext == true
--    deps += dep_libintl
--  endif
-+dep_libintl = cc.find_library('intl', required: false)
-+use_gettext = cc.has_function('gettext', dependencies: dep_libintl)
-+if use_gettext == true
-+  deps += dep_libintl
- endif
- conf.set('USE_GETTEXT', use_gettext ? 1 : false,
-          description: 'Define to 1 if you want to use the gettext() function.')
++  use_gettext = cc.has_function('gettext', dependencies: dep_libintl,
++                                prefix: libintl_prefix)
+   if use_gettext == true
+     deps += dep_libintl
+   endif
