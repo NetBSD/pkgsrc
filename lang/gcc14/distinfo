@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/07/27 08:40:18 tnn Exp $
+$NetBSD: distinfo,v 1.14 2026/09/16 09:06:02 tnn Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -48,7 +48,7 @@ SHA1 (patch-gcc_config_arm_bpabi.h) = 0b0de5ad95442e34397cb46739ef6e36048d6f45
 SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 568f537d624199ef9f9f56088fe4fff7e946b2e2
-SHA1 (patch-gcc_config_darwin-driver.cc) = ac24a7ff6562bd69427a86942d40653a0301d3fd
+SHA1 (patch-gcc_config_darwin-driver.cc) = 3e5f767b99f9eba1ac4775f763e05b51979af1e6
 SHA1 (patch-gcc_config_darwin-protos.h) = dc33fd8f7e70f08b4f723b669b6fd46ce49f091b
 SHA1 (patch-gcc_config_darwin.cc) = 2e6f967fbff313ff16fe95edeaa4380f740512ee
 SHA1 (patch-gcc_config_darwin.h) = 5ffb2337cb94148be1b2e486227761cfcefbda87
