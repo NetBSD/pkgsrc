@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.14 2026/09/09 16:03:19 micha Exp $
+$NetBSD: distinfo,v 1.15 2026/09/16 09:47:45 micha Exp $
 
 BLAKE2s (libcanlock-3.3.3.tar.bz2) = 78b5a6f547d3f3f1cec6627eda57559b28c75909fb892f10a2517624641124bf
 SHA512 (libcanlock-3.3.3.tar.bz2) = 400eadd3990c67aa10b48d9c52a9ad75de64d193995551f945b51142ddddbd9d7691ad92308cc319a5d0c76b4a1345fd6c29bba2d262bb8adaa890b4f2dc28c3
 Size (libcanlock-3.3.3.tar.bz2) = 638066 bytes
-SHA1 (patch-hp_util_hfp__lexer.l) = 75208408e4a30b35d2a6b4c527a1c795f276e794
-SHA1 (patch-hp_util_hfp__parser.y) = 1d4eed8a3e3dcf071369cc1c9412e0965b9ec902
+SHA1 (patch-hp_src_Makefile.am) = c148306fd0cf1f1069ce611627fe34c052db4cef
+SHA1 (patch-hp_src_parser.c.in) = e508cb539ae1724c019bb3824f9f6e81e2e6395a
+SHA1 (patch-hp_src_unfold.c) = 1a8debb58eecd00846e1058c6cdd7f3466e5c534
+SHA1 (patch-hp_util_Makefile.am) = 2a16d1a8c116d67df2ce065ac269b177899f4127
+SHA1 (patch-hp_util_canlock-hfp.c) = 1fb7f0b6d44de8b5f2ca88c1f7ce13cf5b3c7527

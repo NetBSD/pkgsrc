@@ -1,0 +1,15 @@
+$NetBSD: patch-hp_src_Makefile.am,v 1.1 2026/09/16 09:47:45 micha Exp $
+
+Request POSIX conformant APIs from system headers.
+
+--- hp/src/Makefile.am.orig	2026-05-01 16:32:44.000000000 +0000
++++ hp/src/Makefile.am
+@@ -2,7 +2,7 @@
+ # Rules for automake
+ 
+ ACLOCAL_AMFLAGS = -I m4
+-AM_CPPFLAGS = -I $(top_srcdir)/include
++AM_CPPFLAGS = -I $(top_srcdir)/include -D_POSIX_C_SOURCE=200112L
+ 
+ 
+ # ==============================================================================
