@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.201 2026/06/30 15:13:10 adam Exp $
+$NetBSD: distinfo,v 1.202 2026/09/16 11:00:39 tnn Exp $
 
 BLAKE2s (rust-1.95.0-aarch64-apple-darwin.tar.gz) = a81f78cd68fd2e8002b7c81d783144fed183f115c38dd1e21ee2e5ff31e1013c
 SHA512 (rust-1.95.0-aarch64-apple-darwin.tar.gz) = 588fffe89e51dae5566fac16630fc40849e2c33e842a7e92bbe98ec0e7148d88068fdc522f7cf6d301d3d08cd094b3d24fb864d7450c23a5b126c27777800bfa
@@ -132,6 +132,8 @@ SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = 91a46663881236016ac7db95e362
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = 29438700020db4f5beaf747645ba1977f2f0865e
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 75019dcb3dbca6cda33ba329dbe483101dcf48e7
+SHA1 (patch-src_llvm-project_llvm_lib_ObjCopy_MachO_MachOLayoutBuilder.cpp) = b2e1cb919c7316c9f92f1dbbc25d45cdc8e910d2
+SHA1 (patch-src_llvm-project_llvm_lib_ObjCopy_MachO_MachOWriter.cpp) = 1680319cad3fd6a5c51bccf820f592b92635fe62
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2587c2f4d11ad8f75bf8a16de625135b26bacc15
 SHA1 (patch-src_tools_cargo_src_bin_cargo_commands_help.rs) = e76c6746470959487a2ae9178dbd76c1a59ea64e
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = e1af7fde97416e0a269ee34efd37f4f47fcf7a95
