@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/02/14 13:52:18 mef Exp $
+$NetBSD: distinfo,v 1.20 2026/09/17 20:18:27 wiz Exp $
 
-BLAKE2s (R/XML_3.99-0.18.tar.gz) = e919f2cddbcebee95484669cf0d04a9a494502efcefa47e4308a50a957ce2c42
-SHA512 (R/XML_3.99-0.18.tar.gz) = d54a61fc623f64cc3766805e002961c683f0a0ebbb69032873d565af05e265a29e2de909b7be116bffde76967943ad897f53e9620c08714c9d3ca207d3cc7edf
-Size (R/XML_3.99-0.18.tar.gz) = 966667 bytes
+BLAKE2s (R/XML_3.99-0.24.tar.gz) = 76c566b5bde01f8127e2e2134b2a8f260d1e12b5a838c578d1c3534efabfd3ae
+SHA512 (R/XML_3.99-0.24.tar.gz) = 675aefd4bb7f911d48ba71ef76673fca1eb5f3fb8ab284a6d71a9ff29b9d8b000a3e46347c43d087d2882a38689fbbfcbe8dbd1667ad2a06a5c2bda605e86002
+Size (R/XML_3.99-0.24.tar.gz) = 958064 bytes
