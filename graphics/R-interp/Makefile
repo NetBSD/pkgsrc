@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/07/05 14:20:55 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/17 06:13:09 wiz Exp $
 
 R_PKGNAME=	interp
 R_PKGVER=	1.1-6
@@ -20,12 +20,6 @@ TEST_DEPENDS+=	R-stringi-[0-9]*:../../textproc/R-stringi
 TEST_DEPENDS+=	R-stringr-[0-9]*:../../textproc/R-stringr
 
 USE_LANGUAGES=	c c++ fortran
-
-.include "../../mk/bsd.prefs.mk"
-pre-patch:
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
-	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src/
-.endif
 
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../math/R-RcppEigen/buildlink3.mk"
