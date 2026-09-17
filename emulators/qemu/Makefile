@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2026/09/02 19:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.414 2026/09/17 19:56:16 tnn Exp $
 
 PKGREVISION= 1
 .include "../../emulators/qemu/Makefile.common"
@@ -122,6 +122,11 @@ PLIST.nbd=		yes
 USER_EMUL=
 CONFIGURE_ARGS+=	--disable-bsd-user
 PLIST.nbd=		yes
+# Parts of ParavirtualizedGraphics.framework's API that hw/display/apple-gfx.m
+# relies on are marked obsolete in the macOS 27 SDK.
+.  if ${OS_VERSION:R} >= 27
+CONFIGURE_ARGS+=	--disable-pvg
+.  endif
 .elif ${OPSYS} == "Linux"
 # Help this package to build on systems too old for user-mode code.
 HAVE_LINUX_USER!=	${CPP} ${CPPFLAGS} ${FILESDIR}/linux-user-test.h \
