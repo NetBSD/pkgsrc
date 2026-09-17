@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/02/28 11:28:44 alnsn Exp $
+$NetBSD: distinfo,v 1.5 2026/09/17 13:45:03 wiz Exp $
 
-BLAKE2s (Yices-2.6.5.tar.gz) = 8d9cd5f06281d2cd3e01ffefdcbca35704369953b0bf111e5749bfcdda91d42d
-SHA512 (Yices-2.6.5.tar.gz) = 8f01c6d516f2aa901b30e9248c3df78930e670c8e1a795b1bb112561f4e338e6e11eadfc2e6cbfc089f6593561b5874fbe816be677dd09c0834a01829c5cf490
-Size (Yices-2.6.5.tar.gz) = 10389496 bytes
+BLAKE2s (yices2-2.7.0.tar.gz) = 31ca6fcee6b8d8669ed4ae8c226d674c3cca257e49b6d53660e34c7b70a4b146
+SHA512 (yices2-2.7.0.tar.gz) = 0ed9811bfc505793078aa87afd86177a79bb5b9a4ec579fa0c43076cc997ff432d66588e996c1303d91bfb2163110312f30f1fc75a4d2f60d5786499bdd26b92
+Size (yices2-2.7.0.tar.gz) = 10461165 bytes

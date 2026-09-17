@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/02/28 11:28:44 alnsn Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/17 13:45:03 wiz Exp $
 
-DISTNAME=	Yices-${PKGVERSION}
-PKGNAME=	yices2-2.6.5
+DISTNAME=	yices2-2.7.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SRI-CSL/}
-GITHUB_TAG=	${DISTNAME}
+GITHUB_TAG=	yices-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://yices.csl.sri.com/
@@ -22,7 +21,7 @@ TEST_TARGET=		check
 
 REPLACE_BASH+=	tests/regress/check.sh
 
-WRKSRC=		${WRKDIR}/yices2-${DISTNAME}
+WRKSRC=		${WRKDIR}/yices2-yices-${PKGVERSION_NOREV}
 
 pre-configure:
 	 cd ${WRKSRC} && autoconf
