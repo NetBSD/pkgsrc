@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/01 12:21:37 mef Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/17 20:23:53 wiz Exp $
 
 R_PKGNAME=	webfakes
-R_PKGVER=	1.3.2
+R_PKGVER=	1.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +29,8 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	bash
+REPLACE_BASH+=	inst/cert/localhost/generate.sh
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
