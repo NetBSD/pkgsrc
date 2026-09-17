@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.14 2026/05/14 16:29:23 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.15 2026/09/17 18:58:20 agc Exp $
 
 Use LIBTOOL.
 
@@ -22,7 +22,7 @@ Use LIBTOOL.
 -	$(AR) $(ARFLAGS) $@ $(nettle_OBJS)
 -	$(RANLIB) $@
 +libnettle.la: $(nettle_OBJS)
-+	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libnettle.la \
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} -o libnettle.la \
 +		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
 +		-version-info ${LIBNETTLE_MAJOR}:${LIBNETTLE_MINOR}
  	echo nettle > libnettle.stamp
@@ -32,7 +32,7 @@ Use LIBTOOL.
 -	$(AR) $(ARFLAGS) $@ $(hogweed_OBJS)
 -	$(RANLIB) $@
 +libhogweed.la: $(hogweed_OBJS)
-+	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libhogweed.la \
++	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} -o libhogweed.la \
 +		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
 +		-version-info ${LIBHOGWEED_MAJOR}:${LIBHOGWEED_MINOR}
  	echo hogweed > libhogweed.stamp
@@ -40,11 +40,11 @@ Use LIBTOOL.
  %.$(OBJEXT): %.asm $(srcdir)/m4-utils.m4 $(srcdir)/asm.m4 config.m4 machine.m4
  	$(M4) $(srcdir)/m4-utils.m4 $(srcdir)/asm.m4 config.m4 machine.m4 $< >$*.s
 -	$(COMPILE) $(ASM_FLAGS) -c $*.s
-+	${LIBTOOL} --mode=compile $(COMPILE) -c $*.s
++	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) -c $*.s
  
  %.$(OBJEXT): %.c
 -	$(COMPILE) -c $< \
-+	${LIBTOOL} --mode=compile $(COMPILE) -c $< \
++	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) -c $< \
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries.
