@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6128 2026/09/17 13:27:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6129 2026/09/17 13:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9306,3 +9306,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.1116 [morr 2026-09-16]
 	Updated devel/libextractor to 1.15 [wiz 2026-09-16]
 	Updated devel/apache-maven to 3.9.10nb1 [wiz 2026-09-17]
+	Updated math/yices2 to 2.7.0 [wiz 2026-09-17]
