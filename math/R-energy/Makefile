@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/07/13 13:52:25 mef Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/17 06:35:33 wiz Exp $
 
 R_PKGNAME=	energy
 R_PKGVER=	1.7-12
@@ -22,12 +22,6 @@ TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++
-
-.include "../../mk/bsd.prefs.mk"
-pre-patch:
-.if ${OPSYS} != SunOS && ${OPSYS} != Linux && ${OPSYS} != Darwin
-	${CP} ${FILESDIR}/Makevars ${WRKSRC}/src/
-.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
