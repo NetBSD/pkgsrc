@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2017/07/06 13:13:30 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2026/09/17 22:28:48 agc Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.5 2017/07/06 13:13:30 wiz Exp $
 -all: libjbig.a libjbig85.a tstcodec tstcodec85
 +.SUFFIXES: .lo
 +.c.lo:
-+	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
++	${LIBTOOL} --mode=compile --tag=CC $(CC) $(CFLAGS) -o $@ -c $<
  
 -tstcodec: tstcodec.o jbig.o jbig_ar.o
 -	$(CC) $(CFLAGS) -o tstcodec tstcodec.o jbig.o jbig_ar.o
@@ -45,16 +45,16 @@ $NetBSD: patch-aa,v 1.5 2017/07/06 13:13:30 wiz Exp $
 -tstcodec.o: tstcodec.c jbig.h
 -tstcodec85.o: tstcodec85.c jbig85.h
 +tstcodec: tstcodec.lo jbig.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
 +
 +tstcodec85: tstcodec85.lo jbig85.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
 +
 +libjbig.la: jbig.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +libjbig85.la: jbig85.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +jbig.lo: jbig.c jbig.h jbig_ar.h
 +jbig85.lo: jbig85.c jbig85.h jbig_ar.h
