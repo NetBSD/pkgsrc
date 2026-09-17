@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/07/10 20:25:40 ktnb Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/17 13:27:50 wiz Exp $
 
 DISTNAME=	apache-maven-3.9.10
+PKGREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -11,7 +12,7 @@ COMMENT=	Apache Project's software project management and comprehension tool
 LICENSE=	apache-2.0
 
 USE_JAVA=	run
-USE_JAVA2=	7
+USE_JAVA2=	yes
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
