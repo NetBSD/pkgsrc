@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6130 2026/09/17 14:09:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6131 2026/09/17 20:18:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9308,3 +9308,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/apache-maven to 3.9.10nb1 [wiz 2026-09-17]
 	Updated math/yices2 to 2.7.0 [wiz 2026-09-17]
 	Updated www/drupal11 to 11.4.7 [taca 2026-09-17]
+	Updated math/R-XML to 3.99.0.24 [wiz 2026-09-17]
