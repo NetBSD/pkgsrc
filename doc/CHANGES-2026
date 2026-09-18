@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6144 2026/09/18 20:02:52 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6145 2026/09/18 22:08:57 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9322,3 +9322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wikid to 3.2.2 [pin 2026-09-18]
 	Updated sysutils/yazi to 26.9.1 [pin 2026-09-18]
 	Updated www/resterm to 1.8.2 [drixter 2026-09-18]
+	Updated math/cvc5 to 1.4.0 [asnsn 2026-09-18]
