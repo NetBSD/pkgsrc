@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2026/09/11 07:09:48 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2026/09/18 09:59:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -45,6 +45,7 @@ CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	bytes-1.12.1
 CARGO_CRATE_DEPENDS+=	bytesize-2.4.2
 CARGO_CRATE_DEPENDS+=	camino-1.2.5
+CARGO_CRATE_DEPENDS+=	camino-anchored-0.1.1
 CARGO_CRATE_DEPENDS+=	camino-tempfile-1.4.1
 CARGO_CRATE_DEPENDS+=	camino-tempfile-ext-0.3.3
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.3.0
@@ -176,7 +177,7 @@ CARGO_CRATE_DEPENDS+=	hdrhistogram-7.5.4
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hex-0.4.3
 CARGO_CRATE_DEPENDS+=	home-0.5.12
-CARGO_CRATE_DEPENDS+=	http-1.4.2
+CARGO_CRATE_DEPENDS+=	http-1.5.0
 CARGO_CRATE_DEPENDS+=	http-body-1.0.1
 CARGO_CRATE_DEPENDS+=	http-body-util-0.1.3
 CARGO_CRATE_DEPENDS+=	httparse-1.10.1

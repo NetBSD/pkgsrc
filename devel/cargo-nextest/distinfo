@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2026/09/11 07:09:48 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/09/18 09:59:59 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -135,15 +135,18 @@ Size (bytesize-2.4.2.crate) = 24542 bytes
 BLAKE2s (camino-1.2.5.crate) = eac5a7d9973b935a28271c3d294971addec3b005aa1f042c9c83c0e657611c5d
 SHA512 (camino-1.2.5.crate) = 2254de1900c2ba08436718e8d5988420bb34b2f9ff4a6fb4553a1d65cc67d91cbe31b6b8de470b361dbb29f6b029552ea93c99a813f1baf32330b74fec094346
 Size (camino-1.2.5.crate) = 39915 bytes
+BLAKE2s (camino-anchored-0.1.1.crate) = 69736dcb837fe849c1024ad642a29aa402f6c5d7e507a469020da9e0c334c3b7
+SHA512 (camino-anchored-0.1.1.crate) = 27119543bf94c74a4925a1c7d9240edf5c22134b4a44feec52eaba81567f88c79b7e508f0970e3901eb1dde04f20882591d523cfeb86d12bb65fa46465638a7c
+Size (camino-anchored-0.1.1.crate) = 34040 bytes
 BLAKE2s (camino-tempfile-1.4.1.crate) = a3501ec55f4230ac53c46aa6335cc70d2926c4f2fbcdc40b52f92360e6c3bb18
 SHA512 (camino-tempfile-1.4.1.crate) = 03d6bf0c6684c51f44b7d2706d0f940f7cc1dd35742383a8d02891b950a6c7b4b378b2442320d79dd961364f0e7b947138529faebc3f1fd9c7b8c55950e31e1a
 Size (camino-tempfile-1.4.1.crate) = 26540 bytes
 BLAKE2s (camino-tempfile-ext-0.3.3.crate) = a4c8ca92f3553889982795461fa1bd8a17151e7e8afcd6bce7227ccbbb6e40be
 SHA512 (camino-tempfile-ext-0.3.3.crate) = 1725f3f72ccd207e8d9ee6c7f28749f1b34734032e51bf11aa773be791509a80fdad1aa3c8cb70e3d2b8cea4c04997a615c3581fb16975242e66cb11655195fa
 Size (camino-tempfile-ext-0.3.3.crate) = 19167 bytes
-BLAKE2s (cargo-nextest-0.9.144.tar.gz) = 6b52a2a61acf73cba3437aeb64ca9e40ae6e9c1f7104020cff4367c606b9d103
-SHA512 (cargo-nextest-0.9.144.tar.gz) = 4d0c052bce213be768d96f7cf1d5240873a32a78cc56732dab92c1bb94000ef3b9bcd5d637072c064a8a99475813fd7974e6a408854699b10d5c2eb10e0f6bff
-Size (cargo-nextest-0.9.144.tar.gz) = 9079417 bytes
+BLAKE2s (cargo-nextest-0.9.145.tar.gz) = b3cdc3a6b0a276510fb459097e1d9956b729656b3af906438e0e7ca38b263fc9
+SHA512 (cargo-nextest-0.9.145.tar.gz) = c8f4d9a24ee3c425289d5b6f9a77de39ea2664673300c4fd1b4ffc65ba002e7fe7cde798810f667f759461681ca6200cb3c7fa749530b8f1daff97039a84f202
+Size (cargo-nextest-0.9.145.tar.gz) = 9101072 bytes
 BLAKE2s (cargo-platform-0.3.0.crate) = f1dc01d022f8890fc5e672e24809275d002c6063802735604161960fd465374c
 SHA512 (cargo-platform-0.3.0.crate) = 43800bb1f7d23c4b82b8ff67dda6463de93955201bf9add1da16d31e4efc3864e5bc506ad05d7b76e7d7eb3a1dc3623e25c5656d19433dc8ef545656aa5786e0
 Size (cargo-platform-0.3.0.crate) = 13252 bytes
@@ -531,9 +534,9 @@ Size (hex-0.4.3.crate) = 13299 bytes
 BLAKE2s (home-0.5.12.crate) = 97ae6e92623f9be8dc8c915cfdf1acadc2c36c7c02765a52f101a44db4703dcc
 SHA512 (home-0.5.12.crate) = 3397947c3dc44749075b3076cd038936993b5755180b8190ea45c31b7ddd1701a14a4fb36c07adc7010a171b750f1a1ccd82c83640d42d350e996ff56c311df5
 Size (home-0.5.12.crate) = 9445 bytes
-BLAKE2s (http-1.4.2.crate) = 0d0ddadbbba1bc77603d42330a67b0d727329092c9ac426a9631e08ebace29f4
-SHA512 (http-1.4.2.crate) = e32d157265df84f43a62f74c40af4aa1057bcf36feb46b33aee0ef7e05e7ec0347f4a94a17e6ae6f660d128a2d727591276ad65dab6bf72fd3c736fc98bfd703
-Size (http-1.4.2.crate) = 110471 bytes
+BLAKE2s (http-1.5.0.crate) = a2546cdfce8a9f55a2923d4fd2d84a7210f7e1f1fd635435adc6603f53b399e6
+SHA512 (http-1.5.0.crate) = be36bbf1560ce187d4786dbbc921f6e2d88e314def83ed61cf3caaf99992f152995d6c252d426950e9b049dad867093f9bc77a94e219559a76ef93c6af3d8451
+Size (http-1.5.0.crate) = 111161 bytes
 BLAKE2s (http-body-1.0.1.crate) = 095da94c17f05738a7e5e0d6681aa805d14882003a246704cc0b70f19b9206c9
 SHA512 (http-body-1.0.1.crate) = 3d9a711619e5b14d2188fa42bbd43653dceeeb7e172cbd96d36fdf37846fa2c1efa0fad019395a4fa6da2e139875934aa56caf7332dc40546095b0a774ca39bd
 Size (http-body-1.0.1.crate) = 6125 bytes
