@@ -1,0 +1,12 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/09/18 14:48:54 pin Exp $
+
+Don't fetch files at build time.
+
+--- Cargo.toml.orig	2026-09-18 11:29:13.114918260 +0000
++++ Cargo.toml
+@@ -104,4 +104,4 @@ use_self             = "warn"
+ use_self             = "warn"
+ 
+ [patch.crates-io]
+-ratatui-core = { git = "https://github.com/yazi-rs/ratatui.git", branch = "fix_buffer_diff_wide_cells" }
++ratatui-core = { path = "../ratatui-dde5e05eccfe5b7cb7712b4bdf76edd0c2cd1f25/ratatui-core" }
