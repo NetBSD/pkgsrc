@@ -1,3 +1,7 @@
-xwpe is a programming environment for UNIX systems writen by Fred Kruse.
-The user interface mimics the Borland C and Pascal family of products for
-MS-DOS. From within xwpe you can edit, compile, and debug programs.
+xwpe (the X Windows Programming Environment) is a programming and text editor
+in the style of the early-1990s Borland Turbo C IDE.  A single binary runs in
+the console (wpe/we, ncurses) or under X11 (xwpe/xwe, anti-aliased Xft/Cairo,
+UTF-8).  It pairs a syntax-highlighting editor with a Borland-style menu and
+dialog system, project management, multi-language compiler integration and
+source-level debugging through gdb, plus Language Server Protocol and Debug
+Adapter Protocol clients.
