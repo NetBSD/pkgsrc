@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27931 2026/09/18 06:52:23 wiz Exp $
+$NetBSD: TODO,v 1.27932 2026/09/18 09:01:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,6 +382,10 @@ Suggested new packages
 	libretro-tyrquake (wip), libretro-prboom (wip), libretro-easyrpg,
 	libretro-scummvm, libretro-stonesoup, libretro-cannonball,
 	libretro-reminiscence
+
+	Standard Widget Toolkit (SWT)
+	https://eclipse.dev/eclipse/swt/
+
 
 Suggested package updates
 =========================
@@ -810,6 +814,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jchkmail-2.6.2
 	o jdbc-mysql5-5.1.36
 	o jdom-2.0.6
+	o jemalloc-5.4.0
 	o jetty7-7.6.17
 	o jetty9-9.3.7
 	o jools-1.0
