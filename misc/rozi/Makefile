@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/09/12 16:00:12 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/18 10:05:59 pin Exp $
 
-DISTNAME=	rozi-0.0.18
+DISTNAME=	rozi-0.0.19
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tui-lipan/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	824d925305579adcde6fb0cf17d480f445fd4831
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rozi.tui-lipan.dev/
