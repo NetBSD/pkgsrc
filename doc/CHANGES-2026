@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6141 2026/09/18 10:15:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6142 2026/09/18 10:17:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9319,3 +9319,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dust to 1.2.6 [pin 2026-09-18]
 	Updated sysutils/uutils-coreutils to 0.12.0 [pin 2026-09-18]
 	Updated wm/leftwm to 0.5.5 [pin 2026-09-18]
+	Updated www/wikid to 3.2.2 [pin 2026-09-18]
