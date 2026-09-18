@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2026/09/02 19:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2026/09/18 10:03:53 pin Exp $
 
-DISTNAME=	tp-note-1.26.5
-PKGREVISION=	1
+DISTNAME=	tp-note-1.27.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,9 +12,9 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.91.1
+RUST_REQ=	1.95
 
-WRKSRC=		${WRKDIR}/tp-note-v1.26.5-ed3008e70aebfd770f236bb62d70dd12bdbcf65b
+WRKSRC=		${WRKDIR}/tp-note-v1.27.1-64cd61ec579adf754a581a66d2541e655185e1e0
 
 USE_TOOLS+=	pkg-config
 
@@ -34,6 +33,9 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/assets/tpnote.svg  \
 		${DESTDIR}${PREFIX}/share/pixmaps
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		read-clipboard message-box viewer renderer lang-detection mermaid latex
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/batteries-included.mk"
