@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6135 2026/09/18 10:03:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6136 2026/09/18 10:05:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9313,3 +9313,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.24 [fox 2026-09-18]
 	Updated devel/cargo-nextest to 0.9.145 [pin 2026-09-18]
 	Updated editors/redox to 0.9.0 [pin 2026-09-18]
+	Updated editors/tp-note to 1.27.1 [pin 2026-09-18]
