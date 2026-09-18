@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/09/12 16:00:12 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/09/18 10:05:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -276,7 +276,7 @@ CARGO_CRATE_DEPENDS+=	rand_xoshiro-0.8.1
 CARGO_CRATE_DEPENDS+=	ratatui-0.30.2
 CARGO_CRATE_DEPENDS+=	ratatui-core-0.1.2
 CARGO_CRATE_DEPENDS+=	ratatui-crossterm-0.1.2
-CARGO_CRATE_DEPENDS+=	ratatui-image-11.0.6
+CARGO_CRATE_DEPENDS+=	ratatui-image-11.1.0
 CARGO_CRATE_DEPENDS+=	ratatui-termina-0.1.0
 CARGO_CRATE_DEPENDS+=	ratatui-termion-0.1.2
 CARGO_CRATE_DEPENDS+=	ratatui-termwiz-0.1.2
@@ -298,7 +298,7 @@ CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-0.38.44
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
 CARGO_CRATE_DEPENDS+=	rustix-openpty-0.2.0
-CARGO_CRATE_DEPENDS+=	rustls-0.23.43
+CARGO_CRATE_DEPENDS+=	rustls-0.23.45
 CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.4
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.7.0
@@ -375,8 +375,8 @@ CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
-CARGO_CRATE_DEPENDS+=	tui-lipan-0.9.0
-CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.9.0
+CARGO_CRATE_DEPENDS+=	tui-lipan-0.11.4
+CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.11.4
 CARGO_CRATE_DEPENDS+=	typed-path-0.12.3
 CARGO_CRATE_DEPENDS+=	typenum-1.20.1
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
