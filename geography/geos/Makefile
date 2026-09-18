@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/09/01 16:57:32 gdt Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/18 16:39:11 gdt Exp $
 
 VERSION_BASE=	3.15.0
 # Accomodate testing unreleased versions.
@@ -15,7 +15,10 @@ COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
+# CMakeLists.txt requires C++17.  The code also uses filesystem, which
+# unsurprisingly is not documented because filesystem is part of
+# C++17, and it's only pkgsrc that considers it separate.
+USE_CXX_FEATURES+=	c++17 filesystem
 
 .include "../../devel/cmake/build.mk"
 # cmake hides what it is doing; ask it to be like traditional builds.
