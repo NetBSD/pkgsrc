@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/09/16 09:47:45 micha Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/18 16:26:03 micha Exp $
 
 DISTNAME=	libcanlock-3.3.3
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://micha.freeshell.org/libcanlock/
 COMMENT=	Parsers for RFC 5536 message headers and RFC 8315 header fields
 LICENSE=	icu
 
-USE_TOOLS+=		autoconf automake autoreconf
+USE_TOOLS+=		autoconf automake autoreconf pkg-config
 USE_TOOLS+=		lex yacc
 FORCE_C_STD=		c99
 USE_LIBTOOL=		yes
