@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/07/25 18:58:36 alnsn Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/18 22:07:57 alnsn Exp $
 
-DISTNAME=	cvc5-1.3.4
-PKGREVISION=	1
+DISTNAME=	cvc5-1.4.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cvc5/}
 GITHUB_TAG=	cvc5-${PKGVERSION_NOREV}
@@ -19,6 +18,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX}
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_PYTHON_VENV=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_POLY=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_MPFR=ON
 
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0.9:../../devel/py-pyparsing
 
@@ -33,5 +33,6 @@ TEST_ENV+=	LD_LIBRARY_PATH=${CVC5_BUILD_SRC}:${CVC5_BUILD_SRC}/parser:${CVC5_BUI
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/cadical/buildlink3.mk"
 .include "../../math/libpoly/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../math/symfpu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
