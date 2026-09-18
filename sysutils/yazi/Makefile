@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/08/15 18:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/18 14:48:54 pin Exp $
 
-DISTNAME=	yazi-26.8.15
+DISTNAME=	yazi-26.9.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,12 @@ COMMENT=	Blazing fast terminal file manager
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+RATATUI-CORE_REV=	dde5e05eccfe5b7cb7712b4bdf76edd0c2cd1f25	
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		ratatui-core-${RATATUI-CORE_REV}.tar.gz
+SITES.ratatui-core-${RATATUI-CORE_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=yazi-rs/}ratatui/archive/${RATATUI-CORE_REV}.tar.gz
 
 RUST_REQ=	1.95.0
 USE_LANGUAGES+=	c c++
