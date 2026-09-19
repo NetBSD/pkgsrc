@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/09/02 19:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/19 13:48:27 wiz Exp $
 
 DISTNAME=		gnunet-gtk-0.21.0
 PKGREVISION=		24
@@ -16,6 +16,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash pkg-config
 
 REPLACE_BASH+=		pixmaps/icon-theme-installer
+
+CFLAGS+=		-Wno-incompatible-pointer-types
 
 # options.mk uses an option from gnunet's bl3
 # TODO: verify if this still does anything
