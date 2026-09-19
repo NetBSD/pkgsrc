@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/09/14 08:16:58 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/19 16:02:49 wiz Exp $
 
 DISTNAME=	statsmodels-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,8 @@ REPLACE_PYTHON+=	statsmodels/tsa/ardl/_pss_critical_values/pss.py
 REPLACE_PYTHON+=	statsmodels/tsa/ardl/pss_critical_values.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+
+REPLACE_PYTHON+=	statsmodels/_build/tempita.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
