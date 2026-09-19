@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.202 2026/08/09 21:30:06 wiz Exp $
+$NetBSD: distinfo,v 1.203 2026/09/19 19:18:02 wiz Exp $
 
 BLAKE2s (54cf3d44cbbedd17d774e9a37921963e8fd5d0cb.patch) = f8a0372f796accd11793695d12641d2d1395848f198d54e6900447a3d941fe48
 SHA512 (54cf3d44cbbedd17d774e9a37921963e8fd5d0cb.patch) = 01fef2dfaf3bfd4b9403e92aeb9e93b8e74264cd4cb6478db1e83d7761859fd477c5ff91d9e177f7b940252f7a8b1ab0457da23c23edea81e6d71e7b213af3a2
@@ -14,6 +14,10 @@ SHA1 (patch-Makefile.SH) = 0ac10d14a36c5f78611776413fed14413f50046e
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 996556f221eb0c75c316315462bf6cea6746e030
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
+SHA1 (patch-cpan_podlators_lib_Pod_Text.pm) = 64a111d8fa2c15eff000b930ce908d6417ad36d8
+SHA1 (patch-cpan_podlators_lib_Pod_Text_Color.pm) = 1272cd8676ee32fcb50a2017616b1b7c18a8bae9
+SHA1 (patch-cpan_podlators_lib_Pod_Text_Overstrike.pm) = 3c937735505a4ca171322ed308f19c0cdff0fbcd
+SHA1 (patch-cpan_podlators_lib_Pod_Text_Termcap.pm) = 0a859923e2f288bb790f9808a5388bd602e3745e
 SHA1 (patch-hints_cygwin.sh) = 5e2e7179336c9bc085bd2e83d22755a235ea1a4a
 SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = cb498170c18f1f429eed9be245cd1df24c7ad628
