@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/09/16 13:09:08 pin Exp $
+$NetBSD: distinfo,v 1.8 2026/09/19 15:40:06 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -315,9 +315,9 @@ Size (miniz_oxide-0.9.1.crate) = 70519 bytes
 BLAKE2s (mio-1.2.3.crate) = d9a5d2f4520a01ed8725e519847f9a2294c9a03ded7c370133ec501c69031859
 SHA512 (mio-1.2.3.crate) = 5b5bcff74dc9b1d7ad2d322d5237be4bc323ad915fb20a1a6e4814c809888d6e0c37d3e89d5586fff1dde628b9780e03c04748eefb29f6091df6bdc2f60adfc5
 Size (mio-1.2.3.crate) = 110455 bytes
-BLAKE2s (mirador-1.13.1.tar.gz) = 3205d2b6a6b54d3b527e3b5e11f871668e47e8ef0349c4335b80fdb9fb998b83
-SHA512 (mirador-1.13.1.tar.gz) = 97b7bd032bda894821f1f778db6f307924860286ff15ff765193e9ddfdbd41c3f6103518cb46a9361735b2abea2e50c044255e6eaf16e02d5a029e64ed0be760
-Size (mirador-1.13.1.tar.gz) = 1580857 bytes
+BLAKE2s (mirador-1.16.0.tar.gz) = 241aa12e938d520d334c9a2bed722cc80cf3f0d65d01eef093de12ea221da267
+SHA512 (mirador-1.16.0.tar.gz) = bd828f4db10df65ff98a00b40601e0d6cb4c455ea1044a3c281bcf50dbea3eeacf537443dd475788bc65a12cbeccef57e03a64d96e9c0b1f7928a0b7c02bd71c
+Size (mirador-1.16.0.tar.gz) = 1599981 bytes
 BLAKE2s (nix-0.29.0.crate) = 084b04649afac1124562c8c1c209ec5e206278e462f736f3cc9a2b848be8970f
 SHA512 (nix-0.29.0.crate) = 86c05084aa0e6238f8d48df0f5ce6e6d7661b589f4f3fbdad43387c59c0d6afafea4badf25d31db1611615de19a0b9ef18ce614846b79a47cad4e2c9367dbe7f
 Size (nix-0.29.0.crate) = 318248 bytes
