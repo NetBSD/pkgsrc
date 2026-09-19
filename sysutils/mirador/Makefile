@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/16 13:09:08 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/19 15:40:06 pin Exp $
 
-DISTNAME=	mirador-1.13.1
+DISTNAME=	mirador-1.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jchultarsky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
