@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6150 2026/09/19 15:38:26 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6151 2026/09/19 15:39:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9328,3 +9328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/opa to 1.20.2 [leot 2026-09-19]
 	Updated devel/regal to 0.42.0 [leot 2026-09-19]
 	Updated graphics/feh to 3.13.1 [pin 2026-09-19]
+	Updated misc/rozi to 0.0.22 [pin 2026-09-19]
