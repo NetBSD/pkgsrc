@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/08/12 10:15:46 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/19 20:22:03 wiz Exp $
 
 PKGNAME=	oracle-jdk21-21.0.12
+PKGREVISION=	1
 CATEGORIES=	lang java
 MASTER_SITES=	https://download.oracle.com/java/21/archive/
 
@@ -16,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 USE_TOOLS+=	pax
 
 EMUL_PLATFORMS=		darwin-aarch64 darwin-x86_64 linux-aarch64 linux-x86_64
-EMUL_MODULES.linux=	alsa locale x11 freetype2
+EMUL_MODULES.linux=	alsa locale x11 freetype2 fontconfig
 
 .include "../../mk/bsd.prefs.mk"
 
