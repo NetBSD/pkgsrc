@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27936 2026/09/19 16:44:08 wiz Exp $
+$NetBSD: TODO,v 1.27937 2026/09/19 18:33:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-9.14.0
+	o calibre-9.15.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o canna-3.7p5
@@ -1217,6 +1217,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o salt-3008.2
+	o sameboy-1.0.3
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
