@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6147 2026/09/19 13:48:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6148 2026/09/19 15:30:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9325,3 +9325,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/cvc5 to 1.4.0 [asnsn 2026-09-18]
 	Updated lang/ruby33 to 3.3.12nb2 [taca 2026-09-19]
 	Updated devel/libextractor to 1.15nb1 [wiz 2026-09-19]
+	Updated devel/opa to 1.20.2 [leot 2026-09-19]
