@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/09/02 19:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/19 19:23:12 wiz Exp $
 
 DISTNAME=	digikam-gmic-qt-4.0.3.20260825
 PKGREVISION=	1
@@ -17,8 +17,6 @@ USE_TOOLS+=	gmake bash:build
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SYSTEM_GMIC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGMIC_QT_HOST=digikam
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=ON
-
-REPLACE_BASH+=	translations/lrelease.sh
 
 # make binaries available in default search path
 BUILDLINK_FNAME_TRANSFORM.qt6-qttools+=	-e s,qt6/bin,bin,
