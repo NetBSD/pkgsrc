@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.bsd,v 1.1 2026/09/19 22:54:07 mef Exp $
+
+Honor LDFLAGS variables of pkgsrc (framework)
+
+--- Makefile.bsd.orig	2026-05-06 17:57:31.702953931 +0900
++++ Makefile.bsd	2026-09-20 07:20:05.315349719 +0900
+@@ -52,6 +52,8 @@ LIBCHICKEN_SO_LINKER_OPTIONS = -Wl,-sona
+ LIBRARIES = -lm -lpthread
+ NEEDS_RELINKING = yes
+ USES_SONAME = yes
++# honor pkgsrc LDFLAG
++LINKER_OPTIONS += @LDFLAGS@
+ 
+ # special files
+ 
