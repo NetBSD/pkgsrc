@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/06/10 11:29:06 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/09/19 15:38:05 pin Exp $
 bin/feh
 man/man1/feh.1
 share/applications/feh.desktop
@@ -10,8 +10,7 @@ share/doc/feh/examples/buttons
 share/doc/feh/examples/find-lowres
 share/doc/feh/examples/keys
 share/doc/feh/examples/themes
-share/feh/fonts/black.style
-share/feh/fonts/menu.style
+share/feh/fonts/NotoSans-Medium.ttf
 share/feh/fonts/yudit.ttf
 share/feh/images/feh.png
 share/feh/images/feh.svg
