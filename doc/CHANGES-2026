@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6146 2026/09/19 13:19:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6147 2026/09/19 13:48:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9324,3 +9324,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.8.2 [drixter 2026-09-18]
 	Updated math/cvc5 to 1.4.0 [asnsn 2026-09-18]
 	Updated lang/ruby33 to 3.3.12nb2 [taca 2026-09-19]
+	Updated devel/libextractor to 1.15nb1 [wiz 2026-09-19]
