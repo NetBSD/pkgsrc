@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2026/09/16 23:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2026/09/19 13:47:56 wiz Exp $
 
 DISTNAME=	libextractor-1.15
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libextractor/}
 
@@ -19,6 +20,9 @@ INFO_FILES=		yes
 PTHREAD_OPTS+=		require
 
 TEST_TARGET=		check
+
+PKGCONFIG_OVERRIDE=		libextractor.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 CONFLICTS=		csound-{bath,dev}-[0-9]*	# bin/extract
 
