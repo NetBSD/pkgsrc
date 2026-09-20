@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.32 2026/09/19 15:56:07 leot Exp $
+# $NetBSD: go-modules.mk,v 1.33 2026/09/20 09:43:29 leot Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.25.2.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.25.2.zip

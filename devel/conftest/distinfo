@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2026/09/19 15:56:07 leot Exp $
+$NetBSD: distinfo,v 1.33 2026/09/20 09:43:29 leot Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.25.2.mod) = c36f332c45cf24a4dd4d1a4c6ff42cd78732769e87b139ce56cd3f7c66ff685e
 SHA512 (cel.dev_expr_@v_v0.25.2.mod) = 67aecc4be51ad90133564333b4619f3195b522bcc4cec478fe37fcb7eef22a7efbfdbae97bfccd9ef1c45828116977a56a53451a037fd1ada3faa906278f4842
@@ -48,9 +48,9 @@ Size (cloud.google.com_go_storage_@v_v1.65.1.mod) = 2730 bytes
 BLAKE2s (cloud.google.com_go_storage_@v_v1.65.1.zip) = 0c4ab87d8c9e13d74fa148111858f18f1dced86ef433bf6c27acfd42d72e4c95
 SHA512 (cloud.google.com_go_storage_@v_v1.65.1.zip) = dff55aeae82b70c087a2e6854aadad96d4cd29a7477364bbd1888d652478f1a075e5cd4056c81e94802bb398abec12c44ff12b524622954a39c91da17538eddb
 Size (cloud.google.com_go_storage_@v_v1.65.1.zip) = 998644 bytes
-BLAKE2s (conftest-0.70.0.tar.gz) = 5d4fc68fa435a82c8ce8ada067c0b81d0550390c0804e43ec5e187bad79cc164
-SHA512 (conftest-0.70.0.tar.gz) = e33bd58e1757d76b9b42cc0ea10aeec5dc4269acaf7fdfc0d604d381b0d56d24e80fe9b4b0fd4880b149105dbeebf660a0e13bc8420ae6a18c234970588caaf0
-Size (conftest-0.70.0.tar.gz) = 179702 bytes
+BLAKE2s (conftest-0.70.1.tar.gz) = fbfc1d4e44bbde491308059868f658fac89fa36d44f1929c594a95bf255fb8c7
+SHA512 (conftest-0.70.1.tar.gz) = 86c26ff1a69b74caf569f6f444aa209891465181e7a3c9d38495bfb0fead33b438867f27b8ec2eb844e385e80297a92e06bfa33252010a0f8adaa43a896661ec
+Size (conftest-0.70.1.tar.gz) = 182150 bytes
 BLAKE2s (cuelang.org_go_@v_v0.17.1.mod) = f5f6eea50499b15e1b924fad151b2ef1c29d70c5bf3d5b11b96aa798e696b8f4
 SHA512 (cuelang.org_go_@v_v0.17.1.mod) = d7a3b7e2c71645289cf261605d31e1bf518f75b01406c1a712ac6602959f6ab2621573b686a3f1b18596e899028b04831620d4368109796a8de359f73f61b083
 Size (cuelang.org_go_@v_v0.17.1.mod) = 1313 bytes
