@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6158 2026/09/20 12:48:29 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.6159 2026/09/20 18:03:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9335,3 +9335,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/perl5 to 5.44.0nb2 [wiz 2026-09-19]
 	Updated lang/oracle-jdk21 to 21.0.12nb1 [wiz 2026-09-19]
 	Updated devel/conftest to 0.70.1 [leot 2026-09-20]
+	Updated inputmethod/fcitx5-chinese-addons to 5.1.3nb23 [wiz 2026-09-20]
