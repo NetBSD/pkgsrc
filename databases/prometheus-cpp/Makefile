@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/05/14 16:40:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/20 21:19:01 he Exp $
 
 DISTNAME=	prometheus-cpp-with-submodules
 PKGNAME=	prometheus-cpp-1.3.0
@@ -31,4 +31,5 @@ PKGCONFIG_OVERRIDE+=	cmake/prometheus-cpp-push.pc.in
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
