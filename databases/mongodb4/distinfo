@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/02/19 08:38:08 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/09/20 13:35:01 gdt Exp $
 
 BLAKE2s (mongodb-4.4.30.tar.gz) = 93a21d4ef5425b763642730a82d4e6d191159fd6d414029351997592133516b1
 SHA512 (mongodb-4.4.30.tar.gz) = 426678b25a209a1dd782c63216c688870d8062d24c86c87d7ab456ef5d27f5f9dd610a41c2b72c186417cff2641ea407fe95deecc5bb71d61c82727679c4883f
@@ -23,6 +23,7 @@ SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h)
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = 0f00e7e1b710b3d19a936d5832ab08279bff48ee
 SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
 SHA1 (patch-src_third__party_boost-1.70.0_boost_asio_detail_impl_kqueue__reactor.ipp) = 0808636a4e01f9eda921b79360ca51c04bc43230
+SHA1 (patch-src_third__party_mozjs-60_extract_js_src_wasm_WasmSignalHandlers.cpp) = b241693f8c98ada1771e33038d48740af3f39419
 SHA1 (patch-src_third__party_mozjs-60_platform_aarch64_netbsd_build_js-confdefs.h) = bd4c0a282f898a20f331ce1fcf1451cc92d5677c
 SHA1 (patch-src_third__party_mozjs-60_platform_x86__64_netbsd_build_js-confdefs.h) = 2474fc221f0c59381c8529e986db1f3f67c405ec
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
