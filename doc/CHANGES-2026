@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6156 2026/09/19 20:22:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6157 2026/09/20 09:43:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9334,3 +9334,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-podlators to 6.1.1 [wiz 2026-09-19]
 	Updated lang/perl5 to 5.44.0nb2 [wiz 2026-09-19]
 	Updated lang/oracle-jdk21 to 21.0.12nb1 [wiz 2026-09-19]
+	Updated devel/conftest to 0.70.1 [leot 2026-09-20]
