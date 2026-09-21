@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2026/09/02 19:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2026/09/21 19:05:58 bouyer Exp $
 
-DISTNAME=	nagstamon-3.16.2
-PKGREVISION=	3
+DISTNAME=	nagstamon-3.18.2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HenriWahl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,8 +10,6 @@ HOMEPAGE=	https://nagstamon.de/
 COMMENT=	Nagios status monitor which takes place in systray or on desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-#DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.24:../../textproc/py-libxslt
-#DEPENDS+=	sox_ng>=14.0.1:../../audio/sox_ng
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 #        'python3-crypto '
@@ -24,9 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 # right socks?
 DEPENDS+=	${PYPKGPREFIX}-python-socks-[0-9]*:../../net/py-python-socks
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-gssapi-[0-9]*:../../security/py-requests-gssapi
 DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../security/py-secretstorage
+DEPENDS+=	${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
 
 SUBST_CLASSES+=         manpath
 SUBST_STAGE.manpath=    pre-configure

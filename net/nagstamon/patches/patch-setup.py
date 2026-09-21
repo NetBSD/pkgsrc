@@ -1,16 +1,16 @@
-$NetBSD: patch-setup.py,v 1.4 2025/10/28 11:36:18 bouyer Exp $
+$NetBSD: patch-setup.py,v 1.5 2026/09/21 19:05:58 bouyer Exp $
 
 Fix paths for pkgsrc
 
---- setup.py.orig	2025-03-14 14:32:29.956473467 +0100
-+++ setup.py	2025-03-14 14:37:36.786709617 +0100
-@@ -153,9 +153,9 @@
+--- setup.py.orig	2026-03-14 09:57:55.000000000 +0100
++++ setup.py	2026-09-21 15:32:54.141535197 +0200
+@@ -155,9 +155,9 @@
                                    'resources/qui/*',
                                    'resources/LICENSE',
                                    'resources/CREDITS']},
--      data_files=[('%s/share/man/man1' % sys.prefix, ['Nagstamon/resources/nagstamon.1.gz']),
--                  ('%s/share/pixmaps' % sys.prefix, ['Nagstamon/resources/nagstamon.svg']),
--                  ('%s/share/applications' % sys.prefix, ['Nagstamon/resources/nagstamon.desktop'])],
+-      data_files=[(f'{sys.prefix}/share/man/man1', ['Nagstamon/resources/nagstamon.1.gz']),
+-                  (f'{sys.prefix}/share/pixmaps', ['Nagstamon/resources/nagstamon.svg']),
+-                  (f'{sys.prefix}/share/applications', ['Nagstamon/resources/nagstamon.desktop'])],
 +      data_files=[('@PKGMANDIR@/man1', ['Nagstamon/resources/nagstamon.1.gz']),
 +                  ('share/pixmaps', ['Nagstamon/resources/nagstamon.svg']),
 +                  ('share/applications', ['Nagstamon/resources/nagstamon.desktop'])],
