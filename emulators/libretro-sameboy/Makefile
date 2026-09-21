@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/21 11:00:13 nia Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/21 07:47:21 wiz Exp $
 
 .include "../../emulators/sameboy/Makefile.common"
 
@@ -8,9 +8,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/sameboy/
 COMMENT=	Libretro core based on the SameBoy Game Boy/Game Boy Color emulator
 
-BUILD_DIRS=	libretro
+BUILD_TARGET=	libretro
 
 LIBRETRO_CORE=	sameboy
+MAKE_JOBS_SAFE=	no
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
