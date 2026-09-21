@@ -1,19 +1,24 @@
-$NetBSD: patch-src_openocd.c,v 1.1 2025/04/06 10:07:06 adam Exp $
+$NetBSD: patch-src_openocd.c,v 1.2 2026/09/21 11:37:52 bouyer Exp $
 
-Fix build with jimtcl 0.83.
+Fix build with jimtcl 0.84.
 
---- src/openocd.c.orig	2025-04-06 05:49:36.109698542 +0000
-+++ src/openocd.c
-@@ -255,9 +255,9 @@ static int jim_expr_command(Jim_Interp *
+--- src/openocd.c.orig	2022-09-18 15:46:16.000000000 +0200
++++ src/openocd.c	2026-09-20 23:39:56.430639363 +0200
+@@ -255,15 +255,8 @@
  		Jim_Obj *obj = Jim_ConcatObj(interp, argc - 1, argv + 1);
  		Jim_IncrRefCount(obj);
  		const char *s = Jim_String(obj);
 -		struct jim_scriptobj *script = Jim_GetIntRepPtr(interp->currentScriptObj);
 -		if (interp->currentScriptObj == interp->emptyObj ||
 -				strcmp(interp->currentScriptObj->typePtr->name, "script") ||
-+		struct jim_scriptobj *script = Jim_GetIntRepPtr(interp->unused_currentScriptObj);
-+		if (interp->unused_currentScriptObj == interp->emptyObj ||
-+				strcmp(interp->unused_currentScriptObj->typePtr->name, "script") ||
- 				script->subst_flags ||
- 				script->filename_obj == interp->emptyObj)
- 			LOG_WARNING("DEPRECATED! use 'expr { %s }' not 'expr %s'", s, s);
+-				script->subst_flags ||
+-				script->filename_obj == interp->emptyObj)
+-			LOG_WARNING("DEPRECATED! use 'expr { %s }' not 'expr %s'", s, s);
+-		else
+-			LOG_WARNING("DEPRECATED! (%s:%d) use 'expr { %s }' not 'expr %s'",
+-						Jim_String(script->filename_obj), script->linenr, s, s);
++		LOG_WARNING("DEPRECATED! use 'expr { %s }' not 'expr %s'", s, s);
++
+ 		int retcode = Jim_EvalExpression(interp, obj);
+ 		Jim_DecrRefCount(interp, obj);
+ 		return retcode;
