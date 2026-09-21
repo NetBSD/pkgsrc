@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/10 16:39:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/21 18:55:36 adam Exp $
 bin/idn2
 include/idn2.h
 info/libidn2.info
@@ -34,8 +34,6 @@ share/gtk-doc/html/libidn2/home.png
 share/gtk-doc/html/libidn2/index.html
 share/gtk-doc/html/libidn2/left-insensitive.png
 share/gtk-doc/html/libidn2/left.png
-share/gtk-doc/html/libidn2/libidn2-idn2.h.html
-share/gtk-doc/html/libidn2/libidn2.devhelp2
 share/gtk-doc/html/libidn2/libidn2.html
 share/gtk-doc/html/libidn2/right-insensitive.png
 share/gtk-doc/html/libidn2/right.png
@@ -57,6 +55,7 @@ share/locale/it/LC_MESSAGES/libidn2.mo
 share/locale/ja/LC_MESSAGES/libidn2.mo
 share/locale/ka/LC_MESSAGES/libidn2.mo
 share/locale/ko/LC_MESSAGES/libidn2.mo
+share/locale/lv/LC_MESSAGES/libidn2.mo
 share/locale/nl/LC_MESSAGES/libidn2.mo
 share/locale/pl/LC_MESSAGES/libidn2.mo
 share/locale/pt_BR/LC_MESSAGES/libidn2.mo
