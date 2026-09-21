@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6168 2026/09/21 18:47:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6169 2026/09/21 18:55:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9346,3 +9346,5 @@ Changes to the packages collection and infrastructure in 2026:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q3 branch [bsiegert 2026-09-21]
 	Updated devel/sccache to 0.18.0 [adam 2026-09-21]
 	Updated multimedia/py-mpegdash to 0.4.1 [adam 2026-09-21]
+	Updated devel/libidn to 1.44 [adam 2026-09-21]
+	Updated devel/libidn2 to 2.3.8 [adam 2026-09-21]
