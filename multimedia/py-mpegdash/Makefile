@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/21 18:46:28 adam Exp $
 
-DISTNAME=	mpegdash-0.1.5
+DISTNAME=	mpegdash-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpegdash/}
 
@@ -11,9 +10,9 @@ HOMEPAGE=	https://github.com/caststack/python-mpegdash
 COMMENT=	MPEG-DASH MPD(Media Presentation Description) Parser
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
