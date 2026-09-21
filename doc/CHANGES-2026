@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6161 2026/09/21 07:47:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6162 2026/09/21 07:47:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9338,3 +9338,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/fcitx5-chinese-addons to 5.1.3nb23 [wiz 2026-09-20]
 	Updated net/frr to 9.1nb15 [wiz 2026-09-20]
 	Updated emulators/sameboy to 1.0.3 [wiz 2026-09-21]
+	Updated emulators/libretro-sameboy to 1.0.3 [wiz 2026-09-21]
