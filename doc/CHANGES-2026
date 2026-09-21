@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6166 2026/09/21 17:39:20 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6167 2026/09/21 18:42:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9343,3 +9343,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/gnuchess to 6.2.9nb1 [wiz 2026-09-21]
 	Updated net/unbound to 1.26.1 [kim 2026-09-21]
 	Updated mail/p5-Email-Sender to 2.602 [wiz 2026-09-21]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q3 branch [bsiegert 2026-09-21]
