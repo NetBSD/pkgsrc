@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6164 2026/09/21 09:31:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6165 2026/09/21 09:44:50 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9341,3 +9341,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/libretro-sameboy to 1.0.3 [wiz 2026-09-21]
 	Updated graphics/digikam-gmic-qt to 4.0.3.20260918 [wiz 2026-09-21]
 	Updated games/gnuchess to 6.2.9nb1 [wiz 2026-09-21]
+	Updated net/unbound to 1.26.1 [kim 2026-09-21]
