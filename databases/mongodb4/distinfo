@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2026/09/20 13:35:01 gdt Exp $
+$NetBSD: distinfo,v 1.12 2026/09/21 18:37:07 abs Exp $
 
-BLAKE2s (mongodb-4.4.30.tar.gz) = 93a21d4ef5425b763642730a82d4e6d191159fd6d414029351997592133516b1
-SHA512 (mongodb-4.4.30.tar.gz) = 426678b25a209a1dd782c63216c688870d8062d24c86c87d7ab456ef5d27f5f9dd610a41c2b72c186417cff2641ea407fe95deecc5bb71d61c82727679c4883f
-Size (mongodb-4.4.30.tar.gz) = 51650645 bytes
+BLAKE2s (mongodb-4.4.31.tar.gz) = 7b37a70faafe68c04cbf7fdfb354aee66ecca00a439f0fe31d3aa0590e05c53a
+SHA512 (mongodb-4.4.31.tar.gz) = 756def1a2944f3d6db71ac245be55e3b2095d26fdf0d97a16f5ebe632e6967e8f8129003fa649ac339ee82920993e6b4048790f7190368a8342d25f9e12cc6b9
+Size (mongodb-4.4.31.tar.gz) = 51650074 bytes
 SHA1 (patch-SConstruct) = 78b3060c3cb5e327a1a1c6f3e91ac1d709abfbc4
 SHA1 (patch-buildscripts_moduleconfig.py) = c88d13662bc30c627184d36690650e61c853dad5
 SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
