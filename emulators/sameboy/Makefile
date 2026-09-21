@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.28 2026/09/02 19:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/21 07:46:51 wiz Exp $
 
-PKGREVISION= 7
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,13 +12,18 @@ MAKE_FLAGS+=	DATA_DIR=${PREFIX}/share/sameboy/
 MAKE_FLAGS+=	FREEDESKTOP=true
 
 .include "../../mk/bsd.fast.prefs.mk"
+
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 
 .include "options.mk"
+
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"

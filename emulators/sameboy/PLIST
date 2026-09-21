@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/03 16:23:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/21 07:46:51 wiz Exp $
 bin/sameboy
+bin/sameboy-thumbnailer
 share/applications/sameboy.desktop
 share/icons/hicolor/128x128/apps/sameboy.png
 share/icons/hicolor/128x128/mimetypes/x-gameboy-color-rom.png
@@ -21,11 +22,18 @@ share/icons/hicolor/64x64/mimetypes/x-gameboy-color-rom.png
 share/icons/hicolor/64x64/mimetypes/x-gameboy-rom.png
 share/mime/packages/sameboy.xml
 share/sameboy/LICENSE
+share/sameboy/Palettes/Canyon.sbp
 share/sameboy/Palettes/Desert.sbp
 share/sameboy/Palettes/Evening.sbp
 share/sameboy/Palettes/Fog.sbp
+share/sameboy/Palettes/Green Slate.sbp
+share/sameboy/Palettes/Green Tea.sbp
+share/sameboy/Palettes/Lavender.sbp
 share/sameboy/Palettes/Magic Eggplant.sbp
+share/sameboy/Palettes/Mystic Blue.sbp
+share/sameboy/Palettes/Pink Pop.sbp
 share/sameboy/Palettes/Radioactive Pea.sbp
+share/sameboy/Palettes/Rose.sbp
 share/sameboy/Palettes/Seaweed.sbp
 share/sameboy/Palettes/Twilight.sbp
 share/sameboy/Shaders/AAOmniScaleLegacy.fsh
@@ -33,6 +41,7 @@ share/sameboy/Shaders/AAScale2x.fsh
 share/sameboy/Shaders/AAScale4x.fsh
 share/sameboy/Shaders/Bilinear.fsh
 share/sameboy/Shaders/CRT.fsh
+share/sameboy/Shaders/FlatCRT.fsh
 share/sameboy/Shaders/HQ2x.fsh
 share/sameboy/Shaders/LCD.fsh
 share/sameboy/Shaders/MasterShader.fsh
@@ -52,3 +61,5 @@ share/sameboy/mgb_boot.bin
 share/sameboy/registers.sym
 share/sameboy/sgb2_boot.bin
 share/sameboy/sgb_boot.bin
+share/thumbnailers/sameboy.thumbnailer
+@pkgdir share/sameboy/BootROMs
