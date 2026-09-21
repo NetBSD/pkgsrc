@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.21 2023/08/11 08:49:13 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2026/09/21 07:46:51 wiz Exp $
 # used by emulators/sameboy/Makefile
 # used by emulators/libretro-sameboy/Makefile
 
-DISTNAME=	sameboy-0.15.8
+DISTNAME=	sameboy-1.0.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LIJI32/}
 GITHUB_PROJECT=	SameBoy
@@ -23,7 +23,7 @@ PATCHDIR=	${.CURDIR}/../../emulators/sameboy/patches
 FORTIFY_SUPPORTED=	no
 .endif
 
-# sh: /tmp/emulators/libretro-sameboy/work/SameBoy-0.13.2/build/pb12: text busy
-MAKE_JOBS_SAFE=	no
-
+# cc1: note: unrecognized command-line option '-Wno-nullability-completeness' may have been intended to silence earlier diagnostics
+# cc1: note: unrecognized command-line option '-Wno-unknown-warning-option' may have been intended to silence earlier diagnostics
+# cc1: note: unrecognized command-line option '-Wno-unknown-warning' may have been intended to silence earlier diagnostics
 BUILDLINK_TRANSFORM+=	rm:-Werror

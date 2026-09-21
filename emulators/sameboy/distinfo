@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2022/12/15 08:38:28 nia Exp $
+$NetBSD: distinfo,v 1.20 2026/09/21 07:46:51 wiz Exp $
 
-BLAKE2s (sameboy-0.15.8.tar.gz) = b013a5001e435a7307b040d314a975a9610d046572a0ace0b2b58d129dd39fbd
-SHA512 (sameboy-0.15.8.tar.gz) = ac72f6a5c52634c671e73c5dd88afaabcf302a854efb751da2f11037cb731a710d9d0848781d1b07e61dc908ccb6eb39df114c4f0cbf5a3e803f8e712d813ffb
-Size (sameboy-0.15.8.tar.gz) = 3112139 bytes
+BLAKE2s (sameboy-1.0.3.tar.gz) = a3a07caa318e0eb67c6d410742aceb02d1afb08e6e7e958c4382afe1482f16b2
+SHA512 (sameboy-1.0.3.tar.gz) = 70c88f3f99f26fa746ac31f4894a1ea2d871dbbfba5f36bd3445a614c754c8a03a6fe7d426d5a2643a458ac599eba9eb4396d0c61d8e3951cd9f072e97531236
+Size (sameboy-1.0.3.tar.gz) = 7865220 bytes
 SHA1 (patch-Core_gb.c) = 3945b96fcfa2047213e34a398b2e18b89057fdab
