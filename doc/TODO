@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27961 2026/09/22 11:43:35 adam Exp $
+$NetBSD: TODO,v 1.27962 2026/09/22 12:27:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1398,7 +1398,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o wdiff-1.2.3
-	o webkit-gtk41-2.54.0 [wiz]
 	o webmin-2.600
 	o websvn-2.6.0
 	o weechat-4.10.1
