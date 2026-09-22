@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6234 2026/09/22 14:56:16 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6235 2026/09/22 16:49:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9344,6 +9344,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/unbound to 1.26.1 [kim 2026-09-21]
 	Updated mail/p5-Email-Sender to 2.602 [wiz 2026-09-21]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2026Q3 branch [bsiegert 2026-09-21]
+	Updated databases/mongodb4 to 4.4.31 [abs 2026-09-21]
 	Updated devel/sccache to 0.18.0 [adam 2026-09-21]
 	Updated multimedia/py-mpegdash to 0.4.1 [adam 2026-09-21]
 	Updated devel/libidn to 1.44 [adam 2026-09-21]
@@ -9448,3 +9449,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.23 [pin 2026-09-22]
 	Added multimedia/moviebox-tui version 0.1.23 [pin 2026-09-22]
 	Updated devel/libudev-bsd to 0.7.0.1 [kikadf 2026-09-22]
+	Added databases/mongodb5 version 5.0.34 [abs 2026-09-22]
