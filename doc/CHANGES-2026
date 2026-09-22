@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6235 2026/09/22 16:49:08 abs Exp $
+$NetBSD: CHANGES-2026,v 1.6236 2026/09/22 17:32:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9450,3 +9450,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added multimedia/moviebox-tui version 0.1.23 [pin 2026-09-22]
 	Updated devel/libudev-bsd to 0.7.0.1 [kikadf 2026-09-22]
 	Added databases/mongodb5 version 5.0.34 [abs 2026-09-22]
+	Added textproc/py-jsonpointer version 3.1.1 [ryoon 2026-09-22]
