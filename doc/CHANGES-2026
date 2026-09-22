@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6204 2026/09/22 09:25:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6205 2026/09/22 09:39:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9401,3 +9401,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-trove-classifiers to 2026.9.21.13 [adam 2026-09-22]
 	Updated devel/py-hatchling to 1.32.4 [adam 2026-09-22]
 	Updated math/py-simpleeval to 1.0.8 [adam 2026-09-22]
+	Updated lang/nodejs to 26.10.0 [adam 2026-09-22]
+	Updated net/libtorrent to 0.16.23 [adam 2026-09-22]
+	Updated net/rtorrent to 0.16.23 [adam 2026-09-22]
