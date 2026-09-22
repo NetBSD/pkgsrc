@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/08/13 18:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/22 08:44:21 ryoon Exp $
 
 NAME=		quickjs
 QJS_DATE=	2026-06-04
@@ -14,6 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bellard.org/quickjs/
 COMMENT=	Quick JavaScript interpreter
 LICENSE=	mit
+
+CONFLICTS+=	quickjs-ng=[0-9]*
 
 USE_TOOLS+=	gmake
 MAKE_FLAGS=	prefix=${PREFIX}
