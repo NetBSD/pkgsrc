@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2024/10/08 15:38:42 wiz Exp $
+$NetBSD: distinfo,v 1.25 2026/09/22 07:42:17 ryoon Exp $
 
-BLAKE2s (fribidi-1.0.16.tar.xz) = de116d2debd50b1204020e0219c38a431a0ec42dd40755088c99ee0eb9a9c9b9
-SHA512 (fribidi-1.0.16.tar.xz) = e3a56f36155f6813e3609473639fc533de742309f561c463012dc90b412a1ac7694b765d92669b2cbfaee973ca0e92fa5e926e68a1a078921f26ef17d82ab651
-Size (fribidi-1.0.16.tar.xz) = 1098260 bytes
+BLAKE2s (fribidi-1.0.17.tar.xz) = d79d29dfbede580544a87624901e7c0b17782b77df02c0db60b98568099663c6
+SHA512 (fribidi-1.0.17.tar.xz) = 70df8b9b2b8e552e969122227192b04c45e3fa2d133ed3642ba1cf8a8c5855cfeace4e0b009cdb9f58431dfc63fbf7878419594d4d7be095ee4d154d3b7570cc
+Size (fribidi-1.0.17.tar.xz) = 1203284 bytes

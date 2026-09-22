@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/10/08 15:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/22 07:42:17 ryoon Exp $
 
-DISTNAME=	fribidi-1.0.16
+DISTNAME=	fribidi-1.0.17
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fribidi/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 TEST_TARGET=	check
 
