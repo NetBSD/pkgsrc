@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2026/06/08 04:24:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/09/22 11:37:52 adam Exp $
 # used by emulators/ppsspp/Makefile
 # used by emulators/ppsspp-qt/Makefile
 # used by emulators/libretro-ppsspp/Makefile
@@ -42,6 +42,12 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_DISCORD=OFF
 # Various issues with -fPIC etc
 CMAKE_CONFIGURE_ARGS+=	-DARMIPS_PRECOMPILE_HEADERS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == x86_64
+CXXFLAGS+=	-mxsave
 .endif
 
 .include "../../archivers/libzip/buildlink3.mk"
