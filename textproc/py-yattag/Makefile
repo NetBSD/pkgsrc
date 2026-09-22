@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/08/28 10:33:08 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/22 09:12:34 adam Exp $
 
-DISTNAME=	yattag-1.15.1
+DISTNAME=	yattag-1.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yattag/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://www.yattag.org/
 COMMENT=	Generate HTML or XML in a pythonic way
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
