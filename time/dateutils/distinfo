@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2024/01/25 16:09:32 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/09/22 07:19:36 adam Exp $
 
-BLAKE2s (dateutils-0.4.11.tar.xz) = 5915b877424ae5aa402a3ae924bdc143a52bc9a50fc327664f5f81a58533dc39
-SHA512 (dateutils-0.4.11.tar.xz) = 601fa8197acdb68fe0688aed3fa2ba2fcf66b9a8ad23a0c7cb816a2cba9c645854ec8715a2127e02294cc068f63b09d0596eee60e151a8ad0edff22f54ec9d7a
-Size (dateutils-0.4.11.tar.xz) = 670468 bytes
+BLAKE2s (dateutils-0.4.12.tar.xz) = 912b37c85ff8abd628b6d16eeaa14ac70fc8c254acc24f4658157a287f968fc9
+SHA512 (dateutils-0.4.12.tar.xz) = f953a2dc9bf2cddb1f7f8bde8f2bc4318f7485d26ae64a8b637ef18571b23c1a83c45d92a5537957dc2662da67db8f8586e588bc2bf926ce9276c599d9e96c13
+Size (dateutils-0.4.12.tar.xz) = 671480 bytes
 SHA1 (patch-lib_ltrcc.c) = 1ad1ce98cb02ac90a62013e96f9e9a16e232a07b
 SHA1 (patch-m4_sxe-compiler.m4) = 43900ecee585b60b5283c82da89ad141f6f3cd91
