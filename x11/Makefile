@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1089 2026/08/10 09:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1090 2026/09/22 09:05:52 ryoon Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -18,6 +18,7 @@ SUBDIR+=	bbapm
 SUBDIR+=	beforelight
 SUBDIR+=	bitmap
 SUBDIR+=	blt
+SUBDIR+=	blueprint-compiler
 SUBDIR+=	c++-gtk-utils
 SUBDIR+=	citron
 SUBDIR+=	clipit
