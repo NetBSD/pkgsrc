@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27946 2026/09/22 03:52:52 ryoon Exp $
+$NetBSD: TODO,v 1.27947 2026/09/22 04:42:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -1164,7 +1164,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pxp-1.2.9
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
-	o py-OTXv2-1.5.2
 	o py-aiostream-0.8.1
 	o py-ast-serialize-0.11.2
 	o py-beets-2.14.1
