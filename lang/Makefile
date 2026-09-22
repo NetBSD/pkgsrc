@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.798 2026/09/22 08:21:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.799 2026/09/22 13:32:37 kikadf Exp $
 #
 
 COMMENT=	Programming languages
@@ -371,6 +371,7 @@ SUBDIR+=	tcl90
 SUBDIR+=	tcltutor
 SUBDIR+=	tclx
 SUBDIR+=	tinyscheme
+SUBDIR+=	typescript
 SUBDIR+=	ucblogo
 SUBDIR+=	umb-scheme
 SUBDIR+=	utilisp
