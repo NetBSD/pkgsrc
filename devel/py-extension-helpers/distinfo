@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/06/13 06:59:12 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/09/22 12:07:49 adam Exp $
 
-BLAKE2s (extension_helpers-1.4.0.tar.gz) = 5108528290841c0c262f37013d374be688177a4199d7f4cd432d133aa324aeea
-SHA512 (extension_helpers-1.4.0.tar.gz) = e907f2af3b9e9d141a645bf1935ec1049f88bb2daebe79f7d93b8259ed26222985514ffc23ca83c98904d020165bbfb29b933b997a21f7c50ca9296d8f66bf79
-Size (extension_helpers-1.4.0.tar.gz) = 32995 bytes
+BLAKE2s (extension_helpers-1.5.0.tar.gz) = 35fc89b51dd6ada54aa725e6c0382b80051a0ac6f7be722373d53c9a605b7444
+SHA512 (extension_helpers-1.5.0.tar.gz) = b41987f772af2a77f7f07683acc713de8e004916dd7373073356b84d7c31745ee1e1414934aed5ae5e10b35f7399831fce3df3263c725395a8776e6c1bffbafa
+Size (extension_helpers-1.5.0.tar.gz) = 34826 bytes
