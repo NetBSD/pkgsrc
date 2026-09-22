@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2026/09/07 07:10:02 pin Exp $
+$NetBSD: distinfo,v 1.51 2026/09/22 14:46:12 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -333,9 +333,9 @@ Size (getrandom-0.3.4.crate) = 50932 bytes
 BLAKE2s (gimli-0.31.1.crate) = 285041fbf11878daf6c1a0a64998883c64ab3426df1fd74bb897ea9c6c548419
 SHA512 (gimli-0.31.1.crate) = b9c8c11547dc7420fe936b9f32a4f5ccf3bb68d1d9f39dedffd40d631360f6e032e719d858668826f1099b8a262e8096aa7ae1f6d7d3d7aaf47934d832715949
 Size (gimli-0.31.1.crate) = 279515 bytes
-BLAKE2s (git-cliff-2.14.1.tar.gz) = e20cfe6f170d400287f32a388eadfa54e559c8ad61bf5ee62660849ac97d9838
-SHA512 (git-cliff-2.14.1.tar.gz) = 0abef5fab3781bcd2c71b218db268948fbe75711aa1a319eff16d11cf9e7ab2ce24a9781b1eef208faed92c3c717f43d39e697a37d1b0e5be9f02a383f965302
-Size (git-cliff-2.14.1.tar.gz) = 13387344 bytes
+BLAKE2s (git-cliff-2.14.2.tar.gz) = 5f4242a9abe275fcf6cc1bcac31be8ce37e03ff52d47c435533a00bc23ea5bcc
+SHA512 (git-cliff-2.14.2.tar.gz) = e7d9995794bb62703a95c28a12669a6912a97bf007961558df64b52d3110fd027b72ebd79352b3d1ceb12b800d9202b35f44e06b1e46038d2244cfd3d69490eb
+Size (git-cliff-2.14.2.tar.gz) = 13394084 bytes
 BLAKE2s (git-conventional-0.12.9.crate) = 1ad16fefcf479daba41a99f0f29e24345249b88138b3f13fca028914277a47b9
 SHA512 (git-conventional-0.12.9.crate) = 2ebc8633e22b13f4dd08e85c45ecdb796e7f2e60ed415a8efafe0ac2a95129daca379064e026b55e2e0540c37ec919a90bcd9425fcaf13588887566699be44eb
 Size (git-conventional-0.12.9.crate) = 16954 bytes
@@ -792,9 +792,9 @@ Size (rustls-pemfile-2.2.0.crate) = 25849 bytes
 BLAKE2s (rustls-pki-types-1.12.0.crate) = 0927c623dc5d80649a52eda66e5d55efa2eeafc9d7b73dd70611bffa99cd059d
 SHA512 (rustls-pki-types-1.12.0.crate) = 6822b3a94109e01a0fb420f58fcaa45b6a52519233da751c314fdd9394802c2175479c470ed5d8c71fcd45be46e3c4d8fc8addc43322101002f31fa034713066
 Size (rustls-pki-types-1.12.0.crate) = 64740 bytes
-BLAKE2s (rustls-webpki-0.103.5.crate) = 346719826c17404fa3c5d218d56c27da9afbe6e076a362122ed652c643bc425d
-SHA512 (rustls-webpki-0.103.5.crate) = 3f319284f76ef09bb2a7b85a3dedeb48e21bcfd192ddc4f99fc34538c6c0f0e69a1125328e60cda9ba6dafadd2ccabe94a6643c522af8fac9f7d74e347d77e89
-Size (rustls-webpki-0.103.5.crate) = 84999 bytes
+BLAKE2s (rustls-webpki-0.103.15.crate) = 7798c89cd466bfc2dcef2c2c7be614ae77cbb76e2772a9890bb5ecc1d1dd3185
+SHA512 (rustls-webpki-0.103.15.crate) = adeb7c379e9b691e044d497768959bab9c8f291c21f93e9f5373ab0639e9070258945e2bd0be4e8eb8fca98c3824e942033d6430d15134f8fe8ff3a1c4d98382
+Size (rustls-webpki-0.103.15.crate) = 87465 bytes
 BLAKE2s (rustversion-1.0.22.crate) = 94885d422b9c942ceab679e86d0a2b8e6f322f655091475a6a475f0b796f48b9
 SHA512 (rustversion-1.0.22.crate) = 7929352df3e5279ac88cebb26ca89bb13c755f46986d2d1f514d18a3239a63638bf64f8ff153920569d173185d988d692ee676335afba0bf72d47f71babe0e15
 Size (rustversion-1.0.22.crate) = 21096 bytes
