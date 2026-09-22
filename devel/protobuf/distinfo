@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.104 2026/09/01 09:04:13 adam Exp $
+$NetBSD: distinfo,v 1.105 2026/09/22 07:29:12 adam Exp $
 
-BLAKE2s (protobuf-36.1.tar.gz) = 0830f7f258b591d033754387fda30c27a63e903570f2640888a82df9324284c6
-SHA512 (protobuf-36.1.tar.gz) = 10dd7277bcc37f93ad9997696a597bcb4649f549cc527a740b50982a8e1acd4fa640bd07b968b532d6d75bdf12eeff5c7ba63c97c0b5935bda722ff93a499611
-Size (protobuf-36.1.tar.gz) = 7314419 bytes
+BLAKE2s (protobuf-36.2.tar.gz) = 8c91bd9cf441dfe8898beb76418bdbf48ef76f5df12ea5c61326f39dd64871b5
+SHA512 (protobuf-36.2.tar.gz) = ce1fbb9f9a6b1856e6dd8485847bb4ac9a59d51dcbd052e023ec9c3c6f843e6a0c27006992ae15dda92aa30652a698a27a69b63d1ffb3cfa7be0b4d5171a7c7c
+Size (protobuf-36.2.tar.gz) = 7339736 bytes
 SHA1 (patch-src_file__lists.cmake) = 0b693792cefcff5bed559c6abbe9092e4fb1efdc
 SHA1 (patch-src_google_protobuf_io_zero_copy_stream_impl.cc) = 379eeacfd54d4d3ad577844449d44e29d16ce254
