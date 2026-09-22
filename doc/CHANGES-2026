@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6187 2026/09/22 07:40:08 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6188 2026/09/22 07:42:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9378,3 +9378,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/pcsc-lite to 2.5.2 [adam 2026-09-22]
 	Updated multimedia/libde265 to 1.1.3 [adam 2026-09-22]
 	Updated audio/fluidsynth to 2.6.1 [ryoon 2026-09-22]
+	Updated converters/fribidi to 1.0.17 [ryoon 2026-09-22]
