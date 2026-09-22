@@ -1,4 +1,4 @@
-$NetBSD: patch-template_Makefile.in,v 1.1 2026/09/06 15:13:58 kikadf Exp $
+$NetBSD: patch-template_Makefile.in,v 1.2 2026/09/22 09:29:37 taca Exp $
 
 Try fixing make parallelism/submake problems.
 
@@ -8,9 +8,27 @@ Try fixing make parallelism/submake problems.
 
 https://bugs.ruby-lang.org/issues/22059
 
---- template/Makefile.in.orig	2026-05-07 20:25:14.644318083 +0000
+rjit_c.c has a DTrace hook (RUBY_DTRACE_CMETHOD_RETURN_HOOK) but its
+object was not in DTRACE_DEPENDENT_OBJS, so on a DTRACE_REBUILD=yes
+system such as NetBSD "dtrace -G" never processed it and linking
+miniruby failed with --enable-rjit:
+
+  ld: rjit_c.o: relocation R_X86_64_PLT32 against absolute symbol
+  `__dtraceenabled_ruby___cmethod__return' in section `.text' is disallowed
+
+Same fix as upstream made for yjit.o (https://bugs.ruby-lang.org/issues/18480).
+
+--- template/Makefile.in.orig	2026-06-30 10:54:35.000000000 +0000
 +++ template/Makefile.in
-@@ -523,7 +523,7 @@ probes.stamp: $(DTRACE_REBUILD_OBJS)
+@@ -203,6 +203,7 @@ DTRACE_DEPENDENT_OBJS = array.$(OBJEXT) 
+ 			string.$(OBJEXT) \
+ 			symbol.$(OBJEXT) \
+ 			vm.$(OBJEXT) \
++			rjit_c.$(OBJEXT) \
+ 			$(YJIT_OBJ)
+ 
+ THREAD_MODEL  = @THREAD_MODEL@
+@@ -513,7 +514,7 @@ _PREFIXED_SYMBOL = TOKEN_PASTE($(SYMBOL_
  
  probes.stamp: $(DTRACE_REBUILD_OBJS)
  	$(Q) if test -f $@ -o -f probes.$(OBJEXT); then \
@@ -19,7 +37,7 @@ https://bugs.ruby-lang.org/issues/22059
  	  $(ECHO0) "rebuilding objects which were modified by \"dtrace -G\""; \
  	  $(MAKE) $(DTRACE_REBUILD_OBJS); \
  	fi
-@@ -537,7 +537,7 @@ probes.$(OBJEXT): $(srcdir)/probes.d $(DTRACE_REBUILD:
+@@ -527,7 +528,7 @@ probes.$(OBJEXT): $(srcdir)/probes.d $(D
  
  # DTrace static library hacks described here:
  # https://marc.info/?l=opensolaris-dtrace-discuss&m=114761203110734&w=4
