@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6198 2026/09/22 08:48:29 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6199 2026/09/22 09:02:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9390,3 +9390,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/libreoffice to 26.8.0.3 [ryoon 2026-09-22]
 	Updated textproc/link-grammar to 5.13.0 [ryoon 2026-09-22]
 	Updated textproc/py-link-grammar to 5.13.0 [ryoon 2026-09-22]
+	Updated devel/p5-CLI-Osprey to 0.09 [wiz 2026-09-22]
