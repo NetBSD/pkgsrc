@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2026/09/06 11:09:46 markd Exp $
+# $NetBSD: Makefile,v 1.366 2026/09/22 14:54:12 pin Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -136,6 +136,7 @@ SUBDIR+=	minidlna
 SUBDIR+=	mjpegtools
 SUBDIR+=	mkvtoolnix
 SUBDIR+=	mlt
+SUBDIR+=	moviebox-tui
 SUBDIR+=	movit
 SUBDIR+=	mp4tools
 SUBDIR+=	mp4v2
