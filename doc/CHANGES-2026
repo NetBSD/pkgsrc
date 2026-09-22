@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6182 2026/09/22 07:04:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6183 2026/09/22 07:13:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9366,3 +9366,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.146 [adam 2026-09-22]
 	Updated textproc/ugrep to 7.8.5 [adam 2026-09-22]
 	Updated devel/wabt to 1.0.42 [adam 2026-09-22]
+	Updated mail/exim to 4.100.1 [adam 2026-09-22]
+	Updated mail/exim-html to 4.100.1 [adam 2026-09-22]
