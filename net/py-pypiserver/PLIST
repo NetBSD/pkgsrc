@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/09/02 12:54:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/22 12:57:44 adam Exp $
 bin/pypi-server-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,8 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/pypiserver/__init__.py
 ${PYSITELIB}/pypiserver/__init__.pyc
 ${PYSITELIB}/pypiserver/__init__.pyo
