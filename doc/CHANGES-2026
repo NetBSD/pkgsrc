@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6185 2026/09/22 07:33:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6186 2026/09/22 07:38:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9375,3 +9375,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-protobuf to 7.36.2 [adam 2026-09-22]
 	Updated devel/buf to 1.73.0 [adam 2026-09-22]
 	Updated devel/lazygit to 0.65.1 [adam 2026-09-22]
+	Updated security/pcsc-lite to 2.5.2 [adam 2026-09-22]
+	Updated multimedia/libde265 to 1.1.3 [adam 2026-09-22]
