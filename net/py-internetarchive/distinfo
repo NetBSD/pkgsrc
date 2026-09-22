@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/22 17:35:09 ryoon Exp $
+
+BLAKE2s (internetarchive-5.11.1.tar.gz) = 02c71bd88fb0b3d5653e9db256de864fa7b87c1471ebd9394e09361087f10963
+SHA512 (internetarchive-5.11.1.tar.gz) = 07439aa8d665fc444a16830a913029810c1fa820bd6748d2d1b7379212701655429bea3f995e0f3e11bb381be9d404b4e6cbd78b3183684c858a680ac68e4a4f
+Size (internetarchive-5.11.1.tar.gz) = 157640 bytes
