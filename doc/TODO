@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27947 2026/09/22 04:42:47 adam Exp $
+$NetBSD: TODO,v 1.27948 2026/09/22 07:13:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -628,7 +628,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
-	o exim-4.100.1
 	o exult-1.10.1
 	o faces-1.7.7
 	o facter-2.4.5
