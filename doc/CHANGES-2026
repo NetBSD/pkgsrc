@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6223 2026/09/22 14:29:14 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6224 2026/09/22 14:39:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9436,3 +9436,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/typescript version 6.0.3 [kikadf 2026-09-22]
 	Updated www/chromium to 153.0.8010.52 [kikadf 2026-09-22]
 	Updated net/megacmd to 2.6.0 [kikadf 2026-09-22]
+	Updated www/palemoon-gtk3 to 35.0.1 [nia 2026-09-22]
+	Updated www/palemoon to 35.0.1 [nia 2026-09-22]
