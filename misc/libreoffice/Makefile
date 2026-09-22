@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.392 2026/09/02 19:03:34 wiz Exp $
+# $NetBSD: Makefile,v 1.393 2026/09/22 08:33:59 ryoon Exp $
 
-VERREL=		26.2.5
-VERRC=		2
+VERREL=		26.8.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -88,18 +87,12 @@ EXTRACT_ONLY+=		libreoffice-${component}-${VER}.tar.xz
 
 MORE_DISTFILES= \
 	breakpad-b324760c7f53667af128a6b77b790323da04fcb9.tar.xz \
-	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
 	liberation-narrow-fonts-ttf-1.07.6.tar.gz \
 	liberation-fonts-ttf-2.1.5.tar.gz \
-	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
-	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
-	source-serif-pro-3.000R.tar.gz \
 	xmlsec1-1.3.12.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
-	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
 	3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip \
-	a8c2c5b8f09e7ede322d5c602ff6a4b6-mythes-1.2.4.tar.gz \
 	8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip \
 	97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip \
 	a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip \
@@ -112,27 +105,22 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.3.19-src.tar.gz \
+	mariadb-connector-c-3.4.9-src.tar.gz \
 	rhino-1.7.15.1.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
-	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-15.18.tar.bz2 \
-	graphite2-minimal-1.3.14.tgz \
-	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
-	EmojiOneColor-SVGinOT-1.3.tar.gz \
+	language-subtag-registry-2026-08-08.tar.bz2 \
+	postgresql-15.19.tar.bz2 \
+	graphite2-minimal-1.3.15.tgz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	culmus-0.140.tar.gz \
-	ttf-kacst_2.01+mry.tar.gz \
 	libre-hebrew-1.0.tar.gz \
-	noto-fonts-20171024.tar.gz \
 	Scheherazade-2.100.zip \
-	lxml-4.1.1.tgz \
+	lxml-6.1.1.tar.gz \
 	Amiri-1.001.zip \
 	ReemKufi-2.0.zip \
-	pdfium-7471.tar.bz2 \
-	dtoa-20180411.tgz \
-	skia-m142-f4ed99d2443962782cf5f8b4dd27179f131e7cbe.tar.xz \
+	pdfium-7681.tar.bz2 \
+	skia-m147-ad8ecedbfdef9f4ae4b1e73347b6dd56e6637d38.tar.xz \
 	Java-WebSocket-1.6.0.tar.gz \
 	NotoSans-v2.015.zip \
 	NotoSerif-v2.015.zip \
@@ -217,6 +205,8 @@ CONFIGURE_ARGS+=	--enable-pdfium --disable-poppler
 #CONFIGURE_ARGS+=	--disable-pdfium --disable-poppler --disable-pdfimport
 CONFIGURE_ARGS+=	--enable-gstreamer-1-0
 CONFIGURE_ARGS+=	--enable-python=system
+CONFIGURE_ARGS+=	--enable-quickjs # Enable QuickJS-NG
+CONFIGURE_ARGS+=	--with-system-quickjs
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
 CONFIGURE_ARGS+=	--enable-ext-nlpsolver
 CONFIGURE_ARGS+=	--with-system-gpgmepp
@@ -390,6 +380,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 # Do not pass -I${PREFIX}/include/python?.? to CPPFLAGS/CFLAGS/CXXFLAGS always.
 BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 .include "../../lang/python/tool.mk"
+.include "../../lang/quickjs-ng/buildlink3.mk"
 .include "../../math/coinmp/buildlink3.mk"
 .include "../../math/dragonbox/buildlink3.mk"
 .include "../../math/fast_float/buildlink3.mk"

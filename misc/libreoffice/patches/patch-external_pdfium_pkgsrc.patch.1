@@ -1,14 +1,11 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.13 2026/09/22 08:34:00 ryoon Exp $
 
-* Support NetBSD
-* Add pkgsrc font path
-
---- external/pdfium/pkgsrc.patch.1.orig 2024-08-22 13:07:50.547500585 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2026-08-26 15:40:06.404386898 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,316 @@
-+diff -urN pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp
-+--- pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2026-02-04 22:45:26.393180629 +0900
+@@ -0,0 +1,317 @@
++diff -ur pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_pageobjectholder_unittest.cpp	2026-08-27 00:31:54.201882485 +0900
 +@@ -40,7 +40,7 @@
 +   EXPECT_EQ(data[0], fMin);
 +   EXPECT_EQ(data[1], fMax);
@@ -18,9 +15,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 + 
 +   std::map<GraphicsData, int> graphics_map;
 + 
-+diff -urN pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
-+--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2026-02-04 22:43:56.268709656 +0900
++diff -ur pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2026-08-27 00:32:19.897427292 +0900
 +@@ -75,7 +75,7 @@
 + // Round half up is a nearest integer round with half-way numbers always rounded
 + // up. Example: -5.5 rounds to -5.
@@ -30,9 +27,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return 0;
 +   }
 +   if (f > std::numeric_limits<float>::max() - 0.5f) {
-+diff -urN pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp
-+--- pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp	2026-02-05 00:14:08.598217203 +0900
++diff -ur pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp
++--- pdfium.orig/core/fxcrt/css/cfx_cssdeclaration.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fxcrt/css/cfx_cssdeclaration.cpp	2026-08-27 00:32:34.657685927 +0900
 +@@ -37,7 +37,7 @@
 + 
 +   size_t nUsedLen = 0;
@@ -42,10 +39,10 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return std::nullopt;
 +   }
 +   view = view.Substr(nUsedLen);
-+diff -urN pdfium.orig/core/fxcrt/fx_extension.h pdfium/core/fxcrt/fx_extension.h
-+--- pdfium.orig/core/fxcrt/fx_extension.h	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fxcrt/fx_extension.h	2026-02-04 22:46:23.783555997 +0900
-+@@ -131,17 +131,17 @@
++diff -ur pdfium.orig/core/fxcrt/fx_extension.h pdfium/core/fxcrt/fx_extension.h
++--- pdfium.orig/core/fxcrt/fx_extension.h	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fxcrt/fx_extension.h	2026-08-27 00:33:27.385578809 +0900
++@@ -124,17 +124,17 @@
 + // All NaNs are treated as equal to each other and greater than infinity.
 + template <typename T>
 + bool FXSYS_SafeEQ(const T& lhs, const T& rhs) {
@@ -68,9 +65,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +   }
 +   return lhs < rhs;
 + }
-+diff -urN pdfium.orig/core/fxcrt/fx_system.cpp pdfium/core/fxcrt/fx_system.cpp
-+--- pdfium.orig/core/fxcrt/fx_system.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fxcrt/fx_system.cpp	2026-02-04 22:45:57.363749488 +0900
++diff -ur pdfium.orig/core/fxcrt/fx_system.cpp pdfium/core/fxcrt/fx_system.cpp
++--- pdfium.orig/core/fxcrt/fx_system.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fxcrt/fx_system.cpp	2026-08-27 00:33:53.977678271 +0900
 +@@ -99,7 +99,7 @@
 + }  // namespace
 + 
@@ -89,9 +86,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return 0;
 +   }
 +   if (d < static_cast<double>(std::numeric_limits<int>::min())) {
-+diff -urN pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
-+--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2026-02-04 22:43:56.268932135 +0900
++diff -ur pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
++--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2026-08-27 00:34:30.178089694 +0900
 +@@ -183,6 +183,7 @@
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
@@ -100,9 +97,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     }
 +     return pInfo;
 +   }
-+diff -urN pdfium.orig/fxjs/cfx_v8_unittest.cpp pdfium/fxjs/cfx_v8_unittest.cpp
-+--- pdfium.orig/fxjs/cfx_v8_unittest.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/cfx_v8_unittest.cpp	2026-02-04 22:47:11.102988204 +0900
++diff -ur pdfium.orig/fxjs/cfx_v8_unittest.cpp pdfium/fxjs/cfx_v8_unittest.cpp
++--- pdfium.orig/fxjs/cfx_v8_unittest.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/cfx_v8_unittest.cpp	2026-08-27 00:35:09.633261880 +0900
 +@@ -88,7 +88,7 @@
 +   auto undef = cfx_v8()->NewUndefined();
 +   EXPECT_FALSE(cfx_v8()->ToBoolean(undef));
@@ -112,9 +109,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +   EXPECT_EQ("undefined", cfx_v8()->ToByteString(undef));
 +   EXPECT_EQ(L"undefined", cfx_v8()->ToWideString(undef));
 +   EXPECT_TRUE(cfx_v8()->ToObject(undef).IsEmpty());
-+diff -urN pdfium.orig/fxjs/cjs_publicmethods.cpp pdfium/fxjs/cjs_publicmethods.cpp
-+--- pdfium.orig/fxjs/cjs_publicmethods.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/cjs_publicmethods.cpp	2026-02-04 22:48:02.672697845 +0900
++diff -ur pdfium.orig/fxjs/cjs_publicmethods.cpp pdfium/fxjs/cjs_publicmethods.cpp
++--- pdfium.orig/fxjs/cjs_publicmethods.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/cjs_publicmethods.cpp	2026-08-27 00:35:48.553567756 +0900
 +@@ -459,7 +459,7 @@
 + 
 +   if (status == fxjs::ConversionStatus::kBadDate) {
@@ -124,7 +121,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +       return dRet;
 +     }
 +   }
-+@@ -951,7 +951,7 @@
++@@ -949,7 +949,7 @@
 +                                  nullptr);
 +   }
 + 
@@ -133,7 +130,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     WideString swMsg = WideString::Format(
 +         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
 +     AlertIfPossible(pEvent, WideString::FromASCII("AFDate_FormatEx"), swMsg);
-+@@ -994,7 +994,7 @@
++@@ -992,7 +992,7 @@
 +   int nYear = StringToFloat(wsArray[7].AsStringView());
 +   double dRet = FX_MakeDate(FX_MakeDay(nYear, nMonth - 1, nDay),
 +                             FX_MakeTime(nHour, nMin, nSec, 0));
@@ -142,7 +139,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     dRet = JS_DateParse(isolate, strValue);
 +   }
 + 
-+@@ -1028,7 +1028,7 @@
++@@ -1026,7 +1026,7 @@
 +   WideString sFormat = pRuntime->ToWideString(params[0]);
 +   double dRet = ParseDateUsingFormat(pRuntime->GetIsolate(), strValue, sFormat,
 +                                      &bWrongFormat);
@@ -151,7 +148,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     WideString swMsg = WideString::Format(
 +         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
 +     AlertIfPossible(pEvent, WideString::FromASCII("AFDate_KeystrokeEx"), swMsg);
-+@@ -1306,7 +1306,7 @@
++@@ -1304,7 +1304,7 @@
 +   WideString sFormat = pRuntime->ToWideString(params[1]);
 +   double dDate =
 +       ParseDateUsingFormat(pRuntime->GetIsolate(), sValue, sFormat, nullptr);
@@ -160,7 +157,7 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     WideString swMsg = WideString::Format(
 +         JSGetStringFromID(JSMessage::kParseDateError).c_str(), sFormat.c_str());
 +     AlertIfPossible(pRuntime->GetCurrentEventContext(),
-+@@ -1326,7 +1326,7 @@
++@@ -1324,7 +1324,7 @@
 +   WideString sFunction = pRuntime->ToWideString(params[0]);
 +   double arg1 = pRuntime->ToDouble(params[1]);
 +   double arg2 = pRuntime->ToDouble(params[2]);
@@ -169,9 +166,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return CJS_Result::Failure(JSMessage::kValueError);
 +   }
 + 
-+diff -urN pdfium.orig/fxjs/cjs_runtime.cpp pdfium/fxjs/cjs_runtime.cpp
-+--- pdfium.orig/fxjs/cjs_runtime.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/cjs_runtime.cpp	2026-02-04 22:47:31.356002620 +0900
++diff -ur pdfium.orig/fxjs/cjs_runtime.cpp pdfium/fxjs/cjs_runtime.cpp
++--- pdfium.orig/fxjs/cjs_runtime.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/cjs_runtime.cpp	2026-08-27 00:36:24.184467609 +0900
 +@@ -236,7 +236,7 @@
 +   }
 + 
@@ -181,9 +178,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return value;
 +   }
 + 
-+diff -urN pdfium.orig/fxjs/cjs_util.cpp pdfium/fxjs/cjs_util.cpp
-+--- pdfium.orig/fxjs/cjs_util.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/cjs_util.cpp	2026-02-04 22:48:26.021762568 +0900
++diff -ur pdfium.orig/fxjs/cjs_util.cpp pdfium/fxjs/cjs_util.cpp
++--- pdfium.orig/fxjs/cjs_util.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/cjs_util.cpp	2026-08-27 00:36:42.912698133 +0900
 +@@ -177,7 +177,7 @@
 +   }
 + 
@@ -202,9 +199,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return CJS_Result::Success(pRuntime->NewUndefined());
 +   }
 + 
-+diff -urN pdfium.orig/fxjs/fx_date_helpers.cpp pdfium/fxjs/fx_date_helpers.cpp
-+--- pdfium.orig/fxjs/fx_date_helpers.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/fx_date_helpers.cpp	2026-02-05 00:14:49.671310081 +0900
++diff -ur pdfium.orig/fxjs/fx_date_helpers.cpp pdfium/fxjs/fx_date_helpers.cpp
++--- pdfium.orig/fxjs/fx_date_helpers.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/fx_date_helpers.cpp	2026-08-27 00:37:10.960665694 +0900
 +@@ -278,7 +278,7 @@
 + }
 + 
@@ -223,9 +220,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     return ConversionStatus::kBadDate;
 +   }
 + 
-+diff -urN pdfium.orig/fxjs/js_define.cpp pdfium/fxjs/js_define.cpp
-+--- pdfium.orig/fxjs/js_define.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/js_define.cpp	2026-02-05 00:14:33.113862531 +0900
++diff -ur pdfium.orig/fxjs/js_define.cpp pdfium/fxjs/js_define.cpp
++--- pdfium.orig/fxjs/js_define.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/js_define.cpp	2026-08-27 00:37:26.992158273 +0900
 +@@ -59,7 +59,7 @@
 +   }
 + 
@@ -235,9 +232,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 + }
 + 
 + v8::LocalVector<v8::Value> ExpandKeywordParams(
-+diff -urN pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp
-+--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp	2026-02-04 23:50:32.594362288 +0900
++diff -ur pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp
++--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/xfa/cfxjse_formcalc_context.cpp	2026-08-27 00:37:43.515703666 +0900
 +@@ -4267,7 +4267,7 @@
 +     bsLocale = ValueToUTF8String(info.GetIsolate(), localeValue);
 +   }
@@ -247,9 +244,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +     info.GetReturnValue().Set(fxv8::NewStringHelper(info.GetIsolate(), "*"));
 +     return;
 +   }
-+diff -urN pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp
-+--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2026-02-04 23:50:20.248919381 +0900
++diff -ur pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp
++--- pdfium.orig/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp	2026-08-27 00:37:58.985324503 +0900
 +@@ -90,7 +90,7 @@
 +     CFXJSE_ScopeUtil_IsolateHandleContext scope(GetJseContext());
 +     v8::Local<v8::Value> value = GetValue();
@@ -259,9 +256,10 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +   }
 + 
 +   void ExecuteExpectString(ByteStringView input, const char* expected) {
-+diff -urN pdfium.orig/third_party/fast_float/src/tests/basictest.cpp pdfium/third_party/fast_float/src/tests/basictest.cpp
-+--- pdfium.orig/third_party/fast_float/src/tests/basictest.cpp	2025-05-19 22:05:25.000000000 +0900
-++++ pdfium/third_party/fast_float/src/tests/basictest.cpp	2026-02-04 23:50:49.273976710 +0900
++Only in pdfium.orig/third_party/fast_float/src: .git
++diff -ur pdfium.orig/third_party/fast_float/src/tests/basictest.cpp pdfium/third_party/fast_float/src/tests/basictest.cpp
++--- pdfium.orig/third_party/fast_float/src/tests/basictest.cpp	2026-02-19 19:28:43.000000000 +0900
+++++ pdfium/third_party/fast_float/src/tests/basictest.cpp	2026-08-27 00:38:21.202440508 +0900
 +@@ -741,12 +741,12 @@
 +     return std::copysign(x, y);
 +   };
@@ -277,9 +275,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +   FASTFLOAT_CHECK_EQ(actual, expected);
 + 
 + #undef FASTFLOAT_CHECK_EQ
-+diff -urN pdfium.orig/third_party/lcms/src/cmsintrp.c pdfium/third_party/lcms/src/cmsintrp.c
-+--- pdfium.orig/third_party/lcms/src/cmsintrp.c	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/third_party/lcms/src/cmsintrp.c	2026-02-04 23:51:00.760757400 +0900
++diff -ur pdfium.orig/third_party/lcms/src/cmsintrp.c pdfium/third_party/lcms/src/cmsintrp.c
++--- pdfium.orig/third_party/lcms/src/cmsintrp.c	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/third_party/lcms/src/cmsintrp.c	2026-08-27 00:38:56.096681503 +0900
 +@@ -223,7 +223,7 @@
 + // To prevent out of bounds indexing
 + cmsINLINE cmsFloat32Number fclamp(cmsFloat32Number v) 
@@ -289,9 +287,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 + }
 + 
 + // Floating-point version of 1D interpolation
-+diff -urN pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp
-+--- pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp	2026-02-04 22:46:43.938987678 +0900
++diff -ur pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp
++--- pdfium.orig/xfa/fgas/graphics/cfgas_gegraphics.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/xfa/fgas/graphics/cfgas_gegraphics.cpp	2026-08-27 00:39:19.840761966 +0900
 +@@ -313,7 +313,7 @@
 +             float x = static_cast<float>(column);
 +             scale = (((x - start_x) * x_span) + ((y - start_y) * y_span)) /
@@ -310,9 +308,9 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.12 2026/02/09 16:59:59 ryoon E
 +             if (!info_.fillColor.GetShading()->IsExtendedBegin()) {
 +               continue;
 +             }
-+diff -urN pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp pdfium/xfa/fxfa/parser/cxfa_measurement.cpp
-+--- pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp	2025-10-13 14:04:21.000000000 +0900
-++++ pdfium/xfa/fxfa/parser/cxfa_measurement.cpp	2026-02-05 00:14:20.825879359 +0900
++diff -ur pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp pdfium/xfa/fxfa/parser/cxfa_measurement.cpp
++--- pdfium.orig/xfa/fxfa/parser/cxfa_measurement.cpp	2026-02-09 13:40:20.000000000 +0900
+++++ pdfium/xfa/fxfa/parser/cxfa_measurement.cpp	2026-08-27 00:39:29.660713312 +0900
 +@@ -46,7 +46,7 @@
 + 
 +   size_t nUsedLen = 0;
