@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.116 2026/07/20 14:42:11 wiz Exp $
+# $NetBSD: compiler.mk,v 1.117 2026/09/22 13:47:06 gdt Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -121,7 +121,7 @@
 #	uses GNU language extensions without setting -std=gnu++XX.
 #
 #	Valid values are: c++03, c++11, c++14, c++17, c++20, c++23,
-#	gnu++03, gnu++11, gnu++17, gnu++20, gnu++23
+#	gnu++03, gnu++11, gnu++14, gnu++17, gnu++20, gnu++23
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
