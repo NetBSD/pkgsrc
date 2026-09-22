@@ -1,0 +1,24 @@
+$NetBSD: patch-platform_media_libvpx_moz.build,v 1.3 2026/09/22 14:38:43 nia Exp $
+
+libvpx: Enable -mmmx conditionally for MMX source file.
+
+This change is necessary to build for 32-bit x86 targets
+that lack SSE. Without this change, GCC will refuse to compile
+emms_mmx.c, saying that there is a "target-specific options
+mismatch".
+
+A similar line seems to be present in Firefox 128.
+
+https://repo.palemoon.org/MoonchildProductions/UXP/pulls/3191
+
+--- platform/media/libvpx/moz.build.orig	2026-09-12 13:38:01.000000000 +0000
++++ platform/media/libvpx/moz.build
+@@ -132,6 +132,8 @@ if CONFIG['CLANG_CL'] or not CONFIG['_MSC_VER']:
+ if CONFIG['CLANG_CL'] or not CONFIG['_MSC_VER']:
+     for f in SOURCES:
+         if f.endswith('.c'):
++            if 'emms_mmx.c' in f:
++                SOURCES[f].flags += ['-mmmx']
+             if 'sse2.c' in f:
+                 SOURCES[f].flags += CONFIG['SSE2_FLAGS']
+             if 'ssse3.c' in f:
