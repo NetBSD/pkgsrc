@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2026/09/07 07:14:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2026/09/22 14:48:09 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -274,7 +274,6 @@ CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.0
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
 CARGO_CRATE_DEPENDS+=	tui-input-0.15.3
-CARGO_CRATE_DEPENDS+=	tui-tree-widget-0.24.0
 CARGO_CRATE_DEPENDS+=	typenum-1.19.0
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
 CARGO_CRATE_DEPENDS+=	umbra-0.4.0
