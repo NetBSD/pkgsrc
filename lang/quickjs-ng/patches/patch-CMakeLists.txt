@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/09/22 08:20:33 ryoon Exp $
+
+* Install manpages under standard CMAKE_INSTALL_MANDIR.
+
+--- CMakeLists.txt.orig	2026-08-26 16:08:20.939531434 +0000
++++ CMakeLists.txt
+@@ -562,8 +562,8 @@ if (QJS_ENABLE_INSTALL)
+     if(NOT IOS AND NOT TVOS AND NOT WATCHOS)
+         install(TARGETS qjs_exe RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+         install(TARGETS qjsc RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+-        install(FILES qjs.man DESTINATION ${CMAKE_INSTALL_DATADIR}/man/man1 RENAME qjs.1)
+-        install(FILES qjsc.man DESTINATION ${CMAKE_INSTALL_DATADIR}/man/man1 RENAME qjsc.1)
++        install(FILES qjs.man DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 RENAME qjs.1)
++        install(FILES qjsc.man DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 RENAME qjsc.1)
+     endif()
+     install(TARGETS qjs EXPORT qjsConfig
+             RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
