@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2026/09/22 12:08:50 wiz Exp $
+
+Let pkgsrc create the directory.
+
+--- Makefile.in.orig	2026-09-22 12:05:07.949791870 +0000
++++ Makefile.in
+@@ -20,7 +20,6 @@ install:
+ 		make $@ );\
+ 	done
+ 	@echo "-> Creating dirs & installing misc documentation."
+-	$(INSTALL) -d -o $(DUMPER) -g $(DUMPGRP) -m 700 $(SNARDIR)
+ 	$(INSTALL) -d -m 755 $(DOCDIR)
+ 	$(INSTALL) -m 644 README $(DOCDIR)
+ 	$(INSTALL) -m 644 TODO $(DOCDIR)

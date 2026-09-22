@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/09/22 12:08:50 wiz Exp $
 
 BLAKE2s (cdbkup-1.0.tar.gz) = 7b35d905616c30ff34c0701363f7247ea8ae348c87561b83a90e17f97b4de91c
 SHA512 (cdbkup-1.0.tar.gz) = f95a7540704c16a01e65397fb63b5b97011685c62d3c9a9b2e303470fed5a31f909cb700035466e89ccd181401fd3c19d427fa32c40ece1ba77c1dba9322969d
 Size (cdbkup-1.0.tar.gz) = 38252 bytes
-SHA1 (patch-aa) = 96084141e52169a1759891d12f77ec6111c4ee78
+SHA1 (patch-Makefile.in) = 72da76dd567e5319f89616df0eb01f89108b2dfd
+SHA1 (patch-aa) = de71a81b7f0bb8ea5a7c5f243665c5907bd0ad2d
