@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6172 2026/09/22 03:42:24 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6173 2026/09/22 03:42:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9351,3 +9351,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nagstamon to 3.18.2 [bouyer 2026-09-21]
 	Updated textproc/utf8-cpp to 4.2.1 [ryoon 2026-09-22]
 	Updated multimedia/ffmpeg9 to 9.0.2 [ryoon 2026-09-22]
+	Updated multimedia/ffplay9 to 9.0.2 [ryoon 2026-09-22]
