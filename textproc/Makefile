@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1602 2026/09/12 14:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1603 2026/09/22 17:32:54 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1133,6 +1133,7 @@ SUBDIR+=	py-json5
 SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-jsonlines
 SUBDIR+=	py-jsonpickle
+SUBDIR+=	py-jsonpointer
 SUBDIR+=	py-jsonref
 SUBDIR+=	py-jsonrpc-server
 SUBDIR+=	py-jsonrpclib
