@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/10/27 20:49:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/22 07:51:07 ryoon Exp $
 
-DISTNAME=	bzip3-1.5.3
+DISTNAME=	bzip3-1.5.4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=iczelia/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
