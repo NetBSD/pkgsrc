@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6241 2026/09/22 20:21:15 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6242 2026/09/22 20:26:01 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9457,3 +9457,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-click-repl to 0.4.0 [adam 2026-09-22]
 	Updated emulators/PC6001VX to 4.5.0 [tsutsui 2026-09-22]
 	Updated x11/nativefiledialog-extended to 1.4.0 [ktnb 2026-09-22]
+	Updated audio/kew to 4.3.6 [ktnb 2026-09-22]
