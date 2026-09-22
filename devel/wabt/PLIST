@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/01 05:22:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/22 07:03:51 adam Exp $
 bin/spectest-interp
-bin/wasm-decompile
 bin/wasm-interp
 bin/wasm-objdump
 bin/wasm-stats
@@ -28,10 +27,6 @@ include/wabt/cast.h
 include/wabt/color.h
 include/wabt/common.h
 include/wabt/config.h
-include/wabt/decompiler-ast.h
-include/wabt/decompiler-ls.h
-include/wabt/decompiler-naming.h
-include/wabt/decompiler.h
 include/wabt/error-formatter.h
 include/wabt/error.h
 include/wabt/expr-visitor.h
@@ -84,7 +79,6 @@ lib/cmake/wabt/wabt-targets.cmake
 lib/libwabt.a
 lib/libwasm-rt-impl.a
 man/man1/spectest-interp.1
-man/man1/wasm-decompile.1
 man/man1/wasm-interp.1
 man/man1/wasm-objdump.1
 man/man1/wasm-stats.1
