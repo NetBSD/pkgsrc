@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1939 2026/09/09 11:07:48 markd Exp $
+# $NetBSD: Makefile,v 1.1940 2026/09/22 10:06:58 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -757,7 +757,6 @@ SUBDIR+=	py-django-haystack
 SUBDIR+=	py-django-import-export
 SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-js-asset
-SUBDIR+=	py-django-kronos
 SUBDIR+=	py-django-localflavor
 SUBDIR+=	py-django-mailman3
 SUBDIR+=	py-django-modelcluster
