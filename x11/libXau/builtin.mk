@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2022/12/08 23:33:26 wiz Exp $
+# $NetBSD: builtin.mk,v 1.10 2026/09/22 07:46:37 ryoon Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -58,6 +58,7 @@ CHECK_BUILTIN.libXau?=	no
 .  if ${USE_BUILTIN.libXau:tl} == yes
 BUILDLINK_TARGETS+=	xau-fake-pc
 
+.PHONY: xau-fake-pc
 xau-fake-pc:
 	${RUN} \
 	for dir in lib lib${LIBABISUFFIX} share; do \
