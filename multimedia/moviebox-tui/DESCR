@@ -1,0 +1,20 @@
+Terminal interface to find, download, and stream movies, TV shows, and live TV
+using local media players.
+
+Features
+ - On Demand Streaming: Stream movies, series, and anime across multiple
+   providers and community Stremio addons.
+ - Live TV and IPTV: Import custom M3U playlist URLs to search channels, browse
+   categories, and stream live television.
+ - Native Video Playback: Plays directly in your favorite player with smooth
+   hardware acceleration.
+ - Automatic Subtitles: Automatically searches and loads subtitles in your
+   preferred language into your player.
+ - Fast Downloads: Save single episodes or entire seasons to your computer with
+   pause and resume support.
+ - Visual Posters: Displays cover art and movie posters directly inside your
+   terminal window.
+ - Library and History: Bookmark your favorite titles and pick up watching right
+   where you left off.
+ - Custom Themes: Built in color themes and settings to match your personal
+   terminal look and feel.
