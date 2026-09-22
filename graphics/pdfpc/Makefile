@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/09/22 03:52:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/22 03:53:37 ryoon Exp $
 
 DISTNAME=	pdfpc-4.7.0
 CATEGORIES=	graphics
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://pdfpc.github.io/
 COMMENT=	Presenter console with multi-monitor support for PDF files
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gst-plugins1-gtk-[0-9]*:../../multimedia/gst-plugins1-gtk
 
