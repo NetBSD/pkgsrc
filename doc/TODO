@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27952 2026/09/22 07:40:08 ryoon Exp $
+$NetBSD: TODO,v 1.27953 2026/09/22 07:55:44 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o boolean-7.1
 	o bos-2.5
 	o bottlerocket-0.05b3
-	o box2d-3.1.1 [wip; breaks libreoffice]
 	o brandybasic-1.19
 	o bugzilla3-3.6.13
 	o cacti-1.2.30
