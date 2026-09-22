@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2026/09/09 06:55:35 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2026/09/22 14:47:08 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -61,7 +61,7 @@ CARGO_CRATE_DEPENDS+=	derive_more-2.1.1
 CARGO_CRATE_DEPENDS+=	derive_more-impl-2.1.1
 CARGO_CRATE_DEPENDS+=	digest-0.10.7
 CARGO_CRATE_DEPENDS+=	directories-6.0.0
-CARGO_CRATE_DEPENDS+=	dirs-6.0.0
+CARGO_CRATE_DEPENDS+=	dirs-7.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	dispatch2-0.3.1
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
@@ -221,9 +221,9 @@ CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.28
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-0.38.44
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.42
+CARGO_CRATE_DEPENDS+=	rustls-0.23.45
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.0
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.13
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
@@ -269,7 +269,7 @@ CARGO_CRATE_DEPENDS+=	time-core-0.1.9
 CARGO_CRATE_DEPENDS+=	tokio-1.53.1
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.7.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.19
-CARGO_CRATE_DEPENDS+=	toml-1.1.4+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml-1.1.5+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-1.1.1+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
@@ -287,8 +287,8 @@ CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.3
 CARGO_CRATE_DEPENDS+=	unicode-truncate-2.0.1
 CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
-CARGO_CRATE_DEPENDS+=	ureq-3.4.0
-CARGO_CRATE_DEPENDS+=	ureq-proto-0.6.1
+CARGO_CRATE_DEPENDS+=	ureq-3.4.1
+CARGO_CRATE_DEPENDS+=	ureq-proto-0.6.4
 CARGO_CRATE_DEPENDS+=	utf8-zero-0.8.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.2
 CARGO_CRATE_DEPENDS+=	uuid-1.23.5
