@@ -1,4 +1,6 @@
-$NetBSD: patch-Source_WTF_wtf_StackBounds.cpp,v 1.1 2026/08/30 14:25:05 wiz Exp $
+$NetBSD: patch-Source_WTF_wtf_StackBounds.cpp,v 1.2 2026/09/22 12:27:03 wiz Exp $
+
+Work around stack size value bug in NetBSD<11.99.8.
 
 --- Source/WTF/wtf/StackBounds.cpp.orig	2026-02-23 14:40:54.556305400 +0000
 +++ Source/WTF/wtf/StackBounds.cpp
@@ -22,7 +24,7 @@ $NetBSD: patch-Source_WTF_wtf_StackBounds.cpp,v 1.1 2026/08/30 14:25:05 wiz Exp 
  {
      auto ret = newThreadStackBounds(pthread_self());
 +#if OS(NETBSD)
-+#if __NetBSD_Version__ < 1199000700
++#if __NetBSD_Version__ < 1199000800
 +    // Due to a bug in posix_spawn(3), AT_STACKBASE is wrong for the main thread.
 +    // Use __ps_strings to find the top of the stack, and use that if the current
 +    // stack falls in the computed range on affected NetBSD versions.

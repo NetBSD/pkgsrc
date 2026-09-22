@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_JavaScriptCore_runtime_MathCommon.cpp,v 1.1 2026/08/30 14:25:05 wiz Exp $
+$NetBSD: patch-Source_JavaScriptCore_runtime_MathCommon.cpp,v 1.2 2026/09/22 12:27:02 wiz Exp $
 
---- Source/JavaScriptCore/runtime/MathCommon.cpp.orig	2025-08-08 09:17:51.608548200 +0000
+--- Source/JavaScriptCore/runtime/MathCommon.cpp.orig	2026-07-24 08:02:50.857928800 +0000
 +++ Source/JavaScriptCore/runtime/MathCommon.cpp
-@@ -626,8 +626,8 @@ static inline double roundeven(double operand)
+@@ -602,8 +602,8 @@ JSC_DEFINE_NOEXCEPT_JIT_OPERATION(f64_nearest, double,
+     return roundeven(operand);
  }
- #endif
  
 -JSC_DEFINE_NOEXCEPT_JIT_OPERATION(f32_roundeven, float, (float operand)) { return roundevenf(operand); }
 -JSC_DEFINE_NOEXCEPT_JIT_OPERATION(f64_roundeven, double, (double operand)) { return roundeven(operand); }
