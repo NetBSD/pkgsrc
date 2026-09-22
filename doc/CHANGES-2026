@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6199 2026/09/22 09:02:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6200 2026/09/22 09:05:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9391,3 +9391,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/link-grammar to 5.13.0 [ryoon 2026-09-22]
 	Updated textproc/py-link-grammar to 5.13.0 [ryoon 2026-09-22]
 	Updated devel/p5-CLI-Osprey to 0.09 [wiz 2026-09-22]
+	Added x11/blueprint-compiler version 0.22.2 [ryoon 2026-09-22]
