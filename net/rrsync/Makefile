@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/08/15 06:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/22 23:03:51 kim Exp $
 
 .include "../../net/rsync/Makefile.common"
 
@@ -24,6 +24,9 @@ SUBST_FILES.paths=	support/rrsync
 SUBST_SED.paths=	-e "s|'/usr/bin/rsync'|'${PREFIX}/bin/rsync'|"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+# The files rsync patches are not extracted for rrsync
+do-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/support/rrsync \

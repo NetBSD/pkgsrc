@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2026/09/22 20:47:13 wiz Exp $
-
-BLAKE2s (rsync-3.5.1.tar.gz) = 4ae90d2b0fa382d6a7966aa8ce56dda09c636df58a477f93771827770ac87833
-SHA512 (rsync-3.5.1.tar.gz) = 76f3c60eb12bbde9dd0edfb35c2584526298efea8eace446cbfc11791a593e3716daae313ae6ea30598c03f6c30f38492a4248482351b807ba653a23c808a4aa
-Size (rsync-3.5.1.tar.gz) = 1932807 bytes
