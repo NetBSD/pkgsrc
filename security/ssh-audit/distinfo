@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/01/07 16:36:43 he Exp $
+$NetBSD: distinfo,v 1.7 2026/09/22 10:53:09 adam Exp $
 
-BLAKE2s (ssh-audit-3.3.0.tar.gz) = 3b929cbb1d569c72fed9c347d1c5e8a802cf8768f77261b88dfd0867f9c04c52
-SHA512 (ssh-audit-3.3.0.tar.gz) = 5be8c2e65ca76f34b425392ee54dc62be7a7bfe00fd567123000278a3c4fcd5fe7f4cab8f1edab5ffb08cb9827303ec1e6605b4d0b0a8b35c210f69a57fc595d
-Size (ssh-audit-3.3.0.tar.gz) = 172808 bytes
+BLAKE2s (ssh-audit-3.9.0/v3.9.0.tar.gz) = 5f3866b048a9cbba83f1077c5dc9a09ab7f813f70c63486ff93fceafe218a686
+SHA512 (ssh-audit-3.9.0/v3.9.0.tar.gz) = 97e671bb00abd37eef879e60a6011a56deaae4c89965696597693e5af9eb9bf62c44aa14b077193a5f251e6f7deb97bfebd0a02891200d5f6aaed8e1b151d00d
+Size (ssh-audit-3.9.0/v3.9.0.tar.gz) = 182593 bytes

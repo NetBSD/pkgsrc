@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2025/01/07 16:36:43 he Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/22 10:53:09 adam Exp $
 bin/ssh-audit
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ssh_audit/__init__.py
 ${PYSITELIB}/ssh_audit/__init__.pyc
 ${PYSITELIB}/ssh_audit/__init__.pyo
@@ -41,6 +42,9 @@ ${PYSITELIB}/ssh_audit/gextest.pyo
 ${PYSITELIB}/ssh_audit/globals.py
 ${PYSITELIB}/ssh_audit/globals.pyc
 ${PYSITELIB}/ssh_audit/globals.pyo
+${PYSITELIB}/ssh_audit/hardening_guides.py
+${PYSITELIB}/ssh_audit/hardening_guides.pyc
+${PYSITELIB}/ssh_audit/hardening_guides.pyo
 ${PYSITELIB}/ssh_audit/hostkeytest.py
 ${PYSITELIB}/ssh_audit/hostkeytest.pyc
 ${PYSITELIB}/ssh_audit/hostkeytest.pyo
@@ -65,18 +69,6 @@ ${PYSITELIB}/ssh_audit/readbuf.pyo
 ${PYSITELIB}/ssh_audit/software.py
 ${PYSITELIB}/ssh_audit/software.pyc
 ${PYSITELIB}/ssh_audit/software.pyo
-${PYSITELIB}/ssh_audit/ssh1.py
-${PYSITELIB}/ssh_audit/ssh1.pyc
-${PYSITELIB}/ssh_audit/ssh1.pyo
-${PYSITELIB}/ssh_audit/ssh1_crc32.py
-${PYSITELIB}/ssh_audit/ssh1_crc32.pyc
-${PYSITELIB}/ssh_audit/ssh1_crc32.pyo
-${PYSITELIB}/ssh_audit/ssh1_kexdb.py
-${PYSITELIB}/ssh_audit/ssh1_kexdb.pyc
-${PYSITELIB}/ssh_audit/ssh1_kexdb.pyo
-${PYSITELIB}/ssh_audit/ssh1_publickeymessage.py
-${PYSITELIB}/ssh_audit/ssh1_publickeymessage.pyc
-${PYSITELIB}/ssh_audit/ssh1_publickeymessage.pyo
 ${PYSITELIB}/ssh_audit/ssh2_kex.py
 ${PYSITELIB}/ssh_audit/ssh2_kex.pyc
 ${PYSITELIB}/ssh_audit/ssh2_kex.pyo
