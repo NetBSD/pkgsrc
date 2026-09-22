@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6195 2026/09/22 08:20:58 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6196 2026/09/22 08:34:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9387,3 +9387,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/net-snmp to 5.9.5.2 [adam 2026-09-22]
 	Updated net/py-netsnmp to 5.9.5.2 [adam 2026-09-22]
 	Added lang/quickjs-ng version 0.16.2 [ryoon 2026-09-22]
+	Updated misc/libreoffice to 26.8.0.3 [ryoon 2026-09-22]
