@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2026/09/02 19:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2026/09/22 18:39:33 tsutsui Exp $
 
-VERSION=		4.4.0
+VERSION=		4.5.0
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
-PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		https://eighttails.up.seesaa.net/bin/
 
@@ -34,6 +33,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/cmake/build.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

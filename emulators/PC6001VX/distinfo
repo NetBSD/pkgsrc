@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.55 2026/08/14 17:05:32 tsutsui Exp $
+$NetBSD: distinfo,v 1.56 2026/09/22 18:39:33 tsutsui Exp $
 
-BLAKE2s (PC6001VX_4.4.0_src.tar.gz) = 389e5d80b43ffc5b9d0a6a5b0abdab80074ed889405bd54d5a51feff098b153c
-SHA512 (PC6001VX_4.4.0_src.tar.gz) = afdb1091f1bc4e0cec54058c2a066be26c2f90d0f531788691aea0d069ef81ad93c57f064bf1b356bdbb2e7d6ce278db89ca7a958efe50b1288c353f2b98d0d2
-Size (PC6001VX_4.4.0_src.tar.gz) = 6030700 bytes
-SHA1 (patch-CMakeLists.txt) = e1489b404d3f83eba4a26db0d85b8a998f72ed25
+BLAKE2s (PC6001VX_4.5.0_src.tar.gz) = bbeb28b2eeef8df4c50ee5823ffd3942c727f3f53314392c0a75fbdbc67b6cc1
+SHA512 (PC6001VX_4.5.0_src.tar.gz) = a44002db87be0a00c9223ce7362c8c9a51c309565414ccb5b9cb93ee02c75b332018c8105cba62949365ff89a19197aaf1fccda460b737804dc6519bb02793f1
+Size (PC6001VX_4.5.0_src.tar.gz) = 6083037 bytes
+SHA1 (patch-CMakeLists.txt) = 603ae22f77bf40449dbeee135ea15435b490b006
