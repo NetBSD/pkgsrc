@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/05/18 13:20:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/22 09:58:55 adam Exp $
 
-DISTNAME=	watchfiles-1.2.0
+DISTNAME=	watchfiles-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchfiles/}
@@ -13,6 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
+
+RUST_REQ=	1.83
 
 PY_RENAME_BINARIES=	watchfiles
 

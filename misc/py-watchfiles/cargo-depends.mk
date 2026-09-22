@@ -1,8 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2026/05/18 13:20:05 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2026/09/22 09:58:55 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.7.0
-CARGO_CRATE_DEPENDS+=	cc-1.0.96
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.19
@@ -22,12 +21,11 @@ CARGO_CRATE_DEPENDS+=	notify-types-2.0.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.81
-CARGO_CRATE_DEPENDS+=	pyo3-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.28.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.28.3
-CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.14
+CARGO_CRATE_DEPENDS+=	pyo3-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.45
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.3
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
