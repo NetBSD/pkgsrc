@@ -1,4 +1,4 @@
-$NetBSD: patch-vcl_unx_generic_app_geninst.cxx,v 1.4 2025/02/05 03:50:02 ryoon Exp $
+$NetBSD: patch-vcl_unx_generic_app_geninst.cxx,v 1.5 2026/09/22 08:34:00 ryoon Exp $
 
 Set "OS Environment" on NetBSD,same as FreeBSD.
 
@@ -8,7 +8,7 @@ Help -> About LibreOffice
 
 Tweaked by Yasushi Oshima, PR pkg/56048.
 
---- vcl/unx/generic/app/geninst.cxx.orig	2025-01-30 14:20:37.576103520 +0000
+--- vcl/unx/generic/app/geninst.cxx.orig	2026-08-21 12:51:44.000000000 +0000
 +++ vcl/unx/generic/app/geninst.cxx
 @@ -22,7 +22,7 @@
  #if defined(LINUX)
@@ -18,4 +18,4 @@ Tweaked by Yasushi Oshima, PR pkg/56048.
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
  #  include <sys/utsname.h>
  #endif
- #if defined(EMSCRIPTEN)
+ #if defined(__EMSCRIPTEN__)

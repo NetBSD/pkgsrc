@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2026/08/02 06:43:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.68 2026/09/22 08:33:59 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -134,7 +134,9 @@ ${PKGNAME}/lib/libreoffice/program/libintrospectionlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
-${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PKGNAME}/lib/libreoffice/program/libjsprovlo.so
+${PKGNAME}/lib/libreoffice/program/libjsunolo.so
+${PLIST.ldap}${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
 ${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
@@ -194,6 +196,7 @@ ${PKGNAME}/lib/libreoffice/program/libsdlo.so
 ${PKGNAME}/lib/libreoffice/program/libsduilo.so
 ${PKGNAME}/lib/libreoffice/program/libsfxlo.so
 ${PKGNAME}/lib/libreoffice/program/libsimplecanvaslo.so
+${PKGNAME}/lib/libreoffice/program/libsingleprovlo.so
 ${PKGNAME}/lib/libreoffice/program/libskialo.so
 ${PKGNAME}/lib/libreoffice/program/libslideshowlo.so
 ${PKGNAME}/lib/libreoffice/program/libsmdlo.so
@@ -4235,6 +4238,8 @@ ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforpython.rdb
 ${PKGNAME}/lib/libreoffice/program/services/services.rdb
 ${PKGNAME}/lib/libreoffice/program/setuprc
 ${PKGNAME}/lib/libreoffice/program/shell/about.svg
+${PKGNAME}/lib/libreoffice/program/shell/donate1.png
+${PKGNAME}/lib/libreoffice/program/shell/donate2.png
 ${PKGNAME}/lib/libreoffice/program/shell/logo-sc.svg
 ${PKGNAME}/lib/libreoffice/program/shell/logo-sc_inverted.svg
 ${PKGNAME}/lib/libreoffice/program/shell/logo.svg
@@ -4930,6 +4935,7 @@ ${PKGNAME}/lib/libreoffice/share/basic/SFWidgets/__License.xba
 ${PKGNAME}/lib/libreoffice/share/basic/SFWidgets/dialog.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/SFWidgets/script.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptBindingLibrary/Highlight.xdl
+${PKGNAME}/lib/libreoffice/share/basic/ScriptBindingLibrary/MacroEditor.xdl
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptBindingLibrary/dialog.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptBindingLibrary/script.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/SF_Array.xba
@@ -4992,6 +4998,7 @@ ${PKGNAME}/lib/libreoffice/share/basic/Tutorials/script.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/dialog.xlc
 ${PKGNAME}/lib/libreoffice/share/basic/script.xlc
 ${PKGNAME}/lib/libreoffice/share/calc/styles.xml
+${PKGNAME}/lib/libreoffice/share/calc/tablestyles.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_ca-ES.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_es-ES.xml
@@ -5092,7 +5099,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hangulhanjaconversion
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hangulhanjaeditdictdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hangulhanjaoptdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hatchpage.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkdlg.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkdocpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkinternetpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkmailpage.ui
@@ -5138,7 +5145,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optasianpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optbasicidepage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optchartcolorspage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optctlpage.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optdeeplpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optemailpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optfltrembedpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/optfltrpage.ui
@@ -5467,6 +5473,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/colh
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/column_operations.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/conditional.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/conditional_easy.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/datatablemenu.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/draw.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/drawtext.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/form.xml
@@ -5561,6 +5568,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/datastreams
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/datetimetransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/definedatabaserangedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/definename.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/definetablerangedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/deletecells.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/deletecolumnentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/deletecontents.ui
@@ -5617,10 +5625,8 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groupedbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groupedbar_full.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groups.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_online.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/numberbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/numbertransformationentry.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/onlyactivesheetsaveddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcalculatepage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optchangespage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcompatibilitypage.ui
@@ -5636,6 +5642,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/paradialog.
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/paratemplatedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/passfragment.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/pastespecial.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/pivotcalcfielddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/pivotfielddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/pivotfilterdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/pivottablelayoutdialog.ui
@@ -5677,6 +5684,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/showdetaild
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/showsheetdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sidebaralignment.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sidebarcellappearance.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sidebardatabase.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sidebarnumberformat.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/simplerefdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/solverdlg.ui
@@ -5699,6 +5707,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/subtotalgrp
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/subtotaloptionspage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/swaprowsentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/tabcolordialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/tablestylesbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/textimportcsv.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/textimportoptions.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/texttransformationentry.ui
@@ -5870,7 +5879,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/navigatorco
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar_groupedbar_compact.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar_online.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar_single.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/paranumberingtab.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/queryunlinkimagedialog.ui
@@ -5956,6 +5964,8 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/o
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/outline.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/page.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepane.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanecanvas.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanecanvasmaster.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanemaster.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanenosel.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanenoselmaster.xml
@@ -6056,7 +6066,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebook
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_groupedbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_groupedbar_full.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_groups.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_online.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_single.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/noteschildwindow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notespanelcontextmenu.ui
@@ -6098,6 +6107,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontdialog.
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontsizedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fonttypedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/mathwindow.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/matrixeditor.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/printeroptions.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/savedefaultsdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/sidebarelements_math.ui
@@ -6388,7 +6398,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/captionop
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/cardmediumpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/ccdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/characterproperties.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/charurlpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/checkbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columndialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columnpage.ui
@@ -6495,7 +6504,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookb
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar_groupedbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar_groupedbar_full.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar_groups.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar_online.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar_single.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/numberingnamedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/numberinput.ui
@@ -6555,7 +6563,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selectblo
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selectindexdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selecttabledialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarquickfind.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarquickfindoptionsdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarstylepresets.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebartableedit.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebartheme.ui
@@ -6585,14 +6592,12 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/tocstyles
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/tokenwidget.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/toxbuttonwidget.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/toxentrywidget.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/translationdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/unfloatbutton.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/viewoptionspage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/warndatasourcedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/warnemaildialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/warnhiddensectiondialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/watermarkdialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/wordcount-mobile.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/wordcount.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/wrapdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/wrappage.ui
@@ -6698,6 +6703,9 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/optprintpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/panel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/password.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/printeroptionsdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/propertycategoryrow.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/propertychip.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/propertychiprow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/querysavedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/quickfind.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/safemodequerydialog.ui
@@ -6791,14 +6799,12 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/docrecoverybrokendial
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/docrecoveryprogressdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/docrecoveryrecoverdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/docrecoverysavedialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/dropdownfielddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/extrustiondepthdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/fileexporteddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/fillctrlbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/filtermenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/filternavigator.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/findbox.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/findreplacedialog-mobile.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/findreplacedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/floatingareastyle.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/floatingcontour.ui
@@ -6879,9 +6885,12 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/sidebarstylespanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/sidebartextcolumnspanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/sidebartexteffect.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/sidebartextpanel.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/stringinput.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/stylemenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/stylespreview.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/surfacewindow.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/tableautofmtdlg.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/tablestylesdlg.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/tablewindow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/textcharacterspacingcontrol.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/textcontrolchardialog.ui
@@ -6889,6 +6898,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/textcontrolparadialog
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/textunderlinecontrol.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/themecoloreditdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/themedialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/themeselectorpanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/toolbarpopover.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/xformspage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/xmlsecstatmenu.ui
@@ -6919,6 +6929,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/printerpaperpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/printerpropertiesdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/printprogressdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/querydialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/screenshotmenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/screenshotparent.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/wizard.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/writerperfect/ui/exportepub.ui
@@ -7370,16 +7381,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-fa/fa-IR.dic
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fa/icon.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fa/package-description.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/META-INF/manifest.xml
-${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/README_fr.txt
+${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/README_dict_fr.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/README_hyph_fr.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/README_thes_fr.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/description.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/dictionaries.xcu
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/fr.aff
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/fr.dic
+${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/french_flag.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/hyph-fr.tex
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/hyph_fr.dic
-${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/icon.png
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/package-description.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/thes_fr.dat
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-fr/thes_fr.idx
@@ -7882,7 +7893,6 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/COPYING.LGPL
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/COPYING.MPL
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/META-INF/manifest.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/README_EN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/README_RO.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/description.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/dictionaries.xcu
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ro/hyph_ro_RO.dic
@@ -8199,14 +8209,6 @@ ${PKGNAME}/lib/libreoffice/share/fonts/truetype/FrankRuehlCLM-Medium.otf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/FrankRuehlCLM-MediumOblique.otf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/FrankRuhlHofshi-Bold.otf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/FrankRuhlHofshi-Regular.otf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBasB.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBasBI.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBasI.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBasR.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBkBasB.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBkBasBI.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBkBasI.ttf
-${PKGNAME}/lib/libreoffice/share/fonts/truetype/GenBkBasR.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/LiberationMono-Bold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/LiberationMono-BoldItalic.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/LiberationMono-Italic.ttf
@@ -8894,6 +8896,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_zu.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/writer.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/xsltfilter.xcd
 ${PKGNAME}/lib/libreoffice/share/skia/skia_denylist_vulkan.xml
+${PKGNAME}/lib/libreoffice/share/svx/tablestyles.xml
 ${PKGNAME}/lib/libreoffice/share/template/common/draw/bpmn.otg
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/html.oth
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/idxexample.odt

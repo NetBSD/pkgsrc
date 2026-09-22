@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile.in,v 1.4 2019/06/27 13:50:49 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2026/09/22 08:33:59 ryoon Exp $
 
 * Enable build without root privilege
 
---- Makefile.in.orig	2017-01-26 22:22:46.000000000 +0000
+--- Makefile.in.orig	2026-08-21 12:51:44.000000000 +0000
 +++ Makefile.in
-@@ -250,7 +250,7 @@ endif
+@@ -299,7 +299,7 @@ endif
  #
  # Bootstrap
  #
--bootstrap: check-if-root compilerplugins
+-bootstrap: check-if-root check-makefile-version compilerplugins
 +bootstrap: compilerplugins
  
  #

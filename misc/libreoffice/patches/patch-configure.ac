@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.31 2026/09/22 08:34:00 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -6,10 +6,11 @@ $NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
 * Fix some static links.
 * Find devel/apache-ant.
 * Fix broken xinerama detection.
+* Accept system/external box2d 3.1.1.
 
---- configure.ac.orig	2026-01-27 21:11:38.000000000 +0000
+--- configure.ac.orig	2026-08-21 12:51:44.000000000 +0000
 +++ configure.ac
-@@ -5733,6 +5733,11 @@ linux-android*)
+@@ -5796,6 +5796,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,7 +22,7 @@ $NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -10349,9 +10354,9 @@ if test "x$ac_config_site_64bit_host" = xYES; then
+@@ -10455,9 +10460,9 @@ if test "x$ac_config_site_64bit_host" = xYES; then
  dnl ===================================================================
  FREETYPE_CFLAGS_internal="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
  if test "x$ac_config_site_64bit_host" = xYES; then
@@ -32,8 +33,19 @@ $NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
 +    FREETYPE_LIBS_internal="${WORKDIR}/UnpackedTarball/freetype/instdir/lib/libfreetype.a"
  fi
  libo_CHECK_SYSTEM_MODULE([freetype],[FREETYPE],[freetype2 >= 9.9.3],,system,TRUE)
- 
-@@ -13464,7 +13469,7 @@ elif test "$enable_fuzzers" = "yes"; then
+ if test "$_os" = WINNT -a "$ENABLE_HEADLESS" = TRUE; then
+@@ -12254,8 +12259,8 @@ if test "$with_system_box2d" = "yes"; then
+     BOX2D_VERSION=`$PKG_CONFIG --modversion box2d 2>/dev/null`
+     BOX2D_MAJOR=`echo $BOX2D_VERSION | cut -d"." -f1`
+     BOX2D_MINOR=`echo $BOX2D_VERSION | cut -d"." -f2`
+-    if test "$BOX2D_MAJOR" -eq "2"; then
+-        if test "$BOX2D_MINOR" -eq "4"; then
++    if test "$BOX2D_MAJOR" -eq "3"; then
++        if test "$BOX2D_MINOR" -eq "1"; then
+             _BOX2D_LIB=box2d
+             AC_DEFINE(BOX2D_HEADER,<box2d/box2d.h>)
+         else
+@@ -13663,7 +13668,7 @@ elif test "$enable_fuzzers" = "yes"; then
      AC_MSG_RESULT([no (MPL only)])
  elif test "$enable_fuzzers" = "yes"; then
      AC_MSG_RESULT([no (oss-fuzz)])
@@ -42,7 +54,7 @@ $NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
      AC_MSG_RESULT([yes])
      dnl ===================================================================
      dnl Check for system gpgme
-@@ -14623,8 +14628,8 @@ if test "$USING_X11" = TRUE; then
+@@ -14860,8 +14865,8 @@ if test "$USING_X11" = TRUE; then
          AC_CHECK_HEADER(X11/extensions/Xinerama.h, [],
              [AC_MSG_ERROR(Xinerama header not found.)], [])
          XEXTLIBS=`$PKG_CONFIG --variable=libs xext`
@@ -53,7 +65,7 @@ $NetBSD: patch-configure.ac,v 1.30 2026/02/09 16:59:59 ryoon Exp $
          fi
          XINERAMA_EXTRA_LIBS="$XEXTLIBS"
          if test "$_os" = "FreeBSD"; then
-@@ -15004,8 +15009,8 @@ EOF
+@@ -15241,8 +15246,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else
