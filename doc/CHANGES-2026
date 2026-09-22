@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6189 2026/09/22 07:45:46 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6190 2026/09/22 07:51:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9380,3 +9380,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fluidsynth to 2.6.1 [ryoon 2026-09-22]
 	Updated converters/fribidi to 1.0.17 [ryoon 2026-09-22]
 	Updated net/glib-networking to 2.90.0 [ryoon 2026-09-22]
+	Updated archivers/bzip3 to 1.5.4 [ryoon 2026-09-22]
