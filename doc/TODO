@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27962 2026/09/22 12:27:34 wiz Exp $
+$NetBSD: TODO,v 1.27963 2026/09/22 13:07:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-6.19.0
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
-	o py-platformdirs-4.11.11
 	o py-poetry-core-2.5.0
 	o py-postgresql-5.1.2
 	o py-propcache-0.5.4
