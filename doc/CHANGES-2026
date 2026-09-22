@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6239 2026/09/22 18:35:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6240 2026/09/22 18:40:02 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9455,3 +9455,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/py-internetarchive version 5.11.1 [ryoon 2026-09-22]
 	Updated graphics/cairo to 1.18.6 [adam 2026-09-22]
 	Updated devel/py-click-repl to 0.4.0 [adam 2026-09-22]
+	Updated emulators/PC6001VX to 4.5.0 [tsutsui 2026-09-22]
