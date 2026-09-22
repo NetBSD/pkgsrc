@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/27 11:47:39 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/09/22 18:35:14 adam Exp $
 
-BLAKE2s (click-repl-0.3.0.tar.gz) = 0a9ddddd33a9703ec4c1f5b4d680857499ac2d02a229998a721a47fce7685421
-SHA512 (click-repl-0.3.0.tar.gz) = ce6763c8b194c7e8c2100dc140c3af9696e3528e5d74befa98129cde2cff98df7e3c26de65ae42dff8c001b85264e4a7094f1de9421129cd986415e4f3a5a1fa
-Size (click-repl-0.3.0.tar.gz) = 10449 bytes
+BLAKE2s (click_repl-0.4.0.tar.gz) = 4c7d127b5c2ceb6816719770495fed937047c857730058c775e7ba4d6da26369
+SHA512 (click_repl-0.4.0.tar.gz) = 9ad464e2f3261d95fb0a5f0ab6d2b5367c880cfae6dafd40431f645d13cd19a968c8d70891ae6ead1824d76a1afd6275e5eda9953e847261fddc781e59173088
+Size (click_repl-0.4.0.tar.gz) = 15941 bytes
