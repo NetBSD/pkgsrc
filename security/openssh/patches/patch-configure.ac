@@ -1,8 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.11 2025/02/18 09:33:07 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.12 2026/09/22 08:03:59 he Exp $
+
+Remove no-longer-needed BROKEN_READ_COMPARISON, ref.
+   https://github.com/openssh/openssh-portable/commit/a765b86d
+
+Tweak for wtmpx location probing.
 
 --- configure.ac.orig	2024-07-01 04:36:28.000000000 +0000
 +++ configure.ac
-@@ -380,6 +380,9 @@ AC_ARG_WITH([rpath],
+@@ -388,6 +388,9 @@ AC_ARG_WITH([rpath],
  	]
  )
  
@@ -12,7 +17,16 @@ $NetBSD: patch-configure.ac,v 1.11 2025/02/18 09:33:07 wiz Exp $
  # Allow user to specify flags
  AC_ARG_WITH([cflags],
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -5568,9 +5571,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+@@ -1144,8 +1147,6 @@ mips-sony-bsd|mips-sony-newsos4)
+ 	AC_DEFINE([SSH_TUN_PREPEND_AF], [1],
+ 	    [Prepend the address family to IP tunnel traffic])
+ 	TEST_MALLOC_OPTIONS="AJRX"
+-	AC_DEFINE([BROKEN_READ_COMPARISON], [1],
+-	    [NetBSD read function is sometimes redirected, breaking atomicio comparisons against it])
+ 	;;
+ *-*-freebsd*)
+ 	AC_DEFINE([LOCKED_PASSWD_PREFIX], ["*LOCKED*"], [Account locked with pw(1)])
+@@ -5742,9 +5743,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
  ])
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -32,7 +46,7 @@ $NetBSD: patch-configure.ac,v 1.11 2025/02/18 09:33:07 wiz Exp $
  	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -5677,7 +5688,7 @@ echo "OpenSSH has been configured with t
+@@ -5853,7 +5862,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
