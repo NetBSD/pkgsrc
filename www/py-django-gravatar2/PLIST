@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/04 01:45:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/22 10:05:15 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django_gravatar/__init__.py
 ${PYSITELIB}/django_gravatar/__init__.pyc
 ${PYSITELIB}/django_gravatar/__init__.pyo
@@ -23,7 +28,3 @@ ${PYSITELIB}/django_gravatar/tests.pyo
 ${PYSITELIB}/django_gravatar/views.py
 ${PYSITELIB}/django_gravatar/views.pyc
 ${PYSITELIB}/django_gravatar/views.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/04 01:45:35 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/09/22 10:05:15 adam Exp $
 
-BLAKE2s (django-gravatar2-1.4.4.tar.gz) = dc668d06da3b5d3abbe830c483f2bed37694d22556d9f35d7bba071527b1e628
-SHA512 (django-gravatar2-1.4.4.tar.gz) = 999fe2a036b23f73ee8111cccde459aa72a5f90995d322e772776f85ba206281e791cdf7d4888b45c7f2ecf8baf6509ed44652396f5db158c484a2fb53439c99
-Size (django-gravatar2-1.4.4.tar.gz) = 8396 bytes
+BLAKE2s (django_gravatar2-1.4.5.tar.gz) = 3bfdb39a1be0ba18f6dbd91844a9178453cfefef9884a110f3a5184ef12c7337
+SHA512 (django_gravatar2-1.4.5.tar.gz) = 2d6083ac4ed46acbf1d1e3521fb24a81508fda6934f2862ad70c01b8128434fa8933ce259c6a38331c6ceb86c1bcab738114aabd4c5f714aca0b28808f1ce2c8
+Size (django_gravatar2-1.4.5.tar.gz) = 10444 bytes
