@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2026/09/07 07:14:59 pin Exp $
+$NetBSD: distinfo,v 1.28 2026/09/22 14:48:09 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -672,9 +672,9 @@ Size (serde_derive-1.0.229.crate) = 59864 bytes
 BLAKE2s (serde_spanned-1.1.1.crate) = 50c41815fc79bb565c245dfeb781a6766c2e1d9f0bac30d9d3a649d61207a64f
 SHA512 (serde_spanned-1.1.1.crate) = ed6f0cd52d97985458d530a1ff973aabef8b611a17e739d5011aa50293e4cc994af24992e07ac55e0d2a8fa8d0577ebdba4b42b920cde505e05dadf05382e545
 Size (serde_spanned-1.1.1.crate) = 11025 bytes
-BLAKE2s (serie-0.9.0.tar.gz) = eae8f5723a744f2b2cbd797cf1a2bf5f00331dcd3629e5733f02a0b5ed925a0c
-SHA512 (serie-0.9.0.tar.gz) = c7b6f72575ba0b8e045fb90f6931df71f850b4fb45aa4a96f867407ba2be0179fb3b52c0cde87d268ff8c6fc1d5fceefc45b22acc0e127c4471c0c0e777221c7
-Size (serie-0.9.0.tar.gz) = 14120179 bytes
+BLAKE2s (serie-0.9.1.tar.gz) = 4214136a2b0f465e0b54b6913372ae4d9bade83063aa68d249830d1d1efbb4ab
+SHA512 (serie-0.9.1.tar.gz) = 9d5f1fd729b1cb417d4e9994c88103afe10ca4616a7be56246fbb2450edf09088c88db1df0a748ca0ff8bcdd69b129a0d00c34e119d0c543ba909eaa2bcd5dae
+Size (serie-0.9.1.tar.gz) = 14121720 bytes
 BLAKE2s (sha2-0.10.9.crate) = b0b7a333d767acd0419a8fa55bd26673d2d2b82a30ce17d140d9cd25f4d2a8d9
 SHA512 (sha2-0.10.9.crate) = 963adeeb4ed8b0e7fc19085e8721ea13e9b3aea5d115ca1b3dbca495ad14810c6450991dd3753807c293c415aaeb1054b8b4124c72e7090cd9e86f09fcbb4f80
 Size (sha2-0.10.9.crate) = 29271 bytes
@@ -825,9 +825,6 @@ Size (ttf-parser-0.25.1.crate) = 201121 bytes
 BLAKE2s (tui-input-0.15.3.crate) = e1907ceb42a3ad6472eab1724b4619d411f04a7d19144cf39812b03bc03fb404
 SHA512 (tui-input-0.15.3.crate) = f2f6f16a5da9b55a02c257f0ccad63f67c7d5a3f13c5150858fb221e1689bc63df6aa0f81e8251f8128256aad79290aad236b6944efa867e97bcce1ee0467ed0
 Size (tui-input-0.15.3.crate) = 24785 bytes
-BLAKE2s (tui-tree-widget-0.24.0.crate) = ee1e22bfe833c71273eb31073bda49e1e10027c453af1337e60816e09f485766
-SHA512 (tui-tree-widget-0.24.0.crate) = e86e2b90cf9b46f1e6076cbd0d6ab8ac1f4f95013b3c65151463bab894a0acbb146a8606bd09b2c24493cdc53b792dc565712b6a58cca910687c5e9df26479c6
-Size (tui-tree-widget-0.24.0.crate) = 24749 bytes
 BLAKE2s (typenum-1.19.0.crate) = 80b44dc55e4bf94091b8882ffecd8b65b421bee8fec93e878f36eab55aa58f68
 SHA512 (typenum-1.19.0.crate) = 09ebcd7a2cc11f422469cf4fe706f1988bcd81d628e2bab3f54ae82b0aa5486d03a4392187a3736c13dc0c2027053387f89ac656caff72f36365c8be38bc7ff4
 Size (typenum-1.19.0.crate) = 76414 bytes
