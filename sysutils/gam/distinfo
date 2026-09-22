@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2026/06/02 15:06:30 sborrill Exp $
+$NetBSD: distinfo,v 1.20 2026/09/22 17:59:49 sborrill Exp $
 
-BLAKE2s (gam-7.44.03.tar.gz) = da5f417a6c7830d6a4e45dc138a78fa741bdc5db8d5cf63a7e9c84675dffd8cb
-SHA512 (gam-7.44.03.tar.gz) = fd0c32f12bc147709f1bad7f9ba38f0856edadf647c4d5f3afe49cc30010e48f85a20efbeb5dec84cc7c83680064f05386de8d07b43e45f643436e751b959577
-Size (gam-7.44.03.tar.gz) = 1943435 bytes
+BLAKE2s (gam-7.48.11.tar.gz) = d7075fc69fe7b1ffa5a54ac15be5104a83e035b28bbc787fd3827cd8e67aebf9
+SHA512 (gam-7.48.11.tar.gz) = 907f92102cdf4cdc2c4d805fead30d3613bdcd138270fa3c138671c32a6b09ccba060e737658b9758afa0830529d7e78a5efbb221f9e8a7a2c1c3d66618a8a9e
+Size (gam-7.48.11.tar.gz) = 2200037 bytes
