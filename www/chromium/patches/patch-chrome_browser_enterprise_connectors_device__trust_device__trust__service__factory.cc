@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.25 2026/09/02 13:13:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
 @@ -22,7 +22,7 @@
  #include "components/policy/core/common/management/management_service.h"
@@ -13,8 +13,8 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust_
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/browser_process.h"
- #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/browser_attestation_service.h"
- #include "chrome/browser/enterprise/connectors/device_trust/attestation/browser/device_attester.h"
+ #include "chrome/browser/enterprise/identifiers/profile_id_service_factory.h"
+ #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
 @@ -57,7 +57,7 @@ bool IsProfileManaged(Profile* profile) 
    return management_service && management_service->IsManaged();
  }

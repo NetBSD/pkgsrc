@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
 @@ -19,7 +19,7 @@
  #include "extensions/common/constants.h"
@@ -14,8 +14,8 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/extensions/chrome_app_deprecation.h"
  #include "chrome/browser/extensions/extension_util.h"
- #include "chrome/browser/ui/browser.h"
-@@ -87,7 +87,7 @@ bool OpenExtensionApplicationWindow(Prof
+ #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
+@@ -90,7 +90,7 @@ bool OpenExtensionApplicationWindow(Prof
    if (launch_container == LaunchContainer::kLaunchContainerTab)
      return false;
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return false;
    }
-@@ -119,7 +119,7 @@ content::WebContents* OpenExtensionAppli
+@@ -122,7 +122,7 @@ content::WebContents* OpenExtensionAppli
    if (launch_container != apps::LaunchContainer::kLaunchContainerTab)
      return nullptr;
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return nullptr;
    }
-@@ -135,7 +135,7 @@ content::WebContents* OpenExtensionAppli
+@@ -138,7 +138,7 @@ content::WebContents* OpenExtensionAppli
    return app_tab;
  }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
  bool OpenDeprecatedApplicationPrompt(Profile* profile,
                                       const std::string& app_id) {
    if (!extensions::IsExtensionUnsupportedDeprecatedApp(profile, app_id))
-@@ -171,7 +171,7 @@ bool OpenExtensionApplicationWithReenabl
+@@ -175,7 +175,7 @@ bool OpenExtensionApplicationWithReenabl
    if (!GetPlatformApp(profile, app_id))
      return false;
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
    if (OpenDeprecatedApplicationPrompt(profile, app_id)) {
      return false;
    }
-@@ -193,7 +193,7 @@ content::WebContents* OpenExtensionAppSh
+@@ -197,7 +197,7 @@ content::WebContents* OpenExtensionAppSh
                                           ->enabled_extensions()
                                           .GetAppByURL(url);
    if (app) {
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_apps_platform__apps_platform__app__launch.cc,v 1.2
      if (OpenDeprecatedApplicationPrompt(profile, app->id())) {
        return nullptr;
      }
-@@ -216,7 +216,7 @@ void RecordExtensionAppLaunchOnTabRestor
+@@ -220,7 +220,7 @@ void RecordExtensionAppLaunchOnTabRestor
    if (!extension)
      return;
  

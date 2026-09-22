@@ -1,14 +1,14 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__metrics__service.cc,v 1.25 2026/09/02 13:13:30 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__metrics__service.cc,v 1.26 2026/09/22 13:41:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_metrics_service.cc
-@@ -104,7 +104,7 @@ SupervisedUserMetricsService::Supervised
-     supervised_user_service_observation_.Observe(&supervised_user_service);
-   }
+@@ -100,7 +100,7 @@ SupervisedUserMetricsService::Supervised
+   DCHECK(pref_service_);
+   url_filtering_service_observation_.Observe(&url_filtering_service);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

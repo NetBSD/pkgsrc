@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_app_chrome__command__ids.h,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__command__ids.h,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_command_ids.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/app/chrome_command_ids.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/app/chrome_command_ids.h
-@@ -81,11 +81,11 @@
+@@ -82,11 +82,11 @@
  #define IDC_TOGGLE_MULTITASK_MENU       34050
  #endif
  

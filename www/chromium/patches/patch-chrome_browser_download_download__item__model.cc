@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__item__model.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_item_model.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -725,7 +725,7 @@ bool DownloadItemModel::IsCommandChecked
        return download_->GetOpenWhenComplete() || IsExtensionDownload();

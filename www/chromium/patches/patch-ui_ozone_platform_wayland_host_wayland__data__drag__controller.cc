@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.10 2026/09/02 13:13:39 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.11 2026/09/22 13:41:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc
 @@ -48,7 +48,7 @@
  #include "ui/ozone/platform/wayland/host/wayland_window.h"

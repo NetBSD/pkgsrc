@@ -1,12 +1,12 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/02 13:13:30 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.25 2026/09/22 13:41:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
-@@ -62,7 +62,7 @@ base::TimeDelta GetAvatarSyncPromoFeatur
+@@ -65,7 +65,7 @@ base::TimeDelta GetAvatarSyncPromoFeatur
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kAvoidAutoTriggerListAccountsOnStale);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // A HaTS survey flag for the survey to gather user feedback before any changes
  // to the FRE as part of Chrome Desktop FRE Refresh project.
  //
-@@ -136,7 +136,7 @@ BASE_DECLARE_FEATURE_PARAM(
+@@ -139,7 +139,7 @@ BASE_DECLARE_FEATURE_PARAM(
      kChromeAndroidIdentitySurveyBookmarkPromoProbability);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // Enables surveys to measure the effectiveness of the identity model.
  // These surveys would be displayed after interactions such as signin, profile
  // switching, etc. Please keep sorted alphabetically.
-@@ -213,7 +213,7 @@ BASE_DECLARE_FEATURE_PARAM(
+@@ -216,7 +216,7 @@ BASE_DECLARE_FEATURE_PARAM(
  // LINT.ThenChange(//chrome/browser/signin/signin_hats_util.cc)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // Controls the duration for which the launch of an identity survey is delayed.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kChromeIdentitySurveyLaunchWithDelay);
-@@ -238,7 +238,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -241,7 +241,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  extern const base::FeatureParam<std::string> kCrossDeviceSigninUrl;
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // Feature flag to enable cross-device sign-in promo.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kCrossDeviceSigninFromDesktop);
-@@ -264,7 +264,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -267,7 +267,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kDiceLinkedAccounts);
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // If enabled, disables feedback for U18 users on desktop platforms.
  // The iOS version is kDisableFeedbackForIneligibleUsers flag.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
-@@ -453,7 +453,7 @@ extern const base::FeatureParam<base::Ti
+@@ -500,7 +500,7 @@ extern const base::FeatureParam<base::Ti
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kFetchAccountInfoOnRestart);
  
@@ -60,7 +60,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // This feature controls running visually refreshed first run and profile
  // creation flows for users outside of the search engine choice regions. To
  // enable the refresh in search engine choice screen regions,
-@@ -507,7 +507,7 @@ extern const base::FeatureParam<FirstRun
+@@ -554,7 +554,7 @@ extern const base::FeatureParam<FirstRun
      kFirstRunDesktopSignInPromoVariation;
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -69,7 +69,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // A HaTS survey flag for the survey to gather user feedback after the changes
  // introduced with `kFirstRunDesktopRefresh`.
  //
-@@ -517,7 +517,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -564,7 +564,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kFirstRunDesktopRefreshSurvey);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -78,7 +78,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // It enables the first run revamp (introduce new UIs and additional effects).
  // This feature is no-op if `kFirstRunDesktopRefresh` is disabled.
  //
-@@ -537,7 +537,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -584,7 +584,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  bool IsFirstRunDesktopRevampEnabled(bool is_in_search_engine_choice_region);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -87,7 +87,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // A HaTS survey flag for the survey to gather user feedback after the changes
  // introduced with `kFirstRunDesktopRevamp` for users who are not eligible for
  // the Feature Showcase.
-@@ -548,7 +548,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -595,7 +595,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kFirstRunDesktopRevampNoFeatureShowcaseSurvey);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -96,7 +96,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // A HaTS survey flag for the survey to gather user feedback after the changes
  // introduced with `kFirstRunDesktopRevamp` for users who are eligible for the
  // Feature Showcase.
-@@ -559,7 +559,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -606,7 +606,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kFirstRunDesktopRevampSurvey);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
@@ -105,17 +105,17 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // This feature controls whether Gemini step can be shown in the feature
  // showcase. This feature is no-op if IsFirstRunDesktopRevamp() equals false.
  //
-@@ -660,7 +660,7 @@ BASE_DECLARE_FEATURE(kNoAccountWebSignin
- COMPONENT_EXPORT(SIGNIN_SWITCHES)
- BASE_DECLARE_FEATURE(kNonDefaultGaiaOriginCheck);
+@@ -712,7 +712,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kOpenSystemAccountSettingsDirectly);
+ #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // It enables the pre first run desktop refresh (changes to the onboarding flow
  // prior to the core first run).
  //
-@@ -679,7 +679,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
- bool IsPreFirstRunDesktopRefreshEnabled(bool is_in_search_engine_choice_region);
+@@ -731,7 +731,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ bool IsPreFirstRunDesktopRefreshEnabled();
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -123,7 +123,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // Experimenting with changing the secondary CTA for FRE and new profile
  // creation.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
-@@ -741,7 +741,7 @@ extern const base::FeatureParam<int> kCo
+@@ -797,7 +797,7 @@ extern const base::FeatureParam<int> kCo
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  extern const base::FeatureParam<int> kContextualSigninPromoDismissedThreshold;
  
@@ -132,7 +132,7 @@ $NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.24 2026/09/0
  // Uses the Material Next theme for the signin promo.
  COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kSignInPromoMaterialNextUI);
-@@ -796,7 +796,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -856,7 +856,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kSupportAddSessionEmailPrefill);
  #endif
  

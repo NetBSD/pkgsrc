@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
-@@ -103,7 +103,7 @@
- #include "ui/base/ui_base_switches.h"
+@@ -106,7 +106,7 @@
+ #endif  // !defined(BUILDING_CHROME_RENDERER)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_MAC)
@@ -15,12 +15,12 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif
  
-@@ -185,17 +185,17 @@
+@@ -199,17 +199,17 @@
  #include "v8/include/v8.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD) 
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "base/environment.h"
  #endif
  
@@ -33,10 +33,10 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || \
 -    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/policy/policy_path_parser.h"
- #include "components/crash/core/app/crashpad.h"
- #endif
-@@ -236,7 +236,7 @@ ChromeMainDelegate::GetNonWildcardDomain
+ #if !defined(BUILDING_CHROME_RENDERER)
+ #include "chrome/browser/policy/policy_path_parser.h"  // nogncheck
+ #endif  // !defined(BUILDING_CHROME_RENDERER)
+@@ -256,7 +256,7 @@ ChromeMainDelegate::GetNonWildcardDomain
  #endif
        chrome::kChromeSearchScheme,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -45,7 +45,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
        webapps::kIsolatedAppScheme,
  #endif
        content::kChromeDevToolsScheme,    content::kChromeUIScheme,
-@@ -312,7 +312,7 @@ void AdjustLinuxOOMScore(const std::stri
+@@ -334,7 +334,7 @@ void AdjustLinuxOOMScore(const std::stri
  // and resources loaded.
  bool SubprocessNeedsResourceBundle(const std::string& process_type) {
    return
@@ -54,7 +54,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
        // The zygote process opens the resources for the renderers.
        process_type == switches::kZygoteProcess ||
  #endif
-@@ -394,7 +394,7 @@ bool HandleVersionSwitches(const base::C
+@@ -416,7 +416,7 @@ bool HandleVersionSwitches(const base::C
    return false;
  }
  
@@ -63,7 +63,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
  // Show the man page if --help or -h is on the command line.
  void HandleHelpSwitches(const base::CommandLine& command_line) {
    if (command_line.HasSwitch(switches::kHelp) ||
-@@ -406,7 +406,7 @@ void HandleHelpSwitches(const base::Comm
+@@ -428,7 +428,7 @@ void HandleHelpSwitches(const base::Comm
  }
  #endif  // BUILDFLAG(IS_LINUX)
  
@@ -72,7 +72,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
  void SIGTERMProfilingShutdown(int signal) {
    content::Profiling::Stop();
    struct sigaction sigact;
-@@ -489,7 +489,7 @@ std::optional<int> AcquireProcessSinglet
+@@ -512,7 +512,7 @@ std::optional<int> AcquireProcessSinglet
    // process can be exited.
    ChromeProcessSingleton::CreateInstance(user_data_dir);
  
@@ -81,7 +81,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
    // Read the xdg-activation token and set it in the command line for the
    // duration of the notification in order to ensure this is propagated to an
    // already running browser process if it exists.
-@@ -567,7 +567,7 @@ void InitializeUserDataDir(base::Command
+@@ -592,7 +592,7 @@ void InitializeUserDataDir(base::Command
    std::string process_type =
        command_line->GetSwitchValueASCII(switches::kProcessType);
  
@@ -90,7 +90,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -676,7 +676,7 @@ void RecordMainStartupMetrics(const Star
+@@ -702,7 +702,7 @@ void RecordMainStartupMetrics(const Star
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -99,7 +99,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -1144,7 +1144,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1186,7 +1186,7 @@ std::optional<int> ChromeMainDelegate::B
      return 0;  // Got a --credits switch; exit with a success error code.
    }
  
@@ -108,7 +108,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1483,7 +1483,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1541,7 +1541,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  
@@ -117,7 +117,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.25 2026/09/02 13:13:22 k
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != switches::kZygoteProcess &&
        !command_line.HasSwitch(switches::kDisableCrashpadForTesting)) {
-@@ -1528,7 +1528,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1586,7 +1586,7 @@ void ChromeMainDelegate::PreSandboxStart
    if (process_type.empty()) {
      // Initialize Ozone platform and add required feature flags as per
      // platform's properties.

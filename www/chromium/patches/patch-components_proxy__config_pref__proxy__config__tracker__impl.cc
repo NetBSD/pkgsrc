@@ -1,12 +1,12 @@
-$NetBSD: patch-components_proxy__config_pref__proxy__config__tracker__impl.cc,v 1.12 2026/09/02 13:13:29 kikadf Exp $
+$NetBSD: patch-components_proxy__config_pref__proxy__config__tracker__impl.cc,v 1.13 2026/09/22 13:41:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/proxy_config/pref_proxy_config_tracker_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/proxy_config/pref_proxy_config_tracker_impl.cc
-@@ -531,7 +531,7 @@ void PrefProxyConfigTrackerImpl::Registe
+@@ -587,7 +587,7 @@ void PrefProxyConfigTrackerImpl::Registe
    registry->RegisterDictionaryPref(proxy_config::prefs::kProxy,
                                     ProxyConfigDictionary::CreateSystem());
    registry->RegisterListPref(proxy_config::prefs::kProxyOverrideRules);
@@ -15,7 +15,7 @@ $NetBSD: patch-components_proxy__config_pref__proxy__config__tracker__impl.cc,v 
    registry->RegisterIntegerPref(
        proxy_config::prefs::kEnableProxyOverrideRulesForAllUsers, 0);
    registry->RegisterIntegerPref(proxy_config::prefs::kProxyOverrideRulesScope,
-@@ -546,7 +546,7 @@ void PrefProxyConfigTrackerImpl::Registe
+@@ -602,7 +602,7 @@ void PrefProxyConfigTrackerImpl::Registe
                                     ProxyConfigDictionary::CreateSystem());
    registry->RegisterBooleanPref(proxy_config::prefs::kUseSharedProxies, false);
    registry->RegisterListPref(proxy_config::prefs::kProxyOverrideRules);

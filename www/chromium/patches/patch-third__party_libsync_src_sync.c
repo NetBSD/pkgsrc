@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libsync_src_sync.c,v 1.18 2026/09/02 13:13:37 kikadf Exp $
+$NetBSD: patch-third__party_libsync_src_sync.c,v 1.19 2026/09/22 13:41:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libsync/src/sync.c.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/libsync/src/sync.c.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/libsync/src/sync.c
 @@ -18,7 +18,11 @@
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_enterprise_browser_reporting_chrome__profile__request__generator.cc,v 1.1 2026/09/02 13:13:28 kikadf Exp $
+$NetBSD: patch-components_enterprise_browser_reporting_chrome__profile__request__generator.cc,v 1.2 2026/09/22 13:41:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/browser/reporting/chrome_profile_request_generator.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/enterprise/browser/reporting/chrome_profile_request_generator.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/enterprise/browser/reporting/chrome_profile_request_generator.cc
 @@ -210,7 +210,7 @@ void ChromeProfileRequestGenerator::OnBa
    signals_request.signal_names.emplace(device_signals::SignalName::kHotfixes);

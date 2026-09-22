@@ -1,12 +1,12 @@
-$NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
+$NetBSD: patch-media_base_audio__bus.h,v 1.3 2026/09/22 13:41:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/audio_bus.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- media/base/audio_bus.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/base/audio_bus.h
-@@ -110,6 +110,23 @@ class MEDIA_EXPORT AudioBus {
+@@ -116,6 +116,23 @@ class MEDIA_EXPORT AudioBus {
    // Returns the currently used bitstream data.
    BitstreamData bitstream_data() const { return bitstream_data_; }
  
@@ -30,7 +30,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
    // Overwrites every sample stored in this AudioBus instance with values
    // from a given interleaved `source` with expected layout
    // [ch0, ch1, ..., chN, ch0, ch1, ...]. The sample values are converted to
-@@ -122,6 +139,17 @@ class MEDIA_EXPORT AudioBus {
+@@ -128,6 +145,17 @@ class MEDIA_EXPORT AudioBus {
        base::span<const typename SourceSampleTypeTraits::ValueType> source,
        bool zero_remaining_frames = false);
  
@@ -48,7 +48,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
    // Similar to FromInterleaved...(), but overwrites the frames starting at a
    // given offset `write_offset`, without zero'ing other frames.
    template <class SourceSampleTypeTraits>
-@@ -129,6 +157,18 @@ class MEDIA_EXPORT AudioBus {
+@@ -135,6 +163,18 @@ class MEDIA_EXPORT AudioBus {
        base::span<const typename SourceSampleTypeTraits::ValueType> source,
        size_t write_offset);
  
@@ -67,7 +67,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
    // Fills `dest` with the sample values in this AudioBus instance. Converts the
    // samples to the format specified by `TargetSampleTypeTraits` and places them
    // in interleaved format.
-@@ -138,6 +178,16 @@ class MEDIA_EXPORT AudioBus {
+@@ -144,6 +184,16 @@ class MEDIA_EXPORT AudioBus {
    void ToInterleaved(
        base::span<typename TargetSampleTypeTraits::ValueType> dest) const;
  
@@ -84,7 +84,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
    // Similar to ToInterleaved...(), but reads the frames starting at a given
    // `read_offset`.
    // Note: `dest` must have a multiple of `channels()` elements, but it does not
-@@ -243,6 +293,12 @@ class MEDIA_EXPORT AudioBus {
+@@ -241,6 +291,12 @@ class MEDIA_EXPORT AudioBus {
  
    template <class SourceSampleTypeTraits>
    static void CopyConvertFromInterleavedSourceToAudioBus(
@@ -97,7 +97,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
        base::span<const typename SourceSampleTypeTraits::ValueType> source,
        size_t write_offset,
        AudioBus* dest);
-@@ -250,6 +306,12 @@ class MEDIA_EXPORT AudioBus {
+@@ -248,6 +304,12 @@ class MEDIA_EXPORT AudioBus {
    template <class TargetSampleTypeTraits>
    static void CopyConvertFromAudioBusToInterleavedTarget(
        const AudioBus* source,
@@ -110,7 +110,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
        size_t read_offset,
        base::span<typename TargetSampleTypeTraits::ValueType> dest);
  
-@@ -298,6 +360,17 @@ class MEDIA_EXPORT AudioBus {
+@@ -295,6 +357,17 @@ class MEDIA_EXPORT AudioBus {
  // Delegates to FromInterleavedPartial()
  template <class SourceSampleTypeTraits>
  void AudioBus::FromInterleaved(
@@ -128,14 +128,14 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
      base::span<const typename SourceSampleTypeTraits::ValueType> source,
      bool zero_remaining_frames) {
    const size_t source_frame_count = get_frame_count(source, channels());
-@@ -318,6 +391,16 @@ void AudioBus::FromInterleaved(
+@@ -315,6 +388,16 @@ void AudioBus::FromInterleaved(
  
  template <class SourceSampleTypeTraits>
  void AudioBus::FromInterleavedPartial(
 +    const typename SourceSampleTypeTraits::ValueType* source_buffer,
 +    int write_offset_in_frames,
 +    int num_frames_to_write) {
-+  CheckOverflow(write_offset_in_frames, num_frames_to_write, frames_);
++//  CheckOverflow(write_offset_in_frames, num_frames_to_write, frames_);
 +  CopyConvertFromInterleavedSourceToAudioBus<SourceSampleTypeTraits>(
 +      source_buffer, write_offset_in_frames, num_frames_to_write, this);
 +}
@@ -145,7 +145,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
      base::span<const typename SourceSampleTypeTraits::ValueType> source,
      size_t write_offset) {
    const size_t frame_count = get_frame_count(source, channels());
-@@ -332,6 +415,15 @@ void AudioBus::FromInterleavedPartial(
+@@ -329,6 +412,15 @@ void AudioBus::FromInterleavedPartial(
  // Delegates to ToInterleavedPartial()
  template <class TargetSampleTypeTraits>
  void AudioBus::ToInterleaved(
@@ -161,14 +161,14 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
      base::span<typename TargetSampleTypeTraits::ValueType> dest) const {
    const size_t frames_count = get_frame_count(dest, channels());
    CHECK_EQ(frames_count, frames_);
-@@ -340,6 +432,16 @@ void AudioBus::ToInterleaved(
+@@ -337,6 +429,16 @@ void AudioBus::ToInterleaved(
  
  template <class TargetSampleTypeTraits>
  void AudioBus::ToInterleavedPartial(
 +    int read_offset_in_frames,
 +    int num_frames_to_read,
 +    typename TargetSampleTypeTraits::ValueType* dest) const {
-+  CheckOverflow(read_offset_in_frames, num_frames_to_read, frames_);
++//  CheckOverflow(read_offset_in_frames, num_frames_to_read, frames_);
 +  CopyConvertFromAudioBusToInterleavedTarget<TargetSampleTypeTraits>(
 +      this, read_offset_in_frames, num_frames_to_read, dest);
 +}
@@ -178,7 +178,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
      size_t read_offset,
      base::span<typename TargetSampleTypeTraits::ValueType> dest) const {
    const size_t frame_count = get_frame_count(dest, channels());
-@@ -350,6 +452,28 @@ void AudioBus::ToInterleavedPartial(
+@@ -347,6 +449,28 @@ void AudioBus::ToInterleavedPartial(
        this, read_offset, dest);
  }
  
@@ -207,7 +207,7 @@ $NetBSD: patch-media_base_audio__bus.h,v 1.2 2026/09/02 13:13:32 kikadf Exp $
  template <class SourceSampleTypeTraits>
  void AudioBus::CopyConvertFromInterleavedSourceToAudioBus(
      base::span<const typename SourceSampleTypeTraits::ValueType> source,
-@@ -372,6 +496,27 @@ void AudioBus::CopyConvertFromInterleave
+@@ -369,6 +493,27 @@ void AudioBus::CopyConvertFromInterleave
    }
  }
  

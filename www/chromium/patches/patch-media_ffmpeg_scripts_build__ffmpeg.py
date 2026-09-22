@@ -1,10 +1,10 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.25 2026/09/02 13:13:32 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.26 2026/09/22 13:41:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-08-31 22:47:51.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -43,7 +43,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.25 2026/09/02 13:13:32 
          pre_make_rewrites += [
              (r'(#define HAVE_SYSCTL [01])',
               r'#define HAVE_SYSCTL 0 /* \1 -- forced to 0 for Fuchsia */'),
-@@ -604,7 +607,7 @@ def main(argv):
+@@ -612,7 +615,7 @@ def main(argv):
      configure_args = args[2:]
  
      if target_os not in ('android', 'linux', 'linux-noasm', 'mac', 'win',
@@ -52,7 +52,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.25 2026/09/02 13:13:32 
          parser.print_help()
          return 1
  
-@@ -678,7 +681,6 @@ def ConfigureAndBuild(target_arch, targe
+@@ -686,7 +689,6 @@ def ConfigureAndBuild(target_arch, targe
          '--disable-faan',
          '--disable-alsa',
          '--disable-iamf',
@@ -60,7 +60,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.25 2026/09/02 13:13:32 
  
  
          # Disable automatically detected external libraries. This prevents
-@@ -720,7 +722,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -728,7 +730,7 @@ def ConfigureAndBuild(target_arch, targe
              '--optflags="-O2"',
          ])
  
@@ -69,17 +69,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.25 2026/09/02 13:13:32 
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -816,9 +818,6 @@ def ConfigureAndBuild(target_arch, targe
- 
-                 configure_flags['Common'].extend([
-                     '--target-os=linux',
--                    '--sysroot=' +
--                    os.path.join(CHROMIUM_ROOT_DIR,
--                                 'build/linux/debian_bullseye_arm64-sysroot'),
-                     # See crbug.com/1467681. These could be removed eventually
-                     '--disable-dotprod',
-                     '--disable-i8mm',
-@@ -924,7 +923,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -929,7 +931,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

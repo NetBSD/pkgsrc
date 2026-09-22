@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1.25 2026/09/02 13:13:31 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/slow_web_preference_cache.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/web_contents/slow_web_preference_cache.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/web_contents/slow_web_preference_cache.cc
 @@ -17,7 +17,7 @@
  

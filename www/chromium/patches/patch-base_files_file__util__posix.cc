@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_file__util__posix.cc,v 1.25 2026/09/02 13:13:20 kikadf Exp $
+$NetBSD: patch-base_files_file__util__posix.cc,v 1.26 2026/09/22 13:41:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/files/file_util_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ base/files/file_util_posix.cc
 @@ -986,6 +986,7 @@ bool CreateNewTempDirectory(FilePath::St
  bool CreateDirectoryAndGetError(const FilePath& full_path, File::Error* error) {

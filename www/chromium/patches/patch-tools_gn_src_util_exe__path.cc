@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_src_util_exe__path.cc,v 1.25 2026/09/02 13:13:38 kikadf Exp $
+$NetBSD: patch-tools_gn_src_util_exe__path.cc,v 1.26 2026/09/22 13:41:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/util/exe_path.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>
@@ -20,75 +20,28 @@ $NetBSD: patch-tools_gn_src_util_exe__path.cc,v 1.25 2026/09/02 13:13:38 kikadf 
  #endif
  
 +#if defined(OS_OPENBSD)
-+#include <kvm.h>
++#include <sys/param.h>
 +#endif
 +
  #if defined(OS_MACOSX)
  
  base::FilePath GetExePath() {
-@@ -104,6 +108,67 @@ base::FilePath GetExePath() {
+@@ -104,6 +108,20 @@ base::FilePath GetExePath() {
    return base::FilePath(raw);
  }
  
 +#elif defined(OS_OPENBSD)
 +
 +base::FilePath GetExePath() {
-+  struct kinfo_file *files;
-+  kvm_t *kd = NULL;
-+  char errbuf[_POSIX2_LINE_MAX];
-+  char **retvalargs;
-+#define MAXTOKENS 2
-+  char *tokens[MAXTOKENS];
-+  static char retval[PATH_MAX];
-+  int cnt;
-+  size_t len;
-+  struct stat sb;
-+  pid_t cpid = getpid();
++#if (OpenBSD >= 202610)
++  char execpath[PATH_MAX];
++  if (getexecpath(execpath, sizeof(execpath)) != 0)
++    return base::FilePath();
 +
-+  int mib[] = { CTL_KERN, KERN_PROC_ARGS, cpid, KERN_PROC_ARGV };
-+
-+  if (sysctl(mib, 4, NULL, &len, NULL, 0) != -1) {
-+    retvalargs = static_cast<char**>(malloc(len));
-+    if (!retvalargs)
-+      goto out;
-+
-+    if (sysctl(mib, 4, retvalargs, &len, NULL, 0) < 0)
-+      goto out;
-+
-+    char *cr = strdup(retvalargs[0]);
-+    free(retvalargs);
-+
-+    *tokens = strtok(cr, ":");
-+    if (tokens[0] == NULL)
-+      goto out;
-+
-+    if (realpath(tokens[0], retval) == NULL)
-+      goto out;
-+
-+    if (stat(retval, &sb) < 0)
-+      goto out;
-+
-+    if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf)) == NULL)
-+      goto out;
-+
-+    if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, cpid,
-+                              sizeof(struct kinfo_file), &cnt)) == NULL) {
-+      kvm_close(kd); 
-+      goto out;
-+    }
-+
-+    for (int i = 0; i < cnt; i++) {
-+      if (files[i].fd_fd == KERN_FILE_TEXT &&
-+          files[i].va_fsid == static_cast<uint32_t>(sb.st_dev) &&
-+          files[i].va_fileid == sb.st_ino) {
-+        kvm_close(kd);
-+        return base::FilePath(retval);
-+      }
-+    }
-+  }
-+
-+out:
++  return base::FilePath(execpath);
++#else
 +  return base::FilePath();
++#endif
 +}
 +
  #elif defined(OS_ZOS)

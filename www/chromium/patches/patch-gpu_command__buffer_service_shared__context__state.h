@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.25 2026/09/02 13:13:32 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.26 2026/09/22 13:41:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.h
-@@ -243,7 +243,7 @@ class GPU_GLES2_EXPORT SharedContextStat
+@@ -246,7 +246,7 @@ class GPU_GLES2_EXPORT SharedContextStat
      return &memory_type_tracker_;
    }
  #if BUILDFLAG(ENABLE_VULKAN) && \
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.25 2026/
    ExternalSemaphorePool* external_semaphore_pool() {
      return external_semaphore_pool_.get();
    }
-@@ -411,7 +411,7 @@ class GPU_GLES2_EXPORT SharedContextStat
+@@ -414,7 +414,7 @@ class GPU_GLES2_EXPORT SharedContextStat
    bool disable_check_reset_status_throttling_for_test_ = false;
  
  #if BUILDFLAG(ENABLE_VULKAN) && \

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_profile__picker__widget.cc,v 1.2 2026/09/02 13:13:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_profile__picker__widget.cc,v 1.3 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_picker_widget.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_picker_widget.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_picker_widget.cc
 @@ -11,7 +11,7 @@
  #include "chrome/browser/ui/views/profiles/profile_picker_view.h"

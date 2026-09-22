@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_accessibility_ax__node.cc,v 1.24 2026/09/02 13:13:38 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__node.cc,v 1.25 2026/09/22 13:41:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- ui/accessibility/ax_node.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ ui/accessibility/ax_node.cc
-@@ -1537,7 +1537,7 @@ AXNode::GetExtraMacNodes() const {
+@@ -1622,7 +1622,7 @@ AXNode::GetExtraMacNodes() const {
    return &table_info->extra_mac_nodes;
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_accessibility_ax__node.cc,v 1.24 2026/09/02 13:13:38 kikadf Ex
  AXNode* AXNode::GetExtraAnnouncementNode(
      ax::mojom::AriaNotificationPriority priority_property) const {
    if (!tree_->extra_announcement_nodes()) {
-@@ -1565,7 +1565,7 @@ bool AXNode::IsGenerated() const {
+@@ -1650,7 +1650,7 @@ bool AXNode::IsGenerated() const {
        GetRole() == ax::mojom::Role::kColumn ||
        GetRole() == ax::mojom::Role::kTableHeaderContainer;
    DCHECK_EQ(is_generated_node, is_extra_mac_node_role);

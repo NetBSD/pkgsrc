@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_controls_prefix__selector.h,v 1.25 2026/09/02 13:13:40 kikadf Exp $
+$NetBSD: patch-ui_views_controls_prefix__selector.h,v 1.26 2026/09/22 13:41:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/prefix_selector.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- ui/views/controls/prefix_selector.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ ui/views/controls/prefix_selector.h
 @@ -91,7 +91,7 @@ class VIEWS_EXPORT PrefixSelector : publ
    ukm::SourceId GetClientSourceForMetrics() const override;

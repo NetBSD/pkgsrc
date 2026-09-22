@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.25 2026/09/02 13:13:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -44,7 +44,7 @@
  #include "chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_session_desktop_injector.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.25 2026/09/02 13:13:23 kik
  // This causes a gn error on Android builds, because gn does not understand
  // buildflags, so we include it only on platforms where it is used.
  #include "chrome/browser/default_browser/default_browser_manager.h"
-@@ -195,7 +195,7 @@ void GlobalFeatures::PostBrowserProcessI
+@@ -194,7 +194,7 @@ void GlobalFeatures::PostBrowserProcessI
    }
  #endif
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.25 2026/09/02 13:13:23 kik
    // TODO(crbug.com/463742800): Migrate WhatsNewRegistry (and other non-core
    // features) to Init().
    whats_new_registry_ = CreateWhatsNewRegistry();
-@@ -281,7 +281,7 @@ void GlobalFeatures::PostMainMessageLoop
+@@ -277,7 +277,7 @@ void GlobalFeatures::PostMainMessageLoop
  
    glass_frame_service_.reset();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.25 2026/09/02 13:13:23 kik
    DefaultBrowserPromptManager::GetInstance()->CloseAllPrompts(
        DefaultBrowserPromptManager::CloseReason::kDismiss);
  #endif
-@@ -300,7 +300,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -296,7 +296,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ime_dummy__text__input__client.cc,v 1.25 2026/09/02 13:13:38 kikadf Exp $
+$NetBSD: patch-ui_base_ime_dummy__text__input__client.cc,v 1.26 2026/09/22 13:41:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/dummy_text_input_client.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- ui/base/ime/dummy_text_input_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ ui/base/ime/dummy_text_input_client.cc
 @@ -175,7 +175,7 @@ bool DummyTextInputClient::ShouldDoLearn
    return false;

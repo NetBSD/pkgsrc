@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_trap-handler_trap-handler.h,v 1.25 2026/09/02 13:13:40 kikadf Exp $
+$NetBSD: patch-v8_src_trap-handler_trap-handler.h,v 1.26 2026/09/22 13:41:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/trap-handler/trap-handler.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- v8/src/trap-handler/trap-handler.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ v8/src/trap-handler/trap-handler.h
 @@ -18,7 +18,7 @@ namespace v8::internal::trap_handler {
  // X64 on Linux, Windows, MacOS, FreeBSD.

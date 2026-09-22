@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.h,v 1.25 2026/09/02 13:13:35 kikadf Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.h,v 1.26 2026/09/22 13:41:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h
 @@ -35,7 +35,7 @@
  #if defined(__ELF__) && !defined(__OpenBSD__) && !defined(__QNX__) &&    \

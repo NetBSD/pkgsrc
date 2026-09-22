@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.cc,v 1.25 2026/09/02 13:13:27 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -72,7 +72,7 @@ BASE_FEATURE(kUseKeychainKeyProvider, ba
  #endif  // BUILDFLAG(IS_MAC)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.25 2026/09/02 13:13:27 kika
  // Enables or disables the Autofill survey triggered by opening a prompt to
  // save address info.
  BASE_FEATURE(kAutofillAddressSurvey, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -240,7 +240,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
+@@ -247,7 +247,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.25 2026/09/02 13:13:27 kika
  // Controls whether Chrome Apps are supported. See https://crbug.com/40186761.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -1403,7 +1403,7 @@ BASE_FEATURE(kIsolatedWebAppManagedGuest
+@@ -1410,7 +1410,7 @@ BASE_FEATURE(kIsolatedWebAppManagedGuest
  BASE_FEATURE(kIsolatedWebAppBundleCache, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.25 2026/09/02 13:13:27 kika
  BASE_FEATURE(kLinuxLowMemoryMonitor, base::FEATURE_DISABLED_BY_DEFAULT);
  // Values taken from the low-memory-monitor documentation and also apply to the
  // portal API:
-@@ -1414,7 +1414,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1421,7 +1421,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

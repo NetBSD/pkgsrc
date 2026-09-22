@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_app_chrome__main.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__main.cc,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/app/chrome_main.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/app/chrome_main.cc
-@@ -35,11 +35,11 @@
+@@ -36,11 +36,11 @@
  #include "chrome/common/mac/detect_inappropriate_exit.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD: patch-chrome_app_chrome__main.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp 
  #include "chrome/app/chrome_main_linux.h"
  #endif
  
-@@ -142,7 +142,7 @@ int ChromeMain(int argc, const char** ar
+@@ -110,7 +110,7 @@ int ChromeMain(int argc, const char** ar
  #error Unknown platform.
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-chrome_app_chrome__main.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp 
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -215,7 +215,7 @@ int ChromeMain(int argc, const char** ar
+@@ -183,7 +183,7 @@ int ChromeMain(int argc, const char** ar
    SetUpBundleOverrides();
  #endif
  

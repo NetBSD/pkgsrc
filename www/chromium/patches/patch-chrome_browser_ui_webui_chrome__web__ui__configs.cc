@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.25 2026/09/02 13:13:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
 @@ -174,7 +174,7 @@
  #include "chrome/browser/ui/webui/default_browser/visual_guided_setter_ui.h"
@@ -49,7 +49,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.25 2026/0
  #include "chrome/browser/ui/webui/skills/skills_ui.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
          // BUILDFLAG(IS_CHROMEOS)
-@@ -404,10 +404,10 @@ void RegisterChromeWebUIConfigs() {
+@@ -403,10 +403,10 @@ void RegisterChromeWebUIConfigs() {
    map.AddWebUIConfig(std::make_unique<WebUIToolbarConfig>());
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -62,7 +62,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.25 2026/0
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
    map.AddWebUIConfig(std::make_unique<extensions::ExtensionsUIConfig>());
-@@ -435,7 +435,7 @@ void RegisterChromeWebUIConfigs() {
+@@ -434,7 +434,7 @@ void RegisterChromeWebUIConfigs() {
    map.AddWebUIConfig(std::make_unique<VisualGuidedSetterUIConfig>());
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -71,7 +71,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.25 2026/0
    map.AddWebUIConfig(std::make_unique<BrowserSwitchUIConfig>());
    map.AddWebUIConfig(std::make_unique<HistorySyncOptinUIConfig>());
    map.AddWebUIConfig(std::make_unique<OnDeviceTranslationInternalsUIConfig>());
-@@ -444,17 +444,17 @@ void RegisterChromeWebUIConfigs() {
+@@ -443,17 +443,17 @@ void RegisterChromeWebUIConfigs() {
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -92,7 +92,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.25 2026/0
    map.AddWebUIConfig(std::make_unique<UpdaterUIConfig>());
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
-@@ -501,7 +501,7 @@ void RegisterChromeWebUIConfigs() {
+@@ -500,7 +500,7 @@ void RegisterChromeWebUIConfigs() {
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

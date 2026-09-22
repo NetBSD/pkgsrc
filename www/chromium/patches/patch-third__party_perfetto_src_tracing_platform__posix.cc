@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_tracing_platform__posix.cc,v 1.26 2026/09/02 13:13:37 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_tracing_platform__posix.cc,v 1.27 2026/09/22 13:41:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/platform_posix.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/perfetto/src/tracing/platform_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/perfetto/src/tracing/platform_posix.cc
 @@ -111,13 +111,16 @@ std::unique_ptr<base::TaskRunner> Platfo
  }

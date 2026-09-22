@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.25 2026/09/02 13:13:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
-@@ -153,7 +153,7 @@
+@@ -155,7 +155,7 @@
  #include "chrome/browser/ui/webui/settings/system_handler.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
  #include "ui/display/screen.h"
  #endif
  
-@@ -163,7 +163,7 @@
+@@ -165,7 +165,7 @@
  #include "device/fido/win/webauthn_api.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
  #include "ui/linux/linux_ui_factory.h"
  #include "ui/ozone/public/ozone_platform.h"
  #endif
-@@ -288,7 +288,7 @@ void AddA11yStrings(content::WebUIDataSo
+@@ -290,7 +290,7 @@ void AddA11yStrings(content::WebUIDataSo
        {"toastAlertLevelDescription",
         IDS_SETTINGS_ACCESSIBILITY_TOAST_FREQUENCY_DESCRIPTION},
  #endif
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"overscrollHistoryNavigationTitle",
         IDS_SETTINGS_OVERSCROLL_HISTORY_NAVIGATION_TITLE},
        {"overscrollHistoryNavigationSubtitle",
-@@ -637,7 +637,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -639,7 +639,7 @@ void AddAppearanceStrings(content::WebUI
        {"uiFeatureAlignSide", IDS_SETTINGS_UI_FEATURE_ALIGN_SIDE},
        {"uiFeatureAlignTop", IDS_SETTINGS_UI_FEATURE_ALIGN_TOP},
        {"resetToDefault", IDS_SETTINGS_RESET_TO_DEFAULT},
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"gtkTheme", IDS_SETTINGS_GTK_THEME},
        {"useGtkTheme", IDS_SETTINGS_USE_GTK_THEME},
        {"qtTheme", IDS_SETTINGS_QT_THEME},
-@@ -645,11 +645,11 @@ void AddAppearanceStrings(content::WebUI
+@@ -647,11 +647,11 @@ void AddAppearanceStrings(content::WebUI
        {"classicTheme", IDS_SETTINGS_CLASSIC_THEME},
        {"useClassicTheme", IDS_SETTINGS_USE_CLASSIC_THEME},
  #endif
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"showWindowDecorations", IDS_SHOW_WINDOW_DECORATIONS},
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -692,7 +692,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -694,7 +694,7 @@ void AddAppearanceStrings(content::WebUI
    html_source->AddString("configurableSidePanelAlignments",
                           configurable_alignments_json);
  
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
    bool show_custom_chrome_frame = ui::OzonePlatform::GetInstance()
                                        ->GetPlatformRuntimeProperties()
                                        .supports_server_side_window_decorations;
-@@ -2099,7 +2099,7 @@ void AddSignOutDialogStrings(content::We
+@@ -2130,7 +2130,7 @@ void AddSignOutDialogStrings(content::We
            g_browser_process->GetApplicationLocale())
            .spec();
  

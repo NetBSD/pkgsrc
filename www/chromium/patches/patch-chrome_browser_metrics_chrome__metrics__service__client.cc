@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
-@@ -204,7 +204,7 @@
- #include "chrome/browser/metrics/power/power_metrics_provider_mac.h"
+@@ -206,7 +206,7 @@
+ #include "chrome/browser/metrics/task_info_metrics_provider_mac.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
  #include "components/metrics/motherboard_metrics_provider.h"
  #endif
  
-@@ -216,7 +216,7 @@
+@@ -218,7 +218,7 @@
  #include "chrome/browser/metrics/bluetooth_metrics_provider.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
  #include "chrome/browser/updates/update_metrics_provider.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -567,7 +567,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -574,7 +574,7 @@ void ChromeMetricsServiceClient::Registe
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    metrics::structured::StructuredMetricsService::RegisterPrefs(registry);
  
  #if !BUILDFLAG(IS_CHROMEOS)
-@@ -764,7 +764,7 @@ void ChromeMetricsServiceClient::Initial
+@@ -771,7 +771,7 @@ void ChromeMetricsServiceClient::Initial
          this, local_state);
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    metrics::structured::Recorder::GetInstance()->SetUiTaskRunner(
        base::SequencedTaskRunner::GetCurrentDefault());
  #endif
-@@ -824,7 +824,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -831,7 +831,7 @@ void ChromeMetricsServiceClient::Registe
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -51,8 +51,8 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -924,7 +924,7 @@ void ChromeMetricsServiceClient::Registe
-       std::make_unique<GoogleUpdateMetricsProviderMac>());
+@@ -935,7 +935,7 @@ void ChromeMetricsServiceClient::Registe
+   }
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<DesktopPlatformFeaturesMetricsProvider>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -1034,7 +1034,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -1045,7 +1045,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<PowerMetricsProvider>());
  #endif
  
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    metrics_service_->RegisterMetricsProvider(
        metrics::CreateDesktopSessionMetricsProvider());
    metrics_service_->RegisterMetricsProvider(
-@@ -1245,7 +1245,7 @@ bool ChromeMetricsServiceClient::Registe
+@@ -1258,7 +1258,7 @@ bool ChromeMetricsServiceClient::Registe
    }
  #endif
  
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.25
    // This creates the DesktopProfileSessionDurationsServices if it didn't exist
    // already.
    metrics::DesktopProfileSessionDurationsServiceFactory::GetForBrowserContext(
-@@ -1595,7 +1595,7 @@ void ChromeMetricsServiceClient::CreateS
+@@ -1652,7 +1652,7 @@ void ChromeMetricsServiceClient::CreateS
    recorder =
        std::make_unique<metrics::structured::AshStructuredMetricsRecorder>(
            cros_system_profile_provider_.get());

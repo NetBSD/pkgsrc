@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_webauthn_chrome__web__authentication__delegate.cc,v 1.7 2026/09/02 13:13:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_chrome__web__authentication__delegate.cc,v 1.8 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/webauthn/chrome_web_authentication_delegate.cc
-@@ -69,7 +69,7 @@
+@@ -70,7 +70,7 @@
  #include "url/url_constants.h"
  #include "url/url_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_webauthn_chrome__web__authentication__delegate.cc,
  #include "chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_service.h"
  #endif
  
-@@ -377,7 +377,7 @@ content::WebAuthenticationRequestProxy*
+@@ -324,7 +324,7 @@ content::WebAuthenticationRequestProxy*
  ChromeWebAuthenticationDelegate::MaybeGetRequestProxy(
      content::BrowserContext* browser_context,
      const url::Origin& caller_origin) {
