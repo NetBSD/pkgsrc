@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6220 2026/09/22 13:18:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6221 2026/09/22 13:33:08 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9433,3 +9433,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-python-discovery to 1.6.1 [adam 2026-09-22]
 	Updated comms/srtp to 2.8.1 [adam 2026-09-22]
 	Updated devel/libgsf to 1.14.59 [adam 2026-09-22]
+	Added lang/typescript version 6.0.3 [kikadf 2026-09-22]
