@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2026/07/16 19:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/09/22 09:07:22 wiz Exp $
 
-DISTNAME=	Dancer2-2.0.1
+DISTNAME=	Dancer2-2.2.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CR/CROMEDOME/}
 
@@ -14,15 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Dancer2/.packlist
 
-TOOL_DEPENDS+=	p5-Exporter-Tiny>=0:../../devel/p5-Exporter-Tiny
-TOOL_DEPENDS+=	p5-Test-Memory-Cycle>=0:../../devel/p5-Test-Memory-Cycle
-TOOL_DEPENDS+=	p5-Test-MockTime>=0:../../time/p5-Test-MockTime
-TOOL_DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
-TOOL_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
-TOOL_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
-TOOL_DEPENDS+=	p5-LWP-Protocol-PSGI>=0.06:../../www/p5-LWP-Protocol-PSGI
-
-DEPENDS+=	p5-CLI-Osprey>=0:../../devel/p5-CLI-Osprey
+DEPENDS+=	p5-CLI-Osprey>=0.09:../../devel/p5-CLI-Osprey
 DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Crypt-URandom>=0:../../security/p5-Crypt-URandom
 DEPENDS+=	p5-Config-Any>=0:../../devel/p5-Config-Any
@@ -54,8 +45,17 @@ DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
 DEPENDS+=	p5-YAML-LibYAML>=0:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
+TEST_DEPENDS+=	p5-Exporter-Tiny>=0:../../devel/p5-Exporter-Tiny
+TEST_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Test-EOL>=0:../../devel/p5-Test-EOL
+TEST_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Memory-Cycle>=0:../../devel/p5-Test-Memory-Cycle
+TEST_DEPENDS+=	p5-Test-MockTime>=0:../../time/p5-Test-MockTime
+TEST_DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
+TEST_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
+TEST_DEPENDS+=	p5-LWP-Protocol-PSGI>=0.06:../../www/p5-LWP-Protocol-PSGI
 
-REPLACE_PERL+=	share/skel/bin/+app.psgi
 REPLACE_PERL+=	script/dancer2
 
 post-extract:
