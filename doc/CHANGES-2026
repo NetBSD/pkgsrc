@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6217 2026/09/22 12:40:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6218 2026/09/22 12:58:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9427,3 +9427,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/webkit-gtk41 to 2.54.0 [wiz 2026-09-22]
 	Updated misc/py-narwhals to 2.26.0 [adam 2026-09-22]
 	Updated www/py-pysaml2 to 7.5.5 [adam 2026-09-22]
+	Updated devel/py-pyparsing to 3.3.3 [adam 2026-09-22]
+	Updated net/py-pypiserver to 2.4.2 [adam 2026-09-22]
