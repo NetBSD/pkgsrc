@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6181 2026/09/22 06:52:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6182 2026/09/22 07:04:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9363,3 +9363,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rsync to 3.5.1 [adam 2026-09-22]
 	Updated multimedia/mkvtoolnix to 102.0 [adam 2026-09-22]
 	Updated security/ccid to 1.8.4 [adam 2026-09-22]
+	Updated devel/cargo-nextest to 0.9.146 [adam 2026-09-22]
+	Updated textproc/ugrep to 7.8.5 [adam 2026-09-22]
+	Updated devel/wabt to 1.0.42 [adam 2026-09-22]
