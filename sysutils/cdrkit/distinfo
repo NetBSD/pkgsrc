@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/08/20 07:17:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/09/22 08:05:41 ryoon Exp $
 
 BLAKE2s (cdrkit-1.1.9.tar.gz) = 1fbf1f85044d967e25a6a1edabead95714cc8e69c53d061835d97ab1d84fa658
 SHA512 (cdrkit-1.1.9.tar.gz) = c6d1fe04d384fda22cae009ca60b7aa7990797a6a552130953fb6c677f4989bb29dff4a086c5f720985c5913b7a58a8b5e604f717c0332182772c12dd3147451
@@ -14,3 +14,8 @@ SHA1 (patch-ag) = 4107264722dc7985d31a1e4ad49196ca01a6f8a1
 SHA1 (patch-ah) = af9379e9690808fe7a3adc59c16a9548b9941b9f
 SHA1 (patch-ai) = f4c2c6e52e29c3fb8b00150504c58f82ce9dc161
 SHA1 (patch-aj) = bba9ac440f040bab9b12c25cffd80e07493d4011
+SHA1 (patch-genisoimage_jte.c) = 68e2940e6f6c91c1d22e144358df19ed47d0015e
+SHA1 (patch-icedax_icedax.c) = 88c6c550175d116038538be0b260023b0928805b
+SHA1 (patch-librols_spawn.c) = cde7214eb639182908372426e7c89e302fb3e9e8
+SHA1 (patch-libusal_scsi-remote.c) = c042319963b08068a919d329d4f7911e54776fe9
+SHA1 (patch-wodim_fifo.c) = 0b794cd33279439a98729e0c8a51b0d5050dbf71
