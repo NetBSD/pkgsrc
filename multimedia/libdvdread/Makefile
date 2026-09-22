@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/08/28 19:03:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/22 20:55:39 chuck Exp $
 
 DISTNAME=	libdvdread-7.1.1
 CATEGORIES=	multimedia
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	misc/dvdread.pc.in
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
