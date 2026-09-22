@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/09/29 14:16:28 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2026/09/22 08:11:52 ryoon Exp $
 
 BLAKE2s (firefox-128.14.0esr.source.tar.xz) = a3cc3c29528e11e4a25d67ac536bc00bdb09aaaddb21f36586e9a30a1dc412cb
 SHA512 (firefox-128.14.0esr.source.tar.xz) = a3cf267e82b6f5ab8b6497a62b12f85afb78fcaef6b12c43ef79564ce8270d3327a873368ce48fc018e46fef5e07339c07b9a494a5ff6c22a84099f939f6a9de
@@ -10,3 +10,6 @@ SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f81
 SHA1 (patch-js_src_old-configure.in) = 589e24765615ede2c3c6abfe0b3529c5645193ed
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = 65e1dee34fa5e9f9d1424390f3baf6c0c070617b
+SHA1 (patch-python_mozbuild_mozbuild_frontend_reader.py) = 0b9136397688cef5b9c5de578192ee61ce39440b
+SHA1 (patch-third__party_python_dlmanager_check.py) = 0390376a7bb03065760a24cf7676e01042bce092
+SHA1 (patch-third__party_python_jsonschema_jsonschema_validators.py) = 00cd379cf70cc27224ba328c684d94d0aa4fb4fd
