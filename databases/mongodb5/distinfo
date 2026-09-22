@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.1 2026/09/22 16:47:10 abs Exp $
+
+BLAKE2s (mongodb-src-r5.0.34.tar.gz) = cf977d68e3451b7bb2af0877c601e770e17794b7d1f0785cfb6e10b3db9d06a3
+SHA512 (mongodb-src-r5.0.34.tar.gz) = 13cdc98e24b42675d0dbc367b11835637635e30ccda059ed11993d78517f877d1b95d67552cb220f9588d9ce5abed6a0d6db3105498abb9894a2cdee7f79c409
+Size (mongodb-src-r5.0.34.tar.gz) = 57332527 bytes
+SHA1 (patch-SConstruct) = 8fdd61885a8cc8ca3d5c38b74c0128dc42bfb246
+SHA1 (patch-buildscripts_moduleconfig.py) = c88d13662bc30c627184d36690650e61c853dad5
+SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
+SHA1 (patch-site__scons_site__tools_libtool.py) = 5663c0095939fa5404776bfb7b472b27cfe3a254
+SHA1 (patch-src_mongo_base_initializer.h) = e4a6d77b5881fae2d4102c14d15f2d94b92ff3cf
+SHA1 (patch-src_mongo_db_exec_plan__stats.h) = e0d920d694b4d4ac10de013103f2e7bf922b9125
+SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = 816fb353844b117f945f6367d6bfc71445da7336
+SHA1 (patch-src_mongo_db_repl_isself.cpp) = b7931feac26dcffa7eac68f5cb348feb6b993c37
+SHA1 (patch-src_mongo_db_storage_storage__repair__observer.cpp) = 0a390aa59a4f041acbdd546a45241f9ffa2953dc
+SHA1 (patch-src_mongo_platform_process__id.cpp) = 8fe3aef889d5202fe3d19da8968796a1089c0fd6
+SHA1 (patch-src_mongo_platform_random.cpp) = 593cac552d27a64157b58be3f7c0d8656e5b604f
+SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = b4343403628b8b51177468eaa9f8a82b4c6bf21f
+SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = a29cbf034716ce48a23192320caf4928282b6c1a
+SHA1 (patch-src_mongo_shell_shell__utils__extended.cpp) = a17b7b93f956b37f5239b57b69f7a745e7e25e51
+SHA1 (patch-src_mongo_util_intrusive__counter.h) = 4c8e0d2e834686403a557de489ad518071851911
+SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 6c15ceeddecb9fa81a44fc322081596d0c85969e
+SHA1 (patch-src_mongo_util_time__support.cpp) = d576d8d39b10c496e492c8f0faf7e81f09ca875c
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 3c168389b9288df9055df0b01e8d26cf2f67293e
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = 0f00e7e1b710b3d19a936d5832ab08279bff48ee
+SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
+SHA1 (patch-src_third__party_mozjs-60_extract_js_src_wasm_WasmSignalHandlers.cpp) = a81c3db8eb610bb27db8007e1223ec5597f28d8e
+SHA1 (patch-src_third__party_mozjs-60_platform_aarch64_netbsd_build_js-confdefs.h) = bd4c0a282f898a20f331ce1fcf1451cc92d5677c
+SHA1 (patch-src_third__party_mozjs-60_platform_x86__64_netbsd_build_js-confdefs.h) = d58772d7abb048d14f4ea57f5e8a5b045b3b346c
+SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
+SHA1 (patch-src_third__party_wiredtiger_SConscript) = e97dea310463f246c0a8007a1ba9c5385105036d
+SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = 42c56c11e79b768aa3e454b63a62954d91953e0f
