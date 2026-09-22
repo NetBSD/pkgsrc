@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/22 13:31:37 kikadf Exp $
+
+BLAKE2s (typescript-6.0.3.tgz) = b87044ea35a25e3eed33c13cbb24f5aaad719ee2e5207d1ecf683c9cef657f02
+SHA512 (typescript-6.0.3.tgz) = cb64efbb14993c3c906a490544f6472859be28a56a222b1d83dfc26709bd7edbca5cb3fc3515a3dfcfce0e335baf8dd2b285ea36e022b047f519d0b1a9671d07
+Size (typescript-6.0.3.tgz) = 4515854 bytes
