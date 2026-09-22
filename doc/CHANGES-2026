@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6222 2026/09/22 13:43:26 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6223 2026/09/22 14:29:14 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9435,3 +9435,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libgsf to 1.14.59 [adam 2026-09-22]
 	Added lang/typescript version 6.0.3 [kikadf 2026-09-22]
 	Updated www/chromium to 153.0.8010.52 [kikadf 2026-09-22]
+	Updated net/megacmd to 2.6.0 [kikadf 2026-09-22]
