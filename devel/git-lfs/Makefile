@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2026/09/05 19:09:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.105 2026/09/22 11:29:58 adam Exp $
 
-DISTNAME=	git-lfs-3.7.1
-PKGREVISION=	12
+DISTNAME=	git-lfs-3.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-lfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +17,7 @@ GO_BUILD_PATTERN=	.
 
 pre-build:
 # generate content for "git-lfs --help"
-	ln -sf ${GO} ${BUILDLINK_DIR}/bin/go
+	${LN} -sf ${GO} ${BUILDLINK_DIR}/bin/go
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
 	    GOPATH=${WRKDIR}/.gopath ${GO} generate ./commands
 
