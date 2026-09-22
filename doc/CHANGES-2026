@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6229 2026/09/22 14:47:30 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6230 2026/09/22 14:48:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9443,3 +9443,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-release to 1.1.6 [pin 2026-09-22]
 	Updated devel/git-cliff to 2.14.2 [pin 2026-09-22]
 	Updated devel/gitpane to 0.17.0 [pin 2026-09-22]
+	Updated devel/serie to 0.9.1 [pin 2026-09-22]
