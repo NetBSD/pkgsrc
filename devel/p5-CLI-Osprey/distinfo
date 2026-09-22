@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:16:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/09/22 09:02:27 wiz Exp $
 
-BLAKE2s (CLI-Osprey-0.08.tar.gz) = 350327cb3fc70555562a7ce409c7e96d30ffd6163a63ed321778e13c9eba7502
-SHA512 (CLI-Osprey-0.08.tar.gz) = f643cc4981d3140da3bc713e9a12c36fd5b7bcaff493e9f462de59f8dcee18a66fa7be3154fd9dbcf4a5bc63cdf8d3a3896e2efc96dcb4862c7319e38a5de240
-Size (CLI-Osprey-0.08.tar.gz) = 21310 bytes
+BLAKE2s (CLI-Osprey-0.09.tar.gz) = a1b72219fa1a8c4403f7e9688c959d49c1978e4f29d46116fa54f95aae6321f8
+SHA512 (CLI-Osprey-0.09.tar.gz) = 1e029ee189c1c5e5ad5db011e00afde941ab7bed23ff224f243d738d1c57f4738a3e4b955eeb47536ebd160ebbf4e144cef41c25811157c94729c615a3e587af
+Size (CLI-Osprey-0.09.tar.gz) = 24384 bytes
