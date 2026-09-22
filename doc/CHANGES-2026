@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6214 2026/09/22 12:17:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6215 2026/09/22 12:21:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9423,3 +9423,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/cdbkup to 1.0nb18 [wiz 2026-09-22]
 	Updated databases/py-ldap to 3.4.8 [adam 2026-09-22]
 	Updated misc/py-lazy_loader to 0.6 [adam 2026-09-22]
+	Updated security/racoon2 to 20180701nb12 [wiz 2026-09-22]
