@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6179 2026/09/22 04:10:56 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6180 2026/09/22 04:42:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9358,3 +9358,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-introspection to 2.90.0 [ryoon 2026-09-22]
 	Updated devel/gdbus-codegen to 2.90.0 [ryoon 2026-09-22]
 	Updated devel/glibmm to 2.66.10 [ryoon 2026-09-22]
+	Updated security/py-OTXv2 to 1.5.12 [adam 2026-09-22]
+	Updated misc/py-tqdm to 4.70.1 [adam 2026-09-22]
