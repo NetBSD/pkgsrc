@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6216 2026/09/22 12:27:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6217 2026/09/22 12:40:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9425,3 +9425,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-lazy_loader to 0.6 [adam 2026-09-22]
 	Updated security/racoon2 to 20180701nb12 [wiz 2026-09-22]
 	Updated www/webkit-gtk41 to 2.54.0 [wiz 2026-09-22]
+	Updated misc/py-narwhals to 2.26.0 [adam 2026-09-22]
+	Updated www/py-pysaml2 to 7.5.5 [adam 2026-09-22]
