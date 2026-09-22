@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6232 2026/09/22 14:50:50 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6233 2026/09/22 14:54:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9446,3 +9446,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/serie to 0.9.1 [pin 2026-09-22]
 	Updated emulators/jgenesis to 0.13.1nb2 [pin 2026-09-22]
 	Updated misc/rozi to 0.0.23 [pin 2026-09-22]
+	Added multimedia/moviebox-tui version 0.1.23 [pin 2026-09-22]
