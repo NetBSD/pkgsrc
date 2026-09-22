@@ -1,0 +1,26 @@
+$NetBSD: patch-meson.build,v 1.1 2026/09/22 09:04:53 ryoon Exp $
+
+* Install pkg-config pc file under lib/pkgconfig.
+
+--- meson.build.orig	2026-09-01 08:18:55.120664955 +0000
++++ meson.build
+@@ -53,17 +53,13 @@ else
+ 
+   meson.override_find_program('blueprint-compiler', blueprint_compiler)
+ else
+-  if get_option('python_wheel')
+-    pkgconfig_path = 'share' / 'pkgconfig'
+-  else
+-    pkgconfig_path = 'pkgconfig'
+-  endif
++  pkgconfig_path = 'pkgconfig'
+ 
+   blueprint_compiler_pc = configure_file(
+     input: 'data/blueprint-compiler.pc.in',
+     output: 'blueprint-compiler.pc',
+     configuration: { 'VERSION': meson.project_version() },
+-    install_dir: get_option('datadir') / pkgconfig_path,
++    install_dir: get_option('libdir') / pkgconfig_path,
+   )
+ 
+   install_subdir(

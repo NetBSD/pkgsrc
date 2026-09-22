@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/09/22 09:04:53 ryoon Exp $
+
+BLAKE2s (blueprint-compiler-v0.22.2.tar.bz2) = 8aff134df4fc475120a204ebcc1e3037a76930d818615cd41763025266066635
+SHA512 (blueprint-compiler-v0.22.2.tar.bz2) = f046cfdfba0553ff8b38347b5cef6c4af2fa2df1fd27e7cd842ff76028cc57bc83dc7fbd5b71d235b0fd3be22236c6c380b72885d0201e54f844fa1f201ef9fd
+Size (blueprint-compiler-v0.22.2.tar.bz2) = 121857 bytes
+SHA1 (patch-meson.build) = 0c3b3bdeca2e1a989dcaefc134eff762ef0ad9fc
