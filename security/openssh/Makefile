@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2026/09/22 08:03:59 he Exp $
+# $NetBSD: Makefile,v 1.296 2026/09/22 08:06:07 wiz Exp $
 
 DISTNAME=		openssh-10.5p1
 PKGREVISION=		1
@@ -19,8 +19,6 @@ BROKEN_ON_PLATFORM+=	OpenBSD-*-*
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf perl
-
-CFLAGS+=		-g
 
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		IPV6_READY
