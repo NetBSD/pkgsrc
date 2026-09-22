@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6193 2026/09/22 08:05:01 he Exp $
+$NetBSD: CHANGES-2026,v 1.6194 2026/09/22 08:13:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9384,3 +9384,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/box2d to 3.1.1 [ryoon 2026-09-22]
 	Updated converters/dos2unix to 7.5.7 [ryoon 2026-09-22]
 	Updated security/openssh to 10.5p1nb1 [he 2026-09-22]
+	Updated net/net-snmp to 5.9.5.2 [adam 2026-09-22]
+	Updated net/py-netsnmp to 5.9.5.2 [adam 2026-09-22]
