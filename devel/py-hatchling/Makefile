@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/08/11 14:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/22 09:24:09 adam Exp $
 
-DISTNAME=	hatchling-1.32.0
+DISTNAME=	hatchling-1.32.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatchling/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.0.0:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.1:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-trove-classifiers-[0-9]*:../../misc/py-trove-classifiers
+DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=0:../../misc/py-trove-classifiers
 
 USE_LANGUAGES=	# none
 
