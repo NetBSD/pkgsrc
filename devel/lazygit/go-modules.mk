@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.22 2026/09/07 05:35:55 adam Exp $
+# $NetBSD: go-modules.mk,v 1.23 2026/09/22 07:33:02 adam Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -32,8 +32,8 @@ GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.1.zip
-GO_MODULE_FILES+=	github.com/gdamore/tcell/v3/@v/v3.4.2.mod
-GO_MODULE_FILES+=	github.com/gdamore/tcell/v3/@v/v3.4.2.zip
+GO_MODULE_FILES+=	github.com/gdamore/tcell/v3/@v/v3.5.0.mod
+GO_MODULE_FILES+=	github.com/gdamore/tcell/v3/@v/v3.5.0.zip
 GO_MODULE_FILES+=	github.com/go-errors/errors/@v/v1.5.1.mod
 GO_MODULE_FILES+=	github.com/go-errors/errors/@v/v1.5.1.zip
 GO_MODULE_FILES+=	github.com/go-logfmt/logfmt/@v/v0.4.0.mod
