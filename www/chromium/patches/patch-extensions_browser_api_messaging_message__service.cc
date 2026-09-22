@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_browser_api_messaging_message__service.cc,v 1.25 2026/09/02 13:13:31 kikadf Exp $
+$NetBSD: patch-extensions_browser_api_messaging_message__service.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ extensions/browser/api/messaging/message_service.cc
 @@ -91,7 +91,7 @@ const char kReceivingEndIncompatibleMess
      "Could not establish connection. Receiving end uses different message "
@@ -15,7 +15,7 @@ $NetBSD: patch-extensions_browser_api_messaging_message__service.cc,v 1.25 2026/
  const char kMissingPermissionError[] =
      "Access to native messaging requires nativeMessaging permission.";
  const char kProhibitedByPoliciesError[] =
-@@ -716,7 +716,7 @@ void MessageService::OpenChannelToNative
+@@ -714,7 +714,7 @@ void MessageService::OpenChannelToNative
      return;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

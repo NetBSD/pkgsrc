@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.25 2026/09/02 13:13:32 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
-@@ -189,7 +189,7 @@ const base::FeatureParam<std::string>
+@@ -194,7 +194,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.
  BASE_FEATURE(kRemoveGPULegacyIPC, base::FEATURE_DISABLED_BY_DEFAULT);
  

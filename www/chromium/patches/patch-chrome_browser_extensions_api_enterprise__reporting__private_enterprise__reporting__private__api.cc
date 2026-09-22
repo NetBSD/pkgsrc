@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_enterprise__reporting__private__api.cc,v 1.25 2026/09/02 13:13:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_enterprise__reporting__private__api.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc
 @@ -29,7 +29,7 @@
  #include "components/enterprise/connectors/core/reporting_constants.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
  #include <optional>
  
  #include "base/strings/string_util.h"
-@@ -324,7 +324,7 @@ api::enterprise_reporting_private::Conte
+@@ -261,7 +261,7 @@ api::enterprise_reporting_private::Conte
  }
  
  bool AllowClientCertificateReportingForUsers() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
    return base::FeatureList::IsEnabled(
        enterprise_signals::features::kAllowClientCertificateReportingForUsers);
  #else
-@@ -337,7 +337,7 @@ bool IsProfilePrefManaged(Profile* profi
+@@ -274,7 +274,7 @@ bool IsProfilePrefManaged(Profile* profi
    return pref && pref->IsManaged();
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
  
  device_signals::SignalsAggregationRequest CreateAggregationRequest(
      device_signals::SignalName signal_name) {
-@@ -399,7 +399,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
+@@ -336,7 +336,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
  
  // getPersistentSecret
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_ente
  
  EnterpriseReportingPrivateGetPersistentSecretFunction::
      EnterpriseReportingPrivateGetPersistentSecretFunction() = default;
-@@ -716,7 +716,7 @@ void EnterpriseReportingPrivateGetCertif
+@@ -653,7 +653,7 @@ void EnterpriseReportingPrivateGetCertif
    Respond(WithArguments(ret.ToValue()));
  }
  

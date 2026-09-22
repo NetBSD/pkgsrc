@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.25 2026/09/02 13:13:29 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.26 2026/09/22 13:41:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
-@@ -59,7 +59,7 @@ inline constexpr char kCredentialProvide
+@@ -63,7 +63,7 @@ inline constexpr char kCredentialProvide
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_common_password__manager__pref_
  // Boolean pref controlled by the DeletingUndecryptablePasswordsEnabled policy.
  // If set to false it blocks deleting undecryptable passwords, otherwise the
  // deletion can happen.
-@@ -217,7 +217,7 @@ inline constexpr char kProfileStoreDateL
+@@ -221,7 +221,7 @@ inline constexpr char kProfileStoreDateL
  inline constexpr char kAccountStoreDateLastUsedForFilling[] =
      "password_manager.account_store_date_last_used_for_filling";
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_password__manager_core_common_password__manager__pref_
  // Integer indicating how many times user saw biometric authentication before
  // filling promo.
  inline constexpr char kBiometricAuthBeforeFillingPromoShownCounter[] =
-@@ -253,7 +253,7 @@ inline constexpr char kPasswordManagerPr
+@@ -257,7 +257,7 @@ inline constexpr char kPasswordManagerPr
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  
@@ -33,7 +33,7 @@ $NetBSD: patch-components_password__manager_core_common_password__manager__pref_
  // Integer pref indicating how many times relaunch Chrome bubble was dismissed.
  inline constexpr char kRelaunchChromeBubbleDismissedCounter[] =
      "password_manager.relaunch_chrome_bubble_dismissed_counter";
-@@ -286,7 +286,7 @@ inline constexpr char kLastNegativePassw
+@@ -290,7 +290,7 @@ inline constexpr char kLastNegativePassw
      "password_manager.last_negative_password_change_timestamp";
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \

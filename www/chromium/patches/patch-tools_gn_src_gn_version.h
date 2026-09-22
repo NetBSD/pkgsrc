@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_src_gn_version.h,v 1.25 2026/09/02 13:13:38 kikadf Exp $
+$NetBSD: patch-tools_gn_src_gn_version.h,v 1.26 2026/09/22 13:41:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/gn/version.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- tools/gn/src/gn/version.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ tools/gn/src/gn/version.h
 @@ -22,9 +22,9 @@ class Version {
  

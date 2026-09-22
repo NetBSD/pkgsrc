@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libvpx_source_config_linux_arm64_vpx__dsp__rtcd.h,v 1.8 2026/09/02 13:13:37 kikadf Exp $
+$NetBSD: patch-third__party_libvpx_source_config_linux_arm64_vpx__dsp__rtcd.h,v 1.9 2026/09/22 13:41:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/libvpx/source/config/linux/arm64/vpx_dsp_rtcd.h
 @@ -885,32 +885,26 @@ uint32_t vpx_sub_pixel_avg_variance8x8_n
  

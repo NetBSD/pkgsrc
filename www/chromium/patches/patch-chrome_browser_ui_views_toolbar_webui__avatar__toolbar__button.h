@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__avatar__toolbar__button.h,v 1.5 2026/09/02 13:13:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__avatar__toolbar__button.h,v 1.6 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_avatar_toolbar_button.h
-@@ -57,7 +57,7 @@ class WebUIAvatarToolbarButton : public 
+@@ -55,7 +55,7 @@ class WebUIAvatarToolbarButton : public 
        bool should_announce) override;
    bool HasExplicitButtonState() const override;
    void MaybeShowProfileSwitchIPH() override;

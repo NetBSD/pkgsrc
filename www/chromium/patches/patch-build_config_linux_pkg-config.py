@@ -1,17 +1,17 @@
-$NetBSD: patch-build_config_linux_pkg-config.py,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-build_config_linux_pkg-config.py,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/linux/pkg-config.py.orig	2026-08-31 22:47:51.000000000 +0000
+--- build/config/linux/pkg-config.py.orig	2026-09-14 22:17:16.000000000 +0000
 +++ build/config/linux/pkg-config.py
-@@ -125,7 +125,7 @@ def main():
-   # If this is run on non-Linux platforms, just return nothing and indicate
-   # success. This allows us to "kind of emulate" a Linux build from other
-   # platforms.
--  if "linux" not in sys.platform:
-+  if not sys.platform.startswith(tuple(['linux', 'openbsd', 'freebsd', 'netbsd'])):
-     if options.dridriverdir or options.libdir:
-       sys.stdout.write("")
-       return 0
+@@ -145,7 +145,7 @@ def main():
+     # If this is run on non-Linux platforms, just return nothing and indicate
+     # success. This allows us to "kind of emulate" a Linux build from other
+     # platforms.
+-    if "linux" not in sys.platform:
++    if not sys.platform.startswith(tuple(['linux', 'openbsd', 'freebsd', 'netbsd'])):
+         if options.dridriverdir or options.libdir:
+             sys.stdout.write("")
+             return 0

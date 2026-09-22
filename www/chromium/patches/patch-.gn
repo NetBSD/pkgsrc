@@ -1,0 +1,17 @@
+$NetBSD: patch-.gn,v 1.3 2026/09/22 13:41:17 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- .gn.orig	2026-09-14 22:17:16.000000000 +0000
++++ .gn
+@@ -9,7 +9,7 @@ import("//third_party/angle/dotfile_sett
+ buildconfig = "//build/config/BUILDCONFIG.gn"
+ 
+ # The hermetic Python interpreter to use by default.
+-script_executable = "//third_party/cpython3/host/bin/python3"
++script_executable = "python3"
+ 
+ # These arguments override the default values for items in a declare_args
+ # block. "gn args" in turn can override these.

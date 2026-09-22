@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__metrics__service__factory.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__metrics__service__factory.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_metrics_service_factory.cc
 @@ -19,7 +19,7 @@
  #include "components/supervised_user/core/browser/supervised_user_service.h"

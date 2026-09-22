@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.25 2026/09/02 13:13:21 kikadf Exp $
+$NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.26 2026/09/22 13:41:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_openbsd.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- base/process/process_handle_openbsd.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ base/process/process_handle_openbsd.cc
-@@ -3,17 +3,25 @@
+@@ -3,8 +3,13 @@
  // found in the LICENSE file.
  
  #include "base/process/process_handle.h"
@@ -20,9 +20,7 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.25 2026/09/02 13:13:
  #include <sys/sysctl.h>
  #include <sys/types.h>
  #include <unistd.h>
- 
-+#include <kvm.h>
-+
+@@ -12,8 +17,9 @@
  namespace base {
  
  ProcessId GetParentProcessId(ProcessHandle process) {
@@ -33,7 +31,7 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.25 2026/09/02 13:13:
    int mib[] = {
        CTL_KERN, KERN_PROC, KERN_PROC_PID, process, sizeof(struct kinfo_proc),
        0};
-@@ -22,37 +30,87 @@ ProcessId GetParentProcessId(ProcessHand
+@@ -22,37 +28,39 @@ ProcessId GetParentProcessId(ProcessHand
      return -1;
    }
  
@@ -59,19 +57,26 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.25 2026/09/02 13:13:
  
  FilePath GetProcessExecutablePath(ProcessHandle process) {
 -  struct kinfo_proc kp;
-+  struct kinfo_file *files;
-+  kvm_t *kd = NULL;
-+  char errbuf[_POSIX2_LINE_MAX];
-+  char **retvalargs, *cpath, retval[PATH_MAX];
-+  int cnt;
-   size_t len;
+-  size_t len;
 -  int mib[] = {
 -      CTL_KERN, KERN_PROC, KERN_PROC_PID, process, sizeof(struct kinfo_proc),
 -      0};
 -
 -  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) == -1) {
--    return FilePath();
--  }
++  FilePath result;
++#if (OpenBSD >= 202610)
++  char execpath[PATH_MAX];
++  if (getexecpath(execpath, sizeof(execpath)) != 0) {
+     return FilePath();
++  } 
++  result = FilePath(execpath);
++#else
++  char *cpath;
++  if ((cpath = getenv("CHROME_EXE_PATH")) != NULL) {
++    result = FilePath(cpath);
++  } else {
++    result = FilePath("@PREFIX@/lib/chromium/chrome");
+   }
 -  mib[5] = (len / sizeof(struct kinfo_proc));
 -  if (sysctl(mib, std::size(mib), &kp, &len, NULL, 0) < 0) {
 -    return FilePath();
@@ -81,64 +86,10 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.25 2026/09/02 13:13:
 -  }
 -  if (strcmp(kp.p_comm, "chrome") == 0) {
 -    return FilePath(kp.p_comm);
-+  char *tokens[2];
-+  struct stat sb;
-+  FilePath result;
-+
-+  int mib[] = { CTL_KERN, KERN_PROC_ARGS, process, KERN_PROC_ARGV };
-+
-+  if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
-+    result = FilePath(cpath);
-+  else
-+    result = FilePath("@PREFIX@/lib/chromium/chrome");
-+
-+  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) != -1) {
-+    retvalargs = static_cast<char**>(malloc(len));
-+    if (!retvalargs)
-+      return result;
-+
-+    if (sysctl(mib, std::size(mib), retvalargs, &len, NULL, 0) < 0) {
-+      free(retvalargs);
-+      return result;
-+    }
-+
-+    if ((*tokens = strtok(retvalargs[0], ":")) == NULL) {
-+      free(retvalargs);
-+      return result;
-+    }
-+
-+    free(retvalargs);
-+
-+    if (tokens[0] == NULL)
-+      return result;
-+
-+    if (realpath(tokens[0], retval) == NULL)
-+      return result;
-+
-+    if (stat(retval, &sb) < 0)
-+      return result;
-+
-+    if ((kd = kvm_openfiles(NULL, NULL, NULL, (int)KVM_NO_FILES,
-+         errbuf)) == NULL)
-+      return result;
-+
-+    if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, process,
-+        sizeof(struct kinfo_file), &cnt)) == NULL) {
-+      kvm_close(kd);
-+      return result;
-+    }
-+
-+    for (int i = 0; i < cnt; i++) {
-+      if (files[i].fd_fd == KERN_FILE_TEXT &&
-+          files[i].va_fsid == static_cast<uint32_t>(sb.st_dev) &&
-+          files[i].va_fileid == sb.st_ino) {
-+            kvm_close(kd);
-+            result = FilePath(retval);
-+      }
-+    }
-   }
- 
+-  }
+-
 -  return FilePath();
++#endif
 +  return result;
  }
  

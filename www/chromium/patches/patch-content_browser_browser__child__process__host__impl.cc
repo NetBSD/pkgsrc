@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl.cc,v 1.25 2026/09/02 13:13:30 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl.cc,v 1.26 2026/09/22 13:41:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -293,6 +293,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kLogBestEffortTasks,
@@ -14,7 +14,7 @@ $NetBSD: patch-content_browser_browser__child__process__host__impl.cc,v 1.25 202
    };
    cmd_line->CopySwitchesFrom(browser_command_line, kForwardSwitches);
  
-@@ -658,7 +659,7 @@ void BrowserChildProcessHostImpl::OnProc
+@@ -654,7 +655,7 @@ void BrowserChildProcessHostImpl::OnProc
            ->child_process());
  #endif
  

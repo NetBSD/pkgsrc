@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.24 2026/09/02 13:13:28 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.25 2026/09/22 13:41:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/device_signals/core/common/linux/platform_utils_linux.cc
 @@ -4,11 +4,22 @@
  
@@ -29,20 +29,21 @@ $NetBSD: patch-components_device__signals_core_common_linux_platform__utils__lin
  
  #include <algorithm>
  #include <optional>
-@@ -105,6 +116,7 @@ SettingValue GetScreenlockSecured() {
- // Implements the logic from the native host installation script. First find the
- // root device identifier, then locate its parent and get its type.
- SettingValue GetDiskEncrypted() {
+@@ -129,6 +140,7 @@ SettingValue GetDiskEncrypted() {
+   // ChromeOS user partitions are always encrypted via cryptohome.
+   return SettingValue::ENABLED;
+ #else
 +#if !BUILDFLAG(IS_BSD)
    struct stat info;
    // First figure out the device identifier. Fail fast if this fails.
    if (stat("/", &info) != 0) {
-@@ -127,11 +139,35 @@ SettingValue GetDiskEncrypted() {
+@@ -151,12 +163,36 @@ SettingValue GetDiskEncrypted() {
      }
      return SettingValue::UNKNOWN;
    }
 +#endif
    return SettingValue::DISABLED;
+ #endif
  }
  
  std::vector<std::string> internal::GetMacAddressesImpl() {
@@ -73,7 +74,7 @@ $NetBSD: patch-components_device__signals_core_common_linux_platform__utils__lin
    base::DirReaderPosix reader("/sys/class/net");
    if (!reader.IsValid()) {
      return result;
-@@ -156,6 +192,7 @@ std::vector<std::string> internal::GetMa
+@@ -181,6 +217,7 @@ std::vector<std::string> internal::GetMa
                                &address);
      result.push_back(address);
    }

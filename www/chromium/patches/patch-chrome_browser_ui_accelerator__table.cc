@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.18 2026/09/02 13:13:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_accelerator__table.cc,v 1.19 2026/09/22 13:41:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/accelerator_table.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/ui/accelerator_table.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/ui/accelerator_table.cc
 @@ -77,11 +77,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},

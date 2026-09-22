@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders.cc,v 1.25 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders.cc,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
-@@ -84,7 +84,7 @@
+@@ -89,7 +89,7 @@
  #endif  // BUILDFLAG(ENABLE_UNHANDLED_TAP)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders.cc,v 1.25 2026
  #include "chrome/browser/screen_ai/screen_ai_service_router.h"
  #include "chrome/browser/screen_ai/screen_ai_service_router_factory.h"
  #include "chrome/browser/web_applications/sub_apps/sub_apps_service_impl.h"
-@@ -387,7 +387,7 @@ void BindMediaFoundationPreferences(
+@@ -391,7 +391,7 @@ void BindMediaFoundationPreferences(
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders.cc,v 1.25 2026
  void BindScreenAIAnnotator(
      content::RenderFrameHost* frame_host,
      mojo::PendingReceiver<screen_ai::mojom::ScreenAIAnnotator> receiver) {
-@@ -561,7 +561,7 @@ void PopulateChromeFrameBinders(
+@@ -573,7 +573,7 @@ void PopulateChromeFrameBinders(
  #endif  // BUILDFLAG(ENABLE_SPEECH_SERVICE)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.25 2026/09/02 13:13:31 kikadf Exp $
+$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
 @@ -20,8 +20,10 @@
  #include "build/build_config.h"

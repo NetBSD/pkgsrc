@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_ipc__constants.h,v 1.10 2026/09/02 13:13:34 kikadf Exp $
+$NetBSD: patch-remoting_host_ipc__constants.h,v 1.11 2026/09/22 13:41:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- remoting/host/ipc_constants.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ remoting/host/ipc_constants.h
 @@ -31,7 +31,7 @@ bool GetInstalledBinaryPath(const base::
  const mojo::NamedPlatformChannel::ServerName&

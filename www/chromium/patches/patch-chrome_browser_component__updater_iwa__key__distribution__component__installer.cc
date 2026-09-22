@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.cc,v 1.24 2026/09/02 13:13:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.cc,v 1.25 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.cc
 @@ -32,7 +32,7 @@ bool IsComponentSupported() {
    // Key Distribution component is necessary for full IWAs support as it

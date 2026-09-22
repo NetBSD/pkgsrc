@@ -1,17 +1,45 @@
-$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.25 2026/09/02 13:13:36 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.26 2026/09/22 13:41:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
-@@ -2118,7 +2118,7 @@ static_library("test_support") {
+@@ -186,6 +186,18 @@ group("make_platform_generated") {
    ]
+ }
  
-   # fuzzed_data_provider may not work with a custom toolchain.
--  if (custom_toolchain == "" && is_clang) {
-+  if ((custom_toolchain == "" && is_clang) && !is_bsd) {
-     sources += [
-       "testing/fuzzed_data_provider.cc",
-       "testing/fuzzed_data_provider.h",
++rust_static_library("font_format_check") {
++  allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
++  crate_root = "fonts/opentype/format_check.rs"
++  sources = [ crate_root ]
++  cxx_bindings = [ crate_root ]
++  deps = [
++    "//third_party/rust/font_types/v0_12:lib",
++    "//third_party/rust/read_fonts/v0_41:lib",
++    "//third_party/rust/skrifa/v0_44:lib",
++  ]
++}
++
+ rust_static_library("rustfft_ffi") {
+   allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
+   crate_root = "audio/rustfft_ffi.rs"
+@@ -1794,7 +1806,6 @@ component("platform") {
+     ":allow_discouraged_type",
+     ":blink_platform_public_deps",
+     ":platform_export",
+-    "//build/rust/crubit",
+     "//gpu/command_buffer/client:raster_interface",
+     "//media/capture:capture_lib",
+     "//mojo/public/cpp/base",
+@@ -1821,8 +1832,8 @@ component("platform") {
+     "//ui/native_theme/features",
+   ]
+   deps = [
++    ":font_format_check",
+     ":rustfft_ffi",
+-    "fonts:font_format_bindings",
+     "//base:base_static",
+     "//base/allocator:buildflags",
+     "//build:chromecast_buildflags",

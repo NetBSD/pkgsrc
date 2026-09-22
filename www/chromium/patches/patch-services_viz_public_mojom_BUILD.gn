@@ -1,10 +1,10 @@
-$NetBSD: patch-services_viz_public_mojom_BUILD.gn,v 1.24 2026/09/02 13:13:35 kikadf Exp $
+$NetBSD: patch-services_viz_public_mojom_BUILD.gn,v 1.25 2026/09/22 13:41:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/viz/public/mojom/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
+--- services/viz/public/mojom/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
 +++ services/viz/public/mojom/BUILD.gn
 @@ -54,7 +54,7 @@ mojom("mojom") {
  

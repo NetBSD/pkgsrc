@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.81 2026/09/08 12:48:38 kikadf Exp $
+# $NetBSD: Makefile,v 1.82 2026/09/22 13:41:17 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			152.0.7977.82
+VERSION=			153.0.8010.52
 CATEGORIES=			www
-MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+#MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
 EXTRACT_SUFX_C=			.tar.xz
 
 #PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
 #SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
-DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
+DISTFILES+=			${DISTNAME}-linux${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
@@ -207,6 +208,7 @@ GN_ARGS+=	use_system_harfbuzz=true
 GN_ARGS+=	use_system_libdrm=true
 GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
 GN_ARGS+=	use_thin_lto=false
+GN_ARGS+=	use_typescript_go=false
 GN_ARGS+=	use_udev=true
 GN_ARGS+=	use_vaapi=false
 GN_ARGS+=	v8_enable_cet_ibt=true
@@ -425,6 +427,7 @@ BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
+.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"

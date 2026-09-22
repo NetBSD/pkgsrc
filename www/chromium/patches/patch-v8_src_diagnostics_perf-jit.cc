@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_diagnostics_perf-jit.cc,v 1.25 2026/09/02 13:13:40 kikadf Exp $
+$NetBSD: patch-v8_src_diagnostics_perf-jit.cc,v 1.26 2026/09/22 13:41:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/diagnostics/perf-jit.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- v8/src/diagnostics/perf-jit.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ v8/src/diagnostics/perf-jit.cc
 @@ -31,7 +31,7 @@
  #include "src/flags/flags.h"

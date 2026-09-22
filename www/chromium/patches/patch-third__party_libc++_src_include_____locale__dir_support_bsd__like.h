@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.18 2026/09/02 13:13:37 kikadf Exp $
+$NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like.h,v 1.19 2026/09/22 13:41:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- third_party/libc++/src/include/__locale_dir/support/bsd_like.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ third_party/libc++/src/include/__locale_dir/support/bsd_like.h
-@@ -61,22 +61,22 @@ inline _LIBCPP_HIDE_FROM_ABI char* __set
+@@ -62,22 +62,22 @@ inline _LIBCPP_HIDE_FROM_ABI char* __set
    return ::setlocale(__category, __locale);
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like
  }
  
  //
-@@ -141,43 +141,43 @@ inline _LIBCPP_HIDE_FROM_ABI _LIBCPP_ATT
+@@ -142,43 +142,43 @@ inline _LIBCPP_HIDE_FROM_ABI _LIBCPP_ATT
  //
  // Other functions
  //
@@ -86,8 +86,8 @@ $NetBSD: patch-third__party_libc++_src_include_____locale__dir_support_bsd__like
 +  return ::mbsrtowcs(__dest, __src, __len, __ps);
  }
  #  endif // _LIBCPP_HAS_WIDE_CHARACTERS
- #endif   // _LIBCPP_BUILDING_LIBRARY
-@@ -194,13 +194,13 @@ _LIBCPP_GCC_DIAGNOSTIC_IGNORED("-Wformat
+ 
+@@ -199,13 +199,13 @@ _LIBCPP_GCC_DIAGNOSTIC_IGNORED("-Wformat
  template <class... _Args>
  _LIBCPP_HIDE_FROM_ABI _LIBCPP_VARIADIC_ATTRIBUTE_FORMAT(__printf__, 4, 5) int __snprintf(
      char* __s, size_t __n, __locale_t __loc, const char* __format, _Args&&... __args) {

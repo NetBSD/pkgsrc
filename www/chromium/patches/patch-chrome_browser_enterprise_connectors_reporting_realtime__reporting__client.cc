@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.25 2026/09/02 13:13:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -24,16 +24,16 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
  using Event = ::chrome::cros::reporting::proto::Event;
  #endif
  
-@@ -162,7 +162,7 @@ void RealtimeReportingClient::ReportPast
-                                      /*include_profile_user_name=*/false);
+@@ -144,7 +144,7 @@ RealtimeReportingClient::GetReportingSet
  }
+ 
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
+ 
  void AddCrowdstrikeSignalsToEvent(
-     base::DictValue& event,
-@@ -285,7 +285,7 @@ std::string RealtimeReportingClient::Get
+@@ -248,7 +248,7 @@ std::string RealtimeReportingClient::Get
    username_ =
        identity_manager_ ? GetProfileEmail(identity_manager_) : std::string();
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
    if (username_.empty()) {
      username_ = Profile::FromBrowserContext(context_)->GetPrefs()->GetString(
          enterprise_signin::prefs::kProfileUserEmail);
-@@ -342,7 +342,7 @@ std::string RealtimeReportingClient::Get
+@@ -305,7 +305,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  

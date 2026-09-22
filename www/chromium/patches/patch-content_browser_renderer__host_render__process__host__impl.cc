@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.25 2026/09/02 13:13:31 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
-@@ -230,7 +230,7 @@
+@@ -229,7 +229,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
  #include <sys/resource.h>
  
  #include "components/services/font/public/mojom/font_service.mojom.h"  // nogncheck
-@@ -1196,7 +1196,7 @@ static constexpr size_t kUnknownPlatform
+@@ -1184,7 +1184,7 @@ static constexpr size_t kUnknownPlatform
  // to indicate failure and std::numeric_limits<size_t>::max() to indicate
  // unlimited.
  size_t GetPlatformProcessLimit() {
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1456,7 +1456,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
+@@ -1444,7 +1444,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
  
  void RenderProcessHostImpl::IOThreadHostImpl::SetPid(
      base::ProcessId child_pid) {
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  }
-@@ -3811,7 +3811,7 @@ void RenderProcessHostImpl::AppendRender
+@@ -3809,7 +3809,7 @@ void RenderProcessHostImpl::AppendRender
    command_line->AppendSwitchASCII(switches::kRendererClientId,
                                    base::NumberToString(GetID().value()));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    // Append `kDisableVideoCaptureUseGpuMemoryBuffer` flag if there is no support
    // for NV12 GPU memory buffer.
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled() &&
-@@ -3869,6 +3869,7 @@ void RenderProcessHostImpl::PropagateBro
+@@ -3867,6 +3867,7 @@ void RenderProcessHostImpl::PropagateBro
        switches::kDisableSkiaRuntimeOpts,
        switches::kDisableSpeechAPI,
        switches::kDisableThreadedCompositing,
@@ -50,7 +50,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
        switches::kDisableV8IdleTasks,
        switches::kDisableVideoCaptureUseGpuMemoryBuffer,
        switches::kDomAutomationController,
-@@ -5863,7 +5864,7 @@ uint64_t RenderProcessHostImpl::GetPriva
+@@ -5864,7 +5865,7 @@ uint64_t RenderProcessHostImpl::GetPriva
    // - Win: https://crbug.com/707022 .
    uint64_t total_size = 0;
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

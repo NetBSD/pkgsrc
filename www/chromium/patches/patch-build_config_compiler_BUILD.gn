@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf Exp $
+$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.26 2026/09/22 13:41:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2026-08-31 22:47:51.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -203,7 +203,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -24,25 +24,16 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
      is_clang && clang_warning_suppression_file != ""
  
  # default_include_dirs ---------------------------------------------------------
-@@ -302,13 +302,16 @@ config("default_include_dirs") {
- # Compiler instrumentation can introduce dependencies in DSOs to symbols in
- # the executable they are loaded into, so they are unresolved at link-time.
+@@ -308,7 +308,7 @@ config("default_include_dirs") {
+ # libclang_rt.asan-*-android.so), so all sanitizer symbols are resolved at link
+ # time and -Wl,-z,defs can safely remain enabled to catch missing symbols.
  config("no_unresolved_symbols") {
--  if (!using_sanitizer &&
-+  if (!using_sanitizer && !is_bsd &&
+-  if ((!using_sanitizer || is_android) &&
++  if (!is_bsd && (!using_sanitizer || is_android) &&
        (is_linux || is_chromeos || is_android || is_fuchsia)) {
      ldflags = [
        "-Wl,-z,defs",
-       "-Wl,--as-needed",
-     ]
-   }
-+  if (current_cpu == "x86" && is_openbsd) {
-+    ldflags = [ "-Wl,-z,notext", "-Wl,--strip-all" ]
-+  }
- }
- 
- # compiler ---------------------------------------------------------------------
-@@ -541,6 +544,10 @@ config("compiler") {
+@@ -551,6 +551,10 @@ config("compiler") {
      }
    }
  
@@ -53,7 +44,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
    # Linux-specific compiler flags setup.
    # ------------------------------------
    if (is_linux || is_chromeos) {
-@@ -579,9 +586,9 @@ config("compiler") {
+@@ -589,9 +593,9 @@ config("compiler") {
      # Flags for diagnostics.
      cflags += [ "-fcolor-diagnostics" ]
      if (!is_wasm) {
@@ -65,7 +56,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
          # Combine after https://github.com/llvm/llvm-project/pull/192241
          cflags += [ "/clang:-fdiagnostics-show-inlining-chain" ]
        }
-@@ -607,7 +614,7 @@ config("compiler") {
+@@ -617,7 +621,7 @@ config("compiler") {
      }
    }
  
@@ -74,7 +65,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
      cflags += [ "-fcrash-diagnostics-dir=" + clang_diagnostic_dir ]
      if (save_reproducers_on_lld_crash && use_lld) {
        ldflags += [
-@@ -1466,7 +1473,7 @@ config("compiler_deterministic") {
+@@ -1476,7 +1480,7 @@ config("compiler_deterministic") {
  }
  
  config("clang_revision") {
@@ -83,25 +74,34 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
        current_os != "zos") {
      _perform_consistency_checks = current_toolchain == default_toolchain
      if (llvm_force_head_revision) {
-@@ -1580,7 +1587,7 @@ config("clang_warning_suppression") {
+@@ -1590,7 +1594,7 @@ config("clang_warning_suppression") {
  # See also: https://crbug.com/40891132#comment10
  ubsan_hardening("c_array_bounds") {
    sanitizer = "array-bounds"
--  condition = !(is_asan && target_cpu == "x86") && !is_wasm
-+  condition = !(is_asan && target_cpu == "x86") && !is_wasm && !is_bsd
+-  condition = !(is_asan && target_cpu == "x86")
++  condition = !(is_asan && target_cpu == "x86") && !is_bsd
  
    # Because we've enabled array-bounds sanitizing we also want to suppress
    # the related warning about "unsafe-buffer-usage-in-static-sized-array",
-@@ -1594,7 +1601,7 @@ ubsan_hardening("c_array_bounds") {
+@@ -1604,6 +1608,7 @@ ubsan_hardening("c_array_bounds") {
  # `NOTREACHED()` at the end of such functions.
  ubsan_hardening("return") {
    sanitizer = "return"
--  condition = !is_wasm
-+  condition = !is_wasm && !is_bsd
++  condition = !is_bsd
  }
  
  config("rustc_revision") {
-@@ -1931,7 +1938,7 @@ config("default_warnings") {
+@@ -1918,9 +1923,6 @@ config("default_warnings") {
+       # TODO(thakis): Push this to the (few) targets that need it,
+       # instead of having a global flag.
+       "-Wno-psabi",
+-
+-      # TODO(crbug.com/526996813): Figure out what to do about this.
+-      "-Wno-stringop-overread",
+     ]
+ 
+     cflags_cc += [
+@@ -1949,7 +1951,7 @@ config("default_warnings") {
        "-Wno-nontrivial-memcall",
      ]
  
@@ -110,7 +110,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
        cflags += [
          # TODO(crbug.com/432275627): Fix and re-enable.
          "-Wno-uninitialized-const-pointer",
-@@ -2321,7 +2328,7 @@ config("export_dynamic") {
+@@ -2345,7 +2347,7 @@ config("export_dynamic") {
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
    if ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix" ||
@@ -119,7 +119,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -2762,7 +2769,7 @@ config("afdo_optimize_size") {
+@@ -2786,7 +2788,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -128,7 +128,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.25 2026/09/02 13:13:21 kikadf 
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2789,7 +2796,7 @@ config("afdo") {
+@@ -2813,7 +2815,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__view__host__impl.cc,v 1.25 2026/09/02 13:13:31 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__view__host__impl.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
-@@ -265,7 +265,7 @@ void RenderViewHostImpl::GetPlatformSpec
+@@ -266,7 +266,7 @@ void RenderViewHostImpl::GetPlatformSpec
    GetFontInfo(gfx::win::SystemFont::kStatus, &prefs->status_font_family_name,
                &prefs->status_font_height);
  

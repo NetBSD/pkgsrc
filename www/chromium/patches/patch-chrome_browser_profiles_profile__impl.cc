@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
 @@ -268,7 +268,7 @@
  #include "chrome/browser/safe_browsing/safe_browsing_service.h"
@@ -26,7 +26,7 @@ $NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.25 2026/09/02 13:13:
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -638,7 +642,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -640,7 +644,7 @@ void ProfileImpl::LoadPrefsForNormalStar
    policy_provider = GetUserCloudPolicyManagerAsh();
  #else  // !BUILDFLAG(IS_CHROMEOS)
    {
@@ -35,7 +35,7 @@ $NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.25 2026/09/02 13:13:
      if (GetTestingCloudPolicyManagerFactory()) {
        auto result = GetTestingCloudPolicyManagerFactory().Run(this);
        if (std::holds_alternative<
-@@ -657,7 +661,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -659,7 +663,7 @@ void ProfileImpl::LoadPrefsForNormalStar
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
      if (!cloud_policy_manager) {
@@ -44,7 +44,7 @@ $NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.25 2026/09/02 13:13:
        ProfileAttributesEntry* entry = nullptr;
        if (g_browser_process->profile_manager()) {
          entry = g_browser_process->profile_manager()
-@@ -850,7 +854,7 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -852,7 +856,7 @@ void ProfileImpl::DoFinalInit(CreateMode
    }
  #endif
  
@@ -53,7 +53,7 @@ $NetBSD: patch-chrome_browser_profiles_profile__impl.cc,v 1.25 2026/09/02 13:13:
    // Bootstrap and initialize the Gapis service.
    if (gapis::GapisService* gapis_service =
            GapisServiceFactory::GetForProfile(this)) {
-@@ -946,7 +950,17 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -948,7 +952,17 @@ void ProfileImpl::DoFinalInit(CreateMode
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

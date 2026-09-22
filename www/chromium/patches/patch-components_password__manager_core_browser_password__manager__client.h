@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__manager__client.h,v 1.25 2026/09/02 13:13:29 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__manager__client.h,v 1.26 2026/09/22 13:41:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_client.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/password_manager/core/browser/password_manager_client.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/password_manager/core/browser/password_manager_client.h
-@@ -31,7 +31,7 @@
+@@ -32,7 +32,7 @@
  #include "net/cert/cert_status_flags.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manager__clie
  #include "base/i18n/rtl.h"
  #include "components/password_manager/core/browser/password_cross_domain_confirmation_popup_controller.h"
  #include "ui/gfx/geometry/rect_f.h"
-@@ -585,7 +585,7 @@ class PasswordManagerClient {
+@@ -590,7 +590,7 @@ class PasswordManagerClient {
    virtual void TriggerSignIn(signin_metrics::AccessPoint access_point) const;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

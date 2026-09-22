@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_prefs_pref__service__incognito__allowlist.cc,v 1.25 2026/09/02 13:13:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_prefs_pref__service__incognito__allowlist.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/prefs/pref_service_incognito_allowlist.cc
 @@ -202,7 +202,7 @@ const char* const kPersistentPrefNames[]
      prefs::kShowFullscreenToolbar,

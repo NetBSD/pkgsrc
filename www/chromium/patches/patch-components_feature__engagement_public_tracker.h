@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_tracker.h,v 1.4 2026/09/02 13:13:28 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_tracker.h,v 1.5 2026/09/22 13:41:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/tracker.h.orig	2026-08-31 22:47:51.000000000 +0000
+--- components/feature_engagement/public/tracker.h.orig	2026-09-14 22:17:16.000000000 +0000
 +++ components/feature_engagement/public/tracker.h
 @@ -260,7 +260,7 @@ class Tracker : public KeyedService, pub
      Dismissed(feature);

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/09/02 13:13:32 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.cc
 @@ -5,8 +5,10 @@
  #include "media/capture/video/linux/v4l2_capture_delegate.h"
@@ -53,7 +53,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
  namespace media {
  
  namespace {
-@@ -271,7 +283,7 @@ bool V4L2CaptureDelegate::IsBlockedContr
+@@ -275,7 +287,7 @@ bool V4L2CaptureDelegate::IsBlockedContr
  // static
  bool V4L2CaptureDelegate::IsControllableControl(
      int control_id,
@@ -62,7 +62,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    const int special_control_id = GetControllingSpecialControl(control_id);
    if (!special_control_id) {
      // The control is not controlled by a special control thus the control is
-@@ -327,7 +339,7 @@ V4L2CaptureDelegate::V4L2CaptureDelegate
+@@ -331,7 +343,7 @@ V4L2CaptureDelegate::V4L2CaptureDelegate
        is_capturing_(false),
        timeout_count_(0),
        rotation_(rotation) {
@@ -71,7 +71,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    use_gpu_buffer_ = switches::IsVideoCaptureUseGpuMemoryBufferEnabled();
  #endif  // BUILDFLAG(IS_LINUX)
  }
-@@ -454,7 +466,7 @@ void V4L2CaptureDelegate::AllocateAndSta
+@@ -458,7 +470,7 @@ void V4L2CaptureDelegate::AllocateAndSta
  
    client_->OnStarted();
  
@@ -80,7 +80,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    if (use_gpu_buffer_) {
      v4l2_gpu_helper_ = std::make_unique<V4L2CaptureDelegateGpuHelper>();
    }
-@@ -798,7 +810,7 @@ base::WeakPtr<V4L2CaptureDelegate> V4L2C
+@@ -802,7 +814,7 @@ base::WeakPtr<V4L2CaptureDelegate> V4L2C
  
  V4L2CaptureDelegate::~V4L2CaptureDelegate() = default;
  
@@ -89,7 +89,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    int num_retries = 0;
    for (; DoIoctl(request, argp) < 0 && num_retries < kMaxIOCtrlRetries;
         ++num_retries) {
-@@ -808,7 +820,7 @@ bool V4L2CaptureDelegate::RunIoctl(int r
+@@ -812,7 +824,7 @@ bool V4L2CaptureDelegate::RunIoctl(int r
    return num_retries != kMaxIOCtrlRetries;
  }
  
@@ -98,7 +98,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    return HANDLE_EINTR(v4l2_->ioctl(device_fd_.get(), request, argp));
  }
  
-@@ -819,6 +831,7 @@ bool V4L2CaptureDelegate::IsControllable
+@@ -823,6 +835,7 @@ bool V4L2CaptureDelegate::IsControllable
  }
  
  void V4L2CaptureDelegate::ReplaceControlEventSubscriptions() {
@@ -106,7 +106,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    constexpr uint32_t kControlIds[] = {V4L2_CID_AUTO_EXPOSURE_BIAS,
                                        V4L2_CID_AUTO_WHITE_BALANCE,
                                        V4L2_CID_BRIGHTNESS,
-@@ -846,6 +859,7 @@ void V4L2CaptureDelegate::ReplaceControl
+@@ -850,6 +863,7 @@ void V4L2CaptureDelegate::ReplaceControl
                    << ", {type = V4L2_EVENT_CTRL, id = " << control_id << "}";
      }
    }
@@ -114,7 +114,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
  }
  
  mojom::RangePtr V4L2CaptureDelegate::RetrieveUserControlRange(int control_id) {
-@@ -1026,7 +1040,11 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1030,7 +1044,11 @@ void V4L2CaptureDelegate::DoCapture() {
  
    pollfd device_pfd = {};
    device_pfd.fd = device_fd_.get();
@@ -126,7 +126,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
  
    const int result =
        HANDLE_EINTR(v4l2_->poll(&device_pfd, 1, kCaptureTimeoutMs));
-@@ -1046,6 +1064,12 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1050,6 +1068,12 @@ void V4L2CaptureDelegate::DoCapture() {
        // in older kernels, and stopping and starting the stream gets the camera
        // out of this bad state. Upgrading the kernel is difficult so this is our
        // way out for now.
@@ -139,7 +139,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
        DLOG(WARNING) << "Restarting camera stream";
        if (!StopStream() || !StartStream())
          return;
-@@ -1053,6 +1077,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1057,6 +1081,7 @@ void V4L2CaptureDelegate::DoCapture() {
            FROM_HERE,
            base::BindOnce(&V4L2CaptureDelegate::DoCapture, GetWeakPtr()));
        return;
@@ -147,7 +147,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
      } else if (timeout_count_ >= kContinuousTimeoutLimit) {
        SetErrorState(
            VideoCaptureError::kV4L2MultipleContinuousTimeoutsWhileReadPolling,
-@@ -1064,6 +1089,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1068,6 +1093,7 @@ void V4L2CaptureDelegate::DoCapture() {
      timeout_count_ = 0;
    }
  
@@ -155,7 +155,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
    // Dequeue events if the driver has filled in some.
    if (device_pfd.revents & POLLPRI) {
      bool controls_changed = false;
-@@ -1097,6 +1123,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1101,6 +1127,7 @@ void V4L2CaptureDelegate::DoCapture() {
        client_->OnCaptureConfigurationChanged();
      }
    }
@@ -163,7 +163,7 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
  
    // Deenqueue, send and reenqueue a buffer if the driver has filled one in.
    if (device_pfd.revents & POLLIN) {
-@@ -1150,7 +1177,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1154,7 +1181,7 @@ void V4L2CaptureDelegate::DoCapture() {
        // workable on Linux.
  
        // See http://crbug.com/959919.
@@ -171,8 +171,8 @@ $NetBSD: patch-media_capture_video_linux_v4l2__capture__delegate.cc,v 1.25 2026/
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        if (use_gpu_buffer_) {
          v4l2_gpu_helper_->OnIncomingCapturedData(
-             client_.get(), buffer_tracker->start(),
-@@ -1224,7 +1251,7 @@ void V4L2CaptureDelegate::SetErrorState(
+             client_.get(), buffer_tracker->as_span(), capture_format_,
+@@ -1229,7 +1256,7 @@ void V4L2CaptureDelegate::SetErrorState(
    client_->OnError(error, from_here, reason);
  }
  

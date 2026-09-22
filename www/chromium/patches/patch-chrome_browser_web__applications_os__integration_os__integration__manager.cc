@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_web__applications_os__integration_os__integration__manager.cc,v 1.25 2026/09/02 13:13:27 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_os__integration_os__integration__manager.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/os_integration_manager.cc.orig	2026-08-31 22:47:51.000000000 +0000
+--- chrome/browser/web_applications/os_integration/os_integration_manager.cc.orig	2026-09-14 22:17:16.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/os_integration_manager.cc
-@@ -673,7 +673,7 @@ std::unique_ptr<ShortcutInfo> OsIntegrat
+@@ -687,7 +687,7 @@ std::unique_ptr<ShortcutInfo> OsIntegrat
      }
    }
  
