@@ -1,0 +1,4 @@
+QuickJS-NG is a fork of QuickJS JavaScript engine.
+
+This package provides pkg-config and cmake files for build systems.
+And this also provides manpages.
