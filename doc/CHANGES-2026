@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6180 2026/09/22 04:42:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6181 2026/09/22 06:52:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9360,3 +9360,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glibmm to 2.66.10 [ryoon 2026-09-22]
 	Updated security/py-OTXv2 to 1.5.12 [adam 2026-09-22]
 	Updated misc/py-tqdm to 4.70.1 [adam 2026-09-22]
+	Updated net/rsync to 3.5.1 [adam 2026-09-22]
+	Updated multimedia/mkvtoolnix to 102.0 [adam 2026-09-22]
+	Updated security/ccid to 1.8.4 [adam 2026-09-22]
