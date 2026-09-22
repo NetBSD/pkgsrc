@@ -1,12 +1,12 @@
-$NetBSD: patch-Source_cmake_WebKitFeatures.cmake,v 1.1 2026/08/30 14:25:06 wiz Exp $
+$NetBSD: patch-Source_cmake_WebKitFeatures.cmake,v 1.2 2026/09/22 12:27:03 wiz Exp $
 
 Disabling JIT (performance will be way worse with pages using
 JavaScript, but maybe works).
 Also try to use system malloc.
 
---- Source/cmake/WebKitFeatures.cmake.orig	2025-08-08 09:17:56.304456000 +0000
+--- Source/cmake/WebKitFeatures.cmake.orig	2026-08-06 09:22:31.282348400 +0000
 +++ Source/cmake/WebKitFeatures.cmake
-@@ -88,7 +88,7 @@ macro(WEBKIT_OPTION_BEGIN)
+@@ -89,7 +89,7 @@ macro(WEBKIT_OPTION_BEGIN)
              set(ENABLE_C_LOOP_DEFAULT ON)
              set(ENABLE_SAMPLING_PROFILER_DEFAULT OFF)
          endif ()
@@ -15,8 +15,8 @@ Also try to use system malloc.
          set(ENABLE_JIT_DEFAULT ON)
          set(ENABLE_FTL_DEFAULT ON)
          set(USE_SYSTEM_MALLOC_DEFAULT OFF)
-@@ -106,7 +106,7 @@ macro(WEBKIT_OPTION_BEGIN)
-         set(USE_SYSTEM_MALLOC_DEFAULT OFF)
+@@ -110,7 +110,7 @@ macro(WEBKIT_OPTION_BEGIN)
+         set(USE_MIMALLOC_DEFAULT ON)
          set(ENABLE_C_LOOP_DEFAULT ON)
          set(ENABLE_SAMPLING_PROFILER_DEFAULT OFF)
 -    elseif (WTF_CPU_RISCV64)

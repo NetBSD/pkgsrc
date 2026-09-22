@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/08/30 14:25:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/22 12:27:02 wiz Exp $
 include/webkitgtk-4.1/JavaScriptCore/JSBase.h
 include/webkitgtk-4.1/JavaScriptCore/JSContextRef.h
 include/webkitgtk-4.1/JavaScriptCore/JSObjectRef.h
@@ -48,6 +48,7 @@ include/webkitgtk-4.1/webkit/WebKitFrame.h
 include/webkitgtk-4.1/webkit/WebKitGeolocationManager.h
 include/webkitgtk-4.1/webkit/WebKitGeolocationPermissionRequest.h
 include/webkitgtk-4.1/webkit/WebKitHitTestResult.h
+include/webkitgtk-4.1/webkit/WebKitImage.h
 include/webkitgtk-4.1/webkit/WebKitInputMethodContext.h
 include/webkitgtk-4.1/webkit/WebKitInstallMissingMediaPluginsPermissionRequest.h
 include/webkitgtk-4.1/webkit/WebKitJavascriptResult.h
@@ -224,10 +225,10 @@ lib/girepository-1.0/WebKit2-4.1.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.1.typelib
 lib/libjavascriptcoregtk-4.1.so
 lib/libjavascriptcoregtk-4.1.so.0
-lib/libjavascriptcoregtk-4.1.so.0.10.14
+lib/libjavascriptcoregtk-4.1.so.0.11.7
 lib/libwebkit2gtk-4.1.so
 lib/libwebkit2gtk-4.1.so.0
-lib/libwebkit2gtk-4.1.so.0.21.10
+lib/libwebkit2gtk-4.1.so.0.24.3
 lib/pkgconfig/javascriptcoregtk-4.1.pc
 lib/pkgconfig/webkit2gtk-4.1.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.1.pc
@@ -778,6 +779,7 @@ share/doc/webkit2gtk-4.1/method.Feature.get_name.html
 share/doc/webkit2gtk-4.1/method.Feature.get_status.html
 share/doc/webkit2gtk-4.1/method.Feature.ref.html
 share/doc/webkit2gtk-4.1/method.Feature.unref.html
+share/doc/webkit2gtk-4.1/method.FeatureList.find.html
 share/doc/webkit2gtk-4.1/method.FeatureList.get.html
 share/doc/webkit2gtk-4.1/method.FeatureList.get_length.html
 share/doc/webkit2gtk-4.1/method.FeatureList.ref.html
@@ -1242,6 +1244,7 @@ share/doc/webkit2gtk-4.1/method.WebView.get_inspector.html
 share/doc/webkit2gtk-4.1/method.WebView.get_is_muted.html
 share/doc/webkit2gtk-4.1/method.WebView.get_is_web_process_responsive.html
 share/doc/webkit2gtk-4.1/method.WebView.get_javascript_global_context.html
+share/doc/webkit2gtk-4.1/method.WebView.get_magnification.html
 share/doc/webkit2gtk-4.1/method.WebView.get_main_resource.html
 share/doc/webkit2gtk-4.1/method.WebView.get_microphone_capture_state.html
 share/doc/webkit2gtk-4.1/method.WebView.get_page_id.html
@@ -1299,6 +1302,7 @@ share/doc/webkit2gtk-4.1/method.WebView.set_display_capture_state.html
 share/doc/webkit2gtk-4.1/method.WebView.set_editable.html
 share/doc/webkit2gtk-4.1/method.WebView.set_input_method_context.html
 share/doc/webkit2gtk-4.1/method.WebView.set_is_muted.html
+share/doc/webkit2gtk-4.1/method.WebView.set_magnification.html
 share/doc/webkit2gtk-4.1/method.WebView.set_microphone_capture_state.html
 share/doc/webkit2gtk-4.1/method.WebView.set_settings.html
 share/doc/webkit2gtk-4.1/method.WebView.set_zoom_level.html
@@ -1324,6 +1328,8 @@ share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_base_data_directory.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_cookie_manager.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_disk_cache_directory.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_dom_cache_directory.html
+share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_favicon_database.html
+share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_favicons_enabled.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_hsts_cache_directory.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_indexeddb_directory.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_itp_directory.html
@@ -1339,11 +1345,13 @@ share/doc/webkit2gtk-4.1/method.WebsiteDataManager.get_websql_directory.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.is_ephemeral.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.remove.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.remove_finish.html
+share/doc/webkit2gtk-4.1/method.WebsiteDataManager.set_favicons_enabled.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.set_itp_enabled.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.set_network_proxy_settings.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.set_persistent_credential_storage_enabled.html
 share/doc/webkit2gtk-4.1/method.WebsiteDataManager.set_tls_errors_policy.html
 share/doc/webkit2gtk-4.1/method.WebsitePolicies.get_autoplay_policy.html
+share/doc/webkit2gtk-4.1/method.WebsitePolicies.get_custom_user_agent.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_fullscreen.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_geometry.html
 share/doc/webkit2gtk-4.1/method.WindowProperties.get_locationbar_visible.html
@@ -1506,6 +1514,7 @@ share/doc/webkit2gtk-4.1/property.WebView.is-loading.html
 share/doc/webkit2gtk-4.1/property.WebView.is-muted.html
 share/doc/webkit2gtk-4.1/property.WebView.is-playing-audio.html
 share/doc/webkit2gtk-4.1/property.WebView.is-web-process-responsive.html
+share/doc/webkit2gtk-4.1/property.WebView.magnification.html
 share/doc/webkit2gtk-4.1/property.WebView.microphone-capture-state.html
 share/doc/webkit2gtk-4.1/property.WebView.page-id.html
 share/doc/webkit2gtk-4.1/property.WebView.related-view.html
@@ -1533,6 +1542,7 @@ share/doc/webkit2gtk-4.1/property.WebsiteDataManager.service-worker-registration
 share/doc/webkit2gtk-4.1/property.WebsiteDataManager.total-storage-ratio.html
 share/doc/webkit2gtk-4.1/property.WebsiteDataManager.websql-directory.html
 share/doc/webkit2gtk-4.1/property.WebsitePolicies.autoplay.html
+share/doc/webkit2gtk-4.1/property.WebsitePolicies.custom-user-agent.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.fullscreen.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.geometry.html
 share/doc/webkit2gtk-4.1/property.WindowProperties.locationbar-visible.html

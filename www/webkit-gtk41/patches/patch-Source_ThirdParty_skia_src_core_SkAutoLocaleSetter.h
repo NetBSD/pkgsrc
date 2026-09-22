@@ -1,9 +1,9 @@
-$NetBSD: patch-Source_ThirdParty_skia_src_gpu_ganesh_GrAutoLocaleSetter.h,v 1.1 2026/08/30 14:25:05 wiz Exp $
+$NetBSD: patch-Source_ThirdParty_skia_src_core_SkAutoLocaleSetter.h,v 1.1 2026/09/22 12:27:02 wiz Exp $
 
 No uselocale() on NetBSD.
 
---- Source/ThirdParty/skia/src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2024-11-02 08:05:09.263557564 +0000
-+++ Source/ThirdParty/skia/src/gpu/ganesh/GrAutoLocaleSetter.h
+--- Source/ThirdParty/skia/src/core/SkAutoLocaleSetter.h.orig	2026-09-16 20:30:24.311812753 +0000
++++ Source/ThirdParty/skia/src/core/SkAutoLocaleSetter.h
 @@ -27,7 +27,7 @@
  #define HAVE_XLOCALE 0
  #endif

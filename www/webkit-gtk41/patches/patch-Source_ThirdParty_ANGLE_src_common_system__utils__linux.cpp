@@ -1,10 +1,22 @@
-$NetBSD: patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp,v 1.1 2026/08/30 14:25:05 wiz Exp $
+$NetBSD: patch-Source_ThirdParty_ANGLE_src_common_system__utils__linux.cpp,v 1.2 2026/09/22 12:27:02 wiz Exp $
 
+NetBSD doesn't provide CLOCK_MONOTONIC_RAW.
 pthread_setname_np() has three arguments on NetBSD.
 
---- Source/ThirdParty/ANGLE/src/common/system_utils_linux.cpp.orig	2025-02-25 08:25:37.951309000 +0000
+--- Source/ThirdParty/ANGLE/src/common/system_utils_linux.cpp.orig	2026-09-11 05:47:59.581623300 +0000
 +++ Source/ThirdParty/ANGLE/src/common/system_utils_linux.cpp
-@@ -58,7 +58,10 @@ void SetCurrentThreadName(const char *na
+@@ -18,6 +18,10 @@
+ 
+ #include <array>
+ 
++#ifndef CLOCK_MONOTONIC_RAW
++#define CLOCK_MONOTONIC_RAW CLOCK_MONOTONIC
++#endif
++
+ namespace angle
+ {
+ std::string GetExecutablePath()
+@@ -66,7 +70,10 @@ void SetCurrentThreadName(const char *name)
  {
      // There's a 15-character (16 including '\0') limit.  If the name is too big (and ERANGE is
      // returned), name will be ignored.

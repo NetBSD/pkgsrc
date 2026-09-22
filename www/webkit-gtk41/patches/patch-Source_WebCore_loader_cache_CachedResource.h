@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_WebCore_loader_cache_CachedResource.h,v 1.1 2026/08/30 14:25:05 wiz Exp $
+$NetBSD: patch-Source_WebCore_loader_cache_CachedResource.h,v 1.2 2026/09/22 12:27:03 wiz Exp $
 
 In file included from /usr/pkg/include/EGL/eglplatform.h:134,
                  from /usr/pkg/include/epoxy/egl_generated.h:11,
@@ -11,9 +11,9 @@ In file included from /usr/pkg/include/EGL/eglplatform.h:134,
 
 https://github.com/WebKit/WebKit/pull/64743
 
---- Source/WebCore/loader/cache/CachedResource.h.orig	2026-04-17 08:44:48.754804603 +0000
+--- Source/WebCore/loader/cache/CachedResource.h.orig	2026-07-24 08:02:55.011400500 +0000
 +++ Source/WebCore/loader/cache/CachedResource.h
-@@ -45,6 +45,10 @@
+@@ -46,6 +46,10 @@
  #include <wtf/WeakHashMap.h>
  #include <wtf/text/WTFString.h>
  
@@ -22,5 +22,5 @@ https://github.com/WebKit/WebKit/pull/64743
 +#endif
 +
  namespace WebCore {
- class CachedResource;
+ 
  class CachedResourceCallback;

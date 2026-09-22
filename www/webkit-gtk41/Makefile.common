@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2026/09/13 00:34:24 gdt Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/09/22 12:27:02 wiz Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
-DISTNAME=	webkitgtk-2.52.6
+DISTNAME=	webkitgtk-2.54.0
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -22,11 +22,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-GCC_REQD+=		11
+# https://github.com/WebKit/WebKit/pull/67753/changes/1fec4985d1794c782ff12e2aefc088b76023ba16
+GCC_REQD+=		13
 USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
-
-# this doesn't seem to be using the pkg-config file, which would add this
-CXXFLAGS+=	-I${PREFIX}/include/gstreamer-1.0
 
 # Avoid million warnings
 CFLAGS+=		-Wno-unused-parameter -Wno-undef
@@ -59,51 +57,7 @@ CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBBACKTRACE=OFF
 CMAKE_CONFIGURE_ARGS+=		-DUSE_LIBDRM=OFF
 .endif
 
-# This setting was used in the past because libsqlite3.so was not
-# found by configure.  As of 2026-09, without it, cmake/ninja finds
-# and uses the path to the bl3 tree.  With it, cmake/ninja puts
-# "$prefix/lib/libsqlite3.so" in NEEDED.  Without it, cmake/make works
-# fine.
-# 20260913: Left enabled at request of wiz@.
-CMAKE_CONFIGURE_ARGS+=		-DSQLite3_LIBRARY=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
-
-# When building:
-#   - on NetBSD 10 amd64
-#   - with CMAKE_GENERATOR=ninja
-#   - and perhaps some other conditions (which are not generally
-#     troublesome)
-# somehow, linking of libsqlite3.so into libwebkit2gtk-4.1.so ends up
-# with a bad path.  There is a PKG_DEVELOPER check that finds (with
-# and without the above setting):
-#   => Checking for missing run-time search paths in webkit-gtk41-2.52.6nb2
-#   ERROR: lib/libwebkit2gtk-4.1.so.0.21.10: missing library: /usr/pkg/lib/libsqlite3.so
-#
-#   => Checking for missing run-time search paths in webkit-gtk41-2.52.6nb2
-#   ERROR: lib/libwebkit2gtk-4.1.so.0.21.10: missing library: /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so
-#   *** Error code 1
-#
-# One can inspect the library in the destdir, with and without the
-# above setting:
-#   $ ldd work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10|egrep sqli
-#        /usr/pkg/lib/libsqlite3.so => /usr/pkg/lib/libsqlite3.so
-#
-#   $ ldd work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10|egrep sqli
-#        /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so => /tmp/work/www/webkit-gtk41/work/.buildlink/lib/libsqlite3.so
-#
-# And with objdump instead of ldd, with the setting:
-#   $ objdump -x work/.destdir/usr/pkg/lib/libwebkit2gtk-4.1.so.0.21.10 | egrep 'RPATH|NEEDED'
-#     [many other NEEDED snipped]
-#     NEEDED               libicuuc.so.78
-#     NEEDED               libxml2.so.16
-#     NEEDED               /usr/pkg/lib/libsqlite3.so
-#     NEEDED               libxslt.so.1
-#     NEEDED               libz.so.1
-#     RPATH                /usr/pkg/gcc12/x86_64--netbsd/lib/.:/usr/pkg/gcc12/lib/gcc/x86_64--netbsd/12.5.0:/usr/pkg/lib:/usr/X11R7/lib
-
-# Therefore, to avoid not-understood bugs when using ninja, just
-# don't.
-# Commented out at request of wiz@
-#CMAKE_GENERATORS_INCOMPATIBLE=	ninja
+CMAKE_GENERATORS_INCOMPATIBLE=	make
 
 # required for faking a better user-agent
 CMAKE_CONFIGURE_ARGS+=		-DUSER_AGENT_BRANDING="Linux ${MACHINE_ARCH}"
@@ -173,17 +127,17 @@ REPLACE_RUBY+=		Source/WebInspectorUI/Scripts/*.rb
 REPLACE_RUBY+=		Source/bmalloc/libpas/export.rb
 
 SUBST_CLASSES+=		python
+SUBST_FILES.python+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+SUBST_FILES.python+=	Source/WebCore/Scripts/generate-unified-sources.sh
 SUBST_FILES.python+=	Source/WebInspectorUI/Scripts/copy-user-interface-resources.pl
-SUBST_SED.python+=	-e 's,"python3","${PYTHONBIN}",'
+SUBST_FILES.python+=	Source/WebKit/Scripts/generate-unified-sources.sh
+SUBST_FILES.python+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
+SUBST_SED.python+=	-e 's,python3,${PYTHONBIN},'
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python binary.
 
 SUBST_CLASSES+=		ruby
 SUBST_FILES.ruby+=	Source/bmalloc/libpas/scripts/tally_verifier_output
-SUBST_FILES.ruby+=	Tools/TestWebKitAPI/Scripts/generate-unified-sources.sh
-SUBST_FILES.ruby+=	Source/JavaScriptCore/Scripts/generate-unified-sources.sh
-SUBST_FILES.ruby+=	Source/WebCore/Scripts/generate-unified-sources.sh
-SUBST_FILES.ruby+=	Source/WebKit/Scripts/generate-unified-sources.sh
 SUBST_SED.ruby+=	-e 's,env ruby,env ${RUBY},'
 SUBST_STAGE.ruby=	pre-configure
 SUBST_MESSAGE.ruby=	Fixing path to ruby binary.
@@ -243,7 +197,6 @@ PREFER.gettext=	pkgsrc
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
 .include "../../fonts/woff2/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
@@ -259,6 +212,7 @@ JPEG_ACCEPTED=		libjpeg-turbo
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../net/libsoup3/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
