@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2026/01/11 05:07:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2026/09/22 07:42:21 adam Exp $
 # used by net/net-snmp/Makefile
 # used by net/py-netsnmp/Makefile
 
-DISTNAME=	net-snmp-5.9.5
+DISTNAME=	net-snmp-5.9.5.2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
-HOMEPAGE=	http://www.net-snmp.org/
+HOMEPAGE=	https://www.net-snmp.org/
 LICENSE=	modified-bsd
 
 DISTINFO_FILE=	${.CURDIR}/../../net/net-snmp/distinfo
