@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2026/09/07 05:35:55 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/09/22 07:33:02 adam Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -96,12 +96,12 @@ Size (github.com_gdamore_encoding_@v_v1.0.1.mod) = 78 bytes
 BLAKE2s (github.com_gdamore_encoding_@v_v1.0.1.zip) = 522139725b0477ad06c38986bdb639ad447dde006d880a96f74f4e68a5e77214
 SHA512 (github.com_gdamore_encoding_@v_v1.0.1.zip) = f90d2370cd55757dc6a36408c2a08f385f45e432c6a5db30d947bd8093df38cf1085d483a5ddfc43131def820a00e285ec6a690e80294d65a241e113e3a74b2e
 Size (github.com_gdamore_encoding_@v_v1.0.1.zip) = 25022 bytes
-BLAKE2s (github.com_gdamore_tcell_v3_@v_v3.4.2.mod) = 61fecc502d801f59f47c6f6448ca7252c403b21e16ce789534b4c5ce91445e7c
-SHA512 (github.com_gdamore_tcell_v3_@v_v3.4.2.mod) = 1cc58986be7647dc475fb162ac36b784f1ed9eb7d9e001e1720721e1db860373e2104f4a5e242d1beac9c820492339b959cc5d49b88b04bda2ce53b2bf181a54
-Size (github.com_gdamore_tcell_v3_@v_v3.4.2.mod) = 313 bytes
-BLAKE2s (github.com_gdamore_tcell_v3_@v_v3.4.2.zip) = d8823035dca2b380bdacad65ec450160f9564a55caf0216ed9b0269e7714ef82
-SHA512 (github.com_gdamore_tcell_v3_@v_v3.4.2.zip) = d003cba008a0d80b7dfe0344094cf4d0852b9eec3e84f7c647915995436e14223a834b38199d91332c5f6128c13423468d47ea5749cef61b37d362dcb1e02195
-Size (github.com_gdamore_tcell_v3_@v_v3.4.2.zip) = 487636 bytes
+BLAKE2s (github.com_gdamore_tcell_v3_@v_v3.5.0.mod) = 61fecc502d801f59f47c6f6448ca7252c403b21e16ce789534b4c5ce91445e7c
+SHA512 (github.com_gdamore_tcell_v3_@v_v3.5.0.mod) = 1cc58986be7647dc475fb162ac36b784f1ed9eb7d9e001e1720721e1db860373e2104f4a5e242d1beac9c820492339b959cc5d49b88b04bda2ce53b2bf181a54
+Size (github.com_gdamore_tcell_v3_@v_v3.5.0.mod) = 313 bytes
+BLAKE2s (github.com_gdamore_tcell_v3_@v_v3.5.0.zip) = f4573d56a2ba883f1f9fe9e986295f82f9e1fcab144dbe188938cb81fa43d296
+SHA512 (github.com_gdamore_tcell_v3_@v_v3.5.0.zip) = f7804870a92c488021f83e19d8fb170b19bd2eba9f23675d7a02f542f9e0b26b2448f86d5fe8d5b56c39507294ff03277e6ac72a1e5dbf1014b3047ab73687d5
+Size (github.com_gdamore_tcell_v3_@v_v3.5.0.zip) = 490955 bytes
 BLAKE2s (github.com_go-errors_errors_@v_v1.5.1.mod) = 7eecea9934a3ad1eec4b3d0179c74733ab7d6eba71c629743c46f2c2e3a64a9e
 SHA512 (github.com_go-errors_errors_@v_v1.5.1.mod) = 1e80e8b2fba837e722867556695db44c3f1dbf7f7ba251237991ba396cb2aea203d8ebd55b6a0422884a63cd85e87ce6af81bb3fb171ede8a78c8d5ee28d9a00
 Size (github.com_go-errors_errors_@v_v1.5.1.mod) = 118 bytes
@@ -543,9 +543,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (lazygit-0.65.0.tar.gz) = 6a4cdb1e072a740298d647dbb4d7d52b9a0452496364738f357354ebeec71b95
-SHA512 (lazygit-0.65.0.tar.gz) = edb84a9e3bad7f7a89b7d9d959c661a799b81b9df9110cff094fbc4dd556b0a008810562bb467a15866f59a2d6dd236a6bc73c1ada4e078d83d73f6ad111b55b
-Size (lazygit-0.65.0.tar.gz) = 4900491 bytes
+BLAKE2s (lazygit-0.65.1.tar.gz) = 34eef5dc74146512e96b6dfa6f9027e0ab20f119d680e054a8129ac920c86df9
+SHA512 (lazygit-0.65.1.tar.gz) = 2c1b8b85287b766a68a228322c05ec8f8f61181ddecc85183c7262d1b4f41d36868a0926387e01d0543670ec323b1a032a0372c4511398fb6fe6b5e586aaf477
+Size (lazygit-0.65.1.tar.gz) = 4903455 bytes
 BLAKE2s (mvdan.cc_gofumpt_@v_v0.11.0.mod) = a274aba3eab4b926a4d0e1717ae2c2014cf32a4a1133b1f4ad6a2a09e490338a
 SHA512 (mvdan.cc_gofumpt_@v_v0.11.0.mod) = 4d13140e685a362c07a726c453d37bcb41a60f7183114a2b156ab08cffb62afcd6e0538a23d64ece1c7387f335bf33f49b3435717cacbfca6382f28e997d7368
 Size (mvdan.cc_gofumpt_@v_v0.11.0.mod) = 371 bytes
