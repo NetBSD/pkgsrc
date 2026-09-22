@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/09/22 09:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/22 20:43:10 wiz Exp $
 
 DISTNAME=	yamlordereddictloader-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=   310 311 # py-yaml
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
