@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6184 2026/09/22 07:22:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6185 2026/09/22 07:33:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9371,3 +9371,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/dateutils to 0.4.12 [adam 2026-09-22]
 	Updated devel/py-pygit2 to 1.20.1 [adam 2026-09-22]
 	Updated math/fast_float to 8.3.0 [adam 2026-09-22]
+	Updated devel/protobuf to 36.2 [adam 2026-09-22]
+	Updated devel/py-protobuf to 7.36.2 [adam 2026-09-22]
+	Updated devel/buf to 1.73.0 [adam 2026-09-22]
+	Updated devel/lazygit to 0.65.1 [adam 2026-09-22]
