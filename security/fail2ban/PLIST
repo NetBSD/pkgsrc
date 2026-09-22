@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2023/07/02 08:03:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/22 12:04:33 adam Exp $
 bin/fail2ban-client
 bin/fail2ban-python
 bin/fail2ban-regex
 bin/fail2ban-server
 bin/fail2ban-testcases
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fail2ban/__init__.py
 ${PYSITELIB}/fail2ban/__init__.pyc
 ${PYSITELIB}/fail2ban/__init__.pyo
@@ -56,6 +57,12 @@ ${PYSITELIB}/fail2ban/client/jailreader.pyo
 ${PYSITELIB}/fail2ban/client/jailsreader.py
 ${PYSITELIB}/fail2ban/client/jailsreader.pyc
 ${PYSITELIB}/fail2ban/client/jailsreader.pyo
+${PYSITELIB}/fail2ban/compat/asynchat.py
+${PYSITELIB}/fail2ban/compat/asynchat.pyc
+${PYSITELIB}/fail2ban/compat/asynchat.pyo
+${PYSITELIB}/fail2ban/compat/asyncore.py
+${PYSITELIB}/fail2ban/compat/asyncore.pyc
+${PYSITELIB}/fail2ban/compat/asyncore.pyo
 ${PYSITELIB}/fail2ban/exceptions.py
 ${PYSITELIB}/fail2ban/exceptions.pyc
 ${PYSITELIB}/fail2ban/exceptions.pyo
@@ -98,9 +105,6 @@ ${PYSITELIB}/fail2ban/server/failregex.pyo
 ${PYSITELIB}/fail2ban/server/filter.py
 ${PYSITELIB}/fail2ban/server/filter.pyc
 ${PYSITELIB}/fail2ban/server/filter.pyo
-${PYSITELIB}/fail2ban/server/filtergamin.py
-${PYSITELIB}/fail2ban/server/filtergamin.pyc
-${PYSITELIB}/fail2ban/server/filtergamin.pyo
 ${PYSITELIB}/fail2ban/server/filterpoll.py
 ${PYSITELIB}/fail2ban/server/filterpoll.pyc
 ${PYSITELIB}/fail2ban/server/filterpoll.pyo
@@ -237,7 +241,7 @@ ${PYSITELIB}/fail2ban/tests/files/config/apache-auth/digest_wrongrelm/.htpasswd
 ${PYSITELIB}/fail2ban/tests/files/config/apache-auth/noentry/.htaccess
 ${PYSITELIB}/fail2ban/tests/files/database_v1.db
 ${PYSITELIB}/fail2ban/tests/files/database_v2.db
-${PYSITELIB}/fail2ban/tests/files/filter.d/substition.conf
+${PYSITELIB}/fail2ban/tests/files/filter.d/substitution.conf
 ${PYSITELIB}/fail2ban/tests/files/filter.d/testcase-common.conf
 ${PYSITELIB}/fail2ban/tests/files/filter.d/testcase01.conf
 ${PYSITELIB}/fail2ban/tests/files/filter.d/testcase02.conf
@@ -267,6 +271,7 @@ ${PYSITELIB}/fail2ban/tests/files/logs/counter-strike
 ${PYSITELIB}/fail2ban/tests/files/logs/courier-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/courier-smtp
 ${PYSITELIB}/fail2ban/tests/files/logs/cyrus-imap
+${PYSITELIB}/fail2ban/tests/files/logs/dante
 ${PYSITELIB}/fail2ban/tests/files/logs/directadmin
 ${PYSITELIB}/fail2ban/tests/files/logs/domino-smtp
 ${PYSITELIB}/fail2ban/tests/files/logs/dovecot
@@ -296,10 +301,12 @@ ${PYSITELIB}/fail2ban/tests/files/logs/nagios
 ${PYSITELIB}/fail2ban/tests/files/logs/named-refused
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-bad-request
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-botsearch
+${PYSITELIB}/fail2ban/tests/files/logs/nginx-forbidden
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-http-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-limit-req
 ${PYSITELIB}/fail2ban/tests/files/logs/nsd
 ${PYSITELIB}/fail2ban/tests/files/logs/openhab
+${PYSITELIB}/fail2ban/tests/files/logs/openvpn
 ${PYSITELIB}/fail2ban/tests/files/logs/openwebmail
 ${PYSITELIB}/fail2ban/tests/files/logs/oracleims
 ${PYSITELIB}/fail2ban/tests/files/logs/pam-generic
@@ -309,10 +316,12 @@ ${PYSITELIB}/fail2ban/tests/files/logs/phpmyadmin-syslog
 ${PYSITELIB}/fail2ban/tests/files/logs/portsentry
 ${PYSITELIB}/fail2ban/tests/files/logs/postfix
 ${PYSITELIB}/fail2ban/tests/files/logs/proftpd
+${PYSITELIB}/fail2ban/tests/files/logs/proxmox
 ${PYSITELIB}/fail2ban/tests/files/logs/pure-ftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/qmail
 ${PYSITELIB}/fail2ban/tests/files/logs/recidive
 ${PYSITELIB}/fail2ban/tests/files/logs/roundcube-auth
+${PYSITELIB}/fail2ban/tests/files/logs/routeros-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/scanlogd
 ${PYSITELIB}/fail2ban/tests/files/logs/screensharingd
 ${PYSITELIB}/fail2ban/tests/files/logs/selinux-ssh
@@ -332,14 +341,17 @@ ${PYSITELIB}/fail2ban/tests/files/logs/suhosin
 ${PYSITELIB}/fail2ban/tests/files/logs/tine20
 ${PYSITELIB}/fail2ban/tests/files/logs/traefik-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/uwimap-auth
+${PYSITELIB}/fail2ban/tests/files/logs/vaultwarden
 ${PYSITELIB}/fail2ban/tests/files/logs/vsftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/webmin-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/wuftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/xinetd-fail
+${PYSITELIB}/fail2ban/tests/files/logs/xrdp
 ${PYSITELIB}/fail2ban/tests/files/logs/znc-adminlog
 ${PYSITELIB}/fail2ban/tests/files/logs/zoneminder
 ${PYSITELIB}/fail2ban/tests/files/logs/zzz-generic-example
 ${PYSITELIB}/fail2ban/tests/files/logs/zzz-sshd-obsolete-multiline
+${PYSITELIB}/fail2ban/tests/files/test-ign-ips-file
 ${PYSITELIB}/fail2ban/tests/files/testcase-journal.log
 ${PYSITELIB}/fail2ban/tests/files/testcase-multiline.log
 ${PYSITELIB}/fail2ban/tests/files/testcase-usedns.log
@@ -412,7 +424,6 @@ share/doc/fail2ban/fail2ban.server.datetemplate.txt
 share/doc/fail2ban/fail2ban.server.failmanager.txt
 share/doc/fail2ban/fail2ban.server.failregex.txt
 share/doc/fail2ban/fail2ban.server.filter.txt
-share/doc/fail2ban/fail2ban.server.filtergamin.txt
 share/doc/fail2ban/fail2ban.server.filterpoll.txt
 share/doc/fail2ban/fail2ban.server.filterpyinotify.txt
 share/doc/fail2ban/fail2ban.server.filtersystemd.txt
@@ -440,6 +451,7 @@ share/examples/fail2ban/action.d/bsd-ipfw.conf
 share/examples/fail2ban/action.d/cloudflare-token.conf
 share/examples/fail2ban/action.d/cloudflare.conf
 share/examples/fail2ban/action.d/complain.conf
+share/examples/fail2ban/action.d/csf.conf
 share/examples/fail2ban/action.d/dshield.conf
 share/examples/fail2ban/action.d/dummy.conf
 share/examples/fail2ban/action.d/firewallcmd-allports.conf
@@ -469,6 +481,7 @@ share/examples/fail2ban/action.d/mail-whois-common.conf
 share/examples/fail2ban/action.d/mail-whois-lines.conf
 share/examples/fail2ban/action.d/mail-whois.conf
 share/examples/fail2ban/action.d/mail.conf
+share/examples/fail2ban/action.d/mikrotik.conf
 share/examples/fail2ban/action.d/mynetwatchman.conf
 share/examples/fail2ban/action.d/netscaler.conf
 share/examples/fail2ban/action.d/nftables-allports.conf
@@ -493,6 +506,8 @@ share/examples/fail2ban/action.d/sendmail.conf
 share/examples/fail2ban/action.d/shorewall-ipset-proto6.conf
 share/examples/fail2ban/action.d/shorewall.conf
 share/examples/fail2ban/action.d/smtp.py
+share/examples/fail2ban/action.d/smtp.pyc
+share/examples/fail2ban/action.d/smtp.pyo
 share/examples/fail2ban/action.d/symbiosis-blacklist-allports.conf
 share/examples/fail2ban/action.d/ufw.conf
 share/examples/fail2ban/action.d/xarf-login-attack.conf
@@ -519,6 +534,7 @@ share/examples/fail2ban/filter.d/counter-strike.conf
 share/examples/fail2ban/filter.d/courier-auth.conf
 share/examples/fail2ban/filter.d/courier-smtp.conf
 share/examples/fail2ban/filter.d/cyrus-imap.conf
+share/examples/fail2ban/filter.d/dante.conf
 share/examples/fail2ban/filter.d/directadmin.conf
 share/examples/fail2ban/filter.d/domino-smtp.conf
 share/examples/fail2ban/filter.d/dovecot.conf
@@ -550,10 +566,13 @@ share/examples/fail2ban/filter.d/nagios.conf
 share/examples/fail2ban/filter.d/named-refused.conf
 share/examples/fail2ban/filter.d/nginx-bad-request.conf
 share/examples/fail2ban/filter.d/nginx-botsearch.conf
+share/examples/fail2ban/filter.d/nginx-error-common.conf
+share/examples/fail2ban/filter.d/nginx-forbidden.conf
 share/examples/fail2ban/filter.d/nginx-http-auth.conf
 share/examples/fail2ban/filter.d/nginx-limit-req.conf
 share/examples/fail2ban/filter.d/nsd.conf
 share/examples/fail2ban/filter.d/openhab.conf
+share/examples/fail2ban/filter.d/openvpn.conf
 share/examples/fail2ban/filter.d/openwebmail.conf
 share/examples/fail2ban/filter.d/oracleims.conf
 share/examples/fail2ban/filter.d/pam-generic.conf
@@ -563,10 +582,12 @@ share/examples/fail2ban/filter.d/phpmyadmin-syslog.conf
 share/examples/fail2ban/filter.d/portsentry.conf
 share/examples/fail2ban/filter.d/postfix.conf
 share/examples/fail2ban/filter.d/proftpd.conf
+share/examples/fail2ban/filter.d/proxmox.conf
 share/examples/fail2ban/filter.d/pure-ftpd.conf
 share/examples/fail2ban/filter.d/qmail.conf
 share/examples/fail2ban/filter.d/recidive.conf
 share/examples/fail2ban/filter.d/roundcube-auth.conf
+share/examples/fail2ban/filter.d/routeros-auth.conf
 share/examples/fail2ban/filter.d/scanlogd.conf
 share/examples/fail2ban/filter.d/screensharingd.conf
 share/examples/fail2ban/filter.d/selinux-common.conf
@@ -586,10 +607,12 @@ share/examples/fail2ban/filter.d/suhosin.conf
 share/examples/fail2ban/filter.d/tine20.conf
 share/examples/fail2ban/filter.d/traefik-auth.conf
 share/examples/fail2ban/filter.d/uwimap-auth.conf
+share/examples/fail2ban/filter.d/vaultwarden.conf
 share/examples/fail2ban/filter.d/vsftpd.conf
 share/examples/fail2ban/filter.d/webmin-auth.conf
 share/examples/fail2ban/filter.d/wuftpd.conf
 share/examples/fail2ban/filter.d/xinetd-fail.conf
+share/examples/fail2ban/filter.d/xrdp.conf
 share/examples/fail2ban/filter.d/znc-adminlog.conf
 share/examples/fail2ban/filter.d/zoneminder.conf
 share/examples/fail2ban/jail.conf
