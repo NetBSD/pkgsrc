@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/06 02:57:00 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2026/09/22 09:07:04 adam Exp $
 
-BLAKE2s (yamlordereddictloader-0.4.0.tar.gz) = d6e4a5140643df2f37103061253d02d01f6b844680536b6d42cc8a1666056edd
-SHA512 (yamlordereddictloader-0.4.0.tar.gz) = f3fbb9a7642fb40ce3588b393a451d994f80a8dbba6fcb58d0f2be9adb8e3231a1da7101c67844d57b59af6a0912178de1ec9ab571afb5b25704e44a69ef62d5
-Size (yamlordereddictloader-0.4.0.tar.gz) = 3322 bytes
+BLAKE2s (yamlordereddictloader-0.4.2.tar.gz) = 6af2f008c8cb7b6566066ef80dd3d1535c5bd41a35c703885f1d5a420ece0b10
+SHA512 (yamlordereddictloader-0.4.2.tar.gz) = 56cf670e33fbe1b22d1a0f4d2a36436637ef4a5eae85dafaa081abef434ee303e88c37cd47e257df85905bfff188a5910c917d4a0cee9a86fb6e350e3a771ed9
+Size (yamlordereddictloader-0.4.2.tar.gz) = 3905 bytes
