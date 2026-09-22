@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2026/02/02 20:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/22 12:21:46 wiz Exp $
 
 DISTNAME=		racoon2
 PKGNAME=		racoon2-20180701
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=zoulasc/}
 GITHUB_PROJECT=		racoon2
@@ -11,6 +11,7 @@ GITHUB_TAG=		b2a193fc9875d1fb89c0a51690745379bc135fcf
 MAINTAINER=		kamada@nanohz.org
 #HOMEPAGE=		http://www.racoon2.wide.ad.jp/
 COMMENT=		IPsec key management system (IKEv2, IKEv1, and KINK)
+LICENSE=		modified-bsd
 
 GNU_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes
@@ -64,9 +65,18 @@ CONF_FILES_PERMS+=	${EGDIR}/racoon2.conf ${PKG_SYSCONFDIR}/racoon2.conf \
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 600
 CONF_FILES_PERMS+=	${EGDIR}/vals.conf ${PKG_SYSCONFDIR}/vals.conf \
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 600
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --enable-natt
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 MAKE_DIRS_PERMS+=	${VARBASE}/run/racoon2 ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+
+SUBST_CLASSES+=		var
+SUBST_SED.var+=		-e "s,/var/run/racoon2,${VARBASE}/run/racoon2,"
+SUBST_FILES.var+=	samples/init.d-spmd.in
+SUBST_FILES.var+=	samples/racoon2.conf.in
+SUBST_FILES.var+=	samples/init.d-spmd.in
+SUBST_FILES.var+=	samples/rc.d-spmd.in
+SUBST_STAGE.var=	pre-configure
+SUBST_MESSAGE.var=	Adapt path to /var for pkgsrc.
 
 RCD_SCRIPTS=		iked kinkd spmd racoon2
 RCD_SCRIPT_SRC.iked=	${WRKSRC}/samples/rc.d-iked
