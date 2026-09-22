@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.350 2026/08/09 02:32:02 mef Exp $
+$NetBSD: distinfo,v 1.351 2026/09/22 04:06:12 ryoon Exp $
 
-BLAKE2s (glib-2.88.3.tar.xz) = 44b95662b78afc2bd2e1f839da7cc00e790495c481a13d5332fc6a35bacbd258
-SHA512 (glib-2.88.3.tar.xz) = 9e2b4985d5e4e06c6897a33cf8c100b9303528ebd72152c10e4cb734fa62fc011c84b816b20f686a3b2aac9a4a5a46f33e7517b4c4c7f3c25c75ac3ddc11f844
-Size (glib-2.88.3.tar.xz) = 5794356 bytes
+BLAKE2s (glib-2.90.0.tar.xz) = 5d43c6d0f427980cf32c72a0625c4b74068f94f6fc51dc76aac50107f7216007
+SHA512 (glib-2.90.0.tar.xz) = 5ca18b4e89d0efef40d6921c33903cad242ac664e4125e8161fa7d0f0c9c65c9a7ff61d9e3ac3eb7b780b7e113392a87d12b402000f8af76b8050ddae26d0a01
+Size (glib-2.90.0.tar.xz) = 5830480 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = f719ae41a9eb1d2f04d866b246fa5176543f2df9
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = 9bd0befe0dd547f6f2d818e52bee14e31a017ac7
 SHA1 (patch-gio_glib-compile-schemas.c) = 4fc8e8ba62bef01762007ebf21569053374808d0
@@ -11,15 +11,15 @@ SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495
 SHA1 (patch-gio_gunixmounts.c) = c5d6f75c9b77078682ba171243108cb850b0faab
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 78544b4c32ef3b44e8721b1c07407f46a9e8c8a4
 SHA1 (patch-gio_meson.build) = 818a1edffec511e70e4b71e639d349816d6b009e
-SHA1 (patch-gio_tests_iptosmessage.c) = 8a62ba3a79032d8e37bcfa8ccdda8448fee22a96
+SHA1 (patch-gio_tests_iptosmessage.c) = bb17313eb0eecfbc9b2c64c877b4871824b79f6a
 SHA1 (patch-gio_tests_meson.build) = 864fb2e438c4537e37c2c2e39388d0d0e1795c8c
 SHA1 (patch-girepository_gitypelib.c) = 6a5a49ac9a746028115e261820a2b0f1c1380ea2
 SHA1 (patch-glib_gatomic.c) = 5d08e19cc1c2557a5c007af8b368968217ce65b0
 SHA1 (patch-glib_gatomic.h) = d1c39c3594a5c89d196349e5eafb5512795f55f8
 SHA1 (patch-glib_genviron.c) = 45e382a4b5412c69b310fd26482eff6faffa2c0d
 SHA1 (patch-glib_glib-unix.c) = 1c7ef6437680317f5e28c3e75bca26cfec48351f
-SHA1 (patch-glib_gspawn-posix.c) = ac7536dbb14662d9a8ea27fb32ca911a3b4ab43d
-SHA1 (patch-glib_gthread.c) = 2485f63f27090f99e846c3b58432f6450cc95158
+SHA1 (patch-glib_gspawn-posix.c) = cc5789c94aaaa3b0c586f882bd948610912019d1
+SHA1 (patch-glib_gthread.c) = 52cedcf40ad82af9b9f45315aacf63a8abd93fd5
 SHA1 (patch-glib_tests_hash.c) = a7e19ca55fcbbc0b188c34755cae5b6b65b67f1a
 SHA1 (patch-glib_tests_include.c) = 12d98caebfb87c1146821d518c37c45f97fc7be0
 SHA1 (patch-glib_tests_meson.build) = 40ce43a49ae7084116facac6b3926c5e545f6721
