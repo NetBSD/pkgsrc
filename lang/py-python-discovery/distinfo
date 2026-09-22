@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/09/02 14:14:54 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/09/22 13:07:19 adam Exp $
 
-BLAKE2s (python_discovery-1.6.0.tar.gz) = 42370d8f5a0d2c02c8645def5feecbf9671c32eb471f6d2c034867fa9f41695c
-SHA512 (python_discovery-1.6.0.tar.gz) = dbf16e32b74aa5d02c07219688d1bddab550321cd1bd6e2d424cdf4970c2a80973d0f1b3348a41974fa86dd3d283641f19fe6b8434aee1b35c2ce70102f7562d
-Size (python_discovery-1.6.0.tar.gz) = 82849 bytes
+BLAKE2s (python_discovery-1.6.1.tar.gz) = ed656b174ed8156c6818b23d616399941026acd4654bff1282f6daad4647076e
+SHA512 (python_discovery-1.6.1.tar.gz) = c65201e066c2debf3e8457befab259fa807621cd2dbc46fad5188234a16ea32207c868aad66d913f8dd6e58dc084054ac18ada4ea7e3820a8fe10fab5f1b9dda
+Size (python_discovery-1.6.1.tar.gz) = 84338 bytes
