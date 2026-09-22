@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.797 2026/09/10 00:45:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.798 2026/09/22 08:21:45 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -313,6 +313,7 @@ SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtlanguageserver
 SUBDIR+=	qt6-qtscxml
 SUBDIR+=	quickjs
+SUBDIR+=	quickjs-ng
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
 SUBDIR+=	rakudo
