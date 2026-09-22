@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/10/10 08:19:34 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/09/22 12:40:13 adam Exp $
 
-BLAKE2s (pysaml2-7.5.4.tar.gz) = 6990b0e555117be4918b12af4633e484d8891293d947c6258d5f705f7d9b2e7c
-SHA512 (pysaml2-7.5.4.tar.gz) = 7475db8b6aafa3cd7f9fd69b32c5c3b00d87d236adf501c77eada3cc8ee87ff90c53b751c2bee121a3268a660e0b1440ec281983690d5c1e717a3bf042d3539e
-Size (pysaml2-7.5.4.tar.gz) = 334172 bytes
+BLAKE2s (pysaml2-7.5.5.tar.gz) = 720524a6bd4a4d16ff8d1d35c4cd2be5fd46618d5367dd6b3db30e908d06d3bd
+SHA512 (pysaml2-7.5.5.tar.gz) = 7388c7d487639eb78fd8aa4afa35e82484e386466b3bf3a9aece6f5b1ab5dbac7b9b5b73b7c79b887f89e4f7cfa58f3973b9af7202a15b6814e59cc93148efa3
+Size (pysaml2-7.5.5.tar.gz) = 334463 bytes
