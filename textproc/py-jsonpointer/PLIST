@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/22 17:31:45 ryoon Exp $
+bin/jsonpointer-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jsonpointer.py
+${PYSITELIB}/jsonpointer.pyc
+${PYSITELIB}/jsonpointer.pyo
