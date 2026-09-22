@@ -1,0 +1,1 @@
+bin/jsonpointer @PREFIX@/bin/jsonpointer-@PYVERSSUFFIX@

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/22 17:31:45 ryoon Exp $
+
+BLAKE2s (jsonpointer-3.1.1.tar.gz) = d1addce9e08060909fa066f69e9679cc1f8fe58ee607d8c5e7ad1e68b0b7b074
+SHA512 (jsonpointer-3.1.1.tar.gz) = 9f932985ac404ab21d1e2c29b95bdc684a3d258dc2203bdb6c0192ccf6ba804809d297a0701f7d4fc32adb481f259e1c17e7bd7bf0198e76f19b4481b78056c5
+Size (jsonpointer-3.1.1.tar.gz) = 9068 bytes
