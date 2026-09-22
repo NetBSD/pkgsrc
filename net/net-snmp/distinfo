@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.107 2026/01/12 13:05:57 tnn Exp $
+$NetBSD: distinfo,v 1.108 2026/09/22 07:42:21 adam Exp $
 
-BLAKE2s (net-snmp-5.9.5.tar.gz) = 47f5d457d41a5a54534a9223d30eee6247609d93cd9af134f31db76f518784f4
-SHA512 (net-snmp-5.9.5.tar.gz) = a9801dd83cf7a800942327358654977856a20fd16af703c110dfff2b8baa345ea44ed19131b78a2b31076503a9478da91722eefa139783e6908896673d24dbf2
-Size (net-snmp-5.9.5.tar.gz) = 6728907 bytes
+BLAKE2s (net-snmp-5.9.5.2.tar.gz) = f5133fac1849a30e5f9cc284e5cf82f3ccd3b4a45f798cc4b6aeb7a9671e3a91
+SHA512 (net-snmp-5.9.5.2.tar.gz) = c320c90e01377651fdff3aa9c373b9013f142fab23810d821174e546716ef2fa6499a805728710c67ca7fe238679111df392754c24ea4e01768faa5535ac7db2
+Size (net-snmp-5.9.5.2.tar.gz) = 6826866 bytes
 SHA1 (patch-agent_auto__nlist.c) = a8fe703d8902c2847ca6692af4400ddbf9cbe74b
 SHA1 (patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c) = 418a4568098ee8c5a01b7efe1bc7b3db81599799
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__freebsd.c) = e07e733912b8906cb168415a1768f9939b7f1bde
@@ -19,7 +19,7 @@ SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a
 SHA1 (patch-agent_mibgroup_mibII_tcp.c) = 48bfb424819052987181ac61562c560d17e8e15c
 SHA1 (patch-agent_mibgroup_mibII_var__route.c) = 980a30fd82e46ead6ca266c425d61641f1751093
 SHA1 (patch-agent_snmp__perl.c) = 52b7b26ce8cae6d892b017c50831565fc138a337
-SHA1 (patch-configure) = c1c6381320eccb72a194053a8024ca3f5665f2d8
+SHA1 (patch-configure) = 8a9b1aa84098ab2c1e0364a542c4cd1d0ccc311c
 SHA1 (patch-ov_UCD-fields) = 40e8d78bad93ca12f4c08c43b86e7f13edafc299
 SHA1 (patch-ov_oid__to__type.in) = 281be9a88860987880c71770f4050fd965dd8ed9
 SHA1 (patch-perl_OID_OID.xs) = 5c21172a697021543db4f9f88047e98954b2d0d8

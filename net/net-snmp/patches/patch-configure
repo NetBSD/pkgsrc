@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.6 2026/01/11 05:08:00 wiz Exp $
+$NetBSD: patch-configure,v 1.7 2026/09/22 07:42:21 adam Exp $
 
-- Do not store configure options as these might be polluted with workdir.
-- Support long fds_bits.
+Do not store configure options as these might be polluted with workdir.
+Don't use -Werror,-Wdeclaration-after-statement.
 
---- configure.orig	2025-12-20 15:03:44.000000000 +0000
+--- configure.orig	2025-12-23 16:54:35.000000000 +0000
 +++ configure
-@@ -3800,7 +3800,7 @@ ac_config_headers="$ac_config_headers include/net-snmp
+@@ -3800,7 +3800,7 @@ ac_config_headers="$ac_config_headers in
  # save the configure arguments
  #
  
@@ -14,3 +14,49 @@ $NetBSD: patch-configure,v 1.6 2026/01/11 05:08:00 wiz Exp $
  
  CONFIGURE_OPTIONS="\"$ac_configure_args\""
  
+@@ -18175,45 +18175,6 @@ CFLAGS=$lt_save_CFLAGS
+ #   Build environment:
+ ##
+ 
+-for opt in -Werror=declaration-after-statement
+-do
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports $opt" >&5
+-printf %s "checking whether the compiler supports $opt... " >&6; }
+-    netsnmp_save_CFLAGS="$CFLAGS"
+-    if test x$opt != x-Wstrict-prototypes; then
+-      CFLAGS="-Werror $opt $CFLAGS"
+-    else
+-      CFLAGS="$opt $CFLAGS"
+-    fi
+-    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main (void)
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_link "$LINENO"
+-then :
+-
+-      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-printf "%s\n" "yes" >&6; }
+-      CFLAGS="$opt $netsnmp_save_CFLAGS"
+-
+-else case e in #(
+-  e)
+-      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-printf "%s\n" "no" >&6; }
+-      CFLAGS="$netsnmp_save_CFLAGS"
+-     ;;
+-esac
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.beam \
+-    conftest$ac_exeext conftest.$ac_ext
+-done
+ 
+ #   developer build
+ #       (enabled by default when building from SVN checkout)
