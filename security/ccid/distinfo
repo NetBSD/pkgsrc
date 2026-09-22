@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2026/09/01 10:44:22 adam Exp $
+$NetBSD: distinfo,v 1.36 2026/09/22 06:51:50 adam Exp $
 
-BLAKE2s (ccid-1.8.3.tar.xz) = f9b69b64ce5f261aab23db0284499df85adbe8faf15c69c102b42156484aae23
-SHA512 (ccid-1.8.3.tar.xz) = 3101eed397a1b6983a1460b14bb5ea2fff4b79fd31e01be210eb55a65ab1aa4d3bfe6ca2d7d4ecef39e14d2408b762f45186cb166a4e73af052f5b2c4ac6576f
-Size (ccid-1.8.3.tar.xz) = 145584 bytes
+BLAKE2s (ccid-1.8.4.tar.xz) = 3044b99f1c8a068736c7926e8046c6200bd88e3556fd554dbb3ce7e4fa46054f
+SHA512 (ccid-1.8.4.tar.xz) = e4110ebc6a4cbb904ba957a76cb9e9967580882f1803faf3f8cdb16a88aa278617dfd2d40831f9596faebf12c2e9f6d82564766cb5ac8091577ae50176b70e3b
+Size (ccid-1.8.4.tar.xz) = 145812 bytes
