@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6178 2026/09/22 04:07:21 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6179 2026/09/22 04:10:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9357,3 +9357,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-tools to 2.90.0 [ryoon 2026-09-22]
 	Updated devel/glib2-introspection to 2.90.0 [ryoon 2026-09-22]
 	Updated devel/gdbus-codegen to 2.90.0 [ryoon 2026-09-22]
+	Updated devel/glibmm to 2.66.10 [ryoon 2026-09-22]
