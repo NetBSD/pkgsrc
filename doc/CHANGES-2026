@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6238 2026/09/22 17:35:34 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6239 2026/09/22 18:35:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9453,3 +9453,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/py-jsonpointer version 3.1.1 [ryoon 2026-09-22]
 	Added textproc/py-jsonpatch version 1.33 [ryoon 2026-09-22]
 	Added net/py-internetarchive version 5.11.1 [ryoon 2026-09-22]
+	Updated graphics/cairo to 1.18.6 [adam 2026-09-22]
+	Updated devel/py-click-repl to 0.4.0 [adam 2026-09-22]
