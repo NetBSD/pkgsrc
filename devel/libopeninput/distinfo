@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2026/05/27 17:14:19 kikadf Exp $
+$NetBSD: distinfo,v 1.3 2026/09/22 14:38:21 kikadf Exp $
 
-BLAKE2s (libopeninput-1.30.2-dcf8584ec3f5cde2a2098de25276242d2d815cc7.tar.gz) = 28117e461e18488812c475959e22f02d6477d4dfada1290ee6a809edea224d96
-SHA512 (libopeninput-1.30.2-dcf8584ec3f5cde2a2098de25276242d2d815cc7.tar.gz) = 1bd9a29efd466bb79b276d5fa6be64a0ce6f1deefa277f32f1d88a2e097c07602cd78ae62d0c10cbd427a24db9881e6ba49670b2f0ab0afcc7cee5bc08a0492b
-Size (libopeninput-1.30.2-dcf8584ec3f5cde2a2098de25276242d2d815cc7.tar.gz) = 1189070 bytes
-SHA1 (patch-src_wscons.c) = ccec4d8ced02d46525e62f082adc7bb03730c2e8
-SHA1 (patch-src_wscons.h) = 20c749ef79352094e1b646fdbe9566f95d7e0a41
+BLAKE2s (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 1bb9295eb9bf288dd512d09e94d318241a820f5fb8d1d39f094df2c3794e0ece
+SHA512 (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 4957ef42cfc6868546225d0b690acf51bc2a2fb799161a603fd3560c3d2b13af298161f4682f11e909aeaf443106b65cc4625a0afbc2b3fbd7fa27f61d34ef47
+Size (libopeninput-1.31.3-10995219206280da0f1a3ba124abe4c8ef89e021.tar.gz) = 1203451 bytes
+SHA1 (patch-src_wscons.c) = f4cee7cd0145ecd8e90cc85a7aac80d5a9fc0b48
+SHA1 (patch-src_wscons.h) = d4ce816f3e1b33e4f6dc4dc9d15f41400bccf2a4
