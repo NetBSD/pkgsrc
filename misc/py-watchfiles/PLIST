@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/31 08:47:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/22 09:58:55 adam Exp $
 bin/watchfiles-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,8 +11,8 @@ ${PYSITELIB}/watchfiles/__init__.pyo
 ${PYSITELIB}/watchfiles/__main__.py
 ${PYSITELIB}/watchfiles/__main__.pyc
 ${PYSITELIB}/watchfiles/__main__.pyo
+${PYSITELIB}/watchfiles/_rust_notify.abi3.so
 ${PYSITELIB}/watchfiles/_rust_notify.pyi
-${PYSITELIB}/watchfiles/_rust_notify.so
 ${PYSITELIB}/watchfiles/cli.py
 ${PYSITELIB}/watchfiles/cli.pyc
 ${PYSITELIB}/watchfiles/cli.pyo
