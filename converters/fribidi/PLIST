@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/09/17 16:43:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/22 07:42:17 ryoon Exp $
 bin/fribidi
 include/fribidi/fribidi-arabic.h
 include/fribidi/fribidi-begindecls.h
@@ -24,6 +24,7 @@ include/fribidi/fribidi-unicode.h
 include/fribidi/fribidi.h
 lib/libfribidi.la
 lib/pkgconfig/fribidi.pc
+man/man1/fribidi.1
 man/man3/fribidi_charset_to_unicode.3
 man/man3/fribidi_debug_status.3
 man/man3/fribidi_get_bidi_type.3
