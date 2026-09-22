@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/06/13 06:59:12 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/22 12:07:49 adam Exp $
 
-DISTNAME=	extension_helpers-1.4.0
+DISTNAME=	extension_helpers-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/extension-helpers/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
