@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27963 2026/09/22 13:07:42 adam Exp $
+$NetBSD: TODO,v 1.27964 2026/09/22 14:56:16 kikadf Exp $
 
 Suggested new packages
 ======================
@@ -892,7 +892,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtool-base-2.6.2
 	o libtorrent-rasterbar-2.1.0 [wait for https://github.com/qbittorrent/qBittorrent/issues/24663]
 	o libtrace-4.0.16
-	o libudev-bsd-0.7.0.1
 	o libuninameslist-20260918
 	o libvirt-12.0
 	o libxdg-basedir-1.2.3
