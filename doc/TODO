@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27964 2026/09/22 14:56:16 kikadf Exp $
+$NetBSD: TODO,v 1.27965 2026/09/23 06:27:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -636,7 +636,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
-	o fetchmail-6.6.7rc1 [security fix]
+	o fetchmail-6.6.8 [security fix]
 	o ffmpeg-9.0
 	o fifengine-0.4.3
 	o filerunner-14.06.18.10
@@ -869,6 +869,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.23.5
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1041,7 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmpi-5.0.5
 	o openmw-0.51.0
 	o openslp-2.0.0
-	o openssl-4.0.0
+	o openssl-4.0.3
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1069,6 +1070,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Math-Bezier-0.02
 	o p5-Module-Path-0.33
 	o p5-MooseX-Types-DateTime-0.16
+	o p5-Net-IDN-Encode-2.502
 	o p5-Net-INET6Glue-0.604
 	o p5-Net-Jabber-2.1.7
 	o p5-Publican-4.3.2
