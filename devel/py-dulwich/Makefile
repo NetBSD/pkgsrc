@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2026/08/31 10:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.89 2026/09/23 13:28:14 adam Exp $
 
-DISTNAME=	dulwich-1.2.14
+DISTNAME=	dulwich-1.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -11,14 +11,14 @@ COMMENT=	Python implementation of Git
 LICENSE=	apache-2.0 OR gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.2.2:../../www/py-urllib3
-TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
-TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
-TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpclient
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
-TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport>=0:../../devel/py-fastimport
+TEST_DEPENDS+=	${PYPKGPREFIX}-gevent>=0:../../net/py-gevent
+TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient>=0:../../net/py-geventhttpclient
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko>=0:../../security/py-paramiko
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312
