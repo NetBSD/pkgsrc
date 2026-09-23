@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2026/08/08 06:40:46 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/09/23 09:04:53 adam Exp $
 
-BLAKE2s (fuse-1.9.1.tar.gz) = 245ba1910945b054a050b8df7a5ffd6ce7e943e972f4c6a1e1e9c43498ac274e
-SHA512 (fuse-1.9.1.tar.gz) = dfe804835cd724d903ca34aa368068f16bb0ac0a0738a17de6dd545d0a139953cab15f26612a6129bc0fffbd981a5bb6de3a781e811b6fe1f851525cea1543e6
-Size (fuse-1.9.1.tar.gz) = 1823797 bytes
+BLAKE2s (fuse-1.9.2.tar.gz) = f0abe81c563ac1080df586a2d28f5eaa5138ec87dfeafb80b02275b977059264
+SHA512 (fuse-1.9.2.tar.gz) = c7b5228cd2c25d6511d6df6f5093f12f356455294527950cdc4c8a4ada50a3b8e46a5b16f82e12a18bf4afb2da9b84fc96306f7271d04a0926ae6844efc26dca
+Size (fuse-1.9.2.tar.gz) = 1850564 bytes
 SHA1 (patch-sound_coreaudiosound.c) = e293cd00d9466af4e49a7c0a1cb9b535aebf6f4d
 SHA1 (patch-sound_osssound.c) = e83d80c984592b4e52faccbea35cdc9b54b71933
