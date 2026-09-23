@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6255 2026/09/23 08:58:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6256 2026/09/23 09:07:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9476,3 +9476,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird-l10n to 155.0.1 [ryoon 2026-09-23]
 	Updated x11/gtk4 to 4.24.0 [adam 2026-09-23]
 	Updated devel/appstream to 1.2.0 [adam 2026-09-23]
+	Updated emulators/libspectrum to 1.6.4 [adam 2026-09-23]
+	Updated emulators/fuse-emulator to 1.9.2 [adam 2026-09-23]
+	Updated emulators/fuse-emulator-utils to 1.4.7 [adam 2026-09-23]
