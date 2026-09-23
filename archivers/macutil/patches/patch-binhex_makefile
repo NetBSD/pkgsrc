@@ -1,0 +1,15 @@
+$NetBSD: patch-binhex_makefile,v 1.1 2026/09/23 20:31:33 rhialto Exp $
+
+Use $(LDFLAGS).
+
+--- binhex/makefile.orig	2026-09-23 16:37:24.024866357 +0000
++++ binhex/makefile
+@@ -14,7 +14,7 @@ XOBJS =	$(TNAME).o $(BNAME).o $(UNAME).o
+ XSRCS =	$(TNAME).c $(BNAME).c $(UNAME).c $(INAME).c $(GNAME).c
+ 
+ binhex:	$(OBJS) $(XOBJS) $(LIB)
+-	$(CC) $(CFLAGS) -o binhex $(OBJS) $(XOBJS) $(LIB)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o binhex $(OBJS) $(XOBJS) $(LIB)
+ 
+ $(LIB):	../crc/makecrc.c
+ 	(cd ../crc; make CC=$(CC) CF="$(CF)" )

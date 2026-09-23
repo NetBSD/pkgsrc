@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:57:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/09/23 20:31:33 rhialto Exp $
 
 BLAKE2s (macutil2.0b3.shar.Z) = 5c25db77fd87e60dc4c4271c545d4032dfb29997514eb61aa7efcbbcfc7dd950
 SHA512 (macutil2.0b3.shar.Z) = 5162ed28a7b43f3814c072977c3a41fba0cea832f56c8c28bb78d49f2d3827b139570a363ad6b0c520c039e2a5f3a8f1cbb2cff587bb741b30a8dca051c131a3
@@ -7,3 +7,8 @@ SHA1 (patch-aa) = 418d0cdd57a0d378902b653cd4ddb8279ff0e0e8
 SHA1 (patch-ab) = a731ae3a6d796206a8f27d5a93f35e054bf87cc6
 SHA1 (patch-ac) = 09142b16d17f49ce89c323a6d334db1d2a06f36f
 SHA1 (patch-ad) = 05a1b84a78693291e6fe95af853413bee5f51070
+SHA1 (patch-binhex_makefile) = a59e71cc2386af4b39817ad5504a779b5b0966c7
+SHA1 (patch-comm_makefile) = 59494c7b94ec09e47894b6e2f621e1e2677539f6
+SHA1 (patch-hexbin_makefile) = 0dc9a3c2b54ea9d24b38b963b7b05b79074073df
+SHA1 (patch-macunpack_makefile) = ab2b938c06f54f741572a4e87ea332d38ced6f5e
+SHA1 (patch-mixed_makefile) = ab49a6101bf8b66c3c032ebd93ea5fa9fcaa1ad2
