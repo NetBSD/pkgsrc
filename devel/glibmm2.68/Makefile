@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2026/09/02 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/23 07:12:38 adam Exp $
 
-DISTNAME=	glibmm-2.88.1
+DISTNAME=	glibmm-2.90.0
 PKGNAME=	${DISTNAME:S/glibmm/glibmm2.68/}
-PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +37,7 @@ PLIST_VARS+=	notmac
 PLIST.notmac=	yes
 .endif
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.88.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.90.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
