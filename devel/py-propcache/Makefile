@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/06/28 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/23 12:47:58 adam Exp $
 
-DISTNAME=	propcache-0.5.2
+DISTNAME=	propcache-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/propcache/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://github.com/aio-libs/propcache
 COMMENT=	Accelerated property cache
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars>=0:../../misc/py-expandvars
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults-[0-9]*:../../devel/py-covdefaults
+TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=0:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.0.0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
