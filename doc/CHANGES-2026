@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6262 2026/09/23 12:43:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6263 2026/09/23 12:50:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9492,3 +9492,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coverage to 7.16.1 [adam 2026-09-23]
 	Updated devel/xxhash to 0.8.4 [adam 2026-09-23]
 	Updated graphics/librsvg to 2.62.4 [adam 2026-09-23]
+	Updated devel/py-boltons to 26.2.0 [adam 2026-09-23]
+	Updated devel/py-propcache to 0.5.4 [adam 2026-09-23]
+	Updated devel/py-xdg-base-dirs to 6.0.3 [adam 2026-09-23]
