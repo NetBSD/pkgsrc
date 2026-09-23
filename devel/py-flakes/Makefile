@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/07/01 19:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/23 12:10:37 adam Exp $
 
-DISTNAME=	pyflakes-3.4.0
+DISTNAME=	pyflakes-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyflakes/}
@@ -14,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pyflakes pyflakes-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pyflakes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
