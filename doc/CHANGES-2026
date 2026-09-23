@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6258 2026/09/23 09:34:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6259 2026/09/23 10:42:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9483,3 +9483,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/yq to 4.2.0 [adam 2026-09-23]
 	Updated devel/py-slugify to 9.1.1 [adam 2026-09-23]
 	Updated devel/py-vcs-versioning to 2.4.1 [adam 2026-09-23]
+	Updated textproc/py-Levenshtein to 0.27.5 [adam 2026-09-23]
+	Updated textproc/py-parse to 1.22.2 [adam 2026-09-23]
