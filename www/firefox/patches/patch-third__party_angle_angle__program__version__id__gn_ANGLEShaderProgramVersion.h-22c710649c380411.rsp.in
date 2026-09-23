@@ -1,10 +1,8 @@
-$NetBSD: patch-third__party_angle_angle__program__version__id__gn_ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in,v 1.1 2026/08/24 12:51:47 ryoon Exp $
+$NetBSD: patch-third__party_angle_angle__program__version__id__gn_ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in,v 1.2 2026/09/23 08:39:50 ryoon Exp $
 
-For FreeBSD and NetBSD.
-
---- third_party/angle/angle_program_version_id_gn/ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in.orig	2026-08-14 14:16:40.408891583 +0000
+--- third_party/angle/angle_program_version_id_gn/ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in.orig	2026-09-11 15:06:30.611350505 +0000
 +++ third_party/angle/angle_program_version_id_gn/ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in
-@@ -0,0 +1,866 @@
+@@ -0,0 +1,855 @@
 +/third_party/angle/src/common/BinaryStream.h
 +/third_party/angle/src/common/CircularBuffer.h
 +/third_party/angle/src/common/Color.h
@@ -135,10 +133,6 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/libANGLE/MemoryProgramCache.h
 +/third_party/angle/src/libANGLE/MemoryShaderCache.h
 +/third_party/angle/src/libANGLE/Observer.h
-+/third_party/angle/src/libANGLE/Overlay.h
-+/third_party/angle/src/libANGLE/OverlayWidgets.h
-+/third_party/angle/src/libANGLE/Overlay_autogen.h
-+/third_party/angle/src/libANGLE/Overlay_font_autogen.h
 +/third_party/angle/src/libANGLE/PixelLocalStorage.h
 +/third_party/angle/src/libANGLE/Program.h
 +/third_party/angle/src/libANGLE/ProgramExecutable.h
@@ -198,7 +192,6 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/libANGLE/renderer/gl/functionsgl_enums.h
 +/third_party/angle/src/libANGLE/renderer/ImageImpl.h
 +/third_party/angle/src/libANGLE/renderer/MemoryObjectImpl.h
-+/third_party/angle/src/libANGLE/renderer/OverlayImpl.h
 +/third_party/angle/src/libANGLE/renderer/ProgramImpl.h
 +/third_party/angle/src/libANGLE/renderer/ProgramExecutableImpl.h
 +/third_party/angle/src/libANGLE/renderer/ProgramPipelineImpl.h
@@ -278,10 +271,6 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/libANGLE/MemoryProgramCache.cpp
 +/third_party/angle/src/libANGLE/MemoryShaderCache.cpp
 +/third_party/angle/src/libANGLE/Observer.cpp
-+/third_party/angle/src/libANGLE/Overlay.cpp
-+/third_party/angle/src/libANGLE/OverlayWidgets.cpp
-+/third_party/angle/src/libANGLE/Overlay_autogen.cpp
-+/third_party/angle/src/libANGLE/Overlay_font_autogen.cpp
 +/third_party/angle/src/libANGLE/PixelLocalStorage.cpp
 +/third_party/angle/src/libANGLE/Platform.cpp
 +/third_party/angle/src/libANGLE/Program.cpp
@@ -572,9 +561,10 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/compiler/translator/tree_ops/SimplifyLoopConditions.h
 +/third_party/angle/src/compiler/translator/tree_ops/SplitSequenceOperator.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/SplitSequenceOperator.h
-+/third_party/angle/src/compiler/translator/tree_ops/glsl/RegenerateStructNames.h
++/third_party/angle/src/compiler/translator/tree_ops/glsl/ExpandFragmentOutputsToVec4.h
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/RewriteRepeatedAssignToSwizzled.h
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/UseInterfaceBlockFields.h
++/third_party/angle/src/compiler/translator/tree_ops/glsl/WrapStructConstructors.h
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/AddAndTrueToLoopCondition.h
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/RewriteRowMajorMatrices.h
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/UnfoldShortCircuitAST.h
@@ -612,8 +602,6 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/compiler/translator/tree_util/RunAtTheBeginningOfShader.h
 +/third_party/angle/src/compiler/translator/tree_util/RunAtTheEndOfShader.cpp
 +/third_party/angle/src/compiler/translator/tree_util/RunAtTheEndOfShader.h
-+/third_party/angle/src/compiler/translator/tree_util/SpecializationConstant.cpp
-+/third_party/angle/src/compiler/translator/tree_util/SpecializationConstant.h
 +/third_party/angle/src/compiler/translator/tree_util/Visit.h
 +/third_party/angle/src/compiler/translator/util.cpp
 +/third_party/angle/src/compiler/translator/util.h
@@ -631,9 +619,10 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/compiler/translator/glsl/ExtensionGLSL.h
 +/third_party/angle/src/compiler/translator/glsl/TranslatorGLSL.cpp
 +/third_party/angle/src/compiler/translator/glsl/VersionGLSL.cpp
-+/third_party/angle/src/compiler/translator/tree_ops/glsl/RegenerateStructNames.cpp
++/third_party/angle/src/compiler/translator/tree_ops/glsl/ExpandFragmentOutputsToVec4.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/RewriteRepeatedAssignToSwizzled.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/UseInterfaceBlockFields.cpp
++/third_party/angle/src/compiler/translator/tree_ops/glsl/WrapStructConstructors.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/AddAndTrueToLoopCondition.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/RewriteRowMajorMatrices.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/glsl/apple/UnfoldShortCircuitAST.cpp
@@ -691,8 +680,6 @@ For FreeBSD and NetBSD.
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/ClampGLLayer.h
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateAdvancedBlendEquations.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateAdvancedBlendEquations.h
-+/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateDithering.cpp
-+/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateDithering.h
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateFragColorData.cpp
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateFragColorData.h
 +/third_party/angle/src/compiler/translator/tree_ops/spirv/EmulateFramebufferFetch.cpp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.195 2026/08/26 21:44:35 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.196 2026/09/23 08:39:50 ryoon Exp $
 bin/${MOZILLA}
 lib/${MOZILLA}/application.ini
 lib/${MOZILLA}/browser/chrome/icons/default/default128.png
@@ -12,7 +12,7 @@ lib/${MOZILLA}/dependentlibs.list
 lib/${MOZILLA}/${MOZILLA}
 lib/${MOZILLA}/${MOZILLA}-bin
 lib/${MOZILLA}/fonts/TwemojiMozilla.ttf
-lib/${MOZILLA}/glxtest
+lib/${MOZILLA}/gfxtest
 lib/${MOZILLA}/gmp-clearkey/0.1/libclearkey.so
 lib/${MOZILLA}/gmp-clearkey/0.1/manifest.json
 lib/${MOZILLA}/libgkcodecs.so
@@ -29,8 +29,6 @@ lib/${MOZILLA}/pingsender
 lib/${MOZILLA}/platform.ini
 lib/${MOZILLA}/removed-files
 ${PLIST.v4l2_decode}lib/${MOZILLA}/v4l2test
-lib/${MOZILLA}/vaapitest
-lib/${MOZILLA}/vulkantest
 share/applications/${MOZILLA}.desktop
 share/icons/hicolor/128x128/apps/${MOZILLA}.png
 share/icons/hicolor/16x16/apps/${MOZILLA}.png

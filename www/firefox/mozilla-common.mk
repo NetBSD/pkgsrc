@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.325 2026/09/10 21:05:45 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.326 2026/09/23 08:39:50 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -150,7 +150,7 @@ CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
-SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/gfxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
