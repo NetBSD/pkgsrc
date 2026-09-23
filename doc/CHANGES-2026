@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6263 2026/09/23 12:50:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6264 2026/09/23 13:02:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9495,3 +9495,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-boltons to 26.2.0 [adam 2026-09-23]
 	Updated devel/py-propcache to 0.5.4 [adam 2026-09-23]
 	Updated devel/py-xdg-base-dirs to 6.0.3 [adam 2026-09-23]
+	Updated security/snallygaster to 0.0.15 [adam 2026-09-23]
+	Updated devel/py-meson_python to 0.21.1 [adam 2026-09-23]
