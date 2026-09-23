@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6276 2026/09/23 20:47:58 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.6277 2026/09/23 22:04:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9512,3 +9512,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/kermit to 9.0.302nb15 [rhialto 2026-09-23]
 	Updated cross/64tass to 1.60.3243nb1 [rhialto 2026-09-23]
 	Updated audio/mp3_check to 1.98nb1 [rhialto 2026-09-23]
+	Updated net/p5-Net-Server to 2.018nb2 [wiz 2026-09-23]
