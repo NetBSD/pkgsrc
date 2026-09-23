@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.28 2026/08/11 16:18:02 wiz Exp $
+# $NetBSD: builtin.mk,v 1.29 2026/09/23 05:31:06 adam Exp $
 
 BUILTIN_PKG:=	expat
 
 BUILTIN_FIND_HEADERS_VAR:=	H_EXPAT
-BUILTIN_FIND_HEADERS.H_EXPAT=	expat.h
+BUILTIN_FIND_HEADERS.H_EXPAT=	expat.h expat_config.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
