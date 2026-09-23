@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6254 2026/09/23 08:49:41 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6255 2026/09/23 08:58:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9474,3 +9474,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox-l10n to 156.0.1 [ryoon 2026-09-23]
 	Updated mail/thunderbird to 155.0.1 [ryoon 2026-09-23]
 	Updated mail/thunderbird-l10n to 155.0.1 [ryoon 2026-09-23]
+	Updated x11/gtk4 to 4.24.0 [adam 2026-09-23]
+	Updated devel/appstream to 1.2.0 [adam 2026-09-23]
