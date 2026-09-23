@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/04/14 12:49:12 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/23 13:26:01 adam Exp $
 
-DISTNAME=	jemalloc-5.3.1
+DISTNAME=	jemalloc-5.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jemalloc/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
