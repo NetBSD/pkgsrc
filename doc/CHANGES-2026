@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6272 2026/09/23 20:31:48 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.6273 2026/09/23 20:34:02 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9508,3 +9508,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/mikmod to 3.2.10 [adam 2026-09-23]
 	Updated cad/qcad to 3.33.1.0 [plunky 2026-09-23]
 	Updated archivers/macutil to 2.0b3nb1 [rhialto 2026-09-23]
+	Updated archivers/undms to 1.3nb1 [rhialto 2026-09-23]
