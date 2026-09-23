@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/08/18 00:58:42 ktnb Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/23 13:40:55 ktnb Exp $
 
-DISTNAME=	SuiteSparse-7.14.0
+DISTNAME=	SuiteSparse-7.14.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DrTimothyAldenDavis/}
