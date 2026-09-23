@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2023/10/24 22:08:25 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/09/23 20:39:55 rhialto Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.kermitproject.org/kermit/archives/
 
@@ -26,7 +26,7 @@ LIBS+=		${BUILDLINK_LDADD.termcap}
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 KFLAGS+=	${BUILDLINK_CPPFLAGS}
-LIBS+=		${BUILDLINK_LDFLAGS}
+LIBS+=		${BUILDLINK_LDFLAGS} ${LDFLAGS}
 
 .include "options.mk"
 
