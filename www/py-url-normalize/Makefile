@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/04/28 09:04:50 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/23 13:07:51 adam Exp $
 
-DISTNAME=	url_normalize-3.0.0
+DISTNAME=	url_normalize-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/url_normalize/}
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-idna>=3.3:../../www/py-idna
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket>=0:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
 
