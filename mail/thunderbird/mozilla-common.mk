@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.30 2026/08/30 10:26:05 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.31 2026/09/23 08:48:57 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -31,14 +31,33 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 TOOL_DEPENDS+=		cbindgen>=0.29.4:../../devel/cbindgen
 
+.if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
+USE_TOOLS+=		diff
+.else
+CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
+.endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 CFLAGS+=		-msse2
 .endif
+
+CKSUM_CRATES+=		third_party/rust/mtu
+
+CKSUMS+=		9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
+CKSUMS+=		986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
@@ -135,7 +154,7 @@ CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
-SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/gfxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386}
@@ -202,7 +221,11 @@ ALL_ENV+=		MOZ_APP_NAME=${MOZILLA}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
+.if ${MAINTAINER_INTERNAL:Uno} == "yes"
+OBJDIR=			../no-node-build
+.else
 OBJDIR=			../build
+.endif
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
@@ -256,9 +279,9 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 # See build/moz.configure/nspr.configure
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/iCu/buildlink3.mk"
 # See build/moz.configure/nss.configure
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.126
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.126.1
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.300 2026/08/30 10:26:05 ryoon Exp $
+$NetBSD: distinfo,v 1.301 2026/09/23 08:48:57 ryoon Exp $
 
-BLAKE2s (thunderbird-154.0.source.tar.xz) = c33328c8278ad347c20a3c9ead15483bf23c26ee92dcb82f05bffe45abc94e03
-SHA512 (thunderbird-154.0.source.tar.xz) = aebdc5f0f4788124128a77b8a329767fa0f6d1d46c41ca6fd45889368e4e964a7a82a41f5367e825da0d544eff61d4da07dff2e6eb13f72c935bed79a184c5a8
-Size (thunderbird-154.0.source.tar.xz) = 950250240 bytes
+BLAKE2s (thunderbird-155.0.1.source.tar.xz) = f68efb1036ee0cc446665bb6c0b77ed1a8e6fb62a0c9210dda56cb3b83b2fb9b
+SHA512 (thunderbird-155.0.1.source.tar.xz) = f0811a90cdad910d0265a37e18a36f2f51185b4a50f7f7647938a7ca1bd31f5bc49572954a5039a9e7e87dc2b4f98bb32f1dc393199c3304d8e87cf36b6c89f0
+Size (thunderbird-155.0.1.source.tar.xz) = 945085524 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
 SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
@@ -12,7 +12,7 @@ SHA1 (patch-comm_mailnews_search_src_nsMsgSearchNews.cpp) = 84624c6752de1f56848a
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
 SHA1 (patch-comm_third__party_openpgp.configure) = 674e8a741d82f576549aa0bb44465d3a2577a212
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = b5b4f2aef747836b09584b77d6332a7010963b0b
-SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
+SHA1 (patch-config_makefiles_rust.mk) = 62c823e5f11f047a54c7ebcce7534469c3f0d515
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_canvas_WebGLMethodDispatcher.h) = 78f6e44116a939615523339fb73ac93f40777749
 SHA1 (patch-dom_media_mediacapabilities_MediaCapabilitiesValidation.cpp) = 2f471067387bb63d530ba1299f0542d3b3a785b6
@@ -42,7 +42,7 @@ SHA1 (patch-media_libpng_pngpriv.h) = ee952a703ee08e8ff2269c7178e55e00b12faa29
 SHA1 (patch-memory_build_mozjemalloc__types.h) = af87ef935653cb845a6b702af2f5645a6ada27db
 SHA1 (patch-mozglue_misc_Now.cpp) = 760724be1bdc4ca6e19edaf2c8df6dd84192d93f
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c99c3ce679f4196fc3baaf65051471a13d6fe8cd
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-python_sites_build.txt) = f03f059bbe79bfdf7f1db5475279edb3c9d6ebed
 SHA1 (patch-python_sites_mach.txt) = be62d091430daaa2ceeff3aff07f71275896352f

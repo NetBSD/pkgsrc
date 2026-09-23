@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.368 2026/09/02 19:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.369 2026/09/23 08:48:57 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER:S/esr//}
-PKGREVISION=	1
-TB_VER=		154.0
+TB_VER=		155.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -50,45 +49,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/lib
 .include "../../mk/bsd.prefs.mk"
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
-
-#
-# Generate list of subst entries for various .cargo-checksum.json files.  These
-# are all handled together in one big substitution to simplify things rather
-# than one substitution entry per file, but are kept separate below to ease
-# updating and verification.
-#
-
-#CKSUM_CRATES+=	comm/third_party/rust/minimal-lexical
-#
-## touch comm/third_party/rust/minimal-lexical/.gitmodules
-#CKSUMS+=	6976207a02c7160a3a1d076c5fae10fe4b78f58cdc0aa66ae47f3855b3c392fb
-#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-#CKSUM_CRATES+=	comm/third_party/rust/sfv
-#
-## touch comm/third_party/rust/sfv/.gitmodules
-#CKSUMS+=	caa4f75b6a87c4a0f2e7d8d0d5fa2ef3f726fb0ae7797af09bfa3d57c4721148
-#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-#CKSUM_CRATES+=	comm/third_party/rust/glslopt
-#
-## touch comm/third_party/rust/glslopt/.gitmodules
-#CKSUMS+=	ffc0cce90e856d4f4bdb3bd3c950c9e59501a45ebd5022b91cfe8c07c79ef1ac
-#CKSUMS+=	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-CKSUM_CRATES+=	third_party/rust/mtu
-
-CKSUMS+=	9fbb89ab042627182477b35adc61eed71cffada9d3d5d522766d6d369ad02d80
-CKSUMS+=	986f84f01a44521224c7a7c1b1883cc6a4f89cbcb24b36844bfffea5f285747e
-
-SUBST_CLASSES+=		cksum
-SUBST_STAGE.cksum=	pre-configure
-.for crate in ${CKSUM_CRATES}
-SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-.endfor
-.for from to in ${CKSUMS}
-SUBST_SED.cksum+=	-e 's,${from},${to},g'
-.endfor
 
 PRINT_PLIST_AWK+=	/\/${MOZILLA}\// { gsub(/\/${MOZILLA}\//, "/$${MOZILLA}/") }
 PRINT_PLIST_AWK+=	/\/${MOZILLA}.png$$/ { gsub(/\/${MOZILLA}.png$$/, "/$${MOZILLA}.png") }
