@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.29 2026/05/17 15:49:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2026/09/23 08:41:34 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
-bin/gtk4-encode-symbolic-svg
-bin/gtk4-icon-editor
 bin/gtk4-image-tool
 bin/gtk4-launch
 bin/gtk4-node-editor
@@ -142,6 +140,7 @@ include/gtk-4.0/gsk/gskpathbuilder.h
 include/gtk-4.0/gsk/gskpathmeasure.h
 include/gtk-4.0/gsk/gskpathpoint.h
 include/gtk-4.0/gsk/gskradialgradientnode.h
+include/gtk-4.0/gsk/gskrectsnap.h
 include/gtk-4.0/gsk/gskrenderer.h
 include/gtk-4.0/gsk/gskrendernode.h
 include/gtk-4.0/gsk/gskrenderreplay.h
@@ -288,6 +287,7 @@ include/gtk-4.0/gtk/gtkeditablelabel.h
 include/gtk-4.0/gtk/gtkemojichooser.h
 include/gtk-4.0/gtk/gtkentry.h
 include/gtk-4.0/gtk/gtkentrybuffer.h
+include/gtk-4.0/gtk/gtkenumlist.h
 include/gtk-4.0/gtk/gtkenums.h
 include/gtk-4.0/gtk/gtkeventcontroller.h
 include/gtk-4.0/gtk/gtkeventcontrollerfocus.h
@@ -412,7 +412,7 @@ include/gtk-4.0/gtk/gtkstringfilter.h
 include/gtk-4.0/gtk/gtkstringlist.h
 include/gtk-4.0/gtk/gtkstringsorter.h
 include/gtk-4.0/gtk/gtkstyleprovider.h
-include/gtk-4.0/gtk/gtksvg.h
+include/gtk-4.0/gtk/gtksvgwidget.h
 include/gtk-4.0/gtk/gtkswitch.h
 include/gtk-4.0/gtk/gtksymbolicpaintable.h
 include/gtk-4.0/gtk/gtktestatcontext.h
@@ -448,6 +448,8 @@ include/gtk-4.0/gtk/print/gtkprintcontext.h
 include/gtk-4.0/gtk/print/gtkprintoperation.h
 include/gtk-4.0/gtk/print/gtkprintoperationpreview.h
 include/gtk-4.0/gtk/print/gtkprintsettings.h
+include/gtk-4.0/gtk/svg/gtksvg.h
+include/gtk-4.0/gtk/svg/gtksvgenumtypes.h
 include/gtk-4.0/unix-print/gtk/gtkunixprint.h
 include/gtk-4.0/unix-print/gtk/print/gtkpagesetupunixdialog.h
 include/gtk-4.0/unix-print/gtk/print/gtkprinter.h
@@ -461,7 +463,7 @@ lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
 lib/libgtk-4.so
 lib/libgtk-4.so.1
-lib/libgtk-4.so.1.2200.4
+lib/libgtk-4.so.1.2400.0
 lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
@@ -470,7 +472,6 @@ ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
 lib/pkgconfig/gtk4.pc
 share/applications/org.gtk.Demo4.desktop
 share/applications/org.gtk.PrintEditor4.desktop
-share/applications/org.gtk.Shaper.desktop
 share/applications/org.gtk.WidgetFactory4.desktop
 share/applications/org.gtk.gtk4.NodeEditor.desktop
 share/gettext/its/gtk4builder.its
@@ -515,14 +516,11 @@ share/gtk-4.0/valgrind/gtk.supp
 share/icons/hicolor/scalable/apps/org.gtk.Demo4.svg
 share/icons/hicolor/scalable/apps/org.gtk.PrintEditor4.Devel.svg
 share/icons/hicolor/scalable/apps/org.gtk.PrintEditor4.svg
-share/icons/hicolor/scalable/apps/org.gtk.Shaper.Devel.svg
-share/icons/hicolor/scalable/apps/org.gtk.Shaper.svg
 share/icons/hicolor/scalable/apps/org.gtk.WidgetFactory4.svg
 share/icons/hicolor/scalable/apps/org.gtk.gtk4.NodeEditor.Devel.svg
 share/icons/hicolor/scalable/apps/org.gtk.gtk4.NodeEditor.svg
 share/icons/hicolor/symbolic/apps/org.gtk.Demo4-symbolic.svg
 share/icons/hicolor/symbolic/apps/org.gtk.PrintEditor4-symbolic.svg
-share/icons/hicolor/symbolic/apps/org.gtk.Shaper-symbolic.svg
 share/icons/hicolor/symbolic/apps/org.gtk.WidgetFactory4-symbolic.svg
 share/icons/hicolor/symbolic/apps/org.gtk.gtk4.NodeEditor-symbolic.svg
 share/locale/ab/LC_MESSAGES/gtk40.mo
