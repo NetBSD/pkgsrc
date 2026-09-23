@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/12/30 06:03:24 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/23 12:38:18 adam Exp $
 
-DISTNAME=	xxhash-0.8.3
+DISTNAME=	xxhash-0.8.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 GITHUB_PROJECT=	xxHash
