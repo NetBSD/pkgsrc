@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/07/01 19:31:43 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/23 12:08:06 adam Exp $
 
-DISTNAME=	pycodestyle-2.14.0
+DISTNAME=	pycodestyle-2.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
@@ -14,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pycodestyle pycodestyle-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pycodestyle
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
