@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/05/31 20:44:02 zafer Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/23 06:07:39 wiz Exp $
 
 DISTNAME=	unlzx.c
 PKGNAME=	unlzx-1.1
@@ -13,8 +13,10 @@ WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	bin
 
+CFLAGS+=	-Wno-implicit-function-declaration
+
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} -o unlzx unlzx.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o unlzx unlzx.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unlzx ${DESTDIR}${PREFIX}/bin
