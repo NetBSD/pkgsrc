@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6270 2026/09/23 18:26:37 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.6271 2026/09/23 19:32:43 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9506,3 +9506,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/suitesparse to 7.14.1 [ktnb 2026-09-23]
 	Updated audio/libmikmod to 3.3.14 [adam 2026-09-23]
 	Updated audio/mikmod to 3.2.10 [adam 2026-09-23]
+	Updated cad/qcad to 3.33.1.0 [plunky 2026-09-23]
