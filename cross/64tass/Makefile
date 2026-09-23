@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/05/10 13:45:20 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/23 20:43:11 rhialto Exp $
 
 DISTNAME=	64tass-1.60.3243-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tass64/}
 EXTRACT_SUFX=	.zip
