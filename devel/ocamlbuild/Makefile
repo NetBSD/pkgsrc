@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/03/01 12:38:34 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/23 12:27:57 gdt Exp $
 
 DISTNAME=	ocamlbuild-0.16.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -20,6 +20,10 @@ INSTALL_TARGET=		findlib-install
 
 MAKE_ENV=	CHECK_IF_PREINSTALLED=false OCAMLBUILD_BINDIR=${PREFIX}/bin \
 		OCAMLBUILD_LIBDIR=${PREFIX}/${OCAML_SITELIBDIR}
+
+# ocamlbuild not only uses findlib at build time, normally, but offers
+# a way for the build tool to use findlib at runtime.
+BUILDLINK_DEPMETHOD.ocaml-findlib?=	full
 
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
