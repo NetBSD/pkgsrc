@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.318 2026/08/30 10:20:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.319 2026/09/23 08:41:20 ryoon Exp $
 
-FIREFOX_VER=	154.0.1
+FIREFOX_VER=	156.0.1
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
+#PKGNAME=	firefox-l10n-${FIREFOX_VER}rc1
 DISTNAME=	# empty
 CATEGORIES=	www
-#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-x86_64/xpi/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-x86_64/xpi/}
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-x86_64/xpi/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/candidates/155.0-candidates/build1/linux-x86_64/xpi/}
+#DIST_SUBDIR=	firefox-155.0rc1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
@@ -14,7 +19,6 @@ LICENSE=	mpl-2.0 # as of 140
 
 DEPENDS+=	firefox>=${PKGVERSION_NOREV}:../../www/firefox
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}
 
 NO_BUILD=	yes
