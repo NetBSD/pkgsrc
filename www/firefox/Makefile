@@ -1,18 +1,25 @@
-# $NetBSD: Makefile,v 1.672 2026/09/02 19:04:57 wiz Exp $
+# $NetBSD: Makefile,v 1.673 2026/09/23 08:39:50 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		154.0
+MOZ_BRANCH=		156.0
 MOZ_BRANCH_MINOR=	.1
+CANDIDATE_BUILD=	# for release, make this empty
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	1
+
+.if empty(CANDIDATE_BUILD)
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
+.else
+RCVER=		build${CANDIDATE_BUILD}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/candidates/${FIREFOX_VER}-candidates/${RCVER}/source/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
+.endif
+
+PKGNAME=	${DISTNAME:S/.source/${RCVER:S/build/rc/}/:S/esr//}
 CATEGORIES=	www
-MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
-MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-154.0.tgz
+NODEJSKIT=		nodejs-output-156.0.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
