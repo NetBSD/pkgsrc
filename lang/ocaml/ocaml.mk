@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.4 2026/02/02 19:36:35 wiz Exp $
+# $NetBSD: ocaml.mk,v 1.5 2026/09/23 00:09:27 gdt Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 # It should be included by every package that uses OCaml.
@@ -153,10 +153,11 @@ PRINT_PLIST_AWK+=	{ gsub(/${OCAML_SITELIBDIR:S|/|\\/|g}/, \
 			print; next; }
 
 .if ${OCAML_USE_FINDLIB} == "yes"
+BUILDLINK_DEPMETHOD.ocaml-findlib?=	build
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}
 OCAML_FINDLIB_DIRS?=	${PKGBASE:S/^ocaml-//}
-OCAML_FINDLIB_REGISTER?=	yes
+OCAML_FINDLIB_REGISTER?=		yes
 .endif
 
 #
