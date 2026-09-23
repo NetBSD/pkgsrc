@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27972 2026/09/23 13:14:16 adam Exp $
+$NetBSD: TODO,v 1.27973 2026/09/23 13:28:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -818,7 +818,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jchkmail-2.6.2
 	o jdbc-mysql5-5.1.36
 	o jdom-2.0.6
-	o jemalloc-5.4.0
 	o jetty7-7.6.17
 	o jetty9-9.3.7
 	o jools-1.0
