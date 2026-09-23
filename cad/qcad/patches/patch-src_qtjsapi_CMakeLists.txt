@@ -1,15 +1,14 @@
-$NetBSD: patch-src_qtjsapi_CMakeLists.txt,v 1.1 2025/11/24 09:51:27 wiz Exp $
+$NetBSD: patch-src_qtjsapi_CMakeLists.txt,v 1.2 2026/09/23 19:32:24 plunky Exp $
 
 Explicitly depend on GuiPrivate to fix build with qt6 6.10.
 
---- src/qtjsapi/CMakeLists.txt.orig	2025-11-24 07:59:27.666238568 +0000
+--- src/qtjsapi/CMakeLists.txt.orig	2026-09-05 11:07:00.000000000 +0000
 +++ src/qtjsapi/CMakeLists.txt
-@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
- set(CMAKE_CXX_STANDARD_REQUIRED ON)
- set(CMAKE_AUTOMOC ON)
+@@ -12,6 +12,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core Widgets Conc
  
--find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml UiTools QuickWidgets Core5Compat)
-+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui GuiPrivate Network OpenGL Sql Svg Xml PrintSupport Qml UiTools QuickWidgets Core5Compat)
- qt_standard_project_setup()
+ # Mandatory modules
+ find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Svg Xml Qml UiTools Help)
++find_package(Qt6 REQUIRED COMPONENTS GuiPrivate)
  
- qt_add_resources(SOURCES qtjsapi.qrc)
+ # Optional modules
+ set(QT_OPTIONAL_COMPONENTS Core5Compat PrintSupport QuickWidgets Sql Positioning Location Help)

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.136 2026/09/02 19:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2026/09/23 19:32:24 plunky Exp $
 
-DISTNAME=		qcad-3.32.3.4
-PKGREVISION=		5
+DISTNAME=		qcad-3.33.1.0
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -17,6 +16,8 @@ LICENSE=		gnu-gpl-v3
 
 USE_TOOLS+=		cmake find pax
 USE_LANGUAGES=		c c++
+
+REPLACE_SH+=            src/scripts/update_qrc.sh
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -51,17 +52,15 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/qcad.png
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/src/qcad/plugins/libqcadjsapi.so \
+	${INSTALL_LIB} ${WRKSRC}/src/qcad/plugins/libqcadjsapi.so \
 	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}/plugins
 	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/src/qtjsapi/out/libqtjsapi.so \
 	    ${DESTDIR}${PREFIX}/lib
-	cd ${WRKSRC}/${CMAKE_BUILD_DIR}/release && ${PAX} -rwpm \
+	cd ${WRKSRC}/release && ${PAX} -rwpm \
 	    lib*.so ${DESTDIR}${PREFIX}/lib
-	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ${PAX} -rwpm plugins \
-	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	${FIND} ${WRKSRC}/scripts \( -name \*.orig -or -name .gitignore \) -delete
 	cd ${WRKSRC} && ${PAX} -rwpm \
-	    fonts linetypes patterns scripts themes ts \
+	    fonts linetypes patterns plugins scripts themes ts \
 	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	cd ${WRKSRC} && ${PAX} -rwpm \
 	    readme.txt examples libraries \
