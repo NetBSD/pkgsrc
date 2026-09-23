@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6243 2026/09/22 20:37:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6244 2026/09/23 05:32:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9459,3 +9459,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/PC6001VX to 4.5.0 [tsutsui 2026-09-22]
 	Updated x11/nativefiledialog-extended to 1.4.0 [ktnb 2026-09-22]
 	Updated audio/kew to 4.3.6 [ktnb 2026-09-22]
+	Updated textproc/expat to 2.8.5 [adam 2026-09-23]
+	Updated devel/meson to 1.12.1 [adam 2026-09-23]
