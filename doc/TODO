@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27969 2026/09/23 12:50:24 adam Exp $
+$NetBSD: TODO,v 1.27970 2026/09/23 13:02:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1177,7 +1177,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-httpx2-2.13.0
 	o py-idna-3.20
 	o py-input-pad-1.4.2
-	o py-meson_python-0.21.1
 	o py-msgpack-1.2.2
 	o py-multidict-6.9.0
 	o py-omniORBpy-3.7
