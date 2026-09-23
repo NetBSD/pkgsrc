@@ -1,0 +1,15 @@
+$NetBSD: patch-macunpack_makefile,v 1.1 2026/09/23 20:31:33 rhialto Exp $
+
+Use $(LDFLAGS).
+
+--- macunpack/makefile.orig	2026-09-23 16:37:24.029318131 +0000
++++ macunpack/makefile
+@@ -56,7 +56,7 @@ XSRCS =	$(TNAME).c $(UNAME).c $(ONAME).c
+ CRCS =	../crc/arc.c ../crc/binhex.c ../crc/zip.c
+ 
+ macunpack:	$(OBJS) $(LIB) $(XOBJS)
+-	$(CC) $(CFLAGS) -o macunpack $(OBJS) $(XOBJS) $(LIB)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o macunpack $(OBJS) $(XOBJS) $(LIB)
+ 
+ $(LIB):	../crc/makecrc.c
+ 	(cd ../crc; make CC=$(CC) CF="$(CF)" )

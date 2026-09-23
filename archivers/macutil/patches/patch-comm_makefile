@@ -1,0 +1,19 @@
+$NetBSD: patch-comm_makefile,v 1.1 2026/09/23 20:31:33 rhialto Exp $
+
+Use $(LDFLAGS).
+
+--- comm/makefile.orig	2026-09-23 16:37:24.025767608 +0000
++++ comm/makefile
+@@ -22,10 +22,10 @@ all:	tomac frommac
+ 	touch all
+ 
+ tomac:	$(OBJS1) $(XOBJS1) $(LIB)
+-	$(CC) $(CFLAGS) -o tomac $(OBJS1) $(XOBJS1) $(LIB)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o tomac $(OBJS1) $(XOBJS1) $(LIB)
+ 
+ frommac:	$(OBJS2) $(XOBJS2) $(LIB)
+-	$(CC) $(CFLAGS) -o frommac $(OBJS2) $(XOBJS2) $(LIB)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o frommac $(OBJS2) $(XOBJS2) $(LIB)
+ 
+ $(LIB):	../crc/makecrc.c
+ 	(cd ../crc; make CC=$(CC) CF="$(CF)" )
