@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/24 16:12:48 ktnb Exp $
+
+BLAKE2s (miniz-3.1.2.tar.gz) = d686ad8e62a59e8dc4b8019573fa5860d07e26fab03e16ab8a99170a9ff3d93e
+SHA512 (miniz-3.1.2.tar.gz) = 5f553990632cb15d996ccfa92641167863807867baa9ff0b9a94ae0e40daf782df1746e75ea228a93892be1f574c9261838c9edb94e40bbf559ab22f21068c41
+Size (miniz-3.1.2.tar.gz) = 290205 bytes
