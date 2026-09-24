@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6351 2026/09/24 18:41:48 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6352 2026/09/24 19:19:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9593,3 +9593,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/fair-identd to 20000201nb1 [rhialto 2026-09-24]
 	Updated news/nntpclnt to 1.6.1nb8 [rhialto 2026-09-24]
 	Added graphics/shader-slang version 2026.18 [ktnb 2026-09-24]
+	Updated x11/kitty to 0.49.1 [ktnb 2026-09-24]
