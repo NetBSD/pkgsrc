@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2026/07/05 13:36:22 drixter Exp $
+$NetBSD: distinfo,v 1.23 2026/09/24 13:29:03 drixter Exp $
 
-BLAKE2s (bftpd-6.6.tar.gz) = 61cb194cac1106d0a6f52d7ff48680bfdc6c1caf89a00b49c7a961917a0d84ae
-SHA512 (bftpd-6.6.tar.gz) = a062acabf5f84a6a7043c75ca832f3c70271a8888b5eb9e9850f73d3e691301603af197a468c2060913ec39f3ea8b7eaaf3d1ed5ac21ec08c639dc77a7dcf8c2
-Size (bftpd-6.6.tar.gz) = 175241 bytes
-SHA1 (patch-login.c) = ca50745aa2a4148076ca6735a14467bda1411c21
+BLAKE2s (bftpd-6.7.tar.gz) = dbf0857fc0c4304d4f8081b5b3be5b2d60a7df99c536db552b8ea410b2ac959c
+SHA512 (bftpd-6.7.tar.gz) = 9c85cb95877bf7d324a1d47153f368cfa8c86e9a7daa3ae7442933d4bed1db7d35021121940e36c5d60eb59d4e60b53391649bebf4a0a637984972be3174a335
+Size (bftpd-6.7.tar.gz) = 173261 bytes
