@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27979 2026/09/24 13:10:23 wiz Exp $
+$NetBSD: TODO,v 1.27980 2026/09/24 13:11:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-ExtUtils-F77-1.26
 	o p5-Fsdb-2.71
 	o p5-GitLab-API-v3-1.06
-	o p5-HTML-Parser-3.86
 	o p5-Mac-AppleScript-Glue-0.06
 	o p5-Mac-SystemDirectory-0.13
 	o p5-Math-Bezier-0.02
