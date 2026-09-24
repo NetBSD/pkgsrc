@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/08/21 11:52:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/09/24 09:08:23 adam Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -251,8 +251,8 @@ share/locale/it/LC_MESSAGES/gammu.mo
 share/locale/it/LC_MESSAGES/libgammu.mo
 share/locale/ko/LC_MESSAGES/gammu.mo
 share/locale/ko/LC_MESSAGES/libgammu.mo
-share/locale/nb_NO/LC_MESSAGES/gammu.mo
-share/locale/nb_NO/LC_MESSAGES/libgammu.mo
+share/locale/nb/LC_MESSAGES/gammu.mo
+share/locale/nb/LC_MESSAGES/libgammu.mo
 share/locale/nl/LC_MESSAGES/gammu.mo
 share/locale/nl/LC_MESSAGES/libgammu.mo
 share/locale/pl/LC_MESSAGES/gammu.mo
