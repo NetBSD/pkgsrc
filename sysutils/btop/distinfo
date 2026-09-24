@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2026/05/01 17:49:02 fox Exp $
+$NetBSD: distinfo,v 1.10 2026/09/24 09:43:26 wiz Exp $
 
 BLAKE2s (btop-1.4.7.tar.gz) = 17bc5647b6e8a4b727faff75931357ecde717500f2c658a2163df0b9e7f87a78
 SHA512 (btop-1.4.7.tar.gz) = 49f2d2aa4fa83816f4fdaebc7239b3036d6e776b45b059d40ec535867762f207dcd9e79df16e410b37965e10c758404bd6aab8106a8c8b8e0761d3950e8856ef
 Size (btop-1.4.7.tar.gz) = 1280005 bytes
 SHA1 (patch-Makefile) = 7cec0d616dd445ad139f0868141d15d1687bf402
+SHA1 (patch-src_netbsd_btop__collect.cpp) = 4271ed99dffc153ad1f94515fdc5e55a2f2401cc
