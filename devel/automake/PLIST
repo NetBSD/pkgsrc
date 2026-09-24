@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/07/13 21:08:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/09/24 13:26:14 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -31,6 +31,7 @@ share/aclocal-${PKG_DIR_VERSION}/make.m4
 share/aclocal-${PKG_DIR_VERSION}/missing.m4
 share/aclocal-${PKG_DIR_VERSION}/mkdirp.m4
 share/aclocal-${PKG_DIR_VERSION}/obsolete.m4
+share/aclocal-${PKG_DIR_VERSION}/optional.m4
 share/aclocal-${PKG_DIR_VERSION}/options.m4
 share/aclocal-${PKG_DIR_VERSION}/prog-cc-c-o.m4
 share/aclocal-${PKG_DIR_VERSION}/python.m4
