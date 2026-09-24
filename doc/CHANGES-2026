@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6340 2026/09/24 15:38:10 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6341 2026/09/24 15:45:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9582,3 +9582,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/php83 to 8.3.35 [taca 2026-09-24]
 	Updated lang/php85 to 8.5.11 [taca 2026-09-24]
 	Updated lang/php82 to 8.2.34 [taca 2026-09-24]
+	Updated lang/php84 to 8.4.26 [taca 2026-09-24]
