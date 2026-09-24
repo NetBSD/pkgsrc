@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/09/10 14:13:29 taca Exp $
+$NetBSD: distinfo,v 1.8 2026/09/24 05:02:08 taca Exp $
 
-BLAKE2s (rubyntlm-0.6.6.gem) = be752a045c8cf050f25b092dcbe27657ba0045c9c7fcc2c94752a4220a617213
-SHA512 (rubyntlm-0.6.6.gem) = f27725c26b7f9a5b2e9425360a44d2e4cf7caa06e84808294fabc816f3b7cf57e5a4b9cf15a239696afbaa84dc4a3a5c100c778d88028438651d0d9e070ad9d1
-Size (rubyntlm-0.6.6.gem) = 38400 bytes
+BLAKE2s (rubyntlm-0.6.8.gem) = b48b502f5a4d2ccf9bc145f5e83707f394ef0d7a2283478d39d1954b73442be1
+SHA512 (rubyntlm-0.6.8.gem) = 18e53a99841ff79cdb357674a40dfc0882aacc035766d5563b5ab841b60a342dd7b3dd8abaca47ad2ffbabc6aa3269291ca6cb55938e9755c0e29911841f32a3
+Size (rubyntlm-0.6.8.gem) = 22016 bytes
