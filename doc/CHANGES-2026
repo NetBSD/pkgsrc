@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6293 2026/09/24 04:35:51 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6294 2026/09/24 04:41:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9529,3 +9529,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ruby-RMagick to 7.1.5 [taca 2026-09-24]
 	Updated mail/ruby-mime-types-data to 3.2026.0922 [taca 2026-09-24]
 	Updated net/ruby-net-ping to 2.2.0 [taca 2026-09-24]
+	Updated net/ruby-winrm to 2.4.1 [taca 2026-09-24]
