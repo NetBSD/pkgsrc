@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:22:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/09/24 13:12:29 wiz Exp $
 
-BLAKE2s (Text-Diff-1.45.tar.gz) = 5c497e1de1596795f5073e298507b4798fddfb6050b70dac05940a5114098721
-SHA512 (Text-Diff-1.45.tar.gz) = 569370707bf30d60d12df6389594bcdba050805005916ac3a485c2226e528891b0af9ecfcc13d20e4f377d2c36a7ff67e51de5ca409c647aa8a36b7a87eab367
-Size (Text-Diff-1.45.tar.gz) = 29599 bytes
+BLAKE2s (Text-Diff-1.46.tar.gz) = cb08f59a53b24a70e6076f2f0126ac6b13d581d73844d434e749ce3efef0daf3
+SHA512 (Text-Diff-1.46.tar.gz) = 1a293b0ae2ae857b1eb105b26ffee9ef7eccd9ccfac5dee09129cbeb3d76f3fcaff93ed05f0b4f733d59370b46285823e73a833197e7bc090fb89b4d480204f7
+Size (Text-Diff-1.46.tar.gz) = 27141 bytes

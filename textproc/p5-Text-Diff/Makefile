@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2026/07/16 19:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/24 13:12:29 wiz Exp $
 
-DISTNAME=	Text-Diff-1.45
+DISTNAME=	Text-Diff-1.46
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
-CATEGORIES=	perl5 textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
+CATEGORIES=	textproc perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NE/NEILB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	High-level text diffing module for Perl
