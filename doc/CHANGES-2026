@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6290 2026/09/24 04:29:26 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6291 2026/09/24 04:32:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9526,3 +9526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-sexp-processor to 4.17.6 [taca 2026-09-24]
 	Updated devel/ruby-tins to 1.57.0 [taca 2026-09-24]
 	Updated finance/ruby-braintree to 4.41.0 [taca 2026-09-24]
+	Updated graphics/ruby-RMagick to 7.1.5 [taca 2026-09-24]
