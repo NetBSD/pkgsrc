@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6287 2026/09/24 04:11:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6288 2026/09/24 04:12:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9523,3 +9523,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-async to 2.46.0 [taca 2026-09-24]
 	Updated devel/ruby-google-protobuf to 4.36.2 [taca 2026-09-24]
 	Updated devel/ruby-regexp_parser to 2.13.0 [taca 2026-09-24]
+	Updated devel/ruby-sexp-processor to 4.17.6 [taca 2026-09-24]
