@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2026/04/12 14:43:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/09/24 04:09:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/regexp_parser.rb
 ${GEM_LIBDIR}/lib/regexp_parser/error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression.rb
@@ -45,14 +43,11 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/subexpression.rb
 ${GEM_LIBDIR}/lib/regexp_parser/lexer.rb
 ${GEM_LIBDIR}/lib/regexp_parser/parser.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner.rb
-${GEM_LIBDIR}/lib/regexp_parser/scanner/char_type.rl
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/premature_end_error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/scanner_error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/validation_error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/long.csv
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/short.csv
-${GEM_LIBDIR}/lib/regexp_parser/scanner/property.rl
-${GEM_LIBDIR}/lib/regexp_parser/scanner/scanner.rl
 ${GEM_LIBDIR}/lib/regexp_parser/syntax.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/any.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/base.rb
