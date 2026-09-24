@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:30:45 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/24 14:59:40 wiz Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	7
@@ -24,6 +24,8 @@ BUILD_DIRS=	leim
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	share/emacs/20.7/leim
+
+CFLAGS+=	-Wno-implicit-int
 
 post-install:
 	${CHMOD} -R go+rX ${DESTDIR}${PREFIX}/share/emacs/20.7/leim
