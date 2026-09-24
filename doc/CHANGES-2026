@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6306 2026/09/24 05:16:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6307 2026/09/24 05:18:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9542,3 +9542,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-unicode-name to 1.15.1 [taca 2026-09-24]
 	Updated textproc/ruby-unicode-scripts to 1.13.0 [taca 2026-09-24]
 	Updated www/ruby-css-parser to 3.2.0 [taca 2026-09-24]
+	Updated www/ruby-faraday to 2.14.4 [taca 2026-09-24]
