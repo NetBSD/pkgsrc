@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6330 2026/09/24 14:08:00 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6331 2026/09/24 14:13:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9573,3 +9573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/qtcreator to 20.0.2 [adam 2026-09-24]
 	Updated net/wireshark to 4.6.9 [adam 2026-09-24]
 	Updated sysutils/gatus to 5.37.0 [drixter 2026-09-24]
+	Updated sysutils/coreutils to 9.12 [wiz 2026-09-24]
