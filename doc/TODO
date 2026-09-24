@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27975 2026/09/24 09:53:53 adam Exp $
+$NetBSD: TODO,v 1.27976 2026/09/24 10:18:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -678,13 +678,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcc16-16.2.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
+	o gcompris-26.2
 	o gdb-17.2
 	o gdb7-7.12
 	o gedit-50
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
-	o ggml-0.24.0
+	o ggml-0.25.1
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.5
@@ -1180,6 +1181,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-6.19.0
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
+	o py-pillow-heif-1.8.0
 	o py-poetry-core-2.5.0
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.49.0 [waiting for py-pydantic release that works with this]
@@ -1203,6 +1205,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-2.3.9
 	o qconf-2.5
 	o qore-2.2.0
+	o qtcreator-20.0.2
 	o quodlibet-4.7.1
 	o qutebrowser-3.0.1
 	o radare2-6.0
@@ -1234,7 +1237,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rumdl-0.2.74
+	o rumdl-0.2.77
 	o rust-1.98.1 [wip]
 	o rvault-0.4
 	o rvm-1.20
@@ -1398,6 +1401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o windowlab-1.40
 	o wine-11.5
 	o wine-devel-9.22
+	o wireshark-4.6.9
 	o wkhtmltopdf-0.12.6
 	o wmi-11
 	o wordpress-7.1.1
