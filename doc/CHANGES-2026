@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6326 2026/09/24 13:26:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6327 2026/09/24 13:29:24 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9568,3 +9568,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Text-Diff to 1.46 [wiz 2026-09-24]
 	Updated lang/gawk to 5.4.1 [wiz 2026-09-24]
 	Updated devel/automake to 1.19 [wiz 2026-09-24]
+	Updated net/bftpd to 6.7 [drixter 2026-09-24]
