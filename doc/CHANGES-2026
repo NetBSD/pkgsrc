@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6345 2026/09/24 16:17:47 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6346 2026/09/24 16:29:19 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9587,3 +9587,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/doctest version 2.5.3 [ktnb 2026-09-24]
 	Added archivers/miniz version 3.1.2 [ktnb 2026-09-24]
 	Added devel/unordered-dense version 5.0.1 [ktnb 2026-09-24]
+	Updated archivers/gzip to 1.15 [drixter 2026-09-24]
