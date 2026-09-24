@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6303 2026/09/24 05:10:25 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6304 2026/09/24 05:12:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9539,3 +9539,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-unicode-blocks to 1.12.0 [taca 2026-09-24]
 	Updated textproc/ruby-unicode-emoji to 4.3.0 [taca 2026-09-24]
 	Updated textproc/ruby-unicode-display_width to 3.3.0 [taca 2026-09-24]
+	Updated textproc/ruby-unicode-name to 1.15.1 [taca 2026-09-24]
