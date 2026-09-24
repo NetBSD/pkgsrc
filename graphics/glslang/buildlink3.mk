@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/04/13 14:38:43 kikadf Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/09/24 18:41:26 ktnb Exp $
 
 BUILDLINK_TREE+=	glslang
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	glslang
 GLSLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glslang+=	glslang>=1.4.341.0
+BUILDLINK_ABI_DEPENDS.glslang+=	glslang>=1.4.341.0
 BUILDLINK_PKGSRCDIR.glslang?=	../../graphics/glslang
 
 .endif	# GLSLANG_BUILDLINK3_MK
