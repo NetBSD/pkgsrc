@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2026/08/04 20:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/24 15:03:22 wiz Exp $
 
 DISTNAME=	eblook-1.6.1
 PKGREVISION=	2
-CATEGORIES=	japanese textproc
+CATEGORIES=	textproc japanese
 #MASTER_SITES=	http://openlab.ring.gr.jp/edict/eblook/dist/
 
 MAINTAINER=	uebayasi@NetBSD.org
@@ -13,6 +13,10 @@ GNU_CONFIGURE=		YES
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
 LIBS+=			${BUILDLINK_LDADD.iconv}
+
+CFLAGS+=		-Wno-incompatible-pointer-types
+CFLAGS+=		-Wno-int-conversion
+CFLAGS+=		-Wno-implicit-function-declaration
 
 # FIXME: replace by proper LDFLAGS handling
 _WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
