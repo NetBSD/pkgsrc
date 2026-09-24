@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2026/08/24 18:35:28 drixter Exp $
+# $NetBSD: Makefile,v 1.42 2026/09/24 16:28:58 drixter Exp $
 
-DISTNAME=	gzip-1.14
-PKGREVISION=	1
+DISTNAME=	gzip-1.15
 CATEGORIES=	archivers
 # does not provide uncompressed tarball, needed due to bootstrapping
 #MASTER_SITES=	${MASTER_SITE_GNU:=gzip/}
