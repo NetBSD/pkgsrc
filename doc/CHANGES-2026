@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6311 2026/09/24 09:25:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6312 2026/09/24 09:40:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9548,3 +9548,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tor to 0.4.9.13 [wiz 2026-09-24]
 	Updated comms/gammu to 1.45.0 [adam 2026-09-24]
 	Updated net/gvproxy to 0.8.9 [adam 2026-09-24]
+	Updated fonts/harfbuzz-docs to 14.5.0 [adam 2026-09-24]
+	Updated net/py-stone to 3.5.5 [adam 2026-09-24]
