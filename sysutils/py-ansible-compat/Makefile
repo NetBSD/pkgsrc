@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/08/13 10:59:24 adam Exp $
+# $NetBSD: Makefile,v 1.49 2026/09/24 10:10:18 adam Exp $
 
-DISTNAME=	ansible_compat-26.8.0
+DISTNAME=	ansible_compat-26.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -17,11 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-instafail-[0-9]*:../../devel/py-test-instafail
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-plus-[0-9]*:../../devel/py-test-plus
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=0:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=0:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-instafail>=0:../../devel/py-test-instafail
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-plus>=0:../../devel/py-test-plus
 
 USE_LANGUAGES=	# none
 
