@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/12/23 11:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/24 17:02:59 rhialto Exp $
 
 DISTNAME=	identd
 PKGNAME=	fair-${DISTNAME}-20000201
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://www.clock.org/~fair/opinion/
 EXTRACT_SUFX=	.c
@@ -18,7 +19,7 @@ do-extract:
 
 do-build:
 	cd ${WRKSRC} &&							\
-	${CC} ${CFLAGS} -o ${DISTNAME} ${DISTNAME}${EXTRACT_SUFX}
+	${CC} ${CFLAGS} ${LDFLAGS} -o ${DISTNAME} ${DISTNAME}${EXTRACT_SUFX}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/libexec
