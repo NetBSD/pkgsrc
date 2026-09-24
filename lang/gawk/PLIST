@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2026/02/23 13:30:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2026/09/24 13:23:17 wiz Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/gawkbug
@@ -14,8 +14,8 @@ info/gawk_general-program.png
 info/gawk_process-flow.png
 info/gawk_statist.jpg
 info/gawkinet.info
+info/gawknotes.info
 info/gawkworkflow.info
-info/notes.info
 info/pm-gawk.info
 lib/gawk/filefuncs.la
 lib/gawk/fnmatch.la
@@ -38,6 +38,7 @@ man/man3am/filefuncs.3am
 man/man3am/fnmatch.3am
 man/man3am/fork.3am
 man/man3am/inplace.3am
+man/man3am/intdiv.3am
 man/man3am/ordchr.3am
 man/man3am/readdir.3am
 man/man3am/readfile.3am
@@ -82,6 +83,7 @@ ${PLIST.nls}share/locale/fr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/he/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/gawk.mo
+${PLIST.nls}share/locale/ka/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/gawk.mo
