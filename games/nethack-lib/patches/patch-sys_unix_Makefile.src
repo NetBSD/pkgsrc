@@ -1,4 +1,4 @@
-$NetBSD: patch-sys_unix_Makefile.src,v 1.5 2023/09/02 13:45:14 rhialto Exp $
+$NetBSD: patch-sys_unix_Makefile.src,v 1.6 2026/09/24 16:52:01 rhialto Exp $
 
 Make included UI types configurable.
 
@@ -30,8 +30,8 @@ Make included UI types configurable.
  
 +.if "${X11_GRAPHICS}" != "" || "${QT_GRAPHICS}" != ""
 +CFLAGS += -I${X11BASE}/include
-+LFLAGS += ${LDFLAGS}
 +.endif
++LFLAGS += ${LDFLAGS}
 +
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
