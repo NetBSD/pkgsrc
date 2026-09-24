@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/09/24 04:47:46 taca Exp $
 
-BLAKE2s (winrm-fs-1.3.5.gem) = bd0080220a41df140af4394320b277e0cc1daf5bd72c02739be570e7a884309f
-SHA512 (winrm-fs-1.3.5.gem) = 176b05d557a9ee06d438d700cbd4020cc2d567318943e1787bb20cdd4ab10639230c90331cd340aefcf5f8ad144cfc30f43b84156ea3767d80ff7b803331c03f
-Size (winrm-fs-1.3.5.gem) = 21504 bytes
+BLAKE2s (winrm-fs-1.3.7.gem) = a9733e29c04b5318c921d596dd2d630b89d1c6f10a2079f7f2e56d7bd56de9b4
+SHA512 (winrm-fs-1.3.7.gem) = 6bdd9af8b16af002c1854d0e48d195adcc6597a1e9e727594ea84d4d93545e85a1dcd2a82b8802ee6e0501c62ba935b090e1db9f4a3a03b685f3fb457293c377
+Size (winrm-fs-1.3.7.gem) = 21504 bytes
