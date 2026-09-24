@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.63 2026/09/05 19:09:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64 2026/09/24 09:09:00 adam Exp $
 
-DISTNAME=	gvproxy-0.7.3
-PKGREVISION=	24
+DISTNAME=	gvproxy-0.8.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 GITHUB_PROJECT=	gvisor-tap-vsock
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/containers/gvisor-tap-vsock/
+HOMEPAGE=	https://github.com/containers/gvisor-tap-vsock
 COMMENT=	Replacement for libslirp and VPNKit, written in pure Go
 LICENSE=	apache-2.0
 
