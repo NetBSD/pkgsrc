@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6319 2026/09/24 13:09:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6320 2026/09/24 13:10:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9561,3 +9561,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-semver to 3.1.0 [adam 2026-09-24]
 	Updated devel/nss to 3.130 [wiz 2026-09-24]
 	Updated devel/p5-Alien-Build to 2.88 [wiz 2026-09-24]
+	Updated devel/p5-Clone-PP to 1.09 [wiz 2026-09-24]
