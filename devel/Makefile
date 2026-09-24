@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4691 2026/09/24 16:08:25 ktnb Exp $
+# $NetBSD: Makefile,v 1.4692 2026/09/24 16:16:33 ktnb Exp $
 #
 
 COMMENT=	Development utilities
@@ -3739,6 +3739,7 @@ SUBDIR+=	unidiff
 SUBDIR+=	unifdef
 SUBDIR+=	unittest-cpp
 SUBDIR+=	uno
+SUBDIR+=	unordered-dense
 SUBDIR+=	userspace-rcu
 SUBDIR+=	uthash
 SUBDIR+=	valgrind
