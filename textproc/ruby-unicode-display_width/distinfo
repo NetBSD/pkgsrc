@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/09/15 16:55:30 taca Exp $
+$NetBSD: distinfo,v 1.17 2026/09/24 05:10:13 taca Exp $
 
-BLAKE2s (unicode-display_width-3.2.0.gem) = 77e21e5bc0ac5c958a5eccc72956f3b82d113647e2eb43bce76d51311cbf65c6
-SHA512 (unicode-display_width-3.2.0.gem) = 6d8c51c6c728875a7ab6022c4106a8bc11572a5d9516d7252de2c6508d459bc9c236a1d9e09e8f20157b78820b30f511ddc5576ac10857d98a433f4cfbed1ce5
-Size (unicode-display_width-3.2.0.gem) = 18432 bytes
+BLAKE2s (unicode-display_width-3.3.0.gem) = c8b845b59281745b45ac9533c5be2b9dbbc05d95569c6b221115d6cb5aaadaaa
+SHA512 (unicode-display_width-3.3.0.gem) = 2e382adf218bd869f90791b74627ddc51f4444e74974da83c38948b1cefd750dc9268dc9b0053027cc83da0b9d1a4b05c0d1e703092b9a493bcdeb84977045e3
+Size (unicode-display_width-3.3.0.gem) = 18432 bytes
