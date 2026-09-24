@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/09/24 13:10:12 wiz Exp $
 
-BLAKE2s (Clone-PP-1.08.tar.gz) = 1bfbff16067f607eb907ee3419bf6cb0319788cbb8243097f470ca56f5bffb00
-SHA512 (Clone-PP-1.08.tar.gz) = 912898b0617597429a08a6b2717aec75ee9c3f41e2c05512f434a9cb82dad3274b4dbbc4332725248d7c6071eec670e6977c05994cef090df6f591cdfe2f606c
-Size (Clone-PP-1.08.tar.gz) = 9527 bytes
+BLAKE2s (Clone-PP-1.09.tar.gz) = 57d7e15e2a8f2cdbece7ffd1ff8ccb93b54748210da6b365e395e2a68fdf3a02
+SHA512 (Clone-PP-1.09.tar.gz) = 0f6ce156408f2609dac5460775fc34bea473d8cae8c2eca38ea8b91e0ab85a7878b87bdd961372d6d2d6823753b9dc3101e36a884d36a37ddc13242e3ba23baf
+Size (Clone-PP-1.09.tar.gz) = 9619 bytes
