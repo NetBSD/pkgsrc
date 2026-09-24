@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6315 2026/09/24 10:17:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6316 2026/09/24 10:43:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9555,3 +9555,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httpx2 to 2.13.1 [adam 2026-09-24]
 	Updated sysutils/py-ansible-compat to 26.9.0 [adam 2026-09-24]
 	Updated sysutils/ansible-lint to 26.9.0 [adam 2026-09-24]
+	Updated devel/py-wcwidth to 0.9.1 [adam 2026-09-24]
+	Updated www/py-yarl to 1.25.1 [adam 2026-09-24]
