@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/24 16:08:26 ktnb Exp $
+
+BLAKE2s (doctest-2.5.3.tar.gz) = 3a8bc4dcef78975816d7d88288515b0cb90e2e7dac19656b06a16724cac3cd6e
+SHA512 (doctest-2.5.3.tar.gz) = d7222ae62cf2ac0f858567af0e539bd34cef47827004f805261007943e8e02370fcf16cbf0302581766353bf28317dd280a885fdc775baaa3e519aa2cf2f2eca
+Size (doctest-2.5.3.tar.gz) = 2245013 bytes
