@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.794 2026/09/16 15:02:56 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.795 2026/09/24 03:49:12 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30449,3 +30449,5 @@ ruby40<4.0.7		denial-of-service	https://www.cve.org/CVERecord?id=CVE-2026-80212
 ruby33<3.3.12nb1		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
 ruby34<3.4.10nb2		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
 ruby40<4.0.7		hostname-forgery	https://www.cve.org/CVERecord?id=CVE-2026-80213
+wordpress<7.0.6		file-inclusion		https://www.cve.org/CVERecord?id=CVE-2026-87902
+php{74,82,83,84,85}-ja-wordpress<7.0.6		file-inclusion	https://www.cve.org/CVERecord?id=CVE-2026-87902
