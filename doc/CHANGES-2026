@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6313 2026/09/24 09:43:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6314 2026/09/24 09:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9551,3 +9551,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz-docs to 14.5.0 [adam 2026-09-24]
 	Updated net/py-stone to 3.5.5 [adam 2026-09-24]
 	Updated sysutils/btop to 1.4.7nb1 [wiz 2026-09-24]
+	Updated www/py-httpcore2 to 2.13.1 [adam 2026-09-24]
+	Updated www/py-httpx2 to 2.13.1 [adam 2026-09-24]
