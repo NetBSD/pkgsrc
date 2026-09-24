@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/01/18 14:27:46 taca Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/24 05:08:45 taca Exp $
 
-DISTNAME=	unicode-emoji-4.2.0
+DISTNAME=	unicode-emoji-4.3.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
