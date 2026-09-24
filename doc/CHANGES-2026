@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6347 2026/09/24 16:52:11 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.6348 2026/09/24 16:56:40 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9589,3 +9589,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/unordered-dense version 5.0.1 [ktnb 2026-09-24]
 	Updated archivers/gzip to 1.15 [drixter 2026-09-24]
 	Updated games/nethack-lib to 3.6.7nb4 [rhialto 2026-09-24]
+	Updated games/xtris to 1.15nb3 [rhialto 2026-09-24]
