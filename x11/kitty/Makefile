@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2026/09/05 19:10:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.101 2026/09/24 19:19:25 ktnb Exp $
 
-DISTNAME=	kitty-0.48.2
-PKGREVISION=	5
+DISTNAME=	kitty-0.49.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -76,6 +75,7 @@ PLIST.x11=	yes
 
 pre-configure:
 	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go126 go
+	${CP} ${FILESDIR}/evdev_keycodes.h ${WRKSRC}/glfw/
 
 do-build:
 .if ${OPSYS} == "Darwin"
@@ -132,6 +132,7 @@ do-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/shader-slang/buildlink3.mk"
 .include "../../net/librsync/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

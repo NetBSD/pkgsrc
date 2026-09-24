@@ -1,12 +1,12 @@
-$NetBSD: patch-setup.py,v 1.7 2026/07/19 00:35:25 ktnb Exp $
+$NetBSD: patch-setup.py,v 1.8 2026/09/24 19:19:26 ktnb Exp $
 
 Only point to the pkgsrc fonts for Darwin.
 Don't crash on colored emoji render on NetBSD.
 
---- setup.py.orig	2026-07-18 02:07:54.000000000 +0000
+--- setup.py.orig	2026-09-21 03:27:08.000000000 +0000
 +++ setup.py
-@@ -544,6 +544,9 @@ def init_env(
-     )
+@@ -655,6 +655,9 @@ def init_env(
+     ldflags_ = os.environ.get('OVERRIDE_LDFLAGS', '-Wall ' + ' '.join(sanitize_args) + ('' if debug else ' -O3'))
      ldflags = shlex.split(ldflags_)
      ldflags.append('-shared')
 +    if is_netbsd:
@@ -15,12 +15,14 @@ Don't crash on colored emoji render on NetBSD.
      cppflags += env_cppflags
      cflags += env_cflags
      if fortify_source:
-@@ -924,7 +927,8 @@ def add_builtin_fonts(args: Options) -> None:
+@@ -1059,7 +1062,10 @@ def add_builtin_fonts(args: Options) -> None:
+             continue
          font_file = ''
          if is_macos:
-             candidates = (
--                os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts')
-+                '@PREFIX@/share/fonts/',
+-            candidates = (os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts')
++            candidates = (
++              os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts'
++              '@PREFIX@/share/fonts/',
 +            )
              for candidate in candidates:
                  q = os.path.join(candidate, filename)
