@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/09/06 16:23:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/09/24 05:30:58 taca Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -149,6 +149,7 @@ ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/index.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/list.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/map.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/mixin.d.ts
+${GEM_EXTSDIR}/sass/node_modules/sass/types/value/module.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/number.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/sass/types/value/string.d.ts
 ${GEM_EXTSDIR}/sass/node_modules/source-map-js/LICENSE
@@ -208,7 +209,6 @@ ${GEM_LIBDIR}/lib/sass/compiler/session/logger_registry.rb
 ${GEM_LIBDIR}/lib/sass/compiler/session/path.rb
 ${GEM_LIBDIR}/lib/sass/compiler/session/protofier.rb
 ${GEM_LIBDIR}/lib/sass/compiler/session/stack_trace.rb
-${GEM_LIBDIR}/lib/sass/compiler/session/struct.rb
 ${GEM_LIBDIR}/lib/sass/compiler/varint.rb
 ${GEM_LIBDIR}/lib/sass/elf.rb
 ${GEM_LIBDIR}/lib/sass/embedded.rb
@@ -259,6 +259,7 @@ ${GEM_LIBDIR}/lib/sass/value/fuzzy_math.rb
 ${GEM_LIBDIR}/lib/sass/value/list.rb
 ${GEM_LIBDIR}/lib/sass/value/map.rb
 ${GEM_LIBDIR}/lib/sass/value/mixin.rb
+${GEM_LIBDIR}/lib/sass/value/module.rb
 ${GEM_LIBDIR}/lib/sass/value/null.rb
 ${GEM_LIBDIR}/lib/sass/value/number.rb
 ${GEM_LIBDIR}/lib/sass/value/number/unit.rb
