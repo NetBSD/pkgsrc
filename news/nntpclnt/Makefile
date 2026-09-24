@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/12/06 18:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/09/24 17:09:17 rhialto Exp $
 
 DISTNAME=	nntpclnt-1.6.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	news
 MASTER_SITES=	# http://ftp.sunet.se/pub/news/nntp/
 
