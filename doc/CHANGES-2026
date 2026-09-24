@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6298 2026/09/24 04:59:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6299 2026/09/24 05:02:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9534,3 +9534,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-winrm-elevated to 1.2.4 [taca 2026-09-24]
 	Updated security/ruby-metasploit-concern to 5.0.7 [taca 2026-09-24]
 	Updated security/ruby-metasploit-model to 5.0.6 [taca 2026-09-24]
+	Updated security/ruby-rubyntlm to 0.6.8 [taca 2026-09-24]
