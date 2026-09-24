@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/24 16:16:33 ktnb Exp $
+include/ankerl/huge_page_allocator.h
+include/ankerl/stl.h
+include/ankerl/unordered_dense.h
+lib/cmake/unordered_dense/unordered_denseConfig.cmake
+lib/cmake/unordered_dense/unordered_denseConfigVersion.cmake
+lib/cmake/unordered_dense/unordered_denseTargets.cmake
