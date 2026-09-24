@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/08/14 11:54:44 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/24 09:40:22 adam Exp $
 
-DISTNAME=	stone-3.5.4
+DISTNAME=	stone-3.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stone/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/dropbox/stone
 COMMENT=	Interface description language (IDL) for APIs
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=83.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=10.2.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.6:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging>=26.2:../../devel/py-packaging
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.1.0:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-packaging>=26.3:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.16.0:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
 
