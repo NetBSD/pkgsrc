@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6349 2026/09/24 17:03:10 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.6350 2026/09/24 17:09:28 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9591,3 +9591,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/nethack-lib to 3.6.7nb4 [rhialto 2026-09-24]
 	Updated games/xtris to 1.15nb3 [rhialto 2026-09-24]
 	Updated net/fair-identd to 20000201nb1 [rhialto 2026-09-24]
+	Updated news/nntpclnt to 1.6.1nb8 [rhialto 2026-09-24]
