@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6353 2026/09/24 19:29:46 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6354 2026/09/24 21:41:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9595,3 +9595,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added graphics/shader-slang version 2026.18 [ktnb 2026-09-24]
 	Updated x11/kitty to 0.49.1 [ktnb 2026-09-24]
 	Updated graphics/chafa to 1.18.3 [ktnb 2026-09-24]
+	Updated sysutils/coreutils to 9.12nb1 [wiz 2026-09-24]
