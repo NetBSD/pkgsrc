@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1129 2026/09/06 11:06:58 markd Exp $
+# $NetBSD: Makefile,v 1.1130 2026/09/24 18:41:26 ktnb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -592,6 +592,7 @@ SUBDIR+=	sane-frontends
 SUBDIR+=	screengrab
 SUBDIR+=	scrot
 SUBDIR+=	shaderc
+SUBDIR+=	shader-slang
 SUBDIR+=	shotwell
 SUBDIR+=	silgraphite
 SUBDIR+=	silgraphite-ft

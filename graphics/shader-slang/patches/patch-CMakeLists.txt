@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/09/24 18:41:26 ktnb Exp $
+
+Actually find the pkgsrc lz4.
+
+--- CMakeLists.txt.orig	2026-09-15 12:11:09.000000000 +0000
++++ CMakeLists.txt
+@@ -580,9 +580,13 @@ if(${SLANG_USE_SYSTEM_LZ4})
+ endif()
+ 
+ if(${SLANG_USE_SYSTEM_LZ4})
+-    find_package(lz4 REQUIRED)
++    find_package(PkgConfig REQUIRED)
++    pkg_check_modules(LZ4 REQUIRED IMPORTED_TARGET liblz4)
++    if(NOT TARGET LZ4::lz4)
++        add_library(LZ4::lz4 ALIAS PkgConfig::LZ4)
++    endif()
+     if(NOT TARGET lz4_static)
+-        add_library(lz4_static ALIAS LZ4::lz4)
++        add_library(lz4_static ALIAS PkgConfig::LZ4)
+     endif()
+ endif()
+ 

@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2026/09/24 18:41:26 ktnb Exp $
+
+BLAKE2s (slang/lua-3fe7be956f23385aa1950dc31e2f25127ccfc0ea.tar.gz) = ddea56c812a022acf7d138956858b094bed244b42c1ff0305e809375c2ada000
+SHA512 (slang/lua-3fe7be956f23385aa1950dc31e2f25127ccfc0ea.tar.gz) = ab7ead52b3bfbe88d9b57084021b2a99458cc543cf5660ed96b638a3a36bcf672eb1b6f346a751334613ffc0adbde9cd286fffc15d2359986115ec52615736a2
+Size (slang/lua-3fe7be956f23385aa1950dc31e2f25127ccfc0ea.tar.gz) = 463883 bytes
+BLAKE2s (slang/ocornut-imgui-8936b58fe26e8c3da834b8f60b06511d537b4c63.tar.gz) = e9e16719a89216c1eb2341075e3f5d28830f5256cb5a64c41d71597fca2b3ab6
+SHA512 (slang/ocornut-imgui-8936b58fe26e8c3da834b8f60b06511d537b4c63.tar.gz) = e18cbbc5731507bdb94b31b2a639df94081180758849ce062ef84115d13994e844de9f677d9caced603005c96eefe3504a1fe57ac17357f823987c8b0724abac
+Size (slang/ocornut-imgui-8936b58fe26e8c3da834b8f60b06511d537b4c63.tar.gz) = 2082616 bytes
+BLAKE2s (slang/shader-slang-slang-rhi-079b75b54c49e6546fd611c9a91a25307c279668.tar.gz) = de7aea9ceb906d2019ff88e46ff517e080cf963e8537f173ef4cb4488082e631
+SHA512 (slang/shader-slang-slang-rhi-079b75b54c49e6546fd611c9a91a25307c279668.tar.gz) = 7d4cc3f157697cefa06fe20e01d7d8633ae9abcda75c3bb101f8271a0352fe9527003b2dac2b18a60fad8fb403e779089b933b94a0bf800fcc31d35953ed8cb7
+Size (slang/shader-slang-slang-rhi-079b75b54c49e6546fd611c9a91a25307c279668.tar.gz) = 1361106 bytes
+BLAKE2s (slang/slang-2026.18.tar.gz) = eea70b3ee1bf9733c5c6beb1aaca40ace8fd87283cc8a3da7d0e0c900311c69f
+SHA512 (slang/slang-2026.18.tar.gz) = a46ce8cd4fcdbab4b27a84f0309527cc08c5dbb47349ead428ca647e63a1f10fa2c5c47a60ee408ffb5f75e7f81393dac902791447e5f981b82a751ef02f3bb1
+Size (slang/slang-2026.18.tar.gz) = 13806431 bytes
+BLAKE2s (slang/swiftlang-swift-cmark-924936d0427cb25a61169739a7660230bffa6ea6.tar.gz) = 0b4fb43f61cc02da3e51d5d2e7b068f9c6b7d84837486b71b47bb4b95a125852
+SHA512 (slang/swiftlang-swift-cmark-924936d0427cb25a61169739a7660230bffa6ea6.tar.gz) = ef33324e39481bd810d006bf41c8449a4eb9247955aea9d0143563a00c527a155f0b56ec08982e824007035870b56508abd7545181468ebd80c8a3e3fb1cefbd
+Size (slang/swiftlang-swift-cmark-924936d0427cb25a61169739a7660230bffa6ea6.tar.gz) = 308582 bytes
+SHA1 (patch-CMakeLists.txt) = 06558371db5de68d9d071abe33e1b59224fb60c5
+SHA1 (patch-include_slang.h) = 339da554b047b8a48e946b3c2ac6b3baed61b9a1
+SHA1 (patch-source_core_slang-hash.h) = e9a88c98f5e54a3465c0dbfbe7b3b87a5dfec60e
+SHA1 (patch-source_core_slang-io.cpp) = 6432c018446e6f6b9b0fa32e07abe323f1929d4e
+SHA1 (patch-source_core_slang-stream.cpp) = a7380f533ad9b5d66b98af79e26d56f5e04bdcab
