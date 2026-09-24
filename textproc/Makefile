@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1604 2026/09/22 17:34:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.1605 2026/09/24 15:51:26 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -283,6 +283,7 @@ SUBDIR+=	guile-json
 SUBDIR+=	guile-syntax-highlight
 SUBDIR+=	gutcheck
 SUBDIR+=	halibut
+SUBDIR+=	harper
 SUBDIR+=	hck
 SUBDIR+=	heirloom-bdiff
 SUBDIR+=	heirloom-bfs
