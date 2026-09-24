@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/24 16:12:48 ktnb Exp $
+include/miniz/miniz.h
+include/miniz/miniz_common.h
+include/miniz/miniz_export.h
+include/miniz/miniz_tdef.h
+include/miniz/miniz_tinfl.h
+include/miniz/miniz_zip.h
+lib/cmake/miniz/minizConfig.cmake
+lib/cmake/miniz/minizConfigVersion.cmake
+lib/cmake/miniz/minizTargets-release.cmake
+lib/cmake/miniz/minizTargets.cmake
+lib/libminiz.a
+lib/pkgconfig/miniz.pc
