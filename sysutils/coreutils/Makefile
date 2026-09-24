@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2026/09/24 14:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/09/24 21:40:52 wiz Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
+
+PKGREVISION=	1
 
 CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
@@ -16,12 +18,12 @@ INFO_FILES=		yes
 
 TEST_DEPENDS+=		p5-Expect>=1.11:../../devel/p5-Expect
 
-# as of 9.12
+# as of 9.12nb1
 # TOTAL: 761
 # PASS:  528
 # SKIP:  230
 # XFAIL: 0
-# FAIL:  3
+# FAIL:  1
 # XPASS: 0
 # ERROR: 0
 
