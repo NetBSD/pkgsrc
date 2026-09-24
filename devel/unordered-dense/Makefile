@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/09/24 16:16:33 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/24 16:17:32 ktnb Exp $
 
 DISTNAME=	unordered_dense-5.0.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -23,7 +23,7 @@ LDFLAGS+=	-lexecinfo
 MESON_ARGS+=	-Dwerror=false
 
 .include "../../devel/cmake/build.mk"
+.include "../../devel/doctest/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
-.include "../../devel/doctest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
