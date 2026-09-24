@@ -1,0 +1,6 @@
+doctest is a new C++ testing framework but is by far the fastest
+both in compile times (by orders of magnitude) and runtime compared
+to other feature-rich alternatives. It brings the ability of compiled
+languages such as D / Rust / Nim to have tests written directly in
+the production code thanks to a fast, transparent and flexible test
+runner with a clean interface.

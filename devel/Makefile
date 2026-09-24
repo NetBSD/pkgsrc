@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4690 2026/09/12 20:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4691 2026/09/24 16:08:25 ktnb Exp $
 #
 
 COMMENT=	Development utilities
@@ -370,6 +370,7 @@ SUBDIR+=	dmake
 SUBDIR+=	dmalloc
 SUBDIR+=	doc++
 SUBDIR+=	docopt.cpp
+SUBDIR+=	doctext
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dotconf
 SUBDIR+=	doxygen
