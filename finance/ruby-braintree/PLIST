@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/08/11 16:05:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/09/24 04:29:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -311,6 +311,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/local_payment_context_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_context_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_funded_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/merchant_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_details_spec.rb
@@ -325,6 +326,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_payment_resource_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/plan_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data_spec.rb
@@ -335,6 +337,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/signature_service_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/successful_result_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/test_transaction_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/three_d_secure_info_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/apple_pay_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/credit_card_details_spec.rb
@@ -351,6 +354,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/visa_checkout_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_ach_mandate_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_gateway_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction_line_item_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/unknown_payment_method_spec.rb
