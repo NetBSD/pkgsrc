@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6328 2026/09/24 13:46:02 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6329 2026/09/24 13:50:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9570,3 +9570,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/automake to 1.19 [wiz 2026-09-24]
 	Updated net/bftpd to 6.7 [drixter 2026-09-24]
 	Updated net/dnscontrol to 5.2.0 [drixter 2026-09-24]
+	Updated editors/qtcreator to 20.0.2 [adam 2026-09-24]
+	Updated net/wireshark to 4.6.9 [adam 2026-09-24]
