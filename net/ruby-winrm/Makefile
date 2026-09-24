@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/13 15:50:12 taca Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/24 04:41:31 taca Exp $
 
-DISTNAME=	winrm-2.4.0
+DISTNAME=	winrm-2.4.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +13,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-erubi>=1.8<2:../../textproc/ruby-erubi
 DEPENDS+=	${RUBY_PKGPREFIX}-gssapi>=1.2<2:../../security/ruby-gssapi
 DEPENDS+=	${RUBY_PKGPREFIX}-gyoku>=1.0<2:../../textproc/ruby-gyoku
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient>=2.2.0.2<3:../../www/ruby-httpclient
-DEPENDS+=	${RUBY_PKGPREFIX}-logging>=1.6.1:../../devel/ruby-logging
 DEPENDS+=	${RUBY_PKGPREFIX}-nori>=2.0<3:../../textproc/ruby-nori
 DEPENDS+=	${RUBY_PKGPREFIX}-rubyntlm>=0.6.1:../../security/ruby-rubyntlm
 
