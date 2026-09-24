@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.354 2026/09/02 19:04:05 wiz Exp $
+# $NetBSD: Makefile,v 1.355 2026/09/24 13:49:48 adam Exp $
 
-DISTNAME=	wireshark-4.6.8
-PKGREVISION=	1
+DISTNAME=	wireshark-4.6.9
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ethereal-[0-9]*
 
-DEPENDS+=	lemon-[0-9]*:../../devel/lemon
+DEPENDS+=	lemon>=0:../../devel/lemon
 
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
