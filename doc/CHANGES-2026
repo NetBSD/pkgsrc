@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6333 2026/09/24 14:29:58 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6334 2026/09/24 14:31:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9576,3 +9576,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/coreutils to 9.12 [wiz 2026-09-24]
 	Updated misc/gnuls to 9.12 [wiz 2026-09-24]
 	Updated www/ruby-aws-partitions to 1.1289.0 [taca 2026-09-24]
+	Updated www/ruby-aws-sdk-core to 3.257.0 [taca 2026-09-24]
