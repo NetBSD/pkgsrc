@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/08/04 20:29:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/24 15:14:28 wiz Exp $
 
 DISTNAME=	ATS2-Postiats-0.4.2
 PKGNAME=	${DISTNAME:S/ATS2-Postiats/ats2/}
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	find gmake
 # build is not job safe (... please be more specific?)
 MAKE_JOBS_SAFE=	no
+
+CFLAGS+=	-Wno-implicit-function-declaration
 
 .include "options.mk"
 
