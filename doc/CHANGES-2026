@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6309 2026/09/24 05:31:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6310 2026/09/24 07:14:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9545,3 +9545,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-faraday to 2.14.4 [taca 2026-09-24]
 	Updated www/ruby-faraday1 to 1.10.6 [taca 2026-09-24]
 	Updated www/ruby-sass-embedded to 1.105.0 [taca 2026-09-24]
+	Updated net/tor to 0.4.9.13 [wiz 2026-09-24]
