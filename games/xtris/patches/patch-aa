@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/12/19 12:40:48 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2026/09/24 16:56:26 rhialto Exp $
 
---- Makefile.orig	Fri Jan 25 13:42:54 2002
+--- Makefile.orig	1997-12-14 18:43:35.000000000 +0000
 +++ Makefile
 @@ -8,23 +8,27 @@
  ###################
@@ -38,16 +38,24 @@ $NetBSD: patch-aa,v 1.4 2006/12/19 12:40:48 rillig Exp $
  
  ###########################################################################
  ##         You shouldn't need to change anything past this.		 ##
-@@ -35,7 +39,7 @@
+@@ -35,13 +39,13 @@ XLIBS = -lX11
  all:	xtris xtserv xtbot
  
  xtris:	xtris.c
 -	$(CC) $(CFLAGS) -DXTRISPATH="\"$(BINDIR)\"" xtris.c -o xtris $(XLIBDIR) $(XLIBS) $(EXTRALIBS)
-+	$(CC) $(CFLAGS) $(XCFLAGS) -DXTRISPATH="\"$(BINDIR)\"" xtris.c -o xtris $(XLIBDIR) $(XLIBS) $(EXTRALIBS)
++	$(CC) $(CFLAGS) $(XCFLAGS) -DXTRISPATH="\"$(BINDIR)\"" $(LDFLAGS) xtris.c -o xtris $(XLIBDIR) $(XLIBS) $(EXTRALIBS)
  
  xtserv:	xtserv.c
- 	$(CC) $(CFLAGS) xtserv.c -o xtserv $(EXTRALIBS)
-@@ -60,6 +64,6 @@
+-	$(CC) $(CFLAGS) xtserv.c -o xtserv $(EXTRALIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) xtserv.c -o xtserv $(EXTRALIBS)
+ 
+ xtbot:	xtbot.o decide.o
+-	$(CC) $(CFLAGS) xtbot.o decide.o -o xtbot $(EXTRALIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) xtbot.o decide.o -o xtbot $(EXTRALIBS)
+ 
+ clean:
+ 	rm -f xtris xtserv xtbot core xtbot.o decide.o
+@@ -60,6 +64,6 @@ tar:
  	rm -f xtris.tar.gz
  	mv -f Makefile Makefile.local
  	cp Makefile.dist Makefile

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:44:36 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/09/24 16:56:26 rhialto Exp $
 
 BLAKE2s (xtris-1.15.tar.gz) = 752db0f80ed940f3421aea32377847652625c4df1c0f60c92f5ca033d7a3ca4d
 SHA512 (xtris-1.15.tar.gz) = a5d5c32a7e1650561464f0fda08c7040ca0061e59b374359894e7f181a2e9dfece7f6bee6ed82295779f3e4ac8e7a607c668c31eeb017d6b641c1fe09dea4791
 Size (xtris-1.15.tar.gz) = 52130 bytes
-SHA1 (patch-aa) = 77fc97b763da632bf867a75f17ffd38dad3ff28d
+SHA1 (patch-aa) = 21f550ad53abc67e0432bfe932549501d34a1ac2
 SHA1 (patch-ab) = 80c184220576c61236a5b50facaf27693013d38f
 SHA1 (patch-ac) = 4f2e5c94b22032da6bee13ce451fe98a78982c61
 SHA1 (patch-ad) = 7047fe19e0e951624f258981015875e054aa14d3

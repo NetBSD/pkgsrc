@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2017/10/09 08:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/24 16:56:26 rhialto Exp $
 
 DISTNAME=	xtris-1.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 #MASTER_SITES=	http://www.iagora.com/~espel/xtris/
 
