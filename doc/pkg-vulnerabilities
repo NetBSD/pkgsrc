@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.797 2026/09/24 10:19:46 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.798 2026/09/24 16:35:57 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30453,3 +30453,4 @@ wordpress<7.0.6		file-inclusion		https://www.cve.org/CVERecord?id=CVE-2026-87902
 php{74,82,83,84,85}-ja-wordpress<7.0.6		file-inclusion	https://www.cve.org/CVERecord?id=CVE-2026-87902
 ruby{33,34,40}-zip<3.4.0	path-traversal	https://www.cve.org/CVERecord?id=CVE-2026-85396
 ruby{33,34,40}-zip24-[0-9]*		path-traversal	https://www.cve.org/CVERecord?id=CVE-2026-85396
+ruby{33,34}-faraday1<1.10.5	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2026-25765
