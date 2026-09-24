@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6327 2026/09/24 13:29:24 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6328 2026/09/24 13:46:02 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9569,3 +9569,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/gawk to 5.4.1 [wiz 2026-09-24]
 	Updated devel/automake to 1.19 [wiz 2026-09-24]
 	Updated net/bftpd to 6.7 [drixter 2026-09-24]
+	Updated net/dnscontrol to 5.2.0 [drixter 2026-09-24]
