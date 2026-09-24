@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2026/08/13 11:02:29 adam Exp $
+# $NetBSD: Makefile,v 1.87 2026/09/24 10:17:07 adam Exp $
 
-DISTNAME=	ansible_lint-26.8.0
+DISTNAME=	ansible_lint-26.9.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
@@ -14,8 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 DEPENDS+=	ansible-core>=2.16.19:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=26.3.0:../../sysutils/py-ansible-compat
-DEPENDS+=	${PYPKGPREFIX}-black>=24.3.0:../../textproc/py-black
+DEPENDS+=	${PYPKGPREFIX}-black>=25.2.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.15.1:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=50.0.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.9.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.8.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.10.0:../../textproc/py-jsonschema
@@ -25,20 +26,16 @@ DEPENDS+=	${PYPKGPREFIX}-referencing>=0.36.2:../../textproc/py-referencing
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.18.11:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.5.0:../../textproc/py-wcmatch
-DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-yamllint>=1.38.0:../../textproc/py-yamllint
-TEST_DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
-TEST_DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
-TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-jmespath>=0:../../textproc/py-jmespath
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.17.1:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-netaddr>=1.3.0:../../net/py-netaddr
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=7.0.0:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-instafail>=0.5.0:../../devel/py-test-instafail
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.15.0:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.1.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	cryptography
-
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
