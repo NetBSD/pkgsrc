@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6342 2026/09/24 15:51:39 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6343 2026/09/24 16:10:29 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9584,3 +9584,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/php82 to 8.2.34 [taca 2026-09-24]
 	Updated lang/php84 to 8.4.26 [taca 2026-09-24]
 	Added textproc/harper version 2.11.0 [leot 2026-09-24]
+	Added devel/doctest version 2.5.3 [ktnb 2026-09-24]
