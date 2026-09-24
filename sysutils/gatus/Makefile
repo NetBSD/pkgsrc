@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/05 19:10:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/24 14:07:39 drixter Exp $
 
-DISTNAME=	gatus-5.36.0
-PKGREVISION=	5
+DISTNAME=	gatus-5.37.0
 CATEGORIES=	sysutils net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TwiN/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
