@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/09/25 01:16:09 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/25 14:23:53 ktnb Exp $
 
 DISTNAME=		slang-2026.18
 PKGNAME=		shader-${DISTNAME}
@@ -44,6 +44,11 @@ CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_GFX=OFF
 CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_SLANG_RHI=OFF
 CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_EXAMPLES=OFF
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_DXIL=OFF
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}/cmake-pkgsrc-build
+.endif
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/cmake-pkgsrc-build/generators/Release/lib:${WRKSRC}/cmake-pkgsrc-build/Release/lib
 
