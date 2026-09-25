@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6362 2026/09/25 08:53:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6363 2026/09/25 08:56:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9604,3 +9604,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/coreutils to 9.12nb2 [wiz 2026-09-25]
 	Updated www/resterm to 1.9.0 [drixter 2026-09-25]
 	Updated textproc/p5-Net-IDN-Encode to 2.502 [wiz 2026-09-25]
+	Updated devel/mise to 2026.9.13 [pin 2026-09-25]
