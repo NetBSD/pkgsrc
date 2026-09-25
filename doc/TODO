@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27990 2026/09/25 08:58:35 pin Exp $
+$NetBSD: TODO,v 1.27991 2026/09/25 13:31:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
-	o ggml-0.25.1
+	o ggml-0.25.3
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.5
@@ -1139,7 +1139,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profanity-0.15.1
 	o profit-2.5.3
 	o proftpd-1.3.9a
-	o prometheus-3.14.0
+	o prometheus-3.15.0
 	o prosody-13.0.5
 	o pspp-2.1.2
 	o ptlib-2.16.2
@@ -1230,6 +1230,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o salt-3008.2
+	o samba4-4.25.0
 	o samtools-1.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
