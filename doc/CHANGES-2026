@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6366 2026/09/25 10:01:22 he Exp $
+$NetBSD: CHANGES-2026,v 1.6367 2026/09/25 12:59:21 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9608,3 +9608,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.2.77 [pin 2026-09-25]
 	mk: improved emacs module framework [wiz 2026-09-25]
 	Updated net/tacacs to 4.0.4.32 [he 2026-09-25]
+	Added net/gobgp version 4.9.0 [drixter 2026-09-25]
