@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6372 2026/09/25 14:26:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6373 2026/09/25 21:48:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9614,3 +9614,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xrdb to 1.2.3nb1 [wiz 2026-09-25]
 	Updated www/thttpd to 2.29nb1 [wiz 2026-09-25]
 	Updated net/lft to 4.01 [wiz 2026-09-25]
+	Updated x11/gtkmm4 to 4.24.0 [wiz 2026-09-25]
