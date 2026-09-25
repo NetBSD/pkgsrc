@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6357 2026/09/25 05:20:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6358 2026/09/25 05:22:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9599,3 +9599,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/iamb to 0.0.12 [pin 2026-09-25]
 	Updated devel/sem to 0.25.0 [pin 2026-09-25]
 	Updated multimedia/moviebox-tui to 0.1.24 [pin 2026-09-25]
+	Updated sysutils/lla to 0.6.5 [pin 2026-09-25]
