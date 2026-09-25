@@ -1,0 +1,18 @@
+$NetBSD: patch-index.html,v 1.1 2026/09/25 14:20:40 wiz Exp $
+
+Add the NetBSD logo to the sample index page.  The image it points at
+is sitedrivenby.gif, which the package fetches as a second distfile and
+installs beside this page in share/thttpd.
+
+--- index.html.orig	2005-05-13 20:20:35.000000000 +0000
++++ index.html
+@@ -9,6 +9,9 @@
+ 
+ <P>
+ Here's a link to the <A HREF="http://www.acme.com/software/thttpd/">thttpd web pages</A>.
++<A HREF="http://www.netbsd.org/">
++<IMG ALIGN=RIGHT SRC="sitedrivenby.gif" border=0 ALT="Site driven by NetBSD">
++</A>
+ 
+ </BODY>
+ </HTML>

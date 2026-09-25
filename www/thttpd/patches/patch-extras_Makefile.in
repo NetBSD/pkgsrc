@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2009/12/13 17:42:36 asau Exp $
+$NetBSD: patch-extras_Makefile.in,v 1.1 2026/09/25 14:20:40 wiz Exp $
 
---- extras/Makefile.in.orig	2005-06-29 21:53:20.000000000 +0400
-+++ extras/Makefile.in	2009-12-13 20:35:09.000000000 +0300
+The same two things as patch-aa, for the helper programs: honour
+DESTDIR, install with the BSD_INSTALL_* tools instead of cp, and append
+to CFLAGS rather than overwrite it.
+
+syslogtocern is a shell script, so it goes in with BSD_INSTALL_SCRIPT.
+
+The upstream rule also made makeweb set-group-id here; that is left to
+the administrator instead, which is what README.pkgsrc explains.
+
+--- extras/Makefile.in.orig	2005-05-20 19:10:25.000000000 +0000
++++ extras/Makefile.in
 @@ -35,7 +35,7 @@
  CCOPT =		@V_CCOPT@
  DEFS =		@DEFS@
