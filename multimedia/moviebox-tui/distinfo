@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2026/09/22 14:53:27 pin Exp $
+$NetBSD: distinfo,v 1.2 2026/09/25 05:19:37 pin Exp $
 
-BLAKE2s (MovieBox-Tui-0.1.23.tar.gz) = 86881f3e952e69b0f22cee46541d065f820a8828121242171e3515c6d2d0fd9c
-SHA512 (MovieBox-Tui-0.1.23.tar.gz) = 0b77de9277cfd3836c54f21c09d41523f1623b0ca57105899400cf0d04ce24ea73bcf9fac95f500308c58012957ef92340bb052ca3c6604d4e13940f6f393b25
-Size (MovieBox-Tui-0.1.23.tar.gz) = 475547 bytes
+BLAKE2s (MovieBox-Tui-0.1.24.tar.gz) = 79640a21aa43252fb5d445cf394fd0498d726b186e916668bd726715c6136b8a
+SHA512 (MovieBox-Tui-0.1.24.tar.gz) = 10c41b7e0901510332722b70b6351c08f5e39fe7adbd9f27ae97336296b85d8d0d70d90b36d20e7d85b1d661d84015bbd4fb010553fcdc75fae10d007876a095
+Size (MovieBox-Tui-0.1.24.tar.gz) = 470055 bytes
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
 Size (adler2-2.0.1.crate) = 13366 bytes
