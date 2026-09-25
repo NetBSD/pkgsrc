@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6367 2026/09/25 12:59:21 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6368 2026/09/25 13:09:39 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9609,3 +9609,4 @@ Changes to the packages collection and infrastructure in 2026:
 	mk: improved emacs module framework [wiz 2026-09-25]
 	Updated net/tacacs to 4.0.4.32 [he 2026-09-25]
 	Added net/gobgp version 4.9.0 [drixter 2026-09-25]
+	Added net/stayrtr version 0.6.4 [drixter 2026-09-25]
