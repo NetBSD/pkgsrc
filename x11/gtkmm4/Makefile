@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/09/02 19:05:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/09/25 21:48:35 wiz Exp $
 
-DISTNAME=	gtkmm-4.20.0
+DISTNAME=	gtkmm-4.24.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm4/1}
-PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,8 +18,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
-BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.14
+BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.23.4
 .include "../../x11/gtk4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glibmm2.68+=	glibmm2.68>=2.89.0
 .include "../../devel/glibmm2.68/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.pangomm2.48+=	pangomm2.48>=2.50
