@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6361 2026/09/25 07:21:11 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6362 2026/09/25 08:53:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9603,3 +9603,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/rust-bindgen to 0.72.1nb1 [pin 2026-09-25]
 	Updated sysutils/coreutils to 9.12nb2 [wiz 2026-09-25]
 	Updated www/resterm to 1.9.0 [drixter 2026-09-25]
+	Updated textproc/p5-Net-IDN-Encode to 2.502 [wiz 2026-09-25]
