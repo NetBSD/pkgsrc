@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/02/16 08:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/25 09:48:11 wiz Exp $
 
 VERSION=	2023.08.18
 DISTNAME=	wanderlust
@@ -37,6 +37,8 @@ INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 			${EMACS_INFOPREFIX}
 
 EMACS_BUILDLINK=	# empty
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # apel
 
 .include "options.mk"
 

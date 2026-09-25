@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/25 09:48:05 wiz Exp $
 bin/cqual
 bin/gcqual
 bin/iquals
@@ -15,20 +15,20 @@ share/cqual/linux-syscalls.cq
 share/cqual/prelude.cq
 share/cqual/proto-noderef.cq
 share/doc/cqual/user-guide.pdf
-share/emacs/site-lisp/cqual/avltree.el
-share/emacs/site-lisp/cqual/cqual-pam.el
-share/emacs/site-lisp/cqual/elib-node.el
-share/emacs/site-lisp/cqual/pam-3.el
-share/emacs/site-lisp/cqual/pam-blob.el
-share/emacs/site-lisp/cqual/pam-copyright.el
-share/emacs/site-lisp/cqual/pam-executions.el
-share/emacs/site-lisp/cqual/pam-faces.el
-share/emacs/site-lisp/cqual/pam-hyper.el
-share/emacs/site-lisp/cqual/pam-overlays.el
-share/emacs/site-lisp/cqual/pam-util.el
-share/emacs/site-lisp/cqual/pam-vars.el
-share/emacs/site-lisp/cqual/pam-window.el
-share/emacs/site-lisp/cqual/stack-m.el
+${EMACS_LISPPREFIX}/cqual/avltree.el
+${EMACS_LISPPREFIX}/cqual/cqual-pam.el
+${EMACS_LISPPREFIX}/cqual/elib-node.el
+${EMACS_LISPPREFIX}/cqual/pam-3.el
+${EMACS_LISPPREFIX}/cqual/pam-blob.el
+${EMACS_LISPPREFIX}/cqual/pam-copyright.el
+${EMACS_LISPPREFIX}/cqual/pam-executions.el
+${EMACS_LISPPREFIX}/cqual/pam-faces.el
+${EMACS_LISPPREFIX}/cqual/pam-hyper.el
+${EMACS_LISPPREFIX}/cqual/pam-overlays.el
+${EMACS_LISPPREFIX}/cqual/pam-util.el
+${EMACS_LISPPREFIX}/cqual/pam-vars.el
+${EMACS_LISPPREFIX}/cqual/pam-window.el
+${EMACS_LISPPREFIX}/cqual/stack-m.el
 share/examples/cqual/README
 share/examples/cqual/linux-lock.c
 share/examples/cqual/linux-lock.i

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/06/28 11:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/25 09:48:11 wiz Exp $
 
 DISTNAME=	ess-13.09-1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-1$/.1/}
@@ -14,6 +14,8 @@ COMMENT=	Emacs Speaks Statistics
 USE_TOOLS+=	makeinfo perl gmake
 EMACS_MODULES=	base
 INFO_FILES=	yes
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/ess

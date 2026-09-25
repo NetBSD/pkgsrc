@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:40 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:12 wiz Exp $
 
 DISTNAME=	dictionary-1.8.2
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/dictionary/emacs-dict-client/}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/dictionary/dict-client/}
 PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://me.in-berlin.de/~myrkr/dictionary/
 COMMENT=	Emacs package for talking to a dictionary server
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/dictionary
+
+MAKE_FLAGS+=	EMACS=${EMACS_BIN}
 
 do-install:
 	cd ${WRKSRC}; \

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2026/09/12 14:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/25 09:48:13 wiz Exp $
 
 VERSION=	1.4.632
 DATE_TIME=	20210106.2144
 HASH=		f29aada
 DISTNAME=	w3m-el-snapshot_${VERSION}+0.${DATE_TIME}.${HASH}
-PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME:S/-el-snapshot_/-/:S/+0//:S/.${HASH}//}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-el-snapshot_/-/:S/+0//:S/.${HASH}//}
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/w3m-el-snapshot/}
@@ -17,6 +17,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	makeinfo gzip autoconf
 INFO_FILES=	yes
+
+EMACS_VERSIONS_INCOMPATIBLE=    emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 DEPENDS+=	w3m{,-img}>=0.5.2nb3:../../www/w3m
 
@@ -35,8 +37,6 @@ SUBST_SED.paths=	-e 's|@W3M@|${PREFIX}/bin/w3m|g'
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
-
-EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "options.mk"
 

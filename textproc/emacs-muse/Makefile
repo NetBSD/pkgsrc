@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/12/30 16:40:42 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/25 09:48:12 wiz Exp $
 
 DISTNAME=	muse-3.20
-PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	textproc editors
 MASTER_SITES=	#
@@ -17,6 +17,8 @@ INFO_FILES=	yes
 
 MAKE_FLAGS+=		-I..
 INSTALLATION_DIRS=	share/doc/emacs-muse share/examples/emacs-muse
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 pre-build:
 	sed -e "s,@PREFIX@,${PREFIX}," -e "s,@LISPDIR@,${EMACS_LISPPREFIX}," \

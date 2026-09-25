@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/09/12 14:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/25 09:48:09 wiz Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -11,6 +11,7 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	CJK characters inputting system for emacs + leim
 
 GNU_CONFIGURE=	yes
+MAKE_FLAGS+=	lispdir=${DESTDIR}${EMACS_LISPPREFIX}
 MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 # XXX please someone adjust paths and PLIST for XEmacs...
 EMACS_VERSIONS_ACCEPTED=	emacs20

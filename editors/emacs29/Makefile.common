@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2023/08/14 05:13:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/09/25 09:48:07 wiz Exp $
 #
 # used by editors/emacs29/Makefile
 # used by editors/emacs29-nox11/Makefile
@@ -85,3 +85,15 @@ post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../devel/libgetopt/buildlink3.mk"
+
+# The lisp of other packages lives under this version's directory and so
+# does their info, but Emacs builds Info-default-directory-list from its
+# own --infodir at configure time and cannot be told at run time except
+# through INFOPATH.  This adds the version's info directory to the list
+# at startup; without it the files land where nothing looks.
+post-install: emacs-info-path
+emacs-info-path:
+	${ECHO} '(setq Info-default-directory-list (append Info-default-directory-list' \
+		> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
+	${ECHO} '  (list (expand-file-name "../info" (file-name-directory load-file-name)))))' \
+		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el

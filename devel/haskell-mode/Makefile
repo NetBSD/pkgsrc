@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/05/14 22:25:34 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=		haskell-mode-1.44
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=		Haskell mode for Emacs
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/haskell-mode \
 			share/doc/haskell-mode
+
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 HTML=	.emacs fontlock.hs indent.hs index.html installation-guide.html
 SRCS=	haskell-decl-scan.el haskell-doc.el haskell-font-lock.el	\

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/12/22 19:15:06 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/25 09:48:09 wiz Exp $
 
 DISTNAME=	graphviz-dot-mode
-PKGNAME=	${DISTNAME}-0.3.7
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-0.3.7
 PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	#

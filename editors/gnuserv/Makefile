@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/09/11 21:18:49 vins Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/25 09:48:08 wiz Exp $
 
 DISTNAME=	gnuserv-3.12.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.emacswiki.org/emacs/GnuClient
 COMMENT=	Improved version of emacsserver for GNU Emacs
 
-CONFLICTS+=	xemacs-[0-9]* xemacs-current-[0-9]* # bin/gnuattach; bin/gnuclient
+CONFLICTS+=	xemacs-[0-9]* xemacs-nox11-[0-9]* # bin/gnuattach; bin/gnuclient
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-x	# X support
@@ -19,10 +19,14 @@ CONFIGURE_ARGS+=	--with-resolv	# hostname lookup
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 
+MAKE_FLAGS+=		EMACS=${EMACS_BIN}
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs214nox xemacs215 xemacs215nox
+
 EL_FILES=		devices.el gnuserv.el gnuserv-compat.el
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX} share/applications	\
-			share/doc/${PKGBASE}
+			share/doc/gnuserv
 
 .PHONY: el-install doc-install
 

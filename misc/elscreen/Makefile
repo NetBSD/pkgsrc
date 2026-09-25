@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/09/12 14:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/25 09:48:11 wiz Exp $
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -30,7 +30,11 @@ EMACS_BUILDLINK=	# empty
 
 # Emacs 24 or later is not supported. Try wip/elscreen-current
 # instead.
-EMACS_VERSIONS_ACCEPTED= emacs20
+#EMACS_VERSIONS_ACCEPTED= emacs20
+# but apel does not support emacs20
+#EMACS_VERSIONS_INCOMPATIBLE=	emacs20
+BROKEN=		"Needs fixing for emacs>20"
+EMACS_VERSIONS_ACCEPTED=
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/elscreen
 INSTALLATION_DIRS+=	share/doc/elscreen

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/05/14 22:25:39 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.8 2026/09/25 09:48:11 wiz Exp $
 
 DISTNAME=	texdrive
-PKGNAME=	texdrive-0.0.20081126.171834
+PKGNAME=	${EMACS_PKGNAME_PREFIX}texdrive-0.0.20081126.171834
 PKGREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	http://www.djcbsoftware.nl/code/texdrive/
@@ -16,10 +15,12 @@ DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	texdrive-0.0.20081126.171834
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
+
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile texdrive.el

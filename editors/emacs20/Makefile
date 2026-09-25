@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/09/14 12:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/09/25 09:48:07 wiz Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -111,3 +111,15 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/emacs
 
 .include "../../mk/bsd.pkg.mk"
+
+# The lisp of other packages lives under this version's directory and so
+# does their info, but Emacs builds Info-default-directory-list from its
+# own --infodir at configure time and cannot be told at run time except
+# through INFOPATH.  This adds the version's info directory to the list
+# at startup.
+post-install: emacs-info-path
+emacs-info-path:
+	${ECHO} '(setq Info-default-directory-list (append Info-default-directory-list' \
+		> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
+	${ECHO} '  (list (expand-file-name "../info" (file-name-directory load-file-name)))))' \
+		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el

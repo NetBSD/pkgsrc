@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/12/01 09:16:58 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=		cqual-0.991
 PKGREVISION=		21
@@ -12,6 +12,7 @@ COMMENT=		Tool for adding type qualifiers to C
 MAKE_JOBS_SAFE=		no
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+INSTALL_MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX}/cqual
 USE_TOOLS+=		gmake perl:run bison m4
 
 REPLACE_PERL+=		bin/*

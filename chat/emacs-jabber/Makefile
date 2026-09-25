@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/09/12 14:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=		emacs-jabber-0.8.92
+PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/emacs-//}
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +21,9 @@ CONFIGURE_ENV+=		EMACS=${EMACS_BIN}
 
 TEST_TARGET=		check
 
-EMACS_VERSIONS_ACCEPTED=	emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+MAKE_JOBS_SAFE=		no
+
+EMACS_VERSIONS_ACCEPTED=	#
 
 # net-utils, mule-ucs for xemacs
 EMACS_MODULES=		base

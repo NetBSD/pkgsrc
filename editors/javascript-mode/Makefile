@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/14 22:25:37 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/25 09:48:08 wiz Exp $
 
 DISTNAME=	javascript-2.2.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
@@ -10,6 +10,8 @@ DISTFILES=	#
 MAINTAINER=	cheusov@NetBSD.org
 #HOMEPAGE=	http://www.brgeight.se/
 COMMENT=	Javascript major mode for Emacs
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}
 

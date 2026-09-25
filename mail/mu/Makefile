@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/09/02 19:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/09/25 09:48:10 wiz Exp $
 
 DISTNAME=	mu-1.14.3
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.djcbsoftware.nl/code/mu/
 COMMENT=	E-mail searching and indexing tools
 LICENSE=	gnu-gpl-v3
 
-MESON_ARGS+=	-Dinfodir=info
+MESON_ARGS+=	-Dinfodir=${PKGINFODIR}
 MESON_ARGS+=	-Dlispdir=${EMACS_LISPPREFIX}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config

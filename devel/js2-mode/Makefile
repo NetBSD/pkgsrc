@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2026/09/12 14:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=	js2-20080406
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://js2-mode.googlecode.com/files/
@@ -14,8 +15,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 
-# no xemacs at all
-EMACS_VERSIONS_ACCEPTED+=	emacs29 emacs29nox emacs30 emacs30nox emacs31 emacs31nox
+EMACS_VERSIONS_ACCEPTED+=	emacs31 emacs30 emacs29
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/09/21 21:22:39 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=		verilog-mode-3.60
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,19 +14,15 @@ COMMENT=		Verilog mode for Emacs
 
 WRKSRC=			${WRKDIR}
 
-.include "../../editors/emacs/modules.mk"
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
-.if ${EMACS_FLAVOR} == "emacs"
-EMACS=	emacs
-.else
-EMACS=	xemacs
-.endif
+.include "../../editors/emacs/modules.mk"
 
 SRCS=	verilog-mode.el
 
 do-build:
 	for f in ${SRCS}; do						\
-		${EMACS} --no-init-file --no-site-file -batch		\
+		${EMACS_BIN} --no-init-file --no-site-file -batch		\
 		-f batch-byte-compile ${WRKSRC}/$$f;			\
 	done
 

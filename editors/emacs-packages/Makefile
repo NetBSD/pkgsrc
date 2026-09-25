@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/05/01 20:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/09/25 09:48:07 wiz Exp $
 
-DISTNAME=	emacs-packages-0.12
-PKGREVISION=	3
+DISTNAME=	emacs-packages-0.13
 CATEGORIES=	editors meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,6 +10,9 @@ HOMEPAGE=	# empty
 COMMENT=	Meta-package for the GNU Emacs lisp packages
 
 META_PACKAGE=	yes
+
+# TODO: would work, but needs a lot of .if cases
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 .include "../../editors/emacs/modules.mk"
 
@@ -36,14 +38,14 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib-[0-9]*:../../devel/elib
 .if ${EMACS_VERSION_MAJOR} < 24
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elscreen-[0-9]*:../../misc/elscreen
 .endif
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-dict-client-[0-9]*:../../textproc/emacs-dict-client
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}dict-client-[0-9]*:../../textproc/emacs-dict-client
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
 .endif
-.if ${EMACS_VERSION_MAJOR} < 23
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m-[0-9]*:../../www/emacs-w3m
+.if ${EMACS_VERSION_MAJOR} < 30
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3m-[0-9]*:../../www/emacs-w3m-snapshot
 .else
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m-[0-9]*:../../www/emacs-w3m-snapshot
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3m-[0-9]*:../../www/emacs-w3m
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ess-[0-9]*:../../math/ess
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}etach-[0-9]*:../../mail/etach
@@ -58,7 +60,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
 #.if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "21"
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}jde-[0-9]*:../../editors/jde
 #.endif
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}riece-[0-9]*:../../chat/riece
+#DEPENDS+=	${EMACS_PKGNAME_PREFIX}riece-[0-9]*:../../chat/riece
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}mailcrypt-[0-9]*:../../mail/mailcrypt
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}matlab-mode-[0-9]*:../../editors/matlab-mode
@@ -84,14 +86,18 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar-[0-9]*:../../editors/speedbar
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tamago-[0-9]*:../../editors/tamago
 .endif
+.if ${EMACS_VERSION_MAJOR} == 29
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tc-[0-9]*:../../inputmethod/tc
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode-[0-9]*:../../cad/verilog-mode
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
+#DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl-snapshot
+.if ${EMACS_VERSION_MAJOR} > 30
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenicb-[0-9]*:../../chat/zenicb
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenirc-[0-9]*:../../chat/zenirc
 
 .include "../../mk/bsd.pkg.mk"

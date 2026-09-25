@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/11/17 11:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:13 wiz Exp $
 #
 
 DISTNAME=		xslide-0.2.2
@@ -17,6 +17,7 @@ COMMENT=		XSL major mode for emacs
 EMACS=	emacs
 .else
 EMACS=	xemacs
+DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 .endif
 
 SRCS=	xslide-abbrev.el xslide-data.el xslide-font.el xslide-process.el xslide.el
@@ -32,8 +33,8 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE:C|^${EMACS_PKGNAME_PREFIX}||}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE:C|^${EMACS_PKGNAME_PREFIX}||}
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xslide
 	${INSTALL_DATA} ${WRKSRC}/README.TXT ${DESTDIR}${PREFIX}/share/doc/xslide
 	${INSTALL_DATA} ${WRKSRC}/dot_emacs ${DESTDIR}${PREFIX}/share/doc/xslide
