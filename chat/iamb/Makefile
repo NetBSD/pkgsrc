@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/01/21 14:46:58 pin Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/25 05:15:35 pin Exp $
 
-DISTNAME=	iamb-0.0.11
+DISTNAME=	iamb-0.0.12
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ulyssa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.93.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			share/examples/iamb share/icons/hicolor/scalable/apps \
