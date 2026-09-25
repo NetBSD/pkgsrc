@@ -1,7 +1,11 @@
-$NetBSD: patch-ac,v 1.7 2009/12/13 17:42:36 asau Exp $
+$NetBSD: patch-cgi-src_Makefile.in,v 1.1 2026/09/25 14:20:40 wiz Exp $
 
---- cgi-src/Makefile.in.orig	2005-06-29 21:53:04.000000000 +0400
-+++ cgi-src/Makefile.in	2009-12-13 20:29:23.000000000 +0300
+The same as patch-ab for the CGI programs: honour DESTDIR, install with
+the BSD_INSTALL_* tools instead of cp, and append to CFLAGS rather than
+overwrite it.
+
+--- cgi-src/Makefile.in.orig	2005-05-20 19:10:25.000000000 +0000
++++ cgi-src/Makefile.in
 @@ -34,7 +34,7 @@
  CCOPT =		@V_CCOPT@
  DEFS =		@DEFS@

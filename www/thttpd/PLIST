@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/25 14:20:39 wiz Exp $
 libexec/cgi-bin/phf
 libexec/cgi-bin/redirect
 libexec/cgi-bin/ssi
@@ -12,6 +12,7 @@ sbin/makeweb
 sbin/syslogtocern
 sbin/thtpasswd
 sbin/thttpd
+share/doc/thttpd/README.pkgsrc
 share/examples/thttpd.conf
 share/thttpd/index.html
 share/thttpd/sitedrivenby.gif

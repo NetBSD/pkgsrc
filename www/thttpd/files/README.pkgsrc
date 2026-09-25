@@ -1,0 +1,16 @@
+makeweb and the web group
+=========================
+
+makeweb lets a user create a public_html directory under the web root.
+To do that it has to be set-group-id to the group that owns the web
+root; pkgsrc installs it without that bit, because making a program
+set-group-id is the administrator's decision, not the package's.
+
+If you want to use it:
+
+	chgrp <group> @PREFIX@/sbin/makeweb
+	chmod 2755 @PREFIX@/sbin/makeweb
+
+The group thttpd's own Makefile suggests is "www".
+
+If you do not use makeweb, leave it as it is.

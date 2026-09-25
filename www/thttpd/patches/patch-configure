@@ -1,0 +1,49 @@
+$NetBSD: patch-configure,v 1.1 2026/09/25 14:20:40 wiz Exp $
+
+Not a CVE: the configure script's test programs declare main() without a
+return type.  C99 removed implicit int and current compilers reject it,
+so the very first test -- "checking whether the C compiler works" --
+fails and configure stops with "C compiler cannot create executables".
+gcc 14 and clang 16 and later are in that state; this was measured with
+clang 21 and it is what breaks the build on Debian 13.
+
+Fedora and MacPorts both carry this fix.
+
+--- configure.orig
++++ configure
+@@ -761,7 +761,7 @@
+ #line 762 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:767: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
+@@ -880,7 +880,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_cv_lbl_static_flag=unknown
+-    echo 'main() {}' > conftest.c
++    echo 'int main() {}' > conftest.c
+     if test "$GCC" != yes ; then
+ 	    trial_flag="-Bstatic"
+ 	    test=`$CC $trial_flag -o conftest conftest.c 2>&1`
+@@ -1588,7 +1588,7 @@
+ #include "confdefs.h"
+ 
+ int main() {
+-main()
++int main()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:1595: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -2095,7 +2095,7 @@
+ #endif
+ 
+ int
+-main()
++int main()
+ {
+ 	char *data, *data2, *data3;
+ 	int i, pagesize;

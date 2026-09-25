@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:31:10 nia Exp $
+$NetBSD: distinfo,v 1.22 2026/09/25 14:20:39 wiz Exp $
 
 BLAKE2s (thttpd-2.29/sitedrivenby.gif) = 7eef9313c8279aadd94c91a4bbe0a682cff0b5647f76acf30cd414ea72b0df60
 SHA512 (thttpd-2.29/sitedrivenby.gif) = fc80ec0f63a9a28cd8002ba4c1f922807faf8661c677f7935f8768b2739facf411e6a1e72c65038d72c68c1f7bf64d2bc583c1880dc85f77eca48f7baec38ae2
@@ -6,9 +6,16 @@ Size (thttpd-2.29/sitedrivenby.gif) = 8519 bytes
 BLAKE2s (thttpd-2.29/thttpd-2.29.tar.gz) = 023ee26357ec155995627c937e282ce5077dd1413f1f69f2f5927c883b2dca98
 SHA512 (thttpd-2.29/thttpd-2.29.tar.gz) = e02ed5b889eb3c875d56503093777c542316165a8df2d83e539337fb0759b6d9728fd484123dd903af57b06c97fe339055b816cca64778b7369b94020bd61ab6
 Size (thttpd-2.29/thttpd-2.29.tar.gz) = 133967 bytes
-SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
-SHA1 (patch-ab) = c6d6a20a00b4ceaf409b849982b8e963debf9530
-SHA1 (patch-ac) = f7fe1fed88b4cb33c9456d6fdc13e2bbc175ced6
-SHA1 (patch-ad) = 234127aaf4a3b5e6536bd08cc80f823800240fac
-SHA1 (patch-af) = 5160b635cdf9b3c997e93e039ef2764f77857018
-SHA1 (patch-ag) = 01410f8d293e2d4033f2a1119b21c05e21dfefbe
+SHA1 (patch-CVE-2005-3124) = af34d681b00af143ea86b696ae52b8b19fb619f7
+SHA1 (patch-CVE-2007-0158) = 49428634a39e4bda2f1d0a0a15cc62450c1259d1
+SHA1 (patch-CVE-2009-4491) = 37fa7858d14c7afff9d22ed1aa423b10cfe80516
+SHA1 (patch-CVE-2012-5640) = dda5e5a3e3b40e9d2997952f729e44d2d0ef58d1
+SHA1 (patch-Makefile.in) = 4c5b92df9e28d14ff83d00a4d951efa4595532ac
+SHA1 (patch-cgi-src_Makefile.in) = b80257756fcbb769b6540440b476f7548a5f117d
+SHA1 (patch-configure) = c3a09ec45abbfed2dced7e861333cf4376af2fbb
+SHA1 (patch-extras_Makefile.in) = c0c0df11f5ca945ef588d47a17906ad2d1c6c86c
+SHA1 (patch-extras_htpasswd.c) = 5cd23587d0a6d483462866c96fce5f2d31754556
+SHA1 (patch-index.html) = 2a7b22d91f8ef8cad7eecabdd8cb76fb44076b3e
+SHA1 (patch-libhttpd.c) = 89660ecceb2c4e3242c38a78f734db854d028f31
+SHA1 (patch-mmc.c) = 4052750ad1318f1d6776087f743a15ff609aed8c
+SHA1 (patch-thttpd.c) = 77e8de4f058ef27dc9463614e0c14295f0460fcb

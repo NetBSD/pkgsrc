@@ -1,6 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2002/06/16 19:10:26 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2026/09/25 14:20:39 wiz Exp $
 
---- Makefile.in.orig	Wed Apr  3 04:49:35 2002
+Install into the pkgsrc layout instead of the upstream defaults: the
+CGI programs go to libexec/cgi-bin and the sample web root to
+share/thttpd, rather than under $prefix/www.
+
+Use the BSD_INSTALL_* tools rather than "mkdir -p" and an install(1)
+run with a hardcoded owner of bin:bin, so that DESTDIR and the
+unprivileged build both work.
+
+CFLAGS is appended to rather than assigned, so that the flags pkgsrc
+passes in survive.
+
+--- Makefile.in.orig	2005-05-20 19:10:24.000000000 +0000
 +++ Makefile.in
 @@ -34,7 +34,7 @@
  # Pathname of directory to install the man page.
