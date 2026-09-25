@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/06/16 07:45:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:12 wiz Exp $
 
 DISTNAME=		dictem-1.0.4
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		dict-client>=1.9.14:../../textproc/dict-client
 SRCS=			dictem.el
 DOCS=			README NEWS COPYING # ChangeLog
 
-INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EMACS_LISPPREFIX}
+INSTALLATION_DIRS+=	share/doc/dictem ${EMACS_LISPPREFIX}
 
 do-build:
 .for f in ${SRCS}
@@ -29,7 +29,7 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc}	\
 			${DESTDIR}${EMACS_LISPPREFIX};		\
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS}				\
-			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+			${DESTDIR}${PREFIX}/share/doc/dictem
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

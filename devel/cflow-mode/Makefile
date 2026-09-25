@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/03/02 00:24:21 mef Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=	cflow-1.7
-PKGNAME=	cflow-mode-1.7
+PKGNAME=	${EMACS_PKGNAME_PREFIX}cflow-mode-1.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=cflow/}
 

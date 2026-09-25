@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/09/12 14:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=	apel-10.8.0.20201107
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -40,8 +40,8 @@ MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .include "../../editors/emacs/modules.mk"
 
 PLIST_VARS+=	emacs23 emacs19
-.if empty(EMACS_TYPE:Mxemacs)
-.  if !empty(EMACS_TYPE:Memacs2[3-9]*) || !empty(EMACS_TYPE:Memacs3[0-9]*)
+.if ${EMACS_FLAVOR} != "xemacs"
+.  if ${EMACS_VERSION_MAJOR} >= 23
 PLIST.emacs23=	yes
 .  else
 PLIST.emacs19=	yes

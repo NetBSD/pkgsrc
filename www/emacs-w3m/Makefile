@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2026/09/12 14:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/25 09:48:13 wiz Exp $
 
 DISTNAME=	emacs-w3m-1.4.5
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/emacs-//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emacs-w3m/}
 GITHUB_TAG=	329cfcfc0448a45a0779ded7b51332a343d02a18
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
@@ -20,8 +21,9 @@ DEPENDS+=	w3m{,-img}>=0.5.1nb2:../../www/w3m
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-emacs=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX:Q}/w3m
 CONFIGURE_ARGS+=	--with-icondir=${ICONDIR}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 BUILD_TARGET=		default
 INSTALL_TARGET=		${INSTALL_TARGET.${EMACS_FLAVOR}}
 #AKE_FLAGS=		prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
@@ -36,11 +38,9 @@ WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 #SUBST_SED.fix-icondir+=	-e 's|images/w3m|w3m|g'
 
 EMACS_BUILDLINK=		# empty
-EMACS_VERSIONS_ACCEPTED=	emacs20 \
-				emacs29 emacs29nox \
+EMACS_VERSIONS_ACCEPTED=	emacs31 emacs31nox \
 				emacs30 emacs30nox \
-				emacs31 emacs31nox \
-				xemacs215 xemacs215nox xemacs214 xemacs214nox
+				emacs29 emacs29nox
 
 .include "../../editors/emacs/modules.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/12/12 10:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -32,6 +32,8 @@ MAKEFLAGS.emacs+=	EMACS=${EMACS_BIN}
 MAKEFLAGS.xemacs+=	XEMACS=${EMACS_BIN} \
 			PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # apel
+EMACS_VERSIONS_INCOMPATIBLE+=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 EMACS_MODULES=		base
 EMACS_BUILDLINK=	# empty
 
@@ -66,7 +68,7 @@ post-install:
 .include "../../editors/emacs/modules.mk"
 
 .if (${EMACS_FLAVOR} != "xemacs")
-BUILDLINK_API_DEPENDS.apel+=	apel>=10.8
+BUILDLINK_API_DEPENDS.apel+=	${EMACS_PKGNAME_PREFIX}apel>=10.8
 .include "../../devel/apel/buildlink3.mk"
 .endif
 

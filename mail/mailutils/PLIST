@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/09/02 19:01:24 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/09/25 09:48:10 wiz Exp $
 bin/decodemail
 bin/dotlock
 bin/frm
@@ -244,8 +244,8 @@ share/doc/mailutils/NEWS
 share/doc/mailutils/README
 share/doc/mailutils/THANKS
 share/doc/mailutils/TODO
-${PLIST.emacs}share/emacs/site-lisp/mailutils-mh.el
-${PLIST.emacs}share/emacs/site-lisp/mailutils-mh.elc
+${PLIST.emacs}${EMACS_LISPPREFIX}/mailutils-mh.el
+${PLIST.emacs}${EMACS_LISPPREFIX}/mailutils-mh.elc
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/mailutils.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/mailutils.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/mailutils.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:53:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/25 09:48:07 wiz Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -1275,5 +1275,6 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/lisp/zone-mode.el
 share/emacs/${PKGVERSION}/lisp/zone-mode.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
+share/emacs/${PKGVERSION}/site-lisp/site-start.el
 share/emacs/site-lisp/subdirs.el
 @pkgdir share/emacs/${PKGVERSION}/leim

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2026/09/12 14:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=	ecb-2.50
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ecb-home/}
+GITHUB_PROJECT=	ecb
 GITHUB_TAG=	1330a44cf3c171781083b0b926ab7622f64e6e81
 
 MAINTAINER=	pho@cielonegro.org
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS=	find gmake makeinfo tar
 INFO_FILES=	yes
 
-EMACS_VERSIONS_ACCEPTED=	xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	# empty
 
 MAKE_FLAGS+=		EMACS=${EMACS_BIN}
 MAKE_FLAGS+=		SHELL=${SH:Q}
@@ -25,14 +25,14 @@ EMACS_BUILDLINK=	yes
 
 INSTALLATION_DIRS+=	\
 	${PKGINFODIR} \
-	${EMACS_LISPPREFIX}/${PKGBASE}
+	${EMACS_LISPPREFIX}/ecb
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.el  ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/*.elc ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/*.el  ${DESTDIR}${EMACS_LISPPREFIX}/ecb
+	${INSTALL_DATA} ${WRKSRC}/*.elc ${DESTDIR}${EMACS_LISPPREFIX}/ecb
 	${INSTALL_DATA} ${WRKSRC}/info-help/ecb.info* ${DESTDIR}${PREFIX}/${PKGINFODIR}
 	${TAR} -cf - -C ${WRKSRC} ecb-images | \
-		${TAR} -xf - -C ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+		${TAR} -xf - -C ${DESTDIR}${EMACS_LISPPREFIX}/ecb
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

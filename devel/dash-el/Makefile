@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/04/07 18:56:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/25 09:48:05 wiz Exp $
 
 DISTNAME=	dash.el-2.19.1
-PKGNAME=	${DISTNAME:C/\.el/-el/}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:C/\.el/-el/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magnars/}
 GITHUB_PROJECT=	dash.el
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magnars/dash.el
 COMMENT=	Modern list api for Emacs. No 'cl required
 LICENSE=	gnu-gpl-v3
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/dash
 

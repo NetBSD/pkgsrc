@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/13 18:26:50 hasso Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/09/25 09:48:05 wiz Exp $
 bin/dcc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-commands.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-commands.elc
@@ -25,11 +25,12 @@ ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-modeline.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-sound.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-sound.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-emacs20.el
-${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-emacs20.elc
+${FOR_emacs}${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-emacs20.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-mule2.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-nemacs.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-other-emacsen.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-xmas.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-specific-xmas.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-version-string.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-pj-version-string.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-setpath.el

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/04/07 19:02:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/25 09:48:12 wiz Exp $
 
 DISTNAME=	flycheck-33.0
-PKGNAME=	${DISTNAME:S/flycheck-/flycheck-mode-/}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/flycheck-/flycheck-mode-/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flycheck/}
 GITHUB_PROJECT=	flycheck
@@ -12,7 +12,9 @@ HOMEPAGE=	https://www.flycheck.org/
 COMMENT=	On the fly syntax checking for GNU Emacs
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	dash-el-[0-9]*:../../devel/dash-el
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}dash-el-[0-9]*:../../devel/dash-el
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes

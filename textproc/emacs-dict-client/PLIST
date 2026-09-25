@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:15 joerg Exp $
-share/emacs/site-lisp/dictionary/connection.el
-share/emacs/site-lisp/dictionary/connection.elc
-share/emacs/site-lisp/dictionary/dictionary-init.el
-share/emacs/site-lisp/dictionary/dictionary.el
-share/emacs/site-lisp/dictionary/dictionary.elc
-share/emacs/site-lisp/dictionary/link.el
-share/emacs/site-lisp/dictionary/link.elc
+@comment $NetBSD: PLIST,v 1.3 2026/09/25 09:48:12 wiz Exp $
+${EMACS_LISPPREFIX}/dictionary/connection.el
+${EMACS_LISPPREFIX}/dictionary/connection.elc
+${EMACS_LISPPREFIX}/dictionary/dictionary-init.el
+${EMACS_LISPPREFIX}/dictionary/dictionary.el
+${EMACS_LISPPREFIX}/dictionary/dictionary.elc
+${EMACS_LISPPREFIX}/dictionary/link.el
+${EMACS_LISPPREFIX}/dictionary/link.elc

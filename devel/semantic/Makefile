@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/09/12 14:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/09/25 09:48:07 wiz Exp $
 
 DISTNAME=	semantic-1.4.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,8 +18,7 @@ INFO_FILES=	yes
 
 MAKE_FLAGS+=	EMACS=${EMACS_BIN}
 
-# speedbar
-EMACS_VERSIONS_ACCEPTED=        emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	# empty
 
 # XXX cd ${WRKSRC}; ${MAKE} -V semantic_LISP
 SRCS=	semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el

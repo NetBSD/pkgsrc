@@ -1,10 +1,34 @@
-$NetBSD: patch-mu4e_meson.build,v 1.2 2026/08/11 14:40:34 ktnb Exp $
+$NetBSD: patch-mu4e_meson.build,v 1.3 2026/09/25 09:48:10 wiz Exp $
 
 Don't care about info errors
 
+Byte-compile mu4e-dbus.el unconditionally.  The build asks the Emacs whether
+dbusbind is compiled in and skips the file when it is not, but PLIST.emacs
+lists mu4e-dbus.elc with no condition, so the package cannot be built against
+an Emacs without D-Bus -- every *nox one, and an emacs30 with the dbus option
+off.  The file compiles clean without D-Bus: both of its requires pass
+'noerror.
+
 --- mu4e/meson.build.orig	2026-08-09 13:09:56.075658158 +0000
 +++ mu4e/meson.build
-@@ -156,6 +156,7 @@ if makeinfo.found()
+@@ -80,13 +80,9 @@
+ 
+ # do have we have dbus support?
+ mu4e_srcs += 'mu4e-dbus.el'
+-emacs_dbus = run_command(emacs, '--batch', '--eval', '(kill-emacs (if (featurep \'dbusbind) 0 1))',
+-                         check: false)
+-if emacs_dbus.returncode() == 0
+-  mu4e_bc_srcs += 'mu4e-dbus.el'
+-else
+-  message('mu4e-dbus.el cannot be byte-compiled')
+-endif
++# Byte-compile this whether or not the Emacs has dbusbind; both of its
++# requires are 'noerror, so it compiles without D-Bus.
++mu4e_bc_srcs += 'mu4e-dbus.el'
+ 
+ # note, we cannot compile mu4e-config.el without incurring
+ #  WARNING: Source item
+@@ -156,6 +152,7 @@ if makeinfo.found()
                  install: true,
                  depends: fdl_texi,
                  command: [makeinfo,

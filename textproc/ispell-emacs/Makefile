@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/12/31 09:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/25 09:48:12 wiz Exp $
 
 DISTNAME=	ispell.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}ispell-emacs-3.6
@@ -15,7 +15,7 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/ispell
 
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 
-DIST_SUBDIR=	${PKGNAME_NOREV:C|^xemacs-||}
+DIST_SUBDIR=	ispell-emacs-${PKGVERSION_NOREV}
 WRKSRC=		${WRKDIR}
 
 NO_CONFIGURE=	yes

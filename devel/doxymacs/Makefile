@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/01/07 08:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/09/25 09:48:06 wiz Exp $
 #
 
 DISTNAME=	doxymacs-1.8.0
@@ -24,7 +24,7 @@ COMMENT=	Doxygen editing support for Emacs
 .if ${EMACS_FLAVOR} == xemacs
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 .elif ${EMACS_VERSION_MAJOR} <= 21
-DEPENDS+=	w3-[0-9]*:../../www/w3
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
 
 GNU_CONFIGURE=		yes

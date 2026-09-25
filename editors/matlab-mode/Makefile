@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/01/09 07:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/25 09:48:09 wiz Exp $
 
 DISTNAME=		matlab.el
 # we do this because we want DIST_SUBDIR to not change based on
@@ -23,6 +23,9 @@ DIST_SUBDIR=		${BASEPKGNAME}
 EMACS=	emacs
 .else
 EMACS=	xemacs
+# matlab.el requires tempo, which lives in xemacs-packages rather
+# than in XEmacs itself, so the byte-compile below cannot find it.
+DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 .endif
 
 SRCS=	matlab.el
@@ -34,7 +37,7 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE:C|^xemacs-||}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE:C|^${EMACS_PKGNAME_PREFIX}||}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE:C|^${EMACS_PKGNAME_PREFIX}||}
 
 .include "../../mk/bsd.pkg.mk"

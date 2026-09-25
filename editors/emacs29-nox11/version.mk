@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.1 2023/07/31 15:05:54 ryoon Exp $
+# $NetBSD: version.mk,v 1.2 2026/09/25 09:48:08 wiz Exp $
 
-_EMACS_FLAVOR=	emacs
+# The only thing that differs from the X11 build is which package to
+# ask for.
+.include "../../editors/emacs29/version.mk"
+
 _EMACS_REQD=	emacs29-nox11>=29.1<30
-
-_EMACS_VERSION_MAJOR=	29
-_EMACS_VERSION_MINOR=	1

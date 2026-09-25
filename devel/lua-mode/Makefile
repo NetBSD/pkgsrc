@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/08/17 12:43:43 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=	lua-mode-20210802
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=immerrr/}
+GITHUB_PROJECT=	lua-mode
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cheusov@NetBSD.org
@@ -18,6 +19,8 @@ NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}
 
 EMACS_MODULES=		base
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 .include "../../editors/emacs/modules.mk"
 

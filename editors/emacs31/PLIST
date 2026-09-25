@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/08/25 17:22:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/25 09:48:08 wiz Exp $
 bin/ebrowse
 bin/emacs
 bin/emacs-${PKGVERSION}
@@ -4428,6 +4428,7 @@ share/emacs/${PKGVERSION}/lisp/xwidget.elc
 share/emacs/${PKGVERSION}/lisp/yank-media.el.gz
 share/emacs/${PKGVERSION}/lisp/yank-media.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
+share/emacs/${PKGVERSION}/site-lisp/site-start.el
 share/emacs/site-lisp/subdirs.el
 share/icons/hicolor/128x128/apps/emacs.png
 share/icons/hicolor/16x16/apps/emacs.png

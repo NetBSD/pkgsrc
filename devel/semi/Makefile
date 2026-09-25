@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/12/24 14:24:52 zafer Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/25 09:48:07 wiz Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -31,6 +31,9 @@ INFO_FILES=	yes
 
 EMACS_MODULES=		base
 EMACS_BUILDLINK=	# defined
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # apel
+EMACS_VERSIONS_INCOMPATIBLE+=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package

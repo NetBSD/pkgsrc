@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/05/14 22:25:35 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.10 2026/09/25 09:48:06 wiz Exp $
 
 DISTNAME=	php-mode-1.13.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,6 +13,8 @@ COMMENT=	PHP editing mode for Emacs
 LICENSE=	gnu-gpl-v3
 
 NO_CONFIGURE=		yes
+
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile php-mode.el

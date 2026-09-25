@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:37 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:09 wiz Exp $
 
 DISTNAME=	artist-1.2.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,6 +15,8 @@ INSTALLATION_DIRS+=	${DOCDIR} \
 			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/artist
 
 GNU_CONFIGURE=		yes
+
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 .include "../../editors/emacs/modules.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/05/14 22:25:35 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/25 09:48:07 wiz Exp $
 
 DISTNAME=	sml-mode-3.9.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -11,9 +11,13 @@ COMMENT=	Emacs mode for editing Standard ML source code
 
 BUILD_TARGET=	default
 
+MAKE_FLAGS+=	EMACS=${EMACS_BIN}
+
 INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/sml-mode
+
+EMACS_VERSIONS_INCOMPATIBLE=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc README NEWS TODO \

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/05/14 22:25:36 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/25 09:48:07 wiz Exp $
 
 DISTNAME=	rainbow-delimiters-1.3.5
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Fanael/}

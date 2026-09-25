@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/09/12 14:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/25 09:48:10 wiz Exp $
 
 DISTNAME=	tc-2.3.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -23,13 +23,13 @@ SUBST_FILES.string-to-int=	\
 	lisp/tc-pre.el
 SUBST_SED.string-to-int=	-e 's/string-to-int/string-to-number/'
 
-EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
 
 .include "../../editors/emacs/modules.mk"
 
+CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/tc
 .if ${EMACS_FLAVOR} == "xemacs"
 CONFIGURE_ARGS+=	--with-emacs=xemacs
-CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/tc
 .endif
 
 USE_TOOLS+=	gmake

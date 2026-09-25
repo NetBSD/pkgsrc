@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/04/07 17:55:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/25 09:48:08 wiz Exp $
 
 DISTNAME=	manued-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7
-PKGNAME=	manued-0.0.0.20191018
+PKGNAME=	${EMACS_PKGNAME_PREFIX}manued-0.0.0.20191018
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yamauchih/}
 GITHUB_PROJECT=	manued
