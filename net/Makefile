@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1665 2026/09/25 12:58:43 drixter Exp $
+# $NetBSD: Makefile,v 1.1666 2026/09/25 13:09:18 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -954,6 +954,7 @@ SUBDIR+=	ssmping
 SUBDIR+=	ssync
 SUBDIR+=	stagit-gopher
 SUBDIR+=	statzone
+SUBDIR+=        stayrtr
 SUBDIR+=	stern
 SUBDIR+=	stund
 SUBDIR+=	sup
