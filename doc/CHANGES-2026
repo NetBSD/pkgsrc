@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6358 2026/09/25 05:22:35 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6359 2026/09/25 05:42:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9600,3 +9600,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/sem to 0.25.0 [pin 2026-09-25]
 	Updated multimedia/moviebox-tui to 0.1.24 [pin 2026-09-25]
 	Updated sysutils/lla to 0.6.5 [pin 2026-09-25]
+	Updated devel/rust-bindgen to 0.72.1nb1 [pin 2026-09-25]
