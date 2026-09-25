@@ -1,0 +1,46 @@
+$NetBSD: patch-doc_coreutils.texi,v 1.1 2026/09/25 07:14:32 wiz Exp $
+
+env,printenv: only quote when outputting to terminals
+To support albeit non-robust but existing use cases like:
+
+  env | grep SPARK_JAVA_OPT_ | sort -t_ -k4 -n |
+   sed 's/[^=]*=\(.*\)/\1/g' > java_opts.txt
+  readarray -t SPARK_EXECUTOR_JAVA_OPTS < java_opts.txt
+  ...
+  CMD=("${JAVA_HOME}/bin/java" "${SPARK_EXECUTOR_JAVA_OPTS[@]}" ...)
+
+https://github.com/coreutils/coreutils/commit/782a1e5bc2090212273bb731dceee2cc2a071e54
+
+--- doc/coreutils.texi.orig	2026-09-12 13:37:27.000000000 +0000
++++ doc/coreutils.texi
+@@ -15519,13 +15519,9 @@ The program accepts the following option.  Also see @r
+ 
+ @end table
+ 
+-If no @var{variable}s are specified, @command{printenv} quotes
++If standard output is a terminal @command{printenv} quotes
+ environment variables and their values using the @samp{shell-escape}
+-style.  If @var{variable}s are specified, @command{printenv} only quotes
+-their values using the @samp{shell-escape} style if standard output is a
+-terminal.
+-
+-The environment variable @env{QUOTING_STYLE}
++style by default. The environment variable @env{QUOTING_STYLE}
+ specifies the quoting style.  Valid quoting styles are:
+ @quotingStyles
+ 
+@@ -17497,10 +17493,10 @@ specifying the @command{printenv} program.
+ specifications, the resulting environment is printed.  This is like
+ specifying the @command{printenv} program.
+ 
+-The printed environment variables and their values are quoted using the
+-@samp{shell-escape} style.   The environment variable
+-@env{QUOTING_STYLE} specifies the quoting style.  Valid quoting styles
+-are:
++If standard output is a terminal, the printed environment variables
++and their values are quoted using the @samp{shell-escape} style by default.
++The environment variable @env{QUOTING_STYLE} specifies the quoting style.
++Valid quoting styles are:
+ @quotingStyles
+ 
+ For some examples, suppose the environment passed to @command{env}
