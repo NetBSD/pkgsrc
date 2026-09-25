@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6364 2026/09/25 08:58:35 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6365 2026/09/25 09:55:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9606,3 +9606,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Net-IDN-Encode to 2.502 [wiz 2026-09-25]
 	Updated devel/mise to 2026.9.13 [pin 2026-09-25]
 	Updated textproc/rumdl to 0.2.77 [pin 2026-09-25]
+	mk: improved emacs module framework [wiz 2026-09-25]
