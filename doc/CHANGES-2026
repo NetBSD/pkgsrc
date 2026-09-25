@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6355 2026/09/25 05:16:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6356 2026/09/25 05:18:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9597,3 +9597,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/chafa to 1.18.3 [ktnb 2026-09-24]
 	Updated sysutils/coreutils to 9.12nb1 [wiz 2026-09-24]
 	Updated chat/iamb to 0.0.12 [pin 2026-09-25]
+	Updated devel/sem to 0.25.0 [pin 2026-09-25]
