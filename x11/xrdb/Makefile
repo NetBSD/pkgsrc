@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/07/10 16:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/25 13:45:22 wiz Exp $
 
 DISTNAME=		xrdb-1.2.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
@@ -10,6 +11,8 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X server resource database utility
 
 USE_TOOLS+=		pkg-config
+
+MESON_ARGS+=		-Dcpp=${CPPPATH}
 
 .include "../../devel/meson/build.mk"
 .include "../../x11/libX11/buildlink3.mk"
