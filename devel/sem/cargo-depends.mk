@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/09/07 07:13:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/09/25 05:17:46 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -287,6 +287,7 @@ CARGO_CRATE_DEPENDS+=	tracing-log-0.2.0
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.23
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.26.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.23.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-bsl-0.1.7
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.23.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-clojure-orchard-0.2.5
