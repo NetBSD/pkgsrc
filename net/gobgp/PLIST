@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/25 12:58:43 drixter Exp $
+bin/gobgp
+bin/gobgp-config
+bin/gobgpd
