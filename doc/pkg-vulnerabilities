@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.798 2026/09/24 16:35:57 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.799 2026/09/25 14:21:47 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1559,7 +1559,7 @@ gdk-pixbuf<0.22.0nb6	arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cven
 gdk-pixbuf<0.22.0nb6	arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3186
 acid-[0-9]*		cross-site-scripting	http://secunia.com/advisories/17552/
 acid-[0-9]*		sql-injection		http://secunia.com/advisories/17552/
-thttpd<2.25bnb4		insecure-temp-files	http://secunia.com/advisories/17454/
+thttpd<2.29nb1		insecure-temp-files	https://nvd.nist.gov/vuln/detail/CVE-2005-3124
 rar-linux<3.5.1		format-string		http://secunia.com/advisories/17524/
 rar-linux<3.5.1		buffer-overflow		http://secunia.com/advisories/17524/
 gaim-encryption<2.39	denial-of-service		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4693
@@ -6151,7 +6151,7 @@ tiff<4.0.2		arbitrary-code-execution	http://secunia.com/advisories/49493/
 ap{2,22}-modsecurity{,2}<2.6.6	remote-security-bypass		http://secunia.com/advisories/49576/
 apache-roller<5.0.1	cross-site-scripting		http://secunia.com/advisories/49593/
 mini_httpd-[0-9]*	escape-sequence-injection	https://nvd.nist.gov/vuln/detail/CVE-2009-4490
-thttpd-[0-9]*		escape-sequence-injection	https://nvd.nist.gov/vuln/detail/CVE-2009-4491
+thttpd<2.29nb1		escape-sequence-injection	https://nvd.nist.gov/vuln/detail/CVE-2009-4491
 wordpress<3.4.1	multiple-vulnerabilities	http://wordpress.org/news/2012/06/wordpress-3-4-1/
 typo3<4.5.17		cross-site-scripting	https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2012-003/
 typo3>=4.6.0<4.6.10	cross-site-scripting	https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2012-003/
@@ -18469,7 +18469,7 @@ python36<3.6.0		access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2016-1000110
 quagga-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2012-5521
 ruby{22,24,25,26}-net-ldap<0.16.2	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2014-0083
 tahoe-lafs<1.8.3	arbitrary-file-deletion	https://nvd.nist.gov/vuln/detail/CVE-2011-3617
-thttpd-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2012-5640
+thttpd<2.29nb1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2012-5640
 vsftpd<2.3.5		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2011-2523
 wide-dhcpv6-[0-9]*	shell-command-injection		https://nvd.nist.gov/vuln/detail/CVE-2011-2717
 xscreensaver<5.14	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2011-2187
@@ -18700,7 +18700,7 @@ matio-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-20018
 matio-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-20019
 matio-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-20020
 upx-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-20021
-thttpd-[0-9]*	buffer-underflow		https://nvd.nist.gov/vuln/detail/CVE-2007-0158
+thttpd<2.29nb1	buffer-underflow		https://nvd.nist.gov/vuln/detail/CVE-2007-0158
 upx-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-20051
 upx-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-20053
 libsixel<1.8.5	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-20056
