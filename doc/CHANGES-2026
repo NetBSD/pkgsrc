@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6365 2026/09/25 09:55:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6366 2026/09/25 10:01:22 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9607,3 +9607,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/mise to 2026.9.13 [pin 2026-09-25]
 	Updated textproc/rumdl to 0.2.77 [pin 2026-09-25]
 	mk: improved emacs module framework [wiz 2026-09-25]
+	Updated net/tacacs to 4.0.4.32 [he 2026-09-25]
