@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2026/09/24 18:41:26 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/25 01:16:09 ktnb Exp $
 
 DISTNAME=		slang-2026.18
 PKGNAME=		shader-${DISTNAME}
 CATEGORIES=		graphics lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=shader-slang/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_PROJECT=		slang
 GITHUB_SUBMODULES=	swiftlang swift-cmark 924936d0427cb25a61169739a7660230bffa6ea6 external/cmark
 GITHUB_SUBMODULES+=	shader-slang  slang-rhi 079b75b54c49e6546fd611c9a91a25307c279668 external/slang-rhi
 GITHUB_SUBMODULES+=	ocornut imgui 8936b58fe26e8c3da834b8f60b06511d537b4c63 external/imgui
