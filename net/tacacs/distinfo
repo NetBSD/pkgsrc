@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:06:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/09/25 10:00:42 he Exp $
 
-BLAKE2s (tacacs-F4.0.4.28.tar.gz) = 55b31ba1342eb2a09ca3aa27b59312ddedc172ea8a9ce4160e0a30d7b14c5d96
-SHA512 (tacacs-F4.0.4.28.tar.gz) = aec97bf1c2ea4171ba1aeabeb6ac7405ca693439c15a9f09868b77932a1ed72036043c05d8bfcfc938c43549318e41fd1ab4f3251ce2536278318d6a318c53cb
-Size (tacacs-F4.0.4.28.tar.gz) = 530049 bytes
+BLAKE2s (tacacs-F4.0.4.32.tar.gz) = 91d4f621426fad76948a84c142f6762c0bf727385f3004602f6edf37fc90933a
+SHA512 (tacacs-F4.0.4.32.tar.gz) = 4a962383cc82562197d37848b1b5bbe29a6437fa316f218a569380b37cfcbb948e3a2b526b32ec1e5341cd958b43846aabb85e277bca2df81602acb308a27ca8
+Size (tacacs-F4.0.4.32.tar.gz) = 570098 bytes
+SHA1 (patch-configure) = a7ecaa1d2d73e40c8ba3832b159a9e9d7a606ea2
+SHA1 (patch-configure.ac) = 286ea9ee56b7e673e8987e7313c0eedbd4b6d2ab
