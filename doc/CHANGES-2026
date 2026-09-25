@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6371 2026/09/25 14:20:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6372 2026/09/25 14:26:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9613,3 +9613,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/bgpdump version 1.6.2 [drixter 2026-09-25]
 	Updated x11/xrdb to 1.2.3nb1 [wiz 2026-09-25]
 	Updated www/thttpd to 2.29nb1 [wiz 2026-09-25]
+	Updated net/lft to 4.01 [wiz 2026-09-25]
