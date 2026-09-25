@@ -1,0 +1,84 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/09/25 10:00:42 he Exp $
+
+Fix test for librwap.  Required declared global variables
+need to be ... global.
+
+Also try to adapt to newer autoconf.
+
+--- configure.ac.orig	2026-02-18 16:43:50.000000000 +0000
++++ configure.ac
+@@ -6,17 +6,23 @@ AC_PREREQ(2.69)
+ dnl VERSION needs to be updated in version.h.in such that 'make dist'
+ dnl uses the correct filename for the directory name and tarball and binaries
+ dnl get the right version numbers.
+-PACKAGE=`sh ./aconf/package.sh`
+-VERSION=`sh ./aconf/version.sh`
+-AC_INIT(m4_esyscmd(sh ./aconf/package.sh),
+- 	m4_esyscmd(sh ./aconf/version.sh))
++dnl PACKAGE=`sh ./aconf/package.sh`
++dnl VERSION=`sh ./aconf/version.sh`
++dnl AC_INIT(m4_esyscmd(sh ./aconf/package.sh),
++dnl  	m4_esyscmd(sh ./aconf/version.sh))
++
++AC_INIT([tacacs], [F4.0.4.32], [some@e-mail.com], [tacacs])
++
+ AC_CONFIG_AUX_DIR([aconf])
+ AC_CONFIG_MACRO_DIR([aconf])
+-AM_INIT_AUTOMAKE
++
++AC_LANG([C])
++
++AM_INIT_AUTOMAKE([1.11 foreign])
+ 
+ AM_MAINTAINER_MODE()
+ 
+-dnl AC_CONFIG_SUBDIRS(etc man share)
++AC_CONFIG_SUBDIRS(etc man share)
+ 
+ # what OS
+ dnl ---- XXX: these really should deal with the individual reasons why
+@@ -245,10 +251,11 @@ AC_ARG_WITH(libwrap,
+     WRAPLIBS="-lwrap"
+     OLDLIBS="$LIBS"
+     LIBS="$WRAPLIBS $LIBS"
+-    AC_TRY_LINK([ #include <tcpd.h> ],
+-	        [ int allow_severity; int deny_severity;
++    AC_TRY_LINK([ #include <tcpd.h>
++                  int allow_severity; int deny_severity;
+                   struct request_info *request;
+-		  hosts_access(request); ],
++                ],
++	        [ hosts_access(request); ],
+ 	[AC_DEFINE(LIBWRAP)
+ 	 WRAPLIBS="-lwrap"
+ 	 AC_DEFINE(HAVE_LIBWRAP) ],
+@@ -268,10 +275,11 @@ AC_ARG_WITH(libwrap,
+     OLDINCS="$INCLUDES"
+     LIBS="$WRAPLIBS $LIBS"
+     INCLUDES="$WRAPINCS"
+-    AC_TRY_LINK([ #include <tcpd.h> ],
+-	        [ int allow_severity; int deny_severity;
++    AC_TRY_LINK([ #include <tcpd.h>
++                  int allow_severity; int deny_severity;
+                   struct request_info *request;
+-		  hosts_access(request); ],
++                ],
++	        [ hosts_access(request); ],
+ 		[],
+ 		[ AC_MSG_ERROR(Could not find libwrap.  You must first install tcp_wrappers.) ])
+     LIBS="$OLDLIBS"
+@@ -284,10 +292,11 @@ AC_ARG_WITH(libwrap,
+   WRAPLIBS="-lwrap"
+   OLDLIBS="$LIBS"
+   LIBS="$WRAPLIBS $LIBS"
+-  AC_TRY_LINK([#include <tcpd.h> ],
+-	      [ int allow_severity; int deny_severity;
++  AC_TRY_LINK([#include <tcpd.h>
++                int allow_severity; int deny_severity;
+                 struct request_info *request;
+-		hosts_access(request); ],
++              ],
++	      [ hosts_access(request); ],
+ 	[AC_DEFINE(LIBWRAP)
+ 	 WRAPLIBS="-lwrap"
+ 	 AC_DEFINE(HAVE_LIBWRAP) ],
