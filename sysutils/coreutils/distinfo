@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.54 2026/09/24 21:40:52 wiz Exp $
+$NetBSD: distinfo,v 1.55 2026/09/25 07:14:32 wiz Exp $
 
 BLAKE2s (coreutils-9.12.tar.xz) = ee4915fff2d9eb4503f67069073ae39e0d91f010171a81379f218ea44ca0dbe6
 SHA512 (coreutils-9.12.tar.xz) = f25514cf02fd25365252d9a8f6fc5f8ed063fffdcb11c7eff380e3fa632741105d11b45ded332a2af5e913f77a143b68a2bd1fbdca0085e127fb17c80c35279b
 Size (coreutils-9.12.tar.xz) = 6704996 bytes
 SHA1 (patch-Makefile.in) = bc7f1e8ee125150996e828266ef115930642f9cc
-SHA1 (patch-src_tail.c) = 7506c029bb6b9ef5a81a8fa27646489a42927e24
-SHA1 (patch-tests_date_date.pl) = ba0e1f00bb3d687c20761d9d83e0465f43ff29ab
+SHA1 (patch-doc_coreutils.texi) = 9958a5389333261c902b77b6127f094ae8401a7e
+SHA1 (patch-src_env.c) = e140d82b24631049a296baefcc32e62ffb0cb82a
+SHA1 (patch-src_printenv.c) = 7ff8ec258a9d88efb92cd13b62178977512d5dff
+SHA1 (patch-src_tail.c) = ac8847f9c7b1e1cd91f6aef4b4df1712c1135f99
+SHA1 (patch-tests_date_date.pl) = cfe3be1f5862549e0bab98b4ae15e8724efbf602
+SHA1 (patch-tests_env_env.sh) = 8d0d956491bf0af3c92a7cd5ac1224d95e698d4e
+SHA1 (patch-tests_misc_printenv.sh) = 826403687a082769270d57db0c1ab73e50054d31

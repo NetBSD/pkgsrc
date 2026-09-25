@@ -1,4 +1,6 @@
-$NetBSD: patch-tests_date_date.pl,v 1.1 2026/09/24 21:40:53 wiz Exp $
+$NetBSD: patch-tests_date_date.pl,v 1.2 2026/09/25 07:14:32 wiz Exp $
+
+https://debbugs.gnu.org/cgi/bugreport.cgi?bug=81923
 
 --- tests/date/date.pl.orig	2026-09-01 21:37:43.000000000 +0000
 +++ tests/date/date.pl
