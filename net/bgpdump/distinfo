@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/25 13:30:30 drixter Exp $
+
+BLAKE2s (libbgpdump-1.6.2.tar.gz) = f67a0c9db3f1b3c2ca6a2a01e825cd1c2f50e4b200f43575c9e3b2ccd1f58744
+SHA512 (libbgpdump-1.6.2.tar.gz) = 51b40ac2aef6ea123b1bb0327b0b559e6785b96224a60d2f27e2620b90ac30496d709158277d4b4418dce4f087316ecb24b6b1f86dac82541a9367a942023abd
+Size (libbgpdump-1.6.2.tar.gz) = 51081296 bytes

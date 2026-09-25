@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1666 2026/09/25 13:09:18 drixter Exp $
+# $NetBSD: Makefile,v 1.1667 2026/09/25 13:30:30 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -46,6 +46,7 @@ SUBDIR+=	batchftp
 SUBDIR+=	bbk_cli
 SUBDIR+=	beanstalkd
 SUBDIR+=	bftpd
+SUBDIR+=	bgpdump
 SUBDIR+=	bgpipe
 SUBDIR+=	bgpq4
 SUBDIR+=	bind918
