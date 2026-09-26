@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28004 2026/09/26 10:11:11 wiz Exp $
+$NetBSD: TODO,v 1.28005 2026/09/26 10:12:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1149,7 +1149,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
-	o py-flit_core-4.1.0
 	o py-google-api-core-2.38.0
 	o py-grpcio-1.84.0
 	o py-grpcio-status-1.84.0
