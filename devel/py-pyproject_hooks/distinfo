@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/10/12 11:04:07 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/09/26 10:33:05 wiz Exp $
 
-BLAKE2s (pyproject_hooks-1.2.0.tar.gz) = 921cf819d0df26b5bf9a68b59b7f99e2ced93662bd757346f5ed6893d6a83a04
-SHA512 (pyproject_hooks-1.2.0.tar.gz) = e098e521f03cfae9a96c0ee5d2e2ef46ef832d8f38c7d8380fc17355776e09ae3a704879e6e4a2bc7999092c4dbf80267b3b56850135c74d275a12607e0ffe83
-Size (pyproject_hooks-1.2.0.tar.gz) = 19228 bytes
+BLAKE2s (pyproject_hooks-1.3.3.tar.gz) = c6c966bdd7c56e28250852a98ac183eac74a0c2ab7cf2f3e73a028062beed43d
+SHA512 (pyproject_hooks-1.3.3.tar.gz) = 02987f247af2d82729ac4814ef1a58f129496434206f65411e7dcd254a4d4d9e4d90347d70708e5e74b2a735d7995f8334fb124a8e81fcab4a10ed4c193bf29b
+Size (pyproject_hooks-1.3.3.tar.gz) = 21013 bytes
