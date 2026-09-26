@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/08/26 10:19:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/26 07:38:07 wiz Exp $
 
 BUILDLINK_TREE+=	libomemo-c
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libomemo-c
 LIBOMEMO_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libomemo-c+=	libomemo-c>=0.5.1
-BUILDLINK_ABI_DEPENDS.libomemo-c?=	libomemo-c>=0.5.1nb4
+BUILDLINK_ABI_DEPENDS.libomemo-c?=	libomemo-c>=0.5.1nb5
 BUILDLINK_PKGSRCDIR.libomemo-c?=	../../chat/libomemo-c
 
 .include "../../devel/protobuf-c/buildlink3.mk"
