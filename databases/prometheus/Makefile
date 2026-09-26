@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2026/09/26 10:58:29 tnn Exp $
+# $NetBSD: Makefile,v 1.134 2026/09/26 21:00:02 tnn Exp $
 
 # Note that this package intends to track the Prometheus LTS version.
 # See: https://prometheus.io/docs/introduction/release-cycle/
@@ -33,6 +33,8 @@ FILES_SUBST+=		PROMETHEUS_GROUP=${PROMETHEUS_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
 FILES_SUBST+=		LOGDIR=${LOGDIR:Q}
 
+PROMETHEUS_USER?=	prometheus
+PROMETHEUS_GROUP?=	prometheus
 OWN_DIRS_PERMS+=	${DATADIR} ${PROMETHEUS_USER} ${PROMETHEUS_GROUP} 0700
 OWN_DIRS_PERMS+=	${LOGDIR} ${PROMETHEUS_USER} ${PROMETHEUS_GROUP} 0700
 PKG_USERS_VARS+=	PROMETHEUS_USER
