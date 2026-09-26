@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/07/04 12:56:29 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/26 11:52:42 hubertf Exp $
 
 DISTNAME=	cvs-1.12.13
 PKGREVISION=	9
@@ -26,6 +26,12 @@ INFO_FILES=		yes
 TEXINFO_REQD+=		4.0
 
 CONFIGURE_ARGS.Darwin+=	--enable-case-sensitivity
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+FORCE_C_STD=		gnu99
+.endif
 
 .include "options.mk"
 
