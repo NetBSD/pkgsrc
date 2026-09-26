@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2026/09/26 12:54:50 tnn Exp $
+java/openjdk25/bin/jhsdb
+java/openjdk25/bin/jhsdb${DBGEXT}
+java/openjdk25/bin/jpackage
+java/openjdk25/bin/jpackage${DBGEXT}
+java/openjdk25/conf/sdp/sdp.conf.template
+java/openjdk25/jmods/jdk.hotspot.agent.jmod
+java/openjdk25/jmods/jdk.jpackage.jmod
+java/openjdk25/legal/jdk.hotspot.agent/ADDITIONAL_LICENSE_INFO
+java/openjdk25/legal/jdk.hotspot.agent/ASSEMBLY_EXCEPTION
+java/openjdk25/legal/jdk.hotspot.agent/LICENSE
+java/openjdk25/legal/jdk.incubator.vector/sleef.md
+java/openjdk25/legal/jdk.jpackage/ADDITIONAL_LICENSE_INFO
+java/openjdk25/legal/jdk.jpackage/ASSEMBLY_EXCEPTION
+java/openjdk25/legal/jdk.jpackage/LICENSE
+java/openjdk25/lib/jexec
+java/openjdk25/lib/jexec${DBGEXT}
+java/openjdk25/lib/libjsvml${DBGEXT}
+java/openjdk25/lib/libjsvml.so
+java/openjdk25/lib/libsaproc${DBGEXT}
+java/openjdk25/lib/libsaproc.so
+java/openjdk25/lib/libsctp${DBGEXT}
+java/openjdk25/lib/libsctp.so
+java/openjdk25/lib/libsimdsort${DBGEXT}
+java/openjdk25/lib/libsimdsort.so

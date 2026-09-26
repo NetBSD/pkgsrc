@@ -1,0 +1,35 @@
+$NetBSD: patch-make_autoconf_buildjdk-spec.gmk.template,v 1.1 2026/09/26 12:54:51 tnn Exp $
+
+Use the same variant for the buildjdk as the target jdk.
+This is needed for native builds on platforms where hotspot is broken or not
+supported. In that case the buildjdk can't be hardcoded to "server" but must
+use "zero". This is fine for pkgsrc since we only ever build one variant.
+
+The buildjdk is run out of the build tree, so on Darwin its libraries must
+not claim to live in ${PREFIX}. c.f. flags-cflags.m4.
+
+--- make/autoconf/buildjdk-spec.gmk.template.orig	2026-07-24 17:22:09.000000000 +0000
++++ make/autoconf/buildjdk-spec.gmk.template
+@@ -53,6 +53,10 @@ SUPPORT_OUTPUTDIR := $(patsubst $(OUTPUT
+ JDK_OUTPUTDIR := $(patsubst $(OUTPUTDIR)%,$(BUILDJDK_OUTPUTDIR)%,$(JDK_OUTPUTDIR))
+ IMAGES_OUTPUTDIR := $(patsubst $(OUTPUTDIR)%,$(BUILDJDK_OUTPUTDIR)%,$(IMAGES_OUTPUTDIR))
+ 
++ifeq ($(OPENJDK_TARGET_OS), macosx)
++  SET_SHARED_LIBRARY_NAME = -Wl,-install_name,$(JDK_OUTPUTDIR)/lib/$(patsubst libjvm.%,$(JVM_VARIANT_MAIN)/libjvm.%,$1)
++endif
++
+ OPENJDK_BUILD_CPU_LEGACY := @OPENJDK_BUILD_CPU_LEGACY@
+ OPENJDK_BUILD_CPU_LEGACY_LIB := @OPENJDK_BUILD_CPU_LEGACY_LIB@
+ OPENJDK_BUILD_LIBC := @OPENJDK_BUILD_LIBC@
+@@ -95,8 +99,9 @@ DISABLE_WARNING_PREFIX := @BUILD_CC_DISA
+ # Save speed and disk space by not enabling debug symbols for the buildjdk
+ ENABLE_DEBUG_SYMBOLS := false
+ 
+-JVM_VARIANTS := server
+-JVM_VARIANT_MAIN := server
++JVM_VARIANTS :=  @JVM_VARIANTS@
++JVM_VARIANT_MAIN := @JVM_VARIANT_MAIN@
++JVM_FEATURES_zero := cds g1gc serialgc zero
+ JVM_FEATURES_server := cds compiler1 compiler2 g1gc serialgc
+ 
+ # Some users still set EXTRA_*FLAGS on the make command line. Must
