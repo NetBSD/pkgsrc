@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6408 2026/09/26 11:05:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6409 2026/09/26 11:07:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9650,3 +9650,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/rspamd to 4.2.0 [wiz 2026-09-26]
 	Updated databases/prometheus to 3.13.3 [tnn 2026-09-26]
 	Updated math/lean4 to 4.34.1 [wiz 2026-09-26]
+	Updated devel/py-poetry-core to 2.5.0 [wiz 2026-09-26]
