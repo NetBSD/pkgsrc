@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/09/25 09:48:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/26 07:04:35 wiz Exp $
 
 DISTNAME=	rmail-mime-1.13.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	MIME-capabilities for RMAIL in Emacs
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.4:../../devel/semi
 
 EMACS_VERSIONS_INCOMPATIBLE=	emacs20 # apel via semi
+EMACS_VERSIONS_INCOMPATIBLE+=	xemacs214 xemacs215 xemacs214nox xemacs215nox
 
 .include "../../editors/emacs/modules.mk"
 
