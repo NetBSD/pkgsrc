@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6377 2026/09/26 07:38:23 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6378 2026/09/26 07:46:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9619,3 +9619,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/inetutils to 2.8nb2 [wiz 2026-09-26]
 	Updated www/seamonkey to 2.53.24 [ryoon 2026-09-26]
 	Updated www/seamonkey-l10n to 2.53.24 [ryoon 2026-09-26]
+	Updated mail/thunderbird to 156.0.1 [ryoon 2026-09-26]
