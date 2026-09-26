@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2026/07/27 15:26:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/09/26 10:50:07 wiz Exp $
 bin/mapstats
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
@@ -28,6 +28,7 @@ share/examples/rspamd/lua.local.d/module.lua.example
 share/examples/rspamd/lua.local.d/regexps/example.lua.example
 share/examples/rspamd/lua.local.d/selectors/example.lua.example
 share/examples/rspamd/maps.d/dmarc_whitelist.inc
+share/examples/rspamd/maps.d/equivalent_domains.inc
 share/examples/rspamd/maps.d/exe_clickbait.inc
 share/examples/rspamd/maps.d/maillist.inc
 share/examples/rspamd/maps.d/mid.inc
@@ -154,6 +155,7 @@ share/rspamd/languages/pl.json
 share/rspamd/languages/pt.json
 share/rspamd/languages/ro.json
 share/rspamd/languages/ru.json
+share/rspamd/languages/sk.json
 share/rspamd/languages/sl.json
 share/rspamd/languages/so.json
 share/rspamd/languages/sq.json
@@ -182,10 +184,15 @@ share/rspamd/lualib/lua_cache.lua
 share/rspamd/lualib/lua_cfg_transform.lua
 share/rspamd/lualib/lua_cfg_utils.lua
 share/rspamd/lualib/lua_clickhouse.lua
+share/rspamd/lualib/lua_content/docx.lua
 share/rspamd/lualib/lua_content/ical.lua
 share/rspamd/lualib/lua_content/init.lua
+share/rspamd/lualib/lua_content/ooxml.lua
 share/rspamd/lualib/lua_content/pdf.lua
+share/rspamd/lualib/lua_content/pptx.lua
+share/rspamd/lualib/lua_content/svg.lua
 share/rspamd/lualib/lua_content/vcard.lua
+share/rspamd/lualib/lua_content/xlsx.lua
 share/rspamd/lualib/lua_cta.lua
 share/rspamd/lualib/lua_dkim_tools.lua
 share/rspamd/lualib/lua_extras.lua
@@ -268,6 +275,8 @@ share/rspamd/lualib/redis_scripts/bayes_cache_learn.lua
 share/rspamd/lualib/redis_scripts/bayes_classify.lua
 share/rspamd/lualib/redis_scripts/bayes_learn.lua
 share/rspamd/lualib/redis_scripts/bayes_stat.lua
+share/rspamd/lualib/redis_scripts/fuzzy_count_scan.lua
+share/rspamd/lualib/redis_scripts/fuzzy_stats_scan.lua
 share/rspamd/lualib/redis_scripts/fuzzy_update.lua
 share/rspamd/lualib/redis_scripts/neural_maybe_invalidate.lua
 share/rspamd/lualib/redis_scripts/neural_maybe_lock.lua
