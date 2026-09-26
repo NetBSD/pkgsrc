@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/09/25 09:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/09/26 07:21:48 wiz Exp $
 
 DISTNAME=	emacs-w3m-1.4.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/emacs-//}
@@ -29,7 +29,7 @@ INSTALL_TARGET=		${INSTALL_TARGET.${EMACS_FLAVOR}}
 #AKE_FLAGS=		prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
 PLIST_SUBST+=		ETCDIR=${ETCDIR:Q}
 
-WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
+WRKSRC=	${WRKDIR}/emacs-w3m-${GITHUB_TAG}
 
 #SUBST_CLASSES+=		fix-icondir
 #SUBST_STAGE.fix-icondir=	pre-configure
@@ -44,16 +44,9 @@ EMACS_VERSIONS_ACCEPTED=	emacs31 emacs31nox \
 
 .include "../../editors/emacs/modules.mk"
 
-# GNU Emacs 21 or later and XEmacs have GUI support
-PLIST_VARS+=	gui
-.if (${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} > 20) || \
-    ${EMACS_FLAVOR} == "xemacs"
-PLIST.gui=	yes
-.endif
-
 # Work around an xemacs rendering bug for optimized GIFs, see
 # <https://github.com/doitian/emacs-w3m>, 2b
-.if (${EMACS_FLAVOR} == "xemacs")
+.if ${EMACS_FLAVOR} == "xemacs"
 DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 .endif
 
@@ -76,7 +69,7 @@ post-install:
 
 .include "options.mk"
 
-.if (${EMACS_FLAVOR} != "xemacs")
+.if ${EMACS_FLAVOR} != "xemacs"
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
 .include "../../editors/mule-ucs/buildlink3.mk"
