@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.296 2026/09/02 19:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2026/09/26 07:37:29 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	5
-SM_VER=		2.53.23
+SM_VER=		2.53.24
 CATEGORIES=	www
 MASTER_SITES=	https://archive.seamonkey-project.org/releases/${SM_VER}/source/
 EXTRACT_SUFX=	.tar.xz
@@ -25,6 +24,12 @@ USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip
 GCC_REQD+=	6
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_TRANSFORM+=	l:smime:smime3
+BUILDLINK_TRANSFORM+=	l:nss:nss3
+BUILDLINK_TRANSFORM+=	l:nssutil:nssutil3
+BUILDLINK_TRANSFORM+=	l:ssl:ssl3
+LDFLAGS+=		-lnss3 -lnssutil3 -lsmime3 -lssl3
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -65,23 +70,24 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # ERROR: Unsupported linker bfd
 CONFIGURE_ARGS.Darwin+=	--enable-linker=ld64
 
-CKSUM_CRATES+=	third_party/rust/libc/
+#CKSUM_CRATES+=	third_party/rust/libc/
 # src/unix/bsd/netbsdlike/netbsd/other/mod.rs
-CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
-CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
-
-SUBST_CLASSES+=		cksum
-SUBST_STAGE.cksum=	pre-configure
-.for crate in ${CKSUM_CRATES}
-SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-.endfor
-.for from to in ${CKSUMS}
-SUBST_SED.cksum+=	-e 's,${from},${to},g'
-.endfor
+#CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
+#CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
+#
+#SUBST_CLASSES+=		cksum
+#SUBST_STAGE.cksum=	pre-configure
+#.for crate in ${CKSUM_CRATES}
+#SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+#.endfor
+#.for from to in ${CKSUMS}
+#SUBST_SED.cksum+=	-e 's,${from},${to},g'
+#.endfor
 
 INSTALLATION_DIRS+=	lib/seamonkey/extensions
 INSTALLATION_DIRS+=	share/applications
