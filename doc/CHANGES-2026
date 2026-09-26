@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6374 2026/09/26 01:02:51 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6375 2026/09/26 07:03:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9616,3 +9616,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/lft to 4.01 [wiz 2026-09-25]
 	Updated x11/gtkmm4 to 4.24.0 [wiz 2026-09-25]
 	Updated graphics/shader-slang to 2026.18.3 [ktnb 2026-09-26]
+	Updated net/inetutils to 2.8nb2 [wiz 2026-09-26]
