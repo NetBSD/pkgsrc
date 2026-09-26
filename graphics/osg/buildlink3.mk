@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.167 2026/09/02 19:02:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.168 2026/09/26 09:43:06 wiz Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	osg
 OSG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.osg+=	osg>=2.8.3
-BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.6.5nb86
+BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.6.5nb87
 BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 
 .include "../../mk/bsd.fast.prefs.mk"

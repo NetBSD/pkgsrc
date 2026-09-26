@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2026/09/02 19:04:17 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/09/26 09:43:09 wiz Exp $
 
 DISTNAME=	libfprint-0.7.0
-PKGREVISION=	61
+PKGREVISION=	62
 CATEGORIES=	security devel
 MASTER_SITES=	https://people.freedesktop.org/~anarsoul/
 EXTRACT_SUFX=	.tar.xz
