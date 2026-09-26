@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/26 10:42:59 tnn Exp $
+bin/alertmanager
+bin/amtool
+share/examples/alertmanager/simple.yml
