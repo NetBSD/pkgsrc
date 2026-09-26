@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/13 11:44:26 nros Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/26 14:17:23 wiz Exp $
 include/gsl/algorithm
 include/gsl/assert
 include/gsl/byte
+include/gsl/dyn_array
 include/gsl/gsl
-include/gsl/gsl_algorithm
-include/gsl/gsl_assert
-include/gsl/gsl_byte
-include/gsl/gsl_narrow
-include/gsl/gsl_util
 include/gsl/narrow
 include/gsl/pointers
 include/gsl/span
 include/gsl/span_ext
-include/gsl/string_span
 include/gsl/util
+include/gsl/zstring
+share/cmake/Microsoft.GSL/GSL.natvis
 share/cmake/Microsoft.GSL/Microsoft.GSLConfig.cmake
 share/cmake/Microsoft.GSL/Microsoft.GSLConfigVersion.cmake

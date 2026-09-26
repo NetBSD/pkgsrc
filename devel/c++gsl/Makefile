@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/12/13 11:44:26 nros Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/26 14:17:23 wiz Exp $
 
-DISTNAME=	GSL-4.0.0
+DISTNAME=	GSL-5.0.1
 PKGNAME=	c++${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Microsoft/}
