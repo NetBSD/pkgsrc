@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2026/09/23 08:39:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.674 2026/09/26 11:10:38 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		156.0
@@ -19,7 +19,7 @@ PKGNAME=	${DISTNAME:S/.source/${RCVER:S/build/rc/}/:S/esr//}
 CATEGORIES=	www
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-156.0.tgz
+NODEJSKIT=		nodejs-output-156.0.1.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
