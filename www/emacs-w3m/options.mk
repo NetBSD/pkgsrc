@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/07/02 13:13:25 mef Exp $
+# $NetBSD: options.mk,v 1.5 2026/09/26 07:21:48 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs-w3m
 PKG_SUPPORTED_OPTIONS=	emacs-w3m-mew
@@ -7,10 +7,7 @@ PKG_SUPPORTED_OPTIONS=	emacs-w3m-mew
 
 PLIST_VARS+=	mew
 
-# xemacs-packages contain mew (but not mew-nntp)
-.if (${EMACS_FLAVOR} == "xemacs")
-PLIST.mew=	yes
-.elif !empty(PKG_OPTIONS:Memacs-w3m-mew)
+.if !empty(PKG_OPTIONS:Memacs-w3m-mew)
 .include "../../mail/mew/buildlink3.mk"
 PLIST.mew=	yes
 .endif
