@@ -1,16 +1,22 @@
-$NetBSD: patch-Makefile.in,v 1.6 2026/07/23 15:03:18 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2026/09/26 09:15:51 ryoon Exp $
 
 Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 
---- Makefile.in.orig	2026-01-29 17:47:07.000000000 +0000
+--- Makefile.in.orig	2026-09-09 01:42:39.000000000 +0000
 +++ Makefile.in
-@@ -16,15 +16,15 @@ O=o
+@@ -15,20 +15,20 @@ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
  CPPFLAGS = @CPPFLAGS@
- EXEEXT = @EXEEXT@
- O=o
+ 
 -ifneq ($(strip $(LESSTEST)),)
 +.if !empty(LESSTEST)
  CPPFLAGS += -DLESSTEST -DUSE_TERMCAP
+ O=t.o
+ EXE = _t@EXEEXT@
+-else
++.else
+ O=o
+ EXE = @EXEEXT@
 -endif
 +.endif
  
@@ -24,7 +30,7 @@ Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
  
  LIBS = $(LIBSAN) @LIBS@
  
-@@ -60,9 +60,9 @@ OBJ = \
+@@ -68,9 +68,9 @@ OBJ = \
  	output.${O} pattern.${O} position.${O} prompt.${O} search.${O} signal.${O} \
  	tags.${O} ttyin.${O} version.${O} xbuf.${O}  @REGEX_O@
  
@@ -34,5 +40,5 @@ Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 -endif
 +.endif
  
- all: less$(EXEEXT) lesskey$(EXEEXT) lessecho$(EXEEXT)
+ all: less$(EXE) lessecho$(EXE)
  
