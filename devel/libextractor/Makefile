@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.148 2026/09/19 13:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2026/09/26 09:39:57 wiz Exp $
 
-DISTNAME=	libextractor-1.15
-PKGREVISION=	1
+DISTNAME=	libextractor-1.19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libextractor/}
 
@@ -29,7 +28,8 @@ CONFLICTS=		csound-{bath,dev}-[0-9]*	# bin/extract
 # This package requires dlopen, so save on space by skipping non-PIC libs
 SHLIBTOOL_OVERRIDE=	# empty
 
-# as of 1.15
+# https://bugs.gnunet.org/view.php?id=11826
+# as of 1.19
 # TOTAL: 7
 # PASS:  3
 # SKIP:  0
