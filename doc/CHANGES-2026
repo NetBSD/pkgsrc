@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6416 2026/09/26 14:25:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6417 2026/09/26 14:48:50 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9658,3 +9658,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/openjdk25 version 1.25.0.4.7 [tnn 2026-09-26]
 	Updated devel/c++gsl to 5.0.1 [wiz 2026-09-26]
 	Updated sysutils/cpuinfo to 0.0.20260630 [wiz 2026-09-26]
+	Updated devel/unordered-dense to 5.1.0 [ktnb 2026-09-26]
