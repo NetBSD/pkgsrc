@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.185 2026/09/20 18:22:28 wiz Exp $
+$NetBSD: distinfo,v 1.186 2026/09/26 07:37:29 ryoon Exp $
 
-BLAKE2s (seamonkey-2.53.23.source.tar.xz) = 3bbd96e8a42e4db8e950acfcfb7bf686b86968b9e54e82c5c507881a4cb6a5c6
-SHA512 (seamonkey-2.53.23.source.tar.xz) = 59352660dad53fd4e0d9810d42de05115355a857476ba9468899cefad15b27999e1f279aa457753e9adb5d65dcbb321c8007c467ac309ae30964c292608fc2b6
-Size (seamonkey-2.53.23.source.tar.xz) = 249857600 bytes
+BLAKE2s (seamonkey-2.53.24.source.tar.xz) = bdb82652f83a0aae104fbaacb6beaccfa02c82b3b597c8ba6c10470e4ff53bfa
+SHA512 (seamonkey-2.53.24.source.tar.xz) = dad0c5fef6199a27af5bc98ba73e9bf6f64040da010f55b468d2ef568576089346b2280f1f74730ecbbdb8c8ff8197fa0fbe3f72f1238d0488fa08f6fe8c08bb
+Size (seamonkey-2.53.24.source.tar.xz) = 247752556 bytes
 SHA1 (patch-Makefile.in) = d1de2128b2331efc23bfeaba555e193557053859
 SHA1 (patch-dom_media_CubebUtils.cpp) = 88450f0f9c4ca5a796f63c78f2ee61b16ae26dde
-SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__ESSL__autogen.cpp) = b3776a7d1de9f156c21943ba5ed1d4d25b07cae4
-SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = aab313f47a81101c74df046f160654152e98801e
-SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 064a4464199ca9a2bfeea272e8df8d3042126be9
 SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = ce593b1e9e0d82fc80c6b36bdc148b3322923ef4
 SHA1 (patch-js_src_threading_posix_Thread.cpp) = 8951ea2c1a169cf8351c17154c76f0e29351be5f
 SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 242bff4838b08d0c7d6f0958a89994d07b08cd3c
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 4a033943bd8428407896982fa04486f4f1f7902e
 SHA1 (patch-media_libcubeb_src_moz.build) = 532b369652bb8008eb2c92d0db0d8e6ac5898592
 SHA1 (patch-old-configure.in) = 2fd50e3a8f9ce8a936894fce5f2c858ebc089537
-SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs) = 36de374f55603104c64f6ea905f0dc1232a7023f
-SHA1 (patch-toolkit_library_rust_moz.build) = 95b8505914ce01f56c808c02657dbd327b1bce91
+SHA1 (patch-toolkit_library_rust_moz.build) = 28bdf13bf3f376d9ecc1bceffb3d5538d0c897a5
