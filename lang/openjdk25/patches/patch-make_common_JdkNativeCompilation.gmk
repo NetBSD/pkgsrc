@@ -1,0 +1,17 @@
+$NetBSD: patch-make_common_JdkNativeCompilation.gmk,v 1.1 2026/09/26 12:54:51 tnn Exp $
+
+c.f. buildjdk-spec.gmk.template.patch.
+
+--- make/common/JdkNativeCompilation.gmk.orig	2026-09-06 09:55:09.184970691 +0000
++++ make/common/JdkNativeCompilation.gmk
+@@ -123,7 +123,9 @@ define ResolveLibPath
+       # Special treatment for hotspot
+       ifeq ($(CREATING_BUILDJDK), true)
+         # When building a buildjdk, it's always only the server variant
+-        $1_$2_JVM_VARIANT_PATH := server
++        # xxx pkgsrc: On 32-bit native builds zero may be the only available variant
++        # so follow the spec.
++        $1_$2_JVM_VARIANT_PATH := $(JVM_VARIANT_MAIN)
+       else
+         $1_$2_JVM_VARIANT_PATH := $(JVM_VARIANT_MAIN)
+       endif
