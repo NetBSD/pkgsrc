@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/09/16 23:43:15 wiz Exp $
+$NetBSD: distinfo,v 1.35 2026/09/26 09:39:57 wiz Exp $
 
-BLAKE2s (libextractor-1.15.tar.gz) = e1819db3dcb4a20ecc0290c58da2da9cd201766a71dcbd04433f1c4e7541d90d
-SHA512 (libextractor-1.15.tar.gz) = 78e35d2ed662aaecb67ccaedb681308738343aa8ba16861a4fc7b73b000f950a3d72fd83315bf9570248dc2f5e7cec09839c05725533455d31f182ff04f11b21
-Size (libextractor-1.15.tar.gz) = 8307410 bytes
+BLAKE2s (libextractor-1.19.tar.gz) = 2edc5d2350c2ebe24b8921ffa509d9e28df1b934e856b02ab49352cf88f900ab
+SHA512 (libextractor-1.19.tar.gz) = 41a2c9aaa5a76d367a7ddd024d064cc370ce0260b249fb8895b4ad0d24e7b0325b377768804dc33ac86944ae817d5a1bf48c2224774762db4dd7a90c7141d19a
+Size (libextractor-1.19.tar.gz) = 8557637 bytes
