@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.301 2026/09/23 08:48:57 ryoon Exp $
+$NetBSD: distinfo,v 1.302 2026/09/26 07:45:51 ryoon Exp $
 
-BLAKE2s (thunderbird-155.0.1.source.tar.xz) = f68efb1036ee0cc446665bb6c0b77ed1a8e6fb62a0c9210dda56cb3b83b2fb9b
-SHA512 (thunderbird-155.0.1.source.tar.xz) = f0811a90cdad910d0265a37e18a36f2f51185b4a50f7f7647938a7ca1bd31f5bc49572954a5039a9e7e87dc2b4f98bb32f1dc393199c3304d8e87cf36b6c89f0
-Size (thunderbird-155.0.1.source.tar.xz) = 945085524 bytes
+BLAKE2s (thunderbird-156.0.1.source.tar.xz) = 1e7df5988e15eeb38102d5669d59811a20f4ff06b8161e543cbcb72f7a7b7a7d
+SHA512 (thunderbird-156.0.1.source.tar.xz) = e9262a4666e0107c7bc45fc2ad4bac4d6e5db4bfd3325d1d1c418f00adee777db969f8c12d8f310f45fdfda61b26e31bd0eea8b7d64ed1ee0050b5ee9235cfb0
+Size (thunderbird-156.0.1.source.tar.xz) = 943111452 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1eaa674c0aa8279e2f9dc2eda582650a08156d65
-SHA1 (patch-build_gn__processor.py) = 078f773104bf4c1b30584564aefe365db6ba6daf
+SHA1 (patch-build_gn__processor.py) = c9b2f31787704c3fec466711010ef632199ae385
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-comm_mailnews_compose_src_nsMsgCompUtils.cpp) = c3e38828803536879baf2934aa1bfa50cfba0112
@@ -50,8 +50,8 @@ SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 6cac13bc120d52b2c3628938d2fc1cb
 SHA1 (patch-security_nss_lib_mozpkix_include_pkix_Input.h) = f9ee42e611d69e22f52fb3dede1304ad338ccc71
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = cc68e46f1b98bbcc064a4c61fc96a3c7ede8e6ba
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
-SHA1 (patch-third__party_angle_angle__common__gn_moz.build) = bf799093eeb61677a257e947d2481a35ddb506f4
-SHA1 (patch-third__party_angle_angle__program__version__id__gn_ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in) = 64de7b9f179adfcd6ab2f2a1af1449631b7080fc
+SHA1 (patch-third__party_angle_angle__common__gn_moz.build) = 836c33a87239f69c9bcf0efedcdfef2094de1467
+SHA1 (patch-third__party_angle_angle__program__version__id__gn_ANGLEShaderProgramVersion.h-22c710649c380411.rsp.in) = 5cd224ceac5a03ff38acb9a07c8958669f10e168
 SHA1 (patch-third__party_angle_angle__program__version__id__gn_moz.build) = b367cb16b059627a6033bdce664ba591ca3527e6
 SHA1 (patch-third__party_angle_src_common_system__utils__linux.cpp) = ed9936b0fa5807cdc8df871183589130784b6bc1
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
