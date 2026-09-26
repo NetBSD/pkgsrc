@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/09/25 09:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/26 07:14:48 wiz Exp $
 
 VERSION=	1.4.632
 DATE_TIME=	20210106.2144
@@ -18,16 +18,17 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	makeinfo gzip autoconf
 INFO_FILES=	yes
 
-EMACS_VERSIONS_INCOMPATIBLE=    emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215nox emacs30 emacs30nox emacs31 emacs31nox
 
 DEPENDS+=	w3m{,-img}>=0.5.2nb3:../../www/w3m
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/w3m
 CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 BUILD_TARGET=
-WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGBASE}-${HASH}
+WRKSRC=			${WRKDIR}/emacs-w3m-emacs-w3m-${HASH}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
