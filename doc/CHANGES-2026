@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6405 2026/09/26 10:47:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6406 2026/09/26 10:50:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9647,3 +9647,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-tornado to 6.5.10 [wiz 2026-09-26]
 	Added sysutils/alertmanager version 0.34.1 [tnn 2026-09-26]
 	Updated www/py-zensical to 0.0.65 [wiz 2026-09-26]
+	Updated mail/rspamd to 4.2.0 [wiz 2026-09-26]
