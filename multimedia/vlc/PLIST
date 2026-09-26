@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2026/01/10 16:08:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.80 2026/09/26 08:10:55 ryoon Exp $
 bin/cvlc
 ${PLIST.qt5}bin/qvlc
 bin/rvlc
@@ -143,7 +143,6 @@ lib/vlc/lua/playlist/soundcloud.luac
 lib/vlc/lua/playlist/twitch.luac
 lib/vlc/lua/playlist/vimeo.luac
 lib/vlc/lua/playlist/vocaroo.luac
-lib/vlc/lua/playlist/youtube.luac
 lib/vlc/lua/sd/icecast.luac
 lib/vlc/lua/sd/jamendo.luac
 ${PLIST.alsa}lib/vlc/plugins/access/libaccess_alsa_plugin.la
@@ -166,7 +165,6 @@ lib/vlc/plugins/access/libidummy_plugin.la
 lib/vlc/plugins/access/libimem_plugin.la
 lib/vlc/plugins/access/liblibbluray_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/access/libpulsesrc_plugin.la
-lib/vlc/plugins/access/librist_plugin.la
 lib/vlc/plugins/access/librtp_plugin.la
 lib/vlc/plugins/access/libsatip_plugin.la
 lib/vlc/plugins/access/libsdp_plugin.la
@@ -181,7 +179,6 @@ lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_file_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_http_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.la
-lib/vlc/plugins/access_output/libaccess_output_rist_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_shout_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_udp_plugin.la
 ${PLIST.neon}lib/vlc/plugins/arm_neon/libchroma_yuv_neon_plugin.la
@@ -242,7 +239,6 @@ lib/vlc/plugins/codec/libopus_plugin.la
 lib/vlc/plugins/codec/libpng_plugin.la
 lib/vlc/plugins/codec/librawvideo_plugin.la
 lib/vlc/plugins/codec/librtpvideo_plugin.la
-lib/vlc/plugins/codec/libschroedinger_plugin.la
 lib/vlc/plugins/codec/libscte18_plugin.la
 lib/vlc/plugins/codec/libscte27_plugin.la
 lib/vlc/plugins/codec/libspdif_plugin.la
@@ -501,6 +497,10 @@ lib/vlc/vlc-cache-gen
 man/man1/vlc-wrapper.1
 man/man1/vlc.1
 share/applications/vlc.desktop
+share/applications/vlc-openbd.desktop
+share/applications/vlc-opencda.desktop
+share/applications/vlc-opendvd.desktop
+share/applications/vlc-openvcd.desktop
 share/doc/vlc/fortunes.txt
 share/doc/vlc/libvlc/CMakeLists.txt
 share/doc/vlc/libvlc/QtPlayer/LICENSE
@@ -526,7 +526,6 @@ share/doc/vlc/lua/meta/reader/README.txt
 share/doc/vlc/lua/meta/reader/filename.lua
 share/doc/vlc/lua/playlist/README.txt
 share/doc/vlc/lua/playlist/liveleak.lua
-share/doc/vlc/lua/playlist/youtube.lua
 share/doc/vlc/lua/sd/README.txt
 share/doc/vlc/lua/sd/icast.lua
 share/doc/vlc/lua/sd/icecast.lua
