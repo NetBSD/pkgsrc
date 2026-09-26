@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2026/09/08 05:41:37 adam Exp $
+# $NetBSD: Makefile,v 1.61 2026/09/26 10:01:27 wiz Exp $
 
-DISTNAME=	beets-2.14.0
+DISTNAME=	beets-2.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -60,8 +60,8 @@ SUBST_MESSAGE.ffprobe=	Fixing ffprobe file name.
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 2.13.1
-# 2460 passed, 178 skipped, 200 warnings, 91 errors
+# as of 2.14.1
+# 2559 passed, 179 skipped, 203 warnings, 107 errors
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
