@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6406 2026/09/26 10:50:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6407 2026/09/26 11:01:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9648,3 +9648,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/alertmanager version 0.34.1 [tnn 2026-09-26]
 	Updated www/py-zensical to 0.0.65 [wiz 2026-09-26]
 	Updated mail/rspamd to 4.2.0 [wiz 2026-09-26]
+	Updated databases/prometheus to 3.13.3 [tnn 2026-09-26]
