@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.52 2026/09/13 10:43:15 wiz Exp $
+$NetBSD: distinfo,v 1.53 2026/09/26 08:39:28 ryoon Exp $
 
-BLAKE2s (libheif-1.23.4.tar.gz) = 267399327694d24235ae8131c357672eda192a20fe9537e82d81de6e9df71606
-SHA512 (libheif-1.23.4.tar.gz) = eef0fa12c0b3aed3bba60daeb3ea29d1e19b7b468b88ec09f86f4ccb87b8147a7b07ceb3cf63d75b4bce8cbf8c34c1c015e30c938d7b54a1a79ee07bb8cb4ead
-Size (libheif-1.23.4.tar.gz) = 2217221 bytes
+BLAKE2s (libheif-1.23.5.tar.gz) = 795f3cc309d69bdd5ab1ee93c9274f5de5598767ab0a9fc3915c279ead38ff53
+SHA512 (libheif-1.23.5.tar.gz) = 481f94d7b1a88edfcaa8218c3f07df8ed17609a7fcb79a48f42bddcc7dfb7412f4d68299808300e0c81d4d171aec9b3281922adc39bb49d94fd5b73ffcb2eb1f
+Size (libheif-1.23.5.tar.gz) = 2276803 bytes
 SHA1 (patch-heifio_CMakeLists.txt) = dda4522707589342898c29bba189557895d75178
