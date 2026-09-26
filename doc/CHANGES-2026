@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6387 2026/09/26 09:48:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6388 2026/09/26 09:50:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9629,3 +9629,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/OpenJPH to 0.32.0 [wiz 2026-09-26]
 	Updated math/ggml to 0.25.3 [wiz 2026-09-26]
 	Updated security/gnupg2 to 2.5.24 [wiz 2026-09-26]
+	Updated www/libmicrohttpd to 1.0.3 [wiz 2026-09-26]
