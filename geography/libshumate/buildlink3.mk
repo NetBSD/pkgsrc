@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/09/02 19:02:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/09/26 07:38:08 wiz Exp $
 
 BUILDLINK_TREE+=	libshumate
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libshumate
 LIBSHUMATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libshumate+=	libshumate>=1.6.2
-BUILDLINK_ABI_DEPENDS.libshumate?=	libshumate>=1.6.2nb2
+BUILDLINK_ABI_DEPENDS.libshumate?=	libshumate>=1.6.2nb3
 BUILDLINK_PKGSRCDIR.libshumate?=	../../geography/libshumate
 
 .include "../../databases/sqlite3/buildlink3.mk"
