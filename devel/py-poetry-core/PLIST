@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/05/10 13:54:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/26 11:07:12 wiz Exp $
 ${PYSITELIB}/poetry/core/__init__.py
 ${PYSITELIB}/poetry/core/__init__.pyc
 ${PYSITELIB}/poetry/core/__init__.pyo
@@ -18,6 +18,9 @@ ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft06.pyo
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft07.py
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft07.pyc
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft07.pyo
+${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft2019.py
+${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft2019.pyc
+${PYSITELIB}/poetry/core/_vendor/fastjsonschema/draft2019.pyo
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/exceptions.py
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/exceptions.pyc
 ${PYSITELIB}/poetry/core/_vendor/fastjsonschema/exceptions.pyo
@@ -162,6 +165,9 @@ ${PYSITELIB}/poetry/core/_vendor/packaging/_musllinux.pyo
 ${PYSITELIB}/poetry/core/_vendor/packaging/_parser.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/_parser.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/_parser.pyo
+${PYSITELIB}/poetry/core/_vendor/packaging/_ranges.py
+${PYSITELIB}/poetry/core/_vendor/packaging/_ranges.pyc
+${PYSITELIB}/poetry/core/_vendor/packaging/_ranges.pyo
 ${PYSITELIB}/poetry/core/_vendor/packaging/_structures.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/_structures.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/_structures.pyo
@@ -193,6 +199,9 @@ ${PYSITELIB}/poetry/core/_vendor/packaging/py.typed
 ${PYSITELIB}/poetry/core/_vendor/packaging/pylock.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/pylock.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/pylock.pyo
+${PYSITELIB}/poetry/core/_vendor/packaging/ranges.py
+${PYSITELIB}/poetry/core/_vendor/packaging/ranges.pyc
+${PYSITELIB}/poetry/core/_vendor/packaging/ranges.pyo
 ${PYSITELIB}/poetry/core/_vendor/packaging/requirements.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/requirements.pyo
