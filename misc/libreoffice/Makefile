@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2026/09/22 08:33:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.394 2026/09/26 07:39:57 wiz Exp $
 
 VERREL=		26.8.0
 VERRC=		3
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v3
 UNLIMIT_RESOURCES+=	cputime
 
 # configure script checks the version of GCC.
-GCC_REQD+=	12
+GCC_REQD+=	13
 
 USE_LANGUAGES=	c c++
 
