@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prometheus.sh,v 1.2 2024/07/25 16:02:56 tnn Exp $
+# $NetBSD: prometheus.sh,v 1.3 2026/09/26 10:58:29 tnn Exp $
 #
 # PROVIDE: prometheus
 # REQUIRE: DAEMON
@@ -22,7 +22,7 @@ prometheus_user="@PROMETHEUS_USER@"
 prometheus_group="@PROMETHEUS_GROUP@"
 command="@PREFIX@/bin/prometheus"
 command_args=">> @LOGDIR@/prometheus.log 2>&1 &"
-
+prometheus_flags=${prometheus_flags:-"--config.file=@PKG_SYSCONFDIR@/prometheus.yml --storage.tsdb.path=@DATADIR@/data --web.listen-address=127.0.0.1:9090 --log.level=error"}
 
 if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	load_rc_config $name
