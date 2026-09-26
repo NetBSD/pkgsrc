@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/02/23 18:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/26 10:33:05 wiz Exp $
 
-DISTNAME=	pyproject_hooks-1.2.0
+DISTNAME=	pyproject_hooks-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_hooks/}
 
