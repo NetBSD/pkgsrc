@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6399 2026/09/26 10:30:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6400 2026/09/26 10:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9641,3 +9641,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-multidict to 6.9.1 [wiz 2026-09-26]
 	Removed fonts/nerd-fonts-NerdFontsSymbolsOnly successor fonts/nerd-fonts-Symbols [wiz 2026-09-26]
 	Updated textproc/py-pdf to 6.19.0 [wiz 2026-09-26]
+	Updated textproc/py-pymdown-extensions to 12.1 [wiz 2026-09-26]
