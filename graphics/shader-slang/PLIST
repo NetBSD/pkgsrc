@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/24 18:41:26 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/26 01:02:35 ktnb Exp $
 bin/slang
 bin/slangc
 bin/slangd
@@ -37,6 +37,7 @@ lib/slang-standard-module-${PKGVERSION}/slang/WaveMatrix.slang
 lib/slang-standard-module-${PKGVERSION}/slang/accelerate-vector-coopmat.slang
 lib/slang-standard-module-${PKGVERSION}/slang/activations.slang
 lib/slang-standard-module-${PKGVERSION}/slang/bindless-storage.slang
+lib/slang-standard-module-${PKGVERSION}/slang/functional.slang-module
 lib/slang-standard-module-${PKGVERSION}/slang/hash-function.slang
 lib/slang-standard-module-${PKGVERSION}/slang/iactivation.slang
 lib/slang-standard-module-${PKGVERSION}/slang/iencoder.slang
@@ -397,6 +398,7 @@ share/doc/slang/generated/tests/_meta/expected-failures.txt
 share/doc/slang/generated/tests/_meta/findings-state.json
 share/doc/slang/generated/tests/_meta/findings/as-dynamic-uniform-reaches-emit-ice.yaml
 share/doc/slang/generated/tests/_meta/findings/atomic-load-acqrel-invalid-spirv-semantics.yaml
+share/doc/slang/generated/tests/_meta/findings/builtin-requirement-decoration-added-twice.yaml
 share/doc/slang/generated/tests/_meta/findings/callable-shader-multi-inout-uses-ray-payload-storage.yaml
 share/doc/slang/generated/tests/_meta/findings/check-decl-capability-provenance-duplicate-notes.yaml
 share/doc/slang/generated/tests/_meta/findings/check-decl-int8-positive-overflow-not-warned.yaml
@@ -404,7 +406,6 @@ share/doc/slang/generated/tests/_meta/findings/check-decl-property-accessor-defa
 share/doc/slang/generated/tests/_meta/findings/cli-embed-downstream-ir-silent-failure.yaml
 share/doc/slang/generated/tests/_meta/findings/cli-get-module-info-non-ir-file-silent-failure.yaml
 share/doc/slang/generated/tests/_meta/findings/conjunction-type-as-parameter-type-internal-error.yaml
-share/doc/slang/generated/tests/_meta/findings/countof-on-array-returns-element-size.yaml
 share/doc/slang/generated/tests/_meta/findings/declarations-attribute-syntax-unknown-class-ice.yaml
 share/doc/slang/generated/tests/_meta/findings/declarations-func-inout-ice.yaml
 share/doc/slang/generated/tests/_meta/findings/declarations-refaccessor-spirv-invalid-funcall-return-type.yaml
@@ -452,7 +453,9 @@ share/doc/slang/generated/tests/_meta/findings/metal-wgsl-return-position-depth-
 share/doc/slang/generated/tests/_meta/findings/optional-interface-shader-param-emit-ice.yaml
 share/doc/slang/generated/tests/_meta/findings/optix-oversized-hit-attributes-internal-error.yaml
 share/doc/slang/generated/tests/_meta/findings/private-nested-enum-locationless-visibility-errors.yaml
+share/doc/slang/generated/tests/_meta/findings/ptraccesschain-function-storage-missing-capability.yaml
 share/doc/slang/generated/tests/_meta/findings/resolved/check-decl-enum-tag-not-first-internal-error.yaml
+share/doc/slang/generated/tests/_meta/findings/resolved/countof-on-array-returns-element-size.yaml
 share/doc/slang/generated/tests/_meta/findings/resolved/cpu-get-string-hash-slang-test-segfault.yaml
 share/doc/slang/generated/tests/_meta/findings/resolved/generics-existentials-global-generic-param-constraint-sigsegv.yaml
 share/doc/slang/generated/tests/_meta/findings/resolved/ir-types-unorm-snorm-struct-field-sigsegv.yaml
@@ -494,6 +497,13 @@ share/doc/slang/generated/tests/_meta/schema/manifest.schema.json
 share/doc/slang/generated/tests/_meta/schema/remediation-report.schema.json
 share/doc/slang/generated/tests/_meta/schema/review-report.schema.json
 share/doc/slang/generated/tests/_meta/schema/test-bundle.schema.json
+share/doc/slang/generated/tests/_meta/triage/00-INDEX.md
+share/doc/slang/generated/tests/_meta/triage/01-pointer-arithmetic-stale-entry.md
+share/doc/slang/generated/tests/_meta/triage/02-builtin-requirement-duplicate-decoration.md
+share/doc/slang/generated/tests/_meta/triage/03-classdecl-reference-type-test-bug.md
+share/doc/slang/generated/tests/_meta/triage/04-cuda-callable-payload-now-supported.md
+share/doc/slang/generated/tests/_meta/triage/05-remaining-untriaged.md
+share/doc/slang/generated/tests/_meta/triage/06-already-covered.md
 share/doc/slang/generated/tests/_meta/workflows/whitebox-coverage.js
 share/doc/slang/generated/tests/conformance/basics-execution-divergence-reconvergence/README.md
 share/doc/slang/generated/tests/conformance/basics-execution-divergence-reconvergence/_prompt.md
@@ -730,6 +740,7 @@ share/doc/slang/generated/tests/conformance/generics/empty-generic-param-list-fu
 share/doc/slang/generated/tests/conformance/generics/expand-without-each-negative.slang
 share/doc/slang/generated/tests/conformance/generics/explicit-and-implicit-binding-functional.slang
 share/doc/slang/generated/tests/conformance/generics/explicit-binding-resolves-ambiguous-functional.slang
+share/doc/slang/generated/tests/conformance/generics/generic-argument-list-arity-mismatch-negative.slang
 share/doc/slang/generated/tests/conformance/generics/generic-constructor-functional.slang
 share/doc/slang/generated/tests/conformance/generics/generic-extension-functional.slang
 share/doc/slang/generated/tests/conformance/generics/generic-func-as-param-functional.slang
@@ -754,9 +765,12 @@ share/doc/slang/generated/tests/conformance/generics/pack-count-constraint-funct
 share/doc/slang/generated/tests/conformance/generics/pack-count-mismatch-negative.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-nested-outer-pack-functional.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-no-inference-negative.slang
+share/doc/slang/generated/tests/conformance/generics/pack-count-non-integer-right-side-negative.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-non-oriented-forms-negative.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-operand-not-pack-negative.slang
+share/doc/slang/generated/tests/conformance/generics/pack-count-optional-constraint-negative.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-oriented-proof-negative.slang
+share/doc/slang/generated/tests/conformance/generics/pack-count-target-outside-current-generic-negative.slang
 share/doc/slang/generated/tests/conformance/generics/pack-count-value-pack-expr-functional.slang
 share/doc/slang/generated/tests/conformance/generics/pack-empty-expand-boundary.slang
 share/doc/slang/generated/tests/conformance/generics/pack-expand-emission.slang
@@ -980,6 +994,7 @@ share/doc/slang/generated/tests/coverage/check-decl/capability-interface-require
 share/doc/slang/generated/tests/coverage/check-decl/capability-target-conflict-provenance.slang
 share/doc/slang/generated/tests/coverage/check-decl/capability-undeclared-use-provenance.slang
 share/doc/slang/generated/tests/coverage/check-decl/class-base-not-class-or-interface.slang
+share/doc/slang/generated/tests/coverage/check-decl/differentiability-mode-mismatch-on-interface-requirement.slang
 share/doc/slang/generated/tests/coverage/check-decl/dyn-interface-conformance-restrictions.slang
 share/doc/slang/generated/tests/coverage/check-decl/dyn-interface-inheritance-restrictions.slang
 share/doc/slang/generated/tests/coverage/check-decl/dyn-interface-member-restrictions.slang
@@ -1028,6 +1043,7 @@ share/doc/slang/generated/tests/coverage/check-expr/tuple-swizzle-out-of-range-d
 share/doc/slang/generated/tests/coverage/cli-options/README.md
 share/doc/slang/generated/tests/coverage/cli-options/_repro/embed-downstream-ir-silent-failure.slang
 share/doc/slang/generated/tests/coverage/cli-options/_repro/get-module-info-non-ir-file.slang
+share/doc/slang/generated/tests/coverage/cli-options/debug-info-include-source-requires-debug-info.slang
 share/doc/slang/generated/tests/coverage/cli-options/default-downstream-compiler-diagnostics.slang
 share/doc/slang/generated/tests/coverage/cli-options/diagnostic-color-ansi-escapes.slang
 share/doc/slang/generated/tests/coverage/cli-options/disable-short-circuit-eager-operands.slang
@@ -1150,6 +1166,7 @@ share/doc/slang/generated/tests/coverage/parser/target-switch-multi-statement-ca
 share/doc/slang/generated/tests/coverage/parser/unexpected-body-after-semicolon.slang
 share/doc/slang/generated/tests/coverage/parser/unintended-empty-statement.slang
 share/doc/slang/generated/tests/coverage/specialize/README.md
+share/doc/slang/generated/tests/coverage/specialize/_prompt.md
 share/doc/slang/generated/tests/coverage/specialize/_repro/interface-defaults-init-dynamic-dispatch.slang
 share/doc/slang/generated/tests/coverage/specialize/assoc-type-constrained-generic-spec.slang
 share/doc/slang/generated/tests/coverage/specialize/bitcast-to-interface-type-diag.slang
@@ -1509,6 +1526,7 @@ share/doc/slang/generated/tests/design/ast-reference/modifiers/unorm-snorm-resou
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unroll-attribute-fanout-on-glsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unroll-attribute-on-hlsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unscoped-enum-attribute-unqualified-case-access.slang
+share/doc/slang/generated/tests/design/ast-reference/modifiers/unscoped-enum-on-enum-class-conflicts.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unscoped-enum-on-enum-class-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unscoped-enum-option-implicit-on-plain-enum.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/vk-image-format-alternate-spelling.slang
@@ -3085,6 +3103,7 @@ share/doc/slang/generated/tests/design/name-resolution/lookup/overloaded-namespa
 share/doc/slang/generated/tests/design/name-resolution/lookup/param-modifier-keyword-not-hidden-by-value.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/pointer-like-auto-deref-constant-buffer.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/pointer-like-auto-deref-parameter-block.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/ref-attribute-spelling-makes-this-mutable.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/semantic-name-not-hidden-by-value-decl.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/setter-this-breadcrumb-mutable.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/this-breadcrumb-mutating-mode.slang
@@ -3203,6 +3222,7 @@ share/doc/slang/generated/tests/design/name-resolution/scopes/block-scope-shadow
 share/doc/slang/generated/tests/design/name-resolution/scopes/builtin-from-implicit-core-module.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/catch-handler-variable-not-visible-outside.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/constraint-decl-in-struct-scope-rejected.slang
+share/doc/slang/generated/tests/design/name-resolution/scopes/constraint-decl-not-allowed-in-struct.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/constraint-subject-assoctype-allowed.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/constraint-subject-this-rejected.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/deferred-body-resolves-at-declaration-site-scope.slang
@@ -3348,6 +3368,8 @@ share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/include-pushes
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/include-self-cycle-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/integer-literal-too-large-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/invalid-digit-for-base-diagnostic.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-unknown-version-after-language.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-version-spellings.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-after-line-directive.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-is-constructed-token.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-through-nested-expansion.slang
@@ -3514,6 +3536,7 @@ share/doc/slang/generated/tests/design/pipeline/03-semantic-check/generic-infere
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/generic-inference-pack-count-mismatch-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/generic-inference-param-not-inferred-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/generic-inference-unification-conflict-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/globallycoherent-on-parameter-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/inheritance-from-non-interface-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/interface-conformance-checked.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/interface-constraint-this-subject-rejected.slang
@@ -3779,7 +3802,7 @@ share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/module-instance-ha
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/multiple-globals-each-get-layout.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/no-layout-ir-module-when-binding-fails.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/per-global-struct-field-layout-entries.slang
-share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/raytracing-callable-payload-rejected-on-cuda.slang
+share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/raytracing-callable-payload-rejected-on-metal.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/raytracing-entry-point-param-unsupported-target-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/raytracing-miss-payload-accepted-where-rules-exist.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/raytracing-miss-payload-rejected-on-cpp.slang
@@ -3810,7 +3833,7 @@ share/doc/slang/generated/tests/design/pipeline/05-ir-passes/coverage-instrument
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/coverage-instrument-synthesizes-coverage-buffer.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/cuda-immutable-load-on-struct-field.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/cuda-immutable-load-only-on-cuda-not-hlsl.slang
-share/doc/slang/generated/tests/design/pipeline/05-ir-passes/cuda-immutable-load-wraps-uniform-read-in-ldg.slang
+share/doc/slang/generated/tests/design/pipeline/05-ir-passes/cuda-immutable-load-wraps-buffer-read-in-ldg.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/dce-keeps-partially-used-struct-field.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/dce-removes-dead-branch-after-const-fold.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/dce-removes-transitively-dead-call-chain.slang
@@ -4053,6 +4076,7 @@ share/doc/slang/generated/tests/design/syntax-reference/grammar/expr-string-lite
 share/doc/slang/generated/tests/design/syntax-reference/grammar/expr-subscript-static-member-name.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/expr-ternary-right-associative.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/expr-unary-minus-tighter-than-mul.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/generic-arg-greater-than-unavailable.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/generic-arg-parenthesized-less-than.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/generic-call-followed-by-paren.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/generic-param-each-type-pack.slang
@@ -4243,6 +4267,7 @@ share/doc/slang/generated/tests/design/target-pipelines/cuda/float-nan-emit.slan
 share/doc/slang/generated/tests/design/target-pipelines/cuda/float-positive-zero-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/get-string-hash-inlined-to-constant.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/global-params-constant-memory.slang
+share/doc/slang/generated/tests/design/target-pipelines/cuda/global-uniform-constant-memory-no-ldg.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/groupshared-scalar-to-device-shared.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/groupshared-struct-to-device-shared.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/groupshared-to-device-shared.slang
@@ -4253,6 +4278,7 @@ share/doc/slang/generated/tests/design/target-pipelines/cuda/int-max-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/int-min-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-array-field-per-element.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-large-struct-slang-ldg-function.slang
+share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-on-constant-buffer.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-on-immutable-buffer.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-on-immutable-struct.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ldg-on-runtime-bounded-index.slang

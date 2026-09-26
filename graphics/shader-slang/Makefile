@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/09/25 14:23:53 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/26 01:02:35 ktnb Exp $
 
-DISTNAME=		slang-2026.18
+DISTNAME=		slang-2026.18.3
 PKGNAME=		shader-${DISTNAME}
 CATEGORIES=		graphics lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=shader-slang/}
