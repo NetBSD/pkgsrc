@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/09/23 10:40:04 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/26 07:56:02 wiz Exp $
 
 DISTNAME=	levenshtein-0.27.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/l/L/}
@@ -21,6 +21,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/Levenshtein/CMakeLists.txt.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/Levenshtein/levenshtein_cpp.cxx.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

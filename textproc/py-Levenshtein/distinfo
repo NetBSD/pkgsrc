@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2026/09/23 10:40:04 adam Exp $
+$NetBSD: distinfo,v 1.20 2026/09/26 07:56:02 wiz Exp $
 
 BLAKE2s (levenshtein-0.27.5.tar.gz) = 1d79959e66f057ffb09274497c6add6c0940c65c9ccefb5db74cebe0b63746c1
 SHA512 (levenshtein-0.27.5.tar.gz) = 5df424c781e4270f78792cc785a63fd21c9f041258f15d7907b62c15585bbd50e533692ec08227a52f3d898c32b9e5e33ae976e9f0cd5d4d7205c58eba61a2d7
 Size (levenshtein-0.27.5.tar.gz) = 402914 bytes
 SHA1 (patch-CMakeLists.txt) = 55e88242d6cdc80017797fc056e1e236b05c2eb9
 SHA1 (patch-src_Levenshtein_CMakeLists.txt) = 67f56cfa38593351b337b59a058d496890646da8
+SHA1 (patch-src_Levenshtein_levenshtein__cpp.cxx) = 343128a9cc37fa0e420b719741f2b19549d47e5e
