@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2025/08/08 10:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/26 14:25:07 wiz Exp $
 
-DISTNAME=	cpuinfo-0.0.20250724
+DISTNAME=	cpuinfo-0.0.20260630
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pytorch/}
-GITHUB_TAG=	33ed0be77d7767d0e2010e2c3cf972ef36c7c307
+GITHUB_TAG=	66ee79c038d70dad9f08705b2c9b3e58f6d8f512
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	benchmark-1.6.1.tar.gz
 SITES.benchmark-1.6.1.tar.gz= \
@@ -18,6 +18,7 @@ USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++17
 FORCE_CXX_STD=		c++17
 USE_TOOLS+=		pkg-config
+TEST_TARGET=		test
 
 PKGCONFIG_OVERRIDE=	libcpuinfo.pc.in
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_GOOGLETEST=ON
@@ -39,7 +40,6 @@ post-install:
 	lib/pkgconfig/benchmark.pc
 	${RM} -f ${DESTDIR}${PREFIX}/${file}
 .endfor
-
 
 .include "../../devel/cmake/build.mk"
 # Can't use
