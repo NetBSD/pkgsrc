@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/08/28 18:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/26 11:04:54 wiz Exp $
 
-DISTNAME=	lean4-4.33.1
-PKGREVISION=	1
+DISTNAME=	lean4-4.34.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leanprover/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
