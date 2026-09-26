@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6390 2026/09/26 09:54:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6391 2026/09/26 09:59:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9632,3 +9632,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/libmicrohttpd to 1.0.3 [wiz 2026-09-26]
 	Updated textproc/libuninameslist to 20260918 [wiz 2026-09-26]
 	Updated textproc/wdiff to 1.2.3 [wiz 2026-09-26]
+	Updated devel/py-aiostream to 0.8.1 [wiz 2026-09-26]
