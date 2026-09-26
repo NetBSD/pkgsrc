@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.799 2026/09/22 13:32:37 kikadf Exp $
+# $NetBSD: Makefile,v 1.800 2026/09/26 12:56:32 tnn Exp $
 #
 
 COMMENT=	Programming languages
@@ -235,6 +235,7 @@ SUBDIR+=	openjdk-bin
 SUBDIR+=	openjdk11
 SUBDIR+=	openjdk17
 SUBDIR+=	openjdk21
+SUBDIR+=	openjdk25
 SUBDIR+=	openjdk8
 SUBDIR+=	opensource-cobol
 SUBDIR+=	oracle-jdk17
