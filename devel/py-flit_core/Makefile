@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/08/09 13:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/26 10:12:14 wiz Exp $
 
-DISTNAME=	flit_core-4.0.2
+DISTNAME=	flit_core-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flit-core/}
