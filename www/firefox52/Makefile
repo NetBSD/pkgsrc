@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2026/09/02 19:04:58 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/09/26 07:45:27 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -20,6 +20,14 @@ COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:tu:C/\\.
 LICENSE=	mpl-1.1
 
 MOZILLA_DIR=	# empty
+
+BUILDLINK_TRANSFORM+=	l:smime:smime3
+BUILDLINK_TRANSFORM+=	l:nss:nss3
+BUILDLINK_TRANSFORM+=	l:nssutil:nssutil3
+BUILDLINK_TRANSFORM+=	l:ssl:ssl3
+BUILDLINK_TRANSFORM+=	rm:-lcrmf
+LDFLAGS+=		-lsmime3 -lnss3 -lnssutil3 -lssl3
+CONFIGURE_ENV+=		MOZ_SYSTEM_NSS=1
 
 # Note: when updating remember to conditionalise about-background.png in PLIST
 CONFIGURE_ARGS+=	--enable-application=browser

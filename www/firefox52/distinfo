@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2026/09/20 17:21:58 wiz Exp $
+$NetBSD: distinfo,v 1.40 2026/09/26 07:45:27 ryoon Exp $
 
 BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
@@ -9,6 +9,7 @@ Size (icudt58b.dat.gz) = 10711741 bytes
 SHA1 (patch-aa) = 31ba818e5f507c0ebdddd178b4801ab81e1bbbe5
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
 SHA1 (patch-as) = 03cc0f37718188613285093fc80116ac7c2ea38a
+SHA1 (patch-build_autoconf_nss.m4) = 78b9b053bdcdb1b25a484aebcb0d08fe1f2b308b
 SHA1 (patch-build_gyp.mozbuild) = 481270e6703e556fb87a3440cb3cfb3d4fcc4c86
 SHA1 (patch-build_moz.configure_init.configure) = f2df0c6b92aa825a61f6a4ee1f70f5443c61858e
 SHA1 (patch-build_moz.configure_keyfiles.configure) = dd46c7c29464f374eed3f0762f4653d42032c261
