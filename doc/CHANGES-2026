@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6383 2026/09/26 09:16:05 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6384 2026/09/26 09:40:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9625,3 +9625,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.23.5 [ryoon 2026-09-26]
 	Updated devel/sdcc to 4.6.0 [ryoon 2026-09-26]
 	Updated misc/less to 710 [ryoon 2026-09-26]
+	Updated devel/libextractor to 1.19 [wiz 2026-09-26]
