@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/09/12 20:49:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/09/26 10:14:18 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -165,6 +165,21 @@ ${PYSITELIB}/google/api_core/rest_streaming.pyo
 ${PYSITELIB}/google/api_core/rest_streaming_async.py
 ${PYSITELIB}/google/api_core/rest_streaming_async.pyc
 ${PYSITELIB}/google/api_core/rest_streaming_async.pyo
+${PYSITELIB}/google/api_core/resumable_transfer/__init__.py
+${PYSITELIB}/google/api_core/resumable_transfer/__init__.pyc
+${PYSITELIB}/google/api_core/resumable_transfer/__init__.pyo
+${PYSITELIB}/google/api_core/resumable_transfer/common.py
+${PYSITELIB}/google/api_core/resumable_transfer/common.pyc
+${PYSITELIB}/google/api_core/resumable_transfer/common.pyo
+${PYSITELIB}/google/api_core/resumable_transfer/upload.py
+${PYSITELIB}/google/api_core/resumable_transfer/upload.pyc
+${PYSITELIB}/google/api_core/resumable_transfer/upload.pyo
+${PYSITELIB}/google/api_core/resumable_transfer/upload_async.py
+${PYSITELIB}/google/api_core/resumable_transfer/upload_async.pyc
+${PYSITELIB}/google/api_core/resumable_transfer/upload_async.pyo
+${PYSITELIB}/google/api_core/resumable_transfer/upload_state.py
+${PYSITELIB}/google/api_core/resumable_transfer/upload_state.pyc
+${PYSITELIB}/google/api_core/resumable_transfer/upload_state.pyo
 ${PYSITELIB}/google/api_core/retry/__init__.py
 ${PYSITELIB}/google/api_core/retry/__init__.pyc
 ${PYSITELIB}/google/api_core/retry/__init__.pyo

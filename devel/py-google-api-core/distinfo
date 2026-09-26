@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.53 2026/09/12 20:49:48 wiz Exp $
+$NetBSD: distinfo,v 1.54 2026/09/26 10:14:18 wiz Exp $
 
-BLAKE2s (google_api_core-2.36.0.tar.gz) = 6ac72a2a6069aef27cecc665f41b6523f5a2502aa47e4208bbbd93fe508b4727
-SHA512 (google_api_core-2.36.0.tar.gz) = 119d446ebd67bdd2f527d8bbc05e7877e1fa528e9421dabbef95597cf2e1a4555fe630f9e573b10836b98a65aa437c3a7d72a89a06d700cbf5214fd7084a44ca
-Size (google_api_core-2.36.0.tar.gz) = 196879 bytes
+BLAKE2s (google_api_core-2.39.0.tar.gz) = 7f377b8b771e1822c0e522ee31debb7f1d06e2af23d04ca1fc8b2f036a418416
+SHA512 (google_api_core-2.39.0.tar.gz) = 59f20324762a6f0522d06b966cd0e22ece83f2d692e9d6fcf8e2b1c4f1fe73d42064293ccece627fa9270757eac8ab438732f8780761ea8190f2364b4c0f2367
+Size (google_api_core-2.39.0.tar.gz) = 258568 bytes
