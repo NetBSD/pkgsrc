@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/06/11 13:14:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/09/26 10:31:57 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -45,12 +45,18 @@ ${PYSITELIB}/pymdownx/blocks/html.pyo
 ${PYSITELIB}/pymdownx/blocks/tab.py
 ${PYSITELIB}/pymdownx/blocks/tab.pyc
 ${PYSITELIB}/pymdownx/blocks/tab.pyo
+${PYSITELIB}/pymdownx/bracketspan.py
+${PYSITELIB}/pymdownx/bracketspan.pyc
+${PYSITELIB}/pymdownx/bracketspan.pyo
 ${PYSITELIB}/pymdownx/caret.py
 ${PYSITELIB}/pymdownx/caret.pyc
 ${PYSITELIB}/pymdownx/caret.pyo
 ${PYSITELIB}/pymdownx/critic.py
 ${PYSITELIB}/pymdownx/critic.pyc
 ${PYSITELIB}/pymdownx/critic.pyo
+${PYSITELIB}/pymdownx/delimiterprocessor.py
+${PYSITELIB}/pymdownx/delimiterprocessor.pyc
+${PYSITELIB}/pymdownx/delimiterprocessor.pyo
 ${PYSITELIB}/pymdownx/details.py
 ${PYSITELIB}/pymdownx/details.pyc
 ${PYSITELIB}/pymdownx/details.pyo

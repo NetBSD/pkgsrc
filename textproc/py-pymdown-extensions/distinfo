@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/08/23 08:14:57 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/09/26 10:31:57 wiz Exp $
 
-BLAKE2s (pymdown_extensions-11.0.2.tar.gz) = b39a47a9363446cf67edfce63e7b6cc0f2e0039d3983efc5483e42c1468eb632
-SHA512 (pymdown_extensions-11.0.2.tar.gz) = cd84ba04447bee2f2953453f1045e79c8495b5db0442227a8cc0ef348a9bb64e99e4ac0232032574967683e88b0db21b7eabeb8aa4e6edafde843e07438c5b5a
-Size (pymdown_extensions-11.0.2.tar.gz) = 855419 bytes
+BLAKE2s (pymdown_extensions-12.1.tar.gz) = e8124faf7956f214b91fe8f9ff5fae455d9109b955394b733147ccf1c40b7989
+SHA512 (pymdown_extensions-12.1.tar.gz) = eff6bb92df1e87cd68007a6543f075a6b8276c8718c25ab95dec1e948995ee60ed80cb9067f9fef8819710fb5306b8b94ca44d4640c8777de6b765d0c06a1743
+Size (pymdown_extensions-12.1.tar.gz) = 868245 bytes
