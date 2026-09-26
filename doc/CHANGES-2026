@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6385 2026/09/26 09:42:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6386 2026/09/26 09:45:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9627,3 +9627,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/less to 710 [ryoon 2026-09-26]
 	Updated devel/libextractor to 1.19 [wiz 2026-09-26]
 	Updated graphics/OpenJPH to 0.32.0 [wiz 2026-09-26]
+	Updated math/ggml to 0.25.3 [wiz 2026-09-26]
