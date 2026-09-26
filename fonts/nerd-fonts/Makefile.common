@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2026/08/23 08:31:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2026/09/26 10:25:32 wiz Exp $
 # used by fonts/nerd-fonts-3270/Makefile
 # used by fonts/nerd-fonts-Agave/Makefile
 # used by fonts/nerd-fonts-AnonymousPro/Makefile
@@ -15,7 +15,6 @@
 # used by fonts/nerd-fonts-IBMPlexMono/Makefile
 # used by fonts/nerd-fonts-JetBrainsMono/Makefile
 # used by fonts/nerd-fonts-Meslo/Makefile
-# used by fonts/nerd-fonts-NerdFontsSymbolsOnly/Makefile
 # used by fonts/nerd-fonts-SourceCodePro/Makefile
 # used by fonts/nerd-fonts-Symbols/Makefile
 # used by fonts/nerd-fonts-iA-Writer/Makefile
