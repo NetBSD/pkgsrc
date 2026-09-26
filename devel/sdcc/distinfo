@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2025/12/24 15:37:01 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2026/09/26 08:53:30 ryoon Exp $
 
-BLAKE2s (sdcc-src-4.5.0.tar.bz2) = aef3bc364a270faa34ecbb00af27d3b24ad47a1618919637160ef78e60643a73
-SHA512 (sdcc-src-4.5.0.tar.bz2) = 46edd0456d82ebeacc6e7b2ecf5038aac38ce161dc938662c438cca9c41f73b2004589788c18a0f1dd295033c9c35c202c052b463ec7bd8c605065d440d617f4
-Size (sdcc-src-4.5.0.tar.bz2) = 20298103 bytes
-SHA1 (patch-aa) = a8bb460dccae4a36dd401f78fdb8e42abb0f5567
+BLAKE2s (sdcc-src-4.6.0.tar.bz2) = 3191a7240cdfb62833cefd5b19bbdf382b0b3af01161de98db9aa654335fd49f
+SHA512 (sdcc-src-4.6.0.tar.bz2) = 5beac86cfb26ec00e2ddc21b5e0dae985da57865785aae6129202d480a95b5e4db1c7ccf90c28ddcc24e2654ca73bcb6a686c88ba09ad03af15077d32997541b
+Size (sdcc-src-4.6.0.tar.bz2) = 26552471 bytes
+SHA1 (patch-aa) = 6fb4dfe85dfc8d2fd70f25492a37e817547bc539
 SHA1 (patch-configure) = c5251ccbdd0cc1f3f7b2ee3ad143b731bed2dee3
 SHA1 (patch-sim_ucsim_configure) = 981e142db52723575fd440a7fe6147aa3165d0a5
 SHA1 (patch-support_cpp_gcc_configure) = 6e77670242b9c4d6878e97a622a664710d84500e

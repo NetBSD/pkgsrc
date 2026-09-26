@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/24 15:37:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/26 08:53:30 ryoon Exp $
 bin/as2gbmap
+bin/c++filt
 bin/makebin
 bin/packihx
 bin/s51
@@ -35,6 +36,7 @@ bin/sdranlib
 bin/ucsim_51
 bin/ucsim_f8
 bin/ucsim_i8051
+bin/ucsim_m6800
 bin/ucsim_m68hc08
 bin/ucsim_mos6502
 bin/ucsim_pdk
@@ -43,6 +45,17 @@ bin/ucsim_stm8
 bin/ucsim_tlcs
 bin/ucsim_xa
 bin/ucsim_z80
+include/ctf-api.h
+include/ctf.h
+include/dis-asm.h
+include/sframe-api.h
+include/sframe.h
+info/ctf-spec.info
+info/sframe-spec.info
+lib/libctf-nobfd.la
+lib/libctf.la
+lib/libopcodes.la
+lib/libsframe.la
 libexec/sdcc/x86_64--netbsd/12.1.0/cc1
 man/man1/serialview.1
 man/man1/ucsim.1
@@ -102,8 +115,7 @@ share/sdcc/sdcc/include/asm/f8/features.h
 share/sdcc/sdcc/include/asm/mcs51/features.h
 share/sdcc/sdcc/include/asm/pic14/features.h
 share/sdcc/sdcc/include/asm/pic16/features.h
-share/sdcc/sdcc/include/asm/r2k/features.h
-share/sdcc/sdcc/include/asm/r3ka/features.h
+share/sdcc/sdcc/include/asm/rab/features.h
 share/sdcc/sdcc/include/asm/sm83/features.h
 share/sdcc/sdcc/include/asm/stm8/features.h
 share/sdcc/sdcc/include/asm/tlcs90/features.h
@@ -238,6 +250,9 @@ share/sdcc/sdcc/include/rab/r2kb.h
 share/sdcc/sdcc/include/rab/r2kc.h
 share/sdcc/sdcc/include/rab/r3k.h
 share/sdcc/sdcc/include/rab/r3ka.h
+share/sdcc/sdcc/include/rab/r4k.h
+share/sdcc/sdcc/include/rab/r5k.h
+share/sdcc/sdcc/include/rab/r6k.h
 share/sdcc/sdcc/include/sdcc-lib.h
 share/sdcc/sdcc/include/setjmp.h
 share/sdcc/sdcc/include/signal.h
@@ -247,6 +262,7 @@ share/sdcc/sdcc/include/stdatomic.h
 share/sdcc/sdcc/include/stdbit.h
 share/sdcc/sdcc/include/stdbool.h
 share/sdcc/sdcc/include/stdckdint.h
+share/sdcc/sdcc/include/stdcountof.h
 share/sdcc/sdcc/include/stddef.h
 share/sdcc/sdcc/include/stdint.h
 share/sdcc/sdcc/include/stdio.h
@@ -270,9 +286,10 @@ share/sdcc/sdcc/lib/ds400/libint.lib
 share/sdcc/sdcc/lib/ds400/liblong.lib
 share/sdcc/sdcc/lib/ds400/liblonglong.lib
 share/sdcc/sdcc/lib/ds400/libsdcc.lib
-share/sdcc/sdcc/lib/ez80_z80/crt0.rel
-share/sdcc/sdcc/lib/ez80_z80/ez80_z80.lib
+share/sdcc/sdcc/lib/ez80/crt0.rel
+share/sdcc/sdcc/lib/ez80/ez80.lib
 share/sdcc/sdcc/lib/f8/f8.lib
+share/sdcc/sdcc/lib/f8l/f8l.lib
 share/sdcc/sdcc/lib/hc08/hc08.lib
 share/sdcc/sdcc/lib/huge/libfloat.lib
 share/sdcc/sdcc/lib/huge/libint.lib
@@ -723,6 +740,12 @@ share/sdcc/sdcc/lib/r2ka/crt0.rel
 share/sdcc/sdcc/lib/r2ka/r2ka.lib
 share/sdcc/sdcc/lib/r3ka/crt0.rel
 share/sdcc/sdcc/lib/r3ka/r3ka.lib
+share/sdcc/sdcc/lib/r4k/crt0.rel
+share/sdcc/sdcc/lib/r4k/r4k.lib
+share/sdcc/sdcc/lib/r5k/crt0.rel
+share/sdcc/sdcc/lib/r5k/r5k.lib
+share/sdcc/sdcc/lib/r6k/crt0.rel
+share/sdcc/sdcc/lib/r6k/r6k.lib
 share/sdcc/sdcc/lib/r800/crt0.rel
 share/sdcc/sdcc/lib/r800/r800.lib
 share/sdcc/sdcc/lib/s08-stack-auto/s08.lib
@@ -3788,6 +3811,7 @@ share/sdcc/sdcc/non-free/lib/src/pic16/processors.ac
 share/sdcc/sdcc/non-free/lib/src/pic16/stamp-h1
 share/sdcc/sdcc/non-free/lib/src/pic16/supported-devices.ac
 share/sdcc/sdcc/non-free/lib/src/pic16/update.sh
-@pkgdir share/sdcc/sdcc/non-free/lib/src/pic16/.checkdevices
-@pkgdir share/sdcc/sdcc/non-free/lib/src/pic14/.checkdevices
-@pkgdir share/sdcc/sdcc/lib/src
+x86_64--netbsd/bin/sdar
+x86_64--netbsd/bin/sdnm
+x86_64--netbsd/bin/sdobjcopy
+x86_64--netbsd/bin/sdranlib
