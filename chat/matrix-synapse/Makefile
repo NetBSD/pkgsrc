@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2026/09/04 22:46:47 gdt Exp $
+# $NetBSD: Makefile,v 1.136 2026/09/26 00:39:57 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.160.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -34,7 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.25.0:../../devel/py-rpds-py
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
-DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
+DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.4:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-twisted>=21.2.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-treq>=21.5.0:../../devel/py-treq
@@ -48,7 +49,7 @@ DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.0.5:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.6.0:../../net/py-prometheus_client
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.10.0:../../net/py-prometheus_client
 # To avoid the !=21.1.0, we just require 21.1.1 or newer.
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.1.1:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
@@ -63,11 +64,13 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.12:../../devel/py-pydantic
 # Upstream documents that setuptools_rust is needed if you choose to
 # use poetry instead of the documented/specified maturin (people that
-# work on synapse does that because something is more convenient).
+# work on synapse do that because something is more convenient).
 # However, it is coded as a depdendency for everyone, and ends up in
 # METAINFO.  Experimentally, synapse starts and runs fine without it,
 # so we omit it as a pkgsrc dependency.
 #DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
+
+# Upstream puts this in a separate section (blank line) for no apparent reason.
 DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 
 # Upstream lists "transitive dependency constraints".  These are
@@ -93,15 +96,18 @@ DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 # urllib3 >= 1.26.5
 # zope-interface >= 5.2
 #
-# And we decline to add those here, as noise.
+# And we decline to add those here, as noise, except....
 #
-# However, pyrsistent is in pyproject.toml because jsonschema used to
+# pyrsistent is in pyproject.toml because jsonschema used to
 # require it (before 4.18.0) -- and now it doesn't.  Without an
 # explicit pkgsrc dep on pyrsistent, it isn't pulled in.  That would
 # be fine, except that it appears in METAINFO (because of presence in
 # pyproject.toml) and synapse then fails to start.  Reported upstream
 # 20260226.
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.18.0:../../devel/py-pyrsistent
+# pyparsing is in pyproject.toml because packaging used to require it.
+# Reported upstream 20260925.
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4:../../devel/py-pyparsing
 
 ## OPTIONS
 #
