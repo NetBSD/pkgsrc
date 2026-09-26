@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6394 2026/09/26 10:12:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6395 2026/09/26 10:14:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9636,3 +9636,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-beets to 2.14.1 [wiz 2026-09-26]
 	Updated devel/py-filelock to 4.0.3 [wiz 2026-09-26]
 	Updated devel/py-flit_core to 4.1.0 [wiz 2026-09-26]
+	Updated devel/py-google-api-core to 2.39.0 [wiz 2026-09-26]
