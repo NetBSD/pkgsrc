@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/07/19 10:45:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/09/26 10:11:01 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -45,6 +45,12 @@ ${PYSITELIB}/filelock/_soft_rw/__init__.pyo
 ${PYSITELIB}/filelock/_soft_rw/_async.py
 ${PYSITELIB}/filelock/_soft_rw/_async.pyc
 ${PYSITELIB}/filelock/_soft_rw/_async.pyo
+${PYSITELIB}/filelock/_soft_rw/_protocol.py
+${PYSITELIB}/filelock/_soft_rw/_protocol.pyc
+${PYSITELIB}/filelock/_soft_rw/_protocol.pyo
+${PYSITELIB}/filelock/_soft_rw/_storage.py
+${PYSITELIB}/filelock/_soft_rw/_storage.pyc
+${PYSITELIB}/filelock/_soft_rw/_storage.pyo
 ${PYSITELIB}/filelock/_soft_rw/_sync.py
 ${PYSITELIB}/filelock/_soft_rw/_sync.pyc
 ${PYSITELIB}/filelock/_soft_rw/_sync.pyo
