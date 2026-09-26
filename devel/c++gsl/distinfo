@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/12/13 11:44:26 nros Exp $
+$NetBSD: distinfo,v 1.6 2026/09/26 14:17:23 wiz Exp $
 
-BLAKE2s (GSL-4.0.0.tar.gz) = 5eac47950a289b2218032c77863b3995eba89e47df4b72b107dbe394b7383255
-SHA512 (GSL-4.0.0.tar.gz) = 7fa7446796c6bf82fb3bff09f86a69c446a27be528bef3b17c8bc5ad2f24d5cf86bdb3d3813ecb44726e8f395020180e97e41027330d1fbf545cc0f0b44aac29
-Size (GSL-4.0.0.tar.gz) = 55846 bytes
+BLAKE2s (GSL-5.0.1.tar.gz) = f5eb8cb15b271d3efc38fbe27bb4b3ee1d18c371a6877b5fbd1f3759a701dec1
+SHA512 (GSL-5.0.1.tar.gz) = fd05d8d04cd281e0d19f491e5dcf570caa2acfa739df3fa0eb83967da2073d1b97eae060da5c93cb051a4e5b1e9258652de5c4daa8611a18fdc63ac8de13c5b9
+Size (GSL-5.0.1.tar.gz) = 75787 bytes
