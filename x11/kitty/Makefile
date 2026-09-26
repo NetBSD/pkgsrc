@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2026/09/24 19:19:25 ktnb Exp $
+# $NetBSD: Makefile,v 1.102 2026/09/26 01:04:16 ktnb Exp $
 
 DISTNAME=	kitty-0.49.1
 CATEGORIES=	x11
@@ -81,6 +81,7 @@ do-build:
 .if ${OPSYS} == "Darwin"
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py kitty.app
 .else
+	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py build
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
 .endif
 

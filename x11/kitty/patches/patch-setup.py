@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.8 2026/09/24 19:19:26 ktnb Exp $
+$NetBSD: patch-setup.py,v 1.9 2026/09/26 01:04:16 ktnb Exp $
 
 Only point to the pkgsrc fonts for Darwin.
 Don't crash on colored emoji render on NetBSD.
@@ -21,7 +21,7 @@ Don't crash on colored emoji render on NetBSD.
          if is_macos:
 -            candidates = (os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts')
 +            candidates = (
-+              os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts'
++              os.path.expanduser('~/Library/Fonts'), '/Library/Fonts', '/System/Library/Fonts', '/Network/Library/Fonts',
 +              '@PREFIX@/share/fonts/',
 +            )
              for candidate in candidates:
