@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/09/22 16:47:10 abs Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/26 09:01:28 wiz Exp $
 
 DISTNAME=	mongodb-src-r5.0.34
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -26,6 +26,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-types-yaml>=6.0.5:../../textproc/py-types-yaml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
+# ModuleNotFoundError: No module named 'packaging':
+#   File "/tmp/databases/mongodb5/work/mongo-r5.0.34/SConstruct", line 21:
+#     from packaging.version import parse as parse_version
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=		c c++
