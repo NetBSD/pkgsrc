@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28011 2026/09/26 10:33:14 wiz Exp $
+$NetBSD: TODO,v 1.28012 2026/09/26 10:38:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -719,7 +719,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnuchess-6.3.0
 	o gnumeric-1.12.62
 	o gnunet-0.29.0
-	o gnupg-2.5.24
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-ldap-3.3.0
@@ -1161,7 +1160,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-poetry-core-2.5.0
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.49.0 [waiting for py-pydantic release that works with this]
-	o py-ruff-0.16.9
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2

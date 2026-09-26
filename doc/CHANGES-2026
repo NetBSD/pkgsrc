@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6401 2026/09/26 10:33:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6402 2026/09/26 10:38:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9643,3 +9643,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.19.0 [wiz 2026-09-26]
 	Updated textproc/py-pymdown-extensions to 12.1 [wiz 2026-09-26]
 	Updated devel/py-pyproject_hooks to 1.3.3 [wiz 2026-09-26]
+	Updated devel/py-ruff to 0.16.9 [wiz 2026-09-26]
