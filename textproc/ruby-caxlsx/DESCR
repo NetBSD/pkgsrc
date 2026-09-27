@@ -1,0 +1,11 @@
+Caxlsx (Community Continued Version)
+
+Axlsx is an Office Open XML Spreadsheet generator for the Ruby programming
+language.
+
+With Axlsx you can create Excel worksheets with charts, images (with links),
+automated and fixed column widths, customized styles, functions, tables,
+conditional formatting, print options, comments, merged cells, auto filters,
+file and stream serialization as well as full schema validation.  Axlsx
+excels at helping you generate beautiful Office Open XML Spreadsheet
+documents without having to understand the entire ECMA specification.

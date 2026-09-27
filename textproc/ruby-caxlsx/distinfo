@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/27 13:41:50 taca Exp $
+
+BLAKE2s (caxlsx-4.5.0.gem) = b4690f682ca0106be3a9be67479becc30232c03832c164a3d545ac7423ac5640
+SHA512 (caxlsx-4.5.0.gem) = 8d6a604812afb5684f83daa632a10b053a0fe886753eadb967aaf255e0c27aad9c3c7ec9953eda3d8a98e55dd3b4a3cf825d89d929868e33ad334ed3ca72a660
+Size (caxlsx-4.5.0.gem) = 333312 bytes
