@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/09/27 08:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/27 09:37:55 wiz Exp $
 
 DISTNAME=	lft-4.02
 CATEGORIES=	net
@@ -13,6 +13,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 FAKE_NCURSES=		yes
+TEST_TARGET=		check
 
 CFLAGS.SunOS+=		-Dalloca=__builtin_alloca
 
