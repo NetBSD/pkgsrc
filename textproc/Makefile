@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1605 2026/09/24 15:51:26 leot Exp $
+# $NetBSD: Makefile,v 1.1606 2026/09/27 13:42:30 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1331,6 +1331,7 @@ SUBDIR+=	ruby-asciidoctor
 SUBDIR+=	ruby-bluecloth
 SUBDIR+=	ruby-builder
 SUBDIR+=	ruby-cabocha
+SUBDIR+=	ruby-caxlsx
 SUBDIR+=	ruby-classifier-reborn
 SUBDIR+=	ruby-coderay
 SUBDIR+=	ruby-commonmarker
