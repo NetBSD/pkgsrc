@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6417 2026/09/26 14:48:50 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6418 2026/09/27 00:26:19 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9321,7 +9321,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wikid to 3.2.2 [pin 2026-09-18]
 	Updated sysutils/yazi to 26.9.1 [pin 2026-09-18]
 	Updated www/resterm to 1.8.2 [drixter 2026-09-18]
-	Updated math/cvc5 to 1.4.0 [asnsn 2026-09-18]
+	Updated math/cvc5 to 1.4.0 [alnsn 2026-09-18]
 	Updated lang/ruby33 to 3.3.12nb2 [taca 2026-09-19]
 	Updated devel/libextractor to 1.15nb1 [wiz 2026-09-19]
 	Updated devel/opa to 1.20.2 [leot 2026-09-19]
