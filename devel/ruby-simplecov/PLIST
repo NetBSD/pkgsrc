@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/09/15 14:36:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/09/27 14:23:17 taca Exp $
 bin/simplecov${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -14,6 +14,7 @@ ${GEM_LIBDIR}/lib/simplecov/baseline/parser.rb
 ${GEM_LIBDIR}/lib/simplecov/cli.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/affected.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/affected/changed_files.rb
+${GEM_LIBDIR}/lib/simplecov/cli/affected/runner.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/affected/selection.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/annotations.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/badge.rb
@@ -39,6 +40,7 @@ ${GEM_LIBDIR}/lib/simplecov/cli/patch/changed_lines.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/patch/output.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/ratchet.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/ratchet/output.rb
+${GEM_LIBDIR}/lib/simplecov/cli/real_path.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/report.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/run.rb
 ${GEM_LIBDIR}/lib/simplecov/cli/serve.rb
