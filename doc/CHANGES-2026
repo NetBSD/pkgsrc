@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6422 2026/09/27 09:43:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6423 2026/09/27 09:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9664,3 +9664,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/lft to 4.02 [wiz 2026-09-27]
 	Updated devel/py-flit to 4.1.0 [wiz 2026-09-27]
 	Updated databases/p5-DBI to 1.654 [wiz 2026-09-27]
+	Updated time/p5-DateTime-TimeZone to 2.70 [wiz 2026-09-27]
