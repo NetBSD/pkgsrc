@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2026/09/02 19:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/27 11:36:30 tnn Exp $
 
 WARSOW_VER=	2.1.2
 WARSOW_SDK=	warsow_21_sdk
 DISTFILES=	${WARSOW_SDK}.tar.gz
 DISTFILES+=	warsow-${WARSOW_VER}.tar.gz
 PKGNAME=	warsow-${WARSOW_VER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://warsow.net/
 

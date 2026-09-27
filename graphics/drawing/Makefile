@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:36:40 tnn Exp $
 
 DISTNAME=	drawing-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maoschanz/}
 

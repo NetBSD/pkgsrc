@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/09/02 19:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/27 11:34:56 tnn Exp $
 
 DISTNAME=	gstreamer1-plugins-sndio-1.24.0
 PKGNAME=	${DISTNAME:S/gstreamer1-plugins/gst-plugins1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BSDKaffee/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

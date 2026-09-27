@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/09/02 19:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/27 11:35:10 tnn Exp $
 
 DISTNAME=	carbons-purple-0.2.1
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gkdr/}
 GITHUB_PROJECT=	carbons

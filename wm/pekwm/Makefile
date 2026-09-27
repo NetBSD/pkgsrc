@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2026/09/02 19:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/09/27 11:39:02 tnn Exp $
 
 DISTNAME=	pekwm-0.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	https://www.pekwm.se/pekwm/uv/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2026/09/02 19:05:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/09/27 11:39:09 tnn Exp $
 
 BUILDLINK_TREE+=	qt6-qthttpserver
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qthttpserver
 QT6_QTHTTPSERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qthttpserver+=	qt6-qthttpserver>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qthttpserver+=	qt6-qthttpserver>=6.11.2nb1
+BUILDLINK_ABI_DEPENDS.qt6-qthttpserver+=	qt6-qthttpserver>=6.11.2nb2
 BUILDLINK_PKGSRCDIR.qt6-qthttpserver?=		../../www/qt6-qthttpserver
 
 .include "../../net/qt6-qtwebsockets/buildlink3.mk"

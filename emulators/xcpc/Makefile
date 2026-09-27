@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/02 19:02:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/27 11:36:06 tnn Exp $
 
 DISTNAME=	xcpc-20070122
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	https://bitbucket.org/ponceto/xcpc/get/
 

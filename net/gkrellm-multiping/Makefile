@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2026/09/02 19:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/09/27 11:38:00 tnn Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmakovicka/}
 GITHUB_TAG=	refs/tags/${PKGVERSION_NOREV}

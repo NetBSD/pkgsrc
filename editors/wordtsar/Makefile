@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:35:57 tnn Exp $
 
 DISTNAME=	WordTsar-0.3.719-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wordtsar/}
 EXTRACT_SUFX=	.zip

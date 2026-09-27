@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/02 19:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/27 11:35:51 tnn Exp $
 
 DISTNAME=	zix-0.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.xz

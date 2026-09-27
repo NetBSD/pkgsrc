@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2026/09/02 19:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/09/27 11:35:57 tnn Exp $
 
 DISTNAME=	xournalpp-1.3.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

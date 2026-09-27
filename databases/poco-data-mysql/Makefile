@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/09/02 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/27 11:35:22 tnn Exp $
 
 PKGNAME=	poco-data-mysql-${POCO_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ MySQL RDBMS Accessor libraries

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/09/26 09:43:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/27 11:37:48 tnn Exp $
 
 DISTNAME=	frei0r-2.3.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dyne/}
 GITHUB_PROJECT=	frei0r

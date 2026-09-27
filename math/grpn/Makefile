@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2026/09/02 19:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/09/27 11:37:30 tnn Exp $
 
 DISTNAME=	grpn_1.3.3-1
 PKGNAME=	grpn-1.3.3
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	math
 #MASTER_SITES=	http://lashwhip.com/grpn/
 

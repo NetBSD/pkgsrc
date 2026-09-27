@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/09/02 19:02:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/27 11:36:46 tnn Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-cairo/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - Cairo plugin

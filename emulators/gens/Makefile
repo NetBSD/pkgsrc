@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2026/09/02 19:01:55 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/09/27 11:36:01 tnn Exp $
 
 DISTNAME=		gens-rc3
 PKGNAME=		gens-2.12rc3
-PKGREVISION=		57
+PKGREVISION=		58
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gens/}
 

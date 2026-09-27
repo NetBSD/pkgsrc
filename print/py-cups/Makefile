@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2026/09/02 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2026/09/27 11:38:19 tnn Exp $
 
 DISTNAME=	pycups-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycups/}
 #EXTRACT_SUFX=	.tar.bz2

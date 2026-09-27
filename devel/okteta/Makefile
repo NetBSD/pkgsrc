@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2026/09/02 19:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/09/27 11:35:45 tnn Exp $
 
 DISTNAME=	okteta-0.26.13
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=okteta/0.26.13/src/}
 

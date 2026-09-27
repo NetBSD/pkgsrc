@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/09/02 19:04:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/27 11:38:25 tnn Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../security/liboauth2/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-apache-/}

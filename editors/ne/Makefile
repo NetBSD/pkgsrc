@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/09/02 19:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/27 11:35:55 tnn Exp $
 
 DISTNAME=	ne-3.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 #MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2026/09/02 19:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/09/27 11:36:29 tnn Exp $
 
 DISTNAME=		singularity-0.30c-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		games
 MASTER_SITES=		http://endgame-singularity.googlecode.com/files/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/09/02 19:01:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:35:48 tnn Exp $
 
 BUILDLINK_TREE+=	qcoro
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qcoro
 QCORO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qcoro+=	qcoro>=0.12.0
-BUILDLINK_ABI_DEPENDS.qcoro?=	qcoro>=0.12.0nb4
+BUILDLINK_ABI_DEPENDS.qcoro?=	qcoro>=0.12.0nb5
 BUILDLINK_PKGSRCDIR.qcoro?=	../../devel/qcoro
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

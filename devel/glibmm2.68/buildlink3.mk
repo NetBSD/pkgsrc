@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2026/09/02 19:01:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/09/27 11:35:30 tnn Exp $
 
 BUILDLINK_TREE+=	glibmm2.68
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glibmm2.68
 GLIBMM2.68_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glibmm2.68+=	glibmm2.68>=2.68.0
-BUILDLINK_ABI_DEPENDS.glibmm2.68+=	glibmm2.68>=2.88.1nb1
+BUILDLINK_ABI_DEPENDS.glibmm2.68+=	glibmm2.68>=2.90.0nb1
 BUILDLINK_PKGSRCDIR.glibmm2.68?=	../../devel/glibmm2.68
 
 GCC_REQD+=	4.9

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2026/09/02 19:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/27 11:35:21 tnn Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (embedded)
 
 # for the header files needed by the installed header file of this package

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:04:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:38:44 tnn Exp $
 
 DISTNAME=	spice-0.15.2
 PKGNAME=	${DISTNAME:S/spice/spice-server/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.spice-space.org/download/releases/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/09/06 10:23:28 markd Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:35:46 tnn Exp $
 
 DISTNAME=	kwayland-${PLASMAVER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://invent.kde.org/plasma/kwayland

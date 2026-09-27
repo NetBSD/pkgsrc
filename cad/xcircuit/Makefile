@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2026/09/02 19:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/09/27 11:35:10 tnn Exp $
 
 DISTNAME=	xcircuit-3.10.30
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/
 EXTRACT_SUFX=	.tgz

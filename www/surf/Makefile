@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/09/02 19:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/27 11:39:10 tnn Exp $
 
 DISTNAME=	surf-2.1
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	www
 MASTER_SITES=	https://dl.suckless.org/surf/
 

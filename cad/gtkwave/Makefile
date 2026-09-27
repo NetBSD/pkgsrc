@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.151 2026/09/02 19:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2026/09/27 11:35:08 tnn Exp $
 
 DISTNAME=	gtkwave-3.3.125
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkwave/}
 #MASTER_SITES=	http://home.nc.rr.com/gtkwave/

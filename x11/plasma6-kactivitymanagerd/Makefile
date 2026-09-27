@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/09/06 10:23:31 markd Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/27 11:39:30 tnn Exp $
 
 DISTNAME=	kactivitymanagerd-${PLASMAVER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/

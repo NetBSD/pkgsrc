@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.271 2026/09/22 06:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.272 2026/09/27 11:37:53 tnn Exp $
 
 DISTNAME=	mkvtoolnix-102.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz

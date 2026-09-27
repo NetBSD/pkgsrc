@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/09/02 19:02:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/09/27 11:36:08 tnn Exp $
 
 BUILDLINK_TREE+=	SDL3_ttf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL3_ttf
 SDL3_TTF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL3_ttf+=	SDL3_ttf>=3.2.2
-BUILDLINK_ABI_DEPENDS.SDL3_ttf+=	SDL3_ttf>=3.2.2nb2
+BUILDLINK_ABI_DEPENDS.SDL3_ttf+=	SDL3_ttf>=3.2.2nb3
 BUILDLINK_PKGSRCDIR.SDL3_ttf?=		../../fonts/SDL3_ttf
 
 .include "../../devel/SDL3/buildlink3.mk"

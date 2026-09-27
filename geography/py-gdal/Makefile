@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2026/09/02 19:02:28 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/09/27 11:36:34 tnn Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 #PKGREVISION=	0
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/09/02 19:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/27 11:35:50 tnn Exp $
 
 DISTNAME=	why3-1.8.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://why3.gitlabpages.inria.fr/releases/
 

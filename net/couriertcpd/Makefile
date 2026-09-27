@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2026/09/02 19:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/27 11:37:58 tnn Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
-PKGREVISION=	2
+PKGREVISION=	3
 PKGREVISION=	
 CATEGORIES=	net
 

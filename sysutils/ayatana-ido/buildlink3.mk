@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/09/02 19:04:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/27 11:38:30 tnn Exp $
 
 BUILDLINK_TREE+=	ayatana-ido
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ayatana-ido
 AYATANA_IDO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ayatana-ido+=	ayatana-ido>=0.10.2
-BUILDLINK_ABI_DEPENDS.ayatana-ido?=	ayatana-ido>=0.10.2nb10
+BUILDLINK_ABI_DEPENDS.ayatana-ido?=	ayatana-ido>=0.10.2nb11
 BUILDLINK_PKGSRCDIR.ayatana-ido?=	../../sysutils/ayatana-ido
 
 .include "../../devel/glib2/buildlink3.mk"

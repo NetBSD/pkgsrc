@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2026/09/02 19:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/09/27 11:38:39 tnn Exp $
 
 DISTNAME=	libnotify-0.8.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

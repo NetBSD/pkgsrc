@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2026/09/02 19:00:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2026/09/27 11:34:52 tnn Exp $
 
 BUILDLINK_TREE+=	glyr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glyr
 GLYR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glyr+=	glyr>=1.0.10nb22
-BUILDLINK_ABI_DEPENDS.glyr?=	glyr>=1.0.10nb49
+BUILDLINK_ABI_DEPENDS.glyr?=	glyr>=1.0.10nb50
 BUILDLINK_PKGSRCDIR.glyr?=	../../audio/glyr
 
 .include "../../databases/sqlite3/buildlink3.mk"

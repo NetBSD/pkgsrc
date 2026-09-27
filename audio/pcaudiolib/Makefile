@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/02 19:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/27 11:35:02 tnn Exp $
 
 DISTNAME=	pcaudiolib-1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=espeak-ng/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

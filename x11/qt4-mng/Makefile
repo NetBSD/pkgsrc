@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2026/09/02 19:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/09/27 11:39:34 tnn Exp $
 
 PKGNAME=	qt4-mng-${QTVERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 COMMENT=	QT MNG image format plugin
 
 .include "../../x11/qt4-libs/Makefile.common"

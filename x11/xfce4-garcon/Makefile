@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2026/09/02 19:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/09/27 11:39:44 tnn Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	garcon-4.20.0

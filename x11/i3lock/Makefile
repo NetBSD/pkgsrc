@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/09/02 19:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/27 11:39:19 tnn Exp $
 
 DISTNAME=	i3lock-2.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.xz

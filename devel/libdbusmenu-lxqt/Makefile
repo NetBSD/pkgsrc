@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/09/02 19:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/27 11:35:40 tnn Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	libdbusmenu-lxqt-0.4.0

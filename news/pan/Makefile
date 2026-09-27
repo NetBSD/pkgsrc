@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.170 2026/09/02 19:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2026/09/27 11:38:13 tnn Exp $
 
 PKGNAME=		pan-0.165
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		news
 TAG=			${PKGNAME_NOREV:S/pan-/v/} # e.g. v0.151
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/

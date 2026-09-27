@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2026/09/02 19:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/27 11:38:00 tnn Exp $
 #
 
 DISTNAME=	giFTcurs-0.6.2
 PKGNAME=	${DISTNAME:S/FT/ft/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/giftcurs/
 

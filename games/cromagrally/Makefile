@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/09/02 19:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/27 11:36:13 tnn Exp $
 
 DISTNAME=	cromagrally-3.0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 

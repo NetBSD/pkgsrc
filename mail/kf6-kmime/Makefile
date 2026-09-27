@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/09/06 10:05:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/27 11:37:24 tnn Exp $
 
 DISTNAME=	kmime-${KF6VER}
+PKGREVISION=	1
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/Frameworks

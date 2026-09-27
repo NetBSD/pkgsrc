@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2026/09/02 19:05:06 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/09/27 11:39:14 tnn Exp $
 #
 
 DISTNAME=	ftmenu-0.3
-PKGREVISION=	47
+PKGREVISION=	48
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ftmenu/}
 

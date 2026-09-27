@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:35:27 tnn Exp $
 
 DISTNAME=	cargo-outdated-0.19.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kbknapp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

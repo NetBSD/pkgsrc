@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/09/02 19:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/09/27 11:36:39 tnn Exp $
 
 DISTNAME=	colord-1.4.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/ \
 		http://ftp.slackware.com/pub/slackware/slackware64-current/source/l/colord/

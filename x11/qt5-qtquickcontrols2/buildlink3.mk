@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2026/09/02 19:05:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2026/09/27 11:39:37 tnn Exp $
 
 BUILDLINK_TREE+=	qt5-qtquickcontrols2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtquickcontrols2
 QT5_QTQUICKCONTROLS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtquickcontrols2+=	qt5-qtquickcontrols2>=5.10.0
-BUILDLINK_ABI_DEPENDS.qt5-qtquickcontrols2?=	qt5-qtquickcontrols2>=5.15.19nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtquickcontrols2?=	qt5-qtquickcontrols2>=5.15.19nb2
 BUILDLINK_PKGSRCDIR.qt5-qtquickcontrols2?=	../../x11/qt5-qtquickcontrols2
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/09/06 11:03:02 markd Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/27 11:37:42 tnn Exp $
 
 DISTNAME=	pim-data-exporter-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kontact.kde.org/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/09/02 19:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/09/27 11:38:45 tnn Exp $
 
 DISTNAME=	tiramisu-2.0.20240610
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sweets/}
 
