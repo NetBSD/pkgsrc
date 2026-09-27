@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6437 2026/09/27 14:29:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6438 2026/09/27 14:30:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9679,3 +9679,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-tins to 1.59.0 [taca 2026-09-27]
 	Updated net/ruby-domain_name to 0.6.20260921 [taca 2026-09-27]
 	Updated www/ruby-aws-partitions to 1.1290.0 [taca 2026-09-27]
+	Updated www/ruby-aws-sdk-s3 to 1.232.2 [taca 2026-09-27]
