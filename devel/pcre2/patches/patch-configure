@@ -1,0 +1,40 @@
+$NetBSD: patch-configure,v 1.1 2026/09/27 10:34:45 tnn Exp $
+
+Fix missing symbol versioning:
+
+Don't let CONFIGURE_ENV override libtool's internal CP/MV/RM.
+pkgsrc exports RM as "/bin/rm" but these tests really need "rm -f" because
+of how they are written.
+
+When creating a soname symlink the generated libtool runs
+$RM "$linkname" && $LN_S "$realname" "$linkname"
+which fails because $linkname does not exist yet.
+
+PCRE2_CHECK_VSCRIPT links a shared library to probe for
+-Wl,--version-script and the probe fails due to rm without -f even though
+the link itself succeeded. Symbol versioning is then silently dropped and
+configure says "with symbol versioning : n/a" rather than "yes".
+
+The root cause is in libtool and a similar issue was reported
+upstream in 2010:
+
+https://lists.gnu.org/archive/html/bug-libtool/2010-03/msg00017.html
+
+--- configure.orig	2026-08-31 13:49:04.000000000 +0000
++++ configure
+@@ -6335,9 +6335,12 @@ max_cmd_len=$lt_cv_sys_max_cmd_len
+ 
+ 
+ 
+-: ${CP="cp -f"}
+-: ${MV="mv -f"}
+-: ${RM="rm -f"}
++: ${CP="cp"}
++: ${MV="mv"}
++: ${RM="rm"}
++CP="${CP} -f"
++MV="${MV} -f"
++RM="${RM} -f"
+ 
+ if ( (MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
+   lt_unset=unset
