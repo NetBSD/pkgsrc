@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/09/15 14:36:32 taca Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/27 14:23:17 taca Exp $
 
-DISTNAME=	simplecov-1.3.0
+DISTNAME=	simplecov-1.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
