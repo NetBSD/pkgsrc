@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6431 2026/09/27 13:22:28 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6432 2026/09/27 13:42:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9673,3 +9673,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/p5-Getopt-Yath version 2.000011 [wen 2026-09-27]
 	Added devel/p5-App-Yath-Script version 2.000017 [wen 2026-09-27]
 	Updated devel/p5-Test2-Harness to 1.000180 [wen 2026-09-27]
+	Added textproc/ruby-caxlsx version 4.5.0 [taca 2026-09-27]
