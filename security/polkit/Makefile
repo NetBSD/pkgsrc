@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/09/02 19:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/09/27 08:24:35 nia Exp $
 
 DISTNAME=	polkit-127
 PKGREVISION=	2
@@ -32,6 +32,9 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 CPPFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS -D__EXTENSIONS__
 LDFLAGS.SunOS+=			-lsocket
+
+# FreeBSD does not have ENODATA.
+CPPFLAGS.FreeBSD+=		-DENODATA=ENOATTR
 
 .include "../../mk/bsd.prefs.mk"
 
