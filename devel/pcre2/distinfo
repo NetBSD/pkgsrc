@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2026/09/01 08:59:33 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/09/27 10:34:45 tnn Exp $
 
 BLAKE2s (pcre2-10.48.tar.gz) = fac788212a947345cb441020b11affc6a025dfb7270151359e15d81353b9442a
 SHA512 (pcre2-10.48.tar.gz) = 7682828c8bf512406f3f1bff773830416e55750bec1cf4bb39a1238f5a61026df71817dbd2dd0fcd72a76fcfb15d7b386a64739b33ad99bad77170652248fa35
 Size (pcre2-10.48.tar.gz) = 2887260 bytes
+SHA1 (patch-configure) = 9069921c895a57ad072f7c1564f34b173a144d63
