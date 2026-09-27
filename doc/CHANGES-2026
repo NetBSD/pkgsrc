@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6426 2026/09/27 10:46:38 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6427 2026/09/27 10:49:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9668,3 +9668,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/p5-Email-Sender to 2.603 [wiz 2026-09-27]
 	Updated devel/p5-Params-SomeUtil to 1.12 [wiz 2026-09-27]
 	Updated finance/p5-Finance-Quote to 1.71 [wen 2026-09-27]
+	Updated devel/p5-XS-Parse-Keyword to 0.51 [wen 2026-09-27]
