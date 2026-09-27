@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4695 2026/09/27 13:08:26 wen Exp $
+# $NetBSD: Makefile,v 1.4696 2026/09/27 13:17:57 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1443,6 +1443,7 @@ SUBDIR+=	p5-App-Cmd
 SUBDIR+=	p5-App-FatPacker
 SUBDIR+=	p5-App-Prove-Plugin-ProgressBar
 SUBDIR+=	p5-App-Prove-Plugin-ProgressBar-Each
+SUBDIR+=	p5-App-Yath-Script
 SUBDIR+=	p5-App-a2p
 SUBDIR+=	p5-App-cpanminus
 SUBDIR+=	p5-App-cpanoutdated
