@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4694 2026/09/27 13:00:27 wen Exp $
+# $NetBSD: Makefile,v 1.4695 2026/09/27 13:08:26 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1790,6 +1790,7 @@ SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Getopt-Tabular
+SUBDIR+=	p5-Getopt-Yath
 SUBDIR+=	p5-Git-CPAN-Patch
 SUBDIR+=	p5-Git-Repository
 SUBDIR+=	p5-Git-Repository-Plugin-AUTOLOAD
