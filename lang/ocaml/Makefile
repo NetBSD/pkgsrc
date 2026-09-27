@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.153 2026/02/28 15:22:00 gdt Exp $
+# $NetBSD: Makefile,v 1.154 2026/09/27 21:36:40 gdt Exp $
 
 # Please do not update to ocaml 5.x without discussion, as the
 # consensus is mostly that those versions are not yet baked, and will
 # cause hard-to-debug problems.
 DISTNAME=	ocaml-4.14.3
+PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.14/
-#EXTRACT_SUFX=	.tar.bz2
-
+MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-${PKGVERSION_NOREV:R}/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://ocaml.org/
@@ -15,6 +14,7 @@ COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake
 GNU_CONFIGURE=		yes
@@ -28,13 +28,11 @@ MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
 MKPIE_SUPPORTED=	no
 
 TEST_PROGRAM=		ocamltest
-MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
 .include "options.mk"
 .include "native.mk"
 
-# Options
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 CONFIGURE_ARGS+=	--enable-native-compiler
 BUILD_TARGET=		world.opt
@@ -64,6 +62,7 @@ CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
+# \todo Explain.
 .if ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
@@ -71,6 +70,13 @@ INSTALL_UNSTRIPPED=	yes
 INSTALLATION_DIRS=	share/doc/ocaml
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
+# These rules are imperfect, but help.  Manual attention is needed.
+PRINT_PLIST_AWK+=	{ if (/\.o$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/\.opt$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/\.cmx$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/\.cmxa$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/\.cmxs$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/^bin\/ocamlopt/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
 
 do-test:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} ${TEST_PROGRAM}
@@ -86,6 +92,10 @@ fix-darwin-install-name:
 	done
 .endif
 
+# Not in use for 4.14.
+PRINT_PLIST_AWK+=	{gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");}
+
+# zstd?
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
