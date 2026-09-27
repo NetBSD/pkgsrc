@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/09/25 09:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/27 12:57:16 wiz Exp $
 
 DISTNAME=	emacs-packages-0.13
 CATEGORIES=	editors meta-pkgs
@@ -94,7 +94,9 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode-[0-9]*:../../cad/verilog-mode
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
+.if ${EMACS_VERSION_MAJOR} == 29
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl-snapshot
+.endif
 .if ${EMACS_VERSION_MAJOR} > 30
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenicb-[0-9]*:../../chat/zenicb
 .endif
