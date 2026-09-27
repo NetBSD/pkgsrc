@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/27 12:59:08 wen Exp $
+
+BLAKE2s (Test2-Plugin-Cover-0.000030.tar.gz) = 613335c375668cdf912258ee566413e862dc7c803415520cd1b5bea652198b70
+SHA512 (Test2-Plugin-Cover-0.000030.tar.gz) = 8b99ba4b14461308384d573cc2d78bf55ba5bb92102823dccebdc1416b8a249e82d6648bb2f222ede6b9017112f4352a30124ab1a35526c2bb9dfd7c7c7cc8d5
+Size (Test2-Plugin-Cover-0.000030.tar.gz) = 46466 bytes
