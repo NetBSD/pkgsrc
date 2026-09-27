@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/09/26 21:00:02 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/27 08:36:29 tnn Exp $
 
 DISTNAME=	alertmanager-0.34.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
-FE_DISTNAME=			alertmanager-web-ui-0.34.1.tar.gz
+FE_DISTNAME=			${DISTNAME:C/[a-z]+/alertmanager-web-ui/}.tar.gz
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://github.com/prometheus/alertmanager/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}/ui/app

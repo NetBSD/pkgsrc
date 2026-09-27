@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2026/09/26 21:00:02 tnn Exp $
+# $NetBSD: Makefile,v 1.135 2026/09/27 08:36:29 tnn Exp $
 
 # Note that this package intends to track the Prometheus LTS version.
 # See: https://prometheus.io/docs/introduction/release-cycle/
@@ -12,7 +12,7 @@ HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
 
-FE_DISTNAME=			prometheus-web-ui-3.13.3.tar.gz
+FE_DISTNAME=			${DISTNAME:C/[a-z]+/prometheus-web-ui/}.tar.gz
 SITES.${FE_DISTNAME}=		https://github.com/prometheus/prometheus/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}/web/ui
 DISTFILES=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
