@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6420 2026/09/27 08:00:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6421 2026/09/27 09:33:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9662,3 +9662,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/grafana to 13.2.2 [tnn 2026-09-27]
 	Updated www/grafana-prometheus-datasource to 13.2.1 [tnn 2026-09-27]
 	Updated net/lft to 4.02 [wiz 2026-09-27]
+	Updated devel/py-flit to 4.1.0 [wiz 2026-09-27]
