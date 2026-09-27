@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.141 2026/09/26 10:50:07 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2026/09/27 11:37:27 tnn Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
 DISTNAME=	rspamd-4.2.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 

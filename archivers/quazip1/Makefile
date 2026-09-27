@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/09/06 09:15:08 markd Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/27 11:34:46 tnn Exp $
 
 DISTNAME=	quazip-1.7.2
 PKGNAME=	${DISTNAME:S/quazip/quazip1/}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stachenov/}
 GITHUB_PROJECT=	quazip

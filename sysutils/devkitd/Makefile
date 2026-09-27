@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2026/09/02 19:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/27 11:38:33 tnn Exp $
 #
 
 DISTNAME=	devkitd-jmcneill-003
 PKGNAME=	${DISTNAME:S/-jmcneill//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 #MASTER_SITES=	http://www.invisible.ca/~jmcneill/devkitd/
 

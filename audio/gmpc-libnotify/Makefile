@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2026/09/02 19:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/09/27 11:34:53 tnn Exp $
 
 DISTNAME=	gmpc-libnotify-11.8.16
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	audio
 MASTER_SITES=	https://download.sarine.nl/Programs/gmpc/11.8/
 

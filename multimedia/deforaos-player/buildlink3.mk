@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2026/09/02 19:03:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2026/09/27 11:37:46 tnn Exp $
 #
 
 BUILDLINK_TREE+=	deforaos-player
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	deforaos-player
 DEFORAOS_PLAYER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-player+=	deforaos-player>=0.1.6
-BUILDLINK_ABI_DEPENDS.deforaos-player?=	deforaos-player>=0.2.0nb21
+BUILDLINK_ABI_DEPENDS.deforaos-player?=	deforaos-player>=0.2.0nb22
 BUILDLINK_PKGSRCDIR.deforaos-player?=	../../multimedia/deforaos-player
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2026/09/02 19:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/27 11:36:08 tnn Exp $
 
 R_PKGNAME=	textshaping
 R_PKGVER=	1.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

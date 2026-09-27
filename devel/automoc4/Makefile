@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2026/09/02 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/27 11:35:26 tnn Exp $
 
 DISTNAME=	automoc4-0.9.88
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=automoc4/0.9.88/}
 DIST_SUBDIR=	automoc4

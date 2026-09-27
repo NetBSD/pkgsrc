@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2026/09/02 19:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/09/27 11:35:03 tnn Exp $
 
 DISTNAME=	quodlibet-4.6.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet

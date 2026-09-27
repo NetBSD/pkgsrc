@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/09/05 05:08:24 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/27 11:38:21 tnn Exp $
 
+PKGREVISION= 1
 .include "../../security/defguard/version.mk"
 
 DISTNAME=	defguard-proxy-${DEFGUARD_VERSION}

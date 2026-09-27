@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2026/09/02 19:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2026/09/27 11:35:27 tnn Exp $
 
 DISTNAME=	cppcheck-2.8
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2

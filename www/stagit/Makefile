@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/09/02 19:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/27 11:39:10 tnn Exp $
 
 DISTNAME=	stagit-1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://codemadness.org/releases/stagit/
 

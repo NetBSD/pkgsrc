@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/09/02 19:02:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/09/27 11:36:09 tnn Exp $
 
 DISTNAME=	fcft-3.3.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	https://codeberg.org/dnkl/fcft/releases/download/${PKGVERSION_NOREV}/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2026/09/02 19:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2026/09/27 11:37:58 tnn Exp $
 
 DISTNAME=	amule-3.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amule-project/}
 

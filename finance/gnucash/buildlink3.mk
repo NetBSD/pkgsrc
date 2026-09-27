@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/09/02 19:02:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/09/27 11:36:08 tnn Exp $
 
 BUILDLINK_TREE+=	gnucash
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnucash
 GNUCASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnucash+=	gnucash>=2.1.0
-BUILDLINK_ABI_DEPENDS.gnucash+=	gnucash>=5.16nb3
+BUILDLINK_ABI_DEPENDS.gnucash+=	gnucash>=5.16nb4
 BUILDLINK_PKGSRCDIR.gnucash?=	../../finance/gnucash
 
 .include "../../devel/glib2/buildlink3.mk"

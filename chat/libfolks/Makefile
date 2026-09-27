@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2026/09/02 19:01:08 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/09/27 11:35:12 tnn Exp $
 
 DISTNAME=	folks-0.15.5
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

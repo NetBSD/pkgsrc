@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/09/02 19:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/27 11:39:40 tnn Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	qtxdg-tools-4.4.0

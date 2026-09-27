@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/09/02 19:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/27 11:36:48 tnn Exp $
 
 DISTNAME=	Chart-cairo-1.9.4.1
 PKGNAME=	hs-${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2026/09/02 19:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/09/27 11:39:41 tnn Exp $
 
 DISTNAME=	rofi-2.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davatorium/}
 # We need to specify this way to get submodules fetched

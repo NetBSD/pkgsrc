@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2026/09/02 19:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/09/27 11:38:14 tnn Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
 PKGNAME=	cups-drivers-Magicolor5440DL-1.2.1
-PKGREVISION=	52
+PKGREVISION=	53
 CATEGORIES=	print
 MASTER_SITES=	#
 EXTRACT_SUFX=	.zip

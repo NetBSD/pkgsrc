@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2026/09/02 19:01:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/09/27 11:35:07 tnn Exp $
 
 BUILDLINK_TREE+=	openbabel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openbabel
 OPENBABEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openbabel+=	openbabel>=3.0.0nb1
-BUILDLINK_ABI_DEPENDS.openbabel?=	openbabel>=3.2.1nb2
+BUILDLINK_ABI_DEPENDS.openbabel?=	openbabel>=3.2.1nb3
 BUILDLINK_PKGSRCDIR.openbabel?=		../../biology/openbabel
 
 .include "../../graphics/cairo/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2026/09/02 19:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/09/27 11:36:58 tnn Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Python bindings for cairo
 

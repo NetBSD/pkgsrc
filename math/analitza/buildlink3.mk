@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.65 2026/09/02 19:03:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.66 2026/09/27 11:37:29 tnn Exp $
 
 BUILDLINK_TREE+=	analitza
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	analitza
 ANALITZA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.analitza+=	analitza>=25.08.2
-BUILDLINK_ABI_DEPENDS.analitza?=	analitza>=25.08.3nb4
+BUILDLINK_ABI_DEPENDS.analitza?=	analitza>=26.08.0nb1
 BUILDLINK_PKGSRCDIR.analitza?=		../../math/analitza
 
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"

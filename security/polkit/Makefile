@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2026/09/27 08:24:35 nia Exp $
+# $NetBSD: Makefile,v 1.64 2026/09/27 11:38:27 tnn Exp $
 
 DISTNAME=	polkit-127
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=polkit-org/}
 

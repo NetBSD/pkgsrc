@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2026/09/02 19:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/09/27 11:37:58 tnn Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	castor-0.9.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	net
 MASTER_SITES=	https://git.sr.ht/~julienxx/castor/archive/
 

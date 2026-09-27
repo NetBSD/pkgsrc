@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2026/09/02 19:04:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2026/09/27 11:38:50 tnn Exp $
 
 BUILDLINK_TREE+=	gspell
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gspell
 GSPELL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gspell+=	gspell>=1.0.1
-BUILDLINK_ABI_DEPENDS.gspell+=	gspell>=1.14.4nb1
+BUILDLINK_ABI_DEPENDS.gspell+=	gspell>=1.14.4nb2
 BUILDLINK_PKGSRCDIR.gspell?=	../../textproc/gspell
 
 .include "../../devel/glib2/buildlink3.mk"

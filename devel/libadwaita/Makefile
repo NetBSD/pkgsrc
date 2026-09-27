@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2026/09/02 19:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/27 11:35:39 tnn Exp $
 
 DISTNAME=	libadwaita-1.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

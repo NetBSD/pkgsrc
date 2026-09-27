@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2026/09/02 19:02:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/09/27 11:36:35 tnn Exp $
 
 BUILDLINK_TREE+=	qt6-qtpositioning
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtpositioning
 QT6_QTPOSITIONING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtpositioning+=	qt6-qtpositioning>=6.5.0
-BUILDLINK_ABI_DEPENDS.qt6-qtpositioning+=	qt6-qtpositioning>=6.11.2nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtpositioning+=	qt6-qtpositioning>=6.11.2nb2
 BUILDLINK_PKGSRCDIR.qt6-qtpositioning?=		../../geography/qt6-qtpositioning
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

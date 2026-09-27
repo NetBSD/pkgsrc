@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2026/09/02 19:02:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/27 11:36:06 tnn Exp $
 #
 
 DISTNAME=	cryptofs-0.6.0
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reboot/}
 GITHUB_PROJECT=	cryptofs

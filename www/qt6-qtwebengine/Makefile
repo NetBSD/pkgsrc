@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2026/09/06 09:04:05 markd Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/27 11:39:09 tnn Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

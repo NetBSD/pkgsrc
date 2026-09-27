@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2026/09/02 19:02:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2026/09/27 11:36:56 tnn Exp $
 
 BUILDLINK_TREE+=	p5-cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-cairo
 P5_CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-cairo+=	p5-cairo>=1.023
-BUILDLINK_ABI_DEPENDS.p5-cairo+=	p5-cairo>=1.109nb12
+BUILDLINK_ABI_DEPENDS.p5-cairo+=	p5-cairo>=1.109nb13
 BUILDLINK_PKGSRCDIR.p5-cairo?=		../../graphics/p5-cairo
 
 .include "../../graphics/cairo/buildlink3.mk"

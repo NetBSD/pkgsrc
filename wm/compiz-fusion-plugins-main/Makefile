@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2026/09/02 19:04:52 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/09/27 11:39:00 tnn Exp $
 
 PKGVER=		0.8.8
 PKGNAME=	compiz-fusion-plugins-main-${PKGVER}
 DISTNAME=	compiz-plugins-main-${PKGVER}
-PKGREVISION=	64
+PKGREVISION=	65
 CATEGORIES=	wm x11
 MASTER_SITES=	#
 

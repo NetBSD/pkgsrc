@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/09/02 19:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/27 11:35:23 tnn Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-odbc-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 odbc SQL driver
 CATEGORIES=	databases
 

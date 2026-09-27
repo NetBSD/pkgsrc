@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2026/09/02 19:04:33 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2026/09/27 11:38:40 tnn Exp $
 
 DISTNAME=	mc-4.8.33
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 # Supports HTTPS, but cert is invalid...
 MASTER_SITES=	http://ftp.midnight-commander.org/

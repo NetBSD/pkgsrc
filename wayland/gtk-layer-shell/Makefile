@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/09/02 19:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/27 11:38:58 tnn Exp $
 
 DISTNAME=	gtk-layer-shell-0.10.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wmww/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

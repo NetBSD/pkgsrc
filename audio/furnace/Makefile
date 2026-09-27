@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/02 19:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/27 11:34:51 tnn Exp $
 
 DISTNAME=	furnace-0.6.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tildearrow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

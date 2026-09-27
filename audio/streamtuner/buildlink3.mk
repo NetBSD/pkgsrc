@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.98 2026/09/02 19:01:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.99 2026/09/27 11:35:05 tnn Exp $
 
 BUILDLINK_TREE+=	streamtuner
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	streamtuner
 STREAMTUNER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.streamtuner+=	streamtuner>=0.99
-BUILDLINK_ABI_DEPENDS.streamtuner+=	streamtuner>=0.99.99nb102
+BUILDLINK_ABI_DEPENDS.streamtuner+=	streamtuner>=0.99.99nb103
 BUILDLINK_PKGSRCDIR.streamtuner?=	../../audio/streamtuner
 
 .include "../../www/curl/buildlink3.mk"

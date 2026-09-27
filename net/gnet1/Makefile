@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2026/09/02 19:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/09/27 11:38:01 tnn Exp $
 #
 
 DISTNAME=		gnet-1.1.8
 PKGNAME=		gnet1-1.1.8
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		net
 MASTER_SITES=		#
 

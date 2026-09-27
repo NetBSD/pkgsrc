@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2026/09/02 19:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/09/27 11:36:52 tnn Exp $
 
 DISTNAME=	libexif-gtk-0.5.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexif/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

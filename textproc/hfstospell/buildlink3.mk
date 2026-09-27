@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/09/02 19:04:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/09/27 11:38:50 tnn Exp $
 
 BUILDLINK_TREE+=	hfstospell
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hfstospell
 HFSTOSPELL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hfstospell+=	hfstospell>=0.5.1
-BUILDLINK_ABI_DEPENDS.hfstospell?=	hfstospell>=0.5.4nb8
+BUILDLINK_ABI_DEPENDS.hfstospell?=	hfstospell>=0.5.4nb9
 BUILDLINK_PKGSRCDIR.hfstospell?=	../../textproc/hfstospell
 
 .include "../../textproc/icu/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2026/09/02 19:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/09/27 11:36:41 tnn Exp $
 
 DISTNAME=	eimp-1.0.26
 PKGNAME=	erlang-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	eimp

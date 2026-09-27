@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/09/02 19:03:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/09/27 11:37:41 tnn Exp $
 
 BUILDLINK_TREE+=	libgravatar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgravatar
 LIBGRAVATAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgravatar+=	libgravatar>=25.08.3
-BUILDLINK_ABI_DEPENDS.libgravatar?=	libgravatar>=25.08.3nb4
+BUILDLINK_ABI_DEPENDS.libgravatar?=	libgravatar>=26.08.0nb1
 BUILDLINK_PKGSRCDIR.libgravatar?=	../../misc/libgravatar
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"

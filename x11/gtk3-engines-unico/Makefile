@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2026/09/02 19:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/09/27 11:39:17 tnn Exp $
 
 DISTNAME=	unico-1.0.2
 PKGNAME=	gtk3-engines-${DISTNAME}
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/unico/1.0/1.0.2/+download/
 

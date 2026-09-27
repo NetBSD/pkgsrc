@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2026/09/13 13:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2026/09/27 11:36:59 tnn Exp $
 
 DISTNAME=	matplotlib-3.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2026/09/06 11:03:04 markd Exp $
+# $NetBSD: Makefile,v 1.124 2026/09/27 11:37:52 tnn Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/kmix/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/09/02 19:04:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/09/27 11:38:55 tnn Exp $
 
 DISTNAME=	gkrellm-reminder-2.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL} # Upstream doesn't distribute tarballs.
 

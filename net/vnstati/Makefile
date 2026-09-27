@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/09/02 19:04:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/27 11:38:12 tnn Exp $
 # Version is in Makefile.common shared with net/vnstati
 # PKGREVISION should be bumped here
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 PKGNAME=	${DISTNAME:S/-/i-/}
 

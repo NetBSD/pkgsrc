@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/09/02 19:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/27 11:37:09 tnn Exp $
 
 DISTNAME=	fcitx5-gtk-5.1.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcitx/}
 

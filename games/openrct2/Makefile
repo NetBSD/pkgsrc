@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2026/09/02 19:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2026/09/27 11:36:26 tnn Exp $
 
 PKGNAME=	openrct2-0.4.31
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 
 DIST_SUBDIR=	openrct2-${PKGVERSION_NOREV}

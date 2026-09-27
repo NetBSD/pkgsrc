@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2026/09/02 19:04:46 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/09/27 11:38:53 tnn Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://sary.sourceforge.net/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2026/09/02 19:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/27 11:38:04 tnn Exp $
 
 DISTNAME=	kea-3.1.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

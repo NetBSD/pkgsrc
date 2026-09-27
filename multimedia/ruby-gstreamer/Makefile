@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2026/09/02 19:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/27 11:37:56 tnn Exp $
 #
 
 DISTNAME=		gstreamer-${VERSION}
 COMMENT=		Ruby binding of GStreamer 1.0.x or later
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

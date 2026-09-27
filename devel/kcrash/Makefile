@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2026/09/02 19:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/27 11:35:32 tnn Exp $
 
 DISTNAME=	kcrash-${KF5VER}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/09/02 19:05:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:39:32 tnn Exp $
 
 BUILDLINK_TREE+=	plasma6-plasma-activities-stats
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-plasma-activities-stats
 PLASMA6_PLASMA_ACTIVITIES_STATS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-plasma-activities-stats+=	plasma6-plasma-activities-stats>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-plasma-activities-stats?=	plasma6-plasma-activities-stats>=6.5.2nb4
+BUILDLINK_ABI_DEPENDS.plasma6-plasma-activities-stats?=	plasma6-plasma-activities-stats>=6.7.4nb1
 BUILDLINK_PKGSRCDIR.plasma6-plasma-activities-stats?=	../../x11/plasma6-plasma-activities-stats
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"
