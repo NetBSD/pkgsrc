@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/27 13:07:27 wen Exp $
+
+BLAKE2s (Getopt-Yath-2.000011.tar.gz) = 89b8a70d1d1f7501ef88d2e671eafd27bbeabe1fce230c37c1a3f9c9bb8e097d
+SHA512 (Getopt-Yath-2.000011.tar.gz) = db1a59d24d9d82c8f5690ed783306bc1431398ec30b820fb8bf51c35f0314ab9d65c636d77da19bc631d1febf8d5f78eda2e73f4836f24bc86b8bcb718d0cecd
+Size (Getopt-Yath-2.000011.tar.gz) = 138748 bytes
