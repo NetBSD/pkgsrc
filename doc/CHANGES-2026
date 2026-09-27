@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6439 2026/09/27 14:38:23 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6440 2026/09/27 20:52:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9693,3 +9693,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-actionmailbox72 to 7.2.4 [taca 2026-09-27]
 	Updated textproc/ruby-actiontext72 to 7.2.4 [taca 2026-09-27]
 	Updated www/ruby-rails72 to 7.2.4 [taca 2026-09-27]
+	Downgraded security/gnupg2 to 2.5.22 [wiz 2026-09-27]
