@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6419 2026/09/27 07:30:53 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.6420 2026/09/27 08:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9661,3 +9661,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/unordered-dense to 5.1.0 [ktnb 2026-09-26]
 	Updated www/grafana to 13.2.2 [tnn 2026-09-27]
 	Updated www/grafana-prometheus-datasource to 13.2.1 [tnn 2026-09-27]
+	Updated net/lft to 4.02 [wiz 2026-09-27]
