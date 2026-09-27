@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/09/12 20:33:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/09/27 09:55:17 wiz Exp $
 
-BLAKE2s (Params-SomeUtil-1.11.tar.gz) = 8f0ae8065f6bfb91f8cc500e79e30b8ecbc8d415720767de0d1469806d856ac8
-SHA512 (Params-SomeUtil-1.11.tar.gz) = 23e62eda9c4aecebb708f0c3eb92c7e79a4b51f8821cdc958c832dda60d6c48c6ae8187cbef3fc6e0158081c773891bd2db0e1febeddebcf0bbf733e1a6b6505
-Size (Params-SomeUtil-1.11.tar.gz) = 42006 bytes
+BLAKE2s (Params-SomeUtil-1.12.tar.gz) = 3ffc06176e63f646ff82db7e0be9b5da8c4f754210019f0d53c3b789de81a36f
+SHA512 (Params-SomeUtil-1.12.tar.gz) = 9e7f576f73356e7c4721d4a1c294cdf4b90bf0f8c0097d8d698201f61c0780fc9d22472801cbd2162ab2168b9b850c4a36fd196cdfda7d17968fe16155e1ce9f
+Size (Params-SomeUtil-1.12.tar.gz) = 40609 bytes
