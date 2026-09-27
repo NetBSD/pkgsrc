@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2026/09/27 11:39:23 tnn Exp $
+# $NetBSD: Makefile,v 1.104 2026/09/27 12:56:35 wiz Exp $
 
 DISTNAME=	kitty-0.49.1
 PKGREVISION=	1
@@ -20,7 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 
 USE_CXX_FEATURES+=	has_include
 
-TOOL_DEPENDS+=	nerd-fonts-NerdFontsSymbolsOnly-[0-9]*:../../fonts/nerd-fonts-NerdFontsSymbolsOnly
+TOOL_DEPENDS+=	nerd-fonts-Symbols-[0-9]*:../../fonts/nerd-fonts-Symbols
 
 # go
 MKPIE_SUPPORTED=	no
