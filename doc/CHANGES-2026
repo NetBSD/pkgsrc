@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6424 2026/09/27 09:54:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6425 2026/09/27 09:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9666,3 +9666,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-DBI to 1.654 [wiz 2026-09-27]
 	Updated time/p5-DateTime-TimeZone to 2.70 [wiz 2026-09-27]
 	Updated mail/p5-Email-Sender to 2.603 [wiz 2026-09-27]
+	Updated devel/p5-Params-SomeUtil to 1.12 [wiz 2026-09-27]
