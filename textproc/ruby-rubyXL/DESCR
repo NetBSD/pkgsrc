@@ -1,0 +1,10 @@
+rubyXL
+
+This gem supports operating on xlsx files (Open XML format).  While it is
+capable of properly parsing the entire OOXML structure, its current main
+emphasis is on reading files produced by MS Excel, making minor
+modifications to them and saving them to be opened again, while preserving
+as much of the structure as possible.
+
+Please note that proprietary binary xls format is *not* supported by this
+gem.
