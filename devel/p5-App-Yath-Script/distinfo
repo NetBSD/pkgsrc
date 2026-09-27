@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/27 13:16:12 wen Exp $
+
+BLAKE2s (App-Yath-Script-2.000017.tar.gz) = f28cde5a803d875aa80b0e3eb5cd5819b9c6fc259f33be029fee60334764a88c
+SHA512 (App-Yath-Script-2.000017.tar.gz) = 72168f58d05d4304517ff489ec39161d9d8bde0cffb036b3238f58b2633eabd1f2d8a506d2da487a8d56414e2c4b05363271e9d6f172513f2e21c4be59302fbb
+Size (App-Yath-Script-2.000017.tar.gz) = 46680 bytes
