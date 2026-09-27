@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6427 2026/09/27 10:49:14 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6428 2026/09/27 13:02:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9669,3 +9669,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Params-SomeUtil to 1.12 [wiz 2026-09-27]
 	Updated finance/p5-Finance-Quote to 1.71 [wen 2026-09-27]
 	Updated devel/p5-XS-Parse-Keyword to 0.51 [wen 2026-09-27]
+	Added devel/p5-Test2-Plugin-Cover version 0.000030 [wen 2026-09-27]
