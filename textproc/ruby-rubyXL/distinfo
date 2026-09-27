@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/27 13:44:05 taca Exp $
+
+BLAKE2s (rubyXL-3.4.38.gem) = 4fef82dae78467a4576f1f223d6c7fb9651303d7871676af4abaec4b0b346d20
+SHA512 (rubyXL-3.4.38.gem) = 3c1933c96aac5d15a4c280a7229a0ce519a64d53bdec9f22330b18533fc4aac63f13d9ebb48dbeb7d7c2613fc76bffb4ae2537e40d166a51e53789d60343413a
+Size (rubyXL-3.4.38.gem) = 2627072 bytes
