@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/27 07:30:00 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/27 07:40:47 tnn Exp $
 
 DISTNAME=	grafana-prometheus-datasource-13.2.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,7 @@ LICENSE=	gnu-agpl-v3
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
-FE_DISTNAME=			prometheus-13.1.9.linux_amd64.zip
+FE_DISTNAME=			${DISTNAME:C/^[-a-z]+/prometheus-/}.linux_amd64.zip
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://github.com/grafana/grafana-prometheus-datasource/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
