@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/09/01 08:58:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2026/09/27 21:35:03 mrg Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -7,14 +7,14 @@ NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
 
+MKPIE_SUPPORTED=	no
+
 .include "../../shells/tcsh/Makefile.common"
 
 # This package only makes sense on platforms that don't themselves ship tcsh
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
 # anyone wants.
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
-
-MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
