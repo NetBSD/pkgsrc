@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2026/08/21 20:59:04 tnn Exp $
+@comment $NetBSD: PLIST,v 1.43 2026/09/27 07:28:39 tnn Exp $
 bin/grafana
 share/grafana/conf/defaults.ini
 share/grafana/conf/ldap.toml
@@ -2477,6 +2477,7 @@ share/grafana/public/app/features/dashboard-scene/panel-edit/SaveLibraryVizPanel
 share/grafana/public/app/features/dashboard-scene/panel-edit/getPanelFrameOptions.test.ts
 share/grafana/public/app/features/dashboard-scene/panel-edit/getPanelFrameOptions.tsx
 share/grafana/public/app/features/dashboard-scene/panel-edit/interaction.ts
+share/grafana/public/app/features/dashboard-scene/panel-edit/splitter/useSnappingSplitter.test.ts
 share/grafana/public/app/features/dashboard-scene/panel-edit/splitter/useSnappingSplitter.ts
 share/grafana/public/app/features/dashboard-scene/panel-edit/testfiles/testDashboard.ts
 share/grafana/public/app/features/dashboard-scene/panel-edit/usePanelEditDirty.ts
@@ -7332,8 +7333,8 @@ share/grafana/public/build-swagger/970.c9e7d12e0715714dbc64.js.map
 share/grafana/public/build-swagger/9838.a298dde600ed0843afd2.js
 share/grafana/public/build-swagger/9838.a298dde600ed0843afd2.js.map
 share/grafana/public/build-swagger/app.100b65854c05b277e7c3.css
-share/grafana/public/build-swagger/app.a30e68bc65a83b35fe2d.js
-share/grafana/public/build-swagger/app.a30e68bc65a83b35fe2d.js.map
+share/grafana/public/build-swagger/app.5b32ec7dc61d376e182a.js
+share/grafana/public/build-swagger/app.5b32ec7dc61d376e182a.js.map
 share/grafana/public/build-swagger/assets-manifest.json
 share/grafana/public/build-swagger/b797181c93b3755f4fa1.ttf
 share/grafana/public/build-swagger/react-monaco-editor.48daebd629d506724bb7.js
@@ -7647,8 +7648,8 @@ share/grafana/public/build/5711.161f8d27852c1328bb06.js
 share/grafana/public/build/5711.161f8d27852c1328bb06.js.map
 share/grafana/public/build/5714.85124f61bc91c10a0ddd.js
 share/grafana/public/build/5714.85124f61bc91c10a0ddd.js.map
-share/grafana/public/build/5724.e60d8f37a771be7edf6d.js
-share/grafana/public/build/5724.e60d8f37a771be7edf6d.js.map
+share/grafana/public/build/5724.7cf9b0cc9189737520b8.js
+share/grafana/public/build/5724.7cf9b0cc9189737520b8.js.map
 share/grafana/public/build/5737.0c9eaf6a7c861057500f.js
 share/grafana/public/build/5737.0c9eaf6a7c861057500f.js.map
 share/grafana/public/build/5786.d092b0a11a7a5847ea41.js
@@ -7697,8 +7698,8 @@ share/grafana/public/build/6501.043378113680f35f1e24.js
 share/grafana/public/build/6501.043378113680f35f1e24.js.map
 share/grafana/public/build/6502.e9a08735c0018984e036.js
 share/grafana/public/build/6502.e9a08735c0018984e036.js.map
-share/grafana/public/build/6540.86947f7fddfeec12fdde.js
-share/grafana/public/build/6540.86947f7fddfeec12fdde.js.map
+share/grafana/public/build/6540.acf453ee99146ad315f3.js
+share/grafana/public/build/6540.acf453ee99146ad315f3.js.map
 share/grafana/public/build/6594.4dbf722e0b623ddad497.js
 share/grafana/public/build/6594.4dbf722e0b623ddad497.js.map
 share/grafana/public/build/661.378e850017c290ad26a6.js
@@ -9883,8 +9884,8 @@ share/grafana/public/build/pluginSandbox.76f7fda88ac9b9530e06.js
 share/grafana/public/build/pluginSandbox.76f7fda88ac9b9530e06.js.map
 share/grafana/public/build/react-codemirror-editor.bfe0a0424f7d45fe52c2.js
 share/grafana/public/build/react-codemirror-editor.bfe0a0424f7d45fe52c2.js.map
-share/grafana/public/build/runtime.2bdf5baddecee303ef66.js
-share/grafana/public/build/runtime.2bdf5baddecee303ef66.js.map
+share/grafana/public/build/runtime.10d657f2ef7f26b6080b.js
+share/grafana/public/build/runtime.10d657f2ef7f26b6080b.js.map
 share/grafana/public/build/statPanel.280c9ee0cecc3c4a4196.js
 share/grafana/public/build/statPanel.280c9ee0cecc3c4a4196.js.map
 share/grafana/public/build/stateTimelinePanel.b082dce6bce337581775.js
