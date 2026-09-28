@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2026/09/28 22:08:37 gdt Exp $
+
+BLAKE2s (suds-1.2.0.tar.gz) = 0ee4c2e34387f05d3014b29266b3a98cddec35ee09312377f892f3bfe4728146
+SHA512 (suds-1.2.0.tar.gz) = ca128175491d405f903c1f0e514453ed0f1e844d9a844f4ecc1a71ebe1f360bb212aa38187e1c24fdb58fa9bca7c414161c1aa595a0a6e896a4a7278de994634
+Size (suds-1.2.0.tar.gz) = 301246 bytes
