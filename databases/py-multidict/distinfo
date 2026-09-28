@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2026/09/26 10:18:39 wiz Exp $
+$NetBSD: distinfo,v 1.42 2026/09/28 15:45:34 wiz Exp $
 
-BLAKE2s (multidict-6.9.1.tar.gz) = 02c8084eed1372ed93a3c2908afb2ea84d3b73d1e765896103599d067ae8a775
-SHA512 (multidict-6.9.1.tar.gz) = d72f59c152abb0cae09400ece185908295d6ad7dd682eaf7710b7cc918ceb41b94b001aa6e35cf35bd24c9a4418c0d99f79f29ef1e7b9754317f3eb56e08b14b
-Size (multidict-6.9.1.tar.gz) = 182404 bytes
-SHA1 (patch-setup.py) = e34afa517e8de912c2f0ce37243a7c8b46e1dd2a
+BLAKE2s (multidict-7.0.0.tar.gz) = f905986e09214d856227b39336a91d79bed04304f26dec00467a9f7227f69cf5
+SHA512 (multidict-7.0.0.tar.gz) = ffbf1709d71629e8f09311164b1c0f5c4d6183227df873636404a613ba42ffc5398dfc76f81e8b1286eec7f087cc5a0757aa7ad0f9a4a393164cf4cc72044e47
+Size (multidict-7.0.0.tar.gz) = 280561 bytes
+SHA1 (patch-setup.py) = afb1fa30f8381dfdb5426ddcb441ed438426e2ea
