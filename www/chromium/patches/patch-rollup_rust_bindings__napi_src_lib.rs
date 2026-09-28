@@ -1,4 +1,4 @@
-$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.12 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.13 2026/09/28 07:20:17 tnn Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -11,7 +11,7 @@ $NetBSD: patch-rollup_rust_bindings__napi_src_lib.rs,v 1.12 2026/09/22 13:41:29 
    not(all(target_os = "linux", target_env = "ohos")),
    not(all(target_os = "freebsd", target_arch = "aarch64")),
 +  not(all(target_os = "openbsd", target_arch = "aarch64")),
-+  not(all(target_os = "netbsd", target_arch = "evbarm")),
++  not(all(target_os = "netbsd", target_arch = "aarch64")),
    not(debug_assertions)
  ))]
  #[global_allocator]
