@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/18 11:43:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/28 14:29:29 wiz Exp $
+share/fonts/X11/TTF/Noto-COLRv1-emojicompat.ttf
+share/fonts/X11/TTF/Noto-COLRv1-noflags.ttf
+share/fonts/X11/TTF/Noto-COLRv1.ttf
+share/fonts/X11/TTF/NotoColorEmoji-emojicompat.ttf
+share/fonts/X11/TTF/NotoColorEmoji-flagsonly.ttf
+share/fonts/X11/TTF/NotoColorEmoji-noflags.ttf
 share/fonts/X11/TTF/NotoColorEmoji.ttf
+share/fonts/X11/TTF/NotoColorEmoji_WindowsCompatible.ttf
