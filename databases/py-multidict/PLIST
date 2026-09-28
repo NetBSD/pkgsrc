@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/13 11:09:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/09/28 15:45:34 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/multidict/__init__.pxd
 ${PYSITELIB}/multidict/__init__.py
 ${PYSITELIB}/multidict/__init__.pyc
 ${PYSITELIB}/multidict/__init__.pyo
@@ -17,4 +18,8 @@ ${PYSITELIB}/multidict/_multidict.so
 ${PYSITELIB}/multidict/_multidict_py.py
 ${PYSITELIB}/multidict/_multidict_py.pyc
 ${PYSITELIB}/multidict/_multidict_py.pyo
+${PYSITELIB}/multidict/_testcapi.so
+${PYSITELIB}/multidict/_testcyapi.so
+${PYSITELIB}/multidict/multidict_capi.h
+${PYSITELIB}/multidict/multidict_capi_struct.h
 ${PYSITELIB}/multidict/py.typed
