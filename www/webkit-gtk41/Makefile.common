@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2026/09/28 08:02:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2026/09/28 12:57:05 gdt Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -20,10 +20,11 @@ TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 TOOL_DEPENDS+=	unifdef-[0-9]*:../../devel/unifdef
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++23
+# Upstream specifically requires gcc>=13, but the compiler framework
+# requires >=14 for c++23, so that is omitted.
 # https://github.com/WebKit/WebKit/pull/67753/changes/1fec4985d1794c782ff12e2aefc088b76023ba16
-GCC_REQD+=		13
 USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # Avoid million warnings
