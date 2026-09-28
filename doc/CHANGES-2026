@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6452 2026/09/28 13:10:51 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6453 2026/09/28 13:11:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9706,3 +9706,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-ubx2 to 1.3.8 [gdt 2026-09-28]
 	Updated devel/carwash to 0.4.1 [pin 2026-09-28]
 	Updated devel/feluda to 1.17.0 [pin 2026-09-28]
+	Updated editors/redox to 0.9.1 [pin 2026-09-28]
