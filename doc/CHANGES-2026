@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6478 2026/09/28 15:48:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6479 2026/09/28 15:49:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9732,3 +9732,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-meson_python to 0.22.0 [wiz 2026-09-28]
 	Updated databases/py-multidict to 7.0.0 [wiz 2026-09-28]
 	Updated devel/py-pdm_backend to 2.4.10 [wiz 2026-09-28]
+	Updated graphics/py-pillow_heif to 1.8.0 [wiz 2026-09-28]
