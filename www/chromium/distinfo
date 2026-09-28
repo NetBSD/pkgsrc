@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2026/09/28 07:20:16 tnn Exp $
+$NetBSD: distinfo,v 1.61 2026/09/28 07:27:17 tnn Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -1604,7 +1604,7 @@ SHA1 (patch-media_capture_video_video__capture__buffer__tracker__factory__impl.c
 SHA1 (patch-media_capture_video_video__capture__device__client.cc) = b06ffccb3124f2b0805a0988ddaa0eaca73b7434
 SHA1 (patch-media_cdm_cdm__paths__unittest.cc) = c97dcb8d083372283454508ac5b9837ece4c1e88
 SHA1 (patch-media_cdm_library__cdm_cdm__paths.gni) = f7d82b1377a62f6c2b22c626387623179227f75d
-SHA1 (patch-media_ffmpeg_scripts_build__ffmpeg.py) = 9097f666f401472aecf3bc8ec0f697e01ae090b2
+SHA1 (patch-media_ffmpeg_scripts_build__ffmpeg.py) = cbf0caeb5b70d93dcdd6c53d4cd023848d99a737
 SHA1 (patch-media_ffmpeg_scripts_robo__lib_config.py) = b7bfabccf3d1bf9a86a64fa79fa9e7cb75fca819
 SHA1 (patch-media_gpu_chromeos_gl__image__processor__backend.cc) = 3b5e55db0093433c21e119ea44e047d266fa0974
 SHA1 (patch-media_gpu_chromeos_libyuv__image__processor__backend.cc) = f3c822cae876e565cb475558be5c3c316b7954e3
