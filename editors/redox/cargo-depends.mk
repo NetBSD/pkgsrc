@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2026/09/18 10:01:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2026/09/28 13:11:31 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -63,7 +63,7 @@ CARGO_CRATE_DEPENDS+=	log-0.4.34
 CARGO_CRATE_DEPENDS+=	memchr-2.8.3
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.9.1
-CARGO_CRATE_DEPENDS+=	minui-0.7.5
+CARGO_CRATE_DEPENDS+=	minui-0.8.1
 CARGO_CRATE_DEPENDS+=	mio-1.2.3
 CARGO_CRATE_DEPENDS+=	moxcms-0.8.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
