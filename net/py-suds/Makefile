@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/09/28 22:08:37 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/28 22:32:31 gdt Exp $
 
 # https://github.com/suds-community/suds/archive/refs/tags/v1.2.0.tar.gz
 # also
@@ -16,6 +16,8 @@ COMMENT=	Lightweight SOAP client (community fork)
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
