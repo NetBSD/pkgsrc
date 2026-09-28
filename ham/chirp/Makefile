@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2026/09/28 22:14:15 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2026/09/28 22:21:18 gdt Exp $
 
 VERSION=	20260904
 DISTNAME=	chirp-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 # As of sometime after 20251128 and before 20260508, the distfile is not
 # fetchable by ftp/wget/curl.
