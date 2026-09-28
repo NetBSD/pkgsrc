@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1667 2026/09/25 13:30:30 drixter Exp $
+# $NetBSD: Makefile,v 1.1668 2026/09/28 22:09:13 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -816,6 +816,7 @@ SUBDIR+=	py-socksipy-branch
 SUBDIR+=	py-softlayer
 SUBDIR+=	py-stone
 SUBDIR+=	py-subunit
+SUBDIR+=	py-suds
 SUBDIR+=	py-test-remotedata
 SUBDIR+=	py-tldextract
 SUBDIR+=	py-tweepy
