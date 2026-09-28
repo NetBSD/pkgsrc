@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.78 2026/09/04 13:08:27 gdt Exp $
+# $NetBSD: Makefile,v 1.79 2026/09/28 22:14:15 gdt Exp $
 
 VERSION=	20260904
 DISTNAME=	chirp-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	ham
 # As of sometime after 20251128 and before 20260508, the distfile is not
 # fetchable by ftp/wget/curl.
-# Reported upstream by email to their list 20260508 and 20260515, but
-# this report did not reach the mailinglist.
+# Reported upstream by to the chirp list
+#   20260508
+#   20260515
+# but this report seems not to have reached the list.
 #
 # The workaround is to fetch manually and then:
 #   make upload-distfiles
@@ -36,12 +39,12 @@ USE_LANGUAGES=	#none
 .include "../../lang/python/pyversion.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-# setup.py:install_requires
+# setup.py:install_requires (generally without a version)
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-yattag>=1.15.1:../../textproc/py-yattag
+DEPENDS+=	${PYPKGPREFIX}-suds>=1.0:../../net/py-suds
+DEPENDS+=	${PYPKGPREFIX}-lark>=1.0:../../lang/py-lark
 
 # setup.py:extras_require
 DEPENDS+=	${PYPKGPREFIX}-wxPython>=4:../../x11/py-wxPython
