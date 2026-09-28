@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/11/04 17:37:20 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2026/09/28 19:01:30 wiz Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMPKGS+=	aaa_base-84.87+git20180409.04c9dae-3.57.1.${SUSE_ARCH}
 RPMPKGS+=	bash-4.4-150400.25.22.${SUSE_ARCH}
@@ -25,6 +25,7 @@ RPMPKGS+=	libreadline6-6.3-bp155.2.6.${SUSE_ARCH}
 RPMPKGS+=	libreadline7-7.0-150400.25.22.${SUSE_ARCH}
 RPMPKGS+=	libselinux1-3.1-150400.1.69.${SUSE_ARCH}
 RPMPKGS+=	libstdc++6-11.3.0+git1637-150000.1.11.2.${SUSE_ARCH}
+RPMPKGS+=	libstdc++6-12.2.1+git416-150000.1.7.1.${SUSE_ARCH}
 RPMPKGS+=	libuuid1-2.37.2-150400.8.3.1.${SUSE_ARCH}
 RPMPKGS+=	libz1-1.2.11-150000.3.33.1.${SUSE_ARCH}
 RPMPKGS+=	net-tools-2.0+git20170221.479bb4a-3.11.${SUSE_ARCH}
