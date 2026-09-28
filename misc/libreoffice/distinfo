@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.177 2026/09/22 08:33:59 ryoon Exp $
+$NetBSD: distinfo,v 1.178 2026/09/28 19:25:59 tnn Exp $
 
 BLAKE2s (libreoffice/33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip) = c78072514f9612f642bd4a340bb9cf8e19859c6641d18abc7e8d68b376358a82
 SHA512 (libreoffice/33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip) = f5628efe484b6220d0bf8177aa826c28e7a36f0bcca2019e057c20f5915d579057f931377ec686dbfeebef05fcf6453472be77a21ef282bd9d8d0eaf62549a49
@@ -193,6 +193,7 @@ SHA1 (patch-sal_osl_unx_process.cxx) = e4340ce29c3ebc619ed08dfb9ad2943fd025f89e
 SHA1 (patch-sal_rtl_cipher.cxx) = ab876ff2d23d5e200eec6798803a62612e18f07a
 SHA1 (patch-sc_source_core_tool_math.cxx) = c8beacbc7f17d603d47206e0965c83960a5eec1f
 SHA1 (patch-slideshow_source_engine_box2dtools.cxx) = 3eb386143ae675b8588d4360b46028e47159e225
+SHA1 (patch-solenv_gbuild_UnpackedTarball.mk) = 7f8056de0bd55bf1ad2f464f5724bcfe76188009
 SHA1 (patch-solenv_gbuild_platform_NETBSD_AARCH64_GCC.mk) = eda8dbd0e9394b2dde2f98c0df39e7e9888f49dc
 SHA1 (patch-sw_source_core_bastyp_calc.cxx) = 317f206500c88aea4a645a6f1dea8e0a837ad581
 SHA1 (patch-sw_source_uibase_config_usrpref.cxx) = 0c49f87ff83807d74fe06a2238a8055ec2d67bd7
