@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.175 2026/09/27 11:36:42 tnn Exp $
+# $NetBSD: Makefile,v 1.176 2026/09/28 14:20:57 wiz Exp $
 
-DISTNAME=	geeqie-3.1
-PKGREVISION=	4
+DISTNAME=	geeqie-3.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,9 +21,6 @@ LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
 MESON_ARGS+=	-Ddoxygen=disabled
 MESON_ARGS+=	-Dpandoc=disabled
-# Do not build html documentation.
-# \todo Consider depending on yelp instead
-MESON_ARGS+=	-Dyelp-build=disabled
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
