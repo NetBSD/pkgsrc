@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/09/24 13:10:38 gdt Exp $
+$NetBSD: distinfo,v 1.11 2026/09/28 11:52:28 gdt Exp $
 
-BLAKE2s (pyubx2-1.3.7.tar.gz) = 5a30a94c8dda3a1f53ec596ee6cbde141d0eb94777d5a22ee0e824e7b27cf691
-SHA512 (pyubx2-1.3.7.tar.gz) = 7c5321e2c84ebf8c4977a7dd59a5f7b09710cc4ba63f70025a1f5bfe184c464113d8093fc9373cea4e410a9c9ae96a4ce91f0ce23144836139c4beaa112f8760
-Size (pyubx2-1.3.7.tar.gz) = 1435514 bytes
+BLAKE2s (pyubx2-1.3.8.tar.gz) = 47af8f7c35922666c8732f20bbd7887369190604e4cef80ff21c3ada74b414e0
+SHA512 (pyubx2-1.3.8.tar.gz) = 0d664c40d3d602830b74a914cb79eb63ca56edf260426e4524a250f40ba0e63a8cdd03b65a1ed6b93aaf7408a7572ef366a4aa971738060e754d9f448991c91f
+Size (pyubx2-1.3.8.tar.gz) = 1436230 bytes
