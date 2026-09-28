@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.15 2026/09/13 10:40:58 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.16 2026/09/28 14:24:21 wiz Exp $
 
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.2.1.mod
 GO_MODULE_FILES+=	charm.land/bubbles/v2/@v/v2.2.1.zip
@@ -14,8 +14,8 @@ GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/atotto/clipboard/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.3.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.4.3.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260906173415-0277a179edd9.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260906173415-0277a179edd9.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260910203606-6c9e17dc7a16.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/ultraviolet/@v/v0.0.0-20260910203606-6c9e17dc7a16.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.8.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.11.8.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.2.mod
@@ -32,10 +32,10 @@ GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.8.0.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.8.0.zip
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.4.1.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.29.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.29.zip
-GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.14.mod
-GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.14.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.30.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.30.zip
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.15.mod
+GO_MODULE_FILES+=	github.com/mattn/go-shellwords/@v/v1.0.15.zip
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
@@ -46,8 +46,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.12.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.12.1.zip
 GO_MODULE_FILES+=	github.com/tailscale/peercred/@v/v0.0.0-20250107143737-35a0c7bd7edc.mod
 GO_MODULE_FILES+=	github.com/tailscale/peercred/@v/v0.0.0-20250107143737-35a0c7bd7edc.zip
-GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v1.0.0.mod
-GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v1.2.0.mod
+GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v1.1.2.mod
 GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v1.1.2.zip
 GO_MODULE_FILES+=	go.yaml.in/yaml/v3/@v/v3.0.5.mod
