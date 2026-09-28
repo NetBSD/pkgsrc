@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28022 2026/09/27 20:53:37 wiz Exp $
+$NetBSD: TODO,v 1.28023 2026/09/28 03:29:59 fox Exp $
 
 Suggested new packages
 ======================
@@ -1141,7 +1141,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
-	o py-Glances-4.5.7
 	o py-HappyDoc-3.0
 	o py-JWT-2.15.0
 	o py-MyHDL-0.11
