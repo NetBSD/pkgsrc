@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6487 2026/09/28 16:57:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6488 2026/09/28 19:01:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9741,3 +9741,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 2.10 [wiz 2026-09-28]
 	Updated devel/py-urwid to 4.1.7 [wiz 2026-09-28]
 	Updated security/gnupg2 to 2.5.24nb1 [wiz 2026-09-28]
+	Updated emulators/suse15_base to 15.5nb2 [wiz 2026-09-28]
