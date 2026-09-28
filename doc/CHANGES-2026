@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6467 2026/09/28 15:04:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6468 2026/09/28 15:25:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9721,3 +9721,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-vcs-versioning to 2.5.0 [wiz 2026-09-28]
 	Updated devel/py-astroid to 4.3.2 [wiz 2026-09-28]
 	Updated devel/py-cattrs to 26.2.1 [wiz 2026-09-28]
+	Updated devel/py-confuse to 2.3.0 [wiz 2026-09-28]
