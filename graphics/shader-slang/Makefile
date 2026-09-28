@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/09/26 01:02:35 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/28 14:03:47 ktnb Exp $
 
 DISTNAME=		slang-2026.18.3
 PKGNAME=		shader-${DISTNAME}
@@ -50,7 +50,9 @@ CMAKE_CONFIGURE_ARGS+=	-DSLANG_ENABLE_DXIL=OFF
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}/cmake-pkgsrc-build
 .endif
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/cmake-pkgsrc-build/generators/Release/lib:${WRKSRC}/cmake-pkgsrc-build/Release/lib
+BUILD_LIBS=	${WRKSRC}/cmake-pkgsrc-build/generators/Release/lib:${WRKSRC}/cmake-pkgsrc-build/Release/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${BUILD_LIBS}
+INSTALL_ENV+=	LD_LIBRARY_PATH=${BUILD_LIBS}
 
 post-extract:
 	${MKDIR} ${WRKDIR}/luadep
