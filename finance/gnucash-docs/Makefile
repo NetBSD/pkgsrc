@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2026/09/28 08:35:43 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2026/09/28 09:03:24 wiz Exp $
 
 DISTNAME=		gnucash-docs-5.17
 CATEGORIES=		finance
@@ -9,7 +9,7 @@ HOMEPAGE=		https://www.gnucash.org/
 COMMENT=		Documentation for GnuCash - personal double-entry accounting program
 LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
 
-DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
+DEPENDS+=		yelp-[0-9]*:../../misc/yelp
 
 USE_TOOLS+=		bash
 
