@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6443 2026/09/28 03:35:09 fox Exp $
+$NetBSD: CHANGES-2026,v 1.6444 2026/09/28 08:35:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9697,3 +9697,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/lft to 4.03 [wiz 2026-09-27]
 	Updated sysutils/py-Glances to 4.5.7 [fox 2026-09-28]
 	Updated security/wolfssl to 5.9.4 [fox 2026-09-28]
+	Updated finance/gnucash to 5.17 [wiz 2026-09-28]
