@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/08/07 08:29:03 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/09/28 16:50:59 wiz Exp $
 
-DISTNAME=	soupsieve-2.9.2
+DISTNAME=	soupsieve-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soupsieve/}
@@ -19,9 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-# as of 2.8.1
-# 385 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
