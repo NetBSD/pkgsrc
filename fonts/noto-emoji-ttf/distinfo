@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/09/17 08:08:42 wiz Exp $
+$NetBSD: distinfo,v 1.11 2026/09/28 14:29:29 wiz Exp $
 
-BLAKE2s (noto-emoji-2.051.tar.gz) = 43b171d02bdc3021dcebedac9c28daacd9ea427b0c2c9d6724c46d5cfa320871
-SHA512 (noto-emoji-2.051.tar.gz) = 3882f7e8edfbbecd13fb9aca7cab8b97e6cc041554839692cdd69e97e46dd8331dd373e56f974297255a6f3cccb0b760f13310e4982ccec217f31ce9e0b814e0
-Size (noto-emoji-2.051.tar.gz) = 210291735 bytes
+BLAKE2s (noto-emoji-2.051.0.0.20260924.tar.gz) = 93af9f32f7a0389565485d91322810b2d30451d12a8ca0d32a9684b9a978107c
+SHA512 (noto-emoji-2.051.0.0.20260924.tar.gz) = 226eca5b1dba4212bf6de62a2a78f152486e48192a3962fe2d460f6f9a9f238943269fc3ee204c110c5349c67a6b4f286fd52a575fe195b8bfffb5e351c51e28
+Size (noto-emoji-2.051.0.0.20260924.tar.gz) = 1204181917 bytes
