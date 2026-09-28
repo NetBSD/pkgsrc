@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.690 2026/09/12 16:01:03 pin Exp $
+# $NetBSD: Makefile,v 1.691 2026/09/28 09:03:25 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -429,7 +429,7 @@ SUBDIR+=	xtail
 SUBDIR+=	xtend
 SUBDIR+=	xygrib
 SUBDIR+=	xygrib-devel
-SUBDIR+=	yelp3
+SUBDIR+=	yelp
 SUBDIR+=	yrolo
 SUBDIR+=	zellij
 SUBDIR+=	zorro

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2026/05/15 11:52:22 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2026/09/28 09:03:24 wiz Exp $
 
 PKGNAME=	gnome-3.38.1
 PKGREVISION=	1
@@ -48,7 +48,7 @@ DEPENDS+=	mutter-[0-9]*:../../wm/mutter
 DEPENDS+=	nautilus-[0-9]*:../../sysutils/nautilus
 DEPENDS+=	orca-[0-9]*:../../misc/orca
 #DEPENDS+=	totem-[0-9]*:../../multimedia/totem
-DEPENDS+=	yelp-[0-9]*:../../misc/yelp3
+DEPENDS+=	yelp-[0-9]*:../../misc/yelp
 
 # Some missing applications that might make sense later:
 
