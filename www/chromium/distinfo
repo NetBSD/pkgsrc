@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2026/09/22 13:41:17 kikadf Exp $
+$NetBSD: distinfo,v 1.60 2026/09/28 07:20:16 tnn Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -1604,7 +1604,7 @@ SHA1 (patch-media_capture_video_video__capture__buffer__tracker__factory__impl.c
 SHA1 (patch-media_capture_video_video__capture__device__client.cc) = b06ffccb3124f2b0805a0988ddaa0eaca73b7434
 SHA1 (patch-media_cdm_cdm__paths__unittest.cc) = c97dcb8d083372283454508ac5b9837ece4c1e88
 SHA1 (patch-media_cdm_library__cdm_cdm__paths.gni) = f7d82b1377a62f6c2b22c626387623179227f75d
-SHA1 (patch-media_ffmpeg_scripts_build__ffmpeg.py) = 73f34c2f12065e7a4a548e2f2576dc128a039d70
+SHA1 (patch-media_ffmpeg_scripts_build__ffmpeg.py) = 9097f666f401472aecf3bc8ec0f697e01ae090b2
 SHA1 (patch-media_ffmpeg_scripts_robo__lib_config.py) = b7bfabccf3d1bf9a86a64fa79fa9e7cb75fca819
 SHA1 (patch-media_gpu_chromeos_gl__image__processor__backend.cc) = 3b5e55db0093433c21e119ea44e047d266fa0974
 SHA1 (patch-media_gpu_chromeos_libyuv__image__processor__backend.cc) = f3c822cae876e565cb475558be5c3c316b7954e3
@@ -1766,8 +1766,8 @@ SHA1 (patch-remoting_host_webauthn_remote__webauthn__main.cc) = d91ee4ceb569a5e8
 SHA1 (patch-remoting_protocol_webrtc__transport.cc) = 6be6e37347bdae4b365fdcdd60565ef46c8f4c32
 SHA1 (patch-remoting_protocol_webrtc__video__stream.cc) = 7be343d28af4aa776846822b3485e5e9f12793d7
 SHA1 (patch-remoting_signaling_ftl__host__device__id__provider.cc) = 468b2affd23a0a30af2a63d76a3bfbafe2169edc
-SHA1 (patch-rollup_rust_bindings__napi_Cargo.toml) = af46b5c65dcbd0714ccca2782988f89e4a8d175d
-SHA1 (patch-rollup_rust_bindings__napi_src_lib.rs) = 930763c6c3725b129b395a2a9d560c7c7996cba4
+SHA1 (patch-rollup_rust_bindings__napi_Cargo.toml) = 026582aa085d7a379dde3bceb496cb3f027ac10c
+SHA1 (patch-rollup_rust_bindings__napi_src_lib.rs) = eac53fcf867a908597bc6bed7e4dfc1a64d2938f
 SHA1 (patch-sandbox_BUILD.gn) = 870d879720dff5ecf34c1dbe77ec8bb1a7d2af65
 SHA1 (patch-sandbox_features.gni) = 00a58cedb89dbaf8fca390f250fae2afd20e77ae
 SHA1 (patch-sandbox_linux_BUILD.gn) = fffb5b4535d76cb64337d6997bfe9c8c10f1ab9f

@@ -1,4 +1,4 @@
-$NetBSD: patch-rollup_rust_bindings__napi_Cargo.toml,v 1.12 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-rollup_rust_bindings__napi_Cargo.toml,v 1.13 2026/09/28 07:20:17 tnn Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
@@ -20,7 +20,7 @@ $NetBSD: patch-rollup_rust_bindings__napi_Cargo.toml,v 1.12 2026/09/22 13:41:29 
  # 	)
  # )
 -[target.'cfg(any(all(target_os = "linux", not(target_arch = "loongarch64"), not(all(target_arch = "riscv64", target_env = "musl")), not(target_env = "ohos")), all(target_os = "freebsd", not(target_arch = "aarch64"))))'.dependencies]
-+[target.'cfg(any(all(target_os = "linux", not(target_arch = "loongarch64"), not(all(target_arch = "riscv64", target_env = "musl")), not(target_env = "ohos")), all(target_os = "openbsd", not(target_arch = "aarch64")), all(target_os = "freebsd", not(target_arch = "aarch64")), all(target_os = "netbsd", not(target_arch = "evbarm"))))'.dependencies]
++[target.'cfg(any(all(target_os = "linux", not(target_arch = "loongarch64"), not(all(target_arch = "riscv64", target_env = "musl")), not(target_env = "ohos")), all(target_os = "openbsd", not(target_arch = "aarch64")), all(target_os = "freebsd", not(target_arch = "aarch64")), all(target_os = "netbsd", not(target_arch = "aarch64"))))'.dependencies]
  mimalloc-safe = { version = "0.1.58", features = ["local_dynamic_tls"] }
  
  # Disable architecture specific optimizations on aarch64 platforms
