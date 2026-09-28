@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28029 2026/09/28 14:40:46 wiz Exp $
+$NetBSD: TODO,v 1.28030 2026/09/28 14:41:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1339,7 +1339,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.1.1
-	o tree-sitter-php-0.25.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o ttftot42-0.4.1
