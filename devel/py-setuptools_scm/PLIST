@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/07/22 08:14:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/09/28 16:49:44 wiz Exp $
 bin/setuptools-scm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -37,6 +37,9 @@ ${PYSITELIB}/setuptools_scm/_integration/deprecation.pyo
 ${PYSITELIB}/setuptools_scm/_integration/egg_info.py
 ${PYSITELIB}/setuptools_scm/_integration/egg_info.pyc
 ${PYSITELIB}/setuptools_scm/_integration/egg_info.pyo
+${PYSITELIB}/setuptools_scm/_integration/file_finders.py
+${PYSITELIB}/setuptools_scm/_integration/file_finders.pyc
+${PYSITELIB}/setuptools_scm/_integration/file_finders.pyo
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.py
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyc
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyo
