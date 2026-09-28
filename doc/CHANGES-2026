@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6441 2026/09/27 20:58:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6442 2026/09/28 03:29:59 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9695,3 +9695,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-rails72 to 7.2.4 [taca 2026-09-27]
 	Downgraded security/gnupg2 to 2.5.22 [wiz 2026-09-27]
 	Updated net/lft to 4.03 [wiz 2026-09-27]
+	Updated sysutils/py-Glances to 4.5.7 [fox 2026-09-28]
