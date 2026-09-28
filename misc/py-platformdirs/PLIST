@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/13 09:30:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/09/28 15:51:48 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/platformdirs/__init__.py
 ${PYSITELIB}/platformdirs/__init__.pyc
@@ -18,10 +19,19 @@ ${PYSITELIB}/platformdirs/android.pyo
 ${PYSITELIB}/platformdirs/api.py
 ${PYSITELIB}/platformdirs/api.pyc
 ${PYSITELIB}/platformdirs/api.pyo
+${PYSITELIB}/platformdirs/ios.py
+${PYSITELIB}/platformdirs/ios.pyc
+${PYSITELIB}/platformdirs/ios.pyo
 ${PYSITELIB}/platformdirs/macos.py
 ${PYSITELIB}/platformdirs/macos.pyc
 ${PYSITELIB}/platformdirs/macos.pyo
 ${PYSITELIB}/platformdirs/py.typed
+${PYSITELIB}/platformdirs/pytest_plugin.py
+${PYSITELIB}/platformdirs/pytest_plugin.pyc
+${PYSITELIB}/platformdirs/pytest_plugin.pyo
+${PYSITELIB}/platformdirs/testing.py
+${PYSITELIB}/platformdirs/testing.pyc
+${PYSITELIB}/platformdirs/testing.pyo
 ${PYSITELIB}/platformdirs/unix.py
 ${PYSITELIB}/platformdirs/unix.pyc
 ${PYSITELIB}/platformdirs/unix.pyo
