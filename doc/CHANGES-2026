@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6457 2026/09/28 14:24:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6458 2026/09/28 14:29:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9711,3 +9711,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.3.8 [ktnb 2026-09-28]
 	Updated graphics/geeqie to 3.2 [wiz 2026-09-28]
 	Updated devel/jjui to 0.10.11 [wiz 2026-09-28]
+	Updated fonts/noto-emoji-ttf to 2.051.0.0.20260924 [wiz 2026-09-28]
