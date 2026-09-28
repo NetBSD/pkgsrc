@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6449 2026/09/28 11:26:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6450 2026/09/28 11:52:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9703,3 +9703,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed misc/yelp3 successor misc/yelp [wiz 2026-09-28]
 	Updated sysutils/mirador to 1.19.1 [pin 2026-09-28]
 	Removed games/gnuchess4 successor games/gnuchess [wiz 2026-09-28]
+	Updated geography/py-ubx2 to 1.3.8 [gdt 2026-09-28]
