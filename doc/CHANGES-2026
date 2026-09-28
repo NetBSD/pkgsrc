@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6476 2026/09/28 15:41:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6477 2026/09/28 15:45:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9730,3 +9730,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mako to 1.4.3 [wiz 2026-09-28]
 	Updated textproc/py-markdown to 3.11 [wiz 2026-09-28]
 	Updated devel/py-meson_python to 0.22.0 [wiz 2026-09-28]
+	Updated databases/py-multidict to 7.0.0 [wiz 2026-09-28]
