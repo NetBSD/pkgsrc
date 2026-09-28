@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/23 09:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/28 14:56:48 wiz Exp $
 
-DISTNAME=	vcs_versioning-2.4.1
+DISTNAME=	vcs_versioning-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcs_versioning/}
@@ -29,8 +29,8 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
 .endif
 
-# as of 2.3.1
-# 1 failed, 647 passed, 9 skipped
+# as of 2.5.0
+# 1 failed, 721 passed, 9 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
