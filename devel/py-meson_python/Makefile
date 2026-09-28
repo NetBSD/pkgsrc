@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/23 13:02:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/28 15:41:50 wiz Exp $
 
-DISTNAME=	meson_python-0.21.1
+DISTNAME=	meson_python-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson_python/}
@@ -17,7 +17,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.3:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-TEST_DEPENDS+=	git-base>=0:../../devel/git-base
+TEST_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
+
+USE_TOOLS+=	git:test
+
+# as of 0.22.0
+# 22 failed, 123 passed, 14 skipped, 9 errors
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
