@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2024/02/01 09:45:59 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2026/09/28 09:03:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
 PKG_SUPPORTED_OPTIONS=	doc flac manual ogg opus speex wavpack
@@ -9,7 +9,7 @@ PLIST_VARS+=		man
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
+DEPENDS+=		yelp-[0-9]*:../../misc/yelp
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
