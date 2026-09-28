@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2026/09/09 03:54:39 charlotte Exp $
+# $NetBSD: Makefile,v 1.571 2026/09/28 11:26:53 wiz Exp $
 #
 
 COMMENT=	Games
@@ -183,7 +183,6 @@ SUBDIR+=	gnome-nibbles
 SUBDIR+=	gnome-sudoku
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
-SUBDIR+=	gnuchess4
 SUBDIR+=	gnugo
 SUBDIR+=	gogui
 SUBDIR+=	golddig
