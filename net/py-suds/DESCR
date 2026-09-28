@@ -1,0 +1,9 @@
+Suds is a lightweight SOAP-based web service client for Python
+licensed under LGPL.
+
+Although the original `suds` package stopped releasing versions after
+`0.4`, many (but not all) other open source projects moved to a
+maintained fork known as "suds-jurko". This is a community fork of
+that fork that is releasing packages under the main `suds` package
+name (and `suds-community` for consistency until version 2.x of this
+package).
