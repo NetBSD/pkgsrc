@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2026/09/04 05:13:54 adam Exp $
+# $NetBSD: Makefile,v 1.56 2026/09/28 16:49:44 wiz Exp $
 
-DISTNAME=	setuptools_scm-10.2.3
+DISTNAME=	setuptools_scm-10.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-vcs-versioning>=2.3.2:../../devel/py-vcs-versioning
+DEPENDS+=	${PYPKGPREFIX}-vcs-versioning>=2.5.0:../../devel/py-vcs-versioning
 TEST_DEPENDS+=	git-base>=0:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
@@ -29,8 +29,8 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
 .endif
 
-# test status as of 10.0.5
-# 2 failed, 134 passed, 6 skipped
+# test status as of 10.3.4
+# 4 failed, 199 passed, 8 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
