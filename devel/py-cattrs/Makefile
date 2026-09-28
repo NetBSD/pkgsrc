@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/09/07 07:34:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/28 15:03:49 wiz Exp $
 
-DISTNAME=	cattrs-26.2.0
+DISTNAME=	cattrs-26.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.0:../../devel/py-typing-extensi
 # optional dependency
 # https://github.com/py-bson/bson/issues/122
 #TEST_DEPENDS+=	${PYPKGPREFIX}-bson>=0:../../wip/py-bson
+# optional dependency
+TEST_DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.9.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.135.26:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-immutables>=0.21:../../misc/py-immutables
@@ -33,8 +35,8 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.1.1:../../devel/py-exceptiongroup
 .endif
 
-# as of 25.3.0
-# 8 failed, 857 passed, 15 xfailed, 25 errors
+# as of 26.2.1
+# 983 passed, 15 xfailed, 2 warnings
 
 # bson, see above; leading to
 # tests/preconf/test_pyyaml.py:13: in <module>
