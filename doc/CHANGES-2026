@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6481 2026/09/28 15:53:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6482 2026/09/28 15:54:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9735,3 +9735,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-pillow_heif to 1.8.0 [wiz 2026-09-28]
 	Updated misc/py-platformdirs to 4.12.1 [wiz 2026-09-28]
 	Updated time/py-pytz to 2026.4 [wiz 2026-09-28]
+	Updated devel/py-rope to 1.15.0 [wiz 2026-09-28]
