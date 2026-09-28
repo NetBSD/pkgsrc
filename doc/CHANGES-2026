@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6448 2026/09/28 11:22:17 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6449 2026/09/28 11:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9702,3 +9702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/yelp version 49.2 [wiz 2026-09-28]
 	Removed misc/yelp3 successor misc/yelp [wiz 2026-09-28]
 	Updated sysutils/mirador to 1.19.1 [pin 2026-09-28]
+	Removed games/gnuchess4 successor games/gnuchess [wiz 2026-09-28]
