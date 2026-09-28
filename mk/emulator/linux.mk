@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.34 2021/05/12 10:14:24 hauke Exp $
+# $NetBSD: linux.mk,v 1.35 2026/09/28 19:00:31 wiz Exp $
 #
 # Linux binary emulation framework
 #
@@ -83,6 +83,7 @@ _EMUL_MODULES+=		expat
 _EMUL_MODULES+=		fontconfig
 _EMUL_MODULES+=		freetype2
 _EMUL_MODULES+=		gc
+_EMUL_MODULES+=		gcc12
 _EMUL_MODULES+=		glib2
 _EMUL_MODULES+=		glx
 _EMUL_MODULES+=		gstreamer
