@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.36 2026/09/28 09:01:12 wiz Exp $
+
+BLAKE2s (yelp-49.2.tar.xz) = ba0e74187e0749a62638f94974ae6ba5c066e4e4e935e44c26e34993723d809d
+SHA512 (yelp-49.2.tar.xz) = 8cca0fbc0b8bdf8d1881c408ef1b4d4f008fc05631b7a50b97288fdb11d1e06fe8ffc268354a23e6f59b76dd3d390759e25e5aa93cac6a487d09c2eb7665564c
+Size (yelp-49.2.tar.xz) = 1221484 bytes
