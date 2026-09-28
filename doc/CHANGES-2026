@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6485 2026/09/28 16:51:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6486 2026/09/28 16:52:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9739,3 +9739,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-scikit-build-core to 1.1.0 [wiz 2026-09-28]
 	Updated devel/py-setuptools_scm to 10.3.4 [wiz 2026-09-28]
 	Updated www/py-soupsieve to 2.10 [wiz 2026-09-28]
+	Updated devel/py-urwid to 4.1.7 [wiz 2026-09-28]
