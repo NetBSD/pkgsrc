@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6461 2026/09/28 14:41:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6462 2026/09/28 14:45:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9715,3 +9715,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.5.1 [wiz 2026-09-28]
 	Updated textproc/py-JWT to 2.15.0 [wiz 2026-09-28]
 	Updated textproc/tree-sitter-php to 0.25.0 [wiz 2026-09-28]
+	Updated converters/utf8proc to 2.12.0 [wiz 2026-09-28]
