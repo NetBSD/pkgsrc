@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6490 2026/09/28 20:22:43 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6491 2026/09/28 22:08:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9744,3 +9744,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/suse15_base to 15.5nb2 [wiz 2026-09-28]
 	Updated shells/nushell to 0.116.0 [pin 2026-09-28]
 	Updated www/resterm to 1.10.0 [drixter 2026-09-28]
+	Added net/py-suds version 1.2.0 [gdt 2026-09-28]
