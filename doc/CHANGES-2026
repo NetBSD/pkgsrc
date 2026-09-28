@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6459 2026/09/28 14:39:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6460 2026/09/28 14:40:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9713,3 +9713,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/jjui to 0.10.11 [wiz 2026-09-28]
 	Updated fonts/noto-emoji-ttf to 2.051.0.0.20260924 [wiz 2026-09-28]
 	Updated graphics/openexr to 3.5.1 [wiz 2026-09-28]
+	Updated textproc/py-JWT to 2.15.0 [wiz 2026-09-28]
