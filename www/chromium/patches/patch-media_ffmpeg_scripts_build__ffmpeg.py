@@ -1,4 +1,8 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.27 2026/09/28 07:20:17 tnn Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.28 2026/09/28 07:27:17 tnn Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
 --- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-09-17 03:47:47.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
