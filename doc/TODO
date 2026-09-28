@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28031 2026/09/28 14:45:25 wiz Exp $
+$NetBSD: TODO,v 1.28032 2026/09/28 14:50:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -838,7 +838,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kqtquickcharts4-20.12.3
 	o krita-6.0.4
 	o kronolith-4.2.14
-	o ksanecore-26.08.1
 	o kstars-3.8.4
 	o ktorrent3-3.3.4
 	o latexmk-486
@@ -865,7 +864,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
-	o libksane-26.08.1
 	o liblzo-2.10
 	o libmatchbox-1.14
 	o libmcs-0.7.2
@@ -1012,7 +1010,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
-	o okular-26.08.1
 	o olvwm-4.5
 	o oo2c-2.1.11
 	o opal-3.16.2
@@ -1111,7 +1108,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pitivi-2023.03
 	o pkg-2.6.0
 	o pks-0.9.6
-	o plasma6-plasma-activities-6.7.5
 	o ploticus-examples-230
 	o podcastdl-0.3.3
 	o poke-4.0
@@ -1253,7 +1249,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o shelldap-1.5.2
 	o shotwell-0.32.15
 	o showfont-1.0.4 [wip]
-	o shuck-0.2.3
 	o silc-1.1.11
 	o silc-client-1.1.11
 	o silc-server-1.1.19
