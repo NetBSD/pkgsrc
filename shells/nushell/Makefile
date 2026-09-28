@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2026/08/24 11:56:41 adam Exp $
+# $NetBSD: Makefile,v 1.94 2026/09/28 19:04:15 pin Exp $
 
-DISTNAME=	nushell-0.115.1
+DISTNAME=	nushell-0.116.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
 
-RUST_REQ=	1.95.0
+RUST_REQ=	1.96.1
 USE_TOOLS+=	pkg-config
 
 PKG_SHELL=	bin/nu
