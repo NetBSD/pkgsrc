@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.45 2026/01/18 21:08:07 wiz Exp $
+# $NetBSD: ccache.mk,v 1.46 2026/09/29 00:08:18 gdt Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,6 +93,7 @@ _CCACHE_CIRCULAR_DEPENDENCY_PACKAGES=	\
 	devel/ccache3			\
 	devel/ccache			\
 	devel/distcc			\
+	devel/gmake			\
 	devel/libtool-base		\
 	devel/nbpatch			\
 	devel/zlib			\
