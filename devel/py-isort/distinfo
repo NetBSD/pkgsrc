@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/08/30 15:28:44 wiz Exp $
+$NetBSD: distinfo,v 1.35 2026/09/29 08:20:25 adam Exp $
 
-BLAKE2s (isort-9.0.1.tar.gz) = 979d206a4f60078ef3880588fc560c1b91d5afaa7fd69aa32fc6002685b6dbcf
-SHA512 (isort-9.0.1.tar.gz) = edf386ec3497c1b9e540015dea76f8328593f43d2aa391acad459f175fe1b3a552d4ca0e75187bc92ef1319cb4c77bb774cb22ef9b46cf89daacc754bb454f93
-Size (isort-9.0.1.tar.gz) = 667724 bytes
+BLAKE2s (isort-9.0.2.tar.gz) = aee756bf15894a99cd539061b0790bffa078360b5e1a764a61f7f842d159ea45
+SHA512 (isort-9.0.2.tar.gz) = 78274fb9876684abed3821673245d061bf3fb2b884fca487c8920a96736fed573fa7747284dd6c075f2712b83513de08352d46697d4b7b863b63d4fbbb21322a
+Size (isort-9.0.2.tar.gz) = 685196 bytes
