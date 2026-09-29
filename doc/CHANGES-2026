@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6502 2026/09/29 09:20:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6503 2026/09/29 10:30:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9761,3 +9761,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libuv to 1.53.0 [adam 2026-09-29]
 	Updated graphics/py-pygraphviz to 2.0.2 [adam 2026-09-29]
 	Updated devel/py-nanobind to 3.1.0 [adam 2026-09-29]
+	Updated emulators/libspectrum to 1.7.0 [adam 2026-09-29]
+	Updated emulators/fuse-emulator to 1.10.0 [adam 2026-09-29]
+	Updated emulators/fuse-emulator-utils to 1.5.0 [adam 2026-09-29]
