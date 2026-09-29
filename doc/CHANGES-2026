@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6499 2026/09/29 08:03:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6500 2026/09/29 08:20:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9755,3 +9755,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chromium to 154.0.8037.57 [kikadf 2026-09-29]
 	Updated devel/appstream to 1.2.1 [adam 2026-09-29]
 	Updated devel/ccache to 4.14.1 [adam 2026-09-29]
+	Updated devel/py-blockbuster to 1.5.28 [adam 2026-09-29]
+	Updated devel/py-isort to 9.0.2 [adam 2026-09-29]
