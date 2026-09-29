@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6500 2026/09/29 08:20:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6501 2026/09/29 09:03:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9757,3 +9757,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ccache to 4.14.1 [adam 2026-09-29]
 	Updated devel/py-blockbuster to 1.5.28 [adam 2026-09-29]
 	Updated devel/py-isort to 9.0.2 [adam 2026-09-29]
+	Updated net/haproxy to 3.4.6 [adam 2026-09-29]
+	Updated devel/libuv to 1.53.0 [adam 2026-09-29]
