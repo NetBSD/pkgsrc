@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/09/29 06:06:17 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/29 10:49:57 tnn Exp $
 
 DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -64,9 +64,13 @@ CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-giflib=bundled
 CONFIGURE_ARGS+=	--with-lcms=bundled
 CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.libcups}/include
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-freetype=bundled
+.else
 CONFIGURE_ARGS+=	--with-freetype=system
 CONFIGURE_ARGS+=	--with-freetype-lib=${BUILDLINK_PREFIX.freetype2}/lib
 CONFIGURE_ARGS+=	--with-freetype-include=${BUILDLINK_PREFIX.freetype2}/include
+.endif
 CONFIGURE_ARGS+=	--with-jobs=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--with-num-cores=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--disable-precompiled-headers
@@ -88,15 +92,16 @@ MAKE_ENV+=	CLASSPATH=
 ALL_ENV+=	SED="sed -g"
 .endif
 
-BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/}
+BUILD_OPSYS=			${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/:S/Linux/linux/:S/Darwin/macosx/}
 BUILD_ARCH=			${MACHINE_ARCH:S/i386/x86/:S/sparc64/sparcv9/:C/^e?arm.*$/arm/}
 BUILDDIR=			${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-${BUILD_VARIANT}-${BUILD_DEBUG_LEVEL}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/server
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/${JAVA_NAME}/lib/${BUILD_VARIANT}
 WRKSRC=				${WRKDIR}/${DISTNAME}
 
 .include "../../mk/compiler.mk"
 
+PLIST_VARS+=		gcc
 .if !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--with-toolchain-type=clang
 _WRAP_EXTRA_ARGS.CC+=	-Wno-format-nonliteral -Wno-sign-compare -Wno-char-subscripts
@@ -112,6 +117,7 @@ CWRAPPERS_APPEND.cxx+=	-mstackrealign
 .  endif
 .else
 # GCC
+PLIST.gcc=		yes
 CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 .endif
 
@@ -157,6 +163,16 @@ PLIST.jvmci=			yes
 TOOLS_PLATFORM.unzip=
 .endif
 
+PLIST_VARS+=		bsd-fontconfig
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+PLIST.bsd-fontconfig=	yes
+.endif
+
+PLIST_VARS+=		awt-headless
+.if ${OPSYS} != "Darwin"
+PLIST.awt-headless=	yes
+.endif
+
 post-extract:
 # These libs are bundled w/ the netbsd-9 bootstrap to facilitate building with
 # MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
@@ -200,8 +216,10 @@ do-install:
 CONFIGURE_ARGS+=	--with-alsa=${BUILDLINK_PREFIX.alsa-lib}
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.endif
 # Headers from CUPS are required to build the native implementation of
 # sun.print.* which is used by java.awt.print.
 BUILDLINK_DEPMETHOD.libcups?=	build

@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2026/09/29 10:49:57 tnn Exp $
+java/openjdk21/bin/jhsdb
+java/openjdk21/bin/jhsdb${DBGEXT}
+java/openjdk21/bin/jpackage
+java/openjdk21/bin/jpackage${DBGEXT}
+java/openjdk21/conf/sdp/sdp.conf.template
+java/openjdk21/jmods/jdk.hotspot.agent.jmod
+java/openjdk21/jmods/jdk.jpackage.jmod
+java/openjdk21/legal/jdk.hotspot.agent/ADDITIONAL_LICENSE_INFO
+java/openjdk21/legal/jdk.hotspot.agent/ASSEMBLY_EXCEPTION
+java/openjdk21/legal/jdk.hotspot.agent/LICENSE
+java/openjdk21/legal/jdk.jpackage/ADDITIONAL_LICENSE_INFO
+java/openjdk21/legal/jdk.jpackage/ASSEMBLY_EXCEPTION
+java/openjdk21/legal/jdk.jpackage/LICENSE
+java/openjdk21/lib/jexec
+java/openjdk21/lib/jexec${DBGEXT}
+java/openjdk21/lib/libjsvml${DBGEXT}
+java/openjdk21/lib/libjsvml.so
+java/openjdk21/lib/lible${DBGEXT}
+java/openjdk21/lib/lible.so
+java/openjdk21/lib/libsaproc${DBGEXT}
+java/openjdk21/lib/libsaproc.so
+java/openjdk21/lib/libsctp${DBGEXT}
+java/openjdk21/lib/libsctp.so
+java/openjdk21/man/man1/jhsdb.1
+java/openjdk21/man/man1/jpackage.1

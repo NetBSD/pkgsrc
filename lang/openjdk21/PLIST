@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/09/06 16:53:12 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/09/29 10:49:57 tnn Exp $
 bin/openjdk21-jar
 bin/openjdk21-jarsigner
 bin/openjdk21-java
@@ -257,7 +257,7 @@ java/openjdk21/legal/java.base/aes.md
 java/openjdk21/legal/java.base/asm.md
 java/openjdk21/legal/java.base/c-libutl.md
 java/openjdk21/legal/java.base/cldr.md
-java/openjdk21/legal/java.base/gcc.md
+${PLIST.gcc}java/openjdk21/legal/java.base/gcc.md
 java/openjdk21/legal/java.base/icu.md
 java/openjdk21/legal/java.base/public_suffix.md
 java/openjdk21/legal/java.base/siphash.md
@@ -488,8 +488,8 @@ java/openjdk21/legal/jdk.zipfs/ASSEMBLY_EXCEPTION
 java/openjdk21/legal/jdk.zipfs/LICENSE
 java/openjdk21/lib/classlist
 java/openjdk21/lib/ct.sym
-java/openjdk21/lib/fontconfig.bfc
-java/openjdk21/lib/fontconfig.properties.src
+${PLIST.bsd-fontconfig}java/openjdk21/lib/fontconfig.bfc
+${PLIST.bsd-fontconfig}java/openjdk21/lib/fontconfig.properties.src
 java/openjdk21/lib/jfr/default.jfc
 java/openjdk21/lib/jfr/profile.jfc
 java/openjdk21/lib/jrt-fs.jar
@@ -500,8 +500,8 @@ java/openjdk21/lib/libattach${DBGEXT}
 java/openjdk21/lib/libattach.so
 java/openjdk21/lib/libawt${DBGEXT}
 java/openjdk21/lib/libawt.so
-java/openjdk21/lib/libawt_headless${DBGEXT}
-java/openjdk21/lib/libawt_headless.so
+${PLIST.awt-headless}java/openjdk21/lib/libawt_headless${DBGEXT}
+${PLIST.awt-headless}java/openjdk21/lib/libawt_headless.so
 ${PLIST.x11}java/openjdk21/lib/libawt_xawt${DBGEXT}
 ${PLIST.x11}java/openjdk21/lib/libawt_xawt.so
 java/openjdk21/lib/libdt_socket${DBGEXT}
@@ -556,8 +556,8 @@ java/openjdk21/lib/libprefs${DBGEXT}
 java/openjdk21/lib/libprefs.so
 java/openjdk21/lib/librmi${DBGEXT}
 java/openjdk21/lib/librmi.so
-${PLIST.x11}java/openjdk21/lib/libsplashscreen${DBGEXT}
-${PLIST.x11}java/openjdk21/lib/libsplashscreen.so
+${PLIST.splashscreen}java/openjdk21/lib/libsplashscreen${DBGEXT}
+${PLIST.splashscreen}java/openjdk21/lib/libsplashscreen.so
 java/openjdk21/lib/libsyslookup${DBGEXT}
 java/openjdk21/lib/libsyslookup.so
 java/openjdk21/lib/libverify${DBGEXT}

@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.5 2026/09/06 16:53:12 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2026/09/29 10:49:57 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk21
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
 PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
-PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp jdk-bundled-zlib
-PKG_SUGGESTED_OPTIONS=		jre-jce x11
+PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce static-libstdcpp jdk-bundled-zlib
+PKG_SUGGESTED_OPTIONS=		jre-jce
+.if ${OPSYS} != "Darwin"
+PKG_SUPPORTED_OPTIONS+=		x11
+PKG_SUGGESTED_OPTIONS+=		x11
+.endif
 
 .if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
@@ -31,9 +35,10 @@ CONFIGURE_ARGS+=	--disable-unlimited-crypto
 ###
 ### X11 or headless build
 ###
-PLIST_VARS+=	x11
+PLIST_VARS+=	splashscreen x11
 .if !empty(PKG_OPTIONS:Mx11)
-PLIST.x11=	yes
+PLIST.splashscreen=	yes
+PLIST.x11=		yes
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--disable-headless-only
@@ -48,6 +53,12 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.elif ${OPSYS} == "Darwin"
+PLIST.splashscreen=	yes
+# The Metal compiler is no longer part of Xcode itself.
+# You need to manually run `sudo xcodebuild -downloadComponent MetalToolchain`
+CONFIGURE_ARGS+=	METAL="xcrun metal"
+CONFIGURE_ARGS+=	METALLIB="xcrun metallib"
 .else
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
