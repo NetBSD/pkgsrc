@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/06 17:01:36 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/09/29 08:17:33 adam Exp $
 
-DISTNAME=	blockbuster-1.5.27
+DISTNAME=	blockbuster-1.5.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blockbuster/}
@@ -12,6 +12,9 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-forbiddenfruit>=0.1.4:../../misc/py-forbiddenfruit
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.3:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1.4.0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7.1.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 

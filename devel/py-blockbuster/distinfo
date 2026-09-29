@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/09/06 17:01:36 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/09/29 08:17:33 adam Exp $
 
-BLAKE2s (blockbuster-1.5.27.tar.gz) = 8acad575ec6900545c3932e2d4fa60c11d1993037cbd97c9c968efcb9d715a8b
-SHA512 (blockbuster-1.5.27.tar.gz) = 6344bbca0c9a926fa7e5b80d0a48689144a71dce6dfb0f8c5f4b263431abab10e01705cc93bfc93d6e3f55e37203e50019b50a1088e5b5b774729a640e23e53f
-Size (blockbuster-1.5.27.tar.gz) = 96732 bytes
+BLAKE2s (blockbuster-1.5.28.tar.gz) = 3126352b0ed20692bd6cf45baaa9f168970df2c20ee80acf0fd2bcb23dc45237
+SHA512 (blockbuster-1.5.28.tar.gz) = f21b9e9f939acff62cadc859ad2ba9c854c23df7f4da72fdf6a17e0a929796a94431437eb00a688091367b85edbd70c3360a57629db42c209cf616e1406638e7
+Size (blockbuster-1.5.28.tar.gz) = 98235 bytes
