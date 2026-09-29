@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6492 2026/09/29 05:55:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6493 2026/09/29 06:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9746,3 +9746,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.10.0 [drixter 2026-09-28]
 	Added net/py-suds version 1.2.0 [gdt 2026-09-28]
 	Updated devel/pcre2 to 10.49 [wiz 2026-09-29]
+	Updated graphics/png to 1.6.59 [wiz 2026-09-29]
