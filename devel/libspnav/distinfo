@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/09/29 16:06:19 bouyer Exp $
+
+BLAKE2s (libspnav-1.2.tar.gz) = 9d9361d5e85e77707d8c754c9ed4f04eb50bc8e6fae91df6a5b0bb0a49815f95
+SHA512 (libspnav-1.2.tar.gz) = b2df64305ae0211872d85e1b1d6485018ef7cfe76e69bedad16e612608b2c5c8b12b948b502a3f40291c2c0b20e130c76fee582e7af8af4393c8bc1b7651d0d9
+Size (libspnav-1.2.tar.gz) = 33000 bytes
