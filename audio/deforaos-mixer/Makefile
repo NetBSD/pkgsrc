@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2026/09/27 11:34:50 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2026/09/29 06:03:42 wiz Exp $
 
 DISTNAME=	Mixer-0.4.1
 PKGNAME=	deforaos-mixer-0.4.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	audio
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Mixer/
 

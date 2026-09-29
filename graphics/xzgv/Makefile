@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2026/09/27 11:37:05 tnn Exp $
+# $NetBSD: Makefile,v 1.96 2026/09/29 06:06:01 wiz Exp $
 
 DISTNAME=	xzgv-0.9.1
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xzgv/}
 

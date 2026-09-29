@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/09/27 11:35:41 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/29 06:04:34 wiz Exp $
 
 DISTNAME=	libgudev-238
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

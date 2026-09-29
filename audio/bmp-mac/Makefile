@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2026/09/27 11:34:49 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2026/09/29 06:03:41 wiz Exp $
 #
 
 DISTNAME=	bmp-mac-0.1.1
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	audio
 MASTER_SITES=	https://www.aydogan.net/distfiles/audio/
 

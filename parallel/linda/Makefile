@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/09/27 11:38:13 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/29 06:07:12 wiz Exp $
 #
 
 DISTNAME=	linda-0.1.1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linda/}
 

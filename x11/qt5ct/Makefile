@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2026/09/27 11:39:39 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2026/09/29 06:08:39 wiz Exp $
 
 DISTNAME=		qt5ct-1.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qt5ct/}
 EXTRACT_SUFX=		.tar.bz2

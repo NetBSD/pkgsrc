@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2026/09/27 11:34:47 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/09/29 06:03:39 wiz Exp $
 
 BUILDLINK_TREE+=	SDL3_mixer
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL3_mixer
 SDL3_MIXER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL3_mixer+=	SDL3_mixer>=3.2.0
-BUILDLINK_ABI_DEPENDS.SDL3_mixer?=	SDL3_mixer>=3.2.4nb3
+BUILDLINK_ABI_DEPENDS.SDL3_mixer?=	SDL3_mixer>=3.2.4nb4
 BUILDLINK_PKGSRCDIR.SDL3_mixer?=	../../audio/SDL3_mixer
 
 .include "../../devel/SDL3/buildlink3.mk"

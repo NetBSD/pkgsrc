@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:35:02 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:03:54 wiz Exp $
 
 BUILDLINK_TREE+=	pcaudiolib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pcaudiolib
 PCAUDIOLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcaudiolib+=	pcaudiolib>=1.2
-BUILDLINK_ABI_DEPENDS.pcaudiolib+=	pcaudiolib>=1.3nb5
+BUILDLINK_ABI_DEPENDS.pcaudiolib+=	pcaudiolib>=1.3nb6
 BUILDLINK_PKGSRCDIR.pcaudiolib?=	../../audio/pcaudiolib
 BUILDLINK_INCDIRS.pcaudiolib?=		include/pcaudiolib
 

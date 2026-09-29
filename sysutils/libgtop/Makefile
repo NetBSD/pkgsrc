@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2026/09/27 11:38:39 tnn Exp $
+# $NetBSD: Makefile,v 1.70 2026/09/29 06:07:38 wiz Exp $
 
 DISTNAME=		libgtop-2.28.4
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2

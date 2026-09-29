@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:39:06 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:08:05 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-syndication
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-syndication
 KF6_SYNDICATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-syndication+=	kf6-syndication>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-syndication?=	kf6-syndication>=6.29.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-syndication?=	kf6-syndication>=6.29.0nb2
 BUILDLINK_PKGSRCDIR.kf6-syndication?=	../../www/kf6-syndication
 
 .include "../../textproc/kf6-kcodecs/buildlink3.mk"

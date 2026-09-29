@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2026/09/27 11:37:00 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/09/29 06:05:57 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtquicktimeline
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtquicktimeline
 QT6_QTQUICKTIMELINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtquicktimeline+=	qt6-qtquicktimeline>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtquicktimeline+=	qt6-qtquicktimeline>=6.11.2nb2
+BUILDLINK_ABI_DEPENDS.qt6-qtquicktimeline+=	qt6-qtquicktimeline>=6.11.2nb3
 BUILDLINK_PKGSRCDIR.qt6-qtquicktimeline?=	../../graphics/qt6-qtquicktimeline
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

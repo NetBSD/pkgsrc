@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2026/09/27 11:35:23 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2026/09/29 06:04:15 wiz Exp $
 
 BUILDLINK_TREE+=	poco-data-sqlite
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poco-data-sqlite
 POCO_DATA_SQLITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poco-data-sqlite+=	poco-data-sqlite>=1.6.1
-BUILDLINK_ABI_DEPENDS.poco-data-sqlite+=	poco-data-sqlite>=1.15.3nb2
+BUILDLINK_ABI_DEPENDS.poco-data-sqlite+=	poco-data-sqlite>=1.15.3nb3
 BUILDLINK_PKGSRCDIR.poco-data-sqlite?=		../../databases/poco-data-sqlite
 
 .include "../../databases/poco-data/buildlink3.mk"

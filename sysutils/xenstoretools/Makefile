@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2026/09/27 11:38:46 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2026/09/29 06:07:45 wiz Exp $
 #
 
 # VERSION is set in xentool420/version.mk
 #PKGREVISION=		1
-PKGREVISION=		2
+PKGREVISION=		3
 .include		"../../sysutils/xentools420/version.mk"
 
 PKGNAME=		xenstoretools-4.20_${VERSION}

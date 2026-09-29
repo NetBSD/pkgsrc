@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2026/09/27 11:39:09 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2026/09/29 06:08:08 wiz Exp $
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
 PKGNAME=	privoxy-4.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://www.privoxy.org/sf-download-mirror/Sources/${PKGVERSION_NOREV}%20(stable)/
 

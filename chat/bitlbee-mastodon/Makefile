@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/09/27 11:35:10 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/29 06:04:02 wiz Exp $
 
 DISTNAME=	bitlbee-mastodon-1.4.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kensanata/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

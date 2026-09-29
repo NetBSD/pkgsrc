@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/27 11:38:55 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/29 06:07:54 wiz Exp $
 
 DISTNAME=	gkrellaclock-0.3.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	time sysutils
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/ee/}
 

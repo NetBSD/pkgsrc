@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/09/27 11:39:11 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/29 06:08:10 wiz Exp $
 
 BUILDLINK_TREE+=	gtkada-25
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkada-25
 GTKADA_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkada-25+=	gtkada-${GNAT_NAME}>=21.0.0
-BUILDLINK_ABI_DEPENDS.gtkada-25?=		gtkada-gnat14>=25.2.0nb4
+BUILDLINK_ABI_DEPENDS.gtkada-25?=		gtkada-gnat14>=25.2.0nb5
 BUILDLINK_PKGSRCDIR.gtkada-25?=		../../x11/ada-gtkada-25
 BUILDLINK_DEPMETHOD.gtkada-25?=		build
 

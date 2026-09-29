@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2026/09/27 11:39:05 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2026/09/29 06:08:03 wiz Exp $
 
 DISTNAME=	v3.3.0
 PKGNAME=	dillo-${DISTNAME:S/v//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://git.sr.ht/~dillo/dillo/archive/
 DIST_SUBDIR=	dillo

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2026/09/27 11:36:02 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2026/09/29 06:04:55 wiz Exp $
 
 DISTNAME=	hatari-v2.6.1
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	https://framagit.org/hatari/hatari/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

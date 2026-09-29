@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2026/09/27 11:38:00 tnn Exp $
+# $NetBSD: Makefile,v 1.91 2026/09/29 06:06:58 wiz Exp $
 #
 
 DISTNAME=	gkrellm_snmp-1.1
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://triq.net/files/
 

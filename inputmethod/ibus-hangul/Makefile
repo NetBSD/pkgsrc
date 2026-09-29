@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2026/09/27 11:37:11 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/29 06:06:08 wiz Exp $
 #
 
 DISTNAME=	ibus-hangul-1.5.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	${MASTER_SITE_GITHUB:=choehwanjin/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

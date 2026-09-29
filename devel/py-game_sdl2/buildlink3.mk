@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/09/27 11:35:47 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/29 06:04:40 wiz Exp $
 
 BUILDLINK_TREE+=	py-game_sdl2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-game_sdl2
 PY_GAME_SDL2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-game_sdl2+=	${PYPKGPREFIX}-game_sdl2>=2.1.0
-BUILDLINK_ABI_DEPENDS.py-game_sdl2?=	${PYPKGPREFIX}-game_sdl2>=2.1.0.8.5.3.26051504nb2
+BUILDLINK_ABI_DEPENDS.py-game_sdl2?=	${PYPKGPREFIX}-game_sdl2>=2.1.0.8.5.3.26051504nb3
 BUILDLINK_PKGSRCDIR.py-game_sdl2?=	../../devel/py-game_sdl2
 
 BUILDLINK_INCDIRS.py-game_sdl2+=	${PYINC}/pygame_sdl2

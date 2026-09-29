@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2026/09/27 11:39:35 tnn Exp $
+# $NetBSD: Makefile,v 1.83 2026/09/29 06:08:34 wiz Exp $
 
 DISTNAME=	qtbase-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-odbc-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Qt5 odbc plugin
 
 BUILD_DIRS=		src/plugins/sqldrivers

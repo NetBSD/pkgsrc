@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/09/27 11:38:45 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/09/29 06:07:44 wiz Exp $
 
 BUILDLINK_TREE+=	upower
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	upower
 UPOWER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.upower+=	upower>=1.90.9
-BUILDLINK_ABI_DEPENDS.upower?=	upower>=1.91.2nb4
+BUILDLINK_ABI_DEPENDS.upower?=	upower>=1.91.2nb5
 BUILDLINK_PKGSRCDIR.upower?=	../../sysutils/upower
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2026/09/27 11:38:04 tnn Exp $
+# $NetBSD: Makefile,v 1.114 2026/09/29 06:07:02 wiz Exp $
 
 DISTNAME=		jigdo-0.8.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		https://www.einval.com/~steve/software/jigdo/download/
 EXTRACT_SUFX=		.tar.xz

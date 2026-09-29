@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/09/27 11:35:46 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2026/09/29 06:04:39 wiz Exp $
 
 PKGNAME=	poco-${POCO_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 COMMENT=	POCO C++ Foundation libraries

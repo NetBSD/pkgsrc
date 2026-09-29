@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:36:48 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:05:44 wiz Exp $
 
 BUILDLINK_TREE+=	hs-chart-cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-chart-cairo
 HS_CHART_CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-chart-cairo+=	hs-chart-cairo>=1.9.4
-BUILDLINK_ABI_DEPENDS.hs-chart-cairo+=	hs-chart-cairo>=1.9.4.1nb5
+BUILDLINK_ABI_DEPENDS.hs-chart-cairo+=	hs-chart-cairo>=1.9.4.1nb6
 BUILDLINK_PKGSRCDIR.hs-chart-cairo?=	../../graphics/hs-chart-cairo
 
 .include "../../devel/hs-old-locale/buildlink3.mk"

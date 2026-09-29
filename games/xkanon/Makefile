@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2026/09/27 11:36:31 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2026/09/29 06:05:26 wiz Exp $
 #
 
 DISTNAME=	xkanon-gtk2-090830
 PKGNAME=	xkanon-090830
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 #MASTER_SITES=	http://www.creator.club.ne.jp/~jagarl/
 MASTER_SITES=	https://www.ryoon.net/~ryoon/sfnet-distrib/

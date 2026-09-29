@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/09/27 11:35:17 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/29 06:04:09 wiz Exp $
 
 BUILDLINK_TREE+=	libticalcs2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libticalcs2
 LIBTICALCS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libticalcs2+=	libticalcs2>=1.1.7
-BUILDLINK_ABI_DEPENDS.libticalcs2?=	libticalcs2>=1.1.7nb5
+BUILDLINK_ABI_DEPENDS.libticalcs2?=	libticalcs2>=1.1.7nb6
 BUILDLINK_PKGSRCDIR.libticalcs2?=	../../comms/libticalcs2
 
 .include "../../devel/gettext-lib/buildlink3.mk"

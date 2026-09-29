@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2026/09/27 11:35:46 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/09/29 06:04:39 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-kwayland
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-kwayland
 PLASMA6_KWAYLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-kwayland+=	plasma6-kwayland>=6.0.5
-BUILDLINK_ABI_DEPENDS.plasma6-kwayland?=	plasma6-kwayland>=6.7.4nb1
+BUILDLINK_ABI_DEPENDS.plasma6-kwayland?=	plasma6-kwayland>=6.7.4nb2
 BUILDLINK_PKGSRCDIR.plasma6-kwayland?=		../../devel/plasma6-kwayland
 
 .include "../../devel/plasma-wayland-protocols/buildlink3.mk"

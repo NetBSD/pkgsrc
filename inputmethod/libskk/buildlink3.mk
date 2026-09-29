@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/09/27 11:37:14 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/09/29 06:06:11 wiz Exp $
 #
 
 BUILDLINK_TREE+=	libskk
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libskk
 LIBSKK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libskk+=	libskk>=1.0.2
-BUILDLINK_ABI_DEPENDS.libskk?=	libskk>=1.0.5nb7
+BUILDLINK_ABI_DEPENDS.libskk?=	libskk>=1.0.5nb8
 BUILDLINK_PKGSRCDIR.libskk?=	../../inputmethod/libskk
 
 .include "../../devel/glib2/buildlink3.mk"

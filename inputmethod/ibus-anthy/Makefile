@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/09/27 11:37:11 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/29 06:06:08 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

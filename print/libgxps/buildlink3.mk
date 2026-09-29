@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2026/09/27 11:38:17 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2026/09/29 06:07:15 wiz Exp $
 
 BUILDLINK_TREE+=	libgxps
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgxps
 LIBGXPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgxps+=	libgxps>=0.2.1
-BUILDLINK_ABI_DEPENDS.libgxps?=	libgxps>=0.2.2nb38
+BUILDLINK_ABI_DEPENDS.libgxps?=	libgxps>=0.2.2nb39
 BUILDLINK_PKGSRCDIR.libgxps?=	../../print/libgxps
 
 .include "../../devel/glib2/buildlink3.mk"

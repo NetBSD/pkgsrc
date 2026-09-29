@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2026/09/27 11:34:59 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2026/09/29 06:03:51 wiz Exp $
 
 DISTNAME=	libvisual-plugins-0.4.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Libvisual/}
 GITHUB_PROJECT=	libvisual

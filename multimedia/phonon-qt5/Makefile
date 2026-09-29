@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2026/09/27 11:37:55 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2026/09/29 06:06:53 wiz Exp $
 
 DISTNAME=	phonon-4.12.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.12.0/}
 EXTRACT_SUFX=	.tar.xz

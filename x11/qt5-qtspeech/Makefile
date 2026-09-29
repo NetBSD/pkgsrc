@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2026/09/27 11:39:37 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2026/09/29 06:08:37 wiz Exp $
 
 DISTNAME=	qtspeech-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtspeech-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
