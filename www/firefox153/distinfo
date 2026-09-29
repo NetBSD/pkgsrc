@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2026/09/15 13:20:42 gutteridge Exp $
+$NetBSD: distinfo,v 1.4 2026/09/29 13:03:44 gutteridge Exp $
 
-BLAKE2s (firefox-153.3.0esr.source.tar.xz) = 8e18dde67b90030e4ea0d8404e2a446e8da0bb71320d23671eb017c03ab0c6e3
-SHA512 (firefox-153.3.0esr.source.tar.xz) = 56a5e092f0aba91febf01d227e8068520513f632d09c5ffbad4cbb2de307d9066425f353a1b7fcf5648733e02a9b17cfc9aaed5e39d7562a6b143b1c9827a668
-Size (firefox-153.3.0esr.source.tar.xz) = 804997520 bytes
+BLAKE2s (firefox-153.4.0esr.source.tar.xz) = 5cff0c4b06a94dcd63b0ef203d1e47b29c6399a0fe15e20dfc882eb0bb60bca8
+SHA512 (firefox-153.4.0esr.source.tar.xz) = 79e1f2a0f8c4d156c80b8f4c580aa944600d49cc811f961a3eca251113241638991fda94ccb74a44df9030f643586c41686861333288f13793e621a262a1b131
+Size (firefox-153.4.0esr.source.tar.xz) = 801731048 bytes
 BLAKE2s (nodejs-output-153.0.tgz) = 55a9ae8d1b743f57148a3b763bce2bc9afe2bd902f5b5d6a07a3e597c569aca1
 SHA512 (nodejs-output-153.0.tgz) = 2513c4c47c9bb619a1702a36b8ec316a6c48d6b641656abf86ff33c5ae9e146721947b26a3a1af8295a005daeffb0c77e5f82f36ca9a717decc6850b3518c275
 Size (nodejs-output-153.0.tgz) = 247910 bytes
@@ -62,7 +62,7 @@ SHA1 (patch-third__party_sqlite3_ext_moz.build) = 4d94ea324617a20b3524016dd02fb7
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_c-writer.cc) = 38eb2ee0e00722aa1380540b83648b43723719aa
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
-SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
+SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5fec8a65fb5528f97fc7da863fbf950f4bc25597
 SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = c77481a1f8fe1e237b7fe87e3e586ca886ac1d3d
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
