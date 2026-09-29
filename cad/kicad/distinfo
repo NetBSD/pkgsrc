@@ -1,23 +1,37 @@
-$NetBSD: distinfo,v 1.30 2025/12/22 15:33:09 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/09/29 16:11:56 bouyer Exp $
 
-BLAKE2s (kicad-8.0.9.tar.bz2) = f28dc729590c55aad9b7e84d595d97082a7857cd5c9dddf2dd5c6bffe90d6c31
-SHA512 (kicad-8.0.9.tar.bz2) = cc822c46adea5a3dab3fd6c383c9cc1efebb3e9d1e88a0237caf6e9ef1fd0c249328e9afbf4a138cc19eda1aad864e2854fabd3bf17763109dce57e335be38b2
-Size (kicad-8.0.9.tar.bz2) = 73236341 bytes
+BLAKE2s (kicad-10.0.6.tar.bz2) = 3724d0ea4490077a06219cc5b603cf05fe3aeab5a11b9d0f03080f06301095ea
+SHA512 (kicad-10.0.6.tar.bz2) = 5fd23c26c36d39ce7b58ba224bbce843b708e945806e3c303707a4216b644a8993a6d956078b5f4edb029bcb70e5489411daee23ae471386109cf631ce1d8201
+Size (kicad-10.0.6.tar.bz2) = 232821863 bytes
+SHA1 (patch-3d-viewer_3d__rendering_opengl_3d__spheres__gizmo.cpp) = c78959f9f10de3f9884ab64bf26f4c4f5f813cde
+SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.cpp) = ec756e9952b2e3614384b86782e28c5bc8c42c1b
+SHA1 (patch-3d-viewer_3d__viewer_eda__3d__viewer__frame.h) = 41dfce6f955d6af543ae3536f3105727db86c7bf
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
-SHA1 (patch-CMakeLists.txt) = c0d017d3b8b202004dff71386da451fd81ede969
+SHA1 (patch-3d-viewer_dialogs_panel__preview__3d__model.cpp) = 9c856e16ed4fd89ac9a1c9c9273101ec1792fae6
+SHA1 (patch-3d-viewer_dialogs_panel__preview__3d__model.h) = 47fd811b1c89a066b08ed3899dcd6e6d40bf8a1c
+SHA1 (patch-CMakeLists.txt) = 5a3869f50675de2b19ea20dfabe56b8ed40fbee6
+SHA1 (patch-api_CMakeLists.txt) = 23b2b74ab15dd64da83bda39293c32da1bb67f5e
+SHA1 (patch-api_proto_common_types_base__types.proto) = 63de1236017bc8d92dbb5ed5affc026f1585e8f9
 SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
+SHA1 (patch-common_api_api__handler__common.cpp) = 9c907cc0e155a759ac41e71317b601f678777e09
+SHA1 (patch-common_eda__base__frame.cpp) = 748e4d4887546fd1cb177c81c4f1845f2d13a4c4
 SHA1 (patch-common_import__gfx_dxf__import__plugin.cpp) = 9ba67a398f9d9c0bd487b0cc5a8954be9cf8e274
+SHA1 (patch-common_spacenav_libspnav__driver.h) = da398b3c5f0c9411b906d8184db6da84fa79138d
 SHA1 (patch-cvpcb_CMakeLists.txt) = a839b465f73727786495dace80c1706d457b33e4
 SHA1 (patch-eeschema_CMakeLists.txt) = 89d5b25822f6d5856f827823e0646be80cbbfcb4
-SHA1 (patch-eeschema_sim_kibis_ibis__parser.cpp) = e173ccb32679174033540395e321abaee9eb2200
+SHA1 (patch-eeschema_sim_kibis_ibis__parser.cpp) = bc9f98f5db6d4fc5efd3a565ded3071e448a8180
 SHA1 (patch-eeschema_sim_kibis_kibis.cpp) = 18d804db727498cffef4dffc36b30dbe2c608bcb
-SHA1 (patch-eeschema_sim_sim_model_tline.cpp) = 901488c10a8a2c558a4bebe15dc1339d1bbce066
+SHA1 (patch-eeschema_sim_sim_model_tline.cpp) = 6bfa244b2b7b4b370f825dde653f075de36d311d
 SHA1 (patch-eeschema_sim_sim_property.cpp) = 3edb3ba6d1ac3f15d7562cb5b6c11815ee77d7d2
 SHA1 (patch-gerbview_CMakeLists.txt) = ae4d813f4247b46546ef0945785ae99114d2d68d
 SHA1 (patch-include_kiway.h) = 7208f474e895ea07ba5e5f56bab46d4d529b9e57
+SHA1 (patch-include_pcb__base__frame.h) = 4e73d0dc21ed88598a37c912e2793568b77565c5
 SHA1 (patch-pagelayout__editor_CMakeLists.txt) = d6ee568713ce666f2ece34974a922698d9479c8e
 SHA1 (patch-pcb__calculator_CMakeLists.txt) = 4b496498c6bef100f2eca99209e3efa521a3c653
-SHA1 (patch-pcbnew_CMakeLists.txt) = 671cc75cabbc0f3f73241a3d6db6ce41730465bf
+SHA1 (patch-pcbnew_CMakeLists.txt) = 532c5d41873f2189d4bb133994409b42e74ea983
+SHA1 (patch-pcbnew_pcb__base__frame.cpp) = 3937e71f803790cc438d5ee058ca777dda796c0d
 SHA1 (patch-plugins_3d_idf_CMakeLists.txt) = 9061c5c5eac3311625ba93e541d557007c83eddc
 SHA1 (patch-plugins_3d_vrml_CMakeLists.txt) = ea6942a953432c5c0124c57e9afb01f8a5c5325d
+SHA1 (patch-qa_qa__utils_error__handlers.cpp) = 0b9af4170c940507d4e008183093233ed3783cab
 SHA1 (patch-thirdparty_libcontext_libcontext.h) = cde252b7ee114f88527d953aa0c3ebcdd905c4a9
+SHA1 (patch-thirdparty_thread-pool_bs__thread__pool.hpp) = 48593c9946240c5881d96c626fc5448f9498ac20

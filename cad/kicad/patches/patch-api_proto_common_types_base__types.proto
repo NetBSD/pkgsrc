@@ -1,0 +1,17 @@
+$NetBSD: patch-api_proto_common_types_base__types.proto,v 1.1 2026/09/29 16:11:56 bouyer Exp $
+
+Avoid conflict with major()/minor() macro from sys/types.h.
+
+--- api/proto/common/types/base_types.proto.orig	2025-03-15 02:08:08.496675423 +0000
++++ api/proto/common/types/base_types.proto
+@@ -46,8 +46,8 @@ message CommandStatusResponse
+  */
+ message KiCadVersion
+ {
+-  uint32 major = 1;
+-  uint32 minor = 2;
++  uint32 k_major = 1;
++  uint32 k_minor = 2;
+   uint32 patch = 3;
+ 
+   // Full identifier string, potentially containing git hashes, packager-added info, etc.

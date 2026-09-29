@@ -1,22 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2024/04/26 16:46:29 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2026/09/29 16:11:56 bouyer Exp $
 
-Something is wrong with find_package. If EGL is found it complains
-that OpenGL is not found. Just disable the check for now.
+export Protobuf_INCLUDE_DIR from protobuf::libprotobuf, for use in
+api/CMakeLists.txt
 
---- CMakeLists.txt.orig	2024-03-13 15:55:00.000000000 +0000
-+++ CMakeLists.txt
-@@ -728,7 +728,13 @@ endif()
- # Find OpenGL library, required
- #
- if( KICAD_USE_EGL )
--    find_package( OpenGL REQUIRED COMPONENTS OpenGL EGL )
-+#    find_package( OpenGL REQUIRED COMPONENTS OpenGL EGL )
-+    find_package( OpenGL REQUIRED COMPONENTS OpenGL )
-+    if (OpenGL_EGL_FOUND)
-+        message("Found OpenGL with EGL as expected")
-+    else()
-+        message(FATAL_ERROR "Found OpenGL without EGL")
-+    endif()
- else()
-     set( OpenGL_GL_PREFERENCE "LEGACY" )     # CMake 3.11+ setting; see 'cmake --help-policy CMP0072'
-     find_package( OpenGL REQUIRED )
+--- CMakeLists.txt.orig	2026-08-28 20:01:37.000000000 +0200
++++ CMakeLists.txt	2026-09-26 11:17:30.991741798 +0200
+@@ -906,6 +906,7 @@
+     find_package( Protobuf QUIET CONFIG )
+     if( Protobuf_FOUND )
+         set( Protobuf_LIBRARY "protobuf::libprotobuf" )
++        get_target_property(Protobuf_INCLUDE_DIR protobuf::libprotobuf INTERFACE_INCLUDE_DIRECTORIES)
+         set( _protobuf_found TRUE )
+         message( STATUS "Found Protobuf using CONFIG mode" )
+     else()
