@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/07/06 14:33:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/29 15:55:06 adam Exp $
 bin/xournalpp
 bin/xournalpp-thumbnailer
 bin/xournalpp-wrapper
@@ -50,7 +50,7 @@ share/locale/th/LC_MESSAGES/xournalpp.mo
 share/locale/tr/LC_MESSAGES/xournalpp.mo
 share/locale/uk_UA/LC_MESSAGES/xournalpp.mo
 share/locale/vi/LC_MESSAGES/xournalpp.mo
-share/locale/zh/LC_MESSAGES/xournalpp.mo
+share/locale/zh_CN/LC_MESSAGES/xournalpp.mo
 share/locale/zh_HK/LC_MESSAGES/xournalpp.mo
 share/locale/zh_TW/LC_MESSAGES/xournalpp.mo
 share/metainfo/com.github.xournalpp.xournalpp.appdata.xml

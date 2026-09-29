@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2026/09/29 06:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2026/09/29 15:55:06 adam Exp $
 
-DISTNAME=	xournalpp-1.3.7
-PKGREVISION=	3
+DISTNAME=	xournalpp-1.3.8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,12 +21,12 @@ CMAKE_CONFIGURE_ARGS+=	-DINSTALL_DESKTOP_FILES=ON
 # Let PkgSrc handle man page compression.
 CMAKE_CONFIGURE_ARGS+=	-DMAN_COMPRESS=OFF
 
-TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
-DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
-DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
-DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
+TOOL_DEPENDS+=	help2man>=0:../../converters/help2man
+DEPENDS+=	tex-amsfonts>=0:../../fonts/tex-amsfonts
+DEPENDS+=	tex-amsmath>=0:../../print/tex-amsmath
+DEPENDS+=	tex-latex>=0:../../print/tex-latex
+DEPENDS+=	tex-latex-bin>=0:../../print/tex-latex-bin
+DEPENDS+=	tex-standalone>=0:../../print/tex-standalone
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
