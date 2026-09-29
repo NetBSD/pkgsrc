@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6497 2026/09/29 07:22:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6498 2026/09/29 07:45:27 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9752,3 +9752,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.10.1 [drixter 2026-09-29]
 	Updated textproc/py-JWT to 2.15.1 [adam 2026-09-29]
 	Updated devel/py-filelock to 4.0.6 [adam 2026-09-29]
+	Updated www/chromium to 154.0.8037.57 [kikadf 2026-09-29]
