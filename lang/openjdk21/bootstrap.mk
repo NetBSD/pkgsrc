@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2025/08/21 02:50:14 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2026/09/29 10:49:57 tnn Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 9"
@@ -40,6 +40,24 @@ EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
 #EXTRACT_ONLY+=			${BOOT.nb9-earmv6hf}
 #.endif
 
+ONLY_FOR_PLATFORM+=		Linux-*-x86_64
+BOOT.linux-amd64=		OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz
+SITES.${BOOT.linux-amd64}=	https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo)
+DISTFILES+=			${BOOT.linux-amd64}
+EXTRACT_ONLY+=			${BOOT.linux-amd64}
+ALT_BOOTDIR=			${WRKDIR}/jdk-21.0.9+10
+.endif
+
+ONLY_FOR_PLATFORM+=		Darwin-*-aarch64
+BOOT.darwin-aarch64+=		OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.9_10.tar.gz
+SITES.${BOOT.darwin-aarch64}=	https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo)
+DISTFILES+=			${BOOT.darwin-aarch64}
+EXTRACT_ONLY+=			${BOOT.darwin-aarch64}
+ALT_BOOTDIR=			${WRKDIR}/jdk-21.0.9+10/Contents/Home
+.endif
+
 CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
 
-ALT_BOOTDIR=		${WRKDIR}/bootstrap
+ALT_BOOTDIR?=		${WRKDIR}/bootstrap

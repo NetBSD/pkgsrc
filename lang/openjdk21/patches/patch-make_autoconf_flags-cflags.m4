@@ -1,4 +1,4 @@
-$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.3 2026/09/06 16:53:12 tnn Exp $
+$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.4 2026/09/29 10:49:58 tnn Exp $
 
 We prefer to use explicit run paths.
 
@@ -15,6 +15,19 @@ We prefer to use explicit run paths.
      SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
      SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
  
+@@ -49,9 +49,9 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
+     if test "x$OPENJDK_TARGET_OS" = xmacosx; then
+       # Linking is different on MacOSX
+       SHARED_LIBRARY_FLAGS="-dynamiclib -compatibility_version 1.0.0 -current_version 1.0.0"
+-      SET_EXECUTABLE_ORIGIN='-Wl,-rpath,@loader_path$(or [$]1,/.)'
+-      SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
+-      SET_SHARED_LIBRARY_NAME='-Wl,-install_name,@rpath/[$]1'
++      SET_EXECUTABLE_ORIGIN=''
++      SET_SHARED_LIBRARY_ORIGIN=''
++      SET_SHARED_LIBRARY_NAME='-Wl,-install_name,@PREFIX@/java/@JAVA_NAME@/lib/$(patsubst libjvm.%,${JVM_VARIANT_MAIN}/libjvm.%,[$]1)'
+       SET_SHARED_LIBRARY_MAPFILE='-Wl,-exported_symbols_list,[$]1'
+ 
+     elif test "x$OPENJDK_TARGET_OS" = xaix; then
 @@ -65,20 +65,13 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      else
        # Default works for linux, might work on other platforms as well.

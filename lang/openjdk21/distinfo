@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.20 2026/09/06 16:53:12 tnn Exp $
+$NetBSD: distinfo,v 1.21 2026/09/29 10:49:57 tnn Exp $
 
+BLAKE2s (OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.9_10.tar.gz) = b2535f2bedbe0c709f6d644a493402a2ceb567e470649cb8cb133914e2724598
+SHA512 (OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.9_10.tar.gz) = 4528e4cf9cfedead03324dfd8444b9e00d155905dd18d013f93f49d698f8cbbd1508cac03d70bf6780ab3c6b6d8fe834c6732f0f240e33ca61d4a11a6e2b9cf9
+Size (OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.9_10.tar.gz) = 199857923 bytes
+BLAKE2s (OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz) = 8068b9fcf004dcc11daa1a06870158630e8f9c271dcb3d490ce2d420859213c0
+SHA512 (OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz) = 5209bc15c2c21372b32b8ed55f03aef91e400d151dcfdfab83d63569c12b13aeee7b9c1678c960797d47962396ca566ebed791f55fcef4f27a9450c0db0b4035
+Size (OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz) = 207157802 bytes
 BLAKE2s (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 017a9d787a34faa997d72ac69bcafd9c8ab72354e3a1b751d1cb5d376b364f72
 SHA512 (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 7ec4208363f44a378674a2b87687ab7facb60bf73118ebd4bec35f7912f073365b36efc4c4b3c034bc448139cb81106e18d6d3b1db45f4ab086ce1ed72bc21bf
 Size (bootstrap-jdk-1.21.0.1.12-netbsd-9-amd64-20231207.tar.xz) = 113417260 bytes
@@ -12,8 +18,8 @@ Size (bootstrap-jdk-1.21.0.7.6-netbsd-9-aarch64-20250811.tar.xz) = 112607360 byt
 BLAKE2s (jdk21u-jdk-21.0.12-8-1.tar.gz) = 12f7ac748e9df58b220f72e52dc9c7a29b7720a51d8548d8d2276a38e7a3e6a5
 SHA512 (jdk21u-jdk-21.0.12-8-1.tar.gz) = 1e223ac3cd1aac829d68e8875610234632aac05aac4d3d4d84151a965097131aa1d05a2941c51ade46ae2015132ccc6b4aaffc18516cdaacab547fdaaff543d6
 Size (jdk21u-jdk-21.0.12-8-1.tar.gz) = 114259124 bytes
-SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 1f8d482c9e1498dd230bf63abfc0e4d76cfc6e9b
-SHA1 (patch-make_autoconf_flags-cflags.m4) = 88c41225834688de1ff6d4bcf80ab8c4676a0e74
+SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 0a8a0d7cb1df2c74b28aa846d560f671c5f51532
+SHA1 (patch-make_autoconf_flags-cflags.m4) = d73a9c0d687f15bd7d0d86bc1a3113eb4cf16d61
 SHA1 (patch-make_autoconf_flags-ldflags.m4) = 08c7e642272a447378c8877a1311b90a7e88afad
 SHA1 (patch-make_autoconf_hotspot.m4) = 6097c29677f4b84c3821b5cf7ac8c397376027d0
 SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
@@ -21,6 +27,7 @@ SHA1 (patch-make_autoconf_lib-bundled.m4) = 5f5b638a08abf2f2066a122a825cfa3db9e9
 SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd199445f
 SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
+SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_os__bsd__aarch64.cpp) = b580cdfbf4f2c7f1e216f87cf5ed7c19005e9742
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = c4db01034655302ca686b3ca2a95ab0ade72ce3a
 SHA1 (patch-src_hotspot_os__cpu_bsd__zero_os__bsd__zero.cpp) = c86e92ae0074b46cd623290bcfa5728517875640
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491d14ffc
