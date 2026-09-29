@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4696 2026/09/27 13:17:57 wen Exp $
+# $NetBSD: Makefile,v 1.4697 2026/09/29 16:07:04 bouyer Exp $
 #
 
 COMMENT=	Development utilities
@@ -1103,6 +1103,7 @@ SUBDIR+=	libsigc++3
 SUBDIR+=	libsigsegv
 SUBDIR+=	libslang
 SUBDIR+=	libsmi
+SUBDIR+=	libspnav
 SUBDIR+=	libstash
 SUBDIR+=	libstatgrab
 SUBDIR+=	libstree
