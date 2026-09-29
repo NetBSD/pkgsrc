@@ -1,13 +1,27 @@
-$NetBSD: patch-make_autoconf_buildjdk-spec.gmk.in,v 1.2 2026/09/06 16:53:12 tnn Exp $
+$NetBSD: patch-make_autoconf_buildjdk-spec.gmk.in,v 1.3 2026/09/29 10:49:58 tnn Exp $
 
 Use the same variant for the buildjdk as the target jdk.
 This is needed for native builds on platforms where hotspot is broken or not
 supported. In that case the buildjdk can't be hardcoded to "server" but must
 use "zero". This is fine for pkgsrc since we only ever build one variant.
 
+The buildjdk is run out of the build tree, so on Darwin its libraries must
+not claim to live in ${PREFIX}. c.f. flags-cflags.m4.
+
 --- make/autoconf/buildjdk-spec.gmk.in.orig	2026-07-23 23:33:34.000000000 +0000
 +++ make/autoconf/buildjdk-spec.gmk.in
-@@ -94,8 +94,9 @@ ENABLE_DEBUG_SYMBOLS := false
+@@ -52,6 +52,10 @@ SUPPORT_OUTPUTDIR := $(patsubst $(OUTPUT
+ JDK_OUTPUTDIR := $(patsubst $(OUTPUTDIR)%,$(BUILDJDK_OUTPUTDIR)%,$(JDK_OUTPUTDIR))
+ IMAGES_OUTPUTDIR := $(patsubst $(OUTPUTDIR)%,$(BUILDJDK_OUTPUTDIR)%,$(IMAGES_OUTPUTDIR))
+ 
++ifeq ($(OPENJDK_TARGET_OS), macosx)
++  SET_SHARED_LIBRARY_NAME = -Wl,-install_name,$(JDK_OUTPUTDIR)/lib/$(patsubst libjvm.%,$(JVM_VARIANT_MAIN)/libjvm.%,$1)
++endif
++
+ OPENJDK_BUILD_CPU_LEGACY := @OPENJDK_BUILD_CPU_LEGACY@
+ OPENJDK_BUILD_CPU_LEGACY_LIB := @OPENJDK_BUILD_CPU_LEGACY_LIB@
+ OPENJDK_BUILD_LIBC := @OPENJDK_BUILD_LIBC@
+@@ -94,8 +98,9 @@ DISABLE_WARNING_PREFIX := @BUILD_CC_DISA
  # Save speed and disk space by not enabling debug symbols for the buildjdk
  ENABLE_DEBUG_SYMBOLS := false
  
