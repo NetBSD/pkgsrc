@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2026/09/23 08:59:50 adam Exp $
+$NetBSD: distinfo,v 1.32 2026/09/29 10:25:49 adam Exp $
 
-BLAKE2s (libspectrum-1.6.4.tar.gz) = 3133cadcccfdb85edd1be9506886a0086dcbfda9d9aa53aee28bd2b0847e39b1
-SHA512 (libspectrum-1.6.4.tar.gz) = af7c1468f9927e8239a1c63448a147536b0336f4b6505a2a0c8e54cbc0e4d7e937587b84da738ac62b752fec0b6d2fdff6ee199c828c7c52345bb6f60c9e0fff
-Size (libspectrum-1.6.4.tar.gz) = 703518 bytes
+BLAKE2s (libspectrum-1.7.0.tar.gz) = cc99c7dd1a5a058f2d6331a74eb61dd2fccdaf181baf5e3fbe92aef88c8b8f34
+SHA512 (libspectrum-1.7.0.tar.gz) = 6e0b7f87aa1f794b443d50fbfd135a1a73e5cdf48cc9ace671ad00cd2d5078e606dc1cedd0a4367a62dbaacf6df556d4f2050d5e904905858af3c3994a15ae6a
+Size (libspectrum-1.7.0.tar.gz) = 722761 bytes
