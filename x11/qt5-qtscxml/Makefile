@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/09/27 11:39:37 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/29 06:08:37 wiz Exp $
 
 DISTNAME=	qtscxml-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtscxml-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 BUILD_TARGET=		sub-src
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}

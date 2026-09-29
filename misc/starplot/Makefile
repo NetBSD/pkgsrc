@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2026/09/27 11:37:43 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2026/09/29 06:06:41 wiz Exp $
 
 DISTNAME=	starplot-0.95.5
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	misc x11
 #MASTER_SITES=	http://starplot.org/downloads/
 

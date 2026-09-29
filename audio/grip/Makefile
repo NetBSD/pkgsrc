@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2026/09/27 11:34:53 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2026/09/29 06:03:45 wiz Exp $
 
 DISTNAME=	grip-4.2.4
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grip/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2026/09/27 11:35:52 tnn Exp $
+# $NetBSD: Makefile,v 1.130 2026/09/29 06:04:46 wiz Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dasher-project/}
 GITHUB_TAG=	e03b0dbf1f1132e83645ff78c92efd63fca5a812

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2026/09/27 11:35:21 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/09/29 06:04:13 wiz Exp $
 
 BUILDLINK_TREE+=	mariadb-embedded
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mariadb-embedded
 MARIADB_EMBEDDED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mariadb-embedded+=	mariadb-embedded>=10.11.7
-BUILDLINK_ABI_DEPENDS.mariadb-embedded?=		mariadb-embedded>=10.11.18nb2
+BUILDLINK_ABI_DEPENDS.mariadb-embedded?=		mariadb-embedded>=10.11.18nb3
 BUILDLINK_PKGSRCDIR.mariadb-embedded?=		../../databases/mariadb1011-embedded
 
 #.include "../../archivers/bzip2/buildlink3.mk"

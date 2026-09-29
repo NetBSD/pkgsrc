@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2026/09/27 11:35:28 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/29 06:04:21 wiz Exp $
 
 DISTNAME=	editorconfig-core-c-0.12.6
 PKGNAME=	${DISTNAME:S/c-//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=editorconfig/}
 GITHUB_PROJECT=	editorconfig-core-c

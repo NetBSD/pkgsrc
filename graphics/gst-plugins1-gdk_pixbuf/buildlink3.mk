@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:36:46 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:05:42 wiz Exp $
 
 BUILDLINK_TREE+=	gst-plugins1-gdk_pixbuf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins1-gdk_pixbuf
 GST_PLUGINS1_GDK_PIXBUF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins1-gdk_pixbuf+=	gst-plugins1-gdk_pixbuf>=1.18.0
-BUILDLINK_ABI_DEPENDS.gst-plugins1-gdk_pixbuf+=	gst-plugins1-gdk_pixbuf>=1.28.6nb2
+BUILDLINK_ABI_DEPENDS.gst-plugins1-gdk_pixbuf+=	gst-plugins1-gdk_pixbuf>=1.28.6nb3
 BUILDLINK_PKGSRCDIR.gst-plugins1-gdk_pixbuf?=	../../graphics/gst-plugins1-gdk_pixbuf
 
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

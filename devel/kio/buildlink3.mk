@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.62 2026/09/27 11:35:37 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.63 2026/09/29 06:04:30 wiz Exp $
 
 BUILDLINK_TREE+=	kio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kio
 KIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kio+=	kio>=5.21.0
-BUILDLINK_ABI_DEPENDS.kio?=	kio>=5.116.0nb14
+BUILDLINK_ABI_DEPENDS.kio?=	kio>=5.116.0nb15
 BUILDLINK_PKGSRCDIR.kio?=	../../devel/kio
 
 BUILDLINK_FILES.kio+=		share/dbus-1/interfaces/kf5_org.kde.*.xml

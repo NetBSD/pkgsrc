@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/09/27 11:38:24 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/09/29 06:07:23 wiz Exp $
 
 BUILDLINK_TREE+=	libgabe
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgabe
 LIBGABE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgabe+=	libgabe>=1.0
-BUILDLINK_ABI_DEPENDS.libgabe?=	libgabe>=1.0nb4
+BUILDLINK_ABI_DEPENDS.libgabe?=	libgabe>=1.0nb5
 BUILDLINK_PKGSRCDIR.libgabe?=	../../security/libgabe
 
 pkgbase:= libgabe

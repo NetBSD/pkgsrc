@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2026/09/27 11:36:26 tnn Exp $
+# $NetBSD: Makefile,v 1.87 2026/09/29 06:05:20 wiz Exp $
 
 DISTNAME=	picmi-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/picmi/

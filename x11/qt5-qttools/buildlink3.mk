@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.82 2026/09/27 11:39:38 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.83 2026/09/29 06:08:37 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qttools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qttools
 QT5_QTTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qttools+=	qt5-qttools>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qttools+=	qt5-qttools>=5.15.19nb3
+BUILDLINK_ABI_DEPENDS.qt5-qttools+=	qt5-qttools>=5.15.19nb4
 BUILDLINK_PKGSRCDIR.qt5-qttools?=	../../x11/qt5-qttools
 
 BUILDLINK_INCDIRS.qt5-qttools+=	qt5/include

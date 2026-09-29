@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2026/09/27 11:38:39 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2026/09/29 06:07:38 wiz Exp $
 
 BUILDLINK_TREE+=	libvirt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libvirt
 LIBVIRT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvirt+=	libvirt>=1.2.9nb27
-BUILDLINK_ABI_DEPENDS.libvirt?=	libvirt>=1.2.9nb64
+BUILDLINK_ABI_DEPENDS.libvirt?=	libvirt>=1.2.9nb65
 BUILDLINK_PKGSRCDIR.libvirt?=	../../sysutils/libvirt
 
 .include "../../devel/yajl/buildlink3.mk"

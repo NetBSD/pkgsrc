@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/09/27 11:37:48 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2026/09/29 06:06:46 wiz Exp $
 
 DISTNAME=	gnome-video-effects-0.5.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-video-effects/0.5/}
 EXTRACT_SUFX=	.tar.xz

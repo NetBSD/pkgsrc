@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2026/09/27 11:39:42 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/29 06:08:42 wiz Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
 DISTNAME=	wezterm-20260117.154428
 VERSION=	${PKGVERSION_NOREV:S/./-/}-${GITHUB_TAG:C/(........).*/\1/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
 GITHUB_TAG=	05343b387085842b434d267f91b6b0ec157e4331

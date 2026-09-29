@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/09/27 11:35:14 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/29 06:04:07 wiz Exp $
 
 DISTNAME=	telepathy-farstream-0.6.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chat
 MASTER_SITES=	https://telepathy.freedesktop.org/releases/telepathy-farstream/
 

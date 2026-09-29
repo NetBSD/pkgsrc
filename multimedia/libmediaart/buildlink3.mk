@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:37:53 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:06:51 wiz Exp $
 
 BUILDLINK_TREE+=	libmediaart
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmediaart
 LIBMEDIAART_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmediaart+=	libmediaart>=1.9.4
-BUILDLINK_ABI_DEPENDS.libmediaart?=	libmediaart>=1.9.4nb9
+BUILDLINK_ABI_DEPENDS.libmediaart?=	libmediaart>=1.9.4nb10
 BUILDLINK_PKGSRCDIR.libmediaart?=	../../multimedia/libmediaart
 BUILDLINK_INCDIRS.libmediaart+=		include/libmediaart-2.0
 

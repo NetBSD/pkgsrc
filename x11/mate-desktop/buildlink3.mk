@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2026/09/27 11:39:28 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/09/29 06:08:27 wiz Exp $
 #
 
 BUILDLINK_TREE+=	mate-desktop
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	mate-desktop
 MATE_DESKTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mate-desktop+=	mate-desktop>=1.24
-BUILDLINK_ABI_DEPENDS.mate-desktop+=	mate-desktop>=1.26.2nb15
+BUILDLINK_ABI_DEPENDS.mate-desktop+=	mate-desktop>=1.26.2nb16
 BUILDLINK_PKGSRCDIR.mate-desktop?=	../../x11/mate-desktop
 
 .include "../../devel/dconf/buildlink3.mk"

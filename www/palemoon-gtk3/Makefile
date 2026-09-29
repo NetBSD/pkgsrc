@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/09/27 11:39:09 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2026/09/29 06:08:08 wiz Exp $
 
 PM_GTK_VER=	3
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../www/palemoon/Makefile.common"
 .include "../../www/palemoon/hacks.mk"
 

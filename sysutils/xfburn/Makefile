@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2026/09/27 11:38:46 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/29 06:07:45 wiz Exp $
 
 VERSION=	0.7.2
 DISTNAME=	xfburn-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfburn/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2

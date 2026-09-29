@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2026/09/27 11:36:24 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/29 06:05:18 wiz Exp $
 
 DISTNAME=	love-11.5-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love11/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=love2d/}
 GITHUB_PROJECT=	love

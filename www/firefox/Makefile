@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2026/09/27 11:39:05 tnn Exp $
+# $NetBSD: Makefile,v 1.676 2026/09/29 06:08:04 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		156.0
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 .endif
 
 PKGNAME=	${DISTNAME:S/.source/${RCVER:S/build/rc/}/:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 EXTRACT_SUFX=	.tar.xz
 

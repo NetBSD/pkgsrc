@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:38:51 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:07:50 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-sonnet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-sonnet
 KF6_SONNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-sonnet+=	kf6-sonnet>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-sonnet?=	kf6-sonnet>=6.29.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-sonnet?=	kf6-sonnet>=6.29.0nb2
 BUILDLINK_PKGSRCDIR.kf6-sonnet?=	../../textproc/kf6-sonnet
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

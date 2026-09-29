@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2026/09/27 11:39:12 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2026/09/29 06:08:10 wiz Exp $
 
 DISTNAME=	arandr-0.1.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	http://christian.amsuess.com/tools/arandr/files/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2026/09/27 11:36:59 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/29 06:05:55 wiz Exp $
 
 DISTNAME=	mcomix-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 

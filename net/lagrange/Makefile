@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2026/09/27 11:38:05 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/29 06:07:04 wiz Exp $
 
 DISTNAME=	lagrange-1.20.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	https://git.skyjake.fi/gemini/lagrange/releases/download/v${PKGVERSION_NOREV}/
 

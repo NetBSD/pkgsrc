@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:38:39 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:07:37 wiz Exp $
 
 BUILDLINK_TREE+=	libdevkit-gobject
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdevkit-gobject
 LIBDEVKIT_GOBJECT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdevkit-gobject+=	libdevkit-gobject>=003
-BUILDLINK_ABI_DEPENDS.libdevkit-gobject+=	libdevkit-gobject>=003nb25
+BUILDLINK_ABI_DEPENDS.libdevkit-gobject+=	libdevkit-gobject>=003nb26
 BUILDLINK_PKGSRCDIR.libdevkit-gobject?=		../../sysutils/libdevkit-gobject
 
 .include "../../devel/glib2/buildlink3.mk"

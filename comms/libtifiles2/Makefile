@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/09/27 11:35:17 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/29 06:04:10 wiz Exp $
 #
 
 DISTNAME=	libtifiles2-1.1.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilp/}
 EXTRACT_SUFX=	.tar.bz2

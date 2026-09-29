@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:38:23 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:07:22 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kdesu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kdesu
 KF6_KDESU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kdesu+=	kf6-kdesu>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kdesu?=		kf6-kdesu>=6.29.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-kdesu?=		kf6-kdesu>=6.29.0nb2
 BUILDLINK_PKGSRCDIR.kf6-kdesu?=		../../security/kf6-kdesu
 
 .include "../../devel/kf6-kpty/buildlink3.mk"

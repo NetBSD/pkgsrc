@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:36:56 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:05:52 wiz Exp $
 
 BUILDLINK_TREE+=	p5-cairo-gobject
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-cairo-gobject
 P5_CAIRO_GOBJECT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-cairo-gobject+=	p5-cairo-gobject>=1.005
-BUILDLINK_ABI_DEPENDS.p5-cairo-gobject?=	p5-cairo-gobject>=1.005nb15
+BUILDLINK_ABI_DEPENDS.p5-cairo-gobject?=	p5-cairo-gobject>=1.005nb16
 BUILDLINK_PKGSRCDIR.p5-cairo-gobject?=	../../graphics/p5-cairo-gobject
 
 .include "../../graphics/cairo/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:35:29 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:04:21 wiz Exp $
 
 BUILDLINK_TREE+=	flatzebra
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	flatzebra
 FLATZEBRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flatzebra+=	flatzebra>=0.2.0
-BUILDLINK_ABI_DEPENDS.flatzebra?=		flatzebra>=0.2.0nb3
+BUILDLINK_ABI_DEPENDS.flatzebra?=		flatzebra>=0.2.0nb4
 BUILDLINK_PKGSRCDIR.flatzebra?=		../../devel/flatzebra
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"

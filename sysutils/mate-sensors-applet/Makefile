@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/09/27 11:38:40 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2026/09/29 06:07:39 wiz Exp $
 
-PKGREVISION= 17
+PKGREVISION= 18
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-sensors-applet-${VERSION:R}.0
