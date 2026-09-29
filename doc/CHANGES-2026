@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6495 2026/09/29 06:42:32 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6496 2026/09/29 07:07:20 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9749,3 +9749,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/png to 1.6.59 [wiz 2026-09-29]
 	Updated shells/oh-my-posh to 31.4.0 [pin 2026-09-29]
 	Updated sysutils/broot to 1.60.2 [pin 2026-09-29]
+	Updated www/resterm to 1.10.1 [drixter 2026-09-29]
