@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/09/29 06:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/29 07:52:32 adam Exp $
 
-DISTNAME=	appstream-1.2.0
-PKGREVISION=	2
+DISTNAME=	appstream-1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,13 +30,6 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/src
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/appstream.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
-
-# Hard-coded path to /usr/include for libstemmer.h.
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	Fixing absolute paths.
-SUBST_FILES.paths=	meson.build
-SUBST_SED.paths=	-e 's,/usr/include,${PREFIX}/include,g'
 
 .include "../../devel/wayland/platform.mk"
 .if !empty(PLATFORM_SUPPORTS_WAYLAND:Myes)
