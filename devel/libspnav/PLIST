@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/09/29 16:06:19 bouyer Exp $
+include/spnav.h
+include/spnav_config.h
+include/spnav_magellan.h
+lib/libspnav.a
+lib/libspnav.so
+lib/libspnav.so.0
+lib/libspnav.so.0.4
+lib/pkgconfig/spnav.pc
