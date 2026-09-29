@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6491 2026/09/28 22:08:50 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6492 2026/09/29 05:55:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9745,3 +9745,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/nushell to 0.116.0 [pin 2026-09-28]
 	Updated www/resterm to 1.10.0 [drixter 2026-09-28]
 	Added net/py-suds version 1.2.0 [gdt 2026-09-28]
+	Updated devel/pcre2 to 10.49 [wiz 2026-09-29]
