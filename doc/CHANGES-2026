@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6505 2026/09/29 13:04:16 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.6506 2026/09/29 13:05:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9766,3 +9766,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator-utils to 1.5.0 [adam 2026-09-29]
 	Updated www/resterm to 1.10.2 [drixter 2026-09-29]
 	Updated www/firefox153 to 153.4.0 [gutteridge 2026-09-29]
+	Updated www/firefox153-l10n to 153.4.0 [gutteridge 2026-09-29]
