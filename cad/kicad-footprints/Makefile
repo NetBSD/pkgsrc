@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/11/23 09:42:38 mef Exp $
+# $NetBSD: Makefile,v 1.20 2026/09/29 16:12:42 bouyer Exp $
 
-DISTNAME=	kicad-footprints-8.0.6
+DISTNAME=	kicad-footprints-10.0.6
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
 GITLAB_RELEASE=	${PKGVERSION_NOREV}
