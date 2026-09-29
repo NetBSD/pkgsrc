@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28057 2026/09/29 06:43:05 wiz Exp $
+$NetBSD: TODO,v 1.28058 2026/09/29 14:03:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -740,6 +740,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grafx2-2.8.3137
 	o gramps-6.0.6
 	o grantlee-5.0.0
+	o groff-1.24.2
 	o gromacs-2021.1
 	o grub2-2.14
 	o gss-1.0.3
