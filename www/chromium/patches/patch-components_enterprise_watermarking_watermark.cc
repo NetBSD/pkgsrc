@@ -1,12 +1,12 @@
-$NetBSD: patch-components_enterprise_watermarking_watermark.cc,v 1.26 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-components_enterprise_watermarking_watermark.cc,v 1.27 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/watermarking/watermark.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/enterprise/watermarking/watermark.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/enterprise/watermarking/watermark.cc
-@@ -34,7 +34,7 @@ gfx::Font WatermarkFont(int font_size) {
+@@ -35,7 +35,7 @@ gfx::Font WatermarkFont(int font_size) {
        "Segoe UI",
  #elif BUILDFLAG(IS_MAC)
        "SF Pro Text",
@@ -15,7 +15,7 @@ $NetBSD: patch-components_enterprise_watermarking_watermark.cc,v 1.26 2026/09/22
        "Ubuntu",
  #elif BUILDFLAG(IS_CHROMEOS)
        "Google Sans",
-@@ -45,7 +45,7 @@ gfx::Font WatermarkFont(int font_size) {
+@@ -46,7 +46,7 @@ gfx::Font WatermarkFont(int font_size) {
  }
  
  gfx::Font::Weight WatermarkFontWeight() {

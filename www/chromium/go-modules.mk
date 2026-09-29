@@ -1,0 +1,32 @@
+# $NetBSD: go-modules.mk,v 1.1 2026/09/29 07:42:45 kikadf Exp $
+
+GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.mod
+GO_MODULE_FILES+=	github.com/!microsoft/go-winio/@v/v0.6.2.zip
+GO_MODULE_FILES+=	github.com/go-json-experiment/json/@v/v0.0.0-20260623181947-01eb4420fa68.mod
+GO_MODULE_FILES+=	github.com/go-json-experiment/json/@v/v0.0.0-20260623181947-01eb4420fa68.zip
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.mod
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.zip
+GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.10.mod
+GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.10.zip
+GO_MODULE_FILES+=	github.com/mackerelio/go-osstat/@v/v0.2.7.mod
+GO_MODULE_FILES+=	github.com/mackerelio/go-osstat/@v/v0.2.7.zip
+GO_MODULE_FILES+=	github.com/matryer/moq/@v/v0.7.1.mod
+GO_MODULE_FILES+=	github.com/matryer/moq/@v/v0.7.1.zip
+GO_MODULE_FILES+=	github.com/peter-evans/patience/@v/v0.3.0.mod
+GO_MODULE_FILES+=	github.com/peter-evans/patience/@v/v0.3.0.zip
+GO_MODULE_FILES+=	github.com/zeebo/xxh3/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/zeebo/xxh3/@v/v1.1.0.zip
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.mod
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.37.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.21.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.21.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.46.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.46.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.44.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.44.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.38.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.38.0.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.47.0.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.47.0.zip
+GO_MODULE_FILES+=	gotest.tools/v3/@v/v3.5.2.mod
+GO_MODULE_FILES+=	gotest.tools/v3/@v/v3.5.2.zip

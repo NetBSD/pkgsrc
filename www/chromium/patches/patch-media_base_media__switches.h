@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.h,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.h,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- media/base/media_switches.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/base/media_switches.h
 @@ -92,7 +92,7 @@ MEDIA_EXPORT extern const char kMinVideo
  #endif  // BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.26 2026/09/22 13:41:27 kikadf Ex
  MEDIA_EXPORT extern const char kAlsaInputDevice[];
  MEDIA_EXPORT extern const char kAlsaOutputDevice[];
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||
-@@ -437,7 +437,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kIgnor
+@@ -446,7 +446,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kIgnor
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kShowForceRespectUiGainsToggle);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.26 2026/09/22 13:41:27 kikadf Ex
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kReduceHardwareVideoDecoderBuffers);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOutOfProcessVideoEncoding);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kV4L2H264TemporalLayerHWEncoding);
-@@ -448,7 +448,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kFuchs
+@@ -457,7 +457,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kFuchs
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kFuchsiaMediacodecVideoEncoder);
  #endif  // BUILDFLAG(IS_FUCHSIA)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_media__switches.h,v 1.26 2026/09/22 13:41:27 kikadf Ex
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinux);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoDecodeLinuxGL);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kAcceleratedVideoEncodeLinux);
-@@ -459,6 +459,19 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kPrefe
+@@ -468,6 +468,19 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kPrefe
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPulseaudioLoopbackForCast);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPulseaudioLoopbackForScreenShare);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiIgnoreDriverChecks);

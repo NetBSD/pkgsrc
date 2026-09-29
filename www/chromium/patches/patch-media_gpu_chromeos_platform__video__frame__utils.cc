@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_platform__video__frame__utils.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_platform__video__frame__utils.cc,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -70,7 +70,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(

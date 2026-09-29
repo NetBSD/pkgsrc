@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.12 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.13 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/first_run/first_run.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/first_run/first_run.h
 @@ -73,7 +73,7 @@ struct MasterPrefs {
  #if BUILDFLAG(IS_MAC)

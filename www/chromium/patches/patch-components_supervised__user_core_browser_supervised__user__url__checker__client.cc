@@ -1,12 +1,12 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__url__checker__client.cc,v 1.3 2026/09/22 13:41:25 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__url__checker__client.cc,v 1.4 2026/09/29 07:42:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_url_checker_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_url_checker_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_url_checker_client.cc
-@@ -65,7 +65,7 @@ void OnResponse(
+@@ -66,7 +66,7 @@ void OnResponse(
  
  FetcherConfig GetFetcherConfig(
      bool is_subject_to_family_link_parental_controls) {

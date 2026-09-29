@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_passwd__utils.cc,v 1.1 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-remoting_base_passwd__utils.cc,v 1.2 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/passwd_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/base/passwd_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/base/passwd_utils.cc
 @@ -49,7 +49,7 @@ base::expected<PasswdUserInfo, Loggable>
    user_info.gid = result->pw_gid;

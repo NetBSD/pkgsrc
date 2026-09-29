@@ -1,0 +1,18 @@
+$NetBSD: patch-components_private__verification__tokens_BUILD.gn,v 1.1 2026/09/29 07:42:55 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/private_verification_tokens/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
++++ components/private_verification_tokens/BUILD.gn
+@@ -19,7 +19,8 @@ source_set("unit_tests") {
+ 
+   # Exercises calling the BoringSSL-backed ATHM Rust crate from this component's
+   # C++ via the cxx bridge. The ATHM targets live in common/.
+-  if (enable_rust) {
++  # XXX crubit
++  if (enable_rust && !is_bsd) {
+     deps += [
+       "//components/private_verification_tokens/common:athm_test_issuer_unittest",
+       "//components/private_verification_tokens/common:privacy_pass_athm_batch_request_unittest",

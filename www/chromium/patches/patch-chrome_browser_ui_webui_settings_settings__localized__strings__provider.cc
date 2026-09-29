@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__provider.cc,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
-@@ -155,7 +155,7 @@
+@@ -154,7 +154,7 @@
  #include "chrome/browser/ui/webui/settings/system_handler.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
  #include "ui/display/screen.h"
  #endif
  
-@@ -165,7 +165,7 @@
+@@ -164,7 +164,7 @@
  #include "device/fido/win/webauthn_api.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
  #include "ui/linux/linux_ui_factory.h"
  #include "ui/ozone/public/ozone_platform.h"
  #endif
-@@ -290,7 +290,7 @@ void AddA11yStrings(content::WebUIDataSo
+@@ -289,7 +289,7 @@ void AddA11yStrings(content::WebUIDataSo
        {"toastAlertLevelDescription",
         IDS_SETTINGS_ACCESSIBILITY_TOAST_FREQUENCY_DESCRIPTION},
  #endif
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
        {"showWindowDecorations", IDS_SHOW_WINDOW_DECORATIONS},
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -694,7 +694,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -695,7 +695,7 @@ void AddAppearanceStrings(content::WebUI
    html_source->AddString("configurableSidePanelAlignments",
                           configurable_alignments_json);
  
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_browser_ui_webui_settings_settings__localized__strings__pr
    bool show_custom_chrome_frame = ui::OzonePlatform::GetInstance()
                                        ->GetPlatformRuntimeProperties()
                                        .supports_server_side_window_decorations;
-@@ -2130,7 +2130,7 @@ void AddSignOutDialogStrings(content::We
+@@ -2158,7 +2158,7 @@ void AddSignOutDialogStrings(content::We
            g_browser_process->GetApplicationLocale())
            .spec();
  

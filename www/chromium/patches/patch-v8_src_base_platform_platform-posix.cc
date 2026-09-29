@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.26 2026/09/22 13:41:34 kikadf Exp $
+$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.27 2026/09/29 07:43:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -78,9 +78,11 @@
  #include <sys/syscall.h>
@@ -80,13 +80,13 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.26 2026/09/22 13:41:34
  
  namespace {
  #if DEBUG
-@@ -1486,21 +1500,20 @@ Stack::StackSlot Stack::ObtainCurrentThr
+@@ -1485,19 +1499,13 @@ Stack::StackSlot Stack::ObtainCurrentThr
+   return stack_start;
  #endif  // V8_OS_ZOS
  }
- 
 +#endif  // !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) &&
 +        // !defined(_AIX) && !defined(V8_OS_SOLARIS)
-+
+ 
  // static
  Stack::StackSlot Stack::ObtainCurrentThreadStackReservedLimit() {
  #if V8_OS_ZOS
@@ -100,6 +100,11 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.26 2026/09/22 13:41:34
 -  }
 -  return stack.ss_sp;
  #else
+ // For most libcs, pthread_getattr_np() returns the the stack reserved
+ // limit on the main thread, but musl only returns the current high-water
+@@ -1508,7 +1516,11 @@ Stack::StackSlot Stack::ObtainCurrentThr
+   if (syscall(__NR_gettid) == getpid()) return nullptr;
+ #endif
    pthread_attr_t attr;
 +#if V8_OS_BSD
 +  int error = pthread_attr_init(&attr);
@@ -109,7 +114,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.26 2026/09/22 13:41:34
    if (error) {
      DCHECK(MainThreadIsCurrentThread());
      return nullptr;
-@@ -1514,10 +1527,6 @@ Stack::StackSlot Stack::ObtainCurrentThr
+@@ -1522,10 +1534,6 @@ Stack::StackSlot Stack::ObtainCurrentThr
  #endif  // V8_OS_ZOS
  }
  

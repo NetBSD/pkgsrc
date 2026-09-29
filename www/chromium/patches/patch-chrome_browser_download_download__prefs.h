@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_download_download__prefs.h,v 1.26 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__prefs.h,v 1.27 2026/09/29 07:42:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/download/download_prefs.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/download/download_prefs.h
-@@ -107,7 +107,7 @@ class DownloadPrefs {
+@@ -111,7 +111,7 @@ class DownloadPrefs {
    void DisableAutoOpenByUserBasedOnExtension(const base::FilePath& file_name);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.h,v 1.26 2026/09/22 13:41
    // Store the user preference to disk. If |should_open| is true, also disable
    // the built-in PDF plugin. If |should_open| is false, enable the PDF plugin.
    void SetShouldOpenPdfInSystemReader(bool should_open);
-@@ -171,7 +171,7 @@ class DownloadPrefs {
+@@ -175,7 +175,7 @@ class DownloadPrefs {
    std::unique_ptr<policy::URLBlocklist> auto_open_allowed_by_urls_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

@@ -1,0 +1,44 @@
+$NetBSD: patch-components_web__package_signed__web__bundles_integrity__block__parser.h,v 1.1 2026/09/29 07:42:56 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/web_package/signed_web_bundles/integrity_block_parser.h.orig	2026-09-22 00:09:16.000000000 +0000
++++ components/web_package/signed_web_bundles/integrity_block_parser.h
+@@ -5,13 +5,8 @@
+ #ifndef COMPONENTS_WEB_PACKAGE_SIGNED_WEB_BUNDLES_INTEGRITY_BLOCK_PARSER_H_
+ #define COMPONENTS_WEB_PACKAGE_SIGNED_WEB_BUNDLES_INTEGRITY_BLOCK_PARSER_H_
+ 
+-#include <optional>
+-#include <string>
+-
+-#include "base/compiler_specific.h"
+-#include "base/memory/raw_ref.h"
+-#include "base/memory/weak_ptr.h"
+ #include "components/web_package/mojom/web_bundle_parser.mojom-forward.h"
++#include "components/web_package/signed_web_bundles/integrity_block_attributes.h"
+ #include "components/web_package/signed_web_bundles/types.h"
+ #include "components/web_package/web_bundle_parser.h"
+ 
+@@ -20,7 +15,7 @@ namespace web_package {
+ class IntegrityBlockParser : public WebBundleParser::WebBundleSectionParser {
+  public:
+   explicit IntegrityBlockParser(
+-      mojom::BundleDataSource& data_source LIFETIME_BOUND,
++      mojom::BundleDataSource& data_source,
+       WebBundleParser::ParseIntegrityBlockCallback callback);
+ 
+   IntegrityBlockParser(const IntegrityBlockParser&) = delete;
+@@ -35,7 +30,10 @@ class IntegrityBlockParser : public WebB
+  private:
+   void OnIntegrityBlockRead(const std::optional<BinaryData>& data);
+ 
+-  void RunErrorCallback(std::string message,
++  base::expected<mojom::BundleIntegrityBlockSignatureStackEntryPtr, std::string>
++  ParseSignatureInfo(const cbor::Value& attributes_map);
++
++  void RunErrorCallback(const std::string& message,
+                         mojom::BundleParseErrorType error_type =
+                             mojom::BundleParseErrorType::kFormatError);
+ 

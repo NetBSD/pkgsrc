@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_dawn_tools_python_cipd__deps.py,v 1.3 2026/09/22 13:41:31 kikadf Exp $
+$NetBSD: patch-third__party_dawn_tools_python_cipd__deps.py,v 1.4 2026/09/29 07:43:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/tools/python/cipd_deps.py.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/dawn/tools/python/cipd_deps.py.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/dawn/tools/python/cipd_deps.py
 @@ -49,7 +49,7 @@ def get_cipd_compatible_current_os() -> 
      The returned string is compatible with CIPD's package naming scheme.

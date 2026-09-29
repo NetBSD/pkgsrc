@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ntp__tiles_chrome__most__visited__sites__factory.cc,v 1.19 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ntp__tiles_chrome__most__visited__sites__factory.cc,v 1.20 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.cc
 @@ -48,7 +48,7 @@ bool ShouldCreateCustomLinksManager() {
  

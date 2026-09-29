@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_accessibility_accessibility__features.h,v 1.25 2026/09/22 13:41:33 kikadf Exp $
+$NetBSD: patch-ui_accessibility_accessibility__features.h,v 1.26 2026/09/29 07:43:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/accessibility/accessibility_features.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/accessibility/accessibility_features.h
-@@ -397,7 +397,7 @@ AX_BASE_EXPORT bool IsScreenAIOCREnabled
+@@ -405,7 +405,7 @@ AX_BASE_EXPORT bool IsScreenAIOCREnabled
  AX_BASE_EXPORT BASE_DECLARE_FEATURE(kScreenAITestMode);
  AX_BASE_EXPORT bool IsScreenAITestModeEnabled();
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_accessibility_accessibility__features.h,v 1.25 2026/09/22 13:4
  // Enables advanced partition allocation checks in ScreenAI service.
  // TODO(crbug.com/418199684): Remove when the bug is fixed.
  AX_BASE_EXPORT BASE_DECLARE_FEATURE(
-@@ -429,7 +429,7 @@ AX_BASE_EXPORT BASE_DECLARE_FEATURE(kMac
+@@ -437,7 +437,7 @@ AX_BASE_EXPORT BASE_DECLARE_FEATURE(kMac
  AX_BASE_EXPORT bool IsMacAccessibilityTextOperationEnabled();
  #endif  // BUILDFLAG(IS_MAC)
  

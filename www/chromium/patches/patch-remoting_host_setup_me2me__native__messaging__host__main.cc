@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.24 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-remoting_host_setup_me2me__native__messaging__host__main.cc,v 1.25 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/setup/me2me_native_messaging_host_main.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/setup/me2me_native_messaging_host_main.cc
 @@ -42,7 +42,7 @@
  #include "base/apple/scoped_nsautorelease_pool.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ui__base__features.h,v 1.12 2026/09/22 13:41:33 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__features.h,v 1.13 2026/09/29 07:43:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/base/ui_base_features.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/base/ui_base_features.h
 @@ -156,7 +156,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kWaylandExternalBeginFrameSource);
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_base_ui__base__features.h,v 1.12 2026/09/22 13:41:33 kikadf Ex
  COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kGlobalShortcutsPortalPreferredTrigger);
  #endif
-@@ -357,7 +357,7 @@ BASE_DECLARE_FEATURE(kWebUIRoundedIcons)
+@@ -344,7 +344,7 @@ BASE_DECLARE_FEATURE(kWebUIRoundedIcons)
  COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kChromeDarkNeutrals26);
  

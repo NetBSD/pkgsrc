@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libunwind_src_src_AddressSpace.hpp,v 1.12 2026/09/22 13:41:31 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_AddressSpace.hpp,v 1.13 2026/09/29 07:43:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/AddressSpace.hpp.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/libunwind/src/src/AddressSpace.hpp.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/libunwind/src/src/AddressSpace.hpp
 @@ -16,6 +16,7 @@
  #include <stdio.h>

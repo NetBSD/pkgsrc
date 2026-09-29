@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.h,v 1.26 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.h,v 1.27 2026/09/29 07:42:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
 @@ -103,7 +103,7 @@ class OpaqueBrowserFrameView : public Br
    FrameButtonStyle GetFrameButtonStyle() const override;

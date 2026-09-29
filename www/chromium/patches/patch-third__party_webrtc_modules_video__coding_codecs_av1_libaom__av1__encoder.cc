@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_webrtc_modules_video__coding_codecs_av1_libaom__av1__encoder.cc,v 1.13 2026/09/22 13:41:33 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_modules_video__coding_codecs_av1_libaom__av1__encoder.cc,v 1.14 2026/09/29 07:43:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/webrtc/modules/video_coding/codecs/av1/libaom_av1_encoder.cc
-@@ -67,6 +67,10 @@
+@@ -66,6 +66,10 @@
  #define AOM_EFLAG_CALCULATE_PSNR (1 << 3)
  #endif
  

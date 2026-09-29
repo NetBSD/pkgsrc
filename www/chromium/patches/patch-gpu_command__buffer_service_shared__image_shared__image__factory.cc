@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.27 2026/09/29 07:42:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -56,7 +56,7 @@
  #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
  #elif BUILDFLAG(IS_WIN)
    return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
-@@ -323,7 +323,7 @@ SharedImageFactory::SharedImageFactory(
+@@ -332,7 +332,7 @@ SharedImageFactory::SharedImageFactory(
      factories_.push_back(std::move(ozone_factory));
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    if (gr_context_type_ == GrContextType::kVulkan
  #if BUILDFLAG(USE_WEBGPU_ON_VULKAN_VIA_GL_INTEROP)
        /* We support GL context for WebGPU gl-vulkan interop (on linux).*/
-@@ -1049,7 +1049,7 @@ void SharedImageFactory::LogGetFactoryFa
+@@ -1062,7 +1062,7 @@ void SharedImageFactory::LogGetFactoryFa
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  

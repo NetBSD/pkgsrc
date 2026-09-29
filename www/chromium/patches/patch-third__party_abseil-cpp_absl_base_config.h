@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_base_config.h,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_base_config.h,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/config.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/abseil-cpp/absl/base/config.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/abseil-cpp/absl/base/config.h
-@@ -412,7 +412,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
+@@ -377,7 +377,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
  #ifdef ABSL_HAVE_SCHED_YIELD
  #error ABSL_HAVE_SCHED_YIELD cannot be directly set
  #elif defined(__linux__) || defined(__ros__) || defined(__native_client__) || \
@@ -16,7 +16,7 @@ $NetBSD: patch-third__party_abseil-cpp_absl_base_config.h,v 1.26 2026/09/22 13:4
  #define ABSL_HAVE_SCHED_YIELD 1
  #endif
  
-@@ -427,7 +428,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
+@@ -392,7 +393,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
  // platforms.
  #ifdef ABSL_HAVE_SEMAPHORE_H
  #error ABSL_HAVE_SEMAPHORE_H cannot be directly set

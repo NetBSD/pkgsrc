@@ -1,12 +1,12 @@
-$NetBSD: patch-media_mojo_mojom_BUILD.gn,v 1.25 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-media_mojo_mojom_BUILD.gn,v 1.26 2026/09/29 07:43:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
+--- media/mojo/mojom/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/mojo/mojom/BUILD.gn
-@@ -1101,7 +1101,7 @@ source_set("test_support") {
+@@ -1108,7 +1108,7 @@ source_set("test_support") {
    sources = []
    deps = []
  
