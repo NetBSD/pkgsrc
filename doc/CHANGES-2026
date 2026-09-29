@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6509 2026/09/29 14:03:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6510 2026/09/29 14:12:09 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9770,3 +9770,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox140 to 140.17.0 [gutteridge 2026-09-29]
 	Updated www/firefox140-l10n to 140.17.0 [gutteridge 2026-09-29]
 	Updated misc/stellarium to 26.3 [wiz 2026-09-29]
+	Updated sysutils/intel-microcode-netbsd to 20260925 [msaitoh 2026-09-29]
