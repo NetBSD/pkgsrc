@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_wayland_src_src_scanner.c,v 1.7 2026/09/22 13:41:32 kikadf Exp $
+$NetBSD: patch-third__party_wayland_src_src_scanner.c,v 1.8 2026/09/29 07:43:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/src/src/scanner.c.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/wayland/src/src/scanner.c.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/wayland/src/src/scanner.c
 @@ -293,7 +293,7 @@ uppercase_dup(const char *src)
  

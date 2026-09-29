@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_signin_chrome__signin__client.cc,v 1.22 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_chrome__signin__client.cc,v 1.23 2026/09/29 07:42:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/chrome_signin_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/signin/chrome_signin_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/signin/chrome_signin_client.cc
-@@ -163,7 +163,7 @@ signin_metrics::ProfileSignout kAlwaysAl
+@@ -165,7 +165,7 @@ signin_metrics::ProfileSignout kAlwaysAl
  std::string HatsSurveyTriggerForAccessPoint(
      signin_metrics::AccessPoint access_point) {
    switch (access_point) {

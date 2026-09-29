@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_favicon_chrome__favicon__client.cc,v 1.18 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_favicon_chrome__favicon__client.cc,v 1.19 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/favicon/chrome_favicon_client.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/favicon/chrome_favicon_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/favicon/chrome_favicon_client.cc
 @@ -15,7 +15,7 @@
  #include "url/gurl.h"

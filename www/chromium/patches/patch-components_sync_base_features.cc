@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync_base_features.cc,v 1.2 2026/09/22 13:41:25 kikadf Exp $
+$NetBSD: patch-components_sync_base_features.cc,v 1.3 2026/09/29 07:42:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/base/features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/sync/base/features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/sync/base/features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kReplaceSyncPromosWithSignI
  );

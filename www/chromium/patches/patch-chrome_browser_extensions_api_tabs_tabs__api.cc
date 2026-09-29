@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_api_tabs_tabs__api.cc,v 1.18 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_tabs_tabs__api.cc,v 1.19 2026/09/29 07:42:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/extensions/api/tabs/tabs_api.cc
-@@ -1363,7 +1363,7 @@ ExtensionFunction::ResponseValue Windows
+@@ -1361,7 +1361,7 @@ ExtensionFunction::ResponseValue Windows
  // created as minimized.
  // TODO(crbug.com/40254339): Remove this workaround when linux is fixed.
  // TODO(crbug.com/40254339): Find a fix for wayland as well.

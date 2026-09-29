@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_test_chromedriver_keycode__text__conversion__unittest.cc,v 1.26 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-chrome_test_chromedriver_keycode__text__conversion__unittest.cc,v 1.27 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/test/chromedriver/keycode_text_conversion_unittest.cc
 @@ -64,7 +64,7 @@ std::string ConvertKeyCodeToTextNoError(
  

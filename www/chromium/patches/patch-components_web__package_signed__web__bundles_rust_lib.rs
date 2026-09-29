@@ -1,0 +1,34 @@
+$NetBSD: patch-components_web__package_signed__web__bundles_rust_lib.rs,v 1.1 2026/09/29 07:42:56 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/web_package/signed_web_bundles/rust/lib.rs.orig	2026-09-22 00:09:16.000000000 +0000
++++ components/web_package/signed_web_bundles/rust/lib.rs
+@@ -1,25 +0,0 @@
+-// Copyright 2026 The Chromium Authors
+-// Use of this source code is governed by a BSD-style license that can be
+-// found in the LICENSE file.
+-
+-#![no_std]
+-#![forbid(unsafe_code)]
+-
+-extern crate alloc;
+-
+-mod constants;
+-mod integrity_block;
+-mod signature_verifier;
+-mod types;
+-
+-pub use constants::{
+-    ECDSA_P256_PUBLIC_KEY_ATTRIBUTE_NAME, ECDSA_P256_PUBLIC_KEY_LEN, ECDSA_P256_SIGNATURE_MAX_LEN,
+-    ECDSA_P256_SIGNATURE_MIN_LEN, ED25519_PUBLIC_KEY_ATTRIBUTE_NAME, MAGIC_BYTES,
+-    TOP_LEVEL_ARRAY_LENGTH, V2_VERSION_BYTES, WEB_BUNDLE_ID_ATTRIBUTE_NAME,
+-};
+-pub use integrity_block::parse_integrity_block;
+-pub use signature_verifier::{
+-    create_empty_integrity_block_cbor, create_signature_payload, verify_ecdsa_p256_signature,
+-    verify_ed25519_signature, verify_signature, Sha512Hasher,
+-};
+-pub use types::{IntegrityBlock, ParseError, SignatureStackEntry, SignatureType};

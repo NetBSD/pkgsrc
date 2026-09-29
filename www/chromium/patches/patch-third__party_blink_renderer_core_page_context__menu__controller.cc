@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_page_context__menu__controller.cc,v 1.25 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_page_context__menu__controller.cc,v 1.26 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/renderer/core/page/context_menu_controller.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/core/page/context_menu_controller.cc
 @@ -713,7 +713,7 @@ bool ContextMenuController::ShowContextM
      if (potential_image_node != nullptr &&

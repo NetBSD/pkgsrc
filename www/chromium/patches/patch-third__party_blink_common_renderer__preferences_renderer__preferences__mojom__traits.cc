@@ -1,21 +1,21 @@
-$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__preferences__mojom__traits.cc,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc
-@@ -47,7 +47,7 @@ bool StructTraits<blink::mojom::Renderer
- 
+@@ -48,7 +48,7 @@ bool StructTraits<blink::mojom::Renderer
    out->use_custom_colors = data.use_custom_colors();
  
--#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    out->use_overlay_scrollbar = data.use_overlay_scrollbar();
  #endif
  
-@@ -78,7 +78,7 @@ bool StructTraits<blink::mojom::Renderer
+@@ -79,7 +79,7 @@ bool StructTraits<blink::mojom::Renderer
  
    out->send_subresource_notification = data.send_subresource_notification();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_common_renderer__preferences_renderer__prefere
    if (!data.ReadSystemFontFamilyName(&out->system_font_family_name))
      return false;
  #endif
-@@ -108,7 +108,7 @@ bool StructTraits<blink::mojom::Renderer
+@@ -109,7 +109,7 @@ bool StructTraits<blink::mojom::Renderer
    out->selection_clipboard_buffer_available =
        data.selection_clipboard_buffer_available();
  #endif

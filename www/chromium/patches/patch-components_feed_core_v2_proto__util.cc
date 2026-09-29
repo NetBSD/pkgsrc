@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feed_core_v2_proto__util.cc,v 1.26 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_feed_core_v2_proto__util.cc,v 1.27 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/feed/core/v2/proto_util.cc
 @@ -91,8 +91,8 @@ feedwire::Version GetPlatformVersionMess
  

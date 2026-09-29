@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_security__key_remote__security__key__main.cc,v 1.24 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-remoting_host_security__key_remote__security__key__main.cc,v 1.25 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/security_key/remote_security_key_main.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/security_key/remote_security_key_main.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/security_key/remote_security_key_main.cc
 @@ -23,7 +23,7 @@
  #include "remoting/host/security_key/security_key_message_handler.h"

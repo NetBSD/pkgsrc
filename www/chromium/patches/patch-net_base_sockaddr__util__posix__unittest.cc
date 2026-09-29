@@ -1,10 +1,10 @@
-$NetBSD: patch-net_base_sockaddr__util__posix__unittest.cc,v 1.26 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-net_base_sockaddr__util__posix__unittest.cc,v 1.27 2026/09/29 07:43:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/sockaddr_util_posix_unittest.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- net/base/sockaddr_util_posix_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ net/base/sockaddr_util_posix_unittest.cc
 @@ -77,7 +77,8 @@ TEST(FillUnixAddressTest, AbstractLinuxA
    SockaddrStorage storage;

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2026/09/29 06:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/09/29 07:42:45 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			153.0.8010.52
-PKGREVISION=			2
+VERSION=			154.0.8037.57
 CATEGORIES=			www
 #MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
@@ -14,7 +13,7 @@ DISTFILES+=			${DISTNAME}-linux${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
-NB_VERSION=			v151.1
+NB_VERSION=			v154.0
 GITHUB_SUBMODULES=		kikadf chromium-nb ${NB_VERSION} ./
 
 # rollup
@@ -27,6 +26,9 @@ EB_DISTNAME=			${MAKE} -C ../../www/esbuild -V DISTNAME
 EB_VER=				${EB_DISTNAME:sh:C/^.*-//}
 GITHUB_SUBMODULES+=		evanw esbuild v${EB_VER} esbuild
 
+# typescript
+GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
+
 # LLVM_MAJOR_VERSION
 LLVM_MV=			21
 
@@ -38,7 +40,7 @@ HOMEPAGE=			https://www.chromium.org/Home
 COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
-USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
+USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config patch
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
@@ -232,15 +234,17 @@ EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
 		-I${BUILDLINK_DIR}/include/glib \
 		-I${BUILDLINK_DIR}/include/nss
 
+# LC_C_LOCALE
+.if ${OPSYS} == "NetBSD"
+EXTRA_CXXFLAGS+=	-D_NETBSD_SOURCE
+.endif
+
 # rust
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true
 GN_ARGS+=	rust_sysroot_absolute=\"${PREFIX}\"
 
 # go (third_party/dawn)
-.include "../../lang/go/version.mk"
-TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
-MAKE_ENV+=		GOCACHE=${WRKDIR}/.cache/go-build
 SUBST_CLASSES+=		go
 SUBST_STAGE.go=		pre-configure
 SUBST_MESSAGE.go=	Set path of go executable
@@ -288,6 +292,10 @@ UNLIMIT_RESOURCES=	datasize
 
 post-extract:
 	${CP} ${FILESDIR}/chromium.sh.in ${WRKSRC}/chromium.sh
+
+post-patch:
+	patch -d ${WRKSRC}/typescript/tsc/internal/bundled/libs -Ep2 < \
+		${WRKSRC}/third_party/typescript/linux-amd64/3pp/patches/typescript_native_preview.patch
 
 pre-configure:
 	# Build intternal ffmpeg
@@ -350,6 +358,12 @@ do-build: do-cargo-build
 	${CP} ${WRKSRC}/rollup/rust/target/release/libbindings_napi.so \
 		rollup-${LOWER_OPSYS}/rollup.${LOWER_OPSYS}.node && \
 		${ECHO} '{ "main": "./rollup.${LOWER_OPSYS}.node" }' > rollup-${LOWER_OPSYS}/package.json
+	${RUN} cd ${WRKSRC}/typescript/tsc && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${GO} telemetry off >/dev/null 2>&1 || ${TRUE}
+	${RUN} cd ${WRKSRC}/typescript/tsc && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${GO} build -v -p ${_MAKE_JOBS_N} ./cmd/tsgo && \
+		${LN} -sf ${WRKSRC}/typescript/tsc/tsgo \
+		${WRKSRC}/third_party/typescript/linux-amd64/src/lib/tsc
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out/${BUILDTYPE} ${TARGET}
 
@@ -424,11 +438,14 @@ do-install:
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"
+.include "go-modules.mk"
+.include "../../lang/go/go-module.mk"
 BUILDLINK_DEPMETHOD.nodejs=	build
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
-.include "../../lang/typescript/buildlink3.mk"
+# Chromium uses own patched typescript
+#.include "../../lang/typescript/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"

@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_include_v8-internal.h,v 1.26 2026/09/22 13:41:34 kikadf Exp $
+$NetBSD: patch-v8_include_v8-internal.h,v 1.27 2026/09/29 07:43:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8-internal.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- v8/include/v8-internal.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ v8/include/v8-internal.h
 @@ -218,7 +218,7 @@ using SandboxedPointer_t = Address;
  #ifdef V8_ENABLE_SANDBOX

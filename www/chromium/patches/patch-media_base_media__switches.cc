@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.cc,v 1.28 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- media/base/media_switches.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -20,7 +20,7 @@
  #include "ui/gl/gl_features.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -643,7 +643,7 @@ BASE_FEATURE(kH264IDRKeyframeRequiresPar
+@@ -640,7 +640,7 @@ BASE_FEATURE(kH264IDRKeyframeRequiresPar
  BASE_FEATURE(kHardwareMediaKeyHandling,
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
               base::FEATURE_ENABLED_BY_DEFAULT
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
  #if BUILDFLAG(USE_MPRIS)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1127,7 +1127,7 @@ BASE_FEATURE(kFileDialogsTuckPictureInPi
+@@ -1124,7 +1124,7 @@ BASE_FEATURE(kFileDialogsTuckPictureInPi
  
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1444,7 +1444,7 @@ BASE_FEATURE(kShowForceRespectUiGainsTog
+@@ -1453,7 +1453,7 @@ BASE_FEATURE(kShowForceRespectUiGainsTog
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
  // Reduces the number of buffers needed in the output video frame pool to
  // populate the Renderer pipeline for hardware accelerated VideoDecoder in
  // non-low latency scenarios.
-@@ -1471,7 +1471,7 @@ BASE_FEATURE(kFuchsiaMediacodecVideoEnco
+@@ -1480,7 +1480,7 @@ BASE_FEATURE(kFuchsiaMediacodecVideoEnco
  
  #endif  // BUILDFLAG(IS_FUCHSIA)
  
@@ -60,7 +60,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -1502,6 +1502,30 @@ BASE_FEATURE(kPulseaudioLoopbackForScree
+@@ -1511,6 +1511,30 @@ BASE_FEATURE(kPulseaudioLoopbackForScree
  // implementations.
  BASE_FEATURE(kVaapiIgnoreDriverChecks, base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -91,7 +91,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.27 2026/09/22 13:41:27 kikadf E
  #endif  // BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_MAC)
-@@ -1939,7 +1963,7 @@ bool IsSystemLoopbackCaptureSupported() 
+@@ -1948,7 +1972,7 @@ bool IsSystemLoopbackCaptureSupported() 
  #elif BUILDFLAG(IS_MAC)
    return (IsMacSckSystemLoopbackCaptureSupported() ||
            IsMacCatapSystemLoopbackCaptureSupported());

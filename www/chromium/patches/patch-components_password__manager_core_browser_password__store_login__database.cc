@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__store_login__database.cc,v 1.26 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__store_login__database.cc,v 1.27 2026/09/29 07:42:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database.cc
 @@ -1023,7 +1023,7 @@ bool ShouldDeleteUndecryptablePasswords(
      bool is_enabled_by_policy,

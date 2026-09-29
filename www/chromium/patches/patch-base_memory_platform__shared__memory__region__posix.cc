@@ -1,12 +1,12 @@
-$NetBSD: patch-base_memory_platform__shared__memory__region__posix.cc,v 1.26 2026/09/22 13:41:17 kikadf Exp $
+$NetBSD: patch-base_memory_platform__shared__memory__region__posix.cc,v 1.27 2026/09/29 07:42:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- base/memory/platform_shared_memory_region_posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ base/memory/platform_shared_memory_region_posix.cc
-@@ -171,7 +171,7 @@ bool PlatformSharedMemoryRegion::Convert
+@@ -263,7 +263,7 @@ bool PlatformSharedMemoryRegion::Convert
  // static
  PlatformSharedMemoryRegion PlatformSharedMemoryRegion::Create(Mode mode,
                                                                size_t size
@@ -15,7 +15,7 @@ $NetBSD: patch-base_memory_platform__shared__memory__region__posix.cc,v 1.26 202
                                                                ,
                                                                bool executable
  #endif
-@@ -196,7 +196,7 @@ PlatformSharedMemoryRegion PlatformShare
+@@ -299,7 +299,7 @@ PlatformSharedMemoryRegion PlatformShare
    // flag.
    FilePath directory;
    if (!GetShmemTempDir(

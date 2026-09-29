@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_notifications_notification__display__service__impl.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_notifications_notification__display__service__impl.cc,v 1.27 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_display_service_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/notifications/notification_display_service_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/notifications/notification_display_service_impl.cc
-@@ -31,7 +31,7 @@
+@@ -34,7 +34,7 @@
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_notifications_notification__display__service__impl
  #include "chrome/browser/sharing/sharing_notification_handler.h"
  #endif
  
-@@ -63,7 +63,7 @@ NotificationDisplayServiceImpl* Notifica
+@@ -66,7 +66,7 @@ NotificationDisplayServiceImpl* Notifica
  // static
  void NotificationDisplayServiceImpl::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_notifications_notification__display__service__impl
    registry->RegisterBooleanPref(prefs::kAllowSystemNotifications, true);
  #endif
  }
-@@ -79,7 +79,7 @@ NotificationDisplayServiceImpl::Notifica
+@@ -82,7 +82,7 @@ NotificationDisplayServiceImpl::Notifica
                             std::make_unique<PersistentNotificationHandler>());
  
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

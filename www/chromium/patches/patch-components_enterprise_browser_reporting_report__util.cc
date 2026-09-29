@@ -1,12 +1,12 @@
-$NetBSD: patch-components_enterprise_browser_reporting_report__util.cc,v 1.22 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-components_enterprise_browser_reporting_report__util.cc,v 1.23 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/browser/reporting/report_util.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/enterprise/browser/reporting/report_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/enterprise/browser/reporting/report_util.cc
-@@ -213,7 +213,7 @@ std::string GetSecuritySignalsInReport(
+@@ -214,7 +214,7 @@ std::string GetSecuritySignalsInReport(
      signals_dict.Set("antivirus_info", std::move(anti_virus_list));
  
      signals_dict.Set("hotfixes", RepeatedFieldptrToList(os_report.hotfixes()));

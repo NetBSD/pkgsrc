@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.27 2026/09/29 07:42:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@
  #include <vector>
@@ -14,7 +14,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
  #include "base/feature_list.h"
  #include "base/files/file_util.h"
  #include "base/functional/bind.h"
-@@ -65,6 +66,10 @@
+@@ -67,6 +68,10 @@
  #include "components/safe_browsing/content/common/file_type_policies.h"
  #endif
  
@@ -25,7 +25,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
  using content::BrowserContext;
  using content::BrowserThread;
  using content::DownloadManager;
-@@ -78,7 +83,7 @@ namespace {
+@@ -80,7 +85,7 @@ namespace {
  // Consider downloads 'dangerous' if they go to the home directory on Linux and
  // to the desktop on any platform.
  bool DownloadPathIsDangerous(const base::FilePath& download_path) {
@@ -34,7 +34,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
    base::FilePath home_dir = base::GetHomeDir();
    if (download_path == home_dir) {
      return true;
-@@ -248,7 +253,7 @@ DownloadPrefs::DownloadPrefs(Profile* pr
+@@ -250,7 +255,7 @@ DownloadPrefs::DownloadPrefs(Profile* pr
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -43,7 +43,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
    should_open_pdf_in_system_reader_ =
        prefs->GetBoolean(prefs::kOpenPdfDownloadInSystemReader);
  #endif
-@@ -375,7 +380,7 @@ void DownloadPrefs::RegisterProfilePrefs
+@@ -377,7 +382,7 @@ void DownloadPrefs::RegisterProfilePrefs
    registry->RegisterFilePathPref(prefs::kSaveFileDefaultDirectory,
                                   default_download_path);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -52,7 +52,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
  #if BUILDFLAG(IS_ANDROID)
-@@ -548,7 +553,7 @@ void DownloadPrefs::DisableAutoOpenByUse
+@@ -555,7 +560,7 @@ void DownloadPrefs::DisableAutoOpenByUse
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -61,7 +61,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
    if (should_open_pdf_in_system_reader_ == should_open)
      return;
-@@ -574,7 +579,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
+@@ -581,7 +586,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
  
  void DownloadPrefs::ResetAutoOpenByUser() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -70,7 +70,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
    SetShouldOpenPdfInSystemReader(false);
  #endif
    auto_open_by_user_.clear();
-@@ -611,7 +616,7 @@ void DownloadPrefs::SaveAutoOpenState() 
+@@ -618,7 +623,7 @@ void DownloadPrefs::SaveAutoOpenState() 
  bool DownloadPrefs::CanPlatformEnableAutoOpenForPdf() const {
  #if BUILDFLAG(IS_CHROMEOS)
    return false;  // There is no UI for auto-open on ChromeOS.
@@ -79,7 +79,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.26 2026/09/22 13:4
    return ShouldOpenPdfInSystemReader();
  #else
    return false;
-@@ -693,7 +698,14 @@ base::FilePath DownloadPrefs::SanitizeDo
+@@ -700,7 +705,14 @@ base::FilePath DownloadPrefs::SanitizeDo
  #else
    // If the stored download directory is an absolute path, we presume it's
    // correct; there's not really much more validation we can do here.

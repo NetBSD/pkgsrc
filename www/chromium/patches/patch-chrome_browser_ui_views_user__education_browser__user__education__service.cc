@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -288,7 +288,7 @@ CreateNavigationAction(GURL target) {
+@@ -317,7 +317,7 @@ CreateNavigationAction(GURL target) {
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education_
  void NavigateToSettingsPage(ContextPtr ctx,
                              user_education::FeaturePromoHandle promo_handle) {
    BrowserWindowInterface* const browser = GetBrowser(ctx);
-@@ -1463,7 +1463,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -1577,7 +1577,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));
    }
  
@@ -24,8 +24,8 @@ $NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education_
    // kIPHSupervisedUserProfileSigninFeature:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -1770,7 +1770,7 @@ void MaybeRegisterChromeFeaturePromos(
-                        "new translate screen feature on the Lens Overlay.")));
+@@ -1920,7 +1920,7 @@ void MaybeRegisterChromeFeaturePromos(
+               "Omnibox Everywhere.")));
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
 -    BUILDFLAG(IS_CHROMEOS)
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education_
    // kIPHDesktopPWAsLinkCapturingLaunch:
    registry.RegisterFeature(std::move(
        FeaturePromoSpecification::CreateForCustomAction(
-@@ -2525,7 +2525,7 @@ void MaybeRegisterChromeNewBadges(user_e
+@@ -2768,7 +2768,7 @@ void MaybeRegisterChromeNewBadges(user_e
        user_education::Metadata(153, "amyasinghal@google.com",
                                 "Shown on the Dictation context menu item.")));
  

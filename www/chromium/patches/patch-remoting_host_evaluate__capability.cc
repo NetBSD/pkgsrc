@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_evaluate__capability.cc,v 1.26 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-remoting_host_evaluate__capability.cc,v 1.27 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/evaluate_capability.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/evaluate_capability.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/evaluate_capability.cc
 @@ -56,7 +56,7 @@ base::FilePath BuildHostBinaryPath() {
    }

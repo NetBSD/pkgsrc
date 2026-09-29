@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.18 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__delegate__desktop.cc,v 1.19 2026/09/29 07:42:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/data_sharing/collaboration_controller_delegate_desktop.cc
 @@ -97,7 +97,7 @@ DialogText GetPromptDialogTextFromStatus
        break;
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
  void CollaborationControllerDelegateDesktop::
      MaybeShowSignInUiForHistorySyncOptin() {
    collaboration::ServiceStatus status = GetServiceStatus();
-@@ -519,7 +519,7 @@ void CollaborationControllerDelegateDesk
+@@ -520,7 +520,7 @@ void CollaborationControllerDelegateDesk
    }
  
    AccountInfo account_for_promo =
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
        signin_ui_util::GetSingleAccountForPromos(
            IdentityManagerFactory::GetForProfile(browser_->GetProfile()),
            AccountPreviewDataServiceFactory::GetForProfile(
-@@ -556,7 +556,7 @@ void CollaborationControllerDelegateDesk
+@@ -557,7 +557,7 @@ void CollaborationControllerDelegateDesk
                .SetLabel(dialog_text.ok_button_text)
                .SetEnabled(true));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_data__sharing_collaboration__controller__
    if (syncer::IsReplaceSyncPromosWithSignInPromosEnabled()) {
      dialog_builder.SetFootnote(ui::DialogModelLabel(dialog_text.footnote));
  
-@@ -605,7 +605,7 @@ void CollaborationControllerDelegateDesk
+@@ -606,7 +606,7 @@ void CollaborationControllerDelegateDesk
          .Run(CollaborationControllerDelegate::Outcome::kSuccess);
    }
  

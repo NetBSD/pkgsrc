@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.h,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.h,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -64,7 +64,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
  #endif  // BUILDFLAG(IS_MAC)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.26 2026/09/22 13:41:22 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillAddressSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillCardSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillPasswordSurvey);
-@@ -160,7 +160,7 @@ extern const base::FeatureParam<std::str
+@@ -164,7 +164,7 @@ extern const base::FeatureParam<std::str
  COMPONENT_EXPORT(CHROME_FEATURES)
  bool RemoteActorCredentialSharingEnabled();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.26 2026/09/22 13:41:22 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  #endif
  
-@@ -983,7 +983,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -1001,7 +1001,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kIsolatedWebAppBundleCache);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.26 2026/09/22 13:41:22 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorModerateLevel;
-@@ -991,7 +991,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -1009,7 +1009,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

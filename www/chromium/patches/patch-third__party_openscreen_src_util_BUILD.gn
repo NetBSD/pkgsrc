@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_openscreen_src_util_BUILD.gn,v 1.1 2026/09/22 13:41:32 kikadf Exp $
+$NetBSD: patch-third__party_openscreen_src_util_BUILD.gn,v 1.2 2026/09/29 07:43:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/openscreen/src/util/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/openscreen/src/util/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/openscreen/src/util/BUILD.gn
-@@ -107,7 +107,7 @@ openscreen_source_set("util") {
+@@ -152,7 +152,7 @@ openscreen_source_set("util") {
      sources += [ "scoped_wake_lock_mac.cc" ]
    }
  

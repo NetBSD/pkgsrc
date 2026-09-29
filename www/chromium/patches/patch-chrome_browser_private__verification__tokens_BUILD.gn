@@ -1,0 +1,35 @@
+$NetBSD: patch-chrome_browser_private__verification__tokens_BUILD.gn,v 1.1 2026/09/29 07:42:49 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/private_verification_tokens/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
++++ chrome/browser/private_verification_tokens/BUILD.gn
+@@ -26,7 +26,7 @@ static_library("private_verification_tok
+     "//chrome/browser/profiles:profile",
+     "//components/content_settings/core/browser",
+     "//components/keyed_service/core",
+-    "//components/private_verification_tokens/common:privacy_pass_athm_batch_request",
++    # XXX crubit "//components/private_verification_tokens/common:privacy_pass_athm_batch_request",
+     "//components/private_verification_tokens/common:private_verification_tokens_fetcher",
+     "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
+     "//components/private_verification_tokens/common:private_verification_tokens_parameters",
+@@ -49,7 +49,7 @@ source_set("browser_tests") {
+     "//chrome/browser/content_settings:content_settings_factory",
+     "//chrome/test:test_support",
+     "//components/content_settings/core/common",
+-    "//components/private_verification_tokens/common:athm_test_issuer",
++    # XXX cbor "//components/private_verification_tokens/common:athm_test_issuer",
+     "//components/private_verification_tokens/common:private_verification_tokens_database",
+     "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
+     "//net:test_support",
+@@ -72,7 +72,7 @@ source_set("unit_tests") {
+     "//chrome/test:test_support",
+     "//components/content_settings/core/browser",
+     "//components/content_settings/core/common",
+-    "//components/private_verification_tokens/common:athm_test_issuer",
++    # XXX cbor "//components/private_verification_tokens/common:athm_test_issuer",
+     "//components/private_verification_tokens/common:private_verification_tokens_database",
+     "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
+     "//components/private_verification_tokens/common:private_verification_tokens_parameters",

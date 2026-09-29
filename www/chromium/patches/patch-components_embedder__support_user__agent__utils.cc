@@ -1,10 +1,10 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.26 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.27 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -283,7 +283,7 @@ std::string GetUserAgentPlatform() {
    return "";
@@ -24,7 +24,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.26 2026/09
    return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -603,7 +603,7 @@ std::string GetPlatformVersion() {
+@@ -619,7 +619,7 @@ std::string GetPlatformVersion() {
  
  #if BUILDFLAG(IS_WIN)
    return GetWindowsPlatformVersion();
@@ -33,7 +33,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.26 2026/09
    return std::string();
  #else
  
-@@ -640,6 +640,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -656,6 +656,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -43,7 +43,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.26 2026/09
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -822,6 +825,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -827,6 +830,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

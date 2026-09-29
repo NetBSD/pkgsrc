@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_version_version__ui.cc,v 1.3 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_version_version__ui.cc,v 1.4 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/version/version_ui.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/webui/version/version_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/webui/version/version_ui.cc
 @@ -209,7 +209,7 @@ int VersionUI::VersionProcessorVariation
    return IDS_VERSION_UI_64BIT;

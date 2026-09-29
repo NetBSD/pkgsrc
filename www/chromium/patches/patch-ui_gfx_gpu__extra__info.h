@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.24 2026/09/22 13:41:33 kikadf Exp $
+$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.25 2026/09/29 07:43:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_extra_info.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/gfx/gpu_extra_info.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/gfx/gpu_extra_info.h
 @@ -47,7 +47,7 @@ struct COMPONENT_EXPORT(GFX) GpuExtraInf
    // applicable.

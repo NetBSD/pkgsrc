@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_config__file__watcher.cc,v 1.6 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-remoting_host_config__file__watcher.cc,v 1.7 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/config_file_watcher.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/config_file_watcher.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/config_file_watcher.cc
 @@ -27,7 +27,7 @@ const char kHostConfigSwitchName[] = "ho
  const base::FilePath::CharType kDefaultHostConfigFile[] =

@@ -1,0 +1,35 @@
+$NetBSD: patch-device_vr_openxr_openxr__swapchain__info.h,v 1.1 2026/09/29 07:42:58 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- device/vr/openxr/openxr_swapchain_info.h.orig	2026-09-22 00:09:16.000000000 +0000
++++ device/vr/openxr/openxr_swapchain_info.h
+@@ -19,7 +19,7 @@
+ #include "ui/gl/scoped_egl_image.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include <vulkan/vulkan_core.h>
+ #endif
+ 
+@@ -32,7 +32,7 @@ struct OpenXrSwapchainInfo {
+   explicit OpenXrSwapchainInfo(ID3D11Texture2D*);
+ #elif BUILDFLAG(IS_ANDROID)
+   explicit OpenXrSwapchainInfo(uint32_t texture);
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   explicit OpenXrSwapchainInfo(VkImage vk_image);
+ #endif
+   OpenXrSwapchainInfo();
+@@ -55,7 +55,7 @@ struct OpenXrSwapchainInfo {
+   // texture prior to submission.
+   Microsoft::WRL::ComPtr<ID3D11Texture2D> d3d11_shared_texture = nullptr;
+   Microsoft::WRL::ComPtr<ID3D11Fence> d3d11_fence;
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // The Vulkan image handle from the OpenXR swapchain.
+   VkImage vk_image = VK_NULL_HANDLE;
+ #elif BUILDFLAG(IS_ANDROID)

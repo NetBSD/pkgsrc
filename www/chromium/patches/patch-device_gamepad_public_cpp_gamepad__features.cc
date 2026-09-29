@@ -1,10 +1,10 @@
-$NetBSD: patch-device_gamepad_public_cpp_gamepad__features.cc,v 1.13 2026/09/22 13:41:26 kikadf Exp $
+$NetBSD: patch-device_gamepad_public_cpp_gamepad__features.cc,v 1.14 2026/09/29 07:42:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/public/cpp/gamepad_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- device/gamepad/public/cpp/gamepad_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ device/gamepad/public/cpp/gamepad_features.cc
 @@ -34,7 +34,7 @@ BASE_FEATURE(kClaimDuplicateGamepadsProd
  BASE_FEATURE(kIgnorePS5GamepadsInWgi, base::FEATURE_ENABLED_BY_DEFAULT);

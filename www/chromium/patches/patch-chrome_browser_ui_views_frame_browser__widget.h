@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.h,v 1.18 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.h,v 1.19 2026/09/29 07:42:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_widget.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_widget.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_widget.h
 @@ -65,7 +65,7 @@ class BrowserWidget : public views::Widg
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.h,v 1.18 2026/09/22
    // Returns whether the frame is in a tiled state.
    bool tiled() const { return tiled_; }
    void set_tiled(bool tiled) { tiled_ = tiled; }
-@@ -189,7 +189,7 @@ class BrowserWidget : public views::Widg
+@@ -198,7 +198,7 @@ class BrowserWidget : public views::Widg
    // contents for smoother dragging.
    TabDragKind tab_drag_kind_ = TabDragKind::kNone;
  

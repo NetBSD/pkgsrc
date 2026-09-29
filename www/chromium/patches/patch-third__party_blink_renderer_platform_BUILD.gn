@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
 @@ -186,6 +186,18 @@ group("make_platform_generated") {
    ]
@@ -17,15 +17,15 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.26 2026/09/22 1
 +  cxx_bindings = [ crate_root ]
 +  deps = [
 +    "//third_party/rust/font_types/v0_12:lib",
-+    "//third_party/rust/read_fonts/v0_41:lib",
-+    "//third_party/rust/skrifa/v0_44:lib",
++    "//third_party/rust/read_fonts/v0_43:lib",
++    "//third_party/rust/skrifa/v0_46:lib",
 +  ]
 +}
 +
  rust_static_library("rustfft_ffi") {
    allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
    crate_root = "audio/rustfft_ffi.rs"
-@@ -1794,7 +1806,6 @@ component("platform") {
+@@ -1792,7 +1804,6 @@ component("platform") {
      ":allow_discouraged_type",
      ":blink_platform_public_deps",
      ":platform_export",
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.26 2026/09/22 1
      "//gpu/command_buffer/client:raster_interface",
      "//media/capture:capture_lib",
      "//mojo/public/cpp/base",
-@@ -1821,8 +1832,8 @@ component("platform") {
+@@ -1819,8 +1830,8 @@ component("platform") {
      "//ui/native_theme/features",
    ]
    deps = [

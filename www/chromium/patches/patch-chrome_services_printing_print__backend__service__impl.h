@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_services_printing_print__backend__service__impl.h,v 1.12 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-chrome_services_printing_print__backend__service__impl.h,v 1.13 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/services/printing/print_backend_service_impl.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/services/printing/print_backend_service_impl.h
 @@ -28,7 +28,7 @@
  #include "printing/printing_context.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_named__mojo__ipc__server_endpoint__options.h,v 1.11 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_named__mojo__ipc__server_endpoint__options.h,v 1.12 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/named_mojo_ipc_server/endpoint_options.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/named_mojo_ipc_server/endpoint_options.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/named_mojo_ipc_server/endpoint_options.h
 @@ -65,7 +65,7 @@ struct EndpointOptions {
    std::wstring security_descriptor;

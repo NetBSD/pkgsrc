@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
-@@ -87,12 +87,12 @@
+@@ -83,12 +83,12 @@
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.
  #include "third_party/blink/renderer/controller/highest_pmf_reporter.h"
  #endif
  
-@@ -267,7 +267,7 @@ void BlinkInitializer::RegisterInterface
+@@ -260,7 +260,7 @@ void BlinkInitializer::RegisterInterface
        main_thread_task_runner);
  #endif
  
@@ -30,7 +30,7 @@ $NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.
    binders.Add<mojom::blink::MemoryUsageMonitorLinux>(
        ConvertToBaseRepeatingCallback(
            CrossThreadBindRepeating(&MemoryUsageMonitorPosix::Bind)),
-@@ -320,7 +320,7 @@ void BlinkInitializer::RegisterMemoryWat
+@@ -313,7 +313,7 @@ void BlinkInitializer::RegisterMemoryWat
    MemorySaverController::Initialize();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

@@ -1,13 +1,13 @@
-$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.2 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.3 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ services/webnn/public/cpp/webnn_sandbox_init.cc
-@@ -9,20 +9,20 @@
- #include "base/path_service.h"
+@@ -10,7 +10,7 @@
+ #include "build/build_config.h"
  #include "services/webnn/public/cpp/webnn_buildflags.h"
  
 -#if BUILDFLAG(IS_LINUX)
@@ -15,13 +15,7 @@ $NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.2 2026/09/2
  #include <dlfcn.h>
  #endif
  
- namespace webnn {
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- void PreSandboxWebNNInitialization() {
- #if BUILDFLAG(WEBNN_USE_WEBGPU_ACCELERATOR)
- #if BUILDFLAG(IS_WIN)
+@@ -22,7 +22,7 @@ void PreSandboxWebNNInitialization() {
    base::FilePath library_path(
        FILE_PATH_LITERAL("libLiteRtWebGpuAccelerator.dll"));
    base::LoadNativeLibrary(library_path, nullptr);

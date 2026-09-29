@@ -1,12 +1,12 @@
-$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
-@@ -42,7 +42,7 @@
+@@ -44,7 +44,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"
  #include "third_party/perfetto/protos/perfetto/trace/track_event/thread_descriptor.pbzero.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__pro
  #include "base/profiler/thread_delegate_posix.h"
  #define INITIALIZE_THREAD_DELEGATE_POSIX 1
  #else  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
-@@ -264,7 +264,7 @@ struct FrameDetails {
+@@ -270,7 +270,7 @@ struct FrameDetails {
      ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
      (BUILDFLAG(IS_CHROMEOS) &&                                              \
       (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \
@@ -24,7 +24,7 @@ $NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__pro
  // Returns whether stack sampling is supported on the current platform.
  bool IsStackSamplingSupported() {
    return base::StackSamplingProfiler::IsSupportedForCurrentPlatform();
-@@ -384,7 +384,7 @@ void TracingSamplerProfiler::TracingProf
+@@ -400,7 +400,7 @@ void TracingSamplerProfiler::TracingProf
      thread_descriptor->set_reference_timestamp_us(
          last_timestamp_.since_origin().InMicroseconds());
  
@@ -33,7 +33,7 @@ $NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__pro
      if (base::GetCurrentProcId() != perfetto::Platform::GetCurrentProcessId()) {
        auto* chrome_thread = track_descriptor->set_chrome_thread();
        chrome_thread->set_is_sandboxed_tid(true);
-@@ -655,7 +655,7 @@ bool TracingSamplerProfiler::IsStackUnwi
+@@ -671,7 +671,7 @@ bool TracingSamplerProfiler::IsStackUnwi
      ANDROID_ARM64_UNWINDING_SUPPORTED || ANDROID_CFI_UNWINDING_SUPPORTED || \
      (BUILDFLAG(IS_CHROMEOS) &&                                              \
       (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))) ||              \

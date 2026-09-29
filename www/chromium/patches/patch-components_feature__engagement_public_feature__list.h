@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.27 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -407,7 +407,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPinMostVis
+@@ -411,7 +411,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPinMostVis
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  DEFINE_VARIATION_PARAM(kEsbDownloadRowPromoFeature, "EsbDownloadRowPromo");
  #endif
-@@ -556,7 +556,7 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
+@@ -569,7 +569,7 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026
  DEFINE_VARIATION_PARAM(kIPHAutofillAccountNameEmailSuggestionFeature,
                         "IPH_AutofillAccountNameEmailSuggestion");
  DEFINE_VARIATION_PARAM(kIPHAutofillAiOptInFeature, "IPH_AutofillAiOptIn");
-@@ -601,7 +601,7 @@ DEFINE_VARIATION_PARAM(kIPHLauncherSearc
+@@ -616,7 +616,7 @@ DEFINE_VARIATION_PARAM(kIPHLauncherSearc
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -609,7 +609,7 @@ DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLi
+@@ -624,7 +624,7 @@ DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLi
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
          // BUILDFLAG(IS_CHROMEOS)
  
@@ -42,16 +42,16 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026
  DEFINE_VARIATION_PARAM(kIPHSignInBenefitsFeature, "IPH_SignInBenefits");
  DEFINE_VARIATION_PARAM(kIPHSupervisedUserProfileSigninFeature,
                         "IPH_SupervisedUserProfileSignin");
-@@ -852,7 +852,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -875,7 +875,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHWhatsNewUpdatedFeature),
  // keep-sorted end
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- #if BUILDFLAG(ENABLE_EXTENSIONS)
+ #if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
          VARIATION_ENTRY(kIPHExtensionsMenuFeature),
          VARIATION_ENTRY(kIPHExtensionsRequestAccessButtonFeature),
-@@ -928,7 +928,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -954,7 +954,7 @@ inline constexpr flags_ui::FeatureEntry:
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -60,7 +60,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.26 2026
  // keep-sorted start case=no
          VARIATION_ENTRY(kIPHAutofillAccountNameEmailSuggestionFeature),
          VARIATION_ENTRY(kIPHAutofillAiOptInFeature),
-@@ -956,13 +956,13 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -982,13 +982,13 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHLauncherSearchHelpUiFeature),
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

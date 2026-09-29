@@ -1,10 +1,10 @@
-$NetBSD: patch-net_http_http__auth__handler__negotiate.cc,v 1.26 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-net_http_http__auth__handler__negotiate.cc,v 1.27 2026/09/29 07:43:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_handler_negotiate.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- net/http/http_auth_handler_negotiate.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ net/http/http_auth_handler_negotiate.cc
 @@ -120,7 +120,7 @@ int HttpAuthHandlerNegotiate::Factory::C
  #elif BUILDFLAG(IS_POSIX)

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-net_BUILD.gn,v 1.27 2026/09/29 07:43:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/BUILD.gn.orig	2026-09-14 22:17:16.000000000 +0000
+--- net/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
 +++ net/BUILD.gn
 @@ -104,7 +104,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
@@ -15,7 +15,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1429,6 +1429,19 @@ component("net") {
+@@ -1432,6 +1432,19 @@ component("net") {
      ]
    }
  
@@ -35,7 +35,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1604,7 +1617,7 @@ component("net") {
+@@ -1607,7 +1620,7 @@ component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -44,7 +44,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -2382,7 +2395,7 @@ static_library("test_support") {
+@@ -2385,7 +2398,7 @@ static_library("test_support") {
      ]
    }
  
@@ -53,7 +53,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
      sources += [
        "base/address_tracker_linux_test_util.cc",
        "base/address_tracker_linux_test_util.h",
-@@ -3236,14 +3249,14 @@ target(_test_target_type, "net_unittests
+@@ -3239,14 +3252,14 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -70,7 +70,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -3374,6 +3387,10 @@ target(_test_target_type, "net_unittests
+@@ -3377,6 +3390,10 @@ target(_test_target_type, "net_unittests
      ]
    }
  
@@ -81,7 +81,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
    if (enable_websockets) {
      sources += [
        "server/http_connection_unittest.cc",
-@@ -3432,7 +3449,7 @@ target(_test_target_type, "net_unittests
+@@ -3435,7 +3452,7 @@ target(_test_target_type, "net_unittests
    ]
    data_deps = [ "//testing/buildbot/filters:net_unittests_filters" ]
  
@@ -90,7 +90,7 @@ $NetBSD: patch-net_BUILD.gn,v 1.26 2026/09/22 13:41:28 kikadf Exp $
      sources += [ "tools/quic/quic_simple_server_test.cc" ]
    }
  
-@@ -3565,7 +3582,7 @@ target(_test_target_type, "net_unittests
+@@ -3568,7 +3585,7 @@ target(_test_target_type, "net_unittests
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.

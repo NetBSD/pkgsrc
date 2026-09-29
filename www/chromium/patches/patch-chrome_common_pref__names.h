@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-chrome_common_pref__names.h,v 1.27 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/common/pref_names.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/common/pref_names.h
 @@ -674,7 +674,7 @@ inline constexpr char kVoiceTypingHotkey
  inline constexpr char kAllowedDomainsForApps[] =
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // Boolean that is false if we should show window manager decorations.  If
  // true, we draw a custom chrome frame (thicker title bar and blue border).
  inline constexpr char kUseCustomChromeFrame[] = "browser.custom_chrome_frame";
-@@ -1418,7 +1418,7 @@ inline constexpr char kPinInfoBarTimesSh
+@@ -1416,7 +1416,7 @@ inline constexpr char kPinInfoBarTimesSh
      "browser.pin_infobar_times_shown";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  
  // How many times the session restore infobar has been shown.
  inline constexpr char kSessionRestoreInfoBarTimesShown[] =
-@@ -1469,7 +1469,7 @@ static_assert(std::string_view(kDownload
+@@ -1467,7 +1467,7 @@ static_assert(std::string_view(kDownload
  inline constexpr char kDownloadDirUpgraded[] = "download.directory_upgrade";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -42,7 +42,16 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  inline constexpr char kOpenPdfDownloadInSystemReader[] =
      "download.open_pdf_in_system_reader";
  #endif
-@@ -1966,7 +1966,7 @@ inline constexpr char kMediaStorageIdSal
+@@ -1558,7 +1558,7 @@ inline constexpr char kRestartLastSessio
+ inline constexpr char kRestartInBackgroundOnShutdown[] =
+     "restart.in.background.on.shutdown";
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Timestamp of when the scheduled restart nudge dialog was last shown
+ // to the user, used for nudge cooldown calculations.
+ inline constexpr char kScheduledRestartLastNudgeTime[] =
+@@ -1969,7 +1969,7 @@ inline constexpr char kMediaStorageIdSal
  inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -51,7 +60,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // A boolean pref to determine whether or not the network service is running
  // sandboxed.
  inline constexpr char kNetworkServiceSandboxEnabled[] =
-@@ -1980,7 +1980,7 @@ inline constexpr char kNetworkServiceSan
+@@ -1983,7 +1983,7 @@ inline constexpr char kNetworkServiceSan
  inline constexpr char kNetworkServiceFailedLaunchMajorVersion[] =
      "net.network_service_failed_launch_major_version";
  
@@ -60,7 +69,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // Records whether the user has seen an HTTP auth "negotiate" header.
  inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
      "net.received_http_auth_negotiate_headers";
-@@ -2087,7 +2087,7 @@ inline constexpr char kKioskIwaCachePoli
+@@ -2090,7 +2090,7 @@ inline constexpr char kKioskIwaCachePoli
  inline constexpr char kIsolatedWebAppPendingInitializationCount[] =
      "profile.isolated_web_app.install.pending_initialization_count";
  
@@ -69,7 +78,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
  // along with kAuthNegotiateDelegateAllowlist.
  inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
-@@ -2363,7 +2363,7 @@ inline constexpr char kHardwareSecureDec
+@@ -2366,7 +2366,7 @@ inline constexpr char kHardwareSecureDec
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -78,7 +87,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // Defines administrator-set availability of Chrome for Testing.
  inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
  #endif
-@@ -2794,7 +2794,7 @@ inline constexpr char kScreenCaptureWith
+@@ -2797,7 +2797,7 @@ inline constexpr char kScreenCaptureWith
  inline constexpr char kSandboxExternalProtocolBlocked[] =
      "profile.sandbox_external_protocol_blocked";
  
@@ -87,7 +96,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // Boolean that indicates if system notifications are allowed to be used in
  // place of Chrome notifications.
  inline constexpr char kAllowSystemNotifications[] =
-@@ -2942,7 +2942,7 @@ inline constexpr char kLensRegionSearchE
+@@ -2945,7 +2945,7 @@ inline constexpr char kLensRegionSearchE
  inline constexpr char kLensDesktopNTPSearchEnabled[] =
      "policy.lens_desktop_ntp_search_enabled";
  
@@ -96,7 +105,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.26 2026/09/22 13:41:23 kikadf Exp
  // A dict mapping the edition name with the major version it was shown.
  inline constexpr char kWhatsNewEditionUsed[] = "browser.whats_new.edition_used";
  // A list containing the features of each module in order of when they
-@@ -3028,7 +3028,7 @@ inline constexpr char
+@@ -3031,7 +3031,7 @@ inline constexpr char
      kAccessControlAllowMethodsInCORSPreflightSpecConformant[] =
          "access_control_allow_methods_in_cors_preflight_spec_conformant";
  

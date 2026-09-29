@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__store_login__database__unittest.cc,v 1.26 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__store_login__database__unittest.cc,v 1.27 2026/09/29 07:42:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database_unittest.cc
 @@ -2253,7 +2253,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
                           testing::Values(1, 2, 3, 24));

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_test_popup__browsertest.cc,v 1.26 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_test_popup__browsertest.cc,v 1.27 2026/09/29 07:42:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/popup_browsertest.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/test/popup_browsertest.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/test/popup_browsertest.cc
-@@ -79,7 +79,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLe
+@@ -80,7 +80,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLe
    const display::Display display = GetDisplayNearestBrowser(popup);
    gfx::Rect expected(popup->GetWindow()->GetBounds().size());
    expected.AdjustToFit(display.work_area());
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_test_popup__browsertest.cc,v 1.26 2026/09/22 13
    // TODO(crbug.com/40815883) Desktop Linux window bounds are inaccurate.
    expected.Outset(50);
    EXPECT_TRUE(expected.Contains(popup->GetWindow()->GetBounds()))
-@@ -111,7 +111,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenCl
+@@ -112,7 +112,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenCl
      // The popup should be constrained to the opener's available display space.
      EXPECT_EQ(display, GetDisplayNearestBrowser(popup));
      gfx::Rect work_area(display.work_area());

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_policy_web__app__policy__manager.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_policy_web__app__policy__manager.cc,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
 @@ -125,7 +125,7 @@ GetPreinstalledWebAppsMappingForTesting(
  namespace web_app {

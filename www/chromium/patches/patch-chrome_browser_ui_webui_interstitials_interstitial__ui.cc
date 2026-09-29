@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/webui/interstitials/interstitial_ui.cc
 @@ -75,7 +75,7 @@
  #include "components/security_interstitials/content/captive_portal_blocking_page.h"

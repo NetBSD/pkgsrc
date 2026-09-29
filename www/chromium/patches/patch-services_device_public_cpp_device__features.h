@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_public_cpp_device__features.h,v 1.25 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_device__features.h,v 1.26 2026/09/29 07:43:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- services/device/public/cpp/device_features.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ services/device/public/cpp/device_features.h
 @@ -68,11 +68,11 @@ DEVICE_FEATURES_EXPORT bool IsOsLevelGeo
  DEVICE_FEATURES_EXPORT device::mojom::LocationProviderManagerMode

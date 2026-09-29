@@ -1,26 +1,26 @@
-$NetBSD: patch-chrome_common_chrome__switches.h,v 1.26 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.h,v 1.27 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -290,7 +290,7 @@ extern const char kDebugPrint[];
+@@ -976,7 +976,7 @@ inline constexpr char kDebugPrint[] = "d
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- extern const char kGuest[];
- #endif
+ // Causes the browser to launch directly in guest mode.
+ inline constexpr char kGuest[] = "guest";
  
-@@ -314,7 +314,7 @@ extern const char kGlicGuestUrlPresetSta
- extern const char kGlicGuestUrlPresetPreprod[];
- extern const char kGlicGuestUrlPresetProd[];
+@@ -1044,7 +1044,7 @@ inline constexpr char kGlicGuestUrlPrese
+ 
+ inline constexpr char kGlicGuestUrlPresetProd[] = "glic-guest-url-preset-prod";
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- extern const char kListApps[];
- extern const char kProfileBaseName[];
- extern const char kProfileManagementAttributes[];
+ // Writes open and installed web apps for each profile to the specified file
+ // without launching a new browser window or tab. Pass a absolute file path
+ // to specify where to output the information. Can be used together with

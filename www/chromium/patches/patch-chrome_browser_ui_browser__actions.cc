@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.3 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.4 2026/09/29 07:42:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_actions.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/browser_actions.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/browser_actions.cc
-@@ -237,7 +237,7 @@
+@@ -242,7 +242,7 @@
  #include "chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.3 2026/09/22 13:41:21 k
  #include "chrome/common/pref_names.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -2545,7 +2545,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2609,7 +2609,7 @@ void BrowserActions::InitializeToolbarAn
            .Build());
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,8 +24,8 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.3 2026/09/22 13:41:21 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -2677,7 +2677,7 @@ void BrowserActions::InitializeToolbarAn
-           .SetActionId(kActionExit)
+@@ -2769,7 +2769,7 @@ void BrowserActions::InitializeToolbarAn
+           .SetAccelerator(GetAcceleratorForCommandId(IDC_EXIT))
            .Build());
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
@@ -33,16 +33,16 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.3 2026/09/22 13:41:21 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -3589,7 +3589,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -3766,7 +3766,7 @@ void BrowserActions::InitializeToolbarAn
                [](BrowserWindowInterface* bwi, actions::ActionItem* item,
                   actions::ActionInvocationContext context) {
                  base::RecordAction(base::UserMetricsAction("CreateShortcut"));
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-                 chrome::CreateDesktopShortcutForActiveWebContents(
-                     bwi->GetBrowserForMigrationOnly());
+                 chrome::CreateDesktopShortcutForActiveWebContents(bwi);
  #else
-@@ -4385,7 +4385,7 @@ void BrowserActions::InitializeToolbarAn
+                 web_app::CreateWebAppFromCurrentWebContents(
+@@ -4628,7 +4628,7 @@ void BrowserActions::InitializeToolbarAn
  #endif
  
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \

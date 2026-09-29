@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -194,7 +194,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.26 2026/09/22 13:41:27 kik
  // Feature flag to control whether SharedImageStub sequence uses high priority
  // on ChromeOS and Linux. Enabled by default.
  BASE_FEATURE(kSharedImageStubHighPriority, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -513,7 +513,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
+@@ -522,7 +522,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup,
  const base::FeatureParam<int> kGPUDriverBugListTestGroupId{
      &kGPUDriverBugListTestGroup, "test_group", 0};
  
