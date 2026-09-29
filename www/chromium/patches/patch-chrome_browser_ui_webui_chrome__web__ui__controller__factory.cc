@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.26 2026/09/22 13:41:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v 1.27 2026/09/29 07:42:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -116,17 +116,17 @@
+@@ -117,17 +117,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -27,7 +27,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
-@@ -267,7 +267,7 @@ void ChromeWebUIControllerFactory::GetFa
+@@ -268,7 +268,7 @@ void ChromeWebUIControllerFactory::GetFa
      const std::vector<int>& desired_sizes_in_pixel,
      favicon_base::FaviconResultsCallback callback) const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -36,7 +36,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
    if (page_url.SchemeIs(webapps::kIsolatedAppScheme)) {
      ReadIsolatedWebAppFaviconsFromDisk(profile, page_url, std::move(callback));
      return;
-@@ -439,7 +439,7 @@ ChromeWebUIControllerFactory::GetFavicon
+@@ -444,7 +444,7 @@ ChromeWebUIControllerFactory::GetFavicon
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }
  
@@ -45,7 +45,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__controller__factory.cc,v
    if (page_url.host() == chrome::kChromeUIWhatsNewHost) {
      return WhatsNewUI::GetFaviconResourceBytes(scale_factor);
    }
-@@ -459,7 +459,7 @@ ChromeWebUIControllerFactory::GetFavicon
+@@ -464,7 +464,7 @@ ChromeWebUIControllerFactory::GetFavicon
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

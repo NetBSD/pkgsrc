@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_public_create__browser__window.h,v 1.1 2026/09/22 13:41:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_public_create__browser__window.h,v 1.2 2026/09/29 07:42:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/public/create_browser_window.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/ui/browser_window/public/create_browser_window.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/ui/browser_window/public/create_browser_window.h
 @@ -181,7 +181,7 @@ struct BrowserWindowCreateParams {
    std::optional<int64_t> display_id;

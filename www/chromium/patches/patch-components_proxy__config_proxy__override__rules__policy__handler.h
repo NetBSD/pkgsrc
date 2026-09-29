@@ -1,10 +1,10 @@
-$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.h,v 1.12 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.h,v 1.13 2026/09/29 07:42:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_override_rules_policy_handler.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/proxy_config/proxy_override_rules_policy_handler.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/proxy_config/proxy_override_rules_policy_handler.h
 @@ -53,7 +53,7 @@ class PROXY_CONFIG_EXPORT ProxyOverrideR
                  policy::PolicyErrorPath error_path,

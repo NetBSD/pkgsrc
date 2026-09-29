@@ -1,10 +1,10 @@
-$NetBSD: patch-net_base_network__change__notifier.cc,v 1.26 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-net_base_network__change__notifier.cc,v 1.27 2026/09/29 07:43:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- net/base/network_change_notifier.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ net/base/network_change_notifier.cc
 @@ -38,7 +38,7 @@
  #include "third_party/abseil-cpp/absl/container/flat_hash_set.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-net_base_network__change__notifier.cc,v 1.26 2026/09/22 13:41:28 
  #include "net/base/network_change_notifier_passive.h"
  #elif BUILDFLAG(IS_FUCHSIA)
  #include "net/base/network_change_notifier_fuchsia.h"
-@@ -314,7 +314,7 @@ std::unique_ptr<NetworkChangeNotifier> N
+@@ -302,7 +302,7 @@ std::unique_ptr<NetworkChangeNotifier> N
    // running network service in a separate process.
    return std::make_unique<NetworkChangeNotifierPassive>(initial_type,
                                                          initial_subtype);
@@ -24,7 +24,7 @@ $NetBSD: patch-net_base_network__change__notifier.cc,v 1.26 2026/09/22 13:41:28 
    return std::make_unique<NetworkChangeNotifierPassive>(initial_type,
                                                          initial_subtype);
  #elif BUILDFLAG(IS_LINUX)
-@@ -325,6 +325,9 @@ std::unique_ptr<NetworkChangeNotifier> N
+@@ -313,6 +313,9 @@ std::unique_ptr<NetworkChangeNotifier> N
  #elif BUILDFLAG(IS_FUCHSIA)
    return std::make_unique<NetworkChangeNotifierFuchsia>(
        /*require_wlan=*/false);

@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -171,7 +171,7 @@ void InitializePlatformOverlaySettings(G
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
    if (gpu_info.gpu.vendor_id != 0x10de ||  // NVIDIA
        gpu_info.gpu.driver_vendor != "NVIDIA")
      return true;
-@@ -433,7 +433,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -441,7 +441,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
    bool gpu_sandbox_start_early = gpu_preferences_.gpu_sandbox_start_early;
  #else   // !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
    // For some reasons MacOSX's VideoToolbox might crash when called after
-@@ -472,7 +472,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -480,7 +480,7 @@ bool GpuInit::InitializeAndStartSandbox(
    }
  
    bool attempted_startsandbox = false;
@@ -33,7 +33,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
    // On Chrome OS ARM Mali, GPU driver userspace creates threads when
    // initializing a GL context, so start the sandbox early.
    // TODO(zmo): Need to collect OS version before this.
-@@ -515,7 +515,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -523,7 +523,7 @@ bool GpuInit::InitializeAndStartSandbox(
      }
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
    // The ContentSandboxHelper is currently the only one implementation of
    // GpuSandboxHelper and it has no dependency. Except on Linux where
    // VaapiWrapper checks the GL implementation to determine which display
-@@ -574,7 +574,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -582,7 +582,7 @@ bool GpuInit::InitializeAndStartSandbox(
            command_line, gpu_feature_info_,
            gpu_preferences_.disable_software_rasterizer, false);
        if (gl_use_swiftshader_) {
@@ -51,7 +51,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
          VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
                  << "on Linux";
          return false;
-@@ -795,7 +795,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -803,7 +803,7 @@ bool GpuInit::InitializeAndStartSandbox(
      }
    }
  
@@ -60,7 +60,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -870,7 +870,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -878,7 +878,7 @@ bool GpuInit::InitializeAndStartSandbox(
        }
      }
    }
@@ -69,7 +69,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1100,7 +1100,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1108,7 +1108,7 @@ void GpuInit::InitializeInProcess(base::
    }
    bool gl_disabled = gl::GetGLImplementation() == gl::kGLImplementationDisabled;
  
@@ -78,7 +78,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.26 2026/09/22 13:41:27 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1156,7 +1156,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1164,7 +1164,7 @@ void GpuInit::InitializeInProcess(base::
      }
    }
  

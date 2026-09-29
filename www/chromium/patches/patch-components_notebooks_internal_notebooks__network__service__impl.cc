@@ -1,12 +1,12 @@
-$NetBSD: patch-components_notebooks_internal_notebooks__network__service__impl.cc,v 1.1 2026/09/22 13:41:24 kikadf Exp $
+$NetBSD: patch-components_notebooks_internal_notebooks__network__service__impl.cc,v 1.2 2026/09/29 07:42:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/notebooks/internal/notebooks_network_service_impl.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/notebooks/internal/notebooks_network_service_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/notebooks/internal/notebooks_network_service_impl.cc
-@@ -175,7 +175,7 @@ Device GetDevice() {
+@@ -69,7 +69,7 @@ Device GetDevice() {
    return Device::kMobileAndroid;
  #elif BUILDFLAG(IS_IOS)
    return Device::kMobileIos;

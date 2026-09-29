@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_content_renderer_at__memory__handler.cc,v 1.1 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-components_autofill_content_renderer_at__memory__handler.cc,v 1.2 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/content/renderer/at_memory_handler.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- components/autofill/content/renderer/at_memory_handler.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ components/autofill/content/renderer/at_memory_handler.cc
 @@ -65,7 +65,7 @@ bool IsPrintable(const WebKeyboardEvent&
    if (base::IsAsciiControl(event.text[0]) || event.text[1] != 0) {

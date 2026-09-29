@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_setup_daemon__controller.h,v 1.6 2026/09/22 13:41:29 kikadf Exp $
+$NetBSD: patch-remoting_host_setup_daemon__controller.h,v 1.7 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/daemon_controller.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- remoting/host/setup/daemon_controller.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ remoting/host/setup/daemon_controller.h
 @@ -152,13 +152,13 @@ class DaemonController : public base::Re
      // unprivileged.

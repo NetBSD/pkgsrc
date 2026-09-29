@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_clipboard_clipboard__constants.h,v 1.26 2026/09/22 13:41:33 kikadf Exp $
+$NetBSD: patch-ui_base_clipboard_clipboard__constants.h,v 1.27 2026/09/29 07:43:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/clipboard/clipboard_constants.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ui/base/clipboard/clipboard_constants.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ui/base/clipboard/clipboard_constants.h
-@@ -44,7 +44,7 @@ inline constexpr char kMimeTypeWindowDra
+@@ -46,7 +46,7 @@ inline constexpr char kMimeTypeWindowDra
  
  // ----- LINUX & CHROMEOS & FUCHSIA MIME TYPES -----
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_base_clipboard_clipboard__constants.h,v 1.26 2026/09/22 13:41:
  inline constexpr char kMimeTypeLinuxUtf8String[] = "UTF8_STRING";
  inline constexpr char kMimeTypeLinuxString[] = "STRING";
  inline constexpr char kMimeTypeLinuxText[] = "TEXT";
-@@ -57,7 +57,7 @@ inline constexpr char kMimeTypePortalFil
+@@ -59,7 +59,7 @@ inline constexpr char kMimeTypePortalFil
          // BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \

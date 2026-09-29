@@ -1,11 +1,11 @@
-$NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_management__utils.cc,v 1.2 2026/09/22 13:41:23 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_management__util.cc,v 1.1 2026/09/29 07:42:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/integrators/autofill_ai/management_utils.cc.orig	2026-09-14 22:17:16.000000000 +0000
-+++ components/autofill/core/browser/integrators/autofill_ai/management_utils.cc
+--- components/autofill/core/browser/integrators/autofill_ai/management_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
++++ components/autofill/core/browser/integrators/autofill_ai/management_util.cc
 @@ -49,7 +49,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_DRIVERS_LICENSES_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY,
@@ -13,8 +13,8 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_DRIVERS_LICENSE_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_DRIVERS_LICENSE_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_VARIANT_1_BRANDED,
 @@ -63,7 +63,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_KNOWN_TRAVELER_NUMBER_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY,
@@ -22,8 +22,8 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_KNOWN_TRAVELER_NUMBER_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_KNOWN_TRAVELER_NUMBER_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_VARIANT_1_BRANDED,
 @@ -78,7 +78,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_NATIONAL_IDS_SHORT_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_NATIONAL_ID_CARD_ENTITY,
@@ -31,8 +31,8 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_ID_CARD_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_ID_CARD_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_VARIANT_1_BRANDED,
 @@ -92,7 +92,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_PASSPORTS_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY,
@@ -40,8 +40,8 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_PASSPORT_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_PASSPORT_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_VARIANT_1_BRANDED,
 @@ -106,7 +106,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_REDRESS_NUMBER_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY,
@@ -49,8 +49,8 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_REDRESS_NUMBER_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_REDRESS_NUMBER_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_1_BRANDED,
 @@ -120,7 +120,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_VEHICLES_TITLE,
            .add_entity_id = IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY,
@@ -58,5 +58,5 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_SAVE_VEHICLE_ENTITY_DIALOG_TITLE_BRANDED,
-               IDS_AUTOFILL_AI_SAVE_VEHICLE_ENTITY_DIALOG_TITLE_VARIANT_1_BRANDED,
+               IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_BRANDED,
+               IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_1_BRANDED,

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.1 2026/09/22 13:41:32 kikadf Exp $
+$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.2 2026/09/29 07:43:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/openscreen/src/platform/impl/udp_socket_posix.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/openscreen/src/platform/impl/udp_socket_posix.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/openscreen/src/platform/impl/udp_socket_posix.cc
 @@ -398,7 +398,7 @@ ErrorOr<UdpPacket> ReceiveMessageInterna
    // it's not a fatal error, we will just allocate kMaxUdpBufferSize

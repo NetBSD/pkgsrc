@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_openxr_BUILD.gn,v 1.1 2026/09/29 07:43:05 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/openxr/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
++++ third_party/openxr/BUILD.gn
+@@ -164,7 +164,7 @@ if (enable_openxr) {
+       "DISABLE_STD_FILESYSTEM",
+     ]
+ 
+-    if (is_linux) {
++    if (is_linux && !is_bsd) {
+       # glibc's secure_getenv() is available; without this the loader falls
+       # back to plain getenv() and emits a #pragma message that
+       # -Werror=#pragma-messages rejects.

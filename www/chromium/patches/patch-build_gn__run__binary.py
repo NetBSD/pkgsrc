@@ -1,10 +1,10 @@
-$NetBSD: patch-build_gn__run__binary.py,v 1.26 2026/09/22 13:41:18 kikadf Exp $
+$NetBSD: patch-build_gn__run__binary.py,v 1.27 2026/09/29 07:42:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/gn_run_binary.py.orig	2026-09-14 22:17:16.000000000 +0000
+--- build/gn_run_binary.py.orig	2026-09-22 00:09:16.000000000 +0000
 +++ build/gn_run_binary.py
 @@ -22,7 +22,7 @@ if not os.path.isabs(path):
  # The rest of the arguments are passed directly to the executable.

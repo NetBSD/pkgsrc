@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_browser_api_api__browser__context__keyed__service__factories.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
+$NetBSD: patch-extensions_browser_api_api__browser__context__keyed__service__factories.cc,v 1.27 2026/09/29 07:42:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ extensions/browser/api/api_browser_context_keyed_service_factories.cc
 @@ -139,7 +139,7 @@ void EnsureApiBrowserContextKeyedService
    MediaPerceptionAPIManager::GetFactoryInstance();

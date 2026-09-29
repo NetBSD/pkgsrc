@@ -1,10 +1,10 @@
-$NetBSD: patch-ipc_ipc__channel.h,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel.h,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- ipc/ipc_channel.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ ipc/ipc_channel.h
 @@ -165,7 +165,7 @@ class COMPONENT_EXPORT(IPC) Channel fina
    void OnAssociatedInterfaceRequest(

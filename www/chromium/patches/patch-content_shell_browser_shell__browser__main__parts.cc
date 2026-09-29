@@ -1,10 +1,10 @@
-$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.26 2026/09/22 13:41:26 kikadf Exp $
+$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.27 2026/09/29 07:42:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
 @@ -50,7 +50,7 @@
  #include "net/base/network_change_notifier.h"

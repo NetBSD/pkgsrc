@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_opentype_font__format__check.h,v 1.1 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_opentype_font__format__check.h,v 1.2 2026/09/29 07:43:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/opentype/font_format_check.h.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/opentype/font_format_check.h.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/opentype/font_format_check.h
 @@ -5,7 +5,7 @@
  #ifndef THIRD_PARTY_BLINK_RENDERER_PLATFORM_FONTS_OPENTYPE_FONT_FORMAT_CHECK_H_

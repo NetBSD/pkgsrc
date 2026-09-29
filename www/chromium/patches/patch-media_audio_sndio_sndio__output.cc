@@ -1,16 +1,17 @@
-$NetBSD: patch-media_audio_sndio_sndio__output.cc,v 1.26 2026/09/22 13:41:27 kikadf Exp $
+$NetBSD: patch-media_audio_sndio_sndio__output.cc,v 1.27 2026/09/29 07:42:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/sndio_output.cc.orig	2026-09-17 13:33:09.246445088 +0000
+--- media/audio/sndio/sndio_output.cc.orig	2026-09-26 18:26:00.503049010 +0000
 +++ media/audio/sndio/sndio_output.cc
-@@ -0,0 +1,189 @@
+@@ -0,0 +1,194 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
++#include "base/containers/span.h"
 +#include "base/logging.h"
 +#include "base/time/time.h"
 +#include "base/time/default_tick_clock.h"
@@ -174,12 +175,16 @@ $NetBSD: patch-media_audio_sndio_sndio__output.cc,v 1.26 2026/09/22 13:41:27 kik
 +    const base::TimeDelta delay = AudioTimestampHelper::FramesToTime(hw_delay,
 +	params.sample_rate());
 +    count = source->OnMoreData(delay, base::TimeTicks::Now(), {}, audio_bus.get());
-+    audio_bus->ToInterleaved<SignedInt16SampleTypeTraits>(count, reinterpret_cast<int16_t*>(buffer));
 +    if (count == 0) {
 +      // We have to submit something to the device
 +      count = audio_bus->frames();
 +      memset(buffer, 0, count * params.GetBytesPerFrame(kSampleFormat));
 +      LOG(WARNING) << "No data to play, running empty cycle.";
++    } else {
++      audio_bus->ToInterleavedBytesPartial<SignedInt16SampleTypeTraits>(
++          /*read_offset=*/0u,
++          base::span(reinterpret_cast<uint8_t*>(buffer),
++		     static_cast<size_t>(count * params.GetBytesPerFrame(kSampleFormat))));
 +    }
 +
 +    // Submit data to the device

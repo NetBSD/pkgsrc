@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media__galleries_media__file__system__registry.cc,v 1.26 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_media__galleries_media__file__system__registry.cc,v 1.27 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/media_galleries/media_file_system_registry.cc
 @@ -572,7 +572,12 @@ class MediaFileSystemRegistry::MediaFile
  // Constructor in 'private' section because depends on private class definition.

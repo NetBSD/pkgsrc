@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_printing__features.cc,v 1.26 2026/09/22 13:41:28 kikadf Exp $
+$NetBSD: patch-printing_printing__features.cc,v 1.27 2026/09/29 07:43:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_features.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- printing/printing_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ printing/printing_features.cc
 @@ -17,7 +17,7 @@ namespace printing::features {
  BASE_FEATURE(kAlignPdfDefaultPrintSettingsWithHTML,

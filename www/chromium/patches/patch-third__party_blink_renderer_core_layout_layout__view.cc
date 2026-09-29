@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_layout_layout__view.cc,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_layout_layout__view.cc,v 1.27 2026/09/29 07:43:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
 @@ -78,7 +78,7 @@
  #include "ui/display/screen_info.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_core_layout_layout__view.cc,v 1.26 20
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
  #endif
  
-@@ -853,7 +853,7 @@ void LayoutView::LayoutRoot() {
+@@ -854,7 +854,7 @@ void LayoutView::LayoutRoot() {
      intrinsic_logical_widths_ = LogicalWidth();
    }
  

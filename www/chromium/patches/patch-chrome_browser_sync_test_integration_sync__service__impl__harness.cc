@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_sync_test_integration_sync__service__impl__harness.cc,v 1.13 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_test_integration_sync__service__impl__harness.cc,v 1.14 2026/09/29 07:42:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/sync/test/integration/sync_service_impl_harness.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/sync/test/integration/sync_service_impl_harness.cc
 @@ -489,7 +489,7 @@ bool SyncServiceImplHarness::EnableHisto
    // Tabs and history are bundled together in the same toggle.

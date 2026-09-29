@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.22 2026/09/22 13:41:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_glic_widget_glic__widget.cc,v 1.23 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/widget/glic_widget.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/glic/widget/glic_widget.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/glic/widget/glic_widget.cc
 @@ -53,7 +53,7 @@
  #include "ui/views/win/hwnd_util.h"

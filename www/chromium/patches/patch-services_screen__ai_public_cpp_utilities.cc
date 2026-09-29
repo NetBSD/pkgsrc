@@ -1,10 +1,10 @@
-$NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.26 2026/09/22 13:41:30 kikadf Exp $
+$NetBSD: patch-services_screen__ai_public_cpp_utilities.cc,v 1.27 2026/09/29 07:43:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
 @@ -26,7 +26,7 @@ namespace {
  // The maximum image dimension which is processed without downsampling by OCR.

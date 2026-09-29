@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_notifications_notification__platform__bridge__linux.cc,v 1.1 2026/09/22 13:41:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_notifications_notification__platform__bridge__linux.cc,v 1.2 2026/09/29 07:42:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_platform_bridge_linux.cc.orig	2026-09-14 22:17:16.000000000 +0000
+--- chrome/browser/notifications/notification_platform_bridge_linux.cc.orig	2026-09-22 00:09:16.000000000 +0000
 +++ chrome/browser/notifications/notification_platform_bridge_linux.cc
 @@ -368,6 +368,8 @@ NotificationResources WriteNotificationR
    result.has_logo = WriteImageFile(logo, dir_path.Append("logo.png"));
