@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.332 2026/09/14 14:16:44 pin Exp $
+$NetBSD: distinfo,v 1.333 2026/09/29 06:41:14 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -321,12 +321,12 @@ Size (golang.org_x_sys_@v_v0.48.0.zip) = 2094772 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.6.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.6.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.6.0.mod) = 33 bytes
-BLAKE2s (golang.org_x_text_@v_v0.41.0.mod) = bce30ac087cc413c9ba236fcb00056d3fbffe3b1dc685e2b3299cc50685934b6
-SHA512 (golang.org_x_text_@v_v0.41.0.mod) = 8b90ffda4c41bb151a006b63a40bc762df7db7a579383421bf92dad16ea1cd1146df88ccf8ec89dd901bcef7d388687bbebbd13f0a4105c4a1432d8001960280
-Size (golang.org_x_text_@v_v0.41.0.mod) = 190 bytes
-BLAKE2s (golang.org_x_text_@v_v0.41.0.zip) = 0c5ca0ef15adb7887c8a208a5de0a6fc87bdcd843f3ea0552a1f2686af3ee670
-SHA512 (golang.org_x_text_@v_v0.41.0.zip) = c625c2dc756235f8e88e263a8f6dcad436f2dcb71f59a080a2ddab3678e425ad982538ec94d4e5d4887a31b68f9b1906ec4ba4227b4d598b2e6259974d84e5c0
-Size (golang.org_x_text_@v_v0.41.0.zip) = 7336337 bytes
+BLAKE2s (golang.org_x_text_@v_v0.42.0.mod) = 3e3ec62ee1da53e5a3cc49d7ebf79918d370b7a7707b314ac198a739f3b07e4a
+SHA512 (golang.org_x_text_@v_v0.42.0.mod) = b77b73acfa718df21d32a839faf829c725b85945f1bc7bc02f6a566df730b00ee61a13fb9138264e1d7f9bec037a8423153aaec19e14b746d7f43dc88a5a6ccc
+Size (golang.org_x_text_@v_v0.42.0.mod) = 190 bytes
+BLAKE2s (golang.org_x_text_@v_v0.42.0.zip) = 4734b150d73173c76b7bd46e8860960bb5314d8324d40a654e794652002f09f3
+SHA512 (golang.org_x_text_@v_v0.42.0.zip) = b717d593e11a7684aafd7f959c21bed82cdd8d98e2ac8824d42e1c6c10a60f21a6da931103d27c5e54980dee4cb8fc05407a9f3329a6754216e7da99f9bf756e
+Size (golang.org_x_text_@v_v0.42.0.zip) = 7337550 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 35cd1964700502d06b8c987979fb4dbddc41a5cda3368d037211b89d3587521f
 SHA512 (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 9ac0f80ef05881387cb2f48f81560f3207fe586ea16495383662e6d62e43d93fac01dfe72e1d0063d3ab065331dab3a8098d7da4f1830ba1aff6f27f8e1bc1b2
 Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
@@ -345,7 +345,7 @@ Size (gopkg.in_yaml.v2_@v_v2.2.2.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v2_@v_v2.4.0.mod) = bc2baf62a6e657cc41127b91b88509b4f2c0db68f57858ff8353d3f778154862
 SHA512 (gopkg.in_yaml.v2_@v_v2.4.0.mod) = 2790882fbfa812468b9b3443630b1f1ee67a968eb20da8e4a1bfd410e4b516a8a7e77c07414b64f17e11e2151161b85d019e172cc833a45b19e66d4c70f89f82
 Size (gopkg.in_yaml.v2_@v_v2.4.0.mod) = 95 bytes
-BLAKE2s (oh-my-posh-31.3.0.tar.gz) = afac55f65152d332a708d74ac59fc11af59588d2021b2467b23cdd666878cdee
-SHA512 (oh-my-posh-31.3.0.tar.gz) = f5a34554dff0fc664714c2e9bc5ad849ce50b23fca08dfdd11b4137e55cc8cdf935394db1e83041333821d5dff69306b088ce00b6636440f360171a8744c414e
-Size (oh-my-posh-31.3.0.tar.gz) = 7715339 bytes
+BLAKE2s (oh-my-posh-31.4.0.tar.gz) = 773c9450a8458ef85b8a718ff0297fb9dcd1506a099f6893c7826c986c0468c8
+SHA512 (oh-my-posh-31.4.0.tar.gz) = e8566fefba490c2e0bea8267019a28623da794734d36686c9e4ed377a432f7c220182b01b45443cadd30da6a46927256e3a54903747095089d2303799aabf57f
+Size (oh-my-posh-31.4.0.tar.gz) = 7732162 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
