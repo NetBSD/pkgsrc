@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.78 2026/09/27 11:35:06 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2026/09/29 06:03:58 wiz Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
 PKGNAME=	wsoundserver-0.4.0
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	audio wm windowmaker
 MASTER_SITES=	# ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 

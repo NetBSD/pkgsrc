@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/09/27 11:39:42 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2026/09/29 06:08:42 wiz Exp $
 
 DISTNAME=	wired-notify-0.10.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Toqozz/}
 

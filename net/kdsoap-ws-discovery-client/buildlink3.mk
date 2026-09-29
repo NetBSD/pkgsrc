@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:38:04 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:07:02 wiz Exp $
 
 BUILDLINK_TREE+=	kdsoap-ws-discovery-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdsoap-ws-discovery-client
 KDSOAP_WS_DISCOVERY_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdsoap-ws-discovery-client+=	kdsoap-ws-discovery-client>=0.4.0
-BUILDLINK_ABI_DEPENDS.kdsoap-ws-discovery-client?=	kdsoap-ws-discovery-client>=0.4.0nb5
+BUILDLINK_ABI_DEPENDS.kdsoap-ws-discovery-client?=	kdsoap-ws-discovery-client>=0.4.0nb6
 BUILDLINK_PKGSRCDIR.kdsoap-ws-discovery-client?=	../../net/kdsoap-ws-discovery-client
 
 .include "../../net/kdsoap/buildlink3.mk"

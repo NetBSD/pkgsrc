@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2026/09/27 11:35:49 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2026/09/29 06:04:42 wiz Exp $
 
 BUILDLINK_TREE+=	ruby-glib2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ruby-glib2
 RUBY_GLIB2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ruby-glib2+=	${RUBY_PKGPREFIX}-glib2>=4.3.7
-BUILDLINK_ABI_DEPENDS.ruby-glib2+=	${RUBY_PKGPREFIX}-glib2>=4.3.7nb2
+BUILDLINK_ABI_DEPENDS.ruby-glib2+=	${RUBY_PKGPREFIX}-glib2>=4.3.7nb3
 BUILDLINK_PKGSRCDIR.ruby-glib2?=	../../devel/ruby-glib2
 
 .include "../../devel/glib2/buildlink3.mk"

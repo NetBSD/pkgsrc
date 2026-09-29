@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/09/27 11:34:54 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/29 06:03:46 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-ugly/-a52/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - Dolby AC-3 audio plugin

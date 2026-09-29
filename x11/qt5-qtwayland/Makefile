@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2026/09/27 11:39:38 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2026/09/29 06:08:38 wiz Exp $
 
 DISTNAME=	qtwayland-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwayland-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 .include "../../devel/wayland/platform.mk"
 

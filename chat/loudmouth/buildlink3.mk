@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2026/09/27 11:35:12 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/09/29 06:04:04 wiz Exp $
 
 BUILDLINK_TREE+=	loudmouth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	loudmouth
 LOUDMOUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.loudmouth+=	loudmouth>=1.0
-BUILDLINK_ABI_DEPENDS.loudmouth+=	loudmouth>=1.5.4nb7
+BUILDLINK_ABI_DEPENDS.loudmouth+=	loudmouth>=1.5.4nb8
 BUILDLINK_PKGSRCDIR.loudmouth?=		../../chat/loudmouth
 
 .include "../../devel/glib2/buildlink3.mk"

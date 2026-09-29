@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2026/09/27 11:35:15 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2026/09/29 06:04:07 wiz Exp $
 
 DISTNAME=	telepathy-qt-0.9.8
 PKGNAME=	${DISTNAME:S/qt/qt5/g}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	chat
 MASTER_SITES=	https://telepathy.freedesktop.org/releases/telepathy-qt/
 

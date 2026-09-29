@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2026/09/27 11:38:43 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/09/29 06:07:41 wiz Exp $
 
 BUILDLINK_TREE+=	py-dbus
 
@@ -8,7 +8,7 @@ PY_DBUS_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.23.4
-BUILDLINK_ABI_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=1.3.2nb4
+BUILDLINK_ABI_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=1.3.2nb5
 BUILDLINK_PKGSRCDIR.py-dbus?=	../../sysutils/py-dbus
 
 .include "../../devel/glib2/buildlink3.mk"

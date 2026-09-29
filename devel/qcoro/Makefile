@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/27 11:35:48 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/29 06:04:41 wiz Exp $
 
 DISTNAME=	qcoro-0.12.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danvratil/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:39:30 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:08:30 wiz Exp $
 
 BUILDLINK_TREE+=	plasma6-kdecoration
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma6-kdecoration
 PLASMA6_KDECORATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma6-kdecoration+=	plasma6-kdecoration>=6.5.2
-BUILDLINK_ABI_DEPENDS.plasma6-kdecoration?=	plasma6-kdecoration>=6.7.4nb1
+BUILDLINK_ABI_DEPENDS.plasma6-kdecoration?=	plasma6-kdecoration>=6.7.4nb2
 BUILDLINK_PKGSRCDIR.plasma6-kdecoration?=	../../x11/plasma6-kdecoration
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"

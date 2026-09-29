@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2026/09/27 11:37:57 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2026/09/29 06:06:55 wiz Exp $
 
 BUILDLINK_TREE+=	ORBit2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ORBit2
 ORBIT2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ORBit2+=	ORBit2>=2.12.0
-BUILDLINK_ABI_DEPENDS.ORBit2+=	ORBit2>=2.14.19nb9
+BUILDLINK_ABI_DEPENDS.ORBit2+=	ORBit2>=2.14.19nb10
 BUILDLINK_PKGSRCDIR.ORBit2?=	../../net/ORBit2
 
 .include "../../devel/glib2/buildlink3.mk"

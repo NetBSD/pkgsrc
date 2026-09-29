@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/09/27 11:35:41 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/09/29 06:04:34 wiz Exp $
 
 BUILDLINK_TREE+=	libgudev
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgudev
 LIBGUDEV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgudev+=	libgudev>=238
-BUILDLINK_ABI_DEPENDS.libgudev?=	libgudev>=238nb6
+BUILDLINK_ABI_DEPENDS.libgudev?=	libgudev>=238nb7
 BUILDLINK_PKGSRCDIR.libgudev?=		../../devel/libgudev
 
 BUILDLINK_INCDIRS.libgudev?=	include/gudev-1.0/gudev

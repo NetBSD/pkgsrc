@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/09/27 11:37:26 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2026/09/29 06:06:23 wiz Exp $
 
 DISTNAME=		mpop-1.4.21
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}releases/
 EXTRACT_SUFX=		.tar.xz

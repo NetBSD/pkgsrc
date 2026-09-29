@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/09/27 11:35:44 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/09/29 06:04:37 wiz Exp $
 
 BUILDLINK_TREE+=	ocaml-lwt_glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-lwt_glib
 OCAML_LWT_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-lwt_glib+=	ocaml-lwt_glib>=1.1.1
-BUILDLINK_ABI_DEPENDS.ocaml-lwt_glib+=	ocaml-lwt_glib>=1.1.1nb8
+BUILDLINK_ABI_DEPENDS.ocaml-lwt_glib+=	ocaml-lwt_glib>=1.1.1nb9
 BUILDLINK_PKGSRCDIR.ocaml-lwt_glib?=	../../devel/ocaml-lwt_glib
 
 .include "../../devel/ocaml-lwt/buildlink3.mk"

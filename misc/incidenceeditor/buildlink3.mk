@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/09/27 11:37:35 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/09/29 06:06:33 wiz Exp $
 
 BUILDLINK_TREE+=	incidenceeditor
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	incidenceeditor
 INCIDENCEEDITOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.incidenceeditor+=	incidenceeditor>=25.08.3
-BUILDLINK_ABI_DEPENDS.incidenceeditor?=	incidenceeditor>=26.08.0nb1
+BUILDLINK_ABI_DEPENDS.incidenceeditor?=	incidenceeditor>=26.08.0nb2
 BUILDLINK_PKGSRCDIR.incidenceeditor?=	../../misc/incidenceeditor
 
 .include "../../misc/eventviews/buildlink3.mk"

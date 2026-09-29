@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/09/27 11:36:13 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/29 06:05:07 wiz Exp $
 
 DISTNAME=	cosmosmash-1.5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

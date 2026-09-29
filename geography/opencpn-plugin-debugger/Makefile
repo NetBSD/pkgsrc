@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2026/09/27 11:36:34 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2026/09/29 06:05:28 wiz Exp $
 
 VERSION=	20170414
 DISTNAME=	ocpndebugger_pi-${VERSION}
 PKGNAME=	opencpn-plugin-debugger-${VERSION}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nohal/}
 GITHUB_PROJECT=	ocpndebugger_pi

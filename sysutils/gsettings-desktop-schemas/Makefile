@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/09/27 11:38:36 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2026/09/29 06:07:35 wiz Exp $
 
 DISTNAME=	gsettings-desktop-schemas-50.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

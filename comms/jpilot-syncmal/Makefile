@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2026/09/27 11:35:16 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2026/09/29 06:04:08 wiz Exp $
 
 DISTNAME=		jpilot-syncmal-0.80
-PKGREVISION=		50
+PKGREVISION=		51
 CATEGORIES=		comms
 MASTER_SITES=		https://www.aydogan.net/distfiles/comms/
 

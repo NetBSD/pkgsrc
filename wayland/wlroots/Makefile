@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/27 11:38:59 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/29 06:07:58 wiz Exp $
 
 DISTNAME=		wlroots-0.20.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		wayland
 MASTER_SITE_GITLAB=	https://gitlab.freedesktop.org/
 MASTER_SITES=		${MASTER_SITE_GITLAB:=wlroots/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2026/09/27 11:35:19 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2026/09/29 06:04:11 wiz Exp $
 
 DISTNAME=	pyzy-0.1.0
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	converters chinese
 MASTER_SITES=	http://pyzy.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}

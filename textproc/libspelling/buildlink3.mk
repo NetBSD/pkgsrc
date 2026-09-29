@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/09/27 11:38:52 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/09/29 06:07:51 wiz Exp $
 
 BUILDLINK_TREE+=	libspelling
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libspelling
 LIBSPELLING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libspelling+=	libspelling>=0.4.10
-BUILDLINK_ABI_DEPENDS.libspelling?=	libspelling>=0.4.10nb2
+BUILDLINK_ABI_DEPENDS.libspelling?=	libspelling>=0.4.10nb3
 BUILDLINK_PKGSRCDIR.libspelling?=	../../textproc/libspelling
 
 .include "../../x11/gtk4/buildlink3.mk"

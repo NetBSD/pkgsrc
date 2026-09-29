@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2026/09/27 11:36:43 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2026/09/29 06:05:39 wiz Exp $
 
 DISTNAME=	gexiv2-0.14.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gexiv2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

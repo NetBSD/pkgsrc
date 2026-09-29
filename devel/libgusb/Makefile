@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/09/27 11:35:42 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/29 06:04:34 wiz Exp $
 
 DISTNAME=	libgusb-0.4.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

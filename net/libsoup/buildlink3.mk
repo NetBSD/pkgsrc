@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.54 2026/09/27 11:38:06 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.55 2026/09/29 06:07:05 wiz Exp $
 
 BUILDLINK_TREE+=	libsoup
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsoup
 LIBSOUP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsoup+=	libsoup>=2.50.0
-BUILDLINK_ABI_DEPENDS.libsoup+=	libsoup>=2.74.3nb15
+BUILDLINK_ABI_DEPENDS.libsoup+=	libsoup>=2.74.3nb16
 
 BUILDLINK_PKGSRCDIR.libsoup?=	../../net/libsoup
 

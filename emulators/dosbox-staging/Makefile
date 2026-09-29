@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/09/27 11:35:59 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/29 06:04:52 wiz Exp $
 
 DISTNAME=	dosbox-staging-0.82.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dosbox-staging/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2026/09/27 11:37:25 tnn Exp $
+# $NetBSD: Makefile,v 1.82 2026/09/29 06:06:23 wiz Exp $
 
 DISTNAME=	maildrop-3.1.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

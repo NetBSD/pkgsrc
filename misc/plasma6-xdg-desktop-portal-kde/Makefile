@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2026/09/27 11:37:43 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2026/09/29 06:06:41 wiz Exp $
 
 DISTNAME=	xdg-desktop-portal-kde-${PLASMAVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

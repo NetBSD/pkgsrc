@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/09/27 11:38:32 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2026/09/29 06:07:31 wiz Exp $
 
 COLLECTD_PACKAGE=	varnish
 
 COMMENT=		Statistics collection daemon - varnish plugin
-PKGREVISION=		3
+PKGREVISION=		4
 
 .include "../../www/varnish/buildlink3.mk"
 COLLECTD_LIB.varnish=	${BUILDLINK_PREFIX.varnish}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2026/09/27 11:36:53 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2026/09/29 06:05:50 wiz Exp $
 
 DISTNAME=	mandelbulber1.13-1
 PKGNAME=	${DISTNAME:S/-/./:S/mandelbulber/mandelbulber-/}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mandelbulber/}
 

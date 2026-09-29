@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2026/09/27 11:35:58 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2026/09/29 06:04:51 wiz Exp $
 
 DISTNAME=	aranym_1.1.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aranym/}
 GITHUB_PROJECT=	aranym

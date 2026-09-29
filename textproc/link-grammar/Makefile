@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/09/27 11:38:53 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/29 06:07:51 wiz Exp $
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

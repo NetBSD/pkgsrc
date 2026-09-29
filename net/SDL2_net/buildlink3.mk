@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2026/09/27 11:37:58 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/09/29 06:06:56 wiz Exp $
 
 BUILDLINK_TREE+=	SDL2_net
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL2_net
 SDL2_NET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL2_net+=	SDL2_net>=2.0.0nb2
-BUILDLINK_ABI_DEPENDS.SDL2_net?=	SDL2_net>=2.2.0nb10
+BUILDLINK_ABI_DEPENDS.SDL2_net?=	SDL2_net>=2.2.0nb11
 BUILDLINK_PKGSRCDIR.SDL2_net?=		../../net/SDL2_net
 
 .include "../../devel/SDL2/buildlink3.mk"

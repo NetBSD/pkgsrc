@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/09/27 11:39:31 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2026/09/29 06:08:31 wiz Exp $
 
 DISTNAME=	layer-shell-qt-${PLASMAVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 HOMEPAGE=	https://invent.kde.org/plasma/layer-shell-qt

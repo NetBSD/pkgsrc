@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.55 2026/09/27 11:39:35 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2026/09/29 06:08:34 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-mysql
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-mysql
 QT5_MYSQL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-mysql+=	qt5-mysql>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-mysql+=	qt5-mysql>=5.15.19nb2
+BUILDLINK_ABI_DEPENDS.qt5-mysql+=	qt5-mysql>=5.15.19nb3
 BUILDLINK_PKGSRCDIR.qt5-mysql?=		../../x11/qt5-mysql
 
 BUILDLINK_LIBDIRS.qt5-mysql+=		qt5/plugins

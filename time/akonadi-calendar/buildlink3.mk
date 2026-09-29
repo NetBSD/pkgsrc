@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/09/27 11:38:54 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/09/29 06:07:53 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi-calendar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-calendar
 AKONADI_CALENDAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-calendar+=	akonadi-calendar>=25.08.3
-BUILDLINK_ABI_DEPENDS.akonadi-calendar?=	akonadi-calendar>=26.08.0nb1
+BUILDLINK_ABI_DEPENDS.akonadi-calendar?=	akonadi-calendar>=26.08.0nb2
 BUILDLINK_PKGSRCDIR.akonadi-calendar?=		../../time/akonadi-calendar
 
 .include "../../mail/kmailtransport/buildlink3.mk"

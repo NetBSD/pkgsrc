@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:35:41 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:04:34 wiz Exp $
 
 BUILDLINK_TREE+=	libgee0.6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgee0.6
 LIBGEE0.6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgee0.6+=	libgee0.6>=0.5.3
-BUILDLINK_ABI_DEPENDS.libgee0.6+=	libgee0.6>=0.6.8nb6
+BUILDLINK_ABI_DEPENDS.libgee0.6+=	libgee0.6>=0.6.8nb7
 BUILDLINK_ABI_DEPENDS.libgee0.6+=	libgee0.6<0.8
 BUILDLINK_PKGSRCDIR.libgee0.6?=		../../devel/libgee0.6
 

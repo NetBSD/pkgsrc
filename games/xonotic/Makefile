@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/09/27 11:36:31 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/29 06:05:26 wiz Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "Makefile.common"
 
 CONFLICTS+=	xonotic-dedicated-[0-9]*

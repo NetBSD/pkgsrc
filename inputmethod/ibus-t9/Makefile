@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2026/09/27 11:37:13 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2026/09/29 06:06:10 wiz Exp $
 #
 
 DISTNAME=	ibus-t9-2.1.0.20100601
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-t9.googlecode.com/files/
 

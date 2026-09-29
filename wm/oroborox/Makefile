@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.81 2026/09/27 11:39:02 tnn Exp $
+# $NetBSD: Makefile,v 1.82 2026/09/29 06:08:01 wiz Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
 PKGNAME=	oroborox-0.9.8
-PKGREVISION=	58
+PKGREVISION=	59
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2

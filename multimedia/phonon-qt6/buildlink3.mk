@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/09/27 11:37:55 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/09/29 06:06:53 wiz Exp $
 
 BUILDLINK_TREE+=	phonon-qt6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	phonon-qt6
 PHONON_QT6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.phonon-qt6+=	phonon-qt6>=4.12.0
-BUILDLINK_ABI_DEPENDS.phonon-qt6?=	phonon-qt6>=4.12.0nb6
+BUILDLINK_ABI_DEPENDS.phonon-qt6?=	phonon-qt6>=4.12.0nb7
 BUILDLINK_PKGSRCDIR.phonon-qt6?=	../../multimedia/phonon-qt6
 
 .include "../../devel/qt6-qttools/buildlink3.mk"

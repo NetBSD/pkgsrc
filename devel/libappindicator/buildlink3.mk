@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2026/09/27 11:35:39 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2026/09/29 06:04:32 wiz Exp $
 
 BUILDLINK_TREE+=	libappindicator
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libappindicator
 LIBAPPINDICATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libappindicator+=	libappindicator>=12.10.0
-BUILDLINK_ABI_DEPENDS.libappindicator+=	libappindicator>=12.10.0nb34
+BUILDLINK_ABI_DEPENDS.libappindicator+=	libappindicator>=12.10.0nb35
 BUILDLINK_PKGSRCDIR.libappindicator?=	../../devel/libappindicator
 
 .include "../../devel/libindicator/buildlink3.mk"

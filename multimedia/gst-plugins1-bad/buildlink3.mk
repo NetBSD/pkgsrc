@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:37:49 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:06:47 wiz Exp $
 
 BUILDLINK_TREE+=	gst-plugins1-bad
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins1-bad
 GST_PLUGINS1_BAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins1-bad+=	gst-plugins1-bad>=1.18.4
-BUILDLINK_ABI_DEPENDS.gst-plugins1-bad+=	gst-plugins1-bad>=1.28.6nb2
+BUILDLINK_ABI_DEPENDS.gst-plugins1-bad+=	gst-plugins1-bad>=1.28.6nb3
 BUILDLINK_PKGSRCDIR.gst-plugins1-bad?=		../../multimedia/gst-plugins1-bad
 
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"

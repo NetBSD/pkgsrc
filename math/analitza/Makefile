@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2026/09/27 11:37:29 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2026/09/29 06:06:26 wiz Exp $
 
 DISTNAME=	analitza-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 
 HOMEPAGE=	https://edu.kde.org/

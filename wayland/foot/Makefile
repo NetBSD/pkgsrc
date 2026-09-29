@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/09/27 11:38:57 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2026/09/29 06:07:56 wiz Exp $
 
 DISTNAME=	foot-1.27.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wayland
 MASTER_SITES=	https://codeberg.org/dnkl/foot/releases/download/${PKGVERSION_NOREV}/
 

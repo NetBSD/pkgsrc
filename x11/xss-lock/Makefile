@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2026/09/27 11:39:46 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/29 06:08:46 wiz Exp $
 
 DISTNAME=	1e158fb20108
 PKGNAME=	xss-lock-0.3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://bitbucket.org/raymonad/xss-lock/get/
 DIST_SUBDIR=	${PKGNAME_NOREV}

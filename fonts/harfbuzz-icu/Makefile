@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2026/09/27 11:36:09 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2026/09/29 06:05:03 wiz Exp $
 
 # XXX: hack to override meson installation
 INSTALL_DIRS=
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../fonts/harfbuzz/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/^harfbuzz-/harfbuzz-icu-/1}

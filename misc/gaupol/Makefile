@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2026/09/27 11:37:33 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2026/09/29 06:06:31 wiz Exp $
 
 DISTNAME=	gaupol-1.11
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=otsaloma/}
 

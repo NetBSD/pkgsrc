@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2026/09/27 11:37:40 tnn Exp $
+# $NetBSD: Makefile,v 1.83 2026/09/29 06:06:38 wiz Exp $
 
 DISTNAME=	kteatime-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://apps.kde.org/kteatime/

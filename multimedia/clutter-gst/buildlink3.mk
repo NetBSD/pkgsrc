@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2026/09/27 11:37:46 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2026/09/29 06:06:43 wiz Exp $
 #
 
 BUILDLINK_TREE+=	clutter-gst
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	clutter-gst
 CLUTTER_GST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clutter-gst+=	clutter-gst>=2.0.0
-BUILDLINK_ABI_DEPENDS.clutter-gst?=	clutter-gst>=3.0.26nb24
+BUILDLINK_ABI_DEPENDS.clutter-gst?=	clutter-gst>=3.0.26nb25
 BUILDLINK_PKGSRCDIR.clutter-gst?=	../../multimedia/clutter-gst
 
 .include "../../graphics/clutter/buildlink3.mk"

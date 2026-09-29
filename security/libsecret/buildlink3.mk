@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2026/09/27 11:38:25 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/09/29 06:07:23 wiz Exp $
 
 BUILDLINK_TREE+=	libsecret
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsecret
 LIBSECRET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.12
-BUILDLINK_ABI_DEPENDS.libsecret+=	libsecret>=0.20.5nb5
+BUILDLINK_ABI_DEPENDS.libsecret+=	libsecret>=0.20.5nb6
 BUILDLINK_PKGSRCDIR.libsecret?=		../../security/libsecret
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/09/27 11:38:50 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2026/09/29 06:07:49 wiz Exp $
 
 DISTNAME=	json-glib-1.10.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

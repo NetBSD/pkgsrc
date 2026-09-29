@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2026/09/27 11:39:43 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2026/09/29 06:08:42 wiz Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets

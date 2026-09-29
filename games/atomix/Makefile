@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2026/09/27 11:36:11 tnn Exp $
+# $NetBSD: Makefile,v 1.89 2026/09/29 06:05:04 wiz Exp $
 
 DISTNAME=		atomix-44.0
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atomix/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz

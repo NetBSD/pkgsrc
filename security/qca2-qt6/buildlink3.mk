@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2026/09/27 11:38:28 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/09/29 06:07:27 wiz Exp $
 
 BUILDLINK_TREE+=	qca2-qt6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qca2-qt6
 QCA2_QT6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qca2-qt6+=	qca2-qt6>=2.3.8
-BUILDLINK_ABI_DEPENDS.qca2-qt6?=	qca2-qt6>=2.3.12nb1
+BUILDLINK_ABI_DEPENDS.qca2-qt6?=	qca2-qt6>=2.3.12nb2
 BUILDLINK_PKGSRCDIR.qca2-qt6?=		../../security/qca2-qt6
 
 .include "../../devel/qt6-qt5compat/buildlink3.mk"

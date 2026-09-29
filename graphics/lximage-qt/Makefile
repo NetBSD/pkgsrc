@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2026/09/27 11:36:53 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2026/09/29 06:05:50 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	lximage-qt-2.4.0

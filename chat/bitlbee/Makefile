@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2026/09/27 11:35:10 tnn Exp $
+# $NetBSD: Makefile,v 1.109 2026/09/29 06:04:02 wiz Exp $
 
 DISTNAME=		bitlbee-3.6
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		chat
 MASTER_SITES=		https://get.bitlbee.org/src/
 

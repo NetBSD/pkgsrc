@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2026/09/27 11:38:53 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/09/29 06:07:52 wiz Exp $
 
 BUILDLINK_TREE+=	sary
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sary
 SARY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sary+=	sary>=1.2.0
-BUILDLINK_ABI_DEPENDS.sary+=	sary>=1.2.0nb9
+BUILDLINK_ABI_DEPENDS.sary+=	sary>=1.2.0nb10
 BUILDLINK_PKGSRCDIR.sary?=	../../textproc/sary
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2026/09/27 11:34:46 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/09/29 06:03:38 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-karchive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-karchive
 KF6_KARCHIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-karchive+=	kf6-karchive>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-karchive?=	kf6-karchive>=6.29.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-karchive?=	kf6-karchive>=6.29.0nb2
 BUILDLINK_PKGSRCDIR.kf6-karchive?=	../../archivers/kf6-karchive
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

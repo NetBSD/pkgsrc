@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2026/09/27 11:39:11 tnn Exp $
+# $NetBSD: Makefile,v 1.111 2026/09/29 06:08:10 wiz Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Multilingualized version of a pager/text-based browser w3m
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2026/09/27 11:37:15 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2026/09/29 06:06:12 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtvirtualkeyboard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtvirtualkeyboard
 QT6_QTVIRTUALKEYBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtvirtualkeyboard+=	qt6-qtvirtualkeyboard>=6.5.2
-BUILDLINK_ABI_DEPENDS.qt6-qtvirtualkeyboard+=	qt6-qtvirtualkeyboard>=6.11.2nb2
+BUILDLINK_ABI_DEPENDS.qt6-qtvirtualkeyboard+=	qt6-qtvirtualkeyboard>=6.11.2nb3
 BUILDLINK_PKGSRCDIR.qt6-qtvirtualkeyboard?=	../../inputmethod/qt6-qtvirtualkeyboard
 
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"

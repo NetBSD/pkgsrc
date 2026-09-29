@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2026/09/27 11:36:52 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2026/09/29 06:05:49 wiz Exp $
 
 BUILDLINK_TREE+=	libpuzzle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpuzzle
 LIBPUZZLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpuzzle+=	libpuzzle>=0.9
-BUILDLINK_ABI_DEPENDS.libpuzzle+=	libpuzzle>=0.11nb29
+BUILDLINK_ABI_DEPENDS.libpuzzle+=	libpuzzle>=0.11nb30
 BUILDLINK_PKGSRCDIR.libpuzzle?=		../../graphics/libpuzzle
 
 .include "../../graphics/gd/buildlink3.mk"

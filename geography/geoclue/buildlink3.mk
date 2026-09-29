@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2026/09/27 11:36:32 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/09/29 06:05:27 wiz Exp $
 
 BUILDLINK_TREE+=	geoclue
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	geoclue
 GEOCLUE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.geoclue+=	geoclue>=0.12.0
-BUILDLINK_ABI_DEPENDS.geoclue+=	geoclue>=2.5.7nb22
+BUILDLINK_ABI_DEPENDS.geoclue+=	geoclue>=2.5.7nb23
 BUILDLINK_PKGSRCDIR.geoclue?=	../../geography/geoclue
 
 .include "../../devel/glib2/buildlink3.mk"

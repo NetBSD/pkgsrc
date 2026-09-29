@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2026/09/27 11:38:19 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/29 06:07:17 wiz Exp $
 
 DISTNAME=	psutils-3.3.17
 # renamed from pspdfutils to psutils in 3.3.7
 # TODO: follow suit
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ps/pspdf/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutils/}
 
