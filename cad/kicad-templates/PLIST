@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/08/06 00:54:16 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/09/29 16:14:34 bouyer Exp $
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_ASMEY1435-2014_EN.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_DE.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_EN.kicad_wks
@@ -92,10 +92,13 @@ share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_pcb
 share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_pro
 share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_sch
 share/kicad/template/Edgeberry_Cartridge/Hardware_Cartridge_Design_Guide.pdf
-share/kicad/template/Edgeberry_Cartridge/meta/Edgeberry.png
+share/kicad/template/Edgeberry_Cartridge/faceplate/Edgeberry_Hardware_Cartridge_faceplate.FCStd
+share/kicad/template/Edgeberry_Cartridge/faceplate/Edgeberry_Hardware_Cartridge_faceplate.step
+share/kicad/template/Edgeberry_Cartridge/meta/Edgeberry_banner.png
 share/kicad/template/Edgeberry_Cartridge/meta/cartridge.png
 share/kicad/template/Edgeberry_Cartridge/meta/icon.png
 share/kicad/template/Edgeberry_Cartridge/meta/info.html
+share/kicad/template/Edgeberry_Cartridge/sym-lib-table
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pcb
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pro
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_sch
