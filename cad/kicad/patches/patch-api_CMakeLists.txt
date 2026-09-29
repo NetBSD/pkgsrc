@@ -1,0 +1,14 @@
+$NetBSD: patch-api_CMakeLists.txt,v 1.1 2026/09/29 16:11:56 bouyer Exp $
+
+Make sure protoc will find system includes
+
+--- api/CMakeLists.txt.orig	2026-08-28 20:01:37.000000000 +0200
++++ api/CMakeLists.txt	2026-09-26 11:15:22.451740568 +0200
+@@ -52,6 +52,7 @@
+     COMMAND ${Protobuf_PROTOC_EXECUTABLE}
+     --cpp_out=dllexport_decl=KIAPI_IMPORTEXPORT:${KIAPI_CPP_BASEPATH}
+     --proto_path=${CMAKE_CURRENT_SOURCE_DIR}/proto
++    --proto_path=${Protobuf_INCLUDE_DIR}
+     --experimental_allow_proto3_optional
+     ${KIAPI_PROTO_SRCS}
+     COMMENT "Generating API protobuf source files from proto definitions..."
