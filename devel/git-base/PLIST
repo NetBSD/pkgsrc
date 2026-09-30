@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2026/06/30 08:12:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2026/09/30 10:52:57 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -218,6 +218,7 @@ share/examples/git/templates/hooks/push-to-checkout.sample
 share/examples/git/templates/hooks/sendemail-validate.sample
 share/examples/git/templates/hooks/update.sample
 share/examples/git/templates/info/exclude
+share/locale/af/LC_MESSAGES/git.mo
 share/locale/bg/LC_MESSAGES/git.mo
 share/locale/ca/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
@@ -230,6 +231,7 @@ share/locale/is/LC_MESSAGES/git.mo
 share/locale/it/LC_MESSAGES/git.mo
 share/locale/ko/LC_MESSAGES/git.mo
 share/locale/pl/LC_MESSAGES/git.mo
+share/locale/pt_BR/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo

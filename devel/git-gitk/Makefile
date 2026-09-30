@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/10/16 08:45:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/30 10:52:58 adam Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (gitk)
@@ -9,10 +9,10 @@ SUPERSEDES+=	scmgit-gitk-[0-9]*
 
 DEPENDS+=	git-base>=1.7.12nb1:../../devel/git-base
 
-BUILD_DIRS=		gitk-git
-MAKE_ENV+=		prefix=${PREFIX}
-TK90WISH=		${PREFIX}/${TK90_SUBDIR}/bin/wish
-MAKE_ENV+=		TCLTK_PATH=${TK90WISH:Q}
+BUILD_DIRS=	gitk-git
+MAKE_ENV+=	prefix=${PREFIX}
+TK90WISH=	${PREFIX}/${TK90_SUBDIR}/bin/wish
+MAKE_ENV+=	TCLTK_PATH=${TK90WISH:Q}
 
 CONFIGURE_ARGS+=	--with-tcltk=${TK90WISH:Q}
 
@@ -21,7 +21,7 @@ INSTALLATION_DIRS+=	bin
 .include "../../mk/bsd.prefs.mk"
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
-ALL_ENV+=		gitexecdir=${PREFIX:Q}/libexec/git-core	# XXX
+ALL_ENV+=		gitexecdir=${PREFIX}/libexec/git-core	# XXX
 CONFIGURE_ENV.NetBSD+=	ac_cv_iconv_omits_bom=no
 CONFIGURE_ENV.NetBSD+=	ac_cv_fread_reads_directories=yes
 CONFIGURE_ENV.NetBSD+=	ac_cv_snprintf_returns_bogus=no
