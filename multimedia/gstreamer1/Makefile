@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.76 2026/09/29 06:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/09/30 18:51:16 adam Exp $
 
-PKGREVISION= 3
 .include "version.mk"
 
 DISTNAME=	gstreamer-${GST_VERSION}
@@ -34,15 +33,7 @@ REPLACE_PYTHON+=	scripts/extract-release-date-from-doap-file.py
 MESON_ARGS+=		-Dptp-helper=disabled
 
 # for tests
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check:${WRKSRC}/output/libs/gst/base:${WRKSRC}/output/libs/gst/controller:${WRKSRC}/output/libs/gst/net:${WRKSRC}/output/plugins/elements:${WRKSRC}/output/plugins/tracers
-
-# test status as of 1.18.5
-#Ok:                 66
-#Expected Fail:      0
-#Fail:               39
-#Unexpected Pass:    0
-#Skipped:            1
-#Timeout:            0
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check:${WRKSRC}/output/libs/gst/base:${WRKSRC}/output/libs/gst/controller:${WRKSRC}/output/libs/gst/net:${WRKSRC}/output/plugins/elements:${WRKSRC}/output/plugins/tracers
 
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
