@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2023/01/19 00:53:42 wiz Exp $
+$NetBSD: patch-src_hunspell_hunzip.hxx,v 1.1 2026/09/30 09:10:08 adam Exp $
 
 --- src/hunspell/hunzip.hxx.orig	2022-12-29 20:10:49.000000000 +0000
 +++ src/hunspell/hunzip.hxx
