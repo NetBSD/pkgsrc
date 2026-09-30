@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/04/10 12:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/09/30 08:43:20 adam Exp $
 
-DISTNAME=	iperf-3.21
+DISTNAME=	iperf-3.22
 PKGNAME=	${DISTNAME:S/iperf/iperf3/}
 CATEGORIES=	net benchmarks
 MASTER_SITES=	https://downloads.es.net/pub/iperf/
@@ -19,6 +19,6 @@ TEST_TARGET=		check
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-.include "../../mk/atomic64.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
