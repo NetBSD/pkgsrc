@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2026/09/28 14:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/09/30 08:20:29 adam Exp $
 
-DISTNAME=	astroid-4.3.2
+DISTNAME=	astroid-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
@@ -11,7 +11,7 @@ COMMENT=	Rebuild a new abstract syntax tree from Python's ast
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>0:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
 
