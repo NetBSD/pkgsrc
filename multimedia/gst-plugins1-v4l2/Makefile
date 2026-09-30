@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/09/29 06:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/09/30 18:51:18 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-v4l2/}
-PKGREVISION=	3
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - Webcam plugin

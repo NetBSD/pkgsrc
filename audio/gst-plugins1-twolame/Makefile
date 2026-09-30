@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/09/29 06:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/09/30 18:51:22 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-twolame/}
-PKGREVISION=	3
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - MP2 encoder plugin
