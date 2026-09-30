@@ -1,15 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2026/05/01 19:28:09 hauke Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2026/09/30 20:58:57 hauke Exp $
 
 setuid binaries should not be writable by anyone.
 
 Keep build system from installing to PKG_SYSCONFDIR - we handle
 preference files ourselves.
 
---- CMakeLists.txt.orig	2026-04-04 17:21:19.000000000 +0000
+--- CMakeLists.txt.orig	2026-09-26 08:48:13.000000000 +0000
 +++ CMakeLists.txt
-@@ -182,14 +182,7 @@ endif()
+@@ -185,14 +185,7 @@ endif()
  # Installation
- install(TARGETS hiawatha wigwam DESTINATION ${CMAKE_INSTALL_SBINDIR})
+ install(TARGETS hiawatha ssi-cgi wigwam DESTINATION ${CMAKE_INSTALL_SBINDIR})
  install(TARGETS cgi-wrapper DESTINATION ${CMAKE_INSTALL_SBINDIR}
 -	PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
 -
