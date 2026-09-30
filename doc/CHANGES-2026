@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6536 2026/09/30 20:09:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6537 2026/09/30 20:59:10 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9821,3 +9821,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rust-bin to 1.98.1 [wiz 2026-09-30]
 	Updated net/dnscontrol to 5.3.0 [drixter 2026-09-30]
 	Updated textproc/rumdl to 0.2.78 [wiz 2026-09-30]
+	Updated www/hiawatha to 12.4 [hauke 2026-09-30]
