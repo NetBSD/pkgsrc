@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6523 2026/09/30 10:38:33 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6524 2026/09/30 10:40:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9801,3 +9801,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/py-fonttools to 4.66.1 [adam 2026-09-30]
 	Updated www/py-hishel to 1.4.0 [adam 2026-09-30]
 	Updated misc/rozi to 0.0.27 [pin 2026-09-30]
+	Updated security/pgpdump to 0.38 [adam 2026-09-30]
+	Updated time/py-cftime to 1.6.6 [adam 2026-09-30]
