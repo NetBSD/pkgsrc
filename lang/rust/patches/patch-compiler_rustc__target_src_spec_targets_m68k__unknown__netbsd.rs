@@ -1,6 +1,7 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_m68k__unknown__netbsd.rs,v 1.1 2026/04/02 19:06:34 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_m68k__unknown__netbsd.rs,v 1.2 2026/09/30 20:01:29 wiz Exp $
 
 Add a target description for NetBSD/m68k.
+Align data_layout with new patch to llvm.
 
 --- /dev/null	2026-02-24 21:43:45.067063051 +0000
 +++ compiler/rustc_target/src/spec/targets/m68k_unknown_netbsd.rs	2026-02-24 21:48:57.106967890 +0000
@@ -23,7 +24,7 @@ Add a target description for NetBSD/m68k.
 +            std: Some(true),
 +        },
 +        pointer_width: 32,
-+        data_layout: "E-m:e-p:32:16:32-i8:8:8-i16:16:16-i32:16:32-n8:16:32-a:0:16-S16".into(),
++        data_layout: "E-m:e-p:32:32:32-i8:8:8-i16:16:16-i32:32:32-n8:16:32-a:0:32-S32".into(),
 +        arch: Arch::M68k,
 +        options: TargetOptions {
 +            endian: Endian::Big,

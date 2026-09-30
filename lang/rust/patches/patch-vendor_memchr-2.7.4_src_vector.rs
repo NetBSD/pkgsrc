@@ -1,15 +1,34 @@
-$NetBSD: patch-vendor_memchr-2.7.4_src_vector.rs,v 1.3 2025/08/25 17:51:13 wiz Exp $
+$NetBSD: patch-vendor_memchr-2.7.4_src_vector.rs,v 1.4 2026/09/30 20:01:30 wiz Exp $
 
-Don't try to do neon / SIMD on big-endian aarch64.
+Apply fix for big-endian aarch64 from
+https://github.com/BurntSushi/memchr/pull/222
 
 --- vendor/memchr-2.7.4/src/vector.rs.orig	2024-09-22 14:16:06.473207292 +0000
 +++ vendor/memchr-2.7.4/src/vector.rs
-@@ -289,7 +289,7 @@ mod x86avx2 {
-     }
- }
+@@ -319,6 +319,7 @@ mod aarch64neon {
+         }
  
--#[cfg(target_arch = "aarch64")]
-+#[cfg(all(target_arch = "aarch64", target_endian = "little"))]
- mod aarch64neon {
-     use core::arch::aarch64::*;
+         #[inline(always)]
++        #[cfg(target_endian = "little")]
+         unsafe fn movemask(self) -> NeonMoveMask {
+             let asu16s = vreinterpretq_u16_u8(self);
+             let mask = vshrn_n_u16(asu16s, 4);
+@@ -328,6 +329,18 @@ mod aarch64neon {
+         }
  
+         #[inline(always)]
++        #[cfg(target_endian = "big")]
++        unsafe fn movemask(self) -> NeonMoveMask {
++            // Swap the endianness of each 16-bit input.
++            let asu16s = vreinterpretq_u16_u8(vrev16q_u8(self));
++            let mask = vshrn_n_u16(asu16s, 4);
++            let asu64 = vreinterpret_u64_u8(mask);
++            // Use `swap_bytes` to swap the endianness of the 64-bit output.
++            let scalar64 = vget_lane_u64(asu64, 0).swap_bytes();
++            NeonMoveMask(scalar64 & 0x8888888888888888)
++        }
++
++        #[inline(always)]
+         unsafe fn cmpeq(self, vector2: Self) -> uint8x16_t {
+             vceqq_u8(self, vector2)
+         }

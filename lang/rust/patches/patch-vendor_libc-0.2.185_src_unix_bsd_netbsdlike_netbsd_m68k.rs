@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_libc-0.2.177_src_unix_bsd_netbsdlike_netbsd_m68k.rs,v 1.1 2026/04/02 19:06:34 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.185_src_unix_bsd_netbsdlike_netbsd_m68k.rs,v 1.1 2026/09/30 20:01:30 wiz Exp $
 
 Add cpu-specific file for m68k on NetBSD.
 
---- /dev/null	2026-02-25 04:15:52.295235767 +0000
-+++ vendor/libc-0.2.177/src/unix/bsd/netbsdlike/netbsd/m68k.rs	2026-02-25 10:17:54.356620620 +0000
+--- /dev/null	2026-04-16 15:19:59.503167932 +0000
++++ vendor/libc-0.2.185/src/unix/bsd/netbsdlike/netbsd/m68k.rs	2026-04-16 15:19:11.760619011 +0000
 @@ -0,0 +1,10 @@
 +use crate::prelude::*;
 +use crate::PT_FIRSTMACH;
