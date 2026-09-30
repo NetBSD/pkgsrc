@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6522 2026/09/30 10:26:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6523 2026/09/30 10:38:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9800,3 +9800,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/yq to 4.4.0 [adam 2026-09-30]
 	Updated fonts/py-fonttools to 4.66.1 [adam 2026-09-30]
 	Updated www/py-hishel to 1.4.0 [adam 2026-09-30]
+	Updated misc/rozi to 0.0.27 [pin 2026-09-30]
