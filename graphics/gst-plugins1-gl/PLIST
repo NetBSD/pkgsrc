@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/09/30 18:51:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/30 20:51:13 wiz Exp $
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/egl.h
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/gstegl.h
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/gsteglimage.h
@@ -60,8 +60,6 @@ include/gstreamer-1.0/gst/gl/gstglupload.h
 include/gstreamer-1.0/gst/gl/gstglutils.h
 include/gstreamer-1.0/gst/gl/gstglviewconvert.h
 include/gstreamer-1.0/gst/gl/gstglwindow.h
-include/gstreamer-1.0/gst/gl/wayland/gstgldisplay_wayland.h
-include/gstreamer-1.0/gst/gl/wayland/wayland.h
 lib/gstreamer-1.0/include/gst/gl/gstglconfig.h
 lib/gstreamer-1.0/libgstopengl.so
 lib/libgstgl-1.0.so
@@ -70,4 +68,3 @@ lib/libgstgl-1.0.so.0.${SHLIBVER}.0
 lib/pkgconfig/gstreamer-gl-1.0.pc
 ${PLIST.drm}lib/pkgconfig/gstreamer-gl-egl-1.0.pc
 lib/pkgconfig/gstreamer-gl-prototypes-1.0.pc
-lib/pkgconfig/gstreamer-gl-wayland-1.0.pc
