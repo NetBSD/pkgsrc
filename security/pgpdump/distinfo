@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/02/16 12:45:23 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/09/30 10:33:50 adam Exp $
 
-BLAKE2s (pgpdump-0.37.tar.gz) = cfb6283ccc936b5dcf9f6dfb11b2eae1519c568f7040e89001a8197f192dd8b9
-SHA512 (pgpdump-0.37.tar.gz) = 3a4137885d7926b1f4f6a2dd91bb108d78072ae8225e1dc8a48ae53edaf5dd3a1a69fcd0a99633033759b0f8ed87dde65dd4edd47beeb041d2d6f84a9ecf824e
-Size (pgpdump-0.37.tar.gz) = 143972 bytes
+BLAKE2s (pgpdump-0.38.tar.gz) = e697a1df04b5eac3a2d7e41c07c1b0262caac85eef58d217ebc8b6a0c2e94bec
+SHA512 (pgpdump-0.38.tar.gz) = 940fea5a992fb131735a0437fce87ea5900c638538443eb76f74975437de0e0c38d9f419e73dc34ab03b2c85f7a5256b606df14a5f937e1c2631afab0682b79b
+Size (pgpdump-0.38.tar.gz) = 307198 bytes
