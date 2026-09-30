@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6515 2026/09/30 07:19:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6516 2026/09/30 07:27:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9784,3 +9784,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.26 [pin 2026-09-29]
 	Updated emulators/qemu to 11.1.2 [adam 2026-09-30]
 	Updated sysutils/qemu-guest-agent to 11.1.2 [adam 2026-09-30]
+	Updated devel/py-blessed to 1.50.0 [adam 2026-09-30]
+	Updated devel/py-wrapt to 2.5.0 [adam 2026-09-30]
+	Updated security/py-gnupg to 0.5.7 [adam 2026-09-30]
+	Updated devel/py-setuptools-gettext to 0.1.19 [adam 2026-09-30]
