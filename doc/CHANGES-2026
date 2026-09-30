@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6514 2026/09/29 18:04:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6515 2026/09/30 07:19:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9782,3 +9782,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cad/kicad-symbols to 10.0.6 [bouyer 2026-09-29]
 	Updated cad/kicad-templates to 10.0.6 [bouyer 2026-09-29]
 	Updated misc/rozi to 0.0.26 [pin 2026-09-29]
+	Updated emulators/qemu to 11.1.2 [adam 2026-09-30]
+	Updated sysutils/qemu-guest-agent to 11.1.2 [adam 2026-09-30]
