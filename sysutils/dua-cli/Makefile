@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2026/09/13 07:58:14 pin Exp $
+# $NetBSD: Makefile,v 1.59 2026/09/30 12:44:26 pin Exp $
 
-DISTNAME=	dua-cli-2.45.0
+DISTNAME=	dua-cli-2.45.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
