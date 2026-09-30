@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2026/09/29 06:07:48 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/09/30 09:10:50 adam Exp $
 
-DISTNAME=	gspell-1.14.4
-PKGREVISION=	3
+DISTNAME=	gspell-1.14.5
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gspell/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/gspell
 COMMENT=	Spell checking API for GTK+ applications
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=		glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=		glib2-introspection>=0:../../devel/glib2-introspection
 
 USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	yes
