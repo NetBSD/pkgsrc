@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6535 2026/09/30 20:05:34 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6536 2026/09/30 20:09:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9820,3 +9820,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/rust to 1.98.1 [wiz 2026-09-30]
 	Updated lang/rust-bin to 1.98.1 [wiz 2026-09-30]
 	Updated net/dnscontrol to 5.3.0 [drixter 2026-09-30]
+	Updated textproc/rumdl to 0.2.78 [wiz 2026-09-30]
