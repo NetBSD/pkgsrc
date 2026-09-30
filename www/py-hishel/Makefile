@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/08/11 05:47:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/09/30 10:26:30 adam Exp $
 
-DISTNAME=	hishel-1.3.1
+DISTNAME=	hishel-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hishel/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/karpetrosyan/hishel
 COMMENT=	Persistent cache implementation for httpx and httpcore
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.1.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 
