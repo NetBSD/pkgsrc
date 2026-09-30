@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/05/01 19:28:09 hauke Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/30 20:58:57 hauke Exp $
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/acmev2.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/config.php
 ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/hiawatha_config.php
@@ -12,10 +12,12 @@ ${PLIST.letsencrypt}lib/hiawatha/letsencrypt/rsa.php
 man/man1/cgi-wrapper.1
 man/man1/hiawatha.1
 ${PLIST.letsencrypt}man/man1/lefh.1
+man/man1/ssi-cgi.1
 man/man1/wigwam.1
 sbin/cgi-wrapper
 sbin/hiawatha
 ${PLIST.letsencrypt}sbin/lefh
+sbin/ssi-cgi
 sbin/wigwam
 share/examples/hiawatha/cgi-wrapper.conf
 ${PLIST.xslt}share/examples/hiawatha/error.xslt
