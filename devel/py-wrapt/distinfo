@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2026/09/11 11:07:13 adam Exp $
+$NetBSD: distinfo,v 1.31 2026/09/30 07:22:22 adam Exp $
 
-BLAKE2s (wrapt-2.4.1.tar.gz) = dedc25873f7bbd7708268a937a45b0facef4c0145ff2e82f68b63766a03546a4
-SHA512 (wrapt-2.4.1.tar.gz) = c996422b1dd73687609cfae475cf32d4ba2960686fb6a7ad28edd5314d62d944c13f4ec83e1cd6daa2542aac0d2b9e3fadaa1718da753dce4a8486a92688f880
-Size (wrapt-2.4.1.tar.gz) = 164597 bytes
+BLAKE2s (wrapt-2.5.0.tar.gz) = 58a407c0b342e4f66051db8be30cc0ac88cc1d6461fd42d2a678e929b4e05db3
+SHA512 (wrapt-2.5.0.tar.gz) = 6ef568088e7f02bef41648fdd788c29b882526addf03241198d9146da1dcbd201fd9eecea98078b892d54eb6b819b35f4752443f8eca8a4301b6909c65321de9
+Size (wrapt-2.5.0.tar.gz) = 183288 bytes
