@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2026/08/26 08:12:28 adam Exp $
+# $NetBSD: Makefile,v 1.150 2026/09/30 19:16:45 adam Exp $
 
-DISTNAME=	cryptography-50.0.1
+DISTNAME=	cryptography-50.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -13,11 +13,11 @@ LICENSE=	apache-2.0 OR modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-${PKGVERSION_NOREV}:../../security/py-cryptography_vectors
-TEST_DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
-TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
+TEST_DEPENDS+=	${PYPKGPREFIX}-pretend>=0:../../devel/py-pretend
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
