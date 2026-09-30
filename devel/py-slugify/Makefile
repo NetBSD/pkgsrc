@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/09/23 09:25:09 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/30 08:21:26 adam Exp $
 
-DISTNAME=	python_slugify-9.1.1
+DISTNAME=	python_slugify-9.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-slugify/}
