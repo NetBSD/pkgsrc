@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/08/20 05:42:20 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/09/30 12:52:51 adam Exp $
 
-DISTNAME=	syrupy-5.5.3
+DISTNAME=	syrupy-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/syrupy/}
