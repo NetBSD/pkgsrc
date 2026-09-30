@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.62 2026/09/29 07:42:45 kikadf Exp $
+$NetBSD: distinfo,v 1.63 2026/09/30 11:28:10 kikadf Exp $
 
 BLAKE2s (ahash-0.8.12.crate) = 157e4e2836883526fa391419f08c2aa4c932fb96ddf2b254bb436193691754c4
 SHA512 (ahash-0.8.12.crate) = 872e5fa0d1334abac96d10eca18f32c2b1a1e0b38671c132b6effd029e9f0147ddcef79f4d85c8baf0537ddfb8c39a85f61d073e1fb3143dba659a8385641e1b
@@ -2082,7 +2082,7 @@ SHA1 (patch-third__party_dawn_tools_generate-sources-gn.py) = f55e020c98b3ae2702
 SHA1 (patch-third__party_dawn_tools_python_cipd__deps.py) = 9106d54f380f2035d888e501c3c49b6b21769558
 SHA1 (patch-third__party_devtools-frontend_src_node__modules_rollup_dist_native.js) = 0246c2ab6604d4ddc79fad5ec0ee0fee91309559
 SHA1 (patch-third__party_devtools-frontend_src_scripts_build_typescript_typescript__vars.gni) = c49858a871e900a287c98aa7dd337026c1d818a1
-SHA1 (patch-third__party_devtools-frontend_src_third__party_typescript_typescript.py) = e8038ee13a4b7854dd43765f79d8da325cf2c69b
+SHA1 (patch-third__party_devtools-frontend_src_third__party_typescript_typescript.py) = cad15bda60ed9b84009679db21062e415cd7ad28
 SHA1 (patch-third__party_federated__compute_src_fcp_client_opstats_pds__backed__opstats__db.cc) = d38c0c77467a42b20c0b8d42648bf46b7a4d92ed
 SHA1 (patch-third__party_federated__compute_third__party_protodatastore-cpp_src_protostore_file-storage.cc) = a8c27cd7227146d344d85112f4a611d8104a5103
 SHA1 (patch-third__party_ffmpeg_BUILD.gn) = fb3917622cddb11f52e897293d7f9f3445e0ed08
@@ -2194,7 +2194,7 @@ SHA1 (patch-third__party_test__fonts_fontconfig_fontconfig__util__linux.cc) = 0f
 SHA1 (patch-third__party_test__fonts_fontconfig_generate__fontconfig__caches.cc) = 2508049423d4151f98839ad47fe36b29bc1419a3
 SHA1 (patch-third__party_tflite_features.gni) = c9f0cc7bff1d340cb6d34a5ccdf9ea37ddbcf622
 SHA1 (patch-third__party_typescript_tsgo.gni) = eb2197b148344220f3171310a38c103c0c4d057c
-SHA1 (patch-third__party_typescript_typescript.py) = 57e7db1a0c3b529a7962be1c437ba4a33e921525
+SHA1 (patch-third__party_typescript_typescript.py) = b9a164e03a9dfab3358d8f7a0840fc4d64e1ce7e
 SHA1 (patch-third__party_unrar_src_crypt.cpp) = 09dbe49764f72bc62c2e3517c48b75fa6d2fe80b
 SHA1 (patch-third__party_vulkan-loader_src_BUILD.gn) = b081c3c5b3b2cb2f80ecb1c8c5a0ea0b8c45425a
 SHA1 (patch-third__party_vulkan-loader_src_loader_loader__environment.c) = a4a9428009199ad693ed1d194f2de8b2e6b88ff6
