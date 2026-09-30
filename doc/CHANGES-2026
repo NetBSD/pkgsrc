@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6531 2026/09/30 18:59:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6532 2026/09/30 19:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9813,3 +9813,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/gstreamer1 to 1.28.7 [adam 2026-09-30]
 	Updated net/libpcap to 1.11.0 [adam 2026-09-30]
 	Updated net/tcpdump to 4.99.7 [adam 2026-09-30]
+	Updated devel/py-uv to 0.12.21 [adam 2026-09-30]
+	Updated devel/py-uv-build to 0.12.21 [adam 2026-09-30]
+	Updated security/py-cryptography to 50.0.2 [adam 2026-09-30]
+	Updated security/py-cryptography_vectors to 50.0.2 [adam 2026-09-30]
