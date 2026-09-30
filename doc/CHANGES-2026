@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6518 2026/09/30 08:46:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6519 2026/09/30 09:11:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9792,3 +9792,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-slugify to 9.1.2 [adam 2026-09-30]
 	Updated net/iperf3 to 3.22 [adam 2026-09-30]
 	Updated devel/libgsf to 1.14.60 [adam 2026-09-30]
+	Updated textproc/hunspell to 1.7.4 [adam 2026-09-30]
+	Updated textproc/gspell to 1.14.5 [adam 2026-09-30]
