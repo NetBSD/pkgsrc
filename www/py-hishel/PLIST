@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/11 16:13:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/09/30 10:26:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,9 @@ ${PYSITELIB}/hishel/_async_cache.pyo
 ${PYSITELIB}/hishel/_async_httpx.py
 ${PYSITELIB}/hishel/_async_httpx.pyc
 ${PYSITELIB}/hishel/_async_httpx.pyo
+${PYSITELIB}/hishel/_async_httpx2.py
+${PYSITELIB}/hishel/_async_httpx2.pyc
+${PYSITELIB}/hishel/_async_httpx2.pyo
 ${PYSITELIB}/hishel/_core/_headers.py
 ${PYSITELIB}/hishel/_core/_headers.pyc
 ${PYSITELIB}/hishel/_core/_headers.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/hishel/_sync_cache.pyo
 ${PYSITELIB}/hishel/_sync_httpx.py
 ${PYSITELIB}/hishel/_sync_httpx.pyc
 ${PYSITELIB}/hishel/_sync_httpx.pyo
+${PYSITELIB}/hishel/_sync_httpx2.py
+${PYSITELIB}/hishel/_sync_httpx2.pyc
+${PYSITELIB}/hishel/_sync_httpx2.pyo
 ${PYSITELIB}/hishel/_utils.py
 ${PYSITELIB}/hishel/_utils.pyc
 ${PYSITELIB}/hishel/_utils.pyo
@@ -63,6 +69,9 @@ ${PYSITELIB}/hishel/fastapi.pyo
 ${PYSITELIB}/hishel/httpx.py
 ${PYSITELIB}/hishel/httpx.pyc
 ${PYSITELIB}/hishel/httpx.pyo
+${PYSITELIB}/hishel/httpx2.py
+${PYSITELIB}/hishel/httpx2.pyc
+${PYSITELIB}/hishel/httpx2.pyo
 ${PYSITELIB}/hishel/py.typed
 ${PYSITELIB}/hishel/requests.py
 ${PYSITELIB}/hishel/requests.pyc
