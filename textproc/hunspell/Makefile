@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/05/07 16:34:35 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/09/30 09:10:08 adam Exp $
 
-DISTNAME=	hunspell-1.7.3
+DISTNAME=	hunspell-1.7.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,6 +18,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ui
 PKGCONFIG_OVERRIDE+=	hunspell.pc.in
+TEST_TARGET=		check
 
 GCC_REQD+=		7
 FAKE_NCURSES=		yes
