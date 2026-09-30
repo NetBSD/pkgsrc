@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.26 2026/08/03 17:52:28 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.27 2026/09/30 19:16:45 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	asn1-0.24.1
 CARGO_CRATE_DEPENDS+=	asn1_derive-0.24.1
@@ -20,11 +20,11 @@ CARGO_CRATE_DEPENDS+=	pem-4.0.0
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.33
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.14.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.107
-CARGO_CRATE_DEPENDS+=	pyo3-0.29.0
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.0
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.0
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.0
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.0
+CARGO_CRATE_DEPENDS+=	pyo3-0.29.2
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.2
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.2
 CARGO_CRATE_DEPENDS+=	quote-1.0.47
 CARGO_CRATE_DEPENDS+=	self_cell-1.3.0
 CARGO_CRATE_DEPENDS+=	shlex-2.0.1
