@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/01 04:21:56 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/09/30 02:05:08 brook Exp $
+man/man1/pffrombyto.1
 man/man1/pflogsumm.1
+man/man1/pftobyfrom.1
+sbin/pffrombyto
 sbin/pflogsumm
+sbin/pftobyfrom
 share/doc/pflogsumm/ChangeLog
 share/doc/pflogsumm/README
 share/doc/pflogsumm/ToDo
