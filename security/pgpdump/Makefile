@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/02/16 12:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/09/30 10:33:50 adam Exp $
 
-DISTNAME=	pgpdump-0.37
+DISTNAME=	pgpdump-0.38
 CATEGORIES=	security
 MASTER_SITES=	http://www.mew.org/~kazu/proj/pgpdump/
 
