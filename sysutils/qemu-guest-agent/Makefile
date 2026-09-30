@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.17 2026/09/29 06:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/09/30 07:18:39 adam Exp $
 
-PKGREVISION= 3
 .include "../../emulators/qemu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
