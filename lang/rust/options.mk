@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.55 2026/06/30 15:13:10 adam Exp $
+# $NetBSD: options.mk,v 1.56 2026/09/30 20:01:29 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs rust-system-libgit2
@@ -66,6 +66,11 @@ GCC_REQD+=	14
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
 .include "../../lang/libunwind/buildlink3.mk"
+
+# Ref. src/bootstrap/src/core/build_steps/llvm.rs / check_llvm_version()
+# rust now (1.98.0) requires LLVM >= 21.x
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=21.1.0
+
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
