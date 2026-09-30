@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6530 2026/09/30 17:09:45 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6531 2026/09/30 18:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9810,3 +9810,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zeroconf to 0.151.5 [adam 2026-09-30]
 	Updated devel/py-syrupy to 6.1.1 [adam 2026-09-30]
 	Updated multimedia/moviebox-tui to 0.1.25 [pin 2026-09-30]
+	Updated multimedia/gstreamer1 to 1.28.7 [adam 2026-09-30]
+	Updated net/libpcap to 1.11.0 [adam 2026-09-30]
+	Updated net/tcpdump to 4.99.7 [adam 2026-09-30]
