@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.83 2026/08/06 19:11:11 adam Exp $
+$NetBSD: distinfo,v 1.84 2026/09/30 18:51:17 adam Exp $
 
-BLAKE2s (gst-plugins-good-1.28.6.tar.xz) = c27e2c4b6d8c775a39d6e27408368cbfce3bb42a234cc69091fe35321d49dbed
-SHA512 (gst-plugins-good-1.28.6.tar.xz) = 49a691f00f5b0c6010551b0affa272df3b74854b84d2342c9a6f874cd0032215142ca4f60ee89cb34dc54e10423ba6b6a7fd7b31eb0d48d26ece49f64b6d5494
-Size (gst-plugins-good-1.28.6.tar.xz) = 5999116 bytes
+BLAKE2s (gst-plugins-good-1.28.7.tar.xz) = 3ecbe7e928e6203eef0194091e4cd699bd69b02b8e6dc4c93d5848454753a7ab
+SHA512 (gst-plugins-good-1.28.7.tar.xz) = f8bfb0326c8b7b2e698d1f09a5a5a2beae3df05fd18596cf39a6daae211f4f722e7b4701007b7942e0313c6635064803e454c3bd677d6d026d6be17158f6cb21
+Size (gst-plugins-good-1.28.7.tar.xz) = 6007828 bytes
 SHA1 (patch-sys_v4l2_gstv4l2object.c) = 466b677f8f3f881a17de8106b7541eba591d3c0f

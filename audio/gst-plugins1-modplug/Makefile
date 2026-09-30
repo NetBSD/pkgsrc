@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/09/29 06:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/30 18:51:20 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-modplug/}
-PKGREVISION=	3
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - MOD/S3M/XM/IT decoder plugin

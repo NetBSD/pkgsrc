@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/09/29 06:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/09/30 18:51:19 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-faad/}
-PKGREVISION=	3
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - AAC decoder plugin

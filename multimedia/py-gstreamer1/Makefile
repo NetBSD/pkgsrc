@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.36 2026/09/29 06:06:54 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/09/30 18:51:16 adam Exp $
 
-PKGREVISION= 3
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-python-${GST_VERSION}
@@ -12,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 COMMENT=	Python bindings for gstreamer1
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++

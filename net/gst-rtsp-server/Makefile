@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.23 2026/09/29 06:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/09/30 18:51:24 adam Exp $
 
-PKGREVISION= 3
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-rtsp-server-${GST_VERSION}
@@ -12,7 +11,7 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection>=0:../../devel/glib2-introspection
 
 PYTHON_FOR_BUILD_ONLY=		tool
 

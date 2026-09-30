@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/09/29 06:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/09/30 18:51:24 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-ximagesrc/}
-PKGREVISION=	3
 CATEGORIES=	x11 gnome
 
 COMMENT=	Open source multimedia framework - X11 image plugin
