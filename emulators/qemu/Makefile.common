@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2026/08/30 17:47:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/09/30 07:18:39 adam Exp $
 # used by emulators/qemu/Makefile
 # used by sysutils/qemu-guest-agent/Makefile
 
-QEMU_VERSION?=	11.1.1
+QEMU_VERSION?=	11.1.2
 
 DISTNAME=	qemu-${QEMU_VERSION}
 MASTER_SITES=	https://download.qemu.org/
@@ -14,9 +14,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 # From pythondeps.toml
 TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	ninja-build>=0:../../devel/ninja-build
 # From python/scripts/mkvenv.py
-TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib>=0:../../devel/py-distlib
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pycotap>=1.1.0:../../devel/py-pycotap
 DEPENDS+=	${PYPKGPREFIX}-pip>=20.3.4:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-qemu.qmp>=0.0.5:../../emulators/py-qemu.qmp
