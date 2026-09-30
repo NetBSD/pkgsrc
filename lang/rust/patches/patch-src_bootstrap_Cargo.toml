@@ -1,0 +1,18 @@
+$NetBSD: patch-src_bootstrap_Cargo.toml,v 1.1 2026/09/30 20:01:29 wiz Exp $
+
+Treat linker-messages as warn-by-default.
+Make sure to remove this when no longer needed.
+See: https://github.com/rust-lang/rust/pull/153968
+
+--- src/bootstrap/Cargo.toml.orig	2026-08-22 20:02:17.734783376 +0000
++++ src/bootstrap/Cargo.toml
+@@ -9,6 +9,9 @@ default-run = "bootstrap"
+ build-metrics = ["dep:sysinfo", "build_helper/metrics"]
+ tracing = ["dep:tracing", "dep:tracing-chrome", "dep:tracing-subscriber", "dep:chrono"]
+ 
++[lints.rust]
++linker_messages = "allow"
++
+ [lib]
+ path = "src/lib.rs"
+ doctest = false

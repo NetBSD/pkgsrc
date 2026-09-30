@@ -1,18 +1,18 @@
-$NetBSD: patch-src_bootstrap_src_core_sanity.rs,v 1.3 2026/06/11 07:00:57 wiz Exp $
+$NetBSD: patch-src_bootstrap_src_core_sanity.rs,v 1.4 2026/09/30 20:01:29 wiz Exp $
 
 Add m68k-unknown-netbsd to "missing stage0" list.
 
 --- src/bootstrap/src/core/sanity.rs.orig	2026-05-25 23:21:07.000000000 +0000
 +++ src/bootstrap/src/core/sanity.rs
-@@ -39,6 +39,7 @@ const STAGE0_MISSING_TARGETS: &[&str] = 
-     // just a dummy comment so the list doesn't get onelined
-     "x86_64-unknown-linux-gnumsan",
-     "x86_64-unknown-linux-gnutsan",
+@@ -41,6 +41,7 @@ const STAGE0_MISSING_TARGETS: &[&str] = 
+     "aarch64-unknown-linux-pauthtest", // Stage 0 compiler is not guaranteed to see the target yet.
+     "aarch64-unknown-qnx",
+     "x86_64-pc-qnx",
 +    "m68k-unknown-netbsd",
  ];
  
  /// Minimum version threshold for libstdc++ required when using prebuilt LLVM
-@@ -267,7 +268,10 @@ than building it.
+@@ -269,7 +270,10 @@ than building it.
                  for duplicated_target in duplicated_targets {
                      println!("  {duplicated_target}");
                  }

@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_memchr-2.7.4_src_vector.rs,v 1.4 2026/09/30 20:01:30 wiz Exp $
+$NetBSD: patch-vendor_memchr-2.7.6_src_vector.rs,v 1.1 2026/09/30 20:01:30 wiz Exp $
 
 Apply fix for big-endian aarch64 from
 https://github.com/BurntSushi/memchr/pull/222
 
---- vendor/memchr-2.7.4/src/vector.rs.orig	2024-09-22 14:16:06.473207292 +0000
-+++ vendor/memchr-2.7.4/src/vector.rs
+--- vendor/memchr-2.7.6/src/vector.rs.orig	2026-07-14 15:13:08.000000000 +0000
++++ vendor/memchr-2.7.6/src/vector.rs
 @@ -319,6 +319,7 @@ mod aarch64neon {
          }
  
