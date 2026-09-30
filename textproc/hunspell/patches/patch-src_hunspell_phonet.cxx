@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2023/01/19 00:53:42 wiz Exp $
+$NetBSD: patch-src_hunspell_phonet.cxx,v 1.1 2026/09/30 09:10:08 adam Exp $
 
 --- src/hunspell/phonet.cxx.orig	2022-12-29 20:10:49.000000000 +0000
 +++ src/hunspell/phonet.cxx
