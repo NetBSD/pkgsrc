@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6526 2026/09/30 11:28:31 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6527 2026/09/30 12:16:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9805,3 +9805,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-cftime to 1.6.6 [adam 2026-09-30]
 	Updated devel/git to 2.56.0 [adam 2026-09-30]
 	Updated www/chromium to 154.0.8037.57nb1 [kikadf 2026-09-30]
+	Updated editors/emacs31 to 31.1nb6 [wiz 2026-09-30]
