@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/07/12 11:35:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/09/30 10:20:41 adam Exp $
 bin/tomlq
 bin/xq
 bin/yq
@@ -22,6 +22,9 @@ ${PYSITELIB}/yq/loader.pyo
 ${PYSITELIB}/yq/parser.py
 ${PYSITELIB}/yq/parser.pyc
 ${PYSITELIB}/yq/parser.pyo
+${PYSITELIB}/yq/stream_wrappers.py
+${PYSITELIB}/yq/stream_wrappers.pyc
+${PYSITELIB}/yq/stream_wrappers.pyo
 ${PYSITELIB}/yq/toml_support.py
 ${PYSITELIB}/yq/toml_support.pyc
 ${PYSITELIB}/yq/toml_support.pyo
