@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6520 2026/09/30 09:28:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6521 2026/09/30 10:21:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9796,3 +9796,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/gspell to 1.14.5 [adam 2026-09-30]
 	Updated devel/py-atpublic to 8.0.1 [adam 2026-09-30]
 	Updated sysutils/py-reprotest to 0.7.33 [adam 2026-09-30]
+	Updated textproc/py-regex to 2026.9.29 [adam 2026-09-30]
+	Updated textproc/yq to 4.4.0 [adam 2026-09-30]
