@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/09/23 12:10:37 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/10/01 11:49:26 adam Exp $
 
-BLAKE2s (pyflakes-4.0.0.tar.gz) = 9fe146bccc87d70b183746d21b3c6ec3fbbaa0078657e21102d5db3716b03a62
-SHA512 (pyflakes-4.0.0.tar.gz) = e7fece830ce8f781f2acc0be52ff27a38941c1723aa3fe51a412e4175000e0aafe4864586cffc90a30d76eaed82a7d17efca6e5b7df030394268d91a95c4ee73
-Size (pyflakes-4.0.0.tar.gz) = 66927 bytes
+BLAKE2s (pyflakes-4.0.1.tar.gz) = ee2562a564d5b8fd357806ed4e6bc5cedfa98c6476e597ba674af3b28a2ee4c5
+SHA512 (pyflakes-4.0.1.tar.gz) = cae5791e5c23b8a6466383c5963b668934a17e83f6c271b08ca8d780f10fb620c93bf429b46266d1eefdda7fce3a381c719a721e770ad65739595a165a6ea1de
+Size (pyflakes-4.0.1.tar.gz) = 67099 bytes
