@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/08/30 15:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/01 11:48:38 adam Exp $
 
-DISTNAME=	proto_plus-1.28.4
+DISTNAME=	proto_plus-1.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/proto-plus/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.25.8:../../devel/py-protobuf
 # this depends on py-proto-plus:
 TEST_DEPENDS+=	${PYPKGPREFIX}-google-api-core>=1.31.5:../../devel/py-google-api-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>=0:../../time/py-pytz
 
 USE_LANGUAGES=	# none
 
