@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6567 2026/10/01 14:38:14 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6568 2026/10/01 16:46:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9887,3 +9887,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed security/py-simplesha3 [adam 2026-10-01]
 	Updated mail/ruby-mime-types-data to 3.2026.0929 [taca 2026-10-01]
 	Updated time/ruby-tzinfo-data to 1.2026.5 [taca 2026-10-01]
+	Removed security/py-slowaes [adam 2026-10-01]
+	Removed security/py-smbpasswd [adam 2026-10-01]
+	Removed security/py-yubiauth [adam 2026-10-01]
