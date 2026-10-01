@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2026/08/27 08:54:21 adam Exp $
+# $NetBSD: Makefile,v 1.97 2026/10/01 12:01:37 adam Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -35,7 +35,6 @@ SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	p5-Locale-Currency-Format
 SUBDIR+=	py-alpha_vantage
 SUBDIR+=	py-alphalens
-SUBDIR+=	py-backtrader
 SUBDIR+=	py-beancount
 SUBDIR+=	py-bitcoinlib
 SUBDIR+=	py-bitcoinrpc
