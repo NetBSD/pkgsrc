@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6555 2026/10/01 11:50:23 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6556 2026/10/01 11:56:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9854,3 +9854,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-proto-plus to 1.29.0 [adam 2026-10-01]
 	Updated devel/py-flakes to 4.0.1 [adam 2026-10-01]
 	Updated multimedia/moviebox-tui to 0.1.26 [pin 2026-10-01]
+	Updated converters/py-charset-normalizer to 3.5.2 [adam 2026-10-01]
+	Updated devel/py-project-api to 1.11.2 [adam 2026-10-01]
