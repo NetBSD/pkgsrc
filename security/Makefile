@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1024 2026/09/11 12:15:17 adam Exp $
+# $NetBSD: Makefile,v 1.1025 2026/10/01 12:37:55 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -500,9 +500,6 @@ SUBDIR+=	py-certbot-dns-sakuracloud
 SUBDIR+=	py-certbot-nginx
 SUBDIR+=	py-certifi
 SUBDIR+=	py-certipy
-SUBDIR+=	py-crack
-SUBDIR+=	py-crcmod
-SUBDIR+=	py-cryptkit
 SUBDIR+=	py-cryptodome
 SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptography_vectors
@@ -523,7 +520,6 @@ SUBDIR+=	py-hanko
 SUBDIR+=	py-hanko-certvalidator
 SUBDIR+=	py-hawkauthlib
 SUBDIR+=	py-hkdf
-SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-josepy
 SUBDIR+=	py-joserfc
