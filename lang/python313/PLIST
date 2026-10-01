@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/08/06 08:14:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/10/01 07:28:53 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1547,9 +1547,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.py
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.pyo
@@ -2580,9 +2577,6 @@ lib/python${PY_VER_SUFFIX}/test/mathdata/floating_points.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/formatfloat_testcases.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/ieee754.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/math_testcases.txt
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.py
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.pyc
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.pyo
 lib/python${PY_VER_SUFFIX}/test/mime.types
 lib/python${PY_VER_SUFFIX}/test/mime.types2
 lib/python${PY_VER_SUFFIX}/test/mock_socket.py
@@ -3090,6 +3084,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.pyo
