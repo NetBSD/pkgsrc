@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6576 2026/10/01 18:03:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6577 2026/10/01 18:45:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9929,3 +9929,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/py-wtforms-django [adam 2026-10-01]
 	Removed www/urlgrabber [adam 2026-10-01]
 	Removed www/tuir [adam 2026-10-01]
+	Updated devel/py-ruff to 0.16.10 [adam 2026-10-01]
+	Updated devel/py-cbor2 to 6.1.5 [adam 2026-10-01]
