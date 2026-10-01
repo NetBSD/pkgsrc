@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1608 2026/10/01 17:06:47 adam Exp $
+# $NetBSD: Makefile,v 1.1609 2026/10/01 17:16:43 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1127,21 +1127,18 @@ SUBDIR+=	py-jsbeautifier
 SUBDIR+=	py-jschon
 SUBDIR+=	py-json-logger
 SUBDIR+=	py-json5
-SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-jsonlines
 SUBDIR+=	py-jsonpatch
 SUBDIR+=	py-jsonpickle
 SUBDIR+=	py-jsonpointer
 SUBDIR+=	py-jsonref
 SUBDIR+=	py-jsonrpc-server
-SUBDIR+=	py-jsonrpclib
 SUBDIR+=	py-jsonrpclib-pelix
 SUBDIR+=	py-jsonschema
 SUBDIR+=	py-jsonschema-path
 SUBDIR+=	py-jsonschema-spec
 SUBDIR+=	py-jsonschema-specifications
 SUBDIR+=	py-jupyterlab-pygments
-SUBDIR+=	py-jxmlease
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-link-grammar
@@ -1166,7 +1163,6 @@ SUBDIR+=	py-merge3
 SUBDIR+=	py-mistune
 SUBDIR+=	py-mkdocs
 SUBDIR+=	py-mkdocs-bootstrap
-SUBDIR+=	py-mkdocs-bootswatch
 SUBDIR+=	py-mkdocs-get-deps
 SUBDIR+=	py-myst-parser
 SUBDIR+=	py-natsort
