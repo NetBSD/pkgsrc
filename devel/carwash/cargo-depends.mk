@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2026/09/28 13:09:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2026/10/01 10:36:52 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -29,6 +29,7 @@ CARGO_CRATE_DEPENDS+=	bumpalo-3.20.2
 CARGO_CRATE_DEPENDS+=	by_address-1.2.1
 CARGO_CRATE_DEPENDS+=	bytemuck-1.25.2
 CARGO_CRATE_DEPENDS+=	bytes-1.12.1
+CARGO_CRATE_DEPENDS+=	carwash-core-0.4.1
 CARGO_CRATE_DEPENDS+=	castaway-0.2.4
 CARGO_CRATE_DEPENDS+=	cc-1.2.62
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
