@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6546 2026/10/01 10:38:18 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6547 2026/10/01 10:41:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9836,3 +9836,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ap-modsecurity2 to 2.9.15 [drixter 2026-10-01]
 	Updated devel/carwash to 0.4.1nb1 [pin 2026-10-01]
 	Updated net/termscp to 1.2.0 [pin 2026-10-01]
+	Updated emulators/jgenesis to 0.14.1 [pin 2026-10-01]
