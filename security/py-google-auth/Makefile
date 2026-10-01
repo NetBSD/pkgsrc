@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/09/28 15:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/10/01 11:19:30 adam Exp $
 
-DISTNAME=	google_auth-2.58.1
+DISTNAME=	google_auth-2.59.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
@@ -16,19 +16,19 @@ DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
 # pyjwt
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0:../../textproc/py-JWT
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
-TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses-[0-9]*:../../net/py-aioresponses
-TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-grpcio-[0-9]*:../../net/py-grpcio
+TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses>=0:../../net/py-aioresponses
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask>=0:../../www/py-flask
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-grpcio>=0:../../net/py-grpcio
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=5:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
+TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client>=0:../../security/py-oauth2client
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
-TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../net/py-responses
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver>=0:../../devel/py-test-localserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-u2f>=0.1.5:../../security/py-u2f
-TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
+TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3>=0:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
 
