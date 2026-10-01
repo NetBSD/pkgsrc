@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1026 2026/10/01 13:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.1027 2026/10/01 16:45:45 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -559,8 +559,6 @@ SUBDIR+=	py-service_identity
 SUBDIR+=	py-shamir_mnemonic
 SUBDIR+=	py-signedjson
 SUBDIR+=	py-slip10
-SUBDIR+=	py-slowaes
-SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-spake2
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
@@ -572,7 +570,6 @@ SUBDIR+=	py-truststore
 SUBDIR+=	py-u2f
 SUBDIR+=	py-vodozemac
 SUBDIR+=	py-yara
-SUBDIR+=	py-yubiauth
 SUBDIR+=	py-yubikey-manager
 SUBDIR+=	py27-OpenSSL
 SUBDIR+=	py27-cryptography
