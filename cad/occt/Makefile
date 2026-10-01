@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/02/02 09:30:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/01 05:56:56 wiz Exp $
 
 VERSION=	7.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	opencascade-${VERSION}
 PKGNAME=	${DISTNAME:S/opencascade/occt/}
 CATEGORIES=	cad
