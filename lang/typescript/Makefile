@@ -1,40 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2026/09/22 13:31:37 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/01 12:45:21 kikadf Exp $
 
-DISTNAME=	typescript-6.0.3
+DISTNAME=	typescript-7.0.2
 CATEGORIES=	lang
-EXTRACT_SUFX=	.tgz
-MASTER_SITES=	https://registry.npmjs.org/typescript/-/
+GITHUB_PROJECT=	TypeScript
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 
 MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://www.typescriptlang.org/
 COMMENT=	Superset of JavaScript that compiles to clean JavaScript output
 LICENSE=	apache-2.0
 
-USE_TOOLS+=	pax
-USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}/tsc
 
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/package
+.include "go-modules.mk"
 
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	lib/node_modules/typescript
-
-REPLACE_NODEJS+=	bin/tsc
-REPLACE_NODEJS+=	bin/tsserver
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/package.json \
-		${DESTDIR}${PREFIX}/lib/node_modules/typescript/
-.for i in bin lib
-	${RUN} cd ${WRKSRC} && \
-		${FIND} ${i} -type f -print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/lib/node_modules/typescript/
-.endfor
-	${RUN} cd ${DESTDIR}${PREFIX}/bin && \
-		${LN} -sf ${PREFIX}/lib/node_modules/typescript/bin/tsc  tsc
-	${RUN} cd ${DESTDIR}${PREFIX}/bin && \
-		${LN} -sf ${PREFIX}/lib/node_modules/typescript/bin/tsserver tsserver
-
-.include "../../lang/nodejs/application.mk"
-.include "../../lang/nodejs/nodeversion.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
