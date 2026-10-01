@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/09/30 17:09:21 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/01 11:50:01 pin Exp $
 
-DISTNAME=	MovieBox-Tui-0.1.25
+DISTNAME=	MovieBox-Tui-0.1.26
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesamirh/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/MovieBox-Tui-0.1.25
+WRKSRC=		${WRKDIR}/MovieBox-Tui-0.1.26
 RUST_REQ=	1.90.0
 
 .include "cargo-depends.mk"
