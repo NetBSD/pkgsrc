@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.47 2026/06/03 09:06:11 adam Exp $
+# $NetBSD: cargo.mk,v 1.48 2026/10/01 06:53:07 adam Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -52,7 +52,7 @@ SUBST_STAGE.gitcrate=		pre-configure
 .  for user name hash in ${CARGO_GITHUB_CRATES}
 DISTFILES+=			${name}-${hash}.tar.gz
 SITES.${name}-${hash}.tar.gz+=	-${MASTER_SITE_GITHUB:=${user}/}${name}/archive/${hash}.tar.gz
-SUBST_SED.gitcrate+=		-E -e 's!git.*github.com/${user}/${name}.*${hash}(.)!path = \1../${name}-${hash}\1!'
+SUBST_SED.gitcrate+=		-E -e 's!git =.*github.com/${user}/${name}.*${hash}(.)!path = \1../${name}-${hash}\1!'
 .  endfor
 .endif
 
