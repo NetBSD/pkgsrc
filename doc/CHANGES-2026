@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6575 2026/10/01 17:47:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6576 2026/10/01 18:03:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9924,3 +9924,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed www/py-robobrowser [adam 2026-10-01]
 	Removed www/py-rss2gen [adam 2026-10-01]
 	Removed www/py-webdav [adam 2026-10-01]
+	Removed www/py-wtforms-appengine [adam 2026-10-01]
+	Removed www/py-wtforms-dateutil [adam 2026-10-01]
+	Removed www/py-wtforms-django [adam 2026-10-01]
+	Removed www/urlgrabber [adam 2026-10-01]
+	Removed www/tuir [adam 2026-10-01]
