@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/08/05 15:56:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/01 07:09:41 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1625,9 +1625,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.py
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy_user.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/tkinter_testing_utils.pyo
@@ -3203,6 +3200,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.pyo
@@ -3938,6 +3938,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_code.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_collections.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_context.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_context.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_context.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyo
