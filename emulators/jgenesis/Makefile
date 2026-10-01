@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/10/01 10:40:40 pin Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/01 19:54:28 wiz Exp $
 
 DISTNAME=	jgenesis-0.14.1
 CATEGORIES=	emulators
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jsgroth/jgenesis/
 COMMENT=	Sega Genesis - Sega CD - SNES - Master System - Game Gear emulator
 LICENSE=	mit
 
-# jgenesis >= 0.12.0 only supports Vulkan, OpenGL support was rmoved from the code base.
+# jgenesis >= 0.12.0 only supports Vulkan, OpenGL support was removed from the code base.
 # Only works on platforms that have Vulkan loader.
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-*
 
