@@ -1,3 +1,0 @@
-Flask-Webpack ties Webpack and Flask together. It exposes a few
-global template tags so that you can work with assets in your jinja
-templates and it works with any wsgi server.
