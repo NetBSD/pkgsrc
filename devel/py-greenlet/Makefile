@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/08/11 05:45:41 adam Exp $
+# $NetBSD: Makefile,v 1.46 2026/10/01 11:41:39 adam Exp $
 
-DISTNAME=	greenlet-3.5.5
+DISTNAME=	greenlet-3.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
@@ -11,14 +11,14 @@ COMMENT=	Lightweight in-process concurrent programming
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
-TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph>=0:../../graphics/py-objgraph
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=0:../../sysutils/py-psutil
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 
 # sorry, unimplemented: non-trivial designated initializers not supported
-GCC_REQD+=		8
+GCC_REQD+=	8
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
