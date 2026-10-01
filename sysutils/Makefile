@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1205 2026/09/26 10:44:52 tnn Exp $
+# $NetBSD: Makefile,v 1.1206 2026/10/01 16:53:31 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -631,18 +631,14 @@ SUBDIR+=	py-kazoo
 SUBDIR+=	py-kubernetes
 SUBDIR+=	py-loguru
 SUBDIR+=	py-magic
-SUBDIR+=	py-notify
-SUBDIR+=	py-notify2
 SUBDIR+=	py-pefile
 SUBDIR+=	py-pid
 SUBDIR+=	py-psleak
 SUBDIR+=	py-psutil
 SUBDIR+=	py-ptyprocess
 SUBDIR+=	py-puremagic
-SUBDIR+=	py-pyinotify
 SUBDIR+=	py-reprotest
 SUBDIR+=	py-salt-pepper
-SUBDIR+=	py-setconf
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-sh
 SUBDIR+=	py-stack-data
