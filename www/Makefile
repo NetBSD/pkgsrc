@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1942 2026/10/01 17:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.1943 2026/10/01 17:44:56 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -827,9 +827,7 @@ SUBDIR+=	py-flask-session
 SUBDIR+=	py-flask-sqlalchemy
 SUBDIR+=	py-flask-static-digest
 SUBDIR+=	py-flask-testing
-SUBDIR+=	py-flask-uploads
 SUBDIR+=	py-flask-user
-SUBDIR+=	py-flask-webpack
 SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
 SUBDIR+=	py-furl
@@ -875,7 +873,6 @@ SUBDIR+=	py-mechanize
 SUBDIR+=	py-meinheld
 SUBDIR+=	py-mezzanine
 SUBDIR+=	py-mod_wsgi
-SUBDIR+=	py-model_mommy
 SUBDIR+=	py-modelsearch
 SUBDIR+=	py-moin
 SUBDIR+=	py-multipart
@@ -913,7 +910,6 @@ SUBDIR+=	py-rfc3986
 SUBDIR+=	py-rfc3986-validator
 SUBDIR+=	py-rfc3987
 SUBDIR+=	py-rjsmin
-SUBDIR+=	py-robobrowser
 SUBDIR+=	py-robot-detection
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-sanic
