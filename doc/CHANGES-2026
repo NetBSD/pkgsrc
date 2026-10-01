@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6564 2026/10/01 12:45:38 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6565 2026/10/01 13:00:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9881,3 +9881,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed security/py-cryptkit [adam 2026-10-01]
 	Removed security/py-hsm [adam 2026-10-01]
 	Updated lang/typescript to 7.0.2 [kikadf 2026-10-01]
+	Removed security/py-ndg_httpsclient [adam 2026-10-01]
+	Removed security/py-pbkdf2 [adam 2026-10-01]
+	Removed security/py-pydeep [adam 2026-10-01]
+	Removed security/py-simplesha3 [adam 2026-10-01]
