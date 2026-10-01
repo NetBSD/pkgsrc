@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:39 nia Exp $
-
-BLAKE2s (medusa-0.5.4.tar.gz) = 7f17abccce6f04cb6cd49c2c8f487df01c4041ead545b8e4c7fa4000f1d9294d
-SHA512 (medusa-0.5.4.tar.gz) = 9b28c13f633c87586b88388719afdc6c8f32cb0e25583e8c03f5bb0a0ef7c75a4fbad23f5b296bf84c8fa50d7d811fa62305f3fbe64d3764aa5d28228a31a43f
-Size (medusa-0.5.4.tar.gz) = 107744 bytes
