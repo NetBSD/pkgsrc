@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6561 2026/10/01 12:25:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6562 2026/10/01 12:31:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9872,3 +9872,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-pylint-celery [adam 2026-10-01]
 	Removed net/py-pysendfile [adam 2026-10-01]
 	Removed net/py-requestbuilder [adam 2026-10-01]
+	Removed net/py-simplesoap [adam 2026-10-01]
+	Removed net/py-socksipy-branch [adam 2026-10-01]
+	Removed net/py-txamqp [adam 2026-10-01]
+	Removed print/pdf-redact-tools [adam 2026-10-01]
