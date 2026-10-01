@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1944 2026/10/01 17:47:12 adam Exp $
+# $NetBSD: Makefile,v 1.1945 2026/10/01 18:02:48 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -958,10 +958,7 @@ SUBDIR+=	py-wsproto
 SUBDIR+=	py-wstools
 SUBDIR+=	py-wtforms
 SUBDIR+=	py-wtforms-alchemy
-SUBDIR+=	py-wtforms-appengine
 SUBDIR+=	py-wtforms-components
-SUBDIR+=	py-wtforms-dateutil
-SUBDIR+=	py-wtforms-django
 SUBDIR+=	py-wtforms-sqlalchemy
 SUBDIR+=	py-wtforms-test
 SUBDIR+=	py-yarl
@@ -1169,7 +1166,6 @@ SUBDIR+=	tinyproxy
 SUBDIR+=	tipidee
 SUBDIR+=	trac
 SUBDIR+=	tscrape
-SUBDIR+=	tuir
 SUBDIR+=	typo3-13
 SUBDIR+=	typo3-14
 SUBDIR+=	ufdbguard
@@ -1180,7 +1176,6 @@ SUBDIR+=	unit-php
 SUBDIR+=	unit-python
 SUBDIR+=	unit-ruby
 SUBDIR+=	urlget
-SUBDIR+=	urlgrabber
 SUBDIR+=	varnish
 SUBDIR+=	viewvc
 SUBDIR+=	vimb
