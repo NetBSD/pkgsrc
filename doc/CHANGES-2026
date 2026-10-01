@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6558 2026/10/01 12:10:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6559 2026/10/01 12:15:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9863,3 +9863,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-ipcalc [adam 2026-10-01]
 	Removed net/py-kenosis [adam 2026-10-01]
 	Removed net/py-libpcap [adam 2026-10-01]
+	Removed net/py-medusa [adam 2026-10-01]
+	Removed net/py-namecheap [adam 2026-10-01]
+	Removed net/py-nyx [adam 2026-10-01]
+	Removed net/nyx [adam 2026-10-01]
