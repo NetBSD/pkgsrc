@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6559 2026/10/01 12:15:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6560 2026/10/01 12:17:59 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9867,3 +9867,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-namecheap [adam 2026-10-01]
 	Removed net/py-nyx [adam 2026-10-01]
 	Removed net/nyx [adam 2026-10-01]
+	Updated wayland/waybar to 0.15.0nb5 [kikadf 2026-10-01]
