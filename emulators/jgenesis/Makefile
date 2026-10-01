@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/09/29 06:04:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/01 10:40:40 pin Exp $
 
-DISTNAME=	jgenesis-0.13.1
-PKGREVISION=	4
+DISTNAME=	jgenesis-0.14.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jsgroth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,11 +19,11 @@ DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.97.0-beta.4
+#RUST_REQ=	1.99.0-beta.5
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.97.0-beta.4 on amd64
-USE_LANGUAGES+=		c c++
-USE_TOOLS+=		pkg-config
+#This package is confirmed to build with Rust 1.99.0-beta.5 on amd64
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
@@ -33,19 +32,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jgenesis-cli \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jgenesis-gui \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/m68000-test-runner \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/mos6502-test-runner \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spc700-test-runner \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wdc65816-test-runner \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/z80-test-runner \
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jgenesis \
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.prefs.mk"

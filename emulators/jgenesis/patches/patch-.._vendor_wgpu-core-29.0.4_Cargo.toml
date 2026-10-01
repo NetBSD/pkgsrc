@@ -1,0 +1,15 @@
+$NetBSD: patch-.._vendor_wgpu-core-29.0.4_Cargo.toml,v 1.1 2026/10/01 10:40:40 pin Exp $
+
+Enable the GLES/OpenGL backend cfg alias on NetBSD.
+
+--- ../vendor/wgpu-core-29.0.4/Cargo.toml.orig	2026-09-17 12:49:59.860922715 +0000
++++ ../vendor/wgpu-core-29.0.4/Cargo.toml
+@@ -208,7 +208,7 @@ optional = true
+ version = "29.0.0"
+ optional = true
+ 
+-[target.'cfg(any(windows, target_os = "linux", target_os = "android", target_os = "freebsd"))'.dependencies.wgpu-core-deps-windows-linux-android]
++[target.'cfg(any(windows, target_os = "linux", target_os = "android", target_os = "freebsd", target_os = "netbsd"))'.dependencies.wgpu-core-deps-windows-linux-android]
+ version = "29.0.0"
+ optional = true
+ 
