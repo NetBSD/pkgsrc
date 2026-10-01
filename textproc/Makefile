@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1607 2026/09/27 13:44:34 taca Exp $
+# $NetBSD: Makefile,v 1.1608 2026/10/01 17:06:47 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1050,7 +1050,6 @@ SUBDIR+=	presenterm
 SUBDIR+=	prose
 SUBDIR+=	psgml-mode
 SUBDIR+=	pugixml
-SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-ICU
 SUBDIR+=	py-JWT
 SUBDIR+=	py-Levenshtein
@@ -1087,7 +1086,6 @@ SUBDIR+=	py-cssutils
 SUBDIR+=	py-deepdiff
 SUBDIR+=	py-defusedxml
 SUBDIR+=	py-demjson3
-SUBDIR+=	py-dicttoxml
 SUBDIR+=	py-diff-match-patch
 SUBDIR+=	py-dill
 SUBDIR+=	py-docstring-to-markdown
@@ -1105,7 +1103,6 @@ SUBDIR+=	py-feedparser
 SUBDIR+=	py-feedparser5
 SUBDIR+=	py-ftfy
 SUBDIR+=	py-generateDS
-SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-guessit
 SUBDIR+=	py-html-sanitizer
 SUBDIR+=	py-html2text
@@ -1121,7 +1118,6 @@ SUBDIR+=	py-iniparse
 SUBDIR+=	py-isc_dhcp_leases
 SUBDIR+=	py-itemadapter
 SUBDIR+=	py-itemloaders
-SUBDIR+=	py-jade
 SUBDIR+=	py-jaraco.text
 SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
