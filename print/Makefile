@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2026/09/09 05:55:40 markd Exp $
+# $NetBSD: Makefile,v 1.971 2026/10/01 12:31:21 adam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -113,7 +113,6 @@ SUBDIR+=	p5-biblatex-biber
 SUBDIR+=	papersize
 SUBDIR+=	paps
 SUBDIR+=	pcps
-SUBDIR+=	pdf-redact-tools
 SUBDIR+=	pdf2djvu
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
