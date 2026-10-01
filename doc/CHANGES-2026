@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6568 2026/10/01 16:46:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6569 2026/10/01 16:53:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9890,3 +9890,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed security/py-slowaes [adam 2026-10-01]
 	Removed security/py-smbpasswd [adam 2026-10-01]
 	Removed security/py-yubiauth [adam 2026-10-01]
+	Removed sysutils/py-notify [adam 2026-10-01]
+	Removed sysutils/py-notify2 [adam 2026-10-01]
+	Removed sysutils/py-pyinotify [adam 2026-10-01]
+	Removed sysutils/py-setconf [adam 2026-10-01]
