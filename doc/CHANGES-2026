@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6578 2026/10/01 18:53:43 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6579 2026/10/01 18:58:51 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9932,3 +9932,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.16.10 [adam 2026-10-01]
 	Updated devel/py-cbor2 to 6.1.5 [adam 2026-10-01]
 	Updated net/powerdns-recursor to 5.4.7 [drixter 2026-10-01]
+	Updated net/knot-resolver to 6.5.0 [drixter 2026-10-01]
