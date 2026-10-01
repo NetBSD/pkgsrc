@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/10 07:50:49 wiz Exp $
-bin/pdf-redact-tools
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
