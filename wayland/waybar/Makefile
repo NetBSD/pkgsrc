@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/09/29 06:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/01 12:17:16 kikadf Exp $
 
 DISTNAME=	waybar-0.15.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Alexays/}
 GITHUB_PROJECT=	Waybar
