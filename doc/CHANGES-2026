@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6549 2026/10/01 11:26:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6550 2026/10/01 11:30:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9841,3 +9841,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth to 2.59.1 [adam 2026-10-01]
 	Updated www/py-werkzeug to 3.1.9 [adam 2026-10-01]
 	Updated devel/py-test-rerunfailures to 16.7 [adam 2026-10-01]
+	Updated net/grpc to 1.84.0 [adam 2026-10-01]
+	Updated net/py-grpcio to 1.84.0 [adam 2026-10-01]
+	Updated net/py-grpcio-status to 1.84.0 [adam 2026-10-01]
+	Updated net/py-grpcio-testing to 1.84.0 [adam 2026-10-01]
+	Updated net/py-grpcio-tools to 1.84.0 [adam 2026-10-01]
