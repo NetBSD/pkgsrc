@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6540 2026/10/01 07:29:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6541 2026/10/01 07:38:57 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9828,3 +9828,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py314-html-docs to 3.14.8 [adam 2026-10-01]
 	Updated lang/python313 to 3.13.16 [adam 2026-10-01]
 	Updated lang/py313-html-docs to 3.13.16 [adam 2026-10-01]
+	Updated www/resterm to 1.10.3 [drixter 2026-10-01]
