@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2026/08/16 12:21:33 wiz Exp $
+$NetBSD: distinfo,v 1.30 2026/10/01 11:55:13 adam Exp $
 
-BLAKE2s (charset_normalizer-3.5.1.tar.gz) = c555692cec075f66e4374abce68f5db14a99e842fd8e9a9a6ec448f195909036
-SHA512 (charset_normalizer-3.5.1.tar.gz) = 9f77c6eb941e7b718ccfeefc0febbf964c9b4992fc14c9d64efac1da346f24f1c0b5b82a094512f2ab220232b2b269614ca34e59b93eb05e57e13cd85f7167fb
-Size (charset_normalizer-3.5.1.tar.gz) = 171764 bytes
+BLAKE2s (charset_normalizer-3.5.2.tar.gz) = 51dc1a1e2acd782b918d1a53c5368786c2887a6f8448768d030d0ed7748a31e5
+SHA512 (charset_normalizer-3.5.2.tar.gz) = 342e94ae5b4a3d378860aab316d76947e67cc26d62529e2a9c0e062766ed2c48e4641497b0277c9e291a7ba40fe6861c5b6d4814f38c0775fad59a3b761468d3
+Size (charset_normalizer-3.5.2.tar.gz) = 172659 bytes
