@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1943 2026/10/01 17:44:56 adam Exp $
+# $NetBSD: Makefile,v 1.1944 2026/10/01 17:47:12 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -911,7 +911,6 @@ SUBDIR+=	py-rfc3986-validator
 SUBDIR+=	py-rfc3987
 SUBDIR+=	py-rjsmin
 SUBDIR+=	py-robot-detection
-SUBDIR+=	py-rss2gen
 SUBDIR+=	py-sanic
 SUBDIR+=	py-sanic-routing
 SUBDIR+=	py-scgi
@@ -948,7 +947,6 @@ SUBDIR+=	py-wagtailnews
 SUBDIR+=	py-waitress
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
-SUBDIR+=	py-webdav
 SUBDIR+=	py-webpy
 SUBDIR+=	py-websocket-client
 SUBDIR+=	py-websockets
