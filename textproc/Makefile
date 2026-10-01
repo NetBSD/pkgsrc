@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1609 2026/10/01 17:16:43 adam Exp $
+# $NetBSD: Makefile,v 1.1610 2026/10/01 17:22:00 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1197,7 +1197,6 @@ SUBDIR+=	py-pybtex
 SUBDIR+=	py-pybtex-docutils
 SUBDIR+=	py-pygccxml
 SUBDIR+=	py-pygments
-SUBDIR+=	py-pylev
 SUBDIR+=	py-pymdown-extensions
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
@@ -1223,15 +1222,12 @@ SUBDIR+=	py-sphinx-astropy
 SUBDIR+=	py-sphinx-autoapi
 SUBDIR+=	py-sphinx-autodoc-typehints
 SUBDIR+=	py-sphinx-automodapi
-SUBDIR+=	py-sphinx-basic-ng
-SUBDIR+=	py-sphinx-copybutton
 SUBDIR+=	py-sphinx-gallery
 SUBDIR+=	py-sphinx-inline-tabs
 SUBDIR+=	py-sphinx-issues
 SUBDIR+=	py-sphinx-lv2-theme
 SUBDIR+=	py-sphinx-notfound-page
 SUBDIR+=	py-sphinx-rtd-theme
-SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-sphinxcontrib-actdiag
 SUBDIR+=	py-sphinxcontrib-applehelp
 SUBDIR+=	py-sphinxcontrib-bibtex
