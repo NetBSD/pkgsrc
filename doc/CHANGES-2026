@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6562 2026/10/01 12:31:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6563 2026/10/01 12:38:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9876,3 +9876,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed net/py-socksipy-branch [adam 2026-10-01]
 	Removed net/py-txamqp [adam 2026-10-01]
 	Removed print/pdf-redact-tools [adam 2026-10-01]
+	Removed security/py-crack [adam 2026-10-01]
+	Removed security/py-crcmod [adam 2026-10-01]
+	Removed security/py-cryptkit [adam 2026-10-01]
+	Removed security/py-hsm [adam 2026-10-01]
