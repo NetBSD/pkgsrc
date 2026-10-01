@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6571 2026/10/01 17:17:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6572 2026/10/01 17:30:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9902,3 +9902,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed textproc/py-jsonrpclib [adam 2026-10-01]
 	Removed textproc/py-jxmlease [adam 2026-10-01]
 	Removed textproc/py-mkdocs-bootswatch [adam 2026-10-01]
+	Removed textproc/py-pylev [adam 2026-10-01]
+	Removed textproc/py-sphinx-basic-ng [adam 2026-10-01]
+	Removed textproc/py-sphinx-copybutton [adam 2026-10-01]
+	Removed textproc/py-sphinx-theme-cloud [adam 2026-10-01]
+	Removed time/py-jinja2-time [adam 2026-10-01]
+	Removed time/py-l18n [adam 2026-10-01]
+	Removed time/py-mxDateTime [adam 2026-10-01]
+	Removed time/py-snaptime [adam 2026-10-01]
