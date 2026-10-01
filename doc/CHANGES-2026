@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6547 2026/10/01 10:41:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6548 2026/10/01 11:21:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9837,3 +9837,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/carwash to 0.4.1nb1 [pin 2026-10-01]
 	Updated net/termscp to 1.2.0 [pin 2026-10-01]
 	Updated emulators/jgenesis to 0.14.1 [pin 2026-10-01]
+	Updated devel/py-googleapis-common-protos to 1.75.5 [adam 2026-10-01]
+	Updated security/py-google-auth to 2.59.1 [adam 2026-10-01]
