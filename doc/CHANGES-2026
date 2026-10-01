@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6538 2026/10/01 06:51:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6539 2026/10/01 07:10:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9824,3 +9824,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/hiawatha to 12.4 [hauke 2026-09-30]
 	Updated fonts/harfbuzz to 14.5.1 [adam 2026-10-01]
 	Updated devel/py-uvloop to 0.23.0 [adam 2026-10-01]
+	Updated lang/python314 to 3.14.8 [adam 2026-10-01]
+	Updated lang/py314-html-docs to 3.14.8 [adam 2026-10-01]
