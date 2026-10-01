@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1670 2026/10/01 12:14:50 adam Exp $
+# $NetBSD: Makefile,v 1.1671 2026/10/01 12:24:53 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -776,20 +776,16 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-onionbalance
 SUBDIR+=	py-paho-mqtt
 SUBDIR+=	py-pamqp
-SUBDIR+=	py-pcap
 SUBDIR+=	py-pika
 SUBDIR+=	py-portend
 SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
 SUBDIR+=	py-pychromecast
 SUBDIR+=	py-pyftpdlib
-SUBDIR+=	py-pylint-celery
 SUBDIR+=	py-pynng
 SUBDIR+=	py-pypiserver
 SUBDIR+=	py-pyrate-limiter
-SUBDIR+=	py-pysendfile
 SUBDIR+=	py-python-socks
-SUBDIR+=	py-requestbuilder
 SUBDIR+=	py-requests-ratelimiter
 SUBDIR+=	py-responses
 SUBDIR+=	py-rfc6555
