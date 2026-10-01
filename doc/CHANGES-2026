@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6544 2026/10/01 10:26:48 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6545 2026/10/01 10:37:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9834,3 +9834,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/python311 to 3.11.17 [adam 2026-10-01]
 	Updated lang/py311-html-docs to 3.11.17 [adam 2026-10-01]
 	Updated security/ap-modsecurity2 to 2.9.15 [drixter 2026-10-01]
+	Updated devel/carwash to 0.4.1nb1 [pin 2026-10-01]
