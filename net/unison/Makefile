@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2026/09/29 06:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.184 2026/10/01 12:51:36 gdt Exp $
 
 DISTNAME=	unison-2.54.0
 #PKGREVISION=	0
@@ -14,6 +14,8 @@ COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	bash pkg-config
+TOOL_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+
 # \todo Explain
 MAKE_FLAGS+=	CFLAGS=""
 ALL_ENV+=	PREFIX=${PREFIX}
