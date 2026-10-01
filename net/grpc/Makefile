@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2026/09/26 07:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2026/10/01 11:29:29 adam Exp $
 
-DISTNAME=	grpc-1.83.1
-PKGREVISION=	1
+DISTNAME=	grpc-1.84.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,14 +30,19 @@ CMAKE_CONFIGURE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 CENSUS_VER=		0.3.0
 CENSUS_DIST=		opencensus-proto-${CENSUS_VER}.tar.gz
 SITES.${CENSUS_DIST}=	-${MASTER_SITE_GITHUB:=census-instrumentation/opencensus-proto/archive/}/v${CENSUS_VER}.tar.gz
+GRPC_PROTO_HASH=	ec30f589e2519d595688b9a42f88a91bdd6b733f
+GRPC_PROTO_DIST=	grpc-proto-${GRPC_PROTO_HASH}.tar.gz
+SITES.${GRPC_PROTO_DIST}=	-${MASTER_SITE_GITHUB:=grpc/grpc-proto/archive/}/${GRPC_PROTO_HASH}.tar.gz
 
-DISTFILES=	${DEFAULT_DISTFILES} ${CENSUS_DIST}
+DISTFILES=	${DEFAULT_DISTFILES} ${CENSUS_DIST} ${GRPC_PROTO_DIST}
 
 PKGCONFIG_OVERRIDE=	cmake/pkg-config-template.pc.in
 
 post-extract:
 	${RMDIR} ${WRKSRC}/third_party/opencensus-proto
 	${LN} -s ${WRKDIR}/opencensus-proto-* ${WRKSRC}/third_party/opencensus-proto
+	${RMDIR} ${WRKSRC}/third_party/grpc-proto
+	${LN} -s ${WRKDIR}/grpc-proto-${GRPC_PROTO_HASH} ${WRKSRC}/third_party/grpc-proto
 
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
