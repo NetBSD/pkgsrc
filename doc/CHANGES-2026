@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6557 2026/10/01 12:02:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6558 2026/10/01 12:10:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9858,3 +9858,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-project-api to 1.11.2 [adam 2026-10-01]
 	Removed devel/py-extras [adam 2026-10-01]
 	Removed finance/py-backtrader [adam 2026-10-01]
+	Removed net/coilmq [adam 2026-10-01]
+	Removed net/py-bonjour [adam 2026-10-01]
+	Removed net/py-ipcalc [adam 2026-10-01]
+	Removed net/py-kenosis [adam 2026-10-01]
+	Removed net/py-libpcap [adam 2026-10-01]
