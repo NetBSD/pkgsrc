@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6543 2026/10/01 07:48:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6544 2026/10/01 10:26:48 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9833,3 +9833,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py312-html-docs to 3.12.15 [adam 2026-10-01]
 	Updated lang/python311 to 3.11.17 [adam 2026-10-01]
 	Updated lang/py311-html-docs to 3.11.17 [adam 2026-10-01]
+	Updated security/ap-modsecurity2 to 2.9.15 [drixter 2026-10-01]
