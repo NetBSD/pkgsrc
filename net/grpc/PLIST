@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2026/08/18 18:33:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2026/10/01 11:29:29 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -305,7 +305,6 @@ include/grpcpp/support/sync_stream.h
 include/grpcpp/support/time.h
 include/grpcpp/support/validate_service_config.h
 include/grpcpp/version_info.h
-include/grpcpp/virtual_channel.h
 include/grpcpp/xds_server_builder.h
 lib/cmake/grpc/gRPCConfig.cmake
 lib/cmake/grpc/gRPCConfigVersion.cmake
@@ -324,34 +323,34 @@ lib/libgpr.so.56
 lib/libgpr.so.56.0.0
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
-lib/libgrpc++.so.1.83
+lib/libgrpc++.so.1.84
 lib/libgrpc++_alts.so
 lib/libgrpc++_alts.so.${PKGVERSION}
-lib/libgrpc++_alts.so.1.83
+lib/libgrpc++_alts.so.1.84
 lib/libgrpc++_error_details.so
 lib/libgrpc++_error_details.so.${PKGVERSION}
-lib/libgrpc++_error_details.so.1.83
+lib/libgrpc++_error_details.so.1.84
 lib/libgrpc++_reflection.so
 lib/libgrpc++_reflection.so.${PKGVERSION}
-lib/libgrpc++_reflection.so.1.83
+lib/libgrpc++_reflection.so.1.84
 lib/libgrpc++_unsecure.so
 lib/libgrpc++_unsecure.so.${PKGVERSION}
-lib/libgrpc++_unsecure.so.1.83
+lib/libgrpc++_unsecure.so.1.84
 lib/libgrpc.so
 lib/libgrpc.so.56
 lib/libgrpc.so.56.0.0
 lib/libgrpc_authorization_provider.so
 lib/libgrpc_authorization_provider.so.${PKGVERSION}
-lib/libgrpc_authorization_provider.so.1.83
+lib/libgrpc_authorization_provider.so.1.84
 lib/libgrpc_plugin_support.so
 lib/libgrpc_plugin_support.so.${PKGVERSION}
-lib/libgrpc_plugin_support.so.1.83
+lib/libgrpc_plugin_support.so.1.84
 lib/libgrpc_unsecure.so
 lib/libgrpc_unsecure.so.56
 lib/libgrpc_unsecure.so.56.0.0
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
-lib/libgrpcpp_channelz.so.1.83
+lib/libgrpcpp_channelz.so.1.84
 lib/libupb_base_lib.so
 lib/libupb_base_lib.so.56
 lib/libupb_base_lib.so.56.0.0
