@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4697 2026/09/29 16:07:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.4698 2026/10/01 12:00:39 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2684,7 +2684,6 @@ SUBDIR+=	py-exceptiongroup
 SUBDIR+=	py-execnet
 SUBDIR+=	py-expiringdict
 SUBDIR+=	py-extension-helpers
-SUBDIR+=	py-extras
 SUBDIR+=	py-extratools
 SUBDIR+=	py-factory_boy
 SUBDIR+=	py-fakefs
