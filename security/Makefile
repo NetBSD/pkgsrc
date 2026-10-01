@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1025 2026/10/01 12:37:55 adam Exp $
+# $NetBSD: Makefile,v 1.1026 2026/10/01 13:01:42 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -532,7 +532,6 @@ SUBDIR+=	py-libnacl
 SUBDIR+=	py-libtaxii
 SUBDIR+=	py-mohawk
 SUBDIR+=	py-nacl
-SUBDIR+=	py-ndg_httpsclient
 SUBDIR+=	py-noiseprotocol
 SUBDIR+=	py-nvdlib
 SUBDIR+=	py-oath
@@ -547,10 +546,8 @@ SUBDIR+=	py-otp
 SUBDIR+=	py-pamela
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
-SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-pem
 SUBDIR+=	py-pip-audit
-SUBDIR+=	py-pydeep
 SUBDIR+=	py-pyspnego
 SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-kerberos
@@ -561,7 +558,6 @@ SUBDIR+=	py-secretstorage
 SUBDIR+=	py-service_identity
 SUBDIR+=	py-shamir_mnemonic
 SUBDIR+=	py-signedjson
-SUBDIR+=	py-simplesha3
 SUBDIR+=	py-slip10
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smbpasswd
