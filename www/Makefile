@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1940 2026/09/22 10:06:58 adam Exp $
+# $NetBSD: Makefile,v 1.1941 2026/10/01 17:35:48 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -725,7 +725,6 @@ SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-betamax
 SUBDIR+=	py-bleach
 SUBDIR+=	py-bottle
-SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
@@ -769,14 +768,12 @@ SUBDIR+=	py-django-polymorphic
 SUBDIR+=	py-django-q
 SUBDIR+=	py-django-q2
 SUBDIR+=	py-django-registration
-SUBDIR+=	py-django-rest-framework-proxy
 SUBDIR+=	py-django-reversion
 SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-sortedm2m
 SUBDIR+=	py-django-sql-explorer
 SUBDIR+=	py-django-sslserver
 SUBDIR+=	py-django-stubs-ext
-SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django-taggit
 SUBDIR+=	py-django-tasks
 SUBDIR+=	py-django-tastypie
@@ -813,7 +810,6 @@ SUBDIR+=	py-flask-api
 SUBDIR+=	py-flask-assets
 SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-babelex
-SUBDIR+=	py-flask-bootstrap
 SUBDIR+=	py-flask-caching
 SUBDIR+=	py-flask-cors
 SUBDIR+=	py-flask-debugtoolbar
