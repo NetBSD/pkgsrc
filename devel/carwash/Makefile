@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2026/09/28 13:09:33 pin Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/01 10:36:52 pin Exp $
 
 DISTNAME=	carwash-0.4.1
+PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://static.crates.io/crates/carwash/
+EXTRACT_SUFX=	.crate
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/epistates/carwash/
