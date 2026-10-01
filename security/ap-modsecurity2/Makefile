@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2026/07/06 19:05:05 drixter Exp $
+# $NetBSD: Makefile,v 1.77 2026/10/01 10:26:29 drixter Exp $
 
-DISTNAME=	modsecurity-v2.9.14
+DISTNAME=	modsecurity-v2.9.15
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/-v/-/}
 CATEGORIES=	www security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=owasp-modsecurity/}
