@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/02/21 10:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14.22.1 2026/10/01 18:53:04 bsiegert Exp $
 
 .include "../../net/net-snmp/Makefile.common"
 
@@ -8,10 +8,9 @@ CATEGORIES=	net python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python bindings to extensible SNMP implementation
 
-USE_LANGUAGES=		c
-EGG_NAME=		netsnmp_python-1.0a1
-PYSETUPSUBDIR=		python
+PYSETUPSUBDIR=	python
+WHEEL_NAME=	netsnmp_python-1.0a1
 
+.include "../../lang/python/wheel.mk"
 .include "../../net/net-snmp/buildlink3.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
