@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/15 15:17:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/02 05:18:59 adam Exp $
 bin/imageio_download_bin-${PYVERSSUFFIX}
 bin/imageio_remove_bin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -130,6 +130,9 @@ ${PYSITELIB}/imageio/plugins/pillowmulti.pyo
 ${PYSITELIB}/imageio/plugins/pyav.py
 ${PYSITELIB}/imageio/plugins/pyav.pyc
 ${PYSITELIB}/imageio/plugins/pyav.pyo
+${PYSITELIB}/imageio/plugins/pydicom.py
+${PYSITELIB}/imageio/plugins/pydicom.pyc
+${PYSITELIB}/imageio/plugins/pydicom.pyo
 ${PYSITELIB}/imageio/plugins/rawpy.py
 ${PYSITELIB}/imageio/plugins/rawpy.pyc
 ${PYSITELIB}/imageio/plugins/rawpy.pyo
