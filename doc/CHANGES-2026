@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6579 2026/10/01 18:58:51 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6580 2026/10/02 00:54:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9933,3 +9933,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cbor2 to 6.1.5 [adam 2026-10-01]
 	Updated net/powerdns-recursor to 5.4.7 [drixter 2026-10-01]
 	Updated net/knot-resolver to 6.5.0 [drixter 2026-10-01]
+	Updated www/apache24 to 2.4.69 [taca 2026-10-02]
