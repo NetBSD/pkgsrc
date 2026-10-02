@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_multi__contents__view__drop__target__controller.cc,v 1.13 2026/09/29 07:42:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_multi__contents__view__drop__target__controller.cc,v 1.14 2026/10/02 11:43:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.3 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.4 2026/10/02 11:43:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

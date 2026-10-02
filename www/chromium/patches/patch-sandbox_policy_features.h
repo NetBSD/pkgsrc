@@ -1,4 +1,4 @@
-$NetBSD: patch-sandbox_policy_features.h,v 1.15 2026/09/29 07:43:02 kikadf Exp $
+$NetBSD: patch-sandbox_policy_features.h,v 1.16 2026/10/02 11:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

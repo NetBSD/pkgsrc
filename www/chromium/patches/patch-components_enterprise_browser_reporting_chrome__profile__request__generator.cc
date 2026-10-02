@@ -1,4 +1,4 @@
-$NetBSD: patch-components_enterprise_browser_reporting_chrome__profile__request__generator.cc,v 1.3 2026/09/29 07:42:54 kikadf Exp $
+$NetBSD: patch-components_enterprise_browser_reporting_chrome__profile__request__generator.cc,v 1.4 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

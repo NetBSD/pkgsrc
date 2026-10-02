@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_services_printing_print__backend__service__impl.h,v 1.13 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-chrome_services_printing_print__backend__service__impl.h,v 1.14 2026/10/02 11:43:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_base_x_selection__owner.h,v 1.9 2026/09/29 07:43:07 kikadf Exp $
+$NetBSD: patch-ui_base_x_selection__owner.h,v 1.10 2026/10/02 11:43:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

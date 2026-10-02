@@ -1,4 +1,4 @@
-$NetBSD: patch-components_soda_soda__util.cc,v 1.27 2026/09/29 07:42:55 kikadf Exp $
+$NetBSD: patch-components_soda_soda__util.cc,v 1.28 2026/10/02 11:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.28 2026/09/29 07:43:07 kikadf Exp $
+$NetBSD: patch-third__party_zlib_cpu__features.c,v 1.29 2026/10/02 11:43:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

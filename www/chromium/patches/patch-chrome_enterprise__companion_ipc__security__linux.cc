@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_enterprise__companion_ipc__security__linux.cc,v 1.16 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-chrome_enterprise__companion_ipc__security__linux.cc,v 1.17 2026/10/02 11:43:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

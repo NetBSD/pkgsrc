@@ -1,4 +1,4 @@
-$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.27 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.28 2026/10/02 11:43:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

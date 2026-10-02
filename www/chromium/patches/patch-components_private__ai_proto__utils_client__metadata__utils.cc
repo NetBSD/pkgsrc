@@ -1,4 +1,4 @@
-$NetBSD: patch-components_private__ai_proto__utils_client__metadata__utils.cc,v 1.2 2026/09/29 07:42:55 kikadf Exp $
+$NetBSD: patch-components_private__ai_proto__utils_client__metadata__utils.cc,v 1.3 2026/10/02 11:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

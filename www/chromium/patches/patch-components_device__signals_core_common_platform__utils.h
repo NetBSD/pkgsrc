@@ -1,4 +1,4 @@
-$NetBSD: patch-components_device__signals_core_common_platform__utils.h,v 1.23 2026/09/29 07:42:54 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_common_platform__utils.h,v 1.24 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

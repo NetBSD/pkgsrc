@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_private__verification__tokens_private__verification__tokens__service__factory.cc,v 1.1 2026/09/29 07:42:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_private__verification__tokens_private__verification__tokens__service__factory.cc,v 1.2 2026/10/02 11:43:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

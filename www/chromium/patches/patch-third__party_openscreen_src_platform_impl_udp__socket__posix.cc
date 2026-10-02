@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.2 2026/09/29 07:43:05 kikadf Exp $
+$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.3 2026/10/02 11:43:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

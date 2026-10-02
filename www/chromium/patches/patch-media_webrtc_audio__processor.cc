@@ -1,4 +1,4 @@
-$NetBSD: patch-media_webrtc_audio__processor.cc,v 1.27 2026/09/29 07:43:00 kikadf Exp $
+$NetBSD: patch-media_webrtc_audio__processor.cc,v 1.28 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

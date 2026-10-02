@@ -1,4 +1,4 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.26 2026/09/29 07:42:55 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.27 2026/10/02 11:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-buildtools_third__party_libc++abi_BUILD.gn,v 1.4 2026/09/29 07:42:47 kikadf Exp $
+$NetBSD: patch-buildtools_third__party_libc++abi_BUILD.gn,v 1.5 2026/10/02 11:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

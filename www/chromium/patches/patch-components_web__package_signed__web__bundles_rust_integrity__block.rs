@@ -1,4 +1,4 @@
-$NetBSD: patch-components_web__package_signed__web__bundles_rust_integrity__block.rs,v 1.1 2026/09/29 07:42:56 kikadf Exp $
+$NetBSD: patch-components_web__package_signed__web__bundles_rust_integrity__block.rs,v 1.2 2026/10/02 11:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-base_memory_protected__memory.h,v 1.27 2026/09/29 07:42:46 kikadf Exp $
+$NetBSD: patch-base_memory_protected__memory.h,v 1.28 2026/10/02 11:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

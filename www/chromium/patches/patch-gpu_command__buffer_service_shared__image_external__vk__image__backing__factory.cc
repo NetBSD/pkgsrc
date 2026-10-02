@@ -1,4 +1,4 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing__factory.cc,v 1.27 2026/09/29 07:42:58 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing__factory.cc,v 1.28 2026/10/02 11:43:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

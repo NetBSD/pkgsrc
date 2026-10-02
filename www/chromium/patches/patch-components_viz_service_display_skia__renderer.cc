@@ -1,4 +1,4 @@
-$NetBSD: patch-components_viz_service_display_skia__renderer.cc,v 1.27 2026/09/29 07:42:56 kikadf Exp $
+$NetBSD: patch-components_viz_service_display_skia__renderer.cc,v 1.28 2026/10/02 11:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

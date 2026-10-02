@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_avatar__toolbar__button__state__manager.h,v 1.7 2026/09/29 07:42:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_avatar__toolbar__button__state__manager.h,v 1.8 2026/10/02 11:43:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

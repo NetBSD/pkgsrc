@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_param__traits__utils.h,v 1.17 2026/09/29 07:42:59 kikadf Exp $
+$NetBSD: patch-ipc_param__traits__utils.h,v 1.18 2026/10/02 11:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

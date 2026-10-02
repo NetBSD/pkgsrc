@@ -1,4 +1,4 @@
-$NetBSD: patch-components_eye__dropper_eye__dropper__view.cc,v 1.27 2026/09/29 07:42:54 kikadf Exp $
+$NetBSD: patch-components_eye__dropper_eye__dropper__view.cc,v 1.28 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

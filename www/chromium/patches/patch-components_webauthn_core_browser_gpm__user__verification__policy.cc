@@ -1,4 +1,4 @@
-$NetBSD: patch-components_webauthn_core_browser_gpm__user__verification__policy.cc,v 1.14 2026/09/29 07:42:57 kikadf Exp $
+$NetBSD: patch-components_webauthn_core_browser_gpm__user__verification__policy.cc,v 1.15 2026/10/02 11:43:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

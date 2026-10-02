@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.7 2026/09/29 07:43:05 kikadf Exp $
+$NetBSD: patch-third__party_libphonenumber_src_cpp_src_phonenumbers_base_thread__checker.h,v 1.8 2026/10/02 11:43:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

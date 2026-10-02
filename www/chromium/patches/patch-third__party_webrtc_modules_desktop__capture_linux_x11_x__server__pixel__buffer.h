@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_webrtc_modules_desktop__capture_linux_x11_x__server__pixel__buffer.h,v 1.7 2026/09/29 07:43:06 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_modules_desktop__capture_linux_x11_x__server__pixel__buffer.h,v 1.8 2026/10/02 11:43:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

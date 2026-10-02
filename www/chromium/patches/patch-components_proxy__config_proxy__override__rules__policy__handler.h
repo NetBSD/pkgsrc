@@ -1,4 +1,4 @@
-$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.h,v 1.13 2026/09/29 07:42:55 kikadf Exp $
+$NetBSD: patch-components_proxy__config_proxy__override__rules__policy__handler.h,v 1.14 2026/10/02 11:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

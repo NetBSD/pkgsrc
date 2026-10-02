@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.13 2026/09/29 07:42:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_first__run_first__run.h,v 1.14 2026/10/02 11:43:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

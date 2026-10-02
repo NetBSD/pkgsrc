@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_typescript_typescript.py,v 1.3 2026/09/30 11:28:11 kikadf Exp $
+$NetBSD: patch-third__party_typescript_typescript.py,v 1.4 2026/10/02 11:43:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

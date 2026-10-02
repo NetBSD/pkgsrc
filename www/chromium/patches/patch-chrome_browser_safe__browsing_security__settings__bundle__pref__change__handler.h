@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_safe__browsing_security__settings__bundle__pref__change__handler.h,v 1.7 2026/09/29 07:42:50 kikadf Exp $
+$NetBSD: patch-chrome_browser_safe__browsing_security__settings__bundle__pref__change__handler.h,v 1.8 2026/10/02 11:43:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

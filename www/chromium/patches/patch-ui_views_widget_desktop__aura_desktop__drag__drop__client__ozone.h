@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.h,v 1.27 2026/09/29 07:43:09 kikadf Exp $
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.h,v 1.28 2026/10/02 11:43:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

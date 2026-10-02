@@ -1,4 +1,4 @@
-$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.1 2026/09/29 07:43:00 kikadf Exp $
+$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.2 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

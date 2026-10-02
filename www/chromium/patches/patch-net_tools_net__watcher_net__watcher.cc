@@ -1,4 +1,4 @@
-$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.28 2026/09/29 07:43:00 kikadf Exp $
+$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.29 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

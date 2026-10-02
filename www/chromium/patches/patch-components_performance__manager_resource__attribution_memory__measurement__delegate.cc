@@ -1,4 +1,4 @@
-$NetBSD: patch-components_performance__manager_resource__attribution_memory__measurement__delegate.cc,v 1.19 2026/09/29 07:42:55 kikadf Exp $
+$NetBSD: patch-components_performance__manager_resource__attribution_memory__measurement__delegate.cc,v 1.20 2026/10/02 11:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-content_public_common_content__features.cc,v 1.27 2026/09/29 07:42:57 kikadf Exp $
+$NetBSD: patch-content_public_common_content__features.cc,v 1.28 2026/10/02 11:43:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

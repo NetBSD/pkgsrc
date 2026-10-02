@@ -1,4 +1,4 @@
-$NetBSD: patch-media_gpu_chromeos_mailbox__video__frame__converter.cc,v 1.27 2026/09/29 07:42:59 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_mailbox__video__frame__converter.cc,v 1.28 2026/10/02 11:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-printing_backend_cups__weak__functions.h,v 1.23 2026/09/29 07:43:00 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__weak__functions.h,v 1.24 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

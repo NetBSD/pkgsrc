@@ -1,4 +1,4 @@
-$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.7 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-services_webnn_webnn__graph__impl__fuzzer.cc,v 1.8 2026/10/02 11:43:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

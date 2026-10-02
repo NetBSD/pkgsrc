@@ -1,4 +1,4 @@
-$NetBSD: patch-chromeos_ash_components_mojo__proxy_mojo__core_core_channel__posix.cc,v 1.4 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-chromeos_ash_components_mojo__proxy_mojo__core_core_channel__posix.cc,v 1.5 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
