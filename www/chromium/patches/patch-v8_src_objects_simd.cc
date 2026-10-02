@@ -1,4 +1,4 @@
-$NetBSD: patch-v8_src_objects_simd.cc,v 1.6 2026/09/29 07:43:09 kikadf Exp $
+$NetBSD: patch-v8_src_objects_simd.cc,v 1.7 2026/10/02 11:43:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

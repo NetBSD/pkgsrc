@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_ui_startup_url__util.cc,v 1.7 2026/09/29 07:42:51 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_url__util.cc,v 1.8 2026/10/02 11:43:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

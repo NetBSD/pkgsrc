@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_host_webauthn_desktop__session__type__util.cc,v 1.25 2026/09/29 07:43:01 kikadf Exp $
+$NetBSD: patch-remoting_host_webauthn_desktop__session__type__util.cc,v 1.26 2026/10/02 11:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

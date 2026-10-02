@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_ipc__channel.cc,v 1.19 2026/09/29 07:42:59 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel.cc,v 1.20 2026/10/02 11:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

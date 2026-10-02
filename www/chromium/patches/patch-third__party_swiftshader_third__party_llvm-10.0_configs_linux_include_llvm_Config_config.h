@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_swiftshader_third__party_llvm-10.0_configs_linux_include_llvm_Config_config.h,v 1.27 2026/09/29 07:43:06 kikadf Exp $
+$NetBSD: patch-third__party_swiftshader_third__party_llvm-10.0_configs_linux_include_llvm_Config_config.h,v 1.28 2026/10/02 11:43:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

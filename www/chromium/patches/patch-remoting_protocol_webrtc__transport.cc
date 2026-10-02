@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_protocol_webrtc__transport.cc,v 1.7 2026/09/29 07:43:02 kikadf Exp $
+$NetBSD: patch-remoting_protocol_webrtc__transport.cc,v 1.8 2026/10/02 11:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

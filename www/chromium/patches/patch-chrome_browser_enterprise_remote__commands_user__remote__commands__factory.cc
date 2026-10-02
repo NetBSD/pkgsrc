@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_enterprise_remote__commands_user__remote__commands__factory.cc,v 1.7 2026/09/29 07:42:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_remote__commands_user__remote__commands__factory.cc,v 1.8 2026/10/02 11:43:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

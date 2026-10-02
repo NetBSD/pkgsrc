@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_extensions_api_web__authentication__proxy_web__authentication__proxy__api.h,v 1.9 2026/09/29 07:42:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_web__authentication__proxy_web__authentication__proxy__api.h,v 1.10 2026/10/02 11:43:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

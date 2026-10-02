@@ -1,4 +1,4 @@
-$NetBSD: patch-components_feature__engagement_public_tracker.h,v 1.6 2026/09/29 07:42:54 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_tracker.h,v 1.7 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.cc,v 1.26 2026/09/29 07:42:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_iwa__key__distribution__component__installer.cc,v 1.27 2026/10/02 11:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

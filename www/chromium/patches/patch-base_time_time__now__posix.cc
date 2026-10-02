@@ -1,4 +1,4 @@
-$NetBSD: patch-base_time_time__now__posix.cc,v 1.26 2026/09/29 07:42:47 kikadf Exp $
+$NetBSD: patch-base_time_time__now__posix.cc,v 1.27 2026/10/02 11:43:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

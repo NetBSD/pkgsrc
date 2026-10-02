@@ -1,4 +1,4 @@
-$NetBSD: patch-services_screen__ai_screen__ai__service__impl.cc,v 1.23 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-services_screen__ai_screen__ai__service__impl.cc,v 1.24 2026/10/02 11:43:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
