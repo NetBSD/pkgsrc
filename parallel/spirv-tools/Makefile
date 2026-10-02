@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/08/07 10:42:20 kikadf Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/02 21:29:19 kikadf Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=	SPIRV-Tools-${SDK_VERSION}
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	parallel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

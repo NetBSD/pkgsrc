@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2026/07/29 13:56:56 kikadf Exp $
+$NetBSD: distinfo,v 1.9 2026/10/02 21:29:19 kikadf Exp $
 
-BLAKE2s (SPIRV-Tools-1.4.357.0.tar.gz) = 70b9719e8ffb4f7e1d6345e109dacf0901ea1e2914e95d8de7145726ad60195f
-SHA512 (SPIRV-Tools-1.4.357.0.tar.gz) = e853b7a08d1d1001a45e8d8f7179be7b02d803959d598bd9d097f096b33fd2a380bcecc8c9c1c446941b9df41018271b45d7995f79f8d360e15feb0c32d43f39
-Size (SPIRV-Tools-1.4.357.0.tar.gz) = 3518451 bytes
+BLAKE2s (SPIRV-Tools-1.4.363.0.tar.gz) = 05d557cc9e0a6130e9f061d4fd77c3ff94b3bc7efc97d8d1f3ab6d3ec3b92fe0
+SHA512 (SPIRV-Tools-1.4.363.0.tar.gz) = 8237e02f950736ef8cff7a2cfaa4800f8beaf10e171624da02f0e73193da302afbba107e6d1840dbacebe81d1aeb0f22a69a20d504cd01371cc7302f83395ec0
+Size (SPIRV-Tools-1.4.363.0.tar.gz) = 3556753 bytes
