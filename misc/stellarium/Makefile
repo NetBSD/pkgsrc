@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2026/09/29 14:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2026/10/02 06:46:38 wiz Exp $
 
 DISTNAME=	stellarium-26.3
 CATEGORIES=	misc
@@ -22,17 +22,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_SHOWMYSKY=OFF
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
-PLIST_VARS+=		desktop
-PRINT_PLIST_AWK+=	{ sub("^share/applications/", "$${PLIST.desktop}share/applications/"); }
-PRINT_PLIST_AWK+=	{ sub("^share/icons/", "$${PLIST.desktop}share/icons/"); }
-PRINT_PLIST_AWK+=	{ sub("^share/metainfo/", "$${PLIST.desktop}share/metainfo/"); }
-PRINT_PLIST_AWK+=	{ sub("^share/mime/", "$${PLIST.desktop}share/mime/"); }
-
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Darwin"
-PLIST.desktop=		yes
-.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
