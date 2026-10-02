@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.64 2026/09/29 14:02:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.65 2026/10/02 06:46:38 wiz Exp $
 bin/stellarium
 man/man1/stellarium.1
-${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
-${PLIST.desktop}share/icons/hicolor/128x128/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/16x16/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/256x256/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/32x32/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/48x48/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/512x512/apps/stellarium.png
-${PLIST.desktop}share/icons/hicolor/64x64/apps/stellarium.png
-${PLIST.desktop}share/metainfo/org.stellarium.Stellarium.appdata.xml
-${PLIST.desktop}share/mime/packages/stellarium.xml
+share/applications/org.stellarium.Stellarium.desktop
+share/icons/hicolor/128x128/apps/stellarium.png
+share/icons/hicolor/16x16/apps/stellarium.png
+share/icons/hicolor/256x256/apps/stellarium.png
+share/icons/hicolor/32x32/apps/stellarium.png
+share/icons/hicolor/48x48/apps/stellarium.png
+share/icons/hicolor/512x512/apps/stellarium.png
+share/icons/hicolor/64x64/apps/stellarium.png
+share/metainfo/org.stellarium.Stellarium.appdata.xml
+share/mime/packages/stellarium.xml
 share/stellarium/atmosphere/lightweight.amsh
 share/stellarium/data/DejaVuSans.ttf
 share/stellarium/data/DejaVuSansMono.ttf
