@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2026/08/27 11:17:18 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/02 21:41:27 kikadf Exp $
 
 # to get current vulkan SDK version, but we need to override GITHUB_TAG locally
 .include "../../graphics/vulkan-headers/Makefile.common"
 
-DISTNAME=	shaderc-2026.3
-PKGREVISION=	2
+DISTNAME=	shaderc-2026.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
