@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/10/02 04:59:00 fox Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/02 05:17:13 fox Exp $
 
 DISTNAME=	libdecaf-1.0.5
 CATEGORIES=	security
@@ -26,7 +26,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # XXX: Avoid to pick up possibe installed libdecaf.so
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
 
 TEST_TARGET=	test
 
