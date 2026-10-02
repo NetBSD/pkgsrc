@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/08/07 10:34:50 kikadf Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/02 21:21:29 kikadf Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=		vulkan-tools-${SDK_VERSION}
-PKGREVISION=		1
 CATEGORIES=		graphics
 GITHUB_PROJECT=		Vulkan-Tools
 
