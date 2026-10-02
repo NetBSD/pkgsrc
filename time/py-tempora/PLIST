@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.12 2026/07/23 08:05:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/10/02 04:57:52 adam Exp $
 bin/calc-prorate-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/tempora/__init__.py
 ${PYSITELIB}/tempora/__init__.pyc
 ${PYSITELIB}/tempora/__init__.pyo
+${PYSITELIB}/tempora/py.typed
 ${PYSITELIB}/tempora/schedule.py
 ${PYSITELIB}/tempora/schedule.pyc
 ${PYSITELIB}/tempora/schedule.pyo
