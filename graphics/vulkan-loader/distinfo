@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/07/29 13:52:15 kikadf Exp $
+$NetBSD: distinfo,v 1.5 2026/10/02 21:19:56 kikadf Exp $
 
-BLAKE2s (vulkan-loader-1.4.357.0.tar.gz) = 1b502b684abefa61b59bdebc302d9ba106e17cf6418c3d539b47f0d66a59ba70
-SHA512 (vulkan-loader-1.4.357.0.tar.gz) = 3376ce1be08ec4f453d6674118cc5e59d07ba7c7ec135f3cdd4d6820fa26bf4ef5e176ac9ade4413d25d90b4828060a1d0e0c1c2a7b4bec3118d70cdd61e6bfa
-Size (vulkan-loader-1.4.357.0.tar.gz) = 1820868 bytes
+BLAKE2s (vulkan-loader-1.4.363.0.tar.gz) = bab49813eba5277429b5927381762c9022ceb905ad6ad53afe1ff3de00aebaeb
+SHA512 (vulkan-loader-1.4.363.0.tar.gz) = dc1884b0af24b94c974aa4526e3534625a187effe21088adfebeda94179ebe5ee789e7839765f20a1b1a460aa05a64bf1247310dc5649e61ba90dcb8647915b9
+Size (vulkan-loader-1.4.363.0.tar.gz) = 1866201 bytes
 SHA1 (patch-loader_loader__environment.c) = 13b7c1ec84f17c332faafaf5bfe7d75ca0ea79f6
