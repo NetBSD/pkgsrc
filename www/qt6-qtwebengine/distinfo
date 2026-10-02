@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2026/08/18 18:26:06 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/10/02 13:08:36 kikadf Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
@@ -657,7 +657,9 @@ SHA1 (patch-src_3rdparty_chromium_media_webrtc_helpers.cc) = 9d4a4fd729105ae095c
 SHA1 (patch-src_3rdparty_chromium_media_webrtc_helpers__unittests.cc) = 374b8909391cc0985796d0a89136fbb5b70e3702
 SHA1 (patch-src_3rdparty_chromium_mojo_core_BUILD.gn) = a236dccd43adc1a9ff4924e98e51db769c92cca9
 SHA1 (patch-src_3rdparty_chromium_mojo_core_channel.cc) = 9c4aa885e6e366a609eefb4526ff0e43a9ef61d3
+SHA1 (patch-src_3rdparty_chromium_mojo_core_channel__posix.cc) = 6710b92c58f20afb6d565ac6ce73099e8afb2655
 SHA1 (patch-src_3rdparty_chromium_mojo_core_embedder_features.h) = 6773ad4533e5833af0db3440babaf78b89885de2
+SHA1 (patch-src_3rdparty_chromium_mojo_public_cpp_platform_platform__channel.cc) = cd08b45abb7ea67cc1cbf7009b38e54e18d464aa
 SHA1 (patch-src_3rdparty_chromium_mojo_public_cpp_platform_socket__utils__posix.cc) = 9c80e09154b7a81b715c947bd419489f175e4257
 SHA1 (patch-src_3rdparty_chromium_mojo_public_tools_bindings_mojom.gni) = b43382515e457842959488f644b6668b8994daf8
 SHA1 (patch-src_3rdparty_chromium_net_BUILD.gn) = 924e9c3c262fcf39dc9b0108abe277c8d1805b0d
@@ -934,6 +936,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 4ee
 SHA1 (patch-src_3rdparty_chromium_third__party_node_check__version.py) = c99b14d92716c5e2fd2548238ede7b0bd87153ac
 SHA1 (patch-src_3rdparty_chromium_third__party_node_node.gni) = 674ed5886b07b4886baf0b964216dec452f691e4
 SHA1 (patch-src_3rdparty_chromium_third__party_node_node.py) = ef364690eb2445a329e944d4625c04593936b505
+SHA1 (patch-src_3rdparty_chromium_third__party_ots_src_src_name.cc) = e9fe19e3f954290c568f15cf7ed4c67405cb206b
 SHA1 (patch-src_3rdparty_chromium_third__party_pdfium_core_fpdfapi_page_cpdf__psengine.cpp) = 2815e321325d05223d4b0e05d08095c5a38213ad
 SHA1 (patch-src_3rdparty_chromium_third__party_pdfium_core_fxcrt_css_cfx__cssdeclaration.cpp) = a7594316fb1ef8b196eb40f7dd28a46afc1b4f79
 SHA1 (patch-src_3rdparty_chromium_third__party_pdfium_core_fxcrt_fx__extension.h) = 4563e7d2a973b442525912f8db02cbb391a1e296
