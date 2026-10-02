@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/07/29 13:55:32 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/10/02 21:23:07 kikadf Exp $
 include/spirv/1.0/GLSL.std.450.h
 include/spirv/1.0/OpenCL.std.h
 include/spirv/1.0/extinst.glsl.std.450.grammar.json
@@ -72,6 +72,7 @@ include/spirv/unified1/extinst.spv-amd-shader-ballot.grammar.json
 include/spirv/unified1/extinst.spv-amd-shader-explicit-vertex-parameter.grammar.json
 include/spirv/unified1/extinst.spv-amd-shader-trinary-minmax.grammar.json
 include/spirv/unified1/extinst.tosa.001000.1.grammar.json
+include/spirv/unified1/org/khronos/spv/Spv.java
 include/spirv/unified1/spirv.bf
 include/spirv/unified1/spirv.core.grammar.json
 include/spirv/unified1/spirv.cs
