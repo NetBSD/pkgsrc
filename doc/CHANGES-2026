@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6595 2026/10/02 16:11:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6596 2026/10/02 16:27:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9954,3 +9954,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/ncspot to 1.5.0 [pin 2026-10-02]
 	Updated misc/rozi to 0.0.28 [pin 2026-10-02]
 	Updated x11/picom to 13 [pin 2026-10-02]
+	Updated security/cargo-auditable to 0.7.7 [pin 2026-10-02]
