@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6589 2026/10/02 08:13:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6590 2026/10/02 11:44:09 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9948,3 +9948,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/py-fastcrc version 0.5.0 [adam 2026-10-02]
 	Updated devel/py-apycula to 0.33 [adam 2026-10-02]
 	Updated finance/rex to 0.3.0 [pin 2026-10-02]
+	Updated www/chromium to 154.0.8037.97 [kikadf 2026-10-02]
