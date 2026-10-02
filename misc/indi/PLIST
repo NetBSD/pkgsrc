@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/10/02 05:11:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/10/02 05:14:58 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -349,21 +349,17 @@ lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.2.4
 lib/libindiAlignmentDriver.so.2.2.5
 lib/libindiclient.a
 lib/libindiclient.so
 lib/libindiclient.so.2
-lib/libindiclient.so.2.2.4
 lib/libindiclient.so.2.2.5
 lib/libindidriver.a
 lib/libindidriver.so
 lib/libindidriver.so.2
-lib/libindidriver.so.2.2.4
 lib/libindidriver.so.2.2.5
 lib/libindilx200.so
 lib/libindilx200.so.2
-lib/libindilx200.so.2.2.4
 lib/libindilx200.so.2.2.5
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
