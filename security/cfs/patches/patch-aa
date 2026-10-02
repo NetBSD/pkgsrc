@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2023/03/11 01:54:01 gdt Exp $
+$NetBSD: patch-aa,v 1.9 2026/10/02 13:01:27 gdt Exp $
 
 Add stanza for modern NetBSD.  \todo Send upstream.
 
 Adjust Makefile for pkgsrc norms:
 
   - Use PREFIX
+  - Use LDFLAGS (relro)
   - Comment out FreeBSD
   - Uncomment the "fail if not configured" line
   - Change installation to use INSTALL_PROGRAM
     \todo Evaluate PROGRAM vs SCRIPT; this is carried from before.
 
---- Makefile.orig	2022-12-19 22:46:57.638664951 +0000
+--- Makefile.orig	2023-02-15 11:25:27.000000000 +0000
 +++ Makefile
 @@ -48,12 +48,13 @@
  
@@ -66,6 +67,55 @@ Adjust Makefile for pkgsrc norms:
  
  # now you're done with local configuration.
  
+@@ -244,41 +252,41 @@ cfs: cfsd cattach cmkdir cdetach cname c
+ 	@echo
+ 
+ cfsd: $(OBJS)
+-	$(CC) $(OBJS) $(LIBS) -o cfsd
++	$(CC) $(OBJS) ${LDFLAGS} $(LIBS) -o cfsd
+ 
+ cattach: cattach.o admproto_clnt.o admproto_xdr.o getpass.o cfs_des.o \
+   cfs_cipher.o cfs_bfenc.o cfs_bfsk.o adm.o mcg.o mcgsbox.o shs.o safer.o
+ 	$(CC) cattach.o admproto_clnt.o admproto_xdr.o cfs_des.o \
+ 	   cfs_bfenc.o cfs_bfsk.o cfs_cipher.o getpass.o adm.o mcg.o \
+-	   mcgsbox.o shs.o safer.o $(COMPAT) $(LIBS) -o cattach
++	   mcgsbox.o shs.o safer.o $(LDFLAGS) $(COMPAT) $(LIBS) -o cattach
+ 
+ cdetach: cdetach.o admproto_clnt.o admproto_xdr.o adm.o
+ 	$(CC) cdetach.o adm.o admproto_clnt.o admproto_xdr.o \
+-	   $(LIBS) -o cdetach
++	   $(LDFLAGS) $(LIBS) -o cdetach
+ 
+ cmkdir: getpass.o adm.o cfs_des.o cfs_cipher.o cmkdir.o mcg.o \
+    mcgsbox.o cfs_bfenc.o cfs_bfsk.o safer.o shs.o truerand.o
+ 	$(CC) cmkdir.o cfs_des.o cfs_cipher.o getpass.o adm.o mcg.o \
+ 	   cfs_bfenc.o cfs_bfsk.o mcgsbox.o safer.o shs.o truerand.o \
+-	   $(COMPAT) -o cmkdir
++	   $(LDFLAGS) $(COMPAT) -o cmkdir
+ 
+ cpasswd: getpass.o cfs_des.o cfs_cipher.o cpasswd.o mcg.o \
+    mcgsbox.o cfs_bfenc.o cfs_bfsk.o safer.o shs.o truerand.o
+ 	$(CC) cpasswd.o cfs_des.o cfs_cipher.o getpass.o mcg.o \
+ 	   mcgsbox.o cfs_bfenc.o cfs_bfsk.o safer.o shs.o \
+-	   truerand.o  $(COMPAT) -o cpasswd
++	   truerand.o  $(LDFLAGS) $(COMPAT) -o cpasswd
+ 
+ cname: cname.o getpass.o cfs_des.o cfs_cipher.o cfs_adm.o cfs_fh.o \
+    cfs_bfenc.o cfs_bfsk.o cfs_nfs.o mcg.o mcgsbox.o safer.o shs.o
+ 	$(CC) cname.o getpass.o cfs_des.o cfs_cipher.o cfs_adm.o cfs_fh.o \
+ 	   cfs_nfs.o mcg.o mcgsbox.o cfs_bfenc.o cfs_bfsk.o safer.o \
+-	   shs.o $(LIBS) $(COMPAT) -o cname
++	   shs.o $(LDFLAGS) $(LIBS) $(COMPAT) -o cname
+ 
+ ccat: ccat.o getpass.o cfs_des.o cfs_cipher.o cfs_adm.o cfs_fh.o cfs_nfs.o \
+    mcg.o mcgsbox.o shs.o safer.o
+ 	$(CC) ccat.o getpass.o cfs_des.o cfs_cipher.o cfs_adm.o cfs_fh.o \
+ 	   cfs_bfenc.o cfs_bfsk.o cfs_nfs.o mcg.o mcgsbox.o shs.o \
+-	   safer.o $(LIBS) $(COMPAT) -o ccat
++	   safer.o $(LDFLAGS) $(LIBS) $(COMPAT) -o ccat
+ 
+ $(OBJS): nfsproto.h admproto.h cfs.h mcg.h safer.h shs.h \
+    cfs_bf.h cfs_bfl.h cfs_bfp.h
 @@ -344,10 +352,11 @@ printout: $(SRCS) cfs.h mcg.h safer.h ad
  	$(PRINTCMD) $(SRCS) cfs.h mcg.h safer.h admproto.h nfsproto.h
  

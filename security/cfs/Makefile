@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2025/05/13 13:47:41 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/02 13:01:27 gdt Exp $
 
 VERSION=		1.5.0
 VERSION_SUFFIX_DIST=
 VERSION_SUFFIX_PKG=
 DISTNAME=		cfs-${VERSION}${VERSION_SUFFIX_DIST}
 PKGNAME=		cfs-${VERSION}${VERSION_SUFFIX_PKG}
+PKGREVSION=		1
 CATEGORIES=		security
 MASTER_SITES=		https://www.bayofrum.net/dist/cfs/
 #OLD_MASTER_SITES=	https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
@@ -41,6 +42,8 @@ CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 # \todo evaluate
+
+MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 
 # Required settings necessary to build CFS on various platforms.  This is
 # copied from ${WRKSRC}/Makefile and from browsing the various README files.
