@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/02 01:08:40 charlotte Exp $
+
+BLAKE2s (harec/0.26.0.tar.gz) = 607acd03c6694db3cd7653d6cc9b8f799d0cb70acc6ea3f8a2310e718d594fdf
+SHA512 (harec/0.26.0.tar.gz) = c7c6103d53e936f13021a50f49a7f44b8ead03a9a6d66e25b0326518458483065c3ad415d8368f76ab2ad652b3febcb7366d3e7460121a3089d689af38ab1ee6
+Size (harec/0.26.0.tar.gz) = 210685 bytes
