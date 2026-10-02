@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6587 2026/10/02 05:25:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6588 2026/10/02 07:36:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9945,3 +9945,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/indi to 2.2.5 [adam 2026-10-02]
 	Updated textproc/md4c to 0.6.0 [adam 2026-10-02]
 	Updated graphics/py-imageio to 2.38.0 [adam 2026-10-02]
+	Added misc/py-fastcrc version 0.5.0 [adam 2026-10-02]
+	Updated devel/py-apycula to 0.33 [adam 2026-10-02]
