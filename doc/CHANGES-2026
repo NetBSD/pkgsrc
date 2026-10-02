@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6588 2026/10/02 07:36:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6589 2026/10/02 08:13:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9947,3 +9947,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-imageio to 2.38.0 [adam 2026-10-02]
 	Added misc/py-fastcrc version 0.5.0 [adam 2026-10-02]
 	Updated devel/py-apycula to 0.33 [adam 2026-10-02]
+	Updated finance/rex to 0.3.0 [pin 2026-10-02]
