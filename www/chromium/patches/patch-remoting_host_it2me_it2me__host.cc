@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_host_it2me_it2me__host.cc,v 1.15 2026/09/29 07:43:01 kikadf Exp $
+$NetBSD: patch-remoting_host_it2me_it2me__host.cc,v 1.16 2026/10/02 11:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

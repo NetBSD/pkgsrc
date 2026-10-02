@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_perfetto_src_base_android__utils.cc,v 1.12 2026/09/29 07:43:06 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_android__utils.cc,v 1.13 2026/10/02 11:43:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

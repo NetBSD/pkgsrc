@@ -1,4 +1,4 @@
-$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.25 2026/09/29 07:43:08 kikadf Exp $
+$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.26 2026/10/02 11:43:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

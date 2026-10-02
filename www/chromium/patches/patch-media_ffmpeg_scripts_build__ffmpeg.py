@@ -1,4 +1,4 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.29 2026/09/29 07:42:59 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.30 2026/10/02 11:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

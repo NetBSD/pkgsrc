@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_signaling_ftl__host__device__id__provider.cc,v 1.26 2026/09/29 07:43:02 kikadf Exp $
+$NetBSD: patch-remoting_signaling_ftl__host__device__id__provider.cc,v 1.27 2026/10/02 11:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-net_socket_extra__socket__defines.h,v 1.3 2026/09/29 07:43:00 kikadf Exp $
+$NetBSD: patch-net_socket_extra__socket__defines.h,v 1.4 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

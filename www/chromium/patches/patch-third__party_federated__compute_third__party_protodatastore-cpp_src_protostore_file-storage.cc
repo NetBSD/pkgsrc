@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_federated__compute_third__party_protodatastore-cpp_src_protostore_file-storage.cc,v 1.4 2026/09/29 07:43:04 kikadf Exp $
+$NetBSD: patch-third__party_federated__compute_third__party_protodatastore-cpp_src_protostore_file-storage.cc,v 1.5 2026/10/02 11:43:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

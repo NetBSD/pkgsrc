@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_blink_renderer_modules_webgpu_external__image__utils.cc,v 1.4 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_webgpu_external__image__utils.cc,v 1.5 2026/10/02 11:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

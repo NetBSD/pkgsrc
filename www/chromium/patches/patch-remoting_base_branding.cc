@@ -1,4 +1,4 @@
-$NetBSD: patch-remoting_base_branding.cc,v 1.11 2026/09/29 07:43:01 kikadf Exp $
+$NetBSD: patch-remoting_base_branding.cc,v 1.12 2026/10/02 11:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

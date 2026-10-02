@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_browsing__data_chrome__browsing__data__remover__delegate.cc,v 1.1 2026/09/29 07:42:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_browsing__data_chrome__browsing__data__remover__delegate.cc,v 1.2 2026/10/02 11:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

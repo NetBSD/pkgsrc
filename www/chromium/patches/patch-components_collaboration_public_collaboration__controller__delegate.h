@@ -1,4 +1,4 @@
-$NetBSD: patch-components_collaboration_public_collaboration__controller__delegate.h,v 1.19 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-components_collaboration_public_collaboration__controller__delegate.h,v 1.20 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

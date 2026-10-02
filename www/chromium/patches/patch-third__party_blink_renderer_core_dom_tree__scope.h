@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_blink_renderer_core_dom_tree__scope.h,v 1.20 2026/09/29 07:43:03 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_dom_tree__scope.h,v 1.21 2026/10/02 11:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

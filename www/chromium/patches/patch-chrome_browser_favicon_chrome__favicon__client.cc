@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_favicon_chrome__favicon__client.cc,v 1.19 2026/09/29 07:42:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_favicon_chrome__favicon__client.cc,v 1.20 2026/10/02 11:43:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

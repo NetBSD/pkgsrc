@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_devtools-frontend_src_node__modules_rollup_dist_native.js,v 1.13 2026/09/29 07:43:04 kikadf Exp $
+$NetBSD: patch-third__party_devtools-frontend_src_node__modules_rollup_dist_native.js,v 1.14 2026/10/02 11:43:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

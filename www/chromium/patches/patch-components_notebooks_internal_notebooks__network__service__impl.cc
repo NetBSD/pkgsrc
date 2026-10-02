@@ -1,4 +1,4 @@
-$NetBSD: patch-components_notebooks_internal_notebooks__network__service__impl.cc,v 1.2 2026/09/29 07:42:54 kikadf Exp $
+$NetBSD: patch-components_notebooks_internal_notebooks__network__service__impl.cc,v 1.3 2026/10/02 11:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

@@ -1,4 +1,4 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__impl.cc,v 1.3 2026/09/29 07:42:57 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__impl.cc,v 1.4 2026/10/02 11:43:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

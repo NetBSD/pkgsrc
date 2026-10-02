@@ -1,4 +1,4 @@
-$NetBSD: patch-base_message__loop_message__pump__epoll.h,v 1.25 2026/09/29 07:42:46 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__epoll.h,v 1.26 2026/10/02 11:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

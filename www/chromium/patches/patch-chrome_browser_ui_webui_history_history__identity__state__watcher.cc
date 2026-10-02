@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_browser_ui_webui_history_history__identity__state__watcher.cc,v 1.14 2026/09/29 07:42:52 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_history_history__identity__state__watcher.cc,v 1.15 2026/10/02 11:43:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

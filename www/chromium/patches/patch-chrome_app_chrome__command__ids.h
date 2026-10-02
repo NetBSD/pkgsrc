@@ -1,4 +1,4 @@
-$NetBSD: patch-chrome_app_chrome__command__ids.h,v 1.27 2026/09/29 07:42:47 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__command__ids.h,v 1.28 2026/10/02 11:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

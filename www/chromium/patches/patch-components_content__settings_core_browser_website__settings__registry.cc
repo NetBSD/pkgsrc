@@ -1,4 +1,4 @@
-$NetBSD: patch-components_content__settings_core_browser_website__settings__registry.cc,v 1.27 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-components_content__settings_core_browser_website__settings__registry.cc,v 1.28 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

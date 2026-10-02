@@ -1,4 +1,4 @@
-$NetBSD: patch-components_autofill_core_browser_webdata_payments_payments__sync__bridge__util.cc,v 1.25 2026/09/29 07:42:53 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_webdata_payments_payments__sync__bridge__util.cc,v 1.26 2026/10/02 11:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
