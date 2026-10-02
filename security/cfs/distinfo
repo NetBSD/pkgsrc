@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2025/05/13 13:47:41 gdt Exp $
+$NetBSD: distinfo,v 1.20 2026/10/02 13:01:27 gdt Exp $
 
 BLAKE2s (cfs-1.5.0.tar.gz) = 4ac7764984e910ad73adc16498d127c9a2cd1cede52252ddc425f26e10b260d5
 SHA512 (cfs-1.5.0.tar.gz) = ff776ce9a4837076651758dcaa67e2489cc75d8181d73b2aa7d5b41b66f2ff6c3b451703e8834ae64f52d7289f5dd927d8a514a45cc92f5c58d31a768d3cb539
 Size (cfs-1.5.0.tar.gz) = 110065 bytes
-SHA1 (patch-aa) = f160b243b6722d14d451eaf725a6ca707e4e95ba
+SHA1 (patch-aa) = 737304dd967a9eb65922d83437847427903ffb21
 SHA1 (patch-ab) = dac917a40e5db080cb526b9d0ffe2dd63857c313
 SHA1 (patch-af) = 16dce5ba66737f2222526b3cd689e1381d75c663
 SHA1 (patch-cfs__attach.c) = 6a7908a2051304daaac1d90c115dd06246ab3fc0
