@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/09/30 10:38:13 pin Exp $
+$NetBSD: distinfo,v 1.8 2026/10/02 16:09:15 pin Exp $
 
 BLAKE2s (ab_glyph_rasterizer-0.1.10.crate) = a5c07f176d74215e53c96810d503693202f075d5450a15172dab22fe76917f01
 SHA512 (ab_glyph_rasterizer-0.1.10.crate) = 1b541aea1d7220535c019fc6a2886b44eaf81698697a01f4f2abab39901a8d1c88e6e7c0c426916cbd0f539dade61f5edb5696a2c5df84434e2da6c79a5cc772
@@ -879,9 +879,9 @@ Size (ring-0.17.14.crate) = 1502610 bytes
 BLAKE2s (roxmltree-0.20.0.crate) = a74e1d845d741408dbb31693bd676db21c43c1660c3f44ee5afee12ae03cdf9d
 SHA512 (roxmltree-0.20.0.crate) = f8a934d3809e417c43bca53478cef0a7a18d908620175c84cfa2cdb8c85775b52cc641fb7eb12c80c483e0c17eb500dd3358ace858aceaa810d3ddbdef902d91
 Size (roxmltree-0.20.0.crate) = 54594 bytes
-BLAKE2s (rozi-0.0.27.tar.gz) = b93ccbeda6795bfc4ef0caeff2c31c52a5bbcccafd9ac0473fbe7b8edb1a4754
-SHA512 (rozi-0.0.27.tar.gz) = 8997a05a5b747752a3e2a84bd15355b7e46747cc6605fe68c831232de5472e83d76a6dc38b2831385ea00d2e2fa98cbc657c3f9ca248bd7399dd0b6aaa5d8d1e
-Size (rozi-0.0.27.tar.gz) = 17482445 bytes
+BLAKE2s (rozi-0.0.28.tar.gz) = abefe96b6dbab4d1bdaf6e89ccaca4a425a925032e69af888c97ca3a06d16174
+SHA512 (rozi-0.0.28.tar.gz) = 4096007dd3b3ec6263c65cab5d945c714c7efa2f14d91b86cf9705e74d936fe315def5fc62c205bb35012637abbf3691466aedbc67db8fce83f7fe105b29673b
+Size (rozi-0.0.28.tar.gz) = 17523809 bytes
 BLAKE2s (rustc-hash-2.1.3.crate) = 2b19a9bf51fafa87b1d57886bfaa0c961ddb662ba02537ea4ccb208b322a51d0
 SHA512 (rustc-hash-2.1.3.crate) = d44c38f6775b77b5841a644c53a68c09a2f98541aafd809d385b854f385bbba86399aa4fc76bb3dfadd2cba64ec688db22bd353e1ae4de81e0f6e9d36f0cf629
 Size (rustc-hash-2.1.3.crate) = 14811 bytes
