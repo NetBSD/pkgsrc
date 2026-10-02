@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6586 2026/10/02 05:05:23 fox Exp $
+$NetBSD: CHANGES-2026,v 1.6587 2026/10/02 05:25:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9941,3 +9941,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-tempora to 5.13.0 [adam 2026-10-02]
 	Updated sysutils/py-setproctitle to 1.3.8 [adam 2026-10-02]
 	Updated security/libdecaf to 1.0.5 [fox 2026-10-02]
+	Updated multimedia/libvpx to 1.17.0 [adam 2026-10-02]
+	Updated misc/indi to 2.2.5 [adam 2026-10-02]
+	Updated textproc/md4c to 0.6.0 [adam 2026-10-02]
+	Updated graphics/py-imageio to 2.38.0 [adam 2026-10-02]
