@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/03/03 08:19:42 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/10/02 07:35:53 adam Exp $
 
-BLAKE2s (apycula-0.30.tar.gz) = 3b3115a88a1c4ff81d8152256778ec22557e07a829f85d47b1775b2a10fd1d10
-SHA512 (apycula-0.30.tar.gz) = 605e4a86f208a1e67aeabf983d1efab226ffdc85c6548074ddd2d661cbc372999f3be5d66b9f587d222c4d3519ff405febd2d759d5636e3fcced1bd9a9e70d74
-Size (apycula-0.30.tar.gz) = 19562519 bytes
+BLAKE2s (apycula-0.33.tar.gz) = d2c54eefa1220efef90fa8e6ec4a5bfc2c4da7d48a9bd76c1a93d9df7b54ea8b
+SHA512 (apycula-0.33.tar.gz) = f956efa825bcae2dda958a5cb8e47e6ae59d933df6708cc3fa6e9458a07a30af3cc036513a8979fae4bdaa42dbfdd52a9b38909062cb7d41530a70e68b868407
+Size (apycula-0.33.tar.gz) = 20739766 bytes
