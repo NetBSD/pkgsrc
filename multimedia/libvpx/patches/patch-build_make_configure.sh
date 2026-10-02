@@ -1,4 +1,4 @@
-$NetBSD: patch-build_make_configure.sh,v 1.4 2024/01/22 13:09:26 ryoon Exp $
+$NetBSD: patch-build_make_configure.sh,v 1.5 2026/10/02 05:07:45 adam Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -6,9 +6,9 @@ All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
 Recognize powerpc as a target ISA, so we don't end up with generic-gnu
 
---- build/make/configure.sh.orig	2024-01-09 21:12:22.000000000 +0000
+--- build/make/configure.sh.orig	2026-08-20 19:06:35.000000000 +0000
 +++ build/make/configure.sh
-@@ -752,7 +752,7 @@ process_common_toolchain() {
+@@ -792,7 +792,7 @@ process_common_toolchain() {
        aarch64*)
          tgt_isa=arm64
          ;;
@@ -17,7 +17,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          tgt_isa=armv7
          float_abi=hard
          ;;
-@@ -784,6 +784,9 @@ process_common_toolchain() {
+@@ -824,6 +824,9 @@ process_common_toolchain() {
        loongarch64*)
          tgt_isa=loongarch64
          ;;
@@ -27,7 +27,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
      esac
  
      # detect tgt_os
-@@ -806,7 +809,7 @@ process_common_toolchain() {
+@@ -846,7 +849,7 @@ process_common_toolchain() {
          [ -z "$tgt_isa" ] && tgt_isa=x86
          tgt_os=win32
          ;;
@@ -36,7 +36,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          tgt_os=linux
          ;;
        *solaris2.10)
-@@ -861,6 +864,9 @@ process_common_toolchain() {
+@@ -901,6 +904,9 @@ process_common_toolchain() {
        soft_enable lasx
        enable_feature loongarch
        ;;
@@ -46,7 +46,7 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
    esac
  
    # Position independent code (PIC) is probably what we want when building
-@@ -1533,7 +1539,7 @@ EOF
+@@ -1610,7 +1616,7 @@ EOF
    check_cc <<EOF
  unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -55,8 +55,8 @@ Recognize powerpc as a target ISA, so we don't end up with generic-gnu
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1550,7 +1556,7 @@ EOF
-         # bionic includes basic pthread functionality, obviating -lpthread.
+@@ -1628,7 +1634,7 @@ EOF
+         soft_enable pthread_setname_np
          ;;
        *)
 -        check_header pthread.h && check_lib -lpthread <<EOF && add_extralibs -lpthread || disable_feature pthread_h
