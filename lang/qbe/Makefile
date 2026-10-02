@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/20 22:20:50 charlotte Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/02 20:15:03 charlotte Exp $
 
-DISTNAME=	qbe-1.2
+DISTNAME=	qbe-1.3
 CATEGORIES=	lang
 MASTER_SITES=	https://c9x.me/compile/release/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +17,7 @@ USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
 BUILD_TARGET=	qbe
+TEST_TARGET=	check
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX}/bin
 
