@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.1 2025/10/06 13:30:24 adam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2026/10/02 18:11:09 gdt Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -69,7 +69,7 @@ pgsql_initdb()
 		@ECHO@ "Skipping database initialization."
 	else
 		@ECHO@ "Initializing PostgreSQL databases."
-		@MKDIR@ -p ${pgsql_home}
+		@MKDIR@ ${pgsql_home}
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0700 ${pgsql_home}
