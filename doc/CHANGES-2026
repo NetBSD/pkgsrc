@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6581 2026/10/02 01:10:45 charlotte Exp $
+$NetBSD: CHANGES-2026,v 1.6582 2026/10/02 01:13:11 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9935,3 +9935,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/knot-resolver to 6.5.0 [drixter 2026-10-01]
 	Updated www/apache24 to 2.4.69 [taca 2026-10-02]
 	Added lang/harec version 0.26.0 [charlotte 2026-10-02]
+	Added lang/hare version 0.26.0.1 [charlotte 2026-10-02]
