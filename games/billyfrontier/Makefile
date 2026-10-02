@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/09/29 06:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/02 05:35:50 charlotte Exp $
 
 DISTNAME=	billyfrontier-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -27,10 +27,10 @@ INSTALLATION_DIRS+=	share/billyfrontier/Data
 
 pre-configure:
 	${SED} -e 's,@@PREFIX@@,${PREFIX},g' \
-		${FILESDIR}/billyfrontier.template > ${WRKDIR}/billyfontier
+		${FILESDIR}/billyfrontier.template > ${WRKDIR}/billyfrontier
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/billyfontier ${DESTDIR}${PREFIX}/bin/billyfontier
+	${INSTALL_SCRIPT} ${WRKDIR}/billyfrontier ${DESTDIR}${PREFIX}/bin/billyfrontier
 	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/BillyFrontier ${DESTDIR}${PREFIX}/libexec
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/billyfrontier/Data)
 
