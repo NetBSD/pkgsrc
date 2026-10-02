@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2026/06/09 01:22:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/10/02 00:54:11 taca Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -677,6 +677,7 @@ share/httpd/manual/howto/ssi.html.es
 share/httpd/manual/howto/ssi.html.fr.utf8
 share/httpd/manual/howto/ssi.html.ja.utf8
 share/httpd/manual/howto/ssi.html.ko.euc-kr
+share/httpd/manual/images/README.md
 share/httpd/manual/images/apache_header.gif
 share/httpd/manual/images/bal-man-b.png
 share/httpd/manual/images/bal-man-w.png
@@ -713,8 +714,16 @@ share/httpd/manual/images/pixel.gif
 share/httpd/manual/images/reverse-proxy-arch.png
 share/httpd/manual/images/rewrite_backreferences.png
 share/httpd/manual/images/rewrite_backreferences.svg
+share/httpd/manual/images/rewrite_l_flag_looping.png
+share/httpd/manual/images/rewrite_l_flag_looping.svg
+share/httpd/manual/images/rewrite_module_order.png
+share/httpd/manual/images/rewrite_module_order.svg
+share/httpd/manual/images/rewrite_path_stripping.png
+share/httpd/manual/images/rewrite_path_stripping.svg
 share/httpd/manual/images/rewrite_process_uri.png
 share/httpd/manual/images/rewrite_process_uri.svg
+share/httpd/manual/images/rewrite_simplified_overview.png
+share/httpd/manual/images/rewrite_simplified_overview.svg
 share/httpd/manual/images/right.gif
 share/httpd/manual/images/ssl_intro_fig1.gif
 share/httpd/manual/images/ssl_intro_fig1.png
