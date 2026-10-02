@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/09/28 15:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/02 04:56:01 adam Exp $
 
-DISTNAME=	meson_python-0.22.0
+DISTNAME=	meson_python-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson_python/}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.3:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-TEST_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
+TEST_DEPENDS+=	patchelf>=0:../../devel/patchelf
 
 USE_TOOLS+=	git:test
 
