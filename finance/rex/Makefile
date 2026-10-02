@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/10/02 08:12:40 pin Exp $
+# $NetBSD: Makefile,v 1.34 2026/10/02 16:59:30 pin Exp $
 
-DISTNAME=	rex-0.3.0
+DISTNAME=	rex-0.3.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TheRustyPickle/}
 GITHUB_PROJECT=	Rex
@@ -15,9 +15,9 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.100.0-beta.1
+#RUST_REQ=	1.100.0-beta.2
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.100.0-beta.1 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.2 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
