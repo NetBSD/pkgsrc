@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2026/10/02 05:16:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/02 15:11:56 wiz Exp $
 
-DISTNAME=	md4c-0.6.0
+DISTNAME=	md4c-0.5.3
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mity/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mity/md4c
 COMMENT=	Markdown for C library and parser
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/md4c-release-${PKGVERSION_NOREV}
 
 PKGCONFIG_OVERRIDE+=	src/md4c-html.pc.in
 PKGCONFIG_OVERRIDE+=	src/md4c.pc.in
