@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/06 13:39:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/02 16:11:16 pin Exp $
 bin/compton
 bin/compton-trans
 bin/picom
+bin/picom-inspect
 bin/picom-trans
+include/picom/api.h
+include/picom/backend.h
+lib/pkgconfig/picom-api.pc
+man/man1/picom-inspect.1
 man/man1/picom-trans.1
 man/man1/picom.1
 share/applications/compton.desktop
