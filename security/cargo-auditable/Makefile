@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/09/14 14:15:36 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/02 16:27:30 pin Exp $
 
-DISTNAME=	cargo-auditable-0.7.6
+DISTNAME=	cargo-auditable-0.7.7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-secure-code/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.99.0-beta.5
+#RUST_REQ=	1.100.0-beta.2
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.99.0-beta.5 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.2 on amd64
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
