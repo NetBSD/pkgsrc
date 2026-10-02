@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/10/02 13:01:27 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/02 18:23:15 gdt Exp $
 
 VERSION=		1.5.0
 VERSION_SUFFIX_DIST=
@@ -42,8 +42,6 @@ CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 # \todo evaluate
-
-MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 
 # Required settings necessary to build CFS on various platforms.  This is
 # copied from ${WRKSRC}/Makefile and from browsing the various README files.
