@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6597 2026/10/02 16:59:50 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6598 2026/10/02 20:15:52 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9956,3 +9956,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/picom to 13 [pin 2026-10-02]
 	Updated security/cargo-auditable to 0.7.7 [pin 2026-10-02]
 	Updated finance/rex to 0.3.1 [pin 2026-10-02]
+	Updated lang/qbe to 1.3 [charlotte 2026-10-02]
