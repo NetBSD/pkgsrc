@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/02 01:11:59 charlotte Exp $
+
+BLAKE2s (hare/0.26.0.1.tar.gz) = c62d7c67acb302afb098510192bfd892573e64263edee782d9c12cbef49fd863
+SHA512 (hare/0.26.0.1.tar.gz) = 61959ce95814f81e04d62eb783aa4dfd807b96c3bd1ee0ee31667d042c630be1406fb0b944f1b35776f5ce529eb55227fac1d37c30218020edb40c6b66ea6771
+Size (hare/0.26.0.1.tar.gz) = 976995 bytes
