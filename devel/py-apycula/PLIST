@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/03/03 08:19:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/02 07:35:53 adam Exp $
 bin/gowin_pack-${PYVERSSUFFIX}
 bin/gowin_pll-${PYVERSSUFFIX}
 bin/gowin_unpack-${PYVERSSUFFIX}
@@ -9,6 +9,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/apycula/GW1N-1.msgpack.xz
+${PYSITELIB}/apycula/GW1N-2.msgpack.xz
 ${PYSITELIB}/apycula/GW1N-4.msgpack.xz
 ${PYSITELIB}/apycula/GW1N-9.msgpack.xz
 ${PYSITELIB}/apycula/GW1N-9C.msgpack.xz
@@ -18,6 +19,7 @@ ${PYSITELIB}/apycula/GW2A-18.msgpack.xz
 ${PYSITELIB}/apycula/GW2A-18C.msgpack.xz
 ${PYSITELIB}/apycula/GW5A-25A.msgpack.xz
 ${PYSITELIB}/apycula/GW5AST-138C.msgpack.xz
+${PYSITELIB}/apycula/GW5AT-60B.msgpack.xz
 ${PYSITELIB}/apycula/__init__.py
 ${PYSITELIB}/apycula/__init__.pyc
 ${PYSITELIB}/apycula/__init__.pyo
