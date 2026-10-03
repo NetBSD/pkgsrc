@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/06/18 08:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/03 14:33:24 wiz Exp $
 
-DISTNAME=	khard-0.21.0
+DISTNAME=	khard-0.22.0
 CATEGORIES=	misc net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khard/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/lucc/khard
 COMMENT=	CLI contacts application built around CardDAV
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
@@ -21,8 +21,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autoapi-[0-9]*:../../textproc/py-sphinx-aut
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
-# as of 0.21.0
-# 2 failed, 403 passed, 2 xfailed, 69 warnings
+# as of 0.22.0
+# 2 failed, 410 passed, 2 xfailed, 69 warnings
+
+WHEEL_NAME=		khard-0.21.1.dev4+g214becc0e
 
 INSTALLATION_DIRS=	share/examples/khard ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	*/*.py
