@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28073 2026/10/03 14:28:50 wiz Exp $
+$NetBSD: TODO,v 1.28074 2026/10/03 14:33:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -833,7 +833,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
-	o khard-0.22.0
 	o kicad-9.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6613 2026/10/03 14:29:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6614 2026/10/03 14:33:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9989,3 +9989,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/qgis to 3.44.15 [gdt 2026-10-03]
 	Updated security/mozilla-rootcerts to 1.1.20260908 [wiz 2026-10-03]
 	Updated security/mozilla-rootcerts-openssl to 2.25 [wiz 2026-10-03]
+	Updated misc/khard to 0.22.0 [wiz 2026-10-03]
