@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4698 2026/10/01 12:00:39 adam Exp $
+# $NetBSD: Makefile,v 1.4699 2026/10/03 15:24:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -377,7 +377,6 @@ SUBDIR+=	doxygen
 SUBDIR+=	doxymacs
 SUBDIR+=	dumpet
 SUBDIR+=	easygit
-SUBDIR+=	ecb
 SUBDIR+=	ecore
 SUBDIR+=	editline
 SUBDIR+=	editorconfig-core
@@ -3600,7 +3599,6 @@ SUBDIR+=	sdcc
 SUBDIR+=	sdl12-compat
 SUBDIR+=	sds
 SUBDIR+=	sem
-SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	serie
 SUBDIR+=	sfsexp

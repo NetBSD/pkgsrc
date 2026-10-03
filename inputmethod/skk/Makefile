@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/08/26 14:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/03 15:24:32 wiz Exp $
 
 DISTNAME=	ddskk-ddskk-17.1_Neppu
 PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-17.1
@@ -41,8 +41,6 @@ post-extract:
 	set -e; \
 	${MV} ${WRKSRC}/SKK-CFG ${WRKSRC}/SKK-CFG.orig; \
 	${CP} ${FILESDIR}/SKK-CFG ${WRKSRC}
-
-.include "options.mk"
 
 .include "../../editors/emacs/modules.mk"
 
