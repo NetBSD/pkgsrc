@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6609 2026/10/03 11:30:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6610 2026/10/03 11:31:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9985,3 +9985,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/sesh to 2.31.0 [kim 2026-10-03]
 	Updated www/webkit-gtk41 to 2.54.1 [wiz 2026-10-03]
 	Updated www/webkit-gtk60 to 2.54.1 [wiz 2026-10-03]
+	Updated sysutils/entr to 5.9 [wiz 2026-10-03]
