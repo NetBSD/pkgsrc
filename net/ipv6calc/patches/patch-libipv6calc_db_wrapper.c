@@ -1,4 +1,4 @@
-$NetBSD: patch-libipv6calc_db_wrapper.c,v 1.1 2026/09/03 11:46:24 drixter Exp $
+$NetBSD: patch-libipv6calc_db_wrapper.c,v 1.2 2026/10/03 18:40:36 drixter Exp $
 
 Fix build on SunOS
 
@@ -19,4 +19,3 @@ Fix build on SunOS
  #ifdef DOMAIN
  // fallback for IP2Location.h < 8.0.0 where "DOMAIN" is defined
  // code taken from https://stackoverflow.com/questions/994593/how-to-do-an-integer-log2-in-c
-
