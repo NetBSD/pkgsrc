@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/12/20 22:17:00 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/10/03 18:05:44 wiz Exp $
 
-BLAKE2s (xorgproto-2025.1.tar.xz) = 8d835c76a38a8fea9eeebf9de4d494a6942fffab02936bf1e8810cca7f9c96e4
-SHA512 (xorgproto-2025.1.tar.xz) = dbbee3aa1bc62721d64309e1d98807d403609d8129944b2e23e48f95d30c6448718c2842362994d67647908645bafc757c710070c5dcdca96d191fd2689d023a
-Size (xorgproto-2025.1.tar.xz) = 766932 bytes
+BLAKE2s (xorgproto-2026.1.tar.xz) = 73b4464dcfafafcf5b1e3ef6d2d96146576db3b50b55f01c9f9270d5c44cb84e
+SHA512 (xorgproto-2026.1.tar.xz) = 5d89ffd23edb3c57cbc33d3572b20b356f83ca0cef5c82e66c9073734fb1962c9a28b3169c9517a4d960256883dfd553078a47fd1149e91e86189d58c5079aea
+Size (xorgproto-2026.1.tar.xz) = 771720 bytes
