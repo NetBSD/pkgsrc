@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/08/28 10:34:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/03 09:20:18 adam Exp $
 
-DISTNAME=	nest_asyncio2-1.7.2
+DISTNAME=	nest_asyncio2-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nest-asyncio2/}
