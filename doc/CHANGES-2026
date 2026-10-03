@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6603 2026/10/03 08:56:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6604 2026/10/03 09:05:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9970,3 +9970,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cmake-gui to 4.4.4 [adam 2026-10-03]
 	Updated devel/SDL3 to 3.4.18 [adam 2026-10-03]
 	Updated devel/sdl12-compat to 1.2.78 [adam 2026-10-03]
+	Updated audio/py-discogs-client to 2.10 [adam 2026-10-03]
+	Updated misc/py-platformdirs to 4.12.2 [adam 2026-10-03]
+	Updated databases/py-peewee to 4.5.2 [adam 2026-10-03]
+	Updated security/py-pyspnego to 0.12.3 [adam 2026-10-03]
