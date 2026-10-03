@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/09/29 06:04:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/03 06:56:22 wiz Exp $
 
 DISTNAME=	why3-1.8.2
 PKGREVISION=	6
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	coq>=8.16:../../lang/coq
 DEPENDS+=	menhir-[0-9]*:../../devel/menhir
+DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
