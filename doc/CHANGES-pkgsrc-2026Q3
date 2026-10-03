@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.3 2026/10/03 16:53:12 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.4 2026/10/03 19:47:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -31,4 +31,22 @@ www/firefox140-l10n: dependent update
 Pullup ticket #7260 - requested by gutteridge
 www/firefox153: security fix
 www/firefox153-l10n: dependent update
+
+Pullup ticket #7257 - requested by he
+net/tacacs: security fix
+
+Pullup ticket #7258 - requested by he
+security/openssh: reliability fix
+
+Pullup ticket #7261 - requested by taca
+devel/pcre2: build fix, security fix
+
+Pullup ticket #7262 - requested by taca
+graphics/png: security fix
+
+Pullup ticket #7263 - requested by taca
+security/openssl: security fix
+
+Pullup ticket #7264 - requested by taca
+www/apache24: security fix
 
