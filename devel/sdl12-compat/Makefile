@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2026/09/29 06:04:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/03 08:56:25 adam Exp $
 
-DISTNAME=	sdl12-compat-1.2.76
-PKGREVISION=	4
+DISTNAME=	sdl12-compat-1.2.78
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
-GITHUB_TAG=	release-${PKGVERSION_NOREV}
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libsdl-org/sdl12-compat
@@ -20,7 +19,7 @@ BUILDLINK_DEPMETHOD.SDL2=	build
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
-.  include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
