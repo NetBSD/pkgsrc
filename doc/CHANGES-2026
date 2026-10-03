@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6604 2026/10/03 09:05:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6605 2026/10/03 09:15:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9974,3 +9974,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.12.2 [adam 2026-10-03]
 	Updated databases/py-peewee to 4.5.2 [adam 2026-10-03]
 	Updated security/py-pyspnego to 0.12.3 [adam 2026-10-03]
+	Updated lang/py-ast-serialize to 0.12.0 [adam 2026-10-03]
+	Updated devel/py-mmh3 to 5.3.1 [adam 2026-10-03]
+	Updated devel/py-coverage to 7.16.2 [adam 2026-10-03]
+	Updated devel/py-debugpy to 1.8.22 [adam 2026-10-03]
