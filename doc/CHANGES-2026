@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6606 2026/10/03 09:20:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6607 2026/10/03 11:24:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9982,3 +9982,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/py-simplejson to 4.2.0 [adam 2026-10-03]
 	Updated graphics/py-pygraphviz to 2.0.3 [adam 2026-10-03]
 	Updated devel/py-nest-asyncio2 to 1.7.3 [adam 2026-10-03]
+	Updated misc/sesh to 2.31.0 [kim 2026-10-03]
