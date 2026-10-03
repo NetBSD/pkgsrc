@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/06/02 09:15:05 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/03 09:14:41 adam Exp $
 
-DISTNAME=	debugpy-1.8.21
+DISTNAME=	debugpy-1.8.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
@@ -25,10 +25,6 @@ PLIST.frame_eval=	yes
 .if ${PYTHON_VERSION} >= 312
 PLIST.pydevd_cython=	yes
 .endif
-
-post-extract:
-	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} +
-	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} +
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
