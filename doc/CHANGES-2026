@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6602 2026/10/03 08:49:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6603 2026/10/03 08:56:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9968,3 +9968,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.11.0 [drixter 2026-10-03]
 	Updated devel/cmake to 4.4.4 [adam 2026-10-03]
 	Updated devel/cmake-gui to 4.4.4 [adam 2026-10-03]
+	Updated devel/SDL3 to 3.4.18 [adam 2026-10-03]
+	Updated devel/sdl12-compat to 1.2.78 [adam 2026-10-03]
