@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2026/06/11 13:38:59 drixter Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/03 18:40:36 drixter Exp $
 
-DISTNAME=	ipv6calc-4.4.0
+DISTNAME=	ipv6calc-4.4.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
-MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/Linux/ipv6/bipv6/ipv6calc/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pbiering/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.deepspace6.net/projects/ipv6calc.html
@@ -27,5 +27,6 @@ REPLACE_BASH+=	tools/IP2Location-update.sh.in
 REPLACE_BASH+=	tools/ipv6calc-create-update-ipset.sh
 REPLACE_BASH+=	tools/ipv6calc-db-update-support.sh
 REPLACE_BASH+=	tools/ipv6calc-db-update.sh.in
+REPLACE_BASH+=	tools/ipv6calc-update-registries.sh
 
 .include "../../mk/bsd.pkg.mk"
