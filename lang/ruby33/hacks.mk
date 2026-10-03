@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2024/01/21 08:22:02 taca Exp $
+# $NetBSD: hacks.mk,v 1.2 2026/10/03 11:12:34 rin Exp $
 
 .if !defined(RUBY33_HACKS_MK)
 RUBY33_HACKS_MK=	defined
@@ -39,6 +39,12 @@ BUILDLINK_TRANSFORM+=	opt:-Os:-O1 rm:-freorder-blocks
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*} && ${CC_VERSION:Mgcc-[2-9]*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
+.endif
+
+# On NetBSD/alpha, GCC 14 fails to compile cont.c with -O2.
+.if ${MACHINE_PLATFORM:MNetBSD-*-alpha} && ${CC_VERSION:Mgcc-1[4-9].*}
+PKG_HACKS+=		optimisation
+BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 .endif
 
 .endif	# RUBY33_HACKS_MK
