@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6600 2026/10/03 03:53:31 fox Exp $
+$NetBSD: CHANGES-2026,v 1.6601 2026/10/03 06:40:20 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9965,3 +9965,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-headers to 1.4.363.0 [kikadf 2026-10-02]
 	Updated parallel/spirv-tools to 1.4.363.0 [kikadf 2026-10-02]
 	Updated audio/fasttracker2 to 2.25 [fox 2026-10-03]
+	Updated www/resterm to 1.11.0 [drixter 2026-10-03]
