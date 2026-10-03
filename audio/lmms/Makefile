@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2026/09/29 06:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/10/03 06:53:53 wiz Exp $
 
 DISTNAME=	lmms_1.2.2
 PKGNAME=	${DISTNAME:S/_/-/1}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	c c++
 LDFLAGS+=	${LIBOSSAUDIO}
 .endif
 
-CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-Wno-author
 CMAKE_CONFIGURE_ARGS+=	-DWANT_QT5=ON
 CMAKE_CONFIGURE_ARGS+=	-DWANT_GIG=OFF # requires libgig
 CMAKE_CONFIGURE_ARGS+=	-DWANT_STK=OFF # requires libstk
@@ -44,6 +44,11 @@ LDFLAGS.NetBSD+=	-lrt
 BUILDLINK_TRANSFORM+=	rm:-floop-optimize2 rm:-fgcse-las
 
 CHECK_PORTABILITY_SKIP+=	cmake/linux/package_linux.sh.in
+
+INSTALLATION_DIRS=	share/bash-completion/completions
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/bash-completion/lmms ${DESTDIR}${PREFIX}/share/bash-completion/completions
 
 .include "../../devel/cmake/build.mk"
 .include "options.mk"
