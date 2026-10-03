@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2026/09/02 18:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.34.2.1 2026/10/03 19:37:16 bsiegert Exp $
 #
 # NOTE: basically every update will require a recursive bump,
 # otherwise you'll see errors like:
 # /usr/lib/libpcre2-8.so.0: version PCRE2_10.47 required by /usr/lib/libglib-2.0.so.0 not defined
 
-DISTNAME=	pcre2-10.48
+DISTNAME=	pcre2-10.49
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PhilipHazel/}
 GITHUB_RELEASE=	${DISTNAME}
