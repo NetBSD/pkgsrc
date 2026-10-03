@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2025/09/04 23:06:24 lloyd Exp $
+$NetBSD: distinfo,v 1.6 2026/10/03 18:25:39 yurix Exp $
 
 BLAKE2s (gdb-16.3.tar.xz) = 27e5946391ec197b0a6487e2bfca2b66d4a96f44d5be10d5d19aaccdfdf0f10f
 SHA512 (gdb-16.3.tar.xz) = fffd6689c3405466a179670b04720dc825e4f210a761f63dd2b33027432f8cd5d1c059c431a5ec9e165eedd1901220b5329d73c522f9a444788888c731b29e9c
 Size (gdb-16.3.tar.xz) = 24434444 bytes
+SHA1 (patch-zlib_zutil.h) = 8031b05973fe8a27f08121bee4c11a53c08db4e6
