@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/07/23 12:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/03 08:59:40 adam Exp $
 
-DISTNAME=	python3_discogs_client-2.9
+DISTNAME=	python3_discogs_client-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python3_//:S/_/-/}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python3-discogs-client/}
@@ -11,9 +11,9 @@ COMMENT=	Python Client for the Discogs API
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-oauthlib-[0-9]*:../../security/py-oauthlib
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=0:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-oauthlib>=0:../../security/py-oauthlib
+DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
