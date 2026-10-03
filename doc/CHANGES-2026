@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6610 2026/10/03 11:31:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6611 2026/10/03 13:53:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9986,3 +9986,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/webkit-gtk41 to 2.54.1 [wiz 2026-10-03]
 	Updated www/webkit-gtk60 to 2.54.1 [wiz 2026-10-03]
 	Updated sysutils/entr to 5.9 [wiz 2026-10-03]
+	Updated geography/qgis to 3.44.15 [gdt 2026-10-03]
