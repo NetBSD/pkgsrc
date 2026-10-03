@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.224 2026/05/17 13:50:09 tnn Exp $
+# $NetBSD: Makefile,v 1.224.4.1 2026/10/03 19:37:22 bsiegert Exp $
 
-DISTNAME=	libpng-1.6.58
-PKGREVISION=	1
+DISTNAME=	libpng-1.6.59
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES+=	${MASTER_SITE_GITHUB:=pnggroup/}
+GITHUB_PROJECT=	libpng
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pnggroup/libpng
