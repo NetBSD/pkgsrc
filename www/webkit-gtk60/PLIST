@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/09/22 12:27:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/03 11:29:57 wiz Exp $
 include/webkitgtk-6.0/jsc/JSCClass.h
 include/webkitgtk-6.0/jsc/JSCContext.h
 include/webkitgtk-6.0/jsc/JSCDefines.h
@@ -101,10 +101,10 @@ lib/girepository-1.0/WebKit-6.0.typelib
 lib/girepository-1.0/WebKitWebProcessExtension-6.0.typelib
 lib/libjavascriptcoregtk-6.0.so
 lib/libjavascriptcoregtk-6.0.so.1
-lib/libjavascriptcoregtk-6.0.so.1.8.7
+lib/libjavascriptcoregtk-6.0.so.1.8.8
 lib/libwebkitgtk-6.0.so
 lib/libwebkitgtk-6.0.so.4
-lib/libwebkitgtk-6.0.so.4.19.3
+lib/libwebkitgtk-6.0.so.4.19.4
 lib/pkgconfig/javascriptcoregtk-6.0.pc
 lib/pkgconfig/webkitgtk-6.0.pc
 lib/pkgconfig/webkitgtk-web-process-extension-6.0.pc
