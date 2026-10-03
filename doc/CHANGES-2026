@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6616 2026/10/03 18:05:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6617 2026/10/03 18:40:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -9997,3 +9997,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed misc/elscreen [wiz 2026-10-03]
 	Removed misc/lookup [wiz 2026-10-03]
 	Updated x11/xorgproto to 2026.1 [wiz 2026-10-03]
+	Updated net/ipv6calc to 4.4.1 [drixter 2026-10-03]
