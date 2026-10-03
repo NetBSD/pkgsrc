@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/08/28 10:34:23 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/10/03 09:20:18 adam Exp $
 
-BLAKE2s (nest_asyncio2-1.7.2.tar.gz) = cae521b7b414f225f8cd26dacf05da2272bb5b186ccdfc0ff7de4c640abe045f
-SHA512 (nest_asyncio2-1.7.2.tar.gz) = 8487fd49ff1f21d3c0f89549782f760126c1e1fb9b5c9db0bff6c1a7d4d8c1a945729a79ff7af9543ef58d50c14830aeedaaa6c35f4a2510630fa7a32c9002e1
-Size (nest_asyncio2-1.7.2.tar.gz) = 14743 bytes
+BLAKE2s (nest_asyncio2-1.7.3.tar.gz) = c3aba043f1531833a2f7b52b39afe678759db6f5b75a836ea6538af5140cc138
+SHA512 (nest_asyncio2-1.7.3.tar.gz) = 4c9de618862ff0ce02b8ec1558c671b3d5936c003d64bcef9902012121eb9bb82d7d67e712bed42efa00913eb81a1af8b1fa2a68b86ed36a6b6cb9aa348cd1d0
+Size (nest_asyncio2-1.7.3.tar.gz) = 15642 bytes
