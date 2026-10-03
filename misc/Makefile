@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2026/10/02 07:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.693 2026/10/03 15:24:33 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -69,7 +69,6 @@ SUBDIR+=	ec2-ami-tools
 SUBDIR+=	ec2-api-tools
 SUBDIR+=	edict
 SUBDIR+=	elizatalk
-SUBDIR+=	elscreen
 SUBDIR+=	emacs-neotree
 SUBDIR+=	emacs-wiki
 SUBDIR+=	emacspeak
@@ -207,7 +206,6 @@ SUBDIR+=	lile
 SUBDIR+=	linux-words
 SUBDIR+=	loco
 SUBDIR+=	logsurfer
-SUBDIR+=	lookup
 SUBDIR+=	lr
 SUBDIR+=	lv
 SUBDIR+=	m17n-db

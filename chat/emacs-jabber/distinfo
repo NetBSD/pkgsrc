@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2023/09/09 10:27:20 mef Exp $
-
-BLAKE2s (emacs-jabber-0.8.92.tar.bz2) = 102b137f2c3a97b6f8352c410504e220e2586ed50192128b0d8b577e7edb24f3
-SHA512 (emacs-jabber-0.8.92.tar.bz2) = 925bf5e6422f24f955bdc2ee0dce3b162bd365f552835373961a780cbc8843c2db9803a262c048e0e4e0b9f47992f136dcb3d76f1bed1b731340089711d32591
-Size (emacs-jabber-0.8.92.tar.bz2) = 320283 bytes
-SHA1 (patch-jabber-menu.el) = 3a4f8e3f78e59e60e2a0a260206f761af06ae5f1
-SHA1 (patch-jabber-roster.el) = ed6852dcb6501b7f01db0cf6584bc1fd50c055b4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/09/27 12:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/10/03 15:24:32 wiz Exp $
 
 DISTNAME=	emacs-packages-0.13
 CATEGORIES=	editors meta-pkgs
@@ -35,9 +35,6 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}doxymacs-[0-9]*:../../devel/doxymacs
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}eieio-[0-9]*:../../lang/eieio
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib-[0-9]*:../../devel/elib
-.if ${EMACS_VERSION_MAJOR} < 24
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}elscreen-[0-9]*:../../misc/elscreen
-.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}dict-client-[0-9]*:../../textproc/emacs-dict-client
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
@@ -61,7 +58,6 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}jde-[0-9]*:../../editors/jde
 #.endif
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}riece-[0-9]*:../../chat/riece
-#DEPENDS+=	${EMACS_PKGNAME_PREFIX}lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}mailcrypt-[0-9]*:../../mail/mailcrypt
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}matlab-mode-[0-9]*:../../editors/matlab-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}mew-[0-9]*:../../mail/mew
@@ -74,9 +70,6 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}pcl-cvs-[0-9]*:../../devel/pcl-cvs
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}pvs-[0-9]*:../../devel/pvs	# XXX pvs-license
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}psgml-mode-[0-9]*:../../textproc/psgml-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ruby-rd-mode-[0-9]*:../../devel/ruby-rd-mode
-.if ${EMACS_VERSION_MAJOR} < 22
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}semantic-[0-9]*:../../devel/semantic
-.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}skk-[0-9]*:../../inputmethod/skk
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}sml-mode-[0-9]*:../../devel/sml-mode
@@ -90,7 +83,6 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}tamago-[0-9]*:../../editors/tamago
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tc-[0-9]*:../../inputmethod/tc
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode-[0-9]*:../../cad/verilog-mode
-#DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
