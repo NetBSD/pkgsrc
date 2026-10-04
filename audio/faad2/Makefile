@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2026/08/23 07:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/10/04 15:35:25 wiz Exp $
 
-DISTNAME=	faad2-2.11.3
+DISTNAME=	faad2-2.11.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=knik0/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
