@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/04 09:54:58 wiz Exp $
+
+BLAKE2s (Memory-Process-0.06.tar.gz) = b8442729ddabbbf9378aaff358e5c366ac7c55376e65c246ce93a74273ff0c89
+SHA512 (Memory-Process-0.06.tar.gz) = 13a52f12965ec0541ad0d52ac182b39de8c1fcf00d7482aa9d860fc20c7011287b48e8146e344e8a89583954d7b584010fe320458c944eeb28eac66072ceac91
+Size (Memory-Process-0.06.tar.gz) = 27651 bytes
