@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/09/28 20:17:49 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/10/04 16:21:30 wiz Exp $
 
-BLAKE2s (markupsafe-3.0.3.tar.gz) = 31122e2227cbaaa53aa166849a8fd4f6e7a3559dca2e4d12146ff30c0a3600c6
-SHA512 (markupsafe-3.0.3.tar.gz) = 8c4ed04b467244f6bf99cd2a60ed922bc0569581f00cc5a13d9edcd0a4bc8b97c404edc4576f6146c7aa543bbd37cf52e5312d3bdd27758264d8751fdc7a646c
-Size (markupsafe-3.0.3.tar.gz) = 80313 bytes
+BLAKE2s (markupsafe-3.0.4.tar.gz) = d9900311760e219e72b9e345984229ec20ab04a831fc676d6f03b6f97132fff7
+SHA512 (markupsafe-3.0.4.tar.gz) = 032a791bdc82ddb8cb7a24ee767ae87bd996af2a7195c9272bff7affc0bb63ffe664f54c785335d917b2fa23f45c74fd3b41e51ed46c0eef7a44f005070311f1
+Size (markupsafe-3.0.4.tar.gz) = 153777 bytes
