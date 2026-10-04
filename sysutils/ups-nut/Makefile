@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2026/08/07 15:54:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.86 2026/10/04 14:02:58 martin Exp $
 
 .include "Makefile.common"
 
@@ -21,10 +21,6 @@ SUBST_NOOP_OK.paths=	yes
 
 # Don't regenerate any files in tools/.
 TOOLS_SCRIPT.perl=	exit 1
-
-# nut looks aggressively for asciidoc in a way that is hard to turn off,
-# and builds html docs.   asciidoc isn't that big, so just depend on it.
-TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_RUNDIR:Q}
@@ -89,6 +85,11 @@ INSTALLATION_DIRS+=	${NUT_DOCDIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/detailed
 INSTALLATION_DIRS+=	${NUT_DOCDIR}/drivers
 
 CHECK_INTERPRETER_SKIP+=	share/nut/solaris-init/nut
+
+PRINT_PLIST_AWK+=	/\.py$$/ { $$0 = "$${PLIST.python}" $$0 }
+PRINT_PLIST_AWK+=	/^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/doc\/nut\/html-man/ { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/doc\/nut\/html-doc/ { $$0 = "$${PLIST.doc}" $$0 }
 
 post-install:
 	for f in AUTHORS COPYING ChangeLog NEWS.adoc README.adoc UPGRADING.adoc; do \
