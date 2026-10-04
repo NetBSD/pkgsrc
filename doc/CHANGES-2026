@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6667 2026/10/04 17:18:57 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6668 2026/10/04 17:19:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10048,3 +10048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 4.2.4 [wiz 2026-10-04]
 	Updated www/py-websockets to 17.2 [wiz 2026-10-04]
 	Updated lang/sbcl to 2.6.9 [ktnb 2026-10-04]
+	Updated www/py-zensical to 0.0.67 [wiz 2026-10-04]
