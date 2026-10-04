@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6653 2026/10/04 16:13:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6654 2026/10/04 16:15:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10034,3 +10034,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-configargparse to 1.8.0 [wiz 2026-10-04]
 	Updated devel/py-filelock to 4.0.10 [wiz 2026-10-04]
 	Updated devel/py-flakes to 4.0.2 [wiz 2026-10-04]
+	Updated devel/py-google-api-core to 2.40.0 [wiz 2026-10-04]
