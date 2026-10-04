@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6672 2026/10/04 17:32:24 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6673 2026/10/04 17:37:34 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10053,3 +10053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/kitty to 0.49.2 [ktnb 2026-10-04]
 	Updated www/grafana-prometheus-datasource to 13.2.3 [wiz 2026-10-04]
 	Updated net/qrcp to 0.11.7 [ktnb 2026-10-04]
+	Updated editors/qemacs to 6.5.2 [ktnb 2026-10-04]
