@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6623 2026/10/04 05:44:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6624 2026/10/04 05:47:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10004,3 +10004,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-TimeZone to 2.71 [wiz 2026-10-04]
 	Updated devel/p5-Exception-Class to 1.46 [wiz 2026-10-04]
 	Updated devel/p5-Future to 0.53 [wiz 2026-10-04]
+	Updated devel/p5-Moose to 2.4001 [wiz 2026-10-04]
