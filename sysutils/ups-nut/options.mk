@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2026/05/03 16:39:13 gdt Exp $
+# $NetBSD: options.mk,v 1.6 2026/10/04 14:02:58 martin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ups-nut
-PKG_SUPPORTED_OPTIONS=		python
+PKG_SUPPORTED_OPTIONS=		python doc
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		nss openssl
-PKG_SUGGESTED_OPTIONS=		python openssl
+PKG_SUGGESTED_OPTIONS=		python openssl doc
 
 .include "../../mk/bsd.options.mk"
 
@@ -30,4 +30,14 @@ PLIST.python=		yes
 # they would like that.
 .else
 CONFIGURE_ARGS+=	--without-python3
+.endif
+
+## DOC
+
+PLIST_VARS+=		doc
+.if !empty(PKG_OPTIONS:Mdoc)
+PLIST.doc=		yes
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+.else
+CONFIGURE_ARGS+=	--with-docs=no
 .endif
