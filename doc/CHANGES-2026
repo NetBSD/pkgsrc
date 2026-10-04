@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6650 2026/10/04 16:02:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6651 2026/10/04 16:03:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10031,3 +10031,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openexr to 3.5.2 [wiz 2026-10-04]
 	Updated mail/rspamd to 4.2.1 [wiz 2026-10-04]
 	Updated lang/py-ast-serialize to 0.12.1 [wiz 2026-10-04]
+	Updated devel/py-configargparse to 1.8.0 [wiz 2026-10-04]
