@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/10/03 14:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/10/04 05:35:45 wiz Exp $
 
 DISTNAME=	khard-0.22.0
 CATEGORIES=	misc net python
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/lucc/khard
 COMMENT=	CLI contacts application built around CardDAV
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
