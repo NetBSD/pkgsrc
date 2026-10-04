@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/08/30 15:39:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/10/04 12:35:20 ryoon Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -72,7 +72,7 @@ ${PLIST.dbus}lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 ${PLIST.dbus}lib/gtk-2.0/modules/libatk-bridge.so
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
-lib/libatk-1.0.so.0.26015.1
+lib/libatk-1.0.so.0.26209.1
 ${PLIST.dbus}lib/libatk-bridge-2.0.so
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0
 ${PLIST.dbus}lib/libatk-bridge-2.0.so.0.0.0
@@ -147,7 +147,6 @@ share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/ku/LC_MESSAGES/at-spi2-core.mo
 share/locale/li/LC_MESSAGES/at-spi2-core.mo
-share/locale/lo/LC_MESSAGES/at-spi2-core.mo
 share/locale/lt/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
 share/locale/mai/LC_MESSAGES/at-spi2-core.mo
