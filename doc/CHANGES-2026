@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6646 2026/10/04 15:38:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6647 2026/10/04 15:41:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10027,3 +10027,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird-l10n to 157.0.1 [ryoon 2026-10-04]
 	Updated audio/faad2 to 2.11.4 [wiz 2026-10-04]
 	Updated sysutils/hwdata to 0.412 [wiz 2026-10-04]
+	Updated textproc/libplist to 2.8.0 [wiz 2026-10-04]
