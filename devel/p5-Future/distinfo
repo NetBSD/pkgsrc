@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/07/13 21:18:19 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/10/04 05:44:10 wiz Exp $
 
-BLAKE2s (Future-0.52.tar.gz) = 21e6d150c2645152f44aa5cde08159a220dc395e034470acbcf65e6cd3852917
-SHA512 (Future-0.52.tar.gz) = 625d7c4cf967d9975851bbb2c4293be01bf70644ea7f21e168e1cb3622d3f5549cea67dda1df820e13898683874dea60cce979d65cd5e6aca69d96f3d0d91950
-Size (Future-0.52.tar.gz) = 105923 bytes
+BLAKE2s (Future-0.53.tar.gz) = b908e801d2ea6b4d91591830c987e2226d606b0a5aee04074574d810b6e8e7ba
+SHA512 (Future-0.53.tar.gz) = 946a3834730df436f787f58063b7b8be48f419dd1731e99e8ddd18319709b166164de561885bffcb9e30c9d2a8df4f7233b1f6a862b915e252f2aee4e8aa608f
+Size (Future-0.53.tar.gz) = 106632 bytes
