@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.41 2026/08/30 15:39:35 ryoon Exp $
+$NetBSD: distinfo,v 1.42 2026/10/04 12:35:20 ryoon Exp $
 
-BLAKE2s (at-spi2-core-2.60.6.tar.xz) = b85fe3732041a9bc45de8fde6ffe84e8bf4f544331ba6f08fc220c4376166fd6
-SHA512 (at-spi2-core-2.60.6.tar.xz) = ed69347a002b805358f05875edff2e2a8ac7b8a64219c820f22ecc3ea7c59f47bf6b6440045bfc9771219223c527c78c0edbdf11fe62083abd3cada96f0f4769
-Size (at-spi2-core-2.60.6.tar.xz) = 599128 bytes
+BLAKE2s (at-spi2-core-2.62.0.1.tar.xz) = 8db616beff8c2b0d1dc9c05687528d24e18f2f6244e3d6c9a48821044295dfb0
+SHA512 (at-spi2-core-2.62.0.1.tar.xz) = 8e1ec042c0534d275037ba3c1ade04578a893b2adc540135ac86121deae89a266a1a7878498ba5bf3d77399c3a4aaff68ba1c3d07224af8b55672101a85d33a5
+Size (at-spi2-core-2.62.0.1.tar.xz) = 599704 bytes
 SHA1 (patch-meson.build) = 09823442683c0eadd7670a4ff06ef040a9e2f396
 SHA1 (patch-registryd_registry.c) = 69d8be4a54af1f3749d38ad4f1d6ad33296765fe
