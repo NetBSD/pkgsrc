@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6633 2026/10/04 11:24:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6634 2026/10/04 12:35:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10014,3 +10014,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lcov to 2.6 [wiz 2026-10-04]
 	Updated textproc/p5-Pod-Coverage to 0.23nb14 [wiz 2026-10-04]
 	Updated devel/p5-Devel-Cover to 1.52 [wiz 2026-10-04]
+	Updated devel/at-spi2-core to 2.62.0.1 [ryoon 2026-10-04]
