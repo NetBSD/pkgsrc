@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6647 2026/10/04 15:41:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6648 2026/10/04 15:46:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10028,3 +10028,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/faad2 to 2.11.4 [wiz 2026-10-04]
 	Updated sysutils/hwdata to 0.412 [wiz 2026-10-04]
 	Updated textproc/libplist to 2.8.0 [wiz 2026-10-04]
+	Updated graphics/openexr to 3.5.2 [wiz 2026-10-04]
