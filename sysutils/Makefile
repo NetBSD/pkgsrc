@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1206 2026/10/01 16:53:31 adam Exp $
+# $NetBSD: Makefile,v 1.1207 2026/10/04 09:55:20 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -552,6 +552,8 @@ SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Linux-Inotify2
 SUBDIR+=	p5-Mac-AppleScript
 SUBDIR+=	p5-Mac-AppleScript-Glue
+SUBDIR+=	p5-Memory-Process
+SUBDIR+=	p5-Memory-Usage
 SUBDIR+=	p5-Monitoring-Plugin
 SUBDIR+=	p5-Parse-Syslog
 SUBDIR+=	p5-PerlPowerTools
