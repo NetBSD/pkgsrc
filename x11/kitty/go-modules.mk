@@ -1,17 +1,17 @@
-# $NetBSD: go-modules.mk,v 1.23 2026/09/24 19:19:26 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.24 2026/10/04 17:22:32 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.27.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.27.0.zip
-GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.10.0.mod
-GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.10.0.zip
+GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.10.2.mod
+GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.10.2.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.12.0.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.12.0.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.2.1.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/v2/@v/v2.2.1.zip
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.11.0.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.11.0.zip
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.11.1.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.11.1.zip
 GO_MODULE_FILES+=	github.com/emmansun/base64/@v/v0.10.0.mod
 GO_MODULE_FILES+=	github.com/emmansun/base64/@v/v0.10.0.zip
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.2.6.mod
@@ -58,8 +58,8 @@ GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.16.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.16.zip
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.11.0.mod
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.11.0.zip
-GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.16.mod
-GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.16.zip
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.17.mod
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.17.zip
 GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.mod
 GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.zip
 GO_MODULE_FILES+=	github.com/zeebo/xxh3/@v/v1.1.0.mod

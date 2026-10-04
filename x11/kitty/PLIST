@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2026/09/28 23:09:12 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.43 2026/10/04 17:22:32 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -534,6 +534,8 @@ lib/kitty/kitty/shaders/custom/cursor-trail-default.pipeline
 lib/kitty/kitty/shaders/custom/cursor-trail-default.slang
 lib/kitty/kitty/shaders/custom/cursor-trail-lightning.pipeline
 lib/kitty/kitty/shaders/custom/cursor-trail-lightning.slang
+lib/kitty/kitty/shaders/custom/cursor-trail-motion-blur.pipeline
+lib/kitty/kitty/shaders/custom/cursor-trail-motion-blur.slang
 lib/kitty/kitty/shaders/custom/demo.py
 lib/kitty/kitty/shaders/custom/demo.pyc
 lib/kitty/kitty/shaders/custom/demo.pyo
