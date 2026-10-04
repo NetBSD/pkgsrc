@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6619 2026/10/04 05:38:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6620 2026/10/04 05:41:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10000,3 +10000,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ipv6calc to 4.4.1 [drixter 2026-10-03]
 	Updated net/tailscale to 1.102.5 [ktnb 2026-10-03]
 	Updated devel/p5-Clone to 0.51 [wiz 2026-10-04]
+	Updated databases/p5-DBI to 1.655 [wiz 2026-10-04]
