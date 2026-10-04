@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6631 2026/10/04 10:06:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6632 2026/10/04 11:21:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10012,3 +10012,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added sysutils/p5-Memory-Usage version 0.201 [wiz 2026-10-04]
 	Added sysutils/p5-Memory-Process version 0.06 [wiz 2026-10-04]
 	Updated devel/lcov to 2.6 [wiz 2026-10-04]
+	Updated textproc/p5-Pod-Coverage to 0.23nb14 [wiz 2026-10-04]
