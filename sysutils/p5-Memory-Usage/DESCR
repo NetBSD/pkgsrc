@@ -1,0 +1,2 @@
+This module lets you attempt to measure, from your operating system's
+perspective, how much memory a process is using at any given time.

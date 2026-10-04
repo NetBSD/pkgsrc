@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/04 09:54:12 wiz Exp $
+
+BLAKE2s (Memory-Usage-0.201.tar.gz) = 05c16791b12b8facf0aad683156f73338497d42e1e172f8e3b262ac9f25b32c6
+SHA512 (Memory-Usage-0.201.tar.gz) = 4e34869ca1c97c39224c784e3dd6ef945174399678bfaefa5483cfd11ee0dc4b0efbde7a9ed59f146c4515c6db935261a8fb8fd7a4431c110160c28f9a2f9292
+Size (Memory-Usage-0.201.tar.gz) = 19746 bytes
