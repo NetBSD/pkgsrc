@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6670 2026/10/04 17:22:56 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6671 2026/10/04 17:24:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10051,3 +10051,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.67 [wiz 2026-10-04]
 	Updated archivers/py-zipp to 4.1.1 [wiz 2026-10-04]
 	Updated x11/kitty to 0.49.2 [ktnb 2026-10-04]
+	Updated www/grafana-prometheus-datasource to 13.2.3 [wiz 2026-10-04]
