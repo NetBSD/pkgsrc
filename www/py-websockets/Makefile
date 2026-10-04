@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2026/08/30 15:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/10/04 17:12:06 wiz Exp $
 #
 # https://github.com/python-websockets/websockets/blob/main/docs/project/changelog.rst
 
-DISTNAME=	websockets-17.1
+DISTNAME=	websockets-17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/websockets/}
