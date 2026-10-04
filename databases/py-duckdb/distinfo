@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/08/12 03:52:35 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2026/10/04 13:07:10 ryoon Exp $
 
-BLAKE2s (py-duckdb-1.5.5/duckdb-1.5.5.tar.gz) = 414871d89200131717d17b9339d49706d2691924f5496811a6bc38f8feddc26c
-SHA512 (py-duckdb-1.5.5/duckdb-1.5.5.tar.gz) = 08c716866c7a4aba17c27da5faa130f958f568c4fcb479191d4a377fb2fd2f2dbb70bd21c764afb0c43cdb57fafe7c18fea3197b03139e75a81de058fa58b3c6
-Size (py-duckdb-1.5.5/duckdb-1.5.5.tar.gz) = 18066741 bytes
+BLAKE2s (py-duckdb-1.5.6/duckdb-1.5.6.tar.gz) = 750a04b45bcfcf0b8b57d9ecc4527ab3cd66ad8ef10e5d4fe33224d95c845cd1
+SHA512 (py-duckdb-1.5.6/duckdb-1.5.6.tar.gz) = d1c137b3f95457180db98508a4a6ec15ff11a7213b5f6260e7757a89bc9d487e818229e8ccd931815679eb1a58d27e00f5dc04974d377daabaa34f10678c143c
+Size (py-duckdb-1.5.6/duckdb-1.5.6.tar.gz) = 18032957 bytes
 SHA1 (patch-external_duckdb_src_include_duckdb_common_platform.hpp) = 5a8ca0bdf6d87e638ee1ed292c4a7b1e5b792bc1
