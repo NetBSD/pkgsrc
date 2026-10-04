@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2026/05/20 04:53:42 adam Exp $
+$NetBSD: distinfo,v 1.39 2026/10/04 17:20:10 wiz Exp $
 
-BLAKE2s (zipp-4.1.0.tar.gz) = 614f3a5b8c7bdaba5bbf67430078a3c662661b20dab83e0e68dc1c118cb824c2
-SHA512 (zipp-4.1.0.tar.gz) = 1648ee2581e958ff11472357784b34111f86fd2c2281bb35ca8122f238c721c5a1e54332ffe1fb03208dfee2706adb39ede5389b2d3612c9134f3662bef54ffa
-Size (zipp-4.1.0.tar.gz) = 26214 bytes
+BLAKE2s (zipp-4.1.1.tar.gz) = c3dc29f53f478011a49bb60cc1e4a1a77b0bb990e8e48a8d8674df99bf900b5f
+SHA512 (zipp-4.1.1.tar.gz) = 218a1c11f143bb581c396d4652f46680cce04098440ba202599a8953f2bc5ffbaecaba97048c62fd34d1ed55fe9490859c22ad091107e79cbebf23ac1a12729b
+Size (zipp-4.1.1.tar.gz) = 27649 bytes
