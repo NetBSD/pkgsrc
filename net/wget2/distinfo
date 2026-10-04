@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/01/07 07:56:01 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/10/04 12:56:35 ryoon Exp $
 
-BLAKE2s (wget2-2.2.1.tar.lz) = 3c453f030bbef4e721a1931decec603d8a3dee4dbc2435f6ebab94b5c8d189bc
-SHA512 (wget2-2.2.1.tar.lz) = cc00931763846c6df07d97e77f899fc43e8910a15e380e1f85f23b4bfde447eaa4a9a7ec9bbefd7c89deb80ab450eb6ecc62be0e1a86f537022d3ea4abac10e2
-Size (wget2-2.2.1.tar.lz) = 2266029 bytes
+BLAKE2s (wget2-2.3.0.tar.lz) = a2f2f5612319e0f2aae00a193061086e67285cc99e001ba817f84549a78e9759
+SHA512 (wget2-2.3.0.tar.lz) = 6e7c84fbd53c2401185384a5779172b0bb8d528a85cf0aad8c304cbcf44bd403fff9536de92280cd6ad0f36396eb09502e000a2d65a6136fb7ce63d76decbfde
+Size (wget2-2.3.0.tar.lz) = 2378392 bytes
