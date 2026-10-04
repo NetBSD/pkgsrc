@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6625 2026/10/04 05:48:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6626 2026/10/04 08:41:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10006,3 +10006,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Future to 0.53 [wiz 2026-10-04]
 	Updated devel/p5-Moose to 2.4001 [wiz 2026-10-04]
 	Updated devel/p5-Test-Differences to 0.7300 [wiz 2026-10-04]
+	Updated devel/gtexinfo to 7.3 [wiz 2026-10-04]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28074 2026/10/03 14:33:40 wiz Exp $
+$NetBSD: TODO,v 1.28075 2026/10/04 08:41:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -747,7 +747,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.14
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gtexinfo-7.3
 	o gtklevel9-5.1
 	o gtklife-5.3
 	o gtkmagnetic-23
@@ -841,7 +840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kqtquickcharts4-20.12.3
 	o krita-6.0.4
 	o kronolith-4.2.14
-	o kstars-3.8.4
+	o kstars-3.8.5
 	o ktorrent3-3.3.4
 	o latexmk-486
 	o lbdb-49
