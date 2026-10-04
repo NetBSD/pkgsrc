@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:16:31 nia Exp $
+$NetBSD: distinfo,v 1.23 2026/10/04 05:43:08 wiz Exp $
 
-BLAKE2s (Exception-Class-1.45.tar.gz) = 73e88b8217a31545242e4dc9eecd10cd32ccead99a13ca6f0c2cd0425701ec5d
-SHA512 (Exception-Class-1.45.tar.gz) = 8eff70c85c8f1cc9e1db2c47b5a815ef902fddd4989783b9fb7e84e3ce75776564cafddd3aedd2c86a5a8b9627021c9cfd094b95ec4956a60dd6703bba3eaf4d
-Size (Exception-Class-1.45.tar.gz) = 50933 bytes
+BLAKE2s (Exception-Class-1.46.tar.gz) = 0871a479952b62885b36918eeb3cc96c0e5935154384d67fbb81f68fd56924bb
+SHA512 (Exception-Class-1.46.tar.gz) = 38829574c67e720d6f570a98a7936b4314905884aa1649a47d70e2c8ddc80550685b071c25a11bb50b877c1ef9b837ecfb31eb4b484bcc98f10ab408d21d1604
+Size (Exception-Class-1.46.tar.gz) = 52395 bytes
