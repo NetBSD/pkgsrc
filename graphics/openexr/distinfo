@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.79 2026/09/28 14:39:29 wiz Exp $
+$NetBSD: distinfo,v 1.80 2026/10/04 15:46:30 wiz Exp $
 
-BLAKE2s (openexr-3.5.1.tar.gz) = ca85ac8c9fd77582124fec04b410fcfdcc9e03c03ff65206b800af84a2358b44
-SHA512 (openexr-3.5.1.tar.gz) = c8ac983cfa48b2ff73ee27bde498eb0d33946533eabf51c1ff60399b2e6e2b7557607d123f75b2f9759b01a921475ab2f1eafe3f974a092e7b0035800634cfc7
-Size (openexr-3.5.1.tar.gz) = 26400002 bytes
-SHA1 (patch-src_lib_OpenEXRCore_internal__ht__common.h) = 5a3e4cff4831611fdff3e07cc0cbfc1e6acfad9d
-SHA1 (patch-src_lib_OpenEXRCore_internal__ht__quality.h) = e16ae3e65e772bb053806c15ae8b5f884eaf5946
+BLAKE2s (925058c4b80aff5db8cf300bba622914f9a4d349.diff) = a3b88e5e364b9442f84c85b4b1ff025190eda5048916ed27e436648146f62a62
+SHA512 (925058c4b80aff5db8cf300bba622914f9a4d349.diff) = 60e944f3b1e423315c66cba9d0949fdb50834251b83fe052077a552a1bac28cb279175145a9b29ac8127ce4c592a6d32db7d26be8c7ea5c6a750b3f05e0a4f97
+Size (925058c4b80aff5db8cf300bba622914f9a4d349.diff) = 6056 bytes
+BLAKE2s (openexr-3.5.2.tar.gz) = fd435c7ab03685500c0dfee7082af502ed042cd863c813c475b42991492b30f0
+SHA512 (openexr-3.5.2.tar.gz) = 4dba9cfb65a6bb98c10d9019b3b1e007c6ad751c8faac3df5e8b08e02c8a0ba6355fe35c25d0b175a91a7bdeb125d138cc87ab621f21cbf4050aad9b5391feab
+Size (openexr-3.5.2.tar.gz) = 26403944 bytes
