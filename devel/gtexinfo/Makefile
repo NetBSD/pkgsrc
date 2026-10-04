@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2026/07/16 19:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2026/10/04 08:41:22 wiz Exp $
 
-DISTNAME=	texinfo-7.2
+DISTNAME=	texinfo-7.3
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=texinfo/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,6 @@ DEPENDS+=	p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsian
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # otherwise MiscXS.pm won't be installed
 CONFIGURE_ARGS+=	--with-external-libintl-perl
 CONFIGURE_ARGS+=	--with-external-Text-Unidecode
 CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
@@ -44,11 +42,11 @@ CPPFLAGS+=		-DPKGSRC_INFOPATH=\"${PKGSRC_INFOPATH}\"
 
 REPLACE_SH+=		util/texi2dvi
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"	 # for EXTERN.h in XSParagraph
+# for EXTERN.h in XSParagraph
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
