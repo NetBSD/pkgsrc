@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/10/01 11:49:26 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/10/04 16:13:04 wiz Exp $
 
-DISTNAME=	pyflakes-4.0.1
+DISTNAME=	pyflakes-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyflakes/}
