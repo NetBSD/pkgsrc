@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2026/09/29 07:21:31 adam Exp $
+# $NetBSD: Makefile,v 1.61 2026/10/04 16:12:14 wiz Exp $
 
-DISTNAME=	filelock-4.0.6
+DISTNAME=	filelock-4.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
@@ -22,6 +22,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.4:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
+
+# as of 4.0.10
+# 2 failed, 1841 passed, 61 skipped
+# https://github.com/tox-dev/filelock/issues/766
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
