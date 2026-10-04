@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.7 2025/12/24 16:47:38 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.8 2026/10/04 13:27:53 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2025-10-03 13:17:55.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2026-09-24 10:45:34.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2842,6 +2842,39 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -3055,6 +3055,36 @@ pref("toolkit.coverage.endpoint.base", "https://covera
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -30,9 +30,6 @@ each one.
 +pref("midi.prompt.testing", true);
 +pref("media.navigator.permission.disabled", true);
 +
-+// Avoid runtime error from WebGL for NetBSD systems
-+pref("webgl.out-of-process", false);
-+
 +// Avoid unfunctional video and audio codecs
 +pref("media.allow-audio-non-utility", true);
 +
@@ -42,6 +39,6 @@ each one.
 +// The root cause of this should be investigated.
 +pref("dom.serviceWorkers.enabled", false);
 +
- // Discovery prefs
+ // Enable personalized extension recommendations
  pref("browser.discovery.enabled", true);
- pref("browser.discovery.containers.enabled", true);
+ 
