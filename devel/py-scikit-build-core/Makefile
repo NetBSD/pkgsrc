@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/09/28 15:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/04 17:05:45 wiz Exp $
 
-DISTNAME=	scikit_build_core-1.1.0
+DISTNAME=	scikit_build_core-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -30,8 +30,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 # only needed for tests
 USE_LANGUAGES=	c c++
 
-# as of 1.1.0
-# 15 failed, 1130 passed, 93 skipped
+# as of 1.1.1
+# 15 failed, 1141 passed, 93 skipped, 18 warnings
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
