@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28083 2026/10/04 15:56:21 wiz Exp $
+$NetBSD: TODO,v 1.28084 2026/10/04 16:02:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1140,7 +1140,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pxp-1.2.9
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
-	o py-ast-serialize-0.12.1
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
 	o py-configargparse-1.8.0
