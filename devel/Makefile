@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4699 2026/10/03 15:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4700 2026/10/04 17:00:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3193,6 +3193,7 @@ SUBDIR+=	py-test-pythonpath
 SUBDIR+=	py-test-random-order
 SUBDIR+=	py-test-randomly
 SUBDIR+=	py-test-relaxed
+SUBDIR+=	py-test-remaster
 SUBDIR+=	py-test-rerunfailures
 SUBDIR+=	py-test-run-parallel
 SUBDIR+=	py-test-shutil
