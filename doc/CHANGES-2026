@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6635 2026/10/04 12:43:10 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6636 2026/10/04 12:51:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10016,3 +10016,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Devel-Cover to 1.52 [wiz 2026-10-04]
 	Updated devel/at-spi2-core to 2.62.0.1 [ryoon 2026-10-04]
 	Updated graphics/shader-slang to 2026.19 [ktnb 2026-10-04]
+	Updated news/newsraft to 0.38 [ktnb 2026-10-04]
