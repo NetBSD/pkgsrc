@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2025/03/31 17:53:55 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/04 17:37:15 ktnb Exp $
 
-DISTNAME=	qemacs-6.4.1
+DISTNAME=	qemacs-6.5.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qemacs/}
-GITHUB_TAG=	43b5851958ee13fe0b96cf92b5cfc0aaa085d740
+GITHUB_TAG=	befd7a816ec824e36bccf3d91c10559bf6752400
 GITHUB_TYPE=	tag
 
 MAINTAINER=	ktnb@NetBSD.org
