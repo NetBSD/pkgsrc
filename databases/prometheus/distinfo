@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2026/09/26 10:58:29 tnn Exp $
+$NetBSD: distinfo,v 1.49 2026/10/04 17:43:11 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_auth_@v_v0.20.0.mod) = f6d723963282dc62299a7b8fe8ef9c0cd55e76f4122ba495c5939462ea8a4586
 SHA512 (cloud.google.com_go_auth_@v_v0.20.0.mod) = 98c6ea195be4544e5b50a079bbf4137f85a972560410666a6f3d94d005e1d757fbc2b3aa5de87500283b675dbb3371583819f776bbdc21ac41a86035d32d1a52
@@ -2040,12 +2040,12 @@ Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260610212136-7ab31c2
 BLAKE2s (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260610212136-7ab31c22f7ad.zip) = 89ace00c3638dd3d62b2aa8d5a181f6cdba1307b82d7be5dabd8c4b23de0ffbc
 SHA512 (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260610212136-7ab31c22f7ad.zip) = 37976d4416b073de29b6de9d6c4532573132725d4fb6a62ae1857b257a965bac56b27eb0730999527c8fcedffd8c50c4e2bb4809c8749eb8eff83c439a34bba3
 Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20260610212136-7ab31c22f7ad.zip) = 39931 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.82.1.mod) = 877c61cc2cdf7cdf5b5b566f978b339f187e59a924fe6d1e279093dc7c3b87ce
-SHA512 (google.golang.org_grpc_@v_v1.82.1.mod) = 5d083d11b1a38a6be211356bbd81a2486c7de1694e01adfa1c163dab0e1a8bc9af49f65b9b16d55508547d7a1815149f2fe5243a0974dbc7339d4879698e43c7
-Size (google.golang.org_grpc_@v_v1.82.1.mod) = 1734 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.82.1.zip) = ce624cca9981ad6a2bf144af3626d0e5a5815d373b1e3c1802701cb6c1e79068
-SHA512 (google.golang.org_grpc_@v_v1.82.1.zip) = 2e6c3f83e6921069c2efdbaa0661f430051906faafe2b7ce19938e1814c8a3fb3abe7f57b4118e723d61271d657e05834a2dba723d725fc971051805371e5c7e
-Size (google.golang.org_grpc_@v_v1.82.1.zip) = 2895520 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.83.1.mod) = 8d36b9c4f630173d6e7ccaf010387909242d09d2a907d0ffb6db31e5795d07ce
+SHA512 (google.golang.org_grpc_@v_v1.83.1.mod) = 5f7ff62a5dd617d549e2f9679efa22d76b36f6b3c3e482644d8f296950945006dd7e96e7064faff2d251ce416c2088981e54027eeee8da83d13651055e7bdf01
+Size (google.golang.org_grpc_@v_v1.83.1.mod) = 2099 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.83.1.zip) = dff03527bea326cf041e0ee67e3c0e8688b2795c6edd9589c5d1f42c009d954f
+SHA512 (google.golang.org_grpc_@v_v1.83.1.zip) = 12e26138c1da11f6c5d94019609d084ef00c9c3a3b77cf3f9123abeb631fc37674c322ea130528f08f10e2134b785d0942b977d786c0114e6597f924a0e5f8ac
+Size (google.golang.org_grpc_@v_v1.83.1.zip) = 3001106 bytes
 BLAKE2s (google.golang.org_protobuf_@v_v1.36.11.mod) = f1c27cc7fd7ad2c8c22e99eb8012c01dde7c96370d4dda31dc48892730d31d67
 SHA512 (google.golang.org_protobuf_@v_v1.36.11.mod) = 0b400139a771d8651da5bd9e5695d5d2809c5844b9d53432855238d7338714d0529d4c3d5ce7e6897b0f5e286a3611834769200dae1b1faaa6c01ed9abc80143
 Size (google.golang.org_protobuf_@v_v1.36.11.mod) = 124 bytes
@@ -2151,12 +2151,12 @@ Size (k8s.io_utils_@v_v0.0.0-20251002143259-bc988d571ff4.mod) = 153 bytes
 BLAKE2s (k8s.io_utils_@v_v0.0.0-20251002143259-bc988d571ff4.zip) = ce605b6d2ddbd8557a344fa59ddc9ad153146dec6f4ca1409b39e927f7792ba3
 SHA512 (k8s.io_utils_@v_v0.0.0-20251002143259-bc988d571ff4.zip) = 23187a7f2288d0e6761e71995335cfcd761dc74a6281e0c76e17b21eec836333d4ffa0f9ee01d5360adb756313f8df53f1e32cb2d59d622c8917396b9059d5d4
 Size (k8s.io_utils_@v_v0.0.0-20251002143259-bc988d571ff4.zip) = 220674 bytes
-BLAKE2s (prometheus-3.13.3.tar.gz) = 532085ac482afae8a71469e8b3490213d1c8ba8704858508471a1bbad71dad11
-SHA512 (prometheus-3.13.3.tar.gz) = ca620d0bf151b0e5c88787d6f78f399318181b1cb332ed6455f5badd9db65c3f1172261bd55f68bde47727ca9e0941cae37bc9bcb6c6e794c7851ed411d6642b
-Size (prometheus-3.13.3.tar.gz) = 5947386 bytes
-BLAKE2s (prometheus-web-ui-3.13.3.tar.gz) = 6bd886d4a5459454956f9b6892b114be67df9c4225f6bd7cd8483d133b161205
-SHA512 (prometheus-web-ui-3.13.3.tar.gz) = fafe9162a4acf50d262ec0225aebd3b5be738e45383349477fb827f454305f056af4e0083b0536facb01c358e8524a8f07a46832e95bc84fc3c8163893430dd7
-Size (prometheus-web-ui-3.13.3.tar.gz) = 3351116 bytes
+BLAKE2s (prometheus-3.13.4.tar.gz) = 7ca64dca9b11ce6df64d847cb2ac4d06919ff59cb020b0dc03213d2cf038bbbd
+SHA512 (prometheus-3.13.4.tar.gz) = 6113655bb41cff523ba625b201e8a23a609f8034fc33a2ab797971583730b6fddd3fceaffe6498a63b053c197235bf6612c60571f3af18d704ba8a0aa0211dfd
+Size (prometheus-3.13.4.tar.gz) = 5970529 bytes
+BLAKE2s (prometheus-web-ui-3.13.4.tar.gz) = 12eaa99c5dd4417d704adc0a4a9e4c7ecd75f61634073c806c63d761fa669f07
+SHA512 (prometheus-web-ui-3.13.4.tar.gz) = 7d0ca2352cbeec31a811a178b093c9a97ddabb8691759c63dd2c35b90eab0c201cf30ea8118404abef1a24f8d0ffc6b964d2ce4def93387d0a8e29c857f8252c
+Size (prometheus-web-ui-3.13.4.tar.gz) = 3263786 bytes
 BLAKE2s (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 0b1238d89c77686f02002092d6c14b461423ce7c2fa906f554deffefd727014d
 SHA512 (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = ca8b000bb3d6dce184fd01445782fa95557ec7ff6328dcd225dc26a14fc1d2d69baacaebe9d8703c867c8902f846950f9aefcc80af4530735f4b4432b77e4490
 Size (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 33 bytes

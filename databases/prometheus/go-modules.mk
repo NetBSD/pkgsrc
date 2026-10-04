@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.17 2026/09/26 10:58:29 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.18 2026/10/04 17:43:11 wiz Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.20.0.zip
@@ -680,8 +680,8 @@ GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-2026061518
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20260615183401-62b3387ff324.zip
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260610212136-7ab31c22f7ad.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260610212136-7ab31c22f7ad.zip
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.82.1.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.82.1.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.83.1.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.83.1.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.zip
 GO_MODULE_FILES+=	gopkg.in/alecthomas/kingpin.v2/@v/v2.2.6.mod
