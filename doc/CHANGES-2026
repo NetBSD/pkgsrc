@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6628 2026/10/04 09:22:45 iquiw Exp $
+$NetBSD: CHANGES-2026,v 1.6629 2026/10/04 09:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10009,3 +10009,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gtexinfo to 7.3 [wiz 2026-10-04]
 	Updated devel/task to 3.54.0 [iquiw 2026-10-04]
 	Updated security/cfssl to 1.7.0 [iquiw 2026-10-04]
+	Added sysutils/p5-Memory-Usage version 0.201 [wiz 2026-10-04]
