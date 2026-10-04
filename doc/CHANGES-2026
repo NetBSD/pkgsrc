@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6659 2026/10/04 16:21:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6660 2026/10/04 16:51:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10040,3 +10040,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-last to 7.2.0 [wiz 2026-10-04]
 	Updated lang/py-librt to 0.16.0 [wiz 2026-10-04]
 	Updated textproc/py-markupsafe to 3.0.4 [wiz 2026-10-04]
+	Updated devel/py-pdm_backend to 2.5.0 [wiz 2026-10-04]
