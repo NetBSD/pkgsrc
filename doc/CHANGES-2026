@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6661 2026/10/04 16:59:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6662 2026/10/04 17:01:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10042,3 +10042,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-markupsafe to 3.0.4 [wiz 2026-10-04]
 	Updated devel/py-pdm_backend to 2.5.0 [wiz 2026-10-04]
 	Added devel/py-test-remaster version 0.1.0 [wiz 2026-10-04]
+	Updated devel/py-pylint to 4.1.2 [wiz 2026-10-04]
