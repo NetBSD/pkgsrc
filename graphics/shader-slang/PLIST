@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/09/26 01:02:35 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/04 12:42:45 ktnb Exp $
 bin/slang
 bin/slangc
 bin/slangd
@@ -2505,7 +2505,7 @@ share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-if-predi
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-is-an-instruction-not-a-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-separate-for-condition-and-increment.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-skips-synthesized-constructor.slang
-share/doc/slang/generated/tests/design/ir-reference/metadata/debug-no-scope-emitted-without-operands.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-no-scope-replaced-by-caller-scope-restore.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-scope-references-debug-function.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-source-records-path-and-include-flag.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-source-text-operand-empty-at-minimal.slang
