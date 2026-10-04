@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/10/19 18:58:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/10/04 17:01:25 wiz Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -103,6 +103,9 @@ ${PYSITELIB}/pylint/checkers/lambda_expressions.pyo
 ${PYSITELIB}/pylint/checkers/logging.py
 ${PYSITELIB}/pylint/checkers/logging.pyc
 ${PYSITELIB}/pylint/checkers/logging.pyo
+${PYSITELIB}/pylint/checkers/looping_iterator_checker.py
+${PYSITELIB}/pylint/checkers/looping_iterator_checker.pyc
+${PYSITELIB}/pylint/checkers/looping_iterator_checker.pyo
 ${PYSITELIB}/pylint/checkers/match_statements_checker.py
 ${PYSITELIB}/pylint/checkers/match_statements_checker.pyc
 ${PYSITELIB}/pylint/checkers/match_statements_checker.pyo
@@ -392,6 +395,9 @@ ${PYSITELIB}/pylint/pyreverse/main.pyo
 ${PYSITELIB}/pylint/pyreverse/mermaidjs_printer.py
 ${PYSITELIB}/pylint/pyreverse/mermaidjs_printer.pyc
 ${PYSITELIB}/pylint/pyreverse/mermaidjs_printer.pyo
+${PYSITELIB}/pylint/pyreverse/node_info.py
+${PYSITELIB}/pylint/pyreverse/node_info.pyc
+${PYSITELIB}/pylint/pyreverse/node_info.pyo
 ${PYSITELIB}/pylint/pyreverse/plantuml_printer.py
 ${PYSITELIB}/pylint/pyreverse/plantuml_printer.pyc
 ${PYSITELIB}/pylint/pyreverse/plantuml_printer.pyo
@@ -419,6 +425,9 @@ ${PYSITELIB}/pylint/reporters/collecting_reporter.pyo
 ${PYSITELIB}/pylint/reporters/json_reporter.py
 ${PYSITELIB}/pylint/reporters/json_reporter.pyc
 ${PYSITELIB}/pylint/reporters/json_reporter.pyo
+${PYSITELIB}/pylint/reporters/junit_reporter.py
+${PYSITELIB}/pylint/reporters/junit_reporter.pyc
+${PYSITELIB}/pylint/reporters/junit_reporter.pyo
 ${PYSITELIB}/pylint/reporters/multi_reporter.py
 ${PYSITELIB}/pylint/reporters/multi_reporter.pyc
 ${PYSITELIB}/pylint/reporters/multi_reporter.pyo
@@ -449,6 +458,9 @@ ${PYSITELIB}/pylint/testutils/__init__.pyo
 ${PYSITELIB}/pylint/testutils/_primer/__init__.py
 ${PYSITELIB}/pylint/testutils/_primer/__init__.pyc
 ${PYSITELIB}/pylint/testutils/_primer/__init__.pyo
+${PYSITELIB}/pylint/testutils/_primer/comparator.py
+${PYSITELIB}/pylint/testutils/_primer/comparator.pyc
+${PYSITELIB}/pylint/testutils/_primer/comparator.pyo
 ${PYSITELIB}/pylint/testutils/_primer/package_to_lint.py
 ${PYSITELIB}/pylint/testutils/_primer/package_to_lint.pyc
 ${PYSITELIB}/pylint/testutils/_primer/package_to_lint.pyo
@@ -458,15 +470,36 @@ ${PYSITELIB}/pylint/testutils/_primer/primer.pyo
 ${PYSITELIB}/pylint/testutils/_primer/primer_command.py
 ${PYSITELIB}/pylint/testutils/_primer/primer_command.pyc
 ${PYSITELIB}/pylint/testutils/_primer/primer_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/primer_comment.py
+${PYSITELIB}/pylint/testutils/_primer/primer_comment.pyc
+${PYSITELIB}/pylint/testutils/_primer/primer_comment.pyo
 ${PYSITELIB}/pylint/testutils/_primer/primer_compare_command.py
 ${PYSITELIB}/pylint/testutils/_primer/primer_compare_command.pyc
 ${PYSITELIB}/pylint/testutils/_primer/primer_compare_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/primer_configuration.py
+${PYSITELIB}/pylint/testutils/_primer/primer_configuration.pyc
+${PYSITELIB}/pylint/testutils/_primer/primer_configuration.pyo
 ${PYSITELIB}/pylint/testutils/_primer/primer_prepare_command.py
 ${PYSITELIB}/pylint/testutils/_primer/primer_prepare_command.pyc
 ${PYSITELIB}/pylint/testutils/_primer/primer_prepare_command.pyo
 ${PYSITELIB}/pylint/testutils/_primer/primer_run_command.py
 ${PYSITELIB}/pylint/testutils/_primer/primer_run_command.pyc
 ${PYSITELIB}/pylint/testutils/_primer/primer_run_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer.py
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer.pyc
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer.pyo
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_command.py
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_command.pyc
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_compare_command.py
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_compare_command.pyc
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_compare_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_run_command.py
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_run_command.pyc
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_run_command.pyo
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_target.py
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_target.pyc
+${PYSITELIB}/pylint/testutils/_primer/pyreverse_primer_target.pyo
 ${PYSITELIB}/pylint/testutils/_run.py
 ${PYSITELIB}/pylint/testutils/_run.pyc
 ${PYSITELIB}/pylint/testutils/_run.pyo

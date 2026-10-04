@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2026/09/24 11:11:17 adam Exp $
+# $NetBSD: Makefile,v 1.124 2026/10/04 17:01:25 wiz Exp $
 #
 # Changes: https://github.com/pylint-dev/pylint/releases
 
-DISTNAME=	pylint-4.0.9
+DISTNAME=	pylint-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -21,15 +21,17 @@ DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.2:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.1:../../textproc/py-tomlkit
 TEST_DEPENDS+=	${PYPKGPREFIX}-gitpython>=3:../../devel/py-gitpython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-remaster>=0:../../devel/py-test-remaster
 
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	pylint pylint-config pyreverse symilar
 
-# as of 4.0.6
-# 25 failed, 1998 passed, 261 skipped, 5 xfailed
+# as of 4.1.2
+# 13 failed, 2250 passed, 315 skipped, 5 xfailed
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1:../../textproc/py-tomli
 .endif
