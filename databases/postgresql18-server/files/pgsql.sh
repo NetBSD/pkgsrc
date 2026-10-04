@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2026/10/02 18:11:09 gdt Exp $
+# $NetBSD: pgsql.sh,v 1.3 2026/10/04 12:09:32 gdt Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -54,9 +54,27 @@ if [ -n "${pgsql_flags}" ]; then
 	command_args_daemon="${command_args} -o \"${pgsql_flags}\""
 fi
 
+# If the sysctl named by the first arg is less than the second arg,
+# print a warning.
+check_sysctl()
+{
+    var=$1
+    limit=$2
+    value=`sysctl $var | @AWK@ '{print $3}'`
+    if [ "$value" -lt "$limit" ]; then
+	@ECHO@ "WARNING: pgsql: sysctl $var = $value IS LESS THAN $limit"
+    fi
+}
+
 pgsql_precmd()
 {
 	ulimit -n ${pgsql_nfiles}
+	case `uname` in
+	    NetBSD)
+		check_sysctl kern.ipc.semmni 32
+		check_sysctl kern.ipc.semmns 256
+		;;
+	esac
 	if [ ! -d ${pgsql_home}/data/base ]; then
 		pgsql_initdb
 	fi
