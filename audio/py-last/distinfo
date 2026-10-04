@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/07/06 06:59:11 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/10/04 16:19:26 wiz Exp $
 
-BLAKE2s (pylast-7.1.0.tar.gz) = 9192381dba01fb51198668e3dc0f889635af8a4d22c6cbbb61f093f417b4a584
-SHA512 (pylast-7.1.0.tar.gz) = 454356b7880f53dc7f9289d5e2d0a9d977bfe69a701c1c586f2c9820e8e874298fed131856dd82c4fd35881e2cc431b938c0dcea93048ebc3fc2e57dfe4e203d
-Size (pylast-7.1.0.tar.gz) = 437205 bytes
+BLAKE2s (pylast-7.2.0.tar.gz) = 3adcbd11ee4f59fc62790a62902684263456d4129e0970f94475737fbce382d1
+SHA512 (pylast-7.2.0.tar.gz) = f5a0c5afa8654d112865eef30f609cf9ac73828fd071583a7f2b80504a567ed142f569c0af40867d8c0cc2f6ef5a069a649a46d09ad2c20686981e1390b6caee
+Size (pylast-7.2.0.tar.gz) = 438013 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/07/06 06:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/04 16:19:26 wiz Exp $
 
-DISTNAME=	pylast-7.1.0
+DISTNAME=	pylast-7.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
@@ -25,8 +25,8 @@ USE_LANGUAGES=	# none
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 # 'For integration tests you need a test account at Last.fm'
-# without that, as of 7.1.0
-# 94 failed, 56 passed, 9 skipped, 1 xfailed, 2 warnings
+# without that, as of 7.2.0
+# 94 failed, 59 passed, 9 skipped, 1 xfailed, 2 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
