@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/10/19 10:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/04 16:51:29 wiz Exp $
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
@@ -31,12 +31,30 @@ ${PYSITELIB}/pdm/backend/_vendor/packaging/_musllinux.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_parser.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_parser.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_parser.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/_ranges.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/_ranges.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/_ranges.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_structures.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_structures.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_tokenizer.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_tokenizer.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/_tokenizer.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/dependency_groups.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/dependency_groups.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/dependency_groups.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/direct_url.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/direct_url.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/direct_url.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/errors.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/errors.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/errors.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/__init__.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/__init__.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/__init__.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/_spdx.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/_spdx.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/licenses/_spdx.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.pyo
@@ -44,6 +62,12 @@ ${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/py.typed
+${PYSITELIB}/pdm/backend/_vendor/packaging/pylock.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/pylock.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/pylock.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/ranges.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/ranges.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/ranges.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/requirements.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/requirements.pyo
@@ -63,6 +87,9 @@ ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/LICENSE
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.py
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.pyc
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.pyo
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/_dispatch.py
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/_dispatch.pyc
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/_dispatch.pyo
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.py
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.pyc
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.pyo
