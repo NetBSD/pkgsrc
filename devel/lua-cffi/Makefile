@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 20:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/04 15:52:48 wiz Exp $
 
 DISTNAME=	cffi-lua-0.2.4
 PKGNAME=	${DISTNAME:S/cffi-lua/lua-cffi/}
@@ -16,6 +16,8 @@ USE_LANGUAGES=		c++
 USE_CXX_FEATURES=	c++14
 USE_TOOLS+=		pkg-config
 WRKSRC=			${WRKDIR}/${DISTNAME}
+
+PLIST_SUBST+=		LUA_VERSION=${_LUA_DOT_VERSION}
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
