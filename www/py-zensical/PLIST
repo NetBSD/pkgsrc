@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/09/26 10:47:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/04 17:19:18 wiz Exp $
 bin/zensical-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -3153,6 +3153,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/balloon.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/ban.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/banana.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/bandage.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/bangladeshi-taka.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/banknote-arrow-down.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/banknote-arrow-up.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/banknote-check.svg
@@ -3276,6 +3277,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/bridge.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/briefcase-business.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/briefcase-conveyor-belt.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/briefcase-medical.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/briefcase-plus.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/briefcase.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/bring-to-front.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/broccoli.svg
@@ -3987,6 +3989,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/hospital.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/hotel.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/hourglass-cog.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/hourglass.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/house-cog.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/house-heart.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/house-plug.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/house-plus.svg
@@ -4076,6 +4079,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/lectern.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/lens-concave.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/lens-convex.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/letter-text.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/letters.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/library-big.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/library-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/library.svg
@@ -4085,7 +4089,10 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/lightbulb-off.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/lightbulb.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/lighthouse.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/line-chart.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/line-dot-bottom-vertical.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/line-dot-left-horizontal.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/line-dot-right-horizontal.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/line-dot-top-vertical.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/line-squiggle.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/line-style.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/link-2-off.svg
@@ -4451,6 +4458,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/power-off.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/power-square.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/power.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/presentation.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/printer-3d.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/printer-check.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/printer-x.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/printer.svg
@@ -4757,6 +4765,7 @@ ${PYSITELIB}/zensical/templates/.icons/lucide/square-round-corner.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-scissors.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-sigma.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-slash.svg
+${PYSITELIB}/zensical/templates/.icons/lucide/square-sparkles.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-split-horizontal.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-split-vertical.svg
 ${PYSITELIB}/zensical/templates/.icons/lucide/square-square.svg
@@ -14464,6 +14473,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/go.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gocd.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/godaddy.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/godotengine.svg
+${PYSITELIB}/zensical/templates/.icons/simple/godox.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gofundme.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gogdotcom.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/gojek.svg
@@ -14680,6 +14690,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/husqvarna.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hyper.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hyperskill.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hyperx.svg
+${PYSITELIB}/zensical/templates/.icons/simple/hypit.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hypothesis.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hyprland.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/hyundai.svg
@@ -15341,6 +15352,7 @@ ${PYSITELIB}/zensical/templates/.icons/simple/norwegian.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/note.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/notebooklm.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/notepadplusplus.svg
+${PYSITELIB}/zensical/templates/.icons/simple/notesnook.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/notion.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/notist.svg
 ${PYSITELIB}/zensical/templates/.icons/simple/nounproject.svg
@@ -16770,12 +16782,12 @@ ${PYSITELIB}/zensical/templates/.icons/simple/zyte.svg
 ${PYSITELIB}/zensical/templates/404.html
 ${PYSITELIB}/zensical/templates/assets/images/favicon.png
 ${PYSITELIB}/zensical/templates/assets/javascripts/LICENSE
-${PYSITELIB}/zensical/templates/assets/javascripts/bundle.c04ba553.min.js
+${PYSITELIB}/zensical/templates/assets/javascripts/bundle.67a597eb.min.js
 ${PYSITELIB}/zensical/templates/assets/javascripts/workers/search.7d14d953.min.js
-${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.1470d0a1.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.c7ab7c71.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.40d3fdbb.min.css
-${PYSITELIB}/zensical/templates/assets/stylesheets/modern/palette.812a03bb.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/classic/main.cfc7948b.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/classic/palette.bf1c5cd6.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/modern/main.4ae390e2.min.css
+${PYSITELIB}/zensical/templates/assets/stylesheets/modern/palette.96d1a7e4.min.css
 ${PYSITELIB}/zensical/templates/base.html
 ${PYSITELIB}/zensical/templates/blog-post.html
 ${PYSITELIB}/zensical/templates/blog.html
