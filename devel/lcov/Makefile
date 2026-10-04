@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/10/04 10:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/04 17:47:03 wiz Exp $
 
 DISTNAME=	lcov-2.6
 CATEGORIES=	devel
@@ -37,7 +37,7 @@ CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
 # as of 2.6:
-# 91 tests executed, 64 passed, 27 failed, 0 skipped
+# 91 tests executed, 65 passed, 26 failed, 0 skipped
 TEST_TARGET=	test
 # breaks tests
 #TEST_ENV+=	TESTCASE_ARGS=--parallel\ ${_MAKE_JOBS_N:U1}
