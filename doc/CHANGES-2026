@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6640 2026/10/04 12:58:37 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6641 2026/10/04 13:07:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10021,3 +10021,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/unordered-dense to 5.3.1 [ktnb 2026-10-04]
 	Updated net/wget2 to 2.3.0 [ryoon 2026-10-04]
 	Updated www/gumbo-parser to 0.14.1 [ktnb 2026-10-04]
+	Updated databases/duckdb to 1.5.6 [ryoon 2026-10-04]
