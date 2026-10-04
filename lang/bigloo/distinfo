@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2026/09/09 19:57:49 ktnb Exp $
+$NetBSD: distinfo,v 1.3 2026/10/04 22:29:47 ktnb Exp $
 
-BLAKE2s (bigloo-4.7a.tar.gz) = 1fd1d731b1279bfa23f243847963955532c8d466a1be1d6f5e1b83127c577ff1
-SHA512 (bigloo-4.7a.tar.gz) = 8516956472c6e390b5eaf9dee6bc804dc5f340bd75070d8146acc8d07050b49c0e0e35bdd7a46eb9877dd44eeca7ee7198c3cd51e22f5640a8d700cd4fe8603a
-Size (bigloo-4.7a.tar.gz) = 79609339 bytes
+BLAKE2s (bigloo-4.7b.tar.gz) = d60bc7d81ef31b1b3a857aa1a3438b9288667b08577edb7d3acde438475b6c40
+SHA512 (bigloo-4.7b.tar.gz) = 89fee25a5bfa495ae4ff70269e703e0d851bff0631dcd042e9a293ce368bcbddbabb235749444356f3b79591dbf47c6abef3fcb417403cf55559deef780f3fba
+Size (bigloo-4.7b.tar.gz) = 79471812 bytes
 SHA1 (patch-api_Makefile) = 35843a7de28939b7ba9badb30a9ed0d2d55fbe4f
 SHA1 (patch-autoconf_alloca) = d7d44b07e40a4d2ec1c657cab0b8b0a207431d6e
 SHA1 (patch-bdb_blib_Makefile) = 1180c1f0859f6c04de402bc99b1e68694e54e645
