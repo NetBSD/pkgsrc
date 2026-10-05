@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2026/07/16 19:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/05 07:48:36 wiz Exp $
 
-DISTNAME=	Perl-Tidy-20250912
+DISTNAME=	Perl-Tidy-20260826
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHANCOCK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Perl::Tidy
