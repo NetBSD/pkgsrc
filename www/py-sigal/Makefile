@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2026/06/28 15:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/05 10:26:30 wiz Exp $
 
 DISTNAME=	sigal-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sigal/}
 
@@ -12,7 +13,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
+DEPENDS+=	ffmpeg8-[0-9]*:../../multimedia/ffmpeg8
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
@@ -30,7 +31,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
 
 SUBST_CLASSES+=		ffmpeg
-SUBST_SED.ffmpeg+=	-e "s,ffmpeg,${PREFIX}/bin/ffmpeg7,"
+SUBST_SED.ffmpeg+=	-e "s,ffmpeg,${PREFIX}/bin/ffmpeg8,"
 SUBST_FILES.ffmpeg+=	src/sigal/settings.py
 SUBST_FILES.ffmpeg+=	src/sigal/video.py
 SUBST_STAGE.ffmpeg=	pre-build
