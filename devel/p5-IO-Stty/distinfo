@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/10/05 01:52:51 wen Exp $
 
-BLAKE2s (IO-Stty-0.04.tar.gz) = ff61ac4519def52958909203de9c37715c26e65e97c5169c8b7fb67907ded0e6
-SHA512 (IO-Stty-0.04.tar.gz) = 1a75adef5376612c87bb7c76eed96f6d67bd70eaae51dedf65e25a31b0d1d592a89dbf58fc669e956460a4d3889c3d5273c78bd1c7d926113b42e5f97064d38f
-Size (IO-Stty-0.04.tar.gz) = 9686 bytes
+BLAKE2s (IO-Stty-0.08.tar.gz) = 935366567e10ac8ceec61ea6d97ea18173795390d54bcb6b9cad8c4db60150c5
+SHA512 (IO-Stty-0.08.tar.gz) = cea340a6f9a47566c1d9c92f757e84e6862a4492a1d1d793a8899a9203df7944e43ec48352ac3e1b20cb0a0aded8084740c7ba14d1bb497bff2604b52611c5e0
+Size (IO-Stty-0.08.tar.gz) = 26588 bytes
