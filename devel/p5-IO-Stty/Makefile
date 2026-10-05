@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2026/07/16 19:02:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/10/05 01:52:51 wen Exp $
 
-DISTNAME=	IO-Stty-0.04
+DISTNAME=	IO-Stty-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TODDR/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl class for I/O on tty devices
