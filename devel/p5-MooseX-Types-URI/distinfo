@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:17:09 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/10/05 13:39:15 wen Exp $
 
-BLAKE2s (MooseX-Types-URI-0.09.tar.gz) = 6c56ac3e670b66c26f46c9260517209889d2fba5b2622acbedb1299a68466a3b
-SHA512 (MooseX-Types-URI-0.09.tar.gz) = b55fcb34a7033fe3e9d24b66aea4caf9bbc5508f609cd299fc2a31e1869e8b5b0b2007721a2c62f842890bfabbeb3787137c3c9684268228e6061e7c758b027c
-Size (MooseX-Types-URI-0.09.tar.gz) = 33724 bytes
+BLAKE2s (MooseX-Types-URI-0.10.tar.gz) = b21aca1181b2e59ee69820e60203dd41f18796cfeab5b39a246286be7b842797
+SHA512 (MooseX-Types-URI-0.10.tar.gz) = 86ba0d73b372e5b1a6e2328d6bcb82bc691cce01ba62d4decf5b543589839615f1cd35d1c6db91fc06865ecc5ffcbd94050f2f35ef186337700f748a7cfbb76a
+Size (MooseX-Types-URI-0.10.tar.gz) = 30612 bytes

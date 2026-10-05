@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2026/07/16 19:03:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/05 13:39:15 wen Exp $
 #
 
-DISTNAME=	MooseX-Types-URI-0.09
+DISTNAME=	MooseX-Types-URI-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/MooseX-Types-URI
@@ -18,6 +17,8 @@ DEPENDS+=	p5-URI>0:../../www/p5-URI
 DEPENDS+=	p5-URI-FromHash>0:../../www/p5-URI-FromHash
 
 USE_LANGUAGES=	# empty
+PERL5_MODULE_TYPE=	Module::Build
+
 PERL5_PACKLIST=	auto/MooseX/Types/URI/.packlist
 
 .include "../../lang/perl5/module.mk"
