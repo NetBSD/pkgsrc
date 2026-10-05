@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6706 2026/10/05 10:22:00 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6707 2026/10/05 10:23:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10094,3 +10094,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/oculante to 0.9.6 [pin 2026-10-05]
 	Updated shells/nushell to 0.116.1 [pin 2026-10-05]
 	Updated shells/oh-my-posh to 31.4.1 [pin 2026-10-05]
+	Updated sysutils/xtop to 0.4.0 [pin 2026-10-05]
