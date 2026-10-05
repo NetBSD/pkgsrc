@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6685 2026/10/05 02:30:36 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6686 2026/10/05 02:33:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10066,3 +10066,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Log-Any to 1.72.0 [wen 2026-10-05]
 	Updated textproc/py-sphinxcontrib-programoutput2 to 2.0a1nb1 [jnemeth 2026-10-05]
 	Updated devel/p5-Log-Dispatchouli to 3.101 [wen 2026-10-05]
+	Updated devel/p5-Long-Jump to 0.000005 [wen 2026-10-05]
