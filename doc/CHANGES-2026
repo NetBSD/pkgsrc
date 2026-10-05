@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6726 2026/10/05 13:47:15 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6727 2026/10/05 13:50:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10117,3 +10117,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-MooseX-Types-URI to 0.10 [wen 2026-10-05]
 	Updated devel/p5-MooseX-Types to 0.51 [wen 2026-10-05]
 	Updated devel/p5-MooX-Cmd to 1.000 [wen 2026-10-05]
+	Updated devel/p5-MooX-StrictConstructor to 0.013 [wen 2026-10-05]
