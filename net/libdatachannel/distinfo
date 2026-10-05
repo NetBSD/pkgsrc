@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/05 13:18:20 ktnb Exp $
+
+BLAKE2s (libdatachannel-0.24.6.tar.gz) = f6af5c2694fa992a933552089c92ba7867e67b1f2be1ade235c20c777fafdac6
+SHA512 (libdatachannel-0.24.6.tar.gz) = 95ee4e0be3c524867bf14ecbe438ab3bca08fd939e4ce79ca35b66055ff2cca8e61779eb8ad16ba0f3b2eb86b469f0e82cc0e7bff286f0797607a26c2c2b6e58
+Size (libdatachannel-0.24.6.tar.gz) = 52656037 bytes
