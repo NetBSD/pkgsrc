@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/08/11 01:27:53 wen Exp $
+$NetBSD: distinfo,v 1.21 2026/10/05 01:56:17 wen Exp $
 
-BLAKE2s (IO-Tty-1.20.tar.gz) = 9dd8df1fe2f86ff41a113f1ef9eba9e9a434d681762270551d9be1ba4bcbfb59
-SHA512 (IO-Tty-1.20.tar.gz) = a411dcc3da4adf4913ceaca7d97198041c6870ac8b579a1d5c2517d984fab4cc8108962b23ee694da9e0c952f35d695e636ff35589873b95a86c2bf8c1838ee4
-Size (IO-Tty-1.20.tar.gz) = 27709 bytes
+BLAKE2s (IO-Tty-1.31.tar.gz) = 07e88b35f6f0bd23a65b25cc40f347a58bc7e55d49d0fa992ec509d0e48c5feb
+SHA512 (IO-Tty-1.31.tar.gz) = be4d306aca7e5214bdef9ccfa3079d09142938d5b3804a246facfe0becbf4562d503dd1a56c914b2ac88a8f3134e2688e4d5d681e9644115dd5fd01c5bda84bc
+Size (IO-Tty-1.31.tar.gz) = 39131 bytes
