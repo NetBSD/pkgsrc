@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6678 2026/10/05 01:53:34 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6679 2026/10/05 01:57:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10059,3 +10059,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/bigloo to 4.7b [ktnb 2026-10-04]
 	Updated devel/p5-Hash-Case to 1.07 [wen 2026-10-05]
 	Updated devel/p5-IO-Stty to 0.08 [wen 2026-10-05]
+	Updated devel/p5-IO-Tty to 1.31 [wen 2026-10-05]
