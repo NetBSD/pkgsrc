@@ -1,17 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/06/17 01:33:43 markd Exp $
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Actions.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Antispam.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Antivirus.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Authres.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/DKIM.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/DKIM/ARC.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/MIME.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Mail.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Net.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/RFC2822.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Unit.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Utils.pm
+@comment $NetBSD: PLIST,v 1.11 2026/10/05 04:09:37 jnemeth Exp $
 bin/md-mx-ctrl
 bin/mimedefang
 bin/mimedefang-multiplexor
@@ -20,18 +7,43 @@ bin/mimedefang-util
 bin/mimedefang.pl
 bin/watch-mimedefang
 bin/watch-multiple-mimedefangs.tcl
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Actions.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Antispam.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Antivirus.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Async.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Async/Checks.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Async/Results.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Authres.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/BIMI.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/DKIM.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/DKIM/ARC.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/MIME.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Mail.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Net.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/RFC2822.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/SPF.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/TLSPolicy.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Unit.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Utils.pm
 man/man1/mimedefang-util.1
 man/man3/Mail::MIMEDefang.3
 man/man3/Mail::MIMEDefang::Actions.3
 man/man3/Mail::MIMEDefang::Antispam.3
 man/man3/Mail::MIMEDefang::Antivirus.3
+man/man3/Mail::MIMEDefang::Async.3
+man/man3/Mail::MIMEDefang::Async::Checks.3
+man/man3/Mail::MIMEDefang::Async::Results.3
 man/man3/Mail::MIMEDefang::Authres.3
+man/man3/Mail::MIMEDefang::BIMI.3
 man/man3/Mail::MIMEDefang::DKIM.3
 man/man3/Mail::MIMEDefang::DKIM::ARC.3
 man/man3/Mail::MIMEDefang::MIME.3
 man/man3/Mail::MIMEDefang::Mail.3
 man/man3/Mail::MIMEDefang::Net.3
 man/man3/Mail::MIMEDefang::RFC2822.3
+man/man3/Mail::MIMEDefang::SPF.3
+man/man3/Mail::MIMEDefang::TLSPolicy.3
 man/man3/Mail::MIMEDefang::Unit.3
 man/man3/Mail::MIMEDefang::Utils.3
 man/man5/mimedefang-filter.5
@@ -47,3 +59,4 @@ man/man8/watch-multiple-mimedefangs.8
 share/examples/mimedefang/mimedefang-filter
 share/examples/mimedefang/sa-mimedefang.cf
 share/mimedefang/gen-ip-validator.pl
+@pkgdir etc/mimedefang
