@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/05 13:13:35 ktnb Exp $
+
+BLAKE2s (plog-1.1.11.tar.gz) = 70bbca6d3a7a47508e07669a25e1814a90a36d2cf23a4d28eef98d7e5f0db547
+SHA512 (plog-1.1.11.tar.gz) = b51b83a2b478a54d83333590a4f157e3fdeea08903486249d537811afef370ce9968197efb534f2b4084a5a7a7253e5e2d7e191d602451ea625d645a39f195dc
+Size (plog-1.1.11.tar.gz) = 208251 bytes
