@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/10/05 02:27:11 jnemeth Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/05 07:27:55 wiz Exp $
 
 DISTNAME=	sphinxcontrib-programoutput2-2.0a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Extension to include output of arbitrary commands
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
