@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2026/07/16 19:02:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/05 13:46:37 wen Exp $
 
-DISTNAME=	MooX-Cmd-0.017
+DISTNAME=	MooX-Cmd-1.000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GE/GETTY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/MooX-Cmd

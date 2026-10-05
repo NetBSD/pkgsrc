@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:17:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2026/10/05 13:46:37 wen Exp $
 
-BLAKE2s (MooX-Cmd-0.017.tar.gz) = 2129df784b185ace46b7eba6c5bd66875cf21329113f4e28194cef00ed45e058
-SHA512 (MooX-Cmd-0.017.tar.gz) = f59ac5b62814238b52e4d5787925666c26f4e2af5626a0d8757ae23c26694c737bdef02ab82ba93d2650e6be360d27aff1806d661d65a14e6ea01c52bc0404b4
-Size (MooX-Cmd-0.017.tar.gz) = 18536 bytes
+BLAKE2s (MooX-Cmd-1.000.tar.gz) = b9e9907615dbea56dca8fc4dac45b088ee3b4b76519cc8e7265a475fecb53c43
+SHA512 (MooX-Cmd-1.000.tar.gz) = a8d7aaffcdc86fe9dc3834cbb64a48e143baf76af82ddfda51cf820e8067d49b4bc8b216bd355ce006de4129fe58a743184c75b012093d2eb7910351ac51569a
+Size (MooX-Cmd-1.000.tar.gz) = 29697 bytes
