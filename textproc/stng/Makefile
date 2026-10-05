@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/02/21 15:17:28 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/05 10:24:36 pin Exp $
 
-DISTNAME=	stng-1.0.0
+DISTNAME=	stng-1.7.1
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -11,6 +11,8 @@ COMMENT=	Language-aware string extraction for Go and Rust binaries
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
+
+USE_LANGUAGES+=	c c++
 
 .include "cargo-depends.mk"
 
