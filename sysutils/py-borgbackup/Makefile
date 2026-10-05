@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2026/07/21 14:10:28 he Exp $
+# $NetBSD: Makefile,v 1.65 2026/10/05 13:18:29 adam Exp $
 
-DISTNAME=	borgbackup-1.4.4
+DISTNAME=	borgbackup-1.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
 
@@ -11,12 +10,12 @@ HOMEPAGE=	https://github.com/borgbackup/borg
 COMMENT=	Deduplicating backup program with compression and encryption
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig>=0:../../devel/py-pkgconfig
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.3:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil>=0:../../time/py-dateutil
 
 USE_LANGUAGES=	c c++
 
