@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.7 2026/03/03 19:49:24 tnn Exp $
+$NetBSD: distinfo,v 1.8 2026/10/05 19:06:11 tnn Exp $
 
-BLAKE2s (deskflow-1.26.0.tar.gz) = 81ed6accb5150431f61b384383cdd9d86cd35f586b0a752a104e9e5342d833b8
-SHA512 (deskflow-1.26.0.tar.gz) = 419eccd26ae9199d6f98167e3e97c1de44e316b1b3b49d7318cf323e9955934e5ee6c4c5175ec05fc6410e5aeacae619406a98d6084a11643b24220179eb7cec
-Size (deskflow-1.26.0.tar.gz) = 1306972 bytes
-SHA1 (patch-cmake_Libraries.cmake) = 037ac3fdff42849d414db7e8551b3ac027d35964
+BLAKE2s (deskflow-1.27.0.tar.gz) = 9cf052ef25f9b12b7b994e46f0125553fa4d1e1fb925f9b3c4382690e9dbbfe7
+SHA512 (deskflow-1.27.0.tar.gz) = 8d7b944fe70155db352a37b691755b05e9c695080ed0d9aa32140b90faae3da13315cd5f5e9f8fed2fe3a9b5045bffddd09bad1365d57ae70f16bae6eb3372d4
+Size (deskflow-1.27.0.tar.gz) = 1329103 bytes
 SHA1 (patch-src_apps_deskflow-core_CMakeLists.txt) = d2833b28ff9bb7fbe6ca9314214b26b0ecebd4d5
 SHA1 (patch-src_apps_deskflow-gui_CMakeLists.txt) = ac1a434c31a65907d66b465c83e13c07dde860c4
-SHA1 (patch-src_lib_base_String.h) = d22d8582bf82befee28255746630642a1152dc64

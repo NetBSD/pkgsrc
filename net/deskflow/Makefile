@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/09/29 06:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/05 19:06:11 tnn Exp $
 
-DISTNAME=	deskflow-1.26.0
-PKGREVISION=	4
+DISTNAME=	deskflow-1.27.0
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,16 +17,13 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++20
 USE_TOOLS+=		pkg-config
 
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_USER_DOCS=OFF
 # Tests on at least OSX require elevated privileges to interact with for example the clipboard
 CMAKE_CONFIGURE_ARGS+=	-DSKIP_BUILD_TESTS=ON
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/lib/common/Settings.h
-SUBST_FILES.paths+=	src/lib/deskflow/unix/AppUtilUnix.cpp
 SUBST_SED.paths=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,"/usr/local\(/share/X11/xkb\),"${X11BASE}\1,g'
 
 .include "../../mk/bsd.prefs.mk"
 
