@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6694 2026/10/05 07:41:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6695 2026/10/05 07:46:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10082,3 +10082,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-mypy to 2.4.0 [wiz 2026-10-05]
 	Updated converters/p5-Cpanel-JSON-XS to 4.53 [wiz 2026-10-05]
 	Updated time/p5-DateTime-Format-W3CDTF to 0.09 [wiz 2026-10-05]
+	Updated devel/p5-PPI to 1.291 [wiz 2026-10-05]
