@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/12/17 03:41:36 mef Exp $
+$NetBSD: distinfo,v 1.10 2026/10/05 02:19:49 wen Exp $
 
-BLAKE2s (IPC-Shareable-1.13.tar.gz) = 9b1759e1da92bc0b77970eaee45a852c7f8f493b2e2e6bc8f826cb257045351d
-SHA512 (IPC-Shareable-1.13.tar.gz) = c7559f41131b27da31bf0acba0ac0b2bb4424c516325b2e65892dff89d9b8362367e5e74edc93ac2df370a2ab74c8397e83eb73c4144ab25baf1997c4d76651b
-Size (IPC-Shareable-1.13.tar.gz) = 51682 bytes
+BLAKE2s (IPC-Shareable-1.19.tar.gz) = f145d75f92f57c407828b2bfd4e9da2e3fd27db880eefced75f559dd1aa78b0a
+SHA512 (IPC-Shareable-1.19.tar.gz) = e3065c694bf08e78b80f2886ab2346ee64299eff8751845df1fbbf3c72021f3cf7979510ae2c2ce535b973f55f0a77fa56b4bffb3643f05551f0322490e37f1c
+Size (IPC-Shareable-1.19.tar.gz) = 137700 bytes

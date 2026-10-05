@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.39 2026/07/16 19:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/05 02:19:49 wen Exp $
 
-DISTNAME=	IPC-Shareable-1.13
+DISTNAME=	IPC-Shareable-1.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/ST/STEVEB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/IPC-Shareable
 COMMENT=	Tie a variable to shared memory
 LICENSE=	gnu-gpl-v2
+
+EXTRACT_USING=	gtar
 
 DEPENDS+=	p5-String-CRC32>=0:../../textproc/p5-String-CRC32
 
@@ -18,11 +19,9 @@ PERL5_PACKLIST=		auto/IPC/Shareable/.packlist
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-# The tests hang on NetBSD 9.2, both as unprivileged user and as root.
-# The last words are:
+# The tests failed on NetBSD, because: 
+# 'sysv_info() returns undef on unsupported platform (netbsd)'
 #
-# t/25ipc.......Could not create semaphore set: No space left on device
-#   at t/25ipc.t line 37
 TEST_TARGET=	# disabled
 .endif
 
