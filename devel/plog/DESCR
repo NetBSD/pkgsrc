@@ -1,0 +1,7 @@
+Pretty powerful logging library in about 1000 lines of code.
+Some features include: very small, easy to use headers only, no
+3rd-party dependencies, cross-platform, thread and type safe,
+formatters: TXT, CSV, FuncMessage, MessageOnly, lazy stream
+evaluation unicode aware (files are stored in UTF-8, supports
+Utf8Everywhere), extendable, can use UTC or local time,
+can print buffers in HEX or ASCII, and can print std containers.
