@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:24:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/10/05 07:41:17 wiz Exp $
 
-BLAKE2s (DateTime-Format-W3CDTF-0.08.tar.gz) = d650be89f6be1b5d90cdebbc00eb2ed52709953f2dccecad6128706e176fd619
-SHA512 (DateTime-Format-W3CDTF-0.08.tar.gz) = d7b04870909432a7a98189dc2239ec201f9132e5a5b6db5d3284351a7db31324c1451538880d215073f8fa1e0f909b99a51354e8e87d6c4cf11d90ea184c9b4e
-Size (DateTime-Format-W3CDTF-0.08.tar.gz) = 32885 bytes
+BLAKE2s (DateTime-Format-W3CDTF-0.09.tar.gz) = 67ec683e90bb07d0510556d14399fb1024fe05dd1b92de234bfaeedd529e7103
+SHA512 (DateTime-Format-W3CDTF-0.09.tar.gz) = bde6fcbc1b4e0eeb1d49526f2e2fe6d9601b9a98e70e546be112e5a9241713c9aeefc98ac555b6ccffa2dc1d0b2111f53bb3f182195e552e0d0fb24b8f2dc85f
+Size (DateTime-Format-W3CDTF-0.09.tar.gz) = 33335 bytes
