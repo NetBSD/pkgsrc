@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6676 2026/10/04 22:30:08 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6677 2026/10/05 01:50:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10057,3 +10057,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/grafana to 13.2.3 [wiz 2026-10-04]
 	Updated databases/prometheus to 3.13.4 [wiz 2026-10-04]
 	Updated lang/bigloo to 4.7b [ktnb 2026-10-04]
+	Updated devel/p5-Hash-Case to 1.07 [wen 2026-10-05]
