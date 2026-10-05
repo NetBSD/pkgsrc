@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28108 2026/10/05 08:06:23 wiz Exp $
+$NetBSD: TODO,v 1.28109 2026/10/05 21:26:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -681,11 +681,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ggml-0.26.0
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.5
 	o gitea-28.0
-	o gleam-1.18.0
+	o gleam-1.19.0
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
 	o gliv-1.9.7
@@ -954,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mipsel-none-elf-binutils-2.36.1
 	o mipsel-none-elf-gcc-9.3.0
 	o mit-scheme-bin-9.2
+	o mold-3.0.0
 	o mongo-c-driver-2.3.3
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
@@ -1099,6 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o phpmyadmin-5.2.2
 	o phraseanet-4.1.15
 	o phraseanet-indexer-4.1.15
+	o picard-3.0
 	o pick-4.0.0
 	o picp-0.6.8
 	o picprg-3.01
