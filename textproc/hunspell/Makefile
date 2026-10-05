@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/09/30 09:10:08 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/10/05 08:06:11 wiz Exp $
 
-DISTNAME=	hunspell-1.7.4
+DISTNAME=	hunspell-1.7.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://hunspell.github.io/
 COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint
+USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint bash:test gawk:test
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ui
 PKGCONFIG_OVERRIDE+=	hunspell.pc.in
@@ -36,7 +36,17 @@ SUBST_SED.paths+=	-e 's,/usr/share/myspell/,${PREFIX}/share/hunspell/,g'
 PLIST_SRC=		PLIST
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-REPLACE_PERL=	src/tools/ispellaff2myspell
+REPLACE_PERL+=	src/tools/ispellaff2myspell
+REPLACE_BASH+=	tests/test.sh
+
+# as of 1.7.5:
+# TOTAL: 174
+# PASS:  160
+# SKIP:  1
+# XFAIL: 0
+# FAIL:  13
+# XPASS: 0
+# ERROR: 0
 
 post-patch:
 	cd ${WRKSRC} && ${TOOLS_PATH.autoreconf} -v -i --force
