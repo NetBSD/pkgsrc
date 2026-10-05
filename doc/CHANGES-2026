@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6700 2026/10/05 08:01:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6701 2026/10/05 08:06:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10088,3 +10088,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal-Encoder to 5.010 [wiz 2026-10-05]
 	Updated converters/p5-Sereal to 5.010 [wiz 2026-10-05]
 	Updated textproc/git-delta to 0.20.1 [wiz 2026-10-05]
+	Updated textproc/hunspell to 1.7.5 [wiz 2026-10-05]
