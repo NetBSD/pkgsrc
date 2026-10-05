@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6704 2026/10/05 10:18:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6705 2026/10/05 10:20:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10092,3 +10092,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.0.10nb1 [wiz 2026-10-05]
 	Updated devel/sem to 0.27.0 [pin 2026-10-05]
 	Updated graphics/oculante to 0.9.6 [pin 2026-10-05]
+	Updated shells/nushell to 0.116.1 [pin 2026-10-05]
