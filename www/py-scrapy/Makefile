@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/09/03 08:35:37 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/05 07:26:41 adam Exp $
 
-DISTNAME=	scrapy-2.18.0
+DISTNAME=	scrapy-2.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
@@ -12,7 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24.3.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.13.3:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.2.0:../../archivers/py-brotli
+DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=3.4.0:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
@@ -20,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-itemadapter>=0.1.0:../../textproc/py-itemadapter
 DEPENDS+=	${PYPKGPREFIX}-itemloaders>=1.0.1:../../textproc/py-itemloaders
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.0.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-protego>=0.1.15:../../www/py-protego
 DEPENDS+=	${PYPKGPREFIX}-pydispatcher>=2.0.5:../../devel/py-pydispatcher

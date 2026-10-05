@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/09/03 08:35:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/10/05 07:26:41 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -97,6 +97,9 @@ ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyo
+${PYSITELIB}/scrapy/core/downloader/handlers/_aiohttp.py
+${PYSITELIB}/scrapy/core/downloader/handlers/_aiohttp.pyc
+${PYSITELIB}/scrapy/core/downloader/handlers/_aiohttp.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/_base_http.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/_base_http.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/_base_http.pyo
@@ -241,6 +244,9 @@ ${PYSITELIB}/scrapy/extensions/periodic_log.pyo
 ${PYSITELIB}/scrapy/extensions/postprocessing.py
 ${PYSITELIB}/scrapy/extensions/postprocessing.pyc
 ${PYSITELIB}/scrapy/extensions/postprocessing.pyo
+${PYSITELIB}/scrapy/extensions/remote_control.py
+${PYSITELIB}/scrapy/extensions/remote_control.pyc
+${PYSITELIB}/scrapy/extensions/remote_control.pyo
 ${PYSITELIB}/scrapy/extensions/spiderstate.py
 ${PYSITELIB}/scrapy/extensions/spiderstate.pyc
 ${PYSITELIB}/scrapy/extensions/spiderstate.pyo
@@ -435,6 +441,9 @@ ${PYSITELIB}/scrapy/utils/_deps_compat.pyo
 ${PYSITELIB}/scrapy/utils/_download_handlers.py
 ${PYSITELIB}/scrapy/utils/_download_handlers.pyc
 ${PYSITELIB}/scrapy/utils/_download_handlers.pyo
+${PYSITELIB}/scrapy/utils/_remote_control.py
+${PYSITELIB}/scrapy/utils/_remote_control.pyc
+${PYSITELIB}/scrapy/utils/_remote_control.pyo
 ${PYSITELIB}/scrapy/utils/asyncgen.py
 ${PYSITELIB}/scrapy/utils/asyncgen.pyc
 ${PYSITELIB}/scrapy/utils/asyncgen.pyo
