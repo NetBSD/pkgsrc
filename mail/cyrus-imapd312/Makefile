@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/07/26 02:43:18 mef Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/05 02:43:47 jnemeth Exp $
 
-DISTNAME=	cyrus-imapd-3.12.1
-PKGREVISION=	1
+DISTNAME=	cyrus-imapd-3.12.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
 GITHUB_TAG=	${PKGNAME_NOREV}
