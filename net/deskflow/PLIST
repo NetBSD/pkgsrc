@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/03/03 19:49:24 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/05 19:06:11 tnn Exp $
 bin/deskflow
 bin/deskflow-core
 man/man1/deskflow-core.1
@@ -11,6 +11,11 @@ share/deskflow/translations/deskflow_ja.qm
 share/deskflow/translations/deskflow_ko.qm
 share/deskflow/translations/deskflow_ru.qm
 share/deskflow/translations/deskflow_zh_CN.qm
+share/doc/deskflow/Configuration.md
+share/doc/deskflow/HelpMain.md
+share/doc/deskflow/Issues.md
+share/doc/deskflow/Readme.md
+share/doc/deskflow/Security.md
 share/icons/hicolor/512x512/apps/org.deskflow.deskflow.png
 share/icons/hicolor/symbolic/apps/org.deskflow.deskflow-symbolic.svg
 share/licenses/deskflow/LICENSE

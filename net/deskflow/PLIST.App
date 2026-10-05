@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST.App,v 1.4 2026/03/03 21:14:46 tnn Exp $
+@comment $NetBSD: PLIST.App,v 1.5 2026/10/05 19:06:11 tnn Exp $
 Applications/Deskflow.app/Contents/Info.plist
 Applications/Deskflow.app/Contents/MacOS/Deskflow
 Applications/Deskflow.app/Contents/MacOS/deskflow-core
 Applications/Deskflow.app/Contents/Resources/Deskflow.icns
 Applications/Deskflow.app/Contents/Resources/LICENSE
 Applications/Deskflow.app/Contents/Resources/LICENSE_EXCEPTION
+Applications/Deskflow.app/Contents/Resources/docs/Configuration.md
+Applications/Deskflow.app/Contents/Resources/docs/HelpMain.md
+Applications/Deskflow.app/Contents/Resources/docs/Issues.md
+Applications/Deskflow.app/Contents/Resources/docs/Readme.md
+Applications/Deskflow.app/Contents/Resources/docs/Security.md
 Applications/Deskflow.app/Contents/Resources/translations/deskflow_en.qm
 Applications/Deskflow.app/Contents/Resources/translations/deskflow_es.qm
 Applications/Deskflow.app/Contents/Resources/translations/deskflow_it.qm
