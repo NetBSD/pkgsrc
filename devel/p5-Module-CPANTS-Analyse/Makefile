@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2026/07/16 19:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/10/05 13:19:15 wen Exp $
 
-DISTNAME=		Module-CPANTS-Analyse-1.02
+DISTNAME=		Module-CPANTS-Analyse-1.03
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		devel perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IS/ISHIGAKI/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Module-CPANTS-Analyse
