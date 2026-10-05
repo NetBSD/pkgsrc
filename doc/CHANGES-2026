@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6683 2026/10/05 02:25:33 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6684 2026/10/05 02:27:16 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10064,3 +10064,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/cyrus-imapd310 to 3.10.4 [jnemeth 2026-10-05]
 	Updated devel/p5-IPC-Shareable to 1.19 [wen 2026-10-05]
 	Updated devel/p5-Log-Any to 1.72.0 [wen 2026-10-05]
+	Updated textproc/py-sphinxcontrib-programoutput2 to 2.0a1nb1 [jnemeth 2026-10-05]
