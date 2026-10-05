@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.68 2026/09/28 19:04:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.69 2026/10/05 10:19:09 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -237,6 +237,7 @@ CARGO_CRATE_DEPENDS+=	fast-float2-0.2.3
 CARGO_CRATE_DEPENDS+=	fastrand-2.3.0
 CARGO_CRATE_DEPENDS+=	fax-0.2.6
 CARGO_CRATE_DEPENDS+=	fax_derive-0.2.0
+CARGO_CRATE_DEPENDS+=	fd-lock-4.0.4
 CARGO_CRATE_DEPENDS+=	fdeflate-0.3.7
 CARGO_CRATE_DEPENDS+=	fff-grep-0.11.0
 CARGO_CRATE_DEPENDS+=	fff-notify-debouncer-full-0.9.4
@@ -439,7 +440,7 @@ CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.9
 CARGO_CRATE_DEPENDS+=	mio-1.2.0
 CARGO_CRATE_DEPENDS+=	mockito-1.7.2
 CARGO_CRATE_DEPENDS+=	moxcms-0.8.1
-CARGO_CRATE_DEPENDS+=	mq-markdown-0.8.4
+CARGO_CRATE_DEPENDS+=	mq-markdown-0.9.2
 CARGO_CRATE_DEPENDS+=	multipart-rs-0.2.3
 CARGO_CRATE_DEPENDS+=	native-tls-0.2.18
 CARGO_CRATE_DEPENDS+=	ndarray-0.17.2
@@ -627,7 +628,7 @@ CARGO_CRATE_DEPENDS+=	recvmsg-1.0.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.6
 CARGO_CRATE_DEPENDS+=	redox_users-0.5.2
-CARGO_CRATE_DEPENDS+=	reedline-0.52.0
+CARGO_CRATE_DEPENDS+=	reedline-0.52.1
 CARGO_CRATE_DEPENDS+=	ref-cast-1.0.25
 CARGO_CRATE_DEPENDS+=	ref-cast-impl-1.0.25
 CARGO_CRATE_DEPENDS+=	regex-1.13.1
