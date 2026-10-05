@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6714 2026/10/05 13:06:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6715 2026/10/05 13:11:14 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10103,3 +10103,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.12.1 [drixter 2026-10-05]
 	Updated devel/py-ipykernel to 7.4.0 [adam 2026-10-05]
 	Updated www/py-django-stubs-ext to 6.1.2 [adam 2026-10-05]
+	Added net/usrsctp version 0.9.5.0 [ktnb 2026-10-05]
