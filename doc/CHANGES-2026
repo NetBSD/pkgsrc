@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6696 2026/10/05 07:48:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6697 2026/10/05 07:50:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10084,3 +10084,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/p5-DateTime-Format-W3CDTF to 0.09 [wiz 2026-10-05]
 	Updated devel/p5-PPI to 1.291 [wiz 2026-10-05]
 	Updated devel/p5-Perl-Tidy to 20260826 [wiz 2026-10-05]
+	Updated converters/p5-Sereal-Decoder to 5.010 [wiz 2026-10-05]
