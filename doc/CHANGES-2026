@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6721 2026/10/05 13:27:37 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6722 2026/10/05 13:30:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10112,3 +10112,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-types-docutils to 0.23.0.20260923 [adam 2026-10-05]
 	Updated devel/p5-Module-Install-RTx to 0.45 [wen 2026-10-05]
 	Updated devel/p5-Module-Manifest-Skip to 0.24 [wen 2026-10-05]
+	Updated devel/p5-Module-Starter to 1.82 [wen 2026-10-05]
