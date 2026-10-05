@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6691 2026/10/05 07:29:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6692 2026/10/05 07:37:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10079,3 +10079,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/copyq to 17.0.0 [kikadf 2026-10-05]
 	Updated www/py-scrapy to 2.19.0 [adam 2026-10-05]
 	Updated misc/py-platformdirs to 4.12.3 [adam 2026-10-05]
+	Updated lang/py-mypy to 2.4.0 [wiz 2026-10-05]
