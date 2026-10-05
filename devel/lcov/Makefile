@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/10/05 18:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/05 19:39:02 wiz Exp $
 
 DISTNAME=	lcov-2.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,6 +22,7 @@ DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Memory-Process-[0-9]*:../../sysutils/p5-Memory-Process
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=0:../../textproc/py-xlsxwriter
+TEST_DEPENDS+=	jq-[0-9]*:../../devel/jq
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run gmake perl
@@ -40,7 +41,7 @@ CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
 # as of 2.6nb1:
-# 91 tests executed, 72 passed, 19 failed, 0 skipped
+# 91 tests executed, 77 passed, 14 failed, 0 skipped
 TEST_TARGET=	test
 # breaks tests
 #TEST_ENV+=	TESTCASE_ARGS=--parallel\ ${_MAKE_JOBS_N:U1}
@@ -74,7 +75,6 @@ REPLACE_BASH+=	tests/genhtml/mycppfilt.sh
 REPLACE_BASH+=	tests/genhtml/part1.sh
 REPLACE_BASH+=	tests/genhtml/part2.sh
 REPLACE_BASH+=	tests/genhtml/relative/relative.sh
-REPLACE_BASH+=	tests/genhtml/scriptargs/scriptargs.sh
 REPLACE_BASH+=	tests/genhtml/selectscript/selectscript.sh
 REPLACE_BASH+=	tests/genhtml/shellquote/shellquote.sh
 REPLACE_BASH+=	tests/genhtml/simple/part1.sh
@@ -88,14 +88,12 @@ REPLACE_BASH+=	tests/genhtml/xplatform/xplatform.sh
 REPLACE_BASH+=	tests/genhtml/zero.sh
 REPLACE_BASH+=	tests/genpng/genpng.sh
 REPLACE_BASH+=	tests/html2lcov/html2lcov.sh
-REPLACE_BASH+=	tests/jacoco2lcov/jacoco2lcov.sh
 REPLACE_BASH+=	tests/lcov/add/aggdir.sh
 REPLACE_BASH+=	tests/lcov/add/prune.sh
 REPLACE_BASH+=	tests/lcov/add/track.sh
 REPLACE_BASH+=	tests/lcov/branch/branch.sh
 REPLACE_BASH+=	tests/lcov/coverage/coverage.sh
 REPLACE_BASH+=	tests/lcov/coverage/geninfo.sh
-REPLACE_BASH+=	tests/lcov/demangle/demangle.sh
 REPLACE_BASH+=	tests/lcov/errs/errs.sh
 REPLACE_BASH+=	tests/lcov/exception/exception.sh
 REPLACE_BASH+=	tests/lcov/extract/extract1.sh
@@ -103,7 +101,6 @@ REPLACE_BASH+=	tests/lcov/extract/extract2.sh
 REPLACE_BASH+=	tests/lcov/follow/follow.sh
 REPLACE_BASH+=	tests/lcov/format/format.sh
 REPLACE_BASH+=	tests/lcov/gcov-tool/mygcov.sh
-REPLACE_BASH+=	tests/lcov/gcov-tool/path.sh
 REPLACE_BASH+=	tests/lcov/initializer/initializer.sh
 REPLACE_BASH+=	tests/lcov/lambda/lambda.sh
 REPLACE_BASH+=	tests/lcov/mcdc/mcdc.sh
@@ -118,7 +115,6 @@ REPLACE_BASH+=	tests/lcov/multiple/multiple.sh
 REPLACE_BASH+=	tests/lcov/names/names.sh
 REPLACE_BASH+=	tests/lcov/parallel_fail/parallel_fail.sh
 REPLACE_BASH+=	tests/lcov/parallel_parse/parallel_parse.sh
-REPLACE_BASH+=	tests/lcov/scheduling/scheduling.sh
 REPLACE_BASH+=	tests/lcov/serialization/binary.sh
 REPLACE_BASH+=	tests/lcov/serialization/format.sh
 REPLACE_BASH+=	tests/lcov/summary/concatenated.sh
@@ -139,7 +135,6 @@ REPLACE_BASH+=	tests/lcov/xs_test/xs6.sh
 REPLACE_BASH+=	tests/lcov/xs_test/xs7.sh
 REPLACE_BASH+=	tests/llvm2lcov/llvm2lcov.sh
 REPLACE_BASH+=	tests/llvm2lcov/malformed.sh
-REPLACE_BASH+=	tests/perl2lcov/declforms.sh
 REPLACE_BASH+=	tests/perl2lcov/perltest1.sh
 REPLACE_BASH+=	tests/py2lcov/py2lcov.sh
 REPLACE_BASH+=	tests/scripts/analyzeInfoFiles_test.sh
@@ -152,8 +147,20 @@ REPLACE_BASH+=	tests/scripts/gitversion_test.sh
 REPLACE_BASH+=	tests/scripts/p4annotate_test.sh
 REPLACE_BASH+=	tests/scripts/p4udiff_test.sh
 REPLACE_BASH+=	tests/scripts/p4version_test.sh
-REPLACE_BASH+=	tests/winpath/winpath.sh
 REPLACE_BASH+=	tests/xml2lcov/xml2lcov.sh
+
+# these scripts are generating other scripts, so more lines need changing
+SUBST_CLASSES+=		bh
+SUBST_SED.bh=		-e "s,/bin/bash,/usr/pkg/bin/bash,"
+SUBST_FILES.bh+=	tests/genhtml/scriptargs/scriptargs.sh
+SUBST_FILES.bh+=	tests/jacoco2lcov/jacoco2lcov.sh
+SUBST_FILES.bh+=	tests/lcov/demangle/demangle.sh
+SUBST_FILES.bh+=	tests/lcov/gcov-tool/path.sh
+SUBST_FILES.bh+=	tests/lcov/scheduling/scheduling.sh
+SUBST_FILES.bh+=	tests/perl2lcov/declforms.sh
+SUBST_FILES.bh+=	tests/winpath/winpath.sh
+SUBST_STAGE.bh=		pre-configure
+SUBST_MESSAGE.bh=	Fixing path to bash.
 
 REPLACE_PERL+=	bin/fix.pl
 REPLACE_PERL+=	bin/gendesc
@@ -187,7 +194,8 @@ REPLACE_PERL+=	tests/genhtml/htmlgen/annotate.pl
 REPLACE_PERL+=	tests/genhtml/insensitive/annotate.pl
 REPLACE_PERL+=	tests/genhtml/insensitive/version.pl
 REPLACE_PERL+=	tests/genhtml/lcovrc/annotate.pl
-REPLACE_PERL+=	tests/genhtml/selectscript/selectscript.sh
+# not a shebang line, so REPLACE_PERL doesn't work
+#REPLACE_PERL+=	tests/genhtml/selectscript/selectscript.sh
 REPLACE_PERL+=	tests/genhtml/simple/annotate.pl
 REPLACE_PERL+=	tests/genpng/dumppng.pl
 REPLACE_PERL+=	tests/lcov/demangle/simplify.pl
@@ -213,6 +221,10 @@ REPLACE_PYTHON+=	tests/lcov/scheduling/check_thresholds.py
 REPLACE_PYTHON+=	tests/lcov/scheduling/check_value_list.py
 REPLACE_PYTHON+=	tests/lcov/scheduling/check_xs_row.py
 REPLACE_PYTHON+=	tests/py2lcov/test.py
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/lcov/tests/common.tst.orig
+	${RM} -f ${DESTDIR}${PREFIX}/share/lcov/tests/lcov/extract/extract2.sh.orig
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
