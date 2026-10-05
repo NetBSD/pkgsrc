@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6730 2026/10/05 18:52:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6731 2026/10/05 19:06:53 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10121,3 +10121,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssh to 10.5p1nb2 [he 2026-10-05]
 	Updated textproc/expat to 2.9.0 [wiz 2026-10-05]
 	Updated devel/lcov to 2.6nb1 [wiz 2026-10-05]
+	Updated net/deskflow to 1.27.0 [tnn 2026-10-05]
