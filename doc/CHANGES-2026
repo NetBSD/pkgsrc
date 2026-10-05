@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6681 2026/10/05 02:13:41 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.6682 2026/10/05 02:21:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10062,3 +10062,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-IO-Tty to 1.31 [wen 2026-10-05]
 	Updated devel/p5-IPC-Run to 20260402.0 [wen 2026-10-05]
 	Updated mail/cyrus-imapd310 to 3.10.4 [jnemeth 2026-10-05]
+	Updated devel/p5-IPC-Shareable to 1.19 [wen 2026-10-05]
