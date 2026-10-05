@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/09/03 10:37:44 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/05 05:02:36 adam Exp $
 
-DISTNAME=	pbs_installer-2026.9.1
+DISTNAME=	pbs_installer-2026.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbs-installer/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/frostming/pbs-installer
 COMMENT=	Installer for Python Build Standalone
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=0:../../devel/py-pdm_backend
 # download
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 
