@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/10/02 07:35:53 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/05 05:05:59 adam Exp $
 
-DISTNAME=	apycula-0.33
+DISTNAME=	apycula-0.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apycula/}
