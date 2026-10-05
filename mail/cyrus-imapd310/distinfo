@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2026/07/25 06:11:48 mef Exp $
+$NetBSD: distinfo,v 1.4 2026/10/05 02:13:36 jnemeth Exp $
 
-BLAKE2s (cyrus-imapd-3.10.2.tar.gz) = b2b66f1d5fc812c711017f83a2f4e199eba49482bf2b5d6d7ae3ccc82b0c197e
-SHA512 (cyrus-imapd-3.10.2.tar.gz) = 8a3a1c70711362acbe095a52704c79952c0f9907758f69683421fbd1b65a9a33505491dcfe777413fb773a33b9794fc28967e5dd7e55ccddd6d01353decec1e5
-Size (cyrus-imapd-3.10.2.tar.gz) = 5228957 bytes
+BLAKE2s (cyrus-imapd-3.10.4.tar.gz) = acae350397c65229ec8fab6ee27b86d7ca1cec4311e7b97dc9825cfa4e001123
+SHA512 (cyrus-imapd-3.10.4.tar.gz) = 34b3cafb671e2ba9f4a3c03d7a2cefaa9f3a9584ef8fb843d32d35c242e4e63047e81345829fc5619bdeb0a47585090b020d5618608ab15390508ed149c9b605
+Size (cyrus-imapd-3.10.4.tar.gz) = 5235349 bytes
 SHA1 (patch-am) = d3571bc33ad3e053b719da5561af932bb946003b
 SHA1 (patch-ao) = c01c9d32b4d73cbc32d2ad8bfca8b8b021ca2474
 SHA1 (patch-aq) = bedd7e2d8e751577fa02f8f4cd91c00bd20b8a21
