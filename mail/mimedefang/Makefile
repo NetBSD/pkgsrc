@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2026/08/04 20:29:05 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/10/05 04:09:37 jnemeth Exp $
 
-DISTNAME=		mimedefang-3.4.1
-PKGREVISION=		4
+DISTNAME=		Mail-MIMEDefang-3.7.1
+PKGNAME=		mimedefang-3.7.1
 CATEGORIES=		mail
 MASTER_SITES=		https://mimedefang.org/releases/
 
@@ -40,8 +40,8 @@ EGDIR=			${PREFIX}/share/examples/mimedefang
 SHAREDIR=		${PREFIX}/share/mimedefang
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
-FILES_SUBST+=		DEFANG_USER=${DEFANG_USER:Q}
-FILES_SUBST+=		DEFANG_SPOOLDIR=${DEFANG_SPOOLDIR:Q}
+FILES_SUBST+=		DEFANG_USER=${DEFANG_USER}
+FILES_SUBST+=		DEFANG_SPOOLDIR=${DEFANG_SPOOLDIR}
 
 RCD_SCRIPTS=		mimedefang-multiplexor mimedefang
 
@@ -50,13 +50,13 @@ OWN_DIRS_PERMS+=	${DEFANG_SPOOLDIR} ${DEFANG_USER} ${DEFANG_GROUP} 0700
 CONF_FILES+=		${EGDIR}/mimedefang-filter ${PKG_SYSCONFDIR}/mimedefang-filter
 CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/sa-mimedefang.cf
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-confsubdir=
 CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
-CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR:Q}
-CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR:Q}
-CONFIGURE_ARGS+=	--with-user=${DEFANG_USER:Q}
+CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR}
+CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR}
+CONFIGURE_ARGS+=	--with-user=${DEFANG_USER}
 # CONFIGURE_ARGS+=	--disable-anti-virus
 #	list the paths where they _would_ be installed, so they
 #	can be found at runtime. -- they have to be listed
