@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/10/05 08:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/05 08:18:37 wiz Exp $
 
 DISTNAME=	hunspell-1.7.5
 CATEGORIES=	textproc
@@ -11,7 +11,7 @@ COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint bash:test gawk:test
+USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint bash:test
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
