@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6687 2026/10/05 02:43:53 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.6688 2026/10/05 05:04:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10068,3 +10068,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Log-Dispatchouli to 3.101 [wen 2026-10-05]
 	Updated devel/p5-Long-Jump to 0.000005 [wen 2026-10-05]
 	Updated mail/cyrus-imapd312 to 3.12.4 [jnemeth 2026-10-05]
+	Updated math/fast_float to 8.3.1 [adam 2026-10-05]
+	Updated devel/py-wcwidth to 0.9.2 [adam 2026-10-05]
+	Updated misc/py-pbs-installer to 2026.10.3 [adam 2026-10-05]
+	Updated devel/py-pebble to 5.2.3 [adam 2026-10-05]
