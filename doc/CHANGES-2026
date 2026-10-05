@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6722 2026/10/05 13:30:32 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6723 2026/10/05 13:36:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10113,3 +10113,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Module-Install-RTx to 0.45 [wen 2026-10-05]
 	Updated devel/p5-Module-Manifest-Skip to 0.24 [wen 2026-10-05]
 	Updated devel/p5-Module-Starter to 1.82 [wen 2026-10-05]
+	Updated devel/p5-MooseX-Types-LoadableClass to 0.016 [wen 2026-10-05]
