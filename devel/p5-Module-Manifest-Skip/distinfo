@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/10/05 13:26:46 wen Exp $
 
-BLAKE2s (Module-Manifest-Skip-0.23.tar.gz) = 041db7deb3d7d91df48caf867cc769e93dd0edf6841123a6c06918c3b394c1a2
-SHA512 (Module-Manifest-Skip-0.23.tar.gz) = 96336f5c1b4b294abcd4d38648657604d5e80ee3078531befc630f8cd45dac509de4c0f298889c3376f93f2ac57e060805018bb3d4b21420fb5f76dec2480926
-Size (Module-Manifest-Skip-0.23.tar.gz) = 13569 bytes
+BLAKE2s (Module-Manifest-Skip-0.24.tar.gz) = ab696d673d5aae57aaaad4657f7087b05fa0f667887d540612a00378d3915717
+SHA512 (Module-Manifest-Skip-0.24.tar.gz) = 3c99c3beea08622d3ecd3cef46997942651aa1980928937f6ebbcd7076ffcb81210969ba2e8a361edd02b98e4246f4238f4269503fdff7f8b64411c1986e8f09
+Size (Module-Manifest-Skip-0.24.tar.gz) = 14364 bytes
