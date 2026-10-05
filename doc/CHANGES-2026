@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6679 2026/10/05 01:57:00 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6680 2026/10/05 02:06:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10060,3 +10060,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Hash-Case to 1.07 [wen 2026-10-05]
 	Updated devel/p5-IO-Stty to 0.08 [wen 2026-10-05]
 	Updated devel/p5-IO-Tty to 1.31 [wen 2026-10-05]
+	Updated devel/p5-IPC-Run to 20260402.0 [wen 2026-10-05]
