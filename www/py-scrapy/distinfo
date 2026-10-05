@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2026/09/03 08:35:37 adam Exp $
+$NetBSD: distinfo,v 1.33 2026/10/05 07:26:41 adam Exp $
 
-BLAKE2s (scrapy-2.18.0.tar.gz) = c8cab4d08ccf4fe404cc787a780887c2833a8d89e32fd4a47d1967476dc9ba8c
-SHA512 (scrapy-2.18.0.tar.gz) = 237a0ebc0937f871d4d0ec6e29622993f211337b3ff16e2087139b39f9753697526f9145c8c88feee7760516bf8249f7b9393e3df80c6d792e098210424c7e34
-Size (scrapy-2.18.0.tar.gz) = 1407695 bytes
+BLAKE2s (scrapy-2.19.0.tar.gz) = c8285f32018df238cb9ad0e7fd84444f1a014d0b7efed6c28e2b716cfeee493e
+SHA512 (scrapy-2.19.0.tar.gz) = c8c21c4157ae542b96fcf1cde0594485af65d5fd1822e1933dfabc00de64b5599b13f331af13db34604ae7aced4d7f65a88d6d3d3fb634e7d8e877534900137a
+Size (scrapy-2.19.0.tar.gz) = 1457780 bytes
