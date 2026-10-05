@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2026/10/05 19:43:05 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/10/05 20:17:30 wiz Exp $
 
 DISTNAME=	lcov-2.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +21,7 @@ DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Memory-Process-[0-9]*:../../sysutils/p5-Memory-Process
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=0:../../textproc/py-xlsxwriter
 TEST_DEPENDS+=	jq-[0-9]*:../../devel/jq
 
@@ -43,7 +44,7 @@ CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
 # as of 2.6nb1:
-# 91 tests executed, 77 passed, 14 failed, 0 skipped
+# 91 tests executed, 80 passed, 11 failed, 0 skipped
 TEST_TARGET=	test
 # breaks tests
 #TEST_ENV+=	TESTCASE_ARGS=--parallel\ ${_MAKE_JOBS_N:U1}
@@ -153,7 +154,7 @@ REPLACE_BASH+=	tests/xml2lcov/xml2lcov.sh
 
 # these scripts are generating other scripts, so more lines need changing
 SUBST_CLASSES+=		bh
-SUBST_SED.bh=		-e "s,/bin/bash,/usr/pkg/bin/bash,"
+SUBST_SED.bh+=		-e "s,/bin/bash,/usr/pkg/bin/bash,"
 SUBST_FILES.bh+=	tests/genhtml/scriptargs/scriptargs.sh
 SUBST_FILES.bh+=	tests/jacoco2lcov/jacoco2lcov.sh
 SUBST_FILES.bh+=	tests/lcov/demangle/demangle.sh
@@ -163,6 +164,12 @@ SUBST_FILES.bh+=	tests/perl2lcov/declforms.sh
 SUBST_FILES.bh+=	tests/winpath/winpath.sh
 SUBST_STAGE.bh=		pre-configure
 SUBST_MESSAGE.bh=	Fixing path to bash.
+
+SUBST_CLASSES+=		pyc
+SUBST_SED.pyc+=		-e "s,cover_cmd = 'coverage,cover_cmd = 'coverage-${PYVERSSUFFIX},"
+SUBST_FILES.pyc+=	bin/py2lcov
+SUBST_STAGE.pyc=	pre-configure
+SUBST_MESSAGE.pyc=	Fixing py-coverage binary name.
 
 REPLACE_PERL+=	bin/fix.pl
 REPLACE_PERL+=	bin/gendesc
@@ -223,6 +230,12 @@ REPLACE_PYTHON+=	tests/lcov/scheduling/check_thresholds.py
 REPLACE_PYTHON+=	tests/lcov/scheduling/check_value_list.py
 REPLACE_PYTHON+=	tests/lcov/scheduling/check_xs_row.py
 REPLACE_PYTHON+=	tests/py2lcov/test.py
+
+# clang wrappers confuse the test script
+pre-configure:
+	${RM} ${WRAPPER_BINDIR}/clang
+	${RM} ${WRAPPER_BINDIR}/clang++
+	${RM} ${WRAPPER_BINDIR}/clang-cpp
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/lcov/tests/common.tst.orig
