@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6688 2026/10/05 05:04:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6689 2026/10/05 05:12:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10072,3 +10072,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.9.2 [adam 2026-10-05]
 	Updated misc/py-pbs-installer to 2026.10.3 [adam 2026-10-05]
 	Updated devel/py-pebble to 5.2.3 [adam 2026-10-05]
+	Updated devel/py-apycula to 0.34 [adam 2026-10-05]
+	Updated time/py-pytz to 2026.5 [adam 2026-10-05]
+	Updated textproc/py-itemloaders to 1.5.0 [adam 2026-10-05]
+	Updated www/py-w3lib to 2.5.0 [adam 2026-10-05]
