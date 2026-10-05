@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6718 2026/10/05 13:21:05 wen Exp $
+$NetBSD: CHANGES-2026,v 1.6719 2026/10/05 13:23:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10107,3 +10107,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/plog version 1.1.11 [ktnb 2026-10-05]
 	Added net/libdatachannel version 0.24.6 [ktnb 2026-10-05]
 	Updated devel/p5-Module-CPANTS-Analyse to 1.03 [wen 2026-10-05]
+	Updated sysutils/py-borgbackup to 1.4.5 [adam 2026-10-05]
+	Updated security/py-asyncssh to 2.24.1 [adam 2026-10-05]
+	Updated textproc/py-types-docutils to 0.23.0.20260923 [adam 2026-10-05]
