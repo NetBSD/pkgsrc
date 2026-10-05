@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/03/10 07:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/05 02:27:11 jnemeth Exp $
 
 DISTNAME=	sphinxcontrib-programoutput2-2.0a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-programoutput2/}
 
@@ -17,7 +18,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
 
-WHEEL_NAME=	sphinxcontrib_programoutput2-0.0.0
+WHEEL_NAME=	sphinxcontrib_programoutput2-2.0a1
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
