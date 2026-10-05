@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.190 2026/09/29 06:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2026/10/05 09:27:04 leot Exp $
 
 DISTNAME=	mpv-0.41.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -88,7 +88,7 @@ post-install:
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libplacebo+=	libplacebo>=6.338.2
 .include "../../multimedia/libplacebo/buildlink3.mk"
-.include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../multimedia/ffmpeg8/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
