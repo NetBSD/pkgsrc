@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1673 2026/10/05 13:10:40 ktnb Exp $
+# $NetBSD: Makefile,v 1.1674 2026/10/05 13:18:20 ktnb Exp $
 #
 
 COMMENT=	Networking tools
@@ -342,6 +342,7 @@ SUBDIR+=	libasyncns
 SUBDIR+=	libbind
 SUBDIR+=	libcares
 SUBDIR+=	libcmis
+SUBDIR+=	libdatachannel
 SUBDIR+=	libdlna
 SUBDIR+=	libdnet
 SUBDIR+=	libexosip
