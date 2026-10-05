@@ -1,4 +1,4 @@
-$NetBSD: patch-atomicio.c,v 1.4 2026/09/22 08:03:59 he Exp $
+$NetBSD: patch-atomicio.c,v 1.5 2026/10/05 18:08:15 he Exp $
 
 Remove no-longer-needed BROKEN_READ_COMPARISON code, to mirror
 
@@ -15,10 +15,11 @@ ref. mailing list thread at
  
  	pfd.fd = fd;
 -#ifndef BROKEN_READ_COMPARISON
- 	pfd.events = f == read ? POLLIN : POLLOUT;
+-	pfd.events = f == read ? POLLIN : POLLOUT;
 -#else
 -	pfd.events = POLLIN|POLLOUT;
 -#endif
++	pfd.events = f != vwrite ? POLLIN : POLLOUT;
  	while (n > pos) {
  		res = (f) (fd, s + pos, n - pos);
  		switch (res) {
