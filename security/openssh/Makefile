@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.296 2026/09/22 08:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2026/10/05 18:08:15 he Exp $
 
 DISTNAME=		openssh-10.5p1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -16,6 +16,10 @@ CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 CONFLICTS+=		lsh>2.0
 BROKEN_ON_PLATFORM+=	OpenBSD-*-*
+
+CFLAGS+=		-g
+# Causes problems on NetBSD < 11.0, ref. PR#60563
+PKGSRC_USE_FORTIFY=	no
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf perl
