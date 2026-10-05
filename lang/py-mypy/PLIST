@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2026/07/15 06:12:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2026/10/05 07:37:32 wiz Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -1621,6 +1621,7 @@ ${PYSITELIB}/mypyc/lib-rt/internal/librt_internal.h
 ${PYSITELIB}/mypyc/lib-rt/internal/librt_internal_api.c
 ${PYSITELIB}/mypyc/lib-rt/internal/librt_internal_api.h
 ${PYSITELIB}/mypyc/lib-rt/list_ops.c
+${PYSITELIB}/mypyc/lib-rt/locks.c
 ${PYSITELIB}/mypyc/lib-rt/misc_ops.c
 ${PYSITELIB}/mypyc/lib-rt/module_shim.tmpl
 ${PYSITELIB}/mypyc/lib-rt/module_shim_no_gil_multiphase.tmpl
@@ -1785,6 +1786,9 @@ ${PYSITELIB}/mypyc/test/test_analysis.pyo
 ${PYSITELIB}/mypyc/test/test_annotate.py
 ${PYSITELIB}/mypyc/test/test_annotate.pyc
 ${PYSITELIB}/mypyc/test/test_annotate.pyo
+${PYSITELIB}/mypyc/test/test_borrow_generator_attrs.py
+${PYSITELIB}/mypyc/test/test_borrow_generator_attrs.pyc
+${PYSITELIB}/mypyc/test/test_borrow_generator_attrs.pyo
 ${PYSITELIB}/mypyc/test/test_capsule_deps.py
 ${PYSITELIB}/mypyc/test/test_capsule_deps.pyc
 ${PYSITELIB}/mypyc/test/test_capsule_deps.pyo
@@ -1818,6 +1822,9 @@ ${PYSITELIB}/mypyc/test/test_expand_rtype.pyo
 ${PYSITELIB}/mypyc/test/test_external.py
 ${PYSITELIB}/mypyc/test/test_external.pyc
 ${PYSITELIB}/mypyc/test/test_external.pyo
+${PYSITELIB}/mypyc/test/test_generator_spills.py
+${PYSITELIB}/mypyc/test/test_generator_spills.pyc
+${PYSITELIB}/mypyc/test/test_generator_spills.pyo
 ${PYSITELIB}/mypyc/test/test_irbuild.py
 ${PYSITELIB}/mypyc/test/test_irbuild.pyc
 ${PYSITELIB}/mypyc/test/test_irbuild.pyo
@@ -1854,6 +1861,9 @@ ${PYSITELIB}/mypyc/test/test_run.pyo
 ${PYSITELIB}/mypyc/test/test_serialization.py
 ${PYSITELIB}/mypyc/test/test_serialization.pyc
 ${PYSITELIB}/mypyc/test/test_serialization.pyo
+${PYSITELIB}/mypyc/test/test_spill.py
+${PYSITELIB}/mypyc/test/test_spill.pyc
+${PYSITELIB}/mypyc/test/test_spill.pyo
 ${PYSITELIB}/mypyc/test/test_statement.py
 ${PYSITELIB}/mypyc/test/test_statement.pyc
 ${PYSITELIB}/mypyc/test/test_statement.pyo
@@ -1872,6 +1882,9 @@ ${PYSITELIB}/mypyc/test/testutil.pyo
 ${PYSITELIB}/mypyc/transform/__init__.py
 ${PYSITELIB}/mypyc/transform/__init__.pyc
 ${PYSITELIB}/mypyc/transform/__init__.pyo
+${PYSITELIB}/mypyc/transform/borrow_generator_attrs.py
+${PYSITELIB}/mypyc/transform/borrow_generator_attrs.pyc
+${PYSITELIB}/mypyc/transform/borrow_generator_attrs.pyo
 ${PYSITELIB}/mypyc/transform/copy_propagation.py
 ${PYSITELIB}/mypyc/transform/copy_propagation.pyc
 ${PYSITELIB}/mypyc/transform/copy_propagation.pyo
@@ -1881,6 +1894,9 @@ ${PYSITELIB}/mypyc/transform/exceptions.pyo
 ${PYSITELIB}/mypyc/transform/flag_elimination.py
 ${PYSITELIB}/mypyc/transform/flag_elimination.pyc
 ${PYSITELIB}/mypyc/transform/flag_elimination.pyo
+${PYSITELIB}/mypyc/transform/generator_spills.py
+${PYSITELIB}/mypyc/transform/generator_spills.pyc
+${PYSITELIB}/mypyc/transform/generator_spills.pyo
 ${PYSITELIB}/mypyc/transform/ir_transform.py
 ${PYSITELIB}/mypyc/transform/ir_transform.pyc
 ${PYSITELIB}/mypyc/transform/ir_transform.pyo
