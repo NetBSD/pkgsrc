@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2026/07/16 19:02:59 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/10/05 13:42:42 wen Exp $
 
-DISTNAME=	MooseX-Types-0.50
+DISTNAME=	MooseX-Types-0.51
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/MooseX-Types
@@ -15,7 +14,6 @@ DEPENDS+=	p5-Carp-Clan>=6.00:../../devel/p5-Carp-Clan
 DEPENDS+=	p5-namespace-autoclean>=0.16:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-Moose>=1.06:../../devel/p5-Moose
 DEPENDS+=	p5-Sub-Install>=0.924:../../devel/p5-Sub-Install
-DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-namespace-clean>=0.19:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Sub-Exporter-ForMethods>=0.100052:../../devel/p5-Sub-Exporter-ForMethods
 
