@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/02/09 12:58:47 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/10/05 05:10:13 adam Exp $
 
-BLAKE2s (itemloaders-1.4.0.tar.gz) = 4f3c4171fb57797655ae9500187900fb97125f92ad51e0772ae53850ebb4961c
-SHA512 (itemloaders-1.4.0.tar.gz) = cb5b70584043a33b92bf54d669c9f302ea8951f014663b889e0abc2d37c6877cf464bdc32f2c4356232aa3236a84a823b5641ed4e540f4b81b4a365c5f5f36df
-Size (itemloaders-1.4.0.tar.gz) = 29740 bytes
+BLAKE2s (itemloaders-1.5.0.tar.gz) = b88b53728c19435145a92ccd9be74530b7600501524718609514bdf50abeb339
+SHA512 (itemloaders-1.5.0.tar.gz) = 738eed580cffff7d6b5ce1007ae9e86cc8eafdade392cb81a8a55bbe44b11f4f63c66f2719c6a5f003aebc6e2484f1bff308e3ad0b0bb296d72d281f94edbdf3
+Size (itemloaders-1.5.0.tar.gz) = 36360 bytes
