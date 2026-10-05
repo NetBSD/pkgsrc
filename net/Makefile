@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1672 2026/10/01 12:29:55 adam Exp $
+# $NetBSD: Makefile,v 1.1673 2026/10/05 13:10:40 ktnb Exp $
 #
 
 COMMENT=	Networking tools
@@ -1042,6 +1042,7 @@ SUBDIR+=	unworkable
 SUBDIR+=	upclient
 SUBDIR+=	urlgfe
 SUBDIR+=	userppp
+SUBDIR+=	usrsctp
 SUBDIR+=	uucp
 SUBDIR+=	vcheck
 SUBDIR+=	vde

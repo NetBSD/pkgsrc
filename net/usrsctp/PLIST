@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/05 13:10:41 ktnb Exp $
+include/usrsctp.h
+lib/libusrsctp.a
+lib/pkgconfig/usrsctp.pc

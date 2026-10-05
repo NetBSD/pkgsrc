@@ -1,0 +1,11 @@
+Userland SCTP stack. SCTP is a message oriented, reliable transport
+protocol with direct support for multihoming that runs on top of
+IP or UDP, and supports both v4 and v6 versions.
+
+Like TCP, SCTP provides reliable, connection oriented data delivery
+with congestion control. Unlike TCP, SCTP also provides message
+boundary preservation, ordered and unordered message delivery,
+multi-streaming and multi-homing. Detection of data corruption,
+loss of data and duplication of data is achieved by using checksums
+and sequence numbers.A selective retransmission mechanism is applied
+to correct loss or corruption of data.
