@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6692 2026/10/05 07:37:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6693 2026/10/05 07:39:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10080,3 +10080,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-scrapy to 2.19.0 [adam 2026-10-05]
 	Updated misc/py-platformdirs to 4.12.3 [adam 2026-10-05]
 	Updated lang/py-mypy to 2.4.0 [wiz 2026-10-05]
+	Updated converters/p5-Cpanel-JSON-XS to 4.53 [wiz 2026-10-05]
