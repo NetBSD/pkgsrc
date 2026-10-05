@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2026/09/29 06:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/10/05 10:17:02 pin Exp $
 
-DISTNAME=	oculante-0.9.2
-PKGREVISION=	8
+DISTNAME=	oculante-0.9.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -13,15 +12,13 @@ LICENSE=	mit
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
-SITES.spirv-0.3.0+sdk-1.3.268.0.crate=	https://static.crates.io/crates/spirv/
-
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.83.0
+#RUST_REQ=	1.100.0beta.2
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.83.0 on amd64
+#This package is confirmed to build with Rust 1.100.0beta.2 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl
 
@@ -31,14 +28,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 
-# This is needed as pkgsrc defaults to graphics/jpeg.
-# If you have graphics/libjpeg-turbo as a local default, it's most probably
-# possible to build the package with the turbo feature on.
-# The file_open feature has also been switched-off.
-# Disabling it will enable a custom file dialog. Upstream has highlighted
-# this will probably be the default in the future.
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		avif_native notan/glsl-to-spirv
+CARGO_FEATURES+=		turbo avif_native j2k jxlcms notan_glsl-to-spirv
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,15 +42,16 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
 .include "../../devel/at-spi2-core/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
