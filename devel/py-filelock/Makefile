@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.61 2026/10/04 16:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/05 09:59:56 wiz Exp $
 
 DISTNAME=	filelock-4.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
+PATCHFILES=	768.diff
+PATCH_SITES=	https://github.com/tox-dev/filelock/pull/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tox-dev/filelock
@@ -23,9 +26,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-# as of 4.0.10
-# 2 failed, 1841 passed, 61 skipped
-# https://github.com/tox-dev/filelock/issues/766
+# as of 4.0.10 + patch:
+# 1852 passed, 61 skipped
+
+# due to 768.diff
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/filelock/_read_write.py.orig_dist
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
