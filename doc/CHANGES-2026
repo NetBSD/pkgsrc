@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6729 2026/10/05 18:38:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6730 2026/10/05 18:52:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10120,3 +10120,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-MooX-StrictConstructor to 0.013 [wen 2026-10-05]
 	Updated security/openssh to 10.5p1nb2 [he 2026-10-05]
 	Updated textproc/expat to 2.9.0 [wiz 2026-10-05]
+	Updated devel/lcov to 2.6nb1 [wiz 2026-10-05]
