@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2026/08/28 10:41:14 adam Exp $
+# $NetBSD: Makefile,v 1.74 2026/10/05 13:03:50 adam Exp $
 
-DISTNAME=	ipykernel-7.3.0
+DISTNAME=	ipykernel-7.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -19,14 +19,14 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio2>=1.7.0:../../devel/py-nest-asyncio2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-tornado>=6.4.1:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.5.7:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-zmq>=25:../../net/py-zmq
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=0:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel>=0:../../parallel/py-ipyparallel
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.23.5:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
