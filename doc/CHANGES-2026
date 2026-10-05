@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6733 2026/10/05 20:17:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6734 2026/10/05 20:29:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10124,3 +10124,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/deskflow to 1.27.0 [tnn 2026-10-05]
 	Updated devel/lcov to 2.6nb2 [wiz 2026-10-05]
 	Updated devel/lcov to 2.6nb3 [wiz 2026-10-05]
+	Updated graphics/p5-GD to 2.91 [wiz 2026-10-05]
