@@ -1,10 +1,10 @@
-$NetBSD: patch-.._vendor_libaom-sys-0.17.1-rc.1+libaom.3.10.0_vendor_build_cmake_aom_optimization.cmake,v 1.1 2025/11/14 10:19:19 pin Exp $
+$NetBSD: patch-.._vendor_libaom-sys-0.17.2+libaom.3.11.0_vendor_build_cmake_aom_optimization.cmake,v 1.1 2026/10/05 10:17:03 pin Exp $
 
 Fix build with nasm 3.0.
 https://aomedia.googlesource.com/aom/+/6d2b7f71b98bfa28e372b1f2d85f137280bdb3de%5E%21/
 
---- ../vendor/libaom-sys-0.17.1-rc.1+libaom.3.10.0/vendor/build/cmake/aom_optimization.cmake.orig	2025-11-14 09:01:28.320997460 +0000
-+++ ../vendor/libaom-sys-0.17.1-rc.1+libaom.3.10.0/vendor/build/cmake/aom_optimization.cmake
+--- ../vendor/libaom-sys-0.17.2+libaom.3.11.0/vendor/build/cmake/aom_optimization.cmake.orig	2025-11-14 09:01:28.320997460 +0000
++++ ../vendor/libaom-sys-0.17.2+libaom.3.11.0/vendor/build/cmake/aom_optimization.cmake
 @@ -212,7 +212,7 @@ endfunction()
  # Currently checks only for presence of required object formats and support for
  # the -Ox argument (multipass optimization).
