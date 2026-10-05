@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6698 2026/10/05 07:53:39 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6699 2026/10/05 07:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10086,3 +10086,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Perl-Tidy to 20260826 [wiz 2026-10-05]
 	Updated converters/p5-Sereal-Decoder to 5.010 [wiz 2026-10-05]
 	Updated converters/p5-Sereal-Encoder to 5.010 [wiz 2026-10-05]
+	Updated converters/p5-Sereal to 5.010 [wiz 2026-10-05]
