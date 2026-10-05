@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/04/20 18:26:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/10/05 13:18:29 adam Exp $
 bin/borg
 bin/borgfs
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -251,7 +251,6 @@ ${PYSITELIB}/borg/xattr.pyo
 man/man1/borg-benchmark-crud.1
 man/man1/borg-benchmark.1
 man/man1/borg-break-lock.1
-man/man1/borg-change-passphrase.1
 man/man1/borg-check.1
 man/man1/borg-common.1
 man/man1/borg-compact.1
@@ -266,6 +265,7 @@ man/man1/borg-import-tar.1
 man/man1/borg-info.1
 man/man1/borg-init.1
 man/man1/borg-key-change-passphrase.1
+man/man1/borg-key-export-related-secrets.1
 man/man1/borg-key-export.1
 man/man1/borg-key-import.1
 man/man1/borg-key-migrate-to-repokey.1
