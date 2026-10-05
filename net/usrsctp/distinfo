@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/05 13:10:41 ktnb Exp $
+
+BLAKE2s (usrsctp-0.9.5.0.tar.gz) = 48d8e92eecbe88251b036c669016d6d8f5c1182f41a98ebdcde5d980c09a81aa
+SHA512 (usrsctp-0.9.5.0.tar.gz) = 7b28706449f9365ba9750fd39925e7171516a1e3145d123ec69a12486637ae2393ad4c587b056403298dc13c149f0b01a262cbe4852abca42e425d7680c77ee3
+Size (usrsctp-0.9.5.0.tar.gz) = 771701 bytes
