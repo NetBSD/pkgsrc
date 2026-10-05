@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/10/04 17:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/05 18:52:18 wiz Exp $
 
 DISTNAME=	lcov-2.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,9 +17,11 @@ DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Devel-Cover-[0-9]*:../../devel/p5-Devel-Cover
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
+DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Memory-Process-[0-9]*:../../sysutils/p5-Memory-Process
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=0:../../textproc/py-xlsxwriter
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run gmake perl
@@ -36,8 +39,8 @@ MAKE_FLAGS+=	CFG_INST_DIR=${DESTDIR}${PREFIX}/share/examples/lcov
 CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
-# as of 2.6:
-# 91 tests executed, 65 passed, 26 failed, 0 skipped
+# as of 2.6nb1:
+# 91 tests executed, 72 passed, 19 failed, 0 skipped
 TEST_TARGET=	test
 # breaks tests
 #TEST_ENV+=	TESTCASE_ARGS=--parallel\ ${_MAKE_JOBS_N:U1}
