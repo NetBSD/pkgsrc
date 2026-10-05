@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6708 2026/10/05 10:25:45 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6709 2026/10/05 10:26:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10096,3 +10096,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 31.4.1 [pin 2026-10-05]
 	Updated sysutils/xtop to 0.4.0 [pin 2026-10-05]
 	Updated textproc/stng to 1.7.1 [pin 2026-10-05]
+	Updated www/py-sigal to 2.6.1nb1 [wiz 2026-10-05]
