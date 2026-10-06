@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.39 2026/09/30 19:15:31 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.40 2026/10/06 15:29:23 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -29,8 +29,8 @@ CARGO_CRATE_DEPENDS+=	astral-reqwest-retry-0.9.1
 CARGO_CRATE_DEPENDS+=	astral-tl-0.8.0
 CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.7.0
 CARGO_CRATE_DEPENDS+=	astral-version-ranges-0.2.2
-CARGO_CRATE_DEPENDS+=	astral_async_http_range_reader-0.11.1
-CARGO_CRATE_DEPENDS+=	astral_async_zip-0.0.20
+CARGO_CRATE_DEPENDS+=	astral_async_http_range_reader-0.12.0
+CARGO_CRATE_DEPENDS+=	astral_async_zip-0.0.21
 CARGO_CRATE_DEPENDS+=	async-broadcast-0.7.2
 CARGO_CRATE_DEPENDS+=	async-channel-2.5.0
 CARGO_CRATE_DEPENDS+=	async-compression-0.4.19
