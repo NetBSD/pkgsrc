@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.45 2025/09/23 16:41:10 hauke Exp $
+$NetBSD: distinfo,v 1.46 2026/10/06 09:31:11 hauke Exp $
 
-BLAKE2s (xemacs-21.5.36.tar.gz) = 7538ed4273e7d7f6cd7fa4b149199fb109dab9655aed5226ab7e8ea182100dfc
-SHA512 (xemacs-21.5.36.tar.gz) = 42e1bc4283038e6829549c4bf78ff034e94f869cd038a3a28fe48b19a623b358e733e98b4c58b5c53ae7613a2d5da64f9796bb1c794a503e83f7706c4b8123f1
-Size (xemacs-21.5.36.tar.gz) = 16486681 bytes
-SHA1 (patch-Makefile.in.in) = 5048ca8d2eaf09500edc6efc6bd5c4ac8e67a079
+BLAKE2s (xemacs-21.5.37.tar.gz) = 3389304253f321320a3db886c2c75bad2e9826df8b3381e44c291ca08543a267
+SHA512 (xemacs-21.5.37.tar.gz) = 4e22d4563b06c39f956cf2a5179b167f8210fabc5558d7322de288a5b0586f08ab13930b5ec1182248b9b9e4f5d237f00562f66bfc5484e5571c20477605e971
+Size (xemacs-21.5.37.tar.gz) = 16609729 bytes
+SHA1 (patch-Makefile.in.in) = 82718b1d66515caa016521a5f316cb120b8185a5
 SHA1 (patch-configure) = 7169ad26f4b845e15c9b53bb1241ca7a8b6cd539
 SHA1 (patch-lib-src_Makefile.in.in) = 5e19f13bc96f92999aa221831cabc1645605115c
 SHA1 (patch-lwlib_Makefile.in.in) = 8d243f1c85122429187b8250c18221dee8423ed0
