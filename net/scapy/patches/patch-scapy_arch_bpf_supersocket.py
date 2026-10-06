@@ -1,10 +1,10 @@
-$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.7 2024/10/01 01:08:29 gutteridge Exp $
+$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.8 2026/10/06 09:54:31 leot Exp $
 
 Add DragonFly support.
 
---- scapy/arch/bpf/supersocket.py.orig	2024-09-28 13:11:32.000000000 +0000
+--- scapy/arch/bpf/supersocket.py.orig	2026-10-02 16:14:41.000000000 +0000
 +++ scapy/arch/bpf/supersocket.py
-@@ -35,7 +35,7 @@ from scapy.arch.bpf.consts import (
+@@ -35,7 +35,7 @@ from scapy.config import conf
      BPF_T_NANOTIME,
  )
  from scapy.config import conf
@@ -22,10 +22,10 @@ Add DragonFly support.
      # On 32bit architectures long might be 32bit.
      BPF_ALIGNMENT = ctypes.sizeof(ctypes.c_long)
  else:
-@@ -70,7 +70,7 @@ if _NANOTIME:
+@@ -71,7 +71,7 @@ if _NANOTIME:
          # actually a bpf_timespec
-         _fields_ = [("tv_sec", ctypes.c_ulong),
-                     ("tv_nsec", ctypes.c_ulong)]
+         _fields_ = [("tv_sec", ctypes.c_int64),
+                     ("tv_nsec", ctypes.c_uint64)]
 -elif NETBSD:
 +elif NETBSD or DRAGONFLY:
      class bpf_timeval(ctypes.Structure):
