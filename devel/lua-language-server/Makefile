@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/01/31 11:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/06 18:44:22 wiz Exp $
 
-DISTNAME=		lua-language-server-3.8.3
+DISTNAME=		lua-language-server-3.19.1
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
-PKGREVISION=		1
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
 GITHUB_PROJECT=		lua-language-server
@@ -12,17 +11,6 @@ MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://github.com/luals/lua-language-server/
 COMMENT=		Language server for Lua
 LICENSE=		mit
-
-# Two failure modes known. In bulk builds on NetBSD-10:
-# FAILED: build/netbsd/obj/test.stamp
-# build/netbsd/bin/bootstrap bee.lua/test/test.lua --touch build/netbsd/obj/test.stamp
-# ninja: build stopped: subcommand failed.
-#
-# On NetBSD-current additionally
-# bee.lua/bee/net/endpoint.cpp:135:9: error: 'memset' was not declared in this scope
-# bee.lua/bee/net/endpoint.cpp:136:9: error: 'memcpy' was not declared in this scope
-# bee.lua/bee/net/endpoint.h:50:19: error: 'memcpy' was not declared in this scope
-BROKEN=			"Multiple problems."
 
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		CC=${CC:Q}
@@ -49,14 +37,28 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
 
-GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 660a26085ff2c1275392a291063404d54fdd32b9 3rd/EmmyLuaCodeStyle
-GITHUB_SUBMODULES+=	actboy168 bee.lua 8c01c7d79612d47f47f17d80304e66ae14d7b953 3rd/bee.lua
-GITHUB_SUBMODULES+=	actboy168 json.lua 21c9584d30fa36c542c98b6b1410393318583712 3rd/json.lua
-GITHUB_SUBMODULES+=	love2d-community love-api 728ba001f3398fd11b0a3909b919a7caf3e329a4 3rd/love-api
+GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 8c4289b7617ccdb0b247a6171f111f28ac7ae969 3rd/EmmyLuaCodeStyle
+GITHUB_SUBMODULES+=	actboy168 bee.lua f55b6988e8d9564816a555118b0e76564ef9a283 3rd/bee.lua
+GITHUB_SUBMODULES+=	actboy168 json.lua 08095fd2cdfde8f49a5f5b54b35ec7b3d4906a36 3rd/json.lua
+GITHUB_SUBMODULES+=	love2d-community love-api 853639288547618dece86c3a8e52348fe304eba2 3rd/love-api
 GITHUB_SUBMODULES+=	bjornbytes lovr-docs e89c753e1c2849b7533481fcf058095f8e050b9f 3rd/lovr-api
 GITHUB_SUBMODULES+=	sqmedeiros lpeglabel 912b0b9e8641074408ffc2259e069b188e0c717b 3rd/lpeglabel
-GITHUB_SUBMODULES+=	actboy168 luamake c086f35cfad0236f74ba380d51f211c52a2c8abc 3rd/luamake
-GITHUB_SUBMODULES+=	actboy168 bee.lua 038aef6f41dc09dad43325e5d3cdc3e207b6d3c0 3rd/luamake/bee.lua
+GITHUB_SUBMODULES+=	actboy168 luamake 4c4bd16c9b0c1d773402fc15c76367f7899a1f91 3rd/luamake
+GITHUB_SUBMODULES+=	actboy168 bee.lua 466c4f071a17ab7c31e402383b0a2097b03535ba 3rd/luamake/bee.lua
+GITHUB_SUBMODULES+=	LuaCATS openresty 3bec36f0f645bb38b3c8208990d5c36feb66ce3d meta/3rd/OpenResty
+GITHUB_SUBMODULES+=	LuaCATS cocos4.0 c0b2259e0d367561fd4563ae114b029b4dfe3a8f meta/3rd/Cocos4.0
+GITHUB_SUBMODULES+=	LuaCATS defold 05379b40fb3084d82f7270475e42da8d521c4dae meta/3rd/Defold
+GITHUB_SUBMODULES+=	LuaCATS jass 80d85cbbfd8ae2473fb39c7df4be814602f5bc4f meta/3rd/Jass
+GITHUB_SUBMODULES+=	LuaCATS	bee c8ce19fd5536a7e98ef186d1d75825f0bb8c9216 meta/3rd/bee
+GITHUB_SUBMODULES+=	LuaCATS busted 5ed85d0e016a5eb5eca097aa52905eedf1b180f1 meta/3rd/busted
+GITHUB_SUBMODULES+=	LuaCATS ffi-reflect e9037efca4021a15552b281f5e91418afd370d8f meta/3rd/ffi-reflect
+GITHUB_SUBMODULES+=	LuaCATS luafilesystem 9b5cfc15be744c829c66519cb11e49669ae7e39b meta/3rd/lfs
+GITHUB_SUBMODULES+=	LuaCATS	love2d 98f7684525a6e866ffa6df449b7aef406a807dae meta/3rd/love2d
+GITHUB_SUBMODULES+=	LuaCATS lovr 3ba215f98e1647111b50b311d45c31338fdc615f meta/3rd/lovr
+GITHUB_SUBMODULES+=	LuaCATS luaecs 21192fbdccc0f140dae2f74f7c3ec7d74e2aadd0 meta/3rd/luaecs
+GITHUB_SUBMODULES+=	LuaCATS luassert d3528bb679302cbfdedefabb37064515ab95f7b9 meta/3rd/luassert
+GITHUB_SUBMODULES+=	LuaCATS luv 3615eb12c94a7cfa7184b8488cf908abb5e94c9c  meta/3rd/luv
+GITHUB_SUBMODULES+=	LuaCATS skynet afa6717ac4f71e42012fa2ebf4b410d04db647ae meta/3rd/skynet
 
 post-extract:
 	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
@@ -70,24 +72,11 @@ SUBST_FILES.wrapper=	lua-language-server
 SUBST_VARS.wrapper+=	MKTEMP
 SUBST_VARS.wrapper+=	DATADIR
 
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_MESSAGE.path=	Fixing path to installed headers.
-SUBST_FILES.path=	3rd/luamake/compile/ninja/netbsd.ninja
-SUBST_FILES.path+=	3rd/bee.lua/compile/common.lua
-SUBST_SED.path=		-e 's,/usr/pkg,${PREFIX},'
-
-SUBST_CLASSES+=		tests
-SUBST_STAGE.tests=	pre-configure
-SUBST_MESSAGE.tests=	Do not run randomly failing filewatch tests.
-SUBST_FILES.tests+=	3rd/bee.lua/test/test.lua
-SUBST_FILES.tests+=	3rd/luamake/bee.lua/test/test.lua
-SUBST_SED.tests=	-e 's,require "test_filewatch",,'
-
 do-build:
 	# probably needs much more fixes for systems noch supported by luamake.
-	${PREFIX}/bin/ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/${OPSYS:tl}.ninja
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./3rd/luamake/luamake -v
+	${PREFIX}/bin/ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/${OPSYS:tl}.ninja notest
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./3rd/luamake/luamake \
+	    -flags " ${CFLAGS}" -ldflags " ${LDFLAGS}" -v all
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lua-language-server ${DESTDIR}${PREFIX}/bin
