@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6734 2026/10/05 20:29:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6735 2026/10/06 00:06:49 rin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10125,3 +10125,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lcov to 2.6nb2 [wiz 2026-10-05]
 	Updated devel/lcov to 2.6nb3 [wiz 2026-10-05]
 	Updated graphics/p5-GD to 2.91 [wiz 2026-10-05]
+	Updated net/scapy to 2.7.0nb1 [rin 2026-10-06]
