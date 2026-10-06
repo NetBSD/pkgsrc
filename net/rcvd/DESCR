@@ -1,0 +1,11 @@
+rcvd is a privacy-first encrypted DNS engine: a single Go binary driven by
+purpose-built configuration files. It speaks DNS over QUIC (DoQ), DNS over
+TLS (DoT), and DNS over HTTPS (DoH/DoH3), and never falls back to cleartext
+DNS. If every encrypted upstream fails it returns SERVFAIL rather than leaking
+a query over port 53.
+
+Features include multi-upstream fallback with health checks, DNSSEC
+validation, domain blocklists (plain-list and hosts formats, with wildcard
+support), a local cache, runtime statistics, and both forwarder and
+DoH-service (upstream) modes. TLS can be automated via ACME (certmagic) so a
+DoH endpoint presents a real CA certificate with a DNS-ID in its SAN.
