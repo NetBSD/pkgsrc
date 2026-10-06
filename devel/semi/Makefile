@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/09/25 09:48:07 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.42 2026/10/06 19:52:03 wiz Exp $
 
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -39,7 +38,7 @@ BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
 INSTALL_TARGET.emacs=	install
 INSTALL_TARGET.xemacs=	install-package
-MAKEFLAGS.emacs+=
+MAKEFLAGS.emacs+=	EMACS=${EMACS_BIN:Q}
 MAKEFLAGS.xemacs+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 post-build:
