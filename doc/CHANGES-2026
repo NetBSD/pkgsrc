@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6740 2026/10/06 09:31:31 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.6741 2026/10/06 09:31:51 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10133,3 +10133,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-checkdmarc to 6.0.3 [adam 2026-10-06]
 	Updated devel/py-setuptools-git-versioning to 3.2.0 [adam 2026-10-06]
 	Updated editors/xemacs-current to 21.5.37 [hauke 2026-10-06]
+	Updated editors/xemacs-current-nox11 to 21.5.37 [hauke 2026-10-06]
