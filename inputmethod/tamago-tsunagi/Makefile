@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/09/25 09:48:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/06 20:01:11 wiz Exp $
 
 DISTNAME=	tamago-tsunagi-5.0.7.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -20,6 +20,12 @@ EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs215 xemacs214nox xemacs215n
 
 GNU_CONFIGURE=		yes
 INSTALL_MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX}
+
+SUBST_CLASSES+=		emacs
+SUBST_STAGE.emacs=	pre-configure
+SUBST_FILES.emacs=	configure
+SUBST_SED.emacs=	-e 's|^if emacs -batch |if ${EMACS_BIN} -batch |'
+SUBST_MESSAGE.emacs=	Use proper emacs binary.
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
