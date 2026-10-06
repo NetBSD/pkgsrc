@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28111 2026/10/06 07:46:19 wiz Exp $
+$NetBSD: TODO,v 1.28112 2026/10/06 15:05:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -852,6 +852,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libctl-4.7.1
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libfakekey-0.3
@@ -1031,6 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmpi-5.0.5
 	o openmw-0.51.0
 	o openslp-2.0.0
+	o openssh-10.6
 	o openssl-4.0.3
 	o openxenmanager-0.83
 	o opera-26
