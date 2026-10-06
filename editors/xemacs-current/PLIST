@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/09/23 16:41:10 hauke Exp $
+@comment $NetBSD: PLIST,v 1.31 2026/10/06 09:31:11 hauke Exp $
 bin/ellcc
 bin/gnuattach
 bin/gnuclient
@@ -785,6 +785,8 @@ lib/${DISTNAME}/lisp/compose.el
 lib/${DISTNAME}/lisp/compose.elc
 lib/${DISTNAME}/lisp/config.el
 lib/${DISTNAME}/lisp/config.elc
+lib/${DISTNAME}/lisp/config.values.el
+lib/${DISTNAME}/lisp/config.values.elc
 lib/${DISTNAME}/lisp/console.el
 lib/${DISTNAME}/lisp/console.elc
 lib/${DISTNAME}/lisp/cus-dep.el
@@ -830,6 +832,8 @@ lib/${DISTNAME}/lisp/easy-mmode.el
 lib/${DISTNAME}/lisp/easy-mmode.elc
 lib/${DISTNAME}/lisp/easymenu.el
 lib/${DISTNAME}/lisp/easymenu.elc
+lib/${DISTNAME}/lisp/ellcc.el
+lib/${DISTNAME}/lisp/ellcc.elc
 lib/${DISTNAME}/lisp/etags.el
 lib/${DISTNAME}/lisp/etags.elc
 lib/${DISTNAME}/lisp/events.el
@@ -965,6 +969,7 @@ lib/${DISTNAME}/lisp/loadhist.elc
 lib/${DISTNAME}/lisp/loadup-el.el
 lib/${DISTNAME}/lisp/loadup.el
 lib/${DISTNAME}/lisp/make-docfile.el
+lib/${DISTNAME}/lisp/make-docfile.elc
 lib/${DISTNAME}/lisp/map-ynp.el
 lib/${DISTNAME}/lisp/map-ynp.elc
 lib/${DISTNAME}/lisp/menubar-items.el
@@ -1307,7 +1312,6 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/array.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/backtrace.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/balloon_help.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/bitmaps.h
-lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/blocktype.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/buffer.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/bufslots.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/bytecode-ops.h
@@ -1335,7 +1339,6 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/console-x.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/console-xlike-inc.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/console.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/database.h
-lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/debug.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/device-impl.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/device.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/devslots.h
@@ -1487,7 +1490,6 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/xintrinsicp.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/xmmanagerp.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/xmotif.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/xmprimitivep.h
-lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/make-docfile
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/mmencode
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.elc

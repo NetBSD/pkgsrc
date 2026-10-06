@@ -1,10 +1,8 @@
-$NetBSD: patch-Makefile.in.in,v 1.6 2025/09/23 16:41:10 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.7 2026/10/06 09:31:11 hauke Exp $
 
 Sprinkle DESTDIR dust.
 
 Avoid installing backup~ files.
-
-Avoid NetBSD make compatibilty issues with $@
 
 The standards.info provided by XEmacs conflicts with the one installed by
 devel/autoconf, which is probably newer.
@@ -15,7 +13,7 @@ Make TAR settable, to work around shortcomings in base tar(1)
 
 was patch-aa
 
---- Makefile.in.in.orig	2025-06-14 22:52:22.000000000 +0000
+--- Makefile.in.in.orig	2026-09-24 17:42:28.000000000 +0000
 +++ Makefile.in.in
 @@ -67,7 +67,7 @@ LC_ALL = C
  RM = rm -f
@@ -26,7 +24,7 @@ was patch-aa
  
  ## ==================== Things `configure' Might Edit ====================
  
-@@ -416,11 +416,11 @@ install-arch-dep: mkdir
+@@ -419,11 +419,11 @@ install-arch-dep: mkdir
  	   fi; \
  	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
  	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC-`src/${PROGNAME} -sd`; \
@@ -40,7 +38,7 @@ was patch-aa
  #endif
  #ifdef WIN32_NATIVE
  	${INSTALL_PROGRAM} src/${PROGNAME} $(DESTDIR)${bindir}/${PROGNAME}
-@@ -439,6 +439,8 @@ install-arch-dep: mkdir
+@@ -443,6 +443,8 @@ install-arch-dep: mkdir
  # endif /* CYGWIN */
  #endif /* WIN32_NATIVE */
  #ifdef HAVE_SHLIB
@@ -49,7 +47,7 @@ was patch-aa
  	$(INSTALL_DATA) modules/auto-autoloads.* $(DESTDIR)$(moduledir)
  #endif
  
-@@ -474,14 +476,19 @@ install-arch-indep: mkdir info
+@@ -478,15 +480,20 @@ install-arch-indep: mkdir info
  	    ${INSTALL_DATA} ${srcdir}/info/dir $(DESTDIR)${infodir}/dir ; \
  	  fi ; \
  	  for file in *.info* ; do \
@@ -58,6 +56,8 @@ was patch-aa
  	    chmod 0644 $(DESTDIR)${infodir}/$${file}; \
  	  done ; \
  	fi
+-	chmod 0755 ${lispdir}/ellcc.elc
++	chmod 0755 $(DESTDIR)${lispdir}/ellcc.elc
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
 -	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
@@ -71,7 +71,7 @@ was patch-aa
  	  done
  	@echo "If you would like to save approximately 4M of disk space, do"
  	@echo "make gzip-el"
-@@ -500,7 +507,7 @@ gzip-el:
+@@ -505,7 +512,7 @@ gzip-el:
  mkdir: FRC.mkdir
  	for dir in \
  	    ${COPYDESTS} ${docdir} ${infodir} ${archlibdir} \
