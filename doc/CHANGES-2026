@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6738 2026/10/06 07:57:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6739 2026/10/06 08:00:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10130,3 +10130,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ggml to 0.26.0 [wiz 2026-10-06]
 	Updated fonts/harfbuzz to 14.6.0 [adam 2026-10-06]
 	Updated www/py-aiohttp to 3.14.4 [adam 2026-10-06]
+	Updated mail/py-checkdmarc to 6.0.3 [adam 2026-10-06]
+	Updated devel/py-setuptools-git-versioning to 3.2.0 [adam 2026-10-06]
