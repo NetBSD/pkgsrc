@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6736 2026/10/06 07:44:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6737 2026/10/06 07:46:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10127,3 +10127,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/p5-GD to 2.91 [wiz 2026-10-05]
 	Updated net/scapy to 2.7.0nb1 [rin 2026-10-06]
 	Updated www/cgit to 1.3nb2 [wiz 2026-10-06]
+	Updated math/ggml to 0.26.0 [wiz 2026-10-06]
