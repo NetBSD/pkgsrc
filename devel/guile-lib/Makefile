@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2024/09/04 17:50:57 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2026/10/06 00:10:34 gdt Exp $
 
 DISTNAME=	guile-lib-0.2.8.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://download.savannah.gnu.org/releases/guile-lib/
-# http://download.gna.org/guile-lib/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/guile-lib/
@@ -22,20 +22,20 @@ TEST_TARGET=	check
 # guile-lib uses the install(1) feature that missing intermediate
 # directories are created automatically, which e.g. NetBSD's doesn't
 # support, so we have to precreate the directories
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/config
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/container
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/debugging
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/graph
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/io
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/logging
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/math
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/os
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/scheme
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/search
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/string
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/term
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/texinfo
-INSTALLATION_DIRS+=	guile/2.2/share/guile/site/text
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/config
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/container
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/debugging
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/graph
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/io
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/logging
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/math
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/os
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/scheme
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/search
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/string
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/term
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/texinfo
+INSTALLATION_DIRS+=	guile/3.0/share/guile/site/text
 
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
