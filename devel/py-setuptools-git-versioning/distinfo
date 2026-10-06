@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/09/08 09:51:09 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/10/06 08:00:37 adam Exp $
 
-BLAKE2s (setuptools_git_versioning-3.1.0.tar.gz) = f171325246bc82c2397f0c85ed7f4b7ee3bec2380b63f9eab236acab74f1d000
-SHA512 (setuptools_git_versioning-3.1.0.tar.gz) = 1f628d1c9bde4f88178fcf6f8b812fcb16120e031130215fbd18a26fff829b0cc9fe3e10af2e42a14247937169eae5a5e8574426f2f1ac5a510a5493908e77ae
-Size (setuptools_git_versioning-3.1.0.tar.gz) = 17418 bytes
+BLAKE2s (setuptools_git_versioning-3.2.0.tar.gz) = a36d532bca1cdd7a9f4ec1d5ffc90c4dbb8583397847b63d47699c7daa7de109
+SHA512 (setuptools_git_versioning-3.2.0.tar.gz) = 6c4bac0a9debd1c0499fed3d73e844f4b65fae3c2e1d191ac400a65a2dcce5ba7cb47a96bf855b908eb614d8ccc7ec1c88e3b587589a3830ca4326fa0759be8f
+Size (setuptools_git_versioning-3.2.0.tar.gz) = 18049 bytes
