@@ -3,3 +3,6 @@ used to make electrical circuit design, simulation and prototyping/
 production easier/doable.  The suite includes the gschem schematic
 capture program, the gnetlist netlister, the gattrib attribute editor
 along with several other utility programs.
+
+This project is no longer maintained upstream; upstream suggests
+Ringdove eda as a replacement.
