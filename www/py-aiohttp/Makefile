@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2026/07/23 11:12:15 adam Exp $
+# $NetBSD: Makefile,v 1.110 2026/10/06 07:55:50 adam Exp $
 
-DISTNAME=	aiohttp-3.14.3
+DISTNAME=	aiohttp-3.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -21,19 +21,24 @@ DEPENDS+=	${PYPKGPREFIX}-propcache>=0.2.0:../../devel/py-propcache
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.17.0:../../www/py-yarl
 # speedups
 DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.3.0:../../net/py-aiodns
-TEST_DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
-TEST_DEPENDS+=	${PYPKGPREFIX}-re-assert-[0-9]*:../../devel/py-re-assert
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-#TEST_DEPENDS+=	${PYPKGPREFIX}-isal-[0-9]*:../../wip/py-isal
-TEST_DEPENDS+=	${PYPKGPREFIX}-zlib-ng-[0-9]*:../../archivers/py-zlib-ng
-#TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster-[0-9]*:../../wip/py-blockbuster
+DEPENDS+=	${PYPKGPREFIX}-brotli>=1.2:../../archivers/py-brotli
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn>=0:../../www/py-gunicorn
+TEST_DEPENDS+=	${PYPKGPREFIX}-re-assert>=0:../../devel/py-re-assert
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
+#TEST_DEPENDS+=	${PYPKGPREFIX}-isal>=0:../../wip/py-isal
+TEST_DEPENDS+=	${PYPKGPREFIX}-zlib-ng>=0:../../archivers/py-zlib-ng
+#TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster>=0:../../wip/py-blockbuster
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 313
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4:../../devel/py-typing-extensions
+.endif
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)
