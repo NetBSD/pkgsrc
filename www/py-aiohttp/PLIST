@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2026/07/23 11:12:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/10/06 07:55:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -34,9 +34,6 @@ ${PYSITELIB}/aiohttp/_websocket/reader.py
 ${PYSITELIB}/aiohttp/_websocket/reader.pyc
 ${PYSITELIB}/aiohttp/_websocket/reader.pyo
 ${PYSITELIB}/aiohttp/_websocket/reader_c.pxd
-${PYSITELIB}/aiohttp/_websocket/reader_c.py
-${PYSITELIB}/aiohttp/_websocket/reader_c.pyc
-${PYSITELIB}/aiohttp/_websocket/reader_c.pyo
 ${PYSITELIB}/aiohttp/_websocket/reader_c.so
 ${PYSITELIB}/aiohttp/_websocket/reader_py.py
 ${PYSITELIB}/aiohttp/_websocket/reader_py.pyc
