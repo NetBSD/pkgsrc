@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6743 2026/10/06 11:23:38 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6744 2026/10/06 15:29:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10136,3 +10136,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/xemacs-current-nox11 to 21.5.37 [hauke 2026-10-06]
 	Updated net/scapy to 2.8.0 [leot 2026-10-06]
 	Added net/rcvd version 0.3.1 [drixter 2026-10-06]
+	Updated devel/py-uv to 0.12.23 [wiz 2026-10-06]
