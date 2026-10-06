@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: fcgiwrap.sh,v 1.3 2025/08/28 04:27:31 khorben Exp $
+# $NetBSD: fcgiwrap.sh,v 1.4 2026/10/06 03:15:00 riastradh Exp $
 #
 # PROVIDE: fcgiwrap
 # REQUIRE: DAEMON
@@ -21,6 +21,7 @@ start_precmd="fcgiwrap_precmd"
 start_cmd="fcgiwrap_start"
 start_postcmd="fcgiwrap_poststart"
 fcgiwrap_socket="@VARBASE@/run/${name}/${name}.sock"
+fcgiwrap_nchildren=1
 
 fcgiwrap_precmd()
 {
@@ -37,7 +38,22 @@ fcgiwrap_precmd()
 fcgiwrap_start()
 {
 	echo "Starting ${name}."
-	@SU@ -m ${fcgiwrap_user} -c "${command} -f -s unix:${fcgiwrap_socket}" &
+
+        # XXX This should really either:
+        #
+        # (a) properly daemonize and log to syslog, or
+        # (b) run under a process supervisor.
+        #
+        # But fcgiwrap doesn't do (a), and rc.d doesn't have (b).
+        #
+        # As a partial measure, we redirect stdin from /dev/null so it
+        # doesn't try to read from the tty of whoever runs `service
+        # fcgiwrap start'.  But if it prints error output during the
+        # startup, we really want the operator to see that unless
+        # they've already closed the terminal.  So don't redirect
+        # stdout or stderr to /dev/null.
+        #
+	@SU@ -m ${fcgiwrap_user} -c "${command} ${fcgiwrap_flags} -c ${fcgiwrap_nchildren} -f -s unix:${fcgiwrap_socket} </dev/null" &
 }
 
 fcgiwrap_poststart() {
