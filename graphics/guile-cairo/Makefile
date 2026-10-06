@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2026/09/29 06:05:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/06 12:58:07 gdt Exp $
 
 DISTNAME=	guile-cairo-1.11.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.savannah.gnu.org/releases/guile-cairo/
 
@@ -20,6 +20,6 @@ INFO_FILES=	YES
 PKGCONFIG_OVERRIDE+=	guile-cairo.pc.in
 
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../lang/guile20/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
