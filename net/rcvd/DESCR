@@ -5,7 +5,14 @@ DNS. If every encrypted upstream fails it returns SERVFAIL rather than leaking
 a query over port 53.
 
 Features include multi-upstream fallback with health checks, DNSSEC
-validation, domain blocklists (plain-list and hosts formats, with wildcard
-support), a local cache, runtime statistics, and both forwarder and
-DoH-service (upstream) modes. TLS can be automated via ACME (certmagic) so a
-DoH endpoint presents a real CA certificate with a DNS-ID in its SAN.
+validation, domain blocklists and allowlists (plain-list and hosts formats,
+with wildcard support; an allowlist switches to default-deny), a built-in
+cache, runtime statistics, and both forwarder and encrypted-upstream service
+modes. TLS can be automated via ACME (certmagic) so any encrypted endpoint
+(DoH, DoT, or DoQ) presents a real CA certificate with a DNS-ID in its SAN.
+
+A forwarder normally verifies its upstream against the Web-PKI, so a Mode 1
+instance can point at any public CA-issued resolver unchanged. For a private
+link between two rcvd instances on a trusted LAN, it can instead pin the
+upstream service's public key (SPKI pin), accepting a self-signed certificate
+while still failing closed on any key mismatch.
