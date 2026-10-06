@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/06 11:23:17 drixter Exp $
+bin/rcvd
+man/man1/rcvd.1
+share/doc/rcvd/examples/flagship-dualmode.toml
+share/doc/rcvd/examples/mode1-forwarder-3providers.toml
+share/doc/rcvd/examples/mode2-doh-service.toml
+share/examples/rc.d/rcvd
+share/examples/rcvd/rcvd.toml
