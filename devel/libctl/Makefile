@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2026/01/03 07:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/06 13:01:52 gdt Exp $
 
+# Needs update to 4.7.1.
+# Now hosted at https://github.com/NanoComp/libctl
 DISTNAME=	libctl-3.2.2
 PKGREVISION=	5
 CATEGORIES=	devel
