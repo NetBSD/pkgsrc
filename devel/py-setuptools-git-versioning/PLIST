@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/08 09:51:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/06 08:00:37 adam Exp $
 bin/setuptools-git-versioning-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -21,6 +21,9 @@ ${PYSITELIB}/setuptools_git_versioning/cli.pyo
 ${PYSITELIB}/setuptools_git_versioning/defaults.py
 ${PYSITELIB}/setuptools_git_versioning/defaults.pyc
 ${PYSITELIB}/setuptools_git_versioning/defaults.pyo
+${PYSITELIB}/setuptools_git_versioning/dynamic_metadata.py
+${PYSITELIB}/setuptools_git_versioning/dynamic_metadata.pyc
+${PYSITELIB}/setuptools_git_versioning/dynamic_metadata.pyo
 ${PYSITELIB}/setuptools_git_versioning/factories.py
 ${PYSITELIB}/setuptools_git_versioning/factories.pyc
 ${PYSITELIB}/setuptools_git_versioning/factories.pyo

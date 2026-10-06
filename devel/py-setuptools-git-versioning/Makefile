@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/08 09:51:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/06 08:00:37 adam Exp $
 
-DISTNAME=	setuptools_git_versioning-3.1.0
+DISTNAME=	setuptools_git_versioning-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools-git-versioning/}
