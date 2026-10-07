@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/07 00:14:48 agc Exp $
+
+BLAKE2s (eh-1.9.0.tar.gz) = 6d0a1b68e7645b4d8034a11322dcdbc7b1d4c51c29f67ed925d37bd8baadddb5
+SHA512 (eh-1.9.0.tar.gz) = 41432003af57c6d3805b2b1566efd7efa4cde1552e4af571d1bf66740c6fc3dfee9705c1ed0057e3a0096c145c628353c33338f84e337cd4387885c221deedd9
+Size (eh-1.9.0.tar.gz) = 171387 bytes
