@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6784 2026/10/07 16:18:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6785 2026/10/07 16:24:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10192,3 +10192,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/py-peewee to 4.5.3 [adam 2026-10-07]
 	Updated textproc/py-orjson to 3.13.0 [adam 2026-10-07]
 	Updated textproc/py-tomli to 2.5.0 [adam 2026-10-07]
+	Updated devel/py-typer to 0.27.3 [adam 2026-10-07]
+	Updated devel/py-utils to 4.1.0 [adam 2026-10-07]
