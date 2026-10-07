@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2026/09/22 16:47:34 abs Exp $
+# $NetBSD: Makefile,v 1.758 2026/10/07 19:46:34 markd Exp $
 
 COMMENT=	Databases
 
@@ -178,6 +178,7 @@ SUBDIR+=	p5-DBD-SQLite2
 SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBD-XBase
 SUBDIR+=	p5-DBD-mysql
+SUBDIR+=	p5-DBD-mysql4
 SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
