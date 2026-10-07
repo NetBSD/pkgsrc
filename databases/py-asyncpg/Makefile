@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/06/28 15:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/10/07 05:19:29 adam Exp $
 
-DISTNAME=	asyncpg-0.31.0
+DISTNAME=	asyncpg-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncpg/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/MagicStack/asyncpg
 COMMENT=	Asyncio PosgtreSQL driver
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=6.1:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.3:../../devel/py-uvloop
 
