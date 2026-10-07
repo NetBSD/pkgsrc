@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6764 2026/10/07 10:43:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6765 2026/10/07 11:02:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10164,3 +10164,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ddns-route53 to 2.16.0 [drixter 2026-10-07]
 	Updated time/py-pytimeparse to 1.1.9 [adam 2026-10-07]
 	Updated devel/py-test-mock to 3.16.0 [adam 2026-10-07]
+	Updated net/gobgp to 4.10.0 [drixter 2026-10-07]
