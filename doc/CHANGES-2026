@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6770 2026/10/07 13:36:37 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6771 2026/10/07 13:37:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10174,3 +10174,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/gtk4 to 4.24.1 [adam 2026-10-07]
 	Updated devel/bacon to 3.26.0 [pin 2026-10-07]
 	Updated devel/difftastic to 0.71.0 [pin 2026-10-07]
+	Updated devel/serie to 0.9.3 [pin 2026-10-07]
