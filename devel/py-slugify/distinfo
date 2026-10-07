@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/09/30 08:21:26 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/10/07 05:21:34 adam Exp $
 
-BLAKE2s (python_slugify-9.1.2.tar.gz) = 0a8cee2c293ff525e3d9fb150dd8e29dc41662f3916885e7a0577d13f1df559e
-SHA512 (python_slugify-9.1.2.tar.gz) = 0cef75d5c9bb97a1d084881499defa93539969aad16654144286ffe560f5cbfc88bc60cecc683a020ff302cf73a9a2f433986cccc590e761e76bd928a55735cb
-Size (python_slugify-9.1.2.tar.gz) = 64822 bytes
+BLAKE2s (python_slugify-9.1.3.tar.gz) = 18b16ee605b8cfb478344c70a59a579334d0d64a146451b3c171ac381d692e14
+SHA512 (python_slugify-9.1.3.tar.gz) = f69e55295a802b8332b23119ac7444fc6bf6d33b2bbd39bd95ffc75e7bb2931f469b8e46a681f8429aadabc3541fc5b6fc378b5109a6606b6187ec72383b5387
+Size (python_slugify-9.1.3.tar.gz) = 66093 bytes
