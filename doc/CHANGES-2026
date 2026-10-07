@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6779 2026/10/07 15:51:48 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6780 2026/10/07 15:52:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10183,3 +10183,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/libzip to 1.12 [wiz 2026-10-07]
 	Updated security/openssh to 10.6p1 [he 2026-10-07]
 	Updated www/wordpress to 7.0.7 [taca 2026-10-07]
+	Updated www/php-ja-wordpress to 7.0.7 [taca 2026-10-07]
