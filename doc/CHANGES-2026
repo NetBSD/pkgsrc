@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6755 2026/10/07 07:44:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6756 2026/10/07 08:30:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10153,3 +10153,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.21.5 [adam 2026-10-07]
 	Updated www/resterm to 1.13.0 [drixter 2026-10-07]
 	Updated devel/lcov to 2.6nb4 [wiz 2026-10-07]
+	Updated x11/modular-xorg-server to 21.1.25 [wiz 2026-10-07]
