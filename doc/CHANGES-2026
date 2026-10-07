@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6758 2026/10/07 08:31:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6759 2026/10/07 08:45:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10156,3 +10156,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/modular-xorg-server to 21.1.25 [wiz 2026-10-07]
 	Updated x11/modular-xorg-xephyr to 21.1.25 [wiz 2026-10-07]
 	Updated wayland/xwayland to 24.1.14 [wiz 2026-10-07]
+	Updated archivers/7-zip to 26.04 [wiz 2026-10-07]
