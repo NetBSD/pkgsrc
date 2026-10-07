@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6780 2026/10/07 15:52:25 taca Exp $
+$NetBSD: CHANGES-2026,v 1.6781 2026/10/07 15:53:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10184,3 +10184,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openssh to 10.6p1 [he 2026-10-07]
 	Updated www/wordpress to 7.0.7 [taca 2026-10-07]
 	Updated www/php-ja-wordpress to 7.0.7 [taca 2026-10-07]
+	Updated www/palemoon-gtk3 to 35.0.2 [nia 2026-10-07]
+	Updated www/palemoon to 35.0.2 [nia 2026-10-07]
