@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6788 2026/10/07 17:04:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6789 2026/10/07 17:30:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10201,3 +10201,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-borgmatic to 2.1.10 [adam 2026-10-07]
 	Updated devel/py-click-repl to 0.4.1 [adam 2026-10-07]
 	Updated devel/py-cachetools to 7.2.1 [adam 2026-10-07]
+	Updated security/flawfinder to 2.0.20 [adam 2026-10-07]
+	Updated devel/py-mocket to 3.14.5 [adam 2026-10-07]
