@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6760 2026/10/07 08:54:09 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6761 2026/10/07 09:48:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10158,3 +10158,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/xwayland to 24.1.14 [wiz 2026-10-07]
 	Updated archivers/7-zip to 26.04 [wiz 2026-10-07]
 	Updated net/samba4 to 4.25.0 [wiz 2026-10-07]
+	Updated devel/nss to 3.131 [wiz 2026-10-07]
