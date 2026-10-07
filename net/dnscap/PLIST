@@ -1,3 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/08 07:39:00 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/07 20:58:45 agc Exp $
 bin/dnscap
+bin/dnscap-rssm-rssac002
+lib/dnscap/anonaes128.la
+lib/dnscap/anonmask.la
+lib/dnscap/asudp.la
+lib/dnscap/cryptopan.la
+lib/dnscap/cryptopant.la
+lib/dnscap/eventlog.la
+lib/dnscap/ipcrypt.la
+lib/dnscap/pcapdump.la
+lib/dnscap/royparse.la
+lib/dnscap/rssm.la
+lib/dnscap/rzkeychange.la
+lib/dnscap/txtout.la
+man/man1/dnscap-rssm-rssac002.1
 man/man1/dnscap.1
+share/doc/dnscap/CHANGES
+share/doc/dnscap/CONTRIBUTORS
+share/doc/dnscap/LICENSE
+share/doc/dnscap/README.md
