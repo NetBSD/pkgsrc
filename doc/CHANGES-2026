@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6748 2026/10/07 05:14:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6749 2026/10/07 05:19:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10142,3 +10142,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added editors/eh version 01.9.0 [agc 2026-10-06]
 	Updated www/py-django to 6.1.2 [adam 2026-10-07]
 	Updated www/py-django5 to 5.2.18 [adam 2026-10-07]
+	Updated devel/py-iniconfig to 2.3.1 [adam 2026-10-07]
+	Updated databases/py-asyncpg to 0.32.0 [adam 2026-10-07]
