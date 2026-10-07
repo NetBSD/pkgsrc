@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.131 2026/09/10 08:25:39 adam Exp $
+$NetBSD: distinfo,v 1.132 2026/10/07 08:53:53 wiz Exp $
 
-BLAKE2s (samba-4.24.7.tar.gz) = e0cf44ca449abdb4d6b988c0661f08ccee9b7d7a20e8df7fd8a03f29c649a910
-SHA512 (samba-4.24.7.tar.gz) = f895baf3c06d0d0371052ae48f44ebc9f953441a8d6fbb6eab223bf1b892dab7be429733d46fa2cbd1088b1cefee601cc99ca97f41b985c47b9846c300af8cce
-Size (samba-4.24.7.tar.gz) = 43450847 bytes
+BLAKE2s (samba-4.25.0.tar.gz) = 3a4601a0c931608cc4fd8d23197e39c7fb1602d8f74ceec5bd1cc31f20f39e09
+SHA512 (samba-4.25.0.tar.gz) = cf22b631c1340e0d02c0fa092f7661072fef4fffddb048a4ed6b481edf7bf0df158b33a7330d1ed2e56e20a755e0991121b3123836e5dcf442cb55294e0ca61e
+Size (samba-4.25.0.tar.gz) = 43571277 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = b9015694b80c0e6382d75c806fd6e0eb92e5f998
@@ -15,7 +15,7 @@ SHA1 (patch-lib_replace_system_passwd.h) = 652be067b2560310ce3a4bbf37c24cb2fa8eb
 SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = 109e7a516dc291372e982b9f21c6ce8c0e5d3ca4
 SHA1 (patch-lib_tevent_tevent__threads.c) = e5e82db82cff4d550451cd9290b3a351b25d4de4
-SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 0ac414e02ee3a326d3dd34515bfffce6e8da5e46
+SHA1 (patch-lib_tsocket_tsocket__bsd.c) = ed9d7d1cec0559d0c3b2f1cdc38799e1a2313c04
 SHA1 (patch-lib_util_access.c) = e629aac8b4b36514fc73cf0d31a07b4a912f87c6
 SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f73bb791217c26
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
@@ -24,7 +24,7 @@ SHA1 (patch-lib_util_time.h) = 5048614e301cf6922ff7fa6693fa58bfe17ff10e
 SHA1 (patch-lib_util_util__crypt.c) = 476e5f501df0b87096a145005480980752109225
 SHA1 (patch-libcli_dns_wscript__build) = e1eae3d78a7a473107d22e41d3cdaa1beb83b3d5
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdfc6fc12df2
-SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 1214bfbd7714b64f3ff3eb97b6f24e3d2629370f
+SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = ce325d85488ed38b6938cee09feafb7b4dc5155a
 SHA1 (patch-nsswitch_wscript__build) = 5be3e07f8a34ae3e2f68126eb6f05f8b65f5be2f
 SHA1 (patch-python_pyglue.c) = ba8b0f7d471f16e603a050f735d4a92a95e0b886
 SHA1 (patch-source3_auth_user__util.c) = c7c1c48974ba9d484ddda657996741e0e5b2a9c4
