@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/10/22 09:52:29 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/10/07 11:12:45 adam Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	Generate code and/or documentation for one or more D-Bus interfaces
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/gio/gdbus-2.0/codegen
 
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 
 SUBST_CLASSES+=		autovars
 SUBST_STAGE.autovars=	pre-configure

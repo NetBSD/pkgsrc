@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.134 2026/09/22 04:06:12 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.135 2026/10/07 11:12:45 adam Exp $
 # used by devel/gdbus-codegen/Makefile
 # used by devel/glib2/Makefile
 # used by devel/glib2-tools/Makefile
 # used by devel/glib2-introspection/Makefile
 
-DISTNAME=	glib-2.90.0
+DISTNAME=	glib-2.90.1
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

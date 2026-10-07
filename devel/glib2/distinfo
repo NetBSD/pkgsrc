@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.351 2026/09/22 04:06:12 ryoon Exp $
+$NetBSD: distinfo,v 1.352 2026/10/07 11:12:45 adam Exp $
 
-BLAKE2s (glib-2.90.0.tar.xz) = 5d43c6d0f427980cf32c72a0625c4b74068f94f6fc51dc76aac50107f7216007
-SHA512 (glib-2.90.0.tar.xz) = 5ca18b4e89d0efef40d6921c33903cad242ac664e4125e8161fa7d0f0c9c65c9a7ff61d9e3ac3eb7b780b7e113392a87d12b402000f8af76b8050ddae26d0a01
-Size (glib-2.90.0.tar.xz) = 5830480 bytes
+BLAKE2s (glib-2.90.1.tar.xz) = 331e90767287ee31990f1ef6843a76fbd321b0235db41554c08f25df80790865
+SHA512 (glib-2.90.1.tar.xz) = d2d76deaad64e307034b09635c64a60537b0d625d1695b314bc33e9e3c9b20284270d2105333474eb1fbe5afcaa814d4c52ded3a1c2a46b4b2652f7b66a211c3
+Size (glib-2.90.1.tar.xz) = 5871112 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = f719ae41a9eb1d2f04d866b246fa5176543f2df9
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = 9bd0befe0dd547f6f2d818e52bee14e31a017ac7
 SHA1 (patch-gio_glib-compile-schemas.c) = 4fc8e8ba62bef01762007ebf21569053374808d0
