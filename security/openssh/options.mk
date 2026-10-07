@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.51 2026/08/03 13:12:31 wiz Exp $
+# $NetBSD: options.mk,v 1.52 2026/10/07 15:22:05 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam openssh-legacymodsz
@@ -22,7 +22,10 @@ PKG_SUGGESTED_OPTIONS+=	pam
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mopenssl)
-.include "../../security/openssl/buildlink3.mk"
+# Want/need newish OpenSSL:
+BUILDLINK_API_DEPENDS.openssl+= openssl>=3
+# but it may come from the in-tree version:
+.include "../../security/openssl/builtin.mk"
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-openssl

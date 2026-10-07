@@ -1,25 +1,15 @@
-$NetBSD: patch-atomicio.c,v 1.5 2026/10/05 18:08:15 he Exp $
+$NetBSD: patch-atomicio.c,v 1.6 2026/10/07 15:22:05 he Exp $
 
-Remove no-longer-needed BROKEN_READ_COMPARISON code, to mirror
-
-  https://github.com/openssh/openssh-portable/commit/a765b86d
-
-ref. mailing list thread at
-
-  https://lists.mindrot.org/pipermail/openssh-unix-dev/2026-September/042758.html
+Fix for PR#60563.
 
 --- atomicio.c.orig	2026-09-22 07:42:45.683284535 +0000
 +++ atomicio.c
-@@ -51,11 +51,7 @@ atomicio6(ssize_t (*f) (int, void *, siz
+@@ -51,7 +51,7 @@ atomicio6(ssize_t (*f) (int, void *, siz
  	struct pollfd pfd;
  
  	pfd.fd = fd;
--#ifndef BROKEN_READ_COMPARISON
 -	pfd.events = f == read ? POLLIN : POLLOUT;
--#else
--	pfd.events = POLLIN|POLLOUT;
--#endif
-+	pfd.events = f != vwrite ? POLLIN : POLLOUT;
++	pfd.events = f == vwrite ? POLLOUT : POLLIN;
  	while (n > pos) {
  		res = (f) (fd, s + pos, n - pos);
  		switch (res) {
