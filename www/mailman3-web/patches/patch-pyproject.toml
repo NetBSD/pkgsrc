@@ -1,0 +1,16 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/10/07 19:38:02 markd Exp $
+
+Bump django top end to 5.3 as per
+https://gitlab.com/mailman/mailman-web/-/commit/bf3eae03ba6ed416ff58e63ea30dd4b95f310e46
+
+--- pyproject.toml.orig	2024-03-07 08:51:32.800742000 +0000
++++ pyproject.toml
+@@ -17,7 +17,7 @@ classifiers = [
+ ]
+ requires-python = ">=3.9"
+ dependencies = [
+-    "django>=4.0,<4.3",
++    "django>=4.0,<5.3",
+     "hyperkitty",
+     "postorius",
+     "whoosh",
