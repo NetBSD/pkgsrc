@@ -1,9 +1,9 @@
-$NetBSD: patch-regress_nihtest.conf.in,v 1.3 2023/08/25 07:12:41 adam Exp $
+$NetBSD: patch-regress_support_nihtest.conf.in,v 1.1 2026/10/07 14:24:37 wiz Exp $
 
 To allow testing in uninstalled state.
 
---- regress/nihtest.conf.in.orig	2023-08-23 10:55:23.000000000 +0000
-+++ regress/nihtest.conf.in
+--- regress/support/nihtest.conf.in.orig	2023-08-23 10:55:23.000000000 +0000
++++ regress/support/nihtest.conf.in
 @@ -9,6 +9,8 @@ program-directories = @PROJECT_BINARY_DI
      @PROJECT_BINARY_DIR@/src/Debug
  default-program = ziptool_regress
