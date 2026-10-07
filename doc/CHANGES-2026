@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6777 2026/10/07 14:24:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6778 2026/10/07 15:22:42 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10181,3 +10181,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xdotool to 4.20260303.1 [pin 2026-10-07]
 	Updated x11/xtermcontrol to 3.11 [pin 2026-10-07]
 	Updated archivers/libzip to 1.12 [wiz 2026-10-07]
+	Updated security/openssh to 10.6p1 [he 2026-10-07]
