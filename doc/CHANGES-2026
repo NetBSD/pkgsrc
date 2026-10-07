@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6762 2026/10/07 10:19:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6763 2026/10/07 10:19:46 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10161,3 +10161,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/nss to 3.131 [wiz 2026-10-07]
 	Updated www/py-django-filter to 26.2 [adam 2026-10-07]
 	Updated www/py-djangorestframework to 3.18.3 [adam 2026-10-07]
+	Updated net/ddns-route53 to 2.16.0 [drixter 2026-10-07]
