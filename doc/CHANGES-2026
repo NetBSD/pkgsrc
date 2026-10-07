@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6746 2026/10/06 18:44:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6747 2026/10/07 00:16:11 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10139,3 +10139,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.12.23 [wiz 2026-10-06]
 	Updated devel/py-uv-build to 0.12.23 [wiz 2026-10-06]
 	Updated devel/lua-language-server to 3.19.1 [wiz 2026-10-06]
+	Added editors/eh version 01.9.0 [agc 2026-10-06]
