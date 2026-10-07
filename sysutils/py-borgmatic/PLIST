@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/08/20 05:36:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/07 17:00:02 adam Exp $
 bin/borgmatic
 bin/generate-borgmatic-config
 bin/validate-borgmatic-config
@@ -342,6 +342,9 @@ ${PYSITELIB}/borgmatic/hooks/credential/file.pyo
 ${PYSITELIB}/borgmatic/hooks/credential/keepassxc.py
 ${PYSITELIB}/borgmatic/hooks/credential/keepassxc.pyc
 ${PYSITELIB}/borgmatic/hooks/credential/keepassxc.pyo
+${PYSITELIB}/borgmatic/hooks/credential/onepassword.py
+${PYSITELIB}/borgmatic/hooks/credential/onepassword.pyc
+${PYSITELIB}/borgmatic/hooks/credential/onepassword.pyo
 ${PYSITELIB}/borgmatic/hooks/credential/parse.py
 ${PYSITELIB}/borgmatic/hooks/credential/parse.pyc
 ${PYSITELIB}/borgmatic/hooks/credential/parse.pyo
@@ -363,6 +366,9 @@ ${PYSITELIB}/borgmatic/hooks/data_source/config.pyo
 ${PYSITELIB}/borgmatic/hooks/data_source/dump.py
 ${PYSITELIB}/borgmatic/hooks/data_source/dump.pyc
 ${PYSITELIB}/borgmatic/hooks/data_source/dump.pyo
+${PYSITELIB}/borgmatic/hooks/data_source/influxdb.py
+${PYSITELIB}/borgmatic/hooks/data_source/influxdb.pyc
+${PYSITELIB}/borgmatic/hooks/data_source/influxdb.pyo
 ${PYSITELIB}/borgmatic/hooks/data_source/lvm.py
 ${PYSITELIB}/borgmatic/hooks/data_source/lvm.pyc
 ${PYSITELIB}/borgmatic/hooks/data_source/lvm.pyo
@@ -375,6 +381,9 @@ ${PYSITELIB}/borgmatic/hooks/data_source/mongodb.pyo
 ${PYSITELIB}/borgmatic/hooks/data_source/mysql.py
 ${PYSITELIB}/borgmatic/hooks/data_source/mysql.pyc
 ${PYSITELIB}/borgmatic/hooks/data_source/mysql.pyo
+${PYSITELIB}/borgmatic/hooks/data_source/openldap.py
+${PYSITELIB}/borgmatic/hooks/data_source/openldap.pyc
+${PYSITELIB}/borgmatic/hooks/data_source/openldap.pyo
 ${PYSITELIB}/borgmatic/hooks/data_source/postgresql.py
 ${PYSITELIB}/borgmatic/hooks/data_source/postgresql.pyc
 ${PYSITELIB}/borgmatic/hooks/data_source/postgresql.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/08/20 05:36:38 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/07 17:00:02 adam Exp $
 
-DISTNAME=	borgmatic-2.1.7
+DISTNAME=	borgmatic-2.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgmatic/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>0.15.0:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.1:../../devel/py-ruamel-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-flexmock>=0:../../devel/py-flexmock
 
 USE_LANGUAGES=	# none

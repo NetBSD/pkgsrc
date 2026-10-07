@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/08/20 05:36:38 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/10/07 17:00:02 adam Exp $
 
-BLAKE2s (borgmatic-2.1.7.tar.gz) = 1ddb2f608dc776402f217b54038afdf17954b043f22985f241c1da4caf992ba8
-SHA512 (borgmatic-2.1.7.tar.gz) = 13c814e04fa1d5a7fe06b3f5fdf2f5dae096093b4178e76cee57e9f1effa4ec47125093f9fc7144714aeff6ccc8a7bb8bfd912da70b58173ca8a288108468a6c
-Size (borgmatic-2.1.7.tar.gz) = 1000086 bytes
+BLAKE2s (borgmatic-2.1.10.tar.gz) = 335f64eb9267765eb837ba503523fbaf87878ff0924b3e38005f8760b69d6920
+SHA512 (borgmatic-2.1.10.tar.gz) = a0e8f20548c793453824a2ca0e7cdd0d8636d625f98bdf4c6030372320d2c8e2997cbc7064e4c86e1366324a67df0a72d268d4e250d6b732c5c5bac2c480aa1c
+Size (borgmatic-2.1.10.tar.gz) = 1076927 bytes
