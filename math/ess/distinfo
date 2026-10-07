@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:55:39 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/10/07 19:55:20 markd Exp $
 
-BLAKE2s (ess-13.09-1.tgz) = dff3171643c868ac0973f97f3d63d4af049ff3a2175da5f26f0b62b7db360e2e
-SHA512 (ess-13.09-1.tgz) = 846dccb032cb0780fece51c6647dc3e19d737c8b89a36f3bd0509eea7ea3f75a8d50f05f6d00744dc3253b16e40d1ee38190d9e452f3bcb6545379c059e1f7c5
-Size (ess-13.09-1.tgz) = 3331643 bytes
-SHA1 (patch-aa) = 2e2c39c4c98e37cbbb968d605afd3d98a4199e68
-SHA1 (patch-ab) = 22673b8f70ac9ba952d9e23eb9ca3fcbb18e371b
+BLAKE2s (ess-26.05.0/ess-26.05.0.tar.gz) = d20e8a9549cd7f8cbabba851bf641bc1dff61172e8f230b059c5d33422e4a9b8
+SHA512 (ess-26.05.0/ess-26.05.0.tar.gz) = bd687e43faff7d923cefb1553ea2de4ee5002eeeb9c820919c872c9c2c670052e0709360d7e3ffe34628ada0ca208f67a2e6dc24e2547f604d4841d6557e4aab
+Size (ess-26.05.0/ess-26.05.0.tar.gz) = 802751 bytes
+BLAKE2s (ess-26.05.0/julia-mode-latexsubs.el) = 5c9fa1861ac5947a90052dda468249349aed421c9201aa62d9dace3c1ba23a7f
+SHA512 (ess-26.05.0/julia-mode-latexsubs.el) = 6414c08a8589f5b105f4bd1733f1f722cd12d8f118ba71167958e75fcc2bb13690abce6c2ebd0063ad44dbba95fa26191b8317ae32d7523e394ec1dd719f9b25
+Size (ess-26.05.0/julia-mode-latexsubs.el) = 453405 bytes
+BLAKE2s (ess-26.05.0/julia-mode.el) = 29a7e781954274e111c04f406836f18c2378073ff50af57e6b501af999a91bb1
+SHA512 (ess-26.05.0/julia-mode.el) = cd1eab18fab0e2c850227f1c4d9e1398ffa3464c74007ec13d6130706268d9741c3badd2d4d7e036041ace169ee6013f1acbd346faa1473a17e7ea0289088ea8
+Size (ess-26.05.0/julia-mode.el) = 45682 bytes
+SHA1 (patch-doc_installation.texi) = 42eae4365abb818482af48426d7bc6ec84084ca1
+SHA1 (patch-doc_newfeat.texi) = 51a43f95839d63d9fe331168d94e10970b200039
+SHA1 (patch-lisp_ess-site.el) = 6d19a7cd018a4f6ee7badb0e748da4c87e8ac665
+SHA1 (patch-test_ess-test.el) = 0d6516a336553487d09a69ecd4ae9c36d51f6940
