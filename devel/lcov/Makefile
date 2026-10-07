@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2026/10/06 08:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/07 07:44:30 wiz Exp $
 
 DISTNAME=	lcov-2.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+PATCHFILES+=	af02b08f844200aa3ee611062036499f652520d0.diff
+PATCH_SITES=	https://github.com/henry2cox/lcov/commit/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://github.com/linux-test-project/lcov
@@ -23,7 +25,6 @@ DEPENDS+=	p5-Memory-Process-[0-9]*:../../sysutils/p5-Memory-Process
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=0:../../textproc/py-xlsxwriter
-TEST_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 TEST_DEPENDS+=	jq-[0-9]*:../../devel/jq
 
 USE_LANGUAGES=	c c++
@@ -44,8 +45,8 @@ MAKE_FLAGS+=	CFG_INST_DIR=${DESTDIR}${PREFIX}/share/examples/lcov
 CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
-# as of 2.6nb1:
-# 91 tests executed, 84 passed, 7 failed, 0 skipped
+# as of 2.6nb4:
+# 91 tests executed, 91 passed, 0 failed, 0 skipped
 TEST_TARGET=	test
 # breaks tests
 #TEST_ENV+=	TESTCASE_ARGS=--parallel\ ${_MAKE_JOBS_N:U1}
@@ -168,36 +169,12 @@ SUBST_MESSAGE.bh=	Fixing path to bash.
 
 SUBST_CLASSES+=		pyc
 SUBST_SED.pyc+=		-e "s,cover_cmd = 'coverage,cover_cmd = 'coverage-${PYVERSSUFFIX},"
-SUBST_SED.pyc+=		-e "s,CMD='coverage,CMD='coverage-${PYVERSSUFFIX},"
+SUBST_SED.pyc+=		-e "s,command -v coverage,command -v coverage-${PYVERSSUFFIX},"
+SUBST_SED.pyc+=		-e 's,echo "coverage",echo "coverage-'${PYVERSSUFFIX}'",'
 SUBST_FILES.pyc+=	bin/py2lcov
-SUBST_FILES.pyc+=	tests/py2lcov/py2lcov.sh
+SUBST_FILES.pyc+=	tests/common.tst
 SUBST_STAGE.pyc=	pre-configure
 SUBST_MESSAGE.pyc=	Fixing py-coverage binary name.
-
-# needs mktemp --suffix
-# needs md5sum
-# needs wc without leading space
-SUBST_CLASSES+=		gnu
-SUBST_SED.gnu+=		-e "s,md5sum,gmd5sum,"
-SUBST_SED.gnu+=		-e "s,mktemp,gmktemp,"
-SUBST_SED.gnu+=		-e "s, wc , gwc ,"
-SUBST_FILES.gnu+=	tests/bin/common
-SUBST_FILES.gnu+=	tests/bin/test_run
-SUBST_FILES.gnu+=	tests/genhtml/full.sh
-SUBST_FILES.gnu+=	tests/genhtml/htmlgen/htmlgen.sh
-SUBST_FILES.gnu+=	tests/genhtml/part1.sh
-SUBST_FILES.gnu+=	tests/genhtml/part2.sh
-SUBST_FILES.gnu+=	tests/genhtml/target.sh
-SUBST_FILES.gnu+=	tests/genhtml/zero.sh
-SUBST_FILES.gnu+=	tests/lcov/exception/exception.sh
-SUBST_FILES.gnu+=	tests/lcov/scheduling/scheduling.sh
-SUBST_FILES.gnu+=	tests/lcov/tempdir/tempdir.sh
-SUBST_FILES.gnu+=	tests/lcov/xplatform/xplatform.sh
-SUBST_FILES.gnu+=	tests/scripts/gitblame_test.sh
-SUBST_FILES.gnu+=	tests/scripts/p4annotate_test.sh
-SUBST_FILES.gnu+=	tests/scripts/p4version_test.sh
-SUBST_STAGE.gnu=	pre-test
-SUBST_MESSAGE.gnu=	Preferring GNU tools.
 
 REPLACE_PERL+=	bin/fix.pl
 REPLACE_PERL+=	bin/gendesc
@@ -268,6 +245,7 @@ pre-configure:
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/lcov/tests/common.tst.orig
 	${RM} -f ${DESTDIR}${PREFIX}/share/lcov/tests/lcov/extract/extract2.sh.orig
+	${FIND} ${DESTDIR}${PREFIX} -name *.orig_dist -delete
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
