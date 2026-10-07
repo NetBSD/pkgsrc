@@ -1,19 +1,19 @@
-$NetBSD: patch-lib_tsocket_tsocket__bsd.c,v 1.3 2022/07/29 20:33:38 jperkin Exp $
+$NetBSD: patch-lib_tsocket_tsocket__bsd.c,v 1.4 2026/10/07 08:53:53 wiz Exp $
 
 Avoid s_addr macro.
 
---- lib/tsocket/tsocket_bsd.c.orig	2022-01-24 10:26:58.933306500 +0000
+--- lib/tsocket/tsocket_bsd.c.orig	2026-08-10 19:16:53.014630000 +0000
 +++ lib/tsocket/tsocket_bsd.c
-@@ -457,7 +457,7 @@ int _tsocket_address_inet_from_hostport_
+@@ -441,7 +441,7 @@ int _tsocket_address_inet_from_hostport_strings(TALLOC
  	char *buf = NULL;
  	uint64_t port = 0;
  	int ret;
 -	char *s_addr = NULL;
 +	char *sun_addr = NULL;
  	uint16_t s_port = default_port;
- 	bool conv_ret;
+ 	int error = 0;
  	bool is_ipv6_by_squares = false;
-@@ -486,7 +486,7 @@ int _tsocket_address_inet_from_hostport_
+@@ -470,7 +470,7 @@ int _tsocket_address_inet_from_hostport_strings(TALLOC
  		/* IPv6 possibly with port - squares detected */
  		port_sep = pr_sq + 1;
  		if (*port_sep == '\0') {
@@ -22,7 +22,7 @@ Avoid s_addr macro.
  			*pr_sq = 0;
  			s_port = default_port;
  			goto get_addr;
-@@ -508,7 +508,7 @@ int _tsocket_address_inet_from_hostport_
+@@ -493,7 +493,7 @@ int _tsocket_address_inet_from_hostport_strings(TALLOC
  		s_port = (uint16_t)port;
  		*port_sep = 0;
  		*pr_sq = 0;
@@ -31,7 +31,7 @@ Avoid s_addr macro.
  		*pl_sq = 0;
  		goto get_addr;
  	} else if (pl_period != NULL && port_sep != NULL) {
-@@ -525,18 +525,18 @@ int _tsocket_address_inet_from_hostport_
+@@ -511,18 +511,18 @@ int _tsocket_address_inet_from_hostport_strings(TALLOC
  		}
  		s_port = (uint16_t)port;
  		*port_sep = 0;

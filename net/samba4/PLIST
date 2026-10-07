@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2026/08/20 08:11:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.66 2026/10/07 08:53:53 wiz Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -199,10 +199,12 @@ ${PYSITELIB}/samba/dcerpc/drsblobs.so
 ${PYSITELIB}/samba/dcerpc/drsuapi.so
 ${PYSITELIB}/samba/dcerpc/echo.so
 ${PYSITELIB}/samba/dcerpc/epmapper.so
+${PYSITELIB}/samba/dcerpc/file_id.so
 ${PYSITELIB}/samba/dcerpc/gkdi.so
 ${PYSITELIB}/samba/dcerpc/gmsa.so
 ${PYSITELIB}/samba/dcerpc/idmap.so
 ${PYSITELIB}/samba/dcerpc/initshutdown.so
+${PYSITELIB}/samba/dcerpc/ioctl.so
 ${PYSITELIB}/samba/dcerpc/irpc.so
 ${PYSITELIB}/samba/dcerpc/keycredlink.so
 ${PYSITELIB}/samba/dcerpc/krb5ccache.so
@@ -643,8 +645,10 @@ ${PYSITELIB}/samba/tests/net_join_no_spnego.py
 ${PYSITELIB}/samba/tests/netbios.py
 ${PYSITELIB}/samba/tests/netcmd.py
 ${PYSITELIB}/samba/tests/netlogonsvc.py
+${PYSITELIB}/samba/tests/nps_echo_test.py
 ${PYSITELIB}/samba/tests/nss/base.py
 ${PYSITELIB}/samba/tests/nss/group.py
+${PYSITELIB}/samba/tests/ntacl_resource_attr_ace.py
 ${PYSITELIB}/samba/tests/ntacls.py
 ${PYSITELIB}/samba/tests/ntacls_backup.py
 ${PYSITELIB}/samba/tests/ntlm_auth.py
