@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/10/05 08:52:04 drixter Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/07 12:59:37 drixter Exp $
 
 DISTNAME=	knot-resolver-6.5.0
 CATEGORIES=	net
@@ -42,6 +42,8 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/knot-resolver/root.keys ${DESTDIR}${PREFIX}/share/examples/knot-resolver/
 	${RMDIR} ${DESTDIR}${PREFIX}/etc/knot-resolver
 
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+
 OPSYSVARS+=	SOEXT
 SOEXT.Darwin=	dylib
 SOEXT.*=	so
@@ -59,7 +61,7 @@ PLIST.notdarwin=	yes
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
-.include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/protobuf-c/buildlink3.mk"
@@ -69,4 +71,6 @@ PLIST.notdarwin=	yes
 .include "../../net/knot/buildlink3.mk"
 .include "../../net/fstrm/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../www/nghttp2/buildlink3.mk"
+.include "../../net/ngtcp2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
