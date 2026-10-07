@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/08/30 15:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/07 16:20:03 adam Exp $
 
-DISTNAME=	typer-0.27.2
+DISTNAME=	typer-0.27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/fastapi/typer
 COMMENT=	Library for building CLI tools
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>0:../../devel/py-pdm_backend
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-annotated-doc>=0.0.2:../../textproc/py-annotated-doc
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.8.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.3.0:../../misc/py-shellingham
