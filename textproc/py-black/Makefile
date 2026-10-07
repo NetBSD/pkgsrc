@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/06/28 15:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/07 05:35:42 adam Exp $
 
-DISTNAME=	black-26.5.1
+DISTNAME=	black-26.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://black.readthedocs.io/
 COMMENT=	Uncompromising Python code formatter
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3.0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
