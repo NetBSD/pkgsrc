@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/08/12 22:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/07 10:16:21 adam Exp $
 
-DISTNAME=	django_filter-26.1
+DISTNAME=	django_filter-26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filter/}
 
