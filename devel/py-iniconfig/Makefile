@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/11/07 10:32:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/07 05:16:47 adam Exp $
 
-DISTNAME=	iniconfig-2.3.0
+DISTNAME=	iniconfig-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iniconfig/}
