@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2022/10/06 02:18:16 markd Exp $
+# $NetBSD: options.mk,v 1.2 2026/10/07 19:48:51 markd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.rt5
 PKG_OPTIONS_REQUIRED_GROUPS=	backend frontend
-PKG_OPTIONS_GROUP.backend=	mysql oracle pgsql sqlite
+PKG_OPTIONS_GROUP.backend=	mysql mariadb oracle pgsql sqlite
 PKG_OPTIONS_GROUP.frontend=	fastcgi modperl2
 PKG_SUGGESTED_OPTIONS=		mysql fastcgi
 
@@ -22,6 +22,9 @@ DEPENDS+=	p5-HTML-Mason>=1.36:../../www/p5-HTML-Mason
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	p5-DBD-mysql>=2.1018:../../databases/p5-DBD-mysql
 RT_DB_TYPE=	mysql
+.elif !empty(PKG_OPTIONS:Mmariadb)
+DEPENDS+=	p5-DBD-mysql>=2.1018<5:../../databases/p5-DBD-mysql4
+RT_DB_TYPE=	MariaDB
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=1.43:../../databases/p5-DBD-postgresql
 RT_DB_TYPE=	Pg
