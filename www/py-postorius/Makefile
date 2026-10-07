@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/07/23 22:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/07 19:34:11 markd Exp $
 
 DISTNAME=	postorius-1.3.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postorius/}
 
