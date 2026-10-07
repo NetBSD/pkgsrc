@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/07/17 10:16:04 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/07 14:06:58 sborrill Exp $
 
 DISTNAME=	nsis-${NSIS_VER}
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
@@ -20,7 +21,7 @@ NSIS_SRC=	${DISTNAME:=-src}
 NSIS_VER=	3.12
 WRKSRC=		${WRKDIR}/${NSIS_SRC}
 NO_CONFIGURE=	yes
-
+USE_GNU_ICONV=	yes
 EXTRACT_OPTS_ZIP=	-qo
 
 MAKENSIS_BIN=	${PREFIX}/share/nsis/makensis
@@ -34,7 +35,9 @@ SUBST_SED.makensis=	-e s,@@SH@@,${SH:Q},
 SUBST_SED.makensis+=	-e s,@@MAKENSIS@@,${MAKENSIS_BIN:Q},
 
 # https://nsis.sourceforge.io/Docs/AppendixG.html#build_posix
-SCONS_BUILD_ARGS+=	NSIS_CONFIG_CONST_DATA_PATH=no
+SCONS_BUILD_ARGS+=	APPEND_CCFLAGS=${CFLAGS:Q}
+SCONS_BUILD_ARGS+=	APPEND_LINKFLAGS=${LDFLAGS:Q}
+SCONS_BUILD_ARGS+=	NSIS_CONFIG_CONST_DATA_PATH=yes
 SCONS_BUILD_ARGS+=	SKIPMISC=all
 SCONS_BUILD_ARGS+=	SKIPPLUGINS=all
 SCONS_BUILD_ARGS+=	SKIPSTUBS=all
@@ -54,6 +57,7 @@ do-install:
 	cd ${WRKDIR}/${DISTNAME} && ${PAX} -rw .	\
 		${DESTDIR}${PREFIX}/share/nsis
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/scons4/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
