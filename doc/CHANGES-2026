@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6753 2026/10/07 05:49:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6754 2026/10/07 06:56:08 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10151,3 +10151,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-black to 26.10.0 [adam 2026-10-07]
 	Updated devel/py-project-api to 1.11.3 [adam 2026-10-07]
 	Updated sysutils/ansible-core to 2.21.5 [adam 2026-10-07]
+	Updated www/resterm to 1.13.0 [drixter 2026-10-07]
