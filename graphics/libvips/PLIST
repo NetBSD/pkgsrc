@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/10/31 22:44:40 hauke Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/07 22:44:26 wiz Exp $
 bin/vips
 bin/vipsedit
 bin/vipsheader
@@ -52,18 +52,18 @@ include/vips/vips.h
 include/vips/vips8
 lib/libvips-cpp.so
 lib/libvips-cpp.so.42
-lib/libvips-cpp.so.42.19.2
+lib/libvips-cpp.so.42.20.7
 lib/libvips.so
 lib/libvips.so.42
-lib/libvips.so.42.19.2
+lib/libvips.so.42.20.7
 lib/pkgconfig/vips-cpp.pc
 lib/pkgconfig/vips.pc
-lib/vips-modules-8.17/vips-heif.so
-lib/vips-modules-8.17/vips-jxl.so
-${PLIST.x11}lib/vips-modules-8.17/vips-poppler.so
+lib/vips-modules-8.18/vips-heif.so
+lib/vips-modules-8.18/vips-jxl.so
+${PLIST.x11}lib/vips-modules-8.18/vips-poppler.so
 man/man1/vips.1
 man/man1/vipsedit.1
 man/man1/vipsheader.1
 man/man1/vipsthumbnail.1
-share/locale/de/LC_MESSAGES/vips8.17.mo
-share/locale/en_GB/LC_MESSAGES/vips8.17.mo
+share/locale/de/LC_MESSAGES/vips8.18.mo
+share/locale/en_GB/LC_MESSAGES/vips8.18.mo
