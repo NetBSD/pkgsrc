@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2023/02/06 11:23:50 nros Exp $
+$NetBSD: distinfo,v 1.13 2026/10/07 17:15:41 adam Exp $
 
-BLAKE2s (flawfinder-2.0.19.tar.gz) = 0168e0f39c14517610584191e2106a2876f8c56399f5936cf2cf0c9e86fe2a0a
-SHA512 (flawfinder-2.0.19.tar.gz) = 7ac8684f157f30cb7cc0e2d9c270f92bb26e9207d9879530c499cc93af10070c2558f3794cc8b1a0a51b52ae771a4aa47157b467d0e6578cab96360cb0c6d90b
-Size (flawfinder-2.0.19.tar.gz) = 260817 bytes
+BLAKE2s (flawfinder-2.0.20.tar.gz) = 5a629e9be0f1a82432bd3781b22b9886a961e5a0c620d1ee8192497eb60b22a8
+SHA512 (flawfinder-2.0.20.tar.gz) = bd72f4145733f297dd70d3ba73fff1f481d50519431d76dfc1809af8b586c8b0311a62834ce217f5ced8732e2399ef93b592caa952f9cdb36e17ff2c5223c8c7
+Size (flawfinder-2.0.20.tar.gz) = 272298 bytes
 SHA1 (patch-setup.py) = adef74ae8bf53be447cfb3d68d5d9d8dc36b93f6
