@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6787 2026/10/07 17:00:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6788 2026/10/07 17:04:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10199,3 +10199,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-scp to 0.16.2 [adam 2026-10-07]
 	Updated devel/py-rpds-py to 2026.9.1 [adam 2026-10-07]
 	Updated sysutils/py-borgmatic to 2.1.10 [adam 2026-10-07]
+	Updated devel/py-click-repl to 0.4.1 [adam 2026-10-07]
+	Updated devel/py-cachetools to 7.2.1 [adam 2026-10-07]
