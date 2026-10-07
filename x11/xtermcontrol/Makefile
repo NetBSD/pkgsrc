@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/02/28 14:08:39 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/07 13:42:22 pin Exp $
 
-DISTNAME=	xtermcontrol-3.10
+DISTNAME=	xtermcontrol-3.11
 CATEGORIES=	x11
 MASTER_SITES=	https://thrysoee.dk/xtermcontrol/
 
