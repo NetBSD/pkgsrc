@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/08/11 14:48:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/10/07 16:31:05 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -53,6 +53,9 @@ ${PYSITELIB}/uvicorn/loops/auto.pyo
 ${PYSITELIB}/uvicorn/loops/uvloop.py
 ${PYSITELIB}/uvicorn/loops/uvloop.pyc
 ${PYSITELIB}/uvicorn/loops/uvloop.pyo
+${PYSITELIB}/uvicorn/loops/zuvloop.py
+${PYSITELIB}/uvicorn/loops/zuvloop.pyc
+${PYSITELIB}/uvicorn/loops/zuvloop.pyo
 ${PYSITELIB}/uvicorn/main.py
 ${PYSITELIB}/uvicorn/main.pyc
 ${PYSITELIB}/uvicorn/main.pyo
@@ -80,6 +83,9 @@ ${PYSITELIB}/uvicorn/protocols/http/__init__.pyo
 ${PYSITELIB}/uvicorn/protocols/http/auto.py
 ${PYSITELIB}/uvicorn/protocols/http/auto.pyc
 ${PYSITELIB}/uvicorn/protocols/http/auto.pyo
+${PYSITELIB}/uvicorn/protocols/http/auto_zttp_impl.py
+${PYSITELIB}/uvicorn/protocols/http/auto_zttp_impl.pyc
+${PYSITELIB}/uvicorn/protocols/http/auto_zttp_impl.pyo
 ${PYSITELIB}/uvicorn/protocols/http/flow_control.py
 ${PYSITELIB}/uvicorn/protocols/http/flow_control.pyc
 ${PYSITELIB}/uvicorn/protocols/http/flow_control.pyo
@@ -89,6 +95,9 @@ ${PYSITELIB}/uvicorn/protocols/http/h11_impl.pyo
 ${PYSITELIB}/uvicorn/protocols/http/httptools_impl.py
 ${PYSITELIB}/uvicorn/protocols/http/httptools_impl.pyc
 ${PYSITELIB}/uvicorn/protocols/http/httptools_impl.pyo
+${PYSITELIB}/uvicorn/protocols/http/zttp_h2_impl.py
+${PYSITELIB}/uvicorn/protocols/http/zttp_h2_impl.pyc
+${PYSITELIB}/uvicorn/protocols/http/zttp_h2_impl.pyo
 ${PYSITELIB}/uvicorn/protocols/http/zttp_impl.py
 ${PYSITELIB}/uvicorn/protocols/http/zttp_impl.pyc
 ${PYSITELIB}/uvicorn/protocols/http/zttp_impl.pyo
