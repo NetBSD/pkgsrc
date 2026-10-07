@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2026/10/02 16:09:15 pin Exp $
+$NetBSD: distinfo,v 1.9 2026/10/07 13:38:22 pin Exp $
 
 BLAKE2s (ab_glyph_rasterizer-0.1.10.crate) = a5c07f176d74215e53c96810d503693202f075d5450a15172dab22fe76917f01
 SHA512 (ab_glyph_rasterizer-0.1.10.crate) = 1b541aea1d7220535c019fc6a2886b44eaf81698697a01f4f2abab39901a8d1c88e6e7c0c426916cbd0f539dade61f5edb5696a2c5df84434e2da6c79a5cc772
@@ -879,9 +879,9 @@ Size (ring-0.17.14.crate) = 1502610 bytes
 BLAKE2s (roxmltree-0.20.0.crate) = a74e1d845d741408dbb31693bd676db21c43c1660c3f44ee5afee12ae03cdf9d
 SHA512 (roxmltree-0.20.0.crate) = f8a934d3809e417c43bca53478cef0a7a18d908620175c84cfa2cdb8c85775b52cc641fb7eb12c80c483e0c17eb500dd3358ace858aceaa810d3ddbdef902d91
 Size (roxmltree-0.20.0.crate) = 54594 bytes
-BLAKE2s (rozi-0.0.28.tar.gz) = abefe96b6dbab4d1bdaf6e89ccaca4a425a925032e69af888c97ca3a06d16174
-SHA512 (rozi-0.0.28.tar.gz) = 4096007dd3b3ec6263c65cab5d945c714c7efa2f14d91b86cf9705e74d936fe315def5fc62c205bb35012637abbf3691466aedbc67db8fce83f7fe105b29673b
-Size (rozi-0.0.28.tar.gz) = 17523809 bytes
+BLAKE2s (rozi-0.0.29.tar.gz) = 884ec5be1d7b725a0c131a35bf16e64c2d5e9d5220084be07e5287d34f977ace
+SHA512 (rozi-0.0.29.tar.gz) = 5635952b5966fa715f0c12d8d78c823b3951e1605e8c019315f39acdedc0a434a4a8a7f36005dd696dd81a79a154e15a924708683fb7db62615a2d1192a935bf
+Size (rozi-0.0.29.tar.gz) = 17526208 bytes
 BLAKE2s (rustc-hash-2.1.3.crate) = 2b19a9bf51fafa87b1d57886bfaa0c961ddb662ba02537ea4ccb208b322a51d0
 SHA512 (rustc-hash-2.1.3.crate) = d44c38f6775b77b5841a644c53a68c09a2f98541aafd809d385b854f385bbba86399aa4fc76bb3dfadd2cba64ec688db22bd353e1ae4de81e0f6e9d36f0cf629
 Size (rustc-hash-2.1.3.crate) = 14811 bytes
@@ -1137,12 +1137,12 @@ Size (tree_magic_mini-3.2.2.crate) = 16074 bytes
 BLAKE2s (ttf-parser-0.25.1.crate) = a9a17470e40b1a4cc727ce7af1f69c855ffd1033b163fa500275f178c511d0ae
 SHA512 (ttf-parser-0.25.1.crate) = 2483f485ade8a764a279173a3431d7fbfa7c14466c458e44a3a09d249781d200a6880f98f424b3dc1718ffde4988c8be4eb1ada7b255c7ae3b6639449a299c9c
 Size (ttf-parser-0.25.1.crate) = 201121 bytes
-BLAKE2s (tui-lipan-0.17.4.crate) = 02646fa6f6e8692794dad2bfce9226f73aaeb1035664a57660b5067a15829be3
-SHA512 (tui-lipan-0.17.4.crate) = 071bc4b96eaf28d64831630e06f2cbed23a86dcd4d321457f346db6fcbb045ae829ac8820b56ebd64dc41fe1c0a6ac794c006a9bc8aa660b6516f29a5a1ecfdb
-Size (tui-lipan-0.17.4.crate) = 2993083 bytes
-BLAKE2s (tui-lipan-macro-0.17.4.crate) = 81c11b376d7e1e325d40898c44307bb7df96ad9440e85a69e16beef5725269a8
-SHA512 (tui-lipan-macro-0.17.4.crate) = 3c4f76c202fe4a3ebd737fceb34fcd51e94f77e04c368239311c1ccb897f154a50c03fdab60eb5282bf41a09269a853c8004cdecde3218c27d5fd79659245b10
-Size (tui-lipan-macro-0.17.4.crate) = 21450 bytes
+BLAKE2s (tui-lipan-0.19.0.crate) = dc3621a832615782770fcd5ab9be66f640f0594ec227c90acd60c52db520ad8d
+SHA512 (tui-lipan-0.19.0.crate) = 9809d392365f610daa44c0ac7ec1aaf7d691830c92bcfe8d61e73df1e6d42ba5e551e0b0e5c6dd3b7e85dcecc5d63b67b6fafbe0e33cef3ceaec924a95993daf
+Size (tui-lipan-0.19.0.crate) = 3048210 bytes
+BLAKE2s (tui-lipan-macro-0.19.0.crate) = 865cc8240d27d18bdf479db42e48d875b23588dc4559e17d1eab864499bfa469
+SHA512 (tui-lipan-macro-0.19.0.crate) = ab8670d9bb8729adecce08d66de81b57c7dfd08a104007e8483a21dc97d1d6bf551b587491565f207951abeae41c711e9d5b72adbd3afc1177c93f34a189444c
+Size (tui-lipan-macro-0.19.0.crate) = 21450 bytes
 BLAKE2s (typed-path-0.12.3.crate) = e7b936efb579ac3ba734cd7e122786d989b5607acff60c8950066ac9beae4fdf
 SHA512 (typed-path-0.12.3.crate) = ea582d83e0623a871990af261c60747d5f0b546a1d7398ad4e665e756267cea4e8cac1b2f9d4918de4a399e25ec34d7e4a704edbfbbfeedb056c5385a7d776b5
 Size (typed-path-0.12.3.crate) = 112964 bytes
