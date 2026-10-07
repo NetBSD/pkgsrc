@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6775 2026/10/07 13:41:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6776 2026/10/07 13:42:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10179,3 +10179,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 31.5.0 [pin 2026-10-07]
 	Updated sysutils/onefetch to 3.0.0 [pin 2026-10-07]
 	Updated x11/xdotool to 4.20260303.1 [pin 2026-10-07]
+	Updated x11/xtermcontrol to 3.11 [pin 2026-10-07]
