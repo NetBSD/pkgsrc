@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6786 2026/10/07 16:32:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6787 2026/10/07 17:00:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10197,3 +10197,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-jwcrypto to 1.6.1 [adam 2026-10-07]
 	Updated www/py-uvicorn to 0.54.0 [adam 2026-10-07]
 	Updated net/py-scp to 0.16.2 [adam 2026-10-07]
+	Updated devel/py-rpds-py to 2026.9.1 [adam 2026-10-07]
+	Updated sysutils/py-borgmatic to 2.1.10 [adam 2026-10-07]
