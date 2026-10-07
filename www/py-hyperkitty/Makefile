@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/10/09 08:02:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/07 19:37:03 markd Exp $
 
 DISTNAME=	hyperkitty-1.3.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperkitty/}
 
@@ -38,6 +39,7 @@ REPLACE_PYTHON=	hyperkitty/contrib/cleanarch3 hyperkitty/contrib/check_hk_import
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/example_project
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/hyperkitty/forms.py.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"

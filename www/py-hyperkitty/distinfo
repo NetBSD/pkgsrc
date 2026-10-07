@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2025/06/04 11:11:02 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/10/07 19:37:03 markd Exp $
 
 BLAKE2s (hyperkitty-1.3.12.tar.gz) = bed1af19ba0487870d538b0d196c3b24043fc4dc6cd841fe42da0ad52ba64bc7
 SHA512 (hyperkitty-1.3.12.tar.gz) = 778c77ee52fda775b0acba99654a1023b38fc5a9815c23454759cdf45e6e8cfda1f026f854972f4ffaa09749f341822e9ecd07619cceea842572b90b88e583d1
 Size (hyperkitty-1.3.12.tar.gz) = 2231630 bytes
+SHA1 (patch-hyperkitty_forms.py) = bbd7ee2c00beb57b01089a802a33f69541dcbebf
+SHA1 (patch-pyproject.toml) = 148a828b5620bb375b807ac609999470deb32baf
