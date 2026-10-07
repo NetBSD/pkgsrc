@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6789 2026/10/07 17:30:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6790 2026/10/07 20:01:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10203,3 +10203,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachetools to 7.2.1 [adam 2026-10-07]
 	Updated security/flawfinder to 2.0.20 [adam 2026-10-07]
 	Updated devel/py-mocket to 3.14.5 [adam 2026-10-07]
+	Added databases/p5-DBD-mysql4 version 4.050nb8 [markd 2026-10-07]
+	Updated math/ess to 26.05.0 [markd 2026-10-07]
