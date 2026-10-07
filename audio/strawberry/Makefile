@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2026/09/29 06:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2026/10/07 11:03:47 adam Exp $
 
-DISTNAME=	strawberry-1.2.30
-PKGREVISION=	3
+DISTNAME=	strawberry-1.2.31
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -21,21 +20,21 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_QTSPARKLE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SPARKLE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_BUNDLE=OFF
 
-DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
-DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
-DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
-DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
-DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
+DEPENDS+=	gst-plugins1-flac>=0:../../audio/gst-plugins1-flac
+DEPENDS+=	gst-plugins1-mpg123>=0:../../audio/gst-plugins1-mpg123
+DEPENDS+=	gst-plugins1-ogg>=0:../../multimedia/gst-plugins1-ogg
+DEPENDS+=	gst-plugins1-opus>=0:../../audio/gst-plugins1-opus
+DEPENDS+=	gst-plugins1-vorbis>=0:../../audio/gst-plugins1-vorbis
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OPSYS} != "Darwin"
-DEPENDS+=	gst-plugins1-alsa-[0-9]*:../../audio/gst-plugins1-alsa
+DEPENDS+=	gst-plugins1-alsa>=0:../../audio/gst-plugins1-alsa
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 .if ${OPSYS} != "Linux" && ${OSS_TYPE} != "none"
-DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
+DEPENDS+=	gst-plugins1-oss>=0:../../audio/gst-plugins1-oss
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -64,9 +63,11 @@ CHECK_PORTABILITY_SKIP+=	dist/macos/macversion.sh
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/uchardet/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/libxcb/buildlink3.mk"
 .endif
