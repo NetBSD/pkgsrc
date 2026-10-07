@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.39 2026/09/25 09:48:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/07 19:55:20 markd Exp $
 
-DISTNAME=	ess-13.09-1
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-1$/.1/}
-PKGREVISION=	10
+DISTNAME=	ess-26.05.0
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://ess.r-project.org/downloads/ess/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	https://ess.r-project.org/
+DIST_SUBDIR=	${DISTNAME}
+DISTFILES=	${DEFAULT_DISTFILES} julia-mode.el julia-mode-latexsubs.el
+SITES.julia-mode.el= \
+	https://raw.githubusercontent.com/JuliaEditorSupport/julia-emacs/refs/heads/master/
+SITES.julia-mode-latexsubs.el= \
+	https://raw.githubusercontent.com/JuliaEditorSupport/julia-emacs/refs/heads/master/
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ess.r-project.org/
 COMMENT=	Emacs Speaks Statistics
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	makeinfo perl gmake
 EMACS_MODULES=	base
@@ -21,32 +26,28 @@ MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/ess
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 
-SUBST_CLASSES+=		etcdir
-SUBST_STAGE.etcdir=	pre-patch
-SUBST_FILES.etcdir=	lisp/ess-site.el
-SUBST_SED.etcdir=	-e 's,"./etc/"),"./etc/" "../../../ess/"),'
-
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/ess
 INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess ${EMACS_ETCPREFIX}/ess/icons
 INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess/ESSR/R
 
 post-extract:
-	cd ${WRKSRC} && chmod u+w doc/*/
+	cp ${WRKDIR}/julia-mode*.el ${WRKSRC}/lisp/
 
 do-install:
 	cd ${WRKSRC}/lisp && ${INSTALL_DATA} *.el*			\
 		${DESTDIR}${EMACS_LISPPREFIX}/ess
+	rm ${DESTDIR}${EMACS_LISPPREFIX}/ess/*.orig
 	cd ${WRKSRC}/doc/info; for f in ess.info ess.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
         done
 	cd ${WRKSRC}/etc && ${INSTALL_DATA} icons/*.xpm			\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess/icons
-	cd ${WRKSRC}/etc && ${INSTALL_DATA} *.S				\
+	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-julia.jl		\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess
 	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-sas-sh-command	\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess
-	cd ${WRKSRC}/etc/ESSR && ${INSTALL_DATA} LOADREMOTE VERSION	\
+	cd ${WRKSRC}/etc/ESSR && ${INSTALL_DATA} BUILDESSR LOADREMOTE	\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess/ESSR
 	cd ${WRKSRC}/etc/ESSR/R && ${INSTALL_DATA} *.R .*.R		\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess/ESSR/R
