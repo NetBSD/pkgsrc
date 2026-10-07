@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/10/07 12:59:37 drixter Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/07 13:12:13 drixter Exp $
 
 DISTNAME=	knot-resolver-6.5.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-resolver/
 EXTRACT_SUFX=	.tar.xz
