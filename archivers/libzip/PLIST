@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/05/23 14:07:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/10/07 14:24:37 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptool
@@ -10,12 +10,11 @@ lib/cmake/libzip/libzip-config-version.cmake
 lib/cmake/libzip/libzip-config.cmake
 lib/cmake/libzip/libzip-targets-noconfig.cmake
 lib/cmake/libzip/libzip-targets.cmake
-lib/cmake/libzip/modules/FindMbedTLS.cmake
 lib/cmake/libzip/modules/FindNettle.cmake
 lib/cmake/libzip/modules/Findzstd.cmake
 lib/libzip.so
 lib/libzip.so.5
-lib/libzip.so.5.5
+lib/libzip.so.5.6
 lib/pkgconfig/libzip.pc
 man/man1/zipcmp.1
 man/man1/zipmerge.1
@@ -98,6 +97,7 @@ man/man3/zip_set_archive_flag.3
 man/man3/zip_set_default_password.3
 man/man3/zip_set_file_comment.3
 man/man3/zip_set_file_compression.3
+man/man3/zip_source_at_eof.3
 man/man3/zip_source_begin_write.3
 man/man3/zip_source_begin_write_cloning.3
 man/man3/zip_source_buffer.3
@@ -121,6 +121,7 @@ man/man3/zip_source_layered.3
 man/man3/zip_source_layered_create.3
 man/man3/zip_source_make_command_bitmap.3
 man/man3/zip_source_open.3
+man/man3/zip_source_pass_to_lower_layer.3
 man/man3/zip_source_read.3
 man/man3/zip_source_rollback_write.3
 man/man3/zip_source_seek.3
