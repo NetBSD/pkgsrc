@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6749 2026/10/07 05:19:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6750 2026/10/07 05:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10144,3 +10144,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django5 to 5.2.18 [adam 2026-10-07]
 	Updated devel/py-iniconfig to 2.3.1 [adam 2026-10-07]
 	Updated databases/py-asyncpg to 0.32.0 [adam 2026-10-07]
+	Updated devel/py-slugify to 9.1.3 [adam 2026-10-07]
+	Updated devel/py-dotenv to 1.2.4 [adam 2026-10-07]
