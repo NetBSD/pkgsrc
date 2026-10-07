@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.38 2026/09/05 20:08:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.39 2026/10/07 13:35:26 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -82,6 +82,7 @@ CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.35
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
 CARGO_CRATE_DEPENDS+=	errno-0.3.14
 CARGO_CRATE_DEPENDS+=	error-code-3.4.0
+CARGO_CRATE_DEPENDS+=	extended-0.1.0
 CARGO_CRATE_DEPENDS+=	faster-hex-0.10.0
 CARGO_CRATE_DEPENDS+=	fastrand-2.5.0
 CARGO_CRATE_DEPENDS+=	file-size-1.0.3
@@ -262,13 +263,19 @@ CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.1
 CARGO_CRATE_DEPENDS+=	strict-0.2.0
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	symphonia-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-bundle-flac-0.5.5
 CARGO_CRATE_DEPENDS+=	symphonia-bundle-mp3-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-codec-pcm-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-codec-vorbis-0.5.5
 CARGO_CRATE_DEPENDS+=	symphonia-core-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-format-ogg-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-format-riff-0.5.5
 CARGO_CRATE_DEPENDS+=	symphonia-metadata-0.5.5
+CARGO_CRATE_DEPENDS+=	symphonia-utils-xiph-0.5.5
 CARGO_CRATE_DEPENDS+=	syn-2.0.119
 CARGO_CRATE_DEPENDS+=	syn-3.0.3
 CARGO_CRATE_DEPENDS+=	tempfile-3.27.0
-CARGO_CRATE_DEPENDS+=	termimad-0.35.2
+CARGO_CRATE_DEPENDS+=	termimad-0.35.5
 CARGO_CRATE_DEPENDS+=	terminal-light-1.9.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-2.0.20
