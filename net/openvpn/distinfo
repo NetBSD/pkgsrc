@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.83 2026/09/03 19:02:45 adam Exp $
+$NetBSD: distinfo,v 1.84 2026/10/07 16:12:13 adam Exp $
 
-BLAKE2s (openvpn-2.7.7.tar.gz) = e55ef9eaefa0c1451d51d5b3dd14e80b5c7f9615ab63b2a381bc0ea807b36218
-SHA512 (openvpn-2.7.7.tar.gz) = 27c12b94569c21fb09a081607bca8d959f70039d72335b6bf4a39d4fe02ddd1b60d8787594e0b878b1237892fd4372cf9888373609fde1469f9636eeb6ecb541
-Size (openvpn-2.7.7.tar.gz) = 2128305 bytes
+BLAKE2s (openvpn-2.7.8.tar.gz) = c00f21af6f3a325b398702f9d0a8145933ac9bd083049f68b56f17b97745873c
+SHA512 (openvpn-2.7.8.tar.gz) = 1461dbe00e35219c06c0e8f5836877522a8d5db786a6f3a6049aebdbb0b326dd816a6fc3197ebd3a5c1019a54e703d52c28af77c747e266e31438d1a9f64b631
+Size (openvpn-2.7.8.tar.gz) = 2123466 bytes
 SHA1 (patch-src_compat_compat-basename.c) = c5cd48db40279a956ada044a81e6dfab015d70b6
