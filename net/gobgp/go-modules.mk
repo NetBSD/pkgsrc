@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2026/09/25 12:58:43 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.2 2026/10/07 11:02:28 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -102,21 +102,21 @@ GO_MODULE_FILES+=	go.uber.org/goleak/@v/v1.3.0.mod
 GO_MODULE_FILES+=	go.uber.org/goleak/@v/v1.3.0.zip
 GO_MODULE_FILES+=	go.uber.org/multierr/@v/v1.9.0.mod
 GO_MODULE_FILES+=	go.uber.org/multierr/@v/v1.9.0.zip
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.55.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.55.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20181221193216-37e7f081c4d4.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.10.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.2.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.45.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.45.0.zip
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.37.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.37.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.47.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.47.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.41.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.41.0.zip
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.12.0.mod
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.12.0.zip
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260414002931-afd174a4e478.mod
-GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260414002931-afd174a4e478.zip
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.82.1.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.82.1.zip
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260526163538-3dc84a4a5aaa.mod
+GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260526163538-3dc84a4a5aaa.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.83.2.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.83.2.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.11.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
