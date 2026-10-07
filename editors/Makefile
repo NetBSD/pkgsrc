@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2026/09/12 14:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.271 2026/10/07 00:14:48 agc Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -27,6 +27,7 @@ SUBDIR+=	ed
 SUBDIR+=	edt
 SUBDIR+=	edt-o3one
 SUBDIR+=	ee
+SUBDIR+=	eh
 SUBDIR+=	elvis
 SUBDIR+=	elvis-x11
 SUBDIR+=	em

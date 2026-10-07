@@ -1,0 +1,10 @@
+A minimalist version of vi(1).  It is an example of the "Buffer Gap"
+method outlined in the The Craft Of Text Editing used by many Emacs
+style editors.
+
+Create or read a text file to edit.  Text files consists of lines of
+printable UTF-8 text, tabs, or newline characters.  A physical line
+can be of arbitrary length and is delimited by either a newline or the
+end of file.  Tab stops are every eight columns.  The behaviour of
+non-printable characters may vary depending on the implementation of
+the Curses library, stty(1) settings, or terminal emulator.
