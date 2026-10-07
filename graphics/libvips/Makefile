@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/09/29 06:05:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/07 22:44:26 wiz Exp $
 
-DISTNAME=		vips-8.17.2
+DISTNAME=		vips-8.18.7
 PKGNAME=		lib${DISTNAME}
-PKGREVISION=		13
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libvips/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -22,6 +21,8 @@ REPLACE_PYTHON+=	doc/gen-function-list.py
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/vips-cpp.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/vips.pc
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libvips
 
 # disable examples and deprecated interfaces
 MESON_ARGS+=		-Ddeprecated=false -Dexamples=false
