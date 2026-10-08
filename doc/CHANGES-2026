@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6795 2026/10/08 07:56:52 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6796 2026/10/08 08:23:01 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10210,3 +10210,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.148 [adam 2026-10-08]
 	Updated lang/nodejs to 26.11.1 [adam 2026-10-08]
 	Updated www/resterm to 1.13.2 [drixter 2026-10-08]
+	Updated www/resterm to 1.13.3 [drixter 2026-10-08]
