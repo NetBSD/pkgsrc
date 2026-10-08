@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1675 2026/10/06 11:23:17 drixter Exp $
+# $NetBSD: Makefile,v 1.1676 2026/10/08 21:12:40 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -840,7 +840,7 @@ SUBDIR+=	ratman
 SUBDIR+=	raven
 SUBDIR+=	rbldnsd
 SUBDIR+=	rclone
-SUBDIR+=        rcvd
+SUBDIR+=	rcvd
 SUBDIR+=	rdesktop
 SUBDIR+=	rdist6
 SUBDIR+=	remmina
