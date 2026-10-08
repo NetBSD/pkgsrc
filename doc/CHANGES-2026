@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6794 2026/10/08 06:32:03 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6795 2026/10/08 07:56:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10205,7 +10205,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mocket to 3.14.5 [adam 2026-10-07]
 	Added databases/p5-DBD-mysql4 version 4.050nb8 [markd 2026-10-07]
 	Updated math/ess to 26.05.0 [markd 2026-10-07]
-	Updated net/dnscap2 to 2.5.1 [agc 2026-10-07]
+	Updated net/dnscap to 2.5.1 [agc 2026-10-07]
 	Updated graphics/libvips to 8.18.7 [wiz 2026-10-07]
 	Updated devel/cargo-nextest to 0.9.148 [adam 2026-10-08]
 	Updated lang/nodejs to 26.11.1 [adam 2026-10-08]
