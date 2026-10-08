@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6798 2026/10/08 10:28:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6799 2026/10/08 11:55:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10213,3 +10213,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.13.3 [drixter 2026-10-08]
 	Updated net/tor to 0.4.9.14 [wiz 2026-10-08]
 	Updated devel/jj to 0.46.0 [wiz 2026-10-08]
+	Updated chat/matrix-synapse to 1.161.0 [gdt 2026-10-08]
