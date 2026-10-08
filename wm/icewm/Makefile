@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2026/01/06 13:38:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.66 2026/10/08 18:20:58 ktnb Exp $
 
-DISTNAME=	icewm-4.0.0
+DISTNAME=	icewm-4.1.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/}
 
