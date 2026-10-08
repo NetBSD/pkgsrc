@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6792 2026/10/07 22:44:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6793 2026/10/08 05:49:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10207,3 +10207,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/ess to 26.05.0 [markd 2026-10-07]
 	Updated net/dnscap2 to 2.5.1 [agc 2026-10-07]
 	Updated graphics/libvips to 8.18.7 [wiz 2026-10-07]
+	Updated devel/cargo-nextest to 0.9.148 [adam 2026-10-08]
+	Updated lang/nodejs to 26.11.1 [adam 2026-10-08]
