@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2026/09/04 22:46:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.75 2026/10/08 11:54:58 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -394,6 +394,9 @@ ${PYSITELIB}/synapse/federation/transport/server/__init__.pyo
 ${PYSITELIB}/synapse/federation/transport/server/_base.py
 ${PYSITELIB}/synapse/federation/transport/server/_base.pyc
 ${PYSITELIB}/synapse/federation/transport/server/_base.pyo
+${PYSITELIB}/synapse/federation/transport/server/appservice_proxy.py
+${PYSITELIB}/synapse/federation/transport/server/appservice_proxy.pyc
+${PYSITELIB}/synapse/federation/transport/server/appservice_proxy.pyo
 ${PYSITELIB}/synapse/federation/transport/server/federation.py
 ${PYSITELIB}/synapse/federation/transport/server/federation.pyc
 ${PYSITELIB}/synapse/federation/transport/server/federation.pyo
@@ -580,6 +583,9 @@ ${PYSITELIB}/synapse/http/__init__.pyo
 ${PYSITELIB}/synapse/http/additional_resource.py
 ${PYSITELIB}/synapse/http/additional_resource.pyc
 ${PYSITELIB}/synapse/http/additional_resource.pyo
+${PYSITELIB}/synapse/http/appservice_proxy.py
+${PYSITELIB}/synapse/http/appservice_proxy.pyc
+${PYSITELIB}/synapse/http/appservice_proxy.pyo
 ${PYSITELIB}/synapse/http/client.py
 ${PYSITELIB}/synapse/http/client.pyc
 ${PYSITELIB}/synapse/http/client.pyo
@@ -980,9 +986,15 @@ ${PYSITELIB}/synapse/rest/client/account_data.pyo
 ${PYSITELIB}/synapse/rest/client/account_validity.py
 ${PYSITELIB}/synapse/rest/client/account_validity.pyc
 ${PYSITELIB}/synapse/rest/client/account_validity.pyo
+${PYSITELIB}/synapse/rest/client/appservice_federation_proxy.py
+${PYSITELIB}/synapse/rest/client/appservice_federation_proxy.pyc
+${PYSITELIB}/synapse/rest/client/appservice_federation_proxy.pyo
 ${PYSITELIB}/synapse/rest/client/appservice_ping.py
 ${PYSITELIB}/synapse/rest/client/appservice_ping.pyc
 ${PYSITELIB}/synapse/rest/client/appservice_ping.pyo
+${PYSITELIB}/synapse/rest/client/appservice_proxy.py
+${PYSITELIB}/synapse/rest/client/appservice_proxy.pyc
+${PYSITELIB}/synapse/rest/client/appservice_proxy.pyo
 ${PYSITELIB}/synapse/rest/client/auth.py
 ${PYSITELIB}/synapse/rest/client/auth.pyc
 ${PYSITELIB}/synapse/rest/client/auth.pyo
@@ -2030,6 +2042,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/94/07_profile_updates.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/07_profile_updates_seq.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/07_sliding_sync_lazy_members_position_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/08_device_lists_changes_in_room_unconverted_idx.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/94/09_e2e_cross_signing_signatures_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/94/10_e2e_cross_signing_signatures_add_key_id_to_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -2046,6 +2060,8 @@ ${PYSITELIB}/synapse/storage/schema/state/delta/70/08_state_group_edges_unique.s
 ${PYSITELIB}/synapse/storage/schema/state/delta/89/01_state_groups_deletion.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/90/02_delete_unreferenced_state_groups.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/90/03_remove_old_deletion_bg_update.sql
+${PYSITELIB}/synapse/storage/schema/state/delta/94/01_state_groups_persisting_inserted_ts.sql.postgres
+${PYSITELIB}/synapse/storage/schema/state/delta/94/01_state_groups_persisting_inserted_ts.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/types.py
