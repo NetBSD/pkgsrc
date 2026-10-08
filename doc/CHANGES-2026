@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6803 2026/10/08 13:56:19 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6804 2026/10/08 15:26:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10218,3 +10218,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mirador to 1.21.0 [pin 2026-10-08]
 	Updated www/monolith to 2.11.2 [pin 2026-10-08]
 	Updated chat/matrix-synapse to 1.162.0 [gdt 2026-10-08]
+	Updated chat/ejabberd to 26.09 [gdt 2026-10-08]
