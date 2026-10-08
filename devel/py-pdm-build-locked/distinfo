@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/12/09 09:55:49 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/10/08 16:55:06 adam Exp $
 
-BLAKE2s (pdm_build_locked-0.3.7.tar.gz) = 119ab2d275b0712a5ad525d7ff4107bfd5f7c8dae0ac10ba4b29af323aa2746b
-SHA512 (pdm_build_locked-0.3.7.tar.gz) = c5af634d4c577ecfa3650596d9cd52e7dfa21be61829a616f99020a192c739b01c534684b9d438901a0e7222748b8150dae6db48e4fcd0d6457b7777dfecb590
-Size (pdm_build_locked-0.3.7.tar.gz) = 70178 bytes
+BLAKE2s (pdm_build_locked-0.3.8.tar.gz) = c024b850440c066b300dce2a7fe63629994b391b7911c7baefd56132b65fd4d9
+SHA512 (pdm_build_locked-0.3.8.tar.gz) = 24dfa48f53eb5392281afc57e5f3b864b7feafc76f3fc81e0f2406d33e87894b1ea80da4c029b533f9dc4d36c4fa097604ecc416221db86d7c7c0d2cad6d91ca
+Size (pdm_build_locked-0.3.8.tar.gz) = 71947 bytes

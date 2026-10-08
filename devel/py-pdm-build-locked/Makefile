@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/12/09 09:55:49 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/08 16:55:06 adam Exp $
 
-DISTNAME=	pdm_build_locked-0.3.7
+DISTNAME=	pdm_build_locked-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-build-locked/}
@@ -10,14 +10,16 @@ HOMEPAGE=	https://github.com/pdm-project/pdm-build-locked
 COMMENT=	Pdm plugin to add locked packages as optional dependency groups
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=0:../../devel/py-pdm_backend
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.9.6:../../devel/py-pkginfo
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
 
 .include "../../lang/python/wheel.mk"
