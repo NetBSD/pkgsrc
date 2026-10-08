@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2026/08/06 16:22:59 gdt Exp $
+# $NetBSD: Makefile,v 1.120 2026/10/08 15:26:08 gdt Exp $
 
-DISTNAME=	ejabberd-26.07
+DISTNAME=	ejabberd-26.09
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -89,6 +89,7 @@ SUBST_MESSAGE.invites=	Fixing Linuxism of sha256sum
 SUBST_STAGE.invites=	pre-configure
 SUBST_FILES.invites=	tools/dl_invites_page_deps.sh
 SUBST_SED.invites=	-e 's/sha256sum/g&/'
+
 # Leave network usage at build time unremediated, on the theory that
 # updating for security fixes is more important than ick reduction.
 ALLOW_NETWORK_ACCESS=	yes
