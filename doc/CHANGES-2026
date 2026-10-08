@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6809 2026/10/08 17:56:35 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6810 2026/10/08 18:02:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10228,3 +10228,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-diff-cover to 10.6.0 [adam 2026-10-08]
 	Updated devel/py-pdm-build-locked to 0.3.8 [adam 2026-10-08]
 	Updated shells/fish to 4.9.3 [ktnb 2026-10-08]
+	Updated shells/oksh to 7.9 [ktnb 2026-10-08]
