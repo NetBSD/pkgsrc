@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6793 2026/10/08 05:49:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6794 2026/10/08 06:32:03 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10209,3 +10209,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libvips to 8.18.7 [wiz 2026-10-07]
 	Updated devel/cargo-nextest to 0.9.148 [adam 2026-10-08]
 	Updated lang/nodejs to 26.11.1 [adam 2026-10-08]
+	Updated www/resterm to 1.13.2 [drixter 2026-10-08]
