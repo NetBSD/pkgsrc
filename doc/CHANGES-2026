@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6804 2026/10/08 15:26:13 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6805 2026/10/08 16:08:32 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10219,3 +10219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/monolith to 2.11.2 [pin 2026-10-08]
 	Updated chat/matrix-synapse to 1.162.0 [gdt 2026-10-08]
 	Updated chat/ejabberd to 26.09 [gdt 2026-10-08]
+	Updated net/tailscale to 1.104.1 [ktnb 2026-10-08]
