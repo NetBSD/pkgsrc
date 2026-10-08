@@ -1,8 +1,8 @@
-$NetBSD: patch-cmake_Install.cmake,v 1.6 2026/08/09 16:45:24 wiz Exp $
+$NetBSD: patch-cmake_Install.cmake,v 1.7 2026/10/08 17:55:58 ktnb Exp $
 
 Use pkgsrc defaults. 
 
---- cmake/Install.cmake.orig	2026-07-13 23:26:44.000000000 +0000
+--- cmake/Install.cmake.orig	2026-09-08 18:53:36.000000000 +0000
 +++ cmake/Install.cmake
 @@ -4,11 +4,14 @@ set(mandir ${CMAKE_INSTALL_MANDIR})
  set(bindir ${CMAKE_INSTALL_BINDIR})

@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/08/09 16:45:24 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/10/08 17:55:58 ktnb Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -35,21 +35,16 @@ CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.6
 CARGO_CRATE_DEPENDS+=	either-1.16.0
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
-CARGO_CRATE_DEPENDS+=	errno-0.3.14
 CARGO_CRATE_DEPENDS+=	fastrand-2.4.1
 CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.9
-CARGO_CRATE_DEPENDS+=	fluent-0.17.0
 CARGO_CRATE_DEPENDS+=	fluent-bundle-0.16.0
-#CARGO_CRATE_DEPENDS+=	fluent-ftl-tools-0.1.0
 CARGO_CRATE_DEPENDS+=	fluent-langneg-0.13.1
-CARGO_CRATE_DEPENDS+=	fluent-syntax-0.12.0
 CARGO_CRATE_DEPENDS+=	foldhash-0.1.5
 CARGO_CRATE_DEPENDS+=	foldhash-0.2.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
 CARGO_CRATE_DEPENDS+=	getrandom-0.4.2
-#CARGO_CRATE_DEPENDS+=	gettext-po-file-parser-0.0.0
 CARGO_CRATE_DEPENDS+=	globset-0.4.18
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.17.1
