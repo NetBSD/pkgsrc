@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2026/10/08 11:54:58 gdt Exp $
+$NetBSD: distinfo,v 1.99 2026/10/08 13:56:13 gdt Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -222,24 +222,24 @@ Size (js-sys-0.3.77.crate) = 55538 bytes
 BLAKE2s (lazy_static-1.5.0.crate) = e1c1f0f38c4bae0138784e2df43c1a683e7dc5a2fb3fc0c9f49e01c04b770b40
 SHA512 (lazy_static-1.5.0.crate) = 6d2f9887cd7f34f019644e42f02f2bf0111accd73aeaa60973ba0b039b6774670debece1ea9a6978e923208ef5d3ab7326473ee3560c078817f0f7ab8ed0f65f
 Size (lazy_static-1.5.0.crate) = 14025 bytes
-BLAKE2s (libc-0.2.174.crate) = e838a056cf2a08791dc836497c99b2e3d64d3b8554cca6a5d0cc434df3a1ac1e
-SHA512 (libc-0.2.174.crate) = 243f2ffd5741ef859e4dc5b7ee0396071943b1d10429efcaecb322957e256c4be88a7a649029dfd47e6456acc73ee257893fb6c4e8b4d0fe66a12bc5d1c13c73
-Size (libc-0.2.174.crate) = 779933 bytes
+BLAKE2s (libc-0.2.189.crate) = 1783ee1cd2f111dc2c064e01ae615942f295563538c0bc6a93e59ae6a35da5a2
+SHA512 (libc-0.2.189.crate) = 0cf621171ed4e6bbfeb71fb582ebf037d62ab481bc406ca2fb766bd4a8416f220a189325a0d3cb3e3cb39d80e09312516ca6335fad71b329c5fccddabedf4110
+Size (libc-0.2.189.crate) = 851502 bytes
 BLAKE2s (libm-0.2.15.crate) = d27bf6608e6bebbbcc39cfd7f8bdd17683c1cd989913bcf628311920fb950366
 SHA512 (libm-0.2.15.crate) = abee4d8d50a9d25f8d5cbada78877d53ea50d82434b888d170bd83a532bc0534190abbf877e38aba78c370c8cfdf9dc9955c8a8ba4640732e8e6deee3992ab41
 Size (libm-0.2.15.crate) = 156108 bytes
 BLAKE2s (litemap-0.8.0.crate) = 6654e32bfb2cad87e06ab618a5c8da54ecbd27cd8d32fea67e43ffea66aff33f
 SHA512 (litemap-0.8.0.crate) = 61162bd55b28540ec2d61262698045a78efbfadc7e2fa248d9e0215fd7d3ce53a8c50ea0487f2f7df41149e41c0131849e507737e3bbae29cb69ea41dcb8e2d9
 Size (litemap-0.8.0.crate) = 34344 bytes
-BLAKE2s (log-0.4.33.crate) = 3998a5eba5385e4cb2782d8d11790a5294e7629dbbb56a03b1237b34a5125144
-SHA512 (log-0.4.33.crate) = fce3eaf97b1415e413aec344a156d930ebaf52d918f8d9ff9e086f3df58253a6306a215aa4d4b4782a1b7deaad484739666f4fbd8e41272bf95ce4fc6306b74b
-Size (log-0.4.33.crate) = 52997 bytes
+BLAKE2s (log-0.4.34.crate) = bbbda75cc6cb256d6b067dea67da2df6b61d79d5fa9c3d70a3df3d72ec4279fd
+SHA512 (log-0.4.34.crate) = 6f51dc492f808262a67b28a1a80055aee15eb9437d0b0e21e0478cb94db358f751a61172f0c303d94fa949a1874e3f25bd7bc29d9724e3d43849a9f3f4b55d6e
+Size (log-0.4.34.crate) = 53395 bytes
 BLAKE2s (lru-slab-0.1.2.crate) = aa3f3674478a76b09b52e1c77b3fc8382ad771a643b4184baf095d0dd7f35d1b
 SHA512 (lru-slab-0.1.2.crate) = eb93796ffaccafd2e2530efeaf60dab1eeb17fe61652a9299c220cea4dd9099239eb549ae1259ac272c5aa807eebfaec6db4dc5efc95ee59365d3fd1d413f60f
 Size (lru-slab-0.1.2.crate) = 9090 bytes
-BLAKE2s (matrix-synapse-1.161.0.tar.gz) = 15fcea38870b3fae975e21fd874714d27fb7e140d669eca98ee40926c810dd19
-SHA512 (matrix-synapse-1.161.0.tar.gz) = 9bd689a7d081fc0523693391b06769060158831974370afa1e773b4ecae0ec8c1e07338a94bba742d372bbb70875f76ae0c8e28c2ff493e5c4afcb237ffd7055
-Size (matrix-synapse-1.161.0.tar.gz) = 9610891 bytes
+BLAKE2s (matrix-synapse-1.162.0.tar.gz) = 76c405a0151831b17d2ff3ab2421bf7f53df8c4356a678c8f808118e17dd9c96
+SHA512 (matrix-synapse-1.162.0.tar.gz) = e0a847e8c3a2399fa9d5a62e9690b8828c081a7a38219a869180dc53531a996c140a962240e37501069ee88bea1103aa3d1d1c53c0dee3fe70e6956d064d46b6
+Size (matrix-synapse-1.162.0.tar.gz) = 9677770 bytes
 BLAKE2s (memchr-2.7.5.crate) = 741834638b9ed49c5a8ab61a0aeac280a8d91d104fafe3c7219d313131694001
 SHA512 (memchr-2.7.5.crate) = 2606ee16a7dc02db95dac17cebd2cac9deb2e23d7ea62972cdb19145c06eaf75631347a49c4e6ceeff89fb6e90e992f9bca0a9c955eb5130f89ba2bd865936e1
 Size (memchr-2.7.5.crate) = 97603 bytes
@@ -618,3 +618,4 @@ Size (zerovec-derive-0.11.1.crate) = 21294 bytes
 BLAKE2s (zmij-1.0.19.crate) = e6857f8f672ab60cba6575bda0b64bfd4898ee7c34cb1f799842885965039969
 SHA512 (zmij-1.0.19.crate) = aa191ba286f10d59727981e68f7fb0214d53b02d6c28951e6f16670433cd79abc4615384b3b1e1f74adc81a3f51c15d906fda0340b03938984693332feeac2cc
 Size (zmij-1.0.19.crate) = 23948 bytes
+SHA1 (patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs) = 6c69f01ccf89fa30457e83ce98ba3a17f3f10bdf

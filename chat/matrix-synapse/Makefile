@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2026/10/08 11:54:58 gdt Exp $
+# $NetBSD: Makefile,v 1.138 2026/10/08 13:56:13 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.161.0
+DISTNAME=	matrix-synapse-1.162.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -23,7 +23,7 @@ USE_CC_FEATURES=	c99
 .include "../../lang/python/pyversion.mk"
 
 # Build tools:
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
+.include "../../devel/py-maturin/tool.mk"
 # poetry is used for some dev things, but not for building, despite
 # the comments in pyproject.toml.
 
