@@ -1,18 +1,26 @@
-$NetBSD: patch-paths_paths.go,v 1.1 2026/07/14 20:43:31 schmonz Exp $
+$NetBSD: patch-paths_paths.go,v 1.2 2026/10/08 16:08:15 ktnb Exp $
 
 Follow hier(7).
 
---- paths/paths.go.orig	2026-07-02 14:59:26.000000000 -0400
+--- paths/paths.go.orig	2026-10-08 00:18:58.000000000 +0000
 +++ paths/paths.go
-@@ -25,28 +25,7 @@
+@@ -56,36 +56,7 @@ func DefaultTailscaledSocket() string {
  	if runtime.GOOS == "windows" {
- 		return `\\.\pipe\ProtectedPrefix\Administrators\Tailscale\tailscaled`
+ 		return WindowsProtectedPipePrefix + `Tailscale\tailscaled`
  	}
 -	if runtime.GOOS == "darwin" {
 -		return "/var/run/tailscaled.socket"
 -	}
 -	if runtime.GOOS == "plan9" {
 -		return "/srv/tailscaled.sock"
+-	}
+-	if runtime.GOOS == "android" {
+-		// Android (e.g. a userspace tailscaled under Termux) has no /var,
+-		// and the cwd-relative fallback below only works when the daemon
+-		// and the CLI happen to be started from the same directory
+-		// (see #21161). Use the shared per-app temp directory so both
+-		// agree on an absolute path.
+-		return filepath.Join(os.TempDir(), "tailscaled.sock")
 -	}
 -	switch distro.Get() {
 -	case distro.Synology:
