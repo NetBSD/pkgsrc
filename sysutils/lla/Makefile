@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/09/25 05:21:28 pin Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/08 12:41:45 pin Exp $
 
-DISTNAME=	lla-0.6.5
+DISTNAME=	lla-0.6.6
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lla/
 EXTRACT_SUFX=	.crate
@@ -15,9 +15,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.99.0-beta.7
+#RUST_REQ=	1.100.0-beta.4
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.99.0-beta.7 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.4 on amd64
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
