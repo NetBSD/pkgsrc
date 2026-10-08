@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.676 2026/09/29 06:08:04 wiz Exp $
+# $NetBSD: Makefile,v 1.677 2026/10/08 20:57:14 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		156.0
+MOZ_BRANCH=		157.0
 MOZ_BRANCH_MINOR=	.1
 CANDIDATE_BUILD=	# for release, make this empty
 
@@ -16,7 +16,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 .endif
 
 PKGNAME=	${DISTNAME:S/.source/${RCVER:S/build/rc/}/:S/esr//}
-PKGREVISION=	2
 CATEGORIES=	www
 EXTRACT_SUFX=	.tar.xz
 
@@ -54,6 +53,9 @@ LICENSE=	mpl-1.1
 #
 # -----------------------------------------------------------------------
 
+### As if 157.0, `make maintainer-files` does not work.
+### ryoon will disable build without nodejs for a while.
+FIREFOX_MAINTAINER=yes
 WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
 
 MOZILLA_DIR=	# empty

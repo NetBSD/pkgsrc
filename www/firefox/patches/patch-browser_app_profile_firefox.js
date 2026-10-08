@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.26 2026/08/14 12:26:11 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.27 2026/10/08 20:57:15 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2026-08-10 18:46:16.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2026-09-24 10:45:34.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2929,6 +2929,36 @@ pref("toolkit.coverage.endpoint.base", "https://covera
+@@ -3055,6 +3055,36 @@ pref("toolkit.coverage.endpoint.base", "https://covera
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -39,6 +39,6 @@ each one.
 +// The root cause of this should be investigated.
 +pref("dom.serviceWorkers.enabled", false);
 +
- // Discovery prefs
+ // Enable personalized extension recommendations
  pref("browser.discovery.enabled", true);
- pref("browser.discovery.containers.enabled", true);
+ 

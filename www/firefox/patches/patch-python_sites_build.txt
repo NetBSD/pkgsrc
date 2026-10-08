@@ -1,12 +1,12 @@
-$NetBSD: patch-python_sites_build.txt,v 1.3 2026/07/21 15:25:01 ryoon Exp $
+$NetBSD: patch-python_sites_build.txt,v 1.4 2026/10/08 20:57:15 ryoon Exp $
 
 * We are offline, so do not try to download from pypi.
   No need to wait a timeout.
 
---- python/sites/build.txt.orig	2026-07-13 13:09:21.000000000 +0000
+--- python/sites/build.txt.orig	2026-09-24 10:45:43.000000000 +0000
 +++ python/sites/build.txt
 @@ -1,6 +1,6 @@ pth:third_party/python/vsdownload
- requires-python:>=3.9
+ requires-python:>=3.10
  pth:third_party/python/vsdownload
 -pypi-optional:taskcluster-taskgraph==24.1.1:toolchain artifacts will not be bootstrapped
 +#pypi-optional:taskcluster-taskgraph==24.1.1:toolchain artifacts will not be bootstrapped

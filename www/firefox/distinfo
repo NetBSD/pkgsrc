@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.595 2026/09/26 11:10:38 ryoon Exp $
+$NetBSD: distinfo,v 1.596 2026/10/08 20:57:14 ryoon Exp $
 
-BLAKE2s (firefox-156.0.1.source.tar.xz) = dfaef24cc7ad06c7f5e6609574a713e5717fe3a87ecc8feef0cb77530c389123
-SHA512 (firefox-156.0.1.source.tar.xz) = 80a32a79268b672206f5477ca6bfde620cb7419b27aac090e01f06df06990ee0bbd81bb5c4aa78ac1d0edb26b133b1c6fa11cb6522445eccd70c82e719a24d5b
-Size (firefox-156.0.1.source.tar.xz) = 806005992 bytes
+BLAKE2s (firefox-157.0.1.source.tar.xz) = 5bdeab611f6bffe5dd7ccacd349b6dcc32dcda646d713ccd73b69ae4f2970ec3
+SHA512 (firefox-157.0.1.source.tar.xz) = c019202b2f87d25b3605bbf7266f3bb4d59745e48536f297d3f00cc3524a1cd2eba416a5a3cd0ecee6b0762d0f35bf3c5fcce286ebc7bc741263bebd0f102858
+Size (firefox-157.0.1.source.tar.xz) = 811383348 bytes
 BLAKE2s (nodejs-output-156.0.1.tgz) = 26aa0e33c007e8c08ebbe87dd1004c0cee01d9bed8a3b96ed5ccdc4062324e8d
 SHA512 (nodejs-output-156.0.1.tgz) = 6b6bc87f4dacc2f77bb525aa484ac7cb5035502033dc37f8b46d047659a516631281e332515ca450cd5cce4d01d7102d7fc011771a9bc0ea15633b233a0ffe31
 Size (nodejs-output-156.0.1.tgz) = 251380 bytes
-SHA1 (patch-browser_app_profile_firefox.js) = f111e03a9c70b6ad5ba64bf95d45302b9256687a
+SHA1 (patch-browser_app_profile_firefox.js) = 1fe46a0bb3d29520d19755a8786457b3259a6c96
 SHA1 (patch-build_gn__processor.py) = c9b2f31787704c3fec466711010ef632199ae385
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -42,7 +42,7 @@ SHA1 (patch-mozglue_misc_Now.cpp) = 760724be1bdc4ca6e19edaf2c8df6dd84192d93f
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda80b3197fed542a26
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c99c3ce679f4196fc3baaf65051471a13d6fe8cd
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
-SHA1 (patch-python_sites_build.txt) = f03f059bbe79bfdf7f1db5475279edb3c9d6ebed
+SHA1 (patch-python_sites_build.txt) = 2f716b67b47d8d0f648f466aabdc1c4e90d0f024
 SHA1 (patch-python_sites_mach.txt) = be62d091430daaa2ceeff3aff07f71275896352f
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = b1067a6804470f7e365f347683b7d505853fd799
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
@@ -71,5 +71,6 @@ SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
 SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = c77481a1f8fe1e237b7fe87e3e586ca886ac1d3d
+SHA1 (patch-widget_gtk_nsAppShell.cpp) = 69034ac3b176b56c93cbc7e075c484d56d61ca6a
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 8980398051fa16c7283acb6d323419993cce1420
