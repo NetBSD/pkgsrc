@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6812 2026/10/08 20:57:30 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6813 2026/10/08 20:58:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10231,3 +10231,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oksh to 7.9 [ktnb 2026-10-08]
 	Updated wm/icewm to 4.1.0 [ktnb 2026-10-08]
 	Updated www/firefox to 157.0.1 [ryoon 2026-10-08]
+	Updated www/firefox-l10n to 157.0.1 [ryoon 2026-10-08]
