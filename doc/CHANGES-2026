@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6807 2026/10/08 16:48:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6808 2026/10/08 16:55:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10225,3 +10225,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-cramjam to 2.13.0 [adam 2026-10-08]
 	Updated security/py-pyspnego to 0.12.4 [adam 2026-10-08]
 	Updated math/py-gmpy2 to 2.3.2 [adam 2026-10-08]
+	Updated misc/py-diff-cover to 10.6.0 [adam 2026-10-08]
+	Updated devel/py-pdm-build-locked to 0.3.8 [adam 2026-10-08]
