@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/06/24 05:20:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/08 16:48:16 adam Exp $
 
-DISTNAME=	gmpy2-2.3.1
+DISTNAME=	gmpy2-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/a/alpha/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmpy2/}
@@ -12,9 +12,9 @@ LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
+TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath>=0:../../math/py-mpmath
 
 .include "../../devel/gmp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mpcomplex?=	mpcomplex>=1.2.1
