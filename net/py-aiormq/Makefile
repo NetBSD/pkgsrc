@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/09/11 08:10:30 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/09 09:05:19 adam Exp $
 
-DISTNAME=	aiormq-7.0.0
+DISTNAME=	aiormq-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiormq/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mosquito/aiormq
 COMMENT=	Pure python AMQP asynchronous client library
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.10.4:../../devel/py-uv-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.12.19:../../devel/py-uv-build
 DEPENDS+=	${PYPKGPREFIX}-pamqp>=4:../../net/py-pamqp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=0:../../www/py-yarl
 
