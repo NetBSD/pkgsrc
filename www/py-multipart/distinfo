@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/08/11 15:56:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/10/09 03:53:37 adam Exp $
 
-BLAKE2s (multipart-2.0.0.tar.gz) = b3fdfc2d0d4668e8181c51d68464b325d65f47442b1f51c5875de0a6090e8b18
-SHA512 (multipart-2.0.0.tar.gz) = 637a6224e83284d38c35a6615157463f08d7e9a95d6d71e0943d71e313cb7d5249b32eace22f064a93ecb86fc68a47fd2e65288c272acfc7d9cb692c3606a281
-Size (multipart-2.0.0.tar.gz) = 42606 bytes
+BLAKE2s (multipart-2.0.1.tar.gz) = 13b8379bff9a42d68efcb5ed805e649a886026106ebb436e32458c608f184f3d
+SHA512 (multipart-2.0.1.tar.gz) = 656e860bed5b655905951d733d8680807d04fdfe93a3a17a233ddfa117d98586550d63828a02f875825c7b20f50cab3496dbf566811d22039f91838474a241ff
+Size (multipart-2.0.1.tar.gz) = 42844 bytes
