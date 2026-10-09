@@ -1,0 +1,4 @@
+aiothreads is a Python library that provides seamless integration between
+asyncio and thread-based execution. It offers decorators and utilities to run
+synchronous functions and generators in threads while maintaining clean
+async/await syntax in your asyncio applications.
