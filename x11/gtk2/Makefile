@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.368 2026/09/29 06:08:15 wiz Exp $
+# $NetBSD: Makefile,v 1.369 2026/10/09 10:05:44 jperkin Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	GTK_UPDATE_ICON_CACHE=${TOOLBASE:Q}/bin/gtk2-update-icon-cache
 
 # https://github.com/macports/macports-ports/pull/25847
 .if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} >= 150000
-MAKE_ENV+=		MACOSX_DEPLOYMENT_TARGET=14.0
+MACOSX_DEPLOYMENT_TARGET=	14.0
 .endif
 
 #SUBST_CLASSES+=	pthread
