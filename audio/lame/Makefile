@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2026/07/15 07:09:51 adam Exp $
+# $NetBSD: Makefile,v 1.99 2026/10/09 12:02:00 tnn Exp $
 
 DISTNAME=	lame-4.0
 PKGREVISION=	1
@@ -15,8 +15,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-# Fix for faulty detection of iconv.
-CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
+# Upstream insists on enforcing GNU iconv on macOS.
+CONFIGURE_ENV.Darwin+=	am_cv_func_iconv_works=yes
 
 LDFLAGS.SunOS+=		-lm
 LDFLAGS.NetBSD+=	-ltermcap
