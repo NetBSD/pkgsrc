@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/08/16 12:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/09 12:02:00 tnn Exp $
 
 DISTNAME=	libpsl-0.23.3
 CATEGORIES=	www
@@ -17,8 +17,8 @@ USE_TOOLS+=		gmake msgfmt msgmerge pkg-config xgettext
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-runtime=libidn2
-# Fix for iconv detection in gettext 1.0.
-CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
+# Upstream insists on enforcing GNU iconv on macOS.
+CONFIGURE_ENV.Darwin+=	am_cv_func_iconv_works=yes
 PKGCONFIG_OVERRIDE+=	libpsl.pc.in
 TEST_TARGET=		check
 

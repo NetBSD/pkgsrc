@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/08/07 09:03:53 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/09 12:02:00 tnn Exp $
 
 DISTNAME=	libunistring-1.4.2
 CATEGORIES=	textproc
@@ -14,8 +14,8 @@ USE_LIBTOOL=	yes
 INFO_FILES=	yes
 TEST_TARGET=	check
 
-# Fix for iconv detection in gettext 1.0.
-CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
+# Upstream insists on enforcing GNU iconv on macOS.
+CONFIGURE_ENV.Darwin+=	am_cv_func_iconv_works=yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

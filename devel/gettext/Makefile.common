@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2026/07/21 12:55:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2026/10/09 12:02:00 tnn Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -19,8 +19,8 @@ CONFLICTS=	gettext<=0.10.35
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures
-# Fix for faulty detection of iconv.
-CONFIGURE_ENV.Darwin=	am_cv_func_iconv_works=yes
+# Upstream insists on enforcing GNU iconv on macOS.
+CONFIGURE_ENV.Darwin+=	am_cv_func_iconv_works=yes
 
 TEST_TARGET=	check
 
