@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.800 2026/10/05 08:38:05 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.801 2026/10/09 17:44:46 tron Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30457,3 +30457,4 @@ ruby{33,34}-faraday1<1.10.5	server-side-request-forgery	https://nvd.nist.gov/vul
 tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103678
 tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103679
 tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103680
+mutt<2.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-107570
