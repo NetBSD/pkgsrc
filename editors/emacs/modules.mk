@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.43 2026/09/25 09:46:51 wiz Exp $
+# $NetBSD: modules.mk,v 1.44 2026/10/09 19:35:46 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -460,6 +460,7 @@ _EMACS_TYPE_OTHER=	${_EMACS_TYPE}nox
 _EMACS_REQD_OTHER=	${_EMACS_REQD:C/[<>=].*//}-nox11
 .endif
 
+_EMACS_REQD:=	{${_EMACS_REQD:C/[<>=].*//},${_EMACS_REQD_OTHER}}${_EMACS_REQD:C/^[^<>=]*//}
 DEPENDS+=	${_EMACS_REQD}:${_EMACS_PKGDIR}
 
 EMACS_MODULES?=
@@ -533,6 +534,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 #
 
 .if defined(EMACS_BUILDLINK)
+BUILDLINK_ABI_DEPENDS.emacs?=	${_EMACS_REQD}
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
 # A development version usually claims three digits, say, 27.0.50 etc.
 # The lisp of other packages now lives under the version directory, so
