@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/09/12 17:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/09 07:19:02 adam Exp $
 
-DISTNAME=	jupyter_server-2.21.0
+DISTNAME=	jupyter_server-2.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://jupyter-server.readthedocs.io/
 COMMENT=	Backend for Jupyter web applications
 LICENSE=	modified-bsd
 
+# Not in pyproject.toml, but required.
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0:../../devel/py-hatch-jupyter-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-Send2Trash>=1.8.2:../../sysutils/py-Send2Trash
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.1.0:../../devel/py-anyio
 DEPENDS+=	${PYPKGPREFIX}-argon2-cffi>=21.1:../../security/py-argon2-cffi
