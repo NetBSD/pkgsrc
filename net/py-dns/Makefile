@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/09/21 15:45:29 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/10/09 03:35:08 adam Exp $
 
-DISTNAME=	dnspython-2.8.0
+DISTNAME=	dnspython-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnspython/}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://www.dnspython.org/
 COMMENT=	Python DNS toolkit
 LICENSE=	isc
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.21.0:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-idna>=2.1:../../www/py-idna
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.9.21:../../devel/py-uv-build
+# idna
+DEPENDS+=	${PYPKGPREFIX}-idna>=3.20:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
