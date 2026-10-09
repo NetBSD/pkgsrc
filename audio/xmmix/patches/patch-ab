@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2002/10/08 12:30:57 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2026/10/09 18:17:24 chuck Exp $
 
---- mixer.c.orig	Thu Nov  7 08:00:26 1996
+--- mixer.c.orig	1996-11-07 16:00:26.000000000 +0000
 +++ mixer.c
 @@ -104,6 +104,14 @@ STATIC ctlinfo_t	ctlsav;		/* Saved state
   ***********************/
@@ -17,6 +17,15 @@ $NetBSD: patch-ab,v 1.2 2002/10/08 12:30:57 jlam Exp $
  /*
   * do_ioctl
   *	Perform ioctl command.  If file is not yet open or if we
+@@ -124,7 +132,7 @@ STATIC ctlinfo_t	ctlsav;		/* Saved state
+  *	Nothing
+  */
+ STATIC void
+-do_ioctl(int cmd, int *arg, char *name, int dir)
++do_ioctl(unsigned long cmd, int *arg, char *name, int dir)
+ {
+ 	int	ret;
+ 	char	errmsg[STR_BUF_SZ];
 @@ -201,12 +209,18 @@ mx_queryhw(widgets_t *m)
  			ctlinfo.slinfo[i].right = ((level >> 8) & 0xff);
  
@@ -91,18 +100,10 @@ $NetBSD: patch-ab,v 1.2 2002/10/08 12:30:57 jlam Exp $
  	/* Update screen controls to match current status */
  	mx_updctl(m);
  }
-@@ -1531,6 +1563,22 @@ mx_focuschg(Widget w, XtPointer client_d
- 	if (p->reason != XmCR_FOCUS || form == (Widget) NULL)
- 		return;
+@@ -1539,5 +1571,21 @@ mx_focuschg(Widget w, XtPointer client_d
+ }
  
-+	/* Query hardware mixer settings */
-+	mx_queryhw(&widgets);
-+
-+	/* Update screen controls */
-+	mx_updctl(&widgets);
-+}
-+
-+
+ 
 +/*
 + * mx_change
 + *	Mixer device has changed
@@ -111,6 +112,13 @@ $NetBSD: patch-ab,v 1.2 2002/10/08 12:30:57 jlam Exp $
 +void
 +mx_change(XtPointer client_data)
 +{
- 	/* Query hardware mixer settings */
- 	mx_queryhw(&widgets);
++	/* Query hardware mixer settings */
++	mx_queryhw(&widgets);
++
++	/* Update screen controls */
++	mx_updctl(&widgets);
++}
++
++
+ /**************** ^^ Callback routines ^^ ****************/
  

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:59:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/10/09 18:17:24 chuck Exp $
 
 BLAKE2s (xmmix-1.2.tar.gz) = 8d00c3e0c6bd703f2011f07b09432340f0073553d545b33113d81ef40b0d4fa8
 SHA512 (xmmix-1.2.tar.gz) = 82704081ff866bb3b73319a7931af6662cc9a1724b8cb9bc44331392c4ccf408314f56d6b6ae72bf4b77475dc084d95f656d4772358b729d11c922c446bf7d3b
 Size (xmmix-1.2.tar.gz) = 33496 bytes
 SHA1 (patch-aa) = 68a33a91de0e373da4818a26e339d3c87e895b33
-SHA1 (patch-ab) = cbdc30e17aa2a857d756b403c0873436e9480129
+SHA1 (patch-ab) = 9d82256971de2691ae6048372b390f68a18ed82d
 SHA1 (patch-ac) = 8d68a2de3ee8a094a7f84ecb1d387bc22ca82bbb
 SHA1 (patch-ba) = 8092fcec3c39060da476f2ad2d018e8e0a8aa028
 SHA1 (patch-bb) = 1c01aa80d4c24ba7caecb1a4ef97ac36d8e242ba
