@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2023/10/24 22:11:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/09 07:58:02 drixter Exp $
 
-GITHUB_PROJECT=	bsdec2-image-upload
-DISTNAME=	1.4.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	bsdec2-image-upload-1.5.0
+DISTFILES=	${DISTNAME}.tar.gz
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cperciva/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	jmcneill@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/cperciva/bsdec2-image-upload/
 COMMENT=	Tool for creating Amazon EC2 AMIs
 LICENSE=	2-clause-bsd
