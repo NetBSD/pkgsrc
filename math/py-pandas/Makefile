@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2026/08/03 09:57:15 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/10/09 03:52:03 adam Exp $
 
-DISTNAME=	pandas-3.0.5
+DISTNAME=	pandas-3.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1.0:../../devel/py-cython
 # multi-version build fixes.
 TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.17.1:../../devel/py-meson_python
-TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
+TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.1:../../time/py-tzdata
 # timezone
