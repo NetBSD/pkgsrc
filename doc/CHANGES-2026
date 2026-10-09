@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6820 2026/10/09 07:25:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6821 2026/10/09 07:58:22 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10253,3 +10253,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-jupyter_server to 2.21.1 [adam 2026-10-09]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.13.9 [adam 2026-10-09]
 	Updated textproc/py-sphinxfeed-lsaffre to 0.3.7 [adam 2026-10-09]
+	Updated sysutils/bsdec2-image-upload to 1.5.0 [drixter 2026-10-09]
