@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/09 09:12:54 adam Exp $
+
+BLAKE2s (aiothreads-1.1.4.tar.gz) = 8c2b2cfa2285bb7b7aaa0989d0578f296bc86645f696d0a64b556af059621de4
+SHA512 (aiothreads-1.1.4.tar.gz) = f06a9c14bf8c07a2f0133e8a6fd84d53bccc4b90a3b8ef1cbaac40b9f5641af338cd5b82d18967c092d1cac88d3e903fe57144bf77fa232450f39f347cb0b40c
+Size (aiothreads-1.1.4.tar.gz) = 119209 bytes

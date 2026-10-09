@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/09 09:12:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/aiothreads/__init__.py
+${PYSITELIB}/aiothreads/__init__.pyc
+${PYSITELIB}/aiothreads/__init__.pyo
+${PYSITELIB}/aiothreads/coroutine_waiter.py
+${PYSITELIB}/aiothreads/coroutine_waiter.pyc
+${PYSITELIB}/aiothreads/coroutine_waiter.pyo
+${PYSITELIB}/aiothreads/iterator_wrapper.py
+${PYSITELIB}/aiothreads/iterator_wrapper.pyc
+${PYSITELIB}/aiothreads/iterator_wrapper.pyo
+${PYSITELIB}/aiothreads/new_thread.py
+${PYSITELIB}/aiothreads/new_thread.pyc
+${PYSITELIB}/aiothreads/new_thread.pyo
+${PYSITELIB}/aiothreads/py.typed
+${PYSITELIB}/aiothreads/threaded_iterable.py
+${PYSITELIB}/aiothreads/threaded_iterable.pyc
+${PYSITELIB}/aiothreads/threaded_iterable.pyo
+${PYSITELIB}/aiothreads/threads.py
+${PYSITELIB}/aiothreads/threads.pyc
+${PYSITELIB}/aiothreads/threads.pyo
+${PYSITELIB}/aiothreads/types.py
+${PYSITELIB}/aiothreads/types.pyc
+${PYSITELIB}/aiothreads/types.pyo
