@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/03/12 19:02:45 leot Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/09 07:05:29 drixter Exp $
 
-DISTNAME=	pick-3.0.1
+DISTNAME=	pick-4.0.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mptre/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dbotw@gmx.net
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/mptre/pick/
 COMMENT=	Fuzzy search tool for the command-line
 LICENSE=	mit
