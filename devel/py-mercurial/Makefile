@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2026/06/09 15:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2026/10/09 10:23:35 adam Exp $
 #
 # Changelog sometimes at: https://mercurial-scm.org/news
 
@@ -12,10 +12,11 @@ HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
+# FIXME: Fails to build locale files when devel/py-setuptools-gettext is installed.
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1.0:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 USE_TOOLS+=	gmake msgfmt
 
@@ -25,7 +26,7 @@ LDFLAGS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
 
-PYTHON_SELF_CONFLICT=		yes
+PYTHON_SELF_CONFLICT=	yes
 
 .include "version.mk"
 

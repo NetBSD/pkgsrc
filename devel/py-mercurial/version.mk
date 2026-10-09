@@ -1,6 +1,5 @@
-# $NetBSD: version.mk,v 1.70 2026/07/01 22:05:35 wiz Exp $
+# $NetBSD: version.mk,v 1.71 2026/10/09 10:23:35 adam Exp $
 #
 # please also update devel/rhg when changing the version number
-#
 
-VERSION=	7.2.2
+VERSION=	7.2.4
