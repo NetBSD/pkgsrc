@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6816 2026/10/09 04:11:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6817 2026/10/09 04:42:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10244,3 +10244,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/catch2 to 3.16.1 [adam 2026-10-09]
 	Updated security/easy-rsa to 3.2.7 [adam 2026-10-09]
 	Updated sysutils/direnv to 2.38.1 [adam 2026-10-09]
+	Updated devel/lazygit to 0.66.0 [adam 2026-10-09]
+	Updated devel/py-astroid to 4.3.4 [adam 2026-10-09]
+	Updated devel/py-dulwich to 1.2.17 [adam 2026-10-09]
+	Updated devel/py-flakes to 4.0.3 [adam 2026-10-09]
