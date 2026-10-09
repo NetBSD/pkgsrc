@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/04/20 11:27:29 nia Exp $
+# $NetBSD: Makefile,v 1.58 2026/10/09 10:24:54 jperkin Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	13
@@ -11,11 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Berkeley nvi with additional features
 LICENSE=	modified-bsd
 
+FORCE_C_STD=	c99
+USE_LIBTOOL=	yes
+USE_TOOLS+=	sh aclocal automake autoheader autoconf
+
 .include "options.mk"
 
 CONFIGURE_DIRS=		build.unix
-USE_LIBTOOL=		yes
-USE_TOOLS+=		sh aclocal automake autoheader autoconf
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
