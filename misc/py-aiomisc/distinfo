@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/09 09:14:40 adam Exp $
+
+BLAKE2s (aiomisc-18.0.33.tar.gz) = 5210db40ea3bb8a71acbc36faf2e3c5513b377c2c329c210e4685f7e01247ecc
+SHA512 (aiomisc-18.0.33.tar.gz) = 27c8d2d2cf2709f5a11b2016619730690ad1317c172a8ead70eb4667a463beed07adc069234c23195631cf96cbcff62697b34c4145a2cf0269e93bd78660fd5a
+Size (aiomisc-18.0.33.tar.gz) = 539726 bytes
