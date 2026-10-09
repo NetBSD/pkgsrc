@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2023/11/22 11:54:43 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/10/09 03:42:31 adam Exp $
 
-BLAKE2s (html5-parser-0.4.12.tar.gz) = 596cf344076210e0293aab6fd194381542bc6ee742e8232a3ba4c512790c4a3c
-SHA512 (html5-parser-0.4.12.tar.gz) = 5dc45c54c53fc6492b645977940ebaf4bc4fee141767d9d6066ecc1c8547a2343f29c39c65f97d827863c499d48f54fae9309b8b25aa636ae3e4e42e97ec1f17
-Size (html5-parser-0.4.12.tar.gz) = 270861 bytes
+BLAKE2s (html5_parser-0.5.0.tar.gz) = 89dc546173e095715ca770d17ce494d19ac5aa1fa75c520bfbf6defb0d44ce61
+SHA512 (html5_parser-0.5.0.tar.gz) = 4e38427d70ddd16cd8dce10d26d8ba6d33e985b681b85d27b2992ad07d10371a011df8fb3757ed62e6e492380377075ee1d27d469dec8a04dfb0451922e1b48f
+Size (html5_parser-0.5.0.tar.gz) = 275010 bytes
 SHA1 (patch-setup.py) = 075e34e3e9528a99a7262cff7b1b40e076858b8e
