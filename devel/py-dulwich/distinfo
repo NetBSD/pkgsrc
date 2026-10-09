@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.84 2026/09/23 13:28:14 adam Exp $
+$NetBSD: distinfo,v 1.85 2026/10/09 04:40:04 adam Exp $
 
 BLAKE2s (bstr-1.12.3.crate) = 147f1dc0e32ca9e25fc4eb8638b10a6a4683f890145057a982bf4ac718f30376
 SHA512 (bstr-1.12.3.crate) = 5093e7fc678c31684468d7b779a6f129db6b3d87fe7e05b86950ff1ee1afdf1bf6ae2586144667c8ee798de37f5fd089be0f7318401565484fbd7de07f7c0330
 Size (bstr-1.12.3.crate) = 355150 bytes
-BLAKE2s (dulwich-1.2.15.tar.gz) = fde68ff941c09d323d8ad203d27ed37e73be6f4917c62d3eff99b285bd00a05f
-SHA512 (dulwich-1.2.15.tar.gz) = b5a9e7f8762202c20ebbe8e465574c639771de0b2483daa63516380de4be953d5f304015aa06ebc5a8edbda4da81ab82a75bc8dbdb5974238efa364bad7e93c7
-Size (dulwich-1.2.15.tar.gz) = 1371420 bytes
+BLAKE2s (dulwich-1.2.17.tar.gz) = df33ba94fdad49d9af1a12f3392c30de307498b4ed02d46f631c77459a5ba4f3
+SHA512 (dulwich-1.2.17.tar.gz) = 82fac681d94c0e792d578ba81e46e3cce0b550b6dcb0b57cde0d2cbe0d3ea61c4e30e3f7cb403cf2bee259de9b2a3f08c5625d5efa8c773bd184c71ddb44ec91
+Size (dulwich-1.2.17.tar.gz) = 1407736 bytes
 BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
 SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
 Size (heck-0.5.0.crate) = 11517 bytes
