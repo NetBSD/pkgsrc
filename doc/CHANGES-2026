@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6828 2026/10/09 17:38:12 tron Exp $
+$NetBSD: CHANGES-2026,v 1.6829 2026/10/09 17:39:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10265,3 +10265,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/gerbil version 0.18.2 [ktnb 2026-10-09]
 	Updated net/dnscontrol to 5.4.0 [drixter 2026-10-09]
 	Updated mail/mutt to 2.4.3 [tron 2026-10-09]
+	Updated textproc/enchant2 to 2.8.21nb3 [wiz 2026-10-09]
