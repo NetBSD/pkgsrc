@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2026/10/09 14:31:31 ktnb Exp $
+
+BLAKE2s (gerbil-0.18.2.tar.gz) = 4662034d271805ea786b14939164237c3b1e828e9bd39f8b4f67e19ab368398f
+SHA512 (gerbil-0.18.2.tar.gz) = d5c60c2682d6b57bab83338ae05837c14f54c3bd76844a0ae34500ee74fb543cb752a1c8c4220a980149f6180cca39da018050ea7bb2173e8b28a8ae83257882
+Size (gerbil-0.18.2.tar.gz) = 19280641 bytes
+SHA1 (patch-src_bootstrap_gerbil_expander_root~0.scm) = dc3f03fa0a2b3aafa61316313df5e1cb3474dcda
+SHA1 (patch-src_gerbil_expander_root.ss) = c3f355b8464637980bb6cbcab8b49d134717809c
