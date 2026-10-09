@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/10/08 12:45:50 pin Exp $
+$NetBSD: distinfo,v 1.16 2026/10/09 03:28:48 pin Exp $
 
 BLAKE2s (accesskit-0.24.1.crate) = ae7d19482b619e8123a46a3c04737ad46a244c55775afefbe8bec34c60d9489b
 SHA512 (accesskit-0.24.1.crate) = f44b37019e3707b7af633ea33f5d726b5f653d509388b906b2626d6bc7fdb4fb8f8cf4882cd17327ff1f057728f80713ef6bc58e31dfe954fd67a930dee4bae5
@@ -1419,4 +1419,3 @@ Size (zune-jpeg-0.5.15.crate) = 88879 bytes
 SHA1 (patch-.._vendor_wgpu-30.0.1_build.rs) = 79cdef3bb47cdd97a5ef4702839ad75db0afaa4d
 SHA1 (patch-.._vendor_wgpu-core-30.0.1_Cargo.toml) = cb1f7df2b7d45343041e78225a6ec1bd67529328
 SHA1 (patch-.._vendor_wgpu-core-30.0.1_build.rs) = b2d1568beb78555560776e29ce55fc45e75cb3ce
-SHA1 (patch-.._vendor_x11rb-0.13.2_src_xcb__ffi_raw__ffi_ffi.rs) = b80ac1ecb6b77a77c6510c8421c78a0984a28073
