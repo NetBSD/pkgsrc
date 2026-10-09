@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6815 2026/10/09 03:57:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6816 2026/10/09 04:11:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10240,3 +10240,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-pandas to 3.0.6 [adam 2026-10-09]
 	Updated www/py-multipart to 2.0.1 [adam 2026-10-09]
 	Updated devel/py-project-api to 1.11.4 [adam 2026-10-09]
+	Updated databases/postgresql-timescaledb to 2.30.2 [adam 2026-10-09]
+	Updated devel/catch2 to 3.16.1 [adam 2026-10-09]
+	Updated security/easy-rsa to 3.2.7 [adam 2026-10-09]
+	Updated sysutils/direnv to 2.38.1 [adam 2026-10-09]
