@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.802 2026/10/02 01:12:26 charlotte Exp $
+# $NetBSD: Makefile,v 1.803 2026/10/09 14:31:31 ktnb Exp $
 #
 
 COMMENT=	Programming languages
@@ -113,6 +113,7 @@ SUBDIR+=	gcc8
 SUBDIR+=	gcc8-libs
 SUBDIR+=	gcc9
 SUBDIR+=	gcc9-libs
+SUBDIR+=	gerbil
 SUBDIR+=	gforth
 SUBDIR+=	ghc910
 SUBDIR+=	ghc92
