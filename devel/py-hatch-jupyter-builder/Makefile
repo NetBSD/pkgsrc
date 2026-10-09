@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/04/03 08:56:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/09 07:12:38 adam Exp $
 
-DISTNAME=	hatch_jupyter_builder-0.9.1
+DISTNAME=	hatch_jupyter_builder-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-jupyter-builder/}
@@ -11,16 +11,12 @@ COMMENT=	Hatch plugin to help build Jupyter packages
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.17:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} hatch-jupyter-builder hatch-jupyter-builder-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	hatch-jupyter-builder
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
