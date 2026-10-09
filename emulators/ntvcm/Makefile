@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2026/05/01 19:52:47 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/09 09:26:43 hauke Exp $
 
 DISTNAME=	ntvcm
-PKGNAME=	ntvcm-0.0.20260329
+PKGNAME=	ntvcm-0.0.20261009
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davidly/}
 GITHUB_PROJECT=	ntvcm
-GITHUB_TAG=	5f3897b6239836ade2d1089664874c52e117c0ac	# 2026-03-29
+GITHUB_TAG=	59c0b63d5cb1a14b6ee342df9440dee29e67a79f	# 2026-10-09
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/davidly/ntvcm?tab=readme-ov-file\#readme
