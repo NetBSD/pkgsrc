@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile,v 1.1 2025/07/04 16:30:12 hauke Exp $
+$NetBSD: patch-makefile,v 1.2 2026/10/09 16:44:17 hauke Exp $
 
 Make LFLAGS and CFLAGS overridable
 
@@ -8,7 +8,7 @@ Remove ls(1) call, GNU long opts are not portable
 
 Print compiler command lines always
 
---- makefile.orig	2025-07-02 22:41:46.000000000 +0000
+--- makefile.orig	2026-10-08 12:25:52.000000000 +0000
 +++ makefile
 @@ -27,14 +27,15 @@ FILES	= *.cxx *.hxx LICENSE README.md ma
  OBJECTS	= $(SOURCES:.cxx=.o)
@@ -36,7 +36,7 @@ Print compiler command lines always
  endif
  
 -all: CFLAGS	+= -flto -Ofast -D NDEBUG
-+all: CFLAGS	+= -flto -D NDEBUG
++all: CFLAGS	+= -D NDEBUG
  all: $(PROGRAM) $(OBJECTS)
  
  $(PROGRAM): $(OBJECTS)
