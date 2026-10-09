@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6814 2026/10/09 03:42:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6815 2026/10/09 03:57:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10236,3 +10236,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-dns to 2.9.0 [adam 2026-10-09]
 	Updated graphics/py-imageio to 2.38.1 [adam 2026-10-09]
 	Updated textproc/py-html5-parser to 0.5.0 [adam 2026-10-09]
+	Updated textproc/py-jsonpointer to 3.2.0 [adam 2026-10-09]
+	Updated math/py-pandas to 3.0.6 [adam 2026-10-09]
+	Updated www/py-multipart to 2.0.1 [adam 2026-10-09]
+	Updated devel/py-project-api to 1.11.4 [adam 2026-10-09]
