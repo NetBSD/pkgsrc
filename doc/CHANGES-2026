@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6825 2026/10/09 11:13:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6826 2026/10/09 14:32:01 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10262,3 +10262,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-mercurial to 7.2.4 [adam 2026-10-09]
 	Updated devel/rhg to 7.2.4 [adam 2026-10-09]
 	Updated devel/py-vcs-versioning to 2.6.0 [adam 2026-10-09]
+	Added lang/gerbil version 0.18.2 [ktnb 2026-10-09]
