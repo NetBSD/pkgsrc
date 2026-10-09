@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/22 17:31:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/09 03:49:02 adam Exp $
 
-DISTNAME=	jsonpointer-3.1.1
+DISTNAME=	jsonpointer-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpointer/}
@@ -14,15 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-.for bin in jsonpointer
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	jsonpointer
 
 do-test:
-	cd ${WRKSRC} && \
-	${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
