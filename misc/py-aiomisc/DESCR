@@ -1,0 +1,5 @@
+aiomisc is a Python library that provides a collection of utility functions and
+classes for working with asynchronous I/O in a more intuitive and efficient
+way. It is built on top of the asyncio library and is designed to make it
+easier for developers to write asynchronous code that is both reliable and
+scalable.
