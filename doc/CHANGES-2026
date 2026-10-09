@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6822 2026/10/09 09:07:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6823 2026/10/09 09:14:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10256,3 +10256,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/bsdec2-image-upload to 1.5.0 [drixter 2026-10-09]
 	Updated net/py-aiormq to 7.2.1 [adam 2026-10-09]
 	Updated net/py-aio-pika to 10.1.0 [adam 2026-10-09]
+	Added misc/py-aiothreads version 1.1.4 [adam 2026-10-09]
+	Added misc/py-aiomisc version 18.0.33 [adam 2026-10-09]
