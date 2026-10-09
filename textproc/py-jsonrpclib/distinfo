@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:06 nia Exp $
-
-BLAKE2s (jsonrpclib-0.2.1.tar.gz) = 10e79b306253f34c3a5ec8084a56777f92f69538edd245092a774c1e714fa4fa
-SHA512 (jsonrpclib-0.2.1.tar.gz) = 397c5bce2199451f55c30a6ce3c3af9cc6fb11dcc086b97b5c537f34e85369a39cbbee6d68e3aca5e9627abdf21e5422d5bb9557cc159e416804096f60773e97
-Size (jsonrpclib-0.2.1.tar.gz) = 18096 bytes
