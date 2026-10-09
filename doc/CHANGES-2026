@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6817 2026/10/09 04:42:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6818 2026/10/09 07:05:50 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10248,3 +10248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-astroid to 4.3.4 [adam 2026-10-09]
 	Updated devel/py-dulwich to 1.2.17 [adam 2026-10-09]
 	Updated devel/py-flakes to 4.0.3 [adam 2026-10-09]
+	Updated misc/pick to 4.0.0 [drixter 2026-10-09]
