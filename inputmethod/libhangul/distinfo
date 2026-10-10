@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:49:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/10/10 11:25:24 adam Exp $
 
-BLAKE2s (libhangul-0.1.0.tar.gz) = 43e85aefc5535af93e477a1752e094109c27937cfac620ef99f23289fa981a4a
-SHA512 (libhangul-0.1.0.tar.gz) = cf84850bf7a41e743457300513c5efdf7b3e18d168f4fdc324aaa8e1be78743752fcb98385764f94c707777ab82cc9444e076808e61fdbd915c9c0d7ea93c534
-Size (libhangul-0.1.0.tar.gz) = 2899845 bytes
+BLAKE2s (libhangul-0.2.0.tar.gz) = 265df7d6ee114867f4660472f8a6a6b1aeb4c7be0bf7cfade528763c4cd9082a
+SHA512 (libhangul-0.2.0.tar.gz) = a8e1e70a91d51932bedc9b9d9e3099aba18d1b696cdc2395430076bf433855d0dbe807bc901f4eee4bd7bfda1e0079f73d58c6564a03e5f7828a7fe41c357c0a
+Size (libhangul-0.2.0.tar.gz) = 3027777 bytes
