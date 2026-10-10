@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/04 12:55:43 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/10 01:09:05 ktnb Exp $
 
-DISTNAME=	unordered_dense-5.3.1
+DISTNAME=	unordered_dense-5.3.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=martinus/}
