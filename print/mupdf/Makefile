@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2026/09/29 06:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2026/10/10 15:31:07 leot Exp $
 
-DISTNAME=	mupdf-1.27.2-source
+DISTNAME=	mupdf-1.28.5-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	https://casper.mupdf.com/downloads/archive/
 
@@ -106,8 +105,9 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 #.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-# XXX: mupdf needs mujs/regexp.h installed
 .include "../../lang/mujs/buildlink3.mk"
+# XXX: mupdf needs "registry.h" that are cmark-gfm internals not exposed
+#.include "../../textproc/cmark-gfm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
