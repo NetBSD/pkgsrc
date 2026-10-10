@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6840 2026/10/10 10:35:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6841 2026/10/10 11:27:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10279,3 +10279,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/conftest to 0.71.1 [leot 2026-10-10]
 	Added lang/python315 version 3.15.0 [adam 2026-10-10]
 	Added lang/py315-html-docs version 3.15.0 [adam 2026-10-10]
+	Updated inputmethod/libhangul to 0.2.0 [adam 2026-10-10]
+	Updated inputmethod/ibus-hangul to 1.5.5 [adam 2026-10-10]
