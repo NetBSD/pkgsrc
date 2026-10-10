@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2026/10/09 04:11:28 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/10/10 16:23:26 leot Exp $
 
-BLAKE2s (direnv-2.38.1.tar.gz) = af2fc3b55b01d3a0281c28c6aee7ad7a720fe36449c5632976f33bbac56dbcfc
-SHA512 (direnv-2.38.1.tar.gz) = b167306131c2d0c122cd2c32da46a3e21a9ebac61ce3ba6da3e1c39590a22231d7c17ea6a24abc91a5d74f65ab3715d84622568c922ed19a4f1d42d70b695aac
-Size (direnv-2.38.1.tar.gz) = 118364 bytes
+BLAKE2s (direnv-2.38.2.tar.gz) = 175ffe3cc148c6572e9f191a77e52b8483cd8fcc891f76093d064f42a41df7d1
+SHA512 (direnv-2.38.2.tar.gz) = 9c66be859f0177805e06399eeb45e8a0d6a6e851f19c03839d608357ca2a1247e6fd55d42098291425382f4809f01f770b3f2dea796cd842f94e43357a30f3b8
+Size (direnv-2.38.2.tar.gz) = 119628 bytes
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
 Size (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 43 bytes
