@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2026/10/01 17:30:20 adam Exp $
+# $NetBSD: Makefile,v 1.291 2026/10/10 18:55:05 leot Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -289,6 +289,7 @@ SUBDIR+=	xonclock
 SUBDIR+=	xtide
 SUBDIR+=	xtimer
 SUBDIR+=	xtu
+SUBDIR+=	zk
 SUBDIR+=	zonetab
 
 .include "../mk/misc/category.mk"
