@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6831 2026/10/10 00:39:07 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.6832 2026/10/10 01:09:22 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10268,3 +10268,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/enchant2 to 2.8.21nb3 [wiz 2026-10-09]
 	Updated net/knot to 3.6.1 [drixter 2026-10-09]
 	Added math/chuffed version 0.14.0 [alnsn 2026-10-09]
+	Updated devel/unordered-dense to 5.3.2 [ktnb 2026-10-10]
