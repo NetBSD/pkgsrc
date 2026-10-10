@@ -1,0 +1,5 @@
+Chuffed is a state of the art lazy clause solver designed
+from the ground up with lazy clause generation in mind.
+Lazy clause generation is a hybrid approach to constraint
+solving that combines features of finite domain propagation
+and Boolean satisfiability.
