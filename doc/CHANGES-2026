@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6844 2026/10/10 13:34:52 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6845 2026/10/10 14:33:40 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10284,3 +10284,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 31.7.0 [pin 2026-10-10]
 	Updated lang/gambc to 4.9.8 [ktnb 2026-10-10]
 	Updated geography/py-sbf2 to 1.0.6 [gdt 2026-10-10]
+	Added math/minizinc version 2.9.7 [alnsn 2026-10-10]
