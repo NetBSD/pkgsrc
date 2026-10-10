@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.803 2026/10/10 09:33:10 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.804 2026/10/10 10:37:32 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30458,3 +30458,17 @@ tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103678
 tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103679
 tnef-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-103680
 mutt<2.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-107570
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-19668
+bind<9.20.29	input-validation	https://kb.isc.org/docs/cve-2026-19033
+bind<9.20.29	input-validation	https://kb.isc.org/docs/cve-2026-77119
+bind<9.20.29	insufficient-verification	https://kb.isc.org/docs/cve-2026-19941
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-19666
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-19667
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-19662
+bind<9.20.29	uncontrolled-resource-consumption	https://kb.isc.org/docs/cve-2026-75029
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-77692
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-81736
+bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-76163
+bind<9.20.29	insufficient-verification	https://kb.isc.org/docs/cve-2026-78301
+bind<9.20.29	reachable-assertion	https://kb.isc.org/docs/cve-2026-80274
+bind<9.20.29	memory-leak		https://kb.isc.org/docs/cve-2026-81563
