@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2026/09/04 08:46:01 adam Exp $
+# $NetBSD: Makefile,v 1.649 2026/10/10 00:37:53 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -178,6 +178,7 @@ SUBDIR+=	capc-calc
 SUBDIR+=	cblas
 SUBDIR+=	cblas64
 SUBDIR+=	cgal
+SUBDIR+=	chuffed
 SUBDIR+=	classias
 SUBDIR+=	cln
 SUBDIR+=	coinmp
