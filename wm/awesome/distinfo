@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.30 2025/08/18 06:45:19 wiz Exp $
+$NetBSD: distinfo,v 1.30.10.1 2026/10/10 14:18:43 maya Exp $
 
 BLAKE2s (awesome-4.3.tar.xz) = 996ff487c8d2f850bf78d26f151ea5269c96cff94ccae95626ec2e0cb59e55d4
 SHA512 (awesome-4.3.tar.xz) = c5ef1e8dc593e7783b895d22143154aea8f211beeda24672a7ee4ed5112b4f4284043f848a151f3d3c4f569e91308670367a4353f705b20511b36495b22fa3f5
 Size (awesome-4.3.tar.xz) = 1037816 bytes
 SHA1 (patch-CMakeLists.txt) = ce684afe20430a5e030e8e4ee574fb22e3e16b9f
+SHA1 (patch-lib_awful_spawn.lua) = 637f1dfff662327419530081546136bd1484bb94
