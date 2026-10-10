@@ -1,0 +1,14 @@
+$NetBSD: patch-share_minizinc_Preferences.json,v 1.1 2026/10/10 14:31:03 alnsn Exp $
+
+Gecode isn't yet available in pkgsrc.
+
+--- share/minizinc/Preferences.json.orig	2026-10-10 14:02:45.887783345 +0000
++++ share/minizinc/Preferences.json
+@@ -1,6 +1,6 @@
+ {
+   "tagDefaults": [
+-    ["", "org.gecode.gecode"]
++    ["", "org.chuffed.chuffed"]
+   ],
+   "solverDefaults" : [
+     ["org.minizinc.mip.gurobi", "-DQuadrIntSolverConfig=true", ""],
