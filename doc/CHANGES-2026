@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6852 2026/10/10 16:44:53 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6853 2026/10/10 17:15:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10292,3 +10292,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rlwrap to 0.48 [leot 2026-10-10]
 	Updated sysutils/direnv to 2.38.2 [leot 2026-10-10]
 	Updated net/gallery-dl to 1.32.16 [leot 2026-10-10]
+	Updated security/sops to 3.13.3 [leot 2026-10-10]
