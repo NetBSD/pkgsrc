@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/09/29 06:06:40 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/10/10 10:45:22 adam Exp $
 
 DISTNAME=	orca-46.2
 PKGREVISION=	10
@@ -11,10 +11,10 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Orca
 COMMENT=	Screen reader
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
-DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
-DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-at-spi2>=0:../../devel/py-at-spi2
+DEPENDS+=	${PYPKGPREFIX}-dbus>=0:../../sysutils/py-dbus
+DEPENDS+=	${PYPKGPREFIX}-gstreamer1>=0:../../multimedia/py-gstreamer1
 
 PY_PATCHPLIST=	yes
 
@@ -29,7 +29,7 @@ CONF_FILES+=	share/examples/xdg/autostart/orca-autostart.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/orca.desktop
 
 # depends on deprecated imp module, removed in 3.12
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
