@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/10 00:36:41 alnsn Exp $
+
+BLAKE2s (chuffed-0.14.0.tar.gz) = cb9607eb5adb573e3ec87602ee86209c2083a66273b087de188a1ef9247b9772
+SHA512 (chuffed-0.14.0.tar.gz) = 2a2d423abcb3866403790d43ef91ca7237c7b950d59711100e277e8ad405b1b0b87ccba12515d37e34fd53f9f3a2c150f45edffe36c4f1eaa099c0cdf1e66e6f
+Size (chuffed-0.14.0.tar.gz) = 417729 bytes
