@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2026/09/05 19:09:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2026/10/10 18:34:51 leot Exp $
 
-DISTNAME=	nuclei-3.6.2
-PKGREVISION=	11
+DISTNAME=	nuclei-3.11.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	leot@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nuclei.projectdiscovery.io/
 COMMENT=	Fast and customizable vulnerability scanner
 LICENSE=	mit
