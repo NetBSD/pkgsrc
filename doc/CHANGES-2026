@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6842 2026/10/10 12:21:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6843 2026/10/10 12:22:35 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10282,3 +10282,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated inputmethod/libhangul to 0.2.0 [adam 2026-10-10]
 	Updated inputmethod/ibus-hangul to 1.5.5 [adam 2026-10-10]
 	Updated shells/oh-my-posh to 31.7.0 [pin 2026-10-10]
+	Updated lang/gambc to 4.9.8 [ktnb 2026-10-10]
