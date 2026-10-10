@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.31 2026/09/29 06:06:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2026/10/10 11:26:50 adam Exp $
 
-DISTNAME=	ibus-hangul-1.5.0
-PKGREVISION=	10
+DISTNAME=	ibus-hangul-1.5.5
 CATEGORIES=	inputmethod korean
-MASTER_SITES=	${MASTER_SITE_GITHUB:=choehwanjin/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libhangul/}
+EXTRACT_SUFX=	.tar.xz
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/ibus/ibus/wiki
+HOMEPAGE=	https://github.com/libhangul/ibus-hangul/wiki
 COMMENT=	Hangul engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config gmake msgfmt intltool
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 PY_PATCHPLIST=		yes
 
-# uses deprecated imp module
-PYTHON_VERSIONS_ACCEPTED=	311 310
+.include "../../mk/bsd.prefs.mk"
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.1.0
-.include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
+.include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

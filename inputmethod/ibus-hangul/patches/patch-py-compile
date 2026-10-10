@@ -1,0 +1,45 @@
+$NetBSD: patch-py-compile,v 1.1 2026/10/10 11:26:50 adam Exp $
+
+Fix for Python 3.12 and newer.
+
+--- py-compile.orig	2026-10-10 11:14:52.563548666 +0000
++++ py-compile
+@@ -116,7 +116,7 @@ $PYTHON -c "
+ fi
+ 
+ $PYTHON -c "
+-import sys, os, py_compile, imp
++import sys, os, py_compile, importlib.util
+ 
+ files = '''$files'''
+ 
+@@ -129,15 +129,12 @@ for file in files.split():
+ 	    continue
+     sys.stdout.write(file)
+     sys.stdout.flush()
+-    if hasattr(imp, 'get_tag'):
+-        py_compile.compile(filepath, imp.cache_from_source(filepath), path)
+-    else:
+-        py_compile.compile(filepath, filepath + 'c', path)
++    py_compile.compile(filepath, importlib.util.cache_from_source(filepath), path)
+ sys.stdout.write('\n')" || exit $?
+ 
+ # this will fail for python < 1.5, but that doesn't matter ...
+ $PYTHON -O -c "
+-import sys, os, py_compile, imp
++import sys, os, py_compile, importlib.util
+ 
+ # pypy does not use .pyo optimization
+ if hasattr(sys, 'pypy_translation_info'):
+@@ -153,10 +150,7 @@ for file in files.split():
+ 	    continue
+     sys.stdout.write(file)
+     sys.stdout.flush()
+-    if hasattr(imp, 'get_tag'):
+-        py_compile.compile(filepath, imp.cache_from_source(filepath, False), path)
+-    else:
+-        py_compile.compile(filepath, filepath + 'o', path)
++    py_compile.compile(filepath, importlib.util.cache_from_source(filepath, False), path)
+ sys.stdout.write('\n')" 2>/dev/null || :
+ 
+ # Local Variables:
