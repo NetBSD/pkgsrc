@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6837 2026/10/10 10:16:01 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6838 2026/10/10 10:22:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10274,3 +10274,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/opa to 1.21.1 [leot 2026-10-10]
 	Added net/bind920 version 9.20.29 [he 2026-10-10]
 	Updated devel/regal to 0.43.0 [leot 2026-10-10]
+	Removed lang/mozjs78 successor lang/mozjs128 [adam 2026-10-10]
+	Updated devel/py-ruff to 0.17.0 [adam 2026-10-10]
