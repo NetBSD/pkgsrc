@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/06/23 09:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/10 10:51:38 adam Exp $
 
 DISTNAME=	glusterfs-8.2
 PKGREVISION=	23
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 MAKE_FLAGS+=		LEXLIB=""
 
 # uses 'imp', which was removed in Python 3.12
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
