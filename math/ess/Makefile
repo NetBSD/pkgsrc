@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/10/07 19:55:20 markd Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/10 20:45:46 wiz Exp $
 
 DISTNAME=	ess-26.05.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -31,6 +31,7 @@ INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess ${EMACS_ETCPREFIX}/ess/icons
 INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess/ESSR/R
 
 post-extract:
+	${RM} -f ${WRKSRC}/lisp/julia-mode*.el
 	cp ${WRKDIR}/julia-mode*.el ${WRKSRC}/lisp/
 
 do-install:
