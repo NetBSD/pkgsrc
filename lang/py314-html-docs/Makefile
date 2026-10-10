@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/10/10 10:28:29 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/10 10:33:09 leot Exp $
 
 VERS=		3.14.8
 DISTNAME=	python-${VERS}-docs-html
@@ -7,7 +7,7 @@ CATEGORIES=	lang python
 MASTER_SITES=	https://www.python.org/ftp/python/doc/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.python.org/doc/
 COMMENT=	HTML documentation for Python 3.14
 LICENSE=	python-software-foundation
