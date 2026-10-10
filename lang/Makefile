@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.804 2026/10/10 10:13:30 adam Exp $
+# $NetBSD: Makefile,v 1.805 2026/10/10 10:34:18 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -304,12 +304,14 @@ SUBDIR+=	py311-html-docs
 SUBDIR+=	py312-html-docs
 SUBDIR+=	py313-html-docs
 SUBDIR+=	py314-html-docs
+SUBDIR+=	py315-html-docs
 SUBDIR+=	python27
 SUBDIR+=	python310
 SUBDIR+=	python311
 SUBDIR+=	python312
 SUBDIR+=	python313
 SUBDIR+=	python314
+SUBDIR+=	python315
 SUBDIR+=	qbe
 SUBDIR+=	qore
 SUBDIR+=	qt6-qtdeclarative
