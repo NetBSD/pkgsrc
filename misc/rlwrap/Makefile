@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2025/09/14 13:08:13 leot Exp $
+# $NetBSD: Makefile,v 1.35 2026/10/10 16:18:42 leot Exp $
 #
 
-DISTNAME=	rlwrap-0.47.1
+DISTNAME=	rlwrap-0.48
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hanslub42/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
