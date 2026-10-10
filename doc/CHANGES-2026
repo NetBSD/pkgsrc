@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6846 2026/10/10 15:31:14 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6847 2026/10/10 15:57:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10286,3 +10286,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-sbf2 to 1.0.6 [gdt 2026-10-10]
 	Added math/minizinc version 2.9.7 [alnsn 2026-10-10]
 	Updated print/mupdf to 1.28.5 [leot 2026-10-10]
+	Updated security/age to 1.3.2 [leot 2026-10-10]
