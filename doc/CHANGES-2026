@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6853 2026/10/10 17:15:39 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6854 2026/10/10 17:32:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10293,3 +10293,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/direnv to 2.38.2 [leot 2026-10-10]
 	Updated net/gallery-dl to 1.32.16 [leot 2026-10-10]
 	Updated security/sops to 3.13.3 [leot 2026-10-10]
+	Updated security/dnsx to 1.3.1 [leot 2026-10-10]
