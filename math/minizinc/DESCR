@@ -1,2 +1,5 @@
-A high-level constraint modelling language that allows you
-to easily express and solve discrete optimisation problems.
+A high-level constraint modelling language that allows you to easily
+express and solve discrete optimisation problems.
+
+This is a minimal working version of MiniZinc with no Gecode
+integration.
