@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.29 2026/07/18 15:31:35 taca Exp $
+# $NetBSD: eol-packages,v 1.30 2026/10/10 10:39:09 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1268,3 +1268,9 @@ Package: ruby-simplecov-html
 eol date: April 4, 2026
 URL: https://github.com/simplecov-ruby/simplecov-html
 Description: Use ruby-simple-cov to 1.0.0 or later.
+
+Package: bind918
+eol date: July 1, 2026
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Update to newer version.
+
