@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.16 2026/08/06 11:56:54 ktnb Exp $
+$NetBSD: distinfo,v 1.17 2026/10/10 12:22:08 ktnb Exp $
 
-BLAKE2s (gambit-v4_9_7.tgz) = 5c5046dffd5fc7a1599174ad622e4001dbc09f3eb3867f2779b9443a4253e8c3
-SHA512 (gambit-v4_9_7.tgz) = 38a5c52f65280e09ebc75ba25064baadde5fe8cc85369727c212bcdd2cf4c40b395b4aa8d021fe714f763a9e0a0c4beed47233107ce9f4fb78e294a995e9f23d
-Size (gambit-v4_9_7.tgz) = 16716857 bytes
+BLAKE2s (gambit-v4_9_8.tgz) = 8b74aee9582b931200b14f90c046d833fe82d615e25a281c05dd1ba979e628ea
+SHA512 (gambit-v4_9_8.tgz) = e736305576701bab87e56712a595714479ea3e47d92c40b88b060836035b9561c33e259f912ecf6a16c8ef06d34bca6ac10078705c34399af5ecb8f2de90c68a
+Size (gambit-v4_9_8.tgz) = 17274666 bytes
 SHA1 (patch-aa) = 627aa9d41238f117133413de64dd2a2c36e51166
-SHA1 (patch-bb) = 789c634a9449655548e57806e4ee50828728abda
+SHA1 (patch-bb) = 1655a185897e4baf02cdf368a3bbb6a4dc9d42fe
+SHA1 (patch-configure) = 3571770f32c32d18b80291cbc8f0c6bb810f6023
 SHA1 (patch-contrib_GambitREPL_make-keys) = 54b8e023feae823381f85ccc0c3465516134b7b8
 SHA1 (patch-include_gambit.h.in) = e51a81667f7ef7ddbed5caf3ac54755147e9e5f5
 SHA1 (patch-misc_build-gambit-android) = 754690aca858a43f2ac2b9244ed510a8179f45b4

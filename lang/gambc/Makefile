@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/07/23 17:47:36 ktnb Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/10 12:22:08 ktnb Exp $
 #
 
 DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
@@ -17,7 +17,7 @@ CONFLICTS+=	scheme48>=1.2
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-single-host
 CONFIGURE_ARGS+=	--enable-cplusplus

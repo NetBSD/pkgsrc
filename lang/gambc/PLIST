@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/07/23 17:47:36 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/10 12:22:08 ktnb Exp $
 bin/gambdoc
 bin/gambuild-C
 bin/gambuild-arm
@@ -383,6 +383,11 @@ lib/srfi/158/158#.scm
 lib/srfi/158/158.scm
 lib/srfi/158/158.sld
 lib/srfi/158/test/test.scm
+lib/srfi/16/16#.scm
+lib/srfi/16/16.scm
+lib/srfi/16/16.sld
+lib/srfi/16/demo/demo.scm
+lib/srfi/16/test/test.scm
 lib/srfi/179/179#.scm
 lib/srfi/179/179.scm
 lib/srfi/179/179.sld
@@ -442,6 +447,11 @@ lib/srfi/33/33#.scm
 lib/srfi/33/33.scm
 lib/srfi/33/33.sld
 lib/srfi/33/test/test.scm
+lib/srfi/39/39#.scm
+lib/srfi/39/39.scm
+lib/srfi/39/39.sld
+lib/srfi/39/demo/demo.scm
+lib/srfi/39/test/test.scm
 lib/srfi/4/4#.scm
 lib/srfi/4/4.scm
 lib/srfi/4/4.sld
@@ -506,5 +516,4 @@ lib/termite/uuid.scm
 man/man1/gsi.1
 share/doc/gambc/gambit.html
 share/doc/gambc/gambit.pdf
-share/doc/gambc/gambit.tsv
 share/doc/gambc/gambit.txt

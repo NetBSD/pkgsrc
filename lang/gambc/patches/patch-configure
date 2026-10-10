@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.3 2026/10/10 12:22:08 ktnb Exp $
+
+Verisons <4.9.8 assumed pkg-config was in the path. Without manually
+setting this the gambuild-C will link against pkg-config in the
+work/.tools and cause an error in the install phase. Since it's only
+used to get information on the C compiler, this is low risk.
+
+--- configure.orig	2026-10-10 00:57:40.563462204 +0000
++++ configure
+@@ -4692,7 +4692,7 @@ PKG_PROG_PKG_CONFIG
+ fi
+ 
+ PKG_PROG_PKG_CONFIG
+-
++PKG_CONFIG="pkg-config"
+ 
+ 
+ 
