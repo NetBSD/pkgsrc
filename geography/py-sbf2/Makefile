@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/03/09 11:55:13 gdt Exp $
+# $netbsd: Makefile,v 1.8 2026/03/09 11:55:13 gdt Exp $
 
-VERSION=	1.0.4
+VERSION=	1.0.6
 DISTTAIL=	sbf2
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
@@ -20,6 +20,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-nmeagps-[0-9]*:../../geography/py-nmeagps
 DEPENDS+=	${PYPKGPREFIX}-rtcm-[0-9]*:../../geography/py-rtcm
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
