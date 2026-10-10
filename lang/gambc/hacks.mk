@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: hacks.mk,v 1.4 2026/10/10 12:22:08 ktnb Exp $
 ###
 .if !defined(GAMBC_HACKS_MK)
 GAMBC_HACKS_MK=	# empty
@@ -8,7 +8,7 @@ GAMBC_HACKS_MK=	# empty
 ### much memory and time this package takes to build the more optimization
 ### is enabled, let's let the configure script do its job.
 ###
-.if !empty(CC_VERSION:Mgcc-*)
+.if ${CC_VERSION:Mgcc-*}
 BUILDLINK_TRANSFORM+=	rm:-O[2-9s]*
 .endif
 BUILDLINK_TRANSFORM+=	rm:-pipe	# XXX takes up too much memory
