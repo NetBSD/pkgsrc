@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/10/05 13:35:32 wen Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/10 18:45:24 wiz Exp $
 
 DISTNAME=	MooseX-Types-LoadableClass-0.016
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/LoadableClass/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
