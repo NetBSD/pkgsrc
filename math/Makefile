@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2026/10/10 00:37:53 alnsn Exp $
+# $NetBSD: Makefile,v 1.650 2026/10/10 14:32:31 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -313,6 +313,7 @@ SUBDIR+=	mcsim
 SUBDIR+=	meschach
 SUBDIR+=	metis
 SUBDIR+=	minisat
+SUBDIR+=	minizinc
 SUBDIR+=	minpack
 SUBDIR+=	mpcomplex
 SUBDIR+=	mpdecimal
