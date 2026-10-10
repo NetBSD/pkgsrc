@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.801 2026/10/09 17:44:46 tron Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.802 2026/10/10 09:31:40 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -15821,7 +15821,7 @@ php{56,70,71,72}-contao35<3.5.36	cross-site-scripting	https://cve.mitre.org/cgi-
 php{56,70,71,72}-contao44<4.4.25	cross-site-scripting	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17057
 php{71,72}-contao45-4.5.*	cross-site-scripting	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17057
 php{71,72}-contao45-4.5.*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-openssh-[0-9]*	oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-15919
+openssh>=5.9<=7.8	oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-15919
 qemu<4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15746
 grafana<4.6.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-15727
 fig2dev<3.2.7b	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-16140
