@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2026/10/10 10:34:19 adam Exp $
+
+BLAKE2s (Python-3.15.0.tar.xz) = c83bedc7b22f51b35d80f96a2cd47865901e612d19932e2181bd2c14422a30ba
+SHA512 (Python-3.15.0.tar.xz) = 293cbdbb20076c8d9f1ddfb9b72796974b00802f96691843af3924e55e2a7cbd89c1cd85ebd8e35a474eda9e7a878b6622238178ef2de4427e4e34ef70d04265
+Size (Python-3.15.0.tar.xz) = 35688820 bytes
+SHA1 (patch-Include_pymacro.h) = 7611315fefc305a48b4965f2f2b9bee53ae3d987
+SHA1 (patch-Lib___pyrepl_terminfo.py) = 905a1b281afa0a97302db22b55a9d6b7880c73ad
+SHA1 (patch-Lib_ctypes_util.py) = 671f4fcccb738ec96c4ba8ad62b66ea016172651
+SHA1 (patch-Lib_sysconfig_____init____.py) = 76a35b78b098978209f9bcc0e5357d439f281c6b
+SHA1 (patch-Makefile.pre.in) = cf9dfc2e2ee7338c3366bf5123d34f560dfdfdec
+SHA1 (patch-Modules_faulthandler.c) = ca59c378d25bfc0769a7f5da887369d8c913e70c
+SHA1 (patch-Modules_readline.c) = 232f6ac43b5a0e87c915f13117bae91ef069a6c1
+SHA1 (patch-Modules_socketmodule.c) = 9d88a801af6e2cbd36b9935a46c8a86727222d56
+SHA1 (patch-configure) = 7f03fb127a348ef2537ded5e12235ee637b63007

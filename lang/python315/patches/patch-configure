@@ -1,0 +1,75 @@
+$NetBSD: patch-configure,v 1.1 2026/10/10 10:34:19 adam Exp $
+
+Chunks 1, 5, 6: Changes for consistency across pkgsrc platforms.
+Chunk 1: Simplify _sysconfigdata to include only platform name.
+Chunk 2: Disable barrier to cross-compilation.
+Chunk 3: should probably be handled in the Makefile instead
+Chunk 4: Do not set duplicated HAVE_UUID_H. This is a hack only for pkgsrc.
+         For upstream, detection of uuig_create and uuid_enc_be should be
+         improved.
+
+--- configure.orig	2026-10-09 11:16:41.000000000 +0000
++++ configure
+@@ -3796,7 +3796,7 @@ fi
+     fi
+         ac_cv_prog_PYTHON_FOR_REGEN=$with_build_python
+     PYTHON_FOR_FREEZE="$with_build_python"
+-    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) _PYTHON_SYSCONFIGDATA_PATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`) '$with_build_python
++    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) _PYTHON_SYSCONFIGDATA_PATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`) '$with_build_python
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $with_build_python" >&5
+ printf "%s\n" "$with_build_python" >&6; }
+ 
+@@ -4626,7 +4626,7 @@ fi
+ 
+ 
+ 
+-if test "$cross_compiling" = yes; then
++if false && test "$cross_compiling" = yes; then
+ 	case "$host" in
+ 	*-*-linux*)
+ 		case "$host_cpu" in
+@@ -10579,7 +10579,7 @@ printf "%s\n" "#define _Py_WITH_FRAME_PO
+ 
+     fi
+ 
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c11"
++    CFLAGS_NODIST="$CFLAGS_NODIST -std=gnu11"
+ 
+ 
+ 
+@@ -15173,14 +15173,6 @@ then :
+ 
+ fi
+ 
+-# gh-124228: While the libuuid library is available on NetBSD and OpenBSD,
+-# it supports only UUID version 4.
+-# This restriction inhibits the proper generation of time-based UUIDs.
+-if test "$ac_sys_system" = "NetBSD" || test "$ac_sys_system" = "OpenBSD"; then
+-  have_uuid=missing
+-  printf "%s\n" "#define HAVE_UUID_H 0" >>confdefs.h
+-
+-fi
+ 
+ if test "x$have_uuid" = xmissing
+ then :
+@@ -27621,7 +27613,7 @@ printf "%s\n" "#define ALT_SOABI \"${ALT
+ fi
+ 
+ 
+-EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX}
++EXT_SUFFIX=${SHLIB_SUFFIX}
+ 
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
+ printf %s "checking LDVERSION... " >&6; }
+@@ -27689,11 +27681,7 @@ LIBDEST='${prefix}/${PLATLIBDIR}/python$
+ BINLIBDEST='${exec_prefix}/${PLATLIBDIR}/python$(VERSION)$(ABI_THREAD)'
+ 
+ 
+-if test x$PLATFORM_TRIPLET = x; then
+   LIBPL='$(LIBDEST)'"/config-${LDVERSION}"
+-else
+-  LIBPL='$(LIBDEST)'"/config-${LDVERSION}-${PLATFORM_TRIPLET}"
+-fi
+ 
+ 
+ # Check for --with-wheel-pkg-dir=PATH

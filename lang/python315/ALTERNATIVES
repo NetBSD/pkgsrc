@@ -1,0 +1,4 @@
+bin/idle @PREFIX@/bin/idle3.15
+bin/pydoc @PREFIX@/bin/pydoc3.15
+bin/python @PREFIX@/bin/python3.15
+bin/python3 @PREFIX@/bin/python3.15
