@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/03/09 11:55:13 gdt Exp $
+$NetBSD: distinfo,v 1.6 2026/10/10 13:34:46 gdt Exp $
 
-BLAKE2s (pysbf2-1.0.4.tar.gz) = cbad19205d8bacee45bacef5c136fc6286757b581fe38b640d5b66b6f0ffbf3c
-SHA512 (pysbf2-1.0.4.tar.gz) = 6dc7e4a69a25f1d4380f4467eb1e91c8260f400aaab87372e8e823cae9cc66ad3aa772c4eb22827136e643b6d119bb4ce0e6f8c44db66e8ec1258e544cf66ba5
-Size (pysbf2-1.0.4.tar.gz) = 121362 bytes
+BLAKE2s (pysbf2-1.0.6.tar.gz) = d8bd0104964ce03c6af1ef71a5f1f4240db0d08296ab05fc6b7f463c3bb6ef54
+SHA512 (pysbf2-1.0.6.tar.gz) = b38e136f257add6c19900303eb4e585fe406cff34e0f37607cc1e074c9d57e0c96b1969fbb0d85b247407f87dbbf1c92b3678919359feb18f98c7495505abc5d
+Size (pysbf2-1.0.6.tar.gz) = 125111 bytes
