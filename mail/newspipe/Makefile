@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.29 2025/11/17 11:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/10/10 10:50:02 adam Exp $
 
-DISTNAME=		newspipe.1.1.9
-PKGNAME=		${DISTNAME:S/./-/}
-PKGREVISION=		13
-CATEGORIES=		mail
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
-EXTRACT_SUFX=		.zip
+DISTNAME=	newspipe.1.1.9
+PKGNAME=	${DISTNAME:S/./-/}
+PKGREVISION=	13
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newspipe/}
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://newspipe.sourceforge.net/
-COMMENT=		Read RSS/Atom feeds as email messages
+MAINTAINER=	schmonz@NetBSD.org
+HOMEPAGE=	https://newspipe.sourceforge.net/
+COMMENT=	Read RSS/Atom feeds as email messages
 
-DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
-DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
+DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
+DEPENDS+=	${PYPKGPREFIX}-html2text>=0:../../textproc/py-html2text-2019.8.11
 
-WRKSRC=			${WRKDIR}
+WRKSRC=		${WRKDIR}
 
-PYTHON_27_ACCEPTED=	yes
-PYTHON_VERSIONS_ACCEPTED=	312 311 310 27
+PYTHON_27_ACCEPTED=		yes
+PYTHON_VERSIONS_ACCEPTED=	312 311 27
 
 NO_BUILD=	yes
 REPLACE_PYTHON=	*.py
