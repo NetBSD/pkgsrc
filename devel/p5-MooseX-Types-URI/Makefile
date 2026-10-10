@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/10/05 13:39:15 wen Exp $
-#
+# $NetBSD: Makefile,v 1.28 2026/10/10 18:46:33 wiz Exp $
 
 DISTNAME=	MooseX-Types-URI-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +15,8 @@ DEPENDS+=	p5-MooseX-Types>0.40:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-URI>0:../../www/p5-URI
 DEPENDS+=	p5-URI-FromHash>0:../../www/p5-URI-FromHash
 
-USE_LANGUAGES=	# empty
-PERL5_MODULE_TYPE=	Module::Build
+USE_LANGUAGES=		# empty
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 PERL5_PACKLIST=	auto/MooseX/Types/URI/.packlist
 
