@@ -1,0 +1,31 @@
+$NetBSD: patch-configure.ac,v 1.1 2026/10/10 10:13:09 he Exp $
+
+support removal of WRKDIR references from config.h
+Also test a more specific -lexecinfo function, to allow
+configuration with CFLAGS+=-fsanitize=thread, because
+backtrace_symbols() is in /usr/lib/libtsan.so, so the
+"do we need -lexecinfo?" is otherwise mis-detected as "not needed".
+
+--- configure.ac.orig	2024-07-08 13:09:17.034283885 +0000
++++ configure.ac
+@@ -36,7 +36,10 @@ AC_DEFINE([PACKAGE_DESCRIPTION], [m4_ifn
+ AC_DEFINE([PACKAGE_SRCID], ["][bind_SRCID]["], [A short hash from git])
+ 
+ bind_CONFIGARGS="${ac_configure_args:-default}"
+-AC_DEFINE_UNQUOTED([PACKAGE_CONFIGARGS], ["$bind_CONFIGARGS"], [Either 'defaults' or used ./configure options])
++faked_CONFIGARGS=$(echo ${bind_CONFIGARGS} | \
++	sed -e 's|@TOOLS_DIR@|@PREFIX@|g' -e 's|@BUILDLINK_DIR@|@PREFIX@|g')
++AC_DEFINE_UNQUOTED([PACKAGE_CONFIGARGS], ["$faked_CONFIGARGS"], [Either 'defaul
++ts' or used ./configure options])
+ 
+ AC_DEFINE([PACKAGE_BUILDER], ["make"], [make or Visual Studio])
+ 
+@@ -975,7 +978,7 @@ AC_SUBST([LIBSYSTEMD_LIBS])
+ # Check if the system supports glibc-compatible backtrace() function.
+ #
+ AC_CHECK_HEADERS([execinfo.h],
+-		 [AC_SEARCH_LIBS([backtrace_symbols], [execinfo],
++		 [AC_SEARCH_LIBS([backtrace_symbols_fd], [execinfo],
+ 				 [AC_CHECK_FUNCS([backtrace_symbols])])])
+ 
+ #
