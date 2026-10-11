@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/03/25 22:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/10/11 16:02:18 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	polly-${LLVM_VERSION}

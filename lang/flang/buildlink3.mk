@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/03/25 22:56:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/10/11 16:02:20 wiz Exp $
 
 BUILDLINK_TREE+=	flang
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	flang
 FLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flang+=	flang>=20.1.0
+BUILDLINK_ABI_DEPENDS.flang?=	flang>=22.1.8nb1
 BUILDLINK_PKGSRCDIR.flang?=	../../lang/flang
 
 BUILDLINK_FILES.flang+=		bin/bbc

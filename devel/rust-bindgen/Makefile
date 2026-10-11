@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/25 05:41:20 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/11 16:02:18 wiz Exp $
 
 DISTNAME=	rust-bindgen-0.72.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

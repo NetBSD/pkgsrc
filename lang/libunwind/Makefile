@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2026/03/25 22:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/10/11 16:02:20 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	libunwind-${LLVM_VERSION}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/01/07 08:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/11 16:02:21 wiz Exp $
 
 DISTNAME=	usenet_reborn-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	https://static.crates.io/crates/usenet_reborn/
 EXTRACT_SUFX=   .crate

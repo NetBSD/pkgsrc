@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2026/10/11 05:28:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2026/10/11 16:02:19 wiz Exp $
 
 BUILDLINK_TREE+=	clang
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=22.1.0
+BUILDLINK_ABI_DEPENDS.clang?=	clang>=22.1.8nb1
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 BUILDLINK_FILES.clang+=		bin/amdgpu-arch
