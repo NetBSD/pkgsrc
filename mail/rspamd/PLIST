@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2026/10/04 15:56:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2026/10/11 16:31:28 wiz Exp $
 bin/mapstats
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
@@ -193,6 +193,7 @@ share/rspamd/lualib/lua_content/pptx.lua
 share/rspamd/lualib/lua_content/svg.lua
 share/rspamd/lualib/lua_content/vcard.lua
 share/rspamd/lualib/lua_content/xlsx.lua
+share/rspamd/lualib/lua_crypto_addresses.lua
 share/rspamd/lualib/lua_cta.lua
 share/rspamd/lualib/lua_dkim_tools.lua
 share/rspamd/lualib/lua_extras.lua
@@ -261,6 +262,7 @@ share/rspamd/lualib/lua_util.lua
 share/rspamd/lualib/lua_verdict.lua
 share/rspamd/lualib/lupa.lua
 share/rspamd/lualib/plugins/dmarc.lua
+share/rspamd/lualib/plugins/metadata_exporter.lua
 share/rspamd/lualib/plugins/neural.lua
 share/rspamd/lualib/plugins/neural/providers/fasttext_embed.lua
 share/rspamd/lualib/plugins/neural/providers/llm.lua
@@ -371,7 +373,6 @@ share/rspamd/plugins/url_redirector.lua
 share/rspamd/plugins/url_suspect.lua
 share/rspamd/plugins/whitelist.lua
 share/rspamd/rules/archives.lua
-share/rspamd/rules/bitcoin.lua
 share/rspamd/rules/bounce.lua
 share/rspamd/rules/content.lua
 share/rspamd/rules/controller/fuzzy.lua
@@ -379,6 +380,7 @@ share/rspamd/rules/controller/init.lua
 share/rspamd/rules/controller/maps.lua
 share/rspamd/rules/controller/neural.lua
 share/rspamd/rules/controller/selectors.lua
+share/rspamd/rules/crypto.lua
 share/rspamd/rules/forwarding.lua
 share/rspamd/rules/fuzzy_html_phishing.lua
 share/rspamd/rules/headers_checks.lua
