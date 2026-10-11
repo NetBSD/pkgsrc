@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2026/04/09 18:44:08 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/11 12:25:07 ryoon Exp $
 
-DISTNAME=	wasi-libc-0.0.0pre20250809
+DISTNAME=	wasi-libc-0.0.0pre20261001
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 GITHUB_PROJECT=	wasi-libc
-GITHUB_TAG=	08799da37ae52955427ebec1336b49d6a8eb5051
+GITHUB_TAG=	165235bc467d5fa52d424f5d82587dfb76ed9d54
 
 GITHUB_SUBMODULES+=	WebAssembly WASI 59cbe140561db52fc505555e859de884e0ee7f00 tools/wasi-headers/WASI
 EXTRACT_USING=		bsdtar
@@ -14,9 +14,11 @@ HOMEPAGE=	https://github.com/WebAssembly/wasi-libc/
 COMMENT=	libc for WebAssembly programs built on top of WASI
 LICENSE=	mit AND apache-2.0 # apache-2.0-with-LLVM-exception
 
-BUILTINSFILE=		libclang_rt.builtins-wasm32-wasi-25.0.tar.gz
+BUILTINSFILE=		libclang_rt-34.0-rc.1.tar.gz
 DISTFILES=		${DEFAULT_DISTFILES} ${BUILTINSFILE}
-SITES.${BUILTINSFILE}=	https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-25/
+SITES.${BUILTINSFILE}=	https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-34-rc.1/
+
+CHECK_PORTABILITY_SKIP+=	test/open-posix-test-suite/*/*/*.sh
 
 # Do not fail tests and compile time error (undefined symbols) in www/firefox.
 SSP_SUPPORTED=		no
@@ -40,20 +42,19 @@ REPLACE_BASH+=	scripts/install-include-headers.sh
 BUILDLINK_TRANSFORM+=	rm:-fcommon
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-MAKE_FLAGS+=	CC=clang
-MAKE_FLAGS+=	AR=${PREFIX}/bin/llvm-ar
-MAKE_FLAGS+=	NM=${PREFIX}/bin/llvm-nm
-MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
-#BUILD_TARGET=	finish
-BUILD_TARGET=	no-check-symbols
+#MAKE_FLAGS+=	CC=clang
+#MAKE_FLAGS+=	AR=${PREFIX}/bin/llvm-ar
+#MAKE_FLAGS+=	NM=${PREFIX}/bin/llvm-nm
+#MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
+##BUILD_TARGET=	finish
+#BUILD_TARGET=	no-check-symbols
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILTINS_LIB=${WRKDIR}/libclang_rt-34.0-rc.1/wasm32-unknown-wasip1/libclang_rt.builtins.a
 
 # iconv.h from libiconv gets pulled in on SunOS (via clang).
 # It conflicts with musl libc, so must be removed.
 pre-configure:
 	rm -f ${BUILDLINK_DIR}/include/iconv.h
-	${MKDIR} ${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasi
-	${MV} ${WRKDIR}/libclang_rt.builtins-wasm32-wasi-25.0/*.a \
-		${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasi
 
 ABI=			# 32
 CFLAGS+=		-O2
@@ -68,4 +69,5 @@ BUILDLINK_DEPMETHOD.llvm=	build
 PKG_FAIL_REASON+=	"llvm-target-webassembly PKG_OPTION must be enabled in lang/llvm"
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

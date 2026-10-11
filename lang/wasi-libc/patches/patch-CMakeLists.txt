@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/10/11 12:25:07 ryoon Exp $
+
+--- CMakeLists.txt.orig	2026-10-11 11:07:12.370090400 +0000
++++ CMakeLists.txt
+@@ -440,5 +440,5 @@ include(GNUInstallDirs)
+ # Installation
+ #
+ include(GNUInstallDirs)
+-install(DIRECTORY ${SYSROOT}/include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+-install(DIRECTORY ${SYSROOT}/lib/ DESTINATION ${CMAKE_INSTALL_LIBDIR})
++install(DIRECTORY ${SYSROOT}/include/ DESTINATION ${CMAKE_INSTALL_PREFIX}/wasi/include)
++install(DIRECTORY ${SYSROOT}/lib/ DESTINATION ${CMAKE_INSTALL_PREFIX}/wasi/lib)
