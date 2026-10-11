@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/07/26 18:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/11 16:10:21 wiz Exp $
 
-DISTNAME=	leangz-0.1.20
+DISTNAME=	leangz-0.1.21
 PKGNAME=	${DISTNAME:S/leangz/leantar/}
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=digama0/}
