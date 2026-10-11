@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6859 2026/10/10 18:55:15 leot Exp $
+$NetBSD: CHANGES-2026,v 1.6860 2026/10/11 00:04:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10299,3 +10299,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/nuclei to 3.11.1 [leot 2026-10-10]
 	Updated security/subfinder to 2.17.0 [leot 2026-10-10]
 	Added time/zk version 0.15.6 [leot 2026-10-10]
+	Updated security/zoneminder to 1.38.6 [gdt 2026-10-11]
