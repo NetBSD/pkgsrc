@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6878 2026/10/11 15:52:57 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6879 2026/10/11 15:54:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10341,3 +10341,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/bulk-test-icu to 20261011 [gutteridge 2026-10-11]
 	Updated meta-pkgs/bulk-test-llvm to 20261011 [gutteridge 2026-10-11]
 	Updated devel/cargo-c to 0.10.26 [pin 2026-10-11]
+	Updated lang/rust to 1.98.1nb1 [pin 2026-10-11]
