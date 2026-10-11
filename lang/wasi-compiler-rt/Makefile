@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2026/10/11 10:35:21 adam Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/11 12:26:29 ryoon Exp $
 
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	wasi-compiler-rt-${LLVM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,9 +34,9 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_TEST_COMPILER=${CC:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_OS_DIR:STRING=wasi
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
-CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_DEFAULT_TARGET_TRIPLE=wasm32-wasi
+CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_DEFAULT_TARGET_TRIPLE=wasm32-wasip1
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_BAREMETAL_BUILD=TRUE
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SYSROOT=${BUILDLINK_DIR}/wasi
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SYSROOT=${BUILDLINK_DIR}/wasip1
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_BAREMETAL_BUILD=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_EXCLUDE_ATOMIC_BUILTIN=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_HAS_FPIC_FLAG:BOOL=ON
@@ -55,11 +56,10 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS:BOOL=OFF
 
-CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+
+INSTALLATION_DIRS+=	lib/clang/22/lib/wasm32-unknown-wasip1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -78,9 +78,8 @@ do-build:
 		${MAKE} ${CMAKE_CONFIGURE_ARGS} ${BUILD_TARGET}
 
 do-install:
-	${RUN} cd ${WRKSRC}/${CMAKE_BUILD_DIR} && \
-		${SETENV} ${INSTALL_ENV} \
-		${MAKE} ${CMAKE_CONFIGURE_ARGS} ${INSTALL_TARGET}
+	${RUN} ${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/lib/wasi/*.a \
+		${DESTDIR}${PREFIX}/lib/clang/22/lib/wasm32-unknown-wasip1/libclang_rt.builtins.a
 
 # Run llvm-ranlib again on the archive. Fixes mystery build failure
 # in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
@@ -88,7 +87,7 @@ do-install:
 .if ${OPSYS} != "Darwin"
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/wasi/libclang_rt.builtins-wasm32.a
+	  ${DESTDIR}${PREFIX}/lib/clang/22/lib/wasm32-unknown-wasip1/libclang_rt.builtins.a
 .endif
 
 ABI=			# 32
