@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2026/07/16 19:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/11 07:56:29 wiz Exp $
 
-DISTNAME=	Package-Stash-XS-0.30
+DISTNAME=	Package-Stash-XS-0.32
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Package-Stash-XS

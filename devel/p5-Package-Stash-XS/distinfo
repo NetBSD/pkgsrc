@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/05/20 06:57:42 wiz Exp $
+$NetBSD: distinfo,v 1.10 2026/10/11 07:56:29 wiz Exp $
 
-BLAKE2s (Package-Stash-XS-0.30.tar.gz) = 32bb4f0450c7afa04693cc49266e0570dea3cb78bb85480ffb0daf094955ba92
-SHA512 (Package-Stash-XS-0.30.tar.gz) = 528faaefa71c5c37d378a9bedf325babf3b2717024995d166fc77bb1fb1ce1aed11da775608029a1c215c903dcd7ac9f68569cd8fd3690681ccd72b47c51b0a3
-Size (Package-Stash-XS-0.30.tar.gz) = 168584 bytes
+BLAKE2s (Package-Stash-XS-0.32.tar.gz) = ced794b26dabad1ece3f9e5ca7bf2d36c563b16e114345835cc7ac541a468147
+SHA512 (Package-Stash-XS-0.32.tar.gz) = 69758245572f71c6a9977705aed3be6cd264986fbdc38a5e964a1d0b7f8a8b6511f8c5ee89a24521c7ce8d4af5626697cfe69c074f52f1d786926e36159ac386
+Size (Package-Stash-XS-0.32.tar.gz) = 170737 bytes
