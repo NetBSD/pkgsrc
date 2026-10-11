@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1027 2026/10/01 16:45:45 adam Exp $
+# $NetBSD: Makefile,v 1.1028 2026/10/11 18:18:46 drixter Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -714,6 +714,7 @@ SUBDIR+=	validns
 SUBDIR+=	vault
 SUBDIR+=	vaultwarden
 SUBDIR+=	volatility3
+SUBDIR+=	vulnx
 SUBDIR+=	wfuzz
 SUBDIR+=	wolfssl
 SUBDIR+=	xca
