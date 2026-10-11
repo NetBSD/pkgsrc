@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/09/29 08:17:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/11 07:19:37 adam Exp $
 
-DISTNAME=	blockbuster-1.5.28
+DISTNAME=	blockbuster-1.5.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blockbuster/}
