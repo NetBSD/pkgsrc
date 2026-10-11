@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6867 2026/10/11 07:56:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6868 2026/10/11 08:43:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10330,3 +10330,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-black to 26.10.1 [adam 2026-10-11]
 	Updated devel/py-blockbuster to 1.5.29 [adam 2026-10-11]
 	Updated devel/p5-Package-Stash-XS to 0.32 [wiz 2026-10-11]
+	Updated lang/libclc to 22.1.8 [ryoon 2026-10-11]
