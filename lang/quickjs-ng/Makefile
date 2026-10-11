@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/22 08:20:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/11 16:35:33 wiz Exp $
 
-DISTNAME=	quickjs-0.16.2
+DISTNAME=	quickjs-0.17.0
 PKGNAME=	${DISTNAME:S/quickjs-/quickjs-ng-/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quickjs-ng/}
