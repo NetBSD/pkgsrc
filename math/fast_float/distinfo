@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2026/10/05 04:58:03 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/10/11 16:06:50 wiz Exp $
 
-BLAKE2s (fast_float-8.3.1.tar.gz) = a5af0630769dcf08f69aea8cf5be8e7cccca1ec6898f6b273412bb3f972f0cf8
-SHA512 (fast_float-8.3.1.tar.gz) = e8d2776eee3c7a5445feebc489f222acc3b2ab6043689d1743e4af8e6a44ea09e84b20c226b364b61fc6e6871523402b95cfe36a8c354c558e3a68d052f936db
-Size (fast_float-8.3.1.tar.gz) = 153668 bytes
+BLAKE2s (fast_float-8.3.2.tar.gz) = bc877f4a25d6352d9cd1d37aa25b9e607b11925b138cea047091eabd4b58c3a8
+SHA512 (fast_float-8.3.2.tar.gz) = 4dc378af6a33da86f9f537416db1fcd6fb684c260a709b60d1f595cafe3fdc869b4fdd412f6e18053483b18916bb01476688951b737df416910d8a62e877ff45
+Size (fast_float-8.3.2.tar.gz) = 154257 bytes
