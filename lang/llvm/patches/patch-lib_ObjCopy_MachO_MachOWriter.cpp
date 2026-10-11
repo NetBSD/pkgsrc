@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_ObjCopy_MachO_MachOWriter.cpp,v 1.1 2026/09/16 11:00:39 tnn Exp $
+$NetBSD: patch-lib_ObjCopy_MachO_MachOWriter.cpp,v 1.2 2026/10/11 05:35:54 adam Exp $
 
 Fix llvm-objcopy producing mis-aligned __LINKEDIT segment.
 ld on xcode 27 rejects such dylibs. This breaks notably rustc.
 Patch via https://github.com/llvm/llvm-project/pull/203680
 
---- lib/ObjCopy/MachO/MachOWriter.cpp.orig	2025-12-12 10:35:47.000000000 +0000
+--- lib/ObjCopy/MachO/MachOWriter.cpp.orig	2026-06-15 22:33:53.000000000 +0000
 +++ lib/ObjCopy/MachO/MachOWriter.cpp
-@@ -24,6 +24,12 @@
+@@ -24,6 +24,12 @@ using namespace llvm;
  using namespace llvm::objcopy::macho;
  using namespace llvm::support::endian;
  
@@ -19,7 +19,7 @@ Patch via https://github.com/llvm/llvm-project/pull/203680
  size_t MachOWriter::headerSize() const {
    return Is64Bit ? sizeof(MachO::mach_header_64) : sizeof(MachO::mach_header);
  }
-@@ -55,29 +61,34 @@
+@@ -55,29 +61,34 @@ size_t MachOWriter::totalSize() const {
          O.LoadCommands[*O.DyLdInfoCommandIndex]
              .MachOLoadCommand.dyld_info_command_data;
      if (DyLdInfoCommand.rebase_off) {
@@ -59,70 +59,70 @@ Patch via https://github.com/llvm/llvm-project/pull/203680
               "Incorrect trie size");
        Ends.push_back(DyLdInfoCommand.export_off + DyLdInfoCommand.export_size);
      }
-@@ -320,7 +331,8 @@
+@@ -320,7 +331,8 @@ void MachOWriter::writeRebaseInfo() {
        O.LoadCommands[*O.DyLdInfoCommandIndex]
            .MachOLoadCommand.dyld_info_command_data;
-   char *Out = (char *)Buf->getBufferStart() + DyLdInfoCommand.rebase_off;
+   char *Out = Buf->getBufferStart() + DyLdInfoCommand.rebase_off;
 -  assert((DyLdInfoCommand.rebase_size == O.Rebases.Opcodes.size()) &&
 +  assert((DyLdInfoCommand.rebase_size ==
 +          paddedLinkEditEntrySize(O.Rebases.Opcodes.size(), Is64Bit)) &&
           "Incorrect rebase opcodes size");
    memcpy(Out, O.Rebases.Opcodes.data(), O.Rebases.Opcodes.size());
  }
-@@ -332,7 +344,8 @@
+@@ -332,7 +344,8 @@ void MachOWriter::writeBindInfo() {
        O.LoadCommands[*O.DyLdInfoCommandIndex]
            .MachOLoadCommand.dyld_info_command_data;
-   char *Out = (char *)Buf->getBufferStart() + DyLdInfoCommand.bind_off;
+   char *Out = Buf->getBufferStart() + DyLdInfoCommand.bind_off;
 -  assert((DyLdInfoCommand.bind_size == O.Binds.Opcodes.size()) &&
 +  assert((DyLdInfoCommand.bind_size ==
 +          paddedLinkEditEntrySize(O.Binds.Opcodes.size(), Is64Bit)) &&
           "Incorrect bind opcodes size");
    memcpy(Out, O.Binds.Opcodes.data(), O.Binds.Opcodes.size());
  }
-@@ -344,7 +357,8 @@
+@@ -344,7 +357,8 @@ void MachOWriter::writeWeakBindInfo() {
        O.LoadCommands[*O.DyLdInfoCommandIndex]
            .MachOLoadCommand.dyld_info_command_data;
-   char *Out = (char *)Buf->getBufferStart() + DyLdInfoCommand.weak_bind_off;
+   char *Out = Buf->getBufferStart() + DyLdInfoCommand.weak_bind_off;
 -  assert((DyLdInfoCommand.weak_bind_size == O.WeakBinds.Opcodes.size()) &&
 +  assert((DyLdInfoCommand.weak_bind_size ==
 +          paddedLinkEditEntrySize(O.WeakBinds.Opcodes.size(), Is64Bit)) &&
           "Incorrect weak bind opcodes size");
    memcpy(Out, O.WeakBinds.Opcodes.data(), O.WeakBinds.Opcodes.size());
  }
-@@ -356,7 +370,8 @@
+@@ -356,7 +370,8 @@ void MachOWriter::writeLazyBindInfo() {
        O.LoadCommands[*O.DyLdInfoCommandIndex]
            .MachOLoadCommand.dyld_info_command_data;
-   char *Out = (char *)Buf->getBufferStart() + DyLdInfoCommand.lazy_bind_off;
+   char *Out = Buf->getBufferStart() + DyLdInfoCommand.lazy_bind_off;
 -  assert((DyLdInfoCommand.lazy_bind_size == O.LazyBinds.Opcodes.size()) &&
 +  assert((DyLdInfoCommand.lazy_bind_size ==
 +          paddedLinkEditEntrySize(O.LazyBinds.Opcodes.size(), Is64Bit)) &&
           "Incorrect lazy bind opcodes size");
    memcpy(Out, O.LazyBinds.Opcodes.data(), O.LazyBinds.Opcodes.size());
  }
-@@ -368,7 +383,8 @@
+@@ -368,7 +383,8 @@ void MachOWriter::writeExportInfo() {
        O.LoadCommands[*O.DyLdInfoCommandIndex]
            .MachOLoadCommand.dyld_info_command_data;
-   char *Out = (char *)Buf->getBufferStart() + DyLdInfoCommand.export_off;
+   char *Out = Buf->getBufferStart() + DyLdInfoCommand.export_off;
 -  assert((DyLdInfoCommand.export_size == O.Exports.Trie.size()) &&
 +  assert((DyLdInfoCommand.export_size ==
 +          paddedLinkEditEntrySize(O.Exports.Trie.size(), Is64Bit)) &&
           "Incorrect export trie size");
    memcpy(Out, O.Exports.Trie.data(), O.Exports.Trie.size());
  }
-@@ -398,7 +414,8 @@
+@@ -398,7 +414,8 @@ void MachOWriter::writeLinkData(std::opt
    const MachO::linkedit_data_command &LinkEditDataCommand =
        O.LoadCommands[*LCIndex].MachOLoadCommand.linkedit_data_command_data;
-   char *Out = (char *)Buf->getBufferStart() + LinkEditDataCommand.dataoff;
+   char *Out = Buf->getBufferStart() + LinkEditDataCommand.dataoff;
 -  assert((LinkEditDataCommand.datasize == LD.Data.size()) &&
 +  assert((LinkEditDataCommand.datasize ==
 +          paddedLinkEditEntrySize(LD.Data.size(), Is64Bit)) &&
           "Incorrect data size");
    memcpy(Out, LD.Data.data(), LD.Data.size());
  }
-@@ -575,7 +592,8 @@
+@@ -575,7 +592,8 @@ void MachOWriter::writeExportsTrieData()
        O.LoadCommands[*O.ExportsTrieCommandIndex]
            .MachOLoadCommand.linkedit_data_command_data;
-   char *Out = (char *)Buf->getBufferStart() + ExportsTrieCmd.dataoff;
+   char *Out = Buf->getBufferStart() + ExportsTrieCmd.dataoff;
 -  assert((ExportsTrieCmd.datasize == O.Exports.Trie.size()) &&
 +  assert((ExportsTrieCmd.datasize ==
 +          paddedLinkEditEntrySize(O.Exports.Trie.size(), Is64Bit)) &&
