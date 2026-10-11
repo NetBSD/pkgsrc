@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6864 2026/10/11 05:58:22 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6865 2026/10/11 06:44:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10323,3 +10323,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numba to 0.68.0 [adam 2026-10-11]
 	Updated parallel/pocl to 7.2 [adam 2026-10-11]
 	Updated parallel/spirv-llvm-translator to 22.1.7 [adam 2026-10-11]
+	Updated lang/zig to 0.17.0 [adam 2026-10-11]
+	Updated x11/wxGTK32 to 3.2.12 [adam 2026-10-11]
