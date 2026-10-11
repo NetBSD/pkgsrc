@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6887 2026/10/11 16:21:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6888 2026/10/11 16:23:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10350,3 +10350,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter to 0.27.1 [wiz 2026-10-11]
 	Updated textproc/tree-sitter-php to 0.25.1 [wiz 2026-10-11]
 	Updated graphics/geeqie to 3.3 [wiz 2026-10-11]
+	Updated security/zxcvbn-c to 2.7 [wiz 2026-10-11]
