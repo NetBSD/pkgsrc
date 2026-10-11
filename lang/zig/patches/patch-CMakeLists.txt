@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2025/08/05 13:33:19 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2026/10/11 06:41:44 adam Exp $
 
 Do not append a buildlinked directory to ZIG_CMAKE_PREFIX_PATH to avoid WRKREF
 in bin/zig.
@@ -7,7 +7,7 @@ Skip stage3 during build to:
 * speed up building
 * avoid work directory reference in zig's RUNPATH.
 
---- CMakeLists.txt.orig	2025-05-23 04:31:41.000000000 +0000
+--- CMakeLists.txt.orig	2026-10-01 22:02:33.000000000 +0000
 +++ CMakeLists.txt
 @@ -18,13 +18,7 @@ endif()
  # cache variable. Furthermore, the environment variable follows the system path
@@ -24,7 +24,7 @@ Skip stage3 during build to:
  
  list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
  
-@@ -978,18 +972,9 @@ if(MINGW AND "${ZIG_HOST_TARGET_ARCH}" S
+@@ -790,18 +784,9 @@ if(NOT "${ZIG_TARGET_DYNAMIC_LINKER}" ST
  endif()
  
  
@@ -36,7 +36,7 @@ Skip stage3 during build to:
  
 -add_custom_command(
 -  OUTPUT "${PROJECT_BINARY_DIR}/stage3/bin/zig"
--  COMMAND zig2 build --prefix "${PROJECT_BINARY_DIR}/stage3" ${ZIG_BUILD_ARGS}
+-  COMMAND zig2 build ${ZIG_BUILD_ARGS} --prefix "${PROJECT_BINARY_DIR}/stage3"
 -  COMMENT "Building stage3"
 -  WORKING_DIRECTORY "${ZIG2_WORKING_DIR}"
 -)
