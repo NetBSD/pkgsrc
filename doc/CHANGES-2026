@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6880 2026/10/11 16:07:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6881 2026/10/11 16:08:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10343,3 +10343,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-c to 0.10.26 [pin 2026-10-11]
 	Updated lang/rust to 1.98.1nb1 [pin 2026-10-11]
 	Updated math/fast_float to 8.3.2 [wiz 2026-10-11]
+	Updated sysutils/fzf to 0.74.5 [wiz 2026-10-11]
