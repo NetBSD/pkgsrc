@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6877 2026/10/11 13:39:24 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.6878 2026/10/11 15:52:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10340,3 +10340,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/sesh to 2.32.0 [kim 2026-10-11]
 	Updated meta-pkgs/bulk-test-icu to 20261011 [gutteridge 2026-10-11]
 	Updated meta-pkgs/bulk-test-llvm to 20261011 [gutteridge 2026-10-11]
+	Updated devel/cargo-c to 0.10.26 [pin 2026-10-11]
