@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6882 2026/10/11 16:10:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6883 2026/10/11 16:12:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10345,3 +10345,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/fast_float to 8.3.2 [wiz 2026-10-11]
 	Updated sysutils/fzf to 0.74.5 [wiz 2026-10-11]
 	Updated math/leantar to 0.1.21 [wiz 2026-10-11]
+	Updated graphics/libheif to 1.23.6 [wiz 2026-10-11]
