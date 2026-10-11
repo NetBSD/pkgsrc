@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.804 2026/10/10 10:37:32 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.805 2026/10/11 19:35:16 spz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28194,7 +28194,7 @@ emacs29-nox11<29.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-302
 emacs30<30.1		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-53920
 emacs30-nox11<30.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-53920
 emacs29<29.4nb31	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1244
-emacs29-nox11<29.4nb31	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1244
+emacs29-nox11<29.4nb1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1244
 engrampa<1.28.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-52138
 erlang<27.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-26618
 erlang<27.3.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-30211
