@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/04/02 13:18:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/10/11 05:55:22 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -15,6 +15,7 @@ ${PYSITELIB}/numba/__main__.pyo
 ${PYSITELIB}/numba/_arraystruct.h
 ${PYSITELIB}/numba/_devicearray.h
 ${PYSITELIB}/numba/_devicearray.so
+${PYSITELIB}/numba/_dispatcher.pyi
 ${PYSITELIB}/numba/_dispatcher.so
 ${PYSITELIB}/numba/_dynfunc.c
 ${PYSITELIB}/numba/_dynfunc.so
@@ -41,6 +42,8 @@ ${PYSITELIB}/numba/cext/dictobject.c
 ${PYSITELIB}/numba/cext/dictobject.h
 ${PYSITELIB}/numba/cext/listobject.c
 ${PYSITELIB}/numba/cext/listobject.h
+${PYSITELIB}/numba/cext/setobject.c
+${PYSITELIB}/numba/cext/setobject.h
 ${PYSITELIB}/numba/cext/utils.c
 ${PYSITELIB}/numba/cloudpickle/__init__.py
 ${PYSITELIB}/numba/cloudpickle/__init__.pyc
@@ -90,6 +93,7 @@ ${PYSITELIB}/numba/core/callwrapper.pyc
 ${PYSITELIB}/numba/core/callwrapper.pyo
 ${PYSITELIB}/numba/core/ccallback.py
 ${PYSITELIB}/numba/core/ccallback.pyc
+${PYSITELIB}/numba/core/ccallback.pyi
 ${PYSITELIB}/numba/core/ccallback.pyo
 ${PYSITELIB}/numba/core/cgutils.py
 ${PYSITELIB}/numba/core/cgutils.pyc
@@ -144,12 +148,14 @@ ${PYSITELIB}/numba/core/debuginfo.pyc
 ${PYSITELIB}/numba/core/debuginfo.pyo
 ${PYSITELIB}/numba/core/decorators.py
 ${PYSITELIB}/numba/core/decorators.pyc
+${PYSITELIB}/numba/core/decorators.pyi
 ${PYSITELIB}/numba/core/decorators.pyo
 ${PYSITELIB}/numba/core/descriptors.py
 ${PYSITELIB}/numba/core/descriptors.pyc
 ${PYSITELIB}/numba/core/descriptors.pyo
 ${PYSITELIB}/numba/core/dispatcher.py
 ${PYSITELIB}/numba/core/dispatcher.pyc
+${PYSITELIB}/numba/core/dispatcher.pyi
 ${PYSITELIB}/numba/core/dispatcher.pyo
 ${PYSITELIB}/numba/core/entrypoints.py
 ${PYSITELIB}/numba/core/entrypoints.pyc
@@ -159,6 +165,7 @@ ${PYSITELIB}/numba/core/environment.pyc
 ${PYSITELIB}/numba/core/environment.pyo
 ${PYSITELIB}/numba/core/errors.py
 ${PYSITELIB}/numba/core/errors.pyc
+${PYSITELIB}/numba/core/errors.pyi
 ${PYSITELIB}/numba/core/errors.pyo
 ${PYSITELIB}/numba/core/event.py
 ${PYSITELIB}/numba/core/event.pyc
@@ -227,9 +234,6 @@ ${PYSITELIB}/numba/core/pythonapi.pyo
 ${PYSITELIB}/numba/core/registry.py
 ${PYSITELIB}/numba/core/registry.pyc
 ${PYSITELIB}/numba/core/registry.pyo
-${PYSITELIB}/numba/core/removerefctpass.py
-${PYSITELIB}/numba/core/removerefctpass.pyc
-${PYSITELIB}/numba/core/removerefctpass.pyo
 ${PYSITELIB}/numba/core/rewrites/__init__.py
 ${PYSITELIB}/numba/core/rewrites/__init__.pyc
 ${PYSITELIB}/numba/core/rewrites/__init__.pyo
@@ -315,18 +319,22 @@ ${PYSITELIB}/numba/core/types/__init__.pyi
 ${PYSITELIB}/numba/core/types/__init__.pyo
 ${PYSITELIB}/numba/core/types/abstract.py
 ${PYSITELIB}/numba/core/types/abstract.pyc
+${PYSITELIB}/numba/core/types/abstract.pyi
 ${PYSITELIB}/numba/core/types/abstract.pyo
 ${PYSITELIB}/numba/core/types/common.py
 ${PYSITELIB}/numba/core/types/common.pyc
+${PYSITELIB}/numba/core/types/common.pyi
 ${PYSITELIB}/numba/core/types/common.pyo
 ${PYSITELIB}/numba/core/types/containers.py
 ${PYSITELIB}/numba/core/types/containers.pyc
 ${PYSITELIB}/numba/core/types/containers.pyo
 ${PYSITELIB}/numba/core/types/function_type.py
 ${PYSITELIB}/numba/core/types/function_type.pyc
+${PYSITELIB}/numba/core/types/function_type.pyi
 ${PYSITELIB}/numba/core/types/function_type.pyo
 ${PYSITELIB}/numba/core/types/functions.py
 ${PYSITELIB}/numba/core/types/functions.pyc
+${PYSITELIB}/numba/core/types/functions.pyi
 ${PYSITELIB}/numba/core/types/functions.pyo
 ${PYSITELIB}/numba/core/types/iterators.py
 ${PYSITELIB}/numba/core/types/iterators.pyc
@@ -336,9 +344,11 @@ ${PYSITELIB}/numba/core/types/misc.pyc
 ${PYSITELIB}/numba/core/types/misc.pyo
 ${PYSITELIB}/numba/core/types/npytypes.py
 ${PYSITELIB}/numba/core/types/npytypes.pyc
+${PYSITELIB}/numba/core/types/npytypes.pyi
 ${PYSITELIB}/numba/core/types/npytypes.pyo
 ${PYSITELIB}/numba/core/types/scalars.py
 ${PYSITELIB}/numba/core/types/scalars.pyc
+${PYSITELIB}/numba/core/types/scalars.pyi
 ${PYSITELIB}/numba/core/types/scalars.pyo
 ${PYSITELIB}/numba/core/typing/__init__.py
 ${PYSITELIB}/numba/core/typing/__init__.pyc
@@ -382,9 +392,6 @@ ${PYSITELIB}/numba/core/typing/listdecl.pyo
 ${PYSITELIB}/numba/core/typing/mathdecl.py
 ${PYSITELIB}/numba/core/typing/mathdecl.pyc
 ${PYSITELIB}/numba/core/typing/mathdecl.pyo
-${PYSITELIB}/numba/core/typing/npdatetime.py
-${PYSITELIB}/numba/core/typing/npdatetime.pyc
-${PYSITELIB}/numba/core/typing/npdatetime.pyo
 ${PYSITELIB}/numba/core/typing/npydecl.py
 ${PYSITELIB}/numba/core/typing/npydecl.pyc
 ${PYSITELIB}/numba/core/typing/npydecl.pyo
@@ -424,6 +431,9 @@ ${PYSITELIB}/numba/core/withcontexts.pyo
 ${PYSITELIB}/numba/cpython/__init__.py
 ${PYSITELIB}/numba/cpython/__init__.pyc
 ${PYSITELIB}/numba/cpython/__init__.pyo
+${PYSITELIB}/numba/cpython/_binomial.py
+${PYSITELIB}/numba/cpython/_binomial.pyc
+${PYSITELIB}/numba/cpython/_binomial.pyo
 ${PYSITELIB}/numba/cpython/builtins.py
 ${PYSITELIB}/numba/cpython/builtins.pyc
 ${PYSITELIB}/numba/cpython/builtins.pyo
@@ -1148,6 +1158,7 @@ ${PYSITELIB}/numba/experimental/jitclass/boxing.pyc
 ${PYSITELIB}/numba/experimental/jitclass/boxing.pyo
 ${PYSITELIB}/numba/experimental/jitclass/decorators.py
 ${PYSITELIB}/numba/experimental/jitclass/decorators.pyc
+${PYSITELIB}/numba/experimental/jitclass/decorators.pyi
 ${PYSITELIB}/numba/experimental/jitclass/decorators.pyo
 ${PYSITELIB}/numba/experimental/jitclass/overloads.py
 ${PYSITELIB}/numba/experimental/jitclass/overloads.pyc
@@ -1228,6 +1239,7 @@ ${PYSITELIB}/numba/misc/quicksort.pyc
 ${PYSITELIB}/numba/misc/quicksort.pyo
 ${PYSITELIB}/numba/misc/special.py
 ${PYSITELIB}/numba/misc/special.pyc
+${PYSITELIB}/numba/misc/special.pyi
 ${PYSITELIB}/numba/misc/special.pyo
 ${PYSITELIB}/numba/misc/timsort.py
 ${PYSITELIB}/numba/misc/timsort.pyc
@@ -1275,6 +1287,7 @@ ${PYSITELIB}/numba/np/npyimpl.pyc
 ${PYSITELIB}/numba/np/npyimpl.pyo
 ${PYSITELIB}/numba/np/numpy_support.py
 ${PYSITELIB}/numba/np/numpy_support.pyc
+${PYSITELIB}/numba/np/numpy_support.pyi
 ${PYSITELIB}/numba/np/numpy_support.pyo
 ${PYSITELIB}/numba/np/polynomial/__init__.py
 ${PYSITELIB}/numba/np/polynomial/__init__.pyc
@@ -1300,11 +1313,25 @@ ${PYSITELIB}/numba/np/random/generator_core.pyo
 ${PYSITELIB}/numba/np/random/generator_methods.py
 ${PYSITELIB}/numba/np/random/generator_methods.pyc
 ${PYSITELIB}/numba/np/random/generator_methods.pyo
+${PYSITELIB}/numba/np/random/legacy.py
+${PYSITELIB}/numba/np/random/legacy.pyc
+${PYSITELIB}/numba/np/random/legacy.pyo
 ${PYSITELIB}/numba/np/random/random_methods.py
 ${PYSITELIB}/numba/np/random/random_methods.pyc
 ${PYSITELIB}/numba/np/random/random_methods.pyo
+${PYSITELIB}/numba/np/types/__init__.py
+${PYSITELIB}/numba/np/types/__init__.pyc
+${PYSITELIB}/numba/np/types/__init__.pyi
+${PYSITELIB}/numba/np/types/__init__.pyo
+${PYSITELIB}/numba/np/types/datetime.py
+${PYSITELIB}/numba/np/types/datetime.pyc
+${PYSITELIB}/numba/np/types/datetime.pyo
+${PYSITELIB}/numba/np/types/datetime_registry.py
+${PYSITELIB}/numba/np/types/datetime_registry.pyc
+${PYSITELIB}/numba/np/types/datetime_registry.pyo
 ${PYSITELIB}/numba/np/ufunc/__init__.py
 ${PYSITELIB}/numba/np/ufunc/__init__.pyc
+${PYSITELIB}/numba/np/ufunc/__init__.pyi
 ${PYSITELIB}/numba/np/ufunc/__init__.pyo
 ${PYSITELIB}/numba/np/ufunc/_internal.so
 ${PYSITELIB}/numba/np/ufunc/_num_threads.so
@@ -1316,9 +1343,11 @@ ${PYSITELIB}/numba/np/ufunc/decorators.pyc
 ${PYSITELIB}/numba/np/ufunc/decorators.pyo
 ${PYSITELIB}/numba/np/ufunc/dufunc.py
 ${PYSITELIB}/numba/np/ufunc/dufunc.pyc
+${PYSITELIB}/numba/np/ufunc/dufunc.pyi
 ${PYSITELIB}/numba/np/ufunc/dufunc.pyo
 ${PYSITELIB}/numba/np/ufunc/gufunc.py
 ${PYSITELIB}/numba/np/ufunc/gufunc.pyc
+${PYSITELIB}/numba/np/ufunc/gufunc.pyi
 ${PYSITELIB}/numba/np/ufunc/gufunc.pyo
 ${PYSITELIB}/numba/np/ufunc/parallel.py
 ${PYSITELIB}/numba/np/ufunc/parallel.pyc
@@ -1329,6 +1358,7 @@ ${PYSITELIB}/numba/np/ufunc/sigparse.pyo
 ${PYSITELIB}/numba/np/ufunc/tbbpool.so
 ${PYSITELIB}/numba/np/ufunc/ufunc_base.py
 ${PYSITELIB}/numba/np/ufunc/ufunc_base.pyc
+${PYSITELIB}/numba/np/ufunc/ufunc_base.pyi
 ${PYSITELIB}/numba/np/ufunc/ufunc_base.pyo
 ${PYSITELIB}/numba/np/ufunc/ufuncbuilder.py
 ${PYSITELIB}/numba/np/ufunc/ufuncbuilder.pyc
@@ -1352,6 +1382,9 @@ ${PYSITELIB}/numba/parfors/__init__.pyo
 ${PYSITELIB}/numba/parfors/array_analysis.py
 ${PYSITELIB}/numba/parfors/array_analysis.pyc
 ${PYSITELIB}/numba/parfors/array_analysis.pyo
+${PYSITELIB}/numba/parfors/ir_utils.py
+${PYSITELIB}/numba/parfors/ir_utils.pyc
+${PYSITELIB}/numba/parfors/ir_utils.pyo
 ${PYSITELIB}/numba/parfors/parfor.py
 ${PYSITELIB}/numba/parfors/parfor.pyc
 ${PYSITELIB}/numba/parfors/parfor.pyo
@@ -1361,6 +1394,7 @@ ${PYSITELIB}/numba/parfors/parfor_lowering.pyo
 ${PYSITELIB}/numba/parfors/parfor_lowering_utils.py
 ${PYSITELIB}/numba/parfors/parfor_lowering_utils.pyc
 ${PYSITELIB}/numba/parfors/parfor_lowering_utils.pyo
+${PYSITELIB}/numba/py.typed
 ${PYSITELIB}/numba/pycc/__init__.py
 ${PYSITELIB}/numba/pycc/__init__.pyc
 ${PYSITELIB}/numba/pycc/__init__.pyo
@@ -1486,6 +1520,9 @@ ${PYSITELIB}/numba/tests/doc_examples/test_typed_dict_usage.pyo
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_list_usage.py
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_list_usage.pyc
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_list_usage.pyo
+${PYSITELIB}/numba/tests/doc_examples/test_typed_set_usage.py
+${PYSITELIB}/numba/tests/doc_examples/test_typed_set_usage.pyc
+${PYSITELIB}/numba/tests/doc_examples/test_typed_set_usage.pyo
 ${PYSITELIB}/numba/tests/doctest_usecase.py
 ${PYSITELIB}/numba/tests/doctest_usecase.pyc
 ${PYSITELIB}/numba/tests/doctest_usecase.pyo
@@ -1732,6 +1769,9 @@ ${PYSITELIB}/numba/tests/test_conditions_as_predicates.pyo
 ${PYSITELIB}/numba/tests/test_config.py
 ${PYSITELIB}/numba/tests/test_config.pyc
 ${PYSITELIB}/numba/tests/test_config.pyo
+${PYSITELIB}/numba/tests/test_controlflow.py
+${PYSITELIB}/numba/tests/test_controlflow.pyc
+${PYSITELIB}/numba/tests/test_controlflow.pyo
 ${PYSITELIB}/numba/tests/test_conversion.py
 ${PYSITELIB}/numba/tests/test_conversion.pyc
 ${PYSITELIB}/numba/tests/test_conversion.pyo
@@ -2092,6 +2132,12 @@ ${PYSITELIB}/numba/tests/test_runtests.pyo
 ${PYSITELIB}/numba/tests/test_serialize.py
 ${PYSITELIB}/numba/tests/test_serialize.pyc
 ${PYSITELIB}/numba/tests/test_serialize.pyo
+${PYSITELIB}/numba/tests/test_setimpl.py
+${PYSITELIB}/numba/tests/test_setimpl.pyc
+${PYSITELIB}/numba/tests/test_setimpl.pyo
+${PYSITELIB}/numba/tests/test_setobject.py
+${PYSITELIB}/numba/tests/test_setobject.pyc
+${PYSITELIB}/numba/tests/test_setobject.pyo
 ${PYSITELIB}/numba/tests/test_sets.py
 ${PYSITELIB}/numba/tests/test_sets.pyc
 ${PYSITELIB}/numba/tests/test_sets.pyo
@@ -2230,7 +2276,9 @@ ${PYSITELIB}/numba/typed/dictobject.pyo
 ${PYSITELIB}/numba/typed/listobject.py
 ${PYSITELIB}/numba/typed/listobject.pyc
 ${PYSITELIB}/numba/typed/listobject.pyo
-${PYSITELIB}/numba/typed/py.typed
+${PYSITELIB}/numba/typed/setobject.py
+${PYSITELIB}/numba/typed/setobject.pyc
+${PYSITELIB}/numba/typed/setobject.pyo
 ${PYSITELIB}/numba/typed/typeddict.py
 ${PYSITELIB}/numba/typed/typeddict.pyc
 ${PYSITELIB}/numba/typed/typeddict.pyo
@@ -2240,6 +2288,9 @@ ${PYSITELIB}/numba/typed/typedlist.pyo
 ${PYSITELIB}/numba/typed/typedobjectutils.py
 ${PYSITELIB}/numba/typed/typedobjectutils.pyc
 ${PYSITELIB}/numba/typed/typedobjectutils.pyo
+${PYSITELIB}/numba/typed/typedset.py
+${PYSITELIB}/numba/typed/typedset.pyc
+${PYSITELIB}/numba/typed/typedset.pyo
 ${PYSITELIB}/numba/types/__init__.py
 ${PYSITELIB}/numba/types/__init__.pyc
 ${PYSITELIB}/numba/types/__init__.pyo
