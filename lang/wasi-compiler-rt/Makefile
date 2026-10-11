@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/10/11 05:28:15 adam Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/11 10:35:21 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,7 +16,7 @@ DISTINFO_FILE=	${.CURDIR}/../../lang/compiler-rt/distinfo
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
 TOOL_DEPENDS+=	cmake>=0:../../devel/cmake
-TOOL_DEPENDS+=	lld-${LLVM_VERSION}*:../../wip/lld
+TOOL_DEPENDS+=	lld-${LLVM_VERSION}*:../../devel/lld
 
 USE_LANGUAGES=	c99 c++17
 USE_TOOLS+=	ggrep
