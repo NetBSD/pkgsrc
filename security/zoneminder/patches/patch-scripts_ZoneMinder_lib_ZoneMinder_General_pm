@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.5 2026/07/30 12:36:00 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.6 2026/10/11 00:04:42 gdt Exp $
 
 Comment that appears no longer relevant, probably because upstream has
 avoided the problem it was about.  Deletion  candidate.
@@ -24,14 +24,14 @@ Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
 
 \todo Assess and report upstream.
 
---- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2023-02-23 21:44:01.000000000 +0000
+--- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2026-10-05 23:07:17.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/General.pm
-@@ -92,7 +92,7 @@ sub getCmdFormat {
+@@ -198,7 +198,7 @@ sub getCmdFormat {
      chomp( $output );
      Debug("Test failed, '$output'");
  
--    $prefix = 'su '.$Config{ZM_WEB_USER}.q` --shell=/bin/sh --command='`;
-+    $prefix = 'su -m'.$Config{ZM_WEB_USER}.q` --shell=/bin/sh --command='`;
+-    $prefix = 'su -s /bin/sh '.$Config{ZM_WEB_USER}.q` -c '`;
++    $prefix = 'su -m '.$Config{ZM_WEB_USER}.q` -c '`;
      $suffix = q`'`;
      $command = $prefix.$null_command.$suffix;
      Debug("Testing \"$command\"");
