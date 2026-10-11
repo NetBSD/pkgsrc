@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2026/09/29 06:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.391 2026/10/11 14:32:11 wiz Exp $
 
 DISTNAME=		gnucash-5.17
 PKGREVISION=		1
@@ -24,10 +24,6 @@ USE_TOOLS+=		gmake
 USE_CXX_FEATURES=	c++17
 GCC_REQD+=		8
 
-# build failure in test-tx_import and a couple test failures
-# https://bugzilla.gnome.org/show_bug.cgi?id=795251
-TEST_TARGET=		check
-
 # too fragile
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
@@ -41,23 +37,23 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_AQBANKING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPERL_EXECUTABLE=${PERL5:Q}
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILE_GSCHEMAS=OFF
 
-# as of 5.15
+TEST_TARGET=		check
+# as of 5.17
 # before 'make install'
-# 43% tests passed, 75 tests failed out of 132
+# 43% tests passed, 76 tests failed out of 134
 # after 'make install'
-# 86% tests passed, 18 tests failed out of 132
+# 89% tests passed, 15 tests failed out of 134
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		util/elegant-sort.pl
+REPLACE_BASH+=		libgnucash/backend/xml/test/test-real-data.sh
 
 PLIST_SRC=		PLIST
 
 PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALLATION_DIRS=	share/examples/gnucash
-
-.include "../../mk/bsd.prefs.mk"
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/environment
