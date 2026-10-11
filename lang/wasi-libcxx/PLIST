@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/10/11 05:28:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/11 12:28:54 ryoon Exp $
 wasi/include/c++/v1/__algorithm/adjacent_find.h
 wasi/include/c++/v1/__algorithm/all_of.h
 wasi/include/c++/v1/__algorithm/any_of.h
@@ -1678,10 +1678,10 @@ wasi/include/c++/v1/vector
 wasi/include/c++/v1/version
 wasi/include/c++/v1/wchar.h
 wasi/include/c++/v1/wctype.h
-wasi/lib/wasm32-wasi/libc++.a
-wasi/lib/wasm32-wasi/libc++.modules.json
-wasi/lib/wasm32-wasi/libc++abi.a
-wasi/lib/wasm32-wasi/libc++experimental.a
+wasi/lib/wasm32-wasip1/libc++.a
+wasi/lib/wasm32-wasip1/libc++.modules.json
+wasi/lib/wasm32-wasip1/libc++abi.a
+wasi/lib/wasm32-wasip1/libc++experimental.a
 wasi/share/libc++/v1/std.compat.cppm
 wasi/share/libc++/v1/std.compat/cassert.inc
 wasi/share/libc++/v1/std.compat/cctype.inc
