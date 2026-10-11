@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28139 2026/10/11 16:31:37 wiz Exp $
+$NetBSD: TODO,v 1.28140 2026/10/11 16:35:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qore-2.2.0
 	o qt6-qtbase-6.12.0
-	o quickjs-ng-0.17.0
 	o quodlibet-4.7.1
 	o qutebrowser-3.0.1
 	o radare2-6.0
