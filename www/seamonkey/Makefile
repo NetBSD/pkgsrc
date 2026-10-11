@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2026/09/29 06:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.300 2026/10/11 08:37:40 adam Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -95,7 +95,7 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 
 # Python 2.7 and Python 3.8 or later are required simultaneously.
-PYTHON_VERSIONS_ACCEPTED=	310
+PYTHON_VERSIONS_ACCEPTED=	311
 PYTHON_FOR_BUILD_ONLY=		tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
