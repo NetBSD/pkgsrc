@@ -1,12 +1,12 @@
-$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.6 2026/04/16 06:33:53 wiz Exp $
+$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.7 2026/10/11 05:28:15 adam Exp $
 
 * Generate __config_site and __assertion_handler under source directory. This is wrong.
   This fixes non-pthreads wasi-libcxx-14.0.6 build.
 
---- libcxx/include/CMakeLists.txt.orig	2025-12-12 10:35:47.000000000 +0000
+--- libcxx/include/CMakeLists.txt.orig	2026-03-23 18:46:22.000000000 +0000
 +++ libcxx/include/CMakeLists.txt
-@@ -1677,7 +1677,9 @@ set(files
-   __cxx03/wctype.h
+@@ -1676,7 +1676,9 @@ set(files
+   __cxx03/wchar.h
    )
  
 +configure_file("__config_site.in" "${CMAKE_CURRENT_SOURCE_DIR}/__config_site" @ONLY)
@@ -15,8 +15,11 @@ $NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.6 2026/04/16 06:33:53 wiz Exp $
  configure_file("${LIBCXX_ASSERTION_HANDLER_FILE}" "${LIBCXX_GENERATED_INCLUDE_DIR}/__assertion_handler" COPYONLY)
  
  # We generate the modulemap file so that we can include __config_site in it. For now, we don't know how to
-@@ -1687,6 +1689,9 @@ if (NOT LLVM_ENABLE_PER_TARGET_RUNTIME_D
+@@ -1684,8 +1686,12 @@ configure_file("${LIBCXX_ASSERTION_HANDL
+ if (NOT LLVM_ENABLE_PER_TARGET_RUNTIME_DIR)
+   set(LIBCXX_CONFIG_SITE_MODULE_ENTRY "textual header \"__config_site\"")
  endif()
++configure_file("module.modulemap.in" "${CMAKE_CURRENT_SOURCE_DIR}/module.modulemap" @ONLY)
  configure_file("module.modulemap.in" "${LIBCXX_GENERATED_INCLUDE_DIR}/module.modulemap" @ONLY)
  
 +set(_all_includes "${CMAKE_CURRENT_SOURCE_DIR}/__config_site"

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.67 2026/09/29 06:04:36 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/10/11 05:28:13 adam Exp $
 
-PKGREVISION= 3
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	lldb-${LLVM_VERSION}
@@ -42,7 +41,9 @@ REPLACE_PYTHON+=	bindings/python/get-python-config.py
 REPLACE_PYTHON+=	bindings/python/lldb-python
 REPLACE_PYTHON+=	scripts/analyze-project-deps.py
 REPLACE_PYTHON+=	scripts/generate-sbapi-dwarf-enum.py
+REPLACE_PYTHON+=	scripts/reproducer-replay.py
 REPLACE_PYTHON+=	scripts/verify_api.py
+REPLACE_PYTHON+=	utils/lldb-repro/lldb-repro.py
 REPLACE_PYTHON+=	utils/lui/lui.py
 REPLACE_PYTHON+=	utils/lui/sandbox.py
 

@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.39 2026/04/16 06:33:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2026/10/11 05:28:13 adam Exp $
 
 BUILDLINK_TREE+=	clang
 
 .if !defined(CLANG_BUILDLINK3_MK)
 CLANG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.clang+=	clang>=21.1.0
+BUILDLINK_API_DEPENDS.clang+=	clang>=22.1.0
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 BUILDLINK_FILES.clang+=		bin/amdgpu-arch
@@ -13,7 +13,7 @@ BUILDLINK_FILES.clang+=		bin/analyze-build
 BUILDLINK_FILES.clang+=		bin/c-index-test
 BUILDLINK_FILES.clang+=		bin/clang
 BUILDLINK_FILES.clang+=		bin/clang++
-BUILDLINK_FILES.clang+=		bin/clang-21
+BUILDLINK_FILES.clang+=		bin/clang-22
 BUILDLINK_FILES.clang+=		bin/clang-check
 BUILDLINK_FILES.clang+=		bin/clang-cl
 BUILDLINK_FILES.clang+=		bin/clang-cpp
@@ -23,7 +23,6 @@ BUILDLINK_FILES.clang+=		bin/clang-installapi
 BUILDLINK_FILES.clang+=		bin/clang-linker-wrapper
 BUILDLINK_FILES.clang+=		bin/clang-nvlink-wrapper
 BUILDLINK_FILES.clang+=		bin/clang-offload-bundler
-BUILDLINK_FILES.clang+=		bin/clang-offload-packager
 BUILDLINK_FILES.clang+=		bin/clang-refactor
 BUILDLINK_FILES.clang+=		bin/clang-repl
 BUILDLINK_FILES.clang+=		bin/clang-scan-deps

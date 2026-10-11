@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.23 2026/04/16 06:33:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/10/11 05:28:13 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-dap
 bin/lldb-instr
+bin/lldb-mcp
 bin/lldb-server
+bin/yaml2macho-core
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAddressRange.h
@@ -33,6 +35,7 @@ include/lldb/API/SBFileSpec.h
 include/lldb/API/SBFileSpecList.h
 include/lldb/API/SBFormat.h
 include/lldb/API/SBFrame.h
+include/lldb/API/SBFrameList.h
 include/lldb/API/SBFunction.h
 include/lldb/API/SBHostOS.h
 include/lldb/API/SBInstruction.h
@@ -247,6 +250,7 @@ include/lldb/Host/XML.h
 include/lldb/Host/aix/HostInfoAIX.h
 include/lldb/Host/aix/Support.h
 include/lldb/Host/android/HostInfoAndroid.h
+include/lldb/Host/common/DiagnosticsRendering.h
 include/lldb/Host/common/GetOptInc.h
 include/lldb/Host/common/NativeBreakpointList.h
 include/lldb/Host/common/NativeProcessProtocol.h
@@ -287,6 +291,7 @@ include/lldb/Host/windows/MainLoopWindows.h
 include/lldb/Host/windows/PipeWindows.h
 include/lldb/Host/windows/PosixApi.h
 include/lldb/Host/windows/ProcessLauncherWindows.h
+include/lldb/Host/windows/PseudoConsole.h
 include/lldb/Host/windows/windows.h
 include/lldb/Initialization/SystemInitializer.h
 include/lldb/Initialization/SystemInitializerCommon.h
@@ -301,6 +306,9 @@ include/lldb/Interpreter/CommandOptionArgumentTable.h
 include/lldb/Interpreter/CommandOptionValidators.h
 include/lldb/Interpreter/CommandReturnObject.h
 include/lldb/Interpreter/Interfaces/OperatingSystemInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedBreakpointInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedFrameInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedFrameProviderInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedInterfaceUsages.h
 include/lldb/Interpreter/Interfaces/ScriptedPlatformInterface.h
@@ -350,6 +358,12 @@ include/lldb/Interpreter/Property.h
 include/lldb/Interpreter/ScriptInterpreter.h
 include/lldb/Interpreter/ScriptObject.h
 include/lldb/LLDB.h
+include/lldb/Protocol/MCP/MCPError.h
+include/lldb/Protocol/MCP/Protocol.h
+include/lldb/Protocol/MCP/Resource.h
+include/lldb/Protocol/MCP/Server.h
+include/lldb/Protocol/MCP/Tool.h
+include/lldb/Protocol/MCP/Transport.h
 include/lldb/SBAddress.h
 include/lldb/SBAddressRange.h
 include/lldb/SBAddressRangeList.h
@@ -378,11 +392,13 @@ include/lldb/SBFileSpec.h
 include/lldb/SBFileSpecList.h
 include/lldb/SBFormat.h
 include/lldb/SBFrame.h
+include/lldb/SBFrameList.h
 include/lldb/SBFunction.h
 include/lldb/SBHostOS.h
 include/lldb/SBInstruction.h
 include/lldb/SBInstructionList.h
 include/lldb/SBLanguageRuntime.h
+include/lldb/SBLanguages.h
 include/lldb/SBLaunchInfo.h
 include/lldb/SBLineEntry.h
 include/lldb/SBListener.h
@@ -472,6 +488,7 @@ include/lldb/Symbol/VariableList.h
 include/lldb/Target/ABI.h
 include/lldb/Target/AppleArm64ExceptionClass.h
 include/lldb/Target/AssertFrameRecognizer.h
+include/lldb/Target/BorrowedStackFrame.h
 include/lldb/Target/CoreFileMemoryRanges.h
 include/lldb/Target/DynamicLoader.h
 include/lldb/Target/DynamicRegisterInfo.h
@@ -517,6 +534,7 @@ include/lldb/Target/StackID.h
 include/lldb/Target/Statistics.h
 include/lldb/Target/StopInfo.h
 include/lldb/Target/StructuredDataPlugin.h
+include/lldb/Target/SyntheticFrameProvider.h
 include/lldb/Target/SystemRuntime.h
 include/lldb/Target/Target.h
 include/lldb/Target/TargetList.h
@@ -552,7 +570,6 @@ include/lldb/Target/UnixSignals.h
 include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
 include/lldb/Target/UnwindLLDB.h
-include/lldb/Target/VerboseTrapFrameRecognizer.h
 include/lldb/Utility/AddressableBits.h
 include/lldb/Utility/AnsiTerminal.h
 include/lldb/Utility/AppleUuidCompatibility.h
@@ -571,7 +588,6 @@ include/lldb/Utility/DataBufferLLVM.h
 include/lldb/Utility/DataEncoder.h
 include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Diagnostics.h
-include/lldb/Utility/DiagnosticsRendering.h
 include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
 include/lldb/Utility/ErrorMessages.h
@@ -588,6 +604,7 @@ include/lldb/Utility/LLDBLog.h
 include/lldb/Utility/Listener.h
 include/lldb/Utility/Log.h
 include/lldb/Utility/NameMatches.h
+include/lldb/Utility/NonNullSharedPtr.h
 include/lldb/Utility/OptionDefinition.h
 include/lldb/Utility/Predicate.h
 include/lldb/Utility/ProcessInfo.h
@@ -607,7 +624,6 @@ include/lldb/Utility/StreamString.h
 include/lldb/Utility/StreamTee.h
 include/lldb/Utility/StringExtractor.h
 include/lldb/Utility/StringExtractorGDBRemote.h
-include/lldb/Utility/StringLexer.h
 include/lldb/Utility/StringList.h
 include/lldb/Utility/StructuredData.h
 include/lldb/Utility/SupportFile.h
@@ -624,6 +640,7 @@ include/lldb/Utility/UserID.h
 include/lldb/Utility/UserIDResolver.h
 include/lldb/Utility/VASPrintf.h
 include/lldb/Utility/VMRange.h
+include/lldb/Utility/VirtualDataExtractor.h
 include/lldb/Utility/XcodeSDK.h
 include/lldb/Utility/ZipFile.h
 include/lldb/ValueObject/DILAST.h
@@ -659,10 +676,8 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-lib/liblldb.so.21.1
-lib/lua/5.4/lldb.so
+lib/lua/${LUA_VERSION}/lldb.so
 ${PYSITELIB}/lldb/__init__.py
-${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py
 ${PYSITELIB}/lldb/formatters/Logger.py
 ${PYSITELIB}/lldb/formatters/__init__.py
@@ -674,9 +689,12 @@ ${PYSITELIB}/lldb/formatters/cpp/libcxx.py
 ${PYSITELIB}/lldb/formatters/metrics.py
 ${PYSITELIB}/lldb/formatters/synth.py
 ${PYSITELIB}/lldb/lldb-argdumper
+${PYSITELIB}/lldb/native/__init__.py
+${PYSITELIB}/lldb/native/_lldb.abi3.so
 ${PYSITELIB}/lldb/plugins/__init__.py
 ${PYSITELIB}/lldb/plugins/operating_system.py
 ${PYSITELIB}/lldb/plugins/parsed_cmd.py
+${PYSITELIB}/lldb/plugins/scripted_frame_provider.py
 ${PYSITELIB}/lldb/plugins/scripted_platform.py
 ${PYSITELIB}/lldb/plugins/scripted_process.py
 ${PYSITELIB}/lldb/plugins/scripted_thread_plan.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2026/09/16 11:00:39 tnn Exp $
+# $NetBSD: Makefile,v 1.117 2026/10/11 05:28:12 adam Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -26,7 +26,6 @@
 .include "version.mk"
 
 PKGNAME=	llvm-${LLVM_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

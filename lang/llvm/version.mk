@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.22 2026/09/02 20:22:38 adam Exp $
+# $NetBSD: version.mk,v 1.23 2026/10/11 05:28:12 adam Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -15,7 +15,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	21.1.8
+LLVM_VERSION=	22.1.8
 
 DISTNAME=	llvm-project-${LLVM_VERSION}.src
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}

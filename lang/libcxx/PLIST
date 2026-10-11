@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/04/16 06:33:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/10/11 05:28:14 adam Exp $
 include/c++/v1/__algorithm/adjacent_find.h
 include/c++/v1/__algorithm/all_of.h
 include/c++/v1/__algorithm/any_of.h
@@ -194,6 +194,7 @@ include/c++/v1/__algorithm/sift_down.h
 include/c++/v1/__algorithm/simd_utils.h
 include/c++/v1/__algorithm/sort.h
 include/c++/v1/__algorithm/sort_heap.h
+include/c++/v1/__algorithm/specialized_algorithms.h
 include/c++/v1/__algorithm/stable_partition.h
 include/c++/v1/__algorithm/stable_sort.h
 include/c++/v1/__algorithm/swap_ranges.h
@@ -214,9 +215,12 @@ include/c++/v1/__atomic/atomic_init.h
 include/c++/v1/__atomic/atomic_lock_free.h
 include/c++/v1/__atomic/atomic_ref.h
 include/c++/v1/__atomic/atomic_sync.h
+include/c++/v1/__atomic/atomic_sync_timed.h
+include/c++/v1/__atomic/atomic_waitable_traits.h
 include/c++/v1/__atomic/check_memory_order.h
 include/c++/v1/__atomic/contention_t.h
 include/c++/v1/__atomic/fence.h
+include/c++/v1/__atomic/floating_point_helper.h
 include/c++/v1/__atomic/is_always_lock_free.h
 include/c++/v1/__atomic/kill_dependency.h
 include/c++/v1/__atomic/memory_order.h
@@ -262,6 +266,7 @@ include/c++/v1/__chrono/formatter.h
 include/c++/v1/__chrono/gps_clock.h
 include/c++/v1/__chrono/hh_mm_ss.h
 include/c++/v1/__chrono/high_resolution_clock.h
+include/c++/v1/__chrono/is_clock.h
 include/c++/v1/__chrono/leap_second.h
 include/c++/v1/__chrono/literals.h
 include/c++/v1/__chrono/local_info.h
@@ -306,6 +311,7 @@ include/c++/v1/__concepts/boolean_testable.h
 include/c++/v1/__concepts/class_or_enum.h
 include/c++/v1/__concepts/common_reference_with.h
 include/c++/v1/__concepts/common_with.h
+include/c++/v1/__concepts/comparison_common_type.h
 include/c++/v1/__concepts/constructible.h
 include/c++/v1/__concepts/convertible_to.h
 include/c++/v1/__concepts/copyable.h
@@ -328,6 +334,8 @@ include/c++/v1/__config_site
 include/c++/v1/__configuration/abi.h
 include/c++/v1/__configuration/availability.h
 include/c++/v1/__configuration/compiler.h
+include/c++/v1/__configuration/experimental.h
+include/c++/v1/__configuration/hardening.h
 include/c++/v1/__configuration/language.h
 include/c++/v1/__configuration/platform.h
 include/c++/v1/__coroutine/coroutine_handle.h
@@ -838,7 +846,6 @@ include/c++/v1/__cxx03/clocale
 include/c++/v1/__cxx03/cmath
 include/c++/v1/__cxx03/codecvt
 include/c++/v1/__cxx03/complex
-include/c++/v1/__cxx03/complex.h
 include/c++/v1/__cxx03/condition_variable
 include/c++/v1/__cxx03/csetjmp
 include/c++/v1/__cxx03/csignal
@@ -851,25 +858,20 @@ include/c++/v1/__cxx03/cstdlib
 include/c++/v1/__cxx03/cstring
 include/c++/v1/__cxx03/ctgmath
 include/c++/v1/__cxx03/ctime
-include/c++/v1/__cxx03/ctype.h
 include/c++/v1/__cxx03/cuchar
 include/c++/v1/__cxx03/cwchar
 include/c++/v1/__cxx03/cwctype
 include/c++/v1/__cxx03/deque
-include/c++/v1/__cxx03/errno.h
 include/c++/v1/__cxx03/exception
 include/c++/v1/__cxx03/experimental/__config
 include/c++/v1/__cxx03/experimental/utility
 include/c++/v1/__cxx03/ext/__hash
 include/c++/v1/__cxx03/ext/hash_map
 include/c++/v1/__cxx03/ext/hash_set
-include/c++/v1/__cxx03/fenv.h
-include/c++/v1/__cxx03/float.h
 include/c++/v1/__cxx03/forward_list
 include/c++/v1/__cxx03/fstream
 include/c++/v1/__cxx03/functional
 include/c++/v1/__cxx03/future
-include/c++/v1/__cxx03/inttypes.h
 include/c++/v1/__cxx03/iomanip
 include/c++/v1/__cxx03/ios
 include/c++/v1/__cxx03/iosfwd
@@ -896,11 +898,8 @@ include/c++/v1/__cxx03/set
 include/c++/v1/__cxx03/sstream
 include/c++/v1/__cxx03/stack
 include/c++/v1/__cxx03/stdatomic.h
-include/c++/v1/__cxx03/stdbool.h
-include/c++/v1/__cxx03/stddef.h
 include/c++/v1/__cxx03/stdexcept
 include/c++/v1/__cxx03/stdint.h
-include/c++/v1/__cxx03/stdio.h
 include/c++/v1/__cxx03/stdlib.h
 include/c++/v1/__cxx03/streambuf
 include/c++/v1/__cxx03/string
@@ -908,7 +907,6 @@ include/c++/v1/__cxx03/string.h
 include/c++/v1/__cxx03/string_view
 include/c++/v1/__cxx03/strstream
 include/c++/v1/__cxx03/system_error
-include/c++/v1/__cxx03/tgmath.h
 include/c++/v1/__cxx03/thread
 include/c++/v1/__cxx03/type_traits
 include/c++/v1/__cxx03/typeindex
@@ -921,7 +919,6 @@ include/c++/v1/__cxx03/valarray
 include/c++/v1/__cxx03/vector
 include/c++/v1/__cxx03/version
 include/c++/v1/__cxx03/wchar.h
-include/c++/v1/__cxx03/wctype.h
 include/c++/v1/__debug_utils/randomize_range.h
 include/c++/v1/__debug_utils/sanitizers.h
 include/c++/v1/__debug_utils/strict_weak_ordering_check.h
@@ -966,6 +963,7 @@ include/c++/v1/__format/container_adaptor.h
 include/c++/v1/__format/enable_insertable.h
 include/c++/v1/__format/escaped_output_table.h
 include/c++/v1/__format/extended_grapheme_cluster_table.h
+include/c++/v1/__format/fmt_pair_like.h
 include/c++/v1/__format/format_arg.h
 include/c++/v1/__format/format_arg_store.h
 include/c++/v1/__format/format_args.h
@@ -988,6 +986,7 @@ include/c++/v1/__format/formatter_tuple.h
 include/c++/v1/__format/indic_conjunct_break_table.h
 include/c++/v1/__format/parser_std_format_spec.h
 include/c++/v1/__format/range_default_formatter.h
+include/c++/v1/__format/range_format.h
 include/c++/v1/__format/range_formatter.h
 include/c++/v1/__format/unicode.h
 include/c++/v1/__format/width_estimation_table.h
@@ -1030,14 +1029,12 @@ include/c++/v1/__fwd/functional.h
 include/c++/v1/__fwd/get.h
 include/c++/v1/__fwd/ios.h
 include/c++/v1/__fwd/istream.h
-include/c++/v1/__fwd/map.h
 include/c++/v1/__fwd/mdspan.h
 include/c++/v1/__fwd/memory.h
 include/c++/v1/__fwd/memory_resource.h
 include/c++/v1/__fwd/ostream.h
 include/c++/v1/__fwd/pair.h
 include/c++/v1/__fwd/queue.h
-include/c++/v1/__fwd/set.h
 include/c++/v1/__fwd/span.h
 include/c++/v1/__fwd/sstream.h
 include/c++/v1/__fwd/stack.h
@@ -1099,21 +1096,22 @@ include/c++/v1/__locale
 include/c++/v1/__locale_dir/check_grouping.h
 include/c++/v1/__locale_dir/get_c_locale.h
 include/c++/v1/__locale_dir/locale_base_api.h
-include/c++/v1/__locale_dir/locale_base_api/android.h
 include/c++/v1/__locale_dir/locale_base_api/bsd_locale_fallbacks.h
 include/c++/v1/__locale_dir/locale_base_api/ibm.h
-include/c++/v1/__locale_dir/locale_base_api/musl.h
 include/c++/v1/__locale_dir/locale_base_api/openbsd.h
 include/c++/v1/__locale_dir/messages.h
 include/c++/v1/__locale_dir/money.h
 include/c++/v1/__locale_dir/num.h
 include/c++/v1/__locale_dir/pad_and_output.h
 include/c++/v1/__locale_dir/scan_keyword.h
+include/c++/v1/__locale_dir/support/aix.h
 include/c++/v1/__locale_dir/support/apple.h
 include/c++/v1/__locale_dir/support/bsd_like.h
 include/c++/v1/__locale_dir/support/freebsd.h
 include/c++/v1/__locale_dir/support/fuchsia.h
 include/c++/v1/__locale_dir/support/linux.h
+include/c++/v1/__locale_dir/support/netbsd.h
+include/c++/v1/__locale_dir/support/newlib.h
 include/c++/v1/__locale_dir/support/no_locale/characters.h
 include/c++/v1/__locale_dir/support/no_locale/strtonum.h
 include/c++/v1/__locale_dir/support/windows.h
@@ -1151,7 +1149,6 @@ include/c++/v1/__mdspan/layout_stride.h
 include/c++/v1/__mdspan/mdspan.h
 include/c++/v1/__memory/addressof.h
 include/c++/v1/__memory/align.h
-include/c++/v1/__memory/aligned_alloc.h
 include/c++/v1/__memory/allocate_at_least.h
 include/c++/v1/__memory/allocation_guard.h
 include/c++/v1/__memory/allocator.h
@@ -1281,6 +1278,8 @@ include/c++/v1/__random/uniform_random_bit_generator.h
 include/c++/v1/__random/uniform_real_distribution.h
 include/c++/v1/__random/weibull_distribution.h
 include/c++/v1/__ranges/access.h
+include/c++/v1/__ranges/adjacent_transform_view.h
+include/c++/v1/__ranges/adjacent_view.h
 include/c++/v1/__ranges/all.h
 include/c++/v1/__ranges/as_rvalue_view.h
 include/c++/v1/__ranges/chunk_by_view.h
@@ -1292,6 +1291,7 @@ include/c++/v1/__ranges/dangling.h
 include/c++/v1/__ranges/data.h
 include/c++/v1/__ranges/drop_view.h
 include/c++/v1/__ranges/drop_while_view.h
+include/c++/v1/__ranges/elements_of.h
 include/c++/v1/__ranges/elements_view.h
 include/c++/v1/__ranges/empty.h
 include/c++/v1/__ranges/empty_view.h
@@ -1323,6 +1323,7 @@ include/c++/v1/__ranges/to.h
 include/c++/v1/__ranges/transform_view.h
 include/c++/v1/__ranges/view_interface.h
 include/c++/v1/__ranges/views.h
+include/c++/v1/__ranges/zip_transform_view.h
 include/c++/v1/__ranges/zip_view.h
 include/c++/v1/__split_buffer
 include/c++/v1/__std_mbstate_t.h
@@ -1363,22 +1364,18 @@ include/c++/v1/__thread/timed_backoff_policy.h
 include/c++/v1/__tree
 include/c++/v1/__tuple/find_index.h
 include/c++/v1/__tuple/ignore.h
-include/c++/v1/__tuple/make_tuple_types.h
 include/c++/v1/__tuple/sfinae_helpers.h
 include/c++/v1/__tuple/tuple_element.h
-include/c++/v1/__tuple/tuple_indices.h
 include/c++/v1/__tuple/tuple_like.h
-include/c++/v1/__tuple/tuple_like_ext.h
 include/c++/v1/__tuple/tuple_like_no_subrange.h
 include/c++/v1/__tuple/tuple_size.h
-include/c++/v1/__tuple/tuple_types.h
+include/c++/v1/__tuple/tuple_transform.h
 include/c++/v1/__type_traits/add_cv_quals.h
 include/c++/v1/__type_traits/add_pointer.h
 include/c++/v1/__type_traits/add_reference.h
 include/c++/v1/__type_traits/aligned_storage.h
 include/c++/v1/__type_traits/aligned_union.h
 include/c++/v1/__type_traits/alignment_of.h
-include/c++/v1/__type_traits/can_extract_key.h
 include/c++/v1/__type_traits/common_reference.h
 include/c++/v1/__type_traits/common_type.h
 include/c++/v1/__type_traits/conditional.h
@@ -1407,7 +1404,6 @@ include/c++/v1/__type_traits/is_arithmetic.h
 include/c++/v1/__type_traits/is_array.h
 include/c++/v1/__type_traits/is_assignable.h
 include/c++/v1/__type_traits/is_base_of.h
-include/c++/v1/__type_traits/is_bounded_array.h
 include/c++/v1/__type_traits/is_callable.h
 include/c++/v1/__type_traits/is_char_like_type.h
 include/c++/v1/__type_traits/is_class.h
@@ -1426,6 +1422,7 @@ include/c++/v1/__type_traits/is_final.h
 include/c++/v1/__type_traits/is_floating_point.h
 include/c++/v1/__type_traits/is_function.h
 include/c++/v1/__type_traits/is_fundamental.h
+include/c++/v1/__type_traits/is_generic_transparent_comparator.h
 include/c++/v1/__type_traits/is_implicit_lifetime.h
 include/c++/v1/__type_traits/is_implicitly_default_constructible.h
 include/c++/v1/__type_traits/is_integral.h
@@ -1443,7 +1440,6 @@ include/c++/v1/__type_traits/is_primary_template.h
 include/c++/v1/__type_traits/is_reference.h
 include/c++/v1/__type_traits/is_reference_wrapper.h
 include/c++/v1/__type_traits/is_referenceable.h
-include/c++/v1/__type_traits/is_replaceable.h
 include/c++/v1/__type_traits/is_same.h
 include/c++/v1/__type_traits/is_scalar.h
 include/c++/v1/__type_traits/is_signed.h
@@ -1457,17 +1453,18 @@ include/c++/v1/__type_traits/is_trivially_copyable.h
 include/c++/v1/__type_traits/is_trivially_destructible.h
 include/c++/v1/__type_traits/is_trivially_lexicographically_comparable.h
 include/c++/v1/__type_traits/is_trivially_relocatable.h
-include/c++/v1/__type_traits/is_unbounded_array.h
 include/c++/v1/__type_traits/is_union.h
 include/c++/v1/__type_traits/is_unqualified.h
 include/c++/v1/__type_traits/is_unsigned.h
 include/c++/v1/__type_traits/is_valid_expansion.h
 include/c++/v1/__type_traits/is_void.h
 include/c++/v1/__type_traits/is_volatile.h
+include/c++/v1/__type_traits/is_within_lifetime.h
 include/c++/v1/__type_traits/lazy.h
 include/c++/v1/__type_traits/make_32_64_or_128_bit.h
 include/c++/v1/__type_traits/make_const_lvalue_ref.h
 include/c++/v1/__type_traits/make_signed.h
+include/c++/v1/__type_traits/make_transparent.h
 include/c++/v1/__type_traits/make_unsigned.h
 include/c++/v1/__type_traits/maybe_const.h
 include/c++/v1/__type_traits/nat.h
@@ -1499,6 +1496,7 @@ include/c++/v1/__utility/auto_cast.h
 include/c++/v1/__utility/cmp.h
 include/c++/v1/__utility/convert_to_integral.h
 include/c++/v1/__utility/declval.h
+include/c++/v1/__utility/default_three_way_comparator.h
 include/c++/v1/__utility/element_count.h
 include/c++/v1/__utility/empty.h
 include/c++/v1/__utility/exception_guard.h
@@ -1509,6 +1507,7 @@ include/c++/v1/__utility/in_place.h
 include/c++/v1/__utility/integer_sequence.h
 include/c++/v1/__utility/is_pointer_in_range.h
 include/c++/v1/__utility/is_valid_range.h
+include/c++/v1/__utility/lazy_synth_three_way_comparator.h
 include/c++/v1/__utility/move.h
 include/c++/v1/__utility/no_destroy.h
 include/c++/v1/__utility/pair.h
@@ -1520,6 +1519,7 @@ include/c++/v1/__utility/scope_guard.h
 include/c++/v1/__utility/small_buffer.h
 include/c++/v1/__utility/swap.h
 include/c++/v1/__utility/to_underlying.h
+include/c++/v1/__utility/try_key_extraction.h
 include/c++/v1/__utility/unreachable.h
 include/c++/v1/__variant/monostate.h
 include/c++/v1/__vector/comparison.h
@@ -1648,7 +1648,6 @@ include/c++/v1/span
 include/c++/v1/sstream
 include/c++/v1/stack
 include/c++/v1/stdatomic.h
-include/c++/v1/stdbool.h
 include/c++/v1/stddef.h
 include/c++/v1/stdexcept
 include/c++/v1/stdio.h
