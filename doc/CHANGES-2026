@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6861 2026/10/11 05:39:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6862 2026/10/11 05:46:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10315,3 +10315,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/wasi-compiler-rt to 22.1.8 [adam 2026-10-11]
 	Updated lang/wasi-libcxx to 22.1.8 [adam 2026-10-11]
 	Updated parallel/openmp to 22.1.8 [adam 2026-10-11]
+	Updated devel/ccls to 0.20261004 [adam 2026-10-11]
+	Updated devel/include-what-you-use to 0.26 [adam 2026-10-11]
+	Updated devel/woboq_codebrowser to 2.1.20260407 [adam 2026-10-11]
+	Updated devel/py-llvmlite to 0.50.0 [adam 2026-10-11]
