@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/10/11 16:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/11 18:37:00 wiz Exp $
 
 DISTNAME=	zxcvbn-c-2.7
 CATEGORIES=	security
@@ -15,6 +15,10 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 
 INSTALLATION_DIRS+=	include lib
+
+# In file included from /tmp/work/security/zxcvbn-c/work/zxcvbn-c-2.7/test-internals.c:9:
+# /tmp/work/security/zxcvbn-c/work/zxcvbn-c-2.7/zxcvbn.c:468:1: error: expected '}' before 'static'
+MAKE_JOBS_SAFE=		no
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/zxcvbn.h ${DESTDIR}${PREFIX}/include
