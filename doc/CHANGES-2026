@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6863 2026/10/11 05:55:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6864 2026/10/11 05:58:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10321,3 +10321,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-llvmlite to 0.50.0 [adam 2026-10-11]
 	Updated math/py-numpy to 2.5.4 [adam 2026-10-11]
 	Updated math/py-numba to 0.68.0 [adam 2026-10-11]
+	Updated parallel/pocl to 7.2 [adam 2026-10-11]
+	Updated parallel/spirv-llvm-translator to 22.1.7 [adam 2026-10-11]
