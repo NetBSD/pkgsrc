@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/10/11 05:28:15 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/10/11 12:28:54 ryoon Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -7,6 +7,7 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/libcxx
 EXTRACT_ELEMENTS+=	${DISTNAME}/libcxxabi
 
 PKGNAME=	wasi-libcxx-${LLVM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,12 +23,10 @@ TOOL_DEPENDS+=	lld>=0:../../devel/lld
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
 
-BUILD_DIRS+=		${WRKDIR}/build_libcxx
-BUILD_DIRS+=		${WRKDIR}/build_libcxxabi
+BUILD_DIRS+=		build_libcxx build_libcxxabi
 INSTALL_DIRS+=		${BUILD_DIRS}
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
@@ -41,9 +40,9 @@ CMAKE_CONFIGURE_ARGS+=	-DCXX_SUPPORTS_CXX11=ON
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_COMPILER_CHECKED=ON
 CMAKE_CONFIGURE_ARGS+=	-DUNIX:BOOL=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SYSROOT=${BUILDLINK_DIR}/wasi
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER_TARGET=wasm32-wasi
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER_TARGET=wasm32-wasip1
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG_PATH=${PREFIX}/bin/llvm-config
-CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_LIBDIR_SUFFIX=/wasm32-wasi
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_LIBDIR_SUFFIX=/wasm32-wasip1
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=FALSE
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_INCLUDE_TESTS:BOOL=FALSE
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_THREADS:BOOL=OFF
@@ -58,7 +57,7 @@ CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ENABLE_FILESYSTEM:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_HAS_MUSL_LIBC:BOOL=ON
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_ABI_VERSION=2
-CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_LIBDIR_SUFFIX=/wasm32-wasi
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_LIBDIR_SUFFIX=/wasm32-wasip1
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_ENABLE_EXCEPTIONS:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_ENABLE_SHARED:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_SILENT_TERMINATE:BOOL=ON
@@ -137,30 +136,34 @@ CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKSRC}/libcxxabi/includ
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/wasi
 
-# avoid conflict with stddef.h
-CPPFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
-
-post-extract:
-	${MKDIR} ${WRKDIR}/build_libcxx
-	${MKDIR} ${WRKDIR}/build_libcxxabi
+pre-configure:
+.for d in ${BUILD_DIRS}
+	${RUN} ${MKDIR} ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/${d}
+.endfor
 
 do-configure:
-	cd ${WRKDIR}/build_libcxx && \
-	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
-		cmake ${CMAKE_CONFIGURE_ARGS} ${WRKSRC}/libcxx
-	cd ${WRKDIR}/build_libcxxabi && \
-	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
-		cmake ${CMAKE_CONFIGURE_ARGS} ${WRKSRC}/libcxxabi
+.for d in ${BUILD_DIRS}
+	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/${d} && \
+		${SETENV} ${CONFIGURE_ENV} cmake \
+		--install-prefix ${PREFIX} \
+		-G ${_CMAKE_BUILD_SYSTEM:Q} \
+		${CMAKE_CONFIGURE_ARGS} \
+		../../${d:S/build_//}
+.endfor
+
+# avoid conflict with stddef.h
+CPPFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 # Run llvm-ranlib again on the archives. Fixes mystery build failure
 # in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
 # problem in this package?
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++.a
+	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasip1/libc++.a
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++abi.a
+	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasip1/libc++abi.a
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"
