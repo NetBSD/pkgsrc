@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/02 20:22:38 adam Exp $
-share/clc/amdgcn--amdhsa.bc
+@comment $NetBSD: PLIST,v 1.2 2026/10/11 08:43:14 ryoon Exp $
+share/clc/amdgcn-amd-amdhsa.bc
 share/clc/aruba-r600--.bc
 share/clc/barts-r600--.bc
 share/clc/bonaire-amdgcn--.bc
@@ -56,6 +56,10 @@ share/clc/gfx1200-amdgcn--.bc
 share/clc/gfx1200-amdgcn-mesa-mesa3d.bc
 share/clc/gfx1201-amdgcn--.bc
 share/clc/gfx1201-amdgcn-mesa-mesa3d.bc
+share/clc/gfx1250-amdgcn--.bc
+share/clc/gfx1250-amdgcn-mesa-mesa3d.bc
+share/clc/gfx1251-amdgcn--.bc
+share/clc/gfx1251-amdgcn-mesa-mesa3d.bc
 share/clc/gfx602-amdgcn--.bc
 share/clc/gfx602-amdgcn-mesa-mesa3d.bc
 share/clc/gfx705-amdgcn--.bc
@@ -96,10 +100,9 @@ share/clc/kaveri-amdgcn--.bc
 share/clc/kaveri-amdgcn-mesa-mesa3d.bc
 share/clc/mullins-amdgcn--.bc
 share/clc/mullins-amdgcn-mesa-mesa3d.bc
-share/clc/nvptx--.bc
-share/clc/nvptx--nvidiacl.bc
 share/clc/nvptx64--.bc
 share/clc/nvptx64--nvidiacl.bc
+share/clc/nvptx64-nvidia-cuda.bc
 share/clc/oland-amdgcn--.bc
 share/clc/oland-amdgcn-mesa-mesa3d.bc
 share/clc/palm-r600--.bc
