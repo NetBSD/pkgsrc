@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6870 2026/10/11 09:07:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6871 2026/10/11 10:15:02 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10333,3 +10333,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/libclc to 22.1.8 [ryoon 2026-10-11]
 	Updated devel/ast-grep to 0.50.0 [wiz 2026-10-11]
 	Updated textproc/rumdl to 0.2.79 [wiz 2026-10-11]
+	Updated www/resterm to 1.14.0 [drixter 2026-10-11]
