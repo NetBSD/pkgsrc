@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/02 21:09:12 rillig Exp $
-#
+# $NetBSD: options.mk,v 1.3 2026/10/11 07:51:10 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aubio
 PKG_SUPPORTED_OPTIONS=	jack alsa
