@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6884 2026/10/11 16:15:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6885 2026/10/11 16:16:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10347,3 +10347,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/leantar to 0.1.21 [wiz 2026-10-11]
 	Updated graphics/libheif to 1.23.6 [wiz 2026-10-11]
 	Updated misc/libimobiledevice-glue to 1.3.3 [wiz 2026-10-11]
+	Updated textproc/tree-sitter to 0.27.1 [wiz 2026-10-11]
