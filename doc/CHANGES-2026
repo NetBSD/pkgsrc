@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6865 2026/10/11 06:44:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6866 2026/10/11 07:20:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10325,3 +10325,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated parallel/spirv-llvm-translator to 22.1.7 [adam 2026-10-11]
 	Updated lang/zig to 0.17.0 [adam 2026-10-11]
 	Updated x11/wxGTK32 to 3.2.12 [adam 2026-10-11]
+	Updated textproc/yq to 4.4.5 [adam 2026-10-11]
+	Updated time/py-rfc3339 to 2.1.1 [adam 2026-10-11]
+	Updated textproc/py-black to 26.10.1 [adam 2026-10-11]
+	Updated devel/py-blockbuster to 1.5.29 [adam 2026-10-11]
