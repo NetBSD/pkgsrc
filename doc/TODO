@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28125 2026/10/11 07:56:42 wiz Exp $
+$NetBSD: TODO,v 1.28126 2026/10/11 08:52:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
-	o ast-grep-0.50.0
 	o asymptote-3.01
 	o atril-1.28.4
 	o audacity-4.0.0
@@ -1150,7 +1149,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-pillow-heif-1.8.0
-	o py-pip-26.4
 	o py-postgresql-5.1.2
 	o py-pydantic-core-2.49.0 [waiting for py-pydantic release that works with this]
 	o py-simpletal-5.1
@@ -1200,6 +1198,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rubber-1.5.1
 	o rumdl-0.2.79
 	o rust-1.99.0 [wip]
+	o rustdesk-1.5.0
+	o rustdesk-server-1.1.16
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
