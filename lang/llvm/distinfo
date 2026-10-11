@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2026/10/11 05:28:12 adam Exp $
+$NetBSD: distinfo,v 1.53 2026/10/11 05:35:54 adam Exp $
 
 BLAKE2s (llvm-project-22.1.8.src.tar.xz) = 07f9fe26ade885b62c6d7349df72a723a33df8f130703c2bdbd733ba7c2e94bc
 SHA512 (llvm-project-22.1.8.src.tar.xz) = 2615b20ba08534f83ab8ecc7b5ba43b5f1dfcf9cdb2534a32fcdbf0ccdd9a008b46276e45ef26ed9377f65b5e4ae89ea798f3863fd034484b5715140f3a7b35c
@@ -7,8 +7,7 @@ SHA1 (patch-CMakeLists.txt) = e7ed5046d2f6f2f6338bc842e83666ed109bd2b0
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 8247115b19af5c19399a94f64ef65e2fbef62b9b
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
-SHA1 (patch-include_llvm_CodeGen_RDFRegisters.h) = 906be4b85954ca4a1dc4b34946a7bfcbf6c4758a
 SHA1 (patch-lib_ObjCopy_MachO_MachOLayoutBuilder.cpp) = ecfffdb53cbc53fbb304f478fb908bfe703dfa2b
-SHA1 (patch-lib_ObjCopy_MachO_MachOWriter.cpp) = 73e6d111214cc8a8928457e2efdd1775ede27be4
+SHA1 (patch-lib_ObjCopy_MachO_MachOWriter.cpp) = c0ad0d6e2e084045cccaf3619e7c32ccc1b1f842
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 92558f2d7d87b7a26f7f3a2b3b3dc539ae13e672
 SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = be83a1ac3df2b28d295d2693a35f2e65d2a34a73
