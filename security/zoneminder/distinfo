@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.30 2026/08/11 19:27:14 gdt Exp $
+$NetBSD: distinfo,v 1.31 2026/10/11 00:04:42 gdt Exp $
 
 BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
 SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
 Size (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 73086 bytes
-BLAKE2s (ZoneMinder-1.38.4.tar.gz) = e0fd482ac88d85a7af7fe9af23f65e2197b267e840a13839a877e3d0cc4b2203
-SHA512 (ZoneMinder-1.38.4.tar.gz) = 582344cbf2027d203f2b206084537fd2b4ea292a518a83a7ef32635fdc1f0113eb50e149716f0539abaa2cc1520291c83f9ca92a0475c71717581c188c839fe3
-Size (ZoneMinder-1.38.4.tar.gz) = 20579498 bytes
+BLAKE2s (ZoneMinder-1.38.6.tar.gz) = d245f2641a2aebf274a42701b81b94f7f0c68f9b8e6e1e49d5a431212395ef66
+SHA512 (ZoneMinder-1.38.6.tar.gz) = f315e266a824f7ed23c189d2811a3b583a7474e3ae1c1bea33e4fa8e1dfc193c7e1fe18bcebec9f6cdde677d41d90581c9f9f5d32a7980acb7b919bd1b98aae1
+Size (ZoneMinder-1.38.6.tar.gz) = 20658550 bytes
 BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 4639184438becb1c33450a00e213fca9d11e92b7f2545fb701f40a664c716764
 SHA512 (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 75f2188e548b98191c8df82fb76e918f3bda9788f541449df8fa92449ad19aa0b9c13420dd91c760e08a4d31956ad51602242ab97e3bd4460f01e99f49992453
 Size (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 3504 bytes
@@ -17,13 +17,12 @@ SHA512 (chmike-CxxUrl-eaf46c0207df24853a238d4499e7f4426d9d234c.tar.gz) = acdf5a2
 Size (chmike-CxxUrl-eaf46c0207df24853a238d4499e7f4426d9d234c.tar.gz) = 14299 bytes
 SHA1 (patch-CMakeLists.txt) = 51899465cbf3bdafea590989d5bbf176054c3764
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in) = 9cf3f3f9da6a3cb4911bbb127a2d10d7edd8929f
-SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 5350c37edb0d5d52613a734a20516ce6aefb417d
+SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = c31203f6d2155a73434da40d4c1d8d5be9e2dfe8
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = 38de6349f2071eef146009e029a3a0592aa9720a
 SHA1 (patch-scripts_zm_in) = e1e344b2bddaffa63c435541f6d5e78af73de80b
 SHA1 (patch-scripts_zmpkg_pl_in) = 429ea720574e19d96a34ad6a39f1196a90ac8a86
 SHA1 (patch-src_zm__comms.h) = b6b68d50dfb73a72fd9609d50890aed6ecde9294
 SHA1 (patch-src_zm__remote__camera__nvsocket.cpp) = 2af57a1fe70369b0d377932570370838466c1535
-SHA1 (patch-src_zm__rtp__source.cpp) = ba46738d040ad0c83a49e0d5cc368f2752535b6e
-SHA1 (patch-src_zm__utils.cpp) = c347ad18989ca83e4317fb7e7eb3ba9fed4e99fa
-SHA1 (patch-src_zm_signal_cpp) = 68c97ef3b3bc9b0be0069bee0842e31c9317582e
+SHA1 (patch-src_zm__utils.cpp) = e520c226020dfdd19814b4f3ade66c773213d914
+SHA1 (patch-src_zm_signal_cpp) = ecade9c2f9597b001b99eacb8a65cffcf3e9136c
 SHA1 (patch-web_includes_database.php) = 0d7e455220a59e94d5dd9acfd83858b78dce889b

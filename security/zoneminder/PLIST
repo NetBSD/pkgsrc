@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/08/11 19:27:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/10/11 00:04:42 gdt Exp $
 bin/zm_rtsp_server
 bin/zmaudit.pl
 bin/zmc
@@ -3087,7 +3087,6 @@ ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Control/Vivotek_ePTZ.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Control/Wanscam.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Control/WanscamHW0025.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Control/mjpgStreamer.pm
-${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Control/onvif.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Database.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Event.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/ZoneMinder/Event_Summary.pm
@@ -6495,6 +6494,7 @@ share/zoneminder/db/zm_update-1.37.80.sql
 share/zoneminder/db/zm_update-1.37.9.sql
 share/zoneminder/db/zm_update-1.38.1.sql
 share/zoneminder/db/zm_update-1.38.4.sql
+share/zoneminder/db/zm_update-1.38.5.sql
 share/zoneminder/fonts/default.zmfnt
 ${ZM_HTTPD_ROOT}/ajax/add_monitors.php
 ${ZM_HTTPD_ROOT}/ajax/alarm.php
@@ -7925,11 +7925,13 @@ ${ZM_HTTPD_ROOT}/includes/Frame.php
 ${ZM_HTTPD_ROOT}/includes/Group.php
 ${ZM_HTTPD_ROOT}/includes/Group_Monitor.php
 ${ZM_HTTPD_ROOT}/includes/Group_Permission.php
+${ZM_HTTPD_ROOT}/includes/HttpRange.php
 ${ZM_HTTPD_ROOT}/includes/Manufacturer.php
 ${ZM_HTTPD_ROOT}/includes/Model.php
 ${ZM_HTTPD_ROOT}/includes/Monitor.php
 ${ZM_HTTPD_ROOT}/includes/Monitor_Permission.php
 ${ZM_HTTPD_ROOT}/includes/MontageLayout.php
+${ZM_HTTPD_ROOT}/includes/Network.php
 ${ZM_HTTPD_ROOT}/includes/Object.php
 ${ZM_HTTPD_ROOT}/includes/Report.php
 ${ZM_HTTPD_ROOT}/includes/Role_Group_Permission.php
@@ -8613,6 +8615,7 @@ ${ZM_HTTPD_ROOT}/skins/classic/views/js/add_monitors.js
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/console.js
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/console.js.php
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/control.js
+${ZM_HTTPD_ROOT}/skins/classic/views/js/control.js.php
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/controlcap.js
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/controlcaps.js
 ${ZM_HTTPD_ROOT}/skins/classic/views/js/cycle.js

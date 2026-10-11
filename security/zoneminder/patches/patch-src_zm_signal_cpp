@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_signal_cpp,v 1.5 2026/07/30 12:36:00 gdt Exp $
+$NetBSD: patch-src_zm_signal_cpp,v 1.6 2026/10/11 00:04:42 gdt Exp $
 
 Don't assume machine-dependent IP register details are available for any
 platform except Linux.  Only Linux is sure to have this style of mcontext_t.
@@ -6,18 +6,18 @@ Instead, add an #else for NetBSD.
 
 \todo File upstream.
 
---- src/zm_signal.cpp.orig	2026-05-28 12:42:49.000000000 +0000
+--- src/zm_signal.cpp.orig	2026-10-05 23:07:17.000000000 +0000
 +++ src/zm_signal.cpp
-@@ -118,6 +118,8 @@ RETSIGTYPE zm_die_handler(int signal)
- #if defined(__x86_64__)
- #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
+@@ -120,6 +120,8 @@ RETSIGTYPE zm_die_handler(int signal)
+     ip = (void *)(uc->uc_mcontext->__ss.__rip);
+ #elif defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
      ip = (void *)(uc->uc_mcontext.mc_rip);
 +#elif defined(__NetBSD__)
 +    ip = (void *) _UC_MACHINE_PC(uc);
  #elif defined(__OpenBSD__)
      ip = (void *)(uc->sc_rip);
  #else
-@@ -126,18 +128,24 @@ RETSIGTYPE zm_die_handler(int signal)
+@@ -128,6 +130,8 @@ RETSIGTYPE zm_die_handler(int signal)
  #elif defined(__i386__)
  #if defined(__FreeBSD_kernel__) || defined(__FreeBSD__)
      ip = (void *)(uc->uc_mcontext.mc_eip);
@@ -26,8 +26,9 @@ Instead, add an #else for NetBSD.
  #else
      ip = (void *)(uc->uc_mcontext.gregs[REG_EIP]);
  #endif
- #elif defined(__aarch64__)
- #if defined(__FreeBSD__)
+@@ -136,12 +140,16 @@ RETSIGTYPE zm_die_handler(int signal)
+     ip = (void *)(uc->uc_mcontext->__ss.__pc);
+ #elif defined(__FreeBSD__)
      ip = (void *)(uc->uc_mcontext.mc_gpregs.gp_elr);
 +#elif defined(__NetBSD__)
 +    ip = (void *) _UC_MACHINE_PC(uc);
