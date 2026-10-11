@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6862 2026/10/11 05:46:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6863 2026/10/11 05:55:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10319,3 +10319,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/include-what-you-use to 0.26 [adam 2026-10-11]
 	Updated devel/woboq_codebrowser to 2.1.20260407 [adam 2026-10-11]
 	Updated devel/py-llvmlite to 0.50.0 [adam 2026-10-11]
+	Updated math/py-numpy to 2.5.4 [adam 2026-10-11]
+	Updated math/py-numba to 0.68.0 [adam 2026-10-11]
