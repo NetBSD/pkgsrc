@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6873 2026/10/11 12:26:41 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6874 2026/10/11 12:29:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10336,3 +10336,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.14.0 [drixter 2026-10-11]
 	Updated lang/wasi-libc to 0.0.0pre20261001 [ryoon 2026-10-11]
 	Updated lang/wasi-compiler-rt to 22.1.8nb1 [ryoon 2026-10-11]
+	Updated lang/wasi-libcxx to 22.1.8nb1 [ryoon 2026-10-11]
