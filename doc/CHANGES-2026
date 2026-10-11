@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6869 2026/10/11 08:52:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6870 2026/10/11 09:07:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10332,3 +10332,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Package-Stash-XS to 0.32 [wiz 2026-10-11]
 	Updated lang/libclc to 22.1.8 [ryoon 2026-10-11]
 	Updated devel/ast-grep to 0.50.0 [wiz 2026-10-11]
+	Updated textproc/rumdl to 0.2.79 [wiz 2026-10-11]
