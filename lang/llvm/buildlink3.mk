@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2026/10/11 05:28:12 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2026/10/11 16:02:16 wiz Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -14,6 +14,7 @@ GCC_REQD+=		14
 .endif
 
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=22.1.0
+BUILDLINK_ABI_DEPENDS.llvm?=	llvm>=22.1.8
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config

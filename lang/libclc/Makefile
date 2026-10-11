@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/02 20:22:38 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/11 16:02:20 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	libclc-${LLVM_VERSION}

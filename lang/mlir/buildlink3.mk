@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/10/11 05:28:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/10/11 16:02:20 wiz Exp $
 
 BUILDLINK_TREE+=	mlir
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mlir
 MLIR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mlir+=	mlir>=22.1.0
+BUILDLINK_ABI_DEPENDS.mlir?=	mlir>=22.1.8nb1
 BUILDLINK_PKGSRCDIR.mlir?=	../../lang/mlir
 
 BUILDLINK_FILES.mlir+=		bin/mlir-tblgen
