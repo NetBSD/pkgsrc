@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:36 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2026/10/11 05:28:13 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldb
 
@@ -18,8 +18,6 @@ CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DLLDB_ENABLE_CURSES=ON
-CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_TERMINFO=ON
 .else
 CMAKE_CONFIGURE_ARGS+=	-DLLDB_ENABLE_CURSES=OFF
-CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 .endif

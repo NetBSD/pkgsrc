@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2026/04/16 06:33:52 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/10/11 05:28:15 adam Exp $
 
-BLAKE2s (llvm-project-21.1.8.src.tar.xz) = e6db98fed167ddd56b49c7eb46c4de7e7e8e08158e9c99ae79806983bcb60ae9
-SHA512 (llvm-project-21.1.8.src.tar.xz) = cae4c44e7bf678071723da63ad5839491d717a7233e7f4791aa408207f3ea42f52de939ad15189b112c02a0770f1bb8d59bae6ad31ef53417a6eea7770fe52ab
-Size (llvm-project-21.1.8.src.tar.xz) = 158958576 bytes
+BLAKE2s (llvm-project-22.1.8.src.tar.xz) = 07f9fe26ade885b62c6d7349df72a723a33df8f130703c2bdbd733ba7c2e94bc
+SHA512 (llvm-project-22.1.8.src.tar.xz) = 2615b20ba08534f83ab8ecc7b5ba43b5f1dfcf9cdb2534a32fcdbf0ccdd9a008b46276e45ef26ed9377f65b5e4ae89ea798f3863fd034484b5715140f3a7b35c
+Size (llvm-project-22.1.8.src.tar.xz) = 167061596 bytes
 SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = ec96152743be4c33231899399f9e7cde5655b321
 SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 7b78acbf8a85443f2cc3f13786bbbda25b0b8d74

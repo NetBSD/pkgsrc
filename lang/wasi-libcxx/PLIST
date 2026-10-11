@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/04/16 06:33:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/10/11 05:28:15 adam Exp $
 wasi/include/c++/v1/__algorithm/adjacent_find.h
 wasi/include/c++/v1/__algorithm/all_of.h
 wasi/include/c++/v1/__algorithm/any_of.h
@@ -194,6 +194,7 @@ wasi/include/c++/v1/__algorithm/sift_down.h
 wasi/include/c++/v1/__algorithm/simd_utils.h
 wasi/include/c++/v1/__algorithm/sort.h
 wasi/include/c++/v1/__algorithm/sort_heap.h
+wasi/include/c++/v1/__algorithm/specialized_algorithms.h
 wasi/include/c++/v1/__algorithm/stable_partition.h
 wasi/include/c++/v1/__algorithm/stable_sort.h
 wasi/include/c++/v1/__algorithm/swap_ranges.h
@@ -214,9 +215,12 @@ wasi/include/c++/v1/__atomic/atomic_init.h
 wasi/include/c++/v1/__atomic/atomic_lock_free.h
 wasi/include/c++/v1/__atomic/atomic_ref.h
 wasi/include/c++/v1/__atomic/atomic_sync.h
+wasi/include/c++/v1/__atomic/atomic_sync_timed.h
+wasi/include/c++/v1/__atomic/atomic_waitable_traits.h
 wasi/include/c++/v1/__atomic/check_memory_order.h
 wasi/include/c++/v1/__atomic/contention_t.h
 wasi/include/c++/v1/__atomic/fence.h
+wasi/include/c++/v1/__atomic/floating_point_helper.h
 wasi/include/c++/v1/__atomic/is_always_lock_free.h
 wasi/include/c++/v1/__atomic/kill_dependency.h
 wasi/include/c++/v1/__atomic/memory_order.h
@@ -262,6 +266,7 @@ wasi/include/c++/v1/__chrono/formatter.h
 wasi/include/c++/v1/__chrono/gps_clock.h
 wasi/include/c++/v1/__chrono/hh_mm_ss.h
 wasi/include/c++/v1/__chrono/high_resolution_clock.h
+wasi/include/c++/v1/__chrono/is_clock.h
 wasi/include/c++/v1/__chrono/leap_second.h
 wasi/include/c++/v1/__chrono/literals.h
 wasi/include/c++/v1/__chrono/local_info.h
@@ -306,6 +311,7 @@ wasi/include/c++/v1/__concepts/boolean_testable.h
 wasi/include/c++/v1/__concepts/class_or_enum.h
 wasi/include/c++/v1/__concepts/common_reference_with.h
 wasi/include/c++/v1/__concepts/common_with.h
+wasi/include/c++/v1/__concepts/comparison_common_type.h
 wasi/include/c++/v1/__concepts/constructible.h
 wasi/include/c++/v1/__concepts/convertible_to.h
 wasi/include/c++/v1/__concepts/copyable.h
@@ -328,6 +334,8 @@ wasi/include/c++/v1/__config_site
 wasi/include/c++/v1/__configuration/abi.h
 wasi/include/c++/v1/__configuration/availability.h
 wasi/include/c++/v1/__configuration/compiler.h
+wasi/include/c++/v1/__configuration/experimental.h
+wasi/include/c++/v1/__configuration/hardening.h
 wasi/include/c++/v1/__configuration/language.h
 wasi/include/c++/v1/__configuration/platform.h
 wasi/include/c++/v1/__coroutine/coroutine_handle.h
@@ -838,7 +846,6 @@ wasi/include/c++/v1/__cxx03/clocale
 wasi/include/c++/v1/__cxx03/cmath
 wasi/include/c++/v1/__cxx03/codecvt
 wasi/include/c++/v1/__cxx03/complex
-wasi/include/c++/v1/__cxx03/complex.h
 wasi/include/c++/v1/__cxx03/condition_variable
 wasi/include/c++/v1/__cxx03/csetjmp
 wasi/include/c++/v1/__cxx03/csignal
@@ -851,25 +858,20 @@ wasi/include/c++/v1/__cxx03/cstdlib
 wasi/include/c++/v1/__cxx03/cstring
 wasi/include/c++/v1/__cxx03/ctgmath
 wasi/include/c++/v1/__cxx03/ctime
-wasi/include/c++/v1/__cxx03/ctype.h
 wasi/include/c++/v1/__cxx03/cuchar
 wasi/include/c++/v1/__cxx03/cwchar
 wasi/include/c++/v1/__cxx03/cwctype
 wasi/include/c++/v1/__cxx03/deque
-wasi/include/c++/v1/__cxx03/errno.h
 wasi/include/c++/v1/__cxx03/exception
 wasi/include/c++/v1/__cxx03/experimental/__config
 wasi/include/c++/v1/__cxx03/experimental/utility
 wasi/include/c++/v1/__cxx03/ext/__hash
 wasi/include/c++/v1/__cxx03/ext/hash_map
 wasi/include/c++/v1/__cxx03/ext/hash_set
-wasi/include/c++/v1/__cxx03/fenv.h
-wasi/include/c++/v1/__cxx03/float.h
 wasi/include/c++/v1/__cxx03/forward_list
 wasi/include/c++/v1/__cxx03/fstream
 wasi/include/c++/v1/__cxx03/functional
 wasi/include/c++/v1/__cxx03/future
-wasi/include/c++/v1/__cxx03/inttypes.h
 wasi/include/c++/v1/__cxx03/iomanip
 wasi/include/c++/v1/__cxx03/ios
 wasi/include/c++/v1/__cxx03/iosfwd
@@ -896,11 +898,8 @@ wasi/include/c++/v1/__cxx03/set
 wasi/include/c++/v1/__cxx03/sstream
 wasi/include/c++/v1/__cxx03/stack
 wasi/include/c++/v1/__cxx03/stdatomic.h
-wasi/include/c++/v1/__cxx03/stdbool.h
-wasi/include/c++/v1/__cxx03/stddef.h
 wasi/include/c++/v1/__cxx03/stdexcept
 wasi/include/c++/v1/__cxx03/stdint.h
-wasi/include/c++/v1/__cxx03/stdio.h
 wasi/include/c++/v1/__cxx03/stdlib.h
 wasi/include/c++/v1/__cxx03/streambuf
 wasi/include/c++/v1/__cxx03/string
@@ -908,7 +907,6 @@ wasi/include/c++/v1/__cxx03/string.h
 wasi/include/c++/v1/__cxx03/string_view
 wasi/include/c++/v1/__cxx03/strstream
 wasi/include/c++/v1/__cxx03/system_error
-wasi/include/c++/v1/__cxx03/tgmath.h
 wasi/include/c++/v1/__cxx03/thread
 wasi/include/c++/v1/__cxx03/type_traits
 wasi/include/c++/v1/__cxx03/typeindex
@@ -921,7 +919,6 @@ wasi/include/c++/v1/__cxx03/valarray
 wasi/include/c++/v1/__cxx03/vector
 wasi/include/c++/v1/__cxx03/version
 wasi/include/c++/v1/__cxx03/wchar.h
-wasi/include/c++/v1/__cxx03/wctype.h
 wasi/include/c++/v1/__cxxabi_config.h
 wasi/include/c++/v1/__debug_utils/randomize_range.h
 wasi/include/c++/v1/__debug_utils/sanitizers.h
@@ -967,6 +964,7 @@ wasi/include/c++/v1/__format/container_adaptor.h
 wasi/include/c++/v1/__format/enable_insertable.h
 wasi/include/c++/v1/__format/escaped_output_table.h
 wasi/include/c++/v1/__format/extended_grapheme_cluster_table.h
+wasi/include/c++/v1/__format/fmt_pair_like.h
 wasi/include/c++/v1/__format/format_arg.h
 wasi/include/c++/v1/__format/format_arg_store.h
 wasi/include/c++/v1/__format/format_args.h
@@ -989,6 +987,7 @@ wasi/include/c++/v1/__format/formatter_tuple.h
 wasi/include/c++/v1/__format/indic_conjunct_break_table.h
 wasi/include/c++/v1/__format/parser_std_format_spec.h
 wasi/include/c++/v1/__format/range_default_formatter.h
+wasi/include/c++/v1/__format/range_format.h
 wasi/include/c++/v1/__format/range_formatter.h
 wasi/include/c++/v1/__format/unicode.h
 wasi/include/c++/v1/__format/width_estimation_table.h
@@ -1031,14 +1030,12 @@ wasi/include/c++/v1/__fwd/functional.h
 wasi/include/c++/v1/__fwd/get.h
 wasi/include/c++/v1/__fwd/ios.h
 wasi/include/c++/v1/__fwd/istream.h
-wasi/include/c++/v1/__fwd/map.h
 wasi/include/c++/v1/__fwd/mdspan.h
 wasi/include/c++/v1/__fwd/memory.h
 wasi/include/c++/v1/__fwd/memory_resource.h
 wasi/include/c++/v1/__fwd/ostream.h
 wasi/include/c++/v1/__fwd/pair.h
 wasi/include/c++/v1/__fwd/queue.h
-wasi/include/c++/v1/__fwd/set.h
 wasi/include/c++/v1/__fwd/span.h
 wasi/include/c++/v1/__fwd/sstream.h
 wasi/include/c++/v1/__fwd/stack.h
@@ -1100,21 +1097,22 @@ wasi/include/c++/v1/__locale
 wasi/include/c++/v1/__locale_dir/check_grouping.h
 wasi/include/c++/v1/__locale_dir/get_c_locale.h
 wasi/include/c++/v1/__locale_dir/locale_base_api.h
-wasi/include/c++/v1/__locale_dir/locale_base_api/android.h
 wasi/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_fallbacks.h
 wasi/include/c++/v1/__locale_dir/locale_base_api/ibm.h
-wasi/include/c++/v1/__locale_dir/locale_base_api/musl.h
 wasi/include/c++/v1/__locale_dir/locale_base_api/openbsd.h
 wasi/include/c++/v1/__locale_dir/messages.h
 wasi/include/c++/v1/__locale_dir/money.h
 wasi/include/c++/v1/__locale_dir/num.h
 wasi/include/c++/v1/__locale_dir/pad_and_output.h
 wasi/include/c++/v1/__locale_dir/scan_keyword.h
+wasi/include/c++/v1/__locale_dir/support/aix.h
 wasi/include/c++/v1/__locale_dir/support/apple.h
 wasi/include/c++/v1/__locale_dir/support/bsd_like.h
 wasi/include/c++/v1/__locale_dir/support/freebsd.h
 wasi/include/c++/v1/__locale_dir/support/fuchsia.h
 wasi/include/c++/v1/__locale_dir/support/linux.h
+wasi/include/c++/v1/__locale_dir/support/netbsd.h
+wasi/include/c++/v1/__locale_dir/support/newlib.h
 wasi/include/c++/v1/__locale_dir/support/no_locale/characters.h
 wasi/include/c++/v1/__locale_dir/support/no_locale/strtonum.h
 wasi/include/c++/v1/__locale_dir/support/windows.h
@@ -1152,7 +1150,6 @@ wasi/include/c++/v1/__mdspan/layout_stride.h
 wasi/include/c++/v1/__mdspan/mdspan.h
 wasi/include/c++/v1/__memory/addressof.h
 wasi/include/c++/v1/__memory/align.h
-wasi/include/c++/v1/__memory/aligned_alloc.h
 wasi/include/c++/v1/__memory/allocate_at_least.h
 wasi/include/c++/v1/__memory/allocation_guard.h
 wasi/include/c++/v1/__memory/allocator.h
@@ -1282,6 +1279,8 @@ wasi/include/c++/v1/__random/uniform_random_bit_generator.h
 wasi/include/c++/v1/__random/uniform_real_distribution.h
 wasi/include/c++/v1/__random/weibull_distribution.h
 wasi/include/c++/v1/__ranges/access.h
+wasi/include/c++/v1/__ranges/adjacent_transform_view.h
+wasi/include/c++/v1/__ranges/adjacent_view.h
 wasi/include/c++/v1/__ranges/all.h
 wasi/include/c++/v1/__ranges/as_rvalue_view.h
 wasi/include/c++/v1/__ranges/chunk_by_view.h
@@ -1293,6 +1292,7 @@ wasi/include/c++/v1/__ranges/dangling.h
 wasi/include/c++/v1/__ranges/data.h
 wasi/include/c++/v1/__ranges/drop_view.h
 wasi/include/c++/v1/__ranges/drop_while_view.h
+wasi/include/c++/v1/__ranges/elements_of.h
 wasi/include/c++/v1/__ranges/elements_view.h
 wasi/include/c++/v1/__ranges/empty.h
 wasi/include/c++/v1/__ranges/empty_view.h
@@ -1324,6 +1324,7 @@ wasi/include/c++/v1/__ranges/to.h
 wasi/include/c++/v1/__ranges/transform_view.h
 wasi/include/c++/v1/__ranges/view_interface.h
 wasi/include/c++/v1/__ranges/views.h
+wasi/include/c++/v1/__ranges/zip_transform_view.h
 wasi/include/c++/v1/__ranges/zip_view.h
 wasi/include/c++/v1/__split_buffer
 wasi/include/c++/v1/__std_mbstate_t.h
@@ -1364,22 +1365,18 @@ wasi/include/c++/v1/__thread/timed_backoff_policy.h
 wasi/include/c++/v1/__tree
 wasi/include/c++/v1/__tuple/find_index.h
 wasi/include/c++/v1/__tuple/ignore.h
-wasi/include/c++/v1/__tuple/make_tuple_types.h
 wasi/include/c++/v1/__tuple/sfinae_helpers.h
 wasi/include/c++/v1/__tuple/tuple_element.h
-wasi/include/c++/v1/__tuple/tuple_indices.h
 wasi/include/c++/v1/__tuple/tuple_like.h
-wasi/include/c++/v1/__tuple/tuple_like_ext.h
 wasi/include/c++/v1/__tuple/tuple_like_no_subrange.h
 wasi/include/c++/v1/__tuple/tuple_size.h
-wasi/include/c++/v1/__tuple/tuple_types.h
+wasi/include/c++/v1/__tuple/tuple_transform.h
 wasi/include/c++/v1/__type_traits/add_cv_quals.h
 wasi/include/c++/v1/__type_traits/add_pointer.h
 wasi/include/c++/v1/__type_traits/add_reference.h
 wasi/include/c++/v1/__type_traits/aligned_storage.h
 wasi/include/c++/v1/__type_traits/aligned_union.h
 wasi/include/c++/v1/__type_traits/alignment_of.h
-wasi/include/c++/v1/__type_traits/can_extract_key.h
 wasi/include/c++/v1/__type_traits/common_reference.h
 wasi/include/c++/v1/__type_traits/common_type.h
 wasi/include/c++/v1/__type_traits/conditional.h
@@ -1408,7 +1405,6 @@ wasi/include/c++/v1/__type_traits/is_arithmetic.h
 wasi/include/c++/v1/__type_traits/is_array.h
 wasi/include/c++/v1/__type_traits/is_assignable.h
 wasi/include/c++/v1/__type_traits/is_base_of.h
-wasi/include/c++/v1/__type_traits/is_bounded_array.h
 wasi/include/c++/v1/__type_traits/is_callable.h
 wasi/include/c++/v1/__type_traits/is_char_like_type.h
 wasi/include/c++/v1/__type_traits/is_class.h
@@ -1427,6 +1423,7 @@ wasi/include/c++/v1/__type_traits/is_final.h
 wasi/include/c++/v1/__type_traits/is_floating_point.h
 wasi/include/c++/v1/__type_traits/is_function.h
 wasi/include/c++/v1/__type_traits/is_fundamental.h
+wasi/include/c++/v1/__type_traits/is_generic_transparent_comparator.h
 wasi/include/c++/v1/__type_traits/is_implicit_lifetime.h
 wasi/include/c++/v1/__type_traits/is_implicitly_default_constructible.h
 wasi/include/c++/v1/__type_traits/is_integral.h
@@ -1444,7 +1441,6 @@ wasi/include/c++/v1/__type_traits/is_primary_template.h
 wasi/include/c++/v1/__type_traits/is_reference.h
 wasi/include/c++/v1/__type_traits/is_reference_wrapper.h
 wasi/include/c++/v1/__type_traits/is_referenceable.h
-wasi/include/c++/v1/__type_traits/is_replaceable.h
 wasi/include/c++/v1/__type_traits/is_same.h
 wasi/include/c++/v1/__type_traits/is_scalar.h
 wasi/include/c++/v1/__type_traits/is_signed.h
@@ -1458,17 +1454,18 @@ wasi/include/c++/v1/__type_traits/is_trivially_copyable.h
 wasi/include/c++/v1/__type_traits/is_trivially_destructible.h
 wasi/include/c++/v1/__type_traits/is_trivially_lexicographically_comparable.h
 wasi/include/c++/v1/__type_traits/is_trivially_relocatable.h
-wasi/include/c++/v1/__type_traits/is_unbounded_array.h
 wasi/include/c++/v1/__type_traits/is_union.h
 wasi/include/c++/v1/__type_traits/is_unqualified.h
 wasi/include/c++/v1/__type_traits/is_unsigned.h
 wasi/include/c++/v1/__type_traits/is_valid_expansion.h
 wasi/include/c++/v1/__type_traits/is_void.h
 wasi/include/c++/v1/__type_traits/is_volatile.h
+wasi/include/c++/v1/__type_traits/is_within_lifetime.h
 wasi/include/c++/v1/__type_traits/lazy.h
 wasi/include/c++/v1/__type_traits/make_32_64_or_128_bit.h
 wasi/include/c++/v1/__type_traits/make_const_lvalue_ref.h
 wasi/include/c++/v1/__type_traits/make_signed.h
+wasi/include/c++/v1/__type_traits/make_transparent.h
 wasi/include/c++/v1/__type_traits/make_unsigned.h
 wasi/include/c++/v1/__type_traits/maybe_const.h
 wasi/include/c++/v1/__type_traits/nat.h
@@ -1500,6 +1497,7 @@ wasi/include/c++/v1/__utility/auto_cast.h
 wasi/include/c++/v1/__utility/cmp.h
 wasi/include/c++/v1/__utility/convert_to_integral.h
 wasi/include/c++/v1/__utility/declval.h
+wasi/include/c++/v1/__utility/default_three_way_comparator.h
 wasi/include/c++/v1/__utility/element_count.h
 wasi/include/c++/v1/__utility/empty.h
 wasi/include/c++/v1/__utility/exception_guard.h
@@ -1510,6 +1508,7 @@ wasi/include/c++/v1/__utility/in_place.h
 wasi/include/c++/v1/__utility/integer_sequence.h
 wasi/include/c++/v1/__utility/is_pointer_in_range.h
 wasi/include/c++/v1/__utility/is_valid_range.h
+wasi/include/c++/v1/__utility/lazy_synth_three_way_comparator.h
 wasi/include/c++/v1/__utility/move.h
 wasi/include/c++/v1/__utility/no_destroy.h
 wasi/include/c++/v1/__utility/pair.h
@@ -1521,6 +1520,7 @@ wasi/include/c++/v1/__utility/scope_guard.h
 wasi/include/c++/v1/__utility/small_buffer.h
 wasi/include/c++/v1/__utility/swap.h
 wasi/include/c++/v1/__utility/to_underlying.h
+wasi/include/c++/v1/__utility/try_key_extraction.h
 wasi/include/c++/v1/__utility/unreachable.h
 wasi/include/c++/v1/__variant/monostate.h
 wasi/include/c++/v1/__vector/comparison.h
@@ -1650,7 +1650,6 @@ wasi/include/c++/v1/span
 wasi/include/c++/v1/sstream
 wasi/include/c++/v1/stack
 wasi/include/c++/v1/stdatomic.h
-wasi/include/c++/v1/stdbool.h
 wasi/include/c++/v1/stddef.h
 wasi/include/c++/v1/stdexcept
 wasi/include/c++/v1/stdio.h

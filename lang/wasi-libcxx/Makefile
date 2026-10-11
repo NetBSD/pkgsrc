@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/03/25 22:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/10/11 05:28:15 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,7 +16,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-TOOL_DEPENDS+=	lld-[0-9]*:../../devel/lld
+TOOL_DEPENDS+=	lld>=0:../../devel/lld
 
 # Workaround for header conflicts
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
