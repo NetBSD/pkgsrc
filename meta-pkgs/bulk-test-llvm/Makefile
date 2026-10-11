@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/09/03 06:23:05 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/11 13:37:35 gutteridge Exp $
 
-DISTNAME=	bulk-test-llvm-20260410
+DISTNAME=	bulk-test-llvm-20261011
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,7 +42,7 @@ DEPENDS+=	cvise-[0-9]*:../../devel/cvise
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
 DEPENDS+=	include-what-you-use-[0-9]*:../../devel/include-what-you-use
-DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
+DEPENDS+=	mozjs128-[0-9]*:../../lang/mozjs128
 DEPENDS+=	opencl-clang-[0-9]*:../../parallel/opencl-clang
 DEPENDS+=	pocl-[0-9]*:../../parallel/pocl
 DEPENDS+=	${PYPKGPREFIX}-llvmlite-[0-9]*:../../devel/py-llvmlite
