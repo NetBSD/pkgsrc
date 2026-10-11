@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.177 2026/09/29 06:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2026/10/11 16:21:19 wiz Exp $
 
-DISTNAME=	geeqie-3.2
-PKGREVISION=	1
+DISTNAME=	geeqie-3.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -36,8 +35,8 @@ MESON_ARGS+=	--localedir='${PKGLOCALEDIR}/locale'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-# test status as of 3.1
-# Ok:                1058
+# test status as of 3.3
+# Ok:                1045
 # Fail:              1
 
 .include "../../mk/bsd.fast.prefs.mk"
