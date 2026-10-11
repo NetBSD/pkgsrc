@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2026/04/16 06:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/10/11 05:44:17 adam Exp $
 
-DISTNAME=	codebrowser-2.1.20260406
+DISTNAME=	codebrowser-2.1.20260407
 PKGNAME=	woboq_${DISTNAME}
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
-GITHUB_TAG=	02e30f8f05c347b5d3831d45da7efbc3059f3c74
+GITHUB_TAG=	ebe91a86e4d06a23f5f7709d081f83e2cc14ef26
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://codebrowser.dev/
