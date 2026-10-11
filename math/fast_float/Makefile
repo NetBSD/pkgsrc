@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/10/05 04:58:03 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/11 16:06:50 wiz Exp $
 
-DISTNAME=	fast_float-8.3.1
+DISTNAME=	fast_float-8.3.2
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfloat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
