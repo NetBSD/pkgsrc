@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6911 2026/10/12 13:19:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6912 2026/10/12 13:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10391,3 +10391,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-cairo-shared to 1.29.2 [wiz 2026-10-12]
 	Updated net/py-cares to 5.1.0 [wiz 2026-10-12]
 	Updated devel/py-cparser to 3.11 [wiz 2026-10-12]
+	Updated security/py-cryptodome to 3.24.0 [wiz 2026-10-12]
