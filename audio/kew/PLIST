@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/09/28 13:12:57 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/10/12 12:24:29 ktnb Exp $
 bin/kew
 man/man1/kew.1
 man/man5/kew.5
@@ -37,5 +37,7 @@ share/kew/themes/ravachol.theme
 share/kew/themes/solarizedlight.theme
 share/kew/themes/synthwave.theme
 share/kew/themes/tokyonight.theme
+share/locale/es/LC_MESSAGES/kew.mo
 share/locale/ja/LC_MESSAGES/kew.mo
+share/locale/ru/LC_MESSAGES/kew.mo
 share/locale/zh_CN/LC_MESSAGES/kew.mo
