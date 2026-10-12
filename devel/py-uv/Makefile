@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/04/14 12:09:05 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/12 21:20:36 wiz Exp $
 
 DISTNAME=	uv-${UV_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ COMMENT=	Extremely fast Python package and project manager
 USE_TOOLS+=	gmake
 
 .include "Makefile.common"
+.include "cargo-depends.mk"
 
 PY_RENAME_BINARIES=	uv uvx
 
