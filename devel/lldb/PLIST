@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/10/11 05:28:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/10/12 21:43:12 wiz Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-dap
@@ -676,6 +676,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
+lib/liblldb.so.22.1
 lib/lua/${LUA_VERSION}/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/embedded_interpreter.py
