@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6894 2026/10/12 07:37:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6895 2026/10/12 09:10:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10358,3 +10358,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-Glances to 4.5.8 [fox 2026-10-11]
 	Removed games/0ad [wiz 2026-10-12]
 	Removed games/0ad-data [wiz 2026-10-12]
+	Updated lang/nodejs22 to 22.23.3 [adam 2026-10-12]
+	Updated devel/lazygit to 0.66.1 [adam 2026-10-12]
