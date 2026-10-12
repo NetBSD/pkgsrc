@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/09/05 09:25:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/12 12:00:51 adam Exp $
 
-DISTNAME=	backports_zstd-1.7.0
+DISTNAME=	backports_zstd-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.zstd/}
