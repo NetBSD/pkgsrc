@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2026/10/09 04:36:42 adam Exp $
+$NetBSD: distinfo,v 1.33 2026/10/12 09:09:59 adam Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -543,9 +543,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (lazygit-0.66.0.tar.gz) = 07c7a4a3e906f82a750600dc3d32d6d736b519e1e4de135c17a385e37856bea8
-SHA512 (lazygit-0.66.0.tar.gz) = e479e32b2a8081b48ccb34f0477d94257757c4ad3c286972fe5b97fa3f95aac37510388049da1ea6c087e1730fda24cfe08d9ed521b31e28ac8f26ed9f238ec3
-Size (lazygit-0.66.0.tar.gz) = 5114054 bytes
+BLAKE2s (lazygit-0.66.1.tar.gz) = b3dd4ea0d9f22974451cf80b7f8f2b1ab1e55198f835e7dfce3e2a7f70922e3c
+SHA512 (lazygit-0.66.1.tar.gz) = e48b76a6848d6ec36460d3cbabc55fbd2508944639358fa137440e3396183499ed6401b6df51d517bdff191678001b8eeb58cc05632816a6d817e42e925bd91e
+Size (lazygit-0.66.1.tar.gz) = 5121726 bytes
 BLAKE2s (mvdan.cc_gofumpt_@v_v0.11.0.mod) = a274aba3eab4b926a4d0e1717ae2c2014cf32a4a1133b1f4ad6a2a09e490338a
 SHA512 (mvdan.cc_gofumpt_@v_v0.11.0.mod) = 4d13140e685a362c07a726c453d37bcb41a60f7183114a2b156ab08cffb62afcd6e0538a23d64ece1c7387f335bf33f49b3435717cacbfca6382f28e997d7368
 Size (mvdan.cc_gofumpt_@v_v0.11.0.mod) = 371 bytes
