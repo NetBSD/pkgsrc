@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/01/25 23:11:06 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/10/12 13:19:37 wiz Exp $
 
-BLAKE2s (pycparser-3.0.tar.gz) = 7b142cb450143761b50f644840d70ce77868a691d8a6524ee4cd2e2382a7b6b9
-SHA512 (pycparser-3.0.tar.gz) = 333504ef076e369661823abcd1d1f0d4e01ebadd43b7039e403d80fc2418500c2ed2c42e7b997c6eaf9c56b16085dfccacc6d0be2d45f0033a90eac1a7ed49d0
-Size (pycparser-3.0.tar.gz) = 103492 bytes
+BLAKE2s (pycparser-3.11.tar.gz) = bbb8d9c5b442bceab043824f303d897b748d165c580f20dbbfb21e9566109a4c
+SHA512 (pycparser-3.11.tar.gz) = 6f2be578e646438d8c451cdbd19a97741e6c6cad05f608376f2bae40435afdecaab95d1aa2fa6b9dc7ffc010597c294dfb32154859557c77533e55bc1ddef82f
+Size (pycparser-3.11.tar.gz) = 113796 bytes
