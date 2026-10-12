@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6908 2026/10/12 13:16:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6909 2026/10/12 13:16:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10388,3 +10388,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.4.0 [ktnb 2026-10-12]
 	Updated emulators/nono to 1.8.4 [jun 2026-10-12]
 	Updated graphics/py-cairo to 1.29.2 [wiz 2026-10-12]
+	Updated graphics/py-cairo-shared to 1.29.2 [wiz 2026-10-12]
