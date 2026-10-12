@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/01/03 22:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/12 21:41:43 wiz Exp $
 
-DISTNAME=	AFLplusplus-4.35c
+DISTNAME=	AFLplusplus-5.03c
 PKGNAME=	${DISTNAME:C/AFLplusplus/afl++/}
 GITHUB_PROJECT=	AFLplusplus
 CATEGORIES=	devel
@@ -18,6 +18,7 @@ PYTHON_INCLUDE_CMD=	python${PYVERSSUFFIX}-config --includes
 PYTHON_VERSION_CMD=	python${PYVERSSUFFIX} --version
 PYTHON_LIB_CMD=		python${PYVERSSUFFIX}-config --libs --embed --ldflags
 REPLACE_PYTHON+=	afl-cmin.py
+REPLACE_PYTHON+=	afl-health
 
 MAKE_FLAGS+=	PYTHON_INCLUDE=${PYTHON_INCLUDE_CMD:sh:Q}
 MAKE_FLAGS+=	PYTHON_VERSION=${PYTHON_VERSION_CMD:sh:Q}
@@ -25,10 +26,12 @@ MAKE_FLAGS+=	PYTHON_LIB=${PYTHON_LIB_CMD:sh:Q}
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run gmake
-REPLACE_BASH+=	afl-cmin
+REPLACE_BASH+=	afl-cmin.awk
 REPLACE_BASH+=	afl-cmin.bash
 REPLACE_BASH+=	afl-persistent-config
 MAKE_FILE=	GNUmakefile
+
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
