@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/09/08 13:13:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/10/12 13:53:12 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -57,9 +57,6 @@ ${PYSITELIB}/pypdf/_doc_common.pyo
 ${PYSITELIB}/pypdf/_encryption.py
 ${PYSITELIB}/pypdf/_encryption.pyc
 ${PYSITELIB}/pypdf/_encryption.pyo
-${PYSITELIB}/pypdf/_font.py
-${PYSITELIB}/pypdf/_font.pyc
-${PYSITELIB}/pypdf/_font.pyo
 ${PYSITELIB}/pypdf/_page.py
 ${PYSITELIB}/pypdf/_page.pyc
 ${PYSITELIB}/pypdf/_page.pyo
@@ -147,6 +144,9 @@ ${PYSITELIB}/pypdf/generic/_files.pyo
 ${PYSITELIB}/pypdf/generic/_fit.py
 ${PYSITELIB}/pypdf/generic/_fit.pyc
 ${PYSITELIB}/pypdf/generic/_fit.pyo
+${PYSITELIB}/pypdf/generic/_font.py
+${PYSITELIB}/pypdf/generic/_font.pyc
+${PYSITELIB}/pypdf/generic/_font.pyo
 ${PYSITELIB}/pypdf/generic/_image_inline.py
 ${PYSITELIB}/pypdf/generic/_image_inline.pyc
 ${PYSITELIB}/pypdf/generic/_image_inline.pyo
