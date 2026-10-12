@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/12/26 10:49:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/12 11:43:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -51,9 +51,6 @@ ${PYSITELIB}/pydantic/_internal/_git.pyo
 ${PYSITELIB}/pydantic/_internal/_import_utils.py
 ${PYSITELIB}/pydantic/_internal/_import_utils.pyc
 ${PYSITELIB}/pydantic/_internal/_import_utils.pyo
-${PYSITELIB}/pydantic/_internal/_internal_dataclass.py
-${PYSITELIB}/pydantic/_internal/_internal_dataclass.pyc
-${PYSITELIB}/pydantic/_internal/_internal_dataclass.pyo
 ${PYSITELIB}/pydantic/_internal/_known_annotated_metadata.py
 ${PYSITELIB}/pydantic/_internal/_known_annotated_metadata.pyc
 ${PYSITELIB}/pydantic/_internal/_known_annotated_metadata.pyo
@@ -81,6 +78,9 @@ ${PYSITELIB}/pydantic/_internal/_serializers.pyo
 ${PYSITELIB}/pydantic/_internal/_signature.py
 ${PYSITELIB}/pydantic/_internal/_signature.pyc
 ${PYSITELIB}/pydantic/_internal/_signature.pyo
+${PYSITELIB}/pydantic/_internal/_type_refs.py
+${PYSITELIB}/pydantic/_internal/_type_refs.pyc
+${PYSITELIB}/pydantic/_internal/_type_refs.pyo
 ${PYSITELIB}/pydantic/_internal/_typing_extra.py
 ${PYSITELIB}/pydantic/_internal/_typing_extra.pyc
 ${PYSITELIB}/pydantic/_internal/_typing_extra.pyo
