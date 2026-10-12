@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.294.2.1 2026/10/03 19:27:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.294.2.2 2026/10/12 01:16:43 maya Exp $
 
-DISTNAME=		openssh-10.5p1
-PKGREVISION=		1
+DISTNAME=		openssh-10.6p1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
