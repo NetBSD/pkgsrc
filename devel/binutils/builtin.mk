@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: builtin.mk,v 1.12 2026/10/12 09:10:08 jperkin Exp $
 
 BINUTILS_PREFIX?=	/usr
 
@@ -27,10 +27,10 @@ USE_BUILTIN.binutils=	no
 .  else
 USE_BUILTIN.binutils=	${IS_BUILTIN.binutils}
 .    if defined(BUILTIN_PKG.binutils) && \
-        !empty(IS_BUILTIN.binutils:M[yY][eE][sS])
+        ${IS_BUILTIN.binutils:tl} == yes
 USE_BUILTIN.binutils=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.binutils}
-.        if !empty(USE_BUILTIN.binutils:M[yY][eE][sS])
+.        if ${USE_BUILTIN.binutils:tl} == yes
 USE_BUILTIN.binutils!=							\
 	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.binutils:Q}; then	\
 		${ECHO} yes;						\
@@ -58,7 +58,7 @@ MAKEVARS+=		USE_BUILTIN.binutils
 # implementation.
 #
 .if defined(USE_BINUTILS)
-.  if !empty(IS_BUILTIN.binutils:M[nN][oO])
+.  if ${IS_BUILTIN.binutils:tl} == no
 USE_BUILTIN.binutils=	no
 .  endif
 .endif
@@ -68,9 +68,9 @@ USE_BUILTIN.binutils=	no
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.binutils?=	no
-.if !empty(CHECK_BUILTIN.binutils:M[nN][oO])
+.if ${CHECK_BUILTIN.binutils:tl} == no
 
-.  if !empty(USE_BUILTIN.binutils:M[nN][oO])
+.  if ${USE_BUILTIN.binutils:tl} == no
 AR=	${BUILDLINK_PREFIX.binutils}/bin/gar
 AS=	${BUILDLINK_PREFIX.binutils}/bin/gas
 LD=	${BUILDLINK_PREFIX.binutils}/bin/gld
