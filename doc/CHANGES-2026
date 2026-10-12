@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6900 2026/10/12 09:51:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6901 2026/10/12 10:37:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10371,3 +10371,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.1.1 [adam 2026-10-12]
 	Updated devel/py-virtualenv to 21.14.7 [adam 2026-10-12]
 	Updated devel/py-project-api to 1.11.5 [adam 2026-10-12]
+	Updated editors/neovim to 0.12.6 [adam 2026-10-12]
+	Updated games/scummvm to 2026.4.0 [adam 2026-10-12]
