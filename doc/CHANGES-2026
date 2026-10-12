@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6921 2026/10/12 14:06:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6922 2026/10/12 14:32:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10401,3 +10401,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 3.0.3 [wiz 2026-10-12]
 	Updated devel/py-tenacity to 9.2.1 [wiz 2026-10-12]
 	Updated www/py-zensical to 0.0.69 [wiz 2026-10-12]
+	Updated devel/libadwaita to 1.10.0 [adam 2026-10-12]
+	Updated archivers/file-roller to 44.7 [adam 2026-10-12]
