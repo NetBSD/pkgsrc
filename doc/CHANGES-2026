@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6922 2026/10/12 14:32:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6923 2026/10/12 14:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10403,3 +10403,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.69 [wiz 2026-10-12]
 	Updated devel/libadwaita to 1.10.0 [adam 2026-10-12]
 	Updated archivers/file-roller to 44.7 [adam 2026-10-12]
+	Updated security/py-cryptodome to 3.24.1 [adam 2026-10-12]
+	Updated textproc/py-cssselect to 1.6.0 [adam 2026-10-12]
