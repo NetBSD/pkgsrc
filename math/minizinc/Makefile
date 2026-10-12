@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2026/10/10 14:31:03 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/12 21:07:56 wiz Exp $
 
 PKGNAME=	minizinc-2.9.7
 DISTNAME=	lib${PKGNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MiniZinc/}
+GITHUB_PROJECT=	libminizinc
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c c++
