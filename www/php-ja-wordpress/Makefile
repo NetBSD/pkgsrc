@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2026/10/07 15:52:13 taca Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/12 21:14:17 wiz Exp $
 #
-# when updating this, please run 'make upload'
+# when updating this, please run 'PKG_DEVELOPER=1 make upload-distfiles'
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
