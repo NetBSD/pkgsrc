@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2026/09/29 06:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.174 2026/10/12 14:28:47 adam Exp $
 
-DISTNAME=	file-roller-3.38.0
+DISTNAME=	file-roller-44.7
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	21
 CATEGORIES=	archivers gnome
 EXTRACT_SUFX=	.tar.xz
 
@@ -13,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	msgfmt pkg-config itstool
 
+MESON_ARGS+=	-Dnautilus-actions=disabled
 MESON_ARGS+=	-Dpackagekit=false
-MESON_ARGS+=	-Dnautilus-actions=false
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,12 +25,14 @@ TOOLS_PLATFORM.msgfmt=
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
+.include "../../devel/libadwaita/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
