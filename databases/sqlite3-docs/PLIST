@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.154 2026/08/01 13:45:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.155 2026/10/12 11:44:54 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -47,6 +47,7 @@ share/doc/sqlite3/c3ref/c_blob.html
 share/doc/sqlite3/c3ref/c_carray_blob.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
+share/doc/sqlite3/c3ref/c_copy.html
 share/doc/sqlite3/c3ref/c_dbconfig_defensive.html
 share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
@@ -170,6 +171,7 @@ share/doc/sqlite3/c3ref/release_memory.html
 share/doc/sqlite3/c3ref/reset.html
 share/doc/sqlite3/c3ref/reset_auto_extension.html
 share/doc/sqlite3/c3ref/result_blob.html
+share/doc/sqlite3/c3ref/result_str.html
 share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/serialize.html
 share/doc/sqlite3/c3ref/set_authorizer.html
@@ -247,6 +249,7 @@ share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cksumvfs.html
 share/doc/sqlite3/cli.html
 share/doc/sqlite3/climode.html
+share/doc/sqlite3/cliprompt.html
 share/doc/sqlite3/codeofconduct.html
 share/doc/sqlite3/codeofethics.html
 share/doc/sqlite3/compile.html
@@ -271,6 +274,7 @@ share/doc/sqlite3/dbstat.html
 share/doc/sqlite3/debugging.html
 share/doc/sqlite3/deterministic.html
 share/doc/sqlite3/different.html
+share/doc/sqlite3/diskusedfunc.html
 share/doc/sqlite3/doc_backlink_crossref.html
 share/doc/sqlite3/doc_keyword_crossref.html
 share/doc/sqlite3/doc_pagelink_crossref.html
@@ -414,14 +418,13 @@ share/doc/sqlite3/images/foreignlogos/oracle.gif
 share/doc/sqlite3/images/foreignlogos/philips.gif
 share/doc/sqlite3/images/foreignlogos/php.gif
 share/doc/sqlite3/images/foreignlogos/python.gif
+share/doc/sqlite3/images/foreignlogos/reportr.png
 share/doc/sqlite3/images/foreignlogos/rpm_logo.png
 share/doc/sqlite3/images/foreignlogos/skype.gif
 share/doc/sqlite3/images/foreignlogos/sony.gif
 share/doc/sqlite3/images/foreignlogos/sunmicro.gif
 share/doc/sqlite3/images/foreignlogos/symbian.gif
 share/doc/sqlite3/images/foreignlogos/tcl.gif
-share/doc/sqlite3/images/foreignlogos/visualdb-txt.png
-share/doc/sqlite3/images/foreignlogos/visualdb.png
 share/doc/sqlite3/images/foreignlogos/xojo.png
 share/doc/sqlite3/images/fts3_doclist.png
 share/doc/sqlite3/images/fts3_doclist.svg
@@ -730,6 +733,7 @@ share/doc/sqlite3/releaselog/3_53_1.html
 share/doc/sqlite3/releaselog/3_53_2.html
 share/doc/sqlite3/releaselog/3_53_3.html
 share/doc/sqlite3/releaselog/3_53_4.html
+share/doc/sqlite3/releaselog/3_54_0.html
 share/doc/sqlite3/releaselog/3_5_0.html
 share/doc/sqlite3/releaselog/3_5_1.html
 share/doc/sqlite3/releaselog/3_5_2.html
@@ -1011,6 +1015,10 @@ share/doc/sqlite3/unlock_notify.html
 share/doc/sqlite3/uri.html
 share/doc/sqlite3/useovernet.html
 share/doc/sqlite3/vdbe.html
+share/doc/sqlite3/vec1.html
+share/doc/sqlite3/vec1bench.html
+share/doc/sqlite3/vec1doc.html
+share/doc/sqlite3/vec1ref.html
 share/doc/sqlite3/version3.html
 share/doc/sqlite3/versionnumbers.html
 share/doc/sqlite3/vfs.html
