@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/10/11 16:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/10/12 08:16:21 wiz Exp $
 
 DISTNAME=	wasi-libc-0.0.0pre20261001
 PKGREVISION=	1
@@ -18,6 +18,8 @@ LICENSE=	mit AND apache-2.0 # apache-2.0-with-LLVM-exception
 BUILTINSFILE=		libclang_rt-34.0-rc.1.tar.gz
 DISTFILES=		${DEFAULT_DISTFILES} ${BUILTINSFILE}
 SITES.${BUILTINSFILE}=	https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-34-rc.1/
+
+TOOL_DEPENDS+=		lld>=0:../../devel/lld
 
 CHECK_PORTABILITY_SKIP+=	test/open-posix-test-suite/*/*/*.sh
 
