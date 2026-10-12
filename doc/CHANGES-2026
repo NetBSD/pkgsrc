@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6932 2026/10/12 18:05:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6933 2026/10/12 18:52:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10414,3 +10414,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.14.1 [drixter 2026-10-12]
 	Removed devel/g-wrap [gdt 2026-10-12]
 	Updated shells/oh-my-posh to 31.8.0 [pin 2026-10-12]
+	Updated devel/gitlogue to 0.12.0 [pin 2026-10-12]
