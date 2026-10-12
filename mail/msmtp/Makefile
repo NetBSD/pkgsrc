@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2026/09/29 06:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/10/12 10:52:45 leot Exp $
 
 DISTNAME=		msmtp-1.8.32
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}releases/
 EXTRACT_SUFX=		.tar.xz

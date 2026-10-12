@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2025/02/21 17:50:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.19 2026/10/12 10:52:45 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.msmtp
 PKG_SUPPORTED_OPTIONS=		gsasl idn scripts secret
@@ -48,7 +48,7 @@ USE_TOOLS+=		bash:run pax
 INSTALLATION_DIRS+=	share/msmtp
 REPLACE_BASH+=		scripts/find_alias/find_alias_for_msmtp.sh
 REPLACE_BASH+=		scripts/msmtpq/msmtp-queue
-REPLACE_SH+=		scripts/msmtpq/msmtpq
+REPLACE_BASH+=		scripts/msmtpq/msmtpq
 REPLACE_SH+=		scripts/msmtpqueue/msmtp-enqueue.sh
 REPLACE_SH+=		scripts/msmtpqueue/msmtp-listqueue.sh
 REPLACE_SH+=		scripts/msmtpqueue/msmtp-runqueue.sh
