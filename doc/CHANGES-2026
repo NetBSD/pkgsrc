@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6898 2026/10/12 09:37:22 micha Exp $
+$NetBSD: CHANGES-2026,v 1.6899 2026/10/12 09:51:22 micha Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10366,3 +10366,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pylint to 4.1.3 [adam 2026-10-12]
 	Updated devel/py-test-env to 1.8.0 [adam 2026-10-12]
 	Updated news/canlock-hp to 3.3.4 [micha 2026-10-12]
+	Updated news/libcanlock to 3.3.4 [micha 2026-10-12]
