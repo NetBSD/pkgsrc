@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6903 2026/10/12 11:45:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6904 2026/10/12 11:55:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10380,3 +10380,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/sqlite3-docs to 3.54.0 [adam 2026-10-12]
 	Updated databases/sqlite3-tcl to 3.54.0 [adam 2026-10-12]
 	Updated devel/lemon to 1.0.3.54.0 [adam 2026-10-12]
+	Updated www/py-aiohttp to 3.14.5 [adam 2026-10-12]
+	Updated audio/libmikmod to 3.3.15 [adam 2026-10-12]
+	Updated net/bird to 3.3.3 [adam 2026-10-12]
