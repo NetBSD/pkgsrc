@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 20:56:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/10/12 13:59:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tenacity/__init__.py
 ${PYSITELIB}/tenacity/__init__.pyc
 ${PYSITELIB}/tenacity/__init__.pyo
 ${PYSITELIB}/tenacity/_utils.py
 ${PYSITELIB}/tenacity/_utils.pyc
 ${PYSITELIB}/tenacity/_utils.pyo
+${PYSITELIB}/tenacity/_version.py
+${PYSITELIB}/tenacity/_version.pyc
+${PYSITELIB}/tenacity/_version.pyo
 ${PYSITELIB}/tenacity/after.py
 ${PYSITELIB}/tenacity/after.pyc
 ${PYSITELIB}/tenacity/after.pyo
