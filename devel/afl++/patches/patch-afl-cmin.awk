@@ -1,10 +1,10 @@
-$NetBSD: patch-afl-cmin,v 1.1 2025/10/25 13:57:41 kikadf Exp $
+$NetBSD: patch-afl-cmin.awk,v 1.1 2026/10/12 21:41:43 wiz Exp $
 
 * Use getconf instead of nproc
 
---- afl-cmin.orig	2025-10-01 07:45:10.000000000 +0000
-+++ afl-cmin
-@@ -383,7 +383,7 @@ BEGIN {
+--- afl-cmin.awk.orig	2026-09-02 09:40:04.000000000 +0000
++++ afl-cmin.awk
+@@ -386,7 +386,7 @@ BEGIN {
    }
  
    if (threads) {

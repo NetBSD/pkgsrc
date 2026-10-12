@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.5 2026/01/03 22:16:36 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/10/12 21:41:43 wiz Exp $
 
-BLAKE2s (AFLplusplus-4.35c.tar.gz) = 34ae4e487fc098bcbd9d75db12a7b4e485597e553f5f59365e0aeed2aa83e047
-SHA512 (AFLplusplus-4.35c.tar.gz) = 07a503d22c42f55092367255907d7173d2aef9beb8bcfa9c2d7aca24f6de342305a0310b780c692bc4db807042fd38c479c7ba3ba13210715bd7c0143499785e
-Size (AFLplusplus-4.35c.tar.gz) = 3117948 bytes
+BLAKE2s (AFLplusplus-5.03c.tar.gz) = e0ecd9a742f1c8e685e01ae6bc3741d1e300ae31ee2fbdbf81c16d017772f745
+SHA512 (AFLplusplus-5.03c.tar.gz) = f5698178f2de1a5743b0b908e910195afccbd0f3d556ad652db61c77290b20445d672aee01f7e09d329b65e709b9f1309f4f33c6f8f3ca92f577232ff5738e96
+Size (AFLplusplus-5.03c.tar.gz) = 3461864 bytes
 SHA1 (patch-GNUmakefile) = 7c628d33c5f542bbbcdeafcbad37a50ac3820dd3
 SHA1 (patch-GNUmakefile.llvm) = 0b52eeb14dec51796e6db4b3b5ac079a697bd53c
-SHA1 (patch-afl-cmin) = 7e1eece67b64250e99f6d64d9e45dbc360357dcb
+SHA1 (patch-afl-cmin.awk) = b9f9022030d4d61a0eb954ffd3cac65f61ae3b29
 SHA1 (patch-src_afl-cc.c) = ce8b51060b94f8129a9ef08fa131d2c20acc8c53
+SHA1 (patch-src_afl-cmin.c) = fc8c19690047febbb66271376778638f2a3e7615

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/01/03 22:16:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/12 21:41:43 wiz Exp $
 bin/afl-addseeds
 bin/afl-analyze
 bin/afl-c++
@@ -8,12 +8,15 @@ bin/afl-clang++
 bin/afl-clang-fast
 bin/afl-clang-fast++
 bin/afl-cmin
+bin/afl-cmin.awk
 bin/afl-cmin.bash
 bin/afl-cmin.py
 bin/afl-fuzz
 bin/afl-g++
 bin/afl-gcc
 bin/afl-gotcpu
+bin/afl-health
+bin/afl-merge
 bin/afl-persistent-config
 bin/afl-plot
 bin/afl-showmap
@@ -28,6 +31,8 @@ include/afl/afl-prealloc.h
 include/afl/afl-record-compat.h
 include/afl/alloc-inl.h
 include/afl/android-ashmem.h
+include/afl/bitops.h
+include/afl/cmp-attrs.h
 include/afl/cmplog.h
 include/afl/common.h
 include/afl/config.h
@@ -45,14 +50,17 @@ include/afl/t1ha0_ia32aes_b.h
 include/afl/t1ha_bits.h
 include/afl/t1ha_selfcheck.h
 include/afl/types.h
+include/afl/value-profile-attrs.h
+include/afl/value-profile.h
 include/afl/xxhash.h
 lib/afl/SanitizerCoveragePCGUARD.so
+lib/afl/afl-c11-pass.so
 lib/afl/afl-compiler-rt-32.o
 lib/afl/afl-compiler-rt-64.o
 lib/afl/afl-compiler-rt.o
+lib/afl/afl-llvm-bug-pass.so
 lib/afl/afl-llvm-dict2file.so
 lib/afl/afl-llvm-ijon-pass.so
-lib/afl/afl-llvm-pass.so
 lib/afl/cmplog-instructions-pass.so
 lib/afl/cmplog-routines-pass.so
 lib/afl/cmplog-switches-pass.so
@@ -70,10 +78,13 @@ man/man8/afl-cc.8
 man/man8/afl-clang-fast++.8
 man/man8/afl-clang-fast.8
 man/man8/afl-cmin.8
+man/man8/afl-cmin.awk.8
 man/man8/afl-cmin.bash.8
 man/man8/afl-cmin.py.8
 man/man8/afl-fuzz.8
 man/man8/afl-gotcpu.8
+man/man8/afl-health.8
+man/man8/afl-merge.8
 man/man8/afl-persistent-config.8
 man/man8/afl-plot.8
 man/man8/afl-showmap.8
@@ -212,6 +223,7 @@ share/afl/testcases/others/text/hello_world.txt
 share/afl/testcases/others/xml/small_document.xml
 share/doc/afl/Changelog.md
 share/doc/afl/FAQ.md
+share/doc/afl/FrameShift.md
 share/doc/afl/IJON.md
 share/doc/afl/INSTALL.md
 share/doc/afl/README.cmplog.md
@@ -231,8 +243,8 @@ share/doc/afl/env_variables.md
 share/doc/afl/features.md
 share/doc/afl/fuzzing_binary-only_targets.md
 share/doc/afl/fuzzing_in_depth.md
-share/doc/afl/ideas.md
 share/doc/afl/important_changes.md
 share/doc/afl/rpc_statsd.md
 share/doc/afl/third_party_tools.md
 share/doc/afl/tutorials.md
+share/doc/afl/value_profiling.md
