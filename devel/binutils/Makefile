@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2024/11/26 14:11:40 bacon Exp $
+# $NetBSD: Makefile,v 1.115 2026/10/12 09:10:08 jperkin Exp $
 
-DISTNAME=	binutils-2.41
+DISTNAME=	binutils-2.47
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,29 +12,26 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
 
-USE_PKGLOCALEDIR=		yes
-REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-
-USE_LANGUAGES=		c99 c++
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
-
 TOOLS_BROKEN+=		perl
+
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
-# Standard lib dirs on RHEL are named *lib64
-LIB_PATH=		/lib:/usr/lib
-.if exists(/usr/lib64)
-LIB_PATH:=		/usr/lib64:${LIB_PATH}
-.endif
-.if exists(/lib64)
-LIB_PATH:=		/lib64:${LIB_PATH}
-.endif
-CONFIGURE_ARGS+=	--with-lib-path=${LIB_PATH}
+CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--program-prefix=g
-BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--with-lib-path=${COMPILER_LIB_DIRS:ts:}
+CONFIGURE_ARGS+=	--without-zlib
 
-PLIST_SRC=	${PKGDIR}/PLIST.common
+REPLACE_LOCALEDIR_PATTERNS+=	Make-in
+
+MAKE_FLAGS+=	LEXLIB=	# Avoid unnecessary runtime dependency on libfl/libl
+MAKE_FLAGS+=	V=1	# Avoid ignored and confusing @echo errors
+
+PLIST_SRC=	${PKGDIR}/PLIST
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
 INFO_FILES=	yes
@@ -47,7 +44,7 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 #
 # Supported utils and libraries differ quite a bit across platforms.
 #
-PLIST_VARS+=	ctf gas gold gprof ld ldint
+PLIST_VARS+=	ctf gas gprof ld
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,7 +55,6 @@ PLIST_VARS+=	ctf gas gold gprof ld ldint
 CONFIGURE_ARGS+=	--disable-libctf
 .else
 PLIST.ctf=		yes
-PLIST.ldint=		yes
 .endif
 
 .if ${OPSYS} != "Darwin"
@@ -78,16 +74,6 @@ PLIST.gprof=	yes
 PLIST.ld=	yes
 .endif
 
-.if ${OPSYS} == DragonFly \
-	|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
-	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
-	|| (${OPSYS} == NetBSD && ${OPSYS_VERSION} > 050000) \
-	|| ${OPSYS} == Linux
-PLIST.gold=		yes
-USE_TOOLS+=		bison
-CONFIGURE_ARGS+=	--enable-gold --enable-plugins
-.endif
-
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-unused-value -Wno-format-security \
@@ -100,7 +86,7 @@ CFLAGS+=	-Wno-unused-value -Wno-format-security \
 
 SYMLINK_FILES=	addr2line ar ${PLIST.gas:Das} c++filt dlltool elfedit \
 		${PLIST.gprof:Dgprof} ${PLIST.ld:Dld} ${PLIST.gld:Dld.bfd} \
-		${PLIST.gold:Dld.gold dwp} nlmconv nm objcopy objdump \
+		nlmconv nm objcopy objdump \
 		ranlib readelf size strings strip windmc windres
 
 post-install:
