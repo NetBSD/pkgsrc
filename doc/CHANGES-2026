@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6901 2026/10/12 10:37:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6902 2026/10/12 11:44:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10373,3 +10373,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-project-api to 1.11.5 [adam 2026-10-12]
 	Updated editors/neovim to 0.12.6 [adam 2026-10-12]
 	Updated games/scummvm to 2026.4.0 [adam 2026-10-12]
+	Updated devel/py-pydantic-core to 2.50.1 [adam 2026-10-12]
+	Updated devel/py-pydantic to 2.14.1 [adam 2026-10-12]
