@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6893 2026/10/11 20:46:54 fox Exp $
+$NetBSD: CHANGES-2026,v 1.6894 2026/10/12 07:37:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10356,3 +10356,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/quickjs-ng to 0.17.0 [wiz 2026-10-11]
 	Added security/vulnx version 2.0.2 [drixter 2026-10-11]
 	Updated sysutils/py-Glances to 4.5.8 [fox 2026-10-11]
+	Removed games/0ad [wiz 2026-10-12]
+	Removed games/0ad-data [wiz 2026-10-12]
