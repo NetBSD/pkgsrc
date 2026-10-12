@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6934 2026/10/12 18:54:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6935 2026/10/12 21:41:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10416,3 +10416,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 31.8.0 [pin 2026-10-12]
 	Updated devel/gitlogue to 0.12.0 [pin 2026-10-12]
 	Updated textproc/scooter to 0.10.0 [pin 2026-10-12]
+	Updated devel/afl++ to 5.03c [wiz 2026-10-12]
