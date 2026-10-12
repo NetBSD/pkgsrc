@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2026/08/03 17:52:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.42 2026/10/12 11:17:54 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -44,7 +44,7 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
-${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
+${PYSITELIB}/cryptography/hazmat/bindings/_rust.${PYSTABLEABI}.so
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/__init__.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/_openssl.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/asn1.pyi
