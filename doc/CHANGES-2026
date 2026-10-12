@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6929 2026/10/12 15:16:10 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6930 2026/10/12 15:40:03 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10411,3 +10411,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/libcups to 2.4.20 [wiz 2026-10-12]
 	Updated print/cups-base to 2.4.20 [wiz 2026-10-12]
 	Updated print/cups to 2.4.20 [wiz 2026-10-12]
+	Updated www/resterm to 1.14.1 [drixter 2026-10-12]
