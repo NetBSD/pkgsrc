@@ -1,4 +1,4 @@
-$NetBSD: patch-waflib_Context.py,v 1.3 2025/06/06 23:03:39 wiz Exp $
+$NetBSD: patch-waflib_Context.py,v 1.4 2026/10/12 08:00:56 adam Exp $
 
 Fix build with Python 3.11, 3.12.
 https://github.com/jackaudio/jack2/issues/898
@@ -20,7 +20,7 @@ https://github.com/jackaudio/jack2/commit/250420381b1a6974798939ad7104ab1a4b9a99
  		pass
  
 -	module = imp.new_module(WSCRIPT_FILE)
-+	module = module = types.ModuleType(WSCRIPT_FILE)
++	module = types.ModuleType(WSCRIPT_FILE)
  	try:
  		code = Utils.readf(path, m='r', encoding=encoding)
  	except EnvironmentError:
