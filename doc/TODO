@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28145 2026/10/12 09:51:38 adam Exp $
+$NetBSD: TODO,v 1.28146 2026/10/12 11:44:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -1157,9 +1157,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdm-2.26.8
 	o py-pillow_heif-1.8.1
 	o py-postgresql-5.1.2
-	o py-pydantic-2.14.0
-	o py-pydantic-core-2.49.0 [waiting for py-pydantic release that works with this]
-	o py-pydantic-core-2.50.0
 	o py-pymdown-extensions-12.2
 	o py-simpletal-5.1
 	o py-soupsieve-3.0.1
