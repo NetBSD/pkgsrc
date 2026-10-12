@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/07/22 13:51:41 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/12 13:18:27 wiz Exp $
 
-DISTNAME=	pycares-5.0.1
+DISTNAME=	pycares-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
@@ -9,14 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/saghul/pycares
 COMMENT=	Python interface for c-ares
 LICENSE=	mit
-
-# This package builds but fails to work on NetBSD 9 because NetBSD
-# declares structs as __packed, pycares does not, and cffi insists on
-# matching alignment.  Details at:
-#   https://mail-index.netbsd.org/tech-pkg/2024/05/05/msg029208.html
-# \todo One of
-#    Pull up 1.112 of src/sys/netinet/in.h to netbsd-9.
-#    Fix py-cares or cffi to work with a packed definition.
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
