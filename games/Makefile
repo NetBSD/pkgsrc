@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.571 2026/09/28 11:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.572 2026/10/12 07:37:55 wiz Exp $
 #
 
 COMMENT=	Games
 
-SUBDIR+=	0ad
-SUBDIR+=	0ad-data
 SUBDIR+=	0verkill
 SUBDIR+=	2048-cli
 SUBDIR+=	3dpong
