@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.178 2026/10/10 10:38:00 adam Exp $
+# $NetBSD: pyversion.mk,v 1.179 2026/10/12 11:17:05 wiz Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -240,6 +240,14 @@ BUILDLINK_API_DEPENDS.${PYPACKAGE}?=	${PYPACKAGE}>=${PYVERSSUFFIX}
 PYPKGSRCDIR=				../../lang/${PYPACKAGE}
 PYDEPENDENCY=				${BUILDLINK_API_DEPENDS.${PYPACKAGE}:=:${PYPKGSRCDIR}}
 PYPKGPREFIX=				py${_PYTHON_VERSION}
+# https://docs.python.org/3/c-api/stable.html
+.if ${PYTHON_VERSION} < 315
+PYSTABLEABI=				abi3
+.else
+PYSTABLEABI=				abi3t
+.endif
+PLIST_SUBST+=				PYSTABLEABI=${PYSTABLEABI}
+PRINT_PLIST_AWK+=			/${PYSTABLEABI}.so$$/ { sub(/${PYSTABLEABI}/, "$${PYSTABLEABI}") }
 .endif
 .if !empty(_PYTHON_VERSION:M3*)
 PLIST.py3x=				yes
