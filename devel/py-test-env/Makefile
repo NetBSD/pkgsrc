@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/09/08 19:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/12 09:33:35 adam Exp $
 
-DISTNAME=	pytest_env-1.7.1
+DISTNAME=	pytest_env-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-env/}
@@ -11,19 +11,14 @@ COMMENT=	Plugin for py.test that allows you to add environment variables
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.2.2:../../devel/py-dotenv
-DEPENDS+=	${PYPKGPREFIX}-test>=9.0.2:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.2.4:../../devel/py-dotenv
+DEPENDS+=	${PYPKGPREFIX}-test>=9.1.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.13.4:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.15.1:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.16.2:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.16:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.4:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
