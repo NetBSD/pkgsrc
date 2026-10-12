@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6926 2026/10/12 15:11:37 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.6927 2026/10/12 15:15:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10408,3 +10408,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.13.0 [wiz 2026-10-12]
 	Updated devel/py-uv to 0.13.0 [wiz 2026-10-12]
 	Updated net/dnsdist to 2.1.3 [drixter 2026-10-12]
+	Updated print/libcups to 2.4.20 [wiz 2026-10-12]
