@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6905 2026/10/12 12:02:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6906 2026/10/12 12:24:48 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10385,3 +10385,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bird to 3.3.3 [adam 2026-10-12]
 	Updated archivers/py-backports.zstd to 1.8.0 [adam 2026-10-12]
 	Updated textproc/py-parse to 1.22.3 [adam 2026-10-12]
+	Updated audio/kew to 4.4.0 [ktnb 2026-10-12]
