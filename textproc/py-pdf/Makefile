@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/10/12 13:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/10/12 21:12:28 wiz Exp $
 
 DISTNAME=	pypdf-6.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -15,6 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-fonttools>=0:../../fonts/py-fonttools
 # image
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
@@ -30,8 +31,16 @@ USE_LANGUAGES=	# none
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 # as of 6.20.0
+# disable some tests that need extra files, per
+# https://pypdf.readthedocs.io/en/latest/dev/testing.html#deselecting-groups-of-tests
+# 3 failed, 1850 passed, 33 skipped, 53 deselected, 1 xfailed, 1 xpassed
+# after 'make install'
+# 1 failed, 1852 passed, 33 skipped, 53 deselected, 1 xfailed, 1 xpassed
+# test failures reported at:
 # https://github.com/py-pdf/pypdf/issues/4187
-# 37 failed, 1865 passed, 36 skipped, 2 xfailed, 1 xpassed
+do-test:
+	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
+	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} -m "not samples"
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
