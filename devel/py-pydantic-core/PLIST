@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/22 13:32:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/12 11:42:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,8 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pydantic_core/__init__.py
 ${PYSITELIB}/pydantic_core/__init__.pyc
 ${PYSITELIB}/pydantic_core/__init__.pyo
-${PYSITELIB}/pydantic_core/_pydantic_core.pyi
 ${PYSITELIB}/pydantic_core/_pydantic_core.so
+${PYSITELIB}/pydantic_core/_pydantic_core/__init__.pyi
+${PYSITELIB}/pydantic_core/_pydantic_core/_schema_gather.pyi
 ${PYSITELIB}/pydantic_core/core_schema.py
 ${PYSITELIB}/pydantic_core/core_schema.pyc
 ${PYSITELIB}/pydantic_core/core_schema.pyo
