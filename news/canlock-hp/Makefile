@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/09/18 16:26:03 micha Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/12 09:35:12 micha Exp $
 
-DISTNAME=	libcanlock-3.3.3
+DISTNAME=	libcanlock-3.3.4
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
-PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +11,6 @@ HOMEPAGE=	https://micha.freeshell.org/libcanlock/
 COMMENT=	Parsers for RFC 5536 message headers and RFC 8315 header fields
 LICENSE=	icu
 
-USE_TOOLS+=		autoconf automake autoreconf pkg-config
 USE_TOOLS+=		lex yacc
 FORCE_C_STD=		c99
 USE_LIBTOOL=		yes
@@ -26,8 +24,5 @@ BUILD_DIRS=	hp
 TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	hp/libcanlock-hp-3.pc.in
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -vif
 
 .include "../../mk/bsd.pkg.mk"
