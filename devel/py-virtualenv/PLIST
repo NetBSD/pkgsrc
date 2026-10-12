@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.83 2026/08/11 15:49:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.84 2026/10/12 09:49:18 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/THIRD-PARTY-NOTICES.md
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/virtualenv.cdx.json
 ${PYSITELIB}/virtualenv/__init__.py
 ${PYSITELIB}/virtualenv/__init__.pyc
 ${PYSITELIB}/virtualenv/__init__.pyo
@@ -31,6 +33,7 @@ ${PYSITELIB}/virtualenv/activation/cshell/__init__.py
 ${PYSITELIB}/virtualenv/activation/cshell/__init__.pyc
 ${PYSITELIB}/virtualenv/activation/cshell/__init__.pyo
 ${PYSITELIB}/virtualenv/activation/cshell/activate.csh
+${PYSITELIB}/virtualenv/activation/cshell/deactivate.csh
 ${PYSITELIB}/virtualenv/activation/fish/__init__.py
 ${PYSITELIB}/virtualenv/activation/fish/__init__.pyc
 ${PYSITELIB}/virtualenv/activation/fish/__init__.pyo
@@ -289,6 +292,9 @@ ${PYSITELIB}/virtualenv/util/path/_win.pyo
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.py
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyc
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyo
+${PYSITELIB}/virtualenv/util/text.py
+${PYSITELIB}/virtualenv/util/text.pyc
+${PYSITELIB}/virtualenv/util/text.pyo
 ${PYSITELIB}/virtualenv/util/zipapp.py
 ${PYSITELIB}/virtualenv/util/zipapp.pyc
 ${PYSITELIB}/virtualenv/util/zipapp.pyo
