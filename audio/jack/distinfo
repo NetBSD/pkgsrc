@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2025/06/06 23:03:39 wiz Exp $
+$NetBSD: distinfo,v 1.38 2026/10/12 08:00:56 adam Exp $
 
 BLAKE2s (jack2-1.9.22.tar.gz) = 7fb0da036d729eb2814b8003e73e44ed46f43f7243b164bc8799c9156717e7f3
 SHA512 (jack2-1.9.22.tar.gz) = d93cb2bcc57b72b6815eed143de1092d14fe22542ae9a1f8480d9ed5f44b59c50f81279d18bdd84ff6276ddd71ca1aa64a1e46d61199a5eda0d873a356194ab4
@@ -21,5 +21,5 @@ SHA1 (patch-posix_JackPosixSemaphore.cpp) = 7d02f92dd6054014abf13ad1fd3aa7d86819
 SHA1 (patch-posix_JackPosixThread.h) = 0aa94425ad44cc36fb583e48bdfa9f5f33a5eaa3
 SHA1 (patch-posix_JackSocket.cpp) = 88ae18c3d2cc31a43355ff9b0c78ab13b83bd314
 SHA1 (patch-tests_wscript) = d79f0c5fefed422c36a3571fce7188a799e57a5d
-SHA1 (patch-waflib_Context.py) = 83ee99de6c2fd92a070e40ea2d96b5fa4c4b1596
+SHA1 (patch-waflib_Context.py) = d782be089bb243b0020c88deb8353977c873a0fa
 SHA1 (patch-wscript) = 5be2296b7598de17403847785614ca9fdd0d2d28
