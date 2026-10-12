@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6920 2026/10/12 14:00:06 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6921 2026/10/12 14:06:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10400,3 +10400,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pymdown-extensions to 12.2 [wiz 2026-10-12]
 	Updated www/py-soupsieve to 3.0.3 [wiz 2026-10-12]
 	Updated devel/py-tenacity to 9.2.1 [wiz 2026-10-12]
+	Updated www/py-zensical to 0.0.69 [wiz 2026-10-12]
