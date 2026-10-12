@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/09/07 07:11:29 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/10/12 18:52:39 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -29,7 +29,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	chacha20-0.10.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.45
-CARGO_CRATE_DEPENDS+=	chrono-english-0.2.0
+CARGO_CRATE_DEPENDS+=	chrono-english-0.2.1
 CARGO_CRATE_DEPENDS+=	clap-4.6.3
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.2
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.3
@@ -54,7 +54,7 @@ CARGO_CRATE_DEPENDS+=	deranged-0.5.5
 CARGO_CRATE_DEPENDS+=	derive_more-2.0.1
 CARGO_CRATE_DEPENDS+=	derive_more-impl-2.0.1
 CARGO_CRATE_DEPENDS+=	digest-0.10.7
-CARGO_CRATE_DEPENDS+=	dirs-6.0.0
+CARGO_CRATE_DEPENDS+=	dirs-7.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	dispatch2-0.3.0
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
@@ -152,7 +152,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
 CARGO_CRATE_DEPENDS+=	quote-1.0.45
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
-CARGO_CRATE_DEPENDS+=	rand-0.10.2
+CARGO_CRATE_DEPENDS+=	rand-0.10.3
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	rand_core-0.10.0
 CARGO_CRATE_DEPENDS+=	ratatui-0.30.2
@@ -203,9 +203,9 @@ CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.17
 CARGO_CRATE_DEPENDS+=	time-0.3.47
 CARGO_CRATE_DEPENDS+=	time-core-0.1.8
-CARGO_CRATE_DEPENDS+=	toml-1.1.4+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml-1.1.6+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-1.1.1+spec-1.1.0
-CARGO_CRATE_DEPENDS+=	toml_edit-0.25.13+spec-1.1.0
+CARGO_CRATE_DEPENDS+=	toml_edit-0.25.15+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.25.10
