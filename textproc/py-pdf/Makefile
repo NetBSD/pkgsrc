@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/09/26 10:30:07 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/10/12 13:53:12 wiz Exp $
 
-DISTNAME=	pypdf-6.19.0
+DISTNAME=	pypdf-6.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -29,8 +29,9 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 6.19.0
-# 98 failed, 1597 passed, 36 skipped, 6 xfailed
+# as of 6.20.0
+# https://github.com/py-pdf/pypdf/issues/4187
+# 37 failed, 1865 passed, 36 skipped, 2 xfailed, 1 xpassed
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
