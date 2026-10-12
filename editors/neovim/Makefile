@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/08/27 07:48:41 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/10/12 10:35:42 adam Exp $
 
-DISTNAME=	neovim-0.12.5
+DISTNAME=	neovim-0.12.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -36,15 +36,15 @@ FORTIFY_SUPPORTED=	no
 
 .include "../../lang/lua/luaversion.mk"
 
-DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../devel/lua-BitOp
-DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
-DEPENDS+=	${LUA_PKGPREFIX}-inspect-[0-9]*:../../devel/lua-inspect
-DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../devel/lua-mpack
+DEPENDS+=	${LUA_PKGPREFIX}-BitOp>=0:../../devel/lua-BitOp
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem>=0:../../devel/lua-filesystem
+DEPENDS+=	${LUA_PKGPREFIX}-inspect>=0:../../devel/lua-inspect
+DEPENDS+=	${LUA_PKGPREFIX}-mpack>=0:../../devel/lua-mpack
 
 .if ${SHLIB_TYPE} == "ELF"
 CFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lua/5.1
 
-TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
+TOOL_DEPENDS+=	patchelf>=0:../../devel/patchelf
 .endif
 
 post-install:
