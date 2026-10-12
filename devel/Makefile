@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4701 2026/10/05 13:13:35 ktnb Exp $
+# $NetBSD: Makefile,v 1.4702 2026/10/12 17:12:52 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -428,7 +428,6 @@ SUBDIR+=	frink
 SUBDIR+=	fromcvs
 SUBDIR+=	frozen
 SUBDIR+=	ftnchek
-SUBDIR+=	g-wrap
 SUBDIR+=	galasm
 SUBDIR+=	galette
 SUBDIR+=	garden
