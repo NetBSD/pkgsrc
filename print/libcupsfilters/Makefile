@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/09/29 06:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/12 15:15:00 wiz Exp $
 
 DISTNAME=	libcupsfilters-2.1.1
 PKGREVISION=	12
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES=	c++20
 
 PKGCONFIG_OVERRIDE+=	libcupsfilters.pc.in
 
