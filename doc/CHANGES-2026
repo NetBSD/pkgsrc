@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6940 2026/10/13 08:37:53 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6941 2026/10/13 09:05:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10424,3 +10424,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/pamtester version 0.1.2 [drixter 2026-10-13]
 	Updated sysutils/dbus-python-common to 1.5.0 [wiz 2026-10-13]
 	Updated sysutils/py-dbus to 1.5.0 [wiz 2026-10-13]
+	Updated devel/py-argparse-manpage to 4.7nb1 [wiz 2026-10-13]
