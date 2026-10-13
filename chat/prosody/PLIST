@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/10/15 10:34:42 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/10/13 10:29:13 sborrill Exp $
 bin/prosody
 bin/prosodyctl
 lib/prosody/core/certmanager.lua
@@ -263,6 +263,7 @@ lib/prosody/util/termcolours.lua
 lib/prosody/util/throttle.lua
 lib/prosody/util/time.so
 lib/prosody/util/timer.lua
+lib/prosody/util/tlsref.lua
 lib/prosody/util/uuid.lua
 lib/prosody/util/watchdog.lua
 lib/prosody/util/x509.lua
