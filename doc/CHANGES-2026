@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6937 2026/10/13 08:09:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6938 2026/10/13 08:37:20 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10421,3 +10421,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-async-lru to 2.4.0 [adam 2026-10-13]
 	Updated parallel/opencl-headers to 2026.05.29 [adam 2026-10-13]
 	Updated parallel/opencl-clang to 22.1.4 [adam 2026-10-13]
+	Added security/pamtester version 0.1.2 [drixter 2026-10-13]
