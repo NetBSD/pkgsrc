@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2026/10/11 16:02:19 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2026/10/13 13:08:38 kikadf Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	clang-${LLVM_VERSION}
@@ -8,6 +8,10 @@ PKGNAME=	clang-${LLVM_VERSION}
 COMMENT=	C language family frontend for LLVM
 
 USE_TOOLS+=	perl:run
+
+# Install clang python bindings
+CMAKE_CONFIGURE_ARGS+=	-DCLANG_PYTHON_BINDINGS_VERSIONS=${PYVERSSUFFIX}
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
 # Certain header files are generated, and can only be generated
 # if llvm has support for the target.

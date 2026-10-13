@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2026/10/11 05:28:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2026/10/13 13:08:38 kikadf Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/clang
@@ -1307,6 +1307,8 @@ lib/libscanbuild/resources/scanview.css
 lib/libscanbuild/resources/selectable.js
 lib/libscanbuild/resources/sorttable.js
 lib/libscanbuild/shell.py
+${PYSITELIB}/clang/__init__.py
+${PYSITELIB}/clang/cindex.py
 libexec/analyze-c++
 libexec/analyze-cc
 libexec/c++-analyzer
