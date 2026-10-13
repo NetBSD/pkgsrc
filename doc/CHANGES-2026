@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6965 2026/10/13 17:58:21 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6966 2026/10/13 18:02:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10456,3 +10456,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed cad/geda [gdt 2026-10-13]
 	Updated devel/libctl to 4.7.1 [gdt 2026-10-13]
 	Removed lang/guile20 [gdt 2026-10-13]
+	Removed devel/guile-slib [gdt 2026-10-13]
