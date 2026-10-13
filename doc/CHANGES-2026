@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6949 2026/10/13 12:21:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6950 2026/10/13 12:33:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10434,3 +10434,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-cms to 5.1.3 [adam 2026-10-13]
 	Updated textproc/py-jsonpatch to 1.35 [adam 2026-10-13]
 	Updated misc/py-installer to 1.1.0 [wiz 2026-10-13]
+	Updated archivers/py-cramjam to 2.14.0 [adam 2026-10-13]
+	Updated devel/py-utils to 4.1.2 [adam 2026-10-13]
