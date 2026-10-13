@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.18 2026/08/14 15:33:54 gdt Exp $
-${SITE_DIR}/slib
-${SITE_DIR}/slibcat

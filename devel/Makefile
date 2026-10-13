@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4702 2026/10/12 17:12:52 gdt Exp $
+# $NetBSD: Makefile,v 1.4703 2026/10/13 18:02:15 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -540,7 +540,6 @@ SUBDIR+=	gtk2hs-buildtools
 SUBDIR+=	guile-bytestructures
 SUBDIR+=	guile-git
 SUBDIR+=	guile-lib
-SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
 SUBDIR+=	guile22-slib
 SUBDIR+=	guile30-slib
