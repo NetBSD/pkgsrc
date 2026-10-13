@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/05/12 07:57:36 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/13 12:21:17 wiz Exp $
 
-DISTNAME=	installer-1.0.1
+DISTNAME=	installer-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/installer/}
@@ -22,9 +22,6 @@ TEST_ENV+=	PYTHONPATH=${WRKSRC}/src
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} -m installer --destdir ${DESTDIR} --prefix ${PREFIX} dist/*.whl
 
-# XXX Hack -- the patch phase leaves .orig files around which Python
-# dutifully picks up and installs because it doesn't use any explicit
-# lists of files or any patterns to exclude *.orig.
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/installer/*.orig
 
