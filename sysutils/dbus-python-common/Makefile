@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/10/13 08:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/10/13 08:50:22 wiz Exp $
 
 DISTNAME=	dbus_python-1.5.0
 PKGNAME=	${DISTNAME:S/python/python-common/:S/_/-/}
@@ -15,8 +15,6 @@ CONFLICTS+=	py[0-9]*-dbus<1.1.1
 USE_TOOLS+=	pkg-config
 MESON_ARGS+=	-Ddoc=disabled
 MESON_INSTALL=	no
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
