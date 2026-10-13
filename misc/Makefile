@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2026/10/09 09:14:40 adam Exp $
+# $NetBSD: Makefile,v 1.696 2026/10/13 13:26:27 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -34,6 +34,7 @@ SUBDIR+=	buffer
 SUBDIR+=	byobu
 SUBDIR+=	cabal-install
 SUBDIR+=	calibre
+SUBDIR+=	cargo-llvm-lines
 SUBDIR+=	cargo-machete
 SUBDIR+=	cargo-sweep
 SUBDIR+=	catpoint
