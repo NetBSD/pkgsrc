@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6969 2026/10/13 19:10:37 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.6970 2026/10/13 19:44:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10461,3 +10461,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go126 to 1.26.9 [bsiegert 2026-10-13]
 	Updated lang/go127 to 1.27.2 [bsiegert 2026-10-13]
 	Updated meta-pkgs/bulk-test-go to 20261013 [bsiegert 2026-10-13]
+	Updated multimedia/gstreamer1 to 1.28.8 [adam 2026-10-13]
