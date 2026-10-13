@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2026/09/03 11:35:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2026/10/13 11:27:44 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1943,6 +1943,9 @@ ${PYSITELIB}/cms/tests/test_check.pyo
 ${PYSITELIB}/cms/tests/test_cms_config_wizards.py
 ${PYSITELIB}/cms/tests/test_cms_config_wizards.pyc
 ${PYSITELIB}/cms/tests/test_cms_config_wizards.pyo
+${PYSITELIB}/cms/tests/test_copy_permissions.py
+${PYSITELIB}/cms/tests/test_copy_permissions.pyc
+${PYSITELIB}/cms/tests/test_copy_permissions.pyo
 ${PYSITELIB}/cms/tests/test_csp.py
 ${PYSITELIB}/cms/tests/test_csp.pyc
 ${PYSITELIB}/cms/tests/test_csp.pyo
@@ -1985,6 +1988,9 @@ ${PYSITELIB}/cms/tests/test_menu_page_viewperm_staff.pyo
 ${PYSITELIB}/cms/tests/test_menu_utils.py
 ${PYSITELIB}/cms/tests/test_menu_utils.pyc
 ${PYSITELIB}/cms/tests/test_menu_utils.pyo
+${PYSITELIB}/cms/tests/test_middleware_user.py
+${PYSITELIB}/cms/tests/test_middleware_user.pyc
+${PYSITELIB}/cms/tests/test_middleware_user.pyo
 ${PYSITELIB}/cms/tests/test_migrations.py
 ${PYSITELIB}/cms/tests/test_migrations.pyc
 ${PYSITELIB}/cms/tests/test_migrations.pyo
