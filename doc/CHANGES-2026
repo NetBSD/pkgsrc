@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6955 2026/10/13 13:12:42 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.6956 2026/10/13 13:23:25 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10444,3 +10444,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pydantic-settings to 2.15.0 [adam 2026-10-13]
 	Updated www/firefox153 to 153.5.0 [gutteridge 2026-10-13]
 	Updated www/firefox153-l10n to 153.5.0 [gutteridge 2026-10-13]
+	Updated lang/clang to 22.1.8nb2 [kikadf 2026-10-13]
