@@ -1,2 +1,7 @@
 The goal of the project is to describe the APIs and collect them
 in a uniform, machine readable format.
+
+This package contains the introspection tools.  It also contains
+gir/typelib files for DBus, libxml2, and various graphics libraries.
+Notably it DOES NOT contain gir/typelib files for objects provided by
+glib2; see the glib2-introspection package for those.
