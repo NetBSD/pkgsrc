@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/10/13 19:43:54 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/13 22:15:21 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-gl/}
 CATEGORIES=	graphics gnome
@@ -9,7 +9,7 @@ COMMENT=	Open source multimedia framework - GL plugin
 
 PLIST_VARS+=	drm wayland
 
-GST_EXT_BUILD=	# defined
+GST_EXT_BUILD=	# yes
 .if ${OPSYS} != "Darwin"
 GST_PLUGINS+=	drm
 PLIST.drm=	yes
@@ -19,6 +19,8 @@ GST_PLUGINS+=	gl
 .include "../../devel/wayland/platform.mk"
 .if !empty(PLATFORM_SUPPORTS_WAYLAND:Myes)
 PLIST.wayland=	yes
+.include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
 .endif
 
 # Because there is no "drm" dir.
