@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/10/12 19:17:10 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/13 07:50:19 jperkin Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -78,6 +78,7 @@ ${PLIST.gprof}info/gprof.info
 ${PLIST.gld}info/ld.info
 ${PLIST.gld}info/ldint.info
 info/sframe-spec.info
+${PLIST.gld}lib/bfd-plugins/libdep.so
 lib/libbfd.la
 ${PLIST.ctf}lib/libctf-nobfd.la
 ${PLIST.ctf}lib/libctf.la
