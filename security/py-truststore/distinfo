@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/08/16 07:02:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/10/13 12:58:23 adam Exp $
 
-BLAKE2s (truststore-0.10.4.tar.gz) = 3fb0f92c862ea5b80cd83c5e07754ed17ae1f01234647f76b0bc0fe6a13c5fe8
-SHA512 (truststore-0.10.4.tar.gz) = 3373b4ac2a37e8e8a7c8b22aebcbedf2f3552452550b181125dd0d16870281f8d1d3019738453c19d2afe21c882b7f6cab8ef37f3e2464605a3c07a6600adbe1
-Size (truststore-0.10.4.tar.gz) = 26169 bytes
+BLAKE2s (truststore-0.10.5.tar.gz) = 4c1101dfbdc8f4a54dc34d1e11e5a314e7a889d837027a26805c0054d036e643
+SHA512 (truststore-0.10.5.tar.gz) = 789d1c66c38a26c587c13aa71972cf494da8e0d9ad06735b75134ea6b35bf0885c6e7a6d44a87ff61568f58e8591856a3c7a4faa61f3e9e4a1f8c2480d3d5f51
+Size (truststore-0.10.5.tar.gz) = 28091 bytes
