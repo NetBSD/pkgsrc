@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6943 2026/10/13 09:13:04 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6944 2026/10/13 09:26:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10427,3 +10427,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-argparse-manpage to 4.7nb1 [wiz 2026-10-13]
 	Updated devel/py-game to 2.6.1nb11 [wiz 2026-10-13]
 	Updated devel/meson to 1.12.1nb1 [wiz 2026-10-13]
+	Updated textproc/py-patiencediff to 1.0.0 [wiz 2026-10-13]
