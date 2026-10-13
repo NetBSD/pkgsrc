@@ -1,0 +1,21 @@
+$NetBSD: patch-vendor_autocxx-engine_Cargo.toml,v 1.1 2026/10/13 15:31:10 ryoon Exp $
+
+--- vendor/autocxx-engine/Cargo.toml.orig	2026-10-13 09:30:27.000000000 +0000
++++ vendor/autocxx-engine/Cargo.toml
+@@ -71,15 +71,7 @@ version_check = "0.9"
+ tempfile = "3.4"
+ thiserror = "1"
+ version_check = "0.9"
+-
+-[dependencies.autocxx-bindgen]
+-git = "https://github.com/tchebb/rust-bindgen"
+-branch = "openwv-fixes"
+-features = [
+-    "logging",
+-    "which-rustfmt",
+-]
+-default-features = false
++autocxx-bindgen = { path = "../autocxx-bindgen/bindgen" }
+ 
+ [dependencies.autocxx-parser]
+ version = "=0.30.1"
