@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: anubis.sh,v 1.2 2025/05/24 14:41:18 ryoon Exp $
+# $NetBSD: anubis.sh,v 1.3 2026/10/13 15:34:04 khorben Exp $
 #
 # PROVIDE: anubis
 # REQUIRE: DAEMON
@@ -32,6 +32,7 @@ anubis_precmd()
 
 anubis_start()
 {
+	echo "Starting ${name}."
 	@SU@ -m ${anubis_user} -c "${command}" >> @VARBASE@/log/anubis.log 2>&1 &
 }
 
@@ -41,8 +42,13 @@ anubis_poststart() {
 
 anubis_stop()
 {
-	kill -HUP $(check_pidfile $pidfile $name)
+	echo "Stopping ${name}."
+	rc_pid=$(check_pidfile $pidfile $name)
+	kill -HUP $rc_pid
+	wait_for_pids $rc_pid
 }
+
+cd /
 
 load_rc_config $name
 run_rc_command "$1"
