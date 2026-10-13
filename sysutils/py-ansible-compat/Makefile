@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2026/09/24 10:10:18 adam Exp $
+# $NetBSD: Makefile,v 1.50 2026/10/13 13:30:16 adam Exp $
 
-DISTNAME=	ansible_compat-26.9.0
+DISTNAME=	ansible_compat-26.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
