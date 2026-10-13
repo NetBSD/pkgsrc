@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/06/26 06:37:22 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/13 09:26:04 wiz Exp $
 
-DISTNAME=	patiencediff-0.2.19
+DISTNAME=	patiencediff-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/patiencediff/}
@@ -14,6 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.5.0:../../devel/py-setuptools-rust
 
 PY_RENAME_BINARIES=	patiencediff
+
+# https://github.com/breezy-team/patiencediff/issues/159
+MAKE_ENV+=		PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 .include "cargo-depends.mk"
 
