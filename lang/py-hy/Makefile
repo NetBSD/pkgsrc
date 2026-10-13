@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/04/27 10:22:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/13 09:45:39 wiz Exp $
 
-DISTNAME=	hy-1.2.0
+DISTNAME=	hy-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
 
@@ -16,11 +15,10 @@ DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=1.0:../../devel/py-funcparserlib
 
 USE_LANGUAGES=	# none
 
-post-install:
-.for bin in hy hy2py hyc
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	hy hy2py hyc
+
+# as of 1.3.1
+# 36 failed, 78 passed
 
 pre-test:
 	${TOUCH} ${WRKSRC}/tests/__init__.py
