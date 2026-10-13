@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/09/29 06:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/10/13 13:22:54 gdt Exp $
 
 DISTNAME=	gobject-introspection-1.86.0
 PKGREVISION=	6
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gi.readthedocs.io/en/latest/
-COMMENT=	GObject Introspection
+COMMENT=	GObject Introspection tools and non-glib2 interface files
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "../../lang/python/pyversion.mk"
