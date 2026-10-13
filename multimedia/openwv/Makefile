@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/11 16:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/13 15:31:10 ryoon Exp $
 
-DISTNAME=	openwv-1.1.3
-PKGREVISION=	4
+DISTNAME=	openwv-1.1.4
 CATEGORIES=	multimedia
 # Tarball contains Git submodule and result of `cargo vendor`.
 MASTER_SITES=	https://www.ryoon.net/~ryoon/
@@ -30,13 +29,29 @@ SUBST_VARS.readme+=	PREFIX
 INSTALLATION_DIRS+=	share/openwv
 INSTALLATION_DIRS+=	share/doc/openwv
 
+CKSUM_CRATES+=		vendor/autocxx-engine
+
+CKSUMS+=		b8b11e4e91bf47f49fe1e43605c2c01a726aff989a4834d350f4a1b7ee94a6db
+CKSUMS+=		5e0109b0f4003b1d05d44a8f3bb435a27890ca601745acd55a4721b4748fea8b
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
+
 post-extract:
-	# Adjust for vendor handling of cargo.mk
-	cd ${WRKSRC} && \
-		${MV} vendor ..
 	# Place README files
 	${CP} ${FILESDIR}/README.firefox.in ${WRKSRC}/README.firefox
 	${CP} ${FILESDIR}/README.chromium.in ${WRKSRC}/README.chromium
+
+pre-configure:
+	# Adjust for vendor handling of cargo.mk
+	cd ${WRKSRC} && \
+		${MV} vendor ..
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/target/release/libwidevinecdm.so \
