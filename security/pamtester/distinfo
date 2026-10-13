@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2026/10/13 08:36:47 drixter Exp $
+
+BLAKE2s (pamtester-0.1.2.tar.gz) = e2c13b0d7d0993b12b9cc8dd8c878bed951bcc84af0bc8d7d2a2ad798ab54b77
+SHA512 (pamtester-0.1.2.tar.gz) = baf4786ad735d73bce8f351071e658cffa5fa45dcf67045827f998555e6cff2bd7ff88dd751ab0198b7b1ecfb9c37ffc8ad0bcc5def098ea7143241a3d501168
+Size (pamtester-0.1.2.tar.gz) = 282872 bytes
+SHA1 (patch-src_app.c) = dd1db055930fc2cdca3b9cb8988032e6cce2db82
+SHA1 (patch-src_compat.c) = 44b294bf0e12034337d1f9da17104f913e9f48f9
+SHA1 (patch-src_expr__parser.c) = 8e17fb9bbe87522238a83b4026d5c757c8ef1a66
+SHA1 (patch-src_pamtester.c) = be2be4cb7391d0374625a8c78cda9253f96adfba
+SHA1 (patch-src_parse__opts.c) = 3bf15cbdb7d3340c48bdf3ca93c6d79f437aa922
+SHA1 (patch-src_util.c) = 96df77092668f59baff4c3266156e6c977313267
