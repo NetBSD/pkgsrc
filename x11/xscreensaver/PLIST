@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2026/03/31 12:26:33 hauke Exp $
+@comment $NetBSD: PLIST,v 1.63 2026/10/13 16:59:27 hauke Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -6,6 +6,7 @@ bin/xscreensaver-settings
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/abstractile
 libexec/xscreensaver/alienbeacon
+libexec/xscreensaver/amigajuggler
 libexec/xscreensaver/anemone
 libexec/xscreensaver/anemotaxis
 libexec/xscreensaver/antinspect
@@ -49,6 +50,7 @@ libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/abstractile.xml
 libexec/xscreensaver/config/alienbeacon.xml
+libexec/xscreensaver/config/amigajuggler.xml
 libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/anemotaxis.xml
 libexec/xscreensaver/config/antinspect.xml
@@ -137,6 +139,7 @@ libexec/xscreensaver/config/flame.xml
 libexec/xscreensaver/config/flipflop.xml
 libexec/xscreensaver/config/flipscreen3d.xml
 libexec/xscreensaver/config/fliptext.xml
+libexec/xscreensaver/config/floppy.xml
 libexec/xscreensaver/config/flow.xml
 libexec/xscreensaver/config/fluidballs.xml
 libexec/xscreensaver/config/flurry.xml
@@ -165,6 +168,7 @@ libexec/xscreensaver/config/glsnake.xml
 libexec/xscreensaver/config/gltext.xml
 libexec/xscreensaver/config/goldenapollian.xml
 libexec/xscreensaver/config/goop.xml
+libexec/xscreensaver/config/graphstat.xml
 libexec/xscreensaver/config/grav.xml
 libexec/xscreensaver/config/gravitywell.xml
 libexec/xscreensaver/config/greynetic.xml
@@ -242,6 +246,7 @@ libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pinion.xml
 libexec/xscreensaver/config/pipes.xml
 libexec/xscreensaver/config/platonicfolding.xml
+libexec/xscreensaver/config/polarnight.xml
 libexec/xscreensaver/config/polyhedra.xml
 libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/polytopes.xml
@@ -383,6 +388,7 @@ libexec/xscreensaver/flame
 libexec/xscreensaver/flipflop
 libexec/xscreensaver/flipscreen3d
 libexec/xscreensaver/fliptext
+libexec/xscreensaver/floppy
 libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
 libexec/xscreensaver/flurry
@@ -411,6 +417,7 @@ libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
 libexec/xscreensaver/goldenapollian
 libexec/xscreensaver/goop
+libexec/xscreensaver/graphstat
 libexec/xscreensaver/grav
 libexec/xscreensaver/gravitywell
 libexec/xscreensaver/greynetic
@@ -489,6 +496,7 @@ libexec/xscreensaver/piecewise
 libexec/xscreensaver/pinion
 libexec/xscreensaver/pipes
 libexec/xscreensaver/platonicfolding
+libexec/xscreensaver/polarnight
 libexec/xscreensaver/polyhedra
 libexec/xscreensaver/polyominoes
 libexec/xscreensaver/polytopes
@@ -597,6 +605,7 @@ man/man1/xscreensaver-settings.1
 man/man1/xscreensaver.1
 man/man6/abstractile.6
 man/man6/alienbeacon.6
+man/man6/amigajuggler.6
 man/man6/anemone.6
 man/man6/anemotaxis.6
 man/man6/antinspect.6
@@ -788,6 +797,7 @@ man/man6/piecewise.6
 man/man6/pinion.6
 man/man6/pipes.6
 man/man6/platonicfolding.6
+man/man6/polarnight.6
 man/man6/polyhedra.6
 man/man6/polyominoes.6
 man/man6/polytopes.6
@@ -898,5 +908,34 @@ share/fonts/xscreensaver/SpecialElite.ttf
 share/fonts/xscreensaver/clacon.ttf
 share/fonts/xscreensaver/gallant12x22.ttf
 share/fonts/xscreensaver/luximr.ttf
+share/locale/be/LC_MESSAGES/xscreensaver.mo
+share/locale/ca/LC_MESSAGES/xscreensaver.mo
+share/locale/da/LC_MESSAGES/xscreensaver.mo
+share/locale/de/LC_MESSAGES/xscreensaver.mo
+share/locale/el/LC_MESSAGES/xscreensaver.mo
+share/locale/es/LC_MESSAGES/xscreensaver.mo
+share/locale/et/LC_MESSAGES/xscreensaver.mo
+share/locale/fi/LC_MESSAGES/xscreensaver.mo
+share/locale/fr/LC_MESSAGES/xscreensaver.mo
+share/locale/hu/LC_MESSAGES/xscreensaver.mo
+share/locale/it/LC_MESSAGES/xscreensaver.mo
+share/locale/ja/LC_MESSAGES/xscreensaver.mo
+share/locale/ka/LC_MESSAGES/xscreensaver.mo
+share/locale/ko/LC_MESSAGES/xscreensaver.mo
+share/locale/lt/LC_MESSAGES/xscreensaver.mo
+share/locale/nb/LC_MESSAGES/xscreensaver.mo
+share/locale/nl/LC_MESSAGES/xscreensaver.mo
+share/locale/pl/LC_MESSAGES/xscreensaver.mo
+share/locale/pt/LC_MESSAGES/xscreensaver.mo
+share/locale/pt_BR/LC_MESSAGES/xscreensaver.mo
+share/locale/ru/LC_MESSAGES/xscreensaver.mo
+share/locale/sk/LC_MESSAGES/xscreensaver.mo
+share/locale/sv/LC_MESSAGES/xscreensaver.mo
+share/locale/tr/LC_MESSAGES/xscreensaver.mo
+share/locale/uk/LC_MESSAGES/xscreensaver.mo
+share/locale/vi/LC_MESSAGES/xscreensaver.mo
+share/locale/wa/LC_MESSAGES/xscreensaver.mo
+share/locale/zh_CN/LC_MESSAGES/xscreensaver.mo
+share/locale/zh_TW/LC_MESSAGES/xscreensaver.mo
 share/pixmaps/xscreensaver.png
 share/xscreensaver/xscreensaver.service
