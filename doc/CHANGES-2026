@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6950 2026/10/13 12:33:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6951 2026/10/13 12:44:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10436,3 +10436,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-installer to 1.1.0 [wiz 2026-10-13]
 	Updated archivers/py-cramjam to 2.14.0 [adam 2026-10-13]
 	Updated devel/py-utils to 4.1.2 [adam 2026-10-13]
+	Updated devel/py-absl-py to 2.5.1 [adam 2026-10-13]
+	Updated devel/py-test-check to 3.0.1 [adam 2026-10-13]
