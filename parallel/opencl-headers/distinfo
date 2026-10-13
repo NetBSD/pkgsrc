@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2026/04/16 12:33:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/10/13 08:07:52 adam Exp $
 
-BLAKE2s (opencl-headers-2025.07.22.tar.gz) = d4d5953eeee56934ad7137358176bc824e7456b3e09768cfb2bab68eea940e3c
-SHA512 (opencl-headers-2025.07.22.tar.gz) = e8a338e501783d778ced2e5d0cf5ed735a2372ba9bbd809cc6a1f2d6c7c0d16ded731272fbb5ffe4fd7ce37aa5d739d898869843149f861937aa35890b23c69a
-Size (opencl-headers-2025.07.22.tar.gz) = 86771 bytes
+BLAKE2s (opencl-headers-2026.05.29.tar.gz) = 77258f70514187763c1326732b39c678fa143239e3ae86c88193fcc9bc99f990
+SHA512 (opencl-headers-2026.05.29.tar.gz) = 65908880c36e75fe7d11cf326f4a6e67d2b36b06a405eb331b66d02a8ea43c9eee8b82be955cfb2c4538332b6ca1586af76dfcd44ec92aed5cf9131142aead34
+Size (opencl-headers-2026.05.29.tar.gz) = 89035 bytes
 SHA1 (patch-CMakeLists.txt) = 49afeed82a1dc7c72ec5714d8e799980f33fb8f8
