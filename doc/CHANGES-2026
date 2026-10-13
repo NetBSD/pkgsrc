@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6962 2026/10/13 16:59:58 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.6963 2026/10/13 17:31:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10453,3 +10453,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim to 4.100.1nb3 [ryoon 2026-10-13]
 	Updated multimedia/openwv to 1.1.4 [ryoon 2026-10-13]
 	Updated x11/xscreensaver to 6.17 [hauke 2026-10-13]
+	Removed cad/geda [gdt 2026-10-13]
