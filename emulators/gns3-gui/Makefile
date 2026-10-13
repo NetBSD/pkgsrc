@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/16 02:15:01 markd Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/13 09:33:25 wiz Exp $
 
 DISTNAME=	gns3-gui-2.2.49
 CATEGORIES=	emulators
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.23:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-sentry-sdk>=2.12:../../devel/py-sentry-sdk
 DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315 # py-qt5
 
 USE_PKG_RESOURCES=	yes
 
