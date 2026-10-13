@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6958 2026/10/13 13:34:50 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6959 2026/10/13 13:53:21 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10449,3 +10449,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/cargo-llvm-lines version 0.4.48 [adam 2026-10-13]
 	Updated sysutils/py-ansible-compat to 26.10.0 [adam 2026-10-13]
 	Updated sysutils/ansible-lint to 26.10.1 [adam 2026-10-13]
+	Updated www/e2guardian to 5.5.9r [sborrill 2026-10-13]
