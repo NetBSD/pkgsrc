@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/07/16 20:05:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/13 17:54:19 gdt Exp $
 bin/gen-ctl-io
+include/ctl-math.h
 include/ctl.h
 include/ctlgeom-types.h
 include/ctlgeom.h
@@ -7,20 +8,19 @@ lib/libctl.la
 lib/libctlgeom.la
 man/man1/gen-ctl-io.1
 share/doc/libctl/AUTHORS
+share/doc/libctl/Advanced_User_Experience.md
+share/doc/libctl/Basic_User_Experience.md
 share/doc/libctl/COPYING
 share/doc/libctl/COPYRIGHT
-share/doc/libctl/ChangeLog
-share/doc/libctl/INSTALL
-share/doc/libctl/NEWS
+share/doc/libctl/Developer_Experience.md
+share/doc/libctl/Guile_and_Scheme_Information.md
+share/doc/libctl/Installation.md
+share/doc/libctl/Introduction.md
+share/doc/libctl/License_and_Copyright.md
+share/doc/libctl/NEWS.md
 share/doc/libctl/README.md
-share/doc/libctl/advanced-user.html
-share/doc/libctl/basic-user.html
-share/doc/libctl/developer.html
-share/doc/libctl/guile-links.html
-share/doc/libctl/index.html
-share/doc/libctl/introduction.html
-share/doc/libctl/license.html
-share/doc/libctl/user-ref.html
+share/doc/libctl/User_Reference.md
+share/doc/libctl/index.md
 share/libctl/base/class.scm
 share/libctl/base/ctl.scm
 share/libctl/base/extern-funcs.scm
