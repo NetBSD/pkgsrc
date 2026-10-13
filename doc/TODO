@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28163 2026/10/13 09:54:39 wiz Exp $
+$NetBSD: TODO,v 1.28164 2026/10/13 09:58:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1027,6 +1027,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmw-0.51.0
 	o openslp-2.0.0
 	o openssl-4.0.3
+	o openwv-1.1.4
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
