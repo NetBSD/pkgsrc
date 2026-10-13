@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/05/29 12:38:08 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/13 09:38:25 wiz Exp $
 
 DISTNAME=	geojson-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
