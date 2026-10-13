@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:15:15 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/10/13 17:54:19 gdt Exp $
 
-BLAKE2s (libctl-3.2.2.tar.gz) = 22df8a9ff66bc9ad960dce721dd98dff4c150851b8e69ac734d539a58b3a3429
-SHA512 (libctl-3.2.2.tar.gz) = 646456c23490eb3e63e845d4866b16bd1d92b210f2279342560888bb4764e474b97e17ff34beb672d43afe4d42bbcbddbcf8bb49cedc23b886061a93de10e6df
-Size (libctl-3.2.2.tar.gz) = 505796 bytes
+BLAKE2s (libctl-4.7.1.tar.gz) = 06f104549cebd5b31526722e5ea14528d97e85ce8066fc0b185b0705d01f7530
+SHA512 (libctl-4.7.1.tar.gz) = ebae68cbe853d3034f24c122975ac76ed0198ed481fe46e28efccc87153f361d05c545e1490df6d264e3153af702e2a5f2cde86f45fad35acb325992579b7d00
+Size (libctl-4.7.1.tar.gz) = 708331 bytes

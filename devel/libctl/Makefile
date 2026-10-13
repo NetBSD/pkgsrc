@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2026/10/06 13:01:52 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/13 17:54:19 gdt Exp $
 
-# Needs update to 4.7.1.
-# Now hosted at https://github.com/NanoComp/libctl
-DISTNAME=	libctl-3.2.2
-PKGREVISION=	5
+VERSION=	4.7.1
+DISTNAME=	libctl-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://ab-initio.mit.edu/libctl/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=NanoComp/}
+GITHUB_RELEASE=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libctl.readthedocs.io/en/latest/
@@ -23,10 +22,10 @@ TEST_TARGET=	check
 INSTALLATION_DIRS=	share/doc/libctl
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/libctl/
+	${INSTALL_DATA} ${WRKSRC}/doc/docs/*.md ${DESTDIR}${PREFIX}/share/doc/libctl/
 	cd ${WRKSRC} && ${INSTALL_DATA} \
-		AUTHORS ChangeLog COPYING COPYRIGHT INSTALL NEWS README.md \
+		AUTHORS COPYING COPYRIGHT NEWS.md README.md \
 		${DESTDIR}${PREFIX}/share/doc/libctl/
 
-.include "../../lang/guile20/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
