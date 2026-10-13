@@ -1,0 +1,14 @@
+$NetBSD: patch-lib_CL_CMakeLists.txt,v 1.1 2026/10/13 08:12:30 adam Exp $
+
+install TARGETS RUNTIME_DEPENDENCY_SET is not supported on system "NetBSD"
+
+--- lib/CL/CMakeLists.txt.orig	2026-10-07 06:03:26.760158541 +0000
++++ lib/CL/CMakeLists.txt
+@@ -472,7 +472,6 @@ install(TARGETS "${POCL_LIBRARY_NAME}"
+ endif()
+ 
+ install(TARGETS "${POCL_LIBRARY_NAME}"
+-        RUNTIME_DEPENDENCY_SET libpocl_deps
+         ARCHIVE DESTINATION ${POCL_INSTALL_STATIC_LIBDIR_REL}
+         COMPONENT "dev"
+         LIBRARY DESTINATION ${POCL_INSTALL_PUBLIC_LIBDIR_REL}
