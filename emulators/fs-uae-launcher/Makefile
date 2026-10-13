@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/09/22 10:36:14 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/13 09:35:29 wiz Exp $
 
 DISTNAME=	fs-uae-launcher-3.2.35
 CATEGORIES=	emulators
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-qt6>=6.9.1:../../x11/py-qt6
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=3:../../devel/py-pyobjc-framework-Cocoa
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framework-Quartz
 .endif
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt6
 
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt

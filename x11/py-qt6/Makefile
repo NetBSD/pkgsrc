@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/09/29 06:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/13 09:35:29 wiz Exp $
 
 DISTNAME=	pyqt6-6.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -28,6 +28,8 @@ SUBST_SED.x11lib+=	-e 's,@X11LIB@,${X11BASE}/lib,'
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 .include "../../mk/bsd.prefs.mk"
 

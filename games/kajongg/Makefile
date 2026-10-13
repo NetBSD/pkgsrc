@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2026/09/29 06:05:12 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/10/13 09:35:29 wiz Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
 PKGREVISION=	2
@@ -22,6 +22,8 @@ REPLACE_PYTHON+=	src/kajongg.py
 REPLACE_PYTHON+=	src/kajonggserver.py
 
 PLIST_SUBST+=	PYPKGVER=${PYPKGPREFIX:S/py//}
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt6
 
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../games/libkmahjongg/buildlink3.mk"
