@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.99 2026/09/22 07:12:51 adam Exp $
+$NetBSD: distinfo,v 1.100 2026/10/13 14:50:26 ryoon Exp $
 
 BLAKE2s (exim-4.100.1.tar.xz) = facb6a74fa067aebf9ac3dd24f67a4e0daf38b0fd9b75d80682def51c60787b7
 SHA512 (exim-4.100.1.tar.xz) = 42b7d59bca187e0e8b3cd85d97ff40fe8de9d807fb12ce38749c30056c92689ce98b09874aec06f1d83fde806fe6193312a98681b56c8baff1acfcf91244bbab
@@ -7,4 +7,5 @@ SHA1 (patch-Local_Makefile.pkgsrc) = 9414802bae7ca32eb0639058c5e77795c685f308
 SHA1 (patch-OS_Makefile-Default) = 32681d5114eef2da1f624127655edfdeaaa68d64
 SHA1 (patch-lookups_Makefile) = ed0c54d1e4ad36944ab5d0947d92f4ebfd98417d
 SHA1 (patch-scripts_exim__install) = aa0a31e77d5f76e33bc92140c14d39c79f710b95
+SHA1 (patch-src_miscmods_dmarc__common.c) = b76ef65d7542bf3a124744d11ad24f49e922ce6f
 SHA1 (patch-src_utils_exicyclog.src) = 587d2a489bb5fc53ecf58fbfa2c8d2d350c7a1ec
