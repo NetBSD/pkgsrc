@@ -1,10 +1,10 @@
-$NetBSD: patch-components_metrics_metrics__log.cc,v 1.28 2026/10/02 11:43:28 kikadf Exp $
+$NetBSD: patch-components_metrics_metrics__log.cc,v 1.29 2026/10/13 13:16:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/metrics/metrics_log.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/metrics/metrics_log.cc
 @@ -61,7 +61,7 @@
  #include "base/win/current_module.h"
@@ -34,7 +34,7 @@ $NetBSD: patch-components_metrics_metrics__log.cc,v 1.28 2026/10/02 11:43:28 kik
    // consistent.
    os->set_kernel_version(base::SysInfo::OperatingSystemVersion());
 @@ -465,7 +465,7 @@ void MetricsLog::RecordCoreSystemProfile
-   os->set_build_number(base::SysInfo::GetIOSBuildNumber());
+   os->set_build_number(base::SysInfo::OperatingSystemBuildVersion());
  #endif
  
 -#if BUILDFLAG(IS_LINUX)

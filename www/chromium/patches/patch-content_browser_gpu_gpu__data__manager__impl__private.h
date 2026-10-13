@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_gpu_gpu__data__manager__impl__private.h,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_browser_gpu_gpu__data__manager__impl__private.h,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.h
-@@ -155,7 +155,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
+@@ -149,7 +149,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    void OnDisplayMetricsChanged(const display::Display& display,
                                 uint32_t changed_metrics);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_gpu_gpu__data__manager__impl__private.h,v 1.28 20
    bool IsGpuMemoryBufferNV12Supported();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -315,7 +315,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
+@@ -311,7 +311,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    bool application_is_visible_ = true;
  
    bool disable_gpu_compositing_ = false;

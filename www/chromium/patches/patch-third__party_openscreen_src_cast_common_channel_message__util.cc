@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_openscreen_src_cast_common_channel_message__util.cc,v 1.3 2026/10/02 11:43:37 kikadf Exp $
+$NetBSD: patch-third__party_openscreen_src_cast_common_channel_message__util.cc,v 1.4 2026/10/13 13:16:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/openscreen/src/cast/common/channel/message_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/openscreen/src/cast/common/channel/message_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/openscreen/src/cast/common/channel/message_util.cc
 @@ -59,7 +59,7 @@ constexpr VirtualConnectPlatformValue Ge
    return kMacOSX;

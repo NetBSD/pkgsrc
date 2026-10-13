@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.28 2026/10/02 11:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.29 2026/10/13 13:16:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.h
 @@ -148,7 +148,7 @@ class WebRtcLoggingController
  

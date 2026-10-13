@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.29 2026/10/13 13:16:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -23,7 +23,9 @@
  #include "content/public/common/content_switches.h"
@@ -16,7 +16,7 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
  #include "sandbox/policy/linux/sandbox_linux.h"
  
  namespace content {
-@@ -48,14 +50,20 @@ ChildProcessLauncherHelper::GetFilesToMa
+@@ -49,14 +51,20 @@ ChildProcessLauncherHelper::GetFilesToMa
  }
  
  bool ChildProcessLauncherHelper::IsUsingLaunchOptions() {
@@ -32,22 +32,22 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
      base::LaunchOptions* options) {
    if (options) {
 +#if !BUILDFLAG(IS_BSD)
-     DCHECK(!GetZygoteForLaunch());
+     CHECK(!GetZygoteForLaunch(), base::NotFatalUntil::M159);
 +#endif
      // Convert FD mapping to FileHandleMappingVector
      options->fds_to_remap = files_to_register.GetMappingWithIDAdjustment(
          base::GlobalDescriptors::kBaseDescriptor);
-@@ -67,7 +75,9 @@ bool ChildProcessLauncherHelper::BeforeL
+@@ -68,7 +76,9 @@ bool ChildProcessLauncherHelper::BeforeL
  
      options->environment = delegate_->GetEnvironment();
    } else {
 +#if !BUILDFLAG(IS_BSD)
-     DCHECK(GetZygoteForLaunch());
+     CHECK(GetZygoteForLaunch(), base::NotFatalUntil::M159);
 +#endif
      // Environment variables could be supported in the future, but are not
      // currently supported when launching with the zygote.
-     DCHECK(delegate_->GetEnvironment().empty());
-@@ -84,6 +94,7 @@ ChildProcessLauncherHelper::LaunchProces
+     CHECK(delegate_->GetEnvironment().empty(), base::NotFatalUntil::M159);
+@@ -85,6 +95,7 @@ ChildProcessLauncherHelper::LaunchProces
      int* launch_result) {
    *is_synchronous_launch = true;
    Process process;
@@ -55,7 +55,7 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
    ZygoteCommunication* zygote_handle = GetZygoteForLaunch();
    if (zygote_handle) {
      // TODO(crbug.com/40448989): If chrome supported multiple zygotes they could
-@@ -94,7 +105,6 @@ ChildProcessLauncherHelper::LaunchProces
+@@ -95,7 +106,6 @@ ChildProcessLauncherHelper::LaunchProces
          GetProcessType());
      *launch_result = LAUNCH_RESULT_SUCCESS;
  
@@ -63,7 +63,7 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
      if (handle) {
        // It could be a renderer process or an utility process.
        int oom_score = content::kMiscOomScore;
-@@ -103,15 +113,17 @@ ChildProcessLauncherHelper::LaunchProces
+@@ -104,15 +114,17 @@ ChildProcessLauncherHelper::LaunchProces
          oom_score = content::kLowestRendererOomScore;
        ZygoteHostImpl::GetInstance()->AdjustRendererOOMScore(handle, oom_score);
      }
@@ -82,7 +82,7 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
  
  #if BUILDFLAG(IS_CHROMEOS)
    process_id_ = process.process.Pid();
-@@ -135,10 +147,14 @@ ChildProcessTerminationInfo ChildProcess
+@@ -136,10 +148,14 @@ ChildProcessTerminationInfo ChildProcess
      const ChildProcessLauncherHelper::Process& process,
      bool known_dead) {
    ChildProcessTerminationInfo info;
@@ -97,8 +97,8 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
      info.status = base::GetKnownDeadTerminationStatus(process.process.Handle(),
                                                        &info.exit_code);
    } else {
-@@ -164,13 +180,17 @@ void ChildProcessLauncherHelper::ForceNo
-   DCHECK(CurrentlyOnProcessLauncherTaskRunner());
+@@ -165,13 +181,17 @@ void ChildProcessLauncherHelper::ForceNo
+   CHECK(CurrentlyOnProcessLauncherTaskRunner(), base::NotFatalUntil::M159);
    process.process.Terminate(RESULT_CODE_NORMAL_EXIT, false);
    // On POSIX, we must additionally reap the child.
 +#if !BUILDFLAG(IS_BSD)
@@ -115,7 +115,7 @@ $NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.28
  }
  
  void ChildProcessLauncherHelper::SetProcessPriorityOnLauncherThread(
-@@ -182,11 +202,13 @@ void ChildProcessLauncherHelper::SetProc
+@@ -183,11 +203,13 @@ void ChildProcessLauncherHelper::SetProc
    }
  }
  

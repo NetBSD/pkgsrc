@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_client__cert__sources.cc,v 1.28 2026/10/02 11:43:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_client__cert__sources.cc,v 1.29 2026/10/13 13:16:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
 @@ -54,7 +54,7 @@
  #include "net/ssl/client_cert_store_mac.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:41 kikadf Exp $
+$NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.29 2026/10/13 13:16:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -90,7 +90,7 @@
  #include "base/win/win_util.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:
    return flags & ui::EF_CONTROL_DOWN;
  #else
    return false;
-@@ -834,7 +834,7 @@ bool Textfield::OnKeyPressed(const ui::K
+@@ -840,7 +840,7 @@ bool Textfield::OnKeyPressed(const ui::K
      return handled;
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:
    if (!handled) {
      if (auto* linux_ui = ui::LinuxUi::instance()) {
        const auto command =
-@@ -1019,7 +1019,7 @@ void Textfield::AboutToRequestFocusFromT
+@@ -1025,7 +1025,7 @@ void Textfield::AboutToRequestFocusFromT
  }
  
  bool Textfield::SkipDefaultKeyEventProcessing(const ui::KeyEvent& event) {
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:
    // Skip any accelerator handling that conflicts with custom keybindings.
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      if (IsTextEditCommandEnabled(linux_ui->GetTextEditCommandForEvent(
-@@ -2151,7 +2151,7 @@ bool Textfield::ShouldDoLearning() {
+@@ -2157,7 +2157,7 @@ bool Textfield::ShouldDoLearning() {
    return false;
  }
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:
  // TODO(crbug.com/41452689): Implement this method to support Korean IME
  // reconversion feature on native text fields (e.g. find bar).
  bool Textfield::SetCompositionFromExistingText(
-@@ -2678,7 +2678,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2684,7 +2684,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
          return ui::TextEditCommand::DELETE_BACKWARD;
        }
@@ -60,7 +60,7 @@ $NetBSD: patch-ui_views_controls_textfield_textfield.cc,v 1.28 2026/10/02 11:43:
        // Only erase by line break on Linux and ChromeOS.
        if (shift) {
          return ui::TextEditCommand::DELETE_TO_BEGINNING_OF_LINE;
-@@ -2686,7 +2686,7 @@ ui::TextEditCommand Textfield::GetComman
+@@ -2692,7 +2692,7 @@ ui::TextEditCommand Textfield::GetComman
  #endif
        return ui::TextEditCommand::DELETE_WORD_BACKWARD;
      case ui::VKEY_DELETE:

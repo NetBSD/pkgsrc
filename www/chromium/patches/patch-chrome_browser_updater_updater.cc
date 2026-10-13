@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_updater_updater.cc,v 1.13 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_updater_updater.cc,v 1.14 2026/10/13 13:16:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/updater/updater.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/updater/updater.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/updater/updater.cc
 @@ -53,7 +53,7 @@ std::optional<mojom::AppState> GetLastKn
    return GetLastKnownUpdaterRegistrationStorage();

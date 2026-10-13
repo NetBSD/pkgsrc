@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_base_switches.cc,v 1.28 2026/10/02 11:43:34 kikadf Exp $
+$NetBSD: patch-remoting_host_base_switches.cc,v 1.29 2026/10/13 13:16:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/switches.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- remoting/host/base/switches.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ remoting/host/base/switches.cc
 @@ -25,13 +25,13 @@ const char kProcessTypeEvaluateCapabilit
  const char kProcessTypeFileChooser[] = "file_chooser";

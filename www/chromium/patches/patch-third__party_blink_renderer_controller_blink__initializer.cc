@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.28 2026/10/02 11:43:36 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.29 2026/10/13 13:16:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -83,12 +83,12 @@
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
@@ -22,8 +22,8 @@ $NetBSD: patch-third__party_blink_renderer_controller_blink__initializer.cc,v 1.
  #endif
  
 @@ -260,7 +260,7 @@ void BlinkInitializer::RegisterInterface
+           CrossThreadBindRepeating(&CrashMemoryMetricsReporterImpl::Bind)),
        main_thread_task_runner);
- #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

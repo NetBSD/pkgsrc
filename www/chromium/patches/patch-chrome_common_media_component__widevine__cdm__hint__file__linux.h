@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_media_component__widevine__cdm__hint__file__linux.h,v 1.28 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_common_media_component__widevine__cdm__hint__file__linux.h,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -14,7 +14,7 @@
  #error "This file only applies when Widevine used."

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.27 2026/10/02 11:43:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.28 2026/10/13 13:16:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
 @@ -103,7 +103,7 @@
  #include "ui/wm/core/window_modality_controller.h"  // nogncheck
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      const bool is_dragging_all_tabs =
          source_context_ && drag_data_.num_dragging_tabs() ==
                                 source_context_->GetTabStripModel()->count();
-@@ -1796,7 +1796,7 @@ TabDragController::DetachIntoNewBrowserA
+@@ -1813,7 +1813,7 @@ TabDragController::DetachIntoNewBrowserA
        current_state_ = DragState::kWaitingForWindowToShow;
        VisibilityWaiter waiter(dragged_widget);
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
        // VisibilityWaiter runs a kNestableTasksAllowed loop while the user holds
        // the pointer button, before the move loop's own suppression scope is
        // established; suppress data drags for its duration as well.
-@@ -2426,7 +2426,7 @@ void TabDragController::CompleteDrag() {
+@@ -2462,7 +2462,7 @@ void TabDragController::CompleteDrag() {
      }
  
      // If source window was maximized - maximize the new window as well.
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 
      // Keeping maximized state breaks snap to Grid on Windows when dragging
      // tabs from maximized windows. TODO:(crbug.com/41321838) Explore doing this
      // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2854,7 +2854,7 @@ TabDragController::Liveness TabDragContr
+@@ -2890,7 +2890,7 @@ TabDragController::Liveness TabDragContr
      }
    }
  

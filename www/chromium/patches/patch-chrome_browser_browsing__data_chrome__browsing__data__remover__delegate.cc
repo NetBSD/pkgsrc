@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_browsing__data_chrome__browsing__data__remover__delegate.cc,v 1.2 2026/10/02 11:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_browsing__data_chrome__browsing__data__remover__delegate.cc,v 1.3 2026/10/13 13:16:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/browsing_data/chrome_browsing_data_remover_delegate.cc
-@@ -725,6 +725,7 @@ void ChromeBrowsingDataRemoverDelegate::
+@@ -726,6 +726,7 @@ void ChromeBrowsingDataRemoverDelegate::
    if (remove_mask & constants::DATA_TYPE_PRIVATE_VERIFICATION_TOKENS) {
      if (base::FeatureList::IsEnabled(
              net::features::kEnablePrivateVerificationTokens)) {
@@ -14,7 +14,7 @@ $NetBSD: patch-chrome_browser_browsing__data_chrome__browsing__data__remover__de
        if (auto* pvt_service =
                PrivateVerificationTokensServiceFactory::GetForProfile(
                    profile_)) {
-@@ -741,6 +742,9 @@ void ChromeBrowsingDataRemoverDelegate::
+@@ -742,6 +743,9 @@ void ChromeBrowsingDataRemoverDelegate::
                filter_builder->BuildStorageKeyFilter(), std::move(done_closure));
          }
        }

@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_features.h,v 1.16 2026/10/02 11:43:34 kikadf Exp $
+$NetBSD: patch-sandbox_policy_features.h,v 1.17 2026/10/13 13:16:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- sandbox/policy/features.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ sandbox/policy/features.h
-@@ -46,7 +46,7 @@ SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATU
+@@ -45,7 +45,7 @@ SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATU
  SANDBOX_POLICY_EXPORT BASE_DECLARE_FEATURE(kSpectreVariant2Mitigation);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

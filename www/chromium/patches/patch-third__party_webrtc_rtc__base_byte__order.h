@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_byte__order.h,v 1.28 2026/10/02 11:43:38 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_byte__order.h,v 1.29 2026/10/13 13:16:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/byte_order.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/webrtc/rtc_base/byte_order.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/webrtc/rtc_base/byte_order.h
 @@ -84,6 +84,8 @@
  #error WEBRTC_ARCH_BIG_ENDIAN or WEBRTC_ARCH_LITTLE_ENDIAN must be defined.

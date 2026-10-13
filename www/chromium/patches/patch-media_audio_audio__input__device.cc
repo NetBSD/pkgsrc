@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_audio__input__device.cc,v 1.28 2026/10/02 11:43:32 kikadf Exp $
+$NetBSD: patch-media_audio_audio__input__device.cc,v 1.29 2026/10/13 13:16:43 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/audio_input_device.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- media/audio/audio_input_device.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ media/audio/audio_input_device.cc
 @@ -269,7 +269,7 @@ void AudioInputDevice::OnStreamCreated(
  // here. See comments in AliveChecker and PowerObserverHelper for details and

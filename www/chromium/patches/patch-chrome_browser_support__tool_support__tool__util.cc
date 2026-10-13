@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_support__tool_support__tool__util.cc,v 1.14 2026/10/02 11:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_support__tool_support__tool__util.cc,v 1.15 2026/10/13 13:16:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/support_tool/support_tool_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/support_tool/support_tool_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/support_tool/support_tool_util.cc
 @@ -53,7 +53,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_WITH_HW_DETAILS)

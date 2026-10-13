@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.28 2026/10/02 11:43:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__ui__prefs.cc,v 1.29 2026/10/13 13:16:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
 @@ -97,7 +97,7 @@ void RegisterBrowserPrefs(PrefRegistrySi
    registry->RegisterTimePref(prefs::kPinInfoBarLastShown, base::Time());

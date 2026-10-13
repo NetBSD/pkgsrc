@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_channel.cc,v 1.28 2026/10/02 11:43:33 kikadf Exp $
+$NetBSD: patch-mojo_core_channel.cc,v 1.29 2026/10/13 13:16:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/channel.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- mojo/core/channel.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ mojo/core/channel.cc
 @@ -69,7 +69,11 @@ const size_t kMaxUnusedReadBufferCapacit
  // Limit on the number of handles that may be received per Mojo message.

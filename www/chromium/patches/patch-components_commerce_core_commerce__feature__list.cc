@@ -1,12 +1,12 @@
-$NetBSD: patch-components_commerce_core_commerce__feature__list.cc,v 1.28 2026/10/02 11:43:27 kikadf Exp $
+$NetBSD: patch-components_commerce_core_commerce__feature__list.cc,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
-@@ -167,7 +167,7 @@ BASE_FEATURE(kShoppingAlternateServer, b
+@@ -164,7 +164,7 @@ BASE_FEATURE(kEnableDiscountInfoApi, bas
  const char kDiscountOnShoppyPageParam[] = "discount-on-shoppy-page";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_commerce_core_commerce__feature__list.cc,v 1.28 2026/1
  const base::FeatureParam<bool> kDiscountOnShoppyPage{
      &kEnableDiscountInfoApi, kDiscountOnShoppyPageParam, true};
  #else
-@@ -180,7 +180,7 @@ const char kMerchantWideBehaviorParam[] 
+@@ -177,7 +177,7 @@ const char kMerchantWideBehaviorParam[] 
  const char kNonMerchantWideBehaviorParam[] = "non-merchant-wide-behavior";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

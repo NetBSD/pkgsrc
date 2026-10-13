@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.h,v 1.15 2026/10/02 11:43:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_prefs_pref__watcher.h,v 1.16 2026/10/13 13:16:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/prefs/pref_watcher.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/prefs/pref_watcher.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/prefs/pref_watcher.h
 @@ -53,7 +53,7 @@ class PrefWatcher : public KeyedService,
    // blink::RendererPreferences.

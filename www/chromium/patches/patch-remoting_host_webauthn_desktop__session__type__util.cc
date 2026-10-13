@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_webauthn_desktop__session__type__util.cc,v 1.26 2026/10/02 11:43:34 kikadf Exp $
+$NetBSD: patch-remoting_host_webauthn_desktop__session__type__util.cc,v 1.27 2026/10/13 13:16:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/desktop_session_type_util.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- remoting/host/webauthn/desktop_session_type_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ remoting/host/webauthn/desktop_session_type_util.cc
 @@ -11,7 +11,7 @@
  namespace remoting {

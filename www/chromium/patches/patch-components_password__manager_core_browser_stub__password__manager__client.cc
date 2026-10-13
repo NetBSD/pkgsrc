@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_stub__password__manager__client.cc,v 1.28 2026/10/02 11:43:28 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_stub__password__manager__client.cc,v 1.29 2026/10/13 13:16:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/stub_password_manager_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/password_manager/core/browser/stub_password_manager_client.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/password_manager/core/browser/stub_password_manager_client.cc
 @@ -235,7 +235,7 @@ version_info::Channel StubPasswordManage
  }

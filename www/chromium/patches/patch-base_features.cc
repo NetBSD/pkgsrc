@@ -1,12 +1,12 @@
-$NetBSD: patch-base_features.cc,v 1.7 2026/10/02 11:43:19 kikadf Exp $
+$NetBSD: patch-base_features.cc,v 1.8 2026/10/13 13:16:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/features.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- base/features.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ base/features.cc
-@@ -17,7 +17,7 @@
+@@ -18,7 +18,7 @@
  #include "build/build_config.h"
  #include "build/buildflag.h"
  
@@ -15,9 +15,9 @@ $NetBSD: patch-base_features.cc,v 1.7 2026/10/02 11:43:19 kikadf Exp $
  #include "base/message_loop/message_pump_epoll.h"
  #endif
  
-@@ -259,7 +259,7 @@ void Init() {
-   debug::StackTrace::InitializeFeatures();
+@@ -243,7 +243,7 @@ void Init() {
    FilePath::InitializeFeatures();
+   MessagePumpWakeupCounter::InitializeFeatures();
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)

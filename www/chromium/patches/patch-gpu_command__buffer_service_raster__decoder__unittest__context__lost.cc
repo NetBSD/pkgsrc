@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_raster__decoder__unittest__context__lost.cc,v 1.27 2026/10/02 11:43:31 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_raster__decoder__unittest__context__lost.cc,v 1.28 2026/10/13 13:16:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ gpu/command_buffer/service/raster_decoder_unittest_context_lost.cc
 @@ -15,6 +15,18 @@ using ::testing::Return;
  using ::testing::SaveArg;

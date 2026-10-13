@@ -1,0 +1,17 @@
+$NetBSD: patch-device_bluetooth_BUILD.gn,v 1.1 2026/10/13 13:16:42 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- device/bluetooth/BUILD.gn.orig	2026-10-06 00:06:58.000000000 +0000
++++ device/bluetooth/BUILD.gn
+@@ -7,7 +7,7 @@ import("//build/config/features.gni")
+ import("//device/bluetooth/emulation/buildflags.gni")
+ 
+ declare_args() {
+-  use_bluez = (is_linux && !is_castos && use_dbus) || is_chromeos
++  use_bluez = !is_bsd && (is_linux && !is_castos && use_dbus) || is_chromeos
+ }
+ 
+ if (is_android) {

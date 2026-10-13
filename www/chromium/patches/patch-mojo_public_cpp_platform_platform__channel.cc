@@ -1,23 +1,17 @@
-$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.2 2026/10/02 11:43:33 kikadf Exp $
+$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.3 2026/10/13 13:16:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/platform_channel.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- mojo/public/cpp/platform/platform_channel.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ mojo/public/cpp/platform/platform_channel.cc
-@@ -148,6 +148,38 @@ void CreateChannel(PlatformHandle* local
+@@ -148,6 +148,32 @@ void CreateChannel(PlatformHandle* local
    *remote_endpoint = PlatformHandle(std::move(receive));
  }
  #elif BUILDFLAG(IS_POSIX)
 +#if BUILDFLAG(IS_NETBSD)
-+// NetBSD's unp_send() silently drops both the data and the descriptors of a
-+// sendmsg() whose SCM_RIGHTS control message does not fit in the receiver's
-+// buffer, yet reports success: sosend() checks the space with the userland
-+// control size (4 bytes per fd), then internalization grows it to 8 bytes per
-+// fd. The stream then desyncs and the passed fds are lost. A sender can queue
-+// at most its own SO_SNDBUF, so a receive buffer well above the peer's send
-+// buffer keeps the internalized control message in range.
++// PR60832 https://gnats.netbsd.org/60832
 +void GrowReceiveBufferAbovePeerSendBuffer(int fd, int peer_fd) {
 +  int sndbuf = 0;
 +  socklen_t len = sizeof(sndbuf);
@@ -45,7 +39,7 @@ $NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.2 2026/10/02 11
  void CreateChannel(PlatformHandle* local_endpoint,
                     PlatformHandle* remote_endpoint) {
    int fds[2];
-@@ -157,6 +189,11 @@ void CreateChannel(PlatformHandle* local
+@@ -157,6 +183,11 @@ void CreateChannel(PlatformHandle* local
    PCHECK(fcntl(fds[0], F_SETFL, O_NONBLOCK) == 0);
    PCHECK(fcntl(fds[1], F_SETFL, O_NONBLOCK) == 0);
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_safe__browsing_content_common_file__type__policies__unittest.cc,v 1.28 2026/10/02 11:43:29 kikadf Exp $
+$NetBSD: patch-components_safe__browsing_content_common_file__type__policies__unittest.cc,v 1.29 2026/10/13 13:16:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/safe_browsing/content/common/file_type_policies_unittest.cc
 @@ -146,7 +146,7 @@ TEST_F(FileTypePoliciesTest, UnpackResou
    EXPECT_EQ(142, file_type.uma_value());

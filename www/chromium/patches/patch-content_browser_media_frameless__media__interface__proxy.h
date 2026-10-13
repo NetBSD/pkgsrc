@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_media_frameless__media__interface__proxy.h,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_browser_media_frameless__media__interface__proxy.h,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/frameless_media_interface_proxy.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/media/frameless_media_interface_proxy.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
-@@ -19,7 +19,7 @@
+@@ -18,7 +18,7 @@
  #include "mojo/public/cpp/bindings/receiver_set.h"
  #include "mojo/public/cpp/bindings/remote.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_media_frameless__media__interface__proxy.h,v 1.28
  #include "media/mojo/mojom/video_decoder.mojom.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -96,7 +96,7 @@ class FramelessMediaInterfaceProxy final
+@@ -95,7 +95,7 @@ class FramelessMediaInterfaceProxy final
    // Connections to the renderer.
    mojo::ReceiverSet<media::mojom::InterfaceFactory> receivers_;
  

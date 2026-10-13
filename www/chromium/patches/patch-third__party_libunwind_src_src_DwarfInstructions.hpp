@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libunwind_src_src_DwarfInstructions.hpp,v 1.14 2026/10/02 11:43:37 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_DwarfInstructions.hpp,v 1.15 2026/10/13 13:16:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/DwarfInstructions.hpp.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/libunwind/src/src/DwarfInstructions.hpp.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/libunwind/src/src/DwarfInstructions.hpp
 @@ -408,6 +408,23 @@ int DwarfInstructions<A, R>::stepWithDwa
        if (R::getArch() == REGISTERS_PPC64 && returnAddress != 0) {

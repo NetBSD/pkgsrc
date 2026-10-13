@@ -1,21 +1,27 @@
-$NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.28 2026/10/02 11:43:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.29 2026/10/13 13:16:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/webui/interstitials/interstitial_ui.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/webui/interstitials/interstitial_ui.cc
-@@ -75,7 +75,7 @@
- #include "components/security_interstitials/content/captive_portal_blocking_page.h"
+@@ -77,12 +77,12 @@
+ #endif
+ 
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/supervised_user/supervised_user_verification_controller_client.h"
+ #include "chrome/browser/supervised_user/supervised_user_verification_page_blocked_sites.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/supervised_user/supervised_user_verification_controller_client.h"
- #include "chrome/browser/supervised_user/supervised_user_verification_page_blocked_sites.h"
  #include "chrome/browser/supervised_user/supervised_user_verification_page_youtube.h"
-@@ -404,7 +404,7 @@ std::unique_ptr<EnterpriseWarnPage> Crea
+ #endif
+ 
+@@ -409,7 +409,7 @@ std::unique_ptr<EnterpriseWarnPage> Crea
  }
  #endif
  
@@ -24,7 +30,16 @@ $NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.28 
  std::unique_ptr<SupervisedUserVerificationPageForYouTube>
  CreateSupervisedUserVerificationPageForYouTube(
      content::WebContents* web_contents,
-@@ -631,7 +631,7 @@ void InterstitialHTMLSource::StartDataRe
+@@ -429,7 +429,7 @@ CreateSupervisedUserVerificationPageForY
+ #endif
+ 
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ std::unique_ptr<SupervisedUserVerificationPageForBlockedSites>
+ CreateSupervisedUserVerificationPageForBlockedSites(
+     content::WebContents* web_contents,
+@@ -639,7 +639,7 @@ void InterstitialHTMLSource::StartDataRe
      interstitial_delegate = CreateInsecureFormPage(web_contents);
    } else if (path_without_query == "/https_only") {
      interstitial_delegate = CreateHttpsOnlyModePage(web_contents);
@@ -32,4 +47,13 @@ $NetBSD: patch-chrome_browser_ui_webui_interstitials_interstitial__ui.cc,v 1.28 
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    } else if (path_without_query == "/supervised-user-verify") {
      interstitial_delegate = CreateSupervisedUserVerificationPageForYouTube(
+         web_contents, /*is_main_frame=*/true);
+@@ -648,7 +648,7 @@ void InterstitialHTMLSource::StartDataRe
+         web_contents, /*is_main_frame=*/false);
+ #endif
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+   } else if (path_without_query == "/supervised-user-verify-blocked-site") {
+     interstitial_delegate = CreateSupervisedUserVerificationPageForBlockedSites(
          web_contents, /*is_main_frame=*/true);

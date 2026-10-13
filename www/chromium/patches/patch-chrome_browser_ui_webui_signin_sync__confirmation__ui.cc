@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_signin_sync__confirmation__ui.cc,v 1.10 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_signin_sync__confirmation__ui.cc,v 1.11 2026/10/13 13:16:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/signin/sync_confirmation_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/webui/signin/sync_confirmation_ui.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/webui/signin/sync_confirmation_ui.cc
 @@ -180,7 +180,7 @@ SyncConfirmationUI::SyncConfirmationUI(c
                      IDS_SYNC_LOADING_CONFIRMATION_TITLE);

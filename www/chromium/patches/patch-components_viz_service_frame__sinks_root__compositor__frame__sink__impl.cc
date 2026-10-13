@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink__impl.cc,v 1.28 2026/10/02 11:43:29 kikadf Exp $
+$NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink__impl.cc,v 1.29 2026/10/13 13:16:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
 @@ -142,7 +142,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(
@@ -15,7 +15,7 @@ $NetBSD: patch-components_viz_service_frame__sinks_root__compositor__frame__sink
    // For X11, we need notify client about swap completion after resizing, so the
    // client can use it for synchronize with X11 WM.
    output_surface->SetNeedsSwapSizeNotifications(true);
-@@ -945,7 +945,7 @@ void RootCompositorFrameSinkImpl::Displa
+@@ -960,7 +960,7 @@ void RootCompositorFrameSinkImpl::Displa
    if (display_client_ && enable_swap_completion_callback_) {
      display_client_->DidCompleteSwapWithSize(pixel_size);
    }

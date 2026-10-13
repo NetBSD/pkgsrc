@@ -1,17 +1,18 @@
-$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.28 2026/10/02 11:43:36 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.29 2026/10/13 13:16:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
-@@ -186,6 +186,18 @@ group("make_platform_generated") {
+@@ -186,6 +186,19 @@ group("make_platform_generated") {
    ]
  }
  
++# XXX crubit
 +rust_static_library("font_format_check") {
-+  allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
++  allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate. 
 +  crate_root = "fonts/opentype/format_check.rs"
 +  sources = [ crate_root ]
 +  cxx_bindings = [ crate_root ]
@@ -25,21 +26,39 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.28 2026/10/02 1
  rust_static_library("rustfft_ffi") {
    allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
    crate_root = "audio/rustfft_ffi.rs"
-@@ -1792,7 +1804,6 @@ component("platform") {
+@@ -712,8 +725,6 @@ component("platform") {
+     "fonts/generic_font_family_settings.cc",
+     "fonts/generic_font_family_settings.h",
+     "fonts/glyph_metrics_map.h",
+-    "fonts/ift/ift_patcher.cc",
+-    "fonts/ift/ift_patcher.h",
+     "fonts/opentype/color_table_lookup.cc",
+     "fonts/opentype/color_table_lookup.h",
+     "fonts/opentype/font_format_check.cc",
+@@ -1792,7 +1803,6 @@ component("platform") {
      ":allow_discouraged_type",
      ":blink_platform_public_deps",
      ":platform_export",
 -    "//build/rust/crubit",
+     "//components/language_detection/core",
      "//gpu/command_buffer/client:raster_interface",
      "//media/capture:capture_lib",
-     "//mojo/public/cpp/base",
-@@ -1819,8 +1830,8 @@ component("platform") {
+@@ -1819,9 +1829,8 @@ component("platform") {
      "//ui/native_theme/features",
    ]
    deps = [
 +    ":font_format_check",
      ":rustfft_ffi",
 -    "fonts:font_format_bindings",
+-    "fonts:ift_patcher_bindings",
      "//base:base_static",
      "//base/allocator:buildflags",
      "//build:chromecast_buildflags",
+@@ -2240,7 +2249,6 @@ source_set("blink_platform_unittests_sou
+     "fonts/font_test.cc",
+     "fonts/font_test_utilities.cc",
+     "fonts/generic_font_family_settings_test.cc",
+-    "fonts/ift/ift_patcher_test.cc",
+     "fonts/opentype/color_table_lookup_test.cc",
+     "fonts/opentype/font_format_check_test.cc",
+     "fonts/opentype/font_settings_test.cc",

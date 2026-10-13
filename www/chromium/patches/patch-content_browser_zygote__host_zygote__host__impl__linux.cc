@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
-@@ -20,8 +20,10 @@
+@@ -21,8 +21,10 @@
  #include "build/build_config.h"
  #include "content/common/zygote/zygote_commands_linux.h"
  #include "content/common/zygote/zygote_communication_linux.h"
@@ -17,7 +17,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
  #include "sandbox/linux/services/credentials.h"
  #include "sandbox/linux/services/namespace_sandbox.h"
  #include "sandbox/linux/suid/client/setuid_sandbox_host.h"
-@@ -39,6 +41,7 @@ namespace content {
+@@ -40,6 +42,7 @@ namespace content {
  
  namespace {
  
@@ -25,7 +25,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
  // Receive a fixed message on fd and return the sender's PID.
  // Returns true if the message received matches the expected message.
  bool ReceiveFixedMessage(int fd,
-@@ -61,6 +64,7 @@ bool ReceiveFixedMessage(int fd,
+@@ -62,6 +65,7 @@ bool ReceiveFixedMessage(int fd,
      return false;
    return true;
  }
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
  
  }  // namespace
  
-@@ -70,9 +74,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
+@@ -71,9 +75,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
  }
  
  ZygoteHostImpl::ZygoteHostImpl()
@@ -47,7 +47,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
        sandbox_binary_(),
        zygote_pids_lock_(),
        zygote_pids_() {}
-@@ -85,6 +93,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
+@@ -86,6 +94,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
  }
  
  void ZygoteHostImpl::Init(const base::CommandLine& command_line) {
@@ -55,7 +55,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
    if (command_line.HasSwitch(sandbox::policy::switches::kNoSandbox)) {
      return;
    }
-@@ -139,6 +148,7 @@ void ZygoteHostImpl::Init(const base::Co
+@@ -140,6 +149,7 @@ void ZygoteHostImpl::Init(const base::Co
             "you can try using --"
          << sandbox::policy::switches::kNoSandbox << ".";
    }
@@ -63,20 +63,36 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.28 
  }
  
  void ZygoteHostImpl::AddZygotePid(pid_t pid) {
-@@ -163,6 +173,7 @@ pid_t ZygoteHostImpl::LaunchZygote(
+@@ -164,6 +174,7 @@ ZygoteLaunchCompletionCallback ZygoteHos
      base::CommandLine* cmd_line,
      base::ScopedFD* control_fd,
      base::FileHandleMappingVector additional_remapped_fds) {
 +#if !BUILDFLAG(IS_BSD)
-   int fds[2];
-   CHECK_EQ(0, socketpair(AF_UNIX, SOCK_SEQPACKET | SOCK_CLOEXEC, 0, fds));
-   CHECK(base::UnixDomainSocket::EnableReceiveProcessId(fds[0]));
-@@ -251,9 +262,12 @@ pid_t ZygoteHostImpl::LaunchZygote(
+   has_zygote_ = true;
  
+   int fds[2];
+@@ -209,10 +220,15 @@ ZygoteLaunchCompletionCallback ZygoteHos
+   const pid_t pid = process.Pid();
    AddZygotePid(pid);
-   return pid;
+   return base::BindOnce([](pid_t pid) { return pid; }, pid);
 +#else
-+  return 0;
++  const pid_t pid = getpid();
++  return base::BindOnce([](pid_t pid) { return pid; }, pid);
++#endif
+ }
+ 
+ pid_t ZygoteHostImpl::FinishSandboxedZygoteLaunch(base::Process process,
+                                                   int control_fd) {
++#if !BUILDFLAG(IS_BSD)
+   // The namespace and SUID sandbox will execute the zygote in a new
+   // PID namespace, and the main zygote process will then fork from
+   // there. Watch now our elaborate dance to find and validate the
+@@ -263,9 +279,12 @@ pid_t ZygoteHostImpl::FinishSandboxedZyg
+ 
+   AddZygotePid(real_pid);
+   return real_pid;
++#else
++  return getpid();
 +#endif
  }
  

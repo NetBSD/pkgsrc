@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.28 2026/10/02 11:43:32 kikadf Exp $
+$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.29 2026/10/13 13:16:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -171,7 +171,7 @@ void InitializePlatformOverlaySettings(G
  
@@ -69,7 +69,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.28 2026/10/02 11:43:32 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1108,7 +1108,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1112,7 +1112,7 @@ void GpuInit::InitializeInProcess(base::
    }
    bool gl_disabled = gl::GetGLImplementation() == gl::kGLImplementationDisabled;
  
@@ -78,7 +78,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.28 2026/10/02 11:43:32 kikadf Ex
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1164,7 +1164,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1168,7 +1168,7 @@ void GpuInit::InitializeInProcess(base::
      }
    }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__log__uploader.cc,v 1.28 2026/10/02 11:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__log__uploader.cc,v 1.29 2026/10/13 13:16:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
 @@ -98,7 +98,7 @@ std::string GetLogUploadProduct(WebRtcLo
    const char product[] = "Chrome";

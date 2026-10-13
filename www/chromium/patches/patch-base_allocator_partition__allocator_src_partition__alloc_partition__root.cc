@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.28 2026/10/02 11:43:19 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__root.cc,v 1.29 2026/10/13 13:16:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
-@@ -50,7 +50,7 @@
+@@ -51,7 +51,7 @@
  #include "wow64apiset.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
  #include <pthread.h>
  #endif  // PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
  
-@@ -283,7 +283,7 @@ void PartitionAllocMallocInitOnce() {
+@@ -284,7 +284,7 @@ void PartitionAllocMallocInitOnce() {
      return;
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -1001,7 +1001,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -1002,7 +1002,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));

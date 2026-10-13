@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libunwind_src_src_UnwindCursor.hpp,v 1.14 2026/10/02 11:43:37 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_UnwindCursor.hpp,v 1.15 2026/10/13 13:16:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/libunwind/src/src/UnwindCursor.hpp
 @@ -114,6 +114,8 @@ extern "C" _Unwind_Reason_Code __libunwi
  

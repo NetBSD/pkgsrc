@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 2026/10/02 11:43:40 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.28 2026/10/13 13:16:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_frame_manager.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_frame_manager.cc
 @@ -5,7 +5,9 @@
  #include "ui/ozone/platform/wayland/host/wayland_frame_manager.h"
@@ -16,7 +16,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 
  
  #include <cstdint>
  #include <variant>
-@@ -490,8 +492,10 @@ std::optional<bool> WaylandFrameManager:
+@@ -496,8 +498,10 @@ std::optional<bool> WaylandFrameManager:
    surface->UpdateBufferDamageRegion(
        gfx::ToEnclosingRectIgnoringError(surface_damage));
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 
  
    bool needs_commit = false;
  
-@@ -523,6 +527,9 @@ std::optional<bool> WaylandFrameManager:
+@@ -529,6 +533,9 @@ std::optional<bool> WaylandFrameManager:
        case WaylandBufferHandle::SyncMethod::kNone:
          break;
        case WaylandBufferHandle::SyncMethod::kSyncobj:
@@ -37,7 +37,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 
          surface->RequestExplicitRelease(
              base::BindOnce(&WaylandFrameManager::OnExplicitBufferRelease,
                             weak_factory_.GetWeakPtr(), surface));
-@@ -530,6 +537,9 @@ std::optional<bool> WaylandFrameManager:
+@@ -536,6 +543,9 @@ std::optional<bool> WaylandFrameManager:
        case WaylandBufferHandle::SyncMethod::kDMAFence:
          [[fallthrough]];
        case WaylandBufferHandle::SyncMethod::kImplicit:
@@ -47,7 +47,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 
          buffer_handle->set_buffer_released_callback(
              base::BindOnce(&WaylandFrameManager::OnWlBufferRelease,
                             weak_factory_.GetWeakPtr(), surface),
-@@ -788,8 +798,10 @@ void WaylandFrameManager::OnExplicitBuff
+@@ -781,8 +791,10 @@ void WaylandFrameManager::OnExplicitBuff
  
        if (fence.is_valid()) {
          if (frame->merged_release_fence_fd.is_valid()) {
@@ -58,7 +58,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__frame__manager.cc,v 1.27 
          } else {
            frame->merged_release_fence_fd = std::move(fence);
          }
-@@ -827,8 +839,10 @@ void WaylandFrameManager::OnWlBufferRele
+@@ -820,8 +832,10 @@ void WaylandFrameManager::OnWlBufferRele
  
          if (fence.is_valid()) {
            if (frame->merged_release_fence_fd.is_valid()) {

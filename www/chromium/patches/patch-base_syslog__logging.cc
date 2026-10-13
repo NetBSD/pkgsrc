@@ -1,10 +1,10 @@
-$NetBSD: patch-base_syslog__logging.cc,v 1.28 2026/10/02 11:43:20 kikadf Exp $
+$NetBSD: patch-base_syslog__logging.cc,v 1.29 2026/10/13 13:16:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/syslog_logging.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- base/syslog_logging.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ base/syslog_logging.cc
 @@ -17,7 +17,7 @@
  #include "base/strings/string_util.h"

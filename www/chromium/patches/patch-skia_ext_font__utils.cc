@@ -1,12 +1,12 @@
-$NetBSD: patch-skia_ext_font__utils.cc,v 1.28 2026/10/02 11:43:35 kikadf Exp $
+$NetBSD: patch-skia_ext_font__utils.cc,v 1.29 2026/10/13 13:16:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/font_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- skia/ext/font_utils.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ skia/ext/font_utils.cc
-@@ -25,7 +25,7 @@
+@@ -30,7 +30,7 @@
  #include "third_party/skia/include/ports/SkFontMgr_mac_ct.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-skia_ext_font__utils.cc,v 1.28 2026/10/02 11:43:35 kikadf Exp $
  #include "third_party/skia/include/ports/SkFontConfigInterface.h"
  #include "third_party/skia/include/ports/SkFontMgr_FontConfigInterface.h"
  #include "third_party/skia/include/ports/SkFontScanner_Fontations.h"
-@@ -83,7 +83,7 @@ static sk_sp<SkFontMgr> fontmgr_factory(
+@@ -88,7 +88,7 @@ static sk_sp<SkFontMgr> fontmgr_factory(
    return SkFontMgr_New_Android(nullptr, SkFontScanner_Make_Fontations());
  #elif BUILDFLAG(IS_APPLE)
    return SkFontMgr_New_CoreText(nullptr);
