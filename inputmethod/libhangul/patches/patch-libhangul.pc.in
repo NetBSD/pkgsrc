@@ -1,0 +1,13 @@
+$NetBSD: patch-libhangul.pc.in,v 1.1 2026/10/13 07:50:37 adam Exp $
+
+Link against libintl.
+
+--- libhangul.pc.in.orig	2026-10-13 07:45:47.786009749 +0000
++++ libhangul.pc.in
+@@ -6,5 +6,5 @@ includedir=@includedir@/hangul-1.0
+ Name: libhangul
+ Description: Hangul hanja input support
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lhangul
++Libs: -L${libdir} -lhangul -lintl
+ Cflags: -I${includedir}

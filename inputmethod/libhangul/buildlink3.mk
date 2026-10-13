@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:04:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/10/13 07:50:37 adam Exp $
 
 BUILDLINK_TREE+=	libhangul
 
@@ -8,6 +8,8 @@ LIBHANGUL_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.4
 BUILDLINK_ABI_DEPENDS.libhangul+=	libhangul>=0.1.0
 BUILDLINK_PKGSRCDIR.libhangul?=		../../inputmethod/libhangul
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 .endif # LIBHANGUL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libhangul
