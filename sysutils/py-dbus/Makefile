@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/09/29 06:07:41 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/13 08:37:28 wiz Exp $
 
-DISTNAME=	dbus-python-1.3.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	5
+DISTNAME=	dbus_python-1.5.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//:S/_/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
@@ -11,15 +10,18 @@ HOMEPAGE=	https://www.freedesktop.org/Software/dbus
 COMMENT=	Python bindings for the D-BUS message bus system
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config gmake
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN}
-
-PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_TOOLS+=		pkg-config
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
+PY_PATCHPLIST=		yes
+
+# in dbus-python-common
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/include/dbus-1.0/dbus/dbus-python.h
+	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/dbus-python.pc
+
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
