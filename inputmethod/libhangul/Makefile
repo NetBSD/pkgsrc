@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2026/10/10 11:25:24 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/13 07:50:37 adam Exp $
 
 DISTNAME=	libhangul-0.2.0
+PKGREVISION=	1
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libhangul/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -16,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libhangul.pc.in
+
+LIBS+=	-lintl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
