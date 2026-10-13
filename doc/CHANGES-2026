@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6936 2026/10/13 05:34:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6937 2026/10/13 08:09:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10419,3 +10419,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/afl++ to 5.03c [wiz 2026-10-12]
 	Updated lang/py-ast-serialize to 0.13.0 [adam 2026-10-13]
 	Updated devel/py-async-lru to 2.4.0 [adam 2026-10-13]
+	Updated parallel/opencl-headers to 2026.05.29 [adam 2026-10-13]
+	Updated parallel/opencl-clang to 22.1.4 [adam 2026-10-13]
