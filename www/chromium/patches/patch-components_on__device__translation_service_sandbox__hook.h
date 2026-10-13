@@ -1,10 +1,10 @@
-$NetBSD: patch-components_on__device__translation_service_sandbox__hook.h,v 1.14 2026/10/02 11:43:28 kikadf Exp $
+$NetBSD: patch-components_on__device__translation_service_sandbox__hook.h,v 1.15 2026/10/13 13:16:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/on_device_translation/service/sandbox_hook.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/on_device_translation/service/sandbox_hook.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/on_device_translation/service/sandbox_hook.h
 @@ -5,7 +5,13 @@
  #ifndef COMPONENTS_ON_DEVICE_TRANSLATION_SERVICE_SANDBOX_HOOK_H_

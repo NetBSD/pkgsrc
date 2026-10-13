@@ -1,20 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delegate__views.cc,v 1.28 2026/10/02 11:43:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delegate__views.cc,v 1.29 2026/10/13 13:16:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
-@@ -60,14 +60,14 @@
+@@ -63,7 +63,7 @@
  #include "chrome/browser/ui/webui/signin/signout_confirmation/signout_confirmation_ui.h"
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin_ui.h"
+ #include "chrome/browser/ui/webui/signin/managed_user_profile_notice_ui.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
- 
+@@ -71,7 +71,7 @@
  namespace {
  
  const int kModalDialogWidth = 448;
@@ -23,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
  const int kManagedUserNoticeConfirmationDialogWidth = 780;
  const int kManagedUserNoticeConfirmationDialogHeight = 560;
  #endif
-@@ -138,7 +138,7 @@ SigninViewControllerDelegateViews::Creat
+@@ -142,7 +142,7 @@ SigninViewControllerDelegateViews::Creat
        kSyncConfirmationDialogWidth, InitializeSigninWebDialogUI(true));
  }
  
@@ -32,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
  std::unique_ptr<views::WebView>
  SigninViewControllerDelegateViews::CreateHistorySyncOptInWebView(
      BrowserWindowInterface* browser,
-@@ -247,7 +247,7 @@ SigninViewControllerDelegateViews::Creat
+@@ -251,7 +251,7 @@ SigninViewControllerDelegateViews::Creat
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -41,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
  // static
  std::unique_ptr<views::WebView>
  SigninViewControllerDelegateViews::CreateManagedUserNoticeConfirmationWebView(
-@@ -436,7 +436,7 @@ SigninViewControllerDelegateViews::Signi
+@@ -440,7 +440,7 @@ SigninViewControllerDelegateViews::Signi
  
    SetButtons(static_cast<int>(ui::mojom::DialogButton::kNone));
  
@@ -50,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
    // On the local profile creation dialog, cancelling the dialog (for instance
    // through the VKEY_ESCAPE accelerator) should delete the profile.
    if (delete_profile_on_cancel) {
-@@ -555,7 +555,7 @@ void SigninViewControllerDelegateViews::
+@@ -559,7 +559,7 @@ void SigninViewControllerDelegateViews::
    }
  }
  
@@ -59,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
  void SigninViewControllerDelegateViews::DeleteProfileOnCancel() {
    ProfileAttributesEntry* entry =
        g_browser_process->profile_manager()
-@@ -593,7 +593,7 @@ SigninViewControllerDelegate::CreateSync
+@@ -597,7 +597,7 @@ SigninViewControllerDelegate::CreateSync
        /*animate_on_resize=*/true);
  }
  
@@ -68,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
  // static
  SigninViewControllerDelegate*
  SigninViewControllerDelegate::CreateSyncHistoryOptInDelegate(
-@@ -656,7 +656,7 @@ SigninViewControllerDelegate::CreateSign
+@@ -660,7 +660,7 @@ SigninViewControllerDelegate::CreateSign
  }
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  

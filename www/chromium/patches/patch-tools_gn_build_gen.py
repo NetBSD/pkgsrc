@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_build_gen.py,v 1.28 2026/10/02 11:43:39 kikadf Exp $
+$NetBSD: patch-tools_gn_build_gen.py,v 1.29 2026/10/13 13:16:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2026-09-22 00:09:16.000000000 +0000
+--- tools/gn/build/gen.py.orig	2026-10-06 00:06:58.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -91,6 +91,12 @@ class Platform(object):
    def is_solaris(self):
@@ -19,7 +19,7 @@ $NetBSD: patch-tools_gn_build_gen.py,v 1.28 2026/10/02 11:43:39 kikadf Exp $
    def is_posix(self):
      return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
  
-@@ -331,7 +337,7 @@ def WriteGenericNinja(path, static_libra
+@@ -356,7 +362,7 @@ def WriteGenericNinja(path, static_libra
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts__desktop.cc,v 1.20 2026/10/02 11:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts__desktop.cc,v 1.21 2026/10/13 13:16:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc
-@@ -140,7 +140,7 @@
+@@ -141,7 +141,7 @@
  #include "ui/webui/resources/cr_components/theme_color_picker/theme_color_picker.mojom.h"
  #include "ui/webui/resources/js/browser_command/browser_command.mojom.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts_
  #include "chrome/browser/ui/webui/app_home/app_home.mojom.h"
  #include "chrome/browser/ui/webui/app_home/app_home_ui.h"
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
-@@ -359,7 +359,7 @@ void PopulateChromeWebUIFrameBindersPart
+@@ -360,7 +360,7 @@ void PopulateChromeWebUIFrameBindersPart
          HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts_
    RegisterWebUIControllerInterfaceBinder<whats_new::mojom::PageHandlerFactory,
                                           WhatsNewUI>(map);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -389,7 +389,7 @@ void PopulateChromeWebUIFrameBindersPart
+@@ -390,7 +390,7 @@ void PopulateChromeWebUIFrameBindersPart
  
    RegisterWebUIControllerInterfaceBinder<
        browser_command::mojom::CommandHandlerFactory,
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts_
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -579,7 +579,7 @@ void PopulateChromeWebUIFrameBindersPart
+@@ -583,7 +583,7 @@ void PopulateChromeWebUIFrameBindersPart
          DrivePickerUntrustedHostUI>(map);
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts_
    RegisterWebUIControllerInterfaceBinder<
        app_management::mojom::PageHandlerFactory, WebAppSettingsUI>(map);
  
-@@ -605,7 +605,7 @@ void PopulateChromeWebUIFrameBindersPart
+@@ -609,7 +609,7 @@ void PopulateChromeWebUIFrameBindersPart
                                           webapps::AppHomeUI>(map);
  #endif
  

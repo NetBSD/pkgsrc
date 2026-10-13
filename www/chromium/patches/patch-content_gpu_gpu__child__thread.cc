@@ -1,12 +1,12 @@
-$NetBSD: patch-content_gpu_gpu__child__thread.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_gpu_gpu__child__thread.cc,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_child_thread.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/gpu/gpu_child_thread.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/gpu/gpu_child_thread.cc
-@@ -57,7 +57,7 @@
+@@ -58,7 +58,7 @@
  #include "third_party/skia/include/ports/SkFontConfigInterface.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_gpu_gpu__child__thread.cc,v 1.28 2026/10/02 11:43:30 kika
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
  
-@@ -147,7 +147,8 @@ void GpuChildThread::Init(const base::Ti
+@@ -159,7 +159,8 @@ void GpuChildThread::Init(const base::Ti
  
    viz_main_.gpu_service()->set_start_time(process_start_time);
  

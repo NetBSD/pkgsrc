@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf Exp $
+$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.29 2026/10/13 13:16:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2026-10-06 00:06:58.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -203,7 +203,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -90,8 +90,17 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf 
 +  condition = !is_bsd
  }
  
+ # Enable `-fsanitize=unreachable` to crash deterministically if control
+@@ -1617,7 +1622,7 @@ ubsan_hardening("unreachable") {
+   # 1.  `fuchsia-binary-size` tells us that web_engine and
+   #     chrome_fuchsia both grow 32768 bytes (10x that, uncompressed).
+   # 2.  `headless_shell_wpt_tests` fail on `mac-rel`.
+-  condition = is_debug || !(is_mac || is_fuchsia)
++  condition = is_debug || !(is_mac || is_fuchsia || is_bsd)
+ }
+ 
  config("rustc_revision") {
-@@ -1922,7 +1927,7 @@ config("default_warnings") {
+@@ -1934,7 +1939,7 @@ config("default_warnings") {
        "-Wno-psabi",
      ]
  
@@ -100,7 +109,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf 
        cflags += [
          # TODO(crbug.com/526996813): Figure out what to do about this.
          "-Wno-stringop-overread",
-@@ -1955,7 +1960,7 @@ config("default_warnings") {
+@@ -1967,7 +1972,7 @@ config("default_warnings") {
        "-Wno-nontrivial-memcall",
      ]
  
@@ -109,7 +118,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf 
        cflags += [
          # TODO(crbug.com/432275627): Fix and re-enable.
          "-Wno-uninitialized-const-pointer",
-@@ -2348,7 +2353,7 @@ config("export_dynamic") {
+@@ -2358,7 +2363,7 @@ config("export_dynamic") {
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
    if ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix" ||
@@ -118,7 +127,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf 
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -2789,7 +2794,7 @@ config("afdo_optimize_size") {
+@@ -2799,7 +2804,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -127,7 +136,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.28 2026/10/02 11:43:20 kikadf 
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2816,7 +2821,7 @@ config("afdo") {
+@@ -2826,7 +2831,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }

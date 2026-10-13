@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_browser_browser__utils.h,v 1.27 2026/10/02 11:43:27 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_browser_browser__utils.h,v 1.28 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/browser_utils.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/device_signals/core/browser/browser_utils.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/device_signals/core/browser/browser_utils.h
 @@ -39,7 +39,7 @@ std::string GetHostName();
  #endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)

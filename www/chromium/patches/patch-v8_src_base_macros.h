@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_macros.h,v 1.10 2026/10/02 11:43:41 kikadf Exp $
+$NetBSD: patch-v8_src_base_macros.h,v 1.11 2026/10/13 13:16:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/macros.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- v8/src/base/macros.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ v8/src/base/macros.h
 @@ -224,7 +224,7 @@ V8_INLINE constexpr Dest bit_cast(Source
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/slow_web_preference_cache.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/browser/web_contents/slow_web_preference_cache.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/browser/web_contents/slow_web_preference_cache.cc
 @@ -17,7 +17,7 @@
  
@@ -15,8 +15,8 @@ $NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1
  #include "ui/events/devices/device_data_manager.h"
  #elif BUILDFLAG(IS_ANDROID)
  #include "ui/base/device_form_factor.h"
-@@ -57,7 +57,7 @@ SlowWebPreferenceCache::SlowWebPreferenc
- 
+@@ -55,7 +55,7 @@ SlowWebPreferenceCacheObserver::~SlowWeb
+ SlowWebPreferenceCache::SlowWebPreferenceCache() {
  #if BUILDFLAG(IS_WIN)
    ui::InputDeviceObserverWin::GetInstance()->AddObserver(this);
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_web__contents_slow__web__preference__cache.cc,v 1
    ui::DeviceDataManager::GetInstance()->AddObserver(this);
  #elif BUILDFLAG(IS_ANDROID)
    ui::InputDeviceObserverAndroid::GetInstance()->AddObserver(this);
-@@ -69,7 +69,7 @@ SlowWebPreferenceCache::SlowWebPreferenc
+@@ -67,7 +67,7 @@ SlowWebPreferenceCache::SlowWebPreferenc
  SlowWebPreferenceCache::~SlowWebPreferenceCache() {
  #if BUILDFLAG(IS_WIN)
    ui::InputDeviceObserverWin::GetInstance()->RemoveObserver(this);

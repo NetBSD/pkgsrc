@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_ui_test_test__browser__ui.cc,v 1.28 2026/10/02 11:43:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_test_test__browser__ui.cc,v 1.29 2026/10/13 13:16:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/test_browser_ui.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/test/test_browser_ui.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/test/test_browser_ui.cc
-@@ -21,7 +21,7 @@
- #include "ui/views/widget/widget.h"
+@@ -24,7 +24,7 @@
+ #include "ui/events/test/event_generator.h"  // nogncheck
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_test_test__browser__ui.cc,v 1.28 2026/10/02 11:
  #include "content/public/common/content_switches.h"
  #include "ui/base/test/skia_gold_matching_algorithm.h"
  #include "ui/compositor/compositor.h"
-@@ -35,7 +35,7 @@
+@@ -38,7 +38,7 @@
  #endif
  
  // TODO(crbug.com/40625383) support Mac for pixel tests.

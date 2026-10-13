@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.27 2026/10/02 11:43:35 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.28 2026/10/13 13:16:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.h
 @@ -20,7 +20,7 @@
  #include "base/threading/sequence_bound.h"

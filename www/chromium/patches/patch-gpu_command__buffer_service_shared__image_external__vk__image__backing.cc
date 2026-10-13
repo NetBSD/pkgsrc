@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing.cc,v 1.28 2026/10/02 11:43:31 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing.cc,v 1.29 2026/10/13 13:16:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing.cc
 @@ -56,7 +56,7 @@
  #include "ui/gl/gl_version_info.h"

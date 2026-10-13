@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.28 2026/10/02 11:43:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.29 2026/10/13 13:16:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/ui_features.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/ui_features.h
-@@ -29,7 +29,7 @@ BASE_DECLARE_FEATURE(kCompositorLoadingT
+@@ -30,7 +30,7 @@ BASE_DECLARE_FEATURE(kCompositorLoadingT
  
  BASE_DECLARE_FEATURE(kCtrlTabMru);
  
@@ -15,12 +15,12 @@ $NetBSD: patch-chrome_browser_ui_ui__features.h,v 1.28 2026/10/02 11:43:24 kikad
  BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  BASE_DECLARE_FEATURE(kLegacySearchIntegrityCheck);
-@@ -87,7 +87,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+@@ -93,7 +93,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
  BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // When enabled, user may see the session restore UI flow.
- BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
- 
+ // When enabled, SessionService respects the should_trigger_session_restore
+ // flag on BrowserInitState when deciding whether to restore a session for a
+ // newly opened browser window.

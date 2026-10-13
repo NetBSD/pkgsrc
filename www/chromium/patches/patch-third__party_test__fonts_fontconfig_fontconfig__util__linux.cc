@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_test__fonts_fontconfig_fontconfig__util__linux.cc,v 1.28 2026/10/02 11:43:38 kikadf Exp $
+$NetBSD: patch-third__party_test__fonts_fontconfig_fontconfig__util__linux.cc,v 1.29 2026/10/13 13:16:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/test_fonts/fontconfig/fontconfig_util_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

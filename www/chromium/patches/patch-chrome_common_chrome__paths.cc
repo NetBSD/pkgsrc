@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/common/chrome_paths.cc
-@@ -31,7 +31,7 @@
+@@ -32,7 +32,7 @@
  #include "base/apple/foundation_util.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
  #include "components/policy/core/common/policy_paths.h"
  #endif
  
-@@ -47,14 +47,14 @@ namespace {
+@@ -48,14 +48,14 @@ namespace {
  
  std::optional<bool> g_override_using_default_data_directory_for_testing;
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -175,7 +175,7 @@ bool PathProvider(int key, base::FilePat
+@@ -176,7 +176,7 @@ bool PathProvider(int key, base::FilePat
        }
        break;
      case chrome::DIR_DEFAULT_DOWNLOADS_SAFE:
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
        if (!GetUserDownloadsDirectorySafe(&cur)) {
          return false;
        }
-@@ -405,13 +405,13 @@ bool PathProvider(int key, base::FilePat
+@@ -406,13 +406,13 @@ bool PathProvider(int key, base::FilePat
        break;
      }
  #endif
@@ -58,7 +58,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
      (BUILDFLAG(IS_LINUX) && BUILDFLAG(CHROMIUM_BRANDING))
      case chrome::DIR_USER_EXTERNAL_EXTENSIONS: {
        if (!base::PathService::Get(chrome::DIR_USER_DATA, &cur)) {
-@@ -421,7 +421,7 @@ bool PathProvider(int key, base::FilePat
+@@ -422,7 +422,7 @@ bool PathProvider(int key, base::FilePat
        break;
      }
  #endif
@@ -67,7 +67,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
      case chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS: {
        cur = base::FilePath(kFilepathSinglePrefExtensions);
        break;
-@@ -448,7 +448,7 @@ bool PathProvider(int key, base::FilePat
+@@ -449,7 +449,7 @@ bool PathProvider(int key, base::FilePat
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -76,7 +76,7 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.28 2026/10/02 11:43:26 kikadf 
      case chrome::DIR_NATIVE_MESSAGING:
  #if BUILDFLAG(IS_MAC)
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
-@@ -465,6 +465,9 @@ bool PathProvider(int key, base::FilePat
+@@ -466,6 +466,9 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));

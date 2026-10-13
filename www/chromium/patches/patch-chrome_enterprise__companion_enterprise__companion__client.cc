@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_enterprise__companion_enterprise__companion__client.cc,v 1.28 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_enterprise__companion_enterprise__companion__client.cc,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/enterprise_companion/enterprise_companion_client.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/enterprise_companion/enterprise_companion_client.cc
 @@ -35,7 +35,7 @@ namespace {
  

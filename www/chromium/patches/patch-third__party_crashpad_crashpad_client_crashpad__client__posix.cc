@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_crashpad_crashpad_client_crashpad__client__posix.cc,v 1.28 2026/10/02 11:43:36 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_client_crashpad__client__posix.cc,v 1.29 2026/10/13 13:16:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-09-30 10:43:03.234343151 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2026-10-12 08:56:14.398605777 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
-@@ -0,0 +1,40 @@
+@@ -0,0 +1,41 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.
 +//
 +// Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,8 +40,9 @@ $NetBSD: patch-third__party_crashpad_crashpad_client_crashpad__client__posix.cc,
 +    const std::map<std::string, std::string>& annotations,
 +    const std::vector<std::string>& arguments,
 +    bool restartable,
-+    bool asynchronous_start,   
-+    const std::vector<base::FilePath>& attachments) {
++    bool asynchronous_start,
++    const std::vector<base::FilePath>& attachments,
++    const std::set<FileHandle>& preserve_file_handles) {
 +  NOTREACHED();  // TODO(scottmg): https://crashpad.chromium.org/bug/196
 +  return false;
 +}

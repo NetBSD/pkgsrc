@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_printing_print__test__utils.cc,v 1.14 2026/10/02 11:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_printing_print__test__utils.cc,v 1.15 2026/10/13 13:16:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/print_test_utils.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/printing/print_test_utils.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/printing/print_test_utils.cc
 @@ -138,7 +138,7 @@ std::unique_ptr<PrintSettings> MakeUserM
      data.Set(kMacSystemPrintDialogDataPrintSettings,

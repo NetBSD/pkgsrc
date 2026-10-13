@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_first__run_first__run.cc,v 1.13 2026/10/02 11:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_first__run_first__run.cc,v 1.14 2026/10/13 13:16:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/first_run/first_run.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/first_run/first_run.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/first_run/first_run.cc
 @@ -309,7 +309,7 @@ void SetupInitialPrefsFromInstallPrefs(
      out_prefs->confirm_to_quit = true;

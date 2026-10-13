@@ -1,10 +1,10 @@
-$NetBSD: patch-components_metrics_metrics__service__client.cc,v 1.3 2026/10/02 11:43:28 kikadf Exp $
+$NetBSD: patch-components_metrics_metrics__service__client.cc,v 1.4 2026/10/13 13:16:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_service_client.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/metrics/metrics_service_client.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/metrics/metrics_service_client.cc
 @@ -39,7 +39,7 @@ struct LogTrimmingDefaults {
  };

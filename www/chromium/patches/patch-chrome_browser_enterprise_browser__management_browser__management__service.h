@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.h,v 1.26 2026/10/02 11:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.h,v 1.27 2026/10/13 13:16:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/enterprise/browser_management/browser_management_service.h
 @@ -17,7 +17,7 @@
  #include "components/prefs/pref_change_registrar.h"

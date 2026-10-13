@@ -1,10 +1,10 @@
-$NetBSD: patch-content_gpu_gpu__main.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
+$NetBSD: patch-content_gpu_gpu__main.cc,v 1.29 2026/10/13 13:16:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ content/gpu/gpu_main.cc
 @@ -112,14 +112,18 @@
  #include "sandbox/win/src/sandbox.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.28 2026/10/02 11:43:30 kikadf Exp $
  #endif
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     webnn::PreSandboxWebNNInitialization();
+     webnn::PreSandboxWebNNInitialization(/*is_gpu_process=*/true);
  #endif
  
 @@ -207,7 +211,7 @@ class ContentSandboxHelper : public gpu:

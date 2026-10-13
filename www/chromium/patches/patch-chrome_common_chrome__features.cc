@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__features.cc,v 1.28 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.cc,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/common/chrome_features.cc
-@@ -72,7 +72,7 @@ BASE_FEATURE(kUseKeychainKeyProvider, ba
+@@ -60,7 +60,7 @@ BASE_FEATURE(kUseKeychainKeyProvider, ba
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.28 2026/10/02 11:43:26 kika
  // Enables or disables the Autofill survey triggered by opening a prompt to
  // save address info.
  BASE_FEATURE(kAutofillAddressSurvey, base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -250,7 +250,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
+@@ -230,7 +230,7 @@ BASE_FEATURE(kEnableFullscreenToAnyScree
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -24,16 +24,16 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.28 2026/10/02 11:43:26 kika
  // Controls whether Chrome Apps are supported. See https://crbug.com/40186761.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -1434,7 +1434,7 @@ BASE_FEATURE(kIsolatedWebAppManagedGuest
+@@ -1372,7 +1372,7 @@ BASE_FEATURE(kIsolatedWebAppUnmanagedIns
  BASE_FEATURE(kIsolatedWebAppBundleCache, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS)
- BASE_FEATURE(kLinuxLowMemoryMonitor, base::FEATURE_DISABLED_BY_DEFAULT);
- // Values taken from the low-memory-monitor documentation and also apply to the
- // portal API:
-@@ -1445,7 +1445,7 @@ constexpr base::FeatureParam<int> kLinux
+ // Controls whether Chromium requests a delay shutdown inhibitor and listens
+ // for session end events via D-Bus on Linux to allow flushing state cleanly.
+ BASE_FEATURE(kLinuxLogindShutdownInhibitor, base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -1387,7 +1387,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

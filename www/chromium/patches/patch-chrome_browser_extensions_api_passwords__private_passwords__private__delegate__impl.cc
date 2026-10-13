@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_api_passwords__private_passwords__private__delegate__impl.cc,v 1.28 2026/10/02 11:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_passwords__private_passwords__private__delegate__impl.cc,v 1.29 2026/10/13 13:16:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc
-@@ -642,7 +642,7 @@ void PasswordsPrivateDelegateImpl::OnFet
+@@ -643,7 +643,7 @@ void PasswordsPrivateDelegateImpl::OnFet
  }
  
  void PasswordsPrivateDelegateImpl::OsReauthTimeoutCall() {

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_accelerators_global__accelerator__listener_global__accelerator__listener__ozone.cc,v 1.27 2026/10/02 11:43:39 kikadf Exp $
+$NetBSD: patch-ui_base_accelerators_global__accelerator__listener_global__accelerator__listener__ozone.cc,v 1.28 2026/10/13 13:16:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
 @@ -13,7 +13,7 @@
  

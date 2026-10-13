@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__connector__service__factory.cc,v 1.28 2026/10/02 11:43:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__connector__service__factory.cc,v 1.29 2026/10/13 13:16:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_connector_service_factory.cc
 @@ -10,7 +10,7 @@
  #include "components/enterprise/device_trust/core/device_trust_connector_service.h"
@@ -24,12 +24,12 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust_
    return true;
  #else
    return false;
-@@ -84,7 +84,7 @@ DeviceTrustConnectorServiceFactory::Buil
+@@ -89,7 +89,7 @@ DeviceTrustConnectorServiceFactory::Buil
    std::unique_ptr<DeviceTrustConnectorService> service =
        std::make_unique<DeviceTrustConnectorService>(profile->GetPrefs());
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-   auto* key_manager = g_browser_process->browser_policy_connector()
-                           ->chrome_browser_cloud_management_controller()
-                           ->GetDeviceTrustKeyManager();
+   // `system_network_context_manager` can be null in unit test environments
+   // (e.g. `TestingBrowserProcess`) where the network service and Chrome Browser
+   // Cloud Management (CBCM) are not initialized. In that case, avoid

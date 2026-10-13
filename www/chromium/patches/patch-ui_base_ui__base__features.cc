@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_ui__base__features.cc,v 1.28 2026/10/02 11:43:39 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__features.cc,v 1.29 2026/10/13 13:16:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/base/ui_base_features.cc
-@@ -143,7 +143,7 @@ BASE_FEATURE(kWaylandExternalBeginFrameS
+@@ -129,7 +129,7 @@ BASE_FEATURE(kWaylandExternalBeginFrameS
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_base_ui__base__features.cc,v 1.28 2026/10/02 11:43:39 kikadf E
  BASE_FEATURE(kGlobalShortcutsPortalPreferredTrigger,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
-@@ -199,7 +199,7 @@ BASE_FEATURE(kUiCompositorUsesLayerLists
+@@ -185,7 +185,7 @@ BASE_FEATURE(kUiCompositorUsesLayerLists
  // Enables the use of a touch fling curve that is based on the behavior of
  // native apps on Windows.
  BASE_FEATURE(kExperimentalFlingAnimation,
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_base_ui__base__features.cc,v 1.28 2026/10/02 11:43:39 kikadf E
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -276,7 +276,7 @@ bool IsTouchTextEditingRedesignEnabled()
+@@ -262,7 +262,7 @@ bool IsTouchTextEditingRedesignEnabled()
  // This feature enables drag and drop using touch input devices.
  BASE_FEATURE(kTouchDragAndDrop,
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_WIN) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_base_ui__base__features.cc,v 1.28 2026/10/02 11:43:39 kikadf E
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -303,7 +303,7 @@ bool IsForcedColorsEnabled() {
+@@ -289,7 +289,7 @@ bool IsForcedColorsEnabled() {
  // milestones.
  BASE_FEATURE(kEyeDropper,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -42,9 +42,9 @@ $NetBSD: patch-ui_base_ui__base__features.cc,v 1.28 2026/10/02 11:43:39 kikadf E
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -523,7 +523,7 @@ BASE_FEATURE(kWebUIRoundedIcons, base::F
- // Updates the default dark neutrals for the theme palette.
- BASE_FEATURE(kChromeDarkNeutrals26, base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -511,7 +511,7 @@ BASE_FEATURE(kChromeDarkNeutrals26, base
+ 
+ BASE_FEATURE(kDarkModeSurfaceTokens, base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

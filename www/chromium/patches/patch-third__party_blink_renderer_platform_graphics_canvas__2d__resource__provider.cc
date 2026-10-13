@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_canvas__2d__resource__provider.cc,v 1.4 2026/10/02 11:43:36 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_canvas__2d__resource__provider.cc,v 1.5 2026/10/13 13:16:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/canvas_2d_resource_provider.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/canvas_2d_resource_provider.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/canvas_2d_resource_provider.cc
-@@ -792,7 +792,7 @@ Canvas2DResourceProvider::CreateWithClea
+@@ -773,7 +773,7 @@ Canvas2DResourceProvider::CreateWithClea
            gpu::SHARED_IMAGE_USAGE_CONCURRENT_READ_WRITE);
  #endif
  

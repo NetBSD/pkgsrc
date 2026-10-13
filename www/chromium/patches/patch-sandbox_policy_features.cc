@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_features.cc,v 1.28 2026/10/02 11:43:34 kikadf Exp $
+$NetBSD: patch-sandbox_policy_features.cc,v 1.29 2026/10/13 13:16:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- sandbox/policy/features.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ sandbox/policy/features.cc
 @@ -17,7 +17,11 @@ namespace sandbox::policy::features {
  #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_FUCHSIA)
@@ -18,7 +18,7 @@ $NetBSD: patch-sandbox_policy_features.cc,v 1.28 2026/10/02 11:43:34 kikadf Exp 
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  // Enables a fine-grained seccomp-BPF syscall filter for the network service.
-@@ -114,7 +118,7 @@ BASE_FEATURE(kWinSboxModuleTamperingProt
+@@ -109,7 +113,7 @@ BASE_FEATURE(kWinSboxModuleTamperingProt
  BASE_FEATURE(kSpectreVariant2Mitigation, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

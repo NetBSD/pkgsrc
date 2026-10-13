@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_child__account__service.cc,v 1.24 2026/10/02 11:43:29 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_child__account__service.cc,v 1.25 2026/10/13 13:16:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/child_account_service.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- components/supervised_user/core/browser/child_account_service.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ components/supervised_user/core/browser/child_account_service.cc
 @@ -179,7 +179,7 @@ void ChildAccountService::OnPrimaryAccou
  void ChildAccountService::UpdateForceGoogleSafeSearch() {

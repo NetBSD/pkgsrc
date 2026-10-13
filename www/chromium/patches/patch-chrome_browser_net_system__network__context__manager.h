@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_net_system__network__context__manager.h,v 1.28 2026/10/02 11:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_system__network__context__manager.h,v 1.29 2026/10/13 13:16:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.h
 @@ -221,7 +221,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;

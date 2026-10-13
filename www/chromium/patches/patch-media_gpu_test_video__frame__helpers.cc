@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_test_video__frame__helpers.cc,v 1.28 2026/10/02 11:43:32 kikadf Exp $
+$NetBSD: patch-media_gpu_test_video__frame__helpers.cc,v 1.29 2026/10/13 13:16:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_helpers.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- media/gpu/test/video_frame_helpers.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ media/gpu/test/video_frame_helpers.cc
 @@ -22,7 +22,7 @@
  #include "third_party/libyuv/include/libyuv.h"

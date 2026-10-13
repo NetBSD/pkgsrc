@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_switches.h,v 1.28 2026/10/02 11:43:40 kikadf Exp $
+$NetBSD: patch-ui_gfx_switches.h,v 1.29 2026/10/13 13:16:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/switches.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/gfx/switches.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/gfx/switches.h
 @@ -19,7 +19,7 @@ GFX_SWITCHES_EXPORT extern const char kF
  GFX_SWITCHES_EXPORT extern const char kHeadless[];

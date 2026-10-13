@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp $
+$NetBSD: patch-chrome_common_pref__names.h,v 1.29 2026/10/13 13:16:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/common/pref_names.h.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/common/pref_names.h
 @@ -674,7 +674,7 @@ inline constexpr char kVoiceTypingHotkey
  inline constexpr char kAllowedDomainsForApps[] =
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // Timestamp of when the scheduled restart nudge dialog was last shown
  // to the user, used for nudge cooldown calculations.
  inline constexpr char kScheduledRestartLastNudgeTime[] =
-@@ -1969,7 +1969,7 @@ inline constexpr char kMediaStorageIdSal
+@@ -1971,7 +1971,7 @@ inline constexpr char kMediaStorageIdSal
  inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // A boolean pref to determine whether or not the network service is running
  // sandboxed.
  inline constexpr char kNetworkServiceSandboxEnabled[] =
-@@ -1983,7 +1983,7 @@ inline constexpr char kNetworkServiceSan
+@@ -1985,7 +1985,7 @@ inline constexpr char kNetworkServiceSan
  inline constexpr char kNetworkServiceFailedLaunchMajorVersion[] =
      "net.network_service_failed_launch_major_version";
  
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // Records whether the user has seen an HTTP auth "negotiate" header.
  inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
      "net.received_http_auth_negotiate_headers";
-@@ -2090,7 +2090,7 @@ inline constexpr char kKioskIwaCachePoli
+@@ -2092,7 +2092,7 @@ inline constexpr char kKioskIwaCachePoli
  inline constexpr char kIsolatedWebAppPendingInitializationCount[] =
      "profile.isolated_web_app.install.pending_initialization_count";
  
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
  // along with kAuthNegotiateDelegateAllowlist.
  inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
-@@ -2366,7 +2366,7 @@ inline constexpr char kHardwareSecureDec
+@@ -2368,7 +2368,7 @@ inline constexpr char kHardwareSecureDec
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -87,7 +87,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // Defines administrator-set availability of Chrome for Testing.
  inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
  #endif
-@@ -2797,7 +2797,7 @@ inline constexpr char kScreenCaptureWith
+@@ -2799,7 +2799,7 @@ inline constexpr char kScreenCaptureWith
  inline constexpr char kSandboxExternalProtocolBlocked[] =
      "profile.sandbox_external_protocol_blocked";
  
@@ -96,7 +96,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // Boolean that indicates if system notifications are allowed to be used in
  // place of Chrome notifications.
  inline constexpr char kAllowSystemNotifications[] =
-@@ -2945,7 +2945,7 @@ inline constexpr char kLensRegionSearchE
+@@ -2947,7 +2947,7 @@ inline constexpr char kLensRegionSearchE
  inline constexpr char kLensDesktopNTPSearchEnabled[] =
      "policy.lens_desktop_ntp_search_enabled";
  
@@ -105,7 +105,7 @@ $NetBSD: patch-chrome_common_pref__names.h,v 1.28 2026/10/02 11:43:26 kikadf Exp
  // A dict mapping the edition name with the major version it was shown.
  inline constexpr char kWhatsNewEditionUsed[] = "browser.whats_new.edition_used";
  // A list containing the features of each module in order of when they
-@@ -3031,7 +3031,7 @@ inline constexpr char
+@@ -3033,7 +3033,7 @@ inline constexpr char
      kAccessControlAllowMethodsInCORSPreflightSpecConformant[] =
          "access_control_allow_methods_in_cors_preflight_spec_conformant";
  

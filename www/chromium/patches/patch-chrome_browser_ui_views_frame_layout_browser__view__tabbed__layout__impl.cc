@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_layout_browser__view__tabbed__layout__impl.cc,v 1.8 2026/10/02 11:43:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_layout_browser__view__tabbed__layout__impl.cc,v 1.9 2026/10/13 13:16:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc.orig	2026-09-22 00:09:16.000000000 +0000
+--- chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
 +++ chrome/browser/ui/views/frame/layout/browser_view_tabbed_layout_impl.cc
-@@ -323,7 +323,7 @@ int BrowserViewTabbedLayoutImpl::GetHori
+@@ -324,7 +324,7 @@ int BrowserViewTabbedLayoutImpl::GetHori
  }
  
  int BrowserViewTabbedLayoutImpl::GetVerticalTabStripContentOverlap() const {

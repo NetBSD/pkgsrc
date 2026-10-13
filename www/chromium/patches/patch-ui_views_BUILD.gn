@@ -1,13 +1,13 @@
-$NetBSD: patch-ui_views_BUILD.gn,v 1.27 2026/10/02 11:43:41 kikadf Exp $
+$NetBSD: patch-ui_views_BUILD.gn,v 1.28 2026/10/13 13:16:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/BUILD.gn.orig	2026-09-22 00:09:16.000000000 +0000
+--- ui/views/BUILD.gn.orig	2026-10-06 00:06:58.000000000 +0000
 +++ ui/views/BUILD.gn
-@@ -908,7 +908,6 @@ component("views") {
-       "windows_stationarity_monitor_aura.cc",
+@@ -902,7 +902,6 @@ component("views") {
+       "widget/window_reorderer.cc",
      ]
      deps += [
 -      "//components/crash/core/common:crash_key",
