@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2026/10/13 08:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/10/13 08:50:12 wiz Exp $
 
 DISTNAME=	dbus_python-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_python//}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
-
 PY_PATCHPLIST=		yes
+
+MESON_ARGS+=		-Dpython=${PYTHONBIN}
 
 # in dbus-python-common
 post-install:
