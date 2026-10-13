@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6966 2026/10/13 18:02:41 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6967 2026/10/13 18:22:21 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10457,3 +10457,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libctl to 4.7.1 [gdt 2026-10-13]
 	Removed lang/guile20 [gdt 2026-10-13]
 	Removed devel/guile-slib [gdt 2026-10-13]
+	Updated audio/kew to 4.4.1 [ktnb 2026-10-13]
