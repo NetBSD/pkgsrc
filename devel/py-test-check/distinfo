@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/08/09 06:23:38 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/10/13 12:44:40 adam Exp $
 
-BLAKE2s (pytest_check-2.9.1.tar.gz) = 2589320bd8819c50f4d69be58bd60f9becbf0b487bf6f1788575eccdf83edd7d
-SHA512 (pytest_check-2.9.1.tar.gz) = 39d8d8d2b9377b79fa18106bb91c0a662ef1823cd58a8ef681fa07a9f97ce435ebad9063397ed72bbca53f0235199ba242b0708ea65a07345d515cfa22b1885c
-Size (pytest_check-2.9.1.tar.gz) = 41394 bytes
+BLAKE2s (pytest_check-3.0.1.tar.gz) = ee5cf2cba84bdfb494a96178fda1eb094ff66ed374910c4ed99ee4895f6d837a
+SHA512 (pytest_check-3.0.1.tar.gz) = cac4c060de85e2ef632833c1fb9255ddc8f61871c321b7ab3c9df191b9818ec83203a466f1f9bdd07571fd30e7924c2311a50bb3ae211856a41313cd2485917e
+Size (pytest_check-3.0.1.tar.gz) = 48520 bytes
