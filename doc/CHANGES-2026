@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6956 2026/10/13 13:23:25 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6957 2026/10/13 13:23:46 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10445,3 +10445,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox153 to 153.5.0 [gutteridge 2026-10-13]
 	Updated www/firefox153-l10n to 153.5.0 [gutteridge 2026-10-13]
 	Updated lang/clang to 22.1.8nb2 [kikadf 2026-10-13]
+	Updated www/chromium to 155.0.8059.39 [kikadf 2026-10-13]
