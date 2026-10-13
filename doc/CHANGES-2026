@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6964 2026/10/13 17:54:25 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6965 2026/10/13 17:58:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10455,3 +10455,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xscreensaver to 6.17 [hauke 2026-10-13]
 	Removed cad/geda [gdt 2026-10-13]
 	Updated devel/libctl to 4.7.1 [gdt 2026-10-13]
+	Removed lang/guile20 [gdt 2026-10-13]
