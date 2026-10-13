@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2026/05/09 15:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2026/10/13 17:33:35 gdt Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -21,7 +21,6 @@ SUBDIR+=	freehdl
 SUBDIR+=	fstl
 SUBDIR+=	gcad3d
 SUBDIR+=	gdsreader
-SUBDIR+=	geda
 SUBDIR+=	gerbv
 SUBDIR+=	ghdl
 SUBDIR+=	gnetman
