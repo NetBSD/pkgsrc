@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/05/11 12:51:19 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/13 09:49:49 wiz Exp $
 
 DISTNAME=	guppy3-3.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
+# https://github.com/zhuyifei1999/guppy3/issues/58
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
