@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/10/09 10:34:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/13 07:01:45 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	rhg-${VERSION}
@@ -15,6 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
 INSTALLATION_DIRS=	bin share/doc/rhg
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/rust
+
+# https://foss.heptapod.net/mercurial/mercurial-devel/-/work_items/10154
+MAKE_ENV+=	PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rhg ${DESTDIR}${PREFIX}/bin
