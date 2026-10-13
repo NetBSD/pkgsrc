@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/10/10 18:41:35 leot Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/13 18:37:56 bsiegert Exp $
 
 DISTNAME=	subfinder-2.17.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/10/10 18:54:49 leot Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/13 18:38:01 bsiegert Exp $
 
 DISTNAME=	zk-0.15.6
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zk-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

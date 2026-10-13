@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/10/06 11:23:17 drixter Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/13 18:37:51 bsiegert Exp $
 
 DISTNAME=	rcvd-0.3.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rcvd-dns/}
 GITHUB_PROJECT=	rcvd

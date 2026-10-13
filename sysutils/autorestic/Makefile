@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/09/05 19:10:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2026/10/13 18:37:57 bsiegert Exp $
 
 DISTNAME=	autorestic-1.8.2
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cupcakearmy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
