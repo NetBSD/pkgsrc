@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6957 2026/10/13 13:23:46 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.6958 2026/10/13 13:34:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10446,3 +10446,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox153-l10n to 153.5.0 [gutteridge 2026-10-13]
 	Updated lang/clang to 22.1.8nb2 [kikadf 2026-10-13]
 	Updated www/chromium to 155.0.8059.39 [kikadf 2026-10-13]
+	Added misc/cargo-llvm-lines version 0.4.48 [adam 2026-10-13]
+	Updated sysutils/py-ansible-compat to 26.10.0 [adam 2026-10-13]
+	Updated sysutils/ansible-lint to 26.10.1 [adam 2026-10-13]
