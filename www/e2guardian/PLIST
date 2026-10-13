@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2024/09/12 13:58:15 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/13 13:52:43 sborrill Exp $
 man/man8/e2guardian.8
 sbin/e2guardian
 share/doc/e2guardian/AuthPlugins
 share/doc/e2guardian/ContentScanners
 share/doc/e2guardian/DownloadManagers
-share/doc/e2guardian/FAQ
-share/doc/e2guardian/FAQ.html
 share/doc/e2guardian/Plugins
 share/e2guardian/blockedflash.swf
 share/e2guardian/e2guardian.pl

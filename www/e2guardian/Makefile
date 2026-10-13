@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/09/12 13:58:14 sborrill Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/13 13:52:43 sborrill Exp $
 
-DISTNAME=	e2guardian-5.5.6r
+DISTNAME=	e2guardian-5.5.9r
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=e2guardian/}
 GITHUB_PROJECT=	e2guardian
