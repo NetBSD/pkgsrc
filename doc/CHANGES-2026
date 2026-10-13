@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6953 2026/10/13 13:00:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.6954 2026/10/13 13:11:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10442,3 +10442,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-validators to 0.36.0 [adam 2026-10-13]
 	Updated security/py-truststore to 0.10.5 [adam 2026-10-13]
 	Updated devel/py-pydantic-settings to 2.15.0 [adam 2026-10-13]
+	Updated www/firefox153 to 153.5.0 [gutteridge 2026-10-13]
