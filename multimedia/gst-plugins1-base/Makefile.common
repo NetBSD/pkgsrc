@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2025/08/23 12:45:41 adam Exp $
+# $NetBSD: Makefile.common,v 1.52 2026/10/13 22:14:41 wiz Exp $
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
 # used by audio/gst-plugins1-libvisual/Makefile
@@ -55,9 +55,9 @@ GST_PLUGINS_SET+=	gl
 GST_PLUGINS_SET+=	gl-graphene
 GST_PLUGINS_SET+=	gl-jpeg
 GST_PLUGINS_SET+=	gl-png
-GST_PLUGINS_SET+=	glib-asserts
-GST_PLUGINS_SET+=	glib-checks
-GST_PLUGINS_SET+=	gobject-cast-checks
+GST_PLUGINS_SET+=	glib_assert
+GST_PLUGINS_SET+=	glib_checks
+GST_PLUGINS_SET+=	glib_debug
 GST_PLUGINS_SET+=	introspection
 GST_PLUGINS_SET+=	iso-codes
 GST_PLUGINS_SET+=	libvisual
