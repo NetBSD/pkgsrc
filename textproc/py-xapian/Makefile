@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/01/13 17:21:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/13 09:54:18 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=	Python bindings for Xapian search engine
@@ -12,6 +12,8 @@ CONFIGURE_ARGS+=	--with-python3 PYTHON3=${PYTHONBIN}
 
 PY_PATCHPLIST=		yes
 PYTHON_SELF_CONFLICT=	yes
+# Fatal Python error: PyMutex_Unlock: unlocking mutex that is not locked
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 REPLACE_PYTHON=		python/docs/examples/*.py
 
