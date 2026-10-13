@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2026/09/29 06:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2026/10/13 09:33:24 wiz Exp $
 
 DISTNAME=	PyQt5-5.15.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
@@ -16,6 +16,8 @@ WHEEL_NAME=	${DISTNAME:tl}
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.8.6:../../x11/py-sip6
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.14.1:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config

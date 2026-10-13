@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/01/06 07:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/13 09:33:24 wiz Exp $
 
 DISTNAME=	puddletag-2.0.1
 PKGREVISION=	1
@@ -23,6 +23,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_ACCEPTED=	312 311 # py-feedparser5 via quodlibet
+#PYTHON_VERSIONS_INCOMPATIBLE=	315 # py-qt5
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

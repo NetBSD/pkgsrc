@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/09/29 06:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/13 09:33:26 wiz Exp $
 
 DISTNAME=	PyQtWebEngine-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.7
@@ -18,6 +18,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/

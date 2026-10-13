@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/27 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/13 09:33:24 wiz Exp $
 
 DISTNAME=	breezy-qbrz-0.5.0.0.${VER}
 PKGREVISION=	1
@@ -26,6 +26,8 @@ WRKSRC=		${WRKDIR}/~qbrz/qbrz/trunk
 
 REPLACE_PYTHON=		lib/uifactory.py
 WHEEL_NAME=		qbrz-0.5.0
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315 # py-qt5
 
 .include "../../devel/breezy/plugin.mk"
 .include "../../lang/python/wheel.mk"

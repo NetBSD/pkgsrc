@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/07/28 07:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/13 09:33:25 wiz Exp $
 
 DISTNAME=	python_lsp_server-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
@@ -40,6 +40,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-rope -> py-toolconfig -> py-sphinx
+#PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
 
 # as of 1.15.0
 # 1 failed, 202 passed, 8 skipped, 14 warnings, 1 error

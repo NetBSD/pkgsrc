@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2026/09/29 06:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.325 2026/10/13 09:33:25 wiz Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
@@ -42,6 +42,8 @@ DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
 
 EXTRACT_USING=	bsdtar
 

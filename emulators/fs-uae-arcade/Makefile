@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/23 06:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/13 09:33:24 wiz Exp $
 
 DISTNAME=	fs-uae-arcade-3.1.63
 PKGREVISION=	3
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framew
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	315 # py-qt5
 
 USE_PKG_RESOURCES=	yes
 

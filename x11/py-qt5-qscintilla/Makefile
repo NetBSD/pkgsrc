@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2026/09/29 06:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/10/13 09:33:26 wiz Exp $
 
 PKGREVISION= 13
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
+
 .include "../../x11/qt5-qscintilla/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-qt5-${DISTNAME:S/_src//:tl}

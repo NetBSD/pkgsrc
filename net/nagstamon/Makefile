@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2026/09/29 06:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2026/10/13 09:33:25 wiz Exp $
 
 DISTNAME=	nagstamon-3.18.2
 PKGREVISION=	2
@@ -36,6 +36,8 @@ SUBST_VARS.manpath=     PKGMANDIR
 WRKSRC=		${WRKDIR}/${DISTNAME:S/^n/N/}
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
 
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"

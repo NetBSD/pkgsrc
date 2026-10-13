@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/04/14 06:04:53 adam Exp $
+# $NetBSD: Makefile,v 1.55 2026/10/13 09:33:24 wiz Exp $
 
 DISTNAME=	picard-2.13.3
 PKGREVISION=	1
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-markdown>=3.2:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.37:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.11:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	315 # py-qt5
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
