@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6961 2026/10/13 15:31:24 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6962 2026/10/13 16:59:58 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10452,3 +10452,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/e2guardian to 5.5.9r [sborrill 2026-10-13]
 	Updated mail/exim to 4.100.1nb3 [ryoon 2026-10-13]
 	Updated multimedia/openwv to 1.1.4 [ryoon 2026-10-13]
+	Updated x11/xscreensaver to 6.17 [hauke 2026-10-13]
