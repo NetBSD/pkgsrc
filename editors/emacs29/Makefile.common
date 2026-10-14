@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2026/09/25 09:48:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2026/10/14 19:32:13 markd Exp $
 #
 # used by editors/emacs29/Makefile
 # used by editors/emacs29-nox11/Makefile
@@ -91,9 +91,13 @@ post-extract:
 # own --infodir at configure time and cannot be told at run time except
 # through INFOPATH.  This adds the version's info directory to the list
 # at startup; without it the files land where nothing looks.
+# Since we are using site-start.el allow it to load a local-site-start.el
+# if it exists.
 post-install: emacs-info-path
 emacs-info-path:
 	${ECHO} '(setq Info-default-directory-list (append Info-default-directory-list' \
 		> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
 	${ECHO} '  (list (expand-file-name "../info" (file-name-directory load-file-name)))))' \
+		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
+	${ECHO} '  (load "local-site-start" t)' \
 		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
