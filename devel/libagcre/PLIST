@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/14 03:20:32 agc Exp $
+include/agcre.h
+lib/libagcre.la
+man/man3/libagcre.3
+man/man7/agcre_format.7
