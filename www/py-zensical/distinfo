@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.15 2026/10/12 14:05:48 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/10/14 20:14:24 wiz Exp $
 
+BLAKE2s (812f06be8b308f5dffcc2796bffb4c4931b9bf6d.diff) = bafc6f7c4017824c225a9bf97c7efdd965e802f836ec6d022d4d02f7bbae9282
+SHA512 (812f06be8b308f5dffcc2796bffb4c4931b9bf6d.diff) = 9e69ba520f9b071e22fcc32820278e5d53ee899b54261d5b4c3256c78e631a3cb1387fa8d8430f09d13c4c21c0d424713287d0877e878a42233ea847b581086c
+Size (812f06be8b308f5dffcc2796bffb4c4931b9bf6d.diff) = 25031 bytes
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
 Size (adler2-2.0.1.crate) = 13366 bytes
@@ -1059,9 +1062,9 @@ Size (yoke-0.8.3.crate) = 33132 bytes
 BLAKE2s (yoke-derive-0.8.2.crate) = 5552ca3b0c844667a0532da6e6a4bbfc41777d56d6615f80ca4c90020a50dedf
 SHA512 (yoke-derive-0.8.2.crate) = ed37289fe2dfcafda13be24b3e4aae1fbbdd6f52c42a1f2d770771f458af0d17b4cbe487941381b4bd692388e9818b45c686bdcd6229918e0f5b6fced1068ca3
 Size (yoke-derive-0.8.2.crate) = 15077 bytes
-BLAKE2s (zensical-0.0.69.tar.gz) = b7109bed1520503b6dd6a73d23e19f3bfb95807351e022f92fe636882186ca7e
-SHA512 (zensical-0.0.69.tar.gz) = f47140dd6c53dc514272ccaf243b97ea8bd4fe5447675f856c9583bccb144820c5e8be489fe50f967f96098e5994b9c1331daec917d1fa322864a437d28950b3
-Size (zensical-0.0.69.tar.gz) = 4312939 bytes
+BLAKE2s (zensical-0.0.70.tar.gz) = 2eb4825564ca09be18fabeed5288856f15c08feb5abee244a8610e3239644ce0
+SHA512 (zensical-0.0.70.tar.gz) = 591dc55d358a1f6f4c02d828da68b007334190d65d2ece8a86c5aa101d5608f03ec88a37cad8a241d6e12fba91ad632c793dfc450d99000dd7f7be6d5b9fc809
+Size (zensical-0.0.70.tar.gz) = 4319716 bytes
 BLAKE2s (zerocopy-0.8.53.crate) = e54df3825c175c34ea7e8018039c860ce591756435ed3afa8735ddfefd16917c
 SHA512 (zerocopy-0.8.53.crate) = c2f1fabfcc5ce8badb1b69b395ef1394bc4cc88b795e095b22347fd4cefc5c195a4013e8a05a2327ef1e45aad65f6e562a08c7c03a62d3aec149701cb6da0be8
 Size (zerocopy-0.8.53.crate) = 284705 bytes
@@ -1132,3 +1135,5 @@ BLAKE2s (zune-jpeg-0.5.15.crate) = a84f7dadac3e88940bbacdbca0735a6db306299944846
 SHA512 (zune-jpeg-0.5.15.crate) = 99f072129bc11873b25886d73392012a08636575c85ed9237fb8ad247a66ff188b2bd67aa303931f94501735c24ceac24d414186e7ef5010a639f08fbdc855af
 Size (zune-jpeg-0.5.15.crate) = 88879 bytes
 SHA1 (patch-Cargo.toml) = fa617f0df3197148e23a56a7ecd50fcc75107dec
+SHA1 (patch-crates_zensical-watch_src_agent_monitor.rs) = 28d66a2b37f6c89084d378c1a6ac843dce94ed4a
+SHA1 (patch-crates_zensical_src_watcher.rs) = 0e4470b3e74967cf0ce803fcf1bcce4717cf5972
