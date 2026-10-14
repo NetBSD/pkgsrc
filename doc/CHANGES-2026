@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6977 2026/10/14 08:35:58 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6978 2026/10/14 09:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10469,3 +10469,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/serie to 0.10.0 [pin 2026-10-14]
 	Updated net/xfr to 0.11.0 [pin 2026-10-14]
 	Updated sysutils/broot to 1.61.0 [pin 2026-10-14]
+	Updated textproc/py-patiencediff to 1.0.1 [wiz 2026-10-14]
