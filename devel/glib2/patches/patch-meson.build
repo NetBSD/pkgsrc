@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
+$NetBSD: patch-meson.build,v 1.27 2026/10/14 09:34:25 jperkin Exp $
 
 - On Darwin, optionally use Cocoa (needed for X11 users).
 
@@ -14,9 +14,9 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
 
 - Explicitly avoid epoll on SunOS.
 
---- meson.build.orig	2026-03-16 13:53:50.000000000 +0000
+--- meson.build.orig	2026-10-06 15:22:44.000000000 +0000
 +++ meson.build
-@@ -443,6 +443,7 @@ headers = [
+@@ -442,6 +442,7 @@ headers = [
    'sys/mount.h',
    'sys/param.h',
    'sys/prctl.h',
@@ -24,7 +24,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
    'sys/resource.h',
    'sys/select.h',
    'sys/statfs.h',
-@@ -714,7 +715,6 @@ functions = [
+@@ -711,7 +712,6 @@ functions = [
    'copy_file_range',
    'endmntent',
    'endservent',
@@ -32,7 +32,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
    'faccessat',
    'fallocate',
    'fchmod',
-@@ -780,6 +780,10 @@ functions = [
+@@ -777,6 +777,10 @@ functions = [
    'sysctlbyname',
  ]
  
@@ -43,7 +43,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
  # _NSGetEnviron is available on iOS too, but its usage gets apps rejected from
  # the app store since it's considered 'private API'
  if host_system == 'darwin'
-@@ -1010,13 +1014,6 @@ glib_have_cocoa = false
+@@ -1007,13 +1011,6 @@ glib_have_cocoa = false
  if host_system == 'darwin' and subsystem == 'macos'
    add_languages('objc', native: false, required: true)
    objcc = meson.get_compiler('objc')
@@ -57,7 +57,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
  
    # Mac OS X Carbon support
    glib_have_carbon = objcc.compiles('''#include <Carbon/Carbon.h>
-@@ -1033,7 +1030,7 @@ if host_system == 'darwin' and subsystem
+@@ -1030,7 +1027,7 @@ if host_system == 'darwin' and subsystem
                                        #error "Detected GNUstep, not Cocoa"
                                        #endif''',
                                     name : 'Mac OS X Cocoa support')
@@ -66,7 +66,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
    if glib_have_cocoa
      glib_conf.set('HAVE_COCOA', true)
      osx_ldflags += ['-Wl,-framework,Foundation', '-Wl,-framework,AppKit']
-@@ -2402,18 +2399,17 @@ if host_system != 'windows' and get_opti
+@@ -2403,18 +2400,17 @@ if host_system != 'windows' and get_opti
  
    # try glibc
    if cc.has_function('getxattr') and cc.has_header('sys/xattr.h')
@@ -87,7 +87,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
    if cc.compiles(glib_conf_prefix + '''
                   #include <stdio.h>
                   #ifdef HAVE_SYS_TYPES_H
-@@ -2514,7 +2510,7 @@ endif
+@@ -2515,7 +2511,7 @@ endif
  
  glib_conf.set('HAVE_PROC_SELF_CMDLINE', have_proc_self_cmdline)
  
@@ -96,7 +96,7 @@ $NetBSD: patch-meson.build,v 1.26 2026/05/03 20:57:24 schmonz Exp $
  
  # Sets the shebang on script files. This has been changed many times including
  # using env, the absolute path to the Python executable, and using both python
-@@ -2553,7 +2549,7 @@ endif
+@@ -2554,7 +2550,7 @@ endif
  
  # Determine which user environment-dependent files that we want to install
  bash = find_program('bash', required : false)
