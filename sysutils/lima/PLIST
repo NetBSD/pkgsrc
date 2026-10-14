@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/12 21:36:29 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/14 20:39:12 leot Exp $
 bin/apptainer.lima
 bin/docker.lima
 bin/kubectl.lima
@@ -7,6 +7,9 @@ bin/limactl
 bin/nerdctl.lima
 bin/podman.lima
 man/man1/lima.1
+man/man1/limactl-autostart-disable.1
+man/man1/limactl-autostart-enable.1
+man/man1/limactl-autostart.1
 man/man1/limactl-clone.1
 man/man1/limactl-completion-bash.1
 man/man1/limactl-completion-fish.1
@@ -36,6 +39,7 @@ man/man1/limactl-protect.1
 man/man1/limactl-prune.1
 man/man1/limactl-rename.1
 man/man1/limactl-restart.1
+man/man1/limactl-screenshot.1
 man/man1/limactl-shell.1
 man/man1/limactl-show-ssh.1
 man/man1/limactl-snapshot-apply.1
@@ -43,7 +47,6 @@ man/man1/limactl-snapshot-create.1
 man/man1/limactl-snapshot-delete.1
 man/man1/limactl-snapshot-list.1
 man/man1/limactl-snapshot.1
-man/man1/limactl-start-at-login.1
 man/man1/limactl-start.1
 man/man1/limactl-stop.1
 man/man1/limactl-sudoers.1
@@ -57,6 +60,7 @@ man/man1/limactl-unprotect.1
 man/man1/limactl-validate.1
 man/man1/limactl-watch.1
 man/man1/limactl.1
+share/doc/lima/ADOPTERS.md
 share/doc/lima/LICENSE
 share/doc/lima/MAINTAINERS.md
 share/doc/lima/README.md
@@ -76,8 +80,10 @@ share/lima/templates/_images/almalinux-10.yaml
 share/lima/templates/_images/almalinux-8.yaml
 share/lima/templates/_images/almalinux-9.yaml
 share/lima/templates/_images/almalinux-kitten-10.yaml
+share/lima/templates/_images/alpine-3.21.yaml
+share/lima/templates/_images/alpine-3.22.yaml
+share/lima/templates/_images/alpine-3.23.yaml
 share/lima/templates/_images/alpine-iso.yaml
-share/lima/templates/_images/alpine.yaml
 share/lima/templates/_images/archlinux.yaml
 share/lima/templates/_images/centos-stream-10.yaml
 share/lima/templates/_images/centos-stream-9.yaml
@@ -87,11 +93,13 @@ share/lima/templates/_images/debian-13.yaml
 share/lima/templates/_images/fedora-41.yaml
 share/lima/templates/_images/fedora-42.yaml
 share/lima/templates/_images/fedora-43.yaml
+share/lima/templates/_images/fedora-44.yaml
 share/lima/templates/_images/fedora.yaml
 share/lima/templates/_images/freebsd-15.yaml
 share/lima/templates/_images/freebsd.yaml
 share/lima/templates/_images/macos-15.yaml
 share/lima/templates/_images/macos-26.yaml
+share/lima/templates/_images/macos-27.yaml
 share/lima/templates/_images/macos.yaml
 share/lima/templates/_images/opensuse-leap-15.yaml
 share/lima/templates/_images/opensuse-leap-16.yaml
@@ -108,14 +116,16 @@ share/lima/templates/_images/ubuntu-24.04.yaml
 share/lima/templates/_images/ubuntu-24.10.yaml
 share/lima/templates/_images/ubuntu-25.04.yaml
 share/lima/templates/_images/ubuntu-25.10.yaml
+share/lima/templates/_images/ubuntu-26.04.yaml
 share/lima/templates/_images/ubuntu-lts.yaml
 share/lima/templates/_images/ubuntu.yaml
 share/lima/templates/almalinux-10.yaml
 share/lima/templates/almalinux-8.yaml
 share/lima/templates/almalinux-9.yaml
-share/lima/templates/almalinux-kitten-10.yaml
-share/lima/templates/almalinux-kitten.yaml
 share/lima/templates/almalinux.yaml
+share/lima/templates/alpine-3.21.yaml
+share/lima/templates/alpine-3.22.yaml
+share/lima/templates/alpine-3.23.yaml
 share/lima/templates/alpine-iso.yaml
 share/lima/templates/alpine.yaml
 share/lima/templates/apptainer-rootful.yaml
@@ -132,6 +142,8 @@ share/lima/templates/debian.yaml
 share/lima/templates/default.yaml
 share/lima/templates/docker-rootful.yaml
 share/lima/templates/docker.yaml
+share/lima/templates/experimental/almalinux-kitten-10.yaml
+share/lima/templates/experimental/almalinux-kitten.yaml
 share/lima/templates/experimental/alsa.yaml
 share/lima/templates/experimental/debian-sid.yaml
 share/lima/templates/experimental/fedora-rawhide.yaml
@@ -141,7 +153,7 @@ share/lima/templates/experimental/gentoo.yaml
 share/lima/templates/experimental/opensuse-tumbleweed.yaml
 share/lima/templates/experimental/rke2.yaml
 share/lima/templates/experimental/u7s.yaml
-share/lima/templates/experimental/ubuntu-26.04.yaml
+share/lima/templates/experimental/ubuntu-26.10.yaml
 share/lima/templates/experimental/ubuntu-next.yaml
 share/lima/templates/experimental/vnc.yaml
 share/lima/templates/experimental/wsl2.yaml
@@ -149,6 +161,7 @@ share/lima/templates/faasd.yaml
 share/lima/templates/fedora-41.yaml
 share/lima/templates/fedora-42.yaml
 share/lima/templates/fedora-43.yaml
+share/lima/templates/fedora-44.yaml
 share/lima/templates/fedora.yaml
 share/lima/templates/freebsd-15.yaml
 share/lima/templates/freebsd.yaml
@@ -160,6 +173,7 @@ share/lima/templates/k8s.yaml
 share/lima/templates/linuxbrew.yaml
 share/lima/templates/macos-15.yaml
 share/lima/templates/macos-26.yaml
+share/lima/templates/macos-27.yaml
 share/lima/templates/macos.yaml
 share/lima/templates/opensuse-leap-15.yaml
 share/lima/templates/opensuse-leap-16.yaml
@@ -181,5 +195,9 @@ share/lima/templates/ubuntu-24.04.yaml
 share/lima/templates/ubuntu-24.10.yaml
 share/lima/templates/ubuntu-25.04.yaml
 share/lima/templates/ubuntu-25.10.yaml
+share/lima/templates/ubuntu-26.04.yaml
 share/lima/templates/ubuntu-lts.yaml
 share/lima/templates/ubuntu.yaml
+share/lima/templates/windows-11.yaml
+share/lima/templates/windows-2025.yaml
+share/lima/templates/windows.yaml
