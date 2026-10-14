@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2026/09/25 09:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/10/14 19:32:13 markd Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/
 MASTER_SITES+=	ftp://ftp.gnu.org/pub/old-gnu/emacs
@@ -117,9 +117,13 @@ post-install:
 # own --infodir at configure time and cannot be told at run time except
 # through INFOPATH.  This adds the version's info directory to the list
 # at startup.
+# Since we are using site-start.el allow it to load a local-site-start.el
+# if it exists.
 post-install: emacs-info-path
 emacs-info-path:
 	${ECHO} '(setq Info-default-directory-list (append Info-default-directory-list' \
 		> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
 	${ECHO} '  (list (expand-file-name "../info" (file-name-directory load-file-name)))))' \
+		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
+	${ECHO} '  (load "local-site-start" t)' \
 		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
