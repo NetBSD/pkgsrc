@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6982 2026/10/14 15:32:45 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.6983 2026/10/14 16:21:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10474,3 +10474,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-gnssutils to 1.2.9 [gdt 2026-10-14]
 	Updated devel/cgen to 20260101 [ryoon 2026-10-14]
 	Updated www/anubis to 1.28.1 [ryoon 2026-10-14]
+	Updated www/curl to 8.23.0 [wiz 2026-10-14]
