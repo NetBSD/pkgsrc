@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4703 2026/10/13 18:02:15 gdt Exp $
+# $NetBSD: Makefile,v 1.4704 2026/10/14 03:20:32 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -974,6 +974,7 @@ SUBDIR+=	lettuce
 SUBDIR+=	libadalang-tools
 SUBDIR+=	libadapta
 SUBDIR+=	libadwaita
+SUBDIR+=	libagcre
 SUBDIR+=	libantlr3c
 SUBDIR+=	libappindicator
 SUBDIR+=	libarena

@@ -1,0 +1,22 @@
+The resulting library is libagcre, which implements regular expression
+compilation and execution. It uses the Pike Virtual Machine approach:
+
++ standard POSIX features where sane
++ some/most Perl escapes
++ lazy matching via '?'
++ non-capture parentheses (?:...)
++ in-expression case-insensitive directives are supported (?i)...(?-i)
++ all case-insensitivity is actioned at expression exec time.
++ utf-8 is supported both for expressions and for input text when
+  matching
++ unicode escapes (in the Java format of \uABCD) are supported
++ wide character support is also provided. Expressions can be compiled
+  in utf-8, and searched using wchar_t arrays. When matching, start and
+  end offsets are given relative to the input format: utf-8 is a byte
+  offset from the start of the stream, and wide chars are given in
+  wide character offsets from the start
++ exact multiple repetition specifiers {N}, and {N,M} are supported
++ backreferences are supported
++ at the most basic level, individual 32bit unicode characters are
+  matched
++ an egrep/grep implementation for matching unicode regexps included
