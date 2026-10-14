@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/10/14 15:02:46 ryoon Exp $
 
-BLAKE2s (cgen-20131001.tar.bz2) = 41996c402754b1d717fa7b06d751dd22704eb837ee208b971d3bc48876a0efa9
-SHA512 (cgen-20131001.tar.bz2) = dde7a4d85e2b19f52bcb09d3169d89c8e42cee460950fa8ea7aacf1464c29c09bef76fffa337bcd95510314785baf2ed2655e781324c0523ec619d31516e8c8b
-Size (cgen-20131001.tar.bz2) = 1631519 bytes
-SHA1 (patch-cgen_gen-all) = b1729f27fd9a8d7a8a6afca0acd6608297efe19b
-SHA1 (patch-cgen_testsuite_run-tests.sh) = 69d513dd93a3369506ea47a98c1c30455f0f3343
-SHA1 (patch-cgen_testsuite_test-utils.sh.in) = 39ce38cd4583215bde180704140e560bc7b378f3
+BLAKE2s (cgen-20260101.tar.bz2) = 4ed02d2f13e91dd9ea03385f2f237dee6283c67a44060d9b99328b92f11aae2d
+SHA512 (cgen-20260101.tar.bz2) = 844af5300154af8ef0c1430031916c164a2ca2f02ead6ab7944bb7792d772d8efeb28b2da2c5284059d6fe4841a739880f4cebbfbfda891a2b17bf710f86e295
+Size (cgen-20260101.tar.bz2) = 608248 bytes
+SHA1 (patch-gen-all) = a3c98a8ef6f50b85f7e1d1c11599313ea138c63d
+SHA1 (patch-testsuite_run-tests.sh) = 6817b221a880aee9885bc7bc5de8106cf4c64323
