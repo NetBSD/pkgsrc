@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1610 2026/10/01 17:22:00 adam Exp $
+# $NetBSD: Makefile,v 1.1611 2026/10/14 04:05:11 agc Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -60,6 +60,7 @@ SUBDIR+=	ada-vss-25
 SUBDIR+=	ada-xmlada-24
 SUBDIR+=	ada-xmlada-25
 SUBDIR+=	ada-xmlada26
+SUBDIR+=	agcre
 SUBDIR+=	aha
 SUBDIR+=	aiksaurus
 SUBDIR+=	align
