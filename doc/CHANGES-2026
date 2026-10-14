@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6971 2026/10/14 03:21:47 agc Exp $
+$NetBSD: CHANGES-2026,v 1.6972 2026/10/14 04:06:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10463,3 +10463,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated meta-pkgs/bulk-test-go to 20261013 [bsiegert 2026-10-13]
 	Updated multimedia/gstreamer1 to 1.28.8 [adam 2026-10-13]
 	Added devel/libagcre version 20261013 [agc 2026-10-13]
+	Added textproc/agcre version 20261013 [agc 2026-10-13]
