@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6983 2026/10/14 16:21:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6984 2026/10/14 16:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10475,3 +10475,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cgen to 20260101 [ryoon 2026-10-14]
 	Updated www/anubis to 1.28.1 [ryoon 2026-10-14]
 	Updated www/curl to 8.23.0 [wiz 2026-10-14]
+	Updated www/libcurl-gnutls to 8.23.0 [wiz 2026-10-14]
