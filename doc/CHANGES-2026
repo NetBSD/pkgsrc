@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6979 2026/10/14 10:59:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.6980 2026/10/14 12:31:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10471,3 +10471,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/broot to 1.61.0 [pin 2026-10-14]
 	Updated textproc/py-patiencediff to 1.0.1 [wiz 2026-10-14]
 	Updated archivers/libzip to 1.12.1 [wiz 2026-10-14]
+	Updated geography/py-gnssutils to 1.2.9 [gdt 2026-10-14]
