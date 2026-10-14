@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+bin/dkim-rotate
+share/examples/dkim-rotate/crontab
+share/examples/dkim-rotate/example.zone

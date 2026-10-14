@@ -1,0 +1,5 @@
+dkim-rotate is a tool for managing DKIM (RFC 6376 email antispoofing)
+keys in a manner that avoids unnecessarily making emails nonrepudiable.
+
+This meta-package provides the dkim-rotate(1) program, an example
+crontab and zone file to configure it, and the documentation.
