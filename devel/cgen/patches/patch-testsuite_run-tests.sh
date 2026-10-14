@@ -1,8 +1,10 @@
-$NetBSD: patch-cgen_testsuite_run-tests.sh,v 1.1 2013/10/12 08:39:03 ryoon Exp $
+$NetBSD: patch-testsuite_run-tests.sh,v 1.1 2026/10/14 15:02:46 ryoon Exp $
 
---- cgen/testsuite/run-tests.sh.orig	2009-08-06 16:40:44.000000000 +0000
-+++ cgen/testsuite/run-tests.sh
-@@ -6,7 +6,7 @@
+* POSIX shell portability.
+
+--- testsuite/run-tests.sh.orig	2026-10-14 06:54:55.207116968 +0000
++++ testsuite/run-tests.sh
+@@ -6,7 +6,7 @@ test_list="$@"
  
  # The names of tests to run, or ""/"all".
  test_list="$@"
@@ -11,7 +13,7 @@ $NetBSD: patch-cgen_testsuite_run-tests.sh,v 1.1 2013/10/12 08:39:03 ryoon Exp $
  
  test="driver"
  source ./test-utils.sh
-@@ -39,7 +39,7 @@ echo "Test summary:"
+@@ -39,7 +39,7 @@ echo "# passes:   ${pass_count}"
  echo "# failures: ${fail_count}"
  echo "# passes:   ${pass_count}"
  
