@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.common,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+#	$NetBSD: Makefile.common,v 1.2 2026/10/14 13:22:33 riastradh Exp $
 #
 
 # used by mail/dkim-rotate-base/Makefile
@@ -6,7 +6,7 @@
 
 DISTNAME=	dkim-rotate-dkim-rotate-1.1
 CATEGORIES=	mail
-MASTER_SITES=	https://salsa.debian.org/iwj/dkim-rotate/-/archive/dkim-rotate/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://salsa.debian.org/iwj/dkim-rotate/-/archive/dkim-rotate/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://salsa.debian.org/iwj/dkim-rotate
