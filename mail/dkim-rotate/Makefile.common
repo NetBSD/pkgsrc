@@ -1,0 +1,26 @@
+#	$NetBSD: Makefile.common,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+#
+
+# used by mail/dkim-rotate-base/Makefile
+# used by mail/dkim-rotate-doc/Makefile
+
+DISTNAME=	dkim-rotate-dkim-rotate-1.1
+CATEGORIES=	mail
+MASTER_SITES=	https://salsa.debian.org/iwj/dkim-rotate/-/archive/dkim-rotate/v${PKGVERSION_NOREV}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://salsa.debian.org/iwj/dkim-rotate
+LICENSE=	gnu-gpl-v3
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	dkim-rotate
+SUBST_FILES.paths+=	dkim-rotate.*.md
+SUBST_SED.paths+=	-e 's,/etc,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,/var/lib,${VARBASE}/db,g'
+SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
+
+BUILD_DEFS+=	VARBASE
+
+DISTINFO_FILE=	../../mail/dkim-rotate/distinfo
+PATCHDIR=	../../mail/dkim-rotate/patches

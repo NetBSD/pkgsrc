@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+man/man1/dkim-rotate.1
+man/man5/dkim-rotate.5
+man/man7/dkim-rotate.7
+share/doc/dkim-rotate/INTERNALS.html
+share/doc/dkim-rotate/README.html
+share/doc/dkim-rotate/dkim-rotate.1.html
+share/doc/dkim-rotate/dkim-rotate.5.html
+share/doc/dkim-rotate/dkim-rotate.7.html

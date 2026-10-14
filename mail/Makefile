@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2026/10/03 15:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.699 2026/10/14 03:34:55 riastradh Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -68,6 +68,9 @@ SUBDIR+=	deliver
 SUBDIR+=	demime
 SUBDIR+=	distribute
 SUBDIR+=	dk-milter
+SUBDIR+=	dkim-rotate
+SUBDIR+=	dkim-rotate-base
+SUBDIR+=	dkim-rotate-doc
 SUBDIR+=	dkimproxy
 SUBDIR+=	dmarc-report-viewer
 SUBDIR+=	dnsbl-milter

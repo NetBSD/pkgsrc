@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+
+BLAKE2s (dkim-rotate-dkim-rotate-1.1.tar.gz) = 3af941af30cd331c83d67e4261747ea1982b23f8e4565c7810fc30d93907aff1
+SHA512 (dkim-rotate-dkim-rotate-1.1.tar.gz) = 1e2b553f4e69fbdd2c361fdd8cb11ae8ef5467cc53ec2248cd80086246111be996ccbbce2dc6f162469d4653e94c49af11726eca6ff1f3941cf25ea122d67fce
+Size (dkim-rotate-dkim-rotate-1.1.tar.gz) = 28102 bytes
