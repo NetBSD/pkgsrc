@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/06/04 11:33:55 markd Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/14 19:33:35 markd Exp $
 
 DISTNAME=	rt-5.0.8
 PKGNAME=	${DISTNAME:S/rt/rt5/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -227,5 +228,8 @@ REPLACE_PERL+=		etc/upgrade/upgrade-mysql-schema.pl
 INSTALL_MAKE_FLAGS+=	BIN_OWNER=${ROOT_USER:Q} LIBS_OWNER=${ROOT_USER:Q} \
 			LIBS_GROUP=${ROOT_GROUP:Q} RTGROUP=${ROOT_GROUP:Q} \
 			WEB_USER=${ROOT_USER:Q} WEB_GROUP=${ROOT_GROUP:Q}
+
+post-install:
+	rm ${DESTDIR}${PREFIX}/share/rt5/lib/RT/Squish.pm.orig
 
 .include "../../mk/bsd.pkg.mk"

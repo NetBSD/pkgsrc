@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/06/04 11:33:55 markd Exp $
+$NetBSD: distinfo,v 1.5 2026/10/14 19:33:35 markd Exp $
 
 BLAKE2s (rt-5.0.8.tar.gz) = b0a8f17e49d890b599cb7f837977cb48ff5f14dda0b279abed6c2fcc36e57fcc
 SHA512 (rt-5.0.8.tar.gz) = beb8f792c369915abdeb259eb34201bbbf874cb1db03f81785ff6e3f681ab48355e1a952f7f1af2bc603df1bdb463f9c3ab0e77fc284eae7cb73ae20b731d26c
@@ -6,3 +6,4 @@ Size (rt-5.0.8.tar.gz) = 20268018 bytes
 SHA1 (patch-Makefile.in) = 9009623bc764c351dcb79d365a4b0728b18f4205
 SHA1 (patch-config.layout) = 9e94a03bc33ea2bbb353172ce9d89365dc8bc723
 SHA1 (patch-etc_cpanfile) = 2af513ff4b95ca6f4e87563e01e971e571d61390
+SHA1 (patch-lib_RT_Squish.pm) = dcb12f69cf74b692a833744913931e6d1d9c256a
