@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6975 2026/10/14 08:33:55 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6976 2026/10/14 08:35:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10467,3 +10467,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xbindkeys to 1.8.7nb4 [wiz 2026-10-14]
 	Added lang/gnu-apl version 2.0 [drixter 2026-10-14]
 	Updated devel/serie to 0.10.0 [pin 2026-10-14]
+	Updated net/xfr to 0.11.0 [pin 2026-10-14]
