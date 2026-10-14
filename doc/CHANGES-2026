@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6980 2026/10/14 12:31:41 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.6981 2026/10/14 15:02:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10472,3 +10472,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-patiencediff to 1.0.1 [wiz 2026-10-14]
 	Updated archivers/libzip to 1.12.1 [wiz 2026-10-14]
 	Updated geography/py-gnssutils to 1.2.9 [gdt 2026-10-14]
+	Updated devel/cgen to 20260101 [ryoon 2026-10-14]
