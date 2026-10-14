@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2026/10/07 11:12:45 adam Exp $
+# $NetBSD: Makefile,v 1.321 2026/10/14 09:34:25 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -26,7 +26,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
-CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -D__stub_epoll_create
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS -D__stub_epoll_create
 LDFLAGS.SunOS+=		-lnsl -lsocket
 LDFLAGS.FreeBSD+=	-liconv
 
