@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6976 2026/10/14 08:35:00 pin Exp $
+$NetBSD: CHANGES-2026,v 1.6977 2026/10/14 08:35:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10468,3 +10468,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added lang/gnu-apl version 2.0 [drixter 2026-10-14]
 	Updated devel/serie to 0.10.0 [pin 2026-10-14]
 	Updated net/xfr to 0.11.0 [pin 2026-10-14]
+	Updated sysutils/broot to 1.61.0 [pin 2026-10-14]
