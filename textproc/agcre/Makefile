@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/10/14 04:05:11 agc Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/14 21:33:36 agc Exp $
 
 DISTNAME=		agcre-${VERSION}
-VERSION=		20261013
+VERSION=		20261014
 CATEGORIES=		textproc
 MASTER_SITES=		-${MASTER_SITE_CODEBERG:=agc-codeberg/agcre/archive/${VERSION}.tar.gz}
 

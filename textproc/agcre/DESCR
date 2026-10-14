@@ -16,4 +16,3 @@ but this may prove food for thought:
 	% time egrep '(a?){9999}aaaaaaaaaaaaaaaaaaaaaaaaaaaaa' dist/tests/2.in
 	^C88.462u 0.730s 1:29.21 99.9%  0+0k 0+0io 0pf+0w
 	%
-
