@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6987 2026/10/14 22:04:57 agc Exp $
+$NetBSD: CHANGES-2026,v 1.6988 2026/10/15 13:05:38 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10479,3 +10479,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.70nb1 [wiz 2026-10-14]
 	Updated sysutils/lima to 2.2.1 [leot 2026-10-14]
 	Updated textproc/agcre to 20261014 [agc 2026-10-14]
+	Updated devel/CLI11 to 2.7.2 [ktnb 2026-10-15]
