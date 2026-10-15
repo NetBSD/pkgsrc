@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6998 2026/10/15 20:24:06 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6999 2026/10/15 20:40:56 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10494,3 +10494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/soju to 0.11.1 [tm 2026-10-15]
 	Updated net/p5-Net-Patricia to 1.24 [tm 2026-10-15]
 	Updated games/gnuchess to 6.3.0 [ktnb 2026-10-15]
+	Updated misc/sesh to 2.33.0 [kim 2026-10-15]
