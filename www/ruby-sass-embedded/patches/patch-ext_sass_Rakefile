@@ -1,0 +1,24 @@
+$NetBSD: patch-ext_sass_Rakefile,v 1.1 2026/10/15 13:01:38 jperkin Exp $
+
+Disable fetching of binaries on supported platforms.
+
+--- ext/sass/Rakefile.orig	2026-10-15 12:53:04.130262211 +0000
++++ ext/sass/Rakefile
+@@ -69,7 +69,7 @@ file File.absolute_path('node_modules/sa
+   cp File.absolute_path("sass-#{SassConfig.dart_sass_version}.tgz", __dir__), ARCHDIR
+ 
+   begin
+-    sh 'npm', 'install', chdir: ARCHDIR
++    sh 'npm', 'install', '--omit=optional', '--ignore-scripts', '@parcel/watcher', chdir: ARCHDIR
+   rescue StandardError
+     begin
+       sh 'yarn', 'install', chdir: ARCHDIR
+@@ -84,7 +84,7 @@ file File.absolute_path('node_modules/sa
+ end
+ 
+ task 'dart-sass' => (
+-  if SassConfig.dart_support?
++  if false
+     File.absolute_path('dart-sass/sass', ARCHDIR)
+   else
+     File.absolute_path('node_modules/sass', ARCHDIR)
