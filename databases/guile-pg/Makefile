@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/10/15 00:00:56 gdt Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/15 00:02:52 gdt Exp $
 
 DISTNAME=	guile-pg-0.50
 PKGREVISION=	3
@@ -28,6 +28,6 @@ TEST_ENV+=	GUILE_AUTO_COMPILE=0
 TEST_ENV+=	VERBOSE=1
 TEST_ENV+=	DEBUG=1
 
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
