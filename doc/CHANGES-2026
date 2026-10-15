@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6992 2026/10/15 15:25:37 bouyer Exp $
+$NetBSD: CHANGES-2026,v 1.6993 2026/10/15 18:49:51 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10488,3 +10488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenstoretools to 20261015 [bouyer 2026-10-15]
 	Updated sysutils/xenkernel418 to 20261015 [bouyer 2026-10-15]
 	Updated sysutils/xentools418 to 20261015 [bouyer 2026-10-15]
+	Updated www/nginx to 1.30.6 [kim 2026-10-15]
