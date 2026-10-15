@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.3 2026/05/30 12:56:30 ryoon Exp $
+@comment $NetBSD: PLIST.emacs,v 1.4 2026/10/15 13:06:37 ktnb Exp $
 info/mu4e.info
 man/man1/mu-add.1
 man/man1/mu-cfind.1
@@ -86,6 +86,10 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-vars.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-vars.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-view.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-view.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-view-html.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-view-html.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-view-xwidget.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-view-xwidget.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-window.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-window.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e.el
