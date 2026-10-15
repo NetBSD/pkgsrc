@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1676 2026/10/08 21:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.1677 2026/10/15 02:57:05 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -50,6 +50,7 @@ SUBDIR+=	bgpdump
 SUBDIR+=	bgpipe
 SUBDIR+=	bgpq4
 SUBDIR+=	bind918
+SUBDIR+=	bind920
 SUBDIR+=	bird
 SUBDIR+=	bmon
 SUBDIR+=	bombadillo
