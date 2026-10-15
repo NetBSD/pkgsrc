@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.807 2026/10/14 08:16:40 drixter Exp $
+# $NetBSD: Makefile,v 1.808 2026/10/15 03:07:10 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -122,8 +122,8 @@ SUBDIR+=	ghc96
 SUBDIR+=	ghc98
 SUBDIR+=	gjs
 SUBDIR+=	gleam
-SUBDIR+=	gnucobol
 SUBDIR+=	gnu-apl
+SUBDIR+=	gnucobol
 SUBDIR+=	go
 SUBDIR+=	go-bin
 SUBDIR+=	go118
