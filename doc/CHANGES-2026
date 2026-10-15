@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6991 2026/10/15 13:33:45 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6992 2026/10/15 15:25:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10483,3 +10483,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mu to 1.14.4 [ktnb 2026-10-15]
 	Updated net/dnscontrol to 5.5.0 [drixter 2026-10-15]
 	Updated net/gh to 2.102.0 [ktnb 2026-10-15]
+	Updated sysutils/xenkernel420 to 20261015 [bouyer 2026-10-15]
+	Updated sysutils/xentools420 to 20261015 [bouyer 2026-10-15]
+	Updated sysutils/xenstoretools to 20261015 [bouyer 2026-10-15]
+	Updated sysutils/xenkernel418 to 20261015 [bouyer 2026-10-15]
+	Updated sysutils/xentools418 to 20261015 [bouyer 2026-10-15]
