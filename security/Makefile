@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1029 2026/10/13 08:36:46 drixter Exp $
+# $NetBSD: Makefile,v 1.1030 2026/10/15 03:09:04 taca Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -403,7 +403,6 @@ SUBDIR+=	p5-Tie-EncryptedHash
 SUBDIR+=	p5-pcsc
 SUBDIR+=	pakchois
 SUBDIR+=	pakemon
-SUBDIR+=	pamtester
 SUBDIR+=	pam-af
 SUBDIR+=	pam-fprint
 SUBDIR+=	pam-krb5
@@ -420,6 +419,7 @@ SUBDIR+=	pam-tacplus
 SUBDIR+=	pam-u2f
 SUBDIR+=	pam-yubico
 SUBDIR+=	pam_ssh_agent_auth
+SUBDIR+=	pamtester
 SUBDIR+=	paperkey
 SUBDIR+=	passphrase
 SUBDIR+=	password-store
