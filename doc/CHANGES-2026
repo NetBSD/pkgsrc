@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6996 2026/10/15 20:00:55 tm Exp $
+$NetBSD: CHANGES-2026,v 1.6997 2026/10/15 20:18:46 tm Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10492,3 +10492,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/mblaze to 1.4 [ktnb 2026-10-15]
 	Updated mail/libspf2 to 1.2.11nb3 [tm 2026-10-15]
 	Updated chat/soju to 0.11.1 [tm 2026-10-15]
+	Updated net/p5-Net-Patricia to 1.24 [tm 2026-10-15]
