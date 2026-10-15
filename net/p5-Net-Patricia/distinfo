@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:06:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2026/10/15 20:18:05 tm Exp $
 
-BLAKE2s (Net-Patricia-1.22.tar.gz) = a86e7517abd5bc4b04fd1dc9591585e2f4c65fc8c9e94ea96ac3cd32e07055bc
-SHA512 (Net-Patricia-1.22.tar.gz) = d76702d30784f8448dcf3a5269e052bc7bd6f5fe5a16824b6e3ede1d0182deb139522e45e1fb78749a7527ddbc950c213d843e43f45b5b0ed63b5b985b329861
-Size (Net-Patricia-1.22.tar.gz) = 27780 bytes
+BLAKE2s (Net-Patricia-1.24.tar.gz) = b4ba2fe9f09dc08b867bcd16b26d1d3ebe85154afb0fd916a922faeaa21473fe
+SHA512 (Net-Patricia-1.24.tar.gz) = 9fa8a5e9c0401a32f2e95463c9b3b89493662e4f185928bb25455fe2e46ce25a94f526c3fd8f56dcefbcc44e699d67c6679e913f2ee4cef87854205807154b6a
+Size (Net-Patricia-1.24.tar.gz) = 28370 bytes
