@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/13 18:37:07 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/15 13:05:22 ktnb Exp $
 
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	CLI11-2.4.2
+DISTNAME=	CLI11-2.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CLIUtils/}
 
@@ -29,4 +29,3 @@ CMAKE_CONFIGURE_ARGS+=	-DCLI11_BUILD_EXAMPLES=off
 # download it, even if one has not asked to run tests.
 .include "../../devel/catch2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
