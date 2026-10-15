@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6999 2026/10/15 20:40:56 kim Exp $
+$NetBSD: CHANGES-2026,v 1.7000 2026/10/15 21:34:36 tm Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10495,3 +10495,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-Patricia to 1.24 [tm 2026-10-15]
 	Updated games/gnuchess to 6.3.0 [ktnb 2026-10-15]
 	Updated misc/sesh to 2.33.0 [kim 2026-10-15]
+	Updated devel/gcli to 2.13.0 [tm 2026-10-15]
