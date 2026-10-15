@@ -1,6 +1,7 @@
-$NetBSD: patch-src_libspf2_spf__compile.c,v 1.1 2023/10/07 20:12:08 schmonz Exp $
+$NetBSD: patch-src_libspf2_spf__compile.c,v 1.2 2026/10/15 19:51:20 tm Exp $
 
-Apply upstream commit d14abff to fix integer underflow.
+Apply upstream commit d14abff to fix integer underflow. Also handle BIG_MECH
+errors correctly.
 
 --- src/libspf2/spf_compile.c.orig	2021-06-09 05:43:12.000000000 +0000
 +++ src/libspf2/spf_compile.c
@@ -17,3 +18,12 @@ Apply upstream commit d14abff to fix integer underflow.
  			ds_len = 0;												\
  		} while(0)
  
+@@ -1411,7 +1415,7 @@ SPF_record_compile(SPF_server_t *spf_ser
+ 			err = SPF_c_mech_add(spf_server,
+ 							spf_record, spf_response,
+ 							mechtype, prefix, &val_start);
+-			if (err == SPF_E_NO_MEMORY)
++			if (err == SPF_E_NO_MEMORY || err == SPF_E_BIG_MECH)
+ 				return err;
+ 			/* XXX Else do nothing. Continue for the next error. */
+ 			/* We shouldn't have to worry about the child function
