@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.6989 2026/10/15 13:06:54 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.6990 2026/10/15 13:19:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10481,3 +10481,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/agcre to 20261014 [agc 2026-10-14]
 	Updated devel/CLI11 to 2.7.2 [ktnb 2026-10-15]
 	Updated mail/mu to 1.14.4 [ktnb 2026-10-15]
+	Updated net/dnscontrol to 5.5.0 [drixter 2026-10-15]
