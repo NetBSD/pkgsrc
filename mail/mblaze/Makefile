@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/09/13 17:08:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/15 19:44:23 ktnb Exp $
 
-DISTNAME=	mblaze-1.3
+DISTNAME=	mblaze-1.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	public-domain
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:test
 MAKE_FILE=	GNUmakefile
-MAKE_FLAGS+=	PREFIX=${PREFIX:Q} BINDIR=${PREFIX:Q}/bin MANDIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_FLAGS+=	PREFIX=${PREFIX} BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/${PKGMANDIR}
 
 TEST_TARGET=	check
 
