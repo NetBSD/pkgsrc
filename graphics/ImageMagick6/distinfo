@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2025/08/04 16:09:34 kikadf Exp $
+$NetBSD: distinfo,v 1.19 2026/10/15 23:30:47 nia Exp $
 
-BLAKE2s (ImageMagick-6.9.13-26.tar.xz) = 2ac947683a770470ccff42af75ee171f923eb8ff640ccecd876b305da9c9e3e5
-SHA512 (ImageMagick-6.9.13-26.tar.xz) = 23b563de77c77f354f5c95e4b246964f94313d4e555597ac7f962b9826e3aad98fee0c9f0c5468381c34670aa75d2436f8f97d46bdc8def01b5bdd9adb3c3dbf
-Size (ImageMagick-6.9.13-26.tar.xz) = 9621256 bytes
+BLAKE2s (ImageMagick-6.9.13-56.tar.xz) = cfaeff03a92e61fb6e3e6e5aa934b1c8b0d4039953cc511ffa5517fea93d16c2
+SHA512 (ImageMagick-6.9.13-56.tar.xz) = df79dfb0b30eda77fdca380b67bdac3af5938e6fee14ba40712a930dedbf9428999256b8ba60867077c0e9bec8927cd34ba40951c914ebc568d2f9e83d35d021
+Size (ImageMagick-6.9.13-56.tar.xz) = 8669620 bytes
 SHA1 (patch-Makefile.in) = 8360c4e0903bdbc73dd40f9a466f40996c53ce44

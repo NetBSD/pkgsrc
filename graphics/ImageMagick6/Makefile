@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.95 2026/09/29 06:05:31 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/10/15 23:30:47 nia Exp $
 
-PKGREVISION= 15
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick6-${DISTVERSION}
@@ -26,6 +25,7 @@ PKGCONFIG_OVERRIDE+=	magick/MagickCore.pc.in
 PKGCONFIG_OVERRIDE+=	wand/MagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	wand/Wand.pc.in
 
+CXXFLAGS.Darwin+=	-D__STDC_LIMIT_MACROS
 LDFLAGS.SunOS+=		-lsendfile
 
 SUBST_CLASSES+=		pkgcfg
