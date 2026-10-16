@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/09/02 03:37:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/16 19:44:19 adam Exp $
 
 DISTNAME=	rapidfuzz-3.14.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,7 +37,7 @@ GCC_REQD+=		10
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fno-fat-lto-objects
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 pre-configure:
 	cd ${WRKSRC} && \

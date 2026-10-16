@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 19:43:57 adam Exp $
 
 DISTNAME=	PyDPainter-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -23,7 +23,7 @@ WRKSRC=		${WRKDIR}/PyDPainter-${PKGVERSION_NOREV}
 INSTALLATION_DIRS+=	bin share/py-DPainter
 
 REPLACE_PYTHON=	*.py */*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 do-build:
 	${ECHO} '#!/bin/sh' > ${WRKSRC}/PyDPainter.sh

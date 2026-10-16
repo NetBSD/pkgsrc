@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/06/28 15:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/16 19:44:29 adam Exp $
 
 DISTNAME=	mezzanine-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.4.1:../../devel/py-pep8
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 REPLACE_PYTHON+=	mezzanine/bin/mezzanine_project.py
 REPLACE_PYTHON+=	mezzanine/project_template/manage.py

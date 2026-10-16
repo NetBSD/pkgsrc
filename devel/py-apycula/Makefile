@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/10/05 05:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/16 19:43:45 adam Exp $
 
 DISTNAME=	apycula-0.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	gowin_pack gowin_pll gowin_unpack
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

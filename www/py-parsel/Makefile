@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/06/28 15:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/16 19:44:29 adam Exp $
 
 DISTNAME=	parsel-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

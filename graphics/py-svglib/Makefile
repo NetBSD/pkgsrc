@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/08/20 05:40:44 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 19:43:59 adam Exp $
 
 DISTNAME=	svglib-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	svg2pdf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

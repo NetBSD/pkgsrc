@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/06/28 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/16 19:43:52 adam Exp $
 
 DISTNAME=	requests-gssapi-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-gssapi>=0:../../security/py-gssapi
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

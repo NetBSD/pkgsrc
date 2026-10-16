@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2026/02/18 13:46:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/10/16 19:43:46 adam Exp $
 # used by devel/py-buildbot-console-view/Makefile
 # used by devel/py-buildbot-grid-view/Makefile
 # used by devel/py-buildbot-pkg/Makefile
@@ -13,6 +13,6 @@ HOMEPAGE=	https://buildbot.net/
 PKGNAME?=	${PYPKGPREFIX}-${DISTNAME}
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"

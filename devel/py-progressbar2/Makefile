@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/08/14 08:29:09 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	progressbar2-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ PY_RENAME_BINARIES=	progressbar
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 do-test:
 	${LN} -f -s ${WRKSRC}/examples.py ${WRKSRC}/tests/examples.py

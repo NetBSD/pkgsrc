@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/01/06 09:05:37 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	pyasyncore-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	python-software-foundation
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # Removed in Python 3.12
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

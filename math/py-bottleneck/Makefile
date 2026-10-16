@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/06/28 15:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/16 19:44:02 adam Exp $
 
 DISTNAME=	bottleneck-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

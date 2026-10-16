@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2026/10/13 09:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.288 2026/10/16 19:43:56 adam Exp $
 
 # This is intentionally 3.44, about to be Long Term Release.  Please
 # do not update to later branches without MAINTAINER consensus.  The
@@ -106,7 +106,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # for metasearch
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt5
 .include "../../lang/python/pyversion.mk"
 

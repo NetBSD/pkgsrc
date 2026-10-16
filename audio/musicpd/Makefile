@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2026/09/29 06:03:52 wiz Exp $
+# $NetBSD: Makefile,v 1.348 2026/10/16 19:43:39 adam Exp $
 
 DISTNAME=	mpd-0.24.12
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -118,7 +118,7 @@ SUBST_VARS.doc+=	PKG_SYSCONFDIR
 INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 post-extract:
 	${CP} ${FILESDIR}/mpd.conf ${WRKSRC}/mpd.conf

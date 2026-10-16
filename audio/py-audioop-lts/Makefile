@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 08:05:37 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/16 19:43:39 adam Exp $
 
 DISTNAME=	audioop_lts-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,7 @@ LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 312
+PYTHON_VERSIONS_INCOMPATIBLE=	311 312
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

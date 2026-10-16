@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2026/10/09 07:23:03 adam Exp $
+# $NetBSD: Makefile,v 1.57 2026/10/16 19:44:20 adam Exp $
 
 DISTNAME=	sphinx_autodoc_typehints-3.13.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.15:../../devel/py-typing-exte
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes

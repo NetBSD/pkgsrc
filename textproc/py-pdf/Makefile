@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2026/10/12 21:12:28 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/10/16 19:44:18 adam Exp $
 
 DISTNAME=	pypdf-6.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 # crypto
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 

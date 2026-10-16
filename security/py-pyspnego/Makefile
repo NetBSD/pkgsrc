@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/10/08 16:45:00 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/16 19:44:12 adam Exp $
 
 DISTNAME=	pyspnego-0.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 PY_RENAME_BINARIES=	pyspnego-parse
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"

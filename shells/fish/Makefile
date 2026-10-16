@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2026/10/08 17:55:58 ktnb Exp $
+# $NetBSD: Makefile,v 1.70 2026/10/16 19:44:13 adam Exp $
 
 DISTNAME=	fish-4.9.3
 CATEGORIES=	shells
@@ -32,7 +32,7 @@ SITES.fluent-ftl-tools-${FLUENT_FTL_TOOLS_REV}.tar.gz+=	-https://codeberg.org/da
 
 USE_TOOLS+=		patch pkg-config pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 PKGCONFIG_OVERRIDE+=	fish.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/08/12 08:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/16 19:44:26 adam Exp $
 
 DISTNAME=	django_photologue-3.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=4.0.0:../../www/py-django-sortedm2m
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

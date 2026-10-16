@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/09/07 16:45:59 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 19:43:48 adam Exp $
 
 DISTNAME=	falcon-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 PY_RENAME_BINARIES=	falcon-bench falcon-inspect-app falcon-print-routes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 4.0.2
 # 1 failed, 3677 passed, 360 skipped

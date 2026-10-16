@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/09/23 06:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/10/16 19:44:02 adam Exp $
 
 DISTNAME=	astropy-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,7 @@ USE_LANGUAGES=	c c++
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

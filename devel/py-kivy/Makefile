@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/09/29 06:04:41 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/10/16 19:43:49 adam Exp $
 
 DISTNAME=	Kivy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -29,7 +29,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # \todo Understand upstream's dependency rules and add/fix.
 # (Upstream's docs are very confusing as they are not listed in a

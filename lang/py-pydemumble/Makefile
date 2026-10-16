@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/07/22 07:02:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 19:44:01 adam Exp $
 
 DISTNAME=	pydemumble-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_TOOLS+=		cmake
 #  for #if __has_builtin(__builtin_expect)
 GCC_REQD+=		10
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

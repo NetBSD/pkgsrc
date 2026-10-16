@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/09/07 16:36:11 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/10/16 19:43:42 adam Exp $
 
 DISTNAME=	cairosvg-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	cairosvg
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # tests need a copy of the directory test_non_regression/cairosvg_reference
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/06/28 15:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 19:43:41 adam Exp $
 
 DISTNAME=	mastodon_py-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_py//}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 1.8.1
 # 97 failed, 172 passed, 3 skipped, 3 xfailed, 135 warnings, 38 errors

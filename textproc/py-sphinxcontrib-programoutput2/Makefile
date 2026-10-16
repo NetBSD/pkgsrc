@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/10/05 07:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/16 19:44:22 adam Exp $
 
 DISTNAME=	sphinxcontrib-programoutput2-2.0a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 WHEEL_NAME=	sphinxcontrib_programoutput2-2.0a1
 

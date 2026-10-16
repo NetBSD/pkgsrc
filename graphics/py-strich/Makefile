@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/09/04 09:43:07 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/16 19:43:59 adam Exp $
 
 DISTNAME=	pystrich-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.15.0:../../devel/py-typing-extensi
 TEST_DEPENDS+=	dmtx-utils>=0:../../graphics/dmtx-utils
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.155.2:../../devel/py-hypothesis
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PY_RENAME_BINARIES=	pystrich
 

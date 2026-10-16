@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/09/08 05:31:06 adam Exp $
+# $NetBSD: Makefile,v 1.53 2026/10/16 19:43:43 adam Exp $
 
 DISTNAME=	alembic-1.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	alembic
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

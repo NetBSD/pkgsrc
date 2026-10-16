@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/10/09 03:37:01 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/16 19:43:57 adam Exp $
 
 DISTNAME=	imageio-2.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	imageio_download_bin imageio_remove_bin
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

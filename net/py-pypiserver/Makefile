@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/09/22 12:57:44 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/16 19:44:09 adam Exp $
 
 DISTNAME=	pypiserver-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	pypi-server
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312

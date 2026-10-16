@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/01/06 11:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/10/16 19:44:00 adam Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -288,7 +288,7 @@ STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 # Dependencies
 #
 .if ${BUILD_SPHINX_HTML} != "no"
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif
 

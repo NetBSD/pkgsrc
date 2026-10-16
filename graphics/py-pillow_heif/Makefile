@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/10/12 13:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/16 19:43:58 adam Exp $
 
 DISTNAME=	pillow_heif-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=11.1.0:../../graphics/py-Pillow
 TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0:../../textproc/py-defusedxml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.19.0

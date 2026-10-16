@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/10/14 20:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/16 19:44:32 adam Exp $
 #
 # Changelog:
 # https://github.com/zensical/zensical/releases
@@ -29,7 +29,7 @@ SUBST_NOOP_OK.gitcrate=	yes
 
 PY_RENAME_BINARIES=	zensical
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 RUST_REQ=	1.89
 

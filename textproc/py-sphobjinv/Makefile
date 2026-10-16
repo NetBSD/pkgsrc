@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/04/01 12:39:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/16 19:44:23 adam Exp $
 
 DISTNAME=	sphobjinv-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-check>=0:../../devel/py-test-check
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 post-install:
 .for bin in sphobjinv sphobjinv-textconv

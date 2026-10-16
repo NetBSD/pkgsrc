@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/06/28 15:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/16 19:43:40 adam Exp $
 
 DISTNAME=	cutadapt-4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.10.0:../../biology/py-dnaio
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

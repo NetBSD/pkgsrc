@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/08/18 14:51:28 kim Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/16 19:44:07 adam Exp $
 
 DISTNAME=	tmuxp-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0:../../textproc/py-sphinx
 # as of 1.67.0
 # 66 failed, 897 passed, 2 skipped, 59 errors, 25 rerun
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 USE_LANGUAGES=	# none
 

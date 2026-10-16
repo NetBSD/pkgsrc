@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/07/21 05:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.48 2026/10/16 19:44:03 adam Exp $
 
 DISTNAME=	numexpr-2.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 USE_LANGUAGES=	c c++
 REPLACE_PYTHON=	numexpr/cpuinfo.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # needs to be installed first
 do-test:

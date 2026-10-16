@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/10/07 05:42:11 adam Exp $
+# $NetBSD: Makefile,v 1.67 2026/10/16 19:44:13 adam Exp $
 
 # When upgrading ansible-core, please also upgrade the ansible package
 # to a version that supports the new version of ansible-core.  At times
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 REPLACE_PYTHON=		test/lib/ansible_test/_data/*.py
 REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*.py

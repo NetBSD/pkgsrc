@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2026/06/28 15:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/16 19:44:29 adam Exp $
 
 DISTNAME=	sanic-25.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -43,7 +43,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	sanic
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

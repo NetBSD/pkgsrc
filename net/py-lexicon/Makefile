@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2026/06/28 15:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2026/10/16 19:44:08 adam Exp $
 
 DISTNAME=	dns_lexicon-3.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	lexicon
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
