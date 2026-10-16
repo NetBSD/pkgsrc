@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7020 2026/10/16 18:03:27 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7021 2026/10/16 18:10:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10521,3 +10521,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hypothesis to 6.170.1 [adam 2026-10-16]
 	Updated devel/py-inline-snapshot to 0.36.1 [adam 2026-10-16]
 	Updated chat/cgiirc to 0.5.13 [ktnb 2026-10-16]
+	Updated devel/py-test-check to 3.0.3 [adam 2026-10-16]
+	Updated devel/py-filelock to 4.2.0 [adam 2026-10-16]
+	Updated devel/py-pipx to 1.18.2 [adam 2026-10-16]
+	Updated devel/py-project-api to 1.11.7 [adam 2026-10-16]
