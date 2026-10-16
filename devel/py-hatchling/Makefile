@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/09/22 09:24:09 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/10/16 17:36:00 adam Exp $
 
 DISTNAME=	hatchling-1.32.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=0:../../misc/py-trove-classifiers
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	hatchling
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
