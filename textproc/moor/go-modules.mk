@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.11 2026/08/16 12:17:37 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.12 2026/10/16 21:28:35 schmonz Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
@@ -34,8 +34,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
 GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.16.mod
 GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.16.zip
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.22.0.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.22.0.zip
+GO_MODULE_FILES+=	github.com/walles/twin/@v/v0.9.6.mod
+GO_MODULE_FILES+=	github.com/walles/twin/@v/v0.9.6.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.47.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.47.0.zip
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.45.0.mod
