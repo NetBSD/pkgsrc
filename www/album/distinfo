@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:29:17 nia Exp $
+$NetBSD: distinfo,v 1.10 2026/10/16 18:29:19 ktnb Exp $
 
-BLAKE2s (album-4.15.tar.gz) = b316c4ccb73994989b375fec1da6b8ad001eddcbef3ef402be712c52fe3370ff
-SHA512 (album-4.15.tar.gz) = 3e075efd81c829817f42fbe2163269581aa6ac972ec8f14e04237598e08722cdda78cc702e8628a6f77e6c2181ab7bc438f56975f5ed883f5ed9c53ca13edf9a
-Size (album-4.15.tar.gz) = 651380 bytes
+BLAKE2s (album-4.18.tar.gz) = 2edea2171cfc31bf902d3ce317ea6861cab74756b8e8d320dcbc7acb7428ae97
+SHA512 (album-4.18.tar.gz) = 13fc90ad624fbe63026ea69887419eb1b6bc971e05608d64a44026bd9235fecdb8f3fb602444f7b8ae2c57297cc5d7247ff4f3454ebfbc9983f63c30ab050507
+Size (album-4.18.tar.gz) = 668077 bytes
 SHA1 (patch-aa) = c0d2504691615c767e48f4a80fe66e7afb49097e
