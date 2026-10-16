@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2026/10/12 09:31:39 adam Exp $
+# $NetBSD: Makefile,v 1.126 2026/10/16 17:57:44 adam Exp $
 #
 # Changes: https://github.com/pylint-dev/pylint/releases
 
@@ -29,12 +29,6 @@ PY_RENAME_BINARIES=	pylint pylint-config pyreverse symilar
 
 # as of 4.1.2
 # 13 failed, 2250 passed, 315 skipped, 5 xfailed
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
