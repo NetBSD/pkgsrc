@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_webui_web__ui__util.cc,v 1.29 2026/10/13 13:16:51 kikadf Exp $
+$NetBSD: patch-ui_base_webui_web__ui__util.cc,v 1.30 2026/10/16 15:31:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/webui/web_ui_util.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -44,7 +44,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;

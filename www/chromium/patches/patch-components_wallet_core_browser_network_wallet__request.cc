@@ -1,10 +1,10 @@
-$NetBSD: patch-components_wallet_core_browser_network_wallet__request.cc,v 1.11 2026/10/13 13:16:40 kikadf Exp $
+$NetBSD: patch-components_wallet_core_browser_network_wallet__request.cc,v 1.12 2026/10/16 15:30:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/wallet/core/browser/network/wallet_request.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/wallet/core/browser/network/wallet_request.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/wallet/core/browser/network/wallet_request.cc
 @@ -19,7 +19,7 @@ ClientInfo::ChromeClientInfo::Platform G
    return ClientInfo::ChromeClientInfo::PLATFORM_MACOS;

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_media__router_common_providers_cast_channel_enum__table.h,v 1.29 2026/10/13 13:16:38 kikadf Exp $
+$NetBSD: patch-components_media__router_common_providers_cast_channel_enum__table.h,v 1.30 2026/10/16 15:30:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/media_router/common/providers/cast/channel/enum_table.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/media_router/common/providers/cast/channel/enum_table.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/media_router/common/providers/cast/channel/enum_table.h
 @@ -364,7 +364,12 @@ class EnumTable {
  

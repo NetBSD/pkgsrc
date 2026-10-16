@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ui__base__features.h,v 1.15 2026/10/13 13:16:51 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__features.h,v 1.16 2026/10/16 15:31:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/base/ui_base_features.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/base/ui_base_features.h
 @@ -155,7 +155,7 @@ COMPONENT_EXPORT(UI_BASE_FEATURES)
  BASE_DECLARE_FEATURE(kWaylandExternalBeginFrameSource);

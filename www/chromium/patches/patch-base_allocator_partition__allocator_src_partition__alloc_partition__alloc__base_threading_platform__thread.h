@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_threading_platform__thread.h,v 1.29 2026/10/13 13:16:29 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_threading_platform__thread.h,v 1.30 2026/10/16 15:30:41 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/threading/platform_thread.h
 @@ -39,6 +39,8 @@ typedef DWORD PlatformThreadId;
  typedef zx_handle_t PlatformThreadId;

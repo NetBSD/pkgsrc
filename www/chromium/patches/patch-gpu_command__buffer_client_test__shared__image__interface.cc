@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.cc,v 1.25 2026/10/13 13:16:42 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.cc,v 1.26 2026/10/16 15:30:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- gpu/command_buffer/client/test_shared_image_interface.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ gpu/command_buffer/client/test_shared_image_interface.cc
 @@ -28,7 +28,7 @@
  #include "ui/gfx/gpu_fence.h"

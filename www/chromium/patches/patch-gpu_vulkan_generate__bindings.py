@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_vulkan_generate__bindings.py,v 1.29 2026/10/13 13:16:43 kikadf Exp $
+$NetBSD: patch-gpu_vulkan_generate__bindings.py,v 1.30 2026/10/16 15:30:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/generate_bindings.py.orig	2026-10-06 00:06:58.000000000 +0000
+--- gpu/vulkan/generate_bindings.py.orig	2026-10-14 21:09:54.000000000 +0000
 +++ gpu/vulkan/generate_bindings.py
 @@ -271,7 +271,7 @@ VULKAN_DEVICE_FUNCTIONS = [
      ]

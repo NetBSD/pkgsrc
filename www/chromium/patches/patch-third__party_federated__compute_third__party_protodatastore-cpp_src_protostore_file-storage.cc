@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_federated__compute_third__party_protodatastore-cpp_src_protostore_file-storage.cc,v 1.6 2026/10/13 13:16:48 kikadf Exp $
+$NetBSD: patch-third__party_federated__compute_third__party_protodatastore-cpp_src_protostore_file-storage.cc,v 1.7 2026/10/16 15:31:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/federated_compute/third_party/protodatastore-cpp/src/protostore/file-storage.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/federated_compute/third_party/protodatastore-cpp/src/protostore/file-storage.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/federated_compute/third_party/protodatastore-cpp/src/protostore/file-storage.cc
 @@ -130,7 +130,7 @@ absl::Status IOError(absl::string_view c
      case ENETUNREACH:   // Network unreachable

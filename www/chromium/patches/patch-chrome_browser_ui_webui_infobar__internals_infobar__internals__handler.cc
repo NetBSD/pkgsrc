@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.16 2026/10/13 13:16:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.17 2026/10/16 15:30:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
 @@ -89,7 +89,7 @@
  #include "chrome/browser/ui/cocoa/keystone_infobar_delegate.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libaom_source_libaom_aom__ports_aarch64__cpudetect.c,v 1.29 2026/10/13 13:16:49 kikadf Exp $
+$NetBSD: patch-third__party_libaom_source_libaom_aom__ports_aarch64__cpudetect.c,v 1.30 2026/10/16 15:31:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
 @@ -127,10 +127,46 @@ static int arm_get_cpu_caps(void) {
    return flags;

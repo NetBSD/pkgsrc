@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_api_runtime.json,v 1.29 2026/10/13 13:16:42 kikadf Exp $
+$NetBSD: patch-extensions_common_api_runtime.json,v 1.30 2026/10/16 15:30:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/runtime.json.orig	2026-10-06 00:06:58.000000000 +0000
+--- extensions/common/api/runtime.json.orig	2026-10-14 21:09:54.000000000 +0000
 +++ extensions/common/api/runtime.json
 @@ -104,7 +104,9 @@
              {"name": "android", "description": "Specifies the Android operating system."},

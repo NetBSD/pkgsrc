@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_it2me_it2me__host.cc,v 1.17 2026/10/13 13:16:45 kikadf Exp $
+$NetBSD: patch-remoting_host_it2me_it2me__host.cc,v 1.18 2026/10/16 15:30:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_host.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- remoting/host/it2me/it2me_host.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ remoting/host/it2me/it2me_host.cc
 @@ -74,7 +74,7 @@
  #include "remoting/host/chromeos/features.h"

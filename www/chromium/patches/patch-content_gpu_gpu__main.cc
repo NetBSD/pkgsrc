@@ -1,10 +1,10 @@
-$NetBSD: patch-content_gpu_gpu__main.cc,v 1.29 2026/10/13 13:16:41 kikadf Exp $
+$NetBSD: patch-content_gpu_gpu__main.cc,v 1.30 2026/10/16 15:30:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/gpu/gpu_main.cc
 @@ -112,14 +112,18 @@
  #include "sandbox/win/src/sandbox.h"

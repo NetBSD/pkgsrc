@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_hats_survey__config.cc,v 1.25 2026/10/13 13:16:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_hats_survey__config.cc,v 1.26 2026/10/16 15:30:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/hats/survey_config.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/hats/survey_config.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/hats/survey_config.cc
 @@ -583,7 +583,7 @@ std::vector<hats::SurveyConfig> GetAllSu
        &features::kHappinessTrackingSurveysForWallpaperSearch,

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_layout_browser__view__app__layout__impl.cc,v 1.16 2026/10/13 13:16:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_layout_browser__view__app__layout__impl.cc,v 1.17 2026/10/16 15:30:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/frame/layout/browser_view_app_layout_impl.cc
 @@ -401,7 +401,7 @@ void BrowserViewAppLayoutImpl::DoPostLay
  #elif BUILDFLAG(IS_WIN)

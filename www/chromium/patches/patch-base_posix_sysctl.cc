@@ -1,10 +1,10 @@
-$NetBSD: patch-base_posix_sysctl.cc,v 1.29 2026/10/13 13:16:29 kikadf Exp $
+$NetBSD: patch-base_posix_sysctl.cc,v 1.30 2026/10/16 15:30:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/posix/sysctl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- base/posix/sysctl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ base/posix/sysctl.cc
 @@ -4,6 +4,7 @@
  

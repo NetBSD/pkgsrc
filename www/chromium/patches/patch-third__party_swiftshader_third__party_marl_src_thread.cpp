@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_swiftshader_third__party_marl_src_thread.cpp,v 1.29 2026/10/13 13:16:50 kikadf Exp $
+$NetBSD: patch-third__party_swiftshader_third__party_marl_src_thread.cpp,v 1.30 2026/10/16 15:31:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/swiftshader/third_party/marl/src/thread.cpp
 @@ -46,6 +46,9 @@
  #include <unistd.h>

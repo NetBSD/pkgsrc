@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_gpu_vulkan__implementation__wayland.cc,v 1.29 2026/10/13 13:16:52 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_gpu_vulkan__implementation__wayland.cc,v 1.30 2026/10/16 15:31:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc
 @@ -39,7 +39,11 @@ bool VulkanImplementationWayland::Initia
  

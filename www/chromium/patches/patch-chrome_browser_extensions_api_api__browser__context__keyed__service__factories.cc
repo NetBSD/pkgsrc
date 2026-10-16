@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_api__browser__context__keyed__service__factories.cc,v 1.13 2026/10/13 13:16:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_api__browser__context__keyed__service__factories.cc,v 1.14 2026/10/16 15:30:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
 @@ -55,7 +55,7 @@
  

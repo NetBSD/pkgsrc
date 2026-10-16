@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.1 2026/10/13 13:16:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.2 2026/10/16 15:30:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc
 @@ -571,7 +571,7 @@ void WebUIToolbarWebView::AddedToWidget(
      if (features::IsWebUIExtensionsContainerEnabled()) {

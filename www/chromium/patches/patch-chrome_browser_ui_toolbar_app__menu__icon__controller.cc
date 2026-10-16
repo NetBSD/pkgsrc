@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.9 2026/10/13 13:16:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.10 2026/10/16 15:30:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/app_menu_icon_controller.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/toolbar/app_menu_icon_controller.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/toolbar/app_menu_icon_controller.cc
 @@ -22,7 +22,7 @@
  #include "ui/gfx/paint_vector_icon.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.29 2026/10/13 13:16:44 kikadf Exp $
+$NetBSD: patch-media_video_video__encode__accelerator__adapter.cc,v 1.30 2026/10/16 15:30:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -266,7 +266,7 @@ class VideoEncodeAcceleratorAdapter::Map
      DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);

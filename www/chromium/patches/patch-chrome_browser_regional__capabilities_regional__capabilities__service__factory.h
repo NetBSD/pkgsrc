@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_regional__capabilities_regional__capabilities__service__factory.h,v 1.13 2026/10/13 13:16:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_regional__capabilities_regional__capabilities__service__factory.h,v 1.14 2026/10/16 15:30:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/regional_capabilities/regional_capabilities_service_factory.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/regional_capabilities/regional_capabilities_service_factory.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/regional_capabilities/regional_capabilities_service_factory.h
 @@ -31,7 +31,7 @@ class RegionalCapabilitiesServiceFactory
  

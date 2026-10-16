@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_platform_platform-openbsd.cc,v 1.29 2026/10/13 13:16:53 kikadf Exp $
+$NetBSD: patch-v8_src_base_platform_platform-openbsd.cc,v 1.30 2026/10/16 15:31:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-openbsd.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- v8/src/base/platform/platform-openbsd.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ v8/src/base/platform/platform-openbsd.cc
 @@ -8,6 +8,9 @@
  #include <errno.h>

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.29 2026/10/13 13:16:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.30 2026/10/16 15:30:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -44,7 +44,7 @@
  #include "chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_session_desktop_injector.h"

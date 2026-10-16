@@ -1,10 +1,10 @@
-$NetBSD: patch-net_filter_zstd__source__stream.cc,v 1.29 2026/10/13 13:16:44 kikadf Exp $
+$NetBSD: patch-net_filter_zstd__source__stream.cc,v 1.30 2026/10/16 15:30:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/filter/zstd_source_stream.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- net/filter/zstd_source_stream.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ net/filter/zstd_source_stream.cc
 @@ -7,6 +7,7 @@
  #include <algorithm>

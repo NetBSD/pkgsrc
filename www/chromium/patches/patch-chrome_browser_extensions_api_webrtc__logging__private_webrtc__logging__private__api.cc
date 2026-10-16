@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.29 2026/10/13 13:16:32 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc,v 1.30 2026/10/16 15:30:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc
 @@ -28,7 +28,7 @@
  #include "extensions/browser/process_manager.h"

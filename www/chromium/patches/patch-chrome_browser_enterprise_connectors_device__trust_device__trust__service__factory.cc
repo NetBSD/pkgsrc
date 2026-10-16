@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.29 2026/10/13 13:16:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_device__trust_device__trust__service__factory.cc,v 1.30 2026/10/16 15:30:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
 @@ -22,7 +22,7 @@
  #include "components/policy/core/common/management/management_service.h"

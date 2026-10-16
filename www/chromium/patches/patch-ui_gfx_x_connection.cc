@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_x_connection.cc,v 1.19 2026/10/13 13:16:52 kikadf Exp $
+$NetBSD: patch-ui_gfx_x_connection.cc,v 1.20 2026/10/16 15:31:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/connection.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/gfx/x/connection.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/gfx/x/connection.cc
 @@ -389,7 +389,7 @@ bool Connection::HasNextEvent() {
      }

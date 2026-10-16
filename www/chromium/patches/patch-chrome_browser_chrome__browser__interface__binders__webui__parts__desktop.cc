@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts__desktop.cc,v 1.21 2026/10/13 13:16:31 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui__parts__desktop.cc,v 1.22 2026/10/16 15:30:44 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui_parts_desktop.cc
 @@ -141,7 +141,7 @@
  #include "ui/webui/resources/cr_components/theme_color_picker/theme_color_picker.mojom.h"

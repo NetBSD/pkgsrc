@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__profiles.cc,v 1.29 2026/10/13 13:16:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_profiles_chrome__browser__main__extra__parts__profiles.cc,v 1.30 2026/10/16 15:30:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
 @@ -328,7 +328,7 @@
  #include "ui/webui/buildflags.h"

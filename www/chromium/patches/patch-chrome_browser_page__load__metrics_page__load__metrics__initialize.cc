@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_page__load__metrics_page__load__metrics__initialize.cc,v 1.21 2026/10/13 13:16:33 kikadf Exp $
+$NetBSD: patch-chrome_browser_page__load__metrics_page__load__metrics__initialize.cc,v 1.22 2026/10/16 15:30:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/page_load_metrics/page_load_metrics_initialize.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/page_load_metrics/page_load_metrics_initialize.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/page_load_metrics/page_load_metrics_initialize.cc
 @@ -83,7 +83,7 @@
  #include "url/gurl.h"

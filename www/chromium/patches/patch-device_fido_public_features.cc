@@ -1,10 +1,10 @@
-$NetBSD: patch-device_fido_public_features.cc,v 1.15 2026/10/13 13:16:42 kikadf Exp $
+$NetBSD: patch-device_fido_public_features.cc,v 1.16 2026/10/16 15:30:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/fido/public/features.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- device/fido/public/features.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ device/fido/public/features.cc
 @@ -34,7 +34,7 @@ namespace device {
  // comment.

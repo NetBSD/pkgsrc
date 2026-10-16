@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_platform__window_platform__window__delegate.h,v 1.29 2026/10/13 13:16:52 kikadf Exp $
+$NetBSD: patch-ui_platform__window_platform__window__delegate.h,v 1.30 2026/10/16 15:31:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_delegate.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/platform_window/platform_window_delegate.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/platform_window/platform_window_delegate.h
 @@ -146,7 +146,7 @@ class COMPONENT_EXPORT(PLATFORM_WINDOW) 
    virtual void OnWindowStateChanged(PlatformWindowState old_state,

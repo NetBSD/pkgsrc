@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_skia_src_core_SkAutoLocaleSetter.h,v 1.6 2026/10/13 13:16:50 kikadf Exp $
+$NetBSD: patch-third__party_skia_src_core_SkAutoLocaleSetter.h,v 1.7 2026/10/16 15:31:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/core/SkAutoLocaleSetter.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/skia/src/core/SkAutoLocaleSetter.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/skia/src/core/SkAutoLocaleSetter.h
 @@ -15,7 +15,7 @@
  #include <string>
