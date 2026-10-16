@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/06/06 06:46:19 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/16 18:17:53 adam Exp $
 
 DISTNAME=	bandcamp_downloader-0.0.17
 PKGNAME=	${DISTNAME:S/_downloader/-dl/}
@@ -19,11 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-unicode-slugify>=0.1.5:../../converters/py-unicode-slug
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.2.2:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
