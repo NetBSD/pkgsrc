@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7023 2026/10/16 18:29:37 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7024 2026/10/16 18:30:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10527,5 +10527,10 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-project-api to 1.11.7 [adam 2026-10-16]
 	Updated net/py-python-socks to 3.1.1 [adam 2026-10-16]
 	Updated textproc/py-numpydoc to 1.11.0 [adam 2026-10-16]
+<<<<<<< CHANGES-2026
+	Updated www/album to 4.18 [ktnb 2026-10-16]
+=======
 	Updated security/py-cyclonedx-bom to 7.5.0 [adam 2026-10-16]
 	Updated devel/py-argparse-manpage to 4.8 [adam 2026-10-16]
+>>>>>>> 1.7023
+	Updated www/album to 4.18 [ktnb 2026-10-16]
