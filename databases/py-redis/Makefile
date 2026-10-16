@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2026/08/24 12:36:52 adam Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/16 17:54:22 adam Exp $
 
 DISTNAME=	redis-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,14 +13,9 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.3:../../devel/py-async-timeout
-.endif
 
 # Testing requires a running redis-server.
 # Broken in 4.1.0: missing SSL certificates and tox.ini.
