@@ -1,8 +1,10 @@
-# $NetBSD: cargo-depends.mk,v 1.39 2026/04/02 12:13:25 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.40 2026/10/16 20:01:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
+CARGO_CRATE_DEPENDS+=	alloc-no-stdlib-2.0.4
+CARGO_CRATE_DEPENDS+=	alloc-stdlib-0.2.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	anstream-0.6.21
@@ -14,6 +16,7 @@ CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
 CARGO_CRATE_DEPENDS+=	arraydeque-0.5.1
 CARGO_CRATE_DEPENDS+=	assert-json-diff-2.0.2
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.1.2
+CARGO_CRATE_DEPENDS+=	async-compression-0.4.39
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.89
 CARGO_CRATE_DEPENDS+=	atomic-0.6.1
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
@@ -32,6 +35,8 @@ CARGO_CRATE_DEPENDS+=	bit-vec-0.8.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.10.0
 CARGO_CRATE_DEPENDS+=	block-buffer-0.10.4
+CARGO_CRATE_DEPENDS+=	brotli-8.0.2
+CARGO_CRATE_DEPENDS+=	brotli-decompressor-5.0.3
 CARGO_CRATE_DEPENDS+=	bstr-1.12.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.19.1
 CARGO_CRATE_DEPENDS+=	bytemuck-1.24.0
@@ -52,6 +57,8 @@ CARGO_CRATE_DEPENDS+=	cmake-0.1.57
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.4
 CARGO_CRATE_DEPENDS+=	combine-4.6.7
 CARGO_CRATE_DEPENDS+=	compact_str-0.9.0
+CARGO_CRATE_DEPENDS+=	compression-codecs-0.4.36
+CARGO_CRATE_DEPENDS+=	compression-core-0.4.31
 CARGO_CRATE_DEPENDS+=	console-0.16.2
 CARGO_CRATE_DEPENDS+=	console-api-0.9.0
 CARGO_CRATE_DEPENDS+=	console-subscriber-0.5.0
@@ -483,3 +490,6 @@ CARGO_CRATE_DEPENDS+=	zerotrie-0.2.3
 CARGO_CRATE_DEPENDS+=	zerovec-0.11.5
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.11.2
 CARGO_CRATE_DEPENDS+=	zmij-1.0.14
+CARGO_CRATE_DEPENDS+=	zstd-0.13.3
+CARGO_CRATE_DEPENDS+=	zstd-safe-7.2.4
+CARGO_CRATE_DEPENDS+=	zstd-sys-2.0.16+zstd.1.5.7

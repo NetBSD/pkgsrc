@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2026/05/17 16:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2026/10/16 20:01:57 pin Exp $
 
-DISTNAME=	slumber-5.3.0
+DISTNAME=	slumber-5.4.0
+# Release 5.4.1 was accidentally skipped by upstream.
+# slumber >= 5.4.2. requires Rust >= 1.99.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +14,8 @@ LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
