@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7018 2026/10/16 17:21:44 leot Exp $
+$NetBSD: CHANGES-2026,v 1.7019 2026/10/16 17:53:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10518,3 +10518,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed lang/python310 [adam 2026-10-16]
 	Removed lang/py310-html-docs [adam 2026-10-16]
 	Added misc/asciinema-agg version 1.9.0 [leot 2026-10-16]
+	Updated devel/py-hypothesis to 6.170.1 [adam 2026-10-16]
+	Updated devel/py-inline-snapshot to 0.36.1 [adam 2026-10-16]
