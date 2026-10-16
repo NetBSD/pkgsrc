@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2026/10/03 09:12:43 adam Exp $
+# $NetBSD: Makefile,v 1.98 2026/10/16 17:41:23 adam Exp $
 
 DISTNAME=	coverage-7.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
-.endif
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage3
