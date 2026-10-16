@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/12/15 12:02:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/16 18:21:48 adam Exp $
 bin/numpydoc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,9 +12,6 @@ ${PYSITELIB}/numpydoc/__init__.pyo
 ${PYSITELIB}/numpydoc/__main__.py
 ${PYSITELIB}/numpydoc/__main__.pyc
 ${PYSITELIB}/numpydoc/__main__.pyo
-${PYSITELIB}/numpydoc/_version.py
-${PYSITELIB}/numpydoc/_version.pyc
-${PYSITELIB}/numpydoc/_version.pyo
 ${PYSITELIB}/numpydoc/cli.py
 ${PYSITELIB}/numpydoc/cli.pyc
 ${PYSITELIB}/numpydoc/cli.pyo
@@ -37,6 +34,9 @@ ${PYSITELIB}/numpydoc/numpydoc.py
 ${PYSITELIB}/numpydoc/numpydoc.pyc
 ${PYSITELIB}/numpydoc/numpydoc.pyo
 ${PYSITELIB}/numpydoc/templates/numpydoc_docstring.rst
+${PYSITELIB}/numpydoc/tests/hooks/example_module.py
+${PYSITELIB}/numpydoc/tests/hooks/example_module.pyc
+${PYSITELIB}/numpydoc/tests/hooks/example_module.pyo
 ${PYSITELIB}/numpydoc/tests/hooks/test_utils.py
 ${PYSITELIB}/numpydoc/tests/hooks/test_utils.pyc
 ${PYSITELIB}/numpydoc/tests/hooks/test_utils.pyo

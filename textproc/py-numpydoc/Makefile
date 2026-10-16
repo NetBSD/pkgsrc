@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/01/06 11:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/16 18:21:48 adam Exp $
 
-DISTNAME=	numpydoc-1.10.0
+DISTNAME=	numpydoc-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpydoc/}
@@ -12,21 +12,14 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=6:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib>=0:../../graphics/py-matplotlib
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PY_RENAME_BINARIES=	numpydoc
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} numpydoc numpydoc-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
