@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/12 08:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/16 17:13:58 adam Exp $
 
 DISTNAME=	autopep8-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,14 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.12.0:../../devel/py-codestyle
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} autopep8 autopep8-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	autopep8
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
