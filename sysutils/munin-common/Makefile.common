@@ -1,16 +1,18 @@
-# $NetBSD: Makefile.common,v 1.9 2026/01/11 05:22:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2026/10/16 11:05:15 tm Exp $
 #
 # used by sysutils/munin-common/Makefile
 # used by sysutils/munin-master/Makefile
 # used by sysutils/munin-node/Makefile
 
-VERSION=	2.0.69
+VERSION=	2.0.78
 DISTNAME=	munin-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=munin-monitoring/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_PROJECT=	munin
 
 MAINTAINER=	tm@NetBSD.org
-HOMEPAGE=	https://munin-monitoring.org/
+HOMEPAGE=	http://munin-monitoring.org/
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	p5-Module-Build>=0.42050:../../devel/p5-Module-Build
