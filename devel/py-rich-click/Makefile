@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/09/07 11:04:54 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/16 17:58:20 adam Exp $
 
 DISTNAME=	rich_click-1.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,11 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-click>=8:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-rich>=12:../../comms/py-rich
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
-.endif
 
 PY_RENAME_BINARIES=	rich-click
 
