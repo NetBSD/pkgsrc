@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/01/06 11:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2026/10/16 18:32:47 adam Exp $
 
 DISTNAME=	sphinx-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,29 +28,19 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath>=1.0.1:../../textproc/py-sphinxcon
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp>=1.0.6:../../textproc/py-sphinxcontrib-qthelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.9:../../textproc/py-sphinxcontrib-serializinghtml
 TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PY_RENAME_BINARIES=	sphinx-apidoc sphinx-autogen sphinx-build sphinx-quickstart
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 9.1.0
 # 43 failed, 2348 passed, 33 skipped, 48 warnings
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2:../../textproc/py-tomli
-.endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} sphinx-apidoc sphinx-apidoc-${PYVERSSUFFIX} && \
-	${MV} sphinx-autogen sphinx-autogen-${PYVERSSUFFIX} && \
-	${MV} sphinx-build sphinx-build-${PYVERSSUFFIX} && \
-	${MV} sphinx-quickstart sphinx-quickstart-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
