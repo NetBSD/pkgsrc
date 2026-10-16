@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/09/15 15:07:12 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/16 17:38:57 adam Exp $
 
 DISTNAME=	behave-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,16 +25,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-html>=0:../../devel/py-test-html
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
+PY_RENAME_BINARIES=	behave
 
 # as of 1.3.0
 # 1846 passed, 10 skipped, 2 xfailed
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} behave behave-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
