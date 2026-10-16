@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/05/06 12:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/16 17:11:33 adam Exp $
 
 DISTNAME=	hatch_fancy_pypi_readme-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,23 +11,15 @@ COMMENT=	Fancy PyPI READMEs with Hatch
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.0:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0:../../devel/py-build
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
+PY_RENAME_BINARIES=	hatch-fancy-pypi-readme
+
 # as of 25.1.0
 # 2 failed, 46 passed
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} hatch-fancy-pypi-readme hatch-fancy-pypi-readme-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
