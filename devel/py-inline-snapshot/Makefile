@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/09/03 11:47:41 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/16 17:52:18 adam Exp $
 
-DISTNAME=	inline_snapshot-0.35.4
+DISTNAME=	inline_snapshot-0.36.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inline_snapshot/}
@@ -33,11 +33,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests>=0.11.0:../../devel/py-test-subtests
 # 4 failed, 339 passed, 39 skipped, 5 warnings, 3 errors, 903 subtests
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.0:../../textproc/py-tomli
-.endif
 
 pre-test:
 	cd ${BUILDLINK_DIR}/bin && ${LN} -sf ${PREFIX}/bin/pytest-${PYVERSSUFFIX} pytest
