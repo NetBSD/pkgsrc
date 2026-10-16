@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/02/16 12:26:51 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/16 18:31:41 adam Exp $
 
 DISTNAME=	rdflib-7.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,11 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-isodate>=0.7.2:../../time/py-isodate
-.endif
 
 REPLACE_PYTHON+=	rdflib/extras/describer.py
 REPLACE_PYTHON+=	rdflib/extras/infixowl.py
