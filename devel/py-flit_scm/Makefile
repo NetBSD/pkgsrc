@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/02/23 20:39:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 17:46:58 adam Exp $
 
 DISTNAME=	flit_scm-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,12 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
