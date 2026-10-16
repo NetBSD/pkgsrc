@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7021 2026/10/16 18:10:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7022 2026/10/16 18:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10525,3 +10525,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.2.0 [adam 2026-10-16]
 	Updated devel/py-pipx to 1.18.2 [adam 2026-10-16]
 	Updated devel/py-project-api to 1.11.7 [adam 2026-10-16]
+	Updated net/py-python-socks to 3.1.1 [adam 2026-10-16]
+	Updated textproc/py-numpydoc to 1.11.0 [adam 2026-10-16]
