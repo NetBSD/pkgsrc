@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/10/09 10:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/16 18:13:25 adam Exp $
 
 DISTNAME=	vcs_versioning-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,12 +22,6 @@ USE_TOOLS+=	git:test
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	vcs-versioning
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
-.endif
 
 # as of 2.5.0
 # 1 failed, 721 passed, 9 skipped
