@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/22 07:36:20 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/16 18:30:55 adam Exp $
 
 DISTNAME=	mdformat-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,14 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=1:../../textproc/py-markdown-it-py
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} mdformat mdformat-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	mdformat
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
