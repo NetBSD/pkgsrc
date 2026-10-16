@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7028 2026/10/16 19:48:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7029 2026/10/16 20:02:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10536,3 +10536,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/py-jedi to 0.20.1 [adam 2026-10-16]
 	Updated textproc/py-jsonpickle to 4.1.4 [adam 2026-10-16]
 	Updated textproc/py-phonenumbers to 9.0.41 [adam 2026-10-16]
+	Updated net/slumber to 5.4.0 [pin 2026-10-16]
