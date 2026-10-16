@@ -1,0 +1,8 @@
+photoc helps you review, organize, and prepare photos from the
+terminal: summarize a shoot, read metadata, find blurry shots and
+exact duplicates, rename and sort into folders, make contact sheets
+and smaller copies, or remove GPS before sharing. Most commands
+work in shell scripts; `review` needs a terminal. Inspection commands
+can print JSON. Large JPEGs may use temporary in-memory previews,
+which do not change the originals. photoc reads JPEG files and
+metadata from Sony ARW RAW files as of now.

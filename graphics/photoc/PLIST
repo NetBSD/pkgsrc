@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/16 00:43:50 ktnb Exp $
+bin/photoc
+man/man1/photoc.1
+share/doc/photoc/LICENSE
+share/doc/photoc/THIRD_PARTY_NOTICES.md
+share/doc/photoc/licenses/libexif/COPYING
+share/doc/photoc/licenses/libjpeg-turbo/LICENSE-2.1.2.md
+share/doc/photoc/licenses/libjpeg-turbo/LICENSE-3.2.0.md
+share/doc/photoc/licenses/libjpeg-turbo/README.ijg

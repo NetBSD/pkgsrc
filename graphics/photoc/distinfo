@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2026/10/16 00:43:50 ktnb Exp $
+
+BLAKE2s (photoc-0.7.1.tar.gz) = d924817fd9f4dd0c32e3ed57061a22375a76c88067648280fac717a70f17beb6
+SHA512 (photoc-0.7.1.tar.gz) = 5f0a2dc8b4d45bd9b5197aac8e1fa36fbd90f6b6b5bf7224de282bbf6f485db19e8790490d99f9b0dd899799a119fb64ed7bcee033c1232aa188bcb598600e3c
+Size (photoc-0.7.1.tar.gz) = 1084639 bytes
+SHA1 (patch-src_commands_review__state.c) = 961e3f042db4949c0d612ce601d565d04a586bb7
+SHA1 (patch-src_core_fs.c) = 5551e10b7d9d7af77294748820ec3395e9e8b881
+SHA1 (patch-src_core_jpeg__write.c) = 53c4161a2d0cddce003723aabd547119d411c3c9
+SHA1 (patch-tests_test__fs.c) = 44ab0eb92da8a4871315a080baa39e63407396f3
+SHA1 (patch-tests_test__hash.c) = fd42e0322e3881abad2db7caf7c33aa0e9da149d
+SHA1 (patch-tests_test__jpeg__write.c) = 7f3da5411067725bb33fd6d0591e84c1504a50bf
+SHA1 (patch-tests_test__metadata.c) = 3af3d4cd91fa5ed9b51a9c4d72e170d69ce97b2f
+SHA1 (patch-tests_test__rename__rollback.c) = c85087f62e2016f36687fe68d4dcc4d8428b8478
+SHA1 (patch-tests_test__review__model.c) = 9eb70fafdc34f089d3f3de0aafdae8ce5cdd3ed4
+SHA1 (patch-tests_test__review__state.c) = 102cc5129c73f5101b4d27c278aa4ed16749eec7
+SHA1 (patch-tests_test__scan.c) = 4d1cb865bf21607d2b995bb4d5a181943e351463
