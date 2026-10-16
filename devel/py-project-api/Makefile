@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/10/12 09:50:28 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/16 18:09:58 adam Exp $
 
-DISTNAME=	pyproject_api-1.11.5
+DISTNAME=	pyproject_api-1.11.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_api/}
@@ -19,11 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.16:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.4.1:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
