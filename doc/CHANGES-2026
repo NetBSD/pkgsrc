@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7031 2026/10/16 20:41:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7032 2026/10/16 20:42:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10539,3 +10539,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.4.0 [pin 2026-10-16]
 	Updated sysutils/dua-cli to 2.46.0 [pin 2026-10-16]
 	Updated x11/libX11 to 1.8.14 [wiz 2026-10-16]
+	Updated x11/libXi to 1.8.4 [wiz 2026-10-16]
