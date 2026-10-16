@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/12/26 12:40:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/16 17:43:15 adam Exp $
 bin/debugpy-${PYVERSSUFFIX}
 bin/debugpy-adapter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -342,7 +342,6 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_eval_main.
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.c
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.pxd
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.pyx
-${PLIST.frame_eval}${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.so
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.template.pyx
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_tracing.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_tracing.pyc
@@ -415,7 +414,7 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitor
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.c
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.pxd
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.pyx
-${PLIST.pydevd_cython}${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.so
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.so
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.pyo
