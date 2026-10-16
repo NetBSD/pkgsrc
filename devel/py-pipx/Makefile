@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/03 09:14:54 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/16 18:08:31 adam Exp $
 
-DISTNAME=	pipx-1.17.2
+DISTNAME=	pipx-1.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pipx/}
@@ -10,23 +10,18 @@ HOMEPAGE=	https://pipx.pypa.io/
 COMMENT=	Install and Run Python Applications in Isolated Environments
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21:../../textproc/py-docutils
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.9.4:../../devel/py-argcomplete
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.16:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-packaging>=26:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.6:../../misc/py-platformdirs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-argcomplete>=3.7.2:../../devel/py-argcomplete
+DEPENDS+=	${PYPKGPREFIX}-filelock>=4.2:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-packaging>=26.3:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.12.2:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-userpath>=1.9.2:../../devel/py-userpath
 
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	pipx
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
-.endif
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure
