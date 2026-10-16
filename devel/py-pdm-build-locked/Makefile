@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/10/08 16:55:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/16 17:55:56 adam Exp $
 
 DISTNAME=	pdm_build_locked-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -16,11 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.9.6:../../devel/py-pkginfo
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
