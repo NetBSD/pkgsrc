@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/01/26 10:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/16 17:47:26 adam Exp $
 
 DISTNAME=	gi_docgen-2026.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
@@ -18,14 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
 # uses bin/dot for .dot file support
-DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
+DEPENDS+=	graphviz>=0:../../graphics/graphviz
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
-.endif
-
-PYTHON_SELF_CONFLICT=		yes
+PYTHON_SELF_CONFLICT=	yes
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
