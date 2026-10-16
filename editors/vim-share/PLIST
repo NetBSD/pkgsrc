@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2026/09/16 23:21:45 morr Exp $
+@comment $NetBSD: PLIST,v 1.97 2026/10/16 23:35:46 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -580,6 +580,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/http.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hurl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hyprlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/i3config.vim
+share/vim/${VIM_SUBDIR}/ftplugin/icalendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/icon.vim
 share/vim/${VIM_SUBDIR}/ftplugin/idris2.vim
 share/vim/${VIM_SUBDIR}/ftplugin/indent.vim
@@ -1491,6 +1492,7 @@ share/vim/${VIM_SUBDIR}/syntax/hyprlang.vim
 share/vim/${VIM_SUBDIR}/syntax/i3config.vim
 share/vim/${VIM_SUBDIR}/syntax/ia64.vim
 share/vim/${VIM_SUBDIR}/syntax/ibasic.vim
+share/vim/${VIM_SUBDIR}/syntax/icalendar.vim
 share/vim/${VIM_SUBDIR}/syntax/icemenu.vim
 share/vim/${VIM_SUBDIR}/syntax/icon.vim
 share/vim/${VIM_SUBDIR}/syntax/idl.vim
