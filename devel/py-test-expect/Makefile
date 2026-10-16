@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/16 18:11:51 adam Exp $
 
 DISTNAME=	pytest-expect-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -17,14 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-u-msgpack>=0:../../devel/py-u-msgpack
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.12:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-#.if ${PYTHON_VERSION} < 311
-#DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
-#.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
