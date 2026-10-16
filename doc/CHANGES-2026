@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7027 2026/10/16 19:09:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7028 2026/10/16 19:48:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10534,3 +10534,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pkginfo to 1.13.1 [adam 2026-10-16]
 	Updated www/websockify to 0.13.0 [adam 2026-10-16]
 	Updated editors/py-jedi to 0.20.1 [adam 2026-10-16]
+	Updated textproc/py-jsonpickle to 4.1.4 [adam 2026-10-16]
+	Updated textproc/py-phonenumbers to 9.0.41 [adam 2026-10-16]
