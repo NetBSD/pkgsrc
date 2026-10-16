@@ -1,24 +1,44 @@
-$NetBSD: patch-libraries_vendor__config.php,v 1.1 2022/04/22 19:28:59 tm Exp $
+$NetBSD: patch-libraries_vendor__config.php,v 1.2 2026/10/16 10:38:19 tm Exp $
 
-As recommended by phpMyAdmin developers the temp directory should not be part of the webroot. User configuration should be also stored in the "etc"-folder to update the package without configuration changes.
+As recommended by phpMyAdmin developers the temp directory should not be part 
+of the webroot. User configuration should be also stored in the "etc"-folder
+to update the package without configuration changes.
 
---- libraries/vendor_config.php.orig	2022-02-11 04:16:06.000000000 +0000
+--- libraries/vendor_config.php.orig	2025-10-07 20:40:11.000000000 +0000
 +++ libraries/vendor_config.php
-@@ -24,7 +24,7 @@ define('AUTOLOAD_FILE', ROOT_PATH . 'ven
- /**
-  * Directory where cache files are stored.
-  */
--define('TEMP_DIR', ROOT_PATH . 'tmp' . DIRECTORY_SEPARATOR);
-+define('TEMP_DIR', '@PMVARDIR@' . DIRECTORY_SEPARATOR . 'tmp' . DIRECTORY_SEPARATOR);
+@@ -22,7 +22,7 @@ return [
+     /**
+      * Directory where cache files are stored.
+      */
+-    'tempDir' => ROOT_PATH . 'tmp' . DIRECTORY_SEPARATOR,
++    'tempDir' => '@PMVARDIR@' . DIRECTORY_SEPARATOR . 'tmp' . DIRECTORY_SEPARATOR,
  
- /**
-  * Path to changelog file, can be gzip compressed. Useful when you want to
-@@ -48,7 +48,7 @@ define('SQL_DIR', ROOT_PATH . 'sql' . DI
-  * It is not used directly in code, just a convenient
-  * define used further in this file.
-  */
--define('CONFIG_DIR', ROOT_PATH);
-+define('CONFIG_DIR', '@PMCONFDIR@');
+     /**
+      * Path to changelog file, can be gzip compressed.
+@@ -43,22 +43,22 @@ return [
+     /**
+      * Filename of a configuration file.
+      */
+-    'configFile' => ROOT_PATH . 'config.inc.php',
++    'configFile' => '@PMCONFDIR@' . DIRECTORY_SEPARATOR . 'config.inc.php',
  
- /**
-  * Filename of a configuration file.
+     /**
+      * Filename of custom header file.
+      */
+-    'customHeaderFile' => ROOT_PATH . 'config.header.inc.php',
++    'customHeaderFile' => '@PMCONFDIR@' . DIRECTORY_SEPARATOR . 'config.header.inc.php',
+ 
+     /**
+      * Filename of custom footer file.
+      */
+-    'customFooterFile' => ROOT_PATH . 'config.footer.inc.php',
++    'customFooterFile' => '@PMCONFDIR@' . DIRECTORY_SEPARATOR . 'config.footer.inc.php',
+ 
+     /**
+      * Default value for check for version upgrades.
+      */
+-    'versionCheckDefault' => true,
++    'versionCheckDefault' => false,
+ 
+     /**
+      * Path to files with compiled locales (*.mo)

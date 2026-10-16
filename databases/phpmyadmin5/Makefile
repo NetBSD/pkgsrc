@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/02/08 03:33:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 10:38:19 tm Exp $
 
-DISTNAME=	phpMyAdmin-5.1.3-all-languages
-PKGREVISION=	1
+DISTNAME=	phpMyAdmin-5.2.3-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
@@ -31,9 +30,6 @@ PHP_VERSIONS_INCOMPATIBLE=	56
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-APACHE_USER?=	www
-APACHE_GROUP?=	www
-
 PKG_GROUPS=	${APACHE_GROUP}
 PKG_USERS=	${APACHE_USER}:${APACHE_GROUP}
 BUILD_DEFS+=	APACHE_USER APACHE_GROUP VARBASE
@@ -58,7 +54,7 @@ PMVARDIR=	${VARBASE}/phpmyadmin
 
 CONF_FILES+=	${EXDIR}/apache.conf ${PKG_SYSCONFDIR}/apache.conf
 
-SRCS=		*.css *.ico *.php *.txt doc js libraries locale setup \
+SRCS=		*.ico *.php *.txt doc js libraries locale setup \
 		sql templates themes vendor
 
 NO_BUILD=		yes
