@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/09/28 15:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/16 17:39:55 adam Exp $
 
 DISTNAME=	cattrs-26.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,11 +29,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-msgspec>=0:../../devel/py-msgspec
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.1.1:../../devel/py-exceptiongroup
-.endif
 
 # as of 26.2.1
 # 983 passed, 15 xfailed, 2 warnings
