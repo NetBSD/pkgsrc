@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/10/16 17:36:43 adam Exp $
+# $NetBSD: Makefile,v 1.42 2026/10/16 20:39:44 wiz Exp $
 
 DISTNAME=	anyio-4.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,8 @@ USE_LANGUAGES=	# none
 # 12 failed, 1511 passed, 184 skipped, 6 xfailed
 # as of 4.6.2.post1
 # Fatal Python error: Aborted
+
+.include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 315
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.16.0:../../devel/py-typing-extensions
