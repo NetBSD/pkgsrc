@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7001 2026/10/15 23:31:00 nia Exp $
+$NetBSD: CHANGES-2026,v 1.7002 2026/10/16 00:46:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10497,3 +10497,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/sesh to 2.33.0 [kim 2026-10-15]
 	Updated devel/gcli to 2.13.0 [tm 2026-10-15]
 	Updated graphics/ImageMagick6 to 6.9.13.56 [nia 2026-10-15]
+	Added graphics/photoc version 0.7.1 [ktnb 2026-10-16]
