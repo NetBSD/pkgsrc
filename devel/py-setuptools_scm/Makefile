@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2026/09/28 16:49:44 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/10/16 18:00:06 adam Exp $
 
 DISTNAME=	setuptools_scm-10.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,12 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	setuptools-scm
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
-.endif
 
 # test status as of 10.3.4
 # 4 failed, 199 passed, 8 skipped
