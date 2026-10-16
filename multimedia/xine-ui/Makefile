@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2026/05/14 16:41:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.139 2026/10/16 03:45:42 mrg Exp $
 
 DISTNAME=		xine-ui-0.99.14
 PKGREVISION=		3
@@ -19,6 +19,8 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-lirc
 CONFIGURE_ARGS+=	--without-aalib
+
+FORCE_C_STD=		gnu11
 
 # libedit is not good enough, need rl_kill_full_line(3)
 # PR lib/59883
