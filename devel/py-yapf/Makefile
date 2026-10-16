@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/13 06:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/16 18:16:49 adam Exp $
 
 DISTNAME=	yapf-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,16 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.1:../../misc/py-platformdirs
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
-.endif
-
-post-install:
-.for bin in yapf yapf-diff
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
+PY_RENAME_BINARIES=	yapf yapf-diff
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
