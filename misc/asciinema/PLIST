@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/16 17:03:07 leot Exp $
+bin/asciinema
