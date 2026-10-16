@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2026/08/16 12:17:37 wiz Exp $
+$NetBSD: distinfo,v 1.31 2026/10/16 21:28:35 schmonz Exp $
 
 BLAKE2s (github.com_adrg_xdg_@v_v0.5.3.mod) = d6562994850ff49646864144f83c4ce6db7f136692b1d986787ee15b68e4d496
 SHA512 (github.com_adrg_xdg_@v_v0.5.3.mod) = 392cf3f009a48dab138d1e2b3d1d2563e616a43ae7c2e0bb00f0029073b758706ebb882e96a3400dc4b6a25fef07370c960fdd197d366bc9757d29f20c89cbe3
@@ -102,12 +102,12 @@ Size (github.com_ulikunitz_xz_@v_v0.5.16.mod) = 40 bytes
 BLAKE2s (github.com_ulikunitz_xz_@v_v0.5.16.zip) = 53fe0c050964c47a5f32b03243cb449417a916c5995a8c1db2bc9dcbaa423178
 SHA512 (github.com_ulikunitz_xz_@v_v0.5.16.zip) = 0c58b18b56dc69ff3d47f9a24a1c6ce0512335818e0c99924e890af010a3ddb74f3807baf3f87c9e4d1831d574ac83211d20e9c5f737a6b3388e16014e9d54a9
 Size (github.com_ulikunitz_xz_@v_v0.5.16.zip) = 4247946 bytes
-BLAKE2s (golang.org_x_sync_@v_v0.22.0.mod) = 7041602217cf35da919f89685bb7203789bf49cf861bc4dd4b9a92b03b6d3961
-SHA512 (golang.org_x_sync_@v_v0.22.0.mod) = fadbb942889ef5930c37862f8e79d336f26b1a713134a731377f4fecfca8472fe699624f71955c8a1a87b48e98a99f537ae0c43a07ef449feada221d0d6dc2e2
-Size (golang.org_x_sync_@v_v0.22.0.mod) = 36 bytes
-BLAKE2s (golang.org_x_sync_@v_v0.22.0.zip) = 0ec6b5e3c43fbf2025843932a30177b90c3f99c603927c3b8be28f9b6a8e9c83
-SHA512 (golang.org_x_sync_@v_v0.22.0.zip) = ff5d56fbee5e6753223ec168f3c0e63aaad1e3a06518a3f9cee2fddcafb047625f11c75c2070fb01c29da85a515ee3cf571270e6c962509bd5b87b63d75419c2
-Size (golang.org_x_sync_@v_v0.22.0.zip) = 25790 bytes
+BLAKE2s (github.com_walles_twin_@v_v0.9.6.mod) = c083e2df7bb1d690b6ce8fb4731d89631b0a92f7c5a1f0be51257902a6e3d17e
+SHA512 (github.com_walles_twin_@v_v0.9.6.mod) = add8612cb176f9b5febd019d732eb544b368298a281326feb69764d0ef98027892f99ed0bb06d7f72bfeee88ae001e95d7fed185135b7979c8e2d952068c5a84
+Size (github.com_walles_twin_@v_v0.9.6.mod) = 411 bytes
+BLAKE2s (github.com_walles_twin_@v_v0.9.6.zip) = 31c07bb6abaf4e50a25ac4a48136378cbe4c78faf9f48e3c18c878e41c75ec90
+SHA512 (github.com_walles_twin_@v_v0.9.6.zip) = 1f881f14fde511fdb9e933fdc52c6728508c9714222c9b3deb381a5622ba539dba05ca409437b66c96b187caba49530f623599af08721f867a26dede8a611572
+Size (github.com_walles_twin_@v_v0.9.6.zip) = 1017134 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.47.0.mod) = 54d735bab6b0f4ca4d304be2307672bd0448377d788ebe83f3acfb0a565cc3ae
 SHA512 (golang.org_x_sys_@v_v0.47.0.mod) = 1e0df129f27326be70316a1f1f0e94ca4b48c0d09c2975919182a64639b9718dc224d851d4cd69c618c10e7e7765a11a70e10a57507a26488c50e7c53baa8b01
 Size (golang.org_x_sys_@v_v0.47.0.mod) = 35 bytes
@@ -138,6 +138,6 @@ Size (gotest.tools_v3_@v_v3.5.2.mod) = 195 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.5.2.zip) = 582bab822c0d8279b3758825d276fbab77af2972fa7cbd8159993c7ca81c6c13
 SHA512 (gotest.tools_v3_@v_v3.5.2.zip) = eec814fc0f8e39fd10051f659859fb9c0016fb51e798968ae53617da5f29e441c5fd0a719cbbbe4416ebc0e9eac5b09ddebb99a8434cf602728f0c37b72534d5
 Size (gotest.tools_v3_@v_v3.5.2.zip) = 101104 bytes
-BLAKE2s (moor-2.17.0.tar.gz) = a0827a947a82b10d4e02969fc16f02c51dfc25af29e9d8850cc3a410504b2051
-SHA512 (moor-2.17.0.tar.gz) = b54593fed976b706b06b170f889aca7cf277f0b3ce5b154cda19865216c032c07411462d6ec17a7ab47a8171278ad884f04ef12d924d56f3800144ab3a620ae0
-Size (moor-2.17.0.tar.gz) = 5381789 bytes
+BLAKE2s (moor-2.19.5.tar.gz) = 9b216f50be8bb1dd79dbf99bd51177e2bab746e51fc5f5a52faa11c8564bb353
+SHA512 (moor-2.19.5.tar.gz) = 46dc121e612cf7c7887ace5b0f01af940b3feda78c60adbbdfaf354c84e965cd5d8b0c046ddb78344befc480fc4b6f94d1752ac605474016cac9ec24aa6d6c2f
+Size (moor-2.19.5.tar.gz) = 5356583 bytes
