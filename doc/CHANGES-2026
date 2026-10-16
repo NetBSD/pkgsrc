@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7003 2026/10/16 07:29:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7004 2026/10/16 09:01:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10499,3 +10499,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/ImageMagick6 to 6.9.13.56 [nia 2026-10-15]
 	Added graphics/photoc version 0.7.1 [ktnb 2026-10-16]
 	Updated textproc/py-jellyfish to 1.3.0 [wiz 2026-10-16]
+	Updated audio/fasttracker2 to 2.26 [fox 2026-10-16]
