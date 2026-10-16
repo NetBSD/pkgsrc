@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/03/02 20:31:12 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/10/16 18:55:34 adam Exp $
 bin/streamlink
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -85,9 +85,6 @@ ${PYSITELIB}/streamlink/plugins/aloula.pyo
 ${PYSITELIB}/streamlink/plugins/app17.py
 ${PYSITELIB}/streamlink/plugins/app17.pyc
 ${PYSITELIB}/streamlink/plugins/app17.pyo
-${PYSITELIB}/streamlink/plugins/ard_live.py
-${PYSITELIB}/streamlink/plugins/ard_live.pyc
-${PYSITELIB}/streamlink/plugins/ard_live.pyo
 ${PYSITELIB}/streamlink/plugins/ard_mediathek.py
 ${PYSITELIB}/streamlink/plugins/ard_mediathek.pyc
 ${PYSITELIB}/streamlink/plugins/ard_mediathek.pyo
@@ -178,6 +175,9 @@ ${PYSITELIB}/streamlink/plugins/dogus.pyo
 ${PYSITELIB}/streamlink/plugins/douyin.py
 ${PYSITELIB}/streamlink/plugins/douyin.pyc
 ${PYSITELIB}/streamlink/plugins/douyin.pyo
+${PYSITELIB}/streamlink/plugins/douyu.py
+${PYSITELIB}/streamlink/plugins/douyu.pyc
+${PYSITELIB}/streamlink/plugins/douyu.pyo
 ${PYSITELIB}/streamlink/plugins/drdk.py
 ${PYSITELIB}/streamlink/plugins/drdk.pyc
 ${PYSITELIB}/streamlink/plugins/drdk.pyo
@@ -187,6 +187,9 @@ ${PYSITELIB}/streamlink/plugins/earthcam.pyo
 ${PYSITELIB}/streamlink/plugins/euronews.py
 ${PYSITELIB}/streamlink/plugins/euronews.pyc
 ${PYSITELIB}/streamlink/plugins/euronews.pyo
+${PYSITELIB}/streamlink/plugins/facebook.py
+${PYSITELIB}/streamlink/plugins/facebook.pyc
+${PYSITELIB}/streamlink/plugins/facebook.pyo
 ${PYSITELIB}/streamlink/plugins/filmon.py
 ${PYSITELIB}/streamlink/plugins/filmon.pyc
 ${PYSITELIB}/streamlink/plugins/filmon.pyo
@@ -307,9 +310,6 @@ ${PYSITELIB}/streamlink/plugins/piaulizaportal.pyo
 ${PYSITELIB}/streamlink/plugins/picarto.py
 ${PYSITELIB}/streamlink/plugins/picarto.pyc
 ${PYSITELIB}/streamlink/plugins/picarto.pyo
-${PYSITELIB}/streamlink/plugins/piczel.py
-${PYSITELIB}/streamlink/plugins/piczel.pyc
-${PYSITELIB}/streamlink/plugins/piczel.pyo
 ${PYSITELIB}/streamlink/plugins/pixiv.py
 ${PYSITELIB}/streamlink/plugins/pixiv.pyc
 ${PYSITELIB}/streamlink/plugins/pixiv.pyo
@@ -391,9 +391,6 @@ ${PYSITELIB}/streamlink/plugins/tf1.pyo
 ${PYSITELIB}/streamlink/plugins/tiktok.py
 ${PYSITELIB}/streamlink/plugins/tiktok.pyc
 ${PYSITELIB}/streamlink/plugins/tiktok.pyo
-${PYSITELIB}/streamlink/plugins/trovo.py
-${PYSITELIB}/streamlink/plugins/trovo.pyc
-${PYSITELIB}/streamlink/plugins/trovo.pyo
 ${PYSITELIB}/streamlink/plugins/turkuvaz.py
 ${PYSITELIB}/streamlink/plugins/turkuvaz.pyc
 ${PYSITELIB}/streamlink/plugins/turkuvaz.pyo
@@ -412,6 +409,9 @@ ${PYSITELIB}/streamlink/plugins/tv8.pyo
 ${PYSITELIB}/streamlink/plugins/tv999.py
 ${PYSITELIB}/streamlink/plugins/tv999.pyc
 ${PYSITELIB}/streamlink/plugins/tv999.pyo
+${PYSITELIB}/streamlink/plugins/tvazteca.py
+${PYSITELIB}/streamlink/plugins/tvazteca.pyc
+${PYSITELIB}/streamlink/plugins/tvazteca.pyo
 ${PYSITELIB}/streamlink/plugins/tvibo.py
 ${PYSITELIB}/streamlink/plugins/tvibo.pyc
 ${PYSITELIB}/streamlink/plugins/tvibo.pyo
@@ -460,6 +460,9 @@ ${PYSITELIB}/streamlink/plugins/wwenetwork.pyo
 ${PYSITELIB}/streamlink/plugins/youtube.py
 ${PYSITELIB}/streamlink/plugins/youtube.pyc
 ${PYSITELIB}/streamlink/plugins/youtube.pyo
+${PYSITELIB}/streamlink/plugins/youtvua.py
+${PYSITELIB}/streamlink/plugins/youtvua.pyc
+${PYSITELIB}/streamlink/plugins/youtvua.pyo
 ${PYSITELIB}/streamlink/plugins/yupptv.py
 ${PYSITELIB}/streamlink/plugins/yupptv.pyc
 ${PYSITELIB}/streamlink/plugins/yupptv.pyo
@@ -570,6 +573,9 @@ ${PYSITELIB}/streamlink/utils/dataclass.pyo
 ${PYSITELIB}/streamlink/utils/formatter.py
 ${PYSITELIB}/streamlink/utils/formatter.pyc
 ${PYSITELIB}/streamlink/utils/formatter.pyo
+${PYSITELIB}/streamlink/utils/id3v2.py
+${PYSITELIB}/streamlink/utils/id3v2.pyc
+${PYSITELIB}/streamlink/utils/id3v2.pyo
 ${PYSITELIB}/streamlink/utils/l10n.py
 ${PYSITELIB}/streamlink/utils/l10n.pyc
 ${PYSITELIB}/streamlink/utils/l10n.pyo
@@ -579,6 +585,9 @@ ${PYSITELIB}/streamlink/utils/module.pyo
 ${PYSITELIB}/streamlink/utils/named_pipe.py
 ${PYSITELIB}/streamlink/utils/named_pipe.pyc
 ${PYSITELIB}/streamlink/utils/named_pipe.pyo
+${PYSITELIB}/streamlink/utils/num.py
+${PYSITELIB}/streamlink/utils/num.pyc
+${PYSITELIB}/streamlink/utils/num.pyo
 ${PYSITELIB}/streamlink/utils/parse.py
 ${PYSITELIB}/streamlink/utils/parse.pyc
 ${PYSITELIB}/streamlink/utils/parse.pyo
@@ -775,4 +784,5 @@ ${PYSITELIB}/streamlink_cli/utils/versioncheck.pyc
 ${PYSITELIB}/streamlink_cli/utils/versioncheck.pyo
 man/man1/streamlink.1
 share/bash-completion/completions/streamlink
+share/fish/vendor_completions.d/streamlink.fish
 share/zsh/site-functions/_streamlink
