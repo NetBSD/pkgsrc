@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:05:12 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/10/16 18:03:10 ktnb Exp $
 
-BLAKE2s (cgiirc-0.5.12.tar.gz) = b0a4abe52df56911ecc4609cca66609368d1cb4f96499f0e033f92c9b9d41183
-SHA512 (cgiirc-0.5.12.tar.gz) = ba156bbf036846e2bdd1d5f219d837bcfc23c690593740bccad375af95f3d4c56c3624621d03b47145b5dbb73e2fed5a16b6917f81ac784de04e0e9d6afdd2eb
-Size (cgiirc-0.5.12.tar.gz) = 140379 bytes
+BLAKE2s (cgiirc-0.5.13.tar.gz) = 162114c80df004ab8f00c996c13a471df6b656475d6327761d9c7c43f6817a63
+SHA512 (cgiirc-0.5.13.tar.gz) = 87668f0003c23a94d7a8127e6c8e4cf2237c1fb84b49d3f6bf8c8140cb634a42c346c225a2c750f3ee5ef396eedaefd0c94fc599cac0f4848da3751f39573ebf
+Size (cgiirc-0.5.13.tar.gz) = 145289 bytes
