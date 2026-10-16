@@ -1,0 +1,5 @@
+agg is a command-line tool for generating animated GIF files from
+terminal session recordings.
+
+It supports conversion from asciicast files produced by asciinema
+recorder.
