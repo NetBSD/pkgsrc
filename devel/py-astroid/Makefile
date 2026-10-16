@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2026/10/09 04:38:44 adam Exp $
+# $NetBSD: Makefile,v 1.117 2026/10/16 17:37:07 adam Exp $
 
 DISTNAME=	astroid-4.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,11 +17,6 @@ USE_LANGUAGES=	# none
 
 # as of 4.3.2
 # 1 failed, 2062 passed, 89 skipped, 15 xfailed
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
