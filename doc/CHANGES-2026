@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7016 2026/10/16 17:05:25 leot Exp $
+$NetBSD: CHANGES-2026,v 1.7017 2026/10/16 17:08:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10515,3 +10515,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird to 158.0 [ryoon 2026-10-16]
 	Updated mail/thunderbird-l10n to 158.0 [ryoon 2026-10-16]
 	Added misc/asciinema version 3.2.1 [leot 2026-10-16]
+	Removed lang/python310 [adam 2026-10-16]
+	Removed lang/py310-html-docs [adam 2026-10-16]
