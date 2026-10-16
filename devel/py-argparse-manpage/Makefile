@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/10/13 09:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/16 17:12:54 adam Exp $
 
 DISTNAME=	argparse_manpage-4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,22 +11,17 @@ HOMEPAGE=	https://github.com/praiskup/argparse-manpage
 COMMENT=	Build manual page from python's ArgumentParser object
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
+PY_RENAME_BINARIES=	argparse-manpage
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} argparse-manpage argparse-manpage-${PYVERSSUFFIX} || ${TRUE}
 	cd ${DESTDIR}${PREFIX} && \
 	${MV} share/man/man1/argparse-manpage.1 ${PKGMANDIR}/man1/argparse-manpage-${PYVERSSUFFIX}.1 || ${TRUE}
 
