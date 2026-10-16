@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/09/29 07:19:49 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/10/16 18:30:24 adam Exp $
 
 DISTNAME=	pyjwt-2.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyjwt/JWT/}
@@ -13,11 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
-.endif
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
