@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.303 2026/10/04 13:27:53 ryoon Exp $
+$NetBSD: distinfo,v 1.304 2026/10/16 16:36:07 ryoon Exp $
 
-BLAKE2s (thunderbird-157.0.1.source.tar.xz) = 9ed62aeaa4b32242517db5b1f7e9747f25a7e15f3dc773aa946b8e444380a8b9
-SHA512 (thunderbird-157.0.1.source.tar.xz) = 12c6151150cadce68b113720788ff6d4cdcd39ae57131152f92a272a76c2590fd929edd45faed4e81e1f32eb58d0b22ca003a37294b9daf6648d39194f09fd95
-Size (thunderbird-157.0.1.source.tar.xz) = 948443048 bytes
+BLAKE2s (thunderbird-158.0.source.tar.xz) = 45061abba5c4c844df64ae2237465deca09e49940a4dd10260289b1b5e1898df
+SHA512 (thunderbird-158.0.source.tar.xz) = fe19e0e7540ef27af0bdb730963a9b4ad91472a9ab8b0c5eddd291c2d234ab7ac68ddf71c8595090b87cfd0deeaebc66dbce15c65c90fd09183b05db4bdce263
+Size (thunderbird-158.0.source.tar.xz) = 961411644 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 1fe46a0bb3d29520d19755a8786457b3259a6c96
 SHA1 (patch-build_gn__processor.py) = c9b2f31787704c3fec466711010ef632199ae385
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
@@ -12,7 +12,7 @@ SHA1 (patch-comm_mailnews_search_src_nsMsgSearchNews.cpp) = 84624c6752de1f56848a
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
 SHA1 (patch-comm_third__party_openpgp.configure) = 674e8a741d82f576549aa0bb44465d3a2577a212
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = b5b4f2aef747836b09584b77d6332a7010963b0b
-SHA1 (patch-config_makefiles_rust.mk) = 62c823e5f11f047a54c7ebcce7534469c3f0d515
+SHA1 (patch-config_makefiles_rust.mk) = 74c18ac9c37ff268428961275df3e77a7b1ed537
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_canvas_WebGLMethodDispatcher.h) = 78f6e44116a939615523339fb73ac93f40777749
 SHA1 (patch-dom_media_mediacapabilities_MediaCapabilitiesValidation.cpp) = 2f471067387bb63d530ba1299f0542d3b3a785b6
@@ -45,7 +45,7 @@ SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 67493b4635041d21ff9fbfda8
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c99c3ce679f4196fc3baaf65051471a13d6fe8cd
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-python_sites_build.txt) = 2f716b67b47d8d0f648f466aabdc1c4e90d0f024
-SHA1 (patch-python_sites_mach.txt) = be62d091430daaa2ceeff3aff07f71275896352f
+SHA1 (patch-python_sites_mach.txt) = be4acab3eb38a12aad95209a539fc5dde8982f38
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 6cac13bc120d52b2c3628938d2fc1cba628b3a31
 SHA1 (patch-security_nss_lib_mozpkix_include_pkix_Input.h) = f9ee42e611d69e22f52fb3dede1304ad338ccc71
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = cc68e46f1b98bbcc064a4c61fc96a3c7ede8e6ba
@@ -70,9 +70,8 @@ SHA1 (patch-third__party_python_dlmanager_check.py) = 69054522d8ced8cb47e65e5a8b
 SHA1 (patch-third__party_rust_mtu_src_bindings_netbsd.rs) = dc28ab3a4b6a5bee76ea6fd2485e34b9d6f1b195
 SHA1 (patch-third__party_sqlite3_ext_moz.build) = 4d94ea324617a20b3524016dd02fb717e518ece1
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
-SHA1 (patch-third__party_wasm2c_src_c-writer.cc) = 38eb2ee0e00722aa1380540b83648b43723719aa
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
-SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
+SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = a222742a8a496033bd53e88f4f28fe8dde1e4e7f
 SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = c77481a1f8fe1e237b7fe87e3e586ca886ac1d3d
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
