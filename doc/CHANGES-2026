@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7036 2026/10/16 21:00:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7037 2026/10/16 21:05:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10544,3 +10544,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libXrender to 0.9.13 [wiz 2026-10-16]
 	Updated x11/libXtst to 1.2.6 [wiz 2026-10-16]
 	Updated www/py-zensical to 0.0.71 [wiz 2026-10-16]
+	Updated devel/astyle to 3.6.19 [schmonz 2026-10-16]
