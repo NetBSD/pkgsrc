@@ -1,0 +1,13 @@
+asciinema (aka asciinema CLI or asciinema recorder) is a command-line
+tool for recording and live streaming terminal sessions.
+
+Unlike typical screen recording software, which records visual output
+of a screen into a heavyweight video files (`.mp4`, `.mov`), asciinema
+CLI runs inside a terminal, capturing terminal session output into a
+lightweight recording files in the asciicast format (`.cast`), or
+streaming it live to viewers in real-time.
+
+The recordings can be replayed in a terminal, embedded on a web page
+with the asciinema player, or published to an asciinema server, such as
+asciinema.org, for further sharing. Live streams allow viewers to watch
+terminal sessions as they happen.
