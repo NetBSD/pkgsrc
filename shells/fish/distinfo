@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2026/10/08 17:55:58 ktnb Exp $
+$NetBSD: distinfo,v 1.46 2026/10/16 09:52:48 wiz Exp $
 
 BLAKE2s (aho-corasick-1.1.4.crate) = 1419308c5b0745af6cfa18dd4c9639f7078f564e9dacbe2b17b03df42c393409
 SHA512 (aho-corasick-1.1.4.crate) = c77e35191b00546f5e499fab154170cedd619599e7250f92db9fba0a41c833eb426f214e58b00c5c39f8757406b33492b3241cb8cb233ce384ad0683c3ee4b62
@@ -525,3 +525,5 @@ Size (zmij-1.0.21.crate) = 26665 bytes
 SHA1 (patch-.._fluent-ftl-tools_Cargo.toml) = 7e8cba64683cfa5311bf9bae9722258976a566e1
 SHA1 (patch-Cargo.toml) = e046b3310e3a9b930c9672c24422402a7a119f32
 SHA1 (patch-cmake_Install.cmake) = 3d4a87b4a1a3fc38c4d102c7fe8ea216587b8dce
+SHA1 (patch-crates_build-man-pages_build.rs) = 8a6a0aea9277a439654e9841edf3e2c45266e1a6
+SHA1 (patch-crates_xtask_src_main.rs) = f13d814620b81450ee8e5e66b504386db25b98ba
