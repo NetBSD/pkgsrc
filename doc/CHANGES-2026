@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7006 2026/10/16 10:52:18 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.7007 2026/10/16 10:58:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10502,3 +10502,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.26 [fox 2026-10-16]
 	Updated databases/phpmyadmin5 to 5.2.3 [tm 2026-10-16]
 	Updated www/snac to 2.96 [schmonz 2026-10-16]
+	Updated devel/asdf to 0.20.2 [schmonz 2026-10-16]
