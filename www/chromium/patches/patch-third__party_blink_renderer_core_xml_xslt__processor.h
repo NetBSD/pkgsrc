@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_xml_xslt__processor.h,v 1.29 2026/10/13 13:16:47 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_xml_xslt__processor.h,v 1.30 2026/10/16 15:30:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor.h
 @@ -91,7 +91,11 @@ class XSLTProcessor final : public Scrip
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_bindings_scripts_bind__gen_style__format.py,v 1.29 2026/10/13 13:16:47 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_bindings_scripts_bind__gen_style__format.py,v 1.30 2026/10/16 15:30:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
 @@ -30,7 +30,7 @@ def init(root_src_dir, enable_style_form
  

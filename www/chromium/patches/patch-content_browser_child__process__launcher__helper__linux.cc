@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.29 2026/10/13 13:16:40 kikadf Exp $
+$NetBSD: patch-content_browser_child__process__launcher__helper__linux.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -23,7 +23,9 @@
  #include "content/public/common/content_switches.h"

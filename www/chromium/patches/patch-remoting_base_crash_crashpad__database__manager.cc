@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_crash_crashpad__database__manager.cc,v 1.11 2026/10/13 13:16:45 kikadf Exp $
+$NetBSD: patch-remoting_base_crash_crashpad__database__manager.cc,v 1.12 2026/10/16 15:30:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/crash/crashpad_database_manager.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- remoting/base/crash/crashpad_database_manager.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ remoting/base/crash/crashpad_database_manager.cc
 @@ -24,7 +24,7 @@
  #if BUILDFLAG(IS_WIN)

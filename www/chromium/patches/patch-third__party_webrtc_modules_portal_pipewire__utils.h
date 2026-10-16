@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_modules_portal_pipewire__utils.h,v 1.23 2026/10/13 13:16:50 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_modules_portal_pipewire__utils.h,v 1.24 2026/10/16 15:31:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/portal/pipewire_utils.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/webrtc/modules/portal/pipewire_utils.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/webrtc/modules/portal/pipewire_utils.h
 @@ -11,7 +11,9 @@
  #ifndef MODULES_PORTAL_PIPEWIRE_UTILS_H_

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__drag__context.h,v 1.11 2026/10/13 13:16:51 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__drag__context.h,v 1.12 2026/10/16 15:31:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_drag_context.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/base/x/x11_drag_context.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/base/x/x11_drag_context.h
 @@ -17,7 +17,7 @@
  #include "ui/gfx/x/event.h"

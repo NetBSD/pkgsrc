@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__node.h,v 1.28 2026/10/13 13:16:51 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__node.h,v 1.29 2026/10/16 15:31:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_node.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/accessibility/ax_node.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/accessibility/ax_node.h
 @@ -590,7 +590,7 @@ class AX_EXPORT AXNode final {
    const std::vector<raw_ptr<AXNode, VectorExperimental>>* GetExtraMacNodes()

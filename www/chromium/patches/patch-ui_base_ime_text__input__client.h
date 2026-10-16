@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ime_text__input__client.h,v 1.29 2026/10/13 13:16:51 kikadf Exp $
+$NetBSD: patch-ui_base_ime_text__input__client.h,v 1.30 2026/10/16 15:31:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/text_input_client.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/base/ime/text_input_client.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/base/ime/text_input_client.h
 @@ -342,7 +342,7 @@ class COMPONENT_EXPORT(UI_BASE_IME) Text
    virtual bool SupportsAutoFill() const;

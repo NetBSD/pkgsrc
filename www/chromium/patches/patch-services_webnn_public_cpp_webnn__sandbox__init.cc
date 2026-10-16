@@ -1,10 +1,10 @@
-$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.5 2026/10/13 13:16:47 kikadf Exp $
+$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.6 2026/10/16 15:30:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ services/webnn/public/cpp/webnn_sandbox_init.cc
 @@ -12,7 +12,7 @@
  #include "services/webnn/public/cpp/webnn_buildflags.h"

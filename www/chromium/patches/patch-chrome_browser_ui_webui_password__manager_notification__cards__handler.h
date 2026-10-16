@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__handler.h,v 1.5 2026/10/13 13:16:36 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__handler.h,v 1.6 2026/10/16 15:30:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/notification_cards_handler.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/notification_cards_handler.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/notification_cards_handler.h
 @@ -56,7 +56,7 @@ class NotificationCardsHandler : public 
  

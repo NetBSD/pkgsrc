@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.21 2026/10/13 13:16:37 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__content__client.cc,v 1.22 2026/10/16 15:30:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_content_client.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/common/chrome_content_client.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/common/chrome_content_client.cc
 @@ -61,12 +61,12 @@
  #include "url/url_constants.h"

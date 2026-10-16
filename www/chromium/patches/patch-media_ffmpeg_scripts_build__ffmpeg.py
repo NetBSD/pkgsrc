@@ -1,10 +1,10 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.31 2026/10/13 13:16:43 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.32 2026/10/16 15:30:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-10-06 00:06:58.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2026-10-14 21:09:54.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_os__crypt_async_browser_secret__portal__key__provider.cc,v 1.29 2026/10/13 13:16:38 kikadf Exp $
+$NetBSD: patch-components_os__crypt_async_browser_secret__portal__key__provider.cc,v 1.30 2026/10/16 15:30:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/async/browser/secret_portal_key_provider.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- components/os_crypt/async/browser/secret_portal_key_provider.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ components/os_crypt/async/browser/secret_portal_key_provider.cc
 @@ -5,7 +5,9 @@
  #include "components/os_crypt/async/browser/secret_portal_key_provider.h"

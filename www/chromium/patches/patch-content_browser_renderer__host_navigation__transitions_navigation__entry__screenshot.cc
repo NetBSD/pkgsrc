@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.21 2026/10/13 13:16:41 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_navigation__transitions_navigation__entry__screenshot.cc,v 1.22 2026/10/16 15:30:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/renderer_host/navigation_transitions/navigation_entry_screenshot.cc
 @@ -71,7 +71,7 @@ void CompressNavigationScreenshotOnWorke
  }

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.28 2026/10/13 13:16:41 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.29 2026/10/16 15:30:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/browser/service_host/utility_sandbox_delegate.cc
 @@ -24,7 +24,7 @@
  #include "sandbox/policy/sandbox_type.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.28 2026/10/13 13:16:35 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_dragging_tab__drag__controller.cc,v 1.29 2026/10/16 15:30:48 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
 @@ -103,7 +103,7 @@
  #include "ui/wm/core/window_modality_controller.h"  // nogncheck

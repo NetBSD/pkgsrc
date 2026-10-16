@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_constants.h,v 1.27 2026/10/13 13:16:45 kikadf Exp $
+$NetBSD: patch-remoting_base_constants.h,v 1.28 2026/10/16 15:30:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/constants.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- remoting/base/constants.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ remoting/base/constants.h
 @@ -27,7 +27,7 @@ const int kDefaultDpi = 96;
  // The video frame rate.

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.30 2026/10/13 13:16:45 kikadf Exp $
+$NetBSD: patch-net_tools_net__watcher_net__watcher.cc,v 1.31 2026/10/16 15:30:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/net_watcher/net_watcher.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ net/tools/net_watcher/net_watcher.cc
 @@ -31,7 +31,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_style_platform__style.h,v 1.28 2026/10/13 13:16:52 kikadf Exp $
+$NetBSD: patch-ui_views_style_platform__style.h,v 1.29 2026/10/16 15:31:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/style/platform_style.h.orig	2026-10-06 00:06:58.000000000 +0000
+--- ui/views/style/platform_style.h.orig	2026-10-14 21:09:54.000000000 +0000
 +++ ui/views/style/platform_style.h
 @@ -84,7 +84,7 @@ class VIEWS_EXPORT PlatformStyle {
    // Default setting at bubble creation time for whether arrow will be adjusted

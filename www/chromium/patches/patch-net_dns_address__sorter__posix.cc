@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_address__sorter__posix.cc,v 1.29 2026/10/13 13:16:44 kikadf Exp $
+$NetBSD: patch-net_dns_address__sorter__posix.cc,v 1.30 2026/10/16 15:30:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/address_sorter_posix.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- net/dns/address_sorter_posix.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ net/dns/address_sorter_posix.cc
 @@ -27,6 +27,7 @@
  #include "net/dns/netinet_in_var_ios.h"

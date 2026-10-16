@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_test_popup__browsertest.cc,v 1.29 2026/10/13 13:16:34 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_test_popup__browsertest.cc,v 1.30 2026/10/16 15:30:47 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/test/popup_browsertest.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- chrome/browser/ui/test/popup_browsertest.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ chrome/browser/ui/test/popup_browsertest.cc
 @@ -80,7 +80,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLe
    const display::Display display = GetDisplayNearestBrowser(popup);

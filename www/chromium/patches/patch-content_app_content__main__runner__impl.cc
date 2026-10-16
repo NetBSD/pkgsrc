@@ -1,10 +1,10 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.29 2026/10/13 13:16:40 kikadf Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2026-10-06 00:06:58.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -162,13 +162,13 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"

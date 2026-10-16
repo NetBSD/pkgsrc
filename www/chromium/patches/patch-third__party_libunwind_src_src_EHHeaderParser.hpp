@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libunwind_src_src_EHHeaderParser.hpp,v 1.15 2026/10/13 13:16:49 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_EHHeaderParser.hpp,v 1.16 2026/10/16 15:31:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/EHHeaderParser.hpp.orig	2026-10-06 00:06:58.000000000 +0000
+--- third_party/libunwind/src/src/EHHeaderParser.hpp.orig	2026-10-14 21:09:54.000000000 +0000
 +++ third_party/libunwind/src/src/EHHeaderParser.hpp
 @@ -161,6 +161,10 @@ bool EHHeaderParser<A>::findFDE(A &addre
  
