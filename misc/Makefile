@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.696 2026/10/13 13:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.697 2026/10/16 17:05:15 leot Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -16,6 +16,7 @@ SUBDIR+=	akonadiconsole
 SUBDIR+=	ansiweather
 SUBDIR+=	aschord
 SUBDIR+=	ascii
+SUBDIR+=	asciinema
 SUBDIR+=	asr-manpages
 SUBDIR+=	astrolog
 SUBDIR+=	attica
