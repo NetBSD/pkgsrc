@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/09/07 09:45:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/16 17:54:56 adam Exp $
 
 DISTNAME=	jupyter_builder-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,11 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=7:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	jlpm jupyter-builder
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
-.endif
 
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
