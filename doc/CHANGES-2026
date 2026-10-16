@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7007 2026/10/16 10:58:10 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.7008 2026/10/16 11:06:15 tm Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10503,3 +10503,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/phpmyadmin5 to 5.2.3 [tm 2026-10-16]
 	Updated www/snac to 2.96 [schmonz 2026-10-16]
 	Updated devel/asdf to 0.20.2 [schmonz 2026-10-16]
+	Updated sysutils/munin-node to 2.0.78 [tm 2026-10-16]
+	Updated sysutils/munin-master to 2.0.78 [tm 2026-10-16]
