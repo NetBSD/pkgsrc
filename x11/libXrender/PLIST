@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/15 18:37:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/16 20:47:05 wiz Exp $
 include/X11/extensions/Xrender.h
-lib/libXrender.la
+lib/libXrender.so
+lib/libXrender.so.1
+lib/libXrender.so.1.3.0
 lib/pkgconfig/xrender.pc
 share/doc/libXrender/libXrender.txt
