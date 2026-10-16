@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/09/03 11:10:45 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/16 19:44:04 adam Exp $
 
 DISTNAME=	photutils-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-astropy>=6.1.4:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

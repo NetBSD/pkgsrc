@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/09/10 12:10:27 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/16 19:44:30 adam Exp $
 
 DISTNAME=	python_swiftclient-4.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	swift
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx via py-pbr
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

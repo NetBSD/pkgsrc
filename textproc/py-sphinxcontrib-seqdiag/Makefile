@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/03/10 07:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/16 19:44:22 adam Exp $
 
 DISTNAME=	sphinxcontrib-seqdiag-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

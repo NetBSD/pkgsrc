@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/09/29 06:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/10/16 19:44:10 adam Exp $
 
 DISTNAME=	weasyprint-69.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort>=0:../../devel/py-test-isort
 
 PY_RENAME_BINARIES=	weasyprint
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 BUILDLINK_API_DEPENDS.pango+=   pango>=1.44.0
 .include "../../devel/pango/buildlink3.mk"

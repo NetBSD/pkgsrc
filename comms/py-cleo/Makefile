@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/06/28 15:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/16 19:43:42 adam Exp $
 
 DISTNAME=	cleo-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

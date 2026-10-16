@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/12/12 12:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/16 19:44:08 adam Exp $
 #
 # When updating this, make sure that net/mitmproxy still
 # works - usually it also needs to be updated.
@@ -19,7 +19,7 @@ LICENSE=	mit
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 RUST_REQ=	1.86
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 BORINGTUN_REV=	2f3c85f5c4a601018c10b464b1ca890d9504bf6e
 DISTFILES=	${DEFAULT_DISTFILES}

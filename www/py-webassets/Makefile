@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/06/28 15:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/16 19:44:31 adam Exp $
 
 DISTNAME=	webassets-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-zope.dottedname>=6.0:../../textproc/py-zope.dottedname
 
 USE_LANGUAGES=	# empty
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 REPLACE_PYTHON+=	src/webassets/filter/rjsmin/rjsmin.py
 

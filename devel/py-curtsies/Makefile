@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/06/28 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/16 19:43:46 adam Exp $
 
 DISTNAME=	curtsies-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 0.4.2
 # 8 failed, 69 passed, 26 skipped

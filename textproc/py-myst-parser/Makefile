@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/05/28 12:26:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/16 19:44:17 adam Exp $
 
 DISTNAME=	myst_parser-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -24,7 +24,7 @@ PY_RENAME_BINARIES=	myst-anchors myst-docutils-demo myst-docutils-html
 PY_RENAME_BINARIES+=	myst-docutils-html5 myst-docutils-latex myst-docutils-pseudoxml
 PY_RENAME_BINARIES+=	myst-docutils-xml myst-inv
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

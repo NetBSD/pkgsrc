@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/07/18 08:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 19:43:50 adam Exp $
 
 DISTNAME=	lupa-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_TOOLS+=	gmake pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "options.mk"
 

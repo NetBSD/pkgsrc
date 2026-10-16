@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/06/28 15:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/16 19:44:29 adam Exp $
 
 DISTNAME=	notebook_shim-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

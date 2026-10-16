@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/10/11 07:18:34 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/16 19:44:15 adam Exp $
 
 DISTNAME=	black-26.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PY_RENAME_BINARIES=	black blackd
 

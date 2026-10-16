@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/10/09 09:05:19 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/16 19:44:07 adam Exp $
 
 DISTNAME=	aiormq-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-yarl>=0:../../www/py-yarl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

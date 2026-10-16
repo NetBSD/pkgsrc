@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/10/09 03:42:31 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/16 19:44:16 adam Exp $
 
 DISTNAME=	html5_parser-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=0:../../www/py-beautifulsoup4
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py

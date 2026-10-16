@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2026/08/21 12:52:21 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/10/16 19:44:10 adam Exp $
 
 DISTNAME=	pyzmq-27.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -21,7 +21,7 @@ USE_TOOLS+=	cmake pkg-config
 
 PYSETUPBUILDARGS+=	--zmq=${BUILDLINK_PREFIX.zeromq:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../net/zeromq/buildlink3.mk"

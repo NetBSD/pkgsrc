@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/09/13 05:28:49 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/10/16 19:44:28 adam Exp $
 
 DISTNAME=	jupyterlab-4.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,7 @@ PY_RENAME_BINARIES=	jupyter-lab jupyter-labextension jupyter-labhub
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

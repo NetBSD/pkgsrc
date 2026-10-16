@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/07/05 10:38:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	requests_cache-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -47,7 +47,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine>=2.9:../../time/py-time-machine
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=3.5:../../wip/py-pre-commit
 TEST_DEPENDS+=	${PYPKGPREFIX}-rich>=10.0:../../comms/py-rich
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

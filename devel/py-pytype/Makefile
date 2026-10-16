@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/06/28 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	pytype-2024.10.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensio
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 post-install:
 .for file in annotate-ast merge-pyi pytd pytype pytype-single pyxref

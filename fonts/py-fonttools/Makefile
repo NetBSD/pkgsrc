@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2026/09/30 10:24:46 adam Exp $
+# $NetBSD: Makefile,v 1.138 2026/10/16 19:43:55 adam Exp $
 
 DISTNAME=	fonttools-4.66.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=4.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.1:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-zopfli>=0.1.4:../../archivers/py-zopfli
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 4.66.0
 # https://github.com/fonttools/fonttools/issues/3660

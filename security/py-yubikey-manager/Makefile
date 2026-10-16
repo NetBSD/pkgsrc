@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/06/28 15:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/16 19:44:13 adam Exp $
 
 .include "../../security/ykman/version.mk"
 
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-fido2>=1:../../security/py-fido2
 DEPENDS+=	${PYPKGPREFIX}-scard>=2:../../devel/py-scard
 DEPENDS+=	${PYPKGPREFIX}-keyring>=23.4:../../security/py-keyring
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 pre-configure:
 	${RM} ${WRKSRC}/ykman/hid/*.orig

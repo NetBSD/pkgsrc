@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/09/13 07:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/16 19:44:10 adam Exp $
 
 DISTNAME=	pikepdf-10.13.0.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../devel/py-nanobind/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

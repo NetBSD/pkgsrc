@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/10/05 07:26:41 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/16 19:44:30 adam Exp $
 
 DISTNAME=	scrapy-2.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -40,7 +40,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	scrapy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 314

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/06/10 07:11:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/16 19:43:53 adam Exp $
 
 DISTNAME=	pyxbe-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

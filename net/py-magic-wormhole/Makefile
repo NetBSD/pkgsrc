@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/06/28 15:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/16 19:44:08 adam Exp $
 
 # Work around setuptools insisting that distfiles not match the (pypi)
 # package name.
@@ -53,7 +53,7 @@ USE_LANGUAGES=	# none
 
 AUTO_MKDIRS=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PYTHON_SELF_CONFLICT=	yes # completion files
 

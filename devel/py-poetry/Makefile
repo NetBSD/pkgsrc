@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/09/07 08:21:58 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	poetry-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -43,7 +43,7 @@ USE_LANGUAGES=	c
 
 PY_RENAME_BINARIES=	poetry
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

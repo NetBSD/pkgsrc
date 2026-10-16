@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2026/09/29 06:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.335 2026/10/16 19:43:56 adam Exp $
 
 DISTNAME=	inkscape-1.4.4
 PKGREVISION=	9
@@ -46,7 +46,7 @@ USE_TOOLS+=		gmake gzip msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 UNLIMIT_RESOURCES=	datasize
 

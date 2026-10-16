@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/01/07 23:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 19:43:49 adam Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}.0
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/AdaCore/langkit
 COMMENT=	Tool to create syntactic and semantic analysis engines
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-stevedore
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx via py-stevedore
 
 .include "../../mk/bsd.prefs.mk"
 

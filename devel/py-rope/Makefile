@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2026/09/28 15:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/10/16 19:43:52 adam Exp $
 
 DISTNAME=	rope-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-toolconfig -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-toolconfig -> py-sphinx
 
 # as of 1.14.0
 # 2092 passed, 7 skipped, 5 xfailed, 1948 warnings, 1 error

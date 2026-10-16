@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/06/28 15:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/16 19:44:13 adam Exp $
 
 DISTNAME=	requests_kerberos-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography

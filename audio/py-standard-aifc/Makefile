@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 08:07:24 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/16 19:43:40 adam Exp $
 
 DISTNAME=	standard_aifc-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-standard-chunk>0:../../audio/py-standard-chunk
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 312
+PYTHON_VERSIONS_INCOMPATIBLE=	311 312
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

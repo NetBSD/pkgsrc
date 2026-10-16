@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/08/12 22:16:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/16 19:44:25 adam Exp $
 
 DISTNAME=	aiohttp_remotes-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # https://github.com/aio-libs/aiohttp-remotes/issues/621
 BROKEN=		"Needs fixing for flit_core 4."

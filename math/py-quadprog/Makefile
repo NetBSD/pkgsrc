@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/16 19:44:05 adam Exp $
 
 DISTNAME=	quadprog-0.1.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

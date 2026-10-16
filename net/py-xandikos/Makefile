@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/06/28 15:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/16 19:44:09 adam Exp $
 
 DISTNAME=	xandikos-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	xandikos
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

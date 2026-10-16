@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/08/28 14:15:57 adam Exp $
+# $NetBSD: Makefile,v 1.53 2026/10/16 19:43:49 adam Exp $
 
 DISTNAME=	jupyter_client-8.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	jupyter-kernel jupyter-kernelspec jupyter-run
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

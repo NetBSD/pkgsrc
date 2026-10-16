@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/06/28 15:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/10/16 19:44:25 adam Exp $
 
 DISTNAME=	cmsplugin_gallery-2.0.3
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-easy-thumbnails-[0-9]*:../../www/py-easy-thumbnails
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

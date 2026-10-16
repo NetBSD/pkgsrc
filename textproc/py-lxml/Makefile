@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2026/09/02 19:31:15 adam Exp $
+# $NetBSD: Makefile,v 1.134 2026/10/16 19:44:17 adam Exp $
 
 DISTNAME=	lxml-6.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ FORCE_C_STD=		gnu99
 # as of 6.0.0 this gives:
 # Ran 2003 tests in 5.956s
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"

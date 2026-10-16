@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/06/28 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/16 19:44:01 adam Exp $
 
 DISTNAME=	mailman2-python3-20251123
 CATEGORIES=	mail www
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 # needs 'iconv -o'
 BROKEN_ON_PLATFORM+=	NetBSD-[4-9].*-* NetBSD-10.*-* NetBSD-11.[0-9]-*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../mk/bsd.prefs.mk"
 

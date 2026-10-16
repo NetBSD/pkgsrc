@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/09/11 12:16:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/10/16 19:43:42 adam Exp $
 
 DISTNAME=	matrix_nio-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-vodozemac>=0.9.0:../../security/py-vodozemac
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-peewee -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-peewee -> py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

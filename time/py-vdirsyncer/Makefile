@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/09/04 05:18:44 adam Exp $
+# $NetBSD: Makefile,v 1.80 2026/10/16 19:44:24 adam Exp $
 
 DISTNAME=	vdirsyncer-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,7 +36,7 @@ PLIST_SUBST+=		PKGBASE=${PKGBASE}
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 # test status as of 0.20.0
 # 410 passed, 160 skipped, 2 xfailed

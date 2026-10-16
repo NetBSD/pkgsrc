@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2026/06/28 15:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/16 19:44:24 adam Exp $
 
 DISTNAME=	pyyaml-6.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../textproc/libyaml/buildlink3.mk"

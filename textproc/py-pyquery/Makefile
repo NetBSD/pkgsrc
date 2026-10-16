@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/09/08 05:45:32 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/16 19:44:19 adam Exp $
 
 DISTNAME=	pyquery-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

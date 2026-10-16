@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 08:08:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/16 19:43:40 adam Exp $
 
 DISTNAME=	standard_sunau-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-audioop-lts>0:../../audio/py-audioop-lts
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 312
+PYTHON_VERSIONS_INCOMPATIBLE=	311 312
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

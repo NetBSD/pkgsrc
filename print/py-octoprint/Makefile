@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/07/03 07:30:05 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/16 19:44:10 adam Exp $
 
 DISTNAME=	octoprint-1.11.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -76,7 +76,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	octoprint
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/08/26 10:19:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/16 19:43:47 adam Exp $
 
 DISTNAME=	dm_tree-0.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -21,7 +21,7 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c++
 USE_TOOLS+=		cmake gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"

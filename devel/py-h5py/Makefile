@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/09/07 16:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/10/16 19:43:48 adam Exp $
 
 DISTNAME=	h5py-3.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 MAKE_ENV=	HDF5_DIR=${PREFIX}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 BUILDLINK_API_DEPENDS.hdf5+=	hdf5>=1.10.4
 .include "../../devel/hdf5/buildlink3.mk"

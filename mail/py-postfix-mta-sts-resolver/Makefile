@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/08/06 07:44:19 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/16 19:44:01 adam Exp $
 
 .include "version.mk"
 
@@ -33,7 +33,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	mta-sts-daemon mta-sts-query
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
 .include "../../lang/python/versioned_dependencies.mk"

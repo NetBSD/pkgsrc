@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/09/09 13:02:24 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 19:43:50 adam Exp $
 
 DISTNAME=	logbook-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 MAKE_ENV+=	CARGO_BUILD_JOBS=${_MAKE_JOBS_N:U1}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "cargo-depends.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/01/06 11:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/10/16 19:43:42 adam Exp $
 
 DISTNAME=	zulip-term-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-zulip
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-zulip
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

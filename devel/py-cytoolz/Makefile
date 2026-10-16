@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2026/09/08 09:55:01 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/16 19:43:47 adam Exp $
 
 DISTNAME=	cytoolz-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-git-versioning>=2.0:../../devel/py-setuptools-git-versioning
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.0:../../devel/py-toolz
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

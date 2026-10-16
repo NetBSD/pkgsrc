@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/07/23 11:25:15 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 19:44:08 adam Exp $
 
 DISTNAME=	moto-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,7 +35,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	moto_proxy moto_server
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"

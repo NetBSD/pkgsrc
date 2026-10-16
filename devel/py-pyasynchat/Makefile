@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/01/06 09:06:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/16 19:43:51 adam Exp $
 
 DISTNAME=	pyasynchat-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyasyncore>=1.0.2:../../devel/py-pyasyncore
 USE_LANGUAGES=	# none
 
 # Removed in Python 3.12
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
