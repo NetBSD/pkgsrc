@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.21 2026/10/15 20:23:50 ktnb Exp $
+$NetBSD: distinfo,v 1.22 2026/10/16 17:53:00 ktnb Exp $
 
 BLAKE2s (gnuchess-6.3.0.tar.gz) = 6789eb377fa5f44a8c7f68fde1718f65863a40a392e85c66be3712cddedf6535
 SHA512 (gnuchess-6.3.0.tar.gz) = 093bdf37ab67d55ff449c8367ccf0e0c52012ee164a0cf11b42c44c4025df0996c9efdcf42136746633d2d020d7fb8f338c1b04dcf8044e48629f1da7642fb81
 Size (gnuchess-6.3.0.tar.gz) = 835620 bytes
+SHA1 (patch-src_adapter_main.cpp) = 5e4ad202ec4823feb15e2b5814a263cac7c6e391
 SHA1 (patch-src_adapter_pgn.cpp) = bbb71c1cd504b40d544fa0a0389b2c2d05fcb025
+SHA1 (patch-src_engine_protocol.cpp) = d50430cb78560104aad56fcf12e2b8f1aca2f6bb
 SHA1 (patch-src_frontend_cmd.cc) = 19f86e48a87bc9049cdb5eefc1ae20ac4e6329b6
+SHA1 (patch-src_frontend_input.cc) = bd212b47a1b636fbce4fab9ba657749e988ff65d
 SHA1 (patch-src_frontend_move.cc) = 53fc658e3ddf277623d730897fae9a2c0b048e68
