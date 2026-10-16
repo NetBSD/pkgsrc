@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.27 2026/10/08 20:57:15 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.28 2026/10/16 16:28:47 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.

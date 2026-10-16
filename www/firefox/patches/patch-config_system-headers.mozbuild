@@ -1,0 +1,12 @@
+$NetBSD: patch-config_system-headers.mozbuild,v 1.5 2026/10/16 16:28:47 ryoon Exp $
+
+--- config/system-headers.mozbuild.orig	2026-10-09 17:18:07.601740057 +0000
++++ config/system-headers.mozbuild
+@@ -761,6 +761,7 @@ system_headers = [
+     "size_t.h",
+     "smime.h",
+     "someincludefile.h",
++    "source_location",
+     "soundcard.h",
+     "Sound.h",
+     "soundtouch/SoundTouchFactory.h",
