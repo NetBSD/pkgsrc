@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 21:10:57 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/16 18:12:10 adam Exp $
 
 DISTNAME=	pytest-pylint-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -19,12 +19,6 @@ USE_LANGUAGES=	# none
 
 # as of 0.21.0
 # 33 passed, 36 warnings
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
