@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7009 2026/10/16 14:15:20 osa Exp $
+$NetBSD: CHANGES-2026,v 1.7010 2026/10/16 14:24:40 osa Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10507,3 +10507,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/munin-master to 2.0.78 [tm 2026-10-16]
 	Updated www/freenginx to 1.30.1nb7 [osa 2026-10-14]
 	Updated www/freenginx-devel to 1.31.4nb4 [osa 2026-10-14]
+	Updated www/freenginx to 1.30.1nb8 [osa 2026-10-14]
+	Updated www/freenginx-devel to 1.31.4nb5 [osa 2026-10-14]
