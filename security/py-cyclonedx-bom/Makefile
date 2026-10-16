@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/08 12:05:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/16 18:27:04 adam Exp $
 
-DISTNAME=	cyclonedx_bom-7.3.1
+DISTNAME=	cyclonedx_bom-7.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-bom/}
@@ -24,11 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-poetry>=1.7:../../devel/py-poetry
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	cyclonedx-py
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
-.endif
 
 SUBST_CLASSES+=		cli
 SUBST_STAGE.cli=	pre-configure
