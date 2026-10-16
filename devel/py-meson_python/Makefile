@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/10/02 04:56:01 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/16 17:55:26 adam Exp $
 
 DISTNAME=	meson_python-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,11 +23,6 @@ USE_TOOLS+=	git:test
 
 # as of 0.22.0
 # 22 failed, 123 passed, 14 skipped, 9 errors
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
-.endif
 
 SUBST_CLASSES+=		cython
 SUBST_STAGE.cython=	pre-configure
