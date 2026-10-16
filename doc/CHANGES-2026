@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7014 2026/10/16 16:36:21 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7015 2026/10/16 16:36:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10513,3 +10513,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox to 158.0 [ryoon 2026-10-16]
 	Updated www/firefox-l10n to 158.0 [ryoon 2026-10-16]
 	Updated mail/thunderbird to 158.0 [ryoon 2026-10-16]
+	Updated mail/thunderbird-l10n to 158.0 [ryoon 2026-10-16]
