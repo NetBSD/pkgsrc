@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7026 2026/10/16 18:57:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7027 2026/10/16 19:09:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10532,3 +10532,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/album to 4.18 [ktnb 2026-10-16]
 	Updated multimedia/streamlink to 8.6.2 [adam 2026-10-16]
 	Updated devel/py-pkginfo to 1.13.1 [adam 2026-10-16]
+	Updated www/websockify to 0.13.0 [adam 2026-10-16]
+	Updated editors/py-jedi to 0.20.1 [adam 2026-10-16]
