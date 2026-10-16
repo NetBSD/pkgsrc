@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/23 09:59:22 nia Exp $
+$NetBSD: distinfo,v 1.2 2026/10/16 19:06:05 adam Exp $
 
-BLAKE2s (websockify-0.12.0.tar.gz) = 8f4ba9c2710b51d8169feb52f45a1497730a4fd0ec10718a5cc7786e942c285c
-SHA512 (websockify-0.12.0.tar.gz) = 616619a27b00af6621d9b2e3be415ff958fc226a08714302688b76690976805a22c120ff7f0eaca3d7f26fd5575971a96b5e27e5d20688c6edbb4eb84b896871
-Size (websockify-0.12.0.tar.gz) = 56839 bytes
+BLAKE2s (websockify-0.13.0.tar.gz) = 8c2ad0209e0865ed13008152e43bed418a6acb7a6c463a723680dc1bdf30c875
+SHA512 (websockify-0.13.0.tar.gz) = 52a6615d7a45ea12015c90e3e50fcf7338a2a67412c44bd6da4d039ebc2edc8ce1bd7a1cee977f7e2b76aaa6dccdb601851a0b9a2f49af53081c2e5b296b3062
+Size (websockify-0.13.0.tar.gz) = 57826 bytes
