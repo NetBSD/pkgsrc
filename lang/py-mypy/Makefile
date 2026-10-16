@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/10/05 07:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/10/16 18:17:26 adam Exp $
 
 DISTNAME=	mypy-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,11 +28,6 @@ USE_LANGUAGES=	c # for tests
 # 6 failed, 14416 passed, 408 skipped, 12 xfailed
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
-.endif
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
 REPLACE_PYTHON+=	mypy/typeshed/scripts/update-stubtest-whitelist.py
