@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2023/04/17 21:09:49 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2026/10/16 20:45:04 wiz Exp $
 
---- configure.orig	2023-04-17 20:13:03.000000000 +0000
+--- configure.orig	2026-10-16 20:08:46.000000000 +0000
 +++ configure
-@@ -19582,6 +19582,10 @@ else
- printf "%s\n" "$LOCALEDIR" >&6; }
+@@ -21149,6 +21149,10 @@ fi
+ printf '%s\n' "$LOCALEDIR" >&6; }
  fi
  
 +# For pkgsrc, always set USE_GETTEXT=yes because it is used by [cs]xpm.
@@ -12,4 +12,4 @@ $NetBSD: patch-aa,v 1.6 2023/04/17 21:09:49 wiz Exp $
 +USE_GETTEXT=yes
  if test "x$USE_GETTEXT" = "xyes" ; then
  
- printf "%s\n" "#define USE_GETTEXT 1" >>confdefs.h
+ printf '%s\n' "#define USE_GETTEXT 1" >>confdefs.h
