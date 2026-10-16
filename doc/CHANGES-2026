@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7038 2026/10/16 21:08:35 schmonz Exp $
+$NetBSD: CHANGES-2026,v 1.7039 2026/10/16 21:19:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10546,3 +10546,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.71 [wiz 2026-10-16]
 	Updated devel/astyle to 3.6.19 [schmonz 2026-10-16]
 	Updated shells/bash-preexec to 0.7.0 [schmonz 2026-10-16]
+	Updated www/lighttpd to 1.4.85 [schmonz 2026-10-16]
