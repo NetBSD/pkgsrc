@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/02/25 10:26:17 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/16 18:23:52 adam Exp $
 
 DISTNAME=	bandit-1.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,12 +24,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.3.0:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-sphinx via py-pbr
+PY_RENAME_BINARIES=	bandit bandit-baseline bandit-config-generator
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-TEST_DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx via py-pbr
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure
@@ -38,10 +35,6 @@ SUBST_FILES.mandir=	setup.py
 SUBST_SED.mandir=	-e 's,share/man,${PKGMANDIR},g'
 
 post-install:
-.for bin in bandit bandit-baseline bandit-config-generator
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
-.endfor
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR} && \
 	${MV} man1/bandit.1 man1/bandit-${PYVERSSUFFIX}.1 || ${TRUE}
 
