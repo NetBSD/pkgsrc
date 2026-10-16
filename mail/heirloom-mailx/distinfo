@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:54:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/10/16 19:38:11 bsiegert Exp $
 
 BLAKE2s (heirloom-mailx_12.5.orig.tar.gz) = e72b5cfbae36a3a3e6c6b3f2e84f6f2c942e09028ec363cfc04ee86368bb495c
 SHA512 (heirloom-mailx_12.5.orig.tar.gz) = eb4aea0c668354f6fe28137f72bf49d291ce58671a7b70c7775777532e17e59ac52156e68f02937256f0a2f90c132b7c0948553b55daad92a664bd8bbb64774f
@@ -11,5 +11,5 @@ SHA1 (patch-fio.c) = 0f850a28fb7c6d511af8b398eda283068b80d00f
 SHA1 (patch-getopt.c) = b238221ae17fdc7285febd1e9209ac9acac92069
 SHA1 (patch-mailx.1) = 070ae8af60dc22d0acc1c68caf66384ff390379e
 SHA1 (patch-names.c) = 5a7f4bd255f30a425114b5371430012079511d88
-SHA1 (patch-openssl.c) = 5b221586d5159788b22bdcefb9918ab49719e91f
-SHA1 (patch-sendout.c) = 1270c454ec7956ef4c3c3f3f71e847928bbbd2e3
+SHA1 (patch-openssl.c) = 849b38746db5f1a5c9ce3fa67d170da4106836e7
+SHA1 (patch-sendout.c) = 3a8ed851d7aea4162f19ff20e675f9a02f83962b

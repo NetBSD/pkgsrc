@@ -1,4 +1,4 @@
-$NetBSD: patch-openssl.c,v 1.2 2020/01/22 20:50:34 sevan Exp $
+$NetBSD: patch-openssl.c,v 1.3 2026/10/16 19:38:11 bsiegert Exp $
 
 - remove SSL2 support since it is no longer supported by OpenSSL.
 - fix build against modern OpenSSL
@@ -30,11 +30,13 @@ $NetBSD: patch-openssl.c,v 1.2 2020/01/22 20:50:34 sevan Exp $
 +		#ifndef OPENSSL_NO_SSL3
 +		if (equal(cp, "ssl3"))
  			method = SSLv3_client_method();
- 		else if (equal(cp, "tls1"))
- 			method = TLSv1_client_method();
+-		else if (equal(cp, "tls1"))
+-			method = TLSv1_client_method();
++		else if (equal(cp, "tls"))
++			method = TLS_client_method();
 +		#else
-+		if (equal(cp, "tls1"))
-+			method = TLSv1_client_method();
++		if (equal(cp, "tls"))
++			method = TLS_client_method();
 +		#endif
  		else {
  			fprintf(stderr, catgets(catd, CATSET, 244,

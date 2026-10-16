@@ -1,4 +1,4 @@
-$NetBSD: patch-sendout.c,v 1.1 2014/12/28 14:16:14 bsiegert Exp $
+$NetBSD: patch-sendout.c,v 1.2 2026/10/16 19:38:11 bsiegert Exp $
 
 Imported Debian package fixes:
 - disable option processing for email addresses when calling sendmail
@@ -32,3 +32,19 @@ Ref: patch-af,v 1.1.1.1 2008/10/30 13:01:00 obache
  		if (debug || value("debug")) {
  			printf(catgets(catd, CATSET, 181,
  					"Sendmail arguments:"));
+@@ -1135,13 +1144,11 @@ mkdate(FILE *fo, const char *field)
+ 	int tzdiff, tzdiff_hour, tzdiff_min;
+ 
+ 	time(&t);
+-	tzdiff = t - mktime(gmtime(&t));
++	tmptr = localtime(&t);
++	tzdiff = tmptr->tm_gmtoff;
+ 	tzdiff_hour = (int)(tzdiff / 60);
+ 	tzdiff_min = tzdiff_hour % 60;
+ 	tzdiff_hour /= 60;
+-	tmptr = localtime(&t);
+-	if (tmptr->tm_isdst > 0)
+-		tzdiff_hour++;
+ 	return fprintf(fo, "%s: %s, %02d %s %04d %02d:%02d:%02d %+05d\n",
+ 			field,
+ 			weekday_names[tmptr->tm_wday],
