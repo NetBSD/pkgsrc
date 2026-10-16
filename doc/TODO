@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28175 2026/10/16 07:29:49 wiz Exp $
+$NetBSD: TODO,v 1.28176 2026/10/16 07:51:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.51.0
 	o asymptote-3.01
 	o atril-1.28.4
 	o audacity-4.0.0
@@ -676,6 +677,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ggml-0.27.0
 	o ghc-9.14.1
 	o gif2png-3.0.5
 	o git-cinnabar-0.7.5
@@ -1146,6 +1148,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
 	o py-postgresql-5.1.2
+	o py-ruff-0.17.1
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
