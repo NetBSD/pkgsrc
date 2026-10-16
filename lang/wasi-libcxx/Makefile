@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/10/11 16:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/10/16 20:34:16 dholland Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -163,6 +163,7 @@ post-install:
 	${PREFIX}/bin/llvm-ranlib \
 	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasip1/libc++abi.a
 
+BUILDLINK_API_DEPENDS.wasi-libc+=	wasi-libc>=0.0.0pre20261001
 .include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/wasi-libc/buildlink3.mk"
