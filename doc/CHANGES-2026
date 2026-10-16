@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7019 2026/10/16 17:53:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7020 2026/10/16 18:03:27 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10520,3 +10520,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/asciinema-agg version 1.9.0 [leot 2026-10-16]
 	Updated devel/py-hypothesis to 6.170.1 [adam 2026-10-16]
 	Updated devel/py-inline-snapshot to 0.36.1 [adam 2026-10-16]
+	Updated chat/cgiirc to 0.5.13 [ktnb 2026-10-16]
