@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/10/06 08:00:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/16 18:00:37 adam Exp $
 
 DISTNAME=	setuptools_git_versioning-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -16,11 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	setuptools-git-versioning
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
