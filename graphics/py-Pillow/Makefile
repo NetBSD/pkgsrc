@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2026/10/16 19:43:58 adam Exp $
+# $NetBSD: Makefile,v 1.108 2026/10/17 09:05:15 adam Exp $
 
-DISTNAME=	pillow-12.3.0
+DISTNAME=	pillow-13.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
-PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
 
@@ -12,12 +11,13 @@ COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-TEST_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
-TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-TEST_DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	netpbm>=0:../../graphics/netpbm
+TEST_DEPENDS+=	ghostscript>=0:../../print/ghostscript
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
+TEST_DEPENDS+=	${PYPKGPREFIX}-olefile>=0:../../devel/py-olefile
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 USE_TOOLS+=	pkg-config
 
