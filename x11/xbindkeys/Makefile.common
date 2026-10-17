@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2020/11/24 10:25:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.16 2026/10/17 13:52:49 wiz Exp $
 #
 # used by x11/xbindkeys-tk/Makefile
 
@@ -15,5 +15,7 @@ DISTINFO_FILE=	${.CURDIR}/../../x11/xbindkeys/distinfo
 PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
 
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--disable-guile
 
 .include "../../x11/libX11/buildlink3.mk"
