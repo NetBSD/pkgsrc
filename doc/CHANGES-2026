@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7046 2026/10/17 09:04:07 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7047 2026/10/17 09:07:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10556,3 +10556,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-virtualenv to 21.14.8 [adam 2026-10-17]
 	Updated devel/py-tox to 4.66.0 [adam 2026-10-17]
 	Updated www/resterm to 1.15.0 [drixter 2026-10-17]
+	Updated graphics/py-Pillow to 13.0.0 [adam 2026-10-17]
+	Updated lang/py-ast-serialize to 0.13.1 [adam 2026-10-17]
