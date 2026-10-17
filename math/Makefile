@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.650 2026/10/10 14:32:31 alnsn Exp $
+# $NetBSD: Makefile,v 1.651 2026/10/17 20:46:00 alnsn Exp $
 
 COMMENT=	Mathematics
 
+SUBDIR+=	HiGHS
 SUBDIR+=	QXlsx
 SUBDIR+=	R
 SUBDIR+=	R-CGIwithR
