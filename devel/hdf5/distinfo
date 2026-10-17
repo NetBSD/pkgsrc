@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.50 2025/03/05 06:24:20 adam Exp $
+$NetBSD: distinfo,v 1.51 2026/10/17 21:48:01 wiz Exp $
 
 BLAKE2s (hdf5-1.14.6.tar.gz) = a3b5f6b29f66b76a58bb1a3991063483066025cdb85f02b12b938dae281f665d
 SHA512 (hdf5-1.14.6.tar.gz) = f3907abb530c4818cd9c0eb78b43073f3133260baa008ed52478e50e6bf9f1520365882acba21e0206e72c37c3e564d450def4edc3d2eef46275a41a2ad3f34b
 Size (hdf5-1.14.6.tar.gz) = 39195022 bytes
 SHA1 (patch-CMakeInstallation.cmake) = 666188c584e678719cf2beb0f939e1bfd611e77d
 SHA1 (patch-config_cmake_HDFMacros.cmake) = 5582194110ed12f3f96b84d1ede22267c00598db
+SHA1 (patch-config_cmake_hdf5-config.cmake.in) = 7d1d0710f1ee1df3e4a4621f8560c0a015ccf49a
 SHA1 (patch-tools_test_h5dump_testh5dump.sh.in) = 97c70174d10e6e3671975cf3b09c74add27ce9c5
 SHA1 (patch-tools_test_h5repack_h5repack.sh.in) = 7e6f3ce52d4d282f341a93ff4c8231ec8c04a37c

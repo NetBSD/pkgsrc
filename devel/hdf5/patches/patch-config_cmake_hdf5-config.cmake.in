@@ -1,0 +1,16 @@
+$NetBSD: patch-config_cmake_hdf5-config.cmake.in,v 1.1 2026/10/17 21:48:01 wiz Exp $
+
+Make sure ZLIB::ZLIB and libaec::sz are defined.
+
+--- config/cmake/hdf5-config.cmake.in.orig	2026-10-17 21:32:04.650341389 +0000
++++ config/cmake/hdf5-config.cmake.in
+@@ -148,6 +148,9 @@ if (NOT TARGET "@HDF5_PACKAGE@")
+   if (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_SUPPORT AND ${HDF5_PACKAGE_NAME}_PACKAGE_EXTLIBS)
+     include (@PACKAGE_SHARE_INSTALL_DIR@/@LIBAEC_PACKAGE_NAME@@HDF_PACKAGE_EXT@-targets.cmake)
+   endif ()
++  include(CMakeFindDependencyMacro)
++  find_dependency(ZLIB MODULE)
++  find_dependency(libaec CONFIG)
+   include (@PACKAGE_SHARE_INSTALL_DIR@/@HDF5_PACKAGE@@HDF_PACKAGE_EXT@-targets.cmake)
+ endif ()
+ 
