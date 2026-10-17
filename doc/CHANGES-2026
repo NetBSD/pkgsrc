@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7059 2026/10/17 19:05:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7060 2026/10/17 20:46:52 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10571,3 +10571,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.17.1 [wiz 2026-10-17]
 	Updated textproc/rumdl to 0.3.0 [wiz 2026-10-17]
 	Updated chat/gurk to 0.10.2 [wiz 2026-10-17]
+	Added math/HiGHS version 1.15.1 [alnsn 2026-10-17]
