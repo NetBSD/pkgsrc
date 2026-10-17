@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7057 2026/10/17 17:11:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7058 2026/10/17 18:26:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10464,6 +10464,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/gstreamer1 to 1.28.8 [adam 2026-10-13]
 	Added devel/libagcre version 20261013 [agc 2026-10-13]
 	Added textproc/agcre version 20261013 [agc 2026-10-13]
+	Added mail/dkim-rotate version 1.1 [riastradh 2026-10-14]
+	Added mail/dkim-rotate-base version 1.1 [riastradh 2026-10-14]
+	Added mail/dkim-rotate-doc version 1.1 [riastradh 2026-10-14]
 	Updated x11/xbindkeys to 1.8.7nb4 [wiz 2026-10-14]
 	Added lang/gnu-apl version 2.0 [drixter 2026-10-14]
 	Updated devel/serie to 0.10.0 [pin 2026-10-14]
