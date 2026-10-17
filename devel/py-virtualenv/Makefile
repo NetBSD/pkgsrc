@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2026/10/12 09:49:18 adam Exp $
+# $NetBSD: Makefile,v 1.116 2026/10/17 08:57:23 adam Exp $
 
-DISTNAME=	virtualenv-21.14.7
+DISTNAME=	virtualenv-21.14.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -33,11 +33,6 @@ USE_LANGUAGES=	c # for tests
 REPLACE_PYTHON=	virtualenv.py
 
 PY_RENAME_BINARIES=	virtualenv
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.2:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
