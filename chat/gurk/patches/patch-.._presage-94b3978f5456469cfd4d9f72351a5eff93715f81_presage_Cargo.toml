@@ -1,0 +1,15 @@
+$NetBSD: patch-.._presage-94b3978f5456469cfd4d9f72351a5eff93715f81_presage_Cargo.toml,v 1.1 2026/10/17 19:05:27 wiz Exp $
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- ../presage-94b3978f5456469cfd4d9f72351a5eff93715f81/presage/Cargo.toml.orig	2026-10-12 07:50:47.000000000 +0000
++++ ../presage-94b3978f5456469cfd4d9f72351a5eff93715f81/presage/Cargo.toml
+@@ -12,7 +12,7 @@ cdsi = ["libsignal-service/cdsi"]
+ cdsi = ["libsignal-service/cdsi"]
+ 
+ [dependencies]
+-libsignal-service = { git = "https://github.com/whisperfish/libsignal-service-rs", rev = "fb92b13c82fde40ba4d10696cf79aa4f36ce25f1", default-features = false, features = [
++libsignal-service = { path = "../../libsignal-service-rs-fb92b13c82fde40ba4d10696cf79aa4f36ce25f1", default-features = false, features = [
+     "phonenumber",
+ ] }
+ 

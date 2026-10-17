@@ -1,0 +1,29 @@
+$NetBSD: patch-.._libsignal-service-rs-fb92b13c82fde40ba4d10696cf79aa4f36ce25f1_Cargo.toml,v 1.1 2026/10/17 19:05:27 wiz Exp $
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- ../libsignal-service-rs-fb92b13c82fde40ba4d10696cf79aa4f36ce25f1/Cargo.toml.orig	2026-10-11 19:16:08.000000000 +0000
++++ ../libsignal-service-rs-fb92b13c82fde40ba4d10696cf79aa4f36ce25f1/Cargo.toml
+@@ -10,14 +10,14 @@ readme = "README.md"
+ readme = "README.md"
+ 
+ [dependencies]
+-libsignal-protocol = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
+-libsignal-core = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
+-libsignal-account-keys = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
+-libsignal-net = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0", optional = true }
+-libsignal-net-infra = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0", optional = true }
+-signal-crypto = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
+-zkgroup = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
+-usernames = { git = "https://github.com/signalapp/libsignal", tag = "v0.99.0" }
++libsignal-protocol = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/protocol" }
++libsignal-core = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/core" }
++libsignal-account-keys = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/account-keys" }
++libsignal-net = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/net", optional = true }
++libsignal-net-infra = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/net/infra", optional = true }
++signal-crypto = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/crypto" }
++zkgroup = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/zkgroup" }
++usernames = { path = "../libsignal-439f035d9cfd7efe5435cbea0294591c9ed17232/rust/usernames" }
+ 
+ aes = "0.9"
+ aes-gcm = "0.11"
