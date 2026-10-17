@@ -1,20 +1,23 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2026/07/24 21:26:20 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.3 2026/10/17 21:06:42 wiz Exp $
 
 Treat NetBSD like Linux.
 https://github.com/leanprover/lean4/pull/14543
 
---- src/CMakeLists.txt.orig	2026-07-22 17:50:04.000000000 +0000
+Do not build projects using ExternalProject - this wants to download
+during the build. Package separately?
+
+--- src/CMakeLists.txt.orig	2026-10-12 15:51:15.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -502,7 +502,7 @@ set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LIN
+@@ -547,7 +547,7 @@ set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LIN
  
- # flags for user binaries = flags for toolchain binaries + Lake
- set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LINKER_FLAGS} -lLake")
+ # flags for user binaries = flags for toolchain binaries + Lake (and deps)
+ set(LEANC_STATIC_LINKER_FLAGS " ${TOOLCHAIN_STATIC_LINKER_FLAGS} -lLake -lLeanExport")
 -if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 +if(CMAKE_SYSTEM_NAME MATCHES "Linux|NetBSD")
    set(LEANC_SHARED_LINKER_FLAGS " ${TOOLCHAIN_SHARED_LINKER_FLAGS} -Wl,--as-needed -lLake_shared -Wl,--no-as-needed")
  else()
    set(LEANC_SHARED_LINKER_FLAGS " ${TOOLCHAIN_SHARED_LINKER_FLAGS} -lLake_shared")
-@@ -549,7 +549,7 @@ endif()
+@@ -594,7 +594,7 @@ endif()
    string(APPEND LEAN_EXTRA_LINKER_FLAGS " -lm")
  endif()
  
@@ -23,3 +26,87 @@ https://github.com/leanprover/lean4/pull/14543
    if(BSYMBOLIC)
      string(APPEND LEANC_SHARED_LINKER_FLAGS " -Wl,-Bsymbolic")
      string(APPEND TOOLCHAIN_SHARED_LINKER_FLAGS " -Wl,-Bsymbolic")
+@@ -1030,23 +1030,6 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Emscripten")
+     VERBATIM
+   )
+ 
+-  # NOTE: uses toolchain from contained `lean-toolchain` so bumps are necessary only on kernel
+-  # interface changes. Not in `ALL` as it's expensive; release CI builds it explicitly.
+-  ExternalProject_Add(
+-    lean4lean
+-    PREFIX lean4lean
+-    EXCLUDE_FROM_ALL ON
+-    GIT_REPOSITORY https://github.com/Kha/lean4lean
+-    GIT_TAG lean4-bundle-4.35
+-    PATCH_COMMAND bash ${LEAN_SOURCE_DIR}/../script/lean4lean-minimal-init.sh
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND lake build lean4lean
+-    BUILD_IN_SOURCE ON
+-    INSTALL_COMMAND
+-      ${CMAKE_COMMAND} -E copy .lake/build/bin/lean4lean${CMAKE_EXECUTABLE_SUFFIX}
+-      ${CMAKE_BINARY_DIR}/bin
+-  )
+-
+   # `cargo` links with whatever `cc` is on `PATH`. In a standalone build, link the Rust checkers through `leanc`
+   # instead so that they bind to the bundled glibc and the default ELF interpreter like every other shipped binary.
+   set(CARGO_LINK_WITH_LEANC OFF)
+@@ -1055,59 +1038,6 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Emscripten")
+     set(CARGO_LINK_WITH_LEANC ON)
+     string(TOUPPER "${CMAKE_SYSTEM_PROCESSOR}_unknown_linux_gnu" CARGO_RUST_TARGET)
+     set(CARGO_BUILD_ENV ${CMAKE_COMMAND} -E env "CARGO_TARGET_${CARGO_RUST_TARGET}_LINKER=${CMAKE_BINARY_DIR}/bin/leanc")
+-  endif()
+-
+-  # Not in `ALL` as it's expensive; release CI builds it explicitly.
+-  ExternalProject_Add(
+-    nanoda
+-    PREFIX nanoda
+-    EXCLUDE_FROM_ALL ON
+-    GIT_REPOSITORY https://github.com/ammkrn/nanoda_lib
+-    GIT_TAG 3a2407216ee84a75f9e1aead6803d0578be06ae7
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND ${CARGO_BUILD_ENV} cargo build --release --locked
+-    BUILD_IN_SOURCE ON
+-    INSTALL_COMMAND
+-      ${CMAKE_COMMAND} -E copy target/release/nanoda_bin${CMAKE_EXECUTABLE_SUFFIX}
+-      ${CMAKE_BINARY_DIR}/bin
+-  )
+-  if(CARGO_LINK_WITH_LEANC)
+-    add_dependencies(nanoda leanc)
+-  endif()
+-
+-  # Not in `ALL` as it's expensive; release CI builds it explicitly.
+-  ExternalProject_Add(
+-    con-leche
+-    PREFIX con-leche
+-    EXCLUDE_FROM_ALL ON
+-    GIT_REPOSITORY https://github.com/leanprover/con-leche
+-    GIT_TAG 67f04630d88718e81aa4d07ab64501f68f105398
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND lake build con-leche
+-    BUILD_IN_SOURCE ON
+-    INSTALL_COMMAND
+-      ${CMAKE_COMMAND} -E copy .lake/build/bin/con-leche${CMAKE_EXECUTABLE_SUFFIX}
+-      ${CMAKE_BINARY_DIR}/bin
+-  )
+-
+-  # Not in `ALL` as it's expensive; release CI builds it explicitly. Its only submodule is the
+-  # Aeneas verifier, which the binary does not need.
+-  ExternalProject_Add(
+-    con-ron
+-    PREFIX con-ron
+-    EXCLUDE_FROM_ALL ON
+-    GIT_REPOSITORY https://github.com/leanprover/con-ron
+-    GIT_TAG dd8d8218892c871276b1e569d3decbb368bba1b6
+-    GIT_SUBMODULES ""
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND ${CARGO_BUILD_ENV} cargo build --release --locked
+-    BUILD_IN_SOURCE ON
+-    INSTALL_COMMAND
+-      ${CMAKE_COMMAND} -E copy target/release/con-ron${CMAKE_EXECUTABLE_SUFFIX}
+-      ${CMAKE_BINARY_DIR}/bin
+-  )
+-  if(CARGO_LINK_WITH_LEANC)
+-    add_dependencies(con-ron leanc)
+   endif()
+ 
+   # Not `ALL` as it's big; release CI builds it explicitly.
