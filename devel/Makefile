@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4704 2026/10/14 03:20:32 agc Exp $
+# $NetBSD: Makefile,v 1.4705 2026/10/17 16:57:05 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -256,6 +256,7 @@ SUBDIR+=	carwash
 SUBDIR+=	catch
 SUBDIR+=	catch2
 SUBDIR+=	cbindgen
+SUBDIR+=	cbmc
 SUBDIR+=	cbrowser
 SUBDIR+=	ccache
 SUBDIR+=	ccache3
