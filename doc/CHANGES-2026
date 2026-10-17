@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7063 2026/10/17 23:40:53 agc Exp $
+$NetBSD: CHANGES-2026,v 1.7064 2026/10/17 23:47:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10576,3 +10576,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/hdf5 to 1.14.6nb1 [wiz 2026-10-17]
 	Updated devel/libagcre to 20261015 [agc 2026-10-17]
 	Updated textproc/agcre to 20261015 [agc 2026-10-17]
+	Updated www/p5-Mojolicious to 9.50 [wen 2026-10-17]
