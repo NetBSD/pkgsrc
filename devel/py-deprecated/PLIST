@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6 2025/11/02 20:22:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/10/17 09:13:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/deprecated/__init__.py
 ${PYSITELIB}/deprecated/__init__.pyc
 ${PYSITELIB}/deprecated/__init__.pyo
 ${PYSITELIB}/deprecated/classic.py
 ${PYSITELIB}/deprecated/classic.pyc
 ${PYSITELIB}/deprecated/classic.pyo
+${PYSITELIB}/deprecated/google.py
+${PYSITELIB}/deprecated/google.pyc
+${PYSITELIB}/deprecated/google.pyo
+${PYSITELIB}/deprecated/numpy.py
+${PYSITELIB}/deprecated/numpy.pyc
+${PYSITELIB}/deprecated/numpy.pyo
 ${PYSITELIB}/deprecated/params.py
 ${PYSITELIB}/deprecated/params.pyc
 ${PYSITELIB}/deprecated/params.pyo
+${PYSITELIB}/deprecated/py.typed
 ${PYSITELIB}/deprecated/sphinx.py
 ${PYSITELIB}/deprecated/sphinx.pyc
 ${PYSITELIB}/deprecated/sphinx.pyo
