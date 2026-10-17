@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.40 2026/10/10 10:08:51 leot Exp $
+# $NetBSD: go-modules.mk,v 1.41 2026/10/17 12:22:04 leot Exp $
 
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.zip
@@ -222,8 +222,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20210921155107-089bfa567519.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.13.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.15.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.55.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.55.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.57.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.57.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.12.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.41.0.mod
@@ -237,9 +237,9 @@ GO_MODULE_FILES+=	golang.org/x/net/@v/v0.10.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.15.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.17.0.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.18.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.58.0.zip
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.6.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.60.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.60.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220722155255-886fb9371eb4.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.mod
