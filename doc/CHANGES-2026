@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7060 2026/10/17 20:46:52 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7061 2026/10/17 21:07:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10572,3 +10572,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/rumdl to 0.3.0 [wiz 2026-10-17]
 	Updated chat/gurk to 0.10.2 [wiz 2026-10-17]
 	Added math/HiGHS version 1.15.1 [alnsn 2026-10-17]
+	Updated math/lean4 to 4.35.0 [wiz 2026-10-17]
