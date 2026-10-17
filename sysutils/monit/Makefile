@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/08/12 15:02:09 leot Exp $
+# $NetBSD: Makefile,v 1.29 2026/10/17 10:47:55 leot Exp $
 
-DISTNAME=		monit-5.35.2
+DISTNAME=		monit-6.0.0
 CATEGORIES=		sysutils
 MASTER_SITES=		https://mmonit.com/monit/dist/
 
@@ -10,7 +10,7 @@ COMMENT=		Monitors processes, files, directories and devices
 LICENSE=		gnu-agpl-v3
 
 # no platform specific code yet
-BROKEN_ON_PLATFORM+=	DragonFly-*-* IRIX-*-* OSF1-*-*
+BROKEN_ON_PLATFORM+=	IRIX-*-* OSF1-*-*
 
 USE_TOOLS+=		gmake gzcat flex yacc
 USE_PKGLOCALEDIR=	yes
