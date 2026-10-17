@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/01/26 16:30:24 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/17 09:17:59 adam Exp $
 
 DISTNAME=	flask_limiter-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,6 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flask-restful>=0:../../www/py-flask-restful
 # also needs unpackaged 'hiro' for testing
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-deprecated
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
