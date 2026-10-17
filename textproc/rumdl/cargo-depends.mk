@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.25 2026/10/11 09:07:32 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.26 2026/10/17 17:11:11 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -265,7 +265,7 @@ CARGO_CRATE_DEPENDS+=	reqwest-0.13.2
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.3
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.45
+CARGO_CRATE_DEPENDS+=	rustls-0.23.46
 CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.3
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.14.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.6.2
@@ -295,7 +295,6 @@ CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	serial_test-3.5.0
 CARGO_CRATE_DEPENDS+=	serial_test_derive-3.5.0
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
-CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.8
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.9
 CARGO_CRATE_DEPENDS+=	similar-3.2.0
 CARGO_CRATE_DEPENDS+=	siphasher-1.0.3

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2026/10/11 09:07:32 wiz Exp $
+$NetBSD: distinfo,v 1.59 2026/10/17 17:11:11 wiz Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -789,18 +789,18 @@ Size (reqwest-0.13.2.crate) = 158064 bytes
 BLAKE2s (ring-0.17.14.crate) = 1480ea4de12099a897e831682ebaf48ed6e688e06f58e79e496a06e227ed58bd
 SHA512 (ring-0.17.14.crate) = 88d38205dc1a1f89bd4ae887ec5c168e68a4b749b3ac0612674092331e99d14a9b8d0f4a98d72c1a3853bcc9da420402336da3ee053bedcfd598da8de93afa14
 Size (ring-0.17.14.crate) = 1502610 bytes
-BLAKE2s (rumdl-0.2.79.tar.gz) = 4da3af9c945c55b601f645d5a270f23b5c68275ffd0864ceb53316d4c7b0290c
-SHA512 (rumdl-0.2.79.tar.gz) = cdf94854af919f08e28c7493525f58675c24fd0fd975482e7ec7e1aaa391147887564da01bfaf9b5893b725b9024d595fcc22bbfddf52fd3c9900a6d1ab0fd90
-Size (rumdl-0.2.79.tar.gz) = 5076478 bytes
+BLAKE2s (rumdl-0.3.0.tar.gz) = bdce8c8af81a57314c3b32f0e20bcb967bceb7a2e4ba67ad1a077c9019802d9d
+SHA512 (rumdl-0.3.0.tar.gz) = 722439b3ca29f37a51aa78c38621a6d1fb0dc91f6e3286751e5eee6085b5fe47287e394766fec0e6c1489562938aabf2dd7b5e13d88fc6e827180d482b8ff6f5
+Size (rumdl-0.3.0.tar.gz) = 5617733 bytes
 BLAKE2s (rustc-hash-2.1.3.crate) = 2b19a9bf51fafa87b1d57886bfaa0c961ddb662ba02537ea4ccb208b322a51d0
 SHA512 (rustc-hash-2.1.3.crate) = d44c38f6775b77b5841a644c53a68c09a2f98541aafd809d385b854f385bbba86399aa4fc76bb3dfadd2cba64ec688db22bd353e1ae4de81e0f6e9d36f0cf629
 Size (rustc-hash-2.1.3.crate) = 14811 bytes
 BLAKE2s (rustix-1.1.4.crate) = 47b462406ba74a3225cf16b2e8b75855857edd58915f4033d7387b67cc694948
 SHA512 (rustix-1.1.4.crate) = 33619ed2434963a98b0846414656bcc4945ca0e9b883821869fe0cc86db4a74c6961ce1375963ae49c6b5044ad0536eda807dac1320209739c9d669bd80fd75c
 Size (rustix-1.1.4.crate) = 425241 bytes
-BLAKE2s (rustls-0.23.45.crate) = 80611a082d6f595e031a9d0cc5dbec9a2c0ff47b46fd693b473e9fb29d0dd557
-SHA512 (rustls-0.23.45.crate) = d129106d690b620090c58c34ab9216e4ad697e5343865886411731e77a746eafb524770072653f16b4489f66696d366fc7b84cbdb5b65951c5f4f14832449389
-Size (rustls-0.23.45.crate) = 378933 bytes
+BLAKE2s (rustls-0.23.46.crate) = ac5b2e618ea78a918da8f78cf635dbb97187ac0cbd552f179b58936f56f07d97
+SHA512 (rustls-0.23.46.crate) = 9697677cce4999211bcf2e5c05c3dc468eba1947f586d2402a06cfb75663242fe0a1c2c8cd67f41d29fadc4892b7fcb47dc5db50b57a05cd72e74e1fc6f409d2
+Size (rustls-0.23.46.crate) = 386227 bytes
 BLAKE2s (rustls-native-certs-0.8.3.crate) = 54b2e636a90d1b4e1d949adb15cfb9844a23c2cd689d9e4d75adbaf2b3ae2f22
 SHA512 (rustls-native-certs-0.8.3.crate) = ffca026a5365a97e7a254faac2ceab188bd1cf51876a32e99b16bdf5902363c6416e8e28247f53864609d0f492646fead7b19328e376d0b8b2073e6fb3bc60a8
 Size (rustls-native-certs-0.8.3.crate) = 30380 bytes
@@ -888,9 +888,6 @@ Size (serial_test_derive-3.5.0.crate) = 9436 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
-BLAKE2s (signal-hook-registry-1.4.8.crate) = a1ff8fd36814ee28feca6c314ce9ba8d151ade422acd85aa4a225ad104fbf134
-SHA512 (signal-hook-registry-1.4.8.crate) = 6625d842e5040fb15c3a6a03994aabe8b3d0b752773805866858452fb03e5cab2663c89367caa15a34dc0ee7c2b830e302d9be664130c093bdbc17d7b61f045c
-Size (signal-hook-registry-1.4.8.crate) = 21668 bytes
 BLAKE2s (simd-adler32-0.3.9.crate) = c2430e1618e0e240daa76a5547ea175ff45df5ee87d124bc081a46bede669fc3
 SHA512 (simd-adler32-0.3.9.crate) = c900aad6b3f8b13e995031d7e2ffec015d9b68809cd9d76e8368a1091cc5f3d63073c7a212656f3a7930e4445e64b93b977324d4507f02e059676ea2cf59839a
 Size (simd-adler32-0.3.9.crate) = 18572 bytes
