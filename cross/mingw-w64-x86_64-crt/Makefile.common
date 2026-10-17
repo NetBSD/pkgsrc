@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2024/11/28 20:01:37 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.12 2026/10/17 11:43:47 js Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
@@ -28,9 +28,12 @@ USE_GNU_CONFIGURE_HOST=	no
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}/mingw
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
-CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}/mingw
 CONFIGURE_ARGS+=	--enable-wildcard
 CONFIGURE_ARGS+=	--with-default-msvcrt=${CRT_TYPE}
+# Don't leak -I${PREFIX}/include into the flags, it breaks the build because
+# then the native profile.h is picked up.
+CONFIGURE_ARGS+=	CPPFLAGS= CFLAGS=-O2 CXXFLAGS=-O2
 CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
 
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
