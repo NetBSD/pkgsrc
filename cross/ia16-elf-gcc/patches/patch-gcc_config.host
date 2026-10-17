@@ -1,0 +1,20 @@
+$NetBSD: patch-gcc_config.host,v 1.1 2026/10/17 13:09:28 js Exp $
+
+--- gcc/config.host.orig	2026-10-17 12:34:07.016969634 +0000
++++ gcc/config.host
+@@ -89,15 +89,6 @@ case ${host} in
+     ;;
+ esac
+ 
+-# Common parts for widely ported systems.
+-case ${host} in
+-  *-darwin*)
+-    # Generic darwin host support.
+-    out_host_hook_obj=host-darwin.o
+-    host_xmake_file="${host_xmake_file} x-darwin"
+-    ;;
+-esac
+-
+ case ${host} in
+   aarch64*-*-linux*)
+     case ${target} in

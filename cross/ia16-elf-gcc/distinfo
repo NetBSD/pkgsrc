@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/08/12 16:31:46 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2026/10/17 13:09:28 js Exp $
 
 BLAKE2s (gcc-ia16-9a5539544a9095ad35c4f57a23f2b79461032cb2.tar.gz) = e0ce1cfa4720f9ab70ddb851cc0509b6fc2b2e350f022640385b7548a03e4ee2
 SHA512 (gcc-ia16-9a5539544a9095ad35c4f57a23f2b79461032cb2.tar.gz) = 81fcad255bdb0a533e4d2e47023aeaba99b5cbecdf240a7b03323eef3c3d7f1657d19f452e9cb573c1902008896344f1dc8115f28ad0ef40cb032e0a1cc505b4
@@ -9,4 +9,7 @@ Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 BLAKE2s (newlib-ia16-8aa8f6eb7080eb94713c5b3bee4df44de1df109b.tar.gz) = 2b0a733421a56faf4ae0a978470b7e985eef2aeb02e4989bf58224a5d0fec4b1
 SHA512 (newlib-ia16-8aa8f6eb7080eb94713c5b3bee4df44de1df109b.tar.gz) = b164578ade49b32c65345abd793e27c728ffa22c98b8062984a828d0f1f4982698e68f16963afff4e1a69346daf2bb1865525dab69b09eb7a04db935c2536ba1
 Size (newlib-ia16-8aa8f6eb7080eb94713c5b3bee4df44de1df109b.tar.gz) = 20681744 bytes
+SHA1 (patch-gcc_config.host) = 9d86acf7b677187de95523d3bc72c422fff3429f
+SHA1 (patch-gcc_fibonacci_heap.h) = 79900dfee6e78171dff12a93717777b26d2e3f0f
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-zlib_zutil.c) = 33a75b615f4d43c628450f8f3743a00a1a050c3e
