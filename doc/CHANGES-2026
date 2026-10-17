@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7054 2026/10/17 16:53:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7055 2026/10/17 16:58:31 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10564,3 +10564,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/opa to 1.21.2 [leot 2026-10-17]
 	Updated math/ggml to 0.27.0 [wiz 2026-10-17]
 	Updated devel/ast-grep to 0.51.0 [wiz 2026-10-17]
+	Added devel/cbmc version 6.10.0 [alnsn 2026-10-17]
