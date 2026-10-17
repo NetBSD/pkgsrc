@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2026/10/13 18:38:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.68 2026/10/17 09:03:47 drixter Exp $
 
-DISTNAME=	resterm-1.14.1
-PKGREVISION=	1
+DISTNAME=	resterm-1.15.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unkn0wn-root/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +11,9 @@ COMMENT=	Terminal client for HTTP/GraphQL/gRPC
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
+
+post-install:
+	${RM} -fv ${DESTDIR}${PREFIX}/bin/capture
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
