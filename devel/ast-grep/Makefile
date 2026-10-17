@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2026/10/11 08:52:22 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/10/17 16:53:30 wiz Exp $
 #
 # Changelog:
 # https://github.com/ast-grep/ast-grep/blob/main/CHANGELOG.md
 
-DISTNAME=	ast-grep-0.50.0
+DISTNAME=	ast-grep-0.51.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ast-grep/}
 
