@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2026/05/24 06:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.61 2026/10/17 09:16:33 adam Exp $
 
 DISTNAME=	fabric-3.2.3
 CATEGORIES=	sysutils net python
@@ -21,6 +21,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed>=2.0.1:../../devel/py-test-relaxed
 USE_LANGUAGES=		# none
 
 PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-deprecated
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
