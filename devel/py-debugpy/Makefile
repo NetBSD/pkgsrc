@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/10/16 17:43:15 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/17 13:47:57 wiz Exp $
 
 DISTNAME=	debugpy-1.8.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,13 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PY_RENAME_BINARIES=	debugpy debugpy-adapter
+
+.include "../../lang/python/pyversion.mk"
+
+PLIST_VARS+=		pydevd_cython
+.if ${PYTHON_VERSION} >= 312
+PLIST.pydevd_cython=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
