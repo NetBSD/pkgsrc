@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2026/10/17 16:55:46 alnsn Exp $
+
+BLAKE2s (cbmc-6.10.0.tar.gz) = 35c20f0838e44704016ad1d9041b185e69b95d8ad7efcc1c7da096b056815f4d
+SHA512 (cbmc-6.10.0.tar.gz) = 87a8d0202c778c0699a11733f1d73f2239d9f91222644dc6fbffc820ece53f43621152191fa5443957c85608a0021e56b290959f10b518cb04133c40c7bf0dbe
+Size (cbmc-6.10.0.tar.gz) = 9162298 bytes
+BLAKE2s (minisat2_2.2.1.orig.tar.gz) = 94f71cea0f49ad903d690e23e4a4a3d9b2ddf19be462e3848716d6d67e4096f9
+SHA512 (minisat2_2.2.1.orig.tar.gz) = 279d8f65e5c848f6a1fded8890a907a91b9892ea3e33059a46373151ef64fe94de5e63b8a7512b74c3cd858f084bac818c36c6c5f6f503376f599a1335589949
+Size (minisat2_2.2.1.orig.tar.gz) = 44229 bytes
+SHA1 (patch-src_ansi-c_CMakeLists.txt) = 7886791c1a17a43e3ca21aa16f5ba4c741cd2c87
+SHA1 (patch-src_ansi-c_library_stdio.c) = ce9e9bf10f3c415066e1cfde9ded443d3dd01c36

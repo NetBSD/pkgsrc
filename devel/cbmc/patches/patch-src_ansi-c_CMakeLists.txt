@@ -1,0 +1,12 @@
+$NetBSD: patch-src_ansi-c_CMakeLists.txt,v 1.1 2026/10/17 16:55:46 alnsn Exp $
+
+Fix link errors, reported in https://github.com/diffblue/cbmc/issues/9088
+
+--- src/ansi-c/CMakeLists.txt.orig	2026-01-01 00:00:00.000000000 +0000
++++ src/ansi-c/CMakeLists.txt	2026-01-01 00:00:00.000000000 +0000
+@@ -144,3 +144,5 @@
+ generic_includes(ansi-c)
+ 
+ target_link_libraries(ansi-c analyses util linking goto-programs assembler)
++
++set_target_properties(ansi-c analyses PROPERTIES LINK_INTERFACE_MULTIPLICITY 3)
