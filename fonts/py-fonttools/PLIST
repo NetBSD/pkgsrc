@@ -1,15 +1,8 @@
-@comment $NetBSD: PLIST,v 1.62 2026/09/03 07:02:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2026/10/18 13:15:01 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.external
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -970,6 +963,9 @@ ${PYSITELIB}/fontTools/varLib/instancer/__init__.pyo
 ${PYSITELIB}/fontTools/varLib/instancer/__main__.py
 ${PYSITELIB}/fontTools/varLib/instancer/__main__.pyc
 ${PYSITELIB}/fontTools/varLib/instancer/__main__.pyo
+${PYSITELIB}/fontTools/varLib/instancer/colr.py
+${PYSITELIB}/fontTools/varLib/instancer/colr.pyc
+${PYSITELIB}/fontTools/varLib/instancer/colr.pyo
 ${PYSITELIB}/fontTools/varLib/instancer/featureVars.py
 ${PYSITELIB}/fontTools/varLib/instancer/featureVars.pyc
 ${PYSITELIB}/fontTools/varLib/instancer/featureVars.pyo
@@ -1047,4 +1043,11 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.external
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
