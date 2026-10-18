@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7065 2026/10/18 01:31:35 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7066 2026/10/18 01:34:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10578,3 +10578,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/agcre to 20261015 [agc 2026-10-17]
 	Updated www/p5-Mojolicious to 9.50 [wen 2026-10-17]
 	Updated www/p5-Mojolicious-Plugin-OAuth2-Server to 0.53 [wen 2026-10-18]
+	Updated www/p5-Mojolicious-Plugin-CSRF to 1.06 [wen 2026-10-18]
