@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7080 2026/10/18 12:23:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7081 2026/10/18 13:02:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10593,3 +10593,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/polkit to 128 [wiz 2026-10-18]
 	Updated net/py-cares to 5.2.0 [wiz 2026-10-18]
 	Updated devel/py-dunamai to 1.26.3 [wiz 2026-10-18]
+	Updated fonts/noto-emoji-ttf to 2.051.0.0.20260924nb1 [pin 2026-10-18]
