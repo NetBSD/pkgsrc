@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/08/09 05:57:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/18 12:23:06 wiz Exp $
 
-DISTNAME=	dunamai-1.26.2
+DISTNAME=	dunamai-1.26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dunamai/}
@@ -16,15 +16,11 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=20.9:../../devel/py-packaging
 USE_LANGUAGES=	# none
 USE_TOOLS+=	git:test
 
-# as of 1.26.1
-# 57 passed, 6 skipped, 49 warnings
-# https://github.com/mtkennerly/dunamai/issues/114
+# as of 1.26.3
+# 60 passed, 6 skipped, 54 warning
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-pre-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} git config --global user.email "example@pkgsrc.org"
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} git config --global user.name "pkgsrc test"
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
