@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2026/10/16 19:44:18 adam Exp $
+# $NetBSD: Makefile,v 1.82 2026/10/18 14:23:57 wiz Exp $
 
-DISTNAME=	pypdf-6.20.0
+DISTNAME=	pypdf-6.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -30,14 +30,8 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 6.20.0
-# disable some tests that need extra files, per
-# https://pypdf.readthedocs.io/en/latest/dev/testing.html#deselecting-groups-of-tests
-# 3 failed, 1850 passed, 33 skipped, 53 deselected, 1 xfailed, 1 xpassed
-# after 'make install'
-# 1 failed, 1852 passed, 33 skipped, 53 deselected, 1 xfailed, 1 xpassed
-# test failures reported at:
-# https://github.com/py-pdf/pypdf/issues/4187
+# as of 6.21.1
+# 2052 passed, 33 skipped, 54 deselected, 1 xfailed, 1 xpassed
 do-test:
 	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
 	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} -m "not samples"
