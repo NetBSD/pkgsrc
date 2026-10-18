@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7081 2026/10/18 13:02:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7082 2026/10/18 13:07:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10594,3 +10594,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-cares to 5.2.0 [wiz 2026-10-18]
 	Updated devel/py-dunamai to 1.26.3 [wiz 2026-10-18]
 	Updated fonts/noto-emoji-ttf to 2.051.0.0.20260924nb1 [pin 2026-10-18]
+	Added misc/weatherman version 0.5.6 [pin 2026-10-18]
