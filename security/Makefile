@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1030 2026/10/15 03:09:04 taca Exp $
+# $NetBSD: Makefile,v 1.1031 2026/10/18 08:01:17 pin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -694,6 +694,7 @@ SUBDIR+=	sshs
 SUBDIR+=	ssldump
 SUBDIR+=	sslproxy
 SUBDIR+=	sslsplit
+SUBDIR+=	sslx
 SUBDIR+=	ssss
 SUBDIR+=	starttls
 SUBDIR+=	steghide
