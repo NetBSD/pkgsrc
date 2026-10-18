@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/06/25 10:29:54 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/10/18 12:17:59 wiz Exp $
 
-BLAKE2s (polkit-127.tar.gz) = 42e8bb751fc99d41b4ab296e7eeed826d14be0b13709399f2821aa12302f279f
-SHA512 (polkit-127.tar.gz) = 54b315f2ca05e957e7b9aafda16c1cddcc2266d6018c77dbf4cfe73b7d5b1569e6e07570884b9c5ecc4bdb3a29966169006aa727b089019d959208f2b53067e6
-Size (polkit-127.tar.gz) = 472872 bytes
-SHA1 (patch-src_polkit_polkitunixprocess.c) = b95f8e5d7c1dd0ab9b084e3bd5b1fc6d05744b57
-SHA1 (patch-src_polkitagent_polkitagenthelper-pam.c) = 74e3a9d1b3f4c4e28a2353f4f824c83c0032b97d
-SHA1 (patch-src_polkitbackend_polkitbackendduktapeauthority.c) = 5e48729c3414ccd41faa2e60bf3c915207e21cd1
-SHA1 (patch-src_polkitbackend_polkitd.c) = e587e99017128477522050391c5410024a1e25c7
-SHA1 (patch-src_programs_pkttyagent.c) = d9044bcc2ebd79a885c7bbc8327bdebab5680748
+BLAKE2s (polkit-128.tar.gz) = 6ddab2e8aa3962302a995f8fd03ccc8de7f57a68fd5fc09468abff909933be4b
+SHA512 (polkit-128.tar.gz) = a5c38c7214da42ac6db0a00cec1cb3927d57163f5bd47b4e59700ad83e30ad3ff85563e27375d0603d3cf3351bd5da8634e1354885d01b7c693cda7b68483345
+Size (polkit-128.tar.gz) = 512196 bytes
