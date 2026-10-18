@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7091 2026/10/18 14:52:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7092 2026/10/18 14:53:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10604,3 +10604,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.13.4 [wiz 2026-10-18]
 	Updated devel/py-pluggy to 1.7.0 [wiz 2026-10-18]
 	Updated textproc/py-pymdown-extensions to 12.3 [wiz 2026-10-18]
+	Updated textproc/py-tomlkit to 0.15.2 [wiz 2026-10-18]
