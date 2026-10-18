@@ -1,0 +1,13 @@
+$NetBSD: patch-.._vendor_wgpu-core-deps-windows-linux-android-27.0.0_Cargo.toml,v 1.1 2026/10/18 13:05:42 pin Exp $
+
+Backport #8695 and #10316 to wgpu v27 series.
+
+--- ../vendor/wgpu-core-deps-windows-linux-android-27.0.0/Cargo.toml.orig	2026-10-17 12:04:14.283848274 +0000
++++ ../vendor/wgpu-core-deps-windows-linux-android-27.0.0/Cargo.toml
+@@ -38,5 +38,5 @@ path = "src/lib.rs"
+ name = "wgpu_core_deps_windows_linux_android"
+ path = "src/lib.rs"
+ 
+-[target.'cfg(any(windows, target_os = "linux", target_os = "android", target_os = "freebsd"))'.dependencies.wgpu-hal]
++[target.'cfg(any(windows, target_os = "linux", target_os = "android", target_os = "freebsd", target_os = "netbsd"))'.dependencies.wgpu-hal]
+ version = "27.0.0"

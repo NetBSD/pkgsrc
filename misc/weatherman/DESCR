@@ -1,0 +1,5 @@
+A weather app written entirely in Rust, desktop GUI and terminal UI.
+
+Weather Man ships two front-ends from a single Rust workspace, backed by a
+shared, framework-free core that doubles as a drop-in weather API provider
+library.

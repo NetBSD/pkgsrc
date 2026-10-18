@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/18 13:05:41 pin Exp $
+bin/weatherman
+bin/weatherman-tui
