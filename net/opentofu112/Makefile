@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/10/13 18:37:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/18 10:20:25 leot Exp $
 
-DISTNAME=	opentofu-1.12.6
+DISTNAME=	opentofu-1.12.8
 PKGNAME=	${DISTNAME:S/opentofu/&112/}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 GITHUB_PROJECT=	opentofu
@@ -14,7 +13,7 @@ COMMENT=	Open source infrastructure as code
 LICENSE=	mpl-2.0
 
 # fails to build with Go 1.27
-GO_VERSION_REQD=		126
+#GO_VERSION_REQD=		126
 
 SUBST_CLASSES+=			providers-prefix
 SUBST_STAGE.providers-prefix=	pre-configure
