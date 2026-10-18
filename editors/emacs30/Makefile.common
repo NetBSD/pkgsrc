@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2026/10/14 19:32:13 markd Exp $
+# $NetBSD: Makefile.common,v 1.7 2026/10/18 19:38:49 markd Exp $
 #
 # used by editors/emacs30/Makefile
 # used by editors/emacs30-nox11/Makefile
@@ -103,5 +103,5 @@ emacs-info-path:
 		> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
 	${ECHO} '  (list (expand-file-name "../info" (file-name-directory load-file-name)))))' \
 		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
-	${ECHO} '  (load "local-site-start" t))' \
+	${ECHO} '  (load "local-site-start" t)' \
 		>> ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/site-lisp/site-start.el
