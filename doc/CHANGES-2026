@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7074 2026/10/18 12:09:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7075 2026/10/18 12:10:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10587,3 +10587,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/forgejo version 16.0.6 [khorben 2026-10-18]
 	Updated net/opentofu112 to 1.12.8 [leot 2026-10-18]
 	Updated audio/chromaprint to 1.6.2 [wiz 2026-10-18]
+	Updated devel/gopls to 0.24.0 [wiz 2026-10-18]
