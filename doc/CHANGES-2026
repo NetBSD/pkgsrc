@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7072 2026/10/18 08:24:16 khorben Exp $
+$NetBSD: CHANGES-2026,v 1.7073 2026/10/18 10:20:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10585,3 +10585,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libunistring to 1.5 [wiz 2026-10-18]
 	Added security/sslx version 0.3.1 [pin 2026-10-18]
 	Added www/forgejo version 16.0.6 [khorben 2026-10-18]
+	Updated net/opentofu112 to 1.12.8 [leot 2026-10-18]
