@@ -1,8 +1,6 @@
-# $NetBSD: config.mk,v 1.1 2026/09/22 12:04:33 adam Exp $
+# $NetBSD: config.mk,v 1.2 2026/10/18 06:56:13 wiz Exp $
 
 # cd ${DESTDIR}${EGDIR}/fail2ban; find . -type f | sort | sed 's,^./,EGFILES+=\t,'
-EGFILES+=	action.d/__pycache__/smtp.cpython-314.opt-1.pyc
-EGFILES+=	action.d/__pycache__/smtp.cpython-314.pyc
 EGFILES+=	action.d/abuseipdb.conf
 EGFILES+=	action.d/apf.conf
 EGFILES+=	action.d/apprise.conf
