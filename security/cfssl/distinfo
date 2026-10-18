@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/10/04 09:22:10 iquiw Exp $
+$NetBSD: distinfo,v 1.5 2026/10/18 01:43:05 iquiw Exp $
 
 BLAKE2s (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.mod) = e74e05c10a619aa30a4bb0b22ff4cb43a0543615d24ce703721200b23d1d695e
 SHA512 (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.mod) = eef5b72a9dfc2633c370437ab332ebbe3bc64d7f9e8be477147901d2e5bc50bf87788ec3e38784eb3e8d62f0c30833d6806449e7ee03b7e3b8dfb766fd05fc40
@@ -6,9 +6,9 @@ Size (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.mod) =
 BLAKE2s (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.zip) = f90f32c057cc7f1f97e68bc402802c43d2dae97e92623dbd48f7403945d6bef8
 SHA512 (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.zip) = 585eeaffb9f349e62f03e5d5b10367b52d931c30d068a144af0c8d2fe13061a364844f8e25b0a0fb56c8a266d467dcfe6a2d9a90b96bf38f4c302dd5dbb66938
 Size (bitbucket.org_liamstask_goose_@v_v0.0.0-20150115234039-8488cc47d90c.zip) = 25558 bytes
-BLAKE2s (cfssl-1.7.0.tar.gz) = beb9480ef569fc296a4ea6d93e692bfbc915730137c8527237f36fadb1e28fdd
-SHA512 (cfssl-1.7.0.tar.gz) = 31fd2509e4fc99c83b7dca1b7faa3a7e0b16af442763cf50a6d5b67cdbdd09e85eebb1125db08eb6f4d6028c113d9e5242f5819dd4edf08bc23c4cd223ba5ef3
-Size (cfssl-1.7.0.tar.gz) = 7811706 bytes
+BLAKE2s (cfssl-1.7.1.tar.gz) = c752c5622799ee7d014d5d256037f0b2c128817e2b5187977a6d190ee415d481
+SHA512 (cfssl-1.7.1.tar.gz) = 34b88c3298bdc1026f2d51a9bec8df19683ec01fc40fcb791ecf499d20729e9197685af131ffdb5932ef99d56c344046d172da5e8b6a1b44cf8cc7d042275a59
+Size (cfssl-1.7.1.tar.gz) = 7812521 bytes
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
 Size (cloud.google.com_go_@v_v0.26.0.mod) = 27 bytes

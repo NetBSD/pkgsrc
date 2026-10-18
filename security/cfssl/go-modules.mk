@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2026/10/04 09:22:10 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/10/18 01:43:05 iquiw Exp $
 
 GO_MODULE_FILES+=	bitbucket.org/liamstask/goose/@v/v0.0.0-20150115234039-8488cc47d90c.mod
 GO_MODULE_FILES+=	bitbucket.org/liamstask/goose/@v/v0.0.0-20150115234039-8488cc47d90c.zip
