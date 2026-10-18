@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7070 2026/10/18 07:17:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7071 2026/10/18 08:01:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10583,3 +10583,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Cpanel-JSON-XS to 4.80 [wiz 2026-10-18]
 	Updated textproc/p5-Text-CSV_XS to 1.65 [wiz 2026-10-18]
 	Updated textproc/libunistring to 1.5 [wiz 2026-10-18]
+	Added security/sslx version 0.3.1 [pin 2026-10-18]
