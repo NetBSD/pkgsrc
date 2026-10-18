@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2026/09/28 14:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/18 13:01:45 pin Exp $
 
 DISTNAME=		noto-emoji-2.051.0.0.20260924
 PKGNAME=		${DISTNAME:S/emoji/emoji-ttf/}
+PKGREVISION=		1
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_GITHUB:=googlefonts/}
 GITHUB_PROJECT=		noto-emoji
@@ -18,10 +19,18 @@ NO_BUILD=		yes
 USE_LANGUAGES=		# none
 
 FONTSDIR=		share/fonts/X11/TTF
+VARIANTSDIR=		share/${PKGBASE}/variants
 
-INSTALLATION_DIRS=	${FONTSDIR}
+INSTALLATION_DIRS=	${FONTSDIR} ${VARIANTSDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/2D/fonts/*.ttf ${DESTDIR}${PREFIX}/${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/2D/fonts/NotoColorEmoji.ttf \
+		${DESTDIR}${PREFIX}/${FONTSDIR}
+.for f in Noto-COLRv1 Noto-COLRv1-emojicompat Noto-COLRv1-noflags \
+	NotoColorEmoji-emojicompat NotoColorEmoji-flagsonly \
+	NotoColorEmoji-noflags NotoColorEmoji_WindowsCompatible
+	${INSTALL_DATA} ${WRKSRC}/2D/fonts/${f}.ttf \
+		${DESTDIR}${PREFIX}/${VARIANTSDIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
