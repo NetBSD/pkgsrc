@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/05/18 10:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/18 14:26:35 wiz Exp $
 
-DISTNAME=	pluggy-1.6.0
+DISTNAME=	pluggy-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluggy/}
@@ -16,8 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 
 USE_LANGUAGES=	# none
 
-# as of 1.6.0
-# 3 failed, 121 passed
+# as of 1.7.0
+# 68 failed, 151 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
