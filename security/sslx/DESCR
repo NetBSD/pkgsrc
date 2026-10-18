@@ -1,0 +1,4 @@
+The modern way to work with certificates and TLS.
+
+A fast, beautiful replacement for common openssl commands. Single binary,
+zero config, pure Rust.
