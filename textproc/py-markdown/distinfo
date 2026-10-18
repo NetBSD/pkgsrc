@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2026/09/28 15:38:03 wiz Exp $
+$NetBSD: distinfo,v 1.34 2026/10/18 13:20:22 wiz Exp $
 
-BLAKE2s (markdown-3.11.tar.gz) = 9166d720ee7bbc17cf22a38e3fa369b2b3159de267b4a933154e7cac2ce51a18
-SHA512 (markdown-3.11.tar.gz) = 4368f4527c8af676c3d4df0e3c8fe0a7742a0f2468fcce74a5ca90cce42a19fe526b31b2325ad872ca9b7197a64d418da8c7599d94635bce0a25940cb337c5f3
-Size (markdown-3.11.tar.gz) = 485623 bytes
+BLAKE2s (markdown-3.11.1.tar.gz) = af9e7978a33dfdc269b648bb5d1770c0ea89962145b73d7a3f0d8879792d57a4
+SHA512 (markdown-3.11.1.tar.gz) = d62f4568149bf3b656a0b47eb354b8bd7dea414b04035e5f08ff80696270ce749093a5b4c6843e09f5ffd3a9e2be464c440821202d0c0d9d6d49a657683ad870
+Size (markdown-3.11.1.tar.gz) = 492927 bytes
