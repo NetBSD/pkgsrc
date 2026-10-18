@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7097 2026/10/18 16:32:33 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7098 2026/10/18 16:33:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10610,3 +10610,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/grafana to 13.2.4 [wiz 2026-10-18]
 	Updated misc/rozi to 0.0.31 [pin 2026-10-18]
 	Updated sysutils/xplr to 1.1.2 [pin 2026-10-18]
+	Updated textproc/xan to 0.61.0 [pin 2026-10-18]
