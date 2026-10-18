@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2026/10/18 08:23:58 khorben Exp $
+
+go linker does not like -L/usr/pkg/lib.
+
+--- Makefile.orig	2025-08-20 15:55:58.802859832 +0000
++++ Makefile
+@@ -111,7 +111,7 @@ STRIP ?= 1
+ ifeq ($(STRIP),1)
+ 	LDFLAGS := $(LDFLAGS) -s -w
+ endif
+-LDFLAGS := $(LDFLAGS) -X "main.ReleaseVersion=$(RELEASE_VERSION)" -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(FORGEJO_VERSION)" -X "main.Tags=$(TAGS)" -X "main.ForgejoVersion=$(FORGEJO_VERSION_API)"
++LDFLAGS := -X "main.ReleaseVersion=$(RELEASE_VERSION)" -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(FORGEJO_VERSION)" -X "main.Tags=$(TAGS)" -X "main.ForgejoVersion=$(FORGEJO_VERSION_API)"
+ 
+ LINUX_ARCHS ?= linux/amd64,linux/386,linux/arm-5,linux/arm-6,linux/arm64
+ 
