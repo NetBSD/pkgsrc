@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.19 2025/04/21 21:17:01 wiz Exp $
+$NetBSD: distinfo,v 1.20 2026/10/18 08:34:57 wiz Exp $
 
 BLAKE2s (es-0.9-alpha1.tar.gz) = 98e16fd1f4205f6f44d42ae439e806dcc6a5f5d236ba7304f636b781b254e58b
 SHA512 (es-0.9-alpha1.tar.gz) = ab33fbcd7673c4d40a2ff8750b6644827a78570203db56af5b2e5ba699feb50ebfafb652d82895ed40ecd22d4b33d987d1d669714242859a97584ab45fe7c5f2
 Size (es-0.9-alpha1.tar.gz) = 125913 bytes
-SHA1 (patch-aa) = 86c79243779566c16be156a4d89c41320c10b606
-SHA1 (patch-ab) = bd58fbbf71d5c9dc76bdc380cb7b93ad3f5f1c72
+SHA1 (patch-aa) = 4db76472949f54eea841c6ac7c0768b90c04e53e
+SHA1 (patch-ab) = bd62d280c7c79b8610f55509be414872dd2b8315
 SHA1 (patch-ac) = 823dc9324247e6c9ec6f9fd7e2f7a4f92f86120c
-SHA1 (patch-ad) = 6407ebce9aa59489a4c418da51a7443c40d16cd4
+SHA1 (patch-ad) = 6df3d97c2fa0df4f36e17c8f552fb419b404c45e
 SHA1 (patch-ae) = 616a51a6d2472554583b0a8888fca33bbfbfd1f0
 SHA1 (patch-af) = 2ca4b142961395328bce9423c0ca65ec4df25eed
-SHA1 (patch-ag) = adc7c22ebc2f35f76f85a1ef25b2a1a18a19898e
+SHA1 (patch-ag) = 613f968a257f2e540b81d34707250c8ce4e4ca68
 SHA1 (patch-ah) = 19427378a3e9a40681bad72921cd98f7a6b3a79d
 SHA1 (patch-ai) = 3d9beee005db42b4b7af1bc5529b23d1347a8778
