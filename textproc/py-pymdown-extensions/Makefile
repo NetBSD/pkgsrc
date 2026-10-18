@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/10/16 19:44:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/18 14:52:30 wiz Exp $
 
-DISTNAME=	pymdown_extensions-12.2
+DISTNAME=	pymdown_extensions-12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymdown-extensions/}
