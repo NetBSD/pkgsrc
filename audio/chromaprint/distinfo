@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/08/02 01:43:28 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/10/18 12:08:47 wiz Exp $
 
-BLAKE2s (chromaprint-1.6.1.tar.gz) = f96aed044de52c57b56069a3e35638ca39b23e1b156f0f0ed14f8b4e605e2790
-SHA512 (chromaprint-1.6.1.tar.gz) = ea9bf6c2542ac3648496c4a3f736b5707d98be03a4c882fb4eac00d67ea51df288b7663f31c7ae9677a02ca56db90d79619c1850a3882aaa725a260799af676b
-Size (chromaprint-1.6.1.tar.gz) = 1581744 bytes
+BLAKE2s (chromaprint-1.6.2.tar.gz) = 484a36bd4b0f2463f164c4b50937b73795fee4321d2b6ac2cd02cce4bad2c9a7
+SHA512 (chromaprint-1.6.2.tar.gz) = 91d47ba733641065aa9aef30fe2825354bd76c07e74e3d8ac291b04b0d3dea31a7d80256736d0d8b627d596bae72dddc2252c8ec79931599571e989de9792a8d
+Size (chromaprint-1.6.2.tar.gz) = 1587735 bytes
