@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7089 2026/10/18 14:25:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7090 2026/10/18 14:26:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10602,3 +10602,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-more-itertools to 11.2.1 [wiz 2026-10-18]
 	Updated textproc/py-pdf to 6.21.1 [wiz 2026-10-18]
 	Updated misc/py-platformdirs to 4.13.4 [wiz 2026-10-18]
+	Updated devel/py-pluggy to 1.7.0 [wiz 2026-10-18]
