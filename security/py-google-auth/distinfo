@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.103 2026/10/12 13:29:24 wiz Exp $
+$NetBSD: distinfo,v 1.104 2026/10/18 13:19:14 wiz Exp $
 
-BLAKE2s (google_auth-2.61.0.tar.gz) = 5ecc2efde6edd03a4e9ad1612ad30ae55b8f22f803b345d7f2e6446f881df28a
-SHA512 (google_auth-2.61.0.tar.gz) = 001518c8186cd83aa8dd4fb61f001d0446238c7ce074ab93a5bf3c2dcabf5bcdba8533aff7d0867ce19769d6ef0c79182b2d6135697cc3536ed85e518f46fc78
-Size (google_auth-2.61.0.tar.gz) = 398379 bytes
+BLAKE2s (google_auth-2.62.0.tar.gz) = dd070c89ee2a64ece9c24f18ff9c4f91c6edbaa4180c9e60e3a1fc59e2ec6acd
+SHA512 (google_auth-2.62.0.tar.gz) = 163ed40e72cb03dcb4ecb3b3cb8b61e60412c2f72e2ba81bccb06460d9cc05442fda7864725e398849725cf05124c151956d6756d2f20469a09e19c55e7224ca
+Size (google_auth-2.62.0.tar.gz) = 398180 bytes
