@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1945 2026/10/01 18:02:48 adam Exp $
+# $NetBSD: Makefile,v 1.1946 2026/10/18 08:24:35 khorben Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -137,6 +137,7 @@ SUBDIR+=	firefox153-l10n
 SUBDIR+=	firefox52
 SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox_decrypt
+SUBDIR+=	forgejo
 SUBDIR+=	freenginx
 SUBDIR+=	freenginx-devel
 SUBDIR+=	gallery
