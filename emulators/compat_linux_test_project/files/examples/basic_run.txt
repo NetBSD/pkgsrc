@@ -1,0 +1,57 @@
+# -----------------------------------------------------------------------------
+# Example: Bulk test run (testing all safe syscalls automatically)
+# -----------------------------------------------------------------------------
+# This example demonstrates how to run the entire LTP syscall suite on NetBSD.
+#
+# NOTE: Syscalls known to cause severe issues (e.g., kernel panics or system
+# hangs) are automatically skipped in this mode to ensure the test run finishes.
+# To test those specific syscalls, use the '-s' option.
+#
+# Prerequisite: The compat_linux_test_project package installed.
+#
+# 1. Run the script. We use '-r' to enable reproducible output (essential if
+#    we want to compare these logs later) and '-d' to specify the output directory:
+#
+# $ compat_linux_test_project -r -d /tmp/bulk_logs
+
+# Expected output (trimmed):
+
+Logs will be stored in: /tmp/bulk_logs
+Preparing block device required by some testcases...
+Mounting block device vnd0 from image /usr/pkg/libexec/compat_linux_test_project/test.img...
+Starting test run. This may take a while...
+==> No syscall filter given, testing every syscall in the index (this can take a long time)
+
+  -> abort
+syscall_test: abort01
+abort01.c:60: TPASS:
+abort01.c:63: TPASS:
+
+Summary:
+passed   2
+failed   0
+broken   0
+skipped  0
+warnings 1
+
+[snip] (output trimmed)
+
+Unmounting block device vnd0...
+Test run finished. Logs stored in: /tmp/bulk_logs
+
+# The script saves every log in the output directory, following a clean
+# hierarchical structure based on the syscall name.
+#
+# $ tree -F -L 3 /tmp/bulk_logs | head -n 12
+# /tmp/bulk_logs/
+# |-- abort/
+# |   `-- abort01.log
+# |-- accept/
+# |   |-- accept01.log
+# |   |-- accept02.log
+# |   `-- accept03.log
+# |-- accept4/
+# |   `-- accept4_01.log
+# |-- access/
+# |   |-- access01.log
+# |   |-- access02.log

@@ -1,0 +1,9 @@
+Tools to run the Linux Test Project (LTP) test suite on NetBSD, for
+testing the compat_linux compatibility layer.
+
+It automates fetching, building, and executing LTP tests, helping
+to identify missing syscalls, behavioral differences, and other
+issues in NetBSD's Linux compatibility subsystem.
+
+Warning: Building this package will load the compat_linux kernel
+module.

@@ -1,0 +1,84 @@
+# -----------------------------------------------------------------------------
+# Example: Comparing logs using -c / --compare-to
+# -----------------------------------------------------------------------------
+# This workflow is essential for spotting regressions, fixes, or new tests
+# after kernel updates. It compares a new set of logs against a reference baseline.
+#
+# Prerequisite: Runs should be executed with the reproducible flag ('-r').
+#
+# -----------------------------------------------------------------------------
+# Scenario A: Comparing against the default package reference
+# -----------------------------------------------------------------------------
+# If you don't specify a directory with -b, it defaults to the reference logs
+# shipped with the package.
+#
+# 1. Generate your current run:
+# $ compat_linux_test_project -r -d /tmp/current_run
+#
+# 2. Compare it against the default reference:
+# $ compat_linux_test_project -c /tmp/current_run
+
+# -----------------------------------------------------------------------------
+# Scenario B: Comparing against a custom baseline
+# -----------------------------------------------------------------------------
+# Useful if you are testing incremental changes and want to compare a new run
+# with a run you did before.
+#
+# 1. Generate the baseline run (done before your kernel changes):
+# $ compat_linux_test_project -r -d /tmp/my_baseline
+#
+# 2. Generate the current run (done after your kernel changes):
+# $ compat_linux_test_project -r -d /tmp/my_new_run
+#
+# 3. Compare them by passing the baseline directory to -c:
+# $ compat_linux_test_project -c /tmp/my_new_run -b /tmp/my_baseline
+
+# -----------------------------------------------------------------------------
+# Scenario C: Restricting comparison to specific syscalls
+# -----------------------------------------------------------------------------
+# You can combine '-c' with '-s' to limit the comparison to a specific subset
+# of syscalls. This is extremely useful if you have a full bulk run but only
+# want to analyze the results of one or two syscalls.
+#
+# $ compat_linux_test_project -c /tmp/my_new_run  -b /tmp/my_baseline -s readv
+
+# Expected output for comparison mode (trimmed):
+
+Comparison output will be stored in: /home/hb/compat/diff_logs
+Comparing logs:
+  reference: /home/hb/compat/tmp/my_baseline/
+  current:   /home/hb/compat/tmp/my_new_run/
+Analyzing testcases, this may take a while for large log sets...
+Comparison finished. Full summary saved to: /home/hb/compat/diff_logs_1/summary.log
+
+==================================================
+   COMPARISON SUMMARY
+==================================================
+
+[snip]
+
+==================================================
+   RESULTS
+==================================================
+
+regressed:        0
+fixed:            0
+changed:          0
+new:              2
+removed:          6
+
+# The script creates self-contained logs detailing the changes, categorized
+# into subdirectories. You don't need to hunt down the original files;
+# the diffs and full context are copied here:
+#
+# $ tree -F compared_logs/
+# compared_logs/
+# |-- changed/
+# |-- fixed/
+# |   `-- pipe/
+# |       `-- pipe02.log
+# |-- new/
+# |-- regressed/
+# |   `-- readv/
+# |       `-- readv02.log
+# `-- removed/

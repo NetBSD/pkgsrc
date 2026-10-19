@@ -1,0 +1,58 @@
+# -----------------------------------------------------------------------------
+# Example: Testing specific syscalls using -s / --syscall
+# -----------------------------------------------------------------------------
+# This mode allows you to isolate one or more specific syscalls instead of
+# running the full suite. It is highly recommended for quick validations,
+# debugging, or intentionally running risky syscalls that are skipped in bulk mode.
+#
+# 1. Run the script passing a single syscall or a comma-separated list to '-s':
+#
+# $ compat_linux_test_project -s read,pipe -d /tmp/sys_logs_isolated
+
+# Expected output (trimmed):
+
+Preparing block device required by some testcases...
+Mounting block device vnd0 from image /usr/pkg/libexec/compat_linux_test_project/test.img...
+Starting test run. This may take a while...
+Output will be stored in: /tmp/pipe_and_read
+==> Testing syscall: read
+syscall_test: read01
+
+[snip]
+
+Summary:
+passed   1
+failed   0
+broken   0
+skipped  0
+warnings 0
+
+[snip]
+
+==> Testing syscall: pipe
+syscall_test: pipe01
+
+[snip]
+
+Summary:
+passed   1
+failed   0
+broken   0
+skipped  0
+warnings 0
+
+[snip]
+
+Unmounting block device vnd0...
+Test run finished. Logs stored in: /tmp/pipe_and_read
+
+# The output directory will contain only the directories for the requested syscalls:
+#
+# $ tree -F /tmp/sys_logs_isolated
+# /tmp/sys_logs_isolated/
+# |-- pipe/
+# |   |-- pipe01.log
+# |   `-- pipe02.log
+# `-- read/
+#     |-- read01.log
+#     `-- read02.log

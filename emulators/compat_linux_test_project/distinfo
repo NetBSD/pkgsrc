@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/19 10:12:30 sborrill Exp $
+
+BLAKE2s (ltp-full-20260529.tar.xz) = e6cf1d416ea7602708509e96024b65e0e7898f3bed7b3c46db9a4b2d6bc56dcc
+SHA512 (ltp-full-20260529.tar.xz) = bd22af125edeadcc9f265ca61fa236581640f769ced567725df4a92c6e29ecf6f8352138ad890944ae56f5c207da540a3ab3383259ffa2358d14356099c4ad63
+Size (ltp-full-20260529.tar.xz) = 3377180 bytes

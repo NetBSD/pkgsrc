@@ -1,0 +1,40 @@
+# --- netfilter ---
+# CONFIG_NETFILTER_XT_MATCH_STATE is not set
+# CONFIG_IP_NF_TARGET_REJECT is not set
+
+# --- namespaces ---
+# CONFIG_USER_NS is not set
+# CONFIG_NET_NS is not set
+# CONFIG_PID_NS is not set
+# CONFIG_TIME_NS is not set
+
+# --- devices ---
+# CONFIG_BLK_DEV_LOOP is not set
+# CONFIG_BLK_DEV_RAM is not set
+# CONFIG_BLK_DEV_INTEGRITY is not set
+
+# --- filesystems ---
+# CONFIG_FS_VERITY is not set
+# CONFIG_QFMT_V2 is not set
+# CONFIG_XFS_QUOTA is not set
+# CONFIG_MANDATORY_FILE_LOCKING is not set
+
+# --- memmory ---
+# CONFIG_HWPOISON_INJECT is not set
+# CONFIG_MEMORY_FAILURE is not set
+# CONFIG_USERFAULTFD is not set
+# CONFIG_HAVE_ARCH_USERFAULTFD_WP is not set
+
+# --- misc ---
+# CONFIG_TLS is not set
+# CONFIG_DNOTIFY is not set
+# CONFIG_CHECKPOINT_RESTORE is not set
+# CONFIG_TRACING is not set
+# CONFIG_UBSAN_SIGNED_OVERFLOW is not set
+CONFIG_EVENTFD=y
+# CONFIG_BSD_PROCESS_ACCT is not set
+CONFIG_AIO=y
+
+# Basic features that NetBSD should support natively
+CONFIG_INET=y
+CONFIG_SWAP=y
