@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/19 08:39:42 wiz Exp $
+bin/ChiPass
+bin/ChiPass-cli
+bin/ChiPass-proxy
+share/applications/org.chipass.ChiPass.desktop
+share/icons/hicolor/256x256/apps/org.chipass.ChiPass.png
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-locked.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-monochrome-dark-locked.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-monochrome-dark.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-monochrome-light-locked.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-monochrome-light.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass-unlocked.svg
+share/icons/hicolor/scalable/apps/org.chipass.ChiPass-chipass.svg
+share/icons/hicolor/scalable/mimetypes/org.chipass.ChiPass-application-x-chipass.svg
+share/metainfo/org.chipass.ChiPass.metainfo.xml
+share/mime/packages/org.chipass.ChiPass-application-x-chipass.xml

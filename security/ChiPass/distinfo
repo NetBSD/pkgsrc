@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/10/19 08:39:42 wiz Exp $
+
+BLAKE2s (chipass-2026.09.0/ChiPass.tar.gz) = 587ffc5ccd44f465f250532a36110405f6c19e00385e0beac6b29ed09e4bf014
+SHA512 (chipass-2026.09.0/ChiPass.tar.gz) = 618dc6a8ca4fc4e1ea3f6863213050182661355911776eb5e37bc336023b33a646943632c708cb2c696ced051dd527c8c52026bde9ec37b51d2829acadb8e07a
+Size (chipass-2026.09.0/ChiPass.tar.gz) = 12835830 bytes
+SHA1 (patch-src_CMakeLists.txt) = 831869f10c193ef0bdbf078267e72e0b8e634e01

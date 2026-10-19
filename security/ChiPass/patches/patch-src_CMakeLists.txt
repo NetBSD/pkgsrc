@@ -1,0 +1,20 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2026/10/19 08:39:42 wiz Exp $
+
+* Patch to fix reference to QT6 translation directory on NetBSD.
+
+--- src/CMakeLists.txt.orig	2026-09-10 23:25:09.000000000 +0000
++++ src/CMakeLists.txt
+@@ -223,11 +223,11 @@ cmake_path(ABSOLUTE_PATH QT6_INSTALL_TRA
+   BASE_DIRECTORY ${QT6_INSTALL_PREFIX}
+   OUTPUT_VARIABLE qt_translations_dir
+ )
+-message(VERBOSE "Using Qt6 translations: ${qt_translations_dir}")
+-file(GLOB qtbase_qm_files ${qt_translations_dir}/qtbase_*.qm)
++message(VERBOSE "Using Qt6 translations: @PREFIX@/qt6/translations")
++file(GLOB qtbase_qm_files @PREFIX@/qt6/translations/qtbase_*.qm)
+ qt6_add_resources(ChiPass_all "i18n_qtbase"
+   PREFIX /i18n
+-  BASE ${qt_translations_dir}
++  BASE @PREFIX@/qt6/translations
+   FILES ${qtbase_qm_files}
+ )
