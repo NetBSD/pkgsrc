@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2026/09/30 07:22:22 adam Exp $
+# $NetBSD: Makefile,v 1.38 2026/10/19 12:16:36 adam Exp $
 
-DISTNAME=	wrapt-2.5.0
+DISTNAME=	wrapt-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wrapt/}
