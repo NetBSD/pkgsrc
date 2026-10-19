@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7111 2026/10/19 11:37:16 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7112 2026/10/19 11:49:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10634,3 +10634,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/pcsc-lite to 2.5.3 [adam 2026-10-19]
 	Updated devel/ccache to 4.14.2 [adam 2026-10-19]
 	Updated security/py-passlib to 1.9.4 [adam 2026-10-19]
+	Updated devel/pkgconf to 3.0.10 [adam 2026-10-19]
+	Updated security/vaultwarden to 1.37.4 [adam 2026-10-19]
