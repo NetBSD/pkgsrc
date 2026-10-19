@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/09/29 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/10/19 23:17:46 gutteridge Exp $
 
 DISTNAME=	rep-gtk_0.90.8.3
 PKGNAME=	${DISTNAME:S/gtk_/gtk2-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://www.aydogan.net/distfiles/x11/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sawfish.wikia.com/
+HOMEPAGE=	https://sawfish.wikia.com/
 COMMENT=	GTK2 librep bindings (used by wm/sawfish)
 LICENSE=	gnu-gpl-v2
 
