@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/09/30 14:29:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.70 2026/10/19 23:09:37 gutteridge Exp $
 #
 
 DISTNAME=		librep_0.92.7
@@ -24,6 +24,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
 CONFIGURE_ARGS+=	--enable-static
+
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 .include "../../mk/bsd.prefs.mk"
 

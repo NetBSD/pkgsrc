@@ -1,0 +1,54 @@
+$NetBSD: patch-configure,v 1.1 2026/10/19 23:09:37 gutteridge Exp $
+
+Modernize C tests to fix builds with GCC >= 14.
+
+--- configure.orig	2017-08-25 20:05:31.000000000 +0000
++++ configure
+@@ -14798,7 +14798,8 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-main () { exit (!(sizeof (int) >= sizeof (void *)));}
++#include <stdlib.h>
++int main () { exit (!(sizeof (int) >= sizeof (void *)));}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+   with_value_type=int
+@@ -14817,7 +14818,8 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-main () { exit (!(sizeof (long int) >= sizeof (void *)));}
++#include <stdlib.h>
++int main () { exit (!(sizeof (long int) >= sizeof (void *)));}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+   with_value_type="long int"
+@@ -14836,7 +14838,8 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-main () { exit (!(sizeof (long long int) >= sizeof (void *)));}
++#include <stdlib.h>
++int main () { exit (!(sizeof (long long int) >= sizeof (void *)));}
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+   with_value_type="long long int"
+@@ -14877,7 +14880,8 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
+-	      main () {
++#include <stdlib.h>
++int main () {
+ 		FILE *f = fopen ("conftestval", "w");
+ 		if (!f) exit (1);
+ 		fprintf (f, "%d\n", sizeof (${with_value_type}));
+@@ -15122,6 +15126,7 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++ #include <stdlib.h>
+  int level = 1;
+ 	       void inner (char *foo) { char bar;
+ 		 if (level) { --level; inner (foo); }
