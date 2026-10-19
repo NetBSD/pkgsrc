@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/10/20 10:12:42 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/19 15:45:54 adam Exp $
 
-DISTNAME=	rcssmin-1.2.2
+DISTNAME=	rcssmin-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rcssmin/}
