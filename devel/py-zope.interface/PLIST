@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/15 11:46:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/19 12:13:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -120,6 +120,9 @@ ${PYSITELIB}/zope/interface/tests/test_advice.pyo
 ${PYSITELIB}/zope/interface/tests/test_compile_flags.py
 ${PYSITELIB}/zope/interface/tests/test_compile_flags.pyc
 ${PYSITELIB}/zope/interface/tests/test_compile_flags.pyo
+${PYSITELIB}/zope/interface/tests/test_coptimizations_declarations_import.py
+${PYSITELIB}/zope/interface/tests/test_coptimizations_declarations_import.pyc
+${PYSITELIB}/zope/interface/tests/test_coptimizations_declarations_import.pyo
 ${PYSITELIB}/zope/interface/tests/test_declarations.py
 ${PYSITELIB}/zope/interface/tests/test_declarations.pyc
 ${PYSITELIB}/zope/interface/tests/test_declarations.pyo
@@ -138,6 +141,9 @@ ${PYSITELIB}/zope/interface/tests/test_interface.pyo
 ${PYSITELIB}/zope/interface/tests/test_interfaces.py
 ${PYSITELIB}/zope/interface/tests/test_interfaces.pyc
 ${PYSITELIB}/zope/interface/tests/test_interfaces.pyo
+${PYSITELIB}/zope/interface/tests/test_lookup_concurrency.py
+${PYSITELIB}/zope/interface/tests/test_lookup_concurrency.pyc
+${PYSITELIB}/zope/interface/tests/test_lookup_concurrency.pyo
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.py
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.pyc
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.pyo
