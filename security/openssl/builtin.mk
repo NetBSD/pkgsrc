@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.52 2024/01/13 20:07:34 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.53 2026/10/19 23:19:36 gutteridge Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -88,7 +88,10 @@ USE_BUILTIN.openssl=		${IS_BUILTIN.openssl}
 .    if defined(BUILTIN_PKG.openssl) && \
         ${IS_BUILTIN.openssl:tl} == yes
 USE_BUILTIN.openssl=		yes
-### take care builtin check case, BUILDLINK_API_DEPENDS may not be defined yet.
+###
+### Take care with the built-in check case, BUILDLINK_API_DEPENDS may not be
+### defined yet.
+###
 CHECK_BUILTIN.openssl?=		no
 .      if ${CHECK_BUILTIN.openssl:tl} == yes
 BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.1.1
@@ -145,7 +148,7 @@ SSLDIR=	/etc/openssl
 .    elif ${OPSYS} == "Linux"
 .      if exists(${_CROSS_DESTDIR:U}/etc/pki/tls)
 # Some distributions have moved to /etc/pki/tls, with incomplete
-# symlinks from /etc/ssl.  Prefer the new location if it exists
+# symlinks from /etc/ssl.  Prefer the new location if it exists.
 SSLDIR=	/etc/pki/tls
 .      else
 SSLDIR=	/etc/ssl 		# standard location
@@ -167,7 +170,7 @@ SSLCERTS=	${SSLDIR}/certs
 # Some systems use CA bundles instead of files and hashed symlinks.
 # Continue to define SSLCERTS because it's unclear if that's the
 # directory that has one file per cert, or the directory that contains
-# trust anchor config in some fortm.
+# trust anchor config in some form.
 .  if exists(${_CROSS_DESTDIR:U}${SSLDIR}/certs/ca-bundle.crt)
 SSLCERTBUNDLE=	${SSLDIR}/certs/ca-bundle.crt
 .  endif
@@ -175,8 +178,8 @@ SSLKEYS=	${SSLDIR}/private
 
 BUILD_DEFS+=	SSLDIR SSLCERTS SSLCERTBUNDLE SSLKEYS
 
-# create pc files for builtin version; other versions assumed to contain them
-# If we are using the builtin version, check whether it has a *.pc
+# Create pc files for built-in version; other versions assumed to contain them.
+# If we are using the built-in version, check whether it has *.pc
 # files or not.  If the latter, generate fake ones.
 .  if ${USE_BUILTIN.openssl:tl} == yes
 BUILDLINK_TARGETS+=	openssl-fake-pc
