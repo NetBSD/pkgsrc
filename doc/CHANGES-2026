@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7120 2026/10/19 15:56:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7121 2026/10/19 20:32:02 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10663,3 +10663,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xarray to 2026.9.0 [adam 2026-10-19]
 	Updated net/py-gevent to 26.9.0 [adam 2026-10-19]
 	Updated net/py-geventhttpclient to 2.6.1 [adam 2026-10-19]
+	Updated devel/libagcre to 20261017 [agc 2026-10-19]
+	Updated textproc/agcre to 20261017 [agc 2026-10-19]
