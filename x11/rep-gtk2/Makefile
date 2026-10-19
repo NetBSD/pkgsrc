@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2026/10/19 23:17:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2026/10/19 23:23:59 gutteridge Exp $
 
 DISTNAME=	rep-gtk_0.90.8.3
 PKGNAME=	${DISTNAME:S/gtk_/gtk2-/}
@@ -16,6 +16,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config automake autoconf autoreconf
 PKGCONFIG_OVERRIDE=	rep-gtk.pc.in
+
+CFLAGS+=	-Wno-implicit-function-declaration -Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-int-conversion
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
