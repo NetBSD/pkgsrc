@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7106 2026/10/19 08:40:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7107 2026/10/19 09:28:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10624,3 +10624,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/goaccess to 1.12 [tm 2026-10-19]
 	Added audio/fooyin version 0.13.1 [wiz 2026-10-19]
 	Added security/ChiPass version 2026.09.0 [wiz 2026-10-19]
+	Updated lang/nodejs to 26.12.0 [adam 2026-10-19]
+	Updated lang/nodejs24 to 24.22.0 [adam 2026-10-19]
