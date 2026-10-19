@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7114 2026/10/19 12:14:20 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7115 2026/10/19 12:19:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10644,3 +10644,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-zope.hookable to 8.4 [adam 2026-10-19]
 	Updated devel/py-zope.i18nmessageid to 8.4 [adam 2026-10-19]
 	Updated devel/py-zope.interface to 8.7 [adam 2026-10-19]
+	Updated security/py-certifi to 2026.10.18 [adam 2026-10-19]
+	Updated devel/py-wrapt to 2.5.1 [adam 2026-10-19]
+	Updated databases/py-tortoise-orm to 1.1.9 [adam 2026-10-19]
+	Updated devel/py-test-mock to 3.17.0 [adam 2026-10-19]
