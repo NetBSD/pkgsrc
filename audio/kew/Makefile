@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2026/10/13 18:22:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.39 2026/10/19 14:09:24 ktnb Exp $
 
 DISTNAME=	kew-4.4.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ravachol/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DIST_SUBDIR=	kew
+# added due to mix up in the git tag for 4.4.1 release, remove on
+# next update
+DIST_SUBDIR=	kew-${PKGVERSION_NOREV}
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/ravachol/kew/
