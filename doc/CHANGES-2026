@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7104 2026/10/19 07:36:45 tm Exp $
+$NetBSD: CHANGES-2026,v 1.7105 2026/10/19 08:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10622,3 +10622,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/buf to 1.74.0 [adam 2026-10-19]
 	Updated sysutils/znapzend to 0.23.6 [tm 2026-10-19]
 	Updated www/goaccess to 1.12 [tm 2026-10-19]
+	Added audio/fooyin version 0.13.1 [wiz 2026-10-19]
