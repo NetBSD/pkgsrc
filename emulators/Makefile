@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2026/07/16 11:03:32 nia Exp $
+# $NetBSD: Makefile,v 1.383 2026/10/19 10:13:32 sborrill Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -46,6 +46,7 @@ SUBDIR+=	compat61
 SUBDIR+=	compat61-x11
 SUBDIR+=	compat80
 SUBDIR+=	compat90
+SUBDIR+=	compat_linux_test_project
 SUBDIR+=	darwin_lib
 SUBDIR+=	dega
 SUBDIR+=	dgen
