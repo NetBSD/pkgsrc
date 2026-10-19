@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2026/10/19 06:53:57 kikadf Exp $
+# $NetBSD: Makefile,v 1.94 2026/10/19 07:15:40 wiz Exp $
 
 DISTNAME=	libuv-1.53.0
 PKGREVISION=	1
@@ -19,9 +19,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake pkg-config
 USE_FEATURES+=	strnlen
 GNU_CONFIGURE=	yes
-# 3 test failures as of 1.31.0
-# https://github.com/libuv/libuv/issues/2437
-# connect_unspecified, tcp_open, udp_open
+# 1 test failures as of 1.53.0
+# connect_unspecified
 TEST_ENV=	UV_RUN_AS_ROOT=yes
 TEST_TARGET=	check
 
