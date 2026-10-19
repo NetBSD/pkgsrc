@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7107 2026/10/19 09:28:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7108 2026/10/19 10:18:41 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10626,3 +10626,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/ChiPass version 2026.09.0 [wiz 2026-10-19]
 	Updated lang/nodejs to 26.12.0 [adam 2026-10-19]
 	Updated lang/nodejs24 to 24.22.0 [adam 2026-10-19]
+	Added emulators/compat_linux_test_project 20260529-0.10 [sborrill 2026-10-19]
