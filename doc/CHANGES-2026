@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7116 2026/10/19 12:25:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7117 2026/10/19 14:05:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10652,3 +10652,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httpcore2 to 2.14.0 [adam 2026-10-19]
 	Updated www/py-httpx2 to 2.14.0 [adam 2026-10-19]
 	Updated www/py-httptools to 0.9.0 [adam 2026-10-19]
+	Updated mail/roundcube to 1.6.20 [taca 2026-10-19]
