@@ -1,10 +1,23 @@
-$NetBSD: patch-src_unix_process.c,v 1.1 2026/10/01 08:43:33 jperkin Exp $
+$NetBSD: patch-src_unix_process.c,v 1.2 2026/10/19 06:53:57 kikadf Exp $
 
 Backport https://github.com/libuv/libuv/pull/5284
 
---- src/unix/process.c.orig	2026-10-01 08:16:59.915766284 +0000
+On NetBSD use fork instead of posix_spawn, while fix not available for:
+PR kern/60653: posix_spawn(3) causes incorrect stack base information
+
+--- src/unix/process.c.orig	2026-09-24 14:33:47.000000000 +0000
 +++ src/unix/process.c
-@@ -610,11 +610,14 @@ static int uv__spawn_set_posix_spawn_fil
+@@ -490,6 +490,9 @@ static void uv__spawn_init_posix_spawn(v
+    * Unices in that it returns 0 instead of EACCES or ENOENT for paths
+    * that don't exist. See https://github.com/libuv/libuv/issues/5240.
+    */
++#elif defined(__NetBSD__)
++  /* PR kern/60653: posix_spawn(3) causes incorrect stack base information
++   */
+ #else
+ #if !defined(__linux__) && !defined(_AIX) && !defined(__PASE__)
+   posix_spawn_works = 1;
+@@ -610,11 +613,14 @@ static int uv__spawn_set_posix_spawn_fil
      const uv_process_options_t* options,
      int stdio_count,
      int (*pipes)[2]) {
@@ -19,7 +32,7 @@ Backport https://github.com/libuv/libuv/pull/5284
    err = posix_spawn_file_actions_init(actions);
    if (err != 0) {
      /* If initialization fails, no need to de-init, just return */
-@@ -633,14 +636,25 @@ static int uv__spawn_set_posix_spawn_fil
+@@ -633,14 +639,25 @@ static int uv__spawn_set_posix_spawn_fil
        goto error;
    }
  
@@ -47,7 +60,7 @@ Backport https://github.com/libuv/libuv/pull/5284
  #if defined(__APPLE__) || defined(__linux__)
      if (use_fd < 0 || use_fd >= fd)
        continue;
-@@ -656,24 +670,24 @@ static int uv__spawn_set_posix_spawn_fil
+@@ -656,24 +673,24 @@ static int uv__spawn_set_posix_spawn_fil
        /* If we were not setting POSIX_SPAWN_CLOEXEC_DEFAULT, we would need to
         * also consider whether fcntl(fd, F_GETFD) returned without the
         * FD_CLOEXEC flag set. */
@@ -76,7 +89,7 @@ Backport https://github.com/libuv/libuv/pull/5284
      if (use_fd < 0) {
        if (fd >= 3)
          continue;
-@@ -702,20 +716,21 @@ static int uv__spawn_set_posix_spawn_fil
+@@ -702,20 +719,21 @@ static int uv__spawn_set_posix_spawn_fil
      if (err != 0)
        goto error;
  
@@ -103,7 +116,7 @@ Backport https://github.com/libuv/libuv/pull/5284
            break;
      }
      if (fd2 < fd)
-@@ -727,9 +742,13 @@ static int uv__spawn_set_posix_spawn_fil
+@@ -727,9 +745,13 @@ static int uv__spawn_set_posix_spawn_fil
        goto error;
    }
  
@@ -117,7 +130,7 @@ Backport https://github.com/libuv/libuv/pull/5284
    (void) posix_spawn_file_actions_destroy(actions);
    return err;
  }
-@@ -862,7 +881,6 @@ static int uv__spawn_and_init_child_posi
+@@ -862,7 +884,6 @@ static int uv__spawn_and_init_child_posi
    if (err != 0)
      goto error;
  
