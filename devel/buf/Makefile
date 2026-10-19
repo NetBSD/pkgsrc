@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/10/13 18:37:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/19 05:45:07 adam Exp $
 
-DISTNAME=	buf-1.73.0
-PKGREVISION=	1
+DISTNAME=	buf-1.74.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bufbuild/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
