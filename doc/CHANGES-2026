@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7119 2026/10/19 15:44:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7120 2026/10/19 15:56:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10659,3 +10659,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/gammu to 1.45.1 [adam 2026-10-19]
 	Updated comms/py-gammu to 3.5.0 [adam 2026-10-19]
 	Updated devel/py-test-env to 1.8.1 [adam 2026-10-19]
+	Updated www/py-rcssmin to 1.3.0 [adam 2026-10-19]
+	Updated math/py-xarray to 2026.9.0 [adam 2026-10-19]
+	Updated net/py-gevent to 26.9.0 [adam 2026-10-19]
+	Updated net/py-geventhttpclient to 2.6.1 [adam 2026-10-19]
