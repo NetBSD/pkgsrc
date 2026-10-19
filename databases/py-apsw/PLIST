@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/04/17 12:50:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/19 05:40:37 adam Exp $
 bin/apsw-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -58,9 +58,6 @@ ${PYSITELIB}/apsw/tests/carray.pyo
 ${PYSITELIB}/apsw/tests/extratest.py
 ${PYSITELIB}/apsw/tests/extratest.pyc
 ${PYSITELIB}/apsw/tests/extratest.pyo
-${PYSITELIB}/apsw/tests/fork_checker.py
-${PYSITELIB}/apsw/tests/fork_checker.pyc
-${PYSITELIB}/apsw/tests/fork_checker.pyo
 ${PYSITELIB}/apsw/tests/ftstests.py
 ${PYSITELIB}/apsw/tests/ftstests.pyc
 ${PYSITELIB}/apsw/tests/ftstests.pyo
