@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.730 2026/07/22 15:25:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.731 2026/10/19 08:35:07 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -122,6 +122,7 @@ SUBDIR+=	flac2mp3
 SUBDIR+=	flactag
 SUBDIR+=	flite
 SUBDIR+=	fluidsynth
+SUBDIR+=	fooyin
 SUBDIR+=	forked-daapd
 SUBDIR+=	freac
 SUBDIR+=	freealut
