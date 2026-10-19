@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/08/31 10:26:20 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/10/19 12:06:41 adam Exp $
 
-BLAKE2s (joserfc-1.7.5.tar.gz) = 23e687d04d3ed39f7e678dfbada13f194a6f00f806d30aa31c57d19deb383efd
-SHA512 (joserfc-1.7.5.tar.gz) = 584523420e097cfd26c458749482f6d8fa596c81ba885471d48a51653986625047a058b30fd07e99414d6819a53897812975339e24ce74a619c80dad8c04d008
-Size (joserfc-1.7.5.tar.gz) = 234990 bytes
+BLAKE2s (joserfc-1.7.7.tar.gz) = 554f1efeec46ea449c7ba2cb8236530c18758293ba8dfdc85ae5743c37cd3da4
+SHA512 (joserfc-1.7.7.tar.gz) = b9269ad90b8eef9f04bb7ad66a70104c5e07af7e6b5f458d8b1588a005f001cd93832e8ffdde05d05641ee4ebdba85350b3fab3343b29126a90436816c280b14
+Size (joserfc-1.7.7.tar.gz) = 237446 bytes
