@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7110 2026/10/19 11:29:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7111 2026/10/19 11:37:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10632,3 +10632,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lazygit to 0.66.2 [adam 2026-10-19]
 	Updated net/rclone to 1.75.2 [adam 2026-10-19]
 	Updated security/pcsc-lite to 2.5.3 [adam 2026-10-19]
+	Updated devel/ccache to 4.14.2 [adam 2026-10-19]
+	Updated security/py-passlib to 1.9.4 [adam 2026-10-19]
