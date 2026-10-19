@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7102 2026/10/19 05:45:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7103 2026/10/19 07:30:35 tm Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10620,3 +10620,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lemon to 1.0.3.54.1 [adam 2026-10-19]
 	Updated databases/py-apsw to 3.54.1.0 [adam 2026-10-19]
 	Updated devel/buf to 1.74.0 [adam 2026-10-19]
+	Updated sysutils/znapzend to 0.23.6 [tm 2026-10-19]
