@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2026/10/19 23:09:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.71 2026/10/19 23:11:27 gutteridge Exp $
 #
 
 DISTNAME=		librep_0.92.7
@@ -9,7 +9,7 @@ MASTER_SITES=		https://www.aydogan.net/distfiles/lang/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sawfish.wikia.com/
+#HOMEPAGE=		http://sawfish.wikia.com/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 LICENSE=		gnu-gpl-v2
 
