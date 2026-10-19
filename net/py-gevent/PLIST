@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/09/01 13:09:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/10/19 15:51:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -551,6 +551,9 @@ ${PYSITELIB}/gevent/tests/test__issue1686.pyo
 ${PYSITELIB}/gevent/tests/test__issue1864.py
 ${PYSITELIB}/gevent/tests/test__issue1864.pyc
 ${PYSITELIB}/gevent/tests/test__issue1864.pyo
+${PYSITELIB}/gevent/tests/test__issue2013.py
+${PYSITELIB}/gevent/tests/test__issue2013.pyc
+${PYSITELIB}/gevent/tests/test__issue2013.pyo
 ${PYSITELIB}/gevent/tests/test__issue230.py
 ${PYSITELIB}/gevent/tests/test__issue230.pyc
 ${PYSITELIB}/gevent/tests/test__issue230.pyo
@@ -605,6 +608,12 @@ ${PYSITELIB}/gevent/tests/test__monkey.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.py
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.pyo
+${PYSITELIB}/gevent/tests/test__monkey_fork_atomic.py
+${PYSITELIB}/gevent/tests/test__monkey_fork_atomic.pyc
+${PYSITELIB}/gevent/tests/test__monkey_fork_atomic.pyo
+${PYSITELIB}/gevent/tests/test__monkey_futures_thread_fork.py
+${PYSITELIB}/gevent/tests/test__monkey_futures_thread_fork.pyc
+${PYSITELIB}/gevent/tests/test__monkey_futures_thread_fork.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.py
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.pyo
@@ -773,6 +782,9 @@ ${PYSITELIB}/gevent/tests/test__threading_no_monkey.pyo
 ${PYSITELIB}/gevent/tests/test__threading_patched_local.py
 ${PYSITELIB}/gevent/tests/test__threading_patched_local.pyc
 ${PYSITELIB}/gevent/tests/test__threading_patched_local.pyo
+${PYSITELIB}/gevent/tests/test__threading_shutdown_atexit.py
+${PYSITELIB}/gevent/tests/test__threading_shutdown_atexit.pyc
+${PYSITELIB}/gevent/tests/test__threading_shutdown_atexit.pyo
 ${PYSITELIB}/gevent/tests/test__threading_vs_settrace.py
 ${PYSITELIB}/gevent/tests/test__threading_vs_settrace.pyc
 ${PYSITELIB}/gevent/tests/test__threading_vs_settrace.pyo
