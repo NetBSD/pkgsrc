@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:52 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:04 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -90,13 +90,13 @@ inode is seen (new cpio).</p>
 <p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver</b> functions help by
 providing a unified interface and handling the complexity
-behind the scene.</p>
+behind the scenes.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver</b> functions assume that
 <i>archive_entry</i> instances have valid nlinks, inode and
-device values. The inode and device value is used to match
-entries. The nlinks value is used to determined if all
+device values. The inode and device values are used to match
+entries. The nlinks value is used to determine if all
 references have been found and if the internal references
 can be recycled.</p>
 
@@ -116,10 +116,10 @@ entries first.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkify</b>() function is the core of
-<b>archive_entry_linkresolver</b>. The <b>entry</b>()
-argument points to the <i>archive_entry</i> that should be
-written. Depending on the strategy one of the following
-actions is taken:</p>
+<b>archive_entry_linkresolver</b>. The <i>entry</i> argument
+points to the <i>archive_entry</i> that should be written.
+Depending on the strategy one of the following actions is
+taken:</p>
 
 <p style="margin-top: 1em">1.</p>
 

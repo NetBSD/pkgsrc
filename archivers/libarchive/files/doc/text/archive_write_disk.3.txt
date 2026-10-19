@@ -219,11 +219,11 @@
        In particular, the directory 4maa24m is created as well as the final  object
        4mbb24m.	 In theory, this can be exploited to create an entire directory hi‐
        erarchy	with  a	 single request.  Of course, this does not work if the
-       1mARCHIVE_EXTRACT_NODOTDOT 22moption is specified.
+       1mARCHIVE_EXTRACT_SECURE_NODOTDOT 22moption is specified.
 
        Implicit directories are always created obeying the current umask.  Ex‐
        plicit  objects	are  created  obeying	the   current	umask	unless
-       1mARCHIVE_EXTRACT_PERM  22mis specified, in which case they current umask is
+       1mARCHIVE_EXTRACT_PERM  22mis  specified, in which case the current umask is
        ignored.
 
        SGID and SUID bits are restored only if	the  correct  user  and	 group

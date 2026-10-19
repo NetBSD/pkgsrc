@@ -63,8 +63,8 @@
 	       the mode field in the inode representing the file.   These  are
 	       the  IALLOC  flag,  which shows that the inode entry is in use,
 	       and the ILARG flag, which shows that the file it represents  is
-	       large  enough  to  have	indirect blocks pointers in the inode.
-	       The mode is decoded as follows:
+	       large enough to have indirect block pointers in the inode.  The
+	       mode is decoded as follows:
 
 	       0100000	IALLOC flag - irrelevant to cpio.
 	       0060000	This masks the file type bits.
@@ -75,69 +75,69 @@
 	       0004000	SUID bit.
 	       0002000	SGID bit.
 	       0001000	Sticky bit.
-	       0000777	The lower 9 bits  specify  read/write/execute  permis‐
-			sions  for  world,  group, and user following standard
+	       0000777	The  lower  9  bits specify read/write/execute permis‐
+			sions for world, group, and  user  following  standard
 			POSIX conventions.
 
        4mh_uid24m, 4mh_gid0m
 	       The numeric user id and group id of the owner.
 
        4mh_nlink0m
-	       The number of links to this file.  Directories  always  have  a
+	       The  number  of	links to this file.  Directories always have a
 	       value of at least two here.  Note that hardlinked files include
 	       file data with every copy in the archive.
 
        4mh_majmin0m
-	       For  block  special  and	 character special entries, this field
+	       For block special and character	special	 entries,  this	 field
 	       contains the associated device number, with the major number in
-	       the high byte, and the minor number in the low byte.   For  all
-	       other  entry types, it should be set to zero by writers and ig‐
+	       the  high  byte, and the minor number in the low byte.  For all
+	       other entry types, it should be set to zero by writers and  ig‐
 	       nored by readers.
 
        4mh_mtime0m
-	       Modification time of the file, indicated as the number of  sec‐
-	       onds  since  the	 start	of  the epoch, 00:00:00 UTC January 1,
+	       Modification  time of the file, indicated as the number of sec‐
+	       onds since the start of the  epoch,  00:00:00  UTC  January  1,
 	       1970.
 
        4mh_namesize0m
-	       The number of bytes in the pathname that	 follows  the  header.
+	       The  number  of	bytes in the pathname that follows the header.
 	       This count includes the trailing NUL byte.
 
        4mh_filesize0m
 	       The size of the file.  Note that this archive format is limited
-	       to  16 megabyte file sizes, because PWB UNIX, like 6th Edition,
-	       only used an unsigned 24 bit integer for the file  size	inter‐
+	       to 16 megabyte file sizes, because PWB UNIX, like 6th  Edition,
+	       only  used  an unsigned 24 bit integer for the file size inter‐
 	       nally.
 
-       The  pathname  immediately  follows the fixed header.  If 1mh_namesize 22mis
+       The pathname immediately follows the fixed header.   If	1mh_namesize  22mis
        odd, an additional NUL byte is added after the pathname.	 The file data
-       is then appended, again with an additional NUL appended	if  needed  to
+       is  then	 appended,  again with an additional NUL appended if needed to
        get the next header at an even offset.
 
-       Hardlinked  files  are  not given special treatment; the full file con‐
+       Hardlinked files are not given special treatment; the  full  file  con‐
        tents are included with each copy of the file.
 
    1mNew Binary Format0m
-       The new binary 1mcpio 22mformat showed up when cpio was	adopted	 into  late
-       7th  Edition UNIX.  It is exactly like the PWB binary format, described
+       The  new	 binary	 1mcpio 22mformat showed up when cpio was adopted into late
+       7th Edition UNIX.  It is exactly like the PWB binary format,  described
        above, except for three changes:
 
-       First, UNIX now ran on more than one hardware type, so  the  endianness
-       of  16 bit integers must be determined by observing the magic number at
-       the start of the header.	 The 32 bit integers are still	always	stored
-       with  the most significant word first, though, so each of those two, in
-       the struct shown above, was stored as an array of two 16 bit  integers,
-       in  the	traditional order.  Those 16 bit integers, like all the others
-       in the struct, were accessed using a macro that byte  swapped  them  if
+       First,  UNIX  now ran on more than one hardware type, so the endianness
+       of 16 bit integers must be determined by observing the magic number  at
+       the  start  of the header.  The 32 bit integers are still always stored
+       with the most significant word first, though, so each of those two,  in
+       the  struct shown above, was stored as an array of two 16 bit integers,
+       in the traditional order.  Those 16 bit integers, like all  the	others
+       in  the	struct,	 were accessed using a macro that byte swapped them if
        necessary.
 
-       Next,  7th  Edition  had	 more  file types to store, and the IALLOC and
+       Next, 7th Edition had more file types to	 store,	 and  the  IALLOC  and
        ILARG flag bits were re-purposed to accommodate these.  The revised use
        of the various bits is as follows:
 
        0170000	This masks the file type bits.
        0140000	File type value for sockets.
-       0120000	File type value for symbolic links.  For symbolic  links,  the
+       0120000	File  type  value for symbolic links.  For symbolic links, the
 		link body is stored as file data.
        0100000	File type value for regular files.
        0060000	File type value for block special devices.
@@ -147,28 +147,28 @@
        0004000	SUID bit.
        0002000	SGID bit.
        0001000	Sticky bit.
-       0000777	The  lower  9  bits specify read/write/execute permissions for
+       0000777	The lower 9 bits specify  read/write/execute  permissions  for
 		world, group, and user following standard POSIX conventions.
 
-       Finally, the file size field now represents a signed 32 bit integer  in
+       Finally,	 the file size field now represents a signed 32 bit integer in
        the underlying file system, so the maximum file size has increased to 2
        gigabytes.
 
-       Note  that there is no obvious way to tell which of the two binary for‐
-       mats an archive uses, other than to see which  one  makes  more	sense.
-       The  typical error scenario is that a PWB format archive unpacked as if
+       Note that there is no obvious way to tell which of the two binary  for‐
+       mats  an	 archive  uses,	 other than to see which one makes more sense.
+       The typical error scenario is that a PWB format archive unpacked as  if
        it were in the new format will create named sockets instead of directo‐
-       ries, and then fail to unpack files that should go  in  those  directo‐
-       ries.   Running 4mbsdcpio24m 4m-itv24m on an unknown archive will make it obvious
+       ries,  and  then	 fail to unpack files that should go in those directo‐
+       ries.  Running 4mbsdcpio24m 4m-itv24m on an unknown archive will make it	 obvious
        which it is: if it's PWB format, directories will be listed with an 's'
-       instead of a 'd' as the first character of the  mode  string,  and  the
+       instead	of  a  'd'  as the first character of the mode string, and the
        larger files will have a '?' in that position.
 
    1mPortable ASCII Format0m
-       Version	2  of  the Single UNIX Specification (“SUSv2”) standardized an
-       ASCII variant that is portable across all platforms.   It  is  commonly
-       known  as the “old character” format or as the “odc” format.  It stores
-       the same numeric fields as the old binary format, but  represents  them
+       Version 2 of the Single UNIX Specification  (“SUSv2”)  standardized  an
+       ASCII  variant  that  is portable across all platforms.	It is commonly
+       known as the “old character” format or as the “odc” format.  It	stores
+       the  same  numeric fields as the old binary format, but represents them
        as 6-character or 11-character octal values.
 
 	     struct cpio_odc_header {
@@ -185,16 +185,16 @@
 		     char    c_filesize[11];
 	     };
 
-       The  fields  are identical to those in the new binary format.  The name
-       and file body follow the fixed  header.	 Unlike	 the  binary  formats,
+       The fields are identical to those in the new binary format.   The  name
+       and  file  body	follow	the  fixed header.  Unlike the binary formats,
        there is no additional padding after the pathname or file contents.  If
-       the  files  being  archived are themselves entirely ASCII, then the re‐
-       sulting archive will be entirely ASCII, except for the  NUL  byte  that
+       the files being archived are themselves entirely ASCII,	then  the  re‐
+       sulting	archive	 will  be entirely ASCII, except for the NUL byte that
        terminates the name field.
 
    1mNew ASCII Format0m
-       The  "new"  ASCII format uses 8-byte hexadecimal fields for all numbers
-       and separates device numbers into separate fields for major  and	 minor
+       The "new" ASCII format uses 8-byte hexadecimal fields for  all  numbers
+       and  separates  device numbers into separate fields for major and minor
        numbers.
 
 	     struct cpio_newc_header {
@@ -214,37 +214,37 @@
 		     char    c_check[8];
 	     };
 
-       Except  as  specified  below, the fields here match those specified for
+       Except as specified below, the fields here match	 those	specified  for
        the new binary format above.
 
        4mmagic24m   The string “070701”.
 
-       4mcheck24m   This field is always set to zero  by  writers  and	ignored	 by
+       4mcheck24m   This  field	 is  always  set  to zero by writers and ignored by
 	       readers.	 See the next section for more details.
 
-       The  pathname  is  followed  by NUL bytes so that the total size of the
-       fixed header plus pathname is a multiple of four.  Likewise,  the  file
+       The pathname is followed by NUL bytes so that the  total	 size  of  the
+       fixed  header  plus pathname is a multiple of four.  Likewise, the file
        data is padded to a multiple of four bytes.  Note that this format sup‐
-       ports  only 4 gigabyte files (unlike the older ASCII format, which sup‐
+       ports only 4 gigabyte files (unlike the older ASCII format, which  sup‐
        ports 8 gigabyte files).
 
        In this format, hardlinked files are handled by setting the filesize to
        zero for each entry except the first one that appears in the archive.
 
    1mNew CRC Format0m
-       The CRC format is identical to the new ASCII format  described  in  the
+       The  CRC	 format	 is identical to the new ASCII format described in the
        previous section except that the magic field is set to “070702” and the
-       4mcheck24m  field is set to the sum of all bytes in the file data.  This sum
-       is computed treating all bytes as unsigned values  and  using  unsigned
+       4mcheck24m field is set to the sum of all bytes in the file data.  This	sum
+       is  computed  treating  all bytes as unsigned values and using unsigned
        arithmetic.  Only the least-significant 32 bits of the sum are stored.
 
    1mHP variants0m
-       The  1mcpio 22mimplementation distributed with HPUX used XXXX but stored de‐
+       The 1mcpio 22mimplementation distributed with HPUX used XXXX but stored	de‐
        vice numbers differently XXX.
 
    1mOther Extensions and Variants0m
        Sun Solaris uses additional file types to store extended file data, in‐
-       cluding ACLs and	 extended  attributes,	as  special  entries  in  cpio
+       cluding	ACLs  and  extended  attributes,  as  special  entries in cpio
        archives.
 
        XXX Others? XXX
@@ -253,32 +253,32 @@
        4mcpio24m(1), 4mtar24m(5)
 
 1mSTANDARDS0m
-       The  1mcpio 22mutility is no longer a part of POSIX or the Single Unix Stan‐
-       dard.  It last appeared in Version 2 of the Single  UNIX	 Specification
-       (“SUSv2”).   It	has been supplanted in subsequent standards by 4mpax24m(1).
-       The portable ASCII format is currently part of  the  specification  for
+       The 1mcpio 22mutility is no longer a part of POSIX or the Single Unix  Stan‐
+       dard.   It  last appeared in Version 2 of the Single UNIX Specification
+       (“SUSv2”).  It has been supplanted in subsequent standards  by  4mpax24m(1).
+       The  portable  ASCII  format is currently part of the specification for
        the 4mpax24m(1) utility.
 
 1mHISTORY0m
-       The  original  cpio utility was written by Dick Haight while working in
-       AT&T's Unix Support Group.  It appeared in 1977	as  part  of  PWB/UNIX
-       1.0,  the  “Programmer's	 Work  Bench” derived from Version 6 AT&T UNIX
-       that was used internally at AT&T.  Both the new binary and old  charac‐
+       The original cpio utility was written by Dick Haight while  working  in
+       AT&T's  Unix  Support  Group.   It appeared in 1977 as part of PWB/UNIX
+       1.0, the “Programmer's Work Bench” derived from	Version	 6  AT&T  UNIX
+       that  was used internally at AT&T.  Both the new binary and old charac‐
        ter formats were in use by 1980, according to the System III source re‐
        leased by SCO under their “Ancient Unix” license.  The character format
-       was  adopted as part of IEEE Std 1003.1-1988 (“POSIX.1”).  XXX when did
+       was adopted as part of IEEE Std 1003.1-1988 (“POSIX.1”).	 XXX when  did
        "newc" appear?  Who invented it?	 When did HP come out with their vari‐
        ant?  When did Sun introduce ACLs and extended attributes? XXX
 
 1mBUGS0m
-       The “CRC” format is mis-named, as it uses a simple checksum and	not  a
+       The  “CRC”  format is mis-named, as it uses a simple checksum and not a
        cyclic redundancy check.
 
-       The  binary  formats  are limited to 16 bits for user id, group id, de‐
-       vice, and inode numbers.	 They are limited to 16 megabyte and  2	 giga‐
+       The binary formats are limited to 16 bits for user id,  group  id,  de‐
+       vice,  and  inode numbers.  They are limited to 16 megabyte and 2 giga‐
        byte file sizes for the older and newer variants, respectively.
 
-       The  old	 ASCII format is limited to 18 bits for the user id, group id,
+       The old ASCII format is limited to 18 bits for the user id,  group  id,
        device, and inode numbers.  It is limited to 8 gigabyte file sizes.
 
        The new ASCII format is limited to 4 gigabyte file sizes.
@@ -289,7 +289,7 @@
 
        Especially when writing older cpio variants, it may be necessary to map
        actual device/inode values to synthesized values that fit the available
-       fields.	With very large filesystems, this may be  necessary  even  for
+       fields.	 With  very  large filesystems, this may be necessary even for
        the newer formats.
 
 Debian			       December 23, 2011		       4mCPIO24m(5)

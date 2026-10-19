@@ -80,12 +80,12 @@
        archive-to-archive copy and archive-to-disk extraction operations.
 
 1mREADING ENTRIES FROM DISK0m
-       The  4marchive_read_disk24m(3)  supports for populating 4marchive_entry24m(3) ob‐
-       jects from information in the filesystem.  This includes	 the  informa‐
-       tion  accessible from the 4mstat24m(2) system call as well as ACLs, extended
-       attributes, and other metadata.	The 4marchive_read_disk24m(3) API also sup‐
-       ports iterating over directory trees, which allows directories of files
-       to be read using an API compatible with the 4marchive_read24m(3) API.
+       The  4marchive_read_disk24m(3)  supports populating 4marchive_entry24m(3) objects
+       from information in the filesystem.  This includes the information  ac‐
+       cessible from the 4mstat24m(2) system call as well as ACLs, extended attrib‐
+       utes,  and  other metadata.  The 4marchive_read_disk24m(3) API also supports
+       iterating over directory trees, which allows directories of files to be
+       read using an API compatible with the 4marchive_read24m(3) API.
 
 1mDESCRIPTION0m
        Detailed descriptions of each function are provided by the  correspond‐

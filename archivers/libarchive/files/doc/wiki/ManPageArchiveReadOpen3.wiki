@@ -125,7 +125,7 @@ The callback functions must match the following prototypes:
 </li></ul> 
 
 The open callback is invoked by 
-'''archive_open'''(). 
+'''archive_read_open'''(). 
 It should return 
 '''ARCHIVE_OK''' 
 if the underlying file or data source is successfully 
@@ -171,7 +171,7 @@ performance gains when reading uncompressed
 archives from slow disk drives or other media 
 that can skip quickly. 
 
-The close callback is invoked by archive_close when 
+The close callback is invoked by archive_read_close when 
 the archive processing is complete. 
 The callback should return 
 '''ARCHIVE_OK''' 

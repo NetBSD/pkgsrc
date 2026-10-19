@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.1.1.7 2026/06/24 05:38:53 adam Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.1.1.8 2026/10/19 11:50:33 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -101,8 +101,7 @@ static const char tooManyFields[] = "too many fields for format";
 #define apd_makedev(maj, min) makedev((maj), (min))
 #endif
 
-/* exported */
-dev_t
+static dev_t
 pack_native(int n, unsigned long numbers[], const char **error)
 {
 	dev_t dev = 0;
@@ -317,7 +316,7 @@ compare_format(const void *key, const void *element)
 
 
 pack_t *
-pack_find(const char *name)
+__archive_pack_find(const char *name)
 {
 	const struct format	*format;
 

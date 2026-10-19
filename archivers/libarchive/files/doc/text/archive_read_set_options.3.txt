@@ -52,7 +52,7 @@
 	       Calls	       1marchive_read_set_format_option22m(),	       then
 	       1marchive_read_set_filter_option22m().  If either  function  returns
 	       1mARCHIVE_FATAL22m,  1mARCHIVE_FATAL  22mwill  be  returned  immediately.
-	       Otherwise, greater of the two values will be returned.
+	       Otherwise, the greater of the two values will be returned.
 
        1marchive_read_set_options22m()
 	       4moptions24m is a comma-separated list of options.   If	4moptions24m  is

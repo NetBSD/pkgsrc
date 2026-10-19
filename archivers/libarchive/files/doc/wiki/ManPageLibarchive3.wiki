@@ -150,7 +150,7 @@ operations.
 == READING ENTRIES FROM DISK == 
 The 
 [[ManPageArchiveReadDisk3]] 
-supports for populating 
+supports populating 
 [[ManPageArchiveEntry3]] 
 objects from information in the filesystem. 
 This includes the information accessible from the 

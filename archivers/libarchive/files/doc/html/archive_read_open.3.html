@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:53 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:05 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -195,7 +195,7 @@ int</i> <b>archive_close_callback</b>(<i>struct archive
 *</i>, <i>void *client_data</i>)</p>
 
 <p style="margin-left:9%; margin-top: 1em">The open
-callback is invoked by <b>archive_open</b>(). It should
+callback is invoked by <b>archive_read_open</b>(). It should
 return <b>ARCHIVE_OK</b> if the underlying file or data
 source is successfully opened. If the open fails, it should
 call <b>archive_set_error</b>() to register an error code
@@ -226,7 +226,7 @@ performance gains when reading uncompressed archives from
 slow disk drives or other media that can skip quickly.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The close
-callback is invoked by archive_close when the archive
+callback is invoked by archive_read_close when the archive
 processing is complete. The callback should return
 <b>ARCHIVE_OK</b> on success. On failure, the callback
 should invoke <b>archive_set_error</b>() to register an

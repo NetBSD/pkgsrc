@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:55 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:07 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -109,6 +109,15 @@ Reset access times on files after they are read.</p>
 <p style="margin-left:19%; margin-top: 1em">(o mode only)
 Block output to records of 5120 bytes.</p>
 
+<p style="margin-top: 1em"><b>--b64encode</b></p>
+
+<p style="margin-left:19%;">(o mode only) Encode the
+archive with base64, after any compression. In input mode,
+this option is ignored; base64-encoded archives are
+recognized automatically on input. If both this option and
+<b>--uuencode</b> are given, the last one specified is
+used.</p>
+
 <p style="margin-top: 1em"><b>-C</b> <i>size</i></p>
 
 <p style="margin-left:19%;">(o mode only) Block output to
@@ -213,19 +222,25 @@ automatically on input.</p>
 <p style="margin-left:19%; margin-top: 1em">Synonym for
 <b>-y</b>.</p>
 
-<p style="margin-top: 1em"><b>-L</b></p>
+<p style="margin-top: 1em"><b>-L</b>,
+<b>--dereference</b></p>
 
-<p style="margin-left:19%; margin-top: 1em">(o and p modes)
-All symbolic links will be followed. Normally, symbolic
-links are archived and copied as symbolic links. With this
-option, the target of the link will be archived or copied
-instead.</p>
+<p style="margin-left:19%;">(o and p modes) All symbolic
+links will be followed. Normally, symbolic links are
+archived and copied as symbolic links. With this option, the
+target of the link will be archived or copied instead.</p>
 
 <p style="margin-top: 1em"><b>-l</b>, <b>--link</b></p>
 
 <p style="margin-left:19%;">(p mode only) Create links from
 the target directory to the original files, instead of
 copying.</p>
+
+<p style="margin-top: 1em"><b>--grzip</b></p>
+
+<p style="margin-left:19%;">(o mode only) Compress the
+resulting archive with <i>grzip</i>(1). In input mode, this
+option is ignored.</p>
 
 <p style="margin-top: 1em"><b>--lrzip</b></p>
 
@@ -360,6 +375,15 @@ disk.</p>
 <p style="margin-left:19%;">(i and p modes) Unconditionally
 overwrite existing files. Ordinarily, an older file will not
 overwrite a newer file on disk.</p>
+
+<p style="margin-top: 1em"><b>--uuencode</b></p>
+
+<p style="margin-left:19%;">(o mode only) Encode the
+archive with <i>uuencode</i>(1), after any compression. In
+input mode, this option is ignored; uuencoded archives are
+recognized automatically on input. If both this option and
+<b>--b64encode</b> are given, the last one specified is
+used.</p>
 
 <p style="margin-top: 1em"><b>-V</b>, <b>--dot</b></p>
 

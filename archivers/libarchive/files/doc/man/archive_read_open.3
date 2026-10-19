@@ -138,7 +138,7 @@ The callback functions must match the following prototypes:
 .RE
 .PP
 The open callback is invoked by
-\fB\%archive_open\fP().
+\fB\%archive_read_open\fP().
 It should return
 \fBARCHIVE_OK\fP
 if the underlying file or data source is successfully
@@ -184,7 +184,7 @@ performance gains when reading uncompressed
 archives from slow disk drives or other media
 that can skip quickly.
 .PP
-The close callback is invoked by archive_close when
+The close callback is invoked by archive_read_close when
 the archive processing is complete.
 The callback should return
 \fBARCHIVE_OK\fP

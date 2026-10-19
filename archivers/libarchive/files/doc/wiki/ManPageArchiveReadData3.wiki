@@ -46,6 +46,17 @@ will not overlap.
 Note that the blocks returned from this function can be much larger 
 than the block size read from disk, due to compression 
 and internal buffer optimizations. 
+All three of 
+, 
+and 
+are written whenever the function returns 
+'''ARCHIVE_OK''' 
+or 
+'''ARCHIVE_EOF'''. 
+At the end of an entry 
+is zero and 
+is the end of the entry's data, which is how a trailing sparse hole is 
+reported. 
 </dd><dt>'''archive_read_data_skip'''()</dt><dd> 
 A convenience function that repeatedly calls 
 '''archive_read_data_block'''() 

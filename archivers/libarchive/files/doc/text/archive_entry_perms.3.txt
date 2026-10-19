@@ -167,7 +167,7 @@
        4marchive_write_disk24m(3), 4mlibarchive24m(3)
 
 1mBUGS0m
-       The platform types 4muid_t24m and 4mgid_t24m are often 16 or  32	 bit  wide.   In
+       The platform types 4muid_t24m and 4mgid_t24m are often 16 or 32	bits  wide.   In
        this  case  it  is  possible that the ids can not be correctly restored
        from archives and get truncated.
 

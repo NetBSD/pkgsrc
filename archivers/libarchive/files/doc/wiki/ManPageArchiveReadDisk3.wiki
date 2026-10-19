@@ -36,7 +36,7 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
-'''archive_read_disk_open_w'''(''struct archive *'', ''const wchar_t *'', ''''); 
+'''archive_read_disk_open_w'''(''struct archive *'', ''const wchar_t *''); 
 <br> 
 ''int'' 
 <br> 
@@ -181,15 +181,19 @@ By default, sparse file information is read from disk.
 This sets the mode used for handling symbolic links. 
 The 
 "logical" 
-mode follows all symbolic links. 
+mode follows all symbolic links, except that a symbolic link whose 
+target is an ancestor directory of the link is archived as a symbolic 
+link rather than being followed, to avoid loops. 
 The 
 "physical" 
 mode does not follow any symbolic links. 
 The 
 "hybrid" 
-mode currently behaves identically to the 
-"logical" 
-mode. 
+mode follows symbolic links specified as the target of 
+'''archive_read_disk_open'''() 
+or 
+'''archive_read_disk_open_w'''() 
+but does not follow symbolic links anywhere else. 
 </dd><dt> 
 '''archive_read_disk_gname'''(), 
 '''archive_read_disk_uname'''() 
@@ -257,13 +261,13 @@ This affects the file ownership fields and ACL values in the
 '''struct archive_entry''' 
 object. 
 </dd><dt>'''archive_read_disk_descend'''()</dt><dd> 
-If the current entry can be descended, this function will mark the directory as the next entry for  
+If the current entry can be descended, this function will mark the directory as the next entry for 
 [[ManPageArchiveReadHeader3]] 
 to visit. 
 </dd><dt>'''archive_read_disk_can_descend'''()</dt><dd> 
 Returns 1 if the current entry is an unvisited directory and 0 otherwise. 
 </dd><dt>'''archive_read_disk_current_filesystem'''()</dt><dd> 
-Returns the index of the most recent filesystem entry that has been visited through archive_read_disk 
+Returns the index of the most recent filesystem entry that has been visited through archive_read_disk. 
 </dd><dt>'''archive_read_disk_current_filesystem_is_synthetic'''()</dt><dd> 
 Returns 1 if the current filesystem is a virtual filesystem. Returns 0 if the current filesystem is not a virtual filesystem. Returns -1 if it is unknown. 
 </dd><dt>'''archive_read_disk_current_filesystem_is_remote'''()</dt><dd> 
@@ -284,7 +288,7 @@ Allows the caller to set a callback function during calls to
 [[ManPageArchiveReadHeader3]] 
 to filter out metadata for each entry. The callback function receives the 
 '''struct archive''' 
-object, void* custom filter data, and the  
+object, void* custom filter data, and the 
 '''struct archive_entry .''' 
 If the callback function returns an error, ARCHIVE_RETRY will be returned and the entry will not be further processed. 
 </dd></dl> 
@@ -305,12 +309,12 @@ file_to_archive(struct archive *a, const char *name)
   struct archive *ard;
   struct archive_entry *entry;
   int fd;
+  fd = open(name, O_RDONLY);
+  if (fd < 0)
+    return;
   ard = archive_read_disk_new();
   archive_read_disk_set_standard_lookup(ard);
   entry = archive_entry_new();
-  fd = open(name, O_RDONLY);
-  if (fd < 0)
-     return;
   archive_entry_copy_pathname(entry, name);
   archive_read_disk_entry_from_file(ard, entry, fd, NULL);
   archive_write_header(a, entry);

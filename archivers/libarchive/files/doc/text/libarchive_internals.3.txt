@@ -223,22 +223,22 @@
        from most ISO9660 readers.  The libarchive  support  utilizes  a	 work-
        queue  design  that keeps a list of known entries sorted by their loca‐
        tion in the input.  Whenever  libarchive's  ISO9660  implementation  is
-       asked  for  the	next header, checks this list to find the next item on
-       the disk.  Directories are parsed when they  are	 encountered  and  new
+       asked for the next header, it checks this list to find the next item on
+       the  disk.   Directories	 are  parsed when they are encountered and new
        items are added to the list.  This design relies heavily on the ISO9660
-       image  being  optimized so that directories always occur earlier on the
+       image being optimized so that directories always occur earlier  on  the
        disk than the files they describe.
 
-       Depending on the specific format, such approaches may not be  possible.
-       The  ZIP	 format	 specification, for example, allows archivers to store
+       Depending  on the specific format, such approaches may not be possible.
+       The ZIP format specification, for example, allows  archivers  to	 store
        key information only at the end of the file.  In theory, it is possible
-       to create ZIP archives that cannot be  read  without  seeking.	Fortu‐
-       nately,	such  archives are very rare, and libarchive can read most ZIP
+       to  create  ZIP	archives  that cannot be read without seeking.	Fortu‐
+       nately, such archives are very rare, and libarchive can read  most  ZIP
        archives, though it cannot always extract as much information as a ded‐
        icated ZIP program.
 
 1mSEE ALSO0m
-       4marchive_entry24m(3),	       4marchive_read24m(3),	       4marchive_write24m(3),
+       4marchive_entry24m(3),		4marchive_read24m(3),	       4marchive_write24m(3),
        4marchive_write_disk24m(3), 4mlibarchive24m(3)
 
 1mHISTORY0m

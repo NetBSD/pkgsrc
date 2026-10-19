@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:54 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:05 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -203,7 +203,7 @@ return (0); <br>
 write_archive(const char *outname, const char **filename)
 <br>
 { <br>
-struct mydata *mydata = malloc(sizeof(struct mydata)); <br>
+struct mydata *mydata = malloc(sizeof(*mydata)); <br>
 struct archive *a; <br>
 struct archive_entry *entry; <br>
 struct stat st; <br>
@@ -216,7 +216,7 @@ archive_write_new(); <br>
 mydata-&gt;name = outname; <br>
 /* Set archive format and filter according to output file
 extension. <br>
-* If it fails, set default format. Platform depended
+* If it fails, set default format. Platform dependent
 function. <br>
 * See supported formats in
 archive_write_set_format_filter_by_ext.c */ <br>

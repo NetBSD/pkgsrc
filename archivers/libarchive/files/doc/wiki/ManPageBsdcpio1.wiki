@@ -74,6 +74,14 @@ Reset access times on files after they are read.
 </dd><dt>-B</dt><dd> 
 (o mode only) 
 Block output to records of 5120 bytes. 
+</dd><dt>--b64encode</dt><dd> 
+(o mode only) 
+Encode the archive with base64, after any compression. 
+In input mode, this option is ignored; base64-encoded archives are 
+recognized automatically on input. 
+If both this option and 
+--uuencode 
+are given, the last one specified is used. 
 </dd><dt>-C ''size''</dt><dd> 
 (o mode only) 
 Block output to records of 
@@ -149,7 +157,7 @@ automatically on input.
 </dd><dt>-j</dt><dd> 
 Synonym for 
 -y. 
-</dd><dt>-L</dt><dd> 
+</dd><dt>-L, --dereference</dt><dd> 
 (o and p modes) 
 All symbolic links will be followed. 
 Normally, symbolic links are archived and copied as symbolic links. 
@@ -158,6 +166,11 @@ With this option, the target of the link will be archived or copied instead.
 (p mode only) 
 Create links from the target directory to the original files, 
 instead of copying. 
+</dd><dt>--grzip</dt><dd> 
+(o mode only) 
+Compress the resulting archive with 
+[[grzip(1)|http://www.freebsd.org/cgi/man.cgi?query=grzip&sektion=1]]. 
+In input mode, this option is ignored. 
 </dd><dt>--lrzip</dt><dd> 
 (o mode only) 
 Compress the resulting archive with 
@@ -260,6 +273,16 @@ do not restore the contents to disk.
 (i and p modes) 
 Unconditionally overwrite existing files. 
 Ordinarily, an older file will not overwrite a newer file on disk. 
+</dd><dt>--uuencode</dt><dd> 
+(o mode only) 
+Encode the archive with 
+[[uuencode(1)|http://www.freebsd.org/cgi/man.cgi?query=uuencode&sektion=1]], 
+after any compression. 
+In input mode, this option is ignored; uuencoded archives are 
+recognized automatically on input. 
+If both this option and 
+--b64encode 
+are given, the last one specified is used. 
 </dd><dt>-V, --dot</dt><dd> 
 Print a dot to stderr for each file as it is processed. 
 Superseded by 

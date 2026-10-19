@@ -38,7 +38,7 @@ than 2013.
 </dd><dt>'''archive_read_free'''()</dt><dd> 
 Invokes 
 '''archive_read_close'''() 
-if it was not invoked manually, then release all resources. 
+if it was not invoked manually, then releases all resources. 
 Note: In libarchive 1.x, this function was declared to return 
 ''void ,'' 
 which made it impossible to detect certain errors when 

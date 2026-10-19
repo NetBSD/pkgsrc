@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:53 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:04 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -355,16 +355,16 @@ functions for block and character devices</b></p>
 <p style="margin-left:9%;">Block and character devices are
 characterised either using a device number or a pair of
 major and minor number. The combined device number can be
-obtained with <b>archive_device_rdev</b>() and set with
-<b>archive_device_set_rdev</b>(). The major and minor
-numbers are accessed by <b>archive_device_rdevmajor</b>(),
-<b>archive_device_rdevminor</b>()
-<b>archive_device_set_rdevmajor</b>() and
-<b>archive_device_set_rdevminor</b>().</p>
+obtained with <b>archive_entry_rdev</b>() and set with
+<b>archive_entry_set_rdev</b>(). The major and minor numbers
+are accessed by <b>archive_entry_rdevmajor</b>(),
+<b>archive_entry_rdevminor</b>()
+<b>archive_entry_set_rdevmajor</b>() and
+<b>archive_entry_set_rdevminor</b>().</p>
 
 <p style="margin-left:9%; margin-top: 1em">The process of
 splitting the combined device number into major and minor
-number and the reverse process of combing them differs
+number and the reverse process of combining them differs
 between platforms. Some archive formats use the combined
 form, while other formats use the split form.</p>
 

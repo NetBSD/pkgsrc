@@ -174,18 +174,18 @@
    1mAccessor functions for block and character devices0m
        Block and character devices are characterised  either  using  a	device
        number or a pair of major and minor number.  The combined device number
-       can    be    obtained   with   1marchive_device_rdev22m()   and	 set   with
-       1marchive_device_set_rdev22m().	The major and minor numbers are accessed by
-       1marchive_device_rdevmajor22m(),			 1marchive_device_rdevminor22m()
-       1marchive_device_set_rdevmajor22m() and 1marchive_device_set_rdevminor22m().
+       can    be    obtained	with   1marchive_entry_rdev22m()   and	 set   with
+       1marchive_entry_set_rdev22m().  The major and minor numbers are accessed	 by
+       1marchive_entry_rdevmajor22m(),			  1marchive_entry_rdevminor22m()
+       1marchive_entry_set_rdevmajor22m() and 1marchive_entry_set_rdevminor22m().
 
-       The  process of splitting the combined device number into major and mi‐
-       nor number and the reverse process  of  combing	them  differs  between
-       platforms.   Some  archive  formats  use the combined form, while other
+       The process of splitting the combined device number into major and  mi‐
+       nor  number  and	 the reverse process of combining them differs between
+       platforms.  Some archive formats use the	 combined  form,  while	 other
        formats use the split form.
 
 1mSEE ALSO0m
-       4mstat24m(2),	     4marchive_entry_acl24m(3),		 4marchive_entry_perms24m(3),
+       4mstat24m(2),	      4marchive_entry_acl24m(3),	 4marchive_entry_perms24m(3),
        4marchive_entry_time24m(3), 4mlibarchive24m(3)
 
 Debian			       February 2, 2012		 4mARCHIVE_ENTRY_STAT24m(3)

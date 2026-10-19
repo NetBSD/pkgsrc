@@ -178,7 +178,7 @@ Use
 as compression method.
 Supported values are
 ``bzip2'',
-``gzipi'',
+``gzip'',
 ``lzo''
 (ultra fast,)
 and
@@ -448,7 +448,7 @@ If disabled, characters will be converted to uppercase ASCII.
 Default: disabled.
 .TP
 \fBallow-sharp-tilde\fP
-If enabled, sharp and tilde characters will be permitted in filenames, in violation if the ISO9660 specification.
+If enabled, sharp and tilde characters will be permitted in filenames, in violation of the ISO9660 specification.
 If disabled, such characters will be converted to underscore characters.
 Default: disabled.
 .TP
@@ -711,7 +711,7 @@ Supported values are
 and
 ``xz''.
 .TP
-\fBcompression_level\fP
+\fBcompression-level\fP
 The value is a decimal integer from 1 to 9 specifying the compression level.
 .TP
 \fBtoc-checksum\fP=\fItype\fP
@@ -756,7 +756,7 @@ other values will enable
 ``lzma'',
 or
 ``zstd''
-compression (in order of priority, depending on what libraries 
+compression (in order of priority, depending on what libraries
 are linked) with the given level.
 .TP
 \fBthreads\fP
@@ -836,7 +836,7 @@ compressor should use the maximum compression level.
 a = archive_write_new();
 archive_write_add_filter_gzip(a);
 archive_write_set_format_iso9660(a);
-archive_write_set_options(a, "boot=kernel.img,compression=9");
+archive_write_set_options(a, "boot=kernel.img,gzip:compression-level=9");
 archive_write_open_filename(a, filename, blocksize);
 .RE
 .SH ERRORS

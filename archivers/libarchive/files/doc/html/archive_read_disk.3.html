@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:53 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:05 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -269,10 +269,15 @@ from disk.</p>
 
 <p style="margin-left:19%;">This sets the mode used for
 handling symbolic links. The &ldquo;logical&rdquo; mode
-follows all symbolic links. The &ldquo;physical&rdquo; mode
-does not follow any symbolic links. The &ldquo;hybrid&rdquo;
-mode currently behaves identically to the
-&ldquo;logical&rdquo; mode.</p>
+follows all symbolic links, except that a symbolic link
+whose target is an ancestor directory of the link is
+archived as a symbolic link rather than being followed, to
+avoid loops. The &ldquo;physical&rdquo; mode does not follow
+any symbolic links. The &ldquo;hybrid&rdquo; mode follows
+symbolic links specified as the target of
+<b>archive_read_disk_open</b>() or
+<b>archive_read_disk_open_w</b>() but does not follow
+symbolic links anywhere else.</p>
 
 
 <p style="margin-top: 1em"><b>archive_read_disk_gname</b>(),
@@ -353,7 +358,7 @@ is an unvisited directory and 0 otherwise.</p>
 
 <p style="margin-left:19%;">Returns the index of the most
 recent filesystem entry that has been visited through
-archive_read_disk</p>
+archive_read_disk.</p>
 
 
 <p style="margin-top: 1em"><b>archive_read_disk_current_filesystem_is_synthetic</b>()</p>
@@ -416,13 +421,13 @@ struct archive *ard; <br>
 struct archive_entry *entry; <br>
 int fd;</p>
 
-<p style="margin-left:17%; margin-top: 1em">ard =
-archive_read_disk_new(); <br>
-archive_read_disk_set_standard_lookup(ard); <br>
-entry = archive_entry_new(); <br>
-fd = open(name, O_RDONLY); <br>
+<p style="margin-left:17%; margin-top: 1em">fd = open(name,
+O_RDONLY); <br>
 if (fd &lt; 0) <br>
 return; <br>
+ard = archive_read_disk_new(); <br>
+archive_read_disk_set_standard_lookup(ard); <br>
+entry = archive_entry_new(); <br>
 archive_entry_copy_pathname(entry, name); <br>
 archive_read_disk_entry_from_file(ard, entry, fd, NULL);
 <br>

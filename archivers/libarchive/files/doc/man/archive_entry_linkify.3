@@ -46,15 +46,15 @@ Store the body the last time an inode is seen (new cpio).
 The
 \fB\%archive_entry_linkresolver\fP
 functions help by providing a unified interface and handling the complexity
-behind the scene.
+behind the scenes.
 .PP
 The
 \fB\%archive_entry_linkresolver\fP
 functions assume that
 Vt archive_entry
 instances have valid nlinks, inode and device values.
-The inode and device value is used to match entries.
-The nlinks value is used to determined if all references have been found and
+The inode and device values are used to match entries.
+The nlinks value is used to determine if all references have been found and
 if the internal references can be recycled.
 .PP
 The
@@ -77,7 +77,6 @@ The
 function is the core of
 \fB\%archive_entry_linkresolver\fP.
 The
-\fB\%entry\fP()
 argument points to the
 Vt archive_entry
 that should be written.

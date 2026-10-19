@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:55 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:07 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -344,12 +344,12 @@ libarchive&rsquo;s ISO9660 support operates very differently
 from most ISO9660 readers. The libarchive support utilizes a
 work-queue design that keeps a list of known entries sorted
 by their location in the input. Whenever libarchive&rsquo;s
-ISO9660 implementation is asked for the next header, checks
-this list to find the next item on the disk. Directories are
-parsed when they are encountered and new items are added to
-the list. This design relies heavily on the ISO9660 image
-being optimized so that directories always occur earlier on
-the disk than the files they describe.</p>
+ISO9660 implementation is asked for the next header, it
+checks this list to find the next item on the disk.
+Directories are parsed when they are encountered and new
+items are added to the list. This design relies heavily on
+the ISO9660 image being optimized so that directories always
+occur earlier on the disk than the files they describe.</p>
 
 <p style="margin-left:9%; margin-top: 1em">Depending on the
 specific format, such approaches may not be possible. The

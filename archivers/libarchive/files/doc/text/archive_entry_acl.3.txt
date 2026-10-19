@@ -96,19 +96,20 @@
        tries.
 
    1mNFSv4 Access Control Lists0m
-       A  NFSv4 ACL consists of multiple individual entries called Access Con‐
+       An NFSv4 ACL consists of multiple individual entries called Access Con‐
        trol Entries (ACEs).
 
-       There are four possible types of a NFSv4 ACE:
-	     ARCHIVE_ENTRY_ACL_TYPE_ALLOW Allow principal to  perform  actions
-					  requiring given permissions.
-	     ARCHIVE_ENTRY_ACL_TYPE_DENY  Prevent  principal  from  performing
-					  actions requiring given permissions.
-	     ARCHIVE_ENTRY_ACL_TYPE_AUDIT Log  access  attempts	 by  principal
-					  which require given permissions.
-	     ARCHIVE_ENTRY_ACL_TYPE_ALARM Trigger a system alarm on access at‐
-					  tempts  by  principal	 which require
-					  given permissions.
+       There are four possible types of an NFSv4 ACE:
+	     ARCHIVE_ENTRY_ACL_TYPE_ALLOW  Allow  principal to perform actions
+					   requiring given permissions.
+	     ARCHIVE_ENTRY_ACL_TYPE_DENY   Prevent principal  from  performing
+					   actions   requiring	given  permis‐
+					   sions.
+	     ARCHIVE_ENTRY_ACL_TYPE_AUDIT  Log access  attempts	 by  principal
+					   which require given permissions.
+	     ARCHIVE_ENTRY_ACL_TYPE_ALARM  Trigger  a  system  alarm on access
+					   attempts by principal which require
+					   given permissions.
 
        The 4mtag24m specifies the principal to which the permission applies.  Valid
        values are:
@@ -221,21 +222,21 @@
        tries  and  entries  beginning  with  the  ‘#’ character (comments) are
        skipped.
 
-       1marchive_entry_acl_next22m() return the next entry of the ACL  list.   This
-       functions  may only be called after 1marchive_entry_acl_reset22m() has indi‐
+       1marchive_entry_acl_next22m() returns the next entry of the ACL list.   This
+       function	 may  only be called after 1marchive_entry_acl_reset22m() has indi‐
        cated the presence of extended ACL entries.
 
-       1marchive_entry_acl_reset22m() prepare reading the list of ACL entries  with
-       1marchive_entry_acl_next22m().	The  function  returns 0 if no non-extended
-       ACLs are found.	In this case, the access  permissions  should  be  ob‐
-       tained  by 4marchive_entry_mode24m(3) or set using 4mchmod24m(2).  Otherwise, the
+       1marchive_entry_acl_reset22m() prepares reading the list of ACL entries with
+       1marchive_entry_acl_next22m().  The function returns 0  if  no  non-extended
+       ACLs  are  found.   In  this case, the access permissions should be ob‐
+       tained by 4marchive_entry_mode24m(3) or set using 4mchmod24m(2).	 Otherwise,  the
        function returns the same value as 1marchive_entry_acl_count22m().
 
-       1marchive_entry_acl_to_text22m() and  1marchive_entry_acl_to_text_w22m()	 convert
-       the  ACL entries for the given type into a (wide) string of ACL entries
+       1marchive_entry_acl_to_text22m()	 and  1marchive_entry_acl_to_text_w22m() convert
+       the ACL entries for the given type into a (wide) string of ACL  entries
        separated by newline.  If the pointer 4mlen_p24m is not NULL, then the func‐
-       tion shall return the length of the  string  (not  including  the  NULL
-       terminator)  in the location pointed to by 4mlen_p24m.  The 4mflag24m argument is
+       tion  shall  return  the	 length	 of the string (not including the NULL
+       terminator) in the location pointed to by 4mlen_p24m.  The 4mflag24m argument  is
        a bitwise-or.
 
        The following flags are effective only on POSIX.1e ACL:
@@ -246,54 +247,54 @@
 	     ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT
 		     Prefix each default ACL entry with the word “default:”.
 	     ARCHIVE_ENTRY_ACL_STYLE_SOLARIS
-		     The mask and other ACLs don not contain a double colon.
+		     The mask and other ACLs do not contain a double colon.
 
        The following flags are effective only on NFSv4 ACL:
 	     ARCHIVE_ENTRY_ACL_STYLE_COMPACT
-		     Do not output minus characters for unset permissions  and
+		     Do	 not output minus characters for unset permissions and
 		     flags in NFSv4 ACL permission and flag fields.
 
        The following flags are effective on both POSIX.1e and NFSv4 ACL:
 	     ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID
-		     Add  an  additional  colon-separated field containing the
+		     Add an additional colon-separated	field  containing  the
 		     user or group id.
 	     ARCHIVE_ENTRY_ACL_STYLE_SEPARATOR_COMMA
 		     Separate ACL entries with comma instead of newline.
 
-       If the archive entry contains NFSv4 ACLs, all types of NFSv4  ACLs  are
-       returned.   It  the  entry contains POSIX.1e ACLs and none of the flags
-       ARCHIVE_ENTRY_ACL_TYPE_ACCESS  or  ARCHIVE_ENTRY_ACL_TYPE_DEFAULT   are
+       If  the	archive entry contains NFSv4 ACLs, all types of NFSv4 ACLs are
+       returned.  If the entry contains POSIX.1e ACLs and none	of  the	 flags
+       ARCHIVE_ENTRY_ACL_TYPE_ACCESS   or  ARCHIVE_ENTRY_ACL_TYPE_DEFAULT  are
        specified, both access and default entries are returned and default en‐
        tries are prefixed with “default:”.
 
-       1marchive_entry_acl_types22m()  get  ACL entry types contained in an archive
-       entry's ACL.  As POSIX.1e and NFSv4 ACL entries cannot be  mixed,  this
-       function	 is  a very efficient way to detect if an ACL already contains
+       1marchive_entry_acl_types22m() gets ACL entry types contained in an  archive
+       entry's	ACL.   As POSIX.1e and NFSv4 ACL entries cannot be mixed, this
+       function is a very efficient way to detect if an ACL  already  contains
        POSIX.1e or NFSv4 ACL entries.
 
 1mRETURN VALUES0m
-       1marchive_entry_acl_count22m()  and  1marchive_entry_acl_reset22m()  returns  the
-       number  of  ACL	entries	 that match the given type mask.  For POSIX.1e
-       ACLS if the type mask  includes	ARCHIVE_ENTRY_ACL_TYPE_ACCESS  and  at
-       least one extended ACL entry exists, the three classic Unix permissions
-       are counted.
+       1marchive_entry_acl_count22m() and 1marchive_entry_acl_reset22m() return the num‐
+       ber  of	ACL entries that match the given type mask.  For POSIX.1e ACLS
+       if the type mask includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS	and  at	 least
+       one  extended  ACL entry exists, the three classic Unix permissions are
+       counted.
 
-       1marchive_entry_acl_from_text22m()  and	1marchive_entry_acl_from_text_w22m() re‐
-       turn  ARCHIVE_OK	 if  all  entries   were   successfully	  parsed   and
+       1marchive_entry_acl_from_text22m() and  1marchive_entry_acl_from_text_w22m()  re‐
+       turn   ARCHIVE_OK   if	all   entries  were  successfully  parsed  and
        ARCHIVE_WARN if one or more entries were invalid or non-parseable.
 
-       1marchive_entry_acl_next22m()  returns ARCHIVE_OK on success, ARCHIVE_EOF if
+       1marchive_entry_acl_next22m() returns ARCHIVE_OK on success, ARCHIVE_EOF	 if
        no more ACL entries exist and ARCHIVE_WARN if 1marchive_entry_acl_reset22m()
        has not been called first.
 
-       1marchive_entry_acl_to_text22m() returns a string representing the  ACL	en‐
+       1marchive_entry_acl_to_text22m()	 returns  a string representing the ACL en‐
        tries matching the given type and flags on success or NULL on error.
 
-       1marchive_entry_acl_to_text_w22m()  returns  a  wide string representing the
+       1marchive_entry_acl_to_text_w22m() returns a wide  string  representing	the
        ACL entries matching the given type and flags on success or NULL on er‐
        ror.
 
-       1marchive_entry_acl_types22m() returns a bitmask of ACL entry types or 0	 if
+       1marchive_entry_acl_types22m()  returns a bitmask of ACL entry types or 0 if
        archive entry has no ACL entries.
 
 1mSEE ALSO0m

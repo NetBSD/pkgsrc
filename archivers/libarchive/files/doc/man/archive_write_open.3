@@ -180,7 +180,7 @@ to register an error code and message and return -1.
 \fB\%archive_close_callback\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP)
 .RE
 .PP
-The close callback is invoked by archive_close when
+The close callback is invoked by archive_write_close when
 the archive processing is complete. If the open callback fails, the close
 callback is not invoked.
 The callback should return

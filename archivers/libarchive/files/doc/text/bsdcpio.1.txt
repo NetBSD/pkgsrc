@@ -51,10 +51,17 @@
 
        1m-B	 22m(o mode only) Block output to records of 5120 bytes.
 
+       1m--b64encode0m
+	       (o mode only) Encode the archive with base64,  after  any  com‐
+	       pression.   In  input  mode, this option is ignored; base64-en‐
+	       coded archives are recognized automatically on input.  If  both
+	       this option and 1m--uuencode 22mare given, the last one specified is
+	       used.
+
        1m-C 4m22msize0m
 	       (o mode only) Block output to records of 4msize24m bytes.
 
-       1m-c	 22m(o mode only) Use the  old	POSIX  portable	 character  format.
+       1m-c	 22m(o	mode  only)  Use  the  old POSIX portable character format.
 	       Equivalent to 1m--format 4m22modc24m.
 
        1m-d22m, 1m--make-directories0m
@@ -71,7 +78,7 @@
 	       (i mode only) Ignore files that match 4mpattern24m.
 
        1m-H 4m22mformat24m, 1m--format 4m22mformat0m
-	       (o  mode only) Produce the output archive in the specified for‐
+	       (o mode only) Produce the output archive in the specified  for‐
 	       mat.  Supported formats include:
 
 	       4mcpio24m     Synonym for 4modc24m.
@@ -81,8 +88,8 @@
 			mat.
 	       4mustar24m    The POSIX.1 tar format.
 
-	       The default format is 4modc24m.	See 4mlibarchive-formats24m(5) for  more
-	       complete	 information  about the formats currently supported by
+	       The  default format is 4modc24m.	 See 4mlibarchive-formats24m(5) for more
+	       complete information about the formats currently	 supported  by
 	       the underlying 4mlibarchive24m(3) library.
 
        1m-h22m, 1m--help0m
@@ -95,25 +102,30 @@
 	       Input mode.  See above for description.
 
        1m--insecure0m
-	       (i and p mode only) Disable security checks  during  extraction
-	       or  copying.   This  allows  extraction via symbolic links, ab‐
+	       (i  and	p mode only) Disable security checks during extraction
+	       or copying.  This allows extraction  via	 symbolic  links,  ab‐
 	       solute paths, and path names containing ‘..’ in the name.
 
        1m-J22m, 1m--xz0m
-	       (o mode only) Compress the file with xz-compatible  compression
-	       before  writing	it.  In input mode, this option is ignored; xz
+	       (o  mode only) Compress the file with xz-compatible compression
+	       before writing it.  In input mode, this option is  ignored;  xz
 	       compression is recognized automatically on input.
 
        1m-j	 22mSynonym for 1m-y22m.
 
-       1m-L	 22m(o and p modes) All symbolic links will be followed.  Normally,
+       1m-L22m, 1m--dereference0m
+	       (o and p modes) All symbolic links will be followed.  Normally,
 	       symbolic links are archived and copied as symbolic links.  With
-	       this option, the target of the link will be archived or	copied
+	       this  option, the target of the link will be archived or copied
 	       instead.
 
        1m-l22m, 1m--link0m
-	       (p  mode	 only)	Create	links from the target directory to the
+	       (p mode only) Create links from the  target  directory  to  the
 	       original files, instead of copying.
+
+       1m--grzip0m
+	       (o mode only) Compress the resulting archive with 4mgrzip24m(1).	 In
+	       input mode, this option is ignored.
 
        1m--lrzip0m
 	       (o mode only) Compress the resulting archive with 4mlrzip24m(1).	 In
@@ -123,35 +135,35 @@
 	       sion before writing it.	In input mode, this option is ignored;
 	       lz4 compression is recognized automatically on input.
 
-       1m--zstd	 22m(o mode only) Compress the archive	with  zstd-compatible  com‐
-	       pression	 before writing it.  In input mode, this option is ig‐
+       1m--zstd	 22m(o	mode  only)  Compress the archive with zstd-compatible com‐
+	       pression before writing it.  In input mode, this option is  ig‐
 	       nored; zstd compression is recognized automatically on input.
 
-       1m--lzma	 22m(o mode only) Compress the file with  lzma-compatible  compres‐
+       1m--lzma	 22m(o	mode  only) Compress the file with lzma-compatible compres‐
 	       sion before writing it.	In input mode, this option is ignored;
 	       lzma compression is recognized automatically on input.
 
-       1m--lzop	 22m(o	mode only) Compress the resulting archive with 4mlzop24m(1).  In
+       1m--lzop	 22m(o mode only) Compress the resulting archive with 4mlzop24m(1).   In
 	       input mode, this option is ignored.
 
        1m--passphrase 4m22mpassphrase0m
-	       The 4mpassphrase24m is  used  to	 extract  or  create  an  encrypted
-	       archive.	  Currently, zip is only a format that 1mcpio 22mcan handle
-	       encrypted archives.  You shouldn't use this option  unless  you
+	       The  4mpassphrase24m  is	 used  to  extract  or	create an encrypted
+	       archive.	 Currently, zip is only a format that 1mcpio 22mcan  handle
+	       encrypted  archives.   You shouldn't use this option unless you
 	       realize how insecure use of this option is.
 
        1m-m22m, 1m--preserve-modification-time0m
-	       (i  and p modes) Set file modification time on created files to
+	       (i and p modes) Set file modification time on created files  to
 	       match those in the source.
 
        1m-n22m, 1m--numeric-uid-gid0m
-	       (i mode, only with 1m-t22m) Display numeric uid	and  gid.   By	de‐
-	       fault,  1mcpio  22mdisplays  the	 user and group names when they are
-	       provided in the archive, or looks up the user and  group	 names
+	       (i  mode,  only	with  1m-t22m) Display numeric uid and gid.  By de‐
+	       fault, 1mcpio 22mdisplays the user and group  names  when  they	are
+	       provided	 in  the archive, or looks up the user and group names
 	       in the system password database.
 
        1m--no-preserve-owner0m
-	       (i  mode	 only) Do not attempt to restore file ownership.  This
+	       (i mode only) Do not attempt to restore file  ownership.	  This
 	       is the default when run by non-root users.
 
        1m-O 4m22mfile0m
@@ -172,30 +184,37 @@
 
        1m-R 22m[user][:][group], 1m--owner 22m[user][:][group]
 	       Set the owner and/or group on files in the output.  If group is
-	       specified with no user (for example, 1m-R 4m22m:wheel24m) then the  group
-	       will  be set but not the user.  If the user is specified with a
-	       trailing colon and no group (for example, 1m-R  4m22mroot:24m)  then  the
-	       group  will be set to the user's default group.	If the user is
+	       specified  with no user (for example, 1m-R 4m22m:wheel24m) then the group
+	       will be set but not the user.  If the user is specified with  a
+	       trailing	 colon	and  no group (for example, 1m-R 4m22mroot:24m) then the
+	       group will be set to the user's default group.  If the user  is
 	       specified with no trailing colon, then the user will be set but
-	       not the group.  In 1m-i 22mand 1m-p 22mmodes, this  option  can	only  be
-	       used  by	 the  super-user.  (For compatibility, a period can be
+	       not  the	 group.	  In  1m-i 22mand 1m-p 22mmodes, this option can only be
+	       used by the super-user.	(For compatibility, a  period  can  be
 	       used in place of the colon.)
 
-       1m-r	 22m(All modes.)  Rename files interactively.	For  each  file,  a
-	       prompt  is  written to 4m/dev/tty24m containing the name of the file
-	       and a line is read from 4m/dev/tty24m.  If the line read	 is  blank,
+       1m-r	 22m(All  modes.)   Rename  files  interactively.  For each file, a
+	       prompt is written to 4m/dev/tty24m containing the name of  the  file
+	       and  a  line is read from 4m/dev/tty24m.	 If the line read is blank,
 	       the file is skipped.  If the line contains a single period, the
 	       file is processed normally.  Otherwise, the line is taken to be
 	       the new name of the file.
 
        1m-t22m, 1m--list0m
-	       (i  mode	 only)	List the contents of the archive to stdout; do
+	       (i mode only) List the contents of the archive  to  stdout;  do
 	       not restore the contents to disk.
 
        1m-u22m, 1m--unconditional0m
-	       (i and p modes) Unconditionally overwrite existing files.   Or‐
-	       dinarily,  an  older  file  will	 not overwrite a newer file on
+	       (i  and p modes) Unconditionally overwrite existing files.  Or‐
+	       dinarily, an older file will not	 overwrite  a  newer  file  on
 	       disk.
+
+       1m--uuencode0m
+	       (o  mode	 only)	Encode the archive with 4muuencode24m(1), after any
+	       compression.  In input mode, this option is ignored;  uuencoded
+	       archives	 are  recognized automatically on input.  If both this
+	       option and 1m--b64encode 22mare given, the  last	 one  specified	 is
+	       used.
 
        1m-V22m, 1m--dot0m
 	       Print a dot to stderr for each file as it is processed.	Super‐
@@ -208,16 +227,16 @@
        1m--version0m
 	       Print the program version information and exit.
 
-       1m-y	 22m(o mode only) Compress the archive with  bzip2-compatible  com‐
-	       pression	 before writing it.  In input mode, this option is ig‐
+       1m-y	 22m(o	mode  only) Compress the archive with bzip2-compatible com‐
+	       pression before writing it.  In input mode, this option is  ig‐
 	       nored; bzip2 compression is recognized automatically on input.
 
-       1m-Z	 22m(o mode only) Compress  the	 archive  with	compress-compatible
-	       compression  before  writing it.	 In input mode, this option is
+       1m-Z	 22m(o	mode  only)  Compress  the archive with compress-compatible
+	       compression before writing it.  In input mode, this  option  is
 	       ignored; compression is recognized automatically on input.
 
-       1m-z	 22m(o mode only) Compress the archive	with  gzip-compatible  com‐
-	       pression	 before writing it.  In input mode, this option is ig‐
+       1m-z	 22m(o	mode  only)  Compress the archive with gzip-compatible com‐
+	       pression before writing it.  In input mode, this option is  ig‐
 	       nored; gzip compression is recognized automatically on input.
 
 1mEXIT STATUS0m
@@ -228,23 +247,23 @@
 
        LANG	  The locale to use.  See 4menviron24m(7) for more information.
 
-       TZ	  The timezone to use when displaying dates.   See  4menviron24m(7)
+       TZ	  The  timezone	 to use when displaying dates.	See 4menviron24m(7)
 		  for more information.
 
 1mEXAMPLES0m
        The 1mcpio 22mcommand is traditionally used to copy file hierarchies in con‐
-       junction	 with  the  4mfind24m(1)  command.   The  first example here simply
+       junction with the 4mfind24m(1)  command.	  The  first  example  here  simply
        copies all files from 4msrc24m to 4mdest24m:
 	     1mfind 4m22msrc24m | 1mcpio -pmud 4m22mdest0m
 
-       By carefully selecting options to the 4mfind24m(1) command and combining	 it
-       with  other  standard  utilities,  it is possible to exercise very fine
-       control over which files are copied.  This next	example	 copies	 files
-       from  4msrc24m to 4mdest24m that are more than 2 days old and whose names match a
+       By  carefully selecting options to the 4mfind24m(1) command and combining it
+       with other standard utilities, it is possible  to  exercise  very  fine
+       control	over  which  files are copied.	This next example copies files
+       from 4msrc24m to 4mdest24m that are more than 2 days old and whose names match  a
        particular pattern:
 	     1mfind 4m22msrc24m 1m-mtime 4m22m+224m | 1mgrep foo[bar] 22m| 1mcpio -pdmu 4m22mdest0m
 
-       This example copies files from 4msrc24m to 4mdest24m that are more  than	 2  days
+       This  example  copies  files from 4msrc24m to 4mdest24m that are more than 2 days
        old and which contain the word “foobar”:
 	     1mfind 4m22msrc24m 1m-mtime 4m22m+224m | 1mxargs grep -l foobar 22m| 1mcpio -pdmu 4m22mdest0m
 
@@ -253,12 +272,12 @@
        u, and v comply with SUSv2.
 
        The old POSIX.1 standard specified that only 1m-i22m, 1m-o22m, and 1m-p 22mwere inter‐
-       preted  as command-line options.	 Each took a single argument of a list
-       of modifier characters.	For example, the standard syntax  allows  1m-imu0m
+       preted as command-line options.	Each took a single argument of a  list
+       of  modifier  characters.  For example, the standard syntax allows 1m-imu0m
        but does not support 1m-miu 22mor 1m-i -m -u22m, since 4mm24m and 4mu24m are only modifiers
-       to  1m-i22m, they are not command-line options in their own right.  The syn‐
-       tax supported by this implementation is backwards-compatible  with  the
-       standard.   For	best compatibility, scripts should limit themselves to
+       to 1m-i22m, they are not command-line options in their own right.  The  syn‐
+       tax  supported  by this implementation is backwards-compatible with the
+       standard.  For best compatibility, scripts should limit	themselves  to
        the standard syntax.
 
 1mSEE ALSO0m
@@ -267,30 +286,30 @@
 
 1mSTANDARDS0m
        There is no current POSIX standard for the cpio command; it appeared in
-       ISO/IEC	 9945-1:1996   (“POSIX.1”)  but	 was  dropped  from  IEEE  Std
+       ISO/IEC	9945-1:1996  (“POSIX.1”)  but  was  dropped  from   IEEE   Std
        1003.1-2001 (“POSIX.1”).
 
-       The cpio, ustar, and pax interchange file formats are defined  by  IEEE
+       The  cpio,  ustar, and pax interchange file formats are defined by IEEE
        Std 1003.1-2001 (“POSIX.1”) for the pax command.
 
 1mHISTORY0m
-       The  original 1mcpio 22mand 1mfind 22mutilities were written by Dick Haight while
-       working in AT&T's Unix Support Group.  They first appeared in  1977  in
-       PWB/UNIX	 1.0,  the  “Programmer's Work Bench” system developed for use
-       within AT&T.  They were first released outside of AT&T as part of  Sys‐
-       tem  III	 Unix  in 1981.	 As a result, 1mcpio 22mactually predates 1mtar22m, even
+       The original 1mcpio 22mand 1mfind 22mutilities were written by Dick Haight  while
+       working	in  AT&T's Unix Support Group.	They first appeared in 1977 in
+       PWB/UNIX 1.0, the “Programmer's Work Bench” system  developed  for  use
+       within  AT&T.  They were first released outside of AT&T as part of Sys‐
+       tem III Unix in 1981.  As a result, 1mcpio 22mactually  predates	 1mtar22m,  even
        though it was not well-known outside of AT&T until some time later.
 
-       This is a complete re-implementation based  on  the  4mlibarchive24m(3)	li‐
+       This  is	 a  complete  re-implementation based on the 4mlibarchive24m(3) li‐
        brary.
 
 1mBUGS0m
-       The  cpio  archive  format  has	several basic limitations: It does not
-       store user and group names, only numbers.  As a result,	it  cannot  be
-       reliably	 used  to  transfer files between systems with dissimilar user
-       and group numbering.  Older cpio formats limit the user and group  num‐
-       bers  to	 16 or 18 bits, which is insufficient for modern systems.  The
-       cpio archive formats cannot support files over 4 gigabytes, except  for
+       The cpio archive format has several  basic  limitations:	 It  does  not
+       store  user  and	 group names, only numbers.  As a result, it cannot be
+       reliably used to transfer files between systems	with  dissimilar  user
+       and  group numbering.  Older cpio formats limit the user and group num‐
+       bers to 16 or 18 bits, which is insufficient for modern	systems.   The
+       cpio  archive formats cannot support files over 4 gigabytes, except for
        the “odc” variant, which can support files up to 8 gigabytes.
 
 Debian			      September 16, 2014		       4mCPIO24m(1)

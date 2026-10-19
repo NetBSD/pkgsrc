@@ -32,7 +32,7 @@ Returns number of bytes written or -1 on error.
 '''archive_write''' 
 handles, only for 
 '''archive_write_disk''' 
-handles. 
+handles.) 
 </dd></dl> 
 == RETURN VALUES == 
 This function returns the number of bytes actually written, or 
