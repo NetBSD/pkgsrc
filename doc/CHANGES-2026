@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7115 2026/10/19 12:19:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7116 2026/10/19 12:25:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10648,3 +10648,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wrapt to 2.5.1 [adam 2026-10-19]
 	Updated databases/py-tortoise-orm to 1.1.9 [adam 2026-10-19]
 	Updated devel/py-test-mock to 3.17.0 [adam 2026-10-19]
+	Updated mail/py-checkdmarc to 6.0.4 [adam 2026-10-19]
+	Updated www/py-httpcore2 to 2.14.0 [adam 2026-10-19]
+	Updated www/py-httpx2 to 2.14.0 [adam 2026-10-19]
+	Updated www/py-httptools to 0.9.0 [adam 2026-10-19]
