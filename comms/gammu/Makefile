@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2026/09/24 09:08:23 adam Exp $
+# $NetBSD: Makefile,v 1.72 2026/10/19 15:42:42 adam Exp $
 
-DISTNAME=	Gammu-1.45.0
+DISTNAME=	Gammu-1.45.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gammu/}
