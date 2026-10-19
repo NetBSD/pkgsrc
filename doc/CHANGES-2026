@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7100 2026/10/19 01:37:08 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7101 2026/10/19 05:36:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10613,3 +10613,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/xan to 0.61.0 [pin 2026-10-18]
 	Updated x11/xterm to 412 [pin 2026-10-18]
 	Updated graphics/shader-slang to 2026.20 [ktnb 2026-10-19]
+	Updated databases/sqlite3 to 3.54.1 [adam 2026-10-19]
+	Updated databases/sqlite3-diff to 3.54.1 [adam 2026-10-19]
+	Updated databases/sqlite3-docs to 3.54.1 [adam 2026-10-19]
+	Updated databases/sqlite3-tcl to 3.54.1 [adam 2026-10-19]
+	Updated devel/lemon to 1.0.3.54.1 [adam 2026-10-19]
