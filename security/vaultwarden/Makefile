@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/09/23 09:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/10/19 11:48:39 adam Exp $
 
-DISTNAME=	vaultwarden-1.37.3
+DISTNAME=	vaultwarden-1.37.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-agpl-v3
 
 # See options.mk
 DISTFILES=	${DEFAULT_DISTFILES}
-RUST_REQ=	1.96.1
+RUST_REQ=	1.97.1
 
 .include "cargo-depends.mk"
 
