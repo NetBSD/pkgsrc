@@ -156,6 +156,9 @@
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_WIN supported. */
 #undef ARCHIVE_CRYPTO_SHA512_WIN
 
+/* Use Windows CNG (Crypto Next Generation) */
+#undef ARCHIVE_CRYPTO_WIN
+
 /* AIX xattr support */
 #undef ARCHIVE_XATTR_AIX
 
@@ -306,6 +309,9 @@
 /* Define to 1 if you have the <blake2.h> header file. */
 #undef HAVE_BLAKE2_H
 
+/* Define to 1 if you have the <bsdxml.h> header file. */
+#undef HAVE_BSDXML_H
+
 /* Define to 1 if you have the <bzlib.h> header file. */
 #undef HAVE_BZLIB_H
 
@@ -324,14 +330,14 @@
 /* Define to 1 if you have the 'close_range' function. */
 #undef HAVE_CLOSE_RANGE
 
-/* cmtime_s function */
-#undef HAVE_CMTIME_S
-
 /* Define to 1 if you have the <copyfile.h> header file. */
 #undef HAVE_COPYFILE_H
 
 /* Define to 1 if you have the 'ctime_r' function. */
 #undef HAVE_CTIME_R
+
+/* ctime_s function */
+#undef HAVE_CTIME_S
 
 /* Define to 1 if you have the <ctype.h> header file. */
 #undef HAVE_CTYPE_H
@@ -411,7 +417,7 @@
    don't. */
 #undef HAVE_DECL_SIZE_MAX
 
-/* Define to 1 if you have the declaration of `SSIZE_MAX', and to 0 if you
+/* Define to 1 if you have the declaration of 'SSIZE_MAX', and to 0 if you
    don't. */
 #undef HAVE_DECL_SSIZE_MAX
 
@@ -434,6 +440,9 @@
 /* Define to 1 if you have the declaration of 'XATTR_NOFOLLOW', and to 0 if
    you don't. */
 #undef HAVE_DECL_XATTR_NOFOLLOW
+
+/* Define to 1 if you have the <direct.h> header file. */
+#undef HAVE_DIRECT_H
 
 /* Define to 1 if you have the <dirent.h> header file, and it defines 'DIR'.
    */
@@ -462,6 +471,9 @@
 
 /* Define to 1 if you have the <expat.h> header file. */
 #undef HAVE_EXPAT_H
+
+/* Define to 1 if you have the 'explicit_bzero' function. */
+#undef HAVE_EXPLICIT_BZERO
 
 /* Define to 1 if you have the <ext2fs/ext2_fs.h> header file. */
 #undef HAVE_EXT2FS_EXT2_FS_H
@@ -664,6 +676,9 @@
 /* Define to 1 if you have the 'b2' library (-lb2). */
 #undef HAVE_LIBB2
 
+/* Define to 1 if you have the 'bsdxml' library (-lbsdxml). */
+#undef HAVE_LIBBSDXML
+
 /* Define to 1 if you have the 'bz2' library (-lbz2). */
 #undef HAVE_LIBBZ2
 
@@ -673,16 +688,13 @@
 /* Define to 1 if you have the 'crypto' library (-lcrypto). */
 #undef HAVE_LIBCRYPTO
 
-/* Define to 1 if you have the 'expat' library (-lexpat). */
+/* Define to 1 if you have the 'expat' library. */
 #undef HAVE_LIBEXPAT
-
-/* Define to 1 if you have the `iconv' library (-liconv). */
-#undef HAVE_LIBICONV
 
 /* Define to 1 if you have the 'lz4' library (-llz4). */
 #undef HAVE_LIBLZ4
 
-/* Define to 1 if you have the `lzma' library. */
+/* Define to 1 if you have the 'lzma' library. */
 #undef HAVE_LIBLZMA
 
 /* Define to 1 if you have the 'lzo2' library (-llzo2). */
@@ -717,6 +729,9 @@
 
 /* Define to 1 if you have the 'xml2' library (-lxml2). */
 #undef HAVE_LIBXML2
+
+/* Define to 1 if you have the 'xmllite' library. */
+#undef HAVE_LIBXMLLITE
 
 /* Define to 1 if you have the <libxml/xmlreader.h> header file. */
 #undef HAVE_LIBXML_XMLREADER_H
@@ -809,7 +824,7 @@
 /* Define to 1 if you have the <lzma.h> header file. */
 #undef HAVE_LZMA_H
 
-/* Define to 1 if you have the `lzma_stream_encoder_mt' function. */
+/* Define to 1 if you have the 'lzma_stream_encoder_mt' function. */
 #undef HAVE_LZMA_STREAM_ENCODER_MT
 
 /* Define to 1 if you have the <lzo/lzo1x.h> header file. */
@@ -851,6 +866,9 @@
 /* Define to 1 if you have the 'memset' function. */
 #undef HAVE_MEMSET
 
+/* Define to 1 if you have the 'memset_explicit' function. */
+#undef HAVE_MEMSET_EXPLICIT
+
 /* Define to 1 if you have the <minix/config.h> header file. */
 #undef HAVE_MINIX_CONFIG_H
 
@@ -883,6 +901,12 @@
 
 /* Define to 1 if you have the <nettle/ripemd160.h> header file. */
 #undef HAVE_NETTLE_RIPEMD160_H
+
+/* Define to 1 if you have the <nettle/sha1.h> header file. */
+#undef HAVE_NETTLE_SHA1_H
+
+/* Define to 1 if you have the <nettle/sha2.h> header file. */
+#undef HAVE_NETTLE_SHA2_H
 
 /* Define to 1 if you have the <nettle/sha.h> header file. */
 #undef HAVE_NETTLE_SHA_H
@@ -1151,6 +1175,9 @@
 /* Define to 1 if you have the <sys/select.h> header file. */
 #undef HAVE_SYS_SELECT_H
 
+/* Define to 1 if you have the <sys/single_threaded.h> header file. */
+#undef HAVE_SYS_SINGLE_THREADED_H
+
 /* Define to 1 if you have the <sys/statfs.h> header file. */
 #undef HAVE_SYS_STATFS_H
 
@@ -1159,6 +1186,9 @@
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/sysctl.h> header file. */
+#undef HAVE_SYS_SYSCTL_H
 
 /* Define to 1 if you have the <sys/sysmacros.h> header file. */
 #undef HAVE_SYS_SYSMACROS_H
@@ -1232,13 +1262,20 @@
 /* Define to 1 if you have the 'vfork' function. */
 #undef HAVE_VFORK
 
+/* Define to 1 or 0, depending whether the compiler supports simple visibility
+   declarations. */
+#undef HAVE_VISIBILITY
+
 /* Define to 1 if you have the 'vprintf' function. */
 #undef HAVE_VPRINTF
+
+/* Define to 1 if you have the 'waitpid' function. */
+#undef HAVE_WAITPID
 
 /* Define to 1 if you have the <wchar.h> header file. */
 #undef HAVE_WCHAR_H
 
-/* Define to 1 if the system has the type `wchar_t'. */
+/* Define to 1 if the system has the type 'wchar_t'. */
 #undef HAVE_WCHAR_T
 
 /* Define to 1 if you have the 'wcrtomb' function. */
@@ -1280,17 +1317,20 @@
 /* Define to 1 if you have a working FS_IOC_GETFLAGS */
 #undef HAVE_WORKING_FS_IOC_GETFLAGS
 
+/* Define to 1 if you have the <xmllite.h> header file. */
+#undef HAVE_XMLLITE_H
+
 /* Define to 1 if you have zlib >= 1.2.1 */
 #undef HAVE_ZLIB_H
 
 /* Define to 1 if you have the <zstd.h> header file. */
 #undef HAVE_ZSTD_H
 
-/* Define to 1 if you have the `zstd' library (-lzstd) with compression
+/* Define to 1 if you have the 'zstd' library (-lzstd) with compression
    support. */
 #undef HAVE_ZSTD_compressStream
 
-/* Define to 1 if you have a `zstd' library version with ZSTD_minCLevel(). */
+/* Define to 1 if you have a 'zstd' library version with ZSTD_minCLevel(). */
 #undef HAVE_ZSTD_minCLevel
 
 /* Define to 1 if you have the '_fseeki64' function. */

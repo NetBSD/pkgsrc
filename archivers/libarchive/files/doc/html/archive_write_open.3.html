@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:54 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:06 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -216,7 +216,7 @@ int</i> <b>archive_close_callback</b>(<i>struct archive
 *</i>, <i>void *client_data</i>)</p>
 
 <p style="margin-left:9%; margin-top: 1em">The close
-callback is invoked by archive_close when the archive
+callback is invoked by archive_write_close when the archive
 processing is complete. If the open callback fails, the
 close callback is not invoked. The callback should return
 <b>ARCHIVE_OK</b> on success. On failure, the callback

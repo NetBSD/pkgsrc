@@ -122,10 +122,10 @@ Directories have an additional ACL
 (.BR ARCHIVE_ENTRY_ACL_TYPE_DEFAULT,)
 which controls the initial access ACL for newly-created directory entries.
 .SS NFSv4 Access Control Lists
-A NFSv4 ACL consists of multiple individual entries called Access Control
+An NFSv4 ACL consists of multiple individual entries called Access Control
 Entries (ACEs).
 .PP
-There are four possible types of a NFSv4 ACE:
+There are four possible types of an NFSv4 ACE:
 .RS 5
 It .BR ARCHIVE_ENTRY_ACL_TYPE_ALLOW
 Allow principal to perform actions requiring given permissions.
@@ -325,13 +325,13 @@ character
 are skipped.
 .PP
 \fB\%archive_entry_acl_next\fP()
-return the next entry of the ACL list.
-This functions may only be called after
+returns the next entry of the ACL list.
+This function may only be called after
 \fB\%archive_entry_acl_reset\fP()
 has indicated the presence of extended ACL entries.
 .PP
 \fB\%archive_entry_acl_reset\fP()
-prepare reading the list of ACL entries with
+prepares reading the list of ACL entries with
 \fB\%archive_entry_acl_next\fP().
 The function returns 0 if no non-extended ACLs are found.
 In this case, the access permissions should be obtained by
@@ -369,7 +369,7 @@ Prefix each default ACL entry with the word
 ``default:''.
 .TP
 .BR ARCHIVE_ENTRY_ACL_STYLE_SOLARIS
-The mask and other ACLs don not contain a double colon.
+The mask and other ACLs do not contain a double colon.
 .RE
 .PP
 The following flags are effective only on NFSv4 ACL:
@@ -391,7 +391,7 @@ Separate ACL entries with comma instead of newline.
 .RE
 .PP
 If the archive entry contains NFSv4 ACLs, all types of NFSv4 ACLs are returned.
-It the entry contains POSIX.1e ACLs and none of the flags
+If the entry contains POSIX.1e ACLs and none of the flags
 .BR ARCHIVE_ENTRY_ACL_TYPE_ACCESS
 or
 .BR ARCHIVE_ENTRY_ACL_TYPE_DEFAULT
@@ -400,7 +400,7 @@ are prefixed with
 ``default:''.
 .PP
 \fB\%archive_entry_acl_types\fP()
-get ACL entry types contained in an archive entry's ACL.
+gets ACL entry types contained in an archive entry's ACL.
 As POSIX.1e and NFSv4
 ACL entries cannot be mixed, this function is a very efficient way to detect if
 an ACL already contains POSIX.1e or NFSv4 ACL entries.
@@ -409,7 +409,7 @@ an ACL already contains POSIX.1e or NFSv4 ACL entries.
 \fB\%archive_entry_acl_count\fP()
 and
 \fB\%archive_entry_acl_reset\fP()
-returns the number of ACL entries that match the given type mask.
+return the number of ACL entries that match the given type mask.
 For POSIX.1e ACLS if the type mask includes
 .BR ARCHIVE_ENTRY_ACL_TYPE_ACCESS
 and at least one extended ACL entry exists, the three classic Unix

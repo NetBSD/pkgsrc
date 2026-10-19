@@ -23,7 +23,7 @@ Streaming Archive Library (libarchive, -larchive)
 .RS 5
 .TP
 \fB\%archive_read_add_passphrase\fP()
-Register passphrases for reading an encryption archive.
+Register passphrases for reading an encrypted archive.
 If
 \fIpassphrase\fP
 is
@@ -36,7 +36,7 @@ Otherwise,
 will be returned.
 .TP
 \fB\%archive_read_set_passphrase_callback\fP()
-Register a callback function that will be invoked to get a passphrase 
+Register a callback function that will be invoked to get a passphrase
 for decryption after trying all the passphrases registered by the
 \fB\%archive_read_add_passphrase\fP()
 function failed.

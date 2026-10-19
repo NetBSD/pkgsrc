@@ -88,6 +88,15 @@ Reset access times on files after they are read.
 (o mode only)
 Block output to records of 5120 bytes.
 .TP
+\fB\-Fl\fP b64encode
+(o mode only)
+Encode the archive with base64, after any compression.
+In input mode, this option is ignored; base64-encoded archives are
+recognized automatically on input.
+If both this option and
+\fB\-Fl\fP uuencode
+are given, the last one specified is used.
+.TP
 \fB\-C\fP \fIsize\fP
 (o mode only)
 Block output to records of
@@ -181,7 +190,7 @@ automatically on input.
 Synonym for
 \fB\-y\fP.
 .TP
-\fB\-L\fP
+\fB\-L\fP, \fB\-Fl\fP dereference
 (o and p modes)
 All symbolic links will be followed.
 Normally, symbolic links are archived and copied as symbolic links.
@@ -191,6 +200,12 @@ With this option, the target of the link will be archived or copied instead.
 (p mode only)
 Create links from the target directory to the original files,
 instead of copying.
+.TP
+\fB\-Fl\fP grzip
+(o mode only)
+Compress the resulting archive with
+\fBgrzip\fP(1).
+In input mode, this option is ignored.
 .TP
 \fB\-Fl\fP lrzip
 (o mode only)
@@ -311,6 +326,17 @@ do not restore the contents to disk.
 (i and p modes)
 Unconditionally overwrite existing files.
 Ordinarily, an older file will not overwrite a newer file on disk.
+.TP
+\fB\-Fl\fP uuencode
+(o mode only)
+Encode the archive with
+\fBuuencode\fP(1),
+after any compression.
+In input mode, this option is ignored; uuencoded archives are
+recognized automatically on input.
+If both this option and
+\fB\-Fl\fP b64encode
+are given, the last one specified is used.
 .TP
 \fB\-V\fP, \fB\-Fl\fP dot
 Print a dot to stderr for each file as it is processed.

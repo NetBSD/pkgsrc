@@ -31,7 +31,7 @@
 	       not expected to occur earlier than 2013.
        1marchive_read_free22m()
 	       Invokes 1marchive_read_close22m() if it was  not	 invoked  manually,
-	       then  release  all  resources.	Note:  In libarchive 1.x, this
+	       then  releases  all  resources.	 Note: In libarchive 1.x, this
 	       function was declared to return 4mvoid24m, which made it	 impossible
 	       to  detect certain errors when 1marchive_read_close22m() was invoked
 	       implicitly from this function.  The  declaration	 is  corrected

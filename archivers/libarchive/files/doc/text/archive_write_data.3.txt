@@ -28,25 +28,26 @@
 	       data.   This is useful when restoring sparse files from archive
 	       formats that support sparse files.   Returns  number  of	 bytes
 	       written or -1 on error.	(Note: This is currently not supported
-	       for archive_write handles, only for archive_write_disk handles.
+	       for  archive_write  handles,  only  for archive_write_disk han‐
+	       dles.)
 
 1mRETURN VALUES0m
-       This  function returns the number of bytes actually written, or a nega‐
+       This function returns the number of bytes actually written, or a	 nega‐
        tive error code on error.
 
 1mERRORS0m
-       Detailed error codes and textual descriptions are  available  from  the
+       Detailed	 error	codes  and textual descriptions are available from the
        1marchive_errno22m() and 1marchive_error_string22m() functions.
 
 1mBUGS0m
-       In  libarchive 3.x, this function sometimes returns zero on success in‐
+       In libarchive 3.x, this function sometimes returns zero on success  in‐
        stead of returning the number of bytes written.	Specifically, this oc‐
-       curs when writing to  an	 4marchive_write_disk24m  handle.   Clients  should
-       treat  any  value less than zero as an error and consider any non-nega‐
+       curs  when  writing  to	an  4marchive_write_disk24m handle.  Clients should
+       treat any value less than zero as an error and consider	any  non-nega‐
        tive value as success.
 
 1mSEE ALSO0m
-       4mtar24m(1),  4marchive_write_finish_entry24m(3),   4marchive_write_set_options24m(3),
+       4mtar24m(1),   4marchive_write_finish_entry24m(3),  4marchive_write_set_options24m(3),
        4mlibarchive24m(3), 4mcpio24m(5), 4mmtree24m(5), 4mtar24m(5)
 
 Debian			       February 28, 2017	 4mARCHIVE_WRITE_DATA24m(3)

@@ -77,8 +77,8 @@
 
 		   4mformat24m,4mmajor24m,4mminor24m[,4msubunit24m]
 			 A device  with	 4mmajor24m,  4mminor24m  and  optional	 4msubunit0m
-			 fields.   Their  meaning  is specified by the operat‐
-			 ing's system 4mformat24m.  See below for valid formats.
+			 fields.   Their meaning is specified by the operating
+			 system's 4mformat24m.	See below for valid formats.
 
 		   4mnumber0m
 			 Opaque number (as stored on the file system).

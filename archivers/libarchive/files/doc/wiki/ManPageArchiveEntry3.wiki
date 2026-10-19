@@ -61,7 +61,7 @@ Allocate and return a blank
 object. 
 </dd></dl> 
 === Function groups=== 
-Due to high number of functions, the accessor functions can be found in 
+Due to the high number of functions, the accessor functions can be found in 
 man pages grouped by the purpose. 
 <dl> 
 <dt>[[ManPageArchiveEntryAcl3]]</dt><dd> 

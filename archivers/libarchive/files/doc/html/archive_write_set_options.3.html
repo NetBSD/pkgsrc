@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:54 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:06 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -187,7 +187,7 @@ compression</b>=<i>type</i></p>
 
 <p style="margin-left:29%;">Use <i>type</i> as compression
 method. Supported values are &ldquo;bzip2&rdquo;,
-&ldquo;gzipi&rdquo;, &ldquo;lzo&rdquo; (ultra fast), and
+&ldquo;gzip&rdquo;, &ldquo;lzo&rdquo; (ultra fast), and
 &ldquo;zpaq&rdquo; (best, extremely slow).</p>
 
 <p><b>compression-level</b></p>
@@ -473,7 +473,7 @@ disabled.</p>
 <p><b>allow-sharp-tilde</b></p>
 
 <p style="margin-left:29%;">If enabled, sharp and tilde
-characters will be permitted in filenames, in violation if
+characters will be permitted in filenames, in violation of
 the ISO9660 specification. If disabled, such characters will
 be converted to underscore characters. Default:
 disabled.</p>
@@ -731,7 +731,7 @@ method. Supported values are &ldquo;none&rdquo;,
 &ldquo;bzip2&rdquo;, &ldquo;gzip&rdquo; (default),
 &ldquo;lzma&rdquo; and &ldquo;xz&rdquo;.</p>
 
-<p><b>compression_level</b></p>
+<p><b>compression-level</b></p>
 
 <p style="margin-left:29%;">The value is a decimal integer
 from 1 to 9 specifying the compression level.</p>
@@ -847,7 +847,7 @@ archive_write_new(); <br>
 archive_write_add_filter_gzip(a); <br>
 archive_write_set_format_iso9660(a); <br>
 archive_write_set_options(a,
-&quot;boot=kernel.img,compression=9&quot;); <br>
+&quot;boot=kernel.img,gzip:compression-level=9&quot;); <br>
 archive_write_open_filename(a, filename, blocksize);</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>

@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.h,v 1.9 2025/05/21 15:25:51 adam Exp $	*/
+/*	$NetBSD: archive_pack_dev.h,v 1.10 2026/10/19 12:05:19 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -36,8 +36,7 @@
 
 typedef	dev_t pack_t(int, unsigned long [], const char **);
 
-pack_t	*pack_find(const char *);
-pack_t	 pack_native;
+pack_t	*__archive_pack_find(const char *);
 
 #define	major_netbsd(x)		((int32_t)((((x) & 0x000fff00) >>  8)))
 #define	minor_netbsd(x)		((int32_t)((((x) & 0xfff00000) >> 12) | \

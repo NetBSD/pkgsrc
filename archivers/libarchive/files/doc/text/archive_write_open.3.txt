@@ -121,9 +121,9 @@
 	     4mtypedef24m   4mint24m   1marchive_close_callback22m(4mstruct24m	 4marchive24m  4m*24m,	4mvoid0m
 	     4m*client_data24m)
 
-       The close callback is invoked by archive_close when  the	 archive  pro‐
-       cessing	is complete. If the open callback fails, the close callback is
-       not invoked.  The callback should return	 1mARCHIVE_OK  22mon  success.	 On
+       The close callback is invoked by archive_write_close when  the  archive
+       processing  is complete. If the open callback fails, the close callback
+       is not invoked.	The callback should return 1mARCHIVE_OK 22mon success.	 On
        failure,	 the callback should invoke 1marchive_set_error22m() to register an
        error code and message and return 1mARCHIVE_FATAL22m.
 

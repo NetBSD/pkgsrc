@@ -196,6 +196,16 @@ Specify the block size, in 512-byte records, for tape drive I/O.
 As a rule, this argument is only needed when reading from or writing 
 to tape drives, and usually not even then as the default block size of 
 20 records (10240 bytes) is very common. 
+</dd><dt>--b64encode</dt><dd> 
+(c mode only) 
+Encode the resulting archive with base64, after any compression. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes base64-encoded archives automatically when 
+reading archives. 
+This option cannot be combined with 
+--uuencode. 
 </dd><dt>-C ''directory'', --cd ''directory'', --directory ''directory''</dt><dd> 
 In c and r mode, this changes the directory before adding 
 the following files. 
@@ -272,7 +282,8 @@ on Linux, the default is
 Use the provided group id number. 
 On extract, this overrides the group id in the archive; 
 the group name in the archive will be ignored. 
-On create, this overrides the group id read from disk; 
+On create, this overrides the group id read from disk 
+or copied from an archive; 
 if 
 --gname 
 is not also specified, the group name will be set to 
@@ -298,6 +309,15 @@ can be either a group name or numeric id.
 See the 
 --gname 
 option for details. 
+</dd><dt>--grzip</dt><dd> 
+(c mode only) 
+Compress the resulting archive with 
+[[grzip(1)|http://www.freebsd.org/cgi/man.cgi?query=grzip&sektion=1]]. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes grzip compression automatically when reading 
+archives. 
 </dd><dt>-H</dt><dd> 
 (c and r modes only) 
 Symbolic links named on the command line will be followed; the 
@@ -391,6 +411,13 @@ In extract or list modes, this option is ignored.
 Note that this 
 '''tar''' 
 implementation recognizes lz4 compression automatically when reading archives. 
+</dd><dt>--lzip</dt><dd> 
+(c mode only) 
+Compress the archive with lzip-compatible compression before writing it. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes lzip compression automatically when reading archives. 
 </dd><dt>--zstd</dt><dd> 
 (c mode only) 
 Compress the archive with zstd-compatible compression before writing it. 
@@ -434,6 +461,15 @@ is run in x mode as root.
 Currently supported only for pax formats 
 Po including pax restricted, the default tar format for 
 '''bsdtar''' Pc 
+</dd><dt>--mode ''permissions''</dt><dd> 
+Modify the file mode bits. 
+On create, this takes the on-disk mode and modifies it before storing 
+in the archive. 
+On extract, the mode from the archive is modified before writing to disk. 
+Permissions can be absolute (an octal number) or symbolic. 
+See 
+[[chmod(1)|http://www.freebsd.org/cgi/man.cgi?query=chmod&sektion=1]] 
+for more information and examples of both types. 
 </dd><dt>--mtime ''date''</dt><dd> 
 (c, r, u modes only) 
 Set the modification times of added files to the specified date. 
@@ -463,7 +499,7 @@ Honor the nodump file flag by skipping this file.
 </dd><dt>--nopreserveHFSCompression</dt><dd> 
 (x mode only) 
 Mac OS X specific (v10.6 or later). Do not compress extracted regular files 
-which were compressed with HFS+ compression before archived. 
+which were compressed with HFS+ compression before being archived. 
 By default, compress the regular files again with HFS+ compression. 
 </dd><dt>--null</dt><dd> 
 (use with 
@@ -657,10 +693,10 @@ and zpaq (best, extremely slow).
 </dd><dt>'''lrzip:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lrzip compression level. 
 </dd><dt>'''lz4:compression-level'''</dt><dd> 
-A decimal integer from 1 to 9 specifying the lzop compression level. 
+A decimal integer from 1 to 9 specifying the lz4 compression level. 
 </dd><dt>'''lz4:stream-checksum'''</dt><dd> 
 Enable stream checksum. 
-This is by default, use 
+This is enabled by default, use 
 '''lz4:!stream-checksum''' 
 to disable. 
 </dd><dt>'''lz4:block-checksum'''</dt><dd> 
@@ -1042,12 +1078,24 @@ the name is not verified against the system user database.
 Pipe the input (in x or t mode) or the output (in c mode) through 
 ''program'' 
 instead of using the builtin compression support. 
+</dd><dt>--uuencode</dt><dd> 
+(c mode only) 
+Encode the resulting archive with 
+[[uuencode(1)|http://www.freebsd.org/cgi/man.cgi?query=uuencode&sektion=1]], 
+after any compression. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes uuencoded archives automatically when reading 
+archives. 
+This option cannot be combined with 
+--b64encode. 
 </dd><dt>--owner ''name''<nowiki>[</nowiki>:''uid''<nowiki>]</nowiki></dt><dd> 
 Use the provided user, if 
 ''uid'' 
 is not provided, 
 ''name'' 
-can be either an username or numeric id. 
+can be either a username or numeric id. 
 See the 
 --uname 
 option for details. 
@@ -1492,7 +1540,7 @@ complain about the null padding when decompressing an archive created by
 '''tar''', 
 although they still extract it correctly. 
 
-The compression and decompression is implemented internally, so 
+The compression and decompression are implemented internally, so 
 there may be insignificant differences between the compressed output 
 generated by 
 

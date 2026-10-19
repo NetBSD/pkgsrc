@@ -42,15 +42,15 @@ Store the body the last time an inode is seen (new cpio).
 The 
 '''archive_entry_linkresolver''' 
 functions help by providing a unified interface and handling the complexity 
-behind the scene. 
+behind the scenes. 
 
 The 
 '''archive_entry_linkresolver''' 
 functions assume that 
 ''archive_entry'' 
 instances have valid nlinks, inode and device values. 
-The inode and device value is used to match entries. 
-The nlinks value is used to determined if all references have been found and 
+The inode and device values are used to match entries. 
+The nlinks value is used to determine if all references have been found and 
 if the internal references can be recycled. 
 
 The 
@@ -73,7 +73,6 @@ The
 function is the core of 
 '''archive_entry_linkresolver'''. 
 The 
-'''entry'''() 
 argument points to the 
 ''archive_entry'' 
 that should be written. 

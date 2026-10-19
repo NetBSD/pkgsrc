@@ -96,7 +96,7 @@ If either function returns
 '''ARCHIVE_FATAL''' 
 will be returned 
 immediately. 
-Otherwise, greater of the two values will be returned. 
+Otherwise, the greater of the two values will be returned. 
 </dd><dt> 
 '''archive_read_set_options'''() 
 </dt> <dd> 

@@ -19,7 +19,7 @@
 
 1mDESCRIPTION0m
        1marchive_read_add_passphrase22m()
-	       Register passphrases for reading	 an  encryption	 archive.   If
+	       Register passphrases for	 reading  an  encrypted	 archive.   If
 	       4mpassphrase24m	is NULL or empty, this function will do nothing and
 	       1mARCHIVE_FAILED 22mwill be returned.  Otherwise, 1mARCHIVE_OK 22mwill be
 	       returned.

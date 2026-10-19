@@ -618,10 +618,10 @@
        additional metadata about the second file, including ACL, extended  at‐
        tributes,  and  resources.  To recreate the original file on disk, each
        separate file can be extracted and the Mac OS X 1mcopyfile22m() function can
-       be used to unpack the separate metadata file and apply it to th regular
-       file.  Conversely, the same function provides a “pack” option to encode
-       the extended metadata from a file into a separate file  whose  contents
-       can then be put into a tar archive.
+       be used to unpack the separate metadata file and apply it to the	 regu‐
+       lar  file.   Conversely,	 the same function provides a “pack” option to
+       encode the extended metadata from a file into  a	 separate  file	 whose
+       contents can then be put into a tar archive.
 
        Note  that the Apple extended attributes interact badly with long file‐
        names.  Since each file is stored with the full name, a separate set of

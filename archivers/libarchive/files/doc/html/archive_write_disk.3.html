@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:54 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:06 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -344,13 +344,14 @@ directory. In particular, the directory <i>aa</i> is created
 as well as the final object <i>bb</i>. In theory, this can
 be exploited to create an entire directory hierarchy with a
 single request. Of course, this does not work if the
-<b>ARCHIVE_EXTRACT_NODOTDOT</b> option is specified.</p>
+<b>ARCHIVE_EXTRACT_SECURE_NODOTDOT</b> option is
+specified.</p>
 
 <p style="margin-left:9%; margin-top: 1em">Implicit
 directories are always created obeying the current umask.
 Explicit objects are created obeying the current umask
 unless <b>ARCHIVE_EXTRACT_PERM</b> is specified, in which
-case they current umask is ignored.</p>
+case the current umask is ignored.</p>
 
 <p style="margin-left:9%; margin-top: 1em">SGID and SUID
 bits are restored only if the correct user and group could

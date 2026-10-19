@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jul 28 09:31:52 2026 -->
+<!-- CreationDate: Wed Oct 14 09:02:04 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -192,30 +192,31 @@ access ACL for newly-created directory entries.</p>
 <p style="margin-left:4%; margin-top: 1em"><b>NFSv4 Access
 Control Lists</b></p>
 
-<p style="margin-left:9%;">A NFSv4 ACL consists of multiple
-individual entries called Access Control Entries (ACEs).</p>
+<p style="margin-left:9%;">An NFSv4 ACL consists of
+multiple individual entries called Access Control Entries
+(ACEs).</p>
 
 <p style="margin-left:9%; margin-top: 1em">There are four
-possible types of a NFSv4 ACE:</p>
+possible types of an NFSv4 ACE:</p>
 
 <p>ARCHIVE_ENTRY_ACL_TYPE_ALLOW</p>
 
-<p style="margin-left:54%;">Allow principal to perform
+<p style="margin-left:55%;">Allow principal to perform
 actions requiring given permissions.</p>
 
 <p>ARCHIVE_ENTRY_ACL_TYPE_DENY</p>
 
-<p style="margin-left:54%;">Prevent principal from
+<p style="margin-left:55%;">Prevent principal from
 performing actions requiring given permissions.</p>
 
 <p>ARCHIVE_ENTRY_ACL_TYPE_AUDIT</p>
 
-<p style="margin-left:54%;">Log access attempts by
+<p style="margin-left:55%;">Log access attempts by
 principal which require given permissions.</p>
 
 <p>ARCHIVE_ENTRY_ACL_TYPE_ALARM</p>
 
-<p style="margin-left:54%;">Trigger a system alarm on
+<p style="margin-left:55%;">Trigger a system alarm on
 access attempts by principal which require given
 permissions.</p>
 
@@ -436,13 +437,13 @@ character (comments) are skipped.</p>
 
 
 <p style="margin-left:9%; margin-top: 1em"><b>archive_entry_acl_next</b>()
-return the next entry of the ACL list. This functions may
+returns the next entry of the ACL list. This function may
 only be called after <b>archive_entry_acl_reset</b>() has
 indicated the presence of extended ACL entries.</p>
 
 
 <p style="margin-left:9%; margin-top: 1em"><b>archive_entry_acl_reset</b>()
-prepare reading the list of ACL entries with
+prepares reading the list of ACL entries with
 <b>archive_entry_acl_next</b>(). The function returns 0 if
 no non-extended ACLs are found. In this case, the access
 permissions should be obtained by
@@ -479,7 +480,7 @@ with the word &ldquo;default:&rdquo;.</p>
 
 <p>ARCHIVE_ENTRY_ACL_STYLE_SOLARIS</p>
 
-<p style="margin-left:27%;">The mask and other ACLs don not
+<p style="margin-left:27%;">The mask and other ACLs do not
 contain a double colon.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The following
@@ -506,7 +507,7 @@ instead of newline.</p>
 
 <p style="margin-left:9%; margin-top: 1em">If the archive
 entry contains NFSv4 ACLs, all types of NFSv4 ACLs are
-returned. It the entry contains POSIX.1e ACLs and none of
+returned. If the entry contains POSIX.1e ACLs and none of
 the flags ARCHIVE_ENTRY_ACL_TYPE_ACCESS or
 ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are specified, both access
 and default entries are returned and default entries are
@@ -514,7 +515,7 @@ prefixed with &ldquo;default:&rdquo;.</p>
 
 
 <p style="margin-left:9%; margin-top: 1em"><b>archive_entry_acl_types</b>()
-get ACL entry types contained in an archive entry&rsquo;s
+gets ACL entry types contained in an archive entry&rsquo;s
 ACL. As POSIX.1e and NFSv4 ACL entries cannot be mixed, this
 function is a very efficient way to detect if an ACL already
 contains POSIX.1e or NFSv4 ACL entries.</p>
@@ -523,7 +524,7 @@ contains POSIX.1e or NFSv4 ACL entries.</p>
 
 
 <p style="margin-left:9%;"><b>archive_entry_acl_count</b>()
-and <b>archive_entry_acl_reset</b>() returns the number of
+and <b>archive_entry_acl_reset</b>() return the number of
 ACL entries that match the given type mask. For POSIX.1e
 ACLS if the type mask includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS
 and at least one extended ACL entry exists, the three

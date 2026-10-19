@@ -285,18 +285,18 @@ is the preferred interface.
 Block and character devices are characterised either using a device number 
 or a pair of major and minor number. 
 The combined device number can be obtained with 
-'''archive_device_rdev'''() 
+'''archive_entry_rdev'''() 
 and set with 
-'''archive_device_set_rdev'''(). 
+'''archive_entry_set_rdev'''(). 
 The major and minor numbers are accessed by 
-'''archive_device_rdevmajor'''(), 
-'''archive_device_rdevminor'''() 
-'''archive_device_set_rdevmajor'''() 
+'''archive_entry_rdevmajor'''(), 
+'''archive_entry_rdevminor'''() 
+'''archive_entry_set_rdevmajor'''() 
 and 
-'''archive_device_set_rdevminor'''(). 
+'''archive_entry_set_rdevminor'''(). 
 
 The process of splitting the combined device number into major and 
-minor number and the reverse process of combing them differs between 
+minor number and the reverse process of combining them differs between 
 platforms. 
 Some archive formats use the combined form, while other formats use 
 the split form. 
