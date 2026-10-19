@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7109 2026/10/19 10:29:57 fox Exp $
+$NetBSD: CHANGES-2026,v 1.7110 2026/10/19 11:29:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10628,3 +10628,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.22.0 [adam 2026-10-19]
 	Added emulators/compat_linux_test_project 20260529-0.10 [sborrill 2026-10-19]
 	Updated audio/fasttracker2 to 2.26.1 [fox 2026-10-19]
+	Updated multimedia/mkvtoolnix to 103.0 [adam 2026-10-19]
+	Updated devel/lazygit to 0.66.2 [adam 2026-10-19]
+	Updated net/rclone to 1.75.2 [adam 2026-10-19]
+	Updated security/pcsc-lite to 2.5.3 [adam 2026-10-19]
