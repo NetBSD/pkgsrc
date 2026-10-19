@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/10/19 19:55:58 alnsn Exp $
+$NetBSD: distinfo,v 1.6 2026/10/19 21:06:59 wiz Exp $
 
-BLAKE2s (duff-0.5.tar.gz) = b079c9ded5d7951c2140bc5fea7126768cf9b544c201f13bd473b763284bbd2a
-SHA512 (duff-0.5.tar.gz) = 4e09e4ff518cf2c6a6d4bc58321972bcbaac6eb78cee457ab91052708087cbefcc6e0ae79ce8e34c09160a4f114e66aef09a915568251572805122650a53f6d1
-Size (duff-0.5.tar.gz) = 12965 bytes
+BLAKE2s (ocaml-duff-0.5/duff-0.5.tar.gz) = b079c9ded5d7951c2140bc5fea7126768cf9b544c201f13bd473b763284bbd2a
+SHA512 (ocaml-duff-0.5/duff-0.5.tar.gz) = 4e09e4ff518cf2c6a6d4bc58321972bcbaac6eb78cee457ab91052708087cbefcc6e0ae79ce8e34c09160a4f114e66aef09a915568251572805122650a53f6d1
+Size (ocaml-duff-0.5/duff-0.5.tar.gz) = 12965 bytes
