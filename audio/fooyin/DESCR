@@ -1,0 +1,7 @@
+fooyin is a customisable desktop music player. It combines flexible playback,
+library management, playlists, and scripting tools in an interface that can
+be rearranged from a blank canvas or adapted from preset layouts.
+
+It's built around extensibility and supports plugins for widgets,
+decoders, tag readers, DSPs, and integrations, and includes FooScript
+for advanced display formatting, queries, autoplaylists, and widget behaviour.
