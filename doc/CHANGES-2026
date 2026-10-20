@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7136 2026/10/20 14:21:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7137 2026/10/20 16:59:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10702,3 +10702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/treemd to 0.10.0 [pin 2026-10-20]
 	Updated misc/weatherman to 0.5.7 [pin 2026-10-20]
 	Updated shells/oh-my-posh to 31.9.1 [pin 2026-10-20]
+	Updated devel/nss to 3.131.1 [wiz 2026-10-20]
