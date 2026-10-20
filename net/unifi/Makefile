@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.39 2026/04/23 17:55:56 abs Exp $
+# $NetBSD: Makefile,v 1.40 2026/10/20 18:57:24 abs Exp $
 
-DISTNAME=	unifi-10.1.89
+DISTNAME=	unifi-10.6.101
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
-# unifi-10.1.89 is (as of 2026-04-23) the last version to run in pre java25
-
 # Updates must be tested to not only build but actually function under
-# at least NetBSD 10/amd64 with actual UBNT hardware.
+# at least NetBSD 11/amd64 with actual UBNT hardware.
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	abs@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
@@ -49,7 +47,7 @@ INSTALLATION_DIRS=	unifi share/doc/unifi
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
 # native libaries.
-PKG_JVMS_ACCEPTED=	openjdk21 openjdk17
+PKG_JVMS_ACCEPTED=	openjdk25
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
