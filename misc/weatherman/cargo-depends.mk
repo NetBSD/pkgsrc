@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/10/18 13:05:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/10/20 14:19:13 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.32
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.10
@@ -58,7 +58,7 @@ CARGO_CRATE_DEPENDS+=	calloop-0.14.5
 CARGO_CRATE_DEPENDS+=	calloop-wayland-source-0.3.0
 CARGO_CRATE_DEPENDS+=	calloop-wayland-source-0.4.1
 CARGO_CRATE_DEPENDS+=	castaway-0.2.4
-CARGO_CRATE_DEPENDS+=	cc-1.8.0
+CARGO_CRATE_DEPENDS+=	cc-1.9.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.5
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.2
 CARGO_CRATE_DEPENDS+=	chacha20-0.10.2
@@ -133,7 +133,7 @@ CARGO_CRATE_DEPENDS+=	event-listener-strategy-0.5.4
 CARGO_CRATE_DEPENDS+=	fancy-regex-0.11.0
 CARGO_CRATE_DEPENDS+=	fastrand-2.5.0
 CARGO_CRATE_DEPENDS+=	filedescriptor-0.8.3
-CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.14
+CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.15
 CARGO_CRATE_DEPENDS+=	finl_unicode-1.5.0
 CARGO_CRATE_DEPENDS+=	fixedbitset-0.4.2
 CARGO_CRATE_DEPENDS+=	float_next_after-1.0.0
@@ -471,7 +471,7 @@ CARGO_CRATE_DEPENDS+=	tiny-skia-path-0.11.4
 CARGO_CRATE_DEPENDS+=	tiny-xlib-0.2.5
 CARGO_CRATE_DEPENDS+=	tinystr-0.8.4
 CARGO_CRATE_DEPENDS+=	tinyvec-1.13.3
-CARGO_CRATE_DEPENDS+=	tokio-1.53.3
+CARGO_CRATE_DEPENDS+=	tokio-1.54.0
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.7.2
 CARGO_CRATE_DEPENDS+=	tokio-rustls-0.26.6
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.20
@@ -528,7 +528,7 @@ CARGO_CRATE_DEPENDS+=	wayland-scanner-0.31.11
 CARGO_CRATE_DEPENDS+=	wayland-sys-0.31.11
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.106
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
-CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.10
 CARGO_CRATE_DEPENDS+=	wezterm-bidi-0.2.3
 CARGO_CRATE_DEPENDS+=	wezterm-blob-leases-0.1.1
 CARGO_CRATE_DEPENDS+=	wezterm-color-types-0.3.0

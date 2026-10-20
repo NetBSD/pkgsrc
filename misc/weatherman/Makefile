@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/10/18 13:05:41 pin Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/20 14:19:13 pin Exp $
 
-DISTNAME=	weatherman-0.5.6
+DISTNAME=	weatherman-0.5.7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sorinirimies/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,9 +17,9 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.100.0beta.5
+#RUST_REQ=	1.100.0beta.7
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.100.0beta.5 on amd64
+#This package is confirmed to build with Rust 1.100.0beta.7 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
