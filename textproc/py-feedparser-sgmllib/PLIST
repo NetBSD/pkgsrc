@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/20 10:13:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/feedparser_sgmllib/__init__.py
+${PYSITELIB}/feedparser_sgmllib/__init__.pyc
+${PYSITELIB}/feedparser_sgmllib/__init__.pyo
+${PYSITELIB}/feedparser_sgmllib/_compat.py
+${PYSITELIB}/feedparser_sgmllib/_compat.pyc
+${PYSITELIB}/feedparser_sgmllib/_compat.pyo
+${PYSITELIB}/feedparser_sgmllib/py.typed

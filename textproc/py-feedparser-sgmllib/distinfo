@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/20 10:13:11 adam Exp $
+
+BLAKE2s (feedparser_sgmllib-2.1.0.tar.gz) = 815154408573d99b9d9dcf7f4835449dde0e54ac161fc19ec8472eeb5e0098c7
+SHA512 (feedparser_sgmllib-2.1.0.tar.gz) = a7c436496ff6f90eb691938514c4d933ccafd37c56672ceecaa51c639558ce87d9cab1d2e8ed2b83ad937caf1f993310ddfa20145966486e0ec7bacd17f0da31
+Size (feedparser_sgmllib-2.1.0.tar.gz) = 26845 bytes

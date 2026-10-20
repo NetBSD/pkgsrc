@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1611 2026/10/14 04:05:11 agc Exp $
+# $NetBSD: Makefile,v 1.1612 2026/10/20 10:13:11 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1101,6 +1101,7 @@ SUBDIR+=	py-eradicate
 SUBDIR+=	py-et_xmlfile
 SUBDIR+=	py-fastjsonschema
 SUBDIR+=	py-feedparser
+SUBDIR+=	py-feedparser-sgmllib
 SUBDIR+=	py-feedparser5
 SUBDIR+=	py-ftfy
 SUBDIR+=	py-generateDS
