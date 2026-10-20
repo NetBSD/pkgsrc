@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2026/10/20 14:45:11 nia Exp $
+$NetBSD: distinfo,v 1.45 2026/10/20 22:59:05 nia Exp $
 
 BLAKE2s (certdata-20260908.txt) = 7570bb28d4e8a175f25a9aa703a3e419324a4960a291e2c611be2b7001f3d8a1
 SHA512 (certdata-20260908.txt) = 46d681128b3aa0f22b9e3764b7ee0b2fb73dacf29231ae395d316fe956e6afdaeaf799e15632974b7802c642f057fe39a3fae21f4460831b68d9490322bfbb5a
 Size (certdata-20260908.txt) = 1375050 bytes
-SHA1 (patch-certdata.txt) = 8639fd77607f00c7f908cdf1887dde057154cf1c
+SHA1 (patch-certdata.txt) = 04ed1f75d4905cc7fa80be0e6f3eeeefdc1e3f9f
