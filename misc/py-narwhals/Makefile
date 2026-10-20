@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/22 12:37:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/20 06:02:15 adam Exp $
 
-DISTNAME=	narwhals-2.26.0
+DISTNAME=	narwhals-2.27.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/narwhals/}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/07/13 12:00:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/20 06:02:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -96,6 +96,9 @@ ${PYSITELIB}/narwhals/_dask/expr.pyo
 ${PYSITELIB}/narwhals/_dask/expr_dt.py
 ${PYSITELIB}/narwhals/_dask/expr_dt.pyc
 ${PYSITELIB}/narwhals/_dask/expr_dt.pyo
+${PYSITELIB}/narwhals/_dask/expr_list.py
+${PYSITELIB}/narwhals/_dask/expr_list.pyc
+${PYSITELIB}/narwhals/_dask/expr_list.pyo
 ${PYSITELIB}/narwhals/_dask/expr_str.py
 ${PYSITELIB}/narwhals/_dask/expr_str.pyc
 ${PYSITELIB}/narwhals/_dask/expr_str.pyo
