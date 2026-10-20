@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2026/09/02 14:01:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/10/20 18:31:28 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -303,7 +303,15 @@ ${PLIST.lua}share/nmap/scripts/db2-das-info.nse
 ${PLIST.lua}share/nmap/scripts/deluge-rpc-brute.nse
 ${PLIST.lua}share/nmap/scripts/dhcp-discover.nse
 ${PLIST.lua}share/nmap/scripts/dicom-brute.nse
+${PLIST.lua}share/nmap/scripts/dicom-cfind-ls.nse
+${PLIST.lua}share/nmap/scripts/dicom-cmove.nse
+${PLIST.lua}share/nmap/scripts/dicom-get.nse
+${PLIST.lua}share/nmap/scripts/dicom-info.nse
 ${PLIST.lua}share/nmap/scripts/dicom-ping.nse
+${PLIST.lua}share/nmap/scripts/dicom-slowloris.nse
+${PLIST.lua}share/nmap/scripts/dicom-store-fuzzer.nse
+${PLIST.lua}share/nmap/scripts/dicom-store-inject.nse
+${PLIST.lua}share/nmap/scripts/dicom-web-enum.nse
 ${PLIST.lua}share/nmap/scripts/dict-info.nse
 ${PLIST.lua}share/nmap/scripts/distcc-cve2004-2687.nse
 ${PLIST.lua}share/nmap/scripts/dns-blacklist.nse

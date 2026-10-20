@@ -1,18 +1,22 @@
-$NetBSD: patch-nping_configure,v 1.2 2026/09/14 22:10:12 tnn Exp $
+$NetBSD: patch-nping_configure,v 1.3 2026/10/20 18:31:29 adam Exp $
 
 pcap_version is not portable; use pcap_lib_version(), which returns a
 string like "libpcap version 1.10.7 (...)", so skip to the first digit
 before parsing it.
 
---- nping/configure.orig	2025-05-15 09:53:51.037421707 +0000
+--- nping/configure.orig	2026-10-12 17:36:47.000000000 +0000
 +++ nping/configure
-@@ -6057,9 +6057,12 @@ else $as_nop
+@@ -6293,13 +6293,16 @@ else $as_nop
  /* end confdefs.h.  */
  
  #include <stdio.h>
 -extern char pcap_version[];
 +#include <pcap/pcap.h>
- int main() {
+ 
+ int
+ main (void)
+ {
+ 
 -  int major, minor1, minor2;
 +  int major = 0, minor1 = 0, minor2 = 0;
 +  const char *pcap_version = pcap_lib_version();
@@ -21,13 +25,17 @@ before parsing it.
    sscanf(pcap_version,"%d.%d.%d", &major, &minor1, &minor2);
    if (major > 0)
      return 0;
-@@ -6095,9 +6098,12 @@ else $as_nop
+@@ -6336,13 +6339,16 @@ else $as_nop
  #ifdef HAVE_NET_BPF_H
  #include <net/bpf.h>
  #endif
 -extern char pcap_version[];
 +#include <pcap/pcap.h>
- int main() {
+ 
+ int
+ main (void)
+ {
+ 
 -  int major, minor;
 +  int major = 0, minor = 0;
 +  const char *pcap_version = pcap_lib_version();

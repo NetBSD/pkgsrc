@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/09/02 14:01:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/10/20 18:31:29 adam Exp $
 bin/zenmap
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -184,7 +184,6 @@ ${PYSITELIB}/zenmapCore/__init__.pyc
 ${PYSITELIB}/zenmapCore/__init__.pyo
 ${PYSITELIB}/zenmapCore/data/config/scan_profile.usp
 ${PYSITELIB}/zenmapCore/data/config/zenmap.conf
-${PYSITELIB}/zenmapCore/data/config/zenmap_version
 ${PYSITELIB}/zenmapCore/data/docs/help.html
 ${PYSITELIB}/zenmapCore/data/locale/de.po
 ${PYSITELIB}/zenmapCore/data/locale/es.po
