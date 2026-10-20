@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/09/29 15:22:36 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/20 18:34:46 adam Exp $
 
-DISTNAME=	libtorrent-rasterbar-2.0.15
+DISTNAME=	libtorrent-rasterbar-2.1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arvidn/}
 GITHUB_PROJECT=	libtorrent
@@ -15,14 +15,19 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	pkg-config
 
+# For deps/libdatachannel/CMakeLists.txt
+CMAKE_CONFIGURE_ARGS+=	-DNO_EXAMPLES=ON
+CMAKE_CONFIGURE_ARGS+=	-DNO_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_JSON=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_SRTP=ON
+
 PKGCONFIG_OVERRIDE+=	libtorrent-rasterbar.pc.in
 
-post-install:
-	${FIND} ${DESTDIR} -name '*.orig' -exec ${RM} -f {} +
-
+.include "../../comms/srtp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
