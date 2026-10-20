@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7121 2026/10/19 20:32:02 agc Exp $
+$NetBSD: CHANGES-2026,v 1.7122 2026/10/20 02:21:11 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10665,3 +10665,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-geventhttpclient to 2.6.1 [adam 2026-10-19]
 	Updated devel/libagcre to 20261017 [agc 2026-10-19]
 	Updated textproc/agcre to 20261017 [agc 2026-10-19]
+	Updated devel/libagcre to 20261019 [agc 2026-10-19]
+	Updated textproc/agcre to 20261019 [agc 2026-10-19]
