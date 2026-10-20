@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.513.2.1 2026/10/20 23:11:52 maya Exp $
+# $NetBSD: phpversion.mk,v 1.513.2.2 2026/10/20 23:16:18 maya Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -110,7 +110,7 @@ PHPVERSION_MK=	defined
 # Define each PHP's version.
 PHP56_VERSION=	5.6.40
 PHP74_VERSION=	7.4.33
-PHP82_VERSION=	8.2.33
+PHP82_VERSION=	8.2.34
 PHP83_VERSION=	8.3.35
 PHP84_VERSION=	8.4.25
 PHP85_VERSION=	8.5.10
