@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/05/24 06:17:51 adam Exp $
+# $NetBSD: Makefile,v 1.64 2026/10/20 06:14:50 adam Exp $
 
-DISTNAME=	paramiko-5.0.0
+DISTNAME=	paramiko-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
@@ -19,9 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
-
-.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

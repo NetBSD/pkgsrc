@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2026/05/24 06:17:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/10/20 06:14:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -67,6 +67,9 @@ ${PYSITELIB}/paramiko/kex_group14.pyo
 ${PYSITELIB}/paramiko/kex_group16.py
 ${PYSITELIB}/paramiko/kex_group16.pyc
 ${PYSITELIB}/paramiko/kex_group16.pyo
+${PYSITELIB}/paramiko/kex_mlkem.py
+${PYSITELIB}/paramiko/kex_mlkem.pyc
+${PYSITELIB}/paramiko/kex_mlkem.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
