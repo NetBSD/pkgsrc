@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.4 2022/05/02 18:12:13 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.5 2026/10/20 20:05:50 alnsn Exp $
 
 PREFIX, LIBDIR and DOCDIR set by the package Makefile
 Use BSD_INSTALL_*
 
---- Makefile.orig	2022-02-06 14:17:34.000000000 +0000
+--- Makefile.orig	2026-10-20 19:37:20.015395497 +0000
 +++ Makefile
 @@ -12,9 +12,9 @@
  
@@ -22,36 +22,36 @@ Use BSD_INSTALL_*
  install: $(INSTALL-TARGETS)
  
  install-doc:
--	$(INSTALL) -d $(DOCDIR)/odoc-pages
--	$(INSTALL) CHANGES.md LICENSE.md README.md $(DOCDIR)
+-	$(INSTALL) -d "$(DOCDIR)/odoc-pages"
+-	$(INSTALL) CHANGES.md LICENSE.md README.md "$(DOCDIR)"
 -	$(INSTALL) doc/index.mld doc/cli.mld doc/examples.mld doc/tutorial.mld \
-+	$(BSD_INSTALL_DATA_DIR) -d $(DOCDIR)/odoc-pages
-+	$(BSD_INSTALL_DATA) CHANGES.md LICENSE.md README.md $(DOCDIR)
++	$(BSD_INSTALL_DATA_DIR) "$(DOCDIR)/odoc-pages"
++	$(BSD_INSTALL_DATA) CHANGES.md LICENSE.md README.md "$(DOCDIR)"
 +	$(BSD_INSTALL_DATA) doc/index.mld doc/cli.mld doc/examples.mld doc/tutorial.mld \
- 	           doc/tool_man.mld $(DOCDIR)/odoc-pages
+ 	           doc/tool_man.mld "$(DOCDIR)/odoc-pages"
  
  clean:
 @@ -61,18 +61,18 @@ create-libdir:
- 	$(INSTALL) -d $(LIBDIR)
+ 	$(INSTALL) -d "$(LIBDIR)"
  
  install-common: create-libdir
--	$(INSTALL) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti $(LIBDIR)
--	$(INSTALL) cmdliner.opam $(LIBDIR)/opam
-+	$(BSD_INSTALL_DATA) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti $(LIBDIR)
-+	$(BSD_INSTALL_DATA) cmdliner.opam $(LIBDIR)/opam
+-	$(INSTALL) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti "$(LIBDIR)"
+-	$(INSTALL) cmdliner.opam "$(LIBDIR)/opam"
++	$(BSD_INSTALL_DATA) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti "$(LIBDIR)"
++	$(BSD_INSTALL_DATA) cmdliner.opam "$(LIBDIR)/opam"
  
  install-byte: create-libdir
--	$(INSTALL) $(BASE).cma $(LIBDIR)
-+	$(BSD_INSTALL_DATA) $(BASE).cma $(LIBDIR)
+-	$(INSTALL) $(BASE).cma "$(LIBDIR)"
++	$(BSD_INSTALL_DATA) $(BASE).cma "$(LIBDIR)"
  
  install-native: create-libdir
 -	$(INSTALL) $(BASE).cmxa $(BASE)$(EXT_LIB) $(wildcard $(B)/cmdliner*.cmx) \
 +	$(BSD_INSTALL_DATA) $(BASE).cmxa $(BASE)$(EXT_LIB) $(wildcard $(B)/cmdliner*.cmx) \
-   $(LIBDIR)
+   "$(LIBDIR)"
  
  install-native-dynlink: create-libdir
--	$(INSTALL) $(BASE).cmxs $(LIBDIR)
-+	$(BSD_INSTALL_DATA) $(BASE).cmxs $(LIBDIR)
+-	$(INSTALL) $(BASE).cmxs "$(LIBDIR)"
++	$(BSD_INSTALL_DATA) $(BASE).cmxs "$(LIBDIR)"
  
  .PHONY: all install install-doc clean build-byte build-native \
  	build-native-dynlink create-libdir install-common install-byte \

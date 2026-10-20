@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2026/03/01 12:38:22 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/10/20 20:05:50 alnsn Exp $
 
 BUILDLINK_TREE+=	ocaml-cmdliner
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-cmdliner
 OCAML_CMDLINER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-cmdliner+=	ocaml-cmdliner>=0.9.8
-BUILDLINK_ABI_DEPENDS.ocaml-cmdliner?=	ocaml-cmdliner>=1.1.1nb2
+BUILDLINK_ABI_DEPENDS.ocaml-cmdliner?=	ocaml-cmdliner>=1.3.0
 BUILDLINK_PKGSRCDIR.ocaml-cmdliner?=	../../devel/ocaml-cmdliner
 
 .include "../../devel/ocaml-findlib/buildlink3.mk"
