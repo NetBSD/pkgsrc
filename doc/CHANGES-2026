@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7133 2026/10/20 12:02:51 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7134 2026/10/20 12:04:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10699,3 +10699,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.32 [pin 2026-10-20]
 	Updated shells/oh-my-posh to 31.9.0 [pin 2026-10-20]
 	Updated sysutils/onefetch to 3.1.0 [pin 2026-10-20]
+	Updated textproc/treemd to 0.10.0 [pin 2026-10-20]
