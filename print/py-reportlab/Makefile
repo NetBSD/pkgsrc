@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2026/10/16 19:44:10 adam Exp $
+# $NetBSD: Makefile,v 1.98 2026/10/20 05:04:20 adam Exp $
 
-DISTNAME=	reportlab-4.5.1
+DISTNAME=	reportlab-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.0.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-charset-normalizer-[0-9]*:../../converters/py-charset-normalizer
+DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=0:../../converters/py-charset-normalizer
 
 USE_LANGUAGES=	# none
 
