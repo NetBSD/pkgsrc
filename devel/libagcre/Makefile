@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/10/19 20:30:29 agc Exp $
+# $NetBSD: Makefile,v 1.4 2026/10/20 02:19:23 agc Exp $
 
 DISTNAME=		agcre-${VERSION}
 PKGNAME=		libagcre-${VERSION}
-VERSION=		20261017
+VERSION=		20261019
 CATEGORIES=		devel
 MASTER_SITES=		-${MASTER_SITE_CODEBERG:=agc-codeberg/agcre/archive/${VERSION}.tar.gz}
 
