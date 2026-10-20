@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2026/10/13 18:37:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.66 2026/10/20 20:28:09 bsiegert Exp $
 #
 
 DISTNAME=		nats-server-2.1.9
-PKGREVISION=		63
+PKGREVISION=		64
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=nats-io/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

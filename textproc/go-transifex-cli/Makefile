@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2026/10/13 18:38:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/20 20:28:20 bsiegert Exp $
 #
 
 DISTNAME=	cli-${VERS}
 PKGNAME=	go-transifex-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transifex/}
 GITHUB_PROJECT=	cli

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2026/10/13 18:37:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.97 2026/10/20 20:27:57 bsiegert Exp $
 
 DISTNAME=	matterircd-0.28.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=42wim/}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	chat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar

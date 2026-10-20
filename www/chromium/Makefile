@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2026/10/16 15:30:41 kikadf Exp $
+# $NetBSD: Makefile,v 1.92 2026/10/20 20:28:21 bsiegert Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			155.0.8059.84
+PKGREVISION=			1
 CATEGORIES=			www
 #MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/

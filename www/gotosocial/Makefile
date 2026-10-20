@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2026/10/13 18:38:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.71 2026/10/20 20:28:22 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.22.1-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_CODEBERG:=superseriousbusiness/gotosocial/releases/download/v${PKGVERSION_NOREV}/}
 SRC_DISTFILE=	gotosocial-${PKGVERSION_NOREV}-source-code.tar.gz

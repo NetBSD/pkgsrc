@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/10/13 18:37:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/20 20:28:10 bsiegert Exp $
 
 DISTNAME=	opentofu-1.6.3
 PKGNAME=	${DISTNAME:S/opentofu/&16/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 GITHUB_PROJECT=	opentofu

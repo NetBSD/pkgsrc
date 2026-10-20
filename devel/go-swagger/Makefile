@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2026/10/13 18:37:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/20 20:28:01 bsiegert Exp $
 
 DISTNAME=	go-swagger-0.30.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-swagger/}
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	go-swagger

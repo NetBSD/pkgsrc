@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2026/10/17 12:22:04 leot Exp $
+# $NetBSD: Makefile,v 1.92 2026/10/20 20:28:03 bsiegert Exp $
 
 DISTNAME=	opa-1.21.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
