@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/07/13 12:03:10 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/10/20 06:10:44 adam Exp $
 
-BLAKE2s (astropy-8.0.1.tar.gz) = f885a1c5ebbf7d287ba8614f525063ba3af0f07544ed9c7ff556e95aaa32c771
-SHA512 (astropy-8.0.1.tar.gz) = 5b71b01174786b679b9d5b689a3adbc103f9cad3db2dde4e6278da65e450345d682838569ccf28147fd4f2658ffd68bf04d59b5142181feedb11bf50e9249deb
-Size (astropy-8.0.1.tar.gz) = 7152500 bytes
+BLAKE2s (astropy-8.0.2.tar.gz) = 6d0ae9f0d298122f957978c670c2757ede3567b20476c1dfbce9fdcf6cb38b7e
+SHA512 (astropy-8.0.2.tar.gz) = 38f49339167110fb340d6a59bd2978c05ac1e88fb0d5a99c1360f1d3ea88e5a76be3132815c685bc07d8fc4352fc4b065a8027e0cd357f7b863ab0a9f1e2df08
+Size (astropy-8.0.2.tar.gz) = 7178167 bytes

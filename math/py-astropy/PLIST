@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/09/23 06:27:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/10/20 06:10:44 adam Exp $
 bin/fits2bitmap
 bin/fitscheck
 bin/fitsdiff
@@ -403,8 +403,8 @@ ${PYSITELIB}/astropy/coordinates/tests/accuracy/test_icrs_fk5.pyo
 ${PYSITELIB}/astropy/coordinates/tests/data/barycorr_bvcs.dat
 ${PYSITELIB}/astropy/coordinates/tests/data/barycorr_bvcs_withvels.dat
 ${PYSITELIB}/astropy/coordinates/tests/data/jpl_moon.dat
-${PYSITELIB}/astropy/coordinates/tests/data/sites/astropy/download/url/2a464ec894e62c3f19c6aa05f3df3fdc/contents
-${PYSITELIB}/astropy/coordinates/tests/data/sites/astropy/download/url/2a464ec894e62c3f19c6aa05f3df3fdc/url
+${PYSITELIB}/astropy/coordinates/tests/data/sites/astropy/download/url/e0b0a015ce4cf06dd43a7004c20f2fb7/contents
+${PYSITELIB}/astropy/coordinates/tests/data/sites/astropy/download/url/e0b0a015ce4cf06dd43a7004c20f2fb7/url
 ${PYSITELIB}/astropy/coordinates/tests/helper.py
 ${PYSITELIB}/astropy/coordinates/tests/helper.pyc
 ${PYSITELIB}/astropy/coordinates/tests/helper.pyo
