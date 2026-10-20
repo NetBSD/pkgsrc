@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7127 2026/10/20 06:08:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7128 2026/10/20 06:16:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10687,3 +10687,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx to 9.1.1 [adam 2026-10-20]
 	Updated misc/py-narwhals to 2.27.1 [adam 2026-10-20]
 	Updated math/py-astropy-iers-data to 0.2026.10.19.0.52.1 [adam 2026-10-20]
+	Updated math/py-astropy to 8.0.2 [adam 2026-10-20]
+	Updated math/py-photutils to 3.1.1 [adam 2026-10-20]
+	Updated security/py-paramiko to 5.1.0 [adam 2026-10-20]
+	Updated www/py-nbconvert to 7.17.2 [adam 2026-10-20]
