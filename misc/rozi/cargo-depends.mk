@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2026/10/18 16:31:19 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2026/10/20 11:57:52 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.10
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -377,8 +377,8 @@ CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
-CARGO_CRATE_DEPENDS+=	tui-lipan-0.27.2
-CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.27.2
+CARGO_CRATE_DEPENDS+=	tui-lipan-0.27.3
+CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.27.3
 CARGO_CRATE_DEPENDS+=	typed-path-0.12.3
 CARGO_CRATE_DEPENDS+=	typenum-1.20.1
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
