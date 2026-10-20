@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7139 2026/10/20 18:32:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7140 2026/10/20 18:36:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10708,3 +10708,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/nmap to 7.992 [adam 2026-10-20]
 	Updated net/ndiff to 7.992 [adam 2026-10-20]
 	Updated net/zenmap to 7.992 [adam 2026-10-20]
+	Updated net/libtorrent-rasterbar to 2.1.2 [adam 2026-10-20]
+	Updated net/qbittorrent to 5.3.0 [adam 2026-10-20]
