@@ -1,18 +1,16 @@
-$NetBSD: patch-rxvt___rxvtlib_h,v 1.1 2011/12/21 08:45:34 dholland Exp $
+$NetBSD: patch-rxvt___rxvtlib_h,v 1.2 2026/10/20 20:57:33 ktnb Exp $
 
 If the configuration detects /dev/ptmx, it tries to use it; but avoid
 in that case trying to do STREAMS things.
 
---- rxvt/_rxvtlib.h~	2005-04-04 20:47:45.000000000 +0000
+--- rxvt/_rxvtlib.h.orig	2026-10-14 21:58:01.000000000 +0000
 +++ rxvt/_rxvtlib.h
-@@ -130,8 +130,10 @@
+@@ -132,7 +132,7 @@
+ #ifdef TTY_GID_SUPPORT
+ # include <grp.h>
  #endif
- #ifdef PTYS_ARE_PTMX
+-#if defined(PTYS_ARE_PTMX) && !defined(__FreeBSD__) && !defined(__DragonFly__)
++#if defined(PTYS_ARE_PTMX) && !defined(__FreeBSD__) && !defined(__DragonFly__) && !defined(__NetBSD__)
  # include <sys/resource.h>	/* for struct rlimit */
-+#ifndef __NetBSD__
  # include <sys/stropts.h>	/* for I_PUSH */
  #endif
-+#endif
- #ifdef UTMP_SUPPORT
- # if ! defined(HAVE_STRUCT_UTMPX) && ! defined(HAVE_STRUCT_UTMP)
- #  error cannot build with utmp support - no utmp or utmpx struct found

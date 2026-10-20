@@ -1,19 +1,23 @@
-# $NetBSD: Makefile,v 1.40 2025/11/17 11:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/20 20:57:33 ktnb Exp $
 
-DISTNAME=	cooledit-3.17.17
-PKGREVISION=	11
+DISTNAME=	cooledit-5.0.6
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
+MASTER_SITES=	https://www.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# https://cooledit.sourceforge.net/
+HOMEPAGE=	https://github.com/paulsheer/cooledit
 COMMENT=	Full-featured text editor
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=	${WRKDIR}/${PKGBASE}
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
+
+CHECK_RELRO_SKIP+=	bin/remotefs
 
 post-configure:
 	if ${GREP} -q mbstate_t /usr/include/wchar.h ; then :; else \
@@ -23,6 +27,7 @@ post-configure:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
