@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7122 2026/10/20 02:21:11 agc Exp $
+$NetBSD: CHANGES-2026,v 1.7123 2026/10/20 04:41:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10667,3 +10667,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/agcre to 20261017 [agc 2026-10-19]
 	Updated devel/libagcre to 20261019 [agc 2026-10-19]
 	Updated textproc/agcre to 20261019 [agc 2026-10-19]
+	Updated www/py-httpcore2 to 2.15.1 [adam 2026-10-20]
+	Updated www/py-httpx2 to 2.15.1 [adam 2026-10-20]
+	Updated devel/py-lazy-object-proxy to 1.13.0 [adam 2026-10-20]
+	Updated net/py-tldextract to 5.4.0 [adam 2026-10-20]
