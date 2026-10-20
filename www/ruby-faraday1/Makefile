@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/04/08 14:29:35 taca Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2026/10/20 22:57:35 maya Exp $
 
-DISTNAME=	faraday-1.10.4
+DISTNAME=	faraday-1.10.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/faraday/&1/}
 CATEGORIES=	www
 
