@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/09/02 05:40:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/20 04:50:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -358,6 +358,12 @@ ${PYSITELIB}/authlib/oauth2/claims.pyo
 ${PYSITELIB}/authlib/oauth2/client.py
 ${PYSITELIB}/authlib/oauth2/client.pyc
 ${PYSITELIB}/authlib/oauth2/client.pyo
+${PYSITELIB}/authlib/oauth2/drafts/__init__.py
+${PYSITELIB}/authlib/oauth2/drafts/__init__.pyc
+${PYSITELIB}/authlib/oauth2/drafts/__init__.pyo
+${PYSITELIB}/authlib/oauth2/drafts/id_jag.py
+${PYSITELIB}/authlib/oauth2/drafts/id_jag.pyc
+${PYSITELIB}/authlib/oauth2/drafts/id_jag.pyo
 ${PYSITELIB}/authlib/oauth2/rfc6749/__init__.py
 ${PYSITELIB}/authlib/oauth2/rfc6749/__init__.pyc
 ${PYSITELIB}/authlib/oauth2/rfc6749/__init__.pyo
@@ -580,6 +586,9 @@ ${PYSITELIB}/authlib/oidc/__init__.pyo
 ${PYSITELIB}/authlib/oidc/core/__init__.py
 ${PYSITELIB}/authlib/oidc/core/__init__.pyc
 ${PYSITELIB}/authlib/oidc/core/__init__.pyo
+${PYSITELIB}/authlib/oidc/core/authorization_request.py
+${PYSITELIB}/authlib/oidc/core/authorization_request.pyc
+${PYSITELIB}/authlib/oidc/core/authorization_request.pyo
 ${PYSITELIB}/authlib/oidc/core/claims.py
 ${PYSITELIB}/authlib/oidc/core/claims.pyc
 ${PYSITELIB}/authlib/oidc/core/claims.pyo
