@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7143 2026/10/20 20:27:15 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.7144 2026/10/20 20:57:07 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10714,3 +10714,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ocaml-cmdliner to 1.3.0 [alnsn 2026-10-20]
 	Updated lang/go126 to 1.26.10 [bsiegert 2026-10-20]
 	Updated lang/go127 to 1.27.3 [bsiegert 2026-10-20]
+	Added devel/ocaml-alcotest version 1.9.1 [alnsn 2026-10-20]
