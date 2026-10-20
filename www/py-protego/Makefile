@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/06/29 13:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/20 04:53:42 adam Exp $
 
-DISTNAME=	protego-0.6.2
+DISTNAME=	protego-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Protego/}
