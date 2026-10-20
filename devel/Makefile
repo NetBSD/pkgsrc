@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4705 2026/10/17 16:57:05 alnsn Exp $
+# $NetBSD: Makefile,v 1.4706 2026/10/20 20:55:54 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1279,6 +1279,7 @@ SUBDIR+=	nspr-reference
 SUBDIR+=	nss
 SUBDIR+=	nss_wrapper
 SUBDIR+=	objfw
+SUBDIR+=	ocaml-alcotest
 SUBDIR+=	ocaml-angstrom
 SUBDIR+=	ocaml-astring
 SUBDIR+=	ocaml-async
