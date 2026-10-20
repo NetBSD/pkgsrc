@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/10/07 10:30:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/20 04:52:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,7 @@ ${PYSITELIB}/pytimeparse/VERSION
 ${PYSITELIB}/pytimeparse/__init__.py
 ${PYSITELIB}/pytimeparse/__init__.pyc
 ${PYSITELIB}/pytimeparse/__init__.pyo
+${PYSITELIB}/pytimeparse/py.typed
 ${PYSITELIB}/pytimeparse/tests/__init__.py
 ${PYSITELIB}/pytimeparse/tests/__init__.pyc
 ${PYSITELIB}/pytimeparse/tests/__init__.pyo

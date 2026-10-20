@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/10/07 10:30:47 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/20 04:52:14 adam Exp $
 
-DISTNAME=	pytimeparse-1.1.9
+DISTNAME=	pytimeparse-1.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytimeparse/}

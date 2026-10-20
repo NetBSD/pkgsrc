@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/10/07 10:30:47 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/10/20 04:52:14 adam Exp $
 
-BLAKE2s (pytimeparse-1.1.9.tar.gz) = 8fe51900042d1486a8f777e7e3a206da4edff69155493d5f49e529951e114c61
-SHA512 (pytimeparse-1.1.9.tar.gz) = d4bdf1617930bea071e3c0e06fd85925e9d0c643488aaf5114b580f450f8d9cfcc271a88081af9ee712e845879b31e5fcdbf5a7de2a2f5cad2418327aee26326
-Size (pytimeparse-1.1.9.tar.gz) = 10955 bytes
+BLAKE2s (pytimeparse-1.1.10.tar.gz) = 783f1d14885b31fbbafedeebffa5a05fdcfef9cc5e3bbbc4657c239f427149fb
+SHA512 (pytimeparse-1.1.10.tar.gz) = bb966fca91503fe9d307c35c42f3a593c55382d946931b465004113ea73ca8d91b54af3d342d0613537c9931bab50948ffa1c396a1c8d0c8603cdf1b5516090d
+Size (pytimeparse-1.1.10.tar.gz) = 11613 bytes
