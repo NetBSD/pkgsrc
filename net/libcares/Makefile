@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2026/07/09 12:46:45 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/10/20 09:59:32 adam Exp $
 
-DISTNAME=	c-ares-1.34.8
+DISTNAME=	c-ares-1.34.9
 PKGNAME=	${DISTNAME:S/c-/libc/1}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=c-ares/}
