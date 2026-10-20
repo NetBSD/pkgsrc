@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2026/10/16 19:43:50 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/20 04:56:19 adam Exp $
 
-DISTNAME=	line_profiler-5.0.2
+DISTNAME=	line_profiler-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
@@ -18,11 +18,9 @@ USE_LANGUAGES=	c c++
 MAKE_ENV+=	LINE_PROFILER_BUILD_METHOD=cython
 INSTALL_ENV+=	LINE_PROFILER_BUILD_METHOD=cython
 
-PYTHON_VERSIONS_INCOMPATIBLE=	311
+PY_RENAME_BINARIES=	kernprof
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} kernprof kernprof-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

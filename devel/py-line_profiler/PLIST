@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/03/02 12:21:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/10/20 04:56:19 adam Exp $
 bin/kernprof-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -21,7 +21,6 @@ ${PYSITELIB}/line_profiler/__main__.pyo
 ${PYSITELIB}/line_profiler/_diagnostics.py
 ${PYSITELIB}/line_profiler/_diagnostics.pyc
 ${PYSITELIB}/line_profiler/_diagnostics.pyo
-${PYSITELIB}/line_profiler/_line_profiler.cpp
 ${PYSITELIB}/line_profiler/_line_profiler.pyi
 ${PYSITELIB}/line_profiler/_line_profiler.pyx
 ${PYSITELIB}/line_profiler/_line_profiler.so
@@ -32,6 +31,9 @@ ${PYSITELIB}/line_profiler/_map_helpers.pxd
 ${PYSITELIB}/line_profiler/autoprofile/__init__.py
 ${PYSITELIB}/line_profiler/autoprofile/__init__.pyc
 ${PYSITELIB}/line_profiler/autoprofile/__init__.pyo
+${PYSITELIB}/line_profiler/autoprofile/_import_targets.py
+${PYSITELIB}/line_profiler/autoprofile/_import_targets.pyc
+${PYSITELIB}/line_profiler/autoprofile/_import_targets.pyo
 ${PYSITELIB}/line_profiler/autoprofile/ast_profile_transformer.py
 ${PYSITELIB}/line_profiler/autoprofile/ast_profile_transformer.pyc
 ${PYSITELIB}/line_profiler/autoprofile/ast_profile_transformer.pyo
