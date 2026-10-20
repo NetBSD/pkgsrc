@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/20 20:55:07 alnsn Exp $
+
+BLAKE2s (alcotest-1.9.1.tbz) = d3850ee4ac02530649ddc4cf933117af9b7800ecec6a86a3dd2b49ccd67d3f6a
+SHA512 (alcotest-1.9.1.tbz) = c49d402fa636dcf11f81917610dd1d2eca8606c8919aede4db23710d071f6046a8f93c78de9fbfee26637a53ca67f71fad500bfa2478b7f0f059608a492dd0a5
+Size (alcotest-1.9.1.tbz) = 294013 bytes
