@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/10/16 19:44:04 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/20 06:13:09 adam Exp $
 
-DISTNAME=	photutils-3.0.0
+DISTNAME=	photutils-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/photutils/}
@@ -14,8 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1.2:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=1.3:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-astropy>=6.1.4:../../math/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=7.0:../../math/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.15.0:../../math/py-scipy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
