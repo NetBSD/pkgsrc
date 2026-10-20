@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/08/09 11:06:21 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/10/20 04:40:45 adam Exp $
 
-BLAKE2s (tldextract-5.3.2.tar.gz) = 757be0bc6a46d22b26789318570be4f633f5a2ae843a0b45b4c0c74f2353aa65
-SHA512 (tldextract-5.3.2.tar.gz) = 8b321bd27940af3caf65e9ad9c95d74153d3e677c47251e5a728c7d4d437f57db90efde50ea44c78f1260e9e92d47202b2bb997507c46f8b7964591858bd530a
-Size (tldextract-5.3.2.tar.gz) = 191971 bytes
+BLAKE2s (tldextract-5.4.0.tar.gz) = 6f282bc510185d951d158590c1e56694af9b8f0847d9a5b69062a6bf4eeecdc8
+SHA512 (tldextract-5.4.0.tar.gz) = a38515bcc8a764cb3686df8155273899e15e1f8be0ef841fc778361d79dda73720f8d7442bd8690db929d163c7cf55e238794f4d0327c68ab4b114b14d661d03
+Size (tldextract-5.4.0.tar.gz) = 197271 bytes
