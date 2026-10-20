@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.149 2026/10/12 18:04:59 pin Exp $
+# $NetBSD: go-modules.mk,v 1.150 2026/10/20 11:59:58 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -35,8 +35,8 @@ GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.1.mod
-GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.1.zip
+GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.2.mod
+GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.2.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.zip
 GO_MODULE_FILES+=	github.com/invopop/jsonschema/@v/v0.14.0.mod
@@ -105,8 +105,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.49.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.49.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.42.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.42.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.43.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.43.0.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20190902080502-41f04d3bba15.mod
 GO_MODULE_FILES+=	gopkg.in/warnings.v0/@v/v0.1.2.mod
