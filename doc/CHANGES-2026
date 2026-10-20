@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7123 2026/10/20 04:41:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7124 2026/10/20 04:47:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10671,3 +10671,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-httpx2 to 2.15.1 [adam 2026-10-20]
 	Updated devel/py-lazy-object-proxy to 1.13.0 [adam 2026-10-20]
 	Updated net/py-tldextract to 5.4.0 [adam 2026-10-20]
+	Updated devel/py-ijson to 3.6.0 [adam 2026-10-20]
+	Updated devel/py-pykka to 4.5.0 [adam 2026-10-20]
+	Updated devel/py-pkginfo to 1.13.3 [adam 2026-10-20]
+	Updated net/haproxy to 3.4.7 [adam 2026-10-20]
