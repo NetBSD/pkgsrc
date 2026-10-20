@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/09/22 13:07:19 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/20 05:09:21 adam Exp $
 
-DISTNAME=	python_discovery-1.6.1
+DISTNAME=	python_discovery-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-discovery/}
