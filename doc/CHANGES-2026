@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7130 2026/10/20 10:23:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7131 2026/10/20 11:58:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10696,3 +10696,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bird to 3.4.0 [adam 2026-10-20]
 	Added textproc/py-feedparser-sgmllib version 2.1.0 [adam 2026-10-20]
 	Updated textproc/py-feedparser to 6.0.14 [adam 2026-10-20]
+	Updated misc/rozi to 0.0.32 [pin 2026-10-20]
