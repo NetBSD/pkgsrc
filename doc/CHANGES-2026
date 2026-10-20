@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7125 2026/10/20 04:56:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7126 2026/10/20 05:19:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10679,3 +10679,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-pytimeparse to 1.1.10 [adam 2026-10-20]
 	Updated www/py-protego to 0.7.0 [adam 2026-10-20]
 	Updated devel/py-line_profiler to 5.1.0 [adam 2026-10-20]
+	Updated print/py-reportlab to 5.0.1 [adam 2026-10-20]
+	Updated lang/py-python-discovery to 1.6.4 [adam 2026-10-20]
+	Updated devel/py-uv to 0.13.3 [adam 2026-10-20]
+	Updated devel/py-uv-build to 0.13.3 [adam 2026-10-20]
