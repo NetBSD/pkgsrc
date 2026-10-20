@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7124 2026/10/20 04:47:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7125 2026/10/20 04:56:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10675,3 +10675,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pykka to 4.5.0 [adam 2026-10-20]
 	Updated devel/py-pkginfo to 1.13.3 [adam 2026-10-20]
 	Updated net/haproxy to 3.4.7 [adam 2026-10-20]
+	Updated security/py-authlib to 1.9.1 [adam 2026-10-20]
+	Updated time/py-pytimeparse to 1.1.10 [adam 2026-10-20]
+	Updated www/py-protego to 0.7.0 [adam 2026-10-20]
+	Updated devel/py-line_profiler to 5.1.0 [adam 2026-10-20]
