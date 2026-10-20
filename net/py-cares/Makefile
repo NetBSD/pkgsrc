@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/10/18 12:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/20 10:01:12 adam Exp $
 
-DISTNAME=	pycares-5.2.0
+DISTNAME=	pycares-5.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
@@ -11,7 +11,7 @@ COMMENT=	Python interface for c-ares
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cffi>=2.0.0:../../devel/py-cffi
 
 MAKE_ENV+=	PYCARES_USE_SYSTEM_LIB=1
 
