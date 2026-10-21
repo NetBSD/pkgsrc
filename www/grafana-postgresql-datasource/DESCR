@@ -1,0 +1,17 @@
+PostgreSQL is an open-source object-relational database system.
+The PostgreSQL data source plugin lets Grafana query, visualize, and alert
+on data stored in PostgreSQL or PostgreSQL-compatible databases
+(for example TimescaleDB).
+
+To install this plugin, do
+# ln -s /usr/pkg/share/grafana/plugins/grafana-postgresql-datasource \
+    /var/lib/grafana/plugins
+
+Ensure the following settings are present in grafana's configuration file:
+[plugins]
+preinstall_disabled = true
+preinstall_auto_update = false
+allow_loading_unsigned_plugins = grafana-postgresql-datasource
+
+[plugin.grafana-postgresql-datasource]
+as_external = true

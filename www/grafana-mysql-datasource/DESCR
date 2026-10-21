@@ -1,0 +1,16 @@
+MySQL is an open-source relational database management system.
+The MySQL data source plugin lets Grafana query, visualize, and alert
+on data stored in MySQL or MySQL-compatible databases
+(for example MariaDB).
+
+To install this plugin, do
+# ln -s /usr/pkg/share/grafana/plugins/mysql /var/lib/grafana/plugins
+
+Ensure the following settings are present in grafana's configuration file:
+[plugins]
+preinstall_disabled = true
+preinstall_auto_update = false
+allow_loading_unsigned_plugins = mysql
+
+[plugin.mysql]
+as_external = true

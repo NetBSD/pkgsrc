@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/21 17:14:15 tnn Exp $
+share/grafana/plugins/influxdb/156.js
+share/grafana/plugins/influxdb/156.js.map
+share/grafana/plugins/influxdb/CHANGELOG.md
+share/grafana/plugins/influxdb/LICENSE
+share/grafana/plugins/influxdb/README.md
+share/grafana/plugins/influxdb/go_plugin_build_manifest
+share/grafana/plugins/influxdb/gpx_grafana_influxdb_datasource_${GO_PLATFORM}
+share/grafana/plugins/influxdb/img/influxdb_logo.svg
+share/grafana/plugins/influxdb/module.js
+share/grafana/plugins/influxdb/module.js.LICENSE.txt
+share/grafana/plugins/influxdb/module.js.map
+share/grafana/plugins/influxdb/plugin.json
+share/grafana/plugins/influxdb/query_help.md
+share/grafana/plugins/influxdb/sql-query-editor.js
+share/grafana/plugins/influxdb/sql-query-editor.js.map

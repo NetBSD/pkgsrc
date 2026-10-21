@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/21 17:14:15 tnn Exp $
+share/grafana/plugins/mysql/156.js
+share/grafana/plugins/mysql/156.js.map
+share/grafana/plugins/mysql/CHANGELOG.md
+share/grafana/plugins/mysql/LICENSE
+share/grafana/plugins/mysql/README.md
+share/grafana/plugins/mysql/go_plugin_build_manifest
+share/grafana/plugins/mysql/gpx_grafana-mysql-datasource_${GO_PLATFORM}
+share/grafana/plugins/mysql/img/mysql_logo.svg
+share/grafana/plugins/mysql/module.js
+share/grafana/plugins/mysql/module.js.LICENSE.txt
+share/grafana/plugins/mysql/module.js.map
+share/grafana/plugins/mysql/plugin.json
+share/grafana/plugins/mysql/sql-query-editor.js
+share/grafana/plugins/mysql/sql-query-editor.js.map

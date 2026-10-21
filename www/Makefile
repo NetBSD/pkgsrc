@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1946 2026/10/18 08:24:35 khorben Exp $
+# $NetBSD: Makefile,v 1.1947 2026/10/21 17:14:15 tnn Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -151,6 +151,9 @@ SUBDIR+=	go-minify
 SUBDIR+=	goaccess
 SUBDIR+=	gotosocial
 SUBDIR+=	grafana
+SUBDIR+=	grafana-influxdb-datasource
+SUBDIR+=	grafana-mysql-datasource
+SUBDIR+=	grafana-postgresql-datasource
 SUBDIR+=	grafana-prometheus-datasource
 SUBDIR+=	gtkasp2php
 SUBDIR+=	guile-haunt

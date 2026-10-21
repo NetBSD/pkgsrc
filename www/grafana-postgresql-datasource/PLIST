@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/21 17:14:16 tnn Exp $
+share/grafana/plugins/grafana-postgresql-datasource/156.js
+share/grafana/plugins/grafana-postgresql-datasource/156.js.map
+share/grafana/plugins/grafana-postgresql-datasource/CHANGELOG.md
+share/grafana/plugins/grafana-postgresql-datasource/LICENSE
+share/grafana/plugins/grafana-postgresql-datasource/README.md
+share/grafana/plugins/grafana-postgresql-datasource/go_plugin_build_manifest
+share/grafana/plugins/grafana-postgresql-datasource/gpx_grafana_postgresql_datasource_${GO_PLATFORM}
+share/grafana/plugins/grafana-postgresql-datasource/img/postgresql_logo.svg
+share/grafana/plugins/grafana-postgresql-datasource/module.js
+share/grafana/plugins/grafana-postgresql-datasource/module.js.LICENSE.txt
+share/grafana/plugins/grafana-postgresql-datasource/module.js.map
+share/grafana/plugins/grafana-postgresql-datasource/plugin.json
+share/grafana/plugins/grafana-postgresql-datasource/sql-query-editor.js
+share/grafana/plugins/grafana-postgresql-datasource/sql-query-editor.js.map
