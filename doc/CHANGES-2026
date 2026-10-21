@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7148 2026/10/21 04:13:16 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7149 2026/10/21 05:03:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10719,3 +10719,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/p5-DBI to 1.656 [taca 2026-10-21]
 	Updated www/firefox153 to 153.5.1 [gutteridge 2026-10-21]
 	Updated www/firefox153-l10n to 153.5.1 [gutteridge 2026-10-21]
+	Updated security/p5-Mozilla-CA to 20261020 [wiz 2026-10-21]
