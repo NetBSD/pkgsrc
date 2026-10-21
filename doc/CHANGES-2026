@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7167 2026/10/21 20:18:39 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7168 2026/10/21 20:45:09 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10740,3 +10740,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns to 5.1.5nb1 [drixter 2026-10-21]
 	Updated x11/unicode-screensaver to 0.5.2 [ktnb 2026-10-21]
 	Updated net/powerdns-recursor to 5.4.8 [drixter 2026-10-21]
+	Updated devel/topgit to 0.19.14 [ktnb 2026-10-21]
