@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2026/05/27 22:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/10/21 19:22:45 ktnb Exp $
 
-DISTNAME=	tmux-3.6b
+DISTNAME=	tmux-3.8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

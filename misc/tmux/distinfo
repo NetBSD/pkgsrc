@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2026/05/27 22:38:36 wiz Exp $
+$NetBSD: distinfo,v 1.64 2026/10/21 19:22:45 ktnb Exp $
 
-BLAKE2s (tmux-3.6b.tar.gz) = 236a2c65d7f18c6d22db3ede18236ae5898b6b5da0adc2fae25d5b5f0e6d0bbc
-SHA512 (tmux-3.6b.tar.gz) = 0dee1a6548496e5398cda98a7740139749f98fbbb8c9c539f81b18805a560529e4d7fee2b823748ec51935a83836ca502724fa759139f8db9514229004558192
-Size (tmux-3.6b.tar.gz) = 750261 bytes
+BLAKE2s (tmux-3.8.tar.gz) = eed0707570fbd22b3e94376bc102a9a9018ab1aeb206b108aad89b62f40c49e7
+SHA512 (tmux-3.8.tar.gz) = 8836978b4676d3d03d1eeedd7b6a55241eec400d44ab6b5a743fe053c52749a9f1d2cf32ef9b444e8ed8216c5577e2aecaa9663d2e693c4b95f6af638f21a872
+Size (tmux-3.8.tar.gz) = 895926 bytes
 SHA1 (patch-client.c) = 5fe1e0c82665b805573dab59c7f3faa5fc2c8abe
 SHA1 (patch-compat_imsg-buffer.c) = a4946b98414a0fbd8d3799f2622c5e736bb90833
 SHA1 (patch-compat_queue.h) = a65435dedb40f653f3c2650a6d2189743f5a6dcd
