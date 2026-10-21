@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2026/09/05 19:09:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2026/10/21 20:45:25 maya Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	ssh-chat-1.10
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shazow/}
 GITHUB_PROJECT=	ssh-chat

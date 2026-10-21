@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/09/19 15:37:23 leot Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2026/10/21 20:45:33 maya Exp $
 
 DISTNAME=	regal-0.42.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

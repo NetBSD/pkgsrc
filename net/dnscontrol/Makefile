@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/09/16 08:55:51 drixter Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2026/10/21 20:45:37 maya Exp $
 
 DISTNAME=	dnscontrol-5.1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=StackExchange/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

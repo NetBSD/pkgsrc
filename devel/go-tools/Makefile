@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.120 2026/09/05 19:09:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.120.2.1 2026/10/21 20:45:30 maya Exp $
 
 DISTNAME=		tools-0.39.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools

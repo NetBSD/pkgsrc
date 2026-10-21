@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2026/09/05 19:10:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.100.2.1 2026/10/21 20:45:55 maya Exp $
 
 DISTNAME=	kitty-0.48.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty

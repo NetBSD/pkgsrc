@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2026/09/05 19:09:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.63.2.1 2026/10/21 20:45:26 maya Exp $
 
 DISTNAME=	mongo-tools-100.7.5
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

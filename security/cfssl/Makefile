@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2026/09/05 19:09:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2026/10/21 20:45:44 maya Exp $
 
 DISTNAME=	cfssl-1.6.5
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudflare/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
