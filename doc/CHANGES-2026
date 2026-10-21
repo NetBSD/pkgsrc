@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7152 2026/10/21 13:54:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7153 2026/10/21 13:57:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10723,3 +10723,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/wtype to 0.5 [kikadf 2026-10-21]
 	Updated net/bind920 to 9.20.30 [taca 2026-10-21]
 	Updated lang/php82 to 8.2.35 [taca 2026-10-21]
+	Updated lang/php83 to 8.3.36 [taca 2026-10-21]
