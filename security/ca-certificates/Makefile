@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/10/20 22:55:53 nia Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/21 07:52:12 kim Exp $
 
-PKGNAME=	ca-certificates-20260601
-PKGREVISION=	1
+PKGNAME=	ca-certificates-20260816
 DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
