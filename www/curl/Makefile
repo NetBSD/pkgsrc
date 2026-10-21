@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2026/09/02 19:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.309.2.1 2026/10/21 00:39:16 maya Exp $
 
 .include "Makefile.common"
 
@@ -14,8 +14,8 @@ SUPERSEDES+=		wcurl-[0-9]*
 
 .include "options.mk"
 
-# 8.22.0
-# TESTDONE: 2072 tests were considered during 655 seconds.
-# TESTDONE: 1623 tests out of 1623 reported OK: 100%
+# 8.23.0
+# TESTDONE: 2138 tests were considered during 672 seconds.
+# TESTDONE: 1668 tests out of 1668 reported OK: 100%
 
 .include "../../mk/bsd.pkg.mk"

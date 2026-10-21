@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.228 2026/09/02 19:19:32 wiz Exp $
+$NetBSD: distinfo,v 1.228.2.1 2026/10/21 00:39:16 maya Exp $
 
-BLAKE2s (curl-8.22.0.tar.xz) = a89e1809cfded71de58affbd4c02b1fb1df70d7a76a120ce79144c1d529530b0
-SHA512 (curl-8.22.0.tar.xz) = d6badf794e7a72760a353db73adb8b671804ce41619b401265b22dc8f6770ebeaa5adb3c4d1312722082c56013612a382884e025cca49397a8ab47577dd659f7
-Size (curl-8.22.0.tar.xz) = 2953092 bytes
+BLAKE2s (curl-8.23.0.tar.xz) = 0c41b4d76dc6da7c5b9848bd8ad08cb41058a31c030ba2b934b824247de8aa30
+SHA512 (curl-8.23.0.tar.xz) = 69cf0feafdc79fbad007cf2fc977b777ce6ccb05d01afd17b5a42f8bedbfcc342fc3a48193faa7f3eafe6800cd7d07948916e8733db1b9de60287ed06219b840
+Size (curl-8.23.0.tar.xz) = 2990916 bytes
