@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/09/30 16:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/21 16:00:17 hauke Exp $
 
-DISTNAME=	viewvc-1.2.3
-PKGREVISION=	2
+DISTNAME=	viewvc-1.3.0
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewvc/}
 
@@ -11,8 +10,6 @@ COMMENT=	View the content of CVS/SVN repositories with a web browser
 LICENSE=	2-clause-bsd
 
 REPLACE_PYTHON=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
-# https://github.com/viewvc/viewvc/issues/138
-PYTHON_VERSIONS_ACCEPTED=	27	# not yet ported as of 1.2.3
 
 .if exists(/usr/bin/rlog)
 RCSPATH=	/usr/bin
@@ -63,7 +60,7 @@ SUBST_VARS.conf+=	VIEWVCDIR DIFF RCSPATH CVSGRAPH_OPT
 
 CHECK_PORTABILITY_SKIP=	tools/make-release
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${VIEWVCDIR}/bin
 
 do-install:
 	(cd ${WRKSRC} && ${PYTHONBIN} viewvc-install \
@@ -76,10 +73,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${doc} \
 		${DESTDIR}${PREFIX}/${DOCDIR}/${doc:T}
 .endfor
-
-post-install:
-	( cd ${DESTDIR}${PREFIX}/${VIEWVCDIR}/bin/mod_python ; \
-		${CHMOD} ${SHAREMODE} .htaccess *.py)
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

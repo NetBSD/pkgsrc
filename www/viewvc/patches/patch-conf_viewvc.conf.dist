@@ -1,10 +1,10 @@
-$NetBSD: patch-conf_viewvc.conf.dist,v 1.1 2023/08/18 22:20:49 hauke Exp $
+$NetBSD: patch-conf_viewvc.conf.dist,v 1.2 2026/10/21 16:00:17 hauke Exp $
 
 Make paths adaptable for pkgsrc installation.
 
---- conf/viewvc.conf.dist.orig	2023-01-04 14:48:34.000000000 +0000
+--- conf/viewvc.conf.dist.orig	2026-10-21 15:44:45.447515462 +0000
 +++ conf/viewvc.conf.dist
-@@ -218,7 +218,8 @@
+@@ -222,7 +222,8 @@
  ##                    /etc/mime.types,
  ##                    /usr/local/apache2/conf/mime.types
  ##
@@ -12,9 +12,9 @@ Make paths adaptable for pkgsrc installation.
 +#mime_types_files = @PKG_SYSCONFDIR@/mimetypes.conf,
 +#                   @PKG_SYSCONFBASE@/httpd/mime.types
  
- ## address: The address of the local repository maintainer.  (This
- ## option is provided only as a convenience for ViewVC installations
-@@ -312,7 +313,7 @@
+ ## allowed_hosts: A list of allowed hostname or hostname:port values
+ ## specified in server URL. If there are no values specified, any hostname
+@@ -333,7 +334,7 @@
  ## Example:
  ## rcs_dir = /usr/bin/
  ##
@@ -23,16 +23,16 @@ Make paths adaptable for pkgsrc installation.
  
  ## cvsnt: Location of cvsnt program.  ViewVC can use CVSNT (www.cvsnt.org)
  ## instead of the RCS utilities to retrieve information from CVS
-@@ -334,7 +335,7 @@
+@@ -355,7 +356,7 @@
  ## Example:
  ## diff = /usr/bin/diff
  ##
 -#diff = 
-+diff = @DIFF@
++diff = @DIFF@ 
  
- ## cvsgraph: Location of the CvsGraph program, a graphical CVS version
- ## graph generator (see options.use_cvsgraph).
-@@ -342,7 +343,7 @@
+ ## max_context: Number of context lines to pass to diff program with
+ ## "--unified" option, for "Full human readable" format.
+@@ -375,7 +376,7 @@
  ## Example:
  ## cvsgraph = /usr/local/bin/cvsgraph
  ##
@@ -41,7 +41,7 @@ Make paths adaptable for pkgsrc installation.
  
  
  ##---------------------------------------------------------------------------
-@@ -662,7 +663,7 @@
+@@ -744,7 +745,7 @@
  ## template_dir = templates/default
  ## template_dir = /opt/custom-viewvc-templates/templates
  #
@@ -50,7 +50,7 @@ Make paths adaptable for pkgsrc installation.
  
  ## docroot: Web path to a directory that contains ViewVC static files
  ## (stylesheets, images, etc.)  If set, static files will get
-@@ -753,13 +754,13 @@
+@@ -846,13 +847,13 @@
  
  ## use_cvsgraph: Use CvsGraph to offer visual graphs of CVS revision history.
  ##
