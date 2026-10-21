@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2023/11/12 13:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/21 20:11:35 ktnb Exp $
 
-DISTNAME=	unicode-screensaver-0.5
-PKGREVISION=	5
+DISTNAME=	unicode-screensaver-0.5.2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.joachim-breitner.de/archive/unicode-screensaver/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.joachim-breitner.de/projects#unicode-screensaver
+HOMEPAGE=	https://www.joachim-breitner.de/projects\#unicode-screensaver
 COMMENT=	Screensaver that repeatedly randomly picks an unicode character
+
+USE_LANGUAGES=	c
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

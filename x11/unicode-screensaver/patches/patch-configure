@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2026/10/21 20:11:35 ktnb Exp $
+
+Fixed "C compiler can't compile trivial program" error
+
+--- configure.orig	2026-10-21 20:00:45.132609759 +0000
++++ configure
+@@ -4735,7 +4735,7 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+- main(int ac, char **av) { return 0; }
++ int main(int ac, char **av) { return 0; }
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
