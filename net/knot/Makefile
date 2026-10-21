@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2026/10/09 17:50:25 drixter Exp $
+# $NetBSD: Makefile,v 1.106 2026/10/21 19:27:28 drixter Exp $
 
-DISTNAME=	knot-3.6.1
+DISTNAME=	knot-3.6.2
 CATEGORIES=	net
 MASTER_SITES=	https://knot-dns.nic.cz/release/
 EXTRACT_SUFX=	.tar.xz
