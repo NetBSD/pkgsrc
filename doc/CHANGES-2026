@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7145 2026/10/20 20:58:16 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7146 2026/10/21 00:43:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10716,3 +10716,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/go127 to 1.27.3 [bsiegert 2026-10-20]
 	Added devel/ocaml-alcotest version 1.9.1 [alnsn 2026-10-20]
 	Updated editors/cooledit to 5.0.6 [ktnb 2026-10-20]
+	Updated databases/p5-DBI to 1.656 [taca 2026-10-21]
