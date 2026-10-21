@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/09/05 19:08:36 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2026/10/21 20:39:26 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go126/CONTRIBUTING.md
@@ -1765,6 +1765,7 @@ go126/src/cmd/go/internal/modfetch/codehost/vcs.go
 go126/src/cmd/go/internal/modfetch/coderepo.go
 go126/src/cmd/go/internal/modfetch/coderepo_test.go
 go126/src/cmd/go/internal/modfetch/fetch.go
+go126/src/cmd/go/internal/modfetch/fetch_test.go
 go126/src/cmd/go/internal/modfetch/key.go
 go126/src/cmd/go/internal/modfetch/proxy.go
 go126/src/cmd/go/internal/modfetch/repo.go
@@ -2321,6 +2322,7 @@ go126/src/cmd/go/testdata/script/env_write.txt
 go126/src/cmd/go/testdata/script/fileline.txt
 go126/src/cmd/go/testdata/script/fips.txt
 go126/src/cmd/go/testdata/script/fipssnap.txt
+go126/src/cmd/go/testdata/script/fipssnap_modcache.txt
 go126/src/cmd/go/testdata/script/fix_diff_exitcode.txt
 go126/src/cmd/go/testdata/script/fix_suite.txt
 go126/src/cmd/go/testdata/script/fix_vendor.txt
@@ -2367,6 +2369,7 @@ go126/src/cmd/go/testdata/script/gotoolchain_loop.txt
 go126/src/cmd/go/testdata/script/gotoolchain_modcmds.txt
 go126/src/cmd/go/testdata/script/gotoolchain_net.txt
 go126/src/cmd/go/testdata/script/gotoolchain_path.txt
+go126/src/cmd/go/testdata/script/gotoolchain_switch_gosum.txt
 go126/src/cmd/go/testdata/script/gotoolchain_version.txt
 go126/src/cmd/go/testdata/script/govcs.txt
 go126/src/cmd/go/testdata/script/help.txt
@@ -2510,6 +2513,7 @@ go126/src/cmd/go/testdata/script/mod_download_private_vcs.txt
 go126/src/cmd/go/testdata/script/mod_download_replace_file.txt
 go126/src/cmd/go/testdata/script/mod_download_svn.txt
 go126/src/cmd/go/testdata/script/mod_download_too_many_redirects.txt
+go126/src/cmd/go/testdata/script/mod_download_toolchain_gosum.txt
 go126/src/cmd/go/testdata/script/mod_e.txt
 go126/src/cmd/go/testdata/script/mod_edit.txt
 go126/src/cmd/go/testdata/script/mod_edit_go.txt
@@ -4967,6 +4971,7 @@ go126/src/crypto/internal/fips140/mldsa/mldsa.go
 go126/src/crypto/internal/fips140/mldsa/mldsa_test.go
 go126/src/crypto/internal/fips140/mldsa/semiexpanded.go
 go126/src/crypto/internal/fips140/mlkem/cast.go
+go126/src/crypto/internal/fips140/mlkem/cast_test.go
 go126/src/crypto/internal/fips140/mlkem/field.go
 go126/src/crypto/internal/fips140/mlkem/field_test.go
 go126/src/crypto/internal/fips140/mlkem/generate1024.go
@@ -14122,6 +14127,7 @@ go126/test/fixedbugs/issue79186.go
 go126/test/fixedbugs/issue7921.go
 go126/test/fixedbugs/issue7944.go
 go126/test/fixedbugs/issue79874.go
+go126/test/fixedbugs/issue79909.go
 go126/test/fixedbugs/issue7995.go
 go126/test/fixedbugs/issue7995b.dir/x1.go
 go126/test/fixedbugs/issue7995b.dir/x2.go
@@ -14154,11 +14160,14 @@ go126/test/fixedbugs/issue8073.go
 go126/test/fixedbugs/issue8074.go
 go126/test/fixedbugs/issue8076.go
 go126/test/fixedbugs/issue8079.go
+go126/test/fixedbugs/issue81240.go
+go126/test/fixedbugs/issue81242.go
 go126/test/fixedbugs/issue8132.go
 go126/test/fixedbugs/issue8139.go
 go126/test/fixedbugs/issue8154.go
 go126/test/fixedbugs/issue8155.go
 go126/test/fixedbugs/issue8158.go
+go126/test/fixedbugs/issue81612.go
 go126/test/fixedbugs/issue8183.go
 go126/test/fixedbugs/issue8280.dir/a.go
 go126/test/fixedbugs/issue8280.dir/b.go
