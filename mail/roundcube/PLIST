@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2026/08/11 15:21:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.62.2.1 2026/10/21 00:45:21 maya Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2155,6 +2155,7 @@ share/roundcube/vendor/guzzlehttp/promises/src/PromiseInterface.php
 share/roundcube/vendor/guzzlehttp/promises/src/PromisorInterface.php
 share/roundcube/vendor/guzzlehttp/promises/src/RejectedPromise.php
 share/roundcube/vendor/guzzlehttp/promises/src/RejectionException.php
+share/roundcube/vendor/guzzlehttp/promises/src/State.php
 share/roundcube/vendor/guzzlehttp/promises/src/TaskQueue.php
 share/roundcube/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 share/roundcube/vendor/guzzlehttp/promises/src/Utils.php
