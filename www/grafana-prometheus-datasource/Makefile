@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/10/20 20:28:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/21 16:54:39 tnn Exp $
 
 DISTNAME=	grafana-prometheus-datasource-13.2.3
 PKGREVISION=	2
@@ -27,7 +27,7 @@ GO_BUILD_PATTERN=	./pkg
 PLUGINDIR=		share/grafana/plugins/prometheus
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${PLUGINDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PLUGINDIR}
 	cd ${WRKDIR}/linux/prometheus && \
 	  ${PAX} -rw . ${DESTDIR}${PREFIX}/${PLUGINDIR}/.
 	${RM} -f ${DESTDIR}${PREFIX}/${PLUGINDIR}/gpx_grafana-prometheus-datasource_linux_amd64
