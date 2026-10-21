@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7158 2026/10/21 17:15:53 tnn Exp $
+$NetBSD: CHANGES-2026,v 1.7159 2026/10/21 18:17:53 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10731,3 +10731,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/grafana-influxdb-datasource version 13.1.8 [tnn 2026-10-21]
 	Added www/grafana-mysql-datasource version 13.1.4 [tnn 2026-10-21]
 	Added www/grafana-postgresql-datasource version 13.0.5 [tnn 2026-10-21]
+	Updated www/resterm to 1.16.0 [drixter 2026-10-21]
