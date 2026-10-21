@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:20:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/10/21 20:44:54 ktnb Exp $
 
-BLAKE2s (topgit_0.7.orig.tar.gz) = 72925ca11ead5e1ce85f3eec08956d5f5e1fecc2bfb959a5d23061e83cb8620e
-SHA512 (topgit_0.7.orig.tar.gz) = b3e00eb120bd51b629565a9106c322645dbc5510d3d4257c607bddba1d946c2fb913fdf6851198519d9798ec8cd3dd8e5ba4caa1ff7e629255b7e189d839fc1d
-Size (topgit_0.7.orig.tar.gz) = 23437 bytes
+BLAKE2s (topgit-0.19.14.tar.gz) = 050d4f3b5ba3e402afa346443b2cfec5218317481547f6b60a9ab7130c01af6d
+SHA512 (topgit-0.19.14.tar.gz) = dabc511317211f5ad736675759f7920d3a5bb67c257bb8a0f3d9334e01fe1a60773c54b2f430a67a259bfe062e5741aaa33de213116d09a2193cfb8b7adf42de
+Size (topgit-0.19.14.tar.gz) = 358244 bytes

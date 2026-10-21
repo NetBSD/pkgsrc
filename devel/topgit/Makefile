@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/21 20:44:54 ktnb Exp $
 
-DISTNAME=	topgit_0.7.orig
-PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	1
+DISTNAME=	topgit-0.19.14
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/topgit/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mackyle/}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://repo.or.cz/w/topgit.git
+HOMEPAGE=	https://github.com/mackyle/topgit
 COMMENT=	Different patch queue manager
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGBASE}-${PKGNAME_NOREV}
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 
 MAKE_ENV+=	prefix=${PREFIX}
 
