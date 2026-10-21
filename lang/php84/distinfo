@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25.2.1 2026/10/21 00:51:17 maya Exp $
+$NetBSD: distinfo,v 1.25.2.2 2026/10/21 14:51:42 maya Exp $
 
-BLAKE2s (php-8.4.26.tar.xz) = 4a8051b8721192c6ff2622b43f83a90b6f45948a0cac920fad4cf447353acca7
-SHA512 (php-8.4.26.tar.xz) = 7c1909185187dc54789727861afdce567eae9e39eb34aabf0da0ec7515b2c9c73b011740f5122724c5b1306ad3ec2bf1d5d0a46b0bf932c40e685e05c8c4dda7
-Size (php-8.4.26.tar.xz) = 13791528 bytes
+BLAKE2s (php-8.4.27.tar.xz) = 654d8635ffff31c266416d735b04a4da4d7274e380767dbab8c1cc8f4bdb520f
+SHA512 (php-8.4.27.tar.xz) = 61b5bde7634e083820c383f2f5f249a1c3f685d589b68f8a02bd6032c4ab04297abcbf0f51d3465794e47f878a57f531ac3d6c084dd8f87124d3d31578e180b0
+Size (php-8.4.27.tar.xz) = 13862944 bytes
 SHA1 (patch-build_Makefile.global) = da9577733497d026315b4702cb19d673053148ed
 SHA1 (patch-build_php.m4) = bb72e38ab391ad587962940ba85e8d4de8633dca
 SHA1 (patch-configure.ac) = 2bdd1d2b1def552032dba5fbeb6140922b72c880
