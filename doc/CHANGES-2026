@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7160 2026/10/21 18:31:50 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7161 2026/10/21 18:52:09 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10733,3 +10733,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/grafana-postgresql-datasource version 13.0.5 [tnn 2026-10-21]
 	Updated www/resterm to 1.16.0 [drixter 2026-10-21]
 	Updated www/miniflux to 2.3.4 [drixter 2026-10-21]
+	Updated net/dnscontrol to 5.7.0 [drixter 2026-10-21]
