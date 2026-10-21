@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.140.2.1 2026/10/21 00:34:45 maya Exp $
+# $NetBSD: Makefile,v 1.140.2.2 2026/10/21 02:33:20 maya Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
 DISTNAME=	rspamd-4.2.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -74,6 +75,9 @@ REPLACE_PERL+=	utils/*.pl
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/local.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/lua.local.d
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/lua.local.d/maps
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/lua.local.d/regexps
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/lua.local.d/selectors
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/maps.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/modules.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/modules.local.d
