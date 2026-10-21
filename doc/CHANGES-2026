@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7164 2026/10/21 19:27:47 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7165 2026/10/21 20:04:56 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10737,3 +10737,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/netatalk4 to 4.6.1 [hauke 2026-10-21]
 	Updated misc/tmux to 3.8 [ktnb 2026-10-21]
 	Updated net/knot to 3.6.2 [drixter 2026-10-21]
+	Updated net/powerdns to 5.1.5nb1 [drixter 2026-10-21]
