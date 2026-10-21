@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/08/03 13:12:30 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/21 10:01:19 sborrill Exp $
 
 DISTNAME=	nbtscan-1.5.1
 PKGREVISION=	2
@@ -13,6 +13,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NetBIOS name network scanner
 
 GNU_CONFIGURE=	yes
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}a
 BUILD_TARGET=	nbtscan

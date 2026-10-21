@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/05/20 06:09:08 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/21 10:01:19 sborrill Exp $
 
 DISTNAME=	scponly-4.8
 PKGREVISION=	2
@@ -11,6 +11,12 @@ MAINTAINER=	sborrill@NetBSD.org
 COMMENT=	Shell that only permits sftp
 
 GNU_CONFIGURE=	yes
+
+# FIXME: replace by proper LDFLAGS handling
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 USE_TOOLS+=		chgrp chmod chown echo id ln ls mkdir mv pwd rm rmdir
 CONFIGURE_ENV+=		scponly_PROG_CHGRP=${TOOLS_CHGRP:Q}
