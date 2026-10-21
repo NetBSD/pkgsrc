@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/09/20 17:46:18 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/10/21 23:15:43 nia Exp $
 
 BLAKE2s (basilisk-2026.06.12/basilisk.tar.gz) = bb39a9a33f42726d6468fbe364e9704ea45b60be350ba72e11020338bc0b7c19
 SHA512 (basilisk-2026.06.12/basilisk.tar.gz) = 33ed55f1a2c6427e1a49f4df72586e694fb94893d8d8107d52571b97e1021a11066cb73035c4cac2aab8e06cabf0943e5ae781a7c2ba37ddefe106c076cd9b90
@@ -29,6 +29,7 @@ SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf4177
 SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptsynch.c) = f99271490a983d0a1d101cb0d2b593a3987549d7
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptthread.c) = a04b06e39c289ac32dfbb6cbd79b1d7ecf0b560d
+SHA1 (patch-platform_security_nss_lib_ckfw_builtins_certdata.txt) = 7639138626eb9efeab4b277ec249fd55a80980f7
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
 SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
