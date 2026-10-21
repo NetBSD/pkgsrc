@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7146 2026/10/21 00:43:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7147 2026/10/21 04:11:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10717,3 +10717,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ocaml-alcotest version 1.9.1 [alnsn 2026-10-20]
 	Updated editors/cooledit to 5.0.6 [ktnb 2026-10-20]
 	Updated databases/p5-DBI to 1.656 [taca 2026-10-21]
+	Updated www/firefox153 to 153.5.1 [gutteridge 2026-10-21]
