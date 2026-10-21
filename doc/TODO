@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28212 2026/10/21 19:19:33 hauke Exp $
+$NetBSD: TODO,v 1.28213 2026/10/21 19:23:06 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -1291,7 +1291,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tkinfo-2.11
 	o tkpasman-2.2b
 	o tlsh-4.12.0
-	o tmux-3.8
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2

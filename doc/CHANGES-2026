@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7162 2026/10/21 19:19:33 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.7163 2026/10/21 19:23:06 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10735,3 +10735,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/miniflux to 2.3.4 [drixter 2026-10-21]
 	Updated net/dnscontrol to 5.7.0 [drixter 2026-10-21]
 	Updated net/netatalk4 to 4.6.1 [hauke 2026-10-21]
+	Updated misc/tmux to 3.8 [ktnb 2026-10-21]
