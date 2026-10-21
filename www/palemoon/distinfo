@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2026/10/07 15:52:18 nia Exp $
+$NetBSD: distinfo,v 1.50 2026/10/21 22:02:37 nia Exp $
 
 BLAKE2s (palemoon-35.0.2/icudt78b.dat.gz) = f7414c79346600686ea9e0660e2604156b04cf655cb70e04915fdfd15f24ce93
 SHA512 (palemoon-35.0.2/icudt78b.dat.gz) = 5ea8779e6f8809cdd30662da7fc1f578274d8a9ea79ed0f2ae63807bb9ae0bcbe1f8302d4ba4d58d2997d46a3bcb10f0697288b16e19c7cfb5af288358cde314
@@ -28,6 +28,7 @@ SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf4177
 SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptsynch.c) = f99271490a983d0a1d101cb0d2b593a3987549d7
 SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptthread.c) = a04b06e39c289ac32dfbb6cbd79b1d7ecf0b560d
+SHA1 (patch-platform_security_nss_lib_ckfw_builtins_certdata.txt) = e63cc2632fb39e74f85c7c56ff0f4c7464b407bd
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
 SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
