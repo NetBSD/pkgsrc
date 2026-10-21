@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7161 2026/10/21 18:52:09 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7162 2026/10/21 19:19:33 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10734,3 +10734,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.16.0 [drixter 2026-10-21]
 	Updated www/miniflux to 2.3.4 [drixter 2026-10-21]
 	Updated net/dnscontrol to 5.7.0 [drixter 2026-10-21]
+	Updated net/netatalk4 to 4.6.1 [hauke 2026-10-21]
