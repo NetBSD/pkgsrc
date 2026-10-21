@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/10/10 10:13:08 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/21 13:39:17 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -214,7 +214,6 @@ include/isc/tid.h
 include/isc/time.h
 include/isc/timer.h
 include/isc/tls.h
-include/isc/tm.h
 include/isc/types.h
 include/isc/urcu.h
 include/isc/url.h
