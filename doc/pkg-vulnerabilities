@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.805 2026/10/11 19:35:16 spz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.806 2026/10/21 16:55:49 khorben Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30472,3 +30472,11 @@ bind<9.20.29	denial-of-service	https://kb.isc.org/docs/cve-2026-76163
 bind<9.20.29	insufficient-verification	https://kb.isc.org/docs/cve-2026-78301
 bind<9.20.29	reachable-assertion	https://kb.isc.org/docs/cve-2026-80274
 bind<9.20.29	memory-leak		https://kb.isc.org/docs/cve-2026-81563
+php82<8.2.35	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php82<8.2.35	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+php83<8.3.36	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php83<8.3.36	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+php84<8.4.27	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php84<8.4.27	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+php85<8.5.12	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php85<8.5.12	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
