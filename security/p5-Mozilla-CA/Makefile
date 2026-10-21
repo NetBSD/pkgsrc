@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/08/16 06:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/10/21 05:03:40 wiz Exp $
 
-DISTNAME=		Mozilla-CA-20260813
+DISTNAME=		Mozilla-CA-20261020
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LW/LWP/}

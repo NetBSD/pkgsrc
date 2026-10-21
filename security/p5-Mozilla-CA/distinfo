@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/08/16 06:21:06 wiz Exp $
+$NetBSD: distinfo,v 1.25 2026/10/21 05:03:40 wiz Exp $
 
-BLAKE2s (Mozilla-CA-20260813.tar.gz) = 447840014afe3597160d10d0c21260a089d441d6aa8d1a38ea801e513dde4293
-SHA512 (Mozilla-CA-20260813.tar.gz) = c8b3461197cf88f08532babdf5a9cf97bb609ad352ca3303a6a79e0d0124edeaed61c64ee2a9a2edbce78311b2685720e35fc0a72117ac22deae067b16c21710
-Size (Mozilla-CA-20260813.tar.gz) = 129592 bytes
+BLAKE2s (Mozilla-CA-20261020.tar.gz) = dfa36ed03e5286cb5af11bdc2f65964e613e9420be81e54eaf4c46d7e7951fb3
+SHA512 (Mozilla-CA-20261020.tar.gz) = a7934fd1c588eb66a618dff0bfb338a9e156f34cf480647d872c2a4b6c5bced57779aeaf2f06cfa9bf42d372d572bd366d7a8b230e9575da465973b77fb2a889
+Size (Mozilla-CA-20261020.tar.gz) = 130089 bytes
