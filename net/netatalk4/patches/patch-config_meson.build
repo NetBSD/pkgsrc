@@ -1,14 +1,14 @@
-$NetBSD: patch-config_meson.build,v 1.5 2026/09/03 15:06:07 hauke Exp $
+$NetBSD: patch-config_meson.build,v 1.6 2026/10/21 19:19:19 hauke Exp $
 
 Leave installation of config files to pkgsrc framework
 
---- config/meson.build.orig	2026-07-16 12:01:12.000000000 +0000
+--- config/meson.build.orig	2026-10-02 02:19:30.000000000 +0000
 +++ config/meson.build
 @@ -4,12 +4,6 @@ afp_conf = configure_file(
      configuration: cdata,
  )
  
--if (fs.exists(pkgconfdir / 'afp.conf') and not get_option('with-overwrite'))
+-if fs.exists(pkgconfdir / 'afp.conf') and not overwrite_config
 -    message('will not replace existing', pkgconfdir / 'afp.conf')
 -else
 -    install_data(afp_conf, install_dir: pkgconfdir, install_tag: 'config')
@@ -17,15 +17,12 @@ Leave installation of config files to pkgsrc framework
  if have_spotlight and use_spotlight_localsearch
      subdir('dconf')
  
-@@ -18,15 +12,6 @@ if have_spotlight and use_spotlight_loca
+@@ -18,12 +12,6 @@ if have_spotlight and use_spotlight_loca
          output: 'dbus-session.conf',
          configuration: cdata,
      )
 -
--    if (
--        fs.exists(pkgconfdir / 'dbus-session.conf')
--        and not get_option('with-overwrite')
--    )
+-    if (fs.exists(pkgconfdir / 'dbus-session.conf') and not overwrite_config)
 -        message('will not replace existing', pkgconfdir / 'dbus-session.conf')
 -    else
 -        install_data(dbus_session_conf, install_dir: pkgconfdir, install_tag: 'config')
@@ -33,7 +30,7 @@ Leave installation of config files to pkgsrc framework
  endif
  
  static_conf_files = ['extmap.conf']
-@@ -50,20 +35,9 @@ if have_appletalk and have_cups and get_
+@@ -47,20 +35,9 @@ if enable_appletalk and have_cups and in
          input: 'pap.in',
          output: 'pap',
          configuration: cdata,
@@ -44,21 +41,21 @@ Leave installation of config files to pkgsrc framework
  endif
  
 -foreach file : static_conf_files
--    if (fs.exists(pkgconfdir / file) and not get_option('with-overwrite'))
+-    if fs.exists(pkgconfdir / file) and not overwrite_config
 -        message('will not replace existing', pkgconfdir / file)
 -    else
 -        install_data(file, install_dir: pkgconfdir, install_tag: 'config')
 -    endif
 -endforeach
 -
- if (fs.exists('/etc/ld.so.conf.d') and get_option('with-ldsoconf'))
+ if fs.exists('/etc/ld.so.conf.d') and enable_ldsoconf
      configure_file(
          input: 'libatalk.conf.in',
-@@ -75,14 +49,6 @@ if (fs.exists('/etc/ld.so.conf.d') and g
+@@ -72,14 +49,6 @@ if fs.exists('/etc/ld.so.conf.d') and en
      )
  endif
  
--if get_option('with-statedir-creation')
+-if create_statedirs
 -    install_data(
 -        'README',
 -        install_dir: localstatedir / 'netatalk/CNID',

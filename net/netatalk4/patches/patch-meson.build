@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.8 2025/08/12 18:22:55 hauke Exp $
+$NetBSD: patch-meson.build,v 1.9 2026/10/21 19:19:19 hauke Exp $
 
 Add PREFIXed paths (include, lib) for all OSes.
 
@@ -6,9 +6,9 @@ Make PREFIX path configurable.
 
 Install at.h on Linux, we do it on NetBSD, too.
 
---- meson.build.orig	2025-08-05 13:56:32.000000000 +0000
+--- meson.build.orig	2026-10-02 02:19:30.000000000 +0000
 +++ meson.build
-@@ -152,16 +152,9 @@ include_dirs = [
+@@ -377,16 +377,9 @@ include_dirs = [
      'include',
      'sys',
      'etc/afpd',
@@ -26,7 +26,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  # note: the brew app is not visible from within the brew build wrapper iteslf,
  # so rather than checking for brew we apply a blanket prefix
  brew_prefix = ''
-@@ -189,13 +182,7 @@ endif
+@@ -414,13 +407,7 @@ endif
  
  libsearch_dirs = []
  
@@ -41,7 +41,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  
  if brew_prefix != ''
      libsearch_dirs += brew_prefix + '/lib'
-@@ -233,9 +220,8 @@ add_global_link_arguments(netatalk_commo
+@@ -494,9 +481,8 @@ endif
  #################
  
  header_dir = []
@@ -53,7 +53,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  
  check_headers = [
      'acl/libacl.h',
-@@ -400,9 +386,7 @@ if 'dbd' in get_option('with-cnid-backen
+@@ -691,9 +677,7 @@ if enable_dbd_backend
          endif
  
          bdb_dirs += [
@@ -64,7 +64,7 @@ Install at.h on Linux, we do it on NetBSD, too.
              '/usr',
          ]
      endif
-@@ -1567,7 +1551,7 @@ else
+@@ -1995,7 +1979,7 @@ else
          pam_paths = [
              '/',
              '/usr',
@@ -73,7 +73,7 @@ Install at.h on Linux, we do it on NetBSD, too.
          ]
  
          foreach path : pam_paths
-@@ -1918,16 +1902,10 @@ cracklib_dict = ''
+@@ -2368,16 +2352,10 @@ cracklib_dict = ''
  
  if fs.is_dir('/usr/share/cracklib')
      cracklib_dict += '/usr/share/cracklib/pw_dict'
@@ -92,11 +92,11 @@ Install at.h on Linux, we do it on NetBSD, too.
  endif
  
  if not enable_cracklib
-@@ -2051,7 +2029,6 @@ if host_os == 'freebsd'
-     cdata.set('FREEBSD', 1)
+@@ -2495,7 +2473,6 @@ elif host_os == 'dragonfly'
+     cdata.set('BSD4_4', 1)
      cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
  elif host_os == 'linux'
 -    use_glibc_at_header = cc.has_header('netatalk/at.h')
-     cdata.set('_GNU_SOURCE', 1)
      if cc.compiles(
          '''
+ #include <sys/socket.h>
