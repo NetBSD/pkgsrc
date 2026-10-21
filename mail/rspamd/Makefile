@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.140 2026/09/02 19:03:20 wiz Exp $
+# $NetBSD: Makefile,v 1.140.2.1 2026/10/21 00:34:45 maya Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
-DISTNAME=	rspamd-4.1.5
-PKGREVISION=	1
+DISTNAME=	rspamd-4.2.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -112,8 +111,8 @@ post-extract:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
 
-# as of 4.1.5
-# 1191 tests 1187 passed 3110 assertions 0 failed 0 errors 4 unassertive 0 pending
+# as of 4.2.2, after 'make install'
+# 1423 tests 1419 passed 5506 assertions 0 failed 0 errors 4 unassertive 0 pending
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/replxx:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/aho-corasick:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/libev:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/kann
 
