@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1131 2026/10/01 02:52:27 taca Exp $
+# $NetBSD: Makefile,v 1.1132 2026/10/22 20:19:23 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -454,6 +454,7 @@ SUBDIR+=	pear-Image_Color
 SUBDIR+=	pear-Image_Graph
 SUBDIR+=	pfstools
 SUBDIR+=	pgraf
+SUBDIR+=	photoc
 SUBDIR+=	photopc
 SUBDIR+=	php-exif
 SUBDIR+=	php-gd
