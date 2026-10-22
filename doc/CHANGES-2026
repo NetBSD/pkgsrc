@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7184 2026/10/22 13:36:25 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7185 2026/10/22 14:08:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10768,3 +10768,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-release to 1.1.7 [pin 2026-10-22]
 	Updated net/ttl to 0.24.1 [pin 2026-10-22]
 	Updated net/xfr to 0.12.1 [pin 2026-10-22]
+	Updated devel/py-uv to 0.13.5 [adam 2026-10-22]
+	Updated devel/py-uv-build to 0.13.5 [adam 2026-10-22]
