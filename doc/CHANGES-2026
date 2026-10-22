@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7169 2026/10/22 02:07:14 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7170 2026/10/22 07:45:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10742,3 +10742,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns-recursor to 5.4.8 [drixter 2026-10-21]
 	Updated devel/topgit to 0.19.14 [ktnb 2026-10-21]
 	Updated lang/php74 to 7.4.33nb11 [taca 2026-10-22]
+	Added devel/py-cachebox version 6.2.8 [adam 2026-10-22]
+	Updated textproc/py-deepdiff to 9.1.0 [adam 2026-10-22]
