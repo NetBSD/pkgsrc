@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/11/05 22:14:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/22 16:31:42 adam Exp $
 
-DISTNAME=	brotli-1.2.0
+DISTNAME=	brotli-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotli/}
@@ -12,7 +12,8 @@ HOMEPAGE=	https://github.com/google/brotli
 COMMENT=	Generic-purpose lossless compression algorithm (Python module)
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig>=0:../../devel/py-pkgconfig
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 
