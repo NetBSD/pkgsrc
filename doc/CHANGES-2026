@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7170 2026/10/22 07:45:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7171 2026/10/22 08:09:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10744,3 +10744,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/php74 to 7.4.33nb11 [taca 2026-10-22]
 	Added devel/py-cachebox version 6.2.8 [adam 2026-10-22]
 	Updated textproc/py-deepdiff to 9.1.0 [adam 2026-10-22]
+	Updated lang/python313 to 3.13.17 [adam 2026-10-22]
+	Updated lang/py313-html-docs to 3.13.17 [adam 2026-10-22]
+	Updated lang/python314 to 3.14.9 [adam 2026-10-22]
+	Updated lang/py314-html-docs to 3.14.9 [adam 2026-10-22]
+	Updated lang/python315 to 3.15.1 [adam 2026-10-22]
+	Updated lang/py315-html-docs to 3.15.1 [adam 2026-10-22]
