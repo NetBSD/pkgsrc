@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/10/10 10:34:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/22 08:08:54 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1264,7 +1264,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-26.2.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-26.2.2-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2817,9 +2817,6 @@ lib/python${PY_VER_SUFFIX}/test/mathdata/floating_points.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/formatfloat_testcases.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/ieee754.txt
 lib/python${PY_VER_SUFFIX}/test/mathdata/math_testcases.txt
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.py
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.pyc
-lib/python${PY_VER_SUFFIX}/test/memory_watchdog.pyo
 lib/python${PY_VER_SUFFIX}/test/mime.types
 lib/python${PY_VER_SUFFIX}/test/mime.types2
 lib/python${PY_VER_SUFFIX}/test/mock_socket.py
@@ -3262,6 +3259,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/check_config.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_abstract.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_abstract.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_abstract.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_build.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_build.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_build.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_bytearray.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_bytearray.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_bytearray.pyo
@@ -3355,6 +3355,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_slice.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_slots.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_slots.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_slots.pyo
@@ -3386,6 +3389,10 @@ lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cext/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cext/extension.c
+lib/python${PY_VER_SUFFIX}/test/test_cext/extension.cpp
+lib/python${PY_VER_SUFFIX}/test/test_cext/runtests.py
+lib/python${PY_VER_SUFFIX}/test/test_cext/runtests.pyc
+lib/python${PY_VER_SUFFIX}/test/test_cext/runtests.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cext/setup.py
 lib/python${PY_VER_SUFFIX}/test/test_cext/setup.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cext/setup.pyo
@@ -3542,13 +3549,6 @@ lib/python${PY_VER_SUFFIX}/test/test_copyreg.pyo
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.py
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.pyc
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.pyo
-lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.py
-lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.pyc
-lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.pyo
-lib/python${PY_VER_SUFFIX}/test/test_cppext/extension.cpp
-lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.py
-lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.pyc
-lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.pyo
 lib/python${PY_VER_SUFFIX}/test/test_crossinterp.py
 lib/python${PY_VER_SUFFIX}/test/test_crossinterp.pyc
 lib/python${PY_VER_SUFFIX}/test/test_crossinterp.pyo
@@ -3747,6 +3747,12 @@ lib/python${PY_VER_SUFFIX}/test/test_dataclasses/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/_types_proxy.py
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/_types_proxy.pyc
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/_types_proxy.pyo
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_broken.py
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_broken.pyc
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_broken.pyo
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_str.py
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_str.pyc
+lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_lazy_str.pyo
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_module_1.py
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_module_1.pyc
 lib/python${PY_VER_SUFFIX}/test/test_dataclasses/dataclass_module_1.pyo
@@ -4090,6 +4096,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bisect.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bytes_object.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bytes_object.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bytes_object.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bz2.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bz2.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_bz2.pyo
@@ -4111,6 +4120,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_cprofile.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_csv.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_datetime.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_datetime.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_datetime.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_dbm_gnu.pyo
@@ -4180,6 +4192,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_mmap.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_monitoring.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_os.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_os.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_os.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_pickle.pyo
@@ -4240,6 +4255,9 @@ lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_types.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_uuid.pyo
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_weakref.py
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_weakref.pyc
+lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_weakref.pyo
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.py
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.pyc
 lib/python${PY_VER_SUFFIX}/test/test_free_threading/test_zip.pyo
@@ -5154,6 +5172,9 @@ lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_same_name_var_order
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_getattr.py
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_getattr.pyc
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_getattr.pyo
+lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_lazy_import_and_getattr.py
+lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_lazy_import_and_getattr.pyc
+lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/module_with_lazy_import_and_getattr.pyo
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/modules_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/modules_dict.pyc
 lib/python${PY_VER_SUFFIX}/test/test_lazy_import/data/modules_dict.pyo
@@ -5580,6 +5601,9 @@ lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_modes
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_profiler.py
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_profiler.pyc
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_profiler.pyo
+lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_sync_coordinator.py
+lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_sync_coordinator.pyc
+lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_sync_coordinator.pyo
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_trend_tracker.py
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_trend_tracker.pyc
 lib/python${PY_VER_SUFFIX}/test/test_profiling/test_sampling_profiler/test_trend_tracker.pyo

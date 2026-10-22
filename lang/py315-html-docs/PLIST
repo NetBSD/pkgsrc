@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/10/10 10:34:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/22 08:08:54 adam Exp $
 share/doc/python3.15/.buildinfo
 share/doc/python3.15/404.html
 share/doc/python3.15/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -16,6 +16,7 @@ share/doc/python3.15/_images/mac_installer_07_applications.png
 share/doc/python3.15/_images/mac_installer_08_install_certificates.png
 share/doc/python3.15/_images/mac_installer_09_custom_install_free_threaded.png
 share/doc/python3.15/_images/pathlib-inheritance.png
+share/doc/python3.15/_images/pathlib-parts.svg
 share/doc/python3.15/_images/tachyon-flamegraph.png
 share/doc/python3.15/_images/tachyon-gecko-calltree.png
 share/doc/python3.15/_images/tachyon-gecko-flamegraph.png

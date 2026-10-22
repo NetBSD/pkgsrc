@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2026/10/10 10:34:19 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/10/22 08:08:54 adam Exp $
 
-BLAKE2s (Python-3.15.0.tar.xz) = c83bedc7b22f51b35d80f96a2cd47865901e612d19932e2181bd2c14422a30ba
-SHA512 (Python-3.15.0.tar.xz) = 293cbdbb20076c8d9f1ddfb9b72796974b00802f96691843af3924e55e2a7cbd89c1cd85ebd8e35a474eda9e7a878b6622238178ef2de4427e4e34ef70d04265
-Size (Python-3.15.0.tar.xz) = 35688820 bytes
+BLAKE2s (Python-3.15.1.tar.xz) = 1873308fee917887c1aaa988b849e2a4526a6e16c48c832d6c850f9962024587
+SHA512 (Python-3.15.1.tar.xz) = 6903df8c553f8bda2b5f807b21f1a948076522ffa5b17d9e8b452099294f78a085929565df7b2b79af153fc0e638928d87cccb35b48e505280ffa2c3e2b735ec
+Size (Python-3.15.1.tar.xz) = 35789408 bytes
 SHA1 (patch-Include_pymacro.h) = 7611315fefc305a48b4965f2f2b9bee53ae3d987
 SHA1 (patch-Lib___pyrepl_terminfo.py) = 905a1b281afa0a97302db22b55a9d6b7880c73ad
 SHA1 (patch-Lib_ctypes_util.py) = 671f4fcccb738ec96c4ba8ad62b66ea016172651
