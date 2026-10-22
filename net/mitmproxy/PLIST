@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/10/07 11:04:54 leot Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/10/22 11:05:10 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -711,15 +711,9 @@ ${PYSITELIB}/mitmproxy/tools/web/master.py
 ${PYSITELIB}/mitmproxy/tools/web/master.pyc
 ${PYSITELIB}/mitmproxy/tools/web/master.pyo
 ${PYSITELIB}/mitmproxy/tools/web/static/favicon.ico
-${PYSITELIB}/mitmproxy/tools/web/static/fontawesome-webfont-B-jkhYfk.woff2
-${PYSITELIB}/mitmproxy/tools/web/static/fontawesome-webfont-CDK5bt4p.woff
-${PYSITELIB}/mitmproxy/tools/web/static/fontawesome-webfont-CQDK8MU3.ttf
-${PYSITELIB}/mitmproxy/tools/web/static/fontawesome-webfont-D13rzr4g.svg
-${PYSITELIB}/mitmproxy/tools/web/static/fontawesome-webfont-G5YE5S7X.eot
-${PYSITELIB}/mitmproxy/tools/web/static/index-Be7e-cwP.js
-${PYSITELIB}/mitmproxy/tools/web/static/index-DhPPoJ7G.css
-${PYSITELIB}/mitmproxy/tools/web/static/vendor-BS4xPthR.js
-${PYSITELIB}/mitmproxy/tools/web/static/vendor-Cg3S-P9H.css
+${PYSITELIB}/mitmproxy/tools/web/static/index-BgAKWRDq.css
+${PYSITELIB}/mitmproxy/tools/web/static/index-DA3bdZbQ.js
+${PYSITELIB}/mitmproxy/tools/web/static/vendor-DXVK1cAY.js
 ${PYSITELIB}/mitmproxy/tools/web/static_viewer.py
 ${PYSITELIB}/mitmproxy/tools/web/static_viewer.pyc
 ${PYSITELIB}/mitmproxy/tools/web/static_viewer.pyo
