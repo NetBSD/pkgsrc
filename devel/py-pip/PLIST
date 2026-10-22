@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2026/08/08 07:40:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2026/10/22 08:18:55 adam Exp $
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -549,6 +549,12 @@ ${PYSITELIB}/pip/_vendor/certifi/core.py
 ${PYSITELIB}/pip/_vendor/certifi/core.pyc
 ${PYSITELIB}/pip/_vendor/certifi/core.pyo
 ${PYSITELIB}/pip/_vendor/certifi/py.typed
+${PYSITELIB}/pip/_vendor/certifi/tests/__init__.py
+${PYSITELIB}/pip/_vendor/certifi/tests/__init__.pyc
+${PYSITELIB}/pip/_vendor/certifi/tests/__init__.pyo
+${PYSITELIB}/pip/_vendor/certifi/tests/test_certify.py
+${PYSITELIB}/pip/_vendor/certifi/tests/test_certify.pyc
+${PYSITELIB}/pip/_vendor/certifi/tests/test_certify.pyo
 ${PYSITELIB}/pip/_vendor/distlib/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/distlib/__init__.py
 ${PYSITELIB}/pip/_vendor/distlib/__init__.pyc
