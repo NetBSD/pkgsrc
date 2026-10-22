@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7186 2026/10/22 14:22:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7187 2026/10/22 16:33:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10773,3 +10773,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/yt-dlp to 2026.10.21 [adam 2026-10-22]
 	Updated textproc/py-bracex to 3.2 [adam 2026-10-22]
 	Updated textproc/py-wcmatch to 11.2 [adam 2026-10-22]
+	Updated archivers/py-brotli to 1.2.1 [adam 2026-10-22]
+	Updated devel/py-coverage to 7.17.0 [adam 2026-10-22]
