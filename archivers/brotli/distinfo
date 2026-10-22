@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/10/29 18:10:15 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/10/22 11:06:23 adam Exp $
 
-BLAKE2s (brotli/brotli-1.2.0.tar.gz) = dc0af34fb8e25ae98c87039b7f3ffed7e5ad68bd153ce5f907f9c1640f9904b5
-SHA512 (brotli/brotli-1.2.0.tar.gz) = f94542afd2ecd96cc41fd21a805a3da314281ae558c10650f3e6d9ca732b8425bba8fde312823f0a564c7de3993bdaab5b43378edab65ebb798cefb6fd702256
-Size (brotli/brotli-1.2.0.tar.gz) = 646315 bytes
+BLAKE2s (brotli/brotli-1.2.1.tar.gz) = 7c6c062da704c44957758639e20aa1fc2c96c7377d21c41a6b62b837c2c6e67e
+SHA512 (brotli/brotli-1.2.1.tar.gz) = 460591287d428c8b5a8a2766b5b424d14501fcda12c7118b8f3cc4bfae44b90ac75ca156557f07b6e22542612724d904533e5f70019be07dbbb604c46f03ab69
+Size (brotli/brotli-1.2.1.tar.gz) = 646598 bytes
