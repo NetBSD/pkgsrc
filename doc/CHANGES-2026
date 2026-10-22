@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7175 2026/10/22 10:18:50 kim Exp $
+$NetBSD: CHANGES-2026,v 1.7176 2026/10/22 11:05:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10756,3 +10756,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.9.3 [adam 2026-10-22]
 	Updated devel/cargo-nextest to 0.9.149 [pin 2026-10-22]
 	Updated net/unbound to 1.26.2 [kim 2026-10-22]
+	Updated net/py-mitmproxy_rs to 0.12.15 [leot 2026-10-22]
