@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2026/07/24 10:56:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2026/10/22 11:54:20 jperkin Exp $
 
-DISTNAME=	mktool-1.5.10
+DISTNAME=	mktool-1.5.11
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ COMMENT=	High performance alternatives for pkgsrc/mk
 LICENSE=	isc
 
 USE_LANGUAGES=	c
-RUST_REQ=	1.86
+RUST_REQ=	1.88
 
 #
 # For consistency in pkgsrc this build switches to using native-certs, i.e.
