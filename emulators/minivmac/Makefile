@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/08/27 16:01:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/22 11:04:57 hauke Exp $
 
 DISTNAME=	minivmac-36.04.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -60,6 +60,14 @@ MODELS=		128K 512Ke Plus SE Classic SEFDHD II
 BUILD_DIRS=	${MODELS}
 
 INSTALLATION_DIRS+=	bin
+
+CHECK_RELRO_SKIP+=	bin/minivmac-128K
+CHECK_RELRO_SKIP+=	bin/minivmac-512Ke
+CHECK_RELRO_SKIP+=	bin/minivmac-Classic
+CHECK_RELRO_SKIP+=	bin/minivmac-II
+CHECK_RELRO_SKIP+=	bin/minivmac-Plus
+CHECK_RELRO_SKIP+=	bin/minivmac-SE
+CHECK_RELRO_SKIP+=	bin/minivmac-SEFDHD
 
 do-configure:
 	cd ${WRKSRC} && \
