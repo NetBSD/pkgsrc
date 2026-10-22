@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/05/30 12:59:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/22 16:08:34 ryoon Exp $
 
 DISTNAME=	pmwiki-2.6.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -48,4 +48,5 @@ do-install:
 		${LN} -sf ${PKG_SYSCONFDIR}/config.php config.php
 
 .include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
