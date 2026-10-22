@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7185 2026/10/22 14:08:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7186 2026/10/22 14:22:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10770,3 +10770,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/xfr to 0.12.1 [pin 2026-10-22]
 	Updated devel/py-uv to 0.13.5 [adam 2026-10-22]
 	Updated devel/py-uv-build to 0.13.5 [adam 2026-10-22]
+	Updated net/yt-dlp to 2026.10.21 [adam 2026-10-22]
+	Updated textproc/py-bracex to 3.2 [adam 2026-10-22]
+	Updated textproc/py-wcmatch to 11.2 [adam 2026-10-22]
