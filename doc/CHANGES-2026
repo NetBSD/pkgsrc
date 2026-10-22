@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7182 2026/10/22 13:34:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7183 2026/10/22 13:35:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10766,3 +10766,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/mktool to 1.5.11 [jperkin 2026-10-22]
 	Updated chat/iamb to 0.13.1 [pin 2026-10-22]
 	Updated devel/cargo-release to 1.1.7 [pin 2026-10-22]
+	Updated net/ttl to 0.24.1 [pin 2026-10-22]
