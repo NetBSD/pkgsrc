@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/07/21 13:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/22 14:20:56 adam Exp $
 
-DISTNAME=	bracex-3.0.1
+DISTNAME=	bracex-3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bracex/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/facelessuser/bracex
 COMMENT=	Bash style brace expander
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
