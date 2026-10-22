@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/07/17 05:16:58 pin Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/22 11:06:36 pin Exp $
 
-DISTNAME=	cargo-edit-0.13.13
+DISTNAME=	cargo-edit-0.13.14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=killercup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.92.0
+RUST_REQ=	1.97.0
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
