@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4706 2026/10/20 20:55:54 alnsn Exp $
+# $NetBSD: Makefile,v 1.4707 2026/10/22 07:38:55 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2595,6 +2595,7 @@ SUBDIR+=	py-buildbot-worker
 SUBDIR+=	py-buildbot-www
 SUBDIR+=	py-bump2version
 SUBDIR+=	py-bumpver
+SUBDIR+=	py-cachebox
 SUBDIR+=	py-cachecontrol
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachelib

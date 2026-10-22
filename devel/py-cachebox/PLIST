@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/22 07:38:55 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-THIRD-PARTY
+${PYSITELIB}/cachebox/__init__.py
+${PYSITELIB}/cachebox/__init__.pyc
+${PYSITELIB}/cachebox/__init__.pyo
+${PYSITELIB}/cachebox/_cachebox.py
+${PYSITELIB}/cachebox/_cachebox.pyc
+${PYSITELIB}/cachebox/_cachebox.pyo
+${PYSITELIB}/cachebox/_core.pyi
+${PYSITELIB}/cachebox/_core.so
+${PYSITELIB}/cachebox/_wrappers.py
+${PYSITELIB}/cachebox/_wrappers.pyc
+${PYSITELIB}/cachebox/_wrappers.pyo
+${PYSITELIB}/cachebox/py.typed
+${PYSITELIB}/cachebox/utils.py
+${PYSITELIB}/cachebox/utils.pyc
+${PYSITELIB}/cachebox/utils.pyo
