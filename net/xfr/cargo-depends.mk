@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2026/10/14 08:34:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2026/10/22 13:36:06 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aead-0.6.1
@@ -271,12 +271,12 @@ CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.3
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rusticata-macros-4.1.0
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.45
+CARGO_CRATE_DEPENDS+=	rustls-0.23.46
 CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.4
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.7.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-android-0.1.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
@@ -384,8 +384,8 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.127
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.127
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.104
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
-CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.9
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.10
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.10
 CARGO_CRATE_DEPENDS+=	wezterm-bidi-0.2.3
 CARGO_CRATE_DEPENDS+=	wezterm-blob-leases-0.1.1
 CARGO_CRATE_DEPENDS+=	wezterm-color-types-0.3.0
