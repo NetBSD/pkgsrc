@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2026/10/01 07:28:53 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/10/22 07:47:53 adam Exp $
 
-BLAKE2s (Python-3.13.16.tar.xz) = 8bf02540856c1926d59a96cd92f22792a21793c5385d258e790b3cbe0a55b294
-SHA512 (Python-3.13.16.tar.xz) = 7283884583b181161aff5ce523c0cdf03904a1d7a172db2727f7d3f42ae6e4d44f1ac86f7960df4a0203740cc04ab5adba3f404aafd562afe761d9052cc4f32c
-Size (Python-3.13.16.tar.xz) = 23225704 bytes
+BLAKE2s (Python-3.13.17.tar.xz) = 7df947c8e8460e4b61973a137a883fe6c6e7c484fb6af5489576502ce355168a
+SHA512 (Python-3.13.17.tar.xz) = 461df4bca8b11cb2f76250ab38df3afdeb937a920132b3f8569c52261281d64d64ef8ba663c426ff613ad37dbcd1de871c5e15cc31f1b865982b8508adf986d9
+Size (Python-3.13.17.tar.xz) = 23233336 bytes
 SHA1 (patch-Include_pymacro.h) = 7611315fefc305a48b4965f2f2b9bee53ae3d987
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_sysconfig_____init____.py) = 6c151d3dca0367cbb38c1175b9dba894509cf1a4
