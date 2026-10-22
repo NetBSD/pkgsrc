@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7176 2026/10/22 11:05:00 leot Exp $
+$NetBSD: CHANGES-2026,v 1.7177 2026/10/22 11:05:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10757,3 +10757,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-nextest to 0.9.149 [pin 2026-10-22]
 	Updated net/unbound to 1.26.2 [kim 2026-10-22]
 	Updated net/py-mitmproxy_rs to 0.12.15 [leot 2026-10-22]
+	Updated net/mitmproxy to 12.3.0 [leot 2026-10-22]
