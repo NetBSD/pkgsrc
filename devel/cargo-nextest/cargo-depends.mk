@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.26 2026/10/08 05:16:43 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.27 2026/10/22 09:20:51 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -279,7 +279,7 @@ CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	ordered-float-4.6.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.2.2
 CARGO_CRATE_DEPENDS+=	outref-0.5.2
-CARGO_CRATE_DEPENDS+=	owo-colors-4.3.0
+CARGO_CRATE_DEPENDS+=	owo-colors-4.4.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.4
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.11
 CARGO_CRATE_DEPENDS+=	pathdiff-0.2.3
@@ -350,7 +350,7 @@ CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.3
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.12.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.7.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-android-0.1.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.22
 CARGO_CRATE_DEPENDS+=	rusty-fork-0.3.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
@@ -517,7 +517,7 @@ CARGO_CRATE_DEPENDS+=	wasmparser-0.244.0
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.91
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
 CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.6
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.0
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.10
 CARGO_CRATE_DEPENDS+=	wezterm-bidi-0.2.3
 CARGO_CRATE_DEPENDS+=	wezterm-blob-leases-0.1.1
 CARGO_CRATE_DEPENDS+=	wezterm-color-types-0.3.0
