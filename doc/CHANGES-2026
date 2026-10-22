@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7168 2026/10/21 20:45:09 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7169 2026/10/22 02:07:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10741,3 +10741,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/unicode-screensaver to 0.5.2 [ktnb 2026-10-21]
 	Updated net/powerdns-recursor to 5.4.8 [drixter 2026-10-21]
 	Updated devel/topgit to 0.19.14 [ktnb 2026-10-21]
+	Updated lang/php74 to 7.4.33nb11 [taca 2026-10-22]
