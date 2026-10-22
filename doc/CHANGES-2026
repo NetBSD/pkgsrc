@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7171 2026/10/22 08:09:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7172 2026/10/22 08:16:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10750,3 +10750,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py314-html-docs to 3.14.9 [adam 2026-10-22]
 	Updated lang/python315 to 3.15.1 [adam 2026-10-22]
 	Updated lang/py315-html-docs to 3.15.1 [adam 2026-10-22]
+	Updated sysutils/gravityfile to 0.4.0 [pin 2026-10-22]
