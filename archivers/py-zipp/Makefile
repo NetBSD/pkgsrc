@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/10/04 17:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/10/22 08:20:16 adam Exp $
 
-DISTNAME=	zipp-4.1.1
+DISTNAME=	zipp-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipp/}
@@ -12,11 +12,11 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
-TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.itertools-[0-9]*:../../devel/py-jaraco.itertools
-TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test-[0-9]*:../../devel/py-jaraco.test
-TEST_DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=0:../../devel/py-jaraco.functools
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.itertools>=0:../../devel/py-jaraco.itertools
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=0:../../devel/py-jaraco.test
+TEST_DEPENDS+=	${PYPKGPREFIX}-more-itertools>=0:../../devel/py-more-itertools
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
