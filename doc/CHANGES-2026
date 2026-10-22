@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7179 2026/10/22 11:18:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7180 2026/10/22 11:54:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10763,3 +10763,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.22.1 [adam 2026-10-22]
 	Updated lang/nodejs to 26.12.1 [adam 2026-10-22]
 	Updated lang/nodejs22 to 22.23.4 [adam 2026-10-22]
+	Updated pkgtools/mktool to 1.5.11 [jperkin 2026-10-22]
