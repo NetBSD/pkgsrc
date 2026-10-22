@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2026/10/20 05:18:57 adam Exp $
+$NetBSD: distinfo,v 1.47 2026/10/22 14:08:06 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -42,9 +42,9 @@ Size (astral-mail-headers-0.0.1.crate) = 217813 bytes
 BLAKE2s (astral-tokio-tar-0.7.0.crate) = a7d2b8e8997b8a4851d4de9432c6ed15ffbfe926d60eb57cfb03950f27b79153
 SHA512 (astral-tokio-tar-0.7.0.crate) = 8d14b922c020864c6eb6cfd183aa85657f65b9061b6714d8ee6ef31705cbf83801acd651694e0ef7b02883d7c0089db35d109b69370a3824828f806bcfc38c64
 Size (astral-tokio-tar-0.7.0.crate) = 82650 bytes
-BLAKE2s (astral-version-ranges-0.2.2.crate) = 0f1a22a398e5ea4fd9d067e048dc2a28d2fdc4ea578029052b4ce78be291f16f
-SHA512 (astral-version-ranges-0.2.2.crate) = 405b929a9f919b209b29daf84779a4d3deff7328942cb8771cf4a065c8b96d2df3a885f9183fc0c3b595acb0391528a235c050cd7589c7ec55334adffc72b311
-Size (astral-version-ranges-0.2.2.crate) = 28049 bytes
+BLAKE2s (astral-version-ranges-0.2.3.crate) = 961363f8c99e475b252954e4f3d658d6962c0efa0500483a79069e590ab294a5
+SHA512 (astral-version-ranges-0.2.3.crate) = 4172921ae4b651f7f4400ec6d1068e0da2af66dd305987ec8b83befac04bda232200e82e3f7c505ef155150827cad65b40b30ba8e31dd76f9f6f5612bdc9da2e
+Size (astral-version-ranges-0.2.3.crate) = 28033 bytes
 BLAKE2s (astral_async_zip-0.0.22.crate) = cf528c66238fff7371fc3b7fb95f7560f6d4a4105077ec9b58fd5b47cfe2afac
 SHA512 (astral_async_zip-0.0.22.crate) = d15d93b6f44c00e94f81c04ffa7aae179ed9ed34985e7284f893fe7c0565429436ee6a246c3f7a0ceac1dd95212254f4350717a06e88f3a8105d299a87bc1168
 Size (astral_async_zip-0.0.22.crate) = 98833 bytes
@@ -708,9 +708,9 @@ Size (utf8parse-0.2.2.crate) = 13499 bytes
 BLAKE2s (uuid-1.26.1.crate) = eb9672ecbf70f13daa6c5ec2996120aad61dd0367c19338a6b99a2fc827d29ca
 SHA512 (uuid-1.26.1.crate) = 298b8197a7c94d4d70bfe0860e21373421cbd53fb9681190171c71889b4b7de6d7bfa58d4e7ab99ebb4dc8bc718ede946f208eacb1cf9a08d693eef551cb422f
 Size (uuid-1.26.1.crate) = 65928 bytes
-BLAKE2s (uv_build-0.13.3.tar.gz) = 51210a903592671b351d8c221abd39e99dfe4df8a461472a9a7d4eed05b10dc0
-SHA512 (uv_build-0.13.3.tar.gz) = 2fc5b9fe0e23172636b2fb927634619f5b93f1e1173ae2a8ea3ce14b4194bd2dba7bf6da6e46723c90a945a47273b8e67114398bc958e94f68bc4895af7a6574
-Size (uv_build-0.13.3.tar.gz) = 464136 bytes
+BLAKE2s (uv_build-0.13.5.tar.gz) = f1f8eda789c98443468c6930d88679b25aa359c031955af771aef322fe5f63b2
+SHA512 (uv_build-0.13.5.tar.gz) = a7e3c3029179dc9a2c91519f7d161f707cce9b87e0b6a1802b257a63b8a468ba0fa64ea2010571426b30746ed3f83742c26c2c3045f06b587375c60231e52f9f
+Size (uv_build-0.13.5.tar.gz) = 466761 bytes
 BLAKE2s (valuable-0.1.1.crate) = df7602da20aa0212438759173532cf82c56ba05307e036b22bfddb318e2f82b7
 SHA512 (valuable-0.1.1.crate) = d8a4bffdc8a166d1ee11b87dd91cd68e5c898916b14db7039ad2faaad34f4bfef76f3fc3d17d6e7bf05e495778f7c9d5223fbf45331bd114f93fb6ec950eadbf
 Size (valuable-0.1.1.crate) = 28679 bytes

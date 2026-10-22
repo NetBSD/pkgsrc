@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/10/20 05:18:57 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/10/22 14:08:06 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -14,7 +14,7 @@ CARGO_CRATE_DEPENDS+=	arcstr-1.2.0
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.8
 CARGO_CRATE_DEPENDS+=	astral-mail-headers-0.0.1
 CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.7.0
-CARGO_CRATE_DEPENDS+=	astral-version-ranges-0.2.2
+CARGO_CRATE_DEPENDS+=	astral-version-ranges-0.2.3
 CARGO_CRATE_DEPENDS+=	astral_async_zip-0.0.22
 CARGO_CRATE_DEPENDS+=	async-compression-0.4.48
 CARGO_CRATE_DEPENDS+=	autocfg-1.5.0
