@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/08/18 07:22:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/22 07:42:15 adam Exp $
 bin/deep-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,6 +9,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/deepdiff/__init__.py
 ${PYSITELIB}/deepdiff/__init__.pyc
 ${PYSITELIB}/deepdiff/__init__.pyo
+${PYSITELIB}/deepdiff/_multiprocessing.py
+${PYSITELIB}/deepdiff/_multiprocessing.pyc
+${PYSITELIB}/deepdiff/_multiprocessing.pyo
 ${PYSITELIB}/deepdiff/anyset.py
 ${PYSITELIB}/deepdiff/anyset.pyc
 ${PYSITELIB}/deepdiff/anyset.pyo
@@ -33,6 +36,34 @@ ${PYSITELIB}/deepdiff/diff.pyo
 ${PYSITELIB}/deepdiff/distance.py
 ${PYSITELIB}/deepdiff/distance.pyc
 ${PYSITELIB}/deepdiff/distance.pyo
+${PYSITELIB}/deepdiff/docstrings/authors.rst
+${PYSITELIB}/deepdiff/docstrings/basics.rst
+${PYSITELIB}/deepdiff/docstrings/changelog.rst
+${PYSITELIB}/deepdiff/docstrings/colored_view.rst
+${PYSITELIB}/deepdiff/docstrings/commandline.rst
+${PYSITELIB}/deepdiff/docstrings/custom.rst
+${PYSITELIB}/deepdiff/docstrings/deep_distance.rst
+${PYSITELIB}/deepdiff/docstrings/deephash.rst
+${PYSITELIB}/deepdiff/docstrings/deephash_doc.rst
+${PYSITELIB}/deepdiff/docstrings/delta.rst
+${PYSITELIB}/deepdiff/docstrings/diff.rst
+${PYSITELIB}/deepdiff/docstrings/diff_doc.rst
+${PYSITELIB}/deepdiff/docstrings/dsearch.rst
+${PYSITELIB}/deepdiff/docstrings/exclude_paths.rst
+${PYSITELIB}/deepdiff/docstrings/extract.rst
+${PYSITELIB}/deepdiff/docstrings/faq.rst
+${PYSITELIB}/deepdiff/docstrings/ignore_order.rst
+${PYSITELIB}/deepdiff/docstrings/ignore_types_or_values.rst
+${PYSITELIB}/deepdiff/docstrings/index.rst
+${PYSITELIB}/deepdiff/docstrings/numbers.rst
+${PYSITELIB}/deepdiff/docstrings/optimizations.rst
+${PYSITELIB}/deepdiff/docstrings/other.rst
+${PYSITELIB}/deepdiff/docstrings/search_doc.rst
+${PYSITELIB}/deepdiff/docstrings/serialization.rst
+${PYSITELIB}/deepdiff/docstrings/stats.rst
+${PYSITELIB}/deepdiff/docstrings/support.rst
+${PYSITELIB}/deepdiff/docstrings/troubleshoot.rst
+${PYSITELIB}/deepdiff/docstrings/view.rst
 ${PYSITELIB}/deepdiff/helper.py
 ${PYSITELIB}/deepdiff/helper.pyc
 ${PYSITELIB}/deepdiff/helper.pyo
