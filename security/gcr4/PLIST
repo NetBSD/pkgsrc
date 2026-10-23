@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/05/03 09:51:11 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/23 07:56:29 adam Exp $
 ${PLIST.gtk4}bin/gcr-viewer-gtk4
 include/gck-2/gck/gck-enum-types.h
 include/gck-2/gck/gck-version.h
@@ -38,10 +38,10 @@ ${PLIST.introspection}lib/girepository-1.0/Gck-2.typelib
 ${PLIST.introspection}lib/girepository-1.0/Gcr-4.typelib
 lib/libgck-2.so
 lib/libgck-2.so.2
-lib/libgck-2.so.2.4.0
+lib/libgck-2.so.2.4.1
 lib/libgcr-4.so
 lib/libgcr-4.so.4
-lib/libgcr-4.so.4.4.0
+lib/libgcr-4.so.4.4.1
 lib/pkgconfig/gck-2.pc
 lib/pkgconfig/gcr-4.pc
 libexec/gcr4-ssh-agent
@@ -820,6 +820,7 @@ share/locale/kab/LC_MESSAGES/gcr-4.mo
 share/locale/kk/LC_MESSAGES/gcr-4.mo
 share/locale/kn/LC_MESSAGES/gcr-4.mo
 share/locale/ko/LC_MESSAGES/gcr-4.mo
+share/locale/lo/LC_MESSAGES/gcr-4.mo
 share/locale/lt/LC_MESSAGES/gcr-4.mo
 share/locale/lv/LC_MESSAGES/gcr-4.mo
 share/locale/mai/LC_MESSAGES/gcr-4.mo
@@ -856,6 +857,7 @@ share/locale/th/LC_MESSAGES/gcr-4.mo
 share/locale/tr/LC_MESSAGES/gcr-4.mo
 share/locale/ug/LC_MESSAGES/gcr-4.mo
 share/locale/uk/LC_MESSAGES/gcr-4.mo
+share/locale/uz/LC_MESSAGES/gcr-4.mo
 share/locale/vi/LC_MESSAGES/gcr-4.mo
 share/locale/xh/LC_MESSAGES/gcr-4.mo
 share/locale/zh_CN/LC_MESSAGES/gcr-4.mo
