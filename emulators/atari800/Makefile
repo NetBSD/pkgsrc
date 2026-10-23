@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2026/09/29 06:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/10/23 13:01:42 adam Exp $
 
-DISTNAME=	atari800-7.1.2-src
+DISTNAME=	atari800-7.2.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atari800/}
 GITHUB_RELEASE=	ATARI800_${PKGVERSION_NOREV:S/./_/g}
@@ -28,11 +27,7 @@ INSTALLATION_DIRS+=	${PREFIX}/share/atari800
 # override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
 MAKE_FLAGS+=	HOME=${WRKSRC}
 
-SUBST_CLASSES+=		cfg-path
-SUBST_STAGE.cfg-path=	pre-configure
-SUBST_MESSAGE.cfg-path=	Setting config path.
-SUBST_FILES.cfg-path=	src/cfg.c
-SUBST_SED.cfg-path=	-e 's,"/etc,"${PREFIX}/share/atari800,g'
+CPPFLAGS+=	-DSYSTEM_WIDE_CFG_FILE=\"${PREFIX}/share/atari800\"
 
 post-extract:
 	cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/pcxf380.zip
