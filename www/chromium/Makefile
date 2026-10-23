@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2026/10/23 15:05:14 kikadf Exp $
+# $NetBSD: Makefile,v 1.94 2026/10/23 16:57:02 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			156.0.8078.47
@@ -31,7 +31,7 @@ LLVM_MV=			${LLVM_VERSION:sh:C/\..*//}
 # Used nodejs version
 NODE_VERSIONS_ACCEPTED=		24
 
-EXTRACT_ONLY=			${DISTNAME}-linux${EXTRACT_SUFX_C}
+EXTRACT_ONLY=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #EXTRACT_ONLY+=			${PROFILE_DISTFILES}
 EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
 .for crate in ${CARGO_CRATE_DEPENDS}
