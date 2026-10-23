@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2026/10/19 10:16:50 sborrill Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/23 08:44:20 sborrill Exp $
 LTP_VERSION=	20260529
-PKGVERSION=	${LTP_VERSION}-0.10
+PKGVERSION=	${LTP_VERSION}-0.11
 PKGNAME=	compat_linux_test_project-${PKGVERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}ltp/releases/download/${LTP_VERSION}/
 DISTFILES=	ltp-full-${LTP_VERSION}.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sborrill@NetBSD.org
 COMMENT=	Package to build and run the Linux Test Project tests on NetBSD
 LICENSE=	2-clause-bsd
 

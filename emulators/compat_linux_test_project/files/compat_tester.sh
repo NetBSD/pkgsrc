@@ -406,6 +406,9 @@ run_testcase() {
 		printf '\nTESTCASE CRASHED: exit status %s (signal %s)\n' \
 			"${test_status}" "$((test_status - 128))" >> "${output_file}"
 	fi
+
+	# Ensures that the output_file only have valid characters
+	sed -i 's/[^[:print:]]//g' "${output_file}"
 }
 
 check_for_testcase_issue() {
