@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7189 2026/10/23 05:29:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7190 2026/10/23 05:58:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10778,3 +10778,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.16.1 [drixter 2026-10-22]
 	Updated devel/py-importlib-metadata to 9.1.0 [adam 2026-10-23]
 	Updated audio/py-music21 to 10.5.1 [adam 2026-10-23]
+	Updated net/py-botocore to 1.43.118 [adam 2026-10-23]
+	Updated net/py-s3transfer to 0.19.3 [adam 2026-10-23]
+	Updated net/py-boto3 to 1.43.118 [adam 2026-10-23]
+	Updated net/py-awscli to 1.46.2 [adam 2026-10-23]
