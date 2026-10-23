@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2025/05/02 07:02:07 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/10/23 13:05:13 adam Exp $
 
-BLAKE2s (rdiff-backup-2.2.6.tar.gz) = 612262cfbcbc43ad72f3161aa7734144bafddbe7e49349e1c3c8edf3b041b9ab
-SHA512 (rdiff-backup-2.2.6.tar.gz) = 7370dcbb71f087252f8c599b0fbf58260ec7e026e023648bfab63c39b062120862ab8b60173e2bf2352e16d404bb561c72fe19aa9aed9d49cff56225b91f5c63
-Size (rdiff-backup-2.2.6.tar.gz) = 944414 bytes
+BLAKE2s (rdiff_backup-2.2.7.tar.gz) = ba9d6ce8877496ac479512acbf282d8527e6323491d1f11d108a170ccddf3e31
+SHA512 (rdiff_backup-2.2.7.tar.gz) = 822b86550ca49f4a0dde8bbcfac49152f3eb5f3554fdf8dad2311e0b4323985e75dcd1a689a93046f61a88beb6267d08f03e20cd576d7ff584bc15c9c45b9875
+Size (rdiff_backup-2.2.7.tar.gz) = 950776 bytes

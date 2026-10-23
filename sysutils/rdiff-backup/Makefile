@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2025/05/09 06:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2026/10/23 13:05:13 adam Exp $
 
-DISTNAME=	rdiff-backup-2.2.6
+DISTNAME=	rdiff_backup-2.2.7
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdiff-backup/}
 
@@ -11,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 SUBST_CLASSES+=		manpath
 SUBST_MESSAGE.manpath=	Fixing path to manpages.
