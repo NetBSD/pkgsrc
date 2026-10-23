@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/09/03 10:03:21 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/10/23 16:56:12 adam Exp $
 
-BLAKE2s (pyhanko-0.37.0.tar.gz) = c02180bcf12137f3e5a1d2870fce6aa83a469c2340acb59913543cb60f8e8bb8
-SHA512 (pyhanko-0.37.0.tar.gz) = eb200e6a6dab4329553000dabb9e8481f9add97ffedc40061a2062055259912aeaa704221846c3529c702f86e849957b37135ddc030aa517857b03615b7d436c
-Size (pyhanko-0.37.0.tar.gz) = 7988521 bytes
+BLAKE2s (pyhanko-0.38.0.tar.gz) = ef5ed0c4ebbda1bcc6711fac3974467bbee96fb639aecce27fb74fcba98ce0cd
+SHA512 (pyhanko-0.38.0.tar.gz) = 4197c8f6f548c94a3830653b73933183690eba1794a8fba6062030ae498b53e97730bbb8a27cd5dd7303a1771c48a53975eb88d90899e617ba32b3a0c6e0a8bb
+Size (pyhanko-0.38.0.tar.gz) = 8000556 bytes

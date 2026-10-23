@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/10/16 19:44:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/23 16:56:12 adam Exp $
 #
 # Changelog: https://docs.pyhanko.eu/en/latest/changelog.html#pyhanko
 
-DISTNAME=	pyhanko-0.37.0
+DISTNAME=	pyhanko-0.38.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyhanko/}
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.8.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-asn1crypto>=1.5.1:../../security/py-asn1crypto
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=48.0.0:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-hanko-certvalidator>=0.32.0:../../security/py-hanko-certvalidator
+DEPENDS+=	${PYPKGPREFIX}-hanko-certvalidator>=0.33.0:../../security/py-hanko-certvalidator
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.4.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=4.3:../../time/py-tzlocal
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.1.0:../../devel/py-freezegun

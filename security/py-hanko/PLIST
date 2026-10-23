@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2026/09/03 10:03:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/23 16:56:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -113,6 +113,9 @@ ${PYSITELIB}/pyhanko/pdf_utils/crypt/pubkey.pyo
 ${PYSITELIB}/pyhanko/pdf_utils/crypt/standard.py
 ${PYSITELIB}/pyhanko/pdf_utils/crypt/standard.pyc
 ${PYSITELIB}/pyhanko/pdf_utils/crypt/standard.pyo
+${PYSITELIB}/pyhanko/pdf_utils/decode_limits.py
+${PYSITELIB}/pyhanko/pdf_utils/decode_limits.pyc
+${PYSITELIB}/pyhanko/pdf_utils/decode_limits.pyo
 ${PYSITELIB}/pyhanko/pdf_utils/embed.py
 ${PYSITELIB}/pyhanko/pdf_utils/embed.pyc
 ${PYSITELIB}/pyhanko/pdf_utils/embed.pyo
