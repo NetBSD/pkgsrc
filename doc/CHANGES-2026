@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7198 2026/10/23 12:52:24 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7199 2026/10/23 13:06:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10800,3 +10800,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-xgboost to 3.4.1 [adam 2026-10-23]
 	Updated net/ddns-route53 to 2.16.1 [drixter 2026-10-23]
 	Updated net/bgpipe to 0.23.0 [drixter 2026-10-23]
+	Updated emulators/atari800 to 7.2.1 [adam 2026-10-23]
+	Updated sysutils/rdiff-backup to 2.2.7 [adam 2026-10-23]
