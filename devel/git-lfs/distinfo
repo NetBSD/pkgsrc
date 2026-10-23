@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2026/09/22 11:29:58 adam Exp $
+$NetBSD: distinfo,v 1.23 2026/10/23 08:26:49 adam Exp $
 
-BLAKE2s (git-lfs-3.8.0.tar.gz) = 904849ffef37913c7f6a50169584700d582ec13a1abfccc479913680389c8bfc
-SHA512 (git-lfs-3.8.0.tar.gz) = e3c9e6ac0094e3fd150112b55c3d80bdfbf89c0b73a331c69b909ce8f59a21505876055a5222d1c9bd947d5af4cba924065423e503faf25166f205b1ed12586f
-Size (git-lfs-3.8.0.tar.gz) = 747367 bytes
+BLAKE2s (git-lfs-3.8.1.tar.gz) = 50a1e7f2dce26034cf6498294fd426b36b224b717419447dc9c76453c5243a7a
+SHA512 (git-lfs-3.8.1.tar.gz) = ecc912965397e1bc8e65eed99083536298fb99b818fd6788d265f83ea9978cf5531f617c7b10f298511476e96a0d99cc551606ab09e52ba6be5b2724eacb416d
+Size (git-lfs-3.8.1.tar.gz) = 761517 bytes
 BLAKE2s (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = c21a1ebaba97d3b288d48b37ba7e87cb0872c5eaa04d535accae5c379fc492ff
 SHA512 (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = aee6f208fe93284b91980e086ddb31e4550149072fbadb81a7084ad30d39bcbeda0e497aebfb231599ea22a52c67cdf4319a8b538e6594ec2bb2892c9ce77570
 Size (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = 45 bytes
@@ -63,6 +63,12 @@ Size (github.com_golang_groupcache_@v_v0.0.0-20241129210726-2c02b8208cf8.mod) = 
 BLAKE2s (github.com_golang_groupcache_@v_v0.0.0-20241129210726-2c02b8208cf8.zip) = 016b80b4851057e2b9f7fe50f5f13b2ac7280e493d9e9e31602d2fffc077639d
 SHA512 (github.com_golang_groupcache_@v_v0.0.0-20241129210726-2c02b8208cf8.zip) = 52430a23b092ab60386fa24d00a04c66978efa1beb94c28a72a9240435bc1da3fcfb594566cb135db8c2ceae1a6d8339507451cf39a4efb727c4000e3dd3c0f3
 Size (github.com_golang_groupcache_@v_v0.0.0-20241129210726-2c02b8208cf8.zip) = 40748 bytes
+BLAKE2s (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.mod) = cd2155833aea8a3d072dc083d22ae0b3fcb4f86fad731dd5589b321d31d5a7fa
+SHA512 (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.mod) = 33a53fe7874517289a9eb9d87b62060ab4827159300acb6f933018b30fc56e3356ec3d33ee64e452137cc6c892a0c6eddeb7e6bd383be8972407c6e7568f94fa
+Size (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.mod) = 40 bytes
+BLAKE2s (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.zip) = 3e5a6a0d4f82d4e992d9b960b1f015fd1b39b4b9ba66d0fe8e1d8600a4ab4adf
+SHA512 (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.zip) = 74bf278d42859148df97c1fdefcbe962ebc583e3c567157b4e17721fd4cef5db7d24c9a76fb32a3d827e6bce6ba761181d9a2d1eca804b59f3cb792a30198906
+Size (github.com_google_shlex_@v_v0.0.0-20191202100458-e7afc7fbc510.zip) = 8977 bytes
 BLAKE2s (github.com_gorilla_securecookie_@v_v1.1.1.mod) = b82e5635de027d073a770ef9143377e397ac81769554bd3d65ddea635061058c
 SHA512 (github.com_gorilla_securecookie_@v_v1.1.1.mod) = f5596bc3919bf32ebdb9851ba6b8e5931eb88583e5129c277f6d5de4b339433ca8a180c40b1bfb44420c35cc8a01f53e4bf1cf6f0aef6f3b790590234bbebf61
 Size (github.com_gorilla_securecookie_@v_v1.1.1.mod) = 39 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2026/09/22 11:29:58 adam Exp $
+# $NetBSD: go-modules.mk,v 1.10 2026/10/23 08:26:49 adam Exp $
 
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.mod
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.zip
@@ -20,6 +20,8 @@ GO_MODULE_FILES+=	github.com/git-lfs/wildmatch/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/git-lfs/wildmatch/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/golang/groupcache/@v/v0.0.0-20241129210726-2c02b8208cf8.mod
 GO_MODULE_FILES+=	github.com/golang/groupcache/@v/v0.0.0-20241129210726-2c02b8208cf8.zip
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.mod
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.zip
 GO_MODULE_FILES+=	github.com/gorilla/securecookie/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/gorilla/sessions/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/go-uuid/@v/v1.0.2.mod
