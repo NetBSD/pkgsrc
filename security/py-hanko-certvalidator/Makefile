@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2026/10/16 19:44:12 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/23 16:55:24 adam Exp $
 #
 # Changelog: https://docs.pyhanko.eu/en/latest/changelog.html#pyhanko-certvalidator
 
-DISTNAME=	pyhanko_certvalidator-0.32.1
+DISTNAME=	pyhanko_certvalidator-0.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyhanko_certvalidator/}
