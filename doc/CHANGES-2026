@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7204 2026/10/23 15:06:05 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7205 2026/10/23 16:01:10 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10809,3 +10809,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-tlsh to 4.12.1 [ktnb 2026-10-23]
 	Updated devel/unordered-dense to 5.3.3 [ktnb 2026-10-23]
 	Updated www/chromium to 156.0.8078.47 [kikadf 2026-10-23]
+	Added devel/forgejo-runner version 13.2.0 [khorben 2026-10-23]
