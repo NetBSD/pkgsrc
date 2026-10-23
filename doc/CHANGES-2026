@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7201 2026/10/23 14:26:38 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7202 2026/10/23 14:33:03 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10806,3 +10806,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-jupyterlab-server to 2.28.1 [adam 2026-10-23]
 	Updated www/py-jupyterlab to 4.6.4 [adam 2026-10-23]
 	Updated devel/tlsh to 4.12.1 [ktnb 2026-10-23]
+	Updated devel/py-tlsh to 4.12.1 [ktnb 2026-10-23]
