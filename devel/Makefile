@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4707 2026/10/22 07:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.4708 2026/10/23 16:01:51 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -420,6 +420,7 @@ SUBDIR+=	flexdock
 SUBDIR+=	flim
 SUBDIR+=	flip-link
 SUBDIR+=	floskell
+SUBDIR+=	forgejo-runner
 SUBDIR+=	fortran-utils
 SUBDIR+=	fossil
 SUBDIR+=	fourmolu
