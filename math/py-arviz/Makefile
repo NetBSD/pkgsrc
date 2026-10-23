@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/06/28 15:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/23 12:50:35 adam Exp $
 
 DISTNAME=	arviz-0.23.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,23 +11,23 @@ COMMENT=	Exploratory analysis of Bayesian models
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-h5netcdf>=1.0.2:../../devel/py-h5netcdf
-DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-h5py>=0:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.8:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.26.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-platformdirs-[0-9]*:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-xarray>=2023.7.0:../../math/py-xarray
 DEPENDS+=	${PYPKGPREFIX}-xarray-einstats>=0.3:../../math/py-xarray-einstats
-TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0:../../converters/py-cloudpickle
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-xarray-einstats
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-xarray-einstats
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
