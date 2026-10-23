@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/10/10 01:09:05 ktnb Exp $
+$NetBSD: distinfo,v 1.5 2026/10/23 14:44:49 ktnb Exp $
 
-BLAKE2s (unordered_dense-5.3.2.tar.gz) = ad32c48f9c3dc24d60688f0093c7ee8dbd4c7ca3f220ad0dba1c4d4d8efefeea
-SHA512 (unordered_dense-5.3.2.tar.gz) = 3ef8367f6803fbe5689f22a9ca43675af33f55667ddfcc1d697083a5095a7602941eb69f74b62c7b7e7340c3bbafda75c50b982b0c1bf9907790a6f23686cc8a
-Size (unordered_dense-5.3.2.tar.gz) = 2585636 bytes
+BLAKE2s (unordered_dense-5.3.3.tar.gz) = 5d6b26b3fa523b893386e0fc0f73f9803556d58600558791f82aa1e90f63f815
+SHA512 (unordered_dense-5.3.3.tar.gz) = f805eda978ef37703dee49214ec39ed24e82df06e7101b6ef52bf9ee1d8db31a311a5abc00d703c2ba0886633eb39096a2b8a1e13cc1d70199785f9ec8f2343f
+Size (unordered_dense-5.3.3.tar.gz) = 2595523 bytes
 SHA1 (patch-test_app_doctest.h) = c807010af0906b01b07186cb2b96ed6e3978dc25
