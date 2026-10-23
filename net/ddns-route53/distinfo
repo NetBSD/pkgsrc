@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2026/10/07 10:19:14 drixter Exp $
+$NetBSD: distinfo,v 1.4 2026/10/23 12:46:39 drixter Exp $
 
-BLAKE2s (ddns-route53-2.16.0.tar.gz) = 6a7152aa70397c5c4b8e92876ecbf968ed9be8a6d8f4356dab6893546de3a306
-SHA512 (ddns-route53-2.16.0.tar.gz) = 08c2f81e884217abd8656012ee5932384a5bec119624bb5055fd139a4ca6d9838f52ff9b73f188aa267489ed773b5a6d5d353b16f410713321713f5950c478d1
-Size (ddns-route53-2.16.0.tar.gz) = 3865047 bytes
+BLAKE2s (ddns-route53-2.16.1.tar.gz) = a859e8a33ebcc8e349c205aebacd7481443faf571d4401fa52b761e8e8a338b3
+SHA512 (ddns-route53-2.16.1.tar.gz) = a5e3f05ecf447692434e9407d74cd2266c13453767e567bc31c4737c6168a27830b3d3600f0900e7e93bef329da9c1a6554c58c3ff06542fdb682fc8c02496bd
+Size (ddns-route53-2.16.1.tar.gz) = 3865310 bytes
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
 Size (github.com__burnt_sushi_toml_@v_v1.6.0.mod) = 43 bytes
