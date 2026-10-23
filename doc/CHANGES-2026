@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7194 2026/10/23 08:27:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7195 2026/10/23 08:33:54 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10795,3 +10795,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/libconfig to 1.8.3 [adam 2026-10-23]
 	Updated devel/buf to 1.75.0 [adam 2026-10-23]
 	Updated devel/git-lfs to 3.8.1 [adam 2026-10-23]
+	Updated net/knot-resolver to 6.5.1 [drixter 2026-10-23]
