@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/06/28 15:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/23 12:26:56 adam Exp $
 
-DISTNAME=	xgboost-3.3.0
+DISTNAME=	xgboost-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xgboost/}
@@ -10,16 +10,15 @@ HOMEPAGE=	https://github.com/dmlc/xgboost
 COMMENT=	XGBoost Python Package
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.12.1:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.11.0:../../devel/py-scikit-build-core
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake ninja
 GCC_REQD+=		8.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # as of 2.1.4:
 # NotImplementedError: System SunOS not supported
