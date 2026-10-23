@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2026/10/10 06:38:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2026/10/23 17:51:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -164,9 +164,9 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.11
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-1.1.4
-CARGO_CRATE_DEPENDS+=	rustls-0.23.45
+CARGO_CRATE_DEPENDS+=	rustls-0.23.46
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
@@ -231,7 +231,7 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.128
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.128
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.128
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.128
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.10
 CARGO_CRATE_DEPENDS+=	wezterm-bidi-0.2.3
 CARGO_CRATE_DEPENDS+=	wezterm-blob-leases-0.1.1
 CARGO_CRATE_DEPENDS+=	wezterm-color-types-0.3.0
