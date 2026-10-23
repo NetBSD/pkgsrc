@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7206 2026/10/23 16:57:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7207 2026/10/23 17:51:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10812,3 +10812,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/forgejo-runner version 13.2.0 [khorben 2026-10-23]
 	Updated security/py-hanko-certvalidator to 0.33.0 [adam 2026-10-23]
 	Updated security/py-hanko to 0.38.0 [adam 2026-10-23]
+	Updated sysutils/mirador to 1.22.2 [pin 2026-10-23]
