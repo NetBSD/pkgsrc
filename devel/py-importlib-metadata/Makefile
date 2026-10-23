@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/08/30 15:21:58 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/10/23 05:25:35 adam Exp $
 
-DISTNAME=	importlib_metadata-9.0.1
+DISTNAME=	importlib_metadata-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -13,9 +13,9 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-zipp>=3.20:../../archivers/py-zipp
-TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
+TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs>=0:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.4:../../devel/py-jaraco.test
-TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf>=0.9.2:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
