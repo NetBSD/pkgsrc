@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7190 2026/10/23 05:58:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7191 2026/10/23 07:58:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10782,3 +10782,9 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-s3transfer to 0.19.3 [adam 2026-10-23]
 	Updated net/py-boto3 to 1.43.118 [adam 2026-10-23]
 	Updated net/py-awscli to 1.46.2 [adam 2026-10-23]
+	Updated security/gcr4 to 4.4.1 [adam 2026-10-23]
+	Updated net/grpc to 1.84.1 [adam 2026-10-23]
+	Updated net/py-grpcio to 1.84.1 [adam 2026-10-23]
+	Updated net/py-grpcio-status to 1.84.1 [adam 2026-10-23]
+	Updated net/py-grpcio-testing to 1.84.1 [adam 2026-10-23]
+	Updated net/py-grpcio-tools to 1.84.1 [adam 2026-10-23]
