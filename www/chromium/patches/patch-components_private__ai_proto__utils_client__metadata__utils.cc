@@ -1,10 +1,10 @@
-$NetBSD: patch-components_private__ai_proto__utils_client__metadata__utils.cc,v 1.5 2026/10/16 15:30:51 kikadf Exp $
+$NetBSD: patch-components_private__ai_proto__utils_client__metadata__utils.cc,v 1.6 2026/10/23 15:05:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/private_ai/proto_utils/client_metadata_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/private_ai/proto_utils/client_metadata_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/private_ai/proto_utils/client_metadata_utils.cc
 @@ -41,7 +41,7 @@ proto::ChromeClientMetadata::Platform Ge
    return proto::ChromeClientMetadata::PLATFORM_ANDROID;

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_ntp__tiles_pref__names.h,v 1.23 2026/10/16 15:30:51 kikadf Exp $
+$NetBSD: patch-components_ntp__tiles_pref__names.h,v 1.24 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/ntp_tiles/pref_names.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/ntp_tiles/pref_names.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/ntp_tiles/pref_names.h
-@@ -57,7 +57,7 @@ inline constexpr char kCustomLinksInitia
+@@ -49,7 +49,7 @@ inline constexpr char kCustomLinksInitia
  
  // Prefs used to cache enterprise shortcuts.
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_web__package_signed__web__bundles_signed__web__bundle__signature__verifier.cc,v 1.4 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-components_web__package_signed__web__bundles_signed__web__bundle__signature__verifier.cc,v 1.5 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/web_package/signed_web_bundles/signed_web_bundle_signature_verifier.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/web_package/signed_web_bundles/signed_web_bundle_signature_verifier.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/web_package/signed_web_bundles/signed_web_bundle_signature_verifier.cc
 @@ -20,14 +20,17 @@
  #include "base/task/thread_pool.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_web__package_signed__web__bundles_integrity__block__parser.cc,v 1.4 2026/10/16 15:30:52 kikadf Exp $
+$NetBSD: patch-components_web__package_signed__web__bundles_integrity__block__parser.cc,v 1.5 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/web_package/signed_web_bundles/integrity_block_parser.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/web_package/signed_web_bundles/integrity_block_parser.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/web_package/signed_web_bundles/integrity_block_parser.cc
 @@ -4,17 +4,19 @@
  

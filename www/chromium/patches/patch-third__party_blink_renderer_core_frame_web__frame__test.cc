@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_frame_web__frame__test.cc,v 1.30 2026/10/16 15:30:59 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_frame_web__frame__test.cc,v 1.31 2026/10/23 15:05:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/core/frame/web_frame_test.cc
-@@ -6722,7 +6722,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo
+@@ -6837,7 +6837,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo
  }
  
  #if BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_core_frame_web__frame__test.cc,v 1.30
  // TODO(crbug.com/1090246): Fix these tests on Fuchsia and re-enable.
  // TODO(crbug.com/1317375): Build these tests on all platforms.
  #define MAYBE_SelectRangeStaysHorizontallyAlignedWhenMoved \
-@@ -7132,7 +7132,7 @@ TEST_F(CompositedSelectionBoundsTest, La
+@@ -7247,7 +7247,7 @@ TEST_F(CompositedSelectionBoundsTest, La
  TEST_F(CompositedSelectionBoundsTest, LargeSelectionNoScroll) {
    RunTest("composited_selection_bounds_large_selection_noscroll.html");
  }

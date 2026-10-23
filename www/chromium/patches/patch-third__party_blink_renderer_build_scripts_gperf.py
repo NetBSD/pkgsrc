@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_build_scripts_gperf.py,v 1.30 2026/10/16 15:30:59 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_build_scripts_gperf.py,v 1.31 2026/10/23 15:05:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/build/scripts/gperf.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/build/scripts/gperf.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/build/scripts/gperf.py
 @@ -28,27 +28,6 @@ def generate_gperf(gperf_path, gperf_inp
              stdout=subprocess.PIPE,

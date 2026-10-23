@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_dawn_tools_generate-sources-gn.py,v 1.7 2026/10/16 15:31:00 kikadf Exp $
+$NetBSD: patch-third__party_dawn_tools_generate-sources-gn.py,v 1.8 2026/10/23 15:05:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/tools/generate-sources-gn.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/dawn/tools/generate-sources-gn.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/dawn/tools/generate-sources-gn.py
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env vpython3

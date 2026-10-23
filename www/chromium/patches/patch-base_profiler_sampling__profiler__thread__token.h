@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_sampling__profiler__thread__token.h,v 1.30 2026/10/16 15:30:42 kikadf Exp $
+$NetBSD: patch-base_profiler_sampling__profiler__thread__token.h,v 1.31 2026/10/23 15:05:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/sampling_profiler_thread_token.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/profiler/sampling_profiler_thread_token.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/profiler/sampling_profiler_thread_token.h
 @@ -13,7 +13,7 @@
  
@@ -13,9 +13,9 @@ $NetBSD: patch-base_profiler_sampling__profiler__thread__token.h,v 1.30 2026/10/
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include <stdint.h>
- #endif
- 
-@@ -27,7 +27,7 @@ struct SamplingProfilerThreadToken {
+ #elif BUILDFLAG(IS_WIN)
+ #include <stdint.h>
+@@ -35,7 +35,7 @@ struct BASE_EXPORT SamplingProfilerThrea
    PlatformThreadId id;
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_APPLE)
    pthread_t pthread_id;

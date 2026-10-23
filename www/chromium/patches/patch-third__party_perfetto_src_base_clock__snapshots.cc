@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_clock__snapshots.cc,v 1.30 2026/10/16 15:31:00 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_clock__snapshots.cc,v 1.31 2026/10/23 15:05:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/clock_snapshots.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/perfetto/src/base/clock_snapshots.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/perfetto/src/base/clock_snapshots.cc
 @@ -27,6 +27,8 @@ ClockSnapshotVector CaptureClockSnapshot
  #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) &&   \

@@ -1,12 +1,12 @@
-$NetBSD: patch-.gn,v 1.7 2026/10/16 15:30:41 kikadf Exp $
+$NetBSD: patch-.gn,v 1.8 2026/10/23 15:05:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- .gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- .gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ .gn
-@@ -9,7 +9,7 @@ import("//third_party/angle/dotfile_sett
+@@ -11,7 +11,7 @@ import("//third_party/angle/dotfile_sett
  buildconfig = "//build/config/BUILDCONFIG.gn"
  
  # The hermetic Python interpreter to use by default.

@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_signaling_ftl__host__device__id__provider.cc,v 1.29 2026/10/16 15:30:57 kikadf Exp $
+$NetBSD: patch-remoting_signaling_ftl__host__device__id__provider.cc,v 1.30 2026/10/23 15:05:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/signaling/ftl_host_device_id_provider.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/signaling/ftl_host_device_id_provider.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/signaling/ftl_host_device_id_provider.cc
 @@ -16,7 +16,7 @@ constexpr char kDeviceIdPrefix[] = "crd-
  constexpr char kDeviceIdPrefix[] = "crd-mac-host-";

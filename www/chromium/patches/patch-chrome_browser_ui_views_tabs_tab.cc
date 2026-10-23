@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_tab.cc,v 1.30 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_tab.cc,v 1.31 2026/10/23 15:05:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/tabs/tab.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/tabs/tab.cc
-@@ -1484,7 +1484,7 @@ void Tab::MaybeUpdateHoverStatus(const u
+@@ -1503,7 +1503,7 @@ void Tab::MaybeUpdateHoverStatus(const u
      return;
    }
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.30 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.31 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
-@@ -81,7 +81,7 @@
+@@ -82,7 +82,7 @@
  #include "chrome/browser/ui/managed_ui.h"  // nogncheck crbug.com/40147906
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
  #include "components/device_signals/core/browser/user_permission_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -205,7 +205,7 @@ void AddThreatProtectionPermission(const
+@@ -206,7 +206,7 @@ void AddThreatProtectionPermission(const
  }
  
  bool IsSaasReportingEnabled(content::WebUI* web_ui) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
    return !Profile::FromWebUI(web_ui)
                ->GetPrefs()
                ->GetList(enterprise_reporting::kSaasUsageDomainUrlsForProfile)
-@@ -409,7 +409,7 @@ void ManagementUIHandler::AddBrowserRepo
+@@ -410,7 +410,7 @@ void ManagementUIHandler::AddBrowserRepo
      report_sources->Append(std::move(data));
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
    auto device_signal_data = GetDeviceSignalGrantedMessage();
    if (!device_signal_data.empty()) {
      report_sources->Append(std::move(device_signal_data));
-@@ -444,7 +444,7 @@ void ManagementUIHandler::AddProfileRepo
+@@ -445,7 +445,7 @@ void ManagementUIHandler::AddProfileRepo
      report_sources->Append(std::move(data));
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
    auto device_signal_data = GetDeviceSignalGrantedMessage();
    if (!device_signal_data.empty()) {
      report_sources->Append(std::move(device_signal_data));
-@@ -632,7 +632,7 @@ policy::PolicyService* ManagementUIHandl
+@@ -637,7 +637,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

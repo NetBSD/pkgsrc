@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_test_ui__controls__factory__desktop__aura__ozone.cc,v 1.30 2026/10/16 15:31:03 kikadf Exp $
+$NetBSD: patch-ui_views_test_ui__controls__factory__desktop__aura__ozone.cc,v 1.31 2026/10/23 15:05:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/views/test/ui_controls_factory_desktop_aura_ozone.cc
 @@ -241,7 +241,7 @@ bool SendMouseClick(MouseButton type, gf
                           window_hint);

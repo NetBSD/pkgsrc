@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_android__utils.cc,v 1.15 2026/10/16 15:31:00 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_android__utils.cc,v 1.16 2026/10/23 15:05:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/android_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/perfetto/src/base/android_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/perfetto/src/base/android_utils.cc
 @@ -38,8 +38,11 @@
  #include <unistd.h>

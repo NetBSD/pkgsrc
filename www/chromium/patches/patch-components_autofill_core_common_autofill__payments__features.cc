@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.30 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.31 2026/10/23 15:05:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -38,7 +38,7 @@ BASE_FEATURE(kAutofillDisableBnplCountry
  // page using server-side AI.
@@ -78,7 +78,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -189,7 +189,7 @@ BASE_FEATURE(kAutofillEnableFlatRateCard
+@@ -195,7 +195,7 @@ BASE_FEATURE(kAutofillEnableFlatRateCard
  // Payments Autofill UI.
  BASE_FEATURE(kAutofillEnableFlatRateCardBenefitsFromCurinos,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -87,7 +87,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -281,7 +281,7 @@ BASE_FEATURE(kAutofillEnableTravelCatego
+@@ -282,7 +282,7 @@ BASE_FEATURE(kAutofillEnableTravelCatego
  // the card, and FIDO is not.
  BASE_FEATURE(kAutofillEnableVcn3dsAuthentication,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -96,7 +96,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -349,7 +349,7 @@ BASE_FEATURE(kAutofillParseLegalMessageL
+@@ -350,7 +350,7 @@ BASE_FEATURE(kAutofillParseLegalMessageL
  // eligibility.
  BASE_FEATURE(kAutofillPreferBuyNowPayLaterBlocklists,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -105,7 +105,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -406,7 +406,7 @@ const base::FeatureParam<int> kAutofillU
+@@ -404,7 +404,7 @@ const base::FeatureParam<int> kAutofillU
      "autofill_upstream_enforce_strike_delay_days", 1};
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

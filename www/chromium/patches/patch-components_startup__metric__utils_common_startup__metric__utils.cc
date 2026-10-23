@@ -1,10 +1,10 @@
-$NetBSD: patch-components_startup__metric__utils_common_startup__metric__utils.cc,v 1.30 2026/10/16 15:30:52 kikadf Exp $
+$NetBSD: patch-components_startup__metric__utils_common_startup__metric__utils.cc,v 1.31 2026/10/23 15:05:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/startup_metric_utils/common/startup_metric_utils.cc
 @@ -99,7 +99,7 @@ base::TimeTicks CommonStartupMetricRecor
    // Enabling this logic on OS X causes a significant performance regression.

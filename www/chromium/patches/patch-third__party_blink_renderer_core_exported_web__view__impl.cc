@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.30 2026/10/16 15:30:59 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.31 2026/10/23 15:05:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -197,7 +197,7 @@
  #include "ui/gfx/geometry/skia_conversions.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
  void UpdateUseOverlayScrollbar(bool use_overlay_scrollbar) {
    ui::NativeTheme::GetInstanceForWeb()->set_use_overlay_scrollbar(
        use_overlay_scrollbar);
-@@ -3712,7 +3712,7 @@ void WebViewImpl::UpdateFontRenderingFro
+@@ -3721,7 +3721,7 @@ void WebViewImpl::UpdateFontRenderingFro
        gfx::FontRenderParams::SUBPIXEL_RENDERING_NONE);
    WebFontRenderStyle::SetSubpixelPositioning(
        renderer_preferences_.use_subpixel_positioning);
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
    if (!renderer_preferences_.system_font_family_name.empty()) {
      WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUtf8(
          renderer_preferences_.system_font_family_name));
-@@ -3856,7 +3856,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3865,7 +3865,7 @@ void WebViewImpl::UpdateRendererPreferen
        renderer_preferences_.selection_clipboard_buffer_available);
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_blink_renderer_core_exported_web__view__impl.cc,v 1.
    GetSettings()->SetMiddleClickPasteAllowed(
        renderer_preferences_.middle_click_paste_allowed);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -3865,7 +3865,7 @@ void WebViewImpl::UpdateRendererPreferen
+@@ -3874,7 +3874,7 @@ void WebViewImpl::UpdateRendererPreferen
        renderer_preferences_.explicitly_allowed_network_ports);
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_toasts_toast__service.cc,v 1.2 2026/10/16 15:30:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toasts_toast__service.cc,v 1.3 2026/10/23 15:05:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toasts/toast_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/toasts/toast_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/toasts/toast_service.cc
-@@ -152,7 +152,7 @@ void ToastService::RegisterToasts(
+@@ -144,7 +144,7 @@ void ToastService::RegisterToasts(
                                    IDS_CLEAR_BROWSING_DATA_TOAST_BODY)
            .Build());
  

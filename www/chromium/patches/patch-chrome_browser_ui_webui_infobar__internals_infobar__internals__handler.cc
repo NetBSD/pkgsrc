@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.17 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__handler.cc,v 1.18 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/infobar_internals/infobar_internals_handler.cc
-@@ -89,7 +89,7 @@
+@@ -93,7 +93,7 @@
  #include "chrome/browser/ui/cocoa/keystone_infobar_delegate.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
  #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_manager.h"  // nogncheck
  #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_prefs.h"  // nogncheck
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_manager.h"
-@@ -140,7 +140,7 @@ TriggerRequirements RequirementsFor(Info
+@@ -149,7 +149,7 @@ TriggerRequirements RequirementsFor(Info
        return {.profile = true, .web_contents = true};
  #endif
      case InfoBarType::kExtensionDevTools:
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
      case InfoBarType::kDefaultBrowser:
      case InfoBarType::kEnableLinkCapturing:
      case InfoBarType::kSessionRestore:
-@@ -203,7 +203,7 @@ void InfoBarInternalsHandler::GetInfoBar
+@@ -244,7 +244,7 @@ void InfoBarInternalsHandler::GetInfoBar
              "The Collected Cookies infobar is shown after the user has changed "
              "the allowed/blocked state of a cookie, reminding them to reload "
              "the page in order for the new cookies to take effect.");
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
    add_entry(InfoBarType::kDefaultBrowser, "Default Browser",
              "The Default Browser infobar asks the user if they want to set "
              "Chrome as their default browser. This trigger resets any browser "
-@@ -221,7 +221,7 @@ void InfoBarInternalsHandler::GetInfoBar
+@@ -262,7 +262,7 @@ void InfoBarInternalsHandler::GetInfoBar
              "process-per-site disabled. This trigger shows the infobar on the "
              "active tab.");
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
    add_entry(InfoBarType::kEnableLinkCapturing, "Enable Link Capturing",
              "The Enable Link Capturing infobar asks the user if they want to "
              "open supported links in an installed web app. This trigger "
-@@ -287,7 +287,7 @@ void InfoBarInternalsHandler::GetInfoBar
+@@ -331,7 +331,7 @@ void InfoBarInternalsHandler::GetInfoBar
              "This can only be triggered on Windows or Mac.");
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
    add_entry(InfoBarType::kSessionRestore, "Session Restore",
              "Triggers the session restore infobar. This infobar can only be "
              "triggered on Mac, Windows and Linux.");
-@@ -370,7 +370,7 @@ bool InfoBarInternalsHandler::TriggerInf
+@@ -461,7 +461,7 @@ bool InfoBarInternalsHandler::PerformInf
        }
        return true;
      }
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
      case InfoBarType::kDefaultBrowser: {
        chrome::startup::default_prompt::ResetPromptPrefs(profile);
        DefaultBrowserPromptManager::GetInstance()->MaybeShowPrompt();
-@@ -401,7 +401,7 @@ bool InfoBarInternalsHandler::TriggerInf
+@@ -492,7 +492,7 @@ bool InfoBarInternalsHandler::PerformInf
                   std::make_unique<ProcessSharingInfobarDelegate>(
                       web_contents))) != nullptr;
      }
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_webui_infobar__internals_infobar__internals__ha
      case InfoBarType::kEnableLinkCapturing: {
        if (!infobars::IsInfoBarMigrated(
                infobars::InfoBarDelegate::
-@@ -704,7 +704,7 @@ bool InfoBarInternalsHandler::TriggerInf
+@@ -795,7 +795,7 @@ bool InfoBarInternalsHandler::PerformInf
      }
  #endif
  

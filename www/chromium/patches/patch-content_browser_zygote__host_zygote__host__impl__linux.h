@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.h,v 1.30 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.h,v 1.31 2026/10/23 15:05:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.h
-@@ -50,12 +50,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
+@@ -51,12 +51,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
        base::ScopedFD* control_fd,
        base::FileHandleMappingVector additional_remapped_fds);
  
@@ -21,7 +21,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.h,v 1.30 2
  
    bool HasZygote() { return has_zygote_; }
  
-@@ -76,9 +78,11 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
+@@ -77,9 +79,11 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
    // other threads are created.
    bool has_zygote_ = false;
  
@@ -32,4 +32,4 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.h,v 1.30 2
 +#endif
    std::string sandbox_binary_;
  
-   // This lock protects the |zygote_pids_| set.
+   base::Lock zygote_pids_lock_;

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_webauthn_chrome__web__authentication__delegate.cc,v 1.12 2026/10/16 15:30:49 kikadf Exp $
+$NetBSD: patch-chrome_browser_webauthn_chrome__web__authentication__delegate.cc,v 1.13 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/webauthn/chrome_web_authentication_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/webauthn/chrome_web_authentication_delegate.cc
 @@ -70,7 +70,7 @@
  #include "url/url_constants.h"

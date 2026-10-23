@@ -1,10 +1,10 @@
-$NetBSD: patch-build_modules_unified_modulemap__config.py,v 1.9 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-build_modules_unified_modulemap__config.py,v 1.10 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/modules/unified/modulemap_config.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- build/modules/unified/modulemap_config.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ build/modules/unified/modulemap_config.py
 @@ -62,7 +62,7 @@ class AllowedHeader(Header):
  

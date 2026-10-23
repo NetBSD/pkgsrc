@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_list__family__members__service.h,v 1.29 2026/10/16 15:30:52 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_list__family__members__service.h,v 1.30 2026/10/23 15:05:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/list_family_members_service.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/supervised_user/core/browser/list_family_members_service.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/supervised_user/core/browser/list_family_members_service.h
 @@ -31,7 +31,7 @@ namespace supervised_user {
  // If true, this fetcher is active for all users with CanFetchFamilyMemberInfo

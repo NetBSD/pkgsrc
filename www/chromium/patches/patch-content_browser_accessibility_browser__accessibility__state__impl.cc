@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl.cc,v 1.29 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl.cc,v 1.30 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl.cc
 @@ -295,7 +295,7 @@ BrowserAccessibilityStateImpl* BrowserAc
  

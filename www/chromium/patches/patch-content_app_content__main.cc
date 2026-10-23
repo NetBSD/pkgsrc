@@ -1,10 +1,10 @@
-$NetBSD: patch-content_app_content__main.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_app_content__main.cc,v 1.31 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/app/content_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/app/content_main.cc
 @@ -212,7 +212,7 @@ NO_STACK_PROTECTOR int RunContentProcess
      base::EnableTerminationOnOutOfMemory();

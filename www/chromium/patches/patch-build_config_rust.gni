@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_rust.gni,v 1.30 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-build_config_rust.gni,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2026-10-14 21:09:54.000000000 +0000
+--- build/config/rust.gni.orig	2026-10-19 20:07:21.000000000 +0000
 +++ build/config/rust.gni
 @@ -67,7 +67,8 @@ declare_args() {
    # set this to the output of `rustc -V`. Changing this string will cause all
@@ -16,7 +16,7 @@ $NetBSD: patch-build_config_rust.gni,v 1.30 2026/10/16 15:30:43 kikadf Exp $
  
    # Whether artifacts produced by the Rust compiler can participate in ThinLTO.
    #
-@@ -168,6 +169,24 @@ if (enable_rust) {
+@@ -169,6 +170,24 @@ if (enable_rust) {
    } else {
      toolchain_has_rust = custom_toolchain_supports_platform
      rustc_revision = rustc_version
@@ -41,7 +41,7 @@ $NetBSD: patch-build_config_rust.gni,v 1.30 2026/10/16 15:30:43 kikadf Exp $
    }
  }
  
-@@ -203,7 +222,7 @@ if (is_linux || is_chromeos) {
+@@ -204,7 +223,7 @@ if (is_linux || is_chromeos) {
    if (current_cpu == "arm64") {
      rust_abi_target = "aarch64-unknown-linux-gnu"
    } else if (current_cpu == "x86") {
@@ -50,7 +50,7 @@ $NetBSD: patch-build_config_rust.gni,v 1.30 2026/10/16 15:30:43 kikadf Exp $
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
    } else if (current_cpu == "arm") {
-@@ -343,7 +362,11 @@ if (is_linux || is_chromeos) {
+@@ -344,7 +363,11 @@ if (is_linux || is_chromeos) {
    }
  }
  

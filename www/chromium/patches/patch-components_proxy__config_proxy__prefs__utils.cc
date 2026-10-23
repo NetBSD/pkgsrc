@@ -1,10 +1,10 @@
-$NetBSD: patch-components_proxy__config_proxy__prefs__utils.cc,v 1.16 2026/10/16 15:30:52 kikadf Exp $
+$NetBSD: patch-components_proxy__config_proxy__prefs__utils.cc,v 1.17 2026/10/23 15:05:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/proxy_config/proxy_prefs_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/proxy_config/proxy_prefs_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/proxy_config/proxy_prefs_utils.cc
 @@ -64,7 +64,7 @@ net::ProxyChain ProxyOverrideRuleProxyFr
  bool ProxyOverrideRulesAllowed(const PrefService* pref_service,

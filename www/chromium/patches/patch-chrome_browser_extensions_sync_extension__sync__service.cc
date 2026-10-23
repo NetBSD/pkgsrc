@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_sync_extension__sync__service.cc,v 1.20 2026/10/16 15:30:45 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_sync_extension__sync__service.cc,v 1.21 2026/10/23 15:05:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/sync/extension_sync_service.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/extensions/sync/extension_sync_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/extensions/sync/extension_sync_service.cc
 @@ -638,7 +638,7 @@ void ExtensionSyncService::ApplySyncData
      AccountExtensionTracker::Get(profile_)->OnExtensionSyncDataReceived(id);

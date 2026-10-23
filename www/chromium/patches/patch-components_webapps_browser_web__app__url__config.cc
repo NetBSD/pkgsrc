@@ -1,10 +1,10 @@
-$NetBSD: patch-components_webapps_browser_web__app__url__config.cc,v 1.12 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-components_webapps_browser_web__app__url__config.cc,v 1.13 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/webapps/browser/web_app_url_config.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/webapps/browser/web_app_url_config.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/webapps/browser/web_app_url_config.cc
 @@ -35,7 +35,7 @@ bool IsUrlEligibleForWebApp(const GURL& 
    }

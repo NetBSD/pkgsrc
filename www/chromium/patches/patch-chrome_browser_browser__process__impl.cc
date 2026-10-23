@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.30 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -271,7 +271,7 @@ void OnLocalStatePrefsLoaded();
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.30 2026/10/16 15:30:
  // How often to check if the persistent instance of Chrome needs to restart
  // to install an update.
  static const int kUpdateCheckIntervalHours = 6;
-@@ -1372,7 +1372,7 @@ void BrowserProcessImpl::RegisterPrefs(P
+@@ -1359,7 +1359,7 @@ void BrowserProcessImpl::RegisterPrefs(P
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingAllowed, true);
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingEnabled, false);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.30 2026/10/16 15:30:
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1632,7 +1632,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1619,7 +1619,7 @@ void BrowserProcessImpl::PreMainMessageL
            local_state(), /*force_protection_level=*/std::nullopt)));
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.30 2026/10/16 15:30:
    base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    const auto password_store =
        cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore);
-@@ -1975,7 +1975,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1962,7 +1962,7 @@ void BrowserProcessImpl::Unpin() {
  }
  
  // Mac is currently not supported.

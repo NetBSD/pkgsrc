@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gtk_select__file__dialog__linux__gtk.cc,v 1.14 2026/10/16 15:31:03 kikadf Exp $
+$NetBSD: patch-ui_gtk_select__file__dialog__linux__gtk.cc,v 1.15 2026/10/23 15:05:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/select_file_dialog_linux_gtk.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/gtk/select_file_dialog_linux_gtk.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/gtk/select_file_dialog_linux_gtk.cc
 @@ -57,7 +57,8 @@ namespace {
  // GTK_RESPONSE_ACCEPT as the default button, which should be avoided to prevent

@@ -1,12 +1,12 @@
-$NetBSD: patch-tools_typescript_ts__library.py,v 1.5 2026/10/16 15:31:02 kikadf Exp $
+$NetBSD: patch-tools_typescript_ts__library.py,v 1.6 2026/10/23 15:05:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/typescript/ts_library.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- tools/typescript/ts_library.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ tools/typescript/ts_library.py
-@@ -366,8 +366,8 @@ def main(argv):
+@@ -341,8 +341,8 @@ def main(argv):
    list_valid, error_msg = validateDefinitionDeps(
      definitions_files, target_path, args.gen_dir, args.root_gen_dir, definitions
    )

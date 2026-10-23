@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_new__tab__page_new__tab__page__handler.cc,v 1.4 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_new__tab__page_new__tab__page__handler.cc,v 1.5 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc
 @@ -61,7 +61,7 @@
  #include "chrome/browser/ui/hats/hats_service_factory.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_new__tab__page_new__tab__page__handler.cc
  #include "chrome/browser/ui/views/scheduled_restart/scheduled_restart_bubble_controller.h"
  #endif
  #include "chrome/browser/ui/webui/new_tab_footer/new_tab_footer_helper.h"
-@@ -562,7 +562,7 @@ NewTabPageHandler::NewTabPageHandler(
+@@ -544,7 +544,7 @@ NewTabPageHandler::NewTabPageHandler(
    }
  #endif  // !BUILDFLAG(IS_ANDROID)
  

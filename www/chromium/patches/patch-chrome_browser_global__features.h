@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.h,v 1.31 2026/10/23 15:05:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/global_features.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/global_features.h
 @@ -26,7 +26,7 @@ class GlobalBrowserCollection;
  namespace system_permission_settings {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
  namespace whats_new {
  class WhatsNewRegistry;
  }  // namespace whats_new
-@@ -87,7 +87,7 @@ namespace on_device_translation {
+@@ -90,7 +90,7 @@ namespace on_device_translation {
  class OnDeviceTranslationInstaller;
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
  namespace scheduled_restart {
  class ScheduledRestartBubbleController;
  class ScheduledRestartManager;
-@@ -164,7 +164,7 @@ class GlobalFeatures {
+@@ -167,7 +167,7 @@ class GlobalFeatures {
    system_permissions_platform_handle() {
      return system_permissions_platform_handle_.get();
    }
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
    whats_new::WhatsNewRegistry* whats_new_registry() {
      return whats_new_registry_.get();
    }
-@@ -233,7 +233,7 @@ class GlobalFeatures {
+@@ -240,7 +240,7 @@ class GlobalFeatures {
    }
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
    scheduled_restart::ScheduledRestartBubbleController*
    scheduled_restart_bubble_controller() {
      return scheduled_restart_bubble_controller_.get();
-@@ -263,12 +263,12 @@ class GlobalFeatures {
+@@ -270,12 +270,12 @@ class GlobalFeatures {
  
    virtual std::unique_ptr<system_permission_settings::PlatformHandle>
    CreateSystemPermissionsPlatformHandle();
@@ -57,7 +57,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
    virtual std::unique_ptr<scheduled_restart::ScheduledRestartManager>
    CreateScheduledRestartManager();
  #endif
-@@ -287,7 +287,7 @@ class GlobalFeatures {
+@@ -294,7 +294,7 @@ class GlobalFeatures {
  
    std::unique_ptr<system_permission_settings::PlatformHandle>
        system_permissions_platform_handle_;
@@ -66,7 +66,7 @@ $NetBSD: patch-chrome_browser_global__features.h,v 1.30 2026/10/16 15:30:45 kika
    std::unique_ptr<whats_new::WhatsNewRegistry> whats_new_registry_;
  
    std::unique_ptr<default_browser::DefaultBrowserManager>
-@@ -350,7 +350,7 @@ class GlobalFeatures {
+@@ -359,7 +359,7 @@ class GlobalFeatures {
    std::unique_ptr<smart_restart::SmartRestartManager> smart_restart_manager_;
  #endif  // !BUILDFLAG(IS_ANDROID)
  

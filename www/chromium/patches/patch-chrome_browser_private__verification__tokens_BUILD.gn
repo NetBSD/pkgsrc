@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_private__verification__tokens_BUILD.gn,v 1.4 2026/10/16 15:30:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_private__verification__tokens_BUILD.gn,v 1.5 2026/10/23 15:05:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/private_verification_tokens/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/private_verification_tokens/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/private_verification_tokens/BUILD.gn
-@@ -26,7 +26,7 @@ static_library("private_verification_tok
+@@ -28,7 +28,7 @@ static_library("private_verification_tok
      "//chrome/browser/profiles:profile",
      "//components/content_settings/core/browser",
      "//components/keyed_service/core",
@@ -14,8 +14,8 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_BUILD.gn,v 1.4 2026/
 +    # XXX crubit "//components/private_verification_tokens/common:privacy_pass_athm_batch_request",
      "//components/private_verification_tokens/common:private_verification_tokens_fetcher",
      "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
-     "//components/private_verification_tokens/common:private_verification_tokens_parameters",
-@@ -52,7 +52,6 @@ source_set("browser_tests") {
+     "//components/private_verification_tokens/common:private_verification_tokens_metrics",
+@@ -56,7 +56,6 @@ source_set("browser_tests") {
      "//components/private_verification_tokens/common:private_verification_tokens_database",
      "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
      "//components/private_verification_tokens/common:test_support",
@@ -23,8 +23,15 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_BUILD.gn,v 1.4 2026/
      "//net:test_support",
      "//services/network:test_support",
      "//url",
-@@ -77,7 +76,6 @@ source_set("unit_tests") {
+@@ -77,13 +76,12 @@ source_set("unit_tests") {
+     "//chrome/test:test_support",
+     "//components/content_settings/core/browser",
+     "//components/content_settings/core/common",
+-    "//components/private_verification_tokens/common:privacy_pass_athm_batch_request",
++#    "//components/private_verification_tokens/common:privacy_pass_athm_batch_request",
+     "//components/private_verification_tokens/common:private_verification_tokens_database",
      "//components/private_verification_tokens/common:private_verification_tokens_issuer_config",
+     "//components/private_verification_tokens/common:private_verification_tokens_metrics",
      "//components/private_verification_tokens/common:private_verification_tokens_parameters",
      "//components/private_verification_tokens/common:test_support",
 -    "//components/private_verification_tokens/common/athm_ffi:athm_ffi_bindings",

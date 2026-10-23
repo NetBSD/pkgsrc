@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 1.30 2026/10/16 15:30:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 1.31 2026/10/23 15:05:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
-@@ -2311,7 +2311,7 @@ void ChromeDownloadManagerDelegate::OnDo
+@@ -2312,7 +2312,7 @@ void ChromeDownloadManagerDelegate::OnDo
  bool ChromeDownloadManagerDelegate::IsOpenInBrowserPreferredForFile(
      const base::FilePath& path) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_download_chrome__download__manager__delegate.cc,v 
    if (path.MatchesExtension(FILE_PATH_LITERAL(".pdf"))) {
      return !download_prefs_->ShouldOpenPdfInSystemReader();
    }
-@@ -2448,7 +2448,7 @@ void ChromeDownloadManagerDelegate::Chec
+@@ -2449,7 +2449,7 @@ void ChromeDownloadManagerDelegate::Chec
      content::CheckDownloadAllowedCallback check_download_allowed_cb) {
    DCHECK_CURRENTLY_ON(BrowserThread::UI);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

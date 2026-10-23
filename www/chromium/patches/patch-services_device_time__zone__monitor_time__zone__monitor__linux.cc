@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_time__zone__monitor_time__zone__monitor__linux.cc,v 1.30 2026/10/16 15:30:58 kikadf Exp $
+$NetBSD: patch-services_device_time__zone__monitor_time__zone__monitor__linux.cc,v 1.31 2026/10/23 15:05:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
 @@ -132,9 +132,12 @@ class TimeZoneMonitorLinuxImpl
      // false positives are harmless, assuming the false positive rate is

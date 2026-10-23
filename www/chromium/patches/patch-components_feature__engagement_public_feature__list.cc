@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.30 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.31 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -253,7 +253,7 @@ const base::Feature* const kAllFeatures[
+@@ -250,7 +250,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.30 202
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -350,7 +350,7 @@ const base::Feature* const kAllFeatures[
+@@ -347,7 +347,7 @@ const base::Feature* const kAllFeatures[
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.30 202
      // keep-sorted start case=no
      &kIPHAutofillAccountNameEmailSuggestionFeature,
      &kIPHAutofillAiValuablesFeature,
-@@ -383,7 +383,7 @@ const base::Feature* const kAllFeatures[
+@@ -380,7 +380,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.30 202
      // keep-sorted start case=no
      &kIPHDesktopPWAsLinkCapturingLaunch,
      &kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -395,7 +395,7 @@ const base::Feature* const kAllFeatures[
+@@ -392,7 +392,7 @@ const base::Feature* const kAllFeatures[
      &kIPHExtensionsPinnedByDefaultFeature,
  #endif  // BUILDFLAG(ENABLE_EXTENSIONS_CORE)
  

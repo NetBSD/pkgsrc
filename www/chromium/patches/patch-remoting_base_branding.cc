@@ -1,13 +1,13 @@
-$NetBSD: patch-remoting_base_branding.cc,v 1.14 2026/10/16 15:30:57 kikadf Exp $
+$NetBSD: patch-remoting_base_branding.cc,v 1.15 2026/10/23 15:05:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/branding.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/base/branding.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/base/branding.cc
-@@ -10,7 +10,7 @@
- #include "base/path_service.h"
+@@ -11,7 +11,7 @@
+ #include "build/branding_buildflags.h"
  #include "build/build_config.h"
  
 -#if BUILDFLAG(IS_LINUX)
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_base_branding.cc,v 1.14 2026/10/16 15:30:57 kikadf Exp $
  #include <unistd.h>
  
  #include "remoting/base/file_path_util_linux.h"
-@@ -34,12 +34,12 @@ const base::FilePath::CharType kConfigDi
+@@ -35,12 +35,12 @@ const base::FilePath::CharType kConfigDi
  #elif BUILDFLAG(IS_APPLE)
  const base::FilePath::CharType kConfigDir[] =
      FILE_PATH_LITERAL("Chrome Remote Desktop");
@@ -30,8 +30,8 @@ $NetBSD: patch-remoting_base_branding.cc,v 1.14 2026/10/16 15:30:57 kikadf Exp $
  base::FilePath GetConfigDirWithPrefix(int prefix_path_key) {
    base::FilePath app_data_dir;
    base::PathService::Get(prefix_path_key, &app_data_dir);
-@@ -60,7 +60,7 @@ const wchar_t kWindowsServiceName[] = L"
- #endif
+@@ -74,7 +74,7 @@ const wchar_t kHostUpdatePendingEventNam
+ #endif  // BUILDFLAG(IS_WIN)
  
  base::FilePath GetConfigDir() {
 -#if BUILDFLAG(IS_LINUX)

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_horizontal__tab__strip__region__view.cc,v 1.12 2026/10/16 15:30:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_horizontal__tab__strip__region__view.cc,v 1.13 2026/10/23 15:05:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.cc
-@@ -247,7 +247,7 @@ HorizontalTabStripRegionViewOld::Horizon
+@@ -245,7 +245,7 @@ HorizontalTabStripRegionViewOld::Horizon
      new_tab_button_->GetViewAccessibility().SetName(
          l10n_util::GetStringUTF16(IDS_ACCNAME_NEWTAB));
  

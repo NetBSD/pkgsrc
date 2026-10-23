@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_hang__watcher.cc,v 1.14 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-base_threading_hang__watcher.cc,v 1.15 2026/10/23 15:05:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/hang_watcher.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/threading/hang_watcher.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/threading/hang_watcher.cc
 @@ -236,7 +236,7 @@ bool ThreadTypeLoggingLevelGreaterOrEqua
  

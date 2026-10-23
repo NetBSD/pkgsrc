@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_platform__font__skia.h,v 1.7 2026/10/16 15:31:03 kikadf Exp $
+$NetBSD: patch-ui_gfx_platform__font__skia.h,v 1.8 2026/10/23 15:05:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/platform_font_skia.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/gfx/platform_font_skia.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/gfx/platform_font_skia.h
 @@ -101,7 +101,7 @@ class COMPONENT_EXPORT(GFX) PlatformFont
    int font_size_pixels_;

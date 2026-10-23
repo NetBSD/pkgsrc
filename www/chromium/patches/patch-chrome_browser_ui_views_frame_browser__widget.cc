@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.22 2026/10/16 15:30:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.23 2026/10/23 15:05:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_widget.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_widget.cc
 @@ -51,7 +51,7 @@
  #include "ui/aura/window.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.22 2026/10/1
    SelectNativeTheme();
  #else
    SetNativeTheme(ui::NativeTheme::GetInstanceForNativeUi());
-@@ -541,7 +541,7 @@ void BrowserWidget::OnMenuClosed() {
+@@ -544,7 +544,7 @@ void BrowserWidget::OnMenuClosed() {
  }
  
  void BrowserWidget::SelectNativeTheme() {
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__widget.cc,v 1.22 2026/10/1
    // Use the regular NativeTheme instance if running incognito mode or
    // enterprise isolated mode, regardless of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -588,7 +588,7 @@ void BrowserWidget::OnGlassFrameEligibil
+@@ -591,7 +591,7 @@ void BrowserWidget::OnGlassFrameEligibil
  bool BrowserWidget::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

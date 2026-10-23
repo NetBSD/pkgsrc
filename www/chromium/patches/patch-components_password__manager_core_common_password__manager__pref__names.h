@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.30 2026/10/16 15:30:51 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_common_password__manager__pref__names.h,v 1.31 2026/10/23 15:05:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
 @@ -63,7 +63,7 @@ inline constexpr char kCredentialProvide
  #endif

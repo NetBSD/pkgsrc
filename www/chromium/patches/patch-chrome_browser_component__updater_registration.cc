@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.30 2026/10/16 15:30:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.31 2026/10/23 15:05:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/registration.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/component_updater/registration.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/component_updater/registration.cc
-@@ -93,7 +93,7 @@
+@@ -92,7 +92,7 @@
  #endif  // BUILDFLAG(ENABLE_WIDEVINE_CDM_COMPONENT)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.30 2026/10/
  #include "components/component_updater/installer_policies/amount_extraction_heuristic_regexes_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-@@ -102,7 +102,7 @@
+@@ -101,7 +101,7 @@
  #include "ui/aura/env.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_component__updater_registration.cc,v 1.30 2026/10/
  #include "chrome/browser/component_updater/wasm_tts_engine_component_installer.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -226,12 +226,12 @@ void RegisterComponentsForUpdate() {
+@@ -225,12 +225,12 @@ void RegisterComponentsForUpdate() {
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

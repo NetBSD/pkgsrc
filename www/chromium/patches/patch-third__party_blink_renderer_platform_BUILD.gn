@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.30 2026/10/16 15:30:59 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.31 2026/10/23 15:05:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
 @@ -186,6 +186,19 @@ group("make_platform_generated") {
    ]
@@ -26,7 +26,15 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.30 2026/10/16 1
  rust_static_library("rustfft_ffi") {
    allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
    crate_root = "audio/rustfft_ffi.rs"
-@@ -712,8 +725,6 @@ component("platform") {
+@@ -253,7 +266,6 @@ group("blink_platform_public_deps") {
+     "//third_party/boringssl",
+     "//third_party/libwebp",
+     "//third_party/ots",
+-    "//third_party/woff2:woff2_dec",
+     "//ui/gfx/animation/keyframe",
+     "//url",
+     "//v8",
+@@ -713,8 +725,6 @@ component("platform") {
      "fonts/generic_font_family_settings.cc",
      "fonts/generic_font_family_settings.h",
      "fonts/glyph_metrics_map.h",
@@ -35,7 +43,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.30 2026/10/16 1
      "fonts/opentype/color_table_lookup.cc",
      "fonts/opentype/color_table_lookup.h",
      "fonts/opentype/font_format_check.cc",
-@@ -1792,7 +1803,6 @@ component("platform") {
+@@ -1795,7 +1805,6 @@ component("platform") {
      ":allow_discouraged_type",
      ":blink_platform_public_deps",
      ":platform_export",
@@ -43,7 +51,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.30 2026/10/16 1
      "//components/language_detection/core",
      "//gpu/command_buffer/client:raster_interface",
      "//media/capture:capture_lib",
-@@ -1819,9 +1829,8 @@ component("platform") {
+@@ -1822,9 +1831,8 @@ component("platform") {
      "//ui/native_theme/features",
    ]
    deps = [
@@ -54,7 +62,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_BUILD.gn,v 1.30 2026/10/16 1
      "//base:base_static",
      "//base/allocator:buildflags",
      "//build:chromecast_buildflags",
-@@ -2240,7 +2249,6 @@ source_set("blink_platform_unittests_sou
+@@ -2245,7 +2253,6 @@ source_set("blink_platform_unittests_sou
      "fonts/font_test.cc",
      "fonts/font_test_utilities.cc",
      "fonts/generic_font_family_settings_test.cc",

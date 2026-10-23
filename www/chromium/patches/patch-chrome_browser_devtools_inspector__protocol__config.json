@@ -1,0 +1,20 @@
+$NetBSD: patch-chrome_browser_devtools_inspector__protocol__config.json,v 1.1 2026/10/23 15:05:17 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/devtools/inspector_protocol_config.json.orig	2026-10-19 20:07:21.000000000 +0000
++++ chrome/browser/devtools/inspector_protocol_config.json
+@@ -49,9 +49,8 @@
+             },
+             {
+                 "domain": "Storage",
+-                "include": ["runBounceTrackingMitigations", "getPrivateVerificationTokens", "getPrivateVerificationTokensIssuerConfigs", "clearPrivateVerificationTokens", "deletePrivateVerificationToken", "setPrivateVerificationTokensTracking"],
+-                "include_events": ["privateVerificationTokensUpdated"],
+-                "async": ["runBounceTrackingMitigations", "getPrivateVerificationTokens", "clearPrivateVerificationTokens", "deletePrivateVerificationToken"]
++                "include": ["runBounceTrackingMitigations", "getRelatedWebsiteSets"],
++                "async": ["runBounceTrackingMitigations", "getRelatedWebsiteSets"]
+             },
+             {
+                 "domain": "SystemInfo",

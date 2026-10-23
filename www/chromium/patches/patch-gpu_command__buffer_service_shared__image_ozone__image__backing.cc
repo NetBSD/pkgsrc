@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_ozone__image__backing.cc,v 1.9 2026/10/16 15:30:54 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_ozone__image__backing.cc,v 1.10 2026/10/23 15:05:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/ozone_image_backing.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- gpu/command_buffer/service/shared_image/ozone_image_backing.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/ozone_image_backing.cc
 @@ -500,7 +500,7 @@ std::unique_ptr<VulkanImageRepresentatio
      native_pixmap_handle.planes[1].offset = image_size.GetArea();

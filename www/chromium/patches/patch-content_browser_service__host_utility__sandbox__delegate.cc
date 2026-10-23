@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.29 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.30 2026/10/23 15:05:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/service_host/utility_sandbox_delegate.cc
 @@ -24,7 +24,7 @@
  #include "sandbox/policy/sandbox_type.h"
@@ -15,7 +15,16 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.2
  #include "media/gpu/buildflags.h"
  #include "media/media_buildflags.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -75,10 +75,10 @@ UtilitySandboxedProcessLauncherDelegate:
+@@ -53,7 +53,7 @@ UtilitySandboxedProcessLauncherDelegate:
+ #if DCHECK_IS_ON()
+   bool supported_sandbox_type =
+       sandbox_type_ == sandbox::mojom::Sandbox::kNoSandbox ||
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       sandbox_type_ == sandbox::mojom::Sandbox::kXrCompositing ||
+ #endif
+ #if BUILDFLAG(IS_WIN)
+@@ -77,10 +77,10 @@ UtilitySandboxedProcessLauncherDelegate:
        sandbox_type_ == sandbox::mojom::Sandbox::kOnDeviceModelExecution ||
        sandbox_type_ == sandbox::mojom::Sandbox::kCdm ||
        sandbox_type_ == sandbox::mojom::Sandbox::kPrintCompositor ||
@@ -28,7 +37,7 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.2
        sandbox_type_ == sandbox::mojom::Sandbox::kShapeDetection ||
  #if BUILDFLAG(ENABLE_OOP_VIDEO_DECODER)
        sandbox_type_ == sandbox::mojom::Sandbox::kHardwareVideoDecoding ||
-@@ -93,11 +93,11 @@ UtilitySandboxedProcessLauncherDelegate:
+@@ -95,12 +95,12 @@ UtilitySandboxedProcessLauncherDelegate:
        sandbox_type_ == sandbox::mojom::Sandbox::kNearby ||
  #endif  // BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -36,16 +45,24 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.2
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
        sandbox_type_ == sandbox::mojom::Sandbox::kScreenAI ||
        sandbox_type_ == sandbox::mojom::Sandbox::kPrintBackend ||
+       sandbox_type_ == sandbox::mojom::Sandbox::kPlatformRuntime ||
  #endif
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        sandbox_type_ == sandbox::mojom::Sandbox::kOnDeviceTranslation ||
  #endif
        sandbox_type_ == sandbox::mojom::Sandbox::kAudio ||
-@@ -156,15 +156,15 @@ ZygoteCommunication* UtilitySandboxedPro
+@@ -159,22 +159,22 @@ ZygoteCommunication* UtilitySandboxedPro
        sandbox_type_ == sandbox::mojom::Sandbox::kNearby ||
  #endif  // BUILDFLAG(IS_CHROMEOS)
        sandbox_type_ == sandbox::mojom::Sandbox::kAudio ||
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       // The XR Device Service installs its broker and seccomp policy from a
+       // pre-sandbox hook, so it must fork from the unsandboxed zygote (like the
+       // other hook-based types) rather than the pre-sandboxed generic zygote.
+       sandbox_type_ == sandbox::mojom::Sandbox::kXrCompositing ||
+ #endif
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        sandbox_type_ == sandbox::mojom::Sandbox::kShapeDetection ||
@@ -55,6 +72,7 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.2
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
        sandbox_type_ == sandbox::mojom::Sandbox::kPrintBackend ||
        sandbox_type_ == sandbox::mojom::Sandbox::kScreenAI ||
+       sandbox_type_ == sandbox::mojom::Sandbox::kPlatformRuntime ||
  #endif
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

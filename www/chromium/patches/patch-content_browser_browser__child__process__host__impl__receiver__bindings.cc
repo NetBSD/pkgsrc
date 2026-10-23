@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_browser__child__process__host__impl__receiver__bindings.cc,v 1.31 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
 @@ -38,7 +38,7 @@
  #include "content/public/common/font_cache_win.mojom.h"

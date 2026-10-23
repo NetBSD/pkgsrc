@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.22 2026/10/16 15:30:47 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__features.cc,v 1.23 2026/10/23 15:05:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/browser_window/internal/browser_window_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/browser_window/internal/browser_window_features.cc
-@@ -217,7 +217,7 @@
+@@ -220,7 +220,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__window_internal_browser__window__featu
  #include "chrome/browser/ui/views/session_restore_infobar/session_restore_infobar_controller.h"
  #endif
  
-@@ -492,7 +492,7 @@ void BrowserWindowFeatures::Init(Browser
+@@ -500,7 +500,7 @@ void BrowserWindowFeatures::Init(Browser
                                                                   browser);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.h,v 1.30 2026/10/16 15:30:49 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.h,v 1.31 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -57,7 +57,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
  #endif  // BUILDFLAG(IS_MAC)
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.30 2026/10/16 15:30:49 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillAddressSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillCardSurvey);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kAutofillPasswordSurvey);
-@@ -152,7 +152,7 @@ extern const base::FeatureParam<std::str
+@@ -154,7 +154,7 @@ extern const base::FeatureParam<std::str
  COMPONENT_EXPORT(CHROME_FEATURES)
  bool RemoteActorCredentialSharingEnabled();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.30 2026/10/16 15:30:49 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  #endif
  
-@@ -973,7 +973,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -978,7 +978,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kIsolatedWebAppBundleCache);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.30 2026/10/16 15:30:49 kikad
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kLinuxLogindShutdownInhibitor);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
-@@ -983,7 +983,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -988,7 +988,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

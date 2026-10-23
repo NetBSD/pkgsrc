@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__manual__fallback__flow.h,v 1.30 2026/10/16 15:30:51 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__manual__fallback__flow.h,v 1.31 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/password_manager/core/browser/password_manual_fallback_flow.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/password_manager/core/browser/password_manual_fallback_flow.h
-@@ -20,7 +20,7 @@
+@@ -18,7 +18,7 @@
  #include "components/password_manager/core/browser/ui/saved_passwords_presenter.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

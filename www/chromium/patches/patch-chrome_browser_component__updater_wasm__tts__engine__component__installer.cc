@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.29 2026/10/16 15:30:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__installer.cc,v 1.30 2026/10/23 15:05:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/component_updater/wasm_tts_engine_component_installer.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/component_updater/wasm_tts_engine_component_installer.cc
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include "content/public/browser/browser_thread.h"
  #include "content/public/common/content_switches.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
  #include "base/no_destructor.h"
  #include "chrome/browser/accessibility/embedded_a11y_extension_loader.h"
  #include "chrome/common/extensions/extension_constants.h"
-@@ -33,7 +33,7 @@
+@@ -34,7 +34,7 @@
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
  const base::FilePath::CharType kBindingsMainWasmFileName[] =
      FILE_PATH_LITERAL("bindings_main.wasm");
  const base::FilePath::CharType kBindingsMainJsFileName[] =
-@@ -61,7 +61,7 @@ constexpr std::array<uint8_t, 32> kWasmT
+@@ -62,7 +62,7 @@ constexpr std::array<uint8_t, 32> kWasmT
  
  const char kWasmTtsEngineManifestName[] = "WASM TTS Engine";
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
  class WasmTTSEngineDirectory {
   public:
    static WasmTTSEngineDirectory* Get() {
-@@ -118,7 +118,7 @@ WasmTtsEngineComponentInstallerPolicy::W
+@@ -119,7 +119,7 @@ WasmTtsEngineComponentInstallerPolicy::W
  // static
  void WasmTtsEngineComponentInstallerPolicy::RegisterPrefs(
      PrefRegistrySimple* registry) {
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    registry->RegisterTimePref(prefs::kAccessibilityReadAnythingDateLastOpened,
                               base::Time());
    registry->RegisterBooleanPref(
-@@ -151,7 +151,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -152,7 +152,7 @@ void WasmTtsEngineComponentInstallerPoli
    VLOG(1) << "Component ready, version " << version.GetString() << " in "
            << install_dir.value();
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    if (base::CommandLine::ForCurrentProcess()->HasSwitch(
            ::switches::kTestType)) {
      return;
-@@ -179,7 +179,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -180,7 +180,7 @@ void WasmTtsEngineComponentInstallerPoli
  // be removed the next time Chrome is restarted.
  void WasmTtsEngineComponentInstallerPolicy::MaybeReinstallTtsEngine(
      const base::FilePath& install_dir) {
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    const base::Time current_time = base::Time::Now();
    const base::Time date_last_opened =
        pref_service_->GetTime(prefs::kAccessibilityReadAnythingDateLastOpened);
-@@ -239,7 +239,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -240,7 +240,7 @@ void WasmTtsEngineComponentInstallerPoli
  bool WasmTtsEngineComponentInstallerPolicy::VerifyInstallation(
      const base::DictValue& /* manifest */,
      const base::FilePath& install_dir) const {
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    return base::PathExists(install_dir.Append(kManifestV3FileName)) &&
           base::PathExists(install_dir.Append(kBindingsMainWasmFileName)) &&
           base::PathExists(install_dir.Append(kBindingsMainJsFileName)) &&
-@@ -311,7 +311,7 @@ void RegisterWasmTtsEngineComponent(Comp
+@@ -312,7 +312,7 @@ void RegisterWasmTtsEngineComponent(Comp
  
  void WasmTtsEngineComponentInstallerPolicy::GetWasmTTSEngineDirectory(
      base::OnceCallback<void(const base::FilePath&)> callback) {
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_component__updater_wasm__tts__engine__component__i
    WasmTTSEngineDirectory* wasm_directory = WasmTTSEngineDirectory::Get();
    wasm_directory->Get(std::move(callback));
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -319,7 +319,7 @@ void WasmTtsEngineComponentInstallerPoli
+@@ -320,7 +320,7 @@ void WasmTtsEngineComponentInstallerPoli
  
  // static
  bool WasmTtsEngineComponentInstallerPolicy::IsWasmTTSEngineDirectorySet() {

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_conversion__utils.h,v 1.30 2026/10/16 15:30:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_conversion__utils.h,v 1.31 2026/10/23 15:05:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.h
 @@ -7,7 +7,7 @@
  

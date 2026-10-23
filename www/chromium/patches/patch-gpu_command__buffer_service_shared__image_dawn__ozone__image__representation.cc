@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_dawn__ozone__image__representation.cc,v 1.12 2026/10/16 15:30:54 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_dawn__ozone__image__representation.cc,v 1.13 2026/10/23 15:05:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/dawn_ozone_image_representation.cc
 @@ -199,6 +199,7 @@ void DawnOzoneImageRepresentation::EndAc
    if (!texture_) {

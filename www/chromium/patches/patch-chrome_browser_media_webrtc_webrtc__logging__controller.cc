@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.30 2026/10/16 15:30:45 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -30,7 +30,7 @@
  #include "net/base/schemeful_site.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.30
  #include "content/public/browser/child_process_security_policy.h"
  #include "storage/browser/file_system/isolated_context.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||
-@@ -328,7 +328,7 @@ WebRtcLoggingController::GetLogMessageCa
+@@ -366,7 +366,7 @@ WebRtcLoggingController::GetLogMessageCa
    return text_log_handler_->GetLogMessageCallback();
  }
  

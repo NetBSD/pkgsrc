@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_system__signals_platform__delegate.cc,v 1.30 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_system__signals_platform__delegate.cc,v 1.31 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/system_signals/platform_delegate.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/device_signals/core/system_signals/platform_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/device_signals/core/system_signals/platform_delegate.cc
 @@ -11,7 +11,7 @@ namespace device_signals {
  

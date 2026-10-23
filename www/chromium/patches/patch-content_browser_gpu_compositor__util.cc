@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_gpu_compositor__util.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_gpu_compositor__util.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/compositor_util.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/gpu/compositor_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/gpu/compositor_util.cc
 @@ -144,7 +144,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
        "video_decode",

@@ -1,12 +1,12 @@
-$NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.30 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.31 2026/10/23 15:05:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/crash/core/app/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/crash/core/app/BUILD.gn
-@@ -74,6 +74,10 @@ static_library("app") {
+@@ -104,6 +104,10 @@ static_library("app") {
      ]
    }
  
@@ -17,7 +17,7 @@ $NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.30 2026/10/16 15:30:50 kik
    defines = [ "CRASH_IMPLEMENTATION" ]
  
    public_deps = [ ":lib" ]
-@@ -90,7 +94,7 @@ static_library("app") {
+@@ -120,7 +124,7 @@ static_library("app") {
      "//third_party/crashpad/crashpad/util",
    ]
  
@@ -26,8 +26,8 @@ $NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.30 2026/10/16 15:30:50 kik
      sources += [ "crashpad_linux.cc" ]
      data_deps = [ ":chrome_crashpad_handler" ]
    }
-@@ -111,7 +115,7 @@ static_library("app") {
-     libs = [ "log" ]
+@@ -145,7 +149,7 @@ static_library("app") {
+     deps += [ ":shared_memory_user_stream_args" ]
    }
  
 -  if (is_android || is_linux || is_chromeos) {
@@ -35,7 +35,7 @@ $NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.30 2026/10/16 15:30:50 kik
      deps += [
        "//base:base_static",
        "//components/crash/core/common",
-@@ -248,11 +252,6 @@ if (is_mac || is_android || is_linux || 
+@@ -284,11 +288,6 @@ if (is_mac || is_android || is_linux || 
    executable("chrome_crashpad_handler") {
      sources = [ "chrome_crashpad_handler.cc" ]
  

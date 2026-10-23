@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_thread__isolation_pkey.cc,v 1.30 2026/10/16 15:30:41 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_thread__isolation_pkey.cc,v 1.31 2026/10/23 15:05:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc
 @@ -19,7 +19,7 @@
  #include "partition_alloc/partition_alloc_check.h"

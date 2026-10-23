@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_private__verification__tokens_private__verification__tokens__url__loader__throttle.cc,v 1.4 2026/10/16 15:30:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_private__verification__tokens_private__verification__tokens__url__loader__throttle.cc,v 1.5 2026/10/23 15:05:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/private_verification_tokens/private_verification_tokens_url_loader_throttle.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/private_verification_tokens/private_verification_tokens_url_loader_throttle.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/private_verification_tokens/private_verification_tokens_url_loader_throttle.cc
-@@ -54,6 +54,10 @@ void PrivateVerificationTokensURLLoaderT
+@@ -57,6 +57,10 @@ void PrivateVerificationTokensURLLoaderT
      return;
    }
  
@@ -17,7 +17,7 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_private__verificatio
    // Token header should not already exist, remove it if it does.
    request->headers.RemoveHeader(
        net::HttpRequestHeaders::kSecPrivateVerificationToken);
-@@ -88,6 +92,7 @@ void PrivateVerificationTokensURLLoaderT
+@@ -110,6 +114,7 @@ void PrivateVerificationTokensURLLoaderT
            token_info->second);
      }
    }
@@ -25,7 +25,7 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_private__verificatio
  }
  
  void PrivateVerificationTokensURLLoaderThrottle::WillRedirectRequest(
-@@ -95,6 +100,10 @@ void PrivateVerificationTokensURLLoaderT
+@@ -117,6 +122,10 @@ void PrivateVerificationTokensURLLoaderT
      const network::mojom::URLResponseHead& response_head,
      bool* defer,
      network::HttpRequestHeadersUpdateParams* headers_update_params) {
@@ -36,7 +36,7 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_private__verificatio
    if (headers_update_params) {
      headers_update_params->removed_headers.push_back(
          net::HttpRequestHeaders::kSecPrivateVerificationToken);
-@@ -109,12 +118,17 @@ void PrivateVerificationTokensURLLoaderT
+@@ -131,12 +140,17 @@ void PrivateVerificationTokensURLLoaderT
      token_id_.reset();
      redeemer_origin_.reset();
    }
@@ -54,7 +54,7 @@ $NetBSD: patch-chrome_browser_private__verification__tokens_private__verificatio
    if (token_id_.has_value()) {
      if (pvt_service_ && response_head &&
          !response_head->pvt_token_removed_due_to_cookies) {
-@@ -126,4 +140,5 @@ void PrivateVerificationTokensURLLoaderT
+@@ -148,4 +162,5 @@ void PrivateVerificationTokensURLLoaderT
      token_id_.reset();
      redeemer_origin_.reset();
    }

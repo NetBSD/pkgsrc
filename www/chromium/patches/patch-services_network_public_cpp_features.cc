@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_public_cpp_features.cc,v 1.30 2026/10/16 15:30:58 kikadf Exp $
+$NetBSD: patch-services_network_public_cpp_features.cc,v 1.31 2026/10/23 15:05:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- services/network/public/cpp/features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ services/network/public/cpp/features.cc
-@@ -96,7 +96,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
+@@ -76,7 +76,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
  // Enable usage of hardcoded DoH upgrade mapping for use in automatic mode.
  BASE_FEATURE(kDnsOverHttpsUpgrade,
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-build_config_compiler_BUILD.gn,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/compiler/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -203,7 +203,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
@@ -74,7 +74,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
        current_os != "zos") {
      _perform_consistency_checks = current_toolchain == default_toolchain
      if (llvm_force_head_revision) {
-@@ -1592,7 +1596,7 @@ config("clang_warning_suppression") {
+@@ -1625,7 +1629,7 @@ config("clang_warning_suppression") {
  # See also: https://crbug.com/40891132#comment10
  ubsan_hardening("c_array_bounds") {
    sanitizer = "array-bounds"
@@ -83,7 +83,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
  
    # Because we've enabled array-bounds sanitizing we also want to suppress
    # the related warning about "unsafe-buffer-usage-in-static-sized-array",
-@@ -1606,6 +1610,7 @@ ubsan_hardening("c_array_bounds") {
+@@ -1639,6 +1643,7 @@ ubsan_hardening("c_array_bounds") {
  # `NOTREACHED()` at the end of such functions.
  ubsan_hardening("return") {
    sanitizer = "return"
@@ -91,7 +91,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
  }
  
  # Enable `-fsanitize=unreachable` to crash deterministically if control
-@@ -1617,7 +1622,7 @@ ubsan_hardening("unreachable") {
+@@ -1650,7 +1655,7 @@ ubsan_hardening("unreachable") {
    # 1.  `fuchsia-binary-size` tells us that web_engine and
    #     chrome_fuchsia both grow 32768 bytes (10x that, uncompressed).
    # 2.  `headless_shell_wpt_tests` fail on `mac-rel`.
@@ -100,7 +100,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
  }
  
  config("rustc_revision") {
-@@ -1934,7 +1939,7 @@ config("default_warnings") {
+@@ -1967,7 +1972,7 @@ config("default_warnings") {
        "-Wno-psabi",
      ]
  
@@ -109,7 +109,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
        cflags += [
          # TODO(crbug.com/526996813): Figure out what to do about this.
          "-Wno-stringop-overread",
-@@ -1967,7 +1972,7 @@ config("default_warnings") {
+@@ -2000,7 +2005,7 @@ config("default_warnings") {
        "-Wno-nontrivial-memcall",
      ]
  
@@ -118,7 +118,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
        cflags += [
          # TODO(crbug.com/432275627): Fix and re-enable.
          "-Wno-uninitialized-const-pointer",
-@@ -2358,7 +2363,7 @@ config("export_dynamic") {
+@@ -2391,7 +2396,7 @@ config("export_dynamic") {
  #    .o files, instead of just references to .o files in the build directoy
  config("thin_archive") {
    if ((is_apple && use_lld) || (is_linux && !is_clang) || current_os == "aix" ||
@@ -127,7 +127,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
      # The macOS and iOS linker ld64.ldd doesn't support thin archive without
      # symbol table, gcc on linux also throws the error `archive has no index`.
      # AIX does support -s option, not -S option.
-@@ -2799,7 +2804,7 @@ config("afdo_optimize_size") {
+@@ -2832,7 +2837,7 @@ config("afdo_optimize_size") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -136,7 +136,7 @@ $NetBSD: patch-build_config_compiler_BUILD.gn,v 1.30 2026/10/16 15:30:43 kikadf 
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2826,7 +2831,7 @@ config("afdo") {
+@@ -2859,7 +2864,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }

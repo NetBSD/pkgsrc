@@ -1,10 +1,10 @@
-$NetBSD: patch-components_gcm__driver_gcm__desktop__utils.cc,v 1.29 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_gcm__driver_gcm__desktop__utils.cc,v 1.30 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gcm_driver/gcm_desktop_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/gcm_driver/gcm_desktop_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/gcm_driver/gcm_desktop_utils.cc
 @@ -32,7 +32,7 @@ GCMClient::ChromePlatform GetPlatform() 
    return GCMClient::PLATFORM_ANDROID;

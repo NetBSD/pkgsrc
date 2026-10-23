@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.7 2026/10/16 15:30:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.8 2026/10/23 15:05:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_actions.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/browser_actions.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/browser_actions.cc
-@@ -246,7 +246,7 @@
+@@ -254,7 +254,7 @@
  #include "chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.7 2026/10/16 15:30:46 k
  #include "chrome/common/pref_names.h"
  #include "components/prefs/pref_service.h"
  #endif
-@@ -2619,7 +2619,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2742,7 +2742,7 @@ void BrowserActions::InitializeToolbarAn
            .Build());
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.7 2026/10/16 15:30:46 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -2779,7 +2779,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2901,7 +2901,7 @@ void BrowserActions::InitializeToolbarAn
            .SetAccelerator(GetAcceleratorForCommandId(IDC_EXIT))
            .Build());
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.7 2026/10/16 15:30:46 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -3729,7 +3729,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -3862,7 +3862,7 @@ void BrowserActions::InitializeToolbarAn
                [](BrowserWindowInterface* bwi, actions::ActionItem* item,
                   actions::ActionInvocationContext context) {
                  base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.7 2026/10/16 15:30:46 k
                  chrome::CreateDesktopShortcutForActiveWebContents(bwi);
  #else
                  web_app::CreateWebAppFromCurrentWebContents(
-@@ -4667,7 +4667,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -4863,7 +4863,7 @@ void BrowserActions::InitializeToolbarAn
  #endif
  
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \

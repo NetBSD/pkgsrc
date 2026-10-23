@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.92 2026/10/20 20:28:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.93 2026/10/23 15:05:14 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			155.0.8059.84
-PKGREVISION=			1
+VERSION=			156.0.8078.47
 CATEGORIES=			www
-#MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
-MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
+MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
+#MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
 EXTRACT_SUFX_C=			.tar.xz
 
 #PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
 #SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
-DISTFILES+=			${DISTNAME}-linux${EXTRACT_SUFX_C}
+DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
@@ -31,6 +30,13 @@ LLVM_MV=			${LLVM_VERSION:sh:C/\..*//}
 
 # Used nodejs version
 NODE_VERSIONS_ACCEPTED=		24
+
+EXTRACT_ONLY=			${DISTNAME}-linux${EXTRACT_SUFX_C}
+#EXTRACT_ONLY+=			${PROFILE_DISTFILES}
+EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
+.for crate in ${CARGO_CRATE_DEPENDS}
+EXTRACT_ONLY+=			${crate}.crate
+.endfor
 
 MAINTAINER=			kikadf@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
@@ -148,8 +154,6 @@ SUBST_STAGE.pulse=	pre-configure
 SUBST_MESSAGE.pulse=	Set BUILT_WITH_PULSE to ${WITH_PA} in chromium wrapper
 SUBST_FILES.pulse+=	chromium.sh
 SUBST_SED.pulse+=	-e 's,@PULSE@,${WITH_PA},g'
-
-.include "tests.mk"
 
 BUILDTYPE=	Release
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}

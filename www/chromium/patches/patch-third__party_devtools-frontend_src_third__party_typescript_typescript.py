@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_devtools-frontend_src_third__party_typescript_typescript.py,v 1.6 2026/10/16 15:31:00 kikadf Exp $
+$NetBSD: patch-third__party_devtools-frontend_src_third__party_typescript_typescript.py,v 1.7 2026/10/23 15:05:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/devtools-frontend/src/third_party/typescript/typescript.py.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/devtools-frontend/src/third_party/typescript/typescript.py.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/devtools-frontend/src/third_party/typescript/typescript.py
 @@ -18,6 +18,9 @@ def GetBinaryPath():
      relative = {

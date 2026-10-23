@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__constants.cc,v 1.30 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__constants.cc,v 1.31 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_constants.cc
-@@ -93,13 +93,13 @@ const char kProfileReportingExtension[] 
+@@ -96,13 +96,13 @@ const char kProfileReportingExtension[] 
  const char kProfileReportingPolicy[] = "profileReportingPolicy";
  const char kProfileReportingLearnMore[] = "profileReportingLearnMore";
  

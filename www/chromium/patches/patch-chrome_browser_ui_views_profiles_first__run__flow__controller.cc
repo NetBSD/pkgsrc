@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_first__run__flow__controller.cc,v 1.14 2026/10/16 15:30:48 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_first__run__flow__controller.cc,v 1.15 2026/10/23 15:05:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/first_run_flow_controller.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/ui/views/profiles/first_run_flow_controller.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/ui/views/profiles/first_run_flow_controller.cc
 @@ -86,7 +86,7 @@
  #include "chrome/installer/util/shell_util.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_first__run__flow__controller.cc,
  #include "base/check_deref.h"
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/global_features.h"
-@@ -1228,7 +1228,7 @@ bool FirstRunFlowController::AreEffectsE
+@@ -1206,7 +1206,7 @@ bool FirstRunFlowController::AreEffectsE
  }
  
  void FirstRunFlowController::MaybeTriggerHatsSurvey() {

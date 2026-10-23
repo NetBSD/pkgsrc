@@ -1,12 +1,12 @@
-$NetBSD: patch-base_version__info_version__info.h,v 1.30 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-base_version__info_version__info.h,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/version_info/version_info.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- base/version_info/version_info.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ base/version_info/version_info.h
-@@ -74,6 +74,8 @@ constexpr std::string_view GetOSType() {
+@@ -78,6 +78,8 @@ constexpr std::string_view GetOSType() {
    return "FreeBSD";
  #elif BUILDFLAG(IS_OPENBSD)
    return "OpenBSD";

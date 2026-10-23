@@ -1,10 +1,10 @@
-$NetBSD: patch-components_metrics_drive__metrics__provider.cc,v 1.29 2026/10/16 15:30:50 kikadf Exp $
+$NetBSD: patch-components_metrics_drive__metrics__provider.cc,v 1.30 2026/10/23 15:05:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/drive_metrics_provider.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/metrics/drive_metrics_provider.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/metrics/drive_metrics_provider.cc
 @@ -23,7 +23,7 @@
  namespace metrics {

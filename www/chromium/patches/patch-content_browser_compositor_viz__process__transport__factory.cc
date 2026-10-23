@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_compositor_viz__process__transport__factory.cc,v 1.30 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_browser_compositor_viz__process__transport__factory.cc,v 1.31 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/compositor/viz_process_transport_factory.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/browser/compositor/viz_process_transport_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/browser/compositor/viz_process_transport_factory.cc
 @@ -101,7 +101,7 @@ class HostDisplayClient : public viz::Ho
    HostDisplayClient& operator=(const HostDisplayClient&) = delete;

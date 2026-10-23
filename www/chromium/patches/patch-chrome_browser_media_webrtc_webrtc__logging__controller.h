@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.30 2026/10/16 15:30:45 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.31 2026/10/23 15:05:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.h
-@@ -148,7 +148,7 @@ class WebRtcLoggingController
+@@ -160,7 +160,7 @@ class WebRtcLoggingController
  
    base::RepeatingCallback<void(const std::string&)> GetLogMessageCallback();
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.h,v 1.30 
    // Ensures that the WebRTC Logs directory exists and then grants render
    // process access to the 'WebRTC Logs' directory, and invokes |callback| with
    // the ids necessary to create a DirectoryEntry object.
-@@ -228,7 +228,7 @@ class WebRtcLoggingController
+@@ -244,7 +244,7 @@ class WebRtcLoggingController
    bool CheckCanOperationProceed(GenericDoneCallback& callback);
    bool CheckCanOperationProceed(UploadDoneCallback& callback);
  

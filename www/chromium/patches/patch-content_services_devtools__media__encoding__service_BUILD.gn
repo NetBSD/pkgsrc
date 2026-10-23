@@ -1,10 +1,10 @@
-$NetBSD: patch-content_services_devtools__media__encoding__service_BUILD.gn,v 1.6 2026/10/16 15:30:54 kikadf Exp $
+$NetBSD: patch-content_services_devtools__media__encoding__service_BUILD.gn,v 1.7 2026/10/23 15:05:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/services/devtools_media_encoding_service/BUILD.gn.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/services/devtools_media_encoding_service/BUILD.gn.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/services/devtools_media_encoding_service/BUILD.gn
 @@ -18,6 +18,7 @@ source_set("devtools_media_encoding_serv
      "//media/mojo/common",

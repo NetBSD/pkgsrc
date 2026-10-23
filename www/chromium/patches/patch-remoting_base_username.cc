@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_base_username.cc,v 1.14 2026/10/16 15:30:57 kikadf Exp $
+$NetBSD: patch-remoting_base_username.cc,v 1.15 2026/10/23 15:05:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/base/username.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/base/username.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/base/username.cc
 @@ -86,7 +86,7 @@ std::string GetUsername() {
  #endif  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID)

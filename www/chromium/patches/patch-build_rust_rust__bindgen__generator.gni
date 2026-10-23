@@ -1,10 +1,10 @@
-$NetBSD: patch-build_rust_rust__bindgen__generator.gni,v 1.29 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-build_rust_rust__bindgen__generator.gni,v 1.30 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/rust_bindgen_generator.gni.orig	2026-10-14 21:09:54.000000000 +0000
+--- build/rust/rust_bindgen_generator.gni.orig	2026-10-19 20:07:21.000000000 +0000
 +++ build/rust/rust_bindgen_generator.gni
 @@ -11,12 +11,12 @@ if (is_win) {
    import("//build/toolchain/win/win_toolchain_data.gni")

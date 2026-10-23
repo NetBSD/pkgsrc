@@ -1,10 +1,10 @@
-$NetBSD: patch-content_app_initialize__mojo__core.cc,v 1.2 2026/10/16 15:30:53 kikadf Exp $
+$NetBSD: patch-content_app_initialize__mojo__core.cc,v 1.3 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/initialize_mojo_core.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- content/app/initialize_mojo_core.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ content/app/initialize_mojo_core.cc
 @@ -54,7 +54,7 @@ void InitializeMojoCore() {
          mojo::core::kMojoDirectSharedMemoryAllocation);

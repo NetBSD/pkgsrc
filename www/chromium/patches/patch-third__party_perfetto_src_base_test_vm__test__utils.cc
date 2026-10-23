@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_test_vm__test__utils.cc,v 1.30 2026/10/16 15:31:01 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_test_vm__test__utils.cc,v 1.31 2026/10/23 15:05:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ third_party/perfetto/src/base/test/vm_test_utils.cc
 @@ -92,7 +92,7 @@ bool IsMapped(void* start, size_t size) 
    // Fuchsia doesn't yet support paging (b/119503290).

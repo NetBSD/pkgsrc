@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:44 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
 @@ -172,7 +172,7 @@
  #endif
@@ -102,7 +102,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsLinux>());
  #elif BUILDFLAG(IS_OZONE)
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsOzone>());
-@@ -1347,7 +1347,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1338,7 +1338,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -111,7 +111,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    // Create directory for user-level Native Messaging manifest files. This
    // makes it less likely that the directory will be created by third-party
    // software with incorrect owner or permission. See crbug.com/41321051 .
-@@ -1391,7 +1391,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1382,7 +1382,7 @@ int ChromeBrowserMainParts::PreCreateThr
  
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -120,7 +120,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchUIControllerStatsTracker::Initialize(
-@@ -1633,7 +1633,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1624,7 +1624,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || \
@@ -129,7 +129,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    // Delete the media history database if it still exists.
    // TODO(crbug.com/40177301): Remove this.
    base::ThreadPool::PostTask(
-@@ -1701,7 +1701,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1692,7 +1692,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif
  
@@ -138,7 +138,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1789,7 +1789,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1780,7 +1780,7 @@ int ChromeBrowserMainParts::PreMainMessa
  #endif
  
    // Should be done before starting metrics recording.
@@ -147,7 +147,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    // On Linux, the EULA dialog requires Views, so it is shown here rather than
    // when applying the first-run prefs.
    if (first_run::IsChromeFirstRun() && master_prefs_->eula_required &&
-@@ -1825,7 +1825,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1816,7 +1816,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -156,7 +156,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.30 2026/10/16 15:30:4
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
-@@ -2141,7 +2141,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -2132,7 +2132,7 @@ int ChromeBrowserMainParts::PreMainMessa
      browser_process_->StartAutoupdateTimer();
  #endif
  

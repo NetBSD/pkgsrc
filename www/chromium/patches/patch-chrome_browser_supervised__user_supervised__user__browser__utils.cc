@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.cc,v 1.30 2026/10/16 15:30:46 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.cc,v 1.31 2026/10/23 15:05:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_browser_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_browser_utils.cc
 @@ -39,10 +39,10 @@
  #include "components/user_manager/user.h"
@@ -19,7 +19,7 @@ $NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.
  #include "chrome/browser/supervised_user/supervised_user_verification_page_youtube.h"
  #endif
  #endif
-@@ -158,7 +158,7 @@ void AssertChildStatusOfTheUser(Profile*
+@@ -166,7 +166,7 @@ void AssertChildStatusOfTheUser(Profile*
  #endif
  }
  
@@ -28,7 +28,7 @@ $NetBSD: patch-chrome_browser_supervised__user_supervised__user__browser__utils.
  std::string CreateReauthenticationInterstitialForYouTube(
      content::NavigationHandle& navigation_handle) {
    content::WebContents* web_contents = navigation_handle.GetWebContents();
-@@ -186,7 +186,7 @@ std::string CreateReauthenticationInters
+@@ -194,7 +194,7 @@ std::string CreateReauthenticationInters
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

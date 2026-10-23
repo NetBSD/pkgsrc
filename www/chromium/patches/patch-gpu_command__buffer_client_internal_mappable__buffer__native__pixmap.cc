@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_client_internal_mappable__buffer__native__pixmap.cc,v 1.9 2026/10/16 15:30:54 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_client_internal_mappable__buffer__native__pixmap.cc,v 1.10 2026/10/23 15:05:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ gpu/command_buffer/client/internal/mappable_buffer_native_pixmap.cc
-@@ -64,7 +64,7 @@ MappableBufferNativePixmap::CreateFromHa
+@@ -62,7 +62,7 @@ MappableBufferNativePixmap::CreateFromHa
      viz::SharedImageFormat format,
      gfx::BufferUsage usage) {
    const bool supports_zero_copy_webgpu_import =

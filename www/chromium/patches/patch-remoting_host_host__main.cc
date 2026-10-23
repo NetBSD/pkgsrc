@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__main.cc,v 1.30 2026/10/16 15:30:57 kikadf Exp $
+$NetBSD: patch-remoting_host_host__main.cc,v 1.31 2026/10/23 15:05:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ remoting/host/host_main.cc
 @@ -24,7 +24,7 @@
  #include "remoting/base/crash/crash_reporting_crashpad.h"
@@ -31,16 +31,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.30 2026/10/16 15:30:57 kikadf Exp
  void EnsureVarLibDirectory() {
    if (getuid() != 0) {
      // Only do this in the daemon process, which is always run as root.
-@@ -113,7 +113,7 @@ void Usage(const base::FilePath& program
-       "\n"
-       "Options:\n"
- 
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       "  --audio-pipe-name=<pipe> - Sets the pipe name to capture audio on "
-       "Linux.\n"
- #endif  // BUILDFLAG(IS_LINUX)
-@@ -209,7 +209,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -204,7 +204,7 @@ MainRoutineFn SelectMainRoutine(const st
    } else if (process_type == kProcessTypeUrlForwarderConfigurator) {
      main_routine = &UrlForwarderConfiguratorMain;
  #endif  // BUILDFLAG(IS_WIN)
@@ -49,7 +40,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.30 2026/10/16 15:30:57 kikadf Exp
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -273,7 +273,7 @@ int HostMain(int argc, char** argv) {
+@@ -268,7 +268,7 @@ int HostMain(int argc, char** argv) {
    // Enable debug logs.
    InitHostLogging();
  
@@ -58,7 +49,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.30 2026/10/16 15:30:57 kikadf Exp
    EnsureVarLibDirectory();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -284,7 +284,7 @@ int HostMain(int argc, char** argv) {
+@@ -279,7 +279,7 @@ int HostMain(int argc, char** argv) {
    // Note that we enable crash reporting only if the user has opted in to having
    // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {

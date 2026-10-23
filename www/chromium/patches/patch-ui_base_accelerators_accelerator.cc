@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_accelerators_accelerator.cc,v 1.29 2026/10/16 15:31:02 kikadf Exp $
+$NetBSD: patch-ui_base_accelerators_accelerator.cc,v 1.30 2026/10/23 15:05:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/accelerators/accelerator.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- ui/base/accelerators/accelerator.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ ui/base/accelerators/accelerator.cc
 @@ -402,7 +402,7 @@ std::vector<std::u16string> Accelerator:
      modifiers.push_back(l10n_util::GetStringUTF16(IDS_APP_SEARCH_KEY));

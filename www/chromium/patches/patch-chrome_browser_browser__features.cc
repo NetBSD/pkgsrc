@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_browser__features.cc,v 1.30 2026/10/16 15:30:43 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__features.cc,v 1.31 2026/10/23 15:05:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/browser/browser_features.cc
 @@ -63,7 +63,7 @@ BASE_FEATURE(kCertVerificationNetworkTim
  BASE_FEATURE(kClearUserDataUponProfileDestruction,
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_browser__features.cc,v 1.30 2026/10/16 15:30:43 ki
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -158,7 +158,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -155,7 +155,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
  BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
               base::FEATURE_ENABLED_BY_DEFAULT);
  

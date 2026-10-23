@@ -1,10 +1,10 @@
-$NetBSD: patch-headless_lib_browser_headless__browser__impl.cc,v 1.20 2026/10/16 15:30:55 kikadf Exp $
+$NetBSD: patch-headless_lib_browser_headless__browser__impl.cc,v 1.21 2026/10/23 15:05:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_impl.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- headless/lib/browser/headless_browser_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ headless/lib/browser/headless_browser_impl.cc
 @@ -37,7 +37,7 @@
  #include "components/os_crypt/async/browser/keychain_key_provider.h"

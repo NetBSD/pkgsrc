@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_controlled__frame_controlled__frame.cc,v 1.22 2026/10/16 15:30:49 kikadf Exp $
+$NetBSD: patch-chrome_common_controlled__frame_controlled__frame.cc,v 1.23 2026/10/23 15:05:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- chrome/common/controlled_frame/controlled_frame.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ chrome/common/controlled_frame/controlled_frame.cc
 @@ -18,7 +18,7 @@
  #include "third_party/blink/public/common/features.h"

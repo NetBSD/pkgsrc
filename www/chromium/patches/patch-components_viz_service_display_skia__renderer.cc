@@ -1,12 +1,12 @@
-$NetBSD: patch-components_viz_service_display_skia__renderer.cc,v 1.30 2026/10/16 15:30:52 kikadf Exp $
+$NetBSD: patch-components_viz_service_display_skia__renderer.cc,v 1.31 2026/10/23 15:05:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display/skia_renderer.cc.orig	2026-10-14 21:09:54.000000000 +0000
+--- components/viz/service/display/skia_renderer.cc.orig	2026-10-19 20:07:21.000000000 +0000
 +++ components/viz/service/display/skia_renderer.cc
-@@ -1433,7 +1433,7 @@ void SkiaRenderer::ClearFramebuffer() {
+@@ -1421,7 +1421,7 @@ void SkiaRenderer::ClearFramebuffer() {
    if (current_frame()->current_render_pass->has_transparent_background) {
      ClearCanvas(SkColors::kTransparent);
    } else {
