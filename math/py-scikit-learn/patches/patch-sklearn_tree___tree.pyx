@@ -1,15 +1,16 @@
-$NetBSD: patch-sklearn_tree___tree.pyx,v 1.1 2023/11/13 10:42:42 wiz Exp $
+$NetBSD: patch-sklearn_tree___tree.pyx,v 1.2 2026/10/23 12:18:46 adam Exp $
 
 Fix build on NetBSD.
 
---- sklearn/tree/_tree.pyx.orig	2023-10-23 10:11:35.000000000 +0000
+--- sklearn/tree/_tree.pyx.orig	2026-09-10 05:14:20.000000000 +0000
 +++ sklearn/tree/_tree.pyx
-@@ -18,7 +18,7 @@ from libc.stdlib cimport free
+@@ -3,7 +3,8 @@
+ 
+ from cpython cimport Py_INCREF, PyObject, PyTypeObject
+ 
+-from libc.math cimport INFINITY, isnan
++from libc.math cimport INFINITY
++from libcpp.cmath cimport isnan as isnan
+ from libc.stdlib cimport free
  from libc.string cimport memcpy
  from libc.string cimport memset
- from libc.stdint cimport INTPTR_MAX
--from libc.math cimport isnan
-+from libcpp.cmath cimport isnan as isnan
- from libcpp.vector cimport vector
- from libcpp.algorithm cimport pop_heap
- from libcpp.algorithm cimport push_heap

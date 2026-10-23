@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2026/06/28 15:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/10/23 12:18:46 adam Exp $
 
-DISTNAME=	scikit_learn-1.8.0
+DISTNAME=	scikit_learn-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -12,9 +12,10 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	meson>=1.1.0:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.17.1:../../devel/py-meson_python
-DEPENDS+=	${PYPKGPREFIX}-joblib>=1.3.0:../../devel/py-joblib
+DEPENDS+=	${PYPKGPREFIX}-joblib>=1.4.0:../../devel/py-joblib
+DEPENDS+=	${PYPKGPREFIX}-narwhals>=2.0.1:../../misc/py-narwhals
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.10.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=3.2.0:../../parallel/py-threadpoolctl
+DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=3.5.0:../../parallel/py-threadpoolctl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
@@ -24,7 +25,7 @@ GCC_REQD+=	8
 REPLACE_PYTHON+=	sklearn/_build_utils/version.py
 REPLACE_PYTHON+=	sklearn/_build_utils/tempita.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/sklearn/preprocessing/_target_encoder_fast.pyx.orig
