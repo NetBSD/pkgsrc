@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2026/05/20 20:44:21 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/10/23 05:29:19 adam Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/WHEEL
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/licenses/LICENSE
-${PYSITELIB}/music21/.claude/settings.local.json
 ${PYSITELIB}/music21/__init__.py
 ${PYSITELIB}/music21/__init__.pyc
 ${PYSITELIB}/music21/__init__.pyo
