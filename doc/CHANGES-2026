@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7193 2026/10/23 08:13:48 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7194 2026/10/23 08:27:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10793,3 +10793,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rtorrent to 0.16.26 [adam 2026-10-23]
 	Updated graphics/libansilove to 1.4.3 [adam 2026-10-23]
 	Updated devel/libconfig to 1.8.3 [adam 2026-10-23]
+	Updated devel/buf to 1.75.0 [adam 2026-10-23]
+	Updated devel/git-lfs to 3.8.1 [adam 2026-10-23]
