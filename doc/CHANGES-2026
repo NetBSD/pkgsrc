@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7188 2026/10/22 17:06:35 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7189 2026/10/23 05:29:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10776,3 +10776,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-brotli to 1.2.1 [adam 2026-10-22]
 	Updated devel/py-coverage to 7.17.0 [adam 2026-10-22]
 	Updated www/resterm to 1.16.1 [drixter 2026-10-22]
+	Updated devel/py-importlib-metadata to 9.1.0 [adam 2026-10-23]
+	Updated audio/py-music21 to 10.5.1 [adam 2026-10-23]
