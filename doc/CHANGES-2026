@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7251 2026/10/24 19:44:00 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7252 2026/10/24 21:16:17 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10877,3 +10877,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ocaml-unionfind version 20220122 [alnsn 2026-10-24]
 	Updated archivers/lzma to 26.05 [drixter 2026-10-24]
 	Updated net/arping to 2.29 [drixter 2026-10-24]
+	Added devel/ocaml-ppx_deriving_yaml version 0.4.0 [alnsn 2026-10-24]
