@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7254 2026/10/24 22:34:26 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7255 2026/10/24 23:49:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10880,3 +10880,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ocaml-ppx_deriving_yaml version 0.4.0 [alnsn 2026-10-24]
 	Updated chat/matrix-synapse to 1.163.1 [gdt 2026-10-24]
 	Added devel/ocaml-ppx_deriving_yojson version 3.9.1 [alnsn 2026-10-24]
+	Updated devel/nss to 3.132 [ryoon 2026-10-24]
