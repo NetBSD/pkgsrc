@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/10/24 14:59:38 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/24 21:43:20 alnsn Exp $
 
 .include "../../devel/ocaml-dune/Makefile.common"
 
@@ -16,8 +16,6 @@ DUNE_BUILD_PACKAGES=	dune-site dune-private-libs
 # below or create a new devel/ocaml-dune-private-libs package
 # if any dependent package wants dune's private libs.
 #OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
-
-BUILDLINK_API_DEPENDS.ocaml-dune+=	ocaml-dune>=3.23.0
 
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/ocaml-csexp/buildlink3.mk"
