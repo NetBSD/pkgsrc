@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 21:13:55 alnsn Exp $
+${OCAML_SITELIB}/ppx_deriving_yaml/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.a
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cma
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmi
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmt
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.cmxs
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.ml
+${OCAML_SITELIB}/ppx_deriving_yaml/common/ppx_deriving_yaml_common.mli
+${OCAML_SITELIB}/ppx_deriving_yaml/dune-package
+${OCAML_SITELIB}/ppx_deriving_yaml/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.a
+${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cma
+${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cmi
+${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.cmxs
+${OCAML_SITELIB}/ppx_deriving_yaml/ppx_deriving_yaml.ml
+share/doc/ppx_deriving_yaml/CHANGES.md
+share/doc/ppx_deriving_yaml/LICENSE.md
+share/doc/ppx_deriving_yaml/README.md
+share/doc/ppx_deriving_yaml/odoc-pages/index.mld

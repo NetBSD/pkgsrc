@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 21:13:55 alnsn Exp $
+
+BLAKE2s (ppx_deriving_yaml-0.4.0.tar.gz) = 1bb4ca54158611c06bc24c2866834fabc74add6e244784cf588725f341c979d4
+SHA512 (ppx_deriving_yaml-0.4.0.tar.gz) = 18e43cfd1d49c23274bdff219a97c36b76d7e05b2d2430e079ad8dcf8949d02bfe88570b31fc0205605af963e647388baa8c0d46692f80949c4a53d038e7ed83
+Size (ppx_deriving_yaml-0.4.0.tar.gz) = 24852 bytes
