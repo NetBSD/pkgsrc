@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 12:13:40 leot Exp $
+
+BLAKE2s (webdump-0.3.tar.gz) = 4c155264bcf8a39307a1312894f3113bb7ce5f100251556b59161326d18b0fbc
+SHA512 (webdump-0.3.tar.gz) = fa44ba3171b0d7f9f2359c6846aa74f04d3b534bc88791a0e102d800b03da38e7b954a3677af26b16192e59cd1ee204f50d6201bc082949d14a97b17d9b8f705
+Size (webdump-0.3.tar.gz) = 52268 bytes

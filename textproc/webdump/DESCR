@@ -1,0 +1,3 @@
+HTML to plain-text converter tool.
+
+It reads HTML in UTF-8 from stdin and writes plain-text to stdout.

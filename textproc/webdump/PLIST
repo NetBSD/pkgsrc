@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 12:13:40 leot Exp $
+bin/webdump
+man/man1/webdump.1
+share/doc/webdump/README
