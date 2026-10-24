@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7252 2026/10/24 21:16:17 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7253 2026/10/24 22:23:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10878,3 +10878,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lzma to 26.05 [drixter 2026-10-24]
 	Updated net/arping to 2.29 [drixter 2026-10-24]
 	Added devel/ocaml-ppx_deriving_yaml version 0.4.0 [alnsn 2026-10-24]
+	Updated chat/matrix-synapse to 1.163.1 [gdt 2026-10-24]
