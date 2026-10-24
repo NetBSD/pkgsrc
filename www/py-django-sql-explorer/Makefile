@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 08:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/24 10:11:14 adam Exp $
 
-DISTNAME=	django_sql_explorer-5.3
+DISTNAME=	django_sql_explorer-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sql-explorer/}

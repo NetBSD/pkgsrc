@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/15 12:53:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/24 10:11:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -203,23 +203,23 @@ ${PYSITELIB}/explorer/src/scss/explorer.scss
 ${PYSITELIB}/explorer/src/scss/pivot.css
 ${PYSITELIB}/explorer/src/scss/styles.scss
 ${PYSITELIB}/explorer/src/scss/variables.scss
-${PYSITELIB}/explorer/static/explorer/_commonjsHelpers.5.3.js
+${PYSITELIB}/explorer/static/explorer/_commonjsHelpers.${PKGVERSION}.js
 ${PYSITELIB}/explorer/static/explorer/bootstrap-icons.woff
 ${PYSITELIB}/explorer/static/explorer/bootstrap-icons.woff2
-${PYSITELIB}/explorer/static/explorer/choices.5.3.js
-${PYSITELIB}/explorer/static/explorer/csrf.5.3.js
-${PYSITELIB}/explorer/static/explorer/explorer.5.3.js
-${PYSITELIB}/explorer/static/explorer/favorites.5.3.js
+${PYSITELIB}/explorer/static/explorer/choices.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/csrf.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/explorer.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/favorites.${PKGVERSION}.js
 ${PYSITELIB}/explorer/static/explorer/images/logo-main.svg
 ${PYSITELIB}/explorer/static/explorer/images/logo.png
-${PYSITELIB}/explorer/static/explorer/index.5.3.js
-${PYSITELIB}/explorer/static/explorer/main.5.3.js
-${PYSITELIB}/explorer/static/explorer/pivot-setup.5.3.js
-${PYSITELIB}/explorer/static/explorer/query-list.5.3.js
-${PYSITELIB}/explorer/static/explorer/schema.5.3.js
+${PYSITELIB}/explorer/static/explorer/index.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/main.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/pivot-setup.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/query-list.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/schema.${PKGVERSION}.js
 ${PYSITELIB}/explorer/static/explorer/styles.css
-${PYSITELIB}/explorer/static/explorer/tableDescription.5.3.js
-${PYSITELIB}/explorer/static/explorer/uploads.5.3.js
+${PYSITELIB}/explorer/static/explorer/tableDescription.${PKGVERSION}.js
+${PYSITELIB}/explorer/static/explorer/uploads.${PKGVERSION}.js
 ${PYSITELIB}/explorer/tasks.py
 ${PYSITELIB}/explorer/tasks.pyc
 ${PYSITELIB}/explorer/tasks.pyo
