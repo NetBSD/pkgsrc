@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7210 2026/10/24 09:18:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7211 2026/10/24 09:28:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10822,3 +10822,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-xlsxwriter to 3.3.0 [adam 2026-10-24]
 	Updated devel/py-utils to 4.1.4 [adam 2026-10-24]
 	Updated time/py-types-python-dateutil to 2.9.0.20261021 [adam 2026-10-24]
+	Updated www/py-websockets to 17.3 [adam 2026-10-24]
+	Updated devel/py-evalidate to 2.1.6 [adam 2026-10-24]
+	Updated devel/py-pyvcd to 0.5.1 [adam 2026-10-24]
