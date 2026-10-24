@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 10:47:18 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/diagnostic/__init__.py
+${PYSITELIB}/diagnostic/__init__.pyc
+${PYSITELIB}/diagnostic/__init__.pyo
+${PYSITELIB}/diagnostic/_base.py
+${PYSITELIB}/diagnostic/_base.pyc
+${PYSITELIB}/diagnostic/_base.pyo
+${PYSITELIB}/diagnostic/_check_docs.py
+${PYSITELIB}/diagnostic/_check_docs.pyc
+${PYSITELIB}/diagnostic/_check_docs.pyo
+${PYSITELIB}/diagnostic/_concrete.py
+${PYSITELIB}/diagnostic/_concrete.pyc
+${PYSITELIB}/diagnostic/_concrete.pyo
+${PYSITELIB}/diagnostic/_parsers.py
+${PYSITELIB}/diagnostic/_parsers.pyc
+${PYSITELIB}/diagnostic/_parsers.pyo
+${PYSITELIB}/diagnostic/check-docs.py
+${PYSITELIB}/diagnostic/check-docs.pyc
+${PYSITELIB}/diagnostic/check-docs.pyo
+${PYSITELIB}/diagnostic/py.typed

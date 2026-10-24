@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 10:47:18 adam Exp $
+
+BLAKE2s (diagnostic-3.0.0.tar.gz) = 185e0aa1ad779ab2ac90504a016135471d5beefb02e345bfe667b4d94bf5972a
+SHA512 (diagnostic-3.0.0.tar.gz) = 8648da29896f3a13fb3856fe9592bf093726ac3a2c38c85abd70730723e2c0498a440e4fb2c163440ba1e910ffafa651a88f76244bd266121cb4c9062f4d8f05
+Size (diagnostic-3.0.0.tar.gz) = 8651 bytes
