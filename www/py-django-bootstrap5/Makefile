@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/09/02 15:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/24 09:38:03 adam Exp $
 
-DISTNAME=	django_bootstrap5-26.3
+DISTNAME=	django_bootstrap5-26.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-bootstrap5/}

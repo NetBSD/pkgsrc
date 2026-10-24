@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/13 15:13:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/24 09:38:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,9 @@ ${PYSITELIB}/django_bootstrap5/__about__.pyo
 ${PYSITELIB}/django_bootstrap5/__init__.py
 ${PYSITELIB}/django_bootstrap5/__init__.pyc
 ${PYSITELIB}/django_bootstrap5/__init__.pyo
+${PYSITELIB}/django_bootstrap5/apps.py
+${PYSITELIB}/django_bootstrap5/apps.pyc
+${PYSITELIB}/django_bootstrap5/apps.pyo
 ${PYSITELIB}/django_bootstrap5/components.py
 ${PYSITELIB}/django_bootstrap5/components.pyc
 ${PYSITELIB}/django_bootstrap5/components.pyo
