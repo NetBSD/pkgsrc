@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 10:00:01 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/py_svg_hush/__init__.py
+${PYSITELIB}/py_svg_hush/__init__.pyc
+${PYSITELIB}/py_svg_hush/__init__.pyi
+${PYSITELIB}/py_svg_hush/__init__.pyo
+${PYSITELIB}/py_svg_hush/py.typed
+${PYSITELIB}/py_svg_hush/py_svg_hush.so

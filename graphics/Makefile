@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1132 2026/10/22 20:19:23 wiz Exp $
+# $NetBSD: Makefile,v 1.1133 2026/10/24 10:00:01 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -533,6 +533,7 @@ SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-spectra
 SUBDIR+=	py-strich
+SUBDIR+=	py-svg-hush
 SUBDIR+=	py-svglib
 SUBDIR+=	py-tifffile
 SUBDIR+=	py-wand
