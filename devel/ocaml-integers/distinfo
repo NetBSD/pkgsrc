@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 15:44:36 alnsn Exp $
+
+BLAKE2s (integers-0.7.0.tar.gz) = a8c9532cdebfd57b1c71dfaf32a40c78b80991081185aed59c1afb69512c9ef2
+SHA512 (integers-0.7.0.tar.gz) = f71bf73af2e4e0dd5bd039b28bce1fdabfb199ada1836d694814aa6d0c1c2d205531fbfc05581082b2dbb1e9cc0948e594915d5ad6a1cfa1dbffa9e44a7a7450
+Size (integers-0.7.0.tar.gz) = 12758 bytes
