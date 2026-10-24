@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4709 2026/10/23 23:19:09 alnsn Exp $
+# $NetBSD: Makefile,v 1.4710 2026/10/24 15:01:34 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1311,6 +1311,7 @@ SUBDIR+=	ocaml-digestif
 SUBDIR+=	ocaml-duff
 SUBDIR+=	ocaml-dune
 SUBDIR+=	ocaml-dune-configurator
+SUBDIR+=	ocaml-dune-site
 SUBDIR+=	ocaml-encore
 SUBDIR+=	ocaml-eqaf
 SUBDIR+=	ocaml-expect_test_helpers_core
