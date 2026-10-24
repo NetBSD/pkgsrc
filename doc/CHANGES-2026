@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7237 2026/10/24 17:14:10 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7238 2026/10/24 17:15:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10863,3 +10863,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/rust-bindgen to 0.73.2 [pin 2026-10-24]
 	Updated devel/sem to 0.28.1 [pin 2026-10-24]
 	Updated games/chess-tui to 2.8.0 [pin 2026-10-24]
+	Updated misc/tui-journal to 0.18.0 [pin 2026-10-24]
