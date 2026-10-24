@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/11/28 20:01:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/24 13:45:11 js Exp $
 cross/x86_64-w64-mingw32-ucrt/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32-ucrt/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32-ucrt/mingw/include/cdoex_i.c
@@ -70,6 +70,7 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbasesrv.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbatmeter.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbatt.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbcrypt.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbcryptprimitives.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbits.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbluetoothapis.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libbootvid.a
@@ -526,11 +527,14 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcirt.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcp120_app.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcp60.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr100.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr100d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr110.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr110d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr120.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr120_app.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr120d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr80.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr80d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr90.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcr90d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libmsvcrt-os.a
@@ -570,6 +574,7 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnetui0.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnetui1.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnetui2.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnewdev.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libninput.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnntpapi.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnormaliz.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libnpptools.a
@@ -788,6 +793,7 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libtxfw32.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libucrt.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libucrtapp.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libucrtbase.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libucrtbased.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libudhisapi.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libufat.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libuiautomationcore.a
@@ -812,7 +818,9 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libusp10.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libutildll.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libuuid.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libuxtheme.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libvcruntime140.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libvcruntime140_app.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libvcruntime140d.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libvdsutil.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libverifier.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libversion.a
@@ -856,10 +864,12 @@ cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwer.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwevtapi.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwevtfwd.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwiadss.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwiaguid.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwiarpc.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwiaservc.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwiashext.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwimgapi.a
+cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwinbrand.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwindows.ai.machinelearning.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwindows.data.pdf.a
 cross/x86_64-w64-mingw32-ucrt/mingw/lib/libwindows.networking.a

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2026/10/17 11:43:47 js Exp $
+# $NetBSD: Makefile.common,v 1.13 2026/10/24 13:45:11 js Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
 
-DISTNAME=		mingw-w64-v12.0.0
+DISTNAME=		mingw-w64-v14.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2

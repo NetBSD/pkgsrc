@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/11/28 20:10:27 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2026/10/24 13:45:11 js Exp $
 
-BLAKE2s (mingw-w64-v12.0.0.tar.bz2) = 2ecb89dd9e62fd4d1a11be24775b3d73c8d5364605e9f2c0c3c9ef8786cd886c
-SHA512 (mingw-w64-v12.0.0.tar.bz2) = 949b2bfab8763ab10ec4e9fdfdaf5361517a4ab787fb98ab419b38d02694061c2e821ebbf6e2e4b39d92bdf17419d116daa8e63afd9e01d11592f39df4da69d7
-Size (mingw-w64-v12.0.0.tar.bz2) = 10474283 bytes
+BLAKE2s (mingw-w64-v14.0.0.tar.bz2) = 70af575eeefbf317260ac5345e0236c9951acc4be6a2a2b4a174ff02668dc552
+SHA512 (mingw-w64-v14.0.0.tar.bz2) = 17378a0e2abbbb688468a78cb0ba261f9001a1bc6e7d0270c24c4b8b13e5c6513e8fb8e617d08102fbc772c288ad81ec3a43ca756ed28f17cc5543f717a8bb6d
+Size (mingw-w64-v14.0.0.tar.bz2) = 11163292 bytes
