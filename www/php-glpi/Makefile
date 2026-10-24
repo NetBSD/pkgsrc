@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/08/07 01:41:56 taca Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/24 10:39:25 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=glpi-project/}glpi/releases/download/${GLPI_
 #MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	hauke@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://glpi-project.org/
 COMMENT=	IT inventory management software
 LICENSE=	gnu-gpl-v2
