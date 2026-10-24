@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/12/26 16:45:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/24 10:05:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -33,7 +33,6 @@ ${PYSITELIB}/django_countries/graphql/types.pyo
 ${PYSITELIB}/django_countries/ioc_data.py
 ${PYSITELIB}/django_countries/ioc_data.pyc
 ${PYSITELIB}/django_countries/ioc_data.pyo
-${PYSITELIB}/django_countries/iso3166-1.csv
 ${PYSITELIB}/django_countries/locale/af/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ar/LC_MESSAGES/django.mo
