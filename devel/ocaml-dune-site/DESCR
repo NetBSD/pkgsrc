@@ -1,0 +1,3 @@
+OCaml dune-site is a feature of the Dune build system that allows
+programs to embed the location of installation directories and to
+load plugins at run time.
