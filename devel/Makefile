@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4711 2026/10/24 15:45:23 alnsn Exp $
+# $NetBSD: Makefile,v 1.4712 2026/10/24 17:26:44 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1307,6 +1307,7 @@ SUBDIR+=	ocaml-core_unix
 SUBDIR+=	ocaml-cppo
 SUBDIR+=	ocaml-csexp
 SUBDIR+=	ocaml-cstruct
+SUBDIR+=	ocaml-ctypes
 SUBDIR+=	ocaml-digestif
 SUBDIR+=	ocaml-duff
 SUBDIR+=	ocaml-dune
