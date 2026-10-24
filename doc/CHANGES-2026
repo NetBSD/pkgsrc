@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7220 2026/10/24 13:47:16 js Exp $
+$NetBSD: CHANGES-2026,v 1.7221 2026/10/24 13:47:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10846,3 +10846,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/runawk to 1.6.2 [cheusov 2026-10-24]
 	Added textproc/webdump version 0.3 [leot 2026-10-24]
 	Updated cross/mingw-w64-i686-crt to 14.0.0 [js 2026-10-24]
+	Updated cross/mingw-w64-i686-crt-msvcrt to 14.0.0 [js 2026-10-24]
