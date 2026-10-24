@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7244 2026/10/24 17:22:26 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7245 2026/10/24 17:24:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10870,3 +10870,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xplr to 1.2.1 [pin 2026-10-24]
 	Updated www/monolith to 2.11.6 [pin 2026-10-24]
 	Updated www/xh to 0.26.3 [pin 2026-10-24]
+	Updated x11/wired-notify to 0.10.7 [pin 2026-10-24]
