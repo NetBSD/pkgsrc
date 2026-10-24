@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7216 2026/10/24 10:42:24 cheusov Exp $
+$NetBSD: CHANGES-2026,v 1.7217 2026/10/24 10:49:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10841,3 +10841,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-soupsieve to 3.0.4 [adam 2026-10-24]
 	Updated devel/py-pylru to 1.3.2 [adam 2026-10-24]
 	Updated devel/mk-configure to 0.40.3 [cheusov 2026-10-24]
+	Added misc/py-diagnostic version 3.0.0 [adam 2026-10-24]
+	Added textproc/py-sphinxext-opengraph version 0.13.0 [adam 2026-10-24]
