@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/08/06 13:10:17 pin Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/24 17:09:25 pin Exp $
 
-DISTNAME=	cargo-modules-0.27.0
+DISTNAME=	cargo-modules-0.28.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regexident/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mpl-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.95.0
+RUST_REQ=	1.98.0
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
