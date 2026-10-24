@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2025/11/22 17:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/10/24 19:43:42 drixter Exp $
 
-DISTNAME=	arping-2.21
-PKGREVISION=	1
+DISTNAME=	arping-2.29
 CATEGORIES=	net
 MASTER_SITES=	https://www.habets.pp.se/synscan/files/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.habets.pp.se/synscan/programs_arping.html
 COMMENT=	ARP-level ping utility
 LICENSE=	gnu-gpl-v2
