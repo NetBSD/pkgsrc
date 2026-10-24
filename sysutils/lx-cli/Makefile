@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/08/09 08:02:41 pin Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/24 17:19:01 pin Exp $
 
-DISTNAME=	lx-cli-0.2.0
+DISTNAME=	lx-cli-0.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lx-cli/
 EXTRACT_SUFX=	.crate
