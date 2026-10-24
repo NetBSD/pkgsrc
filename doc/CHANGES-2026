@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7250 2026/10/24 19:27:52 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7251 2026/10/24 19:44:00 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10876,3 +10876,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/logswan to 2.1.17 [drixter 2026-10-24]
 	Added devel/ocaml-unionfind version 20220122 [alnsn 2026-10-24]
 	Updated archivers/lzma to 26.05 [drixter 2026-10-24]
+	Updated net/arping to 2.29 [drixter 2026-10-24]
