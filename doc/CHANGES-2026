@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7209 2026/10/24 09:11:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7210 2026/10/24 09:18:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10818,3 +10818,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-svglib to 2.3.2 [adam 2026-10-24]
 	Updated devel/py-dulwich to 1.2.19 [adam 2026-10-24]
 	Updated devel/py-ruff to 0.17.2 [adam 2026-10-24]
+	Updated time/py-tzlocal to 5.4.5 [adam 2026-10-24]
+	Updated textproc/py-xlsxwriter to 3.3.0 [adam 2026-10-24]
+	Updated devel/py-utils to 4.1.4 [adam 2026-10-24]
+	Updated time/py-types-python-dateutil to 2.9.0.20261021 [adam 2026-10-24]
