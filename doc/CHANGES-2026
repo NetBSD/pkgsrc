@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7213 2026/10/24 10:03:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7214 2026/10/24 10:11:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10832,3 +10832,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added graphics/py-svg-hush version 0.3.0 [adam 2026-10-24]
 	Updated www/py-django-filer to 3.6.0 [adam 2026-10-24]
 	Updated www/py-django-reversion to 6.4.0 [adam 2026-10-24]
+	Updated www/py-django-countries to 9.1.0 [adam 2026-10-24]
+	Updated www/py-django-js-asset to 4.2.0 [adam 2026-10-24]
+	Updated www/py-django-mptt to 0.20.0 [adam 2026-10-24]
+	Updated www/py-django-sql-explorer to 5.3.1 [adam 2026-10-24]
