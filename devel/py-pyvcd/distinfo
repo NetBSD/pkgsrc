@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/09/02 15:37:24 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/10/24 09:28:12 adam Exp $
 
-BLAKE2s (pyvcd-0.5.0.tar.gz) = f5d34e1f0e36d6bbc64fcf53f181a3757974f1ba3f22e74cc27965506dfd9beb
-SHA512 (pyvcd-0.5.0.tar.gz) = 8ee32fb40d3e6a642752a036abedb0f5607bf3da1c3e55591e113fc409e8489e1381bd873fded193792ada7cbc8f196c0453cab38e41f5671f03604894889b8a
-Size (pyvcd-0.5.0.tar.gz) = 42872 bytes
+BLAKE2s (pyvcd-0.5.1.tar.gz) = c46145f30835adcaaa7a729735662adc675119d5dcca97e454ec71d1de30e6f9
+SHA512 (pyvcd-0.5.1.tar.gz) = 8131d6702f80b0fd3692f81808fb0228b704ba8827d205c1f4d8365cbf5d14d67d51089bc435349c5b805edf73af3004f045603f983c6216fccc2629266165c5
+Size (pyvcd-0.5.1.tar.gz) = 45529 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/09/02 15:37:24 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/24 09:28:12 adam Exp $
 
-DISTNAME=	pyvcd-0.5.0
+DISTNAME=	pyvcd-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyvcd/}
