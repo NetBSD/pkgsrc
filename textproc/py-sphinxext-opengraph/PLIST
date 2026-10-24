@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 10:48:51 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.rst
+${PYSITELIB}/sphinxext/opengraph/__init__.py
+${PYSITELIB}/sphinxext/opengraph/__init__.pyc
+${PYSITELIB}/sphinxext/opengraph/__init__.pyo
+${PYSITELIB}/sphinxext/opengraph/_description_parser.py
+${PYSITELIB}/sphinxext/opengraph/_description_parser.pyc
+${PYSITELIB}/sphinxext/opengraph/_description_parser.pyo
+${PYSITELIB}/sphinxext/opengraph/_meta_parser.py
+${PYSITELIB}/sphinxext/opengraph/_meta_parser.pyc
+${PYSITELIB}/sphinxext/opengraph/_meta_parser.pyo
+${PYSITELIB}/sphinxext/opengraph/_social_cards.py
+${PYSITELIB}/sphinxext/opengraph/_social_cards.pyc
+${PYSITELIB}/sphinxext/opengraph/_social_cards.pyo
+${PYSITELIB}/sphinxext/opengraph/_static/Roboto-Flex.ttf
+${PYSITELIB}/sphinxext/opengraph/_static/sphinx-logo-shadow.png
+${PYSITELIB}/sphinxext/opengraph/_title_parser.py
+${PYSITELIB}/sphinxext/opengraph/_title_parser.pyc
+${PYSITELIB}/sphinxext/opengraph/_title_parser.pyo

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 10:48:51 adam Exp $
+
+BLAKE2s (sphinxext_opengraph-0.13.0.tar.gz) = bc5e37b7d923e5b0906e8231a95188e221b10c1d3f2ac74dfa28c8db9f9fbdba
+SHA512 (sphinxext_opengraph-0.13.0.tar.gz) = 933cb99cd7d1aeb4d2ea975382ba165e36d46e89da8ad85c217b78b1a5e06f8017968a92c92f68134a5c84e62906533717d05cf2e0207645a22c57298f9d9ebc
+Size (sphinxext_opengraph-0.13.0.tar.gz) = 1026875 bytes
