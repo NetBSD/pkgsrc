@@ -1,10 +1,10 @@
-$NetBSD: patch-.._vendor_starship-battery-0.11.0_src_platform_netbsd_sysmon.rs,v 1.1 2026/09/14 14:31:42 pin Exp $
+$NetBSD: patch-.._vendor_starship-battery-0.11.1_src_platform_netbsd_sysmon.rs,v 1.1 2026/10/24 17:17:58 pin Exp $
 
 Fix battery readout using upstreams pull request.
 https://github.com/starship/rust-battery/pull/168
 
---- ../vendor/starship-battery-0.11.0/src/platform/netbsd/sysmon.rs.orig	2026-09-14 11:26:29.446107617 +0000
-+++ ../vendor/starship-battery-0.11.0/src/platform/netbsd/sysmon.rs
+--- ../vendor/starship-battery-0.11.1/src/platform/netbsd/sysmon.rs.orig	2026-09-14 11:26:29.446107617 +0000
++++ ../vendor/starship-battery-0.11.1/src/platform/netbsd/sysmon.rs
 @@ -1,3 +1,4 @@
 +use std::ffi::CStr;
  use std::fs;
