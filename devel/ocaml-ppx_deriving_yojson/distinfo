@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 22:32:12 alnsn Exp $
+
+BLAKE2s (ppx_deriving_yojson-3.9.1.tar.gz) = 473ddb7b65dd53123f73778bdd1aa2304d2df4b7033500719692c37332976f39
+SHA512 (ppx_deriving_yojson-3.9.1.tar.gz) = d70f31ac0c6f772215c0cb47051f78824cadcad5083c46eadcd94b0a5cf55ef3f862ef9e6c107bcf607e045517b4387e3f1557acfa62d0201663a2fa0dff2c55
+Size (ppx_deriving_yojson-3.9.1.tar.gz) = 21069 bytes

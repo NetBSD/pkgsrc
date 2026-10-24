@@ -1,0 +1,3 @@
+Deriving Yojson is a ppx_deriving plugin that generates JSON
+serializers and deserializes that use the Yojson library from
+an OCaml type definition.

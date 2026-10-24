@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/24 22:32:12 alnsn Exp $
+${OCAML_SITELIB}/ppx_deriving_yojson/META
+${OCAML_SITELIB}/ppx_deriving_yojson/dune-package
+${OCAML_SITELIB}/ppx_deriving_yojson/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.a
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cma
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmi
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmt
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.cmxs
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.ml
+${OCAML_SITELIB}/ppx_deriving_yojson/ppx_deriving_yojson.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.a
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cma
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmi
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmt
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.cmxs
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.ml
+${OCAML_SITELIB}/ppx_deriving_yojson/runtime/ppx_deriving_yojson_runtime.mli
+share/doc/ppx_deriving_yojson/CHANGELOG.md
+share/doc/ppx_deriving_yojson/LICENSE.txt
+share/doc/ppx_deriving_yojson/README.md
