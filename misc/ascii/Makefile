@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/03/01 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/10/24 15:52:27 drixter Exp $
 
-DISTNAME=	ascii-3.32
+DISTNAME=	ascii-3.33
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 
