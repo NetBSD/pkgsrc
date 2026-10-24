@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2026/06/28 15:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/10/24 10:01:30 adam Exp $
 
-DISTNAME=	django_filer-3.4.4
+DISTNAME=	django_filer-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filer/}
@@ -14,11 +14,11 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-polymorphic>=2.0:../../www/py-django-polymorphic
 DEPENDS+=	${PYPKGPREFIX}-easy-thumbnails>=2.0:../../www/py-easy-thumbnails
-DEPENDS+=	${PYPKGPREFIX}-svglib>=1.5.1:../../graphics/py-svglib
+DEPENDS+=	${PYPKGPREFIX}-svg-hush>=0:../../graphics/py-svg-hush
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

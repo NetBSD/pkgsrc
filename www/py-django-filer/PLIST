@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/02/12 14:05:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/10/24 10:01:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -84,6 +84,8 @@ ${PYSITELIB}/filer/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/bg/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/bg/LC_MESSAGES/django.po
+${PYSITELIB}/filer/locale/bn/LC_MESSAGES/django.mo
+${PYSITELIB}/filer/locale/bn/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/ca/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/cs/LC_MESSAGES/django.mo
@@ -108,10 +110,14 @@ ${PYSITELIB}/filer/locale/gl/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/gl/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/he/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/he/LC_MESSAGES/django.po
+${PYSITELIB}/filer/locale/hi/LC_MESSAGES/django.mo
+${PYSITELIB}/filer/locale/hi/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/hr/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/hr/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/hu/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/hu/LC_MESSAGES/django.po
+${PYSITELIB}/filer/locale/id/LC_MESSAGES/django.mo
+${PYSITELIB}/filer/locale/id/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/ja/LC_MESSAGES/django.mo
@@ -140,10 +146,8 @@ ${PYSITELIB}/filer/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/tr/LC_MESSAGES/django.po
-${PYSITELIB}/filer/locale/vi_VN/LC_MESSAGES/django.mo
-${PYSITELIB}/filer/locale/vi_VN/LC_MESSAGES/django.po
-${PYSITELIB}/filer/locale/zh-Hans/LC_MESSAGES/django.mo
-${PYSITELIB}/filer/locale/zh-Hans/LC_MESSAGES/django.po
+${PYSITELIB}/filer/locale/vi/LC_MESSAGES/django.mo
+${PYSITELIB}/filer/locale/vi/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/zh/LC_MESSAGES/django.mo
 ${PYSITELIB}/filer/locale/zh/LC_MESSAGES/django.po
 ${PYSITELIB}/filer/locale/zh_CN/LC_MESSAGES/django.mo
@@ -343,6 +347,7 @@ ${PYSITELIB}/filer/static/filer/img/select_item-hover.gif
 ${PYSITELIB}/filer/static/filer/img/select_item.gif
 ${PYSITELIB}/filer/static/filer/img/upload_button.png
 ${PYSITELIB}/filer/static/filer/js/addons/copy-move-files.js
+${PYSITELIB}/filer/static/filer/js/addons/csrf.js
 ${PYSITELIB}/filer/static/filer/js/addons/dropdown-menu.js
 ${PYSITELIB}/filer/static/filer/js/addons/dropzone.init.js
 ${PYSITELIB}/filer/static/filer/js/addons/filer_popup_response.js
@@ -381,6 +386,7 @@ ${PYSITELIB}/filer/templates/admin/filer/folder/directory_table_list.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/directory_thumbnail_list.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/legacy_listing.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/list_type_switcher.html
+${PYSITELIB}/filer/templates/admin/filer/folder/listing_breadcrumbs.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/new_folder_form.html
 ${PYSITELIB}/filer/templates/admin/filer/image/change_form.html
 ${PYSITELIB}/filer/templates/admin/filer/image/expand.html
@@ -436,6 +442,9 @@ ${PYSITELIB}/filer/utils/pil_exif.pyo
 ${PYSITELIB}/filer/utils/recursive_dictionary.py
 ${PYSITELIB}/filer/utils/recursive_dictionary.pyc
 ${PYSITELIB}/filer/utils/recursive_dictionary.pyo
+${PYSITELIB}/filer/utils/svg.py
+${PYSITELIB}/filer/utils/svg.pyc
+${PYSITELIB}/filer/utils/svg.pyo
 ${PYSITELIB}/filer/utils/zip.py
 ${PYSITELIB}/filer/utils/zip.pyc
 ${PYSITELIB}/filer/utils/zip.pyo
