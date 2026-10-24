@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2026/05/21 11:34:59 pin Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/24 17:13:50 pin Exp $
 
-DISTNAME=	chess-tui-2.7.1
+DISTNAME=	chess-tui-2.8.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomas-mauran/}
 
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://thomas-mauran.github.io/chess-tui/
 COMMENT=	Chess TUI implementation in rust
 LICENSE=	mit
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
