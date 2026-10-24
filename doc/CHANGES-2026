@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7221 2026/10/24 13:47:36 js Exp $
+$NetBSD: CHANGES-2026,v 1.7222 2026/10/24 13:47:54 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10847,3 +10847,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/webdump version 0.3 [leot 2026-10-24]
 	Updated cross/mingw-w64-i686-crt to 14.0.0 [js 2026-10-24]
 	Updated cross/mingw-w64-i686-crt-msvcrt to 14.0.0 [js 2026-10-24]
+	Updated cross/mingw-w64-x86_64-crt to 14.0.0 [js 2026-10-24]
