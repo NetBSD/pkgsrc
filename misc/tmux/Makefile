@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/10/21 19:22:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.72 2026/10/24 22:49:12 js Exp $
 
 DISTNAME=	tmux-3.8
 CATEGORIES=	misc
@@ -38,6 +38,16 @@ BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
 # https://trac.macports.org/changeset/127986
 .if ${MACHINE_PLATFORM:MDarwin-1[0-9].*}
 CPPFLAGS+=	-D__DARWIN_VERS_1050=0
+.endif
+
+.if ${OPSYS} == "Darwin"
+# configure: 	   macOS calloc(3) appears not to correctly
+# configure: 	   zero allocations in some circumstances;
+# configure: 	   to avoid this, configuring with
+# configure: 	   --enable-jemalloc is recommended. To build
+# configure: 	   without anyway, use --disable-jemalloc
+CONFIGURE_ARGS+=	--enable-jemalloc
+.include "../../devel/jemalloc/buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "QNX"
