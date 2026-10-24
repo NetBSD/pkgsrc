@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/09/25 09:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/24 12:51:11 hauke Exp $
 
 DISTNAME=	muse-3.20
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,7 +18,7 @@ INFO_FILES=	yes
 MAKE_FLAGS+=		-I..
 INSTALLATION_DIRS=	share/doc/emacs-muse share/examples/emacs-muse
 
-EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs214nox xemacs215 xemacs215nox
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20
 
 pre-build:
 	sed -e "s,@PREFIX@,${PREFIX}," -e "s,@LISPDIR@,${EMACS_LISPPREFIX}," \
