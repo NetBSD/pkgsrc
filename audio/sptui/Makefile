@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/10/20 20:27:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/24 17:08:10 pin Exp $
 
-DISTNAME=	sptui-0.1.2
-PKGREVISION=	28
+DISTNAME=	sptui-0.1.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=szktkfm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,6 +21,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "go-modules.mk"
-
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
