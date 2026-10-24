@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1613 2026/10/24 10:48:51 adam Exp $
+# $NetBSD: Makefile,v 1.1614 2026/10/24 12:14:35 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1530,6 +1530,7 @@ SUBDIR+=	verify-synopsis
 SUBDIR+=	vis
 SUBDIR+=	wbxml2
 SUBDIR+=	wdiff
+SUBDIR+=	webdump
 SUBDIR+=	word2vec
 SUBDIR+=	writer2latex
 SUBDIR+=	xalan-j
