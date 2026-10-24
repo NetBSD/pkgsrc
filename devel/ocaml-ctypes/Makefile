@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/10/24 17:25:39 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/24 17:42:13 alnsn Exp $
 
 DISTNAME=	ctypes-0.21.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -22,6 +22,7 @@ TEST_TARGET=	test
 
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/ocaml-bigarray-compat/buildlink3.mk"
 .include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../devel/ocaml-integers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
