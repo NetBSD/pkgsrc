@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7208 2026/10/23 23:20:32 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7209 2026/10/24 09:11:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10814,3 +10814,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-hanko to 0.38.0 [adam 2026-10-23]
 	Updated sysutils/mirador to 1.22.2 [pin 2026-10-23]
 	Added devel/ocaml-parmap version 1.2.5 [alnsn 2026-10-24]
+	Updated security/py-certifi to 2026.10.23 [adam 2026-10-24]
+	Updated graphics/py-svglib to 2.3.2 [adam 2026-10-24]
+	Updated devel/py-dulwich to 1.2.19 [adam 2026-10-24]
+	Updated devel/py-ruff to 0.17.2 [adam 2026-10-24]
