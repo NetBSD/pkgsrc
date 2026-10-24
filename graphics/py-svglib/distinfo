@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/08/20 05:40:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/10/24 09:03:40 adam Exp $
 
-BLAKE2s (svglib-2.2.0.tar.gz) = 7d982f30c746e4bd4cf40ad338eb2a6bd07a58dc90255d6d3437589427aae121
-SHA512 (svglib-2.2.0.tar.gz) = b5c3927e25e7d21700b159acfa1ae34a211682d4eebf153886691eef353f30c51e63f1fd7d6103c542f7ffa8e8e5ea9d9bdb99caeb59003534ab550c1935ff1b
-Size (svglib-2.2.0.tar.gz) = 1373629 bytes
+BLAKE2s (svglib-2.3.2.tar.gz) = c7f4474ee258f76187888d2254e5fd4328b07ffb9d9b287a15c8aed581a77962
+SHA512 (svglib-2.3.2.tar.gz) = 114ab498304d44ce913c8d8a50c68720b0a5c4b00980c34df9197b2166291bb4831a51ff799f4b566656c03479d5f8b4b29b1822ea80f4154f2cb81ff3df3cac
+Size (svglib-2.3.2.tar.gz) = 1381814 bytes

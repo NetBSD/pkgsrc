@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/16 19:43:59 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/24 09:03:40 adam Exp $
 
-DISTNAME=	svglib-2.2.0
+DISTNAME=	svglib-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/svglib/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/deeplook/svglib
 COMMENT=	Pure-Python library for reading and converting SVG
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.2.0:../../textproc/py-cssselect2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=6.0.0:../../textproc/py-lxml
