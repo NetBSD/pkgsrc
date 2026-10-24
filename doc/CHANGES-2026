@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7211 2026/10/24 09:28:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7212 2026/10/24 09:42:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10825,3 +10825,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-websockets to 17.3 [adam 2026-10-24]
 	Updated devel/py-evalidate to 2.1.6 [adam 2026-10-24]
 	Updated devel/py-pyvcd to 0.5.1 [adam 2026-10-24]
+	Updated www/py-asgiref to 3.13.0 [adam 2026-10-24]
+	Updated www/py-django-bootstrap5 to 26.4 [adam 2026-10-24]
+	Updated www/py-django-import-export to 4.4.3 [adam 2026-10-24]
+	Updated www/py-django-treebeard to 7.0.3 [adam 2026-10-24]
