@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4710 2026/10/24 15:01:34 alnsn Exp $
+# $NetBSD: Makefile,v 1.4711 2026/10/24 15:45:23 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1325,6 +1325,7 @@ SUBDIR+=	ocaml-hex
 SUBDIR+=	ocaml-hmap
 SUBDIR+=	ocaml-hxd
 SUBDIR+=	ocaml-int_repr
+SUBDIR+=	ocaml-integers
 SUBDIR+=	ocaml-intrinsics
 SUBDIR+=	ocaml-jane-street-headers
 SUBDIR+=	ocaml-js-build-tools
