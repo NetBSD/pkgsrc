@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7229 2026/10/24 15:46:32 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7230 2026/10/24 15:52:46 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10855,3 +10855,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated cross/mingw-w64-x86_64-headers-msvcrt to 14.0.0 [js 2026-10-24]
 	Added devel/ocaml-dune-site version 3.23.1 [alnsn 2026-10-24]
 	Added devel/ocaml-integers version 0.7.0 [alnsn 2026-10-24]
+	Updated misc/ascii to 3.33 [drixter 2026-10-24]
