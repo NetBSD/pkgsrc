@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2026/10/08 13:56:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.77 2026/10/24 22:15:25 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -295,6 +295,9 @@ ${PYSITELIB}/synapse/config/sso.pyo
 ${PYSITELIB}/synapse/config/stats.py
 ${PYSITELIB}/synapse/config/stats.pyc
 ${PYSITELIB}/synapse/config/stats.pyo
+${PYSITELIB}/synapse/config/task_scheduler.py
+${PYSITELIB}/synapse/config/task_scheduler.pyc
+${PYSITELIB}/synapse/config/task_scheduler.pyo
 ${PYSITELIB}/synapse/config/third_party_event_rules.py
 ${PYSITELIB}/synapse/config/third_party_event_rules.pyc
 ${PYSITELIB}/synapse/config/third_party_event_rules.pyo
@@ -2044,6 +2047,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/94/07_sliding_sync_lazy_members_p
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/08_device_lists_changes_in_room_unconverted_idx.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/09_e2e_cross_signing_signatures_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/94/10_e2e_cross_signing_signatures_add_key_id_to_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/94/11_destination_room_sticky_events.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -2088,7 +2092,7 @@ ${PYSITELIB}/synapse/streams/config.pyo
 ${PYSITELIB}/synapse/streams/events.py
 ${PYSITELIB}/synapse/streams/events.pyc
 ${PYSITELIB}/synapse/streams/events.pyo
-${PYSITELIB}/synapse/synapse_rust.abi3.so
+${PYSITELIB}/synapse/synapse_rust.${PYSTABLEABI}.so
 ${PYSITELIB}/synapse/synapse_rust/__init__.pyi
 ${PYSITELIB}/synapse/synapse_rust/acl.pyi
 ${PYSITELIB}/synapse/synapse_rust/events.pyi
