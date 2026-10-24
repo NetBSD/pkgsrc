@@ -1,4 +1,4 @@
-$NetBSD: patch-.._vendor_wide-0.7.33_src_u8x16__.rs,v 1.1 2025/12/08 12:40:17 adam Exp $
+$NetBSD: patch-.._vendor_wide-0.7.33_src_u8x16__.rs,v 1.2 2026/10/24 19:12:37 he Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
@@ -112,3 +112,30 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vqsubq_u8(self.neon, rhs.neon) } }
        } else {
          Self { arr: [
+@@ -477,7 +477,7 @@ impl u8x16 {
+             u8x16 { sse: unpack_low_i8_m128i(lhs.sse, rhs.sse) }
+         } else if #[cfg(target_feature = "simd128")] {
+           u8x16 { simd: u8x16_shuffle::<0, 16, 1, 17, 2, 18, 3, 19, 4, 20, 5, 21, 6, 22, 7, 23>(lhs.simd, rhs.simd) }
+-        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64"))] {
++        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64", target_endian = "little"))] {
+             let lhs = unsafe { vget_low_u8(lhs.neon) };
+             let rhs = unsafe { vget_low_u8(rhs.neon) };
+ 
+@@ -507,7 +507,7 @@ impl u8x16 {
+             u8x16 { sse: unpack_high_i8_m128i(lhs.sse, rhs.sse) }
+         } else if #[cfg(target_feature = "simd128")] {
+             u8x16 { simd: u8x16_shuffle::<8, 24, 9, 25, 10, 26, 11, 27, 12, 28, 13, 29, 14, 30, 15, 31>(lhs.simd, rhs.simd) }
+-        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64"))] {
++        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64", target_endian = "little"))] {
+             let lhs = unsafe { vget_high_u8(lhs.neon) };
+             let rhs = unsafe { vget_high_u8(rhs.neon) };
+ 
+@@ -537,7 +537,7 @@ impl u8x16 {
+             u8x16 { sse: pack_i16_to_u8_m128i(lhs.sse, rhs.sse) }
+         } else if #[cfg(target_feature = "simd128")] {
+             u8x16 { simd: u8x16_narrow_i16x8(lhs.simd, rhs.simd) }
+-        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64"))] {
++        } else if #[cfg(all(target_feature = "neon", target_arch = "aarch64", target_endian = "little"))] {
+             let lhs = unsafe { vqmovun_s16(lhs.neon) };
+             let rhs = unsafe { vqmovun_s16(rhs.neon) };
+             u8x16 { neon: unsafe { vcombine_u8(lhs, rhs) } }

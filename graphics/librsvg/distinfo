@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2026/09/23 12:43:04 adam Exp $
+$NetBSD: distinfo,v 1.76 2026/10/24 19:12:37 he Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -1090,7 +1090,7 @@ SHA1 (patch-.._vendor_wide-0.7.33_src_i8x16__.rs) = ad5f686af9ffb21eeae70db5f0a2
 SHA1 (patch-.._vendor_wide-0.7.33_src_u16x8__.rs) = 00d9c69a40c5ce6c6caf7ee36856fcb9e69643da
 SHA1 (patch-.._vendor_wide-0.7.33_src_u32x4__.rs) = 6ef1a165bb39bb39a437b72d037469f75b073a28
 SHA1 (patch-.._vendor_wide-0.7.33_src_u64x2__.rs) = 6d779112842a67507cd2969aca55287fecbc3f24
-SHA1 (patch-.._vendor_wide-0.7.33_src_u8x16__.rs) = 72729f072dcf8bbf1524606cf066f82bdda6f15d
+SHA1 (patch-.._vendor_wide-0.7.33_src_u8x16__.rs) = 96375e175f8420af9bf2327114cb17ec10c438d7
 SHA1 (patch-.._vendor_zune-jpeg-0.5.13_src_idct.rs) = de42940dcbfd5fee44eb42c0315070b34726f05f
 SHA1 (patch-.._vendor_zune-jpeg-0.5.13_src_unsafe__utils.rs) = 0f6b93067186b4daf8f1fc32135d551f7fd72a84
 SHA1 (patch-.._vendor_zune-jpeg-0.5.13_src_unsafe__utils__neon.rs) = 201deb50af81144505a8316ddb5f9a3bcc2cc3e1
