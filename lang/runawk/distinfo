@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:51:54 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/10/24 11:01:52 cheusov Exp $
 
-BLAKE2s (runawk-1.6.1.tar.gz) = fcd81aec9c118aafd84b3bcfb5734ce25c66f1dc143305950b912760eb1b5fe2
-SHA512 (runawk-1.6.1.tar.gz) = dc795db815454af842523c35afd5b84dff460c3c53dfec21d400bcf74395ffed1d664c23ba5b8a8901b8709fc4fea55b6e1de4e1d024e1a4ccdcdeeec199b0c0
-Size (runawk-1.6.1.tar.gz) = 77351 bytes
+BLAKE2s (runawk-1.6.2.tar.gz) = 3b4ce77f9db4fb2e8103d14187f24f596491a50542ac60e15c1c4b8f0b74a811
+SHA512 (runawk-1.6.2.tar.gz) = 93cb5c680e10d9c456001056622cbe3d2da84a8fa588cbc4c626e0325c73654db9b6e0243d12246b582a5f5256b76b793ac26fce3f079b33d459f20b62707990
+Size (runawk-1.6.2.tar.gz) = 71060 bytes
