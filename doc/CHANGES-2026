@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7248 2026/10/24 19:03:10 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7249 2026/10/24 19:04:58 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10874,3 +10874,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ocaml-ctypes version 0.21.1 [alnsn 2026-10-24]
 	Added textproc/ocaml-yaml version 3.2.0 [alnsn 2026-10-24]
 	Updated www/logswan to 2.1.17 [drixter 2026-10-24]
+	Added devel/ocaml-unionfind version 20220122 [alnsn 2026-10-24]
