@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 18:08:25 alnsn Exp $
+
+BLAKE2s (yaml-3.2.0.tbz) = 978244293ee910b74ee255dd71f63aae21ce29f19dbfdf6d52705b0c2e42d355
+SHA512 (yaml-3.2.0.tbz) = e87ae73f3e376800a09e4359d5c7090ef5107807f540b51fbdee9017bcbacb2414ec12255b37caead115ea1562303436cac2c91c60814c2ba44bdd3d677fc0d1
+Size (yaml-3.2.0.tbz) = 70548 bytes
