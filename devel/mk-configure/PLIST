@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/05/24 14:31:05 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/10/24 10:42:03 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -186,6 +186,11 @@ share/examples/mk-configure/efun/Makefile
 share/examples/mk-configure/efun/expect.out
 share/examples/mk-configure/efun/prog.c
 share/examples/mk-configure/efun/test.mk
+share/examples/mk-configure/efun2/Makefile
+share/examples/mk-configure/efun2/cprog.c
+share/examples/mk-configure/efun2/cxxprog.cc
+share/examples/mk-configure/efun2/expect.out
+share/examples/mk-configure/efun2/test.mk
 share/examples/mk-configure/errc/Makefile
 share/examples/mk-configure/errc/expect.out
 share/examples/mk-configure/errc/prog.c
