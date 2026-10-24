@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 19:03:12 alnsn Exp $
+
+BLAKE2s (unionFind-20220122.tar.gz) = 949d5379a4d41e56ff602286f23409a7ab098f1afa6b8abfca0b97df773bf54d
+SHA512 (unionFind-20220122.tar.gz) = c49dd3f9a6689f6a5efe39c26efe2c137f8812b4be6ee76c2cc20068cf86ad73c0ac97ec9a543245dddb63792ce8c1904576b3435bf419cc7837bc5e368eee6d
+Size (unionFind-20220122.tar.gz) = 23976 bytes

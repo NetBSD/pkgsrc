@@ -1,0 +1,5 @@
+The OCaml library unionFind offers several implementations of the
+union-find data structure. All implementations are based on disjoint
+sets forests, with path compression and a balanced-linking policy,
+so as to guarantee good asymptotic complexity: every operation
+requires a quasi-constant number of accesses to the store.
