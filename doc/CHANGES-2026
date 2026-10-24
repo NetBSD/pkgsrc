@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7235 2026/10/24 17:12:07 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7236 2026/10/24 17:13:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10861,3 +10861,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-modules to 0.28.0 [pin 2026-10-24]
 	Updated devel/gitpane to 0.17.1 [pin 2026-10-24]
 	Updated devel/rust-bindgen to 0.73.2 [pin 2026-10-24]
+	Updated devel/sem to 0.28.1 [pin 2026-10-24]
