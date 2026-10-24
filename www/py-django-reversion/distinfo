@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2026/06/29 12:39:54 adam Exp $
+$NetBSD: distinfo,v 1.36 2026/10/24 10:03:13 adam Exp $
 
-BLAKE2s (django_reversion-6.3.0.tar.gz) = 7a5f471bd87457683c5627a8dc28d54fe7a45e706e786f06cd352faa25562bc1
-SHA512 (django_reversion-6.3.0.tar.gz) = a154a5675fbdce477f7660bf61ba0946b2d1d57f649d98ea6d2bbd18949c63d2315a50bcf1e59f9830e92e3d2fd0e6a89cb0e97dea46bc996fbd8a9648de481b
-Size (django_reversion-6.3.0.tar.gz) = 79028 bytes
+BLAKE2s (django_reversion-6.4.0.tar.gz) = d82e6cc3b696385a5f5b5116e2f3f77bf7bc1c7b6d837c65aaa913d39b6645a1
+SHA512 (django_reversion-6.4.0.tar.gz) = 8f0e6be69c3657c5bc9676e89e5ded021230a5808c4dff19a4fa7d5dd2c5b74aa252fe41b3faf279015b662c487812822eee8d56cb61321fced26dadb7d492b0
+Size (django_reversion-6.4.0.tar.gz) = 80991 bytes
