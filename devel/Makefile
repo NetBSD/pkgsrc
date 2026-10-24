@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4714 2026/10/24 21:15:02 alnsn Exp $
+# $NetBSD: Makefile,v 1.4715 2026/10/24 21:27:57 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1359,6 +1359,7 @@ SUBDIR+=	ocaml-ppx_custom_printf
 SUBDIR+=	ocaml-ppx_derivers
 SUBDIR+=	ocaml-ppx_deriving
 SUBDIR+=	ocaml-ppx_deriving_yaml
+SUBDIR+=	ocaml-ppx_deriving_yojson
 SUBDIR+=	ocaml-ppx_disable_unused_warnings
 SUBDIR+=	ocaml-ppx_enumerate
 SUBDIR+=	ocaml-ppx_expect
