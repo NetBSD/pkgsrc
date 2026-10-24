@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7232 2026/10/24 17:08:34 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7233 2026/10/24 17:09:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10858,3 +10858,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ascii to 3.33 [drixter 2026-10-24]
 	Updated sysutils/smartmontools to 7.5 [drixter 2026-10-24]
 	Updated audio/sptui to 0.1.4 [pin 2026-10-24]
+	Updated devel/cargo-modules to 0.28.0 [pin 2026-10-24]
