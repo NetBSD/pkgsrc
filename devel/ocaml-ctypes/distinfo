@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/24 17:25:39 alnsn Exp $
+
+BLAKE2s (ctypes-0.21.1.tar.gz) = 0a61cf1f4986a010cc357cf3bf3cbfc7c5a0eac61f035620daa7636a32ecc1e4
+SHA512 (ctypes-0.21.1.tar.gz) = 3a64b29746360e7dda7725ce7af23ca64cd6a3fa585aa70188cdd143aace744f44c1bd13cdda5c9733ca53d4b874ed42749ca21aaff4f4d53636a390a2c7f94f
+Size (ctypes-0.21.1.tar.gz) = 200264 bytes

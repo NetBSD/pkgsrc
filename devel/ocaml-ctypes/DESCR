@@ -1,0 +1,3 @@
+OCaml ctypes is a library for binding to C libraries using
+pure OCaml. The primary aim is to make writing C extensions
+as straightforward as possible.
