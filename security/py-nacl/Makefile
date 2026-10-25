@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2026/01/06 12:22:01 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/25 13:30:19 wiz Exp $
 
 DISTNAME=	pynacl-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNaCl/}
 

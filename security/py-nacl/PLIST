@@ -1,15 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2026/01/06 12:22:01 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/LICENSE.libsodium.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2026/10/25 13:30:19 wiz Exp $
 ${PYSITELIB}/nacl/__init__.py
 ${PYSITELIB}/nacl/__init__.pyc
 ${PYSITELIB}/nacl/__init__.pyo
-${PLIST.py3x}${PYSITELIB}/nacl/_sodium.abi3.so
-${PLIST.py2x}${PYSITELIB}/nacl/_sodium.so
+${PYSITELIB}/nacl/_sodium.so
 ${PYSITELIB}/nacl/bindings/__init__.py
 ${PYSITELIB}/nacl/bindings/__init__.pyc
 ${PYSITELIB}/nacl/bindings/__init__.pyo
@@ -98,3 +91,9 @@ ${PYSITELIB}/nacl/signing.pyo
 ${PYSITELIB}/nacl/utils.py
 ${PYSITELIB}/nacl/utils.pyc
 ${PYSITELIB}/nacl/utils.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/LICENSE.libsodium.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
