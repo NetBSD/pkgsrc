@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/10/25 09:14:58 js Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/25 12:38:47 js Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,7 +10,8 @@ ${PYSITELIB}/brotlicffi/__init__.pyo
 ${PYSITELIB}/brotlicffi/_api.py
 ${PYSITELIB}/brotlicffi/_api.pyc
 ${PYSITELIB}/brotlicffi/_api.pyo
-${PYSITELIB}/brotlicffi/_brotlicffi.abi3.so
+${PLIST.not_darwin}${PYSITELIB}/brotlicffi/_brotlicffi.abi3.so
+${PLIST.darwin}${PYSITELIB}/brotlicffi/_brotlicffi.abi3-darwin.so
 ${PYSITELIB}/brotlicffi/_build.py
 ${PYSITELIB}/brotlicffi/_build.pyc
 ${PYSITELIB}/brotlicffi/_build.pyo
