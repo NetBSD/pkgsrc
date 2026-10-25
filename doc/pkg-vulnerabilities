@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.807 2026/10/22 16:27:25 spz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.808 2026/10/25 15:17:32 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30480,3 +30480,14 @@ php84<8.4.27	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109
 php84<8.4.27	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
 php85<8.5.12	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
 php85<8.5.12	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+ruby33<3.3.13	double-free	https://www.cve.org/CVERecord?id=CVE-2026-89078
+ruby33<3.3.13	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-93577
+ruby33<3.3.13	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-97229
+ruby33<3.3.13	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-110264
+ruby34<3.4.12	double-free	https://www.cve.org/CVERecord?id=CVE-2026-89078
+ruby34<3.4.12	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-93577
+ruby34<3.4.12	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-97229
+ruby34<3.4.12	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-110264
+ruby40<4.0.8	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-93577
+ruby40<4.0.8	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-97229
+ruby40<4.0.9	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-110264
