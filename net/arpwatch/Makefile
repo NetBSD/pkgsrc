@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2026/10/25 15:27:12 taca Exp $
 #
 
 DISTNAME=	arpwatch-2.1a15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Monitor ARP activity on a network, maintaining a database
+#LICENSE=	original-bsd
 
 RCD_SCRIPTS=	arpwatch
 
@@ -15,6 +16,8 @@ GNU_CONFIGURE=	yes
 
 CFLAGS.Darwin+=	-DBIND_8_COMPAT
 LIBS+=		${BUILDLINK_LDADD.libpcap}
+
+BUILD_DEFS+=	VARBASE
 
 MAKE_ENV+=	VARBASE=${VARBASE:Q}
 PLIST_SUBST+=	VARBASE=${VARBASE:Q}
@@ -25,16 +28,17 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	arpsnmp.8 arpwatch.8
 SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
 
+SUBST_CLASSES+=		rcs
+SUBST_MESSAGE.rcs=	Disable rcs id
+SUBST_STAGE.rcs=	post-extract
+SUBST_FILES.rcs=	arpwatch.h
+SUBST_SED.rcs=		-e '/Id/s|\$$||g'
+
 OWN_DIRS=	${VARBASE:Q}/db/arpwatch
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/arpwatch share/arpwatch
 
 CONF_FILES+=	/dev/null ${VARBASE}/db/arpwatch/arp.dat
-
-pre-patch:
-	f=arpwatch.h;							\
-	${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;			\
-	${SED} -e '/Header/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8

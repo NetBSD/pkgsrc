@@ -1,8 +1,11 @@
-$NetBSD: patch-ae,v 1.5 2005/12/05 20:50:44 rillig Exp $
+$NetBSD: patch-ae,v 1.6 2026/10/25 15:27:12 taca Exp $
 
---- report.c.orig	2000-10-01 01:41:10.000000000 +0200
-+++ report.c	2005-10-25 13:07:21.000000000 +0200
-@@ -70,6 +70,8 @@
+* Use watcher specified by -m option if available.
+* Pass correct type to ctype(3) function.
+
+--- report.c.orig	2000-09-30 23:41:10.000000000 +0000
++++ report.c
+@@ -70,6 +70,8 @@ struct rtentry;
  
  #define PLURAL(n) ((n) == 1 || (n) == -1 ? "" : "s")
  
@@ -11,7 +14,7 @@ $NetBSD: patch-ae,v 1.5 2005/12/05 20:50:44 rillig Exp $
  static int cdepth;	/* number of outstanding children */
  
  static char *fmtdate(time_t);
-@@ -240,7 +242,7 @@
+@@ -240,7 +242,7 @@ report(register char *title, register u_
  	register FILE *f;
  	char tempfile[64], cpu[64], os[64];
  	char *fmt = "%20s: %s\n";
@@ -20,3 +23,12 @@ $NetBSD: patch-ae,v 1.5 2005/12/05 20:50:44 rillig Exp $
  	char *watchee = WATCHEE;
  	char *sendmail = PATH_SENDMAIL;
  	char *unknown = "<unknown>";
+@@ -303,7 +305,7 @@ report(register char *title, register u_
+ 	(void)fprintf(f, "From: %s\n", watchee);
+ 	(void)fprintf(f, "To: %s\n", watcher);
+ 	hn = gethname(a);
+-	if (!isdigit(*hn))
++	if (!isdigit((unsigned char)*hn))
+ 		(void)fprintf(f, "Subject: %s (%s)\n", title, hn);
+ 	else {
+ 		(void)fprintf(f, "Subject: %s\n", title);
