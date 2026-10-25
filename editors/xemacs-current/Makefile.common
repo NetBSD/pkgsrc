@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2026/10/06 09:31:11 hauke Exp $
+# $NetBSD: Makefile.common,v 1.25 2026/10/25 15:43:55 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -34,7 +34,7 @@ SUBST_SED.xescript=	-e "s,^\#!/usr/bin/env.*,\#!${PREFIX}/bin/xemacs-script,"
 # Having the build path in the dumped emacs is not a problem.
 CHECK_WRKREF_SKIP+=	bin/xemacs*
 CHECK_WRKREF_SKIP+=	lib/xemacs-*/xemacs*.dmp
-CHECK_WRKREF_SKIP+=	lib/xemacs-${EMACSVERSION}/x86_64--netbsd/config.values
+CHECK_WRKREF_SKIP+=	lib/xemacs-${EMACSVERSION}/*/config.values
 
 PRINT_PLIST_AWK+=	{ gsub(/${EMACS_DISTNAME}/, "$${DISTNAME}"); }
 PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
