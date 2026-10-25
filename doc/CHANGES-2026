@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7260 2026/10/25 09:01:19 cheusov Exp $
+$NetBSD: CHANGES-2026,v 1.7261 2026/10/25 09:51:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10893,3 +10893,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/openldap to 2.7.2 [adam 2026-10-25]
 	Updated databases/lmdb to 1.0.3 [adam 2026-10-25]
 	Updated pkgtools/distbb to 0.49.1 [cheusov 2026-10-25]
+	Updated www/p5-HTTP-Headers-ActionPack to 0.10 [wiz 2026-10-25]
