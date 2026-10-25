@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7287 2026/10/25 16:43:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7288 2026/10/25 17:41:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10922,3 +10922,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-aiohttp-remotes to 1.4.0 [wiz 2026-10-25]
 	Updated converters/py-bidi to 0.6.12 [adam 2026-10-25]
 	Updated devel/py-blessed to 1.52.0 [adam 2026-10-25]
+	Updated archivers/py-brotlicffi to 1.2.1.0nb1 [wiz 2026-10-25]
