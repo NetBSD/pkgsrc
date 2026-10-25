@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7257 2026/10/25 01:45:24 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7258 2026/10/25 06:02:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10885,3 +10885,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/dose3 to version 7.0.0 [alnsn 2026-10-25]
 	Updated devel/ocaml-ppxlib to version 0.33.0 [alnsn 2026-10-25]
 	Updated devel/ocaml-ppx_deriving to version 6.0.3 [alnsn 2026-10-25]
+	Updated devel/sccache to 0.19.0 [adam 2026-10-25]
+	Updated graphics/py-objgraph to 3.7.0 [adam 2026-10-25]
+	Updated databases/py-multidict to 7.2.1 [adam 2026-10-25]
+	Updated devel/py-wcwidth to 0.9.4 [adam 2026-10-25]
