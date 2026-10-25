@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/10/25 12:53:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/25 13:18:22 ktnb Exp $
 
 DISTNAME=	brotlicffi-1.2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,12 +21,10 @@ PLIST_VARS+=		darwin not_darwin
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYTHON_VERSION} > 314
-.  if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" && ${PYTHON_VERSION} > 314
 PLIST.darwin=		yes
-.  else
+.else
 PLIST.not_darwin=	yes
-.  endif
 .endif
 
 # tests need libbrotli sources in ${WRKSRC}/libbrotli
