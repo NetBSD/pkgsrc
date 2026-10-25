@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7284 2026/10/25 14:36:10 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7285 2026/10/25 15:27:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10918,3 +10918,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby40 to 4.0.9 [taca 2026-10-25]
 	Updated lang/ruby34 to 3.4.12 [taca 2026-10-25]
 	Updated lang/ruby33 to 3.3.13 [taca 2026-10-25]
+	Updated net/arpwatch to 2.1a15nb5 [taca 2026-10-25]
