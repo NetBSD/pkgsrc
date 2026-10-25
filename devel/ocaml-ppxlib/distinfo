@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/05/02 15:04:06 jaapb Exp $
+$NetBSD: distinfo,v 1.10 2026/10/25 01:31:12 alnsn Exp $
 
-BLAKE2s (ppxlib-0.26.0.tar.gz) = 330ee6e9bfc60903c80c320484da855645ff664339a41a6b0a87cd355cc15288
-SHA512 (ppxlib-0.26.0.tar.gz) = 5cabfd1f97620e9d0c6bd8ee186f81dfdd69988c37c7adc460bf20b4255e80c88b13e3f1a620bbc12cbc8005400f73cb86e91c36a5cccc5de8281d33a0441c46
-Size (ppxlib-0.26.0.tar.gz) = 393944 bytes
+BLAKE2s (ppxlib-0.33.0.tar.gz) = 2b92ab155c207725c5c1d47f4794e4b8b3e8db44f321850484c626b8358a66a2
+SHA512 (ppxlib-0.33.0.tar.gz) = 8437ed1e7616deb371b50a4ca11cb3d50a294a722b64d7732808321d312aa212d9433bedc4a66ea3a4ebbfeed1ab6f739470b99a01991ac56279cea151b2ded8
+Size (ppxlib-0.33.0.tar.gz) = 638136 bytes
