@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/10/25 02:13:17 alnsn Exp $
+$NetBSD: distinfo,v 1.8 2026/10/25 12:51:23 alnsn Exp $
 
-BLAKE2s (ppx_inline_test-0.15.0.tar.gz) = d325cc9f7994d0d1e6c3b838c98027a7a4c0044d8ca2bd2ba1d352c259487775
-SHA512 (ppx_inline_test-0.15.0.tar.gz) = 04ea3bc4fc86881d8df50340d5684b8167063293cf0eb0b2c041a6416897d878df22422ea0b8171533dfbe741d5df53a4a9d250370e36a6c7a0a27816b9d3abe
-Size (ppx_inline_test-0.15.0.tar.gz) = 20733 bytes
-SHA1 (patch-src_ppx__inline__test.ml) = b285636a4e1b764b966071f037e88ab4f2f623a7
+BLAKE2s (ppx_inline_test-0.15.1.tar.gz) = be8882e26307017d58f38f395ea33ba547dffeb3d82da91575d7b050750bdd2e
+SHA512 (ppx_inline_test-0.15.1.tar.gz) = 27dd4a4b9f0e8f7b22a7de4016ab0b8733e1ad4fe9e9e19cd98d321c071dd8662830a4e83579a2595d53b0a47c2ba03c1165df95312d6effc46c8aa13c0324b6
+Size (ppx_inline_test-0.15.1.tar.gz) = 20717 bytes
