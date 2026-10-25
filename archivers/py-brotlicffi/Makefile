@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/10/19 14:50:52 ktnb Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/25 12:53:32 wiz Exp $
 
-DISTNAME=	brotlicffi-1.2.0.2
+DISTNAME=	brotlicffi-1.2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotlicffi/}
@@ -19,10 +19,14 @@ MAKE_ENV+=	USE_SHARED_BROTLI=1
 
 PLIST_VARS+=		darwin not_darwin
 
-.if ${OPSYS} == "Darwin"
-PLIST.darwin=	yes
-.else
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 314
+.  if ${OPSYS} == "Darwin"
+PLIST.darwin=		yes
+.  else
 PLIST.not_darwin=	yes
+.  endif
 .endif
 
 # tests need libbrotli sources in ${WRKSRC}/libbrotli
