@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7269 2026/10/25 10:39:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7270 2026/10/25 10:44:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10902,3 +10902,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/serie to 0.10.1 [pin 2026-10-25]
 	Updated news/tuifeed to 0.4.2nb1 [pin 2026-10-25]
 	Updated converters/p5-Sereal to 5.011 [wiz 2026-10-25]
+	Updated www/p5-URI to 5.40 [wiz 2026-10-25]
