@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/10 13:00:08 pin Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/25 13:52:47 pin Exp $
 
 DISTNAME=	cargo-licenses-0.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/cargo-licenses/
 EXTRACT_SUFX=	.crate
