@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7275 2026/10/25 12:55:58 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7276 2026/10/25 13:11:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10909,3 +10909,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/py-brotlicffi to 1.2.1.0 [wiz 2026-10-25]
 	Updated devel/ocaml-ppx_bench to 0.15.1 [alnsn 2026-10-25]
 	Updated devel/ocaml-ppx_inline_test to 0.15.1 [alnsn 2026-10-25]
+	Updated textproc/py-pdf to 6.21.2 [wiz 2026-10-25]
