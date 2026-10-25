@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/10/25 01:43:01 alnsn Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/25 02:13:17 alnsn Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	ppx_inline_test
