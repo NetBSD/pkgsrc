@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2026/09/09 09:44:39 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/25 07:12:34 adam Exp $
 
 .include "../../databases/openldap/Makefile.version"
 
 # get the version from libraries/liblmdb/lmdb.h
-PKGNAME=	lmdb-1.0.2
+PKGNAME=	lmdb-1.0.3
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
