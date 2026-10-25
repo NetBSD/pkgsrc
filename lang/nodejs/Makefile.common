@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2026/07/03 14:11:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.66.2.1 2026/10/25 09:16:50 bsiegert Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs22/Makefile
 # used by lang/nodejs24/Makefile
@@ -45,14 +45,14 @@ CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 .endif
 
 # see patch-configure.py and patch-tools_gyp_pylib_gyp_input.py
-TOOL_DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TOOL_DEPENDS+=		${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 
 REPLACE_NODEJS+=	deps/npm/bin/*.js
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
 
 .if ${OPSYS} == "NetBSD"
-TOOL_DEPENDS+=		lockf-[0-9]*:../../sysutils/lockf
+TOOL_DEPENDS+=		lockf>=0:../../sysutils/lockf
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
@@ -85,6 +85,7 @@ paxctl:
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+BUILDLINK_API_DEPENDS.brotli+=	brotli>=1.2.1
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.49

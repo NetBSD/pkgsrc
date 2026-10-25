@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/10/29 18:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.13.8.1 2026/10/25 09:16:50 bsiegert Exp $
 
-DISTNAME=	brotli-1.2.0
+DISTNAME=	brotli-1.2.1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
