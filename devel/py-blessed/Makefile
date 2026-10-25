@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/09/30 07:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/25 16:43:26 adam Exp $
 
-DISTNAME=	blessed-1.50.0
+DISTNAME=	blessed-1.52.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blessed/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-jinxed>=2.1:../../devel/py-jinxed
-DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.8.3:../../devel/py-wcwidth
+DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.9.2:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
