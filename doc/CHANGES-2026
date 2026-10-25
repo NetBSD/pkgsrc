@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7274 2026/10/25 12:53:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7275 2026/10/25 12:55:58 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10907,3 +10907,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated pkgtools/pkg_summary-utils to 0.70.0 [cheusov 2026-10-25]
 	Updated time/py-dateutil to 3.0.0 [wiz 2026-10-25]
 	Updated archivers/py-brotlicffi to 1.2.1.0 [wiz 2026-10-25]
+	Updated devel/ocaml-ppx_bench to 0.15.1 [alnsn 2026-10-25]
+	Updated devel/ocaml-ppx_inline_test to 0.15.1 [alnsn 2026-10-25]
