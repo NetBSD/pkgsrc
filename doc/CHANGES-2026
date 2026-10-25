@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7272 2026/10/25 12:07:01 cheusov Exp $
+$NetBSD: CHANGES-2026,v 1.7273 2026/10/25 12:50:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10905,3 +10905,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-URI to 5.40 [wiz 2026-10-25]
 	Updated pkgtools/nih to 0.17.0 [cheusov 2026-10-25]
 	Updated pkgtools/pkg_summary-utils to 0.70.0 [cheusov 2026-10-25]
+	Updated time/py-dateutil to 3.0.0 [wiz 2026-10-25]
