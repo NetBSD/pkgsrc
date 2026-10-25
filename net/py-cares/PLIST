@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/07/13 06:20:09 kim Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/25 17:51:44 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,7 +10,7 @@ ${PYSITELIB}/pycares/__init__.pyo
 ${PYSITELIB}/pycares/__main__.py
 ${PYSITELIB}/pycares/__main__.pyc
 ${PYSITELIB}/pycares/__main__.pyo
-${PYSITELIB}/pycares/_cares.abi3.so
+${PYSITELIB}/pycares/_cares.so
 ${PYSITELIB}/pycares/_version.py
 ${PYSITELIB}/pycares/_version.pyc
 ${PYSITELIB}/pycares/_version.pyo
