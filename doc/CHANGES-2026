@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7263 2026/10/25 10:07:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7264 2026/10/25 10:10:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10896,3 +10896,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/p5-HTTP-Headers-ActionPack to 0.10 [wiz 2026-10-25]
 	Updated devel/p5-Future to 0.54 [wiz 2026-10-25]
 	Updated net/p5-Net to 3.16 [wiz 2026-10-25]
+	Updated converters/p5-Sereal-Decoder to 5.011 [wiz 2026-10-25]
