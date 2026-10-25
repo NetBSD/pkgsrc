@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2024/06/15 09:38:55 cheusov Exp $
+$NetBSD: distinfo,v 1.30 2026/10/25 12:06:48 cheusov Exp $
 
-BLAKE2s (pkg_summary-utils-0.69.0.tar.gz) = 933b7e473af0c03b7b11e238cf06d4b62fcead63058459998cd3bc853e9a5d9e
-SHA512 (pkg_summary-utils-0.69.0.tar.gz) = 7dddb7539c7201be79b716659114745d9571c5785f72d460172ef8a8cbc07f2e4da79360b5ba1de0524b4f201a8088b2c4e0dd9a4aabac194944d7c2f9f1c1fa
-Size (pkg_summary-utils-0.69.0.tar.gz) = 126229 bytes
+BLAKE2s (pkg_summary-utils-0.70.0.tar.gz) = 49bef86d8abd8a3e233e16fa56e7f7178ea1372a31d3fb534f562f76cafedfc8
+SHA512 (pkg_summary-utils-0.70.0.tar.gz) = 75019cf0463df9db06b58ff5f5084c4d8b2e4a710c6b38684478fde1e29599d7b686bf3243715a07f858d9b4be8a4e5664615c0ed180d7734e5772820253d2a1
+Size (pkg_summary-utils-0.70.0.tar.gz) = 127205 bytes
