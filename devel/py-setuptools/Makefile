@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.278 2026/08/09 17:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2026/10/25 13:38:46 wiz Exp $
 
-DISTNAME=	setuptools-84.0.0
+DISTNAME=	setuptools-84.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -37,6 +37,8 @@ TEST_ENV+=	PYTHONPATH=${WRKSRC}
 
 # as of 84.0.0 (make sure previous version is not installed by test dependency)
 # 1006 passed, 31 skipped, 13 xfailed, 3 xpassed
+# as of 84.2.1
+# 294 failed, 890 passed, 33 skipped, 13 xfailed, 2 xpassed, 3 errors
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif

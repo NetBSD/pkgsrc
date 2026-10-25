@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.109 2026/08/09 17:06:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.110 2026/10/25 13:38:46 wiz Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -408,14 +408,14 @@ ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyc
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyi
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyo
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/INSTALLER
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/METADATA
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/RECORD
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/REQUESTED
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/WHEEL
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE
-${PYSITELIB}/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/INSTALLER
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/METADATA
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/RECORD
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/REQUESTED
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/WHEEL
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.APACHE
+${PYSITELIB}/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.BSD
 ${PYSITELIB}/setuptools/_vendor/packaging/__init__.py
 ${PYSITELIB}/setuptools/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/__init__.pyo
@@ -431,12 +431,24 @@ ${PYSITELIB}/setuptools/_vendor/packaging/_musllinux.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/_parser.py
 ${PYSITELIB}/setuptools/_vendor/packaging/_parser.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/_parser.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/_ranges.py
+${PYSITELIB}/setuptools/_vendor/packaging/_ranges.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/_ranges.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/_structures.py
 ${PYSITELIB}/setuptools/_vendor/packaging/_structures.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/_tokenizer.py
 ${PYSITELIB}/setuptools/_vendor/packaging/_tokenizer.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/_tokenizer.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/dependency_groups.py
+${PYSITELIB}/setuptools/_vendor/packaging/dependency_groups.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/dependency_groups.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/direct_url.py
+${PYSITELIB}/setuptools/_vendor/packaging/direct_url.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/direct_url.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/errors.py
+${PYSITELIB}/setuptools/_vendor/packaging/errors.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/errors.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/licenses/__init__.py
 ${PYSITELIB}/setuptools/_vendor/packaging/licenses/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/licenses/__init__.pyo
@@ -453,6 +465,9 @@ ${PYSITELIB}/setuptools/_vendor/packaging/py.typed
 ${PYSITELIB}/setuptools/_vendor/packaging/pylock.py
 ${PYSITELIB}/setuptools/_vendor/packaging/pylock.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/pylock.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/ranges.py
+${PYSITELIB}/setuptools/_vendor/packaging/ranges.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/ranges.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/requirements.py
 ${PYSITELIB}/setuptools/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/requirements.pyo
