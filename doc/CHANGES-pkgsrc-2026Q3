@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.4 2026/10/03 19:47:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.5 2026/10/25 09:17:42 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -49,4 +49,16 @@ security/openssl: security fix
 
 Pullup ticket #7264 - requested by taca
 www/apache24: security fix
+
+Pullup ticket #7316 - requested by nia
+www/basilisk: security fix (compromised certificates)
+
+Pullup ticket #7318 - requested by nia
+www/palemoon: security fix (compromised certificates)
+
+Pullup ticket #7322 - requested by maya
+archivers/brotli: security fix
+lang/nodejs: security fix
+lang/nodejs22: security fix
+lang/nodejs24: security fix
 
