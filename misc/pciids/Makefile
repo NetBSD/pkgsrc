@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2020/02/22 19:48:39 sevan Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/25 20:46:22 drixter Exp $
 
 DISTNAME=	pci.ids
-PKGNAME=	pciids-20200222
+PKGNAME=	pciids-20261024
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pciutils/}
-GITHUB_PROJECT= 	pciids
-GITHUB_TAG= 	738f0c156f6ae0085b9b695fb3064437d28a3db1
+GITHUB_PROJECT=	pciids
+GITHUB_TAG=	fe7fceb2e1153d495e1deefacf59c5d61c36ef8e
 
-MAINTAINER=	mark@coris.org.uk
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://pci-ids.ucw.cz/
 COMMENT=	Repository of PCI IDs (pci.ids database)
 LICENSE=	modified-bsd OR gnu-gpl-v2
