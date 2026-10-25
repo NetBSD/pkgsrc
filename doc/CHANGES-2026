@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7281 2026/10/25 14:08:33 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7282 2026/10/25 14:26:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10915,3 +10915,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-setuptools to 84.2.1 [wiz 2026-10-25]
 	Updated devel/cargo-licenses to 0.2.0nb1 [pin 2026-10-25]
 	Updated lang/akku to 1.2.0 [ktnb 2026-10-25]
+	Updated lang/ruby40 to 4.0.9 [taca 2026-10-25]
