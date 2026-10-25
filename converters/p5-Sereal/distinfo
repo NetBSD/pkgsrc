@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/10/05 07:56:39 wiz Exp $
+$NetBSD: distinfo,v 1.18 2026/10/25 10:39:41 wiz Exp $
 
-BLAKE2s (Sereal-5.010.tar.gz) = f80917f17ca9b679355bab87031adc83d2eb84fe7028c7cd0bf4a8f1b637cfca
-SHA512 (Sereal-5.010.tar.gz) = 42e6042edfeaac9bfec87b9c2f762f2028a0a15df0fbc30958b590acae0ab1ad94b0e037e13740ece23b87a3b9145341cf26c7f5b2636a24dd0635f114e24afe
-Size (Sereal-5.010.tar.gz) = 200206 bytes
+BLAKE2s (Sereal-5.011.tar.gz) = 89db26dc5bf70b1136e99435f0d265cecf78c738ae8532185cbd758f23162822
+SHA512 (Sereal-5.011.tar.gz) = bcdc14c6dfab48e8d62f9f065da530f35d681fbb3543156552fc24477b9880afa3c8ab098c93464b244b922d9117e678eeda29a1e7385d3547037aec560fe2da
+Size (Sereal-5.011.tar.gz) = 200368 bytes
