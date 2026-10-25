@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7259 2026/10/25 07:13:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7260 2026/10/25 09:01:19 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10892,3 +10892,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/samba4 to 4.25.1 [adam 2026-10-25]
 	Updated databases/openldap to 2.7.2 [adam 2026-10-25]
 	Updated databases/lmdb to 1.0.3 [adam 2026-10-25]
+	Updated pkgtools/distbb to 0.49.1 [cheusov 2026-10-25]
