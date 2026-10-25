@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7286 2026/10/25 15:52:31 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7287 2026/10/25 16:43:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10920,3 +10920,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/ruby33 to 3.3.13 [taca 2026-10-25]
 	Updated net/arpwatch to 2.1a15nb5 [taca 2026-10-25]
 	Updated www/py-aiohttp-remotes to 1.4.0 [wiz 2026-10-25]
+	Updated converters/py-bidi to 0.6.12 [adam 2026-10-25]
+	Updated devel/py-blessed to 1.52.0 [adam 2026-10-25]
