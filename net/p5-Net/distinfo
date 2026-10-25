@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2023/05/20 07:05:45 wiz Exp $
+$NetBSD: distinfo,v 1.31 2026/10/25 10:07:02 wiz Exp $
 
-BLAKE2s (libnet-3.15.tar.gz) = e3b875f3a54d7f44570a090b5fe840f00ed88fca4b26422031d92edc9468e356
-SHA512 (libnet-3.15.tar.gz) = 8ae71a32e350b73d97eed87f51507e7c88fb37501b66a5c118cee894de664e6728444950dc32a3ca4b2c4e47974b8e90b5747cceff266fda46575fd995bedcf6
-Size (libnet-3.15.tar.gz) = 95593 bytes
+BLAKE2s (libnet-3.16.tar.gz) = f50510c3e01dd1ad0a3db0cab8bef91fe2cd3a9840f5db046819181641d1deaf
+SHA512 (libnet-3.16.tar.gz) = 8e14bd3b71e181043e5f01e743b54f4335c1a983abd23453e718d5a62627e3c80bb03a6beaa24be49d8ef55cbe36175ab5f5410e747e1b56990fdfbaeaa1eaf9
+Size (libnet-3.16.tar.gz) = 100291 bytes
 SHA1 (patch-aa) = cb38ca4c56af2c8bc1b6592fc115b22bf0ae35a0
