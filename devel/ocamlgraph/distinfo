@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/10/25 00:46:16 alnsn Exp $
 
-BLAKE2s (ocamlgraph-1.8.8.tar.gz) = 6f372f3c032d89862cf14e206fc014a38b3caaf4d4a86390df22f5ebf0adffb7
-SHA512 (ocamlgraph-1.8.8.tar.gz) = ccb07d4a7fb0c3026ad2d4563e1ca0a88483ac3cf43c9378989ae5c031961853a11c9673c06b54a16733c5755d9c0a2783c5f475afdcc7692d2bf3d4778f5bc5
-Size (ocamlgraph-1.8.8.tar.gz) = 282729 bytes
-SHA1 (patch-Makefile.in) = 7b58bec3d470c709ac481cc9e4261a5f7a747117
+BLAKE2s (ocamlgraph-2.2.0.tbz) = 9302611e406d331fee533c7362116972110d3972f4466160a41d1e7a302b61e0
+SHA512 (ocamlgraph-2.2.0.tbz) = 257cdd5fb90337b3e3682cade1269c1d181f3124e569a731909f49bbfbe581ab529ac401472fb9ef57166ac34d8ebadfa6a32c93665f38f5a335982d5e5dc0e1
+Size (ocamlgraph-2.2.0.tbz) = 317929 bytes

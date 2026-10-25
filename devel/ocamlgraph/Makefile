@@ -1,41 +1,21 @@
-# $NetBSD: Makefile,v 1.80 2026/09/29 06:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/10/25 00:46:16 alnsn Exp $
 
-DISTNAME=	ocamlgraph-1.8.8
-PKGREVISION=	54
+DISTNAME=	ocamlgraph-2.2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://ocamlgraph.lri.fr/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=backtracking/}
+GITHUB_PROJECT=	ocamlgraph
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ocamlgraph.lri.fr/
+HOMEPAGE=	https://github.com/backtracking/ocamlgraph/
 COMMENT=	Graph library for OCaml
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-INSTALL_TARGET=		install-findlib
-OCAML_USE_FINDLIB=	yes
-
-.include "options.mk"
-
-MAKE_ENV+=	USE_LABLGTK="${USE_LABLGTK}"
+USE_LANGUAGES=		# none
+OCAML_USE_DUNE=		yes
+DUNE_BUILD_PACKAGES=	ocamlgraph
+OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
 
 .include "../../lang/ocaml/ocaml.mk"
-
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-MAKE_ENV+=	OCAMLBEST="opt"
-.else
-MAKE_ENV+=	OCAMLBEST="byte"
-.endif
-
-post-install:
-.if ${USE_LABLGTK} == "yes"
-.  if ${OCAML_USE_OPT_COMPILER} == "yes"
-	${INSTALL_PROGRAM} ${WRKSRC}/editor/editor.opt ${DESTDIR}${PREFIX}/bin/graph-editor
-	${INSTALL_PROGRAM} ${WRKSRC}/dgraph/dgraph.opt ${DESTDIR}${PREFIX}/bin/graph-viewer
-.  else
-	${INSTALL_PROGRAM} ${WRKSRC}/editor/editor.byte ${DESTDIR}${PREFIX}/bin/graph-editor
-	${INSTALL_PROGRAM} ${WRKSRC}/dgraph/dgraph.byte ${DESTDIR}${PREFIX}/bin/graph-viewer
-.  endif
-.endif
-
 .include "../../mk/bsd.pkg.mk"
