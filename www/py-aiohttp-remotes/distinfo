@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/16 19:08:46 js Exp $
+$NetBSD: distinfo,v 1.2 2026/10/25 15:52:15 wiz Exp $
 
-BLAKE2s (aiohttp_remotes-1.2.0.tar.gz) = 3bbb8e7f6d4a036917c9adad8bc7805b7f3a15bf0d15f32f06cc670ef0b9c7bc
-SHA512 (aiohttp_remotes-1.2.0.tar.gz) = 88359676240209d9be6c573a69ed5aaee61c844da89df035131eb2ba1cb760ebed3413ab4366b0ccba58866e393fb38ab8148794b73edf83d249c13b1d1b6e5f
-Size (aiohttp_remotes-1.2.0.tar.gz) = 596463 bytes
+BLAKE2s (aiohttp_remotes-1.4.0.tar.gz) = 2f8254e2606ef4f7ed027b9c38869f8f04e119f96c89a8144b302b26b4669096
+SHA512 (aiohttp_remotes-1.4.0.tar.gz) = 4ef29d87d3949f43c1f2bd4a167bb451b5be59d5c7ede66cbd5e87ffe7b054f578bf4ec5eab4a6a1770c824a71a5e6635df67971192a294597b36447930af79d
+Size (aiohttp_remotes-1.4.0.tar.gz) = 8089 bytes
