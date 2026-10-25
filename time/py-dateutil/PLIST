@@ -1,16 +1,13 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/14 08:49:19 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.14 2026/10/25 12:49:47 wiz Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
 ${PYSITELIB}/dateutil/_common.py
 ${PYSITELIB}/dateutil/_common.pyc
 ${PYSITELIB}/dateutil/_common.pyo
+${PYSITELIB}/dateutil/_tzdata_impl.py
+${PYSITELIB}/dateutil/_tzdata_impl.pyc
+${PYSITELIB}/dateutil/_tzdata_impl.pyo
 ${PYSITELIB}/dateutil/_version.py
 ${PYSITELIB}/dateutil/_version.pyc
 ${PYSITELIB}/dateutil/_version.pyo
@@ -41,6 +38,12 @@ ${PYSITELIB}/dateutil/tz/_common.pyo
 ${PYSITELIB}/dateutil/tz/_factories.py
 ${PYSITELIB}/dateutil/tz/_factories.pyc
 ${PYSITELIB}/dateutil/tz/_factories.pyo
+${PYSITELIB}/dateutil/tz/_tzfile.py
+${PYSITELIB}/dateutil/tz/_tzfile.pyc
+${PYSITELIB}/dateutil/tz/_tzfile.pyo
+${PYSITELIB}/dateutil/tz/_tzpath.py
+${PYSITELIB}/dateutil/tz/_tzpath.pyc
+${PYSITELIB}/dateutil/tz/_tzpath.pyo
 ${PYSITELIB}/dateutil/tz/tz.py
 ${PYSITELIB}/dateutil/tz/tz.pyc
 ${PYSITELIB}/dateutil/tz/tz.pyo
@@ -56,7 +59,12 @@ ${PYSITELIB}/dateutil/utils.pyo
 ${PYSITELIB}/dateutil/zoneinfo/__init__.py
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyc
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyo
-${PYSITELIB}/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.py
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyc
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
