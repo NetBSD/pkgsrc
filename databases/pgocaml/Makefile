@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2026/03/01 12:38:19 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/25 01:42:58 alnsn Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.3.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
 GITHUB_PROJECT=	pgocaml
