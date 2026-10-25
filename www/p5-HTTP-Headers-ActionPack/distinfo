@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/31 20:40:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2026/10/25 09:51:00 wiz Exp $
 
-BLAKE2s (HTTP-Headers-ActionPack-0.09.tar.gz) = dd9b93922765f31e97288009d237804918016097effc013a6688d83360a8d43c
-SHA512 (HTTP-Headers-ActionPack-0.09.tar.gz) = 762f147657b10609a49d15b17985403083567cf9dd01c1d3498150885d75d088cae2d51d9a5cebcef81a5959850a5b09ad51411b659b98bfe8a827101de4a2b4
-Size (HTTP-Headers-ActionPack-0.09.tar.gz) = 36113 bytes
+BLAKE2s (HTTP-Headers-ActionPack-0.10.tar.gz) = 806f570ade2b6d183a11e2453529c8bf0222e8ab79653696e4c7e48c1b49a8f5
+SHA512 (HTTP-Headers-ActionPack-0.10.tar.gz) = 75bc048649d9e0c66875ad81f676546c6cb08ec829d784ddb8151b65b55375da296d79993fc0cfe1519e0143dc12508a711d922af218dc35c4ae25ed3d833665
+Size (HTTP-Headers-ActionPack-0.10.tar.gz) = 55757 bytes
