@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/09/10 00:45:14 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/25 14:08:12 ktnb Exp $
 bin/akku
 lib/akku/guile/3.0/site-ccache/akku/config.go
 lib/akku/guile/3.0/site-ccache/akku/format/lockfile.go
@@ -60,6 +60,7 @@ lib/akku/guile/3.0/site-ccache/industria/base64.go
 lib/akku/guile/3.0/site-ccache/industria/bit-strings.go
 lib/akku/guile/3.0/site-ccache/industria/bytevectors.go
 lib/akku/guile/3.0/site-ccache/industria/crypto/dsa.go
+lib/akku/guile/3.0/site-ccache/industria/crypto/eddsa.go
 lib/akku/guile/3.0/site-ccache/industria/crypto/entropy.go
 lib/akku/guile/3.0/site-ccache/industria/crypto/math.go
 lib/akku/guile/3.0/site-ccache/industria/crypto/rsa.go
@@ -69,13 +70,6 @@ lib/akku/guile/3.0/site-ccache/industria/strings.go
 lib/akku/guile/3.0/site-ccache/laesare/reader.go
 lib/akku/guile/3.0/site-ccache/laesare/writer.go
 lib/akku/guile/3.0/site-ccache/packrat.go
-lib/akku/guile/3.0/site-ccache/pffi.go
-lib/akku/guile/3.0/site-ccache/pffi/compat.go
-lib/akku/guile/3.0/site-ccache/pffi/misc.go
-lib/akku/guile/3.0/site-ccache/pffi/pointers.go
-lib/akku/guile/3.0/site-ccache/pffi/procedure.go
-lib/akku/guile/3.0/site-ccache/pffi/struct.go
-lib/akku/guile/3.0/site-ccache/pffi/variable.go
 lib/akku/guile/3.0/site-ccache/semver/compat/match.go
 lib/akku/guile/3.0/site-ccache/semver/ranges.go
 lib/akku/guile/3.0/site-ccache/semver/versions.go
@@ -134,7 +128,6 @@ lib/akku/guile/3.0/site-ccache/wak/syn-param.go
 lib/akku/guile/3.0/site-ccache/wak/wt-tree.go
 lib/akku/guile/3.0/site-ccache/wak/wt-tree/mit-compat.go
 man/man1/akku.1
-share/akku/bootstrap.db
 share/akku/guile/site/3.0/akku/config.scm
 share/akku/guile/site/3.0/akku/format/lockfile.scm
 share/akku/guile/site/3.0/akku/format/manifest.scm
@@ -195,6 +188,7 @@ share/akku/guile/site/3.0/industria/base64.scm
 share/akku/guile/site/3.0/industria/bit-strings.scm
 share/akku/guile/site/3.0/industria/bytevectors.scm
 share/akku/guile/site/3.0/industria/crypto/dsa.scm
+share/akku/guile/site/3.0/industria/crypto/eddsa.scm
 share/akku/guile/site/3.0/industria/crypto/entropy.scm
 share/akku/guile/site/3.0/industria/crypto/math.scm
 share/akku/guile/site/3.0/industria/crypto/rsa.scm
@@ -204,13 +198,6 @@ share/akku/guile/site/3.0/industria/strings.scm
 share/akku/guile/site/3.0/laesare/reader.scm
 share/akku/guile/site/3.0/laesare/writer.scm
 share/akku/guile/site/3.0/packrat.scm
-share/akku/guile/site/3.0/pffi.scm
-share/akku/guile/site/3.0/pffi/compat.scm
-share/akku/guile/site/3.0/pffi/misc.scm
-share/akku/guile/site/3.0/pffi/pointers.scm
-share/akku/guile/site/3.0/pffi/procedure.scm
-share/akku/guile/site/3.0/pffi/struct.scm
-share/akku/guile/site/3.0/pffi/variable.scm
 share/akku/guile/site/3.0/semver/compat/match.scm
 share/akku/guile/site/3.0/semver/ranges.scm
 share/akku/guile/site/3.0/semver/versions.scm
@@ -280,7 +267,7 @@ share/akku/guile/site/3.0/wak/syn-param.scm
 share/akku/guile/site/3.0/wak/syn-param/private/syn-param.scm
 share/akku/guile/site/3.0/wak/wt-tree.scm
 share/akku/guile/site/3.0/wak/wt-tree/mit-compat.scm
-share/akku/keys.d/akku-archive-2018.gpg
+share/akku/keys.d/akku-archive-2026.gpg
 share/doc/akku/CONTRIBUTING.md
 share/doc/akku/CREDITS.md
 share/doc/akku/NEWS.md

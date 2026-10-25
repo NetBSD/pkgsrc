@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/09/10 13:06:43 ktnb Exp $
+$NetBSD: distinfo,v 1.3 2026/10/25 14:08:12 ktnb Exp $
 
-BLAKE2s (akku-1.1.0.tar.gz) = 150ad4e47d50f5a50e3628d03bebfd16c34297af0f1bbb79cbd498c44192f779
-SHA512 (akku-1.1.0.tar.gz) = a056043ea6bf54fe39a2ed0f085fbfd0515cb838cb19ee9dd19404bd21dd391620e7e84e65eae934a3837f21bbb5e88fa2a60951c7944cf5036ba08e8ba0de78
-Size (akku-1.1.0.tar.gz) = 446544 bytes
-SHA1 (patch-spells_define-values.scm) = 7ced0c91231599f5d4c0955cef459b274b57caf6
+BLAKE2s (akku-1.2.0.tar.gz) = 0fb8e3aaee9f0a9b90f8e0cd6ffea52f16a3de55c978895014c110622525731f
+SHA512 (akku-1.2.0.tar.gz) = a7ecc6763dbdce3b91286d932c72d8961edb1a6eb9ba2d66f9ccbff4b9428412f48eac66935b2787b31acfc0d9e57a9e83f12474202abc1f9a9041a6781fa218
+Size (akku-1.2.0.tar.gz) = 408618 bytes
