@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/09/24 10:39:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/10/25 17:49:53 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,8 +19,8 @@ ${PYSITELIB}/wcwidth/_wcswidth.pyo
 ${PYSITELIB}/wcwidth/_wcwidth.py
 ${PYSITELIB}/wcwidth/_wcwidth.pyc
 ${PYSITELIB}/wcwidth/_wcwidth.pyo
-${PYSITELIB}/wcwidth/_wcwidth_c.abi3.so
 ${PYSITELIB}/wcwidth/_wcwidth_c.pyi
+${PYSITELIB}/wcwidth/_wcwidth_c.so
 ${PYSITELIB}/wcwidth/_width.py
 ${PYSITELIB}/wcwidth/_width.pyc
 ${PYSITELIB}/wcwidth/_width.pyo
