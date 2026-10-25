@@ -1,34 +1,27 @@
-# $NetBSD: Makefile,v 1.25 2026/03/01 12:38:36 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/25 00:49:33 alnsn Exp $
 
-DISTNAME=	dose3-5.0.1
-PKGREVISION=	9
+DISTNAME=	dose3-7.0.0
 CATEGORIES=	misc
-#MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36063/
+MASTER_SITES=	https://gitlab.com/irill/dose3/-/archive/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mancoosi.org/software/
 COMMENT=	Package repository analysis toolkit
 LICENSE=	gnu-lgpl-v3
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		aclocal automake autoconf gmake pod2man
-MAKE_JOBS_SAFE=		no
-OCAML_USE_FINDLIB=	yes
+USE_LANGUAGES=		# none
+OCAML_USE_DUNE=		yes
+DUNE_BUILD_PACKAGES=	dose3 dose3-extra
+OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
 
 .include "../../lang/ocaml/ocaml.mk"
-
-.if ${OCAML_USE_OPT_COMPILER} != "yes"
-CONFIGURE_ARGS+=	--with-bytecodeonly
-.endif
-
-pre-configure:
-	cd ${WRKSRC} && aclocal -I m4 && autoconf
-
-.include "../../lang/ocaml/ocaml.mk"
-.include "../../devel/ocaml-cppo/buildlink3.mk"
+.include "../../archivers/ocaml-bz2/buildlink3.mk"
+.include "../../archivers/ocaml-zip/buildlink3.mk"
+.include "../../devel/ocaml-base64/buildlink3.mk"
 .include "../../devel/ocaml-extlib/buildlink3.mk"
+.include "../../devel/ocaml-parmap/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
-.include "../../devel/ocamlbuild/buildlink3.mk"
+.include "../../devel/ocaml-stdlib-shims/buildlink3.mk"
 .include "../../devel/ocamlgraph/buildlink3.mk"
 .include "../../misc/ocaml-cudf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
