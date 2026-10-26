@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/10/26 08:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/26 20:36:13 ktnb Exp $
 
 DISTNAME=	py_tlsh-4.12.1
 PKGNAME=	${DISTNAME:S/py_/${PYPKGPREFIX}-/:S/_/-/}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=	${WRKDIR}/${DISTNAME:S/_/-/}
 
 .include "../../devel/tlsh/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
