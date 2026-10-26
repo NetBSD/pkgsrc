@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2026/10/23 05:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/10/26 18:23:11 wiz Exp $
 
-DISTNAME=	importlib_metadata-9.1.0
+DISTNAME=	importlib_metadata-10.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -20,8 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf>=0.9.2:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
 
-# as of 9.0.0
-# 1 failed, 119 passed
+# as of 10.1.0
+# 1 failed, 146 passed, 1 skipped
 # but all fine after 'make install'
 
 .include "../../lang/python/wheel.mk"
