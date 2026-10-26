@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7346 2026/10/26 18:23:28 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7347 2026/10/26 18:25:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11001,3 +11001,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.2.4 [wiz 2026-10-26]
 	Updated devel/py-importlib-metadata to 10.1.0 [wiz 2026-10-26]
 	Updated devel/py-awscrt to 0.36.2nb1 [drixter 2026-10-26]
+	Updated textproc/py-markdown to 3.11.2 [wiz 2026-10-26]
