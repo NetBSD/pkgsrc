@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/09/03 05:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/26 05:55:50 adam Exp $
 
 DISTNAME=	ipywidgets-8.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>=0:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

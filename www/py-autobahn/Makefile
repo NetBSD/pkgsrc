@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2026/09/04 06:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.52 2026/10/26 05:55:50 adam Exp $
 
 DISTNAME=	autobahn-26.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -40,8 +40,6 @@ BUILDLINK_TRANSFORM+=	opt:-march=x86-64-v2:-march=x86-64
 MAKE_ENV+=	PYUBJSON_NO_EXTENSION=1
 
 PY_RENAME_BINARIES=	flatc wamp
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/autobahn/nvx/_nvx_utf8validator.[co]
