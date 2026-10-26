@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/07/09 04:30:59 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/26 05:51:52 adam Exp $
 
-DISTNAME=	testfixtures-12.3.0
+DISTNAME=	testfixtures-12.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testfixtures/}
@@ -11,17 +11,15 @@ COMMENT=	Helpers and mocks useful for automated tests in Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django4
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-django>=0:../../www/py-django4
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0:../../lang/py-mypy
 # circular dependency
-#TEST_DEPENDS+=	${PYPKGPREFIX}-sybil>=6:../../wip/py-sybil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-django-[0-9]*:../../www/py-test-django
-TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+#TEST_DEPENDS+=	${PYPKGPREFIX}-sybil>=6:../../devel/py-sybil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-django>=0:../../www/py-test-django
+TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 313
