@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7309 2026/10/26 06:29:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7310 2026/10/26 06:30:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10952,3 +10952,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-olm to 3.2.16nb1 [wiz 2026-10-26]
 	Updated math/py-pyerfa to 2.0.1.5nb2 [wiz 2026-10-26]
 	Updated devel/py-pygit2 to 1.20.1nb3 [wiz 2026-10-26]
+	Updated www/py-pylsqpack to 0.3.24nb1 [wiz 2026-10-26]
