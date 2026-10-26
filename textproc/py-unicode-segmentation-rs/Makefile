@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/08/09 08:20:40 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/26 05:41:08 adam Exp $
 
-DISTNAME=	unicode_segmentation_rs-0.3.3
+DISTNAME=	unicode_segmentation_rs-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unicode-segmentation-rs/}

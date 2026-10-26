@@ -1,19 +1,19 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/08/09 08:20:40 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/10/26 05:41:08 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.189
+CARGO_CRATE_DEPENDS+=	libc-0.2.191
 CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
-CARGO_CRATE_DEPENDS+=	portable-atomic-1.14.0
+CARGO_CRATE_DEPENDS+=	portable-atomic-1.15.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.107
-CARGO_CRATE_DEPENDS+=	pyo3-0.29.2
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.2
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.2
+CARGO_CRATE_DEPENDS+=	pyo3-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.30.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.47
-CARGO_CRATE_DEPENDS+=	syn-2.0.119
+CARGO_CRATE_DEPENDS+=	syn-3.0.9
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.5
-CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.24
+CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.27
 CARGO_CRATE_DEPENDS+=	unicode-linebreak-0.1.5
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.3
 CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
