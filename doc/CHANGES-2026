@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7326 2026/10/26 11:27:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7327 2026/10/26 11:28:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10971,3 +10971,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.33 [pin 2026-10-26]
 	Updated news/brochure to 0.12.0 [pin 2026-10-26]
 	Updated sysutils/gravityfile to 0.4.1 [pin 2026-10-26]
+	Updated sysutils/xplr to 1.2.2 [pin 2026-10-26]
