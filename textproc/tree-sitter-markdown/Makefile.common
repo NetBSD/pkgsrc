@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2026/05/18 09:24:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/10/26 18:07:04 wiz Exp $
 # used by textproc/tree-sitter-markdown-inline/Makefile
 
-DISTNAME=	tree-sitter-markdown-0.5.3
+DISTNAME=	tree-sitter-markdown-0.5.4
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter-grammars/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
