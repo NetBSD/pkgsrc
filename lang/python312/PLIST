@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/10/10 11:53:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/10/26 13:03:35 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -2310,6 +2310,7 @@ lib/python${PY_VER_SUFFIX}/test/certdata/capath/6e88d7b8.0
 lib/python${PY_VER_SUFFIX}/test/certdata/capath/99d0fa06.0
 lib/python${PY_VER_SUFFIX}/test/certdata/capath/b1930218.0
 lib/python${PY_VER_SUFFIX}/test/certdata/capath/ceff1710.0
+lib/python${PY_VER_SUFFIX}/test/certdata/distrusted.zip
 lib/python${PY_VER_SUFFIX}/test/certdata/ffdh3072.pem
 lib/python${PY_VER_SUFFIX}/test/certdata/idnsans.pem
 lib/python${PY_VER_SUFFIX}/test/certdata/keycert.passwd.pem
