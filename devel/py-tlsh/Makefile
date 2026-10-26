@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/10/26 07:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/10/26 08:25:45 wiz Exp $
 
 DISTNAME=	py_tlsh-4.12.1
-PKGNAME=	${DISTNAME:S/py-/${PYPKGPREFIX}-/:S/_/-/}
+PKGNAME=	${DISTNAME:S/py_/${PYPKGPREFIX}-/:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-tlsh/}
 
