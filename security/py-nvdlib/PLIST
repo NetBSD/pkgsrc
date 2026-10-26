@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/14 05:09:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/10/26 05:54:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,3 +19,9 @@ ${PYSITELIB}/nvdlib/cve.pyo
 ${PYSITELIB}/nvdlib/get.py
 ${PYSITELIB}/nvdlib/get.pyc
 ${PYSITELIB}/nvdlib/get.pyo
+${PYSITELIB}/nvdlib/history.py
+${PYSITELIB}/nvdlib/history.pyc
+${PYSITELIB}/nvdlib/history.pyo
+${PYSITELIB}/nvdlib/source.py
+${PYSITELIB}/nvdlib/source.pyc
+${PYSITELIB}/nvdlib/source.pyo
