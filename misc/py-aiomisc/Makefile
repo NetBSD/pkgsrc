@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/10/09 09:14:40 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/26 16:08:18 adam Exp $
 
-DISTNAME=	aiomisc-18.0.33
+DISTNAME=	aiomisc-18.0.37
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiomisc/}
