@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7294 2026/10/26 05:29:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7295 2026/10/26 05:38:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10932,3 +10932,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-asyncio to 1.4.1 [adam 2026-10-26]
 	Updated devel/py-cachetools to 7.2.5 [adam 2026-10-26]
 	Updated lang/py-inflect to 7.6.0 [adam 2026-10-26]
+	Updated lang/python315 to 3.15.2 [adam 2026-10-26]
+	Updated lang/py315-html-docs to 3.15.2 [adam 2026-10-26]
