@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2026/10/07 00:14:48 agc Exp $
+# $NetBSD: Makefile,v 1.272 2026/10/26 10:53:31 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -159,6 +159,7 @@ SUBDIR+=	vim-gtk4
 SUBDIR+=	vim-lang
 SUBDIR+=	vim-motif
 SUBDIR+=	vim-share
+SUBDIR+=	vis-editor
 SUBDIR+=	wily
 SUBDIR+=	wordtsar
 SUBDIR+=	xcoral
