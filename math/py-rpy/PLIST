@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.19 2021/12/17 10:15:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/10/26 06:38:03 wiz Exp $
 ${PYSITELIB}/_rinterface_cffi_abi.py
 ${PYSITELIB}/_rinterface_cffi_abi.pyc
 ${PYSITELIB}/_rinterface_cffi_abi.pyo
-${PYSITELIB}/_rinterface_cffi_api.abi3.so
+${PYSITELIB}/_rinterface_cffi_api.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
