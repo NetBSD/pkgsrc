@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2026/08/19 04:29:17 wen Exp $
+# $NetBSD: Makefile,v 1.63 2026/10/26 06:56:20 wiz Exp $
 
-DISTNAME=	Plack-1.0054
+DISTNAME=	Plack-1.0057
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Plack
 COMMENT=	PSGI toolkit and servers
 LICENSE=	${PERL5_LICENSE}
 
-TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-TOOL_DEPENDS+=	p5-CGI-Compile-[0-9]*:../../www/p5-CGI-Compile
-
+DEPENDS+=	p5-CGI-Compile-[0-9]*:../../www/p5-CGI-Compile
 DEPENDS+=	p5-libwww>=5.814:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Message>=5.814:../../www/p5-HTTP-Message
 DEPENDS+=	p5-URI>=1.59:../../www/p5-URI
@@ -30,9 +28,15 @@ DEPENDS+=	p5-Apache-LogFormat-Compiler>=0.33:../../www/p5-Apache-LogFormat-Compi
 DEPENDS+=	p5-Cookie-Baker>=0.07:../../www/p5-Cookie-Baker
 DEPENDS+=	p5-HTTP-Headers-Fast>=0.18:../../www/p5-HTTP-Headers-Fast
 DEPENDS+=	p5-WWW-Form-UrlEncoded>=0.23:../../www/p5-WWW-Form-UrlEncoded
+TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TEST_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Plack/.packlist
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
