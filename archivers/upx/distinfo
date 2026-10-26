@@ -1,11 +1,26 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 09:57:19 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/10/26 22:10:50 drixter Exp $
 
-BLAKE2s (upx-3.96.tar.gz) = 3a460e4271f6f574255a27945d9dc17aaa978958a9fc2e49e0de96d24bc080cd
-SHA512 (upx-3.96.tar.gz) = 1baa5208a895f8ed9b729a110646b6dd7779269d7792255b37d3923b26f30fb7cf12e22615eb4d5c520b3ec41153599338814b21c6f14c7a750a835f23831560
-Size (upx-3.96.tar.gz) = 1676172 bytes
-BLAKE2s (upx-lzma-sdk-3.96.tar.gz) = eda3fa6d1227891fe4535bc0c84ba09a733adc6075595bb62192cbed2e266e27
-SHA512 (upx-lzma-sdk-3.96.tar.gz) = 9690a1dfabf8bcb161b26761556a390aa354b633914254b29e36246fe11f9c3e905dafa916d0d52300bd418e2bddedd4122027e447fc87183bce4479e771c7df
-Size (upx-lzma-sdk-3.96.tar.gz) = 109692 bytes
-SHA1 (patch-ab) = 75d59c551d4844665372daa3ca5a2bf48fc2fed2
-SHA1 (patch-src_p__exe.cpp) = 21814e235022afe48102b0de021b066b717b3917
-SHA1 (patch-src_p__exe.h) = a03d88ad312c1e85ccc43b78c7bea5b5ce613a09
+BLAKE2s (upx-5.2.1.tar.gz) = f8e049cf242ca593af8d5a07c738fecdceb2c929b783d390b71f47b6d1492830
+SHA512 (upx-5.2.1.tar.gz) = 1fec2419e2f48823cef4677489301e9c4cca39d39562c625258b80fa200d2652c8081e3eb37888b27d9afe75594a09d201466b3dc1cf0d8ebe10db8d197b8b60
+Size (upx-5.2.1.tar.gz) = 2338143 bytes
+BLAKE2s (upx-upx-vendor-bzip2-v5.2.1-upx-vendor.tar.gz) = 46f27027db6e0c4c2e5b51c2542e9c7c72632bca3f314739ca4cb1fdbcd633d5
+SHA512 (upx-upx-vendor-bzip2-v5.2.1-upx-vendor.tar.gz) = ebc8c8bf98ce4437bf84fb2e5b4ce1ca6fe97fadc744134f74e0d61a7aad650c120bf4bdeeadd4c6819b80576f972e7e00bebd14829220d7110ea242620a32e8
+Size (upx-upx-vendor-bzip2-v5.2.1-upx-vendor.tar.gz) = 36675 bytes
+BLAKE2s (upx-upx-vendor-doctest-v5.2.1-upx-vendor.tar.gz) = e22be729c53b34f77a47c9d9e8b36c14dc3c39d0c067f6c6c0839f6816415cc5
+SHA512 (upx-upx-vendor-doctest-v5.2.1-upx-vendor.tar.gz) = edcb24e117712baab6c157cfcc27efe3e614da746856bea439cbb337632b039b7fae01a6152c21e7090a92d3fa7e0ec428740785ea8581ab54ac8ff3f8b356e7
+Size (upx-upx-vendor-doctest-v5.2.1-upx-vendor.tar.gz) = 62256 bytes
+BLAKE2s (upx-upx-vendor-lzma-sdk-v5.2.1-upx-vendor.tar.gz) = 30685d3589a1c45575835d254b50ab80bc77877b8237bdfb763c6914aa808e8e
+SHA512 (upx-upx-vendor-lzma-sdk-v5.2.1-upx-vendor.tar.gz) = 7de538602ce0c541e3493e23ba14162d82dd0be3e923b87dc08d84e266c2a3ccfa2849aa9a0ab47c596fedd6f59216e37dc6983697066d2ede9af7ca87a29a93
+Size (upx-upx-vendor-lzma-sdk-v5.2.1-upx-vendor.tar.gz) = 37903 bytes
+BLAKE2s (upx-upx-vendor-ucl-v5.2.1-upx-vendor.tar.gz) = 249ca32b019a4246c4a23f161a3b0037c3d83648905de92dd370c8cabb3bf5ef
+SHA512 (upx-upx-vendor-ucl-v5.2.1-upx-vendor.tar.gz) = 2564b0b94c63941f9d489fd524f8951a76bd1172020ffc92c383c0e8a09e2e5e8d25afe2118eaafb9a206e0a65eb5a56afa3eaa1351ebce1eee32d3ad2487084
+Size (upx-upx-vendor-ucl-v5.2.1-upx-vendor.tar.gz) = 54807 bytes
+BLAKE2s (upx-upx-vendor-valgrind-v5.2.1-upx-vendor.tar.gz) = bb2bb9e1c4cf542cd81cc9abb81e2b0d6479f6420fe02e9c5bc4c2e1e9bcf30d
+SHA512 (upx-upx-vendor-valgrind-v5.2.1-upx-vendor.tar.gz) = d85eea26ff2c6508bd2b23b46f81f0c321f56f311969e43e0488172563cfb8785f83a5e42811b4d5644e4b03d9bd442c71c95a13117eba7de823f0c1803c8a2d
+Size (upx-upx-vendor-valgrind-v5.2.1-upx-vendor.tar.gz) = 54428 bytes
+BLAKE2s (upx-upx-vendor-zlib-v5.2.1-upx-vendor.tar.gz) = 03c7611e40964cbb88d7aebb232fee3a8a7f504f84eb105ce19332da3d10c26f
+SHA512 (upx-upx-vendor-zlib-v5.2.1-upx-vendor.tar.gz) = 89fda273983b4fdf3825f2873165e85f5671b8b9121828ac3d47aafe9623f396f11f753af5323b2a465f1113c561cecf4ff1cf5d138db85a2e245cd1e523ad32
+Size (upx-upx-vendor-zlib-v5.2.1-upx-vendor.tar.gz) = 351562 bytes
+BLAKE2s (upx-upx-vendor-zstd-v5.2.1-upx-vendor.tar.gz) = 32eae93e7acb794cf4d61146fa52f1719de68245b95c379028d3d7b37e4db97f
+SHA512 (upx-upx-vendor-zstd-v5.2.1-upx-vendor.tar.gz) = ba1b9f57e6b455e1deca2c4c675ad80d066243cfd934e5cd6c9cacbb1039e0b80be9eacfab87ef51959e0faba02c4144c98d83f8d07263798e11b91cbe881174
+Size (upx-upx-vendor-zstd-v5.2.1-upx-vendor.tar.gz) = 405020 bytes
