@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/10/26 16:45:20 abs Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/26 17:38:01 wiz Exp $
 
 DISTNAME=	aioquic-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/aiortc/aioquic
 COMMENT=	Fork of aioquic with adjustments for mitmproxy
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.0:../../security/py-cryptography
