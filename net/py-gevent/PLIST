@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/10/19 15:51:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/10/26 06:15:30 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -135,7 +135,7 @@ ${PYSITELIB}/gevent/hub.pyo
 ${PYSITELIB}/gevent/libev/__init__.py
 ${PYSITELIB}/gevent/libev/__init__.pyc
 ${PYSITELIB}/gevent/libev/__init__.pyo
-${PYSITELIB}/gevent/libev/_corecffi.abi3.so
+${PYSITELIB}/gevent/libev/_corecffi.so
 ${PYSITELIB}/gevent/libev/_corecffi_build.py
 ${PYSITELIB}/gevent/libev/_corecffi_build.pyc
 ${PYSITELIB}/gevent/libev/_corecffi_build.pyo
@@ -149,7 +149,7 @@ ${PYSITELIB}/gevent/libev/watcher.pyo
 ${PYSITELIB}/gevent/libuv/__init__.py
 ${PYSITELIB}/gevent/libuv/__init__.pyc
 ${PYSITELIB}/gevent/libuv/__init__.pyo
-${PYSITELIB}/gevent/libuv/_corecffi.abi3.so
+${PYSITELIB}/gevent/libuv/_corecffi.so
 ${PYSITELIB}/gevent/libuv/_corecffi_build.py
 ${PYSITELIB}/gevent/libuv/_corecffi_build.pyc
 ${PYSITELIB}/gevent/libuv/_corecffi_build.pyo
