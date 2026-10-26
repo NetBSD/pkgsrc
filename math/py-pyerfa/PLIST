@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/15 16:31:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/10/26 06:25:33 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,7 +25,7 @@ ${PYSITELIB}/erfa/tests/test_erfa.pyo
 ${PYSITELIB}/erfa/tests/test_ufunc.py
 ${PYSITELIB}/erfa/tests/test_ufunc.pyc
 ${PYSITELIB}/erfa/tests/test_ufunc.pyo
-${PYSITELIB}/erfa/ufunc.abi3.so
+${PYSITELIB}/erfa/ufunc.so
 ${PYSITELIB}/erfa/version.py
 ${PYSITELIB}/erfa/version.pyc
 ${PYSITELIB}/erfa/version.pyo
