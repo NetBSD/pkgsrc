@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/12/11 15:22:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/10/26 06:00:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -87,7 +87,7 @@ ${PYSITELIB}/tornado/routing.pyo
 ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
-${PYSITELIB}/tornado/speedups.abi3.so
+${PYSITELIB}/tornado/speedups.so
 ${PYSITELIB}/tornado/speedups.pyi
 ${PYSITELIB}/tornado/tcpclient.py
 ${PYSITELIB}/tornado/tcpclient.pyc
