@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2026/10/26 06:00:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/10/26 08:11:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -87,8 +87,8 @@ ${PYSITELIB}/tornado/routing.pyo
 ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
-${PYSITELIB}/tornado/speedups.so
 ${PYSITELIB}/tornado/speedups.pyi
+${PYSITELIB}/tornado/speedups.so
 ${PYSITELIB}/tornado/tcpclient.py
 ${PYSITELIB}/tornado/tcpclient.pyc
 ${PYSITELIB}/tornado/tcpclient.pyo
@@ -104,6 +104,10 @@ ${PYSITELIB}/tornado/test/__init__.pyo
 ${PYSITELIB}/tornado/test/__main__.py
 ${PYSITELIB}/tornado/test/__main__.pyc
 ${PYSITELIB}/tornado/test/__main__.pyo
+${PYSITELIB}/tornado/test/api.txt
+${PYSITELIB}/tornado/test/api_test.py
+${PYSITELIB}/tornado/test/api_test.pyc
+${PYSITELIB}/tornado/test/api_test.pyo
 ${PYSITELIB}/tornado/test/asyncio_test.py
 ${PYSITELIB}/tornado/test/asyncio_test.pyc
 ${PYSITELIB}/tornado/test/asyncio_test.pyo
@@ -173,6 +177,9 @@ ${PYSITELIB}/tornado/test/options_test_types_str.cfg
 ${PYSITELIB}/tornado/test/process_test.py
 ${PYSITELIB}/tornado/test/process_test.pyc
 ${PYSITELIB}/tornado/test/process_test.pyo
+${PYSITELIB}/tornado/test/property_test.py
+${PYSITELIB}/tornado/test/property_test.pyc
+${PYSITELIB}/tornado/test/property_test.pyo
 ${PYSITELIB}/tornado/test/queues_test.py
 ${PYSITELIB}/tornado/test/queues_test.pyc
 ${PYSITELIB}/tornado/test/queues_test.pyo
@@ -185,6 +192,9 @@ ${PYSITELIB}/tornado/test/routing_test.pyo
 ${PYSITELIB}/tornado/test/runtests.py
 ${PYSITELIB}/tornado/test/runtests.pyc
 ${PYSITELIB}/tornado/test/runtests.pyo
+${PYSITELIB}/tornado/test/security_corpus_test.py
+${PYSITELIB}/tornado/test/security_corpus_test.pyc
+${PYSITELIB}/tornado/test/security_corpus_test.pyo
 ${PYSITELIB}/tornado/test/simple_httpclient_test.py
 ${PYSITELIB}/tornado/test/simple_httpclient_test.pyc
 ${PYSITELIB}/tornado/test/simple_httpclient_test.pyo
