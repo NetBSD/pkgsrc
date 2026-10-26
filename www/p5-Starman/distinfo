@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/04/29 06:52:22 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/10/26 07:02:34 wiz Exp $
 
-BLAKE2s (Starman-0.4018.tar.gz) = 865f38443edc5d98f51b6360c4c48cc617a454e175067586c78bffc15cfafbc0
-SHA512 (Starman-0.4018.tar.gz) = b839ea13b94ec9556145956a7d3f6973ed99579d30a6102c325e9eac6b306aa6f64f5ac000159a01142fa380a149f5c2be890c6fc3f8846f9922993c489c81fe
-Size (Starman-0.4018.tar.gz) = 33079 bytes
+BLAKE2s (Starman-0.4019.tar.gz) = 3099b61f2af019cbcfe23393549639576d7e6c0e2bf213c67273ede8f32bf26c
+SHA512 (Starman-0.4019.tar.gz) = db1aa765c1f504ea7555cd91af21629b4fa0d9ef1a5964c2d6ef7da2f7b6e241d90ba5ca64876dc645ca13063d99dbc38ee2d840fece85fef489d63ea9686630
+Size (Starman-0.4019.tar.gz) = 45120 bytes
