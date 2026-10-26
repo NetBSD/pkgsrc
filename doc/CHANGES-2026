@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7328 2026/10/26 12:18:41 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7329 2026/10/26 12:34:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10973,3 +10973,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/gravityfile to 0.4.1 [pin 2026-10-26]
 	Updated sysutils/xplr to 1.2.2 [pin 2026-10-26]
 	Updated devel/cargo-about to 0.9.3 [pin 2026-10-26]
+	Updated graphics/py-pygraphviz to 2.0.4 [adam 2026-10-26]
+	Updated devel/py-pylru to 1.3.3 [adam 2026-10-26]
