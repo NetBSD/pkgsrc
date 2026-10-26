@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2026/10/25 10:15:31 pin Exp $
+$NetBSD: distinfo,v 1.15 2026/10/26 12:18:21 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.5.crate) = 81b34e3dfc1b58f892b0487465608067b30309e424c9904a98e8f926a6adc083
 SHA512 (aho-corasick-1.1.5.crate) = 324012ebcb573740ce56c7ef217dcf2bb849d0040e022dcc39aa8a46750088a2c26271016bfb6b1bf7a558d0c4bcefc004811bd8f0afd7fd000dce9bf0206643
@@ -51,9 +51,9 @@ Size (bytes-1.12.1.crate) = 75667 bytes
 BLAKE2s (camino-1.2.6.crate) = 7f8f31c88faf025ee5f990e394d1c73f26b28764936f7a908cf173e786399588
 SHA512 (camino-1.2.6.crate) = 8e116488fd75c40841b8ec37f5304191e52662de1647c3151322275d51dbfc4b10f01cf0236afeedd7d77473da806dd7538b9a6c38b10dcfa654e254d0171c68
 Size (camino-1.2.6.crate) = 39988 bytes
-BLAKE2s (cargo-about-0.9.2.tar.gz) = 66f3d8d3e994b950562ae5975bec65ce06a3831923d1b2bba0ccb90255b51ac7
-SHA512 (cargo-about-0.9.2.tar.gz) = c4e6c54e2c634fe6efe71ce15757be9966f5d6230ec807c87f0f9a4cc135b79690351b52be6f455d49ec861349659ff67fa9a0dd87691f456a1549fa9360f552
-Size (cargo-about-0.9.2.tar.gz) = 95909 bytes
+BLAKE2s (cargo-about-0.9.3.tar.gz) = af9a66dce79d5720d4ca41eca62063e2cf743b29156bcf1de4209bde1d9a219f
+SHA512 (cargo-about-0.9.3.tar.gz) = 3ae50032a1ba094eef171851aef0571747d313d8827efbf84f8664028069788ecd3b5a3b5070b74ec88e41dff2dea41a715222ad7d46b8fe1bb592b954a78e3d
+Size (cargo-about-0.9.3.tar.gz) = 95944 bytes
 BLAKE2s (cc-1.10.0.crate) = 9638f8e32d23b16a512e20a8b7d5d471ba7b29ee4a3a64bc796a59711a56509d
 SHA512 (cc-1.10.0.crate) = 5ce07489166b97bfe1af7afa0fff41e28d44ee38b81ed2773ed324ee3d1cd7bd9cf933a5ab9b1ec315754aef9179def2bd23c768105f0374191feb7e4cc0e7c6
 Size (cc-1.10.0.crate) = 148443 bytes
@@ -648,4 +648,3 @@ Size (zstd-safe-7.3.0.crate) = 26367 bytes
 BLAKE2s (zstd-sys-2.1.2+zstd.1.5.7.crate) = 594ec72f65674ed4c5032279133f4a1eb20866c1a0009e03c64aae1ff5406f52
 SHA512 (zstd-sys-2.1.2+zstd.1.5.7.crate) = b604262d2633eaa3bdfd4403715e667232f457298288e666726ec896a4045c0d4b2b0981c24f45889a5ef3fa5a96861f93de670786fcd6701e61dcb3bb5e513d
 Size (zstd-sys-2.1.2+zstd.1.5.7.crate) = 785774 bytes
-SHA1 (patch-Cargo.lock) = 21d77f9212a0afbac76539ce9ff192aca1af69de
