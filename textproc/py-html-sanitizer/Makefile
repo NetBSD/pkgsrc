@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/10/16 19:44:16 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/26 15:49:19 adam Exp $
 
-DISTNAME=	html_sanitizer-2.6.0
+DISTNAME=	html_sanitizer-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html-sanitizer/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/matthiask/html-sanitizer
 COMMENT=	White-list based HTML sanitizer
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-lxml-html-clean>=0.4:../../textproc/py-lxml-html-clean
 
