@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/26 10:53:10 wiz Exp $
+
+BLAKE2s (vis-0.9.tar.gz) = 73d4a5c3f8fe1731f878a4e5bfb654a9eb9c55580a3ed3a98be62e6791ea55a6
+SHA512 (vis-0.9.tar.gz) = 64025569f6feb1a3b5aa8aaa79af319cdf8fc1fd5d1f5b29a6838ff00ea950cade1efb366d0a95d77e516f5605048bcb557fd7aa52b3a9510a15e69acaee147c
+Size (vis-0.9.tar.gz) = 456713 bytes
