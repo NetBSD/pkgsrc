@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7312 2026/10/26 06:38:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7313 2026/10/26 06:46:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10955,3 +10955,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-pylsqpack to 0.3.24nb1 [wiz 2026-10-26]
 	Updated net/py-pynng to 0.9.0nb1 [wiz 2026-10-26]
 	Updated math/py-rpy to 3.4.5nb7 [wiz 2026-10-26]
+	Updated math/py-tables to 3.11.1nb1 [wiz 2026-10-26]
