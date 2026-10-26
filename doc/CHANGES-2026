@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7323 2026/10/26 11:23:58 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7324 2026/10/26 11:25:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10968,3 +10968,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added editors/vis-editor version 0.9 [wiz 2026-10-26]
 	Added www/chawan version v0.5.1 [wiz 2026-10-26]
 	Updated devel/feluda to 1.18.0 [pin 2026-10-26]
+	Updated misc/rozi to 0.0.33 [pin 2026-10-26]
