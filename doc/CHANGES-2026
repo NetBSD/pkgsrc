@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7344 2026/10/26 18:20:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7345 2026/10/26 18:23:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10999,3 +10999,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter-markdown to 0.5.4 [wiz 2026-10-26]
 	Updated textproc/tree-sitter-markdown-inline to 0.5.4 [wiz 2026-10-26]
 	Updated devel/py-filelock to 4.2.4 [wiz 2026-10-26]
+	Updated devel/py-importlib-metadata to 10.1.0 [wiz 2026-10-26]
