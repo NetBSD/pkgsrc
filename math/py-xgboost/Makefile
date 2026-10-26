@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/10/23 12:26:56 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/26 07:39:21 wiz Exp $
 
 DISTNAME=	xgboost-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		cmake ninja
-GCC_REQD+=		8.1
+USE_TOOLS+=		cmake
+GCC_REQD+=		8
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
