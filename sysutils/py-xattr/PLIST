@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 08:31:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/26 06:51:12 wiz Exp $
 bin/xattr-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,7 +9,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xattr/__init__.py
 ${PYSITELIB}/xattr/__init__.pyc
 ${PYSITELIB}/xattr/__init__.pyo
-${PYSITELIB}/xattr/_lib.abi3.so
+${PYSITELIB}/xattr/_lib.so
 ${PYSITELIB}/xattr/lib.py
 ${PYSITELIB}/xattr/lib.pyc
 ${PYSITELIB}/xattr/lib.pyo
