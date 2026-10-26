@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/26 12:20:31 riastradh Exp $
+
+BLAKE2s (pkcs11-provider-1.3.0.tar.xz) = 496732ebac367453eb4181ffc6897f3103b300fbb2a985fcd4b20b269859f411
+SHA512 (pkcs11-provider-1.3.0.tar.xz) = 5a2af2ab09cf8088ea05b07f6feed90b9df57ec6201a64f9c06cde447d3f9faf532a07094b5f62617163374bb03f974d62b11e27b48ba2a83e4459339d32b157
+Size (pkcs11-provider-1.3.0.tar.xz) = 236628 bytes

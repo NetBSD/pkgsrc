@@ -1,0 +1,7 @@
+This is an OpenSSL 3.x provider to access Hardware and Software Tokens
+using the PKCS#11 Cryptographic Token Interface.  Access to tokens
+depends on loading an appropriate PKCS#11 driver that knows how to talk
+to the specific token.  The PKCS#11 provider is a connector that allows
+OpenSSL to make proper use of such drivers.  This code targets PKCS#11
+version 3.2 but is backwards compatible to version 3.1, 3.0 and 2.40 as
+well.

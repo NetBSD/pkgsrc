@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1032 2026/10/19 08:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.1033 2026/10/26 12:20:30 riastradh Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -453,6 +453,7 @@ SUBDIR+=	pinentry-qt6
 SUBDIR+=	pinepgp
 SUBDIR+=	pius
 SUBDIR+=	pkcs11-helper
+SUBDIR+=	pkcs11-provider
 SUBDIR+=	pks
 SUBDIR+=	plasma6-ksshaskpass
 SUBDIR+=	plasma6-polkit-kde-agent
