@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7299 2026/10/26 06:04:37 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7300 2026/10/26 06:05:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10939,3 +10939,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-cryptodome to 3.24.1nb1 [wiz 2026-10-26]
 	Updated www/py-tornado to 6.5.10nb1 [wiz 2026-10-26]
 	Updated security/py-argon2-cffi-bindings to 25.1.0nb1 [wiz 2026-10-26]
+	Updated devel/py-testfixtures to 12.4.0 [adam 2026-10-26]
+	Updated security/py-nvdlib to 0.9.0 [adam 2026-10-26]
+	Updated multimedia/openh264 to 2.7.0 [adam 2026-10-26]
+	Updated net/glib-networking to 2.90.1 [adam 2026-10-26]
