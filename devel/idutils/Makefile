@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/03 08:03:00 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/26 22:22:14 mrg Exp $
 
 DISTNAME=	idutils-4.6
 CATEGORIES=	devel
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/idutils/idutils.html
 COMMENT=	Classic Berkeley gid/lid tools for looking up variables in code
 LICENSE=	gnu-gpl-v3
+
+PKGREVISION=	1
 
 CONFLICTS=	sh-utils>=2.0nb2 coreutils-[0-9]*
 

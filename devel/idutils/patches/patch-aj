@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.4 2014/12/15 11:35:42 mef Exp $
+$NetBSD: patch-aj,v 1.5 2026/10/26 22:22:14 mrg Exp $
 
---- src/lid.c.orig	2012-01-31 21:22:05.000000000 +0900
-+++ src/lid.c	2014-11-20 23:12:39.000000000 +0900
+--- src/lid.c.orig	2012-01-31 04:22:05.000000000 -0800
++++ src/lid.c	2026-10-26 15:06:09.682440695 -0700
 @@ -32,7 +32,6 @@
  #include <dirname.h>
  #include <unistd.h>
@@ -10,6 +10,17 @@ $NetBSD: patch-aj,v 1.4 2014/12/15 11:35:42 mef Exp $
  #include <regex.h>
  #include <xalloc.h>
  #include <pathmax.h>
+@@ -139,8 +138,8 @@ static void savetty (void);
+ static void restoretty (void);
+ static void chartty (void);
+ 
+-#define	TOLOWER(c)	(isupper (c) ? tolower (c) : (c))
+-#define IS_ALNUM(c)	(isalnum (c) || (c) == '_')
++#define	TOLOWER(c)	(isupper ((unsigned char)c) ? tolower ((unsigned char)c) : (c))
++#define IS_ALNUM(c)	(isalnum ((unsigned char)c) || (c) == '_')
+ 
+ /* Sorry about all the globals, but it's really cleaner this way. */
+ 
 @@ -562,10 +561,11 @@ report_filenames (char const *name, stru
  static void
  report_grep (char const *name, struct file_link **flinkv)
