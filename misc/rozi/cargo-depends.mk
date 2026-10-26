@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2026/10/20 11:57:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2026/10/26 11:24:41 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.10
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -302,7 +302,7 @@ CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.4
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.7.0
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-android-0.1.1
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	ryu-1.0.23
 CARGO_CRATE_DEPENDS+=	safe_arch-1.2.0
@@ -377,8 +377,8 @@ CARGO_CRATE_DEPENDS+=	toml_parser-1.1.3+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	toml_writer-1.1.2+spec-1.1.0
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.2.2
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.25.1
-CARGO_CRATE_DEPENDS+=	tui-lipan-0.27.3
-CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.27.3
+CARGO_CRATE_DEPENDS+=	tui-lipan-0.30.0
+CARGO_CRATE_DEPENDS+=	tui-lipan-macro-0.30.0
 CARGO_CRATE_DEPENDS+=	typed-path-0.12.3
 CARGO_CRATE_DEPENDS+=	typenum-1.20.1
 CARGO_CRATE_DEPENDS+=	ucd-trie-0.1.7
@@ -414,8 +414,8 @@ CARGO_CRATE_DEPENDS+=	wayland-scanner-0.31.11
 CARGO_CRATE_DEPENDS+=	wayland-sys-0.31.11
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.104
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
-CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.9
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.10
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.10
 CARGO_CRATE_DEPENDS+=	weezl-0.1.12
 CARGO_CRATE_DEPENDS+=	wezterm-bidi-0.2.3
 CARGO_CRATE_DEPENDS+=	wezterm-blob-leases-0.1.1
