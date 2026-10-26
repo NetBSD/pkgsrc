@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/10/22 08:01:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/10/26 12:53:06 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -87,6 +87,7 @@ include/python${PY_VER_SUFFIX}/floatobject.h
 include/python${PY_VER_SUFFIX}/frameobject.h
 include/python${PY_VER_SUFFIX}/genericaliasobject.h
 include/python${PY_VER_SUFFIX}/import.h
+include/python${PY_VER_SUFFIX}/internal/mimalloc/mimalloc-stats.h
 include/python${PY_VER_SUFFIX}/internal/mimalloc/mimalloc.h
 include/python${PY_VER_SUFFIX}/internal/mimalloc/mimalloc/atomic.h
 include/python${PY_VER_SUFFIX}/internal/mimalloc/mimalloc/internal.h
@@ -2304,6 +2305,7 @@ lib/python${PY_VER_SUFFIX}/test/certdata/capath/99d0fa06.0
 lib/python${PY_VER_SUFFIX}/test/certdata/capath/b1930218.0
 lib/python${PY_VER_SUFFIX}/test/certdata/capath/ceff1710.0
 lib/python${PY_VER_SUFFIX}/test/certdata/cert3.pem
+lib/python${PY_VER_SUFFIX}/test/certdata/distrusted.zip
 lib/python${PY_VER_SUFFIX}/test/certdata/ffdh3072.pem
 lib/python${PY_VER_SUFFIX}/test/certdata/idnsans.pem
 lib/python${PY_VER_SUFFIX}/test/certdata/keycert.passwd.pem

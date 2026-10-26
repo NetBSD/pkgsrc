@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/10/22 08:01:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/10/26 12:53:06 adam Exp $
 share/doc/python3.14/.buildinfo
 share/doc/python3.14/404.html
 share/doc/python3.14/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -114,6 +114,7 @@ share/doc/python3.14/c-api/objimpl.html
 share/doc/python3.14/c-api/perfmaps.html
 share/doc/python3.14/c-api/picklebuffer.html
 share/doc/python3.14/c-api/profiling.html
+share/doc/python3.14/c-api/pyexpat.html
 share/doc/python3.14/c-api/refcounting.html
 share/doc/python3.14/c-api/reflection.html
 share/doc/python3.14/c-api/sequence.html
