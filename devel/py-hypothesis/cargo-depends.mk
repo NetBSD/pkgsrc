@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/10/16 17:50:29 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/10/26 05:21:36 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.4
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
@@ -10,17 +10,18 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.21.4
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.13.1
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
-CARGO_CRATE_DEPENDS+=	pyo3-0.29.3
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.29.3
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.29.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.29.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.29.3
+CARGO_CRATE_DEPENDS+=	pyo3-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.30.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.30.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.46
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	rand-0.9.4
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.9.0
 CARGO_CRATE_DEPENDS+=	rand_core-0.9.5
 CARGO_CRATE_DEPENDS+=	syn-2.0.118
+CARGO_CRATE_DEPENDS+=	syn-3.0.9
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.5
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.24
 CARGO_CRATE_DEPENDS+=	wasip2-1.0.4+wasi-0.2.12
