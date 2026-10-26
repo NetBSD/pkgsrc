@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7339 2026/10/26 18:00:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7340 2026/10/26 18:03:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10994,3 +10994,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz to 15.0.0 [wiz 2026-10-26]
 	Updated fonts/harfbuzz-icu to 15.0.0 [wiz 2026-10-26]
 	Updated mail/dmarc-report-viewer to 2.6.2 [wiz 2026-10-26]
+	Updated www/grafana-prometheus-datasource to 13.2.4 [wiz 2026-10-26]
