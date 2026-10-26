@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2025/02/18 10:13:33 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/10/26 06:02:39 adam Exp $
 
-BLAKE2s (openh264-2.6.0.tar.gz) = 2ea2f5bfbb440e7f57a2cc59f0e628ffe41aee70d58086a5e9d8b3478da1d3a5
-SHA512 (openh264-2.6.0.tar.gz) = 26a03acde7153a6b40b99f00641772433a244c72a3cc4bca6d903cf3b770174d028369a2fb73b2f0774e1124db0e269758eed6d88975347a815e0366c820d247
-Size (openh264-2.6.0.tar.gz) = 60302243 bytes
+BLAKE2s (openh264-2.7.0.tar.gz) = b623e6f9558c93ee7bdb7d72b8fd4138e9b924202541522cc4995f220bf3fa29
+SHA512 (openh264-2.7.0.tar.gz) = caa52cbc73e9b6096c5ba4066d85d34ea63e81573c36d06ccd3f54ba34d95b133b5c507fc6e1ba81552673de01bed50c35de4b90428b4da9942ade442bd47a13
+Size (openh264-2.7.0.tar.gz) = 60330936 bytes
 SHA1 (patch-Makefile) = 8dfd1e2bba933ec8280ac8db8b7c661fee64ba47
 SHA1 (patch-codec_common_generate__version.sh) = 5f0d3b33c6730e3da824acb503ceb4c84347a320
 SHA1 (patch-codec_common_src_WelsThreadLib.cpp) = 06a6154330f58c5cca96ab9c3287258796248aaa

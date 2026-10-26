@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/04/12 18:25:34 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/26 06:02:39 adam Exp $
 
-DISTNAME=	openh264-2.6.0
+DISTNAME=	openh264-2.7.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cisco/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
