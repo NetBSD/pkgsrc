@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7341 2026/10/26 18:05:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7342 2026/10/26 18:07:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10996,3 +10996,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/dmarc-report-viewer to 2.6.2 [wiz 2026-10-26]
 	Updated www/grafana-prometheus-datasource to 13.2.4 [wiz 2026-10-26]
 	Updated misc/py-platformdirs to 4.13.5 [wiz 2026-10-26]
+	Updated textproc/tree-sitter-markdown to 0.5.4 [wiz 2026-10-26]
