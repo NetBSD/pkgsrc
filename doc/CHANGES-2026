@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7293 2026/10/25 20:46:42 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7294 2026/10/26 05:29:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10928,3 +10928,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-cares to 5.2.1nb1 [wiz 2026-10-25]
 	Updated textproc/miller to 6.22.0 [drixter 2026-10-25]
 	Updated misc/pciids to 20261024 [drixter 2026-10-25]
+	Updated devel/py-hypothesis to 6.170.11 [adam 2026-10-26]
+	Updated devel/py-test-asyncio to 1.4.1 [adam 2026-10-26]
+	Updated devel/py-cachetools to 7.2.5 [adam 2026-10-26]
+	Updated lang/py-inflect to 7.6.0 [adam 2026-10-26]
