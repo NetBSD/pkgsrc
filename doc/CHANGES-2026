@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7320 2026/10/26 10:00:02 micha Exp $
+$NetBSD: CHANGES-2026,v 1.7321 2026/10/26 10:53:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10965,3 +10965,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-tornado to 6.6 [adam 2026-10-26]
 	Updated print/py-xhtml2pdf to 0.2.28 [adam 2026-10-26]
 	Updated news/flnews to 1.4.0 [micha 2026-10-26]
+	Added editors/vis-editor version 0.9 [wiz 2026-10-26]
