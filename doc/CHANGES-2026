@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7332 2026/10/26 13:07:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7333 2026/10/26 15:49:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10985,3 +10985,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py312-html-docs to 3.12.16 [adam 2026-10-26]
 	Updated lang/python311 to 3.11.18 [adam 2026-10-26]
 	Updated lang/py311-html-docs to 3.11.18 [adam 2026-10-26]
+	Updated textproc/py-lxml-html-clean to 0.4.6 [adam 2026-10-26]
+	Updated textproc/py-html-sanitizer to 2.7.0 [adam 2026-10-26]
