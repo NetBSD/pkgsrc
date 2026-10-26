@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/10/23 14:32:40 ktnb Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/26 07:03:41 wiz Exp $
 
 DISTNAME=	py_tlsh-4.12.1
 PKGNAME=	${DISTNAME:S/py-/${PYPKGPREFIX}-/:S/_/-/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/py-tlsh/
 COMMENT=	TLSH C++ extension for Python
 LICENSE=	apache-2.0
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 
