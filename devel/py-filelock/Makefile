@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2026/10/18 13:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/10/26 18:20:26 wiz Exp $
 
-DISTNAME=	filelock-4.2.2
+DISTNAME=	filelock-4.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
@@ -23,8 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-# as of 4.2.2
-# 105 failed, 2686 passed, 157 skipped
+# as of 4.2.4
+# 2694 passed, 258 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
