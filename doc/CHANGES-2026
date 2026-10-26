@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7348 2026/10/26 21:01:38 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7349 2026/10/26 21:20:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11003,3 +11003,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-awscrt to 0.36.2nb1 [drixter 2026-10-26]
 	Updated textproc/py-markdown to 3.11.2 [wiz 2026-10-26]
 	Updated net/dnscontrol to 5.7.1 [drixter 2026-10-26]
+	Updated audio/rhythmbox to 3.4.6nb34 [wiz 2026-10-26]
