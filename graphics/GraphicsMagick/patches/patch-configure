@@ -1,38 +1,60 @@
-$NetBSD: patch-configure,v 1.6 2026/06/29 12:00:28 adam Exp $
+$NetBSD: patch-configure,v 1.7 2026/10/26 07:24:18 nia Exp $
 
 Do not save configure args; they reference workdir.
 
---- configure.orig	2026-05-13 14:14:52.000000000 +0000
+--- configure.orig	2026-10-25 21:49:18.802270567 +0000
 +++ configure
-@@ -36236,31 +36236,8 @@ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS |
+@@ -36394,53 +36394,6 @@ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS | sed -e 's/  *
+ MAGICK_API_DEP_LIBS=`echo $MAGICK_API_DEP_LIBS | sed -e 's/  */ /g'`
+ MAGICK_API_LIBS=`echo $MAGICK_API_LIBS | sed -e 's/  */ /g'`
  
- # Save configure/build parameters for later reference
- 
--printf "%s\n" "#define GM_BUILD_CONFIGURE_ARGS \"$0 ${ac_configure_args}\"" >>confdefs.h
- 
- 
--printf "%s\n" "#define GM_BUILD_HOST \"${host}\"" >>confdefs.h
+-# Save configure/build parameters for later reference
+-
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CONFIGURE_ARGS "$0 ${ac_configure_args}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_CC \"${CC}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_HOST "${host}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_CXX \"${CXX}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CC "${CC}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_CFLAGS \"${CFLAGS}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CXX "${CXX}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_CPPFLAGS \"${CPPFLAGS}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CFLAGS "${CFLAGS}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_CXXFLAGS \"${CXXFLAGS}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CPPFLAGS "${CPPFLAGS}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_LDFLAGS \"${LDFLAGS}\"" >>confdefs.h
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_CXXFLAGS "${CXXFLAGS}"
+-_ACEOF
 -
 -
--printf "%s\n" "#define GM_BUILD_LIBS \"${MAGICK_API_DEP_LIBS}\"" >>confdefs.h
- 
- 
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_LDFLAGS "${LDFLAGS}"
+-_ACEOF
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define GM_BUILD_LIBS "${MAGICK_API_DEP_LIBS}"
+-_ACEOF
+-
+-
  # Pass only user-provided LIBS as "global" libraries
+ LIBS=$LIBS_USER
+ 
