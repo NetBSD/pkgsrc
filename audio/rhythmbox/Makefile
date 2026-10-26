@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.228 2026/09/29 06:03:55 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2026/10/26 21:19:51 wiz Exp $
 
 DISTNAME=	rhythmbox-3.4.6
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,9 @@ TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
-DEPENDS+=	grilo-plugins-[0-9]*:../../net/grilo-plugins
+# grilo uses libsoup3, and rhythmbox 3.4.6 only supports libsoup2,
+# and the different libsoup versions cannot coexist, see PR 60929.
+#DEPENDS+=	grilo-plugins-[0-9]*:../../net/grilo-plugins
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_TOOLS+=		intltool itstool msgfmt pkg-config
@@ -42,7 +44,7 @@ BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
-.include "../../net/grilo/buildlink3.mk"
+#.include "../../net/grilo/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2023/01/03 13:23:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/10/26 21:19:51 wiz Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 include/rhythmbox/backends/rb-encoder.h
@@ -91,8 +91,6 @@ lib/rhythmbox/plugins/dbus-media-server/dbus-media-server.plugin
 lib/rhythmbox/plugins/dbus-media-server/libdbus-media-server.so
 lib/rhythmbox/plugins/generic-player/generic-player.plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.so
-lib/rhythmbox/plugins/grilo/grilo.plugin
-lib/rhythmbox/plugins/grilo/libgrilo.so
 lib/rhythmbox/plugins/ipod/ipod.plugin
 lib/rhythmbox/plugins/ipod/libipod.so
 lib/rhythmbox/plugins/iradio/iradio.plugin
