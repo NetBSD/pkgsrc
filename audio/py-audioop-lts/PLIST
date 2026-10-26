@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/15 08:05:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/26 06:06:13 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,5 +8,5 @@ ${PYSITELIB}/audioop/__init__.py
 ${PYSITELIB}/audioop/__init__.pyc
 ${PYSITELIB}/audioop/__init__.pyi
 ${PYSITELIB}/audioop/__init__.pyo
-${PYSITELIB}/audioop/_audioop.abi3.so
+${PYSITELIB}/audioop/_audioop.so
 ${PYSITELIB}/audioop/py.typed
