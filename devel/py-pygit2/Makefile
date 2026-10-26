@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2026/09/29 06:04:41 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/10/26 06:29:09 wiz Exp $
 
 DISTNAME=	pygit2-1.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/libgit2/pygit2
 COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=2.0:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/08/10 11:38:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/10/26 06:29:09 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -11,7 +11,7 @@ ${PYSITELIB}/pygit2/__init__.pyo
 ${PYSITELIB}/pygit2/_build.py
 ${PYSITELIB}/pygit2/_build.pyc
 ${PYSITELIB}/pygit2/_build.pyo
-${PYSITELIB}/pygit2/_libgit2.abi3.so
+${PYSITELIB}/pygit2/_libgit2.so
 ${PYSITELIB}/pygit2/_pygit2.pyi
 ${PYSITELIB}/pygit2/_pygit2.so
 ${PYSITELIB}/pygit2/_run.py
