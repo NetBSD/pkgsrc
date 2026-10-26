@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7300 2026/10/26 06:05:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7301 2026/10/26 06:06:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10943,3 +10943,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-nvdlib to 0.9.0 [adam 2026-10-26]
 	Updated multimedia/openh264 to 2.7.0 [adam 2026-10-26]
 	Updated net/glib-networking to 2.90.1 [adam 2026-10-26]
+	Updated audio/py-audioop-lts to 0.2.2nb1 [wiz 2026-10-26]
