@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/10/22 08:16:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/10/26 11:26:49 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -136,12 +136,6 @@ CARGO_CRATE_DEPENDS+=	gif-0.14.2
 CARGO_CRATE_DEPENDS+=	gimli-0.32.3
 CARGO_CRATE_DEPENDS+=	git2-0.21.0
 CARGO_CRATE_DEPENDS+=	globset-0.4.20
-CARGO_CRATE_DEPENDS+=	gravityfile-analyze-0.4.0
-CARGO_CRATE_DEPENDS+=	gravityfile-core-0.4.0
-CARGO_CRATE_DEPENDS+=	gravityfile-ops-0.4.0
-CARGO_CRATE_DEPENDS+=	gravityfile-plugin-0.4.0
-CARGO_CRATE_DEPENDS+=	gravityfile-scan-0.4.0
-CARGO_CRATE_DEPENDS+=	gravityfile-tui-0.4.0
 CARGO_CRATE_DEPENDS+=	half-2.7.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.16.1

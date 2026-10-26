@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2026/10/22 08:16:22 pin Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/26 11:26:49 pin Exp $
 
-DISTNAME=	gravityfile-0.4.0
+DISTNAME=	gravityfile-0.4.1
 CATEGORIES=	sysutils
-MASTER_SITES=	https://static.crates.io/crates/gravityfile/
-EXTRACT_SUFX=	.crate
+MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/epistates/gravityfile/

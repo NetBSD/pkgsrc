@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/10/22 08:16:22 pin Exp $
+$NetBSD: distinfo,v 1.6 2026/10/26 11:26:49 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -408,27 +408,9 @@ Size (git2-0.21.0.crate) = 242222 bytes
 BLAKE2s (globset-0.4.20.crate) = 0b71b4c18106e867529934cc131e8db316b7ea01157fbf9653d8b7f952e48fe3
 SHA512 (globset-0.4.20.crate) = 28e17a477f57903c8c6491dadf05be26ee1fdf099b392f6f0148cb12fd7237f871ccd61e19bfcd19bff468a8276cbb859eee37865cd4eb4407d7d9800e701f65
 Size (globset-0.4.20.crate) = 29724 bytes
-BLAKE2s (gravityfile-0.4.0.crate) = 699db4e8f4e02527b83efa19c87abc3cc1bfc5059bdb18dbef733b3d0d53a12d
-SHA512 (gravityfile-0.4.0.crate) = 4144060d51092819bc2b21196506b3cb2f88ee7b18c6c08c4aeeb20b83f344f4e64af625b6c34273565926ab522ae1a2afa14cd6a4cd395fdc9cd38f43506404
-Size (gravityfile-0.4.0.crate) = 86738 bytes
-BLAKE2s (gravityfile-analyze-0.4.0.crate) = cf8c7577f51832bebcbea2737ee1527468fb0c2a4f42e303bf6d79a2b8e83ab8
-SHA512 (gravityfile-analyze-0.4.0.crate) = 4e35efcd95f69aaa2ee447db944630a407daba1f3dd6a40933c3649baabfed9879abd952934eb7459039d24fd5a2a589ce16bf471dabaea2cdaf106b5c0d4667
-Size (gravityfile-analyze-0.4.0.crate) = 38102 bytes
-BLAKE2s (gravityfile-core-0.4.0.crate) = 09515902145d63c942844541b313f90ac695ffaeaedd4dc4e4c60018600383d9
-SHA512 (gravityfile-core-0.4.0.crate) = e8993f0613e9d9cf1d3a91fa576f6014ea2c106729b22a625b69a3ef15dbc2d853b52b4ffc4fbfd64ddded83d425a1a74c0f78505f18511c66448b87bae0029c
-Size (gravityfile-core-0.4.0.crate) = 35232 bytes
-BLAKE2s (gravityfile-ops-0.4.0.crate) = 02754200b18778aba5552c94f8ce951a28f7c85d6dff9cbbb16c251b895aacaf
-SHA512 (gravityfile-ops-0.4.0.crate) = aa137f04b63e5e35cc7d44656b49d50cecd7f5ea345e91bed5b86068cfe53b5619e38581e243d7904899cd9efd3cc943dcb1b7b54f3035b7256b325e63ded966
-Size (gravityfile-ops-0.4.0.crate) = 72909 bytes
-BLAKE2s (gravityfile-plugin-0.4.0.crate) = 2877940fc657c282f8e3801966ef04fa2c9283c7ca6020a9486bae9aa762160d
-SHA512 (gravityfile-plugin-0.4.0.crate) = 8488033e33161275bfbaad848f60d43d27f7febd4ce9922fed354ee1d11d424a7f1879b6b9bbb7bdc9235040bfad10cc01cfb7fdbe65dae5840a3abfd1435430
-Size (gravityfile-plugin-0.4.0.crate) = 50155 bytes
-BLAKE2s (gravityfile-scan-0.4.0.crate) = 07268fb4007049b0d9cec2e12ce77c04b505bf5406bb08ffa125a09e8bebea57
-SHA512 (gravityfile-scan-0.4.0.crate) = 9c5562f16bef45fc5472956ed366ed1c0ed84947567de8f4e1abbbe3c0f13e2024b929edf55320c097b1d878492b2791530cd11666e2e93d1179872a86f2d186
-Size (gravityfile-scan-0.4.0.crate) = 45813 bytes
-BLAKE2s (gravityfile-tui-0.4.0.crate) = 3b83ada8568eccbd4224b8777fb61cf37310eb0a81dbc078c2c2a404d449ee99
-SHA512 (gravityfile-tui-0.4.0.crate) = 82206fc9661d274eeb93c8d0f99562407da0fff237528eaa6ff724d33d5a53aca50f457b9bfa5d9e2673decdc1b7a40ec8d499f69e9b991611da2617b896a99b
-Size (gravityfile-tui-0.4.0.crate) = 229511 bytes
+BLAKE2s (gravityfile-0.4.1.tar.gz) = c36c24dceab8253971261671fc3c58db331affdae910e39efe32b69ae00fc557
+SHA512 (gravityfile-0.4.1.tar.gz) = af9d426fe2bfd29cdffbea30d276e65e2c1238458d1f7c76e83bbb0d5f391eda946408636ee0c93fb43047d2cee4293158b459a3de196323d251dd2572161839
+Size (gravityfile-0.4.1.tar.gz) = 3047191 bytes
 BLAKE2s (half-2.7.1.crate) = 6dc03241ebe563191babc40781e79b04c3c79285330b7668158f50df4a4a562e
 SHA512 (half-2.7.1.crate) = f47cc8bfb4c754a8585d4e8eca1a35039dc0879e87e59acb72e91bf2d33eca8c4f8dd17b3a56e8953bcba62cb08122120866e9d4b3ab9f008847d86a5f81716d
 Size (half-2.7.1.crate) = 61040 bytes
