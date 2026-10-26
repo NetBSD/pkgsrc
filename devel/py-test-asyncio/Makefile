@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2026/05/27 12:50:25 adam Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/26 05:25:29 adam Exp $
 
-DISTNAME=	pytest_asyncio-1.4.0
+DISTNAME=	pytest_asyncio-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-asyncio/}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.7.1:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # requires backports-asyncio-runner
-
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 313
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12:../../devel/py-typing-extensions
@@ -27,10 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12:../../devel/py-typing-extension
 
 # test status as of 1.1.0 after 'make install'
 # 168 passed
-
-# https://github.com/pytest-dev/pytest-asyncio/issues/1194
-pre-configure:
-	${MV} ${WRKSRC}/dependencies ${WRKSRC}/not-dependencies
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
