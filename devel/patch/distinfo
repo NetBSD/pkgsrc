@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:17:59 nia Exp $
+$NetBSD: distinfo,v 1.16 2026/10/26 16:47:06 wiz Exp $
 
-BLAKE2s (patch-2.7.6.tar.xz) = 712c28f8a0fbfbd5ec4cd71ef45204a3780a332d559b5566070138554b89e400
-SHA512 (patch-2.7.6.tar.xz) = fcca87bdb67a88685a8a25597f9e015f5e60197b9a269fa350ae35a7991ed8da553939b4bbc7f7d3cfd863c67142af403b04165633acbce4339056a905e87fbd
-Size (patch-2.7.6.tar.xz) = 783756 bytes
-SHA1 (patch-src_pch.c) = 0aed6cd0d64c380767c39908c388c91ddf3003d1
-SHA1 (patch-tests_Makefile.in) = f7fd200672b65f466a982084d2b907d32a8f0a77
-SHA1 (patch-tests_ed-style) = 7d7c2d04eddaab1d07c05022908a98ef9c984e08
+BLAKE2s (patch-2.8.1.tar.xz) = 8211fd13845369e1c26701ac2527854cf6755d2b87ef93d40da3f9efab73d241
+SHA512 (patch-2.8.1.tar.xz) = 344cad0f3a19a651c8f0188c89402018c65406b106adecdfec52df4359046ca5d86a70ce8d7943f8c41deed79918291b0a86bfa57dcec2c0aa2b4bbca6edc698
+Size (patch-2.8.1.tar.xz) = 940364 bytes
