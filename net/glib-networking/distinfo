@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2026/09/22 07:45:33 ryoon Exp $
+$NetBSD: distinfo,v 1.36 2026/10/26 06:04:19 adam Exp $
 
-BLAKE2s (glib-networking-2.90.0.tar.xz) = b62c6c621dc0f8638cd0a11b9870ee884562dd64baa0f02d1bd914af8ada8f91
-SHA512 (glib-networking-2.90.0.tar.xz) = a94c5d0e9775cf7d6bf1cfd6132ff2bb90ec53915bf169d59548fe6a914007837a9a139d2aee8c562006c53e78ddf74b0279c542c10c95cd9ae8929c4af4e46e
-Size (glib-networking-2.90.0.tar.xz) = 290168 bytes
+BLAKE2s (glib-networking-2.90.1.tar.xz) = 7979cac9fb65f59811e1d71e3a3e90867020f440447e204083ff9d45712a339c
+SHA512 (glib-networking-2.90.1.tar.xz) = 9d5ef7bfaa9ee00b10c65959528def32a48212fc4abf835aab940f893c0bde2c023c916ae4b714c21e2038ec7bd27795b3c8ea62b8ef75cdef4b10571e1c74f6
+Size (glib-networking-2.90.1.tar.xz) = 293904 bytes
 SHA1 (patch-tls_tests_meson.build) = 203689ed3069086ecca6f3b41ebb30b1654cb70c
