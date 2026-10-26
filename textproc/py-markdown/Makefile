@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2026/10/18 13:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2026/10/26 18:25:20 wiz Exp $
 
-DISTNAME=	markdown-3.11.1
+DISTNAME=	markdown-3.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
@@ -15,9 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} markdown_py markdown_py${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	markdown_py
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
