@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7338 2026/10/26 17:55:00 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7339 2026/10/26 18:00:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10993,3 +10993,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns-recursor to 5.4.9 [drixter 2026-10-26]
 	Updated fonts/harfbuzz to 15.0.0 [wiz 2026-10-26]
 	Updated fonts/harfbuzz-icu to 15.0.0 [wiz 2026-10-26]
+	Updated mail/dmarc-report-viewer to 2.6.2 [wiz 2026-10-26]
