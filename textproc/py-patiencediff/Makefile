@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/10/14 09:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/10/26 12:38:56 adam Exp $
 
-DISTNAME=	patiencediff-1.0.1
+DISTNAME=	patiencediff-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/patiencediff/}
