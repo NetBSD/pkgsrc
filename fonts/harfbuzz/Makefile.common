@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.90 2026/10/06 07:49:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.91 2026/10/26 17:54:39 wiz Exp $
 # used by fonts/harfbuzz-docs/Makefile
 # used by fonts/harfbuzz-icu/Makefile
 
-DISTNAME=	harfbuzz-14.6.0
+DISTNAME=	harfbuzz-15.0.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
