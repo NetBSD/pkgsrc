@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7295 2026/10/26 05:38:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7296 2026/10/26 05:43:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10934,3 +10934,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-inflect to 7.6.0 [adam 2026-10-26]
 	Updated lang/python315 to 3.15.2 [adam 2026-10-26]
 	Updated lang/py315-html-docs to 3.15.2 [adam 2026-10-26]
+	Updated textproc/py-unicode-segmentation-rs to 1.0.0 [adam 2026-10-26]
+	Updated textproc/py-validate-pyproject to 0.27 [adam 2026-10-26]
