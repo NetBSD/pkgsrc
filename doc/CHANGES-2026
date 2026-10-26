@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7318 2026/10/26 07:42:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7319 2026/10/26 08:15:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10962,3 +10962,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/GraphicsMagick to 1.3.49 [nia 2026-10-26]
 	Updated www/py-httpcore2 to 2.16.0 [adam 2026-10-26]
 	Updated www/py-httpx2 to 2.16.0 [adam 2026-10-26]
+	Updated www/py-tornado to 6.6 [adam 2026-10-26]
+	Updated print/py-xhtml2pdf to 0.2.28 [adam 2026-10-26]
