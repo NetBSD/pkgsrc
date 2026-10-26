@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2026/09/28 13:10:31 pin Exp $
+$NetBSD: distinfo,v 1.24 2026/10/26 11:23:30 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -255,9 +255,9 @@ Size (fancy-regex-0.11.0.crate) = 82918 bytes
 BLAKE2s (fastrand-2.5.0.crate) = ab3a561a68d20ac300072f96800163982cf9a862f26088d6c477455466ba88ac
 SHA512 (fastrand-2.5.0.crate) = 0c7369840393fbd8fe8c6fa94d47ddc8e8c709270d20c9ce81c3902ea6dc9cfaa5ee0cf2e9b5b865453748283545e206264446d905550c838c052534a6088ddd
 Size (fastrand-2.5.0.crate) = 20782 bytes
-BLAKE2s (feluda-1.17.0.tar.gz) = 8b09b406542fe47778ce5da2e036863228649deaa4b70ef4bee7c9e7d720f8f8
-SHA512 (feluda-1.17.0.tar.gz) = 7a8654d746693483a638e9500b15f50398507a0daebfb32da275b746c558fc216cebfde0be998e82f6663418545c821ff996548133f7a699e599b7be68e37c0c
-Size (feluda-1.17.0.tar.gz) = 1061512 bytes
+BLAKE2s (feluda-1.18.0.tar.gz) = 0b7f0ec72dc8e5f8cd2c088760ee0b4dad39cc864067db97078fb0a21fa69b19
+SHA512 (feluda-1.18.0.tar.gz) = 5bff8f70af6a586fb2226c0b8224978f1a2c10abc0eb923b21344334aa81eb21a09661287e1f2f9b33b643148005c76a550b6caa5d0074da266753aab028e683
+Size (feluda-1.18.0.tar.gz) = 2482375 bytes
 BLAKE2s (figment-0.10.19.crate) = a3e1ddeeab89744acbff111cc319d4e9837b626d5edc58e8e76ba6cc8bf11e7a
 SHA512 (figment-0.10.19.crate) = 1b153903f54c980451d013a145138b8c4254796014c19e6bc096927d490c96f04bf0a2266164cca3ad3a50322c07b3ef41831e317d264ae9273645e1e43ee095
 Size (figment-0.10.19.crate) = 70111 bytes
@@ -810,9 +810,9 @@ Size (rustls-platform-verifier-0.7.1.crate) = 60698 bytes
 BLAKE2s (rustls-platform-verifier-android-0.2.0.crate) = a4891a056e9ffbaed109586654dcc3d6e5b22fb9f1cf04cea1c8e8fa32723473
 SHA512 (rustls-platform-verifier-android-0.2.0.crate) = d07f13f059cba0c480917f2233caaec0c5ed5e10876c793264c23ba2f02b9c1d8a120a3319799c114fcddd02d8306f434dcb611d9ecb7a3336c32ad51edfb87a
 Size (rustls-platform-verifier-android-0.2.0.crate) = 16451 bytes
-BLAKE2s (rustls-webpki-0.103.15.crate) = 7798c89cd466bfc2dcef2c2c7be614ae77cbb76e2772a9890bb5ecc1d1dd3185
-SHA512 (rustls-webpki-0.103.15.crate) = adeb7c379e9b691e044d497768959bab9c8f291c21f93e9f5373ab0639e9070258945e2bd0be4e8eb8fca98c3824e942033d6430d15134f8fe8ff3a1c4d98382
-Size (rustls-webpki-0.103.15.crate) = 87465 bytes
+BLAKE2s (rustls-webpki-0.103.16.crate) = 752cd6f7b2ea420c76d7891a38783c33fdb77471ea4286f27ce3fb0a78ab8087
+SHA512 (rustls-webpki-0.103.16.crate) = eee403a2e2a57b598ad01662995db2bd2fe79d2405e3e3ff98442fa37e6ff8f8a267a46476303fe74691c3399d618c41cc8ffa733ddebe4d8759fd466fc7ce6a
+Size (rustls-webpki-0.103.16.crate) = 89984 bytes
 BLAKE2s (rustversion-1.0.23.crate) = 34b032c76b54216071144f3bad4e20da1bbee1cd59abbd3e5c33d3513e2a88dc
 SHA512 (rustversion-1.0.23.crate) = 95baec2c1d8475661677ea35a724c392ed10b1151a1f4522b44133c6d691824bf4a42327ebc9d631a1f64f944dc721843e0aa0e19354fc4fab89aa048f1c68f5
 Size (rustversion-1.0.23.crate) = 21013 bytes
@@ -1155,9 +1155,9 @@ Size (web-sys-0.3.105.crate) = 682289 bytes
 BLAKE2s (web-time-1.1.0.crate) = 9c36644abce7ba1ddc0bdc98622e1ef801daa6ae7f862e033f2c446162686892
 SHA512 (web-time-1.1.0.crate) = 73e4ef9851de089fde9381a595cb9e37a434f563f1fd350e345f2617b701caf57a9aef739b922b5b10cda131cdf2fd0af42c55603f8973a623a8b6ae70f6cc9f
 Size (web-time-1.1.0.crate) = 18026 bytes
-BLAKE2s (webpki-root-certs-1.0.9.crate) = c0ddf22eebb506dd898ead38b077e26df58c5541a860269a9c9ce54c946d15b9
-SHA512 (webpki-root-certs-1.0.9.crate) = 77a64cc129bae28d2d274d8c0240eea5c2824cc12a3ebcda890b7f43e2d159fd52f7bb294075c471963397221fb27ee4d8777d283f42440c98eabfc042c5d110
-Size (webpki-root-certs-1.0.9.crate) = 149167 bytes
+BLAKE2s (webpki-root-certs-1.0.10.crate) = f7c9b7bd8a6b6e9b0272fee95c90bd85495783481c2af035d8f4e1f905d20720
+SHA512 (webpki-root-certs-1.0.10.crate) = b861defc7c1dab088e4fabc1fbe7f1db5c3e9e28c4b8fdd92e1635dbd2ceaa2ba397bafff984792317fba39802827c80c33b408726f79985382721fd01e16135
+Size (webpki-root-certs-1.0.10.crate) = 148663 bytes
 BLAKE2s (wezterm-bidi-0.2.3.crate) = 21cb5448b48f1368a3eed911fe3eb827ee237c32592d567aa61f613aadb6f9d9
 SHA512 (wezterm-bidi-0.2.3.crate) = 37950db06980a60ce7a5cf2a2ac55aafb3d16d02b650dbb938f28d60217f4c51e1fbfe21d53898078336f68538e97f8a061e7b6c7eb238427651ff8673d6c45f
 Size (wezterm-bidi-0.2.3.crate) = 73214 bytes
