@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7329 2026/10/26 12:34:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7330 2026/10/26 12:39:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10975,3 +10975,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-about to 0.9.3 [pin 2026-10-26]
 	Updated graphics/py-pygraphviz to 2.0.4 [adam 2026-10-26]
 	Updated devel/py-pylru to 1.3.3 [adam 2026-10-26]
+	Updated devel/py-pipx to 1.18.4 [adam 2026-10-26]
+	Updated textproc/py-patiencediff to 1.0.2 [adam 2026-10-26]
