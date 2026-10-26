@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7296 2026/10/26 05:43:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7297 2026/10/26 06:00:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10936,3 +10936,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py315-html-docs to 3.15.2 [adam 2026-10-26]
 	Updated textproc/py-unicode-segmentation-rs to 1.0.0 [adam 2026-10-26]
 	Updated textproc/py-validate-pyproject to 0.27 [adam 2026-10-26]
+	Updated security/py-cryptodome to 3.24.1nb1 [wiz 2026-10-26]
