@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7316 2026/10/26 07:02:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7317 2026/10/26 07:24:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -10959,3 +10959,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-xattr to 1.3.0nb1 [wiz 2026-10-26]
 	Updated www/p5-Plack to 1.0057 [wiz 2026-10-26]
 	Updated www/p5-Starman to 0.4019 [wiz 2026-10-26]
+	Updated graphics/GraphicsMagick to 1.3.49 [nia 2026-10-26]
