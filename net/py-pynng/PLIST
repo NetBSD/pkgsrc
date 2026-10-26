@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/15 09:51:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/26 06:36:26 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,7 +10,7 @@ ${PYSITELIB}/pynng/__init__.pyo
 ${PYSITELIB}/pynng/_aio.py
 ${PYSITELIB}/pynng/_aio.pyc
 ${PYSITELIB}/pynng/_aio.pyo
-${PYSITELIB}/pynng/_nng.abi3.so
+${PYSITELIB}/pynng/_nng.so
 ${PYSITELIB}/pynng/_version.py
 ${PYSITELIB}/pynng/_version.pyc
 ${PYSITELIB}/pynng/_version.pyo
