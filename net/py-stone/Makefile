@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/09/24 09:40:22 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/10/26 05:49:35 adam Exp $
 
 DISTNAME=	stone-3.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.16.0:../../devel/py-coverage
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	stone
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

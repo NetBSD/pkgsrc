@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/06/28 15:23:39 adam Exp $
+# $NetBSD: Makefile,v 1.23 2026/10/26 05:47:17 adam Exp $
 
 DISTNAME=	txaio-26.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=22.10.0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

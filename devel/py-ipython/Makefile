@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2026/09/01 13:49:19 adam Exp $
+# $NetBSD: Makefile,v 1.125 2026/10/26 05:47:17 adam Exp $
 
 DISTNAME=	ipython-9.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	ipython ipython3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312

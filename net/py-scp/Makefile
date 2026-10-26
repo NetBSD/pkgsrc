@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/10/07 16:32:28 adam Exp $
+# $NetBSD: Makefile,v 1.24 2026/10/26 05:49:35 adam Exp $
 
 DISTNAME=	scp-0.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=0:../../security/py-paramiko
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

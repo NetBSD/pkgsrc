@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2026/09/04 05:11:05 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/10/26 05:47:17 adam Exp $
 
 DISTNAME=	cachelib-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess>=0.22.2:../../devel/py-test-xprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-uwsgi>=2.0.21:../../www/py-uwsgi
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

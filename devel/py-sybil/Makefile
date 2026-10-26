@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/06/25 12:46:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/26 05:47:17 adam Exp $
 
 DISTNAME=	sybil-10.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures>=11:../../devel/py-testfixtures
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

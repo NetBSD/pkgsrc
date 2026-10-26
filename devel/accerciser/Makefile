@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/09/29 06:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/10/26 05:47:17 adam Exp $
 
 DISTNAME=	accerciser-3.38.0
 PKGREVISION=	24
@@ -27,16 +27,12 @@ REPLACE_PYTHON+=	src/accerciser.in
 TOOLS_PLATFORM.msgfmt=
 .endif
 
-TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
-
-DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3
-DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+TOOL_DEPENDS+=	gettext-tools>=0.19.8:../../devel/gettext-tools
+DEPENDS+=	libwnck3>=0:../../devel/libwnck3
+DEPENDS+=	${PYPKGPREFIX}-at-spi2>=0:../../devel/py-at-spi2
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-ipython>=1.2.1:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
-
-# dependencies to keep package's configure script happy:
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+DEPENDS+=	${PYPKGPREFIX}-Xlib>=0:../../x11/py-Xlib
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"
