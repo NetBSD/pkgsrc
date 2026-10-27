@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7362 2026/10/27 11:31:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7363 2026/10/27 11:40:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11025,3 +11025,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.13.6 [adam 2026-10-27]
 	Updated devel/py-uv-build to 0.13.6 [adam 2026-10-27]
 	Updated devel/py-google-api-core to 2.43.0 [wiz 2026-10-27]
+	Updated net/py-grpcio to 1.85.0nb1 [wiz 2026-10-27]
