@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.9 2026/04/16 09:58:01 adam Exp $
+$NetBSD: patch-setup.py,v 1.10 2026/10/27 08:02:48 adam Exp $
 
 Use pthread on FreeBSD.
 Use external protobuf.
 
---- setup.py.orig	2026-03-24 23:15:03.000000000 +0000
+--- setup.py.orig	2026-10-25 14:42:05.000000000 +0000
 +++ setup.py
-@@ -226,7 +226,7 @@ if EXTRA_ENV_LINK_ARGS is None:
+@@ -229,7 +229,7 @@ if EXTRA_ENV_LINK_ARGS is None:
          EXTRA_ENV_LINK_ARGS += " -Wl,-exported_symbol,_{}".format(
              _EXT_INIT_SYMBOL
          )
@@ -14,11 +14,13 @@ Use external protobuf.
          EXTRA_ENV_LINK_ARGS += " -lpthread"
          if check_linker_need_libatomic():
              EXTRA_ENV_LINK_ARGS += " -latomic"
-@@ -244,13 +244,9 @@ EXTRA_LINK_ARGS = shlex.split(EXTRA_ENV_
- if BUILD_WITH_STATIC_LIBSTDCXX:
-     EXTRA_LINK_ARGS.append("-static-libstdc++")
+@@ -255,15 +255,11 @@ def _get_cc_files():
+     return [os.path.normpath(cc_file) for cc_file in cc_files]
  
--CC_FILES = [os.path.normpath(cc_file) for cc_file in protoc_lib_deps.CC_FILES]
+ 
+-CC_FILES = _get_cc_files()
+ 
+ 
  PROTO_FILES = [
      os.path.normpath(proto_file) for proto_file in protoc_lib_deps.PROTO_FILES
  ]
@@ -28,7 +30,7 @@ Use external protobuf.
  PROTO_INCLUDE = os.path.normpath(protoc_lib_deps.PROTO_INCLUDE)
  PROTO_PATH_PREFIX = os.path.normpath("google/protobuf")
  
-@@ -266,7 +262,7 @@ if "win32" in sys.platform:
+@@ -279,7 +275,7 @@ if "win32" in sys.platform:
      )
      if "64bit" in platform.architecture()[0]:
          DEFINE_MACROS += (("MS_WIN64", 1),)
@@ -37,7 +39,7 @@ Use external protobuf.
      DEFINE_MACROS += (("HAVE_PTHREAD", 1),)
  
  
-@@ -305,7 +301,7 @@ def extension_modules():
+@@ -318,7 +314,7 @@ def extension_modules():
          os.path.join("grpc_tools", "main.cc"),
          os.path.join("grpc_root", "src", "compiler", "python_generator.cc"),
          os.path.join("grpc_root", "src", "compiler", "proto_parser_helper.cc"),
@@ -46,7 +48,7 @@ Use external protobuf.
  
      plugin_ext = Extension(
          name="grpc_tools._protoc_compiler",
-@@ -314,8 +310,7 @@ def extension_modules():
+@@ -327,8 +323,7 @@ def extension_modules():
              ".",
              "grpc_root",
              os.path.join("grpc_root", "include"),
