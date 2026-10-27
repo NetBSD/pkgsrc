@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7370 2026/10/27 12:11:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7371 2026/10/27 12:18:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11033,3 +11033,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/py27-cryptodome version 3.24.1nb1 [wiz 2026-10-27]
 	Updated textproc/hunspell to 1.7.6 [wiz 2026-10-27]
 	Updated www/py-zensical to 0.0.73 [wiz 2026-10-27]
+	Updated misc/py-pbs-installer to 2026.10.25 [adam 2026-10-27]
+	Updated www/py-starlette to 1.10.0 [adam 2026-10-27]
