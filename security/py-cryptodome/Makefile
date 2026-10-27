@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/10/26 06:00:20 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/10/27 11:52:53 wiz Exp $
 
 DISTNAME=	pycryptodome-3.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -18,8 +18,6 @@ FORCE_C_STD=	c99
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP=	appveyor/get_wheels.sh
-
-PYTHON_27_ACCEPTED=	yes
 
 .include "../../lang/python/egg.mk"
 
