@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7375 2026/10/27 12:41:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7376 2026/10/27 13:55:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11039,3 +11039,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/rspamd to 4.2.3 [wiz 2026-10-27]
 	Updated shells/shuck to 0.2.7 [wiz 2026-10-27]
 	Updated databases/prometheus to 3.13.5 [wiz 2026-10-27]
+	Updated textproc/lowdown to 3.2.1 [adam 2026-10-27]
+	Updated sysutils/btop to 1.4.8 [adam 2026-10-27]
