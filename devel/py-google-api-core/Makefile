@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2026/10/12 13:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/27 11:31:45 wiz Exp $
 
-DISTNAME=	google_api_core-2.42.0
+DISTNAME=	google_api_core-2.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -28,8 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-# as of 2.42.0 (failure due to missing opentelemetry)
-# 1 failed, 1437 passed, 90 skipped
+# as of 2.43.0 (failure due to missing opentelemetry)
+# 1 failed, 1525 passed, 90 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
