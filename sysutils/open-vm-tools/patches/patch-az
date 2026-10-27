@@ -1,6 +1,6 @@
-$NetBSD: patch-az,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-az,v 1.4 2026/10/27 20:33:09 wiz Exp $
 
---- lib/include/vmblock.h.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/include/vmblock.h.orig	2025-09-18 01:06:36.000000000 +0000
 +++ lib/include/vmblock.h
 @@ -83,11 +83,11 @@
  #ifndef _VMBLOCK_H_
@@ -16,7 +16,7 @@ $NetBSD: patch-az,v 1.3 2016/10/09 03:41:56 ryoon Exp $
  # include <sys/param.h>
  #endif
  
-@@ -164,7 +164,7 @@
+@@ -169,7 +169,7 @@ extern "C" {
                                         "/" VMBLOCK_CONTROL_DEVNAME
  # define VMBLOCK_DEVICE_MODE            O_WRONLY
  
@@ -25,10 +25,11 @@ $NetBSD: patch-az,v 1.3 2016/10/09 03:41:56 ryoon Exp $
  # define VMBLOCK_FS_NAME                "vmblock"
  # define VMBLOCK_MOUNT_POINT            "/var/run/" VMBLOCK_FS_NAME
  # define VMBLOCK_FS_ROOT                VMBLOCK_MOUNT_POINT
-@@ -196,6 +196,20 @@
+@@ -200,6 +200,20 @@ extern "C" {
+ #  ifdef VMX86_DEVEL
  #   define VMBLOCK_LIST_FILEBLOCKS       _IO('Z', 3)
  #   define VMBLOCK_PURGE_FILEBLOCKS      _IO('Z', 4)
- #  endif
++#  endif
 +# elif defined(__NetBSD__)               /* } else if (NetBSD) { */
 +   /*
 +    * Similar to Solaris, construct ioctl(2) commands for block operations.
@@ -42,7 +43,6 @@ $NetBSD: patch-az,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 +#  ifdef VMX86_DEVEL
 +#   define VMBLOCK_LIST_FILEBLOCKS       _IO('z', 3)
 +#   define VMBLOCK_PURGE_FILEBLOCKS      _IO('z', 4)
-+#  endif
+ #  endif
  
  # endif                                 /* } */
- #else
