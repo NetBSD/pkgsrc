@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7376 2026/10/27 13:55:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7377 2026/10/27 13:56:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11041,3 +11041,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/prometheus to 3.13.5 [wiz 2026-10-27]
 	Updated textproc/lowdown to 3.2.1 [adam 2026-10-27]
 	Updated sysutils/btop to 1.4.8 [adam 2026-10-27]
+	Updated www/webkit-gtk41 to 2.54.2 [wiz 2026-10-27]
