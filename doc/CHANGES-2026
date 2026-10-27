@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7351 2026/10/26 22:47:05 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7352 2026/10/27 00:03:20 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11006,3 +11006,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/rhythmbox to 3.4.6nb34 [wiz 2026-10-26]
 	Updated archivers/upx to 5.2.1 [drixter 2026-10-26]
 	Updated archivers/upx to 5.2.1nb1 [drixter 2026-10-26]
+	Updated net/py-metar to 1.4 [gdt 2026-10-27]
