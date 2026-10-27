@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7381 2026/10/27 15:31:03 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7382 2026/10/27 15:35:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11047,3 +11047,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-google-auth-oauthlib to 1.5.0 [adam 2026-10-27]
 	Updated emulators/wine to 9.0nb18 [wiz 2026-10-27]
 	Updated lang/php56 to 5.6.40nb7 [taca 2026-10-27]
+	Updated mail/ruby-mime-types-data to 3.2026.1020 [taca 2026-10-27]
