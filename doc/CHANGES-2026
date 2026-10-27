@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7384 2026/10/27 16:54:43 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7385 2026/10/27 16:55:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11050,3 +11050,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.1020 [taca 2026-10-27]
 	Updated lang/scheme48 to 1.9.3 [ktnb 2026-10-27]
 	Updated www/firefox153 to 153.6.0 [gutteridge 2026-10-27]
+	Updated www/firefox153-l10n to 153.6.0 [gutteridge 2026-10-27]
