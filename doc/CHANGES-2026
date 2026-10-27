@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7364 2026/10/27 11:40:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7365 2026/10/27 11:53:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11027,3 +11027,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-google-api-core to 2.43.0 [wiz 2026-10-27]
 	Updated net/py-grpcio to 1.85.0nb1 [wiz 2026-10-27]
 	Updated devel/py-googleapis-common-protos to 1.76.0 [wiz 2026-10-27]
+	Updated net/py-dns1 to 1.16.0nb3 [wiz 2026-10-27]
