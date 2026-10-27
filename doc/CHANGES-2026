@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7387 2026/10/27 17:15:42 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7388 2026/10/27 19:48:08 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11053,3 +11053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox153-l10n to 153.6.0 [gutteridge 2026-10-27]
 	Updated www/resterm to 1.17.0 [drixter 2026-10-27]
 	Updated archivers/unrar to 7.3.2 [drixter 2026-10-27]
+	Added math/4ti2 version 1.6.15 [drixter 2026-10-27]
