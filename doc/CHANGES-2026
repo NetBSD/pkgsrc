@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7360 2026/10/27 08:16:33 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7361 2026/10/27 09:12:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11021,3 +11021,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-tools to 1.85.0 [adam 2026-10-27]
 	Updated devel/py-poetry-dynamic-versioning to 1.10.1 [adam 2026-10-27]
 	Updated net/py-pyrate-limiter to 4.5.1 [adam 2026-10-27]
+	Updated devel/py-ruff to 0.17.3 [adam 2026-10-27]
+	Updated devel/py-uv to 0.13.6 [adam 2026-10-27]
+	Updated devel/py-uv-build to 0.13.6 [adam 2026-10-27]
