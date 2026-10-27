@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.49 2026/10/22 14:08:06 adam Exp $
+# $NetBSD: Makefile.common,v 1.50 2026/10/27 09:12:06 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.13.5
+UV_VERSION=	0.13.6
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/astral-sh/uv
