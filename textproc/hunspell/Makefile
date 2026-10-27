@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2026/10/05 08:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/10/27 12:06:03 wiz Exp $
 
-DISTNAME=	hunspell-1.7.5
+DISTNAME=	hunspell-1.7.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -39,12 +39,12 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 REPLACE_PERL+=	src/tools/ispellaff2myspell
 REPLACE_BASH+=	tests/test.sh
 
-# as of 1.7.5:
-# TOTAL: 174
-# PASS:  160
+# as of 1.7.6
+# TOTAL: 180
+# PASS:  165
 # SKIP:  1
 # XFAIL: 0
-# FAIL:  13
+# FAIL:  14
 # XPASS: 0
 # ERROR: 0
 

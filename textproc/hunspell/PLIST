@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/09/30 09:10:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/27 12:06:03 wiz Exp $
 bin/affixcompress
 bin/chmorph
 bin/hunspell
@@ -20,6 +20,7 @@ include/hunspell/w_char.hxx
 lib/libhunspell-1.7.la
 lib/pkgconfig/hunspell.pc
 man/hu/man1/hunspell.1
+man/hu/man5/hunspell.5
 man/man1/hunspell.1
 man/man1/hunzip.1
 man/man1/hzip.1

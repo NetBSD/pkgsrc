@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.21 2026/10/05 08:06:11 wiz Exp $
+$NetBSD: distinfo,v 1.22 2026/10/27 12:06:03 wiz Exp $
 
-BLAKE2s (hunspell-1.7.5.tar.gz) = 10cc339199e8fad460d958bd4f974bd7397093a129be54ba6bb6d4355f94fb2c
-SHA512 (hunspell-1.7.5.tar.gz) = 0d9e81e432bd41ca7c751a2d2fa5d285816f3ffd128196fd53e4e72a4777720fe6e4b092483e39fe9a44a66b0afabbefa49446b2d38bf2e154421a64b8f363e4
-Size (hunspell-1.7.5.tar.gz) = 585328 bytes
-SHA1 (patch-configure.ac) = 9916f560fe6b3be4b999c9ba0a7639c84d3b6fcb
+BLAKE2s (hunspell-1.7.6.tar.gz) = 14b01257f017182d67e6cbdd351429c02c79233fe287764501975fd3db86d21b
+SHA512 (hunspell-1.7.6.tar.gz) = b078c65c9ba0dd0016e1cd36e8e185c8707ec5d979177b91c93dff2ec5190f5cceb09a678580b5098cece8bf7cee4fd09ae4a3500dfe3c95a0a0345511afc433
+Size (hunspell-1.7.6.tar.gz) = 595358 bytes
 SHA1 (patch-src_hunspell_hunzip.hxx) = 75bc2e099acf2bf3b1caba75b616ef38ee851b70
 SHA1 (patch-src_hunspell_phonet.cxx) = 489e8e4f978ff531322a445612f836c2d90e4e64
 SHA1 (patch-src_hunspell_replist.cxx) = 9775f9f944ec533b91b4a4856e1ece7877ec7f7b
-SHA1 (patch-src_parsers_latexparser.cxx) = 0107d2b015cb85de3d535524be4429f68692dc20
-SHA1 (patch-src_tools_Makefile.am) = 4781ab63ffdd92236145918bb8800711a12b6dd0
+SHA1 (patch-src_tools_Makefile.am) = 662cdeaca69d0db126f8660e65e70afe7078190d
