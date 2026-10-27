@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2026/01/25 23:12:38 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/27 15:49:59 ktnb Exp $
 
-DISTNAME=		scheme48-1.9.2
+DISTNAME=		scheme48-1.9.3
 CATEGORIES=		lang
-MASTER_SITES=		http://s48.org/1.9.2/
+MASTER_SITES=		http://s48.org/1.9.3/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,13 +16,14 @@ MAKE_JOBS_SAFE=		no
 # bin/scheme-r5rs
 CONFLICTS+=		gambc-[0-9]*
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV} \
-			--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html \
-			--mandir=${PREFIX}/${PKGMANDIR}
-USE_TOOLS+=		gmake
-BUILD_TARGET=		enough
-TEST_TARGET=		check		# fail if USER == root directory owner
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV} \
+		--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html \
+		--mandir=${PREFIX}/${PKGMANDIR}
+USE_TOOLS+=	gmake pax
+BUILD_TARGET=	enough
+TEST_TARGET=	check		# fail if USER == root directory owner
+INSTALL_TARGET=	install-no-doc
 
 REPLACE_INTERPRETER+=	scheme
 REPLACE.scheme.old=	.*/bin/env scheme-srfi-7
@@ -45,5 +46,12 @@ SUBST_SED.pthr=		-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CF
 CFLAGS+= -O0
 .endif
 
+post-install:
+	cd ${WRKSRC}/doc/html && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/html/
+	${INSTALL_MAN} ${WRKSRC}/doc/manual.ps ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/
+	${INSTALL_MAN} ${WRKSRC}/doc/manual.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/
+
 .include "../../devel/sysexits/buildlink3.mk"
+PTHREAD_AUTO_VARS=	yes
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
