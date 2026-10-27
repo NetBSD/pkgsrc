@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7382 2026/10/27 15:35:59 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7383 2026/10/27 15:50:17 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11048,3 +11048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/wine to 9.0nb18 [wiz 2026-10-27]
 	Updated lang/php56 to 5.6.40nb7 [taca 2026-10-27]
 	Updated mail/ruby-mime-types-data to 3.2026.1020 [taca 2026-10-27]
+	Updated lang/scheme48 to 1.9.3 [ktnb 2026-10-27]
