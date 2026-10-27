@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/01/02 13:23:41 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2026/10/27 20:38:04 wiz Exp $
 
 BLAKE2s (erlang/OTP-21.3.6.tar.gz) = b45e975a9afcd15794a9e38d4338826b52c520fcf05d198814733bf841270f4e
 SHA512 (erlang/OTP-21.3.6.tar.gz) = 4ba430ccacde9366233c085f641712b2745360315ce32447e19eb25ee2c734e4be88fe2ccb68a9bda9c6ee7f257330adcad9fc421a8038ab14dba426c9466227
@@ -8,6 +8,7 @@ SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
 SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_configure.in) = 0f86b46e7abb9e158fc3d6114004a22a31253b93
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = e34674aea2fa5092b5215944cb5639738df647bb
+SHA1 (patch-erts_emulator_drivers_unix_ttsl__drv.c) = 2e95398a1fd250bd3560f9ac157b8cb02a2fbf75
 SHA1 (patch-erts_emulator_sys_unix_sys__uds.c) = a165f977221acc8aba2ef30ca23d149a10af060a
 SHA1 (patch-erts_etc_unix_run__erl.c) = dbcd6819949874da19daa554335567c444d7abe2
 SHA1 (patch-erts_lib__src_common_erl__printf.c) = 04b97c91d5c7a02c6a61ada0524ef2a2d9ad2e8b
