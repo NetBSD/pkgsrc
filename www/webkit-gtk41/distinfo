@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2026/10/03 11:29:57 wiz Exp $
+$NetBSD: distinfo,v 1.4 2026/10/27 13:56:30 wiz Exp $
 
-BLAKE2s (webkitgtk-2.54.1.tar.xz) = 484ccacc593ef6a36a3a3e18bc6a8c5718152ca5c9f42922b081f8425cd4b67e
-SHA512 (webkitgtk-2.54.1.tar.xz) = a685e1642eaa544a1dba2dce0433a5a0eeb84bfa34001e5fe4047464e7e85b1127d05674e8c64cb0312d665531c2875b3de103d60600bb5d742ccff7ef8a9fe8
-Size (webkitgtk-2.54.1.tar.xz) = 49729412 bytes
+BLAKE2s (webkitgtk-2.54.2.tar.xz) = 1e07ece535ededa3ee86495de26cd81673653a09759a3b12f290514ac97d8a8f
+SHA512 (webkitgtk-2.54.2.tar.xz) = 5e35d8d5d74e5e648df112db082cdb3b99949ce2a81c87af2462ebb5aba4e7e122b04ba421d826deebbffcd7fe2d620957450308539907ae2f41bdef7b5def24
+Size (webkitgtk-2.54.2.tar.xz) = 49989232 bytes
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 4980f15a5ef0b69345d8d333ded1d3dbbae8b6fc
 SHA1 (patch-Source_JavaScriptCore_parser_VariableEnvironment.h) = 817d8d635c5bcf1ee6d1fbd79ff789cd73d6420f
 SHA1 (patch-Source_JavaScriptCore_runtime_DefinePropertyAttributes.h) = 35e5e1080b6c24ffbe00e099b3293c626c7a207b
