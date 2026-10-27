@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7356 2026/10/27 06:45:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7357 2026/10/27 07:37:41 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11012,3 +11012,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-curl to 7.49.0 [adam 2026-10-27]
 	Updated www/py-genshi to 0.7.12 [adam 2026-10-27]
 	Updated audio/fooyin to 0.14.1 [wiz 2026-10-27]
+	Updated wayland/swayidle to 1.9.1 [kikadf 2026-10-27]
