@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7379 2026/10/27 14:17:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7380 2026/10/27 14:43:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11045,3 +11045,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/webkit-gtk60 to 2.54.2 [wiz 2026-10-27]
 	Updated finance/py-braintree to 4.48.0 [adam 2026-10-27]
 	Updated security/py-google-auth-oauthlib to 1.5.0 [adam 2026-10-27]
+	Updated emulators/wine to 9.0nb18 [wiz 2026-10-27]
