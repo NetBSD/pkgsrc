@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2026/09/29 06:07:21 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2026/10/27 07:59:32 wiz Exp $
 
-DISTNAME=	keepassxc-2.7.12-src
+DISTNAME=	keepassxc-2.8.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,6 +12,8 @@ HOMEPAGE=	https://keepassxc.org/
 COMMENT=	Password generator and manager
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v3 AND mit AND cc0-1.0-universal
 
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
+
 SUPERSEDES+=	keepassx-[0-9]*
 SUPERSEDES+=	keepassx0-[0-9]*
 
@@ -22,35 +23,29 @@ GCC_REQD+=	11
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+
 CMAKE_CONFIGURE_ARGS+=	-DKEEPASSXC_BUILD_TYPE=Release
-CMAKE_CONFIGURE_ARGS+=	-DWITH_XC_DOCS=OFF
-
-NOT_PAX_MPROTECT_SAFE+=	bin/keepassxc
-
-.PHONY: qmake-bin-add
-pre-configure: qmake-bin-add
-
-qmake-bin-add:
-	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+CMAKE_CONFIGURE_ARGS+=	-DASCIIDOCTOR_EXE=${PREFIX}/bin/asciidoctor${RUBY_SUFFIX}
 
 .include "options.mk"
 
 .include "../../archivers/minizip/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../converters/qrencode/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/argon2/buildlink3.mk"
-.include "../../security/botan3/buildlink3.mk"
-.include "../../security/zxcvbn-c/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-# no qt6 support yet
-# https://github.com/keepassxreboot/keepassxc/issues/7774
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
-.include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 # does not support editline
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/ruby/rubyversion.mk"
+.include "../../security/argon2/buildlink3.mk"
+.include "../../security/botan3/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
+.include "../../security/zxcvbn-c/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2026/03/15 12:48:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/10/27 07:59:32 wiz Exp $
 bin/keepassxc
 bin/keepassxc-cli
 bin/keepassxc-proxy
-lib/keepassxc/libkeepassxc-autotype-xcb.so
+man/man1/keepassxc-cli.1
+man/man1/keepassxc.1
 share/applications/org.keepassxc.KeePassXC.desktop
 share/icons/hicolor/256x256/apps/keepassxc.png
 share/icons/hicolor/scalable/apps/keepassxc-locked.svg
@@ -13,6 +14,9 @@ share/icons/hicolor/scalable/apps/keepassxc-monochrome-light.svg
 share/icons/hicolor/scalable/apps/keepassxc-unlocked.svg
 share/icons/hicolor/scalable/apps/keepassxc.svg
 share/icons/hicolor/scalable/mimetypes/application-x-keepassxc.svg
+share/keepassxc/docs/KeePassXC_GettingStarted.html
+share/keepassxc/docs/KeePassXC_KeyboardShortcuts.html
+share/keepassxc/docs/KeePassXC_UserGuide.html
 share/keepassxc/icons/application/256x256/apps/keepassxc.png
 share/keepassxc/translations/keepassxc_ar.qm
 share/keepassxc/translations/keepassxc_be.qm
@@ -31,12 +35,14 @@ share/keepassxc/translations/keepassxc_fi.qm
 share/keepassxc/translations/keepassxc_fil.qm
 share/keepassxc/translations/keepassxc_fr.qm
 share/keepassxc/translations/keepassxc_fr_CA.qm
+share/keepassxc/translations/keepassxc_gl.qm
 share/keepassxc/translations/keepassxc_he.qm
 share/keepassxc/translations/keepassxc_hr.qm
 share/keepassxc/translations/keepassxc_hu.qm
 share/keepassxc/translations/keepassxc_id.qm
 share/keepassxc/translations/keepassxc_it.qm
 share/keepassxc/translations/keepassxc_ja.qm
+share/keepassxc/translations/keepassxc_kab.qm
 share/keepassxc/translations/keepassxc_km.qm
 share/keepassxc/translations/keepassxc_ko.qm
 share/keepassxc/translations/keepassxc_lt.qm
