@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7373 2026/10/27 12:28:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7374 2026/10/27 12:33:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11037,3 +11037,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-starlette to 1.10.0 [adam 2026-10-27]
 	Updated sysutils/snmp_exporter to 0.31.0 [wiz 2026-10-27]
 	Updated mail/rspamd to 4.2.3 [wiz 2026-10-27]
+	Updated shells/shuck to 0.2.7 [wiz 2026-10-27]
