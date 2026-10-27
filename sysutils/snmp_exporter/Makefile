@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/10/20 20:28:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2026/10/27 12:20:08 wiz Exp $
 
-DISTNAME=	snmp_exporter-0.30.1
-PKGREVISION=	19
+DISTNAME=	snmp_exporter-0.31.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
