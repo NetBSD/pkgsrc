@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7353 2026/10/27 05:49:18 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7354 2026/10/27 06:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11009,3 +11009,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-metar to 1.4 [gdt 2026-10-27]
 	Updated devel/cargo-nextest to 0.9.150 [adam 2026-10-27]
 	Updated net/yt-dlp to 2026.10.26 [adam 2026-10-27]
+	Updated www/py-curl to 7.49.0 [adam 2026-10-27]
+	Updated www/py-genshi to 0.7.12 [adam 2026-10-27]
