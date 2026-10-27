@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.126 2026/10/24 09:11:25 adam Exp $
+$NetBSD: distinfo,v 1.127 2026/10/27 08:49:16 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -957,9 +957,9 @@ Size (rkyv_derive-0.8.18.crate) = 22643 bytes
 BLAKE2s (ron-0.12.0.crate) = c488a6ebd6e366e5591cbe2d87f80c153e70b793b82d456b7cc77dd08f7575d6
 SHA512 (ron-0.12.0.crate) = 67c447dbd9e15ebfe84f85ca2d342489c04d3a8d7294301bcb4a1e4d8c29267503f3516679ec9ea21da3447fcdfb2ab311a30eb76895d35dbf99edbe684d173f
 Size (ron-0.12.0.crate) = 119892 bytes
-BLAKE2s (ruff-0.17.2.tar.gz) = 5c9914bac515de1819c1e464ca925d76ea0a394ae420a822188abff114706728
-SHA512 (ruff-0.17.2.tar.gz) = 8bad01cab4150ad92e304981e1faabf12ae55cc9eb90e9d1feb1c981184996ccde25c0aca613489a1d9823b05bf70f257a10a9cd3d4332f5d47e807b9ebcd8f5
-Size (ruff-0.17.2.tar.gz) = 5333400 bytes
+BLAKE2s (ruff-0.17.3.tar.gz) = f6dbbf6c0722282a3fde7382f86f422136db0af8fc399a93da01fcabbd13d665
+SHA512 (ruff-0.17.3.tar.gz) = 6cc65827687d51764c09860b3d9b64dfe0f549ff09f82a3fbbe6d127aadb4d2d1f0fc0f54c2232b3663bd35fb1c0049e484bc58d7cc6313dc697ee277f16cbb0
+Size (ruff-0.17.3.tar.gz) = 5339444 bytes
 BLAKE2s (rust-stemmers-1.2.0.crate) = b3877c53f5abea4a2b4cdabcb1bb1ea43cd4708da95dc458e436a6429a10c542
 SHA512 (rust-stemmers-1.2.0.crate) = b9453a0984d41e5a692e5ea1a8a7bc6142de30f7b345a269489b8d4ebe3b3d442e7fe5f338c72a790521dea7a2ad9605c0ca8218a6b76d8bc5e19ae02cf711d7
 Size (rust-stemmers-1.2.0.crate) = 2351301 bytes
