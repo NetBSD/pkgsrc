@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/27 19:47:41 drixter Exp $
+bin/genmodel
+bin/gensymm
+bin/output
+bin/ppi
+include/4ti2/4ti2.h
+include/4ti2/4ti2_config.h
+include/4ti2/4ti2xx.h
+include/util/genmodel.h
+include/util/gensymm.h
+include/util/myheader.h
+include/util/orbit.h
+include/util/output.h
+include/util/print.h
+include/util/vector.h
+lib/lib4ti2common.la
+lib/lib4ti2util.la
+share/doc/4ti2/4ti2_manual.pdf

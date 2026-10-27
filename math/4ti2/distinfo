@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/10/27 19:47:41 drixter Exp $
+
+BLAKE2s (4ti2-1.6.15.tar.gz) = a5072c50aa6bc3d4a1dd42f609fcc901f2bb8db97ad48e6152887eed9dcc84f1
+SHA512 (4ti2-1.6.15.tar.gz) = e8b2b9ed78bb1e5f9030d7072ac683c9197a460365868a2259df7f52c833a2948137bd94468eb74c44fba7edd135cbfa0c73aa3287e13ca2db625c376ac5230e
+Size (4ti2-1.6.15.tar.gz) = 5905108 bytes
