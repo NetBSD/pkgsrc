@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2026/10/22 17:06:13 drixter Exp $
+$NetBSD: distinfo,v 1.64 2026/10/27 17:12:57 drixter Exp $
 
 BLAKE2s (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 6ac20d45dc73571467fbfa4fb284b576f5877808bb8938b2c883fc48fca05429
 SHA512 (github.com__make_now_just_heredoc_@v_v1.0.0.mod) = 283a7606aaa0d7463b9744a13a6c2064ca5d815077622a5d36e43be704c17403d80e6a5e106f544baaacf922b14d106843d99c1af174808960cc27a3fc26db91
@@ -36,6 +36,12 @@ Size (github.com_bahlo_generic-list-go_@v_v0.2.0.mod) = 49 bytes
 BLAKE2s (github.com_bahlo_generic-list-go_@v_v0.2.0.zip) = 44d60b85b72915af4c04ade1b8d1f4c28f2e77ffd98ec22a1054361b005e8859
 SHA512 (github.com_bahlo_generic-list-go_@v_v0.2.0.zip) = 814a69163e35cde9ba5068d26ff5c7bf24d90a47bc2bb21687c30f84b59951c3871c21a1e6f2d473aad446e5682643c684c83815de43ae3b7194fb4762cfcc87
 Size (github.com_bahlo_generic-list-go_@v_v0.2.0.zip) = 6607 bytes
+BLAKE2s (github.com_bufbuild_protocompile_@v_v0.14.1.mod) = 8c51b69bc22220113207ddb48362e24a876fb4c1a025b96fd1b62d5cda720b70
+SHA512 (github.com_bufbuild_protocompile_@v_v0.14.1.mod) = 7e69ce2d614e3c5ba8d80022f288f80495860141beaf51669068b1d2f40560d55be6d91ffe12a2d326165a05df35a91d33c4b5485dc731dd211ad015df15dd5f
+Size (github.com_bufbuild_protocompile_@v_v0.14.1.mod) = 383 bytes
+BLAKE2s (github.com_bufbuild_protocompile_@v_v0.14.1.zip) = 38cf2ae2aa3ab4b1b88e1dd2b40a656aa2df4a93d9079a6de1e55f26ebf676cf
+SHA512 (github.com_bufbuild_protocompile_@v_v0.14.1.zip) = dc7665e114c83e993ff6b5289b9fb04889409574f42400911a33e6678312abd9c398eca74e24d0602a5f3881f6f5d6076865e6d082d878a9b7420c3bec5fcd23
+Size (github.com_bufbuild_protocompile_@v_v0.14.1.zip) = 557987 bytes
 BLAKE2s (github.com_buger_jsonparser_@v_v1.1.1.mod) = f0a75805d65a3eab2486c537e42284228ade6ac391f36ed2ba03d8173d5ac002
 SHA512 (github.com_buger_jsonparser_@v_v1.1.1.mod) = 8290d816f4045e7ce5a6d3c4ae8fd9ff5016f5987494a024cbaa12c5e594db04d00428d908441747581c09d9d7e6ba03b7ded175b634faaab458830ea1a370bf
 Size (github.com_buger_jsonparser_@v_v1.1.1.mod) = 45 bytes
@@ -678,9 +684,9 @@ Size (modernc.org_sqlite_@v_v1.53.0.mod) = 1061 bytes
 BLAKE2s (modernc.org_sqlite_@v_v1.53.0.zip) = 60010c522053887eea8fd5d22ebd32ca41a852d6d091f6f88d03374fcb7d217e
 SHA512 (modernc.org_sqlite_@v_v1.53.0.zip) = e68a2bd32c8f06bca3dab925f3d0f47021926902005dbec792aa852135c93c6223d192273862fde07dfbd849f1803465d73c06692df5eb177eb416c37f6f3944
 Size (modernc.org_sqlite_@v_v1.53.0.zip) = 22448529 bytes
-BLAKE2s (resterm-1.16.1.tar.gz) = 7261f9896541ebb63b11941967b9c9debee69f1b56b463393799c1f98593dfd5
-SHA512 (resterm-1.16.1.tar.gz) = b1fc295c8816480d7114fbc5f61862b6864cafaf02a78465a096bb2f82caeaa3d8365c02bd315eeb2b9d6e6a668f8b6d0649b2ce5345f541dbea0db2aa231ace
-Size (resterm-1.16.1.tar.gz) = 7893702 bytes
+BLAKE2s (resterm-1.17.0.tar.gz) = 623fad0e3fa6fa03322d370be6a955809c7fb1945d153661658c95361424b3e1
+SHA512 (resterm-1.17.0.tar.gz) = 239cb2f4a9da771e6b5cd66fb474532ee55cacc20214cddfc44ec364831acf58c2621a391eebc8b3c9356c55e7bdd351366848e6ce23f563bb8470407c61e41c
+Size (resterm-1.17.0.tar.gz) = 7944196 bytes
 BLAKE2s (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 0b1238d89c77686f02002092d6c14b461423ce7c2fa906f554deffefd727014d
 SHA512 (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = ca8b000bb3d6dce184fd01445782fa95557ec7ff6328dcd225dc26a14fc1d2d69baacaebe9d8703c867c8902f846950f9aefcc80af4530735f4b4432b77e4490
 Size (sigs.k8s.io_json_@v_v0.0.0-20250730193827-2d320260d730.mod) = 33 bytes
