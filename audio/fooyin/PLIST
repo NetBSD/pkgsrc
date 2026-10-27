@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/10/19 08:33:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/27 06:45:30 wiz Exp $
 bin/fooyin
 lib/fooyin/libfooyin_core.so.0.0.0
 lib/fooyin/libfooyin_gui.so.0.0.0
@@ -7,13 +7,16 @@ lib/fooyin/plugins/fyplugin_cdda.so
 lib/fooyin/plugins/fyplugin_discord.so
 lib/fooyin/plugins/fyplugin_equaliser.so
 lib/fooyin/plugins/fyplugin_fileops.so
+lib/fooyin/plugins/fyplugin_flac.so
 lib/fooyin/plugins/fyplugin_globalhotkeys.so
 lib/fooyin/plugins/fyplugin_gmeinput.so
 lib/fooyin/plugins/fyplugin_libarchive.so
 lib/fooyin/plugins/fyplugin_lyrics.so
+lib/fooyin/plugins/fyplugin_mpg123.so
 lib/fooyin/plugins/fyplugin_mpris.so
 lib/fooyin/plugins/fyplugin_notify.so
 lib/fooyin/plugins/fyplugin_openmpt.so
+lib/fooyin/plugins/fyplugin_opus.so
 lib/fooyin/plugins/fyplugin_oscilloscope.so
 lib/fooyin/plugins/fyplugin_pulseaudio.so
 lib/fooyin/plugins/fyplugin_quicktagger.so
@@ -28,6 +31,7 @@ lib/fooyin/plugins/fyplugin_sndfile.so
 lib/fooyin/plugins/fyplugin_spectrogram.so
 lib/fooyin/plugins/fyplugin_spectrum.so
 lib/fooyin/plugins/fyplugin_tageditor.so
+lib/fooyin/plugins/fyplugin_vorbis.so
 lib/fooyin/plugins/fyplugin_vumeter.so
 lib/fooyin/plugins/fyplugin_wavebar.so
 share/applications/org.fooyin.fooyin.desktop
