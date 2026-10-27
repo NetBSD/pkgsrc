@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7358 2026/10/27 07:59:43 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7359 2026/10/27 08:04:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11014,3 +11014,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fooyin to 0.14.1 [wiz 2026-10-27]
 	Updated wayland/swayidle to 1.9.1 [kikadf 2026-10-27]
 	Updated security/keepassxc to 2.8.0 [wiz 2026-10-27]
+	Updated net/grpc to 1.85.0 [adam 2026-10-27]
+	Updated net/py-grpcio to 1.85.0 [adam 2026-10-27]
+	Updated net/py-grpcio-status to 1.85.0 [adam 2026-10-27]
+	Updated net/py-grpcio-testing to 1.85.0 [adam 2026-10-27]
+	Updated net/py-grpcio-tools to 1.85.0 [adam 2026-10-27]
