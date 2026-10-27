@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/10/01 11:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.36 2026/10/27 11:40:44 wiz Exp $
 
-DISTNAME=	googleapis_common_protos-1.75.5
+DISTNAME=	googleapis_common_protos-1.76.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
@@ -12,10 +12,11 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=6.33.5:../../devel/py-protobuf
-# would lead to dependency cycle
-#TEST_DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core
+TEST_DEPENDS+=	${PYPKGPREFIX}-grpcio>=0:../../net/py-grpcio
 
 USE_LANGUAGES=	# none
+
+# test works after 'make install'
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
