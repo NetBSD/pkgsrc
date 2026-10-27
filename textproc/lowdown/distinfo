@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2026/07/24 18:20:09 wiz Exp $
+$NetBSD: distinfo,v 1.42 2026/10/27 13:53:22 adam Exp $
 
-BLAKE2s (lowdown-3.1.1.tar.gz) = 02ab0d6cd973a2a1cbe6b8327f96bbc19f3f7401dd5e82de72535904ee1845bf
-SHA512 (lowdown-3.1.1.tar.gz) = 05c6a0c6fcb0ffc45d7f60c5aecc43e96d89eb5708558098009db8aecd2e527bdac44dcce8cf91c139275f5405202b6cf838c0e56852a523fc8070d792fc8709
-Size (lowdown-3.1.1.tar.gz) = 773421 bytes
+BLAKE2s (lowdown-3.2.1.tar.gz) = 57ba9c2993049419506e018a2b6ff681ec73abff71f3e7752f5d80a0a8c3b00a
+SHA512 (lowdown-3.2.1.tar.gz) = 73c7e614fc9cc5a4c441f95e9fc3b078db5456eeee5ad42212111d7837c9fe482cf34ae116e1a62eef5afc56bf98640a1f1656044c4b13aec3fe7e3622e44c87
+Size (lowdown-3.2.1.tar.gz) = 784560 bytes
