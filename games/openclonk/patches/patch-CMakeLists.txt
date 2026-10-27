@@ -1,11 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2024/06/20 17:02:50 charlotte Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/10/27 20:18:32 wiz Exp $
 
 Don't attempt to deal with link-time optimization manually; CMake is smart
 enough to figure it out on its own.
 
---- CMakeLists.txt.orig	2020-02-12 22:30:26.516115047 -0800
-+++ CMakeLists.txt	2020-02-12 22:30:36.341115137 -0800
-@@ -91,38 +91,6 @@
+Serialize building of the packs, c4groups re-uses the same names.
+
+--- CMakeLists.txt.orig	2018-03-16 17:25:33.000000000 +0000
++++ CMakeLists.txt
+@@ -91,38 +91,6 @@ endfunction()
  	endforeach()
  endfunction()
  
@@ -44,3 +46,43 @@ enough to figure it out on its own.
  if(MSVC)
  	if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
  		# Set up some additional flags only if we're using the MS compiler,
+@@ -1510,6 +1478,7 @@ endif()
+ 	list(APPEND OC_C4GROUPS Music.ocg)
+ endif()
+ 
++set(OC_C4GROUPS_PREV "")
+ foreach(group ${OC_C4GROUPS})
+ 	if (APPLE)
+ 		if (CMAKE_GENERATOR STREQUAL Xcode)
+@@ -1518,7 +1487,7 @@ foreach(group ${OC_C4GROUPS})
+ 				"$<TARGET_FILE:${native_c4group}>"
+ 				"${CMAKE_CURRENT_SOURCE_DIR}/planet/${group}"
+ 				# leave out third parameter here so the script can figure out Xcode-ish paths as usual
+-				DEPENDS "${native_c4group}"
++				DEPENDS "${native_c4group}" ${OC_C4GROUPS_PREV}
+ 			)
+ 		else()
+ 			add_custom_command(TARGET openclonk
+@@ -1526,7 +1495,7 @@ foreach(group ${OC_C4GROUPS})
+ 				"$<TARGET_FILE:${native_c4group}>"
+ 				"${CMAKE_CURRENT_SOURCE_DIR}/planet/${group}"
+ 				"${CMAKE_CURRENT_BINARY_DIR}/openclonk.app/Contents/Resources"
+-				DEPENDS "${native_c4group}"
++				DEPENDS "${native_c4group}" ${OC_C4GROUPS_PREV}
+ 			)
+ 		endif()
+ 	else()
+@@ -1534,11 +1503,12 @@ foreach(group ${OC_C4GROUPS})
+ 			OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${group}
+ 			COMMAND "${native_c4group}" ARGS "${CMAKE_CURRENT_SOURCE_DIR}/planet/${group}" -t "${CMAKE_CURRENT_BINARY_DIR}/${group}"
+ 			MAIN_DEPENDENCY ${CMAKE_CURRENT_SOURCE_DIR}/planet/${group}
+-			DEPENDS "${native_c4group}"
++			DEPENDS "${native_c4group}" ${OC_C4GROUPS_PREV}
+ 			VERBATIM
+ 		)
+ 		install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${group} DESTINATION share/games/openclonk)
+ 	endif()
++	set(OC_C4GROUPS_PREV "${CMAKE_CURRENT_BINARY_DIR}/${group}")
+ endforeach()
+ 
+ if(NOT APPLE)

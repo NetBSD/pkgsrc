@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2026/09/29 06:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/10/27 20:18:31 wiz Exp $
 
 DISTNAME=	openclonk-8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	https://www.openclonk.org/builds/release/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake pkg-config
 
 USE_CXX_FEATURES+=	c++14
 
-CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
