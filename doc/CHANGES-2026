@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7366 2026/10/27 11:58:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7367 2026/10/27 12:01:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11029,3 +11029,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-googleapis-common-protos to 1.76.0 [wiz 2026-10-27]
 	Updated net/py-dns1 to 1.16.0nb3 [wiz 2026-10-27]
 	Updated security/py-cryptodome to 4.2.0 [wiz 2026-10-27]
+	Updated textproc/py-sphinxcontrib-jsmath to 2.0.0 [wiz 2026-10-27]
