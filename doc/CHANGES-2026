@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7385 2026/10/27 16:55:15 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7386 2026/10/27 17:13:17 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11051,3 +11051,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/scheme48 to 1.9.3 [ktnb 2026-10-27]
 	Updated www/firefox153 to 153.6.0 [gutteridge 2026-10-27]
 	Updated www/firefox153-l10n to 153.6.0 [gutteridge 2026-10-27]
+	Updated www/resterm to 1.17.0 [drixter 2026-10-27]
