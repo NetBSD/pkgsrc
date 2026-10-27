@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28235 2026/10/26 18:25:30 wiz Exp $
+$NetBSD: TODO,v 1.28236 2026/10/27 07:59:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
-	o keepassxc-2.8.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -1238,6 +1237,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o skype-4.3
 	o smproxy-1.0.3
 	o snd-21.3
+	o snmp_exporter-0.31.0
 	o snobol-2.1.5
 	o snoopy-2.4.14
 	o snort-2.9.17.1
@@ -1267,6 +1267,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
+	o tabiew-0.16.0
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
