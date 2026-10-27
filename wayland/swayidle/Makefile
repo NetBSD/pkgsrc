@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/04/14 13:20:25 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/27 07:37:10 kikadf Exp $
 
-DISTNAME=	swayidle-1.9.0
+DISTNAME=	swayidle-1.9.1
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
