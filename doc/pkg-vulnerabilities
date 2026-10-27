@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.808 2026/10/25 15:17:32 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.809 2026/10/27 15:33:41 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30491,3 +30491,7 @@ ruby34<3.4.12	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-110264
 ruby40<4.0.8	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-93577
 ruby40<4.0.8	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-97229
 ruby40<4.0.9	integer-overflow	https://www.cve.org/CVERecord?id=CVE-2026-110264
+php74<7.4.33nb11	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php74<7.4.33nb11	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+php56<5.6.40nb7	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
+php56<5.6.40nb7	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
