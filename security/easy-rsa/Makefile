@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/10/09 04:09:27 adam Exp $
+# $NetBSD: Makefile,v 1.27 2026/10/27 10:59:49 wiz Exp $
 
 DISTNAME=	EasyRSA-3.2.7
 PKGNAME=	${DISTNAME:S/EasyRSA/easy-rsa/}
@@ -12,8 +12,9 @@ HOMEPAGE=	https://github.com/OpenVPN/easy-rsa
 COMMENT=	CLI utility to build and manage a PKI CA
 LICENSE=	gnu-gpl-v2
 
-# The 3.2.6 distfile has extended attributes.
+# The 3.2.6 and 3.2.7 distfiles have extended attributes.
 # https://github.com/OpenVPN/easy-rsa/issues/1455
+EXTRACT_USING=	gtar
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
