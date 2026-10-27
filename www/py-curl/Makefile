@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2026/09/23 13:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.109 2026/10/27 06:20:25 adam Exp $
 
-DISTNAME=	pycurl-7.48.0
+DISTNAME=	pycurl-7.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycurl/}
@@ -11,9 +11,10 @@ COMMENT=	Python module interface to the cURL library
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-bottle>=0:../../www/py-bottle
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=0:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask>=0:../../www/py-flask
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-run-parallel>=0:../../devel/py-test-run-parallel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 MAKE_ENV+=	PYCURL_SSL_LIBRARY=openssl
 INSTALL_ENV+=	PYCURL_SSL_LIBRARY=openssl

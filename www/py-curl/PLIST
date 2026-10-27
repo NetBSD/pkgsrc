@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/07/02 07:28:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/10/27 06:20:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,36 +16,3 @@ ${PYSITELIB}/pycurl/_pycurl.so
 ${PYSITELIB}/pycurl/async_multi.py
 ${PYSITELIB}/pycurl/async_multi.pyc
 ${PYSITELIB}/pycurl/async_multi.pyo
-share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
-share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
-share/doc/pycurl${PYVERSSUFFIX}/COPYING-MIT
-share/doc/pycurl${PYVERSSUFFIX}/ChangeLog
-share/doc/pycurl${PYVERSSUFFIX}/INSTALL.rst
-share/doc/pycurl${PYVERSSUFFIX}/README.rst
-share/doc/pycurl${PYVERSSUFFIX}/RELEASE-NOTES.rst
-share/doc/pycurl${PYVERSSUFFIX}/examples/async_multi.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/multi-socket_action-select.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/opensocketexception.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_buffer.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real_fancy.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/follow_redirect.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/form_post.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_buffer.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_file.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/response_headers.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/response_info.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/write_file.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/retriever-multi.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/sfquery.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/smtp.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/ssh_keyfunction.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/ws_callback.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/ws_echo.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/ws_fragmented.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/ws_multi.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
