@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.88 2026/10/22 14:18:42 adam Exp $
+$NetBSD: distinfo,v 1.89 2026/10/27 05:48:58 adam Exp $
 
-BLAKE2s (yt_dlp-2026.10.21.tar.gz) = 6da9523e165661908f3a47fb2c4374f00529f709dc93a07b4f61b5f069c8130e
-SHA512 (yt_dlp-2026.10.21.tar.gz) = 25225fda6d4e4139b6adbb896389a26a4e75249c60061fd25bef48c4a36ba1a5aae001d562d2ae38df31fe79f47fff935521ccd236fb4e7c5eb6ae6b37d0ca11
-Size (yt_dlp-2026.10.21.tar.gz) = 3057326 bytes
+BLAKE2s (yt_dlp-2026.10.26.tar.gz) = 55d0be2b0e117be6154e10881b519be6014bbe9ed5f74f6e841ddaceedf0d3ac
+SHA512 (yt_dlp-2026.10.26.tar.gz) = d53b13df3b24c34ca711801b412bcdb2c9ba78d77a345b05a3b324bde5bb066da6234351314dfb682bca68fc7383fa12cc1e0b0f966eef982cc2cf97a29b49a5
+Size (yt_dlp-2026.10.26.tar.gz) = 3048880 bytes
