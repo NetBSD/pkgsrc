@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7371 2026/10/27 12:18:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7372 2026/10/27 12:20:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11035,3 +11035,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.73 [wiz 2026-10-27]
 	Updated misc/py-pbs-installer to 2026.10.25 [adam 2026-10-27]
 	Updated www/py-starlette to 1.10.0 [adam 2026-10-27]
+	Updated sysutils/snmp_exporter to 0.31.0 [wiz 2026-10-27]
