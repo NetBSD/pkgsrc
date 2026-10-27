@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/09/24 09:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/10/27 13:55:03 adam Exp $
 
-DISTNAME=	btop-1.4.7
-PKGREVISION=	1
+DISTNAME=	btop-1.4.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=	apache-2.0
 # https://github.com/aristocratos/btop/pull/1106
 GCC_REQD+=	14
 
-TOOL_DEPENDS+=	lowdown-[0-9]*:../../textproc/lowdown
+TOOL_DEPENDS+=	lowdown>=0:../../textproc/lowdown
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
