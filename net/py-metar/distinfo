@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:06:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2026/10/27 00:03:13 gdt Exp $
 
-BLAKE2s (pymetar-0.21.tar.gz) = a96a73f824296b3db6af4cc43063b53472af0998faea091d457cfb10c3e0980b
-SHA512 (pymetar-0.21.tar.gz) = 6c9e9e7906fe6fb327c667408d04992ca898d0d6037fe1bce08bc15ded59bcda670094da99e84b553c06c8cf991f33c6b3b7b41a9fbd47ba4c48dd4db1d8a2c0
-Size (pymetar-0.21.tar.gz) = 22714 bytes
-SHA1 (patch-aa) = 274447d4842a8ec6b7f3e32af5e36001c246b8c1
+BLAKE2s (pymetar-1.4.tar.gz) = 104419fe71348a7bbba3ae72a7862115c30406b9348f73dd7306c9f00b7f6e86
+SHA512 (pymetar-1.4.tar.gz) = d5c5d382c68ffacefe07d63239f3b56984bf2becef922c945b0014a210ddf9ce1f96f99028e0ec9e649f70f6262925a836dbeb83309407aa2c4ddb4769db3dbd
+Size (pymetar-1.4.tar.gz) = 3162928 bytes
+SHA1 (patch-aa) = 7cb29f57958eb4fb06db97367312db1342b530aa
