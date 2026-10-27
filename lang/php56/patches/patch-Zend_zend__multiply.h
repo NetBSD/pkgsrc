@@ -1,18 +1,17 @@
-$NetBSD: patch-Zend_zend__multiply.h,v 1.1 2026/08/29 02:43:37 mef Exp $
+$NetBSD: patch-Zend_zend__multiply.h,v 1.2 2026/10/27 15:30:49 taca Exp $
 
 https://mail-index.netbsd.org/pkgsrc-users/2026/08/28/msg043351.html
 Quick hack by importing from php85 
 
---- Zend/zend_multiply.h.orig	2019-01-09 18:54:13.000000000 +0900
-+++ Zend/zend_multiply.h	2026-08-29 09:48:42.223797552 +0900
-@@ -56,14 +56,17 @@
- } while (0)
+--- Zend/zend_multiply.h.orig	2019-01-09 09:54:13.000000000 +0000
++++ Zend/zend_multiply.h
+@@ -57,13 +57,16 @@
  
  #elif defined(__aarch64__) && defined(__GNUC__)
-+
+ 
 +typedef int64_t zend_long;
 +
- 
++
  #define ZEND_SIGNED_MULTIPLY_LONG(a, b, lval, dval, usedval) do {	\
 -	long __tmpvar; 													\
 +	zend_long __tmpvar; 													\

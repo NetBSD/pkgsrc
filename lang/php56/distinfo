@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2026/08/29 02:43:37 mef Exp $
+$NetBSD: distinfo,v 1.68 2026/10/27 15:30:48 taca Exp $
 
 BLAKE2s (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 9eaf6505d80e90147fd0b993fb501620030eea24ccd69e42c49d8faf50d47775
 SHA512 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = bbe39ad27a5a82c705692c921b214c5630227ed9852f0432340f74533b5e618d9bea01bff75a4b7a1f1b72876b6d092d2db4533758d9a927f274cff7361f3eb4
@@ -8,7 +8,15 @@ SHA512 (php-5.6.40.tar.xz) = 997b5a952a60cf9166671cc91fcc34c674dd62bfd5cb0a9cdf3
 Size (php-5.6.40.tar.xz) = 12472236 bytes
 SHA1 (patch-Makefile.global) = cf4dec0e4adf4ceceffb498919c1b463db9c6e66
 SHA1 (patch-TSRM_threads.m4) = 83c51ef32371598689f2610726a2902e503b1d55
-SHA1 (patch-Zend_zend__multiply.h) = b51442f44e5b5853162a1ac7e451359d292b8210
+SHA1 (patch-Zend_zend.c) = faed48a92db61da305ab30cadc98df01c1436fb2
+SHA1 (patch-Zend_zend__alloc.c) = a011b5bab60d1775a4fdaeff50df31fc2f9ba77c
+SHA1 (patch-Zend_zend__alloc.h) = a9ef44b5880ff72ecccbb3269b126e72105f10bf
+SHA1 (patch-Zend_zend__execute__API.c) = 068bf1d940915073062d2dfb1ae407d1a4872d8d
+SHA1 (patch-Zend_zend__globals.h) = 3b3a499420f42c2211a653c140c11078ac9c374d
+SHA1 (patch-Zend_zend__llist.c) = 988d9882d48a94b69e97570a4a9a4e79f04ff81c
+SHA1 (patch-Zend_zend__multiply.h) = a2d1286e16971a406a4cfa13575f004d1f3af794
+SHA1 (patch-Zend_zend__vm__execute.h) = 2364bdcde9e9dff85820b35e54bb1fe2e8226907
+SHA1 (patch-Zend_zend__vm__execute.skl) = 0615c7f0ed6e5f98f0782df41922d498794c4dc9
 SHA1 (patch-acinclude.m4) = 46ee41b151927673b0d17fbd13a3159b2f7aab0a
 SHA1 (patch-aclocal.m4) = f24f25d8da5d846902ba94ec59fe4838bd24dda1
 SHA1 (patch-configure.in) = 67ed9f97785ba4bf3f6405d4af07fc32b972ba4e
@@ -37,12 +45,22 @@ SHA1 (patch-ext_pdo_config.m4) = 2cd85e7a6583d549c9fb60cee9ce46b34860a8e4
 SHA1 (patch-ext_phar_Makefile.frag) = b39927055edd6fd3a02fb1d954e8fc69089ef01c
 SHA1 (patch-ext_phar_phar_phar.php) = 159f7934c3ca35e036739aa446f84fe2b7f72026
 SHA1 (patch-ext_recode_recode.c) = a97a1815d6a41410f68c289debbb9396128a2159
+SHA1 (patch-ext_session_session.c) = 4a2bffc26711f8258632433ddda1d612459d9855
 SHA1 (patch-ext_sqlite3_config0.m4) = 2435e1518a88c7d05eb93cf3c8e716fe4ea0748b
 SHA1 (patch-ext_standard_basic__functions.c) = ca1de427a3d793c3a3e99581fbd2d1fcf99aeb30
+SHA1 (patch-ext_standard_basic__functions.h) = 04506f91783498421e0d1b32b8bcc9477e41a077
 SHA1 (patch-ext_standard_php__dns.h) = 8e544eb637044e9428a0becb7402336f64a3a23d
+SHA1 (patch-ext_standard_php__incomplete__class.h) = 5123320a7e1d7ddac12b5e752b130277bf970fea
+SHA1 (patch-ext_standard_var.c) = 4618e6acf10de73226f5741d6246ae113a3489fb
+SHA1 (patch-ext_standard_var__unserializer.c) = 4d532463190fdaee4b39996be17ffd0b5c216b70
+SHA1 (patch-ext_standard_var__unserializer.re) = defcc69425eac0ac8ca7d47a699716a0e98bb254
 SHA1 (patch-ext_tidy_tidy.c) = 8f075f17ac913f21e65f4b704574c0ae5ffdfc84
 SHA1 (patch-ext_xml_compat.c) = fbea14c738728d33cdaf38405688ed6361f8894d
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627
+SHA1 (patch-main_SAPI.c) = db0702693307616062379e767bb84994ad20dd03
+SHA1 (patch-main_main.c) = c90a96a8d66bf2191df097bde97693ae870d1d8d
+SHA1 (patch-main_php__variables.c) = 0b351a7e30716f3ca861c8a21ad9f1fb7083cfc6
+SHA1 (patch-main_rfc1867.c) = 72f92bd0ffd34247ea9e2f6eef806e0e7dbc218d
 SHA1 (patch-makedist) = 091d5c0ba3e890ade475faa33446c8f97bcb7bc3
 SHA1 (patch-php.ini-development) = e1a187070a9dfc28762d7476d9acc796a93c7fac
 SHA1 (patch-php.ini-production) = f978e200175a161893669391f784f8072488ff24
