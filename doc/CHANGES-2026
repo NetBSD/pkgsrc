@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7419 2026/10/28 18:02:05 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7420 2026/10/28 18:03:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11100,3 +11100,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.34 [pin 2026-10-28]
 	Updated misc/zellij to 0.45.1 [pin 2026-10-28]
 	Updated multimedia/moviebox-tui to 0.1.27 [pin 2026-10-28]
+	Updated news/brochure to 0.13.0 [pin 2026-10-28]
