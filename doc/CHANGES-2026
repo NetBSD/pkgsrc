@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7403 2026/10/28 13:24:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7404 2026/10/28 13:42:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11083,3 +11083,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/tesseract to 5.5.4 [adam 2026-10-28]
 	Updated misc/py-narwhals to 2.28.0 [adam 2026-10-28]
 	Updated net/py-python-socks to 3.2.0 [adam 2026-10-28]
+	Updated math/py-networkx to 3.7 [adam 2026-10-28]
+	Updated time/py-tzdata to 2026.6 [adam 2026-10-28]
