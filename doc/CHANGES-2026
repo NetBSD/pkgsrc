@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7390 2026/10/28 05:23:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7391 2026/10/28 05:39:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11058,3 +11058,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libjpeg-turbo to 3.2.1 [adam 2026-10-28]
 	Updated devel/cmake to 4.4.5 [adam 2026-10-28]
 	Updated devel/cmake-gui to 4.4.5 [adam 2026-10-28]
+	Updated devel/py-test to 9.2.0 [adam 2026-10-28]
+	Updated net/py-test-remotedata to 0.4.3 [adam 2026-10-28]
