@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7394 2026/10/28 06:01:41 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7395 2026/10/28 07:16:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11065,3 +11065,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-hatchling to 1.33.0 [adam 2026-10-28]
 	Updated devel/py-jupyter-builder to 1.2.4 [adam 2026-10-28]
 	Updated www/grafana to 13.2.5 [wiz 2026-10-28]
+	Updated www/py-pylsqpack to 1.0.0 [adam 2026-10-28]
+	Updated www/py-aioquic to 1.7.0 [adam 2026-10-28]
