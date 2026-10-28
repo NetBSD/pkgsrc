@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/10/26 11:24:41 pin Exp $
+# $NetBSD: Makefile,v 1.13 2026/10/28 17:59:37 pin Exp $
 
-DISTNAME=	rozi-0.0.33
+DISTNAME=	rozi-0.0.34
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tui-lipan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
