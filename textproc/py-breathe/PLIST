@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/24 09:04:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/28 08:53:38 adam Exp $
 bin/breathe-apidoc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,9 +9,15 @@ ${PYSITELIB}/breathe/README.rst
 ${PYSITELIB}/breathe/__init__.py
 ${PYSITELIB}/breathe/__init__.pyc
 ${PYSITELIB}/breathe/__init__.pyo
+${PYSITELIB}/breathe/_parser.py
+${PYSITELIB}/breathe/_parser.pyc
+${PYSITELIB}/breathe/_parser.pyo
 ${PYSITELIB}/breathe/apidoc.py
 ${PYSITELIB}/breathe/apidoc.pyc
 ${PYSITELIB}/breathe/apidoc.pyo
+${PYSITELIB}/breathe/cpp_util.py
+${PYSITELIB}/breathe/cpp_util.pyc
+${PYSITELIB}/breathe/cpp_util.pyo
 ${PYSITELIB}/breathe/directives/__init__.py
 ${PYSITELIB}/breathe/directives/__init__.pyc
 ${PYSITELIB}/breathe/directives/__init__.pyo
@@ -57,21 +63,9 @@ ${PYSITELIB}/breathe/finder/factory.pyo
 ${PYSITELIB}/breathe/finder/index.py
 ${PYSITELIB}/breathe/finder/index.pyc
 ${PYSITELIB}/breathe/finder/index.pyo
-${PYSITELIB}/breathe/parser/__init__.py
-${PYSITELIB}/breathe/parser/__init__.pyc
-${PYSITELIB}/breathe/parser/__init__.pyo
-${PYSITELIB}/breathe/parser/compound.py
-${PYSITELIB}/breathe/parser/compound.pyc
-${PYSITELIB}/breathe/parser/compound.pyo
-${PYSITELIB}/breathe/parser/compoundsuper.py
-${PYSITELIB}/breathe/parser/compoundsuper.pyc
-${PYSITELIB}/breathe/parser/compoundsuper.pyo
-${PYSITELIB}/breathe/parser/index.py
-${PYSITELIB}/breathe/parser/index.pyc
-${PYSITELIB}/breathe/parser/index.pyo
-${PYSITELIB}/breathe/parser/indexsuper.py
-${PYSITELIB}/breathe/parser/indexsuper.pyc
-${PYSITELIB}/breathe/parser/indexsuper.pyo
+${PYSITELIB}/breathe/parser.py
+${PYSITELIB}/breathe/parser.pyc
+${PYSITELIB}/breathe/parser.pyo
 ${PYSITELIB}/breathe/path_handler.py
 ${PYSITELIB}/breathe/path_handler.pyc
 ${PYSITELIB}/breathe/path_handler.pyo

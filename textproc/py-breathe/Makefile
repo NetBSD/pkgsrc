@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/10/16 19:44:15 adam Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/28 08:53:38 adam Exp $
 
-DISTNAME=	breathe-4.36.0
+DISTNAME=	breathe-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/breathe/}
@@ -15,11 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.2:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
+PY_RENAME_BINARIES=	breathe-apidoc
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} breathe-apidoc breathe-apidoc-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
