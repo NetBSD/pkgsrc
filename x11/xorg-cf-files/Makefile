@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/09/21 15:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/10/28 14:07:01 jperkin Exp $
 
 DISTNAME=		xorg-cf-files-1.0.9
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
@@ -17,6 +18,7 @@ DARWIN_USE_QUARTZ?=	1
 
 # SmartOS puts compiler tools in /usr/bin and does not come with lex/yacc.
 .if ${OS_VARIANT} == "SmartOS"
+DEPENDS+=		bmake-[0-9]*:../../devel/bmake
 DEPENDS+=		byacc-[0-9]*:../../devel/byacc
 DEPENDS+=		flex-[0-9]*:../../devel/flex
 SUBST_CLASSES+=		fixpaths
@@ -26,6 +28,7 @@ SUBST_FILES.fixpaths=	svr4.cf
 SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/ar,/usr/bin/ar,g'
 SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/ld,/usr/bin/ld,g'
 SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/lex,${PREFIX}/bin/flex,g'
+SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/make,${PREFIX}/bin/bmake,g'
 SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/yacc,${PREFIX}/bin/yacc,g'
 .endif
 
