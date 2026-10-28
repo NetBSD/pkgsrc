@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/10/26 16:45:20 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/28 07:15:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,9 +10,9 @@ ${PYSITELIB}/aioquic/__init__.pyo
 ${PYSITELIB}/aioquic/_buffer.c
 ${PYSITELIB}/aioquic/_buffer.pyi
 ${PYSITELIB}/aioquic/_buffer.so
-${PYSITELIB}/aioquic/_crypto.c
-${PYSITELIB}/aioquic/_crypto.pyi
-${PYSITELIB}/aioquic/_crypto.so
+${PYSITELIB}/aioquic/_crypto.py
+${PYSITELIB}/aioquic/_crypto.pyc
+${PYSITELIB}/aioquic/_crypto.pyo
 ${PYSITELIB}/aioquic/asyncio/__init__.py
 ${PYSITELIB}/aioquic/asyncio/__init__.pyc
 ${PYSITELIB}/aioquic/asyncio/__init__.pyo
