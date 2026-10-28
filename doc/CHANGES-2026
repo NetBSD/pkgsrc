@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7393 2026/10/28 05:53:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7394 2026/10/28 06:01:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11064,3 +11064,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-python-discovery to 1.6.6 [adam 2026-10-28]
 	Updated devel/py-hatchling to 1.33.0 [adam 2026-10-28]
 	Updated devel/py-jupyter-builder to 1.2.4 [adam 2026-10-28]
+	Updated www/grafana to 13.2.5 [wiz 2026-10-28]
