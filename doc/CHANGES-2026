@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7396 2026/10/28 08:16:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7397 2026/10/28 08:33:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11070,3 +11070,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-autodoc-typehints to 3.17.4 [adam 2026-10-28]
 	Updated textproc/py-sphinx-automodapi to 0.22.1 [adam 2026-10-28]
 	Updated math/py-numba to 0.68.1 [adam 2026-10-28]
+	Updated time/py-time-machine to 3.6.0 [adam 2026-10-28]
+	Updated net/py-unearth to 0.19.0 [adam 2026-10-28]
