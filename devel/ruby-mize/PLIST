@@ -1,18 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2026/03/01 07:25:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/28 15:34:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.all_images.yml
+${GEM_LIBDIR}/.github/workflows/static.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/.utilsrc
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/config/broken_config.yml
-${GEM_LIBDIR}/config/config.yml
 ${GEM_LIBDIR}/lib/mize.rb
 ${GEM_LIBDIR}/lib/mize/cache_methods.rb
 ${GEM_LIBDIR}/lib/mize/cache_protocol.rb
@@ -28,5 +26,6 @@ ${GEM_LIBDIR}/spec/mize/global_clear_spec.rb
 ${GEM_LIBDIR}/spec/mize/memoize_method_spec.rb
 ${GEM_LIBDIR}/spec/mize/memoize_reload_spec.rb
 ${GEM_LIBDIR}/spec/mize/version_spec.rb
+${GEM_LIBDIR}/spec/mize_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
