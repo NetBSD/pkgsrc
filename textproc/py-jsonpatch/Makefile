@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/10/13 11:30:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/28 08:55:27 adam Exp $
 
-DISTNAME=	jsonpatch-1.35
+DISTNAME=	jsonpatch-1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpatch/}
