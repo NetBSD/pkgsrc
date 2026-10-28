@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2025/09/01 13:21:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/10/28 15:28:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/IO_Event.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/agent.md
+${GEM_LIBDIR}/context/futex.md
 ${GEM_LIBDIR}/context/getting-started.md
 ${GEM_LIBDIR}/context/index.yaml
 ${GEM_LIBDIR}/design.md
@@ -12,6 +12,8 @@ ${GEM_LIBDIR}/ext/io/event/event.c
 ${GEM_LIBDIR}/ext/io/event/event.h
 ${GEM_LIBDIR}/ext/io/event/fiber.c
 ${GEM_LIBDIR}/ext/io/event/fiber.h
+${GEM_LIBDIR}/ext/io/event/futex.c
+${GEM_LIBDIR}/ext/io/event/futex.h
 ${GEM_LIBDIR}/ext/io/event/interrupt.c
 ${GEM_LIBDIR}/ext/io/event/interrupt.h
 ${GEM_LIBDIR}/ext/io/event/list.h
