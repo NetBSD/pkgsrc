@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7415 2026/10/28 15:35:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7416 2026/10/28 16:46:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11096,3 +11096,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-msgpack to 1.8.6 [taca 2026-10-28]
 	Updated wayland/wvkbd to 0.21 [kikadf 2026-10-28]
 	Updated devel/ruby-mize to 0.7.0 [taca 2026-10-28]
+	Updated net/py-junos-eznc to 2.8.2 [he 2026-10-28]
