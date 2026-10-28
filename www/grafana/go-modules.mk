@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.38 2026/10/18 15:42:02 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.39 2026/10/28 05:58:12 wiz Exp $
 
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.mod
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.zip
@@ -1104,8 +1104,8 @@ GO_MODULE_FILES+=	github.com/alicebob/miniredis/v2/@v/v2.38.0.zip
 GO_MODULE_FILES+=	github.com/aliyun/aliyun-oss-go-sdk/@v/v2.2.2+incompatible.mod
 GO_MODULE_FILES+=	github.com/aliyun/aliyun-oss-go-sdk/@v/v2.2.2+incompatible.zip
 GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.0.4.mod
-GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.2.mod
-GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.2.zip
+GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.7.mod
+GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.7.zip
 GO_MODULE_FILES+=	github.com/ankane/disco-go/@v/v0.1.2.mod
 GO_MODULE_FILES+=	github.com/ankane/disco-go/@v/v0.1.2.zip
 GO_MODULE_FILES+=	github.com/antchfx/xmlquery/@v/v1.5.1.mod
@@ -1681,8 +1681,8 @@ GO_MODULE_FILES+=	github.com/gammazero/deque/@v/v0.2.1.mod
 GO_MODULE_FILES+=	github.com/gammazero/deque/@v/v0.2.1.zip
 GO_MODULE_FILES+=	github.com/gchaincl/sqlhooks/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/gchaincl/sqlhooks/@v/v1.3.0.zip
-GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.144.0.mod
-GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.144.0.zip
+GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.151.0.mod
+GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.151.0.zip
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v0.0.0-20150909031657-73d445a93680.mod
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.zip
@@ -3146,8 +3146,8 @@ GO_MODULE_FILES+=	github.com/samuel/go-zookeeper/@v/v0.0.0-20190810000440-0ceca6
 GO_MODULE_FILES+=	github.com/samuel/go-zookeeper/@v/v0.0.0-20190810000440-0ceca61e4d75.zip
 GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v5/@v/v5.3.1.mod
 GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v5/@v/v5.3.1.zip
-GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v6/@v/v6.0.2.mod
-GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v6/@v/v6.0.2.zip
+GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v6/@v/v6.0.3.mod
+GO_MODULE_FILES+=	github.com/santhosh-tekuri/jsonschema/v6/@v/v6.0.3.zip
 GO_MODULE_FILES+=	github.com/satori/go.uuid/@v/v1.2.1-0.20181028125025-b2ce2384e17b.mod
 GO_MODULE_FILES+=	github.com/satori/go.uuid/@v/v1.2.1-0.20181028125025-b2ce2384e17b.zip
 GO_MODULE_FILES+=	github.com/scaleway/scaleway-sdk-go/@v/v1.0.0-beta.36.mod
@@ -3869,7 +3869,6 @@ GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.39.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.1.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.2.mod
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.40.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.41.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.41.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.5.0.mod
