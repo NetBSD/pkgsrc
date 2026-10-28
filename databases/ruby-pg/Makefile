@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2026/01/13 14:52:18 taca Exp $
+# $NetBSD: Makefile,v 1.50 2026/10/28 15:04:47 taca Exp $
 
-DISTNAME=	pg-1.6.3
+DISTNAME=	pg-1.7.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/postgres/&ql/}
 CATEGORIES=	databases
 
