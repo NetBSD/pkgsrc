@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.6 2026/08/25 09:23:00 wiz Exp $
+$NetBSD: distinfo,v 1.7 2026/10/28 05:09:43 wiz Exp $
 
 BLAKE2s (Kivy-2.3.1.tar.gz) = bc67e1d62d706dfe5c8f168960bf6b352db08539eb009993069dd7bf20b4de87
 SHA512 (Kivy-2.3.1.tar.gz) = f26983a6ccdc173d7d69f0c17a36dc8a4dfd31e4777363253b6bcbf549c44ff2d281e8529ff3ea6683fbfb1c16102bd436bb0433b00c23eb4084be30b3b487ad
 Size (Kivy-2.3.1.tar.gz) = 23967306 bytes
+SHA1 (patch-kivy_clock.py) = aaf276d23d1c6706d59635348c42af39a2242f83
+SHA1 (patch-kivy_core_text_____init____.py) = 9619ee9954f0d179ed9afcc0218f0d98bd2b026d
 SHA1 (patch-kivy_graphics_context__instructions.pyx) = 832277962827829929a90ee5feeb8da34d7051a9
 SHA1 (patch-kivy_graphics_instructions.pyx) = 36300574e45441df13b082bc7b3ad6dcb94f02d5
 SHA1 (patch-kivy_graphics_opengl.pyx) = 968074f0b413e5b1b267d8d126cbee1a10756f00
+SHA1 (patch-kivy_tests_common.py) = 25ed0951210163046fc8250a04d9852e4eca6544
+SHA1 (patch-kivy_tests_conftest.py) = b9d34ded50ca4e3c2505c8dfb69193f33e449cb5
+SHA1 (patch-kivy_tests_fixtures.py) = 02507b88ccdbf13c9cbec431dbdef729526d2854
+SHA1 (patch-kivy_utils.py) = a1219b45c70e5cff7a5d3a3781cabae422b3cd93
 SHA1 (patch-kivy_weakproxy.pyx) = 34214bdd35389edab5cc13e3009870b183ac6371
+SHA1 (patch-pyproject.toml) = 3402eadb72ba7abcbdc75ffdc8bc53d14df56fa4

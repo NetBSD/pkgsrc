@@ -1,0 +1,11 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/10/28 05:09:43 wiz Exp $
+
+https://github.com/kivy/kivy/commit/122596b656304aef81b53de2aebfc53bd24f0ecc
+
+--- pyproject.toml.orig	2026-10-28 04:29:19.784505631 +0000
++++ pyproject.toml
+@@ -15,3 +15,4 @@ markers = "incremental: mark a test as incremental."
+ [tool.pytest.ini_options]
+ addopts = "--benchmark-skip --benchmark-warmup=on --benchmark-warmup-iterations=5 --benchmark-disable-gc --benchmark-name=short --benchmark-sort=mean --benchmark-group-by=fullfunc --benchmark-storage=.benchmarks-kivy --benchmark-save=kivy"
+ markers = "incremental: mark a test as incremental."
++asyncio_mode = "auto"

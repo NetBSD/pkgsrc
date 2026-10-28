@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2026/10/16 19:43:49 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/10/28 05:09:43 wiz Exp $
 
 DISTNAME=	Kivy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
@@ -24,6 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.5.0:../../graphics/py-Pillow
 # \todo File upstream bug that dependency on enchant and pygame is undocumented.
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -51,6 +52,28 @@ WHEEL_NAME=	${DISTNAME:tl}
 
 # For share/kivy-examples
 PYTHON_SELF_CONFLICT=	yes
+
+SUBST_CLASSES+=		prefix
+SUBST_VARS.prefix=	PREFIX
+SUBST_FILES.prefix+=	kivy/core/text/__init__.py
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Fixing PREFIX.
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/kivy/tests/common.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/kivy/tests/conftest.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/kivy/tests/fixtures.py.orig
+
+# as of 2.3.1
+# 19 failed, 873 passed, 23 skipped, 1 xfailed, 5 warnings
+
+TEST_ENV+=	PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB}
+# Run tests against destdir (after 'make package') to have compiled
+# extension available; explicitly pass test directory to avoid
+# automatic collection find examples/widgets/bubble_test.py first.
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} \
+		pytest-${PYVERSSUFFIX} ${DESTDIR}${PREFIX}/${PYSITELIB}/kivy/tests
 
 .include "../../mk/bsd.prefs.mk"
 
