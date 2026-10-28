@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2026/08/19 03:10:14 wen Exp $
+$NetBSD: distinfo,v 1.30 2026/10/28 21:58:18 wiz Exp $
 
-BLAKE2s (MIME-tools-5.517.tar.gz) = e17811059aeff12c8c28898ac441abe819fc70b6556798c3f00a765f6b2d11da
-SHA512 (MIME-tools-5.517.tar.gz) = e7935a1f4219b5de87f5752cf87978083ffe55ebd6a929f8f9fed63595553059fed6fe98ee18f151b0a250a57d8f239ba8ebd5d34b5e5d407b30ed9a5de95547
-Size (MIME-tools-5.517.tar.gz) = 425046 bytes
+BLAKE2s (MIME-tools-5.522.tar.gz) = 9edf58b362877757dfbd4bc697b04dae9541e6153da09c0f89128bcb1f0c8452
+SHA512 (MIME-tools-5.522.tar.gz) = ced238b1b40b855edcf803cc86b95d92a2fd88002fa07c8ef2e590e32340239f603b631ed97116d4d165e0b6fb0430a4d72f92f9ce19ff6cab2b085b42a6b1a8
+Size (MIME-tools-5.522.tar.gz) = 441525 bytes
