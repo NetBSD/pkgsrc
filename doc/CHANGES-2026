@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7400 2026/10/28 09:00:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7401 2026/10/28 13:02:15 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11078,3 +11078,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-jsonpatch to 1.38 [adam 2026-10-28]
 	Updated sysutils/py-fsspec to 2026.9.0 [adam 2026-10-28]
 	Updated www/py-django-mptt to 0.21.0 [adam 2026-10-28]
+	Updated audio/kew to 4.4.2 [ktnb 2026-10-28]
