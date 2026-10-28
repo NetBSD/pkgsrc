@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/06/04 10:28:06 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.12 2026/10/28 16:45:20 he Exp $
 ${PYSITELIB}/jnpr/junos/__init__.py
 ${PYSITELIB}/jnpr/junos/__init__.pyc
 ${PYSITELIB}/jnpr/junos/__init__.pyo
@@ -120,6 +114,9 @@ ${PYSITELIB}/jnpr/junos/factory/factory_loader.pyo
 ${PYSITELIB}/jnpr/junos/factory/optable.py
 ${PYSITELIB}/jnpr/junos/factory/optable.pyc
 ${PYSITELIB}/jnpr/junos/factory/optable.pyo
+${PYSITELIB}/jnpr/junos/factory/safe_eval.py
+${PYSITELIB}/jnpr/junos/factory/safe_eval.pyc
+${PYSITELIB}/jnpr/junos/factory/safe_eval.pyo
 ${PYSITELIB}/jnpr/junos/factory/state_machine.py
 ${PYSITELIB}/jnpr/junos/factory/state_machine.pyc
 ${PYSITELIB}/jnpr/junos/factory/state_machine.pyo
@@ -159,6 +156,9 @@ ${PYSITELIB}/jnpr/junos/facts/get_chassis_cluster_status.pyo
 ${PYSITELIB}/jnpr/junos/facts/get_chassis_inventory.py
 ${PYSITELIB}/jnpr/junos/facts/get_chassis_inventory.pyc
 ${PYSITELIB}/jnpr/junos/facts/get_chassis_inventory.pyo
+${PYSITELIB}/jnpr/junos/facts/get_jnu_satellites_information.py
+${PYSITELIB}/jnpr/junos/facts/get_jnu_satellites_information.pyc
+${PYSITELIB}/jnpr/junos/facts/get_jnu_satellites_information.pyo
 ${PYSITELIB}/jnpr/junos/facts/get_route_engine_information.py
 ${PYSITELIB}/jnpr/junos/facts/get_route_engine_information.pyc
 ${PYSITELIB}/jnpr/junos/facts/get_route_engine_information.pyo
@@ -207,6 +207,9 @@ ${PYSITELIB}/jnpr/junos/ofacts/personality.pyo
 ${PYSITELIB}/jnpr/junos/ofacts/routing_engines.py
 ${PYSITELIB}/jnpr/junos/ofacts/routing_engines.pyc
 ${PYSITELIB}/jnpr/junos/ofacts/routing_engines.pyo
+${PYSITELIB}/jnpr/junos/ofacts/satellites.py
+${PYSITELIB}/jnpr/junos/ofacts/satellites.pyc
+${PYSITELIB}/jnpr/junos/ofacts/satellites.pyo
 ${PYSITELIB}/jnpr/junos/ofacts/session.py
 ${PYSITELIB}/jnpr/junos/ofacts/session.pyc
 ${PYSITELIB}/jnpr/junos/ofacts/session.pyo
@@ -335,4 +338,10 @@ ${PYSITELIB}/jnpr/junos/utils/util.pyo
 ${PYSITELIB}/jnpr/junos/version.py
 ${PYSITELIB}/jnpr/junos/version.pyc
 ${PYSITELIB}/jnpr/junos/version.pyo
-${PYSITELIB}/junos_eznc-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
+${PYSITELIB}/junos_eznc-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
