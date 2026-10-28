@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7424 2026/10/28 20:55:00 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7425 2026/10/28 21:57:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11105,3 +11105,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/upx to 5.3.0 [drixter 2026-10-28]
 	Updated misc/usbids to 20260626 [drixter 2026-10-28]
 	Updated sysutils/gatus to 5.38.0 [drixter 2026-10-28]
+	Updated www/p5-HTTP-Body to 1.24 [wiz 2026-10-28]
