@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/06/23 06:00:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/10/28 05:36:48 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -49,6 +49,9 @@ ${PYSITELIB}/_pytest/_py/path.pyo
 ${PYSITELIB}/_pytest/_version.py
 ${PYSITELIB}/_pytest/_version.pyc
 ${PYSITELIB}/_pytest/_version.pyo
+${PYSITELIB}/_pytest/approx.py
+${PYSITELIB}/_pytest/approx.pyc
+${PYSITELIB}/_pytest/approx.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
@@ -154,6 +157,9 @@ ${PYSITELIB}/_pytest/mark/structures.pyo
 ${PYSITELIB}/_pytest/monkeypatch.py
 ${PYSITELIB}/_pytest/monkeypatch.pyc
 ${PYSITELIB}/_pytest/monkeypatch.pyo
+${PYSITELIB}/_pytest/nodeid.py
+${PYSITELIB}/_pytest/nodeid.pyc
+${PYSITELIB}/_pytest/nodeid.pyo
 ${PYSITELIB}/_pytest/nodes.py
 ${PYSITELIB}/_pytest/nodes.pyc
 ${PYSITELIB}/_pytest/nodes.pyo
@@ -176,9 +182,6 @@ ${PYSITELIB}/_pytest/pytester_assertions.pyo
 ${PYSITELIB}/_pytest/python.py
 ${PYSITELIB}/_pytest/python.pyc
 ${PYSITELIB}/_pytest/python.pyo
-${PYSITELIB}/_pytest/python_api.py
-${PYSITELIB}/_pytest/python_api.pyc
-${PYSITELIB}/_pytest/python_api.pyo
 ${PYSITELIB}/_pytest/raises.py
 ${PYSITELIB}/_pytest/raises.pyc
 ${PYSITELIB}/_pytest/raises.pyo
