@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/09/29 06:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/10/28 15:33:31 kikadf Exp $
 
-DISTNAME=	wvkbd-0.20
-PKGREVISION=	3
+DISTNAME=	wvkbd-0.21
 CATEGORIES=	wayland
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jjsullivan5196/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
