@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7402 2026/10/28 13:19:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7403 2026/10/28 13:24:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11081,3 +11081,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/kew to 4.4.2 [ktnb 2026-10-28]
 	Updated net/icinga2 to 2.16.6 [adam 2026-10-28]
 	Updated graphics/tesseract to 5.5.4 [adam 2026-10-28]
+	Updated misc/py-narwhals to 2.28.0 [adam 2026-10-28]
+	Updated net/py-python-socks to 3.2.0 [adam 2026-10-28]
