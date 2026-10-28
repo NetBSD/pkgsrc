@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/10/16 19:44:20 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/10/28 08:14:02 adam Exp $
 
-DISTNAME=	sphinx_automodapi-0.22.0
+DISTNAME=	sphinx_automodapi-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-automodapi/}
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0.0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=5:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
