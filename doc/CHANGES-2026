@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7405 2026/10/28 14:07:10 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.7406 2026/10/28 14:54:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11086,3 +11086,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-networkx to 3.7 [adam 2026-10-28]
 	Updated time/py-tzdata to 2026.6 [adam 2026-10-28]
 	Updated x11/xorg-cf-files to 1.0.9nb1 [jperkin 2026-10-28]
+	Updated comms/ruby-termios to 1.2.0 [taca 2026-10-28]
