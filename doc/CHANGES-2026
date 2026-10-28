@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7412 2026/10/28 15:28:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7413 2026/10/28 15:30:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11093,3 +11093,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-tiny_tds to 3.4.1 [taca 2026-10-28]
 	Updated devel/ruby-bindata to 3.0.1 [taca 2026-10-28]
 	Updated devel/ruby-io-event to 1.22.3 [taca 2026-10-28]
+	Updated devel/ruby-msgpack to 1.8.6 [taca 2026-10-28]
