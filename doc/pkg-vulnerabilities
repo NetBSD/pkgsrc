@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.810 2026/10/28 09:56:00 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.811 2026/10/28 09:58:42 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -15867,7 +15867,7 @@ lcms2<2.10		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-16435
 hdf5-[0-9]*	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-16438
 pidgin<2.11.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2016-1000030
 npm<3.10.7	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2016-1000232
-py{27,34,35,36,37,38}-flask-admin-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-16516
+py{27,34,35,36,37,38}-flask-admin<1.5.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-16516
 zziplib<0.13.70	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-16548
 sympa<6.2.36	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-1000671
 okular<18.08.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2018-1000801
