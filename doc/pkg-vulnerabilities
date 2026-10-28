@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.811 2026/10/28 09:58:42 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.812 2026/10/28 10:09:34 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20587,7 +20587,7 @@ mantis<2.24.4		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail
 mantis<2.24.4		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-29604
 mantis<2.24.4		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-29605
 ImageMagick<7.0.10.62	divide-by-zero			https://nvd.nist.gov/vuln/detail/CVE-2021-20176
-ImageMagick6<6.99.11.62	divide-by-zero			https://nvd.nist.gov/vuln/detail/CVE-2021-20176
+ImageMagick6<6.9.11.62	divide-by-zero			https://nvd.nist.gov/vuln/detail/CVE-2021-20176
 apache-cassandra<2.2.20		authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-17516
 apache-cassandra>=3<3.11.24	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-17516
 bitcoin<0.19.0		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-3401
