@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/09/07 09:45:19 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/10/28 05:53:08 adam Exp $
 
-BLAKE2s (jupyter_builder-1.2.3.tar.gz) = e884592dd684b7582c19dbcb77cafb18133111e586d59c71f5731482fd93f181
-SHA512 (jupyter_builder-1.2.3.tar.gz) = 8c7025105b74851fa598b969f9db099c70b998f8ff2918f30ee0ca944997d05a09868ecf59bf02dc6a63dc6cd71432d9d5c87d7c4ee8b8868df07fdeea10df52
-Size (jupyter_builder-1.2.3.tar.gz) = 1024218 bytes
+BLAKE2s (jupyter_builder-1.2.4.tar.gz) = 140dc172e4f806427c0ae91b868892a37399d9e564dda74d8c98e33a77166aa8
+SHA512 (jupyter_builder-1.2.4.tar.gz) = 02d367fbaf3b999154492e2cc081a09f94320d74a80059142cf20bfdbf6ab9611cbc7db39823349138214e7d8e14a8cc3c4105a76f26f4fe46f22e4dfdfc4acb
+Size (jupyter_builder-1.2.4.tar.gz) = 1026105 bytes
