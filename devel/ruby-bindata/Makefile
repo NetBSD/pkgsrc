@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/07/18 15:03:52 taca Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/28 15:25:39 taca Exp $
 
-DISTNAME=	bindata-3.0.0
+DISTNAME=	bindata-3.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
