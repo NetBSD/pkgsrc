@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7397 2026/10/28 08:33:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7398 2026/10/28 08:49:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11072,3 +11072,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-numba to 0.68.1 [adam 2026-10-28]
 	Updated time/py-time-machine to 3.6.0 [adam 2026-10-28]
 	Updated net/py-unearth to 0.19.0 [adam 2026-10-28]
+	Updated math/py-quadprog to 0.1.14 [adam 2026-10-28]
+	Updated print/py-pydyf to 0.13.0 [adam 2026-10-28]
