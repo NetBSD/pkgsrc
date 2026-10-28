@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/10/26 11:25:44 pin Exp $
+$NetBSD: distinfo,v 1.3 2026/10/28 18:02:49 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -111,9 +111,9 @@ Size (block-padding-0.3.3.crate) = 8504 bytes
 BLAKE2s (blocking-1.7.0.crate) = 3b667a332b1e6495e58eef53878c270fe34cba6361386694b1b88a869289289b
 SHA512 (blocking-1.7.0.crate) = c4712b326cd45006aaa3388dbdd5d22559e196fc5cd44bde0547b88f8dff28f3b2c26bf1008865f4cb327f8612f73f211c3018d31de37e957755a5d5feee229b
 Size (blocking-1.7.0.crate) = 18136 bytes
-BLAKE2s (brochure-0.12.0.tar.gz) = 41f83187e150f11326988fb25d9130abcfc5ad927ed9bc79053fe477dc78b510
-SHA512 (brochure-0.12.0.tar.gz) = 4632ade77eefc6c59b9b0c1b7c34d8b5130ffa0dcf720db2cc7c196b58ff052ec84f57ec3bea744264c28f8d572180d257a02fdcd5a700afbcefa99d05c59744
-Size (brochure-0.12.0.tar.gz) = 195659 bytes
+BLAKE2s (brochure-0.13.0.tar.gz) = 0efc10f4907aecaebfc81f01d1d25011412abe3a10bdf33def4259a5d72efb90
+SHA512 (brochure-0.13.0.tar.gz) = 5893c95c8ac385f451c2c8854c761fb4cf637ebce565cd52aa85506bb81bd61ce1f7760864f687d04012ae097d1919cb0aa2c97cfb3b5743faf75b2fbf0aad87
+Size (brochure-0.13.0.tar.gz) = 207778 bytes
 BLAKE2s (bumpalo-3.20.2.crate) = 1c169a9ea0cdd68b6d07273892294f6418aec6c962abc2d67bfcc2b93590433e
 SHA512 (bumpalo-3.20.2.crate) = 4c725a4eb436fc9b3302430f5bec699563bed4b6a86c187defba9a83b749089eb6b00a6855afa4d42ac5eb324088eada3c0713f3e8c2d1c85bea4dcca83a4a60
 Size (bumpalo-3.20.2.crate) = 97696 bytes
