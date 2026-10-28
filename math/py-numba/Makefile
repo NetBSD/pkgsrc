@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/10/11 05:55:22 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/28 08:16:26 adam Exp $
 
-DISTNAME=	numba-0.68.0
+DISTNAME=	numba-0.68.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 
 PY_RENAME_BINARIES=	numba
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
