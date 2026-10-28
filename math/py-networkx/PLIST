@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/12/15 12:05:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/10/28 13:41:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -155,6 +155,9 @@ ${PYSITELIB}/networkx/algorithms/bipartite/centrality.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/cluster.py
 ${PYSITELIB}/networkx/algorithms/bipartite/cluster.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/cluster.pyo
+${PYSITELIB}/networkx/algorithms/bipartite/community.py
+${PYSITELIB}/networkx/algorithms/bipartite/community.pyc
+${PYSITELIB}/networkx/algorithms/bipartite/community.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/covering.py
 ${PYSITELIB}/networkx/algorithms/bipartite/covering.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/covering.pyo
@@ -197,6 +200,9 @@ ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_centrality.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_cluster.py
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_cluster.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_cluster.pyo
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_community.py
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_community.pyc
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_community.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_covering.py
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_covering.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_covering.pyo
@@ -712,6 +718,9 @@ ${PYSITELIB}/networkx/algorithms/isomorphism/tests/iso_r01_s80.A99
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/iso_r01_s80.B99
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/si2_b06_m200.A99
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/si2_b06_m200.B99
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_common.py
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_common.pyc
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_common.pyo
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_ismags.py
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_ismags.pyc
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_ismags.pyo
