@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.135 2026/04/12 14:30:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.136 2026/10/28 15:09:39 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -272,6 +272,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements_safe.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/primary_key_lookup_check_values.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/rcte_tree.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/require_valid_schema.rb
+${GEM_LIBDIR}/lib/sequel/plugins/select_on_skipped_update.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/serialization.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/serialization_modification_detection.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/sharding.rb
@@ -302,6 +303,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/update_primary_key.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_refresh.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/uuid.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validate_associated.rb
+${GEM_LIBDIR}/lib/sequel/plugins/validate_associated_context.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_contexts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
