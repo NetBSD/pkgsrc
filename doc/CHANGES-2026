@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7408 2026/10/28 15:09:49 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7409 2026/10/28 15:21:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11089,3 +11089,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/ruby-termios to 1.2.0 [taca 2026-10-28]
 	Updated databases/ruby-pg to 1.7.0 [taca 2026-10-28]
 	Updated databases/ruby-sequel to 5.109.0 [taca 2026-10-28]
+	Updated databases/ruby-sqlite3 to 2.10.2 [taca 2026-10-28]
