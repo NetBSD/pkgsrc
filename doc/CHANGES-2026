@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7423 2026/10/28 20:06:19 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7424 2026/10/28 20:55:00 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11104,3 +11104,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xcp to 0.24.9 [pin 2026-10-28]
 	Updated archivers/upx to 5.3.0 [drixter 2026-10-28]
 	Updated misc/usbids to 20260626 [drixter 2026-10-28]
+	Updated sysutils/gatus to 5.38.0 [drixter 2026-10-28]
