@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/11/11 10:22:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/10/28 08:57:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -138,6 +138,9 @@ ${PYSITELIB}/fsspec/mapping.pyo
 ${PYSITELIB}/fsspec/parquet.py
 ${PYSITELIB}/fsspec/parquet.pyc
 ${PYSITELIB}/fsspec/parquet.pyo
+${PYSITELIB}/fsspec/prefetcher.py
+${PYSITELIB}/fsspec/prefetcher.pyc
+${PYSITELIB}/fsspec/prefetcher.pyo
 ${PYSITELIB}/fsspec/registry.py
 ${PYSITELIB}/fsspec/registry.pyc
 ${PYSITELIB}/fsspec/registry.pyo
