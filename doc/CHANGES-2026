@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7442 2026/10/29 11:27:27 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7443 2026/10/29 11:32:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11131,3 +11131,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Net-CIDR to 0.27 [wen 2026-10-29]
 	Updated devel/p5-Net-Netmask to 2.0003 [wen 2026-10-29]
 	Updated devel/p5-Object-Realize-Later to 4.00 [wen 2026-10-29]
+	Updated devel/p5-Overload-FileCheck to 0.015 [wen 2026-10-29]
