@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7430 2026/10/29 06:30:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7431 2026/10/29 07:05:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11114,3 +11114,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-flake8 to 7.5.0 [adam 2026-10-29]
 	Updated net/tor to 0.4.9.15 [adam 2026-10-29]
 	Updated www/py-draftjs_exporter to 7.3.1 [adam 2026-10-29]
+	Updated net/nmap to 7.993 [adam 2026-10-29]
+	Updated net/ndiff to 7.993 [adam 2026-10-29]
+	Updated net/zenmap to 7.993 [adam 2026-10-29]
