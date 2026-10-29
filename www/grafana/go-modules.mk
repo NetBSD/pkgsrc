@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.39 2026/10/28 05:58:12 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.40 2026/10/29 04:39:44 tnn Exp $
 
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.mod
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.zip
@@ -1474,6 +1474,10 @@ GO_MODULE_FILES+=	github.com/coreos/go-oidc/@v/v2.5.0+incompatible.zip
 GO_MODULE_FILES+=	github.com/coreos/go-semver/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/coreos/go-semver/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/coreos/go-semver/@v/v0.3.1.zip
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/v22/@v/v22.3.2.mod
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/v22/@v/v22.5.0.mod
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/v22/@v/v22.7.0.mod
+GO_MODULE_FILES+=	github.com/coreos/go-systemd/v22/@v/v22.7.0.zip
 GO_MODULE_FILES+=	github.com/couchbase/ghistogram/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/couchbase/ghistogram/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/couchbase/moss/@v/v0.2.0.mod
@@ -1914,6 +1918,7 @@ GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.19.2.zip
 GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.9.5.mod
 GO_MODULE_FILES+=	github.com/gocraft/dbr/v2/@v/v2.7.2.mod
 GO_MODULE_FILES+=	github.com/gocraft/dbr/v2/@v/v2.7.2.zip
+GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.0.4.mod
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.1.0.mod
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.2.2.mod
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.2.2.zip
@@ -4725,6 +4730,8 @@ GO_MODULE_FILES+=	k8s.io/apiextensions-apiserver/@v/v0.36.2.zip
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.0.0-20190809020650-423f5d784010.mod
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.36.2.mod
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.36.2.zip
+GO_MODULE_FILES+=	k8s.io/apiserver/@v/v0.36.2.mod
+GO_MODULE_FILES+=	k8s.io/apiserver/@v/v0.36.2.zip
 GO_MODULE_FILES+=	k8s.io/client-go/@v/v0.36.2.mod
 GO_MODULE_FILES+=	k8s.io/client-go/@v/v0.36.2.zip
 GO_MODULE_FILES+=	k8s.io/code-generator/@v/v0.36.2.mod

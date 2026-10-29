@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2026/10/28 05:58:11 wiz Exp $
+$NetBSD: distinfo,v 1.56 2026/10/29 04:39:44 tnn Exp $
 
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6b700bc0ea1a5a9070b79e2df5ee41bda8994973fbf2a4deac2a482ec151279b
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6e2becc6b0294a2ce097ef7bb8ddedfc9793e9e5281620bf920644fb9bef3bb69ad0367e7ffb706acf955c48bf46b118360107241014555562985337a0bbd051
@@ -4422,6 +4422,18 @@ Size (github.com_coreos_go-semver_@v_v0.3.1.mod) = 76 bytes
 BLAKE2s (github.com_coreos_go-semver_@v_v0.3.1.zip) = 7633c5e176f8889069df7af9f9f89e2af47f0a822d158760471e5f0e74975605
 SHA512 (github.com_coreos_go-semver_@v_v0.3.1.zip) = cad6deb8d14f1941111f7d0805e42741668a1e9bae3d5f01750f3183bd2b4b2c9d77ee04b0b6493c00a613c96022787b9f7ec732bbb933681b072f48a3069d24
 Size (github.com_coreos_go-semver_@v_v0.3.1.zip) = 14749 bytes
+BLAKE2s (github.com_coreos_go-systemd_v22_@v_v22.3.2.mod) = 12dcaed190b9f3d30e196bd1213a6357c43772d311ca8e8d4fab9ce1e9159377
+SHA512 (github.com_coreos_go-systemd_v22_@v_v22.3.2.mod) = 722430decd4f1022e8b035bcc7c1ed295db21a3c64f9dbdf409bd0442356664d378d4af37b7de828c02453014a5a9ddefb3397cbbbc8481c14179ecba9499a5a
+Size (github.com_coreos_go-systemd_v22_@v_v22.3.2.mod) = 91 bytes
+BLAKE2s (github.com_coreos_go-systemd_v22_@v_v22.5.0.mod) = 12dcaed190b9f3d30e196bd1213a6357c43772d311ca8e8d4fab9ce1e9159377
+SHA512 (github.com_coreos_go-systemd_v22_@v_v22.5.0.mod) = 722430decd4f1022e8b035bcc7c1ed295db21a3c64f9dbdf409bd0442356664d378d4af37b7de828c02453014a5a9ddefb3397cbbbc8481c14179ecba9499a5a
+Size (github.com_coreos_go-systemd_v22_@v_v22.5.0.mod) = 91 bytes
+BLAKE2s (github.com_coreos_go-systemd_v22_@v_v22.7.0.mod) = e4f39301cb4e78756b8c69798b620be9abfd70eea6314b9187332ba933ad4ef2
+SHA512 (github.com_coreos_go-systemd_v22_@v_v22.7.0.mod) = 6cb27db0538c254d3e197ac9bbfb3bef3d8bd2a316e12cafa32d738d2c7960097efc9edbe4e5842213e4cfe536f3db236744e006a8011346dd28f165c1e34d82
+Size (github.com_coreos_go-systemd_v22_@v_v22.7.0.mod) = 121 bytes
+BLAKE2s (github.com_coreos_go-systemd_v22_@v_v22.7.0.zip) = 5bbcb5d6eec5ce2eb2c650e89825fbc43198932c1e50107579188942ddf72007
+SHA512 (github.com_coreos_go-systemd_v22_@v_v22.7.0.zip) = b1329905ff1ffd6413109b2f7809b39ebe03c68d60dafb6011e96af6b697b8007c7202fa9149914696c466eead5e634672c9fc06df40b2a25ec3e6d258e2a4c6
+Size (github.com_coreos_go-systemd_v22_@v_v22.7.0.zip) = 133635 bytes
 BLAKE2s (github.com_couchbase_ghistogram_@v_v0.1.0.mod) = 9e87e485a345c974ed95eeea2a631baa380a025adbfbde84bb18c4e53c90d42f
 SHA512 (github.com_couchbase_ghistogram_@v_v0.1.0.mod) = 0feed47bcb57ae2731c72476cddbf694a5102b82903970dcf26c5333bf41ff0d399c6dcbd9a331c790fa29f37a04023637c73a69d2488fdf9836b3cd1bf4300a
 Size (github.com_couchbase_ghistogram_@v_v0.1.0.mod) = 39 bytes
@@ -5742,6 +5754,9 @@ Size (github.com_gocraft_dbr_v2_@v_v2.7.2.mod) = 353 bytes
 BLAKE2s (github.com_gocraft_dbr_v2_@v_v2.7.2.zip) = 88132ee331ff989a32f808ef8d5da8a4a614f25ef3f209ec12b4df0c87d94b06
 SHA512 (github.com_gocraft_dbr_v2_@v_v2.7.2.zip) = b2d01f5716bfbaffcd5851146a22da855d54a8b7de37065ca132628b40f6b9bf1d7af0c96bc711b6f38a88adc87bb53ae741d246814ffe97587f75fd2055c14a
 Size (github.com_gocraft_dbr_v2_@v_v2.7.2.zip) = 55312 bytes
+BLAKE2s (github.com_godbus_dbus_v5_@v_v5.0.4.mod) = 14df8b500892bef1fedace1cd033fe9cd8436ebbd9d5852139270c31636539b8
+SHA512 (github.com_godbus_dbus_v5_@v_v5.0.4.mod) = b9aad4f1c1d4f2c43b293b0c9ca8a600a37ca407ba8b22b0f826c8355828cb7860a96a85df84f720fe8aa2840974807ea7ea7b790790c6dafed794e761f1f26b
+Size (github.com_godbus_dbus_v5_@v_v5.0.4.mod) = 42 bytes
 BLAKE2s (github.com_godbus_dbus_v5_@v_v5.1.0.mod) = 14df8b500892bef1fedace1cd033fe9cd8436ebbd9d5852139270c31636539b8
 SHA512 (github.com_godbus_dbus_v5_@v_v5.1.0.mod) = b9aad4f1c1d4f2c43b293b0c9ca8a600a37ca407ba8b22b0f826c8355828cb7860a96a85df84f720fe8aa2840974807ea7ea7b790790c6dafed794e761f1f26b
 Size (github.com_godbus_dbus_v5_@v_v5.1.0.mod) = 42 bytes
@@ -14181,6 +14196,12 @@ Size (k8s.io_apimachinery_@v_v0.36.2.mod) = 1868 bytes
 BLAKE2s (k8s.io_apimachinery_@v_v0.36.2.zip) = dfc4c68667a317da1277cd7605939091d6930b4577304eee5d3153228972a569
 SHA512 (k8s.io_apimachinery_@v_v0.36.2.zip) = a95e4e001948e93652e28b8f00e15fa5272dae9430ab7dec60bd78e2e3773bbbb1788673de88b9ca25eb3b9dada510a91ced55cf895fd4b77c9f903c6415bf08
 Size (k8s.io_apimachinery_@v_v0.36.2.zip) = 1197280 bytes
+BLAKE2s (k8s.io_apiserver_@v_v0.36.2.mod) = 19178be780d197328b1f034675a3cdc9cbf704d0d515445c7686f6fb65d01ede
+SHA512 (k8s.io_apiserver_@v_v0.36.2.mod) = dc506c8503ae45d525650798fee7ddfc2d91e11bb8a48e00b821a4bb80c77d48ad4548f1badb5574f47da850d6a87cd5ad417b27a8a4af3c32a8282efd29323a
+Size (k8s.io_apiserver_@v_v0.36.2.mod) = 5369 bytes
+BLAKE2s (k8s.io_apiserver_@v_v0.36.2.zip) = c7d576e6296bf2130fd4e9b12bdff5e96f2855e2b6589c17feba5abdf4b292d3
+SHA512 (k8s.io_apiserver_@v_v0.36.2.zip) = 0a54d48144b7958f461bca35b40bd5d11a66423e1306a6a9990fbf15304308a286d70e6089d58ff6f4a1abdfd4af88287c2647f934c67c466abf05df755af9b4
+Size (k8s.io_apiserver_@v_v0.36.2.zip) = 2827669 bytes
 BLAKE2s (k8s.io_client-go_@v_v0.36.2.mod) = 275b818e1c013ecb9b5ba6a5e49e07a4509f7ecb063d7333ecd5704a3d2f1217
 SHA512 (k8s.io_client-go_@v_v0.36.2.mod) = acfe1e6813e732016e5531175f94f8f73a1dc9a8dcccab0ff5935766c82f4c9a82b6018715581dd3ca53e16ce08061708b3c02214a9d322216571509547f329d
 Size (k8s.io_client-go_@v_v0.36.2.mod) = 2258 bytes
