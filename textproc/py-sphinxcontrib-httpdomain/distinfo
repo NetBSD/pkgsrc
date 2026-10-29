@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/05/26 09:12:08 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/10/29 13:32:22 adam Exp $
 
-BLAKE2s (sphinxcontrib_httpdomain-2.0.0.tar.gz) = 24780d1f4b80d7487ea7b208373e6abc3174c4a3651852e16dc50ebe642c2d6e
-SHA512 (sphinxcontrib_httpdomain-2.0.0.tar.gz) = 3f02542bb1a705229bf517b2274ccba27d20bfc846453e8d52d28ddf59f6f3e18c66fd698ab7afec1b892632132bd39027cbac4bec9a62eb29b66680441094ff
-Size (sphinxcontrib_httpdomain-2.0.0.tar.gz) = 17155 bytes
+BLAKE2s (sphinxcontrib_httpdomain-2.2.1.tar.gz) = cebd937b6b1ccfc94467b6567bce7abff2db2f1603731e04a02c7b4e9ef382ad
+SHA512 (sphinxcontrib_httpdomain-2.2.1.tar.gz) = e2184d6d11cda22e9bb50850b065bdb28afc4dd67af5225fd8350dea0e6111f2a09b3d222f65f71fd38e34f4a59832472acaf833e362278accfdcb24f65cb7e6
+Size (sphinxcontrib_httpdomain-2.2.1.tar.gz) = 21783 bytes

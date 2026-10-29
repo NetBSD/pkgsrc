@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2026/05/26 09:12:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/10/29 13:32:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/sphinxcontrib/.DS_Store
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.py
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/autohttp/__init__.pyo
@@ -27,8 +28,14 @@ ${PYSITELIB}/sphinxcontrib/autohttp/tornado.pyo
 ${PYSITELIB}/sphinxcontrib/httpdomain/__init__.py
 ${PYSITELIB}/sphinxcontrib/httpdomain/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/httpdomain/__init__.pyo
-${PYSITELIB}/sphinxcontrib/locale/es_ES/LC_MESSAGES/httpdomain.mo
-${PYSITELIB}/sphinxcontrib/locale/es_ES/LC_MESSAGES/httpdomain.po
-${PYSITELIB}/sphinxcontrib/locale/fr_FR/LC_MESSAGES/httpdomain.mo
-${PYSITELIB}/sphinxcontrib/locale/fr_FR/LC_MESSAGES/httpdomain.po
-${PYSITELIB}/sphinxcontrib/locale/httpdomain.pot
+${PYSITELIB}/sphinxcontrib/httpdomain/_path_signature.py
+${PYSITELIB}/sphinxcontrib/httpdomain/_path_signature.pyc
+${PYSITELIB}/sphinxcontrib/httpdomain/_path_signature.pyo
+${PYSITELIB}/sphinxcontrib/httpdomain/locale/es_ES/LC_MESSAGES/httpdomain.mo
+${PYSITELIB}/sphinxcontrib/httpdomain/locale/es_ES/LC_MESSAGES/httpdomain.po
+${PYSITELIB}/sphinxcontrib/httpdomain/locale/fr_FR/LC_MESSAGES/httpdomain.mo
+${PYSITELIB}/sphinxcontrib/httpdomain/locale/fr_FR/LC_MESSAGES/httpdomain.po
+${PYSITELIB}/sphinxcontrib/httpdomain/locale/httpdomain.pot
+${PYSITELIB}/sphinxcontrib/httpdomain/websocket.py
+${PYSITELIB}/sphinxcontrib/httpdomain/websocket.pyc
+${PYSITELIB}/sphinxcontrib/httpdomain/websocket.pyo
