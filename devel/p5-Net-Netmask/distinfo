@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/08/18 08:15:20 wen Exp $
+$NetBSD: distinfo,v 1.15 2026/10/29 11:21:15 wen Exp $
 
-BLAKE2s (Net-Netmask-2.0002.tar.gz) = fc2430bd6efe73f65566afb707699fa6e6a3c18fc77e6b704afc599e31289295
-SHA512 (Net-Netmask-2.0002.tar.gz) = 60cd9de1cac95516515428eb7d1c883b5260333768c363b47a87bb404b13bac713746e7512ff1f52bf3e5c8344f0d38889bba44a2c84b8ddf36e969d63ea8373
-Size (Net-Netmask-2.0002.tar.gz) = 44672 bytes
+BLAKE2s (Net-Netmask-2.0003.tar.gz) = 233e87057567260f0e959b70741bb24d43dbc40f508b0bc50aa24ff3d93e1a1f
+SHA512 (Net-Netmask-2.0003.tar.gz) = 2ac22b0f5d97af4615deec0591d2ef3091d421b93224eb36e5c6f5ae291ebf95572453152b7e27d2663186a20cc130a6b3d1fa4438113f96864f1565ee038cb6
+Size (Net-Netmask-2.0003.tar.gz) = 43996 bytes
