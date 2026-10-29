@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/10/23 05:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/29 07:14:59 adam Exp $
 
-DISTNAME=	music21-noCorpus-10.5.1
+DISTNAME=	music21-noCorpus-10.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
@@ -19,9 +19,10 @@ DEPENDS+=	${PYPKGPREFIX}-jsonpickle>=0:../../textproc/py-jsonpickle
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-Levenshtein>=0:../../textproc/py-Levenshtein
 DEPENDS+=	${PYPKGPREFIX}-webcolors>=1.11:../../www/py-webcolors
+# extras
+DEPENDS+=	${PYPKGPREFIX}-Levenshtein>=0:../../textproc/py-Levenshtein
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
 
 # Some tests will fail because they depend on the score files that
 # are part of the full music21 distribution.
