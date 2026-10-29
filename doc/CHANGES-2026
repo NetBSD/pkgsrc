@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7454 2026/10/29 13:30:09 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7455 2026/10/29 13:34:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11151,3 +11151,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-findpython to 0.9.0 [adam 2026-10-29]
 	Updated textproc/py-jsonpointer to 3.6 [adam 2026-10-29]
 	Updated textproc/py-itemadapter to 0.14.0 [adam 2026-10-29]
+	Updated textproc/py-sphinxcontrib-httpdomain to 2.2.1 [adam 2026-10-29]
+	Updated textproc/py-sphinxcontrib-phpdomain to 0.15.3 [adam 2026-10-29]
