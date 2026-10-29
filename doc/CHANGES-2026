@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7449 2026/10/29 12:25:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7450 2026/10/29 12:30:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11143,3 +11143,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-notebook to 7.6.3 [adam 2026-10-29]
 	Updated devel/py-flit_core to 4.2.0 [adam 2026-10-29]
 	Updated devel/py-flit to 4.2.0 [adam 2026-10-29]
+	Updated security/py-asn1 to 0.6.5 [adam 2026-10-29]
+	Updated devel/py-cachebox to 6.2.9 [adam 2026-10-29]
