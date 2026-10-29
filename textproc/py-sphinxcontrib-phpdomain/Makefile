@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/10/16 19:44:22 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/29 13:34:15 adam Exp $
 
-DISTNAME=	sphinxcontrib_phpdomain-0.15.2
+DISTNAME=	sphinxcontrib_phpdomain-0.15.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-phpdomain/}
