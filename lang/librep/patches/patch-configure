@@ -1,7 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2026/10/19 23:51:13 gutteridge Exp $
+$NetBSD: patch-configure,v 1.3 2026/10/29 16:28:04 gutteridge Exp $
 
 Modernize C tests to fix builds with GCC >= 14.
 https://github.com/SawfishWM/librep/commit/48f557ab34d47a7a1fd9e8425542f720be40946e
+
+Account for loongarch64 and riscv stack direction.
+https://github.com/SawfishWM/librep/commit/e668e25fd994a76275d788e16f290931372773b5
+https://github.com/SawfishWM/librep/commit/52d64573cf4e3e6d92ef7ec2b72a73abdccd0389
 
 --- configure.orig	2017-08-25 20:05:31.000000000 +0000
 +++ configure
@@ -45,6 +49,15 @@ https://github.com/SawfishWM/librep/commit/48f557ab34d47a7a1fd9e8425542f720be409
  		FILE *f = fopen ("conftestval", "w");
  		if (!f) exit (1);
  		fprintf (f, "%d\n", sizeof (${with_value_type}));
+@@ -15101,7 +15105,7 @@ if test "${with_stack_direction}" = unknown; then
+ 
+ if test "${with_stack_direction}" = unknown; then
+   case ${host_cpu} in
+-    sparc*|i?86*|powerpc*|x86_64*|arm*|aarch64*|s390*|mips*|alpha*|ia64*)
++    sparc*|i?86*|powerpc*|x86_64*|arm*|aarch64*|s390*|mips*|alpha*|ia64*|loongarch64*|riscv*)
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: assuming downwards" >&5
+ $as_echo "assuming downwards" >&6; }
+       with_stack_direction="-1"
 @@ -15122,6 +15126,7 @@ else
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
