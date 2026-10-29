@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7434 2026/10/29 10:27:17 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7435 2026/10/29 10:43:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11123,3 +11123,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/py-music21 to 10.5.2 [adam 2026-10-29]
 	Updated lang/nodejs24 to 24.22.2 [adam 2026-10-29]
 	Updated lang/nodejs to 26.13.0 [adam 2026-10-29]
+	Updated www/p5-Dancer2 to 2.3.0 [wen 2026-10-29]
