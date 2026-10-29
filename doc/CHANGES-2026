@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7428 2026/10/29 05:58:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7429 2026/10/29 06:01:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11110,3 +11110,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tailscale to 1.104.4 [ktnb 2026-10-29]
 	Updated devel/gperftools to 2.19.2 [adam 2026-10-29]
 	Updated devel/appstream to 1.2.2 [adam 2026-10-29]
+	Updated devel/py-flakes to 4.1.0 [adam 2026-10-29]
+	Updated devel/py-flake8 to 7.5.0 [adam 2026-10-29]
