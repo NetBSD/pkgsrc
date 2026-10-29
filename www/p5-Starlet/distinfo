@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:30:15 nia Exp $
+$NetBSD: distinfo,v 1.15 2026/10/29 11:07:25 wen Exp $
 
-BLAKE2s (Starlet-0.31.tar.gz) = eac2b9b525e41163205110cb554150bc09dce923b4abd8dbbfc608dbf2b33337
-SHA512 (Starlet-0.31.tar.gz) = 855451ee69e379230d2476144fe5b44d0fef115e654d22bd697b3d75cc30aa53c179201d3bf980cc044b48081f7d2cfd56a956e5747d0e93e4468fd511945b7b
-Size (Starlet-0.31.tar.gz) = 111347 bytes
-SHA1 (patch-Makefile.PL) = ac9882a37254bcc4d1601862a0a645c3b98b388b
+BLAKE2s (Starlet-0.33.tar.gz) = 39d5535d3496a940f09ab0ce4ac958a0c0b5933762fc2920202c05dfd6253bb1
+SHA512 (Starlet-0.33.tar.gz) = 027dbe81b6dc8fbfe29d8d13acf850bc086aed11d6b7dec38a7157498ebd86ab095472a12cb959d7ae9002daaac503fbca9cba4616356d4f0a19ff65eb17f421
+Size (Starlet-0.33.tar.gz) = 114503 bytes
