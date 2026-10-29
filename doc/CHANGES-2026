@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7451 2026/10/29 12:37:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7452 2026/10/29 12:58:51 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11146,3 +11146,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-asn1 to 0.6.5 [adam 2026-10-29]
 	Updated devel/py-cachebox to 6.2.9 [adam 2026-10-29]
 	Updated misc/rozi to 0.0.36 [pin 2026-10-29]
+	Updated www/chromium to 156.0.8078.73 [kikadf 2026-10-29]
