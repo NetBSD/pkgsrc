@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/08/16 06:51:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/10/29 13:29:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,9 @@ ${PYSITELIB}/itemadapter/_imports.pyo
 ${PYSITELIB}/itemadapter/_json_schema.py
 ${PYSITELIB}/itemadapter/_json_schema.pyc
 ${PYSITELIB}/itemadapter/_json_schema.pyo
+${PYSITELIB}/itemadapter/_utils.py
+${PYSITELIB}/itemadapter/_utils.pyc
+${PYSITELIB}/itemadapter/_utils.pyo
 ${PYSITELIB}/itemadapter/adapter.py
 ${PYSITELIB}/itemadapter/adapter.pyc
 ${PYSITELIB}/itemadapter/adapter.pyo

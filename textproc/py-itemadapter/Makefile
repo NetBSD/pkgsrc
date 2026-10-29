@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/09 06:56:47 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/10/29 13:29:49 adam Exp $
 
-DISTNAME=	itemadapter-0.13.1
+DISTNAME=	itemadapter-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/itemadapter/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/scrapy/itemadapter
 COMMENT=	Wrapper providing a common interface for objects of different types
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
