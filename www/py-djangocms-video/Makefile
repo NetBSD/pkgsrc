@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/10/16 19:44:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/29 16:43:50 adam Exp $
 
-DISTNAME=	djangocms-video-3.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	djangocms_video-3.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-video/}
 
@@ -12,9 +11,9 @@ COMMENT=	Django CMS plugin that allow you to publish video content
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.7:../../www/py-django-cms
-DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.7:../../www/py-django-filer
-DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=1.0:../../www/py-djangocms-attributes-field
+DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.11:../../www/py-django-cms
+DEPENDS+=	${PYPKGPREFIX}-django-filer>=2.2:../../www/py-django-filer
+DEPENDS+=	${PYPKGPREFIX}-djangocms-attributes-field>=1:../../www/py-djangocms-attributes-field
 
 USE_LANGUAGES=	# none
 

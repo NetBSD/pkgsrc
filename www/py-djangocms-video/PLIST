@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 18:56:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/10/29 16:43:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -194,12 +194,25 @@ ${PYSITELIB}/djangocms_video/migrations/0010_videoplayer_parameters.pyo
 ${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.py
 ${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.pyc
 ${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.pyo
+${PYSITELIB}/djangocms_video/migrations/0012_alter_videoplayer_embed_link.py
+${PYSITELIB}/djangocms_video/migrations/0012_alter_videoplayer_embed_link.pyc
+${PYSITELIB}/djangocms_video/migrations/0012_alter_videoplayer_embed_link.pyo
+${PYSITELIB}/djangocms_video/migrations/0012_hlsstreamsource.py
+${PYSITELIB}/djangocms_video/migrations/0012_hlsstreamsource.pyc
+${PYSITELIB}/djangocms_video/migrations/0012_hlsstreamsource.pyo
+${PYSITELIB}/djangocms_video/migrations/0013_videoplayer_autoplay_videoplayer_show_controls.py
+${PYSITELIB}/djangocms_video/migrations/0013_videoplayer_autoplay_videoplayer_show_controls.pyc
+${PYSITELIB}/djangocms_video/migrations/0013_videoplayer_autoplay_videoplayer_show_controls.pyo
+${PYSITELIB}/djangocms_video/migrations/0014_merge_hls_and_vimeo.py
+${PYSITELIB}/djangocms_video/migrations/0014_merge_hls_and_vimeo.pyc
+${PYSITELIB}/djangocms_video/migrations/0014_merge_hls_and_vimeo.pyo
 ${PYSITELIB}/djangocms_video/migrations/__init__.py
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyo
 ${PYSITELIB}/djangocms_video/models.py
 ${PYSITELIB}/djangocms_video/models.pyc
 ${PYSITELIB}/djangocms_video/models.pyo
+${PYSITELIB}/djangocms_video/templates/djangocms_video/default/hls_stream_source.html
 ${PYSITELIB}/djangocms_video/templates/djangocms_video/default/source.html
 ${PYSITELIB}/djangocms_video/templates/djangocms_video/default/track.html
 ${PYSITELIB}/djangocms_video/templates/djangocms_video/default/video_player.html
