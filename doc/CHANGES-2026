@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7453 2026/10/29 13:23:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7454 2026/10/29 13:30:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11149,3 +11149,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chromium to 156.0.8078.73 [kikadf 2026-10-29]
 	Updated devel/py-dulwich to 1.2.20 [adam 2026-10-29]
 	Updated lang/py-findpython to 0.9.0 [adam 2026-10-29]
+	Updated textproc/py-jsonpointer to 3.6 [adam 2026-10-29]
+	Updated textproc/py-itemadapter to 0.14.0 [adam 2026-10-29]
