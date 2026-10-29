@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2026/05/14 16:42:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2026/10/29 08:42:23 plunky Exp $
 
-DISTNAME=	v${PKGVER}
-PKGNAME=	uacme-${PKGVER}
-PKGREVISION=	1
-PKGVER=		1.8.1
+DISTNAME=	uacme-1.8.1
+PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ndilieto/uacme/archive/refs/tags/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ndilieto/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/ndilieto/uacme
@@ -20,7 +19,6 @@ USE_LANGUAGES=		c
 USE_CC_FEATURES=	c11
 
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/uacme-${PKGVER}
 
 HOOKDIR=		libexec
 DOCDIR=			share/doc/uacme
@@ -51,7 +49,7 @@ MESSAGE_SUBST+=			UACME_CHALLENGE_PATH=${UACME_CHALLENGE_PATH}
 SUBST_CLASSES+=			confdir
 SUBST_STAGE.confdir=		pre-configure
 SUBST_MESSAGE.confdir=		Set CONFDIR default
-SUBST_FILES.confdir=		uacme.c
+SUBST_FILES.confdir=		uacme.c uacme.1.txt
 SUBST_VARS.confdir=		UACME_CONFDIR
 
 SUBST_CLASSES+=			challenge
