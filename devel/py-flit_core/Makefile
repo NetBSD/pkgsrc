@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/09/26 10:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/10/29 12:25:01 adam Exp $
 
-DISTNAME=	flit_core-4.1.0
+DISTNAME=	flit_core-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flit-core/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://flit.readthedocs.io/
 COMMENT=	Distribution-building parts of Flit
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
 PY_PATCHPLIST=	yes
