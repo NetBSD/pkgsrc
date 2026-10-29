@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7439 2026/10/29 11:13:31 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7440 2026/10/29 11:16:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11128,3 +11128,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated geography/py-ubx2 to 1.4.1 [gdt 2026-10-29]
 	Updated www/p5-Starlet to 0.33 [wen 2026-10-29]
 	Updated devel/p5-Mouse to 2.6.2 [wen 2026-10-29]
+	Updated devel/p5-Net-CIDR to 0.27 [wen 2026-10-29]
