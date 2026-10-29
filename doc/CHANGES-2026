@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7452 2026/10/29 12:58:51 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7453 2026/10/29 13:23:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11147,3 +11147,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachebox to 6.2.9 [adam 2026-10-29]
 	Updated misc/rozi to 0.0.36 [pin 2026-10-29]
 	Updated www/chromium to 156.0.8078.73 [kikadf 2026-10-29]
+	Updated devel/py-dulwich to 1.2.20 [adam 2026-10-29]
+	Updated lang/py-findpython to 0.9.0 [adam 2026-10-29]
