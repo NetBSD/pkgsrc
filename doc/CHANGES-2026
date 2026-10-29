@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7448 2026/10/29 12:19:56 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7449 2026/10/29 12:25:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11141,3 +11141,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-pdf to 6.21.4 [adam 2026-10-29]
 	Updated converters/py-fastbencode to 0.3.12 [adam 2026-10-29]
 	Updated www/py-notebook to 7.6.3 [adam 2026-10-29]
+	Updated devel/py-flit_core to 4.2.0 [adam 2026-10-29]
+	Updated devel/py-flit to 4.2.0 [adam 2026-10-29]
