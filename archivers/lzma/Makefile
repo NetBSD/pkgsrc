@@ -1,27 +1,31 @@
-# $NetBSD: Makefile,v 1.10 2026/10/24 19:27:33 drixter Exp $
-#
+# $NetBSD: Makefile,v 1.11 2026/10/29 16:21:39 adam Exp $
 
-DISTNAME=		lzma2605
-PKGNAME=		lzma-26.05
-CATEGORIES=		archivers
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sevenzip/}
-EXTRACT_SUFX=		.7z
+DISTNAME=	lzma2605
+PKGNAME=	lzma-26.05
+CATEGORIES=	archivers
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sevenzip/}
+EXTRACT_SUFX=	.7z
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.7-zip.org/sdk.html
-COMMENT=		LZMA compression utility from 7zip
-LICENSE=		public-domain
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.7-zip.org/sdk.html
+COMMENT=	LZMA compression utility from 7zip
+LICENSE=	public-domain
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 
-WRKSRC=			${WRKDIR}/CPP/7zip/Bundles/LzmaCon
-MAKE_FILE=		makefile.gcc
+WRKSRC=		${WRKDIR}/CPP/7zip/Bundles/LzmaCon
+MAKE_FILE=	makefile.gcc
 
-MAKE_FLAGS+=		LIB2="-lpthread"
-MAKE_FLAGS+=		LDFLAGS="-Wl,-z,relro"
+MAKE_FLAGS+=	LIB2="-lpthread"
 
-CONFLICTS+=		lzma-utils-[0-9]* xz-utils-[0-9]*
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+MAKE_FLAGS+=	LDFLAGS="-Wl,-z,relro"
+.endif
+
+CONFLICTS+=	lzma-utils-[0-9]* xz-utils-[0-9]*
 
 INSTALLATION_DIRS=	bin
 
