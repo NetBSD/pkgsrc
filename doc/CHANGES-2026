@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7450 2026/10/29 12:30:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7451 2026/10/29 12:37:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11145,3 +11145,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-flit to 4.2.0 [adam 2026-10-29]
 	Updated security/py-asn1 to 0.6.5 [adam 2026-10-29]
 	Updated devel/py-cachebox to 6.2.9 [adam 2026-10-29]
+	Updated misc/rozi to 0.0.36 [pin 2026-10-29]
