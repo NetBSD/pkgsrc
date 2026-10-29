@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2026/08/18 18:26:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2026/10/29 11:30:19 nros Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -3298,7 +3298,7 @@ ${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginCon
 ${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfigVersionImpl.cmake
 ${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-release.cmake
 ${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargetsPrecheck.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargetsPrecheck.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfigVersion.cmake
