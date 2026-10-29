@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7461 2026/10/29 19:47:28 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7462 2026/10/29 20:59:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11162,3 +11162,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-gcovr to 8.8 [adam 2026-10-29]
 	Updated www/py-djangocms-video to 3.2.0 [adam 2026-10-29]
 	Updated net/routinator to 0.15.3 [drixter 2026-10-29]
+	Updated sysutils/lsof to 4.91nb11 [taca 2026-10-29]
