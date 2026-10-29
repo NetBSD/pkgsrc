@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2025/11/03 14:33:59 adam Exp $
-${PYSITELIB}/psutil/_psutil_osx.abi3.so
+@comment $NetBSD: PLIST.Darwin,v 1.3 2026/10/29 11:58:08 adam Exp $
+${PYSITELIB}/psutil/_psutil_osx.so
