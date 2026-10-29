@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7445 2026/10/29 11:48:47 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7446 2026/10/29 12:09:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11135,3 +11135,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-pytz to 2026.6 [adam 2026-10-29]
 	Updated devel/py-pipx to 1.18.9 [adam 2026-10-29]
 	Updated devel/p5-Future-IO to 0.23 [wen 2026-10-29]
+	Updated lang/py-executing to 2.3.0 [adam 2026-10-29]
+	Updated www/py-httplib2 to 0.32.1 [adam 2026-10-29]
