@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7456 2026/10/29 13:47:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7457 2026/10/29 15:00:25 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11155,3 +11155,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinxcontrib-phpdomain to 0.15.3 [adam 2026-10-29]
 	Updated devel/py-evalidate to 2.1.7 [adam 2026-10-29]
 	Updated lang/py-python-discovery to 1.6.7 [adam 2026-10-29]
+	Added net/cloudflare-speed-cli version 1.0.11 [drixter 2026-10-29]
