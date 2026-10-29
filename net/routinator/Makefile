@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.15 2026/06/08 17:18:29 he Exp $
+# $NetBSD: Makefile,v 1.16 2026/10/29 19:47:04 drixter Exp $
 
-VER=		0.15.2
+VER=		0.15.3
 DISTNAME=	routinator-${VER}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
 GITHUB_TAG=	v${VER}
 GITHUB_PROJECT=	routinator
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/NLnetLabs/routinator
 COMMENT=	Validate RPKI ROA against routing announcements
 LICENSE=	modified-bsd
 
 # 0.13.0 requires minimum this rust version:
 RUST_REQ=		1.74.0
-
-# This can reportedly go away in 0.14.0:
-ALLOW_NETWORK_ACCESS=	1
 
 .include "cargo-depends.mk"
 
@@ -27,19 +24,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-# toolchain/54192, induces rtld issues
-.if ${OPSYS} == "NetBSD"
-MAKE_JOBS_SAFE=	no
-.endif
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PREFIX}/bin/cargo \
-		build --locked --frozen \
-		-j ${_MAKE_JOBS_N}
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/debug/routinator \
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/routinator \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/routinator.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

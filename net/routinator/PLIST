@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/09 18:53:05 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/29 19:47:04 drixter Exp $
 bin/routinator
 man/man1/routinator.1
 share/doc/routinator/README.md
