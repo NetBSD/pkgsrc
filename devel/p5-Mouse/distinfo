@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2024/08/18 08:12:44 wen Exp $
+$NetBSD: distinfo,v 1.57 2026/10/29 11:12:34 wen Exp $
 
-BLAKE2s (Mouse-v2.5.11.tar.gz) = e52ac3fc9982e2cca125e3c32f4689a0994f445f3ef6325d1b3a02e392e7ed47
-SHA512 (Mouse-v2.5.11.tar.gz) = 3c4c09b637711f438bbed7a1de0e074110a5e47573c78e52a545b180733bd892a9d90ec39d538c67a100348638aad1a3a0a7647bdb15e9d88a700aaa2d3ad93d
-Size (Mouse-v2.5.11.tar.gz) = 220539 bytes
+BLAKE2s (Mouse-v2.6.2.tar.gz) = 6a7607c6a1dd8e246364df4d9cccecd373ba9e6754dd4832ff28b4e5304e0592
+SHA512 (Mouse-v2.6.2.tar.gz) = e28f8e2ce6275ed3ab1e5ee0ee436d6cc3888ef7f752c4aa3d61b6ff97d3486dccbd00f1b5e2b6ac9d16bc8148e7ef27c87097684f68773ce9789878e994065b
+Size (Mouse-v2.6.2.tar.gz) = 220423 bytes
