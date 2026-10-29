@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/01/14 19:03:29 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/10/29 16:38:13 adam Exp $
 
-BLAKE2s (gcovr-8.6.tar.gz) = 4b6f256a1f06f261851319b034575ebb55538a177a0176eb5a38a7efafc28d6c
-SHA512 (gcovr-8.6.tar.gz) = 057f7eebf2c1884fcdfa1b7032b751a758dcfe0095e5c9cd964e77fd34a05681bd4a6b4ed813c79b5cf5edffb36dbaa0c700e1650630cd81ca2ba89a11801152
-Size (gcovr-8.6.tar.gz) = 199997 bytes
+BLAKE2s (gcovr-8.8.tar.gz) = 5748822d36944f8c6f8a9c6c0580a1e1cd1656190af556fc999cdcdce1d06147
+SHA512 (gcovr-8.8.tar.gz) = c090023ce94d4eebe7466f37a62e1f58490475b6de3b3129024d84b5406c94307c79b8cd0cfe8839bedf521a097f1a5c89e161774866986dfd8d057c1d28a21d
+Size (gcovr-8.8.tar.gz) = 808751 bytes
