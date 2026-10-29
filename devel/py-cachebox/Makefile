@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/10/22 07:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/29 12:29:45 adam Exp $
 
-DISTNAME=	cachebox-6.2.8
+DISTNAME=	cachebox-6.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachebox/}
