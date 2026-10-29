@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/05 06:01:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/10/29 13:23:14 adam Exp $
 bin/findpython-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -56,6 +56,7 @@ ${PYSITELIB}/findpython/providers/uv.pyo
 ${PYSITELIB}/findpython/providers/winreg.py
 ${PYSITELIB}/findpython/providers/winreg.pyc
 ${PYSITELIB}/findpython/providers/winreg.pyo
+${PYSITELIB}/findpython/py.typed
 ${PYSITELIB}/findpython/python.py
 ${PYSITELIB}/findpython/python.pyc
 ${PYSITELIB}/findpython/python.pyo
