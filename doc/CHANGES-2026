@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7444 2026/10/29 11:47:43 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7445 2026/10/29 11:48:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11134,3 +11134,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Overload-FileCheck to 0.015 [wen 2026-10-29]
 	Updated time/py-pytz to 2026.6 [adam 2026-10-29]
 	Updated devel/py-pipx to 1.18.9 [adam 2026-10-29]
+	Updated devel/p5-Future-IO to 0.23 [wen 2026-10-29]
