@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2026/10/16 17:55:11 adam Exp $
+# $NetBSD: Makefile,v 1.62 2026/10/29 16:10:10 adam Exp $
 
-DISTNAME=	maturin-1.15.0
+DISTNAME=	maturin-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
@@ -10,8 +10,10 @@ HOMEPAGE=	https://github.com/PyO3/maturin
 COMMENT=	Build and publish crates with pyo3, rust-cpython and cffi bindings
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.11.1:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.11.0:../../devel/py-setuptools-rust
+
+RUST_REQ=	1.89
 
 PY_RENAME_BINARIES=	maturin
 
