@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/10/09 03:49:02 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/10/29 13:27:31 adam Exp $
 
-BLAKE2s (jsonpointer-3.2.0.tar.gz) = ef6faa11f7781ce3d4d50ab4d5233d8aa47c494f79d7bdc1eee6080f605c34ff
-SHA512 (jsonpointer-3.2.0.tar.gz) = b07a52c387f12e93285d86889de0b887b144ff91f700d53cd0e43bd7cbdb9c86d2c9cc732d982ff9460b449214231ed1ded2ab52bc184accd7f3a444f95cd875
-Size (jsonpointer-3.2.0.tar.gz) = 11062 bytes
+BLAKE2s (jsonpointer-3.6.tar.gz) = 49c01621edecd489bdf2ef0e2bfeb4bfea5d1af37f9d33a5b8c2f78cca274adc
+SHA512 (jsonpointer-3.6.tar.gz) = 2881495480bcff06c56592b5af9fe7960e9b6e5b616064a94ff7ce7eb517691d48bf45854dbe947dce1eaddc937515cc7a65285a0eab9bad583ed8f81470a244
+Size (jsonpointer-3.6.tar.gz) = 14352 bytes

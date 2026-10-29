@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/10/09 03:49:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/29 13:27:31 adam Exp $
 
-DISTNAME=	jsonpointer-3.2.0
+DISTNAME=	jsonpointer-3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpointer/}
