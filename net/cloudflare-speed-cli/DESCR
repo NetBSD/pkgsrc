@@ -1,0 +1,11 @@
+CLI tool that displays network speed test results from
+Cloudflare's speed test service in a TUI interface.
+
+Features:
+ - Speed Tests: Measures download/upload throughput,
+   idle latency, and loaded latency
+ - Interactive TUI: Real-time charts and statistics
+ - History: View and manage past test results
+ - Export: Save results as JSON
+ - Text/JSON Modes: Headless operation for scripting
+ - Interface Binding: Bind to specific network interface or source IP

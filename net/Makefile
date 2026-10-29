@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1677 2026/10/15 02:57:05 taca Exp $
+# $NetBSD: Makefile,v 1.1678 2026/10/29 14:59:52 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -78,6 +78,7 @@ SUBDIR+=	cisco-mibs
 SUBDIR+=	citrix_ica
 SUBDIR+=	clisp-rawsock
 SUBDIR+=	clive
+SUBDIR+=	cloudflare-speed-cli
 SUBDIR+=	cmu-dhcpd
 SUBDIR+=	cntlm
 SUBDIR+=	coda
