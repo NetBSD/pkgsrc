@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.34 2026/07/16 19:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/10/29 11:26:38 wen Exp $
 
-DISTNAME=	Object-Realize-Later-0.21
+DISTNAME=	Object-Realize-Later-4.00
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Object-Realize-Later
 COMMENT=	Delayed creation of objects
 LICENSE=	${PERL5_LICENSE}
 
-#DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 TOOL_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=	auto/Object/Realize/Later/.packlist

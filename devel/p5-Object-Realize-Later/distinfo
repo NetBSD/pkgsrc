@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:17:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2026/10/29 11:26:38 wen Exp $
 
-BLAKE2s (Object-Realize-Later-0.21.tar.gz) = 2becd2a73fa91836856a4e3b5006d660365085b01d8c1ac83be767e5936565f5
-SHA512 (Object-Realize-Later-0.21.tar.gz) = 006b54dc97f4464d434f4dd423546f078eb815c4eecba8cf54e292d4b98b679b6c8e8011aab808582553b245ee25013583b8d430762de6e30c3136a87858c21d
-Size (Object-Realize-Later-0.21.tar.gz) = 12375 bytes
+BLAKE2s (Object-Realize-Later-4.00.tar.gz) = a1ebb9f8b95c258886a595e25ab976480b81e7b1df2157c45e2642b4f085a165
+SHA512 (Object-Realize-Later-4.00.tar.gz) = 08ddd024e65f211fde72a5d1fe65c58523875d1a53cb7867155c137dc3c225521c431bff3b234abe35839fd0b6366420f92967361287a5b9dd3ae3ae8a08e9ed
+Size (Object-Realize-Later-4.00.tar.gz) = 12991 bytes
