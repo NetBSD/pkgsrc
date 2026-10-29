@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7426 2026/10/28 21:58:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7427 2026/10/29 00:52:52 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11107,3 +11107,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/gatus to 5.38.0 [drixter 2026-10-28]
 	Updated www/p5-HTTP-Body to 1.24 [wiz 2026-10-28]
 	Updated mail/p5-MIME-tools to 5.522 [wiz 2026-10-28]
+	Updated net/tailscale to 1.104.4 [ktnb 2026-10-29]
