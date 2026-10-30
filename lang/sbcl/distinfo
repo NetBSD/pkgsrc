@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.94 2026/10/04 17:18:39 ktnb Exp $
+$NetBSD: distinfo,v 1.95 2026/10/30 20:13:37 ktnb Exp $
 
-BLAKE2s (sbcl-2.6.9-source.tar.bz2) = 7cb2ff13db6388cbefd96ec95bd3a0258ad303fd723308f52d777b1e0e17e33a
-SHA512 (sbcl-2.6.9-source.tar.bz2) = 58ae3edc423a79091dc09f7d851e7e84ceb5fd9f0207d7cc843fa44b04957acc38b91f722386051433486b73900c2d622fd2721c115103744c7850590770e1dd
-Size (sbcl-2.6.9-source.tar.bz2) = 8760242 bytes
-SHA1 (patch-ab) = b272bee6fc39ede638cbf71106150044a2977596
+BLAKE2s (sbcl-2.6.10-source.tar.bz2) = 9f3accdb0d636b7846e01644dd6fa30739ae1c400ef012fa5d347f6f356e8b11
+SHA512 (sbcl-2.6.10-source.tar.bz2) = 5f42e2a1eb143861e4b7ad3a963002125c877fc868c131d53783686d753d806f58cd7471d91857350baab3081db52de45c58a0fd8c78bafc41d4db87d7b12e94
+Size (sbcl-2.6.10-source.tar.bz2) = 9109639 bytes
+SHA1 (patch-ab) = 198714e6fae1a734f4c3c96555fb0fe0342ed916
 SHA1 (patch-clean.sh) = 8dd795727c2e2cba2c4b5ca8cc4972c89eb6ecaa
-SHA1 (patch-make-config.sh) = 83fff8df71f8722ba372cb6351b20472fe5e36cc
+SHA1 (patch-make-config.sh) = da9ddca8d1ff64ae0abc01df6f26087517eed793
 SHA1 (patch-make-genesis-2.sh) = 5d61f2662795c93aabfaa18ef686725d2ed9384a
 SHA1 (patch-make-host-1.sh) = 7ecb23bf3cd4ee091a279503668a539a533b1196
 SHA1 (patch-make-host-2.sh) = c0ac2f16a670a6db2ff69b863d1f990f7ba0bef0

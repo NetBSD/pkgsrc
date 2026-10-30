@@ -1,8 +1,8 @@
-$NetBSD: patch-make-config.sh,v 1.2 2026/07/30 12:03:59 ktnb Exp $
+$NetBSD: patch-make-config.sh,v 1.3 2026/10/30 20:13:37 ktnb Exp $
 
 Exclude sb-simd module from build, it depends on the host features.
 
---- make-config.sh.orig	2026-07-28 08:09:25.000000000 +0000
+--- make-config.sh.orig	2026-10-29 13:18:01.000000000 +0000
 +++ make-config.sh
 @@ -553,12 +553,8 @@ echo "(lambda (features) (set-difference (union featur
  echo ';;;; See make-config.sh.' >> $ltf

@@ -1,21 +1,21 @@
-$NetBSD: patch-ab,v 1.8 2020/08/10 23:18:52 rjs Exp $
+$NetBSD: patch-ab,v 1.9 2026/10/30 20:13:37 ktnb Exp $
 
 Honor PREFIX.
 
---- doc/sbcl.1.orig	2020-07-30 19:30:02.000000000 +0000
+--- doc/sbcl.1.orig	2026-10-29 13:18:01.000000000 +0000
 +++ doc/sbcl.1
-@@ -423,8 +423,8 @@ This variable controls where files like 
- add-on "contrib" systems are searched for. If it is not set, then sbcl
- looks in \fB../lib/sbcl/\fR relative to the location of the executable,
- or in the current directory. If your executable is in the default
--location \fB/usr/local/bin/\fR then it will look in
+@@ -431,8 +431,8 @@ of the executable. For example, if your executable is 
+ this, SBCL looks in the current directory, the directory of the
+ executable, and finally in \fB../lib/sbcl/\fR relative to the location
+ of the executable. For example, if your executable is in the default
+-location \fB/usr/local/bin/\fR, then this last rule will look in
 -\fB/usr/local/lib/sbcl/\fR.
-+location \fB/usr/@PREFIX@/bin/\fR then it will look in
-+\fB/usr/@PREFIX@/lib/sbcl/\fR.
++location \fB@PREFIX@/bin/\fR, then this last rule will look in
++\fB@PREFIX@/lib/sbcl/\fR.
  
  .SH FILES
  
-@@ -457,7 +457,7 @@ been installed, the command
+@@ -471,7 +471,7 @@ installation it may also be available in HTML and PDF 
  should give you access to the complete manual. Depending on your
  installation it may also be available in HTML and PDF formats in \fIe.g.\fR
  .IP
