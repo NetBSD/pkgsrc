@@ -1,3 +1,13 @@
-@comment $NetBSD: PLIST.x86_64,v 1.4 2026/10/26 06:00:20 wiz Exp $
+@comment $NetBSD: PLIST.x86_64,v 1.5 2026/10/30 18:49:36 adam Exp $
+${PYSITELIB}/Crypto/Cipher/_Salsa20_avx2_bmi2.so
+${PYSITELIB}/Crypto/Cipher/_chacha20_avx2_bmi2.so
 ${PYSITELIB}/Crypto/Cipher/_raw_aesni.so
+${PYSITELIB}/Crypto/Hash/_SHA224_shani.so
+${PYSITELIB}/Crypto/Hash/_SHA256_shani.so
 ${PYSITELIB}/Crypto/Hash/_ghash_clmul.so
+${PYSITELIB}/Crypto/Hash/_k12_avx2_bmi2.so
+${PYSITELIB}/Crypto/Hash/_keccak_avx2_bmi2.so
+${PYSITELIB}/Crypto/Math/_nat_bmi2_adx.so
+${PYSITELIB}/Crypto/PublicKey/_ec_nat_bmi2_adx.so
+${PYSITELIB}/Crypto/PublicKey/_mldsa_avx2_bmi2.so
+${PYSITELIB}/Crypto/PublicKey/_mlkem_avx2_bmi2.so

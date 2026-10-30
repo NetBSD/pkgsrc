@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.36 2026/10/27 11:57:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2026/10/30 18:49:36 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mldsa-native/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mlkem-native/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyo
@@ -40,12 +47,10 @@ ${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.py
 ${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.pyc
 ${PYSITELIB}/Crypto/Cipher/_EKSBlowfish.pyo
 ${PYSITELIB}/Crypto/Cipher/_Salsa20.so
-${PYSITELIB}/Crypto/Cipher/_Salsa20_avx2_bmi2.so
 ${PYSITELIB}/Crypto/Cipher/__init__.py
 ${PYSITELIB}/Crypto/Cipher/__init__.pyc
 ${PYSITELIB}/Crypto/Cipher/__init__.pyo
 ${PYSITELIB}/Crypto/Cipher/_chacha20.so
-${PYSITELIB}/Crypto/Cipher/_chacha20_avx2_bmi2.so
 ${PYSITELIB}/Crypto/Cipher/_mode_cbc.py
 ${PYSITELIB}/Crypto/Cipher/_mode_cbc.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_cbc.pyo
@@ -203,9 +208,7 @@ ${PYSITELIB}/Crypto/Hash/_MD5.so
 ${PYSITELIB}/Crypto/Hash/_RIPEMD160.so
 ${PYSITELIB}/Crypto/Hash/_SHA1.so
 ${PYSITELIB}/Crypto/Hash/_SHA224.so
-${PYSITELIB}/Crypto/Hash/_SHA224_shani.so
 ${PYSITELIB}/Crypto/Hash/_SHA256.so
-${PYSITELIB}/Crypto/Hash/_SHA256_shani.so
 ${PYSITELIB}/Crypto/Hash/_SHA384.so
 ${PYSITELIB}/Crypto/Hash/_SHA512.so
 ${PYSITELIB}/Crypto/Hash/__init__.py
@@ -213,9 +216,7 @@ ${PYSITELIB}/Crypto/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.pyo
 ${PYSITELIB}/Crypto/Hash/_ghash_portable.so
 ${PYSITELIB}/Crypto/Hash/_k12.so
-${PYSITELIB}/Crypto/Hash/_k12_avx2_bmi2.so
 ${PYSITELIB}/Crypto/Hash/_keccak.so
-${PYSITELIB}/Crypto/Hash/_keccak_avx2_bmi2.so
 ${PYSITELIB}/Crypto/Hash/_poly1305.so
 ${PYSITELIB}/Crypto/Hash/cSHAKE128.py
 ${PYSITELIB}/Crypto/Hash/cSHAKE128.pyc
@@ -257,7 +258,6 @@ ${PYSITELIB}/Crypto/Math/__init__.py
 ${PYSITELIB}/Crypto/Math/__init__.pyc
 ${PYSITELIB}/Crypto/Math/__init__.pyo
 ${PYSITELIB}/Crypto/Math/_nat.so
-${PYSITELIB}/Crypto/Math/_nat_bmi2_adx.so
 ${PYSITELIB}/Crypto/Protocol/DH.py
 ${PYSITELIB}/Crypto/Protocol/DH.pyc
 ${PYSITELIB}/Crypto/Protocol/DH.pyo
@@ -306,15 +306,12 @@ ${PYSITELIB}/Crypto/PublicKey/_ec_lib.py
 ${PYSITELIB}/Crypto/PublicKey/_ec_lib.pyc
 ${PYSITELIB}/Crypto/PublicKey/_ec_lib.pyo
 ${PYSITELIB}/Crypto/PublicKey/_ec_nat.so
-${PYSITELIB}/Crypto/PublicKey/_ec_nat_bmi2_adx.so
 ${PYSITELIB}/Crypto/PublicKey/_ed25519.so
 ${PYSITELIB}/Crypto/PublicKey/_edwards.py
 ${PYSITELIB}/Crypto/PublicKey/_edwards.pyc
 ${PYSITELIB}/Crypto/PublicKey/_edwards.pyo
 ${PYSITELIB}/Crypto/PublicKey/_mldsa.so
-${PYSITELIB}/Crypto/PublicKey/_mldsa_avx2_bmi2.so
 ${PYSITELIB}/Crypto/PublicKey/_mlkem.so
-${PYSITELIB}/Crypto/PublicKey/_mlkem_avx2_bmi2.so
 ${PYSITELIB}/Crypto/PublicKey/_montgomery.py
 ${PYSITELIB}/Crypto/PublicKey/_montgomery.pyc
 ${PYSITELIB}/Crypto/PublicKey/_montgomery.pyo
@@ -732,10 +729,3 @@ ${PYSITELIB}/Crypto/__init__.py
 ${PYSITELIB}/Crypto/__init__.pyc
 ${PYSITELIB}/Crypto/__init__.pyo
 ${PYSITELIB}/Crypto/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mldsa-native/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mlkem-native/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
