@@ -1,6 +1,7 @@
-$NetBSD: patch-src_sockets.c,v 1.1 2026/10/19 23:09:37 gutteridge Exp $
+$NetBSD: patch-src_sockets.c,v 1.2 2026/10/30 01:18:02 gutteridge Exp $
 
 Include proper header for select(2).
+https://github.com/SawfishWM/librep/pull/21
 
 --- src/sockets.c.orig	2017-08-25 19:59:05.000000000 +0000
 +++ src/sockets.c
