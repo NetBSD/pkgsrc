@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2026/10/30 21:34:16 agc Exp $
-bin/mldsa
-man/man1/mldsa.1
+@comment $NetBSD: PLIST,v 1.4 2026/10/30 21:34:16 agc Exp $
+include/mldsa.h
+lib/libmldsa.la
+man/man3/libmldsa.3
+@pkgdir man/man3
+@pkgdir man/man1
+@pkgdir bin
