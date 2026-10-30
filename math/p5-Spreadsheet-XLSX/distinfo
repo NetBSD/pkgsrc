@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/05/27 08:08:10 wen Exp $
+$NetBSD: distinfo,v 1.10 2026/10/30 00:36:26 wiz Exp $
 
-BLAKE2s (Spreadsheet-XLSX-0.18.tar.gz) = 3b0613201f863cde72ac469694d6e6f07b0eac797d3ed3aed12387781e013872
-SHA512 (Spreadsheet-XLSX-0.18.tar.gz) = 46dffedce89147407fe55ccb65cf99ac5d5e06eb8d988b7bf3f7a9cf43bec9d96cec1195ef6b7f6ae40c151d31175ded2d959298f3a12f0e4ac1284669515eae
-Size (Spreadsheet-XLSX-0.18.tar.gz) = 80239 bytes
+BLAKE2s (Spreadsheet-XLSX-0.19.tar.gz) = 45077e7b26fcfb351b2d141f369b868cdb7b73900e95b42edb475275ba9f75ac
+SHA512 (Spreadsheet-XLSX-0.19.tar.gz) = add358546006315cb4d25aa842727b3dc4dfdf5cf10ca51fa807adcd1a8a4ec7c445c2aca6d03eba23af0ad7cb860fcf8d16b8f0cc17d78009026f4f59890f52
+Size (Spreadsheet-XLSX-0.19.tar.gz) = 84021 bytes
