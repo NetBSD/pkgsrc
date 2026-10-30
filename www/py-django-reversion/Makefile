@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2026/10/24 10:03:13 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/10/30 00:02:55 wiz Exp $
 
-DISTNAME=	django_reversion-6.4.0
+DISTNAME=	django_reversion-6.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
-# https://github.com/etianen/django-reversion/issues/1001
+# https://github.com/etianen/django-reversion/issues/1005
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../lang/python/wheel.mk"
