@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/05/10 06:26:14 fox Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/10/30 08:21:41 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -383,6 +383,7 @@ share/din/factory/list-audio.help.tcl
 share/din/factory/list-patches.help.tcl
 share/din/factory/load-patch.help.tcl
 share/din/factory/load-scale.help.tcl
+share/din/factory/log
 share/din/factory/make-interval-note-vars.tcl
 share/din/factory/microtonal-keyboard-waveform.crv
 share/din/factory/microtonal-keyboard-waveform.ed
@@ -412,6 +413,7 @@ share/din/factory/num-octaves.help.tcl
 share/din/factory/octave-shift-patterns.lib
 share/din/factory/octave-shift.crv
 share/din/factory/octave-shift.ed
+share/din/factory/overtone.tuning
 share/din/factory/p_Circler
 share/din/factory/p_Countries
 share/din/factory/p_Fractaliser
