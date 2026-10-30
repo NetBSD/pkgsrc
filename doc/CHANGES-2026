@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7482 2026/10/30 21:38:42 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7483 2026/10/30 22:11:15 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11192,3 +11192,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libmldsa to 20261029 [agc 2026-10-30]
 	Updated security/mldsa to 20261029 [agc 2026-10-30]
 	Added net/ndp-proxy-go version 1.1.1 [drixter 2026-10-30]
+	Updated textproc/rumdl to 0.3.2 [drixter 2026-10-30]
