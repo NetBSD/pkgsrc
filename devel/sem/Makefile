@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/10/24 17:12:48 pin Exp $
+# $NetBSD: Makefile,v 1.12 2026/10/30 11:10:35 pin Exp $
 
-DISTNAME=	sem-0.28.1
+DISTNAME=	sem-0.29.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ataraxy-Labs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +14,9 @@ USE_TOOLS+=	pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/crates/sem-cli
 
-#RUST_REQ=	1.100.0-beta.5
+#RUST_REQ=	1.100.0-beta.7
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.100.0-beta.5 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.7 on amd64
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 

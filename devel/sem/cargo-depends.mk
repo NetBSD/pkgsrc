@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/10/24 17:12:48 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/10/30 11:10:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -360,7 +360,7 @@ CARGO_CRATE_DEPENDS+=	wasmparser-0.244.0
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.98
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
 CARGO_CRATE_DEPENDS+=	webpki-roots-0.26.11
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.7
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.10
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.11
 CARGO_CRATE_DEPENDS+=	windows-core-0.62.2
 CARGO_CRATE_DEPENDS+=	windows-implement-0.60.2

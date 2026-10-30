@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/10/24 17:12:48 pin Exp $
+$NetBSD: distinfo,v 1.12 2026/10/30 11:10:35 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -696,9 +696,9 @@ Size (schemars_derive-1.2.1.crate) = 31319 bytes
 BLAKE2s (scopeguard-1.2.0.crate) = 4daf97de7fabaf7fe5ba6000f7132a46cc0bab2a297127580d9ac127d0a8fcec
 SHA512 (scopeguard-1.2.0.crate) = 6247719a15fe1e4e2d179127b9a934bd2f99367724f41175ed9522f58824b6bc69b35002eae66b35880375ff61d77ac43ddaa78cbde7160a35183a1da32d3fbb
 Size (scopeguard-1.2.0.crate) = 11619 bytes
-BLAKE2s (sem-0.28.1.tar.gz) = c90bcfc357ede742376b5f72f277084dd1f027a82a738e2b1e6d98cb04ad8764
-SHA512 (sem-0.28.1.tar.gz) = c0bd7a2f8708c6809239d146671b8bd810dc3ba816747ebfb963b0b5020ad6c8b6f10b8bc04b8aaa1736e1167d3227a46d8ceb99f4ccda45e8d612d31048e1f7
-Size (sem-0.28.1.tar.gz) = 2770397 bytes
+BLAKE2s (sem-0.29.0.tar.gz) = fa1cad40a58fdfa1a5a1e5207e4c760e21d1a3f73afba5eef3384da2ab2d49a5
+SHA512 (sem-0.29.0.tar.gz) = 32f6c84575beecc73e8404d616bdf8ac93e2321ddbb5af9412e7e9eacac574a7a85bc5ed528fc83c7ee9b26b7f7981f91fd93a46cc93b3eb5c8c2d921a63dd02
+Size (sem-0.29.0.tar.gz) = 2817314 bytes
 BLAKE2s (semver-1.0.28.crate) = cc54fd8b7e1ad8e773e58137625a19c3ca7c46fec285a7eec1685230a1e9b88f
 SHA512 (semver-1.0.28.crate) = bb44373e60fccb83bc95e4277ea0abdd756a3f77b3334cf6d6b5fceac086910661ab94eb326cdc8fefce0c09220933bdf03bfd142c1594a92c9c1e4e931114b7
 Size (semver-1.0.28.crate) = 33064 bytes
@@ -1083,9 +1083,9 @@ Size (web-time-1.1.0.crate) = 18026 bytes
 BLAKE2s (webpki-roots-0.26.11.crate) = 92fd4fbe06b643caccdfafb39b6d5b64b2cd0f58295ac4ec31aa920d5285b04d
 SHA512 (webpki-roots-0.26.11.crate) = c567d8167d0f61ea52667e5afc5fa002cd173b69b3392463abaa82a68d38ed2872f9b596fa8a5cf82d891a1f75b5cc0fceba623a56b1f1ad2525045c0c94b4a4
 Size (webpki-roots-0.26.11.crate) = 15557 bytes
-BLAKE2s (webpki-roots-1.0.7.crate) = f6603685024887be899d0cf47895f598200877af69ac4282e6ef6722e101d5a4
-SHA512 (webpki-roots-1.0.7.crate) = 34fd7b56a9f831ffb5c59e63e2d14983316092bdbaa94bbf41aff2660975e42cfc7d13cd879f9dc5b1636d7628f0075e98a6740b9235546934d28cd86d8843a6
-Size (webpki-roots-1.0.7.crate) = 213706 bytes
+BLAKE2s (webpki-roots-1.0.10.crate) = f337149f2878c45343438984d80bf67eab56ac8c9fca7af3ca3c138b65d0791d
+SHA512 (webpki-roots-1.0.10.crate) = aee28de146157169c036ef180bf83529303f83f90998021932f830334190cadc46afd53a9d91dba1520fb05152ac1146fce650ed164ea1138768cd7d286b4882
+Size (webpki-roots-1.0.10.crate) = 216631 bytes
 BLAKE2s (winapi-util-0.1.11.crate) = 2f2e40ee4fe0683c2629d04b366f9b7498d7fc096183a40c9a279168f65a71e0
 SHA512 (winapi-util-0.1.11.crate) = cc1511c004c2a81da4d7a0414973f09ab711033fbbadfd597f56df2cc6c99b3c1822f0b8de1952e78400a88462b9050acd85d2e4b36db72254049a2d6f725a01
 Size (winapi-util-0.1.11.crate) = 13368 bytes
