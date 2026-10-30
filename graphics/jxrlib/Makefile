@@ -1,53 +1,41 @@
-# $NetBSD: Makefile,v 1.4 2026/08/04 20:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/10/30 10:32:52 prlw1 Exp $
 
-DISTNAME=	jxrlib_1_1
-PKGNAME=	jxrlib-1.1
-PKGREVISION=	1
+DISTNAME=	jxrlib-1.4.4
 CATEGORIES=	graphics
-MASTER_SITES=	# javascript link
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mircomir/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/curasystems/jxrlib
+HOMEPAGE=	https://github.com/mircomir/jxrlib
 COMMENT=	JPEG XR library
 LICENSE=	2-clause-bsd
 
+USE_TOOLS=	gmake
 TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
-
-WRKSRC=		${WRKDIR}/jxrlib
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=-D_BIG__ENDIAN_
+MAKE_ENV+=	BIG_ENDIAN="true"
+ENDIANFLAG=	-D_BIG__ENDIAN_
+.else
+ENDIANFLAG=
 .endif
+MAKE_ENV+=	DIR_INSTALL=${DESTDIR}${PREFIX}
+MAKE_ENV+=	SHARED="true"
 
-INSTALLATION_DIRS=	bin lib
-INSTALLATION_DIRS+=	include/jxrlib/common/include
-INSTALLATION_DIRS+=	include/jxrlib/image/sys
-INSTALLATION_DIRS+=	include/jxrlib/image/encode
-INSTALLATION_DIRS+=	include/jxrlib/image/decode
-INSTALLATION_DIRS+=	include/jxrlib/image/x86
-INSTALLATION_DIRS+=	include/jxrgluelib
-INSTALLATION_DIRS+=	share/doc/jxrlib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
+PKGCONFIG_OVERRIDE+=	libjxr.pc.in
+SUBST_CLASSES+=		avoidpy
+SUBST_FILES.avoidpy=	libjxr.pc.in
+SUBST_STAGE.avoidpy=	pre-build
+SUBST_MESSAGE.avoidpy=	Substitute variables in .pc.in file
+SUBST_SED.avoidpy=	-e 's,%(DIR_INSTALL)s,${PREFIX},g'
+SUBST_SED.avoidpy+=	-e 's,%(JXR_VERSION)s,${PKGVERSION_NOREV},g'
+SUBST_SED.avoidpy+=	-e 's,%(JXR_ENDIAN)s,${ENDIANFLAG},g'
 
 pre-patch:
 	dos2unix ${WRKSRC}/Makefile
 	find ${WRKSRC} -name '*.c' -print0 | xargs -0 dos2unix
 	find ${WRKSRC} -name '*.h' -print0 | xargs -0 dos2unix
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/JxrEncApp ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/JxrDecApp ${DESTDIR}${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/*.a ${DESTDIR}${PREFIX}/lib
-	for dir in common/include image/sys image/encode image/decode image/x86; do \
-		${INSTALL_DATA} ${WRKSRC}/$$dir/*.h ${DESTDIR}${PREFIX}/include/jxrlib/$$dir; \
-	done
-	${INSTALL_DATA} ${WRKSRC}/jxrgluelib/*.h ${DESTDIR}${PREFIX}/include/jxrgluelib
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/jxrlib
-
-# FIXME: replace by proper LDFLAGS handling
-_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../mk/bsd.pkg.mk"
