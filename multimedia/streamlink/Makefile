@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2026/10/16 18:55:34 adam Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/30 19:25:19 adam Exp $
 
-DISTNAME=	streamlink-8.6.2
+DISTNAME=	streamlink-8.6.3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.8:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-country>=0:../../geography/py-country
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
-DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=0:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-isodate>=0:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.0.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
