@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7475 2026/10/30 13:22:14 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7476 2026/10/30 14:10:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11180,3 +11180,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/rozi to 0.0.39 [pin 2026-10-30]
 	Updated multimedia/moviebox-tui to 0.1.28 [pin 2026-10-30]
 	Updated www/resterm to 1.17.1 [drixter 2026-10-30]
+	Updated devel/gitpane to 0.18.0 [pin 2026-10-30]
