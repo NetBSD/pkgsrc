@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.812 2026/10/28 10:09:34 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.813 2026/10/30 09:16:48 spz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30495,3 +30495,4 @@ php74<7.4.33nb11	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026
 php74<7.4.33nb11	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
 php56<5.6.40nb7	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109618
 php56<5.6.40nb7	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-109619
+brotli>=1.0.3<1.2.1	remote-code-execution	https://www.cve.org/CVERecord?id=CVE-2026-111497
