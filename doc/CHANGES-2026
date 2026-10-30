@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7465 2026/10/30 05:47:47 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7466 2026/10/30 05:57:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11169,3 +11169,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachebox to 6.2.10 [adam 2026-10-30]
 	Updated devel/py-frozendict to 2.5.0 [adam 2026-10-30]
 	Updated net/py-dns to 2.9.1 [adam 2026-10-30]
+	Updated www/py-url-normalize to 3.1.0 [adam 2026-10-30]
+	Updated devel/py-awscrt to 0.38.0 [adam 2026-10-30]
