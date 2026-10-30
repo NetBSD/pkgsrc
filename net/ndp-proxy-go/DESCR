@@ -1,0 +1,23 @@
+IPv6 Neighbor Discovery Protocol (NDP) Proxy
+
+Key Features
+Multi-Segment Support - Supports one upstream and multiple
+downstream interfaces.
+NDP Proxying - Relays Neighbor Solicitation and Neighbor Advertisement
+messages between interfaces for transparent address resolution
+across segments. Responds locally for router and client addresses.
+DAD Proxying - Forwards DAD probes between interfaces and responds
+immediately when address conflicts are detected in cache.
+RA Proxying - Forwards Router Solicitations and unicast/multicast Router
+Advertisements to enable SLAAC autoconfiguration of clients. Forwarded RAs
+carry the RFC 4389 Proxy (P) flag. An incoming P flag is logged in debug
+mode but does not alter forwarding, allowing proxies to be chained while
+per-host learning directs traffic.
+Dynamic Prefix Learning - Learns valid prefixes from Router Advertisements
+and expires them automatically. Handles temporary RFC 4941 addresses and
+changing prefixes without loss of connectivity.
+Static Prefix Support - Manually trusted IPv6 prefixes and upstream router
+link-local addresses replace corresponding RA-learned state. Static prefixes
+permit downstream host learning and can also be used by the prefix responder.
+Route Management - Installs and updates per-host /128 routes.
+PF Table Management - Add learned IP addresses to pf tables.

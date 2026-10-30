@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/10/30 21:38:19 drixter Exp $
+bin/ndp-proxy-go

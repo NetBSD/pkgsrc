@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1678 2026/10/29 14:59:52 drixter Exp $
+# $NetBSD: Makefile,v 1.1679 2026/10/30 21:38:19 drixter Exp $
 #
 
 COMMENT=	Networking tools
@@ -463,6 +463,7 @@ SUBDIR+=	ncdc
 SUBDIR+=	ncftp3
 SUBDIR+=	ncgopher
 SUBDIR+=	ndiff
+SUBDIR+=	ndp-proxy-go
 SUBDIR+=	ndpi
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
