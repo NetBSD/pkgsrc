@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7477 2026/10/30 19:29:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7478 2026/10/30 19:52:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11183,3 +11183,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.18.0 [pin 2026-10-30]
 	Updated multimedia/streamlink to 8.6.3 [adam 2026-10-30]
 	Updated textproc/py-iniparse to 0.5.2 [adam 2026-10-30]
+	Removed graphics/py-blockdiag [adam 2026-10-30]
+	Removed graphics/py-nwdiag [adam 2026-10-30]
+	Removed graphics/py-seqdiag [adam 2026-10-30]
+	Removed graphics/py-actdiag [adam 2026-10-30]
