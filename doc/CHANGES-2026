@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7478 2026/10/30 19:52:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7479 2026/10/30 20:14:00 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11187,3 +11187,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed graphics/py-nwdiag [adam 2026-10-30]
 	Removed graphics/py-seqdiag [adam 2026-10-30]
 	Removed graphics/py-actdiag [adam 2026-10-30]
+	Updated lang/sbcl to 2.6.10 [ktnb 2026-10-30]
