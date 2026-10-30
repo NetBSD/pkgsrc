@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7470 2026/10/30 10:21:20 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7471 2026/10/30 10:33:13 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11175,3 +11175,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/fasttracker2 to 2.27 [fox 2026-10-30]
 	Updated net/megacmd to 2.7.0 [kikadf 2026-10-30]
 	Updated games/luanti to 5.18.0 [ktnb 2026-10-30]
+	Updated graphics/jxrlib to 1.4.4 [prlw1 2026-10-30]
