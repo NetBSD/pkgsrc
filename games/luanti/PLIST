@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/08/21 16:05:27 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/10/30 10:20:53 ktnb Exp $
 bin/luanti
 bin/luantiserver
 bin/minetest
@@ -82,6 +82,7 @@ share/locale/tok/LC_MESSAGES/luanti.mo
 share/locale/tr/LC_MESSAGES/luanti.mo
 share/locale/tt/LC_MESSAGES/luanti.mo
 share/locale/uk/LC_MESSAGES/luanti.mo
+share/locale/uz/LC_MESSAGES/luanti.mo
 share/locale/vi/LC_MESSAGES/luanti.mo
 share/locale/zh_CN/LC_MESSAGES/luanti.mo
 share/locale/zh_TW/LC_MESSAGES/luanti.mo
