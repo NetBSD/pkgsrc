@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/10/09 03:35:08 adam Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/30 05:46:41 adam Exp $
 
-DISTNAME=	dnspython-2.9.0
+DISTNAME=	dnspython-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnspython/}
