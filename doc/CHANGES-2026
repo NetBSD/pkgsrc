@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7480 2026/10/30 21:22:55 cheusov Exp $
+$NetBSD: CHANGES-2026,v 1.7481 2026/10/30 21:35:45 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11189,3 +11189,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed graphics/py-actdiag [adam 2026-10-30]
 	Updated lang/sbcl to 2.6.10 [ktnb 2026-10-30]
 	Updated devel/cvs2svn to 2.5.0 [cheusov 2026-10-30]
+	Updated security/libmldsa to 20261029 [agc 2026-10-30]
+	Updated security/mldsa to 20261029 [agc 2026-10-30]
