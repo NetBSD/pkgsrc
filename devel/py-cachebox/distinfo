@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/10/29 12:29:45 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/10/30 05:43:03 adam Exp $
 
 BLAKE2s (allocator-api2-0.4.0.crate) = 1d26cd06434bcb16ce517864a3987f7ec1791e1a433105b25c9228fc639dc040
 SHA512 (allocator-api2-0.4.0.crate) = 12e5920def3cf95a8e859de10866bb5e9f4bc25c7c831d2aa8e3498ebc8bb66a4a59cd5af5a9c475f6625a216d8e33408e8b93caef97f036f99327a78215f7b0
@@ -15,9 +15,9 @@ Size (bitflags-2.13.2.crate) = 51678 bytes
 BLAKE2s (bumpalo-3.20.3.crate) = d0c72662efaf43a3c6fe9d806a1057a4d3bbc146ab5217628fbcfbed52cd5611
 SHA512 (bumpalo-3.20.3.crate) = c0e8ebd1c9eaf0a093370251a8a4993f73ed925a95ec852173649e6716741e38fbe1b1bbe15dd7704722fa67e3113f82a76b3e9edb5691f3b5c68a3a55b0c039
 Size (bumpalo-3.20.3.crate) = 98671 bytes
-BLAKE2s (cachebox-6.2.9.tar.gz) = 6aad4d3e0ce8e9d39166c9d888f28592debfc6ffd13edec3655bfc933909faad
-SHA512 (cachebox-6.2.9.tar.gz) = 6168393b79c5cf2a012bd0418c540dc5927bd29c7cc4de95e823d9cf11768e3c264d8e9bc5c8572e71955040ed69bf68d2438d0e2299a48523875f3c15b8c2ad
-Size (cachebox-6.2.9.tar.gz) = 281014 bytes
+BLAKE2s (cachebox-6.2.10.tar.gz) = 9c7d69a2a4911dce23d48dc10cf37af43e9ca336f4f451fa938025dce7b6774f
+SHA512 (cachebox-6.2.10.tar.gz) = 20106ce118d0c0ac37f58b06f2fcb160cdf8989aa5167ad072db7677d00a42a68dfe80f6e64da2c60e73d7482b32d09df2edf4242b14f42b4c03f6d4ae19733b
+Size (cachebox-6.2.10.tar.gz) = 284526 bytes
 BLAKE2s (cc-1.9.0.crate) = 9454e34a9b1b77f9bbe75d65971300ac6e6a2acda7a3d5372d0a26b018d3f981
 SHA512 (cc-1.9.0.crate) = 7b3522161a5d2f70b5fdd5129e217c125330b0dde927557721bac73fcdd3b7f184f246cc96bcdd0acf8e4555ea65663dbdfc21cbf745917af9866341a9ac6228
 Size (cc-1.9.0.crate) = 147091 bytes
