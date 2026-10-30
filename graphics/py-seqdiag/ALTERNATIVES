@@ -1,1 +1,0 @@
-bin/seqdiag @PREFIX@/bin/seqdiag-@PYVERSSUFFIX@

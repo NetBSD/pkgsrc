@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1133 2026/10/24 10:00:01 adam Exp $
+# $NetBSD: Makefile,v 1.1134 2026/10/30 19:51:14 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -490,9 +490,7 @@ SUBDIR+=	py-OpenGL-accelerate
 SUBDIR+=	py-Pillow
 SUBDIR+=	py-Willow
 SUBDIR+=	py-aafigure
-SUBDIR+=	py-actdiag
 SUBDIR+=	py-altgraph
-SUBDIR+=	py-blockdiag
 SUBDIR+=	py-blurhash
 SUBDIR+=	py-brewer2mpl
 SUBDIR+=	py-cairo
@@ -515,7 +513,6 @@ SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-inline
 SUBDIR+=	py-matplotlib-venn
 SUBDIR+=	py-mcomix
-SUBDIR+=	py-nwdiag
 SUBDIR+=	py-objgraph
 SUBDIR+=	py-openexr
 SUBDIR+=	py-piexif
@@ -530,7 +527,6 @@ SUBDIR+=	py-qrcode
 SUBDIR+=	py-railroad-diagrams
 SUBDIR+=	py-scour
 SUBDIR+=	py-seaborn
-SUBDIR+=	py-seqdiag
 SUBDIR+=	py-spectra
 SUBDIR+=	py-strich
 SUBDIR+=	py-svg-hush
