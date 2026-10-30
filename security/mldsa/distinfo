@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/10/30 21:34:16 agc Exp $
+$NetBSD: distinfo,v 1.4 2026/10/30 21:34:16 agc Exp $
 
 BLAKE2s (mldsa-20261029.tar.gz) = 3e0e00e516aa3b6420e9aa5fdc1b95e6e36c5ef09ff51309a14cd6c0ce3bbc2e
 SHA512 (mldsa-20261029.tar.gz) = 580633105b5cc9a5cf5978dd8f6717c7ef9b5377ffd6c8341f2f05876e1ac8b774a370b47ec8530bb6a62c4872322b9143e18fa671772e9dbc90bd6a3bc6b700
