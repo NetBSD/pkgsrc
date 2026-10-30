@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7467 2026/10/30 08:22:00 fox Exp $
+$NetBSD: CHANGES-2026,v 1.7468 2026/10/30 08:26:31 fox Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11172,3 +11172,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-url-normalize to 3.1.0 [adam 2026-10-30]
 	Updated devel/py-awscrt to 0.38.0 [adam 2026-10-30]
 	Updated audio/din to 66.2 [fox 2026-10-30]
+	Updated audio/fasttracker2 to 2.27 [fox 2026-10-30]
