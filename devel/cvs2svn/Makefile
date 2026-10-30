@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/10/30 21:22:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.47 2026/10/30 21:31:49 cheusov Exp $
 
 DISTNAME=	cvs2svn-2.5.0
 CATEGORIES=	devel scm
-MASTER_SITES=	#
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mhagger/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mhagger/cvs2svn
