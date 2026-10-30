@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/08/25 13:59:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/10/30 16:20:09 sborrill Exp $
 sbin/acme.sh
 share/acmesh/acme.sh
 share/acmesh/deploy/ali_cdn.sh
@@ -20,6 +20,8 @@ share/acmesh/deploy/fritzbox.sh
 share/acmesh/deploy/gcore_cdn.sh
 share/acmesh/deploy/gitlab.sh
 share/acmesh/deploy/haproxy.sh
+share/acmesh/deploy/ikuai.sh
+share/acmesh/deploy/jetkvm.sh
 share/acmesh/deploy/kemplm.sh
 share/acmesh/deploy/keychain.sh
 share/acmesh/deploy/keyhelp.sh
@@ -45,12 +47,15 @@ share/acmesh/deploy/pureftpd.sh
 share/acmesh/deploy/qiniu.sh
 share/acmesh/deploy/routeros.sh
 share/acmesh/deploy/ruckus.sh
+share/acmesh/deploy/shelly.sh
 share/acmesh/deploy/ssh.sh
 share/acmesh/deploy/strongswan.sh
 share/acmesh/deploy/synology_dsm.sh
 share/acmesh/deploy/truenas.sh
+share/acmesh/deploy/truenas_websocat.sh
 share/acmesh/deploy/truenas_ws.sh
 share/acmesh/deploy/unifi.sh
+share/acmesh/deploy/unifios.sh
 share/acmesh/deploy/vault.sh
 share/acmesh/deploy/vault_cli.sh
 share/acmesh/deploy/vsftpd.sh
@@ -101,6 +106,7 @@ share/acmesh/dnsapi/dns_dgon.sh
 share/acmesh/dnsapi/dns_dnsexit.sh
 share/acmesh/dnsapi/dns_dnshome.sh
 share/acmesh/dnsapi/dns_dnsimple.sh
+share/acmesh/dnsapi/dns_dnsmint.sh
 share/acmesh/dnsapi/dns_dnsservices.sh
 share/acmesh/dnsapi/dns_doapi.sh
 share/acmesh/dnsapi/dns_domeneshop.sh
@@ -133,12 +139,14 @@ share/acmesh/dnsapi/dns_gname.sh
 share/acmesh/dnsapi/dns_googledomains.sh
 share/acmesh/dnsapi/dns_he.sh
 share/acmesh/dnsapi/dns_he_ddns.sh
+share/acmesh/dnsapi/dns_hestiacp.sh
 share/acmesh/dnsapi/dns_hetznercloud.sh
 share/acmesh/dnsapi/dns_hexonet.sh
 share/acmesh/dnsapi/dns_hostingde.sh
 share/acmesh/dnsapi/dns_hostinger.sh
 share/acmesh/dnsapi/dns_hostup.sh
 share/acmesh/dnsapi/dns_huaweicloud.sh
+share/acmesh/dnsapi/dns_hw.sh
 share/acmesh/dnsapi/dns_infoblox.sh
 share/acmesh/dnsapi/dns_infoblox_uddi.sh
 share/acmesh/dnsapi/dns_infomaniak.sh
@@ -161,7 +169,6 @@ share/acmesh/dnsapi/dns_leaseweb.sh
 share/acmesh/dnsapi/dns_level27.sh
 share/acmesh/dnsapi/dns_lexicon.sh
 share/acmesh/dnsapi/dns_limacity.sh
-share/acmesh/dnsapi/dns_linode.sh
 share/acmesh/dnsapi/dns_linode_v4.sh
 share/acmesh/dnsapi/dns_loopia.sh
 share/acmesh/dnsapi/dns_lua.sh
@@ -175,6 +182,7 @@ share/acmesh/dnsapi/dns_muumuu.sh
 share/acmesh/dnsapi/dns_myapi.sh
 share/acmesh/dnsapi/dns_mydevil.sh
 share/acmesh/dnsapi/dns_mydnsjp.sh
+share/acmesh/dnsapi/dns_myloc.sh
 share/acmesh/dnsapi/dns_mythic_beasts.sh
 share/acmesh/dnsapi/dns_namecheap.sh
 share/acmesh/dnsapi/dns_namecom.sh
@@ -184,6 +192,7 @@ share/acmesh/dnsapi/dns_nederhost.sh
 share/acmesh/dnsapi/dns_neodigit.sh
 share/acmesh/dnsapi/dns_netcup.sh
 share/acmesh/dnsapi/dns_netlify.sh
+share/acmesh/dnsapi/dns_nexdns.sh
 share/acmesh/dnsapi/dns_nic.sh
 share/acmesh/dnsapi/dns_njalla.sh
 share/acmesh/dnsapi/dns_nm.sh
@@ -199,6 +208,8 @@ share/acmesh/dnsapi/dns_openprovider.sh
 share/acmesh/dnsapi/dns_openprovider_rest.sh
 share/acmesh/dnsapi/dns_openstack.sh
 share/acmesh/dnsapi/dns_opnsense.sh
+share/acmesh/dnsapi/dns_opteamax.sh
+share/acmesh/dnsapi/dns_optidata.sh
 share/acmesh/dnsapi/dns_opusdns.sh
 share/acmesh/dnsapi/dns_ovh.sh
 share/acmesh/dnsapi/dns_pdns.sh
@@ -212,6 +223,7 @@ share/acmesh/dnsapi/dns_rackspace.sh
 share/acmesh/dnsapi/dns_rage4.sh
 share/acmesh/dnsapi/dns_rcode0.sh
 share/acmesh/dnsapi/dns_regru.sh
+share/acmesh/dnsapi/dns_rltx.sh
 share/acmesh/dnsapi/dns_scaleway.sh
 share/acmesh/dnsapi/dns_schlundtech.sh
 share/acmesh/dnsapi/dns_selectel.sh
