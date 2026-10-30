@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7462 2026/10/29 20:59:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7463 2026/10/30 00:03:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11163,3 +11163,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-djangocms-video to 3.2.0 [adam 2026-10-29]
 	Updated net/routinator to 0.15.3 [drixter 2026-10-29]
 	Updated sysutils/lsof to 4.91nb11 [taca 2026-10-29]
+	Updated www/py-django-reversion to 6.5.0 [wiz 2026-10-30]
