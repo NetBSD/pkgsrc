@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2026/10/31 20:45:41 hauke Exp $
+# $NetBSD: Makefile,v 1.49 2026/10/31 23:23:53 hauke Exp $
 
 DISTNAME=	radmind-1.15.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radmind/}
 GITHUB_PROJECT=	radmind

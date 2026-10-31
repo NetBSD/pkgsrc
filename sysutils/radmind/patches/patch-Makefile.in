@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.6 2026/10/31 22:02:01 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2026/10/31 23:23:54 hauke Exp $
 
 Assuming we want to build with BSD Make, adapt the only incompatible
 command, and straighten out the VERSION handling.
@@ -10,7 +10,7 @@ command, and straighten out the VERSION handling.
  version.o : version.c
  	${CC} ${CFLAGS} \
 -		-DVERSION=\"`cat ${srcdir}/VERSION`\" \
-+		-DVERSION=${VERSION} \
++		-DVERSION=\"${VERSION}\" \
  		-c ${srcdir}/version.c
  
  openssl_compat.o : openssl_compat.c
