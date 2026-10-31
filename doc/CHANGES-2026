@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7497 2026/10/31 17:51:30 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7498 2026/10/31 20:45:56 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11210,3 +11210,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/blosc to 1.21.7 [adam 2026-10-31]
 	Updated wayland/labwc to 0.20.3 [kikadf 2026-10-31]
 	Updated wayland/labwc-tweaks to 0.2.0 [kikadf 2026-10-31]
+	Updated sysutils/radmind to 1.15.0 [hauke 2026-10-31]
