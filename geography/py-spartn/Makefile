@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/07/18 12:21:58 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/31 11:50:55 gdt Exp $
 
-VERSION=	1.1.0
+VERSION=	1.1.2
 DISTTAIL=	spartn
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
