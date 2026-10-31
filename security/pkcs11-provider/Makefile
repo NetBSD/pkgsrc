@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/10/26 12:20:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2026/10/31 23:14:09 wiz Exp $
 
 DISTNAME=	pkcs11-provider-1.3.0
 CATEGORIES=	security
@@ -12,6 +12,11 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	pkg-config
 
+# as of 2026-10-31, does not work with base openssl
+# a) the pkgsrc framework does not provide all required pkg-config values
+#    in the faked libcrypto.pc file
+# b) the base system does not provide the directories to install into
+USE_BUILTIN.openssl=	no
 .include "../../devel/meson/build.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
