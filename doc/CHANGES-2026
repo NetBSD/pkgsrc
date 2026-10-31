@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7495 2026/10/31 17:33:46 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7496 2026/10/31 17:51:09 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11208,3 +11208,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-setuptools-gettext to 0.1.20 [adam 2026-10-31]
 	Updated math/fast_float to 8.3.3 [adam 2026-10-31]
 	Updated devel/blosc to 1.21.7 [adam 2026-10-31]
+	Updated wayland/labwc to 0.20.3 [kikadf 2026-10-31]
