@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST.i386,v 1.4 2026/10/26 06:00:20 wiz Exp $
+@comment $NetBSD: PLIST.i386,v 1.5 2026/10/31 06:35:39 adam Exp $
 ${PYSITELIB}/Crypto/Cipher/_raw_aesni.so
+${PYSITELIB}/Crypto/Hash/_SHA224_shani.so
+${PYSITELIB}/Crypto/Hash/_SHA256_shani.so
 ${PYSITELIB}/Crypto/Hash/_ghash_clmul.so
