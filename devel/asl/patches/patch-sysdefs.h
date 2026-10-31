@@ -1,10 +1,10 @@
-$NetBSD: patch-sysdefs.h,v 1.1 2026/08/23 20:34:39 he Exp $
+$NetBSD: patch-sysdefs.h,v 1.2 2026/10/31 22:33:34 hauke Exp $
 
 Provide portability to the NetBSD PowerPC ports.
 
---- sysdefs.h.orig	2026-08-23 20:15:04.141222279 +0000
+--- sysdefs.h.orig	2026-10-16 12:48:52.000000000 +0000
 +++ sysdefs.h
-@@ -138,7 +138,7 @@ typedef unsigned int as_uint32_t;
+@@ -124,7 +124,7 @@
  /*---------------------------------------------------------------------------*/
  /* ditto for PPC platforms */
  
@@ -13,8 +13,8 @@ Provide portability to the NetBSD PowerPC ports.
  # ifndef _POWER
  #  define _POWER
  # endif
-@@ -674,6 +674,30 @@ typedef unsigned int as_uint32_t;
- #endif
+@@ -606,6 +606,30 @@ extern void bcopy();
+ #define ARCHPRNAME "ppc64"
  
  /*---------------------------------------------------------------------------*/
 +/* POWER with NetBSD */
@@ -41,6 +41,6 @@ Provide portability to the NetBSD PowerPC ports.
 +#endif
 +
 +/*---------------------------------------------------------------------------*/
- /* POWER with Linux (Macintosh) */
+ /* POWER64 with Linux */
  
  #ifdef __linux__

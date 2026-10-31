@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/05 12:12:14 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/31 22:33:34 hauke Exp $
+share/doc/asl/78z80inst.tex
 share/doc/asl/COPYING
+share/doc/asl/README
+share/doc/asl/README.LANGS
 share/doc/asl/as_DE.doc
 share/doc/asl/as_DE.html
 share/doc/asl/as_DE.pdf
+share/doc/asl/as_DE.tex
 share/doc/asl/as_EN.doc
 share/doc/asl/as_EN.html
 share/doc/asl/as_EN.pdf
+share/doc/asl/as_EN.tex
 share/doc/asl/biblio.tex
 share/doc/asl/cp3finst.tex
 share/doc/asl/pscomm.tex
 share/doc/asl/pscpu.tex
+share/doc/asl/recstruct.tex
+share/doc/asl/tabids.tex
 share/doc/asl/taborg.tex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/08/12 16:25:41 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2026/10/31 22:33:34 hauke Exp $
 
 PKGNAME=	asl-doc-${PKGVER}
 COMMENT=	Portable macro cross assembler documentation
@@ -15,6 +15,8 @@ DEPENDS+=	texlive-collection-latexrecommended-[0-9]*:../../meta-pkgs/texlive-col
 DOCDIR=		share/doc/asl
 
 INSTALLATION_DIRS+=	${DOCDIR}
+
+MAKEVARS+=	DOCDIR=${DOCDIR:Q}
 
 .include "../../devel/asl/Makefile.common"
 
