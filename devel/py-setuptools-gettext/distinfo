@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/09/30 07:27:15 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/10/31 17:13:40 adam Exp $
 
-BLAKE2s (setuptools_gettext-0.1.19.tar.gz) = 39a38faca4c41f0c3519cb10c913a17beb12ee567cad6140714866c5bf947d30
-SHA512 (setuptools_gettext-0.1.19.tar.gz) = 324c6fe9b77f0f69b4a2dd73d9d820785db48f3655e4d72c86192f8d6b475dbd39270118a264d5462935d6092f9bd14f8feda043b67c892bab75352133633b18
-Size (setuptools_gettext-0.1.19.tar.gz) = 23455 bytes
+BLAKE2s (setuptools_gettext-0.1.20.tar.gz) = 1ffb04238299888ebc796a9204dadf00b2d7b301cb45ec86b14722c0701c7353
+SHA512 (setuptools_gettext-0.1.20.tar.gz) = c0ff3bfc169bcb6b64844d236f51d9a140bfcf09dab2e4d7d5194d6e51019f39bcfda213bba3069bed80641e6d0a2ba42e60f836a52211457b468b292d563e35
+Size (setuptools_gettext-0.1.20.tar.gz) = 23388 bytes
