@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7486 2026/10/31 11:51:03 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.7487 2026/10/31 12:57:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11197,3 +11197,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-frozendict to 2.5.1 [adam 2026-10-31]
 	Updated www/resterm to 1.17.2 [drixter 2026-10-31]
 	Updated geography/py-spartn to 1.1.2 [gdt 2026-10-31]
+	Updated mail/py-notmuch2 to 0.40nb4 [wiz 2026-10-31]
