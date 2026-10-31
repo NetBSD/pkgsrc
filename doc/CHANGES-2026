@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7500 2026/10/31 22:33:54 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.7501 2026/10/31 22:34:09 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11213,3 +11213,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/radmind to 1.15.0 [hauke 2026-10-31]
 	Updated devel/libbstring to 1.1.1 [hauke 2026-10-31]
 	Updated devel/asl to 1.42.315 [hauke 2026-10-31]
+	Updated devel/asl-doc to 1.42.315 [hauke 2026-10-31]
