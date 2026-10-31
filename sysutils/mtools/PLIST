@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/04/03 15:51:42 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/10/31 15:38:22 wiz Exp $
 bin/amuFormat.sh
 ${PLIST.floppyd}bin/floppyd
 ${PLIST.floppyd}bin/floppyd_installtest
@@ -13,6 +13,7 @@ bin/mcopy
 bin/mdel
 bin/mdeltree
 bin/mdir
+bin/mdoctorfat
 bin/mdu
 bin/mformat
 bin/minfo
@@ -44,6 +45,7 @@ man/man1/mcopy.1
 man/man1/mdel.1
 man/man1/mdeltree.1
 man/man1/mdir.1
+man/man1/mdoctorfat.1
 man/man1/mdu.1
 man/man1/mformat.1
 man/man1/minfo.1

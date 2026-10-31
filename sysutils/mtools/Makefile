@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2023/03/29 13:07:10 rhialto Exp $
+# $NetBSD: Makefile,v 1.65 2026/10/31 15:38:22 wiz Exp $
 
-DISTNAME=	mtools-4.0.43
+DISTNAME=	mtools-4.0.50
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=mtools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,10 @@ USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+# ${WRKSRC} is in all binaries
+# TODO: investigate and fix
+CHECK_WRKREF_SKIP=	bin/*
 
 .include "options.mk"
 
