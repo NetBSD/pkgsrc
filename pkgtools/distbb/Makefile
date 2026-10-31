@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/10/25 09:01:05 cheusov Exp $
-#
+# $NetBSD: Makefile,v 1.28 2026/10/31 13:18:40 wiz Exp $
 
 DISTNAME=	distbb-0.49.1
 CATEGORIES=	pkgtools
@@ -18,6 +17,7 @@ DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 TOOL_DEPENDS+=	mk-configure>=0.39:../../devel/mk-configure
 
 USE_LANGUAGES=		# none
+USE_TOOLS+=		pod2man
 
 REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
 
@@ -28,7 +28,7 @@ REPLACE_FILES.runawk=	gen_weights.in pkg_summary2build_deps.in \
 			distbb_grep.in gen_queue.in
 
 EGDIR=			${PREFIX}/share/examples/distbb
-DOCDIR=		${PREFIX}/share/doc/distbb
+DOCDIR=			${PREFIX}/share/doc/distbb
 
 CONF_FILES=		${EGDIR}/distbb.conf     ${PKG_SYSCONFDIR}/distbb.conf
 CONF_FILES+=		${EGDIR}/distbb.local.mk ${PKG_SYSCONFDIR}/distbb.local.mk
