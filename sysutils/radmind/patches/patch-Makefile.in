@@ -1,10 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.5 2026/10/31 21:29:00 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2026/10/31 22:02:01 hauke Exp $
 
 Assuming we want to build with BSD Make, adapt the only incompatible
 command, and straighten out the VERSION handling.
 
---- Makefile.in.orig 2026-10-31 21:18:58.025155132 +0000 +++
-Makefile.in @@ -105,7 +105,7 @@ all : ${TARGETS}
+--- Makefile.in.orig 2026-10-31 21:18:58.025155132 +0000
++++ Makefile.in
+@@ -105,7 +105,7 @@ all : ${TARGETS}
  
  version.o : version.c
  	${CC} ${CFLAGS} \

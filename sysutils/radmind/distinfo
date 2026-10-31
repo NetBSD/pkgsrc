@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.33 2026/10/31 21:28:59 hauke Exp $
+$NetBSD: distinfo,v 1.34 2026/10/31 22:02:01 hauke Exp $
 
 BLAKE2s (radmind-1.15.0.tar.gz) = 4d0efc96b2e8d9655db88757c915514783f5ab96ead5e57191517a284cb72965
 SHA512 (radmind-1.15.0.tar.gz) = 550367ef502eb6333a2864ea08f7929e5e4e52fa8395f5af7136e43a7cb89ab28cde9d731d6d3e548535e027fa3a03d0c8070e0dc78380e83343e078bdc77cce
 Size (radmind-1.15.0.tar.gz) = 424259 bytes
-SHA1 (patch-Makefile.in) = b912c976e263578a25b9c467ad2a57fa139b1f10
+SHA1 (patch-Makefile.in) = 1dc1603664d1f86743a7cfa823f9889fb7694059
 SHA1 (patch-ra.sh) = 7843f5cb3c192c919bc7ac9989841d3d05e57932
