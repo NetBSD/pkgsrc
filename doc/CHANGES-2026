@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7491 2026/10/31 13:35:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7492 2026/10/31 14:00:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11202,3 +11202,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-augeas to 1.2.0nb2 [wiz 2026-10-31]
 	Updated textproc/py-cmarkgfm to 2025.10.22nb1 [wiz 2026-10-31]
 	mk: updated default Python to 3.14 [wiz 2026-10-31]
+	Updated www/p5-HTTP-Parser-XS to 0.18 [wiz 2026-10-31]
