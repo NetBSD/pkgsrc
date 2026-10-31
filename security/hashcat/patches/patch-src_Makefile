@@ -1,15 +1,14 @@
-$NetBSD: patch-src_Makefile,v 1.5 2025/09/08 15:03:40 adam Exp $
+$NetBSD: patch-src_Makefile,v 1.6 2026/10/31 17:12:20 adam Exp $
 
 Set preferences.
 Don't override CC nor optimisation flags in CFLAGS.
 Defined IS_ARM in externally.
 Remove sed magic; we'll use nbsed.
-Don't build universal binary on Darwin.
 
---- src/Makefile.orig	2025-08-18 05:23:33.000000000 +0000
+--- src/Makefile.orig	2026-10-25 17:34:45.000000000 +0000
 +++ src/Makefile
-@@ -69,8 +69,6 @@ BRIDGE_INTERFACE_VERSION := 700
- ## Native compiler paths
+@@ -198,8 +198,6 @@ FEEDS_INTERFACE_VERSION  := 800
+ ## One block per platform, and nothing outside these blocks names a compiler.
  ##
  
 -CC                      := gcc
@@ -17,14 +16,15 @@ Don't build universal binary on Darwin.
  AR                      := ar
  FIND                    := find
  INSTALL                 := install
-@@ -79,18 +77,10 @@ SED                     := sed
- SED_IN_PLACE            := -i
+@@ -210,33 +208,10 @@ SED_IN_PLACE            := -i
+ IS_APPLE_SILICON        := 0
  
  ifeq ($(UNAME),Darwin)
 -CC                      := clang
 -CXX                     := clang++
+-# if available using llvm-ar else ar
+-AR                      := $(shell which llvm-ar >/dev/null 2>&1 && echo llvm-ar || echo ar)
 -# the sed -i option of macOS requires a parameter for the backup file (we just use "")
--AR                      := /usr/bin/ar
 -SED                     := /usr/bin/sed
 -SED_IN_PLACE            := -i ""
  DARWIN_VERSION          := $(shell uname -r | cut -d. -f1)
@@ -33,37 +33,28 @@ Don't build universal binary on Darwin.
  
 -IS_AARCH64              := $(shell [ "$$(arch 2>/dev/null)" = "aarch64" ] && echo 1 || echo 0)
 -IS_ARM                  := $(or $(filter 1,$(IS_APPLE_SILICON)),$(filter 1,$(IS_AARCH64)))
+-IS_PPC                  := $(shell uname -m | grep -q -E '^(ppc|powerpc)' && echo 1 || echo 0)
+-
+-ifneq (,$(filter $(UNAME),OpenBSD FreeBSD NetBSD DragonFly))
+-CC                      := cc
+-CXX                     := c++
+-SED                     := gsed
+-endif
+-
+-ifeq ($(UNAME),NetBSD)
+-CC                      := gcc
+-CXX                     := g++
+-AR                      := gcc-ar
+-endif
+-
+ # CC, CXX and AR keep their conventional names because that is what a builder overrides on the
+ # command line. Under the platform name they are what every rule below asks for.
  
- ifneq (,$(filter $(UNAME),FreeBSD NetBSD DragonFly))
- CC                      := cc
-@@ -275,7 +265,6 @@ endif
- endif
+@@ -572,7 +547,6 @@ endif
+ 
  
  ifeq ($(DEBUG),0)
--CFLAGS                  += -O2
- ifneq ($(UNAME),Darwin)
- LFLAGS                  += -s
- endif
-@@ -355,6 +344,7 @@ ifeq ($(UNAME),Linux)
- CFLAGS_NATIVE           := $(CFLAGS)
- CFLAGS_NATIVE           += -DWITH_HWMON
- LFLAGS_NATIVE           := $(LFLAGS)
-+LFLAGS_NATIVE           += -lm
- LFLAGS_NATIVE           += -lpthread
- LFLAGS_NATIVE           += -ldl
- LFLAGS_NATIVE           += -lrt
-@@ -414,14 +404,6 @@ LFLAGS_NATIVE           += -lIOReport
- LFLAGS_NATIVE           += -lpthread
- LFLAGS_NATIVE           += -liconv
+-CFLAGS                  += -O2 -fomit-frame-pointer
  
--ifeq ($(IS_APPLE_SILICON),1)
--CFLAGS_NATIVE           += -arch arm64
--CFLAGS_NATIVE           += -arch x86_64
--ifeq ($(SHARED),1)
--LFLAGS_NATIVE           += -arch arm64
--LFLAGS_NATIVE           += -arch x86_64
--endif
--endif
- 
- endif # Darwin
- 
+ # a release carries no debug information. Build with DEBUG=1 to get it, and that build is not
+ # stripped, so the information stays where the program is.

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/09/08 15:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/10/31 17:12:20 adam Exp $
 
-DISTNAME=	hashcat-7.1.2
+DISTNAME=	hashcat-8.0.0
 CATEGORIES=	security
 MASTER_SITES=	https://hashcat.net/files/
 
@@ -14,29 +14,46 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gsed perl:run
 
 BUILD_TARGET=	hashcat
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}
 MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=	SHARED=1
+MAKE_ENV+=	USE_SYSTEM_OPENCL=1
 MAKE_ENV+=	USE_SYSTEM_XXHASH=1
 MAKE_ENV+=	USE_SYSTEM_ZLIB=1
+
 .if ${MACHINE_ARCH} == "aarch64"
 MAKE_ENV+=	IS_ARM=1
 .else
 MAKE_ENV+=	IS_ARM=0
 .endif
 
+.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "powerpc64"
+MAKE_ENV+=	IS_PPC=1
+.else
+MAKE_ENV+=	IS_PPC=0
+.endif
+
 .include "../../mk/bsd.fast.prefs.mk"
 # see include/common.h
 BROKEN_ON_PLATFORM+=	${BIGENDIANPLATFORMS}
 
-CARGO_WRKSRC=	${WRKSRC}/Rust/generic_hash
+#CARGO_WRKSRC=	${WRKSRC}/Rust/bridges/dynamic_hash
+#CARGO_WRKSRC=	${WRKSRC}/Rust/bridges/generic_hash
+#CARGO_WRKSRC=	${WRKSRC}/Rust/feeds/random
+
 .include "cargo-depends.mk"
 
-REPLACE_PERL=	tools/*.pl
-REPLACE_PYTHON=	tools/*.py
+REPLACE_PERL=		tools/*.pl
+REPLACE_PYTHON+=	extra/fpga/zc706-sdboot/make_bootbin.py
+REPLACE_PYTHON+=	tools/*.py
 
 # Define custom 'do-build' and 'do-install', so both cargo and regular targets
 # do not collide.
-do-build: do-cargo-build
+do-build:
+.for cargo_dir in bridges/dynamic_hash bridges/generic_hash feeds/random
+	cd ${WRKSRC}/Rust/${cargo_dir} && ${SETENV} ${MAKE_ENV} ${CARGO} ${CARGO_ARGS}
+.endfor
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 
 do-install:
@@ -46,13 +63,15 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/hashcat/sort_r.h.orig
 .if ${OPSYS} == "Darwin"
-	${RUN} cd ${DESTDIR};						\
-	for i in $$(${FIND} .${PREFIX}/share/hashcat -name '*.so' |	\
-		${SED} -e 's|^\./||'); do				\
-		install_name_tool -id /$$i $$i;				\
+post-install:
+	${RUN} \
+	install_name_tool -id ${PREFIX}/lib/libhashcat.8.dylib ${DESTDIR}${PREFIX}/lib/libhashcat.8.dylib; \
+	install_name_tool -change @rpath/libhashcat.8.dylib ${PREFIX}/lib/libhashcat.8.dylib ${DESTDIR}${PREFIX}/bin/hashcat; \
+	cd ${DESTDIR}; \
+	for i in $$(${FIND} .${PREFIX}/share/hashcat -name '*.so' | ${SED} -e 's|^\./||'); do \
+		install_name_tool -id /$$i $$i; \
+		install_name_tool -change @rpath/libhashcat.8.dylib ${PREFIX}/lib/libhashcat.8.dylib $$i; \
 	done
 .endif
 
@@ -61,4 +80,5 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/rust/cargo.mk"
+.include "../../parallel/opencl-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
