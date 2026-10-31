@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/10/29 11:45:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/10/31 13:11:02 wiz Exp $
 
 DISTNAME=	pipx-1.18.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=0:../../devel/py-hatch-fancy-pypi-readme
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=3.7.2:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-filelock>=4.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-packaging>=26.3:../../devel/py-packaging
