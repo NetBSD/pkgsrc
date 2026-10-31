@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2026/01/07 08:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/10/31 13:20:05 wiz Exp $
 
 DISTNAME=	python-augeas-1.2.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-augeas/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://augeas.net/
 COMMENT=	Python bindings for Augeas
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 .include "../../sysutils/augeas/buildlink3.mk"
