@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/10/27 00:03:13 gdt Exp $
+$NetBSD: distinfo,v 1.7 2026/10/31 13:09:38 wiz Exp $
 
 BLAKE2s (pymetar-1.4.tar.gz) = 104419fe71348a7bbba3ae72a7862115c30406b9348f73dd7306c9f00b7f6e86
 SHA512 (pymetar-1.4.tar.gz) = d5c5d382c68ffacefe07d63239f3b56984bf2becef922c945b0014a210ddf9ce1f96f99028e0ec9e649f70f6262925a836dbeb83309407aa2c4ddb4769db3dbd
 Size (pymetar-1.4.tar.gz) = 3162928 bytes
-SHA1 (patch-aa) = 7cb29f57958eb4fb06db97367312db1342b530aa
