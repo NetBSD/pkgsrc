@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/04/04 04:21:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/10/31 12:57:44 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,7 +12,7 @@ ${PYSITELIB}/notmuch2/_base.pyo
 ${PYSITELIB}/notmuch2/_build.py
 ${PYSITELIB}/notmuch2/_build.pyc
 ${PYSITELIB}/notmuch2/_build.pyo
-${PYSITELIB}/notmuch2/_capi.abi3.so
+${PYSITELIB}/notmuch2/_capi.so
 ${PYSITELIB}/notmuch2/_config.py
 ${PYSITELIB}/notmuch2/_config.pyc
 ${PYSITELIB}/notmuch2/_config.pyo
