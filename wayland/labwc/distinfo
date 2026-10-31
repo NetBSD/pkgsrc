@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2026/08/24 11:37:07 kikadf Exp $
+$NetBSD: distinfo,v 1.5 2026/10/31 17:27:39 kikadf Exp $
 
-BLAKE2s (labwc-0.20.2.tar.gz) = 7125213b185b10194c651c49b95b75f31ab796ef1d2ef0deb58e685bccf13fdc
-SHA512 (labwc-0.20.2.tar.gz) = 68519170aa01c65e3be5ea115ebcb9173132f34febb2f3b7990ba067ea219819e2551847e91f548bf011fb3ceeae4802248153693a5e14914eb6cee889656b4d
-Size (labwc-0.20.2.tar.gz) = 553497 bytes
+BLAKE2s (labwc-0.20.3.tar.gz) = 0b5df7beb4ee0d230b7ee0a44709696eab72ed24b9acda23af9ceaf9e7dbe4e2
+SHA512 (labwc-0.20.3.tar.gz) = 2a1a46070a6a1c4ae6750cf4a411e81e5be031154f9cddd35521d411dd52c8457f85b946c3906d531a3716dbaee3a6a9493df73ab7aca7f340b493cfa11856d8
+Size (labwc-0.20.3.tar.gz) = 566230 bytes
 SHA1 (patch-docs_meson.build) = 0f84be326a5f0f3f6611476df344076d851236af
-SHA1 (patch-src_common_string-helpers.c) = bf81bb3d086948901d3cb239cefda7cfd98288a4
-SHA1 (patch-src_cycle_osd-field.c) = ae3006944d739c6bb326633cfa85ed55ade5e828
