@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7489 2026/10/31 13:20:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7490 2026/10/31 13:21:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11200,3 +11200,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-notmuch2 to 0.40nb4 [wiz 2026-10-31]
 	Updated net/py-metar to 1.4nb1 [wiz 2026-10-31]
 	Updated sysutils/py-augeas to 1.2.0nb2 [wiz 2026-10-31]
+	Updated textproc/py-cmarkgfm to 2025.10.22nb1 [wiz 2026-10-31]
