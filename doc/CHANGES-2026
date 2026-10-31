@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7492 2026/10/31 14:00:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7493 2026/10/31 15:38:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11203,3 +11203,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-cmarkgfm to 2025.10.22nb1 [wiz 2026-10-31]
 	mk: updated default Python to 3.14 [wiz 2026-10-31]
 	Updated www/p5-HTTP-Parser-XS to 0.18 [wiz 2026-10-31]
+	Updated sysutils/mtools to 4.0.50 [wiz 2026-10-31]
