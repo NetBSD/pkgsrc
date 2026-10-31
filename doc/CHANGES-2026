@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7494 2026/10/31 17:14:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7495 2026/10/31 17:33:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11206,3 +11206,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/mtools to 4.0.50 [wiz 2026-10-31]
 	Updated security/hashcat to 8.0.0 [adam 2026-10-31]
 	Updated devel/py-setuptools-gettext to 0.1.20 [adam 2026-10-31]
+	Updated math/fast_float to 8.3.3 [adam 2026-10-31]
+	Updated devel/blosc to 1.21.7 [adam 2026-10-31]
