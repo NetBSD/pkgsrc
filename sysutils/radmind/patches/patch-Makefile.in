@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile.in,v 1.5 2026/10/31 21:29:00 hauke Exp $
+
+Assuming we want to build with BSD Make, adapt the only incompatible
+command, and straighten out the VERSION handling.
+
+--- Makefile.in.orig 2026-10-31 21:18:58.025155132 +0000 +++
+Makefile.in @@ -105,7 +105,7 @@ all : ${TARGETS}
+ 
+ version.o : version.c
+ 	${CC} ${CFLAGS} \
+-		-DVERSION=\"`cat ${srcdir}/VERSION`\" \
++		-DVERSION=${VERSION} \
+ 		-c ${srcdir}/version.c
+ 
+ openssl_compat.o : openssl_compat.c
+@@ -252,7 +252,7 @@ FRC :
+ libsnet/libsnet.la : FRC
+ 	cd libsnet; ${MAKE}
+ 
+-VERSION=	$(shell date +%Y%m%d%H%M)
++VERSION!=	date +%Y%m%d%H%M
+ DISTDIR=	radmind-${VERSION}
+ 
+ dist : distclean
+@@ -278,7 +278,7 @@ rash : FRC
+ 		-e 's@_RADMIND_DIR@${RADMINDDIR}@g' \
+ 		-e 's@_RADMIND_MAIL_DOMAIN@${RADMIND_MAIL_DOMAIN}@g' \
+ 		-e 's@_RADMIND_COMMANDFILE@${COMMANDFILE}@g' \
+-		-e 's@_RADMIND_VERSION@$(shell cat VERSION)@g' \
++		-e 's@_RADMIND_VERSION@${VERSION}@g' \
+ 		-e 's@_RADMIND_ECHO_PATH@${ECHO}@g' \
+ 		${srcdir}/ra.sh > tmp/ra.sh; 
+ 
