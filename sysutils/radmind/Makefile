@@ -1,35 +1,25 @@
-# $NetBSD: Makefile,v 1.47 2026/02/02 20:23:44 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/10/31 20:45:41 hauke Exp $
 
-DISTNAME=	radmind-1.14.1
-PKGREVISION=	13
+DISTNAME=	radmind-1.15.0
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=radmind/}
+GITHUB_PROJECT=	radmind
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	https://radmind.org/
+HOMEPAGE=	https://github.com/Radmind/
 COMMENT=	Remote file administration and integrity tool
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${RADMINDDIR}
-CONFIGURE_ARGS+=	--enable-profiled=no
 CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
-# XXX configure script checks for path to echo, which pkgsrc does not
-# provide, so we need to side-step {echopath}.
-CONFIGURE_ENV+=		ac_cv_path_echopath=${TOOLS_ECHO:Q}
 
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
 
 .include "../../mk/compiler.mk"
-
-# libsnet uses K&R function declarations
-.if !empty(CC_VERSION:Mclang-1[5-9].*) || !empty(CC_VERSION:Mclang-[2-9][1-9].*)
-CFLAGS+=		-Wno-deprecated-non-prototype
-.endif
-
-MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		all man rash
 RADMINDDIR=		${VARBASE}/radmind

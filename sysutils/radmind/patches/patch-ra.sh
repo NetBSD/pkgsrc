@@ -1,10 +1,12 @@
-$NetBSD: patch-ra.sh,v 1.2 2018/12/18 14:16:18 hauke Exp $
+$NetBSD: patch-ra.sh,v 1.3 2026/10/31 20:45:42 hauke Exp $
 
 Insert pkgsrc-style defaults file
 
---- ra.sh.orig	2010-12-13 03:42:49.000000000 +0000
+echo(1) is a shell built-in these days
+
+--- ra.sh.orig	2026-10-23 00:02:17.000000000 +0000
 +++ ra.sh
-@@ -31,7 +31,7 @@ EDITOR=${EDITOR:-vi}
+@@ -31,13 +31,13 @@ EDITOR=${EDITOR:-vi}
  PAGER=${PAGER:-cat}
  USER=${SUDO_USER:-$USER}
  TMPDIR="${TMPDIR:=/tmp}"
@@ -13,6 +15,13 @@ Insert pkgsrc-style defaults file
  FSDIFFROOT="."
  DEFAULTWORKDIR="/"
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
+ CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
+ MAILDOMAIN="_RADMIND_MAIL_DOMAIN"
+-ECHO="_RADMIND_ECHO_PATH"
++ECHO="echo"
+ VERSION=_RADMIND_VERSION
+ 
+ # variable containing all network-related flags (-w, -h, -p, etc.) 
 @@ -46,7 +46,7 @@ NETOPTS=
  PREAPPLY="_RADMIND_PREAPPLY"
  POSTAPPLY="_RADMIND_POSTAPPLY"
