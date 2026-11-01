@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7530 2026/11/01 21:34:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7531 2026/11/01 21:40:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11249,3 +11249,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libheif to 1.23.7 [wiz 2026-11-01]
 	Updated graphics/openexr to 3.5.3 [wiz 2026-11-01]
 	Updated devel/py-deepmerge to 4.0.0 [wiz 2026-11-01]
+	Updated devel/py-filelock to 4.2.6 [wiz 2026-11-01]
