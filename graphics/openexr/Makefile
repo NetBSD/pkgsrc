@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2026/10/04 15:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/01 21:26:23 wiz Exp $
 
-DISTNAME=	openexr-3.5.2
+DISTNAME=	openexr-3.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PATCHFILES+=	925058c4b80aff5db8cf300bba622914f9a4d349.diff
-PATCH_SITES+=	https://github.com/AcademySoftwareFoundation/openexr/commit/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.openexr.com/
