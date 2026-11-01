@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/11/01 21:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/11/01 21:57:37 wiz Exp $
 
 DISTNAME=	filelock-4.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Platform independent file lock
 LICENSE=	unlicense
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=0.5:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-diff-cover>=10.2:../../misc/py-diff-cover
