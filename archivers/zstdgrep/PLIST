@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/01 13:07:55 wiz Exp $
+bin/zstdgrep
+man/man1/zstdgrep.1
