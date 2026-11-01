@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2026/10/18 13:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2026/11/01 21:45:57 wiz Exp $
 
-DISTNAME=	fonttools-4.67.0
+DISTNAME=	fonttools-4.68.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -19,9 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-zopfli>=0.1.4:../../archivers/py-zopfli
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
-# as of 4.67.0
+# as of 4.68.0
+# 8 failed, 7037 passed, 73 skipped, 2 xfailed, 307 warnings
 # https://github.com/fonttools/fonttools/issues/3660
-# 8 failed, 5601 passed, 72 skipped, 2 xfailed, 307 warnings
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
