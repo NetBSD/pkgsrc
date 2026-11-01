@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/09/02 07:27:05 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/11/01 21:34:22 wiz Exp $
 
-BLAKE2s (deepmerge-3.0.1.tar.gz) = cd7df94a3ab2082b2567b965a02d781a7706827105a96624dea57e620b49dc6b
-SHA512 (deepmerge-3.0.1.tar.gz) = 273ae1d6ee2c63be571f3d310dc1989871d15db78131e1fc841da5840528389783b8bc2a2e121d44a681be04dba336ee838ae1c1ac56f87742de0f899b3a3cd1
-Size (deepmerge-3.0.1.tar.gz) = 22328 bytes
+BLAKE2s (deepmerge-4.0.0.tar.gz) = e54b355904f530a0961496efdff8993da40ae191753be9cdd361dcee3e3bd364
+SHA512 (deepmerge-4.0.0.tar.gz) = b6756737de9acb7104589160eb0aaf89744ed5573bae7505c0215d96f5fc3525ec166a8267cfc584da48e752be24badb0de275f012e8d1464bce6e62ee20bf25
+Size (deepmerge-4.0.0.tar.gz) = 22792 bytes

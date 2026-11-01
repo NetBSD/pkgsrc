@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/09/02 07:27:05 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/01 21:34:22 wiz Exp $
 #
 # Changelogs: https://github.com/toumorokoshi/deepmerge/releases
 
-DISTNAME=	deepmerge-3.0.1
+DISTNAME=	deepmerge-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deepmerge/}
