@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/11/01 10:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/01 21:58:06 wiz Exp $
 
 DISTNAME=	mypy-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	c # for tests
 
-# as of 2.4.0
-# 6 failed, 14416 passed, 408 skipped, 12 xfailed
+# as of 2.4.1
+# 6 failed, 14427 passed, 409 skipped, 12 xfailed
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
