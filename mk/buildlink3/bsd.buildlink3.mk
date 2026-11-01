@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.266 2025/05/03 16:02:45 tnn Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.267 2026/11/01 23:17:04 dholland Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -117,6 +117,13 @@ BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
 # is set to "no" if that package depends on any other packages where
 # USE_BUILTIN.pkg is set to "no".
 #
+# That is: fontconfig depends on freetype2, so a builtin fontconfig is
+# linked to a builtin freetype2. Therefore, if we are using pkgsrc
+# freetype2 and not builtin freetype2, we can't use builtin fontconfig
+# either. Trying will either fail at build time, if we're lucky, or
+# produce runtime nasal demons if not. (Not a hypothetical example:
+# getting broken fontconfig packages was what motivated this logic.)
+#
 
 _stack_:=bot
 _ok_:=yes
@@ -131,10 +138,20 @@ _ok_:=yes
 .  else
      # leaving a package (in the buildlink tree)
 .    if ${USE_BUILTIN.${_pkg_:S/^-//}:Uno:M[Yy][Ee][Ss]}
-       # this package is going to use the builtin version
+       # This package is, so far, going to be the builtin version.
 .      if ${_ok_} != yes
-         # not ok for it to be builtin; force it to pkgsrc
+         # We've seen a non-builtin dependency. That makes it not ok
+         # for this package to be builtin. Force the pkgsrc version.
          USE_BUILTIN.${_pkg_:S/^-//}:=no
+         # If the buildlink prefix is already set, it is pointing to
+         # the builtin version. Clear it; otherwise the buildlink
+         # logic will blindly use it and we'll buildlink the builtin
+         # version regardless of the USE_BUILTIN setting, and then
+         # things break. XXX: this is a hack.
+.        undef BUILDLINK_PREFIX.${_pkg_:S/^-//}
+         # Record what we did. If you're getting unexpected results
+         # from this logic, try make show-var VARNAME=FORCED_PKGSRC or
+         # VARNAME=FORCED_PKGSRC_REASONS.
          FORCED_PKGSRC+=${_pkg_:S/^-//}
          # using += here fails to evaluate ${_ok_} until after the loop
          FORCED_PKGSRC_REASONS:=${FORCED_PKGSRC_REASONS} ${_pkg_:S/^-//}:${_ok_:S/^no,//}
