@@ -1,28 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2025/02/20 08:10:34 adam Exp $
+# $NetBSD: Makefile,v 1.54 2026/11/01 13:07:16 wiz Exp $
 
-DISTNAME=	zstd-1.5.7
-CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+PKGREVISION=	1
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://facebook.github.io/zstd/
+.include "Makefile.common"
+
 COMMENT=	Fast real-time compression algorithm
-LICENSE=	modified-bsd OR gnu-gpl-v2
-
-CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
-
-# 1.4.8
-# ld: ../lib/libzstd.a: error adding symbols: no more archived files
-# ld:../lib/libzstd.a: file format not recognized; treating as linker script
-# ld:../lib/libzstd.a:1: syntax error
-# or
-# ld: ../lib/libzstd.a: error adding symbols: file format not recognized
-# reported as
-# https://github.com/facebook/zstd/issues/2453
-#MAKE_JOBS_SAFE=		no
-
-.include "../../mk/bsd.prefs.mk"
 
 # See HASH and BUILD_DIR in lib/Makefile and programs/Makefile.
 # Set BUILD_DIR so that HASH is not needed and there is no
@@ -34,7 +16,7 @@ MAKE_ENV+=		BUILD_DIR=obj
 MAKE_ENV+=		HASH=${FALSE:Q}
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		ggrep gmake pkg-config
+USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	lib/libzstd.pc.in
 MAKE_FLAGS=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
@@ -60,6 +42,10 @@ MAKE_FLAGS+=		BACKTRACE=0
 LDFLAGS.SunOS+=		-lrt
 
 BUILDLINK_TRANSFORM.Darwin+=	opt:-shared:-dynamiclib
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/zstdgrep
+	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zstdgrep.1
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"

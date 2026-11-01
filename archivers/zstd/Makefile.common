@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2026/11/01 13:07:16 wiz Exp $
+
+DISTNAME=	zstd-1.5.7
+CATEGORIES=	archivers
+MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
+GITHUB_PROJECT=	zstd
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://facebook.github.io/zstd/
+LICENSE=	modified-bsd OR gnu-gpl-v2
+
+PATCHDIR=	${.CURDIR}/../../archivers/zstd/patches
+DISTINFO_FILE=	${.CURDIR}/../../archivers/zstd/distinfo

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2021/01/03 14:55:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/01 13:07:16 wiz Exp $
 bin/unzstd
 bin/zstd
 bin/zstdcat
-bin/zstdgrep
 bin/zstdless
 bin/zstdmt
 include/zdict.h
@@ -16,5 +15,4 @@ lib/pkgconfig/libzstd.pc
 man/man1/unzstd.1
 man/man1/zstd.1
 man/man1/zstdcat.1
-man/man1/zstdgrep.1
 man/man1/zstdless.1
