@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/10/16 19:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/01 10:36:16 adam Exp $
 
-DISTNAME=	pytest_mypy_plugins-4.0.3
+DISTNAME=	pytest_mypy_plugins-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mypy-plugins/}
@@ -11,15 +11,15 @@ COMMENT=	Pytest plugin for writing cmd for mypy plugins
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-mypy>=1.3:../../lang/py-mypy
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-regex>=0:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
