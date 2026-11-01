@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7518 2026/11/01 11:45:13 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7519 2026/11/01 13:08:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11236,3 +11236,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-mypy to 1.1.0 [adam 2026-11-01]
 	Updated devel/py-test-mypy-plugins to 4.1.0 [adam 2026-11-01]
 	Updated mail/dmarc-report-viewer to 2.7.0 [drixter 2026-11-01]
+	Updated archivers/zstd to 1.5.7nb1 [wiz 2026-11-01]

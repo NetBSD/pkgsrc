@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28263 2026/11/01 11:45:13 drixter Exp $
+$NetBSD: TODO,v 1.28264 2026/11/01 13:08:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o emerillon-0.1.90
 	o endless-sky-0.10.2
 	o enigma-1.30
-	o enlightenment-0.27.1
+	o enlightenment-0.28.0
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-extensions-3.2.0
