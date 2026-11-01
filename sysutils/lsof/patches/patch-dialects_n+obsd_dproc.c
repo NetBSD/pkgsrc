@@ -1,4 +1,4 @@
-$NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
+$NetBSD: patch-dialects_n+obsd_dproc.c,v 1.3 2026/11/01 05:18:02 taca Exp $
 
 * Various build fixes for NetBSD.
 * Do not include _STABLE, _RC, etc. suffixes in version comparison.
@@ -39,7 +39,17 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  
  _PROTOTYPE(static void enter_vn_text,(KA_T va, int *n));
  _PROTOTYPE(static void get_kernel_access,(void));
-@@ -81,6 +108,24 @@ ckkv(d, er, ev, ea)
+@@ -67,6 +94,9 @@ ckkv(d, er, ev, ea)
+ 	size_t l;
+ 	int m[2];
+ 	char v[64];
++#ifdef __NetBSD__
++	char tmp_er[64];
++#endif
+ 
+ 	if (Fwarn)
+ 	    return;
+@@ -81,6 +111,23 @@ ckkv(d, er, ev, ea)
  		Pn, strerror(errno));
  	    Exit(1);
  	}
@@ -50,7 +60,6 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
 + */
 +	{
 +	    char *vp;
-+ 	    char tmp_er[64];
 +	    vp = strchr(v, '_');
 +	    if (vp != NULL)
 +		*vp = '\0';
@@ -64,7 +73,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  /*
   * Warn if the actual and expected releases don't match.
   */
-@@ -152,7 +197,7 @@ gather_proc_info()
+@@ -152,7 +199,7 @@ gather_proc_info()
  	struct filedesc fd;
  	int i, nf;
  	MALLOC_S nb;
@@ -73,7 +82,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  	static int ofbb = 0;
  	short pss, sf;
  	int px;
-@@ -179,6 +224,10 @@ gather_proc_info()
+@@ -179,6 +226,10 @@ gather_proc_info()
  	struct kinfo_proc *p;
  #endif	/* defined(HASKVMGETPROC2) */
  
@@ -84,7 +93,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  /*
   * Read the process table.
   */
-@@ -218,7 +267,14 @@ gather_proc_info()
+@@ -218,7 +269,14 @@ gather_proc_info()
  	    if (!p->P_FD
  	    ||  kread((KA_T)p->P_FD, (char *)&fd, sizeof(fd)))
  		continue;
@@ -100,7 +109,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  		continue;
  
  #if	defined(HASCWDINFO)
-@@ -278,14 +334,14 @@ gather_proc_info()
+@@ -278,14 +336,14 @@ gather_proc_info()
  	/*
  	 * Read open file structure pointers.
  	 */
@@ -119,7 +128,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  		if (!ofb) {
  		    (void) fprintf(stderr, "%s: PID %d, no file * space\n",
  			Pn, p->P_PID);
-@@ -293,7 +349,7 @@ gather_proc_info()
+@@ -293,7 +351,7 @@ gather_proc_info()
  		}
  		ofbb = nb;
  	    }
@@ -128,7 +137,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  		continue;
  
  #if	defined(HASFSTRUCT)
-@@ -311,8 +367,10 @@ gather_proc_info()
+@@ -311,8 +369,10 @@ gather_proc_info()
  		    }
  		    pofb = nb;
  		}
@@ -139,7 +148,7 @@ $NetBSD: patch-dialects_n+obsd_dproc.c,v 1.2 2026/10/29 20:59:17 taca Exp $
  	    }
  #endif	/* defined(HASFSTRUCT) */
  
-@@ -321,8 +379,20 @@ gather_proc_info()
+@@ -321,8 +381,20 @@ gather_proc_info()
  	 */
  	    for (i = 0; i < nf; i++) {
  		if (ofb[i]) {
