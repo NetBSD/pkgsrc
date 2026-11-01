@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2026/10/12 11:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.44 2026/11/01 22:35:35 wiz Exp $
 
 # NB: pydantic expresses an exact dependency on pydantic-core.  While
 # unfortunate, it is actually true, and pydantic with non-matching
 # versions of pydantic-core fail to build matrix-synapse.
 # https://github.com/pydantic/pydantic/issues/12189#issuecomment-3227083571
-DISTNAME=	pydantic-2.14.1
+DISTNAME=	pydantic-2.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
 # We must express the exact dependency from pyproject.toml with
 # respect to upstream's version, but allow for possible nbN versions.
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.50.1<2.51:../../devel/py-pydantic-core
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.50.2<2.51:../../devel/py-pydantic-core
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.16.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.4:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0:../../converters/py-cloudpickle
@@ -33,16 +33,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=4.0.0:../../devel/py-test-benchmar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-examples>=0:../../devel/py-test-examples
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine>=0:../../time/py-time-machine
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-run-parallel>=0.3.1:../../devel/py-test-run-parallel
 
 USE_LANGUAGES=	# none
 
-# TODO: import cloudpickle and test-examples
-pre-test:
-	${RM} -f ${WRKSRC}/tests/test_docs.py ${WRKSRC}/tests/test_pickle.py
+# as of 2.14.2
+# 6480 passed, 242 skipped, 28 xfailed
 
-# test status
-# 2 errors
+# needs non-existent 'docs' directory
+pre-test:
+	${RM} -f ${WRKSRC}/tests/test_docs.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
