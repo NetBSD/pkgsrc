@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2026/10/07 11:02:28 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.3 2026/11/01 09:15:16 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip

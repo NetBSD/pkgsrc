@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/10/07 11:02:28 drixter Exp $
+$NetBSD: distinfo,v 1.3 2026/11/01 09:15:16 drixter Exp $
 
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
 SHA512 (github.com__burnt_sushi_toml_@v_v1.5.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
@@ -306,9 +306,9 @@ Size (go.uber.org_multierr_@v_v1.9.0.mod) = 260 bytes
 BLAKE2s (go.uber.org_multierr_@v_v1.9.0.zip) = 8acb6291609fbd053c364c7ddee65b4f45aefab402693dd34a1d3c5809f055c3
 SHA512 (go.uber.org_multierr_@v_v1.9.0.zip) = 1b83caaab2c6a9a34e24821131b334f2859740ac8f7ff42012f830dacf31ddf1dffb3dc9d1413497c57d51d2269555861025ffb34fa1f78a7b3401bd52ba8b84
 Size (go.uber.org_multierr_@v_v1.9.0.zip) = 21580 bytes
-BLAKE2s (gobgp-4.10.0.tar.gz) = 3e2f2c35c4e7e11d906c539876734621475ffc1256f14d7cd328ed3f4297d608
-SHA512 (gobgp-4.10.0.tar.gz) = 78e7c77466a72e938b12019bf5c8de1565bebed53a59e89e9419d7c75711b695f4106a2dec939f200d04e9998a9f92bb2a5e369c09d94692ef16bf21d1ad6c8f
-Size (gobgp-4.10.0.tar.gz) = 1549876 bytes
+BLAKE2s (gobgp-4.11.0.tar.gz) = b806d11239fbd99bdf18498986b7b35e817b81296fb010236c50407a36dd59ff
+SHA512 (gobgp-4.11.0.tar.gz) = 315d3e00b683612d7f145b4e117988154ef44c2aacaf27028e911c8906c65def965a2c65a720feaf7448c02fe04d4508b437804ea32239c2057bf8cae1681456
+Size (gobgp-4.11.0.tar.gz) = 1698313 bytes
 BLAKE2s (golang.org_x_net_@v_v0.58.0.mod) = 4c2f0015fefbfce3e197fe9ee14bf400f608f5bbcf9042a7ee5d9ea92cd7fcf2
 SHA512 (golang.org_x_net_@v_v0.58.0.mod) = 167a4bd626cf5b0f64598f73cc7bb1981dd9feda7cf2ec1dac2c915e6d1ffcd24788db10276e1e00a1ce862530d464caffe3fe1f67517735c0e66c3dbbc9490e
 Size (golang.org_x_net_@v_v0.58.0.mod) = 157 bytes
