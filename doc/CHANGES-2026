@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7525 2026/11/01 20:22:57 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7526 2026/11/01 21:13:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11244,3 +11244,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/libmldsa version 20261029 [agc 2026-11-01]
 	Updated devel/py-nanobind to 3.1.0nb1 [wiz 2026-11-01]
 	Updated print/py-pikepdf to 10.13.0.post1nb1 [wiz 2026-11-01]
+	Updated converters/fribidi to 1.0.18 [wiz 2026-11-01]
