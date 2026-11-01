@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:07:12 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/11/01 17:52:34 christos Exp $
 
 BLAKE2s (xl2tpd-20171013.zip) = 6df247633b9b7323b48d021970f41b91314c6e3dcdc206c880536eea5889e68b
 SHA512 (xl2tpd-20171013.zip) = 95868ebcea53f55ae0c3edae6b0a5904d8aa13a046b8e0c0eb06eb1eb656ee16245aa002694dfb080e1295ceea27bc6c147d4ef7702b038925bcfdac522d7e91
@@ -12,4 +12,4 @@ SHA1 (patch-misc.h) = faa5bf97b2fbc853e867177686eb324e7341d341
 SHA1 (patch-network.c) = 5d5a9cce0f780a24489caebc25d87a09d937a084
 SHA1 (patch-osport.h) = 370d7b5c617022d4ca6d87abcd595327dcfd0cfe
 SHA1 (patch-pty.c) = 3284ab1ea19d3ccce459bdb4742a7f33e8e557fe
-SHA1 (patch-xl2tpd.c) = 9e94b1b0e6f6cd99c11353d1d3df37e307d6ac39
+SHA1 (patch-xl2tpd.c) = afc506ef428584b4f500dbcd33644643bd2bee49
