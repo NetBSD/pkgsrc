@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/10/21 16:00:17 hauke Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/01 11:38:36 hauke Exp $
 
 DISTNAME=	viewvc-1.3.0
 CATEGORIES=	www devel
@@ -37,7 +37,9 @@ CONF_FILES+=		${EGDIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
 .endfor
 
 PLIST_SUBST+=		VIEWVCDIR=${VIEWVCDIR:Q}
+PLIST_SUBST+=		PYTHON_VERSION=${PYTHON_VERSION:Q}
 
+PRINT_PLIST_AWK+=	/lib\// { sub(/${PYTHON_VERSION}/, "$${PYTHON_VERSION}") }
 PRINT_PLIST_AWK+=	{ gsub(/^${VIEWVCDIR:S|/|\\/|g}/, "$${VIEWVCDIR}"); }
 
 .include "options.mk"
@@ -57,6 +59,7 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 SUBST_FILES.conf=	conf/viewvc.conf.dist
 SUBST_VARS.conf=	PREFIX PKG_SYSCONFBASE PKG_SYSCONFDIR
 SUBST_VARS.conf+=	VIEWVCDIR DIFF RCSPATH CVSGRAPH_OPT
+
 
 CHECK_PORTABILITY_SKIP=	tools/make-release
 
