@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.49 2026/04/29 22:53:23 gdt Exp $
+$NetBSD: distinfo,v 1.50 2026/11/01 15:13:59 gdt Exp $
 
-BLAKE2s (postgis-3.6.3.tar.gz) = 80f63ea981e8512f6d285d5028e1717948172b0d5284d0d1f75a3de494f0d5e6
-SHA512 (postgis-3.6.3.tar.gz) = edf22989c564e93514d06bc8743ea3494b20e8ebd7891ab22a32c6230592b848f3d2bdece11243960187086b243870e2c28398d5449f774fe562cd0389de2ff6
-Size (postgis-3.6.3.tar.gz) = 16283593 bytes
+BLAKE2s (postgis-3.7.0.tar.gz) = 6a73cfcd487d6a356581b8258546ca8491ecf2007dde9932801406c21d72fe33
+SHA512 (postgis-3.7.0.tar.gz) = 6cd9522ed56acf6da89ccb3db0cbcc4d532cd33c37e842c79549620c68689b84bd1e1edf6a601bc400f2c7e3400defdd31948e5823f001f9fdd4dccda4c0b598
+Size (postgis-3.7.0.tar.gz) = 15991154 bytes

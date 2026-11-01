@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2026/10/01 22:45:05 gdt Exp $
+# $NetBSD: Makefile,v 1.208 2026/11/01 15:13:59 gdt Exp $
 
 # Note that the PKGPATH remains "postgresql-postgis2", added during
 # postgis 1->2 migration, due to inertia and the pain of renaming.  So
@@ -8,12 +8,11 @@
 # The version number is split because part of the version number ends
 # up in file names.  Alpha/beta/rc are cleanly flavors of minor and
 # thus do not need accomodating.
-MAJOR=		3.6
-MINOR=		3
+MAJOR=		3.7
+MINOR=		0
 VERSION=	${MAJOR}.${MINOR}
 DISTNAME=	postgis-${VERSION}
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	11
 #PKGREVISION=
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
@@ -23,7 +22,6 @@ HOMEPAGE=	https://postgis.net/
 COMMENT=	Spatial database capabilities for PostgreSQL
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=		postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
 CONFLICTS=		postgis-[0-9]*
@@ -35,16 +33,13 @@ CONFLICTS=		postgis-[0-9]*
 # 2. Check 2nd make, and file bug about anything that happens.  Check xsltproc
 #    in particular.
 
-USE_GCC_RUNTIME=		yes
-USE_LANGUAGES=			c c++
-USE_LIBTOOL=			yes
-USE_TOOLS+=			gsed gmake lex pax perl pkg-config
-GNU_CONFIGURE=			yes
-CONFIGURE_ARGS+=		--enable-rpath
-CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
-
-# This isn't an option, but could be.
-CONFIGURE_ARGS+=	--with-address-standardizer
+USE_GCC_RUNTIME=	yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gsed gmake lex pax perl pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
 
 BUILD_TARGET=		all docs
 INSTALL_TARGET=		install docs-install
@@ -76,6 +71,10 @@ TEST_ENV+=		PGUSER=pgsql
 .include "../../devel/cunit/buildlink3.mk"
 
 # DOC DEPENDS
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+
 CONFIGURE_ARGS+=	-with-xsldir=${PREFIX}/share/xsl/docbook
 # By default xsltproc downloads DTDs.  postgis tells it not to, but
 # the dependencies are not packaged.  The timing option, not needed,
@@ -83,13 +82,6 @@ CONFIGURE_ARGS+=	-with-xsldir=${PREFIX}/share/xsl/docbook
 # defined/non-empty incorrect test in postgis.
 MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 
-# These are really all TOOL_DEPENDS.
-# \todo Report upstream; they are not mentioned in README.postgis.
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-
-# address standardizer (separate for possible future option)
-.include "../../devel/pcre2/buildlink3.mk"
 
 # MISSING DEPEENDS
 # "GNU gettext 0.14" for the loader
@@ -100,6 +92,8 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 # gtk 2.2.0, for GUI version of shp2pgsql
 
 # NORMAL DEPENDS
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.geos+=	geos>=3.8
