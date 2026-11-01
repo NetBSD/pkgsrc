@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7514 2026/11/01 09:23:25 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7515 2026/11/01 09:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11226,3 +11226,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/uriparser to 1.0.3 [wiz 2026-11-01]
 	Updated net/gobgp to 4.11.0 [drixter 2026-11-01]
 	Updated textproc/ruby-commonmarker23 to 2.3.2nb3 [wiz 2026-11-01]
+	Updated math/ggml to 0.28.0 [wiz 2026-11-01]
