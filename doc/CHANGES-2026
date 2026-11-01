@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7516 2026/11/01 10:26:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7517 2026/11/01 10:36:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11231,3 +11231,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-rapidjson to 1.26 [adam 2026-11-01]
 	Updated devel/py-cachetools to 7.2.8 [adam 2026-11-01]
 	Updated www/py-vcrpy to 9.4.0 [adam 2026-11-01]
+	Updated finance/py-stripe to 16.1.0 [adam 2026-11-01]
+	Updated lang/py-mypy to 2.4.1 [adam 2026-11-01]
+	Updated devel/py-test-mypy to 1.1.0 [adam 2026-11-01]
+	Updated devel/py-test-mypy-plugins to 4.1.0 [adam 2026-11-01]
