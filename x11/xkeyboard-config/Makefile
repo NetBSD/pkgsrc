@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2026/06/22 19:27:18 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/01 21:41:57 wiz Exp $
 
-DISTNAME=		xkeyboard-config-2.48
+DISTNAME=		xkeyboard-config-xkeyboard-config-2.49
+PKGNAME=		${DISTNAME:S/xkeyboard-config-x/x/}
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
-EXTRACT_SUFX=		.tar.xz
+MASTER_SITES=		https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/archive/xkeyboard-config-${PKGVERSION_NOREV}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.freedesktop.org/wiki/Software/XKeyboardConfig

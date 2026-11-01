@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/08/11 10:01:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/11/01 21:41:57 wiz Exp $
 share/X11/xkb
 share/locale/af/LC_MESSAGES/xkeyboard-config-2.mo
 share/locale/af/LC_MESSAGES/xkeyboard-config.mo
@@ -195,6 +195,7 @@ share/xkeyboard-config-2/symbols/ba
 share/xkeyboard-config-2/symbols/bd
 share/xkeyboard-config-2/symbols/be
 share/xkeyboard-config-2/symbols/bg
+share/xkeyboard-config-2/symbols/blackberry_vndr/key2/us
 share/xkeyboard-config-2/symbols/bqn
 share/xkeyboard-config-2/symbols/br
 share/xkeyboard-config-2/symbols/brai
@@ -288,6 +289,7 @@ share/xkeyboard-config-2/symbols/macintosh_vndr/se
 share/xkeyboard-config-2/symbols/macintosh_vndr/us
 share/xkeyboard-config-2/symbols/md
 share/xkeyboard-config-2/symbols/me
+share/xkeyboard-config-2/symbols/meta
 share/xkeyboard-config-2/symbols/mk
 share/xkeyboard-config-2/symbols/ml
 share/xkeyboard-config-2/symbols/mm
