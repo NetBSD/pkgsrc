@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/09/29 09:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/01 20:19:25 wiz Exp $
 
 DISTNAME=	nanobind-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nanobind/}
 
