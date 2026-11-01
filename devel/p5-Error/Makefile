@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2026/07/16 19:02:22 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/01 07:55:19 wiz Exp $
 
-DISTNAME=	Error-0.17030
+DISTNAME=	Error-0.17031
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Error/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Error
