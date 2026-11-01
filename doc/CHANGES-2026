@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7534 2026/11/01 21:47:38 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7535 2026/11/01 22:00:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11253,3 +11253,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/xkeyboard-config to 2.49 [wiz 2026-11-01]
 	Updated fonts/py-fonttools to 4.68.0 [wiz 2026-11-01]
 	Updated devel/py-google-api-core to 2.43.2 [wiz 2026-11-01]
+	Updated misc/py-platformdirs to 4.14.3 [wiz 2026-11-01]
