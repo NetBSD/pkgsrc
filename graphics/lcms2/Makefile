@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/05/12 16:09:35 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/01 00:48:09 gdt Exp $
 
 DISTNAME=	lcms2-2.19.1
 CATEGORIES=	graphics
@@ -28,6 +28,21 @@ TEST_TARGET=		check
 # lcms does not need zlib, but will look for it and link it to tifficc
 # if present.  Therefore, we don't enjoin lcms from finding zlib, but
 # don't include it via bl3.
+
+.include "../../mk/bsd.prefs.mk"
+
+# lcms2's suballocator defaults to sizeof(void *) alignment; 32-bit
+# SPARC needs 8 for doubles (Ghostscript's bundled lcms2mt already
+# does this for sparc).  Perhaps other 32-bit arches need this, and if
+# so someone(tm) could add a define in mk someplace for "double needs
+# more than int alignment, specifically N" and we could use it here;
+# this isn't really about lcms.
+#
+# Upstream declined to add a compile-time conditional to fix this:
+#   https://github.com/mm2/Little-CMS/pull/635
+.if ${MACHINE_ARCH} == "sparc"
+CPPFLAGS+=     -DCMS_PTR_ALIGNMENT=8
+.endif
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
