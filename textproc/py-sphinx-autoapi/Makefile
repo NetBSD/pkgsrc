@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2026/10/16 19:44:20 adam Exp $
+# $NetBSD: Makefile,v 1.34 2026/11/01 22:02:07 wiz Exp $
 
-DISTNAME=	sphinx_autoapi-3.8.1
+DISTNAME=	sphinx_autoapi-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_autoapi/}
@@ -26,8 +26,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-sphinx
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 
-# as of 3.8.1
-# 1 failed, 329 passed, 4 errors
+# as of 3.9.0
+# 343 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
