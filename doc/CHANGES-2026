@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7521 2026/11/01 15:05:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7522 2026/11/01 15:14:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11240,3 +11240,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added archivers/zstdgrep version 1.5.7 [wiz 2026-11-01]
 	Updated graphics/lerc to 4.3.0 [adam 2026-11-01]
 	Updated devel/patchelf to 0.19.3 [adam 2026-11-01]
+	Updated databases/postgresql-postgis2.update to 3.7.0 [gdt 2026-11-01]
