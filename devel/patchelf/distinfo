@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/10/02 04:55:13 adam Exp $
+$NetBSD: distinfo,v 1.19 2026/11/01 15:05:04 adam Exp $
 
-BLAKE2s (patchelf-0.19.2.tar.bz2) = 94469cdc089ce0b99fe57c2a21064bb318841b1fa9bd562f4952a95e8a2b1a78
-SHA512 (patchelf-0.19.2.tar.bz2) = 2d7b76ca8b953f03f9e73830d6c4b178cadefcd54385b58be458dc4fc90e3c9af66d4fe551143fa229de17629bb67d055168ed28c3025be12fb684078822239e
-Size (patchelf-0.19.2.tar.bz2) = 444307 bytes
+BLAKE2s (patchelf-0.19.3.tar.bz2) = 1b8cf6105a4a0c72963b69569951fd7c700c8f6844455affe6469bca00f2c17a
+SHA512 (patchelf-0.19.3.tar.bz2) = 16ff5113b6941a326f570f8dadee40bfd975add8b1475bb00e6eb90bf341029fd61baeaf30a630a19500792ae79fb07b5a9b18d630f6734423f4ebca647e0c21
+Size (patchelf-0.19.3.tar.bz2) = 444978 bytes
