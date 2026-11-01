@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7504 2026/11/01 05:18:34 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7505 2026/11/01 07:53:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11216,3 +11216,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/libagcre version 20261020 [agc 2026-10-31]
 	Added textproc/agcre version 20261020 [agc 2026-10-31]
 	Updated sysutils/lsof to 4.91nb12 [taca 2026-11-01]
+	Updated converters/p5-Sereal to 6.003 [wiz 2026-11-01]
