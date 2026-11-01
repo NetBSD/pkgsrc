@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2026/09/12 20:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2026/11/01 07:58:46 wiz Exp $
 
-DISTNAME=	DateTime-1.67
+DISTNAME=	DateTime-1.68
 PKGNAME=	p5-${DISTNAME}00
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DR/DROLSKY/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/dist/DateTime
 COMMENT=	Perl module for date/time sets and ranges
 LICENSE=	artistic-2.0
 
-DEPENDS+=	p5-DateTime-Locale>=1.06:../../time/p5-DateTime-Locale
+DEPENDS+=	p5-DateTime-Locale>=1.47:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-DateTime-TimeZone>=2.02:../../time/p5-DateTime-TimeZone
 DEPENDS+=	p5-Math-Round-[0-9]*:../../math/p5-Math-Round
 DEPENDS+=	p5-Specio>=0.50:../../devel/p5-Specio
