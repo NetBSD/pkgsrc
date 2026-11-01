@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7507 2026/11/01 07:54:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7508 2026/11/01 07:55:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11219,3 +11219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal to 6.003 [wiz 2026-11-01]
 	Updated converters/p5-Sereal-Decoder to 6.003 [wiz 2026-11-01]
 	Updated converters/p5-Sereal-Encoder to 6.003 [wiz 2026-11-01]
+	Updated devel/p5-Error to 0.17031 [wiz 2026-11-01]
