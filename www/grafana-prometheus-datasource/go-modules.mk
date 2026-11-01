@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2026/10/26 18:03:22 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.5 2026/11/01 21:15:32 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!azure!a!d/microsoft-authentication-library-for-go/@v/v1.10.1.mod
 GO_MODULE_FILES+=	github.com/!azure!a!d/microsoft-authentication-library-for-go/@v/v1.10.1.zip
@@ -6,8 +6,8 @@ GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.6.mod
-GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.6.zip
+GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.7.mod
+GO_MODULE_FILES+=	github.com/andybalholm/brotli/@v/v1.2.7.zip
 GO_MODULE_FILES+=	github.com/apache/arrow-go/v18/@v/v18.8.0.mod
 GO_MODULE_FILES+=	github.com/apache/arrow-go/v18/@v/v18.8.0.zip
 GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.mod
