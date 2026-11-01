@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28275 2026/11/01 22:00:18 wiz Exp $
+$NetBSD: TODO,v 1.28276 2026/11/01 22:02:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pydantic-core-2.50.2
 	o py-simpletal-5.1
 	o py-sphinx-9.2.0 [wip; drops Python 3.12 support]
-	o py-sphinx-autoapi-3.9.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-textual-8.2.5

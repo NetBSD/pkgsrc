@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7535 2026/11/01 22:00:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7536 2026/11/01 22:02:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11254,3 +11254,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/py-fonttools to 4.68.0 [wiz 2026-11-01]
 	Updated devel/py-google-api-core to 2.43.2 [wiz 2026-11-01]
 	Updated misc/py-platformdirs to 4.14.3 [wiz 2026-11-01]
+	Updated textproc/py-sphinx-autoapi to 3.9.0 [wiz 2026-11-01]
