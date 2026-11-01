@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/04/16 21:08:28 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/11/01 10:34:31 adam Exp $
 
-BLAKE2s (pytest_mypy-1.0.1.tar.gz) = 332cd7644aa59783b41632274a090597d8c94bf774d3af681d3a190fc93f5f32
-SHA512 (pytest_mypy-1.0.1.tar.gz) = e8f27018a1f2ba7ce36435f22ae44257069176e93eb5475219112a79998fd6746109107eafce34be42a9b80d7d57ee0a1acda0b091d2a872477a7ae18d456839
-Size (pytest_mypy-1.0.1.tar.gz) = 15975 bytes
+BLAKE2s (pytest_mypy-1.1.0.tar.gz) = 3d53e09e7e73a73f1e87071bd3c2cf05718f0e006370559d340d7bd6dca82b87
+SHA512 (pytest_mypy-1.1.0.tar.gz) = a9ef2f46cb2d0c62c7c93b35c9c34295522968747e2a733928683b2e02956e126ac843322093f00b14f4e1f2ce87942cb90164c00b021b3fb7e08df92207725d
+Size (pytest_mypy-1.1.0.tar.gz) = 16666 bytes
