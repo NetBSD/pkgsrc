@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2026/10/27 11:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1035 2026/11/01 18:07:18 agc Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -213,6 +213,7 @@ SUBDIR+=	libkleo
 SUBDIR+=	libksba
 SUBDIR+=	libmcrypt
 SUBDIR+=	libmerkletree
+SUBDIR+=	libmldsa
 SUBDIR+=	libmultigest
 SUBDIR+=	libnetpgpverify
 SUBDIR+=	libnitrokey
