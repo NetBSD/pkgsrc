@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2026/09/07 05:41:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2026/11/01 22:04:22 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/urwid/__init__.py
 ${PYSITELIB}/urwid/__init__.pyc
 ${PYSITELIB}/urwid/__init__.pyo
+${PYSITELIB}/urwid/_deprecation.py
+${PYSITELIB}/urwid/_deprecation.pyc
+${PYSITELIB}/urwid/_deprecation.pyo
+${PYSITELIB}/urwid/_selectors.py
+${PYSITELIB}/urwid/_selectors.pyc
+${PYSITELIB}/urwid/_selectors.pyo
 ${PYSITELIB}/urwid/ansi_parser.py
 ${PYSITELIB}/urwid/ansi_parser.pyc
 ${PYSITELIB}/urwid/ansi_parser.pyo
@@ -103,6 +109,9 @@ ${PYSITELIB}/urwid/split_repr.pyo
 ${PYSITELIB}/urwid/str_util.py
 ${PYSITELIB}/urwid/str_util.pyc
 ${PYSITELIB}/urwid/str_util.pyo
+${PYSITELIB}/urwid/testing.py
+${PYSITELIB}/urwid/testing.pyc
+${PYSITELIB}/urwid/testing.pyo
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
@@ -151,6 +160,9 @@ ${PYSITELIB}/urwid/widget/deque_walker.pyo
 ${PYSITELIB}/urwid/widget/divider.py
 ${PYSITELIB}/urwid/widget/divider.pyc
 ${PYSITELIB}/urwid/widget/divider.pyo
+${PYSITELIB}/urwid/widget/drop_down.py
+${PYSITELIB}/urwid/widget/drop_down.pyc
+${PYSITELIB}/urwid/widget/drop_down.pyo
 ${PYSITELIB}/urwid/widget/edit.py
 ${PYSITELIB}/urwid/widget/edit.pyc
 ${PYSITELIB}/urwid/widget/edit.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/10/07 05:29:07 adam Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/01 22:04:22 wiz Exp $
 
-DISTNAME=	urwid-4.2.5
+DISTNAME=	urwid-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -25,8 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zmq>=0:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
-# as of 4.2.4
-# 131 passed, 5 warnings
+# as of 5.0.1
+# 165 passed, 1 skipped, 6 warnings
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
