@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28276 2026/11/01 22:02:17 wiz Exp $
+$NetBSD: TODO,v 1.28277 2026/11/01 22:04:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-msgpack-1.2.4
-	o py-mypy-2.4.1
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-pdm-2.26.8
@@ -1159,7 +1158,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-torch-2.10
 	o py-uliweb-0.6
-	o py-urwid-5.0.1
 	o py-wat-0.6.0
 	o py-websockets-17.4
 	o py-yubiauth-0.3.10
