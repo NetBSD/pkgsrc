@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7503 2026/11/01 01:16:34 agc Exp $
+$NetBSD: CHANGES-2026,v 1.7504 2026/11/01 05:18:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11215,3 +11215,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/asl-doc to 1.42.315 [hauke 2026-10-31]
 	Added devel/libagcre version 20261020 [agc 2026-10-31]
 	Added textproc/agcre version 20261020 [agc 2026-10-31]
+	Updated sysutils/lsof to 4.91nb12 [taca 2026-11-01]
