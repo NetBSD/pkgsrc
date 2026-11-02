@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2024/09/09 19:20:52 pin Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/02 16:03:40 pin Exp $
 
-DISTNAME=	please-0.5.6
-PKGNAME=	pleaser-0.5.6
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITLAB:=edneville/}
-GITLAB_PROJECT=	please
-GITLAB_RELEASE=	v${PKGVERSION_NOREV}
+DISTNAME=		please-0.6.0
+PKGNAME=		pleaser-0.6.0
+CATEGORIES=		security
+MASTER_SITES=		${MASTER_SITE_GITLAB:=edneville/}
+GITLAB_PROJECT=		please
+GITLAB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/edneville/please/
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/please-v0.5.6-3ca6938f73ab0885dc442139d7bdf06f13a94105
+WRKSRC=			${WRKDIR}/please-v0.6.0-4815936c6075f1eb8344414ee735d016f93e6e15
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -33,6 +33,9 @@ SPECIAL_PERMS+=		bin/pleaseedit ${SETUID_ROOT_PERMS}
 
 AUTO_MKDIRS=		yes
 
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.clang}/lib
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/please \
 		${DESTDIR}${PREFIX}/bin
@@ -48,5 +51,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/
 
 .include "../../lang/rust/cargo.mk"
+BUILDLINK_API_DEPENDS.cairo+=	clang>=21
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
