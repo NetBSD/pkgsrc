@@ -1,6 +1,7 @@
 DEFINE_TEST(test_0)
 DEFINE_TEST(test_basic)
 DEFINE_TEST(test_copy)
+DEFINE_TEST(test_copy_data_warning)
 DEFINE_TEST(test_crlf_mtree)
 DEFINE_TEST(test_edit_pathname_hardlink)
 DEFINE_TEST(test_empty_mtree)

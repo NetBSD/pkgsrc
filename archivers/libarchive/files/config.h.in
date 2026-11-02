@@ -727,7 +727,7 @@
 /* Define to 1 if you have the 'richacl' library (-lrichacl). */
 #undef HAVE_LIBRICHACL
 
-/* Define to 1 if you have the 'xml2' library (-lxml2). */
+/* Define to 1 if you have the 'xml2' library. */
 #undef HAVE_LIBXML2
 
 /* Define to 1 if you have the 'xmllite' library. */
@@ -1552,9 +1552,6 @@
 
 /* Define to '0x0502' for Windows Server 2003 APIs. */
 #undef _WIN32_WINNT
-
-/* Internal macro for sanity checks */
-#undef __LIBARCHIVE_CONFIG_H_INCLUDED
 
 /* Define to 1 on platforms where this makes time_t a 64-bit type. */
 #undef __MINGW_USE_VC2005_COMPAT
