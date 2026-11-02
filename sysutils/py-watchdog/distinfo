@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/11/04 18:17:06 wiz Exp $
+$NetBSD: distinfo,v 1.17 2026/11/02 11:21:10 adam Exp $
 
-BLAKE2s (watchdog-6.0.0.tar.gz) = 53f01b5f294ed50b93ecd944db9ba435cfd862aad7124bb3c527614abfd9f41b
-SHA512 (watchdog-6.0.0.tar.gz) = a248e05b538a894a00e38dabbc0cc7490bb1a87689aa14aac5835f611136fcf6f1e3bd45a6ca4f10991ffabd9264c72f981f4619bd77eb8baf297d015975d57f
-Size (watchdog-6.0.0.tar.gz) = 131220 bytes
+BLAKE2s (watchdog-7.0.0.tar.gz) = 072ef1d27b905861e2099c7aab837dbcf8eb93c69e46c6442b459803a4583e84
+SHA512 (watchdog-7.0.0.tar.gz) = c73cec75556a25b5d73a03c2c0eeb4ded07bcf80bc196d1dc345bfa1544f8be467c4ada562e65a48d15b95a8997108a8103ff92de3d9edb8b320217933c8e05f
+Size (watchdog-7.0.0.tar.gz) = 208550 bytes

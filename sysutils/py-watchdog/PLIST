@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/13 18:29:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/02 11:21:10 adam Exp $
 bin/watchmedo-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/watchdog/__init__.py
 ${PYSITELIB}/watchdog/__init__.pyc
 ${PYSITELIB}/watchdog/__init__.pyo
+${PYSITELIB}/watchdog/__main__.py
+${PYSITELIB}/watchdog/__main__.pyc
+${PYSITELIB}/watchdog/__main__.pyo
 ${PYSITELIB}/watchdog/events.py
 ${PYSITELIB}/watchdog/events.pyc
 ${PYSITELIB}/watchdog/events.pyo
@@ -29,12 +32,12 @@ ${PYSITELIB}/watchdog/observers/fsevents2.pyo
 ${PYSITELIB}/watchdog/observers/inotify.py
 ${PYSITELIB}/watchdog/observers/inotify.pyc
 ${PYSITELIB}/watchdog/observers/inotify.pyo
-${PYSITELIB}/watchdog/observers/inotify_buffer.py
-${PYSITELIB}/watchdog/observers/inotify_buffer.pyc
-${PYSITELIB}/watchdog/observers/inotify_buffer.pyo
 ${PYSITELIB}/watchdog/observers/inotify_c.py
 ${PYSITELIB}/watchdog/observers/inotify_c.pyc
 ${PYSITELIB}/watchdog/observers/inotify_c.pyo
+${PYSITELIB}/watchdog/observers/inotify_move_event_grouper.py
+${PYSITELIB}/watchdog/observers/inotify_move_event_grouper.pyc
+${PYSITELIB}/watchdog/observers/inotify_move_event_grouper.pyo
 ${PYSITELIB}/watchdog/observers/kqueue.py
 ${PYSITELIB}/watchdog/observers/kqueue.pyc
 ${PYSITELIB}/watchdog/observers/kqueue.pyo
@@ -54,6 +57,9 @@ ${PYSITELIB}/watchdog/tricks/__init__.pyo
 ${PYSITELIB}/watchdog/utils/__init__.py
 ${PYSITELIB}/watchdog/utils/__init__.pyc
 ${PYSITELIB}/watchdog/utils/__init__.pyo
+${PYSITELIB}/watchdog/utils/backwards_compat.py
+${PYSITELIB}/watchdog/utils/backwards_compat.pyc
+${PYSITELIB}/watchdog/utils/backwards_compat.pyo
 ${PYSITELIB}/watchdog/utils/bricks.py
 ${PYSITELIB}/watchdog/utils/bricks.pyc
 ${PYSITELIB}/watchdog/utils/bricks.pyo
