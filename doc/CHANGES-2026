@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7567 2026/11/02 16:07:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7568 2026/11/02 18:21:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11304,3 +11304,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dua-cli to 3.0.0 [pin 2026-11-02]
 	Updated sysutils/dust to 1.2.7 [pin 2026-11-02]
 	Updated sysutils/onefetch to 3.2.0 [pin 2026-11-02]
+	Updated www/nghttp2 to 1.71.0 [adam 2026-11-02]
+	Updated www/nghttp3 to 1.19.0 [adam 2026-11-02]
+	Updated net/ngtcp2 to 1.26.0 [adam 2026-11-02]
