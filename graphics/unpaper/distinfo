@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/02 19:52:28 wiz Exp $
+
+BLAKE2s (unpaper-7.0.0.tar.xz) = 43744fffacaa08d2507c760c725e1918f1469110cf04984e2444cdfb50837179
+SHA512 (unpaper-7.0.0.tar.xz) = 58da969e773bf16ffee98b96f903ac5347f66d9a93c63bdb9131f5d45f4d7973c09f364ac2f27f8cb61f75de0421c6b01aa248fa9619fbdbde30fcebc76aa484
+Size (unpaper-7.0.0.tar.xz) = 4430572 bytes
+SHA1 (patch-unpaper.c) = e8b25f519ebe4da132edf35f3d203a00f4ce9e8e
