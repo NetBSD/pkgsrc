@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/10/26 10:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/02 19:49:48 wiz Exp $
 
 DISTNAME=		vis-0.9
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 GITHUB_PROJECT=		vis
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		ivan@ivanpollak.com
 HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc
