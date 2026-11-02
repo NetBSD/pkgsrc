@@ -1,9 +1,10 @@
-#	$NetBSD: Makefile,v 1.1 2026/10/14 03:34:55 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2026/11/02 12:08:31 riastradh Exp $
 #
 
 .include "../../mail/dkim-rotate/Makefile.common"
 
 PKGNAME=	${DISTNAME:C/^dkim-rotate-dkim-rotate-/dkim-rotate-base-/}
+PKGREVISION=	1
 
 COMMENT=	Tool for rotation and revocation of DKIM keys
 
@@ -32,12 +33,6 @@ TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 
 TOOLS_PATH.date=	${TOOLBASE}/gnu/bin/date
 TOOLS_PATH.grep=	${TOOLBASE}/gnu/bin/grep
-
-TOOLS_CREATE+=		md5sum
-TOOLS_PATH.md5sum=	${TOOLBASE}/gnu/bin/md5sum
-
-TOOLS_CREATE+=		base64
-TOOLS_SCRIPT.base64=	exec openssl base64 "$$@"
 
 REPLACE_BASH+=		debian/tests/*
 REPLACE_BASH+=		tests/*

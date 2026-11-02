@@ -1,0 +1,31 @@
+$NetBSD: patch-dkim-rotate,v 1.1 2026/11/02 12:08:31 riastradh Exp $
+
+Nix runtime and user-visible dependencies on GNU coreutils:
+
+- Use `openssl dgst -md5 -r' instead of `md5sum'.
+
+- Suggest `openssl base64 -d' instead of `base64 -d' for users to
+  generate the URLs.  (Also works around NetBSD's quirky base64(1).)
+
+- Suggest sed instead of Perl for users to generate the URLs.
+
+--- dkim-rotate.orig	2026-10-14 03:26:28.933524660 +0000
++++ dkim-rotate
+@@ -246,7 +246,7 @@ procedure.  Starting (say) with the DKIM
+ 
+ Calculating the end of the URL can be done with a rune like this:
+ 
+- echo 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ycQ99x3kKz6aUKj' | base64 -d | md5sum | perl -pe 's/ .*//; s#^..#$&/$&#; s/$/.pem/'
++ echo 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ycQ99x3kKz6aUKj' | openssl base64 -d | openssl dgst -md5 -r | sed -e 's/ .*//; s#^..#&/&#; s/$/.pem/'
+ 
+ supposing MIIBIjAN... came from the DKIM selector.
+ 
+@@ -662,7 +662,7 @@ sub generate_key () {
+       chmod 644 new.priv.pem # directory permissions protect (checked)
+       openssl rsa -in new.priv.pem -out new.pub.pem -pubout -outform PEM
+       openssl base64 -a -d -in new.pub.pem -out new.pub.bin
+-      md5sum <new.pub.bin >new.pub.hash
++      openssl dgst -md5 -r <new.pub.bin >new.pub.hash
+       read <new.pub.hash keyname
+       keyname=${keyname%% *}
+       echo $keyname
