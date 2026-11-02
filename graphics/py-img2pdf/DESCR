@@ -1,0 +1,12 @@
+Lossless conversion of raster images to PDF. You should use img2pdf if
+your priorities are (in this order):
+
+  always lossless: the image embedded in the PDF will always have the
+      exact same color information for every pixel as the input
+
+  small: if possible, the difference in filesize between the input
+      image and the output PDF will only be the overhead of the PDF container
+      itself
+
+  fast: if possible, the input image is just pasted into the PDF
+      document as-is without any CPU hungry re-encoding of the pixel data

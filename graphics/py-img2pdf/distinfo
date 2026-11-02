@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/02 20:23:53 wiz Exp $
+
+BLAKE2s (img2pdf-0.6.3.tar.gz) = e21fda7b4129d7112de22105c82030b8684ce8d04c95dc55a71fb26d2d5247b5
+SHA512 (img2pdf-0.6.3.tar.gz) = d9d2bfb078765e43727d89f0c9723f9a3cd1ffea745f657540de6e301f287c3fd4a1c9efb9233ee99e3e6d337c701e75ff20908190d0f3ae39c5c32debeaedb2
+Size (img2pdf-0.6.3.tar.gz) = 120350 bytes

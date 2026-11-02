@@ -1,0 +1,2 @@
+bin/img2pdf @PREFIX@/bin/img2pdf@PYVERSSUFFIX@
+bin/img2pdf-gui @PREFIX@/bin/img2pdf-gui@PYVERSSUFFIX@
