@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2026/10/23 08:09:11 adam Exp $
+# $NetBSD: Makefile,v 1.105 2026/11/02 09:22:18 adam Exp $
 
-DISTNAME=	libtorrent-0.16.26
+DISTNAME=	libtorrent-0.16.27
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,10 +10,9 @@ HOMEPAGE=	https://github.com/rakshasa/libtorrent
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
 # Upstream does not document c++20, but configure.ac insists on it.
 USE_CXX_FEATURES=	c++20
-
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
 GNU_CONFIGURE=		yes
