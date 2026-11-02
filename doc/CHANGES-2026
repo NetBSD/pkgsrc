@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7565 2026/11/02 16:05:53 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7566 2026/11/02 16:06:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11302,3 +11302,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/pleaser to 0.6.0 [pin 2026-11-02]
 	Updated sysutils/broot to 1.62.0 [pin 2026-11-02]
 	Updated sysutils/dua-cli to 3.0.0 [pin 2026-11-02]
+	Updated sysutils/dust to 1.2.7 [pin 2026-11-02]
