@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: opendkim.sh,v 1.3 2011/06/17 13:49:35 pettai Exp $
+# $NetBSD: opendkim.sh,v 1.4 2026/11/02 14:55:21 riastradh Exp $
 #
 # PROVIDE: opendkim
 # REQUIRE: DAEMON
@@ -17,6 +17,8 @@ pidfile="@VARBASE@/run/opendkim/${name}.pid"
 command_args="-P ${pidfile} -l -x @PKG_SYSCONFDIR@/opendkim.conf -u @DKIM_USER@:@DKIM_GROUP@"
 required_files="@PKG_SYSCONFDIR@/opendkim.conf"
 start_precmd="opendkim_precmd"
+extra_commands="reload"
+sig_reload=USR1
 
 opendkim_precmd()
 {
