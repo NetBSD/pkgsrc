@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2026/05/20 06:32:56 adam Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/02 08:41:31 adam Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
@@ -8,19 +8,20 @@ COMMENT=	Framework for writing networked applications
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-automat>=24.8.0:../../devel/py-automat
+DEPENDS+=	${PYPKGPREFIX}-automat>=24.8.1:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
-DEPENDS+=	${PYPKGPREFIX}-incremental>=24.7.0:../../devel/py-incremental
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5:../../devel/py-zope.interface
+DEPENDS+=	${PYPKGPREFIX}-incremental>=24.7.1:../../devel/py-incremental
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.2:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=8:../../devel/py-zope.interface
 # tls
-DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=25.3.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-service_identity>=21.1.0:../../security/py-service_identity
 # conch
-PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
+DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.2.0:../../security/py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=46:../../security/py-cryptography
 # serial
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.0:../../comms/py-serial
 # http2
@@ -40,5 +41,4 @@ PY_RENAME_BINARIES=	cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist t
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

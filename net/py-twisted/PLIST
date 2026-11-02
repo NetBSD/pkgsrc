@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2026/05/20 06:32:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/11/02 08:41:31 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -706,6 +706,9 @@ ${PYSITELIB}/twisted/internet/test/test_epollreactor.pyo
 ${PYSITELIB}/twisted/internet/test/test_error.py
 ${PYSITELIB}/twisted/internet/test/test_error.pyc
 ${PYSITELIB}/twisted/internet/test/test_error.pyo
+${PYSITELIB}/twisted/internet/test/test_fakes.py
+${PYSITELIB}/twisted/internet/test/test_fakes.pyc
+${PYSITELIB}/twisted/internet/test/test_fakes.pyo
 ${PYSITELIB}/twisted/internet/test/test_fdset.py
 ${PYSITELIB}/twisted/internet/test/test_fdset.pyc
 ${PYSITELIB}/twisted/internet/test/test_fdset.pyo
