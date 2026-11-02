@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7541 2026/11/01 22:36:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7542 2026/11/02 06:49:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11260,3 +11260,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.0.74 [wiz 2026-11-01]
 	Updated devel/py-pydantic-core to 2.50.2 [wiz 2026-11-01]
 	Updated devel/py-pydantic to 2.14.2 [wiz 2026-11-01]
+	Updated audio/fluidsynth to 2.6.2 [adam 2026-11-02]
+	Updated graphics/libansilove to 1.4.4 [adam 2026-11-02]
+	Updated audio/libmikmod to 3.3.16 [adam 2026-11-02]
+	Updated graphics/ansilove to 4.2.3 [adam 2026-11-02]
