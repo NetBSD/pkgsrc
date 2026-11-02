@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2026/05/10 08:35:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2026/11/02 09:26:23 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -128,6 +128,7 @@ ${PYSITELIB}/lexicon/_private/providers/googleclouddns.pyo
 ${PYSITELIB}/lexicon/_private/providers/gransy.py
 ${PYSITELIB}/lexicon/_private/providers/gransy.pyc
 ${PYSITELIB}/lexicon/_private/providers/gransy.pyo
+${PYSITELIB}/lexicon/_private/providers/gransy.wsdl
 ${PYSITELIB}/lexicon/_private/providers/gratisdns.py
 ${PYSITELIB}/lexicon/_private/providers/gratisdns.pyc
 ${PYSITELIB}/lexicon/_private/providers/gratisdns.pyo
