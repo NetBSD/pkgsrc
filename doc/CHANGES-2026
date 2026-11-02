@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7559 2026/11/02 12:37:53 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7560 2026/11/02 13:55:23 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11295,3 +11295,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-gitpython to 3.2.1 [adam 2026-11-02]
 	Updated www/py-django-import-export to 4.4.4 [adam 2026-11-02]
 	Updated www/chromium to 156.0.8078.79 [kikadf 2026-11-02]
+	Updated chat/toxcore to 0.2.24 [ktnb 2026-11-02]
