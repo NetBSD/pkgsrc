@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/07/27 14:43:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/11/02 18:19:56 adam Exp $
 include/nghttp3/nghttp3.h
 include/nghttp3/version.h
 lib/cmake/nghttp3/nghttp3Config.cmake
@@ -8,6 +8,6 @@ lib/cmake/nghttp3/nghttp3Targets.cmake
 lib/libnghttp3.a
 lib/libnghttp3.so
 lib/libnghttp3.so.9
-lib/libnghttp3.so.9.9.0
+lib/libnghttp3.so.9.9.1
 lib/pkgconfig/libnghttp3.pc
 share/doc/nghttp3/README.rst
