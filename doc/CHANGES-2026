@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7569 2026/11/02 18:24:22 maya Exp $
+$NetBSD: CHANGES-2026,v 1.7570 2026/11/02 18:38:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11240,7 +11240,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Added archivers/zstdgrep version 1.5.7 [wiz 2026-11-01]
 	Updated graphics/lerc to 4.3.0 [adam 2026-11-01]
 	Updated devel/patchelf to 0.19.3 [adam 2026-11-01]
-	Updated databases/postgresql-postgis2.update to 3.7.0 [gdt 2026-11-01]
+	Updated databases/postgresql-postgis2 to 3.7.0 [gdt 2026-11-01]
 	Added security/libmldsa version 20261029 [agc 2026-11-01]
 	Updated devel/py-nanobind to 3.1.0nb1 [wiz 2026-11-01]
 	Updated print/py-pikepdf to 10.13.0.post1nb1 [wiz 2026-11-01]
