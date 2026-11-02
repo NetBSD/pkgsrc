@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/10/08 13:25:34 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/11/02 12:31:09 adam Exp $
 
-BLAKE2s (soapy-sdr-0.8.1.tar.gz) = 420129e9a97076e4a22073a611583639415abbf27551cf10bf46aa259ab368a9
-SHA512 (soapy-sdr-0.8.1.tar.gz) = 50c8f1652bf9ca09215f9c4115175427ca7b5338add7591e31ca0e627093c94b73e7cf7f84fa71ff419cc010d3c1263931506c728bbaa00413a7915d56a87787
-Size (soapy-sdr-0.8.1.tar.gz) = 131252 bytes
-SHA1 (patch-CMakeLists.txt) = dab106e5312908faaf0e31a1ee8ed3702178a350
+BLAKE2s (soapy-sdr-0.9.0.tar.gz) = a587b3539f9d05819342d1d6e5c2d0c1ef8e31b5d64471cc03a06022bfa36233
+SHA512 (soapy-sdr-0.9.0.tar.gz) = f9069e9a823c4892b7f20af30e102bcacadc2ca75978833b52bd5b26d636af8c1cbbf84ac95828683fc5d768b2f0619b1ced137f1f84fa384d1df9a5b06608b8
+Size (soapy-sdr-0.9.0.tar.gz) = 240603 bytes
+SHA1 (patch-CMakeLists.txt) = ecff4839227b79825b21086e6146a09932d1de8a

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/09/27 09:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/02 12:31:09 adam Exp $
 
-DISTNAME=	soapy-sdr-0.8.1
-PKGREVISION=	1
+DISTNAME=	soapy-sdr-0.9.0
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pothosware/}
 GITHUB_PROJECT=	SoapySDR
@@ -12,13 +11,14 @@ HOMEPAGE=	https://github.com/pothosware/SoapySDR/wiki
 COMMENT=	Vendor and platform neutral SDR support library
 LICENSE=	boost-license
 
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config
+USE_CXX_FEATURES+=	c++11
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		pkg-config
 
 .include "../../devel/cmake/build.mk"
 # Do not use /lib64.  \todo File upstream bug.
 CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_LUAJIT=OFF
 
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/08 21:44:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/02 12:31:09 adam Exp $
 bin/SoapySDRUtil
 include/SoapySDR/Config.h
 include/SoapySDR/Config.hpp
@@ -25,7 +25,7 @@ include/SoapySDR/Version.h
 include/SoapySDR/Version.hpp
 lib/libSoapySDR.so
 lib/libSoapySDR.so.${PKGVERSION}
-lib/libSoapySDR.so.0.8
+lib/libSoapySDR.so.0.9
 lib/pkgconfig/SoapySDR.pc
 man/man1/SoapySDRUtil.1
 share/cmake/SoapySDR/SoapySDRConfig.cmake
