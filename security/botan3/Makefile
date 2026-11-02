@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/08/24 08:42:29 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/02 15:10:52 nros Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -12,7 +12,6 @@ HAS_CONFIGURE=		yes
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
-GCC_REQD+=		11
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -57,14 +56,7 @@ CONFIGURE_ARGS+=	--cpu=arm64
 CONFIGURE_ARGS+=	--cpu=arm32
 .endif
 
-# NetBSD does not support getauxval
-# https://github.com/randombit/botan/issues/4733
-# can be removed when updating to 3.6.2+
-CONFIGURE_ARGS.NetBSD+=	--without-os-feature=auxinfo
-
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
-
-LDFLAGS.SunOS+=	-lnsl -lsocket
 
 TEST_TARGET=	check
 
