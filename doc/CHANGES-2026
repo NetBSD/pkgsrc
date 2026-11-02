@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7570 2026/11/02 18:38:41 leot Exp $
+$NetBSD: CHANGES-2026,v 1.7571 2026/11/02 19:52:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11308,3 +11308,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/nghttp3 to 1.19.0 [adam 2026-11-02]
 	Updated net/ngtcp2 to 1.26.0 [adam 2026-11-02]
 	Updated net/wpa_supplicant to 2.12 [fly 2026-11-02]
+	Added graphics/unpaper version 7.0.0 [wiz 2026-11-02]
