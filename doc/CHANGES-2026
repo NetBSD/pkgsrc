@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7545 2026/11/02 07:01:55 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7546 2026/11/02 07:11:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11267,3 +11267,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/ruby-sequel to 5.110.0 [taca 2026-11-02]
 	Updated devel/ruby-anonymous_loader to 0.1.5 [taca 2026-11-02]
 	Updated devel/ruby-version_gem to 1.1.17 [taca 2026-11-02]
+	Updated security/ruby-auth-sanitizer to 0.2.5 [taca 2026-11-02]
