@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.115 2026/10/14 08:35:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.116 2026/11/02 16:04:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -82,7 +82,6 @@ CARGO_CRATE_DEPENDS+=	crossterm-0.29.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.7
-CARGO_CRATE_DEPENDS+=	custom_error-1.9.2
 CARGO_CRATE_DEPENDS+=	dashmap-6.2.1
 CARGO_CRATE_DEPENDS+=	data-url-0.3.2
 CARGO_CRATE_DEPENDS+=	defmt-0.3.100
@@ -96,6 +95,7 @@ CARGO_CRATE_DEPENDS+=	deser-hjson-2.2.6
 CARGO_CRATE_DEPENDS+=	digest-0.10.7
 CARGO_CRATE_DEPENDS+=	directories-4.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
+CARGO_CRATE_DEPENDS+=	doctest-file-1.1.1
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
 CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	either-1.18.0
@@ -210,6 +210,7 @@ CARGO_CRATE_DEPENDS+=	indexmap-2.14.2
 CARGO_CRATE_DEPENDS+=	inotify-0.11.5
 CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.8
 CARGO_CRATE_DEPENDS+=	interpolate_name-0.2.4
+CARGO_CRATE_DEPENDS+=	interprocess-2.4.4
 CARGO_CRATE_DEPENDS+=	io-kit-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	is_executable-1.0.6
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
@@ -334,6 +335,7 @@ CARGO_CRATE_DEPENDS+=	rayon-1.12.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.13.0
 CARGO_CRATE_DEPENDS+=	read-fonts-0.41.0
 CARGO_CRATE_DEPENDS+=	reborrow-0.5.5
+CARGO_CRATE_DEPENDS+=	recvmsg-1.0.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.18
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.6
 CARGO_CRATE_DEPENDS+=	ref-cast-1.0.27
@@ -438,6 +440,7 @@ CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.129
 CARGO_CRATE_DEPENDS+=	weezl-0.1.12
 CARGO_CRATE_DEPENDS+=	which-4.4.2
 CARGO_CRATE_DEPENDS+=	wide-1.7.1
+CARGO_CRATE_DEPENDS+=	widestring-1.2.1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.11
