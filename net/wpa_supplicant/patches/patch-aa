@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2013/03/24 14:17:31 rodent Exp $
+$NetBSD: patch-aa,v 1.5 2026/11/02 18:23:56 maya Exp $
 
 Add NetBSD support.
 
---- src/l2_packet/l2_packet_freebsd.c.orig	2010-09-07 15:43:39.000000000 +0000
+--- src/l2_packet/l2_packet_freebsd.c.orig	2026-08-07 13:10:53.000000000 +0000
 +++ src/l2_packet/l2_packet_freebsd.c
-@@ -14,9 +14,12 @@
+@@ -8,9 +8,12 @@
   */
  
  #include "includes.h"
@@ -18,3 +18,13 @@ Add NetBSD support.
  #include <pcap.h>
  
  #include <sys/ioctl.h>
+@@ -20,7 +23,9 @@
+ #include <sys/sysctl.h>
+ #endif /* __sun__ */
+ 
++#if __has_include("net/ethernet.h")
+ #include <net/ethernet.h>
++#endif
+ #include <net/if.h>
+ #include <net/if_dl.h>
+ #include <net/route.h>
