@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7542 2026/11/02 06:49:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7543 2026/11/02 06:50:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11264,3 +11264,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/libansilove to 1.4.4 [adam 2026-11-02]
 	Updated audio/libmikmod to 3.3.16 [adam 2026-11-02]
 	Updated graphics/ansilove to 4.2.3 [adam 2026-11-02]
+	Updated databases/ruby-sequel to 5.110.0 [taca 2026-11-02]
