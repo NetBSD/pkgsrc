@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2026/09/29 10:30:10 adam Exp $
+$NetBSD: distinfo,v 1.18 2026/11/02 09:15:05 adam Exp $
 
-BLAKE2s (fuse-utils-1.5.0.tar.gz) = 4fba40dd526907fc84669405b285c590ff9e1c4cfdfd44445e554a31ea812cf3
-SHA512 (fuse-utils-1.5.0.tar.gz) = 8fca9a003f43c7b667cc88161846cc542f08a28f8b1ca19e6fa7a4ca53dbcf3cf538a463c3298130d01d755a48640964cfb53b8b46b09da9331fe929cc145b02
-Size (fuse-utils-1.5.0.tar.gz) = 567891 bytes
+BLAKE2s (fuse-utils-1.5.1.tar.gz) = 01185830acf3bb31243df1ef8771e22ca9a20f8b22c529a8d3d2b41bfc646a9e
+SHA512 (fuse-utils-1.5.1.tar.gz) = ff16d48c82e5a4a159c0ab9848a88a0b24cb4198337c0cea18edc4164d544a7cd902130ef1c3d84ed41d776063adca37a147e1d380aa8227185f77236a804a96
+Size (fuse-utils-1.5.1.tar.gz) = 588661 bytes
 SHA1 (patch-configure) = bfcc95f0a558f0d10037c9ac125021171f641b67
