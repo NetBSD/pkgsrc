@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7572 2026/11/02 20:24:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7573 2026/11/02 22:29:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11310,3 +11310,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wpa_supplicant to 2.12 [fly 2026-11-02]
 	Added graphics/unpaper version 7.0.0 [wiz 2026-11-02]
 	Added graphics/py-img2pdf version 0.6.3 [wiz 2026-11-02]
+	Updated www/py-django-reversion to 6.5.1 [wiz 2026-11-02]
