@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/04/23 14:55:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/11/02 11:22:31 adam Exp $
 
-BLAKE2s (texttable-1.7.0.tar.gz) = bb4e93a4e735140fb1774146398f1c9a0236fe64b68bdfe3a931672212adfb92
-SHA512 (texttable-1.7.0.tar.gz) = 427ab262301bc38066c4a54e8ef10163579b5d6210aeb003a729dbaef8badd347a2d01f9ea1d9d136611fc104a3a8cf59a7a9acac6f76f64f9575dc6e5ab4313
-Size (texttable-1.7.0.tar.gz) = 12831 bytes
+BLAKE2s (texttable-1.7.2.tar.gz) = 55407f5f31e631cb927db27bc16e1412d6b9edd645c7144039b1bb51e2b242be
+SHA512 (texttable-1.7.2.tar.gz) = 90a8b9de169a2069899e738ab280238eb7a8e20ddd05c0faa36ed755ad3f5de4fff8bea2e9a52e988ecf705b2d6b6396dd6d84b17aad8f4d0d6d629ac4335752
+Size (texttable-1.7.2.tar.gz) = 15400 bytes
