@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7556 2026/11/02 11:22:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7557 2026/11/02 12:11:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11289,3 +11289,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/bsdtar to 3.8.11 [adam 2026-11-02]
 	Updated sysutils/py-watchdog to 7.0.0 [adam 2026-11-02]
 	Updated textproc/py-texttable to 1.7.2 [adam 2026-11-02]
+	Updated devel/cargo-flamegraph to 0.6.15 [adam 2026-11-02]
+	Updated textproc/expat to 2.10.0 [adam 2026-11-02]
