@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2001/08/24 11:37:08 abs Exp $
+$NetBSD: patch-ad,v 1.5.196.1 2026/11/02 19:53:38 bsiegert Exp $
+
+* Allow redefine ETHERCODES.
 
 --- arpwatch.h.orig	Fri Aug 24 12:26:38 2001
 +++ arpwatch.h
