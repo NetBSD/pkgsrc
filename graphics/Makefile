@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1135 2026/11/02 19:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.1136 2026/11/02 20:24:20 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -507,6 +507,7 @@ SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
 SUBDIR+=	py-imageio
 SUBDIR+=	py-imagesize
+SUBDIR+=	py-img2pdf
 SUBDIR+=	py-japanize-matplotlib
 SUBDIR+=	py-leather
 SUBDIR+=	py-matplotlib
