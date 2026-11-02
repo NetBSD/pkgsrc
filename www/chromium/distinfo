@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.68 2026/10/29 12:58:26 kikadf Exp $
+$NetBSD: distinfo,v 1.69 2026/11/02 12:33:21 kikadf Exp $
 
-BLAKE2s (chromium-156.0.8078.73-lite.tar.xz) = 6f54bdbd25232b4e5d13fec3a1064fabce61df0afe82d64e1bdc13958018657a
-SHA512 (chromium-156.0.8078.73-lite.tar.xz) = da6b9cf4615cc7872674ea41430d61ae04ce63b0d2e5ef7bde5d86631f4a8e9d294c5b59e9ed303161f6b35ffe43d7875f8ea4c77a994a6e88b6f32d154b2739
-Size (chromium-156.0.8078.73-lite.tar.xz) = 2009545268 bytes
+BLAKE2s (chromium-156.0.8078.79-lite.tar.xz) = b3af8fa53e9571660a383682cfda3191d3e022c9fc34f8d1be435166e85a9f4b
+SHA512 (chromium-156.0.8078.79-lite.tar.xz) = 4b228254812038f1f652d5b320408e369e0fc333d3e96a306618b98d04e1a5bf72cda11dcf103111fd65ce5d0c784bb15bc97f80773e8a630ba0693399cbd514
+Size (chromium-156.0.8078.79-lite.tar.xz) = 2009554628 bytes
 BLAKE2s (evanw-esbuild-v0.28.2.tar.gz) = 0a4c994d6121c5b7d2615c7ad1759a8e76822c61a1c632349e6cb03feb3b0b36
 SHA512 (evanw-esbuild-v0.28.2.tar.gz) = c4cb2ef32e147ebc5099ab501ebcb5fb4e3f16a143a0fd1f9b74efb90e0c24309ab61b236b6e6cf86a235187368bed660ae19403bbda9a84328157fe45ffc5b8
 Size (evanw-esbuild-v0.28.2.tar.gz) = 2008796 bytes
