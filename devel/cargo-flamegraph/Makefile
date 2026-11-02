@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/08/12 12:52:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/02 12:06:33 adam Exp $
 
-DISTNAME=	cargo-flamegraph-0.6.14
+DISTNAME=	cargo-flamegraph-0.6.15
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flamegraph-rs/}
 GITHUB_PROJECT=	flamegraph
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/flamegraph-rs/flamegraph
 COMMENT=	Rust-powered flamegraph generator
 LICENSE=	apache-2.0 OR mit
 
-RUST_REQ=	1.86.0
+RUST_REQ=	1.88
 
 .include "cargo-depends.mk"
 
