@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/02 09:12:43 wiz Exp $
 
 DISTNAME=	xonsh-0.10.1
 PKGREVISION=	4
@@ -12,7 +12,8 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# ImportError: cannot import name 'Num' from 'ast' (/usr/pkg/lib/python3.15/ast.py)
+PYTHON_VERSIONS_INCOMPATIBLE=	27 314 315
 
 USE_PKG_RESOURCES=	yes
 
