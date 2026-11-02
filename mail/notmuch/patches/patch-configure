@@ -1,12 +1,31 @@
-$NetBSD: patch-configure,v 1.9 2023/10/15 07:33:48 ryoon Exp $
+$NetBSD: patch-configure,v 1.10 2026/11/02 10:15:06 jperkin Exp $
 
 * Select GnuPG binary
 * Don't let CDPATH affect the build
 * Ignore errors for gpgme tests, can be affected by running gpg-agent
+* Avoid sanitizer test hangs using Apple clang-1700.0.13.5.
 
---- configure.orig	2023-09-12 11:37:38.000000000 +0000
+--- configure.orig	2026-01-31 04:53:45.000000000 +0000
 +++ configure
-@@ -537,7 +537,7 @@ EOF
+@@ -373,7 +373,16 @@ dependencies are available:
+ EOF
+ 
+ errors=0
+-printf "int main(void){return 0;}\n" > minimal.c
++cat >minimal.c <<EOF
++#if defined(__apple_build_version__) && \
++    __apple_build_version__ >= 17000000 && \
++    __apple_build_version__ < 17000100
++# if __has_feature(address_sanitizer) || __has_feature(thread_sanitizer)
++#  error Sanitizer runtime hangs on newer macOS with this Apple Clang build
++# endif
++#endif
++int main(void){return 0;}
++EOF
+ 
+ printf "Sanity checking C compilation environment... "
+ test_cmdline="${CC} ${CFLAGS} ${CPPFLAGS} minimal.c ${LDFLAGS} -o minimal"
+@@ -537,7 +546,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing session-key support.\n'
  	errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _check_session_keys.c ${gmime_ldflags} -o _check_session_keys \
@@ -15,7 +34,7 @@ $NetBSD: patch-configure,v 1.9 2023/10/15 07:33:48 ryoon Exp $
  	   && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
  	   && [ $SESSION_KEY = 9:496A0B6D15A5E7BA762FB8E5FE6DEE421D4D9BBFCEAD1CDD0CCF636D07ADE621 ]
      then
-@@ -635,7 +635,6 @@ is later than 3.2.7, which should have f
+@@ -635,7 +644,6 @@ is later than 3.2.7, which should have f
  Please follow up on https://github.com/jstedfast/gmime/pull/90 with
  more details.
  EOF
@@ -23,7 +42,7 @@ $NetBSD: patch-configure,v 1.9 2023/10/15 07:33:48 ryoon Exp $
  	    fi
  	fi
  	printf "Checking whether GMime emits email addresses with angle brackets... "
-@@ -703,7 +702,7 @@ EOF
+@@ -703,7 +711,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing signature verification when decrypting with session keys.\n'
  	errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _verify_sig_with_session_key.c ${gmime_ldflags} -o _verify_sig_with_session_key \
@@ -32,7 +51,7 @@ $NetBSD: patch-configure,v 1.9 2023/10/15 07:33:48 ryoon Exp $
  	    && rm -f ${TEMP_GPG}/private-keys-v1.d/*.key
      then
  	if GNUPGHOME=${TEMP_GPG} ./_verify_sig_with_session_key; then
-@@ -1655,7 +1654,7 @@ EOF
+@@ -1655,7 +1663,7 @@ EOF
      if [ $WITH_PYTHON_DOCS = "1" ]; then
  	echo "tags.add('WITH_PYTHON')"
      fi
