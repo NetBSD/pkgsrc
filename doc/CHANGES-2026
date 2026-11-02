@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7553 2026/11/02 09:29:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7554 2026/11/02 10:22:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11283,3 +11283,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-lexicon to 3.26.0 [adam 2026-11-02]
 	Updated textproc/py-unicode-segmentation-rs to 1.0.1 [adam 2026-11-02]
 	Updated devel/py-test-codspeed to 5.0.4 [adam 2026-11-02]
+	Added finance/py-ckzg version 2.1.8 [adam 2026-11-02]
+	Updated finance/py-eth-account to 0.14.0 [adam 2026-11-02]
