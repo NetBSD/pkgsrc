@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7552 2026/11/02 09:22:45 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7553 2026/11/02 09:29:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11280,3 +11280,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated emulators/fuse-emulator-utils to 1.5.1 [adam 2026-11-02]
 	Updated net/libtorrent to 0.16.27 [adam 2026-11-02]
 	Updated net/rtorrent to 0.16.27 [adam 2026-11-02]
+	Updated net/py-lexicon to 3.26.0 [adam 2026-11-02]
+	Updated textproc/py-unicode-segmentation-rs to 1.0.1 [adam 2026-11-02]
+	Updated devel/py-test-codspeed to 5.0.4 [adam 2026-11-02]
