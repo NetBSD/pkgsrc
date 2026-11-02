@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/02 10:20:50 adam Exp $
+
+BLAKE2s (ckzg-2.1.8.tar.gz) = e0449248f9b0b6483fe3cb1af5359aa60ce7d4fa392cd65aec807ff5d8cc8328
+SHA512 (ckzg-2.1.8.tar.gz) = 0cf5d0779b81447de5a6c2c72a6feef7bb1e90ead120530e059964be7f6705caa7644b1c7e29a8ac8042d2cb46959730cd7de75c9e72cc8be993b965ddbbc360
+Size (ckzg-2.1.8.tar.gz) = 1128002 bytes
+SHA1 (patch-src_Makefile) = 924431b0c0602497ef49ac21a01c1b1ea2021aba
