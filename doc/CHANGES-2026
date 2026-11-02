@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7566 2026/11/02 16:06:49 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7567 2026/11/02 16:07:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11303,3 +11303,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/broot to 1.62.0 [pin 2026-11-02]
 	Updated sysutils/dua-cli to 3.0.0 [pin 2026-11-02]
 	Updated sysutils/dust to 1.2.7 [pin 2026-11-02]
+	Updated sysutils/onefetch to 3.2.0 [pin 2026-11-02]
