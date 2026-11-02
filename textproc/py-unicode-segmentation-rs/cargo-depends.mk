@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/10/26 05:41:08 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/11/02 09:27:42 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.191
@@ -16,4 +16,4 @@ CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.5
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.27
 CARGO_CRATE_DEPENDS+=	unicode-linebreak-0.1.5
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.13.3
-CARGO_CRATE_DEPENDS+=	unicode-width-0.2.2
+CARGO_CRATE_DEPENDS+=	unicode-width-0.2.3

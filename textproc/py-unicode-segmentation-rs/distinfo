@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2026/10/26 05:41:08 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/11/02 09:27:42 adam Exp $
 
 BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
 SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
@@ -48,9 +48,9 @@ Size (unicode-linebreak-0.1.5.crate) = 15324 bytes
 BLAKE2s (unicode-segmentation-1.13.3.crate) = 8d78f739508b85c310aefcbefe867417eeb280bc8568ec201eb0703b09f62a30
 SHA512 (unicode-segmentation-1.13.3.crate) = 927f3d2662c40213c6d824c410e3559f180fba5736abdea566ad9f3ed357c5a82f84f63e7fb89c6b18dfba2903d2dc43663b79d0b9f7672a42926e0ba49c85d1
 Size (unicode-segmentation-1.13.3.crate) = 112325 bytes
-BLAKE2s (unicode-width-0.2.2.crate) = 770d8dc1245680ff01e5014e31cd470f221eded531e5ffdd84823bcd5ceaf62a
-SHA512 (unicode-width-0.2.2.crate) = a0ff6ccc1d154e5a100808d3109fe30afa048c3ff402f0a0de34dbff2d58a7403903002185b33bee7b04dcb578c9dea66225a8697f3cd997205680ae3abce965
-Size (unicode-width-0.2.2.crate) = 282768 bytes
-BLAKE2s (unicode_segmentation_rs-1.0.0.tar.gz) = a3dcc89ed13b27ba0da0d9e9596ac14f73629b8a176154ff211641e0409de04c
-SHA512 (unicode_segmentation_rs-1.0.0.tar.gz) = 0e707dbca4da659061b864c04c096bbf5685684a41c4ed46b080912711e38ea85c0033d38d68e84f7063325ff279e62753d6e13c04235d603b077b96c93b36a7
-Size (unicode_segmentation_rs-1.0.0.tar.gz) = 34796 bytes
+BLAKE2s (unicode-width-0.2.3.crate) = 7fa8ea7e4f1dd2bd33d973bf903dad576a25ee0d377490c3ce1dadd195b7767f
+SHA512 (unicode-width-0.2.3.crate) = 82fb56231b524820de9adfe4340a0388bc72c43532b17e113b49e8f4f7264177f382762b0f21017205a4ae3a7ef2d3c01457ce29b076ed9ec249b26969ca2e4e
+Size (unicode-width-0.2.3.crate) = 209503 bytes
+BLAKE2s (unicode_segmentation_rs-1.0.1.tar.gz) = fd117fa34b6f3d5ce7b5c063ae60dd0b4a3b418b1e4549c2ccdc315fd9ca36ef
+SHA512 (unicode_segmentation_rs-1.0.1.tar.gz) = 288be19cc97a6990a38567c3d48c881624b8215483bdf85f05260d76a20a1d5b415693184d19fd523128de31db6c54e2a5c53473dd95d2af68c476f4f5cf1e2c
+Size (unicode_segmentation_rs-1.0.1.tar.gz) = 34795 bytes
