@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2026/05/24 05:45:29 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/11/02 09:28:58 adam Exp $
 
-BLAKE2s (pytest_codspeed-5.0.3.tar.gz) = 541e490e21156f8041e570df33d538ff3ff7dbb26240d403fa32d4f3dd5e46ea
-SHA512 (pytest_codspeed-5.0.3.tar.gz) = ffbb2cfedba89da8ec55a9a345daf6d1af8822e9309fdd75f2dfa35299585e6f369ccc5550cfa86506df0ff85d8882cc6c09a7406c65a026056ee6c32998cb48
-Size (pytest_codspeed-5.0.3.tar.gz) = 324571 bytes
+BLAKE2s (pytest_codspeed-5.0.4.tar.gz) = 2e040c34be2fab9ea39599c1dfaf3a5ebb7179a1c47ef2090e2dc96e5198240b
+SHA512 (pytest_codspeed-5.0.4.tar.gz) = 314fc6b3c21e2f02c3de71161b6a58eb5dacab26f2322a090de0246869c7a547cdc9b83b81fa5f281424516cb1e551e7548c619fba0aa22c6e8dc656e64fc907
+Size (pytest_codspeed-5.0.4.tar.gz) = 325049 bytes
