@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7563 2026/11/02 16:04:00 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7564 2026/11/02 16:04:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11300,3 +11300,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/palemoon to 35.0.3 [nia 2026-11-02]
 	Updated devel/cargo-bundle-licenses to 5.0.0 [pin 2026-11-02]
 	Updated security/pleaser to 0.6.0 [pin 2026-11-02]
+	Updated sysutils/broot to 1.62.0 [pin 2026-11-02]
