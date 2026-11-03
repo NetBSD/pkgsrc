@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7595 2026/11/03 19:28:48 bouyer Exp $
+$NetBSD: CHANGES-2026,v 1.7596 2026/11/03 19:40:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11346,3 +11346,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xenstoretools to 20261103 [bouyer 2026-11-03]
 	Updated sysutils/xenkernel418 to 20261103 [bouyer 2026-11-03]
 	Updated sysutils/xentools418 to 20261103 [bouyer 2026-11-03]
+	Updated www/php-nextcloud to 33.0.10 [gdt 2026-11-03]
