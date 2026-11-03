@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.5 2026/10/25 09:17:42 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.6 2026/11/03 06:55:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -61,4 +61,17 @@ archivers/brotli: security fix
 lang/nodejs: security fix
 lang/nodejs22: security fix
 lang/nodejs24: security fix
+
+Pullup ticket #7323 - requested by kim
+www/nginx: security fix
+
+Pullup ticket #7324 - requested by kim
+net/unbound: security fix
+
+Pullup ticket #7325 - requested by taca
+net/arpwatch: NetBSD build fix
+
+Pullup ticket #7326 - requested by gutteridge
+www/firefox153: security fix
+www/firefox153-l10n: dependent update
 
