@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/10/24 12:51:11 hauke Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/03 06:33:12 wiz Exp $
 
 DISTNAME=	muse-3.20
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,7 +18,10 @@ INFO_FILES=	yes
 MAKE_FLAGS+=		-I..
 INSTALLATION_DIRS=	share/doc/emacs-muse share/examples/emacs-muse
 
-EMACS_VERSIONS_INCOMPATIBLE=	emacs20
+# xemacs:
+# >>Error occurred processing cgi.el: Cannot open load file: calendar
+# >>Error occurred processing muse-import-xml.el: Cannot open load file: xml
+EMACS_VERSIONS_INCOMPATIBLE=	emacs20 xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 pre-build:
 	sed -e "s,@PREFIX@,${PREFIX}," -e "s,@LISPDIR@,${EMACS_LISPPREFIX}," \
