@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.53 2026/10/19 23:19:36 gutteridge Exp $
+# $NetBSD: builtin.mk,v 1.54 2026/11/03 14:46:31 riastradh Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -193,8 +193,8 @@ openssl-fake-pc:
 	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/libcrypto.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/libcrypto.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
-	if ${TEST} -f $${src}; then \
-		${LN} -sf $${src} $${dst}; \
+	if ${TEST} -f ${_CROSS_DESTDIR:U}$${src}; then \
+		${LN} -sf ${_CROSS_DESTDIR:U}$${src} $${dst}; \
 	else \
 		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
 		${ECHO} 'exec_prefix=$${prefix}'; \
@@ -212,8 +212,8 @@ openssl-fake-pc:
 	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/libssl.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/libssl.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
-	if ${TEST} -f $${src}; then \
-		${LN} -sf $${src} $${dst}; \
+	if ${TEST} -f ${_CROSS_DESTDIR:U}$${src}; then \
+		${LN} -sf ${_CROSS_DESTDIR:U}$${src} $${dst}; \
 	else \
 		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
 		${ECHO} 'exec_prefix=$${prefix}'; \
@@ -231,8 +231,8 @@ openssl-fake-pc:
 	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/openssl.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/openssl.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
-	if ${TEST} -f $${src}; then \
-		${LN} -sf $${src} $${dst}; \
+	if ${TEST} -f ${_CROSS_DESTDIR:U}$${src}; then \
+		${LN} -sf ${_CROSS_DESTDIR:U}$${src} $${dst}; \
 	else \
 		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
 		${ECHO} 'exec_prefix=$${prefix}'; \
