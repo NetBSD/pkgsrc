@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7579 2026/11/03 14:05:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7580 2026/11/03 14:09:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11325,3 +11325,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/labelnation to 1.233 [gdt 2026-11-03]
 	Updated security/py-joserfc to 1.8.0 [adam 2026-11-03]
 	Updated security/py-authlib to 1.9.3 [adam 2026-11-03]
+	Updated devel/py-coverage to 7.17.1 [adam 2026-11-03]
+	Updated www/py-django-mptt to 0.21.1 [adam 2026-11-03]
