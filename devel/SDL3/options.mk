@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2026/02/02 08:04:05 adam Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/03 23:58:16 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL3
 PKG_SUPPORTED_OPTIONS=		alsa dbus jack opengl libusb pulseaudio x11
@@ -15,8 +15,8 @@ PKG_SUPPORTED_OPTIONS+=		simd
 .endif
 
 .if ${OPSYS} != "Darwin"
-PKG_SUPPORTED_OPTIONS+=		libdrm
-PKG_SUGGESTED_OPTIONS+=		libdrm x11
+PKG_SUPPORTED_OPTIONS+=		opengl libdrm
+PKG_SUGGESTED_OPTIONS+=		opengl libdrm x11
 .endif
 
 .if ${MACHINE_ARCH} == "x86_64"
