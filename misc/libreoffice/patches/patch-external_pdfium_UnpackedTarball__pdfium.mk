@@ -1,12 +1,12 @@
-$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.11 2026/02/09 16:59:59 ryoon Exp $
+$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.12 2026/11/03 16:53:44 ryoon Exp $
 
 * Support pkgsrc and NetBSD
 
---- external/pdfium/UnpackedTarball_pdfium.mk.orig	2026-01-27 21:11:38.000000000 +0000
+--- external/pdfium/UnpackedTarball_pdfium.mk.orig	2026-10-22 10:57:01.000000000 +0000
 +++ external/pdfium/UnpackedTarball_pdfium.mk
-@@ -22,6 +22,8 @@ pdfium_patches += system-fast_float.diff
- 
+@@ -23,6 +23,8 @@ pdfium_patches += system-dragonbox.diff
  pdfium_patches += system-fast_float.diff
+ pdfium_patches += system-dragonbox.diff
  
 +pdfium_patches += pkgsrc.patch.1
 +

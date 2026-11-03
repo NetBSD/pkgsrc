@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2026/09/22 08:33:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.69 2026/11/03 16:53:43 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -5189,7 +5189,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletegradientdi
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletehatchdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletelineenddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletelinestyledialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/queryduplicatedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querynoloadedfiledialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querynosavefiledialog.ui
@@ -6751,6 +6750,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/managedtoolbar.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/placeedit.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/printersetupdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/querydeletedialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/querydialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/restartdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/scrollbars.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/spinfieldcontrol.ui

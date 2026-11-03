@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.396 2026/09/29 06:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.397 2026/11/03 16:53:43 ryoon Exp $
 
-VERREL=		26.8.0
-VERRC=		3
+VERREL=		26.8.2
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -106,7 +105,7 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.4.9-src.tar.gz \
+	mariadb-connector-c-3.4.11-src.tar.gz \
 	rhino-1.7.15.1.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2026-08-08.tar.bz2 \
@@ -120,7 +119,7 @@ MORE_DISTFILES= \
 	lxml-6.1.1.tar.gz \
 	Amiri-1.001.zip \
 	ReemKufi-2.0.zip \
-	pdfium-7681.tar.bz2 \
+	pdfium-8073.tar.bz2 \
 	skia-m147-ad8ecedbfdef9f4ae4b1e73347b6dd56e6637d38.tar.xz \
 	Java-WebSocket-1.6.0.tar.gz \
 	NotoSans-v2.015.zip \
