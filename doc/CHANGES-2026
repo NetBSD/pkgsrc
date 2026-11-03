@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7576 2026/11/03 09:27:49 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7577 2026/11/03 10:09:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11320,3 +11320,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-anyio to 4.16.0 [adam 2026-11-03]
 	Updated devel/py-pyobjc to 13.0 [adam 2026-11-03]
 	Updated devel/py-testscenarios to 0.7.0 [adam 2026-11-03]
+	Updated net/helm to 4.3.1 [adam 2026-11-03]
+	Updated textproc/translate-toolkit to 3.20.2 [adam 2026-11-03]
