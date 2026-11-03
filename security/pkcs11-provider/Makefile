@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/11/03 15:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/03 20:22:42 riastradh Exp $
 
 DISTNAME=	pkcs11-provider-1.3.0
 CATEGORIES=	security
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/openssl-projects/pkcs11-provider
 COMMENT=	OpenSSL provider for PKCS\#11 modules
 LICENSE=	apache-2.0
 
-USE_TOOLS+=	bash:test pkg-config
+USE_TOOLS+=	bash:test gsed:test pkg-config
 
 MESON_ARGS+=	${${USE_BUILTIN.openssl} == "yes":?-Dmodules_dir=${PREFIX:Q}/lib/ossl-modules:}
 
@@ -66,6 +66,15 @@ SUBST_FILES.bash+=	tests/test-wrapper
 SUBST_STAGE.bash=	post-configure
 SUBST_MESSAGE.bash=	Fixing path to bash.
 
+TEST_DEPENDS+=	nss>=0:../../devel/nss
+TEST_DEPENDS+=	softhsm2>=0:../../security/softhsm2
+
+# XXX Should derive this from BUILDLINK_PREFIX.nss but don't want to
+# pull in DEPENDS for something used only in test.  This will do for
+# now.  This is LOCALBASE, not PREFIX, because it's about the prefix
+# where _other_ packages are installed, not where _this_ package is
+# installed (though they will coincide in this case).
+TEST_ENV+=	SOFTOKNPATH=${LOCALBASE:Q}/lib/nss
 
 .include "../../devel/meson/build.mk"
 .include "../../security/openssl/buildlink3.mk"

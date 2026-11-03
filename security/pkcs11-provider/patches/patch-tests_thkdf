@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_thkdf,v 1.1 2026/11/03 20:22:42 riastradh Exp $
+
+Portability: use POSIX od(1), not GNU xxd(1).
+
+--- tests/thkdf.orig	2026-11-03 17:54:05.660151599 +0000
++++ tests/thkdf
+@@ -78,7 +78,7 @@ diff "${TMPPDIR}/hkdf3-out-pkcs11.bin" "
+ 
+ 
+ title PARA "HKDF Derivation: Expand only"
+-PRK_HEX=$(xxd -p -c 256 "${TMPPDIR}/hkdf3-out-pkcs11.bin")
++PRK_HEX=$(od -t x1 -An -v "${TMPPDIR}/hkdf3-out-pkcs11.bin" | tr -d '[:space:]')
+ export PRK_HEX
+ export HKDF_SALT="I'm a Salt!"
+ ossl '

@@ -1,0 +1,19 @@
+$NetBSD: patch-tests_tdemoca,v 1.1 2026/11/03 20:22:42 riastradh Exp $
+
+Bypass pkgsrc's proxy blocking when running tests that talk to a
+temporary local daemon.  Otherwise the OCSP tests fail cryptically
+with:
+
+> Error querying OCSP responder
+> 00E890263E700000:error:10080002:BIO routines:BIO_lookup_ex:system lib:crypto/bio/bio_addr.c:767:No address associated with hostname
+
+--- tests/tdemoca.orig	2026-11-03 17:54:05.610335279 +0000
++++ tests/tdemoca
+@@ -191,6 +191,7 @@ fi
+ ossl '
+ ocsp -CAfile ${DEMOCA}/cacert.pem -issuer ${DEMOCA}/cacert.pem
+      -cert ${DEMOCA}/cert.pem -resp_text -noverify
++     -no_proxy 127.0.0.1
+      -url http://127.0.0.1:${PORT}' $helper_emit
+ output="$helper_output"
+ FAIL=0
