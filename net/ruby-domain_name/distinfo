@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/09/27 14:27:35 taca Exp $
+$NetBSD: distinfo,v 1.26 2026/11/03 16:00:06 taca Exp $
 
-BLAKE2s (domain_name-0.6.20260921.gem) = 3f4560c386539016104d3dc9ae5512a7b25edcf62de12def8007acb0ebb27b3e
-SHA512 (domain_name-0.6.20260921.gem) = f9eca28b87447f6833e0c227cd0d7aedacb0bdb976128d279c2c8209c3a3143941836b671b42f29c3a37a510a91a28ebd26e3a1d68fc4a006584e468422d53e0
-Size (domain_name-0.6.20260921.gem) = 162816 bytes
+BLAKE2s (domain_name-0.7.20261031.gem) = 93da80c474af12cb7df004baa3565b7da3c87ea4fa4e570df2874b555cbdc8d5
+SHA512 (domain_name-0.7.20261031.gem) = a6a3b4b09cad0f2cf5528d03ab06751144be0d20424baac6276bc30159c80d2c8fd344e33ab79dbd00e41db0b8bb3ce471df74b4acdbb730bce473914aca632f
+Size (domain_name-0.7.20261031.gem) = 165888 bytes

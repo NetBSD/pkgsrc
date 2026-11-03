@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2026/09/06 15:11:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/03 16:00:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.github/mergify.yml
 ${GEM_LIBDIR}/.github/renovate.json5
+${GEM_LIBDIR}/.github/workflows/actions-lock.yml
+${GEM_LIBDIR}/.github/workflows/actions.lock
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/publish-gem.yml
 ${GEM_LIBDIR}/.github/workflows/update-public-suffix-list.yml
