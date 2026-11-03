@@ -1,0 +1,16 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2026/11/03 14:47:35 riastradh Exp $
+
+Allow pkgsrc to override OpenSSL module dir in case pkg-config doesn't
+provide it.
+
+--- meson_options.txt.orig	2026-09-22 14:45:27.000000000 +0000
++++ meson_options.txt
+@@ -17,3 +17,8 @@ option('build_info',
+     type : 'string',
+     value : '',
+     description : 'Optional string with build information, like a build id')
++
++option('modules_dir',
++    type : 'string',
++    value : '',
++    description : 'Path where OpenSSL modules are to be installed')
