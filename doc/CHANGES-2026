@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7589 2026/11/03 16:02:38 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7590 2026/11/03 16:38:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11336,3 +11336,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.1027 [taca 2026-11-03]
 	Updated net/ruby-domain_name to 0.7.20261031 [taca 2026-11-03]
 	Updated time/ruby-tzinfo-data to 1.2026.6 [taca 2026-11-03]
+	Updated devel/at-spi2-core to 2.62.1 [ryoon 2026-11-03]
