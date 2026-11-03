@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28282 2026/11/02 19:52:53 wiz Exp $
+$NetBSD: TODO,v 1.28283 2026/11/03 07:23:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -1140,8 +1140,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cxfreeze-8.5.3
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
-	o py-grpcio-1.85.1
-	o py-grpcio-status-1.85.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-msgpack-1.2.4
