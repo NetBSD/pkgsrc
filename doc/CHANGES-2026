@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7588 2026/11/03 16:00:16 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7589 2026/11/03 16:02:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11335,3 +11335,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-pkg-config to 1.6.6 [taca 2026-11-03]
 	Updated mail/ruby-mime-types-data to 3.2026.1027 [taca 2026-11-03]
 	Updated net/ruby-domain_name to 0.7.20261031 [taca 2026-11-03]
+	Updated time/ruby-tzinfo-data to 1.2026.6 [taca 2026-11-03]
