@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2026/10/28 08:59:40 adam Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/03 14:09:28 adam Exp $
 
-DISTNAME=	django_mptt-0.21.0
+DISTNAME=	django_mptt-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-mptt/}
