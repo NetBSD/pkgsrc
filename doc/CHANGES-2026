@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7577 2026/11/03 10:09:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7578 2026/11/03 13:47:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11322,3 +11322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-testscenarios to 0.7.0 [adam 2026-11-03]
 	Updated net/helm to 4.3.1 [adam 2026-11-03]
 	Updated textproc/translate-toolkit to 3.20.2 [adam 2026-11-03]
+	Updated misc/labelnation to 1.233 [gdt 2026-11-03]
