@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7582 2026/11/03 14:32:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7583 2026/11/03 15:49:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11329,3 +11329,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-mptt to 0.21.1 [adam 2026-11-03]
 	Updated net/tailscale to 1.104.5 [ktnb 2026-11-03]
 	Updated devel/ast-grep to 0.51.1 [wiz 2026-11-03]
+	Updated devel/ruby-ffi-compiler to 1.4.3 [taca 2026-11-03]
