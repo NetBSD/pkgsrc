@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/21 13:30:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/03 13:47:46 gdt Exp $
 bin/csv_to_ln
 bin/labelnation
 share/doc/labelnation/LICENSE.md
@@ -9,3 +9,4 @@ share/examples/labelnation/lines-2.txt
 share/examples/labelnation/multipage.txt
 share/examples/labelnation/postscript-1.txt
 share/examples/labelnation/postscript-3.txt
+share/examples/labelnation/web-site-sample.txt
