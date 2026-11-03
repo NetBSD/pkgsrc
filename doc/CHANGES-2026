@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7594 2026/11/03 16:54:00 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7595 2026/11/03 19:28:48 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11341,3 +11341,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/kitty to 0.50.0 [ktnb 2026-11-03]
 	Updated www/firefox-l10n to 159.0.1 [ryoon 2026-11-03]
 	Updated misc/libreoffice to 26.8.2.2 [ryoon 2026-11-03]
+	Updated sysutils/xenkernel420 to 20261103 [bouyer 2026-11-03]
+	Updated sysutils/xentools420 to 20261103 [bouyer 2026-11-03]
+	Updated sysutils/xenstoretools to 20261103 [bouyer 2026-11-03]
+	Updated sysutils/xenkernel418 to 20261103 [bouyer 2026-11-03]
+	Updated sysutils/xentools418 to 20261103 [bouyer 2026-11-03]
