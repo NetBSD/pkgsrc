@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7574 2026/11/03 07:23:28 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7575 2026/11/03 07:47:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11316,3 +11316,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-status to 1.85.1 [adam 2026-11-03]
 	Updated net/py-grpcio-testing to 1.85.1 [adam 2026-11-03]
 	Updated net/py-grpcio-tools to 1.85.1 [adam 2026-11-03]
+	Updated devel/cargo-nextest to 0.9.151 [adam 2026-11-03]
+	Updated devel/py-anyio to 4.16.0 [adam 2026-11-03]
