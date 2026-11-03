@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2026/10/04 12:35:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2026/11/03 16:38:19 ryoon Exp $
 
-DISTNAME=	at-spi2-core-2.62.0.1
+DISTNAME=	at-spi2-core-2.62.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R:R}/}
@@ -51,6 +51,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	no
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
