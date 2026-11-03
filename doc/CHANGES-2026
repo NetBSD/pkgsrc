@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7583 2026/11/03 15:49:31 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7584 2026/11/03 15:51:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11330,3 +11330,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tailscale to 1.104.5 [ktnb 2026-11-03]
 	Updated devel/ast-grep to 0.51.1 [wiz 2026-11-03]
 	Updated devel/ruby-ffi-compiler to 1.4.3 [taca 2026-11-03]
+	Updated devel/ruby-msgpack to 1.8.7 [taca 2026-11-03]
