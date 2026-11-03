@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/08/24 08:42:29 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/03 21:03:58 riastradh Exp $
 
 DISTNAME=	Botan-2.19.5
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -15,9 +15,9 @@ LICENSE=	2-clause-bsd
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 
-CONFIG_SHELL=		${PYTHONBIN}
+CONFIG_SHELL=		${TOOL_PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--docdir=share/doc
@@ -69,6 +69,6 @@ post-test:
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
