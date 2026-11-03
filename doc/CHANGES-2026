@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7578 2026/11/03 13:47:52 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.7579 2026/11/03 14:05:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11323,3 +11323,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/helm to 4.3.1 [adam 2026-11-03]
 	Updated textproc/translate-toolkit to 3.20.2 [adam 2026-11-03]
 	Updated misc/labelnation to 1.233 [gdt 2026-11-03]
+	Updated security/py-joserfc to 1.8.0 [adam 2026-11-03]
+	Updated security/py-authlib to 1.9.3 [adam 2026-11-03]
