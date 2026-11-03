@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/23 14:55:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/03 15:53:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/main.yml
 ${GEM_LIBDIR}/.gitignore
@@ -13,4 +13,5 @@ ${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/pairing_heap.rb
 ${GEM_LIBDIR}/lib/pairing_heap/version.rb
 ${GEM_LIBDIR}/pairing_heap.gemspec
+${GEM_LIBDIR}/sig/pairing_heap.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
