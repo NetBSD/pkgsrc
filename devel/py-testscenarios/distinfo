@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/07/02 08:40:19 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/11/03 09:27:33 adam Exp $
 
-BLAKE2s (testscenarios-0.6.2.tar.gz) = d317d0fe4f42a53bdead77533518647fe8b328d1fddd95c6cc9eb2ed03ed43f1
-SHA512 (testscenarios-0.6.2.tar.gz) = 701d73493dbe8b4f0d37acdc316bc68aafb7819b3067f545bcdf87c3e163cec069087bc0dde79fe8582226950fcbc92979123f3660d1ab27496b52f3af2a6c4c
-Size (testscenarios-0.6.2.tar.gz) = 15698 bytes
+BLAKE2s (testscenarios-0.7.0.tar.gz) = 99fb053f9496374a583839c4ab6556a0abbd802bac9346770d59b52fe1eb439d
+SHA512 (testscenarios-0.7.0.tar.gz) = 208f3d13d3ac95d58f3b0f63c92444526d251cc666ac91aee7f644c5b12d49e1c1616b0721bc4be5af05965637dde10ea7d58b0d724cd8974983a443bc86f168
+Size (testscenarios-0.7.0.tar.gz) = 19184 bytes

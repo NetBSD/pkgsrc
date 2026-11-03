@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2026/07/02 08:40:19 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/03 09:27:33 adam Exp $
 
-DISTNAME=	testscenarios-0.6.2
+DISTNAME=	testscenarios-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testscenarios/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/testscenarios
+HOMEPAGE=	https://github.com/testing-cabal/testscenarios
 COMMENT=	Pyunit extension for dependency injection
 LICENSE=	apache-2.0 OR modified-bsd
 
