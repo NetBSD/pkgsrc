@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2026/05/05 12:36:06 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/11/03 15:49:20 taca Exp $
 
-BLAKE2s (ffi-compiler-1.4.2.gem) = 5d63fb8ad911918db1d9b7032d58f2eff2c95a2d958ca64c3e2408a8bc527fe5
-SHA512 (ffi-compiler-1.4.2.gem) = 12a435cca8a378e07169b2af00ab7bda62bf3701909339edcfee67389989c07f23e58727311b72e52f8fcb9b0df74b2b4f8b1a87668e9a53034c7fb31a71b0ee
-Size (ffi-compiler-1.4.2.gem) = 15360 bytes
+BLAKE2s (ffi-compiler-1.4.3.gem) = e3e32ca64a1181e82e85152df84192c562a85ec1975929cb4e912b6b8036b05b
+SHA512 (ffi-compiler-1.4.3.gem) = 1ec5d8adee182bb7e3fa727ff81cdd3b42ea95c15e623b9ec507e4f0f8d15593af27f69179105c2a968bbb52a83521a3d6d29b3d0f4d0b1962ed5407be050973
+Size (ffi-compiler-1.4.3.gem) = 17408 bytes
 SHA1 (patch-lib_ffi-compiler_compile__task.rb) = 0af0245027ebcb5aa78c7cef1402d71434fd44b7

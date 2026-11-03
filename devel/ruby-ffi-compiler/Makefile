@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2026/05/05 12:36:06 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/03 15:49:20 taca Exp $
 
-DISTNAME=	ffi-compiler-1.4.2
+DISTNAME=	ffi-compiler-1.4.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/ffi/ffi/wiki
+HOMEPAGE=	https://github.com/ffi/ffi-compiler
 COMMENT=	Ruby FFI Rakefile generator
 LICENSE=	apache-2.0
 
