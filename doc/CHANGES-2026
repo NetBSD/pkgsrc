@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7597 2026/11/03 20:22:20 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.7598 2026/11/03 21:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11348,3 +11348,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xentools418 to 20261103 [bouyer 2026-11-03]
 	Updated www/php-nextcloud to 33.0.10 [gdt 2026-11-03]
 	Updated devel/py-msgpack to 1.2.4 [bsiegert 2026-11-03]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.100290 [wiz 2026-11-03]
