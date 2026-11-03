@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/09/03 09:05:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/11/03 10:09:29 adam Exp $
 bin/android2po
 bin/arb2po
 bin/asciidoc2po
@@ -444,6 +444,9 @@ ${PYSITELIB}/translate/lang/bn.pyo
 ${PYSITELIB}/translate/lang/bo.py
 ${PYSITELIB}/translate/lang/bo.pyc
 ${PYSITELIB}/translate/lang/bo.pyo
+${PYSITELIB}/translate/lang/ca.py
+${PYSITELIB}/translate/lang/ca.pyc
+${PYSITELIB}/translate/lang/ca.pyo
 ${PYSITELIB}/translate/lang/code_as.py
 ${PYSITELIB}/translate/lang/code_as.pyc
 ${PYSITELIB}/translate/lang/code_as.pyo
@@ -763,6 +766,9 @@ ${PYSITELIB}/translate/storage/csvl10n.pyo
 ${PYSITELIB}/translate/storage/dtd.py
 ${PYSITELIB}/translate/storage/dtd.pyc
 ${PYSITELIB}/translate/storage/dtd.pyo
+${PYSITELIB}/translate/storage/extraction_limits.py
+${PYSITELIB}/translate/storage/extraction_limits.pyc
+${PYSITELIB}/translate/storage/extraction_limits.pyo
 ${PYSITELIB}/translate/storage/factory.py
 ${PYSITELIB}/translate/storage/factory.pyc
 ${PYSITELIB}/translate/storage/factory.pyo
@@ -964,6 +970,9 @@ ${PYSITELIB}/translate/storage/xml_name.pyo
 ${PYSITELIB}/translate/storage/yaml.py
 ${PYSITELIB}/translate/storage/yaml.pyc
 ${PYSITELIB}/translate/storage/yaml.pyo
+${PYSITELIB}/translate/storage/yaml_limits.py
+${PYSITELIB}/translate/storage/yaml_limits.pyc
+${PYSITELIB}/translate/storage/yaml_limits.pyo
 ${PYSITELIB}/translate/tools/__init__.py
 ${PYSITELIB}/translate/tools/__init__.pyc
 ${PYSITELIB}/translate/tools/__init__.pyo
