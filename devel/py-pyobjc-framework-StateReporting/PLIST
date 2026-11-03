@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/03 09:24:53 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/StateReporting/__init__.py
+${PYSITELIB}/StateReporting/__init__.pyc
+${PYSITELIB}/StateReporting/__init__.pyo
+${PYSITELIB}/StateReporting/_metadata.py
+${PYSITELIB}/StateReporting/_metadata.pyc
+${PYSITELIB}/StateReporting/_metadata.pyo

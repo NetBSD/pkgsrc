@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/08/12 08:52:44 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/11/03 09:24:47 adam Exp $
 
-BLAKE2s (pyobjc_framework_mediaaccessibility-12.2.2.tar.gz) = 8c4f910d03bb982dc23742d1644e19e8a218d09865eed5325deac40ca37fae4a
-SHA512 (pyobjc_framework_mediaaccessibility-12.2.2.tar.gz) = c4a7c28db00c09430808ac68960dc25ece78a244244b34e8602cedef9d1c232838b58761bc6b60e0afc00806cf6836f683a00bf5fd4e9cb25c74735988bc0249
-Size (pyobjc_framework_mediaaccessibility-12.2.2.tar.gz) = 17390 bytes
+BLAKE2s (pyobjc_framework_mediaaccessibility-13.0.tar.gz) = b6f381d706484be2a4a8a634471bd9f67a64f4c827aa4369f6682c11957ce300
+SHA512 (pyobjc_framework_mediaaccessibility-13.0.tar.gz) = 8443207ba995a8d7d4496089d13988673f4aac9abed1e48df248899e73fc70bf6f65369dfd3bb71d288d20e2eb7e4fe5b06857a0879898f0ab7b9b71db392ce1
+Size (pyobjc_framework_mediaaccessibility-13.0.tar.gz) = 17176 bytes

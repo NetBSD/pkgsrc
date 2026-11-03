@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/08/12 08:52:36 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/11/03 09:24:38 adam Exp $
 
-BLAKE2s (pyobjc_framework_avrouting-12.2.2.tar.gz) = cc5745b9197ed2aac871e72fc429b4f57410f6dc6f8fb68f64473ac895bda5a7
-SHA512 (pyobjc_framework_avrouting-12.2.2.tar.gz) = b7ae50a49f7de9d6cc3447a1e21281ee3262d2d5a43d71ea03bb88cf0b2b26423926c7c4a6a009973037ef061d487ae8df84cd06c8ebe4c6181df1a4002685be
-Size (pyobjc_framework_avrouting-12.2.2.tar.gz) = 21059 bytes
+BLAKE2s (pyobjc_framework_avrouting-13.0.tar.gz) = 376eb7a441aa8f67881455c12a4dc62b22670094a24460bf07d58fd02e10d3f3
+SHA512 (pyobjc_framework_avrouting-13.0.tar.gz) = bdba76fba770f5f91ff8c59f465e0dac54eb956ecc1a95b97a4c18342810b9ea10638bbd6092da05fc55fff2346a2d9d366836904193577d65a58bf57522eae1
+Size (pyobjc_framework_avrouting-13.0.tar.gz) = 20989 bytes

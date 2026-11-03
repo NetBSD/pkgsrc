@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/08/12 08:52:35 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/11/03 09:24:38 adam Exp $
 
-BLAKE2s (pyobjc_framework_automaticassessmentconfiguration-12.2.2.tar.gz) = 4e375790153e62982d922af3aecdf92d4185b4a17f4474eb520f55229d505d23
-SHA512 (pyobjc_framework_automaticassessmentconfiguration-12.2.2.tar.gz) = 9d0bd78598b53cf58c13f3cb64ef6072ab7465476ff0126efb83e980476d0f065986e9522574b04e69e2546fe84d3116f4de9b5cb1522622f908b9c042fff89e
-Size (pyobjc_framework_automaticassessmentconfiguration-12.2.2.tar.gz) = 24960 bytes
+BLAKE2s (pyobjc_framework_automaticassessmentconfiguration-13.0.tar.gz) = 398b7b79ae1e9879c7b9b459a398377bbddcec286df5611c474601051fd1444a
+SHA512 (pyobjc_framework_automaticassessmentconfiguration-13.0.tar.gz) = cb4d95d5d091ce45bee319d401f725ce2aa8ae398868b58c1c0b7650540834e703eb3e9e9e2cd6cc9c1306f2ccf3be5324a6438371df34b0360db7a8591992d1
+Size (pyobjc_framework_automaticassessmentconfiguration-13.0.tar.gz) = 30224 bytes

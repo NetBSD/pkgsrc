@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4717 2026/10/24 22:33:08 alnsn Exp $
+# $NetBSD: Makefile,v 1.4718 2026/11/03 09:24:36 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3019,6 +3019,7 @@ SUBDIR+=	py-pyobjc-framework-KernelManagement
 SUBDIR+=	py-pyobjc-framework-LatentSemanticMapping
 SUBDIR+=	py-pyobjc-framework-LaunchServices
 SUBDIR+=	py-pyobjc-framework-LinkPresentation
+SUBDIR+=	py-pyobjc-framework-LinkSecurity
 SUBDIR+=	py-pyobjc-framework-LocalAuthentication
 SUBDIR+=	py-pyobjc-framework-LocalAuthenticationEmbeddedUI
 SUBDIR+=	py-pyobjc-framework-MLCompute
@@ -3074,6 +3075,7 @@ SUBDIR+=	py-pyobjc-framework-Social
 SUBDIR+=	py-pyobjc-framework-SoundAnalysis
 SUBDIR+=	py-pyobjc-framework-Speech
 SUBDIR+=	py-pyobjc-framework-SpriteKit
+SUBDIR+=	py-pyobjc-framework-StateReporting
 SUBDIR+=	py-pyobjc-framework-StoreKit
 SUBDIR+=	py-pyobjc-framework-SyncServices
 SUBDIR+=	py-pyobjc-framework-SystemConfiguration

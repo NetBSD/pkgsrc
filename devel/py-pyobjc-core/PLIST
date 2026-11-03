@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/03 11:44:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/03 09:24:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -318,6 +318,9 @@ ${PYSITELIB}/PyObjCTest/metadatafunction.so.dSYM/Contents/Resources/Relocations/
 ${PYSITELIB}/PyObjCTest/metadataorder.so.dSYM/Contents/Info.plist
 ${PYSITELIB}/PyObjCTest/metadataorder.so.dSYM/Contents/Resources/DWARF/metadataorder.so
 ${PYSITELIB}/PyObjCTest/metadataorder.so.dSYM/Contents/Resources/Relocations/aarch64/metadataorder.so.yml
+${PYSITELIB}/PyObjCTest/methcat.so.dSYM/Contents/Info.plist
+${PYSITELIB}/PyObjCTest/methcat.so.dSYM/Contents/Resources/DWARF/methcat.so
+${PYSITELIB}/PyObjCTest/methcat.so.dSYM/Contents/Resources/Relocations/aarch64/methcat.so.yml
 ${PYSITELIB}/PyObjCTest/methodaccess.so.dSYM/Contents/Info.plist
 ${PYSITELIB}/PyObjCTest/methodaccess.so.dSYM/Contents/Resources/DWARF/methodaccess.so
 ${PYSITELIB}/PyObjCTest/methodaccess.so.dSYM/Contents/Resources/Relocations/aarch64/methodaccess.so.yml
@@ -423,6 +426,9 @@ ${PYSITELIB}/PyObjCTest/vector.so.dSYM/Contents/Resources/Relocations/aarch64/ve
 ${PYSITELIB}/PyObjCTest/vectorcall.so.dSYM/Contents/Info.plist
 ${PYSITELIB}/PyObjCTest/vectorcall.so.dSYM/Contents/Resources/DWARF/vectorcall.so
 ${PYSITELIB}/PyObjCTest/vectorcall.so.dSYM/Contents/Resources/Relocations/aarch64/vectorcall.so.yml
+${PYSITELIB}/PyObjCTest/vectorfunccall.so.dSYM/Contents/Info.plist
+${PYSITELIB}/PyObjCTest/vectorfunccall.so.dSYM/Contents/Resources/DWARF/vectorfunccall.so
+${PYSITELIB}/PyObjCTest/vectorfunccall.so.dSYM/Contents/Resources/Relocations/aarch64/vectorfunccall.so.yml
 ${PYSITELIB}/PyObjCTest/voidpointer.so.dSYM/Contents/Info.plist
 ${PYSITELIB}/PyObjCTest/voidpointer.so.dSYM/Contents/Resources/DWARF/voidpointer.so
 ${PYSITELIB}/PyObjCTest/voidpointer.so.dSYM/Contents/Resources/Relocations/aarch64/voidpointer.so.yml

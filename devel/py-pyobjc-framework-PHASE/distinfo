@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/08/12 08:52:47 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/11/03 09:24:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_phase-12.2.2.tar.gz) = b9d68f3040527bcb41402f2a00972ed9f51a3ae45c5f3ac1f4a302b7c2d72fae
-SHA512 (pyobjc_framework_phase-12.2.2.tar.gz) = bdb6471e2d2a03d63c70c2e2fd4011a3903e8a1d7d3eda198c1be260bf153aaac799e6f142273294c73c7aaed6eea0cda66af5f750680b5dcfeb880cd25ed4da
-Size (pyobjc_framework_phase-12.2.2.tar.gz) = 40994 bytes
+BLAKE2s (pyobjc_framework_phase-13.0.tar.gz) = 0641b03df41f44603d195c6844b36fdaa0318da2a1835e100e081c812fde2dbc
+SHA512 (pyobjc_framework_phase-13.0.tar.gz) = baa0810e5e289bddde2190991b588da98b61a50c4c4e0874a7c7fed85a864bbc54bbe455a7e47004ec7036466bb4a2e0dfe1bc96c79168f22bb1c71ce481aefb
+Size (pyobjc_framework_phase-13.0.tar.gz) = 40514 bytes

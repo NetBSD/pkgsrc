@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/08/12 08:52:50 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/11/03 09:24:53 adam Exp $
 
-BLAKE2s (pyobjc_framework_soundanalysis-12.2.2.tar.gz) = 649eac9b6ae0171f0998aa3ab403857bbb8fd0933c436d218592515c6e3f38d9
-SHA512 (pyobjc_framework_soundanalysis-12.2.2.tar.gz) = 3056f37ea5cf1db3a784e1d6148cdabfe1a167c7762c301763952f86ee58722bb13e09c7465c84607d63ca9950002c23f288280dcadffe9d52c9fb4a7d88bc4d
-Size (pyobjc_framework_soundanalysis-12.2.2.tar.gz) = 15971 bytes
+BLAKE2s (pyobjc_framework_soundanalysis-13.0.tar.gz) = fed132f576d2ed600db4e76d6ff0bf5670086d2446acec1c35bdd09b5f0e8d8b
+SHA512 (pyobjc_framework_soundanalysis-13.0.tar.gz) = 8c4f1bd896ab3637a9c4ebdd645a4967411c13ed890a3d1d504bffd8920a6e941ec306f27ac4dbae2cc9820c6545f318ce6e5d8b3518acb5377655172fc2150c
+Size (pyobjc_framework_soundanalysis-13.0.tar.gz) = 15587 bytes

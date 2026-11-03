@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/08/12 08:52:48 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/11/03 09:24:51 adam Exp $
 
-BLAKE2s (pyobjc_framework_safariservices-12.2.2.tar.gz) = a6c158e787fe57238d7528c2d72c82ce150cd739e025dea91c69329fd73a5860
-SHA512 (pyobjc_framework_safariservices-12.2.2.tar.gz) = b5fcb86b63ceaca5bd0adb94d69e4e82d735390691d689278a3db907ea4c142b98ed01a24fb675c61453724f230b1e584bb4bc8bd9bafa6c43fbec7940b2ca1f
-Size (pyobjc_framework_safariservices-12.2.2.tar.gz) = 27508 bytes
+BLAKE2s (pyobjc_framework_safariservices-13.0.tar.gz) = fc8216daca09a9e20309601bed958ceee666b4b9a065ff9f68230953d16963c9
+SHA512 (pyobjc_framework_safariservices-13.0.tar.gz) = 10cd43218f681676e9afb5668ea9992c761a44926d0171cea8145ab5e67014e1fbc8a56e9dfc6d4a5bae845bd12314d96ebcea4b825bec8c67470a56a4832d05
+Size (pyobjc_framework_safariservices-13.0.tar.gz) = 27664 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/08/12 08:52:39 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/11/03 09:24:42 adam Exp $
 
-BLAKE2s (pyobjc_framework_corewlan-12.2.2.tar.gz) = b7aa1e89d9ea6ae4f47202ab4a648c595676f959b75666c00ea5be010b4d8cc9
-SHA512 (pyobjc_framework_corewlan-12.2.2.tar.gz) = 58c7532498c9ff10e018538ecf24ba28e80b2a7c9ebe05a671772fc08ada4ef0adbd401760dee057cd68693f03d95cdaf4dd03206846c0d168364f2a1bd8c236
-Size (pyobjc_framework_corewlan-12.2.2.tar.gz) = 35755 bytes
+BLAKE2s (pyobjc_framework_corewlan-13.0.tar.gz) = be2811bf5f3f0d8a5d912662d18c7fe913beb810b46378a9f47ec175e064ab0b
+SHA512 (pyobjc_framework_corewlan-13.0.tar.gz) = 81834a41d1505bac7fc0ad2c7a9162361c665491c5bc216363771c5934c2dcb31e0dd03472f05d3dd1c4e0efa43c4fd461fd1c3f18c526e8895d435b0ba5afa6
+Size (pyobjc_framework_corewlan-13.0.tar.gz) = 34227 bytes

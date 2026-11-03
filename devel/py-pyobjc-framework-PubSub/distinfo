@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2026/08/12 08:52:48 adam Exp $
+$NetBSD: distinfo,v 1.25 2026/11/03 09:24:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_pubsub-12.2.2.tar.gz) = 065958d74bc6560bebd676e0541c9ab278ec2926cb68af61f5ad62d09f122e2e
-SHA512 (pyobjc_framework_pubsub-12.2.2.tar.gz) = 17d6f7d7d703093cfdc89fc1c8366c4fc5511af5d73b423e02f2b4a58d4b932d950dbe8046ef8f6002ff34fb7d0b2e3221f47a383a2ba78731b453627a1d2c70
-Size (pyobjc_framework_pubsub-12.2.2.tar.gz) = 15007 bytes
+BLAKE2s (pyobjc_framework_pubsub-13.0.tar.gz) = d0fa2417a98eafe8f815648a48d6176161d490dfc1154f9015837f7786e45d86
+SHA512 (pyobjc_framework_pubsub-13.0.tar.gz) = 7f616b104a80640e8232589052b21cb9d139c1f7eddaf18bc1e52a77149a70ac1a19e942fe63cd9418354cec3d90eb2b9207f7abf1781bb6b448f022a8d593a3
+Size (pyobjc_framework_pubsub-13.0.tar.gz) = 15783 bytes

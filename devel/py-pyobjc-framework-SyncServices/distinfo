@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/08/12 08:52:51 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/11/03 09:24:54 adam Exp $
 
-BLAKE2s (pyobjc_framework_syncservices-12.2.2.tar.gz) = 5c4d96741bf2c181a31762d263dc0367afb14ed55b619387a1dff05b2dc3ba17
-SHA512 (pyobjc_framework_syncservices-12.2.2.tar.gz) = 9f03fb232c8c37ddcb521cd005df1ee465e9db0b09c11dca45bbae4552950db15b6eea6baff984a06da70307ae97ccdc728becb82f3090d788d8d63f1e426154
-Size (pyobjc_framework_syncservices-12.2.2.tar.gz) = 35103 bytes
+BLAKE2s (pyobjc_framework_syncservices-13.0.tar.gz) = 09dd553dab057a17e57b4a65c7e17b4e62544718503938ebc4cb32860ba47828
+SHA512 (pyobjc_framework_syncservices-13.0.tar.gz) = 85c2c004189af618ebda0e9a40200a39e959583ed73b034e241bf347b544566e0831f0d9fd129909a03bc3cdabe5f470ffc7a5c434d69fac6ebb187c3e69053b
+Size (pyobjc_framework_syncservices-13.0.tar.gz) = 34430 bytes

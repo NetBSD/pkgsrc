@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2026/08/12 08:52:47 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/11/03 09:24:50 adam Exp $
 
-BLAKE2s (pyobjc_framework_photosui-12.2.2.tar.gz) = e1815b4743c946652aa34866ab30131b0586e7e2d83c89fb6193b2a1ca76306f
-SHA512 (pyobjc_framework_photosui-12.2.2.tar.gz) = 4ae013f5835ec1c508917313879d45ef01be85c0dacd18bb6bce9abfffebb2f8eb94e21effde0ddcc3b2ad30c1fa7e97d96a609b2990434dabedefeb803d6879
-Size (pyobjc_framework_photosui-12.2.2.tar.gz) = 34059 bytes
+BLAKE2s (pyobjc_framework_photosui-13.0.tar.gz) = 1a606ad8faafcc69b3a5cd9b0baa641c160f3446eeb30b3d66e6cc3f1297e4e4
+SHA512 (pyobjc_framework_photosui-13.0.tar.gz) = 2bcae0f790345a0a247d3c329db89977fb34c6c5434b83361f350b43df10ea792bf1e35687b2563be0ea43b3b161cc7d1678fe30c4221688e6ea1aebcd1758d2
+Size (pyobjc_framework_photosui-13.0.tar.gz) = 36403 bytes

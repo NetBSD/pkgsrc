@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/19 17:02:49 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/03 09:24:36 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -208,6 +208,12 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NetFS>=${PYOBJC_VERS}:../../devel/py-p
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-OpenDirectory>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-OpenDirectory
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-ServiceManagement>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-ServiceManagement
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-iTunesLibrary>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-iTunesLibrary
+.endif
+
+# 27+
+.if !empty(OS_VERSION:M2[7-9].*)
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-LinkSecurity>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-LinkSecurity
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-StateReporting>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-StateReporting
 .endif
 
 # -10.14

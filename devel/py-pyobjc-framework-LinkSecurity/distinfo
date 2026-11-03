@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/03 09:24:47 adam Exp $
+
+BLAKE2s (pyobjc_framework_linksecurity-13.0.tar.gz) = 3cd53084f1c121702c7235c6f554b9382b185a81aee0e9bc3f5a6147a4a0a4ed
+SHA512 (pyobjc_framework_linksecurity-13.0.tar.gz) = 4b1422317fa957459318414afe7db67797cc8c04e8aa25b2a7e4c180c5ce89fca17296e7eb9cd9c3942288b50849563eb21b23672b53370eaa9522d130cad624
+Size (pyobjc_framework_linksecurity-13.0.tar.gz) = 12200 bytes

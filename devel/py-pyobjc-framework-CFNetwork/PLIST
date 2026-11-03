@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/23 12:45:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/03 09:24:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/CFNetwork/_CFNetwork.so
 ${PYSITELIB}/CFNetwork/__init__.py
 ${PYSITELIB}/CFNetwork/__init__.pyc
 ${PYSITELIB}/CFNetwork/__init__.pyo
-${PYSITELIB}/CFNetwork/_manual.so
 ${PYSITELIB}/CFNetwork/_metadata.py
 ${PYSITELIB}/CFNetwork/_metadata.pyc
 ${PYSITELIB}/CFNetwork/_metadata.pyo

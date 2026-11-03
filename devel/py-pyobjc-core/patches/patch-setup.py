@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.11 2026/06/03 11:44:00 adam Exp $
+$NetBSD: patch-setup.py,v 1.12 2026/11/03 09:24:36 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2026-01-25 10:49:01.000000000 +0000
+--- setup.py.orig	2026-10-27 11:41:55.495590000 +0000
 +++ setup.py
 @@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
@@ -21,10 +21,10 @@ Avoid a hack.
 -    "-g",
 -    # "-O0",
 -    "-O3",
+     "-UNDEBUG",
  ]
  
- # CFLAGS for other (test) extensions:
-@@ -112,9 +108,6 @@ OBJC_LDFLAGS = [
+@@ -113,9 +109,6 @@ OBJC_LDFLAGS = [
      # "-fvisibility=protected",
      "-lffi",
      "-fvisibility=hidden",
@@ -34,7 +34,7 @@ Avoid a hack.
      "-fexceptions",
  ]
  EXT_LDFLAGS = OBJC_LDFLAGS + []
-@@ -246,8 +239,6 @@ class oc_test(Command):
+@@ -251,8 +244,6 @@ class oc_test(Command):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  

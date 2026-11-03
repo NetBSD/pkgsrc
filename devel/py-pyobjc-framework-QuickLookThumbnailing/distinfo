@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/08/12 08:52:48 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/11/03 09:24:51 adam Exp $
 
-BLAKE2s (pyobjc_framework_quicklookthumbnailing-12.2.2.tar.gz) = bd44ca6bb5ed6d4bf9c0a7566f28c5a705b733dc32d472929549f70069684519
-SHA512 (pyobjc_framework_quicklookthumbnailing-12.2.2.tar.gz) = 3d32b9c260471e362d68c9d6988197b16bfefa1b8e5a0306368196e70f221403ddffad8a81192589e7e75775ccadfc214e90982c4144da79ffd6eac2160a30a0
-Size (pyobjc_framework_quicklookthumbnailing-12.2.2.tar.gz) = 15902 bytes
+BLAKE2s (pyobjc_framework_quicklookthumbnailing-13.0.tar.gz) = 31b61135955695bb4c852c6cc9d11c493156160c551b22ce3d7ff03f30dae52b
+SHA512 (pyobjc_framework_quicklookthumbnailing-13.0.tar.gz) = c8b3c6c3b4be4192fbc9d80e58beca320dbf1af6fd241818e816208491a7147e2e2348ef6b3f7e1983d828875e101dd337473a6ddfdfb786b309f18b7c2d6197
+Size (pyobjc_framework_quicklookthumbnailing-13.0.tar.gz) = 15671 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2026/08/12 08:52:51 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/11/03 09:24:54 adam Exp $
 
-BLAKE2s (pyobjc_framework_usernotificationsui-12.2.2.tar.gz) = c84e90cbb425ec0ddaf9a42f3302794e55360712a041568bafde14ffb30d66d8
-SHA512 (pyobjc_framework_usernotificationsui-12.2.2.tar.gz) = 00987079cec50f05f03693ef719b1757168966f21a7cc7dc3f8817ce1ab99b1c7e7c723fc7082a2ff027b021b290628c6738a8a8569e34845200562b1ae05ea8
-Size (pyobjc_framework_usernotificationsui-12.2.2.tar.gz) = 13582 bytes
+BLAKE2s (pyobjc_framework_usernotificationsui-13.0.tar.gz) = b9e0d42b943a9b990682f6220dfc9a61db5894248e79f450430d43c5c3c65f21
+SHA512 (pyobjc_framework_usernotificationsui-13.0.tar.gz) = febcc0f9763a149bab0a9aba74076fbc9a3915cc6a4e4f97b1bc673fdc14e17c96fd37020e74068ce23bd49826890123b2fae8e76cce766bfd4b9dcef5e799d3
+Size (pyobjc_framework_usernotificationsui-13.0.tar.gz) = 13377 bytes
