@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2026/10/07 05:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.161 2026/11/03 07:24:56 adam Exp $
 
 DISTNAME=	django-6.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.9.1:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.5.0:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 PY_RENAME_BINARIES=	django-admin
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
