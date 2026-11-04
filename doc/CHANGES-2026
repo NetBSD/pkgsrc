@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7639 2026/11/04 15:30:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7640 2026/11/04 15:33:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11399,3 +11399,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-mime-types-data to 3.2026.1103 [taca 2026-11-04]
 	Updated misc/ruby-pry to 0.16.1 [taca 2026-11-04]
 	Updated misc/ruby-uniform_notifier to 1.18.1 [taca 2026-11-04]
+	Updated net/ruby-net-ldap to 0.21.0 [taca 2026-11-04]
