@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/09/17 14:09:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/04 16:01:16 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -2684,6 +2684,7 @@ share/drupal/core/includes/bootstrap.inc
 share/drupal/core/includes/common.inc
 share/drupal/core/includes/errors.inc
 share/drupal/core/includes/form.inc
+share/drupal/core/includes/guzzle_file_cookie_jar_shim.php
 share/drupal/core/includes/install.core.inc
 share/drupal/core/includes/install.inc
 share/drupal/core/includes/module.inc
@@ -13336,6 +13337,11 @@ share/drupal/core/modules/system/tests/modules/position_shim_test/src/Controller
 share/drupal/core/modules/system/tests/modules/position_shim_test/src/Controller/PositionShimTestPortedJqueryTestsController.php
 share/drupal/core/modules/system/tests/modules/post_update_test_failing/post_update_test_failing.info.yml
 share/drupal/core/modules/system/tests/modules/post_update_test_failing/post_update_test_failing.post_update.php
+share/drupal/core/modules/system/tests/modules/recipe_is_applying_test/config/schema/recipe_is_applying_test.schema.yml
+share/drupal/core/modules/system/tests/modules/recipe_is_applying_test/recipe_is_applying_test.info.yml
+share/drupal/core/modules/system/tests/modules/recipe_is_applying_test/recipe_is_applying_test.services.yml
+share/drupal/core/modules/system/tests/modules/recipe_is_applying_test/src/EventSubscriber/RecipeIsApplyingTestSubscriber.php
+share/drupal/core/modules/system/tests/modules/recipe_is_applying_test/src/Hook/RecipeIsApplyingTestHooks.php
 share/drupal/core/modules/system/tests/modules/render_array_non_html_subscriber_test/render_array_non_html_subscriber_test.info.yml
 share/drupal/core/modules/system/tests/modules/render_array_non_html_subscriber_test/render_array_non_html_subscriber_test.routing.yml
 share/drupal/core/modules/system/tests/modules/render_array_non_html_subscriber_test/src/RenderArrayNonHtmlSubscriberTestController.php
@@ -17768,6 +17774,7 @@ share/drupal/core/tests/Drupal/KernelTests/Core/Entity/FieldTranslationSqlStorag
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/FieldWidgetConstraintValidatorTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/FieldableEntityDefinitionUpdateTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/ImmutablePropertiesConstraintValidatorTest.php
+share/drupal/core/tests/Drupal/KernelTests/Core/Entity/MultiCardinalitySpineTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/RevisionRouteProviderTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/RevisionableContentEntityBaseTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Entity/RouteProviderTest.php
@@ -18169,6 +18176,7 @@ share/drupal/core/tests/Drupal/Tests/Component/Annotation/PluginIdTest.php
 share/drupal/core/tests/Drupal/Tests/Component/Annotation/PluginTest.php
 share/drupal/core/tests/Drupal/Tests/Component/Assertion/InspectorTest.php
 share/drupal/core/tests/Drupal/Tests/Component/ClassFinder/ClassFinderTest.php
+share/drupal/core/tests/Drupal/Tests/Component/Cookie/FileCookieJarShimTest.php
 share/drupal/core/tests/Drupal/Tests/Component/Datetime/DateTimePlusTest.php
 share/drupal/core/tests/Drupal/Tests/Component/Datetime/TimeTest.php
 share/drupal/core/tests/Drupal/Tests/Component/Datetime/TimeWithNoRequestTest.php
@@ -18498,6 +18506,7 @@ share/drupal/core/tests/Drupal/Tests/Core/Cache/NullBackendTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Cache/RefinableCacheableDependencyTraitTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Cache/VariationCacheTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Command/BootableCommandTraitTest.php
+share/drupal/core/tests/Drupal/Tests/Core/Command/DrupalConsoleLoggerTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Common/AttributesTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Common/DiffArrayTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Common/TagsTest.php
@@ -18751,6 +18760,7 @@ share/drupal/core/tests/Drupal/Tests/Core/ParamConverter/EntityRevisionParamConv
 share/drupal/core/tests/Drupal/Tests/Core/ParamConverter/ParamConverterManagerTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Password/DefaultPasswordGeneratorTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Password/PhpPasswordTest.php
+share/drupal/core/tests/Drupal/Tests/Core/Path/CurrentPathStackTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Path/PathMatcherTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Path/PathValidatorTest.php
 share/drupal/core/tests/Drupal/Tests/Core/PathProcessor/PathProcessorFrontTest.php
@@ -19347,6 +19357,9 @@ share/drupal/core/tests/fixtures/recipes/recipe_depend_on_invalid/recipe.yml
 share/drupal/core/tests/fixtures/recipes/recipe_depend_on_invalid_config_and_valid_modules/recipe.yml
 share/drupal/core/tests/fixtures/recipes/recipe_include/config/node.type.another_test.yml
 share/drupal/core/tests/fixtures/recipes/recipe_include/recipe.yml
+share/drupal/core/tests/fixtures/recipes/recipe_is_applying_test/config/recipe_is_applying_test.settings.yml
+share/drupal/core/tests/fixtures/recipes/recipe_is_applying_test/content/entity_test/290a8baa-837f-4a81-8a37-1c54ae407080.yml
+share/drupal/core/tests/fixtures/recipes/recipe_is_applying_test/recipe.yml
 share/drupal/core/tests/fixtures/recipes/theme_with_module_dependencies/recipe.yml
 share/drupal/core/tests/fixtures/recipes/unmet_config_dependencies/config/node.type.test.yml
 share/drupal/core/tests/fixtures/recipes/unmet_config_dependencies/recipe.yml
@@ -20259,9 +20272,9 @@ share/drupal/core/themes/default_admin/migration/media/icons/general/add.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/calendar.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/circle.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/close.svg
+share/drupal/core/themes/default_admin/migration/media/icons/general/default-admin.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/drop.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/drupal.svg
-share/drupal/core/themes/default_admin/migration/media/icons/general/gin.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/handle.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/loader.svg
 share/drupal/core/themes/default_admin/migration/media/icons/general/more.svg
@@ -20403,7 +20416,7 @@ share/drupal/core/themes/default_admin/templates/navigation/menu-region--bottom.
 share/drupal/core/themes/default_admin/templates/navigation/menu-region--middle.html.twig
 share/drupal/core/themes/default_admin/templates/navigation/menu-region--top.html.twig
 share/drupal/core/themes/default_admin/templates/navigation/toolbar.html.twig
-share/drupal/core/themes/default_admin/templates/navigation/top-bar--gin.html.twig
+share/drupal/core/themes/default_admin/templates/navigation/top-bar--default-admin.html.twig
 share/drupal/core/themes/default_admin/templates/node/node-edit-form.html.twig
 share/drupal/core/themes/default_admin/templates/page/page--clone.html.twig
 share/drupal/core/themes/default_admin/templates/page/page--group.html.twig
@@ -20438,7 +20451,12 @@ share/drupal/core/themes/default_admin/templates/views/views-view-field--status.
 share/drupal/core/themes/default_admin/templates/views/views-view-fields--media-library.html.twig
 share/drupal/core/themes/default_admin/templates/views/views-view-table.html.twig
 share/drupal/core/themes/default_admin/templates/views/views-view.html.twig
+share/drupal/core/themes/default_admin/tests/fixtures/implementation-name-allowlist.json
+share/drupal/core/themes/default_admin/tests/modules/default_admin_form_test/default_admin_form_test.info.yml
+share/drupal/core/themes/default_admin/tests/modules/default_admin_form_test/src/Hook/DefaultAdminFormTestHooks.php
+share/drupal/core/themes/default_admin/tests/src/Functional/AdminNodeTest.php
 share/drupal/core/themes/default_admin/tests/src/Functional/AdminTest.php
+share/drupal/core/themes/default_admin/tests/src/FunctionalJavascript/LegacyStorageTest.php
 share/drupal/core/themes/default_admin/tests/src/Kernel/BreadcrumbPreprocessTest.php
 share/drupal/core/themes/default_admin/tests/src/Kernel/ViewsViewFieldStatusTest.php
 share/drupal/core/themes/engines/twig/twig.engine
@@ -21349,6 +21367,7 @@ share/drupal/vendor/composer/semver/src/Semver.php
 share/drupal/vendor/composer/semver/src/VersionParser.php
 share/drupal/vendor/doctrine/lexer/LICENSE
 share/drupal/vendor/doctrine/lexer/README.md
+share/drupal/vendor/doctrine/lexer/SECURITY.md
 share/drupal/vendor/doctrine/lexer/UPGRADE.md
 share/drupal/vendor/doctrine/lexer/composer.json
 share/drupal/vendor/doctrine/lexer/src/AbstractLexer.php
@@ -23999,6 +24018,7 @@ share/drupal/vendor/twig/twig/src/Attribute/AsTwigFunction.php
 share/drupal/vendor/twig/twig/src/Attribute/AsTwigTest.php
 share/drupal/vendor/twig/twig/src/Attribute/FirstClassTwigCallableReady.php
 share/drupal/vendor/twig/twig/src/Attribute/YieldReady.php
+share/drupal/vendor/twig/twig/src/BlockChain.php
 share/drupal/vendor/twig/twig/src/Cache/CacheInterface.php
 share/drupal/vendor/twig/twig/src/Cache/ChainCache.php
 share/drupal/vendor/twig/twig/src/Cache/FilesystemCache.php
@@ -24047,6 +24067,7 @@ share/drupal/vendor/twig/twig/src/Extension/LastModifiedExtensionInterface.php
 share/drupal/vendor/twig/twig/src/Extension/OptimizerExtension.php
 share/drupal/vendor/twig/twig/src/Extension/ProfilerExtension.php
 share/drupal/vendor/twig/twig/src/Extension/RuntimeExtensionInterface.php
+share/drupal/vendor/twig/twig/src/Extension/SandboxBridgeExtension.php
 share/drupal/vendor/twig/twig/src/Extension/SandboxExtension.php
 share/drupal/vendor/twig/twig/src/Extension/StagingExtension.php
 share/drupal/vendor/twig/twig/src/Extension/StringLoaderExtension.php
@@ -24058,6 +24079,7 @@ share/drupal/vendor/twig/twig/src/Loader/ArrayLoader.php
 share/drupal/vendor/twig/twig/src/Loader/ChainLoader.php
 share/drupal/vendor/twig/twig/src/Loader/FilesystemLoader.php
 share/drupal/vendor/twig/twig/src/Loader/LoaderInterface.php
+share/drupal/vendor/twig/twig/src/MacroNamespace.php
 share/drupal/vendor/twig/twig/src/Markup.php
 share/drupal/vendor/twig/twig/src/Node/AutoEscapeNode.php
 share/drupal/vendor/twig/twig/src/Node/BlockNode.php
@@ -24121,11 +24143,13 @@ share/drupal/vendor/twig/twig/src/Node/Expression/ConditionalExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/ConstantExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/EmptyExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Filter/DefaultFilter.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Filter/EscapeFilter.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Filter/RawFilter.php
 share/drupal/vendor/twig/twig/src/Node/Expression/FilterExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/FunctionExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/FunctionNode/EnumCasesFunction.php
 share/drupal/vendor/twig/twig/src/Node/Expression/FunctionNode/EnumFunction.php
+share/drupal/vendor/twig/twig/src/Node/Expression/FunctionNode/RenderSandboxedFunction.php
 share/drupal/vendor/twig/twig/src/Node/Expression/GetAttrExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/InlinePrint.php
 share/drupal/vendor/twig/twig/src/Node/Expression/ListExpression.php
@@ -24162,9 +24186,11 @@ share/drupal/vendor/twig/twig/src/Node/Expression/Unary/SpreadUnary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Unary/StringCastUnary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Unary/UnaryInterface.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/AssignContextVariable.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Variable/AssignMacroVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/AssignTemplateVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/ContextVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/LocalVariable.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Variable/MacroVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/TemplateVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/VariadicExpression.php
 share/drupal/vendor/twig/twig/src/Node/FlushNode.php
@@ -24174,17 +24200,21 @@ share/drupal/vendor/twig/twig/src/Node/ForNode.php
 share/drupal/vendor/twig/twig/src/Node/IfNode.php
 share/drupal/vendor/twig/twig/src/Node/ImportNode.php
 share/drupal/vendor/twig/twig/src/Node/IncludeNode.php
+share/drupal/vendor/twig/twig/src/Node/MacroDeclarationNode.php
 share/drupal/vendor/twig/twig/src/Node/MacroNode.php
+share/drupal/vendor/twig/twig/src/Node/MacrosNode.php
 share/drupal/vendor/twig/twig/src/Node/ModuleNode.php
 share/drupal/vendor/twig/twig/src/Node/NameDeprecation.php
 share/drupal/vendor/twig/twig/src/Node/Node.php
 share/drupal/vendor/twig/twig/src/Node/NodeCaptureInterface.php
+share/drupal/vendor/twig/twig/src/Node/NodeDocumentation.php
 share/drupal/vendor/twig/twig/src/Node/NodeOutputInterface.php
 share/drupal/vendor/twig/twig/src/Node/Nodes.php
 share/drupal/vendor/twig/twig/src/Node/PrintNode.php
 share/drupal/vendor/twig/twig/src/Node/SandboxNode.php
 share/drupal/vendor/twig/twig/src/Node/SetNode.php
 share/drupal/vendor/twig/twig/src/Node/TextNode.php
+share/drupal/vendor/twig/twig/src/Node/TypeNode.php
 share/drupal/vendor/twig/twig/src/Node/TypesNode.php
 share/drupal/vendor/twig/twig/src/Node/WithNode.php
 share/drupal/vendor/twig/twig/src/NodeTraverser.php
@@ -24211,9 +24241,13 @@ share/drupal/vendor/twig/twig/src/Resources/debug.php
 share/drupal/vendor/twig/twig/src/Resources/escaper.php
 share/drupal/vendor/twig/twig/src/Resources/string_loader.php
 share/drupal/vendor/twig/twig/src/Runtime/EscaperRuntime.php
+share/drupal/vendor/twig/twig/src/Runtime/SandboxBridgeRuntime.php
 share/drupal/vendor/twig/twig/src/RuntimeLoader/ContainerRuntimeLoader.php
 share/drupal/vendor/twig/twig/src/RuntimeLoader/FactoryRuntimeLoader.php
 share/drupal/vendor/twig/twig/src/RuntimeLoader/RuntimeLoaderInterface.php
+share/drupal/vendor/twig/twig/src/Sandbox/Sandbox.php
+share/drupal/vendor/twig/twig/src/Sandbox/SandboxInterface.php
+share/drupal/vendor/twig/twig/src/Sandbox/SecurityChecker.php
 share/drupal/vendor/twig/twig/src/Sandbox/SecurityError.php
 share/drupal/vendor/twig/twig/src/Sandbox/SecurityNotAllowedFilterError.php
 share/drupal/vendor/twig/twig/src/Sandbox/SecurityNotAllowedFunctionError.php
@@ -24256,6 +24290,7 @@ share/drupal/vendor/twig/twig/src/TokenStream.php
 share/drupal/vendor/twig/twig/src/TwigCallableInterface.php
 share/drupal/vendor/twig/twig/src/TwigFilter.php
 share/drupal/vendor/twig/twig/src/TwigFunction.php
+share/drupal/vendor/twig/twig/src/TwigMacro.php
 share/drupal/vendor/twig/twig/src/TwigTest.php
 share/drupal/vendor/twig/twig/src/Util/CallableArgumentsExtractor.php
 share/drupal/vendor/twig/twig/src/Util/CallableParameters.php
