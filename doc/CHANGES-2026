@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7606 2026/11/04 08:14:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7607 2026/11/04 10:47:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11360,3 +11360,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-iniparse to 0.5.3 [adam 2026-11-04]
 	Added sysutils/proc-cli version 2.2.0 [drixter 2026-11-04]
 	Updated graphics/gimp to 3.2.8 [wiz 2026-11-04]
+	Updated devel/py-cython to 3.3.1 [adam 2026-11-04]
+	Updated devel/py-fakefs to 6.3.2 [adam 2026-11-04]
