@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7612 2026/11/04 12:19:01 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7613 2026/11/04 12:20:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11369,3 +11369,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-zeroconf to 0.153.0 [adam 2026-11-04]
 	Updated devel/difftastic to 0.72.0 [pin 2026-11-04]
 	Updated devel/gitlogue to 0.12.2 [pin 2026-11-04]
+	Updated devel/gitpane to 0.18.4 [pin 2026-11-04]
