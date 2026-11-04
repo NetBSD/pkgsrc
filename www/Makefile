@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1948 2026/10/26 10:48:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1949 2026/11/04 13:54:10 ast Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -424,6 +424,7 @@ SUBDIR+=	p5-Dancer2
 SUBDIR+=	p5-Data-URIEncode
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-Client
+SUBDIR+=	p5-FCGI-Daemon
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-File-Mork
 SUBDIR+=	p5-HTML-CalendarMonthSimple
