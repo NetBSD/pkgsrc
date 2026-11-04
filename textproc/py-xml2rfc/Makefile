@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/10/16 19:44:23 adam Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/04 13:44:16 adam Exp $
 
-DISTNAME=	xml2rfc-3.34.1
+DISTNAME=	xml2rfc-3.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-google-i18n-address>=3.0.0:../../devel/py-google-i18n-a
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=3.1.0:../../devel/py-intervaltree
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.3.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-natsort>=8.4.0:../../textproc/py-natsort
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.6.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.2.5:../../devel/py-wcwidth
