@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2026/10/16 19:44:10 adam Exp $
+# $NetBSD: Makefile,v 1.59 2026/11/04 12:07:44 adam Exp $
 
-DISTNAME=	pyzmq-27.2.0
+DISTNAME=	pyzmq-27.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyzmq/}
@@ -11,10 +11,10 @@ COMMENT=	Python bindings for zeromq
 LICENSE=	gnu-lgpl-v3 AND modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10:../../devel/py-scikit-build-core
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.17:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=0:../../devel/py-test-rerunfailures
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
