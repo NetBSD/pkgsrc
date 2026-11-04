@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.38 2026/08/23 08:03:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/11/04 10:45:26 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
@@ -367,6 +372,7 @@ ${PYSITELIB}/Cython/Includes/libc/locale.pxd
 ${PYSITELIB}/Cython/Includes/libc/math.pxd
 ${PYSITELIB}/Cython/Includes/libc/setjmp.pxd
 ${PYSITELIB}/Cython/Includes/libc/signal.pxd
+${PYSITELIB}/Cython/Includes/libc/stdbool.pxd
 ${PYSITELIB}/Cython/Includes/libc/stddef.pxd
 ${PYSITELIB}/Cython/Includes/libc/stdint.pxd
 ${PYSITELIB}/Cython/Includes/libc/stdio.pxd
@@ -580,11 +586,6 @@ ${PYSITELIB}/Cython/__init__.pyc
 ${PYSITELIB}/Cython/__init__.pyo
 ${PYSITELIB}/Cython/_shared.so
 ${PYSITELIB}/Cython/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cython.py
 ${PYSITELIB}/cython.pyc
 ${PYSITELIB}/cython.pyo
