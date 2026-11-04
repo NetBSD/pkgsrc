@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7636 2026/11/04 15:25:20 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7637 2026/11/04 15:26:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11396,3 +11396,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/ruby-afm to 1.0.1 [taca 2026-11-04]
 	Updated graphics/ruby-RMagick to 7.2.0 [taca 2026-11-04]
 	Added mail/ruby-mail29 version 2.9.1 [taca 2026-11-04]
+	Updated mail/ruby-mime-types-data to 3.2026.1103 [taca 2026-11-04]
