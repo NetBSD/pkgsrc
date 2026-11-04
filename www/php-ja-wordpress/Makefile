@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2026/10/12 21:14:17 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/11/04 15:54:56 taca Exp $
 #
 # when updating this, please run 'PKG_DEVELOPER=1 make upload-distfiles'
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
-VERSION=		7.0.7
+VERSION=		7.0.8
 CATEGORIES=		www
 MASTER_SITES=		https://ja.wordpress.org/
 
