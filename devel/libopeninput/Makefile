@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/09/22 14:38:21 kikadf Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/04 11:23:10 kikadf Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Wscons(4) and kqueue(2) based port of libinput
 

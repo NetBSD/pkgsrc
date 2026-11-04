@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2026/09/22 14:38:21 kikadf Exp $
+# $NetBSD: Makefile.common,v 1.4 2026/11/04 11:23:10 kikadf Exp $
 
 # used by devel/libopeninput/Makefile
 # used by devel/input-headers/Makefile
@@ -8,7 +8,7 @@ VERSION=	1.31.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sizeofvoid/}
 GITHUB_PROJECT=	libopeninput
-GITHUB_TAG=	10995219206280da0f1a3ba124abe4c8ef89e021
+GITHUB_TAG=	ba39026b50537c685056f7070ed77c9e1e7f63f0
 
 MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://github.com/sizeofvoid/libopeninput/tree/libopeninput/
