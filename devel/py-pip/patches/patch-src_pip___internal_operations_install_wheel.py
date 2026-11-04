@@ -1,4 +1,4 @@
-$NetBSD: patch-src_pip___internal_operations_install_wheel.py,v 1.4 2026/11/04 14:03:24 adam Exp $
+$NetBSD: patch-src_pip___internal_operations_install_wheel.py,v 1.5 2026/11/04 16:49:12 ryoon Exp $
 
 Allow pip install --executable=/path to set path in script #! lines.
 https://github.com/pypa/pip/issues/12087
@@ -11,7 +11,7 @@ https://github.com/pypa/pip/pull/12088
  """)
  
 +    def __init__(self, executable, *args, **kwargs):
-+        super().__init__(*args, **kwargs)
++        super().__init__(None, *args, **kwargs)
 +        self.executable = executable
 +
      def make(

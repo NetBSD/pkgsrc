@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.80 2026/11/04 14:03:24 adam Exp $
+$NetBSD: distinfo,v 1.81 2026/11/04 16:49:12 ryoon Exp $
 
 BLAKE2s (pip-26.3.tar.gz) = cb0b3443336242cd4f4de5c5950dd077573caf8ed33ebcb4c28fe56bf7fb11b5
 SHA512 (pip-26.3.tar.gz) = 0acc2d13845f5ad164db491d26c00b0f9f30e211ea2d735ccd3017b67e1daa2d7c42f75376fcc5a061f2d0591bdd7b484a9f08cd063e5ce471e76cea659ff566
 Size (pip-26.3.tar.gz) = 1934348 bytes
 SHA1 (patch-src_pip___internal_build__env_virtual.py) = 237e2e409c8f3332bd5c77531865520fb086c521
 SHA1 (patch-src_pip___internal_commands_install.py) = 2f78c5af7c677d052a2275488dcda2f7b86c6e51
-SHA1 (patch-src_pip___internal_operations_install_wheel.py) = cc9d808e6c4eae8976f8c28e217eeb75344706d7
+SHA1 (patch-src_pip___internal_operations_install_wheel.py) = 091b19e61c73cc360c62916886e5f2e9f8e45a46
 SHA1 (patch-src_pip___internal_req_____init____.py) = 2bd5e0d18493b25bbd8dc533ffa3189e3e4038ba
 SHA1 (patch-src_pip___internal_req_req__install.py) = 534c68eec2c75ea3dbd8fce89c458ba2109e8fc5
