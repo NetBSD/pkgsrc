@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2026/07/16 19:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2026/11/04 06:22:10 wiz Exp $
 
-DISTNAME=	CGI-4.72
+DISTNAME=	CGI-5.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../..//authors/id/L/LE/LEEJO/}
 
