@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/08/16 16:11:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/04 15:35:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/CHANGES.out_of_date
@@ -24,11 +24,20 @@ ${GEM_LIBDIR}/lib/net/ping/wmi.rb
 ${GEM_LIBDIR}/net-ping-universal-linux.gemspec
 ${GEM_LIBDIR}/net-ping-universal-mingw-ucrt.gemspec
 ${GEM_LIBDIR}/net-ping.gemspec
+${GEM_LIBDIR}/sig/net/ping/external.rbs
+${GEM_LIBDIR}/sig/net/ping/http.rbs
+${GEM_LIBDIR}/sig/net/ping/icmp.rbs
+${GEM_LIBDIR}/sig/net/ping/ping.rbs
+${GEM_LIBDIR}/sig/net/ping/tcp.rbs
+${GEM_LIBDIR}/sig/net/ping/udp.rbs
+${GEM_LIBDIR}/sig/net/ping/version.rbs
+${GEM_LIBDIR}/sig/net/ping/wmi.rbs
 ${GEM_LIBDIR}/test/test_net_ping.rb
 ${GEM_LIBDIR}/test/test_net_ping_external.rb
 ${GEM_LIBDIR}/test/test_net_ping_gem_packaging.rb
 ${GEM_LIBDIR}/test/test_net_ping_http.rb
 ${GEM_LIBDIR}/test/test_net_ping_icmp.rb
+${GEM_LIBDIR}/test/test_net_ping_lib.rb
 ${GEM_LIBDIR}/test/test_net_ping_tcp.rb
 ${GEM_LIBDIR}/test/test_net_ping_udp.rb
 ${GEM_LIBDIR}/test/test_net_ping_wmi.rb
