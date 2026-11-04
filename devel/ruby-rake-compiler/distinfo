@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/01/17 16:25:56 taca Exp $
+$NetBSD: distinfo,v 1.6 2026/11/04 14:48:52 taca Exp $
 
-BLAKE2s (rake-compiler-1.3.1.gem) = d297901b0c6de042d70b9a74997b3bf99c6c7be96ed6cc843b88fa70bbbcfec8
-SHA512 (rake-compiler-1.3.1.gem) = 9022a55fbb397f218ead147f515047d208a1adf0b240d023117b51e0d9297cd95a3aee9aa60e5f29cb7a8e8de05ec1807d4449b25ddde65e42349a60e5a77e41
-Size (rake-compiler-1.3.1.gem) = 35840 bytes
+BLAKE2s (rake-compiler-1.3.3.gem) = c858d2f39aad9572a578049641d2d72a71f765a908c61498c5d95fc7b84d9447
+SHA512 (rake-compiler-1.3.3.gem) = e80d245d0dded54bad451d6b0e22186516a305cfd5ae0eae76cf6bcdc3bc7d314ecae169cab471fb2292dad12b74e7307a4e74a751a91368d6702ce1b7464679
+Size (rake-compiler-1.3.3.gem) = 36352 bytes
