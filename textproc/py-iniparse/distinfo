@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2026/10/30 19:28:43 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/11/04 07:09:15 adam Exp $
 
-BLAKE2s (iniparse-0.5.2.tar.gz) = 607677013924785953ee66cc23c39bea5503298837450f57f31f4e0723f55aee
-SHA512 (iniparse-0.5.2.tar.gz) = e64a32ab1f171d0f4baf758a54b96b4037f437606761a7b12c3c69613dc8798f11aef6e7f12e274ab4a03a9747f3ac7309a10ed12e307fc7dc8412465680649f
-Size (iniparse-0.5.2.tar.gz) = 51507 bytes
-SHA1 (patch-setup.py) = 6c22d846e3372c0f065b80e7344357ce2f90d326
+BLAKE2s (iniparse-0.5.3.tar.gz) = 0239c091b50e2cb46a06e51af5cff535ac0cdcefee64dac6e2882196eeae51d4
+SHA512 (iniparse-0.5.3.tar.gz) = cf8bfb145701f3a50c9c46834bc01418fa71833f850dd412ce450a9850e78266ba25fae4d433cb82a35348a1d79de4a7650230d4b52eff77f257c70ea424a62f
+Size (iniparse-0.5.3.tar.gz) = 51624 bytes
+SHA1 (patch-setup.py) = 8a3126af2b4576d31caebde8a25fca6af76b06a7
