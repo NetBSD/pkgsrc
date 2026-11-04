@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7609 2026/11/04 11:24:59 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7610 2026/11/04 12:12:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11364,3 +11364,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-fakefs to 6.3.2 [adam 2026-11-04]
 	Updated devel/input-headers to 1.31.3nb1 [kikadf 2026-11-04]
 	Updated devel/libopeninput to 1.31.3nb1 [kikadf 2026-11-04]
+	Updated devel/py-scikit-build-core to 1.1.2 [adam 2026-11-04]
+	Updated net/py-zmq to 27.3.0 [adam 2026-11-04]
+	Updated net/py-zeroconf to 0.153.0 [adam 2026-11-04]
