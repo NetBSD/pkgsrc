@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
+$NetBSD: patch-configure,v 1.2 2026/11/04 15:56:42 taca Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
@@ -7,9 +7,9 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
 * Do not override CFLAGS/CXXFLAGS except linux.
 * Prevent WRKDIR reference.
 
---- configure.orig	2025-07-10 13:45:26.000000000 +0100
-+++ configure	2025-07-15 11:57:43.052095332 +0100
-@@ -1133,9 +1133,6 @@
+--- configure.orig	2026-10-30 17:03:41.000000000 +0000
++++ configure
+@@ -1130,9 +1130,6 @@ CXXFLAGS
  CCC
  BUILDCXX
  CPP
@@ -19,7 +19,7 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
  LT_SYS_LIBRARY_PATH
  CXXCPP
  EXT_LIBECAP_CFLAGS
-@@ -29115,10 +29112,13 @@
+@@ -30847,10 +30844,13 @@ do
  done
  
    # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
@@ -36,7 +36,7 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
      : ;; #(
    mingw) :
      EUILIB="-liphlpapi" ;; #(
-@@ -29166,6 +29166,7 @@
+@@ -30898,6 +30898,7 @@ then :
  fi
  
    ac_fn_cxx_check_header_compile "$LINENO" "net/if_arp.h" "ac_cv_header_net_if_arp_h" "
@@ -44,7 +44,7 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -29176,6 +29177,7 @@
+@@ -30908,6 +30909,7 @@ then :
  
  fi
  ac_fn_cxx_check_header_compile "$LINENO" "net/route.h" "ac_cv_header_net_route_h" "
@@ -52,9 +52,9 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -30169,6 +30171,49 @@
- else $as_nop
- 
+@@ -31806,6 +31808,49 @@ then :
+ else case e in #(
+   e)
        as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
 +$as_echo_n "checking for OPENSSL_init_ssl in -lssl... " >&6; }
@@ -99,13 +99,13 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
 +	as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
 +
 +fi
- 
+      ;;
+ esac
  fi
- 
-@@ -30272,7 +30317,51 @@
+@@ -31915,7 +31960,51 @@ then :
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
- else $as_nop
- 
+ else case e in #(
+   e)
 -      as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
 +$as_echo_n "checking for OPENSSL_init_ssl in -lssl... " >&6; }
@@ -152,10 +152,10 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
 +fi
 +
 +
- 
+      ;;
+ esac
  fi
- 
-@@ -47322,6 +47411,8 @@
+@@ -49543,6 +49632,8 @@ then :
  # elif defined _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -164,7 +164,7 @@ $NetBSD: patch-configure,v 1.1 2025/07/16 10:58:03 sborrill Exp $
  # else
  #  ifdef  __cplusplus
  extern "C"
-@@ -50163,6 +50254,9 @@
+@@ -52031,6 +52122,9 @@ printf "%s\n" "#define USE_SOLARIS_IPFIL
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #define minor_t fubar
  #endif
