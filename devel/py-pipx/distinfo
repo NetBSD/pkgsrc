@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/10/29 11:45:14 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/11/04 14:06:13 adam Exp $
 
-BLAKE2s (pipx-1.18.9.tar.gz) = 12ee2717deb5a5885c01fce94f1baa1d42aeac8cd3bcd37102cf6f35ae80e17e
-SHA512 (pipx-1.18.9.tar.gz) = be12dd44098f41541e94f3d84089bdca94888021e4dffa5ac2a7cf20646e8a142e1576942a117acac8f061b8f9ef0c7544c00581e1a7261e8b0f773d2f169bb4
-Size (pipx-1.18.9.tar.gz) = 400280 bytes
+BLAKE2s (pipx-1.18.13.tar.gz) = b81cd38cad7b6e55d875f3ea13a48c78cc7830709f0f0e62c2e2c052a4923f5f
+SHA512 (pipx-1.18.13.tar.gz) = 3dc274b005485ca536720f9cfd269615514ccbd36295cc84d1c2f69ac0b7cc094220db82ca97b4a89a4c5e1eb3da622f3d905bc30339f29e08e5d7638f9d11af
+Size (pipx-1.18.13.tar.gz) = 395144 bytes
