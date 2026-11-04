@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7650 2026/11/04 16:07:48 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7651 2026/11/04 16:13:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11410,3 +11410,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/squid7 to 7.8 [taca 2026-11-04]
 	Updated www/drupal11 to 11.4.10 [taca 2026-11-04]
 	Updated www/php-concrete-cms to 9.5.7 [taca 2026-11-04]
+	Updated www/typo3-13 to 13.4.37 [taca 2026-11-04]
