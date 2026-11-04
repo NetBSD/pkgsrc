@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2026/09/09 14:18:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/11/04 16:07:13 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -57,7 +57,6 @@ ${CC_WEBDIR}/concrete/attributes/select/type_form.css
 ${CC_WEBDIR}/concrete/attributes/select/type_form.php
 ${CC_WEBDIR}/concrete/attributes/site/controller.php
 ${CC_WEBDIR}/concrete/attributes/social_links/controller.php
-${CC_WEBDIR}/concrete/attributes/social_links/form.css
 ${CC_WEBDIR}/concrete/attributes/social_links/form.js
 ${CC_WEBDIR}/concrete/attributes/social_links/form.php
 ${CC_WEBDIR}/concrete/attributes/social_links/icon.png
@@ -1517,7 +1516,6 @@ ${CC_WEBDIR}/concrete/controllers/dialog/file/sets.php
 ${CC_WEBDIR}/concrete/controllers/dialog/file/statistics.php
 ${CC_WEBDIR}/concrete/controllers/dialog/file/thumbnails.php
 ${CC_WEBDIR}/concrete/controllers/dialog/file/thumbnails/edit.php
-${CC_WEBDIR}/concrete/controllers/dialog/file/upload_complete.php
 ${CC_WEBDIR}/concrete/controllers/dialog/file/versions.php
 ${CC_WEBDIR}/concrete/controllers/dialog/frontend/event.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/advanced_search.php
@@ -1624,7 +1622,6 @@ ${CC_WEBDIR}/concrete/controllers/element/dashboard/boards/configuration/page.ph
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/control.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/control/options.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/control/text_options.php
-${CC_WEBDIR}/concrete/controllers/element/dashboard/express/entries/header.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/menu.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/files/header.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/marketplace/extend.php
@@ -1664,7 +1661,6 @@ ${CC_WEBDIR}/concrete/controllers/element/pages/search/search.php
 ${CC_WEBDIR}/concrete/controllers/element/production/notice.php
 ${CC_WEBDIR}/concrete/controllers/element/search/customize_results.php
 ${CC_WEBDIR}/concrete/controllers/element/search/express/customize_results.php
-${CC_WEBDIR}/concrete/controllers/element/search/pages/header.php
 ${CC_WEBDIR}/concrete/controllers/element/search/search_field_selector.php
 ${CC_WEBDIR}/concrete/controllers/element/search/users/groups/header.php
 ${CC_WEBDIR}/concrete/controllers/element/users/search/menu.php
@@ -1762,7 +1758,6 @@ ${CC_WEBDIR}/concrete/controllers/permissions/categories/task_handlers/topic_tre
 ${CC_WEBDIR}/concrete/controllers/permissions/categories/task_handlers/tree_node.php
 ${CC_WEBDIR}/concrete/controllers/permissions/categories/task_handlers/user.php
 ${CC_WEBDIR}/concrete/controllers/permissions/set/clipboard.php
-${CC_WEBDIR}/concrete/controllers/search/express.php
 ${CC_WEBDIR}/concrete/controllers/search/express/entries.php
 ${CC_WEBDIR}/concrete/controllers/search/pages.php
 ${CC_WEBDIR}/concrete/controllers/search/standard.php
@@ -2145,7 +2140,6 @@ ${CC_WEBDIR}/concrete/elements/dashboard/express/control.php
 ${CC_WEBDIR}/concrete/elements/dashboard/express/control/options/association.php
 ${CC_WEBDIR}/concrete/elements/dashboard/express/control/options/text.php
 ${CC_WEBDIR}/concrete/elements/dashboard/express/detail_navigation.php
-${CC_WEBDIR}/concrete/elements/dashboard/express/entries/header.php
 ${CC_WEBDIR}/concrete/elements/dashboard/express/menu.php
 ${CC_WEBDIR}/concrete/elements/dashboard/files/header.php
 ${CC_WEBDIR}/concrete/elements/dashboard/groups/menu_tree.php
@@ -2265,7 +2259,6 @@ ${CC_WEBDIR}/concrete/elements/page_types/target_types/parent_page.php
 ${CC_WEBDIR}/concrete/elements/pages/schedule.php
 ${CC_WEBDIR}/concrete/elements/pages/search/menu.php
 ${CC_WEBDIR}/concrete/elements/pages/search/search.php
-${CC_WEBDIR}/concrete/elements/pages/search_header.php
 ${CC_WEBDIR}/concrete/elements/panels/add/stack_list.php
 ${CC_WEBDIR}/concrete/elements/panels/dashboard.php
 ${CC_WEBDIR}/concrete/elements/panels/page.php
@@ -7904,6 +7897,7 @@ ${CC_WEBDIR}/concrete/src/Calendar/CalendarServiceProvider.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/Command/CalendarEventCommand.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/EditResponse.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/Event.php
+${CC_WEBDIR}/concrete/src/Calendar/Event/Event/CalendarEventEvent.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/Event/DuplicateEventEvent.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/EventList.php
 ${CC_WEBDIR}/concrete/src/Calendar/Event/EventOccurrence.php
@@ -8041,7 +8035,6 @@ ${CC_WEBDIR}/concrete/src/ConcreteCms/ActivityService.php
 ${CC_WEBDIR}/concrete/src/ConcreteCms/ActivitySlotItem.php
 ${CC_WEBDIR}/concrete/src/Config/CompositeLoader.php
 ${CC_WEBDIR}/concrete/src/Config/ConfigServiceProvider.php
-${CC_WEBDIR}/concrete/src/Config/ConfigStore.php
 ${CC_WEBDIR}/concrete/src/Config/CoreFileLoader.php
 ${CC_WEBDIR}/concrete/src/Config/DatabaseLoader.php
 ${CC_WEBDIR}/concrete/src/Config/DatabaseSaver.php
@@ -8108,6 +8101,7 @@ ${CC_WEBDIR}/concrete/src/Controller/ControllerResolver.php
 ${CC_WEBDIR}/concrete/src/Controller/ElementController.php
 ${CC_WEBDIR}/concrete/src/Controller/FunctionController.php
 ${CC_WEBDIR}/concrete/src/Controller/Traits/DashboardBulkUpdaterTrait.php
+${CC_WEBDIR}/concrete/src/Controller/Traits/DashboardExpressEntityBreadcrumbTrait.php
 ${CC_WEBDIR}/concrete/src/Controller/Traits/DashboardExpressEntityTrait.php
 ${CC_WEBDIR}/concrete/src/Controller/Traits/DashboardExpressEntryDetailsTrait.php
 ${CC_WEBDIR}/concrete/src/Controller/Traits/DashboardExpressEntryListTrait.php
@@ -8693,6 +8687,7 @@ ${CC_WEBDIR}/concrete/src/File/Component/Chooser/ChooserConfiguration.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/ChooserConfigurationInterface.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/ChooserOptionInterface.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/DefaultConfigurationFactory.php
+${CC_WEBDIR}/concrete/src/File/Component/Chooser/DefaultUploadDirectoryIdTrait.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/ExternalFileProviderOptionTrait.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/FileExtensionFilter.php
 ${CC_WEBDIR}/concrete/src/File/Component/Chooser/FileTypeFilter.php
@@ -9087,11 +9082,11 @@ ${CC_WEBDIR}/concrete/src/Http/Response.php
 ${CC_WEBDIR}/concrete/src/Http/ResponseAssetGroup.php
 ${CC_WEBDIR}/concrete/src/Http/ResponseFactory.php
 ${CC_WEBDIR}/concrete/src/Http/ResponseFactoryInterface.php
-${CC_WEBDIR}/concrete/src/Http/RouteActionDispatcher.php
 ${CC_WEBDIR}/concrete/src/Http/RouteDispatcher.php
 ${CC_WEBDIR}/concrete/src/Http/ServerInterface.php
 ${CC_WEBDIR}/concrete/src/Http/Service/Ajax.php
 ${CC_WEBDIR}/concrete/src/Http/Service/Json.php
+${CC_WEBDIR}/concrete/src/Http/Traits/AcceptsJsonTrait.php
 ${CC_WEBDIR}/concrete/src/ImageEditor/Controller/DefaultEditorController.php
 ${CC_WEBDIR}/concrete/src/ImageEditor/Controller/EditorControllerInterface.php
 ${CC_WEBDIR}/concrete/src/ImageEditor/ImageEditorService.php
@@ -9333,6 +9328,7 @@ ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/BreadcrumbInterface.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardBreadcrumb.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardBreadcrumbFactory.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardExpressBreadcrumbFactory.php
+${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardExpressEntityBreadcrumbFactory.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardFileManagerBreadcrumbFactory.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardGroupBreadcrumbFactory.php
 ${CC_WEBDIR}/concrete/src/Navigation/Breadcrumb/Dashboard/DashboardStacksBreadcrumbFactory.php
@@ -10159,6 +10155,7 @@ ${CC_WEBDIR}/concrete/src/Sharing/ShareThisPage/Service.php
 ${CC_WEBDIR}/concrete/src/Sharing/ShareThisPage/ServiceList.php
 ${CC_WEBDIR}/concrete/src/Sharing/SharingServiceProvider.php
 ${CC_WEBDIR}/concrete/src/Sharing/SocialNetwork/Link.php
+${CC_WEBDIR}/concrete/src/Sharing/SocialNetwork/LinkUrlValidator.php
 ${CC_WEBDIR}/concrete/src/Sharing/SocialNetwork/Service.php
 ${CC_WEBDIR}/concrete/src/Sharing/SocialNetwork/ServiceList.php
 ${CC_WEBDIR}/concrete/src/Site/Config/Liaison.php
@@ -10224,6 +10221,7 @@ ${CC_WEBDIR}/concrete/src/StyleCustomizer/Customizer/Type/SkinCustomizerType.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Customizer/Type/TypeInterface.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Inline/CustomStyle.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Inline/StyleSet.php
+${CC_WEBDIR}/concrete/src/StyleCustomizer/Inline/StyleValues.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Normalizer/ColorVariable.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Normalizer/ImageVariable.php
 ${CC_WEBDIR}/concrete/src/StyleCustomizer/Normalizer/Legacy/ImageVariable.php
@@ -10758,6 +10756,10 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260203004500.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260811120000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260903000000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260908000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20260914000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20261007000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20261020000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20261020120000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
@@ -12149,12 +12151,15 @@ ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/gettext/gettext/fix-
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/gettext/gettext/php8-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/laminas/laminas-code/php8.1-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/lcobucci/jwt/php8-compatibility.patch
+${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/league/flysystem/cve-2026-102601-malformed-utf8-path.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/league/fractal/php8.1-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/league/url/php8.1-compatibility.patch
+${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/league/url/setters-phpdoc.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/phpunit/phpunit/Getopt-each.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/primal/color/php8-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/sunra/php-simple-html-dom-parser/minus-in-regular-expressions.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/sunra/php-simple-html-dom-parser/php8.1-compatibility.patch
+${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/sunra/php-simple-html-dom-parser/return-types.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/tedivm/jshrink/fix-minifier-loop.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/tedivm/jshrink/update-upstream-1.3.2.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/twig/twig/cve-2026-46627-sandbox-resource-exhaustion-docs.patch
@@ -13540,6 +13545,7 @@ ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/ElementReference/Resolve
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/ElementReference/Subject.php
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/ElementReference/Usage.php
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/Exceptions/NestingException.php
+${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/Exceptions/RegexException.php
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/Helper.php
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/Sanitizer.php
 ${CC_WEBDIR}/concrete/vendor/enshrined/svg-sanitize/src/data/AllowedAttributes.php
@@ -13743,7 +13749,6 @@ ${CC_WEBDIR}/concrete/vendor/gettext/languages/src/cldr-data/main/en-US/scripts.
 ${CC_WEBDIR}/concrete/vendor/gettext/languages/src/cldr-data/main/en-US/territories.json
 ${CC_WEBDIR}/concrete/vendor/gettext/languages/src/cldr-data/supplemental/plurals.json
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/LICENSE
-${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/package-lock.json
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/BodySummarizer.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/BodySummarizerInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Client.php
@@ -13767,21 +13772,28 @@ ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/CurlVersion.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/HostValidator.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/ProxyEnvironment.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Handler/TlsVersion.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/HandlerStack.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/MessageFormatter.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/MessageFormatterInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Middleware.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Multiplexing.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Pool.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/RequestOptions.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/TransferStats.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/TransportSharing.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/Utils.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/functions.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/guzzle/src/functions_include.php
@@ -13799,6 +13811,7 @@ ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/PromiseInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/PromisorInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/RejectedPromise.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/RejectionException.php
+${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/State.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/TaskQueue.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 ${CC_WEBDIR}/concrete/vendor/guzzlehttp/promises/src/Utils.php
@@ -14210,6 +14223,22 @@ ${CC_WEBDIR}/concrete/vendor/jbroadway/urlify/URLify.php
 ${CC_WEBDIR}/concrete/vendor/jbroadway/urlify/scripts/downcode.php
 ${CC_WEBDIR}/concrete/vendor/jbroadway/urlify/scripts/filter.php
 ${CC_WEBDIR}/concrete/vendor/jbroadway/urlify/scripts/transliterate.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/.forgejo/FUNDING.yml
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/.forgejo/workflows/phpunit.yml
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/license.md
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/psalm.xml
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/Action.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/Diff.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/DiffMatch.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/MatchFinder.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/MatchOptions.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/Mode.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/Operation.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/Utils.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/src/WordSplitter.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/tests/HeavyContentTest.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/tests/HtmlDiffTest.php
+${CC_WEBDIR}/concrete/vendor/korvin/htmldiff-gh-fork/tests/MultiByteTest.php
 ${CC_WEBDIR}/concrete/vendor/kylekatarnls/html-object/.editorconfig
 ${CC_WEBDIR}/concrete/vendor/kylekatarnls/html-object/.github/workflows/coverage.yml
 ${CC_WEBDIR}/concrete/vendor/kylekatarnls/html-object/.github/workflows/test.yml
@@ -18444,22 +18473,6 @@ ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Util/Path.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/ValueConverter.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Version.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Warn.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.forgejo/FUNDING.yml
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.forgejo/workflows/phpunit.yml
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/license.md
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/psalm.xml
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Action.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Diff.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/DiffMatch.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/MatchFinder.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/MatchOptions.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Mode.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Operation.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Utils.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/WordSplitter.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/tests/HeavyContentTest.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/tests/HtmlDiffTest.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/tests/MultiByteTest.php
 ${CC_WEBDIR}/concrete/vendor/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/HtmlDomParser.php
 ${CC_WEBDIR}/concrete/vendor/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/simplehtmldom_1_5/simple_html_dom.php
 ${CC_WEBDIR}/concrete/vendor/symfony/amqp-messenger/LICENSE
@@ -19525,6 +19538,7 @@ ${CC_WEBDIR}/concrete/vendor/symfony/polyfill-uuid/LICENSE
 ${CC_WEBDIR}/concrete/vendor/symfony/polyfill-uuid/Uuid.php
 ${CC_WEBDIR}/concrete/vendor/symfony/polyfill-uuid/bootstrap.php
 ${CC_WEBDIR}/concrete/vendor/symfony/polyfill-uuid/bootstrap80.php
+${CC_WEBDIR}/concrete/vendor/symfony/polyfill-uuid/bootstrap85.php
 ${CC_WEBDIR}/concrete/vendor/symfony/property-access/Exception/AccessException.php
 ${CC_WEBDIR}/concrete/vendor/symfony/property-access/Exception/ExceptionInterface.php
 ${CC_WEBDIR}/concrete/vendor/symfony/property-access/Exception/InvalidArgumentException.php
@@ -20838,7 +20852,6 @@ ${CC_WEBDIR}/concrete/views/dialogs/file/sets.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/statistics.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/thumbnails.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/thumbnails/edit.php
-${CC_WEBDIR}/concrete/views/dialogs/file/upload_complete.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/versions.php
 ${CC_WEBDIR}/concrete/views/dialogs/groups/bulk/delete.php
 ${CC_WEBDIR}/concrete/views/dialogs/groups/delete.php
