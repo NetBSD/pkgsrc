@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2026/10/22 11:08:12 adam Exp $
+# $NetBSD: Makefile.common,v 1.68 2026/11/04 22:54:29 gutteridge Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs22/Makefile
 # used by lang/nodejs24/Makefile
@@ -88,7 +88,7 @@ paxctl:
 BUILDLINK_API_DEPENDS.brotli+=	brotli>=1.2.1
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.49
+BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.52
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/nodejs/application.mk"
