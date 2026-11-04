@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4718 2026/11/03 09:24:36 adam Exp $
+# $NetBSD: Makefile,v 1.4719 2026/11/04 14:37:21 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3465,6 +3465,7 @@ SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-loquacious
 SUBDIR+=	ruby-marcel
+SUBDIR+=	ruby-mcp
 SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoist
 SUBDIR+=	ruby-mercenary
