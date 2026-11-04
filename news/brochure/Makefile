@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/10/28 18:02:49 pin Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/04 12:24:55 pin Exp $
 
-DISTNAME=	brochure-0.13.0
+DISTNAME=	brochure-0.14.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sylviromi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
