@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.37 2026/10/07 13:36:19 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.38 2026/11/04 12:17:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.16
@@ -113,16 +113,16 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-elm-5.8.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-erlang-0.20.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-fish-3.6.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-fortran-0.6.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-fsharp-0.3.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-gleam-1.0.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.25.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.23.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.24.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-hcl-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-html-0.23.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-orchard-0.5.9
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.24.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-julia-0.23.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-sg-0.4.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-make-1.1.1
@@ -147,7 +147,6 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-solidity-1.2.13
 CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.7.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-toml-ng-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.23.2
-CARGO_CRATE_DEPENDS+=	tree-sitter-verilog-1.0.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-vhdl-1.4.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-xml-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.2
