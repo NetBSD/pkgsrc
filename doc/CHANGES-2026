@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7598 2026/11/03 21:33:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7599 2026/11/04 04:44:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11349,3 +11349,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 33.0.10 [gdt 2026-11-03]
 	Updated devel/py-msgpack to 1.2.4 [bsiegert 2026-11-03]
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100290 [wiz 2026-11-03]
+	Updated security/adguardhome to 0.107.80 [adam 2026-11-04]
+	Updated net/py-dns to 2.9.2 [adam 2026-11-04]
