@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/01/18 04:02:02 taca Exp $
+$NetBSD: distinfo,v 1.2 2026/11/04 15:30:30 taca Exp $
 
-BLAKE2s (uniform_notifier-1.18.0.gem) = 5dba4244a2264a65d2f9cc5769267b28eddba685aa4fd89ff0cb113a36cac8b7
-SHA512 (uniform_notifier-1.18.0.gem) = fb4d80c9edb2f22980a38e8b1356ff63e948331f6796cc4e1054f4b1e325205eae2c6caf4a257d28d4b4963d195d801833eb9befe4318aea95b1eef2e9ef81ec
-Size (uniform_notifier-1.18.0.gem) = 15360 bytes
+BLAKE2s (uniform_notifier-1.18.1.gem) = 642da31dde6e7385e95ed41a4e8dd39466a39d3a9c9c8ae28110175076cc2d81
+SHA512 (uniform_notifier-1.18.1.gem) = 393e30d4dfe36cdf9b6732459a64cf1df9f2f3d7e6180f9fe09ce259f17e8c3362f4ed0c531f0371d616b88405d932aa2496d259bfbcd416b075ed04363e4cf7
+Size (uniform_notifier-1.18.1.gem) = 10752 bytes
