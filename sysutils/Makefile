@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1207 2026/10/04 09:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1208 2026/11/04 08:03:16 drixter Exp $
 #
 
 COMMENT=	System utilities
@@ -599,6 +599,7 @@ SUBDIR+=	pluged
 SUBDIR+=	podman
 SUBDIR+=	polysh
 SUBDIR+=	prefork
+SUBDIR+=	proc-cli
 SUBDIR+=	pscpug
 SUBDIR+=	psftools
 SUBDIR+=	psmisc

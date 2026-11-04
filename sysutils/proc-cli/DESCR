@@ -1,0 +1,6 @@
+proc finds, inspects and stops processes and ports. Target a process by
+port (:3000), PID, name or path, see what holds a port and why it is
+there, and free it. Commands that change anything ask first, preview
+with --dry-run, and print JSON with stable exit codes for scripts. On
+NetBSD it reads ports with sockstat(1) and open files with fstat(1),
+both in the base system.
