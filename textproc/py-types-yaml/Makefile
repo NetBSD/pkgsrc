@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/11/02 08:43:39 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/04 13:40:15 adam Exp $
 
-DISTNAME=	types_pyyaml-6.0.12.20261030
+DISTNAME=	types_pyyaml-6.0.12.20261103
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-PyYAML/}
