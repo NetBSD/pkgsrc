@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7619 2026/11/04 13:35:38 ast Exp $
+$NetBSD: CHANGES-2026,v 1.7620 2026/11/04 13:44:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11376,3 +11376,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated news/brochure to 0.14.0 [pin 2026-11-04]
 	Updated wm/lefthk to 0.4.0 [pin 2026-11-04]
 	Updated games/cgoban-java to 3.5.144 [ast 2026-11-04]
+	Updated textproc/py-ujson to 6.1.0 [adam 2026-11-04]
+	Updated textproc/py-types-yaml to 6.0.12.20261103 [adam 2026-11-04]
+	Updated textproc/py-xml2rfc to 3.35.0 [adam 2026-11-04]
