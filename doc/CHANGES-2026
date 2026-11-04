@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7633 2026/11/04 15:12:04 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7634 2026/11/04 15:14:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11393,3 +11393,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated finance/ruby-activemerchant to 1.138.0 [taca 2026-11-04]
 	Updated converters/p5-Unicode-Map8 to 0.13nb20 [wiz 2026-11-04]
 	Updated finance/ruby-braintree to 4.42.0 [taca 2026-11-04]
+	Updated fonts/ruby-afm to 1.0.1 [taca 2026-11-04]
