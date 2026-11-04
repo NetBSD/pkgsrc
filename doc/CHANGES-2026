@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7656 2026/11/04 16:58:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7657 2026/11/04 17:00:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11416,3 +11416,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/rsync to 3.5.2 [wiz 2026-11-04]
 	Updated sysutils/proc-cli to 2.3.0 [drixter 2026-11-04]
 	Updated net/rrsync to 3.5.2 [wiz 2026-11-04]
+	Updated sysutils/fd-find to 10.5.1 [wiz 2026-11-04]
