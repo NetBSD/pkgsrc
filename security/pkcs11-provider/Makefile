@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/11/03 20:22:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/04 18:10:58 riastradh Exp $
 
 DISTNAME=	pkcs11-provider-1.3.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openssl-projects/pkcs11-provider/releases/download/v1.3.0/}
 EXTRACT_SUFX=	.tar.xz
