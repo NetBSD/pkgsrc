@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2026/10/11 06:41:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/11/04 07:07:08 adam Exp $
 bin/zig
 lib/zig/build-web/fuzz.zig
 lib/zig/build-web/index.html
@@ -258,6 +258,7 @@ lib/zig/compiler_rt/fmin.zig
 lib/zig/compiler_rt/fmod.zig
 lib/zig/compiler_rt/fmodq_test.zig
 lib/zig/compiler_rt/fmodx_test.zig
+lib/zig/compiler_rt/fmv.zig
 lib/zig/compiler_rt/hexagon.zig
 lib/zig/compiler_rt/int.zig
 lib/zig/compiler_rt/int_from_float.zig
@@ -1487,10 +1488,24 @@ lib/zig/libc/include/any-darwin-any/math.h
 lib/zig/libc/include/any-darwin-any/memory.h
 lib/zig/libc/include/any-darwin-any/monetary.h
 lib/zig/libc/include/any-darwin-any/ndbm.h
+lib/zig/libc/include/any-darwin-any/net/bpf.h
+lib/zig/libc/include/any-darwin-any/net/dlil.h
+lib/zig/libc/include/any-darwin-any/net/ethernet.h
 lib/zig/libc/include/any-darwin-any/net/if.h
+lib/zig/libc/include/any-darwin-any/net/if_arp.h
 lib/zig/libc/include/any-darwin-any/net/if_dl.h
+lib/zig/libc/include/any-darwin-any/net/if_llc.h
+lib/zig/libc/include/any-darwin-any/net/if_media.h
+lib/zig/libc/include/any-darwin-any/net/if_mib.h
+lib/zig/libc/include/any-darwin-any/net/if_types.h
+lib/zig/libc/include/any-darwin-any/net/if_utun.h
 lib/zig/libc/include/any-darwin-any/net/if_var.h
+lib/zig/libc/include/any-darwin-any/net/if_var_status.h
+lib/zig/libc/include/any-darwin-any/net/ipsec_offload.h
+lib/zig/libc/include/any-darwin-any/net/kext_net.h
+lib/zig/libc/include/any-darwin-any/net/ndrv.h
 lib/zig/libc/include/any-darwin-any/net/net_kev.h
+lib/zig/libc/include/any-darwin-any/net/pfkeyv2.h
 lib/zig/libc/include/any-darwin-any/net/route.h
 lib/zig/libc/include/any-darwin-any/netdb.h
 lib/zig/libc/include/any-darwin-any/netinet/in.h
