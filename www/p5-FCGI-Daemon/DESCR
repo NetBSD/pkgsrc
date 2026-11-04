@@ -1,0 +1,12 @@
+FCGI::Daemon is a small FastCGI server for use as CGI-wrapper for
+CGI applications.
+
+Like mod_perl, FCGI-Daemon stays persistent in memory to accelerate
+unmodified CGI applications written in Perl.
+
+FCGI-Daemon run CGI scripts with RLIMITs and predefined number of
+workers.
+
+FCGI-Daemon checks for executable in path and correctly sets
+PATH_INFO environment variable which is crucial for some CGI
+applications like fossil (http://fossil-scm.org).

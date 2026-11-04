@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/04 13:46:52 ast Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/FCGI/Daemon.pm
+lib/perl5/vendor_perl/man/man3/FCGI::Daemon.3
+share/examples/fcgi-daemon/nginx/common.conf
+share/examples/fcgi-daemon/nginx/ikiwiki.conf
+share/examples/fcgi-daemon/nginx/sample.conf
+share/examples/rc.d/fcgi_daemon
