@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/02 20:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/04 06:38:22 wiz Exp $
 
 DISTNAME=	img2pdf-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,8 @@ TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 TEST_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
 TOOLS_PATH.date=	${TOOLBASE}/gnu/bin/date
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-Pillow, py-pikepdf
 
 # as of 0.6.3:
 # 4 failed, 278 passed, 24 skipped, 5 warnings, 48 errors
