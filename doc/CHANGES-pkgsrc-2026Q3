@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.6 2026/11/03 06:55:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.7 2026/11/04 08:44:17 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -75,3 +75,5 @@ Pullup ticket #7326 - requested by gutteridge
 www/firefox153: security fix
 www/firefox153-l10n: dependent update
 
+Pullup ticket #7328 - requested by bsiegert
+graphics/lerc: Security fix
