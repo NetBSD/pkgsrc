@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/09/27 14:25:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/11/04 15:05:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.envrc
 ${GEM_LIBDIR}/CHANGES.md
@@ -191,6 +191,7 @@ ${GEM_LIBDIR}/tests/module_group_test.rb
 ${GEM_LIBDIR}/tests/named_set_test.rb
 ${GEM_LIBDIR}/tests/named_test.rb
 ${GEM_LIBDIR}/tests/null_test.rb
+${GEM_LIBDIR}/tests/once_test.rb
 ${GEM_LIBDIR}/tests/p_test.rb
 ${GEM_LIBDIR}/tests/partial_application_test.rb
 ${GEM_LIBDIR}/tests/proc_compose_test.rb
