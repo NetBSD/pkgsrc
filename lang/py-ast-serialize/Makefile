@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/10/17 09:06:40 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/04 12:50:47 wiz Exp $
 
 DISTNAME=	ast_serialize-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,9 +12,15 @@ LICENSE=	mit
 
 RUST_REQ=	1.80
 
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${PYTHON_VERSION} >= 315
+PYSTABLEABI=	abi3t-darwin
+.endif
+
 .include "cargo-depends.mk"
 
 .include "../../devel/py-maturin/tool.mk"
-.include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
