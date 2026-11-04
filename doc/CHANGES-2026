@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7604 2026/11/04 07:09:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7605 2026/11/04 08:03:42 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11358,3 +11358,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django5 to 5.2.19 [adam 2026-11-04]
 	Updated lang/zig to 0.17.1 [adam 2026-11-04]
 	Updated textproc/py-iniparse to 0.5.3 [adam 2026-11-04]
+	Added sysutils/proc-cli version 2.2.0 [drixter 2026-11-04]
