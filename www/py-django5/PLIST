@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/22 07:26:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/04 06:24:59 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2412,6 +2412,9 @@ ${PYSITELIB}/django/contrib/gis/admin/options.pyo
 ${PYSITELIB}/django/contrib/gis/apps.py
 ${PYSITELIB}/django/contrib/gis/apps.pyc
 ${PYSITELIB}/django/contrib/gis/apps.pyo
+${PYSITELIB}/django/contrib/gis/checks.py
+${PYSITELIB}/django/contrib/gis/checks.pyc
+${PYSITELIB}/django/contrib/gis/checks.pyo
 ${PYSITELIB}/django/contrib/gis/db/__init__.py
 ${PYSITELIB}/django/contrib/gis/db/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/db/__init__.pyo
@@ -2596,6 +2599,9 @@ ${PYSITELIB}/django/contrib/gis/gdal/feature.pyo
 ${PYSITELIB}/django/contrib/gis/gdal/field.py
 ${PYSITELIB}/django/contrib/gis/gdal/field.pyc
 ${PYSITELIB}/django/contrib/gis/gdal/field.pyo
+${PYSITELIB}/django/contrib/gis/gdal/geojson.py
+${PYSITELIB}/django/contrib/gis/gdal/geojson.pyc
+${PYSITELIB}/django/contrib/gis/gdal/geojson.pyo
 ${PYSITELIB}/django/contrib/gis/gdal/geometries.py
 ${PYSITELIB}/django/contrib/gis/gdal/geometries.pyc
 ${PYSITELIB}/django/contrib/gis/gdal/geometries.pyo
