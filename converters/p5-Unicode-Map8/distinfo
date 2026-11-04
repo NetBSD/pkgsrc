@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.8 2026/11/04 06:36:02 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/11/04 15:10:53 wiz Exp $
 
 BLAKE2s (Unicode-Map8-0.13.tar.gz) = e3fa265342a66aa150bd4bd5491975e3118748757edf8d2919372e8295b40f86
 SHA512 (Unicode-Map8-0.13.tar.gz) = 1e8db5bb1e10f13da4eb2c5de36d38e1cad5eeed2aba7e6bfcfb36cde727d557902ac476f64d28937ff2a53992c67f027d1a42edb005292d1c2ec89d05e18f2a
 Size (Unicode-Map8-0.13.tar.gz) = 99250 bytes
+SHA1 (patch-map8.h) = d459dea5b299c0f55d72c8ee8925799c59cc9003
+SHA1 (patch-map8x.c) = ba72d7c86b239ed79619a402e013084cdb5fa049
