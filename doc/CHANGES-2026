@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7620 2026/11/04 13:44:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7621 2026/11/04 13:50:03 ast Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11379,3 +11379,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-ujson to 6.1.0 [adam 2026-11-04]
 	Updated textproc/py-types-yaml to 6.0.12.20261103 [adam 2026-11-04]
 	Updated textproc/py-xml2rfc to 3.35.0 [adam 2026-11-04]
+	Added www/p5-FCGI-Daemon version 20220206 [ast 2026-11-04]
