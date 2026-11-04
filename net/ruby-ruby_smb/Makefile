@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/08/04 14:31:42 taca Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/04 15:42:21 taca Exp $
 
-DISTNAME=	ruby_smb-3.3.22
+DISTNAME=	ruby_smb-3.3.25
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,6 +13,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-windows_error>=0.1.4:../../misc/ruby-windows_error
 DEPENDS+=	${RUBY_PKGPREFIX}-rubyntlm>=0.6.5:../../security/ruby-rubyntlm
 DEPENDS+=	${RUBY_PKGPREFIX}-openssl-ccm-[0-9]*:../../security/ruby-openssl-ccm
 DEPENDS+=	${RUBY_PKGPREFIX}-openssl-cmac-[0-9]*:../../security/ruby-openssl-cmac
+DEPENDS+=	${RUBY_PKGPREFIX}-rasn1>=0.12:../../devel/ruby-rasn1
 
 OVERRIDE_GEMSPEC+=	bindata>=2.4.15
 

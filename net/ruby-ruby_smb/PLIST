@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/06/09 13:24:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/11/04 15:42:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/metasploit-framework_acceptance.yml
 ${GEM_LIBDIR}/.github/workflows/verify.yml
@@ -293,11 +293,19 @@ ${GEM_LIBDIR}/lib/ruby_smb/generic_packet.rb
 ${GEM_LIBDIR}/lib/ruby_smb/gss.rb
 ${GEM_LIBDIR}/lib/ruby_smb/gss/provider.rb
 ${GEM_LIBDIR}/lib/ruby_smb/gss/provider/authenticator.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/provider/kerberos.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/provider/multi.rb
 ${GEM_LIBDIR}/lib/ruby_smb/gss/provider/ntlm.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/spnego_neg_token_init.rb
+${GEM_LIBDIR}/lib/ruby_smb/gss/spnego_neg_token_targ.rb
 ${GEM_LIBDIR}/lib/ruby_smb/impersonation_levels.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss.rb
+${GEM_LIBDIR}/lib/ruby_smb/nbss/name_service_header_flags.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/negative_session_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/netbios_name.rb
+${GEM_LIBDIR}/lib/ruby_smb/nbss/node_status.rb
+${GEM_LIBDIR}/lib/ruby_smb/nbss/node_status_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/nbss/node_status_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
@@ -677,12 +685,18 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/file_system_information/file_fs_volume_info
 ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/file_system_information_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/fscc/fscc_file_attributes_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/generic_packet_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/kerberos_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/multi_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/account_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/authenticator_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm/os_version_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/gss/provider/ntlm_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/gss/spnego_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/negative_session_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/netbios_name_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/node_status_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/node_status_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/node_status_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/nbss/session_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/ntlm/client/session_spec.rb
