@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2026/09/24 04:41:31 taca Exp $
+$NetBSD: distinfo,v 1.11 2026/11/04 15:45:02 taca Exp $
 
-BLAKE2s (winrm-2.4.1.gem) = e3fecfa06e0abcdbcb92032cbef8ec17d074e6377cb919504d18d2b300583827
-SHA512 (winrm-2.4.1.gem) = b6e0ac1e74ada76dea541fa07e3bf97baca89940f55b99dd5cf60641b926a52aa05475af0885cedee9ca83af3e548c29957ad1ef34ae0222c9a3bb27de742397
-Size (winrm-2.4.1.gem) = 44544 bytes
+BLAKE2s (winrm-2.4.2.gem) = ea6a89d5ae39554d9a053d31ebca38e866ccafb71b9e25e8b6e4351f84cd4b2b
+SHA512 (winrm-2.4.2.gem) = baf87217020207b507c50b55641be323dac7e8c3d01a7b4fcd604a1e99ac2b47d860e94c49c3d5e56607dc1eee9bde2efb50d025160e1cd9e68d9816bfa1a1ad
+Size (winrm-2.4.2.gem) = 44544 bytes
