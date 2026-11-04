@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7623 2026/11/04 14:37:41 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7624 2026/11/04 14:39:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11383,3 +11383,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pip to 26.3 [adam 2026-11-04]
 	Updated devel/py-pipx to 1.18.13 [adam 2026-11-04]
 	Added devel/ruby-mcp version 1.9.0 [taca 2026-11-04]
+	Updated devel/ruby-pkg-config to 1.6.7 [taca 2026-11-04]
