@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7608 2026/11/04 11:24:34 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.7609 2026/11/04 11:24:59 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11363,3 +11363,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cython to 3.3.1 [adam 2026-11-04]
 	Updated devel/py-fakefs to 6.3.2 [adam 2026-11-04]
 	Updated devel/input-headers to 1.31.3nb1 [kikadf 2026-11-04]
+	Updated devel/libopeninput to 1.31.3nb1 [kikadf 2026-11-04]
