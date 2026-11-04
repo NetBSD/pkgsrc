@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/10/19 01:35:55 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/04 18:19:22 ktnb Exp $
 bin/slang
 bin/slangc
 bin/slangd
@@ -4553,7 +4553,6 @@ share/doc/slang/generated/tests/design/target-pipelines/metal/negative-infinity-
 share/doc/slang/generated/tests/design/target-pipelines/metal/no-spirv-style-prelude-comment.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/non-main-entry-point-name-preserved.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/nonuniform-descriptor-handle-metal.slang
-share/doc/slang/generated/tests/design/target-pipelines/metal/nonuniform-resource-index-rejected-metal.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/numthreads-not-an-emitted-attribute.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/parameter-block-metal-policy.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/precise-qualifier-dropped-with-warning.slang
@@ -4757,7 +4756,6 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/multi-resources-man
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/multiple-resources-distinct-bindings.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/nested-branches-five-deep-phi.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/no-line-directives.slang
-share/doc/slang/generated/tests/design/target-pipelines/wgsl/non-uniform-resource-index-rejected.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-256-1-1-webgpu-max.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-3d-product-256.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-becomes-workgroup-size.slang
