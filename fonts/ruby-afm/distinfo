@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/08/14 15:13:08 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/11/04 15:14:02 taca Exp $
 
-BLAKE2s (afm-1.0.0.gem) = 237f2bfa93861938c2611e1685f528be37d29316bb6fa627739ccb6db9b0d87e
-SHA512 (afm-1.0.0.gem) = 233dcb61f692076ec4a3b8afe7289c20eead2a6e7376e28e06e0694c3a047867c8fabb497487f226abd569683416a0765af3f35d22484eab49d7437347f93b69
-Size (afm-1.0.0.gem) = 17408 bytes
+BLAKE2s (afm-1.0.1.gem) = b3fccaa051e5f53498da3cbcf99273355c2d43d7f8a16c32923de3ea12890862
+SHA512 (afm-1.0.1.gem) = db825c3dc7392a22e4c3d1ad5bfd2eb029cfaec25a22bdf69d9fbe9c8b6a56039327d8c449a29d7d243b2ef19e84c1dd4fc12b2efe2f18558752f99284bf2f15
+Size (afm-1.0.1.gem) = 7680 bytes

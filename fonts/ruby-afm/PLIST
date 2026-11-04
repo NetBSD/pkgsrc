@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/14 15:13:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/04 15:14:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/lib/afm.rb
-${GEM_LIBDIR}/test/fixtures/Vera.afm
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/test_afm.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
