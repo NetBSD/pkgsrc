@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7644 2026/11/04 15:45:13 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7645 2026/11/04 15:48:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11404,3 +11404,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ruby-recog to 3.1.37 [taca 2026-11-04]
 	Updated net/ruby-ruby_smb to 3.3.25 [taca 2026-11-04]
 	Updated net/ruby-winrm to 2.4.2 [taca 2026-11-04]
+	Updated www/php-contao-manager to 1.10.19 [taca 2026-11-04]
