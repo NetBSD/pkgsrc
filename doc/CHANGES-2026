@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7610 2026/11/04 12:12:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7611 2026/11/04 12:17:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11367,3 +11367,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-scikit-build-core to 1.1.2 [adam 2026-11-04]
 	Updated net/py-zmq to 27.3.0 [adam 2026-11-04]
 	Updated net/py-zeroconf to 0.153.0 [adam 2026-11-04]
+	Updated devel/difftastic to 0.72.0 [pin 2026-11-04]
