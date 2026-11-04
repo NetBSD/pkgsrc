@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/10/09 07:31:08 taca Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/04 15:00:34 taca Exp $
 
-DISTNAME=	rspec_junit_formatter-0.6.0
+DISTNAME=	rspec_junit_formatter-0.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
