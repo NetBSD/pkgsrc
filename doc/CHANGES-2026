@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7655 2026/11/04 16:57:00 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7656 2026/11/04 16:58:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11415,3 +11415,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pip to 26.3nb1 [ryoon 2026-11-04]
 	Updated net/rsync to 3.5.2 [wiz 2026-11-04]
 	Updated sysutils/proc-cli to 2.3.0 [drixter 2026-11-04]
+	Updated net/rrsync to 3.5.2 [wiz 2026-11-04]
