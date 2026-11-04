@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/09/18 15:36:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/11/04 15:10:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -106,6 +106,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/flex_charge.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/flo2cash.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/flo2cash_simple.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/forte.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/fortis.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/garanti.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/global_collect.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/global_transport.rb
@@ -129,6 +130,8 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/kushki.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/latitude19.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/linkpoint.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/litle.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/loan_payment_pro.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/loan_payment_pro_ach.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/mastercard.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/maxipago.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/mercado_pago.rb
@@ -150,6 +153,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/moka.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/monei.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/moneris.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/money_movers.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/multi_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/mundipagg.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/nab_transact.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ncr_secure_pay.rb
@@ -160,12 +164,14 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/netbilling.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/netpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/network_merchants.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/nmi.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/nuvei.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ogone.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/omise.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/openpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/opp.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/optimal_payment.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/orbital.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/orbital/orbital_codes.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/orbital/orbital_soft_descriptors.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pac_net_raven.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pagarme.rb
@@ -262,6 +268,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/usa_epay_transaction.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vanco.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vantiv_express.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/verifi.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/versa_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/viaklix.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/visanet_peru.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vpos.rb
@@ -289,6 +296,7 @@ ${GEM_LIBDIR}/lib/active_merchant/network_connection_retries.rb
 ${GEM_LIBDIR}/lib/active_merchant/post_data.rb
 ${GEM_LIBDIR}/lib/active_merchant/posts_data.rb
 ${GEM_LIBDIR}/lib/active_merchant/version.rb
+${GEM_LIBDIR}/lib/active_merchant/versionable.rb
 ${GEM_LIBDIR}/lib/activemerchant.rb
 ${GEM_LIBDIR}/lib/certs/cacert.pem
 ${GEM_LIBDIR}/lib/support/gateway_support.rb

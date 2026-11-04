@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2024/09/18 15:36:56 taca Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/04 15:10:13 taca Exp $
 
-DISTNAME=	activemerchant-1.137.0
+DISTNAME=	activemerchant-1.138.0
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://activemerchant.org/
+HOMEPAGE=	https://activemerchant.org/
 COMMENT=	Ruby library for credit card processing
 LICENSE=	mit
 
