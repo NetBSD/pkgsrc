@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/10/12 18:52:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/11/04 12:18:41 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -216,14 +216,14 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-clojure-0.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.23.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-css-0.25.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-dart-0.2.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-dart-0.3.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-elixir-0.3.5
-CARGO_CRATE_DEPENDS+=	tree-sitter-erlang-0.20.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-erlang-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-gdscript-6.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-gdshader-0.4.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-godot-resource-0.7.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.23.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.24.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-html-0.23.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.25.0
@@ -231,15 +231,15 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.24.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-ng-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-md-0.5.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-md-0.5.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-nix-0.3.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.24.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.25.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-python-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-ruby-0.23.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-rust-0.24.2
-CARGO_CRATE_DEPENDS+=	tree-sitter-scala-0.26.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-scala-0.26.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-svelte-ng-1.0.2
-CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.7.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.7.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.23.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-xml-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.2
