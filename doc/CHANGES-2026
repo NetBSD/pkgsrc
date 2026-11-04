@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7641 2026/11/04 15:35:49 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7642 2026/11/04 15:38:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11401,3 +11401,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/ruby-uniform_notifier to 1.18.1 [taca 2026-11-04]
 	Updated net/ruby-net-ldap to 0.21.0 [taca 2026-11-04]
 	Updated net/ruby-net-ping to 3.0.0 [taca 2026-11-04]
+	Updated net/ruby-recog to 3.1.37 [taca 2026-11-04]
