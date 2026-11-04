@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2026/02/10 07:29:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2026/11/04 10:47:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -200,6 +200,9 @@ ${PYSITELIB}/pyfakefs/tests/mox3_stubout_test.pyo
 ${PYSITELIB}/pyfakefs/tests/patched_packages_test.py
 ${PYSITELIB}/pyfakefs/tests/patched_packages_test.pyc
 ${PYSITELIB}/pyfakefs/tests/patched_packages_test.pyo
+${PYSITELIB}/pyfakefs/tests/performance_measurement_test.py
+${PYSITELIB}/pyfakefs/tests/performance_measurement_test.pyc
+${PYSITELIB}/pyfakefs/tests/performance_measurement_test.pyo
 ${PYSITELIB}/pyfakefs/tests/performance_test.py
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyc
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyo
