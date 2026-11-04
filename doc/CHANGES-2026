@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7654 2026/11/04 16:56:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7655 2026/11/04 16:57:00 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11414,3 +11414,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/typo3-14 to 14.3.10 [taca 2026-11-04]
 	Updated devel/py-pip to 26.3nb1 [ryoon 2026-11-04]
 	Updated net/rsync to 3.5.2 [wiz 2026-11-04]
+	Updated sysutils/proc-cli to 2.3.0 [drixter 2026-11-04]
