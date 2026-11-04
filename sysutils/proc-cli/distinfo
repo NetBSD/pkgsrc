@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/11/04 08:03:17 drixter Exp $
+$NetBSD: distinfo,v 1.2 2026/11/04 16:56:37 drixter Exp $
 
 BLAKE2s (aho-corasick-1.1.5.crate) = 81b34e3dfc1b58f892b0487465608067b30309e424c9904a98e8f926a6adc083
 SHA512 (aho-corasick-1.1.5.crate) = 324012ebcb573740ce56c7ef217dcf2bb849d0040e022dcc39aa8a46750088a2c26271016bfb6b1bf7a558d0c4bcefc004811bd8f0afd7fd000dce9bf0206643
@@ -216,9 +216,9 @@ Size (predicates-core-1.0.10.crate) = 8649 bytes
 BLAKE2s (predicates-tree-1.0.13.crate) = 71aa7698066a86f67bb51609960e4c2176e0b6a417f7637db12287a13f6e4ef1
 SHA512 (predicates-tree-1.0.13.crate) = def90df6d0d69f9a42f383c919b19482ef8fe2e5980515e0c74facf952e01e6b42561298da9ee3f8dd3fdbfb6f492eb8faaf9a1016dd37b937f982a64069a3f3
 Size (predicates-tree-1.0.13.crate) = 8422 bytes
-BLAKE2s (proc-cli-2.2.0.tar.gz) = 401ded2ec5f4a111921d8555eb32ce513347e702828d7577c9096385c16848b9
-SHA512 (proc-cli-2.2.0.tar.gz) = aede238f1a700088cc225a7d6079e458058fc2fa37a5e49f746057c113d87d2fce82484b2a77d7c4f5d5f74233383c5fb394b51fd6f8168b4c11dd16c2256507
-Size (proc-cli-2.2.0.tar.gz) = 1310464 bytes
+BLAKE2s (proc-cli-2.3.0.tar.gz) = ee95c18eb9b56d2ed59b1e6a75c64ee3becba56afa8111cfe6e6609aec401044
+SHA512 (proc-cli-2.3.0.tar.gz) = ad84a16f87a68c4839ebb8cd66613e9193f53abc9ee2a83557f1cdb289640337f42831ad16df19da297dc31292e8fe4b74dfbf66456b49e77dab5c26b138735c
+Size (proc-cli-2.3.0.tar.gz) = 1488999 bytes
 BLAKE2s (proc-macro2-1.0.107.crate) = fb11738a84dd1e4dea616e14778d0223a5085563cb1ea8a8fa433e26bfb1351a
 SHA512 (proc-macro2-1.0.107.crate) = c109d5509624a57156e0eae22a3aec89a1a163623e8b4e376a13d872a46e4bf6855ee3cd4428c07cdf5c22f2284b6ce755f9cc7e075480e4587ce4f2d40fa903
 Size (proc-macro2-1.0.107.crate) = 59588 bytes

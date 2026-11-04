@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/11/04 08:03:17 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/11/04 16:56:37 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
 CARGO_CRATE_DEPENDS+=	anstream-1.0.0
