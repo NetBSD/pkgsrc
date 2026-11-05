@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.62 2025/05/02 11:13:28 jperkin Exp $
+# $NetBSD: plist.mk,v 1.63 2026/11/05 07:39:47 wiz Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -169,7 +169,6 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		PKGLOCALEDIR=${PKGLOCALEDIR:Q}				\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//:Q}		\
 		LOCALBASE=${LOCALBASE:Q}				\
-		VIEWBASE=${VIEWBASE:Q}					\
 		SHLIB_EXT=${SHLIB_EXT:Q}				\
 		X11BASE=${X11BASE:Q}					\
 		CHGRP=${CHGRP:Q}					\

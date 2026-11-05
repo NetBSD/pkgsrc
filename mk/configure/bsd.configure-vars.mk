@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure-vars.mk,v 1.4 2007/07/12 18:59:15 jlam Exp $
+# $NetBSD: bsd.configure-vars.mk,v 1.5 2026/11/05 07:39:47 wiz Exp $
 #
 # CONFIGURE_DIRS is the list of directories in which to run the
 #	configure process.  If the directories are relative paths,
@@ -21,7 +21,6 @@ SCRIPTS_ENV+=	LOCALBASE=${LOCALBASE}
 SCRIPTS_ENV+=	PATCHDIR=${PATCHDIR}
 SCRIPTS_ENV+=	PKGSRCDIR=${PKGSRCDIR}
 SCRIPTS_ENV+=	SCRIPTDIR=${SCRIPTDIR}
-SCRIPTS_ENV+=	VIEWBASE=${VIEWBASE}
 SCRIPTS_ENV+=	WRKDIR=${WRKDIR}
 SCRIPTS_ENV+=	WRKSRC=${WRKSRC}
 SCRIPTS_ENV+=	X11BASE=${X11BASE}
