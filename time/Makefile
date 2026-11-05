@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2026/10/10 18:55:05 leot Exp $
+# $NetBSD: Makefile,v 1.292 2026/11/05 09:37:38 taca Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -202,6 +202,7 @@ SUBDIR+=	rsclock
 SUBDIR+=	rsibreak
 SUBDIR+=	ruby-hitimes
 SUBDIR+=	ruby-iso8601
+SUBDIR+=	ruby-strptime
 SUBDIR+=	ruby-timers
 SUBDIR+=	ruby-tzinfo
 SUBDIR+=	ruby-tzinfo-data
