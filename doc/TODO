@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28291 2026/11/05 08:31:28 wiz Exp $
+$NetBSD: TODO,v 1.28292 2026/11/05 09:11:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -457,6 +457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
+	o arti-2.8.0
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -807,6 +808,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jdom-2.0.6
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.47.1
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -896,7 +898,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
 	o lumina-1.6.2
+	o lxqt-2.5
 	o lyx-2.5.2
+	o lz4-4.11
 	o mDNSResponder-nss-1310.80.1
 	o maelstrom-sdl-3.0.7
 	o magento-2.4.1
@@ -951,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o motif-2.5.2 [https://github.com/thentenaar/motif]
+	o mpv-0.42
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o munge-0.5.18
