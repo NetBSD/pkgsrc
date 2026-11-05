@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/09/29 06:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/05 18:58:43 pin Exp $
 
-DISTNAME=	spotify-player-0.25.1
-PKGREVISION=	2
+DISTNAME=	spotify-player-0.25.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,9 +18,9 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.98.0-beta.6
+#RUST_REQ=	1.100.0-beta.9
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.98.0-beta.6 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.9 on amd64
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config

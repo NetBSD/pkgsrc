@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2026/09/09 06:53:10 pin Exp $
+$NetBSD: distinfo,v 1.55 2026/11/05 18:58:43 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.32.crate) = a1bd2a114f0cae7af4e1dc5f86421476ddc0abc68c8cc8f85baffa7375db8c88
 SHA512 (ab_glyph-0.2.32.crate) = aa28fc87201abc6cd14bfb2371420be102e82f9317d952db5e0f576e867dcee61e3a54d65e39489459e3dd238baef77b46418ff20a2a9c9cf9e4a6ddf1277fb0
@@ -1656,9 +1656,9 @@ Size (spinning_top-0.3.0.crate) = 52579 bytes
 BLAKE2s (spki-0.7.3.crate) = e1463d485dcb517f116ab8015f690dd9ef5fd1a0d24a90414dfdcc308c3b13be
 SHA512 (spki-0.7.3.crate) = d33a6a7844b33c37628024ccf25c1a631f7a6661595e063049b8c9a9b4edb28f0335397faefc592c6fc5e96378b870ab5dab9b0649c3387577b2370ec8210db9
 Size (spki-0.7.3.crate) = 16409 bytes
-BLAKE2s (spotify-player-0.25.1.tar.gz) = 7e9c78babbb0e582ae88bab89494522afefbb7886237c16b7ee659ca9aaedda3
-SHA512 (spotify-player-0.25.1.tar.gz) = 67d1e3afc0d3bf4b22567ee12d4e411ded1c3827d5e84414e7f0f47529aa2ddb38fee81a099eefbac0ba51dfb09ce4103adce8073918193c0231b61cbf15451b
-Size (spotify-player-0.25.1.tar.gz) = 215361 bytes
+BLAKE2s (spotify-player-0.25.2.tar.gz) = 4e7fca431af62eeadbbd04ea03f3a12378a0533419fe0fe7f147c4b9593fc32d
+SHA512 (spotify-player-0.25.2.tar.gz) = 1608eb636db6fe39f10246575bece994714edffc555137b1f73991fc7f96f732733bb01a381d4880e1aa31df10fdf5031cb05488c7b52ceb42e110c47f572093
+Size (spotify-player-0.25.2.tar.gz) = 216095 bytes
 BLAKE2s (stable_deref_trait-1.2.1.crate) = b10100bc26d661fd9dce98e4be90e31ae3e6a0e723a77659f2ae67327ec492ce
 SHA512 (stable_deref_trait-1.2.1.crate) = 630721d3f8e9f3290efc250c42aba13e2325839e62167a2a611618c18c6aa58c08a53622db61a9aa920284570626b98df26b3c28009cf45b6ce1ec134b9c9f5c
 Size (stable_deref_trait-1.2.1.crate) = 8186 bytes
