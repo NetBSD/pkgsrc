@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28296 2026/11/05 22:27:22 leot Exp $
+$NetBSD: TODO,v 1.28297 2026/11/05 22:53:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1123,6 +1123,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profanity-0.15.1
 	o profit-2.5.3
 	o proftpd-1.3.9a
+	o prometheus-3.16.0
 	o pspp-2.1.3
 	o ptlib-2.16.2
 	o pvs-6.0
