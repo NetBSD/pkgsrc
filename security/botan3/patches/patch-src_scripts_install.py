@@ -1,10 +1,10 @@
-$NetBSD: patch-src_scripts_install.py,v 1.1 2023/06/26 11:40:39 wiz Exp $
+$NetBSD: patch-src_scripts_install.py,v 1.2 2026/11/05 11:11:14 nros Exp $
 
 * install docs into share/doc/${PKGNAME}
 
 --- src/scripts/install.py.orig	2022-01-29 07:12:00.830197062 +0000
 +++ src/scripts/install.py
-@@ -214,7 +214,7 @@ def main(args):
+@@ -230,7 +230,7 @@ def main(args):
  
      if cfg['with_documentation']:
          target_doc_dir = os.path.join(prefix, cfg['docdir'],
