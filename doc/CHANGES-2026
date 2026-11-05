@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7671 2026/11/05 15:14:25 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7672 2026/11/05 15:30:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11434,3 +11434,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/ruby-metasploit-payloads to 2.0.258 [taca 2026-11-05]
 	Updated security/ruby-net-scp to 4.2.1 [taca 2026-11-05]
 	Updated security/ruby-net-sftp to 4.1.1 [taca 2026-11-05]
+	Updated security/ruby-net-ssh to 8.1.0 [taca 2026-11-05]
