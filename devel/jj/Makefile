@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2026/10/08 10:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/11/05 09:32:37 wiz Exp $
 
-DISTNAME=	jj-0.46.0
+DISTNAME=	jj-0.47.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jj-vcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,15 +12,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	git-base>=2.42.0:../../devel/git-base
 
-# status as of 0.46.0
-# failures:
-#     test_run_command::test_run_pool_size_from_jobs_flag
-#     test_run_command::test_run_sets_workspace_root_env_var
-#     test_run_command::test_run_sparse
-# test result: FAILED. 1134 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 50.98s
-#
-# upstream bug report:
-# https://github.com/jj-vcs/jj/issues/10342
+# status as of 0.47.1
+# all tests pass
 
 RUST_REQ=	1.97.1
 
