@@ -1,31 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2026/03/29 13:13:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/11/05 15:29:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.dockerignore
-${GEM_LIBDIR}/.github/FUNDING.yml
-${GEM_LIBDIR}/.github/config/rubocop_linter_action.yml
-${GEM_LIBDIR}/.github/workflows/ci-with-docker.yml
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.github/workflows/rubocop.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/CHANGES.txt
-${GEM_LIBDIR}/DEVELOPMENT.md
-${GEM_LIBDIR}/Dockerfile
-${GEM_LIBDIR}/Dockerfile.openssl3
-${GEM_LIBDIR}/Dockerfile.zlib_ng
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.noed25519
-${GEM_LIBDIR}/Gemfile.norbnacl
-${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE.txt
-${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/SECURITY.md
-${GEM_LIBDIR}/THANKS.txt
-${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/docker-compose.yml
 ${GEM_LIBDIR}/lib/net/ssh.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/agent.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/certificate.rb
@@ -41,6 +18,7 @@ ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/password.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/publickey.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/pageant.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/pub_key_fingerprint.rb
+${GEM_LIBDIR}/lib/net/ssh/authentication/security_key.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/session.rb
 ${GEM_LIBDIR}/lib/net/ssh/buffer.rb
 ${GEM_LIBDIR}/lib/net/ssh/buffered_io.rb
@@ -55,6 +33,10 @@ ${GEM_LIBDIR}/lib/net/ssh/errors.rb
 ${GEM_LIBDIR}/lib/net/ssh/key_factory.rb
 ${GEM_LIBDIR}/lib/net/ssh/known_hosts.rb
 ${GEM_LIBDIR}/lib/net/ssh/loggable.rb
+${GEM_LIBDIR}/lib/net/ssh/multiplex.rb
+${GEM_LIBDIR}/lib/net/ssh/multiplex/client.rb
+${GEM_LIBDIR}/lib/net/ssh/multiplex/control_path.rb
+${GEM_LIBDIR}/lib/net/ssh/multiplex/proxy_transport.rb
 ${GEM_LIBDIR}/lib/net/ssh/packet.rb
 ${GEM_LIBDIR}/lib/net/ssh/prompt.rb
 ${GEM_LIBDIR}/lib/net/ssh/proxy/command.rb
@@ -91,6 +73,7 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/none.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/ripemd160.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1_96.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1_etm.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256_96.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256_etm.rb
@@ -123,7 +106,4 @@ ${GEM_LIBDIR}/lib/net/ssh/verifiers/accept_new_or_local_tunnel.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/always.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/never.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
-${GEM_LIBDIR}/net-ssh-public_cert.pem
-${GEM_LIBDIR}/net-ssh.gemspec
-${GEM_LIBDIR}/support/ssh_tunnel_bug.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
