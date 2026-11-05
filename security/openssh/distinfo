@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.135 2026/10/07 15:22:05 he Exp $
+$NetBSD: distinfo,v 1.136 2026/11/05 20:49:21 wiz Exp $
 
-BLAKE2s (openssh-10.6p1.tar.gz) = f2ac2881839430ca50df9c8fe56ac786d01c62c231fd9c5a7f321e01f34dfeec
-SHA512 (openssh-10.6p1.tar.gz) = 243e07c8c68c649552ee019e6aac4393634de6e403cb793b3cd756d5c46e84cc8b2b560e6c0b36e8fb48979b109f888317411a9d640583109117ea621f27700a
-Size (openssh-10.6p1.tar.gz) = 2355244 bytes
+BLAKE2s (openssh-10.6p2.tar.gz) = f3e33de5336f0fe7d2279c0d2600b6bd38b7b2fc4d342b189773c2f5d9cdba64
+SHA512 (openssh-10.6p2.tar.gz) = 70696ed12bd1be04f67440415528f1ced1ef68c8ee7836e587395618d0992f3fd20c9498c44d46ad9f5806b9a73ce256fd6a2807f9c5c02e6496cf06816c749e
+Size (openssh-10.6p2.tar.gz) = 2355372 bytes
 SHA1 (patch-Makefile.in) = d58adac52e169f25f0b0c3a321f154b44b0475e6
 SHA1 (patch-atomicio.c) = c4ec07e00b29fe902c38b202e6572a290a8b84f9
 SHA1 (patch-configure.ac) = 680d8fdfb7b63c7bf25b8340c7f68defb71703a0
