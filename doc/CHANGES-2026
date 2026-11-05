@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7662 2026/11/05 09:32:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7663 2026/11/05 09:37:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11425,3 +11425,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-authlib to 1.9.4 [adam 2026-11-05]
 	Updated comms/py-textual to 8.2.8 [wiz 2026-11-05]
 	Updated devel/jj to 0.47.1 [wiz 2026-11-05]
+	Added time/ruby-strptime version 0.2.5 [taca 2026-11-05]
