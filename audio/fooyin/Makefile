@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/10/27 06:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/05 22:21:43 wiz Exp $
 
 DISTNAME=	fooyin-0.14.1
 CATEGORIES=	audio
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=		pkg-config msgfmt
 
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES=	c++23
 
 CXXFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/fooyin
 CXXFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/fooyin/plugins
