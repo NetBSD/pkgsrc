@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/19 15:01:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/05 15:14:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGES.txt
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
-${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/net/sftp.rb
 ${GEM_LIBDIR}/lib/net/sftp/constants.rb
 ${GEM_LIBDIR}/lib/net/sftp/errors.rb
@@ -30,11 +25,9 @@ ${GEM_LIBDIR}/lib/net/sftp/protocol/05/base.rb
 ${GEM_LIBDIR}/lib/net/sftp/protocol/06/attributes.rb
 ${GEM_LIBDIR}/lib/net/sftp/protocol/06/base.rb
 ${GEM_LIBDIR}/lib/net/sftp/protocol/base.rb
+${GEM_LIBDIR}/lib/net/sftp/protocol/bounded_read.rb
 ${GEM_LIBDIR}/lib/net/sftp/request.rb
 ${GEM_LIBDIR}/lib/net/sftp/response.rb
 ${GEM_LIBDIR}/lib/net/sftp/session.rb
 ${GEM_LIBDIR}/lib/net/sftp/version.rb
-${GEM_LIBDIR}/net-sftp-public_cert.pem
-${GEM_LIBDIR}/net-sftp.gemspec
-${GEM_LIBDIR}/setup.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

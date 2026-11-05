@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/01/19 15:01:17 taca Exp $
+$NetBSD: distinfo,v 1.11 2026/11/05 15:14:09 taca Exp $
 
-BLAKE2s (net-sftp-4.0.0.gem) = 46498e10b85c835923917e9287ea61250c11d5e74a81412a13aca97267cf8133
-SHA512 (net-sftp-4.0.0.gem) = bb59c1f4f667502540f7d99be882f559559a156e0b1266d287a61034a37d4d249a5968cb2dd7f93ab3e483318297fb0c2067452f4d35ca004bf3e59d97aad5b0
-Size (net-sftp-4.0.0.gem) = 55296 bytes
+BLAKE2s (net-sftp-4.1.1.gem) = 0ba0fdac51d92b8fd8ecc1a1a04b7c1eed6c96b5ea8dff4481d7da950593f3e9
+SHA512 (net-sftp-4.1.1.gem) = a4dc371401a633d8e0f54e6bdb67ebf77125681988e397b8bce322d734598d2ef1cc1d98e3c8c988071a5ee54a908fc0a4034de657345d8decb5f88c08ae5dd0
+Size (net-sftp-4.1.1.gem) = 53760 bytes
