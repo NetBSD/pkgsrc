@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/05 09:41:48 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/hana.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/json-patch-tests/.editorconfig
+${GEM_LIBDIR}/test/json-patch-tests/.npmignore
+${GEM_LIBDIR}/test/json-patch-tests/README.md
+${GEM_LIBDIR}/test/json-patch-tests/package.json
+${GEM_LIBDIR}/test/json-patch-tests/spec_tests.json
+${GEM_LIBDIR}/test/json-patch-tests/tests.json
+${GEM_LIBDIR}/test/mine.json
+${GEM_LIBDIR}/test/test_hana.rb
+${GEM_LIBDIR}/test/test_ietf.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

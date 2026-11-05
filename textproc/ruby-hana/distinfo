@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/05 09:41:48 taca Exp $
+
+BLAKE2s (hana-1.3.7.gem) = 828740785c9a428fd433f96361686f23d9b68efdefc5d8c328cda4158d2442bc
+SHA512 (hana-1.3.7.gem) = 39a7dda29374c0282d545c8cfe8c3a57a5a9ae86b248ffee85dbf56281a9febdee84e17fae9bf70abee2ae73ab6ec9fca2c034888b6c494467853519abed92b2
+Size (hana-1.3.7.gem) = 13824 bytes
