@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/05 09:37:03 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/strptime/strptime.${RUBY_DLEXT}
+${GEM_LIBDIR}/.clang-format
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/appveyor.yml
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/ext/strptime/extconf.rb
+${GEM_LIBDIR}/ext/strptime/ruby_time.c
+${GEM_LIBDIR}/ext/strptime/strftime.c
+${GEM_LIBDIR}/ext/strptime/strptime.c
+${GEM_LIBDIR}/ext/strptime/strptime.h
+${GEM_LIBDIR}/lib/strptime.rb
+${GEM_LIBDIR}/lib/strptime/strptime.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/strptime/version.rb
+${GEM_LIBDIR}/strptime.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/05 09:37:03 taca Exp $
+
+BLAKE2s (strptime-0.2.5.gem) = 89e8b67b7df5c8cc570aaf01e4898837c3a0eddd0dd0a33caa70bffe4f71369b
+SHA512 (strptime-0.2.5.gem) = 2f4493c6143f4984d7410c5b5270b8f93db211ae758ba3d5ca6f9e198733ad7e6d4d6996d9599f691b34d3329a242b99bd326767e52df0721b944e299ab03140
+Size (strptime-0.2.5.gem) = 19456 bytes
