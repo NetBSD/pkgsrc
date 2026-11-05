@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7675 2026/11/05 20:49:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7676 2026/11/05 20:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11438,3 +11438,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/spotify-player to 0.25.2 [pin 2026-11-05]
 	Updated multimedia/moviebox-tui to 0.1.29 [pin 2026-11-05]
 	Updated security/openssh to 10.6p2 [wiz 2026-11-05]
+	Updated devel/forgejo-runner to 13.2.0nb1 [wiz 2026-11-05]
