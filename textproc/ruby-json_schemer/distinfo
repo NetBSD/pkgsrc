@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/05 09:45:22 taca Exp $
+
+BLAKE2s (json_schemer-2.5.0.gem) = 202fa6b9b0c95bfe6f6e7d2dd48d8e5a2e60733728f48469defbb528c6186f5f
+SHA512 (json_schemer-2.5.0.gem) = a60610e928d06a3e0927b0804ed3e414b169e6f870e4473af54581bc6260da71981f80892c90f7b17a302a51b6b22f34a3d8a5e7a281c4256136eec7520ba028
+Size (json_schemer-2.5.0.gem) = 54272 bytes

@@ -1,0 +1,1 @@
+bin/json_schemer @PREFIX@/bin/json_schemer@RUBY_SUFFIX@
