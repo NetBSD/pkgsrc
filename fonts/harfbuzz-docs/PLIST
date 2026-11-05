@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/09/24 09:37:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/05 07:06:36 adam Exp $
 share/gtk-doc/html/harfbuzz/HarfBuzz.png
 share/gtk-doc/html/harfbuzz/HarfBuzz.svg
 share/gtk-doc/html/harfbuzz/a-clustering-example-for-levels-0-and-1.html
@@ -60,6 +60,7 @@ share/gtk-doc/html/harfbuzz/api-index-14-2-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-3-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-4-0.html
 share/gtk-doc/html/harfbuzz/api-index-14-5-0.html
+share/gtk-doc/html/harfbuzz/api-index-15-1-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
