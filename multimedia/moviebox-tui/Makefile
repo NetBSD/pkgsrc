@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/11/05 18:59:51 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/05 22:30:28 leot Exp $
 
 DISTNAME=	MovieBox-Tui-0.1.29
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesamirh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
