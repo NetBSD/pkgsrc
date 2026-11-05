@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1615 2026/10/24 18:09:02 alnsn Exp $
+# $NetBSD: Makefile,v 1.1616 2026/11/05 09:42:16 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1342,6 +1342,7 @@ SUBDIR+=	ruby-ferret
 SUBDIR+=	ruby-fuzzyurl
 SUBDIR+=	ruby-gyoku
 SUBDIR+=	ruby-haml
+SUBDIR+=	ruby-hana
 SUBDIR+=	ruby-hikidoc
 SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
