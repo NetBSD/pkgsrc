@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2026/09/29 06:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/11/06 09:08:54 adam Exp $
 
 DISTNAME=	qtdeclarative-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtdeclarative-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt6 module for the QML language
 CATEGORIES=	lang x11
 

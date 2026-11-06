@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2026/10/29 11:30:19 nros Exp $
+@comment $NetBSD: PLIST,v 1.41 2026/11/06 09:08:53 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1801,6 +1801,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhostaddress_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhostinfo_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhsts_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhstsstore_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttp2configuration_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttp2connection_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttp2protocolhandler_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttpheaderparser_p.h
@@ -1864,7 +1865,6 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtldurl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtlsbackend_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetwork-config_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetworkglobal_p.h
-qt6/include/QtNetwork/6.11.2/QtNetwork/private/qhttp2configuration_p.h
 qt6/include/QtNetwork/QAbstractNetworkCache
 qt6/include/QtNetwork/QAbstractSocket
 qt6/include/QtNetwork/QAuthenticator
@@ -4172,7 +4172,6 @@ qt6/mkspecs/features/unix/x11lib.prf
 qt6/mkspecs/features/unix/x11sm.prf
 qt6/mkspecs/features/unsupported/testserver.prf
 qt6/mkspecs/features/use_c_linker.prf
-qt6/mkspecs/features/vxworks.prf
 qt6/mkspecs/features/warn_off.prf
 qt6/mkspecs/features/warn_on.prf
 qt6/mkspecs/features/wasm/default_pre.prf

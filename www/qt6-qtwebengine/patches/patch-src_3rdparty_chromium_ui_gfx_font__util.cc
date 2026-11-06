@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gfx_font__util.cc,v 1.1 2025/12/21 09:38:47 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gfx_font__util.cc,v 1.2 2026/11/06 09:08:57 adam Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- src/3rdparty/chromium/ui/gfx/font_util.cc.orig	2025-05-29 01:27:28.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/font_util.cc.orig	2026-10-21 00:29:58.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  
@@ -21,6 +21,6 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gfx_font__util.cc,v 1.1 2025/12/21 09:38
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // Early initialize FontConfig.
-   InitializeGlobalFontConfigAsync();
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+   // Ensures the config is created on this thread. It's generally safe to send
+   // concurrent match requests to fontconfig, but it's unsafe to send match
+   // requests concurrently to fontconfig initialization.

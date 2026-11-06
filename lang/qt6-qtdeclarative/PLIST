@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2026/08/18 18:26:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/11/06 09:08:54 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -2251,6 +2251,7 @@ qt6/lib/cmake/Qt6Qml/Qt6QmlTargets.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlVersionlessTargets.cmake
+qt6/lib/cmake/Qt6Qml/Qt6QmllintEmptyJsonTemplate.json
 qt6/lib/cmake/Qt6Qml/Qt6QmltcFileMappingTemplate.qrc.in
 qt6/lib/cmake/Qt6Qml/Qt6UpdateQmllsIni.cmake
 qt6/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in

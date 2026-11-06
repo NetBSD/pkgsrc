@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/04/30 06:38:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/11/06 09:08:53 adam Exp $
 lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonarray_p.h
@@ -48,6 +48,7 @@ qt6/include/QtCore5Compat/qlinkedlist.h
 qt6/include/QtCore5Compat/qregexp.h
 qt6/include/QtCore5Compat/qstringref.h
 qt6/include/QtCore5Compat/qtcore5compat-config.h
+qt6/include/QtCore5Compat/qtcore5compatexports.h
 qt6/include/QtCore5Compat/qtcore5compatversion.h
 qt6/include/QtCore5Compat/qtextcodec.h
 qt6/include/QtCore5Compat/qxml.h

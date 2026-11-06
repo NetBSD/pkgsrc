@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/08/18 18:26:03 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/11/06 09:08:54 adam Exp $
 
-BLAKE2s (qtconnectivity-everywhere-src-6.11.2.tar.xz) = fc859a96f92f4e969a15d84d2d36b2a231f11d698cd719639f36cda037b3a5e0
-SHA512 (qtconnectivity-everywhere-src-6.11.2.tar.xz) = b1873369850d8ba48c1ac421957b07e5c461ee903ef992509a722d513b1ed2623bbea2716eb1a82ae095f00b17775f32e5761179a2df3530fa239338c83fdec1
-Size (qtconnectivity-everywhere-src-6.11.2.tar.xz) = 1064168 bytes
+BLAKE2s (qtconnectivity-everywhere-src-6.11.3.tar.xz) = 90f927b36f85440e422e259cef27df2f037f21a1d9567c5955d9e863bb3257f8
+SHA512 (qtconnectivity-everywhere-src-6.11.3.tar.xz) = 1d38416545b3f6964ca40bc5b2a633dfb3d11c280b9dc2e23c2dfec30cd73307e549e249e8d0d244a77b5d1074918ba8b52163755d832965017951761614bffc
+Size (qtconnectivity-everywhere-src-6.11.3.tar.xz) = 1064184 bytes

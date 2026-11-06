@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2026/08/18 18:26:04 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/11/06 09:08:55 adam Exp $
 
-BLAKE2s (qtmultimedia-everywhere-src-6.11.2.tar.xz) = 013d84dae3c5044ba4492fdc54d8f8f02f80d9ca51c611444a0cc6daeab30b1d
-SHA512 (qtmultimedia-everywhere-src-6.11.2.tar.xz) = 04bffd77a002ae55307412045c6231508626eac25a3c243ea3f2a6c1c3c3f316e977a97e4a050b2a0377bcff89f756312a6baa9c2fe8e8856b6e3c05eaceaaae
-Size (qtmultimedia-everywhere-src-6.11.2.tar.xz) = 10255120 bytes
+BLAKE2s (qtmultimedia-everywhere-src-6.11.3.tar.xz) = a387e1b19b0f9957959cf9671c7827499d736da4ad9a281f4845fb5194205432
+SHA512 (qtmultimedia-everywhere-src-6.11.3.tar.xz) = f94bcf2c6acafda5456339879076bc097c56baee40b88e37cb71730af40634c684a16f1061776e711eada441bc2d7e4c51a59cbd8bff29176dd52ddc63eb99e7
+Size (qtmultimedia-everywhere-src-6.11.3.tar.xz) = 10254792 bytes
 SHA1 (patch-cmake_FindFFmpeg.cmake) = ed6a161c91977df3c86c981f4fe98268d07b820e
 SHA1 (patch-src_multimedia_audio_qaudiosystem__p.h) = 27bd323211b8978d92769d1d3f64e27c6a919e4d
 SHA1 (patch-src_plugins_multimedia_ffmpeg_CMakeLists.txt) = 9d5c65690e510c5ad9b53444f68aa2a0b54d2b6f

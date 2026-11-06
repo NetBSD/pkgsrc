@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2026/10/02 13:08:36 kikadf Exp $
+$NetBSD: distinfo,v 1.10 2026/11/06 09:08:57 adam Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
 Size (kikadf-chromium-audioio-v130.0.tar.gz) = 7824 bytes
-BLAKE2s (qtwebengine-everywhere-src-6.11.2.tar.xz) = d28d300a63efe02ad3f7bae1db286058309de5368f96af92ebcf338f4de57735
-SHA512 (qtwebengine-everywhere-src-6.11.2.tar.xz) = 1bb67ca80ed8daf4fab2ac4afe8261903175b9685e499a73dfb1432f5dda39c15c299ca2e0f9681dbac9b92a0cc185b14890036301bebabe8134074350c164ea
-Size (qtwebengine-everywhere-src-6.11.2.tar.xz) = 580351104 bytes
+BLAKE2s (qtwebengine-everywhere-src-6.11.3.tar.xz) = beb5d04b80d347c7b692e6877525ffad51a324ae7fbf89598478483578da476d
+SHA512 (qtwebengine-everywhere-src-6.11.3.tar.xz) = c24f14c9b0b2c15614af89f74f7ea126bbb98e98e80c824cefbeb7be650f0cc226bb8e3bb60edf5fa2ef007c58fd6e19e45592d4fec72131a3c5dd657009e23d
+Size (qtwebengine-everywhere-src-6.11.3.tar.xz) = 580447120 bytes
 SHA1 (patch-cmake_Functions.cmake) = 1120b7c256f1c98e893060923147f732bfb3c30f
 SHA1 (patch-cmake_QtConfigureHelpers.cmake) = a2ba24b20ef5ac8a0b8e5e04e8fad8aaea3fc04d
 SHA1 (patch-cmake_QtToolchainHelpers.cmake) = 933101b5af4cc29e4eb0547f9cfe2dad4c8da778
@@ -144,7 +144,7 @@ SHA1 (patch-src_3rdparty_chromium_base_version__info_version__info.h) = 0f1449da
 SHA1 (patch-src_3rdparty_chromium_build_config_BUILD.gn) = f3f9ad478465493b5236447f2f3c71cd2044dee9
 SHA1 (patch-src_3rdparty_chromium_build_config_BUILDCONFIG.gn) = c27ea6477801d73dd596d05bbd6ce3e6d5cc6af4
 SHA1 (patch-src_3rdparty_chromium_build_config_clang_BUILD.gn) = fa48b0a2534d8f95b236baa3d2f75905796e65ba
-SHA1 (patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn) = c79e4ab8b77810a45d5653c3708f3f21a1b2c610
+SHA1 (patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn) = cb0dfaab5aa2d645de4786c18f774d179e4a0786
 SHA1 (patch-src_3rdparty_chromium_build_config_linux_BUILD.gn) = 588ad35ecaf9895e8107c7cb2e2468aa0a5304b8
 SHA1 (patch-src_3rdparty_chromium_build_config_linux_libdrm_BUILD.gn) = b459e681ba81f2e5464080e3426d9a0cd8be838e
 SHA1 (patch-src_3rdparty_chromium_build_config_linux_pkg-config.py) = 22d7fd4c016287f4459b6d4d750e1431787dd149
@@ -929,7 +929,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_libusb_BUILD.gn) = 60a7424fcb4445
 SHA1 (patch-src_3rdparty_chromium_third__party_libusb_src_libusb_core.c) = 155575c1c3aeeb5cd46cf859347a0ecc06f21275
 SHA1 (patch-src_3rdparty_chromium_third__party_libusb_src_libusb_os_threads__posix.c) = 3e8af30a02eca054b66c89ec56fcdf64d3000187
 SHA1 (patch-src_3rdparty_chromium_third__party_libvpx_source_libvpx_vpx__ports_aarch64__cpudetect.c) = 74e8149c3361eec09b8b776e6f6083fd7ab22e34
-SHA1 (patch-src_3rdparty_chromium_third__party_lzma__sdk_C_CpuArch.c) = 12a5b9fc3ab2b9e8e9ac2b4f67405c786314e785
 SHA1 (patch-src_3rdparty_chromium_third__party_material__color__utilities_src_cpp_palettes_tones.cc) = 1aefa7e80df8390175f74c70f27f77d65ed93bca
 SHA1 (patch-src_3rdparty_chromium_third__party_nasm_BUILD.gn) = 0b50568657bcc262e1c5ea4aae21a553d94b5b24
 SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 4ee1180f4a642a187d44e37aaeb4977e72cb1d96
@@ -1077,7 +1076,7 @@ SHA1 (patch-src_3rdparty_chromium_ui_gfx_canvas__skia.cc) = da75d7ac270bd3d74a1d
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_font__fallback__linux.cc) = c2aa6e6d11eb94e77117ab453962e2c307fecdac
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_font__render__params.h) = 5b3d6616801447c09405c3f96525254c7bff3bb7
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_font__render__params__linux.cc) = 2856f77d3232c767de7dfb9c251f20258d8aaa28
-SHA1 (patch-src_3rdparty_chromium_ui_gfx_font__util.cc) = 5ea076858a0fa37ec4d0fa45fa7ed8b2fa9c2d8f
+SHA1 (patch-src_3rdparty_chromium_ui_gfx_font__util.cc) = 362be116a9558bd1eb8a7cd111f0a2e6856d836e
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_gpu__extra__info.h) = fa543eff1a50dce2a8b7002a4e8fddec777e56e9
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_linux_dmabuf__uapi.h) = 6bd6f10d86be19fcbe41c20f138a638f5115f445
 SHA1 (patch-src_3rdparty_chromium_ui_gfx_linux_gbm__wrapper.cc) = 5f4f94fe30685274485cf853b9fd0bb76e12dc9f
