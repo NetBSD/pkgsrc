@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7687 2026/11/06 13:29:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7688 2026/11/06 15:24:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11490,3 +11490,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/translate-toolkit to 3.20.4 [adam 2026-11-06]
 	Updated security/py-authlib to 1.9.5 [adam 2026-11-06]
 	Updated devel/py-cachetools to 7.3.0 [adam 2026-11-06]
+	Updated www/basilisk to 2026.11.01 [nia 2026-11-06]
