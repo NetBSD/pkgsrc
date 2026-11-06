@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2026/03/13 10:37:25 tsutsui Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/06 14:12:53 adam Exp $
 
-GITHUB_PROJECT=	hidapi
-GITHUB_TAG=	${GITHUB_PROJECT}-0.15.0
-DISTNAME=	${GITHUB_TAG}
+DISTNAME=	hidapi-0.15.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libusb/}
+GITHUB_PROJECT=	hidapi
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	nathanialsloss@yahoo.com.au
 HOMEPAGE=	https://github.com/libusb/hidapi
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3 OR modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
 PTHREAD_AUTO_VARS=	yes
 LDFLAGS+=		${PTHREAD_LFLAGS}
 
@@ -25,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi.pc.in
 
 PLIST_VARS+=	libusb hidraw netbsd
-
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,7 +35,6 @@ PLIST.hidraw=	yes
 PLIST.netbsd=	yes
 .  endif
 .endif
-
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
