@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7679 2026/11/06 01:08:59 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.7680 2026/11/06 08:37:53 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11442,3 +11442,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/libplacebo to 7.387.0 [leot 2026-11-05]
 	Updated multimedia/mpv to 0.42.0nb1 [leot 2026-11-05]
 	Updated net/py-paho-mqtt to 2.2.0 [gdt 2026-11-06]
+	Updated net/cloudflare-speed-cli to 1.0.12 [drixter 2026-11-06]
