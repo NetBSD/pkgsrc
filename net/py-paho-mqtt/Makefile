@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/08/10 16:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/06 01:08:53 gdt Exp $
 
-VERSION=	2.1.0
+VERSION=	2.2.0
 # Bad distfile name reported upstream via email on 20240619.
+# Still wrong 20261105.
 DISTNAME=	paho_mqtt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-paho-mqtt-${VERSION}
 CATEGORIES=	net python
@@ -11,14 +12,14 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.eclipse.org/paho/
-COMMENT=	MQTT version 3.1.1 client class
+COMMENT=	MQTT client Python library
 LICENSE=	epl-v1.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 
-# \todo Add support for running tests.
-#TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../devel/py-lama
-#TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+# Optional dependency omitted: PySocks
+
+# \todo Resolve test issues.
 
 USE_LANGUAGES=	# none
 

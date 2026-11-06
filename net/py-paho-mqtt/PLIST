@@ -1,16 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/19 14:03:04 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/06 01:08:53 gdt Exp $
 ${PYSITELIB}/paho/__init__.py
 ${PYSITELIB}/paho/__init__.pyc
 ${PYSITELIB}/paho/__init__.pyo
 ${PYSITELIB}/paho/mqtt/__init__.py
 ${PYSITELIB}/paho/mqtt/__init__.pyc
 ${PYSITELIB}/paho/mqtt/__init__.pyo
+${PYSITELIB}/paho/mqtt/_packet.py
+${PYSITELIB}/paho/mqtt/_packet.pyc
+${PYSITELIB}/paho/mqtt/_packet.pyo
 ${PYSITELIB}/paho/mqtt/client.py
 ${PYSITELIB}/paho/mqtt/client.pyc
 ${PYSITELIB}/paho/mqtt/client.pyo
 ${PYSITELIB}/paho/mqtt/enums.py
 ${PYSITELIB}/paho/mqtt/enums.pyc
 ${PYSITELIB}/paho/mqtt/enums.pyo
+${PYSITELIB}/paho/mqtt/exception.py
+${PYSITELIB}/paho/mqtt/exception.pyc
+${PYSITELIB}/paho/mqtt/exception.pyo
 ${PYSITELIB}/paho/mqtt/matcher.py
 ${PYSITELIB}/paho/mqtt/matcher.pyc
 ${PYSITELIB}/paho/mqtt/matcher.pyo
@@ -37,3 +43,5 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/edl-v10
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/epl-v20
