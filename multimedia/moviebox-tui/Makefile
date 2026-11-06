@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/11/05 22:30:28 leot Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/06 11:06:47 pin Exp $
 
 DISTNAME=	MovieBox-Tui-0.1.29
 PKGNAME=	${DISTNAME:tl}
@@ -17,8 +17,7 @@ LICENSE=	apache-2.0 OR mit
 WRKSRC=		${WRKDIR}/MovieBox-Tui-0.1.29
 RUST_REQ=	1.90.0
 
-.include "cargo-depends.mk"
+DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
 
 .include "../../lang/rust/cargo.mk"
-.include "../../multimedia/mpv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
