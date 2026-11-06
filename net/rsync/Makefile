@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.137 2026/09/22 06:44:46 adam Exp $
+# $NetBSD: Makefile,v 1.138 2026/11/06 11:52:39 wiz Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Network file distribution/synchronisation utility
 
@@ -24,9 +26,16 @@ SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
+# test status as of 3.5.2
+# 242 passed
+# 6 failed
+# 129 skipped
+
 .include "options.mk"
 
 .include "../../archivers/lz4/buildlink3.mk"
+# needed for testing
+#.include "../../lang/python/tool.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

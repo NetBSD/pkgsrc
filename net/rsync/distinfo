@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.70 2026/11/04 16:56:24 wiz Exp $
+$NetBSD: distinfo,v 1.71 2026/11/06 11:52:39 wiz Exp $
 
 BLAKE2s (rsync-3.5.2.tar.gz) = 93505151c66ae1cc16324f5a944bc5ad888c3bbdc63217b62e91b959c23a4707
 SHA512 (rsync-3.5.2.tar.gz) = 751bf76d759d101d2b3a8f800d7512df1973753e0438885e75d4bdbda842e9f2cf265616aaebd48a1a6740903444b29338e54c66c793c3f2c080eb08802f8c14
 Size (rsync-3.5.2.tar.gz) = 1977884 bytes
 SHA1 (patch-Makefile.in) = 701577726bdb3b91c97bba47c6be331505630a72
 SHA1 (patch-acls.c) = 9be60c0c1abedc961fa95bba2bb23d802a09bc62
+SHA1 (patch-syscall.c) = f7c7b513023a80cfb391540ad37c03c52f37ae79
+SHA1 (patch-testsuite_symlink-receiver-perms__test.py) = 16cb062c288b778443970e564323b5a4ad79b3d8
