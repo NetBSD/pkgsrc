@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/10/29 19:47:04 drixter Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/06 16:13:04 drixter Exp $
 
-VER=		0.15.3
+VER=		0.16.0
 DISTNAME=	routinator-${VER}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
