@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/06/23 14:32:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/06 15:24:33 nia Exp $
 bin/basilisk
 lib/basilisk-52.9.0/application.ini
 lib/basilisk-52.9.0/basilisk
@@ -17,6 +17,7 @@ lib/basilisk-52.9.0/browser/internal-userscripts/getanimations-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/imagedecode-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/intl-displaynames-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/intl-listformat-polyfill.user.js
+lib/basilisk-52.9.0/browser/internal-userscripts/intl-relativetimeformat-formattoparts-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/intl-segmenter-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/readablestream-pipethrough-polyfill.user.js
 lib/basilisk-52.9.0/browser/internal-userscripts/readablestream-pipeto-polyfill.user.js

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/10/21 23:15:43 nia Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/06 15:24:33 nia Exp $
 # This package is mostly derived from www/palemoon since they use the
 # same backend.  However, several key things are different.
 
-PKGNAME=	basilisk-2026.06.12
-PKGREVISION=	5
+PKGNAME=	basilisk-2026.11.01
 CATEGORIES=	www
 
 DIST_SUBDIR=	basilisk-${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ SITES.basilisk.tar.gz= \
 	-https://repo.palemoon.org/Basilisk-Dev/Basilisk/archive/v${PKGVERSION_NOREV}.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/83826f1f34efa77ac20fc514fa2e3d14a941f115.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/6e23bb7694fb2986bfb5abd92354a8e85d316418.tar.gz
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.basilisk-browser.org/
