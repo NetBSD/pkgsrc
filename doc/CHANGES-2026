@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7685 2026/11/06 11:52:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7686 2026/11/06 12:27:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11486,3 +11486,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-ansible-compat to 26.11.0 [adam 2026-11-06]
 	Updated sysutils/ansible-lint to 26.11.0 [adam 2026-11-06]
 	Updated net/rsync to 3.5.2nb1 [wiz 2026-11-06]
+	Updated net/openvpn to 2.7.9 [adam 2026-11-06]
+	Updated textproc/translate-toolkit to 3.20.4 [adam 2026-11-06]
