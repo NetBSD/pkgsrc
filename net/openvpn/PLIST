@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/02/15 12:50:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/11/06 11:59:39 adam Exp $
 include/openvpn-msg.h
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
@@ -9,7 +9,7 @@ man/man8/openvpn.8
 sbin/openvpn
 share/doc/openvpn/COPYING
 share/doc/openvpn/COPYRIGHT.GPL
-share/doc/openvpn/Changes.rst
+share/doc/openvpn/Changes.md
 share/doc/openvpn/README
 ${PLIST.pam}share/doc/openvpn/README.auth-pam
 share/doc/openvpn/README.down-root
