@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2026/07/22 08:24:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2026/11/06 10:48:16 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -112,6 +112,10 @@ ${PYSITELIB}/ansiblelint/rules/empty_string_compare.md
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.py
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.pyc
 ${PYSITELIB}/ansiblelint/rules/empty_string_compare.pyo
+${PYSITELIB}/ansiblelint/rules/event_query.md
+${PYSITELIB}/ansiblelint/rules/event_query.py
+${PYSITELIB}/ansiblelint/rules/event_query.pyc
+${PYSITELIB}/ansiblelint/rules/event_query.pyo
 ${PYSITELIB}/ansiblelint/rules/fqcn.md
 ${PYSITELIB}/ansiblelint/rules/fqcn.py
 ${PYSITELIB}/ansiblelint/rules/fqcn.pyc
