@@ -1,20 +1,21 @@
-$NetBSD: patch-src_modules_battery.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
+$NetBSD: patch-src_modules_battery.cpp,v 1.3 2026/11/06 19:45:10 kikadf Exp $
 
 * Add NetBSD support
 * Use udev only for linux
 
---- src/modules/battery.cpp.orig	2026-02-06 20:15:03.000000000 +0000
+--- src/modules/battery.cpp.orig	2026-11-05 18:52:00.000000000 +0000
 +++ src/modules/battery.cpp
-@@ -2,15 +2,79 @@
- 
- #include <algorithm>
- #include <cctype>
+@@ -6,16 +6,80 @@
+ #include <cstdio>
+ #include <ctime>
+ #include <string>
 +#include <cstddef>
  
  #include "util/command.hpp"
  #if defined(__FreeBSD__)
  #include <sys/sysctl.h>
  #endif
+ #include <fmt/chrono.h>
 +#ifdef HAVE_LIBUDEV
  #include <libudev.h>
  #include <poll.h>
@@ -86,7 +87,7 @@ $NetBSD: patch-src_modules_battery.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
  
  waybar::modules::Battery::Battery(const std::string& id, const Bar& bar, const Json::Value& config)
      : ALabel(config, "battery", id, "{capacity}%", 60), last_event_(""), bar_(bar) {
-@@ -56,7 +120,7 @@ waybar::modules::Battery::~Battery() {
+@@ -73,7 +137,7 @@ waybar::modules::Battery::~Battery() {
  }
  
  void waybar::modules::Battery::worker() {
@@ -95,7 +96,7 @@ $NetBSD: patch-src_modules_battery.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
    thread_timer_ = [this] {
      dp.emit();
      thread_timer_.sleep_for(interval_);
-@@ -248,6 +312,82 @@ waybar::modules::Battery::getInfos() {
+@@ -266,6 +330,82 @@ waybar::modules::Battery::getInfos() {
      // spdlog::info("{} {} {} {}", capacity,time,status,rate);
      return {capacity, time / 60.0, status, rate, 0, 0.0F};
  
@@ -178,7 +179,7 @@ $NetBSD: patch-src_modules_battery.cpp,v 1.2 2026/09/10 09:15:32 kikadf Exp $
  #elif defined(__linux__)
      uint32_t total_power = 0;  // μW
      bool total_power_exists = false;
-@@ -639,6 +779,38 @@ const std::string waybar::modules::Batte
+@@ -694,6 +834,38 @@ const std::string waybar::modules::Batte
    bool online = state == 2;
    std::string status{"Unknown"};  // TODO: add status in FreeBSD
    {

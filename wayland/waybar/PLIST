@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2026/08/24 14:25:31 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/06 19:45:10 kikadf Exp $
 bin/waybar
+lib/waybar/waybar-gps.so
 man/man5/waybar-battery.5
 man/man5/waybar-cffi.5
 man/man5/waybar-clock.5
@@ -18,6 +19,11 @@ man/man5/waybar-hyprland-workspaces.5
 man/man5/waybar-idle-inhibitor.5
 man/man5/waybar-image.5
 man/man5/waybar-inhibitor.5
+man/man5/waybar-mango-keymode.5
+man/man5/waybar-mango-language.5
+man/man5/waybar-mango-layout.5
+man/man5/waybar-mango-window.5
+man/man5/waybar-mango-workspaces.5
 man/man5/waybar-memory.5
 man/man5/waybar-menu.5
 man/man5/waybar-niri-language.5
@@ -36,6 +42,12 @@ man/man5/waybar-sway-window.5
 man/man5/waybar-sway-workspaces.5
 man/man5/waybar-temperature.5
 man/man5/waybar-tray.5
+man/man5/waybar-umbriel-layout.5
+man/man5/waybar-umbriel-window.5
+man/man5/waybar-umbriel-workspaces.5
+man/man5/waybar-user.5
+man/man5/waybar-wayfire-window.5
+man/man5/waybar-wayfire-workspaces.5
 man/man5/waybar-wlr-taskbar.5
 man/man5/waybar.5
 share/examples/waybar/config.jsonc
