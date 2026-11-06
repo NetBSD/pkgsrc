@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7689 2026/11/06 16:13:25 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7690 2026/11/06 16:55:36 scole Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11492,3 +11492,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-cachetools to 7.3.0 [adam 2026-11-06]
 	Updated www/basilisk to 2026.11.01 [nia 2026-11-06]
 	Updated net/routinator to 0.16.0 [drixter 2026-11-06]
+	Updated textproc/split-thai to 2.46 [scole 2026-11-06]
