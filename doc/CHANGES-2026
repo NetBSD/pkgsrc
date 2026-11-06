@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7691 2026/11/06 17:22:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7692 2026/11/06 19:46:19 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11494,3 +11494,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/routinator to 0.16.0 [drixter 2026-11-06]
 	Updated textproc/split-thai to 2.46 [scole 2026-11-06]
 	Updated www/p5-HTTP-Body to 1.25 [wiz 2026-11-06]
+	Updated wayland/waybar to 0.16.0 [kikadf 2026-11-06]
