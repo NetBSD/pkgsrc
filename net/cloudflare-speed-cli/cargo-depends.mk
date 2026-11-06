@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2026/10/29 14:59:53 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2026/11/06 08:37:30 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -15,8 +15,6 @@ CARGO_CRATE_DEPENDS+=	arboard-3.6.1
 CARGO_CRATE_DEPENDS+=	async-compression-0.4.37
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.5.0
-CARGO_CRATE_DEPENDS+=	aws-lc-rs-1.15.4
-CARGO_CRATE_DEPENDS+=	aws-lc-sys-0.37.0
 CARGO_CRATE_DEPENDS+=	base64-0.22.1
 CARGO_CRATE_DEPENDS+=	bitflags-2.11.1
 CARGO_CRATE_DEPENDS+=	brotli-8.0.2
@@ -34,7 +32,6 @@ CARGO_CRATE_DEPENDS+=	clap_builder-4.5.56
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.55
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.7
 CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.1
-CARGO_CRATE_DEPENDS+=	cmake-0.1.57
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.4
 CARGO_CRATE_DEPENDS+=	compact_str-0.9.0
 CARGO_CRATE_DEPENDS+=	compression-codecs-0.4.36
@@ -57,7 +54,6 @@ CARGO_CRATE_DEPENDS+=	dirs-sys-0.4.1
 CARGO_CRATE_DEPENDS+=	dispatch2-0.3.0
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.5
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
-CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	either-1.15.0
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.2
 CARGO_CRATE_DEPENDS+=	errno-0.3.14
@@ -70,7 +66,6 @@ CARGO_CRATE_DEPENDS+=	flate2-1.1.9
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foldhash-0.2.0
 CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.2
-CARGO_CRATE_DEPENDS+=	fs_extra-1.3.0
 CARGO_CRATE_DEPENDS+=	futures-0.3.31
 CARGO_CRATE_DEPENDS+=	futures-channel-0.3.31
 CARGO_CRATE_DEPENDS+=	futures-core-0.3.31
@@ -117,7 +112,6 @@ CARGO_CRATE_DEPENDS+=	iri-string-0.7.10
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
 CARGO_CRATE_DEPENDS+=	itertools-0.14.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.17
-CARGO_CRATE_DEPENDS+=	jobserver-0.1.34
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.85
 CARGO_CRATE_DEPENDS+=	kasuari-0.4.12
 CARGO_CRATE_DEPENDS+=	libc-0.2.180

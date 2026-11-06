@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/10/29 14:59:53 drixter Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/06 08:37:30 drixter Exp $
 
-DISTNAME=	cloudflare-speed-cli-1.0.11
+DISTNAME=	cloudflare-speed-cli-1.0.12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kavehtehrani/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
