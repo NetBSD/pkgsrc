@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.70 2026/04/12 05:38:27 wiz Exp $
+$NetBSD: distinfo,v 1.71 2026/11/06 09:33:52 wiz Exp $
 
-BLAKE2s (Image-ExifTool-13.55.tar.gz) = 23fea154b081d32c182b068c1ddf64c404bded4807b8e8e48f8d332e1b00f3b3
-SHA512 (Image-ExifTool-13.55.tar.gz) = 0f1f671ea64344e0b4b73ad7845ef785984b2fc905ba80d6478dfc045865dd31f69838bdf53f24f69578a7791f277f4cc8388e2cb31037e8875ad9845fb12fdc
-Size (Image-ExifTool-13.55.tar.gz) = 7799432 bytes
+BLAKE2s (Image-ExifTool-13.61.tar.gz) = b77b11bedc8c2050bd726b55d2637af4c7bd57ea3cae0e0955321b336cddd2a9
+SHA512 (Image-ExifTool-13.61.tar.gz) = 7a15697cadf57a3285db7cf921835b0422961e40a13f6c65e94277f3378b7ba0ba01a854c1932b6ad753c476d63fd9c3e0c3bb6285b84c5dcf99d05579da2d1c
+Size (Image-ExifTool-13.61.tar.gz) = 7950999 bytes
