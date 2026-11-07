@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2026/07/16 19:02:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/07 08:47:41 wen Exp $
 
-DISTNAME=	Devel-CallParser-0.002
+DISTNAME=	Devel-CallParser-0.006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Z/ZE/ZEFRAM/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LN/LNATION/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Devel::CallParser
