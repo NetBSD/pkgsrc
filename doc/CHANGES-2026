@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7723 2026/11/07 15:23:50 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7724 2026/11/07 15:27:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11526,3 +11526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/ruby-json-schema version 6.2.1 [taca 2026-11-07]
 	Added textproc/ruby-sanitize7 version 7.0.2 [taca 2026-11-07]
 	Updated textproc/ruby-nokogiri to 1.19.7 [taca 2026-11-07]
+	Updated www/ruby-aws-eventstream to 1.4.1 [taca 2026-11-07]
