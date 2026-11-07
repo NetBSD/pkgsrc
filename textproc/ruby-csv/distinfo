@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/09/06 15:48:17 taca Exp $
+$NetBSD: distinfo,v 1.18 2026/11/07 15:00:12 taca Exp $
 
-BLAKE2s (csv-3.3.6.gem) = f944cce6dafd520dcceed0f12ed8b8a50fae0c6cf4d6425021fa132028ad4c1e
-SHA512 (csv-3.3.6.gem) = 1491442f83c1ce56fd3f978ed3c8f382a58243e84cf31813db6968de7dfaa0cfd8103d387684d11c4a0f22cee005516f081f498eedd163a1071a2e81a4c48546
-Size (csv-3.3.6.gem) = 66560 bytes
+BLAKE2s (csv-3.3.7.gem) = f6194e623fa82958f87c36b43c93f6988312d4a17e06901a913df1e8cdaca9fe
+SHA512 (csv-3.3.7.gem) = 209866109b210f64d42bf6bb4ee4319eccd778175e14de6d7e589593f45934d589cc8b366a5b3d5c31af5f6ec1cf4a0f6ce1ad67556a58488f77c4e69f30dfcc
+Size (csv-3.3.7.gem) = 67072 bytes
