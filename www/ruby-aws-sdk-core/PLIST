@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2026/01/18 14:43:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/11/07 15:33:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -130,6 +130,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/resources.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/resources/collection.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/response.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/content_type_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/handler.rb
