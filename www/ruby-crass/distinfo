@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/06/28 15:21:40 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/11/07 15:44:33 taca Exp $
 
-BLAKE2s (crass-1.0.7.gem) = 8b36526797e5c0bf7aa3e007d80b425b18f067565b24821a1f2a3cf3b554555b
-SHA512 (crass-1.0.7.gem) = 4c3ee2ea174215154ff8f123ed72d9d19827f0388ea796929030a1e7059d052a9280b84a8d9eca4cecbd08b086562bedd702c7552b77faca2470ef0f886aac29
-Size (crass-1.0.7.gem) = 20992 bytes
+BLAKE2s (crass-1.0.8.gem) = 5dbff7d90736f5ebb46fdbb1f636c6bacc5267ec334c906900aa6a517783c529
+SHA512 (crass-1.0.8.gem) = 61b0a21da1d4621cea6388838be1491273ac8b0d76823a5b34b78f10814f11c009d8a1d545d4dae5905cad2ac2c23197abeda3df0b3423dc440ed0798917d33e
+Size (crass-1.0.8.gem) = 21504 bytes
