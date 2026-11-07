@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/09/29 06:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/07 19:11:58 wiz Exp $
 
 PKGNAME=	qca2-qt6-${DISTNAME:C/.*-//}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Cross-platform crypto API for Qt6
 

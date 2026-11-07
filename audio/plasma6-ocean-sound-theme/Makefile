@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2026/09/29 06:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/07 19:11:18 wiz Exp $
 
 DISTNAME=	ocean-sound-theme-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2026/10/05 19:06:11 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/07 19:11:53 wiz Exp $
 
 DISTNAME=	deskflow-1.27.0
+PKGREVISION=	1
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2026/09/29 06:05:17 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/07 19:11:32 wiz Exp $
 
 DISTNAME=	ktuberling-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ktuberling/

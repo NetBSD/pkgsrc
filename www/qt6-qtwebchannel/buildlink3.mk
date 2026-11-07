@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/09/29 06:08:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/11/07 19:12:05 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtwebchannel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtwebchannel
 QT6_QTWEBCHANNEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtwebchannel+=	qt6-qtwebchannel>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtwebchannel+=	qt6-qtwebchannel>=6.11.2nb3
+BUILDLINK_ABI_DEPENDS.qt6-qtwebchannel+=	qt6-qtwebchannel>=6.11.3nb1
 BUILDLINK_PKGSRCDIR.qt6-qtwebchannel?=		../../www/qt6-qtwebchannel
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

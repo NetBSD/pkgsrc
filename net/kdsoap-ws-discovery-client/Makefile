@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/09/29 06:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/07 19:11:53 wiz Exp $
 
 DISTNAME=	kdsoap-ws-discovery-client-0.4.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net kde
 MASTER_SITES=	${MASTER_SITE_KDE:=kdsoap-ws-discovery-client/}
 EXTRACT_SUFX=	.tar.xz

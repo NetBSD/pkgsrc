@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2026/09/29 06:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2026/11/07 19:11:18 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	pavucontrol-qt-2.4.0

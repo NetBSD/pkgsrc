@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.138 2026/09/29 06:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2026/11/07 19:11:20 wiz Exp $
 
 DISTNAME=	kdiff3-1.12.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
 EXTRACT_SUFX=	.tar.xz

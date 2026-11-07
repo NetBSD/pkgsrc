@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.61 2026/09/29 06:05:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.62 2026/11/07 19:11:35 wiz Exp $
 
 BUILDLINK_TREE+=	kdegraphics-mobipocket
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdegraphics-mobipocket
 KDEGRAPHICS_MOBIPOCKET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdegraphics-mobipocket+=	kdegraphics-mobipocket>=25.08.2
-BUILDLINK_ABI_DEPENDS.kdegraphics-mobipocket?=	kdegraphics-mobipocket>=26.08.0nb2
+BUILDLINK_ABI_DEPENDS.kdegraphics-mobipocket?=	kdegraphics-mobipocket>=26.08.0nb3
 BUILDLINK_PKGSRCDIR.kdegraphics-mobipocket?=	../../graphics/kdegraphics-mobipocket
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

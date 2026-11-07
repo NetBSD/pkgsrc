@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2026/09/29 06:06:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2026/11/07 19:11:49 wiz Exp $
 
 BUILDLINK_TREE+=	kontactinterface
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kontactinterface
 KONTACTINTERFACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kontactinterface+=	kontactinterface>=25.08.2
-BUILDLINK_ABI_DEPENDS.kontactinterface?=	kontactinterface>=26.08.0nb2
+BUILDLINK_ABI_DEPENDS.kontactinterface?=	kontactinterface>=26.08.0nb3
 BUILDLINK_PKGSRCDIR.kontactinterface?=		../../misc/kontactinterface
 
 .include "../../devel/kf6-kparts/buildlink3.mk"

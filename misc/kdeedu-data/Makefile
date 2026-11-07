@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2026/09/29 06:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/07 19:11:46 wiz Exp $
 
 DISTNAME=	kdeedu-data-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/

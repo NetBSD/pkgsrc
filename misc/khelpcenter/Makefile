@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2026/09/29 06:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2026/11/07 19:11:48 wiz Exp $
 
 DISTNAME=	khelpcenter-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://userbase.kde.org/KHelpCenter

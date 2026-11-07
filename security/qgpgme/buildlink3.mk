@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2026/09/29 06:07:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2026/11/07 19:11:58 wiz Exp $
 
 BUILDLINK_TREE+=	qgpgme
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qgpgme
 QGPGME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qgpgme+=	qgpgme>=1.10.0
-BUILDLINK_ABI_DEPENDS.qgpgme?=	qgpgme>=2.0.0nb5
+BUILDLINK_ABI_DEPENDS.qgpgme?=	qgpgme>=2.0.0nb6
 BUILDLINK_PKGSRCDIR.qgpgme?=	../../security/qgpgme
 
 .include "../../security/gpgme/buildlink3.mk"

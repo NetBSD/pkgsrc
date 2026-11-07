@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/11/05 22:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/07 19:11:17 wiz Exp $
 
 DISTNAME=	fooyin-0.14.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fooyin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

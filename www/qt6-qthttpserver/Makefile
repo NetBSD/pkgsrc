@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2026/11/06 09:08:54 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/07 19:12:05 wiz Exp $
 
 DISTNAME=	qthttpserver-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qthttpserver-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 classes for creating http servers
 CATEGORIES=	www
 LICENSE=	gnu-gpl-v3
