@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7729 2026/11/07 15:40:27 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7730 2026/11/07 15:42:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11532,3 +11532,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.143.0 [taca 2026-11-07]
 	Updated www/ruby-aws-sdk-kms to 1.140.0 [taca 2026-11-07]
 	Updated www/ruby-aws-sdk-s3 to 1.239.0 [taca 2026-11-07]
+	Updated www/ruby-bullet to 8.3.1 [taca 2026-11-07]
