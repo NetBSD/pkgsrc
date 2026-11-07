@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7710 2026/11/07 14:21:32 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7711 2026/11/07 14:25:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11513,3 +11513,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-rspec-mocks to 3.13.9 [taca 2026-11-07]
 	Updated devel/ruby-rspec to 3.13.2 [taca 2026-11-07]
 	Updated devel/ruby-rspec-rails to 8.1.0 [taca 2026-11-07]
+	Updated devel/ruby-tins to 1.62.0 [taca 2026-11-07]
