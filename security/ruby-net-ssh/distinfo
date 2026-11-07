@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2026/11/05 15:29:47 taca Exp $
+$NetBSD: distinfo,v 1.35 2026/11/07 14:27:33 taca Exp $
 
-BLAKE2s (net-ssh-8.1.0.gem) = 2a8c7b1efad2a0796cf6f806edf13c532308db0caaacbfc3fde5feccef425bb1
-SHA512 (net-ssh-8.1.0.gem) = cc08a5e0bed09a53254911d0569da6647da5dbdc8f44e36f9f68b23f11c506c1d1af4ce34ecf2e4664175ab10d5c2065e9d655dcb9e2928bd12ef6fea2590d70
-Size (net-ssh-8.1.0.gem) = 157184 bytes
+BLAKE2s (net-ssh-8.1.1.gem) = 4b1a31d0bb004574e093fa43b243eeee342f843c9bb9220be4db6be26b9008b0
+SHA512 (net-ssh-8.1.1.gem) = 9b389acb8b0d6338852f17494c474864fce0823ef2ca740dc9e82bfd24e317d01d72dab950f37fdc6a53024e48772086cd13561f9351955c7ce2eb6756b8c0d9
+Size (net-ssh-8.1.1.gem) = 158208 bytes
