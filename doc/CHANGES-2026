@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7735 2026/11/07 16:40:15 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7736 2026/11/07 16:41:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11538,3 +11538,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-ethon to 0.19.1 [taca 2026-11-07]
 	Updated www/ruby-faraday to 2.15.0 [taca 2026-11-07]
 	Updated www/ruby-faraday-net_http to 3.5.0 [taca 2026-11-07]
+	Updated www/ruby-html-proofer to 5.2.3 [taca 2026-11-07]
