@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/07 15:05:02 taca Exp $
+
+BLAKE2s (json-schema-6.2.1.gem) = 6f6f6a68599998e5ea62bc9bed9597e360fed92dcc294d217c9eb059b657d353
+SHA512 (json-schema-6.2.1.gem) = c67aff6367003907bd4d1f7c2a1ed9a7fa7d8d12fe3daca50b219c9064730631674d18d5ccfd02f669a6703a27601bd1e4a38c270a663f223582cc43e4df2095
+Size (json-schema-6.2.1.gem) = 33280 bytes

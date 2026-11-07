@@ -1,0 +1,6 @@
+Ruby JSON Schema Validator
+
+This library is intended to provide Ruby with an interface for validating
+JSON objects against a JSON schema conforming to JSON Schema Draft 6.
+Legacy support for JSON Schema Draft 4, JSON Schema Draft 3, JSON Schema
+Draft 2 and JSON Schema Draft 1 is also included.
