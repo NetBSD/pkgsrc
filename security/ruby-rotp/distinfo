@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/09/03 16:07:38 taca Exp $
+$NetBSD: distinfo,v 1.7 2026/11/07 14:33:25 taca Exp $
 
-BLAKE2s (rotp-6.3.0.gem) = a80403b93e606c4d8ee97443b5100299a983c039f1b3e212fe3b440d96811c00
-SHA512 (rotp-6.3.0.gem) = 511090f333c07363646422bfca589bdae5c11362366d69c26fa48bffb74cfe4869c63c49d2bc23e34e6a1429db2c4f3dae913b05d88af30da74ae9bc2f2aec8e
-Size (rotp-6.3.0.gem) = 21504 bytes
+BLAKE2s (rotp-6.4.0.gem) = c7b02207d48593c52d32e0972aa531b9a8f76ca2feb52bb4c529263e39c58f49
+SHA512 (rotp-6.4.0.gem) = 2dc7f2ec00276a6a18b2d28d777001ae23c26586740fd0884e2ebcf96e2eea62aabd2e20ace54d5dac57a47c0469e03bd13440ef80deef53eff99e772608dbbc
+Size (rotp-6.4.0.gem) = 22528 bytes

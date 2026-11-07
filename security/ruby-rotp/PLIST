@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/09/03 16:07:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/07 14:33:25 taca Exp $
 bin/rotp${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.devcontainer/Dockerfile
 ${GEM_LIBDIR}/.devcontainer/devcontainer.json
 ${GEM_LIBDIR}/.dockerignore
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/release.yaml
 ${GEM_LIBDIR}/.github/workflows/test.yaml
 ${GEM_LIBDIR}/.gitignore
