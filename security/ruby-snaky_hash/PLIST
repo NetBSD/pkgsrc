@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2026/07/20 05:25:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/07 14:50:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/CITATION.cff
-${GEM_LIBDIR}/CODE_OF_CONDUCT.md
-${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/FUNDING.md
 ${GEM_LIBDIR}/LICENSE.md
-${GEM_LIBDIR}/MIT.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/RUBOCOP.md
-${GEM_LIBDIR}/SECURITY.md
-${GEM_LIBDIR}/certs/pboling.pem
 ${GEM_LIBDIR}/lib/snaky_hash.rb
 ${GEM_LIBDIR}/lib/snaky_hash/extensions.rb
 ${GEM_LIBDIR}/lib/snaky_hash/serializer.rb
@@ -19,5 +11,4 @@ ${GEM_LIBDIR}/lib/snaky_hash/string_keyed.rb
 ${GEM_LIBDIR}/lib/snaky_hash/symbol_keyed.rb
 ${GEM_LIBDIR}/lib/snaky_hash/version.rb
 ${GEM_LIBDIR}/sig/snaky_hash.rbs
-${GEM_LIBDIR}/sig/snaky_hash/version.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
