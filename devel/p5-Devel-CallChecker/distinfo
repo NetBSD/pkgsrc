@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/12/16 10:26:12 mef Exp $
+$NetBSD: distinfo,v 1.5 2026/11/07 08:42:17 wen Exp $
 
-BLAKE2s (Devel-CallChecker-0.009.tar.gz) = 7f23353cb8abf207fef3af091ebbd2d5b431ff33ca2dbe57b241db45c080c10f
-SHA512 (Devel-CallChecker-0.009.tar.gz) = 251bd7f983a196e8f2b9658831d9e7898a757bab916ce0f25ae67504ab5ee2900dae704946e60e24412ce0b15ddc3d205ee67d773905a14ba72e6a906a1454b3
-Size (Devel-CallChecker-0.009.tar.gz) = 20981 bytes
+BLAKE2s (Devel-CallChecker-0.010.tar.gz) = 55f5fbd4c1da5474343869538ea7c9a1590df7a32e078ddb5576904042191bd9
+SHA512 (Devel-CallChecker-0.010.tar.gz) = 4ec2320ce07a9ea5124225183417855347a60e812ad924ea6332d079137eac30cd332850bcb3b428f5020f72108225fa8abb3f4fcfaaa6def8e89ea28cbf87b6
+Size (Devel-CallChecker-0.010.tar.gz) = 21278 bytes
