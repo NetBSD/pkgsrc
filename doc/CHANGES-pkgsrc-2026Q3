@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.7 2026/11/04 08:44:17 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.8 2026/11/07 17:12:13 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -77,3 +77,10 @@ www/firefox153-l10n: dependent update
 
 Pullup ticket #7328 - requested by bsiegert
 graphics/lerc: Security fix
+
+Pullup ticket #7329 - requested by bouyer
+sysutils/xentools420: Security fix
+sysutils/xenkernel420: Security fix
+
+Pullup ticket #7330 - requested by bsiegert
+textproc/expat: Security fix
