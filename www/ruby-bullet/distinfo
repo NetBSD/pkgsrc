@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/09/06 16:13:17 taca Exp $
+$NetBSD: distinfo,v 1.6 2026/11/07 15:42:37 taca Exp $
 
-BLAKE2s (bullet-8.2.0.gem) = 9211090ab1ee00ad21d30c34067685bd0b2fe0cf88130d4dec3b19bfc116ccb7
-SHA512 (bullet-8.2.0.gem) = 42d0bc3ce4c74170f16f683eb9ab81e3072e7c0bfa01780f26fe5253efae0a4513b455fc8b05e4d9811adabfb21a051376574cb256d9cdcd5ebebd9618153cca
-Size (bullet-8.2.0.gem) = 29184 bytes
+BLAKE2s (bullet-8.3.1.gem) = 7cf923dd692340f769223099edba013785b6b3aff1ff83572ca63b3d3b10212e
+SHA512 (bullet-8.3.1.gem) = 14d999566aeee1daa9b65b590f110f56f8543e69687383ad5c477d011b4a17a5865ee6f1d87086e127640bbcd3529a7e82c074b3a4d3ab677005d11f1c258baf
+Size (bullet-8.3.1.gem) = 29696 bytes
