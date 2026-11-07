@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7724 2026/11/07 15:27:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7725 2026/11/07 15:29:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11527,3 +11527,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/ruby-sanitize7 version 7.0.2 [taca 2026-11-07]
 	Updated textproc/ruby-nokogiri to 1.19.7 [taca 2026-11-07]
 	Updated www/ruby-aws-eventstream to 1.4.1 [taca 2026-11-07]
+	Updated www/ruby-aws-partitions to 1.1303.0 [taca 2026-11-07]
