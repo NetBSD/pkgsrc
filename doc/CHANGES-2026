@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7700 2026/11/07 09:18:13 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7701 2026/11/07 09:21:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11503,3 +11503,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Devel-MAT-Dumper to 0.52 [wen 2026-11-07]
 	Updated devel/p5-Devel-MAT to 0.56 [wen 2026-11-07]
 	Updated devel/p5-Devel-NYTProf to 6.16 [wen 2026-11-07]
+	Updated devel/p5-Devel-PatchPerl to 2.14 [wen 2026-11-07]
