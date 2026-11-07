@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2026/11/03 23:58:16 nia Exp $
+# $NetBSD: options.mk,v 1.5 2026/11/07 16:47:53 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL3
-PKG_SUPPORTED_OPTIONS=		alsa dbus jack opengl libusb pulseaudio x11
+PKG_SUPPORTED_OPTIONS=		alsa dbus jack libusb pulseaudio x11
 
 # other platforms use usbhid etc
 PKG_SUGGESTED_OPTIONS.Linux=	alsa libusb
