@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7732 2026/11/07 15:48:00 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7733 2026/11/07 15:54:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11535,3 +11535,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-bullet to 8.3.1 [taca 2026-11-07]
 	Updated www/ruby-crass to 1.0.8 [taca 2026-11-07]
 	Updated www/ruby-css-parser to 3.4.0 [taca 2026-11-07]
+	Updated www/ruby-ethon to 0.19.1 [taca 2026-11-07]
