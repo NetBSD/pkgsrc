@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2026/07/16 19:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/07 08:58:38 wen Exp $
 
-DISTNAME=	Devel-MAT-Dumper-0.50
+DISTNAME=	Devel-MAT-Dumper-0.52
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Devel::MAT::Dumper
@@ -13,9 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
-
-#DEPENDS+=	p5-Commandable-[0-9]*:../../devel/p5-Commandable
-#TEST_DEPENDS+=	p5-Test-Identity-[0-9]*:../../devel/p5-Test-Identity
 
 PERL5_PACKLIST=		auto/Devel/MAT/Dumper/.packlist
 PERL5_MODULE_TYPE=	Module::Build
