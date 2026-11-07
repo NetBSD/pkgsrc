@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2025/09/15 04:46:04 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.44 2026/11/07 15:23:37 taca Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -64,6 +64,8 @@ ${GEM_LIBDIR}/gumbo-parser/src/error.c
 ${GEM_LIBDIR}/gumbo-parser/src/error.h
 ${GEM_LIBDIR}/gumbo-parser/src/foreign_attrs.c
 ${GEM_LIBDIR}/gumbo-parser/src/foreign_attrs.gperf
+${GEM_LIBDIR}/gumbo-parser/src/hashmap.c
+${GEM_LIBDIR}/gumbo-parser/src/hashmap.h
 ${GEM_LIBDIR}/gumbo-parser/src/insertion_mode.h
 ${GEM_LIBDIR}/gumbo-parser/src/macros.h
 ${GEM_LIBDIR}/gumbo-parser/src/nokogiri_gumbo.h
@@ -73,6 +75,8 @@ ${GEM_LIBDIR}/gumbo-parser/src/replacement.h
 ${GEM_LIBDIR}/gumbo-parser/src/string_buffer.c
 ${GEM_LIBDIR}/gumbo-parser/src/string_buffer.h
 ${GEM_LIBDIR}/gumbo-parser/src/string_piece.c
+${GEM_LIBDIR}/gumbo-parser/src/string_set.c
+${GEM_LIBDIR}/gumbo-parser/src/string_set.h
 ${GEM_LIBDIR}/gumbo-parser/src/svg_attrs.c
 ${GEM_LIBDIR}/gumbo-parser/src/svg_attrs.gperf
 ${GEM_LIBDIR}/gumbo-parser/src/svg_tags.c
