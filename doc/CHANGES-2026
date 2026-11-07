@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7721 2026/11/07 15:06:05 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7722 2026/11/07 15:09:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11524,3 +11524,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/ruby-csv to 3.3.7 [taca 2026-11-07]
 	Updated textproc/ruby-haml to 7.5.2 [taca 2026-11-07]
 	Added textproc/ruby-json-schema version 6.2.1 [taca 2026-11-07]
+	Added textproc/ruby-sanitize7 version 7.0.2 [taca 2026-11-07]
