@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7719 2026/11/07 15:00:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7720 2026/11/07 15:02:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11522,3 +11522,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ruby-specinfra to 2.95.2 [taca 2026-11-07]
 	Updated textproc/ruby-commonmarker to 2.10.1 [taca 2026-11-07]
 	Updated textproc/ruby-csv to 3.3.7 [taca 2026-11-07]
+	Updated textproc/ruby-haml to 7.5.2 [taca 2026-11-07]
