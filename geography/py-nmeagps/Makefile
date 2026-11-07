@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/08/10 18:05:11 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/07 12:31:57 gdt Exp $
 
-VERSION=	1.1.7
+VERSION=	1.1.9
 DISTTAIL=	nmeagps
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
