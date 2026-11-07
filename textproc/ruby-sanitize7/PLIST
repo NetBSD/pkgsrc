@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/07 15:09:03 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/sanitize.rb
+${GEM_LIBDIR}/lib/sanitize/config.rb
+${GEM_LIBDIR}/lib/sanitize/config/basic.rb
+${GEM_LIBDIR}/lib/sanitize/config/default.rb
+${GEM_LIBDIR}/lib/sanitize/config/relaxed.rb
+${GEM_LIBDIR}/lib/sanitize/config/restricted.rb
+${GEM_LIBDIR}/lib/sanitize/css.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_cdata.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_comment.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_css.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_doctype.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_element.rb
+${GEM_LIBDIR}/lib/sanitize/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
