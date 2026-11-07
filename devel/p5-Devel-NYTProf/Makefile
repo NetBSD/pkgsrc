@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2026/07/16 19:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2026/11/07 09:17:16 wen Exp $
 
-DISTNAME=	Devel-NYTProf-6.14
+DISTNAME=	Devel-NYTProf-6.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JK/JKEENAN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Devel-NYTProf
