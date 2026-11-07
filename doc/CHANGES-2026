@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7703 2026/11/07 09:47:57 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7704 2026/11/07 12:32:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11506,3 +11506,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Devel-PatchPerl to 2.14 [wen 2026-11-07]
 	Updated devel/p5-Devel-Size to 0.87 [wen 2026-11-07]
 	Updated devel/p5-Dist-Zilla to 6.040 [wen 2026-11-07]
+	Updated geography/py-nmeagps to 1.1.9 [gdt 2026-11-07]
