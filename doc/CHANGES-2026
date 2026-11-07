@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7698 2026/11/07 08:59:42 wen Exp $
+$NetBSD: CHANGES-2026,v 1.7699 2026/11/07 09:03:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11501,3 +11501,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Devel-ebug to 0.69 [wen 2026-11-07]
 	Updated devel/p5-Devel-Hide to 0.0016 [wen 2026-11-07]
 	Updated devel/p5-Devel-MAT-Dumper to 0.52 [wen 2026-11-07]
+	Updated devel/p5-Devel-MAT to 0.56 [wen 2026-11-07]
