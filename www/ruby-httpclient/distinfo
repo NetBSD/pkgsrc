@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2025/02/23 15:13:08 taca Exp $
+$NetBSD: distinfo,v 1.26 2026/11/07 16:43:49 taca Exp $
 
-BLAKE2s (httpclient-2.9.0.gem) = 4c1d6e89e1ea01c1bcbb886f7d6543bae9a6fe460dd38fb961aa77b5acdbdc90
-SHA512 (httpclient-2.9.0.gem) = dc949795ed9b3434e0dcdcae10a6cf34de3ef9431490b4a947853c556688068cad54fd27e7f198da2ef3cf76fa1fdea96136e5287b995491349c7b7e958b6c3c
-Size (httpclient-2.9.0.gem) = 394240 bytes
+BLAKE2s (httpclient-2.10.0.gem) = 2cde9bbf3ef06f5a211701bc59e379f6a5a5b0e5f80ca4119a494db096ad2934
+SHA512 (httpclient-2.10.0.gem) = 612ab6e17db6bbab531bcf23d872a37936713c78ede80c52a686db55e7e14349a1349c5f787cf0aaf501f941c1bad1d6b8d32688f3b02f4549bd19f11f79d118
+Size (httpclient-2.10.0.gem) = 371712 bytes
 SHA1 (patch-lib_httpclient.rb) = 8e72148f4bf0d97536e817683f7ed9432b2ba6fe
