@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7705 2026/11/07 13:51:04 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7706 2026/11/07 13:52:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11508,3 +11508,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Dist-Zilla to 6.040 [wen 2026-11-07]
 	Updated geography/py-nmeagps to 1.1.9 [gdt 2026-11-07]
 	Updated devel/ruby-rspec-support to 3.13.8 [taca 2026-11-07]
+	Updated devel/ruby-rspec-core to 3.13.7 [taca 2026-11-07]
