@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7762 2026/11/08 14:01:29 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7763 2026/11/08 14:02:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11565,3 +11565,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-loofah to 2.25.3 [taca 2026-11-08]
 	Updated www/php-nextcloud to 34.0.5 [gdt 2026-11-08]
 	Updated www/ruby-mechanize to 2.14.2 [taca 2026-11-08]
+	Updated graphics/ptex to 2.5.4 [ryoon 2026-11-08]
