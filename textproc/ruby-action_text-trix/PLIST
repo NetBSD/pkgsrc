@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 16:20:52 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/app/assets/javascripts/trix.js
+${GEM_LIBDIR}/app/assets/stylesheets/trix.css
+${GEM_LIBDIR}/lib/action_text/trix.rb
+${GEM_LIBDIR}/lib/action_text/trix/engine.rb
+${GEM_LIBDIR}/lib/action_text/trix/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

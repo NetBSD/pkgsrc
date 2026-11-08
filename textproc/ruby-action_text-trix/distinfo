@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:20:52 taca Exp $
+
+BLAKE2s (action_text-trix-2.1.19.gem) = 14efa5cb50fb6ff6ff86f78c1f489e71a7eaa93f6a790284d3e20d7fcf8ac68e
+SHA512 (action_text-trix-2.1.19.gem) = 8b6979deb609cc477ca5110bee941eb016afc9cd2d41e0692fdcbcdb950df965adacb79620997d2e30846cf269b4ca8d59f7d4857166d046782ea8f634e1062b
+Size (action_text-trix-2.1.19.gem) = 112128 bytes
