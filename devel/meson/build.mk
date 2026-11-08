@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.35 2026/08/11 11:43:05 wiz Exp $
+# $NetBSD: build.mk,v 1.36 2026/11/08 16:56:01 alnsn Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -11,6 +11,7 @@ INSTALL_DIRS?=		${CONFIGURE_DIRS}
 TEST_DIRS?=		${CONFIGURE_DIRS}
 
 MESON_BUILD_TARGET?=	# empty
+MESON_OUTPUT_DIR?=	output
 
 .PHONY: meson-configure meson-build meson-install meson-test
 
@@ -178,7 +179,7 @@ meson-configure:
 		--sysconfdir ${PKG_SYSCONFDIR} \
 		--wrap-mode=nodownload \
 		${MESON_CROSS_ARGS} ${MESON_NATIVE_ARGS} \
-		--buildtype=plain ${MESON_ARGS} . output
+		--buildtype=plain ${MESON_ARGS} . ${MESON_OUTPUT_DIR}
 .endfor
 
 do-build: meson-build
@@ -188,7 +189,7 @@ meson-build:
 	@${STEP_MSG} Building with ninja in ${d}
 .  endif
 	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} \
-	    ninja -j ${_MAKE_JOBS_N:U1} -C output ${MESON_BUILD_TARGET}
+	    ninja -j ${_MAKE_JOBS_N:U1} -C ${MESON_OUTPUT_DIR} ${MESON_BUILD_TARGET}
 .endfor
 
 .if empty(MESON_INSTALL:Mno)
@@ -202,7 +203,7 @@ meson-install:
 	@${STEP_MSG} Installing with ninja in ${d}
 .    endif
 	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-	    ninja -j ${_MAKE_JOBS_N:U1} -C output install
+	    ninja -j ${_MAKE_JOBS_N:U1} -C ${MESON_OUTPUT_DIR} install
 .  endfor
 .endif
 
@@ -213,7 +214,7 @@ meson-test:
 	@${STEP_MSG} Testing with ninja in ${d}
 .  endif
 	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
-	    ninja -j ${_MAKE_JOBS_N:U1} -C output test
+	    ninja -j ${_MAKE_JOBS_N:U1} -C ${MESON_OUTPUT_DIR} test
 .endfor
 
 _VARGROUPS+=		meson
@@ -230,6 +231,7 @@ _PKG_VARS.meson+=	MESON_BINARY_KEY.*
 _PKG_VARS.meson+=	MESON_CROSS_ARCH_VARS
 _PKG_VARS.meson+=	MESON_CROSS_OPSYS_VARS
 _PKG_VARS.meson+=	MESON_CROSS_VARS MESON_CROSS.*
+_PKG_VARS.meson+=	MESON_OUTPUT_DIR
 _USER_VARS.meson=	MAKE_JOBS PKG_SYSCONFDIR
 _USE_VARS.meson=	TOOLS_PATH.false WRKDIR WRKSRC PREFIX PKGMANDIR
 _USE_VARS.meson+=	MACHINE_ARCH
