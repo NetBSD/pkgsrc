@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/09/14 21:50:24 tnn Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/08 12:52:23 gdt Exp $
 
 DISTNAME=		tigervnc-1.16.2.20260506
 PKGREVISION=		1
@@ -149,6 +149,8 @@ pre-configure:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+# Upstream does build with fltk 1.4.
+# https://github.com/TigerVNC/tigervnc/issues/1949
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
