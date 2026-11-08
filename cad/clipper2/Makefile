@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/08 16:08:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/08 16:10:00 ryoon Exp $
 
 DISTNAME=	Clipper2_2.0.1
 PKGNAME=	${DISTNAME:S/Clipper2_/clipper2-/:tl}
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/AngusJohnson/Clipper2/
+HOMEPAGE=	https://github.com/PolyClipping/Clipper2
 COMMENT=	Library performs operations on polygons
 LICENSE=	boost-license
 
