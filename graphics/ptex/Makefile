@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/11/07 17:56:55 nros Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/08 14:02:39 ryoon Exp $
 
-DISTNAME=	ptex-2.4.2
+DISTNAME=	ptex-2.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wdas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +21,6 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src/ptex/
 
 .include "../../devel/cmake/build.mk"
 
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/libdeflate/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
