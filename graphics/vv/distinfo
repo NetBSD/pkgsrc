@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/07/21 09:12:12 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/11/08 12:03:49 pho Exp $
 
 BLAKE2s (moderncore-20260719-5b775746c6d152cd3cfc2896576ec888a30d4b73.tar.gz) = 57f21a20806c37a1853d5c1d26ada7981e27bd37adddc6c179aca4629f393873
 SHA512 (moderncore-20260719-5b775746c6d152cd3cfc2896576ec888a30d4b73.tar.gz) = 00d15fea0f45ab3066c59d09a2e4bac1a25093ac8e13183b1e0750a997f8592e6a3f34bcaf87aed1bc8c917f07a6b34621290525b7a1b9fba3125001ee072a15
@@ -11,3 +11,4 @@ SHA512 (wolfpld-tracy-853fff614eb2deffd7c86853b517c8021a3efd1f.tar.gz) = d7aa161
 Size (wolfpld-tracy-853fff614eb2deffd7c86853b517c8021a3efd1f.tar.gz) = 6122641 bytes
 SHA1 (patch-CMakeLists.txt) = d123c5dfafc72dc43d4c4abd056fb762ea8c5258
 SHA1 (patch-cmake_git-ref.py) = e17776824d34c8fa565ba6e3d2c472c63ede88e3
+SHA1 (patch-src_image_HeifLoader.cpp) = 246a2b92eaa1022fd6b2a389d4ab2539907bada0
