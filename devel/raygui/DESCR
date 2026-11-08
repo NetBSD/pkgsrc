@@ -1,0 +1,8 @@
+raygui is a simple and easy-to-use immediate-mode-gui library.
+
+raygui was originally inspired by Unity IMGUI (immediate mode GUI API).
+
+raygui was designed as an auxiliary module for raylib to create
+simple GUI interfaces using raylib graphic style (simple colors,
+plain rectangular shapes, wide borders...) but it can be adapted
+to other engines/frameworks.

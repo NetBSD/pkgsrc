@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 16:40:18 ryoon Exp $
+include/raygui.h

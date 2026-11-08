@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:40:18 ryoon Exp $
+
+BLAKE2s (raygui-5.0.tar.gz) = d39c2e703a0d29960d6b5e92a2413e7fe8da4e7ce06456c54a41f3920beef2d7
+SHA512 (raygui-5.0.tar.gz) = 48b0a7459b758b1c0efd4151a51a30e925ed84474fb4fdf05e4ff7f501e5d078605e3731e9dfec53b79bc72db605549f0650e5171e56841fef4d3ad87a304382
+Size (raygui-5.0.tar.gz) = 5464681 bytes
