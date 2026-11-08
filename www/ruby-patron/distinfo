@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2025/03/02 14:54:34 taca Exp $
+$NetBSD: distinfo,v 1.22 2026/11/08 14:10:04 taca Exp $
 
-BLAKE2s (patron-0.13.4.gem) = b31a696a5fb032c9147dff5b801b30cef29269da8ed174d94b556eb6bb82afd9
-SHA512 (patron-0.13.4.gem) = 0691775230f6fa496a58d45724cdc8ac0842edf5259053a5153126db208cabcdb6ca2174aa091e6d7059023b967a49f30a1fd8e05d17d190f922ce5d1bfa6298
-Size (patron-0.13.4.gem) = 66560 bytes
+BLAKE2s (patron-1.1.0.gem) = a78926b5cefa7f842f7bf17741699dc6610ff10b80bdb3521c1f9f21846049c3
+SHA512 (patron-1.1.0.gem) = f8f447a99c2477ff62bbd2da6897f4128dc6eff0f79d702c53b8f383fac2cb6ec6335e562c86d6a2a328fc47bb56582f89244ad9452976c3ee88fcfe2e1864da
+Size (patron-1.1.0.gem) = 59904 bytes
