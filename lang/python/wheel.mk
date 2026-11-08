@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.26 2026/05/28 03:58:33 adam Exp $
+# $NetBSD: wheel.mk,v 1.27 2026/11/08 12:39:58 ryoon Exp $
 #
 # Build and install Python wheels
 #
@@ -85,7 +85,7 @@ do-install:
 		${PYINSTALL_EXEC} \
 		${WHEELFILE}
 .  for f in ${PY_RENAME_BINARIES}
-	cd ${DESTDIR}/${PREFIX}/bin && ${MV} ${f} ${f}-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${f} ${f}-${PYVERSSUFFIX} || ${TRUE}
 .  endfor
 .endif
 
