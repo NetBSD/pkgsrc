@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7774 2026/11/08 15:03:32 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7775 2026/11/08 15:12:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11578,3 +11578,11 @@ Changes to the packages collection and infrastructure in 2026:
 	Added graphics/partio version 1.20.0 [ryoon 2026-11-08]
 	Updated www/ruby-typhoeus to 1.7.1 [taca 2026-11-08]
 	Added graphics/osl version 1.15.7.0 [ryoon 2026-11-08]
+	Updated www/ruby-padrino-support to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-helpers to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-core to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-admin to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-cache to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-gen to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino-mailer to 0.18.5 [taca 2026-11-08]
+	Updated www/ruby-padrino to 0.18.5 [taca 2026-11-08]
