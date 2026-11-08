@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1035 2026/11/01 18:07:18 agc Exp $
+# $NetBSD: Makefile,v 1.1036 2026/11/08 18:07:15 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -149,6 +149,7 @@ SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-blake2
+SUBDIR+=	hs-blake3
 SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-crypto-token
 SUBDIR+=	hs-cryptohash-md5
