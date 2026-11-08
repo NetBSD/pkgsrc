@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/10/27 06:25:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/08 21:53:46 wiz Exp $
 
-DISTNAME=	v0.5.1
+DISTNAME=	v0.5.2
 PKGNAME=	chawan-${DISTNAME:S/v//}
 CATEGORIES=	www
 MASTER_SITES=	https://git.sr.ht/~bptato/chawan/archive/
