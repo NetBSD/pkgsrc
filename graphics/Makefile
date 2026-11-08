@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1139 2026/11/08 15:02:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.1140 2026/11/08 15:04:23 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -408,6 +408,7 @@ SUBDIR+=	openimageio
 SUBDIR+=	openjpeg
 SUBDIR+=	optipng
 SUBDIR+=	osg
+SUBDIR+=	osl
 SUBDIR+=	oxipng
 SUBDIR+=	oxygen-icons
 SUBDIR+=	p5-Barcode-Code128
