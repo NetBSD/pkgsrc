@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7797 2026/11/08 16:04:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7798 2026/11/08 16:09:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11620,3 +11620,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/quickjs-ng to 0.18.0 [wiz 2026-11-08]
 	Added www/ruby-actionview81 version 8.1.4.1 [taca 2026-11-08]
 	Updated textproc/tree-sitter to 0.27.2 [wiz 2026-11-08]
+	Added cad/clipper2 version 2.0.1 [ryoon 2026-11-08]
