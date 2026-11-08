@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/07/20 05:34:04 taca Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/08 13:44:12 taca Exp $
 
-DISTNAME=	oauth-1.1.8
+DISTNAME=	oauth-1.1.9
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
