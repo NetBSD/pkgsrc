@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4722 2026/11/08 15:45:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.4723 2026/11/08 15:52:02 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3373,6 +3373,7 @@ SUBDIR+=	ruby-activestorage72
 SUBDIR+=	ruby-activestorage80
 SUBDIR+=	ruby-activesupport72
 SUBDIR+=	ruby-activesupport80
+SUBDIR+=	ruby-activesupport81
 SUBDIR+=	ruby-algorithms
 SUBDIR+=	ruby-amstd
 SUBDIR+=	ruby-anonymous_loader
