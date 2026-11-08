@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/11/08 18:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/08 21:42:27 wiz Exp $
 
 DISTNAME=	lap-0.5.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,9 @@ USE_LANGUAGES=	c c++
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
+
+pre-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py build_ext --inplace
 
 BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=3.3.0nb1
 .include "../../devel/py-cython/buildlink3.mk"
