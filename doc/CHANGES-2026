@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7749 2026/11/08 11:06:05 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7750 2026/11/08 11:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11552,3 +11552,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fd-find to 10.5.2 [wiz 2026-11-08]
 	Updated www/resterm to 1.18.0 [drixter 2026-11-08]
 	Updated multimedia/libaom to 3.15.3 [ryoon 2026-11-08]
+	Updated sysutils/py-Glances to 4.5.9 [wiz 2026-11-08]
