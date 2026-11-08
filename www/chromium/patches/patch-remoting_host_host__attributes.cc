@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__attributes.cc,v 1.27 2026/10/23 15:05:31 kikadf Exp $
+$NetBSD: patch-remoting_host_host__attributes.cc,v 1.28 2026/11/08 15:39:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/host_attributes.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/host_attributes.cc
 @@ -18,7 +18,7 @@
  #include "remoting/host/win/evaluate_d3d.h"

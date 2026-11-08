@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.3 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.4 2026/11/08 15:38:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/toolbar/webui_toolbar_web_view.cc
-@@ -581,7 +581,7 @@ void WebUIToolbarWebView::AddedToWidget(
+@@ -553,7 +553,7 @@ void WebUIToolbarWebView::AddedToWidget(
      if (features::IsWebUIExtensionsContainerEnabled()) {
        extensions_container_.Init(web_contents());
      }
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.
      if (features::IsWebUIMediaButtonEnabled()) {
        media_control_.Init();
      }
-@@ -992,7 +992,7 @@ WebUIToolbarWebView::GetAvatarToolbarBut
+@@ -945,7 +945,7 @@ WebUIToolbarWebView::GetAvatarToolbarBut
  }
  
  MediaToolbarButton* WebUIToolbarWebView::GetMediaToolbarButton() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_toolbar_webui__toolbar__web__view.cc,v 1.
    if (features::IsWebUIMediaButtonEnabled()) {
      return &media_control_;
    }
-@@ -1813,7 +1813,7 @@ gfx::Size WebUIToolbarWebView::ComputeLa
+@@ -1800,7 +1800,7 @@ gfx::Size WebUIToolbarWebView::ComputeLa
    button_count += features::IsWebUIAppMenuButtonEnabled();
    button_count +=
        features::IsWebUIGlicButtonEnabled() && glic_control_.IsVisible();

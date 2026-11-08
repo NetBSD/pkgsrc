@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_file__path__watcher__kqueue.cc,v 1.11 2026/10/23 15:05:14 kikadf Exp $
+$NetBSD: patch-base_files_file__path__watcher__kqueue.cc,v 1.12 2026/11/08 15:38:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_kqueue.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/files/file_path_watcher_kqueue.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/files/file_path_watcher_kqueue.cc
 @@ -239,9 +239,14 @@ bool FilePathWatcherKQueue::UpdateWatche
  

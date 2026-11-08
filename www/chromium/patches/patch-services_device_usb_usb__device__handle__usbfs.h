@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.30 2026/10/23 15:05:32 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.31 2026/11/08 15:39:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.h
 @@ -20,7 +20,7 @@
  #include "base/threading/sequence_bound.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.30 2026/10/2
  #include "base/containers/flat_set.h"
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
  
-@@ -216,7 +216,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -217,7 +217,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    bool ClearHalt(uint8_t endpoint_address);
    void DiscardUrb(Transfer* transfer);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.30 2026/10/2
    // Detach the interface from a kernel driver before ClaimInterface
    virtual bool DetachInterface(int interface_number,
                                 const CombinedInterfaceInfo& interfaceInfo);
-@@ -229,7 +229,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -230,7 +230,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    // Called when |fd_| is writable without blocking.
    void OnFileCanWriteWithoutBlocking();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.h,v 1.30 2026/10/2
    // Called from |DetachInterface|.
    std::string GetKernelDriver(int interface_number) const;
  #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -241,7 +241,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
+@@ -242,7 +242,7 @@ class UsbDeviceHandleUsbfs::BlockingTask
    std::unique_ptr<base::FileDescriptorWatcher::Controller> watch_controller_;
    SEQUENCE_CHECKER(sequence_checker_);
  

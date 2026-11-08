@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signin_enterprise__signin__service.h,v 1.31 2026/10/23 15:05:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signin_enterprise__signin__service.h,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signin/enterprise_signin_service.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/enterprise/signin/enterprise_signin_service.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/enterprise/signin/enterprise_signin_service.h
 @@ -9,7 +9,7 @@
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu__canvas__context.cc,v 1.30 2026/10/23 15:05:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu__canvas__context.cc,v 1.31 2026/11/08 15:39:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu_canvas_context.cc
-@@ -273,7 +273,7 @@ GPUCanvasContext::PaintRenderingResultsT
+@@ -277,7 +277,7 @@ GPUCanvasContext::PaintRenderingResultsT
  
    scoped_refptr<WebGPUMailboxTexture> front_buffer_texture;
    if (source_buffer == kFrontBuffer) {
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_modules_webgpu_gpu__canvas__context.c
      // By returning false here the canvas will show up as black in the scenarios
      // that copy the front buffer, such as printing.
      // TODO(crbug.com/40902474): Support concurrent SharedImage reads via Dawn
-@@ -492,7 +492,7 @@ void GPUCanvasContext::configure(const G
+@@ -496,7 +496,7 @@ void GPUCanvasContext::configure(const G
    }
  #endif
  

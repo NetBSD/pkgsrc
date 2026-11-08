@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/08 13:13:46 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/08 15:38:50 kikadf Exp $
 bin/chromedriver
 bin/chromium
 lib/chromium/chrome
@@ -457,7 +457,6 @@ lib/chromium/resources/accessibility/reading_mode_gdocs_helper_manifest.json
 lib/chromium/resources/inspector_overlay/inspector_overlay_resources.grd
 lib/chromium/resources/inspector_overlay/main.js
 lib/chromium/snapshot_blob.bin
-lib/chromium/v8_context_snapshot.bin
 ${PLIST.swiftshader}lib/chromium/vk_swiftshader_icd.json
 man/man1/chromium.1
 share/applications/chromium-browser.desktop

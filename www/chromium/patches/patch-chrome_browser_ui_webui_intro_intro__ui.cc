@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_intro_intro__ui.cc,v 1.5 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_intro_intro__ui.cc,v 1.6 2026/11/08 15:38:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/intro/intro_ui.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/intro/intro_ui.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/intro/intro_ui.cc
 @@ -55,7 +55,7 @@ int GetBackupCardDescriptionId(bool is_f
               : IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS;

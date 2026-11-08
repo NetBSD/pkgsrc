@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.h,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_common_features.h,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/common/features.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/common/features.h
-@@ -91,7 +91,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEar
+@@ -93,7 +93,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEar
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEditContextSelectionSync);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kKillOnUnexpectedOriginHeader);
@@ -15,7 +15,7 @@ $NetBSD: patch-content_common_features.h,v 1.31 2026/10/23 15:05:27 kikadf Exp $
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceGamepadPermissionsPolicy);
-@@ -109,8 +109,8 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(
+@@ -111,8 +111,8 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(
      kFocusRenderWidgetHostViewAndroidOnMouseDown);
  #endif
  
@@ -26,7 +26,7 @@ $NetBSD: patch-content_common_features.h,v 1.31 2026/10/23 15:05:27 kikadf Exp $
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceLinux);
  #else
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceChromeOS);
-@@ -126,7 +126,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
+@@ -128,7 +128,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE_PARA
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataManagerPrewarming);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kFontDataServiceForCSSLocalFonts);
  

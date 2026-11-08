@@ -1,17 +1,17 @@
-$NetBSD: patch-third__party_blink_renderer_modules_canvas_imagebitmap_image__bitmap__rendering__context.cc,v 1.8 2026/10/23 15:05:33 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_canvas_imagebitmap_image__bitmap__rendering__context.cc,v 1.9 2026/11/08 15:39:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.cc
-@@ -61,7 +61,7 @@ scoped_refptr<StaticBitmapImage> ImageBi
+@@ -62,7 +62,7 @@ scoped_refptr<StaticBitmapImage> ImageBi
      return source;
    }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // TODO(b/330865436): On Linux, CanvasResourceProvider doesn't always check
+   // TODO(b/330865436): On Linux, CreateFromRaster() doesn't always check
    // for SCANOUT support correctly on X11 and it's never supported in
    // practice. Therefore, don't include it until this flow is reworked.

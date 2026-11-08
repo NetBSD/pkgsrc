@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.31 2026/10/23 15:05:23 kikadf Exp $
+$NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.32 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/test/chromedriver/chrome/chrome_finder.cc
 @@ -58,7 +58,7 @@ void GetApplicationDirs(std::vector<base
          installation_locations[i].Append(L"Chromium\\Application"));

@@ -1,12 +1,12 @@
-$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.32 2026/11/08 15:39:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ net/socket/udp_socket_posix.cc
-@@ -80,6 +80,14 @@
+@@ -77,6 +77,14 @@
  #include "base/mac/mac_util.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -21,7 +21,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  namespace net {
  
  namespace {
-@@ -87,11 +95,37 @@ namespace {
+@@ -84,11 +92,37 @@ namespace {
  constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
  constexpr int kPortEnd = 65535;
@@ -60,7 +60,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -145,7 +179,7 @@ uint32_t GetInterfaceForDestination(cons
+@@ -142,7 +176,7 @@ uint32_t GetInterfaceForDestination(cons
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -69,7 +69,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  // Helper for IPv4 SSM. Sets sin_len on macOS, no-op on Linux.
  group_source_req CreateIPv4SourceGroupRequest(const IPAddress& group_address,
                                                const IPAddress& source_address,
-@@ -277,7 +311,7 @@ int UDPSocketPosix::AdoptOpenedSocket(Ad
+@@ -274,7 +308,7 @@ int UDPSocketPosix::AdoptOpenedSocket(Ad
    return ConfigureOpenedSocket();
  }
  
@@ -78,7 +78,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  namespace {
  
  SetSocketOptionGroResult GetSetSocketOptionGroResult(int setsockopt_rv,
-@@ -285,8 +319,12 @@ SetSocketOptionGroResult GetSetSocketOpt
+@@ -282,8 +316,12 @@ SetSocketOptionGroResult GetSetSocketOpt
    if (setsockopt_rv == 0) {
      return SetSocketOptionGroResult::kSuccess;
    }
@@ -91,7 +91,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
      return SetSocketOptionGroResult::kUnsupportedKernel;
    }
    return SetSocketOptionGroResult::kOtherError;
-@@ -317,7 +355,7 @@ void RecordRecvMmsgPacketsRead(size_t pa
+@@ -314,7 +352,7 @@ void RecordRecvMmsgPacketsRead(size_t pa
  #endif
  
  void UDPSocketPosix::ConfigureGroSocketOption() {
@@ -100,7 +100,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    CHECK_NE(socket_, kInvalidSocket);
    CHECK_EQ(gro_status_, GroStatus::kUnconfigured);
-@@ -530,7 +568,7 @@ base::expected<DatagramsMetadata, Error>
+@@ -499,7 +537,7 @@ base::expected<DatagramsMetadata, Error>
    // when reading coalesced superpackets (e.g. UDP GRO).
    CHECK_GE(buf_len, kMinimumReadMultipleBufferSize);
  
@@ -109,7 +109,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    if (gro_status_ == GroStatus::kUnconfigured) {
      if (base::FeatureList::IsEnabled(features::kEnableUdpGro)) {
        ConfigureGroSocketOption();
-@@ -829,12 +867,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -798,12 +836,17 @@ int UDPSocketPosix::SetRecvTos() {
  #endif  // BUILDFLAG(IS_APPLE)
    }
  
@@ -128,7 +128,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -855,7 +898,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -824,7 +867,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;
@@ -137,7 +137,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -1138,7 +1181,7 @@ void UDPSocketPosix::FillResultFromMessa
+@@ -1107,7 +1150,7 @@ void UDPSocketPosix::FillResultFromMessa
        base::byte_span_from_ref(tclass_val).copy_from(cmsg_data_as_span);
        result->tos = static_cast<uint8_t>(tclass_val);
      }
@@ -146,7 +146,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
      else if (gro_status_ == GroStatus::kEnabled &&
               cmsg->cmsg_level == SOL_UDP && cmsg->cmsg_type == UDP_GRO &&
               cmsg->cmsg_len >= CMSG_LEN(sizeof(int)) &&
-@@ -1171,7 +1214,7 @@ base::expected<DatagramsMetadata, Error>
+@@ -1140,7 +1183,7 @@ base::expected<DatagramsMetadata, Error>
    if (socket_ == kInvalidSocket) {
      return base::unexpected(ERR_SOCKET_NOT_CONNECTED);
    }
@@ -155,7 +155,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    if (gro_status_ == GroStatus::kEnabled) {
      return InternalReadMultipleWithGro(buffer, buf_len, maximum_packet_size);
    }
-@@ -1182,7 +1225,7 @@ base::expected<DatagramsMetadata, Error>
+@@ -1151,7 +1194,7 @@ base::expected<DatagramsMetadata, Error>
  #endif
  }
  
@@ -164,7 +164,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  base::expected<DatagramsMetadata, Error> UDPSocketPosix::InternalRecvMmsg(
      IOBuffer* buffer,
      size_t num_messages,
-@@ -1517,9 +1560,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -1486,9 +1529,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -182,7 +182,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -1554,7 +1605,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+@@ -1523,7 +1574,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
  #if BUILDFLAG(IS_CHROMEOS)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
@@ -191,7 +191,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -1583,9 +1634,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -1552,9 +1603,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -209,7 +209,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
                            &mreq, sizeof(mreq));
-@@ -1620,9 +1679,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1589,9 +1648,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -227,7 +227,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
        mreq.imr_multiaddr = ToInAddr(group_address);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_DROP_MEMBERSHIP,
                            &mreq, sizeof(mreq));
-@@ -1654,7 +1721,7 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1623,7 +1690,7 @@ int UDPSocketPosix::LeaveGroup(const IPA
  int UDPSocketPosix::SetSourceGroupMembership(const IPAddress& group_address,
                                               const IPAddress& source_address,
                                               int option) const {
@@ -236,7 +236,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
    return ERR_NOT_IMPLEMENTED;
  #else
    uint32_t interface_index = multicast_interface_;
-@@ -1680,6 +1747,10 @@ int UDPSocketPosix::SetSourceGroupMember
+@@ -1649,6 +1716,10 @@ int UDPSocketPosix::SetSourceGroupMember
  #endif
  }
  
@@ -247,7 +247,7 @@ $NetBSD: patch-net_socket_udp__socket__posix.cc,v 1.31 2026/10/23 15:05:30 kikad
  int UDPSocketPosix::JoinSourceGroup(const IPAddress& group_address,
                                      const IPAddress& source_address) const {
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
-@@ -1696,6 +1767,10 @@ int UDPSocketPosix::JoinSourceGroup(cons
+@@ -1665,6 +1736,10 @@ int UDPSocketPosix::JoinSourceGroup(cons
                                    MCAST_JOIN_SOURCE_GROUP);
  }
  

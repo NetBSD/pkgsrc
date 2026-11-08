@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_typescript_typescript.py,v 1.7 2026/10/23 15:05:36 kikadf Exp $
+$NetBSD: patch-third__party_typescript_typescript.py,v 1.8 2026/11/08 15:39:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/typescript/typescript.py.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/typescript/typescript.py.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/typescript/typescript.py
 @@ -19,6 +19,9 @@ def GetBinaryPath():
    return os_path.normpath(os_path.join(os_path.dirname(__file__), *{

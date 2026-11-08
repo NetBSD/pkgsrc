@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.31 2026/10/23 15:05:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.32 2026/11/08 15:39:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -318,7 +318,7 @@ const FontPlatformData* FontCache::Creat
    std::string name;

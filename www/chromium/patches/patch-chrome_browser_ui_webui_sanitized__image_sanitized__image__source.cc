@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_sanitized__image_sanitized__image__source.cc,v 1.13 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_sanitized__image_sanitized__image__source.cc,v 1.14 2026/11/08 15:38:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/sanitized_image/sanitized_image_source.cc
-@@ -350,7 +350,7 @@ void SanitizedImageSource::OnAnimationDe
+@@ -352,7 +352,7 @@ void SanitizedImageSource::OnAnimationDe
    }
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \

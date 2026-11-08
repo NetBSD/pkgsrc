@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.16 2026/10/23 15:05:38 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.17 2026/11/08 15:39:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_clipboard.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_clipboard.cc
-@@ -34,7 +34,7 @@
+@@ -35,7 +35,7 @@
  #include "ui/ozone/platform/wayland/host/zwp_primary_selection_device_manager.h"
  #include "ui/ozone/public/platform_clipboard.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.16 2026/
  #include "base/strings/string_util.h"
  #include "ui/base/clipboard/clipboard_util_linux.h"
  #include "ui/ozone/platform/wayland/host/wayland_exchange_data_provider.h"
-@@ -106,7 +106,7 @@ class ClipboardImpl final : public Clipb
+@@ -107,7 +107,7 @@ class ClipboardImpl final : public Clipb
  
    void ReadFileTransfer(
        ui::PlatformClipboard::RequestDataClosure callback) final {
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.16 2026/
      // Prefer portal types
      std::string mime_type;
      auto available_types = GetDevice()->GetAvailableMimeTypes();
-@@ -185,7 +185,7 @@ class ClipboardImpl final : public Clipb
+@@ -186,7 +186,7 @@ class ClipboardImpl final : public Clipb
        }
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.16 2026/
      if (offered_data_.contains(ui::kMimeTypeUriList)) {
        if (!offered_data_.contains(ui::kMimeTypePortalFileTransfer)) {
          mime_types.push_back(ui::kMimeTypePortalFileTransfer);
-@@ -220,7 +220,7 @@ class ClipboardImpl final : public Clipb
+@@ -221,7 +221,7 @@ class ClipboardImpl final : public Clipb
      NotifyClipboardChanged();
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__clipboard.cc,v 1.16 2026/
    void OnPortalKeyRead(ui::PlatformClipboard::RequestDataClosure callback,
                         const ui::PlatformClipboard::Data& data) {
      if (!data) {
-@@ -282,7 +282,7 @@ class ClipboardImpl final : public Clipb
+@@ -283,7 +283,7 @@ class ClipboardImpl final : public Clipb
        DataSource* source,
        const std::string& mime_type,
        typename DataSource::Delegate::ContentCallback callback) override {

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.32 2026/11/08 15:38:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_configs.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_configs.cc
-@@ -176,7 +176,7 @@
+@@ -182,7 +182,7 @@
  #include "chrome/browser/ui/webui/default_browser/visual_guided_setter_ui.h"
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
  #include "chrome/browser/ui/webui/browser_switch/browser_switch_ui.h"
  #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin_ui.h"
-@@ -185,13 +185,13 @@
+@@ -191,13 +191,13 @@
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -31,7 +31,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
  #include "chrome/browser/ui/webui/discards/discards_ui.h"
  #endif
  
-@@ -223,7 +223,7 @@
+@@ -229,7 +229,7 @@
  #include "chrome/browser/ui/webui/signin/signin_error_ui.h"
  #endif  //  !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_ANDROID)
  
@@ -40,7 +40,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -240,7 +240,7 @@
+@@ -246,7 +246,7 @@
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -49,9 +49,9 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
  #include "chrome/browser/ui/webui/skills/skills_ui.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
          // BUILDFLAG(IS_CHROMEOS)
-@@ -416,10 +416,10 @@ void RegisterChromeWebUIConfigs() {
-   map.AddWebUIConfig(std::make_unique<WebUIToolbarConfig>());
- #endif  // BUILDFLAG(IS_ANDROID)
+@@ -428,10 +428,10 @@ void RegisterChromeWebUIConfigs() {
+   map.AddWebUIConfig(std::make_unique<tabstrip_ntb::TabStripNtbUIConfig>());
+ #endif  // BUILDFLAG(ENABLE_WEBUI_TABSTRIP_NTB)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -62,7 +62,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
    map.AddWebUIConfig(std::make_unique<extensions::ExtensionsUIConfig>());
-@@ -447,7 +447,7 @@ void RegisterChromeWebUIConfigs() {
+@@ -459,7 +459,7 @@ void RegisterChromeWebUIConfigs() {
    map.AddWebUIConfig(std::make_unique<VisualGuidedSetterUIConfig>());
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -71,7 +71,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
    map.AddWebUIConfig(std::make_unique<BrowserSwitchUIConfig>());
    map.AddWebUIConfig(std::make_unique<HistorySyncOptinUIConfig>());
    map.AddWebUIConfig(std::make_unique<OnDeviceTranslationInternalsUIConfig>());
-@@ -456,17 +456,17 @@ void RegisterChromeWebUIConfigs() {
+@@ -468,17 +468,17 @@ void RegisterChromeWebUIConfigs() {
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -92,7 +92,7 @@ $NetBSD: patch-chrome_browser_ui_webui_chrome__web__ui__configs.cc,v 1.31 2026/1
    map.AddWebUIConfig(std::make_unique<UpdaterUIConfig>());
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
-@@ -513,7 +513,7 @@ void RegisterChromeWebUIConfigs() {
+@@ -525,7 +525,7 @@ void RegisterChromeWebUIConfigs() {
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

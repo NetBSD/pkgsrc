@@ -1,10 +1,10 @@
-$NetBSD: patch-device_vr_openxr_openxr__swapchain__info.h,v 1.5 2026/10/23 15:05:28 kikadf Exp $
+$NetBSD: patch-device_vr_openxr_openxr__swapchain__info.h,v 1.6 2026/11/08 15:39:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/vr/openxr/openxr_swapchain_info.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- device/vr/openxr/openxr_swapchain_info.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ device/vr/openxr/openxr_swapchain_info.h
 @@ -19,7 +19,7 @@
  #include "ui/gl/scoped_egl_image.h"

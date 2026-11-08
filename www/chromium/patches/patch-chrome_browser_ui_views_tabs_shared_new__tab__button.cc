@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_tabs_shared_new__tab__button.cc,v 1.5 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_tabs_shared_new__tab__button.cc,v 1.6 2026/11/08 15:38:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/shared/new_tab_button.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/tabs/shared/new_tab_button.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/tabs/shared/new_tab_button.cc
 @@ -45,7 +45,7 @@ NewTabButton::NewTabButton(BrowserWindow
  

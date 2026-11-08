@@ -1,12 +1,12 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.31 2026/10/23 15:05:24 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.32 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/embedder_support/user_agent_utils.cc
-@@ -283,7 +283,7 @@ std::string GetUserAgentPlatform() {
+@@ -260,7 +260,7 @@ std::string GetUserAgentPlatform() {
    return "";
  #elif BUILDFLAG(IS_MAC)
    return "Macintosh; ";
@@ -15,7 +15,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.31 2026/10
    return "X11; ";  // strange, but that's what Firefox uses
  #elif BUILDFLAG(IS_ANDROID)
    return "Linux; ";
-@@ -323,7 +323,7 @@ std::string GetUnifiedPlatform() {
+@@ -300,7 +300,7 @@ std::string GetUnifiedPlatform() {
    return "Windows NT 10.0; Win64; x64";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "Fuchsia";
@@ -24,7 +24,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.31 2026/10
    return "X11; Linux x86_64";
  #elif BUILDFLAG(IS_IOS)
    if (ui::GetDeviceFormFactor() == ui::DEVICE_FORM_FACTOR_TABLET) {
-@@ -618,7 +618,7 @@ std::string GetPlatformVersion() {
+@@ -590,7 +590,7 @@ std::string GetPlatformVersion() {
  
  #if BUILDFLAG(IS_WIN)
    return GetWindowsPlatformVersion();
@@ -33,7 +33,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.31 2026/10
    return std::string();
  #else
  
-@@ -655,6 +655,9 @@ std::string GetPlatformForUAMetadata() {
+@@ -627,6 +627,9 @@ std::string GetPlatformForUAMetadata() {
  #else
    return "Chromium OS";
  #endif
@@ -43,7 +43,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils.cc,v 1.31 2026/10
  #else
    return std::string(version_info::GetOSType());
  #endif
-@@ -826,6 +829,16 @@ std::string BuildOSCpuInfoFromOSVersionA
+@@ -798,6 +801,16 @@ std::string BuildOSCpuInfoFromOSVersionA
                        "Android %s", os_version.c_str()
  #elif BUILDFLAG(IS_FUCHSIA)
                        "Fuchsia"

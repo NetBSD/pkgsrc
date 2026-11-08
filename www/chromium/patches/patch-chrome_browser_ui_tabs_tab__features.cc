@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.30 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/tab_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/tabs/tab_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/tabs/tab_features.cc
-@@ -150,12 +150,12 @@
- #include "components/payments/core/features.h"
+@@ -209,12 +209,12 @@
+ #include "components/site_engagement/content/site_engagement_service.h"
  #include "components/skills/features.h"
  #include "content/public/browser/navigation_controller.h"
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -18,10 +18,10 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:2
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/contextual_tasks/contextual_tasks_tab_navigation_observer.h"
  #include "chrome/browser/contextual_tasks/contextual_tasks_tab_visit_tracker.h"
- #include "chrome/browser/record_replay/chrome_record_replay_client.h"
- #include "chrome/browser/ui/views/location_bar/record_replay_page_action_controller.h"
-@@ -215,7 +215,7 @@
+ #include "chrome/browser/contextual_tasks/search_journey_tab_feature.h"
+@@ -304,7 +304,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:2
  #include "chrome/browser/ui/hats/hats_helper.h"
  #include "chrome/browser/ui/performance_controls/performance_controls_hats_service_factory.h"
  #include "chrome/browser/ui/shared_highlighting/shared_highlighting_promo.h"
-@@ -667,13 +667,13 @@ void TabFeatures::Init(TabInterface& tab
+@@ -883,13 +883,13 @@ void TabFeatures::Init(TabInterface& tab
  
    task_manager::WebContentsTags::CreateForTabContents(tab.GetContents());
  
@@ -46,7 +46,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:2
    inactive_window_mouse_event_controller_ =
        std::make_unique<InactiveWindowMouseEventController>();
  
-@@ -784,7 +784,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -1026,7 +1026,7 @@ void TabFeatures::Init(TabInterface& tab
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -55,7 +55,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:2
    if (base::FeatureList::IsEnabled(enterprise_reporting::kSaasUsageReporting)) {
      saas_usage_navigation_observer_ =
          std::make_unique<enterprise_reporting::SaasUsageNavigationObserver>(
-@@ -802,7 +802,7 @@ void TabFeatures::Init(TabInterface& tab
+@@ -1044,7 +1044,7 @@ void TabFeatures::Init(TabInterface& tab
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -64,16 +64,16 @@ $NetBSD: patch-chrome_browser_ui_tabs_tab__features.cc,v 1.29 2026/10/23 15:05:2
    if (base::FeatureList::IsEnabled(multistep_filter::kMultistepFilter)) {
      filter_ui_controller_ =
          GetUserDataFactory()
-@@ -1157,7 +1157,7 @@ void TabFeatures::WillDiscardContents(ta
+@@ -1720,7 +1720,7 @@ void TabFeatures::WillDiscardContents(ta
            new_contents);
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   if (hats_helper_) {
-     hats_helper_ = std::make_unique<HatsHelper>(new_contents);
-   }
-@@ -1170,7 +1170,7 @@ void TabFeatures::WillDiscardContents(ta
+   if (saas_usage_navigation_observer_) {
+     saas_usage_navigation_observer_ =
+         std::make_unique<enterprise_reporting::SaasUsageNavigationObserver>(
+@@ -1738,7 +1738,7 @@ void TabFeatures::WillDiscardContents(ta
        std::make_unique<FontPrewarmerTabHelper>(new_contents);
  #endif
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.8 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.9 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/toolbar/app_menu_model.cc
-@@ -1226,7 +1226,7 @@ std::u16string AppMenuModel::GetUpgradeD
+@@ -1217,7 +1217,7 @@ std::u16string AppMenuModel::GetUpgradeD
      return l10n_util::GetStringUTF16(IDS_UPGRADE_BUBBLE_MENU_ITEM);
    }
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.8 2026/10/23 15
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE_ALT);
  #else
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE);
-@@ -2420,7 +2420,7 @@ void AppMenuModel::Build() {
+@@ -2486,7 +2486,7 @@ void AppMenuModel::Build() {
  
      SetAccessibleNameAt(GetIndexOfCommandId(IDC_SHOW_MANAGEMENT_PAGE).value(),
                          GetManagedUiMenuItemTooltip(browser_->GetProfile()));

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.31 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -139,7 +139,7 @@ void SystemMenuModelBuilder::BuildSystem
    }
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1
    AddItemWithIconMaybe(model, IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU,
                         views::kChromeMinimizeIcon);
    AddItemWithIconMaybe(model, IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU,
-@@ -268,7 +268,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -263,7 +263,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddItemWithStringId(IDC_TASK_MANAGER_CONTEXT_MENU,
                                 task_manager_string_id);
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__builder.cc,v 1
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -361,7 +361,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -356,7 +356,7 @@ void SystemMenuModelBuilder::BuildSystem
  #endif
      model->AddItemWithStringId(IDC_TASK_MANAGER, task_manager_string_id);
    }

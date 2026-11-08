@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.31 2026/10/23 15:05:28 kikadf Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.32 2026/11/08 15:39:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/utility/utility_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/utility/utility_main.cc
 @@ -45,22 +45,31 @@
  #include "services/tracing/public/cpp/trace_startup.h"
@@ -86,9 +86,9 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.31 2026/10/23 15:05:28 kikad
  
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
-@@ -348,13 +360,13 @@ int UtilityMain(MainFunctionParams param
-       pre_sandbox_hook =
-           base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
+@@ -350,13 +362,13 @@ int UtilityMain(MainFunctionParams param
+                          parameters.command_line->GetSwitchValuePath(
+                              speech::GetSodaBinaryPathSwitch()));
        break;
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(ENABLE_VR)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(ENABLE_VR)
@@ -102,7 +102,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.31 2026/10/23 15:05:28 kikad
      case sandbox::mojom::Sandbox::kOnDeviceTranslation:
        pre_sandbox_hook = base::BindOnce(
            &on_device_translation::OnDeviceTranslationSandboxHook);
-@@ -371,7 +383,7 @@ int UtilityMain(MainFunctionParams param
+@@ -373,7 +385,7 @@ int UtilityMain(MainFunctionParams param
  #else
        NOTREACHED();
  #endif
@@ -111,7 +111,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.31 2026/10/23 15:05:28 kikad
      case sandbox::mojom::Sandbox::kShapeDetection:
        pre_sandbox_hook =
            base::BindOnce(&shape_detection::ShapeDetectionPreSandboxHook);
-@@ -400,6 +412,7 @@ int UtilityMain(MainFunctionParams param
+@@ -402,6 +414,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -119,7 +119,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.31 2026/10/23 15:05:28 kikad
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -407,6 +420,11 @@ int UtilityMain(MainFunctionParams param
+@@ -409,6 +422,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.27 2026/10/23 15:05:25 kikadf Exp $
+$NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.28 2026/11/08 15:39:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync/service/sync_prefs.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/sync/service/sync_prefs.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/sync/service/sync_prefs.cc
 @@ -192,7 +192,7 @@ void SyncPrefs::RegisterProfilePrefs(Pre
        prefs::internal::kMigrateExtensionsFromLocalToAccount, false);
@@ -15,7 +15,7 @@ $NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.27 2026/10/23 15:05:25
    registry->RegisterBooleanPref(
        prefs::internal::kReadingListPrefMigratedToAccount, false);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -869,7 +869,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
+@@ -873,7 +873,7 @@ bool SyncPrefs::MaybeMigratePrefsForSync
            update_selected_types_dict->EnsureDict(
                signin::GaiaIdHash::FromGaiaId(gaia_id).ToBase64());
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_sync_service_sync__prefs.cc,v 1.27 2026/10/23 15:05:25
        // Preserve the user's existing enabled state for Bookmarks, Reading List,
        // and Preferences. Otherwise, use the default value, which will be true
        // after `kReplaceSyncPromosWithSignInPromos`.
-@@ -1062,7 +1062,7 @@ void SyncPrefs::MigrateGlobalDataTypePre
+@@ -1066,7 +1066,7 @@ void SyncPrefs::MigrateGlobalDataTypePre
                          saved_tab_groups_enabled);
    account_settings->Set(GetPrefNameForType(UserSelectableType::kExtensions),
                          extensions_enabled);

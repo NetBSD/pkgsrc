@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.23 2026/10/23 15:05:23 kikadf Exp $
+$NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.24 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/renderer/chrome_content_renderer_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/renderer/chrome_content_renderer_client.cc
 @@ -192,7 +192,7 @@
  #include "v8/include/v8-isolate.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_renderer_chrome__content__renderer__client.cc,v 1.23 2026/
  #include "components/webapps/isolated_web_apps/scheme.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -469,7 +469,7 @@ void ChromeContentRendererClient::Render
+@@ -471,7 +471,7 @@ void ChromeContentRendererClient::Render
    WebSecurityPolicy::RegisterURLSchemeAsExtension(
        WebString::FromAscii(extensions::kExtensionScheme));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

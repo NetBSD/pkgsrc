@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.6 2026/10/23 15:05:35 kikadf Exp $
+$NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v 1.7 2026/11/08 15:39:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/openscreen/src/platform/impl/udp_socket_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/openscreen/src/platform/impl/udp_socket_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/openscreen/src/platform/impl/udp_socket_posix.cc
-@@ -398,7 +398,7 @@ ErrorOr<UdpPacket> ReceiveMessageInterna
+@@ -402,7 +402,7 @@ ErrorOr<UdpPacket> ReceiveMessageInterna
    // it's not a fatal error, we will just allocate kMaxUdpBufferSize
    // and shrink-to-fit below.
    int upper_bound_bytes = -1;
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_openscreen_src_platform_impl_udp__socket__posix.cc,v
    // Returns the exact size of the datagram, or -1 on error.
    upper_bound_bytes = recv(fd, nullptr, 0, MSG_PEEK | MSG_TRUNC);
  #elif BUILDFLAG(IS_APPLE)
-@@ -428,7 +428,7 @@ ErrorOr<UdpPacket> ReceiveMessageInterna
+@@ -432,7 +432,7 @@ ErrorOr<UdpPacket> ReceiveMessageInterna
  
    // Although we don't do anything with the control buffer, on Linux
    // it is required for the message to be properly read.

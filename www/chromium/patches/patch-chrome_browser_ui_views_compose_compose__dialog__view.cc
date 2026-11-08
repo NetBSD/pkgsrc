@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_compose_compose__dialog__view.cc,v 1.31 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_compose_compose__dialog__view.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/compose/compose_dialog_view.cc
 @@ -160,7 +160,7 @@ void ComposeDialogView::OnBeforeBubbleWi
      views::Widget::InitParams* params,

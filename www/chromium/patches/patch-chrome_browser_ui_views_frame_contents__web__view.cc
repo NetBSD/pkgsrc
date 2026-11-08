@@ -1,12 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_contents__web__view.cc,v 1.10 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_contents__web__view.cc,v 1.11 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/contents_web_view.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/frame/contents_web_view.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/frame/contents_web_view.cc
-@@ -170,7 +170,7 @@ void ContentsWebView::SetWebContents(con
+@@ -28,7 +28,7 @@
+ #include "ui/wm/core/window_util.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/actor/actor_util.h"  // nogncheck
+ #endif
+ 
+@@ -174,7 +174,7 @@ void ContentsWebView::SetWebContents(con
        .Then(&web_modal::WebContentsModalDialogManager::UpdateDialogHost);
  }
  

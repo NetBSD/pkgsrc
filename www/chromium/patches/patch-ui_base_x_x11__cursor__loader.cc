@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.31 2026/10/23 15:05:37 kikadf Exp $
+$NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.32 2026/11/08 15:39:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_loader.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -39,7 +39,7 @@
  #include "ui/gfx/x/connection.h"
@@ -27,7 +27,7 @@ $NetBSD: patch-ui_base_x_x11__cursor__loader.cc,v 1.31 2026/10/23 15:05:37 kikad
    if (!lib)
      return "";
  
-@@ -234,7 +238,7 @@ scoped_refptr<base::RefCountedMemory> Re
+@@ -236,7 +240,7 @@ scoped_refptr<base::RefCountedMemory> Re
      const std::string& rm_xcursor_theme) {
    constexpr const char kDefaultTheme[] = "default";
    std::string themes[] = {

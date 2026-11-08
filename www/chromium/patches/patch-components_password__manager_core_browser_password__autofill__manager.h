@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.h,v 1.27 2026/10/23 15:05:24 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.h,v 1.28 2026/11/08 15:39:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.h
 @@ -323,7 +323,7 @@ class PasswordAutofillManager : public a
  

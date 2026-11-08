@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__store_login__database__async__helper.cc,v 1.31 2026/10/23 15:05:24 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__store_login__database__async__helper.cc,v 1.32 2026/11/08 15:39:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/password_manager/core/browser/password_store/login_database_async_helper.cc
 @@ -143,7 +143,7 @@ LoginDatabaseAsyncHelper::FillMatchingLo
      std::vector<StoredCredential> matched_credentials;

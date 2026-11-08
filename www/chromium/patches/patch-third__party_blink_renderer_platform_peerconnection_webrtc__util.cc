@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_peerconnection_webrtc__util.cc,v 1.21 2026/10/23 15:05:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_peerconnection_webrtc__util.cc,v 1.22 2026/11/08 15:39:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/peerconnection/webrtc_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/platform/peerconnection/webrtc_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/platform/peerconnection/webrtc_util.cc
 @@ -27,7 +27,7 @@
  namespace blink {

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_user__education_views_help__bubble__views.cc,v 1.8 2026/10/23 15:05:26 kikadf Exp $
+$NetBSD: patch-components_user__education_views_help__bubble__views.cc,v 1.9 2026/11/08 15:39:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_views.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/user_education/views/help_bubble_views.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/user_education/views/help_bubble_views.cc
 @@ -127,7 +127,7 @@ bool HelpBubbleViews::ToggleFocusForAcce
  

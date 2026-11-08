@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.31 2026/10/23 15:05:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.32 2026/11/08 15:39:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -22,6 +22,15 @@ extern "C" void* __libc_stack_end;  // N
  #include <sanitizer/asan_interface.h>
@@ -69,8 +69,8 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.31 20
  #endif
  #if defined(__GLIBC__)
 @@ -157,6 +169,13 @@ void* GetStackStartImpl() {
-   ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
-   return reinterpret_cast<void*>(highLimit);
+   ::GetCurrentThreadStackLimits(&low_limit, &high_limit);
+   return reinterpret_cast<void*>(high_limit);
  #endif
 +#elif BUILDFLAG(IS_OPENBSD)
 +  stack_t ss;

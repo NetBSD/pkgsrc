@@ -1,10 +1,10 @@
-$NetBSD: patch-services_audio_audio__sandbox__hook__linux.h,v 1.31 2026/10/23 15:05:32 kikadf Exp $
+$NetBSD: patch-services_audio_audio__sandbox__hook__linux.h,v 1.32 2026/11/08 15:39:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/audio/audio_sandbox_hook_linux.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- services/audio/audio_sandbox_hook_linux.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ services/audio/audio_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_AUDIO_AUDIO_SANDBOX_HOOK_LINUX_H_

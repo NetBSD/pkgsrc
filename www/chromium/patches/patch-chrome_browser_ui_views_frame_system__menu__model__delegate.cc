@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__delegate.cc,v 1.31 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__delegate.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_delegate.cc
-@@ -33,7 +33,7 @@
+@@ -32,7 +32,7 @@
  #include "chromeos/ui/frame/desks/move_to_desks_menu_model.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__delegate.cc,v 
  #include "chrome/common/pref_names.h"
  #endif
  
-@@ -52,7 +52,7 @@ SystemMenuModelDelegate::SystemMenuModel
+@@ -51,7 +51,7 @@ SystemMenuModelDelegate::SystemMenuModel
  SystemMenuModelDelegate::~SystemMenuModelDelegate() = default;
  
  bool SystemMenuModelDelegate::IsCommandIdChecked(int command_id) const {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_system__menu__model__delegate.cc,v 
    if (command_id == IDC_USE_SYSTEM_TITLE_BAR) {
      PrefService* prefs = browser_->GetProfile()->GetPrefs();
      return !prefs->GetBoolean(prefs::kUseCustomChromeFrame);
-@@ -96,7 +96,7 @@ bool SystemMenuModelDelegate::IsCommandI
+@@ -95,7 +95,7 @@ bool SystemMenuModelDelegate::IsCommandI
  }
  
  bool SystemMenuModelDelegate::IsCommandIdVisible(int command_id) const {

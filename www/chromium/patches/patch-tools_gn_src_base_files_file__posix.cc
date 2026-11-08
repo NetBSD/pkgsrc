@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_src_base_files_file__posix.cc,v 1.31 2026/10/23 15:05:36 kikadf Exp $
+$NetBSD: patch-tools_gn_src_base_files_file__posix.cc,v 1.32 2026/11/08 15:39:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/base/files/file_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- tools/gn/src/base/files/file_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ tools/gn/src/base/files/file_posix.cc
 @@ -359,7 +359,7 @@ void File::DoInitialize(const FilePath& 
  bool File::Flush() {

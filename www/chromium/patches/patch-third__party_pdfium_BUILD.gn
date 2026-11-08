@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_pdfium_BUILD.gn,v 1.4 2026/11/08 15:39:11 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/pdfium/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
++++ third_party/pdfium/BUILD.gn
+@@ -168,7 +168,7 @@ config("pdfium_core_config") {
+     "//build/config/compiler:noshadowing",
+   ]
+   defines = []
+-  if (is_clang) {
++  if (is_clang && !is_bsd) {
+     cflags += [
+       "-Wcovered-switch-default",
+       "-Wlifetime-safety-permissive",

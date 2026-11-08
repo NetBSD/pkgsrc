@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_settings_appearance__handler.cc,v 1.31 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_settings_appearance__handler.cc,v 1.32 2026/11/08 15:38:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/settings/appearance_handler.cc
-@@ -37,7 +37,7 @@ void AppearanceHandler::RegisterMessages
+@@ -39,7 +39,7 @@ void AppearanceHandler::RegisterMessages
        "useDefaultTheme",
        base::BindRepeating(&AppearanceHandler::HandleUseTheme,
                            base::Unretained(this), ui::SystemTheme::kDefault));

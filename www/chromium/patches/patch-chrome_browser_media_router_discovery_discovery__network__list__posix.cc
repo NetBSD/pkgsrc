@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__posix.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__posix.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_posix.cc
 @@ -5,11 +5,12 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list.h"

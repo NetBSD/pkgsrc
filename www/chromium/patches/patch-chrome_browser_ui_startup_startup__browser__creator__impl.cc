@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.31 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -73,7 +73,7 @@
  #include "ui/base/window_open_disposition.h"
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
    std::string startup_id =
        command_line_->GetSwitchValueASCII(base::nix::kXdgActivationTokenSwitch);
    if (startup_id.empty()) {
-@@ -342,7 +342,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -349,7 +349,7 @@ BrowserWindowInterface* StartupBrowserCr
      BrowserWindowCreateParams params(profile_, false);
      params.creation_source =
          BrowserWindowCreateParams::CreationSource::kStartupCreator;
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
      params.startup_id = startup_id;
  #endif
      if (command_line_->HasSwitch(switches::kWindowName)) {
-@@ -379,7 +379,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -386,7 +386,7 @@ BrowserWindowInterface* StartupBrowserCr
        continue;
      }
  
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
      // Start the What's New fetch but don't add the tab at this point. The tab
      // will open as the foreground tab only if the remote content can be
      // retrieved successfully. This prevents needing to automatically close the
-@@ -467,7 +467,7 @@ BrowserWindowInterface* StartupBrowserCr
+@@ -478,7 +478,7 @@ BrowserWindowInterface* StartupBrowserCr
      }
    }
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl__receiver__bindings.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl_receiver_bindings.cc
-@@ -57,7 +57,7 @@
+@@ -59,7 +59,7 @@
  #include "content/browser/renderer_host/p2p/socket_dispatcher_host.h"
  #endif  // BUILDFLAG(IS_P2P_ENABLED)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
  #include "components/services/font/public/mojom/font_service.mojom.h"  // nogncheck
  #include "content/browser/font_service.h"  // nogncheck
  #endif
-@@ -79,7 +79,7 @@
+@@ -81,7 +81,7 @@
  #include "content/public/common/font_cache_win.mojom.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
  #include "components/services/font_data/font_data_service_impl.h"
  #endif
  
-@@ -351,7 +351,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -356,7 +356,7 @@ void RenderProcessHostImpl::IOThreadHost
      }
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
    if (features::IsFontDataServiceEnabled()) {
      if (auto font_data_receiver =
              receiver.As<font_data_service::mojom::FontDataService>()) {
-@@ -362,7 +362,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -367,7 +367,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl__recei
    if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
      ConnectToFontService(std::move(font_receiver));
      return;
-@@ -390,7 +390,7 @@ void RenderProcessHostImpl::IOThreadHost
+@@ -395,7 +395,7 @@ void RenderProcessHostImpl::IOThreadHost
    }
  #endif
  

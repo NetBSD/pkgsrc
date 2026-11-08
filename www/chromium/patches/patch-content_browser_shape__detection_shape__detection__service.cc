@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_shape__detection_shape__detection__service.cc,v 1.21 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_browser_shape__detection_shape__detection__service.cc,v 1.22 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/shape_detection/shape_detection_service.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/shape_detection/shape_detection_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/shape_detection/shape_detection_service.cc
 @@ -15,7 +15,7 @@
  #endif

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_base_config.h,v 1.31 2026/10/23 15:05:33 kikadf Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_base_config.h,v 1.32 2026/11/08 15:39:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/base/config.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/abseil-cpp/absl/base/config.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -376,7 +376,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
  #ifdef ABSL_HAVE_SCHED_YIELD

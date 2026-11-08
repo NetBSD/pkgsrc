@@ -1,14 +1,14 @@
-$NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.cc,v 1.31 2026/10/23 15:05:31 kikadf Exp $
+$NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
-@@ -13,11 +13,11 @@
- #include "base/process/process_handle.h"
+@@ -17,11 +17,11 @@
  #include "build/build_config.h"
+ #include "remoting/host/webauthn/remote_webauthn_constants.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
@@ -17,10 +17,10 @@ $NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #include "base/files/file_path.h"
  #include "remoting/host/base/process_util.h"
  #endif
-@@ -46,7 +46,7 @@ namespace {
+ 
+@@ -49,7 +49,7 @@ namespace {
  
  // No static variables needed for debug builds.
  
@@ -29,7 +29,7 @@ $NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.
  
  constexpr auto kAllowedCallerPrograms =
      base::MakeFixedFlatSet<base::FilePath::StringViewType>({
-@@ -72,7 +72,7 @@ bool IsLaunchedByTrustedProcess() {
+@@ -75,7 +75,7 @@ bool IsLaunchedByTrustedProcess() {
  #if !defined(NDEBUG)
    // Just return true on debug builds for the convenience of development.
    return true;

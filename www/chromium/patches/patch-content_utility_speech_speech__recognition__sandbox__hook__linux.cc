@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_speech_speech__recognition__sandbox__hook__linux.cc,v 1.31 2026/10/23 15:05:28 kikadf Exp $
+$NetBSD: patch-content_utility_speech_speech__recognition__sandbox__hook__linux.cc,v 1.32 2026/11/08 15:39:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.cc
 @@ -12,11 +12,14 @@
  #include "sandbox/linux/syscall_broker/broker_command.h"
@@ -21,19 +21,23 @@ $NetBSD: patch-content_utility_speech_speech__recognition__sandbox__hook__linux.
  namespace {
  
  // Gets the file permissions required by the Speech On-Device API (SODA).
-@@ -50,9 +53,11 @@ std::vector<BrokerFilePermission> GetSod
+@@ -53,6 +56,7 @@ std::vector<BrokerFilePermission> GetSod
  }
  
  }  // namespace
 +#endif
  
+ const char* GetSodaBinaryPathSwitch() {
+   return kSodaBinaryPathSwitch;
+@@ -61,6 +65,7 @@ const char* GetSodaBinaryPathSwitch() {
  bool SpeechRecognitionPreSandboxHook(
+     base::FilePath binary_path,
      sandbox::policy::SandboxLinux::Options options) {
 +#if !BUILDFLAG(IS_BSD)
  #if BUILDFLAG(ENABLE_SODA_INTEGRATION_TESTS)
    base::FilePath test_binary_path = GetSodaTestBinaryPath();
    DCHECK(base::PathExists(test_binary_path));
-@@ -74,6 +79,7 @@ bool SpeechRecognitionPreSandboxHook(
+@@ -88,6 +93,7 @@ bool SpeechRecognitionPreSandboxHook(
                                 }),
                                 GetSodaFilePermissions(), options);
    instance->EngageNamespaceSandboxIfPossible();

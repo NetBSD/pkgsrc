@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_metrics_power_process__monitor.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_power_process__monitor.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/metrics/power/process_monitor.cc
 @@ -69,7 +69,7 @@ class ProcessMetricsDelegateImpl : publi
    }

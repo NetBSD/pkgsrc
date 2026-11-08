@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.31 2026/10/23 15:05:28 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.32 2026/11/08 15:39:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -58,7 +58,7 @@
  #include "gpu/command_buffer/service/vulkan_context_provider.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    if (gr_context_type_ == GrContextType::kVulkan
  #if BUILDFLAG(USE_WEBGPU_ON_VULKAN_VIA_GL_INTEROP)
        /* We support GL context for WebGPU gl-vulkan interop (on linux).*/
-@@ -1131,7 +1131,7 @@ void SharedImageFactory::LogGetFactoryFa
+@@ -1120,7 +1120,7 @@ void SharedImageFactory::LogGetFactoryFa
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  

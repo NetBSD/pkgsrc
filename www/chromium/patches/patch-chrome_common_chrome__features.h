@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.h,v 1.31 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.h,v 1.32 2026/11/08 15:38:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -57,7 +57,7 @@ BASE_DECLARE_FEATURE(kUseKeychainKeyProv
  #endif  // BUILDFLAG(IS_MAC)
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.31 2026/10/23 15:05:22 kikad
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  #endif
  
-@@ -978,7 +978,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -954,7 +954,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kIsolatedWebAppBundleCache);
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.31 2026/10/23 15:05:22 kikad
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kLinuxLogindShutdownInhibitor);
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
-@@ -988,7 +988,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -964,7 +964,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

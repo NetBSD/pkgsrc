@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -46,7 +46,7 @@
  #include "chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_session_desktop_injector.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
  #include "chrome/browser/lifetime/scheduled_restart_manager.h"
  #include "chrome/browser/ui/views/scheduled_restart/scheduled_restart_bubble_controller.h"
  #endif
-@@ -193,7 +193,7 @@ void GlobalFeatures::PostBrowserProcessI
+@@ -196,7 +196,7 @@ void GlobalFeatures::PostBrowserProcessI
    }
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
    if (base::FeatureList::IsEnabled(features::kScheduledRestart)) {
      scheduled_restart_manager_ = CreateScheduledRestartManager();
      scheduled_restart_bubble_controller_ =
-@@ -219,7 +219,7 @@ void GlobalFeatures::PostBrowserProcessI
+@@ -222,7 +222,7 @@ void GlobalFeatures::PostBrowserProcessI
    }
  #endif
    system_permissions_platform_handle_ = CreateSystemPermissionsPlatformHandle();
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
    // TODO(crbug.com/463742800): Migrate WhatsNewRegistry (and other non-core
    // features) to Init().
    whats_new_registry_ = CreateWhatsNewRegistry();
-@@ -297,7 +297,7 @@ void GlobalFeatures::PostMainMessageLoop
+@@ -303,7 +303,7 @@ void GlobalFeatures::PostMainMessageLoop
    profile_launch_observer_.reset();
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -60,8 +60,8 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
    scheduled_restart_bubble_controller_.reset();
    scheduled_restart_manager_.reset();
  #endif
-@@ -326,7 +326,7 @@ void GlobalFeatures::PostMainMessageLoop
-   chrome_companero_host_.reset();
+@@ -335,7 +335,7 @@ void GlobalFeatures::PostMainMessageLoop
+ #endif
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
    DefaultBrowserPromptManager::GetInstance()->CloseAllPrompts(
        DefaultBrowserPromptManager::CloseReason::kDismiss);
  #endif
-@@ -345,7 +345,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -354,7 +354,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.31 2026/10/23 15:05:18 kik
  std::unique_ptr<whats_new::WhatsNewRegistry>
  GlobalFeatures::CreateWhatsNewRegistry() {
    return whats_new::CreateWhatsNewRegistry();
-@@ -357,7 +357,7 @@ GlobalFeatures::CreateGlobalBrowserColle
+@@ -366,7 +366,7 @@ GlobalFeatures::CreateGlobalBrowserColle
    return std::make_unique<GlobalBrowserCollection>();
  }
  

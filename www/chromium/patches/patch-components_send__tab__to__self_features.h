@@ -1,12 +1,12 @@
-$NetBSD: patch-components_send__tab__to__self_features.h,v 1.1 2026/10/23 15:05:25 kikadf Exp $
+$NetBSD: patch-components_send__tab__to__self_features.h,v 1.2 2026/11/08 15:39:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/send_tab_to_self/features.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/send_tab_to_self/features.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/send_tab_to_self/features.h
-@@ -59,7 +59,7 @@ BASE_DECLARE_FEATURE(kSendTabToSelfPostS
+@@ -55,7 +55,7 @@ BASE_DECLARE_FEATURE(kSendTabToSelfPostS
  // to the Omnibox context menu.
  BASE_DECLARE_FEATURE(kSendTabToSelfExtraEntryPoints);
  

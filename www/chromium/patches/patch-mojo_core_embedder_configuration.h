@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_embedder_configuration.h,v 1.3 2026/10/23 15:05:30 kikadf Exp $
+$NetBSD: patch-mojo_core_embedder_configuration.h,v 1.4 2026/11/08 15:39:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/embedder/configuration.h.orig	2026-10-19 20:07:21.000000000 +0000
+--- mojo/core/embedder/configuration.h.orig	2026-11-02 23:22:33.000000000 +0000
 +++ mojo/core/embedder/configuration.h
 @@ -33,7 +33,7 @@ struct Configuration {
    // objects.

@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings.cc,v 1.31 2026/10/23 15:05:30 kikadf Exp $
+$NetBSD: patch-printing_print__settings.cc,v 1.32 2026/11/08 15:39:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- printing/print_settings.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ printing/print_settings.cc
 @@ -319,7 +319,7 @@ PrintSettings& PrintSettings::operator=(
  #endif

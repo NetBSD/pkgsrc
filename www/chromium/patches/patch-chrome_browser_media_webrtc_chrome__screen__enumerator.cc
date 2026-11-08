@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.cc
 @@ -21,7 +21,7 @@
  #if BUILDFLAG(IS_CHROMEOS)
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.31 
  namespace {
  base::LazyInstance<std::unique_ptr<webrtc::DesktopCapturer>>::DestructorAtExit
      g_desktop_capturer_for_testing = LAZY_INSTANCE_INITIALIZER;
-@@ -79,7 +79,7 @@ blink::mojom::StreamDevicesSetPtr Enumer
+@@ -80,7 +80,7 @@ blink::mojom::StreamDevicesSetPtr Enumer
    return stream_devices_set;
  }
  
@@ -32,8 +32,8 @@ $NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.31 
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  blink::mojom::StreamDevicesSetPtr EnumerateScreens(
      blink::mojom::MediaStreamType stream_type) {
-   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-@@ -132,7 +132,7 @@ void ChromeScreenEnumerator::SetRootWind
+   CHECK_CURRENTLY_ON(content::BrowserThread::UI, base::NotFatalUntil::M161);
+@@ -133,7 +133,7 @@ void ChromeScreenEnumerator::SetRootWind
    root_windows_for_testing_.Get() = std::move(root_windows);
  }
  
@@ -42,9 +42,9 @@ $NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.31 
  void ChromeScreenEnumerator::SetDesktopCapturerForTesting(
      std::unique_ptr<webrtc::DesktopCapturer> capturer) {
    g_desktop_capturer_for_testing.Get() = std::move(capturer);
-@@ -145,7 +145,7 @@ void ChromeScreenEnumerator::EnumerateSc
+@@ -146,7 +146,7 @@ void ChromeScreenEnumerator::EnumerateSc
      ScreensCallback screens_callback) const {
-   DCHECK_CURRENTLY_ON(content::BrowserThread::IO);
+   CHECK_CURRENTLY_ON(content::BrowserThread::IO, base::NotFatalUntil::M161);
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

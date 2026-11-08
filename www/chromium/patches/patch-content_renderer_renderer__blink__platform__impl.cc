@@ -1,12 +1,12 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.32 2026/11/08 15:39:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
-@@ -122,13 +122,13 @@
+@@ -124,13 +124,13 @@
  #include "third_party/blink/public/web/win/web_font_rendering.h"
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.31 2026/1
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
-@@ -202,13 +202,13 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -204,13 +204,13 @@ RendererBlinkPlatformImpl::RendererBlink
        is_locked_to_site_(false),
        main_thread_scheduler_(main_thread_scheduler),
        next_frame_sink_id_(uint32_t{std::numeric_limits<int32_t>::max()} + 1) {
@@ -38,7 +38,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.31 2026/1
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -216,7 +216,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -218,7 +218,7 @@ RendererBlinkPlatformImpl::RendererBlink
      SkFontConfigInterface::SetGlobal(font_loader);
  #endif
  
@@ -47,7 +47,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.31 2026/1
      // Create a FontDataManager if it's enabled, and if we're not in a
      // single-process environment. In single process, the SkFontMgr is already
      // installed by browser process code at this point.
-@@ -227,7 +227,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -229,7 +229,7 @@ RendererBlinkPlatformImpl::RendererBlink
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -56,7 +56,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.31 2026/1
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -300,7 +300,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
+@@ -302,7 +302,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

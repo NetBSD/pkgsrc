@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_background_extensions_background__mode__manager.cc,v 1.30 2026/10/23 15:05:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_extensions_background__mode__manager.cc,v 1.31 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/extensions/background_mode_manager.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/background/extensions/background_mode_manager.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/background/extensions/background_mode_manager.cc
-@@ -871,7 +871,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
+@@ -878,7 +878,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
    }
  
    return family->CreateExact(size).AsImageSkia();

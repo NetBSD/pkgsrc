@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_chromeos_mailbox__video__frame__converter.cc,v 1.31 2026/10/23 15:05:29 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_mailbox__video__frame__converter.cc,v 1.32 2026/11/08 15:39:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ media/gpu/chromeos/mailbox_video_frame_converter.cc
-@@ -231,7 +231,7 @@ MailboxVideoFrameConverter::GenerateShar
+@@ -229,7 +229,7 @@ MailboxVideoFrameConverter::GenerateShar
                             VideoPixelFormatToString(origin_frame->format()));
      return nullptr;
    }

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.31 2026/10/23 15:05:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.32 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
 @@ -172,7 +172,7 @@
  #endif
@@ -138,7 +138,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.31 2026/10/23 15:05:1
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1780,7 +1780,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1778,7 +1778,7 @@ int ChromeBrowserMainParts::PreMainMessa
  #endif
  
    // Should be done before starting metrics recording.
@@ -147,7 +147,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.31 2026/10/23 15:05:1
    // On Linux, the EULA dialog requires Views, so it is shown here rather than
    // when applying the first-run prefs.
    if (first_run::IsChromeFirstRun() && master_prefs_->eula_required &&
-@@ -1816,7 +1816,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1814,7 +1814,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -156,7 +156,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main.cc,v 1.31 2026/10/23 15:05:1
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
-@@ -2132,7 +2132,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -2130,7 +2130,7 @@ int ChromeBrowserMainParts::PreMainMessa
      browser_process_->StartAutoupdateTimer();
  #endif
  

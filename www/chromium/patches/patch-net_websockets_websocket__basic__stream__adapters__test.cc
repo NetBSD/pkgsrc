@@ -1,10 +1,10 @@
-$NetBSD: patch-net_websockets_websocket__basic__stream__adapters__test.cc,v 1.30 2026/10/23 15:05:30 kikadf Exp $
+$NetBSD: patch-net_websockets_websocket__basic__stream__adapters__test.cc,v 1.31 2026/11/08 15:39:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- net/websockets/websocket_basic_stream_adapters_test.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ net/websockets/websocket_basic_stream_adapters_test.cc
 @@ -1158,10 +1158,10 @@ TEST_F(WebSocketSpdyStreamAdapterTest,
         OnCloseOkShouldBeTranslatedToConnectionClose) {

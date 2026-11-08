@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.31 2026/10/23 15:05:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.32 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
-@@ -22,7 +22,7 @@
+@@ -24,7 +24,7 @@
  #include "device/bluetooth/dbus/bluez_dbus_manager.h"
  #include "ui/base/l10n/l10n_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.31 2026/10/23 
  #include "ui/ozone/public/ozone_platform.h"
  #if BUILDFLAG(USE_DBUS)
  #include "components/dbus/thread_linux/dbus_thread_linux.h"
-@@ -66,8 +66,10 @@ void ChromeBrowserMainPartsLinux::PostCr
+@@ -82,8 +82,10 @@ void ChromeBrowserMainPartsLinux::PostCr
  
  #if !BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(USE_DBUS)
@@ -26,7 +26,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.31 2026/10/23 
    session_end_listener_ = SessionEndListenerLinux::Create();
  #endif  // BUILDFLAG(USE_DBUS)
  #endif  // !BUILDFLAG(IS_CHROMEOS)
-@@ -75,7 +77,7 @@ void ChromeBrowserMainPartsLinux::PostCr
+@@ -91,7 +93,7 @@ void ChromeBrowserMainPartsLinux::PostCr
    ChromeBrowserMainPartsPosix::PostCreateMainMessageLoop();
  }
  
@@ -35,13 +35,13 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.31 2026/10/23 
  void ChromeBrowserMainPartsLinux::PostMainMessageLoopRun() {
    ChromeBrowserMainPartsPosix::PostMainMessageLoopRun();
    ui::OzonePlatform::GetInstance()->PostMainMessageLoopRun();
-@@ -115,7 +117,9 @@ void ChromeBrowserMainPartsLinux::PostDe
+@@ -131,7 +133,9 @@ void ChromeBrowserMainPartsLinux::PostDe
  #if BUILDFLAG(USE_DBUS)
    session_end_listener_.reset();
  #endif
 +#if !BUILDFLAG(IS_BSD)
    bluez::BluezDBusManager::Shutdown();
 +#endif
- #endif  // BUILDFLAG(IS_CHROMEOS)
- 
-   ChromeBrowserMainPartsPosix::PostDestroyThreads();
+   // TODO(shelley.vohr): Call dbus_thread_linux::Shutdown() here. It cannot run
+   // yet because the in-process device service (battery, wifi, wake lock) is
+   // destroyed after this last BrowserMainParts hook and still dereferences

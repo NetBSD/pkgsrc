@@ -1,10 +1,10 @@
-$NetBSD: patch-base_rand__util__posix.cc,v 1.31 2026/10/23 15:05:15 kikadf Exp $
+$NetBSD: patch-base_rand__util__posix.cc,v 1.32 2026/11/08 15:38:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/rand_util_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/rand_util_posix.cc
 @@ -31,7 +31,7 @@
  #include "base/system/sys_info.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_collaboration_messaging_messaging__backend__service__factory.cc,v 1.30 2026/10/23 15:05:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_collaboration_messaging_messaging__backend__service__factory.cc,v 1.31 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/collaboration/messaging/messaging_backend_service_factory.cc
 @@ -100,7 +100,7 @@ MessagingBackendServiceFactory::BuildSer
    // This configuration object allows us to control platform specific behavior.

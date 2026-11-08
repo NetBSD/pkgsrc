@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_eye__dropper_eye__dropper__aura.cc,v 1.6 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_eye__dropper_eye__dropper__aura.cc,v 1.7 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/eye_dropper/eye_dropper_aura.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/views/eye_dropper/eye_dropper_aura.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/views/eye_dropper/eye_dropper_aura.cc
 @@ -13,7 +13,7 @@
  #include "content/public/browser/web_contents.h"

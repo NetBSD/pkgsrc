@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_management__util.cc,v 1.5 2026/10/23 15:05:23 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_management__util.cc,v 1.6 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/integrators/autofill_ai/management_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/autofill/core/browser/integrators/autofill_ai/management_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/autofill/core/browser/integrators/autofill_ai/management_util.cc
 @@ -49,7 +49,7 @@ EntityTypeResources GetResourcesForType(
            .section_title_id = IDS_AUTOFILL_AI_DRIVERS_LICENSES_TITLE,
@@ -51,12 +51,3 @@ $NetBSD: patch-components_autofill_core_browser_integrators_autofill__ai_managem
            .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
                IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_BRANDED,
                IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_1_BRANDED,
-@@ -120,7 +120,7 @@ EntityTypeResources GetResourcesForType(
-           .section_title_id = IDS_AUTOFILL_AI_VEHICLES_TITLE,
-           .add_entity_id = IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY,
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-           .add_entity_branded_id = ResolveStringIdsForWalletPass2026Experiment(
-               IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_BRANDED,
-               IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_1_BRANDED,

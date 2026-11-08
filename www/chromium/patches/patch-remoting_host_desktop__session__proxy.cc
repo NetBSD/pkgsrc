@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_desktop__session__proxy.cc,v 1.13 2026/10/23 15:05:31 kikadf Exp $
+$NetBSD: patch-remoting_host_desktop__session__proxy.cc,v 1.14 2026/11/08 15:39:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_session_proxy.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/desktop_session_proxy.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/desktop_session_proxy.cc
-@@ -168,7 +168,7 @@ DesktopSessionProxy::CreateRemoteWebAuth
+@@ -166,7 +166,7 @@ DesktopSessionProxy::CreateRemoteWebAuth
        base::BindRepeating(&DesktopSessionProxy::SignalWebAuthnExtension, this));
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_desktop__session__proxy.cc,v 1.13 2026/10/23 15:05:
  void DesktopSessionProxy::OnSessionServicesClientConnected(
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-@@ -208,7 +208,7 @@ std::string DesktopSessionProxy::GetCapa
+@@ -206,7 +206,7 @@ std::string DesktopSessionProxy::GetCapa
      result += protocol::kRemoteWebAuthnCapability;
    }
  

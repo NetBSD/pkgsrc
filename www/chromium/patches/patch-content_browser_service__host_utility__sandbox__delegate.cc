@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.30 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.31 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/service_host/utility_sandbox_delegate.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/service_host/utility_sandbox_delegate.cc
 @@ -24,7 +24,7 @@
  #include "sandbox/policy/sandbox_type.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.3
        sandbox_type_ == sandbox::mojom::Sandbox::kXrCompositing ||
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -77,10 +77,10 @@ UtilitySandboxedProcessLauncherDelegate:
+@@ -79,10 +79,10 @@ UtilitySandboxedProcessLauncherDelegate:
        sandbox_type_ == sandbox::mojom::Sandbox::kOnDeviceModelExecution ||
        sandbox_type_ == sandbox::mojom::Sandbox::kCdm ||
        sandbox_type_ == sandbox::mojom::Sandbox::kPrintCompositor ||
@@ -37,7 +37,7 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.3
        sandbox_type_ == sandbox::mojom::Sandbox::kShapeDetection ||
  #if BUILDFLAG(ENABLE_OOP_VIDEO_DECODER)
        sandbox_type_ == sandbox::mojom::Sandbox::kHardwareVideoDecoding ||
-@@ -95,12 +95,12 @@ UtilitySandboxedProcessLauncherDelegate:
+@@ -97,12 +97,12 @@ UtilitySandboxedProcessLauncherDelegate:
        sandbox_type_ == sandbox::mojom::Sandbox::kNearby ||
  #endif  // BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -52,7 +52,7 @@ $NetBSD: patch-content_browser_service__host_utility__sandbox__delegate.cc,v 1.3
        sandbox_type_ == sandbox::mojom::Sandbox::kOnDeviceTranslation ||
  #endif
        sandbox_type_ == sandbox::mojom::Sandbox::kAudio ||
-@@ -159,22 +159,22 @@ ZygoteCommunication* UtilitySandboxedPro
+@@ -161,22 +161,22 @@ ZygoteCommunication* UtilitySandboxedPro
        sandbox_type_ == sandbox::mojom::Sandbox::kNearby ||
  #endif  // BUILDFLAG(IS_CHROMEOS)
        sandbox_type_ == sandbox::mojom::Sandbox::kAudio ||

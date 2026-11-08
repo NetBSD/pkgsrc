@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_daemon__process.cc,v 1.5 2026/10/23 15:05:31 kikadf Exp $
+$NetBSD: patch-remoting_host_daemon__process.cc,v 1.6 2026/11/08 15:39:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/daemon_process.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/daemon_process.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/daemon_process.cc
 @@ -300,7 +300,7 @@ void DaemonProcess::GetDesktopSession(
    // Windows, user sessions and applications are persisted natively by the OS,

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.31 2026/10/23 15:05:14 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_spinning__mutex.cc,v 1.32 2026/11/08 15:38:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -21,7 +21,16 @@
  #endif

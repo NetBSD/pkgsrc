@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chrome__desktop__report__request__helper.cc,v 1.31 2026/10/23 15:05:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chrome__desktop__report__request__helper.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc
 @@ -24,7 +24,7 @@
  #include "base/win/registry.h"

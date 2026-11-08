@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_host__main.cc,v 1.31 2026/10/23 15:05:31 kikadf Exp $
+$NetBSD: patch-remoting_host_host__main.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ remoting/host/host_main.cc
 @@ -24,7 +24,7 @@
  #include "remoting/base/crash/crash_reporting_crashpad.h"

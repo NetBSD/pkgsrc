@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_util_posix_close__multiple.cc,v 1.31 2026/10/23 15:05:34 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_util_posix_close__multiple.cc,v 1.32 2026/11/08 15:39:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
 @@ -75,7 +75,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
  // no attempt needs to be made to close file descriptors that are not open.

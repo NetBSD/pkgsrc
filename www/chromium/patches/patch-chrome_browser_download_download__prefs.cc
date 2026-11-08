@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.31 2026/10/23 15:05:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.32 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@
  #include <vector>
@@ -52,7 +52,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.31 2026/10/23 15:0
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
  #if BUILDFLAG(IS_ANDROID)
-@@ -555,7 +560,7 @@ void DownloadPrefs::DisableAutoOpenByUse
+@@ -560,7 +565,7 @@ void DownloadPrefs::DisableAutoOpenByUse
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -61,7 +61,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.31 2026/10/23 15:0
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
    if (should_open_pdf_in_system_reader_ == should_open)
      return;
-@@ -581,7 +586,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
+@@ -586,7 +591,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
  
  void DownloadPrefs::ResetAutoOpenByUser() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -70,7 +70,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.31 2026/10/23 15:0
    SetShouldOpenPdfInSystemReader(false);
  #endif
    auto_open_by_user_.clear();
-@@ -618,7 +623,7 @@ void DownloadPrefs::SaveAutoOpenState() 
+@@ -623,7 +628,7 @@ void DownloadPrefs::SaveAutoOpenState() 
  bool DownloadPrefs::CanPlatformEnableAutoOpenForPdf() const {
  #if BUILDFLAG(IS_CHROMEOS)
    return false;  // There is no UI for auto-open on ChromeOS.
@@ -79,7 +79,7 @@ $NetBSD: patch-chrome_browser_download_download__prefs.cc,v 1.31 2026/10/23 15:0
    return ShouldOpenPdfInSystemReader();
  #else
    return false;
-@@ -700,7 +705,14 @@ base::FilePath DownloadPrefs::SanitizeDo
+@@ -705,7 +710,14 @@ base::FilePath DownloadPrefs::SanitizeDo
  #else
    // If the stored download directory is an absolute path, we presume it's
    // correct; there's not really much more validation we can do here.

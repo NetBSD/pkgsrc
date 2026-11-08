@@ -1,12 +1,12 @@
-$NetBSD: patch-build_rust_allocator_lib.rs,v 1.27 2026/10/23 15:05:16 kikadf Exp $
+$NetBSD: patch-build_rust_allocator_lib.rs,v 1.28 2026/11/08 15:38:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/allocator/lib.rs.orig	2026-10-19 20:07:21.000000000 +0000
+--- build/rust/allocator/lib.rs.orig	2026-11-02 23:22:33.000000000 +0000
 +++ build/rust/allocator/lib.rs
-@@ -111,6 +111,12 @@ mod both_allocators {
+@@ -115,6 +115,12 @@ mod both_allocators {
          0
      }
  

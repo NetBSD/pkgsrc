@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_x_generated__protos_shm.cc,v 1.31 2026/10/23 15:05:38 kikadf Exp $
+$NetBSD: patch-ui_gfx_x_generated__protos_shm.cc,v 1.32 2026/11/08 15:39:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/generated_protos/shm.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- ui/gfx/x/generated_protos/shm.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ ui/gfx/x/generated_protos/shm.cc
 @@ -27,6 +27,8 @@
  #include <xcb/xcb.h>

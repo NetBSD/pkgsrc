@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
-@@ -21,8 +21,10 @@
+@@ -24,8 +24,10 @@
  #include "build/build_config.h"
  #include "content/common/zygote/zygote_commands_linux.h"
  #include "content/common/zygote/zygote_communication_linux.h"
@@ -17,7 +17,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
  #include "sandbox/linux/services/credentials.h"
  #include "sandbox/linux/services/namespace_sandbox.h"
  #include "sandbox/linux/suid/client/setuid_sandbox_host.h"
-@@ -40,6 +42,7 @@ namespace content {
+@@ -43,6 +45,7 @@ namespace content {
  
  namespace {
  
@@ -25,15 +25,15 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
  // Receive a fixed message on fd and return the sender's PID.
  // Returns true if the message received matches the expected message.
  bool ReceiveFixedMessage(int fd,
-@@ -62,6 +65,7 @@ bool ReceiveFixedMessage(int fd,
+@@ -65,6 +68,7 @@ bool ReceiveFixedMessage(int fd,
      return false;
    return true;
  }
 +#endif
  
- }  // namespace
- 
-@@ -71,9 +75,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
+ // Returns a description of the sandbox a zygote that exited prematurely with
+ // |exit_code| was launched in and, if the setuid sandbox helper failed to set
+@@ -85,9 +89,13 @@ ZygoteHost* ZygoteHost::GetInstance() {
  }
  
  ZygoteHostImpl::ZygoteHostImpl()
@@ -47,7 +47,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
        sandbox_binary_(),
        zygote_pids_lock_(),
        zygote_pids_() {}
-@@ -86,6 +94,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
+@@ -100,6 +108,7 @@ ZygoteHostImpl* ZygoteHostImpl::GetInsta
  }
  
  void ZygoteHostImpl::Init(const base::CommandLine& command_line) {
@@ -55,7 +55,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
    if (command_line.HasSwitch(sandbox::policy::switches::kNoSandbox)) {
      return;
    }
-@@ -140,6 +149,7 @@ void ZygoteHostImpl::Init(const base::Co
+@@ -154,6 +163,7 @@ void ZygoteHostImpl::Init(const base::Co
             "you can try using --"
          << sandbox::policy::switches::kNoSandbox << ".";
    }
@@ -63,7 +63,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
  }
  
  void ZygoteHostImpl::AddZygotePid(pid_t pid) {
-@@ -164,6 +174,7 @@ ZygoteLaunchCompletionCallback ZygoteHos
+@@ -178,6 +188,7 @@ ZygoteLaunchCompletionCallback ZygoteHos
      base::CommandLine* cmd_line,
      base::ScopedFD* control_fd,
      base::FileHandleMappingVector additional_remapped_fds) {
@@ -71,7 +71,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
    has_zygote_ = true;
  
    int fds[2];
-@@ -209,10 +220,15 @@ ZygoteLaunchCompletionCallback ZygoteHos
+@@ -223,10 +234,15 @@ ZygoteLaunchCompletionCallback ZygoteHos
    const pid_t pid = process.Pid();
    AddZygotePid(pid);
    return base::BindOnce([](pid_t pid) { return pid; }, pid);
@@ -87,7 +87,7 @@ $NetBSD: patch-content_browser_zygote__host_zygote__host__impl__linux.cc,v 1.31 
    // The namespace and SUID sandbox will execute the zygote in a new
    // PID namespace, and the main zygote process will then fork from
    // there. Watch now our elaborate dance to find and validate the
-@@ -263,9 +279,12 @@ pid_t ZygoteHostImpl::FinishSandboxedZyg
+@@ -281,9 +297,12 @@ pid_t ZygoteHostImpl::FinishSandboxedZyg
  
    AddZygotePid(real_pid);
    return real_pid;

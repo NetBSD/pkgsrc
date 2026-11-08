@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_history_history__identity__state__watcher.cc,v 1.18 2026/10/23 15:05:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_history_history__identity__state__watcher.cc,v 1.19 2026/11/08 15:38:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/history/history_identity_state_watcher.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/history/history_identity_state_watcher.cc
 @@ -122,7 +122,7 @@ HistoryIdentityStateWatcher::GetSyncStat
    }

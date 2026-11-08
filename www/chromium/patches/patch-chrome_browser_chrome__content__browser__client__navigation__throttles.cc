@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.29 2026/10/23 15:05:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.30 2026/11/08 15:38:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client_navigation_throttles.cc
 @@ -150,7 +150,7 @@
  #include "chrome/browser/captive_portal/captive_portal_service_factory.h"
@@ -24,16 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
    WebAppSettingsNavigationThrottle::MaybeCreateAndAdd(registry);
    profile_management::ProfileManagementNavigationThrottle::MaybeCreateAndAdd(
        registry);
-@@ -471,7 +471,7 @@ void CreateAndAddChromeThrottlesForNavig
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
- 
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   enterprise_connectors::DeviceTrustNavigationThrottle::MaybeCreateAndAdd(
-       registry);
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) ||
-@@ -528,7 +528,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -526,7 +526,7 @@ void CreateAndAddChromeThrottlesForNavig
        registry, ui_manager);
  #endif  // BUILDFLAG(SAFE_BROWSING_AVAILABLE)
  

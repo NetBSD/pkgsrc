@@ -1,10 +1,10 @@
-$NetBSD: patch-base_system_sys__info__unittest.cc,v 1.31 2026/10/23 15:05:15 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__unittest.cc,v 1.32 2026/11/08 15:38:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_unittest.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- base/system/sys_info_unittest.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ base/system/sys_info_unittest.cc
 @@ -307,12 +307,16 @@ TEST_F(SysInfoTest, GetHardwareInfo) {
    EXPECT_TRUE(IsStringUTF8(hardware_info->model));

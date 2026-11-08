@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.31 2026/10/23 15:05:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -30,7 +30,7 @@
  #include "net/base/schemeful_site.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_side__panel_read__anything_read__anything__untrusted__page__handler.cc,v 1.2 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_side__panel_read__anything_read__anything__untrusted__page__handler.cc,v 1.3 2026/11/08 15:38:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/side_panel/read_anything/read_anything_untrusted_page_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/side_panel/read_anything/read_anything_untrusted_page_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/side_panel/read_anything/read_anything_untrusted_page_handler.cc
-@@ -190,7 +190,7 @@ constexpr int PDF_LOAD_DELAY_MS = 1000;
+@@ -191,7 +191,7 @@ constexpr int PDF_LOAD_DELAY_MS = 1000;
  // Prefix definition for logging.
  constexpr char kReadAnythingPrefix[] = "Read Anything";
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_side__panel_read__anything_read__anything
  // chrome://whats-new renders its content in a single https://www.google.com
  // child frame (see the frame-src CSP in WhatsNewUI). Reading mode distills that
  // frame directly.
-@@ -329,7 +329,7 @@ bool IsSameOriginSubframe(content::Rende
+@@ -330,7 +330,7 @@ bool IsSameOriginSubframe(content::Rende
  // chrome://whats-new only exists on Windows, Mac and Linux.
  bool IsWhatsNewEmbeddedContentFrame(content::RenderFrameHost* rfh,
                                      content::RenderFrameHost* main_frame) {

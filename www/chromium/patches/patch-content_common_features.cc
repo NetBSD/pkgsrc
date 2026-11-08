@@ -1,12 +1,12 @@
-$NetBSD: patch-content_common_features.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_common_features.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/common/features.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/common/features.cc
-@@ -239,7 +239,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
+@@ -241,7 +241,7 @@ BASE_FEATURE(kKillOnUnexpectedOriginHead
  BASE_FEATURE(kEmbeddingRequiresOptIn, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -15,7 +15,7 @@ $NetBSD: patch-content_common_features.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp 
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -302,12 +302,12 @@ BASE_FEATURE(kFocusRenderWidgetHostViewA
+@@ -304,12 +304,12 @@ BASE_FEATURE(kFocusRenderWidgetHostViewA
  // fetch fonts from the Browser's FontDataService. It is currently scoped to
  // Linux and ChromeOS. See
  // crbug.com/335680565.
@@ -30,7 +30,7 @@ $NetBSD: patch-content_common_features.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp 
  BASE_FEATURE(kFontDataServiceLinux, base::FEATURE_ENABLED_BY_DEFAULT);
  BASE_FEATURE_ENUM_PARAM(FontDataServiceTypefaceType,
                          kFontDataServiceTypefaceType,
-@@ -333,11 +333,11 @@ BASE_FEATURE(kFontDataManagerPrewarming,
+@@ -335,11 +335,11 @@ BASE_FEATURE(kFontDataManagerPrewarming,
  BASE_FEATURE(kFontDataServiceForCSSLocalFonts,
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -44,7 +44,7 @@ $NetBSD: patch-content_common_features.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp 
    return base::FeatureList::IsEnabled(features::kFontDataServiceLinux);
  #elif BUILDFLAG(IS_CHROMEOS)
    return base::FeatureList::IsEnabled(features::kFontDataServiceChromeOS);
-@@ -845,7 +845,7 @@ BASE_FEATURE(kStrictHighRankProcessLRU, 
+@@ -860,7 +860,7 @@ BASE_FEATURE(kStrictHighRankProcessLRU, 
  // is handled at a different level and not through the interpretation of scroll
  // events.
  BASE_FEATURE(kTouchpadOverscrollHistoryNavigation,

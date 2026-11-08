@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.31 2026/10/23 15:05:29 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.32 2026/11/08 15:39:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -720,7 +720,7 @@ void VideoDecoderPipeline::InitializeTas
        NOTREACHED();
@@ -24,7 +24,7 @@ $NetBSD: patch-media_gpu_chromeos_video__decoder__pipeline.cc,v 1.31 2026/10/23 
    // Linux: behavior depends on which backend the decoder represents, signaled
    // by whether it supplied a custom allocator.
    if (allocator.has_value()) {
-@@ -1373,7 +1373,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1374,7 +1374,7 @@ VideoDecoderPipeline::PickDecoderOutputF
               << " VideoFrames";
      auxiliary_frame_pool_->set_parent_task_runner(decoder_task_runner_);
  

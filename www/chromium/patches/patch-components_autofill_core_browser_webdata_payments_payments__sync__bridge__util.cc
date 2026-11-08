@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_webdata_payments_payments__sync__bridge__util.cc,v 1.29 2026/10/23 15:05:23 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_webdata_payments_payments__sync__bridge__util.cc,v 1.30 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/autofill/core/browser/webdata/payments/payments_sync_bridge_util.cc
 @@ -1151,7 +1151,7 @@ bool AreMaskedBankAccountSupported() {
  

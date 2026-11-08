@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.31 2026/10/23 15:05:26 kikadf Exp $
+$NetBSD: patch-content_browser_child__thread__type__switcher__linux.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -9,6 +9,7 @@
  #include "base/containers/flat_map.h"

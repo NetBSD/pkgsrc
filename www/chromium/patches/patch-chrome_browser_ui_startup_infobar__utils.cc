@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_startup_infobar__utils.cc,v 1.24 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_infobar__utils.cc,v 1.25 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/startup/infobar_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/startup/infobar_utils.cc
 @@ -56,7 +56,7 @@
  #include "chrome/browser/ui/startup/default_browser_prompt/pin_infobar/pin_infobar_controller.h"

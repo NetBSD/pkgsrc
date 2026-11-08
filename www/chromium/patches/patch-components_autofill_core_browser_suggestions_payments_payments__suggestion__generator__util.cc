@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_browser_suggestions_payments_payments__suggestion__generator__util.cc,v 1.5 2026/10/23 15:05:23 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_suggestions_payments_payments__suggestion__generator__util.cc,v 1.6 2026/11/08 15:38:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ components/autofill/core/browser/suggestions/payments/payments_suggestion_generator_util.cc
-@@ -1351,7 +1351,7 @@ Suggestion CreateCreditCardSuggestion(
+@@ -1350,7 +1350,7 @@ Suggestion CreateCreditCardSuggestion(
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

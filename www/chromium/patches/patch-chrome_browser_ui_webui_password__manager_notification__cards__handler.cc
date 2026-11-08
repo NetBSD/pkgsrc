@@ -1,22 +1,22 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__handler.cc,v 1.7 2026/10/23 15:05:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__handler.cc,v 1.8 2026/11/08 15:38:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/notification_cards_handler.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/notification_cards_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/notification_cards_handler.cc
-@@ -33,7 +33,7 @@
+@@ -44,7 +44,7 @@
+ #include "components/signin/public/identity_manager/account_info.h"
  #endif
- #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/memory/scoped_refptr.h"
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.h"
-@@ -190,7 +190,7 @@ NotificationCardsHandler::NotificationCa
-       webauthn::PasskeyUnlockManagerFactory::GetForProfile(profile)));
+@@ -216,7 +216,7 @@ NotificationCardsHandler::NotificationCa
+ #endif
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__ha
    auto relaunch_banner = std::make_unique<RelaunchChromeBanner>();
    relaunch_chrome_banner_ = relaunch_banner.get();
    notification_cards_.push_back(std::move(relaunch_banner));
-@@ -233,7 +233,7 @@ void NotificationCardsHandler::HandleGet
+@@ -280,7 +280,7 @@ void NotificationCardsHandler::HandleGet
    CHECK_EQ(1U, args.size());
    const base::Value& callback_id = args[0];
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards__ha
    if (relaunch_chrome_banner_ &&
        !relaunch_chrome_banner_->is_encryption_available().has_value()) {
      g_browser_process->os_crypt_async()->GetInstance(
-@@ -296,7 +296,7 @@ NotificationCardsHandler::GetNotificatio
+@@ -343,7 +343,7 @@ NotificationCardsHandler::GetNotificatio
    return card_to_show;
  }
  

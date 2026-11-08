@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.31 2026/10/23 15:05:27 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -137,7 +137,7 @@
  #include "ui/gfx/win/gdi_util.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
    ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -2134,7 +2134,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -2135,7 +2135,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -3328,7 +3328,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -3337,7 +3337,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
    return NeedsInputGrab();
  #else
    return false;
-@@ -3559,7 +3559,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -3568,7 +3568,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

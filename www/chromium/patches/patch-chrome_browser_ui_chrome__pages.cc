@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.31 2026/10/23 15:05:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/chrome_pages.cc.orig	2026-10-19 20:07:21.000000000 +0000
+--- chrome/browser/ui/chrome_pages.cc.orig	2026-11-02 23:22:33.000000000 +0000
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -259,7 +259,7 @@ bool SiteGURLIsValid(const GURL& url) {
+@@ -256,7 +256,7 @@ bool SiteGURLIsValid(const GURL& url) {
    return !site_origin.opaque() && (url.SchemeIsHTTPOrHTTPS() ||
                                     url.SchemeIs(extensions::kExtensionScheme)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_chrome__pages.cc,v 1.31 2026/10/23 15:05:20 kik
                                     || url.SchemeIs(webapps::kIsolatedAppScheme)
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -404,7 +404,7 @@ void ShowChromeTips(BrowserWindowInterfa
+@@ -401,7 +401,7 @@ void ShowChromeTips(BrowserWindowInterfa
    ShowSingletonTab(browser, GURL(kChromeTipsURL));
  }
  
