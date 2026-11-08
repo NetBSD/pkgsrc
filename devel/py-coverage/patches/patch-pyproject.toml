@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/11/08 21:09:13 wiz Exp $
+
+This is an int, not a string.
+
+--- pyproject.toml.orig	2026-11-08 18:39:52.636082140 +0000
++++ pyproject.toml
+@@ -144,7 +144,7 @@ filterwarnings = [
+     "error::pytest.PytestCollectionWarning",
+ ]
+ 
+-verbosity_assertions = "5"
++verbosity_assertions = 5
+ 
+ ## Scriv
+ 
