@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7791 2026/11/08 15:55:57 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7792 2026/11/08 15:58:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11614,3 +11614,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libtatsu to 1.1.0 [wiz 2026-11-08]
 	Added devel/ruby-activesupport81 version 8.1.4.1 [taca 2026-11-08]
 	Added devel/ruby-activemodel81 version 8.1.4.1 [taca 2026-11-08]
+	Added devel/ruby-activejob81 version 8.1.4.1 [taca 2026-11-08]
