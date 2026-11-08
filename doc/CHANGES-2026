@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7748 2026/11/08 09:16:52 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7749 2026/11/08 11:06:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11551,3 +11551,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal to 7.001 [wiz 2026-11-08]
 	Updated sysutils/fd-find to 10.5.2 [wiz 2026-11-08]
 	Updated www/resterm to 1.18.0 [drixter 2026-11-08]
+	Updated multimedia/libaom to 3.15.3 [ryoon 2026-11-08]
