@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/06/04 15:41:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/11/08 15:10:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -64,6 +64,9 @@ ${GEM_LIBDIR}/test/fixtures/apps/views/layouts/specific.erb
 ${GEM_LIBDIR}/test/fixtures/apps/views/test/post.erb
 ${GEM_LIBDIR}/test/fixtures/layouts/layout.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/app.rb
+${GEM_LIBDIR}/test/fixtures/markup_app/views/block_is_template.erb
+${GEM_LIBDIR}/test/fixtures/markup_app/views/block_is_template.haml
+${GEM_LIBDIR}/test/fixtures/markup_app/views/block_is_template.slim
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.haml
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.slim
@@ -150,10 +153,12 @@ ${GEM_LIBDIR}/test/test_form_helpers.rb
 ${GEM_LIBDIR}/test/test_format_helpers.rb
 ${GEM_LIBDIR}/test/test_helpers.rb
 ${GEM_LIBDIR}/test/test_locale.rb
+${GEM_LIBDIR}/test/test_mounted_asset_stamp.rb
 ${GEM_LIBDIR}/test/test_number_helpers.rb
 ${GEM_LIBDIR}/test/test_output_helpers.rb
 ${GEM_LIBDIR}/test/test_render_helpers.rb
 ${GEM_LIBDIR}/test/test_rendering.rb
 ${GEM_LIBDIR}/test/test_rendering_extensions.rb
 ${GEM_LIBDIR}/test/test_tag_helpers.rb
+${GEM_LIBDIR}/test/test_translation_helpers.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

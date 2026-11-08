@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/03/29 13:33:16 taca Exp $
+$NetBSD: distinfo,v 1.24 2026/11/08 15:10:56 taca Exp $
 
-BLAKE2s (padrino-helpers-0.16.1.gem) = cb9ba29b44f4a837ab3c7417dd1db8f0f82a98dbdfb68530551ab09b31d49245
-SHA512 (padrino-helpers-0.16.1.gem) = 581113d41d55b36b12194e449fd91a69e174265ad51aeeaaee9db09eaf305e41a10d0ef899880f6e747a57a2ee06949908276bb15176433352ea0f12c95b5c1f
-Size (padrino-helpers-0.16.1.gem) = 88064 bytes
+BLAKE2s (padrino-helpers-0.18.5.gem) = 333ade09e19ff20992021e1b43cc41658e13557eb52ac7f7aeffbd82e40939f5
+SHA512 (padrino-helpers-0.18.5.gem) = bd00ae61650be1254fb0a353077b3ca1480329f2359f6e0e7bfdefa8bf28786af5f05dcd4b7e25330dd349f986d99b439f84219502bbdb9096e5adcbbb9ef4f9
+Size (padrino-helpers-0.18.5.gem) = 94720 bytes

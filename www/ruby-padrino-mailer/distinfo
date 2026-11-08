@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/03/29 13:33:16 taca Exp $
+$NetBSD: distinfo,v 1.24 2026/11/08 15:10:56 taca Exp $
 
-BLAKE2s (padrino-mailer-0.16.1.gem) = 728027c382471a5942e1825298999f0e7e7d75d1771792d57eee9603930c0f1d
-SHA512 (padrino-mailer-0.16.1.gem) = 28cd87e3437056c98134f5a2b00c355a0309b2d57a118eda766d8be52cafe0fde4cbc8898f4c35750a7e94a59eeb17287e64487d9d6aa0c3270dd7a0d498eb65
-Size (padrino-mailer-0.16.1.gem) = 17408 bytes
+BLAKE2s (padrino-mailer-0.18.5.gem) = b758ef77b50b1d09b485809f5abd7483a6eacde6e3ae903e885544cf358b40d7
+SHA512 (padrino-mailer-0.18.5.gem) = 1cf3d71c913da29567b7947369f15af0f7dc3dcb9c0e38a5b9bf0e00b348221f3e6984ab41566034f0346b2b229105f12de04e7d8a7731dd8d82de3f3d908c1d
+Size (padrino-mailer-0.18.5.gem) = 22528 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/20 16:17:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/08 15:10:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -35,5 +35,6 @@ ${GEM_LIBDIR}/lib/padrino-support/utils.rb
 ${GEM_LIBDIR}/padrino-support.gemspec
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_colorize.rb
+${GEM_LIBDIR}/test/test_inflections.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
