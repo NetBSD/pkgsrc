@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1140 2026/11/08 15:04:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.1141 2026/11/08 15:16:56 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -371,6 +371,7 @@ SUBDIR+=	mate-icon-theme
 SUBDIR+=	mate-icon-theme-faenza
 SUBDIR+=	mate-themes
 SUBDIR+=	materia-gtk-theme
+SUBDIR+=	materialx
 SUBDIR+=	matugen
 SUBDIR+=	metacam
 SUBDIR+=	mgl
