@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7744 2026/11/08 08:43:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7745 2026/11/08 08:44:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11547,3 +11547,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nim to 2.4.0 [wiz 2026-11-07]
 	Updated security/p5-Mozilla-CA to 20261105 [wiz 2026-11-08]
 	Updated converters/p5-Sereal-Decoder to 7.001 [wiz 2026-11-08]
+	Updated converters/p5-Sereal-Encoder to 7.001 [wiz 2026-11-08]
