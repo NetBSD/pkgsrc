@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4728 2026/11/08 16:41:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.4729 2026/11/08 18:01:14 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -761,6 +761,7 @@ SUBDIR+=	hs-primitive-unlifted
 SUBDIR+=	hs-protolude
 SUBDIR+=	hs-psqueues
 SUBDIR+=	hs-quickcheck-instances
+SUBDIR+=	hs-ram
 SUBDIR+=	hs-random
 SUBDIR+=	hs-random-shuffle
 SUBDIR+=	hs-raw-strings-qq
