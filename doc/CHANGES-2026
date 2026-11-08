@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7763 2026/11/08 14:02:52 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7764 2026/11/08 14:08:08 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11566,3 +11566,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 34.0.5 [gdt 2026-11-08]
 	Updated www/ruby-mechanize to 2.14.2 [taca 2026-11-08]
 	Updated graphics/ptex to 2.5.4 [ryoon 2026-11-08]
+	Updated math/symfpu to 1.2.0nb1 [alnsn 2026-11-08]
+	Updated math/cadical to 2.1.3nb1 [alnsn 2026-11-08]
