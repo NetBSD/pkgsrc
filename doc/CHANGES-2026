@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7840 2026/11/08 19:22:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7841 2026/11/08 19:58:03 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11663,3 +11663,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typer to 0.28.0 [wiz 2026-11-08]
 	Updated devel/py-typing-inspection to 0.4.5 [wiz 2026-11-08]
 	Updated devel/py-urwid to 5.1.0 [wiz 2026-11-08]
+	Updated math/4ti2 to 1.6.16 [drixter 2026-11-08]
