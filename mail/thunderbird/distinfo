@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.304 2026/10/16 16:36:07 ryoon Exp $
+$NetBSD: distinfo,v 1.305 2026/11/08 11:27:53 pho Exp $
 
 BLAKE2s (thunderbird-158.0.source.tar.xz) = 45061abba5c4c844df64ae2237465deca09e49940a4dd10260289b1b5e1898df
 SHA512 (thunderbird-158.0.source.tar.xz) = fe19e0e7540ef27af0bdb730963a9b4ad91472a9ab8b0c5eddd291c2d234ab7ac68ddf71c8595090b87cfd0deeaebc66dbce15c65c90fd09183b05db4bdce263
@@ -10,7 +10,7 @@ SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7
 SHA1 (patch-comm_mailnews_compose_src_nsMsgCompUtils.cpp) = c3e38828803536879baf2934aa1bfa50cfba0112
 SHA1 (patch-comm_mailnews_search_src_nsMsgSearchNews.cpp) = 84624c6752de1f56848a202b3a2179a2d8098e4e
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
-SHA1 (patch-comm_third__party_openpgp.configure) = 674e8a741d82f576549aa0bb44465d3a2577a212
+SHA1 (patch-comm_third__party_openpgp.configure) = 24f018b1b4e064cab01d6b4119d1b28c745b2adc
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = b5b4f2aef747836b09584b77d6332a7010963b0b
 SHA1 (patch-config_makefiles_rust.mk) = 74c18ac9c37ff268428961275df3e77a7b1ed537
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49

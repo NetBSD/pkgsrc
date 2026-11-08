@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.32 2026/09/26 07:45:51 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.33 2026/11/08 11:27:53 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -122,6 +122,9 @@ CONFIGURE_ARGS+=	--enable-forkserver
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
+
+# See patches/patch-comm_third__party_openpgp.configure
+CONFIGURE_ENV+=		CC_TYPE=${CC_VERSION:C/-.+$//}
 
 .include "../../mk/compiler.mk"
 
