@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4727 2026/11/08 16:15:45 taca Exp $
+# $NetBSD: Makefile,v 1.4728 2026/11/08 16:41:09 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -3330,6 +3330,7 @@ SUBDIR+=	range-v3
 SUBDIR+=	rapidcheck
 SUBDIR+=	rapidsvn
 SUBDIR+=	ratfor
+SUBDIR+=	raygui
 SUBDIR+=	raylib
 SUBDIR+=	rcs
 SUBDIR+=	rdp
