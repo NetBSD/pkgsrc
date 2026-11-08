@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/10/16 19:44:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/08 18:12:55 wiz Exp $
 
-DISTNAME=	lap-0.5.13
+DISTNAME=	lap-0.5.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lap/}
 
@@ -11,11 +10,11 @@ HOMEPAGE=	https://github.com/gatagat/lap
 COMMENT=	Linear Assignment Problem solver (LAPJV/LAPMOD)
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	c c++
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
+
+USE_LANGUAGES=	c c++
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython

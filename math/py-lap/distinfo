@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/08/25 10:51:52 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/11/08 18:12:55 wiz Exp $
 
-BLAKE2s (lap-0.5.13.tar.gz) = 5d9da67d1b199ffdabd0dfcf477cf691c849fdfb3efee679f69224a4be0c8b33
-SHA512 (lap-0.5.13.tar.gz) = 66c45a6802a6edcbb7f5bf25f7ee5030acc0d5eab706666fb4ebaff3f8578af5bfc951296138ab22cf8d18d74cb0712433feca5c43c3a97cd5e8eed2abdbaee5
-Size (lap-0.5.13.tar.gz) = 1537351 bytes
+BLAKE2s (lap-0.5.14.tar.gz) = cc692b980b6e5262fe49963babd16d7c812c160f158284466077f358b2924254
+SHA512 (lap-0.5.14.tar.gz) = d35d20d35fb612136071a7dde7262ea1410cdca30bacc123a0f919157382f593eaa85bd51494e1df7e595b5ac6264caf03824d860d65b2195832e95dfb323eb5
+Size (lap-0.5.14.tar.gz) = 1545593 bytes
