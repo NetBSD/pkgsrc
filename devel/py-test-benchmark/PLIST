@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/11/04 11:56:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/08 19:00:31 wiz Exp $
 bin/py.test-benchmark-${PYVERSSUFFIX}
 bin/pytest-benchmark-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -16,9 +16,6 @@ ${PYSITELIB}/pytest_benchmark/__main__.pyo
 ${PYSITELIB}/pytest_benchmark/cli.py
 ${PYSITELIB}/pytest_benchmark/cli.pyc
 ${PYSITELIB}/pytest_benchmark/cli.pyo
-${PYSITELIB}/pytest_benchmark/compat.py
-${PYSITELIB}/pytest_benchmark/compat.pyc
-${PYSITELIB}/pytest_benchmark/compat.pyo
 ${PYSITELIB}/pytest_benchmark/csv.py
 ${PYSITELIB}/pytest_benchmark/csv.pyc
 ${PYSITELIB}/pytest_benchmark/csv.pyo
