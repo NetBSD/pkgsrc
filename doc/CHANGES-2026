@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7746 2026/11/08 08:44:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7747 2026/11/08 08:47:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11549,3 +11549,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal-Decoder to 7.001 [wiz 2026-11-08]
 	Updated converters/p5-Sereal-Encoder to 7.001 [wiz 2026-11-08]
 	Updated converters/p5-Sereal to 7.001 [wiz 2026-11-08]
+	Updated sysutils/fd-find to 10.5.2 [wiz 2026-11-08]
