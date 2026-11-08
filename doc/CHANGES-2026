@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7808 2026/11/08 16:31:25 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7809 2026/11/08 16:33:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11631,3 +11631,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/ruby-rails81 version 8.1.4.1 [taca 2026-11-08]
 	Updated security/ruby-net-ssh to 8.1.2 [taca 2026-11-08]
 	Updated cross/mipsel-none-elf-binutils to 2.47 [ryoon 2026-11-08]
+	Updated cross/mipsel-none-elf-gcc to 16.2.0 [ryoon 2026-11-08]
