@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/07/03 18:49:13 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/11/08 06:18:41 pho Exp $
 
 DISTNAME=	psmisc-v23.7
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -21,6 +21,10 @@ USE_TOOLS+=		autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-harden-flags
 CONFIGURE_ARGS+=	--disable-statx
+
+# Don't use textproc/po4a even if it's installed; it changes what the
+# package installs and our PLIST isn't happy with that.
+CONFIGURE_ENV+=	ac_cv_prog_PO4A=
 
 PLIST_VARS+=	fuser
 
