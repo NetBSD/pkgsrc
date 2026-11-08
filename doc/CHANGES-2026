@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7750 2026/11/08 11:52:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7751 2026/11/08 12:32:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11553,3 +11553,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/resterm to 1.18.0 [drixter 2026-11-08]
 	Updated multimedia/libaom to 3.15.3 [ryoon 2026-11-08]
 	Updated sysutils/py-Glances to 4.5.9 [wiz 2026-11-08]
+	Updated mail/thunderbird to 159.0 [ryoon 2026-11-08]
