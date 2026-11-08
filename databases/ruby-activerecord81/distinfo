@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:00:23 taca Exp $
+
+BLAKE2s (activerecord-8.1.4.1.gem) = c00bcc90484abb1ed2c0e074dd0474326f47bb0cca21c7fb1e59b26d55140c1c
+SHA512 (activerecord-8.1.4.1.gem) = a36410cb7046d743075435e0bee294f9f2c3a1894643e14645838cb50a8311d0d5a56c365f5e25f1fcf5bb2ddf5f62d207704c5cfcb2194ec7647714e28987f9
+Size (activerecord-8.1.4.1.gem) = 579072 bytes
