@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/03/30 17:31:17 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/08 13:14:14 ryoon Exp $
 include/eigen3/Eigen/Cholesky
 include/eigen3/Eigen/CholmodSupport
 include/eigen3/Eigen/Core
@@ -118,6 +118,7 @@ include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
 include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProduct.h
 include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProductCommon.h
 include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProductMMA.h
+include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixVectorProduct.h
 include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
 include/eigen3/Eigen/src/Core/arch/CUDA/Complex.h
 include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h
@@ -305,7 +306,6 @@ include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
-include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
 include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h
