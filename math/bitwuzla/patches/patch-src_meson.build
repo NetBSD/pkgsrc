@@ -1,0 +1,15 @@
+$NetBSD: patch-src_meson.build,v 1.1 2026/11/08 17:36:18 alnsn Exp $
+
+Add rpath to pkg-config file.
+
+--- src/meson.build.orig	2026-05-21 16:43:29.000000000 +0000
++++ src/meson.build
+@@ -290,7 +290,7 @@ bitwuzla_dep = declare_dependency(includ
+ 
+ # Generate pkgconfig file.
+ pkg = import('pkgconfig')
+-pkg.generate(bitwuzla_lib)
++pkg.generate(bitwuzla_lib, libraries: ['-Wl,-R${libdir}'])
+ 
+ if is_sat_solver_configured
+   subdir('main')
