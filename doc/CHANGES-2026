@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7827 2026/11/08 18:14:22 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7828 2026/11/08 18:16:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11650,3 +11650,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/git-annex to 10.20261026 [pho 2026-11-08]
 	Updated math/py-lap to 0.5.14 [wiz 2026-11-08]
 	Updated lang/py-mypy_extensions to 1.2.0 [wiz 2026-11-08]
+	Updated misc/py-platformdirs to 4.14.5 [wiz 2026-11-08]
