@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/11/08 17:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/11/08 23:13:18 wiz Exp $
 
 DISTNAME=	python_dateutil-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
@@ -18,8 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.30:../../devel/py-hypothesis
 
-# as of 4.0.0
-# 38 failed, 4875 passed, 414 skipped, 17 xfailed
+# as of 4.0.0 (make sure the correct version is installed)
+# 2 failed, 4911 passed, 414 skipped, 17 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
