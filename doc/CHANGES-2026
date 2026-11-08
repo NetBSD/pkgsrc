@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7825 2026/11/08 18:12:54 pho Exp $
+$NetBSD: CHANGES-2026,v 1.7826 2026/11/08 18:13:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11648,3 +11648,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/hs-blake3 version 0.3.1 [pho 2026-11-08]
 	Updated security/py-google-auth to 2.62.1 [wiz 2026-11-08]
 	Updated sysutils/git-annex to 10.20261026 [pho 2026-11-08]
+	Updated math/py-lap to 0.5.14 [wiz 2026-11-08]
