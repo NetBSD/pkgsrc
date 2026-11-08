@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:12:55 ryoon Exp $
+
+BLAKE2s (ceres-solver-2.2.0.tar.gz) = e63b410d3c6bbb25a8b54d1f575257a52c0c877431d2b6b9fe444dc8988321e3
+SHA512 (ceres-solver-2.2.0.tar.gz) = bf519fbcbd0ee2d4624be72cde061a09d191ee5e56dc33984669393799b885c2164efc99dcef71307f8b50a9ccad945882376ace3d9a44ba7e1f25c20511aabd
+Size (ceres-solver-2.2.0.tar.gz) = 7635532 bytes
