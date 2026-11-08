@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7760 2026/11/08 13:58:40 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7761 2026/11/08 14:00:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11563,3 +11563,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-jekyll-seo-tag to 2.9.1 [taca 2026-11-08]
 	Updated math/metis to 5.2.1 [ryoon 2026-11-08]
 	Updated www/ruby-loofah to 2.25.3 [taca 2026-11-08]
+	Updated www/php-nextcloud to 34.0.5 [gdt 2026-11-08]
