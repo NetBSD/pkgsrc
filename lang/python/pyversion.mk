@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.180 2026/10/31 13:34:56 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.181 2026/11/08 12:44:09 ryoon Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -272,6 +272,12 @@ BUILDLINK_DEPMETHOD.python?=	build
 BUILDLINK_DEPMETHOD.python?=	full
 .    endif
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
+.    if ${PYTHON_VERSION} >= 315
+.      if !empty(PKG_BUILD_OPTIONS.${PYPACKAGE}:Mpyfreethreading)
+PYINC=		include/python${PYVERSSUFFIX}t
+PYLIB=		lib/python${PYVERSSUFFIX}t
+.      endif
+.    endif
 .    if ${USE_CROSS_COMPILE:tl} == "yes"
 TOOL_DEPENDS+=			${PYDEPENDENCY}
 MAKE_ENV+=			PYTHONPATH=${WRKDIR}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE}/${PYLIB:Q}
@@ -309,8 +315,8 @@ PY_COMPILE_ALL=	\
 PY_COMPILE_O_ALL= \
 	${TOOL_PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 
-PYINC=		include/python${PYVERSSUFFIX}
-PYLIB=		lib/python${PYVERSSUFFIX}
+PYINC?=		include/python${PYVERSSUFFIX}
+PYLIB?=		lib/python${PYVERSSUFFIX}
 PYSITELIB=	${PYLIB}/site-packages
 
 # Expect paths directly under PREFIX, but allow for ${PLIST.*} prefix(es)

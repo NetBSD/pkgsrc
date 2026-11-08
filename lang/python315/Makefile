@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/10/10 10:34:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/08 12:44:09 ryoon Exp $
 
 .include "dist.mk"
 
@@ -109,8 +109,11 @@ HAVE_YP_PROT_H=	yes
 .endfor
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
+PLIST_SUBST+=	PY_VER=${PY_VER:Q}
 
 PRINT_PLIST_AWK+=	{ gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
+PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER}/, \
+				"python$${PY_VER}") }
 PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
 				"python$${PY_VER_SUFFIX}") }
 
@@ -119,7 +122,7 @@ INSTALL_TARGET=	altinstall
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	.*python[^ ]*
-REPLACE.python.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE.python.new=	${PREFIX}/bin/python${PY_VER}
 REPLACE_FILES.python+=	Lib/base64.py
 REPLACE_FILES.python+=	Lib/cProfile.py
 REPLACE_FILES.python+=	Lib/encodings/rot_13.py
@@ -169,26 +172,26 @@ SUBST_NOOP_OK.findlib=	yes
 
 .include "options.mk"
 
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/archivetestdata/exe_with_z64
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/archivetestdata/exe_with_zip
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/archivetestdata/header.sh
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_z64
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_zip
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/header.sh
-CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/archivetestdata/exe_with_z64
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/archivetestdata/exe_with_zip
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/archivetestdata/header.sh
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/ziptestdata/exe_with_z64
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/ziptestdata/exe_with_zip
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/test/ziptestdata/header.sh
+CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER}/venv/scripts/posix/pydoc
 
 # contain CONFIGURE_ARGS and CONFIGURE_ENV
-CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/_sysconfig*
-CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/__pycache__/_sysconfigdata*
-CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Makefile
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER}/_sysconfig*
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER}/__pycache__/_sysconfigdata*
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER}/config-${PY_VER}/Makefile
 
-INSTALLATION_DIRS+=	lib/python${PY_VER_SUFFIX}/site-packages
+INSTALLATION_DIRS+=	lib/python${PY_VER}/site-packages
 
 pre-install: setuptools-preinstall
 .PHONY: setuptools-preinstall
 setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
-		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
+		${DESTDIR}${PREFIX}/lib/python${PY_VER}/site-packages/_distutils_system_mod.py
 
 # for testing
 ALLOW_NETWORK_ACCESS=	yes

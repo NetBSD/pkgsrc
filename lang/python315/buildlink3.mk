@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/10/10 10:34:19 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/08 12:44:10 ryoon Exp $
 
 BUILDLINK_TREE+=	python315
 
@@ -15,6 +15,9 @@ BUILDLINK_DEPMETHOD.python315?=	${BUILDLINK_DEPMETHOD.python}
 BUILDLINK_INCDIRS.python315+=	include/python3.15
 BUILDLINK_LIBDIRS.python315+=	lib/python3.15/config
 BUILDLINK_TRANSFORM+=		l:python:python3.15
+
+pkgbase := python315
+.include "../../mk/pkg-build-options.mk"
 
 .if !${BUILDLINK_DEPMETHOD.python315:U:Mbuild}
 .include "../../mk/dlopen.buildlink3.mk"

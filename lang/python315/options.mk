@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2026/10/10 10:34:19 adam Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/08 12:44:10 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python315
-PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
+PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline pyfreethreading
 PKG_SUGGESTED_OPTIONS=	x11 readline
 
 .include "../../mk/bsd.prefs.mk"
@@ -48,4 +48,11 @@ CONFIGURE_ARGS+=	--with-readline=readline
 PLIST.readline=		yes
 .else
 CONFIGURE_ARGS+=	--without-readline
+.endif
+
+.if !empty(PKG_OPTIONS:Mpyfreethreading)
+CONFIGURE_ARGS+=	--disable-gil --enable-optimizations
+PY_VER=			3.15t
+.else
+PY_VER=			3.15
 .endif
