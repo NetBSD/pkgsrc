@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/10/12 11:43:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/11/08 19:12:14 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,9 @@ ${PYSITELIB}/pydantic/_internal/__init__.pyo
 ${PYSITELIB}/pydantic/_internal/_config.py
 ${PYSITELIB}/pydantic/_internal/_config.pyc
 ${PYSITELIB}/pydantic/_internal/_config.pyo
+${PYSITELIB}/pydantic/_internal/_contextlib.py
+${PYSITELIB}/pydantic/_internal/_contextlib.pyc
+${PYSITELIB}/pydantic/_internal/_contextlib.pyo
 ${PYSITELIB}/pydantic/_internal/_core_metadata.py
 ${PYSITELIB}/pydantic/_internal/_core_metadata.pyc
 ${PYSITELIB}/pydantic/_internal/_core_metadata.pyo

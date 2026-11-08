@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2026/11/01 22:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/11/08 19:12:14 wiz Exp $
 
 # NB: pydantic expresses an exact dependency on pydantic-core.  While
 # unfortunate, it is actually true, and pydantic with non-matching
 # versions of pydantic-core fail to build matrix-synapse.
 # https://github.com/pydantic/pydantic/issues/12189#issuecomment-3227083571
-DISTNAME=	pydantic-2.14.2
+DISTNAME=	pydantic-2.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
 # We must express the exact dependency from pyproject.toml with
 # respect to upstream's version, but allow for possible nbN versions.
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.50.2<2.51:../../devel/py-pydantic-core
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.50.4<2.51:../../devel/py-pydantic-core
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.16.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.4:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0:../../converters/py-cloudpickle
@@ -38,8 +38,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-run-parallel>=0.3.1:../../devel/py-test-run-p
 
 USE_LANGUAGES=	# none
 
-# as of 2.14.2
-# 6480 passed, 242 skipped, 28 xfailed
+# as of 2.14.3, after 'make install'
+# 10917 passed, 242 skipped, 28 xfailed, 70 errors
 
 # needs non-existent 'docs' directory
 pre-test:
