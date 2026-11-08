@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7799 2026/11/08 16:13:05 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7800 2026/11/08 16:13:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11622,3 +11622,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter to 0.27.2 [wiz 2026-11-08]
 	Added cad/clipper2 version 2.0.1 [ryoon 2026-11-08]
 	Added math/ceres-solver version 2.2.0 [ryoon 2026-11-08]
+	Added devel/ruby-railties81 version 8.1.4.1 [taca 2026-11-08]
