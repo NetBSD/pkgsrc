@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7752 2026/11/08 12:33:23 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7753 2026/11/08 13:14:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11555,3 +11555,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-Glances to 4.5.9 [wiz 2026-11-08]
 	Updated mail/thunderbird to 159.0 [ryoon 2026-11-08]
 	Updated mail/thunderbird-l10n to 159.0 [ryoon 2026-11-08]
+	Updated math/eigen3 to 3.4.1 [ryoon 2026-11-08]
