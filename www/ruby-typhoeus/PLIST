@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/09/15 17:04:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/08 15:01:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -16,32 +16,20 @@ ${GEM_LIBDIR}/lib/typhoeus/cache/redis.rb
 ${GEM_LIBDIR}/lib/typhoeus/config.rb
 ${GEM_LIBDIR}/lib/typhoeus/easy_factory.rb
 ${GEM_LIBDIR}/lib/typhoeus/errors.rb
+${GEM_LIBDIR}/lib/typhoeus/errors/invalid_option.rb
+${GEM_LIBDIR}/lib/typhoeus/errors/no_response.rb
 ${GEM_LIBDIR}/lib/typhoeus/errors/no_stub.rb
 ${GEM_LIBDIR}/lib/typhoeus/errors/typhoeus_error.rb
 ${GEM_LIBDIR}/lib/typhoeus/expectation.rb
 ${GEM_LIBDIR}/lib/typhoeus/hydra.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/addable.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/before.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/block_connection.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/cacheable.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/memoizable.rb
 ${GEM_LIBDIR}/lib/typhoeus/hydra/queueable.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/runnable.rb
-${GEM_LIBDIR}/lib/typhoeus/hydra/stubbable.rb
 ${GEM_LIBDIR}/lib/typhoeus/pool.rb
 ${GEM_LIBDIR}/lib/typhoeus/railtie.rb
 ${GEM_LIBDIR}/lib/typhoeus/request.rb
 ${GEM_LIBDIR}/lib/typhoeus/request/actions.rb
-${GEM_LIBDIR}/lib/typhoeus/request/before.rb
-${GEM_LIBDIR}/lib/typhoeus/request/block_connection.rb
-${GEM_LIBDIR}/lib/typhoeus/request/cacheable.rb
 ${GEM_LIBDIR}/lib/typhoeus/request/callbacks.rb
 ${GEM_LIBDIR}/lib/typhoeus/request/marshal.rb
-${GEM_LIBDIR}/lib/typhoeus/request/memoizable.rb
-${GEM_LIBDIR}/lib/typhoeus/request/operations.rb
-${GEM_LIBDIR}/lib/typhoeus/request/responseable.rb
 ${GEM_LIBDIR}/lib/typhoeus/request/streamable.rb
-${GEM_LIBDIR}/lib/typhoeus/request/stubbable.rb
 ${GEM_LIBDIR}/lib/typhoeus/response.rb
 ${GEM_LIBDIR}/lib/typhoeus/response/cacheable.rb
 ${GEM_LIBDIR}/lib/typhoeus/response/header.rb
