@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/10/23 08:06:02 adam Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/08 15:13:23 wiz Exp $
 
-DISTNAME=	7z2605-src
-PKGNAME=	7-zip-26.05
+DISTNAME=	7z2606-src
+PKGNAME=	7-zip-26.06
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ip7z/}
 GITHUB_PROJECT=	7zip
