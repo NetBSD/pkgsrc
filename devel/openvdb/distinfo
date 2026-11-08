@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:45:06 ryoon Exp $
+
+BLAKE2s (openvdb-13.0.0.tar.gz) = 3593b07bd883a0a070f2f45170ab642d58e9fff36c98da7ad99dd56d52b5d0e8
+SHA512 (openvdb-13.0.0.tar.gz) = d5cb9e4ab6a1434c9d30fd645a4c1154ce6a16c711e48ca5643fa748d8f51c9920b5bdeb5496ccf0908c6f085b7afcbb0ed2b9387e1ab471ec262733eb6fde4d
+Size (openvdb-13.0.0.tar.gz) = 4891966 bytes
+SHA1 (patch-openvdb_openvdb_thread_Threading.h) = 6bc79d903a332886b6aedc911ee24a6bc9ccf948
