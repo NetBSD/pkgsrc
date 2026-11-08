@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7778 2026/11/08 15:16:08 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7779 2026/11/08 15:22:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11589,3 +11589,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/7-zip to 26.06 [wiz 2026-11-08]
 	Updated textproc/fmtlib to 12.2.1 [wiz 2026-11-08]
 	Added graphics/materialx version 1.39.5 [ryoon 2026-11-08]
+	Added graphics/opensubdiv version 3.7_0 [ryoon 2026-11-08]
