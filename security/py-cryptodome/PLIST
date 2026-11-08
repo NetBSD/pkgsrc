@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2026/10/30 18:49:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2026/11/08 17:41:36 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -555,6 +555,9 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_Ed448.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_NIST.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_secp256k1.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_secp256k1.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ECC_secp256k1.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_ElGamal.pyo
