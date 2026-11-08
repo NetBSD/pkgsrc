@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 14:57:45 ryoon Exp $
+
+BLAKE2s (alembic-1.8.12.tar.gz) = 23e3499c6acff99d0e39420f31703cc3b0448aaf136624e0b20ec743f3cc5345
+SHA512 (alembic-1.8.12.tar.gz) = 88e3f2adec67fa844655b612345df6be7e9734710525d82bbe927d8e159906a086baed4293bc612b91868e9de6f4e5355948d4ceab642ce0ce4de3fa6ca143bf
+Size (alembic-1.8.12.tar.gz) = 933623 bytes
