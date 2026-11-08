@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2026/10/16 19:43:52 adam Exp $
+# $NetBSD: Makefile,v 1.51 2026/11/08 19:14:26 wiz Exp $
 
-DISTNAME=	rope-1.15.0
+DISTNAME=	rope-1.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rope/}
@@ -19,8 +19,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-toolconfig -> py-sphinx
 
-# as of 1.14.0
-# 2092 passed, 7 skipped, 5 xfailed, 1948 warnings, 1 error
+# as of 1.15.2
+# 2157 passed, 7 skipped, 5 xfailed, 1981 warnings
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
