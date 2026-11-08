@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7806 2026/11/08 16:25:47 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7807 2026/11/08 16:29:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11629,3 +11629,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added mail/ruby-actionmailbox81 version 8.1.4.1 [taca 2026-11-08]
 	Added textproc/ruby-action_text-trix version 2.1.19 [taca 2026-11-08]
 	Added www/ruby-rails81 version 8.1.4.1 [taca 2026-11-08]
+	Updated security/ruby-net-ssh to 8.1.2 [taca 2026-11-08]
