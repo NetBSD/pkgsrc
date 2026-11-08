@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/09/10 14:21:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/11/08 14:44:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -37,11 +37,14 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/bluetooth.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browser.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/browsing_context.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/digital_credentials.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/domain.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/emulation.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/error_code.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/input.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/log.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/moz_debugging.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/moz_profiler.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/network.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/protocol/script.rb
@@ -152,6 +155,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/credential.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/virtual_authenticator.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/virtual_authenticator/virtual_authenticator_options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/wait.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/web_extension.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/websocket_connection.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/window.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/zipper.rb
@@ -171,7 +175,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/edge/profile.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/edge/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/driver.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/firefox/extension.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/profile.rb
