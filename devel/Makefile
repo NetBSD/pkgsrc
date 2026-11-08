@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4721 2026/11/08 13:23:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.4722 2026/11/08 15:45:59 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1421,6 +1421,7 @@ SUBDIR+=	openFPGALoader
 SUBDIR+=	opengrok
 SUBDIR+=	openocd
 SUBDIR+=	openrcs
+SUBDIR+=	openvdb
 SUBDIR+=	orc
 SUBDIR+=	ormolu
 SUBDIR+=	ossp-uuid
