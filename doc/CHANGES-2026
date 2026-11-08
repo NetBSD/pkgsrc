@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7848 2026/11/08 21:53:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7849 2026/11/08 22:27:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11671,3 +11671,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/minizip to 1.4 [wiz 2026-11-08]
 	Updated devel/SDL3 to 3.4.20 [wiz 2026-11-08]
 	Updated www/chawan to 0.5.2 [wiz 2026-11-08]
+	Updated devel/py-google-api-core to 2.44.0 [wiz 2026-11-08]
