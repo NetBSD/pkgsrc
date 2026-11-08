@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 18:06:54 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3/IO.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3/IO.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/BLAKE3/IO.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/blake3-${PKGVERSION}/${HS_VERSION}/package-description
+lib/blake3-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/BLAKE3-IO.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/BLAKE3.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/blake3.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/blake3-${PKGVERSION}/html/synopsis.png

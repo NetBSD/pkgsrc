@@ -1,0 +1,2 @@
+Bindings to the official fast BLAKE3 implementations in assembly and C, with
+support for AVX-512, AVX2, SSE 2, and SSE 4.1.
