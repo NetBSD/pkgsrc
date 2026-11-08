@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2026/10/29 12:12:49 adam Exp $
+# $NetBSD: Makefile,v 1.85 2026/11/08 18:33:03 wiz Exp $
 
-DISTNAME=	pypdf-6.21.4
+DISTNAME=	pypdf-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -30,8 +30,8 @@ USE_LANGUAGES=	# none
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
-# as of 6.21.2
-# 2137 passed, 33 skipped, 54 deselected, 1 xfailed, 1 xpassed
+# as of 7.0.0
+# 2394 passed, 33 skipped, 56 deselected, 7 xfailed
 do-test:
 	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
 	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} -m "not samples"
