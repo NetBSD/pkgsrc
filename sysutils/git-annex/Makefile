@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/01/07 08:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/08 18:10:53 pho Exp $
 
-DISTNAME=	git-annex-10.20250115
-PKGNAME=	${DISTNAME}
-PKGREVISION=	6
+DISTNAME=	git-annex-10.20261026
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,26 +17,15 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 
 .include "options.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+
+CONFIGURE_ARGS+=	-f -TastyTap
 
 # Setup dependencies
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../sysutils/hs-filepath-bytestring/buildlink3.mk"
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-
-# Optional dependencies that we always enable
-CONFIGURE_ARGS+=	-f Pairing
-.include "../../net/hs-network-multicast/buildlink3.mk"
-.include "../../net/hs-network-info/buildlink3.mk"
-
-CONFIGURE_ARGS+=	-f TorrentParser
-.include "../../net/hs-torrent/buildlink3.mk"
-
-CONFIGURE_ARGS+=	-f MagicMime
-.include "../../misc/hs-magic/buildlink3.mk"
-
-CONFIGURE_ARGS+=	-f Benchmark
-.include "../../benchmarks/hs-criterion/buildlink3.mk"
 
 # Mandatory runtime dependencies
 .include "../../net/hs-network-uri/buildlink3.mk"
@@ -51,7 +39,6 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../devel/hs-safesemaphore/buildlink3.mk"
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../sysutils/hs-disk-free-space/buildlink3.mk"
-.include "../../sysutils/hs-filepath-bytestring/buildlink3.mk"
 .include "../../devel/hs-ifelse/buildlink3.mk"
 .include "../../devel/hs-monad-logger/buildlink3.mk"
 .include "../../math/hs-free/buildlink3.mk"
@@ -67,9 +54,7 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../www/hs-http-conduit/buildlink3.mk"
 .include "../../www/hs-http-client-restricted/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
-.include "../../devel/hs-old-locale/buildlink3.mk"
 .include "../../databases/hs-persistent-sqlite/buildlink3.mk"
-.include "../../devel/hs-persistent/buildlink3.mk"
 .include "../../devel/hs-persistent-template/buildlink3.mk"
 .include "../../devel/hs-unliftio-core/buildlink3.mk"
 .include "../../devel/hs-microlens/buildlink3.mk"
@@ -80,11 +65,8 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../www/hs-feed/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../net/hs-socks/buildlink3.mk"
-.include "../../devel/hs-byteable/buildlink3.mk"
 .include "../../devel/hs-stm-chans/buildlink3.mk"
-.include "../../security/hs-securemem/buildlink3.mk"
 .include "../../security/hs-crypto-api/buildlink3.mk"
-.include "../../devel/hs-memory/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../devel/hs-concurrent-output/buildlink3.mk"
@@ -95,12 +77,39 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../devel/hs-tasty-quickcheck/buildlink3.mk"
 .include "../../devel/hs-tasty-rerun/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
-.include "../../net/hs-aws/buildlink3.mk"
 .include "../../www/hs-dav/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../net/hs-network-bsd/buildlink3.mk"
 .include "../../devel/hs-git-lfs/buildlink3.mk"
 .include "../../time/hs-clock/buildlink3.mk"
+.include "../../www/hs-servant/buildlink3.mk"
+.include "../../www/hs-servant-server/buildlink3.mk"
+.include "../../www/hs-servant-client/buildlink3.mk"
+.include "../../www/hs-servant-client-core/buildlink3.mk"
+.include "../../www/hs-warp/buildlink3.mk"
+.include "../../www/hs-warp-tls/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
+.include "../../security/hs-crypton-x509-store/buildlink3.mk"
+.include "../../net/hs-aws/buildlink3.mk"
+.include "../../devel/hs-persistent/buildlink3.mk"
 .include "../../security/hs-crypton/buildlink3.mk"
+.include "../../security/hs-tls/buildlink3.mk"
+.include "../../devel/hs-memory/buildlink3.mk"
+.include "../../devel/hs-file-io/buildlink3.mk"
+.if ${MACHINE_ARCH} != "aarch64" && empty(MACHINE_ARCH:M*arm*)
+.  include "../../security/hs-blake3/buildlink3.mk"
+.endif
+.include "../../net/hs-torrent/buildlink3.mk"
+.include "../../misc/hs-magic/buildlink3.mk"
+.include "../../benchmarks/hs-criterion/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../devel/hs-hinotify/buildlink3.mk"
+.elif ${OPSYS} == "Darwin"
+.  include "../../devel/hs-hfsevents/buildlink3.mk"
+.endif
+.include "../../net/hs-torrent/buildlink3.mk"
+.include "../../misc/hs-magic/buildlink3.mk"
+.include "../../benchmarks/hs-criterion/buildlink3.mk"
+
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

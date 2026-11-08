@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/02/02 04:31:03 pho Exp $
+$NetBSD: distinfo,v 1.4 2026/11/08 18:10:53 pho Exp $
 
-BLAKE2s (git-annex-10.20250115.tar.gz) = 2fe2666743941dfb881db34b23d0e8e5e858e142c693a9ba7e23291b4581a592
-SHA512 (git-annex-10.20250115.tar.gz) = 11d59302d71ab659bcd2208096f2f06f6834e2ab5a258340de23b03bee2071c6cacef347dd54068e3a029ced82eae03c36d095d116398a1166f3439fd91da051
-Size (git-annex-10.20250115.tar.gz) = 1533006 bytes
-SHA1 (patch-Utility_DirWatcher_Kqueue.hs) = d4ef7908d32b9396cb3f5661f78f7d7176ab6e47
-SHA1 (patch-git-annex.cabal) = 9dee8b00cb531d31a8a54c5fbb25f5242ab813a6
+BLAKE2s (git-annex-10.20261026.tar.gz) = 744713fb627be999e576df7a3765c4b88d740e4b9ed5bacb254ba4be2bfd9206
+SHA512 (git-annex-10.20261026.tar.gz) = 5c3fd591af36ad4d92ebb189af9f4e2e654ead515f7266a49148000ee4057551bc92bd8b65bed6038345d464a31d9ff4f100ac7eed46824ba50748038fbd4e30
+Size (git-annex-10.20261026.tar.gz) = 1600097 bytes
+SHA1 (patch-git-annex.cabal) = 58aba342fb5fc52bc729c2f90971388e6eb16a67
