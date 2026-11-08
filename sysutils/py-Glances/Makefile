@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2026/10/11 20:46:33 fox Exp $
+# $NetBSD: Makefile,v 1.58 2026/11/08 11:52:42 wiz Exp $
 
-DISTNAME=	glances-4.5.8
+DISTNAME=	glances-4.5.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
@@ -25,8 +25,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
 
 # for testing
 ALLOW_NETWORK_ACCESS=	yes
-# as of 4.3.0.8
-# 35 failed, 35 passed, 2 skipped, 5 errors
+TEST_ENV+=		PYTHONPATH=${WRKSRC}
+# as of 4.5.9
+# 64 failed, 596 passed, 36 skipped, 377 errors
 
 USE_LANGUAGES=	# none
 

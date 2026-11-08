@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/06/23 10:40:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/11/08 11:52:42 wiz Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -418,6 +418,9 @@ ${PYSITELIB}/glances/plugins/vms/engines/virsh.pyo
 ${PYSITELIB}/glances/plugins/wifi/__init__.py
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyc
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyo
+${PYSITELIB}/glances/plugins/wifi/nl80211.py
+${PYSITELIB}/glances/plugins/wifi/nl80211.pyc
+${PYSITELIB}/glances/plugins/wifi/nl80211.pyo
 ${PYSITELIB}/glances/ports_list.py
 ${PYSITELIB}/glances/ports_list.pyc
 ${PYSITELIB}/glances/ports_list.pyo
