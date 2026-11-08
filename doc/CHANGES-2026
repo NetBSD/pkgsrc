@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7769 2026/11/08 14:44:54 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7770 2026/11/08 14:53:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11573,3 +11573,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/cvc5 to 1.4.0nb1 [alnsn 2026-11-08]
 	Updated www/ruby-sass-embedded to 1.108.1 [taca 2026-11-08]
 	Updated www/ruby-selenium-webdriver to 4.52.0 [taca 2026-11-08]
+	Added graphics/manifold-geometry version 3.5.4 [ryoon 2026-11-08]
