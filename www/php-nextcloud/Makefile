@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/11/03 19:40:26 gdt Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/08 14:00:06 gdt Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -10,7 +10,7 @@
 # contained 32.0.11, then during July to September it is ok to update to
 # later 32.x.y, to 33.0.0, and to later 33.x.y, but it is not ok to
 # update to 34.
-DISTNAME=	nextcloud-33.0.10
+DISTNAME=	nextcloud-34.0.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
