@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:01:00 ryoon Exp $
+
+BLAKE2s (partio-1.20.0.tar.gz) = 0b3e28356643c4deb386303ba497d1e5751b2613d332345d57176cb5dea94178
+SHA512 (partio-1.20.0.tar.gz) = 296bd03c5da4a5426b9b756fbdd5a66dee64b6c7926a07e047d46b12abebb4be8ca280622ab318380be87cf5a3954137502b4525c12efbdd2a57ae98bd3e9637
+Size (partio-1.20.0.tar.gz) = 338701 bytes

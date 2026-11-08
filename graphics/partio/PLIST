@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 15:01:00 ryoon Exp $
+include/Partio.h
+include/PartioAttribute.h
+include/PartioIterator.h
+include/PartioVec3.h
+lib/libpartio.so
+lib/libpartio.so.1
