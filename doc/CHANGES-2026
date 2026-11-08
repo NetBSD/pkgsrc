@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7757 2026/11/08 13:47:30 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7758 2026/11/08 13:49:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11560,3 +11560,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/gklib version 0.0.1 [ryoon 2026-11-08]
 	Updated security/ruby-oauth to 1.1.9 [taca 2026-11-08]
 	Updated www/ruby-jekyll-feed to 0.18.0 [taca 2026-11-08]
+	Updated www/ruby-jekyll-seo-tag to 2.9.1 [taca 2026-11-08]
