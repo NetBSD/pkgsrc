@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:55:16 taca Exp $
+
+BLAKE2s (activemodel-8.1.4.1.gem) = f4d09e4c42a9f29f4fff313299ec3d3f5be06642c47a6e218f8e497d67ffa139
+SHA512 (activemodel-8.1.4.1.gem) = e6e5aabec38942992e797ecc7ec73ed8e7ae9e63f06f58b271c4b9526b10f6ec3233b5f591365896095d7e39cf06acb35f8ea44ebb5f7c702f8284d19b5fce8b
+Size (activemodel-8.1.4.1.gem) = 72192 bytes
