@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1141 2026/11/08 15:16:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.1142 2026/11/08 15:23:02 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -407,6 +407,7 @@ SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	openimageio
 SUBDIR+=	openjpeg
+SUBDIR+=	opensubdiv
 SUBDIR+=	optipng
 SUBDIR+=	osg
 SUBDIR+=	osl
