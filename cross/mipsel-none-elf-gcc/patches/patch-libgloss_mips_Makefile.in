@@ -1,0 +1,13 @@
+$NetBSD: patch-libgloss_mips_Makefile.in,v 1.1 2026/11/08 16:33:27 ryoon Exp $
+
+--- libgloss/mips/Makefile.in.orig	2026-10-16 03:13:37.627104993 +0000
++++ libgloss/mips/Makefile.in
+@@ -369,7 +369,7 @@ install:
+ 	done
+ 	mkdir -p $(DESTDIR)$(exec_prefix)/share/mips/rules
+ 	@$(INSTALL_DATA) ${srcdir}/rules/mipshal.mk $(DESTDIR)$(exec_prefix)/share/mips/rules/
+-	@$(INSTALL_PROGRAM) ${srcdir}/rules/srec2hex.pl $(DESTDIR)$(exec_prefix)/share/mips/rules/
++	@$(BSD_INSTALL_SCRIPT) ${srcdir}/rules/srec2hex.pl $(DESTDIR)$(exec_prefix)/share/mips/rules/
+ 
+ info:
+ install-info:

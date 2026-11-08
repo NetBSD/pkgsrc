@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2024/05/13 23:08:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/08 16:33:27 ryoon Exp $
 
-DISTNAME=		gcc-13.2.0
+DISTNAME=		gcc-16.2.0
 PKGNAME=		cross-mipsel-none-elf-${DISTNAME}
 CATEGORIES=		cross
-NEWLIBVER=		4.3.0.20230120
+NEWLIBVER=		4.6.0.20260123
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DEFAULT_DISTFILES} \
@@ -31,6 +31,8 @@ USE_LANGUAGES+=		c c++
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/config/nvptx/gen-opt.sh
 
+REPLACE_PERL+=		libgloss/mips/rules/srec2hex.pl
+
 MIPSELELF_PREFIX=	${PREFIX}/cross-mipsel-none-elf
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -50,6 +52,10 @@ CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-gcov
+
+# For libgloss from newlib 4.6.0
+CFLAGS_FOR_TARGET=	-mips32
+BUILD_MAKE_FLAGS+=	CFLAGS_FOR_TARGET=${CFLAGS_FOR_TARGET}
 
 INFO_FILES=		yes
 

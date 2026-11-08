@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.6 2024/01/31 16:42:51 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2026/11/08 16:33:27 ryoon Exp $
 
-BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
-SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
-Size (gcc-13.2.0.tar.xz) = 87858592 bytes
-BLAKE2s (newlib-4.3.0.20230120.tar.gz) = 968219962893eac031420e21126ffec27a81fbe1b9c5105cae8fdb1ee8f4020b
-SHA512 (newlib-4.3.0.20230120.tar.gz) = 4a06309d36c2255fef8fc8f2d133cafa850f1ed2eddfb27b5d45f5d16af69e0fca829a0b4c9b34af4ed3a28c6fcc929761e0ee823a4229f35c2853d432b5e7ef
-Size (newlib-4.3.0.20230120.tar.gz) = 8832922 bytes
-SHA1 (patch-gcc_configure) = 380bc31209ca1c933293f8a89eaf802545743c7e
+BLAKE2s (gcc-16.2.0.tar.xz) = b2a4b0c96c7025de8336afaa77eb1c7ce61021110dcf8d3ada3cd064830e5afa
+SHA512 (gcc-16.2.0.tar.xz) = c51c30ca7422d0cbecf504b2e0f33c3aca31e0f90a76b65217f465163fa6fa17b3f5de39e145c47e5bab90ac0ce7fff3b03c8d553ae36e01faaea5a50f8648d1
+Size (gcc-16.2.0.tar.xz) = 107200820 bytes
+BLAKE2s (newlib-4.6.0.20260123.tar.gz) = 412f52dfa1c871e899a4cf24c0295897cb5c2d9a0b3830c984cd38a6597f15af
+SHA512 (newlib-4.6.0.20260123.tar.gz) = ffa16d6465c0b429264c46395fa760fbcf072d3ff86e87330ba1f483efcfe66393ef83b03932759444a0ebeaef94d3ca58a59e91ab7b97b2a6ac6be2e7589657
+Size (newlib-4.6.0.20260123.tar.gz) = 9208322 bytes
+SHA1 (patch-gcc_Makefile.in) = 7948c9d74184f7d36ae7b1bc7e317f03003bfb69
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libgloss_mips_Makefile.in) = f3cd78c918ebfa181fcea1769451c7e3db900874
 SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540

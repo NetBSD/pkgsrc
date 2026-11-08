@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_Makefile.in,v 1.1 2026/11/08 16:33:27 ryoon Exp $
+
+* Disable fixinclude.
+
+--- gcc/Makefile.in.orig	2026-10-15 13:17:51.358720693 +0000
++++ gcc/Makefile.in
+@@ -3730,7 +3730,7 @@ stmp-fixinc: gsyslimits.h macro_list fixinc_list \
+ 	      gcc_dir=`${PWD_COMMAND}` ; \
+ 	      export TARGET_MACHINE srcdir SHELL MACRO_LIST && \
+ 	      cd $(build_objdir)/fixincludes && \
+-	      $(SHELL) ./fixinc.sh "$${gcc_dir}/$${fix_dir}" \
++	      $(SHELL) -c true "$${gcc_dir}/$${fix_dir}" \
+ 	        $(BUILD_SYSTEM_HEADER_DIR) $(OTHER_FIXINCLUDES_DIRS) ); \
+ 	  done; \
+ 	fi
