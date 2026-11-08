@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 17:58:35 pho Exp $
+
+BLAKE2s (ram-0.22.1.tar.gz) = 1a46c4e2c59e1e7a224b3e923bd66cd30c54b9ce8929208dbb79e77ee1e8fb4f
+SHA512 (ram-0.22.1.tar.gz) = e4aebb744c32f68257ee64644c475cd4359a4bfc3f5bf7a1794b1326831873db07d20003440ec2b83245e476ab196267815f8dcbffab91e4c4fbe0e683d2a17a
+Size (ram-0.22.1.tar.gz) = 42241 bytes
