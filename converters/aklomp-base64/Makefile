@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/02/02 09:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/08 15:45:04 wiz Exp $
 
-DISTNAME=	base64-0.5.2
+DISTNAME=	base64-0.5.3
 PKGNAME=	aklomp-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aklomp/}
@@ -13,7 +13,6 @@ COMMENT=	Fast Base64 stream encoder/decoder in C99, with SIMD acceleration
 LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-#USE_TOOLS+=	gmake
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} base64 aklomp-base64
