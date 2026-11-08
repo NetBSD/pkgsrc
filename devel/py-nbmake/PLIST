@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 18:59:41 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/nbmake/__init__.py
+${PYSITELIB}/nbmake/__init__.pyc
+${PYSITELIB}/nbmake/__init__.pyo
+${PYSITELIB}/nbmake/nb_result.py
+${PYSITELIB}/nbmake/nb_result.pyc
+${PYSITELIB}/nbmake/nb_result.pyo
+${PYSITELIB}/nbmake/nb_run.py
+${PYSITELIB}/nbmake/nb_run.pyc
+${PYSITELIB}/nbmake/nb_run.pyo
+${PYSITELIB}/nbmake/pytest_items.py
+${PYSITELIB}/nbmake/pytest_items.pyc
+${PYSITELIB}/nbmake/pytest_items.pyo
+${PYSITELIB}/nbmake/pytest_plugin.py
+${PYSITELIB}/nbmake/pytest_plugin.pyc
+${PYSITELIB}/nbmake/pytest_plugin.pyo

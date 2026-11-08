@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 18:59:41 wiz Exp $
+
+BLAKE2s (nbmake-1.5.5.tar.gz) = 4ac8da0ffd35418f4187d82dd11107691575152260bc13695091b32cceacf6a6
+SHA512 (nbmake-1.5.5.tar.gz) = f7a2aed63b56e5103cbf92247f0e0608fc3383e73e03004196633a40bff69bfa9c1b3b6f074bf65e7d55cf7b78c234b909ba3ffa78822b2242332c62b4396f6e
+Size (nbmake-1.5.5.tar.gz) = 85929 bytes
