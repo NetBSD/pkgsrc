@@ -1,0 +1,13 @@
+$NetBSD: patch-resources_CMakeLists.txt,v 1.1 2026/11/08 15:15:55 ryoon Exp $
+
+* Try to exclude CMakeLists.txt. I am not sure.
+
+--- resources/CMakeLists.txt.orig	2026-09-12 13:48:40.832961636 +0000
++++ resources/CMakeLists.txt
+@@ -1,4 +1,5 @@ if(NOT SKBUILD)
+ if(NOT SKBUILD)
+     install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+-            DESTINATION "resources" MESSAGE_NEVER)
++            DESTINATION "${MATERIALX_INSTALL_RESOURCES_PATH}"
++            PATTERN "CMakeLists.txt" EXCLUDE)
+ endif()

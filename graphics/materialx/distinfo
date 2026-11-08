@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:15:55 ryoon Exp $
+
+BLAKE2s (MaterialX-1.39.5.tar.gz) = 575b2cf8610aba6fafc66f8e9d32627900f7a80334e92d220cc4c3765836d5d0
+SHA512 (MaterialX-1.39.5.tar.gz) = 70a56a555d736e2f81b97a10461a166cb6212f4d8fd87342405f4d490b2297ec1f88f0884bba1b7555ff8f30f5ec2c8b1aa512d512547cc67766dbb9620450a5
+Size (MaterialX-1.39.5.tar.gz) = 115055113 bytes
+SHA1 (patch-CMakeLists.txt) = f4fef63481cd6f7e03daeaf886d93dd1ae6dc183
+SHA1 (patch-cmake_modules_MaterialXConfig.cmake.in) = 5aa713ece40701bb362adf1a8a0e47eeb63e8020
+SHA1 (patch-resources_CMakeLists.txt) = 77be5f5717c54d25b0207d856b889a908575a26b
+SHA1 (patch-source_MaterialXFormat_File.cpp) = de93d7682225c1500c755312d08a4811d2734869
