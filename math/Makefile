@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.652 2026/10/27 19:47:41 drixter Exp $
+# $NetBSD: Makefile,v 1.653 2026/11/08 16:13:44 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -179,6 +179,7 @@ SUBDIR+=	cantor
 SUBDIR+=	capc-calc
 SUBDIR+=	cblas
 SUBDIR+=	cblas64
+SUBDIR+=	ceres-solver
 SUBDIR+=	cgal
 SUBDIR+=	chuffed
 SUBDIR+=	classias
