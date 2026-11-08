@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7802 2026/11/08 16:16:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7803 2026/11/08 16:17:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11625,3 +11625,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ruby-railties81 version 8.1.4.1 [taca 2026-11-08]
 	Added graphics/blender52-lts version 5.2.3 [ryoon 2026-11-08]
 	Added devel/ruby-activestorage81 version 8.1.4.1 [taca 2026-11-08]
+	Updated mail/ruby-actionmailer81 to 8.1.4.1 [taca 2026-11-08]
