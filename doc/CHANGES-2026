@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7781 2026/11/08 15:42:45 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7782 2026/11/08 15:43:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11604,3 +11604,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/ruby-actionmailbox80 to 8.0.5.2 [taca 2026-11-08]
 	Updated textproc/ruby-actiontext80 to 8.0.5.2 [taca 2026-11-08]
 	Updated www/ruby-rails80 to 8.0.5.2 [taca 2026-11-08]
+	Updated graphics/OpenJPH to 0.33.0 [wiz 2026-11-08]
