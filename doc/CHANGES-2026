@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7754 2026/11/08 13:19:39 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.7755 2026/11/08 13:22:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11557,3 +11557,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/thunderbird-l10n to 159.0 [ryoon 2026-11-08]
 	Updated math/eigen3 to 3.4.1 [ryoon 2026-11-08]
 	Updated graphics/geeqie to 3.4 [gdt 2026-11-08]
+	Added devel/gklib version 0.0.1 [ryoon 2026-11-08]
