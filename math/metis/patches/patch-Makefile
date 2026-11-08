@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2026/11/08 13:55:09 ryoon Exp $
+
+--- Makefile.orig	2026-09-11 19:18:01.788874768 +0000
++++ Makefile
+@@ -73,7 +73,7 @@ cp include/CMakeLists.txt $(BUILDDIR)/xinclude
+ echo $(REALWIDTH) >> $(BUILDDIR)/xinclude/metis.h
+ cat include/metis.h >> $(BUILDDIR)/xinclude/metis.h
+ cp include/CMakeLists.txt $(BUILDDIR)/xinclude
+-cd $(BUILDDIR) && cmake $(CURDIR) $(CONFIG_FLAGS)
++#cd $(BUILDDIR) && cmake $(CURDIR) $(CONFIG_FLAGS)
+ endef
+ 
+ all clean install:

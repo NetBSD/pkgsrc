@@ -1,23 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/08 13:55:09 ryoon Exp $
+bin/cmpfillin
+bin/gpmetis
 bin/graphchk
-bin/kmetis
-bin/mesh2dual
-bin/mesh2nodal
-bin/oemetis
-bin/onmetis
-bin/partdmesh
-bin/partnmesh
-bin/pmetis
-include/metis/defs.h
-include/metis/macros.h
-include/metis/metis.h
-include/metis/proto.h
-include/metis/rename.h
-include/metis/struct.h
-lib/libmetis.a
-share/doc/metis/manual.ps
-share/examples/metis/0README
-share/examples/metis/4elt.graph
-share/examples/metis/metis.mesh
-share/examples/metis/mtest.c
-share/examples/metis/test.mgraph
+bin/m2gmetis
+bin/mpmetis
+bin/ndmetis
+include/metis.h
+lib/libmetis.so

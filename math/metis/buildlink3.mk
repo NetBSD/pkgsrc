@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/09/23 03:57:32 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/08 13:55:09 ryoon Exp $
 
 BUILDLINK_TREE+=	metis
 
 .if !defined(METIS_BUILDLINK3_MK)
 METIS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.metis+=	metis>=4.0.3
+BUILDLINK_API_DEPENDS.metis+=	metis>=5.2.1
 BUILDLINK_PKGSRCDIR.metis?=	../../math/metis
-BUILDLINK_DEPMETHOD.metis?=	build
+
+.include "../../devel/gklib/buildlink3.mk"
 .endif	# METIS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-metis

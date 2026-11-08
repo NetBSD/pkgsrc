@@ -1,32 +1,30 @@
-# $NetBSD: Makefile,v 1.15 2026/08/23 06:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/08 13:55:09 ryoon Exp $
 
-DISTNAME=		metis-4.0.3
+DISTNAME=		metis-5.2.1
 CATEGORIES=		math
-MASTER_SITES=		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=KarypisLab/}
+GITHUB_PROJECT=		METIS
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/KarypisLab/METIS
 COMMENT=		Unstructured graph partitioning and sparse matrix ordering system
+LICENSE=		apache-2.0
 
-BUILD_TARGET=		default
-INSTALLATION_DIRS=	bin include/metis lib share/doc/metis share/examples/metis
+USE_TOOLS+=		gmake
 
-CFLAGS+=		-Wno-implicit-function-declaration
-CFLAGS+=		-Wno-implicit-int
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} graphchk kmetis mesh2dual 	\
-		mesh2nodal oemetis onmetis partdmesh partnmesh pmetis	\
-		${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/libmetis.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/Lib/*.h				\
-		${DESTDIR}${PREFIX}/include/metis/
-	${INSTALL_DATA} ${WRKSRC}/Doc/manual.ps				\
-		${DESTDIR}${PREFIX}/share/doc/metis
-	cd ${WRKSRC}/Graphs && ${INSTALL_DATA} 0README 4elt.graph 	\
-		metis.mesh test.mgraph					\
-		${DESTDIR}${PREFIX}/share/examples/metis/
-	${INSTALL_DATA} ${WRKSRC}/Test/mtest.c				\
-		${DESTDIR}${PREFIX}/share/examples/metis
+CMAKE_CONFIGURE_ARGS+=	-DSHARED=ON
 
+LDFLAGS+=	-L${BUILDLINK_PREFIX.metis}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.metis}/lib
+LDFLAGS+=	-lGKlib
+
+pre-configure:
+	cd ${WRKSRC} && \
+	make config shared=1 cc=gcc prefix=${PREFIX}
+
+.include "../../devel/cmake/build.mk"
+.include "../../devel/gklib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

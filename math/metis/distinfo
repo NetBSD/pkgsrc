@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.8 2026/08/23 06:30:30 wiz Exp $
+$NetBSD: distinfo,v 1.9 2026/11/08 13:55:09 ryoon Exp $
 
-BLAKE2s (metis-4.0.3.tar.gz) = d3f50ecaef7578d5e59218dd11952642745e25332614326589e05110a8a07cfe
-SHA512 (metis-4.0.3.tar.gz) = 3d1388120c9c94bac6a20e2d38d6022c241bb6094cf71e31decf019d5500d2037716c6d615c5db69b536348a54e43f321c33ecfa25335fa6c84e412be227e332
-Size (metis-4.0.3.tar.gz) = 522624 bytes
-SHA1 (patch-Test_Makefile) = 0113ba21eb14e6b68c0acafc3109119ee50ec5ec
-SHA1 (patch-aa) = 03f17c9a84317ad31c29f3c00ebf2b63c41e6299
-SHA1 (patch-ab) = 40171c7c101a64ae6cb5200306b321cd1634fdea
-SHA1 (patch-ac) = ea9dfba48ac4df3c7d99e1010de5b1f1b85cf74e
+BLAKE2s (metis-5.2.1.tar.gz) = d0cba5fac3910e224b7e3d0897ee92292bf5e155dbbde4d2d1b4e0298451a0d4
+SHA512 (metis-5.2.1.tar.gz) = 69127b7a777f9ba14cf399a7122000af9d6094a5f44be600a28384cfc0495c024fb0c6eab37c4473a5763ec1077cd9f30d9bcbb3c952462f6c9ead31c6b9e790
+Size (metis-5.2.1.tar.gz) = 4838377 bytes
+SHA1 (patch-Makefile) = 5a9c74b7dcb14691ca54623567c8b238d4cf873e
