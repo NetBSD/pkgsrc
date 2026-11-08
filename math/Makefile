@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2026/11/08 16:13:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.654 2026/11/08 17:37:14 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -167,6 +167,7 @@ SUBDIR+=	basic-stats
 SUBDIR+=	bc
 SUBDIR+=	bc-gh
 SUBDIR+=	bcal
+SUBDIR+=	bitwuzla
 SUBDIR+=	blas
 SUBDIR+=	blas64
 SUBDIR+=	blitz++
