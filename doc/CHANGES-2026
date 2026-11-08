@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7796 2026/11/08 16:04:05 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7797 2026/11/08 16:04:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11619,3 +11619,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added databases/ruby-activerecord81 version 8.1.4.1 [taca 2026-11-08]
 	Updated lang/quickjs-ng to 0.18.0 [wiz 2026-11-08]
 	Added www/ruby-actionview81 version 8.1.4.1 [taca 2026-11-08]
+	Updated textproc/tree-sitter to 0.27.2 [wiz 2026-11-08]
