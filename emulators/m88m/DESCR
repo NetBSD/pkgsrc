@@ -1,0 +1,6 @@
+M88M is a modern, cross-platform port of the classic PC-8801 emulator
+M88, originally developed by cisc.  While the original M88 was
+tightly coupled with the Win32 API and DirectX, M88M leverages
+raylib and raygui for its frontend, making it natively compatible
+with macOS (Intel/Apple Silicon), Linux, FreeBSD, Haiku, and Windows
+via a single CMake-based build system.

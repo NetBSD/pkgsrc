@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:42:08 ryoon Exp $
+
+BLAKE2s (M88M-1.2.4.tar.gz) = 9a8223c13d02e8a49c4cf33f10117187e3a35ce60f5da7d1f926269c00d5525b
+SHA512 (M88M-1.2.4.tar.gz) = 9339561c3ed838096dbe5a113f74445a6b669540bd47aaced512125d5f26ffcf5944e9887b5b3c763cb6cab5b498f6a09ffb41baa6fe6268670d683f1b12d0ba
+Size (M88M-1.2.4.tar.gz) = 10979704 bytes
+SHA1 (patch-CMakeLists.txt) = 3c52a38eb4ef637ff4c61ed5dd10fea6e70991b7

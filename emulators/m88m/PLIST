@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/08 16:42:08 ryoon Exp $
+bin/m88m
+share/applications/m88m.desktop
+share/doc/M88M/NOTICE.md
+share/doc/M88M/OFL.txt
+share/icons/hicolor/512x512/apps/m88m.png
