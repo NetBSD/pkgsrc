@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/10/11 16:35:33 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/11/08 16:03:33 wiz Exp $
 
-BLAKE2s (quickjs-ng-0.17.0/quickjs-0.17.0.tar.gz) = 630542431862c6752dc4e9fa17b13d502fb080fbae1a2cf66d16bdccfd01b196
-SHA512 (quickjs-ng-0.17.0/quickjs-0.17.0.tar.gz) = e4f9bffa51ebe8c3a4dba75c62df52e28ee4af31bf81d66694b87748ba4db754e3e7c948fa8c40f3badc045caa0506ed7ef333b40dd4bfe42675ca2ffc5d625d
-Size (quickjs-ng-0.17.0/quickjs-0.17.0.tar.gz) = 905393 bytes
+BLAKE2s (quickjs-ng-0.18.0/quickjs-0.18.0.tar.gz) = cbf45290ba7b776ab4998bd92490cd99c8592b38f974bf10009840b61b95f380
+SHA512 (quickjs-ng-0.18.0/quickjs-0.18.0.tar.gz) = 8ed91ecca1a509dd67bdb57ca3fda237b1502710043dbbea1335a95e054e4bf1ef0c4c4eba7869d59e2b2bbf6faf2a1c1394a05f231ee78f6d981e9c5460cef0
+Size (quickjs-ng-0.18.0/quickjs-0.18.0.tar.gz) = 910210 bytes
 SHA1 (patch-CMakeLists.txt) = f3552638d4e6fad3969148622ec439496e86bb4b
