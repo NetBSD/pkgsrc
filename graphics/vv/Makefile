@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2026/09/29 06:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/11/08 15:44:01 wiz Exp $
 
 # not a release, but we want the change fixing the build with libjxl 0.12.0
 DISTNAME=	moderncore-20260719
 PKGNAME=	${DISTNAME:S/moderncore-/vv-3.2./}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 GITHUB_PROJECT=	moderncore

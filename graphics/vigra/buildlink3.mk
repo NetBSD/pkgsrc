@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/09/26 09:43:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/11/08 15:44:01 wiz Exp $
 
 BUILDLINK_TREE+=	vigra
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vigra
 VIGRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vigra+=	vigra>=1.10.0
-BUILDLINK_ABI_DEPENDS.vigra+=	vigra>=1.12.4nb4
+BUILDLINK_ABI_DEPENDS.vigra+=	vigra>=1.12.4nb5
 BUILDLINK_PKGSRCDIR.vigra?=	../../graphics/vigra
 
 .include "../../devel/hdf5/buildlink3.mk"

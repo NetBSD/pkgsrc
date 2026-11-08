@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.216 2026/11/04 15:17:31 taca Exp $
+# $NetBSD: Makefile,v 1.217 2026/11/08 15:44:01 wiz Exp $
 
 DISTNAME=	rmagick-7.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
