@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7850 2026/11/08 23:06:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7851 2026/11/08 23:15:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11673,3 +11673,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chawan to 0.5.2 [wiz 2026-11-08]
 	Updated devel/py-google-api-core to 2.44.0 [wiz 2026-11-08]
 	Updated devel/py-nbmake to 1.5.5nb1 [wiz 2026-11-08]
+	Updated devel/py-test-benchmark to 5.3.1 [wiz 2026-11-08]
