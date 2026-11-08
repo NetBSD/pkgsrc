@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/18 12:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/08 17:47:01 wiz Exp $
 
-DISTNAME=	dunamai-1.26.3
+DISTNAME=	dunamai-1.26.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dunamai/}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=20.9:../../devel/py-packaging
 USE_LANGUAGES=	# none
 USE_TOOLS+=	git:test
 
-# as of 1.26.3
-# 60 passed, 6 skipped, 54 warning
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
