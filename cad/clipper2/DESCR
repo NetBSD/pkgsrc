@@ -1,0 +1,6 @@
+The Clipper2 library performs intersection, union, difference and
+XOR boolean operations on both simple and complex polygons. It also
+performs polygon offsetting, and Constrained Delaunay Triangulation.
+This is a major update of my original Clipper library that was
+written about 15 years ago. That library I'm now calling Clipper1,
+and while it still works very well, Clipper2 is just better.
