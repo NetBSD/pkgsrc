@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:21:57 ryoon Exp $
+
+BLAKE2s (OpenSubdiv-3_7_0.tar.gz) = ff57ca8d27dc32de6840d1aca167041683799116967a297c5f3c46241e8701e6
+SHA512 (OpenSubdiv-3_7_0.tar.gz) = 947ec6312c224fba3da7dffa863cabb252493c38f22c516ba16b7523883f8ac8cbf353cbc502d406064db71c561e7b1abaff8c0485f4cbb54b182bd871ab0ea0
+Size (OpenSubdiv-3_7_0.tar.gz) = 40736075 bytes
