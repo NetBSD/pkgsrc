@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1137 2026/11/08 14:54:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.1138 2026/11/08 14:58:52 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -54,6 +54,7 @@ SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	adaptagrams
 SUBDIR+=	adwaita-icon-theme
+SUBDIR+=	alembic
 SUBDIR+=	ansilove
 SUBDIR+=	apngasm
 SUBDIR+=	arc-theme
