@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7784 2026/11/08 15:45:22 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.7785 2026/11/08 15:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11607,3 +11607,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/OpenJPH to 0.33.0 [wiz 2026-11-08]
 	Updated converters/aklomp-base64 to 0.5.3 [wiz 2026-11-08]
 	Added devel/openvdb version 13.0.0 [ryoon 2026-11-08]
+	Updated sysutils/fzf to 0.75.0 [wiz 2026-11-08]
