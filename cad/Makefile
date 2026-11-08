@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2026/10/13 17:33:35 gdt Exp $
+# $NetBSD: Makefile,v 1.115 2026/11/08 16:10:35 ryoon Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -9,6 +9,7 @@ SUBDIR+=	adms
 SUBDIR+=	atlc
 SUBDIR+=	cascade
 SUBDIR+=	cgi-wcalc
+SUBDIR+=	clipper2
 SUBDIR+=	covered
 SUBDIR+=	dinotrace
 SUBDIR+=	dinotrace-mode
