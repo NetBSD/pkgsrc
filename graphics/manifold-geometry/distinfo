@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 14:53:40 ryoon Exp $
+
+BLAKE2s (manifold-3.5.4.tar.gz) = 7784d730ae5183c2f83810a4e42d649c4fa27b6edaf6d1fc6fed7a8ee742a4c1
+SHA512 (manifold-3.5.4.tar.gz) = 115c18c8426a1c2761f785414abb22e454b9ebe375bb14f0f6f76b55d1b53116d2b05c41c894efcf2c264601ce2b63c5d6829b66d1d7e6665acf880ae1da1389
+Size (manifold-3.5.4.tar.gz) = 30969217 bytes
