@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 15:03:18 ryoon Exp $
+
+BLAKE2s (OSL-1.15.7.0.tar.gz) = a318813b44923fac0980132a3cf4a7ac7774d7e6d2f933b362d891b6d2efe5cf
+SHA512 (OSL-1.15.7.0.tar.gz) = 9665c3ad3f71eb494f3c318e0bc1c2602d1b3bdd934623199fdd7208cb3dca3eb713271d40768643709141d267581d5b9434d831455a50e37ed2fc18edbeb6d8
+Size (OSL-1.15.7.0.tar.gz) = 44286161 bytes
+SHA1 (patch-src_testrender_rapidobj_rapidobj.hpp) = a5c25bbbd01c6d40407970fe97d3075f456aea58
