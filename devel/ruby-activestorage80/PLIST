@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/07/30 15:23:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/08 15:39:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -81,6 +81,8 @@ ${GEM_LIBDIR}/lib/active_storage/engine.rb
 ${GEM_LIBDIR}/lib/active_storage/errors.rb
 ${GEM_LIBDIR}/lib/active_storage/fixture_set.rb
 ${GEM_LIBDIR}/lib/active_storage/gem_version.rb
+${GEM_LIBDIR}/lib/active_storage/image_magick.rb
+${GEM_LIBDIR}/lib/active_storage/image_magick/policy.xml
 ${GEM_LIBDIR}/lib/active_storage/log_subscriber.rb
 ${GEM_LIBDIR}/lib/active_storage/previewer.rb
 ${GEM_LIBDIR}/lib/active_storage/previewer/mupdf_previewer.rb
