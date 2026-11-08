@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7819 2026/11/08 17:45:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7820 2026/11/08 17:47:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11642,3 +11642,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/bitwuzla version 0.9.1 [alnsn 2026-11-08]
 	Updated security/py-cryptodome to 4.4.0 [wiz 2026-11-08]
 	Updated time/py-dateutil to 4.0.0 [wiz 2026-11-08]
+	Updated devel/py-dunamai to 1.26.4 [wiz 2026-11-08]
