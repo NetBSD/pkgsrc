@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2026/02/02 23:27:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/08 16:39:33 ryoon Exp $
 include/raylib.h
 include/raymath.h
+include/rcamera.h
 include/rlgl.h
 lib/cmake/raylib/raylib-config-version.cmake
 lib/cmake/raylib/raylib-config.cmake
+lib/cmake/raylib/raylib-targets-noconfig.cmake
+lib/cmake/raylib/raylib-targets.cmake
 lib/libraylib.so
-lib/libraylib.so.5.5.0
-lib/libraylib.so.550
+lib/libraylib.so.${PKGVERSION}.0
+lib/libraylib.so.620
 lib/pkgconfig/raylib.pc

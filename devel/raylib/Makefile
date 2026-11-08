@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/02/02 23:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/08 16:39:33 ryoon Exp $
 
-DISTNAME=	raylib-5.5
+DISTNAME=	raylib-6.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raysan5/}
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/02/02 23:27:46 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/11/08 16:39:33 ryoon Exp $
 
-BLAKE2s (raylib-5.5.tar.gz) = 759e10152ec4d6d4270d5a60a5e10738bf3c1e088fb5706a5e6a8f7c53020ee6
-SHA512 (raylib-5.5.tar.gz) = 503483a5436e189ad67533dc6c90be592283b84fbd57c86ab457dd1507b1dd11c897767ea9efa83affaf236f2711ec59e56658cf6fcad582a790a5fdc01b5ace
-Size (raylib-5.5.tar.gz) = 42278112 bytes
+BLAKE2s (raylib-6.2.tar.gz) = 9e33056652c1350fa25de29b86a2897d27125880b8d7f53383c8959da3d4b576
+SHA512 (raylib-6.2.tar.gz) = 706fdef061ed8412ec241f9e49f1badf57dd73ef9d7fadbd6612a78f1c42f03c8ab03251fb91d0523bfee757fcf8932b8bafc274c6bc42f0bfc4c17304af1ef0
+Size (raylib-6.2.tar.gz) = 53034927 bytes
