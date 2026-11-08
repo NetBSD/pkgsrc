@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7792 2026/11/08 15:58:07 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7793 2026/11/08 16:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11615,3 +11615,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/ruby-activesupport81 version 8.1.4.1 [taca 2026-11-08]
 	Added devel/ruby-activemodel81 version 8.1.4.1 [taca 2026-11-08]
 	Added devel/ruby-activejob81 version 8.1.4.1 [taca 2026-11-08]
+	Updated math/cadical to 2.1.3nb2 [wiz 2026-11-08]
