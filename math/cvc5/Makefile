@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2026/09/18 22:07:57 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/08 14:00:44 alnsn Exp $
 
 DISTNAME=	cvc5-1.4.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cvc5/}
 GITHUB_TAG=	cvc5-${PKGVERSION_NOREV}
