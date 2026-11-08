@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7833 2026/11/08 19:12:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7834 2026/11/08 19:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11656,3 +11656,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-nbmake version 1.5.5 [wiz 2026-11-08]
 	Updated devel/py-test-benchmark to 5.3.0 [wiz 2026-11-08]
 	Updated devel/py-pydantic-core to 2.50.4 [wiz 2026-11-08]
+	Updated devel/py-pydantic to 2.14.3 [wiz 2026-11-08]
