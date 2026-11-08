@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/11/01 21:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/11/08 22:26:51 wiz Exp $
 
-DISTNAME=	google_api_core-2.43.2
+DISTNAME=	google_api_core-2.44.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-protobuf>=6.33.5:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-proto-plus>=1.26.1:../../devel/py-proto-plus
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.14.1:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.33.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-opentelemetry-api>=1.44.0:../../devel/py-opentelemetry-api
 # undocumented but used
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 # grpc
@@ -24,12 +25,19 @@ DEPENDS+=	${PYPKGPREFIX}-grpcio>=1.75.1:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-grpcio-status>=1.75.1:../../net/py-grpcio-status
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-# needs opentelemetry
 
 USE_LANGUAGES=	# none
 
-# as of 2.43.2 (failure due to missing opentelemetry)
-# 1 failed, 1542 passed, 90 skipped
+# as of 2.44.0
+# 1583 passed, 90 skipped
+#
+# pytest-asyncio emits a PytestDeprecationWarning when
+# asyncio_default_fixture_loop_scope is unset; pyproject.toml
+# sets filterwarnings = "error", which turns this in an error
+do-test:
+	cd ${WRKSRC}/${PYSETUPSUBDIR} && \
+	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} \
+	    -o asyncio_default_fixture_loop_scope=function
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
