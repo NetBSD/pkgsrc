@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.194 2026/11/08 15:39:22 taca Exp $
+# $NetBSD: rails.mk,v 1.195 2026/11/08 15:48:40 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 72 80
+#	Possible values: 72 80 81
 #	Default: 72
 #
 #
@@ -49,13 +49,14 @@ _RUBY_RAILS_MK=	# defined
 #
 RUBY_RAILS72_VERSION?=	7.2.4
 RUBY_RAILS80_VERSION?=	8.0.5.2
+RUBY_RAILS81_VERSION?=	8.1.4.1
 
 RUBY_RAILS_ACCEPTED?=	# empty
 RUBY_RAILS_DEFAULT?=	72
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	72 80
+RUBY_RAILS_SUPPORTED=	72 80 81
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .  error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -88,7 +89,9 @@ RUBY_RAILS?=	${rr}
 
 RUBY_RAILS_REQD?=	${RUBY_RAILS}
 
-.if ${RUBY_RAILS} == "80"
+.if ${RUBY_RAILS} == "81"
+RAILS_VERSION:=	${RUBY_RAILS81_VERSION}
+.elif ${RUBY_RAILS} == "80"
 RAILS_VERSION:=	${RUBY_RAILS80_VERSION}
 .elif ${RUBY_RAILS} == "72"
 RAILS_VERSION:=	${RUBY_RAILS72_VERSION}
