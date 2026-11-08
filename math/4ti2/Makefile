@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2026/10/27 19:47:41 drixter Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/08 19:56:21 drixter Exp $
 
-DISTNAME=	4ti2-1.6.15
+DISTNAME=	4ti2-1.6.16
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=4ti2/}
 GITHUB_PROJECT=	4ti2
-GITHUB_RELEASE=	Release_1_6_15
+GITHUB_RELEASE=	Release_1_6_16
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://4ti2.github.io/
