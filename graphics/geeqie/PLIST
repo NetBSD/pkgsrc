@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.18 2026/10/11 16:21:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/11/08 13:19:32 gdt Exp $
 bin/geeqie
 lib/geeqie/downsize
 lib/geeqie/geeqie-camera-import
 lib/geeqie/geeqie-camera-import-hook-script
+lib/geeqie/geeqie-convert-image.sh
 lib/geeqie/geeqie-exif-datetime-to-file
 lib/geeqie/geeqie-export-jpeg
-lib/geeqie/geeqie-image-crop
 lib/geeqie/geeqie-random-image
 lib/geeqie/geeqie-resize-image
 lib/geeqie/geeqie-rotate
@@ -26,9 +26,9 @@ share/doc/geeqie/icon-fallbacks/COPYING.GPL-3
 share/doc/geeqie/icon-fallbacks/COPYING.LGPL-3
 share/doc/geeqie/icon-fallbacks/README.md
 share/geeqie/applications/org.geeqie.camera-import.desktop
+share/geeqie/applications/org.geeqie.convert-image.desktop
 share/geeqie/applications/org.geeqie.exif-datetime-to-file.desktop
 share/geeqie/applications/org.geeqie.export-jpeg.desktop
-share/geeqie/applications/org.geeqie.image-crop.desktop
 share/geeqie/applications/org.geeqie.open-with.desktop
 share/geeqie/applications/org.geeqie.random-image.desktop
 share/geeqie/applications/org.geeqie.resize-image.desktop
@@ -78,3 +78,4 @@ share/locale/vi/LC_MESSAGES/geeqie.mo
 share/locale/zh_CN/LC_MESSAGES/geeqie.mo
 share/locale/zh_TW/LC_MESSAGES/geeqie.mo
 share/metainfo/org.geeqie.Geeqie.metainfo.xml
+@pkgdir share/man/man1
