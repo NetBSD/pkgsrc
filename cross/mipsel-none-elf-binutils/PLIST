@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/31 16:42:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/08 16:31:10 ryoon Exp $
 cross-mipsel-none-elf/bin/mipsel-none-elf-addr2line
 cross-mipsel-none-elf/bin/mipsel-none-elf-ar
 cross-mipsel-none-elf/bin/mipsel-none-elf-as
@@ -53,22 +53,31 @@ cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.x
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xbn
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xc
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xce
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xcer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xd
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdc
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdce
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdcer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xde
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xder
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdw
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdwe
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xdwer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xe
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xn
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xr
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xs
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xsc
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xsce
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xscer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xse
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xser
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xsw
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xswe
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xswer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xu
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xw
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xwe
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xwer
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/stamp
