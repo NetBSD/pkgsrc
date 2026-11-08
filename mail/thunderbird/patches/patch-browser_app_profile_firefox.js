@@ -1,13 +1,13 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.8 2026/10/04 13:27:53 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.9 2026/11/08 12:32:17 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2026-09-24 10:45:34.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2026-10-26 19:16:26.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -3055,6 +3055,36 @@ pref("toolkit.coverage.endpoint.base", "https://covera
- pref("toolkit.coverage.enabled", false);
- pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
+@@ -3129,6 +3129,36 @@ pref("app.normandy.onsync_skew_sec", 600);
+   pref("intl.multilingual.aboutWelcome.languageMismatchEnabled", false);
+ #endif
  
 +// Select UI locale from LANG/LC_MESSAGE environmental variables
 +pref("intl.locale.requested", "");
