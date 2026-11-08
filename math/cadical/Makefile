@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/08/04 20:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/08 13:51:53 alnsn Exp $
 
 DISTNAME=	cadical-2.1.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arminbiere/}
 GITHUB_TAG=	rel-${PKGVERSION_NOREV}
@@ -17,9 +18,19 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
 TEST_TARGET=	test
 
-INSTALLATION_DIRS=	bin include/cadical lib
+INSTALLATION_DIRS=	bin include/cadical lib lib/pkgconfig
+
+SUBST_CLASSES+=		pc
+SUBST_STAGE.pc=		pre-configure
+SUBST_MESSAGE.pc=	Set prefix and version in cadical.pc.
+SUBST_FILES.pc=		cadical.pc
+SUBST_VARS.pc=		PREFIX PKGVERSION_NOREV
+
+post-extract:
+	${CP} ${FILESDIR}/cadical.pc ${WRKSRC}/cadical.pc
 
 do-install:
+	${INSTALL_DATA} ${WRKSRC}/cadical.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 	${INSTALL_PROGRAM} ${WRKSRC}/build/cadical ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/src/tracer.hpp ${DESTDIR}${PREFIX}/include/cadical
 	${INSTALL_DATA} ${WRKSRC}/src/cadical.hpp ${DESTDIR}${PREFIX}/include/cadical

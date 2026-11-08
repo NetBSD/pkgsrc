@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2026/06/30 22:52:48 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/08 13:51:53 alnsn Exp $
 bin/cadical
 include/cadical/cadical.hpp
 include/cadical/tracer.hpp
 lib/libcadical.a
+lib/pkgconfig/cadical.pc

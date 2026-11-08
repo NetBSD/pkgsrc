@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: CaDiCaL
+Description: CaDiCaL SAT solver (v2)
+Version: @PKGVERSION_NOREV@
+Libs: -L${libdir} -lcadical
+Cflags: -I${includedir}
