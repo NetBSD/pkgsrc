@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.383 2026/10/19 10:13:32 sborrill Exp $
+# $NetBSD: Makefile,v 1.384 2026/11/08 16:43:03 ryoon Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -147,6 +147,7 @@ SUBDIR+=	libretro-virtualjaguar
 SUBDIR+=	libspectrum
 SUBDIR+=	lrmi
 SUBDIR+=	m1
+SUBDIR+=	m88m
 SUBDIR+=	makeppf
 SUBDIR+=	mame
 SUBDIR+=	marduk
