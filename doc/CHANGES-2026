@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7795 2026/11/08 16:03:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7796 2026/11/08 16:04:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11618,3 +11618,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/cadical to 2.1.3nb2 [wiz 2026-11-08]
 	Added databases/ruby-activerecord81 version 8.1.4.1 [taca 2026-11-08]
 	Updated lang/quickjs-ng to 0.18.0 [wiz 2026-11-08]
+	Added www/ruby-actionview81 version 8.1.4.1 [taca 2026-11-08]
