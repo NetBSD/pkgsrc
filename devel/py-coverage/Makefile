@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2026/11/03 14:08:25 adam Exp $
+# $NetBSD: Makefile,v 1.101 2026/11/08 17:35:41 wiz Exp $
 
-DISTNAME=	coverage-7.17.1
+DISTNAME=	coverage-7.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -18,8 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage3
 
-# Testing: AssertionError: assert None
-# 'fixed' by running as root, needs to find a writeable directory
+# 161 failed, 1482 passed, 64 skipped, 12 errors
+# after 'make install'
+# 143 failed, 1500 passed, 64 skipped, 13 errors
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
