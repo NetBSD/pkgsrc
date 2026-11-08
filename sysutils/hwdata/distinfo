@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2026/10/04 15:38:44 wiz Exp $
+$NetBSD: distinfo,v 1.21 2026/11/08 15:49:07 wiz Exp $
 
-BLAKE2s (hwdata-0.412.tar.gz) = d15dfd828fd709c0211b0f86b1cd660422cf88d5a674ecc66b1aaeb7b20ee064
-SHA512 (hwdata-0.412.tar.gz) = 2d9dfb74955d3de2df489b4102d1201f06162153d24797bee328f9d91f57c1f1fb786f8706d95912974fea503c021867fa8da7c3dee951339365a6145041d522
-Size (hwdata-0.412.tar.gz) = 2653545 bytes
+BLAKE2s (hwdata-0.413.tar.gz) = c130a1817fb0c3b3edb061984e86ac06c04403fce6458be23aa06b7b977f0842
+SHA512 (hwdata-0.413.tar.gz) = d5a2630d929c5e2c015d3d996092d97da351c764f823c1af4c95bc01a7f20e64ccb87c0f37db2220a671397010cd6f83526282669e7f7f1a706fb021a2eca5da
+Size (hwdata-0.413.tar.gz) = 2668896 bytes
 SHA1 (patch-Makefile) = b8d6fb8d4f8db0c634eba59085ef49db399f7c92
