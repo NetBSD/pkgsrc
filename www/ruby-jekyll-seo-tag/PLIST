@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/01 14:55:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/08 13:49:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.github/workflows/release.yml
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/jekyll-seo-tag/author_drop.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/drop.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/filters.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/image_drop.rb
+${GEM_LIBDIR}/lib/jekyll-seo-tag/json_filters.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/json_ld.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/json_ld_drop.rb
 ${GEM_LIBDIR}/lib/jekyll-seo-tag/url_helper.rb
