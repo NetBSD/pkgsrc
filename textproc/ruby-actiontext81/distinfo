@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/08 16:23:40 taca Exp $
+
+BLAKE2s (actiontext-8.1.4.1.gem) = 2b7102c454c13d7ef17df1deaba9842d22335ecb57e958bd0511d08c4db83fcb
+SHA512 (actiontext-8.1.4.1.gem) = 4084c09e66587113b7f2a9f66e8390a83b41a156ed632224c741bfe4c99d4c48c3c10823a807248ad7e65aa482f571c9283821b960e72654c0e283789b4a4eb1
+Size (actiontext-8.1.4.1.gem) = 42496 bytes
