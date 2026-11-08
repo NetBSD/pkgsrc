@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2026/11/01 22:04:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2026/11/08 19:22:39 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -33,6 +33,13 @@ ${PYSITELIB}/urwid/display/_raw_display_base.pyc
 ${PYSITELIB}/urwid/display/_raw_display_base.pyo
 ${PYSITELIB}/urwid/display/_web.css
 ${PYSITELIB}/urwid/display/_web.js
+${PYSITELIB}/urwid/display/_web_common.js
+${PYSITELIB}/urwid/display/_web_common.py
+${PYSITELIB}/urwid/display/_web_common.pyc
+${PYSITELIB}/urwid/display/_web_common.pyo
+${PYSITELIB}/urwid/display/_websocket.css
+${PYSITELIB}/urwid/display/_websocket.html
+${PYSITELIB}/urwid/display/_websocket.js
 ${PYSITELIB}/urwid/display/_win32.py
 ${PYSITELIB}/urwid/display/_win32.pyc
 ${PYSITELIB}/urwid/display/_win32.pyo
@@ -60,6 +67,9 @@ ${PYSITELIB}/urwid/display/raw.pyo
 ${PYSITELIB}/urwid/display/web.py
 ${PYSITELIB}/urwid/display/web.pyc
 ${PYSITELIB}/urwid/display/web.pyo
+${PYSITELIB}/urwid/display/websocket.py
+${PYSITELIB}/urwid/display/websocket.pyc
+${PYSITELIB}/urwid/display/websocket.pyo
 ${PYSITELIB}/urwid/event_loop/__init__.py
 ${PYSITELIB}/urwid/event_loop/__init__.pyc
 ${PYSITELIB}/urwid/event_loop/__init__.pyo
@@ -72,6 +82,9 @@ ${PYSITELIB}/urwid/event_loop/asyncio_loop.pyo
 ${PYSITELIB}/urwid/event_loop/glib_loop.py
 ${PYSITELIB}/urwid/event_loop/glib_loop.pyc
 ${PYSITELIB}/urwid/event_loop/glib_loop.pyo
+${PYSITELIB}/urwid/event_loop/guarded_loop.py
+${PYSITELIB}/urwid/event_loop/guarded_loop.pyc
+${PYSITELIB}/urwid/event_loop/guarded_loop.pyo
 ${PYSITELIB}/urwid/event_loop/main_loop.py
 ${PYSITELIB}/urwid/event_loop/main_loop.pyc
 ${PYSITELIB}/urwid/event_loop/main_loop.pyo
@@ -169,6 +182,9 @@ ${PYSITELIB}/urwid/widget/edit.pyo
 ${PYSITELIB}/urwid/widget/filler.py
 ${PYSITELIB}/urwid/widget/filler.pyc
 ${PYSITELIB}/urwid/widget/filler.pyo
+${PYSITELIB}/urwid/widget/filtered_walker.py
+${PYSITELIB}/urwid/widget/filtered_walker.pyc
+${PYSITELIB}/urwid/widget/filtered_walker.pyo
 ${PYSITELIB}/urwid/widget/frame.py
 ${PYSITELIB}/urwid/widget/frame.pyc
 ${PYSITELIB}/urwid/widget/frame.pyo
@@ -190,9 +206,15 @@ ${PYSITELIB}/urwid/widget/monitored_deque.pyo
 ${PYSITELIB}/urwid/widget/monitored_list.py
 ${PYSITELIB}/urwid/widget/monitored_list.pyc
 ${PYSITELIB}/urwid/widget/monitored_list.pyo
+${PYSITELIB}/urwid/widget/notifications.py
+${PYSITELIB}/urwid/widget/notifications.pyc
+${PYSITELIB}/urwid/widget/notifications.pyo
 ${PYSITELIB}/urwid/widget/overlay.py
 ${PYSITELIB}/urwid/widget/overlay.pyc
 ${PYSITELIB}/urwid/widget/overlay.pyo
+${PYSITELIB}/urwid/widget/overlay_stack.py
+${PYSITELIB}/urwid/widget/overlay_stack.pyc
+${PYSITELIB}/urwid/widget/overlay_stack.pyo
 ${PYSITELIB}/urwid/widget/padding.py
 ${PYSITELIB}/urwid/widget/padding.pyc
 ${PYSITELIB}/urwid/widget/padding.pyo
@@ -211,6 +233,15 @@ ${PYSITELIB}/urwid/widget/scrollable.pyo
 ${PYSITELIB}/urwid/widget/solid_fill.py
 ${PYSITELIB}/urwid/widget/solid_fill.pyc
 ${PYSITELIB}/urwid/widget/solid_fill.pyo
+${PYSITELIB}/urwid/widget/spinner.py
+${PYSITELIB}/urwid/widget/spinner.pyc
+${PYSITELIB}/urwid/widget/spinner.pyo
+${PYSITELIB}/urwid/widget/table.py
+${PYSITELIB}/urwid/widget/table.pyc
+${PYSITELIB}/urwid/widget/table.pyo
+${PYSITELIB}/urwid/widget/tabs.py
+${PYSITELIB}/urwid/widget/tabs.pyc
+${PYSITELIB}/urwid/widget/tabs.pyo
 ${PYSITELIB}/urwid/widget/text.py
 ${PYSITELIB}/urwid/widget/text.pyc
 ${PYSITELIB}/urwid/widget/text.pyo
