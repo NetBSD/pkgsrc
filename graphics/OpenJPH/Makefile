@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2026/09/26 09:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/08 15:43:20 wiz Exp $
 #
 # Note: every non-micro update currently incurs a recursive bump
 # https://github.com/aous72/OpenJPH/issues/304
 
-DISTNAME=	OpenJPH-0.32.0
+DISTNAME=	OpenJPH-0.33.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aous72/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
