@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7830 2026/11/08 18:33:13 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7831 2026/11/08 19:00:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11653,3 +11653,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/py-platformdirs to 4.14.5 [wiz 2026-11-08]
 	Updated lang/runawk to 1.7.0 [cheusov 2026-11-08]
 	Updated textproc/py-pdf to 7.0.0 [wiz 2026-11-08]
+	Added devel/py-nbmake version 1.5.5 [wiz 2026-11-08]
