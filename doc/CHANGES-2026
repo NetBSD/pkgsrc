@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7838 2026/11/08 19:18:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7839 2026/11/08 19:19:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11661,3 +11661,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-serializable to 2.2.0 [wiz 2026-11-08]
 	Updated www/py-soupsieve to 4.0.1 [wiz 2026-11-08]
 	Updated devel/py-typer to 0.28.0 [wiz 2026-11-08]
+	Updated devel/py-typing-inspection to 0.4.5 [wiz 2026-11-08]
