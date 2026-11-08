@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7813 2026/11/08 17:26:32 pho Exp $
+$NetBSD: CHANGES-2026,v 1.7814 2026/11/08 17:31:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11636,3 +11636,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/raygui version 5.0 [ryoon 2026-11-08]
 	Added emulators/m88m version 1.2.4 [ryoon 2026-11-08]
 	Updated devel/hs-file-io to 0.2.0 [pho 2026-11-08]
+	Updated devel/py-click to 8.5.1 [wiz 2026-11-08]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28321 2026/11/08 16:39:48 ryoon Exp $
+$NetBSD: TODO,v 1.28322 2026/11/08 17:31:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1135,7 +1135,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-certbot-5.9.0
 	o py-certbot-nginx-5.9.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
-	o py-click-8.5.1
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-confuse-2.3.1
 	o py-coverage-7.17.2
