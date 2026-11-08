@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7845 2026/11/08 21:32:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7846 2026/11/08 21:35:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11668,3 +11668,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.1.0 [wiz 2026-11-08]
 	Added devel/py-opentelemetry-test-utils version 0.66b2 [wiz 2026-11-08]
 	Added devel/py-opentelemetry-api version 1.45.2 [wiz 2026-11-08]
+	Updated archivers/minizip to 1.4 [wiz 2026-11-08]
