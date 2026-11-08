@@ -1,0 +1,118 @@
+#!/bin/sh
+# $NetBSD: echo-msg,v 1.1 2026/11/08 09:35:43 kim Exp $
+#
+# Print a pkgsrc status message and show phase messages as the terminal
+# title.  With SMART_MESSAGES defined, phase messages carry the make target
+# and the stack of packages being built (see _PKGSRC_IN in bsd.pkg.mk):
+#
+#	===> target [pkg dep ...] ===> message
+#
+# When the title can be set, the stack becomes the title and only
+# "===> message" is printed.  Otherwise the message is printed unchanged.
+#
+# To use it, add to /etc/mk.conf:
+#
+#	ECHO_MSG=	${PKGSRCDIR}/mk/scripts/echo-msg
+#	SMART_MESSAGES=	yes
+#
+# Copyright (c) 2026 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Kimmo Suominen.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+set -u
+
+PATH=/bin:/usr/bin
+export PATH
+
+PROG="${0##*/}"
+
+usage()
+{
+    cat <<-USAGE
+	Usage:	${PROG} [message ...]
+
+	Print the message like echo(1).  When standard output is a
+	terminal, also show phase ("===>") messages as the tmux pane
+	or terminal title.  With SMART_MESSAGES, the title shows the
+	stack of packages being built, and the target and stack are
+	left out of the printed message.  Other messages leave the
+	title alone.
+
+	Options:
+	-h	Show this help
+	USAGE
+}
+
+# Print the title escape for this terminal; fail if it has none.
+set_title()
+{
+    case "${TERM-}" in
+    tmux*|xterm*)
+	printf '\033]0;%s\007' "${1}"
+	;;
+    screen*)
+	if [ -n "${TMUX-}" ]
+	then
+	    printf '\033]0;%s\007' "${1}"
+	else
+	    printf '\033k%s\033\\' "${1}"
+	fi
+	;;
+    *)
+	return 1
+	;;
+    esac
+}
+
+case "${1-}" in
+-h) usage; exit 0;;
+esac
+
+msg="${*}"
+
+if [ -t 1 ]
+then
+    case "${msg}" in
+    "===> "*" ["*"] ===>"*)
+	title="${msg#*"["}"
+	title="${title%%"]"*}"
+	if [ -n "${title}" ] && set_title "${title}"
+	then
+	    msg="${msg#*"] "}"
+	fi
+	;;
+    "===>"*)
+	title="${msg#"${msg%%[!=> ]*}"}"
+	if [ -n "${title}" ]
+	then
+	    set_title "${title}" || :
+	fi
+	;;
+    esac
+fi
+
+printf '%s\n' "${msg}"
+exit 0
