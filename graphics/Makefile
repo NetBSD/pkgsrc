@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1136 2026/11/02 20:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1137 2026/11/08 14:54:48 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -364,6 +364,7 @@ SUBDIR+=	lximage-qt
 SUBDIR+=	lxqt-themes
 SUBDIR+=	magicpoint
 SUBDIR+=	mandelbulber
+SUBDIR+=	manifold-geometry
 SUBDIR+=	mate-backgrounds
 SUBDIR+=	mate-icon-theme
 SUBDIR+=	mate-icon-theme-faenza
