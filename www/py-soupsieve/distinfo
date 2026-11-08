@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2026/10/24 10:17:32 adam Exp $
+$NetBSD: distinfo,v 1.29 2026/11/08 19:17:02 wiz Exp $
 
-BLAKE2s (soupsieve-3.0.4.tar.gz) = 87676ecad6797eb4d7430e57f54347cf599dfa0ffd4ed4bf2c7f1998d451f65f
-SHA512 (soupsieve-3.0.4.tar.gz) = df77bc51d8e6a4b525a9cc13830766d36bde8522d3f56c441aa3df280e65b5d2ac716b485d3637f6b51b5d9b5ffe55d05f10069d2d17ad3b99d3f43b36e00afe
-Size (soupsieve-3.0.4.tar.gz) = 119017 bytes
+BLAKE2s (soupsieve-4.0.1.tar.gz) = e4f8026bedfd102fc375482ca977c1e95690d470fce434f8e553808ab86c87c7
+SHA512 (soupsieve-4.0.1.tar.gz) = c70e187f08f3a3ac7a44a3c6108c51768fe3fdf89e2ea25990c5c33bad8c3084c23fbada153b4c18148f4b82945c1786b730e6ff52ed1d51fe804debbb57f207
+Size (soupsieve-4.0.1.tar.gz) = 153302 bytes

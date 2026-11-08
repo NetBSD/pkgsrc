@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/08 19:17:02 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/soupsieve/__init__.pyo
 ${PYSITELIB}/soupsieve/__meta__.py
 ${PYSITELIB}/soupsieve/__meta__.pyc
 ${PYSITELIB}/soupsieve/__meta__.pyo
+${PYSITELIB}/soupsieve/bidi.py
+${PYSITELIB}/soupsieve/bidi.pyc
+${PYSITELIB}/soupsieve/bidi.pyo
 ${PYSITELIB}/soupsieve/css_match.py
 ${PYSITELIB}/soupsieve/css_match.pyc
 ${PYSITELIB}/soupsieve/css_match.pyo
