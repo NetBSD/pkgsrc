@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7773 2026/11/08 15:02:11 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7774 2026/11/08 15:03:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11577,3 +11577,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added graphics/alembic version 1.8.12 [ryoon 2026-11-08]
 	Added graphics/partio version 1.20.0 [ryoon 2026-11-08]
 	Updated www/ruby-typhoeus to 1.7.1 [taca 2026-11-08]
+	Added graphics/osl version 1.15.7.0 [ryoon 2026-11-08]
