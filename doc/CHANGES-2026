@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7742 2026/11/07 22:44:27 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7743 2026/11/08 08:35:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11545,3 +11545,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-rack-test to 2.3.0 [taca 2026-11-07]
 	Updated databases/p5-SQL-Abstract to 2.000003 [wiz 2026-11-07]
 	Updated lang/nim to 2.4.0 [wiz 2026-11-07]
+	Updated security/p5-Mozilla-CA to 20261105 [wiz 2026-11-08]
