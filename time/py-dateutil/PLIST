@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/10/25 12:49:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/11/08 17:45:39 wiz Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -65,6 +65,5 @@ ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
