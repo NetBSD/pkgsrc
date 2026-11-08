@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4720 2026/11/04 14:42:30 taca Exp $
+# $NetBSD: Makefile,v 1.4721 2026/11/08 13:23:25 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -480,6 +480,7 @@ SUBDIR+=	gitolite
 SUBDIR+=	gitpane
 SUBDIR+=	gitte
 SUBDIR+=	gitui
+SUBDIR+=	gklib
 SUBDIR+=	glade
 SUBDIR+=	glasgow
 SUBDIR+=	glib
