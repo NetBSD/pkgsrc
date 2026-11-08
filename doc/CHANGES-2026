@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7828 2026/11/08 18:16:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7829 2026/11/08 18:23:56 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11651,3 +11651,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/py-lap to 0.5.14 [wiz 2026-11-08]
 	Updated lang/py-mypy_extensions to 1.2.0 [wiz 2026-11-08]
 	Updated misc/py-platformdirs to 4.14.5 [wiz 2026-11-08]
+	Updated lang/runawk to 1.7.0 [cheusov 2026-11-08]
