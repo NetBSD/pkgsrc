@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7818 2026/11/08 17:41:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7819 2026/11/08 17:45:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11641,3 +11641,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coverage to 7.17.2 [wiz 2026-11-08]
 	Added math/bitwuzla version 0.9.1 [alnsn 2026-11-08]
 	Updated security/py-cryptodome to 4.4.0 [wiz 2026-11-08]
+	Updated time/py-dateutil to 4.0.0 [wiz 2026-11-08]
