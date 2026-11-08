@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/07/02 19:34:01 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/08 13:57:54 alnsn Exp $
 include/symfpu/core/add.h
 include/symfpu/core/classify.h
 include/symfpu/core/compare.h
@@ -17,4 +17,5 @@ include/symfpu/core/unpackedFloat.h
 include/symfpu/utils/common.h
 include/symfpu/utils/numberOfRoundingModes.h
 include/symfpu/utils/properties.h
+lib/pkgconfig/symfpu.pc
 lib/symfpu.a

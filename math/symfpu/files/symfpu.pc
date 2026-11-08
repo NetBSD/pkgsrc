@@ -1,0 +1,7 @@
+prefix=@PREFIX@
+includedir=${prefix}/include
+
+Name: SymFPU
+Description: Implementation of IEEE-754 / SMT-LIB floating-point
+Version: @PKGVERSION_NOREV@
+Cflags: -I${includedir}
