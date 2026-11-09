@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.331.2.3 2026/11/09 08:24:08 maya Exp $
+# $NetBSD: rubyversion.mk,v 1.331.2.4 2026/11/09 08:39:05 maya Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -212,7 +212,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY33_VERSION=		3.3.12
+RUBY33_VERSION=		3.3.13
 RUBY34_VERSION=		3.4.12
 RUBY40_VERSION=		4.0.9
 
