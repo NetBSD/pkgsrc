@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7861 2026/11/09 10:45:49 nros Exp $
+$NetBSD: CHANGES-2026,v 1.7862 2026/11/09 10:47:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11687,3 +11687,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-benchmark to 5.3.1nb1 [wiz 2026-11-09]
 	Updated audio/musescore to 4.6.5nb10 [wiz 2026-11-09]
 	Updated editors/TeXmacs to 2.1.5 [nros 2026-11-09]
+	Updated devel/ccache to 4.14.3 [adam 2026-11-09]
+	Updated databases/postgresql-timescaledb to 2.31.0 [adam 2026-11-09]
