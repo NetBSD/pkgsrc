@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7873 2026/11/09 15:14:48 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7874 2026/11/09 15:25:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11706,3 +11706,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated multimedia/gstreamer1 to 1.28.9 [adam 2026-11-09]
 	Updated databases/adodb to 5.22.12 [taca 2026-11-09]
 	Removed databases/php-mongo [taca 2026-11-09]
+	Updated databases/php-mongodb to 1.21.13 [taca 2026-11-09]
