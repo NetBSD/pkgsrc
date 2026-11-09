@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7857 2026/11/09 08:49:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7858 2026/11/09 09:29:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11683,3 +11683,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/defguard-proxy to 2.2.0 [adam 2026-11-09]
 	Updated net/tor to 0.4.9.16 [adam 2026-11-09]
 	Updated benchmarks/google-benchmark to 1.10.0 [adam 2026-11-09]
+	Added devel/py-aspectlib version 2.0.0 [wiz 2026-11-09]
