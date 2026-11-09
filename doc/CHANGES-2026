@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7877 2026/11/09 17:42:38 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7878 2026/11/09 18:09:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11711,3 +11711,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/wordtsar to 0.5.1850 [ryoon 2026-11-09]
 	Updated textproc/link-grammar to 5.13.2 [gutteridge 2026-11-09]
 	Updated textproc/py-link-grammar to 5.13.2 [gutteridge 2026-11-09]
+	Updated pkgtools/pkgin to 26.11.0 [jperkin 2026-11-09]
