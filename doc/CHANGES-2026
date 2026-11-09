@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7865 2026/11/09 13:40:48 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7866 2026/11/09 13:45:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11694,3 +11694,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/py-tifffile to 2026.11.8 [adam 2026-11-09]
 	Updated textproc/py-regex to 2026.11.9 [adam 2026-11-09]
 	Updated lang/janet to 1.43.0 [ktnb 2026-11-09]
+	Updated textproc/py-fastjsonschema to 2.22.3 [adam 2026-11-09]
+	Updated textproc/py-lunr to 0.8.1 [adam 2026-11-09]
