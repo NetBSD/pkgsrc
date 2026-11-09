@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/08/13 11:06:27 pho Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/09 11:31:42 pho Exp $
 
 DISTNAME=	floskell-0.11.1
 PKGNAME=	${DISTNAME}
@@ -11,7 +11,8 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
-	data-default
+	data-default	\
+	ghc-prim
 
 # lib:floskell
 .include "../../converters/hs-aeson/buildlink3.mk"
