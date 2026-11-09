@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7878 2026/11/09 18:09:35 jperkin Exp $
+$NetBSD: CHANGES-2026,v 1.7879 2026/11/09 23:06:15 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11712,3 +11712,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/link-grammar to 5.13.2 [gutteridge 2026-11-09]
 	Updated textproc/py-link-grammar to 5.13.2 [gutteridge 2026-11-09]
 	Updated pkgtools/pkgin to 26.11.0 [jperkin 2026-11-09]
+	Added cross/mingw-w64-i686-crt-crtdll version 14.0.0 [js 2026-11-09]
