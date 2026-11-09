@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7862 2026/11/09 10:47:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7863 2026/11/09 11:29:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11689,3 +11689,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/TeXmacs to 2.1.5 [nros 2026-11-09]
 	Updated devel/ccache to 4.14.3 [adam 2026-11-09]
 	Updated databases/postgresql-timescaledb to 2.31.0 [adam 2026-11-09]
+	Updated lang/python315 to 3.15.2nb1 [wiz 2026-11-09]
