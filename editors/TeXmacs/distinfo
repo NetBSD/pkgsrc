@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.76 2023/11/02 21:34:26 nros Exp $
+$NetBSD: distinfo,v 1.77 2026/11/09 10:45:17 nros Exp $
 
-BLAKE2s (TeXmacs-2.1.2-src.tar.gz) = fb763e21de91a4b84d8e70ec0c1167960392d82dfc97cd892714c9987802543f
-SHA512 (TeXmacs-2.1.2-src.tar.gz) = 8fef84acd60d53a0904fd722dc1ccc027975a769006a3433ccdc723479f22a60c0abfeba071d73f1a12c42e7a80dcf08eae3203e9df75780120d6db899ea6fa4
-Size (TeXmacs-2.1.2-src.tar.gz) = 36224939 bytes
-SHA1 (patch-CMakeLists.txt) = fee1a5c2412b78f7dae71cfee55c4095cf03bd3e
+BLAKE2s (TeXmacs-2.1.5-src.tar.gz) = 6f1a24ee827f5feb4a963e9472add4d03ea21337524c8bfb4cf03026aed3cd03
+SHA512 (TeXmacs-2.1.5-src.tar.gz) = baff6fbfec3cc08bd2c0f5d340f584895f29dc58059f7437edf1bb2537a94b7be0035715ff8fa2c1a36ab8a9adc5b6f0673651eba4da6ef8598281ed0a277389
+Size (TeXmacs-2.1.5-src.tar.gz) = 95945496 bytes
+SHA1 (patch-CMakeLists.txt) = b234a9129d1792185c7acd172f82113808dfabb3
 SHA1 (patch-misc_CMakeLists.txt) = 0534c9a1c66315d3189a4d6932ce56b3d7c2978a
 SHA1 (patch-misc_tm-devel-mac_Makefile) = acddf680138bee82ff46e1e9cb4a69be81d764b7
 SHA1 (patch-plugins_CMakeLists.txt) = fa9efcdf31e44d31076f351572e4177f8f280d16
-SHA1 (patch-src_Plugins_Qt_qt__renderer.hpp) = 4462d168612938d9494d1d4b7135a5d04ff2a06e
+SHA1 (patch-src_Plugins_Qt_qt__renderer.hpp) = 8e2ef0d90a61e2f6561e312ffa010b75e871c05c
+SHA1 (patch-src_System_config.h.cmake) = f63893be9981c47b3de118bbb5a74715df4c5843

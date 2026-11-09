@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.184 2026/09/29 06:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2026/11/09 10:45:17 nros Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
-DISTNAME=		TeXmacs-2.1.2-src
+DISTNAME=		TeXmacs-2.1.5-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		19
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
@@ -20,32 +19,42 @@ USE_TOOLS+=		gmake perl:run pkg-config bash:run
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-src/.15315/}
+
 #Use Qt5 on all platforms
-CMAKE_CONFIGURE_ARGS+=	-DTEXMACS_GUI=Qt5
+#CMAKE_CONFIGURE_ARGS+=	-DTEXMACS_GUI=Qt6
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+
+
+#HAS_CONFIGURE=		yes
+#CONFIGURE_ARGS+=	--with-guile=embedded
 
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 REPLACE_PYTHON+=	plugins/eukleides/python/tm_eukleides.py
 
 REPLACE_BASH+=		configure
 REPLACE_BASH+=		cmake/CreateBundle.sh.in
+REPLACE_BASH+=		plugins/feynmf/bin/tm_feynmf
+REPLACE_BASH+=		plugins/lisp/bin/tm_lisp
+REPLACE_BASH+=		plugins/lush/bin/tm_lush
+REPLACE_BASH+=		plugins/mathematica/bin/tm_mathematica
 REPLACE_BASH+=		plugins/matlab/bin/tm_matlab
+REPLACE_BASH+=		plugins/mupad/bin/tm_mupad
 REPLACE_BASH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_BASH+=		plugins/texgraph/bin/tm_texgraph
 
 REPLACE_PERL+=		plugins/feynmf/bin/bbox_add.pl
-
-SUBST_CLASSES+=		bash
-SUBST_SED.bash+=	-e "s,/bin/bash,${PREFIX}/bin/bash,"
-SUBST_FILES.bash+=	src/Texmacs/Texmacs/texmacs.cpp
-SUBST_FILES.bash+=	plugins/mupad/bin/tm_mupad
-SUBST_MESSAGE.bash=	Fixing hardcoded bash path in ${SUBST_FILES.bash}
-SUBST_STAGE.bash=	pre-configure
 
 SUBST_CLASSES+=		pyexec
 SUBST_SED.pyexec+=	-e "s,python3,python${PYVERSSUFFIX},"
 SUBST_FILES.pyexec+=	TeXmacs/progs/kernel/library/base.scm
 SUBST_MESSAGE.pyexec=	Fixing name of python executable in ${SUBST_FILES.pyexec}
 SUBST_STAGE.pyexec=	pre-configure
+
+# xdg-open is executed by some of the menus
+DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
+
+.include "options.mk"
 
 .include "../../devel/cmake/build.mk"
 
@@ -61,10 +70,6 @@ SUBST_STAGE.pyexec=	pre-configure
 .include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/ghostscript/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.if ${OPSYS} == "Darwin"
-.include "../../x11/qt5-qtmacextras/buildlink3.mk"
-.endif
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

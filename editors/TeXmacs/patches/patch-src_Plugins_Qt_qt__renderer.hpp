@@ -1,14 +1,14 @@
-$NetBSD: patch-src_Plugins_Qt_qt__renderer.hpp,v 1.1 2020/06/21 03:54:54 mef Exp $
+$NetBSD: patch-src_Plugins_Qt_qt__renderer.hpp,v 1.2 2026/11/09 10:45:17 nros Exp $
 
 Adapt to QT 5.15.0
 
---- src/Plugins/Qt/qt_renderer.hpp.orig	2020-06-21 02:24:51.846185942 +0000
+--- src/Plugins/Qt/qt_renderer.hpp.orig	2026-03-09 21:55:57.000000000 +0000
 +++ src/Plugins/Qt/qt_renderer.hpp
-@@ -18,6 +18,7 @@
+@@ -19,6 +19,7 @@
  #include <QImage>
  #include <QtGlobal>
  #include <QWidget>
 +#include <QPainterPath>
  
- // if QTMPIXMAPS is defined we use QPixmap for characters
- // otherwise we use QImage (which support alpha also under X11)
+ class qt_renderer_rep:  public basic_renderer_rep {
+ public:

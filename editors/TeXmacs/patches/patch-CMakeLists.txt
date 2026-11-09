@@ -1,6 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/02 21:34:26 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/11/09 10:45:17 nros Exp $
 
 Set GS_* vars to pkgsrc values
+
+Make sure snprintf is used on systems that have it
 
 Pass -L and rpath linking arguments when linking Guile
 Fixes: "-lguile not found" when linking TeXmacs
@@ -10,9 +12,17 @@ Don't install files directly under PREFIX on mac
 
 Don't install pkgsrc patch files
 
---- CMakeLists.txt.orig	2022-05-05 15:27:04.522996359 +0000
+--- CMakeLists.txt.orig	2026-03-09 21:55:56.000000000 +0000
 +++ CMakeLists.txt
-@@ -345,13 +345,14 @@ endif (_guile_dots_test)
+@@ -159,6 +159,7 @@ check_include_file (X11/Xutil.h HAVE_X11
+ check_include_file (pty.h HAVE_PTY_H)
+ check_include_file (util.h HAVE_UTIL_H)
+ check_function_exists (gettimeofday HAVE_GETTIMEOFDAY)
++check_function_exists (snprintf HAVE_SNPRINTF)
+ 
+ 
+ ### --------------------------------------------------------------------
+@@ -350,13 +351,14 @@ endif (_guile_dots_test)
  set (DEBUG_ASSERT 1)
  
  set (USE_GS 1)
@@ -34,8 +44,13 @@ Don't install pkgsrc patch files
  
  set (GUILE_NUM 1)
  set (PDF_RENDERER 1)
-@@ -549,7 +550,7 @@ set (TeXmacs_MacOS_SRCS
+@@ -555,12 +557,9 @@ set (TeXmacs_MacOS_SRCS
+ ### Determine TeXmacs_Libraries
  ### --------------------------------------------------------------------
+ 
+-if (APPLE AND EXISTS /opt/homebrew/lib)
+-  link_directories (/opt/homebrew/lib)
+-endif ()
  
  set (TeXmacs_Libraries
 -  ${Guile_LIBRARIES}
@@ -43,18 +58,22 @@ Don't install pkgsrc patch files
    ${ZLIB_LIBRARIES}
    ${JPEG_LIBRARIES}
    ${PNG_LIBRARIES}
-@@ -585,10 +586,6 @@ if (TEXMACS_GUI MATCHES "Qt.*")
-     )
-     include (${QT_USE_FILE})
+@@ -619,14 +618,6 @@ if (TEXMACS_GUI MATCHES "Qt.*")
+       add_definitions ("-DQ_WS_MAC")
+     endif (APPLE)
    else (TEXMACS_GUI STREQUAL "Qt4")
 -    # Homebrew installs Qt5 in /usr/local/opt/qt5
 -    if (APPLE AND EXISTS /usr/local/opt/qt5)
 -      list (APPEND CMAKE_PREFIX_PATH "/usr/local/opt/qt5")
 -    endif ()
+-
+-    if (APPLE AND EXISTS /opt/homebrew/opt/qt5/)
+-      list (APPEND CMAKE_PREFIX_PATH "/opt/homebrew/opt/qt5/")
+-    endif ()
  
      if (WIN32 AND EXISTS ${QT_CMAKE_DIR})
        set (Qt5Core_DIR "${QT_CMAKE_DIR}/Qt5Core")
-@@ -769,7 +766,7 @@ add_subdirectory (TeXmacs)
+@@ -807,7 +798,7 @@ add_subdirectory (TeXmacs)
  ### Installation
  ### --------------------------------------------------------------------
  
@@ -63,7 +82,7 @@ Don't install pkgsrc patch files
    install (FILES packages/macos/TeXmacs.icns DESTINATION ${CMAKE_INSTALL_PREFIX})
    install (FILES packages/macos/TeXmacs-document.icns DESTINATION ${CMAKE_INSTALL_PREFIX})
    install (DIRECTORY src/Plugins/Cocoa/English.lproj DESTINATION ${CMAKE_INSTALL_PREFIX})
-@@ -801,6 +798,7 @@ else (WIN32)
+@@ -839,6 +830,7 @@ else (WIN32)
      FILE_PERMISSIONS OWNER_READ GROUP_READ WORLD_READ
      PATTERN "bin" EXCLUDE
      PATTERN "CMakeLists.txt" EXCLUDE
