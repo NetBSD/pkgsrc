@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/11/09 09:29:29 wiz Exp $
+
+BLAKE2s (aspectlib-2.0.0.tar.gz) = e943a173903a17cdfb9be4781b9995ebc32a60f136f2fda3568c5392eefb0282
+SHA512 (aspectlib-2.0.0.tar.gz) = 3611d3f887febae8a60df6ad5567437adaa2105e6622a7d9b543c02f593c9dee43002cd91b89f5d005fc70a8b197b5c568eefa3a0fdb6fc05665f4a1c5107316
+Size (aspectlib-2.0.0.tar.gz) = 156591 bytes
+SHA1 (patch-pytest.ini) = bea7a370284f3ba2ac82310d32534ef3c87f7838
+SHA1 (patch-tests_conftest.py) = 7abdf8464c669719b4bd1534876c2e33910cb729
+SHA1 (patch-tests_test__integrations.py) = 1171ecf6de2b1929ae2f3a28096fca015066ec23

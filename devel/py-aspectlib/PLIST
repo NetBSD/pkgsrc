@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/09 09:29:28 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/aspectlib/__init__.py
+${PYSITELIB}/aspectlib/__init__.pyc
+${PYSITELIB}/aspectlib/__init__.pyo
+${PYSITELIB}/aspectlib/contrib.py
+${PYSITELIB}/aspectlib/contrib.pyc
+${PYSITELIB}/aspectlib/contrib.pyo
+${PYSITELIB}/aspectlib/debug.py
+${PYSITELIB}/aspectlib/debug.pyc
+${PYSITELIB}/aspectlib/debug.pyo
+${PYSITELIB}/aspectlib/pytestsupport.py
+${PYSITELIB}/aspectlib/pytestsupport.pyc
+${PYSITELIB}/aspectlib/pytestsupport.pyo
+${PYSITELIB}/aspectlib/test.py
+${PYSITELIB}/aspectlib/test.pyc
+${PYSITELIB}/aspectlib/test.pyo
+${PYSITELIB}/aspectlib/utils.py
+${PYSITELIB}/aspectlib/utils.pyc
+${PYSITELIB}/aspectlib/utils.pyo
