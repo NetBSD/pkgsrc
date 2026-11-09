@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7864 2026/11/09 13:07:10 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7865 2026/11/09 13:40:48 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11693,3 +11693,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-python-socks to 3.2.1 [adam 2026-11-09]
 	Updated graphics/py-tifffile to 2026.11.8 [adam 2026-11-09]
 	Updated textproc/py-regex to 2026.11.9 [adam 2026-11-09]
+	Updated lang/janet to 1.43.0 [ktnb 2026-11-09]
