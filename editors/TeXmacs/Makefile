@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2026/11/09 10:45:17 nros Exp $
+# $NetBSD: Makefile,v 1.186 2026/11/09 19:24:47 nros Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -20,14 +20,6 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src/.15315/}
-
-#Use Qt5 on all platforms
-#CMAKE_CONFIGURE_ARGS+=	-DTEXMACS_GUI=Qt6
-#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
-
-
-#HAS_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--with-guile=embedded
 
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 REPLACE_PYTHON+=	plugins/eukleides/python/tm_eukleides.py
