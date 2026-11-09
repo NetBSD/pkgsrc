@@ -1,6 +1,17 @@
-@comment $NetBSD: PLIST,v 1.8 2026/01/21 19:05:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/09 08:49:21 adam Exp $
 include/benchmark/benchmark.h
+include/benchmark/benchmark_api.h
+include/benchmark/counter.h
 include/benchmark/export.h
+include/benchmark/macros.h
+include/benchmark/managers.h
+include/benchmark/registration.h
+include/benchmark/reporter.h
+include/benchmark/state.h
+include/benchmark/statistics.h
+include/benchmark/sysinfo.h
+include/benchmark/types.h
+include/benchmark/utils.h
 lib/cmake/benchmark/benchmarkConfig.cmake
 lib/cmake/benchmark/benchmarkConfigVersion.cmake
 lib/cmake/benchmark/benchmarkTargets-release.cmake
@@ -15,6 +26,7 @@ share/doc/benchmark/assets/images/icon.png
 share/doc/benchmark/assets/images/icon.xcf
 share/doc/benchmark/assets/images/icon_black.png
 share/doc/benchmark/assets/images/icon_black.xcf
+share/doc/benchmark/bazel.md
 share/doc/benchmark/dependencies.md
 share/doc/benchmark/index.md
 share/doc/benchmark/perf_counters.md
