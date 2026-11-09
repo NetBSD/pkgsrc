@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/08/13 11:06:23 pho Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/09 09:53:07 pho Exp $
 
 DISTNAME=	aeson-2.2.3.0
 PKGREVISION=	3
@@ -9,6 +9,7 @@ COMMENT=	Fast JSON parsing and encoding
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	ghc-prim	\
 	hashable
 
 .include "../../devel/hs-generically/buildlink3.mk"
