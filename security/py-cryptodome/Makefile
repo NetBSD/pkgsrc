@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/11/08 17:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/11/09 11:29:59 wiz Exp $
 
 DISTNAME=	pycryptodome-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -15,7 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 FORCE_C_STD=	c99
 
-# XXX is this needed?
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP=	appveyor/get_wheels.sh
