@@ -1,0 +1,13 @@
+$NetBSD: patch-build__tools_make__xml__documentation,v 1.1 2026/11/09 05:37:19 jnemeth Exp $
+
+--- build_tools/make_xml_documentation.orig	2026-06-11 14:30:03.000000000 +0000
++++ build_tools/make_xml_documentation
+@@ -238,7 +238,7 @@ for subdir in ${mod_subdirs} ; do
+ 					${XMLSTARLET} val -e -d "${source_tree}/doc/appdocsxml.dtd" "${i}" || { echo "" ; exit 1 ; }
+ 			fi
+ 		fi
+-		${SED} -r "/^\s*(<[?]xml|<.DOCTYPE|<.?docs)/d" "${i}" > "${tmp_output_file}"
++		${SED} -r "/^[[:space:]]*(<[?]xml|<.DOCTYPE|<.?docs)/d" "${i}" > "${tmp_output_file}"
+ 		dirname=${i%/*}
+ 		if [ "${dirname}" != "${subdir_path}" ] ; then
+ 			# If we're in a subdirectory like channels/pjsip, we need to check channels/Makefile
