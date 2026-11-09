@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2025/01/31 10:22:40 pho Exp $
+$NetBSD: distinfo,v 1.6 2026/11/09 13:49:19 pho Exp $
 
 BLAKE2s (ghcide-2.9.0.0.tar.gz) = 6a456c7c6e1ada53350f41ca01ba4f01f210c3780737dc1da02c9d35fcf892aa
 SHA512 (ghcide-2.9.0.0.tar.gz) = f8d0cb3f05c8d7d72d6762a59b957174acccf845fa12336cf1056d8eff36d92a318e567c95a67174fbfddd9dcb1e8b525aeb9f8ff52034fa3afb435c095792d0
 Size (ghcide-2.9.0.0.tar.gz) = 255532 bytes
+SHA1 (patch-src_Development_IDE_GHC_CPP.hs) = 661eab87b0c707af581235bf0b2cad96731d9c2f
+SHA1 (patch-src_Development_IDE_GHC_Compat_Core.hs) = dc6eacb5140731c6da3c4238414e12262a3d32ef
