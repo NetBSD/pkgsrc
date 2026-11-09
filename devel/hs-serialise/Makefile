@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/08/13 11:06:57 pho Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/09 10:12:25 pho Exp $
 
 DISTNAME=	serialise-0.2.6.1
 PKGREVISION=	4
@@ -9,7 +9,8 @@ COMMENT=	Binary serialisation library for Haskell values
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base	\
+	ghc-prim
 
 .include "../../devel/hs-cborg/buildlink3.mk"
 .include "../../devel/hs-half/buildlink3.mk"
