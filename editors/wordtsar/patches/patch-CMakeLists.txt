@@ -1,0 +1,122 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2026/11/09 17:35:45 ryoon Exp $
+
+* Support NetBSD and/or more platforms.
+* Avoid GET_RUNTIME_DEPENDENCIES error under NetBSD.
+
+--- CMakeLists.txt.orig	2026-10-08 17:45:26.000000000 +0000
++++ CMakeLists.txt
+@@ -26,7 +26,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+ 
+ # Linux and MacOS compile options
+-if(CMAKE_SYSTEM_NAME STREQUAL Linux)
++if(CMAKE_SYSTEM_NAME STREQUAL Linux OR CMAKE_SYSTEM_NAME STREQUAL Linux)
+     set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wdeprecated-declarations")
+     set(CMAKE_CXX_FLAGS_DEBUG "-g -rdynamic -DDEBUG ")
+     set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+@@ -424,7 +424,15 @@ if(BUILD_TUI)
+     # Platform link libs + optional font backends.
+     if(WIN32)
+         target_link_libraries(ws PRIVATE ws2_32 Dbghelp gdi32 user32 dwrite d2d1)
+-    elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
++    elseif(APPLE)
++        # Spell checking: NSSpellChecker, as the GUI uses
++        target_sources(ws PRIVATE src/core/spellcheck/macspellcheck.mm)
++        find_library(COREFOUNDATION_LIBRARY CoreFoundation)
++        find_library(CORETEXT_LIBRARY CoreText)
++        target_link_libraries(ws PRIVATE
++            "-framework Foundation" "-framework AppKit"
++            ${COREFOUNDATION_LIBRARY} ${CORETEXT_LIBRARY})
++    else()
+         target_link_libraries(ws PRIVATE pthread hunspell dl)
+ 
+         find_package(PkgConfig QUIET)
+@@ -444,14 +452,6 @@ if(BUILD_TUI)
+                 target_link_libraries(ws PRIVATE ${HARFBUZZ_LIBRARIES} ${FREETYPE_LIBRARIES})
+             endif()
+         endif()
+-    elseif(APPLE)
+-        # Spell checking: NSSpellChecker, as the GUI uses
+-        target_sources(ws PRIVATE src/core/spellcheck/macspellcheck.mm)
+-        find_library(COREFOUNDATION_LIBRARY CoreFoundation)
+-        find_library(CORETEXT_LIBRARY CoreText)
+-        target_link_libraries(ws PRIVATE
+-            "-framework Foundation" "-framework AppKit"
+-            ${COREFOUNDATION_LIBRARY} ${CORETEXT_LIBRARY})
+     endif()
+ 
+     if(MSVC)
+@@ -553,7 +553,15 @@ if(BUILD_TUI)
+ 
+     if(WIN32)
+         target_link_libraries(WSTuiTest PRIVATE ws2_32 Dbghelp gdi32 user32 dwrite d2d1)
+-    elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
++    elseif(APPLE)
++        # Spell checking: NSSpellChecker, as the GUI uses
++        target_sources(WSTuiTest PRIVATE src/core/spellcheck/macspellcheck.mm)
++        find_library(COREFOUNDATION_LIBRARY CoreFoundation)
++        find_library(CORETEXT_LIBRARY CoreText)
++        target_link_libraries(WSTuiTest PRIVATE
++            "-framework Foundation" "-framework AppKit"
++            ${COREFOUNDATION_LIBRARY} ${CORETEXT_LIBRARY})
++    else()
+         target_link_libraries(WSTuiTest PRIVATE pthread hunspell dl)
+         if(PKG_CONFIG_FOUND)
+             if(FONTCONFIG_FOUND)
+@@ -567,14 +575,6 @@ if(BUILD_TUI)
+                 target_link_libraries(WSTuiTest PRIVATE ${HARFBUZZ_LIBRARIES} ${FREETYPE_LIBRARIES})
+             endif()
+         endif()
+-    elseif(APPLE)
+-        # Spell checking: NSSpellChecker, as the GUI uses
+-        target_sources(WSTuiTest PRIVATE src/core/spellcheck/macspellcheck.mm)
+-        find_library(COREFOUNDATION_LIBRARY CoreFoundation)
+-        find_library(CORETEXT_LIBRARY CoreText)
+-        target_link_libraries(WSTuiTest PRIVATE
+-            "-framework Foundation" "-framework AppKit"
+-            ${COREFOUNDATION_LIBRARY} ${CORETEXT_LIBRARY})
+     endif()
+ 
+     if(MSVC)
+@@ -618,11 +618,6 @@ if (WIN32)
+       ws2_32
+       Dbghelp
+    )
+-elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+-   list(APPEND LIBS
+-      pthread
+-      hunspell
+-   )
+ elseif(APPLE)
+    # macOS specific libraries (CoreText: font lookup in gui/utils/fontutils.cpp)
+    list(APPEND LIBS
+@@ -630,6 +625,11 @@ elseif(APPLE)
+       "-framework AppKit"
+       "-framework CoreText"
+    )
++else()
++   list(APPEND LIBS
++      pthread
++      hunspell
++   )
+ endif()
+ 
+ target_link_libraries(WordTsar PUBLIC ${LIBS})
+@@ -780,6 +780,10 @@ else()
+         RUNTIME DESTINATION bin
+         COMPONENT Applications
+     )
++    #install(TARGETS ws
++    #    RUNTIME DESTINATION bin
++    #    COMPONENT Applications
++    #)
+ endif()
+ 
+ # Generate deployment script for distributing the application
+@@ -788,5 +792,5 @@ qt_generate_deploy_app_script(
+     OUTPUT_SCRIPT deploy_script
+     NO_UNSUPPORTED_PLATFORM_ERROR
+ )
+-install(SCRIPT ${deploy_script})
++#install(SCRIPT ${deploy_script})
+ endif() # BUILD_GUI

@@ -1,6 +1,31 @@
-$NetBSD: distinfo,v 1.2 2024/10/02 06:51:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2026/11/09 17:35:45 ryoon Exp $
 
-BLAKE2s (WordTsar-0.3.719-src.zip) = 7cdcaecdb9310b2821cd5449f88a8e9eaa313afd78f7411c634123252ace876a
-SHA512 (WordTsar-0.3.719-src.zip) = 60ffb855c290f0414160b508c36189489d7b9afed5c2cff36e9d0999ec369849ed3bbf54d4bfbce4aa2852a02df664fa481eb692309befb03eb5b47ec38a4ab5
-Size (WordTsar-0.3.719-src.zip) = 3366105 bytes
-SHA1 (patch-src_third-party_zip_zip.h) = b1109dd61e2a53eea21cea94b3c591021f5f0ffc
+BLAKE2s (cpp-unicodelib-18.0.0.tar.gz) = 1199446491f0b91fa4f7ad3407386cc6664c9aefb47f31c4ca09653637d31889
+SHA512 (cpp-unicodelib-18.0.0.tar.gz) = 1933a2cc8e190566cd11230de0477082d7b90dadf85e00db7fba9128910d1320869523202157b1b53d83cde9cc5887c203001ca3c70f0e2a9f101e4cc1ef4267
+Size (cpp-unicodelib-18.0.0.tar.gz) = 1806957 bytes
+BLAKE2s (exprtk-0.0.3.tar.gz) = 1288d2930c89cc782733a6573e50b45ad02e852527e012bb22c616dda9d93d67
+SHA512 (exprtk-0.0.3.tar.gz) = 1493b68929d3cb4e97c0180ef6f111ae4edbbee072ab78223976005b8402e4e7b56d94f013fbbc009f4db2652167fa3b4ba3c33d4029572ebbe61a36df9da9e4
+Size (exprtk-0.0.3.tar.gz) = 1533147 bytes
+BLAKE2s (libharu-2.4.6.tar.gz) = 40aedd14cc9de40141f85cb071f1ad9bd8579b7454679e059114056aafeba39d
+SHA512 (libharu-2.4.6.tar.gz) = c16b1770cd06ffb3d02649de2f4a9e84ca2c42d82183194e01802bf8c6745609a176185d00e37bb06cae9b3245c154cf7e267e47bd71b3b9aa572c28214fec69
+Size (libharu-2.4.6.tar.gz) = 1420425 bytes
+BLAKE2s (picomath-1.1.0.tar.gz) = 746bc1201830d6cd8c92bc3ac3cc02998dacd36d9e43e9e0febeac494ca5f68a
+SHA512 (picomath-1.1.0.tar.gz) = a68232e3d5663515039dc4fd79ac1e02d24582d9c98e5672e6b4513ca6b53bb80a5d5c68a440c14d7dc41a189eed19cf28d744894bf3533b087b01b38130bef0
+Size (picomath-1.1.0.tar.gz) = 18518 bytes
+BLAKE2s (pugixml-1.16.tar.gz) = 45d1696b6c346932c4ac42f6e70c766d61d9e6372eee09968ad1aeb71f40a5a0
+SHA512 (pugixml-1.16.tar.gz) = a550e18c998d4eb7eaadcfe4db7e5616b95e04315fb571563625be1882a54a8e9ac710de79d9451f9dddea8600c898487f2d067d0916dd7abc6e3e29a1624e0b
+Size (pugixml-1.16.tar.gz) = 588574 bytes
+BLAKE2s (simpleini-4.27.tar.gz) = 57fbb8bbebb137b5642a671c484913407828ced361ae4e6c635983fa883c357d
+SHA512 (simpleini-4.27.tar.gz) = f2ba16c76f88d8e299429c401c6076417299c98b0976c25c4fc07ebe563828da93a533e1a2cc4b7078c090416fd02ee4b095313d43b1060dee398b1d31ac7517
+Size (simpleini-4.27.tar.gz) = 90942 bytes
+BLAKE2s (stb-0.0.0-4e9b368bfc071e97206ea5c6adba68dd0cbf8897.tar.gz) = 9bd8a4ba313023efc0dac42e49d2b4b2ffa833b417ffa8ae5c410a91f3f72d0a
+SHA512 (stb-0.0.0-4e9b368bfc071e97206ea5c6adba68dd0cbf8897.tar.gz) = 60227ea75172e89eb50233ee1e0eef1cb6ee1a93926e45bd62f009d15ce8863d129f2a82d336d2082714bcf26319c96800bca3622a67f6324ce060acf7a570a1
+Size (stb-0.0.0-4e9b368bfc071e97206ea5c6adba68dd0cbf8897.tar.gz) = 1515460 bytes
+BLAKE2s (wordtsar-0.5.1850-src.zip) = 5a255d4010edebe16f38e9f88738b0235a9ad99ed622056816e092634432998d
+SHA512 (wordtsar-0.5.1850-src.zip) = d75edd08711a5878c995fed4615bcccb2a0cbb7ed7f6b672a9b90eee22574c2dfe883f5fb8d4efedae093b9acbfb49e073333ad5216b59d12e9134f7ffc60bf4
+Size (wordtsar-0.5.1850-src.zip) = 2027347 bytes
+BLAKE2s (zip-0.3.15-miniz.3.1.2.tar.gz) = ee27666b8402a30f8f20ed5ec3e9e692fd53392a4d8f2befc18c414f9110d6d9
+SHA512 (zip-0.3.15-miniz.3.1.2.tar.gz) = 22623b645c9a1c3f2d1aa47ff41dc1a52b3afd45c7eefe32bbe95ce306d2d5cfd4ae3056c29a5f12d7be684c6ceebefcc5c37b5bc628db15e1536857b5740cae
+Size (zip-0.3.15-miniz.3.1.2.tar.gz) = 525413 bytes
+SHA1 (patch-CMakeLists.txt) = 46c942383ba076b2e75ca5cd724847243375fd35
+SHA1 (patch-src_third-party_chillout_src_chillout_posix_posixcrashhandler.cpp) = 74e98024cfea2acd1c57317926007cf5ac226d61
