@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/08/13 11:06:54 pho Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/09 16:04:03 pho Exp $
 
 DISTNAME=	protolude-0.3.4
 PKGREVISION=	4
@@ -10,6 +10,7 @@ LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
+	ghc-prim	\
 	hashable
 
 .include "../../devel/hs-async/buildlink3.mk"
