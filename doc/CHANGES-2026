@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7874 2026/11/09 15:25:01 taca Exp $
+$NetBSD: CHANGES-2026,v 1.7875 2026/11/09 17:23:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11707,3 +11707,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/adodb to 5.22.12 [taca 2026-11-09]
 	Removed databases/php-mongo [taca 2026-11-09]
 	Updated databases/php-mongodb to 1.21.13 [taca 2026-11-09]
+	Updated net/routinator to 0.16.1 [he 2026-11-09]
