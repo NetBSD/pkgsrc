@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2026/09/30 19:16:45 adam Exp $
+# $NetBSD: Makefile,v 1.151 2026/11/09 16:33:40 adam Exp $
 
 DISTNAME=	cryptography-50.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,8 +29,13 @@ pre-build:
 
 .include "cargo-depends.mk"
 
-.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin" && ${PYTHON_VERSION} >= 315
+PYSTABLEABI=	abi3t-darwin
+.endif
+
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/rust/cargo.mk"
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
