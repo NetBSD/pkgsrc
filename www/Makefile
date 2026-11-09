@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1953 2026/11/08 16:25:33 taca Exp $
+# $NetBSD: Makefile,v 1.1954 2026/11/09 14:10:24 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -273,7 +273,6 @@ SUBDIR+=	luakit
 SUBDIR+=	lynx
 SUBDIR+=	mailman3-web
 SUBDIR+=	make_album
-SUBDIR+=	matcha-sns
 SUBDIR+=	mediawiki
 SUBDIR+=	metabase
 SUBDIR+=	micro_httpd
