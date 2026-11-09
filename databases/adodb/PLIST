@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/06/15 15:54:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/09 15:11:04 taca Exp $
 share/adodb/adodb-active-record.inc.php
 share/adodb/adodb-active-recordx.inc.php
 share/adodb/adodb-csvlib.inc.php
@@ -142,6 +142,10 @@ share/adodb/session/adodb-sessions.mysql.sql
 share/adodb/session/adodb-sessions.oracle.clob.sql
 share/adodb/session/adodb-sessions.oracle.sql
 share/adodb/session/crypt.inc.php
+share/adodb/session/old/adodb-cryptsession.php
+share/adodb/session/old/adodb-session-clob.php
+share/adodb/session/old/adodb-session.php
+share/adodb/session/old/crypt.inc.php
 share/adodb/session/session_schema.xml
 share/adodb/session/session_schema2.xml
 share/adodb/toexport.inc.php

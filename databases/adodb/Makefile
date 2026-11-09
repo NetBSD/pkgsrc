@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/06/15 15:54:44 taca Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/09 15:11:04 taca Exp $
 #
 
 DISTNAME=	adodb-${VERS}
@@ -11,50 +11,27 @@ GITHUB_TAG=	v${VERS}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ADOdb/ADOdb
 COMMENT=	Active Data Objects Data Base for php
+LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 
-VERS=		5.22.9
+VERS=		5.22.12
 
-WRKSRC=			${WRKDIR}/ADOdb-${VERS}
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+WRKSRC=		${WRKDIR}/ADOdb-${VERS}
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
+USE_TOOLS+=	pax
 
-#INSTLATTION_DIRS+=
+PHP_VERSIONS_ACCEPTED=	74 82 83 84 85
+
+INSTALLATION_DIRS+=	share/adodb share/doc/adodb
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/datadict
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/drivers
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/lang
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/perf
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/xsl
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb/session
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/adodb
-
-	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${PREFIX}/share/adodb
-	${INSTALL_DATA} ${WRKSRC}/*.dtd ${DESTDIR}${PREFIX}/share/adodb
-#	${INSTALL_DATA} ${WRKSRC}/cute_icons_for_site/*.gif \
-#		${DESTDIR}${PREFIX}/share/adodb/cute_icons_for_site
-	${INSTALL_DATA} ${WRKSRC}/datadict/*.php \
-		${DESTDIR}${PREFIX}/share/adodb/datadict
-	${INSTALL_DATA} ${WRKSRC}/drivers/*.php \
-		${DESTDIR}${PREFIX}/share/adodb/drivers
-	${INSTALL_DATA} ${WRKSRC}/lang/*.php \
-		${DESTDIR}${PREFIX}/share/adodb/lang
-	${INSTALL_DATA} ${WRKSRC}/perf/*.php \
-		${DESTDIR}${PREFIX}/share/adodb/perf
-	${INSTALL_DATA} ${WRKSRC}/session/*.php \
-		${DESTDIR}${PREFIX}/share/adodb/session
-	${INSTALL_DATA} ${WRKSRC}/session/*.txt \
-		${DESTDIR}${PREFIX}/share/adodb/session
-	${INSTALL_DATA} ${WRKSRC}/session/*.sql \
-		${DESTDIR}${PREFIX}/share/adodb/session
-	${INSTALL_DATA} ${WRKSRC}/session/*.xml \
-		${DESTDIR}${PREFIX}/share/adodb/session
-	${INSTALL_DATA} ${WRKSRC}/xsl/*.xsl ${DESTDIR}${PREFIX}/share/adodb/xsl
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/adodb
-
-	${FIND} ${DESTDIR}${PREFIX}/share/adodb -name \*.\* -type f -print | \
+	${FIND} ${WRKSRC} -name '*.*' -type f -print | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
+	cd ${WRKSRC}/docs && pax -rw -pmp . ${DESTDIR}${PREFIX}/share/doc/adodb
+	cd ${WRKSRC} && \
+		pax -rw -pmp *.php *.dtd datadict drivers lang perf \
+			session xsl ${DESTDIR}${PREFIX}/share/adodb
+
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
