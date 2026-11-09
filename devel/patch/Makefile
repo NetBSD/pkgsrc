@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.47 2025/04/21 16:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.47.12.1 2026/11/09 08:16:02 maya Exp $
 
-DISTNAME=	patch-2.7.6
-PKGREVISION=	1
+DISTNAME=	patch-2.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=patch/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/patch/patch.html
-COMMENT=	Patch files using diff output
+COMMENT=	Apply changes to files using diff output
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		awk
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
