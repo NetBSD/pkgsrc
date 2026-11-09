@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7855 2026/11/09 08:04:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7856 2026/11/09 08:15:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11678,3 +11678,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/asterisk23 to 23.6.0 [jnemeth 2026-11-09]
 	Added comms/asterisk24 version 24.0.0 [jnemeth 2026-11-09]
 	Added sysutils/py-cpuinfo2 version 10.1.1 [wiz 2026-11-09]
+	Updated security/defguard to 2.2.0 [adam 2026-11-09]
+	Updated security/defguard-gateway to 2.2.0 [adam 2026-11-09]
+	Updated security/defguard-proxy to 2.2.0 [adam 2026-11-09]
