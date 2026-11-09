@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.759 2026/11/08 16:01:07 taca Exp $
+# $NetBSD: Makefile,v 1.760 2026/11/09 15:13:32 taca Exp $
 
 COMMENT=	Databases
 
@@ -284,7 +284,6 @@ SUBDIR+=	pgtclng
 SUBDIR+=	php-dba
 SUBDIR+=	php-dbx
 SUBDIR+=	php-ldap
-SUBDIR+=	php-mongo
 SUBDIR+=	php-mongodb
 SUBDIR+=	php-mssql
 SUBDIR+=	php-mysql
