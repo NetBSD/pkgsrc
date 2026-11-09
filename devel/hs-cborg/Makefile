@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/08/13 11:06:33 pho Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/09 09:58:55 pho Exp $
 
 DISTNAME=	cborg-0.2.10.0
 PKGREVISION=	4
@@ -9,7 +9,8 @@ COMMENT=	Concise Binary Object Representation (CBOR)
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base	\
+	ghc-prim
 
 .include "../../devel/hs-half/buildlink3.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
