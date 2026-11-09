@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.98 2026/11/08 15:38:50 kikadf Exp $
+# $NetBSD: Makefile,v 1.99 2026/11/09 08:17:19 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			157.0.8103.38
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 #MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
-EXTRACT_SUFX_C=			.tar.xz
+EXTRACT_SUFX_C=			-lite.tar.xz
 
 #PROFILE_DISTFILES=		chromium-${VERSION}-profdata${EXTRACT_SUFX_C}
 #SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
-DISTFILES+=			${DISTNAME}-lite${EXTRACT_SUFX_C}
+DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
 #DISTFILES+=			${PROFILE_DISTFILES}
 
 # Sources to build on NetBSD
@@ -37,12 +37,13 @@ LLVM_MV=			${LLVM_VERSION:sh:C/\..*//}
 # Used nodejs version
 NODE_VERSIONS_ACCEPTED=		24
 
+# Set own EXTRACT_ONLY before go-module.mk:
+# go-module.mk sets EXTRACT_ONLY?= ${DEFAULT_DISTFILES} ${GO_MODULE_EXTRACT},
+# DEFAULT_DISTFILES uses EXTRACT_SUFX=.tar.gz, which breaks chromium extract.
 EXTRACT_ONLY=			${DISTNAME}-lite${EXTRACT_SUFX_C}
 #EXTRACT_ONLY+=			${PROFILE_DISTFILES}
 EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
-.for crate in ${CARGO_CRATE_DEPENDS}
-EXTRACT_ONLY+=			${crate}.crate
-.endfor
+EXTRACT_ONLY+=			${CARGO_CRATE_DEPENDS:S/$/.crate/}
 
 MAINTAINER=			kikadf@NetBSD.org
 HOMEPAGE=			https://www.chromium.org/Home
