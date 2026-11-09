@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/09 08:04:18 wiz Exp $
+bin/cpuinfo
+${PYSITELIB}/cpuinfo/__init__.py
+${PYSITELIB}/cpuinfo/__init__.pyc
+${PYSITELIB}/cpuinfo/__init__.pyo
+${PYSITELIB}/cpuinfo/__main__.py
+${PYSITELIB}/cpuinfo/__main__.pyc
+${PYSITELIB}/cpuinfo/__main__.pyo
+${PYSITELIB}/cpuinfo/cpuinfo.py
+${PYSITELIB}/cpuinfo/cpuinfo.pyc
+${PYSITELIB}/cpuinfo/cpuinfo.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE

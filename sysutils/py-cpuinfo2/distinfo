@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/09 08:04:18 wiz Exp $
+
+BLAKE2s (py_cpuinfo2-10.1.1.tar.gz) = c7eb80f01b32bce0d6a839eddc27a15d265c1e982929b3206d9c8b71bb1f0214
+SHA512 (py_cpuinfo2-10.1.1.tar.gz) = 5c3472ded2493a7d02acc7921a2753894ef0271137c9003dfdbfa62472c931b653f16768b9f1a730d4088fcfe3455f1512bc8a0525e892de9ef51a160935dab3
+Size (py_cpuinfo2-10.1.1.tar.gz) = 100840 bytes
