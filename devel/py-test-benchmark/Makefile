@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2026/11/08 23:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/09 09:54:47 wiz Exp $
 
 DISTNAME=	pytest_benchmark-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-benchmark/}
 
@@ -11,13 +12,14 @@ COMMENT=	Pytest support for benchmarking
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
+DEPENDS+=	${PYPKGPREFIX}-cpuinfo2>=10.1:../../sysutils/py-cpuinfo2
 DEPENDS+=	${PYPKGPREFIX}-test>=8.1:../../devel/py-test
 # optional dependency
 TEST_DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
 # optional dependency
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygal>=0:../../graphics/py-pygal
-# optional: aspectlib (unpackaged)
+# optional dependency
+TEST_DEPENDS+=	${PYPKGPREFIX}-aspectlib-[0-9]*:../../devel/py-aspectlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-nbmake-[0-9]*:../../devel/py-nbmake
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
@@ -27,7 +29,7 @@ USE_LANGUAGES=	# none
 PY_RENAME_BINARIES=	py.test-benchmark pytest-benchmark
 
 # as of 5.3.1
-# 4 failed, 236 passed, 19 skipped, 3 errors
+# 1 failed, 239 passed, 19 skipped
 
 pre-test:
 	${LN} -sf ${DESTDIR}${PREFIX}/bin/pytest-benchmark-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/pytest-benchmark
