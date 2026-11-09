@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7853 2026/11/09 04:38:30 jnemeth Exp $
+$NetBSD: CHANGES-2026,v 1.7854 2026/11/09 05:38:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11676,3 +11676,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-benchmark to 5.3.1 [wiz 2026-11-08]
 	Updated comms/asterisk22 to 22.12.0 [jnemeth 2026-11-09]
 	Updated comms/asterisk23 to 23.6.0 [jnemeth 2026-11-09]
+	Added comms/asterisk24 version 24.0.0 [jnemeth 2026-11-09]
