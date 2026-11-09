@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2026/11/08 15:14:42 wiz Exp $
+$NetBSD: distinfo,v 1.31 2026/11/09 17:39:42 tsutsui Exp $
 
 BLAKE2s (fmt-12.2.1.tar.gz) = 1472d65b3cb0998af03574b544b53308120336813644adc8ca59aa3dbfbf94ed
 SHA512 (fmt-12.2.1.tar.gz) = d00479330c8b8c6a61a9420ac86c855964c3b611c0989158921a1ff7d1cac09f91cdec56219aebfbca0c47a3bdea98139620d45edaf14641b73288dcb3a6cc1c
 Size (fmt-12.2.1.tar.gz) = 738814 bytes
+SHA1 (patch-include_fmt_format.h) = 296f543c7f742bcca38cf169f299ae74f80ebba8
