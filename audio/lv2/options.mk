@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2026/08/12 12:51:34 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2026/11/09 13:34:16 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lv2
 PKG_SUPPORTED_OPTIONS=	doc gtk2
@@ -7,12 +7,12 @@ PKG_SUGGESTED_OPTIONS=	doc gtk2
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
-TOOL_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-TOOL_DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-TOOL_DEPENDS+=	${PYPKGPREFIX}-rdflib-[0-9]*:../../textproc/py-rdflib
+TOOL_DEPENDS+=	asciidoc>=0:../../textproc/asciidoc
+TOOL_DEPENDS+=	doxygen>=0:../../devel/doxygen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-lxml>=0:../../textproc/py-lxml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-markdown>=0:../../textproc/py-markdown
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
+TOOL_DEPENDS+=	${PYPKGPREFIX}-rdflib>=0:../../textproc/py-rdflib
 MESON_ARGS+=	-Ddocs=enabled
 
 PLIST_SRC=	${PLIST_SRC_DFLT} PLIST.doc ${WRKDIR}/PLIST.STATIC
