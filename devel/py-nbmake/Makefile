@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/08 23:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/09 11:22:50 wiz Exp $
 
 DISTNAME=	nbmake-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-ex
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.6.1:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 # one test in tests/test_nb_run.py hangs? ctrl-c, then:
 # 1 failed, 32 passed
