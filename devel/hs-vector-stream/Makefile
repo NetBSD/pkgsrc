@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/08/13 11:07:06 pho Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/09 09:01:58 pho Exp $
 
 DISTNAME=	vector-stream-0.1.0.1
 PKGREVISION=	4
@@ -9,7 +9,8 @@ COMMENT=	Efficient Streams for Haskell
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base	\
+	ghc-prim
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
