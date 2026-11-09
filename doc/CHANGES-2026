@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7860 2026/11/09 10:40:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7861 2026/11/09 10:45:49 nros Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11686,3 +11686,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-aspectlib version 2.0.0 [wiz 2026-11-09]
 	Updated devel/py-test-benchmark to 5.3.1nb1 [wiz 2026-11-09]
 	Updated audio/musescore to 4.6.5nb10 [wiz 2026-11-09]
+	Updated editors/TeXmacs to 2.1.5 [nros 2026-11-09]
