@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/10/16 19:44:17 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/09 13:44:30 adam Exp $
 
-DISTNAME=	lunr-0.8.0
+DISTNAME=	lunr-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lunr/}
@@ -11,10 +11,10 @@ COMMENT=	Python implementation of Lunr.js
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.8.0:../../devel/py-hatch-fancy-pypi-readme
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 # languages
 DEPENDS+=	${PYPKGPREFIX}-nltk>=0:../../textproc/py-nltk
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 

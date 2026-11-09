@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/03/15 19:32:03 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/11/09 13:44:30 adam Exp $
 
-BLAKE2s (lunr-0.8.0.tar.gz) = 42af7cb7c32ca514dd1cf727964a30c37efc3cafd9b93c927501ca35427f9dd1
-SHA512 (lunr-0.8.0.tar.gz) = 3294d61c42d07b0b3ee30f67a9c11db225d02f7a153ef3f7daa4e80aa200701dc27e7ff74b8f08a4944ff6d31fa66912b289e2a093d5e76b8be2db1a0d8c84e8
-Size (lunr-0.8.0.tar.gz) = 1147598 bytes
+BLAKE2s (lunr-0.8.1.tar.gz) = 81bebfc80e6ebb59021d48d0dd24ed44b1d3438379432719498e51864573f8bd
+SHA512 (lunr-0.8.1.tar.gz) = 1f8bb7d5345a8d6df637c5f2752613a920ba603eccda647e46321c95086660005e96c843cbd3820aff3eb68f2552a2cebda2bf94abc87095964d5ad8d9267fff
+Size (lunr-0.8.1.tar.gz) = 850651 bytes
