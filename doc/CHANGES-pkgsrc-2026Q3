@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.8 2026/11/07 17:12:13 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.9 2026/11/09 08:44:53 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -84,3 +84,36 @@ sysutils/xenkernel420: Security fix
 
 Pullup ticket #7330 - requested by bsiegert
 textproc/expat: Security fix
+
+Pullup ticket #7332 - requested by taca
+lang/php74: Security fix
+
+Pullup ticket #7333 - requested by taca
+www/p5-HTTP-Headers-ActionPack: Security fix
+
+Pullup ticket #7334 - requested by taca
+net/p5-Net: Security fix
+
+Pullup ticket #7335 - requested by taca
+converters/p5-Sereal-Decoder: Security fix
+
+Pullup ticket #7336 - requested by taca
+lang/ruby40: Security fix
+
+Pullup ticket #7337 - requested by taca
+lang/ruby34: Security fix
+
+Pullup ticket #7338 - requested by taca
+lang/ruby33: Security fix
+
+Pullup ticket #7339 - requested by taca
+graphics/GraphicsMagick: Security fix
+
+Pullup ticket #7340 - requested by taca
+devel/patch: Security fix
+
+Pullup ticket #7341 - requested by taca
+lang/php56: Security fix
+
+Pullup ticket #7342 - requested by taca
+databases/ruby-sqlite3: Security fix
