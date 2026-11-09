@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/08/13 11:07:37 pho Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/09 09:11:39 pho Exp $
 
 DISTNAME=	text-short-0.1.6
 PKGREVISION=	3
@@ -10,6 +10,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
+	ghc-prim	\
 	hashable	\
 	template-haskell
 
