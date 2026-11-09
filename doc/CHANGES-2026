@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7871 2026/11/09 14:58:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7872 2026/11/09 15:11:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11704,3 +11704,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lz4 to 1.11.0 [wiz 2026-11-09]
 	Updated net/dnscontrol to 5.8.0 [drixter 2026-11-09]
 	Updated multimedia/gstreamer1 to 1.28.9 [adam 2026-11-09]
+	Updated databases/adodb to 5.22.12 [taca 2026-11-09]
