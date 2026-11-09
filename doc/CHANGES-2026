@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7875 2026/11/09 17:23:09 he Exp $
+$NetBSD: CHANGES-2026,v 1.7876 2026/11/09 17:36:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11708,3 +11708,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/php-mongo [taca 2026-11-09]
 	Updated databases/php-mongodb to 1.21.13 [taca 2026-11-09]
 	Updated net/routinator to 0.16.1 [he 2026-11-09]
+	Updated editors/wordtsar to 0.5.1850 [ryoon 2026-11-09]
