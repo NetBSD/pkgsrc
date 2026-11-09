@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2026/11/09 19:24:47 nros Exp $
+# $NetBSD: Makefile,v 1.187 2026/11/09 19:33:50 nros Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -63,5 +63,6 @@ DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../lang/python/application.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
