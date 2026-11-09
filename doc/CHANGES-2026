@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7869 2026/11/09 14:21:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7870 2026/11/09 14:34:06 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11702,3 +11702,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.21 [taca 2026-11-09]
 	Removed www/matcha-sns [taca 2026-11-09]
 	Updated archivers/lz4 to 1.11.0 [wiz 2026-11-09]
+	Updated net/dnscontrol to 5.8.0 [drixter 2026-11-09]
