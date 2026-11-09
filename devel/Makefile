@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4731 2026/11/08 21:32:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4732 2026/11/09 09:29:38 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2562,6 +2562,7 @@ SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argparse-addons
 SUBDIR+=	py-argparse-manpage
+SUBDIR+=	py-aspectlib
 SUBDIR+=	py-assertpy
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
