@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/08/31 05:33:32 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/11/09 04:10:23 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -2329,6 +2329,8 @@ share/doc/asterisk/ChangeLog-22.10.1.html
 share/doc/asterisk/ChangeLog-22.10.1.md
 share/doc/asterisk/ChangeLog-22.11.0.html
 share/doc/asterisk/ChangeLog-22.11.0.md
+share/doc/asterisk/ChangeLog-22.12.0.html
+share/doc/asterisk/ChangeLog-22.12.0.md
 share/doc/asterisk/ChangeLog-22.2.0.md
 share/doc/asterisk/ChangeLog-22.3.0.html
 share/doc/asterisk/ChangeLog-22.3.0.md
