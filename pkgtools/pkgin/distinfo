@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.90 2026/04/20 18:09:24 jperkin Exp $
+$NetBSD: distinfo,v 1.91 2026/11/09 18:09:26 jperkin Exp $
 
-BLAKE2s (pkgin-26.4.0.tar.gz) = 0b82a713b29def5680b6c3ddec3c07d7ec3b3a509e0739450eb4434182685155
-SHA512 (pkgin-26.4.0.tar.gz) = 989f371a072216d7864e253dcb5b0b40bc4a85a9fdf9d93d7f60ea2c3e1bbcf89782ff821c69439f708fae136063eaccdf0f6a82b032259e8a055f967794d2b5
-Size (pkgin-26.4.0.tar.gz) = 274565 bytes
+BLAKE2s (pkgin-26.11.0.tar.gz) = ef6c737959eca16e18742abf3b18313c4a23d3dcde60b0a8113091eb96efa72d
+SHA512 (pkgin-26.11.0.tar.gz) = fcf3579b92811120018cbd7e118c50569f39f48d35077081050f13aba053b8a8c5613ee915fc361bec75c71759ab4fc90d2f8fefd91f820acdf147ed1e711a68
+Size (pkgin-26.11.0.tar.gz) = 279379 bytes
