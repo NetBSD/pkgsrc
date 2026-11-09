@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/08/05 02:57:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/09 13:41:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -32,6 +32,7 @@ ${PYSITELIB}/fastjsonschema/generator.pyo
 ${PYSITELIB}/fastjsonschema/indent.py
 ${PYSITELIB}/fastjsonschema/indent.pyc
 ${PYSITELIB}/fastjsonschema/indent.pyo
+${PYSITELIB}/fastjsonschema/py.typed
 ${PYSITELIB}/fastjsonschema/ref_resolver.py
 ${PYSITELIB}/fastjsonschema/ref_resolver.pyc
 ${PYSITELIB}/fastjsonschema/ref_resolver.pyo
