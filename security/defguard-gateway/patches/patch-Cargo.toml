@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.9 2026/09/05 05:08:24 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.10 2026/11/09 08:14:56 adam Exp $
 
 Paths to local crates.
 
@@ -8,12 +8,12 @@ Paths to local crates.
  base64 = "0.23"
  chrono = "0.4"
  clap = { version = "4.6", features = ["derive", "env"] }
--defguard_certs = { git = "https://github.com/DefGuard/defguard.git", rev = "b2bac0d3d70c2a6d7b18b9432a5fa1720c702bf3" }
--defguard_grpc_tls = { git = "https://github.com/DefGuard/defguard.git", rev = "b2bac0d3d70c2a6d7b18b9432a5fa1720c702bf3" }
--defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "b2bac0d3d70c2a6d7b18b9432a5fa1720c702bf3" }
-+defguard_certs = { path = "../defguard-2.1.0/crates/defguard_certs" }
-+defguard_grpc_tls = { path = "../defguard-2.1.0/crates/defguard_grpc_tls" }
-+defguard_version = { path = "../defguard-2.1.0/crates/defguard_version" }
- defguard_wireguard_rs = "0.11"
+-defguard_certs = { git = "https://github.com/DefGuard/defguard.git", rev = "442048165cdd0a084f5d14e7b268fbc7a9332775" }
+-defguard_grpc_tls = { git = "https://github.com/DefGuard/defguard.git", rev = "442048165cdd0a084f5d14e7b268fbc7a9332775" }
+-defguard_version = { git = "https://github.com/DefGuard/defguard.git", rev = "442048165cdd0a084f5d14e7b268fbc7a9332775" }
++defguard_certs = { path = "../defguard-2.2.0/crates/defguard_certs" }
++defguard_grpc_tls = { path = "../defguard-2.2.0/crates/defguard_grpc_tls" }
++defguard_version = { path = "../defguard-2.2.0/crates/defguard_version" }
+ defguard_wireguard_rs = "0.12"
  rustls = { version = "0.23", default-features = false, features = ["ring"] }
  rustls-pki-types = "1"

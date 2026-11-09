@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.8 2026/09/05 05:08:23 adam Exp $
+# $NetBSD: version.mk,v 1.9 2026/11/09 08:14:56 adam Exp $
 
-DEFGUARD_VERSION=	2.1.0
+DEFGUARD_VERSION=	2.2.0
 
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=defguard/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-agpl-v3 # AND defguard-enterprise-license
 
 DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
-TOOL_DEPENDS+=	protobuf>0:../../devel/protobuf
+TOOL_DEPENDS+=	protobuf>=0:../../devel/protobuf
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	LIBGIT2_NO_VENDOR=1

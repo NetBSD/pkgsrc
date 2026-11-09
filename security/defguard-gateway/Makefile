@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2026/09/29 06:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/09 08:14:56 adam Exp $
 
-PKGREVISION= 2
 .include "../../security/defguard/version.mk"
 
 DISTNAME=	defguard-gateway-${DEFGUARD_VERSION}
@@ -13,13 +12,7 @@ EXTRA_DIST+=	defguard-${DEFGUARD_VERSION}.tar.xz
 
 WRKSRC=		${WRKDIR}/gateway-${DEFGUARD_VERSION}
 
-# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-NFTNL_REV=	abd34b08c53b88a47346da6362e360d522cf8ca2
-DISTFILES+=	nftnl-${NFTNL_REV}.tar.gz
-
-SITES.nftnl-${NFTNL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=defguard/}nftnl-rs/archive/${NFTNL_REV}.tar.gz
-
-RUST_REQ=	1.95
+RUST_REQ=	1.96
 
 INSTALLATION_DIRS=	bin
 
