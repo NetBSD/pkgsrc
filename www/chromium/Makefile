@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2026/11/09 08:17:19 kikadf Exp $
+# $NetBSD: Makefile,v 1.100 2026/11/09 08:55:01 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			157.0.8103.38
@@ -40,7 +40,7 @@ NODE_VERSIONS_ACCEPTED=		24
 # Set own EXTRACT_ONLY before go-module.mk:
 # go-module.mk sets EXTRACT_ONLY?= ${DEFAULT_DISTFILES} ${GO_MODULE_EXTRACT},
 # DEFAULT_DISTFILES uses EXTRACT_SUFX=.tar.gz, which breaks chromium extract.
-EXTRACT_ONLY=			${DISTNAME}-lite${EXTRACT_SUFX_C}
+EXTRACT_ONLY=			${DISTNAME}${EXTRACT_SUFX_C}
 #EXTRACT_ONLY+=			${PROFILE_DISTFILES}
 EXTRACT_ONLY+=			${_GITHUB_DEFAULT_DISTFILES}
 EXTRACT_ONLY+=			${CARGO_CRATE_DEPENDS:S/$/.crate/}
