@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/07/23 06:22:37 adam Exp $
+# $NetBSD: Makefile,v 1.30 2026/11/09 14:20:58 wiz Exp $
 
-DISTNAME=	lz4-1.10.0
+DISTNAME=	lz4-1.11.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lz4/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -19,8 +19,5 @@ BUILD_TARGET=		# empty
 TEST_TARGET=		test
 
 MAKE_FLAGS+=		PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
-
-# Needed for nanosleep() on Solaris 10, PR pkg/56226
-LDFLAGS.SunOS+=		-lrt
 
 .include "../../mk/bsd.pkg.mk"

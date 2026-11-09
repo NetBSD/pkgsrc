@@ -1,22 +1,24 @@
-$NetBSD: patch-programs_Makefile,v 1.14 2024/07/23 06:22:37 adam Exp $
+$NetBSD: patch-programs_Makefile,v 1.15 2026/11/09 14:20:58 wiz Exp $
 
-Remove OS_VERSION as it is defined by pkgsrc, and causes "No such file or directory" message.
-Unlock install target. Use pkgsrc install scripts.
+Avoid conflict with OS_VERSION (defined by pkgsrc).
+Use pkgsrc install scripts.
 
---- programs/Makefile.orig	2024-07-21 17:29:49.000000000 +0000
+--- programs/Makefile.orig	2026-11-04 00:58:16.000000000 +0000
 +++ programs/Makefile
-@@ -55,10 +55,6 @@ CPPFLAGS += -I$(LIBDIR) -DXXH_NAMESPACE=
+@@ -56,10 +56,10 @@
  
- include ../Makefile.inc
+ include ../build/make/lz4defs.make
  
 -OS_VERSION ?= $(UNAME) -r
 -ifeq ($(TARGET_OS)$(shell $(OS_VERSION)),SunOS5.10)
--LDFLAGS  += -lrt
--endif
++LZ4OS_VERSION ?= $(UNAME) -r
++ifeq ($(TARGET_OS)$(shell $(LZ4OS_VERSION)),SunOS5.10)
+ LDFLAGS  += -lrt
+ endif
  
- ALLFLAGS  = $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+ ALLFLAGS  = $(MCM_CFLAGS) $(CFLAGS) $(MCM_CPPFLAGS) $(CPPFLAGS) $(MCM_LDFLAGS) $(LDFLAGS)
  
-@@ -201,7 +197,7 @@ BINDIR      ?= $(exec_prefix)/bin
+@@ -213,7 +213,7 @@
  bindir      ?= $(BINDIR)
  DATAROOTDIR ?= $(prefix)/share
  datarootdir ?= $(DATAROOTDIR)
@@ -25,7 +27,7 @@ Unlock install target. Use pkgsrc install scripts.
  mandir      ?= $(MANDIR)
  MAN1DIR     ?= $(mandir)/man1
  man1dir     ?= $(MAN1DIR)
-@@ -209,13 +205,13 @@ man1dir     ?= $(MAN1DIR)
+@@ -221,13 +221,13 @@
  .PHONY: install
  install: lz4
  	@echo Installing binaries in $(DESTDIR)$(bindir)
