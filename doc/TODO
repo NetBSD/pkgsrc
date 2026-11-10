@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28351 2026/11/10 08:09:35 adam Exp $
+$NetBSD: TODO,v 1.28352 2026/11/10 08:32:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -942,6 +942,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o miniupnpd-2.3.7
 	o mipsel-none-elf-binutils-2.36.1
 	o mipsel-none-elf-gcc-9.3.0
+	o mit-krb5-1.22.3
 	o mit-scheme-bin-9.2
 	o mold-3.0.0
 	o mongo-c-driver-2.3.3
