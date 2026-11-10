@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.74 2026/09/02 09:13:20 adam Exp $
+$NetBSD: distinfo,v 1.75 2026/11/10 08:08:52 adam Exp $
 
-BLAKE2s (certbot_dns_dnsmadeeasy-5.8.0.tar.gz) = 341597c99f9fd8c1cf428b251426125a9880ae8bb843aea8a8bc30f1d7e78356
-SHA512 (certbot_dns_dnsmadeeasy-5.8.0.tar.gz) = b40fddd6b7b5b61ffa00646176c10a9d72575f726fd17542589ddfe35ca6ec9ecde342c29911bf8cb7d33ac77049835d94199d30c8d5f9c2076a7f60edf3f691
-Size (certbot_dns_dnsmadeeasy-5.8.0.tar.gz) = 12467 bytes
+BLAKE2s (certbot_dns_dnsmadeeasy-5.9.0.tar.gz) = 75fe75925b62fecb9ac23fea0517048b53698e2f677f227c999778e8a050ce54
+SHA512 (certbot_dns_dnsmadeeasy-5.9.0.tar.gz) = b8d8824f49e3928cd125784a02cf61b8de3917cdfa3c744fa47678666ae2033f18b7f13522f072a299486a267a8c9c98d1bfbb2a6fcc863c86413532d7ac2875
+Size (certbot_dns_dnsmadeeasy-5.9.0.tar.gz) = 12347 bytes
