@@ -1,0 +1,5 @@
+$NetBSD: distinfo-2026.10,v 1.1 2026/11/10 20:53:16 martin Exp $
+
+BLAKE2s (u-boot-2026.10.tar.bz2) = d97ec1b6af16684ea9a2b8c9f704372a8b1a507f3b9a64da5ce469af08d35813
+SHA512 (u-boot-2026.10.tar.bz2) = d1cbb37ae94b3e4c87470343e44f7928ec1c8e15b141cafc30b73b76ef12fdeba460376ce6c39b8eabadb61e7e03199b26fae64fcd2cbf77a8720e3fe26b24a0
+Size (u-boot-2026.10.tar.bz2) = 35346177 bytes

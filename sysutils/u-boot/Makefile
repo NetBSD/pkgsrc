@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/12/13 01:10:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/10 20:53:16 martin Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -9,7 +9,7 @@ CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
 MAINTAINER=	jmcneill@NetBSD.org
-HOMEPAGE=	https://www.denx.de/wiki/U-Boot
+HOMEPAGE=	https://u-boot-project.org
 COMMENT=	Das U-Boot, the Universal Boot Loader (meta-package)
 
 META_PACKAGE=	yes
