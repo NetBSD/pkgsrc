@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7908 2026/11/10 18:53:25 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.7909 2026/11/10 21:31:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11773,3 +11773,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/libmatheval to 1.1.12 [wiz 2026-11-10]
 	Updated lang/go126 to 1.26.11 [bsiegert 2026-11-10]
 	Updated lang/go127 to 1.27.4 [bsiegert 2026-11-10]
+	Updated wayland/foot to 1.28.0 [bsiegert 2026-11-10]
