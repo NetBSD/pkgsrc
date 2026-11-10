@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7885 2026/11/10 04:18:38 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7886 2026/11/10 08:09:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11719,3 +11719,20 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.1316 [morr 2026-11-09]
 	Updated audio/kew to 4.4.3 [ktnb 2026-11-10]
 	Updated shells/oh-my-posh to 32.0.0 [pin 2026-11-10]
+	Updated security/py-acme to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-apache to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-cloudflare to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-digitalocean to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-dnsimple to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-dnsmadeeasy to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-gehirn to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-google to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-linode to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-luadns to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-nsone to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-ovh to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-rfc2136 to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-route53 to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-dns-sakuracloud to 5.9.0 [adam 2026-11-10]
+	Updated security/py-certbot-nginx to 5.9.0 [adam 2026-11-10]
