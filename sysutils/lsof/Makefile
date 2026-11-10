@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.150 2026/11/01 05:18:02 taca Exp $
+# $NetBSD: Makefile,v 1.151 2026/11/10 18:34:09 hauke Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
@@ -23,6 +23,8 @@ CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS} ${LDFLAGS}"
 MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
 OSVERSION_SPECIFIC=	yes
 EXTRACT_USING=		bsdtar
+
+USE_LANGUAGES=		c99
 
 TMPWRK=			${WRKDIR}/${DISTNAME}
 SRCBALL_NAME=		${DISTNAME}_src
