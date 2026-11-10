@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7900 2026/11/10 11:18:01 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7901 2026/11/10 12:33:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11759,3 +11759,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/apache24 to 2.4.70 [adam 2026-11-10]
 	Updated devel/py-uv-build to 0.13.7 [wiz 2026-11-10]
 	Updated devel/py-uv to 0.13.7 [wiz 2026-11-10]
+	Updated devel/lazygit to 0.66.3 [adam 2026-11-10]
+	Updated net/rclone to 1.76.0 [adam 2026-11-10]
