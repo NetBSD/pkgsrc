@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7883 2026/11/09 23:44:52 morr Exp $
+$NetBSD: CHANGES-2026,v 1.7884 2026/11/10 00:12:25 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11717,3 +11717,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added cross/mingw-w64-i686-gcc-crtdll version 14.2.0 [js 2026-11-09]
 	Added cross/mingw-w64-i686-headers-crtdll version 14.0.0 [js 2026-11-09]
 	Updated editors/vim-share to 9.2.1316 [morr 2026-11-09]
+	Updated audio/kew to 4.4.3 [ktnb 2026-11-10]
