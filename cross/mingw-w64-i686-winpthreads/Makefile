@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/11/10 08:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/10 22:04:04 js Exp $
 
 .include "../../cross/mingw-w64-x86_64-winpthreads/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/mingw-w64-v/mingw-w64-i686-winpthreads-${CRT_TYPE}-/}
-COMMENT=		Mingw-w64 winpthreads library  for win32 cross-development (${CRT_TYPE})
+COMMENT=		Mingw-w64 winpthreads library for win32 cross-development (${CRT_TYPE})
 
 TOOL_DEPENDS+=		mingw-w64-i686-gcc-bootstrap-ucrt-[0-9]*:../../cross/mingw-w64-i686-gcc-bootstrap
 
