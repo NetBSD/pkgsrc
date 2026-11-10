@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/08/30 15:40:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/10 09:14:55 adam Exp $
 bin/typer-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,9 @@ ${PYSITELIB}/typer/__init__.pyo
 ${PYSITELIB}/typer/__main__.py
 ${PYSITELIB}/typer/__main__.pyc
 ${PYSITELIB}/typer/__main__.pyo
+${PYSITELIB}/typer/_adapters.py
+${PYSITELIB}/typer/_adapters.pyc
+${PYSITELIB}/typer/_adapters.pyo
 ${PYSITELIB}/typer/_click/LICENSE.txt
 ${PYSITELIB}/typer/_click/__init__.py
 ${PYSITELIB}/typer/_click/__init__.pyc
@@ -53,21 +56,24 @@ ${PYSITELIB}/typer/_click/shell_completion.pyo
 ${PYSITELIB}/typer/_click/termui.py
 ${PYSITELIB}/typer/_click/termui.pyc
 ${PYSITELIB}/typer/_click/termui.pyo
-${PYSITELIB}/typer/_click/types.py
-${PYSITELIB}/typer/_click/types.pyc
-${PYSITELIB}/typer/_click/types.pyo
 ${PYSITELIB}/typer/_click/utils.py
 ${PYSITELIB}/typer/_click/utils.pyc
 ${PYSITELIB}/typer/_click/utils.pyo
+${PYSITELIB}/typer/_coercion.py
+${PYSITELIB}/typer/_coercion.pyc
+${PYSITELIB}/typer/_coercion.pyo
 ${PYSITELIB}/typer/_completion_classes.py
 ${PYSITELIB}/typer/_completion_classes.pyc
 ${PYSITELIB}/typer/_completion_classes.pyo
 ${PYSITELIB}/typer/_completion_shared.py
 ${PYSITELIB}/typer/_completion_shared.pyc
 ${PYSITELIB}/typer/_completion_shared.pyo
-${PYSITELIB}/typer/_types.py
-${PYSITELIB}/typer/_types.pyc
-${PYSITELIB}/typer/_types.pyo
+${PYSITELIB}/typer/_display.py
+${PYSITELIB}/typer/_display.pyc
+${PYSITELIB}/typer/_display.pyo
+${PYSITELIB}/typer/_param_types.py
+${PYSITELIB}/typer/_param_types.pyc
+${PYSITELIB}/typer/_param_types.pyo
 ${PYSITELIB}/typer/_typing.py
 ${PYSITELIB}/typer/_typing.pyc
 ${PYSITELIB}/typer/_typing.pyo
