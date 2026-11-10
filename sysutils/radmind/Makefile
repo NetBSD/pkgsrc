@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2026/10/31 23:23:53 hauke Exp $
+# $NetBSD: Makefile,v 1.50 2026/11/10 21:24:23 hauke Exp $
 
 DISTNAME=	radmind-1.15.0
 PKGREVISION=	1
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${RADMINDDIR}
 CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
+
+CONFIGURE_ENV.Linux+=	ac_cv_header_sys_sysmacros_h=yes
 
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
