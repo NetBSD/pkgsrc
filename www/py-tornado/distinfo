@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2026/10/26 08:11:35 adam Exp $
+$NetBSD: distinfo,v 1.41 2026/11/10 09:08:21 adam Exp $
 
-BLAKE2s (tornado-6.6.tar.gz) = eb5486024a6bc1a874e0a9d68749a782af692f14ad9b89d69864687c1c3e8a66
-SHA512 (tornado-6.6.tar.gz) = 8c679f13e158f2cd9a7106e057d74c8a6a8c3ed53bfd0fc7963f876e814b0604db3a75e55de376dbf4c644130de9a7d9d64145fbce276533a05787dec1e60f79
-Size (tornado-6.6.tar.gz) = 617998 bytes
+BLAKE2s (tornado-6.6.1.tar.gz) = 3803384bd63b9d9282d0e47258f184547d6dda6e94d4feb3a89df0a7a05a7fda
+SHA512 (tornado-6.6.1.tar.gz) = f8b13445bb1565a5acb18a52729f92ca3d824d2afed0a69e2ef7d99c7637a05bb226d1b38008741ca911ea6045ce139407020fc1f9f6b164818a10cc038ac8e1
+Size (tornado-6.6.1.tar.gz) = 623388 bytes
