@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2026/04/07 14:12:48 tnn Exp $
+# $NetBSD: Makefile,v 1.125 2026/11/10 12:51:14 adam Exp $
 
 BRANCHNAME=	1.22
-DISTNAME=	krb5-${BRANCHNAME}.2
+DISTNAME=	krb5-${BRANCHNAME}.3
 PKGNAME=	mit-${DISTNAME}
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
@@ -10,13 +10,12 @@ MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${BRANCHNAME}/
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
-
 # There is a file NOTICE in the sources, which is enormous.  Most
 # licenses appear to be some flavor of X11, 3-clause BSD, 4-clause
 # BSD.
 # 20201007: gdt emailed upstream asking for clarification on the AES
 # license, which is not entirely clearly Free, by the text.
-#LICENSE=
+#LICENSE=	2-clause-bsd
 
 # TODO: This is entirely caused by our libtool patches, which are also
 # actively harmful when trying to run the test suite.  They should really
@@ -38,7 +37,7 @@ USE_LANGUAGES=		c
 # c99, and configure checks for that.  The code uses strdup(3):
 # https://pubs.opengroup.org/onlinepubs/9799919799/functions/strdup.html
 # and that's hidden by default on Linux, with gnu99 making it visible.
-USE_CC_FEATURES+=	c99
+USE_CC_FEATURES=	c99
 FORCE_C_STD=		gnu99
 
 USE_LIBTOOL=		yes
