@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2024/08/20 14:11:52 ryoon Exp $
+# $NetBSD: options.mk,v 1.26 2026/11/10 17:08:24 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
 BUILDLINK_TRANSFORM+=	rm:-g
