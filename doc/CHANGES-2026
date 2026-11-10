@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7905 2026/11/10 14:09:32 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7906 2026/11/10 14:10:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11769,3 +11769,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pipx to 1.18.16 [adam 2026-11-10]
 	Updated textproc/py-pdf to 7.0.1 [adam 2026-11-10]
 	Updated www/firefox153 to 153.7.0 [gutteridge 2026-11-10]
+	Updated www/firefox153-l10n to 153.7.0 [gutteridge 2026-11-10]
