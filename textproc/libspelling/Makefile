@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/29 06:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/10 08:33:27 adam Exp $
 
-DISTNAME=	libspelling-0.4.10
-PKGREVISION=	3
+DISTNAME=	libspelling-0.4.11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libspelling/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +10,8 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/libspelling
 COMMENT=	Spellcheck library for GTK 4
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen>=0:../../devel/py-gi-docgen
+TOOL_DEPENDS+=	glib2-introspection>=0:../../devel/glib2-introspection
 
 USE_TOOLS+=	pkg-config
 
@@ -21,9 +20,9 @@ MESON_ARGS+=	-Dsysprof=false
 PKGCONFIG_OVERRIDE+=		output/meson-private/libspelling-1.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-.include "../../lang/python/pyversion.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
