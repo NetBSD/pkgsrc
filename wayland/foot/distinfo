@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2026/07/06 18:26:41 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2026/11/10 21:31:40 bsiegert Exp $
 
-BLAKE2s (foot-1.27.0.tar.gz) = 0ad2b8e5b56cd4b81878097f061bf8f77c2750ac4939395835f9c4f5141478df
-SHA512 (foot-1.27.0.tar.gz) = fb8845b84bd25d65043bf3452e7eb4f17561465713251b06259dff02dec9e8ca177c3efaeaf64533b4922738da06277ae08fa1790f25e25f28f89ab8fabf7873
-Size (foot-1.27.0.tar.gz) = 1196101 bytes
+BLAKE2s (foot-1.28.0.tar.gz) = 65c5ffaac2ba03a9a1fd26f9a5d77623516c95c876364bb44e07d1c1cf902b09
+SHA512 (foot-1.28.0.tar.gz) = 7ca9cf5a980d728f3fe4a37a56ba12bdbc0373598ba30ffad1b93041514621c4d4e3fb44837ea120fde9685b33130bbcba8d151b44389d776f08cc4c12fafbe7
+Size (foot-1.28.0.tar.gz) = 1202880 bytes
 SHA1 (patch-char32.c) = 2fcbe522716f81eb68181745a490a32e493d1065
 SHA1 (patch-config.c) = f3639ee869c2a667f66bf10880b9fab2f5e35c73
 SHA1 (patch-meson.build) = ed84dfab137e9a0be7d464d5f78b8dcbe94956f8
