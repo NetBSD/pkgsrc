@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7894 2026/11/10 10:14:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7895 2026/11/10 10:24:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11752,3 +11752,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-aiormq to 7.2.5 [adam 2026-11-10]
 	Updated net/py-aio-pika to 10.2.3 [adam 2026-11-10]
 	Updated devel/py-utils to 4.2.0 [adam 2026-11-10]
+	Updated shells/nushell to 0.117.0 [pin 2026-11-10]
