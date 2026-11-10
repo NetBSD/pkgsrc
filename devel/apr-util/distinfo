@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2026/08/06 20:02:00 wiz Exp $
+$NetBSD: distinfo,v 1.29 2026/11/10 10:22:28 adam Exp $
 
-BLAKE2s (apr-util-1.6.4.tar.bz2) = 8f1f0cb30697f37582903f5a630ae8e94050ee9a74b7b8d0a5537251a56abebe
-SHA512 (apr-util-1.6.4.tar.bz2) = e3adaaa13c48a7394ed56f29b5543f247241487bb47fe4863bd097ba51a10bce650878b3554ceff7cd0af6ad1b09484b5c12c99bec1bb7679398a23179dd11ff
-Size (apr-util-1.6.4.tar.bz2) = 441511 bytes
+BLAKE2s (apr-util-1.6.6.tar.bz2) = 7577e288bb0dcc5d781749a11051bdc1d5ee4701fa28e517b0c0e56a8371418d
+SHA512 (apr-util-1.6.6.tar.bz2) = ffec6453480f78787cfc2f953c7f55aa592e0db0477f2d601a4f0715a8c35e0a980d6e48107ee652cf22ac079aa5b0781e6919203245e8e3f5344a40110e913c
+Size (apr-util-1.6.6.tar.bz2) = 442523 bytes
 SHA1 (patch-aa) = c91b22de1f0c99e9fab57117e601bc623da44ce6
