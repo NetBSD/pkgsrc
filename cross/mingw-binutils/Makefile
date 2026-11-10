@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/11/17 11:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/10 08:12:07 wiz Exp $
 
 DISTNAME=	binutils-2.18a
 PKGNAME=	mingw-binutils-2.18
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		bash
 SUBST_FILES.bash=	ld/Makefile.in
 SUBST_VARS.bash=	BASH
 SUBST_STAGE.bash=	post-configure
-SUBST_MESSAGE.bash=	Replace $(SHELL) to bash
+SUBST_MESSAGE.bash=	Replace ${SHELL} to bash
 SUBST_SED.bash=		-e s,@@BASH@@,${PREFIX}/bin/bash,
 
 INSTALLATION_DIRS+=	cross/bin

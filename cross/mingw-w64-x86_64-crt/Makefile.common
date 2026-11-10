@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.13 2026/10/24 13:45:11 js Exp $
+# $NetBSD: Makefile.common,v 1.14 2026/11/10 08:12:07 wiz Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
+# used by cross/mingw-w64-i686-crt-crtdll/Makefile
+# used by cross/mingw-w64-i686-crt-msvcrt/Makefile
+# used by cross/mingw-w64-x86_64-crt-msvcrt/Makefile
 
 DISTNAME=		mingw-w64-v14.0.0
 CATEGORIES=		cross

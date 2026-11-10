@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2026/11/09 23:13:30 js Exp $
+# $NetBSD: Makefile.common,v 1.18 2026/11/10 08:12:07 wiz Exp $
 #
 # used by cross/mingw-w64-i686-gcc/Makefile
 # used by cross/mingw-w64-x86_64-gcc/Makefile
+# used by cross/mingw-w64-i686-gcc-crtdll/Makefile
+# used by cross/mingw-w64-i686-gcc-msvcrt/Makefile
+# used by cross/mingw-w64-x86_64-gcc-msvcrt/Makefile
 
 DISTNAME=		gcc-14.2.0
 PKGREVISION=		1

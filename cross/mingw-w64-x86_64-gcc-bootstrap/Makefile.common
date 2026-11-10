@@ -1,9 +1,12 @@
-# $NetBSD: Makefile.common,v 1.15 2024/11/28 20:17:30 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.16 2026/11/10 08:12:07 wiz Exp $
 #
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile
 # used by cross/mingw-w64-i686-gcc-bootstrap/Makefile
 # used by cross/mingw-w64-i686-gcc-bootstrap/Makefile.common
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile.common
+# used by cross/mingw-w64-i686-gcc-bootstrap-crtdll/Makefile
+# used by cross/mingw-w64-i686-gcc-bootstrap-msvcrt/Makefile
+# used by cross/mingw-w64-x86_64-gcc-bootstrap-msvcrt/Makefile
 
 DISTNAME=		gcc-14.2.0
 CATEGORIES=		cross
