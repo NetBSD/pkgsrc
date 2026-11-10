@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_Makefile,v 1.14 2026/11/09 14:20:58 wiz Exp $
+$NetBSD: patch-lib_Makefile,v 1.15 2026/11/10 12:58:26 adam Exp $
 
 Make portable (inc. libtoolize).
 Unlock install target. Use pkgsrc install scripts.
 
---- lib/Makefile.orig	2026-11-04 00:58:16.000000000 +0000
+--- lib/Makefile.orig	2026-11-10 05:21:42.000000000 +0000
 +++ lib/Makefile
 @@ -34,9 +34,9 @@
  SED ?= sed
@@ -18,7 +18,7 @@ Unlock install target. Use pkgsrc install scripts.
  LIBVER_SCRIPT:= $(LIBVER_MAJOR_SCRIPT).$(LIBVER_MINOR_SCRIPT).$(LIBVER_PATCH_SCRIPT)
  LIBVER_MAJOR := $(shell echo $(LIBVER_MAJOR_SCRIPT))
  LIBVER_MINOR := $(shell echo $(LIBVER_MINOR_SCRIPT))
-@@ -59,6 +59,7 @@
+@@ -59,6 +59,7 @@ ALLFLAGS = $(MCM_CFLAGS) $(CFLAGS) $(MCM
  
  SRCFILES := $(sort $(wildcard *.c))
  OBJFILES = $(SRCFILES:.c=.o)
@@ -26,7 +26,7 @@ Unlock install target. Use pkgsrc install scripts.
  
  include ../build/make/lz4defs.make
  
-@@ -168,11 +169,18 @@
+@@ -171,11 +172,18 @@ all: lib liblz4.pc
  all32: MCM_CFLAGS += -m32
  all32: all
  
@@ -46,7 +46,7 @@ Unlock install target. Use pkgsrc install scripts.
  endif
  
  ifeq ($(WINBASED),yes)
-@@ -200,12 +208,11 @@
+@@ -203,12 +211,11 @@ endif
  
  else   # not windows
  
@@ -64,16 +64,16 @@ Unlock install target. Use pkgsrc install scripts.
  
  endif
  
-@@ -219,7 +226,7 @@
+@@ -222,7 +229,7 @@ liblz4.$(SHARED_EXT): liblz4.$(SHARED_EX
  	$(LN_SF) $< $@
  
  .PHONY: liblz4
--liblz4: $(LIBLZ4) liblz4.$(SHARED_EXT_MAJOR) liblz4.$(SHARED_EXT)
+-liblz4: $(if $(filter yes,$(BUILD_SHARED)),$(LIBLZ4) liblz4.$(SHARED_EXT_MAJOR) liblz4.$(SHARED_EXT))
 +liblz4: liblz4.la
  
  else
  
-@@ -298,13 +305,13 @@
+@@ -301,13 +308,13 @@ install:
  	[ -e $(LIBLZ4) ] || $(MAKE) liblz4
    endif
  	$(MAKE) liblz4.pc PC_LIBS_PRIVATE="$(if $(filter yes,$(BUILD_STATIC)),$$($(PC_THREADS_SH)))"
@@ -92,7 +92,7 @@ Unlock install target. Use pkgsrc install scripts.
    endif
    ifeq ($(BUILD_SHARED),yes)
  # Traditionally, one installs the DLLs in the bin directory as programs
-@@ -314,15 +321,13 @@
+@@ -317,15 +324,13 @@ install:
  	$(INSTALL_PROGRAM) $(LIBLZ4) $(DESTDIR)$(bindir)
  	$(INSTALL_PROGRAM) $(LIBLZ4_EXP) $(DESTDIR)$(libdir)
      else

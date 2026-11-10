@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2026/11/09 14:20:58 wiz Exp $
+$NetBSD: distinfo,v 1.29 2026/11/10 12:58:25 adam Exp $
 
-BLAKE2s (lz4-1.11.0.tar.gz) = 8cfee74d286995f4a076c4442320899603bdca6771691089f5a95b6d412e3788
-SHA512 (lz4-1.11.0.tar.gz) = 5638a9ca76f333bea718b457588eadafd8dddbc4c8afcd8e21992805afff7af283283642558e52d1f1d4655dbe26f2aa85fa89dc365041ca621baf79c552f364
-Size (lz4-1.11.0.tar.gz) = 545646 bytes
+BLAKE2s (lz4-1.11.1.tar.gz) = 37a163627c42271fd2cd92243f418cc9e4001b7889d8d4327187a0b6b85b2518
+SHA512 (lz4-1.11.1.tar.gz) = 1b9ecf6b5d0b53be6a7e28f85c63daeecfbf55dee2759dab5eb4647675975ccfe426152e382c30b8a8adb4038d40b312cceac4c56f348fb0977919869aa24669
+Size (lz4-1.11.1.tar.gz) = 553363 bytes
 SHA1 (patch-build_make_lz4defs.make) = 27d09bfa241c00c0376d52fbdaa2e019c7f1d0c8
-SHA1 (patch-lib_Makefile) = 13f9aaf15f7f0ab8c0bd5386d24a300c4c2b8318
+SHA1 (patch-lib_Makefile) = 10c2faed5a75fcbe693fd2ad01fe9835156f9d56
 SHA1 (patch-programs_Makefile) = 50051e64489836066581693d8ed2c2cf9f662d8a
