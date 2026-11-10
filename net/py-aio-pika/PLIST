@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/30 14:25:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/10 10:12:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/aio_pika/__init__.py
 ${PYSITELIB}/aio_pika/__init__.pyc
@@ -21,6 +22,9 @@ ${PYSITELIB}/aio_pika/exceptions.pyo
 ${PYSITELIB}/aio_pika/exchange.py
 ${PYSITELIB}/aio_pika/exchange.pyc
 ${PYSITELIB}/aio_pika/exchange.pyo
+${PYSITELIB}/aio_pika/hook-aio_pika.py
+${PYSITELIB}/aio_pika/hook-aio_pika.pyc
+${PYSITELIB}/aio_pika/hook-aio_pika.pyo
 ${PYSITELIB}/aio_pika/log.py
 ${PYSITELIB}/aio_pika/log.pyc
 ${PYSITELIB}/aio_pika/log.pyo
