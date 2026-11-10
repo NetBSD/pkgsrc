@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7901 2026/11/10 12:33:39 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7902 2026/11/10 12:58:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11761,3 +11761,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.13.7 [wiz 2026-11-10]
 	Updated devel/lazygit to 0.66.3 [adam 2026-11-10]
 	Updated net/rclone to 1.76.0 [adam 2026-11-10]
+	Updated security/mit-krb5 to 1.22.3 [adam 2026-11-10]
+	Updated archivers/lz4 to 1.11.1 [adam 2026-11-10]
