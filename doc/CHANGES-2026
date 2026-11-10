@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7896 2026/11/10 10:26:16 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7897 2026/11/10 10:28:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11754,3 +11754,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-utils to 4.2.0 [adam 2026-11-10]
 	Updated shells/nushell to 0.117.0 [pin 2026-11-10]
 	Updated sysutils/dua-cli to 3.0.1 [pin 2026-11-10]
+	Updated wm/marswm to 0.6.3 [pin 2026-11-10]
