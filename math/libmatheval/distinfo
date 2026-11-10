@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/11/10 15:43:51 wiz Exp $
 
-BLAKE2s (libmatheval-1.1.11.tar.gz) = 078a70769595cb066476b8e3b7178299e5d587121865c493cc6c07847ed7ca27
-SHA512 (libmatheval-1.1.11.tar.gz) = 854c35dce7c9a956ea1d7406ed6799375f039dc7305fea20af92d5b1c97b242d23716d0e83d2ff2daa89e3ca06669934a86684faf714a8458a569c5cde09953c
-Size (libmatheval-1.1.11.tar.gz) = 551770 bytes
-SHA1 (patch-aa) = f6e97ab357245e89e5f4173e5a08dc7716c32d35
-SHA1 (patch-tests_matheval.c) = 65bcb8117e65ad44b63ad59ca3349f06b894d697
+BLAKE2s (libmatheval-1.1.12.tar.gz) = 6be73b2596525f90a449b426d6c5b008c3caf171084aa80974831a10a56cf97a
+SHA512 (libmatheval-1.1.12.tar.gz) = b3fd1fe30ba55d704da15bf95a642ec737f90445e6bcfab5580a5dbb17b76ea11ad0f654465c51e6c7b5fe54f4934a4d8631fa650c7250d3275ebea5aed7e40a
+Size (libmatheval-1.1.12.tar.gz) = 628415 bytes
+SHA1 (patch-lib_g77__interface.c) = 1496ef3f862fc7b47d9122316598354128761e87
+SHA1 (patch-lib_matheval.h) = 35ccd772d5c8ed14f71a6ea74b9c50f37422d01c
