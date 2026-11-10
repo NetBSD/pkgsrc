@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7892 2026/11/10 09:51:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7893 2026/11/10 10:08:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11748,3 +11748,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-progressbar2 to 4.7.0 [adam 2026-11-10]
 	Updated textproc/py-bracex to 3.2.2 [adam 2026-11-10]
 	Updated graphics/py-svglib to 2.4.0 [adam 2026-11-10]
+	Updated net/py-pamqp to 5.0.0 [adam 2026-11-10]
+	Updated net/py-aiormq to 7.2.5 [adam 2026-11-10]
