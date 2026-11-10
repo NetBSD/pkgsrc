@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7907 2026/11/10 15:44:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7908 2026/11/10 18:53:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11771,3 +11771,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox153 to 153.7.0 [gutteridge 2026-11-10]
 	Updated www/firefox153-l10n to 153.7.0 [gutteridge 2026-11-10]
 	Updated math/libmatheval to 1.1.12 [wiz 2026-11-10]
+	Updated lang/go126 to 1.26.11 [bsiegert 2026-11-10]
+	Updated lang/go127 to 1.27.4 [bsiegert 2026-11-10]
