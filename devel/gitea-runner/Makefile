@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/10/20 20:28:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/10 18:55:04 bsiegert Exp $
 
 DISTNAME=	v${PKGVERSION_NOREV}
 PKGNAME=	gitea-runner-3.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://gitea.com/gitea/runner/archive/
 DIST_SUBDIR=	runner

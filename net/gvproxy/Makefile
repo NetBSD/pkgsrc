@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2026/10/20 20:28:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.67 2026/11/10 18:55:13 bsiegert Exp $
 
 DISTNAME=	gvproxy-0.8.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 GITHUB_PROJECT=	gvisor-tap-vsock

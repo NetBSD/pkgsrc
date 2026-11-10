@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.139 2026/10/27 12:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2026/11/10 18:55:02 bsiegert Exp $
 
 # Note that this package intends to track the Prometheus LTS version.
 # See: https://prometheus.io/docs/introduction/release-cycle/
 DISTNAME=		prometheus-3.13.5
 MASTER_SITES=		${MASTER_SITE_GITHUB:=prometheus/}
+PKGREVISION=		1
 CATEGORIES=		databases
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 

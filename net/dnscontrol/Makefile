@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/11/09 14:33:43 drixter Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/10 18:55:12 bsiegert Exp $
 
 DISTNAME=	dnscontrol-5.8.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=StackExchange/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

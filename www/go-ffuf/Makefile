@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2026/10/20 20:28:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.75 2026/11/10 18:55:29 bsiegert Exp $
 
 DISTNAME=		go-ffuf-1.2.1
-PKGREVISION=		63
+PKGREVISION=		64
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ffuf/}
 GITHUB_PROJECT=		ffuf

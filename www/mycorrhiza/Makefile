@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/10/20 20:28:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/10 18:55:31 bsiegert Exp $
 
 DISTNAME=	mycorrhiza-1.14.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bouncepaw/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

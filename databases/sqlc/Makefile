@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2026/10/20 20:27:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.47 2026/11/10 18:55:02 bsiegert Exp $
 
 DISTNAME=	sqlc-1.31.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqlc-dev/}
 

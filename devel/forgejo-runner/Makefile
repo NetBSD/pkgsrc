@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/11/05 20:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/10 18:55:03 bsiegert Exp $
 
 DISTNAME=	v${PKGVERSION_NOREV}
 PKGNAME=	forgejo-runner-13.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://code.forgejo.org/forgejo/runner/archive/
 DIST_SUBDIR=	runner

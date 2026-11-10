@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2026/10/20 20:28:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/10 18:55:08 bsiegert Exp $
 
 DISTNAME=	protobuf-language-server-0.1.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lasorda/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

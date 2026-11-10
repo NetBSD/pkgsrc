@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/10/21 17:14:15 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/10 18:55:30 bsiegert Exp $
 
 DISTNAME=	grafana-influxdb-datasource-13.1.8
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2026/10/20 20:28:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/10 18:55:29 bsiegert Exp $
 
 DISTNAME=	forgejo-src-16.0.6
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www devel
 MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/v${DISTNAME:S/forgejo-src-//}/
 

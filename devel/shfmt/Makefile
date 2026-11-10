@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2026/10/20 20:28:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.50 2026/11/10 18:55:09 bsiegert Exp $
 
 DISTNAME=	shfmt-3.14.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mvdan/}
 GITHUB_PROJECT=	sh

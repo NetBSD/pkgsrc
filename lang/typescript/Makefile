@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/10/20 20:28:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/10 18:55:10 bsiegert Exp $
 
 DISTNAME=	typescript-7.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 GITHUB_PROJECT=	TypeScript
 GITHUB_TAG=	v${PKGVERSION_NOREV}
