@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.49 2026/11/10 11:25:39 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.50 2026/11/10 13:42:40 riastradh Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -109,6 +109,15 @@ CARGO_INSTALL_ARGS?=	install --path . --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO
 
 MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
 ALL_ENV+=		CARGO_HOME=${WRKDIR}
+
+# Not everything uses ${CARGO_ARGS} to pass -j${_MAKE_JOBS_N} to cargo,
+# e.g. Python setuptools-rust assembles its own cargo(1) invocation,
+# but generally Cargo will respect CARGO_BUILD_JOBS the same way as -j
+# or the build.jobs setting in Cargo.toml.
+#
+# https://web.archive.org/web/20261031232318/https://doc.rust-lang.org/cargo/reference/config.html#buildjobs
+#
+ALL_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 .if !target(do-build)
 do-build: do-cargo-build
