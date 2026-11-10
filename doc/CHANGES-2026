@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7888 2026/11/10 09:03:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7889 2026/11/10 09:08:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11740,3 +11740,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libspelling to 0.4.11 [adam 2026-11-10]
 	Updated databases/repmgr to 5.5.1 [adam 2026-11-10]
 	Updated databases/redis to 8.10.3 [adam 2026-11-10]
+	Updated parallel/py-threadpoolctl to 3.8.0 [adam 2026-11-10]
+	Updated www/py-tornado to 6.6.1 [adam 2026-11-10]
