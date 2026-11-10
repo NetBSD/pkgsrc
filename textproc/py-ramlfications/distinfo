@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/06/13 05:15:58 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/11/10 09:23:50 adam Exp $
 
-BLAKE2s (ramlfications-0.2.2.tar.gz) = ab145265ec67dd6419833f081f8678131aff53637116711a4d0f43c3ecab141a
-SHA512 (ramlfications-0.2.2.tar.gz) = fbf0ef577dfbf99ee0747bdf98a507e214cbcf70c78b9abff105dd71b27f875ad3662c740c74b6ce65509e93fdfa07a68b8c4c4b4a3589ef5759e9b25b4e48bd
-Size (ramlfications-0.2.2.tar.gz) = 1155837 bytes
+BLAKE2s (ramlfications-0.3.0.tar.gz) = f04a4bc4d31d48008d405ce2185c0d2931a81b604e81972ec84a857e7c6b402d
+SHA512 (ramlfications-0.3.0.tar.gz) = 1f1e6d81898a2e8916573ef9c810f5b85731333822af4822f7df44ab36df454299182f6b151c69c01047b718e2f4c233d2a0eab0b511205a959b728b5566d7e6
+Size (ramlfications-0.3.0.tar.gz) = 1182435 bytes
