@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/10/26 05:49:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/10 10:07:20 adam Exp $
 
-DISTNAME=	pamqp-4.0.1
+DISTNAME=	pamqp-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pamqp/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/gmr/pamqp
 COMMENT=	RabbitMQ Focused AMQP low-level library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
