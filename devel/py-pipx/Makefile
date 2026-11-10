@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/11/04 14:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/10 13:18:32 adam Exp $
 
-DISTNAME=	pipx-1.18.13
+DISTNAME=	pipx-1.18.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pipx/}
