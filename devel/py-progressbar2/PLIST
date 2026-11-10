@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2026/08/14 08:29:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/10 09:28:07 adam Exp $
+bin/bar-${PYVERSSUFFIX}
 bin/progressbar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -15,6 +16,30 @@ ${PYSITELIB}/progressbar/__init__.pyo
 ${PYSITELIB}/progressbar/__main__.py
 ${PYSITELIB}/progressbar/__main__.pyc
 ${PYSITELIB}/progressbar/__main__.pyo
+${PYSITELIB}/progressbar/_identity.py
+${PYSITELIB}/progressbar/_identity.pyc
+${PYSITELIB}/progressbar/_identity.pyo
+${PYSITELIB}/progressbar/_parallel/__init__.py
+${PYSITELIB}/progressbar/_parallel/__init__.pyc
+${PYSITELIB}/progressbar/_parallel/__init__.pyo
+${PYSITELIB}/progressbar/_parallel/_async.py
+${PYSITELIB}/progressbar/_parallel/_async.pyc
+${PYSITELIB}/progressbar/_parallel/_async.pyo
+${PYSITELIB}/progressbar/_parallel/_common.py
+${PYSITELIB}/progressbar/_parallel/_common.pyc
+${PYSITELIB}/progressbar/_parallel/_common.pyo
+${PYSITELIB}/progressbar/_parallel/_decorator.py
+${PYSITELIB}/progressbar/_parallel/_decorator.pyc
+${PYSITELIB}/progressbar/_parallel/_decorator.pyo
+${PYSITELIB}/progressbar/_parallel/_display.py
+${PYSITELIB}/progressbar/_parallel/_display.pyc
+${PYSITELIB}/progressbar/_parallel/_display.pyo
+${PYSITELIB}/progressbar/_parallel/_shell.py
+${PYSITELIB}/progressbar/_parallel/_shell.pyc
+${PYSITELIB}/progressbar/_parallel/_shell.pyo
+${PYSITELIB}/progressbar/_parallel/_sync.py
+${PYSITELIB}/progressbar/_parallel/_sync.pyc
+${PYSITELIB}/progressbar/_parallel/_sync.pyo
 ${PYSITELIB}/progressbar/algorithms.py
 ${PYSITELIB}/progressbar/algorithms.pyc
 ${PYSITELIB}/progressbar/algorithms.pyo
