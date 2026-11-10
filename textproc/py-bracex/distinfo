@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/10/22 14:20:56 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/11/10 09:43:47 adam Exp $
 
-BLAKE2s (bracex-3.2.tar.gz) = 24a0ccba0574be35abc96ee71cf82106582183b1702c5444e1260f03957ed146
-SHA512 (bracex-3.2.tar.gz) = bde1249d3d599a6b5ae3ca1c0d5b14314d758394ea96981a043b4db2bfb4c82b1bdfb6e4800c2a41b58471497eb120b4a69bfbc4a436cb88773872f81fd0e7ba
-Size (bracex-3.2.tar.gz) = 29771 bytes
+BLAKE2s (bracex-3.2.2.tar.gz) = 790573d2512501808a34e030e4132cdf197ec27613e1449f0adb1a5d7b4d02fb
+SHA512 (bracex-3.2.2.tar.gz) = d540113facab6d746b4ce07083f1e4554c45318019b95a3bc6f0ad9a1a54ecd65109f4801f430247115d90a2f2fd853d3b9e9c3ab3d1264293f3e485847b5404
+Size (bracex-3.2.2.tar.gz) = 34980 bytes
