@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7903 2026/11/10 13:09:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7904 2026/11/10 13:22:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11765,3 +11765,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/lz4 to 1.11.1 [adam 2026-11-10]
 	Updated www/py-aioquic to 1.7.2 [adam 2026-11-10]
 	Updated databases/py-alembic to 1.20.1 [adam 2026-11-10]
+	Updated databases/py-sqlparse to 0.6.1 [adam 2026-11-10]
+	Updated devel/py-pipx to 1.18.16 [adam 2026-11-10]
+	Updated textproc/py-pdf to 7.0.1 [adam 2026-11-10]
