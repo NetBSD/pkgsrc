@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2026/10/05 10:40:06 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2026/11/10 22:11:36 gutteridge Exp $
 
 DISTNAME=	awesome-4.3
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	wm lua
 EXTRACT_SUFX=	.tar.xz
 MASTER_SITES=	${MASTER_SITE_GITHUB:=awesomeWM/}
@@ -11,8 +11,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	https://awesomewm.org/
 COMMENT=	Window manager based on dwm, with Lua integration
 LICENSE=	gnu-gpl-v2
-
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 CONFLICTS+=	awesome<3.0
 
