@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/05/03 10:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/10 08:15:08 adam Exp $
 
-DISTNAME=	assimp-6.0.5
+DISTNAME=	assimp-6.0.6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=assimp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
