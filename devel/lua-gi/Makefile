@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2026/09/29 06:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/10 22:07:02 gutteridge Exp $
 
 DISTNAME=	lgi-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 VERSION=	0.9.2
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pavouk/}
@@ -10,8 +10,10 @@ GITHUB_PROJECT=	lgi
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pavouk/lgi
-COMMENT=	Gobject-introspection based dynamic Lua binding
+COMMENT=	Gobject-introspection-based dynamic Lua binding
 LICENSE=	mit
+
+DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
 
 USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config gmake
