@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/12/28 16:09:24 pin Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/10 10:27:02 pin Exp $
 
-DISTNAME=	marswm-0.6.2
+DISTNAME=	marswm-0.6.3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jzbor/}
 
@@ -22,6 +22,8 @@ INSTALLATION_DIRS=	bin
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXft}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libXft}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/mars-relay \
