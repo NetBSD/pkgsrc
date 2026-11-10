@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/10/24 09:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/10 09:50:43 adam Exp $
 
-DISTNAME=	svglib-2.3.2
+DISTNAME=	svglib-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/svglib/}
