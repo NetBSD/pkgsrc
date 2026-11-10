@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2026/01/04 15:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/10 10:02:56 yurix Exp $
 
 DISTNAME=		libelf-0.8.13
 PKGREVISION=		1
 CATEGORIES=		devel
-#MASTER_SITES=		http://www.mr511.de/software/
+MASTER_SITES=		https://fossies.org/linux/misc/old/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://www.mr511.de/software/english.html
+HOMEPAGE=		https://web.archive.org/web/20170211200259/http://www.mr511.de/software/english.html
 COMMENT=		ELF object file access library
 LICENSE=		gnu-lgpl-v2
 
