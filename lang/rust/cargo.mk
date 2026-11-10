@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.48 2026/10/01 06:53:07 adam Exp $
+# $NetBSD: cargo.mk,v 1.49 2026/11/10 11:25:39 jperkin Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -37,7 +37,7 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../lang/rust/rust.mk"
 
-USE_TOOLS+=		bsdtar digest
+USE_TOOLS+=		bsdtar digest:bootstrap
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
 CARGO_WRKSRC?=		${WRKSRC}
 
