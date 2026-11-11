@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7924 2026/11/11 14:03:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7925 2026/11/11 14:45:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11791,3 +11791,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/shader-slang to 2026.22 [ktnb 2026-11-11]
 	Updated www/apache24 to 2.4.71 [taca 2026-11-11]
 	Updated www/py-starlette to 1.10.0nb1 [wiz 2026-11-11]
+	Added security/py-pwdlib version 0.3.1 [wiz 2026-11-11]
