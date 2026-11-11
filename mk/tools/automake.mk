@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.36 2026/09/24 13:26:38 wiz Exp $
+# $NetBSD: automake.mk,v 1.37 2026/11/11 22:59:25 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -90,7 +90,8 @@ _TOOLS_AM_NAMES=	aclocal		aclocal-1.4			\
 					aclocal-1.16			\
 					aclocal-1.17			\
 					aclocal-1.18			\
-					aclocal-1.19
+					aclocal-1.19			\
+					aclocal-1.20
 _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 					automake-1.5			\
 					automake-1.6			\
@@ -106,7 +107,8 @@ _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 					automake-1.16			\
 					automake-1.17			\
 					automake-1.18			\
-					automake-1.19
+					automake-1.19			\
+					automake-1.20
 
 .if defined(GNU_CONFIGURE)
 .  for _t_ in ${_TOOLS_AM_NAMES}
