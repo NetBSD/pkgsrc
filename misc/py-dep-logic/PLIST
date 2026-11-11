@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/09/26 07:37:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/11 11:38:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -35,6 +35,9 @@ ${PYSITELIB}/dep_logic/py.typed
 ${PYSITELIB}/dep_logic/specifiers/__init__.py
 ${PYSITELIB}/dep_logic/specifiers/__init__.pyc
 ${PYSITELIB}/dep_logic/specifiers/__init__.pyo
+${PYSITELIB}/dep_logic/specifiers/arbitrary.py
+${PYSITELIB}/dep_logic/specifiers/arbitrary.pyc
+${PYSITELIB}/dep_logic/specifiers/arbitrary.pyo
 ${PYSITELIB}/dep_logic/specifiers/base.py
 ${PYSITELIB}/dep_logic/specifiers/base.pyc
 ${PYSITELIB}/dep_logic/specifiers/base.pyo
@@ -50,6 +53,18 @@ ${PYSITELIB}/dep_logic/specifiers/special.pyo
 ${PYSITELIB}/dep_logic/specifiers/union.py
 ${PYSITELIB}/dep_logic/specifiers/union.pyc
 ${PYSITELIB}/dep_logic/specifiers/union.pyo
+${PYSITELIB}/dep_logic/tags/__init__.py
+${PYSITELIB}/dep_logic/tags/__init__.pyc
+${PYSITELIB}/dep_logic/tags/__init__.pyo
+${PYSITELIB}/dep_logic/tags/os.py
+${PYSITELIB}/dep_logic/tags/os.pyc
+${PYSITELIB}/dep_logic/tags/os.pyo
+${PYSITELIB}/dep_logic/tags/platform.py
+${PYSITELIB}/dep_logic/tags/platform.pyc
+${PYSITELIB}/dep_logic/tags/platform.pyo
+${PYSITELIB}/dep_logic/tags/tags.py
+${PYSITELIB}/dep_logic/tags/tags.pyc
+${PYSITELIB}/dep_logic/tags/tags.pyo
 ${PYSITELIB}/dep_logic/utils.py
 ${PYSITELIB}/dep_logic/utils.pyc
 ${PYSITELIB}/dep_logic/utils.pyo
