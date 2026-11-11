@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7926 2026/11/11 15:09:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7927 2026/11/11 15:09:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11793,3 +11793,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-starlette to 1.10.0nb1 [wiz 2026-11-11]
 	Added security/py-pwdlib version 0.3.1 [wiz 2026-11-11]
 	Added devel/py-opentelemetry-semantic-conventions version 0.66b2 [wiz 2026-11-11]
+	Added devel/py-opentelemetry-sdk version 1.45.2 [wiz 2026-11-11]
