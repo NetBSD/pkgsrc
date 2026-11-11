@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/11/11 11:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/11 18:10:24 pin Exp $
 
-DISTNAME=	eilmeldung-1.9.1
-PKGREVISION=	1
+DISTNAME=	eilmeldung-1.10.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=christo-auer/}
 
@@ -16,11 +15,16 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
+# aws-lc-sys builds jitterentropy with -O0 flag.
+# Forcing the -O2 flag triggers a build error.
+# Disable the jitterentropy build.
+MAKE_ENV+=	AWS_LC_SYS_NO_JITTER_ENTROPY=1
+
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.100.0-beta.5
+#RUST_REQ=	1.100.0-beta.13
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.100.0-beta.5 on amd64
+#This package is confirmed to build with Rust 1.100.0-beta.13 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
 
