@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2026/11/11 11:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2026/11/11 22:39:54 leot Exp $
 
 DISTNAME=	mpv-0.42.0
 PKGREVISION=	2
@@ -53,6 +53,8 @@ PLIST_VARS+=	desktop
 .if ${OPSYS} != "Darwin"
 PLIST.desktop=	yes
 .endif
+
+PRINT_PLIST_AWK+=	/\.desktop$$/ { $$0 = "$${PLIST.desktop}" $$0 }
 
 #
 # At some point this should be consolidated into mk/platform/Darwin.mk, it is
