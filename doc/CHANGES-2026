@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7914 2026/11/11 08:10:39 pho Exp $
+$NetBSD: CHANGES-2026,v 1.7915 2026/11/11 09:09:34 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11780,3 +11780,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/git to 2.56.1 [js 2026-11-10]
 	Updated net/tailscale to 1.104.6 [ktnb 2026-11-11]
 	Updated pkgtools/pkgchkxx to 0.3.5 [pho 2026-11-11]
+	Updated www/resterm to 1.18.1 [drixter 2026-11-11]
