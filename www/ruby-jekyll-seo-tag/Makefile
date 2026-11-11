@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/05/31 14:40:01 taca Exp $
+# $NetBSD: Makefile,v 1.11.4.1 2026/11/11 10:48:44 maya Exp $
 
-DISTNAME=	jekyll-seo-tag-2.9.0
+DISTNAME=	jekyll-seo-tag-2.9.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
