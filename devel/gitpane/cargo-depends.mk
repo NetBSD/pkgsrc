@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2026/11/04 12:19:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2026/11/11 18:05:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -91,7 +91,6 @@ CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foldhash-0.1.5
 CARGO_CRATE_DEPENDS+=	foldhash-0.2.0
 CARGO_CRATE_DEPENDS+=	fs2-0.4.3
-CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	futures-0.3.34
 CARGO_CRATE_DEPENDS+=	futures-channel-0.3.34
 CARGO_CRATE_DEPENDS+=	futures-core-0.3.34
@@ -118,7 +117,7 @@ CARGO_CRATE_DEPENDS+=	http-1.4.2
 CARGO_CRATE_DEPENDS+=	httparse-1.10.1
 CARGO_CRATE_DEPENDS+=	hybrid-array-0.4.15
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
-CARGO_CRATE_DEPENDS+=	ignore-0.4.33
+CARGO_CRATE_DEPENDS+=	ignore-0.4.34
 CARGO_CRATE_DEPENDS+=	indenter-0.3.4
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
@@ -158,7 +157,7 @@ CARGO_CRATE_DEPENDS+=	mio-1.2.2
 CARGO_CRATE_DEPENDS+=	nix-0.29.0
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	nom-8.0.0
-CARGO_CRATE_DEPENDS+=	notify-8.2.0
+CARGO_CRATE_DEPENDS+=	notify-8.2.1
 CARGO_CRATE_DEPENDS+=	notify-debouncer-full-0.7.0
 CARGO_CRATE_DEPENDS+=	notify-types-2.1.0
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.3
@@ -171,6 +170,7 @@ CARGO_CRATE_DEPENDS+=	objc2-0.6.4
 CARGO_CRATE_DEPENDS+=	objc2-app-kit-0.3.2
 CARGO_CRATE_DEPENDS+=	objc2-core-foundation-0.3.2
 CARGO_CRATE_DEPENDS+=	objc2-core-graphics-0.3.2
+CARGO_CRATE_DEPENDS+=	objc2-core-services-0.3.2
 CARGO_CRATE_DEPENDS+=	objc2-encode-4.1.0
 CARGO_CRATE_DEPENDS+=	objc2-foundation-0.3.2
 CARGO_CRATE_DEPENDS+=	objc2-io-surface-0.3.2
