@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2026/07/20 05:34:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2026/11/11 13:31:20 maya Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/CITATION.cff
-${GEM_LIBDIR}/CODE_OF_CONDUCT.md
-${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/FUNDING.md
 ${GEM_LIBDIR}/LICENSE.md
-${GEM_LIBDIR}/MIT.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/RUBOCOP.md
-${GEM_LIBDIR}/SECURITY.md
-${GEM_LIBDIR}/certs/pboling.pem
 ${GEM_LIBDIR}/lib/oauth.rb
 ${GEM_LIBDIR}/lib/oauth/auth_sanitizer.rb
 ${GEM_LIBDIR}/lib/oauth/client.rb
@@ -53,8 +45,5 @@ ${GEM_LIBDIR}/lib/oauth/tokens/request_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/server_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/token.rb
 ${GEM_LIBDIR}/lib/oauth/version.rb
-${GEM_LIBDIR}/sig/oauth/consumer.rbs
-${GEM_LIBDIR}/sig/oauth/signature/base.rbs
-${GEM_LIBDIR}/sig/oauth/tokens/token.rbs
-${GEM_LIBDIR}/sig/oauth/version.rbs
+${GEM_LIBDIR}/sig/oauth.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
