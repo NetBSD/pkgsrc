@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2026/11/11 10:00:07 nia Exp $
+# $NetBSD: Makefile,v 1.146 2026/11/11 10:36:38 nia Exp $
 
 DISTNAME=	fontconfig-2.18.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -68,7 +68,7 @@ TMPLDIR=	${PREFIX}/share/fontconfig/conf.avail
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
 FC_STDCONF=	\
-	10-hinting-full.conf	\
+	10-hinting-slight.conf	\
 	10-scale-bitmap-fonts.conf \
 	10-yes-antialias.conf	\
 	10-sub-pixel-none.conf	\
