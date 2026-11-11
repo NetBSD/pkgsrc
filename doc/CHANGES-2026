@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7936 2026/11/11 18:25:49 hauke Exp $
+$NetBSD: CHANGES-2026,v 1.7937 2026/11/11 19:49:07 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11803,3 +11803,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/xfr to 0.14.1 [pin 2026-11-11]
 	Updated news/eilmeldung to 1.10.0 [pin 2026-11-11]
 	Updated sysutils/proc-cli to 2.3.0 [hauke 2026-11-11]
+	Updated audio/fooyin to 0.15.1 [hauke 2026-11-11]
