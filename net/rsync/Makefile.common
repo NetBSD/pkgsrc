@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2026/08/15 06:57:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.1.2.1 2026/11/11 10:00:38 maya Exp $
 #
 # used by net/rsync/Makefile
 # used by net/rrsync/Makefile
 
-DISTNAME=	rsync-3.5.0
+DISTNAME=	rsync-3.5.2
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -11,3 +11,6 @@ MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rsync.samba.org/
 LICENSE=	gnu-gpl-v3
+
+DISTINFO_FILE=	${.CURDIR}/../../net/rsync/distinfo
+PATCHDIR=	${.CURDIR}/../../net/rsync/patches
