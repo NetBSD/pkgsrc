@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2026/10/29 00:52:33 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.10 2026/11/11 01:59:04 ktnb Exp $
 
 GO_MODULE_FILES+=	4d63.com/gocheckcompilerdirectives/@v/v1.4.0.mod
 GO_MODULE_FILES+=	4d63.com/gocheckcompilerdirectives/@v/v1.4.0.zip
@@ -807,8 +807,8 @@ GO_MODULE_FILES+=	github.com/nishanths/predeclared/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/nishanths/predeclared/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/nuclearkev/peercred/@v/v0.0.0-20260422153448-b7b00efe5151.mod
 GO_MODULE_FILES+=	github.com/nuclearkev/peercred/@v/v0.0.0-20260422153448-b7b00efe5151.zip
-GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20261008134953-e33cc573091d.mod
-GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20261008134953-e33cc573091d.zip
+GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20261111010012-0df52e23123e.mod
+GO_MODULE_FILES+=	github.com/nuclearkev/wireguard-go/@v/v0.0.0-20261111010012-0df52e23123e.zip
 GO_MODULE_FILES+=	github.com/nunnatsa/ginkgolinter/@v/v0.24.0.mod
 GO_MODULE_FILES+=	github.com/nunnatsa/ginkgolinter/@v/v0.24.0.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
