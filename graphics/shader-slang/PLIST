@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/11/04 18:19:22 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/11 13:20:16 ktnb Exp $
 bin/slang
 bin/slangc
 bin/slangd
@@ -59,6 +59,15 @@ lib/slang-standard-module-${PKGVERSION}/slang/numerics/__builtin.slang-module
 lib/slang-standard-module-${PKGVERSION}/slang/numerics/__builtin_differentiable.slang-module
 lib/slang-standard-module-${PKGVERSION}/slang/numerics/differentiable.slang-module
 lib/slang-standard-module-${PKGVERSION}/slang/permuto-encoder.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/contexts.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/descriptor.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/portable.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/portable.slang-module
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/program-schema.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/ray-types.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/stage-contracts.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/stage-inputs.slang
+lib/slang-standard-module-${PKGVERSION}/slang/raytracing/trace.slang
 lib/slang-standard-module-${PKGVERSION}/slang/shared-memory-pool.slang
 lib/slang-standard-module-${PKGVERSION}/slang/vectorized-reader.slang
 share/doc/slang/64bit-type-support.md
@@ -447,6 +456,7 @@ share/doc/slang/generated/tests/_meta/findings/glsl-unorm-snorm-image-format-col
 share/doc/slang/generated/tests/_meta/findings/hlsl-pointer-param-emits-internal-ptr-generic.yaml
 share/doc/slang/generated/tests/_meta/findings/hull-patch-constant-user-output-location-collides.yaml
 share/doc/slang/generated/tests/_meta/findings/intrinsic-asm-out-of-range-value-slot-assert.yaml
+share/doc/slang/generated/tests/_meta/findings/llvm-cpu-switch-case-decl-undeclared-local.yaml
 share/doc/slang/generated/tests/_meta/findings/metal-append-buffer-params-missing-binding-slot.yaml
 share/doc/slang/generated/tests/_meta/findings/metal-interpolation-modifier-linear-centroid-mismapped.yaml
 share/doc/slang/generated/tests/_meta/findings/metal-wgsl-return-position-depth-semantic-dropped.yaml
@@ -471,6 +481,8 @@ share/doc/slang/generated/tests/_meta/findings/slangi-vm-swizzle-assign-bytecode
 share/doc/slang/generated/tests/_meta/findings/slangi-vm-vector-scalar-binary-op-wrong-values.yaml
 share/doc/slang/generated/tests/_meta/findings/spirv-track-liveness-malformed-oplifetimestart.yaml
 share/doc/slang/generated/tests/_meta/findings/torch-autobind-unmappable-param-sigsegv.repro.slang
+share/doc/slang/generated/tests/_meta/findings/torch-ordinary-entry-param-sigsegv.repro.slang
+share/doc/slang/generated/tests/_meta/findings/torch-ordinary-entry-param-sigsegv.yaml
 share/doc/slang/generated/tests/_meta/findings/types-double-member-metal-wgsl-emit-abort.yaml
 share/doc/slang/generated/tests/_meta/findings/types-dynamic-resource-hlsl-metal-wgsl-emit-abort.yaml
 share/doc/slang/generated/tests/_meta/findings/types-struct-no-body-forward-decl-conflict.yaml
@@ -1246,13 +1258,9 @@ share/doc/slang/generated/tests/design/ast-reference/declarations/assoctype-wher
 share/doc/slang/generated/tests/design/ast-reference/declarations/assoctypedecl-interface.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/attributedecl-new-spelling-for-existing-class.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/classdecl-reference-type.slang
-share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-countof-on-right-rejected.slang
-share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-optional-hasdifftypeinfo-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-countof-pack.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-equality.slang
-share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-multiple-supertypes.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-nonempty-pack.slang
-share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-optional-subtype.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constraint-where-type-coercion.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constructordecl-init.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/constructordecl-synthesized-member-init.slang
@@ -1269,7 +1277,6 @@ share/doc/slang/generated/tests/design/ast-reference/declarations/enumdecl-confo
 share/doc/slang/generated/tests/design/ast-reference/declarations/enumdecl-tag-type-and-conformance-side-by-side.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/extensiondecl-adds-interface-conformance.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/extensiondecl-adds-member.slang
-share/doc/slang/generated/tests/design/ast-reference/declarations/filedecl-handwritten-block-is-private.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/funcdecl-and-overload.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/funcdecl-member-method.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/funcdecl-trailing-arrow-return.slang
@@ -1284,6 +1291,7 @@ share/doc/slang/generated/tests/design/ast-reference/declarations/genericdecl-wr
 share/doc/slang/generated/tests/design/ast-reference/declarations/generictypepackparamdecl-each.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/genericvaluepackparamdecl-let-each.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/globalgenericparamdecl-use-without-binding-rejected.slang
+share/doc/slang/generated/tests/design/ast-reference/declarations/hlslclassdecl-value-type.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/importdecl-glsl.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/importdecl-unknown-module-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/inheritancedecl-base-interface-method.slang
@@ -1298,6 +1306,7 @@ share/doc/slang/generated/tests/design/ast-reference/declarations/letdecl-immuta
 share/doc/slang/generated/tests/design/ast-reference/declarations/modernparamdecl-immutable-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/modernparamdecl-inout-mutable.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/namespacedecl-qualified-lookup.slang
+share/doc/slang/generated/tests/design/ast-reference/declarations/namespacedecl-qualified-name-expands.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/namespacedecl-same-name-collapse.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/paramdecl-in-out-inout.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/propertydecl-getter-setter.slang
@@ -1319,6 +1328,8 @@ share/doc/slang/generated/tests/design/ast-reference/declarations/subscriptdecl-
 share/doc/slang/generated/tests/design/ast-reference/declarations/subscriptdecl-get.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/typealiasdecl.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/typedefdecl.slang
+share/doc/slang/generated/tests/design/ast-reference/declarations/uniformparametershadowvardecl-assign-global-uniform.slang
+share/doc/slang/generated/tests/design/ast-reference/declarations/uniformparametershadowvardecl-assign-without-compat-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/usingdecl-brings-name.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/vardecl-init-expr.slang
 share/doc/slang/generated/tests/design/ast-reference/declarations/vardecl-mutable.slang
@@ -1333,6 +1344,7 @@ share/doc/slang/generated/tests/design/ast-reference/expressions/assign-to-call-
 share/doc/slang/generated/tests/design/ast-reference/expressions/assign-to-non-lvalue-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/astype-expr-subtype-cast.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/builtin-op-bool-operands-equality.slang
+share/doc/slang/generated/tests/design/ast-reference/expressions/builtin-op-float-mod-uses-floating-remainder.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/builtin-op-for-loop-trip-count-unroll.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/builtin-op-int-constant-folds-array-size.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/builtin-op-matrix-operands-elementwise.slang
@@ -1360,6 +1372,8 @@ share/doc/slang/generated/tests/design/ast-reference/expressions/float-bit-cast-
 share/doc/slang/generated/tests/design/ast-reference/expressions/functype-expr-callback-parameter.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/fwd-differentiate-expr.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/generic-app-explicit-args.slang
+share/doc/slang/generated/tests/design/ast-reference/expressions/hlsl-unsigned-type-expr-denotes-uint.slang
+share/doc/slang/generated/tests/design/ast-reference/expressions/hlsl-unsigned-type-expr-rejected-in-slang-source.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/incomplete-expr-syntax-error.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/index-expr-index-zero.slang
 share/doc/slang/generated/tests/design/ast-reference/expressions/index-expr-last-element.slang
@@ -1475,6 +1489,7 @@ share/doc/slang/generated/tests/design/ast-reference/modifiers/attribute-group-c
 share/doc/slang/generated/tests/design/ast-reference/modifiers/bitfield-modifier-truncates-to-declared-width.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/branch-and-flatten-attributes-emit-on-hlsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/column-major-keeps-native-matrix-on-hlsl.slang
+share/doc/slang/generated/tests/design/ast-reference/modifiers/const-on-ref-parameter-is-readonly.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/const-rejects-assignment.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/cuda-kernel-emits-global-decoration.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/deprecated-attribute-warns-at-use.slang
@@ -1514,6 +1529,7 @@ share/doc/slang/generated/tests/design/ast-reference/modifiers/public-allows-cro
 share/doc/slang/generated/tests/design/ast-reference/modifiers/push-constant-emits-on-spirv.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/raypayload-read-semantic-emits-on-hlsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/ref-parameter-passes-by-reference.slang
+share/doc/slang/generated/tests/design/ast-reference/modifiers/ref-readonly-parameter-rejects-write.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/register-semantic-emits-on-hlsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/require-capability-accepts-matching-target.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/require-capability-rejects-incompatible-target.slang
@@ -1522,6 +1538,7 @@ share/doc/slang/generated/tests/design/ast-reference/modifiers/sample-interpolat
 share/doc/slang/generated/tests/design/ast-reference/modifiers/sealed-interface-allows-direct-conformance.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/shader-entrypoint-attribute.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/static-local-persists-across-calls.slang
+share/doc/slang/generated/tests/design/ast-reference/modifiers/trailing-const-receiver-rejects-member-write.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unorm-snorm-resource-format-emits-on-hlsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unroll-attribute-fanout-on-glsl.slang
 share/doc/slang/generated/tests/design/ast-reference/modifiers/unroll-attribute-on-hlsl.slang
@@ -1545,8 +1562,10 @@ share/doc/slang/generated/tests/design/ast-reference/statements/breakstmt-outsid
 share/doc/slang/generated/tests/design/ast-reference/statements/catchstmt-catch-all.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/catchstmt-multiple-clauses-chained.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/catchstmt-nested-try.slang
+share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-deprecated-warning.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-large-range-stress.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-range-keyword-required.slang
+share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-removed-202c-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-two-argument-range.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-unrolls.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/compiletimefor-zero-range.slang
@@ -1557,12 +1576,15 @@ share/doc/slang/generated/tests/design/ast-reference/statements/declstmt-local-v
 share/doc/slang/generated/tests/design/ast-reference/statements/declstmt-vs-expressionstmt-backtracking.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-at-function-entry.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-block-needs-no-semicolon.slang
+share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-break-continue-inside-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-multiple-lifo-order.slang
+share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-return-inside-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-runs-on-early-return.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/deferstmt-scope-exit-order.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/discardstmt-non-fragment-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/dostmt-without-while-or-catch-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/dowhilestmt-runs-once.slang
+share/doc/slang/generated/tests/design/ast-reference/statements/emptystmt-after-else-diagnosed.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/emptystmt-after-if-diagnosed.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/emptystmt-bare-semicolon.slang
 share/doc/slang/generated/tests/design/ast-reference/statements/emptystmt-loop-body-semicolon.slang
@@ -1614,6 +1636,7 @@ share/doc/slang/generated/tests/design/ast-reference/types/arraytype-unsized-par
 share/doc/slang/generated/tests/design/ast-reference/types/assoctype-through-witness.slang
 share/doc/slang/generated/tests/design/ast-reference/types/atomictype-wrapper.slang
 share/doc/slang/generated/tests/design/ast-reference/types/basictype-int-min-max.slang
+share/doc/slang/generated/tests/design/ast-reference/types/basictype-int64-max-plus-one-seam.slang
 share/doc/slang/generated/tests/design/ast-reference/types/basictype-literal-too-large-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/types/basictype-scalars.slang
 share/doc/slang/generated/tests/design/ast-reference/types/basictype-uint-wrap-overflow.slang
@@ -1629,16 +1652,19 @@ share/doc/slang/generated/tests/design/ast-reference/types/errortype-cascading-s
 share/doc/slang/generated/tests/design/ast-reference/types/functype-callable.slang
 share/doc/slang/generated/tests/design/ast-reference/types/functype-error-type.slang
 share/doc/slang/generated/tests/design/ast-reference/types/functype-param-mode-in-signature.slang
+share/doc/slang/generated/tests/design/ast-reference/types/functype-ref-and-borrow-modes-in-signature.slang
 share/doc/slang/generated/tests/design/ast-reference/types/initializerlisttype-collapse-to-target.slang
 share/doc/slang/generated/tests/design/ast-reference/types/matrixtype-row-col.slang
 share/doc/slang/generated/tests/design/ast-reference/types/matrixtype-shape-mismatch-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/types/modifiedtype-const-rejects-assign.slang
+share/doc/slang/generated/tests/design/ast-reference/types/namedexpressiontype-alias-diagnostic-shows-aliased.slang
 share/doc/slang/generated/tests/design/ast-reference/types/namedexpressiontype-alias-transparent.slang
 share/doc/slang/generated/tests/design/ast-reference/types/nonetype-optional-none.slang
 share/doc/slang/generated/tests/design/ast-reference/types/nullptrtype-null-pointer.slang
 share/doc/slang/generated/tests/design/ast-reference/types/optionaltype-value-hasvalue.slang
 share/doc/slang/generated/tests/design/ast-reference/types/overloadgrouptype-ambiguous-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/types/parameterblocktype-hlsl-emit.slang
+share/doc/slang/generated/tests/design/ast-reference/types/paramtype-borrow-spelling.slang
 share/doc/slang/generated/tests/design/ast-reference/types/paramtype-out-inout-in.slang
 share/doc/slang/generated/tests/design/ast-reference/types/paramtype-out-not-assigned-rejected.slang
 share/doc/slang/generated/tests/design/ast-reference/types/paramtype-ref-and-constref.slang
@@ -1721,6 +1747,8 @@ share/doc/slang/generated/tests/design/cross-cutting/core-module/prelude-absent-
 share/doc/slang/generated/tests/design/cross-cutting/core-module/prelude-cpp-referenced-from-emit.slang
 share/doc/slang/generated/tests/design/cross-cutting/core-module/prelude-cuda-referenced-from-emit.slang
 share/doc/slang/generated/tests/design/cross-cutting/core-module/standard-module-neural-experimental-gate.slang
+share/doc/slang/generated/tests/design/cross-cutting/core-module/standard-module-numerics-differentiable-import-resolves.slang
+share/doc/slang/generated/tests/design/cross-cutting/core-module/standard-module-numerics-experimental-gate.slang
 share/doc/slang/generated/tests/design/cross-cutting/core-module/standard-module-workgraph-import-resolves.slang
 share/doc/slang/generated/tests/design/cross-cutting/core-module/standard-module-workgraph-not-implicit.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics-catalog/1-cannot-open-file.slang
@@ -2071,6 +2099,7 @@ share/doc/slang/generated/tests/design/cross-cutting/diagnostics/command-line-di
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/deeply-nested-error-still-rendered.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-color-selects-frame-glyphs.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-fires-without-suppression.slang
+share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-format-vs.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-header-code-zero-padded-with-e-prefix.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-name-alias-overlapping-bindings.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/diagnostic-on-final-source-line.slang
@@ -2098,6 +2127,8 @@ share/doc/slang/generated/tests/design/cross-cutting/diagnostics/macro-redefinit
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/many-undefined-identifiers-stress.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/name-interpolation-in-message.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/note-multi-span-rendering.slang
+share/doc/slang/generated/tests/design/cross-cutting/diagnostics/notes-disable-rejects-non-note.slang
+share/doc/slang/generated/tests/design/cross-cutting/diagnostics/notes-disable-suppresses-note.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/parser-error-has-code.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/pragma-warning-disable-multiple-codes.slang
 share/doc/slang/generated/tests/design/cross-cutting/diagnostics/pragma-warning-disable-suppresses.slang
@@ -2180,14 +2211,17 @@ share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/structure-w
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-array-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-matrix-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-metal-packed-vec-emit.slang
+share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-metal-packed-vec-local-emit.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-ptr-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-vector-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/type-workgraph-record-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/value-constexpr-add-ir.slang
+share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/value-make-array-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/ir-instructions/value-make-vector-ir.slang
 share/doc/slang/generated/tests/design/cross-cutting/serialization/README.md
 share/doc/slang/generated/tests/design/cross-cutting/serialization/_prompt.md
 share/doc/slang/generated/tests/design/cross-cutting/serialization/embed-downstream-ir-spirv.slang
+share/doc/slang/generated/tests/design/cross-cutting/serialization/line-directive-mode-accepted-values.slang
 share/doc/slang/generated/tests/design/cross-cutting/serialization/module-info-name-version.slang
 share/doc/slang/generated/tests/design/cross-cutting/serialization/module-roundtrip-preserves-float-and-bool-literals.slang
 share/doc/slang/generated/tests/design/cross-cutting/serialization/module-roundtrip-preserves-integer-literal-bounds.slang
@@ -2203,6 +2237,7 @@ share/doc/slang/generated/tests/design/cross-cutting/serialization/supported-mod
 share/doc/slang/generated/tests/design/cross-cutting/targets/README.md
 share/doc/slang/generated/tests/design/cross-cutting/targets/_prompt.md
 share/doc/slang/generated/tests/design/cross-cutting/targets/all-seven-text-targets-dense-stress.slang
+share/doc/slang/generated/tests/design/cross-cutting/targets/c-source-target-has-no-emitter.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/capability-added-to-cross-family-profile-not-diagnosed.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/capability-conflict-two-target-atoms-rejected.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/capability-conjunction-stage-and-target.slang
@@ -2235,6 +2270,7 @@ share/doc/slang/generated/tests/design/cross-cutting/targets/sm-version-family-c
 share/doc/slang/generated/tests/design/cross-cutting/targets/spirv-asm-and-binary-target-variants.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/spirv-direct-path-defaults-to-spirv-1-5.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/spirv-target-keeps-target-keyhole-under-glsl-profile.slang
+share/doc/slang/generated/tests/design/cross-cutting/targets/stage-switch-resolved-per-entry-point-stage.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/target-switch-all-fallthrough.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/target-switch-missing-arm-falls-to-default.slang
 share/doc/slang/generated/tests/design/cross-cutting/targets/target-switch-missing-arm-rejected.slang
@@ -2266,6 +2302,7 @@ share/doc/slang/generated/tests/design/ir-reference/control-flow/early-return-in
 share/doc/slang/generated/tests/design/ir-reference/control-flow/generic-asm-terminates-target-case.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-deeply-nested-5.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-empty-else-arm.slang
+share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-empty-then-arm-minopt-keeps-block.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-empty-then-arm.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-structured-merge.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/ifelse-ternary-expression.slang
@@ -2282,6 +2319,7 @@ share/doc/slang/generated/tests/design/ir-reference/control-flow/loop-single-ite
 share/doc/slang/generated/tests/design/ir-reference/control-flow/loop-test-degenerate-ifelse.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/loop-while.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/missing-return-reachable-diagnostic.slang
+share/doc/slang/generated/tests/design/ir-reference/control-flow/missing-return-slang-202c-error.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/missing-return-terminator.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/nested-ifelse.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/printf-format-and-args-operands.slang
@@ -2297,12 +2335,15 @@ share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-bool-con
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-default-before-cases.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-duplicate-case-labels-rejected.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-eight-case-arms.slang
+share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-enum-bool-legalized-like-bool.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-multi-case.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-no-default.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-single-case-with-default.slang
+share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-statement-before-first-case-unreachable.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-static-const-case-label.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/switch-unreachable-merge.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/target-switch-capability-cases.slang
+share/doc/slang/generated/tests/design/ir-reference/control-flow/trycall-lowered-to-result-opcodes.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/unconditional-branch-with-args.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/unreachable-code-after-return-diagnostic.slang
 share/doc/slang/generated/tests/design/ir-reference/control-flow/yield-terminates-expand-block.slang
@@ -2316,6 +2357,7 @@ share/doc/slang/generated/tests/design/ir-reference/decorations/builtin-requirem
 share/doc/slang/generated/tests/design/ir-reference/decorations/constructor-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/early-depth-stencil-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/entry-point-decoration.slang
+share/doc/slang/generated/tests/design/ir-reference/decorations/entry-point-fragment-stage-tag.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/entry-point-vertex-profile.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/entry-point-with-many-attributes.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/export-linkage-decoration.slang
@@ -2368,6 +2410,7 @@ share/doc/slang/generated/tests/design/ir-reference/decorations/numthreads-zero-
 share/doc/slang/generated/tests/design/ir-reference/decorations/packoffset-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/precise-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/read-none-decoration.slang
+share/doc/slang/generated/tests/design/ir-reference/decorations/require-capability-atom-not-from-attribute.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/semantic-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/semantic-explicit-index.slang
 share/doc/slang/generated/tests/design/ir-reference/decorations/semantic-on-struct-field.slang
@@ -2396,8 +2439,10 @@ share/doc/slang/generated/tests/design/ir-reference/differentiation/builtin-requ
 share/doc/slang/generated/tests/design/ir-reference/differentiation/bwd-diff-does-not-emit-backward-differentiate.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/detach-derivative.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/forward-derivative-emitted-name-prefix.slang
+share/doc/slang/generated/tests/design/ir-reference/differentiation/forward-differentiate-distinct-bases-distinct-requests.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/forward-differentiate-hoisted-dedupe.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/forward-differentiate.slang
+share/doc/slang/generated/tests/design/ir-reference/differentiation/func-extension-dropped-declaration-fails-use.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/func-extension-requires-experimental-feature.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/function-copy.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/get-differential.slang
@@ -2413,12 +2458,14 @@ share/doc/slang/generated/tests/design/ir-reference/differentiation/make-diff-pa
 share/doc/slang/generated/tests/design/ir-reference/differentiation/make-diff-pair-vector.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/make-diff-pair.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/make-diff-ref-pair.slang
+share/doc/slang/generated/tests/design/ir-reference/differentiation/no-diff-call-decorated-not-detached.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/no-diff-expression-detach.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/no-diff-param-produces-no-detach.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/pair-lowered-to-struct-in-target-text.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/pair-opcodes-produce-no-target-code.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/primal-substitute-has-no-opcode.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/report-checkpoint-store-diagnostic.slang
+share/doc/slang/generated/tests/design/ir-reference/differentiation/report-checkpoint-store-silent-without-flag.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/reverse-mode-emitted-name-prefixes.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/synthesized-derivative-witness-tables.slang
 share/doc/slang/generated/tests/design/ir-reference/differentiation/trivial-backward-phase-operators.slang
@@ -2426,6 +2473,7 @@ share/doc/slang/generated/tests/design/ir-reference/differentiation/trivial-forw
 share/doc/slang/generated/tests/design/ir-reference/differentiation/trivial-forward-differentiate.slang
 share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/README.md
 share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/_prompt.md
+share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/buffer-read-interface-no-conformance-diagnostic.slang
 share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/builtin-requirement-key-idifferentiable.slang
 share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/create-existential-object-dynamic-object.slang
 share/doc/slang/generated/tests/design/ir-reference/generics-and-existentials/create-existential-object-no-conformance-diagnostic.slang
@@ -2495,23 +2543,28 @@ share/doc/slang/generated/tests/design/ir-reference/metadata/debug-build-identif
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-compilation-unit-references-debug-source.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-function-name-line-col-file-type.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-function-parent-scope-at-full-debug.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-function-parent-scope-present-at-minimal.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-info-include-source-embeds-text-at-minimal.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-inlined-at-frame-operands.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-inlined-variable-has-no-producer.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-level-minimal-omits-var-value-and-unit.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-level-none-emits-no-records.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-lexical-block-absent-at-minimal.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-lexical-block-operands-parent-is-function.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-five-operand-range.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-if-predicate-and-after-markers.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-is-an-instruction-not-a-decoration.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-separate-for-condition-and-increment.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-line-skips-synthesized-constructor.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-no-scope-replaced-by-caller-scope-restore.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-scope-one-operand-names-lexical-block.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-scope-references-debug-function.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-source-records-path-and-include-flag.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-source-text-operand-empty-at-minimal.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-value-reports-debug-var.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-var-local-result-type-is-pointer.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/debug-var-param-carries-arg-index.slang
+share/doc/slang/generated/tests/design/ir-reference/metadata/debug-var-scope-operand-function-and-lexical-block.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/entry-point-layout-result-excludes-out-param.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/entry-point-layout-two-varlayout-operands.slang
 share/doc/slang/generated/tests/design/ir-reference/metadata/existential-type-layout-interface-field.slang
@@ -2563,9 +2616,11 @@ share/doc/slang/generated/tests/design/ir-reference/misc/annotation-three-operan
 share/doc/slang/generated/tests/design/ir-reference/misc/capability-require-conjunction-disjunction.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/countof-fixed-size-array.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/countof-pack.slang
+share/doc/slang/generated/tests/design/ir-reference/misc/countof-tuple-type.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/expand-pattern-region.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/extract-first-last-from-pack.slang
-share/doc/slang/generated/tests/design/ir-reference/misc/is-vector-folds-false.slang
+share/doc/slang/generated/tests/design/ir-reference/misc/is-bindless-texture-nv-encodable.slang
+share/doc/slang/generated/tests/design/ir-reference/misc/is-vector-builtin-vector.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/istype-existential.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/late-require-capability.slang
 share/doc/slang/generated/tests/design/ir-reference/misc/make-witness-pack-type.slang
@@ -2618,7 +2673,9 @@ share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/atomic
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/atomic-uint-add-uint-max-literal.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/atomic-uint-add.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/atomic-xor-zero-mask.slang
+share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/binding-query-cuda-unresolved-rejected.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/binding-query-register-index-space.slang
+share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/binding-query-structured-buffer-rejected.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/byte-address-buffer-load-large-offset.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/byte-address-buffer-load-offset-zero.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/byte-address-buffer-load.slang
@@ -2647,10 +2704,12 @@ share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/mesh-o
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/natural-stride-alignment-folded-values.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/natural-stride-alignment-opcodes.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/non-uniform-resource-index-buffer-index.slang
+share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/non-uniform-resource-index-deprecated-non-arithmetic.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/non-uniform-resource-index-uint-max-literal.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/non-uniform-resource-index.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/optix-payload-register-and-sbt.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/optix-ray-payload-closesthit.slang
+share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/optix-report-intersection-cuda-emit.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/optix-sbt-carve-outs.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/optix-sbt-entry-point-uniform-parameter.slang
 share/doc/slang/generated/tests/design/ir-reference/resources-and-atomics/parameter-block-globalparam.slang
@@ -2767,6 +2826,7 @@ share/doc/slang/generated/tests/design/ir-reference/types/basic-scalars-uint-fam
 share/doc/slang/generated/tests/design/ir-reference/types/buffer-layout-marker-operands.slang
 share/doc/slang/generated/tests/design/ir-reference/types/byteaddressbuffer-type.slang
 share/doc/slang/generated/tests/design/ir-reference/types/constantbuffer-type.slang
+share/doc/slang/generated/tests/design/ir-reference/types/differentiation-context-both-bwd-attributes.slang
 share/doc/slang/generated/tests/design/ir-reference/types/differentiation-context-differentiable-attribute.slang
 share/doc/slang/generated/tests/design/ir-reference/types/differentiation-context-treat-as-differentiable-attribute.slang
 share/doc/slang/generated/tests/design/ir-reference/types/differentiation-context-user-backward-derivative.slang
@@ -2777,7 +2837,6 @@ share/doc/slang/generated/tests/design/ir-reference/types/double-to-half-narrow.
 share/doc/slang/generated/tests/design/ir-reference/types/double-vector2-global-param.slang
 share/doc/slang/generated/tests/design/ir-reference/types/double-vector3-arithmetic.slang
 share/doc/slang/generated/tests/design/ir-reference/types/double-vector3-global-param.slang
-share/doc/slang/generated/tests/design/ir-reference/types/double-vector4-global-param.slang
 share/doc/slang/generated/tests/design/ir-reference/types/double4-narrow-to-float4.slang
 share/doc/slang/generated/tests/design/ir-reference/types/double4-rwstructuredbuffer-element.slang
 share/doc/slang/generated/tests/design/ir-reference/types/enum-tag-type.slang
@@ -2920,6 +2979,7 @@ share/doc/slang/generated/tests/design/ir-reference/values/aggregate-maketuple.s
 share/doc/slang/generated/tests/design/ir-reference/values/aggregate-makevector.slang
 share/doc/slang/generated/tests/design/ir-reference/values/aggregate-makevectorfromscalar.slang
 share/doc/slang/generated/tests/design/ir-reference/values/arith-bitwise.slang
+share/doc/slang/generated/tests/design/ir-reference/values/arith-frem-generic-float-element.slang
 share/doc/slang/generated/tests/design/ir-reference/values/arith-irem-frem-neg.slang
 share/doc/slang/generated/tests/design/ir-reference/values/arith-shifts.slang
 share/doc/slang/generated/tests/design/ir-reference/values/asuint-stays-call-not-bitcast.slang
@@ -2976,6 +3036,7 @@ share/doc/slang/generated/tests/design/ir-reference/values/conversion-int-float.
 share/doc/slang/generated/tests/design/ir-reference/values/conversion-intcast-narrow.slang
 share/doc/slang/generated/tests/design/ir-reference/values/conversion-reinterpret.slang
 share/doc/slang/generated/tests/design/ir-reference/values/conversion-unmodified-out-param.slang
+share/doc/slang/generated/tests/design/ir-reference/values/defaultconstruct-tuple-array-decompose.slang
 share/doc/slang/generated/tests/design/ir-reference/values/defaultconstruct-undecomposable-types.slang
 share/doc/slang/generated/tests/design/ir-reference/values/defaultconstruct-vector-splat.slang
 share/doc/slang/generated/tests/design/ir-reference/values/div-emit-spirv-signedness.slang
@@ -3004,6 +3065,7 @@ share/doc/slang/generated/tests/design/ir-reference/values/intcast-uint64-to-int
 share/doc/slang/generated/tests/design/ir-reference/values/intcast-uint8-to-int32-zero-extend.slang
 share/doc/slang/generated/tests/design/ir-reference/values/irem-frem-emit-spirv-signedness.slang
 share/doc/slang/generated/tests/design/ir-reference/values/irem-int-by-one.slang
+share/doc/slang/generated/tests/design/ir-reference/values/let-immutable-binding-has-no-var.slang
 share/doc/slang/generated/tests/design/ir-reference/values/literal-emit-multi-target.slang
 share/doc/slang/generated/tests/design/ir-reference/values/literal-emit-spirv-asm.slang
 share/doc/slang/generated/tests/design/ir-reference/values/literal-ptr-constant-nullptr.slang
@@ -3073,6 +3135,7 @@ share/doc/slang/generated/tests/design/name-resolution/lookup/concrete-member-be
 share/doc/slang/generated/tests/design/name-resolution/lookup/constructor-this-breadcrumb-mutable.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/container-overload-accumulates-struct-methods.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/contextual-keyword-disabled-by-local-decl.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/decl-group-members-hidden-until-passed.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/default-impl-calls-requirement-through-this.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/diamond-base-requirement-single-facet.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/enum-tag-type-base-not-surfaced.slang
@@ -3095,8 +3158,11 @@ share/doc/slang/generated/tests/design/name-resolution/lookup/member-not-found-d
 share/doc/slang/generated/tests/design/name-resolution/lookup/modified-type-no-diff-member-access.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/modified-type-unorm-snorm-member-access.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/namespace-merge-via-using.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/namespace-qualified-declaration-sees-outer-namespace.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/namespace-reopened-then-using-injects-all.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/nested-block-forward-ref-rejected.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/nested-type-reference-to-outer-member-uses-this-type.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/no-diff-interface-value-member-access.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/optional-constraint-member-visible-after-is-check.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/optional-constraint-unchecked-member-rejected.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/overloaded-namespace-reference-not-ambiguous.slang
@@ -3110,6 +3176,8 @@ share/doc/slang/generated/tests/design/name-resolution/lookup/this-breadcrumb-mu
 share/doc/slang/generated/tests/design/name-resolution/lookup/this-breadcrumb-static-type-mode.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/this-type-name-resolves-to-self-type.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/transparent-cbuffer-resolves-field.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/transparent-cbuffer-with-instance-name-not-transparent.slang
+share/doc/slang/generated/tests/design/name-resolution/lookup/transparent-member-redeclaration-warns.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/transparent-modifier-not-source-writable.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/transparent-tbuffer-resolves-field.slang
 share/doc/slang/generated/tests/design/name-resolution/lookup/typedef-self-name-excluded-from-lookup.slang
@@ -3162,6 +3230,7 @@ share/doc/slang/generated/tests/design/name-resolution/overload-resolution/cost-
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/directions-mutating-method-on-immutable-value-diagnostic.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-ambiguous-default-parameter-tie-diagnostic.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-ambiguous-equal-cost-candidates-diagnostic.slang
+share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-constraint-failed-generic-candidates-listed-diagnostic.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-no-applicable-names-offending-argument-index.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-no-applicable-overload-diagnostic.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/edge-nodiscard-does-not-affect-resolution.slang
@@ -3199,6 +3268,8 @@ share/doc/slang/generated/tests/design/name-resolution/overload-resolution/subsc
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-closer-scope-wins.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-concrete-member-beats-interface-requirement.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-implicit-conversion-modifier-wins.slang
+share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-legacy-generic-param-count-fallback-removed-in-202c-diagnostic.slang
+share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-legacy-generic-param-count-fallback-warning.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-non-extension-member-beats-extension-member.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-non-generic-beats-specialized-generic.slang
 share/doc/slang/generated/tests/design/name-resolution/overload-resolution/tiebreak-ordinary-extension-beats-free-form-extension.slang
@@ -3214,6 +3285,7 @@ share/doc/slang/generated/tests/design/name-resolution/scopes/README.md
 share/doc/slang/generated/tests/design/name-resolution/scopes/_prompt.md
 share/doc/slang/generated/tests/design/name-resolution/scopes/assoctype-constraint-inheritance-clause-form.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/assoctype-constraint-where-clause-form.slang
+share/doc/slang/generated/tests/design/name-resolution/scopes/block-decl-group-initializer-resolves-outer.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/block-decl-init-resolves-outer-same-name.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/block-scope-forward-ref-rejected.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/block-scope-name-not-visible-outside.slang
@@ -3250,10 +3322,13 @@ share/doc/slang/generated/tests/design/name-resolution/scopes/lambda-param-not-v
 share/doc/slang/generated/tests/design/name-resolution/scopes/lambda-param-visible-in-block-body.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/lambda-param-visible-in-lambda-body.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/let-in-block-not-visible-outside.slang
+share/doc/slang/generated/tests/design/name-resolution/scopes/lookup-stops-at-non-overloadable-hit.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/member-field-not-visible-outside-struct.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/member-scope-fields-visible-from-method.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/namespace-member-needs-qualification.slang
+share/doc/slang/generated/tests/design/name-resolution/scopes/namespace-qualified-decl-body-sees-parent-members.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/namespace-qualified-name-resolves.slang
+share/doc/slang/generated/tests/design/name-resolution/scopes/namespace-reopened-body-sees-other-body-unqualified.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/namespace-reopened-merges-members.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/property-accessor-scope-reaches-struct-field.slang
 share/doc/slang/generated/tests/design/name-resolution/scopes/switch-case-local-visible-in-later-case.slang
@@ -3292,6 +3367,7 @@ share/doc/slang/generated/tests/design/name-resolution/visibility/private-callab
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-callable-from-sibling-extension.slang
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-differentiable-member-synthesizes-internal-extension.slang
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-field-rejected-from-outside-struct.slang
+share/doc/slang/generated/tests/design/name-resolution/visibility/private-in-distinct-concrete-extensions-not-shared.slang
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-in-generic-extension-callable-from-sibling-extension.slang
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-in-generic-type-body-not-reachable-from-extension.slang
 share/doc/slang/generated/tests/design/name-resolution/visibility/private-inside-namespace-rejected.slang
@@ -3317,6 +3393,7 @@ share/doc/slang/generated/tests/design/name-resolution/visibility/using-brings-n
 share/doc/slang/generated/tests/design/name-resolution/visibility/using-struct-rejected-not-aliased.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/README.md
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/_prompt.md
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/argument-token-location-is-call-site.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/backslash-line-continuation-in-macro.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/backslash-line-continuation-in-string.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/char-literal-braced-unicode-value.slang
@@ -3330,6 +3407,7 @@ share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/char-literal-u
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/comments-not-in-parser-token-list.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/elif-chain-five-arms.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/elif-chain-selects-first-true.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/endif-without-if-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/error-directive-emits-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/error-directive-empty-message.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/file-macro-is-constructed-token.slang
@@ -3341,6 +3419,7 @@ share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro-argument-tokens-are-expanded.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro-eight-args.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro-empty-argument.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro-variadic-accepts-trailing-arguments.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/function-macro-zero-args.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/header-guard-pattern.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/if-expression-signed-overflow-wraps.slang
@@ -3368,12 +3447,15 @@ share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/include-pushes
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/include-self-cycle-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/integer-literal-too-large-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/invalid-digit-for-base-diagnostic.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-conflicting-language-diagnostic.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-conflicting-version-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-unknown-version-after-language.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/lang-directive-version-spellings.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-after-line-directive.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-is-constructed-token.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/line-macro-through-nested-expansion.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/macro-body-diagnostic-points-into-macro-body.slang
+share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/macro-self-reference-not-reexpanded.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/macro-wrong-argument-count-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/missing-include-diagnostic.slang
 share/doc/slang/generated/tests/design/pipeline/01-lex-preprocess/non-ascii-identifier-utf8-folded.slang
@@ -3419,7 +3501,10 @@ share/doc/slang/generated/tests/design/pipeline/02-parse-ast/builtin-op-for-loop
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/builtin-op-matrix-operands.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/builtin-op-unary-scalar-operands.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/constraint-decl-in-struct-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-enum-in-body-rejected-by-parser.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-extension-adds-method.slang
+share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-group-later-declarator-sees-earlier.slang
+share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-interface-in-body-rejected-by-checker.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-not-allowed-namespace-in-body.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/decl-struct-with-fields.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/effect-annotation-declarator-clause-discarded.slang
@@ -3444,6 +3529,7 @@ share/doc/slang/generated/tests/design/pipeline/02-parse-ast/function-body-defer
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-app-base-not-generic-is-comparison.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-app-function-type-overload-base-commits.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-app-speculation-leaks-no-diagnostic.slang
+share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-app-swizzle-base-is-comparison.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-application-in-body.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-constraint-colon-multiple-bounds.slang
 share/doc/slang/generated/tests/design/pipeline/02-parse-ast/generic-constraint-colon-vs-where-equivalent.slang
@@ -3502,6 +3588,7 @@ share/doc/slang/generated/tests/design/pipeline/03-semantic-check/differentiable
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/differentiable-interface-requirement.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/dyn-interface-conformer-restrictions-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/dyn-interface-declaration-restrictions-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/dyn-interface-field-checks-ungated-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/dyn-interface-restrictions-inactive-under-default-std.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/entry-point-generic-struct-require-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/entry-point-generic-struct-require-satisfied.slang
@@ -3547,18 +3634,24 @@ share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-attri
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-duplicate-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-exclusive-group-interpolation-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-exclusive-group-out-inout-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-exclusive-group-pervertex-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-exclusive-group-sample-centroid-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-exclusive-group-static-uniform-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-interpolation-with-sampling-location-accepted.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-let-assignment-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-mutating-on-immutable-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/modifier-spec-constant-must-be-scalar-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-bare-constructor-call-excluded.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-bare-statement-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-comma-operand-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-for-side-effect-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-parenthesized-call-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-short-circuit-operand-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/nodiscard-ternary-branch-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/overload-candidate-argument-mismatch-note.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/recovery-error-type-does-not-cascade.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/semantic-type-cross-category-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/03-semantic-check/semantic-type-scalar-matches-vector1-accepted.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/semantic-type-shape-mismatch-rejected.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/semantic-type-vector-sign-coercion-accepted.slang
 share/doc/slang/generated/tests/design/pipeline/03-semantic-check/stmt-break-outside-loop-rejected.slang
@@ -3613,6 +3706,7 @@ share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/debug-info-skipped-
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/debug-info-user-init-names-this-local.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/differentiable-conformance-is-intrinsic-witness-value.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/differentiable-synthesized-fwd-diff-member-is-intrinsic-inst.slang
+share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/dump-ir-name-scrub-escapes-underscore-as-x5F.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/entry-missing-name-fires-no-function-found.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/entry-point-funcdecl-carries-entry-point-decoration.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/entry-point-multiple-each-gets-entry-point-decoration.slang
@@ -3648,6 +3742,7 @@ share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/interfacedecl-five-
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/interfacedecl-lowers-to-interface-with-req-entries.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/interfacedecl-single-method-one-req-entry.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/interfacedecl-three-methods-three-req-entries.slang
+share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/invoke-lowering-recursion-depth-128-still-compiles.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/invoke-lowering-recursion-depth-exceeded.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/invokeexpr-lowers-to-call.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/invokeexpr-method-call-on-struct-lowers-to-call.slang
@@ -3720,6 +3815,8 @@ share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/structdecl-lowers-t
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/structdecl-many-fields-eight-fields.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/structdecl-nested-struct-field-lowers-to-field-of-struct-type.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/structdecl-single-field-lowers-to-one-field.slang
+share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/switch-body-empty-or-semicolon-stays-silent.slang
+share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/switch-body-no-case-label-warns-unreachable.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/switch-stmt-before-first-case-warns-unreachable.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/switchstmt-default-only-single-default-arm.slang
 share/doc/slang/generated/tests/design/pipeline/04-ast-to-ir/switchstmt-five-cases-five-pairs.slang
@@ -3767,6 +3864,7 @@ share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-exis
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-literal-shift-folded-before-overflow-check.slang
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-mangled-name-export-decoration-survives-strip.slang
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-mesh-output-read-rejected.slang
+share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-missing-return-error-survives-validation-off-in-202c.slang
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-missing-return-warns-on-non-void.slang
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-name-hints-stripped-only-under-obfuscation.slang
 share/doc/slang/generated/tests/design/pipeline/04b-pre-link-passes/phase-d-non-essential-validation-gate-suppresses-warning.slang
@@ -3811,6 +3909,7 @@ share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-entry-p
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-entry-point-param-ignored-warning.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-entry-point-param-mixed-explicit-and-implicit.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-entry-point-param-parameter-block-whole-space.slang
+share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-entry-point-param-push-constant-and-register-warn.slang
 share/doc/slang/generated/tests/design/pipeline/04c-layout-ir/vk-binding-on-varying-param-warns-even-on-khronos.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/README.md
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/_prompt.md
@@ -3823,6 +3922,7 @@ share/doc/slang/generated/tests/design/pipeline/05-ir-passes/byte-address-legali
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/byte-address-legalize-store-on-glsl.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/byte-address-legalize-vector-load.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/check-differentiability-rejects-non-differentiable.slang
+share/doc/slang/generated/tests/design/pipeline/05-ir-passes/check-push-constant-blocks-rejects-two-blocks.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/check-unsupported-inst-rejects-non-target-feature.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/collect-global-uniforms-builds-global-params-struct.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/consolidate-ray-tracing-parameters-merges-into-one-payload.slang
@@ -3849,6 +3949,7 @@ share/doc/slang/generated/tests/design/pipeline/05-ir-passes/entry-point-decorat
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/entry-point-decorations-spirv-localsize.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/entry-point-uniforms-packs-multiple-uniforms-into-one-cbuffer.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/explicit-global-context-passes-globals-to-cpu.slang
+share/doc/slang/generated/tests/design/pipeline/05-ir-passes/explicit-global-init-hlsl-keeps-declaration-initializer.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/explicit-global-init-moves-initializer-into-entry-point.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/float-non-uniform-resource-index-spirv-mode.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/float-non-uniform-resource-index-textual-mode.slang
@@ -3915,6 +4016,7 @@ share/doc/slang/generated/tests/design/pipeline/05-ir-passes/optional-none-usage
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/phase-skeleton-force-inlining-runs-more-than-once.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/phase-skeleton-metal-buffer-storage-type-three-configs.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/propagate-func-properties-drops-unused-pure-call.slang
+share/doc/slang/generated/tests/design/pipeline/05-ir-passes/ray-tracing-payloads-empty-payload-gets-dummy-struct-on-hlsl.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/recursion-check-rejects-mutual-recursion.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/recursion-check-rejects-self-recursion.slang
 share/doc/slang/generated/tests/design/pipeline/05-ir-passes/recursion-check-rejects-three-cycle.slang
@@ -3962,6 +4064,7 @@ share/doc/slang/generated/tests/design/pipeline/06-emit/README.md
 share/doc/slang/generated/tests/design/pipeline/06-emit/_prompt.md
 share/doc/slang/generated/tests/design/pipeline/06-emit/assembly-target-emits-disassembled-text.slang
 share/doc/slang/generated/tests/design/pipeline/06-emit/cpp-prelude-and-export.slang
+share/doc/slang/generated/tests/design/pipeline/06-emit/cuda-function-qualifiers-per-decoration.slang
 share/doc/slang/generated/tests/design/pipeline/06-emit/cuda-prelude-and-global-entry.slang
 share/doc/slang/generated/tests/design/pipeline/06-emit/emit-dispatcher-all-text-targets.slang
 share/doc/slang/generated/tests/design/pipeline/06-emit/emit-dispatcher-header-variant-targets.slang
@@ -4015,6 +4118,9 @@ share/doc/slang/generated/tests/design/pipeline/overview/multi-target-emit-dispa
 share/doc/slang/generated/tests/design/pipeline/overview/pipeline-is-target-sensitive.slang
 share/doc/slang/generated/tests/design/pipeline/overview/preprocess-completes-before-parse.slang
 share/doc/slang/generated/tests/design/pipeline/overview/ssa-block-params-across-branch.slang
+share/doc/slang/generated/tests/design/pipeline/overview/thread-group-spelled-per-target.slang
+share/doc/slang/generated/tests/design/pipeline/overview/torch-ordinary-entry-has-nothing-to-bind.slang
+share/doc/slang/generated/tests/design/pipeline/overview/torch-ordinary-entry-with-param-has-nothing-to-bind.slang
 share/doc/slang/generated/tests/design/pipeline/overview/vm-bytecode-target-dispatch.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/README.md
 share/doc/slang/generated/tests/design/syntax-reference/grammar/_prompt.md
@@ -4030,8 +4136,12 @@ share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-enum-empty-
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-enum-with-cases.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-extension.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-arrow-return.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-extension-requires-experimental-feature.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-modern-param-default.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-modern-param-untyped-rejected.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-throws-clause.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-trailing-const-hlsl-dialect.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-trailing-const-hlsl.hlsl
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-func-with-default-param.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-interface-constraint-equality.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/decl-interface-constraint-subtype.slang
@@ -4090,6 +4200,7 @@ share/doc/slang/generated/tests/design/syntax-reference/grammar/modifier-static-
 share/doc/slang/generated/tests/design/syntax-reference/grammar/module-header-optional-name.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/module-name-string-literal.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-break-continue.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-compile-time-for-deprecated.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-compile-time-for.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-continue-label-rejected.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-defer.slang
@@ -4110,12 +4221,20 @@ share/doc/slang/generated/tests/design/syntax-reference/grammar/stmt-while-loop.
 share/doc/slang/generated/tests/design/syntax-reference/grammar/type-array-suffix.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/type-conjunction-and.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/type-functype-keyword.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/type-hlsl-signed-rejected.hlsl
+share/doc/slang/generated/tests/design/syntax-reference/grammar/type-hlsl-unsigned-means-uint.hlsl
 share/doc/slang/generated/tests/design/syntax-reference/grammar/type-pointer-suffix.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/where-clause-conformance-type-list.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/where-clause-countof-pack.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/where-clause-nonempty-pack.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/where-clause-repeated-keyword.slang
 share/doc/slang/generated/tests/design/syntax-reference/grammar/where-clause-type-coercion.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-countof-requires-equality.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-countof-reversed-rejected.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-optional-constraint-unguarded-use-rejected.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-optional-countof-rejected.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-optional-hasdifftypeinfo-rejected.slang
+share/doc/slang/generated/tests/design/syntax-reference/grammar/where-optional-nonempty-rejected.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/README.md
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/_prompt.md
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/boundary-alignof-int.slang
@@ -4136,11 +4255,13 @@ share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/bu
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/builtin-numeric-types-overload.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/builtin-resource-descriptor-heap-multitarget.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-associatedtype-interface.slang
+share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-class-hlsl-generic.hlsl
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-enum-value.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-expand-each-pack-type.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-extension-method.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-func-arrow.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-functype-type-specifier.slang
+share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-hlsl-unsigned-int.hlsl
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-init-constructor.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-interface-conformance.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/decl-let-immutable-rejected.slang
@@ -4152,12 +4273,15 @@ share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/ex
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/expr-sizeof-int.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/expr-this-self-reference.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/expr-true-false-bool.slang
+share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-borrow-constref-spellings.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-dyn-interface.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-groupshared-multitarget.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-in-out-inout.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-public-private.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-raytracing-hitattributeext.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/modifier-static-const.slang
+share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/negative-class-generic-slang-source.slang
+share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/negative-hlsl-signed-rejected.hlsl
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/negative-int-as-identifier-in-expr.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/negative-let-through-inout-argument.slang
 share/doc/slang/generated/tests/design/syntax-reference/keywords-and-builtins/negative-resource-descriptor-heap-metal.slang
@@ -4201,6 +4325,7 @@ share/doc/slang/generated/tests/design/syntax-reference/tokens/int-literal-zero.
 share/doc/slang/generated/tests/design/syntax-reference/tokens/line-comment-backslash-extends.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/line-comment-ends-at-newline.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/line-continuation-in-macro-definition.slang
+share/doc/slang/generated/tests/design/syntax-reference/tokens/negative-directive-after-line-continuation.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/negative-empty-char-literal.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/negative-illegal-character.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/negative-integer-literal-too-large.slang
@@ -4213,9 +4338,7 @@ share/doc/slang/generated/tests/design/syntax-reference/tokens/negative-unicode-
 share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-f-is-float.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-h-is-half.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-lf-is-double.slang
-share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-ll-is-int64.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-u-is-uint.slang
-share/doc/slang/generated/tests/design/syntax-reference/tokens/numeric-suffix-ull-is-uint64.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/operator-comparison-and-logical-tokens.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/operator-compound-assign-tokens.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/preprocessor-pound-pound-token-paste.slang
@@ -4224,6 +4347,7 @@ share/doc/slang/generated/tests/design/syntax-reference/tokens/punctuation-ellip
 share/doc/slang/generated/tests/design/syntax-reference/tokens/punctuation-right-arrow-return-type.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/punctuation-scope-qualified-name.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/raw-string-empty-delimiter.slang
+share/doc/slang/generated/tests/design/syntax-reference/tokens/raw-string-folds-backslash-newline.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/raw-string-multi-char-delimiter.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/raw-string-no-escape.slang
 share/doc/slang/generated/tests/design/syntax-reference/tokens/source-location-line-directive.slang
@@ -4262,6 +4386,7 @@ share/doc/slang/generated/tests/design/target-pipelines/cuda/dispatch-thread-id-
 share/doc/slang/generated/tests/design/target-pipelines/cuda/eliminate-phis-default-options.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/enum-lowered-to-integer.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/extern-c-global-kernel.slang
+share/doc/slang/generated/tests/design/target-pipelines/cuda/fast-math-front-matter-define.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/float-infinity-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/float-nan-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/float-positive-zero-emit.slang
@@ -4302,6 +4427,7 @@ share/doc/slang/generated/tests/design/target-pipelines/cuda/numthreads-one-one-
 share/doc/slang/generated/tests/design/target-pipelines/cuda/numthreads-zero-rejected-diag.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/optix-anyhit-terminating-callee-inlined.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/optix-closesthit-ray-object-accessor-rejected.slang
+share/doc/slang/generated/tests/design/target-pipelines/cuda/optix-hit-attribute-too-large-rejected.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/optix-intersection-ray-object-accessor.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/precise-qualifier-dropped-warning.slang
 share/doc/slang/generated/tests/design/target-pipelines/cuda/ptx-downstream-nvrtc-emit.slang
@@ -4384,6 +4510,8 @@ share/doc/slang/generated/tests/design/target-pipelines/hlsl/int-literal-min-emi
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/int-vector-keeps-hlsl-spelling.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/invert-y-of-position-output-vertex.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-array-return-type.slang
+share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-callable-payload-wrapper.slang
+share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-empty-payload-miss-dummy.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-empty-ray-payload-closesthit.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-mesh-output-types.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/legalize-non-struct-parameter-anyhit.slang
@@ -4420,6 +4548,7 @@ share/doc/slang/generated/tests/design/target-pipelines/hlsl/profile-cs-6-8-emit
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/profile-unknown-rejected-diag.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/rasterizer-ordered-texture2d-access-prefix.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/raypayload-access-qualifiers-sm67.slang
+share/doc/slang/generated/tests/design/target-pipelines/hlsl/raypayload-qualifiers-cover-wrapper-sm67.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/register-b-explicit-high-index.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/register-b-explicit-zero.slang
 share/doc/slang/generated/tests/design/target-pipelines/hlsl/register-b-for-cbuffer.slang
@@ -4538,6 +4667,7 @@ share/doc/slang/generated/tests/design/target-pipelines/metal/fragment-stage-in-
 share/doc/slang/generated/tests/design/target-pipelines/metal/groupshared-array-256-stress.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/groupshared-threadgroup-address-space.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/half-literal-gets-h-suffix.slang
+share/doc/slang/generated/tests/design/target-pipelines/metal/image-store-widened-to-four-components.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/infinity-value-emitted-without-suffix.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/inout-param-becomes-thread-pointer.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/kernel-attribute-and-entry-rename.slang
@@ -4550,6 +4680,7 @@ share/doc/slang/generated/tests/design/target-pipelines/metal/metallib-downstrea
 share/doc/slang/generated/tests/design/target-pipelines/metal/multisampled-subpass-load-warns.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/nan-value-emitted-without-suffix.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/negative-infinity-emitted-as-division.slang
+share/doc/slang/generated/tests/design/target-pipelines/metal/nested-texture-and-buffer-arrays-unbound.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/no-spirv-style-prelude-comment.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/non-main-entry-point-name-preserved.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/nonuniform-descriptor-handle-metal.slang
@@ -4568,11 +4699,13 @@ share/doc/slang/generated/tests/design/target-pipelines/metal/static-global-init
 share/doc/slang/generated/tests/design/target-pipelines/metal/struct-param-becomes-const-thread-ref.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/sv-dispatch-thread-id-attribute.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/sv-group-index-synthesized.slang
+share/doc/slang/generated/tests/design/target-pipelines/metal/texture-and-sampler-arrays-take-base-slot.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/texture-buffer-access-read.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/texture-rank-variants-map-to-metal-types.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/texture2dms-and-array-metal-spellings.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/uint-max-plus-one-wraps-to-zero.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/uniform-globals-packed-into-globalparams.slang
+share/doc/slang/generated/tests/design/target-pipelines/metal/vector-element-address-copy-in-copy-out.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/vector-logical-and-survives.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/vertex-struct-return-uniform-gets-buffer-binding.slang
 share/doc/slang/generated/tests/design/target-pipelines/metal/vk-binding-ignored-positional-wins.slang
@@ -4650,7 +4783,9 @@ share/doc/slang/generated/tests/design/target-pipelines/spirv/memory-model-logic
 share/doc/slang/generated/tests/design/target-pipelines/spirv/mesh-shader-output-types.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/multi-level-break-nested-loops.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/multiple-resources-sequential-bindings.slang
+share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-conflicting-depth-outputs.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-missing-return-non-void.slang
+share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-multiple-push-constant-blocks.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-out-of-bound-static-array-index.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-recursive-function.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/negative-recursive-struct-type.slang
@@ -4660,6 +4795,7 @@ share/doc/slang/generated/tests/design/target-pipelines/spirv/nocontraction-defa
 share/doc/slang/generated/tests/design/target-pipelines/spirv/nocontraction-fp-mode-precise.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/nocontraction-integer-op-not-decorated.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/nocontraction-matrix-per-row-decorated.slang
+share/doc/slang/generated/tests/design/target-pipelines/spirv/nocontraction-precise-qualifier-propagates-to-temporary.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/numthreads-localsize-1024-x.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/numthreads-localsize-one-one-one.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/opsource-slang.slang
@@ -4705,6 +4841,7 @@ share/doc/slang/generated/tests/design/target-pipelines/spirv/unknown-system-val
 share/doc/slang/generated/tests/design/target-pipelines/spirv/vector-logical-and-or.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/vector-logical-or.slang
 share/doc/slang/generated/tests/design/target-pipelines/spirv/vk-invert-y-position-output.slang
+share/doc/slang/generated/tests/design/target-pipelines/spirv/widen-narrow-access-chain-index.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/README.md
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/_prompt.md
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/append-structured-buffer-lowers-to-counter-and-elements.slang
@@ -4741,7 +4878,9 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/float-vector-with-i
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/group-thread-id-builtin.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/groupshared-array-256-elements.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/groupshared-becomes-workgroup-address-space.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/half-literal-enables-f16.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/int-vector-logical-and-casts-operands-to-bool.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/int16-literal-rejected.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/integer-literal-int-max.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/integer-literal-int-min.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/integer-literal-spelling.slang
@@ -4749,6 +4888,7 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/integer-literal-uin
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/integer-literal-uint-zero.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/interlocked-add-rejected.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/large-array-1024-elements.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/matrix-logical-and-one-select-per-row.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/matrix-storage-rectangular-3x4.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/matrix-storage-square-2x2.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/multi-combined-texture-sampler-pairs.slang
@@ -4756,6 +4896,7 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/multi-resources-man
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/multiple-resources-distinct-bindings.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/nested-branches-five-deep-phi.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/no-line-directives.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/nonuniform-resource-index-accepted-and-dropped.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-256-1-1-webgpu-max.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-3d-product-256.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-becomes-workgroup-size.slang
@@ -4764,6 +4905,8 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/numthreads-zero-rej
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/precise-qualifier-dropped-with-diagnostic.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/rw-structured-buffer-storage-binding.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/rwtexture2d-storage-emit.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/sample-cmp-on-non-depth-texture-rejected.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/static-assert-failure-rejected.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/static-assert-specialized-generic-compiles.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/static-const-array-emits-var-private.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/static-const-nested-array-inline-fold.slang
@@ -4774,6 +4917,7 @@ share/doc/slang/generated/tests/design/target-pipelines/wgsl/structured-buffer-s
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/switch-case-omits-trailing-break.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/switch-without-default-gets-synthesized-default.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/texture-array-coordinate-split-emission.slang
+share/doc/slang/generated/tests/design/target-pipelines/wgsl/texture-ms-depth-comparison-sampler-spellings.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/texture-storage-format-and-access-mode-emission.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/texture1d-emit.slang
 share/doc/slang/generated/tests/design/target-pipelines/wgsl/texture2d-binding.slang
@@ -4801,6 +4945,7 @@ share/doc/slang/scripts/Program.cs
 share/doc/slang/scripts/release-note.sh
 share/doc/slang/shader-execution-reordering.md
 share/doc/slang/shader-playground.md
+share/doc/slang/slang-capability-dependency.md
 share/doc/slang/stdlib-doc.md
 share/doc/slang/stdlib-docgen.md
 share/doc/slang/target-compatibility.md
