@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2026/11/01 15:05:04 adam Exp $
+$NetBSD: distinfo,v 1.20 2026/11/11 13:38:36 pho Exp $
 
 BLAKE2s (patchelf-0.19.3.tar.bz2) = 1b8cf6105a4a0c72963b69569951fd7c700c8f6844455affe6469bca00f2c17a
 SHA512 (patchelf-0.19.3.tar.bz2) = 16ff5113b6941a326f570f8dadee40bfd975add8b1475bb00e6eb90bf341029fd61baeaf30a630a19500792ae79fb07b5a9b18d630f6734423f4ebca647e0c21
 Size (patchelf-0.19.3.tar.bz2) = 444978 bytes
+SHA1 (patch-src_patchelf.cc) = e8a95bbfc570217e4342f87d21d38ba539befdfb
