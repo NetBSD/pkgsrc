@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7927 2026/11/11 15:09:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7928 2026/11/11 15:45:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11794,3 +11794,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/py-pwdlib version 0.3.1 [wiz 2026-11-11]
 	Added devel/py-opentelemetry-semantic-conventions version 0.66b2 [wiz 2026-11-11]
 	Added devel/py-opentelemetry-sdk version 1.45.2 [wiz 2026-11-11]
+	Added www/py-fastapi version 0.162.4 [wiz 2026-11-11]
