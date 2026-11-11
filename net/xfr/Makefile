@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/11/04 12:22:45 pin Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/11 18:09:22 pin Exp $
 
-DISTNAME=	xfr-0.14.0
+DISTNAME=	xfr-0.14.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lance0/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
