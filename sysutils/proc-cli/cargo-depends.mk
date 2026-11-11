@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2026/11/04 16:56:37 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2026/11/11 18:25:33 hauke Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
 CARGO_CRATE_DEPENDS+=	anstream-1.0.0
@@ -46,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	float-cmp-0.10.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.4.3
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.2
-CARGO_CRATE_DEPENDS+=	itoa-1.0.18
+CARGO_CRATE_DEPENDS+=	itoa-1.0.19
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.1
 CARGO_CRATE_DEPENDS+=	libc-0.2.191
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.12.1
@@ -94,10 +94,10 @@ CARGO_CRATE_DEPENDS+=	shell-words-1.1.1
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.18
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.5
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.8
-CARGO_CRATE_DEPENDS+=	smallvec-1.16.4
+CARGO_CRATE_DEPENDS+=	smallvec-1.16.5
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.119
-CARGO_CRATE_DEPENDS+=	syn-3.0.9
+CARGO_CRATE_DEPENDS+=	syn-3.0.10
 CARGO_CRATE_DEPENDS+=	sysinfo-0.38.4
 CARGO_CRATE_DEPENDS+=	tempfile-3.27.0
 CARGO_CRATE_DEPENDS+=	termtree-0.5.1
