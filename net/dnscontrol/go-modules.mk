@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.22 2026/11/09 14:33:43 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.23 2026/11/11 22:02:56 drixter Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.24.1-0.20261001053825-dbc26066f70a.mod
 GO_MODULE_FILES+=	cloud.google.com/go/auth/@v/v0.24.1-0.20261001053825-dbc26066f70a.zip

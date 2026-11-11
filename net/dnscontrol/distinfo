@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/11/09 14:33:43 drixter Exp $
+$NetBSD: distinfo,v 1.22 2026/11/11 22:02:56 drixter Exp $
 
 BLAKE2s (cloud.google.com_go_auth_@v_v0.24.1-0.20261001053825-dbc26066f70a.mod) = c26fe07f1a39b6a08a93447e52a13146d6fd79c4b640ebead5daf029d66d10a2
 SHA512 (cloud.google.com_go_auth_@v_v0.24.1-0.20261001053825-dbc26066f70a.mod) = 5954d93fe261d6ce81b17520c5a0cb6e0972cee1645b2817b0807417f55d83abc8f04f931e47f9f1f23d74c658261e7000b2b7c85582170ebb4944d471192b2b
@@ -27,9 +27,9 @@ Size (codeberg.org__tom_on_time_dns_@v_v0.6.116-0.20261106021038-99f642b89f88.zi
 BLAKE2s (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 2136184228fc4913040e8abab210d9694fa46310b1073dbb42e1697f8591c1f2
 SHA512 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 196affe091247f94ceda4b56629bd62d4ee2b397f2c0f56c9534c02e43531b46705ad33543b58c1a4fc7a48e25e5923db087fe0485a93966a4086581c0d1d3e1
 Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 36 bytes
-BLAKE2s (dnscontrol-5.8.0.tar.gz) = d7c042eb4e55893a554d8efb04189b751a6e8d74add63b9ee3e6403a1531cf31
-SHA512 (dnscontrol-5.8.0.tar.gz) = 7a15b8a6f89511361db076309f2b470b60cb64cbfeb24340e4fed710a254e006be47c2ed47bb10334b80d37f83ebacacc62d5334c85d4216afa20045dd64f0a3
-Size (dnscontrol-5.8.0.tar.gz) = 6096300 bytes
+BLAKE2s (dnscontrol-5.8.1.tar.gz) = 3cc87faa8db7f6a8d3c87372902880016175fa157e30331ec79c0ce7af4e6bec
+SHA512 (dnscontrol-5.8.1.tar.gz) = 9db68a31d68e797ac9e9bd5d67b2fb3af9fd1937aa018eb61ddd2451ff65d810719c5e91a422cbf1f99b6f46472b7433c68bb0db84acf44f075d6218ede85a49
+Size (dnscontrol-5.8.1.tar.gz) = 6103672 bytes
 BLAKE2s (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 7ff4e62d167148a47ea2954be89d7301397c4c75ef6e7d27016b47e039c4637f
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = f8186f43b04970d779e9fdb09128e24e6cbe66a49ed8a3e5525f0a9370f897b9f914c6755e5b33da1439b0d12d345219c4ed1c2c19913db318d8c07664bd3e0d
 Size (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 595 bytes
