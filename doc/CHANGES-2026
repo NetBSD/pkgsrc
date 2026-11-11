@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7930 2026/11/11 18:05:30 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7931 2026/11/11 18:06:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11797,3 +11797,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/py-fastapi version 0.162.4 [wiz 2026-11-11]
 	Updated devel/py-test-flake8 to 1.3.0nb2 [wiz 2026-11-11]
 	Updated devel/gitpane to 0.18.6 [pin 2026-11-11]
+	Updated devel/sem to 0.30.1 [pin 2026-11-11]
