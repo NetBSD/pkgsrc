@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2026/11/11 11:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/11/11 23:30:53 gdt Exp $
 
 DISTNAME=	autogen-5.18.16
 PKGREVISION=	19
@@ -25,6 +25,8 @@ MAKE_ENV+=	PERL5=${PERL5}
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 BUILDLINK_TRANSFORM+=	rm:-Werror
 CONFIGURE_ENV.Darwin+=	ac_cv_func_utimensat=no
+
+# Fails to build with guile 3.0 because of explicit checks for 2.2, 2.0, 1.8.
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/guile22/buildlink3.mk"
