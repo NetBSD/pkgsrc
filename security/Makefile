@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1036 2026/11/08 18:07:15 pho Exp $
+# $NetBSD: Makefile,v 1.1037 2026/11/11 14:44:58 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -553,6 +553,7 @@ SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-pem
 SUBDIR+=	py-pip-audit
+SUBDIR+=	py-pwdlib
 SUBDIR+=	py-pyspnego
 SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-kerberos
