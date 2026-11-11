@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60.2.1 2026/10/20 23:32:49 maya Exp $
+# $NetBSD: Makefile,v 1.60.2.2 2026/11/11 10:37:18 maya Exp $
 
-DISTNAME=	libheif-1.23.5
+DISTNAME=	libheif-1.23.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
