@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7.2.1 2026/10/21 20:45:48 maya Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2026/11/11 20:32:18 maya Exp $
 
 DISTNAME=	gatus-5.36.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TwiN/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

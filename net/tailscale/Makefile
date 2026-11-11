@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34.2.1 2026/10/21 20:45:41 maya Exp $
+# $NetBSD: Makefile,v 1.34.2.2 2026/11/11 20:32:09 maya Exp $
 
 DISTNAME=	tailscale
 PKGNAME=	tailscale-1.102.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NuclearKev/}
 GITHUB_PROJECT=	tailscale

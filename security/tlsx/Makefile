@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48.2.1 2026/10/21 20:45:46 maya Exp $
+# $NetBSD: Makefile,v 1.48.2.2 2026/11/11 20:32:16 maya Exp $
 
 DISTNAME=	tlsx-1.2.2
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41.2.1 2026/10/21 20:45:27 maya Exp $
+# $NetBSD: Makefile,v 1.41.2.2 2026/11/11 20:31:54 maya Exp $
 
 DISTNAME=		asdf-0.18.0
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

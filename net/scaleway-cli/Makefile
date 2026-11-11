@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29.2.1 2026/10/21 20:45:40 maya Exp $
+# $NetBSD: Makefile,v 1.29.2.2 2026/11/11 20:32:08 maya Exp $
 
 DISTNAME=	scaleway-cli-2.56.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scaleway/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

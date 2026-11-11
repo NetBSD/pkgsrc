@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29.2.1 2026/10/21 20:45:52 maya Exp $
+# $NetBSD: Makefile,v 1.29.2.2 2026/11/11 20:32:23 maya Exp $
 
 DISTNAME=		ov-0.54.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=noborus/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83.2.1 2026/10/21 20:45:26 maya Exp $
+# $NetBSD: Makefile,v 1.83.2.2 2026/11/11 20:31:53 maya Exp $
 
 DISTNAME=	influxdb-1.8.10
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 GITHUB_PROJECT=	influxdb
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.72.2.1 2026/10/21 20:45:54 maya Exp $
+# $NetBSD: Makefile,v 1.72.2.2 2026/11/11 20:32:27 maya Exp $
 #
 # Changelog:
 # https://github.com/rest-sh/restish/releases/
 
 DISTNAME=	restish-2.3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rest-sh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

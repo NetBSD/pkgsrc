@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78.2.1 2026/10/21 20:45:31 maya Exp $
+# $NetBSD: Makefile,v 1.78.2.2 2026/11/11 20:31:58 maya Exp $
 
 DISTNAME=		goredo-2.8.0
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		devel
 MASTER_SITES=		http://www.goredo.cypherpunks.su/download/
 EXTRACT_SUFX=		.tar.zst

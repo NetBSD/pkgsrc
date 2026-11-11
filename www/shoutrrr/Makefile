@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38.2.1 2026/10/21 20:45:55 maya Exp $
+# $NetBSD: Makefile,v 1.38.2.2 2026/11/11 20:32:27 maya Exp $
 
 DISTNAME=	shoutrrr-0.8.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containrrr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

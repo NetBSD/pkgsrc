@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66.2.1 2026/10/21 20:45:30 maya Exp $
+# $NetBSD: Makefile,v 1.66.2.2 2026/11/11 20:31:57 maya Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	golangci-lint-2.8.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golangci/}
 

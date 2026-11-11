@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18.2.1 2026/10/21 20:45:51 maya Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2026/11/11 20:32:22 maya Exp $
 
 DISTNAME=	gron-0.7.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tomnomnom/}
 GITHUB_PROJECT=	gron

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35.2.1 2026/10/21 20:45:33 maya Exp $
+# $NetBSD: Makefile,v 1.35.2.2 2026/11/11 20:32:01 maya Exp $
 
 PKGNAME=	task-3.53.1
-PKGREVISION=	4
+PKGREVISION=	5
 
 DISTNAME=	task-${GITHUB_TAG}
 CATEGORIES=	devel

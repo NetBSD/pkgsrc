@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89.2.1 2026/10/21 20:45:53 maya Exp $
+# $NetBSD: Makefile,v 1.89.2.2 2026/11/11 20:32:25 maya Exp $
 
 DISTNAME=	minify-2.9.21
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	57
+PKGREVISION=	58
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tdewolff/}
 CATEGORIES=	www
 GITHUB_PROJECT=	minify

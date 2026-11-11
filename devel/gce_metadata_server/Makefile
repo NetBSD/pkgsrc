@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29.2.1 2026/10/21 20:45:28 maya Exp $
+# $NetBSD: Makefile,v 1.29.2.2 2026/11/11 20:31:55 maya Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	gce_metadata_server-3.93.5
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=salrashid123/}
 

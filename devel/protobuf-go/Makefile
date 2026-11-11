@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22.2.1 2026/10/21 20:45:32 maya Exp $
+# $NetBSD: Makefile,v 1.22.2.2 2026/11/11 20:32:00 maya Exp $
 
 DISTNAME=	protobuf-go-1.34.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 

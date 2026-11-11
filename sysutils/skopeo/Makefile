@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24.2.1 2026/10/21 20:45:49 maya Exp $
+# $NetBSD: Makefile,v 1.24.2.2 2026/11/11 20:32:20 maya Exp $
 
 DISTNAME=	skopeo-1.14.3
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 

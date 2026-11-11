@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25.2.1 2026/10/21 20:45:31 maya Exp $
+# $NetBSD: Makefile,v 1.25.2.2 2026/11/11 20:31:59 maya Exp $
 
 DISTNAME=	humungus-0.9.7
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel
 MASTER_SITES=	https://humungus.tedunangst.com/r/humungus/d/
 EXTRACT_SUFX=	.tgz
