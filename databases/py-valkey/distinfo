@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/11 22:43:03 wiz Exp $
+
+BLAKE2s (valkey-6.2.0.tar.gz) = 77bed498045f57c629080151b8085cf0ce6e4b8dd91b649a5ee666dbc98881dd
+SHA512 (valkey-6.2.0.tar.gz) = f474afb11e7ee94e95179aa24d1b67ec54bfb74a9a2bfa3f6d286105958e1c9c10c8c482ddb5eee8cc639851040c89344a517b7a4994780c6c4e120b687fd5b3
+Size (valkey-6.2.0.tar.gz) = 4596658 bytes
