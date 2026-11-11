@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/10/12 21:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/11 10:43:03 wiz Exp $
 
 DISTNAME=	uv-${UV_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uv/}
 

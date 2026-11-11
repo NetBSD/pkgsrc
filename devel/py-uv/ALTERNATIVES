@@ -1,0 +1,2 @@
+bin/uv @PREFIX@/bin/uv-@PYVERSSUFFIX@
+bin/uvx @PREFIX@/bin/uvx-@PYVERSSUFFIX@
