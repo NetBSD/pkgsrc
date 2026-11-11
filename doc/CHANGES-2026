@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7929 2026/11/11 16:08:48 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7930 2026/11/11 18:05:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11796,3 +11796,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-opentelemetry-sdk version 1.45.2 [wiz 2026-11-11]
 	Added www/py-fastapi version 0.162.4 [wiz 2026-11-11]
 	Updated devel/py-test-flake8 to 1.3.0nb2 [wiz 2026-11-11]
+	Updated devel/gitpane to 0.18.6 [pin 2026-11-11]
