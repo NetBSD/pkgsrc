@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4732 2026/11/09 09:29:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4733 2026/11/11 15:09:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2874,6 +2874,8 @@ SUBDIR+=	py-nose
 SUBDIR+=	py-nose2
 SUBDIR+=	py-olefile
 SUBDIR+=	py-opentelemetry-api
+SUBDIR+=	py-opentelemetry-sdk
+SUBDIR+=	py-opentelemetry-semantic-conventions
 SUBDIR+=	py-opentelemetry-test-utils
 SUBDIR+=	py-orca
 SUBDIR+=	py-ordered-set
