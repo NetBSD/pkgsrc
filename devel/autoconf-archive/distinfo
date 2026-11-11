@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/02/19 12:49:07 wiz Exp $
+$NetBSD: distinfo,v 1.16 2026/11/11 22:55:22 wiz Exp $
 
-BLAKE2s (autoconf-archive-2023.02.20.tar.xz) = 781470cbd313215aa701d38921698f43dab41a2bd4616dbacf0fe7b00f282d8d
-SHA512 (autoconf-archive-2023.02.20.tar.xz) = a744f5aa0c1a813b81ad1528aebf7511bde7f470f34626d2057ed6664127120182e031fec5d22027d4a204544266135f202b8ef453bff70a3b0315c506c82528
-Size (autoconf-archive-2023.02.20.tar.xz) = 678184 bytes
+BLAKE2s (autoconf-archive-2026.11.11.tar.xz) = ce2a20d167348a0e6a20f473f0fd892fd70964962062c475d047e92cdec54f2b
+SHA512 (autoconf-archive-2026.11.11.tar.xz) = 1d2f340c3485594da9b1feb25862a8e738eaacc6698c52514c92bd4c968554eaa6d79591dd776c4794c3580f1b3c8ef6d190b246dbd0875b96be15a564c9958f
+Size (autoconf-archive-2026.11.11.tar.xz) = 688488 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/02/19 12:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/11 22:55:22 wiz Exp $
 
-DISTNAME=	autoconf-archive-2023.02.20
+DISTNAME=	autoconf-archive-2026.11.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=autoconf-archive/}
 EXTRACT_SUFX=	.tar.xz
