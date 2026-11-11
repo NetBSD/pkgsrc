@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2026/11/11 23:00:41 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2026/11/11 23:05:02 wiz Exp $
 
 Upstream forgot to bump the version.
+https://debbugs.gnu.org/cgi/bugreport.cgi?bug=82225
 
 --- configure.orig	2026-11-11 22:55:48.272863394 +0000
 +++ configure
