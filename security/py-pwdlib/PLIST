@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/11 14:44:48 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pwdlib/__init__.py
+${PYSITELIB}/pwdlib/__init__.pyc
+${PYSITELIB}/pwdlib/__init__.pyo
+${PYSITELIB}/pwdlib/_hash.py
+${PYSITELIB}/pwdlib/_hash.pyc
+${PYSITELIB}/pwdlib/_hash.pyo
+${PYSITELIB}/pwdlib/exceptions.py
+${PYSITELIB}/pwdlib/exceptions.pyc
+${PYSITELIB}/pwdlib/exceptions.pyo
+${PYSITELIB}/pwdlib/hashers/__init__.py
+${PYSITELIB}/pwdlib/hashers/__init__.pyc
+${PYSITELIB}/pwdlib/hashers/__init__.pyo
+${PYSITELIB}/pwdlib/hashers/argon2.py
+${PYSITELIB}/pwdlib/hashers/argon2.pyc
+${PYSITELIB}/pwdlib/hashers/argon2.pyo
+${PYSITELIB}/pwdlib/hashers/base.py
+${PYSITELIB}/pwdlib/hashers/base.pyc
+${PYSITELIB}/pwdlib/hashers/base.pyo
+${PYSITELIB}/pwdlib/hashers/bcrypt.py
+${PYSITELIB}/pwdlib/hashers/bcrypt.pyc
+${PYSITELIB}/pwdlib/hashers/bcrypt.pyo
+${PYSITELIB}/pwdlib/py.typed
