@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2026/10/25 10:16:34 pin Exp $
+$NetBSD: distinfo,v 1.33 2026/11/11 18:07:13 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -630,9 +630,9 @@ Size (serde_derive-1.0.229.crate) = 59864 bytes
 BLAKE2s (serde_spanned-1.1.2.crate) = d3a2a828df2ab03e7820e1ec897b7d70161e5609d00e3aebe3ae7e983ea41d13
 SHA512 (serde_spanned-1.1.2.crate) = d22796b8e7f508001e9979e0ca9e7cda67088ad4bb6d291e4cb02eaaa9ab1b621bf1e4efdab3d7d583cad89fdd066b47bd0fdbacdff45d709092c99a4f84d123
 Size (serde_spanned-1.1.2.crate) = 11124 bytes
-BLAKE2s (serie-0.10.1.tar.gz) = 1e18aeb676fea6fc8478be5f9665d2daf19735acd3e62cee732433f28b619f0b
-SHA512 (serie-0.10.1.tar.gz) = f4c0dabf0d811f08cbc579e6a475f6b4affbc71b8cffe8351f0a562803ba607bfa9644b94d49fbd405c089da806cbdcafa055c35cad8c390af60b389218190df
-Size (serie-0.10.1.tar.gz) = 14505225 bytes
+BLAKE2s (serie-0.10.2.tar.gz) = 9f86278f787ed0e934362ec895650bf7289f0ad7f2f5524d07c7b45125373346
+SHA512 (serie-0.10.2.tar.gz) = 35132cd75b42a41c21f2d602fab3ec20def86c40d5f353d05b7e359394ad2cbeff2ace652ca84247727cc6b9401051414811015cff4fc1c28fc72b0933639a5c
+Size (serie-0.10.2.tar.gz) = 14506009 bytes
 BLAKE2s (sha2-0.10.9.crate) = b0b7a333d767acd0419a8fa55bd26673d2d2b82a30ce17d140d9cd25f4d2a8d9
 SHA512 (sha2-0.10.9.crate) = 963adeeb4ed8b0e7fc19085e8721ea13e9b3aea5d115ca1b3dbca495ad14810c6450991dd3753807c293c415aaeb1054b8b4124c72e7090cd9e86f09fcbb4f80
 Size (sha2-0.10.9.crate) = 29271 bytes
