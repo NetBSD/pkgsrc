@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/11 15:08:40 wiz Exp $
+
+BLAKE2s (opentelemetry_sdk-1.45.2.tar.gz) = d19ea3d5e388ab63ab314761c73d80b22a491e5fc878ff15c904cdfa2458d902
+SHA512 (opentelemetry_sdk-1.45.2.tar.gz) = d0cc21d5cd81537d29db171d4e171f18c646b02d0e2066ec583c6020c24ca53a36b46e6c3227e9f0484e1deb87d223bcbde79fbccc7255761f0a006f555d504b
+Size (opentelemetry_sdk-1.45.2.tar.gz) = 221705 bytes
