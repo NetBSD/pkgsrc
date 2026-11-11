@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2026/11/11 16:16:40 wiz Exp $
+
+INTERNALERROR> pytest.PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+INTERNALERROR> The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+--- pyproject.toml.orig	2026-11-11 16:09:27.642048654 +0000
++++ pyproject.toml
+@@ -125,6 +125,7 @@ asyncio_mode = "strict"
+ --cov-report=xml
+ """
+ asyncio_mode = "strict"
++asyncio_default_fixture_loop_scope = "function"
+ filterwarnings = [
+     "error",
+     # falcon.media.handlers uses cgi to parse data

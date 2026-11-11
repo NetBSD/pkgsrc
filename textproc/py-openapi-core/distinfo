@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2026/07/07 13:14:22 adam Exp $
+$NetBSD: distinfo,v 1.15 2026/11/11 16:16:40 wiz Exp $
 
 BLAKE2s (openapi_core-0.23.1.tar.gz) = bcce62b3752c6f657057eb3492e2f6bdcbed0f33d2e3ac96267a971ed57080e6
 SHA512 (openapi_core-0.23.1.tar.gz) = a61381c9a721173926293ff5af9312f7d9b1a474759528bf8444891bc95ec4486fe8f735deaeb96aaae1e39c727d30797abd5ad2445b8020a0a38cb351964b86
 Size (openapi_core-0.23.1.tar.gz) = 124348 bytes
+SHA1 (patch-pyproject.toml) = 221729086ad0136ff8464eab0563beab2d4b3e40

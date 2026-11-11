@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2026/10/16 19:44:18 adam Exp $
+# $NetBSD: Makefile,v 1.28 2026/11/11 16:16:40 wiz Exp $
 
 DISTNAME=	openapi_core-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 TEST_DEPENDS+=	${PYPKGPREFIX}-falcon-[0-9]*:../../devel/py-falcon
-#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
+TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi>=0.120:../../www/py-fastapi
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
@@ -36,8 +36,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
-# as of 0.19.4 (with fastapi dependency)
-# 1361 passed, 20 xfailed, 65 errors
+# as of 0.23.1
+# 6 failed, 1354 passed, 20 xfailed, 178 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
