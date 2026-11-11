@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2.2.1 2026/10/21 20:39:26 maya Exp $
+@comment $NetBSD: PLIST,v 1.2.2.2 2026/11/11 20:02:28 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go127/CONTRIBUTING.md
@@ -1520,6 +1520,7 @@ go127/src/cmd/compile/internal/types2/lookup.go
 go127/src/cmd/compile/internal/types2/lookup_test.go
 go127/src/cmd/compile/internal/types2/main_test.go
 go127/src/cmd/compile/internal/types2/map.go
+go127/src/cmd/compile/internal/types2/methodorder_test.go
 go127/src/cmd/compile/internal/types2/mono.go
 go127/src/cmd/compile/internal/types2/mono_test.go
 go127/src/cmd/compile/internal/types2/named.go
@@ -14772,6 +14773,7 @@ go127/test/fixedbugs/issue8158.go
 go127/test/fixedbugs/issue81612.go
 go127/test/fixedbugs/issue81687.go
 go127/test/fixedbugs/issue8183.go
+go127/test/fixedbugs/issue81863.go
 go127/test/fixedbugs/issue8280.dir/a.go
 go127/test/fixedbugs/issue8280.dir/b.go
 go127/test/fixedbugs/issue8280.go
