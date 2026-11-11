@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/11 15:08:17 wiz Exp $
+
+BLAKE2s (opentelemetry_semantic_conventions-0.66b2.tar.gz) = 16ff1827c21d0354a3d3a25fb112abaec8cfb1710128dd19981c6a9752dd9f87
+SHA512 (opentelemetry_semantic_conventions-0.66b2.tar.gz) = ee8e1714f94f1230379a0642b4ecdd784ca5433d8b3647a8b4fa824a457f37f4f40710c264cc4bacf058f2e401cb3a71982e6e39053691b68667b18195c39686
+Size (opentelemetry_semantic_conventions-0.66b2.tar.gz) = 150246 bytes
