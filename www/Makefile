@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1954 2026/11/09 14:10:24 taca Exp $
+# $NetBSD: Makefile,v 1.1955 2026/11/11 15:45:27 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -805,6 +805,7 @@ SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-draftjs_exporter
 SUBDIR+=	py-drf-nested-routers
 SUBDIR+=	py-easy-thumbnails
+SUBDIR+=	py-fastapi
 SUBDIR+=	py-feedgen
 SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-filebrowser_safe
