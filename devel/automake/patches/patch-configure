@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2026/11/11 23:00:41 wiz Exp $
+
+Upstream forgot to bump the version.
+
+--- configure.orig	2026-11-11 22:55:48.272863394 +0000
++++ configure
+@@ -2735,7 +2735,7 @@ am_AUTOUPDATE="${AUTOUPDATE-autoupdate}"
+ am_AUTOUPDATE="${AUTOUPDATE-autoupdate}"
+ 
+ 
+-am__api_version='1.19'
++am__api_version='1.20'
+ 
+ 
+   # Find a good install program.  We prefer a C program (faster),
+@@ -3646,7 +3646,7 @@ RELEASE_YEAR=2026
+ 
+ # The API version is the base version.  We must guarantee
+ # compatibility for all releases with the same API version.
+-APIVERSION=1.19
++APIVERSION=1.20
+ 
+ 
+ pkgvdatadir="\${datadir}/$PACKAGE-$APIVERSION"

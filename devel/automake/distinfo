@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.66 2026/09/24 13:26:15 wiz Exp $
+$NetBSD: distinfo,v 1.67 2026/11/11 23:00:41 wiz Exp $
 
-BLAKE2s (automake-1.19.tar.xz) = 7ef8c304a4c5ed9b3cce8712d641bb0e8071074d52eaadb3fd6d0491686751a3
-SHA512 (automake-1.19.tar.xz) = 98b0ceb15a1009d72502346cd1f0ca3fbc6c161471d82e184a2cce4907c76a7368146805d3a31fa8990b833b53f662e02b72d00bf8a5d02c767abc238cca5fc3
-Size (automake-1.19.tar.xz) = 1682600 bytes
+BLAKE2s (automake-1.20.tar.xz) = 04419caec52fd66ff69c1f09413397de45e8aa656e2aeea18ae619a5648a08a1
+SHA512 (automake-1.20.tar.xz) = 8019fd1e53fe747e7ff2bd3f9215c5dd38001a6621b9a746b944dfeb8bb9e6ad1ee1643533776b48dbdd6397b6dc8dcb3ca1c3702c70a605273e1565f4bccf23
+Size (automake-1.20.tar.xz) = 1694140 bytes
+SHA1 (patch-configure) = 0bcd3b6cb8b3f1e1eaa346e706b88dde71be2cf5

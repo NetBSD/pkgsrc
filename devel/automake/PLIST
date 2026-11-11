@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2026/09/24 13:26:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2026/11/11 23:00:41 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -23,6 +23,7 @@ share/aclocal-${PKG_DIR_VERSION}/gcj.m4
 share/aclocal-${PKG_DIR_VERSION}/init.m4
 share/aclocal-${PKG_DIR_VERSION}/install-sh.m4
 share/aclocal-${PKG_DIR_VERSION}/internal/ac-config-macro-dirs.m4
+share/aclocal-${PKG_DIR_VERSION}/jobserver.m4
 share/aclocal-${PKG_DIR_VERSION}/lead-dot.m4
 share/aclocal-${PKG_DIR_VERSION}/lex.m4
 share/aclocal-${PKG_DIR_VERSION}/lispdir.m4
