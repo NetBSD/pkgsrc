@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/11 22:44:07 wiz Exp $
+
+BLAKE2s (anysqlite-0.0.5.tar.gz) = aa5429123338f3164afd422382da701b86b0fbc194938fdf34332a2397e2289d
+SHA512 (anysqlite-0.0.5.tar.gz) = 792bf02c86ce3fbd2269dec4ea5f45266ba5d46c9382551da9dd21856993b8f8392c3b2a61e641b96bcc4595a297cea7ea1a0b7c37b5d56571962efb0cde6d60
+Size (anysqlite-0.0.5.tar.gz) = 3432 bytes

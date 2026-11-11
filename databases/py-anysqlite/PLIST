@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/11 22:44:06 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/anysqlite/__init__.py
+${PYSITELIB}/anysqlite/__init__.pyc
+${PYSITELIB}/anysqlite/__init__.pyo
+${PYSITELIB}/anysqlite/_core.py
+${PYSITELIB}/anysqlite/_core.pyc
+${PYSITELIB}/anysqlite/_core.pyo
+${PYSITELIB}/anysqlite/py.typed
