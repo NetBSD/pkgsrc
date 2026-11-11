@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2026/02/11 08:24:49 taca Exp $
+$NetBSD: distinfo,v 1.11.6.1 2026/11/11 13:17:50 maya Exp $
 
-BLAKE2s (php-mongodb/mongodb-1.21.5.tgz) = 15f75f79024b9b854a833ed68790cdefaca4a0c591cd7d4bfa601d48f81d085d
-SHA512 (php-mongodb/mongodb-1.21.5.tgz) = 551eff90a09b88188ce0eb62dc4f22c6dcc152feeeba7cef28e8b16c1e1d512024323c7619f18a3da909d26a8716fc1a261831ff05849a7651c0d489ab25c055
-Size (php-mongodb/mongodb-1.21.5.tgz) = 2156847 bytes
+BLAKE2s (php-mongodb/mongodb-1.21.13.tgz) = dc777f7bedf5e743f3d963ae691337df3c9b71d88e08707c7a44f93151cd001f
+SHA512 (php-mongodb/mongodb-1.21.13.tgz) = f31330c6d015a36bf99083497fe5e5ffd745d97b4d73a418ae503c291722ba11b7010cf57b563e529d4861abb86c4e58d758551884e6ec006d594d854fc1eb06
+Size (php-mongodb/mongodb-1.21.13.tgz) = 2170109 bytes
 SHA1 (patch-.._package.xml) = 14a31314d0a281eb55726fc9d1acb27b0a3cf66d
 SHA1 (patch-src_libmongocrypt_src_os__posix_os__dll.c) = 8348a006bed669ce462e46a86f43c87b66e3d856
