@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7944 2026/11/11 23:00:51 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7945 2026/11/11 23:34:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11811,3 +11811,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-hishel to 2.0.0 [wiz 2026-11-11]
 	Updated devel/autoconf-archive to 2026.11.11 [wiz 2026-11-11]
 	Updated devel/automake to 1.20 [wiz 2026-11-11]
+	Updated devel/py-pdm to 2.29.7 [wiz 2026-11-11]
