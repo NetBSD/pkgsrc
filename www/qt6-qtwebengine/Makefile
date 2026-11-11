@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/11/07 19:12:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/11 11:48:37 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebengine-${QTVERSION}
@@ -6,6 +6,8 @@ PKGREVISION=	1
 COMMENT=	Qt6 webengine module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+PATCHFILES=	qtwebengine-6.11.3-icu4c_79-1.patch
+PATCH_SITES=	https://www.linuxfromscratch.org/patches/blfs/svn/
 
 CMAKE_GENERATORS_INCOMPATIBLE=	make
 

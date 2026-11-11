@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/10/22 11:17:46 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/11 11:48:36 wiz Exp $
 
 DISTNAME=	node-v22.23.4
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +31,9 @@ CXXFLAGS+=	-mstackrealign
 post-install: minusx
 minusx:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/node_modules/corepack/shims/*.cmd
+
+# "Please use python3.14 or python3.13 or python3.12 or python3.11 or python3.10 or python3.9 or python3.8."
+PYTHON_VERSIONS_INCOMPATIBLE=	315
 
 .include "../../lang/nodejs/options.mk"
 

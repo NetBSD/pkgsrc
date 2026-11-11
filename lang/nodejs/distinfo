@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.337 2026/10/29 10:26:59 adam Exp $
+$NetBSD: distinfo,v 1.338 2026/11/11 11:48:36 wiz Exp $
 
 BLAKE2s (node-v26.13.0.tar.xz) = 53ee857343785aca9e6b227094b78f6791b027d21db3a08f85d88b323fa1ca0f
 SHA512 (node-v26.13.0.tar.xz) = b26477a172f99513c03ec9bb32f7f72bf88c05443acc2383a6c4bc28f796061ba81f78358353bc4aeaf77d7e2de818746503ac287a2ff74032ee1d261d0388e6
@@ -15,6 +15,9 @@ SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c6
 SHA1 (patch-deps_v8_src_base_strings.h) = 4d2b37491f2f74f1a573f8c1942790204e23a8bb
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
+SHA1 (patch-deps_v8_src_regexp_gen-regexp-special-case.cc) = e96996cfc6171cebeabd0a887739df7888fd3e73
+SHA1 (patch-deps_v8_src_regexp_regexp-parser.cc) = b00e8184f51496798b9da8b28b0e31289bfc3693
+SHA1 (patch-deps_v8_src_regexp_special-case.h) = bdea3389166d7f5ef2ad45dffabc067429278e0b
 SHA1 (patch-deps_v8_src_strings_string-hasher.cc) = 655d497ba45c073b79527b3733ecff4e6aab8ddf
 SHA1 (patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = ccca21704265f98801bb97968b51c1432136b556
 SHA1 (patch-deps_v8_tools_profiling_run-llprof.sh) = b19994d3195cc97424a3cc2ffd3ae02eacc6ffa8

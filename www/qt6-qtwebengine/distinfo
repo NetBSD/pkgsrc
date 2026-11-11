@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.10 2026/11/06 09:08:57 adam Exp $
+$NetBSD: distinfo,v 1.11 2026/11/11 11:48:37 wiz Exp $
 
 BLAKE2s (kikadf-chromium-audioio-v130.0.tar.gz) = 45fe07cb8280f81b8ef490059002da426b59fe69b5ebd53951fe1dc3e9495a10
 SHA512 (kikadf-chromium-audioio-v130.0.tar.gz) = 840aed119dc69982f14fd5f4767e144bfc8a66672b660f0f05f5459070d7f6a36b8719ae7c0de049f7345dec39266759aedcdd5ee37aa4e98bcd2b44d06a3a4c
 Size (kikadf-chromium-audioio-v130.0.tar.gz) = 7824 bytes
+BLAKE2s (qtwebengine-6.11.3-icu4c_79-1.patch) = c67e25045e696eb850958268c59bbcf0a2489bb869eb556de0fae9f48ce23f6a
+SHA512 (qtwebengine-6.11.3-icu4c_79-1.patch) = 5d4b4365e86590c7aee4429c62a2d86e9035bfcee46c4bd0e39d70a41ec243861cc66b750ecb26d22b7027460e2c448afaab3f9ed75203cfd3a05e09daa3b086
+Size (qtwebengine-6.11.3-icu4c_79-1.patch) = 7826 bytes
 BLAKE2s (qtwebengine-everywhere-src-6.11.3.tar.xz) = beb5d04b80d347c7b692e6877525ffad51a324ae7fbf89598478483578da476d
 SHA512 (qtwebengine-everywhere-src-6.11.3.tar.xz) = c24f14c9b0b2c15614af89f74f7ea126bbb98e98e80c824cefbeb7be650f0cc226bb8e3bb60edf5fa2ef007c58fd6e19e45592d4fec72131a3c5dd657009e23d
 Size (qtwebengine-everywhere-src-6.11.3.tar.xz) = 580447120 bytes

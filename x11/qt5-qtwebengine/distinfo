@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2026/05/25 06:18:16 adam Exp $
+$NetBSD: distinfo,v 1.38 2026/11/11 11:48:37 wiz Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.19.tar.xz) = 017a224f994e81829cb694863aa28b9a97d6ad30201053fcd66c4189794b6ec6
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.19.tar.xz) = 1b26848cd5a6720d6ad181cf05501f139686a0fbb8a6e6c2f525a9dc442a94befc88fa13c19b80dcec1d2b1cf4101e07805570911bef90064602bd9ecb488ef0
@@ -844,6 +844,9 @@ SHA1 (patch-src_3rdparty_chromium_v8_gni_v8.gni) = 37cbd6b92dac3370c039aa04424e4
 SHA1 (patch-src_3rdparty_chromium_v8_src_api_api.cc) = d563a6b50e5dff265d5a4b1b516de02e7149cab6
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_cpu.cc) = f6ec99bba983bb93e8515478f64681440ffbda1e
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_platform_platform-posix.cc) = 7e587fac8a26a975b33a93aa09ccf9af82afabb7
+SHA1 (patch-src_3rdparty_chromium_v8_src_regexp_gen-regexp-special-case.cc) = b31e81272d903f88f23a11ac856a2fdaa5d7cd84
+SHA1 (patch-src_3rdparty_chromium_v8_src_regexp_regexp-parser.cc) = 6482774d38861e0477662472ac3278cec395a4b8
+SHA1 (patch-src_3rdparty_chromium_v8_src_regexp_special-case.h) = f6d1a0cc48ec0db50292be052f56085e09d0aa26
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc) = 01a6e7e6c5cd3a30cbe85e3f418dc36e7884c4b8
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.h) = a64ca7574cca4cb804e0ca24dd3454507d3d556d
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_trap-handler.h) = d0b72fff980d5072d2221dd31b2e95526cd33875
