@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7938 2026/11/11 22:03:16 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7939 2026/11/11 22:44:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11805,3 +11805,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/proc-cli to 2.3.0 [hauke 2026-11-11]
 	Updated audio/fooyin to 0.15.1 [hauke 2026-11-11]
 	Updated net/dnscontrol to 5.8.1 [drixter 2026-11-11]
+	Added databases/py-fakeredis version 2.40.0 [wiz 2026-11-11]
