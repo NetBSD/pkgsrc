@@ -1,22 +1,23 @@
-$NetBSD: patch-configure,v 1.15 2025/03/30 21:10:47 wiz Exp $
+$NetBSD: patch-configure,v 1.16 2026/11/11 11:47:11 wiz Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it.
 
---- configure.orig	2024-10-24 18:24:00.000000000 +0000
+--- configure.orig	2026-10-22 15:02:04.000000000 +0000
 +++ configure
-@@ -5884,6 +5884,7 @@ powerpc*-apple-darwin*)	icu_cv_host_frag
+@@ -5833,6 +5833,7 @@ powerpc*-apple-darwin*)	icu_cv_host_frag=mh-darwin-ppc
  *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
  *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
  *-ncr-*)	icu_cv_host_frag=mh-mpras ;;
 +-*-sco3.2v5*)	icu_cv_host_frag=mh-scoosr5 ;;
+ *-wasi*)	icu_cv_host_frag=mh-wasi ;;
  *) 		icu_cv_host_frag=mh-unknown ;;
  esac
- 
-@@ -6511,6 +6512,29 @@ if test "x$plugins" = "xtrue"; then
+@@ -6460,6 +6461,29 @@ fi
+    UCONFIG_CPPFLAGS="$UCONFIG_CPPFLAGS -DUCONFIG_ENABLE_PLUGINS=1"
  fi
  
- 
++
 +# check if sys/atomic.h is present.
 +for ac_header in sys/atomic.h
 +do :
@@ -39,7 +40,6 @@ Solaris seems to need -std=c99 with recent pkgsrc so keep it.
 +*)
 +;;
 +esac
-+
+ 
  U_ENABLE_DYLOAD=1
  enable=yes
- { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins. Ignored if plugins disabled." >&5

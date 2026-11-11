@@ -1,24 +1,21 @@
-$NetBSD: distinfo,v 1.113 2026/03/26 05:41:37 adam Exp $
+$NetBSD: distinfo,v 1.114 2026/11/11 11:47:11 wiz Exp $
 
-BLAKE2s (icu4c-78.3-sources.tgz) = d363f07b8bd0d286c4874d594c4951278c4841ad6505b8d86a639a52285d20ed
-SHA512 (icu4c-78.3-sources.tgz) = 04a49455e1489030c520a4bfd2664fa2171e7938d08f2acdbbcb1fda976639fd8b1f0704f2eec89ba59a7b6d118ceaab6ec5a096e40d9085a0895d91ce225245
-Size (icu4c-78.3-sources.tgz) = 27977255 bytes
-SHA1 (patch-ICU-23263) = d73ce679198314744a61361774707be4b6470365
-SHA1 (patch-acinclude.m4) = 64311d903a85c868e3a87502ea58b916089afb70
+BLAKE2s (icu4c-79.1-sources.tgz) = 4c683f2ddbc398ef3d0a16a42fef062f45fdb9ebd9ffe0e095ca49a1dde4f07f
+SHA512 (icu4c-79.1-sources.tgz) = 9098adf9ba7fbe11d92963415cc80bf09de39ce1372414dbc2561e5f8ef57479a9fe4b6f7abc61911e4659e5953be987c459297d29e61b064d1931a16195a973
+Size (icu4c-79.1-sources.tgz) = 28162455 bytes
+SHA1 (patch-acinclude.m4) = 59da54f9a8b324406f8fbff5baddc3549a14c8ae
 SHA1 (patch-common_putil.cpp) = cc867aaef753c23ff12db019e41836c0dd5ac6d1
-SHA1 (patch-common_ubidiimp.h) = 180eb1fe1069c393ddf1deb46da00f466d8438e8
 SHA1 (patch-common_umutex.h) = b22b7c02b4645a87f71d54885d858d0cf9005988
 SHA1 (patch-common_unicode_platform.h) = 8b7b8bcf6f5185225a1ca516ac212a495f7b47e8
 SHA1 (patch-common_unicode_ptypes.h) = b0fd74429b217580d1957c241b9c7a187a00f8c3
-SHA1 (patch-common_uposixdefs.h) = 2900a3747b49bcf1a81dbb5a20692c120f28cb04
+SHA1 (patch-common_uposixdefs.h) = 968f8b492da6165bbe9db778018f403b09bf6764
 SHA1 (patch-config_Makefile.inc.in) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
 SHA1 (patch-config_mh-darwin) = 4fd2c664b23078692b61557ebb66693712d333cd
 SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
-SHA1 (patch-configure) = d490321c93d67f7d3a70319ce8a86ca36fd3825c
+SHA1 (patch-configure) = 9b052e09363705027e90b45d56996559d3c3d759
 SHA1 (patch-configure.ac) = 86f4b142afddb9784f2aec98f147ee29217b6124
 SHA1 (patch-i18n_double-conversion-utils.h) = 9bee115bb9ddc597607e30f95050de7b21751fca
-SHA1 (patch-i18n_measunit_extra.cpp) = 3e755b2da38345a658905fb32cbedbefa5414183
 SHA1 (patch-icudefs.mk.in) = 15be482cf7541c9b518b8bfb05865ac994313cb7
 SHA1 (patch-runConfigureICU) = 6aa0de86506440aeb13005959e9014a53ed63036
 SHA1 (patch-tools-toolutil-pkg_genc.cpp) = 3cbcf3387d6a39315b26a3e2a2ffb715507e9110
