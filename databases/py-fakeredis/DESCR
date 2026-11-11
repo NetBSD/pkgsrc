@@ -1,0 +1,4 @@
+fakeredis is a drop-in replacement for redis-py and valkey-py that
+runs entirely in-memory. Write tests that depend on Redis, Valkey,
+DragonflyDB, KeyDB, or KiviDB - without spinning up a real server,
+a container, or a network connection.

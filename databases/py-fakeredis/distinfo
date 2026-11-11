@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/11 22:43:34 wiz Exp $
+
+BLAKE2s (fakeredis-2.40.0.tar.gz) = 149626aaabf9675b1008c83492c5625ca205b9e3cb290d416add7f5148c42e3e
+SHA512 (fakeredis-2.40.0.tar.gz) = 215a23b61976b7418172a9c28a7646469127a1caa8dcb388fede54d6d64d83fd9691d41b58d7bb3fc4e46c1828ca0b5d7c97371b33b542a839b84c38f75dbf3b
+Size (fakeredis-2.40.0.tar.gz) = 332674 bytes
