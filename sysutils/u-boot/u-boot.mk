@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.39 2026/11/10 20:53:16 martin Exp $
+# $NetBSD: u-boot.mk,v 1.40 2026/11/11 13:52:43 martin Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -9,7 +9,9 @@ CATEGORIES=	sysutils
 EXTRACT_SUFX?=	.tar.bz2
 
 HOMEPAGE?=	https://u-boot-project.org
-.if ${UBOOT_VERSION:U0} > 2026
+
+VERNO=${UBOOT_VERSION:U0:C@\.([0-9]*).*@.\1@}
+.if ${VERNO} > 2026
 MASTER_SITES?=	https://git.u-boot-project.org/u-boot/u-boot/-/releases/v${UBOOT_VERSION}/downloads/
 .else
 MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/
@@ -35,7 +37,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake gsed pkg-config gawk
-.if ${UBOOT_VERSION:U0} > 2026
+.if ${VERNO} > 2026
 USE_TOOLS+=		perl
 .endif
 PYTHON_FOR_BUILD_ONLY=	yes
@@ -56,7 +58,7 @@ ALL_ENV+=		PYTHONLIBPATH=-L${PREFIX}/lib
 UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
 .endif
 
-.if ${UBOOT_VERSION:U0} > 2026
+.if ${VERNO} > 2026
 WRKSRC=		${WRKDIR}/u-boot-v${UBOOT_VERSION}
 .endif
 
