@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7920 2026/11/11 11:47:21 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7921 2026/11/11 13:13:20 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11787,3 +11787,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.13.7nb1 [wiz 2026-11-11]
 	Updated misc/py-dep-logic to 0.8.0 [wiz 2026-11-11]
 	Updated textproc/icu to 79.1 [wiz 2026-11-11]
+	Updated www/chromium to 157.0.8103.50 [kikadf 2026-11-11]
