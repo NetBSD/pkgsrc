@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7922 2026/11/11 13:20:41 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7923 2026/11/11 13:57:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11789,3 +11789,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/icu to 79.1 [wiz 2026-11-11]
 	Updated www/chromium to 157.0.8103.50 [kikadf 2026-11-11]
 	Updated graphics/shader-slang to 2026.22 [ktnb 2026-11-11]
+	Updated www/apache24 to 2.4.71 [taca 2026-11-11]
