@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/12/04 16:21:50 taca Exp $
+# $NetBSD: Makefile,v 1.13.32.1 2026/11/11 10:48:06 maya Exp $
 
-DISTNAME=	jekyll-feed-0.17.0
+DISTNAME=	jekyll-feed-0.18.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
