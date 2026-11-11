@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/04/12 21:10:56 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/11 16:08:38 wiz Exp $
 
 DISTNAME=	pytest_flake8-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-flake8/}
 
@@ -17,6 +17,9 @@ DEPENDS+=	${PYPKGPREFIX}-flake8>=4:../../devel/py-flake8
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+# as of 1.3.0
+# 8 failed, 2 passed, 2 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
