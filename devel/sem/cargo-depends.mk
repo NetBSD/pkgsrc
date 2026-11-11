@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2026/10/30 11:10:35 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2026/11/11 18:06:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -310,6 +310,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-hcl-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-htmlx-svelte-0.1.16
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.23.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-jq-1.0.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-ng-1.1.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-language-0.1.7
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.5.0

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2026/10/30 11:10:35 pin Exp $
+$NetBSD: distinfo,v 1.13 2026/11/11 18:06:11 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -696,9 +696,9 @@ Size (schemars_derive-1.2.1.crate) = 31319 bytes
 BLAKE2s (scopeguard-1.2.0.crate) = 4daf97de7fabaf7fe5ba6000f7132a46cc0bab2a297127580d9ac127d0a8fcec
 SHA512 (scopeguard-1.2.0.crate) = 6247719a15fe1e4e2d179127b9a934bd2f99367724f41175ed9522f58824b6bc69b35002eae66b35880375ff61d77ac43ddaa78cbde7160a35183a1da32d3fbb
 Size (scopeguard-1.2.0.crate) = 11619 bytes
-BLAKE2s (sem-0.29.0.tar.gz) = fa1cad40a58fdfa1a5a1e5207e4c760e21d1a3f73afba5eef3384da2ab2d49a5
-SHA512 (sem-0.29.0.tar.gz) = 32f6c84575beecc73e8404d616bdf8ac93e2321ddbb5af9412e7e9eacac574a7a85bc5ed528fc83c7ee9b26b7f7981f91fd93a46cc93b3eb5c8c2d921a63dd02
-Size (sem-0.29.0.tar.gz) = 2817314 bytes
+BLAKE2s (sem-0.30.1.tar.gz) = 46ef41d3ca1e34e83b257b094db2f2d62ba388b5ff7464caf8124e371cd6d57c
+SHA512 (sem-0.30.1.tar.gz) = dc6889cdcecbfd9bef72d74154f3d6390f71683e87abc2b583b10c04f7f76b471f081b40bab3e61106328b906b6832173a8f364e929069259221865062599f24
+Size (sem-0.30.1.tar.gz) = 2826856 bytes
 BLAKE2s (semver-1.0.28.crate) = cc54fd8b7e1ad8e773e58137625a19c3ca7c46fec285a7eec1685230a1e9b88f
 SHA512 (semver-1.0.28.crate) = bb44373e60fccb83bc95e4277ea0abdd756a3f77b3334cf6d6b5fceac086910661ab94eb326cdc8fefce0c09220933bdf03bfd142c1594a92c9c1e4e931114b7
 Size (semver-1.0.28.crate) = 33064 bytes
@@ -933,6 +933,9 @@ Size (tree-sitter-java-0.23.5.crate) = 159677 bytes
 BLAKE2s (tree-sitter-javascript-0.23.1.crate) = c511a426375c7ab9900a01596aa1ff3fd6b1c962bce2bd5e6ae84ea08211c1a3
 SHA512 (tree-sitter-javascript-0.23.1.crate) = 249e2488e48ab424f729852b20f9213886be9ec45066943b2d0632c5d93f744aa4ebcac6e37cd63ac29fe321ac5f0d0eeade742ea7bb0a769c6e258e143b75a8
 Size (tree-sitter-javascript-0.23.1.crate) = 133198 bytes
+BLAKE2s (tree-sitter-jq-1.0.2.crate) = f5255d99291da5e9bfca8c44f3a79f8149bd0c4f20af5902c559ddedb2d79d2f
+SHA512 (tree-sitter-jq-1.0.2.crate) = 0e9ea325c02e41ec104ec573716a63df622a425e1149b3214f7a790f03b8b1db1345947db039f9291d59d182d69be7c08eb0a2838775795625a08774e96596bf
+Size (tree-sitter-jq-1.0.2.crate) = 62127 bytes
 BLAKE2s (tree-sitter-kotlin-ng-1.1.0.crate) = fd86b29fa258881203f0301b9ca6aec7a1aa3202adfdd064e3cefc4efdbf2f94
 SHA512 (tree-sitter-kotlin-ng-1.1.0.crate) = e7386a5eaa3329fd7e1ec5cee389b620e8f5f7b648219d20a648b238a44749e9feb85a6b4f3968b191b2287b344b8c584439fea15f71cd054739dd72578115bc
 Size (tree-sitter-kotlin-ng-1.1.0.crate) = 1113824 bytes
