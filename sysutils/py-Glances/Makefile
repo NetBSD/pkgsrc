@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2026/11/08 11:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/11/11 15:51:07 wiz Exp $
 
 DISTNAME=	glances-4.5.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -20,8 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
 # DEPENDS for WebUI/RestFull API
-#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi>=0.82.0:../../wip/py-fastapi
-#TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
+TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi>=0.82.0:../../www/py-fastapi
+TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 # for testing
 ALLOW_NETWORK_ACCESS=	yes
