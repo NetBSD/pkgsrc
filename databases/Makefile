@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2026/11/09 15:13:32 taca Exp $
+# $NetBSD: Makefile,v 1.761 2026/11/11 22:44:13 wiz Exp $
 
 COMMENT=	Databases
 
@@ -365,6 +365,7 @@ SUBDIR+=	py-agate-excel
 SUBDIR+=	py-agate-sql
 SUBDIR+=	py-aiosqlite
 SUBDIR+=	py-alembic
+SUBDIR+=	py-anysqlite
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
@@ -376,6 +377,7 @@ SUBDIR+=	py-dsinternals
 SUBDIR+=	py-duckdb
 SUBDIR+=	py-elastic-transport
 SUBDIR+=	py-elasticsearch
+SUBDIR+=	py-fakeredis
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-influxdb
 SUBDIR+=	py-kb
@@ -406,6 +408,7 @@ SUBDIR+=	py-sqlparse
 SUBDIR+=	py-sqlrelay
 SUBDIR+=	py-tinydb
 SUBDIR+=	py-tortoise-orm
+SUBDIR+=	py-valkey
 SUBDIR+=	py-whisper
 SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
