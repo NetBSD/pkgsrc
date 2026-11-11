@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/06/28 15:00:12 taca Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2026/11/11 10:40:11 maya Exp $
 
-DISTNAME=	net-ssh-7.3.3
+DISTNAME=	net-ssh-8.1.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
