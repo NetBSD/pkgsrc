@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/10/27 06:45:30 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/11/11 18:37:43 hauke Exp $
 
-BLAKE2s (fooyin-0.14.1.tar.gz) = a5cba2a7f79d4f4a9e28203b3f756cdbb8d8f4fa7da6a6defa86cad3af56de76
-SHA512 (fooyin-0.14.1.tar.gz) = c82c6b683a9d0dd70385ed7efd0ad2025ce3c88a3f809be9c7eb0c974ef529567e7b8e4efadd671a6730a63acc0d7d24b9ebc2cb10b95f2f13f2f19906922e8c
-Size (fooyin-0.14.1.tar.gz) = 6322580 bytes
+BLAKE2s (fooyin-0.15.1.tar.gz) = 44cf4be29e191cc4abfa4df7b20702445c9ba1cb16b47f464d9a0666ee39cc87
+SHA512 (fooyin-0.15.1.tar.gz) = 295e895f2106f0f3c0ee471ed900236a8b1cd568ac26a9179aaa1120ee13129a33eaef149f4ea82747b247bd9ca2c865744743e795155e6d0acc77c17874f4a8
+Size (fooyin-0.15.1.tar.gz) = 6739755 bytes
