@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7934 2026/11/11 18:09:41 pin Exp $
+$NetBSD: CHANGES-2026,v 1.7935 2026/11/11 18:10:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11801,3 +11801,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/serie to 0.10.2 [pin 2026-11-11]
 	Updated misc/rozi to 0.0.45 [pin 2026-11-11]
 	Updated net/xfr to 0.14.1 [pin 2026-11-11]
+	Updated news/eilmeldung to 1.10.0 [pin 2026-11-11]
