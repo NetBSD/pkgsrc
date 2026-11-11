@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7941 2026/11/11 22:45:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7942 2026/11/11 22:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11808,3 +11808,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added databases/py-fakeredis version 2.40.0 [wiz 2026-11-11]
 	Added databases/py-anysqlite version 0.0.5 [wiz 2026-11-11]
 	Added databases/py-valkey version 6.2.0 [wiz 2026-11-11]
+	Updated www/py-hishel to 2.0.0 [wiz 2026-11-11]
