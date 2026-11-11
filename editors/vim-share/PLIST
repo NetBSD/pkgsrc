@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2026/09/16 23:21:45 morr Exp $
+@comment $NetBSD: PLIST,v 1.96.2.1 2026/11/11 09:15:05 maya Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -429,6 +429,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/apache.vim
 share/vim/${VIM_SUBDIR}/ftplugin/arch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/arduino.vim
 share/vim/${VIM_SUBDIR}/ftplugin/art.vim
+share/vim/${VIM_SUBDIR}/ftplugin/ascendc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/asciidoc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/asm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aspvbs.vim
@@ -440,6 +441,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/autopkgtest.vim
 share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bash.vim
 share/vim/${VIM_SUBDIR}/ftplugin/basic.vim
+share/vim/${VIM_SUBDIR}/ftplugin/bats.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bazelrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/beancount.vim
@@ -580,6 +582,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/http.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hurl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hyprlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/i3config.vim
+share/vim/${VIM_SUBDIR}/ftplugin/icalendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/icon.vim
 share/vim/${VIM_SUBDIR}/ftplugin/idris2.vim
 share/vim/${VIM_SUBDIR}/ftplugin/indent.vim
@@ -867,11 +870,13 @@ share/vim/${VIM_SUBDIR}/indent/aap.vim
 share/vim/${VIM_SUBDIR}/indent/ada.vim
 share/vim/${VIM_SUBDIR}/indent/ant.vim
 share/vim/${VIM_SUBDIR}/indent/arduino.vim
+share/vim/${VIM_SUBDIR}/indent/ascendc.vim
 share/vim/${VIM_SUBDIR}/indent/astro.vim
 share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/awk.vim
 share/vim/${VIM_SUBDIR}/indent/bash.vim
 share/vim/${VIM_SUBDIR}/indent/basic.vim
+share/vim/${VIM_SUBDIR}/indent/bats.vim
 share/vim/${VIM_SUBDIR}/indent/beancount.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
 share/vim/${VIM_SUBDIR}/indent/bitbake.vim
@@ -982,6 +987,7 @@ share/vim/${VIM_SUBDIR}/indent/odin.vim
 share/vim/${VIM_SUBDIR}/indent/pascal.vim
 share/vim/${VIM_SUBDIR}/indent/perl.vim
 share/vim/${VIM_SUBDIR}/indent/php.vim
+share/vim/${VIM_SUBDIR}/indent/pkl.vim
 share/vim/${VIM_SUBDIR}/indent/postscr.vim
 share/vim/${VIM_SUBDIR}/indent/pov.vim
 share/vim/${VIM_SUBDIR}/indent/prolog.vim
@@ -1230,6 +1236,7 @@ share/vim/${VIM_SUBDIR}/syntax/aptconf.vim
 share/vim/${VIM_SUBDIR}/syntax/arch.vim
 share/vim/${VIM_SUBDIR}/syntax/arduino.vim
 share/vim/${VIM_SUBDIR}/syntax/art.vim
+share/vim/${VIM_SUBDIR}/syntax/ascendc.vim
 share/vim/${VIM_SUBDIR}/syntax/asciidoc.vim
 share/vim/${VIM_SUBDIR}/syntax/asm.vim
 share/vim/${VIM_SUBDIR}/syntax/asm68k.vim
@@ -1255,6 +1262,7 @@ share/vim/${VIM_SUBDIR}/syntax/b.vim
 share/vim/${VIM_SUBDIR}/syntax/baan.vim
 share/vim/${VIM_SUBDIR}/syntax/bash.vim
 share/vim/${VIM_SUBDIR}/syntax/basic.vim
+share/vim/${VIM_SUBDIR}/syntax/bats.vim
 share/vim/${VIM_SUBDIR}/syntax/bazelrc.vim
 share/vim/${VIM_SUBDIR}/syntax/bc.vim
 share/vim/${VIM_SUBDIR}/syntax/bdf.vim
@@ -1491,6 +1499,7 @@ share/vim/${VIM_SUBDIR}/syntax/hyprlang.vim
 share/vim/${VIM_SUBDIR}/syntax/i3config.vim
 share/vim/${VIM_SUBDIR}/syntax/ia64.vim
 share/vim/${VIM_SUBDIR}/syntax/ibasic.vim
+share/vim/${VIM_SUBDIR}/syntax/icalendar.vim
 share/vim/${VIM_SUBDIR}/syntax/icemenu.vim
 share/vim/${VIM_SUBDIR}/syntax/icon.vim
 share/vim/${VIM_SUBDIR}/syntax/idl.vim
