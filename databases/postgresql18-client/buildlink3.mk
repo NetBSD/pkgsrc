@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/04/17 09:38:55 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/11/11 11:52:21 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql18-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql18-client
 POSTGRESQL18_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql18-client+=	postgresql18-client>=18.0
-BUILDLINK_ABI_DEPENDS.postgresql18-client+=	postgresql18-client>=18.0
+BUILDLINK_ABI_DEPENDS.postgresql18-client+=	postgresql18-client>=18.6nb1
 BUILDLINK_PKGSRCDIR.postgresql18-client?=	../../databases/postgresql18-client
 
 # This variable contains the libraries need to link most clients.

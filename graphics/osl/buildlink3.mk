@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/11/08 15:03:18 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/11 11:53:53 wiz Exp $
 
 BUILDLINK_TREE+=	osl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	osl
 OSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.osl+=	osl>=1.15.7.0
+BUILDLINK_ABI_DEPENDS.osl?=	osl>=1.15.7.0nb1
 BUILDLINK_PKGSRCDIR.osl?=	../../graphics/osl
 
 BUILDLINK_FILES.osl+=		bin/oslc

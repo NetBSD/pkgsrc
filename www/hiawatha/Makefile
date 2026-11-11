@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/09/30 20:58:57 hauke Exp $
+# $NetBSD: Makefile,v 1.58 2026/11/11 11:56:15 wiz Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
+PKGREVISION=	1
 DISTNAME=	hiawatha-v${PKGVER}
 PKGVER=		12.4
 CATEGORIES=	www

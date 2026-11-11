@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2026/11/07 19:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/11 11:53:56 wiz Exp $
 
 DISTNAME=	qtquicktimeline-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtquicktimeline-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 quick controls for keyframe animation
 CATEGORIES=	graphics
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3

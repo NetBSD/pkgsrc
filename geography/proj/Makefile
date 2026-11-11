@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2026/05/23 14:01:31 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2026/11/11 11:53:37 wiz Exp $
 
 # Note that 9.8.0 caused problems with ETRF due to the EPSG database
 # adding an ensemble, and this release reverts the EPSG database
@@ -11,7 +11,7 @@ WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
 #PKGREVISION=	0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

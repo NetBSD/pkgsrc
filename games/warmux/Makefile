@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2026/09/29 06:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/11/11 11:53:32 wiz Exp $
 
 DISTNAME=	warmux-11.04.1
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	games
 MASTER_SITES=	http://ftp.nluug.nl/ibiblio/distributions/slitaz/sources/packages-cooking/w/ \
 	http://mirror.clarkson.edu/slitaz/sources/packages/w/ \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.139 2026/06/04 09:52:59 adam Exp $
+# $NetBSD: Makefile,v 1.140 2026/11/11 11:54:18 wiz Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 

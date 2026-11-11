@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2026/11/07 19:12:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/11 11:56:04 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kcalendarcore
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kcalendarcore
 KF6_KCALENDARCORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kcalendarcore+=	kf6-kcalendarcore>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kcalendarcore?=		kf6-kcalendarcore>=6.29.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kcalendarcore?=		kf6-kcalendarcore>=6.29.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kcalendarcore?=		../../time/kf6-kcalendarcore
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2026/11/07 19:12:01 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/11 11:55:44 wiz Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	pcmanfm-qt-2.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

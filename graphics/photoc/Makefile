@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/10/16 00:43:50 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/11 11:53:54 wiz Exp $
 
 DISTNAME=	photoc-0.7.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ahmetomerv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

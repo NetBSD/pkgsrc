@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2026/01/07 08:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/11 11:51:56 wiz Exp $
 
 DISTNAME=		gromacs-4.5.5
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 

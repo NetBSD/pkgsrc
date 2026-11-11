@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/05/14 16:40:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/11 11:53:08 wiz Exp $
 
 DISTNAME=	fuse-s3fs-1.97
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=s3fs-fuse/}
 GITHUB_PROJECT=	s3fs-fuse

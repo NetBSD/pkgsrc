@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2026/10/16 20:01:57 pin Exp $
+# $NetBSD: Makefile,v 1.62 2026/11/11 11:55:12 wiz Exp $
 
 DISTNAME=	slumber-5.4.0
 # Release 5.4.1 was accidentally skipped by upstream.
 # slumber >= 5.4.2. requires Rust >= 1.99.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

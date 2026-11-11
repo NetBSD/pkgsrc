@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2026/09/29 06:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/11 11:53:29 wiz Exp $
 
 DISTNAME=	quadrupleback-0.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

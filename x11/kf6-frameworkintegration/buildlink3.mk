@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2026/11/07 19:12:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2026/11/11 11:56:32 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-frameworkintegration
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-frameworkintegration
 KF6_FRAMEWORKINTEGRATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-frameworkintegration+=	kf6-frameworkintegration>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-frameworkintegration?=		kf6-frameworkintegration>=6.29.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-frameworkintegration?=		kf6-frameworkintegration>=6.29.0nb4
 BUILDLINK_PKGSRCDIR.kf6-frameworkintegration?=		../../x11/kf6-frameworkintegration
 
 .include "../../devel/kf6-kcolorscheme/buildlink3.mk"

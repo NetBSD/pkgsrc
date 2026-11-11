@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2026/10/11 16:02:19 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2026/11/11 11:54:12 wiz Exp $
 
 INSTALL_DIRS=	tools/extra
 # due to INSTALL_DIRS
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	clang-tools-extra-${LLVM_VERSION}

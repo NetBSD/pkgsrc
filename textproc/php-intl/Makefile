@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/01/07 08:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/11 11:55:58 wiz Exp $
 
 MODNAME=		intl
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for i18n
 LICENSE=		php

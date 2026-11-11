@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2026/09/26 07:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/11/11 11:55:37 wiz Exp $
 
 COLLECTD_PACKAGE=	riemann
 COLLECTD_PLUGINS=	write_riemann
 
 COMMENT=		Statistics collection daemon - riemann plugin
-PKGREVISION=		32
+PKGREVISION=		33
 
 .include "../../sysutils/riemann-client/buildlink3.mk"
 COLLECTD_LIB.riemann-client=${BUILDLINK_PREFIX.riemann-client}

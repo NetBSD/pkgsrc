@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/09/29 06:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/11 11:55:24 wiz Exp $
 
 DISTNAME=		cyrus-sasl-oauth2-oidc-1.0.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=stefb69/}
 GITHUB_PROJECT=		cyrus-sasl-oauth2-oidc

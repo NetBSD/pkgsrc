@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2026/11/07 19:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2026/11/11 11:51:58 wiz Exp $
 
 DISTNAME=		qcad-3.33.1.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar

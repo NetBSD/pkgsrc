@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/05/01 12:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/11 11:52:34 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
+PKGREVISION=	1
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
 
 WRKSRC=		${WRKDIR}/hdf5-${DISTNAME:S/-/_/}

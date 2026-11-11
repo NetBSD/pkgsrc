@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2026/09/29 06:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/11 11:53:11 wiz Exp $
 
 DISTNAME=	afternoonstalker-1.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

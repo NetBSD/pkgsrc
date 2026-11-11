@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2026/09/29 06:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/11/11 11:55:05 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 TOOL_DEPENDS+=	glib2-introspection>=0:../../devel/glib2-introspection

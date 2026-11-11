@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/09/29 06:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/11/11 11:53:16 wiz Exp $
 
 DISTNAME=	fallingtime-1.0.2
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cxong/}
 GITHUB_PROJECT=	FallingTime

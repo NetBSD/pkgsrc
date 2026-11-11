@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2026/09/29 06:04:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/11 11:52:00 wiz Exp $
 
 VERSION=	0.7.0
 DISTNAME=	lurch-${VERSION}-src
 PKGNAME=	lurch-purple-${VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gkdr/lurch/releases/download/v${VERSION}/}
 

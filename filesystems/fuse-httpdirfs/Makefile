@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/09/01 19:33:01 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/11 11:53:07 wiz Exp $
 
 DISTNAME=	httpdirfs-1.2.8
 PKGNAME=	${DISTNAME:S/^/fuse-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fangfufu/}
 GITHUB_PROJECT=	httpdirfs

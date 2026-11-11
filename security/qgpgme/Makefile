@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2026/11/07 19:11:58 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/11/11 11:55:32 wiz Exp $
 
 DISTNAME=	qgpgme-2.0.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/qgpgme/
 EXTRACT_SUFX=	.tar.xz

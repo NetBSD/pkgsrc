@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2026/05/14 16:40:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2026/11/11 11:52:15 wiz Exp $
 
 MODNAME=		pdo_dblib
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (FreeTDS/Sybase/MS SQL)
 

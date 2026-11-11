@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2026/05/14 16:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/11 11:56:52 wiz Exp $
 
 DISTNAME=	worker-5.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=workerfm/}
 EXTRACT_SUFX=	.tar.zst

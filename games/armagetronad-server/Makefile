@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2026/01/07 08:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/11 11:53:12 wiz Exp $
 #
 
-PKGREVISION= 12
+PKGREVISION= 13
 .include "../../games/armagetronad/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//:S/armagetronad/armagetronad-server/}

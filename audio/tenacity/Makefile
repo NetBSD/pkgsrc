@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/09/29 06:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/11 11:51:55 wiz Exp $
 
 DISTNAME=		tenacity-v1.3.5
 PKGNAME=		${DISTNAME:S/-v/-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_CODEBERG:=tenacityteam/}
 CODEBERG_PROJECT=	tenacity

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2026/04/17 09:38:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/11/11 11:52:20 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql17-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql17-client
 POSTGRESQL17_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql17-client+=	postgresql17-client>=17.0
-BUILDLINK_ABI_DEPENDS.postgresql17-client+=	postgresql17-client>=17.0
+BUILDLINK_ABI_DEPENDS.postgresql17-client+=	postgresql17-client>=17.11nb1
 BUILDLINK_PKGSRCDIR.postgresql17-client?=	../../databases/postgresql17-client
 
 # This variable contains the libraries need to link most clients.

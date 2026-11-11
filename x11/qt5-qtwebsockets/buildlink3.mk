@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2026/09/29 06:08:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2026/11/11 11:56:49 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebsockets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtwebsockets
 QT5_WEBSOCKETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtwebsockets+=	qt5-qtwebsockets>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qtwebsockets+=	qt5-qtwebsockets>=5.15.19nb3
+BUILDLINK_ABI_DEPENDS.qt5-qtwebsockets+=	qt5-qtwebsockets>=5.15.19nb4
 BUILDLINK_PKGSRCDIR.qt5-qtwebsockets?=		../../x11/qt5-qtwebsockets
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

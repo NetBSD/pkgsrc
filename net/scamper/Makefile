@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2026/09/29 06:07:08 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/11/11 11:55:11 wiz Exp $
 #
 
 DISTNAME=	scamper-cvs-20260331
 PKGNAME=	${DISTNAME:S/-cvs//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://www.caida.org/catalog/software/scamper/code/
 

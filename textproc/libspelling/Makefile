@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2026/11/10 08:33:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/11 11:55:56 wiz Exp $
 
 DISTNAME=	libspelling-0.4.11
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libspelling/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

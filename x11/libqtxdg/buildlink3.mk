@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2026/11/07 19:12:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2026/11/11 11:56:36 wiz Exp $
 
 BUILDLINK_TREE+=	libqtxdg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libqtxdg
 LIBQTXDG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libqtxdg+=	libqtxdg>=4.1.0
-BUILDLINK_ABI_DEPENDS.libqtxdg?=	libqtxdg>=4.4.0nb5
+BUILDLINK_ABI_DEPENDS.libqtxdg?=	libqtxdg>=4.4.0nb6
 BUILDLINK_PKGSRCDIR.libqtxdg?=		../../x11/libqtxdg
 
 .include "../../devel/glib2/buildlink3.mk"

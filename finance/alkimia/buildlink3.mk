@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/11/07 19:11:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/11 11:53:09 wiz Exp $
 
 BUILDLINK_TREE+=	alkimia
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	alkimia
 ALKIMIA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.alkimia+=	alkimia>=8.2.1
-BUILDLINK_ABI_DEPENDS.alkimia?=	alkimia>=8.2.1nb8
+BUILDLINK_ABI_DEPENDS.alkimia?=	alkimia>=8.2.1nb9
 BUILDLINK_PKGSRCDIR.alkimia?=	../../finance/alkimia
 
 .include "../../devel/gmp/buildlink3.mk"

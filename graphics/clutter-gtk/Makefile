@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2026/09/29 06:05:34 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/11/11 11:53:41 wiz Exp $
 
 DISTNAME=	clutter-gtk-1.8.4
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter-gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2026/04/17 09:38:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/11/11 11:52:19 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql16-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql16-client
 POSTGRESQL16_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql16-client+=	postgresql16-client>=16.0
-BUILDLINK_ABI_DEPENDS.postgresql16-client+=	postgresql16-client>=16.0nb1
+BUILDLINK_ABI_DEPENDS.postgresql16-client+=	postgresql16-client>=16.15nb1
 BUILDLINK_PKGSRCDIR.postgresql16-client?=	../../databases/postgresql16-client
 
 # This variable contains the libraries need to link most clients.

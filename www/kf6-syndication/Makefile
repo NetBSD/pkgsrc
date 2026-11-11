@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2026/11/07 19:12:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/11 11:56:16 wiz Exp $
 
 DISTNAME=	syndication-${KF6VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks

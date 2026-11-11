@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/11/07 19:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/11 11:53:09 wiz Exp $
 
 DISTNAME=	kmymoney-5.2.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_KDE:=kmymoney/${PKGVERSION_NOREV}/}
 

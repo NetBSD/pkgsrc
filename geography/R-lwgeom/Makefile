@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2026/09/15 10:06:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/11/11 11:53:34 wiz Exp $
 
 R_PKGNAME=	lwgeom
 R_PKGVER=	0.2-14
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2026/01/07 08:46:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/11/11 11:52:35 wiz Exp $
 
 BUILDLINK_TREE+=	hs-hiedb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hiedb
 HS_HIEDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hiedb+=	hs-hiedb>=0.6.0
-BUILDLINK_ABI_DEPENDS.hs-hiedb+=	hs-hiedb>=0.6.0.1nb5
+BUILDLINK_ABI_DEPENDS.hs-hiedb+=	hs-hiedb>=0.6.0.1nb6
 BUILDLINK_PKGSRCDIR.hs-hiedb?=		../../devel/hs-hiedb
 
 .include "../../math/hs-algebraic-graphs/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/11/07 19:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/11 11:55:08 wiz Exp $
 #
 
 # Do NOT UPGRADE to Nextcloud 4 without making sure it is functional
@@ -6,7 +6,7 @@
 # Since 3.17.x is compatible, there is no urgent need
 
 DISTNAME=	nextcloud-client-3.17.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop

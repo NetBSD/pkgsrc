@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2026/10/28 05:09:43 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/11 11:52:51 wiz Exp $
 
 DISTNAME=	Kivy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 

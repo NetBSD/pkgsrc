@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2026/05/14 16:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/11 11:56:15 wiz Exp $
 
 DISTNAME=	curl-1.3.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

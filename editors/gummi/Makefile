@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2026/09/29 06:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2026/11/11 11:52:56 wiz Exp $
 
 DISTNAME=		gummi-0.8.3
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=alexandervdm/}
 

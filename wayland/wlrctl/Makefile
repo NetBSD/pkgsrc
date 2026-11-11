@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/04/15 08:14:48 kikadf Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/11 11:56:07 wiz Exp $
 
 DISTNAME=	wlrctl-0.2.2
+PKGREVISION=	1
 CATEGORIES=	wayland
 MASTER_SITES=	https://git.sr.ht/~brocellous/wlrctl/archive/
 DISTFILES=	v${PKGVERSION_NOREV}${EXTRACT_SUFX}

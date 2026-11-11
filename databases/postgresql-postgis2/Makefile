@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2026/11/01 15:13:59 gdt Exp $
+# $NetBSD: Makefile,v 1.209 2026/11/11 11:52:16 wiz Exp $
 
 # Note that the PKGPATH remains "postgresql-postgis2", added during
 # postgis 1->2 migration, due to inertia and the pain of renaming.  So
@@ -13,6 +13,7 @@ MINOR=		0
 VERSION=	${MAJOR}.${MINOR}
 DISTNAME=	postgis-${VERSION}
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=	1
 #PKGREVISION=
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/

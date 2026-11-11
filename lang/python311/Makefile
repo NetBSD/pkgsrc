@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2026/03/25 22:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/11 11:54:16 wiz Exp $
 
+PKGREVISION= 1
 .include "dist.mk"
 
 PKGNAME=	python311-${PY_DISTVERSION}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/08/02 20:08:01 js Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/11 11:52:14 wiz Exp $
 
 PKGNAME=	objsqlite3-1.1.3
+PKGREVISION=	1
 DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
 MASTER_SITES=	https://git.nil.im/ObjFW/ObjSQLite3/archive/

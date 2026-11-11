@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/01/07 08:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/11 11:53:11 wiz Exp $
 
-PKGREVISION= 15
+PKGREVISION= 16
 .include "Makefile.common"
 
 COMMENT=	Tron clone in 3D with advanced gameplay and multiplayer

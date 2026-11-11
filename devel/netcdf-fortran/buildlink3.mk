@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2026/05/14 16:40:46 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2026/11/11 11:52:48 wiz Exp $
 
 BUILDLINK_TREE+=	netcdf-fortran
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	netcdf-fortran
 NETCDF_FORTRAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.netcdf-fortran+=	netcdf-fortran>=4.2
-BUILDLINK_ABI_DEPENDS.netcdf-fortran?=	netcdf-fortran>=4.2nb37
+BUILDLINK_ABI_DEPENDS.netcdf-fortran?=	netcdf-fortran>=4.2nb38
 BUILDLINK_PKGSRCDIR.netcdf-fortran?=	../../devel/netcdf-fortran
 
 .include "../../devel/netcdf/buildlink3.mk"

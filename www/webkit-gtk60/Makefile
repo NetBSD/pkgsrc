@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/10/03 11:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/11 11:56:24 wiz Exp $
 
 PLIST_SRC=	PLIST
 
+PKGREVISION= 1
 .include "../../www/webkit-gtk41/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk60/}

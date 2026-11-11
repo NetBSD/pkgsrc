@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2026/09/29 06:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/11 11:53:15 wiz Exp $
 
 DISTNAME=		dunelegacy-0.96.4-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dunelegacy/}
 EXTRACT_SUFX=		.tar.bz2

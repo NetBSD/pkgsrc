@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2026/09/29 06:04:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2026/11/11 11:52:41 wiz Exp $
 
 BUILDLINK_TREE+=	kidletime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kidletime
 KIDLETIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kidletime+=	kidletime>=5.18.0
-BUILDLINK_ABI_DEPENDS.kidletime?=	kidletime>=5.116.0nb10
+BUILDLINK_ABI_DEPENDS.kidletime?=	kidletime>=5.116.0nb11
 BUILDLINK_PKGSRCDIR.kidletime?=		../../devel/kidletime
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"

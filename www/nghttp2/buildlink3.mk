@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2026/01/07 08:49:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2026/11/11 11:56:19 wiz Exp $
 
 BUILDLINK_TREE+=	nghttp2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nghttp2
 NGHTTP2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.0.0
-BUILDLINK_ABI_DEPENDS.nghttp2+=	nghttp2>=1.68.0nb1
+BUILDLINK_ABI_DEPENDS.nghttp2+=	nghttp2>=1.71.0nb1
 BUILDLINK_PKGSRCDIR.nghttp2?=	../../www/nghttp2
 
 .include "../../textproc/libxml2/buildlink3.mk"

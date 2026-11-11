@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/02/09 07:05:26 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/11 11:55:33 wiz Exp $
 
 DISTNAME=	softhsm-1.3.7
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	security
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 

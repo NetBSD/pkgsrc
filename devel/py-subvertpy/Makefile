@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2026/07/16 12:49:23 adam Exp $
+# $NetBSD: Makefile,v 1.71 2026/11/11 11:52:51 wiz Exp $
 
 DISTNAME=	subvertpy-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subvertpy/}
 

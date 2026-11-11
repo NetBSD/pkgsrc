@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2026/10/29 08:42:23 plunky Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/11 11:55:34 wiz Exp $
 
 DISTNAME=	uacme-1.8.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ndilieto/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

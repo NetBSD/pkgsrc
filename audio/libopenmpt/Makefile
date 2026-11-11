@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2026/09/29 06:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/11/11 11:51:50 wiz Exp $
 
 DISTNAME=	libopenmpt-0.7.2+release.autotools
 PKGNAME=	${DISTNAME:C/\+.*//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	https://lib.openmpt.org/files/libopenmpt/src/
 

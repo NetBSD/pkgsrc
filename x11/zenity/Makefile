@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2026/09/29 06:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2026/11/11 11:56:56 wiz Exp $
 
 DISTNAME=	zenity-4.0.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2026/09/29 06:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2026/11/11 11:55:39 wiz Exp $
 
-PKGREVISION= 9
+PKGREVISION= 10
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm

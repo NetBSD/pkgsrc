@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2026/09/29 06:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/11 11:53:34 wiz Exp $
 
 R_PKGNAME=	terra
 R_PKGVER=	1.9-34
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

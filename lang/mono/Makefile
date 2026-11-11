@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.219 2026/02/03 15:17:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.220 2026/11/11 11:54:13 wiz Exp $
 
 DISTNAME=	mono-6.14.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.winehq.org/mono/sources/mono/
 EXTRACT_SUFX=	.tar.xz

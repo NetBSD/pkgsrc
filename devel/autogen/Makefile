@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2026/09/12 12:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2026/11/11 11:52:28 wiz Exp $
 
 DISTNAME=	autogen-5.18.16
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=autogen/rel${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz

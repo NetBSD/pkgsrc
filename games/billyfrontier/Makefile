@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2026/10/02 05:35:50 charlotte Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/11 11:53:13 wiz Exp $
 
 DISTNAME=	billyfrontier-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

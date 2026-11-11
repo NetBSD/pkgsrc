@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2026/03/30 16:39:08 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/11 11:52:10 wiz Exp $
 
 DISTNAME=	v0.1.3
 DIST_SUBDIR=	${PKGNAME_NOREV}
 PKGNAME=	guile-sqlite3-${DISTNAME:S/v//}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	databases
 # \todo Update to codeberg
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2026/09/29 06:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2026/11/11 11:56:49 wiz Exp $
 
 DISTNAME=	qtx11extras-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtx11extras-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 
 BUILD_TARGET=		sub-src
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}

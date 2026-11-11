@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2026/05/14 16:40:37 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2026/11/11 11:52:24 wiz Exp $
 
 BUILDLINK_TREE+=	sqlrelay
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sqlrelay
 SQLRELAY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sqlrelay+=	sqlrelay>=1.0.0
-BUILDLINK_ABI_DEPENDS.sqlrelay+=	sqlrelay>=1.9.3nb15
+BUILDLINK_ABI_DEPENDS.sqlrelay+=	sqlrelay>=1.9.3nb16
 BUILDLINK_PKGSRCDIR.sqlrelay?=		../../databases/sqlrelay
 
 .include "../../devel/rudiments/buildlink3.mk"

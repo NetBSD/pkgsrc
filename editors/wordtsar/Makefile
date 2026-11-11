@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/11/09 17:35:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/11 11:52:59 wiz Exp $
 
 DISTNAME=	wordtsar-0.5.1850-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wordtsar/}
 EXTRACT_SUFX=	.zip

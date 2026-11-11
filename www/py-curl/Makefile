@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2026/10/27 06:20:25 adam Exp $
+# $NetBSD: Makefile,v 1.110 2026/11/11 11:56:21 wiz Exp $
 
 DISTNAME=	pycurl-7.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycurl/}
 

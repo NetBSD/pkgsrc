@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2026/07/03 20:12:56 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/11 11:54:18 wiz Exp $
 
 DISTNAME=	souffle-2.5
 GITHUB_TAG=	${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=souffle-lang/}
 

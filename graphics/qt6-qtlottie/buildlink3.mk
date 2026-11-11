@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2026/11/07 19:11:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2026/11/11 11:53:56 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtlottie
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtlottie
 QT6_QTLOTTIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtlottie+=	qt6-qtlottie>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtlottie+=	qt6-qtlottie>=6.11.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtlottie+=	qt6-qtlottie>=6.11.3nb2
 BUILDLINK_PKGSRCDIR.qt6-qtlottie?=	../../graphics/qt6-qtlottie
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

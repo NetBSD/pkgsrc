@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2026/11/07 19:11:34 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/11 11:53:42 wiz Exp $
 
 DISTNAME=	digikam-gmic-qt-4.0.3.20261019
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cgilles/}
 GITHUB_TAG=	34967a30df4bed563a534cb0ffcb52bdd1aa121e

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2026/10/11 16:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/11/11 11:54:18 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
 PKGNAME=	wasi-compiler-rt-${LLVM_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

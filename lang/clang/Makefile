@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2026/10/13 13:08:38 kikadf Exp $
+# $NetBSD: Makefile,v 1.101 2026/11/11 11:54:12 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 PKGNAME=	clang-${LLVM_VERSION}

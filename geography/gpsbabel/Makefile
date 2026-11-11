@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/09/29 06:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/11/11 11:53:35 wiz Exp $
 #
 
 GITHUB_PROJECT=	gpsbabel
@@ -7,7 +7,7 @@ GH_VERSION=	1_9_0
 GITHUB_TAG=	refs/tags/gpsbabel_${GH_VERSION}
 DISTNAME=	gpsbabel_${GH_VERSION}
 PKGNAME=	gpsbabel-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GPSBabel/}
 

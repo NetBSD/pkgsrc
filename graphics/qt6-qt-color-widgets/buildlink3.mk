@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2026/11/07 19:11:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/11/11 11:53:55 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qt-color-widgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qt-color-widgets
 QT6_QT_COLOR_WIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qt-color-widgets+=	qt6-qt-color-widgets>=3.0.0
-BUILDLINK_ABI_DEPENDS.qt6-qt-color-widgets?=	qt6-qt-color-widgets>=3.0.0nb5
+BUILDLINK_ABI_DEPENDS.qt6-qt-color-widgets?=	qt6-qt-color-widgets>=3.0.0nb6
 BUILDLINK_PKGSRCDIR.qt6-qt-color-widgets?=	../../graphics/qt6-qt-color-widgets
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

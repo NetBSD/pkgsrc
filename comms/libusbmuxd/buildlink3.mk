@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/05/01 19:58:51 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/11 11:52:06 wiz Exp $
 
 BUILDLINK_TREE+=	libusbmuxd
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libusbmuxd
 LIBUSBMUXD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libusbmuxd+=	libusbmuxd>=2.1.1
+BUILDLINK_ABI_DEPENDS.libusbmuxd?=	libusbmuxd>=2.1.1nb1
 BUILDLINK_PKGSRCDIR.libusbmuxd?=	../../comms/libusbmuxd
 
 .include "../../textproc/libplist/buildlink3.mk"

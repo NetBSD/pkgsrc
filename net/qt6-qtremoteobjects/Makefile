@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2026/11/07 19:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/11 11:55:10 wiz Exp $
 
 DISTNAME=	qtremoteobjects-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtremoteobjects-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 module for easier IPC
 CATEGORIES=	net
 LICENSE=	gnu-lgpl-v3 OR gnu-lgpl-v2 OR gnu-gpl-v3

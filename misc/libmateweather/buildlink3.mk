@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2026/09/29 06:06:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2026/11/11 11:54:40 wiz Exp $
 #
 
 BUILDLINK_TREE+=	libmateweather
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libmateweather
 LIBMATEWEATHER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmateweather+=	libmateweather>=1.8.0
-BUILDLINK_ABI_DEPENDS.libmateweather+=	libmateweather>=1.26.3nb20
+BUILDLINK_ABI_DEPENDS.libmateweather+=	libmateweather>=1.26.3nb21
 BUILDLINK_PKGSRCDIR.libmateweather?=	../../misc/libmateweather
 
 .include "../../textproc/libxml2/buildlink3.mk"

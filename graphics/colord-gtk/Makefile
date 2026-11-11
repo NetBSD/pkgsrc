@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2026/09/29 06:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2026/11/11 11:53:41 wiz Exp $
 
 DISTNAME=	colord-gtk-0.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

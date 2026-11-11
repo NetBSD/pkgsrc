@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2026/11/07 19:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/11/11 11:53:58 wiz Exp $
 
 DISTNAME=	svgpart-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

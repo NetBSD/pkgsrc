@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2026/09/29 06:08:00 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/11/11 11:56:09 wiz Exp $
 
 DISTNAME=	mutter-40.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

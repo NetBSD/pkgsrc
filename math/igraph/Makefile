@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2026/01/07 08:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/11 11:54:29 wiz Exp $
 
 DISTNAME=	igraph-${V}
 V=		1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igraph/}
 

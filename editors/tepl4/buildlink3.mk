@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2026/09/29 06:04:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2026/11/11 11:52:58 wiz Exp $
 
 BUILDLINK_TREE+=	tepl4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tepl4
 TEPL4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tepl4+=	tepl4>=4.4.0
-BUILDLINK_ABI_DEPENDS.tepl4?=	tepl4>=4.4.0nb33
+BUILDLINK_ABI_DEPENDS.tepl4?=	tepl4>=4.4.0nb34
 BUILDLINK_PKGSRCDIR.tepl4?=	../../editors/tepl4
 
 .include "../../devel/amtk/buildlink3.mk"

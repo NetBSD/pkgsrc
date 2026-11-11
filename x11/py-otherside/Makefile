@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2026/09/29 06:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/11 11:56:43 wiz Exp $
 
 DISTNAME=	pyotherside-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 GITHUB_PROJECT=	pyotherside

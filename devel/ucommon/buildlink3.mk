@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2026/05/14 16:40:48 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2026/11/11 11:52:53 wiz Exp $
 
 BUILDLINK_TREE+=	ucommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ucommon
 UCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ucommon+=	ucommon>=6.0.0
-BUILDLINK_ABI_DEPENDS.ucommon+=	ucommon>=7.0.0nb21
+BUILDLINK_ABI_DEPENDS.ucommon+=	ucommon>=7.0.0nb22
 BUILDLINK_PKGSRCDIR.ucommon?=	../../devel/ucommon
 
 pkgbase := ucommon

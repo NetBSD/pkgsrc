@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2026/09/29 06:04:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2026/11/11 11:52:30 wiz Exp $
 
 BUILDLINK_TREE+=	compizconfig-backend-gconf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	compizconfig-backend-gconf
 COMPIZCONFIG_BACKEND_GCONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compizconfig-backend-gconf+=	compizconfig-backend-gconf>=0.8.8
-BUILDLINK_ABI_DEPENDS.compizconfig-backend-gconf?=	compizconfig-backend-gconf>=0.8.8nb81
+BUILDLINK_ABI_DEPENDS.compizconfig-backend-gconf?=	compizconfig-backend-gconf>=0.8.8nb82
 BUILDLINK_PKGSRCDIR.compizconfig-backend-gconf?=	../../devel/compizconfig-backend-gconf
 
 .include "../../x11/startup-notification/buildlink3.mk"

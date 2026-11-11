@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/10/11 16:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/11 11:54:40 wiz Exp $
 
 DISTNAME=	libimobiledevice-glue-1.3.3
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

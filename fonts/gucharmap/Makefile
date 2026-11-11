@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2026/09/29 06:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2026/11/11 11:53:10 wiz Exp $
 
 DISTNAME=	gucharmap-15.1.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	fonts gnome
 MASTER_SITES=	https://gitlab.gnome.org/GNOME/gucharmap/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

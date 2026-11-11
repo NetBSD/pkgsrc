@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2026/11/07 19:11:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2026/11/11 11:55:27 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kwallet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kwallet
 KF6_KWALLET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kwallet+=	kf6-kwallet>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kwallet?=	kf6-kwallet>=6.29.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kwallet?=	kf6-kwallet>=6.29.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kwallet?=	../../security/kf6-kwallet
 
 BUILDLINK_FILES.kf6-kwallet+=	share/dbus-1/interfaces/kf6_org.kde.KWallet.xml

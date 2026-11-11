@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2026/11/02 16:03:40 pin Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/11 11:55:31 wiz Exp $
 
 DISTNAME=		please-0.6.0
 PKGNAME=		pleaser-0.6.0
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITLAB:=edneville/}
 GITLAB_PROJECT=		please

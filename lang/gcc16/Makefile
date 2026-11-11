@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2026/09/26 12:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/11 11:54:12 wiz Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC16_DIST_VERSION}
+PKGREVISION=	1
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc16-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!

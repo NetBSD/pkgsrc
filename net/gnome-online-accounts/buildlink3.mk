@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2026/09/29 06:06:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2026/11/11 11:54:59 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-online-accounts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-online-accounts
 GNOME_ONLINE_ACCOUNTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-online-accounts+=	gnome-online-accounts>=3.58
-BUILDLINK_ABI_DEPENDS.gnome-online-accounts?=	gnome-online-accounts>=3.58.1nb4
+BUILDLINK_ABI_DEPENDS.gnome-online-accounts?=	gnome-online-accounts>=3.58.1nb5
 BUILDLINK_PKGSRCDIR.gnome-online-accounts?=	../../net/gnome-online-accounts
 
 .include "../../net/libsoup3/buildlink3.mk"

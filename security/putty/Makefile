@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2026/09/29 06:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2026/11/11 11:55:32 wiz Exp $
 
 DISTNAME=	putty-0.85
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PKGVERSION_NOREV}/
 

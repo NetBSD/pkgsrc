@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2026/09/29 06:07:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/11 11:56:05 wiz Exp $
 
 DISTNAME=	libical-4.0.5
 PKGNAME=	${DISTNAME:S/libical/libical4/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libical/}
 GITHUB_PROJECT=	libical

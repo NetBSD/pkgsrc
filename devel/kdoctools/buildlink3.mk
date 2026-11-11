@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2026/09/29 06:04:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2026/11/11 11:52:38 wiz Exp $
 
 BUILDLINK_TREE+=	kdoctools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdoctools
 KDOCTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdoctools+=	kdoctools>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdoctools?=	kdoctools>=5.116.0nb10
+BUILDLINK_ABI_DEPENDS.kdoctools?=	kdoctools>=5.116.0nb11
 BUILDLINK_PKGSRCDIR.kdoctools?=		../../devel/kdoctools
 
 BUILDLINK_FILES.kdoctools+=		share/kf5/kdoctools/customization/*.xsl

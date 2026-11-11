@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2026/11/06 15:24:33 nia Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/11 11:56:12 wiz Exp $
 # This package is mostly derived from www/palemoon since they use the
 # same backend.  However, several key things are different.
 
 PKGNAME=	basilisk-2026.11.01
+PKGREVISION=	1
 CATEGORIES=	www
 
 DIST_SUBDIR=	basilisk-${PKGVERSION_NOREV}

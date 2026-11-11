@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/06/01 13:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/11 11:56:37 wiz Exp $
 
+PKGREVISION= 1
 .include "../../x11/libxkbcommon/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/common/common-docs/:S/^/lib/}

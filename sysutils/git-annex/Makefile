@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2026/11/08 18:10:53 pho Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/11 11:55:39 wiz Exp $
 
 DISTNAME=	git-annex-10.20261026
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

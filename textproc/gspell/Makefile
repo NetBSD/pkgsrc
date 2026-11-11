@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2026/09/30 09:10:50 adam Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/11 11:55:53 wiz Exp $
 
 DISTNAME=	gspell-1.14.5
+PKGREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gspell/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

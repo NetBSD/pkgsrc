@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/01/07 08:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/11 11:52:12 wiz Exp $
 
-PKGREVISION= 13
+PKGREVISION= 14
 .include "../../databases/lua-dbi/Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1:S/dbi/dbi-sqlite3/1}

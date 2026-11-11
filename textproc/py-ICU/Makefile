@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2026/03/26 05:42:32 adam Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/11 11:55:59 wiz Exp $
 
 DISTNAME=	pyicu-2.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyicu/ICU/}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
 

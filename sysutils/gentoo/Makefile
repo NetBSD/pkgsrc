@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2026/09/29 06:07:33 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/11/11 11:55:38 wiz Exp $
 
 DISTNAME=	gentoo-0.20.7
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gentoo/}
 

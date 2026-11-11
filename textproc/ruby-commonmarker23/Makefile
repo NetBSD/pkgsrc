@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/11/01 09:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/11 11:56:00 wiz Exp $
 
 DISTNAME=	commonmarker-2.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/commonmarker/&23/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

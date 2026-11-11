@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2026/09/29 06:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/11/11 11:53:46 wiz Exp $
 
 DISTNAME=	v4.5.0
 DIST_SUBDIR=	imv
 PKGNAME=	imv-${DISTNAME:S/^v//g}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	https://git.sr.ht/~exec64/imv/archive/
 

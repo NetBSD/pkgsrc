@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2026/09/29 06:05:06 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2026/11/11 11:53:13 wiz Exp $
 
-PKGREVISION= 17
+PKGREVISION= 18
 .include "../../games/cataclysm-dda/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-dda/-dda-sdl/}

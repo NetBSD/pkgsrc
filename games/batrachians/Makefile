@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2026/09/29 06:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/11 11:53:12 wiz Exp $
 
 DISTNAME=	batrachians-0.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://gvlsywt.cluster051.hosting.ovh.net/dev/
 

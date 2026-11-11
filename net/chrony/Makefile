@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2026/09/10 21:25:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2026/11/11 11:54:56 wiz Exp $
 
 DISTNAME=	chrony-4.9
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://chrony-project.org/releases/
 

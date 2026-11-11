@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/05/14 16:42:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/11 11:56:15 wiz Exp $
 
 BUILDLINK_TREE+=	hs-curl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-curl
 HS_CURL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-curl+=	hs-curl>=1.3.8
-BUILDLINK_ABI_DEPENDS.hs-curl+=	hs-curl>=1.3.8nb7
+BUILDLINK_ABI_DEPENDS.hs-curl+=	hs-curl>=1.3.8nb8
 BUILDLINK_PKGSRCDIR.hs-curl?=	../../www/hs-curl
 
 .include "../../www/curl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/11/07 19:11:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/11 11:54:37 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kuserfeedback
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kuserfeedback
 KF6_KUSERFEEDBACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kuserfeedback+=	kf6-kuserfeedback>=6.18.0
-BUILDLINK_ABI_DEPENDS.kf6-kuserfeedback?=		kf6-kuserfeedback>=6.29.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kuserfeedback?=		kf6-kuserfeedback>=6.29.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kuserfeedback?=		../../misc/kf6-kuserfeedback
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

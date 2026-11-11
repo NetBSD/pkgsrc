@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/10/16 20:34:16 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2026/11/11 11:54:19 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -7,7 +7,7 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/libcxx
 EXTRACT_ELEMENTS+=	${DISTNAME}/libcxxabi
 
 PKGNAME=	wasi-libcxx-${LLVM_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

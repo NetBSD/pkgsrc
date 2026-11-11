@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2026/05/02 05:49:35 vins Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/11 11:52:06 wiz Exp $
 
 DISTNAME=	libusbmuxd-2.1.1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

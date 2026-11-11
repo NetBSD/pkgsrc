@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2026/09/29 06:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/11/11 11:52:28 wiz Exp $
 
 DISTNAME=	appdata_tools-0.1.7
-PKGREVISION=	47
+PKGREVISION=	48
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_PROJECT=	appdata-tools

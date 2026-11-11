@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2026/11/07 19:12:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/11 11:56:44 wiz Exp $
 
-PKGREVISION= 16
+PKGREVISION= 17
 PYTHON_VERSIONS_INCOMPATIBLE+=	315 # py-qt6
 
 .include "../../x11/qt6-qscintilla/Makefile.common"

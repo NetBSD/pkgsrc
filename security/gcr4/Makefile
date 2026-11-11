@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2026/10/23 07:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/11 11:55:25 wiz Exp $
 
 DISTNAME=	gcr-4.4.1
 PKGNAME=	${DISTNAME:S/gcr/gcr4/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/4.4/}
 EXTRACT_SUFX=	.tar.xz

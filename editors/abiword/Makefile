@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.254 2026/09/29 06:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.255 2026/11/11 11:52:54 wiz Exp $
 
-PKGREVISION= 	5
+PKGREVISION= 	6
 .include 	"Makefile.common"
 
 PKGNAME=	${DISTNAME:tl:S/-release//1}

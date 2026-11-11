@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2026/01/07 08:46:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2026/11/11 11:52:12 wiz Exp $
 
 BUILDLINK_TREE+=	libzdb
 
@@ -8,7 +8,7 @@ LIBZDB_BUILDLINK3_MK:=
 USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_API_DEPENDS.libzdb+=	libzdb>=2.6
-BUILDLINK_ABI_DEPENDS.libzdb+=	libzdb>=3.5.0nb1
+BUILDLINK_ABI_DEPENDS.libzdb+=	libzdb>=3.5.0nb2
 BUILDLINK_PKGSRCDIR.libzdb?=	../../databases/libzdb
 
 pkgbase := libzdb

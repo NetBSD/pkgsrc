@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2026/09/29 06:08:36 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2026/11/11 11:56:47 wiz Exp $
 
 DISTNAME=	qtscript-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtscript-${QTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Qt5 module for script
 
 BUILD_TARGET=		sub-src

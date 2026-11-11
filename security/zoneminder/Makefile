@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2026/10/11 00:04:42 gdt Exp $
+# $NetBSD: Makefile,v 1.115 2026/11/11 11:55:34 wiz Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -8,6 +8,7 @@ VERSION=	1.38.6
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
+PKGREVISION=	1
 #PKGREVISION=
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${GITHUB_TAG}

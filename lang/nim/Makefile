@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/11/07 22:43:07 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/11 11:54:14 wiz Exp $
 
 # Nim is quite a weird language to package, meaning that the official packaging
 # guideline recommends using a tarball that is created via a CI and also
@@ -24,6 +24,7 @@
 # - `koch.nim` in the source tree
 
 DISTNAME=	nim-2.4.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz

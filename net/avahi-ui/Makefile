@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/09/29 06:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/11 11:54:55 wiz Exp $
 
-PKGREVISION= 20
+PKGREVISION= 21
 .include "../../net/avahi/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/avahi-/avahi-ui-/g}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2026/06/04 16:19:10 rhialto Exp $
+# $NetBSD: Makefile,v 1.41 2026/11/11 11:54:12 wiz Exp $
 
 DISTNAME=	algol68g-3.12.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://algol68genie.nl/
 

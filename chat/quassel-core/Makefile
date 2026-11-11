@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2026/09/29 06:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/11 11:52:02 wiz Exp $
 
 .include "../../chat/quassel/Makefile.common"
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 PKGNAME=	${DISTNAME:S/quassel/quassel-core/}
 COMMENT=	Modern, cross-platform, distributed IRC client - core only

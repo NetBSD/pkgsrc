@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2026/05/14 16:41:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/11 11:55:07 wiz Exp $
 
 DISTNAME=	nanotodon-0.5.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taka-tuos/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

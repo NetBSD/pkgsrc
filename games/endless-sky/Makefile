@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2026/09/29 06:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/11 11:53:16 wiz Exp $
 
 DISTNAME=	endless-sky-0.9.14
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=endless-sky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

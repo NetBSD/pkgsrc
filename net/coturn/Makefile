@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2026/09/08 01:05:42 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/11 11:54:56 wiz Exp $
 
 DISTNAME=	coturn-4.18.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 

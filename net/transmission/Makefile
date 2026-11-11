@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/08/11 14:23:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.57 2026/11/11 11:55:12 wiz Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
 

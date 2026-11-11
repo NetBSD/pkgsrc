@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2026/11/07 19:12:12 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/11/11 11:56:50 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
 DISTNAME=	qtermwidget-2.4.0

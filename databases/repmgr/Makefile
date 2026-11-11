@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2026/11/10 08:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/11 11:52:23 wiz Exp $
 
 DISTNAME=	repmgr-5.5.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EnterpriseDB/}
 GITHUB_PROJECT=	repmgr

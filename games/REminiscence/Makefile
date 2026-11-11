@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2026/09/29 06:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/11/11 11:53:11 wiz Exp $
 DISTNAME=		REminiscence-0.5.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 MASTER_SITES=		http://cyxdown.free.fr/reminiscence/
 DIST_SUBDIR=		${PKGNAME_NOREV}

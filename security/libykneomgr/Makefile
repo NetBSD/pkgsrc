@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2026/05/14 16:42:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/11 11:55:29 wiz Exp $
 
 DISTNAME=	libykneomgr-0.1.8
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/libykneomgr/Releases/
 

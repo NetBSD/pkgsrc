@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2026/09/29 06:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/11 11:52:55 wiz Exp $
 #
 
 DISTNAME=	codeblocks-20.03
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codeblocks/}
 EXTRACT_SUFX=	.tar.xz
