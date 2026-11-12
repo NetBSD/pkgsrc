@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/07/23 15:15:18 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2026/11/12 15:12:35 ktnb Exp $
 
-BLAKE2s (neocities-0.2.1.gem) = 37f135ca8083940e5b8c46957779d61d47d4a28cffd603ffdc1ee7fedaa14d52
-SHA512 (neocities-0.2.1.gem) = c4d2fc6352c3c0c3fc0afc802148acda9400d50d49f900207802c6b7a9f1d0742929a07cbdfd21a03379f0e04ae30039d7f63f3f55148ed13f517980ecd3856f
-Size (neocities-0.2.1.gem) = 15872 bytes
-SHA1 (patch-lib_neocities_client.rb) = 8472e83777703cb66067a54e631039ac0e34864a
+BLAKE2s (neocities-0.3.0.gem) = a58392644eab7be1e8b619f6cf02274bfeb5e041ab7fc7270904c1d3a93f040b
+SHA512 (neocities-0.3.0.gem) = dc908a4c82999cc89ad0a7fde3011c8fab4348bd313ea152a73e685d1f95dd498a88f225f9e8f9e282491b6c99504efb395cd66fa9ced69bbe45d6d21ef3807d
+Size (neocities-0.3.0.gem) = 16896 bytes
+SHA1 (patch-lib_neocities_client.rb) = a0d17d21d037e4f8aa1367a1c352097dc5c3c998
