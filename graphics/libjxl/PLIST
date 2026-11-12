@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/07/02 03:13:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/12 09:06:30 adam Exp $
 bin/cjxl
 bin/djxl
 bin/jxlinfo
@@ -27,14 +27,14 @@ include/jxl/types.h
 include/jxl/version.h
 lib/libjxl.so
 lib/libjxl.so.${PKGVERSION}
-lib/libjxl.so.0.12
+lib/libjxl.so.0.13
 lib/libjxl_cms.so
 lib/libjxl_cms.so.${PKGVERSION}
-lib/libjxl_cms.so.0.12
+lib/libjxl_cms.so.0.13
 lib/libjxl_extras_codec.a
 lib/libjxl_threads.so
 lib/libjxl_threads.so.${PKGVERSION}
-lib/libjxl_threads.so.0.12
+lib/libjxl_threads.so.0.13
 lib/pkgconfig/libjxl.pc
 lib/pkgconfig/libjxl_cms.pc
 lib/pkgconfig/libjxl_threads.pc

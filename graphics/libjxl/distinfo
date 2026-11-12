@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2026/07/02 03:13:36 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/11/12 09:06:30 adam Exp $
 
-BLAKE2s (libjxl-0.12.0.tar.gz) = 975f06d153d23eefc6184e4afebfb9c9746ad2f2ffb9a9c8f377f28b0d26242a
-SHA512 (libjxl-0.12.0.tar.gz) = 71d45123e47588c8028c0e01a7820c7a18d98df05c29b5318ab6858eaff5f249879763907201ba19a93f817c6ef75c393c1974d2a0cc8e461c4e2709ca6fa45f
-Size (libjxl-0.12.0.tar.gz) = 1698757 bytes
+BLAKE2s (libjxl-0.13.0.tar.gz) = a5fed835d2381c0938e21cd91a584a78b7aa93d3302b418ca6ce29f29f02c608
+SHA512 (libjxl-0.13.0.tar.gz) = f5a6cc4c875c9cdd217001096d34e5912afffdf3a58bae816c1c28c7e241eb0909ea37af0bef6d4b2fb8fae20ae94e29b2ef30fb65f778d4a7d62e07e20e3f85
+Size (libjxl-0.13.0.tar.gz) = 1734982 bytes
 SHA1 (patch-CMakeLists.txt) = 61a53fd1bd533f8c488b8e8c3db04fba3373a617
 SHA1 (patch-lib_jxl.cmake) = a0ddd494e1d7a4992ce22161602c44aae2c44267
 SHA1 (patch-lib_jxl__threads.cmake) = a18c85c6ab0111bad03eaa52b005d8f3204fcf58
