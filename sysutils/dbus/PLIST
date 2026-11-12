@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/08/01 20:58:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2026/11/12 20:43:43 wiz Exp $
 ${PLIST.launchd}Library/LaunchAgents/org.freedesktop.dbus-session.plist
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
@@ -31,7 +31,7 @@ lib/cmake/DBus1/DBus1ConfigVersion.cmake
 lib/dbus-1.0/include/dbus/dbus-arch-deps.h
 lib/libdbus-1.so
 lib/libdbus-1.so.3
-lib/libdbus-1.so.3.38.3
+lib/libdbus-1.so.3.38.5
 lib/pkgconfig/dbus-1.pc
 libexec/dbus-daemon-launch-helper
 man/man1/dbus-cleanup-sockets.1
