@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/11/02 09:22:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/11/12 09:55:15 adam Exp $
 include/torrent/bitfield.h
 include/torrent/common.h
 include/torrent/data/block.h
@@ -72,6 +72,8 @@ include/torrent/utils/directory_events.h
 include/torrent/utils/extents.h
 include/torrent/utils/file_stat.h
 include/torrent/utils/functional.h
+include/torrent/utils/limited_vector.h
+include/torrent/utils/linked_unordered_set.h
 include/torrent/utils/log.h
 include/torrent/utils/log_buffer.h
 include/torrent/utils/option_strings.h
