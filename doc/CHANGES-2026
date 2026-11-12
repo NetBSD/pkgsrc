@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7949 2026/11/12 08:11:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7950 2026/11/12 09:07:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11818,3 +11818,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs to 26.13.1 [adam 2026-11-12]
 	Updated editors/emacs31 to 31.1nb10 [wiz 2026-11-12]
 	Updated editors/emacs31-nox11 to 31.1nb3 [wiz 2026-11-12]
+	Updated devel/flex to 2.6.9 [adam 2026-11-12]
+	Updated graphics/libjxl to 0.13.0 [adam 2026-11-12]
