@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 10:14:38 nia Exp $
+$NetBSD: distinfo,v 1.36 2026/11/12 08:35:54 adam Exp $
 
-BLAKE2s (flex-2.6.4.tar.gz) = aee613459454ddfc528df0fd667fb3b5701b9d51f9aff6ce2f6a2f0adb303043
-SHA512 (flex-2.6.4.tar.gz) = e9785f3d620a204b7d20222888917dc065c2036cae28667065bf7862dfa1b25235095a12fd04efdbd09bfd17d3452e6b9ef953a8c1137862ff671c97132a082e
-Size (flex-2.6.4.tar.gz) = 1419096 bytes
+BLAKE2s (flex-2.6.9.tar.gz) = 5a13af1ed0541a09861838101a645bf743b0ed0b9e5877e5b04b04869c1ba4de
+SHA512 (flex-2.6.9.tar.gz) = 96846ae9266f916ac073bd9214166be2eda098e557609aa2f01fec88d4b3a3a3e54bee50548eb5c22e4a4f2e7bea67b07781170d44fccf4e968a429238b19d19
+Size (flex-2.6.9.tar.gz) = 1820166 bytes

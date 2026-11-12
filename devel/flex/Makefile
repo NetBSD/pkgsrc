@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/04/30 12:06:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.67 2026/11/12 08:35:54 adam Exp $
 
-DISTNAME=	flex-2.6.4
+DISTNAME=	flex-2.6.9
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=westes/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/westes/flex
 COMMENT=	Fast clone of lex(1), the lexical scanner generator
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=	help2man>=0:../../converters/help2man
 
 # wants stdbool
-USE_LANGUAGES=		c99 c++
-
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4:run	gmake makeinfo

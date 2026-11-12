@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: options.mk,v 1.3 2026/11/12 08:35:54 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flex
 PKG_SUPPORTED_OPTIONS=	nls
