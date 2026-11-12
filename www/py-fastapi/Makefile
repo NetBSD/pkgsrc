@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/11 15:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/12 20:26:33 wiz Exp $
 
 DISTNAME=	fastapi-0.162.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -57,6 +57,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	fastapi
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-uvicorn
 
 USE_TOOLS+=	git:test
 
