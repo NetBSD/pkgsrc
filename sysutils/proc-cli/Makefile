@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/11/04 16:56:37 drixter Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/12 09:03:59 hauke Exp $
 
-DISTNAME=	proc-cli-2.3.0
+DISTNAME=	proc-cli-2.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yazeed/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
