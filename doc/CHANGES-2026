@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7954 2026/11/12 14:57:29 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7955 2026/11/12 15:04:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11828,3 +11828,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-publicsuffixlist to 1.1.2.20261112 [adam 2026-11-12]
 	Updated www/py-django-compressor to 4.7.0 [adam 2026-11-12]
 	Updated archivers/cabextract to 1.12 [wiz 2026-11-12]
+	Added devel/ruby-rake version 13.4.2 [ktnb 2026-11-12]
