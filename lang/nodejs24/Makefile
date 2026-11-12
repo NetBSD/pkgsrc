@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2026/11/11 11:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/12 08:02:38 adam Exp $
 
-DISTNAME=	node-v24.22.2
+DISTNAME=	node-v24.22.3
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES=	c++20 charconv
 
-PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 # XXX: figure out a way to add rpaths to torque
