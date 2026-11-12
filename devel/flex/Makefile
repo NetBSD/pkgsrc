@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2026/11/12 08:35:54 adam Exp $
+# $NetBSD: Makefile,v 1.68 2026/11/12 09:35:08 adam Exp $
 
-DISTNAME=	flex-2.6.9
+DISTNAME=	flex-2.6.4
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=westes/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

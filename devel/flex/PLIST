@@ -1,17 +1,15 @@
-@comment $NetBSD: PLIST,v 1.15 2026/11/12 08:35:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2026/11/12 09:35:08 adam Exp $
 bin/flex
 bin/flex++
 include/FlexLexer.h
 info/flex.info
 lib/libfl.la
-lib/pkgconfig/libfl.pc
 man/man1/flex.1
 share/doc/flex/AUTHORS
 share/doc/flex/COPYING
 share/doc/flex/NEWS
 share/doc/flex/ONEWS
 share/doc/flex/README.md
-${PLIST.nls}share/locale/bg/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/flex.mo
@@ -23,19 +21,15 @@ ${PLIST.nls}share/locale/fi/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/ga/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/hr/LC_MESSAGES/flex.mo
-${PLIST.nls}share/locale/ka/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/flex.mo
-${PLIST.nls}share/locale/lv/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/flex.mo
-${PLIST.nls}share/locale/pt/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/ro/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/flex.mo
-${PLIST.nls}share/locale/uk/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/flex.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/flex.mo
