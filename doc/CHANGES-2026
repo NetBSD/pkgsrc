@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7962 2026/11/12 21:25:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7963 2026/11/12 21:26:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11837,3 +11837,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/dbus to 1.16.4 [wiz 2026-11-12]
 	Updated wayland/xwayland to 24.1.15 [wiz 2026-11-12]
 	Updated x11/modular-xorg-server to 21.1.26 [wiz 2026-11-12]
+	Updated x11/modular-xorg-xephyr to 21.1.26 [wiz 2026-11-12]
