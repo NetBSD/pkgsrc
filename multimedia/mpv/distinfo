@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2026/11/05 22:27:04 leot Exp $
+$NetBSD: distinfo,v 1.87 2026/11/12 17:18:06 leot Exp $
 
 BLAKE2s (mpv-0.42.0.tar.gz) = 3bc3529d541991d241143e13195f271f6dce2123fcb5499c6d3d5aad9daa3456
 SHA512 (mpv-0.42.0.tar.gz) = 2ab6c7aae6e5e6352b67f7fda2cd62abe2ff29b08a4c6840dce5e3566db753cc8e90d5a17810ab7b57f685f4d476ca6820bf53cb387dd182bdb3fa41ed9c551e
@@ -9,3 +9,4 @@ SHA1 (patch-meson.build) = 482d9ace47968e741cf4abf995d812b4a8fcf3f4
 SHA1 (patch-osdep_threads-posix.h) = b7e2626ba490742858bb979ddbc5a541550ecb6b
 SHA1 (patch-stream_stream__libarchive.c) = 2025f994b7f82cc868608ab7e8df0ae89b549922
 SHA1 (patch-video_out_drm__common.c) = cdb827cbbcdfb667329cdbee7ebbb2c5f6acef2f
+SHA1 (patch-video_out_mac_view.swift) = 76b1231e0313042e22bdd27582d6548659a60437
