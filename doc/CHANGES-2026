@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7946 2026/11/12 04:03:43 msaitoh Exp $
+$NetBSD: CHANGES-2026,v 1.7947 2026/11/12 08:03:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11813,3 +11813,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/automake to 1.20 [wiz 2026-11-11]
 	Updated devel/py-pdm to 2.29.7 [wiz 2026-11-11]
 	Updated sysutils/intel-microcode-netbsd to 20261110 [msaitoh 2026-11-12]
+	Updated lang/nodejs22 to 22.23.5 [adam 2026-11-12]
+	Updated lang/nodejs24 to 24.22.3 [adam 2026-11-12]
+	Updated lang/nodejs to 26.13.1 [adam 2026-11-12]
