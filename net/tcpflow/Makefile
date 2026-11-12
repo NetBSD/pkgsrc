@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.68 2026/11/11 11:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/11/12 16:28:45 adam Exp $
 
-DISTNAME=	tcpflow-1.6.1
-PKGREVISION=	34
+DISTNAME=	tcpflow-1.7.0
 CATEGORIES=	net security
-MASTER_SITES=	http://downloads.digitalcorpora.org/downloads/tcpflow/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=simsong/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/simsong/tcpflow
 COMMENT=	Captures data transmitted as part of TCP connections
 LICENSE=	gnu-gpl-v3
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-o3
-
-USE_CXX_FEATURES+=	c++17
+TEST_TARGET=		check
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -DMAP_FILE=0
 CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
