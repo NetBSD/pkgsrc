@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7956 2026/11/12 15:12:55 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7957 2026/11/12 15:24:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11830,3 +11830,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/cabextract to 1.12 [wiz 2026-11-12]
 	Added devel/ruby-rake version 13.4.2 [ktnb 2026-11-12]
 	Updated www/ruby-neocities to 0.3.0 [ktnb 2026-11-12]
+	Updated net/arpwatch to 2.1a15nb6 [taca 2026-11-12]
