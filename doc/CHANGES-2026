@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7960 2026/11/12 20:43:52 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7961 2026/11/12 21:18:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11835,3 +11835,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tcpflow to 1.7.0 [adam 2026-11-12]
 	Updated security/p11-kit to 0.26.6 [adam 2026-11-12]
 	Updated sysutils/dbus to 1.16.4 [wiz 2026-11-12]
+	Updated wayland/xwayland to 24.1.15 [wiz 2026-11-12]
