@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2026/11/11 11:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2026/11/12 18:56:58 gutteridge Exp $
 
 DISTNAME=	gnupg-2.5.24
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -44,7 +44,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.27.0
 BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
 .include "../../devel/npth/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.11.0
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.12.0
 .include "../../security/libgcrypt/buildlink3.mk"
 # As of 2.5.21, configure script requests libgpg-error>=1.56
 # but we need a fix for NetBSD
