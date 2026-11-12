@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/06/17 11:20:32 skrll Exp $
+$NetBSD: distinfo,v 1.2 2026/11/12 09:39:00 martin Exp $
 
-BLAKE2s (opensbi/opensbi-1.4.tar.gz) = 6c05ce8629391e438389133fb33feef09304f8b053f2d78e9a1de12cabbd491d
-SHA512 (opensbi/opensbi-1.4.tar.gz) = 11833ccca1f16ca5d19580862a0f25d303f7696214c47c30f78f221e16fc35f385f4388d96370c4aa8d43f7f7d5a804c8b55dc845bd316421d9d8ad9509b7ba4
-Size (opensbi/opensbi-1.4.tar.gz) = 409903 bytes
+BLAKE2s (opensbi/opensbi-1.9.tar.gz) = 004391bbf73fefce073510e26808625edf979e7371acda7517a064d08491d25b
+SHA512 (opensbi/opensbi-1.9.tar.gz) = dbefd522516a63fae91a0ddad13a5230e65888f4171361ebc8d84d21649ea2000a96e3cbd5f862a91962c92e254d27b62ee2ffd27f33ae8fc88a6f0cb93e37d6
+Size (opensbi/opensbi-1.9.tar.gz) = 551157 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: opensbi.mk,v 1.2 2024/06/17 21:53:57 gutteridge Exp $
+# $NetBSD: opensbi.mk,v 1.3 2026/11/12 09:39:00 martin Exp $
 
 .include "../../sysutils/opensbi/opensbi-version.mk"
 
@@ -9,7 +9,7 @@ CATEGORIES=		sysutils
 EXTRACT_SUFX=		.tar.gz
 
 GITHUB_PROJECT?=	opensbi
-GITHUB_TAG?=		v1.4
+GITHUB_TAG?=		v${OPENSBI_VERSION}
 MASTER_SITES?=		${MASTER_SITE_GITHUB:=riscv-software-src/}
 DIST_SUBDIR?=		${GITHUB_PROJECT}
 
