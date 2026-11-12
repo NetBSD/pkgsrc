@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7958 2026/11/12 15:37:30 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7959 2026/11/12 16:32:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11832,3 +11832,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-neocities to 0.3.0 [ktnb 2026-11-12]
 	Updated net/arpwatch to 2.1a15nb6 [taca 2026-11-12]
 	Updated net/dnscontrol to 5.8.2 [drixter 2026-11-12]
+	Updated net/tcpflow to 1.7.0 [adam 2026-11-12]
+	Updated security/p11-kit to 0.26.6 [adam 2026-11-12]
