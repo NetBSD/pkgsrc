@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2026/10/25 16:01:23 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/12 15:24:17 taca Exp $
 #
 
 DISTNAME=	arpwatch-2.1a15
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 

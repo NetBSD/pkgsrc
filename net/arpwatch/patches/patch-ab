@@ -1,10 +1,19 @@
-$NetBSD: patch-ab,v 1.9 2026/10/25 15:27:12 taca Exp $
+$NetBSD: patch-ab,v 1.10 2026/11/12 15:24:17 taca Exp $
 
-* Add description for -m option.
+* Add description for -m and -p option.
 
---- arpwatch.8.orig	2005-10-25 12:51:51.000000000 +0200
-+++ arpwatch.8	2005-10-25 12:52:40.000000000 +0200
-@@ -71,6 +71,12 @@
+--- arpwatch.8.orig	2000-10-08 20:31:28.000000000 +0000
++++ arpwatch.8
+@@ -27,7 +27,7 @@ arpwatch - keep track of ethernet/ip add
+ .na
+ .B arpwatch
+ [
+-.B -dN
++.B -dpN
+ ] [
+ .B -f
+ .I datafile
+@@ -71,6 +71,12 @@ The
  flag is used to override the default interface.
  .LP
  The
@@ -17,3 +26,14 @@ $NetBSD: patch-ab,v 1.9 2026/10/25 15:27:12 taca Exp $
  .B -n
  flag specifies additional local networks. This can be useful to
  avoid "bogon" warnings when there is more than one network running
+@@ -83,6 +89,10 @@ The
+ flag disables reporting any bogons.
+ .LP
+ The
++.B -p
++flag prevents setting the interface to promisc mode.
++.LP
++The
+ .B -r
+ flag is used to specify a savefile
+ (perhaps created by

@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.11 2026/10/25 15:27:12 taca Exp $
+$NetBSD: patch-ac,v 1.12 2026/11/12 15:24:17 taca Exp $
 
-* Add -m option.
+* Add -m and -p option.
 * Try first -n if available when pcap_lookupnet() returns error.
 
---- arpwatch.c.orig	2004-01-22 23:18:20.000000000 +0100
-+++ arpwatch.c	2006-04-12 12:36:25.000000000 +0200
-@@ -107,6 +107,8 @@
+--- arpwatch.c.orig	2004-01-22 22:18:20.000000000 +0000
++++ arpwatch.c
+@@ -107,6 +107,8 @@ struct rtentry;
  
  char *prog;
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.11 2026/10/25 15:27:12 taca Exp $
  int can_checkpoint;
  int swapped;
  int nobogons;
-@@ -119,9 +121,9 @@
+@@ -119,9 +121,9 @@ struct nets {
  	u_int32_t netmask;
  };
  
@@ -27,16 +27,25 @@ $NetBSD: patch-ac,v 1.11 2026/10/25 15:27:12 taca Exp $
  
  extern int optind;
  extern int opterr;
-@@ -170,7 +172,7 @@
+@@ -145,7 +147,7 @@ int
+ main(int argc, char **argv)
+ {
+ 	register char *cp;
+-	register int op, pid, snaplen, timeout, linktype, status;
++	register int op, pid, snaplen, timeout, linktype, status, promisc = 1;
+ #ifdef TIOCNOTTY
+ 	register int fd;
+ #endif
+@@ -170,7 +172,7 @@ main(int argc, char **argv)
  	interface = NULL;
  	rfilename = NULL;
  	pd = NULL;
 -	while ((op = getopt(argc, argv, "df:i:n:Nr:")) != EOF)
-+	while ((op = getopt(argc, argv, "df:i:m:n:Nr:")) != EOF)
++	while ((op = getopt(argc, argv, "df:i:m:n:Npr:")) != EOF)
  		switch (op) {
  
  		case 'd':
-@@ -189,6 +191,10 @@
+@@ -189,6 +191,10 @@ main(int argc, char **argv)
  			interface = optarg;
  			break;
  
@@ -47,7 +56,17 @@ $NetBSD: patch-ac,v 1.11 2026/10/25 15:27:12 taca Exp $
  		case 'n':
  			if (!addnet(optarg))
  				usage();
-@@ -223,9 +229,24 @@
+@@ -198,6 +204,9 @@ main(int argc, char **argv)
+ 			++nobogons;
+ 			break;
+ 
++		case 'p':
++			promisc = 0;
++			break;
+ 		case 'r':
+ 			rfilename = optarg;
+ 			break;
+@@ -223,9 +232,24 @@ main(int argc, char **argv)
  
  		/* Determine network and netmask */
  		if (pcap_lookupnet(interface, &net, &netmask, errbuf) < 0) {
@@ -75,11 +94,32 @@ $NetBSD: patch-ac,v 1.11 2026/10/25 15:27:12 taca Exp $
  		}
  
  		/* Drop into the background if not debugging */
-@@ -751,6 +772,6 @@
+@@ -269,7 +293,7 @@ main(int argc, char **argv)
+ 		snaplen = max(sizeof(struct ether_header),
+ 		    sizeof(struct fddi_header)) + sizeof(struct ether_arp);
+ 		timeout = 1000;
+-		pd = pcap_open_live(interface, snaplen, 1, timeout, errbuf);
++		pd = pcap_open_live(interface, snaplen, promisc, timeout, errbuf);
+ 		if (pd == NULL) {
+ 			syslog(LOG_ERR, "pcap open %s: %s", interface, errbuf);
+ 			exit(1);
+@@ -304,7 +328,8 @@ main(int argc, char **argv)
+ 		exit(1);
+ 	}
+ 	if (rfilename == NULL)
+-		syslog(LOG_INFO, "listening on %s", interface);
++		syslog(LOG_INFO, "listening on %s%s", interface,
++		       (promisc)? "with promisc mode": "");
+ 
+ 	/* Read in database */
+ 	initializing = 1;
+@@ -750,7 +775,7 @@ usage(void)
+ 	extern char version[];
  
  	(void)fprintf(stderr, "Version %s\n", version);
- 	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
+-	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
 -	    " [-n net[/width]] [-r file]\n", prog);
++	(void)fprintf(stderr, "usage: %s [-dpN] [-f datafile] [-i interface]"
 +	    " [-m email] [-n net[/width]] [-r file]\n", prog);
  	exit(1);
  }

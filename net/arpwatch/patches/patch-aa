@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.7 2026/10/25 15:27:12 taca Exp $
+$NetBSD: patch-aa,v 1.8 2026/11/12 15:24:17 taca Exp $
 
 * Change path to appropriate for pkgsrc.
+* Supply proper LDFLAGS.
 
---- Makefile.in.orig	2000-06-15 02:39:55.000000000 +0200
+--- Makefile.in.orig	2000-06-15 00:39:55.000000000 +0000
 +++ Makefile.in
 @@ -30,8 +30,10 @@ exec_prefix = @exec_prefix@
  BINDEST = @sbindir@
@@ -16,7 +17,7 @@ $NetBSD: patch-aa,v 1.7 2026/10/25 15:27:12 taca Exp $
  
  # VPATH
  srcdir = @srcdir@
-@@ -45,7 +47,8 @@ CC = @CC@
+@@ -45,11 +47,15 @@ CC = @CC@
  PROG = arpwatch
  CCOPT = @V_CCOPT@
  INCLS = -I. @V_INCLS@
@@ -26,8 +27,33 @@ $NetBSD: patch-aa,v 1.7 2026/10/25 15:27:12 taca Exp $
  
  # Standard CFLAGS
  CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
-@@ -110,8 +113,8 @@ zap: zap.o intoa.o
- 	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
+ 
++# Standard LDFLAGS
++LDFLAGS = @LDFLAGS@
++
+ # Standard LIBS
+ LIBS = @LIBS@
+ # Standard LIBS without libpcap.a
+@@ -95,11 +101,11 @@ all: $(ALL)
+ 
+ arpwatch: $(WOBJ) @V_PCAPDEP@
+ 	@rm -f $@
+-	$(CC) $(CFLAGS) -o $@ $(WOBJ) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(WOBJ) $(LIBS)
+ 
+ arpsnmp: $(SOBJ)
+ 	@rm -f $@
+-	$(CC) $(CFLAGS) -o $@ $(SOBJ) $(SLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(SOBJ) $(SLIBS)
+ 
+ version.o: version.c
+ version.c: $(srcdir)/VERSION
+@@ -107,11 +113,11 @@ version.c: $(srcdir)/VERSION
+ 	sed -e 's/.*/char version[] = "&";/' $(srcdir)/VERSION > $@
+ 
+ zap: zap.o intoa.o
+-	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ zap.o intoa.o -lutil
  
  install: force
 -	$(INSTALL) -m 555 -o bin -g bin arpwatch $(DESTDIR)$(BINDEST)
