@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.9 2026/11/12 15:03:46 ktnb Exp $
+
+BLAKE2s (rake-13.4.2.tar.gz) = b4c5fff1000e4cd23db141aba49c2ac57770bfe651e47f5caee06c29c8e396c7
+SHA512 (rake-13.4.2.tar.gz) = 66c2fdb8b9a495f0f5510764429c616125a50e2e4bd664ae282801b29430b816b8e67133aadc9930867d5c4db8b33b86e783e7112b59fd9b468645f20c29dceb
+Size (rake-13.4.2.tar.gz) = 126572 bytes

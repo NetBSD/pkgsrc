@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4733 2026/11/11 15:09:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4734 2026/11/12 15:03:45 ktnb Exp $
 #
 
 COMMENT=	Development utilities
@@ -3527,6 +3527,7 @@ SUBDIR+=	ruby-pycall
 SUBDIR+=	ruby-railties72
 SUBDIR+=	ruby-railties80
 SUBDIR+=	ruby-railties81
+SUBDIR+=	ruby-rake
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-rake-compiler-dock
 SUBDIR+=	ruby-randexp
