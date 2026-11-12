@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7955 2026/11/12 15:04:11 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.7956 2026/11/12 15:12:55 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11829,3 +11829,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-compressor to 4.7.0 [adam 2026-11-12]
 	Updated archivers/cabextract to 1.12 [wiz 2026-11-12]
 	Added devel/ruby-rake version 13.4.2 [ktnb 2026-11-12]
+	Updated www/ruby-neocities to 0.3.0 [ktnb 2026-11-12]
