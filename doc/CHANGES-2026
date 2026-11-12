@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7945 2026/11/11 23:34:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7946 2026/11/12 04:03:43 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11812,3 +11812,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/autoconf-archive to 2026.11.11 [wiz 2026-11-11]
 	Updated devel/automake to 1.20 [wiz 2026-11-11]
 	Updated devel/py-pdm to 2.29.7 [wiz 2026-11-11]
+	Updated sysutils/intel-microcode-netbsd to 20261110 [msaitoh 2026-11-12]
