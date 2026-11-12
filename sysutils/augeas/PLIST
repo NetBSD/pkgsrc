@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/09/06 18:44:01 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/12 10:42:16 adam Exp $
 bin/augmatch
 bin/augparse
 bin/augprint
@@ -26,6 +26,7 @@ share/augeas/lenses/dist/aptcacherngsecurity.aug
 share/augeas/lenses/dist/aptconf.aug
 share/augeas/lenses/dist/aptpreferences.aug
 share/augeas/lenses/dist/aptsources.aug
+share/augeas/lenses/dist/aptsources822.aug
 share/augeas/lenses/dist/authinfo2.aug
 share/augeas/lenses/dist/authorized_keys.aug
 share/augeas/lenses/dist/authselectpam.aug
@@ -235,6 +236,7 @@ share/augeas/lenses/dist/tests/test_aptcacherngsecurity.aug
 share/augeas/lenses/dist/tests/test_aptconf.aug
 share/augeas/lenses/dist/tests/test_aptpreferences.aug
 share/augeas/lenses/dist/tests/test_aptsources.aug
+share/augeas/lenses/dist/tests/test_aptsources822.aug
 share/augeas/lenses/dist/tests/test_authinfo2.aug
 share/augeas/lenses/dist/tests/test_authorized_keys.aug
 share/augeas/lenses/dist/tests/test_authselectpam.aug

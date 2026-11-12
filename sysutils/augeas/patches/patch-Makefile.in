@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2026/09/06 18:44:01 bsiegert Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2026/11/12 10:42:17 adam Exp $
 
 Install the lenses.  They depend on GNU make otherwise.
 
@@ -11,10 +11,10 @@ The lists are globbed in configure instead; see patch-configure.  Sent
 upstream as well.  Patching the generated files rather than Makefile.am and
 configure.ac keeps autoreconf out of the build here.
 
---- Makefile.in.orig
+--- Makefile.in.orig	2026-09-29 22:04:16.000000000 +0000
 +++ Makefile.in
-@@ -1703,8 +1703,8 @@
- ACLOCAL_AMFLAGS = -I gnulib/m4
+@@ -1708,8 +1708,8 @@ ACLOCAL_AMFLAGS = -I gnulib/m4
+ DISTCHECK_CONFIGURE_FLAGS = --disable-gnulib-tests
  lensdir = $(datadir)/augeas/lenses/dist
  lenstestdir = $(datadir)/augeas/lenses/dist/tests
 -dist_lens_DATA = $(wildcard lenses/*.aug)
