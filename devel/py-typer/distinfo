@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2026/11/10 09:14:55 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/11/12 10:45:27 adam Exp $
 
-BLAKE2s (typer-0.29.0.tar.gz) = 158d92f2a0acaeac33a6522063a165b2f3dc4361268af6985bff0d7fe2fe00ff
-SHA512 (typer-0.29.0.tar.gz) = eb9fb32726945b73c61bbb2b5b30e53846e7ebdd2d57a4a5841cb9f91fe51889a5c1c64cdbc3a5272875432f2e7c6d91c78dd0d7bf34157131eba86a5056a7f6
-Size (typer-0.29.0.tar.gz) = 206371 bytes
+BLAKE2s (typer-0.29.1.tar.gz) = dfd48e6f9cf71348c51cb894f3e90e25f5d9b96d547f489397534e7e80521793
+SHA512 (typer-0.29.1.tar.gz) = 9f8a3bb43f844a87fc5bcbaabea366d361e6ad4697e16ea774b9c9b114e31bf772f4ecd333cce27b7232cf8cbdd64a4ab3e249115cd29e349b510d823c4098ae
+Size (typer-0.29.1.tar.gz) = 205843 bytes
