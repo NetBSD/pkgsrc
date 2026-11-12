@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7951 2026/11/12 09:55:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7952 2026/11/12 10:45:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11823,3 +11823,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Downgraded devel/flex to 2.6.4 [adam 2026-11-12]
 	Updated net/libtorrent to 0.16.28 [adam 2026-11-12]
 	Updated net/rtorrent to 0.16.28 [adam 2026-11-12]
+	Updated sysutils/augeas to 1.15.0 [adam 2026-11-12]
+	Updated devel/py-typer to 0.29.1 [adam 2026-11-12]
