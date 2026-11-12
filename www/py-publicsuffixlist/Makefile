@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/09/10 11:35:15 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/12 11:36:01 adam Exp $
 
-DISTNAME=	publicsuffixlist-1.0.2.20260910
+DISTNAME=	publicsuffixlist-1.1.2.20261112
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/publicsuffixlist/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ko-zu/psl
 COMMENT=	Public Suffix List parser implementation
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 # update
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 
