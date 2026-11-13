@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7975 2026/11/13 17:04:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7976 2026/11/13 20:33:45 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11880,3 +11880,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/vifm to 0.14.5 [drixter 2026-11-13]
 	Updated devel/py-kivy to 2.3.2 [adam 2026-11-13]
 	Updated devel/userspace-rcu to 0.15.7 [adam 2026-11-13]
+	Updated math/HiGHS to version 1.16.0 [alnsn 2026-11-13]
