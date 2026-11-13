@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2026/10/17 20:45:04 alnsn Exp $
+$NetBSD: distinfo,v 1.2 2026/11/13 20:29:16 alnsn Exp $
 
-BLAKE2s (HiGHS-1.15.1.tar.gz) = 8d96fe505568a1f84d5bd075638ab04aeafb80226ce590abed3caf37c99c795c
-SHA512 (HiGHS-1.15.1.tar.gz) = 0ea407784bc6c8e31c72fbcdcab201e8a7cc7debbca57504e74177658208151e90637e5fb1e0cdf1b1ae6b677e7865e77771ec025b17f8223f74d00fc6420546
-Size (HiGHS-1.15.1.tar.gz) = 3059541 bytes
+BLAKE2s (HiGHS-1.16.0.tar.gz) = e3e16d79f5db3042bb024aa5547f428e09b8abfbcb337db96722d95775e3bc2b
+SHA512 (HiGHS-1.16.0.tar.gz) = 4780fd4338e144b5639f00bffed4075ee7260479d904270c704c8220a6e2f0379a7ff167ba6a64587f897b86b99e24d5dea7b6817decfd8534fc832e2c925fa4
+Size (HiGHS-1.16.0.tar.gz) = 3577374 bytes
 SHA1 (patch-extern_zstr_strict__fstream.hpp) = e97dfdf3b5e4be673942755dd4713d3c9882cf75
