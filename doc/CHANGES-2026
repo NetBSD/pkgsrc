@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7963 2026/11/12 21:26:45 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7964 2026/11/13 05:20:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11838,3 +11838,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/xwayland to 24.1.15 [wiz 2026-11-12]
 	Updated x11/modular-xorg-server to 21.1.26 [wiz 2026-11-12]
 	Updated x11/modular-xorg-xephyr to 21.1.26 [wiz 2026-11-12]
+	Updated math/py-bottleneck to 1.6.1 [adam 2026-11-13]
+	Updated www/py-aioquic to 1.8.0 [adam 2026-11-13]
+	Updated www/py-pylsqpack to 1.1.1 [adam 2026-11-13]
+	Updated devel/py-utils to 4.2.1 [adam 2026-11-13]
