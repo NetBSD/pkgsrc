@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/08/15 08:04:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/13 15:05:52 wiz Exp $
 include/ggml-alloc.h
 include/ggml-backend.h
 include/ggml-blas.h
@@ -20,18 +20,18 @@ include/gguf.h
 lib/cmake/ggml/ggml-config-version.cmake
 lib/cmake/ggml/ggml-config.cmake
 lib/libggml-base.so
-lib/libggml-base.so.0
+lib/libggml-base.so.1
 lib/libggml-base.so.${PKGVERSION}
 lib/libggml-blas.so
-lib/libggml-blas.so.0
+lib/libggml-blas.so.1
 lib/libggml-blas.so.${PKGVERSION}
 lib/libggml-cpu.so
-lib/libggml-cpu.so.0
+lib/libggml-cpu.so.1
 lib/libggml-cpu.so.${PKGVERSION}
 ${PLIST.vulkan}lib/libggml-vulkan.so
-${PLIST.vulkan}lib/libggml-vulkan.so.0
+${PLIST.vulkan}lib/libggml-vulkan.so.1
 ${PLIST.vulkan}lib/libggml-vulkan.so.${PKGVERSION}
 lib/libggml.so
-lib/libggml.so.0
+lib/libggml.so.1
 lib/libggml.so.${PKGVERSION}
 lib/pkgconfig/ggml.pc

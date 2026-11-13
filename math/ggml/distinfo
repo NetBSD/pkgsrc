@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2026/11/04 17:07:04 wiz Exp $
+$NetBSD: distinfo,v 1.19 2026/11/13 15:05:52 wiz Exp $
 
-BLAKE2s (ggml-0.29.0.tar.gz) = 7a866404d2a9bc1393d921e9c0f000aba27786b3b50060b506c61064be17dc77
-SHA512 (ggml-0.29.0.tar.gz) = 4bf83e4f3f20b364003f74d16f97aed14bdc2af609d7b9980db90b415290eff6d90e5db85c72b1f3a4715647216fdac7fc41990593d8d02d48a5d0c7c0327c68
-Size (ggml-0.29.0.tar.gz) = 4599304 bytes
-SHA1 (patch-tests_test-quantize-fns.cpp) = d12060c276a02ac897f661e85e2b56911e94fcab
+BLAKE2s (ggml-1.0.0.tar.gz) = 0e714210056ce56c7e4ab336c362e11efc3a075b4dd40d22fe78565ce05badcf
+SHA512 (ggml-1.0.0.tar.gz) = a5098169d420d84f93389f10a4d558651d38140d8cac88f6007156256e1b18987efb3767d384484c14bc42d00e583a3ee538bdbc1b714ce0c3d58de94dd4b614
+Size (ggml-1.0.0.tar.gz) = 4683113 bytes
