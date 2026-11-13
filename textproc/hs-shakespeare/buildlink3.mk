@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/08/13 11:07:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/11/13 14:39:56 pho Exp $
 
 BUILDLINK_TREE+=	hs-shakespeare
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-shakespeare
 HS_SHAKESPEARE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-shakespeare+=	hs-shakespeare>=2.1.1
-BUILDLINK_ABI_DEPENDS.hs-shakespeare+=	hs-shakespeare>=2.1.1nb3
+BUILDLINK_ABI_DEPENDS.hs-shakespeare+=	hs-shakespeare>=2.1.1nb4
 BUILDLINK_PKGSRCDIR.hs-shakespeare?=	../../textproc/hs-shakespeare
 
 .include "../../converters/hs-aeson/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/11/13 14:38:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-basic-prelude
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-basic-prelude
 HS_BASIC_PRELUDE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-basic-prelude+=	hs-basic-prelude>=0.7.0
-BUILDLINK_ABI_DEPENDS.hs-basic-prelude+=	hs-basic-prelude>=0.7.0nb9
+BUILDLINK_ABI_DEPENDS.hs-basic-prelude+=	hs-basic-prelude>=0.7.0nb10
 BUILDLINK_PKGSRCDIR.hs-basic-prelude?=		../../devel/hs-basic-prelude
 
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/08/13 11:06:24 pho Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/13 14:38:42 pho Exp $
 
 DISTNAME=	json-0.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

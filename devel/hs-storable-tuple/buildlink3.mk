@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:06:59 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-storable-tuple
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-storable-tuple
 HS_STORABLE_TUPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-storable-tuple+=	hs-storable-tuple>=0.1
-BUILDLINK_ABI_DEPENDS.hs-storable-tuple+=	hs-storable-tuple>=0.1nb5
+BUILDLINK_ABI_DEPENDS.hs-storable-tuple+=	hs-storable-tuple>=0.1nb6
 BUILDLINK_PKGSRCDIR.hs-storable-tuple?=		../../devel/hs-storable-tuple
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

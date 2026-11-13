@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/08/13 11:07:18 pho Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/13 14:39:38 pho Exp $
 
 DISTNAME=	iproute-1.7.15
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org

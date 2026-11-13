@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:06:43 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-hie-compat
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hie-compat
 HS_HIE_COMPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hie-compat+=	hs-hie-compat>=0.3.1
-BUILDLINK_ABI_DEPENDS.hs-hie-compat+=	hs-hie-compat>=0.3.1.2nb4
+BUILDLINK_ABI_DEPENDS.hs-hie-compat+=	hs-hie-compat>=0.3.1.2nb5
 BUILDLINK_PKGSRCDIR.hs-hie-compat?=	../../devel/hs-hie-compat
 .endif	# HS_HIE_COMPAT_BUILDLINK3_MK
 

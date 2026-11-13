@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2026/11/08 17:29:38 pho Exp $
+# $NetBSD: Makefile,v 1.83 2026/11/13 14:38:44 pho Exp $
 
 DISTNAME=	darcs-2.18.5
 PKGNAME=	${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

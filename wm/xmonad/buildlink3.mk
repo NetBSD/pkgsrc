@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2025/08/13 11:07:40 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2026/11/13 14:40:01 pho Exp $
 
 BUILDLINK_TREE+=	xmonad
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmonad
 XMONAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmonad+=	xmonad>=0.18.0
-BUILDLINK_ABI_DEPENDS.xmonad+=	xmonad>=0.18.0nb4
+BUILDLINK_ABI_DEPENDS.xmonad+=	xmonad>=0.18.0nb5
 BUILDLINK_PKGSRCDIR.xmonad?=	../../wm/xmonad
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"

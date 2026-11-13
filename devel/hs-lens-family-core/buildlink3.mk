@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:06:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:39:05 pho Exp $
 
 BUILDLINK_TREE+=	hs-lens-family-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lens-family-core
 HS_LENS_FAMILY_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lens-family-core+=	hs-lens-family-core>=2.1.3
-BUILDLINK_ABI_DEPENDS.hs-lens-family-core+=	hs-lens-family-core>=2.1.3nb4
+BUILDLINK_ABI_DEPENDS.hs-lens-family-core+=	hs-lens-family-core>=2.1.3nb5
 BUILDLINK_PKGSRCDIR.hs-lens-family-core?=	../../devel/hs-lens-family-core
 .endif	# HS_LENS_FAMILY_CORE_BUILDLINK3_MK
 

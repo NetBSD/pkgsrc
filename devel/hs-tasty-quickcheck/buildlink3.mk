@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/08/13 11:07:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/11/13 14:39:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-tasty-quickcheck
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tasty-quickcheck
 HS_TASTY_QUICKCHECK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tasty-quickcheck+=	hs-tasty-quickcheck>=0.11.1
-BUILDLINK_ABI_DEPENDS.hs-tasty-quickcheck+=	hs-tasty-quickcheck>=0.11.1nb3
+BUILDLINK_ABI_DEPENDS.hs-tasty-quickcheck+=	hs-tasty-quickcheck>=0.11.1nb4
 BUILDLINK_PKGSRCDIR.hs-tasty-quickcheck?=	../../devel/hs-tasty-quickcheck
 
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"

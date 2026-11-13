@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/11/08 18:06:54 pho Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/13 14:39:40 pho Exp $
 
 DISTNAME=	blake3-0.3.1
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

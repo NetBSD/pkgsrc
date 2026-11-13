@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/08/13 11:07:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/13 14:39:56 pho Exp $
 
 BUILDLINK_TREE+=	hs-skylighting-format-ansi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-skylighting-format-ansi
 HS_SKYLIGHTING_FORMAT_ANSI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-skylighting-format-ansi+=	hs-skylighting-format-ansi>=0.1
-BUILDLINK_ABI_DEPENDS.hs-skylighting-format-ansi+=	hs-skylighting-format-ansi>=0.1nb7
+BUILDLINK_ABI_DEPENDS.hs-skylighting-format-ansi+=	hs-skylighting-format-ansi>=0.1nb8
 BUILDLINK_PKGSRCDIR.hs-skylighting-format-ansi?=	../../textproc/hs-skylighting-format-ansi
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"

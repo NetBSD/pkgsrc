@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/11/13 14:39:43 pho Exp $
 
 BUILDLINK_TREE+=	hs-securemem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-securemem
 HS_SECUREMEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-securemem+=	hs-securemem>=0.1.10
-BUILDLINK_ABI_DEPENDS.hs-securemem+=	hs-securemem>=0.1.10nb5
+BUILDLINK_ABI_DEPENDS.hs-securemem+=	hs-securemem>=0.1.10nb6
 BUILDLINK_PKGSRCDIR.hs-securemem?=	../../security/hs-securemem
 
 .include "../../devel/hs-byteable/buildlink3.mk"

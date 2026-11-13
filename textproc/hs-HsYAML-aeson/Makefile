@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/08/13 11:07:27 pho Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/13 14:39:47 pho Exp $
 
 DISTNAME=	HsYAML-aeson-0.2.0.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

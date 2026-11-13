@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:40:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-cookie
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cookie
 HS_COOKIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cookie+=	hs-cookie>=0.5.0
-BUILDLINK_ABI_DEPENDS.hs-cookie+=	hs-cookie>=0.5.0nb4
+BUILDLINK_ABI_DEPENDS.hs-cookie+=	hs-cookie>=0.5.0nb5
 BUILDLINK_PKGSRCDIR.hs-cookie?=		../../www/hs-cookie
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"

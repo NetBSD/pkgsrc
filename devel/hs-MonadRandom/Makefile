@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/08/13 11:06:28 pho Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/13 14:38:45 pho Exp $
 
 DISTNAME=	MonadRandom-0.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

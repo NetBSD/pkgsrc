@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/08/13 11:06:54 pho Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/13 14:39:13 pho Exp $
 
 DISTNAME=	quickcheck-instances-0.3.32
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

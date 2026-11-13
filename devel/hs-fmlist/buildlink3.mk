@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:06:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:38:57 pho Exp $
 
 BUILDLINK_TREE+=	hs-fmlist
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-fmlist
 HS_FMLIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-fmlist+=	hs-fmlist>=0.9.4
-BUILDLINK_ABI_DEPENDS.hs-fmlist+=	hs-fmlist>=0.9.4nb10
+BUILDLINK_ABI_DEPENDS.hs-fmlist+=	hs-fmlist>=0.9.4nb11
 BUILDLINK_PKGSRCDIR.hs-fmlist?=		../../devel/hs-fmlist
 .endif	# HS_FMLIST_BUILDLINK3_MK
 

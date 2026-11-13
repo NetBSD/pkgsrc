@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:06:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:04 pho Exp $
 
 BUILDLINK_TREE+=	hs-implicit-hie
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-implicit-hie
 HS_IMPLICIT_HIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-implicit-hie+=	hs-implicit-hie>=0.1.4
-BUILDLINK_ABI_DEPENDS.hs-implicit-hie+=	hs-implicit-hie>=0.1.4.0nb7
+BUILDLINK_ABI_DEPENDS.hs-implicit-hie+=	hs-implicit-hie>=0.1.4.0nb8
 BUILDLINK_PKGSRCDIR.hs-implicit-hie?=	../../devel/hs-implicit-hie
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

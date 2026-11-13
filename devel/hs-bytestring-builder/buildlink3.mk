@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:06:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:38:50 pho Exp $
 
 BUILDLINK_TREE+=	hs-bytestring-builder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-bytestring-builder
 HS_BYTESTRING_BUILDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-bytestring-builder+=	hs-bytestring-builder>=0.10.8
-BUILDLINK_ABI_DEPENDS.hs-bytestring-builder+=	hs-bytestring-builder>=0.10.8.2.0nb11
+BUILDLINK_ABI_DEPENDS.hs-bytestring-builder+=	hs-bytestring-builder>=0.10.8.2.0nb12
 BUILDLINK_PKGSRCDIR.hs-bytestring-builder?=	../../devel/hs-bytestring-builder
 .endif	# HS_BYTESTRING_BUILDER_BUILDLINK3_MK
 

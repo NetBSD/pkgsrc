@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:40 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:40:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-time-manager
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-time-manager
 HS_TIME_MANAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-time-manager+=	hs-time-manager>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-time-manager+=	hs-time-manager>=0.2.2nb3
+BUILDLINK_ABI_DEPENDS.hs-time-manager+=	hs-time-manager>=0.2.2nb4
 BUILDLINK_PKGSRCDIR.hs-time-manager?=	../../time/hs-time-manager
 
 .include "../../devel/hs-auto-update/buildlink3.mk"

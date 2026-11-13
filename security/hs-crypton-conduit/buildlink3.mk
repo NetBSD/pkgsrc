@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/11/13 14:39:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-crypton-conduit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-crypton-conduit
 HS_CRYPTON_CONDUIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-crypton-conduit+=	hs-crypton-conduit>=0.2.3
-BUILDLINK_ABI_DEPENDS.hs-crypton-conduit+=	hs-crypton-conduit>=0.2.3nb5
+BUILDLINK_ABI_DEPENDS.hs-crypton-conduit+=	hs-crypton-conduit>=0.2.3nb6
 BUILDLINK_PKGSRCDIR.hs-crypton-conduit?=	../../security/hs-crypton-conduit
 
 .include "../../devel/hs-conduit/buildlink3.mk"

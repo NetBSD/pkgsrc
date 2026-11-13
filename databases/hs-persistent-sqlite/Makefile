@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2026/11/11 11:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/13 14:38:43 pho Exp $
 
 DISTNAME=	persistent-sqlite-2.13.3.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

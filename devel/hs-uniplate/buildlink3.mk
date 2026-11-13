@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2025/08/13 11:07:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/11/13 14:39:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-uniplate
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-uniplate
 HS_UNIPLATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-uniplate+=	hs-uniplate>=1.6.13
-BUILDLINK_ABI_DEPENDS.hs-uniplate+=	hs-uniplate>=1.6.13nb11
+BUILDLINK_ABI_DEPENDS.hs-uniplate+=	hs-uniplate>=1.6.13nb12
 BUILDLINK_PKGSRCDIR.hs-uniplate?=	../../devel/hs-uniplate
 
 .include "../../devel/hs-hashable/buildlink3.mk"

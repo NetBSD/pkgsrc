@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/08/13 11:06:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/13 14:39:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-hinotify
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hinotify
 HS_HINOTIFY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hinotify+=	hs-hinotify>=0.4.1
-BUILDLINK_ABI_DEPENDS.hs-hinotify+=	hs-hinotify>=0.4.1nb7
+BUILDLINK_ABI_DEPENDS.hs-hinotify+=	hs-hinotify>=0.4.1nb8
 BUILDLINK_PKGSRCDIR.hs-hinotify?=	../../devel/hs-hinotify
 
 .include "../../mk/bsd.fast.prefs.mk"

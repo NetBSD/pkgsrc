@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/08/13 11:07:42 pho Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/13 14:40:03 pho Exp $
 
 DISTNAME=	http-conduit-2.3.9.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

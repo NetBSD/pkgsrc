@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:02 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:21 pho Exp $
 
 DISTNAME=	th-expand-syns-0.4.12.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

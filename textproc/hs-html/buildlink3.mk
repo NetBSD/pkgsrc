@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-html
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-html
 HS_HTML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-html+=	hs-html>=1.0.1.2
-BUILDLINK_ABI_DEPENDS.hs-html+=	hs-html>=1.0.1.2nb11
+BUILDLINK_ABI_DEPENDS.hs-html+=	hs-html>=1.0.1.2nb12
 BUILDLINK_PKGSRCDIR.hs-html?=	../../textproc/hs-html
 .endif	# HS_HTML_BUILDLINK3_MK
 

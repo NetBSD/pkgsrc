@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:06:53 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:11 pho Exp $
 
 DISTNAME=	prettyclass-1.0.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

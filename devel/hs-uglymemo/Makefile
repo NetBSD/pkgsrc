@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/08/13 11:07:04 pho Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/13 14:39:23 pho Exp $
 
 DISTNAME=	uglymemo-0.1.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

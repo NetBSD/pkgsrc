@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:30 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:50 pho Exp $
 
 BUILDLINK_TREE+=	hs-csv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-csv
 HS_CSV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-csv+=	hs-csv>=0.1.2
-BUILDLINK_ABI_DEPENDS.hs-csv+=	hs-csv>=0.1.2nb11
+BUILDLINK_ABI_DEPENDS.hs-csv+=	hs-csv>=0.1.2nb12
 BUILDLINK_PKGSRCDIR.hs-csv?=	../../textproc/hs-csv
 .endif	# HS_CSV_BUILDLINK3_MK
 

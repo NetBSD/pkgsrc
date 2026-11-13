@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:07:15 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:39:34 pho Exp $
 
 BUILDLINK_TREE+=	hs-mod
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mod
 HS_MOD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mod+=	hs-mod>=0.2.0
-BUILDLINK_ABI_DEPENDS.hs-mod+=	hs-mod>=0.2.0.1nb5
+BUILDLINK_ABI_DEPENDS.hs-mod+=	hs-mod>=0.2.0.1nb6
 BUILDLINK_PKGSRCDIR.hs-mod?=	../../math/hs-mod
 
 .include "../../math/hs-semirings/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/08/13 11:07:15 pho Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/13 14:39:35 pho Exp $
 
 DISTNAME=	profunctors-5.6.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org

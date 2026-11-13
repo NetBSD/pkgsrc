@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/08/13 11:07:30 pho Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/13 14:39:51 pho Exp $
 
 DISTNAME=	edit-distance-0.2.2.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

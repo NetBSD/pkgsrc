@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/08/13 11:07:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2026/11/13 14:39:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-typed-process
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-typed-process
 HS_TYPED_PROCESS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-typed-process+=	hs-typed-process>=0.2.12
-BUILDLINK_ABI_DEPENDS.hs-typed-process+=	hs-typed-process>=0.2.12.0nb3
+BUILDLINK_ABI_DEPENDS.hs-typed-process+=	hs-typed-process>=0.2.12.0nb4
 BUILDLINK_PKGSRCDIR.hs-typed-process?=		../../sysutils/hs-typed-process
 
 .include "../../devel/hs-async/buildlink3.mk"

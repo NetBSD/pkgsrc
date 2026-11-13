@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:06:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/11/13 14:38:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-tar-conduit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tar-conduit
 HS_TAR_CONDUIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tar-conduit+=	hs-tar-conduit>=0.4.1
-BUILDLINK_ABI_DEPENDS.hs-tar-conduit+=	hs-tar-conduit>=0.4.1nb3
+BUILDLINK_ABI_DEPENDS.hs-tar-conduit+=	hs-tar-conduit>=0.4.1nb4
 BUILDLINK_PKGSRCDIR.hs-tar-conduit?=	../../archivers/hs-tar-conduit
 
 .include "../../devel/hs-conduit/buildlink3.mk"

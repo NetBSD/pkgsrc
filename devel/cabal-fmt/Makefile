@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/08/13 11:06:26 pho Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/13 14:38:44 pho Exp $
 
 DISTNAME=	cabal-fmt-0.1.12
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

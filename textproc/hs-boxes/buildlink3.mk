@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:07:28 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/11/13 14:39:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-boxes
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-boxes
 HS_BOXES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-boxes+=	hs-boxes>=0.1.5
-BUILDLINK_ABI_DEPENDS.hs-boxes+=	hs-boxes>=0.1.5nb8
+BUILDLINK_ABI_DEPENDS.hs-boxes+=	hs-boxes>=0.1.5nb9
 BUILDLINK_PKGSRCDIR.hs-boxes?=		../../textproc/hs-boxes
 
 .include "../../devel/hs-split/buildlink3.mk"

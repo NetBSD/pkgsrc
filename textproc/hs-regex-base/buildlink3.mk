@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/08/13 11:07:34 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/11/13 14:39:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-regex-base
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-regex-base
 HS_REGEX_BASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-regex-base+=	hs-regex-base>=0.94.0
-BUILDLINK_ABI_DEPENDS.hs-regex-base+=	hs-regex-base>=0.94.0.2nb9
+BUILDLINK_ABI_DEPENDS.hs-regex-base+=	hs-regex-base>=0.94.0.2nb10
 BUILDLINK_PKGSRCDIR.hs-regex-base?=	../../textproc/hs-regex-base
 .endif	# HS_REGEX_BASE_BUILDLINK3_MK
 

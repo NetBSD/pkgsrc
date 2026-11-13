@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:04 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:24 pho Exp $
 
 DISTNAME=	unlifted-0.2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

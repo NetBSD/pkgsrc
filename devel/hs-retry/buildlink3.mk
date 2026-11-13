@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:06:55 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:39:14 pho Exp $
 
 BUILDLINK_TREE+=	hs-retry
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-retry
 HS_RETRY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-retry+=	hs-retry>=0.9.3
-BUILDLINK_ABI_DEPENDS.hs-retry+=	hs-retry>=0.9.3.1nb5
+BUILDLINK_ABI_DEPENDS.hs-retry+=	hs-retry>=0.9.3.1nb6
 BUILDLINK_PKGSRCDIR.hs-retry?=		../../devel/hs-retry
 
 .include "../../devel/hs-mtl-compat/buildlink3.mk"

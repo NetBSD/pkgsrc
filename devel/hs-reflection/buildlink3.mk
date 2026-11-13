@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/08/13 11:06:55 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2026/11/13 14:39:14 pho Exp $
 
 BUILDLINK_TREE+=	hs-reflection
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-reflection
 HS_REFLECTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-reflection+=	hs-reflection>=2.1.9
-BUILDLINK_ABI_DEPENDS.hs-reflection+=	hs-reflection>=2.1.9nb3
+BUILDLINK_ABI_DEPENDS.hs-reflection+=	hs-reflection>=2.1.9nb4
 BUILDLINK_PKGSRCDIR.hs-reflection?=	../../devel/hs-reflection
 .endif	# HS_REFLECTION_BUILDLINK3_MK
 

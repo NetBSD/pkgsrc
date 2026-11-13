@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/08/13 11:06:58 pho Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/13 14:39:17 pho Exp $
 
 DISTNAME=	silently-1.2.5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:40:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-hourglass
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hourglass
 HS_HOURGLASS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hourglass+=	hs-hourglass>=0.2.12
-BUILDLINK_ABI_DEPENDS.hs-hourglass+=	hs-hourglass>=0.2.12nb11
+BUILDLINK_ABI_DEPENDS.hs-hourglass+=	hs-hourglass>=0.2.12nb12
 BUILDLINK_PKGSRCDIR.hs-hourglass?=	../../time/hs-hourglass
 .endif	# HS_HOURGLASS_BUILDLINK3_MK
 

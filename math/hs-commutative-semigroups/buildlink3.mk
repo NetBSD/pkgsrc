@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:07:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:39:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-commutative-semigroups
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-commutative-semigroups
 HS_COMMUTATIVE_SEMIGROUPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-commutative-semigroups+=	hs-commutative-semigroups>=0.2.0
-BUILDLINK_ABI_DEPENDS.hs-commutative-semigroups+=	hs-commutative-semigroups>=0.2.0.1nb3
+BUILDLINK_ABI_DEPENDS.hs-commutative-semigroups+=	hs-commutative-semigroups>=0.2.0.1nb4
 BUILDLINK_PKGSRCDIR.hs-commutative-semigroups?=		../../math/hs-commutative-semigroups
 .endif	# HS_COMMUTATIVE_SEMIGROUPS_BUILDLINK3_MK
 

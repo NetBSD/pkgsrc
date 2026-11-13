@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/08/13 11:07:24 pho Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/13 14:39:44 pho Exp $
 
 DISTNAME=	disk-free-space-0.1.0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

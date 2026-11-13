@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/08/13 11:06:25 pho Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/13 14:38:42 pho Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../converters/hs-pandoc/version.mk"
 DISTNAME=	pandoc-${PANDOC_VERSION}
 CATEGORIES=	converters

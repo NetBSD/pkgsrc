@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:27 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:39:47 pho Exp $
 
 BUILDLINK_TREE+=	hs-ansi-wl-pprint
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ansi-wl-pprint
 HS_ANSI_WL_PPRINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ansi-wl-pprint+=	hs-ansi-wl-pprint>=1.0.2
-BUILDLINK_ABI_DEPENDS.hs-ansi-wl-pprint+=	hs-ansi-wl-pprint>=1.0.2nb5
+BUILDLINK_ABI_DEPENDS.hs-ansi-wl-pprint+=	hs-ansi-wl-pprint>=1.0.2nb6
 BUILDLINK_PKGSRCDIR.hs-ansi-wl-pprint?=		../../textproc/hs-ansi-wl-pprint
 
 .include "../../textproc/hs-prettyprinter-compat-ansi-wl-pprint/buildlink3.mk"

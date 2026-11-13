@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:30 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:51 pho Exp $
 
 BUILDLINK_TREE+=	hs-edit-distance
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-edit-distance
 HS_EDIT_DISTANCE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-edit-distance+=	hs-edit-distance>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-edit-distance+=	hs-edit-distance>=0.2.2.1nb11
+BUILDLINK_ABI_DEPENDS.hs-edit-distance+=	hs-edit-distance>=0.2.2.1nb12
 BUILDLINK_PKGSRCDIR.hs-edit-distance?=		../../textproc/hs-edit-distance
 
 .include "../../devel/hs-random/buildlink3.mk"

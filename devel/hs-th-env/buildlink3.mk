@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:07:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2026/11/13 14:39:21 pho Exp $
 
 BUILDLINK_TREE+=	hs-th-env
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-th-env
 HS_TH_ENV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-th-env+=	hs-th-env>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-th-env+=	hs-th-env>=0.1.1nb7
+BUILDLINK_ABI_DEPENDS.hs-th-env+=	hs-th-env>=0.1.1nb8
 BUILDLINK_PKGSRCDIR.hs-th-env?=		../../devel/hs-th-env
 
 .include "../../devel/hs-th-compat/buildlink3.mk"

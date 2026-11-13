@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/08/13 11:06:34 pho Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/13 14:38:52 pho Exp $
 
 DISTNAME=	conduit-1.3.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

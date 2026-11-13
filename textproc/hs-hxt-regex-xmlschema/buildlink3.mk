@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:07:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-hxt-regex-xmlschema
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hxt-regex-xmlschema
 HS_HXT_REGEX_XMLSCHEMA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hxt-regex-xmlschema+=	hs-hxt-regex-xmlschema>=9.2.0
-BUILDLINK_ABI_DEPENDS.hs-hxt-regex-xmlschema+=	hs-hxt-regex-xmlschema>=9.2.0.7nb11
+BUILDLINK_ABI_DEPENDS.hs-hxt-regex-xmlschema+=	hs-hxt-regex-xmlschema>=9.2.0.7nb12
 BUILDLINK_PKGSRCDIR.hs-hxt-regex-xmlschema?=	../../textproc/hs-hxt-regex-xmlschema
 
 .include "../../textproc/hs-hxt-charproperties/buildlink3.mk"

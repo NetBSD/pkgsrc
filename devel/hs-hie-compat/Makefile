@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/08/13 11:06:43 pho Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/13 14:39:02 pho Exp $
 
 DISTNAME=	hie-compat-0.3.1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

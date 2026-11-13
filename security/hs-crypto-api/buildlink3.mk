@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2026/11/13 14:39:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-crypto-api
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-crypto-api
 HS_CRYPTO_API_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-crypto-api+=	hs-crypto-api>=0.13.3
-BUILDLINK_ABI_DEPENDS.hs-crypto-api+=	hs-crypto-api>=0.13.3nb5
+BUILDLINK_ABI_DEPENDS.hs-crypto-api+=	hs-crypto-api>=0.13.3nb6
 BUILDLINK_PKGSRCDIR.hs-crypto-api?=	../../security/hs-crypto-api
 
 .include "../../devel/hs-cereal/buildlink3.mk"

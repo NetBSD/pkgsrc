@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2025/08/13 11:07:16 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2026/11/13 14:39:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-semigroups
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-semigroups
 HS_SEMIGROUPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-semigroups+=	hs-semigroups>=0.20
-BUILDLINK_ABI_DEPENDS.hs-semigroups+=	hs-semigroups>=0.20nb9
+BUILDLINK_ABI_DEPENDS.hs-semigroups+=	hs-semigroups>=0.20nb10
 BUILDLINK_PKGSRCDIR.hs-semigroups?=	../../math/hs-semigroups
 
 .include "../../devel/hs-hashable/buildlink3.mk"

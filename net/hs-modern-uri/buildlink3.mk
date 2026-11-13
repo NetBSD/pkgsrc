@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:07:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/11/13 14:39:38 pho Exp $
 
 BUILDLINK_TREE+=	hs-modern-uri
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-modern-uri
 HS_MODERN_URI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-modern-uri+=	hs-modern-uri>=0.3.6
-BUILDLINK_ABI_DEPENDS.hs-modern-uri+=	hs-modern-uri>=0.3.6.1nb3
+BUILDLINK_ABI_DEPENDS.hs-modern-uri+=	hs-modern-uri>=0.3.6.1nb4
 BUILDLINK_PKGSRCDIR.hs-modern-uri?=	../../net/hs-modern-uri
 
 .include "../../devel/hs-QuickCheck/buildlink3.mk"

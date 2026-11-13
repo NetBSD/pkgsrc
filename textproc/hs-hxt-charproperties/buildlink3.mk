@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:07:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-hxt-charproperties
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hxt-charproperties
 HS_HXT_CHARPROPERTIES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hxt-charproperties+=	hs-hxt-charproperties>=9.5.0
-BUILDLINK_ABI_DEPENDS.hs-hxt-charproperties+=	hs-hxt-charproperties>=9.5.0.0nb11
+BUILDLINK_ABI_DEPENDS.hs-hxt-charproperties+=	hs-hxt-charproperties>=9.5.0.0nb12
 BUILDLINK_PKGSRCDIR.hs-hxt-charproperties?=	../../textproc/hs-hxt-charproperties
 .endif	# HS_HXT_CHARPROPERTIES_BUILDLINK3_MK
 

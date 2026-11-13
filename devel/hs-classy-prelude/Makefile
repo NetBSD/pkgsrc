@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/08/13 11:06:34 pho Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/13 14:38:51 pho Exp $
 
 DISTNAME=	classy-prelude-1.5.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

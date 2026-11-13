@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/08/13 11:07:35 pho Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/13 14:39:56 pho Exp $
 
 DISTNAME=	skylighting-format-blaze-html-0.1.1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

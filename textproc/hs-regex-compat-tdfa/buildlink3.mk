@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:07:34 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/11/13 14:39:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-regex-compat-tdfa
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-regex-compat-tdfa
 HS_REGEX_COMPAT_TDFA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-regex-compat-tdfa+=	hs-regex-compat-tdfa>=0.95.1
-BUILDLINK_ABI_DEPENDS.hs-regex-compat-tdfa+=	hs-regex-compat-tdfa>=0.95.1.4nb8
+BUILDLINK_ABI_DEPENDS.hs-regex-compat-tdfa+=	hs-regex-compat-tdfa>=0.95.1.4nb9
 BUILDLINK_PKGSRCDIR.hs-regex-compat-tdfa?=	../../textproc/hs-regex-compat-tdfa
 
 .include "../../textproc/hs-regex-base/buildlink3.mk"

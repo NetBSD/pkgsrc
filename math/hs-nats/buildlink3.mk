@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2025/08/13 11:07:15 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2026/11/13 14:39:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-nats
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-nats
 HS_NATS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-nats+=	hs-nats>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-nats+=	hs-nats>=1.1.2nb11
+BUILDLINK_ABI_DEPENDS.hs-nats+=	hs-nats>=1.1.2nb12
 BUILDLINK_PKGSRCDIR.hs-nats?=	../../math/hs-nats
 
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/08/13 11:06:43 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2026/11/13 14:39:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-hfsevents
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hfsevents
 HS_HFSEVENTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hfsevents+=	hs-hfsevents>=0.1.7
-BUILDLINK_ABI_DEPENDS.hs-hfsevents+=	hs-hfsevents>=0.1.7nb4
+BUILDLINK_ABI_DEPENDS.hs-hfsevents+=	hs-hfsevents>=0.1.7nb5
 BUILDLINK_PKGSRCDIR.hs-hfsevents?=	../../devel/hs-hfsevents
 
 .include "../../devel/hs-cereal/buildlink3.mk"

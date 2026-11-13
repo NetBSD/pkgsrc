@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/08/13 11:06:32 pho Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/13 14:38:49 pho Exp $
 
 DISTNAME=	bloomfilter-2.0.1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

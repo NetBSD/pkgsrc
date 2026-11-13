@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/11/08 17:58:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/13 14:39:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-ram
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ram
 HS_RAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ram+=	hs-ram>=0.22.1
-BUILDLINK_ABI_DEPENDS.hs-ram+=	hs-ram>=0.22.1
+BUILDLINK_ABI_DEPENDS.hs-ram+=	hs-ram>=0.22.1nb1
 BUILDLINK_PKGSRCDIR.hs-ram?=	../../devel/hs-ram
 
 .endif	# HS_RAM_BUILDLINK3_MK

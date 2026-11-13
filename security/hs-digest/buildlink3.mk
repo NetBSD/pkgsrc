@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2025/08/13 11:07:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/11/13 14:39:42 pho Exp $
 
 BUILDLINK_TREE+=	hs-digest
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-digest
 HS_DIGEST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-digest+=	hs-digest>=0.0.2
-BUILDLINK_ABI_DEPENDS.hs-digest+=	hs-digest>=0.0.2.1nb4
+BUILDLINK_ABI_DEPENDS.hs-digest+=	hs-digest>=0.0.2.1nb5
 BUILDLINK_PKGSRCDIR.hs-digest?=		../../security/hs-digest
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2026/11/11 11:52:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2026/11/13 14:39:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghcide
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ghcide
 HS_GHCIDE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.9.0
-BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.9.0.0nb6
+BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.9.0.0nb7
 BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 
 .include "../../converters/hs-aeson/buildlink3.mk"

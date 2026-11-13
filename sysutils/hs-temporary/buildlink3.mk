@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/08/13 11:07:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/13 14:39:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-temporary
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-temporary
 HS_TEMPORARY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-temporary+=	hs-temporary>=1.3
-BUILDLINK_ABI_DEPENDS.hs-temporary+=	hs-temporary>=1.3nb11
+BUILDLINK_ABI_DEPENDS.hs-temporary+=	hs-temporary>=1.3nb12
 BUILDLINK_PKGSRCDIR.hs-temporary?=	../../sysutils/hs-temporary
 
 .include "../../devel/hs-random/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/08/13 11:07:10 pho Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/13 14:39:29 pho Exp $
 
 DISTNAME=	hslua-2.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 
 MAINTAINER=	szptvlfn@NetBSD.org

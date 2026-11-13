@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2026/11/08 17:29:38 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/13 14:38:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-tar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tar
 HS_TAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tar+=	hs-tar>=0.6.4
-BUILDLINK_ABI_DEPENDS.hs-tar+=	hs-tar>=0.6.4.0nb4
+BUILDLINK_ABI_DEPENDS.hs-tar+=	hs-tar>=0.6.4.0nb5
 BUILDLINK_PKGSRCDIR.hs-tar?=	../../archivers/hs-tar
 
 .include "../../sysutils/hs-directory-ospath-streaming/buildlink3.mk"

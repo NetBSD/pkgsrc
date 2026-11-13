@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2026/11/13 14:39:43 pho Exp $
 
 BUILDLINK_TREE+=	hs-byteorder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-byteorder
 HS_BYTEORDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-byteorder+=	hs-byteorder>=1.0.4
-BUILDLINK_ABI_DEPENDS.hs-byteorder+=	hs-byteorder>=1.0.4nb11
+BUILDLINK_ABI_DEPENDS.hs-byteorder+=	hs-byteorder>=1.0.4nb12
 BUILDLINK_PKGSRCDIR.hs-byteorder?=	../../sysutils/hs-byteorder
 .endif	# HS_BYTEORDER_BUILDLINK3_MK
 

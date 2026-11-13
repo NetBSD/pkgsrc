@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2026/01/22 07:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/13 14:38:59 pho Exp $
 
 DISTNAME=	ghc-lib-parser-9.14.1.20251220
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

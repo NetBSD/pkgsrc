@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2026/11/09 11:31:42 pho Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/13 14:38:44 pho Exp $
 
 DISTNAME=	floskell-0.11.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

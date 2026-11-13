@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:07:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:40:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-date
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-date
 HS_HTTP_DATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-date+=	hs-http-date>=0.0.11
-BUILDLINK_ABI_DEPENDS.hs-http-date+=	hs-http-date>=0.0.11nb10
+BUILDLINK_ABI_DEPENDS.hs-http-date+=	hs-http-date>=0.0.11nb11
 BUILDLINK_PKGSRCDIR.hs-http-date?=	../../www/hs-http-date
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

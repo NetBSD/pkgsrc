@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:06:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:05 pho Exp $
 
 BUILDLINK_TREE+=	hs-lifted-async
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lifted-async
 HS_LIFTED_ASYNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lifted-async+=	hs-lifted-async>=0.10.2
-BUILDLINK_ABI_DEPENDS.hs-lifted-async+=	hs-lifted-async>=0.10.2.7nb3
+BUILDLINK_ABI_DEPENDS.hs-lifted-async+=	hs-lifted-async>=0.10.2.7nb4
 BUILDLINK_PKGSRCDIR.hs-lifted-async?=	../../devel/hs-lifted-async
 
 .include "../../devel/hs-async/buildlink3.mk"

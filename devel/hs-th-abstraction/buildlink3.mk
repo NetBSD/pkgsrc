@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/08/13 11:07:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/11/13 14:39:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-th-abstraction
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-th-abstraction
 HS_TH_ABSTRACTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-th-abstraction+=	hs-th-abstraction>=0.7.1
-BUILDLINK_ABI_DEPENDS.hs-th-abstraction+=	hs-th-abstraction>=0.7.1.0nb3
+BUILDLINK_ABI_DEPENDS.hs-th-abstraction+=	hs-th-abstraction>=0.7.1.0nb4
 BUILDLINK_PKGSRCDIR.hs-th-abstraction?=		../../devel/hs-th-abstraction
 .endif	# HS_TH_ABSTRACTION_BUILDLINK3_MK
 

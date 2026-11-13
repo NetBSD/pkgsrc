@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:07:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-unbounded-delays
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unbounded-delays
 HS_UNBOUNDED_DELAYS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unbounded-delays+=	hs-unbounded-delays>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-unbounded-delays+=	hs-unbounded-delays>=0.1.1.1nb11
+BUILDLINK_ABI_DEPENDS.hs-unbounded-delays+=	hs-unbounded-delays>=0.1.1.1nb12
 BUILDLINK_PKGSRCDIR.hs-unbounded-delays?=	../../devel/hs-unbounded-delays
 .endif	# HS_UNBOUNDED_DELAYS_BUILDLINK3_MK
 

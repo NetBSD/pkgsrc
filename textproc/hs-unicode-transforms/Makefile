@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/08/13 11:07:38 pho Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/13 14:39:59 pho Exp $
 
 DISTNAME=	unicode-transforms-0.4.0.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

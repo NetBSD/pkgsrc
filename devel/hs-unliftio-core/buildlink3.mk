@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/08/13 11:07:05 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/13 14:39:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-unliftio-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unliftio-core
 HS_UNLIFTIO_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unliftio-core+=	hs-unliftio-core>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-unliftio-core+=	hs-unliftio-core>=0.2.1.0nb5
+BUILDLINK_ABI_DEPENDS.hs-unliftio-core+=	hs-unliftio-core>=0.2.1.0nb6
 BUILDLINK_PKGSRCDIR.hs-unliftio-core?=		../../devel/hs-unliftio-core
 .endif	# HS_UNLIFTIO_CORE_BUILDLINK3_MK
 

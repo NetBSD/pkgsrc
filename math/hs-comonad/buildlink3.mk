@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:39:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-comonad
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-comonad
 HS_COMONAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-comonad+=	hs-comonad>=5.0.9
-BUILDLINK_ABI_DEPENDS.hs-comonad+=	hs-comonad>=5.0.9nb3
+BUILDLINK_ABI_DEPENDS.hs-comonad+=	hs-comonad>=5.0.9nb4
 BUILDLINK_PKGSRCDIR.hs-comonad?=	../../math/hs-comonad
 
 .include "../../devel/hs-tagged/buildlink3.mk"

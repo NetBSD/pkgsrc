@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:07:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:40:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-old-time
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-old-time
 HS_OLD_TIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-old-time+=	hs-old-time>=1.1.0
-BUILDLINK_ABI_DEPENDS.hs-old-time+=	hs-old-time>=1.1.0.4nb4
+BUILDLINK_ABI_DEPENDS.hs-old-time+=	hs-old-time>=1.1.0.4nb5
 BUILDLINK_PKGSRCDIR.hs-old-time?=	../../time/hs-old-time
 
 .include "../../devel/hs-old-locale/buildlink3.mk"

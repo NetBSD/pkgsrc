@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:06:43 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:01 pho Exp $
 
 DISTNAME=	haskell-src-meta-0.8.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

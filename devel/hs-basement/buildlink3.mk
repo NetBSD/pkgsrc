@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/08/13 11:06:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/13 14:38:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-basement
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-basement
 HS_BASEMENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-basement+=	hs-basement>=0.0.16
-BUILDLINK_ABI_DEPENDS.hs-basement+=	hs-basement>=0.0.16nb5
+BUILDLINK_ABI_DEPENDS.hs-basement+=	hs-basement>=0.0.16nb6
 BUILDLINK_PKGSRCDIR.hs-basement?=	../../devel/hs-basement
 .endif	# HS_BASEMENT_BUILDLINK3_MK
 

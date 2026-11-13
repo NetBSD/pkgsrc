@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:38 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:39:59 pho Exp $
 
 BUILDLINK_TREE+=	hs-unicode-collation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unicode-collation
 HS_UNICODE_COLLATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unicode-collation+=	hs-unicode-collation>=0.1.3
-BUILDLINK_ABI_DEPENDS.hs-unicode-collation+=	hs-unicode-collation>=0.1.3.6nb4
+BUILDLINK_ABI_DEPENDS.hs-unicode-collation+=	hs-unicode-collation>=0.1.3.6nb5
 BUILDLINK_PKGSRCDIR.hs-unicode-collation?=	../../textproc/hs-unicode-collation
 
 .include "../../devel/hs-th-lift-instances/buildlink3.mk"

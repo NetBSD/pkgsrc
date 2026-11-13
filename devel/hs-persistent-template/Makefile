@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/08/13 11:06:52 pho Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/13 14:39:11 pho Exp $
 
 DISTNAME=	persistent-template-2.12.0.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

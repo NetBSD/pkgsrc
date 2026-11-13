@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/08/13 11:07:06 pho Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/13 14:39:26 pho Exp $
 
 DISTNAME=	vector-th-unbox-0.2.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

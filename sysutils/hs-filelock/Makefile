@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:24 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:45 pho Exp $
 
 DISTNAME=	filelock-0.1.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

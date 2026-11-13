@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/08/13 11:06:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2026/11/13 14:39:07 pho Exp $
 
 BUILDLINK_TREE+=	hs-memory
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-memory
 HS_MEMORY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-memory+=	hs-memory>=0.18.0
-BUILDLINK_ABI_DEPENDS.hs-memory+=	hs-memory>=0.18.0nb8
+BUILDLINK_ABI_DEPENDS.hs-memory+=	hs-memory>=0.18.0nb9
 BUILDLINK_PKGSRCDIR.hs-memory?=		../../devel/hs-memory
 
 .include "../../devel/hs-basement/buildlink3.mk"

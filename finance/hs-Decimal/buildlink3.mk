@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/08/13 11:07:09 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2026/11/13 14:39:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-Decimal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-Decimal
 HS_DECIMAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-Decimal+=	hs-Decimal>=0.5.2
-BUILDLINK_ABI_DEPENDS.hs-Decimal+=	hs-Decimal>=0.5.2nb11
+BUILDLINK_ABI_DEPENDS.hs-Decimal+=	hs-Decimal>=0.5.2nb12
 BUILDLINK_PKGSRCDIR.hs-Decimal?=	../../finance/hs-Decimal
 .endif	# HS_DECIMAL_BUILDLINK3_MK
 

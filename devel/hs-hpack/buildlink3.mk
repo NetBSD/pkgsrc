@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/08/13 11:06:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/11/13 14:39:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-hpack
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hpack
 HS_HPACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hpack+=	hs-hpack>=0.38.0
-BUILDLINK_ABI_DEPENDS.hs-hpack+=	hs-hpack>=0.38.0nb2
+BUILDLINK_ABI_DEPENDS.hs-hpack+=	hs-hpack>=0.38.0nb3
 BUILDLINK_PKGSRCDIR.hs-hpack?=		../../devel/hs-hpack
 
 .include "../../textproc/hs-Glob/buildlink3.mk"

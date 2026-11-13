@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/08/13 11:07:19 pho Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/13 14:39:40 pho Exp $
 
 DISTNAME=	socks-0.6.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/13 11:07:28 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2026/11/13 14:39:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-charset
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-charset
 HS_CHARSET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-charset+=	hs-charset>=0.3.11
-BUILDLINK_ABI_DEPENDS.hs-charset+=	hs-charset>=0.3.11nb3
+BUILDLINK_ABI_DEPENDS.hs-charset+=	hs-charset>=0.3.11nb4
 BUILDLINK_PKGSRCDIR.hs-charset?=	../../textproc/hs-charset
 
 .include "../../devel/hs-unordered-containers/buildlink3.mk"

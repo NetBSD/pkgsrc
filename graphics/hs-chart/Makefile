@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:09 pho Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/13 14:39:29 pho Exp $
 
 DISTNAME=	Chart-1.9.5
 PKGNAME=	hs-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

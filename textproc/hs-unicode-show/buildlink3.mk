@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:38 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/13 14:39:59 pho Exp $
 
 BUILDLINK_TREE+=	hs-unicode-show
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unicode-show
 HS_UNICODE_SHOW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unicode-show+=	hs-unicode-show>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-unicode-show+=	hs-unicode-show>=0.1.1.1nb7
+BUILDLINK_ABI_DEPENDS.hs-unicode-show+=	hs-unicode-show>=0.1.1.1nb8
 BUILDLINK_PKGSRCDIR.hs-unicode-show?=	../../textproc/hs-unicode-show
 
 .include "../../devel/hs-safe/buildlink3.mk"
