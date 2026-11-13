@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7969 2026/11/13 12:27:59 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7970 2026/11/13 12:43:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11869,3 +11869,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-wcmatch to 12.0.1 [adam 2026-11-13]
 	Updated devel/py-xdis to 6.3.1 [adam 2026-11-13]
 	Updated www/grafana to 13.2.6 [wiz 2026-11-13]
+	Updated databases/postgresql14 to 14.25 [adam 2026-11-13]
+	Updated databases/postgresql15 to 15.20 [adam 2026-11-13]
+	Updated databases/postgresql16 to 16.16 [adam 2026-11-13]
+	Updated databases/postgresql17 to 17.12 [adam 2026-11-13]
+	Updated databases/postgresql18 to 18.7 [adam 2026-11-13]
