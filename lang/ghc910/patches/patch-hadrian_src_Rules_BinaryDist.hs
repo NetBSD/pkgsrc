@@ -1,4 +1,4 @@
-$NetBSD: patch-hadrian_src_Rules_BinaryDist.hs,v 1.3 2025/12/28 07:30:17 pho Exp $
+$NetBSD: patch-hadrian_src_Rules_BinaryDist.hs,v 1.4 2026/11/13 14:26:06 pho Exp $
 
 Hunk #1, #2, #4:
     Distinguish bootstrapping bindists from regular ones. This is
@@ -20,9 +20,9 @@ Hunk #0, #6:
     Bundle pkgsrc-installed dependencies with bootkits. This is
     pkgsrc-specific.
 
---- hadrian/src/Rules/BinaryDist.hs.orig	2024-05-10 05:05:49.000000000 +0000
+--- hadrian/src/Rules/BinaryDist.hs.orig	2025-09-10 16:02:37.000000000 +0000
 +++ hadrian/src/Rules/BinaryDist.hs
-@@ -13,10 +13,15 @@ import Settings
+@@ -11,10 +11,15 @@ import Settings
  import Settings.Program (programContext)
  import Target
  import Utilities
@@ -38,7 +38,7 @@ Hunk #0, #6:
  
  {-
  Note [Binary distributions]
-@@ -115,7 +120,7 @@ installTo relocatable prefix = do
+@@ -113,7 +118,7 @@ installTo relocatable prefix = do
      root <- buildRoot
      version        <- setting ProjectVersion
      targetPlatform <- setting TargetPlatformFull
@@ -47,16 +47,16 @@ Hunk #0, #6:
          bindistFilesDir  = root -/- "bindist" -/- ghcVersionPretty
      runBuilder (Configure bindistFilesDir) ["--prefix="++prefix] [] []
      let env = case relocatable of
-@@ -154,7 +159,7 @@ bindistRules = do
+@@ -148,7 +153,7 @@ bindistRules = do
  
          let ghcBuildDir      = root -/- stageString Stage1
              bindistFilesDir  = root -/- "bindist" -/- ghcVersionPretty
 -            ghcVersionPretty = "ghc-" ++ version ++ "-" ++ targetPlatform
 +            ghcVersionPretty = "ghc-" ++ version ++ "-boot-" ++ targetPlatform
-             rtsIncludeDir    = ghcBuildDir -/- "lib" -/- distDir -/- rtsDir
-                                -/- "include"
+             rtsIncludeDir    = distDir -/- "include"
  
-@@ -232,16 +237,9 @@ bindistRules = do
+         -- We 'need' all binaries and libraries
+@@ -225,16 +230,9 @@ bindistRules = do
          copyDirectory (rtsIncludeDir)         bindistFilesDir
          when windowsHost $ createGhcii (bindistFilesDir -/- "bin")
  
@@ -76,7 +76,7 @@ Hunk #0, #6:
  
          -- TODO: we should only embed the docs that have been generated
          -- depending on the current settings (flavours' "ghcDocs" field and
-@@ -319,7 +317,7 @@ bindistRules = do
+@@ -312,7 +310,7 @@ bindistRules = do
              version        <- setting ProjectVersion
              targetPlatform <- setting TargetPlatformFull
  
@@ -85,7 +85,7 @@ Hunk #0, #6:
  
              -- Finally, we create the archive <root>/bindist/ghc-X.Y.Z-platform.tar.xz
              tarPath <- builderPath (Tar Create)
-@@ -388,7 +386,7 @@ generateBuildMk = do
+@@ -381,7 +379,7 @@ generateBuildMk = do
  -- | Flag to pass to tar to use the given 'Compressor'.
  compressorTarFlag :: Compressor -> String
  compressorTarFlag Gzip  = "--gzip"
@@ -94,7 +94,7 @@ Hunk #0, #6:
  compressorTarFlag Bzip2 = "--bzip"
  
  -- | File extension to use for archives compressed with the given 'Compressor'.
-@@ -556,3 +554,248 @@ createGhcii outDir = do
+@@ -549,3 +547,248 @@ createGhcii outDir = do
        , "exec \"$(dirname \"$0\")\"/ghc --interactive \"$@\""
        ]
  

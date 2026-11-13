@@ -1,9 +1,9 @@
-$NetBSD: patch-hadrian_src_Settings_Builders_Ghc.hs,v 1.1 2025/01/29 13:21:53 pho Exp $
+$NetBSD: patch-hadrian_src_Settings_Builders_Ghc.hs,v 1.2 2026/11/13 14:26:06 pho Exp $
 
 Don't use rpaths relative to $ORIGIN. Use the final installation path. This
 is pkgsrc-specific.
 
---- hadrian/src/Settings/Builders/Ghc.hs.orig	2022-12-23 16:19:02.000000000 +0000
+--- hadrian/src/Settings/Builders/Ghc.hs.orig	2025-09-10 16:02:37.000000000 +0000
 +++ hadrian/src/Settings/Builders/Ghc.hs
 @@ -5,6 +5,7 @@ module Settings.Builders.Ghc (ghcBuilder
  import Hadrian.Haskell.Cabal
@@ -13,26 +13,23 @@ is pkgsrc-specific.
  import Flavour
  import Packages
  import Settings.Builders.Common
-@@ -104,10 +105,10 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
+@@ -95,8 +96,10 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
      fmwks   <- getContextData frameworks
      way     <- getWay
  
 -    -- Relative path from the output (rpath $ORIGIN).
 -    originPath <- dropFileName <$> getOutput
--    context <- getContext
--    libPath' <- expr (libPath context)
 +    -- Absolute rpath to the final destination.
 +    fileName <- takeFileName <$> getOutput
 +    prefix   <- fromMaybe (error "--prefix missing from the command line") <$> expr cmdPrefix
 +    projVer  <- getSetting ProjectVersion
-     st <- getStage
-     distDir <- expr (Context.distDir st)
+     context <- getContext
+     distPath <- expr (Context.distDynDir context)
  
-@@ -121,17 +122,8 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
+@@ -110,16 +113,8 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
  
      let
          dynamic = Dynamic `wayUnit` way
--        distPath = libPath' -/- distDir
 -        originToLibsDir = makeRelativeNoSysLink originPath distPath
 -        rpath
 -            -- Programs will end up in the bin dir ($ORIGIN) and will link to
@@ -44,11 +41,11 @@ is pkgsrc-specific.
 -                metaOrigin | osxTarget = "@loader_path"
 -                           | otherwise = "$ORIGIN"
 +        ghclibdir = prefix -/- "lib" -/- ("ghc-" ++ projVer)
-+        rpath     = ghclibdir -/- "lib" -/- distDir
++        rpath     = ghclibdir -/- "lib" -/- (takeFileName distPath)
  
          -- TODO: an alternative would be to generalize by linking with extra
          -- bundled libraries, but currently the rts is the only use case. It is
-@@ -144,23 +136,13 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
+@@ -132,23 +127,13 @@ ghcLinkArgs = builder (Ghc LinkHs) ? do
              , arg ("-l" ++ libffiName')
              ]
  
