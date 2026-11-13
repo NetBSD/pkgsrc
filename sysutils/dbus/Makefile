@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2026/11/12 20:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2026/11/13 08:10:39 wiz Exp $
 
 DISTNAME=	dbus-1.16.4
 CATEGORIES=	sysutils
@@ -48,7 +48,8 @@ SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/x
 
 .if ${OPSYS} == "SunOS"
 MESON_ARGS+=		-Dinotify=disabled
-MESON_ARGS+=		-Dsolaris_console_owner_file="/dev/vt/console_user"
+# Solaris only, not for Illumos - how to enable it there?
+#MESON_ARGS+=		-Dsolaris_console_owner_file="/dev/vt/console_user"
 .endif
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
