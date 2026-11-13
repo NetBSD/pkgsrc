@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2026/10/16 19:44:02 adam Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/13 05:12:18 adam Exp $
 
-DISTNAME=	bottleneck-1.6.0
+DISTNAME=	bottleneck-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Bottleneck/}
@@ -11,7 +11,7 @@ COMMENT=	Collection of fast NumPy array functions written in C
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
+TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.29:../../devel/py-versioneer
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
