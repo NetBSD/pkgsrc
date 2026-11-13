@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2026/10/23 05:54:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2026/11/13 05:27:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -54,6 +54,10 @@ ${PYSITELIB}/botocore/data/accessanalyzer/2019-11-01/examples-1.json
 ${PYSITELIB}/botocore/data/accessanalyzer/2019-11-01/paginators-1.json
 ${PYSITELIB}/botocore/data/accessanalyzer/2019-11-01/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/accessanalyzer/2019-11-01/service-2.json
+${PYSITELIB}/botocore/data/account-access-runtime/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/account-access-runtime/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/account-access-runtime/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/account-access-runtime/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/account-access/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/account-access/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/account-access/2018-05-10/service-2.json
@@ -1617,6 +1621,7 @@ ${PYSITELIB}/botocore/data/route53globalresolver/2022-09-27/waiters-2.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/route53profiles/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/route53profiles/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/route53resolver/2018-04-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/route53resolver/2018-04-01/examples-1.json
 ${PYSITELIB}/botocore/data/route53resolver/2018-04-01/paginators-1.json
@@ -2122,6 +2127,9 @@ ${PYSITELIB}/botocore/retryhandler.pyo
 ${PYSITELIB}/botocore/serialize.py
 ${PYSITELIB}/botocore/serialize.pyc
 ${PYSITELIB}/botocore/serialize.pyo
+${PYSITELIB}/botocore/service_module_names.py
+${PYSITELIB}/botocore/service_module_names.pyc
+${PYSITELIB}/botocore/service_module_names.pyo
 ${PYSITELIB}/botocore/session.py
 ${PYSITELIB}/botocore/session.pyc
 ${PYSITELIB}/botocore/session.pyo
