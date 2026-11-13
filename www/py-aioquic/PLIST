@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/10/28 07:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/13 05:15:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,6 +13,9 @@ ${PYSITELIB}/aioquic/_buffer.so
 ${PYSITELIB}/aioquic/_crypto.py
 ${PYSITELIB}/aioquic/_crypto.pyc
 ${PYSITELIB}/aioquic/_crypto.pyo
+${PYSITELIB}/aioquic/_deprecations.py
+${PYSITELIB}/aioquic/_deprecations.pyc
+${PYSITELIB}/aioquic/_deprecations.pyo
 ${PYSITELIB}/aioquic/asyncio/__init__.py
 ${PYSITELIB}/aioquic/asyncio/__init__.pyc
 ${PYSITELIB}/aioquic/asyncio/__init__.pyo
@@ -74,6 +77,9 @@ ${PYSITELIB}/aioquic/quic/crypto.pyo
 ${PYSITELIB}/aioquic/quic/events.py
 ${PYSITELIB}/aioquic/quic/events.pyc
 ${PYSITELIB}/aioquic/quic/events.pyo
+${PYSITELIB}/aioquic/quic/exceptions.py
+${PYSITELIB}/aioquic/quic/exceptions.pyc
+${PYSITELIB}/aioquic/quic/exceptions.pyo
 ${PYSITELIB}/aioquic/quic/logger.py
 ${PYSITELIB}/aioquic/quic/logger.pyc
 ${PYSITELIB}/aioquic/quic/logger.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/11/10 13:06:06 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/13 05:15:09 adam Exp $
 
-DISTNAME=	aioquic-1.7.2
+DISTNAME=	aioquic-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioquic/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=43.0.0:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-pylsqpack>=1.0.0:../../www/py-pylsqpack
+DEPENDS+=	${PYPKGPREFIX}-pylsqpack>=1.1.1:../../www/py-pylsqpack
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=24.1.0:../../security/py-service_identity
 
 .include "../../lang/python/wheel.mk"
