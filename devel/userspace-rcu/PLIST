@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/09/06 09:28:59 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/13 17:04:05 adam Exp $
 include/urcu-bp.h
 include/urcu-call-rcu.h
 include/urcu-defer.h
@@ -72,6 +72,7 @@ include/urcu/uatomic/alpha.h
 include/urcu/uatomic/api.h
 include/urcu/uatomic/arm.h
 include/urcu/uatomic/builtins-generic.h
+include/urcu/uatomic/builtins-x86.h
 include/urcu/uatomic/builtins.h
 include/urcu/uatomic/gcc.h
 include/urcu/uatomic/generic.h

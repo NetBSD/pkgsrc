@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/07/14 17:59:22 he Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/13 17:04:05 adam Exp $
 
-DISTNAME=	userspace-rcu-0.15.3
-PKGREVISION=	1
+DISTNAME=	userspace-rcu-0.15.7
 CATEGORIES=	devel
 MASTER_SITES=	https://lttng.org/files/urcu/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,11 +10,11 @@ HOMEPAGE=	https://liburcu.org/
 COMMENT=	Userspace RCU (Read Copy Update)
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=		yes
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config bash:test
-USE_LANGUAGES+=		c c++
-USE_CXX_FEATURES+=	c++11
+GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
 # liburcu requires thread local storage support; thus,
