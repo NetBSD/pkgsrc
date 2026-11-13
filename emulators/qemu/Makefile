@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.418 2026/11/11 11:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.419 2026/11/13 13:04:56 mef Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../emulators/qemu/Makefile.common"
 
 CATEGORIES=	emulators
@@ -14,7 +14,10 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
-GCC_REQD+=	7
+# configure log ask for newer version
+# ../meson.build:346:4: ERROR: Problem encountered: You either need GCC v10.4 or Clang v10.0 (or XCode Clang v15.0) to compile QEMU
+#  (checked above on NetBSD/amd64 9.4, by mef@)
+GCC_REQD+=	10
 
 .include "options.mk"
 
