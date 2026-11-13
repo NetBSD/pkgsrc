@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/16 20:40:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/13 17:03:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -785,6 +785,9 @@ ${PYSITELIB}/kivy/tests/test_uix_videoplayer.pyo
 ${PYSITELIB}/kivy/tests/test_uix_widget.py
 ${PYSITELIB}/kivy/tests/test_uix_widget.pyc
 ${PYSITELIB}/kivy/tests/test_uix_widget.pyo
+${PYSITELIB}/kivy/tests/test_urlrequest/conftest.py
+${PYSITELIB}/kivy/tests/test_urlrequest/conftest.pyc
+${PYSITELIB}/kivy/tests/test_urlrequest/conftest.pyo
 ${PYSITELIB}/kivy/tests/test_urlrequest/test_urlrequest_requests.py
 ${PYSITELIB}/kivy/tests/test_urlrequest/test_urlrequest_requests.pyc
 ${PYSITELIB}/kivy/tests/test_urlrequest/test_urlrequest_requests.pyo
