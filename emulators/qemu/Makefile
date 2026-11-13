@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2026/11/13 13:04:56 mef Exp $
+# $NetBSD: Makefile,v 1.420 2026/11/13 18:15:50 gdt Exp $
 
 PKGREVISION= 2
 .include "../../emulators/qemu/Makefile.common"
@@ -7,17 +7,27 @@ CATEGORIES=	emulators
 
 COMMENT=	Machine emulator and virtualizer
 
-USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
+# qemu does not clearly document which language variants are required.
+# Probe the reality by forcing older standards, and declare the least
+# standard that builds.
+# C: FAILS: c99 gnu99 c11 WORKS: gnu11
+USE_CC_FEATURES=	gnu11
+# C++: FAILS: c++03 c++11 WORKS
+USE_CXX_FEATURES=	c++17
+
+# Even with a compiler that supports the required standards, upstream
+# inexplicably demands a newer gcc with an explicit configure check.
+# As of 11.1.3 in 202611, gcc 10 is required.  Rounding up per gcc.mk
+# norms, that's still 10.
+#   ../meson.build:346:4: ERROR: Problem encountered: You either need GCC v10.4 or Clang v10.0 (or XCode Clang v15.0) to compile QEMU
+#   (checked above on NetBSD/amd64 9.4, by mef@, 202611)
+GCC_REQD+=	10
+
+USE_CURSES=		resize_term wide
 USE_TOOLS+=		bison gdbus-codegen flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
-
-# https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
-# configure log ask for newer version
-# ../meson.build:346:4: ERROR: Problem encountered: You either need GCC v10.4 or Clang v10.0 (or XCode Clang v15.0) to compile QEMU
-#  (checked above on NetBSD/amd64 9.4, by mef@)
-GCC_REQD+=	10
 
 .include "options.mk"
 
