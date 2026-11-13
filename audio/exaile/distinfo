@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.19 2023/11/19 23:38:27 nia Exp $
+$NetBSD: distinfo,v 1.20 2026/11/13 14:37:34 nia Exp $
 
 BLAKE2s (exaile-4.1.3.tar.gz) = e8e61f030f1c5fdf66fc84313ebd8eff5d078f4843a8e26de903ecb4efcf5a34
 SHA512 (exaile-4.1.3.tar.gz) = f01dba6e66cfa71ba79746af9dea9294c85994ff38f4be56a9d074f62f1a656d71aebc344a4a00ecb926c94ca0aeabdde44a142a210842b86dd15f7f0d3ca823
 Size (exaile-4.1.3.tar.gz) = 3919798 bytes
 SHA1 (patch-exaile) = 738848e3f57ff4cf202478be6d1fe30bc3a93533
+SHA1 (patch-xl_main.py) = 545761868c65b42209051ef4e886da3b93102939
+SHA1 (patch-xl_plugins.py) = a80d4803206951ec5a12e7aed29cc29e040927f3
