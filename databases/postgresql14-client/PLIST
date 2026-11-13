@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/02/13 10:52:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/13 12:42:40 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -1167,5 +1167,25 @@ ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_waldump-14.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pgscripts-14.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/psql-14.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpg-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpglib6-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/initdb-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/libpq5-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_amcheck-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_archivecleanup-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_basebackup-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_checksums-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_config-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_controldata-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_ctl-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_dump-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_resetwal-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_rewind-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_fsync-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_timing-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_upgrade-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_verifybackup-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_waldump-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pgscripts-14.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/psql-14.mo
 share/postgresql/pg_service.conf.sample
 share/postgresql/psqlrc.sample

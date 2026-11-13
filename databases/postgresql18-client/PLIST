@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/10/06 13:30:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/13 12:42:44 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -1324,6 +1324,7 @@ ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_amcheck-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_archivecleanup-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_basebackup-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_checksums-18.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_combinebackup-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_config-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_controldata-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_ctl-18.mo
@@ -1335,6 +1336,7 @@ ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_test_timing-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_upgrade-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_verifybackup-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_waldump-18.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_walsummary-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pgscripts-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/psql-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpg-18.mo
@@ -1342,16 +1344,23 @@ ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpglib6-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/initdb-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/libpq5-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_amcheck-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_archivecleanup-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_basebackup-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_checksums-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_combinebackup-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_config-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_controldata-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_ctl-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_dump-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_resetwal-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_rewind-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_fsync-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_timing-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_upgrade-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_verifybackup-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_waldump-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_walsummary-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pgscripts-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/psql-18.mo
 share/postgresql/pg_service.conf.sample
 share/postgresql/postgres.bki

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/12/19 12:20:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/13 12:42:45 adam Exp $
 bin/postgres
 include/postgresql/server/plpgsql.h
 ${PLIST.llvm}lib/postgresql/bitcode/postgres.index.bc
@@ -339,6 +339,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth-oauth.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth-sasl.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth-scram.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/auth.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-fe-helpers.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-fsstubs.bc
 ${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-gssapi-common.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/libpq/be-secure-common.bc
@@ -854,6 +855,7 @@ ${PLIST.nls}share/locale/vi/LC_MESSAGES/plpgsql-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/plpgsql-18.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/postgres-18.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/plpgsql-18.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/postgres-18.mo
 share/postgresql/errcodes.txt
 share/postgresql/extension/plpgsql--1.0.sql
 share/postgresql/extension/plpgsql.control

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/19 13:16:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/13 12:42:42 adam Exp $
 lib/postgresql/pltcl.so
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/pltcl-15.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/pltcl-15.mo
@@ -17,6 +17,7 @@ ${PLIST.nls}share/locale/tr/LC_MESSAGES/pltcl-15.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pltcl-15.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/pltcl-15.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pltcl-15.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pltcl-15.mo
 share/postgresql/extension/pltcl--1.0.sql
 share/postgresql/extension/pltcl.control
 share/postgresql/extension/pltclu--1.0.sql
