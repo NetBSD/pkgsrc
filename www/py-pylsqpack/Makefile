@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/10/28 07:13:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/13 05:17:21 adam Exp $
 
-DISTNAME=	pylsqpack-1.0.0
+DISTNAME=	pylsqpack-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylsqpack/}
