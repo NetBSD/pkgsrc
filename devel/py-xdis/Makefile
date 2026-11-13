@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2026/03/30 15:31:56 adam Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/13 09:50:56 adam Exp $
 
-DISTNAME=	xdis-6.3.0
+DISTNAME=	xdis-6.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -16,9 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pydisasm pydisasm-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pydisasm
 
 # test status as of 6.1.8
 # 1 error
