@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7972 2026/11/13 14:57:52 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7973 2026/11/13 15:06:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11876,3 +11876,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/postgresql18 to 18.7 [adam 2026-11-13]
 	Updated lang/ghc910 to 9.10.3 [pho 2026-11-13]
 	Updated net/bgpipe to 0.25.0 [drixter 2026-11-13]
+	Updated math/ggml to 1.0.0 [wiz 2026-11-13]
