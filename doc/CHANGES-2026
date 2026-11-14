@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7989 2026/11/14 22:02:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7990 2026/11/14 22:03:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11895,3 +11895,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/vfu to 5.09 [drixter 2026-11-14]
 	Updated lang/gnu-apl to 2.0nb1 [drixter 2026-11-14]
 	Updated lang/rust to 1.99.1 [wiz 2026-11-14]
+	Updated lang/rust-bin to 1.99.1 [wiz 2026-11-14]
