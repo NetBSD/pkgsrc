@@ -1,0 +1,10 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2026/11/14 07:23:20 wiz Exp $
+
+If there are audible clicks or glitches try to increase "Internal
+Buffer Size" option.
+
+Yohimi will hang after exiting when connected to a jack server.
+Just kill it and make your day.
+
+======================================================================

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/14 07:23:20 wiz Exp $
+
+BLAKE2s (yoshimi-2.3.6.5.tar.gz) = a41989d1e2471950a9d666247ba76924b133b2c44ccd1b68eaea1b7994ea10bb
+SHA512 (yoshimi-2.3.6.5.tar.gz) = 0e66a4a2616474c0a2f81ea5cec835740d4b0703be720833ec9f7dad2870f002c17ad1555b6d63783bcf0ecaca780431102b3f13693153e674734f3b7753887e
+Size (yoshimi-2.3.6.5.tar.gz) = 7587667 bytes
