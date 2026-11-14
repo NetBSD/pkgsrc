@@ -1,0 +1,13 @@
+The groff-pdfmark package provides a suite of GNU roff macro
+packages together with the pdfroff Bourne shell driver script. It
+facilitates creation of PDF files that contain active hyperlinks,
+bookmarks, document metadata and other PDF features, using GNU
+troff as the primary typesetting engine.
+
+Originally distributed as a contributed component of GNU groff, the
+macros and pdfroff were removed from the main groff distribution
+starting with version 1.24 and are now maintained separately.
+
+This package installs the macros into share/groff/site-tmac so that
+they are automatically found by groff without modifying the main
+groff package.

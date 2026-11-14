@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/14 07:36:01 wiz Exp $
+
+BLAKE2s (groff-pdfmark-20261029.1-src.tar.xz) = 54abc9e65a0d72c0ca5a5d32e8b5f4423dd5e60fcf6d5b855e2ece29ea5620fa
+SHA512 (groff-pdfmark-20261029.1-src.tar.xz) = 1460a2394451dffd5be029be0bec193c1810580e4a51d6f6f761690694e475cd40d6d60564f865529afbd4b843cae4bfa41f87e37b84343959f91df97072829d
+Size (groff-pdfmark-20261029.1-src.tar.xz) = 293272 bytes
