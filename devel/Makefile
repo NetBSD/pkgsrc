@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4734 2026/11/12 15:03:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.4735 2026/11/14 07:28:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -395,6 +395,7 @@ SUBDIR+=	elftoolchain
 SUBDIR+=	elib
 SUBDIR+=	emacs-ilisp
 SUBDIR+=	emacs20-elib
+SUBDIR+=	emmylua-ls
 SUBDIR+=	empty
 SUBDIR+=	erlang-base64url
 SUBDIR+=	erlang-cache_tab
