@@ -1,0 +1,24 @@
+$NetBSD: patch-HOWTOs_Makefile_in,v 1.1 2026/11/14 21:36:38 drixter Exp $
+
+SunOS fix: use command -v instead which, because which works differently there
+
+--- HOWTOs/Makefile.in.orig	Wed Oct 14 19:46:12 2026
++++ HOWTOs/Makefile.in	Wed Oct 14 19:47:48 2026
+@@ -612,7 +612,7 @@
+ # The .html has a stupid <noscript> tag that needs to be removed
+ # in order to properly display the Table of Contents.
+ .asciidoc.html:
+-	@if [ -z `which asciidoc` ] ; then touch $@ ;        \
++	@if ! command -v asciidoc >/dev/null 2>&1 ; then touch $@ ;        \
+ 	else asciidoc -a icons -o $@ $< ;                    \
+         sed -i 's|Cpp|C++|g'                        $@ ; \
+         sed -i 's|<pre><code>|<pre>\n\n<code>|'     $@ ; \
+@@ -624,7 +624,7 @@
+ # use LibreOffic Writer (if installed) to convert .html to .pdf
+ #
+ .html.pdf:
+-	@if [ -z `which lowriter` ] ; then touch $@  ; \
++	@if ! command -v lowriter >/dev/null 2>&1 ; then touch $@  ; \
+ 	else lowriter --headless --convert-to pdf $< ; \
+ 	fi
+ 

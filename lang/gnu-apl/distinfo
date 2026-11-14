@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.1 2026/10/14 08:16:40 drixter Exp $
+$NetBSD: distinfo,v 1.2 2026/11/14 21:36:38 drixter Exp $
 
 BLAKE2s (apl-2.0.tar.gz) = aa61bb4f3369709cf39e15431b75aa1e5c7d61a613c1f02dfb52f4d87e106c70
 SHA512 (apl-2.0.tar.gz) = d110505eb34b0f7a6cf17a51462216b9a3b4bf93a932308be38bc2d37d55738bd09f0a5fe8c9e2f16dc14ff7de705e223a0a3242af18ab0f41e55fc3cdaf0fa6
 Size (apl-2.0.tar.gz) = 5128916 bytes
+SHA1 (patch-HOWTOs_Makefile_in) = 4635dd59d8964e3776f3de888aa748074d3c489c
+SHA1 (patch-src_Backtrace.cc) = d8310661ee1e2b7c19f7cb6db93fec73b015d4b6
+SHA1 (patch-src_Common.hh) = 8d323cb36ea35b8bfdfbdc2c26da6ae25fd4b026
+SHA1 (patch-src_Quad_JSON.cc) = aa81f8c08bf20c702e6b17d8cd4b7598f2214c33
+SHA1 (patch-src_Quad_XML.cc) = 9f46316e7a248df7c2b987639eb2f659094db272
+SHA1 (patch-src_main.cc) = 5c11ae29a114399ffbe51f86ce49349280228087

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/11 11:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/14 21:36:38 drixter Exp $
 
 DISTNAME=		apl-2.0
 PKGNAME=		gnu-${DISTNAME}
