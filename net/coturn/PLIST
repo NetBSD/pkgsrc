@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/08/05 11:52:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/14 12:32:12 gdt Exp $
 bin/turnadmin
 bin/turnserver
 bin/turnutils_natdiscovery
@@ -84,6 +84,7 @@ share/examples/coturn/scripts/oauth.sh
 share/examples/coturn/scripts/pack.sh
 share/examples/coturn/scripts/peer.sh
 share/examples/coturn/scripts/readme.txt
+share/examples/coturn/scripts/relay_ttl_probe.py
 share/examples/coturn/scripts/restapi/secure_relay_secret.sh
 share/examples/coturn/scripts/restapi/secure_relay_secret_with_db_mongo.sh
 share/examples/coturn/scripts/restapi/secure_relay_secret_with_db_mysql.sh
