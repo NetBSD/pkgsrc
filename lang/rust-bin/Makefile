@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2026/11/10 21:20:48 pho Exp $
+# $NetBSD: Makefile,v 1.87 2026/11/14 22:02:09 wiz Exp $
 
-DISTNAME=	rust-1.98.1
+DISTNAME=	rust-1.99.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -165,14 +165,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	mipsel-unknown-netbsd
-DN:=		${DISTNAME}${NBSUF}
-EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-DISTFILES:=	${DISTFILES} ${DF}
-SITES.${DF}=	${NETBSD_REPO}
-.endif
+#.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make(makesum) || make(mdi)
+#RUST_ARCH:=	mipsel-unknown-netbsd
+#DN:=		${DISTNAME}${NBSUF}
+#EXTRACT_SUFX=	.tar.xz
+#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+#DISTFILES:=	${DISTFILES} ${DF}
+#SITES.${DF}=	${NETBSD_REPO}
+#.endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-riscv64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	riscv64gc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}

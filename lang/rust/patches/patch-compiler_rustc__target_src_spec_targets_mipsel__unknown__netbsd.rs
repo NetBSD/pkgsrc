@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs,v 1.5 2026/09/30 20:01:29 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_mipsel__unknown__netbsd.rs,v 1.6 2026/11/14 22:02:08 wiz Exp $
 
 Let's see if turning off thread local storage makes a difference...
 

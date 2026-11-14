@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_Cargo.toml,v 1.1 2026/09/30 20:01:29 wiz Exp $
+$NetBSD: patch-src_bootstrap_Cargo.toml,v 1.2 2026/11/14 22:02:08 wiz Exp $
 
 Treat linker-messages as warn-by-default.
 Make sure to remove this when no longer needed.

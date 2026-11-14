@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.9 2026/06/11 07:00:57 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.10 2026/11/14 22:02:08 wiz Exp $
 
 Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.186_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2026/09/30 20:01:30 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.186_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2026/11/14 22:02:08 wiz Exp $
 
 Add m68k target.
 

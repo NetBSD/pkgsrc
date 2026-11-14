@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_m68k__unknown__netbsd.rs,v 1.2 2026/09/30 20:01:29 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_m68k__unknown__netbsd.rs,v 1.3 2026/11/14 22:02:08 wiz Exp $
 
 Add a target description for NetBSD/m68k.
 Align data_layout with new patch to llvm.
