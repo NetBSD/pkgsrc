@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2026/08/04 20:29:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/14 06:35:45 wiz Exp $
 
-DISTNAME=	pmw-5.33
+DISTNAME=	pmw-5.34
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PhilipHazel/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake
 
 BUILD_TARGET=	build
+TEST_TARGET=	check
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
