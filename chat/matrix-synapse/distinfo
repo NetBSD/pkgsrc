@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2026/10/24 22:15:25 gdt Exp $
+$NetBSD: distinfo,v 1.101 2026/11/14 21:56:47 wiz Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -612,4 +612,3 @@ Size (zerovec-derive-0.11.1.crate) = 21294 bytes
 BLAKE2s (zmij-1.0.19.crate) = e6857f8f672ab60cba6575bda0b64bfd4898ee7c34cb1f799842885965039969
 SHA512 (zmij-1.0.19.crate) = aa191ba286f10d59727981e68f7fb0214d53b02d6c28951e6f16670433cd79abc4615384b3b1e1f74adc81a3f51c15d906fda0340b03938984693332feeac2cc
 Size (zmij-1.0.19.crate) = 23948 bytes
-SHA1 (patch-.._vendor_mio-1.0.4_src_sys_unix_selector_kqueue.rs) = 6c69f01ccf89fa30457e83ce98ba3a17f3f10bdf
