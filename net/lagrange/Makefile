@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/11/11 11:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/14 01:38:27 js Exp $
 
-DISTNAME=	lagrange-1.20.8
-PKGREVISION=	6
+DISTNAME=	lagrange-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	https://git.skyjake.fi/gemini/lagrange/releases/download/v${PKGVERSION_NOREV}/
 
@@ -23,12 +22,12 @@ PLIST_SRC=	PLIST.Darwin
 
 do-install:
 	${RUN} mkdir -p ${DESTDIR}${PREFIX}/Applications
-	${RUN} cp -R ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/Lagrange.app ${DESTDIR}${PREFIX}/Applications
+	${RUN} cp -R ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/app/Lagrange.app ${DESTDIR}${PREFIX}/Applications
 .endif
 
 .include "options.mk"
 .include "../../converters/fribidi/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/SDL3/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
