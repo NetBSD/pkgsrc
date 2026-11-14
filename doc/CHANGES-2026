@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7981 2026/11/14 07:33:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7982 2026/11/14 07:36:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11886,3 +11886,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added audio/yoshimi version 2.3.6.5 [wiz 2026-11-14]
 	Added devel/emmylua-ls version 0.25.1 [wiz 2026-11-14]
 	Added devel/stirmake version 0.4.5 [wiz 2026-11-14]
+	Added textproc/groff-pdfmark version 26.10 [wiz 2026-11-14]
