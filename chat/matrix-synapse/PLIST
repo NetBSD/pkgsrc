@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2026/10/24 22:15:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.78 2026/11/14 21:56:22 wiz Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -2092,7 +2092,7 @@ ${PYSITELIB}/synapse/streams/config.pyo
 ${PYSITELIB}/synapse/streams/events.py
 ${PYSITELIB}/synapse/streams/events.pyc
 ${PYSITELIB}/synapse/streams/events.pyo
-${PYSITELIB}/synapse/synapse_rust.${PYSTABLEABI}.so
+${PYSITELIB}/synapse/synapse_rust.abi3.so
 ${PYSITELIB}/synapse/synapse_rust/__init__.pyi
 ${PYSITELIB}/synapse/synapse_rust/acl.pyi
 ${PYSITELIB}/synapse/synapse_rust/events.pyi
