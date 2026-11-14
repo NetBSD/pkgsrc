@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/14 07:32:58 wiz Exp $
+
+BLAKE2s (stirmake-v0.4.5.tar.gz) = a2d47631533be2d5449475d3ce69da022eca369045102b75751658ce0855df0e
+SHA512 (stirmake-v0.4.5.tar.gz) = bf814148a04f8b40646903816aa4478daea67dc48cfce15a03a7e2ee4d97b8e78d30d66d7be637539a7f92c116c8e3b9b9808530db1eead02c0f0e98c766cc12
+Size (stirmake-v0.4.5.tar.gz) = 1450384 bytes

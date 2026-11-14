@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/14 07:32:58 wiz Exp $
+bin/smka
+bin/smkp
+bin/smkt
+bin/stirmake
+man/man1/smka.1
+man/man1/smkp.1
+man/man1/smkt.1
+man/man1/stirmake.1
