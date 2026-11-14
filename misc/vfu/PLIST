@@ -1,21 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:32 joerg Exp $
-bin/ftparc
+@comment $NetBSD: PLIST,v 1.5 2026/11/14 21:17:46 drixter Exp $
 bin/rx_auto
 bin/rx_deb
 bin/rx_ftp
+bin/rx_rar
+bin/rx_rpm
 bin/rx_tar
 bin/rx_zip
 bin/vfu
 man/man1/vfu.1
-share/doc/vfu/CONFIG
-share/doc/vfu/COPYING
-share/doc/vfu/FAQ
-share/doc/vfu/HISTORY
-share/doc/vfu/INSTALL
-share/doc/vfu/NOTES
-share/doc/vfu/README
-share/doc/vfu/README.DOS
-share/doc/vfu/THANKS.TO
-share/doc/vfu/TODO
-share/doc/vfu/XWINDOW.NOTES
 share/examples/vfu/vfu.conf

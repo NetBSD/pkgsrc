@@ -1,26 +1,10 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:59:36 nia Exp $
+$NetBSD: distinfo,v 1.18 2026/11/14 21:17:46 drixter Exp $
 
-BLAKE2s (vfu-3.04.src.tar.gz) = 0b1b72e6257dc0b2bd197c4372de86007bb3345ade5a359e03d804ad149c2908
-SHA512 (vfu-3.04.src.tar.gz) = b4cbae451c3fd0e4168e7bf61372c87f2f9969b088b7129f0c42e70cabe8dc6b0af934e28077c9411125644173eb6128afd800728f39ef6e6d44a474f3fd4f5a
-Size (vfu-3.04.src.tar.gz) = 187519 bytes
-SHA1 (patch-aa) = 6177822e3ab352b2aa3b051519237eda974f08e3
-SHA1 (patch-ab) = bb935cd9127479517daf36480e2637cd5447b978
-SHA1 (patch-ac) = 72c05012c39bb785b4eea5d41c51bd1787e463f8
-SHA1 (patch-ad) = 0777dcc38998562c9f8f70c64a6c2dce02c20c7c
-SHA1 (patch-ae) = a2076bb4754bc433898529734f7b25a5efd2ba57
-SHA1 (patch-af) = 056851af215dbf1195b9e7f00b6b654261473945
-SHA1 (patch-ag) = 3e87916630a0e9628cc28097bf2d011d15fadc42
-SHA1 (patch-ah) = 65bcc3b139f688c4407bb14cfb8d2d61962994f7
-SHA1 (patch-ai) = 4a161a1df84001bdefc81384128ea74bf9d7f61d
-SHA1 (patch-aj) = 265fbb0873ce0b910ba6a53da57a18269af34b82
-SHA1 (patch-ak) = cfcfb94f1ba6169ef471ae47fdcd9ccc81196a39
-SHA1 (patch-al) = ee31aca39c8f4ba7254f9a79c8488d8592b465e5
-SHA1 (patch-vfu_vfuopt.cpp) = f504bea56db4ebe07fe313733c02a38fb65805f8
-SHA1 (patch-vfu_vfuopt.h) = d64d243deff488fad9c46fb022f20b303d80bd03
-SHA1 (patch-vfu_vfusys.cpp) = 3a4f57f381d10c6d4f66d84d8c57338a0e17b77c
-SHA1 (patch-vfu_vfuview.cpp) = 573c1df0d515d328de300ed1e418f065ac43887e
-SHA1 (patch-vslib_conmenu.h) = 8fbfc954abb7d713ef66ab565d66ecb285cd86f0
-SHA1 (patch-vslib_getopt2.cpp) = d4f106eabc2abff53c52e0008967324466e2762c
-SHA1 (patch-vslib_regexp3.cpp) = 48017429d1f10559f37cbdc901fa247e6cd8e600
-SHA1 (patch-vslib_vstring.cpp) = 56fc269b175405821533e11c86e1c6a12cc5d7e7
-SHA1 (patch-vslib_vstring.h) = d93cb8362ad11d0a62acaf8ab56e4aace0fd4f7f
+BLAKE2s (vfu-5.09.tar.gz) = 448126fa739c9d734076022003cf02c39b0cd52bc676558146a70cb2540cfb15
+SHA512 (vfu-5.09.tar.gz) = 1aa64894df06af606666c8299f950d0db3524949d150482cdbabd3d39900bf1aa577435f3d3038f19e8b21f09635a601ab150d41c91dd846194ab2ac28f86acc
+Size (vfu-5.09.tar.gz) = 287818 bytes
+SHA1 (patch-vfu_Makefile) = 2618967f22690ed5187a39f054a0345d6833027a
+SHA1 (patch-vfu_vfu.cpp) = 155dc65c5ebe887f00ee9f09d9c192ebfa72deb1
+SHA1 (patch-vfu_vfucopy.cpp) = 88219c35d0ed4d7b07f28d4e4f6d95bf6214f105
+SHA1 (patch-vslib_Makefile) = cc8eed38d15f5a330083edf39d1fdefe0524e007
+SHA1 (patch-vstring_Makefile) = 98b6683d2eba75b80ad716f9637d85a7cc7fd59c

@@ -1,0 +1,9 @@
+$NetBSD: patch-vstring_Makefile,v 1.1 2026/11/14 21:17:48 drixter Exp $
+
+Remove pie enforcement by upstream
+
+--- vstring/Makefile.orig
++++ vstring/Makefile
+@@ -52 +52 @@
+-MYLDFLAGS:=$(MYCXXFLAGS) $(LDFLAGS) -fPIE -pie
++MYLDFLAGS:=$(MYCXXFLAGS) $(LDFLAGS)

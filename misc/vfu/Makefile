@@ -1,44 +1,42 @@
-# $NetBSD: Makefile,v 1.64 2022/06/28 11:34:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.65 2026/11/14 21:17:46 drixter Exp $
 
-DISTNAME=	vfu-3.04
-PKGREVISION=	16
+DISTNAME=	vfu-5.09
 CATEGORIES=	misc
-MASTER_SITES=	http://cade.datamax.bg/vfu/
-MASTER_SITES+=	${MASTER_SITE_SUNSITE:=utils/file/managers/}
-EXTRACT_SUFX=	.src.tar.gz
+MASTER_SITES=	https://cade.noxrun.com/projects/vfu/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cade.datamax.bg/vfu/
-COMMENT=	Small, handy, easy-to-use file manager
+MAINTAINER=	drixter@e-utp.net
+HOMEPAGE=	https://cade.noxrun.com/projects/vfu/
+COMMENT=	Small, handy, easy-to-use file manager for UNIX/Linux
+LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	gmake pkg-config perl:run
 REPLACE_PERL+=	rx/rx_*
-FAKE_NCURSES=	yes
+USE_LANGUAGES=	c c++
 
-DOCDIR=		${PREFIX}/share/doc/vfu
-EGDIR=		${PREFIX}/share/examples/vfu
+USE_CURSES=	wide
 
-CONF_FILES=	${EGDIR}/vfu.conf ${PKG_SYSCONFDIR}/vfu.conf
+MAKE_FLAGS+=	YASCREEN_CC=
+MAKE_FLAGS+=	YASCREEN_LD=
+MAKE_FLAGS+=	NO_FLTO=1
+MAKE_FLAGS+=	NCURSES_CC=
+MAKE_FLAGS+=	NCURSES_LD=${BUILDLINK_LDADD.curses}
 
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} build.netbsd
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/vfu
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PREFIX=${DESTDIR}${PREFIX} ${SH} install
+	${INSTALL_PROGRAM} ${WRKSRC}/vfu/vfu \
+		${DESTDIR}${PREFIX}/bin/vfu
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR} ${DESTDIR}${EGDIR}
-	cd ${WRKSRC} &&							\
-	${INSTALL_DATA} COPYING INSTALL CONFIG FAQ HISTORY NOTES README \
-		README.DOS THANKS.TO TODO XWINDOW.NOTES ${DESTDIR}${DOCDIR}
-	cd ${WRKSRC} &&							\
-	${INSTALL_DATA} ${WRKSRC}/vfu.conf ${DESTDIR}${EGDIR}/vfu.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/rx/rx_* \
+		${DESTDIR}${PREFIX}/bin/
 
+	${INSTALL_MAN} ${WRKSRC}/vfu.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vfu.1
+
+	${INSTALL_DATA} ${WRKSRC}/vfu.conf \
+		${DESTDIR}${PREFIX}/share/examples/vfu/vfu.conf
+
+
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
