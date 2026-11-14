@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2026/10/19 08:35:07 wiz Exp $
+# $NetBSD: Makefile,v 1.732 2026/11/14 07:23:37 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -520,6 +520,7 @@ SUBDIR+=	yasr
 SUBDIR+=	ykchorus
 SUBDIR+=	ympd
 SUBDIR+=	ymuse
+SUBDIR+=	yoshimi
 SUBDIR+=	zam-plugins
 SUBDIR+=	zynaddsubfx
 
