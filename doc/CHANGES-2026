@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7978 2026/11/14 06:35:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.7979 2026/11/14 07:23:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11883,3 +11883,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/HiGHS to version 1.16.0 [alnsn 2026-11-13]
 	Updated net/lagrange to 2.0.2 [js 2026-11-14]
 	Updated print/pmw to 5.34 [wiz 2026-11-14]
+	Added audio/yoshimi version 2.3.6.5 [wiz 2026-11-14]
