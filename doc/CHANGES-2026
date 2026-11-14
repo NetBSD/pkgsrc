@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7983 2026/11/14 08:42:41 adam Exp $
+$NetBSD: CHANGES-2026,v 1.7984 2026/11/14 12:32:12 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11889,3 +11889,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added textproc/groff-pdfmark version 26.10 [wiz 2026-11-14]
 	Updated devel/cargo-nextest to 0.9.152 [adam 2026-11-14]
 	Updated devel/py-test-asyncio to 1.5.0 [adam 2026-11-14]
+	Updated www/chromium to 157.0.8103.78 [kikadf 2026-11-14]
