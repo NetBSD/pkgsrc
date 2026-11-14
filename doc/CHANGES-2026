@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7987 2026/11/14 21:18:13 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.7988 2026/11/14 21:37:00 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11893,3 +11893,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/tailscale to 1.104.7 [ktnb 2026-11-14]
 	Updated chat/weechat to 4.10.4 [ktnb 2026-11-14]
 	Updated misc/vfu to 5.09 [drixter 2026-11-14]
+	Updated lang/gnu-apl to 2.0nb1 [drixter 2026-11-14]
