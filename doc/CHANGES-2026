@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7976 2026/11/13 20:33:45 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.7977 2026/11/14 01:38:54 js Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11881,3 +11881,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-kivy to 2.3.2 [adam 2026-11-13]
 	Updated devel/userspace-rcu to 0.15.7 [adam 2026-11-13]
 	Updated math/HiGHS to version 1.16.0 [alnsn 2026-11-13]
+	Updated net/lagrange to 2.0.2 [js 2026-11-14]
