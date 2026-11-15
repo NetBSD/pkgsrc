@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/11/11 11:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/15 00:59:06 gutteridge Exp $
 
 DISTNAME=	sway-1.12
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 
 MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://swaywm.org/
-COMMENT=	Tilling, i3-compatible Wayland compositor
+COMMENT=	Tiling, i3-compatible Wayland compositor
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
