@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2026/11/11 11:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2026/11/15 02:10:25 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	qterminal-2.4.0
+DISTNAME=	qterminal-2.5.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config perl
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

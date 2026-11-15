@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/11/11 02:56:07 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/11/15 02:10:25 gutteridge Exp $
 bin/qterminal
 share/applications/qterminal-drop.desktop
 share/applications/qterminal.desktop
@@ -49,6 +49,7 @@ share/qterminal/translations/qterminal_si.qm
 share/qterminal/translations/qterminal_sk_SK.qm
 share/qterminal/translations/qterminal_sv.qm
 share/qterminal/translations/qterminal_tr.qm
+share/qterminal/translations/qterminal_ug.qm
 share/qterminal/translations/qterminal_uk.qm
 share/qterminal/translations/qterminal_vi.qm
 share/qterminal/translations/qterminal_zh_CN.qm

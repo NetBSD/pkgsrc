@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2026/04/28 08:06:17 pin Exp $
+$NetBSD: distinfo,v 1.18 2026/11/15 02:10:25 gutteridge Exp $
 
-BLAKE2s (qterminal-2.4.0.tar.xz) = 2c6f91068ef99ec67eae0382363a1e64ba62392abd8867f3d05b14f98fae868c
-SHA512 (qterminal-2.4.0.tar.xz) = 75c6a622976afd7fb3578f7535dad6b86458fa549fc31ef5fcba88fb71c597ed5768544c83a0fb91c27605cb4c3b3262ca82ef7776e9b42c042ce8f395c13822
-Size (qterminal-2.4.0.tar.xz) = 417816 bytes
+BLAKE2s (qterminal-2.5.0.tar.xz) = 23b9638793bc7a386ada66fb53e441a6acd63a74064aa20d3c2efcc01db52c2a
+SHA512 (qterminal-2.5.0.tar.xz) = 1bc005fc62e6d7144b3ab6b4e68eff19004c11aa7d7c4fc588ad209195943bad2de5a380dc2ade27f1dfc7176136ad4daf3435bb8951bc72cb7c9a0060773fd5
+Size (qterminal-2.5.0.tar.xz) = 426532 bytes
