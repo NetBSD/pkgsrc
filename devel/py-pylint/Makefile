@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.126 2026/10/16 17:57:44 adam Exp $
+# $NetBSD: Makefile,v 1.127 2026/11/15 22:24:55 wiz Exp $
 #
 # Changes: https://github.com/pylint-dev/pylint/releases
 
-DISTNAME=	pylint-4.1.3
+DISTNAME=	pylint-4.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -27,8 +27,8 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	pylint pylint-config pyreverse symilar
 
-# as of 4.1.2
-# 13 failed, 2250 passed, 315 skipped, 5 xfailed
+# as of 4.1.4
+# 78 failed, 2295 passed, 290 skipped, 5 xfailed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
