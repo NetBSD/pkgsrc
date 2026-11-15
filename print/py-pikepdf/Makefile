@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2026/11/03 06:40:06 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/15 22:20:39 wiz Exp $
 
-DISTNAME=	pikepdf-10.13.0.post1
+DISTNAME=	pikepdf-10.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
 
@@ -15,6 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10:../../devel/py-scikit-buil
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+# optional dependencies for PDF/A
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-referencing>=0:../../textproc/py-referencing
+DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.40:../../fonts/py-fonttools
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.36:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
@@ -23,6 +26,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.5.0:../../devel/py-test-xdist
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake pkg-config
+
+# as of 10.18.1
+# 4822 passed, 60 skipped, 1 xfailed, 1 xpassed
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
