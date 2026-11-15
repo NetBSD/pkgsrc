@@ -1,0 +1,6 @@
+Software bills of materials (SBOMs) for Python distributions.
+python-sbom writes a CycloneDX SBOM into every wheel you build,
+where PEP 770 (a Python Enhancement Proposal) tells installers to
+keep it. The SBOM records your project, the runtime dependencies
+it declares, any wheels it bundles, and the build toolchain, and
+a rebuild with the same inputs reproduces it byte for byte.

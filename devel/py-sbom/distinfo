@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 21:45:33 wiz Exp $
+
+BLAKE2s (python_sbom-0.3.1.tar.gz) = 872ce4784e7e9e75e6ce29519083370e8dac3442a492e05f9252018798692806
+SHA512 (python_sbom-0.3.1.tar.gz) = 9e15870dcce4392ee11afec5538785c5a6631ba240899baaca4251282a693eb44b83c00682b78bb0d893360980a81e9b337d7bedfd752d8d8e209c7224b2881e
+Size (python_sbom-0.3.1.tar.gz) = 289516 bytes
