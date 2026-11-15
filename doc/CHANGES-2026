@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8029 2026/11/15 11:12:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8030 2026/11/15 11:47:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11936,3 +11936,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-nihtest to 1.12.0 [wiz 2026-11-15]
 	Updated net/libfilezilla to 0.59.0 [wiz 2026-11-15]
 	Updated net/fzssh to 1.5.2 [wiz 2026-11-15]
+	Updated net/filezilla to 3.72.0 [wiz 2026-11-15]
