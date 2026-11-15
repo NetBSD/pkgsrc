@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/11/08 15:51:27 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/11/15 19:45:00 wiz Exp $
 
-BLAKE2s (libtatsu-1.1.0.tar.bz2) = 8ea6c2dbf04feb3e6472d1122b7920c23eeb5f39c5e6ef1cf364e37931182670
-SHA512 (libtatsu-1.1.0.tar.bz2) = f4b784b24ce6e5aa88ea280fa85a14ae841b691819c66e9a7d7a608e5a09c8515e7661a28909ea0806c343dacb6a76e00b6bee3cd752cb2f76927e220907dc9d
-Size (libtatsu-1.1.0.tar.bz2) = 309771 bytes
+BLAKE2s (libtatsu-1.1.1.tar.bz2) = 31f9611e80415561e6e7fcc9ecd71fc54287f0a6e581f365f8a08620a1dc8b7f
+SHA512 (libtatsu-1.1.1.tar.bz2) = f4e0b729ea41d608c88c3cad2100f397300afb2468a9f9a3cecf0d561b8fa49146ecd660d3f02f50070a97e176aea5e5f7a9f401edaf1f252c84347289f9098b
+Size (libtatsu-1.1.1.tar.bz2) = 309461 bytes
