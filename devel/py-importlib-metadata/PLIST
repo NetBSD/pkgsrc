@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/10/26 18:23:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/11/15 21:55:56 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +16,9 @@ ${PYSITELIB}/importlib_metadata/_collections.pyo
 ${PYSITELIB}/importlib_metadata/_compat/__init__.py
 ${PYSITELIB}/importlib_metadata/_compat/__init__.pyc
 ${PYSITELIB}/importlib_metadata/_compat/__init__.pyo
+${PYSITELIB}/importlib_metadata/_compat/_functools.py
+${PYSITELIB}/importlib_metadata/_compat/_functools.pyc
+${PYSITELIB}/importlib_metadata/_compat/_functools.pyo
 ${PYSITELIB}/importlib_metadata/_compat/localize.py
 ${PYSITELIB}/importlib_metadata/_compat/localize.pyc
 ${PYSITELIB}/importlib_metadata/_compat/localize.pyo
@@ -43,6 +46,9 @@ ${PYSITELIB}/importlib_metadata/compat/py311.pyo
 ${PYSITELIB}/importlib_metadata/compat/py312.py
 ${PYSITELIB}/importlib_metadata/compat/py312.pyc
 ${PYSITELIB}/importlib_metadata/compat/py312.pyo
+${PYSITELIB}/importlib_metadata/compat/py314.py
+${PYSITELIB}/importlib_metadata/compat/py314.pyc
+${PYSITELIB}/importlib_metadata/compat/py314.pyo
 ${PYSITELIB}/importlib_metadata/diagnose.py
 ${PYSITELIB}/importlib_metadata/diagnose.pyc
 ${PYSITELIB}/importlib_metadata/diagnose.pyo
