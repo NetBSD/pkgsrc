@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8010 2026/11/15 02:22:57 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8011 2026/11/15 02:23:44 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11916,3 +11916,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lxqt-menu-data to 2.5.0 [disciple 2026-11-15]
 	Updated sysutils/lxqt-powermanagement to 2.5.0 [disciple 2026-11-15]
 	Updated sysutils/pcmanfm-qt to 2.5.0 [disciple 2026-11-15]
+	Updated wayland/lxqt-wayland-session to 0.5.0 [disciple 2026-11-15]
