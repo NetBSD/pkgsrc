@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2026/11/14 22:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.372 2026/11/15 07:39:40 wiz Exp $
 
 DISTNAME=	rustc-1.99.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -249,6 +249,9 @@ MAKE_JOBS_SAFE?=	no
 # Under NetBSD, do not use DT_RUNPATH
 #
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
+
+# Unclear where this is coming from.
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--compress-debug-sections=zlib
 
 #
 # Somewhere in the LLVM build "-arch x86_64" is passed on macOS/arm64 which
