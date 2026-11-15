@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/15 02:12:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/15 02:51:56 gutteridge Exp $
 
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
@@ -16,6 +16,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 AUTOSTART_CONF=		share/examples/autostart
+CONF_FILES+=		${AUTOSTART_CONF}/lxqt-clip-autostart.desktop
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
 
