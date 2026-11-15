@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1624 2026/11/15 21:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1625 2026/11/15 21:44:48 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1140,6 +1140,7 @@ SUBDIR+=	py-jsonrpc-server
 SUBDIR+=	py-jsonrpclib-pelix
 SUBDIR+=	py-jsonschema
 SUBDIR+=	py-jsonschema-path
+SUBDIR+=	py-jsonschema-rs
 SUBDIR+=	py-jsonschema-spec
 SUBDIR+=	py-jsonschema-specifications
 SUBDIR+=	py-jupyterlab-pygments
@@ -1455,6 +1456,7 @@ SUBDIR+=	subliminal
 SUBDIR+=	subtitleripper
 SUBDIR+=	swath
 SUBDIR+=	syntax-highlighting
+SUBDIR+=	tabiew
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-tDOM
