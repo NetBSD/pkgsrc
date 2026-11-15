@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2026/06/02 14:02:46 pin Exp $
+$NetBSD: distinfo,v 1.27 2026/11/15 02:28:48 gutteridge Exp $
 
-BLAKE2s (lxqt-panel-2.4.1.tar.xz) = 2d1fce2f603fd663d9bff0fe5c682acee53eec2d7ba3d6b984d0e0651158599c
-SHA512 (lxqt-panel-2.4.1.tar.xz) = de440431d69237d542ab713011e59850359c5942128e5fd72159fac8368e5c78bdf8fbae885f082237ea2f81a7638480921a6e565913f1c100eb5599de1b8298
-Size (lxqt-panel-2.4.1.tar.xz) = 832828 bytes
+BLAKE2s (lxqt-panel-2.5.1.tar.xz) = 82295f025af7f61710d718d9af9d5bcc094632aa18c5beaa9c12c81d7b0da763
+SHA512 (lxqt-panel-2.5.1.tar.xz) = 00f50e46ef696a1c8a7f77094fe44d84bb49ae1b8a1bd4e05e18a762d98e8ea2a838b3b1899b8653d9647ad3c76934f5644973eb5442b703c31a04d63a6d19f3
+Size (lxqt-panel-2.5.1.tar.xz) = 836696 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 7da192bfa1095042ada0947a85e78792e4d38354
 SHA1 (patch-panel_CMakeLists.txt) = 9bcb3bb91e9c49ee1085ef4887e5a371332c5f4a

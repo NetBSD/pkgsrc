@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2026/04/28 08:49:43 pin Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/11/15 02:28:48 gutteridge Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -80,6 +80,9 @@ share/lxqt/panel/qeyes-types/README
 share/lxqt/panel/qeyes-types/Tango/config
 share/lxqt/panel/qeyes-types/Tango/tango-eye.png
 share/lxqt/panel/qeyes-types/Tango/tango-pupil.png
+share/lxqt/translations/lxqt-panel/backlight/backlight_it.qm
+share/lxqt/translations/lxqt-panel/backlight/backlight_lg.qm
+share/lxqt/translations/lxqt-panel/backlight/backlight_nl.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ar.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_bg.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ca.qm
@@ -111,6 +114,7 @@ share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sk.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sr.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sv.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_tr.qm
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_uk.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_CN.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_TW.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_ar.qm
@@ -592,6 +596,7 @@ share/lxqt/translations/lxqt-panel/qeyes/qeyes_sk.qm
 share/lxqt/translations/lxqt-panel/qeyes/qeyes_sr.qm
 share/lxqt/translations/lxqt-panel/qeyes/qeyes_sv.qm
 share/lxqt/translations/lxqt-panel/qeyes/qeyes_tr.qm
+share/lxqt/translations/lxqt-panel/qeyes/qeyes_uk.qm
 share/lxqt/translations/lxqt-panel/qeyes/qeyes_zh_CN.qm
 share/lxqt/translations/lxqt-panel/qeyes/qeyes_zh_TW.qm
 share/lxqt/translations/lxqt-panel/quicklaunch/quicklaunch_ar.qm

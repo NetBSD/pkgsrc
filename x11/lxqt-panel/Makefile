@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2026/11/11 11:56:38 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/11/15 02:28:48 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-panel-2.4.1
+DISTNAME=	lxqt-panel-2.5.1
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -45,7 +44,7 @@ CONF_FILES+=	${AUTOSTART_CONF}/lxqt-panel.desktop \
 CONF_FILES+=	${PANEL_CONF}/panel.conf \
 		${PKG_SYSCONFDIR}/lxqt/panel.conf
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "options.mk"
