@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8071 2026/11/15 22:26:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8072 2026/11/15 22:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11978,3 +11978,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-puremagic to 2.2.1 [wiz 2026-11-15]
 	Updated devel/py-pylint to 4.1.4 [wiz 2026-11-15]
 	Updated textproc/py-pymdown-extensions to 13.1 [wiz 2026-11-15]
+	Updated www/py-soupsieve to 4.1.1 [wiz 2026-11-15]
