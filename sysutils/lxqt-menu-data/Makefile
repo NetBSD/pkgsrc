@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2026/11/11 11:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/15 02:21:14 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-menu-data-2.4.0
+DISTNAME=	lxqt-menu-data-2.5.0
 CATEGORIES=	sysutils x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,7 +27,7 @@ CONF_FILES+=	${MENU_CONF}/lxqt-config.menu \
 CONF_FILES+=	${MENU_CONF}/lxqt-panel-applications.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-panel-applications.menu
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 BUILDLINK_API_DEPENDS.qt6-qtbase+=	qt6-qtbase>=6.6.0
