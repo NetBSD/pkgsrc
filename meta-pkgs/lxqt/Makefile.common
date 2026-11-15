@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2025/11/25 22:54:01 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.2 2026/11/15 02:35:40 gutteridge Exp $
 
 # used by archivers/lxqt-archiver/Makefile
 # used by audio/pavucontrol-qt/Makefile
@@ -19,6 +19,7 @@
 # used by x11/libqtxdg/Makefile
 # used by x11/lxqt-about/Makefile
 # used by x11/lxqt-admin/Makefile
+# used by x11/lxqt-clip/Makefile
 # used by x11/lxqt-config/Makefile
 # used by x11/lxqt-globalkeys/Makefile
 # used by x11/lxqt-notificationd/Makefile
@@ -35,4 +36,5 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++20

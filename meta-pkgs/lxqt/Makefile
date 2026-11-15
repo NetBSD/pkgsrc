@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2026/08/28 03:57:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.51 2026/11/15 02:35:40 gutteridge Exp $
 
-PKGNAME=	lxqt-2.4.0
-PKGREVISION=	2
+PKGNAME=	lxqt-2.5.0
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,38 +11,37 @@ META_PACKAGE=	yes
 
 .include "options.mk"
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
-
-DEPENDS+=	libqtxdg>=4.4.0:../../x11/libqtxdg
-DEPENDS+=	qtxdg-tools>=4.4.0:../../x11/qtxdg-tools
-DEPENDS+=	liblxqt>=2.4.0:../../x11/liblxqt
-DEPENDS+=	lxqt-menu-data>=2.4.0:../../sysutils/lxqt-menu-data
-DEPENDS+=	libfm-qt>=2.4.0:../../x11/libfm-qt
-DEPENDS+=	lxqt-themes>=2.4.0:../../graphics/lxqt-themes
-DEPENDS+=	pavucontrol-qt>=2.4.0:../../audio/pavucontrol-qt
-DEPENDS+=	qtermwidget>=2.4.0:../../x11/qtermwidget
-DEPENDS+=	lximage-qt>=2.4.0:../../graphics/lximage-qt
-DEPENDS+=	lxqt-about>=2.4.0:../../x11/lxqt-about
-DEPENDS+=	lxqt-policykit>=2.4.0:../../security/lxqt-policykit
-DEPENDS+=	lxqt-admin>=2.4.0:../../x11/lxqt-admin
-DEPENDS+=	lxqt-config>=2.4.0:../../x11/lxqt-config
-DEPENDS+=	lxqt-globalkeys>=2.4.0:../../x11/lxqt-globalkeys
-DEPENDS+=	lxqt-openssh-askpass>=2.4.0:../../security/lxqt-openssh-askpass
-DEPENDS+=	lxqt-notificationd>=2.4.0:../../x11/lxqt-notificationd
-DEPENDS+=	lxqt-powermanagement>=2.4.0:../../sysutils/lxqt-powermanagement
-DEPENDS+=	libdbusmenu-lxqt>=0.4.0:../../devel/libdbusmenu-lxqt
-DEPENDS+=	lxqt-qtplugin>=2.4.0:../../x11/lxqt-qtplugin
-DEPENDS+=	lxqt-session>=2.4.0:../../x11/lxqt-session
-DEPENDS+=	lxqt-sudo>=2.4.0:../../security/lxqt-sudo
-DEPENDS+=	pcmanfm-qt>=2.4.1:../../sysutils/pcmanfm-qt
-DEPENDS+=	qterminal>=2.4.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.4.1:../../x11/lxqt-panel
-DEPENDS+=	lxqt-runner>=2.4.0:../../x11/lxqt-runner
-DEPENDS+=	screengrab>=3.2.0:../../graphics/screengrab
-DEPENDS+=	lxqt-archiver>=1.4.0:../../archivers/lxqt-archiver
+DEPENDS+=	libqtxdg>=4.5.0:../../x11/libqtxdg
+DEPENDS+=	qtxdg-tools>=4.5.0:../../x11/qtxdg-tools
+DEPENDS+=	liblxqt>=2.5.0:../../x11/liblxqt
+DEPENDS+=	lxqt-menu-data>=2.5.0:../../sysutils/lxqt-menu-data
+DEPENDS+=	libfm-qt>=2.5.0:../../x11/libfm-qt
+DEPENDS+=	lxqt-themes>=2.5.0:../../graphics/lxqt-themes
+DEPENDS+=	pavucontrol-qt>=2.5.1:../../audio/pavucontrol-qt
+DEPENDS+=	qtermwidget>=2.5.0:../../x11/qtermwidget
+DEPENDS+=	lximage-qt>=2.5.0:../../graphics/lximage-qt
+DEPENDS+=	lxqt-about>=2.5.0:../../x11/lxqt-about
+DEPENDS+=	lxqt-policykit>=2.5.0:../../security/lxqt-policykit
+DEPENDS+=	lxqt-admin>=2.5.0:../../x11/lxqt-admin
+DEPENDS+=	lxqt-config>=2.5.1:../../x11/lxqt-config
+DEPENDS+=	lxqt-globalkeys>=2.5.0:../../x11/lxqt-globalkeys
+DEPENDS+=	lxqt-openssh-askpass>=2.5.0:../../security/lxqt-openssh-askpass
+DEPENDS+=	lxqt-notificationd>=2.5.0:../../x11/lxqt-notificationd
+DEPENDS+=	lxqt-powermanagement>=2.5.0:../../sysutils/lxqt-powermanagement
+DEPENDS+=	libdbusmenu-lxqt>=0.5.0:../../devel/libdbusmenu-lxqt
+DEPENDS+=	lxqt-qtplugin>=2.5.0:../../x11/lxqt-qtplugin
+DEPENDS+=	lxqt-session>=2.5.0:../../x11/lxqt-session
+DEPENDS+=	lxqt-sudo>=2.5.0:../../security/lxqt-sudo
+DEPENDS+=	pcmanfm-qt>=2.5.0:../../sysutils/pcmanfm-qt
+DEPENDS+=	qterminal>=2.5.0:../../x11/qterminal
+DEPENDS+=	lxqt-panel>=2.5.1:../../x11/lxqt-panel
+DEPENDS+=	lxqt-runner>=2.5.0:../../x11/lxqt-runner
+DEPENDS+=	screengrab>=3.3.0:../../graphics/screengrab
+DEPENDS+=	lxqt-archiver>=1.5.0:../../archivers/lxqt-archiver
+DEPENDS+=	lxqt-clip>=2.5.0:../../x11/lxqt-clip
 # This needs to be commented out for now as wayland only works on NetBSD >=11.
 # If you want to use LXQt under wayland this is needed.
-#DEPENDS+=	lxqt-wayland-session>=0.4.1:../../wayland/lxqt-wayland-session
+#DEPENDS+=	lxqt-wayland-session>=0.5.0:../../wayland/lxqt-wayland-session
 # The Breeze icon set is the default that LXQt expects, and a compatible icon
 # theme must be present for the DE to be fully usable.
 DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
