@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8030 2026/11/15 11:47:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8031 2026/11/15 11:49:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11937,3 +11937,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/libfilezilla to 0.59.0 [wiz 2026-11-15]
 	Updated net/fzssh to 1.5.2 [wiz 2026-11-15]
 	Updated net/filezilla to 3.72.0 [wiz 2026-11-15]
+	Updated devel/pkgconf to 3.0.11 [wiz 2026-11-15]
