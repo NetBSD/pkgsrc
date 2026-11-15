@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8013 2026/11/15 02:26:34 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8014 2026/11/15 02:27:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11920,3 +11920,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-about to 2.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-admin to 2.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-config to 2.5.1 [disciple 2026-11-15]
+	Updated x11/lxqt-globalkeys to 2.5.0 [disciple 2026-11-15]
