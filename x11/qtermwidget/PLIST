@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/04/28 08:04:06 pin Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/11/15 02:08:05 gutteridge Exp $
 include/qtermwidget6/Emulation.h
 include/qtermwidget6/Filter.h
 include/qtermwidget6/KeyboardTranslator.h
@@ -47,6 +47,7 @@ share/qtermwidget6/kb-layouts/historic/vt100.keytab
 share/qtermwidget6/kb-layouts/historic/x11r5.keytab
 share/qtermwidget6/kb-layouts/linux.keytab
 share/qtermwidget6/kb-layouts/macbook.keytab
+share/qtermwidget6/kb-layouts/modern.keytab
 share/qtermwidget6/kb-layouts/solaris.keytab
 share/qtermwidget6/kb-layouts/vt420pc.keytab
 share/qtermwidget6/translations/qtermwidget_ar.qm
@@ -87,6 +88,8 @@ share/qtermwidget6/translations/qtermwidget_ru.qm
 share/qtermwidget6/translations/qtermwidget_si.qm
 share/qtermwidget6/translations/qtermwidget_sk.qm
 share/qtermwidget6/translations/qtermwidget_tr.qm
+share/qtermwidget6/translations/qtermwidget_ug.qm
 share/qtermwidget6/translations/qtermwidget_uk.qm
+share/qtermwidget6/translations/qtermwidget_zh.qm
 share/qtermwidget6/translations/qtermwidget_zh_CN.qm
 share/qtermwidget6/translations/qtermwidget_zh_TW.qm
