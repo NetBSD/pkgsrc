@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8056 2026/11/15 21:20:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8057 2026/11/15 21:23:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11963,3 +11963,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/dmarc-report-viewer to 2.7.1 [drixter 2026-11-15]
 	Added textproc/py-owlrl version 7.6.2 [wiz 2026-11-15]
 	Added textproc/py-shacl version 0.40.2 [wiz 2026-11-15]
+	Added devel/py-beartype version 0.23.1 [wiz 2026-11-15]
