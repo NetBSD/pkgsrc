@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2026/11/11 11:56:38 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/11/15 02:29:56 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-qtplugin-2.4.0
+DISTNAME=	lxqt-qtplugin-2.5.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +19,7 @@ SUBST_FILES.prefix=	src/lxqtplatformtheme.cpp
 SUBST_SED.prefix=	-e 's,/usr/local/share,${PREFIX}/share,g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
