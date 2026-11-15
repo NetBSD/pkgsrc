@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/08 08:51:55 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/15 13:14:45 vins Exp $
 bin/we
 bin/wpe
-bin/xwe
-bin/xwpe
+${PLIST.x11}bin/xwe
+${PLIST.x11}bin/xwpe
+info/xwpe.info
 lib/xwpe/help.key
 lib/xwpe/help.xwpe
 lib/xwpe/syntax_def
@@ -11,4 +12,13 @@ man/man1/wpe.1
 man/man1/xwe.1
 man/man1/xwpe.1
 share/applications/xwpe.desktop
+share/icons/hicolor/128x128/apps/xwpe.png
+share/icons/hicolor/16x16/apps/xwpe.png
+share/icons/hicolor/24x24/apps/xwpe.png
+share/icons/hicolor/256x256/apps/xwpe.png
+share/icons/hicolor/32x32/apps/xwpe.png
+share/icons/hicolor/48x48/apps/xwpe.png
+share/icons/hicolor/64x64/apps/xwpe.png
+share/icons/hicolor/scalable/apps/xwpe.svg
+share/metainfo/io.codeberg.mendezr.xwpe.metainfo.xml
 share/pixmaps/xwpe.xpm

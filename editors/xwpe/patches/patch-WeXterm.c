@@ -1,6 +1,6 @@
-$NetBSD: patch-WeXterm.c,v 1.1 2022/12/08 10:31:08 vins Exp $
+$NetBSD: patch-WeXterm.c,v 1.2 2026/11/15 13:14:45 vins Exp $
 
-Fix implicit declaration warnings.
+Prevent implicit declaration of e_X_sw_color().
 
 --- WeXterm.c.orig	2005-07-07 01:53:09.000000000 +0000
 +++ WeXterm.c
