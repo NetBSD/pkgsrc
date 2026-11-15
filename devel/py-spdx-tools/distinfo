@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 21:37:00 wiz Exp $
+
+BLAKE2s (spdx_tools-0.8.5.tar.gz) = 8b7c1657059bef7c235d5479047b9c8094a6ce270413391a5c5f497bcee6e5eb
+SHA512 (spdx_tools-0.8.5.tar.gz) = 28ed59bf6fd7fd5d86c85477b1a0703ca4cef75d7365137677095a9bf4fd67e43fd964f5848a087703d7d3b8592b78c79a81eeea296eab17802d2a5574bdf982
+Size (spdx_tools-0.8.5.tar.gz) = 696323 bytes
