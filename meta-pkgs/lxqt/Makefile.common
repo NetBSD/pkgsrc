@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2026/11/15 02:35:40 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.3 2026/11/15 03:01:38 gutteridge Exp $
 
 # used by archivers/lxqt-archiver/Makefile
 # used by audio/pavucontrol-qt/Makefile
@@ -13,6 +13,7 @@
 # used by sysutils/lxqt-menu-data/Makefile
 # used by sysutils/lxqt-powermanagement/Makefile
 # used by sysutils/pcmanfm-qt/Makefile
+# used by wayland/lxqt-wayland-session/Makefile
 # used by wm/obconf-qt/Makefile
 # used by x11/libfm-qt/Makefile
 # used by x11/liblxqt/Makefile
