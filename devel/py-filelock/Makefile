@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2026/11/08 17:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/11/15 21:50:27 wiz Exp $
 
-DISTNAME=	filelock-4.2.9
+DISTNAME=	filelock-4.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
@@ -13,6 +13,7 @@ LICENSE=	unlicense
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0:../../devel/py-sbom
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-diff-cover>=10.2:../../misc/py-diff-cover
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1.3:../../devel/py-test-asyncio
@@ -24,9 +25,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-# as of 4.2.9
-# https://github.com/tox-dev/filelock/issues/917
-# 1 failed, 2746 passed, 287 skipped
+# as of 4.2.10
+# https://github.com/tox-dev/filelock/issues/934
+# 1 failed, 2740 passed, 292 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
