@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 20:49:55 wiz Exp $
+
+BLAKE2s (zipremove-0.10.0.tar.gz) = a5f49b66871ea86bfb273d2bef52d0b78a8a3188ebac9436aee3a09481f03a35
+SHA512 (zipremove-0.10.0.tar.gz) = d71fef5af1195df6b8b54c0c0f109cb465357b0ff625d438c071f2ea54461ecfe6c72d11420dfaf5c3bb3d4b502dec21489a73252fcf2956c7cae60639df5c7f
+Size (zipremove-0.10.0.tar.gz) = 25448 bytes

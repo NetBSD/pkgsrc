@@ -1,0 +1,5 @@
+This package extends the native `zipfile` module with remove-related
+capabilities. The same codebase is currently being integrated into
+the CPython standard library and is scheduled to be available
+natively in Python 3.16. This package serves as a backport to
+support these future features today.
