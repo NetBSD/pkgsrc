@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8009 2026/11/15 02:22:07 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8010 2026/11/15 02:22:57 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11915,3 +11915,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/lxqt-sudo to 2.5.0 [disciple 2026-11-15]
 	Updated sysutils/lxqt-menu-data to 2.5.0 [disciple 2026-11-15]
 	Updated sysutils/lxqt-powermanagement to 2.5.0 [disciple 2026-11-15]
+	Updated sysutils/pcmanfm-qt to 2.5.0 [disciple 2026-11-15]
