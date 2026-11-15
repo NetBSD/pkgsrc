@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7995 2026/11/15 02:06:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7996 2026/11/15 02:07:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11901,3 +11901,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libqtxdg to 4.5.0 [disciple 2026-11-15]
 	Updated x11/qtxdg-tools to 4.5.0 [disciple 2026-11-15]
 	Updated devel/libdbusmenu-lxqt to 0.5.0 [disciple 2026-11-15]
+	Updated audio/pavucontrol-qt to 2.5.1 [disciple 2026-11-15]
