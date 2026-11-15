@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2026/11/08 08:43:40 wiz Exp $
+$NetBSD: distinfo,v 1.29 2026/11/15 09:21:25 wiz Exp $
 
-BLAKE2s (Sereal-Encoder-7.001.tar.gz) = a9241e205a1fc5d5e2ca7a6849108a213f6e3fe9da059842827b8617e46ea101
-SHA512 (Sereal-Encoder-7.001.tar.gz) = 0dc6e78c13e661fe9938bc7756ab189a2ca4fd5e1dde73a40ef661a32977050bf3c04fe7c7d159962fc954b579d67efad689e5f5f6686eca18d836e319d6f676
-Size (Sereal-Encoder-7.001.tar.gz) = 1449436 bytes
+BLAKE2s (Sereal-Encoder-7.002.tar.gz) = 902ec195f35546a19a9c6f53775df99a99eb9e2099d2f344f300be491e2533a6
+SHA512 (Sereal-Encoder-7.002.tar.gz) = 4f380377475868882e735751085d4af4ed294684aa50aedea891721c70810b9062f71f7d6d7da1cb087f6bb8d3b675c7ed965f5d7e5fc7d0e594800c5d6d8a4f
+Size (Sereal-Encoder-7.002.tar.gz) = 1456481 bytes
