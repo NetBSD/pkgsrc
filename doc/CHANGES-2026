@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8051 2026/11/15 20:32:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8052 2026/11/15 20:34:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11958,3 +11958,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/rspamd to 4.3.0 [wiz 2026-11-15]
 	Updated textproc/py-annotated-doc to 0.0.6 [wiz 2026-11-15]
 	Updated devel/py-coverage to 7.17.3 [wiz 2026-11-15]
+	Updated devel/py-dunamai to 1.26.5 [wiz 2026-11-15]
