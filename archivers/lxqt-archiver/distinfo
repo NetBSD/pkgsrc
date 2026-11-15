@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2026/04/28 08:35:06 pin Exp $
+$NetBSD: distinfo,v 1.17 2026/11/15 02:16:21 gutteridge Exp $
 
-BLAKE2s (lxqt-archiver-1.4.0.tar.xz) = 7ab53c53dae159b5ffc4a97619982eb5203f5fc71140c59ee577ed6e6a10615c
-SHA512 (lxqt-archiver-1.4.0.tar.xz) = 99c55d02d4b286bcb6ee0822adcb279df1dc90bab337d575b353ca86349f7c5a611e74241c7fc2647a692fea275a7201c28a8fa554e0d51903c1508aedff1112
-Size (lxqt-archiver-1.4.0.tar.xz) = 205660 bytes
-SHA1 (patch-CMakeLists.txt) = 171915fe98a1ee6f9406a20a4e1bf44f92de1f66
+BLAKE2s (lxqt-archiver-1.5.0.tar.xz) = 239b0a6276a4533d29e1e28ef2857c46ec9256060c7349d4a8d264987200a113
+SHA512 (lxqt-archiver-1.5.0.tar.xz) = 8f4c3b164134afbee45f8d4f522e40e19c2feeb238b4054ba9d01d2de2a3c72ea84fc5ac932d2f4bb26c425ec19a83a4bff133e7aed26ef1ff183dddc9ea049c
+Size (lxqt-archiver-1.5.0.tar.xz) = 202708 bytes
