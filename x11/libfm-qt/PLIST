@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/11/11 02:50:13 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/11/15 02:15:12 gutteridge Exp $
 include/libfm-qt6/appchoosercombobox.h
 include/libfm-qt6/appchooserdialog.h
 include/libfm-qt6/applaunchcontext.h
@@ -44,6 +44,7 @@ include/libfm-qt6/core/totalsizejob.h
 include/libfm-qt6/core/trashjob.h
 include/libfm-qt6/core/untrashjob.h
 include/libfm-qt6/core/userinfocache.h
+include/libfm-qt6/core/vfs/desktop-menu.h
 include/libfm-qt6/core/vfs/fm-file.h
 include/libfm-qt6/core/vfs/fm-xml-file.h
 include/libfm-qt6/core/volumemanager.h
@@ -98,8 +99,8 @@ include/libfm-qt6/utilities.h
 include/libfm-qt6/utilities_p.h
 include/libfm-qt6/xdndworkaround.h
 lib/libfm-qt6.so
-lib/libfm-qt6.so.17
-lib/libfm-qt6.so.17.0.0
+lib/libfm-qt6.so.18
+lib/libfm-qt6.so.18.0.0
 lib/pkgconfig/libfm-qt6.pc
 share/cmake/fm-qt6/fm-qt6-config-version.cmake
 share/cmake/fm-qt6/fm-qt6-config.cmake
@@ -153,7 +154,9 @@ share/libfm-qt6/translations/libfm-qt_sk.qm
 share/libfm-qt6/translations/libfm-qt_sl.qm
 share/libfm-qt6/translations/libfm-qt_sv.qm
 share/libfm-qt6/translations/libfm-qt_tr.qm
+share/libfm-qt6/translations/libfm-qt_ug.qm
 share/libfm-qt6/translations/libfm-qt_uk.qm
+share/libfm-qt6/translations/libfm-qt_vi.qm
 share/libfm-qt6/translations/libfm-qt_zh_CN.qm
 share/libfm-qt6/translations/libfm-qt_zh_TW.qm
 share/mime/packages/libfm-qt6-mimetypes.xml

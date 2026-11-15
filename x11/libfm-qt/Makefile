@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2026/11/11 11:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/11/15 02:15:12 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	libfm-qt-2.4.0
+DISTNAME=	libfm-qt-2.5.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -45,14 +44,13 @@ SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb\),${X11BASE}\1,g'
 # the rest of the libraries are from pkgsrc again
 SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/lxqt-menu-data/buildlink3.mk"
-.include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
