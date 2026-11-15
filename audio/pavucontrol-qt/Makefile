@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2026/11/11 11:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/11/15 02:07:09 gutteridge Exp $
 
-PKGREVISION= 7
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	pavucontrol-qt-2.4.0
+DISTNAME=	pavucontrol-qt-2.5.1
 CATEGORIES=	audio
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config perl
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
