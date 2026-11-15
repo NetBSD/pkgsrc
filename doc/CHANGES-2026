@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.7998 2026/11/15 02:10:41 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.7999 2026/11/15 02:13:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11904,3 +11904,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated audio/pavucontrol-qt to 2.5.1 [disciple 2026-11-15]
 	Updated x11/qtermwidget to 2.5.0 [disciple 2026-11-15]
 	Updated x11/qterminal to 2.5.0 [disciple 2026-11-15]
+	Added x11/lxqt-clip version 2.5.0 [disciple 2026-11-15]
