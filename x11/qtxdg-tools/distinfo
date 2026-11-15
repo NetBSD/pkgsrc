@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/04/28 07:52:28 pin Exp $
+$NetBSD: distinfo,v 1.10 2026/11/15 02:04:52 gutteridge Exp $
 
-BLAKE2s (qtxdg-tools-4.4.0.tar.xz) = 7f4988917d122ec1bdcf2870b569781ca8dd62cc442df664107f7e10c7156c2b
-SHA512 (qtxdg-tools-4.4.0.tar.xz) = 7e5802a4322cd82704fb50776275951bb2dbc5ecf365d5fd914fca88b35829eddeee9b2c8d4a41c7516ecbc7c5df837c55d4ece7f54a566256fe4cc24c95ae82
-Size (qtxdg-tools-4.4.0.tar.xz) = 16948 bytes
+BLAKE2s (qtxdg-tools-4.5.0.tar.xz) = dab653661ddd3d0ec581677113e3368cea39c7db09fda72f5d2ae5fb45a15b29
+SHA512 (qtxdg-tools-4.5.0.tar.xz) = df3deced39009c40f2fb6a2d6e3e605fe22920a5937865521f715c4ed0de6602874a0bae7029c0aab8d74b18206b9459558fc4a824a22729bd2c0e3203797319
+Size (qtxdg-tools-4.5.0.tar.xz) = 17048 bytes
