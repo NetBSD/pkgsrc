@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/10/22 20:19:39 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/11/15 19:37:05 wiz Exp $
 
 BUILDLINK_TREE+=	libcbor
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libcbor
 LIBCBOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcbor+=	libcbor>=0.8.0
+BUILDLINK_ABI_DEPENDS.libcbor?=	libcbor>=0.15.0
 BUILDLINK_PKGSRCDIR.libcbor?=	../../devel/libcbor
 .endif	# LIBCBOR_BUILDLINK3_MK
 
