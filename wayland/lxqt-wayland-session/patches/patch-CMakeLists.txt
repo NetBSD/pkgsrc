@@ -1,6 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2026/05/02 04:25:55 pin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2026/11/15 02:23:25 gutteridge Exp $
 
-* Fix pathes, see x11/lxqt-session/patches/patch-CMakeLists.txt
+* Fix paths, see x11/lxqt-session/patches/patch-CMakeLists.txt
 
 --- CMakeLists.txt.orig	2026-03-05 17:53:50.000000000 +0000
 +++ CMakeLists.txt

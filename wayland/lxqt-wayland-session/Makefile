@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2026/11/11 11:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/15 02:23:25 gutteridge Exp $
 
-PKGREVISION= 5
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-wayland-session-0.4.1
+DISTNAME=	lxqt-wayland-session-0.5.0
 CATEGORIES=	wayland
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,7 +21,7 @@ SUBST_MESSAGE.path=	Fix path
 SUBST_FILES.path=	CMakeLists.txt
 SUBST_VARS.path+=	PKG_SYSCONFDIR
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 DEPENDS+=	qtxdg-tools>=4.0.0:../../x11/qtxdg-tools
 DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs

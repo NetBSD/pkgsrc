@@ -1,9 +1,9 @@
-$NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
+$NetBSD: patch-startlxqtwayland.in,v 1.3 2026/11/15 02:23:25 gutteridge Exp $
 
-* Set fallback XDG_RUNTIME_DIR and create if not exist
-* Launch to compositors with seatd-launch
+* Set fallback XDG_RUNTIME_DIR and create if it doesn't exist
+* Launch compositors with seatd-launch
 
---- startlxqtwayland.in.orig	2026-06-02 12:09:16.561707532 +0000
+--- startlxqtwayland.in.orig	2026-11-04 13:14:02.000000000 +0000
 +++ startlxqtwayland.in
 @@ -11,6 +11,14 @@ fi
      export XDG_DATA_HOME="$HOME/.local/share"
@@ -20,16 +20,16 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
  if [ -z "$XDG_CONFIG_HOME" ]; then
      export XDG_CONFIG_HOME="$HOME/.config"
  fi
-@@ -96,7 +104,7 @@ if  [ -z "$COMPOSITOR" ]; then
-         export WLR_NO_HARDWARE_CURSORS=1
-         echo "Running on virtualized hardware"
-     fi
--    exec $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
-+    exec seatd-launch $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
+@@ -98,7 +106,7 @@ if  [ -z "$COMPOSITOR" ]; then
+     export XDG_CURRENT_DESKTOP="LXQt:$COMPOSITOR:wlroots"
  
- elif [ "$COMPOSITOR" = "labwc" ]; then
-     # Copy default configuration if not existing and set keyboard layout if different from us
-@@ -113,14 +121,14 @@ elif [ "$COMPOSITOR" = "labwc" ]; then
+     if [ "$COMPOSITOR" = "labwc" ]; then
+-        exec $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
++        exec seatd-launch $COMPOSITOR -C "$share_dir"/lxqt/wayland/firstrun -S lxqt-config-session
+     elif [ "$COMPOSITOR" = "niri" ]; then
+         exec $COMPOSITOR -c "$share_dir"/lxqt/wayland/firstrun/niri.kdl
+     elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
+@@ -128,14 +136,14 @@ elif [ "$COMPOSITOR" = "labwc" ]; then
          echo "Running on virtualized hardware"
      fi
  
@@ -46,7 +46,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
  
  elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
      # Style KDE's QML apps like systemsettings
-@@ -139,7 +147,7 @@ elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
+@@ -154,7 +162,7 @@ elif [ "$COMPOSITOR" = "kwin_wayland" ]; then
          fi
      fi
      # WARNING: Option '--no-kactivities' can result in crashes with animations and corner actions.
@@ -55,7 +55,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
  
  elif [ "$COMPOSITOR" = "wayfire" ]; then
      if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini" ]; then
-@@ -150,7 +158,7 @@ elif [ "$COMPOSITOR" = "wayfire" ]; then
+@@ -165,7 +173,7 @@ elif [ "$COMPOSITOR" = "wayfire" ]; then
          sed -i "/\[input\]/a $layout" $XDG_CONFIG_HOME/lxqt/wayland/lxqt-wayfire.ini
          fi
      fi
@@ -64,7 +64,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
  
  elif [ "$COMPOSITOR" = "sway" ]; then
      if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config" ]; then
-@@ -161,14 +169,14 @@ elif [ "$COMPOSITOR" = "sway" ]; then
+@@ -176,14 +184,14 @@ elif [ "$COMPOSITOR" = "sway" ]; then
          sed -i "/input \"type\:keyboard\"/a $layout" $XDG_CONFIG_HOME/lxqt/wayland/lxqt-sway.config
          fi
      fi
@@ -81,7 +81,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
      else
          if [ ! -f "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua" ]; then
              cp "$share_dir"/lxqt/wayland/lxqt-hyprland.lua "$XDG_CONFIG_HOME"/lxqt/wayland/
-@@ -176,7 +184,7 @@ elif [ "$COMPOSITOR" = "Hyprland" ]; then
+@@ -191,7 +199,7 @@ elif [ "$COMPOSITOR" = "Hyprland" ]; then
                  sed -i "s/= \"us\",/= \"$trylayout\",/g" "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-hyprland.lua"
              fi
          fi
@@ -90,7 +90,7 @@ $NetBSD: patch-startlxqtwayland.in,v 1.2 2026/06/02 14:01:31 pin Exp $
      fi
  
  elif [ "$COMPOSITOR" = "river" ]; then
-@@ -188,10 +196,10 @@ elif [ "$COMPOSITOR" = "river" ]; then
+@@ -203,10 +211,10 @@ elif [ "$COMPOSITOR" = "river" ]; then
              sed -i "s/riverctl keyboard-layout us/$layout/" "$XDG_CONFIG_HOME/lxqt/wayland/lxqt-river-init"
          fi
      fi
