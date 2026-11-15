@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2026/10/19 11:40:11 adam Exp $
+$NetBSD: distinfo,v 1.42 2026/11/15 11:49:41 wiz Exp $
 
-BLAKE2s (pkgconf-3.0.10.tar.gz) = 9ed1f453f7a3c0a7260b0da17936343dc8279bb7e433936eec006ac2af99c534
-SHA512 (pkgconf-3.0.10.tar.gz) = a4b837341fa5d7422575765a44c4a316c53f79b938f603c1ed3c162d3d079d933676eed6e52ac59f669e2e9dd81f6caec146d86b94e8a0a73e25e041c49ffef3
-Size (pkgconf-3.0.10.tar.gz) = 626550 bytes
+BLAKE2s (pkgconf-3.0.11.tar.gz) = 13fed29350c35af212a850980c8a734d828cddd0817024717d140b829c6643f1
+SHA512 (pkgconf-3.0.11.tar.gz) = b6b268e6ebbdedcb52bd1dc9a04519838e352553eead10842955dce97088195f43bab366ea1a2209ba3bc48ba5a49591131768df03401b63219b9842235af101
+Size (pkgconf-3.0.11.tar.gz) = 628730 bytes
