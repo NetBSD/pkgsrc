@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/08/03 17:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/15 20:29:26 wiz Exp $
 
-DISTNAME=	annotated_doc-0.0.5
+DISTNAME=	annotated_doc-0.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/annotated-doc/}
