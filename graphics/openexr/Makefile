@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2026/11/08 15:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2026/11/15 19:47:08 wiz Exp $
 
-DISTNAME=	openexr-3.5.3
-PKGREVISION=	1
+DISTNAME=	openexr-3.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.81 2026/11/01 21:26:23 wiz Exp $
+$NetBSD: distinfo,v 1.82 2026/11/15 19:47:08 wiz Exp $
 
-BLAKE2s (openexr-3.5.3.tar.gz) = f22ea6ad0cc25193eb246f1bd2ec4073a5444ce2a68a7b6e96805b292d1f5369
-SHA512 (openexr-3.5.3.tar.gz) = 6f0a11437d1c33cfff06d6d7c4c32c2b6660c7665e056b6506d3c078f38d7bcc23594e1695caa32f1ce1c0c018c950a282d75d0bf131966adcf768dd0a3cc1f3
-Size (openexr-3.5.3.tar.gz) = 26457608 bytes
+BLAKE2s (openexr-3.5.4.tar.gz) = 6791d37b841c4eeb636eade47bc4c37ef0c33d66114371f1ee517ccc0eff8f74
+SHA512 (openexr-3.5.4.tar.gz) = 060cad55f05456578ad4ad7f689235bd6a64f27566c0f2b3fa15f2b0ef042c7b4de2d32b3133f049329c07e3b323193589307bf08327d2ee1b8c45c68672a0b7
+Size (openexr-3.5.4.tar.gz) = 26480907 bytes
