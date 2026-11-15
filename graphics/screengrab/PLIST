@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/04/28 08:37:54 pin Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/11/15 02:18:35 gutteridge Exp $
 bin/screengrab
 share/applications/screengrab.desktop
 share/icons/hicolor/scalable/apps/screengrab.svg
@@ -45,6 +45,7 @@ share/screengrab/translations/screengrab_sk.qm
 share/screengrab/translations/screengrab_sl.qm
 share/screengrab/translations/screengrab_sv.qm
 share/screengrab/translations/screengrab_tr.qm
+share/screengrab/translations/screengrab_ug.qm
 share/screengrab/translations/screengrab_uk.qm
 share/screengrab/translations/screengrab_vi.qm
 share/screengrab/translations/screengrab_zh_CN.qm
