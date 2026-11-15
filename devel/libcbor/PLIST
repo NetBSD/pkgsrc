@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/30 15:00:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/15 19:36:39 wiz Exp $
 include/cbor.h
 include/cbor/arrays.h
 include/cbor/bytestrings.h
@@ -9,9 +9,11 @@ include/cbor/configuration.h
 include/cbor/data.h
 include/cbor/encoding.h
 include/cbor/floats_ctrls.h
+include/cbor/internal/array_utils.h
 include/cbor/internal/builder_callbacks.h
 include/cbor/internal/encoders.h
 include/cbor/internal/loaders.h
+include/cbor/internal/map_utils.h
 include/cbor/internal/memory_utils.h
 include/cbor/internal/stack.h
 include/cbor/internal/unicode.h
