@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.813 2026/10/30 09:16:48 spz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.814 2026/11/15 20:17:28 spz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -30243,7 +30243,7 @@ jenkins<2.541.3	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-33001
 jenkins>=2.426.3<2.541.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2026-33002
 libarchive-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2026-4424
 libarchive-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2026-4426
-libexif-[0-9]*	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2026-32775
+libexif<0.6.26	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2026-32775
 libsoup3<3.6.6	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2026-2369
 libsoup-[0-9]*	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2026-3632
 libsoup-[0-9]*	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-2026-3633
