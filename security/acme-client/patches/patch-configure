@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2026/11/15 15:02:42 vins Exp $
+
+Add check for explicit_bzero().
+
+--- configure.orig	2026-10-11 14:57:33.000000000 +0000
++++ configure
+@@ -5659,6 +5659,20 @@ esac
+  ;;
+ esac
+ fi
++ac_fn_c_check_func "$LINENO" "explicit_bzero" "ac_cv_func_explicit_bzero"
++if test "x$ac_cv_func_explicit_bzero" = xyes
++then :
++  printf "%s\n" "#define HAVE_EXPLICIT_BZERO 1" >>confdefs.h
++
++else case e in #(
++  e) case " $LIBOBJS " in
++  *" explicit_bzero.$ac_objext "* ) ;;
++  *) LIBOBJS="$LIBOBJS explicit_bzero.$ac_objext"
++ ;;
++esac
++ ;;
++esac
++fi
+ ac_fn_c_check_func "$LINENO" "freezero" "ac_cv_func_freezero"
+ if test "x$ac_cv_func_freezero" = xyes
+ then :

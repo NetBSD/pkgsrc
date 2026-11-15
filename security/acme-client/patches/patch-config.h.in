@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2026/11/15 15:02:42 vins Exp $
+
+Add support for explicit_bzero().
+
+--- config.h.in.orig	2026-10-11 14:57:33.000000000 +0000
++++ config.h.in
+@@ -12,6 +12,9 @@
+ /* Define to 1 if you have the <err.h> header file. */
+ #undef HAVE_ERR_H
+ 
++/* Define to 1 if you have the 'explicit_bzero' function. */
++#undef HAVE_EXPLICIT_BZERO
++
+ /* Define to 1 if you have the 'fork' function. */
+ #undef HAVE_FORK
+ 
