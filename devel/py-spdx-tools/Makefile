@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/11/15 21:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/15 21:38:11 wiz Exp $
 
 DISTNAME=	spdx_tools-0.8.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spdx_tools/}
 
