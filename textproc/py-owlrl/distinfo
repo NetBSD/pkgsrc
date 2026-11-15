@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 21:15:36 wiz Exp $
+
+BLAKE2s (owlrl-7.6.2.tar.gz) = 3abbddc50b407c8b5d626bee1eb31bdbdc583273e5bba7a5fef86dc34a233ba9
+SHA512 (owlrl-7.6.2.tar.gz) = 2034ac692a82677f6f5cb2ce5a6d4ee8ba2df89273da1758546008cef5282cfb744d642539906b5f52dc37074c09a2e3b5e9799d1e1879648e7406b194237af5
+Size (owlrl-7.6.2.tar.gz) = 48564 bytes
