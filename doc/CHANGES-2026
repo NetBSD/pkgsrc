@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8034 2026/11/15 16:07:28 vins Exp $
+$NetBSD: CHANGES-2026,v 1.8035 2026/11/15 18:19:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11941,3 +11941,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/xwpe to 1.6.9 [vins 2026-11-15]
 	Updated security/acme-client to 1.3.8 [vins 2026-11-15]
 	Updated audio/sndio to 1.11.0 [vins 2026-11-15]
+	Updated sysutils/dua-cli to 3.0.3 [pin 2026-11-15]
