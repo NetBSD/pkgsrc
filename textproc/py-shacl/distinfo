@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 21:20:16 wiz Exp $
+
+BLAKE2s (pyshacl-0.40.2.tar.gz) = 93f7aa5c0b2d705a4cfcb3b0339094b415500622ebdf5455ce7d35ed294e6a8a
+SHA512 (pyshacl-0.40.2.tar.gz) = 411de90db9932930725d96f6b4c88442f0c36e4353894d3c8cc86b7185a88a4ca5edf769632ffb64c3fcf163f2c886a85980ec0fe1a64a1f2f6652de7022bc5b
+Size (pyshacl-0.40.2.tar.gz) = 1447035 bytes

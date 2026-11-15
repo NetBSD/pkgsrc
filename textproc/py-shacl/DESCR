@@ -1,0 +1,2 @@
+This is a pure Python module which allows for the validation of
+RDF graphs against Shapes Constraint Language (SHACL) graphs.
