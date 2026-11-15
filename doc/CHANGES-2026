@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8063 2026/11/15 21:54:23 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8064 2026/11/15 21:56:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11970,3 +11970,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.2.10 [wiz 2026-11-15]
 	Updated www/py-google-api-python-client to 2.202.0 [wiz 2026-11-15]
 	Updated security/py-google-auth to 2.62.2 [wiz 2026-11-15]
+	Updated devel/py-importlib-metadata to 10.2.0 [wiz 2026-11-15]
