@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8004 2026/11/15 02:18:49 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8005 2026/11/15 02:19:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11910,3 +11910,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/lxqt-themes to 2.5.0 [disciple 2026-11-15]
 	Updated graphics/lximage-qt to 2.5.0 [disciple 2026-11-15]
 	Updated graphics/screengrab to 3.3.0 [disciple 2026-11-15]
+	Updated security/lxqt-policykit to 2.5.0 [disciple 2026-11-15]
