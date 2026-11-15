@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8012 2026/11/15 02:25:31 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8013 2026/11/15 02:26:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11919,3 +11919,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wayland/lxqt-wayland-session to 0.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-about to 2.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-admin to 2.5.0 [disciple 2026-11-15]
+	Updated x11/lxqt-config to 2.5.1 [disciple 2026-11-15]
