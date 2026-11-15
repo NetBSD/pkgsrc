@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8002 2026/11/15 02:17:25 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8003 2026/11/15 02:18:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11908,3 +11908,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/libfm-qt to 2.5.0 [disciple 2026-11-15]
 	Updated archivers/lxqt-archiver to 1.5.0 [disciple 2026-11-15]
 	Updated graphics/lxqt-themes to 2.5.0 [disciple 2026-11-15]
+	Updated graphics/lximage-qt to 2.5.0 [disciple 2026-11-15]
