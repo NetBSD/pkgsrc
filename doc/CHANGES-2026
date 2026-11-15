@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8049 2026/11/15 20:28:44 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8050 2026/11/15 20:29:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11956,3 +11956,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/consolekit to 1.2.7 [wiz 2026-11-15]
 	Updated textproc/rumdl to 0.3.4 [wiz 2026-11-15]
 	Updated mail/rspamd to 4.3.0 [wiz 2026-11-15]
+	Updated textproc/py-annotated-doc to 0.0.6 [wiz 2026-11-15]
