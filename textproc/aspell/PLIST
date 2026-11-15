@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/12/31 21:20:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/11/15 19:28:02 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -89,6 +89,7 @@ share/aspell/koi8-u.cset
 share/aspell/spell
 share/aspell/split.kbd
 share/aspell/standard.kbd
+share/locale/ar/LC_MESSAGES/aspell.mo
 share/locale/ast/LC_MESSAGES/aspell.mo
 share/locale/be/LC_MESSAGES/aspell.mo
 share/locale/ca/LC_MESSAGES/aspell.mo
@@ -127,3 +128,4 @@ share/locale/uk/LC_MESSAGES/aspell.mo
 share/locale/vi/LC_MESSAGES/aspell.mo
 share/locale/wa/LC_MESSAGES/aspell.mo
 share/locale/zh_CN/LC_MESSAGES/aspell.mo
+share/locale/zh_TW/LC_MESSAGES/aspell.mo
