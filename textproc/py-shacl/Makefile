@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2026/11/15 21:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/15 22:43:08 wiz Exp $
 
 DISTNAME=	pyshacl-0.40.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyshacl/}
 
