@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2026/04/28 08:40:28 pin Exp $
+@comment $NetBSD: PLIST,v 1.15 2026/11/15 02:26:16 gutteridge Exp $
 bin/lxqt-config
 bin/lxqt-config-appearance
 bin/lxqt-config-brightness
@@ -308,9 +308,11 @@ share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_ru.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_si.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_sk_SK.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_sl.qm
+share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_sr.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_sv.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_tr.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_uk.qm
+share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_vi.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_zh_CN.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_zh_TW.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_ar.qm

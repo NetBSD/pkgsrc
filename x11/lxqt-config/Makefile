@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2026/11/11 11:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/15 02:26:16 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	lxqt-config-2.4.0
+DISTNAME=	lxqt-config-2.5.1
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,7 +35,7 @@ SUBST_VARS.prefix=	X11BASE
 SUBST_VARS.prefix+=	XKBSUB
 
 DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"

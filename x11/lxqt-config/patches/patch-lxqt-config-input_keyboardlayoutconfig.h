@@ -1,13 +1,13 @@
-$NetBSD: patch-lxqt-config-input_keyboardlayoutconfig.h,v 1.1 2020/04/25 01:43:21 gutteridge Exp $
+$NetBSD: patch-lxqt-config-input_keyboardlayoutconfig.h,v 1.2 2026/11/15 02:26:16 gutteridge Exp $
 
 Adjust hard-coded path assumptions to pkgsrc norms.
 
---- lxqt-config-input/keyboardlayoutconfig.h.orig	2019-02-24 00:16:01.000000000 +0000
+--- lxqt-config-input/keyboardlayoutconfig.h.orig	2026-11-14 17:10:01.454761506 +0000
 +++ lxqt-config-input/keyboardlayoutconfig.h
-@@ -22,15 +22,7 @@
- #define KEYBOARDLAYOUTCONFIG_H
+@@ -23,15 +23,7 @@
  
- #include <QtCore/QtGlobal>
+ #include <QtGlobal> // defines the Q_OS_* macros used below
+ 
 -#ifdef Q_OS_LINUX
 -#define XKBD_BASELIST_PATH "/usr/share/X11/xkb/rules/base.lst"
 -#elif defined(Q_OS_FREEBSD)
