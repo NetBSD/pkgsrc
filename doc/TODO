@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28375 2026/11/15 19:34:09 wiz Exp $
+$NetBSD: TODO,v 1.28376 2026/11/15 19:36:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -845,7 +845,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
-	o libcbor-0.14.1
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
