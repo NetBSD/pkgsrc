@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2026/10/30 22:10:53 drixter Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2026/11/15 20:19:07 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -78,6 +78,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.20
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
+CARGO_CRATE_DEPENDS+=	cty-0.2.2
 CARGO_CRATE_DEPENDS+=	dashmap-5.5.3
 CARGO_CRATE_DEPENDS+=	data-encoding-2.10.0
 CARGO_CRATE_DEPENDS+=	diff-0.1.13
@@ -152,7 +153,7 @@ CARGO_CRATE_DEPENDS+=	icu_provider-2.2.0
 CARGO_CRATE_DEPENDS+=	id-arena-2.3.0
 CARGO_CRATE_DEPENDS+=	idna-1.1.0
 CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.1
-CARGO_CRATE_DEPENDS+=	ignore-0.4.33
+CARGO_CRATE_DEPENDS+=	ignore-0.4.34
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	indoc-2.0.7
 CARGO_CRATE_DEPENDS+=	inotify-0.11.1
@@ -248,7 +249,7 @@ CARGO_CRATE_DEPENDS+=	prettyplease-0.2.37
 CARGO_CRATE_DEPENDS+=	proc-macro-crate-3.5.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.106
 CARGO_CRATE_DEPENDS+=	proptest-1.12.0
-CARGO_CRATE_DEPENDS+=	pulldown-cmark-0.13.5
+CARGO_CRATE_DEPENDS+=	pulldown-cmark-0.13.6
 CARGO_CRATE_DEPENDS+=	pulldown-cmark-escape-0.11.0
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.3
 CARGO_CRATE_DEPENDS+=	quick-xml-0.41.0
