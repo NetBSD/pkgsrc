@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2026/10/11 16:31:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2026/11/15 20:28:31 wiz Exp $
 bin/mapstats
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
@@ -33,6 +33,9 @@ share/examples/rspamd/maps.d/exe_clickbait.inc
 share/examples/rspamd/maps.d/maillist.inc
 share/examples/rspamd/maps.d/mid.inc
 share/examples/rspamd/maps.d/mime_types.inc
+share/examples/rspamd/maps.d/phishing_rewrite_domains.inc
+share/examples/rspamd/maps.d/phishing_rewrite_redirectors.inc
+share/examples/rspamd/maps.d/phishing_trusted_redirectors.inc
 share/examples/rspamd/maps.d/redirectors.inc
 share/examples/rspamd/maps.d/spf_dkim_whitelist.inc
 share/examples/rspamd/maps.d/surbl-whitelist.inc
