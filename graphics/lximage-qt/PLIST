@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/04/28 08:08:43 pin Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/11/15 02:17:50 gutteridge Exp $
 bin/lximage-qt
 share/applications/lximage-qt.desktop
 share/icons/hicolor/48x48/apps/lximage-qt.svg
@@ -48,6 +48,7 @@ share/lximage-qt/translations/lximage-qt_sk.qm
 share/lximage-qt/translations/lximage-qt_sl.qm
 share/lximage-qt/translations/lximage-qt_sv.qm
 share/lximage-qt/translations/lximage-qt_tr.qm
+share/lximage-qt/translations/lximage-qt_ug.qm
 share/lximage-qt/translations/lximage-qt_uk.qm
 share/lximage-qt/translations/lximage-qt_vi.qm
 share/lximage-qt/translations/lximage-qt_zh_CN.qm
