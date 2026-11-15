@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8038 2026/11/15 19:32:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8039 2026/11/15 19:34:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11945,3 +11945,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 32.1.0 [pin 2026-11-15]
 	Updated textproc/aspell to 0.60.8.3 [wiz 2026-11-15]
 	Updated devel/ast-grep to 0.51.2 [wiz 2026-11-15]
+	Updated www/grafana-prometheus-datasource to 13.2.6 [wiz 2026-11-15]
