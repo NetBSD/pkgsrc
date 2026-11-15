@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4737 2026/11/15 21:23:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4738 2026/11/15 21:37:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3160,6 +3160,7 @@ SUBDIR+=	py-slugify
 SUBDIR+=	py-smmap
 SUBDIR+=	py-snappy
 SUBDIR+=	py-sortedcontainers
+SUBDIR+=	py-spdx-tools
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-stdio-mgr
 SUBDIR+=	py-stem
