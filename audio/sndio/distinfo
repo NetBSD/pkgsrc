@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/11/15 21:38:42 vins Exp $
+$NetBSD: distinfo,v 1.2 2026/11/15 16:06:08 vins Exp $
 
-BLAKE2s (sndio-1.10.0.tar.gz) = 39f92241015c931433dad456ee5ca965806c5b86e97950265d8a609ac38525a3
-SHA512 (sndio-1.10.0.tar.gz) = c35462976a1bffd128eacb185165964dac6b03505255e9ab9a933e24be5ed146cd9ac6995fd7af23247cb9133c010cce0876572db53b783ebabeb563fec7a1cf
-Size (sndio-1.10.0.tar.gz) = 162725 bytes
-SHA1 (patch-configure) = d1c1833fbcf925cbb31de04c3480757b83fb1aea
-SHA1 (patch-libsndio_sio__oss.c) = ca220153f77b65659b490ef26bfbb2efaab67d74
+BLAKE2s (sndio-1.11.0.tar.gz) = 7cdcac713f380b5b5354681500ead9e67f09060952382e823788dcfe6a07e603
+SHA512 (sndio-1.11.0.tar.gz) = d6f8a5410aa43a99234c6440042e7c2df4e2837544a995ebcbfc7e1fef09c1966d2ebcb8a2b4308fe9ad193618dca4a097fa9b6d4acc98ddad5863f75f193f0a
+Size (sndio-1.11.0.tar.gz) = 165578 bytes
+SHA1 (patch-configure) = 77103dc7516d9f740833e56692495a5ff5c67152

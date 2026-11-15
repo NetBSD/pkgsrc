@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2025/11/15 21:38:42 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/15 16:06:08 vins Exp $
 bin/aucat
 bin/midicat
 bin/sndioctl
 bin/sndiod
 include/sndio.h
 lib/libsndio.so
-lib/libsndio.so.7
-lib/libsndio.so.7.3
+lib/libsndio.so.9
+lib/libsndio.so.9.0
 lib/pkgconfig/sndio.pc
 man/man1/aucat.1
 man/man1/midicat.1
@@ -27,6 +27,7 @@ man/man3/sio_initpar.3
 man/man3/sio_nfds.3
 man/man3/sio_onmove.3
 man/man3/sio_onvol.3
+man/man3/sio_onxrun.3
 man/man3/sio_open.3
 man/man3/sio_pollfd.3
 man/man3/sio_read.3
