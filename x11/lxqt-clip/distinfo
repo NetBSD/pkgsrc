@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 02:12:53 gutteridge Exp $
+
+BLAKE2s (lxqt-clip-2.5.0.tar.xz) = 72b84ad95d1ded74ab87b5fa3b5fb2ace384b1887a302759fb33ade515b0e931
+SHA512 (lxqt-clip-2.5.0.tar.xz) = 6d55d351bb66ccf8848a6a7c99c5a6f752481da5cbedf196da452b78e8ad6936854843ccd460ca12a732deb2a38dbd56f538677f0b1159c4c163b7da19ebda3f
+Size (lxqt-clip-2.5.0.tar.xz) = 91788 bytes
+SHA1 (patch-CMakeLists.txt) = 46210f8a923ffa4e8a5b0e8f00dcc7b03fb848c8
