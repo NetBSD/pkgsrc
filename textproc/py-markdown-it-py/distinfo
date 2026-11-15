@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2026/05/10 13:10:38 wiz Exp $
+$NetBSD: distinfo,v 1.6 2026/11/15 21:58:53 wiz Exp $
 
-BLAKE2s (markdown_it_py-4.2.0.tar.gz) = 2d7f7aeb2c394bc4e084ba7a575ffd1c3d150bdfc54675e9f3031bce949f4a7f
-SHA512 (markdown_it_py-4.2.0.tar.gz) = 01df2c7058e32ea7b3edd4cf25ddccfdd840db058a50733bc4e7bce835b8ab0ccdb75648a70663c553d02147806e29c2f04379e7c8d26e9f515b21916fcaae49
-Size (markdown_it_py-4.2.0.tar.gz) = 82454 bytes
+BLAKE2s (markdown_it_py-4.3.0.tar.gz) = 373a19646353fc274d938df760bc0bf07b3dd898c917a4bd3782fb5000e80e1f
+SHA512 (markdown_it_py-4.3.0.tar.gz) = 5ee2ccadf9233a0f9cfc35515a55be1a7cd7d1e125485ec48c170c25695edbc13de52f816609cff5f3ebee615793baeb43de88adf12938eac575aeb7e0630c5c
+Size (markdown_it_py-4.3.0.tar.gz) = 242701 bytes
