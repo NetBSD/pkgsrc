@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2026/11/15 17:16:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2026/11/15 19:31:00 wiz Exp $
 # used by graphics/gdk-pixbuf2-jxl/Makefile
 
 DISTNAME=	libjxl-0.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
-GITHUB_PRJECT=	libjxl
+GITHUB_PROJECT=	libjxl
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
