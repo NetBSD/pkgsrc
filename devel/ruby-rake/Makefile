@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2026/11/12 15:03:46 ktnb Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/15 17:17:13 wiz Exp $
 
 DISTNAME=	rake-13.4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ruby/}
+GITHUB_PROJECT=	rake
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
