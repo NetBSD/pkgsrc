@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1623 2026/11/15 21:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.1624 2026/11/15 21:20:32 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1219,6 +1219,7 @@ SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
 SUBDIR+=	py-sentencepiece
 SUBDIR+=	py-sgmllib3k
+SUBDIR+=	py-shacl
 SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
