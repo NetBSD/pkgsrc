@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8045 2026/11/15 19:57:42 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8046 2026/11/15 20:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11952,3 +11952,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/libxmlb to 0.3.30 [wiz 2026-11-15]
 	Updated graphics/openexr to 3.5.4 [wiz 2026-11-15]
 	Updated textproc/utf8-cpp to 5.0.0 [wiz 2026-11-15]
+	Updated devel/jjui to 0.10.13 [wiz 2026-11-15]
