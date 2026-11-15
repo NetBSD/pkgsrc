@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8068 2026/11/15 22:20:49 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8069 2026/11/15 22:21:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11975,3 +11975,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-markdown-it-py to 4.3.0 [wiz 2026-11-15]
 	Updated textproc/py-pdf to 7.1.0 [wiz 2026-11-15]
 	Updated print/py-pikepdf to 10.18.1 [wiz 2026-11-15]
+	Updated sysutils/py-puremagic to 2.2.1 [wiz 2026-11-15]
