@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8019 2026/11/15 02:31:44 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8020 2026/11/15 02:36:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11926,3 +11926,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-qtplugin to 2.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-runner to 2.5.0 [disciple 2026-11-15]
 	Updated x11/lxqt-session to 2.5.0 [disciple 2026-11-15]
+	Updated meta-pkgs/lxqt to 2.5.0 [disciple 2026-11-15]
