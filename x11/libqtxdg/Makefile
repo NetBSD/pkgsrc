@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2026/11/11 11:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/11/15 02:03:46 gutteridge Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/lxqt/Makefile.common"
 
-DISTNAME=	libqtxdg-4.4.0
+DISTNAME=	libqtxdg-4.5.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -39,7 +38,7 @@ CONF_FILES+=	${QTXDG_CONF}/qtxdg.conf \
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fuse-linker-plugin
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.4.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.5.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../mk/bsd.prefs.mk"
