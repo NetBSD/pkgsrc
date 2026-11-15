@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2026/07/16 19:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/15 08:28:03 wiz Exp $
 
-DISTNAME=	JSON-XS-4.04
+DISTNAME=	JSON-XS-4.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JSON/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/JSON-XS
