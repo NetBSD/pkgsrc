@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1090 2026/09/22 09:05:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.1091 2026/11/15 02:14:12 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -225,6 +225,7 @@ SUBDIR+=	lxinput
 SUBDIR+=	lxlauncher
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-admin
+SUBDIR+=	lxqt-clip
 SUBDIR+=	lxqt-config
 SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-notificationd
