@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2026/11/08 21:08:42 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2026/11/15 20:32:27 wiz Exp $
 
-DISTNAME=	coverage-7.17.2
+DISTNAME=	coverage-7.17.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
@@ -28,7 +27,7 @@ post-install:
 # provide scripts for testing to match upstream expectations;
 # create test data
 pre-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} igor.py zip_mods
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tools/igor.py zip_mods
 	${MKDIR} -p ${BUILDLINK_DIR}/bin
 	${ECHO} '#!/bin/sh' > ${BUILDLINK_DIR}/bin/coverage
 	${ECHO} 'exec "${PYTHONBIN}" -m coverage "$$@"' >> ${BUILDLINK_DIR}/bin/coverage
@@ -39,7 +38,8 @@ pre-test:
 	${CHMOD} 755 ${BUILDLINK_DIR}/bin/${alias}
 .endfor
 
-# as of 7.17.2, after 'make install'
+# as of 7.17.3, after 'make install'
+# 12 failed, 1638 passed, 62 skipped
 # 12 failed, 1631 passed, 62 skipped, 1 error
 
 # The VirtualenvTest tests create a virtualenv and pip install into it, skip them.
