@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8021 2026/11/15 07:33:47 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8022 2026/11/15 08:28:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11928,3 +11928,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated x11/lxqt-session to 2.5.0 [disciple 2026-11-15]
 	Updated meta-pkgs/lxqt to 2.5.0 [disciple 2026-11-15]
 	Updated x11/xmag to 1.0.9 [wiz 2026-11-15]
+	Updated converters/p5-JSON-XS to 4.05 [wiz 2026-11-15]
