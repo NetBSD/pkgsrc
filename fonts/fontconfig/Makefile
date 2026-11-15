@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2026/08/17 01:30:38 pgoyette Exp $
+# $NetBSD: Makefile,v 1.143.2.1 2026/11/15 12:12:54 bsiegert Exp $
 
 DISTNAME=	fontconfig-2.18.3
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
