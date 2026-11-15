@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2026/11/11 11:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/15 11:11:51 wiz Exp $
 
-DISTNAME=	fzssh-1.4.0
-PKGREVISION=	1
+DISTNAME=	fzssh-1.5.2
 CATEGORIES=	net
 MASTER_SITES=	# scraper ownload protection, download manually
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +19,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/libfzssh-client.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "../../devel/meson/build.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.57.0
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.58.0
 .include "../../net/libfilezilla/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
