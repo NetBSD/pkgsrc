@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/11/08 17:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/15 20:33:54 wiz Exp $
 
-DISTNAME=	dunamai-1.26.4
+DISTNAME=	dunamai-1.26.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dunamai/}
