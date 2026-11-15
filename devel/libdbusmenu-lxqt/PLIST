@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/02 17:45:04 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/15 02:05:52 gutteridge Exp $
 include/dbusmenu-lxqt/dbusmenu_export.h
 include/dbusmenu-lxqt/dbusmenu_version.h
 include/dbusmenu-lxqt/dbusmenuexporter.h
 include/dbusmenu-lxqt/dbusmenuimporter.h
 lib/cmake/dbusmenu-lxqt/dbusmenu-lxqt-config-version.cmake
 lib/cmake/dbusmenu-lxqt/dbusmenu-lxqt-config.cmake
-lib/cmake/dbusmenu-lxqt/dbusmenu-lxqt-targets-noconfig.cmake
+lib/cmake/dbusmenu-lxqt/dbusmenu-lxqt-targets-release.cmake
 lib/cmake/dbusmenu-lxqt/dbusmenu-lxqt-targets.cmake
 lib/libdbusmenu-lxqt.so
 lib/libdbusmenu-lxqt.so.0
