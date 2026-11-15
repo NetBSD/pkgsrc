@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8066 2026/11/15 21:59:02 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8067 2026/11/15 22:13:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11973,3 +11973,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-importlib-metadata to 10.2.0 [wiz 2026-11-15]
 	Updated security/py-josepy to 2.3.0 [wiz 2026-11-15]
 	Updated textproc/py-markdown-it-py to 4.3.0 [wiz 2026-11-15]
+	Updated textproc/py-pdf to 7.1.0 [wiz 2026-11-15]
