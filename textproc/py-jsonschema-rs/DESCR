@@ -1,0 +1,10 @@
+A high-performance JSON Schema validator for Python.
+
+- Drafts 4, 6, 7, 2019-09 and 2020-12
+- Custom keywords and format validators
+- Compile-time validators for your own extension modules, via the Rust crate
+- $ref resolution over HTTP and from files
+- Schema bundling into Compound Schema Documents, and $ref dereferencing
+- Structured Output v1 reports (flag/list/hierarchical)
+- Meta-schema validation for schema documents, including custom metaschemas
+- Experimental schema canonicalization

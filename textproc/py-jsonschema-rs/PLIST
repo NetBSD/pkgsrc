@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/15 21:44:30 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/jsonschema_rs/__init__.py
+${PYSITELIB}/jsonschema_rs/__init__.pyc
+${PYSITELIB}/jsonschema_rs/__init__.pyi
+${PYSITELIB}/jsonschema_rs/__init__.pyo
+${PYSITELIB}/jsonschema_rs/canonical/__init__.py
+${PYSITELIB}/jsonschema_rs/canonical/__init__.pyc
+${PYSITELIB}/jsonschema_rs/canonical/__init__.pyi
+${PYSITELIB}/jsonschema_rs/canonical/__init__.pyo
+${PYSITELIB}/jsonschema_rs/canonical/json.pyi
+${PYSITELIB}/jsonschema_rs/canonical/schema.pyi
+${PYSITELIB}/jsonschema_rs/jsonschema_rs.abi3.so
+${PYSITELIB}/jsonschema_rs/py.typed
