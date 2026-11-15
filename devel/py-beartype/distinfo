@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/15 21:22:16 wiz Exp $
+
+BLAKE2s (beartype-0.23.1.tar.gz) = 4192704c612cfbfd46709bb39ce502499f78c57e136621843a22d5d18d082e97
+SHA512 (beartype-0.23.1.tar.gz) = a523cf31ef7a442f0bd700193a257bdbd2dfc0eefc1ae264ed1d7b92b0b021969e794963320e69ad5a7598a709c41356613634c4655a92296266fe10bc2a87f6
+Size (beartype-0.23.1.tar.gz) = 1993714 bytes
