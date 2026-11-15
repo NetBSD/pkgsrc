@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2026/11/01 21:15:32 wiz Exp $
+$NetBSD: distinfo,v 1.8 2026/11/15 19:33:58 wiz Exp $
 
 BLAKE2s (github.com__azure_a_d_microsoft-authentication-library-for-go_@v_v1.10.1.mod) = 7a7b495f91fb7b8b53b26a4d72a958ddb93ed4e411b5ed1e3e66ea63451078eb
 SHA512 (github.com__azure_a_d_microsoft-authentication-library-for-go_@v_v1.10.1.mod) = 5eebe0047770ccd6d0b7c61f7817530009d88006348c5486028fba63db3672c9069774927d8ddabf57e37f25bdf19ae0de41c5d727073bf083f6be97aef67d50
@@ -825,12 +825,12 @@ Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20261012220534-4341edf
 BLAKE2s (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20261012220534-4341edf3f941.zip) = 1d6391e4ae1fb2e1366a2221add8cbab637ce7a83a1fe3081a0db2842233a407
 SHA512 (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20261012220534-4341edf3f941.zip) = 23c9deed1937773f34bbaf1be5c8eda5fca0bb02778cfb32a0ed46960874d9d515d812832ce0797b667d16f53a986f8ce36dab6df92467f8ca706f6a83cdda8c
 Size (google.golang.org_genproto_googleapis_rpc_@v_v0.0.0-20261012220534-4341edf3f941.zip) = 40889 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.86.0-dev.mod) = 3187be0043e9cdbb87148115cc6f923626dc1165ad9e6c68f7351ba68ecf5b70
-SHA512 (google.golang.org_grpc_@v_v1.86.0-dev.mod) = af666943e3879ba49e890671aa4fb87cfe4e82e08d237e66830758d80ffeaa688814b67fc71b3fcb39d365888c923cbb54822b5a08ff872c06a209430d0c06d4
-Size (google.golang.org_grpc_@v_v1.86.0-dev.mod) = 2173 bytes
-BLAKE2s (google.golang.org_grpc_@v_v1.86.0-dev.zip) = 59ec3c6a8e62f70e0967e6756ae803891f1d797ecf7093a156fe3f69664ffd3a
-SHA512 (google.golang.org_grpc_@v_v1.86.0-dev.zip) = d5a6d07c994eccec6fb1f336374f0d0543e4f88996da91524fba7697571be3a5035f6770e2f8cd933044d30f89fe8f0bca825e3b64e0193c3d8d422af86fd690
-Size (google.golang.org_grpc_@v_v1.86.0-dev.zip) = 3159155 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.85.0.mod) = b1d4819c5bf21fca8bc17c79ac3befd56115bfb19216669180f305e572422da5
+SHA512 (google.golang.org_grpc_@v_v1.85.0.mod) = 8ad269052517350aaab096de31f8ea883c84fc1bea687a272a99f93ac23df77c7f4a0fec5d7b41d4178f6392ce932d60d10fe3196f2dab7952744495da51fef7
+Size (google.golang.org_grpc_@v_v1.85.0.mod) = 1764 bytes
+BLAKE2s (google.golang.org_grpc_@v_v1.85.0.zip) = eb87f10404f19980c452b915558b83bf64642f77c7c0939357781888d94ecf05
+SHA512 (google.golang.org_grpc_@v_v1.85.0.zip) = c3a6d9d95aa07df18eb3b30ba792c187bacbe22bef1fb48b5a32a9261cc9d6fec831598e3864bb503ffd336723161d80b92c6ac05b8b47653f0dc6d8c7dc121b
+Size (google.golang.org_grpc_@v_v1.85.0.zip) = 3165341 bytes
 BLAKE2s (google.golang.org_protobuf_@v_v1.36.12.mod) = f1c27cc7fd7ad2c8c22e99eb8012c01dde7c96370d4dda31dc48892730d31d67
 SHA512 (google.golang.org_protobuf_@v_v1.36.12.mod) = 0b400139a771d8651da5bd9e5695d5d2809c5844b9d53432855238d7338714d0529d4c3d5ce7e6897b0f5e286a3611834769200dae1b1faaa6c01ed9abc80143
 Size (google.golang.org_protobuf_@v_v1.36.12.mod) = 124 bytes
@@ -864,9 +864,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (grafana-prometheus-datasource-13.2.5.tar.gz) = 3d9ebd99d96d4c2053c111316254dee0c74042bb8b5ae666e061967b892feba4
-SHA512 (grafana-prometheus-datasource-13.2.5.tar.gz) = 283a7a02f338f690a51fc4e6b6dc35d01bcc4f6972261f3179f6d00d07a837d9a667fea35dc35f5159d4a7207d8cc50a8d4e91cbc8c56a65307c042bdcbc9bee
-Size (grafana-prometheus-datasource-13.2.5.tar.gz) = 1557577 bytes
+BLAKE2s (grafana-prometheus-datasource-13.2.6.tar.gz) = 63fce3f3dee95be417e0acfd260c11e9a353d0e5494ed860da6e80ed16dbd9a9
+SHA512 (grafana-prometheus-datasource-13.2.6.tar.gz) = 3dd753a4246ac884b27648b0632c7d90b4a8ff33d120ccf710053a2c201dd6b062c0b37e03d295f33ea4875fcb51b08f7e5e3656712e4eb1913cb2199ddb5658
+Size (grafana-prometheus-datasource-13.2.6.tar.gz) = 1558213 bytes
 BLAKE2s (k8s.io_apimachinery_@v_v0.37.1.mod) = d0fc9d55c7473f9ef396e4c739c119bd661f025f3e35256c08561c9d6494c224
 SHA512 (k8s.io_apimachinery_@v_v0.37.1.mod) = 5a02d086972d9263e0545e0eba1d929b33f5c0a34bf3f0e001317e3bd303a84df431e273a31b7cc28522577579d190e16806fd1ff49496eb54b2d0856224a699
 Size (k8s.io_apimachinery_@v_v0.37.1.mod) = 2505 bytes
@@ -891,9 +891,9 @@ Size (k8s.io_utils_@v_v0.0.0-20260707023825-cf1189d6abe3.mod) = 153 bytes
 BLAKE2s (k8s.io_utils_@v_v0.0.0-20260707023825-cf1189d6abe3.zip) = 63a953b8f5da7845262bf126050fe39f52a31226a02f9e077629bcd338f95d6c
 SHA512 (k8s.io_utils_@v_v0.0.0-20260707023825-cf1189d6abe3.zip) = 82ac8caf29efeb40e9166807dbcb6fa173294cf11c3c42b0cbfc6b32a3b8a8e9e5dec7000d28af9c2fe25f99afa2a2e7ff4d2d5d1d471ae7806173a56d75bef4
 Size (k8s.io_utils_@v_v0.0.0-20260707023825-cf1189d6abe3.zip) = 243317 bytes
-BLAKE2s (prometheus-13.2.5.linux_amd64.zip) = e872589163fa1e145fe63117f88e6090eec3060550aeabf56769b240726b8984
-SHA512 (prometheus-13.2.5.linux_amd64.zip) = c7cd54e43b5deb596d03174983a9280328693fdc9e51bc6a74719975a34e39f79b63b3d5628df35be961ccbfb3227c3d9a1eee81669b57548fa270a20956e782
-Size (prometheus-13.2.5.linux_amd64.zip) = 17247641 bytes
+BLAKE2s (prometheus-13.2.6.linux_amd64.zip) = e3591bb26d439cbc8f15cd713995cd29d4c3c6aaa39c76632ca89899e67539ce
+SHA512 (prometheus-13.2.6.linux_amd64.zip) = e31790ff9b01877d88dadabe127bbec837562fa9ca7d4d00f46fda045cb813a87baa44eacd35246e11a91586d2b79d44ba856611ea69b0edfa1a47c8585add84
+Size (prometheus-13.2.6.linux_amd64.zip) = 17252026 bytes
 BLAKE2s (sigs.k8s.io_json_@v_v0.0.0-20260909141634-11ed52e25bc5.mod) = 0b1238d89c77686f02002092d6c14b461423ce7c2fa906f554deffefd727014d
 SHA512 (sigs.k8s.io_json_@v_v0.0.0-20260909141634-11ed52e25bc5.mod) = ca8b000bb3d6dce184fd01445782fa95557ec7ff6328dcd225dc26a14fc1d2d69baacaebe9d8703c867c8902f846950f9aefcc80af4530735f4b4432b77e4490
 Size (sigs.k8s.io_json_@v_v0.0.0-20260909141634-11ed52e25bc5.mod) = 33 bytes

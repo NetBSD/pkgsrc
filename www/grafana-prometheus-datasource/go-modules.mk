@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2026/11/01 21:15:32 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.6 2026/11/15 19:33:58 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!azure!a!d/microsoft-authentication-library-for-go/@v/v1.10.1.mod
 GO_MODULE_FILES+=	github.com/!azure!a!d/microsoft-authentication-library-for-go/@v/v1.10.1.zip
@@ -275,8 +275,8 @@ GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-2026101222
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/api/@v/v0.0.0-20261012220534-4341edf3f941.zip
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20261012220534-4341edf3f941.mod
 GO_MODULE_FILES+=	google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20261012220534-4341edf3f941.zip
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.86.0-dev.mod
-GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.86.0-dev.zip
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.85.0.mod
+GO_MODULE_FILES+=	google.golang.org/grpc/@v/v1.85.0.zip
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.12.mod
 GO_MODULE_FILES+=	google.golang.org/protobuf/@v/v1.36.12.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
