@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1622 2026/11/14 07:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1623 2026/11/15 21:15:57 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1181,6 +1181,7 @@ SUBDIR+=	py-openapi-spec-validator
 SUBDIR+=	py-openapi3
 SUBDIR+=	py-openpyxl
 SUBDIR+=	py-orjson
+SUBDIR+=	py-owlrl
 SUBDIR+=	py-pallets-sphinx-themes
 SUBDIR+=	py-pandocfilters
 SUBDIR+=	py-parse
@@ -1453,7 +1454,6 @@ SUBDIR+=	subliminal
 SUBDIR+=	subtitleripper
 SUBDIR+=	swath
 SUBDIR+=	syntax-highlighting
-SUBDIR+=	tabiew
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-tDOM
