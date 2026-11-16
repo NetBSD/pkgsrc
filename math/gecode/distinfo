@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/16 22:58:52 alnsn Exp $
+
+BLAKE2s (gecode-6.6.0.tar.gz) = df6473ac60df81b4889b866f1e626e58cd3be3c987e105f2d9bc18b617c11097
+SHA512 (gecode-6.6.0.tar.gz) = c1ce2a5ce5a5db7eea8ca52fb72ca09f12699fc4c2372150fa8466c8e611f001b9cfa6d3d4cce037074ab5d037066780f2265a2442386425aecd4799f0c588bc
+Size (gecode-6.6.0.tar.gz) = 6063675 bytes
