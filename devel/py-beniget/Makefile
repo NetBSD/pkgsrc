@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/12/27 14:35:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/16 12:44:47 adam Exp $
 
-DISTNAME=	beniget-0.5.0
+DISTNAME=	beniget-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beniget/}
