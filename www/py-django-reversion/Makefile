@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2026/11/02 22:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/16 10:50:41 adam Exp $
 
-DISTNAME=	django_reversion-6.5.1
+DISTNAME=	django_reversion-6.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
@@ -17,9 +17,9 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 312
-DEPENDS+=	${PYPKGPREFIX}-django>=4.2<6:../../www/py-django5
+DEPENDS+=	${PYPKGPREFIX}-django>=5.2<6:../../www/py-django5
 .else
-DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=5.2:../../www/py-django
 .endif
 
 .include "../../lang/python/wheel.mk"
