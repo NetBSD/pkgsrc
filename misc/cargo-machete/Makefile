@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/07/22 13:34:30 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/16 06:06:52 adam Exp $
 
-DISTNAME=	cargo-machete-0.9.2
+DISTNAME=	cargo-machete-0.10.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bnjbvr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
