@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8103 2026/11/16 15:46:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8104 2026/11/16 15:57:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12031,3 +12031,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ettercap-gtk to 0.8.5.1 [adam 2026-11-16]
 	Updated time/py-dateparser to 1.5.0 [adam 2026-11-16]
 	Updated net/py-zeroconf to 0.154.0 [adam 2026-11-16]
+	Updated devel/py-test-randomly to 5.1.0 [adam 2026-11-16]
+	Updated devel/py-test-datadir to 1.9.0 [adam 2026-11-16]
