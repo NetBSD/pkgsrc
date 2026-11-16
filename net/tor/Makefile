@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.205 2026/11/09 08:32:35 adam Exp $
+# $NetBSD: Makefile,v 1.206 2026/11/16 11:32:07 wiz Exp $
 
-DISTNAME=	tor-0.4.9.16
+DISTNAME=	tor-0.4.9.17
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
