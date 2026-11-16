@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/08/20 18:31:47 adam Exp $
+$NetBSD: distinfo,v 1.9 2026/11/16 12:11:57 adam Exp $
 
-BLAKE2s (ciso8601-2.3.3.tar.gz) = 57b4f1d7be0ef3c99d022630d8adc96ab7e68ef78f16007535625b997e8c01d4
-SHA512 (ciso8601-2.3.3.tar.gz) = 747c18397316acc84d14b8c74b3fdb1cf82796bba415dafbec926fe8a538e447ac3d6ee8db12b86a684855e7aa8981dbeaa88f267fc6f01024b41dc4f1698cde
-Size (ciso8601-2.3.3.tar.gz) = 31909 bytes
+BLAKE2s (ciso8601-2.4.1.tar.gz) = 4ba917a7f03b8006dffa1feef84cc488dc3832b874fe8fc3234d053c9bcf85b8
+SHA512 (ciso8601-2.4.1.tar.gz) = bb5398a57f6398e53c4095457ed6d8d6d15312f4b9d448da9c2b2ec6bcdb4422db1afba3c3ce0e6838990e7dbe657d368c4c8749abdb9c41d58fa3515fccceba
+Size (ciso8601-2.4.1.tar.gz) = 28067 bytes
