@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8101 2026/11/16 13:13:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8102 2026/11/16 15:40:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12027,3 +12027,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-beniget to 0.5.1 [adam 2026-11-16]
 	Updated devel/py-cwcwidth to 0.1.13 [adam 2026-11-16]
 	Updated lang/gawk to 5.4.2 [wiz 2026-11-16]
+	Updated net/ettercap to 0.8.5.1 [adam 2026-11-16]
+	Updated net/ettercap-gtk to 0.8.5.1 [adam 2026-11-16]
