@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/07/06 06:54:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/16 16:15:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -93,6 +93,9 @@ ${PYSITELIB}/httpcore2/_synchronization.pyo
 ${PYSITELIB}/httpcore2/_trace.py
 ${PYSITELIB}/httpcore2/_trace.pyc
 ${PYSITELIB}/httpcore2/_trace.pyo
+${PYSITELIB}/httpcore2/_types.py
+${PYSITELIB}/httpcore2/_types.pyc
+${PYSITELIB}/httpcore2/_types.pyo
 ${PYSITELIB}/httpcore2/_utils.py
 ${PYSITELIB}/httpcore2/_utils.pyc
 ${PYSITELIB}/httpcore2/_utils.pyo
