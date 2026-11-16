@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/08/28 13:41:08 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/16 01:46:29 ktnb Exp $
 
-DISTNAME=	poke-3.3
+DISTNAME=	poke-5.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=poke/}
 
@@ -13,13 +13,13 @@ GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
 USE_TOOLS+=	pkg-config gmake makeinfo install-info
+USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
 CONFIGURE_ARGS+=	--enable-mi
 
 # Jitter's no-threading dispatch does not work on NetBSD
-CONFIGURE_ARGS.NetBSD+= --disable-dispatch-no-threading
+CONFIGURE_ARGS.NetBSD+=	--disable-dispatch-no-threading
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"

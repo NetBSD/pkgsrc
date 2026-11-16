@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/08/24 22:22:28 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2026/11/16 01:46:29 ktnb Exp $
 
-BLAKE2s (poke-3.3.tar.gz) = 56bbbe0958975cb75b77d5e9e623e8cf55d0fcd26e006a128b0a0898b463d7a8
-SHA512 (poke-3.3.tar.gz) = b00dca38d27bddee6ea131d45988aaead1d11d29b757c048f3b2be8013575cedc591844d4d99870f90964fd4f517d500cbb42aae5aff57e9fe07aac8273aa236
-Size (poke-3.3.tar.gz) = 7553544 bytes
+BLAKE2s (poke-5.0.tar.gz) = cc6c201b085ded43a06f1f3c803e5480b8782e0681d7f7e97ccc61fdc75f2ea5
+SHA512 (poke-5.0.tar.gz) = fec7df04729a21de15c9cdfba256291581dad660fc2e0a76c2e605f1505f5687043c032ad73e47a5ece591d6f14c72f5ddc9d480c764291cb5d06bedbcd3d339
+Size (poke-5.0.tar.gz) = 9229552 bytes
