@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/11/10 12:58:25 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/11/16 17:01:13 ktnb Exp $
 
 DISTNAME=	lz4-1.11.1
 CATEGORIES=	archivers
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 BUILD_TARGET=		# empty
 TEST_TARGET=		test
 
-MAKE_FLAGS+=		PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
+MAKE_FLAGS+=	PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
