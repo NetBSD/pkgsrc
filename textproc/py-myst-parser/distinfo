@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/05/28 12:26:39 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/11/16 12:32:22 adam Exp $
 
-BLAKE2s (myst_parser-5.1.0.tar.gz) = 07b0f272c3838b5ce56582daaa9c0bd11bd084555973917df3638b3a40784ef7
-SHA512 (myst_parser-5.1.0.tar.gz) = cd1da145d6652f15c57a7142edc39ebf85aa0ffa972e3f7c29fd3574b42b0c0cf46e5036e3dcd9a6daea40b0d4c63f27e9df824c2d7f2844cb687f71e476fcaf
-Size (myst_parser-5.1.0.tar.gz) = 101182 bytes
+BLAKE2s (myst_parser-5.2.0.tar.gz) = 9d9cc59ea1b6634b4ce2e5d0c5a8e638da2b6dc9cd51a4290a726b2dc74561d6
+SHA512 (myst_parser-5.2.0.tar.gz) = 32607af1d41a45d71bf5c9decf25369512eac33640390df9799df274887d0081b99dbc1da55d0e1dface0e89770f03c811a4cef39d35862a01941249a590a0c8
+Size (myst_parser-5.2.0.tar.gz) = 92240 bytes
