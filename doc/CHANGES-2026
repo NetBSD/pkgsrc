@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8093 2026/11/16 12:06:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8094 2026/11/16 12:15:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12011,3 +12011,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-authlib to 1.9.8 [adam 2026-11-16]
 	Updated math/py-numpy to 2.5.5 [adam 2026-11-16]
 	Updated graphics/py-tifffile to 2026.11.12 [adam 2026-11-16]
+	Updated time/py-ciso8601 to 2.4.1 [adam 2026-11-16]
+	Updated sysutils/py-watchdog to 7.1.0 [adam 2026-11-16]
