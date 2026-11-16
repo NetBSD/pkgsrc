@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/10/16 19:44:07 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/16 09:58:00 adam Exp $
 
-DISTNAME=	copier-9.18.2
+DISTNAME=	copier-9.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/copier/}
