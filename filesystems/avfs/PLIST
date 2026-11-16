@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2026/04/22 17:47:50 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/16 17:37:44 vins Exp $
 bin/avfs-config
 ${PLIST.fuse}bin/avfsd
 bin/davpass
 bin/ftppass
 ${PLIST.fuse}bin/mountavfs
 ${PLIST.fuse}bin/umountavfs
-include/avfs.h
 include/virtual.h
 lib/avfs/extfs/README
 lib/avfs/extfs/a

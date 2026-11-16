@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/04/22 17:47:50 vins Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/16 17:37:44 vins Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avfs
 PKG_SUPPORTED_OPTIONS+=	debug fuse webdav zstd
 PKG_SUGGESTED_OPTIONS+=	fuse zstd
@@ -14,7 +14,8 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 
 # Compile the AVFS daemon for fuse
 .if !empty(PKG_OPTIONS:Mfuse)
-BUILDLINK_API_DEPENDS.fuse+=    fuse>=2.8
+BUILDLINK_API_DEPENDS.fuse+=	fuse>=3.17
+USE_FUSE3=		yes
 .  include "../../mk/fuse.buildlink3.mk"
 CONFIGURE_ARGS+=        --enable-fuse
 PLIST.fuse=	yes
