@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2026/11/14 12:31:44 kikadf Exp $
+# $NetBSD: Makefile,v 1.105 2026/11/16 11:16:51 wiz Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			157.0.8103.78
+PKGREVISION=			1
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 #MASTER_SITES=			${MASTER_SITE_GITHUB:=chromium-linux-tarballs/}chromium-tarballs/releases/download/${VERSION}/
@@ -26,7 +27,7 @@ GITHUB_SUBMODULES+=		microsoft TypeScript v7.0.2 typescript
 
 # crubit
 # From ${WRKSRC}/tools/rust/update_rust.py:
-CRUBIT_REVISION=		20dc640430bd60ff2f7f8dbf69c311c5f807adde
+CRUBIT_REVISION=		dcf92a1baf2c8a6561ed0361502cfec20e2f65f5
 GITHUB_SUBMODULES+=		google crubit ${CRUBIT_REVISION} crubit
 CARGO_WRKSRC=			${WRKSRC}/crubit
 
