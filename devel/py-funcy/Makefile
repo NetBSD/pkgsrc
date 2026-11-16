@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/02 19:53:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/16 09:55:58 adam Exp $
 
-DISTNAME=	funcy-2.0
+DISTNAME=	funcy-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/funcy/}
