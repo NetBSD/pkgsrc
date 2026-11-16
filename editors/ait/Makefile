@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/05/07 16:48:59 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/16 01:59:29 ktnb Exp $
 
-DISTNAME=	ait-1.15
+DISTNAME=	ait-1.16
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/ktnb/
 
