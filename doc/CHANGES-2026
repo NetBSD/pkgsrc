@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8095 2026/11/16 12:22:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8096 2026/11/16 12:26:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12015,3 +12015,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-watchdog to 7.1.0 [adam 2026-11-16]
 	Updated devel/py-inline-snapshot to 0.36.2 [adam 2026-11-16]
 	Updated www/py-python-multipart to 0.0.33 [adam 2026-11-16]
+	Updated converters/py-simplejson to 4.3.0 [adam 2026-11-16]
+	Updated www/py-vcrpy to 9.4.2 [adam 2026-11-16]
