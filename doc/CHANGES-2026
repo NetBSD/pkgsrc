@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8082 2026/11/16 06:17:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8083 2026/11/16 09:58:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11991,3 +11991,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated misc/cargo-machete to 0.10.1 [adam 2026-11-16]
 	Updated misc/py-aiomisc to 18.0.40 [adam 2026-11-16]
 	Updated devel/py-aiostream to 0.8.2 [adam 2026-11-16]
+	Updated devel/py-funcy to 2.1 [adam 2026-11-16]
+	Updated misc/py-copier to 9.19.1 [adam 2026-11-16]
