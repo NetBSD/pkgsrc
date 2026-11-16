@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2026/11/11 11:55:59 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/11/16 12:42:24 adam Exp $
 
-DISTNAME=	pyicu-2.16.2
+DISTNAME=	pyicu-2.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyicu/ICU/}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
 
@@ -12,7 +11,7 @@ COMMENT=	Python extension wrapping the ICU C++ libraries
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
