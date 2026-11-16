@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8105 2026/11/16 16:05:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8106 2026/11/16 16:11:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12035,3 +12035,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-datadir to 1.9.0 [adam 2026-11-16]
 	Updated archivers/py-zlib-ng to 1.1.0 [adam 2026-11-16]
 	Updated www/py-uritools to 7.0.0 [adam 2026-11-16]
+	Updated textproc/translate-toolkit to 3.20.6 [adam 2026-11-16]
+	Updated databases/timescaledb-tune to 0.19.1 [adam 2026-11-16]
