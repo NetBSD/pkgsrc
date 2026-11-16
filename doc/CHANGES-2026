@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8079 2026/11/16 01:46:49 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8080 2026/11/16 01:59:52 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11986,3 +11986,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/toxcore to 0.2.25 [ktnb 2026-11-16]
 	Updated benchmarks/postal to 0.76 [ktnb 2026-11-16]
 	Updated editors/poke to 5.0 [ktnb 2026-11-16]
+	Updated editors/ait to 1.16 [ktnb 2026-11-16]
