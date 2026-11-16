@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/08/03 07:33:35 vins Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/16 19:32:38 vins Exp $
 
-DISTNAME=	emwm-src-1.3.1
+DISTNAME=	emwm-src-2.1
 PKGNAME=	${DISTNAME:S,-src,,}
 CATEGORIES=	wm
 MASTER_SITES=	https://fastestcode.org/dl/

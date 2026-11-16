@@ -1,24 +1,20 @@
-$NetBSD: patch-src_common.mf,v 1.4 2025/08/03 07:33:35 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.5 2026/11/16 19:32:38 vins Exp $
 
-* Use standard CFLAGS and LDFLAGS.
+* Honor pkgsrc CFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2025-08-02 14:30:15.000000000 +0000
+--- src/common.mf.orig	2026-08-13 17:16:02.000000000 +0000
 +++ src/common.mf
-@@ -16,10 +16,10 @@ mwm_objs = \
- 	WmXinerama.o WmEwmh.o
- 
- emwm: $(mwm_objs)
--	$(CC) $(LDFLAGS) $(LIBDIRS) -o $@ $(mwm_objs) $(SYSLIBS)
-+	$(CC) $(LDFLAGS) -o $@ $(mwm_objs) $(SYSLIBS)
+@@ -18,7 +18,7 @@ emwm: $(mwm_objs)
+ 	$(CC) $(LDFLAGS) $(LIBDIRS) -o $@ $(mwm_objs) $(SYSLIBS)
  
  .depend:
--	$(CC) -MM $(INCDIRS) $(mwm_objs:.o=.c) $(wsm_objs:.o=.c) > $@
-+	$(CC) -MM $(CFLAGS) $(mwm_objs:.o=.c) $(wsm_objs:.o=.c) > $@
+-	$(CC) -MM $(INCDIRS) $(mwm_objs:.o=.c) > $@
++	$(CC) -MM $(CFLAGS) $(INCDIRS) $(mwm_objs:.o=.c) > $@
  
  .PHONY: clean install common_install
  
-@@ -28,15 +28,14 @@ clean:
+@@ -27,15 +27,14 @@ clean:
  	-rm .depend
  
  common_install:

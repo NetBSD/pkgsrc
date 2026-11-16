@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/03 07:33:35 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/16 19:32:38 vins Exp $
 bin/emwm
 lib/X11/app-defaults/Emwm
 lib/X11/system.emwmrc
@@ -14,17 +14,20 @@ share/pixmaps/draw.xpm
 share/pixmaps/emwm.xpm
 share/pixmaps/emwm2.xpm
 share/pixmaps/hardware.xpm
+share/pixmaps/java.xpm
 share/pixmaps/mailbox.xpm
 share/pixmaps/mplayer.xpm
 share/pixmaps/navigator.xpm
 share/pixmaps/ofwp.xpm
 share/pixmaps/osview.xpm
 share/pixmaps/pdftool.xpm
+share/pixmaps/pickrgb.xpm
 share/pixmaps/python.xpm
 share/pixmaps/qemu.xpm
 share/pixmaps/rdesktop.xpm
 share/pixmaps/sndmix.xpm
 share/pixmaps/strmedia.xpm
+share/pixmaps/stylus.xpm
 share/pixmaps/terminal.xpm
 share/pixmaps/textedit.xpm
 share/pixmaps/viewer.xpm
