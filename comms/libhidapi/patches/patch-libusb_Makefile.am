@@ -1,11 +1,11 @@
-$NetBSD: patch-libusb_Makefile.am,v 1.2 2021/11/20 18:59:05 nia Exp $
+$NetBSD: patch-libusb_Makefile.am,v 1.3 2026/11/16 16:48:44 adam Exp $
 
 Support NetBSD.
 
---- libusb/Makefile.am.orig	2021-09-27 10:08:20.000000000 +0000
+--- libusb/Makefile.am.orig	2026-11-15 21:12:48.000000000 +0000
 +++ libusb/Makefile.am
-@@ -14,6 +14,13 @@ libhidapi_la_LDFLAGS = $(LTLDFLAGS)
- libhidapi_la_LIBADD = $(LIBS_LIBUSB)
+@@ -14,6 +14,13 @@ libhidapi_libusb_la_LDFLAGS = $(LTLDFLAG
+ libhidapi_libusb_la_LIBADD = $(LIBS_LIBUSB)
  endif
  
 +if OS_NETBSD

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/11/06 14:12:53 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/16 16:48:43 adam Exp $
 
-DISTNAME=	hidapi-0.15.0
+DISTNAME=	hidapi-0.16.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libusb/}
