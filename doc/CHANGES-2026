@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8116 2026/11/16 19:33:10 vins Exp $
+$NetBSD: CHANGES-2026,v 1.8117 2026/11/16 19:34:57 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12051,3 +12051,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/calcurse to 4.9.0 [vins 2026-11-16]
 	Updated misc/usbids to 20260626nb1 [drixter 2026-11-16]
 	Updated wm/emwm to 2.1 [vins 2026-11-16]
+	Updated wm/emwm-utils to 2.0 [vins 2026-11-16]
