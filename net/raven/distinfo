@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2026/09/12 16:45:37 drixter Exp $
+$NetBSD: distinfo,v 1.2 2026/11/16 21:15:03 drixter Exp $
 
 BLAKE2s (github.com_beorn7_perks_@v_v1.0.1.mod) = 3386f8007a627917f183391cfdd8aa248c19db3340b5bd857152b8644fc9ca8e
 SHA512 (github.com_beorn7_perks_@v_v1.0.1.mod) = d0c78b8f08d177e05148ce845f8d720fe79a193a420c12ce15504af8fa3dffc4d2fcebea8030f5cca90aff5775013e2252e0c289d4ed5094e07657ea97a79570
@@ -279,6 +279,6 @@ Size (google.golang.org_protobuf_@v_v1.36.11.zip) = 2273786 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 35cd1964700502d06b8c987979fb4dbddc41a5cda3368d037211b89d3587521f
 SHA512 (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 9ac0f80ef05881387cb2f48f81560f3207fe586ea16495383662e6d62e43d93fac01dfe72e1d0063d3ab065331dab3a8098d7da4f1830ba1aff6f27f8e1bc1b2
 Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
-BLAKE2s (raven-0.3.3.tar.gz) = bfc64d855ef5a192291de1b465fd3677f596fadce8b4616f3fdd35a596a1eb3e
-SHA512 (raven-0.3.3.tar.gz) = 61c0cddb2070951fb36eb7b2ea2ac2882ac25f3bd6cf073ea423409e0df23301dbe14f5ea6b418fad8d189b4f9321b9fecd718aee1adef8ac99a430589509141
-Size (raven-0.3.3.tar.gz) = 141786 bytes
+BLAKE2s (raven-0.4.0.tar.gz) = 6cc082ebb992b0dca3a2a288488f87e4e40e6e680a3ebd337f8ba1d97bb5e741
+SHA512 (raven-0.4.0.tar.gz) = d3f18b37d16943c03bd86012868cff76c94fb6f4aac798e5b5f40c34fdeecf52528a0337e3f9a560c3b9d2562cdbe44659b6f1c0a3bf3d5065a5bd6df11a0962
+Size (raven-0.4.0.tar.gz) = 373653 bytes

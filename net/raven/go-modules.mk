@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2026/09/12 16:45:37 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.2 2026/11/16 21:15:03 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.zip
