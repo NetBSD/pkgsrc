@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/11/15 20:57:15 drixter Exp $
+$NetBSD: distinfo,v 1.7 2026/11/16 21:06:10 drixter Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -180,9 +180,9 @@ Size (digest-0.11.3.crate) = 28955 bytes
 BLAKE2s (displaydoc-0.2.7.crate) = 3fe295f95b661eb7ab4c32967286e956435f6ccfcdf1fd7d8d3ada9ca2f8fbd5
 SHA512 (displaydoc-0.2.7.crate) = 6e21a1572e71d12218a178fc9e6d22964be5cb4006eb4920229db35ff1391708cdcbe5ab2b8295cf3ceb9dd1b1bbc70e2bca1e6080c6e7b8878d0b430e4d45ae
 Size (displaydoc-0.2.7.crate) = 21343 bytes
-BLAKE2s (dmarc-report-viewer-2.7.1.tar.gz) = 3ca40814437b2407447ddd03c920d2b1538b1bceabcb54c852591a404bcc6deb
-SHA512 (dmarc-report-viewer-2.7.1.tar.gz) = bacacf0b8a40c11ad363e792b4604d4e0d8aee23a7c21ede15752fa77b79afe745dd5049ffd8ed41cc30ab4d7dd85f2dad34bcdb1e9d07c927b8015b6b1c040b
-Size (dmarc-report-viewer-2.7.1.tar.gz) = 531004 bytes
+BLAKE2s (dmarc-report-viewer-2.7.2.tar.gz) = 0040232bd82314e310687201613e88ea67ae35b7cc12d06947ba3ac3e8955a28
+SHA512 (dmarc-report-viewer-2.7.2.tar.gz) = b8387173b195f7fbc9cfa530e1b518d947b190ebd613aa775d4c936549829fa58620a9e628436d6ebc850fe65e709f67a724b5093e3225ff8fd7c5fa4cdaba0e
+Size (dmarc-report-viewer-2.7.2.tar.gz) = 531070 bytes
 BLAKE2s (dns-protocol-0.1.2.crate) = a68654cec44143444d043ec6bc05e5643cf73a88ed1c1e304e54660d529d0cef
 SHA512 (dns-protocol-0.1.2.crate) = 1db6930ebab9de08aa83961acfb97ec3c7a87100d3fb99dadedecfb12966222c39d3d83762408d2c54fe97fde0c1a18ae873df5b346f3667f2a7607522d6b152
 Size (dns-protocol-0.1.2.crate) = 14810 bytes
