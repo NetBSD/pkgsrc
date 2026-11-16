@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28402 2026/11/16 01:15:03 ktnb Exp $
+$NetBSD: TODO,v 1.28403 2026/11/16 01:46:49 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -1104,7 +1104,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o ploticus-examples-230
 	o podcastdl-0.3.3
-	o poke-4.0
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
 	o portsentry-2.0.2 [wip]

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8078 2026/11/16 01:15:03 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8079 2026/11/16 01:46:49 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11985,3 +11985,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/vim-share to 9.2.1355 [morr 2026-11-15]
 	Updated chat/toxcore to 0.2.25 [ktnb 2026-11-16]
 	Updated benchmarks/postal to 0.76 [ktnb 2026-11-16]
+	Updated editors/poke to 5.0 [ktnb 2026-11-16]
