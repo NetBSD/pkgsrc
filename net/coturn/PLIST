@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/11/14 12:32:12 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/16 12:43:12 gdt Exp $
 bin/turnadmin
 bin/turnserver
 bin/turnutils_natdiscovery
@@ -49,6 +49,10 @@ share/examples/coturn/scripts/basic/tcp_client.sh
 share/examples/coturn/scripts/basic/tcp_client_c2c_tcp_relay.sh
 share/examples/coturn/scripts/basic/udp_c2c_client.sh
 share/examples/coturn/scripts/basic/udp_client.sh
+share/examples/coturn/scripts/dtls_half_open/dtls_holdopen.c
+share/examples/coturn/scripts/dtls_half_open/dtls_per_source.c
+share/examples/coturn/scripts/dtls_plaintext/dtls_proxy.c
+share/examples/coturn/scripts/dtls_plaintext/turn_over_dtls.py
 share/examples/coturn/scripts/loadbalance/master_relay.sh
 share/examples/coturn/scripts/loadbalance/slave_relay_1.sh
 share/examples/coturn/scripts/loadbalance/slave_relay_2.sh
