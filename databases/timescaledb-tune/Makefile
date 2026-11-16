@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2026/11/10 18:55:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.73 2026/11/16 16:10:50 adam Exp $
 
-DISTNAME=	timescaledb-tune-0.19.0
+DISTNAME=	timescaledb-tune-0.19.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
-PKGREVISION=	9
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
