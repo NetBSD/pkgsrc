@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8107 2026/11/16 16:16:34 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8108 2026/11/16 16:22:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12039,3 +12039,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/timescaledb-tune to 0.19.1 [adam 2026-11-16]
 	Updated www/py-httpcore2 to 2.16.2 [adam 2026-11-16]
 	Updated www/py-httpx2 to 2.16.2 [adam 2026-11-16]
+	Updated devel/py-u-msgpack to 2.9.0 [adam 2026-11-16]
+	Updated devel/py-trio to 0.35.0 [adam 2026-11-16]
