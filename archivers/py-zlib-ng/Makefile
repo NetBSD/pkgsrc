@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/07 09:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/16 16:02:57 adam Exp $
 
-DISTNAME=	zlib_ng-1.0.0
+DISTNAME=	zlib_ng-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zlib-ng/}
