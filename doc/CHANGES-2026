@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8076 2026/11/15 22:44:52 morr Exp $
+$NetBSD: CHANGES-2026,v 1.8077 2026/11/16 00:19:14 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11983,3 +11983,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.13.8 [wiz 2026-11-15]
 	Updated devel/py-uv to 0.13.8nb1 [wiz 2026-11-15]
 	Updated editors/vim-share to 9.2.1355 [morr 2026-11-15]
+	Updated chat/toxcore to 0.2.25 [ktnb 2026-11-16]
