@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8091 2026/11/16 12:00:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8092 2026/11/16 12:02:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12007,3 +12007,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added games/ezquake version 3.6.9 [wiz 2026-11-16]
 	Updated security/vaultwarden to 1.37.5 [adam 2026-11-16]
 	Updated security/sqlmap to 1.10.11 [adam 2026-11-16]
+	Updated mail/rspamd to 4.3.0nb1 [wiz 2026-11-16]
