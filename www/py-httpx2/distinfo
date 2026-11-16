@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/10/26 07:42:25 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/11/16 16:16:16 adam Exp $
 
-BLAKE2s (httpx2-2.16.0.tar.gz) = a479b35564c9b8e5e7b1f1eecad84ea068dac9299e579d99c22891e0e6f5d7c9
-SHA512 (httpx2-2.16.0.tar.gz) = d2f77e61ec6c114889349f1bd6a7d98840876355757fe5f0c6c947f2707094b75ec2f832b74f71b0bb4be3ecdb74d0836574a63e8fe6f41cd8fa1c72b7762f5d
-Size (httpx2-2.16.0.tar.gz) = 103116 bytes
+BLAKE2s (httpx2-2.16.2.tar.gz) = 96f4c907547458bb66973bc752bf2bf6bdab7ed87e3a80630be810fa4e48027e
+SHA512 (httpx2-2.16.2.tar.gz) = 9069d51a5625faf0522acb3505db9044f4ed4d1024b9bbf48e3a69995c3eef03701618831c8e9acc334579d48d6ea192fdd7030781903a8d3b19241a98d689f8
+Size (httpx2-2.16.2.tar.gz) = 103370 bytes
