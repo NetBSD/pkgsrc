@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2026/10/12 07:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.573 2026/11/16 11:43:29 wiz Exp $
 #
 
 COMMENT=	Games
@@ -131,6 +131,7 @@ SUBDIR+=	exchess-book-medium
 SUBDIR+=	exchess-book-small
 SUBDIR+=	exult
 SUBDIR+=	exult-audio
+SUBDIR+=	ezquake
 SUBDIR+=	falcons-eye
 SUBDIR+=	fallingtime
 SUBDIR+=	fheroes2
