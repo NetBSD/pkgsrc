@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2026/09/23 09:20:02 adam Exp $
+# $NetBSD: options.mk,v 1.16 2026/11/16 11:52:10 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vaultwarden
 PKG_SUPPORTED_OPTIONS=		s3 web-vault
@@ -34,7 +34,7 @@ CARGO_FEATURES+=	s3
 
 .if !empty(PKG_OPTIONS:Mweb-vault)
 WEB_VAULT_FILE=		bw_web_v${WEB_VAULT_VERS}.tar.gz
-WEB_VAULT_VERS=		2026.7.0
+WEB_VAULT_VERS=		2026.10.1
 DISTFILES+=		${WEB_VAULT_FILE}
 SITES.${WEB_VAULT_FILE}= ${MASTER_SITE_GITHUB:=dani-garcia/bw_web_builds/releases/download/v${WEB_VAULT_VERS}/}
 
