@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2026/10/19 15:44:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/16 10:44:52 adam Exp $
 
-DISTNAME=	pytest_env-1.8.1
+DISTNAME=	pytest_env-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-env/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/MobileDynasty/pytest-env
 COMMENT=	Plugin for py.test that allows you to add environment variables
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.2.4:../../devel/py-dotenv
