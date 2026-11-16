@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/08/28 14:06:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/11/16 10:39:06 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -523,6 +523,14 @@ ${PYSITELIB}/IPython/utils/terminal.pyo
 ${PYSITELIB}/IPython/utils/text.py
 ${PYSITELIB}/IPython/utils/text.pyc
 ${PYSITELIB}/IPython/utils/text.pyo
+${PYSITELIB}/IPython/utils/themes/gruvbox-dark.json
+${PYSITELIB}/IPython/utils/themes/lightbg.json
+${PYSITELIB}/IPython/utils/themes/linux.json
+${PYSITELIB}/IPython/utils/themes/neutral-nt.json
+${PYSITELIB}/IPython/utils/themes/neutral-posix.json
+${PYSITELIB}/IPython/utils/themes/nocolor.json
+${PYSITELIB}/IPython/utils/themes/pride-l.json
+${PYSITELIB}/IPython/utils/themes/pride.json
 ${PYSITELIB}/IPython/utils/timing.py
 ${PYSITELIB}/IPython/utils/timing.pyc
 ${PYSITELIB}/IPython/utils/timing.pyo
