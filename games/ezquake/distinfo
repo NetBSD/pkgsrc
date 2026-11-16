@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2026/11/16 11:43:16 wiz Exp $
+
+BLAKE2s (QW-Group-qwprot-dd5165c1b702efeaee391b94f491cd1220018691.tar.gz) = d9827e620016a30a65b6cbd697402fda5afc843edb59d635ee69f7ea6a6e924c
+SHA512 (QW-Group-qwprot-dd5165c1b702efeaee391b94f491cd1220018691.tar.gz) = 8a104dc04d065c6231fbde6d588cb78d6dc4846d89700ce90030f77ba5c47e2043020acd68056d43972ad93631da5b3e56f729ed4b432efa1c16921fc0bd0d4f
+Size (QW-Group-qwprot-dd5165c1b702efeaee391b94f491cd1220018691.tar.gz) = 8680 bytes
+BLAKE2s (ezquake-source-3.6.9.tar.gz) = e0a376cf0ec58cdba1b94faae9e67b2f6b61dad3ee283c69c2516cb7839166f7
+SHA512 (ezquake-source-3.6.9.tar.gz) = 43ba6b56340bf31ef2b458b09ae38572a7346ffc85d082eecf7cc85d4011264b4b061018952274080e883e4ed7f207ccb3feb2c6e2465bf37d5f38bb44a70f95
+Size (ezquake-source-3.6.9.tar.gz) = 1962575 bytes

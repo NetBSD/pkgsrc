@@ -1,0 +1,6 @@
+ezQuake is a modern QuakeWorld client. QuakeWorld is a variant of the
+Quake engine designed for online play. ezQuake adds modern graphics,
+QuakeTV support, a server browser and many features for competitive play.
+
+This package contains only the engine. The Quake game data (pak0.pak)
+is not included and must be provided separately.
