@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8081 2026/11/16 06:07:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8082 2026/11/16 06:17:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11989,3 +11989,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated editors/ait to 1.16 [ktnb 2026-11-16]
 	Updated print/py-pikepdf to 10.18.2 [adam 2026-11-16]
 	Updated misc/cargo-machete to 0.10.1 [adam 2026-11-16]
+	Updated misc/py-aiomisc to 18.0.40 [adam 2026-11-16]
+	Updated devel/py-aiostream to 0.8.2 [adam 2026-11-16]
