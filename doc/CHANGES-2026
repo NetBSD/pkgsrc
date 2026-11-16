@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8080 2026/11/16 01:59:52 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8081 2026/11/16 06:07:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -11987,3 +11987,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated benchmarks/postal to 0.76 [ktnb 2026-11-16]
 	Updated editors/poke to 5.0 [ktnb 2026-11-16]
 	Updated editors/ait to 1.16 [ktnb 2026-11-16]
+	Updated print/py-pikepdf to 10.18.2 [adam 2026-11-16]
+	Updated misc/cargo-machete to 0.10.1 [adam 2026-11-16]
