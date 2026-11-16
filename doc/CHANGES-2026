@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8113 2026/11/16 19:09:11 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8114 2026/11/16 19:18:59 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12048,3 +12048,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated filesystems/avfs to 1.4.0 [vins 2026-11-16]
 	Updated x11/worker to 6.0.0 [vins 2026-11-16]
 	Updated misc/pciids to 20261116 [drixter 2026-11-16]
+	Updated time/calcurse to 4.9.0 [vins 2026-11-16]
