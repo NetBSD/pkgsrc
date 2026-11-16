@@ -1,12 +1,12 @@
-$NetBSD: patch-cmake_Modules_EttercapLibCheck.cmake,v 1.1 2021/03/06 11:20:56 nia Exp $
+$NetBSD: patch-cmake_Modules_EttercapLibCheck.cmake,v 1.2 2026/11/16 15:40:08 adam Exp $
 
 Just use pkg-config to find GTK3 rather than a custom hellfire that checks
 30 system directories but nothing used by pkgsrc.
 
---- cmake/Modules/EttercapLibCheck.cmake.orig	2020-08-01 14:32:06.000000000 +0000
+--- cmake/Modules/EttercapLibCheck.cmake.orig	2026-11-10 18:42:51.000000000 +0000
 +++ cmake/Modules/EttercapLibCheck.cmake
-@@ -45,24 +45,9 @@ if(ENABLE_GTK)
-     unset(contains_valid)
+@@ -80,24 +80,9 @@ Please upgrade it, or build against GTK3
+     endif()
      if(GTK_BUILD_TYPE STREQUAL GTK3)
          set(GTK3_FIND_VERSION 1)
 -        find_package(GTK3 3.12.0)
