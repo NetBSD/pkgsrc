@@ -1,9 +1,9 @@
-$NetBSD: patch-src_common.mf,v 1.4 2026/04/20 16:06:01 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.5 2026/11/16 20:15:31 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2026-04-08 12:57:57.000000000 +0000
+--- src/common.mf.orig	2026-08-08 23:07:42.000000000 +0000
 +++ src/common.mf
 @@ -4,8 +4,6 @@
  X_LIBS = -lX11 -lXinerama -lXm -lXt -lXpm
@@ -27,7 +27,7 @@ $NetBSD: patch-src_common.mf,v 1.4 2026/04/20 16:06:01 vins Exp $
  
  # Built-in icons
  icons.h: mkicons.sh icons/*.xpm
-@@ -52,20 +50,20 @@ clean:
+@@ -52,21 +50,21 @@ clean:
  	$(CC) -MM $(INCDIRS) $(XFILE_OBJS:.o=.c) > .depend
  
  # Install
@@ -45,6 +45,7 @@ $NetBSD: patch-src_common.mf,v 1.4 2026/04/20 16:06:01 vins Exp $
 -	for n in icons/*.xpm; do install -o 0 -g 0 -m 664 $$n $(SHAREDIR)/$$n; done
 -	install -o 0 -g 0 -m 644 icons/README $(SHAREDIR)/README.icons
 -	-install -o 0 -g 0 -m 644 xbm/cabinet.xpm $(PREFIX)/share/pixmaps/xfile_48x48.xpm
+-	-install -o 0 -g 0 -m 644 xbm/cabinet64.xpm $(PREFIX)/share/pixmaps/xfile_64x64.xpm
 +common_install:: xfile xfile.ad xfile.1
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) xfile $(DESTDIR)$(BINDIR)
@@ -57,8 +58,9 @@ $NetBSD: patch-src_common.mf,v 1.4 2026/04/20 16:06:01 vins Exp $
 +	for n in icons/*.xpm; do $(BSD_INSTALL_DATA) $$n $(DESTDIR)$(SHAREDIR)/$$n; done
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PIXMAPDIR) $(DESTDIR)$(DOCDIR)
 +	$(BSD_INSTALL_DATA) xbm/cabinet.xpm $(DESTDIR)$(PIXMAPDIR)/xfile_48x48.xpm
++	$(BSD_INSTALL_DATA) xbm/cabinet64.xpm $(DESTDIR)$(PIXMAPDIR)/xfile_64x64.xpm
 +	$(BSD_INSTALL_DATA) ../README $(DESTDIR)$(DOCDIR)
 +	$(BSD_INSTALL_DATA) icons/README $(DESTDIR)$(DOCDIR)/README.icons
  
+ 
  # Removal
- uninstall:

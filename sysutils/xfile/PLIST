@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/10/12 07:34:33 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/16 20:15:31 vins Exp $
 bin/xfile
 bin/xfile-open
 ${PLIST.dbus}bin/xfile-xdgsvc
@@ -10,6 +10,7 @@ share/doc/xfile/README
 share/doc/xfile/README.icons
 share/doc/xfile/README.pkgsrc
 share/pixmaps/xfile_48x48.xpm
+share/pixmaps/xfile_64x64.xpm
 share/xfile/icons/arch.l.xpm
 share/xfile/icons/arch.m.xpm
 share/xfile/icons/arch.s.xpm
@@ -22,6 +23,22 @@ share/xfile/icons/audio.l.xpm
 share/xfile/icons/audio.m.xpm
 share/xfile/icons/audio.s.xpm
 share/xfile/icons/audio.t.xpm
+share/xfile/icons/audio1.l.xpm
+share/xfile/icons/audio1.m.xpm
+share/xfile/icons/audio1.s.xpm
+share/xfile/icons/audio1.t.xpm
+share/xfile/icons/audio2.l.xpm
+share/xfile/icons/audio2.m.xpm
+share/xfile/icons/audio2.s.xpm
+share/xfile/icons/audio2.t.xpm
+share/xfile/icons/audio3.l.xpm
+share/xfile/icons/audio3.m.xpm
+share/xfile/icons/audio3.s.xpm
+share/xfile/icons/audio3.t.xpm
+share/xfile/icons/audio4.l.xpm
+share/xfile/icons/audio4.m.xpm
+share/xfile/icons/audio4.s.xpm
+share/xfile/icons/audio4.t.xpm
 share/xfile/icons/bin.l.xpm
 share/xfile/icons/bin.m.xpm
 share/xfile/icons/bin.s.xpm
