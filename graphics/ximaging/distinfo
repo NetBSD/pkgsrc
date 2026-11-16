@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2026/04/20 16:13:30 vins Exp $
+$NetBSD: distinfo,v 1.7 2026/11/16 19:47:49 vins Exp $
 
-BLAKE2s (ximaging-src-1.9.1.tar.xz) = 9fa2b30f1dbe9fff26419c83400ee614a0795da64e02fb6ec6e9b25b7d9666ca
-SHA512 (ximaging-src-1.9.1.tar.xz) = e54e50e2e35747e93e60f6df817b6b8f0251411caee368bbd139e9d2a772c1444f97d40c1e25a14fffae7618ffcecd69948504fbae5ad7b17c52b43c830cf252
-Size (ximaging-src-1.9.1.tar.xz) = 114732 bytes
+BLAKE2s (ximaging-src-1.9.3.tar.xz) = d7ea3f4093dc32ae685e2e388ce3b1262f463bb4a9f36dfc1750cc5e109187db
+SHA512 (ximaging-src-1.9.3.tar.xz) = e3c8740e1ebb04e0b04af6d40060e5feef2102da5f2691add0a9a93f3fc1767d6a246e1e1dbf37a5d0b666d6446956a3984a58cc3b8f923bfa1aa52876a261f5
+Size (ximaging-src-1.9.3.tar.xz) = 115952 bytes
 SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
 SHA1 (patch-mf_Makefile.pkgsrc) = 591e05e44f7640d342e0c329923c6ba0d58b649f
 SHA1 (patch-src_common.mf) = 2244171b88c7d64a36af3b5edd5c4e29b2259052
-SHA1 (patch-src_viewer.c) = 9a9f3de940acd9eb81fd52f18a1b89f0e0ffbaea
+SHA1 (patch-src_viewer.c) = e359cc5701fb2058d3121b17ddf229dcad07144d
