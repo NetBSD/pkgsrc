@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.149 2026/11/15 20:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2026/11/16 12:02:10 wiz Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
 DISTNAME=	rspamd-4.3.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -13,7 +14,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
-TEST_DEPENDS+=	lua-cffi-[0-9]*:../../devel/lua-cffi
+TEST_DEPENDS+=	${LUA_PKGPREFIX}-cffi-[0-9]*:../../devel/lua-cffi
 
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c c++
@@ -21,6 +22,9 @@ BUILD_DEFS+=	VARBASE
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES+=	c++20
+
+# not stable, see e.g. https://github.com/rspamd/rspamd/issues/6342#issuecomment-6915510365
+LUA_VERSIONS_INCOMPATIBLE=	55
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -114,10 +118,8 @@ post-extract:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
 
-# as of 4.2.2, after 'make install'
-# 1423 tests 1419 passed 5506 assertions 0 failed 0 errors 4 unassertive 0 pending
-# as of 4.2.3, stops early
-# https://github.com/rspamd/rspamd/issues/6342
+# as of 4.3.0, after 'make install'
+# 2457 tests 2433 passed 9129 assertions 2 failed 0 errors 22 unassertive 0 pending
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/replxx:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/aho-corasick:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/libev:${WRKSRC}/${CMAKE_BUILD_DIR}/contrib/kann
 
