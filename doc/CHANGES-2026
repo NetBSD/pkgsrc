@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8097 2026/11/16 12:34:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8098 2026/11/16 12:42:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12021,3 +12021,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-mdit-py-plugins to 0.7.0 [adam 2026-11-16]
 	Updated textproc/py-myst-parser to 5.2.0 [adam 2026-11-16]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.17.5 [adam 2026-11-16]
+	Added devel/pnpm version 12.21.0 [adam 2026-11-16]
+	Updated textproc/py-ICU to 2.17 [adam 2026-11-16]
