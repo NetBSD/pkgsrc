@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/25 18:18:07 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/16 18:09:15 vins Exp $
 bin/worker
 man/fr/man1/worker.1
 man/it/man1/worker.1
@@ -99,6 +99,8 @@ share/worker/config-updates/update-5.0.0-utf8.conf
 share/worker/config-updates/update-5.0.0.conf
 share/worker/config-updates/update-5.2.0-utf8.conf
 share/worker/config-updates/update-5.2.0.conf
+share/worker/config-updates/update-6.0.0-utf8.conf
+share/worker/config-updates/update-6.0.0.conf
 share/worker/hints-english
 share/worker/hints-english.utf8
 share/worker/scripts/aa.pattern_rename.sh
