@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/12 08:02:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/16 06:16:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,9 @@ ${PYSITELIB}/aiostream/py.typed
 ${PYSITELIB}/aiostream/stream/__init__.py
 ${PYSITELIB}/aiostream/stream/__init__.pyc
 ${PYSITELIB}/aiostream/stream/__init__.pyo
+${PYSITELIB}/aiostream/stream/_callbacks.py
+${PYSITELIB}/aiostream/stream/_callbacks.pyc
+${PYSITELIB}/aiostream/stream/_callbacks.pyo
 ${PYSITELIB}/aiostream/stream/advanced.py
 ${PYSITELIB}/aiostream/stream/advanced.pyc
 ${PYSITELIB}/aiostream/stream/advanced.pyo
