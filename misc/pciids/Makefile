@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2026/10/25 20:46:22 drixter Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/16 19:08:43 drixter Exp $
 
 DISTNAME=	pci.ids
-PKGNAME=	pciids-20261024
+PKGNAME=	pciids-20261116
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pciutils/}
 GITHUB_PROJECT=	pciids
-GITHUB_TAG=	fe7fceb2e1153d495e1deefacf59c5d61c36ef8e
+GITHUB_TAG=	7c7e37a74321f1d4573a60377970d327ca034a15
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://pci-ids.ucw.cz/

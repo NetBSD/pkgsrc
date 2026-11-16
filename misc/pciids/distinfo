@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/10/25 20:46:22 drixter Exp $
+$NetBSD: distinfo,v 1.13 2026/11/16 19:08:43 drixter Exp $
 
-BLAKE2s (pci.ids-fe7fceb2e1153d495e1deefacf59c5d61c36ef8e.tar.gz) = 1864b9fc13c80ec50e2efed5fc73e7952e85caf8ce5a8c7c939c8c0323463e2b
-SHA512 (pci.ids-fe7fceb2e1153d495e1deefacf59c5d61c36ef8e.tar.gz) = 0e15938b7d32f9fbcc285b732d33b8bda464fdf00ed5f08fd8342a35c661bca7ad7b565fbdc0ef722e634fd80678f22f09e849a7bc610d30bc51f23e5b4e65bd
-Size (pci.ids-fe7fceb2e1153d495e1deefacf59c5d61c36ef8e.tar.gz) = 380483 bytes
+BLAKE2s (pci.ids-7c7e37a74321f1d4573a60377970d327ca034a15.tar.gz) = 670b58ead5bf299357a382dad3d25331cf31d3d32cfd5a6702bbac44e7dec740
+SHA512 (pci.ids-7c7e37a74321f1d4573a60377970d327ca034a15.tar.gz) = 38db38ecd552aeb8e01b82fe8811a0aaa9ce175420a314ed383a7fce35ece12ac11e1e3b0f0d82ba89a0c57cdbb48e38582172494e078c60e710821ef5adec01
+Size (pci.ids-7c7e37a74321f1d4573a60377970d327ca034a15.tar.gz) = 382254 bytes
