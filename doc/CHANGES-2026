@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8109 2026/11/16 16:53:38 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8110 2026/11/16 17:10:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12043,3 +12043,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-trio to 0.35.0 [adam 2026-11-16]
 	Updated comms/libhidapi to 0.16.0 [adam 2026-11-16]
 	Updated devel/cmake to 4.5.0 [adam 2026-11-16]
+	Updated security/cargo-deny to 0.21.0 [adam 2026-11-16]
+	Updated security/cargo-audit to 0.23.0 [adam 2026-11-16]
