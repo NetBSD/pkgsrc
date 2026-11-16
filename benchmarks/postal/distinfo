@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:02:55 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/11/16 01:14:42 ktnb Exp $
 
-BLAKE2s (postal-0.70.tgz) = b0e6594efa3c659dc65ca66595af57d84537e30598d5e090f0db801c31c40055
-SHA512 (postal-0.70.tgz) = 81356d32e56559a267994c2a18fa7b83c04556423f650404aeb7a8ce3d43d9fbd036b0fa545bccdc8caff8b375f95707031858046f4f99242f4cb23c7809bdb5
-Size (postal-0.70.tgz) = 99965 bytes
+BLAKE2s (postal-0.76.tgz) = 090b352862c3c558ea0cb3db837e37872e044f7565b14880f4eff5721d977eb9
+SHA512 (postal-0.76.tgz) = d47ea765e0cc6efdab1335d2dc71536dc68b6f411447c78500ace3f4deab2d01cfe3f91dbe47aadbd0b2f98d47f6d410dad8bc43096909acab3d2da719d16bb5
+Size (postal-0.76.tgz) = 100260 bytes
 SHA1 (patch-Makefile.in) = 45f7357ff4407033818599a76b9c929b6c09b127
-SHA1 (patch-aa) = 0d85ec46202e0077d7f435547158eff65eab8a69
-SHA1 (patch-ab) = 38ed0b1ad550b31e8d46639e43b243e0e2b99cf5
+SHA1 (patch-aa) = 914a3730c0f60861253a53845a11ac4d817c5ea5
+SHA1 (patch-ab) = 2ad728bfdcbc796bb0a88f4baef395ad059018ad
 SHA1 (patch-ad) = 3707f465c6a69c94fd862fb7863a3c8cb6519366
 SHA1 (patch-ae) = 094165c454fb87c9cbacfae6e9ab2bb38f4d15a2
 SHA1 (patch-af) = ce387f94ff18a9a6b67dfe5a07740cc8340e6cfb
 SHA1 (patch-basictcp.cpp) = fb29a5b4ae0a59681a28ca96cdc52a632a2f1b29
 SHA1 (patch-bhmusers.cpp) = 4cdbb026eb8da5bc42aae304e35869542e19ac60
-SHA1 (patch-bhmusers.h) = 430fdea85b33a331442b67d988b203715171dcad
+SHA1 (patch-bhmusers.h) = 82666bdcc6eec63a0b8e1e8705900a15fb318f75
 SHA1 (patch-smtp.cpp) = a91db5779f1ef8cf6d514c1304d20d01a4548772
-SHA1 (patch-smtp.h) = 876ece300ee53085b61bb1d16efffa907e733a43
+SHA1 (patch-smtp.h) = f5fb2dde72b0202ef518f10d759cb295a9a3e58a
 SHA1 (patch-tcp.cpp) = 6a41a7629607d0238d85bf754b3eb59c407d2757

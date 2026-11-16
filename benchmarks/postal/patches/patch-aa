@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2013/05/23 14:59:13 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2026/11/16 01:14:42 ktnb Exp $
 
---- postal.cpp.orig	2007-01-14 04:40:23.000000000 +0000
+--- postal.cpp.orig	2014-08-18 17:24:20.000000000 +0000
 +++ postal.cpp
-@@ -10,12 +10,22 @@
+@@ -10,6 +10,7 @@
  #include <stdio.h>
  #include "postal.h"
  #include "logit.h"
 +#include <cstdlib>
  #ifdef USE_GNUTLS
  #include <errno.h>
- #include <gcrypt.h>
- GCRY_THREAD_OPTION_PTHREAD_IMPL;
+ #if GNUTLS_VERSION_NUMBER <= 0x020b00
+@@ -18,6 +19,16 @@ GCRY_THREAD_OPTION_PTHREAD_IMPL;
+ #endif /* GNUTLS_VERSION_NUMBER */
  #endif
  
 +#ifdef __NetBSD__
@@ -22,11 +23,12 @@ $NetBSD: patch-aa,v 1.3 2013/05/23 14:59:13 joerg Exp $
 +# define HAVE_STRUCT_SIGACTION_SA_SIGACTION
 +#endif
 +
++
  void usage()
  {
    printf("Usage: postal [-m maximum-message-size] [-M minimum-message-size] [-t threads]\n"
-@@ -152,7 +162,9 @@ int main(int argc, char **argv)
-   struct sigaction sa;
+@@ -161,7 +172,9 @@ int main(int argc, char **argv)
+   memset(&sa, 0, sizeof(sa));
    sa.sa_sigaction = NULL;
    sa.sa_handler = SIG_IGN;
 +#ifdef HAVE_STRUCT_SIGACTION_SA_SIGACTION

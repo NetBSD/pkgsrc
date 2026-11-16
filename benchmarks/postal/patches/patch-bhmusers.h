@@ -1,27 +1,13 @@
-$NetBSD: patch-bhmusers.h,v 1.1 2013/05/23 14:59:13 joerg Exp $
+$NetBSD: patch-bhmusers.h,v 1.2 2026/11/16 01:14:42 ktnb Exp $
 
---- bhmusers.h.orig	2013-05-23 13:33:27.000000000 +0000
+--- bhmusers.h.orig	2026-11-16 01:08:36.675089835 +0000
 +++ bhmusers.h
-@@ -7,10 +7,12 @@ using namespace std;
- #include "conf.h"
+@@ -18,7 +18,7 @@ typedef struct
+   int sync_time;
+ } BHM_DATA;
  
- #ifdef HAVE_EXT_HASH_MAP
--using namespace __gnu_cxx;
- #include <ext/hash_map>
-+using namespace __gnu_cxx;
-+#define HASH_NS __gnu_cxx
- #else
- #include <hash_map.h>
-+#define HASH_NS std
- #endif
- 
- #include "postal.h"
-@@ -34,7 +36,7 @@ namespace __gnu_cxx
-   };
- }
- 
--typedef hash_map<string, BHM_DATA , hash<string> > NAME_MAP;
-+typedef hash_map<string, BHM_DATA , HASH_NS::hash<string> > NAME_MAP;
+-typedef std::tr1::unordered_map<string, BHM_DATA, hash<string> > NAME_MAP;
++typedef std::tr1::unordered_map<string, BHM_DATA, std::tr1::hash<string> > NAME_MAP;
  
  class BHMUsers
  {
