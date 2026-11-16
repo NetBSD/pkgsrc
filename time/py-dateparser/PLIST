@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/09/03 11:16:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/11/16 15:45:17 adam Exp $
 bin/dateparser-download-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,9 +10,15 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dateparser/__init__.py
 ${PYSITELIB}/dateparser/__init__.pyc
 ${PYSITELIB}/dateparser/__init__.pyo
+${PYSITELIB}/dateparser/_parts_of_day.py
+${PYSITELIB}/dateparser/_parts_of_day.pyc
+${PYSITELIB}/dateparser/_parts_of_day.pyo
 ${PYSITELIB}/dateparser/calendars/__init__.py
 ${PYSITELIB}/dateparser/calendars/__init__.pyc
 ${PYSITELIB}/dateparser/calendars/__init__.pyo
+${PYSITELIB}/dateparser/calendars/french_republican.py
+${PYSITELIB}/dateparser/calendars/french_republican.pyc
+${PYSITELIB}/dateparser/calendars/french_republican.pyo
 ${PYSITELIB}/dateparser/calendars/hijri.py
 ${PYSITELIB}/dateparser/calendars/hijri.pyc
 ${PYSITELIB}/dateparser/calendars/hijri.pyo
@@ -25,6 +31,9 @@ ${PYSITELIB}/dateparser/calendars/jalali.pyo
 ${PYSITELIB}/dateparser/calendars/jalali_parser.py
 ${PYSITELIB}/dateparser/calendars/jalali_parser.pyc
 ${PYSITELIB}/dateparser/calendars/jalali_parser.pyo
+${PYSITELIB}/dateparser/calendars/minguo.py
+${PYSITELIB}/dateparser/calendars/minguo.pyc
+${PYSITELIB}/dateparser/calendars/minguo.pyo
 ${PYSITELIB}/dateparser/conf.py
 ${PYSITELIB}/dateparser/conf.pyc
 ${PYSITELIB}/dateparser/conf.pyo
@@ -727,12 +736,6 @@ ${PYSITELIB}/dateparser_cli/__init__.pyo
 ${PYSITELIB}/dateparser_cli/cli.py
 ${PYSITELIB}/dateparser_cli/cli.pyc
 ${PYSITELIB}/dateparser_cli/cli.pyo
-${PYSITELIB}/dateparser_cli/exceptions.py
-${PYSITELIB}/dateparser_cli/exceptions.pyc
-${PYSITELIB}/dateparser_cli/exceptions.pyo
-${PYSITELIB}/dateparser_cli/fasttext_manager.py
-${PYSITELIB}/dateparser_cli/fasttext_manager.pyc
-${PYSITELIB}/dateparser_cli/fasttext_manager.pyo
 ${PYSITELIB}/dateparser_cli/utils.py
 ${PYSITELIB}/dateparser_cli/utils.pyc
 ${PYSITELIB}/dateparser_cli/utils.pyo
@@ -745,6 +748,9 @@ ${PYSITELIB}/dateparser_data/settings.pyo
 ${PYSITELIB}/dateparser_scripts/__init__.py
 ${PYSITELIB}/dateparser_scripts/__init__.pyc
 ${PYSITELIB}/dateparser_scripts/__init__.pyo
+${PYSITELIB}/dateparser_scripts/article_dates.py
+${PYSITELIB}/dateparser_scripts/article_dates.pyc
+${PYSITELIB}/dateparser_scripts/article_dates.pyo
 ${PYSITELIB}/dateparser_scripts/get_cldr_data.py
 ${PYSITELIB}/dateparser_scripts/get_cldr_data.pyc
 ${PYSITELIB}/dateparser_scripts/get_cldr_data.pyo
