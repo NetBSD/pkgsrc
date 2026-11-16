@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/11/16 12:39:08 adam Exp $
+
+Add sub-path to libsql, as this is not currently handled by cargo.mk.
+
+--- Cargo.toml.orig	2026-11-11 06:32:02.791137108 +0000
++++ Cargo.toml
+@@ -312,7 +312,7 @@ tar = { path = "vendor/tar" }
+ # statements to a remote primary in one request and returns their rows. The
+ # SQL metadata store sends each write transaction in two round trips with it;
+ # no upstream release has an equivalent.
+-libsql = { git = "https://github.com/pnpm/libsql", rev = "ab8a7516c7d32d6fdd0f68d59956c6233f9f11d4" }
++libsql = { path = "../libsql-ab8a7516c7d32d6fdd0f68d59956c6233f9f11d4/libsql" }
+ node-semver = { git = "https://github.com/pnpm/node-semver-rs", rev = "3d74d6b7f4de1de2006cf2f7663aac09de65b1f6" }
+ # Adds the `nightly` feature. Drop once an upstream release carries it.
+ # See <https://github.com/pnpm/pnpm/pull/16951>.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4739 2026/11/15 21:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4740 2026/11/16 12:39:08 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2520,6 +2520,7 @@ SUBDIR+=	plasma6-kwayland
 SUBDIR+=	plasma6-plasma5support
 SUBDIR+=	plog
 SUBDIR+=	pmccabe
+SUBDIR+=	pnpm
 SUBDIR+=	poco
 SUBDIR+=	pointfree
 SUBDIR+=	polly
