@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2026/11/11 09:09:12 drixter Exp $
+# $NetBSD: Makefile,v 1.78 2026/11/16 10:27:01 drixter Exp $
 
-DISTNAME=	resterm-1.18.1
+DISTNAME=	resterm-1.18.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unkn0wn-root/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ USE_LANGUAGES=	c
 
 post-install:
 	${RM} -fv ${DESTDIR}${PREFIX}/bin/capture
+	${RM} -fv ${DESTDIR}${PREFIX}/bin/requests
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
