@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8121 2026/11/16 20:42:24 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8122 2026/11/16 20:57:24 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12056,3 +12056,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/xfile to 1.2.1 [vins 2026-11-16]
 	Updated x11/xfind to 1.0.6 [vins 2026-11-16]
 	Updated security/vaultwarden to 1.37.5nb1 [drixter 2026-11-16]
+	Updated net/dnscontrol to 5.9.0 [drixter 2026-11-16]
