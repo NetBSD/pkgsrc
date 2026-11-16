@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8118 2026/11/16 19:48:22 vins Exp $
+$NetBSD: CHANGES-2026,v 1.8119 2026/11/16 20:15:54 vins Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12053,3 +12053,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated wm/emwm to 2.1 [vins 2026-11-16]
 	Updated wm/emwm-utils to 2.0 [vins 2026-11-16]
 	Updated graphics/ximaging to 1.9.3 [vins 2026-11-16]
+	Updated sysutils/xfile to 1.2.1 [vins 2026-11-16]
