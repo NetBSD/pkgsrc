@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2026/08/14 12:14:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.48 2026/11/16 17:44:16 adam Exp $
 #
 # used by databases/openldap-autogroup/Makefile
 # used by databases/openldap-client/Makefile
@@ -74,8 +74,6 @@ CONF_FILES+=		${EGDIR}/${file} ${OPENLDAP_ETCDIR}/${file}
 CONF_FILES_PERMS+=	${EGDIR}/${file} ${OPENLDAP_ETCDIR}/${file} ${OPENLDAP_FILEPERMS}
 .endfor
 
-DB_CONFIG?=		# empty
-
 PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--without-fetch
@@ -111,7 +109,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 # Set the correct file modes for the example config files.
 post-install:
-.for file in ${CNFS} ${CNFS_PERMS} ${DB_CONFIG}
+.for file in ${CNFS} ${CNFS_PERMS}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/${file:Q}
 	${RM} -f ${DESTDIR}${EGDIR}/${file:Q}.default
 .endfor
