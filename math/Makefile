@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2026/11/08 17:37:14 alnsn Exp $
+# $NetBSD: Makefile,v 1.655 2026/11/16 22:59:34 alnsn Exp $
 
 COMMENT=	Mathematics
 
@@ -223,6 +223,7 @@ SUBDIR+=	galculator
 SUBDIR+=	gap
 SUBDIR+=	gappa
 SUBDIR+=	gcem
+SUBDIR+=	gecode
 SUBDIR+=	geg
 SUBDIR+=	genius
 SUBDIR+=	ggml
