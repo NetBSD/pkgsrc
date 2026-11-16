@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2026/10/28 20:06:02 drixter Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/16 19:25:07 drixter Exp $
 #
 
 DISTNAME=	usbids-20260626
+PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://www.linux-usb.org/
-DIST_SUBDIR=	usbids-${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.gz
-DISTFILES=	usb.ids.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=usbids/}
+GITHUB_PROJECT=	usbids
+GITHUB_TAG=	5eb613762db1e34b9218da63a88f22dd26f743c5
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	http://www.linux-usb.org/
@@ -18,7 +18,6 @@ NO_BUILD=		yes
 INSTALLATION_DIRS+=	share/usbids
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/usb.ids ${DESTDIR}${PREFIX}/share/usbids
-
+	${INSTALL_DATA} ${WRKDIR}/usbids-${GITHUB_TAG}/usb.ids ${DESTDIR}${PREFIX}/share/usbids
 
 .include "../../mk/bsd.pkg.mk"
