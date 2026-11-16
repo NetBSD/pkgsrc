@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/04/30 08:55:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/11/16 16:20:23 adam Exp $
 
-BLAKE2s (u-msgpack-python-2.8.0.tar.gz) = fa63e1407edb3dafeb844b0151c220419f03869c9d21328ffb44e9f2fa55820a
-SHA512 (u-msgpack-python-2.8.0.tar.gz) = 61dd332c9f72db65a6a949e2acdc668ab01981b3eb1e9fd58e506d35d47f5f656b9d0abec92ae0e4d949bab063aeff75c205b92758275d99dbbe5f65f15241b9
-Size (u-msgpack-python-2.8.0.tar.gz) = 18167 bytes
+BLAKE2s (u_msgpack_python-2.9.0.tar.gz) = 604f1a5afc899267a5aa227112c601902caab21f9293d1c1b70d18894cbd9f9c
+SHA512 (u_msgpack_python-2.9.0.tar.gz) = e51d849d6f1871cd37709ab4d2e65549bbca5b125afde710196972057806341807b906a07c445e4cfb23fb5940982ba8776b5c3a0fed6d8d6930b98d14594cfe
+Size (u_msgpack_python-2.9.0.tar.gz) = 19659 bytes

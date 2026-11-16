@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/12 21:37:06 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/16 16:20:23 adam Exp $
 
-DISTNAME=	u-msgpack-python-2.8.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	1
+DISTNAME=	u_msgpack_python-2.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/_python//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/u-msgpack-python/}
 
