@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/16 11:43:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/16 23:30:39 wiz Exp $
 
 DISTNAME=		ezquake-source-3.6.9
 PKGNAME=		${DISTNAME:S/-source//}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		ezquake-source
 GITHUB_TAG=		${PKGVERSION_NOREV}
 GITHUB_SUBMODULES+=	QW-Group qwprot dd5165c1b702efeaee391b94f491cd1220018691 src/qwprot
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	m.v.araujo.daniel@gmail.com
 HOMEPAGE=	https://ezquake.com/
 COMMENT=	Modern QuakeWorld client
 LICENSE=	gnu-gpl-v2
