@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/15 22:43:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/17 00:16:43 wiz Exp $
 
 DISTNAME=	pyshacl-0.40.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 # optional, unpackaged: duktape2
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-poetry
 
 # as of 0.40.2
 # 8 failed, 390 passed, 12 skipped, 367117 warning

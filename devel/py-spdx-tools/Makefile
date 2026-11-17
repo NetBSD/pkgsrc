@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/15 21:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/17 00:16:43 wiz Exp $
 
 DISTNAME=	spdx_tools-0.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-uritools>=0:../../www/py-uritools
 DEPENDS+=	${PYPKGPREFIX}-xmltodict>=0:../../textproc/py-xmltodict
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-yaml
 
 # as of 0.8.5
 # 1029 passed, 4 skipped, 3 warnings
