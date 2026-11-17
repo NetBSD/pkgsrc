@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/11/11 11:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/17 12:04:13 wiz Exp $
 
 DISTNAME=	edje-1.7.10
 PKGREVISION=	28
@@ -9,28 +9,17 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
-
 # epp binary is GPL
-LICENSE=		2-clause-bsd AND gnu-gpl-v2
+LICENSE=	2-clause-bsd AND gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	pkg-config
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.edje
-PKG_SUPPORTED_OPTIONS=	python
+# edje_lua2.c:3923:16: error: too few arguments to function 'lua_newstate'
+LUA_VERSIONS_INCOMPATIBLE=	55
 
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=	python
-
-.if empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	PYTHON=:
-.else
-PLIST.python=	yes
-REPLACE_PYTHON+=	utils/inkscape2edc
-.include	"../../lang/python/application.mk"
-.endif
+.include "options.mk"
 
 INSTALLATION_DIRS+=	share/doc/edje
 
@@ -45,5 +34,4 @@ post-install:
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../lang/embryo/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
