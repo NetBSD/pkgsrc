@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/11/11 11:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/17 12:10:36 wiz Exp $
 
 DISTNAME=	l3afpad-0.8.18.1.11
 PKGREVISION=	27
@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/stevenhoneyman/l3afpad
 COMMENT=	Simple text editor forked from Leafpad, supports GTK+ 3.x
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+
 USE_TOOLS+=	automake aclocal autoheader automake autoconf
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext perl
 USE_TOOLS+=	gmake pkg-config
@@ -18,7 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} autoreconf -fiv
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
