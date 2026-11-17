@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2026/07/21 09:05:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/17 10:22:13 adam Exp $
 
-DISTNAME=	types_gdb-16.3.0.20260712
+DISTNAME=	types_gdb-16.3.0.20261116
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-gdb/}
