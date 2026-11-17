@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2026/11/17 00:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/17 05:50:07 adam Exp $
 
 DISTNAME=	spdx_tools-0.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/spdx_tools/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/spdx-tools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/spdx/tools-python
