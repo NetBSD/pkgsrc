@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2026/10/12 21:07:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/17 01:10:16 alnsn Exp $
 
-PKGNAME=	minizinc-2.9.7
+PKGNAME=	minizinc-2.10.1
 DISTNAME=	lib${PKGNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MiniZinc/}
 GITHUB_PROJECT=	libminizinc
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	flex bison
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+USE_TOOLS+=		flex bison
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/MiniZinc/libminizinc/
@@ -24,5 +25,9 @@ DEPENDS+=	chuffed>=0.14.0:../../math/chuffed
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+post-patch:
+	${RM} -f ${WRKSRC}/include/minizinc/process.hh.orig
+
+.include "../../math/gecode/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

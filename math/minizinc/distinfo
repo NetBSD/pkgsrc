@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2026/10/10 14:31:03 alnsn Exp $
+$NetBSD: distinfo,v 1.2 2026/11/17 01:10:16 alnsn Exp $
 
-BLAKE2s (libminizinc-2.9.7.tar.gz) = eb7a0b59acbde475a6a7eaf066dbf8cf295872f75287ac806990cea93c33b1c1
-SHA512 (libminizinc-2.9.7.tar.gz) = 604db8a9508eafbabf6c980384688b808e8f852ad2b4adef35568ccf63b67595bbd74b82b8ed78973b734b37bf662addb620f0c722fae8fb0f9cdcbfd479f1d7
-Size (libminizinc-2.9.7.tar.gz) = 8100604 bytes
-SHA1 (patch-share_minizinc_Preferences.json) = c895b00929c92e667cfd8f6a784b5440710061ff
+BLAKE2s (libminizinc-2.10.1.tar.gz) = 39fcc6e5da1c58ee8c378eeef5fba419d0788ea3ded34b14ce69a1c13cf964d1
+SHA512 (libminizinc-2.10.1.tar.gz) = 70d8864273b1cd2e4e46483e5207f16da3ed41cd304e2b4a24d1c0efe5be6653ff47b44e39438f027616f0a82f40008aa760c0053f3a653341fc8aca6841a3e3
+Size (libminizinc-2.10.1.tar.gz) = 8571096 bytes
+SHA1 (patch-include_minizinc_process.hh) = b893f3b3f63f200ac4ab8a1d37fcf448a6ef316b
