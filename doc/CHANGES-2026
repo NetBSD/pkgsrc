@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8149 2026/11/17 11:13:12 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8150 2026/11/17 13:02:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12092,3 +12092,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated time/py-types-python-dateutil to 2.9.0.20261116 [adam 2026-11-17]
 	Updated devel/ast-grep to 0.51.3 [wiz 2026-11-17]
 	Updated net/filezilla to 3.72.1 [wiz 2026-11-17]
+	Updated devel/gitpane to 0.18.12 [pin 2026-11-17]
