@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2026/11/11 11:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/17 04:10:04 pin Exp $
 
-DISTNAME=	slumber-5.4.0
-# Release 5.4.1 was accidentally skipped by upstream.
-# slumber >= 5.4.2. requires Rust >= 1.99.0
-PKGREVISION=	1
+DISTNAME=	slumber-5.4.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,7 +17,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.90.0
+RUST_REQ=	1.99.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
