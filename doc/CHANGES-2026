@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8139 2026/11/17 07:58:11 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8140 2026/11/17 08:10:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12074,3 +12074,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-pwdlib to 0.4.2 [adam 2026-11-17]
 	Updated devel/py-pipx to 1.18.18 [adam 2026-11-17]
 	Updated textproc/zet to 2.1.0 [wiz 2026-11-17]
+	Updated finance/bitcoin to 32.1 [adam 2026-11-17]
+	Updated devel/py-types-setuptools to 84.2.0.20261104 [adam 2026-11-17]
