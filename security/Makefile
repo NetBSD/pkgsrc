@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1037 2026/11/11 14:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1038 2026/11/17 21:15:01 bsiegert Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -288,6 +288,7 @@ SUBDIR+=	ocaml-cryptokit
 SUBDIR+=	ocaml-safepass
 SUBDIR+=	ocaml-ssl
 SUBDIR+=	olm
+SUBDIR+=	openbao
 SUBDIR+=	opencdk
 SUBDIR+=	openct
 SUBDIR+=	opendnssec

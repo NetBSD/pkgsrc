@@ -1,0 +1,14 @@
+OpenBao is an open source, community-driven secrets manager and fork of
+Vault managed by the Linux Foundation's OpenSSF.
+
+Arbitrary key/value secrets can be stored in OpenBao. OpenBao encrypts
+these secrets prior to writing them to persistent storage, so gaining
+access to the raw storage is not enough to access your secrets.
+
+OpenBao can generate secrets on-demand for some systems, such as
+Kubernetes or SQL databases. After creating these dynamic secrets,
+OpenBao will also automatically revoke them after the lease is up.
+
+OpenBao provides encryption as a service with centralized key management
+to simplify encrypting data in transit and stored across clouds and
+datacenters.

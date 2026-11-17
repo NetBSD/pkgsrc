@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/17 21:15:01 bsiegert Exp $
+bin/openbao

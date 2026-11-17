@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/17 21:15:01 bsiegert Exp $
+
+BLAKE2s (openbao-dist-v2.7.2.tar.xz) = 313396442ebc9c82f5f2d4e899057c10e480c7ada3d14c0aa41afc4ed8d8b7ea
+SHA512 (openbao-dist-v2.7.2.tar.xz) = 122db7e732b4b3773652a9f124de81455604de60513580fc2fb247505d283f5c11408df39f85cb5844c4086860205e21a7862ab02cb7caf3903e803d6e55f8e5
+Size (openbao-dist-v2.7.2.tar.xz) = 45201044 bytes
