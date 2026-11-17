@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/08/20 19:58:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/17 08:34:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,9 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses_bundled/LICENSE_scipy.txt
 ${PYSITELIB}/pywt/__init__.py
 ${PYSITELIB}/pywt/__init__.pyc
 ${PYSITELIB}/pywt/__init__.pyo
-${PYSITELIB}/pywt/_c99_config.py
-${PYSITELIB}/pywt/_c99_config.pyc
-${PYSITELIB}/pywt/_c99_config.pyo
 ${PYSITELIB}/pywt/_cwt.py
 ${PYSITELIB}/pywt/_cwt.pyc
 ${PYSITELIB}/pywt/_cwt.pyo
@@ -71,14 +68,9 @@ ${PYSITELIB}/pywt/data/ascent.npz
 ${PYSITELIB}/pywt/data/camera.npz
 ${PYSITELIB}/pywt/data/ecg.npz
 ${PYSITELIB}/pywt/data/sst_nino3.npz
+${PYSITELIB}/pywt/tests/data/README.md
 ${PYSITELIB}/pywt/tests/data/cwt_matlabR2015b_result.npz
 ${PYSITELIB}/pywt/tests/data/dwt_matlabR2012a_result.npz
-${PYSITELIB}/pywt/tests/data/generate_matlab_data.py
-${PYSITELIB}/pywt/tests/data/generate_matlab_data.pyc
-${PYSITELIB}/pywt/tests/data/generate_matlab_data.pyo
-${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.py
-${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.pyc
-${PYSITELIB}/pywt/tests/data/generate_matlab_data_cwt.pyo
 ${PYSITELIB}/pywt/tests/data/wavelab_test_signals.npz
 ${PYSITELIB}/pywt/tests/test__pywt.py
 ${PYSITELIB}/pywt/tests/test__pywt.pyc
