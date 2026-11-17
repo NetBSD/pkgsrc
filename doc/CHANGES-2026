@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8152 2026/11/17 13:06:39 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8153 2026/11/17 13:39:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12095,3 +12095,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/gitpane to 0.18.12 [pin 2026-11-17]
 	Updated sysutils/lla to 0.9.0 [pin 2026-11-17]
 	Updated textproc/treemd to 0.11.0 [pin 2026-11-17]
+	Updated net/rabbitmq-c to 0.18.1 [adam 2026-11-17]
+	Updated graphics/libansilove to 1.4.6 [adam 2026-11-17]
