@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8133 2026/11/17 04:10:25 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8134 2026/11/17 04:11:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12066,3 +12066,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated games/chess-tui to 2.8.1 [pin 2026-11-17]
 	Updated misc/rozi to 0.0.49 [pin 2026-11-17]
 	Updated net/slumber to 5.4.4 [pin 2026-11-17]
+	Updated net/termscp to 1.2.2 [pin 2026-11-17]
