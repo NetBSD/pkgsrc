@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/11/20 14:31:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/17 08:36:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,6 +28,9 @@ ${PYSITELIB}/stevedore/example/__init__.pyo
 ${PYSITELIB}/stevedore/example/base.py
 ${PYSITELIB}/stevedore/example/base.pyc
 ${PYSITELIB}/stevedore/example/base.pyo
+${PYSITELIB}/stevedore/example/load_as_dispatch.py
+${PYSITELIB}/stevedore/example/load_as_dispatch.pyc
+${PYSITELIB}/stevedore/example/load_as_dispatch.pyo
 ${PYSITELIB}/stevedore/example/load_as_driver.py
 ${PYSITELIB}/stevedore/example/load_as_driver.pyc
 ${PYSITELIB}/stevedore/example/load_as_driver.pyo

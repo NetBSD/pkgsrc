@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2026/10/16 19:43:52 adam Exp $
+# $NetBSD: Makefile,v 1.32 2026/11/17 08:36:42 adam Exp $
 
-DISTNAME=	stevedore-5.9.1
+DISTNAME=	stevedore-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stevedore/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=6.1.1:../../devel/py-pbr
 TEST_DEPENDS+=	${PYPKGPREFIX}-bandit>=1.6.0:../../security/py-bandit
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.2.0:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
