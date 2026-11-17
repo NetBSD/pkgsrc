@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8126 2026/11/17 01:11:49 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.8127 2026/11/17 03:09:51 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12061,3 +12061,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/raven to 0.4.0 [drixter 2026-11-16]
 	Added math/gecode version 6.6.0 [alnsn 2026-11-16]
 	Updated math/minizinc to 2.10.1 [alnsn 2026-11-17]
+	Updated meta-pkgs/bulk-test-rust to 20261117.0 [disciple 2026-11-17]
