@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8125 2026/11/16 23:00:53 alnsn Exp $
+$NetBSD: CHANGES-2026,v 1.8126 2026/11/17 01:11:49 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12060,3 +12060,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/dmarc-report-viewer to 2.7.2 [drixter 2026-11-16]
 	Updated net/raven to 0.4.0 [drixter 2026-11-16]
 	Added math/gecode version 6.6.0 [alnsn 2026-11-16]
+	Updated math/minizinc to 2.10.1 [alnsn 2026-11-17]
