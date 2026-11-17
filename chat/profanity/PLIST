@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/02 13:50:47 nros Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/17 21:42:57 ktnb Exp $
 bin/profanity
 include/profapi.h
-lib/libprofanity.la
+lib/libprofanity.so
+lib/libprofanity.so.0
+lib/libprofanity.so.0.0.0
 man/man1/profanity-about.1
 man/man1/profanity-account.1
 man/man1/profanity-affiliation.1
@@ -17,6 +19,7 @@ man/man1/profanity-bookmark.1
 man/man1/profanity-caps.1
 man/man1/profanity-carbons.1
 man/man1/profanity-changepassword.1
+man/man1/profanity-changes.1
 man/man1/profanity-charset.1
 man/man1/profanity-clear.1
 man/man1/profanity-close.1
@@ -51,6 +54,7 @@ man/man1/profanity-mainwin.1
 man/man1/profanity-mam.1
 man/man1/profanity-mood.1
 man/man1/profanity-msg.1
+man/man1/profanity-mucping.1
 man/man1/profanity-nick.1
 man/man1/profanity-notify.1
 man/man1/profanity-occupants.1
@@ -71,6 +75,7 @@ man/man1/profanity-privileges.1
 man/man1/profanity-quit.1
 man/man1/profanity-receipts.1
 man/man1/profanity-reconnect.1
+man/man1/profanity-redraw.1
 man/man1/profanity-register.1
 man/man1/profanity-reload.1
 man/man1/profanity-resource.1
@@ -85,6 +90,7 @@ man/man1/profanity-serversoftware.1
 man/man1/profanity-silence.1
 man/man1/profanity-slashguard.1
 man/man1/profanity-software.1
+man/man1/profanity-spellcheck.1
 man/man1/profanity-splash.1
 man/man1/profanity-stamp.1
 man/man1/profanity-states.1
@@ -108,6 +114,8 @@ man/man1/profanity-wintitle.1
 man/man1/profanity-wrap.1
 man/man1/profanity-xmlconsole.1
 man/man1/profanity.1
+share/doc/profanity/profrc.example
+share/doc/profanity/theme_template
 share/profanity/icons/proIcon.png
 share/profanity/icons/proIconMsg.png
 share/profanity/themes/aqua

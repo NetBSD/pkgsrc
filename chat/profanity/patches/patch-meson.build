@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2026/11/17 21:42:57 ktnb Exp $
+
+Added NetBSD to the libnotify section
+
+--- meson.build.orig	2026-11-17 21:14:45.990130389 +0000
++++ meson.build
+@@ -184,7 +184,7 @@ if get_option('notifications').enabled()
+     terminal_notifier = find_program('terminal-notifier', required: true)
+     have_osxnotify = true
+     conf_data.set('HAVE_OSXNOTIFY', 1)
+-  elif platform in ['nix', 'freebsd']
++  elif platform in ['nix', 'freebsd', 'netbsd']
+     libnotify_dep = dependency('libnotify', required: true)
+     conf_data.set('HAVE_LIBNOTIFY', 1)
+   else

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2026/11/11 11:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/17 21:42:57 ktnb Exp $
 
-DISTNAME=	profanity-0.14.0
-PKGREVISION=	28
+DISTNAME=	profanity-0.19.0
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+MASTER_SITES=	https://profanity-im.github.io/tarballs/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://profanity-im.github.io/
@@ -12,30 +11,19 @@ COMMENT=	Console based XMPP client inspired by irssi
 LICENSE=	gnu-gpl-v3
 
 FAKE_NCURSES=	yes
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
-
+USE_TOOLS+=	pkg-config cmake
 USE_CURSES=	wide
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
-SUBST_FILES.python=	configure
-SUBST_SED.python=	-e 's,"python",\"python-${PYVERSSUFFIX}\",g'
-SUBST_SED.python+=	-e 's,"python-embed",\"python-${PYVERSSUFFIX}-embed\",g'
-SUBST_SED.python+=	-e 's,\"python\",\"python-${PYVERSSUFFIX}\",g'
-SUBST_SED.python+=	-e 's,\"python-embed\",\"python-${PYVERSSUFFIX}-embed\",g'
+SUBST_FILES.python=	meson.build
+SUBST_SED.python+=	-e 's,'python-embed','python-${PYVERSSUFFIX}-embed',g'
+SUBST_SED.python+=	-e 's,'python3-embed','python-${PYVERSSUFFIX}-embed',g'
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	Setting path to OpenSSL certificates.
-SUBST_FILES.paths=	src/config/preferences.c
-SUBST_VARS.paths=	SSLCERTS
-
-CONFIGURE_ARGS+=	--enable-plugins
-CONFIGURE_ARGS+=	--enable-c-plugins
-CONFIGURE_ARGS+=	--enable-python-plugins
-CONFIGURE_ARGS+=	--enable-omemo
+MESON_ARGS+=		-Dpython-plugins=enabled
+MESON_ARGS+=		-Dc-plugins=enabled
+MESON_ARGS+=		-Domemo=enabled
 
 .include "options.mk"
 .include "../../chat/libstrophe/buildlink3.mk"
@@ -45,6 +33,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.22.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
