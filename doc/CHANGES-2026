@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8157 2026/11/17 21:34:56 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.8158 2026/11/17 21:39:03 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12101,3 +12101,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nim to 2.4.2 [wiz 2026-11-17]
 	Added security/openbao version 2.7.2 [bsiegert 2026-11-17]
 	Updated devel/go-staticcheck to 2026.2.2 [bsiegert 2026-11-17]
+	Updated www/anubis to 1.28.2 [bsiegert 2026-11-17]
