@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8141 2026/11/17 08:27:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8142 2026/11/17 08:33:30 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12078,3 +12078,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-types-setuptools to 84.2.0.20261104 [adam 2026-11-17]
 	Updated devel/py-scard to 2.3.2 [adam 2026-11-17]
 	Updated devel/py-test-httpserver to 1.2.1 [adam 2026-11-17]
+	Updated net/bgpipe to 0.26.0 [drixter 2026-11-17]
