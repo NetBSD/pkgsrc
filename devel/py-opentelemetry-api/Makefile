@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/11/08 21:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/17 05:25:35 adam Exp $
 
 DISTNAME=	opentelemetry_api-1.45.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=o/opentelemetry_api/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/opentelemetry-api/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api
