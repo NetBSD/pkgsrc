@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2026/08/23 07:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/17 09:14:40 adam Exp $
 
-DISTNAME=	libjwt-3.6.1
-PKGREVISION=	1
+DISTNAME=	libjwt-3.6.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benmcollins/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,6 +27,15 @@ SUBST_STAGE.bashpath=	pre-configure
 SUBST_MESSAGE.bashpath=	Fixing path to bash.
 SUBST_FILES.bashpath=	CMakeLists.txt
 SUBST_SED.bashpath=	-e 's,/bin/bash,${BASH},g'
+
+PLIST_SRC=	${PLIST_SRC_DFLT} ${WRKDIR}/PLIST.DOCS
+
+.PHONY: doxygen-plist
+post-install: doxygen-plist
+doxygen-plist:
+	${RM} -f ${WRKDIR}/PLIST.DOCS
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} share/doc/LibJWT/html -type f -print > ${WRKDIR}/PLIST.DOCS
 
 # for tests
 .include "../../devel/check/buildlink3.mk"
