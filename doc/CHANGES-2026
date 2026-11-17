@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8143 2026/11/17 08:37:25 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8144 2026/11/17 08:44:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12081,3 +12081,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bgpipe to 0.26.0 [drixter 2026-11-17]
 	Updated math/py-pywavelets to 1.10.0 [adam 2026-11-17]
 	Updated devel/py-stevedore to 5.10.0 [adam 2026-11-17]
+	Updated www/py-twill to 3.4.0 [adam 2026-11-17]
+	Updated textproc/py-types-docutils to 0.23.0.20261107 [adam 2026-11-17]
+	Updated textproc/py-types-yaml to 6.0.12.20261113 [adam 2026-11-17]
