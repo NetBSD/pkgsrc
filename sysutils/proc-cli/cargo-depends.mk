@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2026/11/11 18:25:33 hauke Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2026/11/17 13:59:42 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
 CARGO_CRATE_DEPENDS+=	anstream-1.0.0
@@ -17,11 +17,11 @@ CARGO_CRATE_DEPENDS+=	cargo-husky-1.5.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.5
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.1.1
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.6.7
+CARGO_CRATE_DEPENDS+=	clap-4.6.8
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.7
-CARGO_CRATE_DEPENDS+=	clap_complete-4.6.11
-CARGO_CRATE_DEPENDS+=	clap_derive-4.6.7
-CARGO_CRATE_DEPENDS+=	clap_lex-1.1.1
+CARGO_CRATE_DEPENDS+=	clap_complete-4.6.12
+CARGO_CRATE_DEPENDS+=	clap_derive-4.6.8
+CARGO_CRATE_DEPENDS+=	clap_lex-1.1.2
 CARGO_CRATE_DEPENDS+=	clap_mangen-0.2.33
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.5
 CARGO_CRATE_DEPENDS+=	colored-3.1.1
@@ -39,7 +39,7 @@ CARGO_CRATE_DEPENDS+=	dispatch2-0.3.1
 CARGO_CRATE_DEPENDS+=	document-features-0.2.12
 CARGO_CRATE_DEPENDS+=	downcast-rs-1.2.1
 CARGO_CRATE_DEPENDS+=	encode_unicode-1.0.0
-CARGO_CRATE_DEPENDS+=	errno-0.3.14
+CARGO_CRATE_DEPENDS+=	errno-0.3.15
 CARGO_CRATE_DEPENDS+=	fastrand-2.5.0
 CARGO_CRATE_DEPENDS+=	filedescriptor-0.8.3
 CARGO_CRATE_DEPENDS+=	float-cmp-0.10.0
@@ -54,9 +54,9 @@ CARGO_CRATE_DEPENDS+=	litrs-1.0.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.14
 CARGO_CRATE_DEPENDS+=	log-0.4.35
 CARGO_CRATE_DEPENDS+=	memchr-2.8.3
-CARGO_CRATE_DEPENDS+=	mio-1.2.4
+CARGO_CRATE_DEPENDS+=	mio-1.2.5
 CARGO_CRATE_DEPENDS+=	nix-0.28.0
-CARGO_CRATE_DEPENDS+=	nix-0.31.3
+CARGO_CRATE_DEPENDS+=	nix-0.31.4
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	ntapi-0.4.3
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
