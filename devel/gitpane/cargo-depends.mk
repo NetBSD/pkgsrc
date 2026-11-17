@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.21 2026/11/17 04:06:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.22 2026/11/17 13:01:25 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
