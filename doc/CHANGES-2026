@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8145 2026/11/17 09:25:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8146 2026/11/17 09:42:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12086,3 +12086,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-types-yaml to 6.0.12.20261113 [adam 2026-11-17]
 	Updated security/libjwt to 3.6.3 [adam 2026-11-17]
 	Updated devel/appstream to 1.2.3 [adam 2026-11-17]
+	Updated net/radsecproxy to 1.11.5 [adam 2026-11-17]
+	Updated sysutils/py-Send2Trash to 2.2.0 [adam 2026-11-17]
