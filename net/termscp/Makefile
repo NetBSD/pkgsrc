@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2026/11/04 12:24:01 pin Exp $
+# $NetBSD: Makefile,v 1.30 2026/11/17 04:11:12 pin Exp $
 
-DISTNAME=	termscp-1.2.0
-# termscp >= 1.2.1 requires Rust >= 1.99.1
+DISTNAME=	termscp-1.2.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +17,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.98.0
+RUST_REQ=	1.99.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
 
