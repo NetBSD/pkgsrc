@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/11/11 11:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/11/17 12:08:34 wiz Exp $
 
 DISTNAME=	elementary-1.7.10
 PKGREVISION=	25
@@ -16,12 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	autoconf automake # because I patched configure.ac
+USE_TOOLS+=	autoconf automake
 USE_TOOLS+=	gmake
-# override for hardcoded aclocal-1.13 in configure script
-CONFIGURE_ENV+=	ACLOCAL='aclocal'
-# override for hardcoded automake-1.13 in Makefiles
-MAKE_FLAGS+=	AUTOMAKE="automake -af"
 
 PKGCONFIG_OVERRIDE=	elementary
 
@@ -31,6 +27,9 @@ PLIST_SUBST=		MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=	{ gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
 MAKE_FLAGS+=	MODULE_ARCH=${MODULE_ARCH}
+
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} autoreconf -fiv
 
 .include "../../devel/ecore/buildlink3.mk"
 .include "../../graphics/edje/buildlink3.mk"
