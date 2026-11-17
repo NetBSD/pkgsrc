@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8129 2026/11/17 03:14:29 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8130 2026/11/17 04:07:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12062,3 +12062,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added math/gecode version 6.6.0 [alnsn 2026-11-16]
 	Updated math/minizinc to 2.10.1 [alnsn 2026-11-17]
 	Updated meta-pkgs/bulk-test-rust to 20261117.0 [gutteridge 2026-11-17]
+	Updated devel/gitpane to 0.18.11 [pin 2026-11-17]
