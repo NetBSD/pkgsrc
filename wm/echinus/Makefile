@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/11/12 13:23:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2026/11/17 11:37:08 wiz Exp $
 
 DISTNAME=	echinus-0.4.9
 PKGREVISION=	4
@@ -10,8 +9,6 @@ MAINTAINER=	polachok@gmail.com
 HOMEPAGE=	http://plhk.ru/echinus
 COMMENT=	Simple and lightweight tiling window manager
 LICENSE=	mit
-
-NO_CONFIGURE=	yes
 
 USE_TOOLS+=	pkg-config
 
@@ -28,6 +25,9 @@ SUBST_SED.makefile+=	-e 's,^LDFLAGS = ,LDFLAGS += ,'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+# do nothing, but needed for expat bl3.mk faking
+do-configure:
 
 .include "options.mk"
 .include "../../x11/libXft/buildlink3.mk"
