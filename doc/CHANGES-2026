@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8144 2026/11/17 08:44:00 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8145 2026/11/17 09:25:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12084,3 +12084,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-twill to 3.4.0 [adam 2026-11-17]
 	Updated textproc/py-types-docutils to 0.23.0.20261107 [adam 2026-11-17]
 	Updated textproc/py-types-yaml to 6.0.12.20261113 [adam 2026-11-17]
+	Updated security/libjwt to 3.6.3 [adam 2026-11-17]
+	Updated devel/appstream to 1.2.3 [adam 2026-11-17]
