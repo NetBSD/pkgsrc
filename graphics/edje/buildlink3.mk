@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2026/11/11 11:53:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2026/11/17 12:05:54 wiz Exp $
 
 BUILDLINK_TREE+=	edje
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.edje?=	../../graphics/edje
 .include	"../../devel/eet/buildlink3.mk"
 .include	"../../graphics/evas/buildlink3.mk"
 .include	"../../lang/embryo/buildlink3.mk"
+LUA_VERSIONS_INCOMPATIBLE+=	55
 .include	"../../lang/lua/buildlink3.mk"
 .endif # EDJE_BUILDLINK3_MK
 
