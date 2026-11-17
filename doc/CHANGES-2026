@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8147 2026/11/17 10:23:19 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8148 2026/11/17 11:10:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12090,3 +12090,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-Send2Trash to 2.2.0 [adam 2026-11-17]
 	Updated devel/py-types-gdb to 16.3.0.20261116 [adam 2026-11-17]
 	Updated time/py-types-python-dateutil to 2.9.0.20261116 [adam 2026-11-17]
+	Updated devel/ast-grep to 0.51.3 [wiz 2026-11-17]
