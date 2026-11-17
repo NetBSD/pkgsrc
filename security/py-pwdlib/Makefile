@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/11/11 14:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/17 05:34:40 adam Exp $
 
-DISTNAME=	pwdlib-0.3.1
+DISTNAME=	pwdlib-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwdlib/}
@@ -11,8 +11,10 @@ COMMENT=	Modern password hashing for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-argon2-cffi>=0:../../security/py-argon2-cffi
-DEPENDS+=	${PYPKGPREFIX}-bcrypt>=0:../../security/py-bcrypt
+# argon2
+DEPENDS+=	${PYPKGPREFIX}-argon2-cffi>=23.1.0:../../security/py-argon2-cffi
+# bcrypt
+DEPENDS+=	${PYPKGPREFIX}-bcrypt>=4.1.2:../../security/py-bcrypt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
