@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2026/11/11 10:36:38 nia Exp $
+# $NetBSD: Makefile,v 1.147 2026/11/17 16:58:52 wiz Exp $
 
 DISTNAME=	fontconfig-2.18.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts
 MASTER_SITES=	https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
 
-# https://bugs.freedesktop.org/show_bug.cgi?id=101280
-TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf>=0:../../devel/gperf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt
@@ -23,7 +22,9 @@ MESON_ARGS+=		-Ddoc=disabled # docbook2man and docbook2html are required.
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
-PKGCONFIG_OVERRIDE=	fontconfig.pc.in
+PKGCONFIG_OVERRIDE=	output/meson-private/fontconfig.pc
+
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 PKG_SYSCONFSUBDIR=	fontconfig
 

@@ -1,4 +1,6 @@
-$NetBSD: patch-test_test-migration.c,v 1.4 2014/07/15 14:48:34 ryoon Exp $
+$NetBSD: patch-test_test-migration.c,v 1.5 2026/11/17 16:58:52 wiz Exp $
+
+Fix build on SCO OpenServer 5.0.7/3.2.
 
 --- test/test-migration.c.orig	2014-01-20 08:14:21.000000000 +0000
 +++ test/test-migration.c
