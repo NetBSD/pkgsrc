@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/12 17:10:22 hans Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/17 11:59:42 wiz Exp $
 
 DISTNAME=	courier-unicode-2.3.0
 CATEGORIES=	mail
@@ -10,13 +10,13 @@ HOMEPAGE=	https://www.courier-mta.org/unicode/
 COMMENT=	Implements several algorithms related to the Unicode Standard
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake autoconf aclocal automake
+USE_TOOLS+=	gmake autoconf aclocal automake autoreconf
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	yes
 
 pre-configure:
-	(cd ${WRKSRC}; autoconf; aclocal; automake)
+	cd ${WRKSRC}; autoreconf -fiv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
