@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8135 2026/11/17 04:12:36 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8136 2026/11/17 04:13:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12068,3 +12068,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/slumber to 5.4.4 [pin 2026-11-17]
 	Updated net/termscp to 1.2.2 [pin 2026-11-17]
 	Updated net/ttl to 0.26.0 [pin 2026-11-17]
+	Updated news/eilmeldung to 1.10.1 [pin 2026-11-17]
