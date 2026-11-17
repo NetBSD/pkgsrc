@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8136 2026/11/17 04:13:43 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8137 2026/11/17 05:23:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12069,3 +12069,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/termscp to 1.2.2 [pin 2026-11-17]
 	Updated net/ttl to 0.26.0 [pin 2026-11-17]
 	Updated news/eilmeldung to 1.10.1 [pin 2026-11-17]
+	Updated textproc/py-regex to 2026.11.15 [adam 2026-11-17]
+	Updated graphics/py-tifffile to 2026.11.16 [adam 2026-11-17]
