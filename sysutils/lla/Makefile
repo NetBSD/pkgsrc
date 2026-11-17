@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2026/10/08 12:41:45 pin Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/17 13:03:42 pin Exp $
 
-DISTNAME=	lla-0.6.6
+DISTNAME=	lla-0.9.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lla/
 EXTRACT_SUFX=	.crate
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lla.chaqchase.com/docs/about/introduction
+HOMEPAGE=	https://lla.chaqchase.com/
 COMMENT=	The Elegant ls Alternative
 LICENSE=	mit
 
@@ -15,9 +15,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.100.0-beta.4
+#RUST_REQ=	1.101.0-beta.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.100.0-beta.4 on amd64
+#This package is confirmed to build with Rust 1.101.0-beta.1 on amd64
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
