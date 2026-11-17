@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8156 2026/11/17 21:23:45 bsiegert Exp $
+$NetBSD: CHANGES-2026,v 1.8157 2026/11/17 21:34:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12100,3 +12100,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/proc-cli to 2.5.0 [drixter 2026-11-17]
 	Updated lang/nim to 2.4.2 [wiz 2026-11-17]
 	Added security/openbao version 2.7.2 [bsiegert 2026-11-17]
+	Updated devel/go-staticcheck to 2026.2.2 [bsiegert 2026-11-17]
