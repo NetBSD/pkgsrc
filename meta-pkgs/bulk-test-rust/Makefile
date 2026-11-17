@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/08/25 21:58:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/17 03:09:29 gutteridge Exp $
 
-DISTNAME=	bulk-test-rust-20230825.2
+DISTNAME=	bulk-test-rust-20261117.0
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,6 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # enormous programs
 DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
+DEPENDS+=	chromium-[0-9]*:../../www/chromium
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
 
