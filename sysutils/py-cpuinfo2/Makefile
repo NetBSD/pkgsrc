@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/11/09 08:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/17 05:27:58 adam Exp $
 
 DISTNAME=	py_cpuinfo2-10.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
 CATEGORIES=	sysutils python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/py_cpuinfo2/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-cpuinfo2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/akx/py-cpuinfo2
