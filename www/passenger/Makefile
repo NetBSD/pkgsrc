@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2026/11/11 11:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/17 13:57:59 wiz Exp $
 
 COMMENT=		Web and application server for Ruby, Python and Node.js
 PKGREVISION=		29
@@ -15,11 +15,11 @@ INSTALL_ENV+=		NATIVE_PACKAGING_METHOD=pkgsrc
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 do-build:
-	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} \
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} \
 		agent nginx nginx:as_dynamic_module native_support
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RAKE} fakeroot
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} fakeroot
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-config.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-memory-stats.8 \

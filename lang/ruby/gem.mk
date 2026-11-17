@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.55 2025/10/24 05:32:21 taca Exp $
+# $NetBSD: gem.mk,v 1.56 2026/11/17 13:57:59 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -289,7 +289,7 @@ BUILD_TARGET?=	gem
 
 .PHONY: _gem-rake-build
 _gem-rake-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} ${BUILD_TARGET}
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} ${BUILD_TARGET}
 	${RUN} cd ${WRKSRC} && rm -f ${GEM_NAME}.gem
 	${RUN} cd ${WRKSRC} && find . -name ${GEM_NAME}.gem -print | \
 	while read file; do \

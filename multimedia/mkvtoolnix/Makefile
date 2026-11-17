@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2026/11/11 11:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2026/11/17 13:57:59 wiz Exp $
 
 DISTNAME=	mkvtoolnix-103.0
 PKGREVISION=	2
@@ -48,10 +48,10 @@ pre-build:
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${RAKE} install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${RAKE} -j ${_MAKE_JOBS_N} install
 
 .include "options.mk"
 

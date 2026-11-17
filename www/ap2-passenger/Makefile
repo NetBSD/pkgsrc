@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/11/11 11:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/17 13:57:59 wiz Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=		27
@@ -20,7 +20,7 @@ BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED=1
 INSTALLATION_DIRS+=	lib/httpd
 
 do-build:
-	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} apache2
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} -j ${_MAKE_JOBS_N} apache2
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/buildout/apache2/mod_passenger.so \
