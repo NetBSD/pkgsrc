@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/14 16:50:41 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.4 2026/11/17 13:38:26 adam Exp $
 include/ansilove.h
-lib/libansilove-static.a
 lib/libansilove.so
-lib/libansilove.so.1
 lib/libansilove.so.${PKGVERSION}
+lib/libansilove.so.1
 man/man3/ansilove_ansi.3
 man/man3/ansilove_artworx.3
 man/man3/ansilove_binary.3
