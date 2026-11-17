@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2026/11/15 21:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/17 05:38:46 adam Exp $
 
 DISTNAME=	python_sbom-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/python_sbom/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-sbom/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tox-dev/python-sbom
