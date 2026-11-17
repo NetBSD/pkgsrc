@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8130 2026/11/17 04:07:12 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8131 2026/11/17 04:08:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12063,3 +12063,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/minizinc to 2.10.1 [alnsn 2026-11-17]
 	Updated meta-pkgs/bulk-test-rust to 20261117.0 [gutteridge 2026-11-17]
 	Updated devel/gitpane to 0.18.11 [pin 2026-11-17]
+	Updated games/chess-tui to 2.8.1 [pin 2026-11-17]
