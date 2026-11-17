@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2026/11/11 18:10:24 pin Exp $
+$NetBSD: distinfo,v 1.14 2026/11/17 04:13:18 pin Exp $
 
 BLAKE2s (addr2line-0.25.1.crate) = cc5c422ec48ccef5c2c46379d2f600644609490afafea5020f2020815d1146e6
 SHA512 (addr2line-0.25.1.crate) = c400f3b6ccaff8a1c0d7d82c708a1784b8fd5ba64b6e420e85819d59b1cadb55fa59c852925093b921469f272d1d5140cf12f013ae75d1e1bc85021097df8fc2
@@ -510,9 +510,9 @@ Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (dyn-clone-1.0.20.crate) = 7231af3126aa2ebfd0a5bf5c1e248ace0ec3bfbbc32a153249c69da91018c828
 SHA512 (dyn-clone-1.0.20.crate) = 5910c39f1ce031fb89d4974530a60b66848038e2f2bc78bdb3d34e6f40075fb4457b8a604309bedc4012fa46b17212e81dfb376cc6b45fa2dee823a86264690f
 Size (dyn-clone-1.0.20.crate) = 13134 bytes
-BLAKE2s (eilmeldung-1.10.0.tar.gz) = 3ca1c7ffac278f45f93831e48d70dd638f5bdd1305dc19c8680f8da1095726da
-SHA512 (eilmeldung-1.10.0.tar.gz) = 742bdb139dc2097739ebef7157cc5d5cc69088e31a27f76b8aac4be5741637e27a09e6c224ad8c53f92f673945965bd7e6fb848b077fbda8d557aab29dff0dd1
-Size (eilmeldung-1.10.0.tar.gz) = 7820417 bytes
+BLAKE2s (eilmeldung-1.10.1.tar.gz) = 2c0e0e72c556cc586ffda91f1fa6012f39a46fd555a60dc0c4b100713411671d
+SHA512 (eilmeldung-1.10.1.tar.gz) = b17ea51982f300a17b2f6bcef53c917e77f84de3250796e9df115584a19299b1c9f7235c061f1bf58c24bffb340096dd1ba76798d70e0533d5a3385e972f3279
+Size (eilmeldung-1.10.1.tar.gz) = 7819898 bytes
 BLAKE2s (either-1.19.0.crate) = 7e45ceeb98eca09847ab4222c8e9e0ddfeac308071854886f36812e54829d2e0
 SHA512 (either-1.19.0.crate) = 41e15204729ca83ce973caebafda1bbbf8827ae7adc3b96ac7beb588739b73525550319c764ff25a59f86cf0d751c87f08e71166109e2bd1e6d667b88537d9f3
 Size (either-1.19.0.crate) = 22501 bytes
@@ -1866,9 +1866,9 @@ Size (termios-0.3.3.crate) = 17103 bytes
 BLAKE2s (termwiz-0.23.3.crate) = 11b1531c3bcd8b01f73fa30fc997624b4608ab59c38871d1e263dafd4bed37b6
 SHA512 (termwiz-0.23.3.crate) = 937c49e22e0004c4a235ff7bbfab7e053477444c2ce0a0873bc17aa6e7165413d07412f6a09630c6b3883d85264d7a3cc88651ec5b8fe8e52e51f1ffa7924701
 Size (termwiz-0.23.3.crate) = 400004 bytes
-BLAKE2s (the-other-tui-markdown-0.2.0.crate) = e81f005025a9ca58fa14987158be8708a5e195def638e4355b6f02172eb329c7
-SHA512 (the-other-tui-markdown-0.2.0.crate) = 04e87c517dd86dedd50a18e98fbcd33f50ac9035d2160f4e6209a5523355dbaf6fa8d0c99e33bfa0b0ebd20562f7bb762887e25e68cdf79becb6d35739f8e2d0
-Size (the-other-tui-markdown-0.2.0.crate) = 66495 bytes
+BLAKE2s (the-other-tui-markdown-0.2.1.crate) = 3af4e1b4ee93683bb0447ad1a8c832e11fe21d1c67eaa560a98dc65d85032a1e
+SHA512 (the-other-tui-markdown-0.2.1.crate) = c7098429092aa0f95fd5eb5c2a155015df9b5a9c233331dce2c6c8852a9a472e82492424b38412ac20539636c4e30ee13ed7300c1cb3fdb44e7b6ea5ded073d4
+Size (the-other-tui-markdown-0.2.1.crate) = 67462 bytes
 BLAKE2s (thiserror-1.0.69.crate) = 26bff7ed5c8f8eeabca66866529fdd00063c22b57c631a70e5bd5deef20976b6
 SHA512 (thiserror-1.0.69.crate) = ef50d2867d965da1dfb29d26faf6de273b5fadf78f95313f6caf44d68bfc610b9bd4b7544200b05bb0861231cfc84e961007f8db83c7905244c492037fd31899
 Size (thiserror-1.0.69.crate) = 22198 bytes

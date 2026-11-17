@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2026/11/11 18:10:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2026/11/17 04:13:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -621,7 +621,7 @@ CARGO_CRATE_DEPENDS+=	terminfo-0.9.0
 CARGO_CRATE_DEPENDS+=	termion-4.0.6
 CARGO_CRATE_DEPENDS+=	termios-0.3.3
 CARGO_CRATE_DEPENDS+=	termwiz-0.23.3
-CARGO_CRATE_DEPENDS+=	the-other-tui-markdown-0.2.0
+CARGO_CRATE_DEPENDS+=	the-other-tui-markdown-0.2.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-2.0.21
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
