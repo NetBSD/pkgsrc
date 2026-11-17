@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2026/11/04 14:06:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/17 05:40:33 adam Exp $
 bin/pipx-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/pipx.cdx.json
 ${PYSITELIB}/pipx/__init__.py
 ${PYSITELIB}/pipx/__init__.pyc
 ${PYSITELIB}/pipx/__init__.pyo
 ${PYSITELIB}/pipx/__main__.py
 ${PYSITELIB}/pipx/__main__.pyc
 ${PYSITELIB}/pipx/__main__.pyo
+${PYSITELIB}/pipx/_env_parsing.py
+${PYSITELIB}/pipx/_env_parsing.pyc
+${PYSITELIB}/pipx/_env_parsing.pyo
 ${PYSITELIB}/pipx/animate.py
 ${PYSITELIB}/pipx/animate.pyc
 ${PYSITELIB}/pipx/animate.pyo
