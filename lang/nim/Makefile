@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2026/11/11 11:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2026/11/17 15:00:37 wiz Exp $
 
 # Nim is quite a weird language to package, meaning that the official packaging
 # guideline recommends using a tarball that is created via a CI and also
@@ -23,37 +23,35 @@
 # - https://nim-lang.github.io/Nim/packaging.html
 # - `koch.nim` in the source tree
 
-DISTNAME=	nim-2.4.0
-PKGREVISION=	1
+DISTNAME=	nim-2.4.2
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
-EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nim-lang.org/
 COMMENT=	The Nim programming language
 LICENSE=	mit
 
-ATLAS_TAG=	aa6fb162006f3015aa84c4305e15cb4d230f5ad6
-SAT_TAG=	9d52513b3c68bfb929dbd687d4fb2836cfee6936
+GH_SFX=			.tar.gz
 
-GH_SFX=		.tar.gz
+EXTRACT_DIR.${SAT_DISTFILE}=		${WRKSRC}
+EXTRACT_DIR.${NIMBLE_DISTFILE}=		${WRKSRC}
 
-ATLAS_DISTNAME=	atlas-${ATLAS_TAG}
-SAT_DISTNAME=	sat-${SAT_TAG}
+# https://github.com/nim-lang/Nim/blob/devel/koch.nim
+GITHUB_SUBMODULES+=	nim-lang atlas fa19ace5c5d176d0e19f9b6ad08239ce2ceea676 dist/atlas
+GITHUB_SUBMODULES+=	nim-lang nimble 302a71139254b43b1488d65de111b6734d1a7490 dist/nimble
+GITHUB_SUBMODULES+=	nim-lang sat 9d52513b3c68bfb929dbd687d4fb2836cfee6936 dist/atlas/dist/sat
 
-ATLAS_DISTFILE=	${ATLAS_DISTNAME}${GH_SFX}
-SAT_DISTFILE=	${SAT_DISTNAME}${GH_SFX}
-
-DISTFILES=		${DEFAULT_DISTFILES}
-DISTFILES+=		${ATLAS_DISTFILE}
-DISTFILES+=		${SAT_DISTFILE}
-
-SITES.${ATLAS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nim-lang/atlas/archive/}${ATLAS_TAG}${GH_SFX}
-SITES.${SAT_DISTFILE}=		-${MASTER_SITE_GITHUB:=nim-lang/sat/archive/}${SAT_TAG}${GH_SFX}
-
-EXTRACT_DIR.${ATLAS_DISTFILE}=	${WRKSRC}
-EXTRACT_DIR.${SAT_DISTFILE}=	${WRKSRC}
+# https://github.com/nim-lang/nimble/tree/master/vendor
+GITHUB_SUBMODULES+=	status-im nim-bearssl 38a5622be728fb083f6fe55c124502995b2f4e3d dist/nimble/vendor/bearssl
+GITHUB_SUBMODULES+=	nim-lang checksums f8f6bd34bfa3fe12c64b919059ad856a96efcba0 dist/nimble/vendor/checksums
+GITHUB_SUBMODULES+=	status-im nim-chronos dcd20011df38c0cb603382f3d626471de71d19df dist/nimble/vendor/chronos
+GITHUB_SUBMODULES+=	status-im nim-http-utils f142cb2e8bd812dd002a6493b6082827bb248592 dist/nimble/vendor/httputils
+GITHUB_SUBMODULES+=	arnetheduck nim-results b319652e98a198fa881ca70a76754c2dd6f09804 dist/nimble/vendor/results
+GITHUB_SUBMODULES+=	nim-lang sat e63eaea8baf00bed8bcd5a29ffd8823abb265b39 dist/nimble/vendor/sat
+GITHUB_SUBMODULES+=	status-im nim-stew 83eb1157963b7f49351dbdd858355fa990bbe23c dist/nimble/vendor/stew
+GITHUB_SUBMODULES+=	guzba zippy bcb8c1e1be6abb0a0e35a3c6040cdd9391cc993f dist/nimble/vendor/zippy
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
@@ -78,13 +76,6 @@ INSTALLATION_DIRS+=	bin
 post-extract:
 	# TODO: csources for cross-building?
 	# ${MV} ${WRKSRC}/csources_v2-${C2VERSION_TAG} ${WRKSRC}/csources_v2
-
-	${MKDIR} ${WRKSRC}/dist
-	${MV} ${WRKSRC}/atlas-${ATLAS_TAG} ${WRKSRC}/dist/atlas
-
-	${MKDIR} ${WRKSRC}/dist/atlas/dist
-	${MV} ${WRKSRC}/sat-${SAT_TAG} ${WRKSRC}/dist/atlas/dist/sat
-
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE}

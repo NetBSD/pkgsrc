@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2026/11/07 22:43:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2026/11/17 15:00:37 wiz Exp $
 bin/nim
 bin/nimble
 bin/nimgrep
@@ -119,6 +119,7 @@ nim/compiler/parampatterns.nim
 nim/compiler/parser.nim
 nim/compiler/passaux.nim
 nim/compiler/passes.nim
+nim/compiler/pathcache.nim
 nim/compiler/pathutils.nim
 nim/compiler/patterns.nim
 nim/compiler/pipelines.nim
@@ -493,6 +494,7 @@ nim/lib/system/inclrtl.nim
 nim/lib/system/indexerrors.nim
 nim/lib/system/indices.nim
 nim/lib/system/integerops.nim
+nim/lib/system/integerprims.nim
 nim/lib/system/iterators.nim
 nim/lib/system/iterators_1.nim
 nim/lib/system/jssys.nim
