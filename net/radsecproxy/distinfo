@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2026/08/20 07:56:55 adam Exp $
+$NetBSD: distinfo,v 1.16 2026/11/17 09:40:40 adam Exp $
 
-BLAKE2s (radsecproxy-1.11.4.tar.gz) = 6579ec8518f0785d45f6d198231061b2251b1696631ffd235527393875be93e4
-SHA512 (radsecproxy-1.11.4.tar.gz) = 464140114ca8a5a685375d4d953f8be55b79bc1f55dbe2b06146dbe14b59044fa623a4e13eab23b79310ffc846bb31673cc6d439eb06cb7df2c98765cbcf26ee
-Size (radsecproxy-1.11.4.tar.gz) = 281721 bytes
+BLAKE2s (radsecproxy-1.11.5.tar.gz) = 29000db9fb2bdcc07ad36bf5fc07cc546602b2c92768f81c170b110ca3382ebe
+SHA512 (radsecproxy-1.11.5.tar.gz) = 6d2c1a71356e08da8829e4adf547caa6cb775fe0c7fda401930ed65a7c158226ed63daafff3e11531b5a49f15eb07271348c154bd3d94046e12601439ef0dbee
+Size (radsecproxy-1.11.5.tar.gz) = 282169 bytes
