@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/10/29 05:58:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/11/17 09:24:51 adam Exp $
 bin/appstreamcli
 include/appstream/appstream.h
 include/appstream/as-agreement-section.h
@@ -19,6 +19,7 @@ include/appstream/as-icon.h
 include/appstream/as-image.h
 include/appstream/as-issue.h
 include/appstream/as-launchable.h
+include/appstream/as-locale.h
 include/appstream/as-macros.h
 include/appstream/as-metadata.h
 include/appstream/as-pool.h
