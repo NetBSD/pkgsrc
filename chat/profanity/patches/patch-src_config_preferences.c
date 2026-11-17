@@ -1,10 +1,10 @@
-$NetBSD: patch-src_config_preferences.c,v 1.4 2026/11/17 21:42:57 ktnb Exp $
+$NetBSD: patch-src_config_preferences.c,v 1.5 2026/11/17 22:09:41 ktnb Exp $
 
 Set paths for security/mozilla-rootcerts.
 
---- src/config/preferences.c.orig	2026-10-15 13:56:02.000000000 +0000
+--- src/config/preferences.c.orig	2021-09-08 10:03:47.000000000 +0000
 +++ src/config/preferences.c
-@@ -707,20 +707,8 @@ prefs_get_tls_certpath(void)
+@@ -636,20 +636,8 @@ prefs_get_tls_certpath(void)
      }
  
      if (setting == NULL) {
@@ -22,8 +22,8 @@ Set paths for security/mozilla-rootcerts.
 -        }
 -        if (g_file_test("/system/etc/security/cacerts", G_FILE_TEST_IS_DIR)) {
 -            return strdup("/system/etc/security/cacerts");
-+        if (g_file_test("/etc/openssl/certs", G_FILE_TEST_IS_DIR)) {
-+            return strdup("/etc/openssl/certs");
++        if (g_file_test("@SSLCERTS@", G_FILE_TEST_IS_DIR)) {
++            return strdup("@SSLCERTS@");
          }
  
          return NULL;

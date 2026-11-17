@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2026/11/17 21:42:57 ktnb Exp $
+$NetBSD: distinfo,v 1.14 2026/11/17 22:09:41 ktnb Exp $
 
 BLAKE2s (profanity-0.19.0.tar.xz) = 1f96cab534e1c62659e1a2649768b19d6a3fcb7824670f768eee4dc3a6e60a98
 SHA512 (profanity-0.19.0.tar.xz) = 4886d5d5bc3d8b39a8a449fc0a86338b5c77ce51a61a79297706489fbac8501fb7de0bfa5e7fab4536acbe08c089126744899dede89e1364ad682e1e22032732
 Size (profanity-0.19.0.tar.xz) = 454992 bytes
-SHA1 (patch-meson.build) = c43185679743ab0f823a96dee3151996a1cd4512
-SHA1 (patch-src_config_preferences.c) = dd1011db67bc4cef0ac33ab9164d918ba3dba97d
+SHA1 (patch-meson.build) = cfe32b799f19d78b2f2058d5a2d9217b475286b4
+SHA1 (patch-src_config_preferences.c) = 17bf3adea60a4934a655e59a48551724506e158b
 SHA1 (patch-src_ui_core.c) = 305dade110c4afd5e83590132a1410b1f8ff73fe

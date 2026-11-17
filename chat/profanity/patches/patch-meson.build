@@ -1,8 +1,8 @@
-$NetBSD: patch-meson.build,v 1.1 2026/11/17 21:42:57 ktnb Exp $
+$NetBSD: patch-meson.build,v 1.2 2026/11/17 22:09:41 ktnb Exp $
 
 Added NetBSD to the libnotify section
 
---- meson.build.orig	2026-11-17 21:14:45.990130389 +0000
+--- meson.build.orig	2026-10-15 13:56:02.000000000 +0000
 +++ meson.build
 @@ -184,7 +184,7 @@ if get_option('notifications').enabled()
      terminal_notifier = find_program('terminal-notifier', required: true)

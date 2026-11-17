@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2026/11/17 21:42:57 ktnb Exp $
+# $NetBSD: Makefile,v 1.56 2026/11/17 22:09:41 ktnb Exp $
 
 DISTNAME=	profanity-0.19.0
 CATEGORIES=	chat
@@ -20,6 +20,12 @@ SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	meson.build
 SUBST_SED.python+=	-e 's,'python-embed','python-${PYVERSSUFFIX}-embed',g'
 SUBST_SED.python+=	-e 's,'python3-embed','python-${PYVERSSUFFIX}-embed',g'
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Setting path to OpenSSL certificates.
+SUBST_FILES.paths=	src/config/preferences.c
+SUBST_VARS.paths=	SSLCERTS
 
 MESON_ARGS+=		-Dpython-plugins=enabled
 MESON_ARGS+=		-Dc-plugins=enabled

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_ui_core.c,v 1.2 2026/11/17 21:42:57 ktnb Exp $
+$NetBSD: patch-src_ui_core.c,v 1.3 2026/11/17 22:09:41 ktnb Exp $
 
 sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
 
