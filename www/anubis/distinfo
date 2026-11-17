@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/10/14 15:32:30 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2026/11/17 21:38:47 bsiegert Exp $
 
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6b700bc0ea1a5a9070b79e2df5ee41bda8994973fbf2a4deac2a482ec151279b
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6e2becc6b0294a2ce097ef7bb8ddedfc9793e9e5281620bf920644fb9bef3bb69ad0367e7ffb706acf955c48bf46b118360107241014555562985337a0bbd051
@@ -6,9 +6,9 @@ Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 113 bytes
 BLAKE2s (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = f4ae9bc566614fbd5cb79005682b5a5854d9481b019b2be01c028e9091b81d79
 SHA512 (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 11b50ef421f8c618e0a7bb448a771cd11da851eafe6679d848d19725f37c71b0c61936fd0b0c2668624a40beba31a40971e50fbce7fc23aaac3c9ac1236e0460
 Size (al.essio.dev_pkg_shellescape_@v_v1.6.0.zip) = 16137 bytes
-BLAKE2s (anubis-src-vendor-npm-1.28.1.tar.gz) = cb3711bf2fa6d92ade3556b490a02149b1e788d70c0be3078cae2e11c4131516
-SHA512 (anubis-src-vendor-npm-1.28.1.tar.gz) = e8e486405c5cf774827dd3f641f9cf3472214f881c61a0d848128e68866da4fc67ab48b958c74146a9e9774aa56c3b4eca8bc122c6da14523ef6d7dfb525737d
-Size (anubis-src-vendor-npm-1.28.1.tar.gz) = 26493674 bytes
+BLAKE2s (anubis-src-vendor-npm-1.28.2.tar.gz) = 84833feb678a0f98b82bb58b30d2780cf0eba5341d233cc3ce8f2b65b51c974a
+SHA512 (anubis-src-vendor-npm-1.28.2.tar.gz) = 505e420df78cbe96644f57f56010a917a35d55f687b84b2d6e0dbd5db8822e7c09473eedc0e391a6de8fe649e308fcf4b7b0e611616a607bf7267a7327a5fe5a
+Size (anubis-src-vendor-npm-1.28.2.tar.gz) = 26498890 bytes
 BLAKE2s (cel.dev_cel-go_@v_v0.32.0.mod) = 56561967ba06bbd2a93f9ac25a5c17e8e6998eaa7975250bce08074698ea2141
 SHA512 (cel.dev_cel-go_@v_v0.32.0.mod) = f2b137eceaff895faeede193af8deb7f382916a84dac8a3bab0fa4ebf7571cb15b29fda2225143cddd5a46e963ad76d5c2243a81163b6071602aeb9b83ea5f52
 Size (cel.dev_cel-go_@v_v0.32.0.mod) = 477 bytes
@@ -84,12 +84,12 @@ Size (github.com__songmu_gitconfig_@v_v0.2.2.mod) = 261 bytes
 BLAKE2s (github.com__songmu_gitconfig_@v_v0.2.2.zip) = fbc3667f2cfc28acdc96a2c9fd557a700638ea7c263f6e02eb739c557e3ff12b
 SHA512 (github.com__songmu_gitconfig_@v_v0.2.2.zip) = d0223ec2ca9d46b60910ab674fe980c6efb2c136937f8853aa650d687bc91621d5301c55bade586886b7330815f8cdc85510dcff4b66ae0541f1a45efcbe6b41
 Size (github.com__songmu_gitconfig_@v_v0.2.2.zip) = 12702 bytes
-BLAKE2s (github.com__techaro_h_q_yeet_@v_v0.12.1.mod) = a7c85f9eb8e5d0eaaa87e37818ad7fc0afc265bc0e488ddad04db02bd89481c2
-SHA512 (github.com__techaro_h_q_yeet_@v_v0.12.1.mod) = d6013e18d7dffb04b6b817d411089e0717b0db06071bd9d363c9d8a96f0b3847e9a30385be68108e8f48d102937c1cace83f2185b19e092b67f466a46952609a
-Size (github.com__techaro_h_q_yeet_@v_v0.12.1.mod) = 4202 bytes
-BLAKE2s (github.com__techaro_h_q_yeet_@v_v0.12.1.zip) = 0c09596909efcf96575319887fa2d108898cda77c2a13a446571dec141a69f90
-SHA512 (github.com__techaro_h_q_yeet_@v_v0.12.1.zip) = f0d3c994767a76158c9bdd3ecec3c93813e980778bc4319dfe6a521d878625faea649ea3c9ceef1a2dcb0810974d103d6615dc488c8a97e91b34128307508d10
-Size (github.com__techaro_h_q_yeet_@v_v0.12.1.zip) = 149707 bytes
+BLAKE2s (github.com__techaro_h_q_yeet_@v_v0.13.0.mod) = 258e6b574c247d068b20f42defcc4102220698cbbbf4d16771efcf8e31195907
+SHA512 (github.com__techaro_h_q_yeet_@v_v0.13.0.mod) = 8fad0adc38c1413c41d51dfbc38b57f85f6dc08846619347fe129f07a197e136931af7904c474bb802f8e31e446abfd3a50eac14e3039b6388dc2e993e814a48
+Size (github.com__techaro_h_q_yeet_@v_v0.13.0.mod) = 4605 bytes
+BLAKE2s (github.com__techaro_h_q_yeet_@v_v0.13.0.zip) = 13d22c4cca580d2e7cfc1c796c425b40ac3f34ef20c5c9e4e887eb5001d3c11d
+SHA512 (github.com__techaro_h_q_yeet_@v_v0.13.0.zip) = ad49072c0a62de211e684e5a2370e231b73fcaa057d3e855b6a7951d7683f70fce0f2cd0e2c0d9e03394f659a7f71dced95bb98635a0b121ae0ed944afe5a18a
+Size (github.com__techaro_h_q_yeet_@v_v0.13.0.zip) = 156678 bytes
 BLAKE2s (github.com__xe_erofs_@v_v0.6.1.mod) = f92f25253810ad2d822e447d90ebda814f6b78935024908ba7b240779cdc2025
 SHA512 (github.com__xe_erofs_@v_v0.6.1.mod) = 6c77eeae2e8107e8879b59d1002a5e1f552c0f6dcd13321a39c8cc7fad1ce5a55b9a7365271fd28c3a2dc649567a78e4b075c0c6cf3b5d239c6fbfa81b096031
 Size (github.com__xe_erofs_@v_v0.6.1.mod) = 435 bytes
