@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8153 2026/11/17 13:39:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8154 2026/11/17 14:00:08 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12097,3 +12097,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/treemd to 0.11.0 [pin 2026-11-17]
 	Updated net/rabbitmq-c to 0.18.1 [adam 2026-11-17]
 	Updated graphics/libansilove to 1.4.6 [adam 2026-11-17]
+	Updated sysutils/proc-cli to 2.5.0 [drixter 2026-11-17]
