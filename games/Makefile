@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2026/11/16 11:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.574 2026/11/18 02:18:29 ktnb Exp $
 #
 
 COMMENT=	Games
@@ -420,6 +420,7 @@ SUBDIR+=	tetris-cli
 SUBDIR+=	tetris-tui
 SUBDIR+=	thew
 SUBDIR+=	tileworld
+SUBDIR+=	tintin++
 SUBDIR+=	toppler
 SUBDIR+=	tr1x
 SUBDIR+=	trader

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/18 02:18:30 ktnb Exp $
+
+BLAKE2s (tintin-2.02.61.tar.gz) = 5cdabbc7eb164a368a31f8a933dbaf91d9f38037ecffbc4004af55a6565860ce
+SHA512 (tintin-2.02.61.tar.gz) = a285f6f88b3aac8385ab9e199ac20e234929222d3d5e563cfe522c84b061293c86ef679caedadfd8f2e9eae84d85ed96a617ba9a33e714d711df106503db8b58
+Size (tintin-2.02.61.tar.gz) = 2337671 bytes
+SHA1 (patch-forkpty.c) = d8d19b63793d56298ef8c68c4818d80304e488e1

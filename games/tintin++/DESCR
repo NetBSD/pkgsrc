@@ -1,0 +1,6 @@
+TinTin++ is a command line MUD client which features support for
+TELNET, PCRE, UTF-8, SSL, VT100, IPv6, the dynamic TINTIN scripting
+language, a comprensive trigger system, and several other features
+geared towards mudding, scripting, shell-scripting, text processing,
+automation, interprocess communication, redirection, xterm terminal
+emulation, and multiplexing / demultiplexing.
