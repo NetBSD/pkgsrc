@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2026/11/17 15:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/18 12:58:38 adam Exp $
 
-DISTNAME=	pipx-1.18.18
+DISTNAME=	pipx-1.18.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pipx/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0:../../devel/py-sbom
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=3.7.2:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-filelock>=4.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-packaging>=26.3:../../devel/py-packaging
