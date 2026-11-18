@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8177 2026/11/18 12:19:26 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8178 2026/11/18 12:24:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12131,3 +12131,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/ansible-core to 2.22.0 [adam 2026-11-18]
 	Updated sysutils/ansible to 15.0.0 [adam 2026-11-18]
 	Updated net/bgpipe to 0.28.0 [drixter 2026-11-18]
+	Updated graphics/py-strich to 0.21 [adam 2026-11-18]
+	Updated www/py-zensical to 0.1.2 [adam 2026-11-18]
