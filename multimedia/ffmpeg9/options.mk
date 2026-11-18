@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.1 2026/08/12 03:43:35 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/18 22:30:58 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ffmpeg9
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
 PKG_SUPPORTED_OPTIONS=	ass aom bluray doc fdk-aac fontconfig freetype jack \
-			lame libvpx libwebp opencore-amr opus pulseaudio rav1e rpi rtmp \
-			speex tesseract theora vorbis x11 x264 x265 xvid
+			lame libvpx libwebp opencore-amr opus pulseaudio rav1e \
+			rpi rtmp speex svt-av1 tesseract theora vorbis x11 \
+			x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	ass aom bluray freetype fontconfig gnutls lame \
 			libvpx libwebp opus speex theora vorbis x264 x265 xvid
 
@@ -71,6 +72,14 @@ CONFIGURE_ARGS+=	--enable-librav1e
 .include "../../multimedia/rav1e/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-librav1e
+.endif
+
+# av1 option with svt-av1
+.if !empty(PKG_OPTIONS:Msvt-av1)
+CONFIGURE_ARGS+=	--enable-libsvtav1
+.include "../../multimedia/svt-av1/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libsvtav1
 .endif
 
 .if !empty(PKG_OPTIONS:Maom) || !empty(PKG_OPTIONS:Mrav1e)
