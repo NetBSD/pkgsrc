@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8175 2026/11/18 10:27:35 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8176 2026/11/18 11:58:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12128,3 +12128,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-progressbar2 to 4.7.1 [adam 2026-11-18]
 	Updated www/webkit-gtk41 to 2.54.3 [wiz 2026-11-18]
 	Updated www/webkit-gtk60 to 2.54.3 [wiz 2026-11-18]
+	Updated sysutils/ansible-core to 2.22.0 [adam 2026-11-18]
+	Updated sysutils/ansible to 15.0.0 [adam 2026-11-18]
