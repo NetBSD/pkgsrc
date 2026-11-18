@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2026/11/17 09:14:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2026/11/18 07:27:07 adam Exp $
 bin/jwe-decrypt
 bin/jwe-encrypt
 bin/jwk2key
@@ -12,7 +12,7 @@ lib/cmake/LibJWT/LibJWTConfig.cmake
 lib/libjwt.a
 lib/libjwt.so
 lib/libjwt.so.14
-lib/libjwt.so.14.4.3
+lib/libjwt.so.14.4.4
 lib/pkgconfig/libjwt.pc
 man/man1/jwe-decrypt.1
 man/man1/jwe-encrypt.1
