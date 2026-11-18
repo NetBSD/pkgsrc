@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.52 2026/11/10 18:55:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2026/11/18 17:08:08 drixter Exp $
 
-DISTNAME=	tlsx-1.4.0
-PKGREVISION=	3
+DISTNAME=	tlsx-1.5.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/projectdiscovery/tlsx
 COMMENT=	TLS grabber focused on TLS based data collection
 LICENSE=	mit
