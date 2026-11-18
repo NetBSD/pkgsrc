@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2026/07/14 09:29:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2026/11/18 11:49:51 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -129,6 +129,9 @@ ${PYSITELIB}/ansible/_internal/_powershell/_script.pyo
 ${PYSITELIB}/ansible/_internal/_rpc_host.py
 ${PYSITELIB}/ansible/_internal/_rpc_host.pyc
 ${PYSITELIB}/ansible/_internal/_rpc_host.pyo
+${PYSITELIB}/ansible/_internal/_secret_input.py
+${PYSITELIB}/ansible/_internal/_secret_input.pyc
+${PYSITELIB}/ansible/_internal/_secret_input.pyo
 ${PYSITELIB}/ansible/_internal/_ssh/__init__.py
 ${PYSITELIB}/ansible/_internal/_ssh/__init__.pyc
 ${PYSITELIB}/ansible/_internal/_ssh/__init__.pyo
@@ -560,6 +563,9 @@ ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/__init__.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.py
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_fork_safe_lock.py
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_fork_safe_lock.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_fork_safe_lock.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.py
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.pyo
@@ -572,6 +578,9 @@ ${PYSITELIB}/ansible/module_utils/_internal/_datatag/__init__.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_datatag/_tags.py
 ${PYSITELIB}/ansible/module_utils/_internal/_datatag/_tags.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_datatag/_tags.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_debug.py
+${PYSITELIB}/ansible/module_utils/_internal/_debug.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_debug.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_debugging.py
 ${PYSITELIB}/ansible/module_utils/_internal/_debugging.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_debugging.pyo
@@ -611,6 +620,9 @@ ${PYSITELIB}/ansible/module_utils/_internal/_json/_profiles/_module_modern_m2c.p
 ${PYSITELIB}/ansible/module_utils/_internal/_json/_profiles/_tagless.py
 ${PYSITELIB}/ansible/module_utils/_internal/_json/_profiles/_tagless.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_json/_profiles/_tagless.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_logging.py
+${PYSITELIB}/ansible/module_utils/_internal/_logging.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_logging.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.py
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_messages.pyo
@@ -632,6 +644,12 @@ ${PYSITELIB}/ansible/module_utils/_internal/_patches/_sys_intern_patch.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_plugin_info.py
 ${PYSITELIB}/ansible/module_utils/_internal/_plugin_info.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_plugin_info.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_secrets.py
+${PYSITELIB}/ansible/module_utils/_internal/_secrets.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_secrets.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_secrets_object.py
+${PYSITELIB}/ansible/module_utils/_internal/_secrets_object.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_secrets_object.pyo
 ${PYSITELIB}/ansible/module_utils/_internal/_stack.py
 ${PYSITELIB}/ansible/module_utils/_internal/_stack.pyc
 ${PYSITELIB}/ansible/module_utils/_internal/_stack.pyo
@@ -742,6 +760,7 @@ ${PYSITELIB}/ansible/module_utils/csharp/Ansible.Basic.cs
 ${PYSITELIB}/ansible/module_utils/csharp/Ansible.Become.cs
 ${PYSITELIB}/ansible/module_utils/csharp/Ansible.Privilege.cs
 ${PYSITELIB}/ansible/module_utils/csharp/Ansible.Process.cs
+${PYSITELIB}/ansible/module_utils/csharp/Ansible.Secrets.cs
 ${PYSITELIB}/ansible/module_utils/csharp/Ansible._Async.cs
 ${PYSITELIB}/ansible/module_utils/csharp/__init__.py
 ${PYSITELIB}/ansible/module_utils/csharp/__init__.pyc
@@ -1000,6 +1019,9 @@ ${PYSITELIB}/ansible/module_utils/powershell/Ansible.ModuleUtils.WebRequest.psm1
 ${PYSITELIB}/ansible/module_utils/powershell/__init__.py
 ${PYSITELIB}/ansible/module_utils/powershell/__init__.pyc
 ${PYSITELIB}/ansible/module_utils/powershell/__init__.pyo
+${PYSITELIB}/ansible/module_utils/secrets.py
+${PYSITELIB}/ansible/module_utils/secrets.pyc
+${PYSITELIB}/ansible/module_utils/secrets.pyo
 ${PYSITELIB}/ansible/module_utils/service.py
 ${PYSITELIB}/ansible/module_utils/service.pyc
 ${PYSITELIB}/ansible/module_utils/service.pyo
@@ -1606,6 +1628,7 @@ ${PYSITELIB}/ansible/plugins/filter/intersect.yml
 ${PYSITELIB}/ansible/plugins/filter/items2dict.yml
 ${PYSITELIB}/ansible/plugins/filter/log.yml
 ${PYSITELIB}/ansible/plugins/filter/mandatory.yml
+${PYSITELIB}/ansible/plugins/filter/mask_secrets.yml
 ${PYSITELIB}/ansible/plugins/filter/mathstuff.py
 ${PYSITELIB}/ansible/plugins/filter/mathstuff.pyc
 ${PYSITELIB}/ansible/plugins/filter/mathstuff.pyo
@@ -1623,6 +1646,7 @@ ${PYSITELIB}/ansible/plugins/filter/regex_escape.yml
 ${PYSITELIB}/ansible/plugins/filter/regex_findall.yml
 ${PYSITELIB}/ansible/plugins/filter/regex_replace.yml
 ${PYSITELIB}/ansible/plugins/filter/regex_search.yml
+${PYSITELIB}/ansible/plugins/filter/register_secret.yml
 ${PYSITELIB}/ansible/plugins/filter/rekey_on_member.yml
 ${PYSITELIB}/ansible/plugins/filter/relpath.yml
 ${PYSITELIB}/ansible/plugins/filter/root.yml
