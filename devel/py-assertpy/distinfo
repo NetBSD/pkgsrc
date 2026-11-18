@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/08/04 08:00:10 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/11/18 08:58:29 adam Exp $
 
-BLAKE2s (assertpy-1.1.tar.gz) = 39f699eeaaa2edab95cf293c540ff10f7c600818ca7d7577d5b7da4aa886e9b8
-SHA512 (assertpy-1.1.tar.gz) = 02df6261beefe71105c2915f7afb4a7f54495c04934ef4abbc9a9ea7e9afef7ce4c0f01da59464659bd30484605203be314ae872d96d3899882ce3d523a4f233
-Size (assertpy-1.1.tar.gz) = 25421 bytes
+BLAKE2s (assertpy-2.36.1.tar.gz) = e0ead4d0d220ab31f4d23636cd2ec72eb0ae5aa41e0aae385f330e5b0fcb16b8
+SHA512 (assertpy-2.36.1.tar.gz) = 0bee62ce47e6ac833399e5653a767877ef79f3a9df4584f5ac6fada2678e5e375806c9e18c7e40f34836ed041ca55927b965808fc0c7d5b0b17b5750722c1e0b
+Size (assertpy-2.36.1.tar.gz) = 1689614 bytes
