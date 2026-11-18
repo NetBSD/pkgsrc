@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2026/04/30 06:17:25 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.29 2026/11/18 07:41:37 adam Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -255,6 +255,7 @@ share/ibus/dicts/emoji-zh_Hant_HK.dict
 share/ibus/dicts/emoji-zu.dict
 share/ibus/dicts/unicode-blocks.dict
 share/ibus/dicts/unicode-names.dict
+@pkgdir share/ibus/engine
 share/ibus/keymaps/common
 share/ibus/keymaps/in
 share/ibus/keymaps/jp
@@ -328,6 +329,7 @@ share/locale/kab/LC_MESSAGES/ibus10.mo
 share/locale/kk/LC_MESSAGES/ibus10.mo
 share/locale/kn/LC_MESSAGES/ibus10.mo
 share/locale/ko/LC_MESSAGES/ibus10.mo
+share/locale/lo/LC_MESSAGES/ibus10.mo
 share/locale/lv/LC_MESSAGES/ibus10.mo
 share/locale/ml/LC_MESSAGES/ibus10.mo
 share/locale/mn/LC_MESSAGES/ibus10.mo
@@ -358,4 +360,3 @@ share/locale/zh_HK/LC_MESSAGES/ibus10.mo
 share/locale/zh_TW/LC_MESSAGES/ibus10.mo
 share/vala/vapi/ibus-1.0.deps
 share/vala/vapi/ibus-1.0.vapi
-@pkgdir share/ibus/engine
