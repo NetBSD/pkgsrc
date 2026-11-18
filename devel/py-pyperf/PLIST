@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/22 21:41:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/18 09:03:59 adam Exp $
 bin/pyperf-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,9 @@ ${PYSITELIB}/pyperf/_formatter.pyo
 ${PYSITELIB}/pyperf/_hooks.py
 ${PYSITELIB}/pyperf/_hooks.pyc
 ${PYSITELIB}/pyperf/_hooks.pyo
+${PYSITELIB}/pyperf/_inprocess_manager.py
+${PYSITELIB}/pyperf/_inprocess_manager.pyc
+${PYSITELIB}/pyperf/_inprocess_manager.pyo
 ${PYSITELIB}/pyperf/_linux_memory.py
 ${PYSITELIB}/pyperf/_linux_memory.pyc
 ${PYSITELIB}/pyperf/_linux_memory.pyo
@@ -96,6 +99,9 @@ ${PYSITELIB}/pyperf/tests/test_cli.pyo
 ${PYSITELIB}/pyperf/tests/test_examples.py
 ${PYSITELIB}/pyperf/tests/test_examples.pyc
 ${PYSITELIB}/pyperf/tests/test_examples.pyo
+${PYSITELIB}/pyperf/tests/test_inprocess.py
+${PYSITELIB}/pyperf/tests/test_inprocess.pyc
+${PYSITELIB}/pyperf/tests/test_inprocess.pyo
 ${PYSITELIB}/pyperf/tests/test_metadata.py
 ${PYSITELIB}/pyperf/tests/test_metadata.pyc
 ${PYSITELIB}/pyperf/tests/test_metadata.pyo

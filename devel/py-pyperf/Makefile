@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/02/09 19:44:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/18 09:03:59 adam Exp $
 
-DISTNAME=	pyperf-2.10.0
+DISTNAME=	pyperf-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyperf/}
@@ -15,8 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.0:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} pyperf pyperf-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	pyperf
 
 # as of 2.9.0
 # 11 failed, 162 passed

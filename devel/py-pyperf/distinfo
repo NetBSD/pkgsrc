@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/02/09 19:44:28 adam Exp $
+$NetBSD: distinfo,v 1.3 2026/11/18 09:03:59 adam Exp $
 
-BLAKE2s (pyperf-2.10.0.tar.gz) = eb6b2b5514205a43dd2028a99b5d0b07085ca9b604492c450fe2dca66f6719e5
-SHA512 (pyperf-2.10.0.tar.gz) = 4ab9e43028dcd623a8fac0cf1afc2b2ff89bd958a0a9eda85b2ba01a1a4f58c0f1371b6c514cae113982d904546cf1cf729d79d1b2e6c3e333093bbbeacdc6fb
-Size (pyperf-2.10.0.tar.gz) = 227609 bytes
+BLAKE2s (pyperf-2.11.0.tar.gz) = 804c981e206a6a45975f5ec78322dc107d8ab9755dc047ad2c085f5085aaf8c1
+SHA512 (pyperf-2.11.0.tar.gz) = d866164e920916420e40d2b1afaed92dc632e6a964fee0ce1ae97bef8745d4f7a80ce31fb213d5f0a0fedab01ea7d7c7c8337c909f5571cc4a1c6abdd49761c7
+Size (pyperf-2.11.0.tar.gz) = 236570 bytes
