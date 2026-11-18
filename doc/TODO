@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28405 2026/11/17 21:43:14 ktnb Exp $
+$NetBSD: TODO,v 1.28406 2026/11/18 08:08:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -883,7 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.10 [breaks qt6-qttools]
-	o llvm-23.1.5 [wip]
+	o llvm-23.1.6 [wip]
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
