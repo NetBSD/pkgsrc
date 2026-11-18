@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2026/11/18 21:48:32 wiz Exp $
+$NetBSD: distinfo,v 1.79 2026/11/18 21:52:11 wiz Exp $
 
 BLAKE2s (nspr-4.41.tar.gz) = d84870b2b36cd55e772aec0b911f2fc3d48d6c9d34a6396bc2b8bf10a63fde5c
 SHA512 (nspr-4.41.tar.gz) = c4b622b1045e7089a58657fcf6f230f8fdb8e0b8c6f73c7200fac6d1c80bd18d348f09a8df9f3fed7867de77070e783675e865b3b5746b916e749ff8d8b2c86f
@@ -7,4 +7,4 @@ SHA1 (patch-ab) = 0c5ced4b35ccade3fcac087d2fad4afc1752ebb1
 SHA1 (patch-ac) = 6562282cc3d846a114f53ca53b9287fa64d69052
 SHA1 (patch-ba) = 9d9875ff74717cc1c9201502a633ae5fa923642b
 SHA1 (patch-nspr_pr_src_pthreads_ptsynch.c) = f6f201959f38c3d42c5b942a6b05c2812dc43aba
-SHA1 (patch-nspr_pr_src_pthreads_ptthread.c) = 0f2db43010adba6b403b6f36efa630f7853da542
+SHA1 (patch-nspr_pr_src_pthreads_ptthread.c) = b904fbdac2c968e3bd26f87f42f6ac5d8fc48ba3
