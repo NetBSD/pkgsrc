@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8173 2026/11/18 09:23:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8174 2026/11/18 10:27:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12126,3 +12126,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-texttable to 1.7.3 [adam 2026-11-18]
 	Updated devel/py-utils to 4.2.2 [adam 2026-11-18]
 	Updated devel/py-progressbar2 to 4.7.1 [adam 2026-11-18]
+	Updated www/webkit-gtk41 to 2.54.3 [wiz 2026-11-18]
