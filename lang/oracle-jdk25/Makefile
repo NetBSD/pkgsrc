@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/08/12 10:18:21 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/18 17:37:07 adam Exp $
 
-PKGNAME=	oracle-jdk25-25.0.4
+PKGNAME=	oracle-jdk25-25.0.5.1
 CATEGORIES=	lang java
 MASTER_SITES=	https://download.oracle.com/java/25/archive/
 
