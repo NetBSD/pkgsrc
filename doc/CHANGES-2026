@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8179 2026/11/18 12:59:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8180 2026/11/18 13:46:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12135,3 +12135,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-zensical to 0.1.2 [adam 2026-11-18]
 	Updated devel/py-apycula to 0.35 [adam 2026-11-18]
 	Updated devel/py-pipx to 1.18.19 [adam 2026-11-18]
+	Updated net/bind920 to 9.20.31 [he 2026-11-18]
