@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8172 2026/11/18 09:09:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8173 2026/11/18 09:23:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12124,3 +12124,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pyperf to 2.11.0 [adam 2026-11-18]
 	Updated textproc/py-prettytable to 3.19.0 [adam 2026-11-18]
 	Updated textproc/py-texttable to 1.7.3 [adam 2026-11-18]
+	Updated devel/py-utils to 4.2.2 [adam 2026-11-18]
+	Updated devel/py-progressbar2 to 4.7.1 [adam 2026-11-18]
