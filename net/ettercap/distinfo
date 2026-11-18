@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2026/11/16 15:40:07 adam Exp $
+$NetBSD: distinfo,v 1.26 2026/11/18 07:31:57 adam Exp $
 
-BLAKE2s (ettercap-0.8.5.1.tar.gz) = f2b018516ff5981676323c680d45a38c9932c921e1d239e1a1a5839e1474a260
-SHA512 (ettercap-0.8.5.1.tar.gz) = 4d43c113ca20ef2c106b0b929f27cec9fae4670025bda789611dd408b973cec735d956f2b352015357dab0d8fd353a272788746ed8561ef811101a91e12db1d9
-Size (ettercap-0.8.5.1.tar.gz) = 12163412 bytes
+BLAKE2s (ettercap-0.8.5.2.tar.gz) = 7d3d5143c70daf83d8c02674e2d90c657acff3c389c7e9c8c6cbabaef37b2d23
+SHA512 (ettercap-0.8.5.2.tar.gz) = 97efb090f66e976af1680bc8fc331c67939a5ba5c92c0f4df0250d949c58feaaf4880ca31328ad1638fc6776aabfb1c25b92b97ac6c9e23c49bb65af1efe5379
+Size (ettercap-0.8.5.2.tar.gz) = 12169003 bytes
 SHA1 (patch-CMakeLists.txt) = 26111bf471c29f6a7a076c7ed427ff5c0f0ffb59
 SHA1 (patch-cmake_Modules_EttercapLibCheck.cmake) = 845bce5e0fc0610111d79cf6b730969d88d3ae75
 SHA1 (patch-src_CMakeLists.txt) = 9a82f254b1c753b11421630184d8eb164b010f0f
