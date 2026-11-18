@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/09/24 11:13:09 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/18 08:38:15 adam Exp $
 
-DISTNAME=	semver-3.1.0
+DISTNAME=	semver-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/semver/}

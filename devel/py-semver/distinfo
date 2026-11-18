@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/09/24 11:13:09 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/11/18 08:38:15 adam Exp $
 
-BLAKE2s (semver-3.1.0.tar.gz) = f990ab21b320ab3c4ad17b6e8e9898d3e2812fe057e857b0068714cb80a0049c
-SHA512 (semver-3.1.0.tar.gz) = 307cb2455814c2ae9af4b0a0c758a6ebff57807c9a8308721c85afa607d65e1597862598f4d5e8c304dbe8c7648c1eeae05269fc816a38ac3e0bbe703c317753
-Size (semver-3.1.0.tar.gz) = 304162 bytes
+BLAKE2s (semver-3.1.2.tar.gz) = c7138fcae27a00f9bb07bd4dbced9f3599d49fbbc412b22c41ed60138f8f9a39
+SHA512 (semver-3.1.2.tar.gz) = b13e3216be7b2e0965074d0b852cab288be81392f30775a7ed859a35f594655a36995952089f15694b7228a88e7811cdb1e6dbfac9c22a921268ea0007ee6d7c
+Size (semver-3.1.2.tar.gz) = 293659 bytes
