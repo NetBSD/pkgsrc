@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8185 2026/11/18 18:30:52 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8186 2026/11/18 20:33:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12144,3 +12144,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/tlsx to 1.5.0 [drixter 2026-11-18]
 	Updated lang/oracle-jdk25 to 25.0.5.1 [adam 2026-11-18]
 	Updated net/dnscontrol to 5.10.0 [drixter 2026-11-18]
+	Updated devel/gitte to 0.11.1 [wiz 2026-11-18]
