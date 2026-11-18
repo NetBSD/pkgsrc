@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2026/11/16 12:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/18 08:37:15 adam Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-3.17.5
+DISTNAME=	sphinx_autodoc_typehints-3.17.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
@@ -13,6 +13,9 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.17:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=9.1:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-annotated-doc>=0.0.5:../../textproc/py-annotated-doc
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults

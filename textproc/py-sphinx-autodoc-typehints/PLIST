@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2026/10/28 08:12:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/11/18 08:37:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/sphinx-autodoc-typehints.cdx.json
 ${PYSITELIB}/sphinx_autodoc_typehints/__init__.py
 ${PYSITELIB}/sphinx_autodoc_typehints/__init__.pyc
 ${PYSITELIB}/sphinx_autodoc_typehints/__init__.pyo
@@ -195,6 +196,9 @@ ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/evaluate/expression.pyo
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/evaluate/type_hints.py
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/evaluate/type_hints.pyc
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/evaluate/type_hints.pyo
+${PYSITELIB}/sphinx_autodoc_typehints/_resolve/forget.py
+${PYSITELIB}/sphinx_autodoc_typehints/_resolve/forget.pyc
+${PYSITELIB}/sphinx_autodoc_typehints/_resolve/forget.pyo
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/generics.py
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/generics.pyc
 ${PYSITELIB}/sphinx_autodoc_typehints/_resolve/generics.pyo
