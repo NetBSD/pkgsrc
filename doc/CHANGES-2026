@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8169 2026/11/18 08:41:54 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8170 2026/11/18 08:49:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12117,3 +12117,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/p5-IO-Socket-SSL to 2.099nb2 [wiz 2026-11-18]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.17.6 [adam 2026-11-18]
 	Updated devel/py-semver to 3.1.2 [adam 2026-11-18]
+	Updated geography/py-maxminddb to 3.3.0 [adam 2026-11-18]
+	Updated geography/py-geoip2 to 5.4.0 [adam 2026-11-18]
