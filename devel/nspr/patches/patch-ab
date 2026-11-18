@@ -1,29 +1,11 @@
-$NetBSD: patch-ab,v 1.10 2021/07/01 07:23:00 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2026/11/18 21:48:32 wiz Exp $
 
 Improve NetBSD support.
 https://bugzilla.mozilla.org/show_bug.cgi?id=1718836
 
 --- nspr/pr/include/md/_netbsd.h.orig	2018-03-05 15:50:28.000000000 +0000
 +++ nspr/pr/include/md/_netbsd.h
-@@ -30,6 +30,8 @@
- #elif defined(__arm32__) || defined(__arm__) || defined(__armel__) \
-     || defined(__armeb__)
- #define _PR_SI_ARCHITECTURE "arm"
-+#elif defined(__aarch64__)
-+#define _PR_SI_ARCHITECTURE "aarch64"
- #endif
- 
- #if defined(__ELF__)
-@@ -47,7 +49,7 @@
- #define HAVE_DLL
- #define USE_DLFCN
- #define _PR_HAVE_SOCKADDR_LEN
--#define _PR_NO_LARGE_FILES
-+#define _PR_HAVE_LARGE_OFF_T
- #define _PR_STAT_HAS_ST_ATIMESPEC
- #define _PR_POLL_AVAILABLE
- #define _PR_USE_POLL
-@@ -75,6 +77,8 @@
+@@ -75,6 +75,8 @@
  #define JB_SP_INDEX 2
  #elif defined(__mips__)
  #define JB_SP_INDEX 4
@@ -32,7 +14,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1718836
  #elif defined(__alpha__)
  #define JB_SP_INDEX 34
  #elif defined(__arm32__)
-@@ -86,6 +90,8 @@
+@@ -86,6 +88,8 @@
  #else
  #define JB_SP_INDEX _JB_REG_R13
  #endif

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2026/05/05 14:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2026/11/18 21:48:32 wiz Exp $
 
-DISTNAME=	nspr-4.39
+DISTNAME=	nspr-4.41
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${PKGVERSION_NOREV}/src/}
 
