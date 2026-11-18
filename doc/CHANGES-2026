@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8189 2026/11/18 22:22:48 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.8190 2026/11/18 22:32:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12148,3 +12148,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/nginx to 1.30.7 [kim 2026-11-18]
 	Updated devel/nspr to 4.41 [wiz 2026-11-18]
 	Updated www/php-nextcloud to 34.0.5nb1 [ryoon 2026-11-18]
+	Updated fonts/fontconfig to 2.18.4 [wiz 2026-11-18]
