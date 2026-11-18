@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2026/11/10 09:28:07 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/18 09:23:15 adam Exp $
 
-DISTNAME=	progressbar2-4.7.0
+DISTNAME=	progressbar2-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
