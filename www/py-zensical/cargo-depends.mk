@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2026/11/08 21:30:21 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2026/11/18 12:23:20 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -238,7 +238,7 @@ CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	roxmltree-0.21.1
 CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.3
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
-CARGO_CRATE_DEPENDS+=	rustix-1.1.4
+CARGO_CRATE_DEPENDS+=	rustix-1.1.6
 CARGO_CRATE_DEPENDS+=	rustls-0.23.46
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
 CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2026/11/13 09:27:34 adam Exp $
+$NetBSD: distinfo,v 1.22 2026/11/18 12:23:20 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -714,9 +714,9 @@ Size (rustc-hash-2.1.3.crate) = 14811 bytes
 BLAKE2s (rustc_version-0.4.1.crate) = f0d198d0457135ca7572b41cd2440f1b0ca075013f53b384d07c00db8c5d2e84
 SHA512 (rustc_version-0.4.1.crate) = 7aa8a487ca7411b6d23cae62f7568fa3474a7b1fd1589621071be3428a550ed3b7c4ad68277a8f86849e5900397d7d0e9d678f5d423742a045dc7c660fa6c598
 Size (rustc_version-0.4.1.crate) = 12245 bytes
-BLAKE2s (rustix-1.1.4.crate) = 47b462406ba74a3225cf16b2e8b75855857edd58915f4033d7387b67cc694948
-SHA512 (rustix-1.1.4.crate) = 33619ed2434963a98b0846414656bcc4945ca0e9b883821869fe0cc86db4a74c6961ce1375963ae49c6b5044ad0536eda807dac1320209739c9d669bd80fd75c
-Size (rustix-1.1.4.crate) = 425241 bytes
+BLAKE2s (rustix-1.1.6.crate) = 8bd6300af4a6318abb8e13e08fe5f55e32d8273f851f65fcf0b79014227ec32d
+SHA512 (rustix-1.1.6.crate) = e7452ff3b0f0f8ee364b66cf5fc8e2409ab6eee1eb69bcf10248800577cf5181cf30de99a3dfc33dbd5b4cd4c52ca92c78e27cf66f2d80f03248b2e2d0b329cd
+Size (rustix-1.1.6.crate) = 426484 bytes
 BLAKE2s (rustls-0.23.46.crate) = ac5b2e618ea78a918da8f78cf635dbb97187ac0cbd552f179b58936f56f07d97
 SHA512 (rustls-0.23.46.crate) = 9697677cce4999211bcf2e5c05c3dc468eba1947f586d2402a06cfb75663242fe0a1c2c8cd67f41d29fadc4892b7fcb47dc5db50b57a05cd72e74e1fc6f409d2
 Size (rustls-0.23.46.crate) = 386227 bytes
@@ -1113,9 +1113,9 @@ Size (yoke-0.8.3.crate) = 33132 bytes
 BLAKE2s (yoke-derive-0.8.2.crate) = 5552ca3b0c844667a0532da6e6a4bbfc41777d56d6615f80ca4c90020a50dedf
 SHA512 (yoke-derive-0.8.2.crate) = ed37289fe2dfcafda13be24b3e4aae1fbbdd6f52c42a1f2d770771f458af0d17b4cbe487941381b4bd692388e9818b45c686bdcd6229918e0f5b6fced1068ca3
 Size (yoke-derive-0.8.2.crate) = 15077 bytes
-BLAKE2s (zensical-0.1.1.tar.gz) = c579cc446f9a05ca808d5e0c689281ec387113aaf704902d2dca92dee82cd71a
-SHA512 (zensical-0.1.1.tar.gz) = c16d31a9ce2fe6d55ea12e7089199529dd6a1efa3f6d5414ef7b17056e37d4c5d839d91b37507bc7d0de644ce9ae8e12226674210ab115adfcbd7487d6997823
-Size (zensical-0.1.1.tar.gz) = 533578 bytes
+BLAKE2s (zensical-0.1.2.tar.gz) = 172e5e11b471c2ea897e93c41bda500d28b351bf978763d549ca886056ebeb2c
+SHA512 (zensical-0.1.2.tar.gz) = 6fc5af0472bc33d834788a21944f0f500814cd08ab545933d5d933c9afcbac29fe58bf7b1545edeb95053357ded7dbed0a702880eab0ed255d410029f4b3a49b
+Size (zensical-0.1.2.tar.gz) = 535446 bytes
 BLAKE2s (zerocopy-0.8.53.crate) = e54df3825c175c34ea7e8018039c860ce591756435ed3afa8735ddfefd16917c
 SHA512 (zerocopy-0.8.53.crate) = c2f1fabfcc5ce8badb1b69b395ef1394bc4cc88b795e095b22347fd4cefc5c195a4013e8a05a2327ef1e45aad65f6e562a08c7c03a62d3aec149701cb6da0be8
 Size (zerocopy-0.8.53.crate) = 284705 bytes

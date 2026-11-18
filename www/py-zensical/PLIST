@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2026/11/01 22:11:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2026/11/18 12:23:20 adam Exp $
 bin/zensical-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -39,6 +39,9 @@ ${PYSITELIB}/zensical/compat/__init__.pyo
 ${PYSITELIB}/zensical/compat/literate_nav.py
 ${PYSITELIB}/zensical/compat/literate_nav.pyc
 ${PYSITELIB}/zensical/compat/literate_nav.pyo
+${PYSITELIB}/zensical/compat/llmstxt.py
+${PYSITELIB}/zensical/compat/llmstxt.pyc
+${PYSITELIB}/zensical/compat/llmstxt.pyo
 ${PYSITELIB}/zensical/compat/mkdocstrings.py
 ${PYSITELIB}/zensical/compat/mkdocstrings.pyc
 ${PYSITELIB}/zensical/compat/mkdocstrings.pyo
