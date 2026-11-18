@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/11/02 11:22:31 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/18 09:08:48 adam Exp $
 
-DISTNAME=	texttable-1.7.2
+DISTNAME=	texttable-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/texttable/}
