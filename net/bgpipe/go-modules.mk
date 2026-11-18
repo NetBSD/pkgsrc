@@ -1,9 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.6 2026/11/18 07:54:30 drixter Exp $
+# $NetBSD: go-modules.mk,v 1.7 2026/11/18 12:18:58 drixter Exp $
 
 GO_MODULE_FILES+=	github.com/!victoria!metrics/metrics/@v/v1.45.0.mod
 GO_MODULE_FILES+=	github.com/!victoria!metrics/metrics/@v/v1.45.0.zip
-GO_MODULE_FILES+=	github.com/bgpfix/bgpfix/@v/v0.27.0.mod
-GO_MODULE_FILES+=	github.com/bgpfix/bgpfix/@v/v0.27.0.zip
+GO_MODULE_FILES+=	github.com/bgpfix/bgpfix/@v/v0.28.0.mod
+GO_MODULE_FILES+=	github.com/bgpfix/bgpfix/@v/v0.28.0.zip
 GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.6.1.mod
 GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.6.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.2-0.20230904184137-39efe44ab707.mod
