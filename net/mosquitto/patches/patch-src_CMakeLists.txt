@@ -1,15 +1,15 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.9 2026/01/30 01:07:56 gdt Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.10 2026/11/18 01:11:04 gdt Exp $
 
-The first hunk removes linker args on SunOS, for no apparent reason.
+This patch removes linker args on SunOS, for no apparent reason.
 
 \todo Explain and file a bug upstream; this should not be a pkgsrc change.
 
---- src/CMakeLists.txt.orig	2026-01-19 00:00:46.000000000 +0000
+--- src/CMakeLists.txt.orig	2026-11-17 13:53:43.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -310,6 +310,7 @@ if(UNIX)
+@@ -306,6 +306,7 @@ if(UNIX)
  			LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms"
  		)
- 	elseif (${CMAKE_SYSTEM_NAME} MATCHES "AIX")
+ 	elseif (AIX)
 +	elseif (${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
  	else()
  		set_target_properties(mosquitto PROPERTIES
