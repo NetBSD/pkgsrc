@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8170 2026/11/18 08:49:12 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8171 2026/11/18 09:04:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12119,3 +12119,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-semver to 3.1.2 [adam 2026-11-18]
 	Updated geography/py-maxminddb to 3.3.0 [adam 2026-11-18]
 	Updated geography/py-geoip2 to 5.4.0 [adam 2026-11-18]
+	Updated devel/py-hypothesis to 6.170.15 [adam 2026-11-18]
+	Updated devel/py-pygit2 to 1.21.0 [adam 2026-11-18]
+	Updated devel/py-pyperf to 2.11.0 [adam 2026-11-18]
