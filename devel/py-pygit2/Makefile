@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2026/10/26 06:29:09 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2026/11/18 09:02:19 adam Exp $
 
-DISTNAME=	pygit2-1.20.1
+DISTNAME=	pygit2-1.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=84.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=2.0:../../devel/py-cffi
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
