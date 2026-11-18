@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/11/16 10:44:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/18 16:47:37 adam Exp $
 
-DISTNAME=	pytest_env-1.8.5
+DISTNAME=	pytest_env-1.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-env/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.32.4:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.2.4:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-test>=9.1.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
