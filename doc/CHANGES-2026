@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8187 2026/11/18 21:33:41 kim Exp $
+$NetBSD: CHANGES-2026,v 1.8188 2026/11/18 21:48:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12146,3 +12146,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnscontrol to 5.10.0 [drixter 2026-11-18]
 	Updated devel/gitte to 0.11.1 [wiz 2026-11-18]
 	Updated www/nginx to 1.30.7 [kim 2026-11-18]
+	Updated devel/nspr to 4.41 [wiz 2026-11-18]
