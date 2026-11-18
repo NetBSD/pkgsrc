@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.172 2026/10/26 05:21:36 adam Exp $
+$NetBSD: distinfo,v 1.173 2026/11/18 08:53:58 adam Exp $
 
 BLAKE2s (cfg-if-1.0.4.crate) = 517b7cff4f133f9b02492c0db281822fd02c24941a7aa4f9b1502895dc5e58d9
 SHA512 (cfg-if-1.0.4.crate) = 176e04df7ba783b7143bb84397b777f5c5a1305c08a5c3a218d4a66830620be89ed68992ba27686165bcd3fb2f34b2daf80b2a1d4b481ecc267c988e84d28e9d
@@ -15,9 +15,9 @@ Size (half-2.7.1.crate) = 61040 bytes
 BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
 SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
 Size (heck-0.5.0.crate) = 11517 bytes
-BLAKE2s (hypothesis-6.170.11.tar.gz) = ba23e90cd338e05488fa38d0d06414959a8297123f4e47723bf22e43983e31ad
-SHA512 (hypothesis-6.170.11.tar.gz) = 8e65056cdf4df9baf260b0b0a168b0746922484d52106d2908f688ae8a983550885dacdabb0487dd946dc11e9f3c98ada9cc3c7f8ae3c788d621a4a23bfc3359
-Size (hypothesis-6.170.11.tar.gz) = 520110 bytes
+BLAKE2s (hypothesis-6.170.15.tar.gz) = c2c0c985b60d3d4ee3b8c8cc7d5700fdea50546dfd8cc6debae14702d6b9f2a9
+SHA512 (hypothesis-6.170.15.tar.gz) = 1bd425a5a1edf94b9bae92871b6560644be025484bffe59c3137a7db59f4e81e5bd2bebdf97e6dc3e9058d4a17c8dbfe662e2f777f201c27f1539d57690aff02
+Size (hypothesis-6.170.15.tar.gz) = 521997 bytes
 BLAKE2s (libc-0.2.186.crate) = e4ae2a7c2182c3a4f54e39cfed3d574220b3a6d54af5a40aadfd814bb8a12c6a
 SHA512 (libc-0.2.186.crate) = 6a58e671ec6811dff9a0d7d4db8f37d38bcbca9efff20dad4706190e5cdb77b426567754bcf0ef0f2d0c31d6506401f724f3ca500b9bed57bb8605b1141ed690
 Size (libc-0.2.186.crate) = 821883 bytes
