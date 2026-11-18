@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8180 2026/11/18 13:46:28 he Exp $
+$NetBSD: CHANGES-2026,v 1.8181 2026/11/18 16:37:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12136,3 +12136,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-apycula to 0.35 [adam 2026-11-18]
 	Updated devel/py-pipx to 1.18.19 [adam 2026-11-18]
 	Updated net/bind920 to 9.20.31 [he 2026-11-18]
+	Updated textproc/py-annotated-doc to 0.0.7 [adam 2026-11-18]
+	Updated textproc/py-pdf to 7.1.1 [adam 2026-11-18]
