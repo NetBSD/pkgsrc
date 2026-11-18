@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2026/11/08 14:00:06 gdt Exp $
+# $NetBSD: Makefile,v 1.94 2026/11/18 22:22:28 ryoon Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -11,6 +11,7 @@
 # later 32.x.y, to 33.0.0, and to later 33.x.y, but it is not ok to
 # update to 34.
 DISTNAME=	nextcloud-34.0.5
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
@@ -28,6 +29,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_BASE_VERS}:../../devel/php-pcntl
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
