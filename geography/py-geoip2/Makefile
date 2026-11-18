@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/10/16 19:43:55 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/18 08:48:54 adam Exp $
 
-DISTNAME=	geoip2-5.3.0
+DISTNAME=	geoip2-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geoip2/}
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.maxmind.com/
 COMMENT=	MaxMind GeoIP2 API
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.7.19:../../devel/py-uv-build
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-maxminddb>=3.0.0:../../geography/py-maxminddb
+TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-build>=0.11.28:../../devel/py-uv-build
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.14.1:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-maxminddb>=3.3.0:../../geography/py-maxminddb
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.24.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=1.0.10:../../devel/py-test-httpserver
 
