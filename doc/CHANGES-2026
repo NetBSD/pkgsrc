@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8182 2026/11/18 16:49:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8183 2026/11/18 17:08:50 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12141,3 +12141,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-test-check to 3.1.0 [adam 2026-11-18]
 	Updated devel/py-test-env to 1.8.6 [adam 2026-11-18]
 	Updated devel/py-test-testmon to 2.3.0 [adam 2026-11-18]
+	Updated security/tlsx to 1.5.0 [drixter 2026-11-18]
