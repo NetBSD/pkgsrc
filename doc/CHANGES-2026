@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8164 2026/11/18 07:42:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8165 2026/11/18 07:55:01 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12111,3 +12111,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ettercap to 0.8.5.2 [adam 2026-11-18]
 	Updated net/ettercap-gtk to 0.8.5.2 [adam 2026-11-18]
 	Updated inputmethod/ibus to 1.5.35 [adam 2026-11-18]
+	Updated net/bgpipe to 0.27.0 [drixter 2026-11-18]
