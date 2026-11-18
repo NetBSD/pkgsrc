@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8167 2026/11/18 08:09:58 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8168 2026/11/18 08:17:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12114,3 +12114,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/bgpipe to 0.27.0 [drixter 2026-11-18]
 	Updated fonts/libfontenc to 1.1.10 [wiz 2026-11-18]
 	Updated x11/libXfont2 to 2.0.10 [wiz 2026-11-18]
+	Updated security/p5-IO-Socket-SSL to 2.099nb2 [wiz 2026-11-18]
