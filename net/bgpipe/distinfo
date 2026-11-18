@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.5 2026/11/17 08:33:10 drixter Exp $
+$NetBSD: distinfo,v 1.6 2026/11/18 07:54:30 drixter Exp $
 
-BLAKE2s (bgpipe-0.26.0.tar.gz) = 20bbaf38abe319e00b5cc5fad51933f98caffc3aee4381a439c640356b1ff221
-SHA512 (bgpipe-0.26.0.tar.gz) = 651c75a38750176506121e4aee4146844d6b0ad217b5d2c449d53337a5b17a8e09ce3e759cb26f52699cfffab4ed500bf688025ecf2bd10058cdf26455ae738e
-Size (bgpipe-0.26.0.tar.gz) = 322352 bytes
+BLAKE2s (bgpipe-0.27.0.tar.gz) = 087129fcbaba7492a6757edd7557fd6aa4d2c869cbebfa8b03e26aee322ca496
+SHA512 (bgpipe-0.27.0.tar.gz) = d60b3248efacb4ab31f590630e8f3900ff02a2d4432173d22952b79c72b2b8bd0925deadc02b353d13188ccebd0acbec6b6747ec13965caae8ebada6095a3c82
+Size (bgpipe-0.27.0.tar.gz) = 328377 bytes
 BLAKE2s (github.com__victoria_metrics_metrics_@v_v1.45.0.mod) = 2a4188f082b926a3de857c0a34abeea051577a967ba48e3429e686b4ae6c0462
 SHA512 (github.com__victoria_metrics_metrics_@v_v1.45.0.mod) = 8b1875b31e2d88371074e9d1fc37179fb11c6fb8f9bd737d5d91799fa4c76acd00af3b479ba7731e6e2a07e4795010eaa6f3026ebedd013a2503038f4796386d
 Size (github.com__victoria_metrics_metrics_@v_v1.45.0.mod) = 205 bytes
 BLAKE2s (github.com__victoria_metrics_metrics_@v_v1.45.0.zip) = c67b028c42224ececc7fdd68b4c773bc71c91a233d70c4f486a9fe37a2503c20
 SHA512 (github.com__victoria_metrics_metrics_@v_v1.45.0.zip) = d89369ec6d11f6ae5d48b9109bbe795f169d557dc70b8d8e6992173740e3403286185cdb808b3dcc81778935d85ccf2b5198e71cc649a848d1a842affa5b5fb0
 Size (github.com__victoria_metrics_metrics_@v_v1.45.0.zip) = 79690 bytes
-BLAKE2s (github.com_bgpfix_bgpfix_@v_v0.26.0.mod) = 0a2b5cc594052869f80c1751f84a203f577b4c91633cb5fea584ab57e0df4981
-SHA512 (github.com_bgpfix_bgpfix_@v_v0.26.0.mod) = fa9248ac4da683602a5fff2e863c0ae1e8187b56c230d8694fd9b32fd01ffc8475decd709247b817f9d88a4829f047d360182c1efde00dca1b6b8b8a7a114cc7
-Size (github.com_bgpfix_bgpfix_@v_v0.26.0.mod) = 455 bytes
-BLAKE2s (github.com_bgpfix_bgpfix_@v_v0.26.0.zip) = a5a6df31f1fc459fd1707d47eb1d01186c5c99cbb17828a016cbce005697929e
-SHA512 (github.com_bgpfix_bgpfix_@v_v0.26.0.zip) = 3509ca25af30dfacb22faecb3391958d5d2dbafc904586cbc42595eba9a0faba5d28f063d59754eccbe8233bc0571d430ee07a84e6e8441c05284339a20f4fc8
-Size (github.com_bgpfix_bgpfix_@v_v0.26.0.zip) = 495744 bytes
+BLAKE2s (github.com_bgpfix_bgpfix_@v_v0.27.0.mod) = 0a2b5cc594052869f80c1751f84a203f577b4c91633cb5fea584ab57e0df4981
+SHA512 (github.com_bgpfix_bgpfix_@v_v0.27.0.mod) = fa9248ac4da683602a5fff2e863c0ae1e8187b56c230d8694fd9b32fd01ffc8475decd709247b817f9d88a4829f047d360182c1efde00dca1b6b8b8a7a114cc7
+Size (github.com_bgpfix_bgpfix_@v_v0.27.0.mod) = 455 bytes
+BLAKE2s (github.com_bgpfix_bgpfix_@v_v0.27.0.zip) = b36c8aa9a1fbf563bcface502752f61c2d17acd54cdcde36506d51a82e7f8da7
+SHA512 (github.com_bgpfix_bgpfix_@v_v0.27.0.zip) = 04ffc13c040aacea313e02051cec015e41720b2bcbf36995c385a582af84940ba125b460829a1a85303abdfe957e23df506fc318e4d595aa5766d87f25668035
+Size (github.com_bgpfix_bgpfix_@v_v0.27.0.zip) = 508643 bytes
 BLAKE2s (github.com_buger_jsonparser_@v_v1.6.1.mod) = f0a75805d65a3eab2486c537e42284228ade6ac391f36ed2ba03d8173d5ac002
 SHA512 (github.com_buger_jsonparser_@v_v1.6.1.mod) = 8290d816f4045e7ce5a6d3c4ae8fd9ff5016f5987494a024cbaa12c5e594db04d00428d908441747581c09d9d7e6ba03b7ded175b634faaab458830ea1a370bf
 Size (github.com_buger_jsonparser_@v_v1.6.1.mod) = 45 bytes
