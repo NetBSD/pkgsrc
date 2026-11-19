@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8213 2026/11/19 16:44:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8214 2026/11/19 19:46:30 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12179,3 +12179,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-hashery to 2.2.2 [taca 2026-11-19]
 	Updated security/adguardhome to 1.0.0 [adam 2026-11-19]
 	Updated sysutils/restic to 0.20.0 [adam 2026-11-19]
+	Updated www/chromium to 158.0.8127.36 [kikadf 2026-11-19]
