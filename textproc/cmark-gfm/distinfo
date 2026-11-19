@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2025/02/12 09:25:41 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/11/19 10:42:45 adam Exp $
 
-BLAKE2s (cmark-gfm/0.29.0.gfm.13.tar.gz) = c7188c0d647eb4a1546480f3f649203d3440fdfdc6d79c7e6900d251493ddbf5
-SHA512 (cmark-gfm/0.29.0.gfm.13.tar.gz) = 435298fcf782dfc5b64c578ac839759b9d5cd0c08eb90d6702f26278062a0f4887c65c18e89e2c9f6be23f10dd835c769a7e0f8c934be068b6754dcca30cdd7c
-Size (cmark-gfm/0.29.0.gfm.13.tar.gz) = 300086 bytes
-SHA1 (patch-CMakeLists.txt) = d814ef219b0b878c4314ca44378b6fabf115a86c
+BLAKE2s (cmark-gfm/0.29.0.gfm.14.tar.gz) = 309abd512e23b046ef166f85309ba3986f124192ff58ab4ab78a0f01e422797f
+SHA512 (cmark-gfm/0.29.0.gfm.14.tar.gz) = 3096a97235942ec987522fb47e2cda7e19db16c738d293da457fd5dce5241e5a2144194e5278f612fce7ee7f49010f7ec88f07429c1ce9c8bef08c68577661f0
+Size (cmark-gfm/0.29.0.gfm.14.tar.gz) = 300120 bytes
+SHA1 (patch-CMakeLists.txt) = 41e91d1ac71d5f064b73a65d9b8afb3893d80017
 SHA1 (patch-extensions_CMakeLists.txt) = 6dafd060f2c21f7b2c859151a6bc2185b943c78b
 SHA1 (patch-src_CMakeLists.txt) = fe5a567353b94c291e1702dd1330f7dadf1e801e

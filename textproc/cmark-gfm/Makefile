@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/08/20 11:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/19 10:42:45 adam Exp $
 
-DISTNAME=	0.29.0.gfm.13
-PKGREVISION=	1
+DISTNAME=	0.29.0.gfm.14
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
