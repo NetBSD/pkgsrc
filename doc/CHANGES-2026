@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8192 2026/11/19 01:21:14 agc Exp $
+$NetBSD: CHANGES-2026,v 1.8193 2026/11/19 02:18:46 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12153,3 +12153,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/libmldsa to 20261118 [agc 2026-11-18]
 	Updated security/mldsa to 20261118 [agc 2026-11-18]
 	Added security/mlsignify version 20261118 [agc 2026-11-18]
+	Updated databases/mysql80-cluster to 8.0.50 [jnemeth 2026-11-19]
