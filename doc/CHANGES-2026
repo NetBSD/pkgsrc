@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8200 2026/11/19 13:54:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8201 2026/11/19 14:31:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12165,3 +12165,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated comms/spandsp to 3.1.1 [adam 2026-11-19]
 	Updated net/wireshark to 4.6.10 [adam 2026-11-19]
 	Updated www/wordpress to 7.0.9 [taca 2026-11-19]
+	Updated net/nsd to 4.15.3 [taca 2026-11-19]
