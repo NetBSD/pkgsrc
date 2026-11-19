@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2026/11/04 16:12:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2026/11/19 15:29:40 taca Exp $
 share/examples/typo3/typo3.conf
 share/typo3/AGENTS.md
 share/typo3/CLAUDE.md
@@ -6473,6 +6473,7 @@ share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/tw.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/tz.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/ua.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/ug.webp
+share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/um.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/us.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/uy.webp
 share/typo3/typo3/sysext/core/Resources/Public/Icons/Flags/uz.webp
@@ -11377,7 +11378,6 @@ share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckedito
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-undo.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-upload.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-utils.js
-share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-watchdog.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-widget.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-word-count.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/translations/af.js
@@ -12673,11 +12673,13 @@ share/typo3/vendor/egulias/email-validator/src/Warning/Warning.php
 share/typo3/vendor/enshrined/svg-sanitize/CHANGELOG.md
 share/typo3/vendor/enshrined/svg-sanitize/LICENSE
 share/typo3/vendor/enshrined/svg-sanitize/README.md
+share/typo3/vendor/enshrined/svg-sanitize/SECURITY.md
 share/typo3/vendor/enshrined/svg-sanitize/composer.json
 share/typo3/vendor/enshrined/svg-sanitize/src/ElementReference/Resolver.php
 share/typo3/vendor/enshrined/svg-sanitize/src/ElementReference/Subject.php
 share/typo3/vendor/enshrined/svg-sanitize/src/ElementReference/Usage.php
 share/typo3/vendor/enshrined/svg-sanitize/src/Exceptions/NestingException.php
+share/typo3/vendor/enshrined/svg-sanitize/src/Exceptions/RegexException.php
 share/typo3/vendor/enshrined/svg-sanitize/src/Helper.php
 share/typo3/vendor/enshrined/svg-sanitize/src/Sanitizer.php
 share/typo3/vendor/enshrined/svg-sanitize/src/data/AllowedAttributes.php
@@ -12735,6 +12737,7 @@ share/typo3/vendor/guzzlehttp/guzzle/src/Exception/ResponseTransferException.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php
+share/typo3/vendor/guzzlehttp/guzzle/src/Handler/ChunkedBodyStream.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/Clock.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php
@@ -12743,10 +12746,12 @@ share/typo3/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/CurlVersion.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/DeadlineSourceStream.php
+share/typo3/vendor/guzzlehttp/guzzle/src/Handler/DeclaredLengthStream.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/EncodedBodyStream.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/HostValidator.php
+share/typo3/vendor/guzzlehttp/guzzle/src/Handler/InflateBodyStream.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/ProxyEnv.php
@@ -12756,6 +12761,7 @@ share/typo3/vendor/guzzlehttp/guzzle/src/Handler/StreamTlsSessionCache.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/Timeout.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/TlsVersion.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/TransferByteCounter.php
+share/typo3/vendor/guzzlehttp/guzzle/src/Handler/TransportStream.php
 share/typo3/vendor/guzzlehttp/guzzle/src/Handler/UriDiagnostic.php
 share/typo3/vendor/guzzlehttp/guzzle/src/HandlerStack.php
 share/typo3/vendor/guzzlehttp/guzzle/src/HostIdentity.php
@@ -12796,6 +12802,7 @@ share/typo3/vendor/guzzlehttp/promises/src/PromiseInterface.php
 share/typo3/vendor/guzzlehttp/promises/src/PromisorInterface.php
 share/typo3/vendor/guzzlehttp/promises/src/RejectedPromise.php
 share/typo3/vendor/guzzlehttp/promises/src/RejectionException.php
+share/typo3/vendor/guzzlehttp/promises/src/State.php
 share/typo3/vendor/guzzlehttp/promises/src/TaskQueue.php
 share/typo3/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 share/typo3/vendor/guzzlehttp/promises/src/Utils.php
@@ -12829,6 +12836,7 @@ share/typo3/vendor/guzzlehttp/psr7/src/NoSeekStream.php
 share/typo3/vendor/guzzlehttp/psr7/src/NonSerializableStreamTrait.php
 share/typo3/vendor/guzzlehttp/psr7/src/PumpStream.php
 share/typo3/vendor/guzzlehttp/psr7/src/Query.php
+share/typo3/vendor/guzzlehttp/psr7/src/ReadFailureCapturingStream.php
 share/typo3/vendor/guzzlehttp/psr7/src/Request.php
 share/typo3/vendor/guzzlehttp/psr7/src/Response.php
 share/typo3/vendor/guzzlehttp/psr7/src/Rfc3986.php
@@ -12878,6 +12886,7 @@ share/typo3/vendor/masterminds/html5/CREDITS
 share/typo3/vendor/masterminds/html5/LICENSE.txt
 share/typo3/vendor/masterminds/html5/README.md
 share/typo3/vendor/masterminds/html5/RELEASE.md
+share/typo3/vendor/masterminds/html5/SECURITY.md
 share/typo3/vendor/masterminds/html5/UPGRADING.md
 share/typo3/vendor/masterminds/html5/bin/entities.php
 share/typo3/vendor/masterminds/html5/composer.json
@@ -12898,7 +12907,6 @@ share/typo3/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php
 share/typo3/vendor/masterminds/html5/src/HTML5/Parser/Tokenizer.php
 share/typo3/vendor/masterminds/html5/src/HTML5/Parser/TreeBuildingRules.php
 share/typo3/vendor/masterminds/html5/src/HTML5/Parser/UTF8Utils.php
-share/typo3/vendor/masterminds/html5/src/HTML5/Serializer/HTML5Entities.php
 share/typo3/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php
 share/typo3/vendor/masterminds/html5/src/HTML5/Serializer/README.md
 share/typo3/vendor/masterminds/html5/src/HTML5/Serializer/RulesInterface.php
@@ -14812,6 +14820,7 @@ share/typo3/vendor/symfony/service-contracts/ServiceMethodsSubscriberTrait.php
 share/typo3/vendor/symfony/service-contracts/ServiceProviderInterface.php
 share/typo3/vendor/symfony/service-contracts/ServiceSubscriberInterface.php
 share/typo3/vendor/symfony/service-contracts/ServiceSubscriberTrait.php
+share/typo3/vendor/symfony/service-contracts/ShutdownInterface.php
 share/typo3/vendor/symfony/service-contracts/composer.json
 share/typo3/vendor/symfony/string/AbstractString.php
 share/typo3/vendor/symfony/string/AbstractUnicodeString.php
