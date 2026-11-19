@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.41 2026/09/11 13:14:17 adam Exp $
+$NetBSD: distinfo,v 1.42 2026/11/19 10:53:25 adam Exp $
 
-BLAKE2s (dpkg_1.23.11.tar.xz) = a4c875fc4fb48fdff90bd68ac770119b20ddc9d1bcd70208ed02d546963102e6
-SHA512 (dpkg_1.23.11.tar.xz) = 6c2dacbc3b719862f5ddee2d449a8100f97e4fb822f620128d860b57586618d4cdbc744db44e36f836d9fd90decb74ba384f975455c87998a08d5f7f60fc4bb7
-Size (dpkg_1.23.11.tar.xz) = 5766064 bytes
+BLAKE2s (dpkg_1.23.12.tar.xz) = 4897a0f7e2d348dc34d7ff6904170a0db1921e6014f016701a932d5cb67c967c
+SHA512 (dpkg_1.23.12.tar.xz) = e38e4003b1d0cacacdd73d6d8f69e1c1a1b93697ef9bb39ea3e8b9ee37f310b797f369b4b0b75675bf344a886a19dcc0c0f79ab88dae7b15d34c54987b025c6a
+Size (dpkg_1.23.12.tar.xz) = 5889132 bytes
 SHA1 (patch-configure) = 9c47ab63da94bbb1540c7b5b4f048ee9ac42aa5f
 SHA1 (patch-lib_dpkg_buffer.c) = c93c8c4fda7c43416690ab71e5afdac2ccefa459
 SHA1 (patch-lib_dpkg_color.c) = 7bcb9ab6705f9c423d355c26c58bf916dc4cc935
