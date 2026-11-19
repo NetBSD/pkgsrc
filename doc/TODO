@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28406 2026/11/18 08:08:51 wiz Exp $
+$NetBSD: TODO,v 1.28407 2026/11/19 15:02:18 taca Exp $
 
 Suggested new packages
 ======================
@@ -978,7 +978,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsca-ng-1.6
-	o nsd-4.15.3
 	o ntop-5.0
 	o nts-82
 	o nuitka-0.6.14.4
@@ -1077,10 +1076,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pear-SOAP-0.14.0
 	o pgbuildfarm-12
 	o phoronix-9.2.1
+	o php-8.6.0
 	o php-basercms-5.4.0
 	o php-composer-2.10.3
 	o php-dotclear-2.39.3
-	o php-ja-wordpress-7.1.4
+	o php-ja-wordpress-7.1.5
 	o php-phrasea2-4.1.15
 	o php-piwigo-15.4.0
 	o php-pthreads-3.2.0 [repository archived]
@@ -1345,7 +1345,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-devel-9.22
 	o wkhtmltopdf-0.12.6
 	o wmi-11
-	o wordpress-7.1.4
+	o wordpress-7.1.5
 	o wordwarvi-1.0.4
 	o wxRemind-101
 	o x2vnc-1.31
