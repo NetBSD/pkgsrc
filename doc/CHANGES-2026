@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8194 2026/11/19 02:49:33 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8195 2026/11/19 02:53:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12155,3 +12155,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/mlsignify version 20261118 [agc 2026-11-18]
 	Updated databases/mysql80-cluster to 8.0.50 [jnemeth 2026-11-19]
 	Updated devel/nss to 3.134 [wiz 2026-11-19]
+	Updated security/clamav to 1.4.7 [taca 2026-11-19]
+	Updated security/clamav-doc to 1.4.7 [taca 2026-11-19]
