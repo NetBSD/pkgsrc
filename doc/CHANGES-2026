@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8214 2026/11/19 19:46:30 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.8215 2026/11/19 19:57:00 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12180,3 +12180,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/adguardhome to 1.0.0 [adam 2026-11-19]
 	Updated sysutils/restic to 0.20.0 [adam 2026-11-19]
 	Updated www/chromium to 158.0.8127.36 [kikadf 2026-11-19]
+	Updated graphics/shader-slang to 2026.22.1 [ktnb 2026-11-19]
