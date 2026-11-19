@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2026/11/04 16:01:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/19 15:18:52 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -8299,6 +8299,8 @@ share/drupal/core/modules/image/tests/modules/image_field_property_constraint_va
 share/drupal/core/modules/image/tests/modules/image_field_property_constraint_validation/src/Plugin/Validation/Constraint/AltTextContainsLlamasConstraintValidator.php
 share/drupal/core/modules/image/tests/modules/image_module_test/config/schema/image_module_test.schema.yml
 share/drupal/core/modules/image/tests/modules/image_module_test/image_module_test.info.yml
+share/drupal/core/modules/image/tests/modules/image_module_test/image_module_test.routing.yml
+share/drupal/core/modules/image/tests/modules/image_module_test/image_module_test.services.yml
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Hook/ImageModuleTestHooks.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldFormatter/DummyAjaxFormatter.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldFormatter/DummyImageFormatter.php
@@ -8307,6 +8309,7 @@ share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/ImageEffect/AjaxTestImageEffect.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/ImageEffect/NullTestImageEffect.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/ImageEffect/UriDependentTestImageEffect.php
+share/drupal/core/modules/image/tests/modules/image_module_test/src/StreamWrapper/ImageTestDummyStreamWrapper.php
 share/drupal/core/modules/image/tests/modules/image_test_views/image_test_views.info.yml
 share/drupal/core/modules/image/tests/modules/image_test_views/test_views/views.view.test_image_user_image_data.yml
 share/drupal/core/modules/image/tests/src/Functional/GenericTest.php
@@ -8500,6 +8503,8 @@ share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/jsonapi_
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/jsonapi_test_field_type.services.yml
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/src/Normalizer/StringNormalizer.php
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/src/Plugin/Field/FieldType/EntityReferenceUuidItem.php
+share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/src/Plugin/Field/FieldType/EntityReferenceWithMetaItem.php
+share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_field_type/src/TestGadget.php
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_meta_events/jsonapi_test_meta_events.info.yml
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_meta_events/jsonapi_test_meta_events.services.yml
 share/drupal/core/modules/jsonapi/tests/modules/jsonapi_test_meta_events/src/EventSubscriber/MetaEventSubscriber.php
@@ -17288,6 +17293,7 @@ share/drupal/core/scripts/rebuild_token_calculator.sh
 share/drupal/core/scripts/run-tests.sh
 share/drupal/core/scripts/test-site.php
 share/drupal/core/scripts/update-countries.sh
+share/drupal/core/tests/Drupal/BuildTests/Command/DrScriptTest.php
 share/drupal/core/tests/Drupal/BuildTests/Command/GenerateThemeTest.php
 share/drupal/core/tests/Drupal/BuildTests/Composer/Component/ComponentsIsolatedBuildTest.php
 share/drupal/core/tests/Drupal/BuildTests/Composer/Component/ComponentsTaggedReleaseTest.php
@@ -21587,6 +21593,7 @@ share/drupal/vendor/guzzlehttp/promises/src/PromiseInterface.php
 share/drupal/vendor/guzzlehttp/promises/src/PromisorInterface.php
 share/drupal/vendor/guzzlehttp/promises/src/RejectedPromise.php
 share/drupal/vendor/guzzlehttp/promises/src/RejectionException.php
+share/drupal/vendor/guzzlehttp/promises/src/State.php
 share/drupal/vendor/guzzlehttp/promises/src/TaskQueue.php
 share/drupal/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 share/drupal/vendor/guzzlehttp/promises/src/Utils.php
@@ -21775,6 +21782,7 @@ share/drupal/vendor/masterminds/html5/CREDITS
 share/drupal/vendor/masterminds/html5/LICENSE.txt
 share/drupal/vendor/masterminds/html5/README.md
 share/drupal/vendor/masterminds/html5/RELEASE.md
+share/drupal/vendor/masterminds/html5/SECURITY.md
 share/drupal/vendor/masterminds/html5/UPGRADING.md
 share/drupal/vendor/masterminds/html5/composer.json
 share/drupal/vendor/masterminds/html5/src/HTML5.php
@@ -21794,7 +21802,6 @@ share/drupal/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php
 share/drupal/vendor/masterminds/html5/src/HTML5/Parser/Tokenizer.php
 share/drupal/vendor/masterminds/html5/src/HTML5/Parser/TreeBuildingRules.php
 share/drupal/vendor/masterminds/html5/src/HTML5/Parser/UTF8Utils.php
-share/drupal/vendor/masterminds/html5/src/HTML5/Serializer/HTML5Entities.php
 share/drupal/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php
 share/drupal/vendor/masterminds/html5/src/HTML5/Serializer/README.md
 share/drupal/vendor/masterminds/html5/src/HTML5/Serializer/RulesInterface.php
@@ -23229,7 +23236,9 @@ share/drupal/vendor/symfony/polyfill-mbstring/LICENSE
 share/drupal/vendor/symfony/polyfill-mbstring/Mbstring.php
 share/drupal/vendor/symfony/polyfill-mbstring/README.md
 share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/caseFolding.php
+share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/eastAsianWidthRegexp.php
 share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php
+share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCase.php
 share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php
 share/drupal/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php
 share/drupal/vendor/symfony/polyfill-mbstring/bootstrap.php
@@ -23489,6 +23498,7 @@ share/drupal/vendor/symfony/serializer/Debug/TraceableEncoder.php
 share/drupal/vendor/symfony/serializer/Debug/TraceableNormalizer.php
 share/drupal/vendor/symfony/serializer/Debug/TraceableSerializer.php
 share/drupal/vendor/symfony/serializer/DependencyInjection/AttributeMetadataPass.php
+share/drupal/vendor/symfony/serializer/DependencyInjection/NamedSerializerNestedNormalizersPass.php
 share/drupal/vendor/symfony/serializer/DependencyInjection/SerializerPass.php
 share/drupal/vendor/symfony/serializer/Encoder/ChainDecoder.php
 share/drupal/vendor/symfony/serializer/Encoder/ChainEncoder.php
