@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8202 2026/11/19 14:55:24 ryoon Exp $
+$NetBSD: CHANGES-2026,v 1.8203 2026/11/19 14:56:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12167,3 +12167,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/wordpress to 7.0.9 [taca 2026-11-19]
 	Updated net/nsd to 4.15.3 [taca 2026-11-19]
 	Updated www/nginx-devel to 1.31.9 [ryoon 2026-11-19]
+	Updated lang/php82 to 8.2.36 [taca 2026-11-19]
