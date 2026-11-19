@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8209 2026/11/19 15:30:00 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8210 2026/11/19 15:32:51 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12174,3 +12174,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-ja-wordpress to 7.0.9 [taca 2026-11-19]
 	Updated www/drupal11 to 11.4.13 [taca 2026-11-19]
 	Updated www/typo3-13 to 13.4.40 [taca 2026-11-19]
+	Updated chat/profanity to 0.20.0 [ktnb 2026-11-19]
