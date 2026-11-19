@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.309 2026/11/19 02:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2026/11/19 21:58:53 wiz Exp $
 #
 # Release Notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
-DISTNAME=		nss-3.134
+DISTNAME=		nss-3.132
+PKGREVISION=		1
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${PKGVERSION_NOREV:S/./_/g}_RTM/src/}
 
@@ -19,15 +20,12 @@ CHECK_PORTABILITY_SKIP+=	configure
 CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6510
 
 USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 USE_TOOLS+=		bash:test gmake perl pax pkg-config
 # Fails to detect jobserver on systems where /bin/make and /bin/gmake both
 # exist. This is because nss uses "gmake" explicitly rather than $MAKE to
 # launch subprocesses.
 MAKE_JOBS_SAFE=		no
-
-USE_CC_FEATURES=	c99
-USE_CXX_FEATURES=	c++17
 
 BUILD_DIRS=		nss
 
@@ -136,7 +134,7 @@ MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
-NSPR_MINIMUM_VERSION=	4.41
+NSPR_MINIMUM_VERSION=	4.39
 
 PKGCONFIG_OVERRIDE=	nss.pc
 
@@ -162,7 +160,7 @@ INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
 
 INSTALL_CMDS+=		certutil cmsutil crlutil derdump makepqg \
 			mangle modutil ocspclnt oidcalc p7content p7env p7sign \
-			p7verify pk12util rsaperf shlibsign signver \
+			p7verify pk12util rsaperf shlibsign signtool signver \
 			ssltap strsclnt symkeyutil vfychain vfyserv
 
 post-extract:
@@ -183,19 +181,16 @@ do-install:
 
 # needed if host is not in DNS
 TEST_ENV+=	HOST=localhost DOMSUF=localdomain
-# adapt for your system, subdirectory of '${WRKSRC}/dist'
-TEST_ENV+=	OBJDIR=NetBSD11.99.11_64_OPT.OBJ
-# as of 3.134
+# as of 3.129
 # Tests summary:
 # --------------
-# Passed:             6073
+# Passed:             5950
 # Failed:             5
 # Failed with core:   0
 # ASan failures:      0
 # UBSan failures:     0
-# Unknown status:     14
-# TinderboxPrint:Unknown: 14
-#
+# Unknown status:     13
+# TinderboxPrint:Unknown: 13
 # Failed tests:
 #   - STANDARD/ssl
 #   - STANDARD/ssl_gtests
