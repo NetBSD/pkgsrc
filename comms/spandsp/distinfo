@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.7 2025/01/22 13:37:54 mef Exp $
+$NetBSD: distinfo,v 1.8 2026/11/19 12:39:01 adam Exp $
 
-BLAKE2s (spandsp-0.0.6.tar.gz) = 32a10a27bfc59882342bc1a62d2b640faa55a3c7ba85218c53de54c672a5ef0e
-SHA512 (spandsp-0.0.6.tar.gz) = 16bb215ca89a39282e832403f69bc4c98ad3fe35ab3a6eb4731ee5029a6acd9b2df243c3701de845441cbdc16c88b3cd398ef15dc3502e45d5aeca8a161917d4
-Size (spandsp-0.0.6.tar.gz) = 3309837 bytes
-SHA1 (patch-aa) = 617ddbd6023ed770effe5447a17a766929f2ae30
-SHA1 (patch-ab) = 11162d011e061172140b766c6c5fe7714f662eb8
+BLAKE2s (spandsp-3.1.1.tar.gz) = 1c90e64d691da223543004e24f77c2323cd372be2d890b9b78373327d888030d
+SHA512 (spandsp-3.1.1.tar.gz) = 16eba25549ca5f43b8a0a4baa1d0931682edb0269e749886d330f3a878a191c584c7be57e14f5c08a255a7d8bb018f9140f2db603c4907a672f8ce74dc501dcf
+Size (spandsp-3.1.1.tar.gz) = 5088215 bytes
 SHA1 (patch-src_gsm0610__rpe.c) = 6c24d6557fc0bbf6872df132e8032bb1b111e0f2
