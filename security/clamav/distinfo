@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2026/08/08 13:24:33 taca Exp $
+$NetBSD: distinfo,v 1.50.2.1 2026/11/19 19:48:06 maya Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -18,9 +18,9 @@ Size (android-tzdata-0.1.1.crate) = 7674 bytes
 BLAKE2s (android_system_properties-0.1.5.crate) = e405a7701baf9817ca6e946b78ab2ae83f4667112c19c5214606cd863ca5c765
 SHA512 (android_system_properties-0.1.5.crate) = b09f51339f9772c0e2e4241b36cf51573c6b96b19ffc1fbbc94b1c1d1d2fdfe8eac3134af54174a675ab05d18ef4f6bcb2c7fcc20114bbeef6e17e3692202191
 Size (android_system_properties-0.1.5.crate) = 5243 bytes
-BLAKE2s (anyhow-1.0.100.crate) = 57b092c11db49087e69a7d8909c7d46f0da77932bf39f1aa9b24fb91886f248c
-SHA512 (anyhow-1.0.100.crate) = 1f0c072aab9490d68db3783f078c6f8a4d96360908fc6ee3e971b02fb72b9dd5e689dd385f0e93388a87e0dfbd8cff0e14a280b40d55f87646f3c0e558e779ca
-Size (anyhow-1.0.100.crate) = 54059 bytes
+BLAKE2s (anyhow-1.0.104.crate) = a6a9bf04ddbbe6477e601ce443d920434f6b8c30321c66a24e5f39381abf57ba
+SHA512 (anyhow-1.0.104.crate) = 5de699d3fffa67fad1be5cb632de87c8e8ca026e480ace9eece3065e879c7996ddfd5e11b9a0b0ce002a880616e6de1de71ee73b268660cf30525bdf3ea86ea4
+Size (anyhow-1.0.104.crate) = 48819 bytes
 BLAKE2s (arbitrary-1.4.2.crate) = 0700d9b7c1672be30d885b8bbce679ea6212789803a68b88fa496cf33b6935ef
 SHA512 (arbitrary-1.4.2.crate) = 2316345897692b3ce13b6c87d214d4911bb584aa4ba7fc3d62c44cd15d6048aa033f8910045487acddfa879338f45323f8c4d59191ef6f9fdc3c6290f1b7f492
 Size (arbitrary-1.4.2.crate) = 38307 bytes
@@ -102,9 +102,9 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.38.crate) = cd804c8f2c3ec8027f1a28fc2406b92e8cb27989956cf7e27fb98f6e338704cf
 SHA512 (chrono-0.4.38.crate) = 858e47e3facebd5383e71898f26b27d92fe4a69027e2cc47da2af59975ead7767355e0b699f4228eabe76a3eff8b2519c7cecf8b60dc3fc60fbf9b28e2f3d4d9
 Size (chrono-0.4.38.crate) = 220559 bytes
-BLAKE2s (clamav-1.4.6.tar.gz) = 088ae5ff536c73898518b2cf5f75deef1a32eb257b4e74216d554f6bbcffea9e
-SHA512 (clamav-1.4.6.tar.gz) = 5e1978befd63eb1095fc203b41ca5e9084e6eeae350660012fb19e68c74a454c11adae69459dd6f521c5a99d0ff57fd976b19b9e768776a94684fa186440a894
-Size (clamav-1.4.6.tar.gz) = 45990124 bytes
+BLAKE2s (clamav-1.4.7.tar.gz) = 8cef61cb1c6848a437911534d64b2988e192ea40b980b6b2ee83e3799841e117
+SHA512 (clamav-1.4.7.tar.gz) = 779caaa789f8ef7bef92f9ea3dfcd246b5aa1db138d16a5fd712e3521ff5640a30684db9975fce2168b192ed3ca8baacceba00082393c8259e9a90820f3fe2d2
+Size (clamav-1.4.7.tar.gz) = 46034197 bytes
 BLAKE2s (clang-sys-1.7.0.crate) = e2d4f063bac7ae563cef9363b02884fc718864129c02ae62606757b232db9c22
 SHA512 (clang-sys-1.7.0.crate) = e544984d5bd76824ea2093f43f98b59a99e1ca8a5de40e49164b870ed4a91a530f3492faf0678190b91e74aa5d122bdbb32c649998d0ce24912dfb0b83ed6b81
 Size (clang-sys-1.7.0.crate) = 42088 bytes
@@ -369,9 +369,9 @@ Size (quote-1.0.36.crate) = 28507 bytes
 BLAKE2s (r-efi-5.3.0.crate) = 3a737953fd15903b6e466848b522230b19bc1520b9b900092e3f5822be416a2d
 SHA512 (r-efi-5.3.0.crate) = e748db9729dbddf215d5c37630fa272197dd2921297800209ca7bfcd6ffd8530b598b944d95547ad9723655cafdfb69b1c1fade9ba5f8c2ac5c55ec38258fdad
 Size (r-efi-5.3.0.crate) = 64532 bytes
-BLAKE2s (rand-0.9.2.crate) = c6ae5dc8b1882d610a563161e6e97f269a6bc0fa5efc4eec2f3ce71bb321ed57
-SHA512 (rand-0.9.2.crate) = 91faee823d9a3b109135182b9566e6327881736359c9d68358ad7dc78eac1e845c553820e2450ca481cae1e0969ec6566e72f7f9233251b1f9133449306f2965
-Size (rand-0.9.2.crate) = 99930 bytes
+BLAKE2s (rand-0.9.5.crate) = 7d2f72dd852f573fd6be8eba15bbf35301a2274c28aa6916ce63e34a83d22091
+SHA512 (rand-0.9.5.crate) = a59c3ddca83a6c6c5a8c39312d33aae2f7464017fca8738e2c8aed7ec013690eba7165d0f0dcc9caac4f103fd62663b80907de1cf9d41ae7a49db01f83f42343
+Size (rand-0.9.5.crate) = 100216 bytes
 BLAKE2s (rand_chacha-0.9.0.crate) = 92c607c07408ba75e10597aba27370fc46ceece6bf2e3d836de2eeb55af6dd72
 SHA512 (rand_chacha-0.9.0.crate) = f62a7bb067ff984049c96cddccc841cd9931daeb5b25bb69f056bfe577f62b1b35c08f2bb5028590eefa04a9369beead4e6b03607eec97256e0383b20542af96
 Size (rand_chacha-0.9.0.crate) = 18258 bytes
