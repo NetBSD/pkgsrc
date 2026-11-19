@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.97 2026/09/05 09:43:49 he Exp $
+$NetBSD: distinfo,v 1.98 2026/11/19 14:30:50 taca Exp $
 
-BLAKE2s (nsd-4.15.2.tar.gz) = c8aecdc2849d51ea3b993b5aa417fc78560fcb8e36ea495bc5b26011d4739b63
-SHA512 (nsd-4.15.2.tar.gz) = e543425438402ca1f4c61ea9f54bcb6ea3ca802b1d645aa76d56bbc82aefedaa6080a757b0e7bd4051c4cd0177a09fd55473eaf9cd641d1021eec94f143df6ea
-Size (nsd-4.15.2.tar.gz) = 1634936 bytes
+BLAKE2s (nsd-4.15.3.tar.gz) = 7e4f600a44727b309fe237fe1c7ab7092b3b5300b03afd8fd86313f4475a66c7
+SHA512 (nsd-4.15.3.tar.gz) = 009b35390a643439a054a73a9743cb00b07632b21af9aa856d1763e268bb9a8ce8c67c94dc4b179d681a1df8bc5b26a85f324c03ee3e3a627a394d371fcaf5b9
+Size (nsd-4.15.3.tar.gz) = 1620092 bytes
 SHA1 (patch-Makefile.in) = 93f77704ee6730aef41955511807ce2f4b6cfc90
