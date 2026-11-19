@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.126 2026/11/04 15:54:18 taca Exp $
+# $NetBSD: Makefile,v 1.127 2026/11/19 13:54:10 taca Exp $
 #
 # when updating this, please run 'PKG_DEVELOPER=1 make upload-distfiles'
 
 DISTNAME=		wordpress-${VERSION}
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
-VERSION=		7.0.8
+VERSION=		7.0.9
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
 
