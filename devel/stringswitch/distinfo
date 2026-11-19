@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/19 21:48:03 agc Exp $
+
+BLAKE2s (stringswitch-20261119.tar.gz) = 3708607b0d9781fd1d241e3944b61bd57e099e247e6ffbb87ae44c102c753e8b
+SHA512 (stringswitch-20261119.tar.gz) = 6a00c3e928294b7ee3a76195318b51fcb75541cef113692bf121ff22a1a3aa5a16a9774ec38c5b8bcd54b596da7a004d769e870ff5d0df000289905abf942a85
+Size (stringswitch-20261119.tar.gz) = 4267 bytes

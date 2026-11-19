@@ -1,0 +1,6 @@
+This is stringswitch, which calculates numeric values for strings.
+Using these numeric values, strings can be used as part of switch
+statements. Dispatcher functions can then be used to process
+strings in an efficient manner. In normal use, compilers will
+flag any hash collisions at compile-time, which removes a large
+class of bugs.
