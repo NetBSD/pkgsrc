@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2026/04/30 05:33:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.86 2026/11/19 03:22:19 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -352,6 +352,8 @@ man/man3/gnutls_hpke_deinit.3
 man/man3/gnutls_hpke_derive_keypair.3
 man/man3/gnutls_hpke_encap.3
 man/man3/gnutls_hpke_export.3
+man/man3/gnutls_hpke_export_pubkey.3
+man/man3/gnutls_hpke_import_pubkey.3
 man/man3/gnutls_hpke_init.3
 man/man3/gnutls_hpke_open.3
 man/man3/gnutls_hpke_seal.3
@@ -683,6 +685,7 @@ man/man3/gnutls_pubkey_export_ecc_raw.3
 man/man3/gnutls_pubkey_export_ecc_raw2.3
 man/man3/gnutls_pubkey_export_ecc_x962.3
 man/man3/gnutls_pubkey_export_gost_raw2.3
+man/man3/gnutls_pubkey_export_mldsa_raw.3
 man/man3/gnutls_pubkey_export_rsa_raw.3
 man/man3/gnutls_pubkey_export_rsa_raw2.3
 man/man3/gnutls_pubkey_get_key_id.3
@@ -697,6 +700,7 @@ man/man3/gnutls_pubkey_import_dsa_raw.3
 man/man3/gnutls_pubkey_import_ecc_raw.3
 man/man3/gnutls_pubkey_import_ecc_x962.3
 man/man3/gnutls_pubkey_import_gost_raw.3
+man/man3/gnutls_pubkey_import_mldsa_raw.3
 man/man3/gnutls_pubkey_import_openpgp.3
 man/man3/gnutls_pubkey_import_openpgp_raw.3
 man/man3/gnutls_pubkey_import_pkcs11.3
@@ -1278,6 +1282,7 @@ share/locale/fi/LC_MESSAGES/gnutls.mo
 share/locale/fr/LC_MESSAGES/gnutls.mo
 share/locale/it/LC_MESSAGES/gnutls.mo
 share/locale/ka/LC_MESSAGES/gnutls.mo
+share/locale/lv/LC_MESSAGES/gnutls.mo
 share/locale/ms/LC_MESSAGES/gnutls.mo
 share/locale/nl/LC_MESSAGES/gnutls.mo
 share/locale/pl/LC_MESSAGES/gnutls.mo
@@ -1288,3 +1293,4 @@ share/locale/sv/LC_MESSAGES/gnutls.mo
 share/locale/uk/LC_MESSAGES/gnutls.mo
 share/locale/vi/LC_MESSAGES/gnutls.mo
 share/locale/zh_CN/LC_MESSAGES/gnutls.mo
+share/locale/zh_TW/LC_MESSAGES/gnutls.mo
