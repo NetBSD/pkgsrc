@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_speech_tts__platform__impl.h,v 1.1 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_browser_speech_tts__platform__impl.h,v 1.2 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/speech/tts_platform_impl.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/browser/speech/tts_platform_impl.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/browser/speech/tts_platform_impl.h
 @@ -15,7 +15,7 @@
  

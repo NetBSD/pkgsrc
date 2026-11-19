@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.32 2026/11/08 15:39:05 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.33 2026/11/19 19:46:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
-@@ -58,7 +58,7 @@
+@@ -56,7 +56,7 @@
  #include "gpu/command_buffer/service/vulkan_context_provider.h"
  #include "gpu/vulkan/vulkan_device_queue.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
  #include "gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.h"
  #endif
  
-@@ -130,7 +130,7 @@ const char* GmbTypeToString(gfx::GpuMemo
+@@ -206,7 +206,7 @@ const char* SharedImageFactory::GmbTypeT
      case gfx::IO_SURFACE_BUFFER:
        return "platform";
  #endif
@@ -24,16 +24,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
      case gfx::NATIVE_PIXMAP:
        return "platform";
  #endif
-@@ -226,7 +226,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
-   return gfx::GpuMemoryBufferType::IO_SURFACE_BUFFER;
- #elif BUILDFLAG(IS_ANDROID)
-   return gfx::GpuMemoryBufferType::ANDROID_HARDWARE_BUFFER;
--#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-   return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
- #elif BUILDFLAG(IS_WIN)
-   return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
-@@ -400,7 +400,7 @@ SharedImageFactory::SharedImageFactory(
+@@ -379,7 +379,7 @@ SharedImageFactory::SharedImageFactory(
      factories_.push_back(std::move(ozone_factory));
    }
  
@@ -42,7 +33,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    if (gr_context_type_ == GrContextType::kVulkan
  #if BUILDFLAG(USE_WEBGPU_ON_VULKAN_VIA_GL_INTEROP)
        /* We support GL context for WebGPU gl-vulkan interop (on linux).*/
-@@ -1120,7 +1120,7 @@ void SharedImageFactory::LogGetFactoryFa
+@@ -912,7 +912,7 @@ void SharedImageFactory::LogGetFactoryFa
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__internals__posix.cc,v 1.32 2026/11/08 15:38:50 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__internals__posix.cc,v 1.33 2026/11/19 19:45:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.cc
 @@ -45,7 +45,7 @@ uint32_t SecTaskGetCodeSignStatus(SecTas
  
@@ -15,12 +15,12 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__al
  struct __ifunc_arg_t;
  
  #include "partition_alloc/aarch64_support.h"
-@@ -232,7 +232,7 @@ size_t GetZeroSegmentSizeFromOS() {
-   return static_cast<size_t>(address);
+@@ -273,7 +273,7 @@ WellKnownReadOnlyRegions GetWellKnownRea
  }
  
--#elif PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS)
-+#elif PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || PA_BUILDFLAG(IS_BSD)
+ #elif PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_CHROMEOS) || \
+-    PA_BUILDFLAG(IS_ANDROID)
++    PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_BSD)
  
- size_t GetZeroSegmentSizeFromOS() {
+ WellKnownReadOnlyRegions GetWellKnownReadOnlyRegions(uintptr_t address_limit) {
    // TODO(40925855): Support larger `mmap_min_addr`.

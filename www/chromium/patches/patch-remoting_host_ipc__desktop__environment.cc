@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.14 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.15 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_desktop_environment.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/ipc_desktop_environment.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/ipc_desktop_environment.cc
-@@ -181,7 +181,7 @@ class IpcDesktopEnvironmentFactory::Core
+@@ -187,7 +187,7 @@ class IpcDesktopEnvironmentFactory::Core
                                ErrorCode error_code,
                                const std::string& error_details,
                                const SourceLocation& error_location);
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.14 2026/11/08 15:3
    void OnSessionServicesClientConnected(
        int terminal_id,
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver);
-@@ -193,7 +193,7 @@ class IpcDesktopEnvironmentFactory::Core
+@@ -199,7 +199,7 @@ class IpcDesktopEnvironmentFactory::Core
    void OnTerminalDisconnected(ErrorCode error_code,
                                const std::string& error_details,
                                const SourceLocation& error_location) override;
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.14 2026/11/08 15:3
    void OnSessionServicesClientConnected(
        mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver)
        override;
-@@ -352,7 +352,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -358,7 +358,7 @@ void IpcDesktopEnvironmentFactory::Core:
                           error_details, error_location);
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.14 2026/11/08 15:3
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
    OnSessionServicesClientConnected(GetEventsReceivers().current_context(),
-@@ -398,7 +398,7 @@ void IpcDesktopEnvironmentFactory::Core:
+@@ -404,7 +404,7 @@ void IpcDesktopEnvironmentFactory::Core:
    }
  }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-remoting_host_ipc__desktop__environment.cc,v 1.14 2026/11/08 15:3
  void IpcDesktopEnvironmentFactory::Core::OnSessionServicesClientConnected(
      int terminal_id,
      mojo::PendingReceiver<mojom::ChromotingSessionServices> receiver) {
-@@ -512,7 +512,7 @@ void IpcDesktopEnvironmentFactory::OnTer
+@@ -518,7 +518,7 @@ void IpcDesktopEnvironmentFactory::OnTer
                                  error_location);
  }
  

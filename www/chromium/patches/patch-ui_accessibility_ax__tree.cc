@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.31 2026/11/08 15:39:13 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.32 2026/11/19 19:46:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/accessibility/ax_tree.cc
 @@ -706,7 +706,7 @@ struct AXTreeUpdateState {
    // (crrev.com/c/2892259).
@@ -51,7 +51,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.31 2026/11/08 15:39:13 kikadf Ex
  void AXTree::ClearExtraAnnouncementNodes() {
    if (!extra_announcement_nodes_) {
      return;
-@@ -2625,7 +2625,7 @@ bool AXTree::CreateNewChildVector(
+@@ -2627,7 +2627,7 @@ bool AXTree::CreateNewChildVector(
      AXTreeUpdateState* update_state) {
    DCHECK(GetTreeUpdateInProgressState());
    bool success = true;

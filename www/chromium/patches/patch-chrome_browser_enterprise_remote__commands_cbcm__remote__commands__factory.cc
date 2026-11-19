@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_remote__commands_cbcm__remote__commands__factory.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_remote__commands_cbcm__remote__commands__factory.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc
 @@ -12,7 +12,7 @@
  #include "chrome/browser/profiles/profile_manager.h"

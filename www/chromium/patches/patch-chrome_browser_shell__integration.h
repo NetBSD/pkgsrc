@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_shell__integration.h,v 1.19 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_shell__integration.h,v 1.20 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/shell_integration.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/shell_integration.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/shell_integration.h
 @@ -188,7 +188,7 @@ std::u16string GetAppShortcutsSubdirName
  #endif

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.32 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_stack__sampling_tracing__sampler__profiler.cc,v 1.33 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
 @@ -43,7 +43,7 @@
  #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.33 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
  
  
  void AddCrowdstrikeSignalsToEvent(
-@@ -312,7 +312,7 @@ std::string RealtimeReportingClient::Get
+@@ -311,7 +311,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  

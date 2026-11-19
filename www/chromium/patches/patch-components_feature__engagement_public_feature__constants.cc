@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.32 2026/11/08 15:39:00 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.33 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
-@@ -33,7 +33,7 @@ bool IsOnDeviceStorageEnabled() {
+@@ -35,7 +35,7 @@ bool IsOnDeviceStorageEnabled() {
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.3
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -1008,7 +1008,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
+@@ -1045,7 +1045,7 @@ BASE_FEATURE(kIPHiOSActiveDaysTrackingFe
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.3
  BASE_FEATURE(kIPHAutofillAtMemoryFeature,
               "IPH_AutofillAtMemory",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1074,7 +1074,7 @@ BASE_FEATURE(kIPHLauncherSearchHelpUiFea
+@@ -1110,7 +1110,7 @@ BASE_FEATURE(kIPHGoogleOneOfferNotificat
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.3
  // This can be enabled by default, as the DesktopPWAsLinkCapturing
  // flag is needed for the IPH linked to this feature to work, and
  // use-cases to show the IPH are guarded by that flag.
-@@ -1091,7 +1091,7 @@ BASE_FEATURE(kIPHDesktopPWAsLinkCapturin
+@@ -1127,7 +1127,7 @@ BASE_FEATURE(kIPHDesktopPWAsLinkCapturin
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__paths.h,v 1.32 2026/11/08 15:38:58 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.h,v 1.33 2026/11/19 19:45:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/common/chrome_paths.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/common/chrome_paths.h
-@@ -55,7 +55,7 @@ enum {
+@@ -56,7 +56,7 @@ enum {
                       // to set policies for chrome. This directory
                       // contains subdirectories.
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__paths.h,v 1.32 2026/11/08 15:38:58 kikadf E
      (BUILDFLAG(IS_LINUX) && BUILDFLAG(CHROMIUM_BRANDING)) || BUILDFLAG(IS_MAC)
    DIR_USER_EXTERNAL_EXTENSIONS,  // Directory for per-user external extensions
                                   // on Chrome Mac and Chromium Linux.
-@@ -64,7 +64,7 @@ enum {
+@@ -65,7 +65,7 @@ enum {
                                   // create it.
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__paths.h,v 1.32 2026/11/08 15:38:58 kikadf E
    DIR_STANDALONE_EXTERNAL_EXTENSIONS,  // Directory for 'per-extension'
                                         // definition manifest files that
                                         // describe extensions which are to be
-@@ -102,7 +102,7 @@ enum {
+@@ -107,7 +107,7 @@ enum {
  
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

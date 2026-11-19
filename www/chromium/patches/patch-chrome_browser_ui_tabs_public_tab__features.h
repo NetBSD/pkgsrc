@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_tabs_public_tab__features.h,v 1.24 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_tabs_public_tab__features.h,v 1.25 2026/11/19 19:45:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/tabs/public/tab_features.h
-@@ -321,13 +321,13 @@ class TabContextualizationController;
+@@ -335,13 +335,13 @@ class TabContextualizationController;
  
  namespace metrics {
  class MetricsServicesWebContentsObserver;
@@ -22,7 +22,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_public_tab__features.h,v 1.24 2026/11/08 1
  namespace wallet {
  class ChromeWalletablePassClient;
  }  // namespace wallet
-@@ -859,7 +859,7 @@ class TabFeatures {
+@@ -836,7 +836,7 @@ class TabFeatures {
        page_context_eligibility_helper_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -31,7 +31,7 @@ $NetBSD: patch-chrome_browser_ui_tabs_public_tab__features.h,v 1.24 2026/11/08 1
    std::unique_ptr<wallet::ChromeWalletablePassClient> walletable_pass_client_;
  #endif
  
-@@ -874,13 +874,13 @@ class TabFeatures {
+@@ -851,13 +851,13 @@ class TabFeatures {
    std::unique_ptr<skills::SkillsUpdateObserver> skills_update_observer_;
  #endif  //  !BUILDFLAG(IS_ANDROID)
  

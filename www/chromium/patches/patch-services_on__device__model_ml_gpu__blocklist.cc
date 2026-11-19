@@ -1,10 +1,10 @@
-$NetBSD: patch-services_on__device__model_ml_gpu__blocklist.cc,v 1.23 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_on__device__model_ml_gpu__blocklist.cc,v 1.24 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/ml/gpu_blocklist.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/on_device_model/ml/gpu_blocklist.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/on_device_model/ml/gpu_blocklist.cc
 @@ -23,7 +23,7 @@ namespace {
  const base::FeatureParam<std::string> kGpuBlockList{

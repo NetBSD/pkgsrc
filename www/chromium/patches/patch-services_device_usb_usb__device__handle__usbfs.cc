@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.31 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.32 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
 @@ -35,7 +35,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.31 2026/11/
  // Outcome of detaching a kernel driver before ClaimInterface().
  // These values are persisted to logs. Entries should not be renumbered and
  // numeric values should never be reused.
-@@ -302,7 +302,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
+@@ -318,7 +318,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
    return true;
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.31 2026/11/
  bool UsbDeviceHandleUsbfs::BlockingTaskRunnerHelper::DetachInterface(
      int interface_number,
      const CombinedInterfaceInfo& interface_info) {
-@@ -656,7 +656,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
+@@ -672,7 +672,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
      return;
    }
  #endif
@@ -42,7 +42,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.31 2026/11/
    if (base::FeatureList::IsEnabled(features::kAutomaticUsbDetach)) {
      const mojom::UsbConfigurationInfo* config =
          device_->GetActiveConfiguration();
-@@ -1016,7 +1016,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
+@@ -1063,7 +1063,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
      return;
    }
  #endif

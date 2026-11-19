@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_policy_policy__value__and__status__aggregator.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_policy_policy__value__and__status__aggregator.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/policy/policy_value_and_status_aggregator.cc
 @@ -62,7 +62,7 @@
  #include "chrome/browser/policy/value_provider/web_app_managed_configuration_value_provider.h"

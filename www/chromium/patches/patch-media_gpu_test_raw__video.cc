@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_test_raw__video.cc,v 1.32 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-media_gpu_test_raw__video.cc,v 1.33 2026/11/19 19:46:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/raw_video.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- media/gpu/test/raw_video.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ media/gpu/test/raw_video.cc
 @@ -60,7 +60,7 @@ std::unique_ptr<base::MemoryMappedFile> 
                               base::File::FLAG_READ | base::File::FLAG_WRITE

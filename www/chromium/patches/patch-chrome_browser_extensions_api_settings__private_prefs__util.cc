@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_api_settings__private_prefs__util.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_settings__private_prefs__util.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -246,7 +246,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -247,7 +247,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[autofill::prefs::kAutofillPaymentCardBenefits] =
        settings_api::PrefType::kBoolean;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_extensions_api_settings__private_prefs__util.cc,v 
    (*s_allowlist)[autofill::prefs::kAutofillBnplEnabled] =
        settings_api::PrefType::kBoolean;
    (*s_allowlist)[autofill::prefs::kAutofillAtMemoryDoubleCtrlTriggerEnabled] =
-@@ -299,7 +299,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -300,7 +300,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[tab_groups::prefs::kAutoPinNewTabGroups] =
        settings_api::PrefType::kBoolean;
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_extensions_api_settings__private_prefs__util.cc,v 
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -320,7 +320,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -321,7 +321,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
    (*s_allowlist)[::prefs::kPinnedActions] = settings_api::PrefType::kList;
    (*s_allowlist)[themes::kPolicyThemeColor] = settings_api::PrefType::kNumber;

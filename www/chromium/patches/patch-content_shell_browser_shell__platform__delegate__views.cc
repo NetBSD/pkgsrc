@@ -1,10 +1,10 @@
-$NetBSD: patch-content_shell_browser_shell__platform__delegate__views.cc,v 1.31 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-content_shell_browser_shell__platform__delegate__views.cc,v 1.32 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_platform_delegate_views.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/shell/browser/shell_platform_delegate_views.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/shell/browser/shell_platform_delegate_views.cc
 @@ -374,7 +374,7 @@ void ShellPlatformDelegate::CreatePlatfo
        views::Widget::InitParams::NATIVE_WIDGET_OWNS_WIDGET);

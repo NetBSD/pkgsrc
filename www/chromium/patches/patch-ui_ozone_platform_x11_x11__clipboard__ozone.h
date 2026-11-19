@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_x11_x11__clipboard__ozone.h,v 1.14 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_x11_x11__clipboard__ozone.h,v 1.15 2026/11/19 19:46:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_clipboard_ozone.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/ozone/platform/x11/x11_clipboard_ozone.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/ozone/platform/x11/x11_clipboard_ozone.h
 @@ -14,7 +14,7 @@
  #include "ui/base/x/selection_utils.h"

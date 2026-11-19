@@ -1,10 +1,10 @@
-$NetBSD: patch-net_socket_udp__socket__posix.h,v 1.9 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-net_socket_udp__socket__posix.h,v 1.10 2026/11/19 19:46:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- net/socket/udp_socket_posix.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ net/socket/udp_socket_posix.h
 @@ -451,7 +451,7 @@ class NET_EXPORT UDPSocketPosix {
        size_t maximum_packet_size);

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_discardable__memory_service_discardable__shared__memory__manager.cc,v 1.32 2026/11/08 15:38:59 kikadf Exp $
+$NetBSD: patch-components_discardable__memory_service_discardable__shared__memory__manager.cc,v 1.33 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
 @@ -178,6 +178,8 @@ uint64_t GetDefaultMaxBytes() {
  #if BUILDFLAG(IS_ANDROID)

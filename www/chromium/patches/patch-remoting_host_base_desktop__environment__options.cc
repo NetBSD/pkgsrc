@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_base_desktop__environment__options.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_base_desktop__environment__options.cc,v 1.33 2026/11/19 19:46:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/base/desktop_environment_options.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/base/desktop_environment_options.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/base/desktop_environment_options.cc
 @@ -117,7 +117,7 @@ bool DesktopEnvironmentOptions::capture_
    // TODO(joedow): Determine whether we can migrate additional platforms to

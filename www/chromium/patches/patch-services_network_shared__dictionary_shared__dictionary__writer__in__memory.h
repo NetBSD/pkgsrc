@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_shared__dictionary_shared__dictionary__writer__in__memory.h,v 1.32 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_network_shared__dictionary_shared__dictionary__writer__in__memory.h,v 1.33 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/network/shared_dictionary/shared_dictionary_writer_in_memory.h
 @@ -9,6 +9,8 @@
  #include <string>

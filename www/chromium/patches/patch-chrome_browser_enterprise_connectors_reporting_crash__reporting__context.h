@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_crash__reporting__context.h,v 1.14 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_crash__reporting__context.h,v 1.15 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/crash_reporting_context.h
 @@ -11,7 +11,7 @@
  #include "chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.h"

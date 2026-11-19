@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__client.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__client.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -1027,7 +1027,7 @@ void ChromePasswordManagerClient::Notify
+@@ -1010,7 +1010,7 @@ void ChromePasswordManagerClient::Notify
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    PasswordsClientUIDelegate* manage_passwords_ui_controller =
        PasswordsClientUIDelegateFromWebContents(web_contents());
    if (manage_passwords_ui_controller) {
-@@ -2024,7 +2024,7 @@ template <typename T>
+@@ -2013,7 +2013,7 @@ template <typename T>
  bool ChromePasswordManagerClient::IsReauthBeforeFillingRequiredImpl(
      T* availability_provider) {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    if (!GetLocalStatePrefs() || !GetPrefs() || !availability_provider) {
      return false;
    }
-@@ -2186,7 +2186,7 @@ void ChromePasswordManagerClient::HideFi
+@@ -2187,7 +2187,7 @@ void ChromePasswordManagerClient::HideFi
  bool ChromePasswordManagerClient::IsPasswordManagementEnabledForCurrentPage(
      const GURL& url) const {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    if (IsPasswordManagerForUrlDisallowedByPolicy(url)) {
      return false;
    }
-@@ -2225,7 +2225,7 @@ bool ChromePasswordManagerClient::IsPass
+@@ -2226,7 +2226,7 @@ bool ChromePasswordManagerClient::IsPass
  }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

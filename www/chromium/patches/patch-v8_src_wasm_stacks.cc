@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_wasm_stacks.cc,v 1.6 2026/11/08 15:39:15 kikadf Exp $
+$NetBSD: patch-v8_src_wasm_stacks.cc,v 1.7 2026/11/19 19:46:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/wasm/stacks.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- v8/src/wasm/stacks.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ v8/src/wasm/stacks.cc
 @@ -4,6 +4,10 @@
  

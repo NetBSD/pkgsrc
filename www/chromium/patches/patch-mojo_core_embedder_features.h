@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_core_embedder_features.h,v 1.32 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-mojo_core_embedder_features.h,v 1.33 2026/11/19 19:46:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/embedder/features.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- mojo/core/embedder/features.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ mojo/core/embedder/features.h
 @@ -14,7 +14,7 @@
  namespace mojo {

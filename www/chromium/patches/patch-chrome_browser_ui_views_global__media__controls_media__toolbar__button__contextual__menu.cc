@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_global__media__controls_media__toolbar__button__contextual__menu.cc,v 1.1 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_global__media__controls_media__toolbar__button__contextual__menu.cc,v 1.2 2026/11/19 19:45:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/global_media_controls/media_toolbar_button_contextual_menu.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/views/global_media_controls/media_toolbar_button_contextual_menu.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/views/global_media_controls/media_toolbar_button_contextual_menu.cc
 @@ -20,7 +20,7 @@
  #include "components/media_router/common/pref_names.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.30 2026/11/08 15:38:53 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.31 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client_navigation_throttles.cc
-@@ -150,7 +150,7 @@
+@@ -151,7 +151,7 @@
  #include "chrome/browser/captive_portal/captive_portal_service_factory.h"
  #endif  // BUILDFLAG(ENABLE_CAPTIVE_PORTAL_DETECTION)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
  #include "chrome/browser/browser_switcher/browser_switcher_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/oidc_auth_response_capture_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.h"
-@@ -453,7 +453,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -455,7 +455,7 @@ void CreateAndAddChromeThrottlesForNavig
      TypedNavigationUpgradeThrottle::MaybeCreateAndAdd(registry);
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
    WebAppSettingsNavigationThrottle::MaybeCreateAndAdd(registry);
    profile_management::ProfileManagementNavigationThrottle::MaybeCreateAndAdd(
        registry);
-@@ -526,7 +526,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -528,7 +528,7 @@ void CreateAndAddChromeThrottlesForNavig
        registry, ui_manager);
  #endif  // BUILDFLAG(SAFE_BROWSING_AVAILABLE)
  

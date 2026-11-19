@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_peer__connection__process__main.cc,v 1.7 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_peer__connection__process__main.cc,v 1.8 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/peer_connection_process_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/peer_connection_process_main.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/peer_connection_process_main.cc
 @@ -26,7 +26,7 @@
  #include "base/files/file_descriptor_watcher_posix.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.32 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -124,13 +124,13 @@
  #include "third_party/blink/public/web/win/web_font_rendering.h"

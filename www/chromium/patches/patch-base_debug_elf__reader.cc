@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_elf__reader.cc,v 1.32 2026/11/08 15:38:51 kikadf Exp $
+$NetBSD: patch-base_debug_elf__reader.cc,v 1.33 2026/11/19 19:45:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/elf_reader.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/debug/elf_reader.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/debug/elf_reader.cc
 @@ -45,6 +45,10 @@ constexpr char kGnuNoteName[] = "GNU";
  // Support up to 32 bytes (for blake3 & SHA256).

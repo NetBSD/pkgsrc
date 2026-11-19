@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.32 2026/11/08 15:39:13 kikadf Exp $
+$NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.33 2026/11/19 19:46:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_pixmap_handle.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/gfx/native_pixmap_handle.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@
  #include "components/viz/common/resources/shared_image_format_utils.h"
@@ -30,7 +30,7 @@ $NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.32 2026/11/08 15:39:13 kikad
  static_assert(NativePixmapHandle::kNoModifier == DRM_FORMAT_MOD_INVALID,
                "gfx::NativePixmapHandle::kNoModifier should be an alias for"
                "DRM_FORMAT_MOD_INVALID");
-@@ -36,7 +40,7 @@ NativePixmapPlane::NativePixmapPlane() :
+@@ -40,7 +44,7 @@ NativePixmapPlane::NativePixmapPlane() :
  NativePixmapPlane::NativePixmapPlane(uint32_t stride,
                                       uint64_t offset,
                                       uint64_t size
@@ -39,7 +39,7 @@ $NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.32 2026/11/08 15:39:13 kikad
                                       ,
                                       base::ScopedFD fd
  #elif BUILDFLAG(IS_FUCHSIA)
-@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(uin
+@@ -51,7 +55,7 @@ NativePixmapPlane::NativePixmapPlane(uin
      : stride(stride),
        offset(offset),
        size(size)
@@ -48,7 +48,7 @@ $NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.32 2026/11/08 15:39:13 kikad
        ,
        fd(std::move(fd))
  #elif BUILDFLAG(IS_FUCHSIA)
-@@ -75,7 +79,7 @@ NativePixmapHandle& NativePixmapHandle::
+@@ -79,7 +83,7 @@ NativePixmapHandle& NativePixmapHandle::
  NativePixmapHandle CloneHandleForIPC(const NativePixmapHandle& handle) {
    NativePixmapHandle clone;
    for (auto& plane : handle.planes) {
@@ -57,7 +57,7 @@ $NetBSD: patch-ui_gfx_native__pixmap__handle.cc,v 1.32 2026/11/08 15:39:13 kikad
      DCHECK(plane.fd.is_valid());
      // Combining the HANDLE_EINTR and ScopedFD's constructor causes the compiler
      // to emit some very strange assembly that tends to cause FD ownership
-@@ -113,7 +117,7 @@ NativePixmapHandle CloneHandleForIPC(con
+@@ -117,7 +121,7 @@ NativePixmapHandle CloneHandleForIPC(con
  #endif
    }
  

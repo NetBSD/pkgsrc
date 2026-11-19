@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_profiles_profiles__state.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_profiles_profiles__state.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profiles_state.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/profiles/profiles_state.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/profiles/profiles_state.cc
 @@ -194,7 +194,7 @@ bool IsGuestModeRequested(const base::Co
                            PrefService* local_state,
@@ -12,7 +12,7 @@ $NetBSD: patch-chrome_browser_profiles_profiles__state.cc,v 1.32 2026/11/08 15:3
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
 -    BUILDFLAG(IS_MAC)
 +    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-   DCHECK(local_state);
+   CHECK(local_state, base::NotFatalUntil::M162);
  
    // Check if guest mode enforcement commandline switch or policy are provided.
 @@ -230,7 +230,7 @@ bool IsGuestModeEnabled() {

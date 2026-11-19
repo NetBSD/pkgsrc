@@ -1,10 +1,10 @@
-$NetBSD: patch-net_traffic__annotation_network__traffic__annotation.h,v 1.32 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-net_traffic__annotation_network__traffic__annotation.h,v 1.33 2026/11/19 19:46:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/traffic_annotation/network_traffic_annotation.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- net/traffic_annotation/network_traffic_annotation.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ net/traffic_annotation/network_traffic_annotation.h
 @@ -372,7 +372,7 @@ struct MutablePartialNetworkTrafficAnnot
  }  // namespace net

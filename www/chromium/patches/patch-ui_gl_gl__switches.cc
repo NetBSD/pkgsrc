@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_gl__switches.cc,v 1.32 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-ui_gl_gl__switches.cc,v 1.33 2026/11/19 19:46:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_switches.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/gl/gl_switches.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/gl/gl_switches.cc
 @@ -27,7 +27,7 @@
  #endif
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_gl_gl__switches.cc,v 1.32 2026/11/08 15:39:14 kikadf Exp $
    angle::SystemInfo system_info;
    {
      TRACE_EVENT("gpu,startup", "angle::GetSystemInfoVulkan");
-@@ -553,7 +553,7 @@ bool IsDefaultANGLEVulkan() {
+@@ -564,7 +564,7 @@ bool IsDefaultANGLEVulkan() {
    }
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_gl_gl__switches.cc,v 1.32 2026/11/08 15:39:14 kikadf Exp $
    // AMDVLK driver is buggy, so disable Vulkan with AMDVLK for now.
    // crbug.com/1340081
    if (active_gpu.driverId == VK_DRIVER_ID_AMD_OPEN_SOURCE)
-@@ -602,7 +602,7 @@ bool CheckVulkanCompatibilities(
+@@ -613,7 +613,7 @@ bool CheckVulkanCompatibilities(
  #if !BUILDFLAG(ENABLE_VULKAN)
    return false;
  #elif !BUILDFLAG(IS_ANDROID)

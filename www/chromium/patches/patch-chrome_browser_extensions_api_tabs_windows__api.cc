@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_tabs_windows__api.cc,v 1.1 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_api_tabs_windows__api.cc,v 1.2 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/tabs/windows_api.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/extensions/api/tabs/windows_api.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/extensions/api/tabs/windows_api.cc
 @@ -932,7 +932,7 @@ ExtensionFunction::ResponseValue Windows
  // created as minimized.

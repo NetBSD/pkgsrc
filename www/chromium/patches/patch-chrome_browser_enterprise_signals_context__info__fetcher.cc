@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.31 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.32 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/signals/context_info_fetcher.cc
 @@ -184,6 +184,8 @@ std::vector<std::string> ContextInfoFetc
  SettingValue ContextInfoFetcher::GetOSFirewall() {

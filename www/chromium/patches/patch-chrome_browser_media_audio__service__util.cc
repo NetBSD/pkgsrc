@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_audio__service__util.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_audio__service__util.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/audio_service_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/media/audio_service_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/media/audio_service_util.cc
 @@ -20,7 +20,7 @@
  

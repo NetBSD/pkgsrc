@@ -1,10 +1,10 @@
-$NetBSD: patch-components_crash_core_browser_crash__upload__list__crashpad.cc,v 1.32 2026/11/08 15:38:59 kikadf Exp $
+$NetBSD: patch-components_crash_core_browser_crash__upload__list__crashpad.cc,v 1.33 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/crash/core/browser/crash_upload_list_crashpad.cc
 @@ -37,7 +37,9 @@ CrashUploadListCrashpad::~CrashUploadLis
  std::vector<std::unique_ptr<UploadList::UploadInfo>>

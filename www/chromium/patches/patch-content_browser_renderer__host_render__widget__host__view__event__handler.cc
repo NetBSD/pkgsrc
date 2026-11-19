@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__event__handler.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__event__handler.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_event_handler.cc
-@@ -651,7 +651,7 @@ bool RenderWidgetHostViewEventHandler::C
+@@ -704,7 +704,7 @@ bool RenderWidgetHostViewEventHandler::C
    if (event->type() == ui::EventType::kMouseExited) {
      if (mouse_locked || selection_popup)
        return false;

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.13 2026/11/19 19:45:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/app_menu_icon_controller.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/toolbar/app_menu_icon_controller.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/toolbar/app_menu_icon_controller.cc
 @@ -22,7 +22,7 @@
  #include "ui/gfx/paint_vector_icon.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
  #include "chrome/browser/browser_process.h"
  #include "chrome/browser/global_features.h"
  #include "chrome/browser/lifetime/scheduled_restart_manager.h"
-@@ -100,7 +100,7 @@ bool IsUnstableChannel() {
+@@ -101,7 +101,7 @@ bool IsUnstableChannel() {
           channel == version_info::Channel::CANARY;
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
  scheduled_restart::ScheduledRestartManager* GetScheduledRestartManager() {
    return g_browser_process && g_browser_process->GetFeatures()
               ? g_browser_process->GetFeatures()->scheduled_restart_manager()
-@@ -128,7 +128,7 @@ AppMenuIconController::AppMenuIconContro
+@@ -129,7 +129,7 @@ AppMenuIconController::AppMenuIconContro
    global_error_observation_.Observe(
        GlobalErrorServiceFactory::GetForProfile(profile_));
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
    if (auto* srm = GetScheduledRestartManager()) {
      schedule_subscription_ =
          srm->AddScheduleChangedCallback(base::BindRepeating(
-@@ -150,7 +150,7 @@ void AppMenuIconController::UpdateDelega
+@@ -151,7 +151,7 @@ void AppMenuIconController::UpdateDelega
  AppMenuIconController::TypeAndSeverity
  AppMenuIconController::GetTypeAndSeverity() const {
  #if !BUILDFLAG(IS_CHROMEOS)
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
    // Display the badge immediately if a restart is scheduled. By default in
    // production, the first nudge interval (14 days) occurs well after upgrade
    // annoyance is reached, but testing environments or Finch trial configs can
-@@ -202,7 +202,7 @@ std::u16string AppMenuIconController::Ge
+@@ -203,7 +203,7 @@ std::u16string AppMenuIconController::Ge
    if (severity == Severity::kNone) {
      return std::u16string();
    } else if (type == IconType::kUpgradeNotification) {
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
      if (base::FeatureList::IsEnabled(features::kScheduledRestart)) {
        if (auto* srm = GetScheduledRestartManager();
            srm && srm->is_scheduled()) {
-@@ -211,7 +211,7 @@ std::u16string AppMenuIconController::Ge
+@@ -212,7 +212,7 @@ std::u16string AppMenuIconController::Ge
      }
  #endif
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__icon__controller.cc,v 1.12 2
      int message_id = IDS_APP_MENU_BUTTON_UPDATE;
      // Select an update text option randomly. Show this text in all browser
      // windows.
-@@ -251,7 +251,7 @@ std::u16string AppMenuIconController::Ge
+@@ -252,7 +252,7 @@ std::u16string AppMenuIconController::Ge
    if (severity == Severity::kNone) {
      return l10n_util::GetStringUTF16(IDS_APPMENU_TOOLTIP);
    } else if (type == IconType::kUpgradeNotification) {

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_hung__renderer__view.cc,v 1.32 2026/11/08 15:38:57 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_hung__renderer__view.cc,v 1.33 2026/11/19 19:45:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/hung_renderer_view.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/views/hung_renderer_view.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/views/hung_renderer_view.cc
-@@ -452,7 +452,7 @@ void HungRendererDialogView::ForceCrashH
+@@ -453,7 +453,7 @@ void HungRendererDialogView::ForceCrashH
    content::RenderProcessHost* rph =
        hung_pages_table_model_->GetRenderWidgetHost()->GetProcess();
    if (rph) {

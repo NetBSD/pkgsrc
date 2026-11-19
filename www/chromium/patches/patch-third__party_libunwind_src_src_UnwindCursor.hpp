@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_libunwind_src_src_UnwindCursor.hpp,v 1.18 2026/11/08 15:39:11 kikadf Exp $
+$NetBSD: patch-third__party_libunwind_src_src_UnwindCursor.hpp,v 1.19 2026/11/19 19:46:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/libunwind/src/src/UnwindCursor.hpp.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/libunwind/src/src/UnwindCursor.hpp
-@@ -114,6 +114,8 @@ extern "C" _Unwind_Reason_Code __libunwi
+@@ -125,6 +125,8 @@ extern "C" _Unwind_Reason_Code __libunwi
  
  namespace libunwind {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_libunwind_src_src_UnwindCursor.hpp,v 1.18 2026/11/08
  #if defined(_LIBUNWIND_SUPPORT_DWARF_UNWIND)
  /// Cache of recently found FDEs.
  template <typename A>
-@@ -2939,7 +2941,14 @@ void UnwindCursor<A, R>::setInfoBasedOnI
+@@ -2955,7 +2957,14 @@ void UnwindCursor<A, R>::setInfoBasedOnI
  
    // Ask address space object to find unwind sections for this pc.
    UnwindInfoSections sects;

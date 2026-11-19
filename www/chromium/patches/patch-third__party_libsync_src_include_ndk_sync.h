@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libsync_src_include_ndk_sync.h,v 1.14 2026/11/08 15:39:11 kikadf Exp $
+$NetBSD: patch-third__party_libsync_src_include_ndk_sync.h,v 1.15 2026/11/19 19:46:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libsync/src/include/ndk/sync.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/libsync/src/include/ndk/sync.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/libsync/src/include/ndk/sync.h
 @@ -29,6 +29,7 @@
  #include <stdint.h>

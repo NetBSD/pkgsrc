@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_common_api___permission__features.json,v 1.32 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-extensions_common_api___permission__features.json,v 1.33 2026/11/19 19:46:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/_permission_features.json.orig	2026-11-02 23:22:33.000000000 +0000
+--- extensions/common/api/_permission_features.json.orig	2026-11-11 21:01:38.000000000 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -61,7 +61,7 @@
      "channel": "stable",
@@ -100,7 +100,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.32 2026/11/
      "allowlist": [
        // DO NOT ADD ANY MORE ENTRIES HERE.
        // networkingPrivate is being migrated to networking.onc.
-@@ -630,7 +630,7 @@
+@@ -622,7 +622,7 @@
      "channel": "stable",
      "extension_types": ["extension", "platform_app" ],
      // "desktop_android" is not supported.
@@ -109,7 +109,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.32 2026/11/
    },
    "proxy": [{
      "channel": "stable",
-@@ -662,7 +662,7 @@
+@@ -654,7 +654,7 @@
      "channel": "stable",
      "extension_types": ["platform_app"],
      // "desktop_android" is not supported.
@@ -118,7 +118,7 @@ $NetBSD: patch-extensions_common_api___permission__features.json,v 1.32 2026/11/
    },
    "storage": [
      {
-@@ -759,7 +759,7 @@
+@@ -751,7 +751,7 @@
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
      // "desktop_android" is not supported.

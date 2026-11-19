@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.32 2026/11/08 15:38:53 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.33 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -274,7 +274,7 @@ void OnLocalStatePrefsLoaded();
+@@ -276,7 +276,7 @@ void OnLocalStatePrefsLoaded();
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.32 2026/11/08 15:38:
  #include "chrome/browser/browser_features.h"
  #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
  #include "components/os_crypt/async/browser/secret_portal_key_provider.h"
-@@ -295,7 +295,7 @@ void OnLocalStatePrefsLoaded();
+@@ -300,7 +300,7 @@ void OnLocalStatePrefsLoaded();
  #include "components/os_crypt/async/common/encryptor.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.32 2026/11/08 15:38:
  // How often to check if the persistent instance of Chrome needs to restart
  // to install an update.
  static const int kUpdateCheckIntervalHours = 6;
-@@ -1364,7 +1364,7 @@ void BrowserProcessImpl::RegisterPrefs(P
+@@ -1396,7 +1396,7 @@ void BrowserProcessImpl::RegisterPrefs(P
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingAllowed, true);
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingEnabled, false);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.32 2026/11/08 15:38:
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1627,7 +1627,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1662,7 +1662,7 @@ void BrowserProcessImpl::PreMainMessageL
            local_state(), /*force_protection_level=*/std::nullopt)));
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.32 2026/11/08 15:38:
    base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    const auto password_store =
        cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore);
-@@ -1970,7 +1970,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -2017,7 +2017,7 @@ void BrowserProcessImpl::Unpin() {
  }
  
  // Mac is currently not supported.

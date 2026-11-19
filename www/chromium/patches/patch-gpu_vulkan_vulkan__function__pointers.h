@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_vulkan_vulkan__function__pointers.h,v 1.32 2026/11/08 15:39:05 kikadf Exp $
+$NetBSD: patch-gpu_vulkan_vulkan__function__pointers.h,v 1.33 2026/11/19 19:46:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_function_pointers.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- gpu/vulkan/vulkan_function_pointers.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ gpu/vulkan/vulkan_function_pointers.h
-@@ -391,7 +391,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu
+@@ -393,7 +393,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu
    VulkanFunction<PFN_vkGetSwapchainImagesKHR> vkGetSwapchainImagesKHR;
    VulkanFunction<PFN_vkQueuePresentKHR> vkQueuePresentKHR;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_vulkan_vulkan__function__pointers.h,v 1.32 2026/11/08 15:39:0
    VulkanFunction<PFN_vkGetImageDrmFormatModifierPropertiesEXT>
        vkGetImageDrmFormatModifierPropertiesEXT;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -1405,7 +1405,7 @@ ALWAYS_INLINE VkResult vkQueuePresentKHR
+@@ -1407,7 +1407,7 @@ ALWAYS_INLINE VkResult vkQueuePresentKHR
                                                               pPresentInfo);
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-gpu_vulkan_vulkan__function__pointers.h,v 1.32 2026/11/08 15:39:0
  ALWAYS_INLINE VkResult vkGetImageDrmFormatModifierPropertiesEXT(
      VkDevice device,
      VkImage image,
-@@ -1415,4 +1415,4 @@ ALWAYS_INLINE VkResult vkGetImageDrmForm
+@@ -1417,4 +1417,4 @@ ALWAYS_INLINE VkResult vkGetImageDrmForm
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  

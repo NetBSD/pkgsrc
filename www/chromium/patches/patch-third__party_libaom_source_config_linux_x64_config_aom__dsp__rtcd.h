@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libaom_source_config_linux_x64_config_aom__dsp__rtcd.h,v 1.8 2026/11/08 15:39:10 kikadf Exp $
+$NetBSD: patch-third__party_libaom_source_config_linux_x64_config_aom__dsp__rtcd.h,v 1.9 2026/11/19 19:46:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/libaom/source/config/linux/x64/config/aom_dsp_rtcd.h
 @@ -59,8 +59,6 @@ void aom_blend_a64_vmask_c(uint8_t *dst,
  void aom_blend_a64_vmask_sse4_1(uint8_t *dst, uint32_t dst_stride, const uint8_t *src0, uint32_t src0_stride, const uint8_t *src1, uint32_t src1_stride, const uint8_t *mask, int w, int h);

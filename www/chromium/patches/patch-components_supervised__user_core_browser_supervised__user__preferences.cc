@@ -1,12 +1,12 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__preferences.cc,v 1.32 2026/11/08 15:39:01 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__preferences.cc,v 1.33 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_preferences.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_preferences.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_preferences.cc
-@@ -148,7 +148,7 @@ void RegisterProfilePrefs(PrefRegistrySi
+@@ -146,7 +146,7 @@ void RegisterProfilePrefs(PrefRegistrySi
    registry->RegisterBooleanPref(prefs::kChildAccountStatusKnown, false);
    registry->RegisterStringPref(prefs::kFamilyLinkUserMemberRole, std::string());
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) && \

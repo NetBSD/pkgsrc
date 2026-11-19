@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/themes/theme_service_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
 @@ -28,7 +28,7 @@
  #include "chrome/browser/themes/theme_helper_win.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_time_time__now__posix.cc,v 1.31 2026/11/08 15:38:52 kikadf Exp $
+$NetBSD: patch-base_time_time__now__posix.cc,v 1.32 2026/11/19 19:45:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/time/time_now_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/time/time_now_posix.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/time/time_now_posix.cc
 @@ -110,7 +110,11 @@ std::optional<TimeTicks> MaybeTimeTicksN
  }

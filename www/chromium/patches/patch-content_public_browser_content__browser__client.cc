@@ -1,12 +1,12 @@
-$NetBSD: patch-content_public_browser_content__browser__client.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_public_browser_content__browser__client.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/content_browser_client.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/public/browser/content_browser_client.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/public/browser/content_browser_client.cc
-@@ -1425,7 +1425,7 @@ bool ContentBrowserClient::ShouldRunOutO
+@@ -1437,7 +1437,7 @@ bool ContentBrowserClient::ShouldRunOutO
  // that can be adequately sandboxed.
  // Currently Android's network service will not run out of process or sandboxed,
  // so OutOfProcessSystemDnsResolution is not currently enabled on Android.

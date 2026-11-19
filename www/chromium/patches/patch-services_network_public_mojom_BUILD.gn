@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.32 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.33 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/mojom/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/network/public/mojom/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/network/public/mojom/BUILD.gn
 @@ -711,11 +711,11 @@ mojom("url_loader_base") {
    ]
@@ -29,8 +29,8 @@ $NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.32 2026/11/08 15:39:08
      cpp_typemaps += [
        {
          types = [
-@@ -2046,7 +2046,7 @@ mojom("mojom") {
-     }
+@@ -2052,7 +2052,7 @@ mojom("mojom") {
+     enabled_features += [ "enable_reporting" ]
    }
  
 -  if (is_linux) {

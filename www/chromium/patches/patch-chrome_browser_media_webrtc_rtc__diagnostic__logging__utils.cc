@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_rtc__diagnostic__logging__utils.cc,v 1.16 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_rtc__diagnostic__logging__utils.cc,v 1.17 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/rtc_diagnostic_logging_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/media/webrtc/rtc_diagnostic_logging_utils.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/media/webrtc/rtc_diagnostic_logging_utils.cc
 @@ -32,7 +32,7 @@
  #include "url/origin.h"

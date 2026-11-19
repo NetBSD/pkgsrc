@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards_relaunch__chrome__banner.cc,v 1.8 2026/11/08 15:38:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_notification__cards_relaunch__chrome__banner.cc,v 1.9 2026/11/19 19:45:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/notification_cards/relaunch_chrome_banner.cc
 @@ -44,7 +44,7 @@ std::u16string RelaunchChromeBanner::Get
    return l10n_util::GetStringUTF16(

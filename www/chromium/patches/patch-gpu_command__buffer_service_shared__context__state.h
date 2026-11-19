@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.32 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.33 2026/11/19 19:46:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_context_state.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- gpu/command_buffer/service/shared_context_state.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ gpu/command_buffer/service/shared_context_state.h
 @@ -274,7 +274,7 @@ class GPU_GLES2_EXPORT SharedContextStat
    gpu::MemoryTypeTracker* memory_type_tracker() {
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__context__state.h,v 1.32 2026/
    ExternalSemaphorePool* external_semaphore_pool() {
      return external_semaphore_pool_.get();
    }
-@@ -445,7 +445,7 @@ class GPU_GLES2_EXPORT SharedContextStat
+@@ -446,7 +446,7 @@ class GPU_GLES2_EXPORT SharedContextStat
    base::Time last_gl_check_graphics_reset_status_;
    bool disable_check_reset_status_throttling_for_test_ = false;
  

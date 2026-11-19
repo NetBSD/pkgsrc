@@ -1,44 +1,44 @@
-$NetBSD: patch-tools_code__cache__generator_BUILD.gn,v 1.31 2026/11/08 15:39:12 kikadf Exp $
+$NetBSD: patch-tools_code__cache__generator_BUILD.gn,v 1.32 2026/11/19 19:46:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/code_cache_generator/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- tools/code_cache_generator/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ tools/code_cache_generator/BUILD.gn
-@@ -15,8 +15,34 @@ if (is_android) {
-   import("//build/config/android/rules.gni")
- }
- 
--executable("code_cache_generator") {
-+group("code_cache_generator") {
-+    deps = [ ":code_cache_generator_executable" ]
-+    if (target_os == "netbsd") {
-+      deps+= [ ":run_paxctl_code_cache_generator" ]
+@@ -22,8 +22,34 @@ if (is_android) {
+ # tests, which run it next to the snapshot in the root build directory.
+ if (v8_snapshot_toolchain == current_toolchain ||
+     current_toolchain == default_toolchain) {
+-  executable("code_cache_generator") {
++    group("code_cache_generator") {
++      deps = [ ":code_cache_generator_executable" ]
++      if (target_os == "netbsd") {
++        deps+= [ ":run_paxctl_code_cache_generator" ]
++      }
 +    }
-+}
 +
-+action("run_paxctl_code_cache_generator") {
-+  deps = [ ":code_cache_generator_executable" ]
++    action("run_paxctl_code_cache_generator") {
++      deps = [ ":code_cache_generator_executable" ]
 +
-+  script = "//v8/tools/run-paxctl.py"
-+  stamp = "$target_gen_dir/paxctl_stamp"
-+  outputs = [ stamp ]
++      script = "//v8/tools/run-paxctl.py"
++      stamp = "$target_gen_dir/paxctl_stamp"
++      outputs = [ stamp ]
 +
-+  sources = []
-+  data = []
++      sources = []
++      data = []
 +
-+  args = [
-+    rebase_path(stamp, root_build_dir),
-+    "/usr/sbin/paxctl", "+m",
-+    "./" + rebase_path(get_label_info(":code_cache_generator_executable", "root_out_dir") + "/code_cache_generator",
-+    root_build_dir),
-+  ]
-+}
++      args = [
++        rebase_path(stamp, root_build_dir),
++        "/usr/sbin/paxctl", "+m",
++        "./" + rebase_path(get_label_info(":code_cache_generator_executable", "root_out_dir") + "/code_cache_generator",
++        root_build_dir),
++      ]
++    }
 +
-+executable("code_cache_generator_executable") {
-   sources = [ "code_cache_generator.cc" ]
-+  output_name = "code_cache_generator"
++    executable("code_cache_generator_executable") {
+     sources = [ "code_cache_generator.cc" ]
++    output_name = "code_cache_generator"
  
-   deps = [
-     "//gin",
+     deps = [
+       "//gin",

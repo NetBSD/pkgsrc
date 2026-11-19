@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.28 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc,v 1.29 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/signals/signals_aggregator_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/signals/signals_aggregator_factory.cc
 @@ -63,7 +63,7 @@
  #include "components/device_signals/core/browser/settings_client.h"
@@ -39,6 +39,6 @@ $NetBSD: patch-chrome_browser_enterprise_signals_signals__aggregator__factory.cc
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   if (enterprise_signals::features::IsCertificateCollectionEnabled()) {
-     auto* profile_network_service =
-         ProfileNetworkContextServiceFactory::GetForContext(profile);
+   if (enterprise_signals::features::IsCertificateCollectionEnabled() &&
+       ProfileNetworkContextServiceFactory::GetForContext(profile)) {
+     // The client certificate store is only created when certificates are

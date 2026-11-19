@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_sys-info.cc,v 1.32 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-v8_src_base_sys-info.cc,v 1.33 2026/11/19 19:46:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/sys-info.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- v8/src/base/sys-info.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ v8/src/base/sys-info.cc
 @@ -35,8 +35,12 @@ namespace base {
  

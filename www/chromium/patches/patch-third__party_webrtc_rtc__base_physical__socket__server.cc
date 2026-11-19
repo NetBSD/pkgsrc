@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.32 2026/11/08 15:39:12 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.33 2026/11/19 19:46:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -63,7 +63,7 @@
  #undef SetPort
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.32 
                 // Suppress SIGPIPE. See above for explanation.
                 MSG_NOSIGNAL,
  #else
-@@ -756,7 +756,7 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -765,7 +765,7 @@ int PhysicalSocket::TranslateOption(Opti
        *slevel = IPPROTO_IP;
        *sopt = IP_DONTFRAGMENT;
        break;
@@ -60,7 +60,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.32 
        RTC_LOG(LS_WARNING) << "Socket::OPT_DONTFRAGMENT not supported.";
        return -1;
  #elif defined(WEBRTC_POSIX)
-@@ -805,7 +805,7 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -814,7 +814,7 @@ int PhysicalSocket::TranslateOption(Opti
        return -1;
  #endif
      case OPT_RECV_ECN:
@@ -69,7 +69,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.32 
        if (family_ == AF_INET6) {
          *slevel = IPPROTO_IPV6;
          *sopt = IPV6_RECVTCLASS;
-@@ -825,10 +825,19 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -834,10 +834,19 @@ int PhysicalSocket::TranslateOption(Opti
        *sopt = SO_KEEPALIVE;
        break;
      case OPT_TCP_KEEPCNT:
@@ -89,7 +89,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_physical__socket__server.cc,v 1.32 
        *slevel = IPPROTO_TCP;
  #if !defined(WEBRTC_MAC)
        *sopt = TCP_KEEPIDLE;
-@@ -836,12 +845,18 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -845,12 +854,18 @@ int PhysicalSocket::TranslateOption(Opti
        *sopt = TCP_KEEPALIVE;
  #endif
        break;

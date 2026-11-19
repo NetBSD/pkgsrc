@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__alloc__features.cc,v 1.14 2026/11/08 15:38:50 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__alloc__features.cc,v 1.15 2026/11/19 19:45:49 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_alloc_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/allocator/partition_alloc_features.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/allocator/partition_alloc_features.cc
 @@ -132,7 +132,7 @@ constinit const FeatureParam<std::string
      kPartitionAllocSchedulerLoopQuarantineConfig{

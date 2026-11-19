@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.10 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_actions.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/browser_actions.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/browser_actions.cc
-@@ -257,7 +257,7 @@
+@@ -263,7 +263,7 @@
  #include "chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 k
  #include "chrome/browser/enterprise/util/managed_browser_utils.h"
  #include "chrome/common/pref_names.h"
  #include "components/prefs/pref_service.h"
-@@ -2767,7 +2767,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2824,7 +2824,7 @@ void BrowserActions::InitializeToolbarAn
            .Build());
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -2926,7 +2926,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -2982,7 +2982,7 @@ void BrowserActions::InitializeToolbarAn
            .SetAccelerator(GetAcceleratorForCommandId(IDC_EXIT))
            .Build());
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 k
    root_action_item_->AddChild(
        actions::ActionItem::Builder(
            base::BindRepeating(
-@@ -3895,7 +3895,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -3939,7 +3939,7 @@ void BrowserActions::InitializeToolbarAn
                [](BrowserWindowInterface* bwi, actions::ActionItem* item,
                   actions::ActionInvocationContext context) {
                  base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 k
                  chrome::CreateDesktopShortcutForActiveWebContents(bwi);
  #else
                  web_app::CreateWebAppFromCurrentWebContents(
-@@ -4854,7 +4854,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -4893,7 +4893,7 @@ void BrowserActions::InitializeToolbarAn
            IDS_CHROME_ENTERPRISE_RELEASE_NOTES,
            IDS_CHROME_ENTERPRISE_RELEASE_NOTES, omnibox::kChromeProductIcon,
            /*is_pinnable=*/false)
@@ -51,7 +51,16 @@ $NetBSD: patch-chrome_browser_ui_browser__actions.cc,v 1.9 2026/11/08 15:38:56 k
            .SetVisible(
                enterprise_util::IsBrowserManaged(profile) &&
                base::FeatureList::IsEnabled(features::kEnterpriseReleaseNotes))
-@@ -4982,7 +4982,7 @@ void BrowserActions::InitializeToolbarAn
+@@ -4920,7 +4920,7 @@ void BrowserActions::InitializeToolbarAn
+           .SetVisible(false)
+           .Build());
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Required so IDC_SCHEDULED_RESTART_DIALOG is supported when browser
+   // commands are routed through actions.
+   root_action_item_->AddChild(
+@@ -5041,7 +5041,7 @@ void BrowserActions::InitializeToolbarAn
  #endif
  
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \

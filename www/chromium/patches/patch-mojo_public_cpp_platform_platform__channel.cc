@@ -1,10 +1,10 @@
-$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.6 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-mojo_public_cpp_platform_platform__channel.cc,v 1.7 2026/11/19 19:46:03 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/platform_channel.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- mojo/public/cpp/platform/platform_channel.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ mojo/public/cpp/platform/platform_channel.cc
 @@ -148,6 +148,32 @@ void CreateChannel(PlatformHandle* local
    *remote_endpoint = PlatformHandle(std::move(receive));

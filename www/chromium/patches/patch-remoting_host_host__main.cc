@@ -1,21 +1,21 @@
-$NetBSD: patch-remoting_host_host__main.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_host__main.cc,v 1.33 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/host_main.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/host_main.cc
-@@ -24,7 +24,7 @@
- #include "remoting/base/crash/crash_reporting_crashpad.h"
- #include "remoting/base/logging.h"
+@@ -38,7 +38,7 @@
+ #include "remoting/proto/control.pb.h"
+ #endif  // !BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include <sys/stat.h>
  #include <unistd.h>
  
-@@ -70,13 +70,13 @@ int FileChooserMain();
+@@ -84,13 +84,13 @@ int FileChooserMain();
  int RdpDesktopSessionMain();
  int UrlForwarderConfiguratorMain();
  #endif  // BUILDFLAG(IS_WIN)
@@ -31,7 +31,7 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp
  void EnsureVarLibDirectory() {
    if (getuid() != 0) {
      // Only do this in the daemon process, which is always run as root.
-@@ -204,7 +204,7 @@ MainRoutineFn SelectMainRoutine(const st
+@@ -223,7 +223,7 @@ MainRoutineFn SelectMainRoutine(const st
    } else if (process_type == kProcessTypeUrlForwarderConfigurator) {
      main_routine = &UrlForwarderConfiguratorMain;
  #endif  // BUILDFLAG(IS_WIN)
@@ -40,16 +40,16 @@ $NetBSD: patch-remoting_host_host__main.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp
    } else if (process_type == kProcessTypeXSessionChooser) {
      main_routine = &XSessionChooserMain;
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -268,7 +268,7 @@ int HostMain(int argc, char** argv) {
-   // Enable debug logs.
-   InitHostLogging();
+@@ -338,7 +338,7 @@ int HostMain(int argc, char** argv) {
+   }
+ #endif  // !BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    EnsureVarLibDirectory();
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -279,7 +279,7 @@ int HostMain(int argc, char** argv) {
+@@ -349,7 +349,7 @@ int HostMain(int argc, char** argv) {
    // Note that we enable crash reporting only if the user has opted in to having
    // the crash reports uploaded.
    if (IsUsageStatsAllowed()) {

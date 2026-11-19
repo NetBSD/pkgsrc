@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_file__system__access_file__path__watcher_file__path__watcher__bsd.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_browser_file__system__access_file__path__watcher_file__path__watcher__bsd.cc,v 1.33 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2026-11-08 10:04:49.763139586 +0000
+--- content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc.orig	2026-11-19 14:17:18.285127071 +0000
 +++ content/browser/file_system_access/file_path_watcher/file_path_watcher_bsd.cc
 @@ -0,0 +1,60 @@
 +// Copyright 2024 The Chromium Authors

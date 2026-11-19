@@ -1,10 +1,10 @@
-$NetBSD: patch-components_enterprise_connectors_core_analysis__service__settings__base.cc,v 1.6 2026/11/08 15:38:59 kikadf Exp $
+$NetBSD: patch-components_enterprise_connectors_core_analysis__service__settings__base.cc,v 1.7 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/connectors/core/analysis_service_settings_base.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/enterprise/connectors/core/analysis_service_settings_base.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/enterprise/connectors/core/analysis_service_settings_base.cc
 @@ -283,7 +283,7 @@ void AnalysisServiceSettingsBase::ParseV
    const char* verification_key = kKeyWindowsVerification;

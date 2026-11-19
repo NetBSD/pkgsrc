@@ -1,12 +1,12 @@
-$NetBSD: patch-components_startup__metric__utils_browser_startup__metric__utils.h,v 1.8 2026/11/08 15:39:01 kikadf Exp $
+$NetBSD: patch-components_startup__metric__utils_browser_startup__metric__utils.h,v 1.9 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/startup_metric_utils/browser/startup_metric_utils.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/startup_metric_utils/browser/startup_metric_utils.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/startup_metric_utils/browser/startup_metric_utils.h
-@@ -205,7 +205,7 @@ class COMPONENT_EXPORT(STARTUP_METRIC_UT
+@@ -206,7 +206,7 @@ class COMPONENT_EXPORT(STARTUP_METRIC_UT
    // Only permit construction from within GetBrowser().
    BrowserStartupMetricRecorder();
  

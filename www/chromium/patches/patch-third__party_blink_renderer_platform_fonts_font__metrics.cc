@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__metrics.cc,v 1.32 2026/11/08 15:39:09 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__metrics.cc,v 1.33 2026/11/19 19:46:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_metrics.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_metrics.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_metrics.cc
 @@ -42,7 +42,7 @@
  namespace blink {
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__metrics.cc,v 1.3
    // Manually digging up VDMX metrics is only applicable when bytecode hinting
    // using FreeType.  With DirectWrite or CoreText, no bytecode hinting is ever
    // done.  This code should be pushed into FreeType (hinted font metrics).
-@@ -118,7 +118,7 @@ void FontMetrics::AscentDescentWithHacks
+@@ -121,7 +121,7 @@ void FontMetrics::AscentDescentWithHacks
      descent = SkScalarRoundToScalar(metrics.fDescent);
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

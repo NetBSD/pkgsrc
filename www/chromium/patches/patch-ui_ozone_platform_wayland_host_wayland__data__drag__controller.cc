@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.17 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc,v 1.18 2026/11/19 19:46:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_data_drag_controller.cc
 @@ -48,7 +48,7 @@
  #include "ui/ozone/platform/wayland/host/wayland_window.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc
    return mime_type == kMimeTypePortalFileTransfer ||
           mime_type == kMimeTypePortalFiles;
  #else
-@@ -203,7 +203,7 @@ void WaylandDataDragController::StartSes
+@@ -207,7 +207,7 @@ void WaylandDataDragController::StartSes
    }
  
    auto mime_types = GetOfferedExchangeDataProvider()->BuildMimeTypesList();
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc
    if (GetOfferedExchangeDataProvider()->HasFile()) {
      mime_types.push_back(kMimeTypePortalFileTransfer);
      mime_types.push_back(kMimeTypePortalFiles);
-@@ -621,7 +621,7 @@ void WaylandDataDragController::OnDataSo
+@@ -625,7 +625,7 @@ void WaylandDataDragController::OnDataSo
    CHECK_EQ(data_source_.get(), source);
    VLOG(1) << __FUNCTION__ << " mime=" << mime_type;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_host_wayland__data__drag__controller.cc
    if (mime_type == kMimeTypePortalFileTransfer ||
        mime_type == kMimeTypePortalFiles) {
      std::optional<std::vector<FileInfo>> filenames =
-@@ -743,7 +743,7 @@ void WaylandDataDragController::OnDataFe
+@@ -751,7 +751,7 @@ void WaylandDataDragController::OnDataFe
      return;
    }
  

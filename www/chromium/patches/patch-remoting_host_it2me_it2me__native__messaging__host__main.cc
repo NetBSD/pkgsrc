@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_it2me_it2me__native__messaging__host__main.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_it2me_it2me__native__messaging__host__main.cc,v 1.33 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
 @@ -30,7 +30,7 @@
  #include "remoting/host/resources.h"

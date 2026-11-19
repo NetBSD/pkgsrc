@@ -1,12 +1,12 @@
-$NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-v8_BUILD.gn,v 1.33 2026/11/19 19:46:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- v8/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ v8/BUILD.gn
-@@ -1135,6 +1135,9 @@ external_v8_defines = [
+@@ -1151,6 +1151,9 @@ external_v8_defines = [
    "V8_TARGET_OS_MACOS",
    "V8_TARGET_OS_WIN",
    "V8_TARGET_OS_CHROMEOS",
@@ -16,7 +16,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
    "V8_TARGET_ARCH_ARM64",
    "V8_TARGET_ARCH_PPC64",
    "V8_TARGET_ARCH_MIPS64",
-@@ -1227,6 +1230,15 @@ if (target_os == "android") {
+@@ -1244,6 +1247,15 @@ if (target_os == "android") {
  } else if (target_os == "chromeos") {
    enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
    enabled_external_v8_defines += [ "V8_TARGET_OS_CHROMEOS" ]
@@ -32,7 +32,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
  }
  
  # Some V8_TARGET_ARCH_ defines that affect Api constants (see usages of
-@@ -1923,7 +1935,7 @@ config("toolchain") {
+@@ -1949,7 +1961,7 @@ config("toolchain") {
      # don't block compiler updates in Chromium. We'll resolve these when
      # rolling the compiler update into V8 instead.
      if (!build_with_chromium && v8_current_cpu != "ppc64" &&
@@ -41,7 +41,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
        cflags += [ "-Wlifetime-safety-permissive" ]
      }
  
-@@ -2511,7 +2523,7 @@ if (v8_use_metagen) {
+@@ -2536,7 +2548,7 @@ if (v8_use_metagen) {
  
    # The clang toolchain's resource dir contains builting headers
    # include/{stddef.h,stdarg.h,...}.
@@ -50,7 +50,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
  
    # The headers are parsed with v8_base_without_compiler's flags.
    _metagen_flags_target = ":v8_base_without_compiler"
-@@ -2574,7 +2586,6 @@ if (v8_use_metagen) {
+@@ -2599,7 +2611,6 @@ if (v8_use_metagen) {
                 # Proxy for the whole builtin-header directory, which has no
                 # GN glob: a toolchain roll rewrites stddef.h along with the
                 # rest, and Metagen cannot parse without it.
@@ -58,8 +58,8 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
               ] + _metagen_libclang_files
  
      # Write-if-changed on each output. Dependents only re-run if needed.
-@@ -3046,6 +3057,23 @@ action("generate_bytecode_builtins_list"
-   ]
+@@ -3198,6 +3209,23 @@ if (v8_use_checked_in_generated_headers)
+   }
  }
  
 +action("run_paxctl_mksnapshot") {
@@ -82,7 +82,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
  # Template to generate different V8 snapshots based on different runtime flags.
  # Can be invoked with run_mksnapshot(<name>). The target will resolve to
  # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
-@@ -3065,7 +3093,11 @@ template("run_mksnapshot") {
+@@ -3217,7 +3245,11 @@ template("run_mksnapshot") {
    }
  
    action("run_mksnapshot_" + name) {
@@ -95,7 +95,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
      if (v8_verify_deterministic_mksnapshot) {
        # We archive the snapshot executable when verifying snapshot
        # determinism to ease debugging.
-@@ -3195,6 +3227,12 @@ template("run_mksnapshot") {
+@@ -3347,6 +3379,12 @@ template("run_mksnapshot") {
        if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
          args += [ "--reorder-builtins" ]
        }
@@ -108,7 +108,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
      }
  
      # This is needed to distinguish between generating code for the simulator
-@@ -5456,7 +5494,7 @@ v8_header_set("v8_internal_headers") {
+@@ -5616,7 +5654,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -117,7 +117,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -7003,7 +7041,7 @@ v8_cluster_source_set("v8_base_without_c
+@@ -7156,7 +7194,7 @@ v8_cluster_source_set("v8_base_without_c
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -126,7 +126,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -7718,7 +7756,7 @@ v8_component("v8_libbase") {
+@@ -7882,7 +7920,7 @@ v8_component("v8_libbase") {
      }
    }
  
@@ -135,7 +135,7 @@ $NetBSD: patch-v8_BUILD.gn,v 1.32 2026/11/08 15:39:14 kikadf Exp $
      sources += [
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-linux.cc",
-@@ -7729,6 +7767,27 @@ v8_component("v8_libbase") {
+@@ -7893,6 +7931,27 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]

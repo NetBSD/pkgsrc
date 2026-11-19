@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_linux_services_libc__interceptor.cc,v 1.32 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-sandbox_linux_services_libc__interceptor.cc,v 1.33 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
 @@ -12,7 +12,9 @@
  #include <stddef.h>

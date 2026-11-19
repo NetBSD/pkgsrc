@@ -1,12 +1,12 @@
-$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.32 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
-@@ -50,7 +50,7 @@
+@@ -49,7 +49,7 @@
  #include "net/base/network_change_notifier.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.32 2026/
  #include "ui/base/ime/init/input_method_initializer.h"
  #endif
  
-@@ -61,7 +61,7 @@
+@@ -60,7 +60,7 @@
  #include "device/bluetooth/floss/floss_features.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.32 2026/
  #include "device/bluetooth/dbus/dbus_bluez_manager_wrapper_linux.h"
  #include "ui/linux/linux_ui.h"          // nogncheck
  #include "ui/linux/linux_ui_factory.h"  // nogncheck
-@@ -128,7 +128,7 @@ void ShellBrowserMainParts::PostCreateMa
+@@ -127,7 +127,7 @@ void ShellBrowserMainParts::PostCreateMa
  }
  
  int ShellBrowserMainParts::PreEarlyInitialization() {
@@ -33,7 +33,7 @@ $NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.32 2026/
    ui::InitializeInputMethodForTesting();
  #elif BUILDFLAG(IS_ANDROID)
    net::NetworkChangeNotifier::SetFactory(
-@@ -156,7 +156,7 @@ void ShellBrowserMainParts::ToolkitIniti
+@@ -155,7 +155,7 @@ void ShellBrowserMainParts::ToolkitIniti
    if (switches::IsRunWebTestsSwitchPresent())
      return;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.32 2026/
    ui::LinuxUi::SetInstance(ui::GetDefaultLinuxUi());
  #endif
  }
-@@ -204,7 +204,7 @@ void ShellBrowserMainParts::PostMainMess
+@@ -203,7 +203,7 @@ void ShellBrowserMainParts::PostMainMess
    ShellDevToolsManagerDelegate::StopHttpHandler();
    browser_context_.reset();
    off_the_record_browser_context_.reset();

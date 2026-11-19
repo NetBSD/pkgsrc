@@ -1,12 +1,12 @@
-$NetBSD: patch-services_service__manager_BUILD.gn,v 1.32 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_service__manager_BUILD.gn,v 1.33 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/service_manager/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/service_manager/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/service_manager/BUILD.gn
-@@ -65,7 +65,7 @@ source_set("service_manager") {
+@@ -63,7 +63,7 @@ source_set("service_manager") {
      ]
    }
  

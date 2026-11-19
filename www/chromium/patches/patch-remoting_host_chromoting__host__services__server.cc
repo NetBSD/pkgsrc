@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_chromoting__host__services__server.cc,v 1.14 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_chromoting__host__services__server.cc,v 1.15 2026/11/19 19:46:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_server.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/chromoting_host_services_server.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/chromoting_host_services_server.cc
 @@ -17,7 +17,7 @@
  #include "remoting/host/mojo_caller_security_checker.h"

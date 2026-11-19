@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.31 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.32 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/util/managed_browser_utils.cc
-@@ -319,7 +319,7 @@ void SetUserAcceptedAccountManagement(Pr
+@@ -301,7 +301,7 @@ void SetUserAcceptedAccountManagement(Pr
    // The updated consent screen also ask the user for consent to share device
    // signals.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.31 
    profile->GetPrefs()->SetBoolean(
        device_signals::prefs::kDeviceSignalsPermanentConsentReceived, accepted);
  #endif
-@@ -328,7 +328,7 @@ void SetUserAcceptedAccountManagement(Pr
+@@ -310,7 +310,7 @@ void SetUserAcceptedAccountManagement(Pr
        profile_manager->GetProfileAttributesStorage()
            .GetProfileAttributesWithPath(profile->GetPath());
    if (entry) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.31 
      SetEnterpriseProfileLabel(profile);
  #endif
      entry->SetUserAcceptedAccountManagement(accepted);
-@@ -414,7 +414,7 @@ bool CanShowEnterpriseProfileUI(Profile*
+@@ -396,7 +396,7 @@ bool CanShowEnterpriseProfileUI(Profile*
  }
  
  bool CanShowEnterpriseBadgingForNTPFooter(Profile* profile) {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.31 
    BrowserManagementNoticeState management_notice_state =
        GetManagementNoticeStateForNTPFooter(profile);
    switch (management_notice_state) {
-@@ -432,7 +432,7 @@ bool CanShowEnterpriseBadgingForNTPFoote
+@@ -414,7 +414,7 @@ bool CanShowEnterpriseBadgingForNTPFoote
  
  BrowserManagementNoticeState GetManagementNoticeStateForNTPFooter(
      Profile* profile) {

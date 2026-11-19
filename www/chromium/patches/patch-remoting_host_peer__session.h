@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_peer__session.h,v 1.7 2026/11/08 15:39:07 kikadf Exp $
+$NetBSD: patch-remoting_host_peer__session.h,v 1.8 2026/11/19 19:46:05 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/peer_session.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- remoting/host/peer_session.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ remoting/host/peer_session.h
 @@ -19,7 +19,7 @@
  #include "remoting/proto/control.pb.h"

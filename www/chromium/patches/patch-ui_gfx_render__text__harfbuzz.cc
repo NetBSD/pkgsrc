@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_gfx_render__text__harfbuzz.cc,v 1.11 2026/11/08 15:39:13 kikadf Exp $
+$NetBSD: patch-ui_gfx_render__text__harfbuzz.cc,v 1.12 2026/11/19 19:46:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_harfbuzz.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/gfx/render_text_harfbuzz.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/gfx/render_text_harfbuzz.cc
-@@ -203,7 +203,7 @@ const char* GetPlatformColorEmojiFontNam
+@@ -207,7 +207,7 @@ const char* GetPlatformColorEmojiFontNam
    return "Segoe UI Emoji";
  #elif BUILDFLAG(IS_APPLE)
    return "Apple Color Emoji";

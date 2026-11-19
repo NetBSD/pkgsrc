@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -231,7 +231,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1478,7 +1478,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
+@@ -1479,7 +1479,7 @@ RenderProcessHostImpl::IOThreadHostImpl:
  
  void RenderProcessHostImpl::IOThreadHostImpl::SetPid(
      base::ProcessId child_pid) {
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  }
-@@ -3879,7 +3879,7 @@ void RenderProcessHostImpl::AppendRender
+@@ -3880,7 +3880,7 @@ void RenderProcessHostImpl::AppendRender
    command_line->AppendSwitchASCII(switches::kRendererClientId,
                                    base::NumberToString(GetID().value()));
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
    // Append `kDisableVideoCaptureUseGpuMemoryBuffer` flag if there is no support
    // for NV12 GPU memory buffer.
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled() &&
-@@ -3938,6 +3938,7 @@ void RenderProcessHostImpl::PropagateBro
+@@ -3939,6 +3939,7 @@ void RenderProcessHostImpl::PropagateBro
        switches::kDisableSkiaRuntimeOpts,
        switches::kDisableSpeechAPI,
        switches::kDisableThreadedCompositing,
@@ -50,7 +50,7 @@ $NetBSD: patch-content_browser_renderer__host_render__process__host__impl.cc,v 1
        switches::kDisableV8IdleTasks,
        switches::kDisableVideoCaptureUseGpuMemoryBuffer,
        switches::kDomAutomationController,
-@@ -5962,7 +5963,7 @@ uint64_t RenderProcessHostImpl::GetPriva
+@@ -5969,7 +5970,7 @@ uint64_t RenderProcessHostImpl::GetPriva
    // - Win: https://crbug.com/707022 .
    uint64_t total_size = 0;
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

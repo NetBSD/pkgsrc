@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.32 2026/11/08 15:39:11 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.33 2026/11/19 19:46:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
-@@ -48,7 +48,8 @@
+@@ -47,7 +47,8 @@
  #endif
  
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) || \
@@ -16,7 +16,7 @@ $NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.32 2026/11/08 
  #include <sys/ucred.h>
  #endif
  
-@@ -1073,9 +1074,16 @@ void UnixSocket::ReadPeerCredentialsPosi
+@@ -1072,9 +1073,16 @@ void UnixSocket::ReadPeerCredentialsPosi
    ignore_result(peer_gid);
    PERFETTO_CHECK(res == 0);
    // There is no pid when obtaining peer credentials for QNX
@@ -35,7 +35,7 @@ $NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.32 2026/11/08 
    socklen_t len = sizeof(user_cred);
    int fd = sock_raw_.fd();
    int res = getsockopt(fd, SOL_SOCKET, SO_PEERCRED, &user_cred, &len);
-@@ -1090,6 +1098,14 @@ void UnixSocket::ReadPeerCredentialsPosi
+@@ -1089,6 +1097,14 @@ void UnixSocket::ReadPeerCredentialsPosi
    PERFETTO_CHECK(res == 0 && user_cred.cr_version == XUCRED_VERSION);
    peer_uid_ = static_cast<uid_t>(user_cred.cr_uid);
    // There is no pid in the LOCAL_PEERCREDS for MacOS / FreeBSD.

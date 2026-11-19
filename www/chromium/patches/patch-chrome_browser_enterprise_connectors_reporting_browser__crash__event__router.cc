@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_browser__crash__event__router.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_browser__crash__event__router.cc,v 1.33 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc
 @@ -13,7 +13,7 @@ namespace enterprise_connectors {
  

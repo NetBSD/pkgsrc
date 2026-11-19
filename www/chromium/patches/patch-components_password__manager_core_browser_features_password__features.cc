@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.33 2026/11/08 15:39:00 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_features_password__features.cc,v 1.34 2026/11/19 19:45:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
-@@ -81,7 +81,7 @@ BASE_FEATURE(kClearUndecryptablePassword
+@@ -66,7 +66,7 @@ BASE_FEATURE(kClearUndecryptablePassword
  BASE_FEATURE(kClearUndecryptablePasswordsOnSync,
               "ClearUndecryptablePasswordsInSync",
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_IOS) || \
@@ -15,7 +15,16 @@ $NetBSD: patch-components_password__manager_core_browser_features_password__feat
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -199,7 +199,7 @@ BASE_FEATURE(kPreventPasswordManagerOnFe
+@@ -173,7 +173,7 @@ BASE_FEATURE(kPasswordSaveInContextError
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kPasswordSignInInContextErrorResolution,
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+@@ -188,7 +188,7 @@ BASE_FEATURE(kPreventPasswordManagerOnFe
  // Remove in or after M155.
  BASE_FEATURE(kRecordPasswordReadiness, base::FEATURE_ENABLED_BY_DEFAULT);
  

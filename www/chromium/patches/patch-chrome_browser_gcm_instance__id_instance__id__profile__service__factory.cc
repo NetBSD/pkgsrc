@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_gcm_instance__id_instance__id__profile__service__factory.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_gcm_instance__id_instance__id__profile__service__factory.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc
 @@ -16,7 +16,7 @@ namespace instance_id {
  // static

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_toolbar_cast_cast__toolbar__button__util.cc,v 1.1 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toolbar_cast_cast__toolbar__button__util.cc,v 1.2 2026/11/19 19:45:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/cast/cast_toolbar_button_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/toolbar/cast/cast_toolbar_button_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/toolbar/cast/cast_toolbar_button_util.cc
 @@ -21,7 +21,7 @@
  #include "ui/base/base_window.h"

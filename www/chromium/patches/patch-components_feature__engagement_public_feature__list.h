@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.32 2026/11/08 15:39:00 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.33 2026/11/19 19:45:59 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -399,7 +399,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPinMostVis
+@@ -418,7 +418,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPinMostVis
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,16 +15,16 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.32 2026
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  DEFINE_VARIATION_PARAM(kEsbDownloadRowPromoFeature, "EsbDownloadRowPromo");
  #endif
-@@ -563,7 +563,7 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
+@@ -588,7 +588,7 @@ DEFINE_VARIATION_PARAM(kIPHTabGroupsShar
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+ DEFINE_VARIATION_PARAM(kIPH_AutofillAmbientAutofillSpiiDisclaimer,
+                        "IPH_AutofillAmbientAutofillSpiiDisclaimer");
  DEFINE_VARIATION_PARAM(kIPHAutofillAccountNameEmailSuggestionFeature,
-                        "IPH_AutofillAccountNameEmailSuggestion");
- DEFINE_VARIATION_PARAM(kIPHAutofillAiValuablesFeature,
-@@ -609,7 +609,7 @@ DEFINE_VARIATION_PARAM(kIPHLauncherSearc
+@@ -634,7 +634,7 @@ DEFINE_VARIATION_PARAM(kIPHGoogleOneOffe
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.32 2026
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunchAppInTab,
-@@ -617,7 +617,7 @@ DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLi
+@@ -642,7 +642,7 @@ DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLi
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
          // BUILDFLAG(IS_CHROMEOS)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.32 2026
  DEFINE_VARIATION_PARAM(kIPHSignInBenefitsFeature, "IPH_SignInBenefits");
  DEFINE_VARIATION_PARAM(kIPHSupervisedUserProfileSigninFeature,
                         "IPH_SupervisedUserProfileSignin");
-@@ -861,7 +861,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -896,7 +896,7 @@ inline constexpr flags_ui::FeatureEntry:
          VARIATION_ENTRY(kIPHWhatsNewUpdatedFeature),
  // keep-sorted end
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -51,17 +51,17 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.h,v 1.32 2026
  #if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
          VARIATION_ENTRY(kIPHExtensionsMenuFeature),
          VARIATION_ENTRY(kIPHExtensionsRequestAccessButtonFeature),
-@@ -945,7 +945,7 @@ inline constexpr flags_ui::FeatureEntry:
+@@ -984,7 +984,7 @@ inline constexpr flags_ui::FeatureEntry:
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  // keep-sorted start case=no
+         VARIATION_ENTRY(kIPH_AutofillAmbientAutofillSpiiDisclaimer),
          VARIATION_ENTRY(kIPHAutofillAccountNameEmailSuggestionFeature),
-         VARIATION_ENTRY(kIPHAutofillAiValuablesFeature),
-@@ -972,13 +972,13 @@ inline constexpr flags_ui::FeatureEntry:
-         VARIATION_ENTRY(kIPHLauncherSearchHelpUiFeature),
+@@ -1011,13 +1011,13 @@ inline constexpr flags_ui::FeatureEntry:
+         VARIATION_ENTRY(kIPHGrowthFramework),
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

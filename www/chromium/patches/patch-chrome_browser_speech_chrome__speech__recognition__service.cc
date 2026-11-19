@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_speech_chrome__speech__recognition__service.cc,v 1.1 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_speech_chrome__speech__recognition__service.cc,v 1.2 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/speech/chrome_speech_recognition_service.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/speech/chrome_speech_recognition_service.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/speech/chrome_speech_recognition_service.cc
 @@ -303,7 +303,7 @@ void ChromeSpeechRecognitionService::Lau
  

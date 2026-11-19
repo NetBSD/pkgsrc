@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_launch.h,v 1.32 2026/11/08 15:38:51 kikadf Exp $
+$NetBSD: patch-base_process_launch.h,v 1.33 2026/11/19 19:45:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/process/launch.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/process/launch.h
 @@ -7,6 +7,13 @@
  #ifndef BASE_PROCESS_LAUNCH_H_

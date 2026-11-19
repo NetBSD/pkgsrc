@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_actions_chrome__action__id.h,v 1.32 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_actions_chrome__action__id.h,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
-@@ -473,7 +473,7 @@
+@@ -295,7 +295,7 @@
    E(kActionVisitDesktopOfLruUser3, IDC_VISIT_DESKTOP_OF_LRU_USER_3) \
    E(kActionVisitDesktopOfLruUser4, IDC_VISIT_DESKTOP_OF_LRU_USER_4) \
    E(kActionVisitDesktopOfLruUser5, IDC_VISIT_DESKTOP_OF_LRU_USER_5)

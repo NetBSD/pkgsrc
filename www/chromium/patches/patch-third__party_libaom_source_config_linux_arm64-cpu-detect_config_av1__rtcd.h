@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_libaom_source_config_linux_arm64-cpu-detect_config_av1__rtcd.h,v 1.18 2026/11/08 15:39:10 kikadf Exp $
+$NetBSD: patch-third__party_libaom_source_config_linux_arm64-cpu-detect_config_av1__rtcd.h,v 1.19 2026/11/19 19:46:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/libaom/source/config/linux/arm64-cpu-detect/config/av1_rtcd.h
-@@ -194,8 +194,10 @@ RTCD_EXTERN void (*av1_dist_wtd_convolve
+@@ -201,8 +201,10 @@ RTCD_EXTERN void (*av1_dist_wtd_convolve
  
  void av1_dist_wtd_convolve_y_c(const uint8_t *src, int src_stride, uint8_t *dst, int dst_stride, int w, int h, const InterpFilterParams *filter_params_y, const int subpel_y_qn, ConvolveParams *conv_params);
  void av1_dist_wtd_convolve_y_neon(const uint8_t *src, int src_stride, uint8_t *dst, int dst_stride, int w, int h, const InterpFilterParams *filter_params_y, const int subpel_y_qn, ConvolveParams *conv_params);
@@ -17,7 +17,7 @@ $NetBSD: patch-third__party_libaom_source_config_linux_arm64-cpu-detect_config_a
  RTCD_EXTERN void (*av1_dist_wtd_convolve_y)(const uint8_t *src, int src_stride, uint8_t *dst, int dst_stride, int w, int h, const InterpFilterParams *filter_params_y, const int subpel_y_qn, ConvolveParams *conv_params);
  
  void av1_dr_prediction_z1_c(uint8_t *dst, ptrdiff_t stride, int bw, int bh, const uint8_t *above, const uint8_t *left, int upsample_above, int dx, int dy);
-@@ -534,8 +536,10 @@ static void setup_rtcd_internal(void)
+@@ -541,8 +543,10 @@ static void setup_rtcd_internal(void)
      if (flags & HAS_NEON_DOTPROD) av1_dist_wtd_convolve_x = av1_dist_wtd_convolve_x_neon_dotprod;
      if (flags & HAS_NEON_I8MM) av1_dist_wtd_convolve_x = av1_dist_wtd_convolve_x_neon_i8mm;
      av1_dist_wtd_convolve_y = av1_dist_wtd_convolve_y_neon;

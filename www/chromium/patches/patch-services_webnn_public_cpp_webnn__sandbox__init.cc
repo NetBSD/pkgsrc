@@ -1,12 +1,12 @@
-$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.8 2026/11/08 15:39:08 kikadf Exp $
+$NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.9 2026/11/19 19:46:06 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- services/webnn/public/cpp/webnn_sandbox_init.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ services/webnn/public/cpp/webnn_sandbox_init.cc
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  #include "services/webnn/public/cpp/webnn_buildflags.h"
  #include "services/webnn/public/mojom/features.mojom-features.h"
  
@@ -15,12 +15,30 @@ $NetBSD: patch-services_webnn_public_cpp_webnn__sandbox__init.cc,v 1.8 2026/11/0
  #include <dlfcn.h>
  #endif
  
-@@ -34,7 +34,7 @@ void PreSandboxWebNNInitialization(bool 
-   base::FilePath library_path(
-       FILE_PATH_LITERAL("libLiteRtWebGpuAccelerator.dll"));
-   base::LoadNativeLibrary(library_path, nullptr);
+@@ -21,7 +21,7 @@ namespace webnn {
+ 
+ void PreSandboxWebNNInitialization(bool is_gpu_process) {
+ #if BUILDFLAG(WEBNN_USE_WEBGPU_ACCELERATOR) && \
+-    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX))
++    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+ #if BUILDFLAG(IS_WIN)
+   if (!base::FeatureList::IsEnabled(
+           webnn::mojom::features::kWebMachineLearningNeuralNetwork)) {
+@@ -40,7 +40,7 @@ void PreSandboxWebNNInitialization(bool 
+ 
+   constexpr base::FilePath::StringViewType kLibraryName =
+       FILE_PATH_LITERAL("libLiteRtWebGpuAccelerator.dll");
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // On Linux, the library is preloaded once in the Zygote process during
    // PreSandboxInit(), allowing all forked renderers to share the library
    // pages via copy-on-write without repeating initialization. The Zygote
+@@ -59,7 +59,7 @@ void PreSandboxWebNNInitialization(bool 
+ 
+ #if BUILDFLAG(IS_WIN)
+   base::LoadNativeLibrary(library_path, nullptr);
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   dlopen(library_path.value().c_str(), RTLD_LAZY | RTLD_LOCAL | RTLD_NODELETE);
+ #endif
+ #endif  // BUILDFLAG(WEBNN_USE_WEBGPU_ACCELERATOR) && (BUILDFLAG(IS_WIN) ||

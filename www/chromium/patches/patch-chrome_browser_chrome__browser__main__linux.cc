@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.32 2026/11/08 15:38:53 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.33 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
 @@ -24,7 +24,7 @@
  #include "device/bluetooth/dbus/bluez_dbus_manager.h"
@@ -12,10 +12,10 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.32 2026/11/08 
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- #include "ui/ozone/public/ozone_platform.h"
- #if BUILDFLAG(USE_DBUS)
- #include "components/dbus/thread_linux/dbus_thread_linux.h"
-@@ -82,8 +82,10 @@ void ChromeBrowserMainPartsLinux::PostCr
+ #include "base/containers/to_vector.h"
+ #include "chrome/browser/profiles/profile_attributes_entry.h"
+ #include "chrome/browser/profiles/profile_attributes_storage.h"
+@@ -88,8 +88,10 @@ void ChromeBrowserMainPartsLinux::PostCr
  
  #if !BUILDFLAG(IS_CHROMEOS)
  #if BUILDFLAG(USE_DBUS)
@@ -26,7 +26,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.32 2026/11/08 
    session_end_listener_ = SessionEndListenerLinux::Create();
  #endif  // BUILDFLAG(USE_DBUS)
  #endif  // !BUILDFLAG(IS_CHROMEOS)
-@@ -91,7 +93,7 @@ void ChromeBrowserMainPartsLinux::PostCr
+@@ -97,7 +99,7 @@ void ChromeBrowserMainPartsLinux::PostCr
    ChromeBrowserMainPartsPosix::PostCreateMainMessageLoop();
  }
  
@@ -35,7 +35,16 @@ $NetBSD: patch-chrome_browser_chrome__browser__main__linux.cc,v 1.32 2026/11/08 
  void ChromeBrowserMainPartsLinux::PostMainMessageLoopRun() {
    ChromeBrowserMainPartsPosix::PostMainMessageLoopRun();
    ui::OzonePlatform::GetInstance()->PostMainMessageLoopRun();
-@@ -131,7 +133,9 @@ void ChromeBrowserMainPartsLinux::PostDe
+@@ -114,7 +116,7 @@ void ChromeBrowserMainPartsLinux::PrePro
+       base::BindOnce(base::IgnoreResult(&base::GetLinuxDistro)));
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Browser windows pick their WM_CLASS / app_id when they are created, so
+   // find out which profiles have a per-profile desktop entry before the first
+   // window is opened. This is a handful of stat() calls for profiles other
+@@ -151,7 +153,9 @@ void ChromeBrowserMainPartsLinux::PostDe
  #if BUILDFLAG(USE_DBUS)
    session_end_listener_.reset();
  #endif

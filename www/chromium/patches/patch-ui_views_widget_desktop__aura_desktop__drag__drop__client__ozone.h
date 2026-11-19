@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.h,v 1.32 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.h,v 1.33 2026/11/19 19:46:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h
-@@ -73,7 +73,7 @@ class VIEWS_EXPORT DesktopDragDropClient
+@@ -79,7 +79,7 @@ class VIEWS_EXPORT DesktopDragDropClient
      // The offset of |drag_widget_| relative to the mouse position.
      gfx::Vector2d offset;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_widget_desktop__aura_desktop__drag__drop__client__ozone.
      // The last received drag location.  The drag widget is moved asynchronously
      // so its position is updated when the UI thread has time for that.  When
      // the first change to the location happens, a call to UpdateDragWidget()
-@@ -94,7 +94,7 @@ class VIEWS_EXPORT DesktopDragDropClient
+@@ -100,7 +100,7 @@ class VIEWS_EXPORT DesktopDragDropClient
        const gfx::Point& root_location,
        int allowed_operations,
        ui::mojom::DragEventSource source) override;

@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_public_scoped__res__state.cc,v 1.32 2026/11/08 15:39:06 kikadf Exp $
+$NetBSD: patch-net_dns_public_scoped__res__state.cc,v 1.33 2026/11/19 19:46:04 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/scoped_res_state.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- net/dns/public/scoped_res_state.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ net/dns/public/scoped_res_state.cc
 @@ -29,7 +29,7 @@ ScopedResState::~ScopedResState() {
  #if !BUILDFLAG(IS_OPENBSD) && !BUILDFLAG(IS_FUCHSIA)

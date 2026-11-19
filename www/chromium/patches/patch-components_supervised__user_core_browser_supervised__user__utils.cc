@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.cc,v 1.17 2026/11/08 15:39:01 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__utils.cc,v 1.18 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_utils.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_utils.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_utils.cc
 @@ -42,7 +42,7 @@ constexpr char kParentAccessResultQueryP
  constexpr char kPacpOriginUrlHost[] = "families.google.com";

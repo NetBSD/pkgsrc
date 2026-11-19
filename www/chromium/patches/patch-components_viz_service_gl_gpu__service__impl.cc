@@ -1,12 +1,12 @@
-$NetBSD: patch-components_viz_service_gl_gpu__service__impl.cc,v 1.30 2026/11/08 15:39:01 kikadf Exp $
+$NetBSD: patch-components_viz_service_gl_gpu__service__impl.cc,v 1.31 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/gl/gpu_service_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/viz/service/gl/gpu_service_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/viz/service/gl/gpu_service_impl.cc
-@@ -505,7 +505,7 @@ void GpuServiceImpl::InitializeWithHostI
+@@ -507,7 +507,7 @@ void GpuServiceImpl::InitializeWithHostI
  
    mojo::Remote<mojom::GpuHost> gpu_host(std::move(pending_gpu_host));
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_viz_service_gl_gpu__service__impl.cc,v 1.30 2026/11/08
    gpu_extra_info_.is_gmb_nv12_supported = IsGMBNV12Supported();
  #endif
  
-@@ -1300,7 +1300,7 @@ bool GpuServiceImpl::OnBeginFrameDerived
+@@ -1309,7 +1309,7 @@ bool GpuServiceImpl::OnBeginFrameDerived
    return true;
  }
  

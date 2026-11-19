@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_begin__frame__provider.cc,v 1.32 2026/11/08 15:39:10 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_begin__frame__provider.cc,v 1.33 2026/11/19 19:46:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
-@@ -71,7 +71,11 @@ void BeginFrameProvider::CreateComposito
+@@ -75,7 +75,11 @@ void BeginFrameProvider::CreateComposito
  
    // Once we are using RAF, this thread is driving user interactive display
    // updates. Update priority accordingly.

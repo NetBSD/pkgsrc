@@ -1,10 +1,10 @@
-$NetBSD: patch-content_services_isolated__xr__device_xr__runtime__provider.cc,v 1.1 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-content_services_isolated__xr__device_xr__runtime__provider.cc,v 1.2 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/services/isolated_xr_device/xr_runtime_provider.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/services/isolated_xr_device/xr_runtime_provider.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/services/isolated_xr_device/xr_runtime_provider.cc
 @@ -21,7 +21,7 @@
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_metrics_BUILD.gn,v 1.12 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_BUILD.gn,v 1.13 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/metrics/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/metrics/BUILD.gn
 @@ -216,7 +216,7 @@ source_set("metrics") {
      ]
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_metrics_BUILD.gn,v 1.12 2026/11/08 15:38:54 kikadf
      public += [ "chrome_metrics_service_crash_reporter.h" ]
    }
  
-@@ -492,7 +492,7 @@ source_set("impl") {
+@@ -497,7 +497,7 @@ source_set("impl") {
      sources += [ "structured/chrome_structured_metrics_delegate.cc" ]
    }
  
@@ -33,8 +33,8 @@ $NetBSD: patch-chrome_browser_metrics_BUILD.gn,v 1.12 2026/11/08 15:38:54 kikadf
      sources += [ "bluetooth_metrics_provider.cc" ]
    }
  
-@@ -507,7 +507,7 @@ source_set("impl") {
-     deps += [ "//chrome/browser/updates:update_metrics" ]
+@@ -516,7 +516,7 @@ source_set("impl") {
+     deps += [ "//chrome/browser/default_browser:startup_metrics" ]
    }
  
 -  if (is_win || is_android || is_linux) {

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_accelerated__static__bitmap__image.cc,v 1.1 2026/11/08 15:39:10 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_accelerated__static__bitmap__image.cc,v 1.2 2026/11/19 19:46:07 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/accelerated_static_bitmap_image.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/accelerated_static_bitmap_image.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/accelerated_static_bitmap_image.cc
 @@ -155,7 +155,7 @@ scoped_refptr<StaticBitmapImage> Acceler
    bool should_force_bgra8_to_rgba =

@@ -1,10 +1,10 @@
-$NetBSD: patch-build_toolchain_gcc__solink__wrapper.py,v 1.32 2026/11/08 15:38:52 kikadf Exp $
+$NetBSD: patch-build_toolchain_gcc__solink__wrapper.py,v 1.33 2026/11/19 19:45:52 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/gcc_solink_wrapper.py.orig	2026-11-02 23:22:33.000000000 +0000
+--- build/toolchain/gcc_solink_wrapper.py.orig	2026-11-11 21:01:38.000000000 +0000
 +++ build/toolchain/gcc_solink_wrapper.py
 @@ -41,7 +41,7 @@ def CollectDynSym(args):
      toc = ''

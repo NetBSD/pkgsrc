@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38:52 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.33 2026/11/19 19:45:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -6,6 +6,13 @@
  
@@ -20,7 +20,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
  #include <sched.h>
  #include <stddef.h>
  #include <stdint.h>
-@@ -80,6 +87,7 @@ void* ThreadFunc(void* params) {
+@@ -81,6 +88,7 @@ void* ThreadFunc(void* params) {
        base::DisallowSingleton();
      }
  
@@ -28,7 +28,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
  #if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC)
      partition_alloc::internal::StackTopRegistry::Get().NotifyThreadCreated();
  #endif
-@@ -93,6 +101,7 @@ void* ThreadFunc(void* params) {
+@@ -94,6 +102,7 @@ void* ThreadFunc(void* params) {
      // where they were created. This explicitly sets the priority of all new
      // threads.
      PlatformThread::SetDefaultThreadType(thread_params->thread_type);
@@ -36,7 +36,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
    }
  
    ThreadIdNameManager::GetInstance()->RegisterThread(
-@@ -270,6 +279,12 @@ PlatformThreadId PlatformThreadBase::Cur
+@@ -271,6 +280,12 @@ PlatformThreadId PlatformThreadBase::Cur
  
  #elif BUILDFLAG(IS_POSIX) && BUILDFLAG(IS_AIX)
    return PlatformThreadId(pthread_self());
@@ -49,7 +49,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
  #elif BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_AIX)
    return PlatformThreadId(reinterpret_cast<int64_t>(pthread_self()));
  #endif
-@@ -363,6 +378,9 @@ void PlatformThreadBase::Detach(Platform
+@@ -364,6 +379,9 @@ void PlatformThreadBase::Detach(Platform
  
  // static
  bool PlatformThreadBase::CanChangeThreadType(ThreadType from, ThreadType to) {
@@ -59,7 +59,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
    if (from >= to) {
      // Decreasing thread priority on POSIX is always allowed.
      return true;
-@@ -372,10 +390,15 @@ bool PlatformThreadBase::CanChangeThread
+@@ -373,10 +391,15 @@ bool PlatformThreadBase::CanChangeThread
    }
  
    return internal::CanLowerNiceTo(internal::ThreadTypeToNiceValue(to));
@@ -75,7 +75,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.32 2026/11/08 15:38
    // Mirrors SetCurrentThreadPriority()'s implementation.
    auto platform_specific_priority =
        internal::GetCurrentEffectiveThreadTypeForPlatformForTest();  // IN-TEST
-@@ -386,6 +409,7 @@ ThreadType PlatformThreadBase::GetCurren
+@@ -387,6 +410,7 @@ ThreadType PlatformThreadBase::GetCurren
    int nice_value = internal::GetCurrentThreadNiceValue();
  
    return internal::NiceValueToThreadTypeForTest(nice_value);  // IN-TEST

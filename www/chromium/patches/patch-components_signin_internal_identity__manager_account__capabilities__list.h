@@ -1,10 +1,10 @@
-$NetBSD: patch-components_signin_internal_identity__manager_account__capabilities__list.h,v 1.14 2026/11/08 15:39:01 kikadf Exp $
+$NetBSD: patch-components_signin_internal_identity__manager_account__capabilities__list.h,v 1.15 2026/11/19 19:46:00 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/signin/internal/identity_manager/account_capabilities_list.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/signin/internal/identity_manager/account_capabilities_list.h
 @@ -78,7 +78,7 @@ ACCOUNT_CAPABILITY(kCanSignInToChromeCap
  #endif

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_public_common_content__features.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_public_common_content__features.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/public/common/content_features.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/public/common/content_features.cc
-@@ -154,7 +154,7 @@ BASE_FEATURE(kAttachUnownedInnerWebConte
+@@ -146,7 +146,7 @@ BASE_FEATURE(kAttachUnownedInnerWebConte
  
  // Runs the audio service in a separate process.
  BASE_FEATURE(kAudioServiceOutOfProcess,
@@ -15,7 +15,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.32 2026/11/08 15:3
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -164,7 +164,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+@@ -156,7 +156,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
  // Enables the audio-service sandbox. This feature has an effect only when the
  // kAudioServiceOutOfProcess feature is enabled.
  BASE_FEATURE(kAudioServiceSandbox,
@@ -24,7 +24,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.32 2026/11/08 15:3
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1355,10 +1355,10 @@ BASE_FEATURE(kWebAssemblyTiering, base::
+@@ -1375,10 +1375,10 @@ BASE_FEATURE(kWebAssemblyTiering, base::
  
  // Enable WebAssembly trap handler.
  BASE_FEATURE(kWebAssemblyTrapHandler,
@@ -37,7 +37,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.32 2026/11/08 15:3
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1421,7 +1421,11 @@ BASE_FEATURE(kWebUIInProcessResourceLoad
+@@ -1447,7 +1447,11 @@ BASE_FEATURE(kWebUIInProcessResourceLoad
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

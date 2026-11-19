@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_new__tab__page_new__tab__page__handler.cc,v 1.6 2026/11/08 15:38:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_new__tab__page_new__tab__page__handler.cc,v 1.7 2026/11/19 19:45:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/webui/new_tab_page/new_tab_page_handler.cc
 @@ -61,7 +61,7 @@
  #include "chrome/browser/ui/hats/hats_service_factory.h"

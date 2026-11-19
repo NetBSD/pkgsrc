@@ -1,10 +1,10 @@
-$NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.32 2026/11/08 15:38:59 kikadf Exp $
+$NetBSD: patch-components_crash_core_app_BUILD.gn,v 1.33 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/crash/core/app/BUILD.gn.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/crash/core/app/BUILD.gn.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/crash/core/app/BUILD.gn
 @@ -115,6 +115,10 @@ static_library("app") {
      ]

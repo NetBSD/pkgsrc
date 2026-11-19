@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_web__app__install__info.h,v 1.32 2026/11/08 15:38:58 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_web__app__install__info.h,v 1.33 2026/11/19 19:45:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/web_app_install_info.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/web_applications/web_app_install_info.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/web_applications/web_app_install_info.h
 @@ -41,7 +41,7 @@
  #include "url/gurl.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest.cc,v 1.32 2026/11/08 15:39:03 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest.cc,v 1.33 2026/11/19 19:46:01 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura_unittest.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura_unittest.cc
-@@ -57,7 +57,7 @@
+@@ -62,7 +62,7 @@
  #include "ui/base/dragdrop/os_exchange_data_provider_non_backed.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
  #include "ui/base/x/selection_utils.h"
  #include "ui/base/x/x11_os_exchange_data_provider.h"
  #include "ui/gfx/x/atom_cache.h"
-@@ -115,7 +115,7 @@ class TestDragDropClient : public aura::
+@@ -149,7 +149,7 @@ class TestDragDropClient : public aura::
      last_source_ = source;
      return DragOperation::kCopy;
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    void UpdateDragImage(const gfx::ImageSkia& image,
                         const gfx::Vector2d& offset) override {}
  #endif
-@@ -302,7 +302,7 @@ TEST_F(WebContentsViewAuraTest, WebConte
+@@ -338,7 +338,7 @@ TEST_F(WebContentsViewAuraTest, WebConte
                               ui::EF_LEFT_MOUSE_BUTTON, 0);
    ui::EventHandler* event_handler = GetView();
    event_handler->OnMouseEvent(&mouse_event);
@@ -33,7 +33,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    // The web-content is not activated during mouse-press on Linux.
    // See comment in WebContentsViewAura::OnMouseEvent() for more details.
    EXPECT_NE(web_contents(), nullptr);
-@@ -372,7 +372,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
+@@ -408,7 +408,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
    view->OnDragEntered(event);
    ASSERT_NE(nullptr, view->current_drag_data_);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    // By design, Linux implementations return an empty string if file data
    // is also present.
    EXPECT_TRUE(!view->current_drag_data_->text ||
-@@ -412,7 +412,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
+@@ -448,7 +448,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
  
    CheckDropData(view);
  
@@ -51,7 +51,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    // By design, Linux implementations returns an empty string if file data
    // is also present.
    EXPECT_TRUE(!drop_complete_data_->drop_data.text ||
-@@ -470,7 +470,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
+@@ -506,7 +506,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
    view->OnDragEntered(event);
    ASSERT_NE(nullptr, view->current_drag_data_);
  
@@ -60,7 +60,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    // By design, Linux implementations return an empty string if file data
    // is also present.
    EXPECT_TRUE(!view->current_drag_data_->text ||
-@@ -502,7 +502,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
+@@ -538,7 +538,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
  
    CheckDropData(view);
  
@@ -69,7 +69,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura__unittest
    // By design, Linux implementations returns an empty string if file data is
    // also present.
    EXPECT_TRUE(!drop_complete_data_->drop_data.text ||
-@@ -534,7 +534,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
+@@ -570,7 +570,7 @@ TEST_F(WebContentsViewAuraTest, MAYBE_Dr
  
    auto data = std::make_unique<ui::OSExchangeData>();
  

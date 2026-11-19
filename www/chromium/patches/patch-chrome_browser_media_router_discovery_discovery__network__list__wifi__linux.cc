@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__wifi__linux.cc,v 1.32 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__wifi__linux.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc
 @@ -4,7 +4,11 @@
  
@@ -15,22 +15,31 @@ $NetBSD: patch-chrome_browser_media_router_discovery_discovery__network__list__w
 +#if !BUILDFLAG(IS_BSD)
  #include <linux/wireless.h>
 +#endif
- #include <string.h>
  #include <sys/ioctl.h>
  #include <sys/socket.h>
-@@ -20,6 +24,7 @@ namespace media_router {
- bool MaybeGetWifiSSID(const std::string& if_name, std::string* ssid_out) {
-   CHECK(ssid_out, base::NotFatalUntil::M161);
+ #include <sys/types.h>
+@@ -17,11 +21,14 @@
+ #include "base/files/scoped_file.h"
+ #include "base/strings/string_util.h"
+ #include "base/strings/string_view_util.h"
++#if !BUILDFLAG(IS_BSD)
+ #include "net/base/network_interfaces_linux.h"
++#endif
  
+ namespace media_router {
+ 
+ std::optional<std::string> MaybeGetWifiSSID(std::string_view if_name) {
 +#if !BUILDFLAG(IS_BSD)
    base::ScopedFD ioctl_socket(socket(AF_INET, SOCK_DGRAM, 0));
    if (!ioctl_socket.is_valid()) {
      // AF_INET is for IPv4, so it may fail for IPv6-only hosts even when there
-@@ -42,6 +47,7 @@ bool MaybeGetWifiSSID(const std::string&
-     ssid_out->assign(ssid);
-     return true;
+@@ -46,6 +53,9 @@ std::optional<std::string> MaybeGetWifiS
+     return std::nullopt;
    }
+   return std::string(ssid_view);
++#else
++  return std::nullopt;
 +#endif
-   return false;
  }
  
+ }  // namespace media_router

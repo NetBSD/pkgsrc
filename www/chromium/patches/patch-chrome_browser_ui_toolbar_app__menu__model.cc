@@ -1,12 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.9 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.10 2026/11/19 19:45:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/toolbar/app_menu_model.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/toolbar/app_menu_model.cc
-@@ -1217,7 +1217,7 @@ std::u16string AppMenuModel::GetUpgradeD
+@@ -197,7 +197,7 @@
+ #include "content/public/browser/gpu_data_manager.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/global_features.h"
+ #include "chrome/browser/lifetime/scheduled_restart_manager.h"
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -1226,7 +1226,7 @@ std::u16string AppMenuModel::GetUpgradeD
      return l10n_util::GetStringUTF16(IDS_UPGRADE_BUBBLE_MENU_ITEM);
    }
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -15,7 +24,25 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.9 2026/11/08 15
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE_ALT);
  #else
    return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE);
-@@ -2486,7 +2486,7 @@ void AppMenuModel::Build() {
+@@ -1236,7 +1236,7 @@ std::u16string AppMenuModel::GetUpgradeD
+ // static
+ std::u16string AppMenuModel::GetUpgradeDialogSubstringText() {
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
+-    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX))
++    (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+   if (!UpgradeDetector::GetInstance()->is_outdated_install() &&
+       !UpgradeDetector::GetInstance()->is_outdated_install_no_au()) {
+     return l10n_util::GetStringUTF16(IDS_RELAUNCH_TO_UPDATE_ALT_MINOR_TEXT);
+@@ -1338,7 +1338,7 @@ void AppMenuModel::LogMenuMetrics(int co
+       }
+       LogMenuAction(MENU_ACTION_UPGRADE_DIALOG);
+       break;
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     case IDC_SCHEDULED_RESTART_DIALOG:
+       if (!uma_action_recorded_) {
+         base::UmaHistogramMediumTimes(
+@@ -2515,7 +2515,7 @@ void AppMenuModel::Build() {
  
      SetAccessibleNameAt(GetIndexOfCommandId(IDC_SHOW_MANAGEMENT_PAGE).value(),
                          GetManagedUiMenuItemTooltip(browser_->GetProfile()));
@@ -24,3 +51,12 @@ $NetBSD: patch-chrome_browser_ui_toolbar_app__menu__model.cc,v 1.9 2026/11/08 15
      if (enterprise_util::IsBrowserManaged(browser_->GetProfile()) &&
          base::FeatureList::IsEnabled(features::kEnterpriseReleaseNotes)) {
        AddItemWithStringIdAndVectorIcon(
+@@ -2561,7 +2561,7 @@ void AppMenuModel::CreateZoomMenu() {
+ }
+ 
+ bool AppMenuModel::AddScheduledRestartMenuItem() {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (!scheduled_restart::ScheduledRestartManager::IsAppMenuItemEnabled() ||
+       !g_browser_process || !g_browser_process->GetFeatures()) {
+     return false;

@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_cursor_cursor__factory.h,v 1.32 2026/11/08 15:39:13 kikadf Exp $
+$NetBSD: patch-ui_base_cursor_cursor__factory.h,v 1.33 2026/11/19 19:46:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/cursor/cursor_factory.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- ui/base/cursor/cursor_factory.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ ui/base/cursor/cursor_factory.h
 @@ -93,7 +93,7 @@ class COMPONENT_EXPORT(UI_BASE_CURSOR) C
    base::ObserverList<CursorFactoryObserver>::Unchecked observers_;

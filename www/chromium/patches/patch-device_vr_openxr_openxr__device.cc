@@ -1,10 +1,10 @@
-$NetBSD: patch-device_vr_openxr_openxr__device.cc,v 1.6 2026/11/08 15:39:04 kikadf Exp $
+$NetBSD: patch-device_vr_openxr_openxr__device.cc,v 1.7 2026/11/19 19:46:02 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/vr/openxr/openxr_device.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- device/vr/openxr/openxr_device.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ device/vr/openxr/openxr_device.cc
 @@ -90,7 +90,7 @@ OpenXrDevice::OpenXrDevice(
  

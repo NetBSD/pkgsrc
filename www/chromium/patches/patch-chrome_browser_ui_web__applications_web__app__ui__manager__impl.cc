@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.32 2026/11/08 15:38:57 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.cc,v 1.33 2026/11/19 19:45:56 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
 @@ -463,7 +463,7 @@ bool WebAppUiManagerImpl::IsAppMigration
      return false;
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.c
    BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(window);
    return browser_view &&
           browser_view->GetProperty(kIsPwaUpdateDialogShowingKey) &&
-@@ -1200,7 +1200,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
+@@ -1201,7 +1201,7 @@ void WebAppUiManagerImpl::ClearWebAppSit
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

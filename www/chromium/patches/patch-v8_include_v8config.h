@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_include_v8config.h,v 1.32 2026/11/08 15:39:14 kikadf Exp $
+$NetBSD: patch-v8_include_v8config.h,v 1.33 2026/11/19 19:46:12 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- v8/include/v8config.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ v8/include/v8config.h
 @@ -207,6 +207,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_IOS) \

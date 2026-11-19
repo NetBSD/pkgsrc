@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.33 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
-@@ -108,7 +108,7 @@
+@@ -107,7 +107,7 @@
  #include "chrome/browser/net/chrome_mojo_proxy_resolver_win.h"
  #elif BUILDFLAG(IS_MAC)
  #include "chrome/browser/net/chrome_mojo_proxy_resolver_mac.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
  #include "chrome/browser/net/chrome_mojo_proxy_resolver_linux.h"
  #endif
  
-@@ -145,7 +145,7 @@ enum class NetworkSandboxState {
+@@ -144,7 +144,7 @@ enum class NetworkSandboxState {
  // The global instance of the SystemNetworkContextManager.
  SystemNetworkContextManager* g_system_network_context_manager = nullptr;
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
  // Whether kerberos library loading will work in the network service due to the
  // sandbox.
  bool g_network_service_will_allow_gssapi_library_load = false;
-@@ -153,7 +153,7 @@ bool g_network_service_will_allow_gssapi
+@@ -152,7 +152,7 @@ bool g_network_service_will_allow_gssapi
  const char* kGssapiDesiredPref =
  #if BUILDFLAG(IS_CHROMEOS)
      ash::prefs::kKerberosEnabled;
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
      prefs::kReceivedHttpAuthNegotiateHeader;
  #endif
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -210,7 +210,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -209,7 +209,7 @@ network::mojom::HttpAuthDynamicParamsPtr
    auth_dynamic_params->basic_over_http_enabled =
        local_state->GetBoolean(prefs::kBasicAuthOverHttpEnabled);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    auth_dynamic_params->delegate_by_kdc_policy =
        local_state->GetBoolean(prefs::kAuthNegotiateDelegateByKdcPolicy);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -225,7 +225,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -224,7 +224,7 @@ network::mojom::HttpAuthDynamicParamsPtr
        local_state->GetString(prefs::kAuthAndroidNegotiateAccountType);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    auth_dynamic_params->allow_gssapi_library_load =
        local_state->GetBoolean(kGssapiDesiredPref);
  #endif  // BUILDFLAG(IS_CHROMEOS)
-@@ -235,7 +235,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -234,7 +234,7 @@ network::mojom::HttpAuthDynamicParamsPtr
  
  void OnNewHttpAuthDynamicParams(
      network::mojom::HttpAuthDynamicParamsPtr& params) {
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    // The kerberos library is incompatible with the network service sandbox, so
    // if library loading is now enabled, the network service needs to be
    // restarted. It will be restarted unsandboxed because is
-@@ -283,11 +283,11 @@ NetworkSandboxState IsNetworkSandboxEnab
+@@ -282,11 +282,11 @@ NetworkSandboxState IsNetworkSandboxEnab
      // it is not always initialized.
      CHECK_IS_TEST();
    }
@@ -74,7 +74,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    // The network service sandbox and the kerberos library are incompatible.
    // If kerberos is enabled by policy, disable the network service sandbox.
    if (g_network_service_will_allow_gssapi_library_load ||
-@@ -303,7 +303,7 @@ NetworkSandboxState IsNetworkSandboxEnab
+@@ -302,7 +302,7 @@ NetworkSandboxState IsNetworkSandboxEnab
    }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -83,7 +83,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    if (local_state &&
        local_state->HasPrefPath(prefs::kNetworkServiceSandboxEnabled)) {
      return local_state->GetBoolean(prefs::kNetworkServiceSandboxEnabled)
-@@ -606,7 +606,7 @@ void SystemNetworkContextManager::Delete
+@@ -605,7 +605,7 @@ void SystemNetworkContextManager::Delete
    g_system_network_context_manager = nullptr;
  }
  
@@ -92,7 +92,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
  SystemNetworkContextManager::GssapiLibraryLoadObserver::
      GssapiLibraryLoadObserver(SystemNetworkContextManager* owner)
      : owner_(owner) {}
-@@ -667,7 +667,7 @@ SystemNetworkContextManager::SystemNetwo
+@@ -666,7 +666,7 @@ SystemNetworkContextManager::SystemNetwo
    pref_change_registrar_.Add(prefs::kAllHttpAuthSchemesAllowedForProxies,
                               auth_pref_callback);
  
@@ -101,7 +101,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    pref_change_registrar_.Add(prefs::kAuthNegotiateDelegateByKdcPolicy,
                               auth_pref_callback);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -681,7 +681,7 @@ SystemNetworkContextManager::SystemNetwo
+@@ -680,7 +680,7 @@ SystemNetworkContextManager::SystemNetwo
                               auth_pref_callback);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -110,7 +110,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    pref_change_registrar_.Add(kGssapiDesiredPref, auth_pref_callback);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  
-@@ -754,7 +754,7 @@ void SystemNetworkContextManager::Regist
+@@ -753,7 +753,7 @@ void SystemNetworkContextManager::Regist
    registry->RegisterStringPref(prefs::kAuthNegotiateDelegateAllowlist,
                                 std::string());
  
@@ -119,7 +119,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    registry->RegisterBooleanPref(prefs::kAuthNegotiateDelegateByKdcPolicy,
                                  false);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -784,11 +784,11 @@ void SystemNetworkContextManager::Regist
+@@ -783,11 +783,11 @@ void SystemNetworkContextManager::Regist
  
    registry->RegisterListPref(prefs::kExplicitlyAllowedNetworkPorts);
  
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    registry->RegisterBooleanPref(prefs::kReceivedHttpAuthNegotiateHeader, false);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -865,7 +865,7 @@ void SystemNetworkContextManager::OnNetw
+@@ -864,7 +864,7 @@ void SystemNetworkContextManager::OnNetw
    OnNewHttpAuthDynamicParams(http_auth_dynamic_params);
    network_service->ConfigureHttpAuthPrefs(std::move(http_auth_dynamic_params));
  
@@ -142,7 +142,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -1029,7 +1029,7 @@ void SystemNetworkContextManager::Config
+@@ -1028,7 +1028,7 @@ void SystemNetworkContextManager::Config
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
@@ -151,7 +151,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.cc,v 1.32 20
    if (command_line.HasSwitch(switches::kUseSystemProxyResolver)) {
  #if BUILDFLAG(IS_WIN)
      network_context_params->system_proxy_resolver =
-@@ -1121,7 +1121,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -1120,7 +1120,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  

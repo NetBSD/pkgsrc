@@ -1,13 +1,13 @@
-$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -40,12 +40,12 @@
- #include "ui/base/ui_base_features.h"
+@@ -42,12 +42,12 @@
+ #include "ui/events/keycodes/keyboard_codes.h"
  #include "ui/native_theme/native_theme.h"
  
 -#if defined(USE_AURA) && BUILDFLAG(IS_LINUX)
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.32 2026/11/08 1
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #include "ui/linux/linux_ui.h"
-@@ -114,7 +114,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -116,7 +116,7 @@ void UpdateFromSystemSettings(blink::Ren
                                Profile* profile) {
    const PrefService* pref_service = profile->GetPrefs();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -30,7 +30,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.32 2026/11/08 1
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
    prefs->focus_ring_color = BUILDFLAG(IS_MAC) ? SkColorSetRGB(0x00, 0x5F, 0xCC)
-@@ -128,7 +128,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -130,7 +130,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->inactive_selection_fg_color = SK_ColorBLACK;
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.32 2026/11/08 1
    if (auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile)) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
        linux_ui_theme->GetFocusRingColor(&prefs->focus_ring_color);
-@@ -145,7 +145,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -147,7 +147,7 @@ void UpdateFromSystemSettings(blink::Ren
  #endif  // BUILDFLAG(IS_LINUX)
  #endif  // BUILDFLAG(USE_AURA)
  
@@ -48,7 +48,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.32 2026/11/08 1
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      prefs->middle_click_paste_allowed = linux_ui->PrimaryPasteEnabled();
    }
-@@ -252,7 +252,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -247,7 +247,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->view_source_line_wrap_enabled =
        pref_service->GetBoolean(prefs::kViewSourceLineWrappingEnabled);
  

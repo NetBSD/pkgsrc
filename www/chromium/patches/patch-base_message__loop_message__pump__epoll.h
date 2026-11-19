@@ -1,12 +1,12 @@
-$NetBSD: patch-base_message__loop_message__pump__epoll.h,v 1.30 2026/11/08 15:38:51 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__epoll.h,v 1.31 2026/11/19 19:45:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_epoll.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/message_loop/message_pump_epoll.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/message_loop/message_pump_epoll.h
-@@ -49,7 +49,11 @@ namespace base {
+@@ -41,7 +41,11 @@ namespace base {
  // Caveat: Since both we and the kernel need to walk the list of all fds at
  // every call, don't do it when we have too many FDs.
  BASE_FEATURE(kUsePollForMessagePumpEpoll,

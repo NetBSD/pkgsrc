@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.32 2026/11/08 15:38:58 kikadf Exp $
+$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.33 2026/11/19 19:45:57 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -452,12 +452,12 @@ bool IsSystemWebUIHost(std::string_view 
+@@ -456,12 +456,12 @@ bool IsSystemWebUIHost(std::string_view 
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_common_webui__url__constants.h,v 1.32 2026/11/08 15:38:58 
  inline constexpr char kChromeUIDefaultBrowserModalURL[] =
      "chrome://default-browser-modal/";
  inline constexpr char kChromeUIDefaultBrowserModalHost[] =
-@@ -480,11 +480,11 @@ inline constexpr char kChromeUILinuxProx
+@@ -484,11 +484,11 @@ inline constexpr char kChromeUILinuxProx
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

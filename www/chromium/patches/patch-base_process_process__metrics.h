@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics.h,v 1.32 2026/11/08 15:38:51 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics.h,v 1.33 2026/11/19 19:45:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics.h.orig	2026-11-02 23:22:33.000000000 +0000
+--- base/process/process_metrics.h.orig	2026-11-11 21:01:38.000000000 +0000
 +++ base/process/process_metrics.h
 @@ -40,7 +40,7 @@
  #endif
@@ -84,7 +84,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.32 2026/11/08 15:38:51 kikadf
  // Data about system-wide memory consumption. Available on Windows, Mac, Linux,
  // Android and Chrome OS.
  //
-@@ -346,7 +346,7 @@ struct BASE_EXPORT SystemMemoryInfo {
+@@ -347,7 +347,7 @@ struct BASE_EXPORT SystemMemoryInfo {
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -93,7 +93,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.32 2026/11/08 15:38:51 kikadf
    // This provides an estimate of available memory as described here:
    // https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=34e431b0ae398fc54ea69ff85ec700722c9da773
    // NOTE: this is ONLY valid in kernels 3.14 and up.  Its value will always
-@@ -361,7 +361,7 @@ struct BASE_EXPORT SystemMemoryInfo {
+@@ -362,7 +362,7 @@ struct BASE_EXPORT SystemMemoryInfo {
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -102,7 +102,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.32 2026/11/08 15:38:51 kikadf
    ByteSize buffers;
    ByteSize cached;
    ByteSize active_anon;
-@@ -403,7 +403,7 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
+@@ -420,7 +420,7 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
          // BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -111,7 +111,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.32 2026/11/08 15:38:51 kikadf
  // Parse the data found in /proc/<pid>/stat and return the sum of the
  // CPU-related ticks.  Returns -1 on parse error.
  // Exposed for testing.
-@@ -579,7 +579,7 @@ class BASE_EXPORT SystemMetrics {
+@@ -596,7 +596,7 @@ class BASE_EXPORT SystemMetrics {
    FRIEND_TEST_ALL_PREFIXES(SystemMetricsTest, SystemMetrics);
  
    size_t committed_memory_;

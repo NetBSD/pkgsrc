@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_unrar_src_crypt.cpp,v 1.32 2026/11/08 15:39:12 kikadf Exp $
+$NetBSD: patch-third__party_unrar_src_crypt.cpp,v 1.33 2026/11/19 19:46:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/unrar/src/crypt.cpp.orig	2026-11-02 23:22:33.000000000 +0000
+--- third_party/unrar/src/crypt.cpp.orig	2026-11-11 21:01:38.000000000 +0000
 +++ third_party/unrar/src/crypt.cpp
 @@ -126,6 +126,8 @@ void GetRnd(byte *RndBuf,size_t BufSize)
      Success=CryptGenRandom(hProvider, (DWORD)BufSize, RndBuf) != FALSE;

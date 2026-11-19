@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_sync_device__info__sync__client__impl.cc,v 1.32 2026/11/08 15:38:55 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_device__info__sync__client__impl.cc,v 1.33 2026/11/19 19:45:54 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/sync/device_info_sync_client_impl.cc
-@@ -42,7 +42,7 @@ DeviceInfoSyncClientImpl::~DeviceInfoSyn
+@@ -40,7 +40,7 @@ DeviceInfoSyncClientImpl::~DeviceInfoSyn
  std::string DeviceInfoSyncClientImpl::GetSigninScopedDeviceId() const {
  // Since the local sync backend is currently only supported on Windows, Mac and
  // Linux don't even check the pref on other os-es.

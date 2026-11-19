@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.32 2026/11/08 15:38:56 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 1.33 2026/11/19 19:45:55 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -385,7 +385,7 @@ TaskManagerTableModel::~TaskManagerTable
    // Note: system_total_time_ is used for both since there is no functional
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_task__manager_task__manager__table__model.cc,v 
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -1040,7 +1040,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -1042,7 +1042,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  

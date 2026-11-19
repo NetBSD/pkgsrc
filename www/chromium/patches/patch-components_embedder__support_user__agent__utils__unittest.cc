@@ -1,12 +1,12 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.32 2026/11/08 15:38:59 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.33 2026/11/19 19:45:58 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
-@@ -155,7 +155,7 @@ class UserAgentUtilsTest : public testin
+@@ -157,7 +157,7 @@ class UserAgentUtilsTest : public testin
          "X11; CrOS x86_64 14541.0.0";
  #elif BUILDFLAG(IS_FUCHSIA)
          "Fuchsia";
@@ -15,7 +15,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.
          "X11; Linux x86_64";
  #elif BUILDFLAG(IS_MAC)
          "Macintosh; Intel Mac OS X 10_15_7";
-@@ -334,7 +334,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
+@@ -336,7 +336,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
  
  #if BUILDFLAG(IS_WIN)
    VerifyWinPlatformVersion(metadata.platform_version);
@@ -24,7 +24,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.
    EXPECT_EQ(metadata.platform_version, "");
  #else
    int32_t major, minor, bugfix = 0;
-@@ -361,7 +361,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
+@@ -363,7 +363,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
  #endif
  #elif BUILDFLAG(IS_ANDROID)
    EXPECT_EQ(metadata.platform, "Android");

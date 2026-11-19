@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_glic_glic__settings__util__desktop.cc,v 1.11 2026/11/08 15:38:54 kikadf Exp $
+$NetBSD: patch-chrome_browser_glic_glic__settings__util__desktop.cc,v 1.12 2026/11/19 19:45:53 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/glic/glic_settings_util_desktop.cc.orig	2026-11-02 23:22:33.000000000 +0000
+--- chrome/browser/glic/glic_settings_util_desktop.cc.orig	2026-11-11 21:01:38.000000000 +0000
 +++ chrome/browser/glic/glic_settings_util_desktop.cc
 @@ -130,7 +130,7 @@ std::string_view GetPlatformHelpSuffix()
    return "_mac";
