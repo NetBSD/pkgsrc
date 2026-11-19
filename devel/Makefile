@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4740 2026/11/16 12:39:08 adam Exp $
+# $NetBSD: Makefile,v 1.4741 2026/11/19 21:48:50 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -3671,6 +3671,7 @@ SUBDIR+=	startbug1
 SUBDIR+=	stfl
 SUBDIR+=	stgit
 SUBDIR+=	stirmake
+SUBDIR+=	stringswitch
 SUBDIR+=	stylish-haskell
 SUBDIR+=	stylua
 SUBDIR+=	subversion
