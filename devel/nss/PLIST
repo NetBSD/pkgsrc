@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2026/05/15 17:00:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2026/11/19 02:49:18 wiz Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
@@ -16,7 +16,6 @@ bin/p7verify
 bin/pk12util
 bin/rsaperf
 bin/shlibsign
-bin/signtool
 bin/signver
 bin/ssltap
 bin/strsclnt
@@ -37,9 +36,6 @@ include/nss/cryptoht.h
 include/nss/eccutil.h
 include/nss/ecl-exp.h
 include/nss/hasht.h
-include/nss/jar-ds.h
-include/nss/jar.h
-include/nss/jarfile.h
 include/nss/key.h
 include/nss/keyhi.h
 include/nss/keyt.h
@@ -48,6 +44,17 @@ include/nss/kyber.h
 include/nss/lowkeyi.h
 include/nss/lowkeyti.h
 include/nss/ml_dsat.h
+include/nss/mozpkix/Input.h
+include/nss/mozpkix/Result.h
+include/nss/mozpkix/Time.h
+include/nss/mozpkix/nss_scoped_ptrs.h
+include/nss/mozpkix/pkix.h
+include/nss/mozpkix/pkixc.h
+include/nss/mozpkix/pkixcheck.h
+include/nss/mozpkix/pkixder.h
+include/nss/mozpkix/pkixnss.h
+include/nss/mozpkix/pkixtypes.h
+include/nss/mozpkix/pkixutil.h
 include/nss/nss.h
 include/nss/nssb64.h
 include/nss/nssb64t.h
