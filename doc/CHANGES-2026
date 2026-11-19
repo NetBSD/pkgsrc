@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8201 2026/11/19 14:31:02 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8202 2026/11/19 14:55:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12166,3 +12166,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/wireshark to 4.6.10 [adam 2026-11-19]
 	Updated www/wordpress to 7.0.9 [taca 2026-11-19]
 	Updated net/nsd to 4.15.3 [taca 2026-11-19]
+	Updated www/nginx-devel to 1.31.9 [ryoon 2026-11-19]
