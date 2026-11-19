@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.118 2026/06/28 06:23:28 wiz Exp $
+$NetBSD: distinfo,v 1.118.2.1 2026/11/19 19:47:57 maya Exp $
 
 BLAKE2s (IO-Socket-SSL-2.099.tar.gz) = 1a8585baeaf3646b2dda007b5d217eef829e1eeb7a8867268a0e7843517fccf2
 SHA512 (IO-Socket-SSL-2.099.tar.gz) = 6e83451806ffdeb843099046ff13250fb1b66f5233f74d807b1a159f2387fab577928967f320d453507821a678bb8e87762f1cdb65aecba358ffa692d8993cfe
 Size (IO-Socket-SSL-2.099.tar.gz) = 282192 bytes
+SHA1 (patch-lib_IO_Socket_SSL_PublicSuffix.pm) = 34d70077e9cb52968ee4204390973bc46102288e
