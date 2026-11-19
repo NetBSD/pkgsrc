@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2026/08/08 13:24:33 taca Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2026/11/19 02:48:57 taca Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -6,7 +6,7 @@ CARGO_CRATE_DEPENDS+=	aligned-0.4.3
 CARGO_CRATE_DEPENDS+=	aligned-vec-0.6.4
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.100
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.104
 CARGO_CRATE_DEPENDS+=	arbitrary-1.4.2
 CARGO_CRATE_DEPENDS+=	arg_enum_proc_macro-0.3.4
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.6
@@ -122,7 +122,7 @@ CARGO_CRATE_DEPENDS+=	qoi-0.4.1
 CARGO_CRATE_DEPENDS+=	quick-error-2.0.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
-CARGO_CRATE_DEPENDS+=	rand-0.9.2
+CARGO_CRATE_DEPENDS+=	rand-0.9.5
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.9.0
 CARGO_CRATE_DEPENDS+=	rand_core-0.9.3
 CARGO_CRATE_DEPENDS+=	rav1e-0.8.1
