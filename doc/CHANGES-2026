@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8191 2026/11/19 00:51:59 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8192 2026/11/19 01:21:14 agc Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12150,3 +12150,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/php-nextcloud to 34.0.5nb1 [ryoon 2026-11-18]
 	Updated fonts/fontconfig to 2.18.4 [wiz 2026-11-18]
 	Updated x11/kitty to 0.51.0 [ktnb 2026-11-19]
+	Updated security/libmldsa to 20261118 [agc 2026-11-18]
+	Updated security/mldsa to 20261118 [agc 2026-11-18]
+	Added security/mlsignify version 20261118 [agc 2026-11-18]
