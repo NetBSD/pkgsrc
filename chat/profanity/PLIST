@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2026/11/17 21:42:57 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/19 15:32:32 ktnb Exp $
 bin/profanity
-include/profapi.h
-lib/libprofanity.so
-lib/libprofanity.so.0
-lib/libprofanity.so.0.0.0
 man/man1/profanity-about.1
 man/man1/profanity-account.1
 man/man1/profanity-affiliation.1
@@ -51,7 +47,6 @@ man/man1/profanity-lastactivity.1
 man/man1/profanity-log.1
 man/man1/profanity-logging.1
 man/man1/profanity-mainwin.1
-man/man1/profanity-mam.1
 man/man1/profanity-mood.1
 man/man1/profanity-msg.1
 man/man1/profanity-mucping.1
@@ -63,7 +58,6 @@ man/man1/profanity-otr.1
 man/man1/profanity-outtype.1
 man/man1/profanity-ox-setup.1
 man/man1/profanity-ox.1
-man/man1/profanity-paste.1
 man/man1/profanity-pgp.1
 man/man1/profanity-ping.1
 man/man1/profanity-plugins.1
@@ -84,7 +78,6 @@ man/man1/profanity-room.1
 man/man1/profanity-rooms.1
 man/man1/profanity-roster.1
 man/man1/profanity-save.1
-man/man1/profanity-script.1
 man/man1/profanity-sendfile.1
 man/man1/profanity-serversoftware.1
 man/man1/profanity-silence.1
@@ -116,8 +109,10 @@ man/man1/profanity-xmlconsole.1
 man/man1/profanity.1
 share/doc/profanity/profrc.example
 share/doc/profanity/theme_template
-share/profanity/icons/proIcon.png
-share/profanity/icons/proIconMsg.png
+share/icons/hicolor/scalable/apps/profanity.svg
+share/profanity/icons/profanity-msg-bubble.png
+share/profanity/icons/profanity-new-message.png
+share/profanity/icons/profanity.svg
 share/profanity/themes/aqua
 share/profanity/themes/batman
 share/profanity/themes/bios

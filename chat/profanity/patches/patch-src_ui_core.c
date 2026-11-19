@@ -1,10 +1,10 @@
-$NetBSD: patch-src_ui_core.c,v 1.3 2026/11/17 22:09:41 ktnb Exp $
+$NetBSD: patch-src_ui_core.c,v 1.4 2026/11/19 15:32:32 ktnb Exp $
 
 sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
 
---- src/ui/core.c.orig	2026-10-15 13:56:02.000000000 +0000
+--- src/ui/core.c.orig	2026-11-19 09:24:26.000000000 +0000
 +++ src/ui/core.c
-@@ -29,6 +29,10 @@
+@@ -25,6 +25,10 @@
  #include <curses.h>
  #endif
  
@@ -15,15 +15,15 @@ sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
  #include "log.h"
  #include "common.h"
  #include "command/cmd_defs.h"
-@@ -56,6 +60,7 @@ static WINDOW* main_scr;
+@@ -51,6 +55,7 @@ static WINDOW* main_scr;
  static gboolean perform_resize = FALSE;
  static GTimer* ui_idle_time;
  static WINDOW* main_scr;
 +static SCREEN* main_screen;
  
- #ifdef HAVE_LIBXSS
- static Display* display;
-@@ -76,7 +81,7 @@ _ui_close(void)
+ static void _ui_draw_term_title(void);
+ 
+@@ -67,7 +72,7 @@ _ui_close(void)
      endwin();
      delwin(main_scr);
      main_scr = NULL;
@@ -32,7 +32,7 @@ sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
  }
  
  void
-@@ -84,7 +89,8 @@ ui_init(void)
+@@ -75,7 +80,8 @@ ui_init(void)
  {
      log_info("Initialising UI");
      prof_add_shutdown_routine(_ui_close);
