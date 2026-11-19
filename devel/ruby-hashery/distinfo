@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:19:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2026/11/19 15:41:41 taca Exp $
 
-BLAKE2s (hashery-2.1.2.gem) = 3cdc3ae8cd41af771692d71a89cb15ac25c53da174afd929312670224782843e
-SHA512 (hashery-2.1.2.gem) = 953fb7024aeeff8720c14880f8cbf0ee03cc09624ba33152215439a2e252cea22167258e8e8c1cb023129a51cd95b2d9d33ca794a6b38560a8eb1e0fe44f290b
-Size (hashery-2.1.2.gem) = 43008 bytes
+BLAKE2s (hashery-2.2.2.gem) = 9a234fb075a34376a26d192cb73ac4b09048429cdcfbf053eb9ce81476b6f334
+SHA512 (hashery-2.2.2.gem) = d7ad6f7a385756b53ca2461473520ba1d9d11800d831cb5afb0746ebbdfac20b794602e0c01434520d0c50d395ee2725e1ab015d2356daace859d7bf563493f1
+Size (hashery-2.2.2.gem) = 48128 bytes

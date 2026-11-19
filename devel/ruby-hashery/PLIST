@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/09 14:24:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/19 15:41:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.index
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/HISTORY.md
-${GEM_LIBDIR}/Index.yml
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/NOTICE.txt
 ${GEM_LIBDIR}/README.md
@@ -31,7 +29,6 @@ ${GEM_LIBDIR}/demo/10_association.rdoc
 ${GEM_LIBDIR}/demo/applique/ae.rb
 ${GEM_LIBDIR}/demo/applique/hashery.rb
 ${GEM_LIBDIR}/lib/hashery.rb
-${GEM_LIBDIR}/lib/hashery.yml
 ${GEM_LIBDIR}/lib/hashery/association.rb
 ${GEM_LIBDIR}/lib/hashery/casting_hash.rb
 ${GEM_LIBDIR}/lib/hashery/core_ext.rb
@@ -50,6 +47,7 @@ ${GEM_LIBDIR}/lib/hashery/property_hash.rb
 ${GEM_LIBDIR}/lib/hashery/query_hash.rb
 ${GEM_LIBDIR}/lib/hashery/stash.rb
 ${GEM_LIBDIR}/lib/hashery/static_hash.rb
+${GEM_LIBDIR}/lib/hashery/version.rb
 ${GEM_LIBDIR}/test/case_association.rb
 ${GEM_LIBDIR}/test/case_casting_hash.rb
 ${GEM_LIBDIR}/test/case_core_ext.rb
@@ -61,6 +59,7 @@ ${GEM_LIBDIR}/test/case_linked_list.rb
 ${GEM_LIBDIR}/test/case_lru_hash.rb
 ${GEM_LIBDIR}/test/case_open_cascade.rb
 ${GEM_LIBDIR}/test/case_open_hash.rb
+${GEM_LIBDIR}/test/case_path_hash.rb
 ${GEM_LIBDIR}/test/case_property_hash.rb
 ${GEM_LIBDIR}/test/case_query_hash.rb
 ${GEM_LIBDIR}/test/fixture/example.ini
