@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.156 2026/10/20 04:46:45 adam Exp $
+$NetBSD: distinfo,v 1.157 2026/11/19 11:28:40 adam Exp $
 
-BLAKE2s (haproxy-3.4.7.tar.gz) = 484ed0de2eb0affe6e8732ba46743aed71c9d39697ae680b562dcf6f293d6378
-SHA512 (haproxy-3.4.7.tar.gz) = 6e61b05e122764f7a6eaa683ba843815785d2fb6c8d3bed80ec5be15c674777ac1829e09767962ede0c47a8b9bca837f81f9ef80f9e6147e292e26815c52402f
-Size (haproxy-3.4.7.tar.gz) = 5531506 bytes
+BLAKE2s (haproxy-3.4.8.tar.gz) = 8b22f46fb01ed70d96cda0acc3da97c44839e9691caad1e0538148ebc5f22bbf
+SHA512 (haproxy-3.4.8.tar.gz) = 5f154fe484347c54ddc4e780187b712371fde8edead26774d8282e8c94f54a1e4043028cdcd9510ed0276431f7724b5fb8653981a9e6f52ef804c56e09f969f1
+Size (haproxy-3.4.8.tar.gz) = 5552944 bytes
 SHA1 (patch-include_haproxy_proxy-t.h) = 7aab2e32aacff45e7a2a0d6a48550b72d1fe7619
 SHA1 (patch-include_haproxy_queue-t.h) = a9f41857d66037b3f66f8d43090dab2d06c7bfb2
 SHA1 (patch-include_haproxy_queue.h) = eed5ea43212462134fb60b50c2a32e619e104d51
