@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2026/11/11 11:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2026/11/19 14:46:27 thorpej Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -58,6 +58,12 @@ TOOLS_SCRIPT.native-cc=	exec ${NATIVE_CC} "$$@"
 # future.
 
 ### Build fixes
+
+# m68k platforms need the -mlong-jump-table-offsets compiler option,
+# otherwise the assembler complations about truncated relocations.
+.if ${MACHINE_PLATFORM:M*-*-m68*}
+CFLAGS+=			-mlong-jump-table-offsets
+.endif
 
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator
