@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8215 2026/11/19 19:57:00 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8216 2026/11/19 20:10:07 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12181,3 +12181,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/restic to 0.20.0 [adam 2026-11-19]
 	Updated www/chromium to 158.0.8127.36 [kikadf 2026-11-19]
 	Updated graphics/shader-slang to 2026.22.1 [ktnb 2026-11-19]
+	Updated net/bgpq4 to 1.17 [drixter 2026-11-19]
