@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/19 01:18:04 agc Exp $
+
+BLAKE2s (mldsa-20261118.tar.gz) = dcbe82083e49761959c708557a2db67e4ff67f0fe1ec0896aa7c8b253c29b34b
+SHA512 (mldsa-20261118.tar.gz) = e3210ce2ddf2813d8d36f060b3d73cf7b3e34dce5c8ea7ca1ce55f487117d0629290cfdd9eca8574af12bf894878b463d56202b2d961d9a5cb5a1b23f007b5c3
+Size (mldsa-20261118.tar.gz) = 127497 bytes

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/19 01:18:04 agc Exp $
+bin/mlsignify
+man/man1/mlsignify.1
