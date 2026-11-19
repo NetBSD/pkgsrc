@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8217 2026/11/19 21:51:40 agc Exp $
+$NetBSD: CHANGES-2026,v 1.8218 2026/11/19 22:00:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12183,3 +12183,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/shader-slang to 2026.22.1 [ktnb 2026-11-19]
 	Updated net/bgpq4 to 1.17 [drixter 2026-11-19]
 	Added devel/stringswitch version 20261119 [agc 2026-11-19]
+	Downgraded devel/nss to 3.132nb1 [wiz 2026-11-19]
