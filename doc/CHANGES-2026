@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8235 2026/11/20 15:38:21 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8236 2026/11/20 15:57:37 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12205,3 +12205,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/libytnef to 2.1.3 [wiz 2026-11-20]
 	Updated mail/ytnef to 2.1.3 [wiz 2026-11-20]
 	Updated shells/oh-my-posh to 33.0.0 [pin 2026-11-20]
+	Updated misc/pinfo to 0.6.13 [ktnb 2026-11-20]
