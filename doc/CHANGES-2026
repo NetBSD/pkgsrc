@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8222 2026/11/20 09:22:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8223 2026/11/20 09:32:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12189,3 +12189,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-Convert-ASN1 to 0.37 [wiz 2026-11-20]
 	Updated textproc/git-delta to 0.21.2 [wiz 2026-11-20]
 	Updated devel/py-ruff to 0.17.6 [wiz 2026-11-20]
+	Updated textproc/rumdl to 0.3.5 [wiz 2026-11-20]
