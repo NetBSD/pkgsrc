@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/11/15 20:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/11/20 09:31:58 wiz Exp $
 
-DISTNAME=	rumdl-0.3.4
+DISTNAME=	rumdl-0.3.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvben/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/rvben/rumdl/
 COMMENT=	Markdown Linter
 LICENSE=	mit
 
-RUST_REQ=	1.94.0
+RUST_REQ=	1.98
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 
