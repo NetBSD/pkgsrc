@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/11/16 17:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/20 13:17:30 adam Exp $
 
-DISTNAME=	cargo-deny-0.21.0
+DISTNAME=	cargo-deny-0.22.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/EmbarkStudios/cargo-deny
 COMMENT=	Check project dependencies
 LICENSE=	apache-2.0 OR mit
 
-RUST_REQ=	1.89.0
+RUST_REQ=	1.95.0
 
 .include "cargo-depends.mk"
 
