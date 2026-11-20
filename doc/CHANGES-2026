@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8224 2026/11/20 10:03:22 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.8225 2026/11/20 10:17:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12191,3 +12191,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-ruff to 0.17.6 [wiz 2026-11-20]
 	Updated textproc/rumdl to 0.3.5 [wiz 2026-11-20]
 	Updated net/megacmd to 2.7.1 [kikadf 2026-11-20]
+	Updated net/iperf3 to 3.22.1 [adam 2026-11-20]
+	Updated graphics/hugin to 2026.0.0 [adam 2026-11-20]
