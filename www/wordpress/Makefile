@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.122.2.3 2026/11/11 09:35:24 maya Exp $
+# $NetBSD: Makefile,v 1.122.2.4 2026/11/20 14:01:38 maya Exp $
 
 DISTNAME=		wordpress-${VERSION}
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
-VERSION=		7.0.8
+VERSION=		7.0.9
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
 
