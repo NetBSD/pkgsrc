@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2026/11/11 11:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/20 10:03:02 kikadf Exp $
 
-DISTNAME=	megacmd-2.7.0
-PKGREVISION=	2
+DISTNAME=	megacmd-2.7.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
 GITHUB_PROJECT=	MEGAcmd
 GITHUB_TAG=	${PKGVERSION_NOREV}_Linux
-SDK_VERSION=	v10.21.0
+SDK_VERSION=	v10.21.1
 
 GITHUB_SUBMODULES=	meganz sdk ${SDK_VERSION} sdk
 
-MAINTAINER=	kikadf.01@gmail.com
+MAINTAINER=	kikadf@NetBSD.org
 HOMEPAGE=	https://mega.io/
 COMMENT=	CLI and scriptable application to access MEGA
 # MEGAcmd: GPLv3, SDK: BSD 2-clause

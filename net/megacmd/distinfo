@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2026/10/30 10:50:19 kikadf Exp $
+$NetBSD: distinfo,v 1.13 2026/11/20 10:03:02 kikadf Exp $
 
-BLAKE2s (megacmd-2.7.0.tar.gz) = cc74d0808f455324ab324b9ba2430f49e17cfbb5e68152387fdabb340a0bec89
-SHA512 (megacmd-2.7.0.tar.gz) = 3f4c75eebb6fc16916c8a780f4829254437ae01fca0119c23ec85c228712b01e66b5111bd32847521a5f07d8c9ea2f1a7cf8fbcd3843819d03a6cb62f41b214c
-Size (megacmd-2.7.0.tar.gz) = 2174191 bytes
-BLAKE2s (meganz-sdk-v10.21.0.tar.gz) = f102051b64bd633f6eaea37da90d0654d0545a17b0dfa8339115de241f96d357
-SHA512 (meganz-sdk-v10.21.0.tar.gz) = 2abb41eda462798f1b021a4b23186955e652140ea5b9d39ae0b1a524b0b20492f23b20c0a33852de80f2c1848c9fd07b48cdfb90f9db4402d876ca7e2d90f06f
-Size (meganz-sdk-v10.21.0.tar.gz) = 5639748 bytes
+BLAKE2s (megacmd-2.7.1.tar.gz) = 33b246303fd144291034f90c559918dc1c129d90ccb525db4efd20b43595b7ca
+SHA512 (megacmd-2.7.1.tar.gz) = f870e8c3088786644e01e09bf075c95ea11d2ff1f86ed5c7478780033f9bb6be559fb76f54910be806019e4295160064a3784b3f0ef5ef6f69c4a810615c97ad
+Size (megacmd-2.7.1.tar.gz) = 2174291 bytes
+BLAKE2s (meganz-sdk-v10.21.1.tar.gz) = f960e6670c09e5c898dcd34e6faba5496836d8e4410539909658dfbf8f3bc01b
+SHA512 (meganz-sdk-v10.21.1.tar.gz) = 446dfe174209af2d79306c4d9b3a5bc8b86cdb2b43e031aec3df6dd0d1e0ab3a1cf56586326fd362228935cee5853a704478b8b3af017079d4599f061afd2655
+Size (meganz-sdk-v10.21.1.tar.gz) = 5644864 bytes
 SHA1 (patch-CMakeLists.txt) = 66d843860251fc55eba4e08858b0418dbc9e7fb1
 SHA1 (patch-build_cmake_modules_megacmd__libraries.cmake) = afabd22177c0437fbe1d13fdf6601832bc60cd96
 SHA1 (patch-sdk_cmake_config.h.in) = 4cc3eab8be8c11571f4aab834690749335c764ec
