@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8220 2026/11/20 07:15:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8221 2026/11/20 09:12:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12187,3 +12187,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated fonts/harfbuzz to 15.2.0 [adam 2026-11-20]
 	Updated devel/cmake to 4.5.1 [adam 2026-11-20]
 	Updated textproc/p5-Convert-ASN1 to 0.37 [wiz 2026-11-20]
+	Updated textproc/git-delta to 0.21.2 [wiz 2026-11-20]
