@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8228 2026/11/20 13:12:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8229 2026/11/20 13:20:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12197,3 +12197,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/dnscontrol to 5.10.1 [drixter 2026-11-20]
 	Updated net/ndpi to 6.0 [adam 2026-11-20]
 	Updated net/ntopng to 7.0 [adam 2026-11-20]
+	Updated security/cargo-deny to 0.22.0 [adam 2026-11-20]
+	Updated databases/hiredis to 1.5.1 [adam 2026-11-20]
