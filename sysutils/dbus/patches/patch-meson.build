@@ -1,0 +1,26 @@
+$NetBSD: patch-meson.build,v 1.4 2026/11/20 20:48:19 nros Exp $
+
+* Treat Illumos like solaris
+* The space before the -D_XOPEN_SOURCE=500 causes the compile test
+  for it to fail somehow, causing the argument to not get added to
+  the compile line
+
+--- meson.build.orig	2026-11-12 16:15:25.000000000 +0000
++++ meson.build
+@@ -171,14 +171,14 @@ compile_args = [
+ # See https://gitlab.freedesktop.org/dbus/dbus/-/issues/4
+ compile_args += ['-fno-strict-aliasing']
+ 
+-if host_os.contains('solaris')
++if host_os.contains('solaris') or host_os.contains('sunos')
+     compile_args += [
+         # Solaris' C library apparently needs these runes to be threadsafe...
+         '-D_POSIX_PTHREAD_SEMANTICS',
+         # ... this opt-in to get sockaddr_in6 and sockaddr_storage...
+         '-D__EXTENSIONS__',
+         # ... and this opt-in to get file descriptor passing support
+-        ' -D_XOPEN_SOURCE=500',
++        '-D_XOPEN_SOURCE=500',
+     ]
+ endif
+ 
