@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/11/19 16:00:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2026/11/20 10:13:18 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -41,6 +41,7 @@ lib/liblocalfeatures.so.0.0
 ${PYSITELIB}/_hsi.so
 ${PYSITELIB}/hpi.py
 ${PYSITELIB}/hsi.py
+${PYSITELIB}/hsi.pyi
 man/man1/PTBatcherGUI.1
 man/man1/align_image_stack.1
 man/man1/autooptimiser.1
