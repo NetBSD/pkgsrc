@@ -1,8 +1,8 @@
-$NetBSD: patch-src_utils.c,v 1.1 2026/11/20 15:57:11 ktnb Exp $
+$NetBSD: patch-src_utils.c,v 1.2 2026/11/20 20:24:55 ktnb Exp $
 
-ctype fix for NetBSD 11 and sys/wait.h is required
+ctype fix for NetBSD 11, sys/wait.h is required, and fix readline conditional
 
---- src/utils.c.orig	2026-11-20 14:25:26.785618991 +0000
+--- src/utils.c.orig	2019-02-16 20:23:32.000000000 +0000
 +++ src/utils.c
 @@ -24,6 +24,7 @@
  #include <regex.h>
@@ -21,7 +21,51 @@ ctype fix for NetBSD 11 and sys/wait.h is required
  		{
  			completions[j++] = table[i].nodename;
  		}
-@@ -604,14 +605,14 @@ yesno(char *prompt, int def)
+@@ -365,15 +366,18 @@ getstring(char *prompt)
+ char *
+ getstring(char *prompt)
+ {
++#ifdef HAS_READLINE
+ 	return getstring_with_completion(prompt, NULL);
++#else
++	return getstring_with_completion(prompt);
++#endif
+ }
+-
++#ifdef HAS_READLINE
+ char *
+ getstring_with_completion(char *prompt, const char * const * completions)
+ {
+ 	char *buf;
+ 
+-#ifdef HAS_READLINE
+ 	completion_values = completions;
+ 	rl_attempted_completion_function = getstring_completion;
+ 	rl_completion_display_matches_hook = my_rl_completion_display;
+@@ -393,15 +397,20 @@ getstring_with_completion(char *prompt, const char * c
+ 
+ 	curs_set(0);
+ 
++	return buf;
++}
+ #else
++char *
++getstring_with_completion(char *prompt)
++{
++	char *buf;
+ 
+ 	move(maxy - 1, 0);
+ 	buf = readlinewrapper(prompt);
+ 
+-#endif
+-
+ 	return buf;
+ }
++#endif
+ 
+ void
+ init_curses()
+@@ -604,14 +613,14 @@ yesno(char *prompt, int def)
  			break;
  		else
  		{

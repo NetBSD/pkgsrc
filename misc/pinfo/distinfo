@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/11/20 15:57:10 ktnb Exp $
+$NetBSD: distinfo,v 1.12 2026/11/20 20:24:55 ktnb Exp $
 
 BLAKE2s (pinfo-0.6.13.tar.gz) = fb352de5e504deb4bb3baca1252c60941e292805c8f8ec37b171918c57a5a3b0
 SHA512 (pinfo-0.6.13.tar.gz) = 739e24821a363a087fb9df5651694f051286d4a15c3e51f2421a2aa60b1efe1da558b959ba22a0094e22854534ea5875498156e8ea2e198e31001aecab1a18df
@@ -7,8 +7,8 @@ SHA1 (patch-ab) = eae999f697e5802309a105d2068804cbb0841efc
 SHA1 (patch-ac) = 7dbddcf81e9ad6ff00dadd8a93cf2c160992ce75
 SHA1 (patch-src_filehandling__functions.c) = 510ea7560884effb5484d5674aa68bb548ca76be
 SHA1 (patch-src_initializelinks.c) = 6f5abacd6913cdfc4f482bb0d37b218498574565
-SHA1 (patch-src_mainfunction.c) = f032a3b2e63dc57de73d5b129aeefd09ae5b97b5
+SHA1 (patch-src_mainfunction.c) = bd8dbff7fb4f9f6a3f918a365b53a4d963694a05
 SHA1 (patch-src_manual.c) = 27b57e13a39256e3efd5c4edef02c68785dea0b8
 SHA1 (patch-src_parse__config.c) = 5803791d0690da22b4685f13ee8813c92cb24949
-SHA1 (patch-src_utils.c) = 07c9810dff44e3590aaf5059e086887d36d6ca9f
+SHA1 (patch-src_utils.c) = 8e0bf87ffebeae85bd03f2e34c6ac49e54c6ccd9
 SHA1 (patch-src_video.c) = 82904d5258d9fae1d94f297b6e247f2d255eb384
