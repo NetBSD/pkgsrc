@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2026/11/20 09:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2026/11/20 09:22:29 wiz Exp $
 
 DISTNAME=	ruff-0.17.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-RUST_REQ=	1.97
+RUST_REQ=	1.98
 
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
