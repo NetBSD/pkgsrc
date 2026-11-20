@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.421 2026/11/15 19:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.422 2026/11/20 16:43:04 thorpej Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../emulators/qemu/Makefile.common"
 
 CATEGORIES=	emulators

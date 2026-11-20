@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.258 2026/10/29 07:07:18 adam Exp $
+$NetBSD: distinfo,v 1.259 2026/11/20 16:43:04 thorpej Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
@@ -16,7 +16,7 @@ SHA1 (patch-hw_9pfs_9p.h) = 4e2749619d2154f9fb341047aa278371b298e8a4
 SHA1 (patch-hw_9pfs_codir.c) = c065762ee13fdeaef063632f56d9d0ead6b68f61
 SHA1 (patch-hw_9pfs_meson.build) = 0fb98920bd0678c00c035dc1178edab526ecbc19
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
-SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
+SHA1 (patch-hw_rtc_mc146818rtc.c) = 0b923e516de17eb9887c17c679a4b0cb656a046f
 SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
 SHA1 (patch-hw_usb_dev-mtp.c) = f148a3ad6d72eb29f85684316af5fb219ddaeb71
 SHA1 (patch-meson.build) = 2280e0b23b7a1e5e1c1208b9b5857a56676e58b4
@@ -26,5 +26,6 @@ SHA1 (patch-target_arm_tcg_translate-sve.c) = 2d2feefe45b83191cccfea7e08fd7eb275
 SHA1 (patch-target_i386_cpu.c) = 46a37ffc8ece4db52e8239b32dde37403ad568bb
 SHA1 (patch-target_i386_nvmm_nvmm-all.c) = 405a3b7ee1c719704bd9517c9dea53f47380c1ab
 SHA1 (patch-target_m68k_helper.c) = eb559e93dfaacf1ce546e89d31243c3933636b16
+SHA1 (patch-target_m68k_op-helper.c) = 7b37e1fefdb972397209fa41ca5db61557444e83
 SHA1 (patch-util_coroutine-ucontext.c) = 02cdf634e64f7e71029047b93747f192df715e6a
 SHA1 (patch-util_osdep.c) = 94144b7fc3c472ae7b21c3daa4fae62da3288c7d
