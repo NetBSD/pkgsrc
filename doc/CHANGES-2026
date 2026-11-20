@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8237 2026/11/20 16:46:21 thorpej Exp $
+$NetBSD: CHANGES-2026,v 1.8238 2026/11/20 17:40:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12207,3 +12207,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 33.0.0 [pin 2026-11-20]
 	Updated misc/pinfo to 0.6.13 [ktnb 2026-11-20]
 	Updated emulators/qemu to 11.1.3nb4 [thorpej 2026-11-20]
+	Updated devel/nspr to 4.41nb1 [wiz 2026-11-20]
