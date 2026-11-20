@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8229 2026/11/20 13:20:31 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8230 2026/11/20 14:34:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12199,3 +12199,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/ntopng to 7.0 [adam 2026-11-20]
 	Updated security/cargo-deny to 0.22.0 [adam 2026-11-20]
 	Updated databases/hiredis to 1.5.1 [adam 2026-11-20]
+	Updated lang/ruby33 to 3.3.14 [taca 2026-11-20]
