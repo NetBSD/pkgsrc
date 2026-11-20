@@ -1,23 +1,24 @@
-@comment $NetBSD: PLIST,v 1.8 2026/06/10 13:17:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/20 13:10:38 adam Exp $
 bin/ndpiReader
+bin/ndpiSimpleIntegration
 include/ndpi/ndpi_api.h
 include/ndpi/ndpi_classify.h
 include/ndpi/ndpi_config.h
 include/ndpi/ndpi_define.h
 include/ndpi/ndpi_encryption.h
 include/ndpi/ndpi_includes.h
-include/ndpi/ndpi_includes_OpenBSD.h
 include/ndpi/ndpi_main.h
 include/ndpi/ndpi_patricia_typedefs.h
 include/ndpi/ndpi_protocol_ids.h
 include/ndpi/ndpi_replace_printf.h
 include/ndpi/ndpi_typedefs.h
 include/ndpi/ndpi_unix.h
+include/ndpi/ndpi_usdt.h
 include/ndpi/ndpi_win32.h
 lib/libndpi.a
 lib/libndpi.so
 lib/libndpi.so.${PKGVERSION}.0
-lib/libndpi.so.5
+lib/libndpi.so.6
 lib/pkgconfig/libndpi.pc
 share/ndpi/ndpiCustomCategory.txt
 share/ndpi/ndpiProtos.txt

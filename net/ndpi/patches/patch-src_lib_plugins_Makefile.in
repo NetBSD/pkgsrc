@@ -1,0 +1,18 @@
+$NetBSD: patch-src_lib_plugins_Makefile.in,v 1.1 2026/11/20 13:10:38 adam Exp $
+
+Use correct library on Darwin.
+
+--- src/lib/plugins/Makefile.in.orig	2026-11-20 11:12:29.727709294 +0000
++++ src/lib/plugins/Makefile.in
+@@ -14,7 +14,11 @@ LDFLAGS=@LDFLAGS@
+ #  * Linux or Mac
+ AM_CFLAGS+=-fPIC -DPIC -DNDPI_LIB_COMPILATION -I$(top_srcdir)/src/include -I$(top_builddir)/src/include @NDPI_CFLAGS@ @CUSTOM_NDPI@
+ AM_LDFLAGS=-L$(top_builddir)/src/lib @NDPI_LDFLAGS@
++ifeq ($(OS),Darwin)
++LIBNDPI_DEP=$(top_builddir)/src/lib/libndpi.dylib
++else
+ LIBNDPI_DEP=$(top_builddir)/src/lib/libndpi.so
++endif
+ LIBS=-lndpi @ADDITIONAL_LIBS@ @LIBS@
+ HEADERS=$(wildcard $(top_srcdir)/src/include/*.h)
+ HEADERS+=$(top_builddir)/src/include/ndpi_config.h $(top_builddir)/src/include/ndpi_define.h

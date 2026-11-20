@@ -1,11 +1,11 @@
-$NetBSD: patch-src_lib_Makefile.in,v 1.9 2026/06/10 13:17:31 adam Exp $
+$NetBSD: patch-src_lib_Makefile.in,v 1.10 2026/11/20 13:10:38 adam Exp $
 
 Fix building on Darwin.
 
---- src/lib/Makefile.in.orig	2025-11-17 08:11:53.000000000 +0000
+--- src/lib/Makefile.in.orig	2026-08-28 09:57:03.000000000 +0000
 +++ src/lib/Makefile.in
-@@ -42,8 +42,15 @@ OBJECTS   = $(patsubst $(srcdir)/protoco
- HEADERS   = $(wildcard $(top_srcdir)/src/include/*.h) $(wildcard $(top_builddir)/src/include/*.h) $(wildcard $(srcdir)/*.h)
+@@ -47,8 +47,15 @@ HEADERS   = $(wildcard $(top_srcdir)/src
+ HEADERS  += $(top_builddir)/src/include/ndpi_config.h $(top_builddir)/src/include/ndpi_define.h
  NDPI_VERSION_MAJOR   = @NDPI_MAJOR@
  NDPI_LIB_STATIC      = libndpi.a
 +ifeq ($(OS),Darwin)
@@ -17,34 +17,33 @@ Fix building on Darwin.
  NDPI_LIB_SHARED      = $(NDPI_LIB_SHARED_BASE).@NDPI_VERSION_SHORT@
 +NDPI_LIB_SHARED_SHORT= $(NDPI_LIB_SHARED_BASE).@NDPI_MAJOR@
 +endif
- NDPI_LIBS            = $(NDPI_LIB_STATIC) $(NDPI_LIB_SHARED)
+ ENABLE_SHARED        = @enable_shared@
+ ENABLE_STATIC        = @enable_static@
  USE_HOST_LIBGCRYPT   = @USE_HOST_LIBGCRYPT@
+@@ -62,7 +69,7 @@ BUILD_MINGW    		 = @BUILD_MINGW@
  
-@@ -55,8 +62,7 @@ endif
- BUILD_MINGW    		 = @BUILD_MINGW@
- 
- ifeq ($(OS),Darwin)
--CC=clang -fno-color-diagnostics
+ # Platform-specific settings
+ ifeq ($(OS_TYPE),Darwin)
 -SONAME_FLAG=
 +SONAME_FLAG=-install_name $(libdir)/${NDPI_LIB_SHARED}
  else
  ifneq ($(BUILD_MINGW),)
  NDPI_LIB_SHARED_BASE = libndpi
-@@ -77,7 +83,7 @@ $(NDPI_LIB_STATIC): $(OBJECTS)
+@@ -103,7 +110,7 @@ $(NDPI_LIB_STATIC): $(OBJECTS)
  $(NDPI_LIB_SHARED): $(OBJECTS)
- 	$(CC) -shared -fPIC $(CFLAGS) $(SONAME_FLAG) -o $@ $(LDFLAGS) $(OBJECTS) $(LIBS)
+ 	$(CC) -shared -fPIC $(AM_CFLAGS) $(CFLAGS) $(SONAME_FLAG) -o $@ $(AM_LDFLAGS) $(LDFLAGS) $(OBJECTS) $(LIBS)
  	ln -fs $(NDPI_LIB_SHARED) $(NDPI_LIB_SHARED_BASE)
 -	ln -fs $(NDPI_LIB_SHARED) $(NDPI_LIB_SHARED_BASE).$(NDPI_VERSION_MAJOR)
 +	ln -fs $(NDPI_LIB_SHARED) $(NDPI_LIB_SHARED_SHORT)
  
  %.o: %.c $(HEADERS) Makefile
- 	$(CC) $(CPPFLAGS) $(CFLAGS) $(CFLAGS_$(notdir $<)) -c $< -o $@
-@@ -108,7 +114,7 @@ install: $(NDPI_LIBS)
- 	mkdir -p $(DESTDIR)@libdir@
+ 	$(CC) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_$(notdir $<)) -c $< -o $@
+@@ -137,7 +144,7 @@ install: $(NDPI_LIBS)
  	cp $(NDPI_LIBS) $(DESTDIR)@libdir@/
+ ifeq ($(ENABLE_SHARED),yes)
  	cp -P $(NDPI_LIB_SHARED_BASE) $(DESTDIR)@libdir@/
 -	cp -P $(NDPI_LIB_SHARED_BASE).$(NDPI_VERSION_MAJOR) $(DESTDIR)@libdir@/
 +	cp -P $(NDPI_LIB_SHARED_SHORT) $(DESTDIR)@libdir@/
- 	mkdir -p $(DESTDIR)@includedir@/ndpi
+ endif
+ 	@MKDIR_P@ $(DESTDIR)@includedir@/ndpi
  	#Avoid installing private header
- 	# Installing header files to $(DESTDIR)@includedir@/ndpi
