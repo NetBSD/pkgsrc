@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2026/09/05 09:43:49 he Exp $
+# $NetBSD: Makefile,v 1.140.2.1 2026/11/20 13:48:06 maya Exp $
 
-DISTNAME=	nsd-4.15.2
+DISTNAME=	nsd-4.15.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
