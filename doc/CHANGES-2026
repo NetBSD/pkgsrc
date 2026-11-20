@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8226 2026/11/20 11:41:28 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8227 2026/11/20 13:08:30 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12194,3 +12194,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/iperf3 to 3.22.1 [adam 2026-11-20]
 	Updated graphics/hugin to 2026.0.0 [adam 2026-11-20]
 	Updated textproc/glow to 3.0.0 [wiz 2026-11-20]
+	Updated net/dnscontrol to 5.10.1 [drixter 2026-11-20]
