@@ -1,10 +1,10 @@
-$NetBSD: patch-src_PacketDumperTuntap.cpp,v 1.3 2023/11/20 17:59:35 adam Exp $
+$NetBSD: patch-src_PacketDumperTuntap.cpp,v 1.4 2026/11/20 13:12:04 adam Exp $
 
 Add NetBSD and SunOS support.
 
---- src/PacketDumperTuntap.cpp.orig	2023-11-02 14:11:55.000000000 +0000
+--- src/PacketDumperTuntap.cpp.orig	2026-09-22 07:53:34.000000000 +0000
 +++ src/PacketDumperTuntap.cpp
-@@ -133,7 +133,7 @@ int PacketDumperTuntap::openTap(
+@@ -136,7 +136,7 @@ int PacketDumperTuntap::openTap(
  
  /* ********************************************* */
  
@@ -12,4 +12,4 @@ Add NetBSD and SunOS support.
 +#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__sun)
  #define OPENBSD_TAPDEVICE_SIZE 32
  int PacketDumperTuntap::openTap(
-     char *dev, /* user-definable interface name, eg. edge0 */ int mtu) {
+     char* dev, /* user-definable interface name, eg. edge0 */ int mtu) {

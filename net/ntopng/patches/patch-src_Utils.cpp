@@ -1,9 +1,9 @@
-$NetBSD: patch-src_Utils.cpp,v 1.7 2023/11/20 17:59:35 adam Exp $
+$NetBSD: patch-src_Utils.cpp,v 1.8 2026/11/20 13:12:04 adam Exp $
 
 Fix building on NetBSD.
 d_type is not POSIX, provide workaround for SunOS.
 
---- src/Utils.cpp.orig	2023-11-02 14:11:55.000000000 +0000
+--- src/Utils.cpp.orig	2026-09-22 07:53:34.000000000 +0000
 +++ src/Utils.cpp
 @@ -21,9 +21,12 @@
  
@@ -19,7 +19,7 @@ d_type is not POSIX, provide workaround for SunOS.
  
  #ifndef WIN32
  #include <ifaddrs.h>
-@@ -2605,7 +2608,12 @@ static bool scan_dir(const char *dir_nam
+@@ -2892,7 +2895,12 @@ static bool scan_dir(const char* dir_nam
      if (!entry) break;
      d_name = entry->d_name;
  
@@ -31,8 +31,8 @@ d_type is not POSIX, provide workaround for SunOS.
 +#endif
        snprintf(path, sizeof(path), "%s/%s", dir_name, entry->d_name);
        if (!stat(path, &buf)) {
-         struct dirent *temp = (struct dirent *)malloc(sizeof(struct dirent));
-@@ -2614,7 +2622,11 @@ static bool scan_dir(const char *dir_nam
+         struct dirent* temp = (struct dirent*)malloc(sizeof(struct dirent));
+@@ -2901,7 +2909,11 @@ static bool scan_dir(const char* dir_nam
          if (total) *total += buf.st_size;
        }
  

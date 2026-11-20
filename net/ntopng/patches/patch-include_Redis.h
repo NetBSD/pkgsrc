@@ -1,13 +1,13 @@
-$NetBSD: patch-include_Redis.h,v 1.3 2023/11/20 17:59:35 adam Exp $
+$NetBSD: patch-include_Redis.h,v 1.4 2026/11/20 13:12:04 adam Exp $
 
 Allow Redis connection through a socket.
 
---- include/Redis.h.orig	2023-11-02 14:11:55.000000000 +0000
+--- include/Redis.h.orig	2026-09-22 07:53:34.000000000 +0000
 +++ include/Redis.h
-@@ -31,9 +31,7 @@ class Redis {
-   redisContext *redis;
-   Mutex *l;
-   char *redis_host, *redis_password, *redis_version;
+@@ -40,9 +40,7 @@ class Redis {
+ #ifdef HAVE_HIREDIS_SSL
+   redisSSLContext* ssl_ctx;
+ #endif
 -#ifdef __linux__
    bool is_socket_connection;
 -#endif

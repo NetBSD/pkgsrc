@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2026/11/11 11:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2026/11/20 13:12:03 adam Exp $
 
-NTOPNG_VERSION=	6.6
+NTOPNG_VERSION=	7.0
 DISTNAME=	ntopng-${NTOPNG_VERSION}
-PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -11,25 +10,8 @@ HOMEPAGE=	https://www.ntop.org/
 COMMENT=	Network traffic probe
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	redis-[0-9]*:../../databases/redis
+DEPENDS+=	redis>=0:../../databases/redis
 
-# How to rebuild UI after bumping version:
-# 1. install lang/nodejs
-# 2. comment out the DISTFILES=... line
-# 3. run "make distinfo extract update-ui"
-# 4. publish the resulting distfile on MASTER_SITE_LOCAL
-# 5. uncomment the DISTFILES=... line and regen distinfo
-.PHONY: update-ui
-update-ui:
-	cd ${WRKSRC} && npm install --force && npm run build && \
-	cd .. && ${TAR} -czf ${HTTPDOCS_DIST} ${DISTNAME}/httpdocs/dist && \
-	${CP} ${HTTPDOCS_DIST} ${DISTDIR}/${HTTPDOCS_DIST} && \
-	${ECHO} "UI built. Run this command:" && \
-	${ECHO} "# scp ${DISTDIR}/${HTTPDOCS_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
-
-#HTTPDOCS_DIST=		${DISTNAME}-httpdocs.tar.gz
-#SITES.${HTTPDOCS_DIST}=	${MASTER_SITE_LOCAL}
-# comment out this when running make update-ui
 HTTPDOCS_DIST=		ntopng-dist-${NTOPNG_VERSION}-stable.tar.gz
 DISTFILES=		${DEFAULT_DISTFILES} ${HTTPDOCS_DIST}
 SITES.${HTTPDOCS_DIST}=	-${MASTER_SITES}ntopng-dist/archive/refs/heads/${NTOPNG_VERSION}-stable.tar.gz
@@ -76,8 +58,8 @@ post-build:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/ntopng/httpdocs/misc/ntopng-utils-manage-updates.in.orig
 
-.include "../../databases/clickhouse-cpp/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../databases/clickhouse-cpp/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
