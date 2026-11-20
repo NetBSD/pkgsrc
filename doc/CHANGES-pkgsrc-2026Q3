@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.9 2026/11/09 08:44:53 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.10 2026/11/20 14:07:55 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -117,3 +117,188 @@ lang/php56: Security fix
 
 Pullup ticket #7342 - requested by taca
 databases/ruby-sqlite3: Security fix
+
+Pullup ticket #7343 - requested by morr
+editors/vim-share: Security fix
+
+Pullup ticket #7344 - requested by taca
+net/powerdns-recursor: Security fix
+
+Pullup ticket #7345 - requested by taca
+www/wordpress: Security fix
+
+Pullup ticket #7347 - requested by taca
+www/php-ja-wordpress: Security fix
+
+Pullup ticket #7348 - requested by taca
+www/drupal11: Security fix
+
+Pullup ticket #7349 - requested by taca
+www/php-concrete-cms: Security fix
+
+Pullup ticket #7350 - requested by taca
+www/typo3-13: Security fix
+
+Pullup ticket #7351 - requested by taca
+www/typo3-14: Security fix
+
+Pullup ticket #7352 - requested by taca
+net/rsync: Security fix
+
+Pullup ticket #7353 - requested by taca
+security/ruby-net-sftp: Security fix
+
+Pullup ticket #7354 - requested by taca
+www/p5-HTTP-Body: Security fix
+
+Pullup ticket #7355 - requested by taca
+mail/p5-MIME-tools: Security fix
+
+Pullup ticket #7356 - requested by taca
+www/p5-Starlet: Security fix
+
+Pullup ticket #7357 - requested by taca
+math/p5-Spreadsheet-XLSX
+
+Pullup ticket #7358 - requested by taca
+mail/dmarc-report-viewer
+
+Pullup ticket #7359 - requested by taca
+converters/fribidi: Security fix
+
+Pullup ticket #7360 - requested by taca
+graphics/libheif: Security fix
+
+Pullup ticket #7361 - requested by taca
+security/ruby-auth-sanitizer: Security fix
+
+Pullup ticket #7362 - requested by taca
+www/p5-Catalyst-Plugin_Authentication: Security fix
+
+Pullup ticket #7363 - requested by taca
+security/ruby-net-ssh: Security fix
+
+Pullup ticket #7364 - requested by taca
+textproc/ruby-nokogiri: Security fix
+
+Pullup ticket #7365 - requested by taca
+www/ruby-crass: Security fix
+
+Pullup ticket #7366 - requested by taca
+www/ruby-css-parser: Security fix
+
+Pullup ticket #7367 - requested by taca
+www/ruby-rack: Security fix
+
+Pullup ticket #7368 - requested by taca
+www/ruby-rack2: Security fix
+
+Pullup ticket #7369 - requested by taca
+databases/p5-SQL-Abstract: Security fix
+
+Pullup ticket #7370 - requested by taca
+www/ruby-jekyll-feed: Security fix
+
+Pullup ticket #7371 - requested by taca
+www/ruby-jekyll-seo-tag: Security fix
+
+Pullup ticket #7372 - requested by taca
+www/ruby-loofah: Security fix
+
+Pullup ticket #7373 - requested by taca
+www/ruby-mechanize: Security fix
+
+Pullup ticket #7374 - requested by taca
+mail/roundcube: Security fix
+
+Pullup ticket #7375 - requested by taca
+databases/adodb: Security fix
+
+Pullup ticket #7376 - requested by taca
+databases/php-mongodb: Security fix
+
+Pullup ticket #7377 - requested by taca
+databases/redis: Security fix
+
+Pullup ticket #7378 - requested by taca
+www/apache24: Security fix
+
+Pullup ticket #7379 - requested by bsiegert
+lang/go126: Security fix
+lang/go127: Security fix
+
+Pullup ticket #7380 - requested by gutteridge
+www/firefox153: Security fix
+www/firefox153-l10n: Security fix
+
+Pullup ticket #7381 - requested by taca
+www/p5-CGI: Security fix
+
+Pullup ticket #7382 - requested by taca
+security/ruby-oauth: Security fix
+
+Pullup ticket #7383 - requested by taca
+textproc/uriparser: Security fix
+
+Pullup ticket #7384 - requested by taca
+devel/ruby-version_gem: Updated to allow other security fixes.
+
+Pullup ticket #7385 - requested by taca
+www/apache24: Security fix
+
+Pullup ticket #7388 - requested by riastradh
+www/nginx: Security fix
+
+Pullup ticket #7389 - requested by taca
+converters/p5-JSON-XS: Security fix
+
+Pullup ticket #7390 - requested by taca
+databases/postgresql*: Security fix
+
+Pullup ticket #7391 - requested by taca
+security/clamav: Security fix
+
+Pullup ticket #7392 - requested by taca
+net/tcpflow: Security fix
+
+Pullup ticket #7393 - requested by taca
+net/rabbitmq-c: Security fix
+
+Pullup ticket #7394 - requested by taca
+fonts/fontconfig: Security fix
+
+Pullup ticket #7395 - requested by taca
+security/p5-IO-Socket-SSL: Security fix
+
+Pullup ticket #7396 - requested by taca
+net/nsd: Security fix
+
+Pullup ticket #7397 - requested by taca
+lang/php82: Security fix
+
+Pullup ticket #7398 - requested by taca
+lang/php83: Security fix
+
+Pullup ticket #7399 - requested by taca
+lang/php84: Security fix
+
+Pullup ticket #7400 - requested by taca
+lang/php85: Security fix
+
+Pullup ticket #7401 - requested by taca
+www/drupal11: Security fix
+
+Pullup ticket #7402 - requested by taca
+www/typo3-13: Security fix
+
+Pullup ticket #7404 - requested by taca
+www/typo3-14: Security fix
+
+Pullup ticket #7405 - requested by taca
+devel/libffi: Security fix
+
+Pullup ticket #7406 - requested by taca
+www/wordpress: Security fix
+
+Pullup ticket #7407 - requested by taca
+www/php-ja-wordpress: Security fix
