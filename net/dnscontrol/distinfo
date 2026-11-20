@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2026/11/18 18:30:17 drixter Exp $
+$NetBSD: distinfo,v 1.26 2026/11/20 13:08:05 drixter Exp $
 
 BLAKE2s (cloud.google.com_go_auth_@v_v0.24.1-0.20261001053825-dbc26066f70a.mod) = c26fe07f1a39b6a08a93447e52a13146d6fd79c4b640ebead5daf029d66d10a2
 SHA512 (cloud.google.com_go_auth_@v_v0.24.1-0.20261001053825-dbc26066f70a.mod) = 5954d93fe261d6ce81b17520c5a0cb6e0972cee1645b2817b0807417f55d83abc8f04f931e47f9f1f23d74c658261e7000b2b7c85582170ebb4944d471192b2b
@@ -27,9 +27,9 @@ Size (codeberg.org__tom_on_time_dns_@v_v0.6.116-0.20261118130851-8ae596c34f2a.zi
 BLAKE2s (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 2136184228fc4913040e8abab210d9694fa46310b1073dbb42e1697f8591c1f2
 SHA512 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 196affe091247f94ceda4b56629bd62d4ee2b397f2c0f56c9534c02e43531b46705ad33543b58c1a4fc7a48e25e5923db087fe0485a93966a4086581c0d1d3e1
 Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 36 bytes
-BLAKE2s (dnscontrol-5.10.0.tar.gz) = 2119b3724b11a847fc0354fed6b345adb111e5a2b186e23699afdf3348536d24
-SHA512 (dnscontrol-5.10.0.tar.gz) = 6800d09aebb652a47d1110c62c94a14935a8e95fc274875d49815598f24187d03032dbbab75f7b12857e1ef4f4307033177752b574b64ee591a15bb9d1ec391c
-Size (dnscontrol-5.10.0.tar.gz) = 6153995 bytes
+BLAKE2s (dnscontrol-5.10.1.tar.gz) = d306d4d84371b4110d5f2c34bb4e1e14bd61a406c1ee55f78f8a009d36d3ec98
+SHA512 (dnscontrol-5.10.1.tar.gz) = 595e931308212c98eb3cbd1b76fc32c6b12e3749c08ca3e8e56771281d064fc31d62509707cb337a5ccca91578d66bb4dd583c2c10dfd867e9f08decfbe904ef
+Size (dnscontrol-5.10.1.tar.gz) = 6153961 bytes
 BLAKE2s (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 7ff4e62d167148a47ea2954be89d7301397c4c75ef6e7d27016b47e039c4637f
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = f8186f43b04970d779e9fdb09128e24e6cbe66a49ed8a3e5525f0a9370f897b9f914c6755e5b33da1439b0d12d345219c4ed1c2c19913db318d8c07664bd3e0d
 Size (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 595 bytes
