@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:59:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2026/11/20 15:57:10 ktnb Exp $
 
-BLAKE2s (pinfo-0.6.1.tar.gz) = d96f0659c0f3a3dc7b8a061c10d2ea7c61b665f458079f0d7c33f2d217b444ac
-SHA512 (pinfo-0.6.1.tar.gz) = ee3dc36bbef0903405886787489bcb70d456dfcaea342b15a5a1e4d300456a2e9bf2eece2bdc10f4216cca351c76018cbe4629d911c6eb02fe0ce4634b6654ba
-Size (pinfo-0.6.1.tar.gz) = 271015 bytes
-SHA1 (patch-aa) = e2d7d0e8ccbe5db276fb736d22682bb8f719eb98
-SHA1 (patch-ab) = f089af56a969af630e2cb886aa8fb40be055eca7
+BLAKE2s (pinfo-0.6.13.tar.gz) = fb352de5e504deb4bb3baca1252c60941e292805c8f8ec37b171918c57a5a3b0
+SHA512 (pinfo-0.6.13.tar.gz) = 739e24821a363a087fb9df5651694f051286d4a15c3e51f2421a2aa60b1efe1da558b959ba22a0094e22854534ea5875498156e8ea2e198e31001aecab1a18df
+Size (pinfo-0.6.13.tar.gz) = 157103 bytes
+SHA1 (patch-ab) = eae999f697e5802309a105d2068804cbb0841efc
 SHA1 (patch-ac) = 7dbddcf81e9ad6ff00dadd8a93cf2c160992ce75
-SHA1 (patch-ad) = 29a395521ab7e08960fb7200f1dd4e0721d1895d
+SHA1 (patch-src_filehandling__functions.c) = 510ea7560884effb5484d5674aa68bb548ca76be
+SHA1 (patch-src_initializelinks.c) = 6f5abacd6913cdfc4f482bb0d37b218498574565
+SHA1 (patch-src_mainfunction.c) = f032a3b2e63dc57de73d5b129aeefd09ae5b97b5
+SHA1 (patch-src_manual.c) = 27b57e13a39256e3efd5c4edef02c68785dea0b8
+SHA1 (patch-src_parse__config.c) = 5803791d0690da22b4685f13ee8813c92cb24949
+SHA1 (patch-src_utils.c) = 07c9810dff44e3590aaf5059e086887d36d6ca9f
+SHA1 (patch-src_video.c) = 82904d5258d9fae1d94f297b6e247f2d255eb384

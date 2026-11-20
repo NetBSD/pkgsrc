@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:07:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/11/20 15:57:10 ktnb Exp $
 bin/pinfo
 info/pinfo.info
 man/man1/pinfo.1
 share/examples/pinfo/pinforc
 share/locale/cs/LC_MESSAGES/pinfo.mo
 share/locale/de/LC_MESSAGES/pinfo.mo
+share/locale/eu/LC_MESSAGES/pinfo.mo
+share/locale/ja/LC_MESSAGES/pinfo.mo
+share/locale/nl/LC_MESSAGES/pinfo.mo
 share/locale/pl/LC_MESSAGES/pinfo.mo
+share/locale/pt_BR/LC_MESSAGES/pinfo.mo
+share/locale/ro/LC_MESSAGES/pinfo.mo
 share/locale/ru/LC_MESSAGES/pinfo.mo
 share/locale/sv/LC_MESSAGES/pinfo.mo
+share/locale/vi/LC_MESSAGES/pinfo.mo

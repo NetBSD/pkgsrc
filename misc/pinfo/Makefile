@@ -1,33 +1,34 @@
-# $NetBSD: Makefile,v 1.41 2026/01/22 08:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/20 15:57:10 ktnb Exp $
 
-DISTNAME=		pinfo-0.6.1
-PKGREVISION=		8
-CATEGORIES=		misc
-MASTER_SITES=		# http://alioth.debian.org/download.php/1502/
+DISTNAME=	pinfo-0.6.13
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=baszoetekouw/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://pinfo.alioth.debian.org/
+HOMEPAGE=		https://github.com/baszoetekouw/pinfo/
 COMMENT=		Przemek's Info Viewer
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt autoconf automake autopoint gettext makeinfo
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-CPPFLAGS+=		-DDFLT_INFOPATH="\"/usr/share/info:${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}:/usr/local/info\""
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/pinfo
 CONF_FILES=		${EGDIR}/pinforc ${PKG_SYSCONFDIR}/pinforc
 INFO_FILES=		yes
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+
+SUBST_CLASSES+=		infopath
+SUBST_STAGE.infopath=	pre-configure
+SUBST_FILES.infopath=	src/datatypes.c
+SUBST_SED.infopath=	-e 's,= "\.:/usr/share/info,= ".:/usr/share/info:${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}:/usr/local/info,'
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi -I macros
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-
 .include "../../mk/curses.buildlink3.mk"
-.if ${CURSES_TYPE} == "curses"
-CONFIGURE_ARGS+=	--with-vcurses
-.elif ${CURSES_TYPE} == "ncurses"
-CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.curses}
-.endif
-
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
