@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8241 2026/11/21 17:23:52 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8242 2026/11/21 17:46:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12211,3 +12211,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/gpgme to 2.3.1 [wiz 2026-11-20]
 	Updated sysutils/bup to 0.34.1 [gdt 2026-11-21]
 	Updated shells/oh-my-posh to 33.1.0 [pin 2026-11-21]
+	Updated misc/rozi to 0.1.1 [pin 2026-11-21]
