@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.76 2026/11/21 01:18:57 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2026/11/21 12:30:29 gdt Exp $
 
-DISTNAME=	bup-0.33.10
+VERSION=	0.34.1
+DISTNAME=	bup-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
+GITHUB_TAG=	${VERSION}
 # bup has two problems that make packaging difficult.  One is that
 # building man pages requires non-portable tools (pandoc).  The other
 # is that it is hosted on github, which makes hosting tarballs
@@ -14,14 +16,12 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # reliably, so just use sha1.
 # EXTRACT_SUFX default value is set too late, so using it in SITES.* fails.
 EXTRACT_SUFX=		.tar.gz
-MAN_TAG=		26d961455dc071f166a3f6f54e6ceb0b71cf2524
-MAN_UNPACK=		bup-${MAN_TAG}
-MAN_DISTFILE=		bup-man-${MAN_TAG}${EXTRACT_SUFX}
-SITES.${MAN_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
-# Upstream provides html, but we choose not to include it in the package.
-#HTML_TAG=		66eccb7eb49575d006d193276018d9551ac5b4d4
-DISTFILES=		${DEFAULT_DISTFILES} ${MAN_DISTFILE}
-DIST_MANPAGES=		${WRKDIR}/${MAN_UNPACK}
+DOC_TAG=		8379be01a941a3c4ff1efe73342e99d9f570fb68
+DOC_UNPACK=		bup-${DOC_TAG}
+DOC_DISTFILE=		bup-doc-${DOC_TAG}${EXTRACT_SUFX}
+SITES.${DOC_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${DOC_TAG}${EXTRACT_SUFX}
+DISTFILES=		${DEFAULT_DISTFILES} ${DOC_DISTFILE}
+DIST_DOC=		${WRKDIR}/${DOC_UNPACK}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bup/bup
@@ -31,6 +31,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash gmake perl:run
 HAS_CONFIGURE=	yes
+CONFIG_SHELL=	bash
 
 # On macOS 10.13, building bup fails with defaults but builds with
 # USE_CWRAPPERS=no.   The error is
@@ -39,25 +40,10 @@ HAS_CONFIGURE=	yes
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
 
 ALL_ENV+=	BUP_PYTHON_CONFIG=${PREFIX}/bin/python${PYVERSSUFFIX}-config
 
-# bup's configure is buggy and ends up with a make->make symlink.
-# Whack it to something sensible.  Reported upstream 20221204.
-#
-# bup's Makefile is buggy in that there is no install target.  Whack
-# Makefile from GNUmakefile so that the install target will be run.
-# Reported upstream 20221204.
-post-configure:
-	cd ${WRKSRC}/config/bin && rm -f make && ln -s ${TOOLS_PATH.gmake} make
-	cd ${WRKSRC} && cp -pf GNUmakefile Makefile
-
+MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
@@ -67,11 +53,13 @@ MAKE_FLAGS+=	PANDOC=
 
 # find work/ -type f |xargs egrep 'env.*bash'|awk -F: '{print $1}' | sed -e s,work/bup-5f9cf697b3daa3d4d6899f9366ebc1fd64161a32/,,
 # and merge to the list
+REPLACE_BASH+=		configure
 REPLACE_BASH+=		dev/checksum
 REPLACE_BASH+=		dev/compare-trees
 REPLACE_BASH+=		dev/configure-sampledata
 REPLACE_BASH+=		dev/force-delete
 REPLACE_BASH+=		dev/git-cat-tree
+REPLACE_BASH+=		dev/path-fs
 REPLACE_BASH+=		dev/perf-glance
 REPLACE_BASH+=		dev/prep-for-debianish-build
 REPLACE_BASH+=		dev/prep-for-macos-build
@@ -81,16 +69,24 @@ REPLACE_BASH+=		dev/system-info
 REPLACE_BASH+=		dev/update-checkout-info
 REPLACE_BASH+=		dev/update-doc-branches
 REPLACE_BASH+=		dev/validate-python
+REPLACE_BASH+=		dev/with-tty
 REPLACE_BASH+=		lib/cmd/bup-import-rdiff-backup
 REPLACE_BASH+=		pylint
+REPLACE_BASH+=		test/ext/test-btl
 REPLACE_BASH+=		test/ext/test-cat-file
-REPLACE_BASH+=		test/ext/test-command-without-init-fails
 REPLACE_BASH+=		test/ext/test-comparative-split-join
 REPLACE_BASH+=		test/ext/test-compression
 REPLACE_BASH+=		test/ext/test-drecurse
+REPLACE_BASH+=		test/ext/test-empty-metadata
 REPLACE_BASH+=		test/ext/test-fsck
 REPLACE_BASH+=		test/ext/test-fuse
 REPLACE_BASH+=		test/ext/test-gc
+REPLACE_BASH+=		test/ext/test-gc-removes-incomplete-trees
+REPLACE_BASH+=		test/ext/test-get-excludes
+REPLACE_BASH+=		test/ext/test-get-missing
+REPLACE_BASH+=		test/ext/test-get-repair-bupm
+REPLACE_BASH+=		test/ext/test-get-repair-symlinks
+REPLACE_BASH+=		test/ext/test-get-rewrite-missing
 REPLACE_BASH+=		test/ext/test-help
 REPLACE_BASH+=		test/ext/test-import-duplicity
 REPLACE_BASH+=		test/ext/test-import-rdiff-backup
@@ -98,18 +94,21 @@ REPLACE_BASH+=		test/ext/test-index
 REPLACE_BASH+=		test/ext/test-index-check-device
 REPLACE_BASH+=		test/ext/test-index-clear
 REPLACE_BASH+=		test/ext/test-index-save-type-change
+REPLACE_BASH+=		test/ext/test-init
+REPLACE_BASH+=		test/ext/test-install
 REPLACE_BASH+=		test/ext/test-list-idx
 REPLACE_BASH+=		test/ext/test-ls
 REPLACE_BASH+=		test/ext/test-ls-remote
 REPLACE_BASH+=		test/ext/test-main
 REPLACE_BASH+=		test/ext/test-meta
+REPLACE_BASH+=		test/ext/test-meta-acls
 REPLACE_BASH+=		test/ext/test-misc
 REPLACE_BASH+=		test/ext/test-on
 REPLACE_BASH+=		test/ext/test-packsizelimit
 REPLACE_BASH+=		test/ext/test-redundant-saves
-REPLACE_BASH+=		test/ext/test-release-archive
 REPLACE_BASH+=		test/ext/test-restore-map-owner
 REPLACE_BASH+=		test/ext/test-restore-single-file
+REPLACE_BASH+=		test/ext/test-rewrite
 REPLACE_BASH+=		test/ext/test-rm
 REPLACE_BASH+=		test/ext/test-rm-between-index-and-save
 REPLACE_BASH+=		test/ext/test-save-creates-no-unrefs
@@ -122,26 +121,40 @@ REPLACE_BASH+=		test/ext/test-save-strip-graft
 REPLACE_BASH+=		test/ext/test-save-symlink-race
 REPLACE_BASH+=		test/ext/test-save-with-valid-parent
 REPLACE_BASH+=		test/ext/test-sparse-files
+REPLACE_BASH+=		test/ext/test-split-files-config
 REPLACE_BASH+=		test/ext/test-split-join
+REPLACE_BASH+=		test/ext/test-tag
+REPLACE_BASH+=		test/ext/test-treesplit
 REPLACE_BASH+=		test/ext/test-tz
+REPLACE_BASH+=		test/ext/test-validate-object-links
+REPLACE_BASH+=		test/ext/test-validate-ref-links
+REPLACE_BASH+=		test/ext/test-validate-refs
+REPLACE_BASH+=		test/ext/test-versioning-and-archive
+REPLACE_BASH+=		test/ext/test-walk-object-order
 REPLACE_BASH+=		test/ext/test-web
 REPLACE_BASH+=		test/ext/test-xdev
 
 DOCDIR=			share/doc/${PKGBASE}
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${DOCDIR}
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${DOCDIR} ${DOCDIR}/html
 
 post-install:
-	${INSTALL_DATA} ${DIST_MANPAGES}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/DESIGN ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${DIST_DOC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${DIST_DOC}/html/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/html
+	${INSTALL_DATA} ${WRKSRC}/DESIGN.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "options.mk"
 
-# Note that tests 1) will fail on a fs mounted noatime and 2) need a
-# lot of space, perhaps 1 GB.
-# Tests fail on netbsd-9 because of non-portable use of script(1)
-# introduced in 0.33.9.  Reported upstream by email 20250830.
+# Note that tests 1) will fail on a fs mounted noatime, 2) need a lot
+# of space, perhaps 1 GB, and 3) can fail with test data at the DST
+# boundary because of what I believe is a bug in NetBSD libc.
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+TEST_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
+
 TEST_TARGET=	test
 # \todo Pass MAKE_JOBS into "gmake test" via -j.
 TEST_ENV+=	TZ=UTC
