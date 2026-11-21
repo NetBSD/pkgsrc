@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.38 2026/04/10 08:41:35 wiz Exp $
+# $NetBSD: metadata.mk,v 1.39 2026/11/21 18:59:54 wiz Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -151,7 +151,11 @@ ${_BUILD_VERSION_FILE}:
 			esac;						\
 		done;							\
 		for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do		\
-			[ -f "$$f" ] && ${ECHO} "$$f";			\
+			case "$$f" in					\
+			*/TODO) ;;					\
+			*/COMMIT_MSG) ;;				\
+			*) [ -f "$$f" ] && ${ECHO} "$$f";;		\
+			esac;						\
 		done;							\
 		if [ -f ${DISTINFO_FILE:Q} ]; then			\
 			${AWK} 'NF == 4 && $$3 == "=" {			\
