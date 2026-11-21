@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2026/10/30 10:32:52 prlw1 Exp $
+$NetBSD: distinfo,v 1.6 2026/11/21 17:08:10 prlw1 Exp $
 
 BLAKE2s (jxrlib-1.4.4.tar.gz) = c7d602a96ae482ef88a73c1ab3ddfa835fa8a74634c95cb5aa86e4ee9855c862
 SHA512 (jxrlib-1.4.4.tar.gz) = 3b77a2cbcf000b6decf006097f415d86156ab6dc70d3fa3069ddee31f04e610e2d644dec0fae96bf73ee4e5d1ca0390129fc650356da3e7446d6211b22d7df99
 Size (jxrlib-1.4.4.tar.gz) = 352758 bytes
-SHA1 (patch-Makefile) = 2dee098ecb785a307efe3bfce6f7a00692a40b61
+SHA1 (patch-Makefile) = a59c2f7a6cb5320004eb64c082c8d9b705cad4cc
