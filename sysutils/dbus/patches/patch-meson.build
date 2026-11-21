@@ -1,6 +1,6 @@
-$NetBSD: patch-meson.build,v 1.4 2026/11/20 20:48:19 nros Exp $
+$NetBSD: patch-meson.build,v 1.5 2026/11/21 11:14:34 nros Exp $
 
-* Treat Illumos like solaris
+* The real identifier for Solaris/Illumos is "sunos" not "solaris"
 * The space before the -D_XOPEN_SOURCE=500 causes the compile test
   for it to fail somehow, causing the argument to not get added to
   the compile line
@@ -12,7 +12,7 @@ $NetBSD: patch-meson.build,v 1.4 2026/11/20 20:48:19 nros Exp $
  compile_args += ['-fno-strict-aliasing']
  
 -if host_os.contains('solaris')
-+if host_os.contains('solaris') or host_os.contains('sunos')
++if host_os.contains('sunos')
      compile_args += [
          # Solaris' C library apparently needs these runes to be threadsafe...
          '-D_POSIX_PTHREAD_SEMANTICS',
@@ -24,3 +24,23 @@ $NetBSD: patch-meson.build,v 1.4 2026/11/20 20:48:19 nros Exp $
      ]
  endif
  
+@@ -548,8 +548,8 @@ endif
+ have_console_owner_file = false
+ console_owner_file = get_option('solaris_console_owner_file')
+ if console_owner_file != ''
+-  if not host_os.contains('solaris')
+-    error('solaris_console_owner_file is only supported on Solaris)')
++  if not host_os.contains('sunos')
++    error('solaris_console_owner_file is only supported on Solaris/Illumos)')
+   endif
+   have_console_owner_file = true
+   if console_owner_file == 'auto'
+@@ -1395,7 +1395,7 @@ summary_dict += {
+     'Tests socket dir':         test_socket_dir,
+ }
+ 
+-if host_os.contains('solaris')
++if host_os.contains('sunos')
+   summary_dict += {
+       'Console owner file': console_owner_file,
+   }

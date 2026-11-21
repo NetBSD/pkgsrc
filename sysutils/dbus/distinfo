@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.108 2026/11/20 20:48:18 nros Exp $
+$NetBSD: distinfo,v 1.109 2026/11/21 11:14:34 nros Exp $
 
 BLAKE2s (dbus-1.16.4.tar.xz) = 96239ce3f7e2f869ae81541deed2d658fb6c3cc73762d2ca7ae04e8c7519c9c4
 SHA512 (dbus-1.16.4.tar.xz) = edcd1102184e4a81da905a7a554531bcba74d4e037240c27b3cf1af8ed308df6ae6182fd8af0c98894c56b6d24100787893d6a86e430f4077c23c8a3a5f530a2
 Size (dbus-1.16.4.tar.xz) = 1124660 bytes
 SHA1 (patch-bus_meson.build) = e815474ffeb4ee7086121746174de6d220290347
-SHA1 (patch-meson.build) = 425c6666b3cb7a2d41808f62e806b8e5f0b229b5
+SHA1 (patch-meson.build) = 118f15950d1f04eaa28f8ae21f9907d49afec405
 SHA1 (patch-tools_meson.build) = 1199df4b4d73cf32278a359c94f3bef8d1d34a51
