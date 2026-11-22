@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/10/27 12:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/22 15:32:13 drixter Exp $
 
-DISTNAME=	shuck-0.2.7
+DISTNAME=	shuck-0.2.11
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ewhauser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ewhauser/shuck/
 COMMENT=	Lightning fast shell linter/formatter/LSP server
 LICENSE=	mit
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	c c++
 # jemalloc
 USE_TOOLS+=	gmake
 
