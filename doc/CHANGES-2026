@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8283 2026/11/22 19:05:26 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8284 2026/11/22 19:10:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12255,3 +12255,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/py-certifi to 2026.11.20 [wiz 2026-11-22]
 	Updated devel/py-cogapp to 3.6.1 [wiz 2026-11-22]
 	Updated devel/py-configargparse to 1.10.2 [wiz 2026-11-22]
+	Updated devel/py-coverage to 7.17.4 [wiz 2026-11-22]
