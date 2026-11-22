@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2026/11/15 20:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/11/22 19:10:08 wiz Exp $
 
-DISTNAME=	coverage-7.17.3
+DISTNAME=	coverage-7.17.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -38,9 +38,8 @@ pre-test:
 	${CHMOD} 755 ${BUILDLINK_DIR}/bin/${alias}
 .endfor
 
-# as of 7.17.3, after 'make install'
-# 12 failed, 1638 passed, 62 skipped
-# 12 failed, 1631 passed, 62 skipped, 1 error
+# as of 7.17.4, after 'make install'
+# 13 failed, 1654 passed, 62 skipped
 
 # The VirtualenvTest tests create a virtualenv and pip install into it, skip them.
 do-test:
