@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/01/09 06:08:29 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/22 19:03:29 wiz Exp $
 
-DISTNAME=	cogapp-3.6.0
+DISTNAME=	cogapp-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogapp/}
@@ -14,8 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cog cog-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	cog
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

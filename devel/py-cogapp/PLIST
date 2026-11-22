@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/01/09 06:08:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/22 19:03:29 wiz Exp $
 bin/cog-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -16,12 +16,18 @@ ${PYSITELIB}/cogapp/__main__.pyo
 ${PYSITELIB}/cogapp/cogapp.py
 ${PYSITELIB}/cogapp/cogapp.pyc
 ${PYSITELIB}/cogapp/cogapp.pyo
+${PYSITELIB}/cogapp/errors.py
+${PYSITELIB}/cogapp/errors.pyc
+${PYSITELIB}/cogapp/errors.pyo
 ${PYSITELIB}/cogapp/hashhandler.py
 ${PYSITELIB}/cogapp/hashhandler.pyc
 ${PYSITELIB}/cogapp/hashhandler.pyo
 ${PYSITELIB}/cogapp/makefiles.py
 ${PYSITELIB}/cogapp/makefiles.pyc
 ${PYSITELIB}/cogapp/makefiles.pyo
+${PYSITELIB}/cogapp/options.py
+${PYSITELIB}/cogapp/options.pyc
+${PYSITELIB}/cogapp/options.pyo
 ${PYSITELIB}/cogapp/test_cogapp.py
 ${PYSITELIB}/cogapp/test_cogapp.pyc
 ${PYSITELIB}/cogapp/test_cogapp.pyo
