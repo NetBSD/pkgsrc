@@ -1,0 +1,16 @@
+$NetBSD: patch-g13_Makefile.am,v 1.1 2026/11/22 11:39:04 pho Exp $
+
+Fix build on FreeBSD: Symbols from libintl go missing. Not sure why it
+succeeds on other platforms.
+
+--- g13/Makefile.am.orig	2026-11-22 11:31:34.440392000 +0000
++++ g13/Makefile.am
+@@ -74,7 +74,7 @@ t_common_ldadd = $(libcommon) $(LIBGCRYPT_LIBS) \
+ 
+ module_tests = t-g13tuple
+ t_common_ldadd = $(libcommon) $(LIBGCRYPT_LIBS) \
+-	         $(LIBASSUAN_LIBS) $(GPG_ERROR_LIBS) $(LIBICONV)
++	         $(LIBASSUAN_LIBS) $(GPG_ERROR_LIBS) $(LIBINTL) $(LIBICONV)
+ 
+ t_g13tuple_SOURCES = t-g13tuple.c g13tuple.c
+ t_g13tuple_LDADD = $(t_common_ldadd)
