@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8260 2026/11/22 10:54:09 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8261 2026/11/22 11:29:30 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12230,3 +12230,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/reader to 0.6.1 [pin 2026-11-22]
 	Updated sysutils/uutils-coreutils to 0.13.0 [pin 2026-11-22]
 	Updated sysutils/lf to 42 [drixter 2026-11-22]
+	Updated lang/chicken6 to 6.1.0 [drixter 2026-11-22]
