@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2026/07/16 19:01:55 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/11/22 08:28:44 wiz Exp $
 
-DISTNAME=	Bit-Vector-7.4
+DISTNAME=	Bit-Vector-7.5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	13
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bit/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Bit-Vector
