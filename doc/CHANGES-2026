@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8268 2026/11/22 15:00:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8269 2026/11/22 15:13:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12238,3 +12238,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/nodejs24 to 24.22.3nb1 [kikadf 2026-11-22]
 	Added print/uPDFParser version 0.1 [wiz 2026-11-22]
 	Added misc/libgourou version 0.9 [wiz 2026-11-22]
+	Updated www/ruby-rack to 3.2.9 [taca 2026-11-22]
