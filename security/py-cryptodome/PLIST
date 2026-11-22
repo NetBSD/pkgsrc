@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2026/11/08 17:41:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2026/11/22 19:14:34 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -72,6 +72,9 @@ ${PYSITELIB}/Crypto/Cipher/_mode_ecb.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.py
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyo
+${PYSITELIB}/Crypto/Cipher/_mode_gcm_siv.py
+${PYSITELIB}/Crypto/Cipher/_mode_gcm_siv.pyc
+${PYSITELIB}/Crypto/Cipher/_mode_gcm_siv.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_kw.py
 ${PYSITELIB}/Crypto/Cipher/_mode_kw.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_kw.pyo
@@ -90,6 +93,9 @@ ${PYSITELIB}/Crypto/Cipher/_mode_openpgp.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.py
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyo
+${PYSITELIB}/Crypto/Cipher/_mode_xts.py
+${PYSITELIB}/Crypto/Cipher/_mode_xts.pyc
+${PYSITELIB}/Crypto/Cipher/_mode_xts.pyo
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.py
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.pyc
@@ -107,6 +113,7 @@ ${PYSITELIB}/Crypto/Cipher/_raw_ecb.so
 ${PYSITELIB}/Crypto/Cipher/_raw_eksblowfish.so
 ${PYSITELIB}/Crypto/Cipher/_raw_ocb.so
 ${PYSITELIB}/Crypto/Cipher/_raw_ofb.so
+${PYSITELIB}/Crypto/Cipher/_raw_xts.so
 ${PYSITELIB}/Crypto/Cipher/_state_machine.py
 ${PYSITELIB}/Crypto/Cipher/_state_machine.pyc
 ${PYSITELIB}/Crypto/Cipher/_state_machine.pyo
@@ -381,6 +388,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_EAX.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.pyo
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM_SIV.py
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM_SIV.pyc
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM_SIV.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.pyo
@@ -399,6 +409,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_SIV.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_Salsa20.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_Salsa20.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_Salsa20.pyo
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_XTS.py
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_XTS.pyc
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_XTS.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_message_too_long.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_message_too_long.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_message_too_long.pyo
@@ -501,6 +514,9 @@ ${PYSITELIB}/Crypto/SelfTest/IO/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PBES.py
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PBES.pyc
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PBES.pyo
+${PYSITELIB}/Crypto/SelfTest/IO/test_PEM.py
+${PYSITELIB}/Crypto/SelfTest/IO/test_PEM.pyc
+${PYSITELIB}/Crypto/SelfTest/IO/test_PEM.pyo
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PKCS8.py
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PKCS8.pyc
 ${PYSITELIB}/Crypto/SelfTest/IO/test_PKCS8.pyo
@@ -702,6 +718,7 @@ ${PYSITELIB}/Crypto/Util/RFC1751.pyo
 ${PYSITELIB}/Crypto/Util/__init__.py
 ${PYSITELIB}/Crypto/Util/__init__.pyc
 ${PYSITELIB}/Crypto/Util/__init__.pyo
+${PYSITELIB}/Crypto/Util/_base64.so
 ${PYSITELIB}/Crypto/Util/_bytes.py
 ${PYSITELIB}/Crypto/Util/_bytes.pyc
 ${PYSITELIB}/Crypto/Util/_bytes.pyo
