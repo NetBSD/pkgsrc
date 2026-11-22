@@ -1,7 +1,9 @@
-# $NetBSD: platname.mk,v 1.1 2025/10/08 07:13:08 adam Exp $
+# $NetBSD: platname.mk,v 1.2 2026/11/22 03:00:53 pho Exp $
 
 .if ${OPSYS} == "Darwin"
 PY_PLATNAME=	${LOWER_OPSYS}
+.elif ${OPSYS} == "FreeBSD"
+PY_PLATNAME=	freebsd
 .elif ${OPSYS} == "IRIX"
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
