@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8262 2026/11/22 12:11:09 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8263 2026/11/22 13:54:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12232,3 +12232,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/lf to 42 [drixter 2026-11-22]
 	Updated lang/chicken6 to 6.1.0 [drixter 2026-11-22]
 	Updated math/cadical3 to 3.1.0 [drixter 2026-11-22]
+	Updated chat/anope to 2.0.21 [wiz 2026-11-22]
