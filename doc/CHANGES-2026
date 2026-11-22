@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8249 2026/11/22 08:32:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8250 2026/11/22 08:33:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12219,3 +12219,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/p5-Data-Dump to 1.26 [wiz 2026-11-22]
 	Updated www/p5-HTML-Parser to 3.87 [wiz 2026-11-22]
 	Updated converters/p5-JSON-XS to 4.06 [wiz 2026-11-22]
+	Updated net/p5-Net to 3.17 [wiz 2026-11-22]
