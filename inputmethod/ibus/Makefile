@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2026/11/22 17:25:22 nros Exp $
+# $NetBSD: Makefile,v 1.133 2026/11/22 17:30:18 nros Exp $
 
 DISTNAME=	ibus-1.5.35
 CATEGORIES=	inputmethod
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--disable-appindicator
 .if empty(_PLATFORM_SUPPORTS_RELRO:Myes)
 CONFIGURE_ARGS+=	--disable-product-build
 .endif
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # avoid generating "*.cpython3*.opt-2.pyc" by -OO on byte compiling
 # https://mail-index.netbsd.org/pkgsrc-users/2025/04/17/msg041482.html
