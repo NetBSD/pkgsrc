@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.50 2026/08/13 10:57:14 adam Exp $
+# $NetBSD: options.mk,v 1.51 2026/11/22 19:53:29 ryoon Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -73,7 +73,7 @@ _addextmod=		add-module
 .endif
 
 # documentation says naxsi must be the first module
-.if !empty(PKG_OPTIONS:Mnginx-naxsi) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-naxsi) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 NAXSI_VERSION=			1.7
 NAXSI_DISTFILE=			naxsi-${NAXSI_VERSION}-src-with-deps.tar.gz
 SITES.${NAXSI_DISTFILE}=	${MASTER_SITE_GITHUB:=wargio/naxsi/releases/download/${NAXSI_VERSION}/}
@@ -98,7 +98,7 @@ SUBST_SED.fix-ssl=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.openssl},g'
 SUBST_NOOP_OK.fix-ssl=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-brotli) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-brotli) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 .include "../../archivers/brotli/buildlink3.mk"
 BROTLI_GH_ACCOUNT=		google
 BROTLI_GH_PROJECT=		ngx_brotli
@@ -116,7 +116,7 @@ SUBST_NOOP_OK.fix-brotli=	yes
 PLIST.brotli=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-dav) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-dav) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 DAV_VERSION=		3.0.0
 DAV_DISTNAME=		nginx-dav-ext-module-3.0.0
 DAV_DISTFILE=		${DAV_DISTNAME}.tar.gz
@@ -178,7 +178,7 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-redis) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-redis) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 REDIS_GH_ACCOUNT=		osokin
 REDIS_GH_PROJECT=		ngx_http_redis
 REDIS_VERSION=			59eb1c3
@@ -198,7 +198,7 @@ NEED_NDK=		yes
 PLIST.ndk=		yes
 .  endif
 .endfor
-.if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean)
+.if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 NDK_VERSION=		0.3.4
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
@@ -206,7 +206,7 @@ SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=vision5/ngx_devel_kit/archive/}v${
 DISTFILES+=		${NDK_DISTFILE}
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-luajit) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-luajit) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 LUA_VERSION=		0.10.31
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
@@ -223,8 +223,8 @@ DSO_EXTMODS+=		lua
 PLIST.lua=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-echo) || make(makesum) || make(mdi) || make(distclean)
-ECHOMOD_VERSION=		0.65
+.if !empty(PKG_OPTIONS:Mnginx-echo) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+ECHOMOD_VERSION=		0.66
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/echo-nginx-module/archive/}v${ECHOMOD_VERSION}.tar.gz
@@ -233,7 +233,7 @@ DSO_EXTMODS+=			echomod
 PLIST.echo=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-set-misc) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-set-misc) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 SETMISC_VERSION=		0.34
 SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
 SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
@@ -243,7 +243,7 @@ DSO_EXTMODS+=			setmisc
 PLIST.setmisc=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-geoip2) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-geoip2) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 GEOIP2_VERSION=			3.4
 GEOIP2_DISTNAME=		ngx_http_geoip2_module-${GEOIP2_VERSION}
 GEOIP2_DISTFILE=		${GEOIP2_DISTNAME}.tar.gz
@@ -254,8 +254,8 @@ PLIST.geoip2=			yes
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-array-var) || make(makesum) || make(mdi) || make(distclean)
-ARRAYVAR_VERSION=		0.06
+.if !empty(PKG_OPTIONS:Mnginx-array-var) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+ARRAYVAR_VERSION=		0.07
 ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
 ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
 SITES.${ARRAYVAR_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/array-var-nginx-module/archive/}v${ARRAYVAR_VERSION}.tar.gz
@@ -264,8 +264,8 @@ DSO_EXTMODS+=			arrayvar
 PLIST.arrayvar=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-encrypted-session) || make(makesum) || make(mdi) || make(distclean)
-ENCSESS_VERSION=		0.10
+.if !empty(PKG_OPTIONS:Mnginx-encrypted-session) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+ENCSESS_VERSION=		0.11
 ENCSESS_DISTNAME=		encrypted-session-nginx-module-${ENCSESS_VERSION}
 ENCSESS_DISTFILE=		${ENCSESS_DISTNAME}.tar.gz
 SITES.${ENCSESS_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/encrypted-session-nginx-module/archive/}v${ENCSESS_VERSION}.tar.gz
@@ -274,7 +274,7 @@ DSO_EXTMODS+=			encsess
 PLIST.encses=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-form-input) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-form-input) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 FORMINPUT_VERSION=		0.12
 FORMINPUT_DISTNAME=		form-input-nginx-module-${FORMINPUT_VERSION}
 FORMINPUT_DISTFILE=		${FORMINPUT_DISTNAME}.tar.gz
@@ -284,8 +284,8 @@ DSO_EXTMODS+=			forminput
 PLIST.forminput=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-headers-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.40
+.if !empty(PKG_OPTIONS:Mnginx-headers-more) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+HEADMORE_VERSION=		0.41
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
@@ -302,8 +302,8 @@ CONFIGURE_ARGS+=	--http-uwsgi-temp-path=${NGINX_DATADIR}/uwsgi_temp
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-push) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.3.7
+.if !empty(PKG_OPTIONS:Mnginx-push) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+PUSH_VERSION=		1.3.9
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
@@ -348,8 +348,8 @@ CONFIGURE_ARGS+=	--with-http_gzip_static_module
 CONFIGURE_ARGS+=	--with-http_auth_request_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-cache-purge) || make(makesum) || make(mdi) || make(distclean)
-CPRG_VERSION=		2.5.3
+.if !empty(PKG_OPTIONS:Mnginx-cache-purge) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+CPRG_VERSION=		3.0.4
 CPRG_DISTNAME=		ngx_cache_purge-${CPRG_VERSION}
 CPRG_DISTFILE=		${CPRG_DISTNAME}.tar.gz
 SITES.${CPRG_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx-modules/ngx_cache_purge/archive/}${CPRG_VERSION}.tar.gz
@@ -368,7 +368,7 @@ CONFIGURE_ARGS+=	--with-stream_ssl_preread_module
 PLIST.stream=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-rtmp) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-rtmp) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 RTMP_VERSION=		1.2.2
 RTMP_DISTNAME=		nginx-rtmp-module-${RTMP_VERSION}
 RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
@@ -378,8 +378,8 @@ DSO_EXTMODS+=		rtmp
 PLIST.rtmp=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.9.1
+.if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
+NJS_VERSION=		1.0.2
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
@@ -396,7 +396,7 @@ CONFIGURE_ENV+=		NJS_LIBXSLT=NO
 .  endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-upload) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-upload) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 UPLOAD_VERSION=			2.3.0
 UPLOAD_DISTNAME=		nginx-upload-module-${UPLOAD_VERSION}
 UPLOAD_DISTFILE=		${UPLOAD_DISTNAME}.tar.gz
@@ -406,7 +406,7 @@ DSO_EXTMODS+=			upload
 PLIST.upload=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-gssapi) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-gssapi) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 GSSAPI_GH_ACCOUNT=		stnoonan
 GSSAPI_GH_PROJECT=		spnego-http-auth-nginx-module
 GSSAPI_VERSION=			c3dbfbd
@@ -418,7 +418,7 @@ DSO_EXTMODS+=			gssapi
 PLIST.gssapi=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-sts) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-sts) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 STS_GH_ACCOUNT=		vozlt
 STS_GH_PROJECT=		nginx-module-sts
 STS_VERSION=		3c10d42
@@ -430,7 +430,7 @@ DSO_EXTMODS+=		sts
 PLIST.sts=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnginx-vts) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-vts) || make(makesum) || make(mdi) || make(distclean) || make(distinfo)
 VTS_GH_ACCOUNT=		vozlt
 VTS_GH_PROJECT=		nginx-module-vts
 VTS_VERSION=		bdb2699
