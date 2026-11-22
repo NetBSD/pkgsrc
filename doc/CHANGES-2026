@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8276 2026/11/22 18:53:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8277 2026/11/22 18:55:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12248,3 +12248,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/openbao to 2.7.3 [bsiegert 2026-11-22]
 	Updated math/fast_float to 8.4.0 [wiz 2026-11-22]
 	Updated www/grafana-prometheus-datasource to 13.2.7 [wiz 2026-11-22]
+	Updated sysutils/node_exporter to 1.13.1 [wiz 2026-11-22]
