@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8245 2026/11/22 08:28:55 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8246 2026/11/22 08:29:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12215,3 +12215,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/qrcp to 0.12.0 [ktnb 2026-11-22]
 	Updated net/libdatachannel to 0.24.7 [ktnb 2026-11-22]
 	Updated devel/p5-Bit-Vector to 7.5 [wiz 2026-11-22]
+	Updated converters/p5-Cpanel-JSON-XS to 4.82 [wiz 2026-11-22]
