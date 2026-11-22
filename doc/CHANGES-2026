@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8273 2026/11/22 16:07:55 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8274 2026/11/22 16:46:50 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12245,3 +12245,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-rack-protection to 4.2.2 [taca 2026-11-22]
 	Updated shells/shuck to 0.2.11 [drixter 2026-11-22]
 	Updated math/mcsim to 6.2.0 [drixter 2026-11-22]
+	Updated security/openbao to 2.7.3 [bsiegert 2026-11-22]
