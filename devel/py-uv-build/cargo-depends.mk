@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2026/11/15 22:42:38 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2026/11/22 21:27:15 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.4
@@ -116,7 +116,7 @@ CARGO_CRATE_DEPENDS+=	jiff-static-0.2.38
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.91
 CARGO_CRATE_DEPENDS+=	junction-2.1.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.189
+CARGO_CRATE_DEPENDS+=	libc-0.2.191
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.12.1
 CARGO_CRATE_DEPENDS+=	litemap-0.8.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.14
