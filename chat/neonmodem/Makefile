@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2026/11/10 18:55:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2026/11/22 09:10:21 pin Exp $
 
-DISTNAME=	neonmodem-1.1.0
-PKGREVISION=	7
+DISTNAME=	neonmodem-2.1.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrusme/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://neonmodem.com/
 COMMENT=	Neon modem overdrive
-LICENSE=	gnu-gpl-v3
+LICENSE=	segv-1.1
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
