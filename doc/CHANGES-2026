@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8286 2026/11/22 19:22:30 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8287 2026/11/22 19:29:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12258,3 +12258,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coverage to 7.17.4 [wiz 2026-11-22]
 	Updated security/py-cryptodome to 4.6.0 [wiz 2026-11-22]
 	Updated security/py-cryptodome to 4.6.0 [wiz 2026-11-22]
+	Updated devel/py-filelock to 4.3.0 [wiz 2026-11-22]
