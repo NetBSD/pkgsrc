@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/03 12:55:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/22 10:53:36 drixter Exp $
 bin/lf
 man/man1/lf.1
 share/applications/lf.desktop
@@ -19,5 +19,6 @@ share/examples/lf/lfcd.sh
 share/examples/lf/lfrc.cmd.example
 share/examples/lf/lfrc.example
 share/examples/lf/lfrc.ps1.example
+share/examples/lf/ruler.default
 share/fish/vendor_completions.d/lf.fish
 share/zsh/site-functions/_lf
