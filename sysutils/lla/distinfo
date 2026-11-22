@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2026/11/17 13:03:42 pin Exp $
+$NetBSD: distinfo,v 1.32 2026/11/22 09:12:24 pin Exp $
 
 BLAKE2s (addr2line-0.26.1.crate) = b4bf0fd45d4dab241cddf26b0719fa42d579fc76ce4dd742f442891be5d9ab60
 SHA512 (addr2line-0.26.1.crate) = 82faf8f3afd0e5415f674e54ebad858f702bdb289c814b5ee258b33b5446eb7f3639a0d05e573ca4a3bf6c4f39059a35abae866112cc1370d7eeea5154f42e35
@@ -579,21 +579,21 @@ Size (linux-raw-sys-0.4.14.crate) = 1826665 bytes
 BLAKE2s (litemap-0.8.0.crate) = 6654e32bfb2cad87e06ab618a5c8da54ecbd27cd8d32fea67e43ffea66aff33f
 SHA512 (litemap-0.8.0.crate) = 61162bd55b28540ec2d61262698045a78efbfadc7e2fa248d9e0215fd7d3ce53a8c50ea0487f2f7df41149e41c0131849e507737e3bbae29cb69ea41dcb8e2d9
 Size (litemap-0.8.0.crate) = 34344 bytes
-BLAKE2s (lla-0.9.0.crate) = 58e78476b43bea36d80b80281c1fefe90afa3500cc7008a2d92fb8dee5265fb5
-SHA512 (lla-0.9.0.crate) = cfcad530741909306be26b073fc261c09feb4b4c85454aa706e3d7591c7038be5680080177b06e59622f9f1a34932f18c61c60b0e4d6dd81237a1d5445318148
-Size (lla-0.9.0.crate) = 295925 bytes
-BLAKE2s (lla_plugin_interface-0.9.0.crate) = 2c1128751cb5475e493d079c342a17090edc90bfda2c02374bad4705b386f0e5
-SHA512 (lla_plugin_interface-0.9.0.crate) = caac0748304aff3f1c45bf9634caee9df9dc53a0668e891f419423858f616d6929a8b8bac34ab38be36d090d95031a63b67e26dbaa232ffedb844fdfb52bb713
-Size (lla_plugin_interface-0.9.0.crate) = 14800 bytes
-BLAKE2s (lla_plugin_sdk-0.9.0.crate) = ebd2f434338579725e02baab67a4f3b83e57093a3034882e24a2733f2305682d
-SHA512 (lla_plugin_sdk-0.9.0.crate) = 0654162c101ca39afb3d953fda3ec3dfb400c15b66ac0922ac99f7da5c35fe248a55e2532480a1268067f916c8f9b79edcd8095015912be1ba2b73290f3ac05d
-Size (lla_plugin_sdk-0.9.0.crate) = 13485 bytes
-BLAKE2s (lla_plugin_sdk_macros-0.9.0.crate) = 4c0584bfd7c531950a729570b46071f3310643383caf50e6f6aaa77e211f25e9
-SHA512 (lla_plugin_sdk_macros-0.9.0.crate) = 5da6f083d972e81bbe7b7a15b4eb63c44ce7697a621b96cbaf4a041f09c3efc4a22ff261608dd97e31fe38b076be79d099b720c8c76c1e3f909d8c39cda6f524
-Size (lla_plugin_sdk_macros-0.9.0.crate) = 6737 bytes
-BLAKE2s (lla_plugin_utils-0.9.0.crate) = 2e4993b9012c2718469eb8faa0eeaadd9b3aac6ebb328f9ffd136d358cdca8f4
-SHA512 (lla_plugin_utils-0.9.0.crate) = 95d987c944b977c2287ae569a17b48c6fe3c506583c5cdcb680132d6979767d51278d4a9f6600480bc5d1dd56d1ed607ef6dcd11e54f215af4095c06ec55dab5
-Size (lla_plugin_utils-0.9.0.crate) = 29679 bytes
+BLAKE2s (lla-0.9.2.crate) = d49fb8c27616fb49a3992fae6717d61598269d18c34da20ece2a85b81fe0fdeb
+SHA512 (lla-0.9.2.crate) = 54b9f577cdab9d0f81594ca1b0a8fcbd8319665694253fd36a3fa20e4dbe7de2f145f56418f0645b1205a3e5ef74862f20c00b0bef5da2d8b3d74b380b85a755
+Size (lla-0.9.2.crate) = 299394 bytes
+BLAKE2s (lla_plugin_interface-0.9.2.crate) = 59f546ed26931a25e39bc4acfd0736e45998fa4344ea14a17903f2945a46e9ce
+SHA512 (lla_plugin_interface-0.9.2.crate) = 78c2935e74a051d6d46f48fc1b1eeaa1b83f9a097780ebbfecc72223d2d04b989127003015c4b1fac57b738316a6d3b24b563eb327680b0996e2f2721fedbae1
+Size (lla_plugin_interface-0.9.2.crate) = 14800 bytes
+BLAKE2s (lla_plugin_sdk-0.9.2.crate) = 699efbf486cc740d97a1feef05370009dc432ebf3629cfea3d03b54280e8cd8e
+SHA512 (lla_plugin_sdk-0.9.2.crate) = 9ba06b8945b39280850809f2d69bda79e2b00292e35dd3e13c6fae83ff227a052faf9e008ea7fde3de75c0964eaa52a62b40f3cda27a97eccc416eeb61969b41
+Size (lla_plugin_sdk-0.9.2.crate) = 13494 bytes
+BLAKE2s (lla_plugin_sdk_macros-0.9.2.crate) = 93fff05903ac0f2f0171067857baec16ef8111a216cf1714310d12654e342f5f
+SHA512 (lla_plugin_sdk_macros-0.9.2.crate) = aa950c81a6001df2e03e3e6952aa2dcc31f7e7e88fc970341aa43bec4151c83dd877f26381b4446d925a8165832bb4d6bced0f28613e018498ed9bfb5eac3d00
+Size (lla_plugin_sdk_macros-0.9.2.crate) = 6739 bytes
+BLAKE2s (lla_plugin_utils-0.9.2.crate) = 8a658e1c3bbd698fe3aa1216a58908f9ef8a489d88c4e3e6991c0bacbddad641
+SHA512 (lla_plugin_utils-0.9.2.crate) = f2aaa1d6a9f8cfec3112a19700c5a6f7f5885ffd6b1bcfc99d353d528591c54d14f23f1b2d028122ec1cde8a3d09069c916f2f0a4ee8c40d3011afca264012ce
+Size (lla_plugin_utils-0.9.2.crate) = 29684 bytes
 BLAKE2s (lock_api-0.4.12.crate) = 15ae57312deba2e9aa3df7a4a7e61ace84bf1faad6c5701eb862da9c11b40f2a
 SHA512 (lock_api-0.4.12.crate) = 525d971f495449bbd02eb70fcd84d4aab05ca582142144a5f314f9aa67ad4c5b4c98dc919a416d0ed2e555063eab037a441d671d56b633f2cb75dfab5d99bcf7
 Size (lock_api-0.4.12.crate) = 27591 bytes
