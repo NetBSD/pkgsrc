@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2026/11/22 14:59:41 wiz Exp $
+
+BLAKE2s (libgourou/v0.9.tar.gz) = e5234e18597a6dcfd4082b52650d2992c51eaa8ec0dce1f19588d93f65a79930
+SHA512 (libgourou/v0.9.tar.gz) = 9d1804efcc66689e3dda3060443cdfce16a553770e8e973c3eb990845076879beaf78a8ebf9d1b496defbcaf4c602d8528f0e214242ec02f146e13c187e40c7b
+Size (libgourou/v0.9.tar.gz) = 55613 bytes
+SHA1 (patch-Makefile) = 59afa69429499bd2d8443256773fa0ec745fcc2a

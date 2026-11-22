@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/22 14:59:41 wiz Exp $
+bin/acsmdownloader
+bin/adept_activate
+bin/adept_loan_mgt
+bin/adept_remove
+lib/libgourou.so
+lib/libgourou.so.0
+lib/libgourou.so.${PKGVERSION}
+man/man1/acsmdownloader.1
+man/man1/adept_activate.1
+man/man1/adept_loan_mgt.1
+man/man1/adept_remove.1
+share/doc/libgourou/README.md

@@ -1,0 +1,3 @@
+libgourou is a free implementation of Adobe's ADEPT protocol used
+to add DRM on ePub/PDF files. It overcomes the lack of Adobe support
+for Linux platforms.
