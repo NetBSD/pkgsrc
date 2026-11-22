@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.39 2026/11/22 19:14:34 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mldsa-native/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mlkem-native/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.40 2026/11/22 19:22:20 wiz Exp $
+${PYSITELIB}/Crypto/Cipher/AEGIS.py
+${PYSITELIB}/Crypto/Cipher/AEGIS.pyc
+${PYSITELIB}/Crypto/Cipher/AEGIS.pyo
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyo
@@ -100,6 +96,7 @@ ${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.py
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.pyc
 ${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.pyo
+${PYSITELIB}/Crypto/Cipher/_raw_aegis.so
 ${PYSITELIB}/Crypto/Cipher/_raw_aes.so
 ${PYSITELIB}/Crypto/Cipher/_raw_arc2.so
 ${PYSITELIB}/Crypto/Cipher/_raw_blowfish.so
@@ -302,6 +299,9 @@ ${PYSITELIB}/Crypto/PublicKey/MLKEM.pyo
 ${PYSITELIB}/Crypto/PublicKey/RSA.py
 ${PYSITELIB}/Crypto/PublicKey/RSA.pyc
 ${PYSITELIB}/Crypto/PublicKey/RSA.pyo
+${PYSITELIB}/Crypto/PublicKey/SLHDSA.py
+${PYSITELIB}/Crypto/PublicKey/SLHDSA.pyc
+${PYSITELIB}/Crypto/PublicKey/SLHDSA.pyo
 ${PYSITELIB}/Crypto/PublicKey/__init__.py
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyc
 ${PYSITELIB}/Crypto/PublicKey/__init__.pyo
@@ -317,6 +317,9 @@ ${PYSITELIB}/Crypto/PublicKey/_ed25519.so
 ${PYSITELIB}/Crypto/PublicKey/_edwards.py
 ${PYSITELIB}/Crypto/PublicKey/_edwards.pyc
 ${PYSITELIB}/Crypto/PublicKey/_edwards.pyo
+${PYSITELIB}/Crypto/PublicKey/_fips205.py
+${PYSITELIB}/Crypto/PublicKey/_fips205.pyc
+${PYSITELIB}/Crypto/PublicKey/_fips205.pyo
 ${PYSITELIB}/Crypto/PublicKey/_mldsa.so
 ${PYSITELIB}/Crypto/PublicKey/_mlkem.so
 ${PYSITELIB}/Crypto/PublicKey/_montgomery.py
@@ -331,6 +334,8 @@ ${PYSITELIB}/Crypto/PublicKey/_openssh.pyo
 ${PYSITELIB}/Crypto/PublicKey/_point.py
 ${PYSITELIB}/Crypto/PublicKey/_point.pyc
 ${PYSITELIB}/Crypto/PublicKey/_point.pyo
+${PYSITELIB}/Crypto/PublicKey/_slhdsa.so
+${PYSITELIB}/Crypto/PublicKey/_slhdsa_shani.so
 ${PYSITELIB}/Crypto/Random/__init__.py
 ${PYSITELIB}/Crypto/Random/__init__.pyc
 ${PYSITELIB}/Crypto/Random/__init__.pyo
@@ -343,6 +348,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/common.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/common.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/common.pyo
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_AEGIS.py
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_AEGIS.pyc
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_AEGIS.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_AES.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_AES.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_AES.pyo
@@ -589,6 +597,9 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_MLKEM.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_RSA.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_SLHDSA.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_SLHDSA.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_SLHDSA.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_Curve25519.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_Curve25519.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_Curve25519.pyo
@@ -610,6 +621,9 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_MLKEM.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_RSA.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_RSA.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_RSA.pyo
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_SLHDSA.py
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_SLHDSA.pyc
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_SLHDSA.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_passphrase.py
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_passphrase.pyc
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_passphrase.pyo
@@ -637,6 +651,9 @@ ${PYSITELIB}/Crypto/SelfTest/Signature/test_pkcs1_15.pyo
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pss.py
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pss.pyc
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_pss.pyo
+${PYSITELIB}/Crypto/SelfTest/Signature/test_slhdsa.py
+${PYSITELIB}/Crypto/SelfTest/Signature/test_slhdsa.pyc
+${PYSITELIB}/Crypto/SelfTest/Signature/test_slhdsa.pyo
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.pyo
@@ -706,6 +723,9 @@ ${PYSITELIB}/Crypto/Signature/pkcs1_15.pyo
 ${PYSITELIB}/Crypto/Signature/pss.py
 ${PYSITELIB}/Crypto/Signature/pss.pyc
 ${PYSITELIB}/Crypto/Signature/pss.pyo
+${PYSITELIB}/Crypto/Signature/slhdsa.py
+${PYSITELIB}/Crypto/Signature/slhdsa.pyc
+${PYSITELIB}/Crypto/Signature/slhdsa.pyo
 ${PYSITELIB}/Crypto/Util/Counter.py
 ${PYSITELIB}/Crypto/Util/Counter.pyc
 ${PYSITELIB}/Crypto/Util/Counter.pyo
@@ -736,6 +756,9 @@ ${PYSITELIB}/Crypto/Util/_strxor.so
 ${PYSITELIB}/Crypto/Util/_threads.py
 ${PYSITELIB}/Crypto/Util/_threads.pyc
 ${PYSITELIB}/Crypto/Util/_threads.pyo
+${PYSITELIB}/Crypto/Util/_typing.py
+${PYSITELIB}/Crypto/Util/_typing.pyc
+${PYSITELIB}/Crypto/Util/_typing.pyo
 ${PYSITELIB}/Crypto/Util/asn1.py
 ${PYSITELIB}/Crypto/Util/asn1.pyc
 ${PYSITELIB}/Crypto/Util/asn1.pyo
@@ -749,3 +772,10 @@ ${PYSITELIB}/Crypto/__init__.py
 ${PYSITELIB}/Crypto/__init__.pyc
 ${PYSITELIB}/Crypto/__init__.pyo
 ${PYSITELIB}/Crypto/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mldsa-native/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/mlkem-native/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
