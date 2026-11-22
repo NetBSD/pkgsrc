@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/11/22 17:32:04 pin Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/22 17:40:21 wiz Exp $
 
 DISTNAME=	neonmodem-2.1.0
 CATEGORIES=	chat
@@ -10,7 +10,7 @@ HOMEPAGE=	https://neonmodem.com/
 COMMENT=	Neon modem overdrive
 LICENSE=	segv-1.1-license
 
-RESTRICTED=		Field of use restrctionss and Duty of Care
+RESTRICTED=		Field of use restrictions and Duty of Care
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

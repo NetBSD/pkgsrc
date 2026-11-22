@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/11/22 17:32:56 pin Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/22 17:40:22 wiz Exp $
 
 DISTNAME=	reader-0.6.1
 CATEGORIES=	www
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mrusme/reader/
 COMMENT=	Lightweight tool offering better readability of web pages on the CLI
 LICENSE=	segv-1.1-license
 
-RESTRICTED=		Field of use restrctionss and Duty of Care
+RESTRICTED=		Field of use restrictions and Duty of Care
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
