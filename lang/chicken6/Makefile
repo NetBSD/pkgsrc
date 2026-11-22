@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/09/19 22:54:07 mef Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/22 11:29:08 drixter Exp $
 
-DISTNAME=	chicken-6.0.0
-PKGREVISION=	1
+DISTNAME=	chicken-6.1.0
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 

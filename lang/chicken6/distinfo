@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2026/09/19 22:54:07 mef Exp $
+$NetBSD: distinfo,v 1.3 2026/11/22 11:29:08 drixter Exp $
 
-BLAKE2s (chicken-6.0.0.tar.gz) = 16b06d5c40b240d3acd5c84e12e5e66cd0cd5de1ea2bc964e20838d541a0f020
-SHA512 (chicken-6.0.0.tar.gz) = 781eb458beb0242707b6460a187d6a06178aa19d2062014d753c02be1d9e6f0486d3295ea4f4464179a4bf273e9b6512f03564901670efcf3baa4f269f28c3e7
-Size (chicken-6.0.0.tar.gz) = 4287731 bytes
+BLAKE2s (chicken-6.1.0.tar.gz) = c34fdd0a337c8767594f3ae6da5ff97862d89b151de4e316ee5f152e2c960384
+SHA512 (chicken-6.1.0.tar.gz) = 0ae57c9480213b5be1110a02f8e32b642b30e8c8b9dc055182cba4bb239e17218aad615448d25fb2b5462883b005b015f4b6cb21dc6d91aef256c6b1fb270a71
+Size (chicken-6.1.0.tar.gz) = 4346807 bytes
 SHA1 (patch-Makefile.bsd) = 906d7d6184d932439f2537d0aafa002688e71e77
 SHA1 (patch-Makefile.macosx) = b43e53c6e2acf435458dc6da6dce998fb920ce06
 SHA1 (patch-rules.make) = 5f030021894b5c1a3932786e346985fac1f81639
