@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.25 2026/11/01 22:35:36 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.26 2026/11/22 21:36:03 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -33,7 +33,7 @@ CARGO_CRATE_DEPENDS+=	idna-1.1.0
 CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.0
 CARGO_CRATE_DEPENDS+=	indexmap-2.14.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11
-CARGO_CRATE_DEPENDS+=	jiter-0.18.0
+CARGO_CRATE_DEPENDS+=	jiter-0.19.0
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.77
 CARGO_CRATE_DEPENDS+=	lexical-parse-float-1.0.6
 CARGO_CRATE_DEPENDS+=	lexical-parse-integer-1.0.6
