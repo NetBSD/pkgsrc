@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8292 2026/11/22 19:46:18 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8293 2026/11/22 19:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12264,3 +12264,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/cyrus-imapd312 to 3.12.5 [jnemeth 2026-11-22]
 	Updated audio/py-last to 7.3.0 [wiz 2026-11-22]
 	Updated lang/py-librt to 0.17.0 [wiz 2026-11-22]
+	Updated misc/py-platformdirs to 4.14.8 [wiz 2026-11-22]
