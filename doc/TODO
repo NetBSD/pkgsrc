@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28416 2026/11/22 10:58:45 wiz Exp $
+$NetBSD: TODO,v 1.28417 2026/11/22 12:14:47 drixter Exp $
 
 Suggested new packages
 ======================
@@ -503,7 +503,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bugzilla3-3.6.13
 	o cacti-1.2.30
 	o cacti-spine-1.2.30
-	o cadical3-3.1.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-9.18.0
