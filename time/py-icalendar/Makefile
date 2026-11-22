@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2026/08/21 12:20:09 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2026/11/22 19:35:57 wiz Exp $
 
-DISTNAME=	icalendar-7.3.0
+DISTNAME=	icalendar-7.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icalendar/}
@@ -24,8 +24,8 @@ REPLACE_SH+=		src/icalendar/tests/fuzzed/generate_python_test_cases_from_downloa
 REPLACE_PYTHON+=	src/icalendar/cli.py
 PY_RENAME_BINARIES=	icalendar
 
-# as of 7.3.0
-# 2 failed, 18124 passed, 28 skipped, 527 xfailed, 47 warnings
+# as of 7.3.2
+# 2 failed, 18126 passed, 28 skipped, 527 xfailed, 27 warnings
 # https://github.com/collective/icalendar/issues/1708
 
 .include "../../lang/python/application.mk"
