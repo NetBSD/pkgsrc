@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/11/10 00:12:07 ktnb Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/22 01:59:27 ktnb Exp $
 
 DISTNAME=	kew-4.4.3
 CATEGORIES=	audio
@@ -25,13 +25,22 @@ INSTALLATION_DIRS+=	share/kew
 
 .include "options.mk"
 
+.if ${OPSYS} == "Darwin"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.endif
+
+PLIST_VARS+=	desktop
+.if ${OPSYS} != "Darwin"
+.include "../../devel/libatomic/buildlink3.mk"
+PLIST.desktop=	yes
+.endif
+
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libatomic/buildlink3.mk"
 .include "../../graphics/chafa/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
