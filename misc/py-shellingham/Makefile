@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/04/12 07:43:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/22 20:28:59 wiz Exp $
 
 DISTNAME=	shellingham-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/shellingham/}
 
