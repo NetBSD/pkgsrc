@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2026/10/28 05:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/22 19:05:16 wiz Exp $
 
-DISTNAME=	configargparse-1.9.0
+DISTNAME=	configargparse-1.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ConfigArgParse/}
@@ -18,9 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests>=0:../../devel/py-test-subtests
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-# as of 1.7
-# 6 failed, 1887 passed, 1 skipped, 1 warning
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
