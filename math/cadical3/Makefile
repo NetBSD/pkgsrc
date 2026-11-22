@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2026/07/24 20:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/22 12:10:50 drixter Exp $
 
-DISTNAME=	cadical-3.0.1
+DISTNAME=	cadical-3.1.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arminbiere/}
 GITHUB_TAG=	rel-${PKGVERSION_NOREV}

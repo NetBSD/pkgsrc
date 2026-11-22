@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2026/07/24 20:27:54 wiz Exp $
+$NetBSD: distinfo,v 1.3 2026/11/22 12:10:50 drixter Exp $
 
-BLAKE2s (cadical-3.0.1.tar.gz) = 871fd58882d77725d02be3fd6f225318f631500ae42c198a10ee4fead935d479
-SHA512 (cadical-3.0.1.tar.gz) = aa1838b58cce726776fc73cd9c54b55af2faf4389b97f672a4dcff007e62aed795ebe3f5862fd292b082e47747eb7672e076e1d5f849ff9cf6ab81210ca2b1f4
-Size (cadical-3.0.1.tar.gz) = 889912 bytes
+BLAKE2s (cadical-3.1.0.tar.gz) = bb89a61bd7918f27a1fa1c2eb4525d9ac9e202a6d9bfda9702968d29c479adb3
+SHA512 (cadical-3.1.0.tar.gz) = 457fe10eef2e1bd2756a38c7ee45c22a64f3699ec7d6fe704d962fe6592bbe79b1ddeb5994a96609d17fb2dbe56398e505e03ff31bf5833d17a0c9b985537f7c
+Size (cadical-3.1.0.tar.gz) = 1016016 bytes
+SHA1 (patch-src_mobical.cpp) = dce8e13c51e87de193aafb60092860807ea19c06
