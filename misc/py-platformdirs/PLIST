@@ -1,15 +1,25 @@
-@comment $NetBSD: PLIST,v 1.7 2026/09/28 15:51:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/22 19:48:06 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/platformdirs.cdx.json
 ${PYSITELIB}/platformdirs/__init__.py
 ${PYSITELIB}/platformdirs/__init__.pyc
 ${PYSITELIB}/platformdirs/__init__.pyo
 ${PYSITELIB}/platformdirs/__main__.py
 ${PYSITELIB}/platformdirs/__main__.pyc
 ${PYSITELIB}/platformdirs/__main__.pyo
+${PYSITELIB}/platformdirs/_android.py
+${PYSITELIB}/platformdirs/_android.pyc
+${PYSITELIB}/platformdirs/_android.pyo
+${PYSITELIB}/platformdirs/_paths.py
+${PYSITELIB}/platformdirs/_paths.pyc
+${PYSITELIB}/platformdirs/_paths.pyo
+${PYSITELIB}/platformdirs/_runtime.py
+${PYSITELIB}/platformdirs/_runtime.pyc
+${PYSITELIB}/platformdirs/_runtime.pyo
 ${PYSITELIB}/platformdirs/_xdg.py
 ${PYSITELIB}/platformdirs/_xdg.pyc
 ${PYSITELIB}/platformdirs/_xdg.pyo
