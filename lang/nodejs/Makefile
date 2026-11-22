@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.367 2026/11/12 08:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.368 2026/11/22 14:33:44 kikadf Exp $
 
 DISTNAME=	node-v26.13.1
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.xz
 
 USE_CXX_FEATURES=	c++20 charconv
