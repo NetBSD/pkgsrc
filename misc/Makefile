@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.700 2026/10/24 10:47:18 adam Exp $
+# $NetBSD: Makefile,v 1.701 2026/11/22 14:59:56 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -193,6 +193,7 @@ SUBDIR+=	libcdio
 SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libdivecomputer
+SUBDIR+=	libgourou
 SUBDIR+=	libgravatar
 SUBDIR+=	libimobiledevice-glue
 SUBDIR+=	libjaylink
