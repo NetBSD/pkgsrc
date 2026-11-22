@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2026/10/04 17:32:05 ktnb Exp $
+$NetBSD: distinfo,v 1.7 2026/11/22 01:18:04 ktnb Exp $
 
-BLAKE2s (qrcp/0.11.7.tar.gz) = 97ae9b9d7e179dafe6495100e150f207ed4e4540546cb00a294d3d9dc20d27d7
-SHA512 (qrcp/0.11.7.tar.gz) = 40adde4777ce9fe3e643a21dbcb63051ce48048b92165333084f0d7b7e4df772e7eacef46f6d19791337617c77e656d9bb01f741f188db46460c115058830b48
-Size (qrcp/0.11.7.tar.gz) = 13293948 bytes
+BLAKE2s (qrcp/0.12.0.tar.gz) = 2d1959500827f3019212d9a1be63f04dc82b2e6527751c28985846c49573d5a5
+SHA512 (qrcp/0.12.0.tar.gz) = 5fdee442b8b30bee00fd0aee5a0c3eccc849d61dd83e006ccadd9efa21d1897b666b9fb817332322e781a6bdd3cd97a04327c5cbe3aae42466e4dacc8b7a5301
+Size (qrcp/0.12.0.tar.gz) = 13315393 bytes
 BLAKE2s (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = d6562994850ff49646864144f83c4ce6db7f136692b1d986787ee15b68e4d496
 SHA512 (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = 392cf3f009a48dab138d1e2b3d1d2563e616a43ae7c2e0bb00f0029073b758706ebb882e96a3400dc4b6a25fef07370c960fdd197d366bc9757d29f20c89cbe3
 Size (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = 258 bytes
@@ -90,6 +90,12 @@ Size (qrcp/github.com_mattn_go-colorable_@v_v0.1.14.mod) = 121 bytes
 BLAKE2s (qrcp/github.com_mattn_go-colorable_@v_v0.1.14.zip) = 72cf6d911cb80fcde716f9abd3406fbbf3a5504aede4643de3e7aa042607ef42
 SHA512 (qrcp/github.com_mattn_go-colorable_@v_v0.1.14.zip) = e2a2e0beab2369ef793d3dabbb617b2d05e91ee46fa278e0252c7b53ad26d035a405a84b4c86ff5a9e9f07e357679619783938263e9f653de46969b03dde8000
 Size (qrcp/github.com_mattn_go-colorable_@v_v0.1.14.zip) = 13436 bytes
+BLAKE2s (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.mod) = 779efb55fdcfefacdd39190c04ee6ce80f51999e7500c46db997722d7af26586
+SHA512 (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.mod) = 9f1baeff279dfddcbc2c93a65b56b432ae90fc360b59809ef755bb13c02b5beb87f8e70e6d4397a85c0f20e1ec50f572558535eb401b1a48d2b40f9f4aa2eaa2
+Size (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.mod) = 76 bytes
+BLAKE2s (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.zip) = 2d2cb2dfbdd0ab3966083e41da0935841137086e5ae572048732f45c92b2f532
+SHA512 (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.zip) = 55d1fca3591dfa9c350a1509c47be776186247adb5b43b6c047743ac265d4cff5252584fa76b4030f9c47bee9eedd610b1c90dbf690b2cdeeabc1f3a95fcd390
+Size (qrcp/github.com_mattn_go-isatty_@v_v0.0.20.zip) = 8936 bytes
 BLAKE2s (qrcp/github.com_mattn_go-runewidth_@v_v0.0.9.mod) = 425a4ee1bcc04aff2655e119549702481c6bf569079a38ae6a073d031de347eb
 SHA512 (qrcp/github.com_mattn_go-runewidth_@v_v0.0.9.mod) = 0cfd4101dd8ed90f80b7f4ce2928cd322b93855764abae65d66c5ff9888a7c8aec6ee6581c7f05d1c80db5c78003ee2afc8537fda8a3855e2349bfb8267aba61
 Size (qrcp/github.com_mattn_go-runewidth_@v_v0.0.9.mod) = 45 bytes
@@ -189,6 +195,9 @@ Size (qrcp/golang.org_x_sys_@v_v0.29.0.mod) = 33 bytes
 BLAKE2s (qrcp/golang.org_x_sys_@v_v0.29.0.zip) = 198ee329c2925443f6f85c0c6d06298c10ed42b1b1d60ded09aed564b21f880c
 SHA512 (qrcp/golang.org_x_sys_@v_v0.29.0.zip) = a1d6857b56d8a072b3998d6f1b3ff7551720d8f103439b223723c7128765c72a707379996bf790e36357c5cb49bb9369ccc2ef1a5eefe6187c8a199f3288106f
 Size (qrcp/golang.org_x_sys_@v_v0.29.0.zip) = 1983637 bytes
+BLAKE2s (qrcp/golang.org_x_sys_@v_v0.6.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
+SHA512 (qrcp/golang.org_x_sys_@v_v0.6.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
+Size (qrcp/golang.org_x_sys_@v_v0.6.0.mod) = 33 bytes
 BLAKE2s (qrcp/golang.org_x_text_@v_v0.21.0.mod) = 548ed54ee155c4d7ef6b0bc411ce72e50bac0974d77541097a1c7c8cbc1dcdab
 SHA512 (qrcp/golang.org_x_text_@v_v0.21.0.mod) = 0e94bb07801aa51aad50cbbb7442b3b3e6dcbee4979fa50db7aaac9bfd7dbe74a548977b1a89e7f14a93f1b5d39d3fec47a2d0037dfa51df4727cf0c4cbeb8e4
 Size (qrcp/golang.org_x_text_@v_v0.21.0.mod) = 221 bytes

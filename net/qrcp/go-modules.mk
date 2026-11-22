@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2026/10/04 17:32:05 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.6 2026/11/22 01:18:04 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
@@ -29,6 +29,8 @@ GO_MODULE_FILES+=	github.com/manifoldco/promptui/@v/v0.9.0.mod
 GO_MODULE_FILES+=	github.com/manifoldco/promptui/@v/v0.9.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-colorable/@v/v0.1.14.mod
 GO_MODULE_FILES+=	github.com/mattn/go-colorable/@v/v0.1.14.zip
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.zip
 GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.2.3.mod
@@ -62,6 +64,7 @@ GO_MODULE_FILES+=	go.uber.org/multierr/@v/v1.9.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20181122145206-62eef0e2fa9b.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.21.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.21.0.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
