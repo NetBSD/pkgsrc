@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2026/08/12 03:43:35 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2026/11/22 21:45:28 wiz Exp $
 
 Sun audio support.
 
@@ -8,9 +8,9 @@ Fix install_name_dir on Darwin.
 
 Do not use 'rsync'.
 
---- configure.orig	2025-08-22 09:24:23.000000000 +0000
+--- configure.orig	2026-11-20 00:01:47.000000000 +0000
 +++ configure
-@@ -2322,6 +2322,7 @@ HEADERS_LIST="
+@@ -2455,6 +2455,7 @@ HEADERS_LIST="
      sys_resource_h
      sys_select_h
      sys_soundcard_h
@@ -18,15 +18,15 @@ Do not use 'rsync'.
      sys_time_h
      sys_un_h
      sys_videoio_h
-@@ -2472,7 +2473,6 @@ TOOLCHAIN_FEATURES="
-     inline_asm_labels
+@@ -2584,7 +2585,6 @@ TOOLCHAIN_FEATURES="
      inline_asm_nonlocal_labels
+     loongson_mmi_mnemonics
      pragma_deprecated
 -    rsync_contimeout
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -3825,6 +3825,8 @@ libdc1394_indev_deps="libdc1394"
+@@ -4029,6 +4029,8 @@ oss_outdev_deps_any="sys_soundcard_h"
  openal_indev_deps="openal"
  oss_indev_deps_any="sys_soundcard_h"
  oss_outdev_deps_any="sys_soundcard_h"
@@ -35,7 +35,7 @@ Do not use 'rsync'.
  pulse_indev_deps="libpulse"
  pulse_outdev_deps="libpulse"
  sndio_indev_deps="sndio"
-@@ -5871,6 +5873,7 @@ case $target_os in
+@@ -6074,6 +6076,7 @@ case $target_os in
      netbsd)
          disable symver
          enable section_data_rel_ro
@@ -43,7 +43,7 @@ Do not use 'rsync'.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5897,7 +5900,7 @@ case $target_os in
+@@ -6100,7 +6103,7 @@ case $target_os in
          ;;
      darwin)
          enabled ppc && add_asflags -force_cpusubtype_ALL
@@ -52,7 +52,7 @@ Do not use 'rsync'.
          SHFLAGS='-dynamiclib -Wl,-single_module -Wl,-install_name,$(INSTALL_NAME_DIR)/$(SLIBNAME_WITH_MAJOR),-current_version,$(LIBVERSION),-compatibility_version,$(LIBMAJOR)'
          enabled x86_32 && append SHFLAGS -Wl,-read_only_relocs,suppress
          strip="${strip} -x"
-@@ -6777,6 +6780,7 @@ check_headers malloc.h
+@@ -6964,6 +6967,7 @@ check_headers poll.h
  check_headers mftransform.h
  check_headers net/udplite.h
  check_headers poll.h
@@ -60,7 +60,7 @@ Do not use 'rsync'.
  check_headers pthread_np.h
  check_headers sys/param.h
  check_headers sys/resource.h
-@@ -7345,7 +7349,6 @@ enabled makeinfo \
+@@ -7538,7 +7542,6 @@ pod2man --help     > /dev/null 2>&1 && enable pod2man 
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man

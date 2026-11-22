@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2026/09/22 03:42:07 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2026/11/22 21:45:27 wiz Exp $
 
-BLAKE2s (ffmpeg-9.0.2.tar.xz) = ee311b09c61fd557c9afa2bfd4bac417aafa50bb436cf08c4b57a682602652fb
-SHA512 (ffmpeg-9.0.2.tar.xz) = 7756f8434371b9bc1d01cf578bf49014e058b0869c3c1df05030f5f4035f1def64b2e7dba3cf340da4dc8dd9239dd5f894530c9e45793ac27876807079aa546a
-Size (ffmpeg-9.0.2.tar.xz) = 12040788 bytes
-SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
-SHA1 (patch-configure) = 007a0cfaebb39b9d729c3c888b11e82e33cdb9aa
+BLAKE2s (ffmpeg-9.1.tar.xz) = f4fc2db4ff89d75a8285f237a86a868f9ef0e808b09e720cd9bb8e79c925d802
+SHA512 (ffmpeg-9.1.tar.xz) = 9f1578270ebe924fad8309d254b6adbef9a710d0d5a8a78628b94ef01ae0f8ce9286a780901d9aa37f663d26c685acffaa8f4c2d6ffce956a06b6a0928d2cf96
+Size (ffmpeg-9.1.tar.xz) = 12557532 bytes
+SHA1 (patch-Makefile) = 0c5ea08c1e2993ffb58ee0006339d5ea0b49dad9
+SHA1 (patch-configure) = 6b99e4c64b41ba2b804119cbd922ffd6a6150509
 SHA1 (patch-doc_Makefile) = 07ee474628f0277d4aec611abe90285fade16f5d
 SHA1 (patch-doc_general__contents.texi) = 13704795d2688dc0377a512dc6e65025ad674724
 SHA1 (patch-doc_indevs.texi) = 8cd421a67f34ebbe6099102bf1de7c6cdb13dcb7
