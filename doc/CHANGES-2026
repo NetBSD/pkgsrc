@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8243 2026/11/22 01:18:27 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8244 2026/11/22 02:08:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12213,3 +12213,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/oh-my-posh to 33.1.0 [pin 2026-11-21]
 	Updated misc/rozi to 0.1.1 [pin 2026-11-21]
 	Updated net/qrcp to 0.12.0 [ktnb 2026-11-22]
+	Updated net/libdatachannel to 0.24.7 [ktnb 2026-11-22]
