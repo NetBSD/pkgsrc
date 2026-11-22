@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/11/22 09:13:26 pin Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/22 16:46:14 pin Exp $
 
 DISTNAME=	reader-0.6.1
 CATEGORIES=	www
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mrusme/reader/
 COMMENT=	Lightweight tool offering better readability of web pages on the CLI
-LICENSE=	segv-1.1
+LICENSE=	segv-1.1-license
 
 INSTALLATION_DIRS=	bin share/doc/reader
 
