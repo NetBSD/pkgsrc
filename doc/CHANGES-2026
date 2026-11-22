@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8254 2026/11/22 08:59:46 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8255 2026/11/22 09:10:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12224,3 +12224,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Sereal-Decoder to 7.003 [wiz 2026-11-22]
 	Updated converters/p5-Sereal-Encoder to 7.003 [wiz 2026-11-22]
 	Updated converters/p5-Sereal to 7.003 [wiz 2026-11-22]
+	Updated chat/neonmodem to 2.1.0 [pin 2026-11-22]
