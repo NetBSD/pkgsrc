@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/02/06 08:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/22 15:26:21 taca Exp $
 
-DISTNAME=	rack-protection-4.2.1
+DISTNAME=	rack-protection-4.2.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
