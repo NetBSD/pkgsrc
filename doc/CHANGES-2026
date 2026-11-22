@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8303 2026/11/22 20:51:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8304 2026/11/22 21:07:15 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12275,3 +12275,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/html2wml to 0.4.11 [drixter 2026-11-22]
 	Updated textproc/py-yaml to 6.0.4 [wiz 2026-11-22]
 	Updated www/py-zensical to 0.1.3 [wiz 2026-11-22]
+	Updated lang/asn1c to 0.9.29 [drixter 2026-11-22]
