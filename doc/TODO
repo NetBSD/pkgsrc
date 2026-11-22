@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28414 2026/11/22 08:28:56 wiz Exp $
+$NetBSD: TODO,v 1.28415 2026/11/22 10:54:10 drixter Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o lean4-4.36.0
-	o lf-42 [pkg/61041]
 	o lgeneral-1.3.1
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
