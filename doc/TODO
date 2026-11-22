@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28418 2026/11/22 15:32:32 drixter Exp $
+$NetBSD: TODO,v 1.28419 2026/11/22 16:07:55 drixter Exp $
 
 Suggested new packages
 ======================
@@ -923,7 +923,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mbedtls-2.28.10
 	o mbuf-20141227
 	o mcollective-2.3.2
-	o mcsim-6.2.0
 	o md-whois-5.5.9
 	o md4c-0.6.0 [breaks qt6-qtbase]
 	o mecab-ipadic-2.7.0.20070801

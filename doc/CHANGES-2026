@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8272 2026/11/22 15:32:32 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8273 2026/11/22 16:07:55 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12244,3 +12244,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/ruby-sinatra-contrib to 4.2.2 [taca 2026-11-22]
 	Updated www/ruby-rack-protection to 4.2.2 [taca 2026-11-22]
 	Updated shells/shuck to 0.2.11 [drixter 2026-11-22]
+	Updated math/mcsim to 6.2.0 [drixter 2026-11-22]
