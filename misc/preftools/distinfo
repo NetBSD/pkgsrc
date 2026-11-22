@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/08/15 14:44:24 wiz Exp $
+$NetBSD: distinfo,v 1.2 2026/11/22 11:07:10 wiz Exp $
 
 BLAKE2s (preftools-v0.9.tar.gz) = bc648e12610c4a775e6246684d1e692cd76403afb8bb590cb50bb5824fb52463
 SHA512 (preftools-v0.9.tar.gz) = 84ddfa0d6137427ca6ba0be020e8641f743c8e5add470d55a475f084b198dc06d3b9640344a0b4a4798edec48febca3510c3c715839027bcd546e0b7660ec7ab
 Size (preftools-v0.9.tar.gz) = 76313 bytes
+SHA1 (patch-propor) = e4261686bf803c810dd26477136154567cb6db66
+SHA1 (patch-schulze) = 2178aca8fea1b969830f9b99f693231aa1938cf9
+SHA1 (patch-schulze-simple) = a6757f6d3a8eb517d67977d7e8638c2b5acc9114

@@ -1,0 +1,15 @@
+$NetBSD: patch-schulze,v 1.1 2026/11/22 11:07:11 wiz Exp $
+
+Remove superfluous argument.
+
+--- schulze.orig	2026-11-22 11:02:01.273174748 +0000
++++ schulze
+@@ -128,7 +128,7 @@ function stripped_lines(filename)
+     message(errmsg, "\n")
+     os.exit(2)
+   end
+-  local get_next_line = file:lines(filename)
++  local get_next_line = file:lines()
+   return function()
+     if not file then return nil end
+     local line

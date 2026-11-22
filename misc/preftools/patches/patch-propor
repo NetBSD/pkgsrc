@@ -1,0 +1,15 @@
+$NetBSD: patch-propor,v 1.1 2026/11/22 11:07:10 wiz Exp $
+
+Remove superfluous argument.
+
+--- propor.orig	2026-11-22 11:01:43.936584162 +0000
++++ propor
+@@ -111,7 +111,7 @@ function stripped_lines(filename)
+     message(errmsg, "\n")
+     os.exit(2)
+   end
+-  local get_next_line = file:lines(filename)
++  local get_next_line = file:lines()
+   return function()
+     if not file then return nil end
+     local line

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/08/28 13:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/22 11:07:10 wiz Exp $
 
 DISTNAME=	preftools-v0.9
 PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.public-software-group.org/pub/projects/preftools/v0.9/
 
@@ -11,8 +12,6 @@ COMMENT=	Command line utilities for ballot counting
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-LUA_VERSIONS_ACCEPTED=	51
 
 REPLACE_LUA+=	propor
 REPLACE_LUA+=	schulze
