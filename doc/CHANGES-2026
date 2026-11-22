@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8300 2026/11/22 20:29:08 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8301 2026/11/22 20:36:15 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12272,3 +12272,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-wcwidth to 0.9.5 [wiz 2026-11-22]
 	Updated textproc/py-xlsxwriter to 3.3.4 [wiz 2026-11-22]
 	Updated misc/py-shellingham to 1.5.4nb2 [wiz 2026-11-22]
+	Updated textproc/html2wml to 0.4.11 [drixter 2026-11-22]
