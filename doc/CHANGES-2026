@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8309 2026/11/22 21:45:40 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8310 2026/11/22 21:45:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12281,3 +12281,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-pydantic-core to 2.50.5 [wiz 2026-11-22]
 	Updated devel/py-pydantic to 2.14.4 [wiz 2026-11-22]
 	Updated multimedia/ffmpeg9 to 9.1 [wiz 2026-11-22]
+	Updated multimedia/ffplay9 to 9.1 [wiz 2026-11-22]
