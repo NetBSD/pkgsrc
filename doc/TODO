@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28426 2026/11/22 19:02:37 wiz Exp $
+$NetBSD: TODO,v 1.28427 2026/11/22 19:03:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1127,7 +1127,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-cassa-1.11.0
 	o py-chardet-7.0.1 [we need to decide how to handle https://github.com/chardet/chardet/issues/327]
-	o py-cogapp-3.6.1
 	o py-configargparse-1.10.2
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-coverage-7.17.4

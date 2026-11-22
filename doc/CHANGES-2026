@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8281 2026/11/22 19:02:36 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8282 2026/11/22 19:03:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12253,3 +12253,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/tree-sitter-php to 0.25.2 [wiz 2026-11-22]
 	Updated devel/py-cachecontrol to 0.15.0 [wiz 2026-11-22]
 	Updated security/py-certifi to 2026.11.20 [wiz 2026-11-22]
+	Updated devel/py-cogapp to 3.6.1 [wiz 2026-11-22]
