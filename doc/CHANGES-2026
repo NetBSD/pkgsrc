@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8253 2026/11/22 08:59:34 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8254 2026/11/22 08:59:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12223,3 +12223,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/p5-Net-DNS to 1.58 [wiz 2026-11-22]
 	Updated converters/p5-Sereal-Decoder to 7.003 [wiz 2026-11-22]
 	Updated converters/p5-Sereal-Encoder to 7.003 [wiz 2026-11-22]
+	Updated converters/p5-Sereal to 7.003 [wiz 2026-11-22]
