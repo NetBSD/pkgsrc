@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8265 2026/11/22 14:34:02 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.8266 2026/11/22 14:36:31 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12235,3 +12235,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated chat/anope to 2.0.21 [wiz 2026-11-22]
 	Updated games/chess-tui to 2.9.0 [pin 2026-11-22]
 	Updated lang/nodejs to 26.13.1nb1 [kikadf 2026-11-22]
+	Updated lang/nodejs24 to 24.22.3nb1 [kikadf 2026-11-22]
