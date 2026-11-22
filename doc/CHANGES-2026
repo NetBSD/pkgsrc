@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8275 2026/11/22 18:51:56 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8276 2026/11/22 18:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12247,3 +12247,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated math/mcsim to 6.2.0 [drixter 2026-11-22]
 	Updated security/openbao to 2.7.3 [bsiegert 2026-11-22]
 	Updated math/fast_float to 8.4.0 [wiz 2026-11-22]
+	Updated www/grafana-prometheus-datasource to 13.2.7 [wiz 2026-11-22]
