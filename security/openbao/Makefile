@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/11/17 21:15:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/22 16:46:35 bsiegert Exp $
 
-DISTNAME=	openbao-dist-v2.7.2
+DISTNAME=	openbao-dist-v2.7.3
 PKGNAME=	${DISTNAME:S,-dist-v,-,}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbao/openbao/releases/download/v${PKGVERSION_NOREV}}
