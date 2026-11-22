@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8270 2026/11/22 15:15:22 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8271 2026/11/22 15:27:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12240,3 +12240,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added misc/libgourou version 0.9 [wiz 2026-11-22]
 	Updated www/ruby-rack to 3.2.9 [taca 2026-11-22]
 	Updated www/ruby-rack2 to 2.2.26 [taca 2026-11-22]
+	Updated www/ruby-sinatra to 4.2.2 [taca 2026-11-22]
+	Updated www/ruby-sinatra-contrib to 4.2.2 [taca 2026-11-22]
+	Updated www/ruby-rack-protection to 4.2.2 [taca 2026-11-22]
