@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2026/10/01 12:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.972 2026/11/22 14:58:08 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1864,6 +1864,7 @@ SUBDIR+=	tex-zxjatype
 SUBDIR+=	tex-zxjatype-doc
 SUBDIR+=	tex4ht
 SUBDIR+=	texlab
+SUBDIR+=	uPDFParser
 SUBDIR+=	vlna
 SUBDIR+=	web2c
 SUBDIR+=	xdvik
