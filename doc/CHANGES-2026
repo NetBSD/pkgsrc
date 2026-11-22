@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8289 2026/11/22 19:36:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8290 2026/11/22 19:40:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12261,3 +12261,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-filelock to 4.3.0 [wiz 2026-11-22]
 	Updated security/py-google-auth to 2.63.1 [wiz 2026-11-22]
 	Updated time/py-icalendar to 7.3.2 [wiz 2026-11-22]
+	Updated mail/cyrus-imapd312 to 3.12.5 [jnemeth 2026-11-22]
