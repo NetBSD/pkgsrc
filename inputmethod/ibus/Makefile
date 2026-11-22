@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2026/11/22 17:30:18 nros Exp $
+# $NetBSD: Makefile,v 1.134 2026/11/22 18:06:41 nros Exp $
 
 DISTNAME=	ibus-1.5.35
 CATEGORIES=	inputmethod
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--disable-appindicator
 
 # Some linkers lacks support for -z,relro
 .include "../../mk/bsd.prefs.mk"
-.if empty(_PLATFORM_SUPPORTS_RELRO:Myes)
+.if empty(_OPSYS_SUPPORTS_RELRO:Myes)
 CONFIGURE_ARGS+=	--disable-product-build
 .endif
 
