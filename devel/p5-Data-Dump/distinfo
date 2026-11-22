@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:16:20 nia Exp $
+$NetBSD: distinfo,v 1.14 2026/11/22 08:30:35 wiz Exp $
 
-BLAKE2s (Data-Dump-1.25.tar.gz) = 1f13c1c49102aeaeda76c4878df0bec05b946eb342014423a401a8cd6ee2e677
-SHA512 (Data-Dump-1.25.tar.gz) = fc859b0f02a44a959da3e162606c8fbaefececf8dbd0aa357d68a5a3143b818ae423dd7862063f2f77161ea000fcaa6841c96a2c4a268b889da9588292b157fe
-Size (Data-Dump-1.25.tar.gz) = 20912 bytes
+BLAKE2s (Data-Dump-1.26.tar.gz) = 3aa9662a49d47fc49d263d4031760d9355e3016ce8ba423b34214d9d37d55530
+SHA512 (Data-Dump-1.26.tar.gz) = af74d10f769f7e7618f39d1f5119d66174ee245f5bde282cf21599be15467e0d7f68dc6abae9e3416ea962da3f76bf2c468f847a59d3aacdcd46df24f3fbc9c8
+Size (Data-Dump-1.26.tar.gz) = 22471 bytes
