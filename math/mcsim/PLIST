@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/09 20:59:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/22 16:07:37 drixter Exp $
 bin/makemcsim
 bin/makemcsimd
+bin/makemcsimp
 bin/makemcsims
 bin/mod
 include/config.h
+include/delays.h
 include/hungtype.h
 include/lex.h
 include/lexfn.h
@@ -16,9 +18,6 @@ include/sim.h
 include/yourcode.h
 info/mcsim.info
 lib/libmcsim.la
-lib/libmodelu.la
-share/mcsim/doc/mcsim.pdf
-share/mcsim/doc/mcsim.ps
 share/mcsim/mod/getopt.c
 share/mcsim/mod/getopt.h
 share/mcsim/mod/hungtype.h
@@ -37,11 +36,12 @@ share/mcsim/mod/modi.h
 share/mcsim/mod/modiSBML.c
 share/mcsim/mod/modiSBML.h
 share/mcsim/mod/modiSBML2.c
-share/mcsim/mod/modiface.h
 share/mcsim/mod/modo.c
 share/mcsim/mod/modo.h
 share/mcsim/mod/strutil.c
 share/mcsim/mod/strutil.h
+share/mcsim/sim/delays.c
+share/mcsim/sim/delays.h
 share/mcsim/sim/getopt.c
 share/mcsim/sim/getopt.h
 share/mcsim/sim/hungtype.h
