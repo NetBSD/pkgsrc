@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2026/11/22 20:35:57 drixter Exp $
 
-BLAKE2s (html2wml-0.4.8r2.tar.gz) = 1789ffcfe3ba08a2968fdf730bde69e7706ed48dff924a934b45c7e4a7671c8a
-SHA512 (html2wml-0.4.8r2.tar.gz) = 2138fecae793a544ecf50af6eed8bfbc5909cdf3198921aecdccec3fbc97dd97e4ad3185ab08c7bf0251d35619339d200071e3063adaaaddd6510383bde8a759
-Size (html2wml-0.4.8r2.tar.gz) = 84959 bytes
-SHA1 (patch-aa) = 3a355140c8e16871b53d98cc05a0bdf1698cce7b
+BLAKE2s (html2wml-0.4.11.tar.gz) = cb98acb63658bbb20a543831892c61f012339e87ea9e978e189fc88025633331
+SHA512 (html2wml-0.4.11.tar.gz) = 76f85c2c800b67e08e35494aae25031d37d845877192e45bdc7f981b3076c4a3639d6296b6f86eb979c136235fd6ede500b5d242266bc826a5edbfea2a29b91f
+Size (html2wml-0.4.11.tar.gz) = 114379 bytes
