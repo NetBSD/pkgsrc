@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/11/17 10:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/22 19:01:25 wiz Exp $
 
-DISTNAME=	cachecontrol-0.14.4
+DISTNAME=	cachecontrol-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
@@ -19,9 +19,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cherrypy>=0:../../www/py-cherrypy
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} doesitcache doesitcache-${PYVERSSUFFIX} || ${TRUE}
+PY_RENAME_BINARIES=	doesitcache
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
