@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8248 2026/11/22 08:31:32 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8249 2026/11/22 08:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12218,3 +12218,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/p5-Cpanel-JSON-XS to 4.82 [wiz 2026-11-22]
 	Updated devel/p5-Data-Dump to 1.26 [wiz 2026-11-22]
 	Updated www/p5-HTML-Parser to 3.87 [wiz 2026-11-22]
+	Updated converters/p5-JSON-XS to 4.06 [wiz 2026-11-22]
