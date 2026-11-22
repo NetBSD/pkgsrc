@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/22 21:06:58 drixter Exp $
 #
+DISTNAME=	asn1c-0.9.29
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vlm/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DISTNAME=		asn1c-0.9.24
-PKGREVISION=		8
-CATEGORIES=		lang
-MASTER_SITES=		http://lionet.info/soft/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://lionet.info/asn1c/
+COMMENT=	Free, open source compiler of ASN.1 specifications into C source code
+LICENSE=	2-clause-bsd
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://lionet.info/asn1c/
-COMMENT=		Free, open source compiler of ASN.1 specifications into C source code
-LICENSE=		2-clause-bsd
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	autoreconf automake autoconf flex gmake perl:run
+GNU_CONFIGURE=	yes
 
-USE_LANGUAGES=		c
-USE_TOOLS+=		autoconf gmake perl:run
-GNU_CONFIGURE=		yes
+REPLACE_PERL+=	examples/crfc2asn1.pl
+REPLACE_PERL+=	libasn1parser/expr-h.pl
+REPLACE_PERL+=	tests/tests-asn1c-compiler/check-parsing-log2diff.pl
 
-REPLACE_PERL+=		examples/crfc2asn1.pl
-REPLACE_PERL+=		examples/clyx2asn1.pl
+pre-configure:
+	cd ${WRKSRC} && autoreconf -iv
 
 .include "../../mk/bsd.pkg.mk"

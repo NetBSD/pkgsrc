@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:51:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/11/22 21:06:58 drixter Exp $
 
-BLAKE2s (asn1c-0.9.24.tar.gz) = 087710a10065164e54db27fc137e5f2db09d51585d0e4e997e1b560ef1a5a285
-SHA512 (asn1c-0.9.24.tar.gz) = c84bca2c23d26af2b1e926a471b7b23dbb4912410384bde275e987c9a4a4b2f44fdeb985ea8ac1e4b59c93921cbf81290ee4f9d8bff182d6f4abe48a6618a94c
-Size (asn1c-0.9.24.tar.gz) = 1514907 bytes
+BLAKE2s (asn1c-0.9.29.tar.gz) = 9797221a532512dd9223ed4351a0bb404ed49256f8fd2a12d09d9603bbae9134
+SHA512 (asn1c-0.9.29.tar.gz) = cb88df84eecc89f8d214a8063d013d4bbd8be423025ee59e3c8b440612a57ebeff75bfeff7ebe920f2e0ae55bd5dbe8394e13a4495e654582d5cd108805f229d
+Size (asn1c-0.9.29.tar.gz) = 1468974 bytes
