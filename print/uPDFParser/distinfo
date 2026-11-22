@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/22 14:58:00 wiz Exp $
+
+BLAKE2s (uPDFParser/v0.1.tar.gz) = 4e992c703601d579e01c42c7308349b15337d4a064c8300b1b5e0e30c397e595
+SHA512 (uPDFParser/v0.1.tar.gz) = fe90e45aebbe1f60010778002191be53955d6608d37dba05778eb43dc5d8933d0daf57d49635d97405cefefaf5ddd5916b9895cafd90367a22f4a9fdbcb3526a
+Size (uPDFParser/v0.1.tar.gz) = 14537 bytes
