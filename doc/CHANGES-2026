@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8307 2026/11/22 21:36:19 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8308 2026/11/22 21:36:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12279,3 +12279,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv-build to 0.13.9 [wiz 2026-11-22]
 	Updated devel/py-uv to 0.13.9 [wiz 2026-11-22]
 	Updated devel/py-pydantic-core to 2.50.5 [wiz 2026-11-22]
+	Updated devel/py-pydantic to 2.14.4 [wiz 2026-11-22]
