@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/26 11:26:49 pin Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/23 12:38:14 pin Exp $
 
-DISTNAME=	gravityfile-0.4.1
+DISTNAME=	gravityfile-0.4.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epistates/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ LICENSE=	mit OR apache-2.0
 
 CFLAGS+=	-Wno-implicit-function-declaration
 
-RUST_REQ=	1.90.0
+RUST_REQ=	1.90
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
