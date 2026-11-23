@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1039 2026/11/19 01:18:03 agc Exp $
+# $NetBSD: Makefile,v 1.1040 2026/11/23 14:31:23 leot Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -527,6 +527,7 @@ SUBDIR+=	py-hanko
 SUBDIR+=	py-hanko-certvalidator
 SUBDIR+=	py-hawkauthlib
 SUBDIR+=	py-hkdf
+SUBDIR+=	py-httpx2-kerberos
 SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-josepy
 SUBDIR+=	py-joserfc
