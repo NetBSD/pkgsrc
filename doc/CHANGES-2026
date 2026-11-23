@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8322 2026/11/23 12:23:20 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8323 2026/11/23 12:24:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12301,3 +12301,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/py-watchdog to 7.1.1 [adam 2026-11-23]
 	Updated devel/gitpane to 0.19.3 [pin 2026-11-23]
 	Updated devel/serie to 0.11.0 [pin 2026-11-23]
+	Updated security/py-authlib to 1.9.10 [adam 2026-11-23]
+	Updated print/py-xhtml2pdf to 0.2.29 [adam 2026-11-23]
+	Updated textproc/py-regex to 2026.11.19 [adam 2026-11-23]
+	Updated www/py-pylsqpack to 1.1.2 [adam 2026-11-23]
