@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2018/02/02 10:33:15 jperkin Exp $
+$NetBSD: patch-configure,v 1.4 2026/11/23 08:10:37 wiz Exp $
 
 Leave pkgsrc to handle security features.
 
 --- configure.orig	2013-07-24 09:05:11.000000000 +0000
 +++ configure
-@@ -3830,7 +3830,7 @@ else
+@@ -3830,7 +3830,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$
  fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
      echo $ssp_cc
@@ -13,3 +13,56 @@ Leave pkgsrc to handle security features.
        CFLAGS="$ssp_old_cflags"
      else
  
+@@ -4914,6 +4914,8 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
++
+ typedef long int int64;
+ 
+ /*
+@@ -4937,7 +4939,7 @@ int does_int64_work()
+     return 0;
+   return 1;
+ }
+-main() {
++int main() {
+   exit(! does_int64_work());
+ }
+ _ACEOF
+@@ -4997,6 +4999,8 @@ else
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
++
+ typedef long long int int64;
+ 
+ /*
+@@ -5020,7 +5024,7 @@ int does_int64_work()
+     return 0;
+   return 1;
+ }
+-main() {
++int main() {
+   exit(! does_int64_work());
+ }
+ _ACEOF
+@@ -5076,6 +5080,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
++#include <stdlib.h>
+ typedef long long int int64;
+ #define INT64_FORMAT "$pgac_format"
+ 
+@@ -5096,7 +5101,7 @@ int does_int64_snprintf_work()
+     return 0;			/* either multiply or snprintf is busted */
+   return 1;
+ }
+-main() {
++int main() {
+   exit(! does_int64_snprintf_work());
+ }
+ _ACEOF
