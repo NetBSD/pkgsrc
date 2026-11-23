@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8336 2026/11/23 14:49:50 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8337 2026/11/23 14:51:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12322,3 +12322,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added security/py-httpx2-kerberos version 2.1.1 [leot 2026-11-23]
 	Updated net/py-rt to 4.0.0 [leot 2026-11-23]
 	Updated devel/ruby-mize to 0.8.0 [taca 2026-11-23]
+	Updated devel/ruby-pkg-config to 1.6.8 [taca 2026-11-23]
