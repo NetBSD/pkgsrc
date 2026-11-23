@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8340 2026/11/23 15:05:19 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8341 2026/11/23 15:11:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12326,3 +12326,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-pycall to 1.5.5 [taca 2026-11-23]
 	Updated devel/ruby-regexp_parser to 2.13.4 [taca 2026-11-23]
 	Updated devel/ruby-term-ansicolor to 1.12.0 [taca 2026-11-23]
+	Updated devel/ruby-tins to 1.63.0 [taca 2026-11-23]
