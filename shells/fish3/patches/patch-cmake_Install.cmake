@@ -1,11 +1,23 @@
-$NetBSD: patch-cmake_Install.cmake,v 1.1 2025/12/13 17:58:55 vins Exp $
+$NetBSD: patch-cmake_Install.cmake,v 1.2 2026/11/23 07:46:21 wiz Exp $
 
 pkgsrc-ifying:
 Install config files to examples rather than etc.
 Install desktop files on macOS regardless to simplify PLIST.
 
---- cmake/Install.cmake.orig	2022-03-25 16:22:53.000000000 +0000
+Fix installation with cmake 4.5.
+https://github.com/fish-shell/fish-shell/commit/95dccbe55eefe73e526563296beded4a8407b8a8
+
+--- cmake/Install.cmake.orig	2024-03-19 03:40:45.000000000 +0000
 +++ cmake/Install.cmake
+@@ -70,7 +70,7 @@ function(FISH_TRY_CREATE_DIRS)
+     else()
+       set(abs_dir "\$ENV{DESTDIR}${dir}")
+     endif()
+-    install(SCRIPT CODE "EXECUTE_PROCESS(COMMAND mkdir -p ${abs_dir} OUTPUT_QUIET ERROR_QUIET)
++    install(CODE "EXECUTE_PROCESS(COMMAND mkdir -p ${abs_dir} OUTPUT_QUIET ERROR_QUIET)
+                          execute_process(COMMAND chmod 755 ${abs_dir} OUTPUT_QUIET ERROR_QUIET)
+                         ")
+   endforeach()
 @@ -81,9 +81,9 @@ install(TARGETS ${PROGRAMS}
                      GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
          DESTINATION ${bindir})
@@ -19,7 +31,7 @@ Install desktop files on macOS regardless to simplify PLIST.
  
  fish_create_dirs(${rel_datadir}/fish ${rel_datadir}/fish/completions
                   ${rel_datadir}/fish/functions ${rel_datadir}/fish/groff
-@@ -170,7 +170,7 @@ if(GETTEXT_FOUND)
+@@ -168,7 +168,7 @@ endif()
    endforeach()
  endif()
  

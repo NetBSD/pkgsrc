@@ -1,6 +1,9 @@
-$NetBSD: patch-cmake_Install.cmake,v 1.7 2026/10/08 17:55:58 ktnb Exp $
+$NetBSD: patch-cmake_Install.cmake,v 1.8 2026/11/23 07:46:21 wiz Exp $
 
 Use pkgsrc defaults. 
+
+Fix build with cmake 4.5
+https://github.com/fish-shell/fish-shell/commit/95dccbe55eefe73e526563296beded4a8407b8a8
 
 --- cmake/Install.cmake.orig	2026-09-08 18:53:36.000000000 +0000
 +++ cmake/Install.cmake
@@ -19,6 +22,15 @@ Use pkgsrc defaults.
  
  set(rel_completionsdir "fish/vendor_completions.d")
  set(rel_functionsdir "fish/vendor_functions.d")
+@@ -71,7 +74,7 @@ function(FISH_TRY_CREATE_DIRS)
+         else()
+             set(abs_dir "\$ENV{DESTDIR}${dir}")
+         endif()
+-        install(SCRIPT CODE "
++        install(CODE "
+             EXECUTE_PROCESS(COMMAND mkdir -p ${abs_dir} OUTPUT_QUIET ERROR_QUIET)
+             execute_process(COMMAND chmod 755 ${abs_dir} OUTPUT_QUIET ERROR_QUIET)
+         ")
 @@ -101,7 +104,7 @@ fish_create_dirs(${sysconfdir}/fish/conf.d ${sysconfdi
  
  fish_create_dirs(${sysconfdir}/fish/conf.d ${sysconfdir}/fish/completions
