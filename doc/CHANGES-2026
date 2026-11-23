@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8347 2026/11/23 17:10:25 rhialto Exp $
+$NetBSD: CHANGES-2026,v 1.8348 2026/11/23 18:19:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12334,3 +12334,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/cargo-outdated to 0.20.0 [adam 2026-11-23]
 	Updated devel/pnpm to 12.23.0 [adam 2026-11-23]
 	Updated devel/git-gitk to 2.56.1nb1 [rhialto 2026-11-23]
+	Updated net/grpc to 1.85.4 [adam 2026-11-23]
+	Updated textproc/gspell to 1.14.6 [adam 2026-11-23]
