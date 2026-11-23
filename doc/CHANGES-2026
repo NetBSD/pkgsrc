@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8349 2026/11/23 18:25:24 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8350 2026/11/23 18:57:19 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12337,3 +12337,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/grpc to 1.85.4 [adam 2026-11-23]
 	Updated textproc/gspell to 1.14.6 [adam 2026-11-23]
 	Updated textproc/miller to 6.23.0 [drixter 2026-11-23]
+	Updated security/vulnx to 2.1.0 [drixter 2026-11-23]
