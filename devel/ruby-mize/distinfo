@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/10/28 15:34:49 taca Exp $
+$NetBSD: distinfo,v 1.3 2026/11/23 14:49:34 taca Exp $
 
-BLAKE2s (mize-0.7.0.gem) = 5d960c5e63a02a85e054e20ac825a54d7d7ed46974ae5fd142d83cb7837cd13b
-SHA512 (mize-0.7.0.gem) = 64b6d815add7da9298b0bee5418ee26038fbf106f45153408f6faafd7d1a14e7672cd40d80d0511d766ecdd8f895d03018a3943d7284797efb6ddefd7acaf182
-Size (mize-0.7.0.gem) = 19456 bytes
+BLAKE2s (mize-0.8.0.gem) = b0e85a03df7c72d5a50384ab95e333bf4b6053d8d9a9bc006292757cd19152fb
+SHA512 (mize-0.8.0.gem) = 7761e8e662315071ce21d9d8ac09c811cc236581a38d44403bc99f242cd4af0f684fdc840b2adae94cdf63a19bbe6a8ab8c7890b53b9c03b14e9e25131628cd9
+Size (mize-0.8.0.gem) = 19456 bytes
