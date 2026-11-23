@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2026/09/18 22:07:57 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2026/11/23 07:51:44 wiz Exp $
 
 BLAKE2s (cvc5-1.4.0.tar.gz) = 44c8e4df3f32cd0877a1426045767e4371a9520a3412cf742a2c2318642afefb
 SHA512 (cvc5-1.4.0.tar.gz) = ee9578878c7e541f82a5f6c9535cd4ba764fb6d5dcdc0bf69e50cd360b2b56bc66adca1f6babd5971c5175818b3e716cb7b411488adcbf207e21ac59d0fd6d84
 Size (cvc5-1.4.0.tar.gz) = 9483162 bytes
+SHA1 (patch-cmake_FindCoCoA.cmake) = 06efdfd6bf2ed0b0e2020ecc0ba509ad2f507dde
+SHA1 (patch-cmake_FindGMP.cmake) = 057a9bd5fb9c04355ea1d37c5ab45ec951f7e467
