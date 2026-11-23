@@ -1,0 +1,17 @@
+$NetBSD: patch-crates_ecstore_Cargo.toml,v 1.1 2026/11/23 10:32:46 adam Exp $
+
+--- crates/ecstore/Cargo.toml.orig	2026-11-18 18:01:00.007174164 +0000
++++ crates/ecstore/Cargo.toml
+@@ -231,10 +231,10 @@ metrics = { workspace = true }
+ # io-uring integration; only the tokio "io-uring" runtime feature is banned.
+ [target.'cfg(target_os = "linux")'.dependencies]
+ # Native completion owners keep physical I/O leases alive after cancellation.
+-rustfs-uring = { git = "https://github.com/rustfs/uring.git", rev = "eb8fc160e71d804427de1e905f5c226d580f71bf" }
++rustfs-uring = { path = "../../../uring-eb8fc160e71d804427de1e905f5c226d580f71bf" }
+ 
+ [target.'cfg(target_os = "linux")'.dev-dependencies]
+-rustfs-uring = { git = "https://github.com/rustfs/uring.git", rev = "eb8fc160e71d804427de1e905f5c226d580f71bf", features = ["fault-injection"] }
++rustfs-uring = { path = "../../../uring-eb8fc160e71d804427de1e905f5c226d580f71bf", features = ["fault-injection"] }
+ 
+ [target.'cfg(windows)'.dependencies]
+ winapi-util.workspace = true

@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2026/11/23 10:32:46 adam Exp $
+
+--- Cargo.toml.orig	2026-11-18 17:55:16.425522605 +0000
++++ Cargo.toml
+@@ -327,8 +327,8 @@ rustify = { version = "0.7", default-fea
+ rustix = { version = "1.1.6" }
+ rust-embed = { version = "8.13.0" }
+ rustc-hash = { version = "2.1.3" }
+-s3s = { git = "https://github.com/s3s-project/s3s", rev = "5761ddfe4c509fcac87e3b99fd5bd9e176b442c0", features = ["minio"] }
+-s3s-sigv4 = { git = "https://github.com/s3s-project/s3s", rev = "5761ddfe4c509fcac87e3b99fd5bd9e176b442c0" }
++s3s = { path = "../s3s-5761ddfe4c509fcac87e3b99fd5bd9e176b442c0/crates/s3s", features = ["minio"] }
++s3s-sigv4 = { path = "../s3s-5761ddfe4c509fcac87e3b99fd5bd9e176b442c0/crates/s3s-sigv4" }
+ serial_test = "4.0.1"
+ shadow-rs = { default-features = false, version = "2.0.0" }
+ siphasher = "1.0.4"
