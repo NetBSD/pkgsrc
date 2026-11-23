@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/11/02 11:21:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/23 12:06:58 adam Exp $
 bin/watchmedo-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -84,6 +84,9 @@ ${PYSITELIB}/watchdog/utils/platform.pyo
 ${PYSITELIB}/watchdog/utils/process_watcher.py
 ${PYSITELIB}/watchdog/utils/process_watcher.pyc
 ${PYSITELIB}/watchdog/utils/process_watcher.pyo
+${PYSITELIB}/watchdog/utils/statx.py
+${PYSITELIB}/watchdog/utils/statx.pyc
+${PYSITELIB}/watchdog/utils/statx.pyo
 ${PYSITELIB}/watchdog/version.py
 ${PYSITELIB}/watchdog/version.pyc
 ${PYSITELIB}/watchdog/version.pyo
