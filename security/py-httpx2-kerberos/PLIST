@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/23 14:30:22 leot Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/httpx2_kerberos/__init__.py
+${PYSITELIB}/httpx2_kerberos/__init__.pyc
+${PYSITELIB}/httpx2_kerberos/__init__.pyo
+${PYSITELIB}/httpx2_kerberos/__version__.py
+${PYSITELIB}/httpx2_kerberos/__version__.pyc
+${PYSITELIB}/httpx2_kerberos/__version__.pyo
+${PYSITELIB}/httpx2_kerberos/exceptions.py
+${PYSITELIB}/httpx2_kerberos/exceptions.pyc
+${PYSITELIB}/httpx2_kerberos/exceptions.pyo
+${PYSITELIB}/httpx2_kerberos/kerberos.py
+${PYSITELIB}/httpx2_kerberos/kerberos.pyc
+${PYSITELIB}/httpx2_kerberos/kerberos.pyo

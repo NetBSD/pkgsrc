@@ -1,0 +1,5 @@
+HTTPX2 Kerberos/GSSAPI Authentication Library.
+
+HTTPX2 is a fully featured HTTP client library for Python 3. This
+library adds optional Kerberos/GSSAPI authentication support and
+supports mutual authentication.
