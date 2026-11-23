@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8352 2026/11/23 21:47:45 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8353 2026/11/23 23:39:14 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12340,3 +12340,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/vulnx to 2.1.0 [drixter 2026-11-23]
 	Updated textproc/expat to 2.11.0 [wiz 2026-11-23]
 	Updated lang/janet to 1.43.1 [ktnb 2026-11-23]
+	Updated x11/kitty to 0.51.1 [ktnb 2026-11-23]
