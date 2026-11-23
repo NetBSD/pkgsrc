@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2026/10/26 08:15:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2026/11/23 12:20:43 adam Exp $
 bin/pisa-${PYVERSSUFFIX}
 bin/xhtml2pdf-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,6 +34,12 @@ ${PYSITELIB}/xhtml2pdf/builders/flex_layout.pyo
 ${PYSITELIB}/xhtml2pdf/builders/inserts.py
 ${PYSITELIB}/xhtml2pdf/builders/inserts.pyc
 ${PYSITELIB}/xhtml2pdf/builders/inserts.pyo
+${PYSITELIB}/xhtml2pdf/builders/margin_boxes.py
+${PYSITELIB}/xhtml2pdf/builders/margin_boxes.pyc
+${PYSITELIB}/xhtml2pdf/builders/margin_boxes.pyo
+${PYSITELIB}/xhtml2pdf/builders/opacity.py
+${PYSITELIB}/xhtml2pdf/builders/opacity.pyc
+${PYSITELIB}/xhtml2pdf/builders/opacity.pyo
 ${PYSITELIB}/xhtml2pdf/builders/pdfx.py
 ${PYSITELIB}/xhtml2pdf/builders/pdfx.pyc
 ${PYSITELIB}/xhtml2pdf/builders/pdfx.pyo
@@ -49,6 +55,9 @@ ${PYSITELIB}/xhtml2pdf/builders/printmarks.pyo
 ${PYSITELIB}/xhtml2pdf/builders/signs.py
 ${PYSITELIB}/xhtml2pdf/builders/signs.pyc
 ${PYSITELIB}/xhtml2pdf/builders/signs.pyo
+${PYSITELIB}/xhtml2pdf/builders/strings.py
+${PYSITELIB}/xhtml2pdf/builders/strings.pyc
+${PYSITELIB}/xhtml2pdf/builders/strings.pyo
 ${PYSITELIB}/xhtml2pdf/builders/watermarks.py
 ${PYSITELIB}/xhtml2pdf/builders/watermarks.pyc
 ${PYSITELIB}/xhtml2pdf/builders/watermarks.pyo
