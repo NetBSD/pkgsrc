@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8313 2026/11/23 08:39:44 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8314 2026/11/23 09:13:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12287,3 +12287,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/agcre to 20261118 [agc 2026-11-22]
 	Updated devel/sccache to 0.20.0 [adam 2026-11-23]
 	Updated textproc/ripgrep to 16.0.0 [adam 2026-11-23]
+	Updated shells/oh-my-posh to 33.3.1 [pin 2026-11-23]
