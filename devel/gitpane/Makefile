@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2026/11/17 13:01:25 pin Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/23 12:20:17 pin Exp $
 
-DISTNAME=	gitpane-0.18.12
+DISTNAME=	gitpane-0.19.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=affromero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
