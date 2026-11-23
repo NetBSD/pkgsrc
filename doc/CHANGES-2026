@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8334 2026/11/23 14:31:46 leot Exp $
+$NetBSD: CHANGES-2026,v 1.8335 2026/11/23 14:47:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12320,3 +12320,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated converters/ruby-Ascii85 to 2.0.2 [taca 2026-11-23]
 	Updated devel/ruby-mcp to 1.11.0 [taca 2026-11-23]
 	Added security/py-httpx2-kerberos version 2.1.1 [leot 2026-11-23]
+	Updated net/py-rt to 4.0.0 [leot 2026-11-23]
