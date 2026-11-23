@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47.2.1 2026/11/19 14:06:08 maya Exp $
+# $NetBSD: Makefile,v 1.47.2.2 2026/11/23 15:08:22 maya Exp $
 
-DISTNAME=	JSON-XS-4.05
+DISTNAME=	JSON-XS-4.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
