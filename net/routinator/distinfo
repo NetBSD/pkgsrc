@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2026/11/09 17:20:13 he Exp $
+$NetBSD: distinfo,v 1.16 2026/11/23 12:56:53 drixter Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -417,9 +417,9 @@ Size (reqwest-0.13.5.crate) = 160871 bytes
 BLAKE2s (ring-0.17.14.crate) = 1480ea4de12099a897e831682ebaf48ed6e688e06f58e79e496a06e227ed58bd
 SHA512 (ring-0.17.14.crate) = 88d38205dc1a1f89bd4ae887ec5c168e68a4b749b3ac0612674092331e99d14a9b8d0f4a98d72c1a3853bcc9da420402336da3ee053bedcfd598da8de93afa14
 Size (ring-0.17.14.crate) = 1502610 bytes
-BLAKE2s (routinator-0.16.1.tar.gz) = 8942ca00d2e9aac5640d755fba6fb5ec60e4ad32ad228d21d7fe590841c49e78
-SHA512 (routinator-0.16.1.tar.gz) = cc751d17f10abec22cc334f1a1af4ab83092b52e2141b75602f0dec70c857cd5fc6ad95694777cd45dcb889f3c6e6b9d141143a16bb917de8c6aa0d11b7b7470
-Size (routinator-0.16.1.tar.gz) = 6121854 bytes
+BLAKE2s (routinator-0.16.2.tar.gz) = ca3e1ee9e03b3f79af9479c8814c8b8ab755417d0df1fe411a08b82d2d0e4121
+SHA512 (routinator-0.16.2.tar.gz) = 1fea1d822a8b38b1fc715627743ea0a1687704d7f1f49145aa45f326bfcf58a1d3ea6cd1a69dab149ac92319a24aa94fb54722af8d33f89e0ccc11e5188b61f5
+Size (routinator-0.16.2.tar.gz) = 6121091 bytes
 BLAKE2s (rpki-0.20.1.crate) = 587ac5fd86f3731bdda3e93eeaf55f8c76b90bd16d5672bd19aa7b8df4ca8f04
 SHA512 (rpki-0.20.1.crate) = 9e6189fff6194dc5fe83e4d971a84c009ac3631bc0fde43e16870675aff20e4ce6ed75ac78f8fc1e1ceb1e2a27af03887357a281d14a4c4a3a3da046b0706004
 Size (rpki-0.20.1.crate) = 786903 bytes

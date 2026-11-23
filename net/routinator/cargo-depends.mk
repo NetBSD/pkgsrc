@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2026/11/09 17:20:13 he Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2026/11/23 12:56:53 drixter Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.6
