@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:06:42 nia Exp $
+$NetBSD: distinfo,v 1.13 2026/11/23 14:47:06 leot Exp $
 
-BLAKE2s (py-rt/rt-2.1.1.tar.gz) = 5fbdb0bbf0d9c8a79c08cac4f942ad862664bc97e0c42e166b612764b77d3990
-SHA512 (py-rt/rt-2.1.1.tar.gz) = 637e93db70983ffffbafc5606ab199222e49305b0aceba0941a1e3e218d2aab3d3157102b5577eb25b4f1e8752e1cb53bfe7a3d42a84ee0d69e8a6e59f18b152
-Size (py-rt/rt-2.1.1.tar.gz) = 40904 bytes
+BLAKE2s (py-rt/rt-4.0.0.tar.gz) = 293b03436c574a06000ee35f00561f2bae635fe109c1b91dab4c0570910cc732
+SHA512 (py-rt/rt-4.0.0.tar.gz) = 8f1b40a37a5620a888f3c1e641192d79f577e2d007282f1410b7d7404ebf8281e467a15a6d048ceb4e226e69cce3494a9bca50d48c954d33976e89371b194910
+Size (py-rt/rt-4.0.0.tar.gz) = 192001 bytes
