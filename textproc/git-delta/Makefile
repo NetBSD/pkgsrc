@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/11/20 09:12:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/23 11:30:52 wiz Exp $
 
-DISTNAME=	delta-0.21.2
+DISTNAME=	delta-0.22.0
 PKGNAME=	git-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dandavison/}
