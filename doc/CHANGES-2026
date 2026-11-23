@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8319 2026/11/23 11:43:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8320 2026/11/23 12:07:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12295,3 +12295,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/git-delta to 0.22.0 [wiz 2026-11-23]
 	Updated games/supertux to 0.7.0.1 [adam 2026-11-23]
 	Updated audio/fluidsynth to 2.6.3 [adam 2026-11-23]
+	Updated textproc/py-wcmatch to 12.0.4 [adam 2026-11-23]
+	Updated devel/py-zope.exceptions to 6.1 [adam 2026-11-23]
+	Updated www/py-uritools to 7.0.1 [adam 2026-11-23]
+	Updated sysutils/py-watchdog to 7.1.1 [adam 2026-11-23]
