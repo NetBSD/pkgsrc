@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8328 2026/11/23 12:41:28 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8329 2026/11/23 12:43:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12314,3 +12314,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.22 [taca 2026-11-23]
 	Updated sysutils/gravityfile to 0.4.2 [pin 2026-11-23]
 	Updated sysutils/parallel-disk-usage to 0.24.1 [pin 2026-11-23]
+	Updated www/monolith to 2.12.0 [pin 2026-11-23]
