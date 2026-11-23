@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/11/04 14:36:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/23 14:30:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -11,7 +11,6 @@ ${GEM_LIBDIR}/lib/mcp/cancelled_error.rb
 ${GEM_LIBDIR}/lib/mcp/client.rb
 ${GEM_LIBDIR}/lib/mcp/client/elicitation.rb
 ${GEM_LIBDIR}/lib/mcp/client/http.rb
-${GEM_LIBDIR}/lib/mcp/client/mcp_param_headers.rb
 ${GEM_LIBDIR}/lib/mcp/client/modern_envelope.rb
 ${GEM_LIBDIR}/lib/mcp/client/oauth.rb
 ${GEM_LIBDIR}/lib/mcp/client/oauth/authorization_request.rb
@@ -39,6 +38,7 @@ ${GEM_LIBDIR}/lib/mcp/error_codes.rb
 ${GEM_LIBDIR}/lib/mcp/icon.rb
 ${GEM_LIBDIR}/lib/mcp/instrumentation.rb
 ${GEM_LIBDIR}/lib/mcp/logging_message_notification.rb
+${GEM_LIBDIR}/lib/mcp/mcp_param_headers.rb
 ${GEM_LIBDIR}/lib/mcp/methods.rb
 ${GEM_LIBDIR}/lib/mcp/progress.rb
 ${GEM_LIBDIR}/lib/mcp/prompt.rb
@@ -70,6 +70,7 @@ ${GEM_LIBDIR}/lib/mcp/server/pagination.rb
 ${GEM_LIBDIR}/lib/mcp/server/pending_response.rb
 ${GEM_LIBDIR}/lib/mcp/server/request_state_security.rb
 ${GEM_LIBDIR}/lib/mcp/server/transports.rb
+${GEM_LIBDIR}/lib/mcp/server/transports/event_store.rb
 ${GEM_LIBDIR}/lib/mcp/server/transports/stdio_transport.rb
 ${GEM_LIBDIR}/lib/mcp/server/transports/streamable_http_transport.rb
 ${GEM_LIBDIR}/lib/mcp/server_context.rb
