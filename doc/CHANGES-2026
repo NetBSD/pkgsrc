@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8330 2026/11/23 12:57:15 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8331 2026/11/23 13:30:20 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12316,3 +12316,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/parallel-disk-usage to 0.24.1 [pin 2026-11-23]
 	Updated www/monolith to 2.12.0 [pin 2026-11-23]
 	Updated net/routinator to 0.16.2 [drixter 2026-11-23]
+	Updated security/cfssl to 1.7.2 [iquiw 2026-11-23]
