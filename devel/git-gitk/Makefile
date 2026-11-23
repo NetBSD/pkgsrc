@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/09/30 10:52:58 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/23 17:10:04 rhialto Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (gitk)
@@ -9,10 +9,11 @@ SUPERSEDES+=	scmgit-gitk-[0-9]*
 
 DEPENDS+=	git-base>=1.7.12nb1:../../devel/git-base
 
-BUILD_DIRS=	gitk-git
+BUILD_DIRS=	git-gui gitk-git
 MAKE_ENV+=	prefix=${PREFIX}
 TK90WISH=	${PREFIX}/${TK90_SUBDIR}/bin/wish
 MAKE_ENV+=	TCLTK_PATH=${TK90WISH:Q}
+MAKE_ENV+=	V=1 # work around bugs in git-gui/Makefile
 
 CONFIGURE_ARGS+=	--with-tcltk=${TK90WISH:Q}
 
