@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/09/30 09:10:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/11/23 18:19:27 adam Exp $
 bin/gspell-app1
 include/gspell-1/gspell/gspell-checker-dialog.h
 include/gspell-1/gspell/gspell-checker.h
@@ -21,6 +21,7 @@ lib/pkgconfig/gspell-1.pc
 share/gir-1.0/Gspell-1.gir
 share/locale/ab/LC_MESSAGES/gspell-1.mo
 share/locale/ar/LC_MESSAGES/gspell-1.mo
+share/locale/az/LC_MESSAGES/gspell-1.mo
 share/locale/be/LC_MESSAGES/gspell-1.mo
 share/locale/bg/LC_MESSAGES/gspell-1.mo
 share/locale/ca/LC_MESSAGES/gspell-1.mo
@@ -57,6 +58,7 @@ share/locale/kw/LC_MESSAGES/gspell-1.mo
 share/locale/lo/LC_MESSAGES/gspell-1.mo
 share/locale/lt/LC_MESSAGES/gspell-1.mo
 share/locale/lv/LC_MESSAGES/gspell-1.mo
+share/locale/mi/LC_MESSAGES/gspell-1.mo
 share/locale/mjw/LC_MESSAGES/gspell-1.mo
 share/locale/ml/LC_MESSAGES/gspell-1.mo
 share/locale/ms/LC_MESSAGES/gspell-1.mo
