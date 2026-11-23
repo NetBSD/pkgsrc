@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.11 2026/03/31 10:47:12 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/11/23 11:41:36 adam Exp $
 
-BLAKE2s (SuperTux-v0.7.0-Source.tar.gz) = 5294f7e605956dc2a5b46e66451af850d81074ff91bc12f0b60d78b1d128ca4b
-SHA512 (SuperTux-v0.7.0-Source.tar.gz) = 15bc4f84e1453be25ac3fa3496443e4e20d805f8c4d50148235f4dc82d188bef974fc720653cab36350d8b631c74539e4a74c33259fdaac6a516f44f8ed65297
-Size (SuperTux-v0.7.0-Source.tar.gz) = 292623271 bytes
-SHA1 (patch-CMakeLists.txt) = 6979c7a97eee2b4ee32d55103b37fa71dad4c42e
+BLAKE2s (SuperTux-v0.7.0.1-Source.tar.gz) = 7382cedd572766061476deb4828d932f8ce0211df07bd1d298eef4c79c159452
+SHA512 (SuperTux-v0.7.0.1-Source.tar.gz) = 4a20f03c65939d0cb53ca7b31be17ab5c087516e1640783142d14ad8da938b925c190de2c57a4b09715b22289603b845fc11021d385bc5e562f288ad00b9f0ad
+Size (SuperTux-v0.7.0.1-Source.tar.gz) = 292044558 bytes
+SHA1 (patch-CMakeLists.txt) = 6255a397689d2614ca8186b8aaac4aa266523f3c
 SHA1 (patch-external_SDL__ttf_configure) = da5e257847458e0a4410be3b03299062d167d441
-SHA1 (patch-mk_cmake_SuperTux_BuildCPack.cmake) = a2f8fe0ab25001d399058ed14fc6df5c7a3e241b
-SHA1 (patch-mk_cmake_SuperTux_BuildInstall.cmake) = c0096b9cf23bce06723ef45d43d3b95d22b0e303
+SHA1 (patch-mk_cmake_SuperTux_BuildCPack.cmake) = bdb84985b86f5f82740f6daa4c4fa87fccf4f7e3
+SHA1 (patch-mk_cmake_SuperTux_BuildInstall.cmake) = 98b0641734d066cb7427bffc3c9d3efce6de854c
 SHA1 (patch-src_audio_openal__sound__source.hpp) = 6fd1c3baba9b84515ab212154e2b72c5a3edca12
 SHA1 (patch-src_audio_sound__manager.hpp) = 702188e8f2e4e9f0d515a1bc2943ac0dd42d6563
 SHA1 (patch-src_supertux_error__handler.cpp) = 6c245d3960ae4e91020848f4c5e1265fcc86aac8

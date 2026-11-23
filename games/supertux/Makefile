@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/11/11 11:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/23 11:41:36 adam Exp $
 
-PKGNAME=	supertux-0.7.0
-PKGREVISION=	8
+PKGNAME=	supertux-0.7.0.1
 DISTNAME=	SuperTux-v${PKGVERSION_NOREV}-Source
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SuperTux/}
@@ -26,10 +25,13 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_SDL2_TTF=ON
 CHECK_PORTABILITY_SKIP+=	external/SDL_ttf/configure.in
 CHECK_PORTABILITY_SKIP+=	mk/flatpak/gen_flatpaks.sh
 
+PLIST_VARS+=	desktop
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+PLIST.desktop=	yes
 .endif
 
 .include "../../audio/libvorbis/buildlink3.mk"

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2026/03/31 10:47:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/23 11:41:36 adam Exp $
 bin/supertux2
-share/applications/supertux2.desktop
+${PLIST.desktop}share/applications/supertux2.desktop
 share/doc/supertux2/LICENSE.txt
 share/doc/supertux2/NEWS.md
 share/doc/supertux2/README.md
@@ -5138,7 +5138,7 @@ share/games/supertux2/speech/tux_hello.ogg
 share/games/supertux2/speech/tux_murp_01.ogg
 share/games/supertux2/speech/tux_rap.ogg
 share/games/supertux2/speech/tux_upset.ogg
-share/icons/hicolor/scalable/apps/supertux2.svg
+${PLIST.desktop}share/icons/hicolor/scalable/apps/supertux2.svg
 share/metainfo/org.supertuxproject.SuperTux.metainfo.xml
-share/pixmaps/supertux.png
-share/pixmaps/supertux.xpm
+${PLIST.desktop}share/pixmaps/supertux.png
+${PLIST.desktop}share/pixmaps/supertux.xpm

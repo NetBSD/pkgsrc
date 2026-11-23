@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2026/03/31 10:47:12 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2026/11/23 11:41:36 adam Exp $
 
 Fix packaging on Darwin.
 
---- CMakeLists.txt.orig	2026-03-15 05:38:50.000000000 +0000
+--- CMakeLists.txt.orig	2026-11-22 04:50:57.000000000 +0000
 +++ CMakeLists.txt
-@@ -83,7 +83,7 @@ if(WIN32 AND NOT UNIX)
+@@ -83,11 +83,11 @@ if(WIN32 AND NOT UNIX)
    set(INSTALL_SUBDIR_SHARE "data" CACHE STRING "Installation subdir for data")
    set(INSTALL_SUBDIR_DOC "doc" CACHE STRING "Installation subdir for docs")
  else()
@@ -13,3 +13,8 @@ Fix packaging on Darwin.
      set(INSTALL_SUBDIR_BIN "SuperTux.app/Contents/MacOS" CACHE STRING "Installation subdir for binaries")
      set(INSTALL_SUBDIR_SHARE "SuperTux.app/Contents/Resources/data" CACHE STRING "Installation subdir for data")
      set(INSTALL_SUBDIR_DOC "SuperTux.app/Contents/Resources" CACHE STRING "Installation subdir for docs")
+-  elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
++  elseif(FALSE)
+     # Relative to the CPack Bundle generator's Resources root (Contents/Resources/).
+     set(INSTALL_SUBDIR_BIN "bin" CACHE STRING "Installation subdir for binaries")
+     set(INSTALL_SUBDIR_SHARE "share/supertux2" CACHE STRING "Installation subdir for data")
