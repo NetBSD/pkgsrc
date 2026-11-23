@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/09/18 14:37:18 taca Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/23 14:05:44 taca Exp $
 
-DISTNAME=	Ascii85-2.0.1
+DISTNAME=	Ascii85-2.0.2
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
