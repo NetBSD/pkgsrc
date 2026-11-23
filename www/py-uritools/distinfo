@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2026/11/16 16:04:47 adam Exp $
+$NetBSD: distinfo,v 1.8 2026/11/23 12:05:31 adam Exp $
 
-BLAKE2s (uritools-7.0.0.tar.gz) = 638d552ee17704e567d6b398e65d95bcc1d1b42ef6d14ebf67b0fa9eb9a4b7f4
-SHA512 (uritools-7.0.0.tar.gz) = 8318d4b5920e88eafce008b83c5ad34453cc88aba238081e72280c49e95abbfaa9ae96a2ad83a4f10277efc65d982a09da06513e2996483c03521ae74757e4c2
-Size (uritools-7.0.0.tar.gz) = 29005 bytes
+BLAKE2s (uritools-7.0.1.tar.gz) = 344affb47e287ace75acee8f91b6bd9ac60769fd009562ee176fac8520cdabf5
+SHA512 (uritools-7.0.1.tar.gz) = 0aeba96b67eeb2bec975ed7462e2e47bfb4e43f7000d6dc9c101c300492f11a06d3fe30ecd2b8441e54432157e3fdba5cf5a48497184e282fb4da89d1c37bb58
+Size (uritools-7.0.1.tar.gz) = 26860 bytes
