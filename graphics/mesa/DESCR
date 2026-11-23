@@ -1,0 +1,10 @@
+The Mesa project began as an open-source implementation of the OpenGL
+specification - a system for rendering interactive 3D graphics.
+
+Over the years the project has grown to implement more graphics APIs,
+including OpenGL ES (versions 1, 2, 3), OpenCL, OpenMAX, VDPAU, VA API,
+XvMC and Vulkan.
+
+A variety of device drivers allows the Mesa libraries to be used in many
+different environments ranging from software emulation to complete hardware
+acceleration for modern GPUs.

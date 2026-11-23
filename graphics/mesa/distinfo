@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2026/11/23 10:29:52 adam Exp $
+
+BLAKE2s (mesa-26.2.7.tar.xz) = 0104727930f0f6064958d9ac256d6fda5e15e75396b54ed44a2e22ff0315c250
+SHA512 (mesa-26.2.7.tar.xz) = 1886bd11f1a2cf8aad5289636004f26536c8dbef47848c15f1ca307b8f8e98dc853c5901630f9be37bd0f1bc044990b924ab698bd493751ce48acb8eddf569d1
+Size (mesa-26.2.7.tar.xz) = 68767300 bytes
+SHA1 (patch-meson.build) = 56aae7cb6f284a787d4ca4ef0ae0d512508a19a8
+SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = c982acaf2246858a06a52f548b6103800c0d7c45
+SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = c6958cf29da9154c673f8c64790ac2bb46ed74bd
+SHA1 (patch-src_gallium_auxiliary_vl_vl__csc.c) = 4a67a1ca8ffc10171ccd60123d4222970e5b7a6e
+SHA1 (patch-src_gallium_drivers_r600_sfn_sfn__valuefactory.cpp) = dce7340ac40e0d32e6ee00288538b30dc5d7d526
+SHA1 (patch-src_glx_glxclient.h) = 4812c1b17bfff6cb43192790aa5cfee5c6c3149d
+SHA1 (patch-src_glx_glxcurrent.c) = be95c084b834275ca65a38f446487c68889e1ab5
+SHA1 (patch-src_intel_compiler_gen_gen__private.h) = a45ad64b465ba0bc55b55bdecc35e75eae797af4
+SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
+SHA1 (patch-src_util_futex.c) = 4ad0d60e008fe8b5a4bb600e32e8f155d6c95b37
+SHA1 (patch-src_util_futex.h) = a4a2827406102d855bb8afadecb7ce5a42fd5ecd
+SHA1 (patch-src_util_os__file.c) = c80d88255a8f800d1e36fc199f3869ecdb61d203
+SHA1 (patch-src_vulkan_wsi_wsi__common__wayland.c) = 1b8017f21855e01183a2343af64cf7fc8ca13ebe
