@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.331.2.6 2026/11/23 14:56:18 maya Exp $
+# $NetBSD: rubyversion.mk,v 1.331.2.7 2026/11/23 15:02:25 maya Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -214,7 +214,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 # current supported Ruby's version
 RUBY33_VERSION=		3.3.14
 RUBY34_VERSION=		3.4.13
-RUBY40_VERSION=		4.0.9
+RUBY40_VERSION=		4.0.10
 
 # current API compatible version; used for version of shared library
 RUBY33_API_VERSION=	3.3.0
@@ -513,7 +513,7 @@ RUBY_FCNTL_VER=			1.3.0
 RUBY_IO_CONSOLE_VER=		0.8.2
 RUBY_IO_NONBLOCK_VER=		0.3.2
 RUBY_IO_WAIT_VER=		0.4.0
-RUBY_JSON_VER=			2.18.0
+RUBY_JSON_VER=			2.18.3
 RUBY_OPENSSL_VER=		4.0.2
 RUBY_PATHNAME_VER=		0.4.0
 RUBY_PSYCH_VER=			5.3.1
