@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/01/23 23:27:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/23 20:42:51 nros Exp $
 
 DISTNAME=	xcb-imdkit-1.0.6
 CATEGORIES=	x11
@@ -15,6 +15,10 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
 PKGCONFIG_OVERRIDE+=	src/xcb-imdkit.pc.in
+
+# Illumos needs __EXTENSIONS__ for asprintf
+# this also makes strdup visible
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
