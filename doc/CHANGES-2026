@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8320 2026/11/23 12:07:27 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8321 2026/11/23 12:21:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12299,3 +12299,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-zope.exceptions to 6.1 [adam 2026-11-23]
 	Updated www/py-uritools to 7.0.1 [adam 2026-11-23]
 	Updated sysutils/py-watchdog to 7.1.1 [adam 2026-11-23]
+	Updated devel/gitpane to 0.19.3 [pin 2026-11-23]
