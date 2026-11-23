@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8326 2026/11/23 12:32:39 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8327 2026/11/23 12:39:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12306,8 +12306,10 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.11.19 [adam 2026-11-23]
 	Updated www/py-pylsqpack to 1.1.2 [adam 2026-11-23]
 	Updated multimedia/moviebox-tui to 0.1.30 [pin 2026-11-23]
+	Updated net/piratebay to 0.5.0 [pin 2026-11-23]
 	Updated emulators/nono to 1.8.5 [jun 2026-11-23]
 	Updated mail/roundcube to 1.6.22 [taca 2026-11-23]
 	Updated mail/roundcube-plugin-enigma to 1.6.22 [taca 2026-11-23]
 	Updated mail/roundcube-plugin-password to 1.6.22 [taca 2026-11-23]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.22 [taca 2026-11-23]
+	Updated sysutils/gravityfile to 0.4.2 [pin 2026-11-23]
