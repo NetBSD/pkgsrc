@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8342 2026/11/23 15:16:24 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8343 2026/11/23 15:16:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12328,3 +12328,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/ruby-term-ansicolor to 1.12.0 [taca 2026-11-23]
 	Updated devel/ruby-tins to 1.63.0 [taca 2026-11-23]
 	Updated net/py-grpcio to 1.85.3 [wiz 2026-11-23]
+	Updated net/py-grpcio-status to 1.85.3 [wiz 2026-11-23]
