@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.10 2026/11/20 14:07:55 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.11 2026/11/23 15:24:32 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -302,3 +302,37 @@ www/wordpress: Security fix
 
 Pullup ticket #7407 - requested by taca
 www/php-ja-wordpress: Security fix
+
+Pullup ticket #7410 - requested by taca
+lang/ruby33: Security fix
+
+Pullup ticket #7411 - requested by taca
+lang/ruby34: Security fix
+
+Pullup ticket #7412 - requested by taca
+lang/ruby40: Security fix
+
+Pullup ticket #7413 - requested by taca
+mail/libytnef: Security fix
+mail/ytnef: Security fix
+
+Pullup ticket #7414 - requested by taca
+converters/p5-Cpanel-JSON-XS: Security fix
+
+Pullup ticket #7415 - requested by taca
+converters/p5-JSON-XS: Security fix
+
+Pullup ticket #7416 - requested by taca
+net/p5-Net: Security fix
+
+Pullup ticket #7417 - requested by taca
+net/p5-Net-DNS: Security fix
+
+Pullup ticket #7418 - requested by taca
+www/ruby-rack: Security fix
+
+Pullup ticket #7419 - requested by taca
+www/ruby-rack2: Security fix
+
+Pullup ticket #7420 - requested by taca
+mail/roundcube: Security fix
