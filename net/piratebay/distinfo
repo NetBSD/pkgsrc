@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/07/14 11:10:07 pin Exp $
+$NetBSD: distinfo,v 1.11 2026/11/23 12:26:32 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -663,9 +663,9 @@ Size (phf_shared-0.8.0.crate) = 2860 bytes
 BLAKE2s (pin-project-lite-0.2.14.crate) = 900e020a5cfc0ba385ef7de35c85c17b080a5392f45d95b8567c5c31c3a19044
 SHA512 (pin-project-lite-0.2.14.crate) = f90a6b9f5ab8701718f72677a4f3597c1b9f32e5fa53198b47a94696227ea37815997599abaa6058b217c5b32a94602582c6b13fdb66e2d683bc98921de95293
 Size (pin-project-lite-0.2.14.crate) = 28817 bytes
-BLAKE2s (piratebay-0.4.1.tar.gz) = 95b34281898ca7b21857897002ecf69d5853085ff79a0a2b3e7f1c95a3c14acc
-SHA512 (piratebay-0.4.1.tar.gz) = 3c29679d4cbf0b52a429977d1cd63e31219859ff5918247c3c8254ebfb298ba536e8de2146110cad8a0447de0c7cc0d2009043c1fee4f8014128ad76ffba61b1
-Size (piratebay-0.4.1.tar.gz) = 1008863 bytes
+BLAKE2s (piratebay-0.5.0.tar.gz) = 00f1dc55cd0ac70b222f7a3408ee9e008be1db8c722c70202d9235b5d8375748
+SHA512 (piratebay-0.5.0.tar.gz) = bee08e52445d8a7bcff76754ab4c91c9ba88d53bc6200601626fec5907a0496247cd26fef35d57bb00cd5fa046ba1b6367d7cfe52ac723c3a00c332761f7f3a9
+Size (piratebay-0.5.0.tar.gz) = 1024071 bytes
 BLAKE2s (portable-atomic-1.13.1.crate) = b3a6549f02086b4648b923c66555c2cf4f46719746faeaf5372cae8ec0e52e11
 SHA512 (portable-atomic-1.13.1.crate) = 2a1b31ac9814af884640b3398ab824a9795c72d260527a0966b193113808cfbb3345d50cd1beaebb45863437c3d06c8706d34b26efecceefc649319a4bc274a3
 Size (portable-atomic-1.13.1.crate) = 197001 bytes
